@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-logout
 title: SQL LOGOUT
 slug: /commands/sql-logout
@@ -30,11 +30,11 @@ displayed_sidebar: docs
 
 ## System variables and sets 
 
-If the logout is performed properly, the system variable OK is set to 1; otherwise, it is set to 0\. You can intercept this error with an error-handling method installed by the [ON ERR CALL](on-err-call.md) command.
+If the logout is performed properly, the system variable OK is set to 1; otherwise, it is set to 0\. You can intercept this error with an error-handling method installed by the [ON ERR CALL](../commands/on-err-call) command.
 
 ## See also 
 
-[SQL LOGIN](sql-login.md)  
+[SQL LOGIN](../commands/sql-login)  
 
 ## Properties
 

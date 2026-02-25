@@ -1,4 +1,4 @@
----
+﻿---
 id: generate-digest
 title: Generate digest
 slug: /commands/generate-digest
@@ -45,7 +45,7 @@ displayed_sidebar: docs
 | SHA256 digest       | 倍長整数 | 3 | (SHA-2 family) SHA-256は、64ビットの16進数の文字列として返された、連続した256ビット  |
 | SHA512 digest       | 倍長整数 | 4 | (SHA-2 family) SHA-512は、128ビットの16進数の文字列として返された、連続した512ビット |
 
-**注:** パスワードの管理にMD5 および SHA アルゴリズムを使用することは推奨されていません。パスワードをチェックするためには、[Generate password hash](generate-password-hash.md) および [Verify password hash](verify-password-hash.md)コマンドを使用することが推奨されます。
+**注:** パスワードの管理にMD5 および SHA アルゴリズムを使用することは推奨されていません。パスワードをチェックするためには、[Generate password hash](../commands/generate-password-hash) および [Verify password hash](../commands/verify-password-hash)コマンドを使用することが推奨されます。
 
 デフォルトで、 *\** 引数が省略された場合、16進数でエンコードされたダイジェストキーが返されます。ダイジェストキーをBase64URLでエンコードしたい場合、 *\** 引数を渡します。
 
@@ -92,10 +92,10 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[BASE64 DECODE](base64-decode.md)  
-[BASE64 ENCODE](base64-encode.md)  
-[Generate password hash](generate-password-hash.md)  
-[WEB Validate digest](web-validate-digest.md)  
+[BASE64 DECODE](../commands/base64-decode)  
+[BASE64 ENCODE](../commands/base64-encode)  
+[Generate password hash](../commands/generate-password-hash)  
+[WEB Validate digest](../commands/web-validate-digest)  
 *暗号化プロトコル*  
 
 ## プロパティ

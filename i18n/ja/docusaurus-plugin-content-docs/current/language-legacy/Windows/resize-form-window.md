@@ -1,4 +1,4 @@
----
+﻿---
 id: resize-form-window
 title: RESIZE FORM WINDOW
 slug: /commands/resize-form-window
@@ -54,9 +54,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[FORM GET PROPERTIES](form-get-properties.md)  
-[FORM SET SIZE](form-set-size.md)  
-[SET WINDOW RECT](set-window-rect.md)  
+[FORM GET PROPERTIES](../commands/form-get-properties)  
+[FORM SET SIZE](../commands/form-set-size)  
+[SET WINDOW RECT](../commands/set-window-rect)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: change-current-user
 title: CHANGE CURRENT USER
 slug: /commands/change-current-user
@@ -34,14 +34,14 @@ displayed_sidebar: docs
 **注:** 
 
 * シングルユーザーモードで開かれたプロジェクトデータベースにおいては、このコマンドはなにもしません。
-* [SET USER ALIAS](set-user-alias.md) コマンドによってカレントユーザーのエイリアスが定義されていた場合、**CHANGE CURRENT USER** コマンドはそれをリセットします。
+* [SET USER ALIAS](../commands/set-user-alias) コマンドによってカレントユーザーのエイリアスが定義されていた場合、**CHANGE CURRENT USER** コマンドはそれをリセットします。
 
 引数なしで CHANGE CURRENT USER コマンドが実行されると、データベース接続ダイアログボックスが表示されます。データベースに入るには、ユーザーは必ず有効な名前とパスワードを入力または選択しなければなりません。接続ダイアログボックスの内容は、データベース環境設定の **セキュリティ**ページに依存します。
 
 また、使用するアカウントをプログラミングで指定するには、2つのオプション引数 *user* と *password* を渡します。   
-引数 *user* には、使用するアカウントの名前またはユニークなユーザーID (*userRef*) を渡します。 [GET USER LIST](get-user-list.md) コマンドを用いて、ユーザー名とIDを取得できます。
+引数 *user* には、使用するアカウントの名前またはユニークなユーザーID (*userRef*) を渡します。 [GET USER LIST](../commands/get-user-list) コマンドを用いて、ユーザー名とIDを取得できます。
 
-ユーザーアカウントが存在しない場合や削除された場合、エラーコード -9979が返されます。 [ON ERR CALL](on-err-call.md) コマンドを用いてインストールされたエラー処理メソッドでこのエラーを検知することができます。その他では [Is user deleted](is-user-deleted.md) コマンドを呼び出してユーザーアカウントをテストし、その後このコマンドを呼び出す方法があります。
+ユーザーアカウントが存在しない場合や削除された場合、エラーコード -9979が返されます。 [ON ERR CALL](../commands/on-err-call) コマンドを用いてインストールされたエラー処理メソッドでこのエラーを検知することができます。その他では [Is user deleted](../commands/is-user-deleted) コマンドを呼び出してユーザーアカウントをテストし、その後このコマンドを呼び出す方法があります。
 
 暗号化されていないユーザーアカウントのパスワードを引数 *password* に渡します。パスワードがユーザーと一致しない場合、コマンドはエラーメッセージ -9978を返し、何も行いません。
 
@@ -57,9 +57,9 @@ displayed_sidebar: docs
 
 1. "デフォルトユーザー" モードでは、ダイアログボックスは表示されず、直接データベースへ入ります。
 2. は、ユーザー名とパスワードを入力するためのカスタムダイアログボックスを表示します。実行可能な処理はすべてダイアログに表示されています。  
-   * 4Dの標準アクセスダイアログボックスと同様に、[GET USER LIST](get-user-list.md) コマンドを使用してデータベースのユーザーリストを表示できます。  
+   * 4Dの標準アクセスダイアログボックスと同様に、[GET USER LIST](../commands/get-user-list) コマンドを使用してデータベースのユーザーリストを表示できます。  
    * 入力された文字の有効性をチェックするための様々な規制 (最低文字数、ユニークなど) を、パスワード入力フィールドにつけられます。  
-   * 入力中のパスワードの文字を画面上でマスクするには、[FILTER KEYSTROKE](filter-keystroke.md) コマンドと特別な*%password* フォントを使用します。  
+   * 入力中のパスワードの文字を画面上でマスクするには、[FILTER KEYSTROKE](../commands/filter-keystroke) コマンドと特別な*%password* フォントを使用します。  
    * 有効期限に関する規則は、ダイアログボックスを受け入れる時に適用できます。期限切れ、初期の接続への変更、数回に及ぶ不正入力後のアカウントロック、既に使用されたパスワードのメモリーなど。
 3. 入力が有効になると、ユーザーのアカウント権限でデータベースを開くために、必須情報 (ユーザー名とパスワード) が **CHANGE CURRENT USER** コマンドに渡されます。
 
@@ -75,8 +75,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[CHANGE PASSWORD](change-password.md)  
-[SET USER ALIAS](set-user-alias.md)  
+[CHANGE PASSWORD](../commands/change-password)  
+[SET USER ALIAS](../commands/set-user-alias)  
 
 ## プロパティ
 

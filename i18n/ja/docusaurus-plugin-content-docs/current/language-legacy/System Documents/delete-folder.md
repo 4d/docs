@@ -1,4 +1,4 @@
----
+﻿---
 id: delete-folder
 title: DELETE FOLDER
 slug: /commands/delete-folder
@@ -47,12 +47,12 @@ displayed_sidebar: docs
    (\*) Windows: -54 (ロックされたファイルを書き込みのために開こうとしました。)  
    macOS: -45 (ファイルがロックされている、あるいはパス名が不正です。)
 
-これらのエラーは [ON ERR CALL](on-err-call.md) コマンドによって実装したメソッドでインターセプトすることができます。
+これらのエラーは [ON ERR CALL](../commands/on-err-call) コマンドによって実装したメソッドでインターセプトすることができます。
 
 ## 参照 
 
   
-[DELETE DOCUMENT](delete-document.md)  
+[DELETE DOCUMENT](../commands/delete-document)  
 
 ## プロパティ
 

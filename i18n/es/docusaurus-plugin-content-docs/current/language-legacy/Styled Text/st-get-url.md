@@ -1,4 +1,4 @@
----
+﻿---
 id: st-get-url
 title: ST GET URL
 slug: /commands/st-get-url
@@ -80,7 +80,7 @@ Cuando hay un evento de doble clic, se comprueba que no existe en realidad una U
 
 #### Ver también 
 
-[ST INSERT URL](st-insert-url.md)  
+[ST INSERT URL](../commands/st-insert-url)  
 
 #### Propiedades
 

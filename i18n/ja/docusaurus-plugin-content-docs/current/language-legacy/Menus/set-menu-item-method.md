@@ -1,4 +1,4 @@
----
+﻿---
 id: set-menu-item-method
 title: SET MENU ITEM METHOD
 slug: /commands/set-menu-item-method
@@ -45,7 +45,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Get menu item method](get-menu-item-method.md)  
+[Get menu item method](../commands/get-menu-item-method)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: time-string
 title: Time string
 slug: /commands/time-string
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 ## 参照 
 
 [String](../commands/string)  
-[Time](time.md)  
+[Time](../commands/time)  
 
 ## プロパティ
 

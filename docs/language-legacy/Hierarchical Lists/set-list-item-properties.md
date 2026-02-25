@@ -1,4 +1,4 @@
----
+﻿---
 id: set-list-item-properties
 title: SET LIST ITEM PROPERTIES
 slug: /commands/set-list-item-properties
@@ -40,17 +40,17 @@ displayed_sidebar: docs
 
 If you pass the first optional *\** parameter, you indicate that the *list* parameter is an object name (string) corresponding to a representation of the list in the form. If you do not pass this parameter, you indicate that the *list* parameter is a hierarchical list reference ([ListRef](# "A Longint reference to a hierachical list")). If you only use a single representation of the list or work with structural items (the second *\** is omitted), you can use either syntax. Conversely, if you use several representations of the same list and work with the current item (the second *\** is passed), the syntax based on the object name is required since each representation can have its own current item.
 
-You can pass a reference number in *itemRef*. If there is no item with the item reference number that is passed, the command does nothing. You can optionally pass *0* in *itemRef* to modify the last item added to the list using [APPEND TO LIST](append-to-list.md).
+You can pass a reference number in *itemRef*. If there is no item with the item reference number that is passed, the command does nothing. You can optionally pass *0* in *itemRef* to modify the last item added to the list using [APPEND TO LIST](../commands/append-to-list).
 
 Lastly, you can pass *\** in *itemRef*: in this case, the command will apply to the current item of the list. If several items are selected manually, the current item is the one that was selected last. If no item is selected, the command does nothing.
 
 If you work with item reference numbers, build a list in which items have unique reference numbers, otherwise you will not be able to distinguish the items. For more information, refer to the [*Hierarchical List form object*](../../FormObjects/list_overview.md) section.
 
-**Note:** To change the text of the item or its sublist, use the command [SET LIST ITEM](set-list-item.md).
+**Note:** To change the text of the item or its sublist, use the command [SET LIST ITEM](../commands/set-list-item).
 
 To make an item enterable, pass TRUE in *enterable*; otherwise, pass FALSE.
 
-**Important:** In order for an item to be enterable, it must belong to a list that is enterable. To make a whole list enterable, use the [OBJECT SET ENTERABLE](object-set-enterable.md) command. To make an individual list item enterable, use **SET LIST ITEM PROPERTIES**. Changing the enterable property at the list level does not affect the enterable properties of the items. However, an item can be enterable only if its list is enterable.
+**Important:** In order for an item to be enterable, it must belong to a list that is enterable. To make a whole list enterable, use the [OBJECT SET ENTERABLE](../commands/object-set-enterable) command. To make an individual list item enterable, use **SET LIST ITEM PROPERTIES**. Changing the enterable property at the list level does not affect the enterable properties of the items. However, an item can be enterable only if its list is enterable.
 
 You specify the font style of the item in the *styles* parameter. You pass a combination (one or a sum) of the following predefined constants (*Font Styles* theme):
 
@@ -70,13 +70,13 @@ In the *icon* parameter, you can pass a picture to be used as the icon for the i
 **Notes:**
 
 * Use of a picture file path is recommended since the Picture library is deprecated and is not supported in 4D projects.
-* If you want to use 4D picture expressions (fields, variables, etc.) to specify the icons of the items, use the [SET LIST ITEM ICON](set-list-item-icon.md) command.
+* If you want to use 4D picture expressions (fields, variables, etc.) to specify the icons of the items, use the [SET LIST ITEM ICON](../commands/set-list-item-icon) command.
 
-The *color* parameter (optional) lets you modify the color of the item text. The color must be specified in the form of an RGB color, i.e. a 4-byte longint in the 0x00RRGGBB format. For more information about this format, refer to the description of the [OBJECT SET RGB COLORS](object-set-rgb-colors.md) command. Pass -1 in the *color* parameter to reset the original color of the item.
+The *color* parameter (optional) lets you modify the color of the item text. The color must be specified in the form of an RGB color, i.e. a 4-byte longint in the 0x00RRGGBB format. For more information about this format, refer to the description of the [OBJECT SET RGB COLORS](../commands/object-set-rgb-colors) command. Pass -1 in the *color* parameter to reset the original color of the item.
 
 ## Example 1 
 
-See the example for the [APPEND TO LIST](append-to-list.md) command.
+See the example for the [APPEND TO LIST](../commands/append-to-list) command.
 
 ## Example 2 
 
@@ -88,10 +88,10 @@ The following example changes the text of the current item of *list* to bold and
 
 ## See also 
 
-[GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
+[GET LIST ITEM PROPERTIES](../commands/get-list-item-properties)  
 [Hierarchical Lists](../../FormObjects/list_overview.md)  
-[SET LIST ITEM](set-list-item.md)  
-[SET LIST ITEM ICON](set-list-item-icon.md)  
+[SET LIST ITEM](../commands/set-list-item)  
+[SET LIST ITEM ICON](../commands/set-list-item-icon)  
 
 ## Properties
 

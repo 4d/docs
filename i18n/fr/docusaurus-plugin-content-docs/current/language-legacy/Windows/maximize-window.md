@@ -1,4 +1,4 @@
----
+﻿---
 id: maximize-window
 title: MAXIMIZE WINDOW
 slug: /commands/maximize-window
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 Cette commande produit le même effet qu'un clic sur la case de zoom d'une fenêtre de l'application 4D. Les fenêtres que vous souhaitez maximiser doivent comporter une case de zoom. Si le type de *fenêtre* n'en contient pas, la commande ne fait rien.
 
-Un clic ultérieur sur la case de zoom ou l'appel de la commande [MINIMIZE WINDOW](minimize-window.md) provoque le retour de la fenêtre à sa taille initiale. Sous Windows, si la fenêtre a été maximisée, un clic sur la case de zoom ou l'appel de la commande [MINIMIZE WINDOW](minimize-window.md) (sans paramètre) entraîne le retour à leur taille initiale de toutes les fenêtres de l'application.
+Un clic ultérieur sur la case de zoom ou l'appel de la commande [MINIMIZE WINDOW](../commands/minimize-window) provoque le retour de la fenêtre à sa taille initiale. Sous Windows, si la fenêtre a été maximisée, un clic sur la case de zoom ou l'appel de la commande [MINIMIZE WINDOW](../commands/minimize-window) (sans paramètre) entraîne le retour à leur taille initiale de toutes les fenêtres de l'application.
 
 Si *fenêtre* est déjà maximisée, la commande ne fait rien.
 
@@ -90,9 +90,9 @@ Dans le contexte suivant, si l'utilisateur clique sur le bouton :
 
 ## Voir aussi 
 
-[Is window maximized](is-window-maximized.md)  
-[MINIMIZE WINDOW](minimize-window.md)  
-[REDUCE RESTORE WINDOW](reduce-restore-window.md)  
+[Is window maximized](../commands/is-window-maximized)  
+[MINIMIZE WINDOW](../commands/minimize-window)  
+[REDUCE RESTORE WINDOW](../commands/reduce-restore-window)  
 
 ## Propriétés
 

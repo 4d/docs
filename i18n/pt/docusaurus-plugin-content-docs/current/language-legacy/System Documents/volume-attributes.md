@@ -1,4 +1,4 @@
----
+﻿---
 id: volume-attributes
 title: VOLUME ATTRIBUTES
 slug: /commands/volume-attributes
@@ -106,7 +106,7 @@ Quando tiver sido adicionado este método de projeto a sua aplicação, pode esc
 
 ## Ver também 
 
-[VOLUME LIST](volume-list.md)  
+[VOLUME LIST](../commands/volume-list)  
 
 ## Propriedades
 

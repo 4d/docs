@@ -1,4 +1,4 @@
----
+﻿---
 id: users-to-blob
 title: USERS TO BLOB
 slug: /commands/users-to-blob
@@ -34,14 +34,14 @@ La commande **USERS TO BLOB** stocke dans le BLOB *utilisateurs* la liste de tou
 
 Seuls l’Administrateur et le Super\_Utilisateur de la base peuvent exécuter cette commande. Si un autre utilisateur tente de l’exécuter, la commande ne fait rien et une erreur de privilège (-9949) est générée.
 
-Le BLOB généré est automatiquement encrypté et ne peut être lu que par la commande [BLOB TO USERS](blob-to-users.md). Vous pouvez stocker ce BLOB dans un fichier disque ou dans un champ.   
+Le BLOB généré est automatiquement encrypté et ne peut être lu que par la commande [BLOB TO USERS](../commands/blob-to-users). Vous pouvez stocker ce BLOB dans un fichier disque ou dans un champ.   
 Cette commande équivaut à l’enregistrement des groupes et utilisateurs depuis la fenêtre de gestion des groupes de la Boîte à outils, à la différence près qu’elle permet de stocker les comptes utilisateurs dans un champ BLOB et non uniquement dans un fichier.
 
 Ce principe permet de conserver une sauvegarde des utilisateurs parmi les données de la base, et ainsi de mettre en place un mécanisme de sauvegarde et de chargement automatiques des utilisateurs en cas de mise à jour de la structure de la base (en effet, les informations relatives aux comptes utilisateurs sont stockées par 4D dans le fichier de structure de la base).
 
 ## Voir aussi 
 
-[BLOB TO USERS](blob-to-users.md)  
+[BLOB TO USERS](../commands/blob-to-users)  
 
 ## Propriétés
 

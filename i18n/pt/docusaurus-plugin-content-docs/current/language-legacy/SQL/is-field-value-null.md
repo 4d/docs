@@ -1,4 +1,4 @@
----
+﻿---
 id: is-field-value-null
 title: Is field value Null
 slug: /commands/is-field-value-null
@@ -34,12 +34,12 @@ O valor NULL é utilizado pelo motor SQL de 4D. Para maior informação, consult
 
 O valor retornado por esse comando só tem significado se a opção *Mapear valores NULOS a valores vazios* não for selecionada no campo definição do editor de Structure. Se for selecionada, retorna **False**
 
-**Nota:** este comando não pode ser utilizado com objetos e propriedades de objetos. Os valores nulos nos campos objeto são manejados através do comando [Null](null.md), 
+**Nota:** este comando não pode ser utilizado com objetos e propriedades de objetos. Os valores nulos nos campos objeto são manejados através do comando [Null](../commands/null), 
 
 ## Ver também 
 
-[Null](null.md)  
-[SET FIELD VALUE NULL](set-field-value-null.md)  
+[Null](../commands/null)  
+[SET FIELD VALUE NULL](../commands/set-field-value-null)  
 
 ## Propriedades
 

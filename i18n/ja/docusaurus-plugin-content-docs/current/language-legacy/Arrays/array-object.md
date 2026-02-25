@@ -1,4 +1,4 @@
----
+﻿---
 id: array-object
 title: ARRAY OBJECT
 slug: /commands/array-object
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 **ARRAY OBJECT** コマンドを既存の配列に対して使用する場合、以下のことに注意して下さい:
 
-* サイズを拡大する場合、既存の要素は何も変更されず、新しく追加された要素は未定義の要素になります。[OB Is defined](ob-is-defined.md) コマンドを使用することによって要素が定義済みかどうかを調べることができます。
+* サイズを拡大する場合、既存の要素は何も変更されず、新しく追加された要素は未定義の要素になります。[OB Is defined](../commands/ob-is-defined) コマンドを使用することによって要素が定義済みかどうかを調べることができます。
 * サイズを縮小する場合は、 "底"にある要素から削除されていきます。
 
 ## 例題 1 

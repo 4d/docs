@@ -1,4 +1,4 @@
----
+﻿---
 id: post-event
 title: POST EVENT
 slug: /commands/post-event
@@ -47,7 +47,7 @@ Vous devez passer une des constantes prédéfinies suivantes dans le paramètre 
 
 Si l'événement est lié à la souris, passez *0* (zéro) dans le paramètre *message*. Si l'événement est lié au clavier, passez dans *message* le code du caractère simulé.
 
-Généralement, vous passez la valeur retournée par la fonction [Tickcount](tickcount.md) dans *quand*.
+Généralement, vous passez la valeur retournée par la fonction [Tickcount](../commands/tickcount) dans *quand*.
 
 Si l'événement est lié à la souris, passez les coordonnées horizontale et verticale du clic dans *sourisX* et *sourisY*. 
 
@@ -82,8 +82,8 @@ Si vous passez le paramètre *process*, l'événement est envoyé au process don
 
 ## Voir aussi 
 
-[POST CLICK](post-click.md)  
-[POST KEY](post-key.md)  
+[POST CLICK](../commands/post-click)  
+[POST KEY](../commands/post-key)  
 
 ## Propriétés
 

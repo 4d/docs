@@ -1,4 +1,4 @@
----
+﻿---
 id: log-event
 title: LOG EVENT
 slug: /commands/log-event
@@ -40,9 +40,9 @@ El parámetro opcional *tipoSalida* permite precisar el canal de salida tomado p
 
 | Constante                    | Tipo         | Valor | Comentario                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ---------------------------- | ------------ | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Into 4D commands log         | Entero largo | 3     | Indica a 4D grabar el *mensaje* en el archivo de historial de los comandos de 4D, si este archivo se ha activado. *El archivo de historial de comandos de 4D puede activarse utilizando el comando [SET DATABASE PARAMETER](set-database-parameter.md) (selector 34*).<br/>**Nota:** los archivos de historial de 4D se agrupan en la carpeta **Logs** (ver el comando *[Get 4D folder](get-4d-folder.md)*).                                                                        |
+| Into 4D commands log         | Entero largo | 3     | Indica a 4D grabar el *mensaje* en el archivo de historial de los comandos de 4D, si este archivo se ha activado. *El archivo de historial de comandos de 4D puede activarse utilizando el comando [SET DATABASE PARAMETER](../commands/set-database-parameter) (selector 34*).<br/>**Nota:** los archivos de historial de 4D se agrupan en la carpeta **Logs** (ver el comando *[Get 4D folder](../commands/get-4d-folder)*).                                                                        |
 | Into 4D debug message        | Entero largo | 1     | Indica a 4D enviar el *mensaje* al entorno de depuración del sistema. El resultado depende de la plataforma:<br/>En macOS: el comando envía el mensaje a la ConsolaBajo Windows: el comando envía el mensaje como un mensaje de depuración. Para poder leer este mensaje, debe tener Microsoft Visual Studio o DebugView para Windows (<http://technet.microsoft.com/en-us/sysinternals/bb896647.aspx>)                                                                          |
-| Into 4D diagnostic log       | Entero largo | 5     | Le indica a 4D poner el mensaje en el archivo de diagnóstico de 4D, si este archivo está activo.<br/>El archivo de diagnóstico puede activarse con ayuda del comando [SET DATABASE PARAMETER](set-database-parameter.md) (*selector 79*).                                                                                                                                                                                                                                           |
+| Into 4D diagnostic log       | Entero largo | 5     | Le indica a 4D poner el mensaje en el archivo de diagnóstico de 4D, si este archivo está activo.<br/>El archivo de diagnóstico puede activarse con ayuda del comando [SET DATABASE PARAMETER](../commands/set-database-parameter) (*selector 79*).                                                                                                                                                                                                                                           |
 | Into 4D request log          | Entero largo | 2     | Indica a 4D grabar el *mensaje* en el archivo de historial de peticiones de 4D, si este archivo ha sido activado                                                                                                                                                                                                                                                                                                                                                                            |
 | Into system standard outputs | Entero largo | 6     | Indica a 4D enviar el *mensaje* a un flujo de salida estándar. El mensaje se envía a: **stdout** si *importance* \= Information message o Warning message **stderr** si *importance* \= Error message                                                                                                                                                                                                                                                                                       |
 | Into Windows log events      | Entero largo | 0     | Indica a 4D enviar el *mensaje* “Log events” de Windows. Este historial recibe y almacena los mensajes que vienen de las aplicaciones en ejecución. En este caso, puede definir el nivel de importancia del *mensaje* vía el parámetro opcional *importancia* (ver a continuación).**<br/>Notas:** <br/>para que esta funcionalidad esté disponible, el servicio Log Events de Windows debe estar en ejecución. Bajo macOS, el comando no hace nada con este tipo de salida |
@@ -67,7 +67,7 @@ El parámetro *importancia* sólo se utiliza con *tipoSalida* `Into Windows log 
 
 ## Ejemplo 
 
-Si quiere realizar un seguimiento de las aperturas de su base bajo Windows, puede escribir la siguiente línea de código en el [Método base On Startup](metodo-base-on-startup.md):
+Si quiere realizar un seguimiento de las aperturas de su base bajo Windows, puede escribir la siguiente línea de código en el [Método base On Startup](../commands/metodo-base-on-startup):
 
 ```4d
  LOG EVENT(Into Windows log events;"The Invoice database was opened.")
@@ -77,7 +77,7 @@ Cada vez que se abre la base, esta información se escribirá en el visor de eve
 
 ## Ver también 
 
-[SET DATABASE PARAMETER](set-database-parameter.md)  
+[SET DATABASE PARAMETER](../commands/set-database-parameter)  
 
 
 ## Propiedades

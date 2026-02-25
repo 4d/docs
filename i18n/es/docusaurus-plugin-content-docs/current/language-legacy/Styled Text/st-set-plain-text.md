@@ -1,4 +1,4 @@
----
+﻿---
 id: st-set-plain-text
 title: ST SET PLAIN TEXT
 slug: /commands/st-set-plain-text
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST SET PLAIN TEXT.Summary-->El comando ST SET PLAIN TEXT inserta el texto pasado en el parámetro *nuevTexto* en el campo o la variable de texto con estilo designado por el parámetro *objeto* .<!-- END REF--> Este comando aplica únicamente al texto plano del parámetro *objeto*, sin modificar las posibles etiquetas de estilo que contiene. 
 
-A diferencia del comando [ST SET TEXT](st-set-text.md), ST SET PLAIN TEXT inserta únicamente texto plano. No debe pasar texto con etiquetas de estilo en *nuevTexto*. Si contiene los caracteres <, > o &, se consideran como caracteres estándar y se convierten en entidades HTML:
+A diferencia del comando [ST SET TEXT](../commands/st-set-text), ST SET PLAIN TEXT inserta únicamente texto plano. No debe pasar texto con etiquetas de estilo en *nuevTexto*. Si contiene los caracteres <, > o &, se consideran como caracteres estándar y se convierten en entidades HTML:
 
 * '&' se convierte en &amp;
 * '<' se convierte en &lt;
@@ -77,7 +77,7 @@ Dada la siguiente variable texto multiestilo:
 
 ![](../../assets/en/commands/pict572269.en.png)
 
-Usted quiere insertar nombres de empresas guardadas en un campo texto. Estos nombres pueden contener, por ejemplo el carácter "&". En este caso, deberá utilizar el comando [ST SET PLAIN TEXT](st-set-plain-text.md):  
+Usted quiere insertar nombres de empresas guardadas en un campo texto. Estos nombres pueden contener, por ejemplo el carácter "&". En este caso, deberá utilizar el comando [ST SET PLAIN TEXT](../commands/st-set-plain-text):  
   
 ```4d
  ST SET PLAIN TEXT(miTextoEstilo;[Empresa]Nombre;33;34)
@@ -93,7 +93,7 @@ Este es el texto sin formato contenido en la variable:
 
 Puede constatar que el texto insertado se encapsuló dentro de un par de etiquetas de estilo adicionales. Estas etiquetas corresponden al estilo de los caracteres antes de la inserción. Este mecanismo permite garantizar una visualización correcta de los campos multiestilos en todos los casos. 
 
-**Nota:** si utiliza el comando [ST SET TEXT](st-set-text.md) en este caso, 4D no inserta nada porque la presencia del carácter "&" no codificado evita la interpretación de las etiquetas de estilo presentes en la variable. Para mayor información, consulte la descripción de este comando. 
+**Nota:** si utiliza el comando [ST SET TEXT](../commands/st-set-text) en este caso, 4D no inserta nada porque la presencia del carácter "&" no codificado evita la interpretación de las etiquetas de estilo presentes en la variable. Para mayor información, consulte la descripción de este comando. 
 
 #### Variables y conjuntos del sistema 
 
@@ -103,8 +103,8 @@ En caso de un error, la variable no cambia. Cuando se produce un error en una va
 
 #### Ver también 
 
-[ST Get plain text](st-get-plain-text.md)  
-[ST SET TEXT](st-set-text.md)  
+[ST Get plain text](../commands/st-get-plain-text)  
+[ST SET TEXT](../commands/st-set-text)  
 
 #### Propiedades
 

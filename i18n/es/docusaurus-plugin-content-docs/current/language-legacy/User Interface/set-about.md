@@ -1,4 +1,4 @@
----
+﻿---
 id: set-about
 title: SET ABOUT
 slug: /commands/set-about
@@ -35,7 +35,7 @@ Después de llamar este comando, cuando el usuario selecciona esta línea de men
 
 Este comando se utiliza con 4D (todos los modos), 4D Desktop y 4D Server. Su ejecución en el equipo servidor provoca la creación de un nuevo proceso.
 
-**Nota:** en Windows, este comando modifica la línea "Acerca de 4D" en el menú Ayuda creado por el comando [SET HELP MENU](set-help-menu.md).
+**Nota:** en Windows, este comando modifica la línea "Acerca de 4D" en el menú Ayuda creado por el comando [SET HELP MENU](../commands/set-help-menu).
 
 ## Ejemplo 1 
 
@@ -55,7 +55,7 @@ El siguiente ejemplo reinicializa el comando de menú Acerca de 4D:
 
 ## Ver también 
 
-[SET HELP MENU](set-help-menu.md)  
+[SET HELP MENU](../commands/set-help-menu)  
 
 ## Propiedades
 

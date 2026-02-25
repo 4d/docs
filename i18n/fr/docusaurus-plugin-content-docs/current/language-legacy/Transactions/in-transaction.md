@@ -1,4 +1,4 @@
----
+﻿---
 id: in-transaction
 title: In transaction
 slug: /commands/in-transaction
@@ -37,11 +37,11 @@ Si vous effectuez l'opération depuis un trigger ou une sous-routine pouvant êt
 
 ## Voir aussi 
 
-[Active transaction](active-transaction.md)  
-[CANCEL TRANSACTION](cancel-transaction.md)  
+[Active transaction](../commands/active-transaction)  
+[CANCEL TRANSACTION](../commands/cancel-transaction)  
 *Présentation des triggers*  
-[START TRANSACTION](start-transaction.md)  
-[VALIDATE TRANSACTION](validate-transaction.md)  
+[START TRANSACTION](../commands/start-transaction)  
+[VALIDATE TRANSACTION](../commands/validate-transaction)  
 
 ## Propriétés
 

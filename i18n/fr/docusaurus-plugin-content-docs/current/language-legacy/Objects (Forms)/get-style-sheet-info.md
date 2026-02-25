@@ -1,4 +1,4 @@
----
+﻿---
 id: get-style-sheet-info
 title: GET STYLE SHEET INFO
 slug: /commands/get-style-sheet-info
@@ -75,8 +75,8 @@ Vous souhaitez connaître la configuration actuelle de la feuille de style "Auto
 
 ## Voir aussi 
 
-[LIST OF STYLE SHEETS](list-of-style-sheets.md)  
-[OBJECT SET STYLE SHEET](object-set-style-sheet.md)  
+[LIST OF STYLE SHEETS](../commands/list-of-style-sheets)  
+[OBJECT SET STYLE SHEET](../commands/object-set-style-sheet)  
 
 ## Propriétés
 

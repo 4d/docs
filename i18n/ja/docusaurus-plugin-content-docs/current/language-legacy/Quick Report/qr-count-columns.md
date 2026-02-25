@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-count-columns
 title: QR Count columns
 slug: /commands/qr-count-columns
@@ -43,8 +43,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[QR DELETE COLUMN](qr-delete-column.md)  
-[QR INSERT COLUMN](qr-insert-column.md)  
+[QR DELETE COLUMN](../commands/qr-delete-column)  
+[QR INSERT COLUMN](../commands/qr-insert-column)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-row-height
 title: LISTBOX Get row height
 slug: /commands/listbox-get-row-height
@@ -38,14 +38,14 @@ Si la *linea* especificada no existe en el list box, el comando devuelve 0 (cero
 
 El valor de la altura de la línea se expresa:
 
-* en la unidad actual definida globalmente para las líneas del list box, ya sea en la lista de Propiedades o mediante una llamada previa al comando [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) cuando la altura de la línea es fija,
+* en la unidad actual definida globalmente para las líneas del list box, ya sea en la lista de Propiedades o mediante una llamada previa al comando [LISTBOX SET ROWS HEIGHT](../commands/listbox-set-rows-height) cuando la altura de la línea es fija,
 * en píxeles cuando la altura de la línea es variable, es decir, automática ( ver *Altura de línea automática*) o manejada por un array.
 
 ## Ver también 
 
-[LISTBOX Get auto row height ](listbox-get-auto-row-height.md)  
-[LISTBOX Get rows height](listbox-get-rows-height.md)  
-[LISTBOX SET ROW HEIGHT](listbox-set-row-height.md)  
+[LISTBOX Get auto row height ](../commands/listbox-get-auto-row-height)  
+[LISTBOX Get rows height](../commands/listbox-get-rows-height)  
+[LISTBOX SET ROW HEIGHT](../commands/listbox-set-row-height)  
 
 ## Propiedades
 

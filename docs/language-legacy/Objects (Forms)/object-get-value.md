@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-value
 title: OBJECT Get value
 slug: /commands/object-get-value
@@ -45,11 +45,11 @@ Current value of the form object's data source.
 
 ## Example 
 
-See the example for the [OBJECT SET VALUE](object-set-value.md) command. 
+See the example for the [OBJECT SET VALUE](../commands/object-set-value) command. 
 
 ## See also 
 
-[OBJECT SET VALUE](object-set-value.md)  
+[OBJECT SET VALUE](../commands/object-set-value)  
 
 ## Properties
 

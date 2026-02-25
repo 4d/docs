@@ -1,4 +1,4 @@
----
+﻿---
 id: multi-sort-array
 title: MULTI SORT ARRAY
 slug: /commands/multi-sort-array
@@ -52,7 +52,7 @@ Os níveis de ordenação são determinados pela ordem em que os arrays são pas
 
 **• Segunda sintaxe: MULTI SORT ARRAY (ptrArrayNome; sortArrayNome)**
 
-Esta sintaxe, mais complexa, é também um valor incalculável para desenvolvimentos genéricos (por exemplo, você pode criar um método genérico para classificar arrays de todos os tipos, ou ainda, criar o equivalente de um comando genérico [SORT ARRAY](sort-array.md)).
+Esta sintaxe, mais complexa, é também um valor incalculável para desenvolvimentos genéricos (por exemplo, você pode criar um método genérico para classificar arrays de todos os tipos, ou ainda, criar o equivalente de um comando genérico [SORT ARRAY](../commands/sort-array)).
 
 O parâmetro *ptrArrayNome* contém o nome de um array de array de ponteiros; cada elemento desse array é um ponteiro que designa um array para ser ordenado. As ordenações são executadas na ordem do array de ponteiros definido por *ptrArrayNome*.    
 **Atenção**: todos os arrays apontados pelo *ptrArrayNome* devem ter o mesmo número de elementos.
@@ -122,9 +122,9 @@ Se quiser que o array de nomes seja usado como um terceiro critério de ordenaç
 
 ## Ver também 
 
-[ORDER BY](order-by.md)  
-[SELECTION TO ARRAY](selection-to-array.md)  
-[SORT ARRAY](sort-array.md)  
+[ORDER BY](../commands/order-by)  
+[SELECTION TO ARRAY](../commands/selection-to-array)  
+[SORT ARRAY](../commands/sort-array)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: set-recent-fonts
 title: SET RECENT FONTS
 slug: /commands/set-recent-fonts
@@ -52,7 +52,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[FONT LIST](font-list.md)  
+[FONT LIST](../commands/font-list)  
 
 ## プロパティ
 

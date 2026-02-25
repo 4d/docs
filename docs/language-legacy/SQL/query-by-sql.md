@@ -1,4 +1,4 @@
----
+﻿---
 id: query-by-sql
 title: QUERY BY SQL
 slug: /commands/query-by-sql
@@ -48,17 +48,17 @@ is equivalent to the following SQL query:
  SELECT*FROM Employees WHERE"name=’smith’"
 ```
 
-The QUERY BY SQL command is similar to the [QUERY BY FORMULA](query-by-formula.md) command. It looks for records in the specified table. It changes the current selection of *aTable* for the current process and makes the first record of the new selection the current record.
+The QUERY BY SQL command is similar to the [QUERY BY FORMULA](../commands/query-by-formula) command. It looks for records in the specified table. It changes the current selection of *aTable* for the current process and makes the first record of the new selection the current record.
 
 **Note:** The QUERY BY SQL command cannot be used in the context of an external SQL connection; it connects directly to the integrated SQL engine of 4D.
 
 QUERY BY SQL applies *sqlFormula* to each record in the table selection. *sqlFormula* is a Boolean expression that must return **True** or **False**. As you may know, in the SQL standard, a search condition can yield a **True**, **False** or NULL result. All the records (rows) where the search condition returns **True** are included in the new current selection.
 
-The *sqlFormula* expression may be simple, such as comparing a field (column) to a value; or it may be complex, such as performing a calculation. Like [QUERY BY FORMULA](query-by-formula.md), QUERY BY SQL is able to evaluate information in related tables (see example 4). *sqlFormula* must be a valid SQL statement that is compliant with the SQL-2 standard and with respect to the limitations of the current SQL implementation of 4D. For more information about SQL support in 4D, refer to the *4D SQL Reference* manual.
+The *sqlFormula* expression may be simple, such as comparing a field (column) to a value; or it may be complex, such as performing a calculation. Like [QUERY BY FORMULA](../commands/query-by-formula), QUERY BY SQL is able to evaluate information in related tables (see example 4). *sqlFormula* must be a valid SQL statement that is compliant with the SQL-2 standard and with respect to the limitations of the current SQL implementation of 4D. For more information about SQL support in 4D, refer to the *4D SQL Reference* manual.
 
-The *sqlFormula* parameter can use references to 4D expressions. The syntax to use is the same as for the integrated SQL commands or the code included between the [Begin SQL](begin-sql.md)/[End SQL](end-sql.md) tags, i.e.: *<<MyVar>>* or *:MyVar*.
+The *sqlFormula* parameter can use references to 4D expressions. The syntax to use is the same as for the integrated SQL commands or the code included between the [Begin SQL](../commands/begin-sql)/[End SQL](../commands/end-sql) tags, i.e.: *<<MyVar>>* or *:MyVar*.
 
-**Note:** This command is compatible with the [SET QUERY LIMIT](set-query-limit.md) and [SET QUERY DESTINATION](set-query-destination.md) commands.
+**Note:** This command is compatible with the [SET QUERY LIMIT](../commands/set-query-limit) and [SET QUERY DESTINATION](../commands/set-query-destination) commands.
 
 **Reminder:** You cannot have references to local variables in compiled mode. For more information about SQL programming in 4D, refer to the section *Overview of SQL Commands*.   
 
@@ -70,7 +70,7 @@ QUERY BY SQL does not use relations between tables defined in the 4D Structure e
    [People]       Name       City    [Cities]       Name       Population
 ```
 
-Using the [QUERY BY FORMULA](query-by-formula.md) command, you can write:
+Using the [QUERY BY FORMULA](../commands/query-by-formula) command, you can write:
 
 ```4d
  QUERY BY FORMULA([People];[Cities]Population>1000)
@@ -82,7 +82,7 @@ Using QUERY BY SQL, you must write the following statement, regardless of whethe
  QUERY BY SQL([People];"people.city=cities.name AND cities.population>1000")
 ```
 
-**Note:** QUERY BY SQL handles One-to-Many and Many-to-Many relations differently than [QUERY BY FORMULA](query-by-formula.md).
+**Note:** QUERY BY SQL handles One-to-Many and Many-to-Many relations differently than [QUERY BY FORMULA](../commands/query-by-formula).
 
 ## Example 1 
 
@@ -141,7 +141,7 @@ This example shows a query using related tables in 4D. In SQL you should use a J
 ```
 
 There is a Many-to-One relation from \[Lines\_Invoices\]ID\_Inv to \[Invoices\]ID\_Inv.  
-Using the [QUERY BY FORMULA](query-by-formula.md) command, you could write:
+Using the [QUERY BY FORMULA](../commands/query-by-formula) command, you could write:
 
 ```4d
  QUERY BY FORMULA([Lines_Invoices];([Lines_Invoices]Code="FX-200") & (Month of([Invoices]Date_Inv)=4))
@@ -163,11 +163,11 @@ When using the **QUERY BY SQL** command:
 
 ## System variables and sets 
 
-If the format of the search condition is correct, the system variable OK is set to 1\. Otherwise, it is set to 0, the result of the command is an empty selection and an error is returned. This error can be intercepted by a method installed using the [ON ERR CALL](on-err-call.md) command.
+If the format of the search condition is correct, the system variable OK is set to 1\. Otherwise, it is set to 0, the result of the command is an empty selection and an error is returned. This error can be intercepted by a method installed using the [ON ERR CALL](../commands/on-err-call) command.
 
 ## See also 
 
-[QUERY BY FORMULA](query-by-formula.md)  
+[QUERY BY FORMULA](../commands/query-by-formula)  
 
 ## Properties
 

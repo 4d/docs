@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-append-xml-child-node
 title: DOM Append XML child node
 slug: /commands/dom-append-xml-child-node
@@ -155,8 +155,8 @@ If the contents of *childValue* are not valid, an error is returned.
 
 ## See also 
 
-[DOM GET XML CHILD NODES](dom-get-xml-child-nodes.md)  
-[DOM Get XML document ref](dom-get-xml-document-ref.md)  
+[DOM GET XML CHILD NODES](../commands/dom-get-xml-child-nodes)  
+[DOM Get XML document ref](../commands/dom-get-xml-document-ref)  
 
 ## Properties
 

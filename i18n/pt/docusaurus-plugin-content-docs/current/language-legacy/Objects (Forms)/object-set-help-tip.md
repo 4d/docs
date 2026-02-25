@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-help-tip
 title: OBJECT SET HELP TIP
 slug: /commands/object-set-help-tip
@@ -40,14 +40,14 @@ Passe o conteúdo da mensagem no parâmetro *mensagemAjuda*. Pode passar:
 * uma cadeia de caracteres, por exemplo "Utilize ele / como separador",
 * uma cadeia vazia "" para eliminar o mensagem de ajuda,
 
-Quando o formulário executa-se, as mensagens de ajuda aparecem como mensagens de ajuda quando o cursor passa sobre o campo de objeto. Os mensagens de ajuda também podem definir-se utilizando Tips delay e os seletores do comando [SET DATABASE PARAMETER](set-database-parameter.md). 
+Quando o formulário executa-se, as mensagens de ajuda aparecem como mensagens de ajuda quando o cursor passa sobre o campo de objeto. Os mensagens de ajuda também podem definir-se utilizando Tips delay e os seletores do comando [SET DATABASE PARAMETER](../commands/set-database-parameter). 
 
 Quando aparece uma mensagem de ajuda, chamando ao comando **OBJECT SET HELP TIP** se fecha, abre uma nova mensagem no local do mouse e reinicia o contador Tips duration, permitindo o manejo dinâmico das sugestões. 
 
 **Notas:** 
 
 * O conteúdo da mensagem de ajuda também pode ser definida utilizando o editor de formulários (ver *Controles de entrada de dados e ajuda de entrada*) e o editor de estrutura (ver *Propriedades Campo*) em modo Desenho.
-* Os conselhos de ajuda podem ser desativados globalmente para a aplicação utilizando o seletor Tips enabled do comando [SET DATABASE PARAMETER](set-database-parameter.md).
+* Os conselhos de ajuda podem ser desativados globalmente para a aplicação utilizando o seletor Tips enabled do comando [SET DATABASE PARAMETER](../commands/set-database-parameter).
   
 ## Exemplo 1 
 
@@ -141,8 +141,8 @@ O resultado é...
 
 ## Ver também 
 
-[OBJECT Get help tip](object-get-help-tip.md)  
-[SET DATABASE PARAMETER](set-database-parameter.md)  
+[OBJECT Get help tip](../commands/object-get-help-tip)  
+[SET DATABASE PARAMETER](../commands/set-database-parameter)  
 
 ## Propriedades
 

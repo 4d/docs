@@ -1,4 +1,4 @@
----
+﻿---
 id: set-update-folder
 title: SET UPDATE FOLDER
 slug: /commands/set-update-folder
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.SET UPDATE FOLDER.Summary-->**SET UPDATE FOLDER**コマンドは、カレントの組み込まれた4Dアプリケーションのアップデート情報を含んだフォルダの場所を指定します。<!-- END REF-->この情報は [RESTART 4D](restart-4d.md)メソッドが呼ばれるまで4Dセッション中は保存されます。アプリケーションが手動で終了した場合、この情報は保存されません。
+<!--REF #_command_.SET UPDATE FOLDER.Summary-->**SET UPDATE FOLDER**コマンドは、カレントの組み込まれた4Dアプリケーションのアップデート情報を含んだフォルダの場所を指定します。<!-- END REF-->この情報は [RESTART 4D](../commands/restart-4d)メソッドが呼ばれるまで4Dセッション中は保存されます。アプリケーションが手動で終了した場合、この情報は保存されません。
 
 このコマンドは組み込みアプリ(サーバーアプリまたはシングルユーザー向けアプリ)の自動アップデート処理において使用されるためのコマンドです。詳細な情報に関しては、デザインリファレンスマニュアルの *アプリケーションの仕上げと展開*のセクションを参照して下さい。
 
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 **Note:** アプリケーションフォルダはアップデートの際に上書きされるため、アプリケーションの新バージョンのファイル名は、オリジナルのものと同じ名前を使用することが推奨されます。異なる名前を使用した場合、保存されたショートカットやパスは全て動かなくなります。
 
-引数が有効であれば、セッション中は [RESTART 4D](restart-4d.md) コマンドが呼び出されるまでアップデートは"on hold"となります。[RESTART 4D](restart-4d.md) を呼び出す前に **SET UPDATE FOLDER**を複数回呼び出した場合、最後の有効な呼び出しのみが有効とみなされます。 
+引数が有効であれば、セッション中は [RESTART 4D](../commands/restart-4d) コマンドが呼び出されるまでアップデートは"on hold"となります。[RESTART 4D](../commands/restart-4d) を呼び出す前に **SET UPDATE FOLDER**を複数回呼び出した場合、最後の有効な呼び出しのみが有効とみなされます。 
 
 例外が起きた場合にはエラーが生成されます。 *silentErrors* 引数によってこのエラーを表示するかどうかを指定することが出来ます(以下を参照)。
 
@@ -49,9 +49,9 @@ displayed_sidebar: docs
 * **False** を渡すかこの引数を省略した場合、エラーはアップデートジャーナルに記録され、警告ダイアログボックス内にその旨が表示されます。
 * **True** を渡した場合、エラーはアップデートジャーナルに記録され、表示はされません。
 
-例外: ジャーナルファイルが作成できないときには、 *silentErrors* 引数の値に関わらず警告ダイアログボックスが表示されます。詳細な情報に関しては、 [Get last update log path](last-update-log-path.md) コマンドの詳細を参照して下さい。
+例外: ジャーナルファイルが作成できないときには、 *silentErrors* 引数の値に関わらず警告ダイアログボックスが表示されます。詳細な情報に関しては、 [Get last update log path](../commands/last-update-log-path) コマンドの詳細を参照して下さい。
 
-コマンドが正常に実行された場合には、OKシステム変数は1に設定されます。それ以外の場合は0に設定されます。このコマンドによって生成されたエラーはどれも [ON ERR CALL](on-err-call.md)コマンドを使用して実装されたメソッドによって割り込み可能です。
+コマンドが正常に実行された場合には、OKシステム変数は1に設定されます。それ以外の場合は0に設定されます。このコマンドによって生成されたエラーはどれも [ON ERR CALL](../commands/on-err-call)コマンドを使用して実装されたメソッドによって割り込み可能です。
 
 ## 例題 
 
@@ -67,8 +67,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Get last update log path](last-update-log-path.md)  
-[RESTART 4D](restart-4d.md)  
+[Get last update log path](../commands/last-update-log-path)  
+[RESTART 4D](../commands/restart-4d)  
 
 ## プロパティ
 

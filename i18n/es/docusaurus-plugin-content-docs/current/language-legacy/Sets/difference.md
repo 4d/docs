@@ -1,4 +1,4 @@
----
+﻿---
 id: difference
 title: DIFFERENCE
 slug: /commands/difference
@@ -54,8 +54,8 @@ Al final de la lista de registros hay un botón con un método de objeto. El mé
 
 ## Ver también 
 
-[INTERSECTION](intersection.md)  
-[UNION](union.md)  
+[INTERSECTION](../commands/intersection)  
+[UNION](../commands/union)  
 
 ## Propiedades
 

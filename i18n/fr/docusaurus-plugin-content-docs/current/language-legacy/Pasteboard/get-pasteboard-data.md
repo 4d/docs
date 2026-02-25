@@ -1,4 +1,4 @@
----
+﻿---
 id: get-pasteboard-data
 title: GET PASTEBOARD DATA
 slug: /commands/get-pasteboard-data
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 Passez dans *typeDonnées* une valeur définissant le type de données à extraire. Vous pouvez passer une signature 4D, un type UTI (macOS), un nom/numéro de format (Windows), ou un type de 4 caractères (compatibilité). Pour plus d'informations sur ces types, reportez-vous à la section *Gestion du conteneur de données*. 
 
-**Note :** Il n'est pas possible de lire les données de type fichier avec cette commande, pour cela vous devez utiliser la commande [Get file from pasteboard](get-file-from-pasteboard.md). 
+**Note :** Il n'est pas possible de lire les données de type fichier avec cette commande, pour cela vous devez utiliser la commande [Get file from pasteboard](../commands/get-file-from-pasteboard). 
 
 ## Exemple 
 
@@ -63,9 +63,9 @@ Si les données sont extraites correctement, la variable OK prend la valeur 1\. 
 
 ## Voir aussi 
 
-[APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
-[GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
-[Get text from pasteboard](get-text-from-pasteboard.md)  
+[APPEND DATA TO PASTEBOARD](../commands/append-data-to-pasteboard)  
+[GET PICTURE FROM PASTEBOARD](../commands/get-picture-from-pasteboard)  
+[Get text from pasteboard](../commands/get-text-from-pasteboard)  
 
 ## Propriétés
 

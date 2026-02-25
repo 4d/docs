@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-execute-script
 title: SQL EXECUTE SCRIPT
 slug: /commands/sql-execute-script
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 Passez dans le paramètre *cheminScript* le chemin d’accès complet du fichier texte contenant les instructions SQL à exécuter. Le chemin d’accès doit être exprimé à l’aide de syntaxe du système courant. Si vous passez une chaîne vide ("") dans *cheminScript*, une boîte de dialogue standard d’ouverture de documents s’affiche, permettant à l’utilisateur de sélectionner le fichier de script à exécuter. 
 
-**Note :** Les commandes [SQL EXPORT DATABASE](sql-export-database.md) et [SQL EXPORT SELECTION](sql-export-selection.md) génèrent automatiquement ce fichier de script.
+**Note :** Les commandes [SQL EXPORT DATABASE](../commands/sql-export-database) et [SQL EXPORT SELECTION](../commands/sql-export-selection) génèrent automatiquement ce fichier de script.
 
 Le paramètre *actionErreur* vous permet de paramétrer le fonctionnement de la commande lorsqu’elle rencontre une erreur au cours de l’exécution du script. Vous pouvez passer l’une des trois constantes ci-dessous, placées dans le thème *SQL* :
 
@@ -52,7 +52,7 @@ Les paramètres *nomAttribut* et *valAttribut* doivent être passés par paires.
 | --------------------- | ------ | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | SQL use access rights | Chaîne | SQL\_Use\_Access\_Rights | Permet de restreindre les droits d’accès à appliquer lors de l’exécution des commandes SQL du script. Lorsque vous utilisez cet attribut, vous devez passer 0 ou 1 dans *valAttribut* :<br/>*valAttribut* \= 1 : 4D utilise les droits d’accès de l’utilisateur 4D courant. *valAttribut* \= 0 (ou attribut non défini) : 4D ne restreint pas les accès, les droits du Super\_Utilisateur sont utilisés. |
 
-Si le fichier d’enregistrement des requêtes de 4D est activé (via les sélecteurs 28 ou 45 de la commande [SET DATABASE PARAMETER](set-database-parameter.md)), chaque commande SQL exécutée génèrera une entrée avec les informations suivantes :
+Si le fichier d’enregistrement des requêtes de 4D est activé (via les sélecteurs 28 ou 45 de la commande [SET DATABASE PARAMETER](../commands/set-database-parameter)), chaque commande SQL exécutée génèrera une entrée avec les informations suivantes :
 
 * Type de commande SQL
 * Nombre d’enregistrements affectés par la commande

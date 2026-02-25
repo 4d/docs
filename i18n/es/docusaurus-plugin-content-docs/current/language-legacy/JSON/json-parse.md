@@ -1,4 +1,4 @@
----
+﻿---
 id: json-parse
 title: JSON Parse
 slug: /commands/json-parse
@@ -32,12 +32,12 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.JSON Parse.Summary-->El comando **JSON Parse** analiza el contenido de una cadena con formato JSON y extrae los valores que puede almacenar en un campo o variable 4D.<!-- END REF--> Este comando deserializa los datos JSON, realiza la acción inversa del comando [JSON Stringify](json-stringify.md).  
+<!--REF #_command_.JSON Parse.Summary-->El comando **JSON Parse** analiza el contenido de una cadena con formato JSON y extrae los valores que puede almacenar en un campo o variable 4D.<!-- END REF--> Este comando deserializa los datos JSON, realiza la acción inversa del comando [JSON Stringify](../commands/json-stringify).  
   
 En *cadenaJSON*, pase la cadena con formato JSON cuyo contenido desea analizar. Esta cadena debe tener el formato correcto, de lo contrario se genera un error de análisis.  
 **JSON Parse** por lo tanto puede ser utilizado para validar cadenas JSON.   
   
-**Nota**: si utiliza punteros, debe llamar al comando [JSON Stringify](json-stringify.md) antes de llamar a **JSON Parse**.  
+**Nota**: si utiliza punteros, debe llamar al comando [JSON Stringify](../commands/json-stringify) antes de llamar a **JSON Parse**.  
   
 Por defecto, si se omite el parámetro *tipo*, 4D intentará convertir el valor obtenido en el tipo de la variable o del campo que se utiliza para almacenar los resultados (si se ha definido). De lo contrario, 4D intenta deducir su tipo. También puede forzar la interpretación del tipo pasando el parámetro *tipo*: pase una de las siguientes constantes, disponibles en el tema *Tipos de campos y variables*:
 
@@ -56,7 +56,7 @@ Por defecto, si se omite el parámetro *tipo*, 4D intentará convertir el valor 
 **Notas**:
 * Los valores de tipo Real deben ser incluidos en el rango ± 10.421e±10
 * En los valores de tipo de texto, todos los caracteres especiales deben ser escapados, incluyendo las comillas (ver ejemplos)
-* Por defecto cuando se utiliza la constante Is date, el comando considera que una cadena fecha contiene una hora local y no GMT. Puede modificar esta configuración utilizando el selector Dates inside objects del comando [SET DATABASE PARAMETER](set-database-parameter.md).
+* Por defecto cuando se utiliza la constante Is date, el comando considera que una cadena fecha contiene una hora local y no GMT. Puede modificar esta configuración utilizando el selector Dates inside objects del comando [SET DATABASE PARAMETER](../commands/set-database-parameter).
 * A partir de 4D v16 R6, si la configuración de almacenamiento de fecha actual es "tipo fecha", las cadenas fecha JSON en formato "AAAA-MM-DD" son devueltas automáticamente como valores fecha por el comando **JSON Parse**. Para más información sobre esta configuración, consulte la opción "Utilizar tipo fecha en lugar de formato fecha ISO en objetos" en *Página Compatibilidad*.
 * Un valor de tipo hora se pueden devolver a partir de números en cadenas. Por defecto, 4D considera que el valor es un número de segundos.
 
@@ -134,7 +134,7 @@ Si la configuración de almacenamiento de fecha actual es "tipo fecha", puede es
 
 ## Ejemplo 4 
 
-Este ejemplo muestra el uso combinado de los comandos [JSON Stringify](json-stringify.md) y **JSON Parse**:
+Este ejemplo muestra el uso combinado de los comandos [JSON Stringify](../commands/json-stringify) y **JSON Parse**:
 
 ```4d
  var $JSONContact : Text
@@ -200,8 +200,8 @@ beta[1].golf:{line:10,offset:12}}}
 
 ## Ver también 
 
-[JSON PARSE ARRAY](json-parse-array.md)  
-[JSON Stringify](json-stringify.md)  
+[JSON PARSE ARRAY](../commands/json-parse-array)  
+[JSON Stringify](../commands/json-stringify)  
 [JSON Validate](../commands/json-validate)  
 *Tipos de campos y variables*  
 

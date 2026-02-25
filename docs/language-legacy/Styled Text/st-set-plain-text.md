@@ -1,4 +1,4 @@
----
+﻿---
 id: st-set-plain-text
 title: ST SET PLAIN TEXT
 slug: /commands/st-set-plain-text
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST SET PLAIN TEXT.Summary-->The ST SET PLAIN TEXT command inserts the text passed in the *newText* parameter into the styled text field or variable designated by the *object* parameter.<!-- END REF--> This command only applies to the plain text of the*object* parameter, without modifying any style tags that it contains. 
 
-Unlike the [ST SET TEXT](st-set-text.md) command, ST SET PLAIN TEXT only inserts plain text. You must not pass text with style tags in *newText*. If it contains the <, > or & characters, they are considered as standard characters and converted into HTML entities:
+Unlike the [ST SET TEXT](../commands/st-set-text) command, ST SET PLAIN TEXT only inserts plain text. You must not pass text with style tags in *newText*. If it contains the <, > or & characters, they are considered as standard characters and converted into HTML entities:
 
 * '&' is converted to &amp;
 * '<' is converted to &lt;
@@ -77,7 +77,7 @@ Given the following rich text (multi-style) variable:
 
 ![](../../assets/en/commands/pict572269.en.png)
 
-You want to insert company names that are stored in a text field. These names can contain, for example, the "&" character. In this case, you will need to use the [ST SET PLAIN TEXT](st-set-plain-text.md) command:
+You want to insert company names that are stored in a text field. These names can contain, for example, the "&" character. In this case, you will need to use the [ST SET PLAIN TEXT](../commands/st-set-plain-text) command:
 
 ```4d
  ST SET PLAIN TEXT(myStyledText;[Company]Name;33;34)
@@ -93,7 +93,7 @@ Here is the plain text contained in the variable:
 
 You can see that the inserted text was enclosed within an additional pair of style tags. These tags correspond to the style of the characters before they were inserted. This mechanism is a way of guaranteeing the correct display of rich text fields in all cases. 
 
-**Note:** If you had used the [ST SET TEXT](st-set-text.md) command in this case, 4D would not have inserted anything because the presence of the non-encoded "&" character would prevent the interpretation of the style tags found in the variable. For more information, refer to the description of this command. 
+**Note:** If you had used the [ST SET TEXT](../commands/st-set-text) command in this case, 4D would not have inserted anything because the presence of the non-encoded "&" character would prevent the interpretation of the style tags found in the variable. For more information, refer to the description of this command. 
 
 ## System variables and sets 
 
@@ -103,8 +103,8 @@ In the case of an error, the variable is not changed. When an error occurs on a 
 
 ## See also 
 
-[ST Get plain text](st-get-plain-text.md)  
-[ST SET TEXT](st-set-text.md)  
+[ST Get plain text](../commands/st-get-plain-text)  
+[ST SET TEXT](../commands/st-set-text)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: receive-packet
 title: RECEIVE PACKET
 slug: /commands/receive-packet
@@ -33,13 +33,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RECEIVE PACKET.Summary-->RECEIVE PACKET lê caracteres a partir de uma porta serial ou de um documento.<!-- END REF-->
 
-Se *docRef* é especificado, este comando recupera dados de um documento aberto, usando [Open document](open-document.md), [Create document](create-document.md) ou [Append document](append-document.md). Se *docRef* for omitido, o comando recupera dados da porta serial ou o documento aberto usando [SET CHANNEL](set-channel.md).
+Se *docRef* é especificado, este comando recupera dados de um documento aberto, usando [Open document](../commands/open-document), [Create document](../commands/create-document) ou [Append document](../commands/append-document). Se *docRef* for omitido, o comando recupera dados da porta serial ou o documento aberto usando [SET CHANNEL](../commands/set-channel).
 
-Seja qual for a fonte, os caracteres lidos são retornados em *receiveVar*, que deve ser um texto, String ou variável BLOB. Se os caracteres foram enviados pelo comando [SEND PACKET](send-packet.md), o tipo deve corresponder ao do pacote enviado. 
+Seja qual for a fonte, os caracteres lidos são retornados em *receiveVar*, que deve ser um texto, String ou variável BLOB. Se os caracteres foram enviados pelo comando [SEND PACKET](../commands/send-packet), o tipo deve corresponder ao do pacote enviado. 
 
 **Notas:**
 
-* Quando o pacote recebido é do tipo BLOB, o comando não leva em conta qualquer conjunto de caracteres definido pelo comando [USE CHARACTER SET](use-character-set.md). O BLOB é retornado sem nenhuma modificação
+* Quando o pacote recebido é do tipo BLOB, o comando não leva em conta qualquer conjunto de caracteres definido pelo comando [USE CHARACTER SET](../commands/use-character-set). O BLOB é retornado sem nenhuma modificação
 * Quando o pacote recebido é do tipo texto, o comando RECEIVE PACKET suporta Byte Order Marks (BOM). Neste caso, se o conjunto de caracteres atual é do tipo Unicode (UTF-8, UTF-16 ou UTF-32), 4D tenta identificar um BOM entre os primeiros bytes recebidos. Se algum for detectado, ele é filtrado da variável *receiveVar* e 4D usa o conjunto de caracteres que define, em vez do conjunto de caracteres atual.
 
 Para ler um determinado número de caracteres, passe este número em *numBytes*. Se a variável *receiveVar* é do tipo de texto, em uma única chamada você pode ler até 2 GB de texto (valor teórico). 
@@ -49,13 +49,13 @@ Para receber dados até que uma cadeia particular (composta por um ou mais carac
 Neste caso, se a seqüência de caracteres especificada pelo *stopChar* não é encontrada:
 
 * Quando RECEIVE PACKET estiver lendo um documento, ele irá parar de ler no final do documento.
-* Quando RECEIVE PACKET estiver lendo a partir de uma porta serial, ele vai tentar esperar indefinidamente até que o tempo limite (se houver) haja decorrido (ver [SET TIMEOUT](set-timeout.md)) ou até que o usuário interrompa a recepção (veja abaixo).
+* Quando RECEIVE PACKET estiver lendo a partir de uma porta serial, ele vai tentar esperar indefinidamente até que o tempo limite (se houver) haja decorrido (ver [SET TIMEOUT](../commands/set-timeout)) ou até que o usuário interrompa a recepção (veja abaixo).
 
-Durante a execução do RECEIVE PACKET, o usuário pode interromper a recepção pressionando Ctrl-Alt-Shift (Windows) ou Command + Option + Shift (Macintosh). Esta interrupção gera um erro -9994, que você pode pegar com um método de tratamento de erros instalado usando [ON ERR CALL](on-err-call.md). Normalmente, você só terá de lidar com a interrupção de uma recepção na comunicação através de uma porta serial.
+Durante a execução do RECEIVE PACKET, o usuário pode interromper a recepção pressionando Ctrl-Alt-Shift (Windows) ou Command + Option + Shift (Macintosh). Esta interrupção gera um erro -9994, que você pode pegar com um método de tratamento de erros instalado usando [ON ERR CALL](../commands/on-err-call). Normalmente, você só terá de lidar com a interrupção de uma recepção na comunicação através de uma porta serial.
 
 Ao ler um documento, o primeiro RECEIVE PACKET começa a ler no início do documento. A leitura de cada pacote subseqüente começa no caractere após o último byte lido.
 
-**Nota:** Este comando é útil para um documento aberto com [SET CHANNEL](set-channel.md). Por outro lado, para um documento aberto com o [Open document](open-document.md), [Create document](create-document.md) ou [Append document](append-document.md) você pode usar os comandos [Get document position](get-document-position.md) e [SET DOCUMENT POSITION](set-document-position.md) para obter e alterar o local no documento onde acontecerá a próxima escrita ([SEND PACKET](send-packet.md)) ou leitura (RECEIVE PACKET).
+**Nota:** Este comando é útil para um documento aberto com [SET CHANNEL](../commands/set-channel). Por outro lado, para um documento aberto com o [Open document](../commands/open-document), [Create document](../commands/create-document) ou [Append document](../commands/append-document) você pode usar os comandos [Get document position](../commands/get-document-position) e [SET DOCUMENT POSITION](../commands/set-document-position) para obter e alterar o local no documento onde acontecerá a próxima escrita ([SEND PACKET](../commands/send-packet)) ou leitura (RECEIVE PACKET).
 
 Ao tentar ler após o final de um arquivo, RECEIVE PACKET retornará os dados lidos até aquele ponto e a variável OK será definido como 1\. Então, o próximo RECEIVE PACKET irá retornar uma string vazia e definir a variável OK para zero.
 
@@ -123,12 +123,12 @@ Depois de um chamado a RECEIVE PACKET, a variável sistema OK recebe o valor 1 s
 
 ## Ver também 
 
-[Get document position](get-document-position.md)  
-[RECEIVE BUFFER](receive-buffer.md)  
-[SEND PACKET](send-packet.md)  
-[SET DOCUMENT POSITION](set-document-position.md)  
-[SET TIMEOUT](set-timeout.md)  
-[USE CHARACTER SET](use-character-set.md)  
+[Get document position](../commands/get-document-position)  
+[RECEIVE BUFFER](../commands/receive-buffer)  
+[SEND PACKET](../commands/send-packet)  
+[SET DOCUMENT POSITION](../commands/set-document-position)  
+[SET TIMEOUT](../commands/set-timeout)  
+[USE CHARACTER SET](../commands/use-character-set)  
 
 ## Propriedades
 

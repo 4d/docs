@@ -1,4 +1,4 @@
----
+﻿---
 id: get-user-properties
 title: GET USER PROPERTIES
 slug: /commands/get-user-properties
@@ -35,16 +35,16 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.GET USER PROPERTIES.Summary-->**GET USER PROPERTIES** devuelve la información sobre el usuario cuyo número de referencia se pasa en el parámetro *refUsuario*.<!-- END REF--> Debe pasar un número de referencia de usuario devuelto por el comando [GET USER LIST](get-user-list.md).
+<!--REF #_command_.GET USER PROPERTIES.Summary-->**GET USER PROPERTIES** devuelve la información sobre el usuario cuyo número de referencia se pasa en el parámetro *refUsuario*.<!-- END REF--> Debe pasar un número de referencia de usuario devuelto por el comando [GET USER LIST](../commands/get-user-list).
 
-Si la cuenta de usuario no existe o ha sido borrada, se genera el error -9979\. Puede interceptar este error con un método de gestión de errores instalado por [ON ERR CALL](on-err-call.md). Sino, puede llamar [Is user deleted](is-user-deleted.md) para probar la cuenta de usuario antes de llamar **GET USER PROPERTIES**.
+Si la cuenta de usuario no existe o ha sido borrada, se genera el error -9979\. Puede interceptar este error con un método de gestión de errores instalado por [ON ERR CALL](../commands/on-err-call). Sino, puede llamar [Is user deleted](../commands/is-user-deleted) para probar la cuenta de usuario antes de llamar **GET USER PROPERTIES**.
 
 Después de la llamada, recupera el nombre, método de inicio, número de usos y la fecha de la última utilización de la base en los parámetros *nombre*, *inicio*, *nbLogin* y *ultimoLogin*.
 
 **Notas:** 
 
 * Los parámetros *nbLogin* y *ultimoLogin* se utilizan solo en bases binarias. Siempre devuelven respectivamente 0 y 00/00/00 en las bases proyecto.
-* el parámetro *contraseña* es obsoleto (siempre devuelve una cadena vacía). Si desea verificar la contraseña de un usuario, utilice la función [Validate password](validate-password.md).
+* el parámetro *contraseña* es obsoleto (siempre devuelve una cadena vacía). Si desea verificar la contraseña de un usuario, utilice la función [Validate password](../commands/validate-password).
 
 Si pasa el parámetro opcional *membresias*, recupera los números de referencia únicos de los grupos a los cuales pertenece el usuario.
 
@@ -60,11 +60,11 @@ Si no tiene privilegios de acceso para llamar al comando GET USER PROPERTIES o s
 
 ## Ver también 
 
-[GET GROUP LIST](get-group-list.md)  
-[GET USER LIST](get-user-list.md)  
-[Is user deleted](is-user-deleted.md)  
-[Set user properties](set-user-properties.md)  
-[Validate password](validate-password.md)  
+[GET GROUP LIST](../commands/get-group-list)  
+[GET USER LIST](../commands/get-user-list)  
+[Is user deleted](../commands/is-user-deleted)  
+[Set user properties](../commands/set-user-properties)  
+[Validate password](../commands/validate-password)  
 
 ## Propiedades
 

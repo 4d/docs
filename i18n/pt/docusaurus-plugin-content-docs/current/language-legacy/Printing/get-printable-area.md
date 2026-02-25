@@ -1,4 +1,4 @@
----
+﻿---
 id: get-printable-area
 title: GET PRINTABLE AREA
 slug: /commands/get-printable-area
@@ -32,13 +32,13 @@ displayed_sidebar: docs
 
 O tamanho devolvido não varia de uma página a outra (depois de um salto de página, por exemplo). 
 
-Associado ao comando [Get printed height](get-printed-height.md), este comando é útil para conhecer o número de píxels disponíveis para a impressão ou para centrar um objeto na página. 
+Associado ao comando [Get printed height](../commands/get-printed-height), este comando é útil para conhecer o número de píxels disponíveis para a impressão ou para centrar um objeto na página. 
 
-**Nota:** para maior informação sobre gestão de impressão e terminologia em 4D, consulte a descrição do comando [GET PRINTABLE MARGIN](get-printable-margin.md). 
+**Nota:** para maior informação sobre gestão de impressão e terminologia em 4D, consulte a descrição do comando [GET PRINTABLE MARGIN](../commands/get-printable-margin). 
 
 Para saber o tamanho total da página, pode:
 
-* adicionar as margens oferecidas pelo comando [GET PRINTABLE MARGIN](get-printable-margin.md) aos valores devolvidos por este comando.
+* adicionar as margens oferecidas pelo comando [GET PRINTABLE MARGIN](../commands/get-printable-margin) aos valores devolvidos por este comando.
 * ou utilizar a seguinte sintaxe:
 
 ```4d
@@ -48,7 +48,7 @@ Para saber o tamanho total da página, pode:
 
 ## Ver também 
 
-[GET PRINTABLE MARGIN](get-printable-margin.md)  
+[GET PRINTABLE MARGIN](../commands/get-printable-margin)  
 [Print form](../commands/print-form)  
 
 ## Propriedades

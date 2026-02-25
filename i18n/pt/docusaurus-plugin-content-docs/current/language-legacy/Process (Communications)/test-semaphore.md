@@ -1,4 +1,4 @@
----
+﻿---
 id: test-semaphore
 title: Test semaphore
 slug: /commands/test-semaphore
@@ -52,8 +52,8 @@ O exemplo a seguir lhe permite conhecer o estado de um processo (em nosso caso, 
 
 ## Ver também 
 
-[CLEAR SEMAPHORE](clear-semaphore.md)  
-[Semaphore](semaphore.md)  
+[CLEAR SEMAPHORE](../commands/clear-semaphore)  
+[Semaphore](../commands/semaphore)  
 
 ## Propriedades
 

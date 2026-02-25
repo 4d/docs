@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-list-name
 title: OBJECT Get list name
 slug: /commands/object-get-list-name
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.OBJECT Get list name.Summary-->OBJECT Get list name コマンドは *object*で指定されたオブジェクトまたはオブジェクトグループに割り当てられた選択リストの名前を返します。<!-- END REF--> 4Dではフォームエディタあるいは [OBJECT SET LIST BY NAME](object-set-list-by-name.md) コマンドを使用してフォームオブジェクトに (デザインモードのリストエディタで作成された) 選択リストを割り当てることができます。
+<!--REF #_command_.OBJECT Get list name.Summary-->OBJECT Get list name コマンドは *object*で指定されたオブジェクトまたはオブジェクトグループに割り当てられた選択リストの名前を返します。<!-- END REF--> 4Dではフォームエディタあるいは [OBJECT SET LIST BY NAME](../commands/object-set-list-by-name) コマンドを使用してフォームオブジェクトに (デザインモードのリストエディタで作成された) 選択リストを割り当てることができます。
 
 オプションの *\** 引数を渡すと、*object*引数はオブジェクト名 (文字) です。この引数を渡さないと、*object*はフィールドまたは変数です。この場合、文字ではなくフィールドまたは変数への参照 (フィールドまたは変数オブジェクトのみ) を渡します。
 
@@ -48,8 +48,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT Get list reference](object-get-list-reference.md)  
-[OBJECT SET LIST BY NAME](object-set-list-by-name.md)  
+[OBJECT Get list reference](../commands/object-get-list-reference)  
+[OBJECT SET LIST BY NAME](../commands/object-set-list-by-name)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: create-document
 title: Create document
 slug: /commands/create-document
@@ -46,9 +46,9 @@ Sous Windows, vous pouvez passer une extension de fichier Windows ou un type de 
 
 Si le document est correctement créé et ouvert, **Create document** retourne sa référence de document et la variable système OK prend la valeur 1\. La variable système Document est mise à jour et retourne le chemin d’accès complet du document créé. 
 
-Une fois que vous avez créé et ouvert un document, vous pouvez écrire ou lire des valeurs dans ce document à l'aide des commandes [RECEIVE PACKET](receive-packet.md) et [SEND PACKET](send-packet.md), que vous pouvez combiner avec les commandes [Get document position](get-document-position.md) et [SET DOCUMENT POSITION](set-document-position.md) pour accéder directement à certains endroits du document. 
+Une fois que vous avez créé et ouvert un document, vous pouvez écrire ou lire des valeurs dans ce document à l'aide des commandes [RECEIVE PACKET](../commands/receive-packet) et [SEND PACKET](../commands/send-packet), que vous pouvez combiner avec les commandes [Get document position](../commands/get-document-position) et [SET DOCUMENT POSITION](../commands/set-document-position) pour accéder directement à certains endroits du document. 
 
-N'oubliez pas d'appeler finalement [CLOSE DOCUMENT](close-document.md) pour le document. 
+N'oubliez pas d'appeler finalement [CLOSE DOCUMENT](../commands/close-document) pour le document. 
 
 ## Exemple 1 
 
@@ -79,8 +79,8 @@ Si le document est correctement créé, la variable système OK prend la valeur 
 
 ## Voir aussi 
 
-[Append document](append-document.md)  
-[Open document](open-document.md)  
+[Append document](../commands/append-document)  
+[Open document](../commands/open-document)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-pointer
 title: OBJECT Get pointer
 slug: /commands/object-get-pointer
@@ -35,9 +35,9 @@ displayed_sidebar: docs
 このコマンドを使用して、*selector*引数の値に基づき、異なるオブジェクトを指定できます。この引数には*Form Objects (Access)*テーマの定数を渡します:
 
 * Object current (*selector*省略時のデフォルト): このセレクタを渡すか*selector*引数を省略した場合、コマンドはカレントオブジェクト (メソッドを実行しているオブジェクト) に割り当てられた変数へのポインタを返します。  
-**注:** これは以前の[Self](self.md)コマンドとまったく同じ動作です。[Self](self.md)コマンドは互換性の目的でのみ保持されています。
+**注:** これは以前の[Self](../commands/self)コマンドとまったく同じ動作です。[Self](../commands/self)コマンドは互換性の目的でのみ保持されています。
 * Object with focus: このセレクタを渡すと、コマンドはフォーム内でフォーカスを持つオブジェクトに割り当てられた変数へのポインタを返します。残り2つのオプション引数は渡されても無視されます。  
-**注** **:** これは完全に[Focus object](focus-object.md)コマンドと同じ動作です。[Focus object](focus-object.md)コマンドは4D v12で廃止予定となりました。
+**注** **:** これは完全に[Focus object](../commands/focus-object)コマンドと同じ動作です。[Focus object](../commands/focus-object)コマンドは4D v12で廃止予定となりました。
 * Object subform container: このセレクタを渡すと、コマンドはサブフォームコンテナにバインドされた変数へのポインタを返します。残り2つのオプション引数は渡されても無視されます。つまりこのセレクタは、コンテナオブジェクトにバインドされた変数にアクセスするために、サブフォームとして使用されるフォームのコンテキストでのみ利用できます。
 * Object named: このセレクタを渡す場合、2番目の*objectName*引数も渡さなければなりません。この場合、コマンドはこの引数に渡された名前を持つオブジェクトに割り当てられた変数へのポインタを返します。  
 **注** **:** *objectName* がサブフォームに対応し、"一覧サブフォーム"オプションがチェックされていると、コマンドはソーステーブルが指定されていればサブフォームのテーブルへのポインタを返します。そうでなければNilを返します。
@@ -61,11 +61,11 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Focus object](focus-object.md)  
+[Focus object](../commands/focus-object)  
 *Form Objects (Access)*  
-[OBJECT Get name](object-get-name.md)  
-[OBJECT Get subform container value](object-get-subform-container-value.md)  
-[Self](self.md)  
+[OBJECT Get name](../commands/object-get-name)  
+[OBJECT Get subform container value](../commands/object-get-subform-container-value)  
+[Self](../commands/self)  
 *オブジェクト(フォーム)*  
 
 ## プロパティ

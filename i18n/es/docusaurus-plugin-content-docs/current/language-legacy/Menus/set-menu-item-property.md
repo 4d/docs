@@ -1,4 +1,4 @@
----
+﻿---
 id: set-menu-item-property
 title: SET MENU ITEM PROPERTY
 slug: /commands/set-menu-item-property
@@ -53,7 +53,7 @@ En el caso de la propiedad Associated standard action, puede pasar en el paráme
     
 **Nota de compatibilidad:** en versiones anteriores, las constantes del tema *Valores para acción estándar asociada* se utilizaron en el parámetro *valor* (Entero largo). A partir de 4D v16 R3, son obsoletas, pero aún son soportadas por compatibilidad.  
 **Nota:** si la línea de menú corresponde al título de un submenú jerárquico, la acción estándar no se llamará cuando se seleccione la línea de menú.
-* **Propiedad personalizada**: en *propiedad*, puede pasar todo texto personalizado y asociar un *valor* de tipo texto, numérico o booleano. Este *valor* será almacenado con el elemento y puede ser recuperado utilizando el comando [GET MENU ITEM PROPERTY](get-menu-item-property.md). En el parámetro *propiedad* puede utilizar toda cadena personalizada, simplemente asegúrese de utilizar un título utilizado por 4D (por convención, las propiedades definidas por 4D comienzan por “4D\_”).
+* **Propiedad personalizada**: en *propiedad*, puede pasar todo texto personalizado y asociar un *valor* de tipo texto, numérico o booleano. Este *valor* será almacenado con el elemento y puede ser recuperado utilizando el comando [GET MENU ITEM PROPERTY](../commands/get-menu-item-property). En el parámetro *propiedad* puede utilizar toda cadena personalizada, simplemente asegúrese de utilizar un título utilizado por 4D (por convención, las propiedades definidas por 4D comienzan por “4D\_”).
 
 ## Ejemplo
 
@@ -69,8 +69,8 @@ En el caso de la propiedad Associated standard action, puede pasar en el paráme
 
 ## Ver también 
 
-[Dynamic pop up menu](dynamic-pop-up-menu.md)  
-[GET MENU ITEM PROPERTY](get-menu-item-property.md)  
+[Dynamic pop up menu](../commands/dynamic-pop-up-menu)  
+[GET MENU ITEM PROPERTY](../commands/get-menu-item-property)  
 
 ## Propiedades
 

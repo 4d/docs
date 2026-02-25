@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-list-reference
 title: OBJECT Get list reference
 slug: /commands/object-get-list-reference
@@ -47,8 +47,8 @@ Se não há uma lista hierárquica associada ao objeto para o *tipoLista* defini
 
 ## Ver também 
 
-[OBJECT Get list name](object-get-list-name.md)  
-[OBJECT SET LIST BY REFERENCE](object-set-list-by-reference.md)  
+[OBJECT Get list name](../commands/object-get-list-name)  
+[OBJECT SET LIST BY REFERENCE](../commands/object-set-list-by-reference)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: notify-resources-folder-modification
 title: NOTIFY RESOURCES FOLDER MODIFICATION
 slug: /commands/notify-resources-folder-modification
@@ -40,11 +40,11 @@ Sólo la información de modificación es enviada por este comando. Las máquina
 El parámetro actual puede estar definido:
 
 * a nivel global de la base vía el parámetro de las Propiedades de la base. En este caso, se aplica a todos los equipos remotos;
-* localmente, utilizando el comando [SET DATABASE PARAMETER](set-database-parameter.md) ejecutado en el equipo remoto (selector Auto Synchro Resources Folder). En este caso, "invalida" el de la base y se aplica únicamente al equipo remoto para la sesión.
+* localmente, utilizando el comando [SET DATABASE PARAMETER](../commands/set-database-parameter) ejecutado en el equipo remoto (selector Auto Synchro Resources Folder). En este caso, "invalida" el de la base y se aplica únicamente al equipo remoto para la sesión.
 
 ## Ver también 
 
-[Get 4D folder](get-4d-folder.md)  
+[Get 4D folder](../commands/get-4d-folder)  
 
 ## Propiedades
 

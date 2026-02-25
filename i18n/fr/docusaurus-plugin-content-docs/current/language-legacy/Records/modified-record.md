@@ -1,4 +1,4 @@
----
+﻿---
 id: modified-record
 title: Modified record
 slug: /commands/modified-record
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 A noter que cette fonction retourne toujours Vrai dans les contextes suivants :
 
 * l'enregistrement courant est un nouvel enregistrement,
-* après l'exécution des commandes [PUSH RECORD](push-record.md) et [POP RECORD](pop-record.md),
+* après l'exécution des commandes [PUSH RECORD](../commands/push-record) et [POP RECORD](../commands/pop-record),
 * dès qu'une valeur a été affectée à un champ de l'enregistrement, même s'il s'agit d'une valeur identique à la précédente. Par exemple, **Modified record** retourne Vrai après l'exécution de l'instruction suivante :  
 ```4d  
  [Table_1]Champ_1:=[Table_1]Champ_1  
@@ -41,9 +41,9 @@ L'exemple suivant montre une utilisation typique de **Modified record** :
 
 ## Voir aussi 
 
-[Modified](modified.md)  
-[Old](old.md)  
-[SAVE RECORD](save-record.md)  
+[Modified](../commands/modified)  
+[Old](../commands/old)  
+[SAVE RECORD](../commands/save-record)  
 
 ## Propriétés
 

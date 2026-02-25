@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-remove-xml-element
 title: DOM REMOVE XML ELEMENT
 slug: /commands/dom-remove-xml-element
@@ -36,8 +36,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[DOM Create XML element](dom-create-xml-element.md)  
-[DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  
+[DOM Create XML element](../commands/dom-create-xml-element)  
+[DOM REMOVE XML ATTRIBUTE](../commands/dom-remove-xml-attribute)  
 
 ## プロパティ
 

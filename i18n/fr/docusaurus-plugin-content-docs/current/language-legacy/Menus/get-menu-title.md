@@ -1,4 +1,4 @@
----
+﻿---
 id: get-menu-title
 title: Get menu title
 slug: /commands/get-menu-title
@@ -38,7 +38,7 @@ Si vous omettez le paramètre *process*, **Get menu title** s'applique à la bar
 
 ## Voir aussi 
 
-[Count menus](count-menus.md)  
+[Count menus](../commands/count-menus)  
 
 ## Propriétés
 

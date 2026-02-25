@@ -1,4 +1,4 @@
----
+﻿---
 id: resource-list
 title: RESOURCE LIST
 slug: /commands/resource-list
@@ -38,7 +38,7 @@ Si vous passez un numéro de référence de fichier de ressources valide dans le
 
 Si vous ne pré-déclarez pas les tableaux *resNums* et *resNoms* avant d'appeler **RESOURCE LIST**, la commande créera par défaut le tableau *resNums* avec le type Entier long et *resNoms* avec le type Texte. Si vous pré-déclarez les tableaux, vous devez attribuer le type Entier long à *resNums*, mais pouvez attribuer le type Alpha ou Texte à *resNoms*.
 
-Après l'appel, vous pouvez tester le nombre de ressources qui ont été trouvées en appliquant la commande [Size of array](size-of-array.md) au tableau *resNums* ou *resNoms*.
+Après l'appel, vous pouvez tester le nombre de ressources qui ont été trouvées en appliquant la commande [Size of array](../commands/size-of-array) au tableau *resNums* ou *resNoms*.
 
 ## Exemple 1 
 
@@ -80,7 +80,7 @@ L'exemple suivant copie dans la bibliothèque d'images de la base les ressources
 
 ## Voir aussi 
 
-[RESOURCE TYPE LIST](resource-type-list.md)  
+[RESOURCE TYPE LIST](../commands/resource-type-list)  
 
 ## Propriétés
 

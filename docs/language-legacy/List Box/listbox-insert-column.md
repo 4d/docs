@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-insert-column
 title: LISTBOX INSERT COLUMN
 slug: /commands/listbox-insert-column
@@ -52,8 +52,8 @@ Pass the name of the object and the variable of the inserted column in the *colN
 * With an array type list box, the name of the variable must match the name of the array whose contents will be displayed in the column. You can pass a Nil (->\[\]) pointer if you use the command in a dynamic context when the form is executed (see below).
 * With a selection list box, you must pass a field or variable in the *colVariable* parameter. The contents of the column will thus be the value of the field or variable, evaluated for each record of the selection associated with the list box. This type of content can only be used when the “Data Source” property of the list box is Current Selection or Named Selection (see the *Managing List Box Objects* section). You can use fields or variables of the string, number, Date, Time, Picture and Boolean types.
 
-In the context of list boxes based on selections of records, **LISTBOX INSERT COLUMN** can be used to insert simple elements (fields or variables). If you want to handle more complex expressions (such as formulas or methods), you must use the [LISTBOX INSERT COLUMN FORMULA](listbox-insert-column-formula.md) command.   
-Collection or Entity selection type list boxes are also supported, however since the *colName* parameter does not accept expressions, you must use the [LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md) command to assign the data source. It is more accurate to use the [LISTBOX INSERT COLUMN FORMULA](listbox-insert-column-formula.md) command in this case. 
+In the context of list boxes based on selections of records, **LISTBOX INSERT COLUMN** can be used to insert simple elements (fields or variables). If you want to handle more complex expressions (such as formulas or methods), you must use the [LISTBOX INSERT COLUMN FORMULA](../commands/listbox-insert-column-formula) command.   
+Collection or Entity selection type list boxes are also supported, however since the *colName* parameter does not accept expressions, you must use the [LISTBOX SET COLUMN FORMULA](../commands/listbox-set-column-formula) command to assign the data source. It is more accurate to use the [LISTBOX INSERT COLUMN FORMULA](../commands/listbox-insert-column-formula) command in this case. 
 
 **Note:** It is not possible to combine columns of the array type (array data source) and those of the field or variable type (selection data source) in the same list box.
 
@@ -69,7 +69,7 @@ You can use this command to insert columns into list boxes dynamically when the 
 
 To do this, **LISTBOX INSERT COLUMN** accepts a **Nil** (**\->\[\]**) pointer as a value for the *colVariable* (array type list box only), *headerVar* and *footerVar* parameters. In this case, when the command is executed, 4D creates the required variables dynamically (for more information, refer to the section). 
 
-Note that header and footer variables are always created with a specific type (longint and text, respectively). Conversely, column variables cannot be typed when created because list boxes accept different types of arrays for these variables (text array, integer array, and so on). This means you have to set the array type manually (see example 3). It is important to perform this typing before calling commands such as [LISTBOX INSERT ROWS](listbox-insert-rows.md) to insert new elements in the array. Alternatively, you can use [APPEND TO ARRAY](append-to-array.md) both for setting the type of the array and inserting elements. 
+Note that header and footer variables are always created with a specific type (longint and text, respectively). Conversely, column variables cannot be typed when created because list boxes accept different types of arrays for these variables (text array, integer array, and so on). This means you have to set the array type manually (see example 3). It is important to perform this typing before calling commands such as [LISTBOX INSERT ROWS](../commands/listbox-insert-rows) to insert new elements in the array. Alternatively, you can use [APPEND TO ARRAY](../commands/append-to-array) both for setting the type of the array and inserting elements. 
 
 ## Example 1 
 
@@ -110,8 +110,8 @@ You want to insert a column dynamically into an array type list box and define i
 
 ## See also 
 
-[LISTBOX DELETE COLUMN](listbox-delete-column.md)  
-[LISTBOX INSERT COLUMN FORMULA](listbox-insert-column-formula.md)  
+[LISTBOX DELETE COLUMN](../commands/listbox-delete-column)  
+[LISTBOX INSERT COLUMN FORMULA](../commands/listbox-insert-column-formula)  
 
 ## Properties
 

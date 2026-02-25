@@ -1,4 +1,4 @@
----
+﻿---
 id: day-number
 title: Day number
 slug: /commands/day-number
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 | Friday    | Integer | 6     |
 | Saturday  | Integer | 7     |
 
-**Note:** **Day number** returns a value between 1 and 7\. To get the day number within the month for a date, use the command [Day of](day-of.md).
+**Note:** **Day number** returns a value between 1 and 7\. To get the day number within the month for a date, use the command [Day of](../commands/day-of).
 
 ## Example 
 
@@ -60,7 +60,7 @@ The following example is a function that returns the current day as a string:
 
 ## See also 
 
-[Day of](day-of.md)  
+[Day of](../commands/day-of)  
 
 ## Properties
 

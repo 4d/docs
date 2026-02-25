@@ -1,4 +1,4 @@
----
+﻿---
 id: count-list-items
 title: Count list items
 slug: /commands/count-list-items
@@ -70,8 +70,8 @@ Here a list named *hList* shown in the Application environment:
 
 ## See also 
 
-[List item position](list-item-position.md)  
-[Selected list items](selected-list-items.md)  
+[List item position](../commands/list-item-position)  
+[Selected list items](../commands/selected-list-items)  
 
 ## Properties
 

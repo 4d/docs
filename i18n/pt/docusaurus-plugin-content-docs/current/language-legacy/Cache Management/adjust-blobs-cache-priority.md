@@ -1,4 +1,4 @@
----
+﻿---
 id: adjust-blobs-cache-priority
 title: ADJUST BLOBS CACHE PRIORITY
 slug: /commands/adjust-blobs-cache-priority
@@ -37,7 +37,7 @@ O comando **ADJUST BLOBS CACHE PRIORITY** modifica a *prioridade* dos dados "blo
 **Nota:** este comando só funciona em modo local (4D Server e 4D); Não pode ser utilizado em modo remoto 4D.
 
 Os tipos de campos de datos "Blobs" incluem BLOB, texto, imagem e objeto. Este comando maneja a prioridade para tais dados quando forem armazenados no arquivo de dados unicamente.  
-A prioridade para os campos de tipo escalar (como os tipos data, número ou strings) é ajustada pelo comando [ADJUST TABLE CACHE PRIORITY](adjust-table-cache-priority.md). 
+A prioridade para os campos de tipo escalar (como os tipos data, número ou strings) é ajustada pelo comando [ADJUST TABLE CACHE PRIORITY](../commands/adjust-table-cache-priority). 
 
 Passe em *prioridad*e uma das constantes abaixo do tema "*Gestão de Cache*":
 
@@ -63,8 +63,8 @@ Se quiser mudar temporariamente a prioridade da cache dos campos de texto da tab
 
 ## Ver também 
 
-[Get adjusted blobs cache priority](get-adjusted-blobs-cache-priority.md)  
-[SET BLOBS CACHE PRIORITY](set-blobs-cache-priority.md)  
+[Get adjusted blobs cache priority](../commands/get-adjusted-blobs-cache-priority)  
+[SET BLOBS CACHE PRIORITY](../commands/set-blobs-cache-priority)  
 
 ## Propriedades
 

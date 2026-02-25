@@ -1,4 +1,4 @@
----
+﻿---
 id: query
 title: QUERY
 slug: /commands/query
@@ -124,7 +124,7 @@ Estas son las reglas a tener en cuenta para la construcción de búsquedas múlt
 
 Sin importar de qué manera se ha definido una búsqueda:
 
-* Si la operación de búsqueda va a tomar algún tiempo, 4D muestra automáticamente un mensaje que contiene un termómetro de progreso. Estos mensajes pueden ser activados o desactivados utilizando los comandos [MESSAGES ON](messages-on.md) y [MESSAGES OFF](messages-off.md). Si se muestra el termómetro de progreso, el usuario puede hacer clic en el botón Detener para interrumpir la búsqueda. Si la búsqueda se completa, OK toma el valor 1\. De lo contrario, si la búsqueda es interrumpida, OK toma el valor 0 (cero).
+* Si la operación de búsqueda va a tomar algún tiempo, 4D muestra automáticamente un mensaje que contiene un termómetro de progreso. Estos mensajes pueden ser activados o desactivados utilizando los comandos [MESSAGES ON](../commands/messages-on) y [MESSAGES OFF](../commands/messages-off). Si se muestra el termómetro de progreso, el usuario puede hacer clic en el botón Detener para interrumpir la búsqueda. Si la búsqueda se completa, OK toma el valor 1\. De lo contrario, si la búsqueda es interrumpida, OK toma el valor 0 (cero).
 * Si los campos indexados son especificados, la búsqueda es optimizada cada vez que sea posible (se busca primero en los campo indexados) reduciendo al máximo la duración de la operación. El comando usa los índices compuestos para las búsquedas utilizando *AND* (&)
 
 ## Ejemplo 5 
@@ -321,7 +321,7 @@ La variable OK toma el valor 0 si: - el usuario hace clic en Cancelar en la caja
 
 ## Ver también 
 
-[QUERY SELECTION](query-selection.md)  
+[QUERY SELECTION](../commands/query-selection)  
 
 ## Propiedades
 

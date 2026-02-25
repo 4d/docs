@@ -1,4 +1,4 @@
----
+﻿---
 id: erase-window
 title: ERASE WINDOW
 slug: /commands/erase-window
@@ -38,8 +38,8 @@ ERASE WINDOWはウィンドウの内容をクリアします。スクリーン�
 
 ## 参照 
 
-[GOTO XY](goto-xy.md)  
-[MESSAGE](message.md)  
+[GOTO XY](../commands/goto-xy)  
+[MESSAGE](../commands/message)  
 
 ## プロパティ
 

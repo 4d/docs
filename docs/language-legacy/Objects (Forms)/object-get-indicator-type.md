@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-indicator-type
 title: OBJECT Get indicator type
 slug: /commands/object-get-indicator-type
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get indicator type.Summary-->The **OBJECT Get indicator type** command returns the current indicator type assigned to the thermometer(s) designated by the *object* and *\** parameters.<!-- END REF-->
 
-You can set the indicator type using the Property List in Design mode, or using the [OBJECT SET INDICATOR TYPE](object-set-indicator-type.md) command.
+You can set the indicator type using the Property List in Design mode, or using the [OBJECT SET INDICATOR TYPE](../commands/object-set-indicator-type) command.
 
 Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
 
@@ -45,7 +45,7 @@ You can compare the value returned by the command with the following constants, 
 
 ## See also 
 
-[OBJECT SET INDICATOR TYPE](object-set-indicator-type.md)  
+[OBJECT SET INDICATOR TYPE](../commands/object-set-indicator-type)  
 
 ## Properties
 

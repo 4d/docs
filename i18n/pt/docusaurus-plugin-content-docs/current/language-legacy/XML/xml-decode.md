@@ -1,4 +1,4 @@
----
+﻿---
 id: xml-decode
 title: XML DECODE
 slug: /commands/xml-decode
@@ -86,8 +86,8 @@ Exemplo do documento XML:
 
 ## Ver também 
 
-[BASE64 DECODE](base64-decode.md)  
-[BASE64 ENCODE](base64-encode.md)  
+[BASE64 DECODE](../commands/base64-decode)  
+[BASE64 ENCODE](../commands/base64-encode)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: get-list-properties
 title: GET LIST PROPERTIES
 slug: /commands/get-list-properties
@@ -48,13 +48,13 @@ If the *multiSelections* parameter is set to 0, multiple selections of items (ma
 
 If the *editable* parameter is set to 1, the list is editable when it is displayed as a choice list in a record. If it is set to 0, the list is not editable. 
 
-These properties can be set using the [SET LIST PROPERTIES](set-list-properties.md) command and/or in the Design environment List Editor, if the list was created there or saved using the [SAVE LIST](save-list.md) command.
+These properties can be set using the [SET LIST PROPERTIES](../commands/set-list-properties) command and/or in the Design environment List Editor, if the list was created there or saved using the [SAVE LIST](../commands/save-list) command.
 
-For a complete description of the appearance, node icons, minimal line height and double-click management of a list, see the [SET LIST PROPERTIES](set-list-properties.md) command.
+For a complete description of the appearance, node icons, minimal line height and double-click management of a list, see the [SET LIST PROPERTIES](../commands/set-list-properties) command.
 
 ## See also 
 
-[SET LIST PROPERTIES](set-list-properties.md)  
+[SET LIST PROPERTIES](../commands/set-list-properties)  
 
 ## Properties
 

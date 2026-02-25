@@ -1,4 +1,4 @@
----
+﻿---
 id: set-list-item-properties
 title: SET LIST ITEM PROPERTIES
 slug: /commands/set-list-item-properties
@@ -40,17 +40,17 @@ displayed_sidebar: docs
 
 Si pasa el primer parámetro opcional *\**, indica que el parámetro *lista* es un nombre de objeto (cadena) correspondiente a una representación de lista en el formulario. Si no pasa este parámetro, indica que el parámetro *lista* es una referencia de lista jerárquica RefLista). Si utiliza sólo una representación de lista o trabaja con elementos estructurales (el segundo \* se omite), puede utilizar indiferentemente una u otra sintaxis. Por el contrario, si utiliza varias representaciones de una misma lista y trabaja con el elemento actual (el segundo *\** se pasa), la sintaxis basada en el nombre del objeto es necesaria ya que cada representación puede tener su propio elemento actual.
 
-Puede pasar un número de referencia en *refElem*. Si el número no corresponde a ningún elemento de la lista, el comando no hace nada. Opcionalmente puede pasar *0* en *refElem* para modificar el último elemento añadido a la lista utilizando [APPEND TO LIST](append-to-list.md).
+Puede pasar un número de referencia en *refElem*. Si el número no corresponde a ningún elemento de la lista, el comando no hace nada. Opcionalmente puede pasar *0* en *refElem* para modificar el último elemento añadido a la lista utilizando [APPEND TO LIST](../commands/append-to-list).
 
 Por último, puede pasar *\** en *refElem*: en este caso, el comando se aplicará al elemento actual de la lista. Si varios elementos se seleccionan manualmente, el elemento actual es el que fue seleccionado de último. Si no se selecciona un elemento, el comando no hace nada.
 
 Si trabaja con los números de referencia de los elementos, construya una lista en la cual los elementos tengan números de referencia únicos, de lo contrario no podrá diferenciar los elementos. Para mayor información, consulte la sección *Gestión de listas jerárquicas*.
 
-**Nota:** para cambiar el texto del elemento o su sublista, utilice el comando [SET LIST ITEM](set-list-item.md).
+**Nota:** para cambiar el texto del elemento o su sublista, utilice el comando [SET LIST ITEM](../commands/set-list-item).
 
 Para hacer que un elemento sea editable, pase TRUE en *editable*; o de lo contrario, pase FALSE.
 
-**Importante:** para que un elemento sea editable, debe pertenecer a una lista que sea editable. Para hacer que una lista sea editable, utilice el comando [OBJECT SET ENTERABLE](object-set-enterable.md). Para hacer que un elemento individual sea editable, utilice **SET LIST ITEM PROPERTIES** . La modificación de la propiedad editable a nivel de la lista no afecta las propiedades individuales de cada elemento. Sin embargo, un elemento puede ser editable sólo si su lista es editable.
+**Importante:** para que un elemento sea editable, debe pertenecer a una lista que sea editable. Para hacer que una lista sea editable, utilice el comando [OBJECT SET ENTERABLE](../commands/object-set-enterable). Para hacer que un elemento individual sea editable, utilice **SET LIST ITEM PROPERTIES** . La modificación de la propiedad editable a nivel de la lista no afecta las propiedades individuales de cada elemento. Sin embargo, un elemento puede ser editable sólo si su lista es editable.
 
 El estilo de fuente del elemento se especifica en el parámetro *estilos*. Se pasa una o una combinación de las siguientes constantes predefinidas:
 
@@ -70,9 +70,9 @@ En el parámetro *icono*, puede pasar una imagen para utilizarla como icono para
 **Notas:**
 
 * Se recomienda el uso de una ruta de archivo de imagen ya que la librería de imágenes está en desuso y no es soportada en proyectos 4D.
-* Si quiere utilizar expresiones imagen 4D (campos, variables, etc.) para definir los iconos de los elementos, utilice el comando [SET LIST ITEM ICON](set-list-item-icon.md).
+* Si quiere utilizar expresiones imagen 4D (campos, variables, etc.) para definir los iconos de los elementos, utilice el comando [SET LIST ITEM ICON](../commands/set-list-item-icon).
 
-El parámetro *color* (opcional) le permite modificar el color del texto del elemento. El color debe especificarse en forma de color RGB, es decir un entero largo de 4 bytes en formato 0x00RRGGBB. Para mayor información sobre este formato, consulte la descripción del comando [OBJECT SET RGB COLORS](object-set-rgb-colors.md). Pase -1 en el parámetro *color* para restablecer el color original del elemento.
+El parámetro *color* (opcional) le permite modificar el color del texto del elemento. El color debe especificarse en forma de color RGB, es decir un entero largo de 4 bytes en formato 0x00RRGGBB. Para mayor información sobre este formato, consulte la descripción del comando [OBJECT SET RGB COLORS](../commands/object-set-rgb-colors). Pase -1 en el parámetro *color* para restablecer el color original del elemento.
 
 ## Ejemplo 1 
 
@@ -88,10 +88,10 @@ El siguiente ejemplo cambia el texto del elemento actual de *lista* a negrita y 
 
 ## Ver también 
 
-[GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
+[GET LIST ITEM PROPERTIES](../commands/get-list-item-properties)  
 *Listas jerárquicas*  
-[SET LIST ITEM](set-list-item.md)  
-[SET LIST ITEM ICON](set-list-item-icon.md)  
+[SET LIST ITEM](../commands/set-list-item)  
+[SET LIST ITEM ICON](../commands/set-list-item-icon)  
 
 ## Propiedades
 

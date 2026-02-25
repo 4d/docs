@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-info-column
 title: QR GET INFO COLUMN
 slug: /commands/qr-get-info-column
@@ -48,7 +48,7 @@ O comando QR GET INFO COLUMN permite recuperar os parâmetros de uma coluna exis
   
 *objeto* devolve o nome do objeto da coluna (variável, campo ou fórmula).  
   
-**Nota:** o comando não leva em conta nenhuma estrutura virtual definida por meio dos comandos [SET TABLE TITLES](set-table-titles.md) e [SET FIELD TITLES](set-field-titles.md). O nome real do campo se devolve no parâmetro *objeto*.   
+**Nota:** o comando não leva em conta nenhuma estrutura virtual definida por meio dos comandos [SET TABLE TITLES](../commands/set-table-titles) e [SET FIELD TITLES](../commands/set-field-titles). O nome real do campo se devolve no parâmetro *objeto*.   
   
 *ocultar* indica se a coluna é visível ou está oculta:  
 
@@ -121,9 +121,9 @@ Pode escrever:
 
 ## Ver também 
 
-[QR Get info row](qr-get-info-row.md)  
-[QR SET INFO COLUMN](qr-set-info-column.md)  
-[QR SET INFO ROW](qr-set-info-row.md)  
+[QR Get info row](../commands/qr-get-info-row)  
+[QR SET INFO COLUMN](../commands/qr-set-info-column)  
+[QR SET INFO ROW](../commands/qr-set-info-row)  
 
 ## Propriedades
 

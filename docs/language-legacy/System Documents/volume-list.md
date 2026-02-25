@@ -1,4 +1,4 @@
----
+﻿---
 id: volume-list
 title: VOLUME LIST
 slug: /commands/volume-list
@@ -48,9 +48,9 @@ Using a scrollable area named *atVolumes* you want to display the list of the vo
 
 ## See also 
 
-[DOCUMENT LIST](document-list.md)  
-[FOLDER LIST](folder-list.md)  
-[VOLUME ATTRIBUTES](volume-attributes.md)  
+[DOCUMENT LIST](../commands/document-list)  
+[FOLDER LIST](../commands/folder-list)  
+[VOLUME ATTRIBUTES](../commands/volume-attributes)  
 
 ## Properties
 

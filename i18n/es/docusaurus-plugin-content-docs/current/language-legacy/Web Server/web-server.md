@@ -1,4 +1,4 @@
----
+﻿---
 id: web-server
 title: WEB Server
 slug: /commands/web-server
@@ -54,7 +54,7 @@ El objeto servidor web devuelto contiene los valores actuales de las propiedades
 
 ## Ver también
 
-[Lista servidor WEB](web-server-list.md)\
+[Lista servidor WEB](../commands/web-server-list)\
 [webServer.stop()](../../API/WebServerClass.md#stop)
 
 ## Propiedades

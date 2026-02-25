@@ -1,4 +1,4 @@
----
+﻿---
 id: method-resolve-path
 title: METHOD RESOLVE PATH
 slug: /commands/method-resolve-path
@@ -94,7 +94,7 @@ Resolution of a path for an object of a table form method:
 
 ## See also 
 
-[METHOD Get path](method-get-path.md)  
+[METHOD Get path](../commands/method-get-path)  
 
 ## Properties
 

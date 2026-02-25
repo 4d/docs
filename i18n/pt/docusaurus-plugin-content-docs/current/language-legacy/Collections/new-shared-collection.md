@@ -1,4 +1,4 @@
----
+﻿---
 id: new-shared-collection
 title: New shared collection
 slug: /commands/new-shared-collection
@@ -69,7 +69,7 @@ Diferente de coleções padrão (não partilhadas), coleções partilhadas não 
 
 ## Veja também
 
-[New collection](new-collection.md)\
+[New collection](../commands/new-collection)\
 [New shared object](../commands/new-shared-object)\
 *Shared objects and shared collections*
 

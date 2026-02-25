@@ -1,4 +1,4 @@
----
+﻿---
 id: alert
 title: ALERT
 slug: /commands/alert
@@ -77,9 +77,9 @@ Mostra a seguinte caixa de diálogo de alerta (em Windows):
 
 ## Ver também 
 
-[CONFIRM](confirm.md)  
-[DISPLAY NOTIFICATION](display-notification.md)  
-[Request](request.md)  
+[CONFIRM](../commands/confirm)  
+[DISPLAY NOTIFICATION](../commands/display-notification)  
+[Request](../commands/request)  
 
 ## Propriedades
 

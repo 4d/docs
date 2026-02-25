@@ -1,4 +1,4 @@
----
+﻿---
 id: system-folder
 title: System folder
 slug: /commands/system-folder
@@ -63,8 +63,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Get 4D folder](get-4d-folder.md)  
-[Temporary folder](temporary-folder.md)  
+[Get 4D folder](../commands/get-4d-folder)  
+[Temporary folder](../commands/temporary-folder)  
 
 ## プロパティ
 

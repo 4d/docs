@@ -1,4 +1,4 @@
----
+﻿---
 id: substring
 title: Substring
 slug: /commands/substring
@@ -64,7 +64,7 @@ El siguiente método de proyecto añade los párrafos que se encuentran en el te
 
 ## Ver también 
 
-[Position](position.md)  
+[Position](../commands/position)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: table-fragmentation
 title: Table fragmentation
 slug: /commands/table-fragmentation
@@ -42,7 +42,7 @@ Este método de mantenimiento permite solicitar la compactación del archivo de 
 
 ## Ver también 
 
-[Compact data file](compact-data-file.md)  
+[Compact data file](../commands/compact-data-file)  
 
 ## Propiedades
 

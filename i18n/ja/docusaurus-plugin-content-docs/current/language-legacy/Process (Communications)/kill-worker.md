@@ -1,4 +1,4 @@
----
+﻿---
 id: kill-worker
 title: KILL WORKER
 slug: /commands/kill-worker
@@ -34,9 +34,9 @@ displayed_sidebar: docs
 *process* には実行を終了させるプロセスの番号または名称を受け渡します。指定のプロセスが存在しない場合、**KILL WORKER** は何もしません。  
 **KILL WORKER** のパラメーターを省略した場合には、現在実行中のワーカーにコマンドが適用されます。つまり、**KILL WORKER* (Current process)* と同じ結果になります。
 
-[CALL WORKER](call-worker.md) によって作成されたワーカーではないプロセス (例えばアプリケーションワーカーなど) に対して**KILL WORKER** が適用された場合には、**KILL WORKER** コマンドはワーカーのメッセージボックスを空にするだけです。
+[CALL WORKER](../commands/call-worker) によって作成されたワーカーではないプロセス (例えばアプリケーションワーカーなど) に対して**KILL WORKER** が適用された場合には、**KILL WORKER** コマンドはワーカーのメッセージボックスを空にするだけです。
 
-**KILL WORKER** コマンドによって終了させられたワーカーに、[CALL WORKER](call-worker.md) コマンドを呼び出してメッセージを送ろうとした場合、新しいプロセスが開始されます。一つのワーカーに対して一つのプロセスのみが実行中であるようにするために、新しいプロセスは、その前のプロセスが実際に終了されたあとに開始されます。ただし、[CALL WORKER](call-worker.md) がワーカーから呼び出されて自分自身にメッセージを送信しようとたものの、その直後にプロセスが**KILL WORKER** によって終了されていた場合、コマンドは何もしないという点に注意してください。
+**KILL WORKER** コマンドによって終了させられたワーカーに、[CALL WORKER](../commands/call-worker) コマンドを呼び出してメッセージを送ろうとした場合、新しいプロセスが開始されます。一つのワーカーに対して一つのプロセスのみが実行中であるようにするために、新しいプロセスは、その前のプロセスが実際に終了されたあとに開始されます。ただし、[CALL WORKER](../commands/call-worker) がワーカーから呼び出されて自分自身にメッセージを送信しようとたものの、その直後にプロセスが**KILL WORKER** によって終了されていた場合、コマンドは何もしないという点に注意してください。
 
 ## 例題 
 
@@ -62,8 +62,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[CALL WORKER](call-worker.md)  
-[Current process name](current-process-name.md)  
+[CALL WORKER](../commands/call-worker)  
+[Current process name](../commands/current-process-name)  
 *ワーカーについて*  
 
 ## プロパティ

@@ -1,4 +1,4 @@
----
+﻿---
 id: kill-worker
 title: KILL WORKER
 slug: /commands/kill-worker
@@ -34,9 +34,9 @@ Este comando sólo se puede utilizar con los procesos worker. Para más informac
 En *proceso*, se pasa el nombre o el número del proceso worker cuya ejecución debe terminarse. Si no existe ningún worker con el nombre o el número de proceso especificado, **KILL WORKER** no hace nada.  
 Si no pasa ningún parámetro, **KILL WORKER** aplica a los procesos worker actualmente en ejecución y por lo tanto es equivalente a **KILL WORKER* (Current process)*.
 
-Si **KILL WORKER** se aplica a un worker que no fue creado explícitamente utilizando el comando [CALL WORKER](call-worker.md) (por ejemplo, el proceso worker principal de la aplicación), sólo pide a este worker vaciar su buzón de mensajes.
+Si **KILL WORKER** se aplica a un worker que no fue creado explícitamente utilizando el comando [CALL WORKER](../commands/call-worker) (por ejemplo, el proceso worker principal de la aplicación), sólo pide a este worker vaciar su buzón de mensajes.
 
-Si se llama al comando [CALL WORKER](call-worker.md) para enviar un mensaje a un worker que acaba de ser finalizado por **KILL WORKER**, se inicia un nuevo proceso. Para asegurarse de que solo hay un proceso que se ejecuta a la vez para un worker, el nuevo proceso se iniciará una vez que el anterior haya finalizado. Sin embargo, tenga en cuenta que si [CALL WORKER](call-worker.md) es llamado por un worker para enviarse un mensaje, mientras que acaba de ser eliminado por **KILL WORKER**, el comando no hace nada.
+Si se llama al comando [CALL WORKER](../commands/call-worker) para enviar un mensaje a un worker que acaba de ser finalizado por **KILL WORKER**, se inicia un nuevo proceso. Para asegurarse de que solo hay un proceso que se ejecuta a la vez para un worker, el nuevo proceso se iniciará una vez que el anterior haya finalizado. Sin embargo, tenga en cuenta que si [CALL WORKER](../commands/call-worker) es llamado por un worker para enviarse un mensaje, mientras que acaba de ser eliminado por **KILL WORKER**, el comando no hace nada.
 
 ## Ejemplo 
 
@@ -62,8 +62,8 @@ En el método (*theWorker*), se añade código para manejar esta situación:
 
 ## Ver también 
 
-[CALL WORKER](call-worker.md)  
-[Current process name](current-process-name.md)  
+[CALL WORKER](../commands/call-worker)  
+[Current process name](../commands/current-process-name)  
 *Sobre workers*  
 
 ## Propiedades

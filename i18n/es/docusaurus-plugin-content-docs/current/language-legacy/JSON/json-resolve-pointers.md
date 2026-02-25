@@ -1,4 +1,4 @@
----
+﻿---
 id: json-resolve-pointers
 title: JSON Resolve pointers
 slug: /commands/json-resolve-pointers
@@ -39,7 +39,7 @@ Los punteros JSON son particularmente útiles para:
 
 Pase en el parámetro *objeto* un objeto que contiene punteros JSON que se deben resolver (para más información sobre la sintaxis del puntero JSON, consulte el párrafo *Definir punteros JSON* abajo). 
 
-**Nota:** el *objeto* fuente se actualizará con el resultado de la resolución del puntero después de ejecutar el comando (excepto si el resultado no es un objeto, consulte abajo). Si desea conservar una versión original del objeto, puede considerar utilizar previamente [OB Copy](ob-copy.md). 
+**Nota:** el *objeto* fuente se actualizará con el resultado de la resolución del puntero después de ejecutar el comando (excepto si el resultado no es un objeto, consulte abajo). Si desea conservar una versión original del objeto, puede considerar utilizar previamente [OB Copy](../commands/ob-copy). 
 
 Opcionalmente, puede pasar en *opciones* un objeto que contenga propiedades específicas que se utilizarán al resolver punteros. Se soportan las siguientes propiedades:
 

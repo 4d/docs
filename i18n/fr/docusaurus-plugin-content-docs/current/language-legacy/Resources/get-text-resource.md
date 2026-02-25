@@ -1,4 +1,4 @@
----
+﻿---
 id: get-text-resource
 title: Get text resource
 slug: /commands/get-text-resource
@@ -52,8 +52,8 @@ OK prend la valeur 1 si la ressource est trouvée, sinon elle prend la valeur 0 
 ## Voir aussi 
 
 [Get indexed string](../commands/get-indexed-string)  
-[Get string resource](get-string-resource.md)  
-[STRING LIST TO ARRAY](string-list-to-array.md)  
+[Get string resource](../commands/get-string-resource)  
+[STRING LIST TO ARRAY](../commands/string-list-to-array)  
 
 ## Propriétés
 

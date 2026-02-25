@@ -1,4 +1,4 @@
----
+﻿---
 id: sequence-number
 title: Sequence number
 slug: /commands/sequence-number
@@ -33,9 +33,9 @@ displayed_sidebar: docs
   
 (\*) Por razões de otimização, a incrementação é iniciada apenas na primeira chamada ao comando **Sequence number** ou de uma propriedade que obtém acesso a sequência de números (ver abaixo). Além disso, a numeração pode ser modificada usando o comando \[#cmd id="642"/\]. Desta forma, o valor retornado não deve ser considerado como contagem dos registros criados em *umaTabela*.   
   
-Normalmente, a numeração começa em 1\. Pode mudar a numeração para uma tabela utilizando o comando [SET DATABASE PARAMETER](set-database-parameter.md).  
+Normalmente, a numeração começa em 1\. Pode mudar a numeração para uma tabela utilizando o comando [SET DATABASE PARAMETER](../commands/set-database-parameter).  
   
-**Nota:** Se não houver um registro atual e a numeração tiver sido modificada via o comando [SET DATABASE PARAMETER](set-database-parameter.md), este número é em fato reservado para a criação do novo registro mas só vai re ser retornado pela função **Sequence number** quando o comando [SAVE RECORD](save-record.md) tiver sido chamado. 
+**Nota:** Se não houver um registro atual e a numeração tiver sido modificada via o comando [SET DATABASE PARAMETER](../commands/set-database-parameter), este número é em fato reservado para a criação do novo registro mas só vai re ser retornado pela função **Sequence number** quando o comando [SAVE RECORD](../commands/save-record) tiver sido chamado. 
 
 A função **Sequence number** é útil nos casos abaixos: 
 * O número de sequência precisa de um incremento maior que 1
@@ -69,8 +69,8 @@ O exemplo a seguir é parte de um método de formulário. Estas linhas de códig
 
 ## Ver também 
 
-[Record number](record-number.md)  
-[Selected record number](selected-record-number.md)  
+[Record number](../commands/record-number)  
+[Selected record number](../commands/selected-record-number)  
 *Sobre Números de Registros*  
 
 ## Propriedades

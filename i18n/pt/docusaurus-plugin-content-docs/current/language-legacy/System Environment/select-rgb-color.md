@@ -1,4 +1,4 @@
----
+﻿---
 id: select-rgb-color
 title: Select RGB color
 slug: /commands/select-rgb-color
@@ -37,7 +37,7 @@ A janela sistema de seleção de cor é vista desta maneira:
 | ------------------------------------------- | ------------------------------------------- |
 | ![](../../assets/en/commands/pict43385.en.png) | ![](../../assets/en/commands/pict43386.en.png) |
 
-O parâmetro opcional *corDefeito* permite pré-selecionar uma cor na janela. Este parâmetro permite por exemplo restaurar por defeito a última cor definida pelo usuário. Passe neste parâmetro um valor de cor formato RGB (para maior informação, consulte a descrição do comando [OBJECT SET RGB COLORS](object-set-rgb-colors.md)). Pode utilizar uma das constantes do tema *DEFINIR CORES RVA*.
+O parâmetro opcional *corDefeito* permite pré-selecionar uma cor na janela. Este parâmetro permite por exemplo restaurar por defeito a última cor definida pelo usuário. Passe neste parâmetro um valor de cor formato RGB (para maior informação, consulte a descrição do comando [OBJECT SET RGB COLORS](../commands/object-set-rgb-colors)). Pode utilizar uma das constantes do tema *DEFINIR CORES RVA*.
 
 Se omitido o parâmetro *corDefeito* ou se passa 0, a cor preta é selecionado ao abrir a caixa de diálogo.
 
@@ -51,7 +51,7 @@ O efeito da validação desta caixa de diálogo muda dependendo da plataforma:
 
 ## Ver também 
 
-[OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
+[OBJECT SET RGB COLORS](../commands/object-set-rgb-colors)  
 
 ## Propriedades
 

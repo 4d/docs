@@ -1,4 +1,4 @@
----
+﻿---
 id: convert-from-text
 title: CONVERT FROM TEXT
 slug: /commands/convert-from-text
@@ -35,7 +35,7 @@ In the *4Dtext* parameter, pass the text to be converted. This text is expressed
 
 In *charSet*, pass the character set to be used for the conversion. You can pass a string containing the standard name of the set (for example “ISO-8859-1” or “UTF-8”), or its MIBEnum identifier.
 
-Here is a list of character sets supported by the CONVERT FROM TEXT and [Convert to text](convert-to-text.md) commands:
+Here is a list of character sets supported by the CONVERT FROM TEXT and [Convert to text](../commands/convert-to-text) commands:
 
 | **MIBEnum** | **Name(s)**        |
 | ----------- | ------------------ |
@@ -190,7 +190,7 @@ Here is a list of character sets supported by the CONVERT FROM TEXT and [Convert
 
 For more information about the names of character sets, please refer to the following address: *http://www.iana.org/assignments/character-sets*
 
-After execution of the command, the converted text will be returned in the *convertedBLOB* BLOB. This BLOB can be read by the [Convert to text](convert-to-text.md) command.
+After execution of the command, the converted text will be returned in the *convertedBLOB* BLOB. This BLOB can be read by the [Convert to text](../commands/convert-to-text) command.
 
 ## System variables and sets 
 
@@ -198,7 +198,7 @@ If the command has been correctly executed, the OK variable is set to 1\. Otherw
 
 ## See also 
 
-[Convert to text](convert-to-text.md)  
+[Convert to text](../commands/convert-to-text)  
 
 ## Properties
 

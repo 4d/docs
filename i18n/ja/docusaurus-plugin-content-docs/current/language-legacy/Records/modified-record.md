@@ -1,4 +1,4 @@
----
+﻿---
 id: modified-record
 title: Modified record
 slug: /commands/modified-record
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 このファンクションは以下の場合に置いては常にTrueを返す点に注意して下さい:
 
 * カレントレコードが新規レコードの場合
-* [PUSH RECORD](push-record.md) と [POP RECORD](pop-record.md) コマンドの実行後
+* [PUSH RECORD](../commands/push-record) と [POP RECORD](../commands/pop-record) コマンドの実行後
 * 値がレコードのフィールドへと割り当てられた場合(値が前のものと同じ場合も含みます)。例えば、**Modified record** は以下の宣言実行後にはTrueを返します:  
 ```4d  
  [Table_1]Field_1:=[Table_1]Field_1  
@@ -41,9 +41,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Modified](modified.md)  
-[Old](old.md)  
-[SAVE RECORD](save-record.md)  
+[Modified](../commands/modified)  
+[Old](../commands/old)  
+[SAVE RECORD](../commands/save-record)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: add-record
 title: ADD RECORD
 slug: /commands/add-record
@@ -36,15 +36,15 @@ The form is displayed in the frontmost window of the process. The window has scr
 
 **ADD RECORD** displays the form until the user accepts or cancels the record. If the user is adding several records, the command must be executed once for each new record.
 
-The record is saved (accepted) if the user clicks an Accept button or presses the Enter key (numeric keypad), or if the [ACCEPT](accept.md) command is executed. 
+The record is saved (accepted) if the user clicks an Accept button or presses the Enter key (numeric keypad), or if the [ACCEPT](../commands/accept) command is executed. 
 
-The record is not saved (canceled) if the user clicks a Cancel button or presses the cancel key combination (Ctrl-Period on Windows, Command-Period on Macintosh), or if the [CANCEL](cancel.md) command is executed. 
+The record is not saved (canceled) if the user clicks a Cancel button or presses the cancel key combination (Ctrl-Period on Windows, Command-Period on Macintosh), or if the [CANCEL](../commands/cancel) command is executed. 
 
 **Note:** This command does not require *aTable* to be in read/write mode. It can be used even when the table is in read-only mode (see *Record Locking*). 
 
 After a call to **ADD RECORD**, OK is set to 1 if the record is accepted, to 0 if canceled.
 
-**Note:** Even when canceled, the record remains in memory and can be saved if [SAVE RECORD](save-record.md) is executed before the current record pointer is changed. 
+**Note:** Even when canceled, the record remains in memory and can be saved if [SAVE RECORD](../commands/save-record) is executed before the current record pointer is changed. 
 
 ## Example 1 
 
@@ -59,7 +59,7 @@ The following example is a loop commonly used to add new records to a database:
 
 ## Example 2 
 
-The following example queries the database for a customer. Depending on the results of the search, one of two things may happen. If no customer is found, then the user is allowed to add a new customer with **ADD RECORD**. If at least one customer is found, the user is presented with the first record found, which can be modified with [MODIFY RECORD](modify-record.md): 
+The following example queries the database for a customer. Depending on the results of the search, one of two things may happen. If no customer is found, then the user is allowed to add a new customer with **ADD RECORD**. If at least one customer is found, the user is presented with the first record found, which can be modified with [MODIFY RECORD](../commands/modify-record): 
 
 ```4d
  READ WRITE([Customers])
@@ -86,11 +86,11 @@ Accepting the record sets the OK system variable to 1; canceling it sets the OK 
 
 ## See also 
 
-[ACCEPT](accept.md)  
-[CANCEL](cancel.md)  
-[CREATE RECORD](create-record.md)  
-[MODIFY RECORD](modify-record.md)  
-[SAVE RECORD](save-record.md)  
+[ACCEPT](../commands/accept)  
+[CANCEL](../commands/cancel)  
+[CREATE RECORD](../commands/create-record)  
+[MODIFY RECORD](../commands/modify-record)  
+[SAVE RECORD](../commands/save-record)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: users-to-blob
 title: USERS TO BLOB
 slug: /commands/users-to-blob
@@ -33,7 +33,7 @@ O comando USERS TO BLOB guarda no BLOB *usuarios* a lista de todas as contas de 
 
 Apenas o Administrador e o Desenhador da banco podem ser executados este comando. Se outro usuário tentar executá-lo, o comando não faz nada e é gerado um erro de privilégio (-9949).  
   
-O BLOB gerado é automaticamente encriptografado e apenas pode ser lido utilizando o comando [BLOB TO USERS](blob-to-users.md). Pode armazenar este BLOB em um arquivo em seu disco duro ou em um campo.
+O BLOB gerado é automaticamente encriptografado e apenas pode ser lido utilizando o comando [BLOB TO USERS](../commands/blob-to-users). Pode armazenar este BLOB em um arquivo em seu disco duro ou em um campo.
 
 Este comando é o equivalente ao registro dos grupos e usuários desde a janela de gestão dos grupos da Caixa de ferramentas. A única diferença é que permite armazenar contas de usuários em um campo BLOB e não apenas em um arquivo.  
   
@@ -41,7 +41,7 @@ Este conceito permite conservar um backup de usuários no banco e implementar um
 
 ## Ver também 
 
-[BLOB TO USERS](blob-to-users.md)  
+[BLOB TO USERS](../commands/blob-to-users)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: sax-get-xml-element-value
 title: SAX GET XML ELEMENT VALUE
 slug: /commands/sax-get-xml-element-value
@@ -55,8 +55,8 @@ Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\.
 
 ## Ver también 
 
-[SAX ADD XML ELEMENT VALUE](sax-add-xml-element-value.md)  
-[SAX Get XML node](sax-get-xml-node.md)  
+[SAX ADD XML ELEMENT VALUE](../commands/sax-add-xml-element-value)  
+[SAX Get XML node](../commands/sax-get-xml-node)  
 
 ## Propiedades
 

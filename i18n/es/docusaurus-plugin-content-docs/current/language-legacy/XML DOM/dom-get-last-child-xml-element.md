@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-get-last-child-xml-element
 title: DOM Get last child XML element
 slug: /commands/dom-get-last-child-xml-element
@@ -54,7 +54,7 @@ Si el comando se ejecutó correctamente, la variable sistema OK toma el valor 1\
 
 ## Ver también 
 
-[DOM Get first child XML element](dom-get-first-child-xml-element.md)  
+[DOM Get first child XML element](../commands/dom-get-first-child-xml-element)  
 
 ## Propiedades
 

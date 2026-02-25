@@ -1,4 +1,4 @@
----
+﻿---
 id: throw
 title: throw
 slug: /commands/throw
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 Cuando se encuentre con una situación en su código 4D en la que surja una condición de error, puede utilizar el comando throw para lanzar explícitamente un error y dar un mensaje de error específico o un número de error. Esto puede ser útil para señalar condiciones excepcionales o entradas inválidas.
 
-Los errores lanzados utilizando el comando **throw** son gestionados por el runtime de 4D como cualquier error normal: se muestra el diálogo de error estándar a menos que se haya instalado un método de intercepción utilizando el comando [ON ERR CALL](on-err-call.md).
+Los errores lanzados utilizando el comando **throw** son gestionados por el runtime de 4D como cualquier error normal: se muestra el diálogo de error estándar a menos que se haya instalado un método de intercepción utilizando el comando [ON ERR CALL](../commands/on-err-call).
 
 El comando admite tres sintaxis:
 
@@ -65,10 +65,10 @@ Cuando se utiliza esta sintaxis, el objeto *errorObj* se devuelve en Últimos er
 
 ### **throw** 
 
-Lanza todos los errores actuales en **modo diferido**, lo que significa que se añadirán a una pila y se gestionarán cuando vuelva el método que los llama. Esto se hace típicamente desde dentro de una retrollamada [ON ERR CALL](on-err-call.md).
+Lanza todos los errores actuales en **modo diferido**, lo que significa que se añadirán a una pila y se gestionarán cuando vuelva el método que los llama. Esto se hace típicamente desde dentro de una retrollamada [ON ERR CALL](../commands/on-err-call).
 
-* **En una aplicación**: cuando se produce un error, se añade a la pila de errores y se llama al método [ON ERR CALL](on-err-call.md) de la aplicación al final del método actual. La función [Last errors](../commands/last-errors) devuelve la pila de errores.
-* **Como consecuencia, en un componente:** la pila de errores se puede enviar a la aplicación local y se llama al método [ON ERR CALL](on-err-call.md) de la aplicación local.
+* **En una aplicación**: cuando se produce un error, se añade a la pila de errores y se llama al método [ON ERR CALL](../commands/on-err-call) de la aplicación al final del método actual. La función [Last errors](../commands/last-errors) devuelve la pila de errores.
+* **Como consecuencia, en un componente:** la pila de errores se puede enviar a la aplicación local y se llama al método [ON ERR CALL](../commands/on-err-call) de la aplicación local.
 
 ## Ejemplo 1 
 
@@ -112,9 +112,9 @@ throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFi
 
 ## Ver también 
 
-[ASSERT](assert.md)  
+[ASSERT](../commands/assert)  
 [Last errors](../commands/last-errors)  
-[ON ERR CALL](on-err-call.md)  
+[ON ERR CALL](../commands/on-err-call)  
 
 ## Propiedades
 

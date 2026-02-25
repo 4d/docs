@@ -1,4 +1,4 @@
----
+﻿---
 id: print-settings-to-blob
 title: Print settings to BLOB
 slug: /commands/print-settings-to-blob
@@ -33,9 +33,9 @@ displayed_sidebar: docs
 * Parámetros de diseño tales como papel, orientación, escala...
 * Parámetros de impresión tales como el número de copias, fuente del papel...
 
-Este comando debe ser usado en conjunto con el comando [BLOB to print settings](blob-to-print-settings.md). Estos comandos le permiten guardar la configuración de impresión actual del usuario y recargarla después para que los usuarios no tengan que especificar sus parámetros cada vez que inician un trabajo de impresión. Además, permite mantener la configuración de la impresora "privada" (específica para el controlador de la impresora) no disponible como parámetros de impresión estándar. 
+Este comando debe ser usado en conjunto con el comando [BLOB to print settings](../commands/blob-to-print-settings). Estos comandos le permiten guardar la configuración de impresión actual del usuario y recargarla después para que los usuarios no tengan que especificar sus parámetros cada vez que inician un trabajo de impresión. Además, permite mantener la configuración de la impresora "privada" (específica para el controlador de la impresora) no disponible como parámetros de impresión estándar. 
 
-El BLOB generado no debe ser modificado por programación; sólo puede ser utilizado por el comando [BLOB to print settings](blob-to-print-settings.md).
+El BLOB generado no debe ser modificado por programación; sólo puede ser utilizado por el comando [BLOB to print settings](../commands/blob-to-print-settings).
 
 El comando devuelve 1 si el BLOB se ha generado correctamente y 0 si no se selecciona ninguna impresora actual.
 
@@ -64,7 +64,7 @@ Usted desea almacenar la configuración de impresión actual en el disco:
 ## Ver también 
 
   
-[BLOB to print settings](blob-to-print-settings.md)  
+[BLOB to print settings](../commands/blob-to-print-settings)  
 
 ## Propiedades
 

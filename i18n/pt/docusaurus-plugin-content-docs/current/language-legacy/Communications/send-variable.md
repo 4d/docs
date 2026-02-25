@@ -1,4 +1,4 @@
----
+﻿---
 id: send-variable
 title: SEND VARIABLE
 slug: /commands/send-variable
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 **Notas:**
 
-1. Se você enviar uma variável para um documento utilizando este comando, o documento deve ter sido aberto usando o comando [SET CHANNEL](set-channel.md "SET CHANNEL"). Você não pode usar SEND VARIABLE com um documento aberto com [Open document](open-document.md), [Create document](create-document.md) ou [Append document](append-document.md).
+1. Se você enviar uma variável para um documento utilizando este comando, o documento deve ter sido aberto usando o comando [SET CHANNEL](set-channel.md "SET CHANNEL"). Você não pode usar SEND VARIABLE com um documento aberto com [Open document](../commands/open-document), [Create document](../commands/create-document) ou [Append document](../commands/append-document).
 2. Este comando não suporta variáveis de array. Se você quiser enviar e receber arrays de um documento ou através de uma porta serial, use os novos comandos BLOB introduzidos na versão 6.
 
 ## Exemplo 
@@ -30,10 +30,10 @@ Veja o exemplo para o comando [RECEIVE RECORD](receive-record.md "RECEIVE RECORD
 
 ## Ver também 
 
-[RECEIVE RECORD](receive-record.md)  
-[RECEIVE VARIABLE](receive-variable.md)  
-[SEND RECORD](send-record.md)  
-[SET CHANNEL](set-channel.md)  
+[RECEIVE RECORD](../commands/receive-record)  
+[RECEIVE VARIABLE](../commands/receive-variable)  
+[SEND RECORD](../commands/send-record)  
+[SET CHANNEL](../commands/set-channel)  
 
 ## Propriedades
 

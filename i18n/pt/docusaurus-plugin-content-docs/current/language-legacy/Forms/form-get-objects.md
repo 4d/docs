@@ -1,4 +1,4 @@
----
+﻿---
 id: form-get-objects
 title: FORM GET OBJECTS
 slug: /commands/form-get-objects
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM GET OBJECTS.Summary-->O comando FORM GET OBJECTS retorna em forma de array(s) a lista de todos os objetos presentes no formulário atual da tabela atual.<!-- END REF--> Esta lista pode estar restrita à página atual do formulário. O comando pode ser utilizado com os formulários de entrada e de saída.
 
-**Nota**: O comando não inclui partes list box. Para passar um formulário para objetos list box, deve usar [LISTBOX GET OBJECTS](listbox-get-objects.md) ou [LISTBOX GET ARRAYS](listbox-get-arrays.md) (ver exemplo abaixo para uma combinação de [FORM GET OBJECTS](form-get-objects.md), [OBJECT Get type](object-get-type.md) e [LISTBOX GET OBJECTS](listbox-get-objects.md)).
+**Nota**: O comando não inclui partes list box. Para passar um formulário para objetos list box, deve usar [LISTBOX GET OBJECTS](../commands/listbox-get-objects) ou [LISTBOX GET ARRAYS](../commands/listbox-get-arrays) (ver exemplo abaixo para uma combinação de [FORM GET OBJECTS](../commands/form-get-objects), [OBJECT Get type](../commands/object-get-type) e [LISTBOX GET OBJECTS](../commands/listbox-get-objects)).
 
 Se um array passado como parâmetro não for declarado previamente, o comando o cria e dimensiona automaticamente. Entretanto, pensando na compilação da aplicação, lhe recomendamos declarar explicitamente cada array. 
 
@@ -42,7 +42,7 @@ Passe em *arrObjetos* o nome do array alfa que conterá os nomes dos objetos (ca
 
 Os outros arrays preenchidos opcionalmente pelo comando são sincronizados com o primeiro array. 
 
-Passe o nome do array ponteiro que já contém os ponteiros às variáveis ou campos associados aos objetos no parâmetro opcional variablesArray. Se um objeto não tiver uma variável associada, o ponteiro [Is nil pointer](is-nil-pointer.md) é retornado. Se houver um objeto de tipo “subformulário”, é retornado um ponteiro à tabela do subformulário.
+Passe o nome do array ponteiro que já contém os ponteiros às variáveis ou campos associados aos objetos no parâmetro opcional variablesArray. Se um objeto não tiver uma variável associada, o ponteiro [Is nil pointer](../commands/is-nil-pointer) é retornado. Se houver um objeto de tipo “subformulário”, é retornado um ponteiro à tabela do subformulário.
 
 O terceiro array (opcional), *arrPags*, é preenchido com os números de páginas do formulário. Cada linha deste array contém o número de página do objeto correspondente. 
 
@@ -135,7 +135,7 @@ Você quer carregar um formulário e obter a lista de todos os objetos dos list 
 
 ## Ver também 
 
-[FORM GET PROPERTIES](form-get-properties.md)  
+[FORM GET PROPERTIES](../commands/form-get-properties)  
 *Objetos (Formulários)*  
 *Objetos de formulário (Acesso)*  
 

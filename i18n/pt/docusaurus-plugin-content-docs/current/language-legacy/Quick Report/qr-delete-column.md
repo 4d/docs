@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-delete-column
 title: QR DELETE COLUMN
 slug: /commands/qr-delete-column
@@ -45,7 +45,7 @@ O exemplo a seguir garante de que o relatório seja listado e apaga a terceira c
 
 ## Ver também 
 
-[QR INSERT COLUMN](qr-insert-column.md)  
+[QR INSERT COLUMN](../commands/qr-insert-column)  
 
 ## Propriedades
 

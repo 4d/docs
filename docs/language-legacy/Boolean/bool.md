@@ -1,4 +1,4 @@
----
+﻿---
 id: bool
 title: Bool
 slug: /commands/bool
@@ -55,10 +55,10 @@ You select a value depending on the contents of an object field attribute, antic
 
 ## See also 
 
-[Date](date.md)  
+[Date](../commands/date)  
 [Num](../commands/num)  
 [String](../commands/string)  
-[Time](time.md)  
+[Time](../commands/time)  
 
 ## Properties
 

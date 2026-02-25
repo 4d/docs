@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-row-color-as-number
 title: LISTBOX Get row color as number
 slug: /commands/listbox-get-row-color-as-number
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 The **LISTBOX Get row color as number** command returns the color of a row or a cell in the list box designated by the *object* and *\** parameters as a number in 0x00rrggbb format.
 
-**Note:** If you want to get the color as a CSS string, you need to use the [LISTBOX Get row color](listbox-get-row-color.md) command. For more information on color formats, please refer to the [OBJECT SET RGB COLORS](object-set-rgb-colors.md) command description. 
+**Note:** If you want to get the color as a CSS string, you need to use the [LISTBOX Get row color](../commands/listbox-get-row-color) command. For more information on color formats, please refer to the [OBJECT SET RGB COLORS](../commands/object-set-rgb-colors) command description. 
 
 Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. You can designate a list box or a list box column in the *object* parameter:
 
@@ -70,8 +70,8 @@ Given the following list box:
 ## See also 
 
 *List Box*  
-[LISTBOX Get row color](listbox-get-row-color.md)  
-[LISTBOX SET ROW COLOR](listbox-set-row-color.md)  
+[LISTBOX Get row color](../commands/listbox-get-row-color)  
+[LISTBOX SET ROW COLOR](../commands/listbox-set-row-color)  
 
 ## Properties
 

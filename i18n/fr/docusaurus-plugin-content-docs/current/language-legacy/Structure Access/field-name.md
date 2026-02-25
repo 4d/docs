@@ -1,4 +1,4 @@
----
+﻿---
 id: field-name
 title: Field name
 slug: /commands/field-name
@@ -47,9 +47,9 @@ L'exemple suivant affiche une boîte de dialogue d'alerte. Nous passons à cette
 
 ## Voir aussi 
 
-[Field](field.md)  
-[Last field number](last-field-number.md)  
-[Table name](table-name.md)  
+[Field](../commands/field)  
+[Last field number](../commands/last-field-number)  
+[Table name](../commands/table-name)  
 
 ## Propriétés
 

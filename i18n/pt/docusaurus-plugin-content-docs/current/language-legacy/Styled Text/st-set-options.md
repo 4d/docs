@@ -1,4 +1,4 @@
----
+﻿---
 id: st-set-options
 title: ST SET OPTIONS
 slug: /commands/st-set-options
@@ -72,7 +72,7 @@ O seguinte código permite mudar o modo de visualização da área:
 
 ## Ver também 
 
-[ST GET OPTIONS](st-get-options.md)  
+[ST GET OPTIONS](../commands/st-get-options)  
 
 ## Propriedades
 

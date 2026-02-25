@@ -1,4 +1,4 @@
----
+﻿---
 id: locked-by
 title: LOCKED BY
 slug: /commands/locked-by
@@ -40,7 +40,7 @@ displayed_sidebar: docs
 
 If the record is not locked, *process* returns 0 and *4Duser*, *sessionUser*, and *processName* return empty strings. If the record you try to load in read/write has been deleted, *process* returns -1 and *4Duser*, *sessionUser*, and *processName* return empty strings.
 
-The *4Duser* parameter returned is the user name from the 4D password system or the user alias as defined with the [SET USER ALIAS](set-user-alias.md) (if any). If there is no password system or alias defined, “Designer” is returned.
+The *4Duser* parameter returned is the user name from the 4D password system or the user alias as defined with the [SET USER ALIAS](../commands/set-user-alias) (if any). If there is no password system or alias defined, “Designer” is returned.
 
 The *sessionUser* parameter returned corresponds to the name of the user that opened the session on the client machine (this name is displayed more particularly in the 4D Server administration window for each open process).
 
@@ -53,7 +53,7 @@ If the record has been locked by a *$lock REST request*:
 
 ## See also 
 
-[Locked](locked.md)  
+[Locked](../commands/locked)  
 *Record Locking*  
 
 ## Properties

@@ -1,4 +1,4 @@
----
+﻿---
 id: close-document
 title: CLOSE DOCUMENT
 slug: /commands/close-document
@@ -36,9 +36,9 @@ El siguiente ejemplo permite al usuario crear un nuevo documento, escribe la cad
 
 ## Ver también 
 
-[Append document](append-document.md)  
-[Create document](create-document.md)  
-[Open document](open-document.md)  
+[Append document](../commands/append-document)  
+[Create document](../commands/create-document)  
+[Open document](../commands/open-document)  
 
 ## Propiedades
 

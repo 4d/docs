@@ -1,4 +1,4 @@
----
+﻿---
 id: export-structure
 title: EXPORT STRUCTURE
 slug: /commands/export-structure
@@ -42,7 +42,7 @@ Por defecto, si omite el parámetro *formato*, el comando exporta la definición
 
 El comando genera el mismo código XML o HTML que el elemento de menú **Exportar > Definición de estructura a archivo XML... o Exportar > Definición de estructura a archivo HTML...** (ver *Exportar e importar las definiciones de estructura*).
 
-* **Formato xml**: la "gramática" interna de las definiciones de estructura 4D se documenta mediante archivos DTD, también utilizados para la validación de archivos XML. Los archivos DTD utilizados por 4D están agrupados en la carpeta DTD, que se encuentra junto a la aplicación 4D. Los archivos **base\_core.dtd** y **common.dtd** se utilizan para las definiciones de estructura. Para más información, puede consultar estos archivos junto con los comentarios que contienen.Una definición de estructura exportada en formato XML puede ser importada en otra base de datos (ver [IMPORT STRUCTURE](import-structure.md)).
+* **Formato xml**: la "gramática" interna de las definiciones de estructura 4D se documenta mediante archivos DTD, también utilizados para la validación de archivos XML. Los archivos DTD utilizados por 4D están agrupados en la carpeta DTD, que se encuentra junto a la aplicación 4D. Los archivos **base\_core.dtd** y **common.dtd** se utilizan para las definiciones de estructura. Para más información, puede consultar estos archivos junto con los comentarios que contienen.Una definición de estructura exportada en formato XML puede ser importada en otra base de datos (ver [IMPORT STRUCTURE](../commands/import-structure)).
 * **Formato** **html**: el comando genera código HTML puro que incluye referencias a una carpeta que contiene recursos externos como imágenes o css, necesarios para la representación HTML. Si desea guardar este código en una página HTML para mostrarla en un navegador, puede reutilizar la carpeta creada por la opción de menú **Exportar > Definición de estructura a archivo HTML...**, o crear su propia carpeta de recursos.
 
 ## Ejemplo 1 
@@ -67,7 +67,7 @@ Desea exportar la estructura actual de la base de datos en formato html:
 
 ## Ver también 
 
-[IMPORT STRUCTURE](import-structure.md)  
+[IMPORT STRUCTURE](../commands/import-structure)  
 
 ## Propiedades
 

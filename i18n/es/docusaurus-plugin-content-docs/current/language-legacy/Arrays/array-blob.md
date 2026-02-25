@@ -1,4 +1,4 @@
----
+﻿---
 id: array-blob
 title: ARRAY BLOB
 slug: /commands/array-blob
@@ -39,7 +39,7 @@ El parámetro *tam2* es opcional. Si lo pasa, este comando crea un array de dos 
   
 Cuando se aplica el comando **ARRAY BLOB** a un array existente:
 
-* Si amplía su tamaño, los elementos existentes no se cambian y los nuevos elementos se inicializan en un BLOB vacío ([BLOB size](blob-size.md)\= 0).
+* Si amplía su tamaño, los elementos existentes no se cambian y los nuevos elementos se inicializan en un BLOB vacío ([BLOB size](../commands/blob-size)\= 0).
 * Si reduce su tamaño, se eliminan y pierden los elementos de abajo del array.
 
 ## Ejemplo 1 

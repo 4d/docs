@@ -1,4 +1,4 @@
----
+﻿---
 id: set-group-properties
 title: Set group properties
 slug: /commands/set-group-properties
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Set group properties.Summary-->Set group properties enables you to change and update the properties of an existing group whose unique group ID number you pass in *groupID*, or to add a new group.<!-- END REF--> 
 
-To change the properties of an existing group, you must pass a valid group ID number returned by the command [GET GROUP LIST](get-group-list.md). 
+To change the properties of an existing group, you must pass a valid group ID number returned by the command [GET GROUP LIST](../commands/get-group-list). 
 
 To add a new group, pass -1 in *groupID* (see also notes below for binary databases). 
 
@@ -45,7 +45,7 @@ Pass the new name of the group in the *name* parameter.
 
 (*Binary databases only*) Pass the ID number of the new owner of the group in the *owner* parameter. This parameter is ignored in project databases. 
 
-If you do not want to change all the properties of the group (besides the members, see below), first call [GET GROUP PROPERTIES](get-group-properties.md) and pass the returned values for the properties you want to leave unchanged.
+If you do not want to change all the properties of the group (besides the members, see below), first call [GET GROUP PROPERTIES](../commands/get-group-properties) and pass the returned values for the properties you want to leave unchanged.
 
 If you do not pass the optional *members* parameter, the current member list of the group is left unchanged. If you do not pass *members* while adding a group, the group will have no members.
 
@@ -60,13 +60,13 @@ To remove all the members from a group, pass an empty *members* array.
 
 ## Error management 
 
-If you do not have the proper access privileges for calling Set group properties or if the Password system is already accessed by another process, an access privilege error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md).
+If you do not have the proper access privileges for calling Set group properties or if the Password system is already accessed by another process, an access privilege error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](../commands/on-err-call).
 
 ## See also 
 
-[GET GROUP LIST](get-group-list.md)  
-[GET GROUP PROPERTIES](get-group-properties.md)  
-[GET USER LIST](get-user-list.md)  
+[GET GROUP LIST](../commands/get-group-list)  
+[GET GROUP PROPERTIES](../commands/get-group-properties)  
+[GET USER LIST](../commands/get-user-list)  
 
 ## Properties
 

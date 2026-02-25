@@ -1,4 +1,4 @@
----
+﻿---
 id: activated
 title: Activated
 slug: /commands/activated
@@ -21,13 +21,13 @@ displayed_sidebar: docs
 
 **Note :** Cette commande équivaut à utiliser la fonction [Form event code](../commands/form-event-code) et tester si elle retourne l'événement On Activate.
 
-**ATTENTION :** N'appelez pas de commandes telles que [TRACE](trace.md) ou [ALERT](alert.md) dans la phase **Activated** d'un formulaire, car cela provoquerait une boucle sans fin.
+**ATTENTION :** N'appelez pas de commandes telles que [TRACE](../commands/trace) ou [ALERT](../commands/alert) dans la phase **Activated** d'un formulaire, car cela provoquerait une boucle sans fin.
 
 **Note :** Si vous voulez que le cycle d'exécution **Activated** soit généré, assurez-vous que la propriété d'événement On Activate du formulaire et/ou des objet(s) est sélectionnée en mode Développement. 
 
 ## Voir aussi 
 
-[Deactivated](deactivated.md)  
+[Deactivated](../commands/deactivated)  
 [Form event code](../commands/form-event-code)  
 
 ## Propriétés

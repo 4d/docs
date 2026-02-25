@@ -1,4 +1,4 @@
----
+﻿---
 id: set-index
 title: SET INDEX
 slug: /commands/set-index
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 ## Compatibility Note 
 
-<!--REF #_command_.SET INDEX.Summary-->**SET INDEX**, although a legacy command, is still fully supported and can remain in your application -- there is no need to rewrite existing code.<!-- END REF--> However, it would be better to use [CREATE INDEX](create-index.md) and [DELETE INDEX](delete-index.md) to manage indexes because they provide more features. 
+<!--REF #_command_.SET INDEX.Summary-->**SET INDEX**, although a legacy command, is still fully supported and can remain in your application -- there is no need to rewrite existing code.<!-- END REF--> However, it would be better to use [CREATE INDEX](../commands/create-index) and [DELETE INDEX](../commands/delete-index) to manage indexes because they provide more features. 
 
 ## Description 
 
@@ -61,9 +61,9 @@ The optional *\** parameter indicates an asynchronous (simultaneous) indexing. A
 
 **Notes:**
 
-* Indexes created by this command do not have names. They cannot be deleted by the [DELETE INDEX](delete-index.md) command using the syntax based on the name.
+* Indexes created by this command do not have names. They cannot be deleted by the [DELETE INDEX](../commands/delete-index) command using the syntax based on the name.
 * This command cannot be used to create or delete composite indexes.
-* This command cannot be used to delete a keywords index created by the [CREATE INDEX](create-index.md) command.
+* This command cannot be used to delete a keywords index created by the [CREATE INDEX](../commands/create-index) command.
 
 ## Note for deployment 
 
@@ -96,11 +96,11 @@ Creation of a keywords index:
 
 ## See also 
 
-[CREATE INDEX](create-index.md)  
-[DELETE INDEX](delete-index.md)  
-[GET FIELD PROPERTIES](get-field-properties.md)  
-[ORDER BY](order-by.md)  
-[QUERY](query.md)  
+[CREATE INDEX](../commands/create-index)  
+[DELETE INDEX](../commands/delete-index)  
+[GET FIELD PROPERTIES](../commands/get-field-properties)  
+[ORDER BY](../commands/order-by)  
+[QUERY](../commands/query)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: json-parse
 title: JSON Parse
 slug: /commands/json-parse
@@ -32,11 +32,11 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.JSON Parse.Summary-->**JSON Parse**コマンドは、JSONフォーマットの文字列の中身を解析し、4Dのフィールドまた は変数へと保存可能な値を取り出します。<!-- END REF-->このコマンドはJSONデータをデシリアライズします。つまり [JSON Stringify](json-stringify.md)コマンドと逆の挙動をします。
+<!--REF #_command_.JSON Parse.Summary-->**JSON Parse**コマンドは、JSONフォーマットの文字列の中身を解析し、4Dのフィールドまた は変数へと保存可能な値を取り出します。<!-- END REF-->このコマンドはJSONデータをデシリアライズします。つまり [JSON Stringify](../commands/json-stringify)コマンドと逆の挙動をします。
 
 *jsonString* 引数には、解析をしたいJSONフォーマットの文字列を渡します。この文字列が正しくフォーマットされていないと、解析はエラーを生成します。なので、**JSON Parse**をしようしてJSON文字列を評価することができます。
 
-**注:** ポインターを使用した場合、**JSON Parse**を使用する前に [JSON Stringify](json-stringify.md) コマンドを使用する必要があります。
+**注:** ポインターを使用した場合、**JSON Parse**を使用する前に [JSON Stringify](../commands/json-stringify) コマンドを使用する必要があります。
 
 *type* 引数を省略した場合、結果を保存するのに使用する変数またはフィールドが定義されていれば、4Dは自動的に、取得した値をその型へと変換します。そうでない場合は4Dは型を推測します。*type* 引数を渡す事によって変換する型を強制的に指定することもできます。渡す場合は、 *Field and Variable Types*テーマ内にある以下の定数のどれか一つを渡して下さい。
 
@@ -56,7 +56,7 @@ displayed_sidebar: docs
 * 実数型の値は ±10.421e±10の範囲内に収まっていなければなりません。
 * テキスト型の値の場合、全ての特殊文字は引用符を含めエスケープされてなければなりません(例を参照して下さい)。
 * JSON の日付は全て "\\"YYYY-MM-DDTHH:mm:ssZ\\""のフォーマットでなければなりません。このコマンドは4Dの日付がGMTではなくローカル時刻を含むことを考慮します。
-* Is date 定数を使用する場合、デフォルトで、コマンドは文字列がGMTではなくローカル時刻を含んでいると判断します。この設定は[SET DATABASE PARAMETER](set-database-parameter.md) コマンドのDates inside objects セレクターを使用することで変更することができます。
+* Is date 定数を使用する場合、デフォルトで、コマンドは文字列がGMTではなくローカル時刻を含んでいると判断します。この設定は[SET DATABASE PARAMETER](../commands/set-database-parameter) コマンドのDates inside objects セレクターを使用することで変更することができます。
 * 4D v16 R6以降、カレントのデータ保存設定が"日付型"であるとき、"YYYY-MM-DD" フォーマットのJSON 日付文字列は、**JSON Parse** コマンドによって自動的に日付値として返されます。この設定についての詳細な情報については、*互換性ページ* 内にある"オブジェクトではISO日付フォーマットの代わりに日付型を使用する"を参照して下さい。
 * 時間型の値は数値型から文字列型へと返すことが可能です。デフォルトでは、解析された値は秒数とみなされます。
 
@@ -129,7 +129,7 @@ __symbols:{//オブジェクト詳細<br />   myAtt.mySubAtt...:{ //プロパ�
 
 ## 例題 4 
 
-ここでは [JSON Stringify](json-stringify.md) と **JSON Parse** コマンドの併用例を紹介しています:
+ここでは [JSON Stringify](../commands/json-stringify) と **JSON Parse** コマンドの併用例を紹介しています:
 
 ```4d
  var $JSONContact : Text
@@ -196,8 +196,8 @@ beta[1].golf:{line:10,offset:12}}}
 ## 参照 
 
 *Field and Variable Types*  
-[JSON PARSE ARRAY](json-parse-array.md)  
-[JSON Stringify](json-stringify.md)  
+[JSON PARSE ARRAY](../commands/json-parse-array)  
+[JSON Stringify](../commands/json-stringify)  
 [JSON Validate](../commands/json-validate)  
 
 ## プロパティ

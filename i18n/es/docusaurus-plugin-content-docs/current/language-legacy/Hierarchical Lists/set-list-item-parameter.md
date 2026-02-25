@@ -1,4 +1,4 @@
----
+﻿---
 id: set-list-item-parameter
 title: SET LIST ITEM PARAMETER
 slug: /commands/set-list-item-parameter
@@ -48,7 +48,7 @@ En *selector*, puede pasar:
 | -------------------------- | ------ | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | Additional text            | Cadena | 4D\_additional\_text       | Esta constante se utiliza para agregar texto a la derecha del elemento *refElem*. Este título adicional siempre se mostrará en la parte derecha de la lista, incluso cuando el usuario mueva el cursor de desplazamiento horizontal. Cuando utilice esta constante, pase el texto que se mostrará en *valor*. |  
 | Associated standard action | Cadena | 4D\_standard\_action\_name | Asociar una acción estándar con el *refElem*. En este caso, debe pasar en el parámetro *valor* un nombre de acción estándar con un parámetro, por ejemplo "fontSize?value=10pt". Para más información, consulte la sección *Acciones estándar* del manual de *Diseño*.                                        |
-* o un **selector personalizado**: también puede pasar un texto personalizado y asociarlo con un valor de tipo texto, numérico o booleano. Este valor será almacenado con el elemento y podrá recuperarse utilizando el comando [GET LIST ITEM PARAMETER](get-list-item-parameter.md). Este principio permite configurar todo tipo de interfaz asociado con las listas jerárquicas. Por ejemplo, en una lista de nombres de clientes, puede guardar la edad de cada persona y mostrarla únicamente cuando el elemento correspondiente sea seleccionado.
+* o un **selector personalizado**: también puede pasar un texto personalizado y asociarlo con un valor de tipo texto, numérico o booleano. Este valor será almacenado con el elemento y podrá recuperarse utilizando el comando [GET LIST ITEM PARAMETER](../commands/get-list-item-parameter). Este principio permite configurar todo tipo de interfaz asociado con las listas jerárquicas. Por ejemplo, en una lista de nombres de clientes, puede guardar la edad de cada persona y mostrarla únicamente cuando el elemento correspondiente sea seleccionado.
 
 ## Ejemplo 
 
@@ -69,11 +69,11 @@ Usted desea definir como lista de opciones de un menú emergente jerárquico una
 
 ## Ver también 
 
-[APPEND TO LIST](append-to-list.md)  
-[Action info](action-info.md)  
-[GET LIST ITEM PARAMETER](get-list-item-parameter.md)  
-[GET LIST ITEM PARAMETER ARRAYS](get-list-item-parameter-arrays.md)  
-[INSERT IN LIST](insert-in-list.md)  
+[APPEND TO LIST](../commands/append-to-list)  
+[Action info](../commands/action-info)  
+[GET LIST ITEM PARAMETER](../commands/get-list-item-parameter)  
+[GET LIST ITEM PARAMETER ARRAYS](../commands/get-list-item-parameter-arrays)  
+[INSERT IN LIST](../commands/insert-in-list)  
 
 ## Propiedades
 

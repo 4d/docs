@@ -1,4 +1,4 @@
----
+﻿---
 id: last-query-plan
 title: Last query plan
 slug: /commands/last-query-plan
@@ -34,8 +34,8 @@ A descrição do plano da última pesquisa pode ser comparada com a descrição 
 
 ## Ver também 
 
-[DESCRIBE QUERY EXECUTION](describe-query-execution.md)  
-[Last query path](last-query-path.md)  
+[DESCRIBE QUERY EXECUTION](../commands/describe-query-execution)  
+[Last query path](../commands/last-query-path)  
 
 ## Propriedades
 

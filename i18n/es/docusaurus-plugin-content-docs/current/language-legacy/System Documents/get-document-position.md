@@ -1,4 +1,4 @@
----
+﻿---
 id: get-document-position
 title: Get document position
 slug: /commands/get-document-position
@@ -34,9 +34,9 @@ Get document position devuelve la posición, a partir del inicio del documento, 
 
 ## Ver también 
 
-[RECEIVE PACKET](receive-packet.md)  
-[SEND PACKET](send-packet.md)  
-[SET DOCUMENT POSITION](set-document-position.md)  
+[RECEIVE PACKET](../commands/receive-packet)  
+[SEND PACKET](../commands/send-packet)  
+[SET DOCUMENT POSITION](../commands/set-document-position)  
 
 ## Propiedades
 

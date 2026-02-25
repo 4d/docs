@@ -1,4 +1,4 @@
----
+﻿---
 id: st-freeze-expressions
 title: ST FREEZE EXPRESSIONS
 slug: /commands/st-freeze-expressions
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST FREEZE EXPRESSIONS.Summary-->La commande **ST FREEZE EXPRESSIONS** "gèle" le contenu des expressions situées dans le champ ou la variable texte multistyle ou 4D Write Pro désigné(e) par le paramètre *objet*.<!-- END REF--> Cette action convertit les expressions dynamiques en textes statiques ou (zones 4D Write Pro uniquement) en images et supprime de l’*objet* les références associées. 
 
-Pour plus d’informations sur les expressions 4D utilisables dans les zones de texte multistyle et les zones 4D Write Pro, reportez-vous à la description de la commande [ST INSERT EXPRESSION](st-insert-expression.md).
+Pour plus d’informations sur les expressions 4D utilisables dans les zones de texte multistyle et les zones 4D Write Pro, reportez-vous à la description de la commande [ST INSERT EXPRESSION](../commands/st-insert-expression).
 
 La commande **ST FREEZE EXPRESSIONS** vous permet de stocker la valeur calculée d’une expression à un instant donné. Cette opération est nécessaire notamment avant chaque utilisation de l’*objet* en-dehors de la zone (exportation, stockage dans un fichier disque, impression...) car seule la référence de l’expression est conservée dans la zone. 
 
@@ -76,8 +76,8 @@ Vous souhaitez insérer l’heure courante au début du texte et la figer avant 
 
 ## Voir aussi 
 
-[ST COMPUTE EXPRESSIONS](st-compute-expressions.md)  
-[ST INSERT EXPRESSION](st-insert-expression.md)  
+[ST COMPUTE EXPRESSIONS](../commands/st-compute-expressions)  
+[ST INSERT EXPRESSION](../commands/st-insert-expression)  
 
 ## Propriétés
 

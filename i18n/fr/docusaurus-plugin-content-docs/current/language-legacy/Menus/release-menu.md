@@ -1,4 +1,4 @@
----
+﻿---
 id: release-menu
 title: RELEASE MENU
 slug: /commands/release-menu
@@ -27,13 +27,13 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.RELEASE MENU.Summary-->La commande **RELEASE MENU** efface de la mémoire le menu dont vous avez passé l’identifiant dans *menu*.<!-- END REF--> Ce menu doit avoir été créé par la commande [Create menu](create-menu.md). La règle est la suivante : à chaque [Create menu](create-menu.md) doit correspondre un [RELEASE MENU](release-menu.md). 
+<!--REF #_command_.RELEASE MENU.Summary-->La commande **RELEASE MENU** efface de la mémoire le menu dont vous avez passé l’identifiant dans *menu*.<!-- END REF--> Ce menu doit avoir été créé par la commande [Create menu](../commands/create-menu). La règle est la suivante : à chaque [Create menu](../commands/create-menu) doit correspondre un [RELEASE MENU](../commands/release-menu). 
 
 La commande efface toutes les instances du *menu* dans toutes les barres de menus et tous les process. Si le menu appartient à une barre de menus en cours d’utilisation, il continuera à fonctionner mais ne pourra plus être modifié. Il ne sera réellement effacé de la mémoire que lorsque la dernière barre de menus dans laquelle il figure ne sera plus utilisée.
 
 Cette commande peut être appliquée aux menus utilisés comme barres de menus.
 
-Les sous-menus éventuellement utilisés par *menu* ne sont pas effacés s'ils ont été créés directement via la commande [Create menu](create-menu.md). Vous devez dans ce cas les effacer individuellement (cf. règle énoncée ci-dessus). En revanche, s'ils sont issus de la duplication d'un menu existant, n'appelez pas [RELEASE MENU](release-menu.md) avec leurs instances car 4D les efface automatiquement.
+Les sous-menus éventuellement utilisés par *menu* ne sont pas effacés s'ils ont été créés directement via la commande [Create menu](../commands/create-menu). Vous devez dans ce cas les effacer individuellement (cf. règle énoncée ci-dessus). En revanche, s'ils sont issus de la duplication d'un menu existant, n'appelez pas [RELEASE MENU](../commands/release-menu) avec leurs instances car 4D les efface automatiquement.
 
 ## Exemple 
 
@@ -65,7 +65,7 @@ Cet exemple illustre les cas d'utilisation de cette commande :
 
 ## Voir aussi 
 
-[Create menu](create-menu.md)  
+[Create menu](../commands/create-menu)  
 
 ## Propriétés
 

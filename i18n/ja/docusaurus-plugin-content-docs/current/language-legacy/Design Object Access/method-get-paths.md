@@ -1,4 +1,4 @@
----
+﻿---
 id: method-get-paths
 title: METHOD GET PATHS
 slug: /commands/method-get-paths
@@ -90,12 +90,12 @@ displayed_sidebar: docs
 
 ## 例題 4 
 
-[METHOD SET CODE](method-set-code.md)コマンドの例題参照。
+[METHOD SET CODE](../commands/method-set-code)コマンドの例題参照。
 
 ## 参照 
 
-[Current method path](current-method-path.md)  
-[METHOD GET FOLDERS](method-get-folders.md)  
+[Current method path](../commands/current-method-path)  
+[METHOD GET FOLDERS](../commands/method-get-folders)  
 
 ## プロパティ
 

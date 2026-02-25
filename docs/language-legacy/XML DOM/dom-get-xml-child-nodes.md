@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-get-xml-child-nodes
 title: DOM GET XML CHILD NODES
 slug: /commands/dom-get-xml-child-nodes
@@ -42,7 +42,7 @@ The types of child nodes are returned in the *childTypesArr* array. You can comp
 | XML DOCTYPE                | Integer | 10    |
 | XML ELEMENT                | Integer | 11    |
 
-For more information, please refer to the description of the [DOM Append XML child node](dom-append-xml-child-node.md) command.
+For more information, please refer to the description of the [DOM Append XML child node](../commands/dom-append-xml-child-node) command.
 
 The *nodeRefsArr* array receives the values or references of the elements according to their nature (contents or instructions).
 
@@ -72,8 +72,8 @@ After executing these instructions:
 
 ## See also 
 
-[DOM Append XML child node](dom-append-xml-child-node.md)  
-[DOM Get XML document ref](dom-get-xml-document-ref.md)  
+[DOM Append XML child node](../commands/dom-append-xml-child-node)  
+[DOM Get XML document ref](../commands/dom-get-xml-document-ref)  
 
 ## Properties
 

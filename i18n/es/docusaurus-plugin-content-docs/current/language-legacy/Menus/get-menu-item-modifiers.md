@@ -1,4 +1,4 @@
----
+﻿---
 id: get-menu-item-modifiers
 title: Get menu item modifiers
 slug: /commands/get-menu-item-modifiers
@@ -61,8 +61,8 @@ Consulte el ejemplo del comando [Get menu item key](get-menu-item-key.md "Get me
 
 ## Ver también 
 
-[Get menu item key](get-menu-item-key.md)  
-[SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md)  
+[Get menu item key](../commands/get-menu-item-key)  
+[SET MENU ITEM SHORTCUT](../commands/set-menu-item-shortcut)  
 
 ## Propiedades
 

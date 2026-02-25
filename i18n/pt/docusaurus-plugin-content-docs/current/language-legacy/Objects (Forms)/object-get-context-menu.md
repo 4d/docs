@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-context-menu
 title: OBJECT Get context menu
 slug: /commands/object-get-context-menu
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get context menu.Summary-->O comando **OBJECT Get context menu** devolve o estado atual da opção "Menú contextual" do objeto ou dos objetos designado(s) pelos parâmetros *objeto* e *\** .<!-- END REF-->  
   
-Pode configurar a opção "Menu contextual" em modo Desenho utilizando a lista de propriedades ou utilizando o comando [OBJECT SET CONTEXT MENU](object-set-context-menu.md).  
+Pode configurar a opção "Menu contextual" em modo Desenho utilizando a lista de propriedades ou utilizando o comando [OBJECT SET CONTEXT MENU](../commands/object-set-context-menu).  
   
 Se passar o parâmetro opcional *\** indica que o parâmetro *objeto* é um nome de objeto (cadeia). Se não passar este parâmetro, indica que o parâmetro *objeto* é um campo ou uma variável. Neste caso, se passar uma referência de campo ou variável no lugar de uma cadeia (campo ou variável objeto unicamente).  
   
@@ -39,7 +39,7 @@ O comando devolve **True** se o menu contextual está ativo para o objeto e **Fa
 
 ## Ver também 
 
-[OBJECT SET CONTEXT MENU](object-set-context-menu.md)  
+[OBJECT SET CONTEXT MENU](../commands/object-set-context-menu)  
 
 ## Propriedades
 

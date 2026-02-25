@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-info-column
 title: QR GET INFO COLUMN
 slug: /commands/qr-get-info-column
@@ -48,7 +48,7 @@ QR GET INFO COLUMN コマンドを使用して、既存のカラムに関する�
 
 *object* には、そのカラムの実際のオブジェクト (変数、フィールド名、またはフォーミュラ) が返されます。
 
-**注:** このコマンドは、[SET TABLE TITLES](set-table-titles.md) コマンドと [SET FIELD TITLES](set-field-titles.md) コマンドによって定義されたバーチャルストラクチャーはどれも考慮に入れません。実際のフィールド名は*object* 引数の中に返されます。
+**注:** このコマンドは、[SET TABLE TITLES](../commands/set-table-titles) コマンドと [SET FIELD TITLES](../commands/set-field-titles) コマンドによって定義されたバーチャルストラクチャーはどれも考慮に入れません。実際のフィールド名は*object* 引数の中に返されます。
 
 *hide*にはカラムが表示されるかされないかが返されます。
 
@@ -117,9 +117,9 @@ QR GET INFO COLUMN コマンドを使用して、同様のパラメータを取�
 
 ## 参照 
 
-[QR Get info row](qr-get-info-row.md)  
-[QR SET INFO COLUMN](qr-set-info-column.md)  
-[QR SET INFO ROW](qr-set-info-row.md)  
+[QR Get info row](../commands/qr-get-info-row)  
+[QR SET INFO COLUMN](../commands/qr-set-info-column)  
+[QR SET INFO ROW](../commands/qr-set-info-row)  
 
 ## プロパティ
 

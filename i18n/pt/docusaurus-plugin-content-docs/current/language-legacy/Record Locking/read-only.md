@@ -1,4 +1,4 @@
----
+﻿---
 id: read-only
 title: READ ONLY
 slug: /commands/read-only
@@ -25,8 +25,8 @@ Utilize READ ONLY quando não necessite modificar os registros.
 
 ## Ver também 
 
-[Read only state](read-only-state.md)  
-[READ WRITE](read-write.md)  
+[Read only state](../commands/read-only-state)  
+[READ WRITE](../commands/read-write)  
 *Record Locking*  
 
 ## Propriedades

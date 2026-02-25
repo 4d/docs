@@ -1,4 +1,4 @@
----
+﻿---
 id: minimize-window
 title: MINIMIZE WINDOW
 slug: /commands/minimize-window
@@ -49,7 +49,7 @@ Windowsの縮小ボックス
   
 Mac OS縮小/ズームボックス
 
-コマンドが適用されるウィンドウが事前に (手動または[MAXIMIZE WINDOW](maximize-window.md) を使用して) 最大化されていない場合、またはウィンドウがズームボックスを持たない場合、コマンドは効果がありません。詳細は*ウィンドウタイプ(互換性)* の節を参照してください。
+コマンドが適用されるウィンドウが事前に (手動または[MAXIMIZE WINDOW](../commands/maximize-window) を使用して) 最大化されていない場合、またはウィンドウがズームボックスを持たない場合、コマンドは効果がありません。詳細は*ウィンドウタイプ(互換性)* の節を参照してください。
 
 **Note:** この機能を、最小化と混同しないようにしてください。最小化は以下のボタンをクリックすると、ボタン (Windows) やDock (macOS) にウィンドウが最小化されます:
 
@@ -61,8 +61,8 @@ Mac OS
 
 ## 参照 
 
-[MAXIMIZE WINDOW](maximize-window.md)  
-[REDUCE RESTORE WINDOW](reduce-restore-window.md)  
+[MAXIMIZE WINDOW](../commands/maximize-window)  
+[REDUCE RESTORE WINDOW](../commands/reduce-restore-window)  
 
 ## プロパティ
 

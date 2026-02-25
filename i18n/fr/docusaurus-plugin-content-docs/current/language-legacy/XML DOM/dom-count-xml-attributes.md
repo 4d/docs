@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-count-xml-attributes
 title: DOM Count XML attributes
 slug: /commands/dom-count-xml-attributes
@@ -64,7 +64,7 @@ Si la commande a été correctement exécutée, la variable système OK prend la
 
 ## Voir aussi 
 
-[DOM Count XML elements](dom-count-xml-elements.md)  
+[DOM Count XML elements](../commands/dom-count-xml-elements)  
 
 ## Propriétés
 

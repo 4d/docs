@@ -1,4 +1,4 @@
----
+﻿---
 id: int
 title: Int
 slug: /commands/int
@@ -31,7 +31,7 @@ El siguiente ejemplo ilustra el funcionamiento de Int para números positivos y 
 
 ## Ver también 
 
-[Dec](dec.md)  
+[Dec](../commands/dec)  
 
 ## Propiedades
 

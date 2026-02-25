@@ -1,4 +1,4 @@
----
+﻿---
 id: form-get-horizontal-resizing
 title: FORM GET HORIZONTAL RESIZING
 slug: /commands/form-get-horizontal-resizing
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 ## Ver também 
 
-[FORM SET HORIZONTAL RESIZING](form-set-horizontal-resizing.md)  
+[FORM SET HORIZONTAL RESIZING](../commands/form-set-horizontal-resizing)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: array-to-selection
 title: ARRAY TO SELECTION
 slug: /commands/array-to-selection
@@ -39,10 +39,10 @@ Si una selección existe en el momento del llamado, los elementos del array se c
 
 Todos los arrays deben tener el mismo número de elementos. Si los arrays son de diferentes tamaños, se genera un error de sintaxis
 
-Este comando efectúa la operación inversa de [SELECTION TO ARRAY](selection-to-array.md). Sin embargo, el comando **ARRAY TO SELECTION** no permite utilizar los campos de diferentes tablas, incluyendo tablas relacionadas, incluso cuando existe una relación automática.
+Este comando efectúa la operación inversa de [SELECTION TO ARRAY](../commands/selection-to-array). Sin embargo, el comando **ARRAY TO SELECTION** no permite utilizar los campos de diferentes tablas, incluyendo tablas relacionadas, incluso cuando existe una relación automática.
 
 Si pasa el parámetro *\**, 4D no ejecuta inmediatamente la línea de instrucción correspondiente pero la guarda en memoria; de esta forma puede apilar varias líneas que terminen en *\**. El conjunto de las líneas en espera es ejecutado por una instrucción **ARRAY TO SELECTION** final sin parámetro *\**. Por esta razón, ahora el comando puede llamarse sin parámetros.  
-Como para el comando [QUERY](query.md), este principio permite romper una instrucción compleja en un conjunto de líneas, lo cual es más fácil de leer y mantener. También es posible insertar instrucciones intermediarias. 
+Como para el comando [QUERY](../commands/query), este principio permite romper una instrucción compleja en un conjunto de líneas, lo cual es más fácil de leer y mantener. También es posible insertar instrucciones intermediarias. 
 
 **Advertencia:** utilice **ARRAY TO SELECTION** con precaución, porque este comando reemplaza la información de los registros existentes. Si un registro está bloqueado por otro proceso durante la ejecución de **ARRAY TO SELECTION**, ese registro no se modifica. Todos los registros bloqueados se colocan en LockedSet. Después de la ejecución de **ARRAY TO SELECTION**, puede probar el conjunto LockedSet para ver si contiene registros bloqueados. 
 
@@ -92,7 +92,7 @@ Usted desea copiar una selección de registros a una tabla archivo seleccionando
 
 ## Ver también 
 
-[SELECTION TO ARRAY](selection-to-array.md)  
+[SELECTION TO ARRAY](../commands/selection-to-array)  
 *Variables sistema*  
 
 ## Propiedades

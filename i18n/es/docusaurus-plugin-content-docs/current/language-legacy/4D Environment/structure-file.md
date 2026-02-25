@@ -1,4 +1,4 @@
----
+﻿---
 id: structure-file
 title: Structure file
 slug: /commands/structure-file
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 * Con bases binarias, el comando devuelve la ruta del archivo **.4db**.
 * Con las bases proyecto, el comando devuelve la ruta del archivo **.4dproject**.
 
-**Nota:** en el caso particular de una base compilada y fusionada con 4D Volume Desktop, este comando devuelve la ruta de acceso al archivo de la aplicación (archivo ejecutable) bajo Windows y macOS. Bajo macOS, este archivo está ubicado dentro del paquete del programa, en la carpeta \[Contents:MacOS\]. Este funcionamiento viene de un antiguo mecanismo y se conserva por razones de compatibilidad. Si quiere obtener el nombre completo del paquete del programa, es preferible utilizar el comando [Application file](application-file.md). La técnica consiste en probar la aplicación utilizando el comando [Application type](application-type.md), luego se ejecuta **Structure file** o [Application file](application-file.md) en función del contexto.
+**Nota:** en el caso particular de una base compilada y fusionada con 4D Volume Desktop, este comando devuelve la ruta de acceso al archivo de la aplicación (archivo ejecutable) bajo Windows y macOS. Bajo macOS, este archivo está ubicado dentro del paquete del programa, en la carpeta \[Contents:MacOS\]. Este funcionamiento viene de un antiguo mecanismo y se conserva por razones de compatibilidad. Si quiere obtener el nombre completo del paquete del programa, es preferible utilizar el comando [Application file](../commands/application-file). La técnica consiste en probar la aplicación utilizando el comando [Application type](../commands/application-type), luego se ejecuta **Structure file** o [Application file](../commands/application-file) en función del contexto.
 
 **Advertencia:** si llama este comando cuandoutiliza 4D en modo remoto, sólo devuelve el nombre del archivo de estructura; no el nombre largo.
 
@@ -77,9 +77,9 @@ El siguiente ejemplo puede utilizarse para saber si el método se llama desde un
 
 #### Ver también 
 
-[Application file](application-file.md)  
-[COMPONENT LIST](component-list.md)  
-[Data file](data-file.md)  
+[Application file](../commands/application-file)  
+[COMPONENT LIST](../commands/component-list)  
+[Data file](../commands/data-file)  
 
 #### Propiedades
 

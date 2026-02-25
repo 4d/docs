@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-execute-command
 title: QR EXECUTE COMMAND
 slug: /commands/qr-execute-command
@@ -30,13 +30,13 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.QR EXECUTE COMMAND.Summary-->**QR EXECUTE COMMAND** コマンドは、*command*に渡された参照番号のツールバーボタンコマンドを実行します。<!-- END REF-->このコマンドの最も一般的な使い方は、[QR ON COMMAND](qr-on-command.md) コマンド経由でコード内で受け取った、ユーザーが選択したコマンドを実行することです。
+<!--REF #_command_.QR EXECUTE COMMAND.Summary-->**QR EXECUTE COMMAND** コマンドは、*command*に渡された参照番号のツールバーボタンコマンドを実行します。<!-- END REF-->このコマンドの最も一般的な使い方は、[QR ON COMMAND](../commands/qr-on-command) コマンド経由でコード内で受け取った、ユーザーが選択したコマンドを実行することです。
 
 *command* 引数には、値または以下の*QR Commands* テーマの定数のいずれか一つを渡します(ここにあるイベントのみがサポートされます):
 
 | 定数                   | 値    | コメント                               |
 | -------------------- | ---- | ---------------------------------- |
-| qr cmd generate      | 2008 | [QR RUN](qr-run.md) コマンドの使用が推奨されます |
+| qr cmd generate      | 2008 | [QR RUN](../commands/qr-run) コマンドの使用が推奨されます |
 | qr cmd open          | 2001 |                                    |
 | qr cmd page setup    | 2006 |                                    |
 | qr cmd print preview | 2007 |                                    |
@@ -49,8 +49,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[QR Get command status](qr-get-command-status.md)  
-[QR ON COMMAND](qr-on-command.md)  
+[QR Get command status](../commands/qr-get-command-status)  
+[QR ON COMMAND](../commands/qr-on-command)  
 
 ## プロパティ
 

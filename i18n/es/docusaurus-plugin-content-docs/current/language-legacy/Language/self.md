@@ -1,4 +1,4 @@
----
+﻿---
 id: self
 title: Self
 slug: /commands/self
@@ -52,8 +52,8 @@ Ver el ejemplo del comando [RESOLVE POINTER](resolve-pointer.md "RESOLVE POINTER
 
 ## Ver también 
 
-[OBJECT Get pointer](object-get-pointer.md)  
-[RESOLVE POINTER](resolve-pointer.md)  
+[OBJECT Get pointer](../commands/object-get-pointer)  
+[RESOLVE POINTER](../commands/resolve-pointer)  
 [This ](../commands/this)  
 
 ## Propiedades

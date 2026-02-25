@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-maximum-value
 title: OBJECT GET MAXIMUM VALUE
 slug: /commands/object-get-maximum-value
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET MAXIMUM VALUE.Summary-->El comando **OBJECT GET MAXIMUM VALUE** devuelve, en la variable valorMax, el valor máximo actual del objeto o de los objetos designados por los parámetros *objeto* y *\** .<!-- END REF--> 
 
-Puede establecer la propiedad "Valor máximo" con la lista de propiedades en modo Diseño o utilizando el comando [OBJECT SET MAXIMUM VALUE](object-set-maximum-value.md).
+Puede establecer la propiedad "Valor máximo" con la lista de propiedades en modo Diseño o utilizando el comando [OBJECT SET MAXIMUM VALUE](../commands/object-set-maximum-value).
 
 Si pasa el parámetro opcional *\** indica que el parámetro *objeto* es un nombre de objeto (cadena). Si no se pasa este parámetro, indica que el parámetro *objeto* es un campo o una variable. En este caso, se pasa una referencia de campo o variable en lugar de una cadena (campo o variable objeto únicamente).
 
@@ -40,8 +40,8 @@ Si pasa el parámetro opcional *\** indica que el parámetro *objeto* es un nomb
 
 ## Ver también 
 
-[OBJECT GET MINIMUM VALUE](object-get-minimum-value.md)  
-[OBJECT SET MAXIMUM VALUE](object-set-maximum-value.md)  
+[OBJECT GET MINIMUM VALUE](../commands/object-get-minimum-value)  
+[OBJECT SET MAXIMUM VALUE](../commands/object-set-maximum-value)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: set-list-properties
 title: SET LIST PROPERTIES
 slug: /commands/set-list-properties
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 **Compatibility note:** *appearance* and *icon* parameters are deprecated, you must pass 0 for them. 
 
-**Note:** If you want to customize the icon of each item in the list, use the command [SET LIST ITEM PROPERTIES](set-list-item-properties.md).
+**Note:** If you want to customize the icon of each item in the list, use the command [SET LIST ITEM PROPERTIES](../commands/set-list-item-properties).
 
 If you do not pass the parameter *lineHeight*, the line height of a hierarchical list is determined by the font and font size used for the object. You can also pass in the parameter *lineHeight* the minimal line height of the hierarchical list. If the value you pass is greater than the line height derived from the font and font size used, the line height of the hierarchical list will be forced to the value you pass. Pass 0 to set the default height.
 
@@ -50,7 +50,7 @@ The optional *multiSelections* parameter lets you indicate whether the list must
 By default, as in previous versions of 4D, you cannot simultaneously select several items of a hierarchical list. If you would like this function to be available for the list, pass the value 1 in the *multiSelections* parameter. In that case, multiple selections can be used:
 
 * manually, using the **Shift**+**click** key combination for a continuous selection or **Ctrl**+**click** (Windows) / **Command**+**click** (macOS) for a discontinuous selection,
-* by programming, using the [SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md) and [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md) commands.  
+* by programming, using the [SELECT LIST ITEMS BY POSITION](../commands/select-list-items-by-position) and [SELECT LIST ITEMS BY REFERENCE](../commands/select-list-items-by-reference) commands.  
 If you pass 0 or omit the *multiSelections* parameter, the default behavior will be applied.
 
 The optional *editable* parameter lets you indicate whether the list must be editable by the user when it is displayed as a choice list associated with a field or a variable during data entry. When the list is editable, a **Modify** button is added in the choice list window and the user can add, delete and sort the values through a specific editor.   
@@ -70,9 +70,9 @@ You want to disallow the expand/collapse sublist on double-click. You can write 
 
 ## See also 
 
-[GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
-[GET LIST PROPERTIES](get-list-properties.md)  
-[SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+[GET LIST ITEM PROPERTIES](../commands/get-list-item-properties)  
+[GET LIST PROPERTIES](../commands/get-list-properties)  
+[SET LIST ITEM PROPERTIES](../commands/set-list-item-properties)  
 
 ## Properties
 

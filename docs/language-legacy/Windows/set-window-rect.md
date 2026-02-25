@@ -1,4 +1,4 @@
----
+﻿---
 id: set-window-rect
 title: SET WINDOW RECT
 slug: /commands/set-window-rect
@@ -42,15 +42,15 @@ This command can resize and move the window, depending on the new coordinates pa
 
 The coordinates must be expressed relative to the top left corner of the contents area of the application window (Windows MDI mode) or to the main screen (macOS and Windows SDI mode). The coordinates indicate the rectangle corresponding to the contents area of the window (excluding title bars and borders).
 
-**Warning:** Be aware that by using this command, you may move a window beyond the limits of the main window (on Windows) or of the screens (on Macintosh). To prevent this, use commands such as [Screen width](screen-width.md) and [Screen height](screen-height.md) to double-check the new coordinates of the window.
+**Warning:** Be aware that by using this command, you may move a window beyond the limits of the main window (on Windows) or of the screens (on Macintosh). To prevent this, use commands such as [Screen width](../commands/screen-width) and [Screen height](../commands/screen-height) to double-check the new coordinates of the window.
 
 By default, executing this command automatically moves the window designated by the *window* parameter to the foreground (if this parameter is used). You can disable this by passing the *\** as the last parameter. In this case, the command no longer changes the original level ("z" coordinate) of the window.
 
-This command does not affect form objects. If the window contains a form, the form objects are not moved or resized by the command (regardless of their properties). Only the window is modified. In order to modify a form window while taking the resizing properties and the objects it contains into account, you must use the [RESIZE FORM WINDOW](resize-form-window.md) command.
+This command does not affect form objects. If the window contains a form, the form objects are not moved or resized by the command (regardless of their properties). Only the window is modified. In order to modify a form window while taking the resizing properties and the objects it contains into account, you must use the [RESIZE FORM WINDOW](../commands/resize-form-window) command.
 
 ## Example 1 
 
-See example for the [WINDOW LIST](window-list.md) command.
+See example for the [WINDOW LIST](../commands/window-list) command.
 
 ## Example 2 
 
@@ -70,10 +70,10 @@ The window appears as follows:
 
 ## See also 
 
-[CONVERT COORDINATES](convert-coordinates.md)  
-[DRAG WINDOW](drag-window.md)  
-[GET WINDOW RECT](get-window-rect.md)  
-[RESIZE FORM WINDOW](resize-form-window.md)  
+[CONVERT COORDINATES](../commands/convert-coordinates)  
+[DRAG WINDOW](../commands/drag-window)  
+[GET WINDOW RECT](../commands/get-window-rect)  
+[RESIZE FORM WINDOW](../commands/resize-form-window)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-delete-offscreen-area
 title: QR DELETE OFFSCREEN AREA
 slug: /commands/qr-delete-offscreen-area
@@ -33,7 +33,7 @@ Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
 ## Voir aussi 
 
-[QR New offscreen area](qr-new-offscreen-area.md)  
+[QR New offscreen area](../commands/qr-new-offscreen-area)  
 
 ## Propriétés
 

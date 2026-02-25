@@ -1,4 +1,4 @@
----
+﻿---
 id: highlight-records
 title: HIGHLIGHT RECORDS
 slug: /commands/highlight-records
@@ -37,15 +37,15 @@ displayed_sidebar: docs
 Le paramètre *laTable* permet de désigner la table de laquelle les enregistrements doivent être “marqués”. Ce paramètre permet en particulier de marquer les enregistrements des sous-formulaires inclus — n’appartenant donc pas à la table courante (cf. ci-dessous).
 
 * Si vous passez un nom d’ensemble valide dans le paramètre *nomEnsemble*, la commande s’appliquera aux enregistrements de cet ensemble pour la *table* définie.
-* Si vous omettez le paramètre *nomEnsemble*, la commande marquera les enregistrements de l’ensemble système UserSet courant. Cet ensemble est géré uniquement en mode Développement et dans le cadre de l'appel des commandes [DISPLAY SELECTION](display-selection.md) /[MODIFY SELECTION](modify-selection.md)). Si vous souhaitez marquer les enregistrements d'un sous-formulaire, vous devez passer un nom de table et d'ensemble. Pour plus d'informations sur l'ensemble UserSet, reportez-vous à la section *Ensembles*.
+* Si vous omettez le paramètre *nomEnsemble*, la commande marquera les enregistrements de l’ensemble système UserSet courant. Cet ensemble est géré uniquement en mode Développement et dans le cadre de l'appel des commandes [DISPLAY SELECTION](../commands/display-selection) /[MODIFY SELECTION](../commands/modify-selection)). Si vous souhaitez marquer les enregistrements d'un sous-formulaire, vous devez passer un nom de table et d'ensemble. Pour plus d'informations sur l'ensemble UserSet, reportez-vous à la section *Ensembles*.
 
-Le paramètre *\**, s’il est passé, provoque l’inactivation de la fonction de défilement automatique de la liste si les enregistrements marqués ne sont pas visibles. Ce mécanisme autorise la gestion personnalisée du défilement via la commande [OBJECT SET SCROLL POSITION](object-set-scroll-position.md).
+Le paramètre *\**, s’il est passé, provoque l’inactivation de la fonction de défilement automatique de la liste si les enregistrements marqués ne sont pas visibles. Ce mécanisme autorise la gestion personnalisée du défilement via la commande [OBJECT SET SCROLL POSITION](../commands/object-set-scroll-position).
 
-**Note :** Dans le cadre des sous-formulaires inclus, la commande **HIGHLIGHT RECORDS** ne fait rien si le sous-formulaire ne dispose pas de la propriété de sélection **Multilignes**. Dans ce contexte, pour marquer une ligne, vous devez utiliser la commande [GOTO SELECTED RECORD](goto-selected-record.md). 
+**Note :** Dans le cadre des sous-formulaires inclus, la commande **HIGHLIGHT RECORDS** ne fait rien si le sous-formulaire ne dispose pas de la propriété de sélection **Multilignes**. Dans ce contexte, pour marquer une ligne, vous devez utiliser la commande [GOTO SELECTED RECORD](../commands/goto-selected-record). 
 
 ## Exemple 
 
-Dans un formulaire en liste affiché par la commande [MODIFY SELECTION](modify-selection.md), vous souhaitez que l’utilisateur puisse effectuer des recherches, sans que la sélection courante soit modifiée. Pour cela, placez un bouton **Chercher** dans le formulaire et associez-lui la méthode suivante :
+Dans un formulaire en liste affiché par la commande [MODIFY SELECTION](../commands/modify-selection), vous souhaitez que l’utilisateur puisse effectuer des recherches, sans que la sélection courante soit modifiée. Pour cela, placez un bouton **Chercher** dans le formulaire et associez-lui la méthode suivante :
 
 ```4d
  SET QUERY DESTINATION(Into set;"UserSet")
@@ -58,8 +58,8 @@ Lorsque l’utilisateur clique sur le bouton, la boîte de dialogue standard de 
 
 ## Voir aussi 
 
-[GET HIGHLIGHTED RECORDS](get-highlighted-records.md)  
-[OBJECT SET SCROLL POSITION](object-set-scroll-position.md)  
+[GET HIGHLIGHTED RECORDS](../commands/get-highlighted-records)  
+[OBJECT SET SCROLL POSITION](../commands/object-set-scroll-position)  
 
 ## Propriétés
 

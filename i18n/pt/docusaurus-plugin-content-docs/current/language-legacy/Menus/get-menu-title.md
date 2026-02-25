@@ -1,4 +1,4 @@
----
+﻿---
 id: get-menu-title
 title: Get menu title
 slug: /commands/get-menu-title
@@ -38,7 +38,7 @@ Se omite o parâmetro *processo*, Get menu title é aplicado à barra de menus d
 
 ## Ver também 
 
-[Count menus](count-menus.md)  
+[Count menus](../commands/count-menus)  
 
 ## Propriedades
 

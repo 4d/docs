@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-corner-radius
 title: OBJECT SET CORNER RADIUS
 slug: /commands/object-set-corner-radius
@@ -78,7 +78,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT Get corner radius](object-get-corner-radius.md)  
+[OBJECT Get corner radius](../commands/object-get-corner-radius)  
 
 ## プロパティ
 

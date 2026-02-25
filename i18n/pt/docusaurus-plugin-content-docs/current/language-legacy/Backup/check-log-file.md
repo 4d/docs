@@ -1,4 +1,4 @@
----
+﻿---
 id: check-log-file
 title: CHECK LOG FILE
 slug: /commands/check-log-file
@@ -45,7 +45,7 @@ Este comando só pode ser utilizado no contexto de aplicativos monousuários. Ma
 ## Ver também 
 
 *Erros de Gestão de backup (1401 -> 1421)*  
-[RESTORE](restore.md)  
+[RESTORE](../commands/restore)  
 
 ## Propriedades
 

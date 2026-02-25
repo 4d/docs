@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-duplicate-column
 title: LISTBOX DUPLICATE COLUMN
 slug: /commands/listbox-duplicate-column
@@ -54,7 +54,7 @@ In the *colName* and *colVariable* parameters, pass the object name and the vari
 
 * For array type list boxes, the *colVariable* corresponds to the name of the array whose contents will be displayed in the column. You can pass a Nil (->\[\]) pointer in a dynamic context (see below).
 * For selection type list boxes, you can pass a field or variable in the *colVariable* parameter. So the contents of the column will be the value of this field or variable, evaluated for each record of the selection associated with the list box. This type of content can only be used when the "Data Source" property of the list box is set to Current Selection or Named Selection.
-* For collection or entity selection type list boxes, pass a Nil (->\[\]) pointer in *colVariable*; you will need to call [LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md) afterwards to specify the data source expression.
+* For collection or entity selection type list boxes, pass a Nil (->\[\]) pointer in *colVariable*; you will need to call [LISTBOX SET COLUMN FORMULA](../commands/listbox-set-column-formula) afterwards to specify the data source expression.
 
 Remember that the data source of the original column is not duplicated: you must set a source variable, array, field, or expression for the new duplicated column.
 
@@ -70,7 +70,7 @@ You can duplicate list box columns dynamically and 4D will automatically handle 
 
 To do this, **LISTBOX DUPLICATE COLUMN** accepts a **Nil** (**\->\[\]**) pointer as a value for the *colVariable* (with array and collection/entity selection type list boxes), *headerVar* and *footerVar* parameters. In this case, when the command is executed, 4D creates the required variables dynamically (for more information, refer to the section). 
 
-Note that header and footer variables are always created with a specific type (longint and text, respectively). Conversely, column variables cannot be typed when created because list boxes accept different types of arrays for these variables (text array, integer array, and so on). This means you have to set the array type manually (see example 2). It is important to perform this typing before calling commands such as [LISTBOX INSERT ROWS](listbox-insert-rows.md) to insert new elements in the array. Alternatively, you can use [APPEND TO ARRAY](append-to-array.md) both for setting the type of the array and inserting elements. 
+Note that header and footer variables are always created with a specific type (longint and text, respectively). Conversely, column variables cannot be typed when created because list boxes accept different types of arrays for these variables (text array, integer array, and so on). This means you have to set the array type manually (see example 2). It is important to perform this typing before calling commands such as [LISTBOX INSERT ROWS](../commands/listbox-insert-rows) to insert new elements in the array. Alternatively, you can use [APPEND TO ARRAY](../commands/append-to-array) both for setting the type of the array and inserting elements. 
 
 ## Example 1 
 
@@ -106,7 +106,7 @@ You want to duplicate a Boolean column and change its title:
 
 ## See also 
 
-[LISTBOX MOVE COLUMN](listbox-move-column.md)  
+[LISTBOX MOVE COLUMN](../commands/listbox-move-column)  
 
 ## Properties
 

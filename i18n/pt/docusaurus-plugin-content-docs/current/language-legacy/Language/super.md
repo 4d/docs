@@ -1,4 +1,4 @@
----
+﻿---
 id: super
 title: Super
 slug: /commands/super
@@ -20,7 +20,7 @@ A palavra-chave `Super` <!-- REF #_command_.Super.Summary -->permite chamadas à
 
 `Super` tem dois objectivos diferentes:
 
-1. Dentro de um [código construtor](../../Concepts/classes.md#class-constructor), `Super` é um comando que permite chamar o construtor da superclasse. Quando usado em um construtor, o comando `Super` aparece sozinho e deve ser usado antes que a palavra-chave [`This`](this.md) seja usada.
+1. Dentro de um [código construtor](../../Concepts/classes.md#class-constructor), `Super` é um comando que permite chamar o construtor da superclasse. Quando usado em um construtor, o comando `Super` aparece sozinho e deve ser usado antes que a palavra-chave [`This`](../commands/this) seja usada.
 
 - Se todos os construtores de classe na árvore de herança não forem correctamente chamados, é gerado o erro -10748. É o programador 4D que se certifica de que as chamadas são válidas.
 - Se o comando `This` for chamado em um objeto cujas superclasses não foram construídas, o erro -10743 será gerado.

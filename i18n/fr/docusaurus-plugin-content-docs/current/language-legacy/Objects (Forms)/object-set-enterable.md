@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-enterable
 title: OBJECT SET ENTERABLE
 slug: /commands/object-set-enterable
@@ -52,7 +52,7 @@ Lorsque saisissable est Faux :
 | obk not enterable               | 0      | Les utilisateurs ne peuvent pas saisir de valeurs dans l'objet, mais un **objet zone de saisie** ou une **zone 4D Write Pro** est focusable (les autres objets non saisissables sont automatiquement non focusables). |  
 | obk not enterable not focusable | 2      | Les utilisateurs ne peuvent pas saisir de valeurs dans l'objet, et un objet **zone de saisie** et **zone 4D Write Pro** n'est pas focusable.                                                                          |
 
-La commande **OBJECT SET ENTERABLE** permet également d’activer par programmation le mode “Saisie en liste” pour les sous-formulaires et les formulaires liste affichés par les commandes [MODIFY SELECTION](modify-selection.md) et [DISPLAY SELECTION](display-selection.md) :
+La commande **OBJECT SET ENTERABLE** permet également d’activer par programmation le mode “Saisie en liste” pour les sous-formulaires et les formulaires liste affichés par les commandes [MODIFY SELECTION](../commands/modify-selection) et [DISPLAY SELECTION](../commands/display-selection) :
 
 * Pour les sous-formulaires, vous pouvez passer dans le paramètre saisissable soit le nom de la table du sous-formulaire, soit le nom de l’objet sous-formulaire lui-même, par exemple : **OBJECT SET ENTERABLE**(\*;"Sousform";Vrai). La commande fonctionne dans les sous-formulaires uniquement si elle se trouve dans la méthode formulaire du sous-formulaire.
 * Pour les formulaires liste, vous devez passer le nom de la table du formulaire dans le paramètre saisissable, par exemple : **OBJECT SET ENTERABLE**(\[MaTable\];Vrai).
@@ -85,8 +85,8 @@ Voici la méthode objet d’une case à cocher placée dans l’en-tête d’une
 
 ## Voir aussi 
 
-[OBJECT Get enterable](object-get-enterable.md)  
-[OBJECT SET VISIBLE](object-set-visible.md)  
+[OBJECT Get enterable](../commands/object-get-enterable)  
+[OBJECT SET VISIBLE](../commands/object-set-visible)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: filter-keystroke
 title: FILTER KEYSTROKE
 slug: /commands/filter-keystroke
@@ -249,9 +249,9 @@ El método ObtenerTextoSeleccionado es el siguiente:
 ## Ver también 
 
 [Form event code](../commands/form-event-code)  
-[Get edited text](get-edited-text.md)  
-[Is editing text](is-editing-text.md)  
-[Keystroke](keystroke.md)  
+[Get edited text](../commands/get-edited-text)  
+[Is editing text](../commands/is-editing-text)  
+[Keystroke](../commands/keystroke)  
 
 
 ## Propiedades

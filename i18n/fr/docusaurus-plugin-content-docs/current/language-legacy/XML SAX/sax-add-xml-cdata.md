@@ -1,4 +1,4 @@
----
+﻿---
 id: sax-add-xml-cdata
 title: SAX ADD XML CDATA
 slug: /commands/sax-add-xml-cdata
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX ADD XML CDATA.Summary-->La commande **SAX ADD XML CDATA** ajoute dans le document XML référencé par *document* des *données* de type texte ou BLOB.<!-- END REF--> Ces données seront automatiquement encadrées par les balises *<!\[CDATA\[* et *\]\]>*.   
 Le texte compris dans une section CData est ignoré par l’interpréteur XML. 
 
-Si vous souhaitez encoder le contenu de *données*, vous devez utiliser la commande [BASE64 ENCODE](base64-encode.md). Dans ce cas bien entendu, vous devez passer un BLOB dans *données*. 
+Si vous souhaitez encoder le contenu de *données*, vous devez utiliser la commande [BASE64 ENCODE](../commands/base64-encode). Dans ce cas bien entendu, vous devez passer un BLOB dans *données*. 
 
 Pour que cette commande fonctionne, un élément doit être ouvert. Dans le cas contraire, une erreur est générée. 
 
@@ -85,7 +85,7 @@ Si la commande a été exécutée correctement, la variable système OK prend la
 
 ## Voir aussi 
 
-[SAX GET XML CDATA](sax-get-xml-cdata.md)  
+[SAX GET XML CDATA](../commands/sax-get-xml-cdata)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: print-label
 title: PRINT LABEL
 slug: /commands/print-label
@@ -49,7 +49,7 @@ Il est à noter que ces paramètres n'ont pas d'effet si l'assistant de créatio
 
 Si l'assistant de création d'étiquettes n'est pas utilisé, la variable système OK est mise à 1 si toutes les étiquettes ont été imprimées ; sinon, elle prend la valeur 0 (zéro) (par exemple si l'utilisateur a cliqué sur le bouton **Annuler** dans la boîte de dialogue d'impression).
 
-Si vous spécifiez le paramètre *nomFichier*, les étiquettes sont imprimées avec les paramétrages définis dans *nomFichier*. Si *nomFichier* est une chaîne vide (""), **PRINT LABEL** affiche une boîte de dialogue standard d’ouverture de documents, permettant à l'utilisateur de sélectionner le fichier d'étiquettes à utiliser. Si *nomFichier* est le nom d'un fichier qui n'existe pas ou est invalide (si vous passez, par exemple, [Char](char.md)(1) dans *nomFichier*), l'assistant de création d'étiquettes s'affiche, permettant à l'utilisateur de créer son propre format d'étiquettes.
+Si vous spécifiez le paramètre *nomFichier*, les étiquettes sont imprimées avec les paramétrages définis dans *nomFichier*. Si *nomFichier* est une chaîne vide (""), **PRINT LABEL** affiche une boîte de dialogue standard d’ouverture de documents, permettant à l'utilisateur de sélectionner le fichier d'étiquettes à utiliser. Si *nomFichier* est le nom d'un fichier qui n'existe pas ou est invalide (si vous passez, par exemple, [Char](../commands/char)(1) dans *nomFichier*), l'assistant de création d'étiquettes s'affiche, permettant à l'utilisateur de créer son propre format d'étiquettes.
 
 **Note :** Si *laTable* a été déclarée “invisible” en mode Développement, l'assistant de création d'étiquettes n'apparaît pas.
 
@@ -120,8 +120,8 @@ L'exemple suivant permet à l'utilisateur d'effectuer une recherche sur la table
 
 ## Voir aussi 
 
-[PRINT SELECTION](print-selection.md)  
-[QR REPORT](qr-report.md)  
+[PRINT SELECTION](../commands/print-selection)  
+[QR REPORT](../commands/qr-report)  
 
 ## Propriétés
 

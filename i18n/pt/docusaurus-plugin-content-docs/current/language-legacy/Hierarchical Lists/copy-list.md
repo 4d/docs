@@ -1,4 +1,4 @@
----
+﻿---
 id: copy-list
 title: Copy list
 slug: /commands/copy-list
@@ -34,9 +34,9 @@ Quando tiver terminado de utilizar a nova lista, chame a [CLEAR LIST](clear-list
 
 ## Ver também 
 
-[CLEAR LIST](clear-list.md)  
-[Load list](load-list.md)  
-[New list](new-list.md)  
+[CLEAR LIST](../commands/clear-list)  
+[Load list](../commands/load-list)  
+[New list](../commands/new-list)  
 
 ## Propriedades
 

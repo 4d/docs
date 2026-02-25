@@ -1,4 +1,4 @@
----
+﻿---
 id: new-object
 title: New object
 slug: /commands/new-object
@@ -53,8 +53,8 @@ Opcionalmente, puede prefijar el nuevo objeto pasando uno o varios pares *propie
 
 Tenga en cuenta que:
 
-* si pasa un puntero, se mantiene como está; Se evalúa utilizando comandos como [JSON Stringify](json-stringify.md),
-* las fechas se almacenan en como fechas "aaaa-mm-dd" o en cadena en formato "AAAA-MM-DDTHH:mm:ss.SSSZ" en función del parámetro actual relativo al almacenamiento de las fechas en los objetos (ver *Página Compatibilidad*). Al convertir las fechas 4D en texto antes de almacenarlas en el objeto, por defecto el programa toma en cuenta la zona horaria local. Puede modificar este comportamiento utilizando el selector Dates inside objects del comando [SET DATABASE PARAMETER](set-database-parameter.md).
+* si pasa un puntero, se mantiene como está; Se evalúa utilizando comandos como [JSON Stringify](../commands/json-stringify),
+* las fechas se almacenan en como fechas "aaaa-mm-dd" o en cadena en formato "AAAA-MM-DDTHH:mm:ss.SSSZ" en función del parámetro actual relativo al almacenamiento de las fechas en los objetos (ver *Página Compatibilidad*). Al convertir las fechas 4D en texto antes de almacenarlas en el objeto, por defecto el programa toma en cuenta la zona horaria local. Puede modificar este comportamiento utilizando el selector Dates inside objects del comando [SET DATABASE PARAMETER](../commands/set-database-parameter).
 * si pasa una hora, se almacena como un número de milisegundos (Real).
 
 ## Ejemplo 1 
@@ -117,7 +117,7 @@ Con este comando, puede fácilmente manejar objetos en bucles:
 ## Ver también 
 
   
-[New shared object](new-shared-object.md)  
+[New shared object](../commands/new-shared-object)  
 
 ## Propiedades
 

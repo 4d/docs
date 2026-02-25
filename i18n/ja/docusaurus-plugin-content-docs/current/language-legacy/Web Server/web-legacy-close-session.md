@@ -1,4 +1,4 @@
----
+﻿---
 id: web-legacy-close-session
 title: WEB LEGACY CLOSE SESSION
 slug: /commands/web-legacy-close-session
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 Webプロセスや他のプロセスからこのコマンドが呼び出されると:
 
 * ブラウザーに送信されるcookieの有効期限が0に設定されます。
-* 開発者がセッション情報を保存できるようにするために[On Web Legacy Close Session database method](on-web-legacy-close-session-database-method.md)が呼び出されます。
+* 開発者がセッション情報を保存できるようにするために[On Web Legacy Close Session database method](../commands/on-web-legacy-close-session-database-method)が呼び出されます。
 * カレントセレクションや変数などのプロセスオブジェクトが消去され、レコードのロックが解除されます。
 
 このコマンド実行後、Webクライアントが当該cookieを使用して4D Webサーバーにアクセスすると、新しいセッションが開始され新しいcookieがクライアントに送信されます。
@@ -47,7 +47,7 @@ Webプロセスや他のプロセスからこのコマンドが呼び出され�
 
 ## 参照 
 
-[On Web Legacy Close Session database method](on-web-legacy-close-session-database-method.md)  
+[On Web Legacy Close Session database method](../commands/on-web-legacy-close-session-database-method)  
 *Webセッション管理(旧式)*  
 
 ## プロパティ

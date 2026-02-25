@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-list-by-name
 title: OBJECT SET LIST BY NAME
 slug: /commands/object-set-list-by-name
@@ -107,8 +107,8 @@ Você quer eliminar a lista de associações:
 
 ## Ver também 
 
-[OBJECT Get list name](object-get-list-name.md)  
-[OBJECT SET LIST BY REFERENCE](object-set-list-by-reference.md)  
+[OBJECT Get list name](../commands/object-get-list-name)  
+[OBJECT SET LIST BY REFERENCE](../commands/object-set-list-by-reference)  
 
 ## Propriedades
 

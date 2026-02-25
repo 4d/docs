@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-hierarchy
 title: LISTBOX SET HIERARCHY
 slug: /commands/listbox-set-hierarchy
@@ -64,7 +64,7 @@ Définition des tableaux tPays, tRegion et tVille comme hiérarchie d’une list
 
 ## Voir aussi 
 
-[LISTBOX GET HIERARCHY](listbox-get-hierarchy.md)  
+[LISTBOX GET HIERARCHY](../commands/listbox-get-hierarchy)  
 
 ## Propriétés
 

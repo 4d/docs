@@ -1,4 +1,4 @@
----
+﻿---
 id: load-list
 title: Load list
 slug: /commands/load-list
@@ -30,15 +30,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Load list.Summary-->La commande **Load list** crée une liste hiérarchique dont le contenu est copié depuis la liste *nomListe* créée en mode Développement, dans l'éditeur d'énumérations.<!-- END REF--> La fonction retourne le numéro de référence de la liste nouvellement créée. 
 
-Pour connaître les énumérations définies dans la base, utilisez la commande [LIST OF CHOICE LISTS](list-of-choice-lists.md). Pour savoir si la liste a correctement été chargée, utilisez la fonction [Is a list](is-a-list.md) avec le numéro de référence retourné par **Load list**.
+Pour connaître les énumérations définies dans la base, utilisez la commande [LIST OF CHOICE LISTS](../commands/list-of-choice-lists). Pour savoir si la liste a correctement été chargée, utilisez la fonction [Is a list](../commands/is-a-list) avec le numéro de référence retourné par **Load list**.
 
 Notez que la nouvelle liste est une copie de la liste définie en mode Développement. Par conséquent, toute modification apportée à cette nouvelle liste n'affectera pas la liste définie en mode Développement. De même, toute modification ultérieure de l'énumération n'affecte pas la liste que vous venez de créer. 
 
-Si vous modifiez la liste nouvellement créée et voulez enregistrer ces modifications, utilisez la commande [SAVE LIST](save-list.md). 
+Si vous modifiez la liste nouvellement créée et voulez enregistrer ces modifications, utilisez la commande [SAVE LIST](../commands/save-list). 
 
-Si vous n'avez plus besoin de la liste, n'oubliez pas d'appeler [CLEAR LIST](clear-list.md) pour la supprimer. Sinon, elle reste en mémoire jusqu'à la fin de la session de travail ou jusqu'à ce que le process dans lequel la liste a été créée soit détruit.
+Si vous n'avez plus besoin de la liste, n'oubliez pas d'appeler [CLEAR LIST](../commands/clear-list) pour la supprimer. Sinon, elle reste en mémoire jusqu'à la fin de la session de travail ou jusqu'à ce que le process dans lequel la liste a été créée soit détruit.
 
-**Astuce :** Si vous associez une liste à un objet de formulaire (liste hiérarchique, onglet ou menu hiérarchique) à l'aide du menu **Enumération** dans la Liste des propriétés, il est inutile d'appeler **Load list** ou [CLEAR LIST](clear-list.md) dans la méthode de l'objet. 4D charge et efface la liste automatiquement pour vous.
+**Astuce :** Si vous associez une liste à un objet de formulaire (liste hiérarchique, onglet ou menu hiérarchique) à l'aide du menu **Enumération** dans la Liste des propriétés, il est inutile d'appeler **Load list** ou [CLEAR LIST](../commands/clear-list) dans la méthode de l'objet. 4D charge et efface la liste automatiquement pour vous.
 
 ## Exemple 
 
@@ -57,9 +57,9 @@ Imaginons que vous créez une base pour le marché international. Vous voulez po
 
 ## Voir aussi 
 
-[CLEAR LIST](clear-list.md)  
-[Is a list](is-a-list.md)  
-[SAVE LIST](save-list.md)  
+[CLEAR LIST](../commands/clear-list)  
+[Is a list](../commands/is-a-list)  
+[SAVE LIST](../commands/save-list)  
 
 ## Propriétés
 

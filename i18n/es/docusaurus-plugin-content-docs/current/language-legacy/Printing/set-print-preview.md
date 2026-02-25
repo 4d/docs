@@ -1,4 +1,4 @@
----
+﻿---
 id: set-print-preview
 title: SET PRINT PREVIEW
 slug: /commands/set-print-preview
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET PRINT PREVIEW.Summary-->**SET PRINT PREVIEW** le permite seleccionar o deseleccionar por programación la opción de previsualización en pantalla de la caja de diálogo de impresión.<!-- END REF--> Si pasa TRUE en *vista previa*, se selecciona Previsualización en pantalla, si pasa FALSE, se deseleccionará. Este parámetro es local para un proceso y no afecta la impresión de otros procesos o usuarios.
 
-**Nota:** en Windows, puede definir el formato de la vista previa de impresión utilizando el comando [SET PRINT OPTION](set-print-option.md).
+**Nota:** en Windows, puede definir el formato de la vista previa de impresión utilizando el comando [SET PRINT OPTION](../commands/set-print-option).
 
 ## Ejemplo 
 
@@ -47,8 +47,8 @@ El siguiente ejemplo selecciona la opción Previsualización en pantalla para mo
 
 ## Ver también 
 
-[Get print preview](get-print-preview.md)  
-[Is in print preview](is-in-print-preview.md)  
+[Get print preview](../commands/get-print-preview)  
+[Is in print preview](../commands/is-in-print-preview)  
 
 ## Propiedades
 

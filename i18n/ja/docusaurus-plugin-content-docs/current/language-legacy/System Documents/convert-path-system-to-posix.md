@@ -1,4 +1,4 @@
----
+﻿---
 id: convert-path-system-to-posix
 title: Convert path system to POSIX
 slug: /commands/convert-path-system-to-posix
@@ -69,10 +69,10 @@ Windowsでの例題
 
 ## 参照 
 
-[Convert path POSIX to system](convert-path-posix-to-system.md)  
-[Object to path](object-to-path.md)  
-[Path to object](path-to-object.md)  
-[Test path name](test-path-name.md)  
+[Convert path POSIX to system](../commands/convert-path-posix-to-system)  
+[Object to path](../commands/object-to-path)  
+[Path to object](../commands/path-to-object)  
+[Test path name](../commands/test-path-name)  
 
 ## プロパティ
 

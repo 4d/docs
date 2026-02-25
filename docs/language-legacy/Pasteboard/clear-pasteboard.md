@@ -1,4 +1,4 @@
----
+﻿---
 id: clear-pasteboard
 title: CLEAR PASTEBOARD
 slug: /commands/clear-pasteboard
@@ -29,11 +29,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CLEAR PASTEBOARD.Summary-->The CLEAR PASTEBOARD command clears the pasteboard of all its contents.<!-- END REF--> If the pasteboard contains multiple instances of the same data, all instances are cleared. After a call to CLEAR PASTEBOARD, the pasteboard is empty.
 
-You must call CLEAR PASTEBOARD once before appending new data to the pasteboard using the command [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md), because this latter command does not clear the pasteboard before appending the new data. 
+You must call CLEAR PASTEBOARD once before appending new data to the pasteboard using the command [APPEND DATA TO PASTEBOARD](../commands/append-data-to-pasteboard), because this latter command does not clear the pasteboard before appending the new data. 
 
-Calling CLEAR PASTEBOARD once and then calling [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md) several times enables you to Cut or Copy the same data under different formats.
+Calling CLEAR PASTEBOARD once and then calling [APPEND DATA TO PASTEBOARD](../commands/append-data-to-pasteboard) several times enables you to Cut or Copy the same data under different formats.
 
-On the other hand, the [SET TEXT TO PASTEBOARD](set-text-to-pasteboard.md) and [SET PICTURE TO PASTEBOARD](set-picture-to-pasteboard.md) commands automatically clear the pasteboard before appending the data to it.
+On the other hand, the [SET TEXT TO PASTEBOARD](../commands/set-text-to-pasteboard) and [SET PICTURE TO PASTEBOARD](../commands/set-picture-to-pasteboard) commands automatically clear the pasteboard before appending the data to it.
 
 ## Example 1 
 
@@ -47,11 +47,11 @@ The following code clears and then appends data to the pasteboard:
 
 ## Example 2 
 
-See example for the [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md) command.
+See example for the [APPEND DATA TO PASTEBOARD](../commands/append-data-to-pasteboard) command.
 
 ## See also 
 
-[APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
+[APPEND DATA TO PASTEBOARD](../commands/append-data-to-pasteboard)  
 
 ## Properties
 

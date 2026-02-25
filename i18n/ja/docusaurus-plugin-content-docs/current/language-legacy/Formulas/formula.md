@@ -1,4 +1,4 @@
----
+﻿---
 id: formula
 title: Formula
 slug: /commands/formula
@@ -136,7 +136,7 @@ displayed_sidebar: docs
 [4D Blog - フォーミュラ: シンプルさの裏にある、さらなるパワー](https://blog.4d.com/ja/new-formula-more-power-behind-simplicity/)\
 [4D Blog - フォーミュラ: 既成概念にとらわれない発想](https://blog.4d.com/ja/new-formula-think-outside-the-box/)\
 [4D Blog - 独自のメソッドをオブジェクトにカプセル化する](https://blog.4d.com/ja/write-your-own-methods-for-objects/)\
-[Formula from string](formula-from-string.md)
+[Formula from string](../commands/formula-from-string)
 
 ## プロパティ
 

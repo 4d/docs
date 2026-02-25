@@ -1,4 +1,4 @@
----
+﻿---
 id: reduce-selection
 title: REDUCE SELECTION
 slug: /commands/reduce-selection
@@ -56,10 +56,10 @@ L'exemple suivant établit des statistiques pour une compétition mondiale parmi
 
 ## Voir aussi 
 
-[ORDER BY](order-by.md)  
+[ORDER BY](../commands/order-by)  
 *Présentation des ensembles*  
-[QUERY](query.md)  
-[SCAN INDEX](scan-index.md)  
+[QUERY](../commands/query)  
+[SCAN INDEX](../commands/scan-index)  
 
 ## Propriétés
 

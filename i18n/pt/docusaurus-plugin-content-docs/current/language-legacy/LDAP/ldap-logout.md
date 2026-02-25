@@ -1,4 +1,4 @@
----
+﻿---
 id: ldap-logout
 title: LDAP LOGOUT
 slug: /commands/ldap-logout
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 ## Ver também 
 
-[LDAP LOGIN](ldap-login.md)  
+[LDAP LOGIN](../commands/ldap-login)  
 
 ## Propriedades
 

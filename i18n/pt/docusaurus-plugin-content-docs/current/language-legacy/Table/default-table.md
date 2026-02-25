@@ -1,4 +1,4 @@
----
+﻿---
 id: default-table
 title: DEFAULT TABLE
 slug: /commands/default-table
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.DEFAULT TABLE.Summary-->**Dica**: ainda que utilizar DEFAULT TABLE e omitir o nome da tabela podem fazer o código mais fácil de ler, muitos programadores consideram que a utilização deste comando em realidade traz mais inconvenientes que vantagens.<!-- END REF--> Em particular, note que [DEFAULT TABLE](default-table.md) é prioritário quando utiliza por exemplo o comando [DIALOG](../commands/dialog) com um formulário projeto e há um formulário da tabela por padrão com o mesmo nome.  
+<!--REF #_command_.DEFAULT TABLE.Summary-->**Dica**: ainda que utilizar DEFAULT TABLE e omitir o nome da tabela podem fazer o código mais fácil de ler, muitos programadores consideram que a utilização deste comando em realidade traz mais inconvenientes que vantagens.<!-- END REF--> Em particular, note que [DEFAULT TABLE](../commands/default-table) é prioritário quando utiliza por exemplo o comando [DIALOG](../commands/dialog) com um formulário projeto e há um formulário da tabela por padrão com o mesmo nome.  
   
 DEFAULT TABLE define *tabela* como a tabela por padrão para o processo atual.
 
@@ -34,7 +34,7 @@ Se a tabela por padrão foi definida previamente como \[Tabela\], o mesmo comand
 ```
   
   
-Uma das razões para definir a tabela por padrão é criar código que não seja específico para uma tabela. Isso permite operar o mesmo código para diferentes tabelas. Também pode utilizar ponteiros para tabelas para escrever código que não seja específico a tabelas. Para maior informação sobre esta técnica, veja a descrição do comando [Table name](table-name.md). 
+Uma das razões para definir a tabela por padrão é criar código que não seja específico para uma tabela. Isso permite operar o mesmo código para diferentes tabelas. Também pode utilizar ponteiros para tabelas para escrever código que não seja específico a tabelas. Para maior informação sobre esta técnica, veja a descrição do comando [Table name](../commands/table-name). 
 
 DEFAULT TABLE não permite a omissão de nomes de tabelas quando se refere aos campos. Por exemplo:  
 
@@ -56,7 +56,7 @@ Em 4D, todas as tabelas estão “abertas” e prontas para ser utilizadas. DEFA
 
 ## Exemplo 
 
-O exemplo abaixo apresenta primeiro o código sem o comando DEFAULT TABLE. Depois mostra o mesmo código, com DEFAULT TABLE. O código é um loop comumente utilizado para adicionar novos registros a um banco de dados. Os comandos [FORM SET INPUT](form-set-input.md) e [ADD RECORD](add-record.md) necesitam uma tabela como primeiro parámetro:
+O exemplo abaixo apresenta primeiro o código sem o comando DEFAULT TABLE. Depois mostra o mesmo código, com DEFAULT TABLE. O código é um loop comumente utilizado para adicionar novos registros a um banco de dados. Os comandos [FORM SET INPUT](../commands/form-set-input) e [ADD RECORD](../commands/add-record) necesitam uma tabela como primeiro parámetro:
 
 ```4d
  FORM SET INPUT([Clientes];"Adicionar Registros")
@@ -77,8 +77,8 @@ Neste código o resultado da tabela padrão:
 
 ## Ver também 
 
-[Current default table](current-default-table.md)  
-[NO DEFAULT TABLE](no-default-table.md)  
+[Current default table](../commands/current-default-table)  
+[NO DEFAULT TABLE](../commands/no-default-table)  
 
 ## Propriedades
 

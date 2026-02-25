@@ -1,4 +1,4 @@
----
+﻿---
 id: encrypt-data-file
 title: Encrypt data file
 slug: /commands/encrypt-data-file
@@ -52,7 +52,7 @@ In the *dataPath* parameter, you can pass an empty string, a file name, or a ful
 
 * **To encrypt the database for the first time**, you only need to pass the *newPassPhrase* or *newDataKey* parameter (The *curPassPhrase* or *curDataKey* parameters must not be provided):  
    * *newPassPhrase*: String used to generate the encryption key (SHA 256-bit)  
-   * *newDataKey*: Object (with *encodedKey* property) that contains a new data encryption key. This key should have been generated with the [New data key](new-data-key.md) command.  
+   * *newDataKey*: Object (with *encodedKey* property) that contains a new data encryption key. This key should have been generated with the [New data key](../commands/new-data-key) command.  
     
 **Note:** The *newPassPhrase* (or *newDataKey*) is not added to the 4D keychain.
 * **To re-encrypt a database** (*i.e.* the database has already been encrypted), you must pass both the *newPassPhrase* (or *newDataKey*) parameter, as well as the current passphrase (or current data key). This is necessary to decrypt the database before re-encrypting it. This information can be provided in the following ways:  
@@ -73,7 +73,7 @@ The *method* parameter is used to set a callback method that will be called regu
 | End of execution   | 4  | 0   | "Done"    | 0         | Reserved         |
 | Warning(\*)    | 5  | Object type   | Text of error   | Table or index number       | Reserved         |
 
-(\*) Warning returned at the verification step (see [VERIFY DATA FILE](verify-data-file.md) command).
+(\*) Warning returned at the verification step (see [VERIFY DATA FILE](../commands/verify-data-file) command).
 
 **Returned value**
 
@@ -142,10 +142,10 @@ Re-encrypt an encrypted data file with the current key (for example, when the en
 ## See also 
 
 [4D Blog - New 4D commands to work with encrypted data](https://blog.4d.com/new-4d-commands-to-work-with-encrypted-data/)  
-[Data file encryption status](data-file-encryption-status.md)  
-[Decrypt data BLOB](decrypt-data-blob.md)  
-[Encrypt data BLOB](encrypt-data-blob.md)  
-[New data key](new-data-key.md)  
+[Data file encryption status](../commands/data-file-encryption-status)  
+[Decrypt data BLOB](../commands/decrypt-data-blob)  
+[Encrypt data BLOB](../commands/encrypt-data-blob)  
+[New data key](../commands/new-data-key)  
 
 ## Properties
 

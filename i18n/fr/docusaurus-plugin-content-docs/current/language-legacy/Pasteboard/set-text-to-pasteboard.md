@@ -1,4 +1,4 @@
----
+﻿---
 id: set-text-to-pasteboard
 title: SET TEXT TO PASTEBOARD
 slug: /commands/set-text-to-pasteboard
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 **Note :** Dans le cadre d'une opération de copier/coller, le conteneur de données correspond au Presse-papiers. 
 
-Vous pouvez récupérer le texte collé dans le conteneur de données à l'aide de la fonction [Get text from pasteboard](get-text-from-pasteboard.md) ou en appelant par exemple [GET PASTEBOARD DATA](get-pasteboard-data.md)("com.4d.private.text.native";...).
+Vous pouvez récupérer le texte collé dans le conteneur de données à l'aide de la fonction [Get text from pasteboard](../commands/get-text-from-pasteboard) ou en appelant par exemple [GET PASTEBOARD DATA](../commands/get-pasteboard-data)("com.4d.private.text.native";...).
 
 Les expressions de type Texte de 4D peuvent contenir jusqu'à 2 Go de texte. 
 
@@ -40,7 +40,7 @@ Les expressions de type Texte de 4D peuvent contenir jusqu'à 2 Go de texte.
 
 ## Exemple 
 
-Référez-vous à l'exemple de la commande [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md).
+Référez-vous à l'exemple de la commande [APPEND DATA TO PASTEBOARD](../commands/append-data-to-pasteboard).
 
 ## Variables et ensembles système 
 
@@ -48,8 +48,8 @@ Si la copie du texte est correctement placée dans le conteneur de données, la 
 
 ## Voir aussi 
 
-[APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
-[Get text from pasteboard](get-text-from-pasteboard.md)  
+[APPEND DATA TO PASTEBOARD](../commands/append-data-to-pasteboard)  
+[Get text from pasteboard](../commands/get-text-from-pasteboard)  
 
 ## Propriétés
 

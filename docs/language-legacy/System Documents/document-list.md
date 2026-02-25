@@ -1,4 +1,4 @@
----
+﻿---
 id: document-list
 title: DOCUMENT LIST
 slug: /commands/document-list
@@ -47,7 +47,7 @@ By default, if you omit the *options* parameter, only the names of documents are
 * With the Posix path option in relative mode (option 4 only), paths do not start with "/".
 * With the Posix path option in absolute mode (option 4 + 2), paths always begin with "/".
 
-If there are no documents at the specified location, the command returns an empty array. If the pathname you pass in *pathname* is invalid, **DOCUMENT LIST** generates a file manager error that you can intercept using an [ON ERR CALL](on-err-call.md) method.
+If there are no documents at the specified location, the command returns an empty array. If the pathname you pass in *pathname* is invalid, **DOCUMENT LIST** generates a file manager error that you can intercept using an [ON ERR CALL](../commands/on-err-call) method.
 
 ## Example 1 
 
@@ -124,8 +124,8 @@ List of all documents in recursive Posix (relative) mode:
 
 ## See also 
 
-[FOLDER LIST](folder-list.md)  
-[VOLUME LIST](volume-list.md)  
+[FOLDER LIST](../commands/folder-list)  
+[VOLUME LIST](../commands/volume-list)  
 
 ## Properties
 

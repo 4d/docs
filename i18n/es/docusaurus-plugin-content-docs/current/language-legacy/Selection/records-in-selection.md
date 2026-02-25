@@ -1,4 +1,4 @@
----
+﻿---
 id: records-in-selection
 title: Records in selection
 slug: /commands/records-in-selection
@@ -34,7 +34,7 @@ El siguiente ejemplo muestra una técnica de bucle actualmente utilizada para mo
 
 ## Ver también 
 
-[Records in table](records-in-table.md)  
+[Records in table](../commands/records-in-table)  
 
 ## Propiedades
 

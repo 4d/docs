@@ -1,4 +1,4 @@
----
+﻿---
 id: encrypt-data-blob
 title: Encrypt data BLOB
 slug: /commands/encrypt-data-blob
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 Puede utilizar un *objetoLlave* o una *frasePasar* para encriptar el BLOB:
 
-* *objetoLlave*: un objeto JSON que contiene la llave de cifrado, con la misma estructura que el objeto devuelto por el comando [New data key](new-data-key.md)
+* *objetoLlave*: un objeto JSON que contiene la llave de cifrado, con la misma estructura que el objeto devuelto por el comando [New data key](../commands/new-data-key)
 * *frasePasar*: una cadena utilizada para generar la llave de cifrado
 
 Pase en *sal* un número que se utilizará para hacer el cifrado más robusto.
@@ -44,7 +44,7 @@ Si el cifrado tiene éxito, los datos cifrados se devuelven en el parámetro *bl
 
 En caso de error, el BLOB se devuelve vacío y el comando devuelve False.
 
-**Nota:** cuando se encripta un blob utilizando **Encrypt data BLOB**, el *blobEncriptado* resultante es un múltiplo de 16 bytes debido al algoritmo de encriptación. En consecuencia, si *blobAEncriptar* no es un múltiplo de 16 bytes, el comando lo convierte automáticamente en un múltiplo de 16 bytes añadiendo bytes nulos al final. Para evitar errores al descifrar el blob con [Decrypt data BLOB](decrypt-data-blob.md), es necesario manejar el tamaño del *blobAEncriptar*   
+**Nota:** cuando se encripta un blob utilizando **Encrypt data BLOB**, el *blobEncriptado* resultante es un múltiplo de 16 bytes debido al algoritmo de encriptación. En consecuencia, si *blobAEncriptar* no es un múltiplo de 16 bytes, el comando lo convierte automáticamente en un múltiplo de 16 bytes añadiendo bytes nulos al final. Para evitar errores al descifrar el blob con [Decrypt data BLOB](../commands/decrypt-data-blob), es necesario manejar el tamaño del *blobAEncriptar*   
 cuando se trabaja con archivos que no son de texto. Para un ejemplo detallado de cómo hacerlo, ver [este artículo del blog](https://blog.4d.com/encrypt-your-own-data-with-the-4d-algorithm/).
 
 ## Ejemplo 
@@ -68,10 +68,10 @@ Encriptar un archivo de texto ubicado en la carpeta RESOURCES de la base de dato
 ## Ver también 
 
   
-[Decrypt data BLOB](decrypt-data-blob.md)  
-[ENCRYPT BLOB](encrypt-blob.md)  
-[Encrypt data file](encrypt-data-file.md)  
-[New data key](new-data-key.md)  
+[Decrypt data BLOB](../commands/decrypt-data-blob)  
+[ENCRYPT BLOB](../commands/encrypt-blob)  
+[Encrypt data file](../commands/encrypt-data-file)  
+[New data key](../commands/new-data-key)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: focus-object
 title: Focus object
 slug: /commands/focus-object
@@ -28,11 +28,11 @@ displayed_sidebar: docs
 
 ## Nota de compatibilidade 
 
-<!--REF #_command_.Focus object.Summary-->Este comando só é conservado por razões de compatibilidade.<!-- END REF--> Começa com a versão 12 de 4D, recomenda-se que se use o comando [OBJECT Get pointer](object-get-pointer.md).
+<!--REF #_command_.Focus object.Summary-->Este comando só é conservado por razões de compatibilidade.<!-- END REF--> Começa com a versão 12 de 4D, recomenda-se que se use o comando [OBJECT Get pointer](../commands/object-get-pointer).
 
 ## Descrição 
 
-Focus object retorna um ponteiro ao objeto que tem o foco no formulário atual. Se nenhum objeto tiver o foco, o comando retorna [Is nil pointer](is-nil-pointer.md).. Pode utilizar Focus object para realizar uma ação em um área de formulário sem saber qual objeto está selecionado atualmente. Tenha certeza de testar se o objeto é do tipo correto, utilizando [Type](type.md),, antes de realizar uma ação.  
+Focus object retorna um ponteiro ao objeto que tem o foco no formulário atual. Se nenhum objeto tiver o foco, o comando retorna [Is nil pointer](../commands/is-nil-pointer).. Pode utilizar Focus object para realizar uma ação em um área de formulário sem saber qual objeto está selecionado atualmente. Tenha certeza de testar se o objeto é do tipo correto, utilizando [Type](../commands/type),, antes de realizar uma ação.  
 
 **Nota**: quando se utiliza com um list box de tipo array, a função Focus object retorna um ponteiro ao list box ou à coluna do list box dependendo do contexto. Para mais informação, veja a seção *Gestão de objetos List Box*  
   
@@ -57,7 +57,7 @@ O exemplo abaixo é um método de objeto para um botão. O método de objeto mod
 
 ## Ver também 
 
-[OBJECT Get pointer](object-get-pointer.md)  
+[OBJECT Get pointer](../commands/object-get-pointer)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: application-type
 title: Application type
 slug: /commands/application-type
@@ -53,8 +53,8 @@ Quelque part dans votre code, ailleurs que dans la *On Server Startup Database M
 
 ## Voir aussi 
 
-[Application version](application-version.md)  
-[Version type](version-type.md)  
+[Application version](../commands/application-version)  
+[Version type](../commands/version-type)  
 
 ## Propriétés
 

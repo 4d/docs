@@ -1,4 +1,4 @@
----
+﻿---
 id: delete-user
 title: DELETE USER
 slug: /commands/delete-user
@@ -41,10 +41,10 @@ Si no tiene los privilegios de acceso para llamar DELETE USER o si otro proceso 
 
 ## Ver también 
 
-[GET USER LIST](get-user-list.md)  
-[GET USER PROPERTIES](get-user-properties.md)  
-[Is user deleted](is-user-deleted.md)  
-[Set user properties](set-user-properties.md)  
+[GET USER LIST](../commands/get-user-list)  
+[GET USER PROPERTIES](../commands/get-user-properties)  
+[Is user deleted](../commands/is-user-deleted)  
+[Set user properties](../commands/set-user-properties)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: get-group-list
 title: GET GROUP LIST
 slug: /commands/get-group-list
@@ -37,13 +37,13 @@ Le tableau *numérosGroupes*, synchronisé avec le tableau *nomsGroupes*, est re
 
 ## Gestion des erreurs 
 
-Si vous n'avez pas les privilèges d'accès pour appeler la commande **GET GROUP LIST** ou si le système de Mots de passe est déjà ouvert par un autre process, une erreur de privilège d'accès est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs installée par [ON ERR CALL](on-err-call.md).
+Si vous n'avez pas les privilèges d'accès pour appeler la commande **GET GROUP LIST** ou si le système de Mots de passe est déjà ouvert par un autre process, une erreur de privilège d'accès est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs installée par [ON ERR CALL](../commands/on-err-call).
 
 ## Voir aussi 
 
-[GET GROUP PROPERTIES](get-group-properties.md)  
-[GET USER LIST](get-user-list.md)  
-[Set group properties](set-group-properties.md)  
+[GET GROUP PROPERTIES](../commands/get-group-properties)  
+[GET USER LIST](../commands/get-user-list)  
+[Set group properties](../commands/set-group-properties)  
 
 ## Propriétés
 

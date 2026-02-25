@@ -1,4 +1,4 @@
----
+﻿---
 id: set-update-folder
 title: SET UPDATE FOLDER
 slug: /commands/set-update-folder
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.SET UPDATE FOLDER.Summary-->O comando **SET UPDATE FOLDER** especifica a pasta que contém a atualização da aplicação 4D fusionada atual.<!-- END REF--> Esta informação se armazena na sessão 4D até que se chama o método [RESTART 4D](restart-4d.md). Se sair da aplicação manualmente, esta informação não se conserva.  
+<!--REF #_command_.SET UPDATE FOLDER.Summary-->O comando **SET UPDATE FOLDER** especifica a pasta que contém a atualização da aplicação 4D fusionada atual.<!-- END REF--> Esta informação se armazena na sessão 4D até que se chama o método [RESTART 4D](../commands/restart-4d). Se sair da aplicação manualmente, esta informação não se conserva.  
   
 Este comando está destinado a ser utilizado em um processo de atualização automática de uma aplicação fundida (servidor ou autônomo). Para mais informação, consulte o capítulo *Finalizar e distribuir aplicativos* no Manual de *Desenho*.  
   
@@ -38,16 +38,16 @@ No parâmetro *viaPasta*, passe a via de acesso completa da pasta da nova versã
   
 **Nota**: Lhe recomendamos que utilize os mesmos nomes da versão original para os arquivos da nova versão da aplicação, já que a pasta da aplicação se substitui durante a atualização. Se utilizar nomes diferentes para estes arquivos, os atalhos e/ou vias armazenadas já não funcionarão mais.  
   
-Se os parámetros são válidos, a atualização fica "em espera" na sessão até que se chame o comando [RESTART 4D](restart-4d.md). Foi executada várias vezes **SET UPDATE FOLDER** antes de chamar a \[[RESTART 4D](restart-4d.md), se leva em conta a última chamada válida.  
+Se os parámetros são válidos, a atualização fica "em espera" na sessão até que se chame o comando [RESTART 4D](../commands/restart-4d). Foi executada várias vezes **SET UPDATE FOLDER** antes de chamar a \[[RESTART 4D](../commands/restart-4d), se leva em conta a última chamada válida.  
   
 Pode passar uma cadeia vazia ("" ) no parâmetro *viaPasta* para reinicializar a informação de atualização para a sessão atual.  
   
 O parâmetro opcional *errosDiscretos* especifica como se reportam os erros pela ferramenta "updater":  
 * Se passar **False** ou se omitir este parâmetro, os erros se registram no histórico de atualização e se mostram em uma caixa de diálogo de alerta.
 * Se passar **True**, os erros só se registram no histórico de atualização.
-Exceção: Se a ferramenta "updater" não pode criar o arquivo de histórico, se mostra uma caixa de diálogo de alerta, independentemente do valor do parâmetro *errosDiscretos*. Para mais informação, consulte a descrição do comando [Get last update log path](last-update-log-path.md).  
+Exceção: Se a ferramenta "updater" não pode criar o arquivo de histórico, se mostra uma caixa de diálogo de alerta, independentemente do valor do parâmetro *errosDiscretos*. Para mais informação, consulte a descrição do comando [Get last update log path](../commands/last-update-log-path).  
   
-Se o comando se executa corretamente, a variável sistema OK toma o valor 1, caso contrário, toma o valor 0\. Pode interceptar os erros gerados pelo comando utilizando um método instalado utilizando o comando [ON ERR CALL](on-err-call.md).
+Se o comando se executa corretamente, a variável sistema OK toma o valor 1, caso contrário, toma o valor 0\. Pode interceptar os erros gerados pelo comando utilizando um método instalado utilizando o comando [ON ERR CALL](../commands/on-err-call).
 
 ## Exemplo 
 
@@ -63,8 +63,8 @@ Você criou uma pasta "MyUpdates" em seu disco, na qual localizou uma nova vers�
 
 ## Ver também 
 
-[Get last update log path](last-update-log-path.md)  
-[RESTART 4D](restart-4d.md)  
+[Get last update log path](../commands/last-update-log-path)  
+[RESTART 4D](../commands/restart-4d)  
 
 ## Propriedades
 

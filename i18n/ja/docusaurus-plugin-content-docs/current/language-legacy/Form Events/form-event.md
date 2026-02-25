@@ -1,4 +1,4 @@
----
+﻿---
 id: form-event
 title: FORM Event
 slug: /commands/form-event
@@ -99,7 +99,7 @@ On Header Click イベントを使用してカラムをソートすることが�
 ## 参照
 
 [Form Events](../../Events/overview.md)
-[Form event code](form-event-code.md)
+[Form event code](../commands/form-event-code)
 
 ## プロパティ
 

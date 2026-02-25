@@ -1,4 +1,4 @@
----
+﻿---
 id: resolve-alias
 title: RESOLVE ALIAS
 slug: /commands/resolve-alias
@@ -43,7 +43,7 @@ If *aliasPath* does specify an alias/shortcut, the OK system variable is set to 
 
 ## See also 
 
-[CREATE ALIAS](create-alias.md)  
+[CREATE ALIAS](../commands/create-alias)  
 
 ## Properties
 

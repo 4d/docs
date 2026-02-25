@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-column-width
 title: LISTBOX Get column width
 slug: /commands/listbox-get-column-width
@@ -37,11 +37,11 @@ displayed_sidebar: docs
 
 Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. Pour plus d'informations sur les noms d’objets, reportez-vous à la section *Objets de formulaires*. 
 
-**LISTBOX Get column width** peut retourner dans les paramètres *largeurMini* et *largeurMaxi* les limites de redimensionnement de la colonne. Ces limites peuvent être définies via la commande [LISTBOX SET COLUMN WIDTH](listbox-set-column-width.md). Si aucune valeur de largeur minimale et/ou maximale n’a été fixée pour la colonne, le paramètre correspondant retourne 0.
+**LISTBOX Get column width** peut retourner dans les paramètres *largeurMini* et *largeurMaxi* les limites de redimensionnement de la colonne. Ces limites peuvent être définies via la commande [LISTBOX SET COLUMN WIDTH](../commands/listbox-set-column-width). Si aucune valeur de largeur minimale et/ou maximale n’a été fixée pour la colonne, le paramètre correspondant retourne 0.
 
 ## Voir aussi 
 
-[LISTBOX SET COLUMN WIDTH](listbox-set-column-width.md)  
+[LISTBOX SET COLUMN WIDTH](../commands/listbox-set-column-width)  
 
 ## Propriétés
 

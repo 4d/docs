@@ -1,4 +1,4 @@
----
+﻿---
 id: graph
 title: GRAPH
 slug: /commands/graph
@@ -38,14 +38,14 @@ displayed_sidebar: docs
 
 Les graphes générés par cette commande sont dessinés via le moteur de rendu SVG intégré. Ils bénéficient des fonctions d'interface associées aux variables images : menu contextuel en mode Application (permettant notamment le choix du format d'affichage), barres de défilement, etc.
 
-**Note :** SVG (Scalable Vector Graphics) est un format de fichier graphique vectoriel (extension .svg). Basé sur le XML, ce format est largement répandu et peut être notamment affiché par les navigateurs Web. Pour plus d'informations, reportez-vous à [http://www.w3.org.Graphics/SVG](http://www.w3.org.graphics/SVG/)/. La commande [SVG EXPORT TO PICTURE](svg-export-to-picture.md) vous permet également de tirer parti du moteur SVG intégré.
+**Note :** SVG (Scalable Vector Graphics) est un format de fichier graphique vectoriel (extension .svg). Basé sur le XML, ce format est largement répandu et peut être notamment affiché par les navigateurs Web. Pour plus d'informations, reportez-vous à [http://www.w3.org.Graphics/SVG](http://www.w3.org.graphics/SVG/)/. La commande [SVG EXPORT TO PICTURE](../commands/svg-export-to-picture) vous permet également de tirer parti du moteur SVG intégré.
 
 Passez dans le paramètre *graphImage* le nom de la variable image devant afficher le graphe dans le formulaire.
 
 Le second paramètre définit le type de graphe à utiliser. Vous disposez de deux possibilités :
 
-* passer un paramètre *graphNum* de type [Entier long](# "Entre -2 Milliard et +2 Milliard") (toutes versions de 4D) : dans ce cas, vous devez passer un nombre entre 1 et 8\. Les différents types de graphes disponibles sont listés dans l'exemple présenté plus bas. Une fois le graphe créé, vous pouvez modifier son type en modifiant la valeur de *graphNum* et en exécutant de nouveau la commande **GRAPH**. Vous pouvez par la suite modifier certaines caractéristiques du graphe en appelant la commande [GRAPH SETTINGS](graph-settings.md). Voir Exemple 1.
-* passer un paramètre *graphParams* de type [Objet](# "Données structurées sous forme d'objet natif 4D") (non pris en charge par 4D Server sur Windows) : dans ce cas, vous devez passer un objet qui contient les diverses propriétés du graphe que vous souhaitez définir. Pour cela, vous pouvez utiliser les constantes placées dans le thème "*Paramètre des graphes*" (cf ci-dessous). Cette syntaxe vous permet de définir le type de graphe ainsi que tous ses paramètres spécifiques (légende, xmin, etc.) en un seul appel. Avec ce principe, vous pouvez sauvegarder les graphes générés en tant qu'images SVG et les afficher dans un navigateur standard tel que FireFox, Chrome, IE ou Safari (les graphes générés sont conformes au SVG standard implémenté dans les navigateurs). En outre, cette syntaxe donne accès à de nombreux paramètres, vous permettant de personnaliser, entre autres, l'espacement entre les barres, les marges, les couleurs de barres, etc. Voir Exemples 2, 3 et 4\. Attention, si vous utilisez cette syntaxe, la commande [GRAPH SETTINGS](graph-settings.md) ne doit PAS être appelée.
+* passer un paramètre *graphNum* de type [Entier long](# "Entre -2 Milliard et +2 Milliard") (toutes versions de 4D) : dans ce cas, vous devez passer un nombre entre 1 et 8\. Les différents types de graphes disponibles sont listés dans l'exemple présenté plus bas. Une fois le graphe créé, vous pouvez modifier son type en modifiant la valeur de *graphNum* et en exécutant de nouveau la commande **GRAPH**. Vous pouvez par la suite modifier certaines caractéristiques du graphe en appelant la commande [GRAPH SETTINGS](../commands/graph-settings). Voir Exemple 1.
+* passer un paramètre *graphParams* de type [Objet](# "Données structurées sous forme d'objet natif 4D") (non pris en charge par 4D Server sur Windows) : dans ce cas, vous devez passer un objet qui contient les diverses propriétés du graphe que vous souhaitez définir. Pour cela, vous pouvez utiliser les constantes placées dans le thème "*Paramètre des graphes*" (cf ci-dessous). Cette syntaxe vous permet de définir le type de graphe ainsi que tous ses paramètres spécifiques (légende, xmin, etc.) en un seul appel. Avec ce principe, vous pouvez sauvegarder les graphes générés en tant qu'images SVG et les afficher dans un navigateur standard tel que FireFox, Chrome, IE ou Safari (les graphes générés sont conformes au SVG standard implémenté dans les navigateurs). En outre, cette syntaxe donne accès à de nombreux paramètres, vous permettant de personnaliser, entre autres, l'espacement entre les barres, les marges, les couleurs de barres, etc. Voir Exemples 2, 3 et 4\. Attention, si vous utilisez cette syntaxe, la commande [GRAPH SETTINGS](../commands/graph-settings) ne doit PAS être appelée.
 
 Le paramètre *xCatégories* définit les valeurs qui seront utilisées pour l'axe des X. Vous pouvez passer un champ de type chaîne, Heure, Date, ou un type numérique. Il doit y avoir le même nombre d'éléments de tableau dans *xCatégories* qu'il y en a dans chaque *zValeurs*.
 
@@ -289,9 +289,9 @@ Dans cet exemple, on personnalise divers paramètres :
 ## Voir aussi 
 
   
-[GRAPH SETTINGS](graph-settings.md)  
+[GRAPH SETTINGS](../commands/graph-settings)  
 *Paramètre des graphes*  
-[SVG EXPORT TO PICTURE](svg-export-to-picture.md)  
+[SVG EXPORT TO PICTURE](../commands/svg-export-to-picture)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: spell-checking
 title: SPELL CHECKING
 slug: /commands/spell-checking
@@ -30,9 +30,9 @@ displayed_sidebar: docs
 
 **Nota:** se deseja ativar o corretor ortográfico clicando no botão no formulário, tenha certeza de que este botão nãoo tenha a propriedade "enfocável".
 
-A verificação ortográfica começa com a primeira palavra de campo ou variável. Se for detectada uma palavra desconhecida, aparece a caixa de diálogo de correção (para saber mais, consulte o Manual de Desenho de 4D). 4D utiliza o dicionario atual (correspondente a linguagem da aplicação) a não ser que tenha utilizado o comando [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md).
+A verificação ortográfica começa com a primeira palavra de campo ou variável. Se for detectada uma palavra desconhecida, aparece a caixa de diálogo de correção (para saber mais, consulte o Manual de Desenho de 4D). 4D utiliza o dicionario atual (correspondente a linguagem da aplicação) a não ser que tenha utilizado o comando [SPELL SET CURRENT DICTIONARY](../commands/spell-set-current-dictionary).
 
-**Aten** **ção:** o comando **SPELL CHECKING** afeta o texto que está sendo introduzido no formulário, e não a fonte de dados associada (campo ou variável). Isto significa que é chamado a este comando desde os eventos de formulário On Data Change ou On Losing Focus (não recomendado), isto não afetará o texto armazenado já que 4D tenha sido assignado o texto introduzido a fonte de dados. Neste caso, é necessário atribuir o resultado editado a fonte de dados, usando o comando [Get edited text](get-edited-text.md). Por exemplo:  
+**Aten** **ção:** o comando **SPELL CHECKING** afeta o texto que está sendo introduzido no formulário, e não a fonte de dados associada (campo ou variável). Isto significa que é chamado a este comando desde os eventos de formulário On Data Change ou On Losing Focus (não recomendado), isto não afetará o texto armazenado já que 4D tenha sido assignado o texto introduzido a fonte de dados. Neste caso, é necessário atribuir o resultado editado a fonte de dados, usando o comando [Get edited text](../commands/get-edited-text). Por exemplo:  
 
 ```4d
  If(Form event code=On Data Change)
@@ -43,8 +43,8 @@ A verificação ortográfica começa com a primeira palavra de campo ou variáve
 
 ## Ver também 
 
-[SPELL CHECK TEXT](spell-check-text.md)  
-[SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md)  
+[SPELL CHECK TEXT](../commands/spell-check-text)  
+[SPELL SET CURRENT DICTIONARY](../commands/spell-set-current-dictionary)  
 
 ## Propriedades
 

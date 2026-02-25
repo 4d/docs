@@ -1,4 +1,4 @@
----
+﻿---
 id: "false"
 title: "False"
 slug: /commands/false
@@ -29,8 +29,8 @@ El siguiente ejemplo asigna la variable *vbOpciones* a Falso:
 
 ## Ver también 
 
-[Not](not.md)  
-[True](true.md)  
+[Not](../commands/not)  
+[True](../commands/true)  
 
 ## Propiedades
 

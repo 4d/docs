@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-get-last-error
 title: SQL GET LAST ERROR
 slug: /commands/sql-get-last-error
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL GET LAST ERROR.Summary-->O comando SQL GET LAST ERROR retorna a informação relacionada com o último erro encontrado durante a execução de um comando ODBC.<!-- END REF--> O erro pode vir da aplicação 4D, da rede, da fonte ODBC, etc.  
   
-Este comando geralmente deve ser chamado no contexto de um método de gestão de erros instalado utilizando o comando [ON ERR CALL](on-err-call.md).  
+Este comando geralmente deve ser chamado no contexto de um método de gestão de erros instalado utilizando o comando [ON ERR CALL](../commands/on-err-call).  
 
 * O parâmetro *codigoErro* retorna o código do erro.
 * O parâmetro *textoErro* retorna o texto do erro.
@@ -43,7 +43,7 @@ Os dos últimos parâmetros apenas são preenchidos quando o erro vem da fonte O
 ## Ver também 
 
 [Last errors](../commands/last-errors)   
-[ON ERR CALL](on-err-call.md)  
+[ON ERR CALL](../commands/on-err-call)  
 
 ## Propriedades
 

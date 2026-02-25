@@ -1,4 +1,4 @@
----
+﻿---
 id: old-related-many
 title: OLD RELATED MANY
 slug: /commands/old-related-many
@@ -25,8 +25,8 @@ OLD RELATED MANY muda a seleção da tabela relacionada e seleciona o primeiro r
 
 ## Ver também 
 
-[OLD RELATED ONE](old-related-one.md)  
-[RELATE MANY](relate-many.md)  
+[OLD RELATED ONE](../commands/old-related-one)  
+[RELATE MANY](../commands/relate-many)  
 
 ## Propriedades
 

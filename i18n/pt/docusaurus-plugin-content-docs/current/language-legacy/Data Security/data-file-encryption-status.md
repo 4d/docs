@@ -1,4 +1,4 @@
----
+﻿---
 id: data-file-encryption-status
 title: Data file encryption status
 slug: /commands/data-file-encryption-status
@@ -55,8 +55,8 @@ O objeto devolvido contém as propriedades abaixo:
 * previamente:  
    * antes de abrir este arquivo de dados, utilizando um dispositivo conectado,  
    * com o comando *ds.provideDataKey( )* quando se abre este arquivo de dados,  
-   * depois de abrir o arquivo de dados, con o comando [Discover data key](discover-data-key.md)
-* utilizando o comando [Register data key](register-data-key.md)
+   * depois de abrir o arquivo de dados, con o comando [Discover data key](../commands/discover-data-key)
+* utilizando o comando [Register data key](../commands/register-data-key)
 
 ## Exemplo 
 
@@ -79,7 +79,7 @@ Se quiser conhecer o estado de criptografia de um arquivo de dados que correspon
 ## Ver também 
 
   
-[Encrypt data file](encrypt-data-file.md)  
+[Encrypt data file](../commands/encrypt-data-file)  
 
 ## Propriedades
 

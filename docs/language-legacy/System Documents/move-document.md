@@ -1,4 +1,4 @@
----
+﻿---
 id: move-document
 title: MOVE DOCUMENT
 slug: /commands/move-document
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 You specify the full pathname to the document in *srcPathname* and the new name and/or new location for the document in *dstPathname*.
 
-**Warning:** Using **MOVE DOCUMENT**, you can move a document from and to any directory on the same volume. If you want to move a document between two distinct volumes, use [COPY DOCUMENT](copy-document.md) to “move” the document then delete the original copy of the document using [DELETE DOCUMENT](delete-document.md).
+**Warning:** Using **MOVE DOCUMENT**, you can move a document from and to any directory on the same volume. If you want to move a document between two distinct volumes, use [COPY DOCUMENT](../commands/copy-document) to “move” the document then delete the original copy of the document using [DELETE DOCUMENT](../commands/delete-document).
 
 ## Example 1 
 
@@ -62,7 +62,7 @@ The following example moves the document DocName:
 
 ## See also 
 
-[COPY DOCUMENT](copy-document.md)  
+[COPY DOCUMENT](../commands/copy-document)  
 
 ## Properties
 

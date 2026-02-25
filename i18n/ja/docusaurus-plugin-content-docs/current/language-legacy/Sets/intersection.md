@@ -1,4 +1,4 @@
----
+﻿---
 id: intersection
 title: INTERSECTION
 slug: /commands/intersection
@@ -49,8 +49,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[DIFFERENCE](difference.md)  
-[UNION](union.md)  
+[DIFFERENCE](../commands/difference)  
+[UNION](../commands/union)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-footers-height
 title: LISTBOX SET FOOTERS HEIGHT
 slug: /commands/listbox-set-footers-height
@@ -45,7 +45,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[LISTBOX Get footers height](listbox-get-footers-height.md)  
+[LISTBOX Get footers height](../commands/listbox-get-footers-height)  
 
 ## プロパティ
 

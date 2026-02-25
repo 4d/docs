@@ -1,4 +1,4 @@
----
+﻿---
 id: folder
 title: Folder
 slug: /commands/folder
@@ -76,7 +76,7 @@ If the command is called from a component, pass the optional `*` parameter to ge
 ## See also 
 
 [`4D.Folder` class](../../API/FolderClass.md)
-[File](file.md)  
+[File](../commands/file)  
 [Object to path](../commands/object-to-path)  
 [Path to object](../commands/path-to-object)  
 

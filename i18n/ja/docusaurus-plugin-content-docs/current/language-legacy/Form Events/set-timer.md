@@ -1,4 +1,4 @@
----
+﻿---
 id: set-timer
 title: SET TIMER
 slug: /commands/set-timer
@@ -56,7 +56,7 @@ On Timerフォームイベントの生成を取り消すには、*tickCount*に0
 ## 参照 
 
 [Form event code](../commands/form-event-code)  
-[REDRAW](redraw.md)  
+[REDRAW](../commands/redraw)  
 
 ## プロパティ
 

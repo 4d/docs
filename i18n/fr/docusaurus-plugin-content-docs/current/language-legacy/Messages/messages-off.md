@@ -1,4 +1,4 @@
----
+﻿---
 id: messages-off
 title: MESSAGES OFF
 slug: /commands/messages-off
@@ -28,40 +28,40 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.MESSAGES OFF.Summary-->Les commandes **MESSAGES OFF** et [MESSAGES ON](messages-on.md) suppriment ou font apparaître les thermomètres de progression affichés par 4D lorsque le programme exécute des opérations de longue durée.<!-- END REF--> Par défaut, les messages sont affichés. 
+<!--REF #_command_.MESSAGES OFF.Summary-->Les commandes **MESSAGES OFF** et [MESSAGES ON](../commands/messages-on) suppriment ou font apparaître les thermomètres de progression affichés par 4D lorsque le programme exécute des opérations de longue durée.<!-- END REF--> Par défaut, les messages sont affichés. 
 
 Voici la liste des opérations qui peuvent provoquer l'affichage d'un thermomètre de progression : Application d'une formule, Génération d'un état rapide, Export de données, Import de données, Tri, Génération d'un graphe, Recherche, Recherche par formulaire, Recherche par formule.
 
 Voici les commandes qui peuvent provoquer l'affichage d'un thermomètre de progression : 
 
-[APPLY TO SELECTION](apply-to-selection.md)   
-[QUERY](query.md)  
-[QUERY SELECTION](query-selection.md)  
-[QUERY BY EXAMPLE](query-by-example.md)  
-[QUERY BY FORMULA](query-by-formula.md)  
-[QUERY SELECTION BY FORMULA](query-selection-by-formula.md)  
-[EXPORT DIF](export-dif.md)  
-[EXPORT SYLK](export-sylk.md)  
-[EXPORT TEXT](export-text.md)  
-[BUILD APPLICATION](build-application.md)  
+[APPLY TO SELECTION](../commands/apply-to-selection)   
+[QUERY](../commands/query)  
+[QUERY SELECTION](../commands/query-selection)  
+[QUERY BY EXAMPLE](../commands/query-by-example)  
+[QUERY BY FORMULA](../commands/query-by-formula)  
+[QUERY SELECTION BY FORMULA](../commands/query-selection-by-formula)  
+[EXPORT DIF](../commands/export-dif)  
+[EXPORT SYLK](../commands/export-sylk)  
+[EXPORT TEXT](../commands/export-text)  
+[BUILD APPLICATION](../commands/build-application)  
   
-[IMPORT TEXT](import-text.md)  
-[RELATE ONE SELECTION](relate-one-selection.md)  
-[IMPORT DIF](import-dif.md)  
-[IMPORT SYLK](import-sylk.md)  
-[Max](max.md)  
-[Min](min.md)  
-[Average](average.md)   
-[QR REPORT](qr-report.md)  
-[REDUCE SELECTION](reduce-selection.md)  
-[SCAN INDEX](scan-index.md)  
-[RELATE MANY SELECTION](relate-many-selection.md)  
-[Sum](sum.md)  
-[ORDER BY](order-by.md)  
-[ORDER BY FORMULA](order-by-formula.md)  
-[DISTINCT VALUES](distinct-values.md) 
+[IMPORT TEXT](../commands/import-text)  
+[RELATE ONE SELECTION](../commands/relate-one-selection)  
+[IMPORT DIF](../commands/import-dif)  
+[IMPORT SYLK](../commands/import-sylk)  
+[Max](../commands/max)  
+[Min](../commands/min)  
+[Average](../commands/average)   
+[QR REPORT](../commands/qr-report)  
+[REDUCE SELECTION](../commands/reduce-selection)  
+[SCAN INDEX](../commands/scan-index)  
+[RELATE MANY SELECTION](../commands/relate-many-selection)  
+[Sum](../commands/sum)  
+[ORDER BY](../commands/order-by)  
+[ORDER BY FORMULA](../commands/order-by-formula)  
+[DISTINCT VALUES](../commands/distinct-values) 
 
-**Note 4D Server :** A compter de 4D Server v14 R3, les fenêtres de messages de progression ne sont plus affichées sur le serveur, ces opérations étant automatiquement listées dans la *Fenêtre d'administration de 4D Server* de la fenêtre d'administration. Si vous souhaitez forcer l'affichage de ces fenêtres de progression, vous devez appeler la commande [MESSAGES ON](messages-on.md) sur le serveur. 
+**Note 4D Server :** A compter de 4D Server v14 R3, les fenêtres de messages de progression ne sont plus affichées sur le serveur, ces opérations étant automatiquement listées dans la *Fenêtre d'administration de 4D Server* de la fenêtre d'administration. Si vous souhaitez forcer l'affichage de ces fenêtres de progression, vous devez appeler la commande [MESSAGES ON](../commands/messages-on) sur le serveur. 
 
 ## Exemple 
 
@@ -75,7 +75,7 @@ L'exemple suivant supprime les thermomètres de progression avant d'effectuer un
 
 ## Voir aussi 
 
-[MESSAGES ON](messages-on.md)  
+[MESSAGES ON](../commands/messages-on)  
 
 ## Propriétés
 

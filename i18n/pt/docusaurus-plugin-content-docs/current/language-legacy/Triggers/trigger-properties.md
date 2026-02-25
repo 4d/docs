@@ -1,4 +1,4 @@
----
+﻿---
 id: trigger-properties
 title: TRIGGER PROPERTIES
 slug: /commands/trigger-properties
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.TRIGGER PROPERTIES.Summary-->O comando TRIGGER PROPERTIES retorna a informação sobre o nível de execução do trigger que se passa em *nivelTrigger*.<!-- END REF--> Pode utilizar [Trigger level](trigger-level.md) junto com Trigger level para realizar diferentes ações em função da cascada do trigger. Para maior informação, consulte .  
+<!--REF #_command_.TRIGGER PROPERTIES.Summary-->O comando TRIGGER PROPERTIES retorna a informação sobre o nível de execução do trigger que se passa em *nivelTrigger*.<!-- END REF--> Pode utilizar [Trigger level](../commands/trigger-level) junto com Trigger level para realizar diferentes ações em função da cascada do trigger. Para maior informação, consulte .  
 
 Se passa um nível de execução de trigger inexistente, o comando retorna 0 (zero) em todos os parâmetros.  
   
@@ -49,8 +49,8 @@ O número de tabela e de registro para o registro relacionado pelo evento de ban
 ## Ver também 
 
 *Sobre Números de Registros*  
-[Trigger event](trigger-event.md)  
-[Trigger level](trigger-level.md)  
+[Trigger event](../commands/trigger-event)  
+[Trigger level](../commands/trigger-level)  
 *Triggers*  
 
 ## Propriedades

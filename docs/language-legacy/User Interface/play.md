@@ -1,4 +1,4 @@
----
+﻿---
 id: play
 title: PLAY
 slug: /commands/play
@@ -68,7 +68,7 @@ The following example code plays a system sound on macOS:
 
 ## See also 
 
-[BEEP](beep.md)  
+[BEEP](../commands/beep)  
 
 ## Properties
 

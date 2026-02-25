@@ -1,4 +1,4 @@
----
+﻿---
 id: new-log-file
 title: New log file
 slug: /commands/new-log-file
@@ -31,7 +31,7 @@ The file is renamed with the current backup numbers of the database and of the l
 
 :::warning
 
-A log file must always be related to a data file. If you call this command just after a log file activation (without backup) using [`SELECT LOG FILE`](select-log-file.md) or the [Settings dialog box](../../Backup/settings.md#configuration), make sure to have a matching copy of your data file, otherwise the log file could not be integrated. 
+A log file must always be related to a data file. If you call this command just after a log file activation (without backup) using [`SELECT LOG FILE`](../commands/select-log-file) or the [Settings dialog box](../../Backup/settings.md#configuration), make sure to have a matching copy of your data file, otherwise the log file could not be integrated. 
 
 :::
 
@@ -41,4 +41,4 @@ In the event of an error, the command generates a code that can be intercepted u
 
 ## See also 
 
-[SELECT LOG FILE](select-log-file.md) 
+[SELECT LOG FILE](../commands/select-log-file) 

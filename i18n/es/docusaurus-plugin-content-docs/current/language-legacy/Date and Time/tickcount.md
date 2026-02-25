@@ -1,4 +1,4 @@
----
+﻿---
 id: tickcount
 title: Tickcount
 slug: /commands/tickcount
@@ -35,8 +35,8 @@ Ver el ejemplo del comando [Milliseconds](milliseconds.md "Milliseconds").
 
 ## Ver también 
 
-[Current time](current-time.md)  
-[Milliseconds](milliseconds.md)  
+[Current time](../commands/current-time)  
+[Milliseconds](../commands/milliseconds)  
 
 ## Propiedades
 

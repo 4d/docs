@@ -1,4 +1,4 @@
----
+﻿---
 id: variable-to-blob
 title: VARIABLE TO BLOB
 slug: /commands/variable-to-blob
@@ -49,14 +49,14 @@ VARIABLE TO BLOB aceita qualquer tipo de variável (incluindo outros BLOBs), exc
 
 Note que:
 
-* Se guardar uma variável de tipo Inteiro longo que é uma referência a uma lista hierárquica (ListRef), VARIABLE TO BLOB guardará a variável Inteiro longo, não a lista. Para guardar e recuperar as listas hierárquicas em um BLOB, utilize os comandos [LIST TO BLOB](list-to-blob.md) e [BLOB to list](blob-to-list.md).
+* Se guardar uma variável de tipo Inteiro longo que é uma referência a uma lista hierárquica (ListRef), VARIABLE TO BLOB guardará a variável Inteiro longo, não a lista. Para guardar e recuperar as listas hierárquicas em um BLOB, utilize os comandos [LIST TO BLOB](../commands/list-to-blob) e [BLOB to list](../commands/blob-to-list).
 * Se passar um objeto ou uma coleção no parâmetro *variavel*, o comando põe uma cópia (e não uma referência) no BLOB. Se o objeto contém ponteiros, os valores não referenciados são guardados no BLOB, não os ponteiros mesmos.
 
-**ATENÇÃO:** Se você usar um BLOB para armazenar as variáveis, você deve usar mais tarde o comando [BLOB TO VARIABLE](blob-to-variable.md) para reler o conteúdo do BLOB, pois as variáveis são armazenadas em BLOBs usando um formato interno de 4D.
+**ATENÇÃO:** Se você usar um BLOB para armazenar as variáveis, você deve usar mais tarde o comando [BLOB TO VARIABLE](../commands/blob-to-variable) para reler o conteúdo do BLOB, pois as variáveis são armazenadas em BLOBs usando um formato interno de 4D.
 
 Após a chamada, se a variável foi armazenada com sucesso, a variável OK é definida como 1\. Se a operação não pôde ser executada, a variável OK é definida como 0, por exemplo, não havia memória suficiente.
 
-**Nota sobre a independência de plataforma:** VARIABLE TO BLOB e [BLOB TO VARIABLE](blob-to-variable.md) usam um formato interno de 4D para lidar com variáveis armazenadas em BLOBs. Como benefício, você não precisa se preocupar com a troca de bytes entre as plataformas ao usar esses dois comandos. Em outras palavras, um BLOB criado no Windows usando um desses comandos podem ser reutilizados em Macintosh, e vice-versa.
+**Nota sobre a independência de plataforma:** VARIABLE TO BLOB e [BLOB TO VARIABLE](../commands/blob-to-variable) usam um formato interno de 4D para lidar com variáveis armazenadas em BLOBs. Como benefício, você não precisa se preocupar com a troca de bytes entre as plataformas ao usar esses dois comandos. Em outras palavras, um BLOB criado no Windows usando um desses comandos podem ser reutilizados em Macintosh, e vice-versa.
 
 ### Nota 
 
@@ -144,9 +144,9 @@ Depois que esses métodos foram adicionados a sua aplicação, pode escrever:
 
 ## Ver também 
 
-[BLOB to list](blob-to-list.md)  
-[BLOB TO VARIABLE](blob-to-variable.md)  
-[LIST TO BLOB](list-to-blob.md)  
+[BLOB to list](../commands/blob-to-list)  
+[BLOB TO VARIABLE](../commands/blob-to-variable)  
+[LIST TO BLOB](../commands/list-to-blob)  
 
 ## Propriedades
 

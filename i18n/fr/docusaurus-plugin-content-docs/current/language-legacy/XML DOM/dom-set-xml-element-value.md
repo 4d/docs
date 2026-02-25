@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-set-xml-element-value
 title: DOM SET XML ELEMENT VALUE
 slug: /commands/dom-set-xml-element-value
@@ -53,7 +53,7 @@ Passez dans *valeurElément* une chaîne ou une variable (ou un champ) contenant
 
 Lorsque le paramètre facultatif astérisque (*\**) est passé, vous indiquez que la valeur de l’élément doit être définie sous la forme CDATA. La forme spéciale CDATA permet d’écrire du texte sous forme brute (cf. exemple 2).
 
-**Note :** Lorsque l’élément désigné par *refElément* est de type BLOB, **DOM SET XML ELEMENT VALUE** l'encode automatiquement en base64\. Dans ce cas, la commande [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md) effectue automatiquement l'opération inverse.
+**Note :** Lorsque l’élément désigné par *refElément* est de type BLOB, **DOM SET XML ELEMENT VALUE** l'encode automatiquement en base64\. Dans ce cas, la commande [DOM GET XML ELEMENT VALUE](../commands/dom-get-xml-element-value) effectue automatiquement l'opération inverse.
 
 ### Note sur le traitement des caractères de fin de ligne 
 
@@ -128,8 +128,8 @@ Si la commande a été exécutée correctement, la variable système OK prend la
 
 ## Voir aussi 
 
-[DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md)  
-[XML SET OPTIONS](xml-set-options.md)  
+[DOM GET XML ELEMENT VALUE](../commands/dom-get-xml-element-value)  
+[XML SET OPTIONS](../commands/xml-set-options)  
 
 ## Propriétés
 

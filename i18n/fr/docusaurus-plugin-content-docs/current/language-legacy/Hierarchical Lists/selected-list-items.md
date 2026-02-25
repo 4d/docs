@@ -1,4 +1,4 @@
----
+﻿---
 id: selected-list-items
 title: Selected list items
 slug: /commands/selected-list-items
@@ -48,7 +48,7 @@ Vous pouvez passer dans le paramètre *tabEléments* un tableau d’entiers long
 * la référence absolue de chaque élément sélectionné si le paramètre \* est passé.  
 Le tableau est retourné vide si aucun élément n’est sélectionné.
 
-**Note :** En cas de sélection multiple, la commande retourne la position ou la référence du premier élément ayant été sélectionné dans *liste*, soit par un clic utilisateur (sélection manuelle) soit par la commande [SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md) ou [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md) (sélection par programmation). 
+**Note :** En cas de sélection multiple, la commande retourne la position ou la référence du premier élément ayant été sélectionné dans *liste*, soit par un clic utilisateur (sélection manuelle) soit par la commande [SELECT LIST ITEMS BY POSITION](../commands/select-list-items-by-position) ou [SELECT LIST ITEMS BY REFERENCE](../commands/select-list-items-by-reference) (sélection par programmation). 
 
 Si la liste comporte des sous-listes, appliquez la fonction à la liste principale (celle qui est associée au formulaire), et non à une de ses sous-listes. Les positions sont exprimées relativement à l'élément supérieur de la liste principale, en tenant compte de l'état courant déployé/contracté de la liste et de ses sous-listes.
 
@@ -94,8 +94,8 @@ Voici la liste *hList* telle qu'elle apparaît en mode Application :
 
 ## Voir aussi 
 
-[SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md)  
-[SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
+[SELECT LIST ITEMS BY POSITION](../commands/select-list-items-by-position)  
+[SELECT LIST ITEMS BY REFERENCE](../commands/select-list-items-by-reference)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-totals-data
 title: QR GET TOTALS DATA
 slug: /commands/qr-get-totals-data
@@ -82,7 +82,7 @@ Se o parâmetro *numQuebra* é incorreto, se gera o erro -9853.
 
 ## Ver também 
 
-[QR SET TOTALS DATA](qr-set-totals-data.md)  
+[QR SET TOTALS DATA](../commands/qr-set-totals-data)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: edit-item
 title: EDIT ITEM
 slug: /commands/edit-item
@@ -39,9 +39,9 @@ Este comando aplica a los siguientes objetos editables:
 * Listas jerárquicas
 * Columnas list box
 * Subformularios (en este caso, sólo un nombre de objeto, el subformulario, puede pasarse en *objeto*)
-* Formularios listados mostrados utilizando los comandos [DISPLAY SELECTION](display-selection.md) o [MODIFY SELECTION](modify-selection.md).
+* Formularios listados mostrados utilizando los comandos [DISPLAY SELECTION](../commands/display-selection) o [MODIFY SELECTION](../commands/modify-selection).
 
-Si el comando se utiliza con un objeto editable que no está en la lista, actúa de la misma forma que el comando [GOTO OBJECT](goto-object.md). El comando no hace nada si la lista o el array están vacíos o son invisibles. Igualmente, si la lista o el array no son editables, el comando sólo selecciona el elemento especificado sin cambiar a modo edición. En el caso de los list boxes, si la columna no permite la entrada de texto (entrada por casillas de selección o por listas deplegables únicamente), el elemento especificado toma el foco.
+Si el comando se utiliza con un objeto editable que no está en la lista, actúa de la misma forma que el comando [GOTO OBJECT](../commands/goto-object). El comando no hace nada si la lista o el array están vacíos o son invisibles. Igualmente, si la lista o el array no son editables, el comando sólo selecciona el elemento especificado sin cambiar a modo edición. En el caso de los list boxes, si la columna no permite la entrada de texto (entrada por casillas de selección o por listas deplegables únicamente), el elemento especificado toma el foco.
 
 El parámetro opcional *elemento* le permite designar la posición del elemento (lista jerárquica) o el número de línea (list box, formularios listados y subformulario en modo “selección múltiple”) para cambiar a modo de edición. Si no pasa este parámetro, el comando se aplica al elemento actual de *objeto*. Si no hay elemento actual, el primer elemento de *objeto* cambia a modo edición.
 
@@ -80,9 +80,9 @@ Dadas dos columnas de un list box donde los nombres de las variables asociadas s
 
 ## Ver también 
 
-[GOTO OBJECT](goto-object.md)  
-[INSERT IN LIST](insert-in-list.md)  
-[SET LIST ITEM](set-list-item.md)  
+[GOTO OBJECT](../commands/goto-object)  
+[INSERT IN LIST](../commands/insert-in-list)  
+[SET LIST ITEM](../commands/set-list-item)  
 
 ## Propiedades
 

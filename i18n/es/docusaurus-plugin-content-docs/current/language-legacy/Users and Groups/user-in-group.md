@@ -1,4 +1,4 @@
----
+﻿---
 id: user-in-group
 title: User in group
 slug: /commands/user-in-group
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.User in group.Summary-->User in group devuelve TRUE si *usuario* está en *grupo*.<!-- END REF-->
 
-**Nota:** este comando espera un nombre de cuenta de usuario en el parámetro *usuario* (no soporta alias de usuario). Si ha definido alias de usuario en su aplicación, pase el parámetro 4D user account al comando [Current user](current-user.md) para asegurarse de que devuelve una cuenta de usuario (ver el ejemplo).
+**Nota:** este comando espera un nombre de cuenta de usuario en el parámetro *usuario* (no soporta alias de usuario). Si ha definido alias de usuario en su aplicación, pase el parámetro 4D user account al comando [Current user](../commands/current-user) para asegurarse de que devuelve una cuenta de usuario (ver el ejemplo).
 
 ## Ejemplo 
 
@@ -41,7 +41,7 @@ El siguiente ejemplo busca facturas específicas. Si el usuario actual está en 
 
 ## Ver también 
 
-[Current user](current-user.md)  
+[Current user](../commands/current-user)  
 
 ## Propiedades
 

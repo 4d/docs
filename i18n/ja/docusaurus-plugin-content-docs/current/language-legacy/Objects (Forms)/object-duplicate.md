@@ -1,4 +1,4 @@
----
+﻿---
 id: object-duplicate
 title: OBJECT DUPLICATE
 slug: /commands/object-duplicate
@@ -67,12 +67,12 @@ displayed_sidebar: docs
 
 *boundTo* 引数は2 つのケースで使用します:
 
-* 入力順の変更: この場合*boundTo* には複製したオブジェクトの直前の入力順の入力可オブジェクト名を渡します。新しいオブジェクトをページ中最初の入力順にしたい場合は、Object First in entry order 定数を渡します([OBJECT Get pointer](object-get-pointer.md) コマンド参照)。
+* 入力順の変更: この場合*boundTo* には複製したオブジェクトの直前の入力順の入力可オブジェクト名を渡します。新しいオブジェクトをページ中最初の入力順にしたい場合は、Object First in entry order 定数を渡します([OBJECT Get pointer](../commands/object-get-pointer) コマンド参照)。
 * ラジオボタングループへの関連付け: ラジオボタンをグループ化するために使用します。複製したオブジェクトがラジオボタンのとき、*boundTo*に新しいオブジェクトを関連付けたいグループのラジオボタンの名前を渡します。
 
 この引数を省略するか空の文字列を渡すと、新しいオブジェクトはフォームページ中の最後の入力可能オブジェクトとなります。
 
-新しいオブジェクトは*moveH*、*moveV*、*resizeH* そして*resizeV* 引数を使用して移動およびリサイズできます。[OBJECT MOVE](object-move.md) コマンドのように、移動やリサイズの方向は*moveH* や*moveV* 引数に渡された値の符号で指定されます:
+新しいオブジェクトは*moveH*、*moveV*、*resizeH* そして*resizeV* 引数を使用して移動およびリサイズできます。[OBJECT MOVE](../commands/object-move) コマンドのように、移動やリサイズの方向は*moveH* や*moveV* 引数に渡された値の符号で指定されます:
 
 * 値が正数の場合、移動やリサイズはそれぞれ右および下方向に行われます。
 * 値が負数の場合、移動やリサイズはそれぞれ左および上方向に行われます。
@@ -87,7 +87,7 @@ displayed_sidebar: docs
 
 * オブジェクトメソッド内で生成されるOn Load イベント
 * On Unload イベント
-* 印刷のコンテキストに関連するイベント (On Header, On Printing Detail等)。オブジェクトを複数回印刷するには[Print object](print-object.md) コマンドを使用します。
+* 印刷のコンテキストに関連するイベント (On Header, On Printing Detail等)。オブジェクトを複数回印刷するには[Print object](../commands/print-object) コマンドを使用します。
 
 サポートされていないコンテキストでコマンドが呼び出されると、オブジェクトは複製されずに、OK変数に0が設定されます。コマンドが印刷のコンテキストで呼び出されるとエラー-10601が生成されます。
 
@@ -112,8 +112,8 @@ displayed_sidebar: docs
 ## 参照 
 
 *Form Objects (Access)*  
-[OBJECT Get pointer](object-get-pointer.md)  
-[OBJECT MOVE](object-move.md)  
+[OBJECT Get pointer](../commands/object-get-pointer)  
+[OBJECT MOVE](../commands/object-move)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: "true"
 title: "True"
 slug: /commands/true
@@ -29,8 +29,8 @@ The following example sets the variable *vbOptions* to True:
 
 ## See also 
 
-[False](false.md)  
-[Not](not.md)  
+[False](../commands/false)  
+[Not](../commands/not)  
 
 ## Properties
 

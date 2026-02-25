@@ -1,4 +1,4 @@
----
+﻿---
 id: http-authenticate
 title: HTTP AUTHENTICATE
 slug: /commands/http-authenticate
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.HTTP AUTHENTICATE.Summary-->**HTTP AUTHENTICATE**コマンドはクライアントアプリケーションの認証を要求するサーバーへのHTTPリクエストを可能にします。<!-- END REF-->*と* *password*引数には必要な認証情報 (ユーザー名とパスワード) を渡します。この情報はエンコードされ、[HTTP Request](http-request.md)または[HTTP Get](http-get.md)を使用して送信されるHTTPリクエストに追加されます。
+<!--REF #_command_.HTTP AUTHENTICATE.Summary-->**HTTP AUTHENTICATE**コマンドはクライアントアプリケーションの認証を要求するサーバーへのHTTPリクエストを可能にします。<!-- END REF-->*と* *password*引数には必要な認証情報 (ユーザー名とパスワード) を渡します。この情報はエンコードされ、[HTTP Request](../commands/http-request)または[HTTP Get](../commands/http-get)を使用して送信されるHTTPリクエストに追加されます。
 
 オプションの*authMethod*引数を使用して、使用する認証メソッドを指定できます。*HTTP Client*テーマの以下の定数を使用できます:
 
@@ -50,7 +50,7 @@ displayed_sidebar: docs
 
 *\** 引数を渡すと、認証情報はHTTPプロクシに提供されることを意味します。この設定はクライアントとHTTPサーバーの間に認証を必要とするプロクシが存在する場合に必要となります。サーバー自身も認証を行い場合、二重の認証が必要となります。
 
-デフォルトでは認証情報は一時的に保管され、カレントプロセス内においてはそれぞれのリクエスト毎に再使用されます。しかしながら[HTTP SET OPTION](http-set-option.md) コマンドでオプションを設定する事により各リクエスト後にこの情報をリセットする事ができます。この場合、[HTTP Request](http-request.md) または [HTTP Get](http-get.md)コマンドを呼び出す前に**HTTP AUTHENTICATE** コマンドを実行する必要があります。
+デフォルトでは認証情報は一時的に保管され、カレントプロセス内においてはそれぞれのリクエスト毎に再使用されます。しかしながら[HTTP SET OPTION](../commands/http-set-option) コマンドでオプションを設定する事により各リクエスト後にこの情報をリセットする事ができます。この場合、[HTTP Request](../commands/http-request) または [HTTP Get](../commands/http-get)コマンドを呼び出す前に**HTTP AUTHENTICATE** コマンドを実行する必要があります。
 
 ## 例題 
 
@@ -66,7 +66,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[HTTP SET OPTION](http-set-option.md)  
+[HTTP SET OPTION](../commands/http-set-option)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: std-deviation
 title: Std deviation
 slug: /commands/std-deviation
@@ -54,7 +54,7 @@ La méthode suivante est appelée pour imprimer les enregistrements de la sélec
  PRINT SELECTION([Table1])
 ```
 
-**Note :** La valeur du paramètre de la commande [BREAK LEVEL](break-level.md) doit être égale au nombre de ruptures que contient l'état. Pour plus d'informations sur les ruptures, reportez-vous aux commandes du thème *Impressions*.
+**Note :** La valeur du paramètre de la commande [BREAK LEVEL](../commands/break-level) doit être égale au nombre de ruptures que contient l'état. Pour plus d'informations sur les ruptures, reportez-vous aux commandes du thème *Impressions*.
 
 ## Exemple 2 
 
@@ -69,10 +69,10 @@ Cet exemple vous permet d’obtenir l’écart type d’une série de valeurs pl
 
 ## Voir aussi 
 
-[Average](average.md)  
-[Sum](sum.md)  
-[Sum squares](sum-squares.md)  
-[Variance](variance.md)  
+[Average](../commands/average)  
+[Sum](../commands/sum)  
+[Sum squares](../commands/sum-squares)  
+[Variance](../commands/variance)  
 
 ## Propriétés
 

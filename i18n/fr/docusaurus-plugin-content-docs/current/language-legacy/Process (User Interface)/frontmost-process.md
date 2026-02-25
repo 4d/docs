@@ -1,4 +1,4 @@
----
+﻿---
 id: frontmost-process
 title: Frontmost process
 slug: /commands/frontmost-process
@@ -29,12 +29,12 @@ Si la fonction **Frontmost process** est utilisée dans la méthode formulaire o
 
 ## Exemple 
 
-Référez-vous à l'exemple de [BRING TO FRONT](bring-to-front.md).
+Référez-vous à l'exemple de [BRING TO FRONT](../commands/bring-to-front).
 
 ## Voir aussi 
 
-[BRING TO FRONT](bring-to-front.md)  
-[WINDOW LIST](window-list.md)  
+[BRING TO FRONT](../commands/bring-to-front)  
+[WINDOW LIST](../commands/window-list)  
 
 ## Propriétés
 

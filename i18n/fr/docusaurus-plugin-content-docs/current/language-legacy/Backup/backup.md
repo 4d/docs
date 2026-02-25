@@ -1,4 +1,4 @@
----
+﻿---
 id: backup
 title: BACKUP
 slug: /commands/backup
@@ -42,13 +42,13 @@ Si la sauvegarde se déroule correctement, la variable système OK prend la vale
 
 ## Gestion des erreurs 
 
-En cas d’incident au cours de la sauvegarde, les informations relatives à l'incident sont écrites dans le journal des sauvegardes et l'erreur de plus haut niveau est transmise uniquement à la [On Backup Shutdown database method](on-backup-shutdown-database-method.md). Il est donc particulièrement important d'utiliser cette méthode base afin de pouvoir gérer par programmation les erreurs liées à la sauvegarde.
+En cas d’incident au cours de la sauvegarde, les informations relatives à l'incident sont écrites dans le journal des sauvegardes et l'erreur de plus haut niveau est transmise uniquement à la [On Backup Shutdown database method](../commands/on-backup-shutdown-database-method). Il est donc particulièrement important d'utiliser cette méthode base afin de pouvoir gérer par programmation les erreurs liées à la sauvegarde.
 
 ## Voir aussi 
 
-[BACKUP INFO](backup-info.md)  
+[BACKUP INFO](../commands/backup-info)  
 *Méthode base Sur démarrage sauvegarde*  
-[RESTORE](restore.md)  
+[RESTORE](../commands/restore)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-export-selection
 title: SQL EXPORT SELECTION
 slug: /commands/sql-export-selection
@@ -34,9 +34,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL EXPORT SELECTION.Summary-->O comando SQL EXPORT SELECTION exporta ao formato SQL os registros da seleção atual da tabela 4D especificada pelo parâmetro *Tabela*.<!-- END REF-->   
   
-Este comando é quase idêntico ao comando [SQL EXPORT DATABASE](sql-export-database.md). O arquivo gerado pode ser utilizado diretamente pelo comando \[#cmd id="1089"/\] com o propósito de importar dados em outra base 4D. A única diferença entre estes dois comandos é que SQL EXPORT SELECTION apenas exporta a seleção de *Tabela* enquanto [SQL EXPORT DATABASE](sql-export-database.md) exporta o banco de dados inteiro. Além disso, diferente do comando [SQL EXPORT DATABASE](sql-export-database.md), este comando não funciona com as bancos SQL externos. Apenas pode ser utilizado com a banco principal.  
+Este comando é quase idêntico ao comando [SQL EXPORT DATABASE](../commands/sql-export-database). O arquivo gerado pode ser utilizado diretamente pelo comando \[#cmd id="1089"/\] com o propósito de importar dados em outra base 4D. A única diferença entre estes dois comandos é que SQL EXPORT SELECTION apenas exporta a seleção de *Tabela* enquanto [SQL EXPORT DATABASE](../commands/sql-export-database) exporta o banco de dados inteiro. Além disso, diferente do comando [SQL EXPORT DATABASE](../commands/sql-export-database), este comando não funciona com as bancos SQL externos. Apenas pode ser utilizado com a banco principal.  
   
-Consulte a descrição do comando [SQL EXPORT DATABASE](sql-export-database.md) para uma descrição detalhada do funcionamento e parâmetros destes comandos.
+Consulte a descrição do comando [SQL EXPORT DATABASE](../commands/sql-export-database) para uma descrição detalhada do funcionamento e parâmetros destes comandos.
 
 Se a seleção atual estiver vazia, o comando não faz nada. Note que neste caso, a pasta de destino não é esvaziado.   
   
@@ -48,7 +48,7 @@ Se a exportação for realizada corretamente, a variável OK assume o valor 1\. 
 
 ## Ver também 
 
-[SQL EXPORT DATABASE](sql-export-database.md)  
+[SQL EXPORT DATABASE](../commands/sql-export-database)  
 
 ## Propriedades
 

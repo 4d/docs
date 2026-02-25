@@ -1,4 +1,4 @@
----
+﻿---
 id: verify-current-data-file
 title: VERIFY CURRENT DATA FILE
 slug: /commands/verify-current-data-file
@@ -35,9 +35,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.VERIFY CURRENT DATA FILE.Summary-->The VERIFY CURRENT DATA FILE command carries out a structural check of the objects found in the data file currently opened by 4D.<!-- END REF-->
 
-This command has the same functioning as the [VERIFY DATA FILE](verify-data-file.md) command, except that it only applies to the current data file of the open database. It therefore does not require parameters specifying the structure and data.
+This command has the same functioning as the [VERIFY DATA FILE](../commands/verify-data-file) command, except that it only applies to the current data file of the open database. It therefore does not require parameters specifying the structure and data.
 
-Refer to the [VERIFY DATA FILE](verify-data-file.md) command for a description of the parameters.
+Refer to the [VERIFY DATA FILE](../commands/verify-data-file) command for a description of the parameters.
 
 If you pass the VERIFY CURRENT DATA FILE command with no parameters, the verification is carried out with the default values of the parameters:
 
@@ -56,7 +56,7 @@ If the callback method does not exist, the verification is not carried out, an e
 
 ## See also 
 
-[VERIFY DATA FILE](verify-data-file.md)  
+[VERIFY DATA FILE](../commands/verify-data-file)  
 
 ## Properties
 

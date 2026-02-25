@@ -1,4 +1,4 @@
----
+﻿---
 id: set-document-position
 title: SET DOCUMENT POSITION
 slug: /commands/set-document-position
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET DOCUMENT POSITION.Summary-->Este comando funciona apenas em um documento aberto cujo número de referência é passado em *docRef*.<!-- END REF-->
 
-SET DOCUMENT POSITION define a posição que se passa em *offset* onde ocorrerá a próxima leitura ([RECEIVE PACKET](receive-packet.md)) ou escrita ([SEND PACKET](send-packet.md)).  
+SET DOCUMENT POSITION define a posição que se passa em *offset* onde ocorrerá a próxima leitura ([RECEIVE PACKET](../commands/receive-packet)) ou escrita ([SEND PACKET](../commands/send-packet)).  
 
 Se omite o parâmetro opcional *ancora*, a posição é relativa ao início do documento. Se especificar o parâmetro *ancora*, passe um dos valores listados anteriormente.  
   
@@ -40,9 +40,9 @@ Se omite o parâmetro opcional *ancora*, a posição é relativa ao início do d
 
 ## Ver também 
 
-[Get document position](get-document-position.md)  
-[RECEIVE PACKET](receive-packet.md)  
-[SEND PACKET](send-packet.md)  
+[Get document position](../commands/get-document-position)  
+[RECEIVE PACKET](../commands/receive-packet)  
+[SEND PACKET](../commands/send-packet)  
 
 ## Propriedades
 

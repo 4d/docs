@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-shortcut
 title: OBJECT SET SHORTCUT
 slug: /commands/object-set-shortcut
@@ -98,7 +98,7 @@ You want to associate a different shortcut depending on the current language of 
 
 ## See also 
 
-[OBJECT GET SHORTCUT](object-get-shortcut.md)  
+[OBJECT GET SHORTCUT](../commands/object-get-shortcut)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: records-in-selection
 title: Records in selection
 slug: /commands/records-in-selection
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Records in table](records-in-table.md)  
+[Records in table](../commands/records-in-table)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: get-menu-item-property
 title: GET MENU ITEM PROPERTY
 slug: /commands/get-menu-item-property
@@ -37,13 +37,13 @@ Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajou
 
 Vous pouvez passer dans *menu* un identifiant unique de menu ([RefMenu](# "Référence unique de menu (16 caractères alphanumériques)")) ou un numéro de menu. Si vous passez un identifiant unique, le paramètre *process* est inutile et sera ignoré s’il est passé. Si vous passez un numéro de menu, la commande prendra en compte le menu correspondant dans la barre de menus principale du process courant. Si vous souhaitez désigner un autre process, passez son numéro dans le paramètre facultatif *process*.
 
-Passez dans le paramètre *propriété* la propriété dont vous souhaitez obtenir la valeur. Vous pouvez utiliser l’une des constantes du thème “*Propriétés des lignes de menu*” ou une chaîne correspondant à une propriété personnalisée. Pour plus d’informations sur les propriétés des menus et leurs valeurs, reportez-vous à la description de la commande [SET MENU ITEM PROPERTY](set-menu-item-property.md).
+Passez dans le paramètre *propriété* la propriété dont vous souhaitez obtenir la valeur. Vous pouvez utiliser l’une des constantes du thème “*Propriétés des lignes de menu*” ou une chaîne correspondant à une propriété personnalisée. Pour plus d’informations sur les propriétés des menus et leurs valeurs, reportez-vous à la description de la commande [SET MENU ITEM PROPERTY](../commands/set-menu-item-property).
 
 **Note de compatibilité :** Par défaut, si la variable *valeur* n'est pas typée explicitement ou est déclarée de type texte, la commande retournera un nom d'*Action standard*. Si vous souhaitez obtenir une valeur numérique comme défini dans le thème de constantes (obsolète) *Valeurs pour Actions standard associée*, vous devez déclarer la variable *valeur* de type entier long.
 
 ## Voir aussi 
 
-[SET MENU ITEM PROPERTY](set-menu-item-property.md)  
+[SET MENU ITEM PROPERTY](../commands/set-menu-item-property)  
 
 ## Propriétés
 

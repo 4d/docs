@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-open-forward-url
 title: WA OPEN FORWARD URL
 slug: /commands/wa-open-forward-url
@@ -34,8 +34,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WA OPEN BACK URL](wa-open-back-url.md)  
-[WA OPEN URL](wa-open-url.md)  
+[WA OPEN BACK URL](../commands/wa-open-back-url)  
+[WA OPEN URL](../commands/wa-open-url)  
 
 ## プロパティ
 

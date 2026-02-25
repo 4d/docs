@@ -1,4 +1,4 @@
----
+﻿---
 id: web-set-http-header
 title: WEB SET HTTP HEADER
 slug: /commands/web-set-http-header
@@ -77,7 +77,7 @@ X-VERSIONとX-STATUSを指定しないと、自動的にHTTP/1.0 200 OKが設定
 
 ## 参照 
 
-[WEB GET HTTP HEADER](web-get-http-header.md)  
+[WEB GET HTTP HEADER](../commands/web-get-http-header)  
 
 ## プロパティ
 

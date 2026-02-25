@@ -1,4 +1,4 @@
----
+﻿---
 id: distinct-attribute-values
 title: DISTINCT ATTRIBUTE VALUES
 slug: /commands/distinct-attribute-values
@@ -41,7 +41,7 @@ displayed_sidebar: docs
 
 ### .length 仮想プロパティの使用 
 
-このコマンドでは"length"仮想プロパティが使用できます。配列型の全ての属性に対して自動的に使用可能で、配列のサイズ、つまり格納される要素の数を提供します。このプロパティはクエリで使用される事を想定して設計されています(**QUERY BY ATTRIBUTE**[QUERY BY ATTRIBUTE](query-by-attribute.md)を参照して下さい)。また**DISTINCT ATTRIBUTE VALUES**コマンドに対して使用する事で、属性の異なる配列サイズを取得することもできます。
+このコマンドでは"length"仮想プロパティが使用できます。配列型の全ての属性に対して自動的に使用可能で、配列のサイズ、つまり格納される要素の数を提供します。このプロパティはクエリで使用される事を想定して設計されています(**QUERY BY ATTRIBUTE**[QUERY BY ATTRIBUTE](../commands/query-by-attribute)を参照して下さい)。また**DISTINCT ATTRIBUTE VALUES**コマンドに対して使用する事で、属性の異なる配列サイズを取得することもできます。
 
 ## 例題 
 
@@ -104,7 +104,7 @@ displayed_sidebar: docs
 ## 参照 
 
   
-[DISTINCT ATTRIBUTE PATHS](distinct-attribute-paths.md)  
+[DISTINCT ATTRIBUTE PATHS](../commands/distinct-attribute-paths)  
 
 ## プロパティ
 

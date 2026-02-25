@@ -1,4 +1,4 @@
----
+﻿---
 id: set-blob-size
 title: SET BLOB SIZE
 slug: /commands/set-blob-size
@@ -61,7 +61,7 @@ BLOBに新しいバイトを割り当て、それらのバイトを特定の値�
 
 ## 参照 
 
-[BLOB size](blob-size.md)  
+[BLOB size](../commands/blob-size)  
 
 ## プロパティ
 

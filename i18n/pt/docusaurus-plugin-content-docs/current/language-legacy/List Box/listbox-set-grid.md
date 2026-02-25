@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-grid
 title: LISTBOX SET GRID
 slug: /commands/listbox-set-grid
@@ -40,9 +40,9 @@ Passe nos parâmetros *horizontal* e *vertical* os valores booleanos que indicam
 
 ## Ver também 
 
-[LISTBOX GET GRID](listbox-get-grid.md)  
+[LISTBOX GET GRID](../commands/listbox-get-grid)  
 [LISTBOX Get property](../commands/listbox-get-property)  
-[LISTBOX SET GRID COLOR](listbox-set-grid-color.md)  
+[LISTBOX SET GRID COLOR](../commands/listbox-set-grid-color)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: method-set-attribute
 title: METHOD SET ATTRIBUTE
 slug: /commands/method-set-attribute
@@ -78,8 +78,8 @@ Setting several attribute/value pairs:
 ## See also 
 
 *Design Object Access*  
-[METHOD Get attribute](method-get-attribute.md)  
-[METHOD SET ATTRIBUTES](method-set-attributes.md)  
+[METHOD Get attribute](../commands/method-get-attribute)  
+[METHOD SET ATTRIBUTES](../commands/method-set-attributes)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-row-color-as-number
 title: LISTBOX Get row color as number
 slug: /commands/listbox-get-row-color-as-number
@@ -67,8 +67,8 @@ Soit la list box suivante :
 #### Voir aussi 
 
 *List box*  
-[LISTBOX Get row color](listbox-get-row-color.md)  
-[LISTBOX SET ROW COLOR](listbox-set-row-color.md)  
+[LISTBOX Get row color](../commands/listbox-get-row-color)  
+[LISTBOX SET ROW COLOR](../commands/listbox-set-row-color)  
 
 #### Propriétés
 

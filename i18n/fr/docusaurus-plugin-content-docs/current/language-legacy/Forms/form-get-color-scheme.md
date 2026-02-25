@@ -1,4 +1,4 @@
----
+﻿---
 id: form-get-color-scheme
 title: FORM Get color scheme
 slug: /commands/form-get-color-scheme
@@ -34,11 +34,11 @@ displayed_sidebar: docs
 Le schéma de couleurs d'un formulaire est défini :
 
 * par la propriété de formulaire "Color Scheme" (voir [*colorScheme*](../../FormEditor/properties_FormProperties.md#color-scheme));
-* si "Color Scheme" est défini sur "inherited", la commande [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) est appelée;
-* si [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) n'est pas appelée ou appelée avec une valeur de paramètre "inherited", les Paramètres (paramètres de la base hôte dans le cas d'un composant);
+* si "Color Scheme" est défini sur "inherited", la commande [SET APPLICATION COLOR SCHEME](../commands/set-application-color-scheme) est appelée;
+* si [SET APPLICATION COLOR SCHEME](../commands/set-application-color-scheme) n'est pas appelée ou appelée avec une valeur de paramètre "inherited", les Paramètres (paramètres de la base hôte dans le cas d'un composant);
 * si les Paramètres sont définis sur "inherited", les préférences utilisateur du système d'exploitation.
 
-Veuillez vous reporter à la commande [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) pour plus de détails sur les noms de schémas de couleurs.
+Veuillez vous reporter à la commande [SET APPLICATION COLOR SCHEME](../commands/set-application-color-scheme) pour plus de détails sur les noms de schémas de couleurs.
 
 ## Exemple 
 
@@ -53,8 +53,8 @@ Vous souhaitez charger une image en fonction du schéma courant du formulaire :
 
 ## Voir aussi 
 
-[Get Application color scheme](get-application-color-scheme.md)  
-[SET APPLICATION COLOR SCHEME](set-application-color-scheme.md)  
+[Get Application color scheme](../commands/get-application-color-scheme)  
+[SET APPLICATION COLOR SCHEME](../commands/set-application-color-scheme)  
 
 ## Propriétés
 

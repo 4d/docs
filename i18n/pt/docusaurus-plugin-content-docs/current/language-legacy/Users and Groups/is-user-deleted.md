@@ -1,4 +1,4 @@
----
+﻿---
 id: is-user-deleted
 title: Is user deleted
 slug: /commands/is-user-deleted
@@ -34,13 +34,13 @@ Se a conta de usuário não existir ou tiver sido apagada, Is user deleted retor
 
 ## Gestão de erros 
 
-Se não tiver os privilégios de acesso adequados para chamar Is user deleted ou se o sistema de Senhas já tiver sido acessado por outro processo, um erro de privilégio de acesso será gerado. Você pode interceptar o erro com um método de gestão de erros instalado usando [ON ERR CALL](on-err-call.md).
+Se não tiver os privilégios de acesso adequados para chamar Is user deleted ou se o sistema de Senhas já tiver sido acessado por outro processo, um erro de privilégio de acesso será gerado. Você pode interceptar o erro com um método de gestão de erros instalado usando [ON ERR CALL](../commands/on-err-call).
 
 ## Ver também 
 
-[DELETE USER](delete-user.md)  
-[GET USER PROPERTIES](get-user-properties.md)  
-[Set user properties](set-user-properties.md)  
+[DELETE USER](../commands/delete-user)  
+[GET USER PROPERTIES](../commands/get-user-properties)  
+[Set user properties](../commands/set-user-properties)  
 
 ## Propriedades
 

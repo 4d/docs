@@ -1,4 +1,4 @@
----
+﻿---
 id: sum
 title: Sum
 slug: /commands/sum
@@ -75,18 +75,18 @@ This example gets the sum of all the values placed in an array:
 
 ## Example 3 
 
-For an example of computing an object field attribute, please refer to the example 3 of the [Average](average.md) command description.
+For an example of computing an object field attribute, please refer to the example 3 of the [Average](../commands/average) command description.
 
 ## See also 
 
-[ACCUMULATE](accumulate.md)  
-[Average](average.md)  
-[BREAK LEVEL](break-level.md)  
-[Max](max.md)  
-[Min](min.md)  
-[ORDER BY](order-by.md)  
-[PRINT SELECTION](print-selection.md)  
-[Subtotal](subtotal.md)  
+[ACCUMULATE](../commands/accumulate)  
+[Average](../commands/average)  
+[BREAK LEVEL](../commands/break-level)  
+[Max](../commands/max)  
+[Min](../commands/min)  
+[ORDER BY](../commands/order-by)  
+[PRINT SELECTION](../commands/print-selection)  
+[Subtotal](../commands/subtotal)  
 
 ## Properties
 

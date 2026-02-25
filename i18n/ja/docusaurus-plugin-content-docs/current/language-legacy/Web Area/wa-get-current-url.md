@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-get-current-url
 title: WA Get current URL
 slug: /commands/wa-get-current-url
@@ -46,7 +46,7 @@ Webページが完全にロードされると、この関数から返される�
 
 ## 参照 
 
-[WA OPEN URL](wa-open-url.md)  
+[WA OPEN URL](../commands/wa-open-url)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-indicator-type
 title: OBJECT SET INDICATOR TYPE
 slug: /commands/object-set-indicator-type
@@ -45,7 +45,7 @@ En el parámetro *indicador*, pase el tipo de indicador a mostrar. Puede utiliza
 
 ## Ver también 
 
-[OBJECT Get indicator type](object-get-indicator-type.md)  
+[OBJECT Get indicator type](../commands/object-get-indicator-type)  
 
 ## Propiedades
 

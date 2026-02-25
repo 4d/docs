@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-enterable
 title: OBJECT SET ENTERABLE
 slug: /commands/object-set-enterable
@@ -52,7 +52,7 @@ Pode passar um valor booleano ou um valor Longint em enterable:
 | obk not enterable               | 0     | Usuários não podem entrar valores no objeto. Use obk not enterable not focusable se quiser remover também a propriedade **focusable** para um **objeto input** ou uma área **4D Write Pro** (outros objetos não enterable são automaticamente não focáveis). |
 | obk not enterable not focusable | 2     | Usuários não podem entrar valores no objeto e conteúdos de **objetos inputs** e **áreas 4D Write Pro** não podem ser selecionados ou copiadas.                                                                                                               |
 
-O comando **OBJECT SET ENTERABLE** também pode ser utilizado para ativar por programação o modo “Editável em lista” para os subformulários e formulários listados mostrados utilizando os comandos [MODIFY SELECTION](modify-selection.md) e [DISPLAY SELECTION](display-selection.md):
+O comando **OBJECT SET ENTERABLE** também pode ser utilizado para ativar por programação o modo “Editável em lista” para os subformulários e formulários listados mostrados utilizando os comandos [MODIFY SELECTION](../commands/modify-selection) e [DISPLAY SELECTION](../commands/display-selection):
 
 • Para os subformulários, no parâmetro *areaEntrada*, passe o nome da tabela do subformulário ou o nome do objeto do subformulário, por exemplo: **OBJECT SET ENTERABLE**(\*;"Subform";True). O comando funciona em subformulários só se estiver no método formulário do subformulário;  
 • Para os formulários listados, deve passar o nome da tabela do formulário no parâmetro *areaEntrada*, por exemplo: OBJECT SET ENTERABLE(\[MinhaTabela\];True).
@@ -85,8 +85,8 @@ Este é o método de objeto de uma caixa de seleção localizada no cabeçalho d
 
 ## Ver também 
 
-[OBJECT Get enterable](object-get-enterable.md)  
-[OBJECT SET VISIBLE](object-set-visible.md)  
+[OBJECT Get enterable](../commands/object-get-enterable)  
+[OBJECT SET VISIBLE](../commands/object-set-visible)  
 
 ## Propriedades
 

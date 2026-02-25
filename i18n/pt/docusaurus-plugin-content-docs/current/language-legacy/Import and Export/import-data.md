@@ -1,4 +1,4 @@
----
+﻿---
 id: import-data
 title: IMPORT DATA
 slug: /commands/import-data
@@ -40,7 +40,7 @@ O parâmetro opcional *projeto* lhe permite utilizar um projeto para importar da
 Um projeto de importação contém todos os parâmetros de importação, tais como as tabelas e campos nas quais importar, os delimitadores a utilizar, etc. No parâmetro *projeto*, pode passar uma variável Texto com XML ou uma variável Texto com uma referência a um elemento DOM pre existente ou um BLOB. Os projetos podem ser criados por programação (projetos com formato XML unicamente) ou carregando parâmetros definidos previamente na caixa de diálogo de importação. No último caso, tem duas soluções disponíveis:
 
 * Utilize o comando IMPORT DATA com um parâmetro *projeto*vazio e o parâmetro opcional *\**, depois salve o parâmetro *projeto* resultante em um campo Texto ou BLOB (ver a continuação). Esta solução lhe permite guardar o projeto com o arquivo de dados.
-* Salve o projeto no disco, depois carregue-o, utilizando por exemplo o comando [DOM Parse XML source](dom-parse-xml-source.md), e passe sua referencia no parâmetro *projeto*.
+* Salve o projeto no disco, depois carregue-o, utilizando por exemplo o comando [DOM Parse XML source](../commands/dom-parse-xml-source), e passe sua referencia no parâmetro *projeto*.
 **Nota de compatibilidad**e: a partir da versão 12 de 4D, os projetos de importação são codificados em XML. 4D pode abrir os projetos de importação gerados com as versões anteriores de 4D (formato BLOB), entretanto os projetos criados a partir da v12 não podem ser abertos com uma versão 11 ou anterior. Recomendamos utilizar variáveis Texto para manipular os arquivos de importação.   
   
 O parâmetro opcional *\**, se for especificado, faz com que apareça a caixa de diálogo de importação com os parâmetros definidos em *projeto*. Esta característica lhe permite utilizar um projeto predefinido, enquanto tem ainda a possibilidade de modificar um ou mais parâmetros. Além disso, o parâmetro *projeto* contém, depois de fechar a caixa de diálogo de importação, os parâmetros do “novo” projeto. Então pode armazenar o novo projeto em um campo BLOB, em disco, etc. 
@@ -55,10 +55,10 @@ Se o usuário clicar em **Cancelar** na caixa de diálogo de salvar arquivos ou 
 
 ## Ver também 
 
-[EXPORT DATA](export-data.md)  
-[IMPORT DIF](import-dif.md)  
-[IMPORT SYLK](import-sylk.md)  
-[IMPORT TEXT](import-text.md)  
+[EXPORT DATA](../commands/export-data)  
+[IMPORT DIF](../commands/import-dif)  
+[IMPORT SYLK](../commands/import-sylk)  
+[IMPORT TEXT](../commands/import-text)  
 
 ## Propriedades
 

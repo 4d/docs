@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-info-column
 title: QR GET INFO COLUMN
 slug: /commands/qr-get-info-column
@@ -48,7 +48,7 @@ The **QR GET INFO COLUMN** command retrieves the parameters of an existing colum
 
 *object* returns the field name or the formula assigned to the column.
 
-**Note:** The command does not take into account any virtual structure defined by means of the [SET TABLE TITLES](set-table-titles.md) and [SET FIELD TITLES](set-field-titles.md) commands. The actual name of the field is returned in the *object* parameter. 
+**Note:** The command does not take into account any virtual structure defined by means of the [SET TABLE TITLES](../commands/set-table-titles) and [SET FIELD TITLES](../commands/set-field-titles) commands. The actual name of the field is returned in the *object* parameter. 
 
 *hide* returns whether the column is displayed or hidden:
 
@@ -84,7 +84,7 @@ The following statement sets the size to automatic for all the columns in a cros
  End for
 ```
 
-You will notice that since you want to alter only the column size, you have to use QR GET INFO COLUMN to retrieve the column properties and pass them to [QR SET INFO COLUMN](qr-set-info-column.md) to leave it unchanged, except for the column size.
+You will notice that since you want to alter only the column size, you have to use QR GET INFO COLUMN to retrieve the column properties and pass them to [QR SET INFO COLUMN](../commands/qr-set-info-column) to leave it unchanged, except for the column size.
 
 * Data source (object) and display format  
 In this case, the numbering of columns operates as depicted below:
@@ -117,9 +117,9 @@ You can write:
 
 ## See also 
 
-[QR Get info row](qr-get-info-row.md)  
-[QR SET INFO COLUMN](qr-set-info-column.md)  
-[QR SET INFO ROW](qr-set-info-row.md)  
+[QR Get info row](../commands/qr-get-info-row)  
+[QR SET INFO COLUMN](../commands/qr-set-info-column)  
+[QR SET INFO ROW](../commands/qr-set-info-row)  
 
 ## Properties
 

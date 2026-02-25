@@ -1,4 +1,4 @@
----
+﻿---
 id: web-get-current-session-id
 title: WEB Get current session ID
 slug: /commands/web-get-current-session-id
@@ -34,7 +34,7 @@ Si este comando se llama fuera del contexto de una sesión web, devuelve una cad
 ## Ver también 
 
 *Gestión de las sesiones web (heredado)*  
-[WEB LEGACY GET SESSION EXPIRATION](web-legacy-get-session-expiration.md)  
+[WEB LEGACY GET SESSION EXPIRATION](../commands/web-legacy-get-session-expiration)  
 
 ## Propiedades
 

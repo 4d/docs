@@ -1,4 +1,4 @@
----
+﻿---
 id: check-log-file
 title: CHECK LOG FILE
 slug: /commands/check-log-file
@@ -40,12 +40,12 @@ This command can only be used in the context of single-user applications. More p
 
 * If this command is executed in a database operating without a log file, it does nothing and the error 1403 is returned.
 * If this command is executed in a client/server database, it does nothing and the error 1421 is returned.  
-You can intercept these errors using an error-handling method installed with the [ON ERR CALL](on-err-call.md) command.
+You can intercept these errors using an error-handling method installed with the [ON ERR CALL](../commands/on-err-call) command.
 
 ## See also 
 
 *Backup Manager Errors (1401 -> 1421)*  
-[RESTORE](restore.md)  
+[RESTORE](../commands/restore)  
 
 ## Properties
 

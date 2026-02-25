@@ -1,4 +1,4 @@
----
+﻿---
 id: resource-type-list
 title: RESOURCE TYPE LIST
 slug: /commands/resource-type-list
@@ -34,7 +34,7 @@ Si vous passez un numéro de référence de fichier de ressources valide dans le
 
 Si vous ne pré-déclarez pas le tableau *resTypes* avant d'appeler **RESOURCE TYPE LIST**, la commande créera par défaut un tableau de type Texte. Si vous pré-déclarez le tableau, vous pouvez lui attribuer le type Alpha ou Texte.
 
-Après l'appel, vous pouvez tester le nombre de types de ressources différents qui ont été trouvés en appliquant la commande [Size of array](size-of-array.md) au tableau *resTypes*.
+Après l'appel, vous pouvez tester le nombre de types de ressources différents qui ont été trouvés en appliquant la commande [Size of array](../commands/size-of-array) au tableau *resTypes*.
 
 ## Exemple 1 
 
@@ -90,7 +90,7 @@ Une fois que cette méthode est implémentée dans votre base, vous pouvez écri
 
 ## Voir aussi 
 
-[RESOURCE LIST](resource-list.md)  
+[RESOURCE LIST](../commands/resource-list)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-multiline
 title: OBJECT SET MULTILINE
 slug: /commands/object-set-multiline
@@ -54,7 +54,7 @@ You want to prohibit multiple lines in an entry area:
 
 ## See also 
 
-[OBJECT Get multiline](object-get-multiline.md)  
+[OBJECT Get multiline](../commands/object-get-multiline)  
 
 ## Properties
 

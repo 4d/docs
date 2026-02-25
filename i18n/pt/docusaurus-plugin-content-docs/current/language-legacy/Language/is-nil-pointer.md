@@ -1,4 +1,4 @@
----
+﻿---
 id: is-nil-pointer
 title: Is nil pointer
 slug: /commands/is-nil-pointer
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is nil pointer.Summary-->O comando **Is nil pointer** devolve True se o ponteiro que você passa em *umPonteiro* é Nulo (*\->\[\]*).<!-- END REF--> Devolve False em todos os outros casos (ponteiro a um campo, tabela ou variável).
 
-Caso deseje conhecer o nome da variável apontada ou o número do campo, pode utilizar o comando [RESOLVE POINTER](resolve-pointer.md).
+Caso deseje conhecer o nome da variável apontada ou o número do campo, pode utilizar o comando [RESOLVE POINTER](../commands/resolve-pointer).
 
 ## Exemplo 
 
@@ -47,8 +47,8 @@ Caso deseje conhecer o nome da variável apontada ou o número do campo, pode ut
 
 ## Ver também 
 
-[Is a variable](is-a-variable.md)  
-[RESOLVE POINTER](resolve-pointer.md)  
+[Is a variable](../commands/is-a-variable)  
+[RESOLVE POINTER](../commands/resolve-pointer)  
 
 ## Propriedades
 

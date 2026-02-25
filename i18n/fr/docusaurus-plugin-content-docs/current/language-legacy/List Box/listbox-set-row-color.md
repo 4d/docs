@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-row-color
 title: LISTBOX SET ROW COLOR
 slug: /commands/listbox-set-row-color
@@ -47,11 +47,11 @@ Passez dans *ligne* le numéro de la ligne à laquelle la nouvelle couleur doit 
 
 **Note :** La commande ne tient pas compte de l’éventuel statut masqué/affiché des lignes de la list box.
 
-Passez dans *couleur* une valeur de couleur RVB. Pour plus d’informations sur les couleurs RVB, reportez-vous à la description de la commande [OBJECT SET RGB COLORS](object-set-rgb-colors.md). Si vous souhaitez que la ligne hérite du paramétrage de couleur défini au niveau supérieur, passez la constante`lk inherited` dans *couleur*.
+Passez dans *couleur* une valeur de couleur RVB. Pour plus d’informations sur les couleurs RVB, reportez-vous à la description de la commande [OBJECT SET RGB COLORS](../commands/object-set-rgb-colors). Si vous souhaitez que la ligne hérite du paramétrage de couleur défini au niveau supérieur, passez la constante`lk inherited` dans *couleur*.
 
 Passez la constante `lk background color`  ou `lk font color`  dans le paramètre *typeCouleur* selon que vous souhaitez appliquer la couleur en tant que couleur de fond ou couleur de police de la ligne. Si vous omettez ce paramètre, la couleur est appliquée en tant que couleur de police. 
 
-Cette commande modifie les valeurs présentes dans les tableaux de couleurs éventuellement définis pour la colonne ou la listbox. Si ces tableaux ne sont pas déjà définis, la commande crée des tableaux dynamiques auxquels vous pourrez accéder à l’aide de la commande [LISTBOX Get array](listbox-get-array.md). 
+Cette commande modifie les valeurs présentes dans les tableaux de couleurs éventuellement définis pour la colonne ou la listbox. Si ces tableaux ne sont pas déjà définis, la commande crée des tableaux dynamiques auxquels vous pourrez accéder à l’aide de la commande [LISTBOX Get array](../commands/listbox-get-array). 
 
 Si des valeurs de couleur contradictoires sont définies via les propriétés de la list box ou de la colonne, un ordre de priorité est appliqué. Pour plus d’informations, reportez-vous au manuel *Mode Développement*.
 
@@ -73,9 +73,9 @@ Dans une list box tableau, on souhaite définir des paramétrages de couleur pou
 ## Voir aussi 
 
 *List box*  
-[LISTBOX Get row color](listbox-get-row-color.md)  
-[LISTBOX Get row color as number](listbox-get-row-color-as-number.md)  
-[LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md)  
+[LISTBOX Get row color](../commands/listbox-get-row-color)  
+[LISTBOX Get row color as number](../commands/listbox-get-row-color-as-number)  
+[LISTBOX SET ROW FONT STYLE](../commands/listbox-set-row-font-style)  
 
 ## Propriétés
 

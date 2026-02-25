@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-font-size
 title: OBJECT Get font size
 slug: /commands/object-get-font-size
@@ -35,7 +35,7 @@ Se passa o parâmetro opcional *\**, indica que o parâmetro objeto é um nome d
 
 ## Ver também 
 
-[OBJECT SET FONT SIZE](object-set-font-size.md)  
+[OBJECT SET FONT SIZE](../commands/object-set-font-size)  
 
 ## Propriedades
 

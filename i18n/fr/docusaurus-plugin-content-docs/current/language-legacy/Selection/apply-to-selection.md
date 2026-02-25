@@ -1,4 +1,4 @@
----
+﻿---
 id: apply-to-selection
 title: APPLY TO SELECTION
 slug: /commands/apply-to-selection
@@ -37,7 +37,7 @@ La commande **APPLY TO SELECTION** peut être utilisée pour récupérer et trai
 
 **4D Server :** Le serveur n'exécute aucune des commandes passées dans *formule*. Chaque enregistrement de la sélection est renvoyé sur le poste client pour traitement et modification.
 
-Un thermomètre de progression s'affiche pendant l'exécution d'un **APPLY TO SELECTION**. Un appel préalable à la commande [MESSAGES OFF](messages-off.md) permet de supprimer ce thermomètre. Lorsque le thermomètre de progression est affiché, l'utilisateur peut annuler l'opération.
+Un thermomètre de progression s'affiche pendant l'exécution d'un **APPLY TO SELECTION**. Un appel préalable à la commande [MESSAGES OFF](../commands/messages-off) permet de supprimer ce thermomètre. Lorsque le thermomètre de progression est affiché, l'utilisateur peut annuler l'opération.
 
 ## Exemple 1 
 
@@ -74,7 +74,7 @@ Si l'utilisateur clique sur le bouton Stop dans le thermomètre de progression, 
 
 ## Voir aussi 
 
-[EDIT FORMULA](edit-formula.md)  
+[EDIT FORMULA](../commands/edit-formula)  
 *Présentation des ensembles*  
 
 ## Propriétés

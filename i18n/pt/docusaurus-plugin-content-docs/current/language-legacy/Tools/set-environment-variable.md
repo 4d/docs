@@ -1,4 +1,4 @@
----
+﻿---
 id: set-environment-variable
 title: SET ENVIRONMENT VARIABLE
 slug: /commands/set-environment-variable
@@ -35,18 +35,18 @@ Recomenda-se usar a classe [`4D.SystemWorker class`](../../API/SystemWorkerClass
 
 ## Descrição 
 
-<!--REF #_command_.SET ENVIRONMENT VARIABLE.Summary-->O comando **SET ENVIRONMENT VARIABLE** permite fixar o valor de uma variável de ambiente em macOS e Windows.<!-- END REF--> Está projetado para ser utilizado com o comando [LAUNCH EXTERNAL PROCESS](launch-external-process.md).
+<!--REF #_command_.SET ENVIRONMENT VARIABLE.Summary-->O comando **SET ENVIRONMENT VARIABLE** permite fixar o valor de uma variável de ambiente em macOS e Windows.<!-- END REF--> Está projetado para ser utilizado com o comando [LAUNCH EXTERNAL PROCESS](../commands/launch-external-process).
   
 Passe o nome da variável a definir em *nomVar* e seu valor em *valorVar*.
 
 * Para obter a lista geral das variáveis de ambiente e seus possíveis valores, por favor consulte a documentação técnica de seu sistema operativo.
-* Três variáveis ambiente específicas estão disponíveis para uso no contexto do comando [LAUNCH EXTERNAL PROCESS](launch-external-process.md): :
+* Três variáveis ambiente específicas estão disponíveis para uso no contexto do comando [LAUNCH EXTERNAL PROCESS](../commands/launch-external-process): :
 
 *\_4D\_OPTION\_CURRENT\_DIRECTORY*:   
 *\_4D\_OPTION\_HIDE\_CONSOLE* (só em Windows)  
 *\_4D\_OPTION\_BLOCKING\_EXTERNAL\_PROCESS*  
   
-Para informação sobre estas variáveis, consulte a documentação do comando [LAUNCH EXTERNAL PROCESS](launch-external-process.md).
+Para informação sobre estas variáveis, consulte a documentação do comando [LAUNCH EXTERNAL PROCESS](../commands/launch-external-process).
 
 ## Exemplo 
 
@@ -54,7 +54,7 @@ Consulte os exemplos do comando [LAUNCH EXTERNAL PROCESS](launch-external-proces
 
 ## Ver também 
 
-[LAUNCH EXTERNAL PROCESS](launch-external-process.md)  
+[LAUNCH EXTERNAL PROCESS](../commands/launch-external-process)  
 
 ## Propriedades
 

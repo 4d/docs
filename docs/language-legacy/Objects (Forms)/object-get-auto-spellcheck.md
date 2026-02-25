@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-auto-spellcheck
 title: OBJECT Get auto spellcheck
 slug: /commands/object-get-auto-spellcheck
@@ -42,7 +42,7 @@ The command returns **True** when automatic spell-checking is enabled for the *o
 
 ## See also 
 
-[OBJECT SET AUTO SPELLCHECK](object-set-auto-spellcheck.md)  
+[OBJECT SET AUTO SPELLCHECK](../commands/object-set-auto-spellcheck)  
 
 ## Properties
 

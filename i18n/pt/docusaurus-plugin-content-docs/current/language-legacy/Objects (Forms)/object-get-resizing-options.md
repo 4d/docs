@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-resizing-options
 title: OBJECT GET RESIZING OPTIONS
 slug: /commands/object-get-resizing-options
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 Se passado o parâmetro opcional *\**, indica que o parâmetro *objeto* é um nome de objeto (uma cadeia). Se este parâmetro não passar, indica que *objeto* é uma variável. Neste caso, passe uma referencia no lugar de uma cadeia.
 
-O comando devolve as opções de redimensiones atuais, como se definiram no modo Desenho o para o processo utilizando o comando [OBJECT SET RESIZING OPTIONS](object-set-resizing-options.md). Estas opções definem a visualização do objeto em caso de redimensionamento da janela do formulário.
+O comando devolve as opções de redimensiones atuais, como se definiram no modo Desenho o para o processo utilizando o comando [OBJECT SET RESIZING OPTIONS](../commands/object-set-resizing-options). Estas opções definem a visualização do objeto em caso de redimensionamento da janela do formulário.
 
 O parâmetro *horizontal* devolve um valor indicando a opção de redimensionamento horizontais definido para o objeto. Pode comparar o valor recebido com as seguintes constantes, do tema *Propriedades dos objetos* :
 
@@ -54,7 +54,7 @@ O parâmetro *vertical* devolve um valor indicando a opção de redimensionament
 
 ## Ver também 
 
-[OBJECT SET RESIZING OPTIONS](object-set-resizing-options.md)  
+[OBJECT SET RESIZING OPTIONS](../commands/object-set-resizing-options)  
 
 ## Propriedades
 

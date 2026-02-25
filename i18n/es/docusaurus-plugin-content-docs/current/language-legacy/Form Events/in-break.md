@@ -1,4 +1,4 @@
----
+﻿---
 id: in-break
 title: In break
 slug: /commands/in-break
@@ -25,8 +25,8 @@ Para que se genere el ciclo de ejecución **In break** asegúrese de que la prop
 
 ## Ver también 
 
-[In footer](in-footer.md)  
-[In header](in-header.md)  
+[In footer](../commands/in-footer)  
+[In header](../commands/in-header)  
 
 ## Propiedades
 

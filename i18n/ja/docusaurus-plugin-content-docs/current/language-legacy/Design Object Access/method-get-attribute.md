@@ -1,4 +1,4 @@
----
+﻿---
 id: method-get-attribute
 title: METHOD Get attribute
 slug: /commands/method-get-attribute
@@ -50,7 +50,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[METHOD SET ATTRIBUTE](method-set-attribute.md)  
+[METHOD SET ATTRIBUTE](../commands/method-set-attribute)  
 
 ## プロパティ
 

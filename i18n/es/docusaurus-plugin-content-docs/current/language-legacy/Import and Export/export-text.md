@@ -1,4 +1,4 @@
----
+﻿---
 id: export-text
 title: EXPORT TEXT
 slug: /commands/export-text
@@ -37,9 +37,9 @@ Un evento On Load se envía al método del formulario por cada registro exportad
 
 El parámetro *documento* puede dar nombre a un documento nuevo o existente. Si *documento* tiene el mismo nombre que un documento existente, el documento existente se sobrescribe. El *documento* puede incluir una ruta de acceso que contenga los nombres de los volúmenes y las carpetas. Si pasa una cadena vacía, aparece la caja de diálogo estándar de guardar archivos. Si el usuario cancela este diálogo, se cancela la operación de exportación, y la variable sistema OK toma el valor 0.
 
-Un termómetro de progreso aparece durante la exportación. El usuario puede cancelar la operación haciendo clic en el botón Detener. Si la exportación termina con éxito, la variable sistema OK toma el valor 1\. En caso de error o si la operación se interrumpe, la variable OK toma el valor 0\. El termómetro puede ocultarse con el comando [MESSAGES OFF](messages-off.md). 
+Un termómetro de progreso aparece durante la exportación. El usuario puede cancelar la operación haciendo clic en el botón Detener. Si la exportación termina con éxito, la variable sistema OK toma el valor 1\. En caso de error o si la operación se interrumpe, la variable OK toma el valor 0\. El termómetro puede ocultarse con el comando [MESSAGES OFF](../commands/messages-off). 
 
-El comando utiliza por defecto el conjunto de caracteres UTF-8\. Puede utilizar el comando [USE CHARACTER SET](use-character-set.md) para modificar este conjunto de caracteres.
+El comando utiliza por defecto el conjunto de caracteres UTF-8\. Puede utilizar el comando [USE CHARACTER SET](../commands/use-character-set) para modificar este conjunto de caracteres.
 
 Durante la utilización de EXPORT TEXT, el delimitador de campos por defecto es el carácter de tabulación (code 9). El delimitador de registros por defecto es el retorno de carro (code 13) bajo macOS y el retorno de carro+retorno a la línea (código 13+código 10) bajo Windows. Puede cambiar estos valores por defecto asignando nuevos valores a las *Variables sistema*: **FldDelimit** y **RecDelimit**. El usuario puede cambiar los valores por defecto en la caja de diálogo de exportación del entorno Aplicación. Tenga en cuenta que si los campos exportados contienen caracteres definidos como delimitadores de campo o de registro, estos caracteres se reemplazan automáticamente con espacios en el archivo exportado, con el fin de no perturbar el proceso de importación.
 
@@ -60,10 +60,10 @@ OK toma el valor 1 si la exportación termina con éxito; de lo contrario, toma 
 
 ## Ver también 
 
-[EXPORT DIF](export-dif.md)  
-[EXPORT SYLK](export-sylk.md)  
-[IMPORT TEXT](import-text.md)  
-[USE CHARACTER SET](use-character-set.md)  
+[EXPORT DIF](../commands/export-dif)  
+[EXPORT SYLK](../commands/export-sylk)  
+[IMPORT TEXT](../commands/import-text)  
+[USE CHARACTER SET](../commands/use-character-set)  
 
 ## Propiedades
 

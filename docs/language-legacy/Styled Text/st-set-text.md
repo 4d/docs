@@ -1,4 +1,4 @@
----
+﻿---
 id: st-set-text
 title: ST SET TEXT
 slug: /commands/st-set-text
@@ -42,7 +42,7 @@ If you omit the *\** parameter, this indicates that the *object* parameter is a 
 
 ### 
 
-In *newText*, pass the text to be inserted. The ST SET TEXT command is intended for working with rich text (multistyle) containing <span> type tags. In all other cases (more particularly, when working with plain text that contains the <, > or & characters), you must use the [ST SET PLAIN TEXT](st-set-plain-text.md) command. If you pass plain text containing the <, > or & characters to the ST SET TEXT command, it does nothing. This is necessary behavior because if you insert a string such as "a<b" directly into rich text, it will distort the internal analysis of the <span> tags. In this case, "<" characters must be encoded beforehand as "&lt;", which can be done using the [ST SET PLAIN TEXT](st-set-plain-text.md) command (see also the example of this command).
+In *newText*, pass the text to be inserted. The ST SET TEXT command is intended for working with rich text (multistyle) containing <span> type tags. In all other cases (more particularly, when working with plain text that contains the <, > or & characters), you must use the [ST SET PLAIN TEXT](../commands/st-set-plain-text) command. If you pass plain text containing the <, > or & characters to the ST SET TEXT command, it does nothing. This is necessary behavior because if you insert a string such as "a<b" directly into rich text, it will distort the internal analysis of the <span> tags. In this case, "<" characters must be encoded beforehand as "&lt;", which can be done using the [ST SET PLAIN TEXT](../commands/st-set-plain-text) command (see also the example of this command).
 
 The optional *startSel* and *endSel* parameters let you designate a selection of text in *object*. The *startSel* and *endSel* values give a selection of plain text, without taking any style tags found in the text into account. The action of the command varies according to the optional *startSel* and *endSel* parameters:
 
@@ -96,13 +96,13 @@ The field and its contents are as follows:
 
 ## Example 2 
 
-Refer to the example of the [ST SET PLAIN TEXT](st-set-plain-text.md) command. 
+Refer to the example of the [ST SET PLAIN TEXT](../commands/st-set-plain-text) command. 
 
 ## See also 
 
-[ST Get plain text](st-get-plain-text.md)  
-[ST Get text](st-get-text.md)  
-[ST SET PLAIN TEXT](st-set-plain-text.md)  
+[ST Get plain text](../commands/st-get-plain-text)  
+[ST Get text](../commands/st-get-text)  
+[ST SET PLAIN TEXT](../commands/st-set-plain-text)  
 
 ## Properties
 

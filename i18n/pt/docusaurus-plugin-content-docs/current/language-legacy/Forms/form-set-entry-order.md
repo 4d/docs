@@ -1,4 +1,4 @@
----
+﻿---
 id: form-set-entry-order
 title: FORM SET ENTRY ORDER
 slug: /commands/form-set-entry-order
@@ -36,14 +36,14 @@ Passe em *nomObjetos* um array que contenha os nomes dos objetos de formulário 
 * existir no formulário (seu nome está definido),
 * for utilizado na página atual (ou na página *numPag*, ver abaixo). Lembre que uma página de formulário inclui os objetos da página 0 e os objetos do formulário herdado.
 
-Se for detectado um objeto não válido em tempo de execução, simplesmente se omite e 4D tentará utilizar o seguinte objeto válido no array *nomObjetos*. Pode conhecer a ordem de entrada atual da página atual (baseada em objetos válidos) utilizando o comando [FORM GET ENTRY ORDER](form-get-entry-order.md) com o paràmetro \*. 
+Se for detectado um objeto não válido em tempo de execução, simplesmente se omite e 4D tentará utilizar o seguinte objeto válido no array *nomObjetos*. Pode conhecer a ordem de entrada atual da página atual (baseada em objetos válidos) utilizando o comando [FORM GET ENTRY ORDER](../commands/form-get-entry-order) com o paràmetro \*. 
 
 Opcionalmente, pode passar o *numPag* para o qual definir a ordem de entrada. Se for omitido, o comando se aplica à página atual.
 
 **Notas:** 
 
 * A ordem de entrada de um subformulário é definida no próprio subformulário. Deve chamar ao comando **FORM SET ENTRY ORDER** no contexto de subformulário.
-* Este comando não define o primeiro objeto enfocável no formulário em tempo de execução. Se quiser definir um primeiro objeto na ordem de entrada, deve utilizar o comando [GOTO OBJECT](goto-object.md) no evento On Load de formulário. Se utilizar o comando [OBJECT DUPLICATE](object-duplicate.md), pode definir o objeto duplicado como o primeiro passando a constante Object First in entry order no parâmetro *ligadoA*.
+* Este comando não define o primeiro objeto enfocável no formulário em tempo de execução. Se quiser definir um primeiro objeto na ordem de entrada, deve utilizar o comando [GOTO OBJECT](../commands/goto-object) no evento On Load de formulário. Se utilizar o comando [OBJECT DUPLICATE](../commands/object-duplicate), pode definir o objeto duplicado como o primeiro passando a constante Object First in entry order no parâmetro *ligadoA*.
 
   
 **Sobre a ordem de entrada dos dados**  
@@ -64,7 +64,7 @@ Se quiser definir a ordem de entrada dos objetos no formulário baseado em seus 
 
 ## Ver também 
 
-[FORM GET ENTRY ORDER](form-get-entry-order.md)  
+[FORM GET ENTRY ORDER](../commands/form-get-entry-order)  
 
 ## Propriedades
 

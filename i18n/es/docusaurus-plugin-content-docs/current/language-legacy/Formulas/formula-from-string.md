@@ -1,4 +1,4 @@
----
+﻿---
 id: formula-from-string
 title: Formula from string
 slug: /commands/formula-from-string
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 El comando `Formula from string` <!-- REF #_command_.Formula from string.Summary -->crea un objeto `4D.Function` basado en *formulaString* y, opcionalmente, *context*<!-- END REF -->.  *formulaString* puede ser tan simple como un valor único o complejo, como un método proyecto con parámetros.
 
-Este comando es similar a [`Formula`](formula.md), excepto que maneja una fórmula basada en texto y permite definir un contexto de ejecución. Normalmente se recomienda utilizar el comando `Formula`, excepto si la fórmula original se expresó como texto (por ejemplo, almacenada externamente en un archivo JSON), o si desea crear una fórmula en una base de datos local mientras llama a `Formula from string` desde un componente. Se recomienda especialmente utilizar sintaxis con tokens con este comando.
+Este comando es similar a [`Formula`](../commands/formula), excepto que maneja una fórmula basada en texto y permite definir un contexto de ejecución. Normalmente se recomienda utilizar el comando `Formula`, excepto si la fórmula original se expresó como texto (por ejemplo, almacenada externamente en un archivo JSON), o si desea crear una fórmula en una base de datos local mientras llama a `Formula from string` desde un componente. Se recomienda especialmente utilizar sintaxis con tokens con este comando.
 
 > Dado que no se puede acceder al contenido de las variables locales por su nombre en el modo compilado, no se pueden utilizar en *formulaString*. Un intento de acceder a una variable local con `Formula from string` generará un error (-10737).
 
@@ -64,7 +64,7 @@ El siguiente código creará un diálogo que acepta una fórmula en formato text
 
 ## Ver también
 
-[Formula](formula.md)\
+[Formula](../commands/formula)\
 [Parse formula](../commands/parse-formula)
 
 ## Propiedades

@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-set-parameter
 title: SQL SET PARAMETER
 slug: /commands/sql-set-parameter
@@ -43,7 +43,7 @@ displayed_sidebar: docs
 
 La valeur de l’objet 4D est substituée au caractère *?* dans la requête SQL (syntaxe standard). Si la requête comporte plusieurs caractères *?*, plusieurs appels à **SQL SET PARAMETER** seront nécessaires. Les valeurs des objets 4D seront affectées séquentiellement dans la requête, dans l’ordre d’exécution des commandes. 
 
-**Attention :** Cette commande permet de manipuler les *paramètres* passés à la requête SQL. Il n'est pas possible d'utiliser le type SQL param out pour associer un objet 4D au *résultat* d'une requête SQL. Le résultat d'une requête SQL est récupéré par exemple via le paramètre *objetLié* de la commande [SQL EXECUTE](sql-execute.md) (cf. section *Présentation des commandes du thème SQL*). La commande **SQL SET PARAMETER** est généralement utilisée pour définir des paramètres passés à la requête (SQL param in) ; les types SQL param out et SQL param in out sont réservés à une utilisation dans le contexte de procédures stockées SQL pouvant retourner des paramètres. 
+**Attention :** Cette commande permet de manipuler les *paramètres* passés à la requête SQL. Il n'est pas possible d'utiliser le type SQL param out pour associer un objet 4D au *résultat* d'une requête SQL. Le résultat d'une requête SQL est récupéré par exemple via le paramètre *objetLié* de la commande [SQL EXECUTE](../commands/sql-execute) (cf. section *Présentation des commandes du thème SQL*). La commande **SQL SET PARAMETER** est généralement utilisée pour définir des paramètres passés à la requête (SQL param in) ; les types SQL param out et SQL param in out sont réservés à une utilisation dans le contexte de procédures stockées SQL pouvant retourner des paramètres. 
 
 ## Exemple 1 
 

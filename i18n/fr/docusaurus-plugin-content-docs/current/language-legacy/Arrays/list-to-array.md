@@ -1,4 +1,4 @@
----
+﻿---
 id: list-to-array
 title: LIST TO ARRAY
 slug: /commands/list-to-array
@@ -40,7 +40,7 @@ Si vous n'avez pas préalablement défini le tableau comme tableau de type Alpha
 
 Le paramètre optionnel *réfEléments* (un tableau de type numérique) retourne les numéros de référence des éléments de la liste. 
 
-Vous pouvez utiliser **LIST TO ARRAY** pour construire un tableau basé sur les éléments de premier niveau d'une liste. Cependant, cette commande ne vous donne pas les moyens de travailler avec les éléments des sous-listes. Pour exploiter pleinement les listes hiérarchiques, il est préférable d'utiliser les commandes de listes hiérarchiques, notamment [Load list](load-list.md).
+Vous pouvez utiliser **LIST TO ARRAY** pour construire un tableau basé sur les éléments de premier niveau d'une liste. Cependant, cette commande ne vous donne pas les moyens de travailler avec les éléments des sous-listes. Pour exploiter pleinement les listes hiérarchiques, il est préférable d'utiliser les commandes de listes hiérarchiques, notamment [Load list](../commands/load-list).
 
 #### Exemple 1 
 
@@ -94,9 +94,9 @@ Si vous exécutez l’instruction :
 
 #### Voir aussi 
 
-[ARRAY TO LIST](array-to-list.md)  
-[Load list](load-list.md)  
-[SAVE LIST](save-list.md)  
+[ARRAY TO LIST](../commands/array-to-list)  
+[Load list](../commands/load-list)  
+[SAVE LIST](../commands/save-list)  
 
 #### Propriétés
 

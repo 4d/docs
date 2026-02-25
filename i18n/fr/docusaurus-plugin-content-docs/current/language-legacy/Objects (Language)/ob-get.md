@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-get
 title: OB Get
 slug: /commands/ob-get
@@ -55,10 +55,10 @@ Par défaut, 4D retournera la valeur de la propriété dans son type d’origine
 
 La commande retourne la valeur de la *propriété*. Plusieurs types de données sont pris en charge. A noter que :
 
-* un pointeur est retourné tel quel, il peut être évalué à l’aide de la commande [JSON Stringify](json-stringify.md),
+* un pointeur est retourné tel quel, il peut être évalué à l’aide de la commande [JSON Stringify](../commands/json-stringify),
 * les dates sont retournées au format "YYYY-MM-DDTHH:mm:ss.SSSZ"
 * dans les valeurs réelles, le séparateur décimal est toujours le point "."
-* les heures sont retournées sous forme d’un nombre. A noter que [OB SET](ob-set.md) stocke les heures sous forme de millisecondes, conformément au standard javascript, tandis que 4D attend un nombre de secondes. Pour une interprétation correcte par **OB Get** d'une heure stockée, vous devez utiliser la constante Is time.
+* les heures sont retournées sous forme d’un nombre. A noter que [OB SET](../commands/ob-set) stocke les heures sous forme de millisecondes, conformément au standard javascript, tandis que 4D attend un nombre de secondes. Pour une interprétation correcte par **OB Get** d'une heure stockée, vous devez utiliser la constante Is time.
 
 ## Exemple 1 
 
@@ -224,8 +224,8 @@ Vous voulez connaître la taille d'une image stockée dans un objet :
 
 ## Voir aussi 
 
-[OB Copy](ob-copy.md)  
-[OB SET](ob-set.md)  
+[OB Copy](../commands/ob-copy)  
+[OB SET](../commands/ob-set)  
 *Types champs et variables*  
 
 ## Propriétés

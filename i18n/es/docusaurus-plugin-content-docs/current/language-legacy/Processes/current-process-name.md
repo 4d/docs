@@ -1,4 +1,4 @@
----
+﻿---
 id: current-process-name
 title: Current process name
 slug: /commands/current-process-name
@@ -41,8 +41,8 @@ Quiere llamar a un proceso worker y pasar el nombre del proceso de llamada como 
 
 ## Ver también 
 
-[CALL WORKER](call-worker.md)  
-[KILL WORKER](kill-worker.md)  
+[CALL WORKER](../commands/call-worker)  
+[KILL WORKER](../commands/kill-worker)  
 *Sobre workers*  
 
 ## Propiedades

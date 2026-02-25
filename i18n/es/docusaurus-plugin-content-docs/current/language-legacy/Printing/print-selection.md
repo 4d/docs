@@ -1,4 +1,4 @@
----
+﻿---
 id: print-selection
 title: PRINT SELECTION
 slug: /commands/print-selection
@@ -35,8 +35,8 @@ displayed_sidebar: docs
 Por defecto, PRINT SELECTION muestra la caja de diálogo de trabajos de impresión antes de la impresión. Si el usuario cancela la caja de diálogo, el comando se cancela y el informe no se imprime.
 
 Puede eliminar esta caja de diálogo utilizando el parámetro opcional asterisco (*\**) o el parámetro opcional “mayor que” (*\>*):   
-• El parámetro *\** provoca un trabajo de impresión utilizando los parámetros de impresión actuales (parámetros por defecto o aquellos definidos por los comandos *\_o\_PAGE SETUP* y/o [SET PRINT OPTION](set-print-option.md)).   
-• Además, el parámetro *\>* provoca un trabajo de impresión sin reinicializar los parámetros de impresión actuales. Este parámetro es útil para ejecutar varias llamadas sucesivas a PRINT SELECTION (por ejemplo al interior de un bucle) conservando los parámetros de impresión personalizados previamente definidos. Para ver un ejemplo de utilización de este parámetro, consulte la descripción del comando [PRINT RECORD](print-record.md).
+• El parámetro *\** provoca un trabajo de impresión utilizando los parámetros de impresión actuales (parámetros por defecto o aquellos definidos por los comandos *\_o\_PAGE SETUP* y/o [SET PRINT OPTION](../commands/set-print-option)).   
+• Además, el parámetro *\>* provoca un trabajo de impresión sin reinicializar los parámetros de impresión actuales. Este parámetro es útil para ejecutar varias llamadas sucesivas a PRINT SELECTION (por ejemplo al interior de un bucle) conservando los parámetros de impresión personalizados previamente definidos. Para ver un ejemplo de utilización de este parámetro, consulte la descripción del comando [PRINT RECORD](../commands/print-record).
 
 Durante la impresión, el método de formulario de salida y los métodos de objeto del formulario se ejecutan en función de los eventos seleccionados en las propiedades de los formularios y de los objetos, en el entorno Diseño, así como de los eventos generados efectivamente:
 
@@ -45,11 +45,11 @@ Durante la impresión, el método de formulario de salida y los métodos de obje
 * Un evento On Printing Break se genera justo antes que un área de ruptura se imprima.
 * Un evento On Printing Footer se genera justo antes que un pie de página se imprima.
 
-Puede saber si PRINT SELECTION está imprimiendo el primer encabezado probando [Before selection](before-selection.md) durante un evento On Header. Igualmente puede verificar el último pie de página, probando [End selection](end-selection.md) durante un evento On Printing Footer. Para mayor información, consulte la descripción de estos comandos, como también de los comandos [Form event code](../commands/form-event-code) y [Level](level.md).
+Puede saber si PRINT SELECTION está imprimiendo el primer encabezado probando [Before selection](../commands/before-selection) durante un evento On Header. Igualmente puede verificar el último pie de página, probando [End selection](../commands/end-selection) durante un evento On Printing Footer. Para mayor información, consulte la descripción de estos comandos, como también de los comandos [Form event code](../commands/form-event-code) y [Level](../commands/level).
 
-Para imprimir una selección ordenada con subtotales o rupturas utilizando PRINT SELECTION, debe primero ordenar la selección. Luego, en cada área de ruptura del informe, incluir una variable con un método de objeto que asigne el subtotal a la variable. Igualmente puede utilizar funciones estadísticas y aritméticas como [Sum](sum.md) y [Average](average.md) para asignar valores a las variables. Para mayor información, consulte las descripciones de [Subtotal](subtotal.md), [BREAK LEVEL](break-level.md) y [ACCUMULATE](accumulate.md).
+Para imprimir una selección ordenada con subtotales o rupturas utilizando PRINT SELECTION, debe primero ordenar la selección. Luego, en cada área de ruptura del informe, incluir una variable con un método de objeto que asigne el subtotal a la variable. Igualmente puede utilizar funciones estadísticas y aritméticas como [Sum](../commands/sum) y [Average](../commands/average) para asignar valores a las variables. Para mayor información, consulte las descripciones de [Subtotal](../commands/subtotal), [BREAK LEVEL](../commands/break-level) y [ACCUMULATE](../commands/accumulate).
 
-**Advertencia:** no utilice el comando [PAGE BREAK](page-break.md) con el comando PRINT SELECTION. [PAGE BREAK](page-break.md) está reservado para ser utilizado con el comando [Print form](../commands/print-form).
+**Advertencia:** no utilice el comando [PAGE BREAK](../commands/page-break) con el comando PRINT SELECTION. [PAGE BREAK](../commands/page-break) está reservado para ser utilizado con el comando [Print form](../commands/print-form).
 
 Después de un llamado a PRINT SELECTION, la variable OK toma el valor 1 si la impresión se ha completado. Si la impresión fue interrumpida, la variable OK toma el valor 0 (cero) (por ejemplo si el usuario hizo clic en Cancelar en la caja de diálogo de impresión).
 
@@ -71,10 +71,10 @@ El siguiente ejemplo selecciona todos los registros en la tabla \[Personas\]. El
 
 ## Ver también 
 
-[ACCUMULATE](accumulate.md)  
-[BREAK LEVEL](break-level.md)  
-[Level](level.md)  
-[Subtotal](subtotal.md)  
+[ACCUMULATE](../commands/accumulate)  
+[BREAK LEVEL](../commands/break-level)  
+[Level](../commands/level)  
+[Subtotal](../commands/subtotal)  
 
 ## Propiedades
 

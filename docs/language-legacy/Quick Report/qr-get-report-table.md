@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-report-table
 title: QR Get report table
 slug: /commands/qr-get-report-table
@@ -34,7 +34,7 @@ If you pass an invalid *area* number, the error -9850 will be generated.
 
 ## See also 
 
-[QR SET REPORT TABLE](qr-set-report-table.md)  
+[QR SET REPORT TABLE](../commands/qr-set-report-table)  
 
 ## Properties
 

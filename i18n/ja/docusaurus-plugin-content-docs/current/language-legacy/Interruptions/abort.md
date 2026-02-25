@@ -1,4 +1,4 @@
----
+﻿---
 id: abort
 title: ABORT
 slug: /commands/abort
@@ -36,7 +36,7 @@ ABORT コマンドはエラー処理プロジェクトメソッド内でのみ�
 
 ## 参照 
 
-[ON ERR CALL](on-err-call.md)  
+[ON ERR CALL](../commands/on-err-call)  
 
 ## プロパティ
 

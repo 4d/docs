@@ -1,4 +1,4 @@
----
+﻿---
 id: get-print-marker
 title: Get print marker
 slug: /commands/get-print-marker
@@ -72,8 +72,8 @@ Consulte el ejemplo del comando [SET PRINT MARKER](set-print-marker.md "SET PRIN
 
 ## Ver también 
 
-[OBJECT MOVE](object-move.md)  
-[SET PRINT MARKER](set-print-marker.md)  
+[OBJECT MOVE](../commands/object-move)  
+[SET PRINT MARKER](../commands/set-print-marker)  
 
 ## Propiedades
 

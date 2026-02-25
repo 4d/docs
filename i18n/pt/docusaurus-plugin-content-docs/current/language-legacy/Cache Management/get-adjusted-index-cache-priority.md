@@ -1,4 +1,4 @@
----
+﻿---
 id: get-adjusted-index-cache-priority
 title: Get adjusted index cache priority
 slug: /commands/get-adjusted-index-cache-priority
@@ -34,9 +34,9 @@ displayed_sidebar: docs
 
 ## Ver também 
 
-[ADJUST INDEX CACHE PRIORITY](adjust-index-cache-priority.md)  
+[ADJUST INDEX CACHE PRIORITY](../commands/adjust-index-cache-priority)  
 *Gerenciar prioridades em cache de banco de dados*  
-[SET INDEX CACHE PRIORITY](set-index-cache-priority.md)  
+[SET INDEX CACHE PRIORITY](../commands/set-index-cache-priority)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: break-level
 title: BREAK LEVEL
 slug: /commands/break-level
@@ -29,9 +29,9 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.BREAK LEVEL.Summary-->**BREAK LEVEL**は、[PRINT SELECTION](print-selection.md)コマンドを使ってプリントするレポートのブレークの数を指定します。<!-- END REF-->
+<!--REF #_command_.BREAK LEVEL.Summary-->**BREAK LEVEL**は、[PRINT SELECTION](../commands/print-selection)コマンドを使ってプリントするレポートのブレークの数を指定します。<!-- END REF-->
 
-ブレーク処理を行うレポートを印刷する前に、**BREAK LEVEL**コマンドと[ACCUMULATE](accumulate.md)コマンドを実行しなければなりません。これらのコマンドはレポートに対するブレーク処理を有効にします。[Subtotal](subtotal.md)コマンドの説明を参照してください。
+ブレーク処理を行うレポートを印刷する前に、**BREAK LEVEL**コマンドと[ACCUMULATE](../commands/accumulate)コマンドを実行しなければなりません。これらのコマンドはレポートに対するブレーク処理を有効にします。[Subtotal](../commands/subtotal)コマンドの説明を参照してください。
 
 *level*引数は、ブレーク処理を実行するもっとも深いレベルです。少なくとも同数のレベルでレコードをソートしなければなりません。ブレークレベルよりも多いレベルでソートすると、これらのレベルはソートされたものとして印刷されますが、ブレークに対しての意味は持ちません。
 
@@ -41,7 +41,7 @@ displayed_sidebar: docs
 
 ## 例題 
 
-以下の例は、2つのブレークレベルを持つレポートを印刷します。このセレクションは4つのレベルに対してソートされますが、**BREAK LEVEL**コマンドは2つのレベルだけにブレークを指定します。一つのフィールドは[ACCUMULATE](accumulate.md)コマンドで累計しています:
+以下の例は、2つのブレークレベルを持つレポートを印刷します。このセレクションは4つのレベルに対してソートされますが、**BREAK LEVEL**コマンドは2つのレベルだけにブレークを指定します。一つのフィールドは[ACCUMULATE](../commands/accumulate)コマンドで累計しています:
 
 ```4d
  ORDER BY([Emp]Dept;>;[Emp]Title;>;[Emp]Last;>;[Emp]First;>) // 4つのレベルでソート
@@ -53,10 +53,10 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ACCUMULATE](accumulate.md)  
-[ORDER BY](order-by.md)  
-[PRINT SELECTION](print-selection.md)  
-[Subtotal](subtotal.md)  
+[ACCUMULATE](../commands/accumulate)  
+[ORDER BY](../commands/order-by)  
+[PRINT SELECTION](../commands/print-selection)  
+[Subtotal](../commands/subtotal)  
 
 ## プロパティ
 

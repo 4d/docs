@@ -1,4 +1,4 @@
----
+﻿---
 id: svg-set-attribute
 title: SVG SET ATTRIBUTE
 slug: /commands/svg-set-attribute
@@ -87,9 +87,9 @@ Tenga en cuenta que por razones técnicas, los atributos de ciertos elementos, a
 | width, height     | Concierne los atributos del elemento 'svg' únicamente (1) |
   
   
-(1) Estos atributos no pueden modificarse porque definen y estructuran la imagen resultante. Los atributos de width y height del elemento svg se utilizan para definir las dimensiones iniciales de la imagen en 4D y estas dimensiones debe permanecer constantes después de la creación de la imagen (sin embargo es posible modificar las dimensiones de la imagen resultante con el comando [SVG GET ATTRIBUTE](svg-get-attribute.md) de 4D).   
+(1) Estos atributos no pueden modificarse porque definen y estructuran la imagen resultante. Los atributos de width y height del elemento svg se utilizan para definir las dimensiones iniciales de la imagen en 4D y estas dimensiones debe permanecer constantes después de la creación de la imagen (sin embargo es posible modificar las dimensiones de la imagen resultante con el comando [SVG GET ATTRIBUTE](../commands/svg-get-attribute) de 4D).   
   
-Consulte también la descripción del comando [SVG GET ATTRIBUTE](svg-get-attribute.md) para ver la lista de los atributos 4D reservados y dedicados a la animación.   
+Consulte también la descripción del comando [SVG GET ATTRIBUTE](../commands/svg-get-attribute) para ver la lista de los atributos 4D reservados y dedicados a la animación.   
   
 Si intenta modificar el atributo de un elemento que no es compatible o uno de sus elementos hijos, el comando no hace nada y no se genera error.  
   
@@ -107,7 +107,7 @@ Modificación del contenido de un elemento de tipo texto:
 
 #### Ver también 
 
-[SVG GET ATTRIBUTE](svg-get-attribute.md)  
+[SVG GET ATTRIBUTE](../commands/svg-get-attribute)  
 
 #### Propiedades
 

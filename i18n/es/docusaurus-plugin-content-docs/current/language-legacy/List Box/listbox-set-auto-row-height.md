@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-auto-row-height
 title: LISTBOX SET AUTO ROW HEIGHT
 slug: /commands/listbox-set-auto-row-height
@@ -67,9 +67,9 @@ Usted desea definir las alturas mínimas y máximas para un list box con una alt
 
 ## Ver también 
 
-[LISTBOX Get auto row height ](listbox-get-auto-row-height.md)  
-[LISTBOX SET ROW HEIGHT](listbox-set-row-height.md)  
-[LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md)  
+[LISTBOX Get auto row height ](../commands/listbox-get-auto-row-height)  
+[LISTBOX SET ROW HEIGHT](../commands/listbox-set-row-height)  
+[LISTBOX SET ROWS HEIGHT](../commands/listbox-set-rows-height)  
 
 ## Propiedades
 

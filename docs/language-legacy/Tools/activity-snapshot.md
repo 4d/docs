@@ -1,4 +1,4 @@
----
+﻿---
 id: activity-snapshot
 title: ACTIVITY SNAPSHOT
 slug: /commands/activity-snapshot
@@ -64,7 +64,7 @@ Here is a description of each property returned:
    * *client\_uid* (string): optional, uuid of client that launched the operation  
    * *is\_remote\_context* (boolean, 0 or 1): optional, indicates whether the database operation was launched by a client (value 1) or by the server through a stored procedure (value 0)  
    * *user4d\_id* (num): ID number of the current 4D user on the client side  
-   * *client\_version* (string): four digits representing the version of the 4D engine of the application, as returned by the [Application version](application-version.md) command.  
+   * *client\_version* (string): four digits representing the version of the 4D engine of the application, as returned by the [Application version](../commands/application-version) command.  
 **Note:** client\_uid and is\_remote\_context are only available in client/server mode. client\_uid is only returned when the database operation was started on a client machine.
 * *dbOperationDetails* (object): property returned only when the operation calls the database engine (this is the case, for instance, for queries and sorts). This is an object containing specific information related to the operation itself. The properties available depend on the type of database operation performed. More specifically, these properties include:  
    * table (string): name of table involved in the operation  

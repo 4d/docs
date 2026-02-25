@@ -1,4 +1,4 @@
----
+﻿---
 id: form-set-vertical-resizing
 title: FORM SET VERTICAL RESIZING
 slug: /commands/form-set-vertical-resizing
@@ -42,13 +42,13 @@ If you passed **True** in the first parameter, you can pass new minimum and maxi
 
 ## Example 
 
-Refer to the example of the [FORM SET SIZE](form-set-size.md) command. 
+Refer to the example of the [FORM SET SIZE](../commands/form-set-size) command. 
 
 ## See also 
 
-[FORM GET VERTICAL RESIZING](form-get-vertical-resizing.md)  
-[FORM SET HORIZONTAL RESIZING](form-set-horizontal-resizing.md)  
-[FORM SET SIZE](form-set-size.md)  
+[FORM GET VERTICAL RESIZING](../commands/form-get-vertical-resizing)  
+[FORM SET HORIZONTAL RESIZING](../commands/form-set-horizontal-resizing)  
+[FORM SET SIZE](../commands/form-set-size)  
 
 ## Properties
 

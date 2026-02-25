@@ -1,4 +1,4 @@
----
+﻿---
 id: get-cache-size
 title: Get cache size
 slug: /commands/get-cache-size
@@ -31,11 +31,11 @@ displayed_sidebar: docs
 
 ## 例題 
 
-[SET CACHE SIZE](set-cache-size.md)コマンドの例題を参照して下さい。
+[SET CACHE SIZE](../commands/set-cache-size)コマンドの例題を参照して下さい。
 
 ## 参照 
 
-[SET CACHE SIZE](set-cache-size.md)  
+[SET CACHE SIZE](../commands/set-cache-size)  
 
 ## プロパティ
 

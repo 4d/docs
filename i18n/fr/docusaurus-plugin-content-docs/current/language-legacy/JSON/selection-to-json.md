@@ -1,4 +1,4 @@
----
+﻿---
 id: selection-to-json
 title: Selection to JSON
 slug: /commands/selection-to-json
@@ -46,7 +46,7 @@ Cette commande prend en charge les champs de type objet : les données des champ
  Selection to JSON([uneTable];champObjet)
 ```
 
-**Note :** Après un appel à **Selection to JSON**, la sélection courante n'est pas modifiée mais l'enregistrement courant n'est plus chargé et il peut avoir changé (le dernier enregistrement de la sélection devient l'enregistrement courant). Après un **Selection to JSON**, utilisez les commandes [LOAD RECORD](load-record.md) ainsi que [GOTO SELECTED RECORD](goto-selected-record.md) (si nécessaire) si vous souhaitez utiliser les valeurs des champs de l'enregistrement courant d'origine. 
+**Note :** Après un appel à **Selection to JSON**, la sélection courante n'est pas modifiée mais l'enregistrement courant n'est plus chargé et il peut avoir changé (le dernier enregistrement de la sélection devient l'enregistrement courant). Après un **Selection to JSON**, utilisez les commandes [LOAD RECORD](../commands/load-record) ainsi que [GOTO SELECTED RECORD](../commands/goto-selected-record) (si nécessaire) si vous souhaitez utiliser les valeurs des champs de l'enregistrement courant d'origine. 
 
 ## Exemple 1 
 
@@ -101,7 +101,7 @@ Vous utilisez la syntaxe avec *template* afin d'exporter des champs de différen
 
 ## Voir aussi 
 
-[JSON TO SELECTION](json-to-selection.md)  
+[JSON TO SELECTION](../commands/json-to-selection)  
 
 ## Propriétés
 

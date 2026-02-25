@@ -1,4 +1,4 @@
----
+﻿---
 id: sort-list
 title: SORT LIST
 slug: /commands/sort-list
@@ -34,7 +34,7 @@ Pour effectuer un tri dans l'ordre croissant, passez *\>* comme deuxième param�
 
 **SORT LIST** trie tous les niveaux de la liste : les éléments de la liste, puis les sous-éléments de chaque sous-liste, puis des sous-listes suivantes, etc., sont triés. C'est pourquoi généralement vous utiliserez la commande **SORT LIST** avec une liste affichée dans un formulaire. Le tri d'une sous-liste a moins d'intérêt car son ordre sera modifié dès qu'un appel à une liste se produira à un niveau supérieur. 
 
-**SORT LIST** ne modifie pas l'état courant déployé/contracté de la liste et de ses éventuelles sous-listes, ni l'élément courant. Cependant, comme l'élément courant peut être déplacé à la suite du tri, [Selected list items](selected-list-items.md) peut retourner une position différente avant et après le tri. 
+**SORT LIST** ne modifie pas l'état courant déployé/contracté de la liste et de ses éventuelles sous-listes, ni l'élément courant. Cependant, comme l'élément courant peut être déplacé à la suite du tri, [Selected list items](../commands/selected-list-items) peut retourner une position différente avant et après le tri. 
 
 ## Exemple 
 
@@ -66,7 +66,7 @@ Après l'exécution du code suivant :
 
 ## Voir aussi 
 
-[Selected list items](selected-list-items.md)  
+[Selected list items](../commands/selected-list-items)  
 
 ## Propriétés
 

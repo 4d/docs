@@ -1,4 +1,4 @@
----
+﻿---
 id: st-compute-expressions
 title: ST COMPUTE EXPRESSIONS
 slug: /commands/st-compute-expressions
@@ -33,13 +33,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST COMPUTE EXPRESSIONS.Summary-->The **ST COMPUTE EXPRESSIONS** command updates the dynamic 4D expressions found in the multi-style or 4D Write Pro field or variable designated by the *object* parameter.<!-- END REF--> 
 
-For more information about 4D expressions used in multi-style text or 4D Write Pro areas, refer to the description of the [ST INSERT EXPRESSION](st-insert-expression.md) command.
+For more information about 4D expressions used in multi-style text or 4D Write Pro areas, refer to the description of the [ST INSERT EXPRESSION](../commands/st-insert-expression) command.
 
  The command re-evaluates the result of expressions found in the *object* based on the current context and displays the result obtained. For example, if the expression inserted is the time, the value will be modified each time the **ST COMPUTE EXPRESSIONS** command is called. Expressions are also computed:
 
 * when they are inserted
 * when the object is loaded
-* when they are "frozen" using the [ST FREEZE EXPRESSIONS](st-freeze-expressions.md) command, if the second *\** parameter is passed.
+* when they are "frozen" using the [ST FREEZE EXPRESSIONS](../commands/st-freeze-expressions) command, if the second *\** parameter is passed.
 
 **ST COMPUTE EXPRESSIONS** does not modify styled text (containing *span* tags) but only plain text displayed in *object*. The values computed are not stored in the styled text, only their reference is stored there. 
 
@@ -78,8 +78,8 @@ You want to update the references included in the selection of text:
 
 ## See also 
 
-[ST FREEZE EXPRESSIONS](st-freeze-expressions.md)  
-[ST INSERT EXPRESSION](st-insert-expression.md)  
+[ST FREEZE EXPRESSIONS](../commands/st-freeze-expressions)  
+[ST INSERT EXPRESSION](../commands/st-insert-expression)  
 
 ## Properties
 

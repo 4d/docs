@@ -1,4 +1,4 @@
----
+﻿---
 id: method-get-comments
 title: METHOD GET COMMENTS
 slug: /commands/method-get-comments
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD GET COMMENTS.Summary-->El comando **METHOD GET COMMENTS** devuelve en el parámetro *comentarios*, la documentación de los métodos designados por el parámetro *ruta*.<!-- END REF-->
 
-La documentación modificada por este comando se muestra en el explorador de 4D (no debe confundirse con líneas de comentarios en el código que son recuperadas utilizando [METHOD GET CODE](method-get-code.md)). 
+La documentación modificada por este comando se muestra en el explorador de 4D (no debe confundirse con líneas de comentarios en el código que son recuperadas utilizando [METHOD GET CODE](../commands/method-get-code)). 
 
 Contiene:
 
@@ -66,7 +66,7 @@ Si el comando se ejecuta desde un componente, se aplica por defecto a los métod
 
 ## Ver también 
 
-[METHOD SET COMMENTS](method-set-comments.md)  
+[METHOD SET COMMENTS](../commands/method-set-comments)  
 
 ## Propiedades
 

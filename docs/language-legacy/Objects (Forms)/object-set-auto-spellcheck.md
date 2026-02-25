@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-auto-spellcheck
 title: OBJECT SET AUTO SPELLCHECK
 slug: /commands/object-set-auto-spellcheck
@@ -44,7 +44,7 @@ Pass **True** in *autoSpellcheck* to enable this function for the object, and **
 
 ## See also 
 
-[OBJECT Get auto spellcheck](object-get-auto-spellcheck.md)  
+[OBJECT Get auto spellcheck](../commands/object-get-auto-spellcheck)  
 
 ## Properties
 

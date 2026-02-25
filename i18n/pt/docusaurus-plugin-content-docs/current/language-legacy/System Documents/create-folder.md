@@ -1,4 +1,4 @@
----
+﻿---
 id: create-folder
 title: CREATE FOLDER
 slug: /commands/create-folder
@@ -78,8 +78,8 @@ Criação da subpasta "\\Fevereiro\\" na atual pasta "C:\\Arquivos\\":
 
 ## Ver também 
 
-[FOLDER LIST](folder-list.md)  
-[Test path name](test-path-name.md)  
+[FOLDER LIST](../commands/folder-list)  
+[Test path name](../commands/test-path-name)  
 
 ## Propriedades
 

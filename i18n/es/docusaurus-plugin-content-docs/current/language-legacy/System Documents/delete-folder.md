@@ -1,4 +1,4 @@
----
+﻿---
 id: delete-folder
 title: DELETE FOLDER
 slug: /commands/delete-folder
@@ -49,12 +49,12 @@ Por defecto, por razones de seguridad, si se omite el parámetro *opcionEliminac
    (\*) En Windows: -54 (Intento de abrir un archivo bloqueado para escritura)  
    En macOS: -45 (El archivo está bloqueado o la ruta de acceso no es correcta)
 
-Puede interceptar estos errores utilizando un método instalado por el comando [ON ERR CALL](on-err-call.md).  
+Puede interceptar estos errores utilizando un método instalado por el comando [ON ERR CALL](../commands/on-err-call).  
 
 ## Ver también 
 
   
-[DELETE DOCUMENT](delete-document.md)  
+[DELETE DOCUMENT](../commands/delete-document)  
 
 ## Propiedades
 

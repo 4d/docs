@@ -1,4 +1,4 @@
----
+﻿---
 id: open-form-window
 title: Open form window
 slug: /commands/open-form-window
@@ -286,7 +286,7 @@ which displays:
 ## See also 
 
 [FORM GET PROPERTIES](../commands/form-get-properties)  
-[Open window](open-window.md)  
+[Open window](../commands/open-window)  
 
 ## Properties
 

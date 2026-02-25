@@ -1,4 +1,4 @@
----
+﻿---
 id: milliseconds
 title: Milliseconds
 slug: /commands/milliseconds
@@ -56,8 +56,8 @@ Le code suivant attend jusqu'à 5 secondes qu'un enregistrement soit déverrouil
 
 ## Voir aussi 
 
-[Current time](current-time.md)  
-[Tickcount](tickcount.md)  
+[Current time](../commands/current-time)  
+[Tickcount](../commands/tickcount)  
 [Timestamp](../commands/timestamp)  
 
 ## Propriétés

@@ -1,4 +1,4 @@
----
+﻿---
 id: delete-selection
 title: DELETE SELECTION
 slug: /commands/delete-selection
@@ -62,9 +62,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[DISPLAY SELECTION](display-selection.md)  
-[MODIFY SELECTION](modify-selection.md)  
-[TRUNCATE TABLE](truncate-table.md)  
+[DISPLAY SELECTION](../commands/display-selection)  
+[MODIFY SELECTION](../commands/modify-selection)  
+[TRUNCATE TABLE](../commands/truncate-table)  
 *セット*  
 *レコードのロック*  
 

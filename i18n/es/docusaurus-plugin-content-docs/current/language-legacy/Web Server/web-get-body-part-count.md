@@ -1,4 +1,4 @@
----
+﻿---
 id: web-get-body-part-count
 title: WEB Get body part count
 slug: /commands/web-get-body-part-count
@@ -31,11 +31,11 @@ displayed_sidebar: docs
 
 ## Ejemplo 
 
-Consulte el ejemplo del comando [WEB GET BODY PART](web-get-body-part.md). 
+Consulte el ejemplo del comando [WEB GET BODY PART](../commands/web-get-body-part). 
 
 ## Ver también 
 
-[WEB GET BODY PART](web-get-body-part.md)  
+[WEB GET BODY PART](../commands/web-get-body-part)  
 
 ## Propiedades
 

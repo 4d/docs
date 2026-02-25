@@ -1,4 +1,4 @@
----
+﻿---
 id: default-table
 title: DEFAULT TABLE
 slug: /commands/default-table
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.DEFAULT TABLE.Summary-->**Tip:** Although using **DEFAULT TABLE** and omitting the table name may make the code easier to read, many programmers find that using this command actually causes more problems and confusion than it is worth.<!-- END REF--> In particular, note that [DEFAULT TABLE](default-table.md) takes priority when you use, for example, the [DIALOG](../commands/dialog) command with a project form and there is a default table form with the same name.
+<!--REF #_command_.DEFAULT TABLE.Summary-->**Tip:** Although using **DEFAULT TABLE** and omitting the table name may make the code easier to read, many programmers find that using this command actually causes more problems and confusion than it is worth.<!-- END REF--> In particular, note that [DEFAULT TABLE](../commands/default-table) takes priority when you use, for example, the [DIALOG](../commands/dialog) command with a project form and there is a default table form with the same name.
 
 **DEFAULT TABLE** sets *aTable* as the default table for the current process.
 
@@ -33,7 +33,7 @@ If the default table is first set to \[Table\], the same command could be writte
  FORM SET INPUT("form")
 ```
 
-One reason for setting the default table is to create code that is not table specific. Doing this allows the same code to operate on different tables. You can also use pointers to tables to write code that is not table specific. For more information about this technique, see the description of the [Table name](table-name.md) command.
+One reason for setting the default table is to create code that is not table specific. Doing this allows the same code to operate on different tables. You can also use pointers to tables to write code that is not table specific. For more information about this technique, see the description of the [Table name](../commands/table-name) command.
 
 **DEFAULT TABLE** does not allow the omission of table names when referring to fields. For example:
 
@@ -54,7 +54,7 @@ In 4D, all tables are “open” and ready for use. **DEFAULT TABLE** does not o
 
 ## Example 
 
-The following example first shows code without the DEFAULT TABLE command. It then shows the same code, with DEFAULT TABLE. The code is a loop commonly used to add new records to a database. The [FORM SET INPUT](form-set-input.md) and [ADD RECORD](add-record.md) commands both require a table as the first parameter:
+The following example first shows code without the DEFAULT TABLE command. It then shows the same code, with DEFAULT TABLE. The code is a loop commonly used to add new records to a database. The [FORM SET INPUT](../commands/form-set-input) and [ADD RECORD](../commands/add-record) commands both require a table as the first parameter:
 
 ```4d
  FORM SET INPUT([Customers];"Add Recs")
@@ -75,8 +75,8 @@ Specifying the default table results in this code:
 
 ## See also 
 
-[Current default table](current-default-table.md)  
-[NO DEFAULT TABLE](no-default-table.md)  
+[Current default table](../commands/current-default-table)  
+[NO DEFAULT TABLE](../commands/no-default-table)  
 
 ## Properties
 

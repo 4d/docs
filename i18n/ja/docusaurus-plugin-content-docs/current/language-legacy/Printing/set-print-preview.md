@@ -1,4 +1,4 @@
----
+﻿---
 id: set-print-preview
 title: SET PRINT PREVIEW
 slug: /commands/set-print-preview
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET PRINT PREVIEW.Summary-->**SET PRINT PREVIEW** は、プリントダイアログボックスのプレビュー設定のオン/オフをメソッドで切り替るためのものです。<!-- END REF-->*preview* に[True](true.md "True") を渡すとプレビューは有効になり、[False](false.md "False") を渡すと無効になります。この設定はプロセスに対してローカルであり、他のプロセスや他のユーザの印刷には影響を与えません。
 
-**注意:** Windows では、 [SET PRINT OPTION](set-print-option.md) コマンドを使用することで印刷プレビューフォーマットを定義することができます。
+**注意:** Windows では、 [SET PRINT OPTION](../commands/set-print-option) コマンドを使用することで印刷プレビューフォーマットを定義することができます。
 
 ## 例題 
 
@@ -47,8 +47,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Get print preview](get-print-preview.md)  
-[Is in print preview](is-in-print-preview.md)  
+[Get print preview](../commands/get-print-preview)  
+[Is in print preview](../commands/is-in-print-preview)  
 
 ## プロパティ
 

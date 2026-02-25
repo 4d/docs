@@ -1,4 +1,4 @@
----
+﻿---
 id: bring-to-front
 title: BRING TO FRONT
 slug: /commands/bring-to-front
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 Os processos Principal e Desenho podem ser passados ao primeiro plano utilizando este comando.
 
-**Nota:** Quando o processo contém várias janelas e quer passar ao primeiro plano uma janela específica, é preferível utilizar por exemplo, o comando [SET WINDOW RECT](set-window-rect.md).
+**Nota:** Quando o processo contém várias janelas e quer passar ao primeiro plano uma janela específica, é preferível utilizar por exemplo, o comando [SET WINDOW RECT](../commands/set-window-rect).
 
 ## Exemplo 
 
@@ -35,9 +35,9 @@ O exemplo a seguir é um método que pode ser executado desde um menu. Ele verif
 
 ## Ver também 
 
-[HIDE PROCESS](hide-process.md)  
-[Process state](process-state.md)  
-[SHOW PROCESS](show-process.md)  
+[HIDE PROCESS](../commands/hide-process)  
+[Process state](../commands/process-state)  
+[SHOW PROCESS](../commands/show-process)  
 
 ## Propriedades
 

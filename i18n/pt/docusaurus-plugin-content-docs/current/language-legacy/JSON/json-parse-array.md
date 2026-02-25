@@ -1,4 +1,4 @@
----
+﻿---
 id: json-parse-array
 title: JSON PARSE ARRAY
 slug: /commands/json-parse-array
@@ -29,13 +29,13 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.JSON PARSE ARRAY.Summary-->O comando **JSON PARSE ARRAY** analisa o conteúdo de uma cadeia com formato JSON e localiza os dados extraídos no array *arrayObjeto*.<!-- END REF--> Este comando não realiza os dados JSON, realiza a ação inversa do comando [JSON Stringify array](json-stringify-array.md).  
+<!--REF #_command_.JSON PARSE ARRAY.Summary-->O comando **JSON PARSE ARRAY** analisa o conteúdo de uma cadeia com formato JSON e localiza os dados extraídos no array *arrayObjeto*.<!-- END REF--> Este comando não realiza os dados JSON, realiza a ação inversa do comando [JSON Stringify array](../commands/json-stringify-array).  
   
 Em *cadeiaJSON*, passe a cadeia com formato JSON cujo conteúdo deseja analisar. Esta cadeia deve ter o formato correto, caso contrário é gerado um erro de análise.  
   
 Em *arrayObjeto*, passe o objeto que deve receber os resultados da análise.
 
-**Note:** A partir de 4D v16 R4, **JSON PARSE ARRAY** pode geralmente ser substituído por uma chamada a [JSON Parse](json-parse.md) que retorna uma **coleção**. Coleções são baseadas em arrays JSON permite armazenar dados de diversos tipos, o que oferece mais flexibilidade que arrays. 
+**Note:** A partir de 4D v16 R4, **JSON PARSE ARRAY** pode geralmente ser substituído por uma chamada a [JSON Parse](../commands/json-parse) que retorna uma **coleção**. Coleções são baseadas em arrays JSON permite armazenar dados de diversos tipos, o que oferece mais flexibilidade que arrays. 
 
 ## Exemplo 
 
@@ -69,8 +69,8 @@ Neste exemplo, os dados dos campos dos registros de uma tabela se extraem e loca
 
 ## Ver também 
 
-[JSON Parse](json-parse.md)  
-[JSON Stringify array](json-stringify-array.md)  
+[JSON Parse](../commands/json-parse)  
+[JSON Stringify array](../commands/json-stringify-array)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: post-event
 title: POST EVENT
 slug: /commands/post-event
@@ -58,8 +58,8 @@ Si pasa el parámetro *proceso*, el evento se envía al proceso cuyo número se 
 
 ## Ver también 
 
-[POST CLICK](post-click.md)  
-[POST KEY](post-key.md)  
+[POST CLICK](../commands/post-click)  
+[POST KEY](../commands/post-key)  
 
 ## Propiedades
 

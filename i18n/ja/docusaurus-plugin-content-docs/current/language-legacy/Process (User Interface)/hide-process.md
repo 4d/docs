@@ -1,4 +1,4 @@
----
+﻿---
 id: hide-process
 title: HIDE PROCESS
 slug: /commands/hide-process
@@ -35,8 +35,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Process state](process-state.md)  
-[SHOW PROCESS](show-process.md)  
+[Process state](../commands/process-state)  
+[SHOW PROCESS](../commands/show-process)  
 
 ## プロパティ
 

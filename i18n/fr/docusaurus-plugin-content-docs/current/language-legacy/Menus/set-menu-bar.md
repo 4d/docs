@@ -1,4 +1,4 @@
----
+﻿---
 id: set-menu-bar
 title: SET MENU BAR
 slug: /commands/set-menu-bar
@@ -39,7 +39,7 @@ Si vous passez le paramètre optionnel *process*, c'est la barre de menus du pro
 **Note :** Si vous passez un paramètre [RefMenu](# "Référence unique de menu (16 caractères alphanumériques)") dans *barre*, le paramètre *process* est inutile et sera ignoré.
 
 Le paramètre optionnel \* vous permet de conserver l'état de la barre de menus. Si ce paramètre est omis, **SET MENU BAR** réinitialise la barre de menus lors de l'exécution de la commande.  
-Imaginez, par exemple, que l'instruction **SET MENU BAR**(1) soit exécutée. Ensuite, plusieurs commandes de menu sont désactivées à l'aide de la commande [DISABLE MENU ITEM](disable-menu-item.md).  
+Imaginez, par exemple, que l'instruction **SET MENU BAR**(1) soit exécutée. Ensuite, plusieurs commandes de menu sont désactivées à l'aide de la commande [DISABLE MENU ITEM](../commands/disable-menu-item).  
 Si **SET MENU BAR**(1) est exécutée une seconde fois, soit à partir du même process, soit à partir d'un autre process, toutes les commandes de menu retournent à leur état d'activation initial.   
 Si **SET MENU BAR**(1;\*) est exécutée, la barre de menus conservera son état précédent, les commandes de menu qui étaient inactivées le resteront.
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: set-list-item-parameter
 title: SET LIST ITEM PARAMETER
 slug: /commands/set-list-item-parameter
@@ -47,7 +47,7 @@ Dans le paramètre *sélecteur*, vous pouvez passer :
 | -------------------------- | ------ | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | Additional text            | Chaîne | 4D\_additional\_text       | Cette constante permet d’ajouter un texte à droite de l’élément *réfElément*. Ce libellé supplémentaire reste toujours affiché dans la partie droite de la liste, même si l’utilisateur déplace le curseur de défilement horizontal. Lorsque vous utilisez cette constante, passez dans *valeur* le texte à afficher. |  
 | Associated standard action | Chaîne | 4D\_standard\_action\_name | Associe une action standard à l'élément *refElément*. Dans ce cas, vous devez passer dans le paramètre *valeur* un nom d'action standard avec un paramètre, par exemple "fontSize?value=10pt". Pour plus d'informations, veuillez vous reporter à la section *Actions standard* dans le manuel *Mode Développement*.  |
-* ou une **valeur personnalisée** : vous pouvez passer dans *sélecteur* tout texte personnalisé et lui associer une valeur de type texte, numérique ou booléen. Cette valeur sera stockée avec l’élément et pourra être récupérée via la commande [GET LIST ITEM PARAMETER](get-list-item-parameter.md). Ce principe permet de mettre en place tout type d’interface associée aux listes hiérarchiques. Par exemple, dans une liste stockant des noms de personnes, vous pouvez stocker l’âge de chaque personne et ne l’afficher que lorsque l’élément correspondant est sélectionné.
+* ou une **valeur personnalisée** : vous pouvez passer dans *sélecteur* tout texte personnalisé et lui associer une valeur de type texte, numérique ou booléen. Cette valeur sera stockée avec l’élément et pourra être récupérée via la commande [GET LIST ITEM PARAMETER](../commands/get-list-item-parameter). Ce principe permet de mettre en place tout type d’interface associée aux listes hiérarchiques. Par exemple, dans une liste stockant des noms de personnes, vous pouvez stocker l’âge de chaque personne et ne l’afficher que lorsque l’élément correspondant est sélectionné.
 
 ## Exemple 
 
@@ -68,11 +68,11 @@ Vous souhaitez définir comme énumération d'un pop up menu hiérarchique une l
 
 ## Voir aussi 
 
-[APPEND TO LIST](append-to-list.md)  
-[Action info](action-info.md)  
-[GET LIST ITEM PARAMETER](get-list-item-parameter.md)  
-[GET LIST ITEM PARAMETER ARRAYS](get-list-item-parameter-arrays.md)  
-[INSERT IN LIST](insert-in-list.md)  
+[APPEND TO LIST](../commands/append-to-list)  
+[Action info](../commands/action-info)  
+[GET LIST ITEM PARAMETER](../commands/get-list-item-parameter)  
+[GET LIST ITEM PARAMETER ARRAYS](../commands/get-list-item-parameter-arrays)  
+[INSERT IN LIST](../commands/insert-in-list)  
 
 ## Propriétés
 

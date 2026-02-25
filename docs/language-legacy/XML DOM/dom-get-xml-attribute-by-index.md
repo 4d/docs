@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-get-xml-attribute-by-index
 title: DOM GET XML ATTRIBUTE BY INDEX
 slug: /commands/dom-get-xml-attribute-by-index
@@ -35,13 +35,13 @@ displayed_sidebar: docs
 
 Pass the reference of an XML element in *elementRef* and the index number of the attribute that you want to know the name of in *attribIndex*. The name is returned in the *attribName* parameter and its value is returned in the *attribValue*, parameter. 4D attempts to convert the value obtained into the same type as that of the variable passed as parameter. If the variable type is not defined, the value is returned in text type by default.
 
-**Note:** The index number does not correspond to the location of the attribute in the XML file displayed in text form. In XML, the index of an attribute indicates it position among the attributes when placed in alphabetical order (based on their names). For an illustration of this, refer to the example of the [DOM Count XML attributes](dom-count-xml-attributes.md) command.
+**Note:** The index number does not correspond to the location of the attribute in the XML file displayed in text form. In XML, the index of an attribute indicates it position among the attributes when placed in alphabetical order (based on their names). For an illustration of this, refer to the example of the [DOM Count XML attributes](../commands/dom-count-xml-attributes) command.
 
 If the value passed in *attribIndex* is greater than the number of attributes present in the XML element, an error is returned.
 
 ## Example 
 
-Refer to the example in the [DOM Count XML attributes](dom-count-xml-attributes.md) command. 
+Refer to the example in the [DOM Count XML attributes](../commands/dom-count-xml-attributes) command. 
 
 ## System variables and sets 
 
@@ -49,8 +49,8 @@ If the command has been correctly executed, the system variable OK is set to 1\.
 
 ## See also 
 
-[DOM GET XML ATTRIBUTE BY NAME](dom-get-xml-attribute-by-name.md)  
-[DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  
+[DOM GET XML ATTRIBUTE BY NAME](../commands/dom-get-xml-attribute-by-name)  
+[DOM REMOVE XML ATTRIBUTE](../commands/dom-remove-xml-attribute)  
 
 ## Properties
 

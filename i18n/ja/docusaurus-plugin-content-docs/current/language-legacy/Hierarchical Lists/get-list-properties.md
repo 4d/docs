@@ -1,4 +1,4 @@
----
+﻿---
 id: get-list-properties
 title: GET LIST PROPERTIES
 slug: /commands/get-list-properties
@@ -48,13 +48,13 @@ displayed_sidebar: docs
 
 引数 *editable*に1が代入された場合、レコードの選択リストとして表示されると、そのリストは編集可能になります。0が代入された場合、リストを編集することはできません。
 
-これらのプロパティは、[SET LIST PROPERTIES](set-list-properties.md) コマンドおよび、リストがデザインモードのリストエディタで作成された場合、または[SAVE LIST](save-list.md) コマンドを使用して保存された場合は、リストエディタで設定することができます。
+これらのプロパティは、[SET LIST PROPERTIES](../commands/set-list-properties) コマンドおよび、リストがデザインモードのリストエディタで作成された場合、または[SAVE LIST](../commands/save-list) コマンドを使用して保存された場合は、リストエディタで設定することができます。
 
-リストの表示様式、ノードアイコン、行の高さの最小値、およびダブルクリックの管理についての詳細は、[SET LIST PROPERTIES](set-list-properties.md) コマンドを参照してください。
+リストの表示様式、ノードアイコン、行の高さの最小値、およびダブルクリックの管理についての詳細は、[SET LIST PROPERTIES](../commands/set-list-properties) コマンドを参照してください。
 
 ## 参照 
 
-[SET LIST PROPERTIES](set-list-properties.md)  
+[SET LIST PROPERTIES](../commands/set-list-properties)  
 
 ## プロパティ
 

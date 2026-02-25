@@ -1,4 +1,4 @@
----
+﻿---
 id: sum-squares
 title: Sum squares
 slug: /commands/sum-squares
@@ -52,7 +52,7 @@ El siguiente método se llama para imprimir los registros en la selección y act
  PRINT SELECTION([Tabla1])
 ```
 
-**Nota:** el parámetro del comando [BREAK LEVEL](break-level.md) debe ser igual al número de rupturas en su informe. Para mayor información sobre el proceso de rupturas, consulte *Impresión*. 
+**Nota:** el parámetro del comando [BREAK LEVEL](../commands/break-level) debe ser igual al número de rupturas en su informe. Para mayor información sobre el proceso de rupturas, consulte *Impresión*. 
 
 ## Ejemplo 2 
 
@@ -67,10 +67,10 @@ Este ejemplo permite obtener la suma de cuadrados de los valores ubicados en un 
 
 ## Ver también 
 
-[Average](average.md)  
-[Std deviation](std-deviation.md)  
-[Sum](sum.md)  
-[Variance](variance.md)  
+[Average](../commands/average)  
+[Std deviation](../commands/std-deviation)  
+[Sum](../commands/sum)  
+[Variance](../commands/variance)  
 
 ## Propiedades
 

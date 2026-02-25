@@ -1,4 +1,4 @@
----
+﻿---
 id: restore
 title: RESTORE
 slug: /commands/restore
@@ -44,8 +44,8 @@ RESTORE コマンドは*OK*および*Document*変数を更新します。復元�
 
 ## 参照 
 
-[BACKUP](backup.md)  
-[RESTORE INFO](restore-info.md)  
+[BACKUP](../commands/backup)  
+[RESTORE INFO](../commands/restore-info)  
 
 ## プロパティ
 

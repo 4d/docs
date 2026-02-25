@@ -1,4 +1,4 @@
----
+﻿---
 id: screen-width
 title: Screen width
 slug: /commands/screen-width
@@ -24,8 +24,8 @@ Macintoshの場合、, Screen width はメイン画面の幅を返します。�
 
 ## 参照 
 
-[SCREEN COORDINATES](screen-coordinates.md)  
-[Screen height](screen-height.md)  
+[SCREEN COORDINATES](../commands/screen-coordinates)  
+[Screen height](../commands/screen-height)  
 
 ## プロパティ
 

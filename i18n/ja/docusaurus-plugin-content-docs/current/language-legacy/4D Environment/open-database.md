@@ -1,4 +1,4 @@
----
+﻿---
 id: open-database
 title: OPEN DATABASE
 slug: /commands/open-database
@@ -40,9 +40,9 @@ displayed_sidebar: docs
 
 ファイル名のみを渡す場合、現在開いているデータベースのストラクチャーファイルと同じ階層にそのファイルが置かれている必要があります。
 
-ア クセスパスが有効なデータベースを設定していた場合、4Dは開いているデータベースを閉じ、指定されたデータベースを開きます。シングルユーザーモードに おいては、閉じられた方のデータベースの [On Exitデータベースメソッド](on-exit-database-method.md) と、新たに開かれた方のデータベースの [On Startupデータベースメソッド](on-startup-database-method.md) (または [On Server Open Connectionデータベースメソッド](on-server-open-connection-database-method.md)) が順番に実行されます。
+ア クセスパスが有効なデータベースを設定していた場合、4Dは開いているデータベースを閉じ、指定されたデータベースを開きます。シングルユーザーモードに おいては、閉じられた方のデータベースの [On Exitデータベースメソッド](../commands/on-exit-database-method) と、新たに開かれた方のデータベースの [On Startupデータベースメソッド](../commands/on-startup-database-method) (または [On Server Open Connectionデータベースメソッド](../commands/on-server-open-connection-database-method)) が順番に実行されます。
 
-**警告** **:** このコマンドは指定されたデータベースを開く前にアプリケーションを強制的に閉じるため、[On Startupデータベースメソッド](on-startup-database-method.md) の中やこのデータベースメソッドから呼び出されるメソッド内で呼び出すことは通常は推奨されません。
+**警告** **:** このコマンドは指定されたデータベースを開く前にアプリケーションを強制的に閉じるため、[On Startupデータベースメソッド](../commands/on-startup-database-method) の中やこのデータベースメソッドから呼び出されるメソッド内で呼び出すことは通常は推奨されません。
 
 このコマンドは非同期的に実行されます。つまり、呼び出しの後、4Dは他のメソッドを実行し続けます。そして、アプリケーションは**ファイル**メニューの**4Dを終了**コマンドを選択したのと同じ挙動をします。ファイルを開くダイアログボックスはキャンセルされ、開いているプロセスは全て10秒間の猶予の後に終了します。
 
@@ -56,7 +56,7 @@ displayed_sidebar: docs
 
 ## 例題 2 
 
-シングルユーザーアプリケーションのスタートアップからサーバーを選択したい場合を考えます。この場合、[On Startupデータベースメソッド](on-startup-database-method.md) から立ち上げたプロセスで以下のコードを実行することでそれを行うことができます:
+シングルユーザーアプリケーションのスタートアップからサーバーを選択したい場合を考えます。この場合、[On Startupデータベースメソッド](../commands/on-startup-database-method) から立ち上げたプロセスで以下のコードを実行することでそれを行うことができます:
 
 ```4d
  var $xml : Text

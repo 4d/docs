@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-row-font-style
 title: LISTBOX SET ROW FONT STYLE
 slug: /commands/listbox-set-row-font-style
@@ -55,7 +55,7 @@ Passez dans *style* une valeur de style. Vous devez utiliser une ou une combinai
 | Underline | Entier long | 4      |
 
 Si un tableau de styles de police a été associé à la list box ou à la colonne, seul l’élément correspondant à la ligne sera modifié. Autrement dit, dans ce cas, l’exécution de la commande produit le même effet que la modification d’un élément du tableau de styles de police.   
-Si aucun tableau de styles de police n’a été associé à la list box ou à la colonne, il est créé dynamiquement lors de l’appel de la commande. Vous pourrez y accéder à l’aide de la commande [LISTBOX Get array](listbox-get-array.md).
+Si aucun tableau de styles de police n’a été associé à la list box ou à la colonne, il est créé dynamiquement lors de l’appel de la commande. Vous pourrez y accéder à l’aide de la commande [LISTBOX Get array](../commands/listbox-get-array).
 
 Si des propriétés de style contradictoires sont définies pour la colonne ou la list box, un ordre de priorité est appliqué. Pour plus d’informations, reportez-vous au manuel *Mode Développement*. 
 
@@ -87,8 +87,8 @@ Après la deuxième instruction, toutes les cellules de la troisième ligne pass
 
 ## Voir aussi 
 
-[LISTBOX Get row font style](listbox-get-row-font-style.md)  
-[LISTBOX SET ROW COLOR](listbox-set-row-color.md)  
+[LISTBOX Get row font style](../commands/listbox-get-row-font-style)  
+[LISTBOX SET ROW COLOR](../commands/listbox-set-row-color)  
 
 ## Propriétés
 

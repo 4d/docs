@@ -1,4 +1,4 @@
----
+﻿---
 id: text-to-array
 title: TEXT TO ARRAY
 slug: /commands/text-to-array
@@ -119,7 +119,7 @@ Debe imprimir en un área de 400 píxeles de largo un texto de un máximo de 80 
 
 [Split string](../commands/split-string  
 [ST Get plain text](st-get-plain-text)  
-[ST Get text](st-get-text.md)  
+[ST Get text](../commands/st-get-text)  
 
 ## Propiedades
 

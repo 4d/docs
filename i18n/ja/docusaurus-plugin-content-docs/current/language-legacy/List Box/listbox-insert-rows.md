@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-insert-rows
 title: LISTBOX INSERT ROWS
 slug: /commands/listbox-insert-rows
@@ -47,7 +47,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[LISTBOX DELETE ROWS](listbox-delete-rows.md)  
+[LISTBOX DELETE ROWS](../commands/listbox-delete-rows)  
 
 ## プロパティ
 

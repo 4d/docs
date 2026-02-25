@@ -1,4 +1,4 @@
----
+﻿---
 id: set-menu-item
 title: SET MENU ITEM
 slug: /commands/set-menu-item
@@ -43,9 +43,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[APPEND MENU ITEM](append-menu-item.md)  
-[Get menu item](get-menu-item.md)  
-[SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md)  
+[APPEND MENU ITEM](../commands/append-menu-item)  
+[Get menu item](../commands/get-menu-item)  
+[SET MENU ITEM SHORTCUT](../commands/set-menu-item-shortcut)  
 
 ## プロパティ
 

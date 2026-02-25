@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-grid-color
 title: LISTBOX SET GRID COLOR
 slug: /commands/listbox-set-grid-color
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 オプションの引数 *\** を渡すことにより、*object* 引数がオブジェクト名（文字列）であることを示します。この引数を渡さない場合、*object* 引数が変数であることを示します。この場合、文字列ではなく変数参照を指定します。オブジェクト名についての詳細は*オブジェクトプロパティ* の節を参照してください。
 
-*color* には、RGBカラーの値を渡します。RGBカラーに関する詳細は、[OBJECT SET RGB COLORS](object-set-rgb-colors.md) コマンドの説明を参照してください。
+*color* には、RGBカラーの値を渡します。RGBカラーに関する詳細は、[OBJECT SET RGB COLORS](../commands/object-set-rgb-colors) コマンドの説明を参照してください。
 
 *horizontal* と*vertical* を使用し、カラーを適用するグリッドラインを指定することができます:
 
@@ -45,9 +45,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[LISTBOX GET GRID COLORS](listbox-get-grid-colors.md)  
-[LISTBOX SET GRID](listbox-set-grid.md)  
-[OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
+[LISTBOX GET GRID COLORS](../commands/listbox-get-grid-colors)  
+[LISTBOX SET GRID](../commands/listbox-set-grid)  
+[OBJECT SET RGB COLORS](../commands/object-set-rgb-colors)  
 
 ## プロパティ
 

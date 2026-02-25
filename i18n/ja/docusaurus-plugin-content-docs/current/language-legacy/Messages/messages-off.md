@@ -1,4 +1,4 @@
----
+﻿---
 id: messages-off
 title: MESSAGES OFF
 slug: /commands/messages-off
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.MESSAGES OFF.Summary-->MESSAGES OFF および [MESSAGES ON](messages-on.md) コマンドは、時間のかかる処理を行っている際に4Dが表示する進捗インジケータの表示/非表示を切り替えます。<!-- END REF-->デフォルトでは、メッセージは表示されます。
+<!--REF #_command_.MESSAGES OFF.Summary-->MESSAGES OFF および [MESSAGES ON](../commands/messages-on) コマンドは、時間のかかる処理を行っている際に4Dが表示する進捗インジケータの表示/非表示を切り替えます。<!-- END REF-->デフォルトでは、メッセージは表示されます。
 
 進捗インジケータを表示する処理を以下の表に示します:
 
@@ -39,34 +39,34 @@ displayed_sidebar: docs
 
 進捗インジケータを表示するコマンドは以下の通りです:
 
-[APPLY TO SELECTION](apply-to-selection.md)  
-[Average](average.md)  
-[BUILD APPLICATION](build-application.md)  
-[DISTINCT VALUES](distinct-values.md)  
-[EXPORT DIF](export-dif.md)  
-[EXPORT SYLK](export-sylk.md)  
-[EXPORT TEXT](export-text.md)  
+[APPLY TO SELECTION](../commands/apply-to-selection)  
+[Average](../commands/average)  
+[BUILD APPLICATION](../commands/build-application)  
+[DISTINCT VALUES](../commands/distinct-values)  
+[EXPORT DIF](../commands/export-dif)  
+[EXPORT SYLK](../commands/export-sylk)  
+[EXPORT TEXT](../commands/export-text)  
   
-[IMPORT DIF](import-dif.md)  
-[IMPORT SYLK](import-sylk.md)  
-[IMPORT TEXT](import-text.md)  
-[Max](max.md)  
-[Min](min.md)  
-[ORDER BY](order-by.md)  
-[ORDER BY FORMULA](order-by-formula.md)  
-[QR REPORT](qr-report.md)  
-[QUERY](query.md)  
-[QUERY BY FORMULA](query-by-formula.md)  
-[QUERY BY EXAMPLE](query-by-example.md)  
-[QUERY SELECTION](query-selection.md)  
-[QUERY SELECTION BY FORMULA](query-selection-by-formula.md)  
-[REDUCE SELECTION](reduce-selection.md)  
-[RELATE MANY SELECTION](relate-many-selection.md)  
-[RELATE ONE SELECTION](relate-one-selection.md)  
-[SCAN INDEX](scan-index.md)  
-[Sum](sum.md)
+[IMPORT DIF](../commands/import-dif)  
+[IMPORT SYLK](../commands/import-sylk)  
+[IMPORT TEXT](../commands/import-text)  
+[Max](../commands/max)  
+[Min](../commands/min)  
+[ORDER BY](../commands/order-by)  
+[ORDER BY FORMULA](../commands/order-by-formula)  
+[QR REPORT](../commands/qr-report)  
+[QUERY](../commands/query)  
+[QUERY BY FORMULA](../commands/query-by-formula)  
+[QUERY BY EXAMPLE](../commands/query-by-example)  
+[QUERY SELECTION](../commands/query-selection)  
+[QUERY SELECTION BY FORMULA](../commands/query-selection-by-formula)  
+[REDUCE SELECTION](../commands/reduce-selection)  
+[RELATE MANY SELECTION](../commands/relate-many-selection)  
+[RELATE ONE SELECTION](../commands/relate-one-selection)  
+[SCAN INDEX](../commands/scan-index)  
+[Sum](../commands/sum)
 
-**4D Serverでの注意:** 進捗メッセージウィンドウは、それらのオペレーションが管理ウィンドウの *\_o\_PAGE SETUP* にて自動的に表示されるため、サーバー側では表示されません。これらの進捗ウィンドウを強制的に表示したい場合は、サーバー側で [MESSAGES ON](messages-on.md) を呼び出す必要があります。
+**4D Serverでの注意:** 進捗メッセージウィンドウは、それらのオペレーションが管理ウィンドウの *\_o\_PAGE SETUP* にて自動的に表示されるため、サーバー側では表示されません。これらの進捗ウィンドウを強制的に表示したい場合は、サーバー側で [MESSAGES ON](../commands/messages-on) を呼び出す必要があります。
 
 ## 例題 
 
@@ -80,7 +80,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[MESSAGES ON](messages-on.md)  
+[MESSAGES ON](../commands/messages-on)  
 
 ## プロパティ
 

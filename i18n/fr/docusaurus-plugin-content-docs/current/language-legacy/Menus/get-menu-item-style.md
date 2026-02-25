@@ -1,4 +1,4 @@
----
+﻿---
 id: get-menu-item-style
 title: Get menu item style
 slug: /commands/get-menu-item-style
@@ -58,7 +58,7 @@ Si, par exemple, vous voulez tester si une ligne de menu est affichée en gras, 
 
 ## Voir aussi 
 
-[SET MENU ITEM STYLE](set-menu-item-style.md)  
+[SET MENU ITEM STYLE](../commands/set-menu-item-style)  
 
 ## Propriétés
 

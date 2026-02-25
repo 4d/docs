@@ -1,4 +1,4 @@
----
+﻿---
 id: is-a-list
 title: Is a list
 slug: /commands/is-a-list
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## Exemple 1 
 
-Reportez-vous à l'exemple de la commande [CLEAR LIST](clear-list.md).
+Reportez-vous à l'exemple de la commande [CLEAR LIST](../commands/clear-list).
 
 ## Exemple 2 
 

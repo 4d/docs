@@ -1,4 +1,4 @@
----
+﻿---
 id: set-picture-file-name
 title: SET PICTURE FILE NAME
 slug: /commands/set-picture-file-name
@@ -36,8 +36,8 @@ The default name is used as the file name when the picture is exported in a disk
 
 ## See also 
 
-[Get picture file name](get-picture-file-name.md)  
-[WRITE PICTURE FILE](write-picture-file.md)  
+[Get picture file name](../commands/get-picture-file-name)  
+[WRITE PICTURE FILE](../commands/write-picture-file)  
 
 ## Properties
 

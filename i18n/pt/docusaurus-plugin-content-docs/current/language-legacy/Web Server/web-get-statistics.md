@@ -1,4 +1,4 @@
----
+﻿---
 id: web-get-statistics
 title: WEB GET STATISTICS
 slug: /commands/web-get-statistics
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB GET STATISTICS.Summary-->O comando WEB GET STATISTICS permite obter a informação sobre as páginas mais consultadas, carregadas na caché do servidor web.<!-- END REF--> Portanto, estas estatísticas são referentes apenas as páginas estáticas, as imagens GIF, as imagens JPEG <100 KB e as folhas de estilo (.css).  
 
-**Nota**: para maior informação sobre o parâmetro da caché do servidor web 4D, consulte a seção [QR DELETE COLUMN](qr-delete-column.md). .  
+**Nota**: para maior informação sobre o parâmetro da caché do servidor web 4D, consulte a seção [QR DELETE COLUMN](../commands/qr-delete-column). .  
   
 O comando preenche o array de texto páginas com os nomes das páginas mais consultadas. O array inteiro longo *hits* recebe o número de “hits” por cada página. A variável numérica *uso* recebe a porcentagem da caché web utilizada por cada página.
 
@@ -73,7 +73,7 @@ No método de projeto STATS, escreva o código abaixo:
  End for
 ```
 
-Pode enviar a página "stats.shtm" utilizando um link URL ou utilizando o comando [WEB SEND FILE](web-send-file.md).
+Pode enviar a página "stats.shtm" utilizando um link URL ou utilizando o comando [WEB SEND FILE](../commands/web-send-file).
 
 
 ## Propriedades

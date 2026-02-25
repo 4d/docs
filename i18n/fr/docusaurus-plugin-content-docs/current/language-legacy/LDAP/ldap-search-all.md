@@ -1,4 +1,4 @@
----
+﻿---
 id: ldap-search-all
 title: LDAP SEARCH ALL
 slug: /commands/ldap-search-all
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.LDAP SEARCH ALL.Summary-->La commande **LDAP SEARCH ALL** recherche sur le server LDAP cible toutes les occurrences correspondant aux critères définis.<!-- END REF--> Cette commande doit être exécutée dans le contexte d'une connexion serveur LDAP ouverte par la commande [LDAP LOGIN](ldap-login.md) dans le process courant ; sinon une erreur 1003 est retournée.
+<!--REF #_command_.LDAP SEARCH ALL.Summary-->La commande **LDAP SEARCH ALL** recherche sur le server LDAP cible toutes les occurrences correspondant aux critères définis.<!-- END REF--> Cette commande doit être exécutée dans le contexte d'une connexion serveur LDAP ouverte par la commande [LDAP LOGIN](../commands/ldap-login) dans le process courant ; sinon une erreur 1003 est retournée.
 
 A noter que les serveurs LDAP imposent généralement un nombre maximum d'entrées qui peuvent être récupérées lors d'une recherche. Par exemple, Microsoft Active directory limite de nombre à 1000 entrées par défaut.
 
@@ -126,7 +126,7 @@ Ces exemples illustrent plus particulièrement l'utilisation du paramètre *attr
 ## Voir aussi 
 
 *LDAP*  
-[LDAP Search](ldap-search.md)  
+[LDAP Search](../commands/ldap-search)  
 
 ## Propriétés
 

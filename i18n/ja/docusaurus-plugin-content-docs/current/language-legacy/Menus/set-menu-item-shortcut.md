@@ -1,4 +1,4 @@
----
+﻿---
 id: set-menu-item-shortcut
 title: SET MENU ITEM SHORTCUT
 slug: /commands/set-menu-item-shortcut
@@ -87,8 +87,8 @@ Ctrl+R (Windows) や Cmd+R (macOS) ショートカットを"再起動"メニュ�
 
 ## 参照 
 
-[Get menu item key](get-menu-item-key.md)  
-[Get menu item modifiers](get-menu-item-modifiers.md)  
+[Get menu item key](../commands/get-menu-item-key)  
+[Get menu item modifiers](../commands/get-menu-item-modifiers)  
 
 ## プロパティ
 

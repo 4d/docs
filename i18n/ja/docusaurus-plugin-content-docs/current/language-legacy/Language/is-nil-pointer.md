@@ -1,4 +1,4 @@
----
+﻿---
 id: is-nil-pointer
 title: Is nil pointer
 slug: /commands/is-nil-pointer
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is nil pointer.Summary-->**Is nil pointer**コマンドは、*aPointer*がNilポインタ (->\[\]) の場合に**True**を返します。<!-- END REF-->その他の場合（フィールドやテーブル、変数へのポインタ）、この関数はFalseを返します。
 
-ポインターの参照先である変数の名前やフィールド番号を知りたい場合、[RESOLVE POINTER](resolve-pointer.md)コマンドを使用します。
+ポインターの参照先である変数の名前やフィールド番号を知りたい場合、[RESOLVE POINTER](../commands/resolve-pointer)コマンドを使用します。
 
 ## 例題 
 
@@ -47,8 +47,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Is a variable](is-a-variable.md)  
-[RESOLVE POINTER](resolve-pointer.md)  
+[Is a variable](../commands/is-a-variable)  
+[RESOLVE POINTER](../commands/resolve-pointer)  
 
 ## プロパティ
 

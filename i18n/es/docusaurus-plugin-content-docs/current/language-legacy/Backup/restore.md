@@ -1,4 +1,4 @@
----
+﻿---
 id: restore
 title: RESTORE
 slug: /commands/restore
@@ -44,8 +44,8 @@ El comando RESTORE modifica el valor de las variables *OK* y *Document*: si la r
 
 ## Ver también 
 
-[BACKUP](backup.md)  
-[RESTORE INFO](restore-info.md)  
+[BACKUP](../commands/backup)  
+[RESTORE INFO](../commands/restore-info)  
 
 ## Propiedades
 

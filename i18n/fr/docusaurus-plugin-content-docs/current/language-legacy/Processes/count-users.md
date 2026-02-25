@@ -1,4 +1,4 @@
----
+﻿---
 id: count-users
 title: Count users
 slug: /commands/count-users
@@ -23,8 +23,8 @@ Dans le cas d'une version monoposte de 4D, **Count users** retourne 1.
 
 ## Voir aussi 
 
-[Count tasks](count-tasks.md)  
-[Count user processes](count-user-processes.md)  
+[Count tasks](../commands/count-tasks)  
+[Count user processes](../commands/count-user-processes)  
 
 ## Propriétés
 

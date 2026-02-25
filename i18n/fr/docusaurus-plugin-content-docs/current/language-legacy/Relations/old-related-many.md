@@ -1,4 +1,4 @@
----
+﻿---
 id: old-related-many
 title: OLD RELATED MANY
 slug: /commands/old-related-many
@@ -17,14 +17,14 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.OLD RELATED MANY.Summary-->**OLD RELATED MANY** fonctionne comme la commande [RELATE MANY](relate-many.md), à la différence près que **OLD RELATED MANY** utilise l'ancienne valeur du champ pour activer le lien.<!-- END REF-->**OLD RELATED MANY** utilise l'ancienne valeur du champ N, telle qu'elle est retournée par la fonction [Old](old.md). Reportez-vous à la description de cette fonction pour plus d'informations.
+<!--REF #_command_.OLD RELATED MANY.Summary-->**OLD RELATED MANY** fonctionne comme la commande [RELATE MANY](../commands/relate-many), à la différence près que **OLD RELATED MANY** utilise l'ancienne valeur du champ pour activer le lien.<!-- END REF-->**OLD RELATED MANY** utilise l'ancienne valeur du champ N, telle qu'elle est retournée par la fonction [Old](../commands/old). Reportez-vous à la description de cette fonction pour plus d'informations.
 
 **OLD RELATED MANY** modifie la sélection de la table liée. La commande sélectionne le premier enregistrement de la sélection courante et en fait l'enregistrement courant. 
 
 ## Voir aussi 
 
-[OLD RELATED ONE](old-related-one.md)  
-[RELATE MANY](relate-many.md)  
+[OLD RELATED ONE](../commands/old-related-one)  
+[RELATE MANY](../commands/relate-many)  
 
 ## Propriétés
 

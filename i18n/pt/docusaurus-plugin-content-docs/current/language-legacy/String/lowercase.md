@@ -1,4 +1,4 @@
----
+﻿---
 id: lowercase
 title: Lowercase
 slug: /commands/lowercase
@@ -59,7 +59,7 @@ Este exemplo compara os resultados obtidos de acordo com se é passado ou não o
 
 ## Ver também 
 
-[Uppercase](uppercase.md)  
+[Uppercase](../commands/uppercase)  
 
 ## Propriedades
 

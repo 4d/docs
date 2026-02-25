@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-report-table
 title: QR Get report table
 slug: /commands/qr-get-report-table
@@ -34,7 +34,7 @@ Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
 ## Voir aussi 
 
-[QR SET REPORT TABLE](qr-set-report-table.md)  
+[QR SET REPORT TABLE](../commands/qr-set-report-table)  
 
 ## Propriétés
 

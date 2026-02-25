@@ -1,4 +1,4 @@
----
+﻿---
 id: graph-settings
 title: GRAPH SETTINGS
 slug: /commands/graph-settings
@@ -39,9 +39,9 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.GRAPH SETTINGS.Summary-->GRAPH SETTINGS changes the graph settings for graph displayed in a form.<!-- END REF--> The graph must have already been defined using the [GRAPH](graph.md) command. GRAPH SETTINGS has no effect on a pie chart. This command must be called in the same process as the form.
+<!--REF #_command_.GRAPH SETTINGS.Summary-->GRAPH SETTINGS changes the graph settings for graph displayed in a form.<!-- END REF--> The graph must have already been defined using the [GRAPH](../commands/graph) command. GRAPH SETTINGS has no effect on a pie chart. This command must be called in the same process as the form.
 
-**Note:** You must not call this command if the graph was generated using the [GRAPH](graph.md) command with the [Object](# "Data structured as a native 4D object") type *graphSettings* parameter. Refer to the description of the [GRAPH](graph.md) command for more information.
+**Note:** You must not call this command if the graph was generated using the [GRAPH](../commands/graph) command with the [Object](# "Data structured as a native 4D object") type *graphSettings* parameter. Refer to the description of the [GRAPH](../commands/graph) command for more information.
 
 The *xmin*, *xmax*, *ymin*, and *ymax* parameters all set the minimum and maximum values for their respective axes of the graph. If the value of any pair of these parameters is a null value (0, ?00:00:00?, or !00/00/00!, depending on the data type), the default graph values will be used. The *xmin* and *xmax* parameters are only taken into account for proportional graphs (*xprop* is **True**).
 
@@ -53,11 +53,11 @@ The *title* parameter(s) labels the legend.
 
 ## Example 
 
-See example for the [GRAPH](graph.md) command.
+See example for the [GRAPH](../commands/graph) command.
 
 ## See also 
 
-[GRAPH](graph.md)  
+[GRAPH](../commands/graph)  
 
 ## Properties
 

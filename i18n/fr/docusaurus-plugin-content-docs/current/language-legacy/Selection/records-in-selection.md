@@ -1,4 +1,4 @@
----
+﻿---
 id: records-in-selection
 title: Records in selection
 slug: /commands/records-in-selection
@@ -18,11 +18,11 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Records in selection.Summary-->**Records in selection** retourne le nombre d'enregistrements constituant la sélection courante de *laTable* (par opposition, [Records in table](records-in-table.md) retourne le nombre total d'enregistrements d'une table).<!-- END REF-->
+<!--REF #_command_.Records in selection.Summary-->**Records in selection** retourne le nombre d'enregistrements constituant la sélection courante de *laTable* (par opposition, [Records in table](../commands/records-in-table) retourne le nombre total d'enregistrements d'une table).<!-- END REF-->
 
 ## Exemple 
 
-L'exemple suivant propose une technique de boucle couramment utilisée pour se déplacer parmi les enregistrements de la sélection courante. La même opération peut être réalisée à l'aide de la commande [APPLY TO SELECTION](apply-to-selection.md) :
+L'exemple suivant propose une technique de boucle couramment utilisée pour se déplacer parmi les enregistrements de la sélection courante. La même opération peut être réalisée à l'aide de la commande [APPLY TO SELECTION](../commands/apply-to-selection) :
 
 ```4d
  FIRST RECORD([Personnes]) // Départ sur le premier enregistrement de la sélection
@@ -34,7 +34,7 @@ L'exemple suivant propose une technique de boucle couramment utilisée pour se d
 
 ## Voir aussi 
 
-[Records in table](records-in-table.md)  
+[Records in table](../commands/records-in-table)  
 
 ## Propriétés
 

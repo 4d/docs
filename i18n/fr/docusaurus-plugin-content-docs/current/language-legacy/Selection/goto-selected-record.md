@@ -1,4 +1,4 @@
----
+﻿---
 id: goto-selected-record
 title: GOTO SELECTED RECORD
 slug: /commands/goto-selected-record
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.GOTO SELECTED RECORD.Summary-->La commande **GOTO SELECTED RECORD** fait de l'enregistrement spécifié parmi la sélection courante de *laTable* l'enregistrement courant.<!-- END REF--> La sélection courante n'est pas modifiée. Le paramètre *enregistrement* n'est pas équivalent au numéro retourné par [Record number](record-number.md). Ce paramètre représente la position de l'enregistrement au sein de la sélection courante. Cette position dépend de la manière dont la sélection a été créée et si elle a été triée.  
+<!--REF #_command_.GOTO SELECTED RECORD.Summary-->La commande **GOTO SELECTED RECORD** fait de l'enregistrement spécifié parmi la sélection courante de *laTable* l'enregistrement courant.<!-- END REF--> La sélection courante n'est pas modifiée. Le paramètre *enregistrement* n'est pas équivalent au numéro retourné par [Record number](../commands/record-number). Ce paramètre représente la position de l'enregistrement au sein de la sélection courante. Cette position dépend de la manière dont la sélection a été créée et si elle a été triée.  
 Pour plus de précisions sur les numéros d'enregistrements, reportez-vous à la section *A propos des numéros d'enregistrements*.
 
 **GOTO SELECTED RECORD** ne fait rien si :
@@ -73,7 +73,7 @@ La méthode objet de la zone de défilement *taNoms* suivante sélectionne le bo
 
 ## Voir aussi 
 
-[Selected record number](selected-record-number.md)  
+[Selected record number](../commands/selected-record-number)  
 
 ## Propriétés
 

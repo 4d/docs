@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-action
 title: OBJECT SET ACTION
 slug: /commands/object-set-action
@@ -99,7 +99,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT Get action](object-get-action.md)  
+[OBJECT Get action](../commands/object-get-action)  
 
 ## プロパティ
 

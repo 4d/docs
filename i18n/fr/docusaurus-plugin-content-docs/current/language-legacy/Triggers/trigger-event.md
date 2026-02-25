@@ -1,4 +1,4 @@
----
+﻿---
 id: trigger-event
 title: Trigger event
 slug: /commands/trigger-event
@@ -37,9 +37,9 @@ displayed_sidebar: docs
 | On Saving Existing Record Event | Entier long | 2      |
 | On Saving New Record Event      | Entier long | 1      |
 
-Si, dans un trigger, vous effectuez des opérations de base de données sur plusieurs enregistrements (par exemple mise à jour de plusieurs enregistrements dans la table *\[Produits\]* et ajout d'enregistrement dans la table *\[Factures\]*), vous pouvez rencontrer des situations (comme des enregistrements verrouillés) qui empêchent le trigger d'exécuter correctement les opérations pour lesquelles il est appelé. Il vous faut alors stopper les actions de la base et retourner une erreur pour que le process appelant sache que la requête n'a pu être exécutée. Ce process doit également être en mesure d'annuler les opérations non exécutées. Autrement dit, lorsqu'une telle situation se produit, vous avez besoin de savoir dans le trigger si vous êtes en transaction avant même d'essayer de faire quoi que ce soit. Pour cela, utilisez la fonction [In transaction](in-transaction.md).
+Si, dans un trigger, vous effectuez des opérations de base de données sur plusieurs enregistrements (par exemple mise à jour de plusieurs enregistrements dans la table *\[Produits\]* et ajout d'enregistrement dans la table *\[Factures\]*), vous pouvez rencontrer des situations (comme des enregistrements verrouillés) qui empêchent le trigger d'exécuter correctement les opérations pour lesquelles il est appelé. Il vous faut alors stopper les actions de la base et retourner une erreur pour que le process appelant sache que la requête n'a pu être exécutée. Ce process doit également être en mesure d'annuler les opérations non exécutées. Autrement dit, lorsqu'une telle situation se produit, vous avez besoin de savoir dans le trigger si vous êtes en transaction avant même d'essayer de faire quoi que ce soit. Pour cela, utilisez la fonction [In transaction](../commands/in-transaction).
 
-Dans 4D, il n'y a pas de limite, à part la mémoire disponible, aux appels de triggers en cascade. Pour optimiser l'exécution d'un trigger, vous pouvez écrire le code de vos triggers non seulement en fonction de l'événement de la base mais aussi du niveau de l'appel lorsque les triggers sont appelés en cascade. Par exemple, pendant l'événement trigger **Sur suppression enregistrement** pour la table *\[Factures\]*, vous pouvez ne pas effectuer la mise à jour du champ *\[Clients\]Ventes* si la suppression de l'enregistrement de la table *\[Factures\]* fait partie de la suppression en cascade des factures liées à l'enregistrement dans la table *\[Clients\]* que vous êtes en train de supprimer. Pour cela, utilisez les routines [Trigger level](trigger-level.md) et [TRIGGER PROPERTIES](trigger-properties.md).
+Dans 4D, il n'y a pas de limite, à part la mémoire disponible, aux appels de triggers en cascade. Pour optimiser l'exécution d'un trigger, vous pouvez écrire le code de vos triggers non seulement en fonction de l'événement de la base mais aussi du niveau de l'appel lorsque les triggers sont appelés en cascade. Par exemple, pendant l'événement trigger **Sur suppression enregistrement** pour la table *\[Factures\]*, vous pouvez ne pas effectuer la mise à jour du champ *\[Clients\]Ventes* si la suppression de l'enregistrement de la table *\[Factures\]* fait partie de la suppression en cascade des factures liées à l'enregistrement dans la table *\[Clients\]* que vous êtes en train de supprimer. Pour cela, utilisez les routines [Trigger level](../commands/trigger-level) et [TRIGGER PROPERTIES](../commands/trigger-properties).
 
 ## Exemple 
 
@@ -61,10 +61,10 @@ Utilisez la fonction **Trigger event** pour structurer vos triggers comme ci-des
 
 ## Voir aussi 
 
-[In transaction](in-transaction.md)  
+[In transaction](../commands/in-transaction)  
 *Présentation des triggers*  
-[Trigger level](trigger-level.md)  
-[TRIGGER PROPERTIES](trigger-properties.md)  
+[Trigger level](../commands/trigger-level)  
+[TRIGGER PROPERTIES](../commands/trigger-properties)  
 
 ## Propriétés
 

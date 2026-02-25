@@ -1,4 +1,4 @@
----
+﻿---
 id: http-get
 title: HTTP Get
 slug: /commands/http-get
@@ -66,7 +66,7 @@ Puede pasar variables de diferentes tipos en *respuesta*:
 * Imagen: cuando el resultado se espera en forma de imagen.
 * Objeto: cuando el resultado se espera en forma de objeto *C\_OBJECT*.
 
-**Nota:** cuando se pasa una variable de texto en *respuesta*, 4D intentará decodificar los datos devueltos desde el servidor. 4D primero intenta recuperar el conjunto de caracteres del encabezado de *tipo de contenido*, luego del contenido utilizando un BOM y, finalmente, busca cualquier atributo *http-equiv charset* (en contenido html) o *codificación* (para xml). Si no se puede detectar ningún charset, 4D intentará decodificar la respuesta en ANSI. Si la conversión falla, el texto resultante quedará vacío. Si no está seguro de si el servidor devuelve una información charset o BOM, pero conoce la codificación, es más preciso pasar *respuesta* en BLOB y llamar al [Convert to text](convert-to-text.md).
+**Nota:** cuando se pasa una variable de texto en *respuesta*, 4D intentará decodificar los datos devueltos desde el servidor. 4D primero intenta recuperar el conjunto de caracteres del encabezado de *tipo de contenido*, luego del contenido utilizando un BOM y, finalmente, busca cualquier atributo *http-equiv charset* (en contenido html) o *codificación* (para xml). Si no se puede detectar ningún charset, 4D intentará decodificar la respuesta en ANSI. Si la conversión falla, el texto resultante quedará vacío. Si no está seguro de si el servidor devuelve una información charset o BOM, pero conoce la codificación, es más preciso pasar *respuesta* en BLOB y llamar al [Convert to text](../commands/convert-to-text).
 
 Si pasa un BLOB, contendrá el texto, la imagen o todo tipo de contenido (.wav, .zip, etc.) devuelto por el servidor. A continuación, debe gestionar la recuperación de estos contenidos (los encabezados no están incluidos en el BLOB). Si pasa un objeto de tipo *C\_OBJECT*, si la petición devuelve un resultado con el contenido tipo texto, 4D intenta analizar el contenido JSON y devuelve el resultado analizado como un objeto, de lo contrario, se devuelve un objeto *4D.Blob*.
 
@@ -76,7 +76,7 @@ Después de la ejecución del método, estos arrays contienen los nombres y los 
 El parámetro *\** permite activar el mecanismo keep-alive para la conexión al servidor. Por defecto, este parámetro se omite, keep-alive no está activo.   
   
 El comando devuelve el código del estado HTTP estándar (200=OK...) tal como fue devuelto por el servidor. La lista de códigos de estado HTTP está en el *RFC 2616*.  
-Si la conexión al servidor no es posible por una razón relacionada con la red (DNS Failed, Server not reachable...), el comando devuelve 0 y se genera un error. Puede interceptar estos errores utilizando un método de gestión de errores instalado por el comando [ON ERR CALL](on-err-call.md).
+Si la conexión al servidor no es posible por una razón relacionada con la red (DNS Failed, Server not reachable...), el comando devuelve 0 y se genera un error. Puede interceptar estos errores utilizando un método de gestión de errores instalado por el comando [ON ERR CALL](../commands/on-err-call).
 
 ## Ejemplo 1 
 
@@ -116,7 +116,7 @@ Recuperación de un vídeo:
 
 ## Ver también 
 
-[HTTP Request](http-request.md)  
+[HTTP Request](../commands/http-request)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: get-menu-item-modifiers
 title: Get menu item modifiers
 slug: /commands/get-menu-item-modifiers
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 ## Description 
 
 <!--REF #_command_.Get menu item modifiers.Summary-->La commande **Get menu item modifiers** retourne le ou les modificateur(s) additionnel(s) associé(s) au raccourci standard de la ligne de menu désignée par les paramètres *menu* et *ligneMenu*.<!-- END REF-->   
-Le raccourci standard est composé de la touche **Commande** (macOS) ou **Ctrl** (Windows) et d’une touche personnalisée. Le raccourci standard est géré via les commandes [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md) et [Get menu item key](get-menu-item-key.md).
+Le raccourci standard est composé de la touche **Commande** (macOS) ou **Ctrl** (Windows) et d’une touche personnalisée. Le raccourci standard est géré via les commandes [SET MENU ITEM SHORTCUT](../commands/set-menu-item-shortcut) et [Get menu item key](../commands/get-menu-item-key).
 
 Les modificateurs additionnels sont la touche **Majuscule** et la touche **Option** (macOS) / **Alt** (Windows). Ces modificateurs ne sont utilisables que si un raccourci standard a été défini au préalable. 
 
@@ -52,12 +52,12 @@ Si vous passez un numéro de menu, la commande prendra en compte le menu corresp
 
 ## Exemple 
 
-Reportez-vous à l'exemple de la commande [Get menu item key](get-menu-item-key.md). 
+Reportez-vous à l'exemple de la commande [Get menu item key](../commands/get-menu-item-key). 
 
 ## Voir aussi 
 
-[Get menu item key](get-menu-item-key.md)  
-[SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md)  
+[Get menu item key](../commands/get-menu-item-key)  
+[SET MENU ITEM SHORTCUT](../commands/set-menu-item-shortcut)  
 
 ## Propriétés
 

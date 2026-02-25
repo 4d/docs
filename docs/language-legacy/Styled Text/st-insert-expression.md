@@ -1,4 +1,4 @@
----
+﻿---
 id: st-insert-expression
 title: ST INSERT EXPRESSION
 slug: /commands/st-insert-expression
@@ -43,7 +43,7 @@ A valid 4D expression is a string returning a value. *expression* can be a field
 **Notes:**
 
 * Inserting picture expressions (e. g. Picture type variables) is supported in 4D Write Pro areas (see *Picture expressions*) but is not supported in multi-style text areas.
-* This command expects "real" names for fields and tables, even if a "virtual" structure has been defined using [SET TABLE TITLES](set-table-titles.md) and [SET FIELD TITLES](set-field-titles.md) commands.
+* This command expects "real" names for fields and tables, even if a "virtual" structure has been defined using [SET TABLE TITLES](../commands/set-table-titles) and [SET FIELD TITLES](../commands/set-field-titles) commands.
 
 If *expression* returns a value containing carriage returns and tabs, 4D formats the text according to the object hosting the expression; carriage return characters are interpreted as line breaks. 
 
@@ -65,7 +65,7 @@ For example:
  "String([Table_1]Field_1;System date short)"
 ```
 
-By default, the expression **values** are displayed in the multi-style text areas. You can force the display of the **references** instead using the [ST SET OPTIONS](st-set-options.md) command.
+By default, the expression **values** are displayed in the multi-style text areas. You can force the display of the **references** instead using the [ST SET OPTIONS](../commands/st-set-options) command.
 
 The optional *startSel* and *endSel* parameters designate a selection of text in *object*. The *startSel* and *endSel* values express a plain text selection, without taking into account any style tags that may be present. 
 
@@ -96,10 +96,10 @@ You want to replace the highlighted text with a field value:
 
 ## See also 
 
-[ST COMPUTE EXPRESSIONS](st-compute-expressions.md)  
-[ST FREEZE EXPRESSIONS](st-freeze-expressions.md)  
-[ST Get expression](st-get-expression.md)  
-[ST INSERT URL](st-insert-url.md)  
+[ST COMPUTE EXPRESSIONS](../commands/st-compute-expressions)  
+[ST FREEZE EXPRESSIONS](../commands/st-freeze-expressions)  
+[ST Get expression](../commands/st-get-expression)  
+[ST INSERT URL](../commands/st-insert-url)  
 
 ## Properties
 

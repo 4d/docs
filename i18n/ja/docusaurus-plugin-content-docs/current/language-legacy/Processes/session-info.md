@@ -1,4 +1,4 @@
----
+﻿---
 id: session-info
 title: Session info
 slug: /commands/session-info
@@ -82,9 +82,9 @@ displayed_sidebar: docs
 ## 参照
 
 [`Session` クラス](../../API/SessionClass.md)
-[Session](session.md)
-[Session storage](session-storage.md)\
-[Process info](process-info.md)
+[Session](../commands/session)
+[Session storage](../commands/session-storage)\
+[Process info](../commands/process-info)
 
 ## プロパティ
 

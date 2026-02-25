@@ -1,4 +1,4 @@
----
+﻿---
 id: stop-sql-server
 title: STOP SQL SERVER
 slug: /commands/stop-sql-server
@@ -34,7 +34,7 @@ Si el servidor SQL ha sido lanzado, todas las conexiones SQL se interrumpen y el
 
 ## Ver también 
 
-[START SQL SERVER](start-sql-server.md)  
+[START SQL SERVER](../commands/start-sql-server)  
 
 ## Propiedades
 

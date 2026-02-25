@@ -1,4 +1,4 @@
----
+﻿---
 id: blob-to-document
 title: BLOB TO DOCUMENT
 slug: /commands/blob-to-document
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.BLOB TO DOCUMENT.Summary-->BLOB TO DOCUMENT rewrites the whole contents of *document* using the data stored in *blob*.<!-- END REF--> You can pass the name of a document in *document*. If the *document* does not exist, the command creates it. If you pass the name of an existing document, make sure that it is not already open, otherwise an error is generated. If you want to let the user choose the document, use the commands [Open document](open-document.md) or [Create document](create-document.md) and use the process variable *document* (see example).
+<!--REF #_command_.BLOB TO DOCUMENT.Summary-->BLOB TO DOCUMENT rewrites the whole contents of *document* using the data stored in *blob*.<!-- END REF--> You can pass the name of a document in *document*. If the *document* does not exist, the command creates it. If you pass the name of an existing document, make sure that it is not already open, otherwise an error is generated. If you want to let the user choose the document, use the commands [Open document](../commands/open-document) or [Create document](../commands/create-document) and use the process variable *document* (see example).
 
 ## Example 
 
@@ -55,13 +55,13 @@ OK is set to 1 if the document is correctly written, otherwise OK is set to 0 an
 * The disk space may be insufficient for writing the new contents of the document.
 * I/O errors can occur while writing the document.
 
-In all cases, you can trap the error using an [ON ERR CALL](on-err-call.md) interruption method.
+In all cases, you can trap the error using an [ON ERR CALL](../commands/on-err-call) interruption method.
 
 ## See also 
 
-[Create document](create-document.md)  
-[DOCUMENT TO BLOB](document-to-blob.md)  
-[Open document](open-document.md)  
+[Create document](../commands/create-document)  
+[DOCUMENT TO BLOB](../commands/document-to-blob)  
+[Open document](../commands/open-document)  
 
 ## Properties
 

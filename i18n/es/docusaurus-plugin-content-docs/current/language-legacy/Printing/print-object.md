@@ -1,4 +1,4 @@
----
+﻿---
 id: print-object
 title: Print object
 slug: /commands/print-object
@@ -41,17 +41,17 @@ Si pasa el parámetro opcional *\**, indica que el parámetro *objeto* es un nom
   
 Los parámetros *posX* y *posY* especifican el punto de partida para la impresión del o de los objeto(s). Estos valores deben expresarse en píxeles. Si estos parámetros se omiten, el objeto se imprime de acuerdo a su ubicación en el formulario.   
   
-Los parámetros *ancho* y *alto* se utilizan para especificar el ancho y el alto del objeto de formulario. El comando **Print object** no trata objetos de tamaño variable. Debe utilizar el comando [OBJECT GET BEST SIZE](object-get-best-size.md) para manejar el tamaño de los objetos. También puede utilizar el comando [OBJECT GET BEST SIZE](object-get-best-size.md) para determinar el tamaño más adecuado para los objetos que contienen texto. Del mismo modo, **Print object** no provoca saltos de página automáticos. Debe manejarlos de acuerdo a sus necesidades.   
+Los parámetros *ancho* y *alto* se utilizan para especificar el ancho y el alto del objeto de formulario. El comando **Print object** no trata objetos de tamaño variable. Debe utilizar el comando [OBJECT GET BEST SIZE](../commands/object-get-best-size) para manejar el tamaño de los objetos. También puede utilizar el comando [OBJECT GET BEST SIZE](../commands/object-get-best-size) para determinar el tamaño más adecuado para los objetos que contienen texto. Del mismo modo, **Print object** no provoca saltos de página automáticos. Debe manejarlos de acuerdo a sus necesidades.   
   
 Puede utilizar los comandos de 4D para modificar rápidamente las propiedades del objeto (color, tamaño, etc).  
   
-El comando devuelve True si el objeto se ha impreso completamente y False si este no es el caso, en otras palabras, si no pudo imprimir todos los datos asociados con el objeto dentro del marco establecido. Normalmente, el comando devuelve False cuando se imprime un list box si todas las líneas del list box no se pudieron imprimir. En este caso, basta con llamar al comando **Print object** varias veces hasta que devuelva True: un mecanismo específico provoca de forma automática el desplazamiento del contenido del objeto después de cada llamada. Si el usuario cancela la operación de impresión, se genera un error -128, que puede interceptar utilizando [ON ERR CALL](on-err-call.md).  
+El comando devuelve True si el objeto se ha impreso completamente y False si este no es el caso, en otras palabras, si no pudo imprimir todos los datos asociados con el objeto dentro del marco establecido. Normalmente, el comando devuelve False cuando se imprime un list box si todas las líneas del list box no se pudieron imprimir. En este caso, basta con llamar al comando **Print object** varias veces hasta que devuelva True: un mecanismo específico provoca de forma automática el desplazamiento del contenido del objeto después de cada llamada. Si el usuario cancela la operación de impresión, se genera un error -128, que puede interceptar utilizando [ON ERR CALL](../commands/on-err-call).  
   
 **Notas**:  
 
 * En la versión actual de 4D, sólo los objetos de tipo list box tienen este mecanismo (el comando siempre devuelve True para cualquier otro tipo de objeto).
-* El comando [LISTBOX GET PRINT INFORMATION](listbox-get-print-information.md) permite controlar el estado de la impresión durante la operación.
-El comando **Print object** sólo puede ser utilizado en el contexto de un trabajo de impresión abierto previamente con el comando [OPEN PRINTING JOB](open-printing-job.md). Si no se llama en este contexto, el comando no hace nada. Varios comandos **Print object** pueden llamarse en el mismo trabajo de impresión.  
+* El comando [LISTBOX GET PRINT INFORMATION](../commands/listbox-get-print-information) permite controlar el estado de la impresión durante la operación.
+El comando **Print object** sólo puede ser utilizado en el contexto de un trabajo de impresión abierto previamente con el comando [OPEN PRINTING JOB](../commands/open-printing-job). Si no se llama en este contexto, el comando no hace nada. Varios comandos **Print object** pueden llamarse en el mismo trabajo de impresión.  
   
 **Nota**: las listas jerárquicas, los subformularios y las áreas web no se pueden imprimir.
 

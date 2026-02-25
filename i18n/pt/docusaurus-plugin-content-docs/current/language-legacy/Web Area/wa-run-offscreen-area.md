@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-run-offscreen-area
 title: WA Run offscreen area
 slug: /commands/wa-run-offscreen-area
@@ -40,7 +40,7 @@ No objeto *parâmetros*, pasesqualquer dos atributos opcionais abaixo para a ár
 | url                           | text \| file object    | A URL ou arquivo a ser carregado na área web. Se omitido ou null, uma página em branco é carregada.                                                                                                                                                                                                                                                   |
 | areaName                      | text                   | O nome da área web. Se omitido ou null, um nome genérico é atribuido (por exemplo, OffscreenArea1).                                                                                                                                                                                                                                                   |
 | onEvent                       | object                 | Um método de callback que será lançado quando a área web estiver pronta.<br/><br/>Como padrão, o método de callback é chamado nos eventos On Load, On Unload, On End URL Loading, On Timer ou On URL Loading Error.                                                                                                                   |
-| autoQuit                      | boolean                | True (valor normal) se o comando precisar parar a execução da fórmula quando acontecerem os eventos On End URL Loading ou On URL Loading Error.<br/><br/>Se false, precisa usar os comandos [CANCEL](cancel.md) ou [ACCEPT](accept.md) no método de callback ou nos métodos projeto chamados com o objeto $4d para fechar a área web. |
+| autoQuit                      | boolean                | True (valor normal) se o comando precisar parar a execução da fórmula quando acontecerem os eventos On End URL Loading ou On URL Loading Error.<br/><br/>Se false, precisa usar os comandos [CANCEL](../commands/cancel) ou [ACCEPT](../commands/accept) no método de callback ou nos métodos projeto chamados com o objeto $4d para fechar a área web. |
 | timeout                       | real                   | Tempo máximo permitido (expresso em segundos) entre chamadas de evento. Se estabelecida em 0, nenhum limite é aplicado. Valor padrão: 60                                                                                                                                                                                                              |
 | result                        | mixed                  | Resultado do processamento a retornar (se houver)                                                                                                                                                                                                                                                                                                     |
 | <customProperty>              | mixed                  | Qualquer atributo personalizado vai estar disponível na callback ou no método $4d.                                                                                                                                                                                                                                                                    |
@@ -60,18 +60,18 @@ Se passar um valor nulo em parâmetros, será criada uma área web em branco e d
 
 Os comandos abaixo podem ser usados no método callback:
 
-* [ACCEPT](accept.md)
-* [CANCEL](cancel.md)
-* [SET TIMER](set-timer.md)
-* [WA Evaluate JavaScript](wa-evaluate-javascript.md)
-* [WA EXECUTE JAVASCRIPT FUNCTION](wa-execute-javascript-function.md)
-* [WA Get current URL](wa-get-current-url.md)
-* [WA GET LAST URL ERROR](wa-get-last-url-error.md)
-* [WA Get page content](wa-get-page-content.md)
-* [WA Get page title](wa-get-page-title.md)
-* [WA OPEN URL](wa-open-url.md)
-* [WA REFRESH CURRENT URL](wa-refresh-current-url.md)
-* [WA STOP LOADING URL](wa-stop-loading-url.md)
+* [ACCEPT](../commands/accept)
+* [CANCEL](../commands/cancel)
+* [SET TIMER](../commands/set-timer)
+* [WA Evaluate JavaScript](../commands/wa-evaluate-javascript)
+* [WA EXECUTE JAVASCRIPT FUNCTION](../commands/wa-execute-javascript-function)
+* [WA Get current URL](../commands/wa-get-current-url)
+* [WA GET LAST URL ERROR](../commands/wa-get-last-url-error)
+* [WA Get page content](../commands/wa-get-page-content)
+* [WA Get page title](../commands/wa-get-page-title)
+* [WA OPEN URL](../commands/wa-open-url)
+* [WA REFRESH CURRENT URL](../commands/wa-refresh-current-url)
+* [WA STOP LOADING URL](../commands/wa-stop-loading-url)
 
 ## Exemplo 
 
@@ -101,13 +101,13 @@ Na **classe OffscreenArea**:
 
 ## Variáveis e conjuntos do sistema 
 
-A variável de sistema OK é estabelecida como 0 se o timeout foi alcançaddo ou [CANCEL](cancel.md) for chamado em *onEvent*, senão é estabelecida como 1.
+A variável de sistema OK é estabelecida como 0 se o timeout foi alcançaddo ou [CANCEL](../commands/cancel) for chamado em *onEvent*, senão é estabelecida como 1.
 
 ## Ver também 
 
 [FORM Event](../commands/form-event)  
 *Gestão programada de áreas web*  
-[WA OPEN WEB INSPECTOR](wa-open-web-inspector.md)  
+[WA OPEN WEB INSPECTOR](../commands/wa-open-web-inspector)  
 
 ## Propriedades
 

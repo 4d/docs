@@ -1,4 +1,4 @@
----
+﻿---
 id: order-by-attribute
 title: ORDER BY ATTRIBUTE
 slug: /commands/order-by-attribute
@@ -56,11 +56,11 @@ Si el valor del atributo de campo es **nulo** para algunos registros (es decir, 
 Puede ordenar la selección en uno o en varios niveles. Para cada nivel de ordenación, se especifica un *campo*, un *rutaAtrib* y el sentido de ordenación en *\> o <*. Si pasa el símbolo (>) "mayor que", el orden es ascendente. Si pasa el símbolo (<) "menor que", el orden es descendente. Si no se especifica el sentido de ordenación, el orden ascendente es el valor predeterminado.   
 Si sólo se especifica un campo (un nivel de ordenación) y está indexado, el índice se utiliza para la orden. Si el campo no está indexado o si hay más de un campo, el orden es secuencial.
 
-Para varias ordenaciones (ordenaciones en varios campos), puede llamar a **ORDER BY ATTRIBUTE** tantas veces como sea necesario y especificar el parámetro opcional *\**, a excepción de la última llamada **ORDER BY ATTRIBUTE**, que inicia la operación de ordenación. Esta funcionalidad es útil para la gestión de ordenaciones múltiples en interfaces de usuario personalizadas. Tenga en cuenta que puede combinar las llamadas **ORDER BY ATTRIBUTE** con llamadas [ORDER BY](order-by.md).
+Para varias ordenaciones (ordenaciones en varios campos), puede llamar a **ORDER BY ATTRIBUTE** tantas veces como sea necesario y especificar el parámetro opcional *\**, a excepción de la última llamada **ORDER BY ATTRIBUTE**, que inicia la operación de ordenación. Esta funcionalidad es útil para la gestión de ordenaciones múltiples en interfaces de usuario personalizadas. Tenga en cuenta que puede combinar las llamadas **ORDER BY ATTRIBUTE** con llamadas [ORDER BY](../commands/order-by).
 
 **Nota:** con esta sintaxis, puede pasar un solo nivel de ordenación (campo) por llamada **ORDER BY ATTRIBUTE**.
 
-No importa qué forma de ordenación se haya definido, si la operación de ordenación va a tomar algún tiempo, 4D muestra automáticamente un mensaje que contiene un termómetro de progreso. Este mensaje se puede controlar mediante el uso de los comandos [MESSAGES ON](messages-on.md) y [MESSAGES OFF](messages-off.md). Si se muestra el termómetro de progreso, el usuario puede hacer clic en el botón **Detener** para interrumpir la ordenación. Si se finaliza la ordenación, OK pasa a 1\. De lo contrario, si se interrumpe la ordenación, OK pasa a 0 (cero).
+No importa qué forma de ordenación se haya definido, si la operación de ordenación va a tomar algún tiempo, 4D muestra automáticamente un mensaje que contiene un termómetro de progreso. Este mensaje se puede controlar mediante el uso de los comandos [MESSAGES ON](../commands/messages-on) y [MESSAGES OFF](../commands/messages-off). Si se muestra el termómetro de progreso, el usuario puede hacer clic en el botón **Detener** para interrumpir la ordenación. Si se finaliza la ordenación, OK pasa a 1\. De lo contrario, si se interrumpe la ordenación, OK pasa a 0 (cero).
 
 ## Ejemplo 
 

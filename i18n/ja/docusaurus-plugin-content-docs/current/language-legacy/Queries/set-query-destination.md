@@ -1,4 +1,4 @@
----
+﻿---
 id: set-query-destination
 title: SET QUERY DESTINATION
 slug: /commands/set-query-destination
@@ -80,7 +80,7 @@ displayed_sidebar: docs
 **注:** 
 
 * 命名セレクションが存在しない場合、検索が完了した時に自動的に作成されます。
-* このコマンドは[CUT NAMED SELECTION](cut-named-selection.md)と同様に命名セレクションを管理します。つまり参照だけが保持されます。命名セレクションをカレントセレクションに使用すると、命名セレクションは存在しなくなります。
+* このコマンドは[CUT NAMED SELECTION](../commands/cut-named-selection)と同様に命名セレクションを管理します。つまり参照だけが保持されます。命名セレクションをカレントセレクションに使用すると、命名セレクションは存在しなくなります。
 例:  
 
 ```4d
@@ -96,7 +96,7 @@ displayed_sidebar: docs
 ```
 
   
-**注**：この二つ目のシンタックスは、このコマンドを[GET QUERY DESTINATION](get-query-destination.md)と組み合わせて使用したい場合に便利です。
+**注**：この二つ目のシンタックスは、このコマンドを[GET QUERY DESTINATION](../commands/get-query-destination)と組み合わせて使用したい場合に便利です。
 
 以降の検索で見つかったレコード数が、変数$vlResultに配置されます。検索の対象となったテーブルのカレントセレクションとカレントレコードは変更されません。
 
@@ -104,18 +104,18 @@ displayed_sidebar: docs
 
 **SET QUERY DESTINATION**は、下記のクエリコマンドの動作を変更します:
 
-* [QUERY](query.md)
-* [QUERY SELECTION](query-selection.md)
-* [QUERY BY EXAMPLE](query-by-example.md)
-* [QUERY BY FORMULA](query-by-formula.md)
-* [QUERY BY SQL](query-by-sql.md)
-* [QUERY SELECTION BY FORMULA](query-selection-by-formula.md)
-* [QUERY SELECTION WITH ARRAY](query-selection-with-array.md)
-* [QUERY WITH ARRAY](query-with-array.md)
-* [QUERY BY ATTRIBUTE](query-by-attribute.md)
-* [QUERY SELECTION BY ATTRIBUTE](query-selection-by-attribute.md)
+* [QUERY](../commands/query)
+* [QUERY SELECTION](../commands/query-selection)
+* [QUERY BY EXAMPLE](../commands/query-by-example)
+* [QUERY BY FORMULA](../commands/query-by-formula)
+* [QUERY BY SQL](../commands/query-by-sql)
+* [QUERY SELECTION BY FORMULA](../commands/query-selection-by-formula)
+* [QUERY SELECTION WITH ARRAY](../commands/query-selection-with-array)
+* [QUERY WITH ARRAY](../commands/query-with-array)
+* [QUERY BY ATTRIBUTE](../commands/query-by-attribute)
+* [QUERY SELECTION BY ATTRIBUTE](../commands/query-selection-by-attribute)
 
-これに対して**SET QUERY DESTINATION**は[ALL RECORDS](all-records.md)や[RELATE MANY](relate-many.md)等、テーブルのカレントセレクションを変更する他のコマンドには影響を与えません。
+これに対して**SET QUERY DESTINATION**は[ALL RECORDS](../commands/all-records)や[RELATE MANY](../commands/relate-many)等、テーブルのカレントセレクションを変更する他のコマンドには影響を与えません。
 
 ## 例題 1 
 
@@ -256,15 +256,15 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[GET QUERY DESTINATION](get-query-destination.md)  
-[QUERY](query.md)  
-[QUERY BY EXAMPLE](query-by-example.md)  
-[QUERY BY FORMULA](query-by-formula.md)  
-[QUERY BY SQL](query-by-sql.md)  
-[QUERY SELECTION](query-selection.md)  
-[QUERY SELECTION BY FORMULA](query-selection-by-formula.md)  
-[QUERY WITH ARRAY](query-with-array.md)  
-[SET QUERY LIMIT](set-query-limit.md)  
+[GET QUERY DESTINATION](../commands/get-query-destination)  
+[QUERY](../commands/query)  
+[QUERY BY EXAMPLE](../commands/query-by-example)  
+[QUERY BY FORMULA](../commands/query-by-formula)  
+[QUERY BY SQL](../commands/query-by-sql)  
+[QUERY SELECTION](../commands/query-selection)  
+[QUERY SELECTION BY FORMULA](../commands/query-selection-by-formula)  
+[QUERY WITH ARRAY](../commands/query-with-array)  
+[SET QUERY LIMIT](../commands/set-query-limit)  
 
 ## プロパティ
 

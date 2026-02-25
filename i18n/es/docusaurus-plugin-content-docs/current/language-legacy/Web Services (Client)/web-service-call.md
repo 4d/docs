@@ -1,4 +1,4 @@
----
+﻿---
 id: web-service-call
 title: WEB SERVICE CALL
 slug: /commands/web-service-call
@@ -35,9 +35,9 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.WEB SERVICE CALL.Summary-->El comando **WEB SERVICE CALL** se utiliza para llamar un servicio web enviando una petición HTTP.<!-- END REF--> Esta petición contiene el mensaje SOAP creado previamente utilizando el comando [WEB SERVICE SET PARAMETER](web-service-set-parameter.md). 
+<!--REF #_command_.WEB SERVICE CALL.Summary-->El comando **WEB SERVICE CALL** se utiliza para llamar un servicio web enviando una petición HTTP.<!-- END REF--> Esta petición contiene el mensaje SOAP creado previamente utilizando el comando [WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter). 
 
-Toda llamada posterior al comando [WEB SERVICE SET PARAMETER](web-service-set-parameter.md) provocará la creación de una nueva petición. La ejecución de un comando **WEB SERVICE CALL** también borra todo resultado del servicio web llamado anteriormente y lo reemplaza con los nuevos resultados.
+Toda llamada posterior al comando [WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter) provocará la creación de una nueva petición. La ejecución de un comando **WEB SERVICE CALL** también borra todo resultado del servicio web llamado anteriormente y lo reemplaza con los nuevos resultados.
 
 En *urlAcceso*, pase el URL completo que permite acceder al servicio web (no confunda este URL con el del archivo WSDL, que describe el servicio web).
 
@@ -45,7 +45,7 @@ En *urlAcceso*, pase el URL completo que permite acceder al servicio web (no con
 
  Si quiere utilizar un servicio web en modo seguro utilizando SSL, pase https:// delante del URL en lugar de http://. Esta configuración activa automáticamente la conexión en modo seguro.
 
-Note que este comando puede utilizar un certificado servidor (ver el comando [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md)). Si este certificado no es valido (vencido o revocado), la variable sistema OK toma el valor y se devuelve el error 901 "Certificado servidor invalido". Puede interceptar este error utilizando un método de gestión de errores instalado por el comando [ON ERR CALL](on-err-call.md). 
+Note que este comando puede utilizar un certificado servidor (ver el comando [HTTP SET CERTIFICATES FOLDER](../commands/http-set-certificates-folder)). Si este certificado no es valido (vencido o revocado), la variable sistema OK toma el valor y se devuelve el error 901 "Certificado servidor invalido". Puede interceptar este error utilizando un método de gestión de errores instalado por el comando [ON ERR CALL](../commands/on-err-call). 
 
 En *soapAccion*, pase el contenido del campo SOAPAction de la petición. Este campo contiene por lo general el valor “ServiceName#MethodName”. 
 
@@ -53,7 +53,7 @@ En *nomMetodo*, pase el nombre del método remoto (que pertenece al servicio web
 
 En *espacioNombre*, pase el espacio del nombre XML (namespace) utilizado para la petición SOAP. Para mayor información sobre los nombres de espacios XML, consulte el Manual de Diseño.
 
-El parámetro opcional *tipoCompuesto* especifica la configuración de los parámetros web Service enviados o recibidos (definidos utilizando los comandos [WEB SERVICE SET PARAMETER](web-service-set-parameter.md) y [WEB SERVICE GET RESULT](web-service-get-result.md).   
+El parámetro opcional *tipoCompuesto* especifica la configuración de los parámetros web Service enviados o recibidos (definidos utilizando los comandos [WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter) y [WEB SERVICE GET RESULT](../commands/web-service-get-result).   
 El valor del parámetro *tipoCompuesto* depende del modo de publicación del servicio web (DOC o RPC, ver el Manual de Diseño) y sus propios parámetros.
 
 En *tipoCompuesto*, debe pasar una de las siguientes constantes, ubicadas en el tema *Servicios Web (Cliente)*:  
@@ -92,11 +92,11 @@ Esta configuración es la más fácil de utilizar. En este caso, el parámetro *
 
 Los parámetros enviados y las respuestas recibidas pueden ser manipulados directamente, sin procesamiento previo. 
 
-Consulte el ejemplo del comando [WEB SERVICE GET RESULT](web-service-get-result.md).
+Consulte el ejemplo del comando [WEB SERVICE GET RESULT](../commands/web-service-get-result).
 
 ### Modo RPC, entrada compuesta y salida simple 
 
-En este caso, el parámetro *tipoComplejo* contiene la constante Web Service Manual In. Con esta configuración, debe pasar “manualmente” al servicio Web cada elemento XML fuente bajo la forma de un BLOB, con la ayuda del comando [WEB SERVICE SET PARAMETER](web-service-set-parameter.md). 
+En este caso, el parámetro *tipoComplejo* contiene la constante Web Service Manual In. Con esta configuración, debe pasar “manualmente” al servicio Web cada elemento XML fuente bajo la forma de un BLOB, con la ayuda del comando [WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter). 
 
 Depende de usted formatear el BLOB inicial como un elemento XML válido. Este BLOB debe contener como primer elemento el primer elemento “hijo” del elemento <Body> de la petición final.
 
@@ -113,7 +113,7 @@ Depende de usted formatear el BLOB inicial como un elemento XML válido. Este BL
   
 ### Modo RPC, entrada simple y salida compuestas 
 
-En este caso, el parámetro *tipoCompuesto* contiene la constante Web Service Manual Out. Cada parámetro de salida será devuelto por el servicio Web bajo la forma del elemento XML almacenado en un BLOB. Recupera este parámetro utilizando el comando [WEB SERVICE GET RESULT](web-service-get-result.md). Luego puede analizar el contenido del BLOB recibido utilizando los comandos XML de 4D.   
+En este caso, el parámetro *tipoCompuesto* contiene la constante Web Service Manual Out. Cada parámetro de salida será devuelto por el servicio Web bajo la forma del elemento XML almacenado en un BLOB. Recupera este parámetro utilizando el comando [WEB SERVICE GET RESULT](../commands/web-service-get-result). Luego puede analizar el contenido del BLOB recibido utilizando los comandos XML de 4D.   
   
 **Ejemplo**  
   
@@ -174,8 +174,8 @@ Si la petición se enruta correctamente y el servicio web la acepta, la variable
 
 ## Ver también 
 
-[WEB SERVICE GET RESULT](web-service-get-result.md)  
-[WEB SERVICE SET PARAMETER](web-service-set-parameter.md)  
+[WEB SERVICE GET RESULT](../commands/web-service-get-result)  
+[WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter)  
 
 ## Propiedades
 

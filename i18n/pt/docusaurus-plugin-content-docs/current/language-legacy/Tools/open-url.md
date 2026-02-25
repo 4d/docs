@@ -1,4 +1,4 @@
----
+﻿---
 id: open-url
 title: OPEN URL
 slug: /commands/open-url
@@ -92,7 +92,7 @@ Pode abrir um arquivo texto com diferentes aplicações:
 
 ## Ver também 
 
-[LAUNCH EXTERNAL PROCESS](launch-external-process.md)  
+[LAUNCH EXTERNAL PROCESS](../commands/launch-external-process)  
 
 ## Propriedades
 

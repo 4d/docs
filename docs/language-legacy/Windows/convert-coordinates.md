@@ -1,4 +1,4 @@
----
+﻿---
 id: convert-coordinates
 title: CONVERT COORDINATES
 slug: /commands/convert-coordinates
@@ -41,11 +41,11 @@ In the *from* parameter, pass the initial coordinate system the input point is u
 | XY Current form   | Integer | 1     | Origin is top left corner of current form                                                                   |
 | XY Current window | Integer | 2     | Origin is top left corner of current window                                                                 |
 | XY Main window    | Integer | 4     | On Windows: origin is top left corner of main window; on macOS: same as XY Screen                            |
-| XY Screen         | Integer | 3     | Origin is top left corner of main screen (same as for [SCREEN COORDINATES](screen-coordinates.md) command). |
+| XY Screen         | Integer | 3     | Origin is top left corner of main screen (same as for [SCREEN COORDINATES](../commands/screen-coordinates) command). |
 
 When this command is called from the method of a subform or a subform's object, and if one of the selectors is XY Current form, then the coordinates are relative to the subform itself, not to its parent form.
 
-When converting from/to the position of a form window (for example when converting from the results of [GET WINDOW RECT](get-window-rect.md), or to values passed to [Open form window](../commands/open-form-window)), XY Main window must be used since it is the coordinate system used by window commands on Windows. It can also be used for this purpose on macOS, where it is equivalent to XY Screen.
+When converting from/to the position of a form window (for example when converting from the results of [GET WINDOW RECT](../commands/get-window-rect), or to values passed to [Open form window](../commands/open-form-window)), XY Main window must be used since it is the coordinate system used by window commands on Windows. It can also be used for this purpose on macOS, where it is equivalent to XY Screen.
 
 When *from* is XY Current form and the point is in the body section of a list form, the result depends on the calling context of the command:
 
@@ -76,7 +76,7 @@ You want to open a pop-up menu at the bottom left corner of the "MyObject" objec
 
 ## Example 2 
 
-You want to open a pop-up window at the position of the mouse cursor. On Windows, you need to convert the coordinates since [MOUSE POSITION](mouse-position.md) (with the \* parameter) returns values based on the position of the MDI window:
+You want to open a pop-up window at the position of the mouse cursor. On Windows, you need to convert the coordinates since [MOUSE POSITION](../commands/mouse-position) (with the \* parameter) returns values based on the position of the MDI window:
 
 ```4d
  var $mouseX;$mouseY;$mouseButtons : Integer
@@ -90,10 +90,10 @@ You want to open a pop-up window at the position of the mouse cursor. On Windows
 
 ## See also 
 
-[GET WINDOW RECT](get-window-rect.md)  
-[OBJECT GET COORDINATES](object-get-coordinates.md)  
-[OBJECT SET COORDINATES](object-set-coordinates.md)  
-[SET WINDOW RECT](set-window-rect.md)  
+[GET WINDOW RECT](../commands/get-window-rect)  
+[OBJECT GET COORDINATES](../commands/object-get-coordinates)  
+[OBJECT SET COORDINATES](../commands/object-set-coordinates)  
+[SET WINDOW RECT](../commands/set-window-rect)  
 
 ## Properties
 

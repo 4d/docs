@@ -1,4 +1,4 @@
----
+﻿---
 id: graph-settings
 title: GRAPH SETTINGS
 slug: /commands/graph-settings
@@ -39,9 +39,9 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.GRAPH SETTINGS.Summary-->GRAPH SETTINGS permite modificar os parâmetros dos gráficos mostrados em um formulário.<!-- END REF--> O gráfico deve ter sido definido com o comando [GRAPH](graph.md). GRAPH SETTINGS não tem efeito em um gráfico de tipo setores. Este comando deve ser chamado obrigatoriamente no mesmo processo que o formulário.
+<!--REF #_command_.GRAPH SETTINGS.Summary-->GRAPH SETTINGS permite modificar os parâmetros dos gráficos mostrados em um formulário.<!-- END REF--> O gráfico deve ter sido definido com o comando [GRAPH](../commands/graph). GRAPH SETTINGS não tem efeito em um gráfico de tipo setores. Este comando deve ser chamado obrigatoriamente no mesmo processo que o formulário.
 
-**Nota:** não deve chamar este comando se o gráfico foi gerado utilizando o comando [GRAPH](graph.md) com o parámetro *grafParams* de tipo [Objeto](# "Estruturas de dados como objetos 4D nativos"). Consulte a descrição do comando [GRAPH](graph.md) para mais informação.
+**Nota:** não deve chamar este comando se o gráfico foi gerado utilizando o comando [GRAPH](../commands/graph) com o parámetro *grafParams* de tipo [Objeto](# "Estruturas de dados como objetos 4D nativos"). Consulte a descrição do comando [GRAPH](../commands/graph) para mais informação.
 
 Os parâmetros *xmin*, *xmax*, *ymin*, e *ymax* fixam os valores mínimos e máximos para seus respectivos eixos do gráfico. Se o valor de um par de estes parâmetros é um valor nulo, (0, ?00:00:00?, ou !00/00/00!, dependendo do tipo de dado), serão utilizados os valores do gráfico automático. Os parâmetros *xmin* e *xmax* só são levados em consideração para gráficos proporcionais (*xprop* é **True**).
 
@@ -57,7 +57,7 @@ Ver o exemplo do comando [GRAPH](graph.md "GRAPH").
 
 ## Ver também 
 
-[GRAPH](graph.md)  
+[GRAPH](../commands/graph)  
 
 ## Propriedades
 

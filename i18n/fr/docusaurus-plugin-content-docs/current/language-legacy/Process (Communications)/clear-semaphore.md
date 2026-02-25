@@ -1,4 +1,4 @@
----
+﻿---
 id: clear-semaphore
 title: CLEAR SEMAPHORE
 slug: /commands/clear-semaphore
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.CLEAR SEMAPHORE.Summary-->**CLEAR SEMAPHORE** permet d'effacer le *sémaphore* précédemment créé par la fonction [Semaphore](semaphore.md).<!-- END REF-->
+<!--REF #_command_.CLEAR SEMAPHORE.Summary-->**CLEAR SEMAPHORE** permet d'effacer le *sémaphore* précédemment créé par la fonction [Semaphore](../commands/semaphore).<!-- END REF-->
 
 La règle d'utilisation est que tous les sémaphores doivent être effacés lorsqu'ils ne sont plus nécessaires. Si les sémaphores ne sont pas effacés, ils restent en mémoire jusqu'à la fermeture du process dans lequel ils ont été créés.  
 Un process ne peut effacer que les sémaphores qu'il a créés. Si vous tentez d'effacer un sémaphore depuis un autre process que celui qui l'a créé, **CLEAR SEMAPHORE** ne fait rien.
@@ -30,9 +30,9 @@ Reportez-vous à l'exemple de la fonction [Semaphore](semaphore.md "Semaphore").
 
 ## Voir aussi 
 
-[Semaphore](semaphore.md)  
+[Semaphore](../commands/semaphore)  
 *Sémaphores et signaux*  
-[Test semaphore](test-semaphore.md)  
+[Test semaphore](../commands/test-semaphore)  
 
 ## Propriétés
 

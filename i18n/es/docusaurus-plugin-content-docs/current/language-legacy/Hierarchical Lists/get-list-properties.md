@@ -1,4 +1,4 @@
----
+﻿---
 id: get-list-properties
 title: GET LIST PROPERTIES
 slug: /commands/get-list-properties
@@ -49,7 +49,7 @@ Para una completa descripción de la apariencia, iconos de nodos, altura de lín
 
 ## Ver también 
 
-[SET LIST PROPERTIES](set-list-properties.md)  
+[SET LIST PROPERTIES](../commands/set-list-properties)  
 
 ## Propiedades
 

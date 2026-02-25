@@ -1,4 +1,4 @@
----
+﻿---
 id: reject
 title: REJECT
 slug: /commands/reject
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 **Nota:** debe considerar utilizar las herramientas integradas de validación de datos antes de utilizar este comando.
 
-La primera sintaxis de **REJECT** evita que el usuario acepte un registro incompleto. Puede alcanzar el mismo resultado sin utilizar **REJECT**, asocie la tecla Intro con un botón Sin acción y utilice los comandos [ACCEPT](accept.md) y[CANCEL](cancel.md)  para aceptar o cancelar el registro, una vez los campos hayan sido introducidos correctamente. Es recomendable utilizar esta segunda técnica y no la primera sintaxis de **REJECT**.
+La primera sintaxis de **REJECT** evita que el usuario acepte un registro incompleto. Puede alcanzar el mismo resultado sin utilizar **REJECT**, asocie la tecla Intro con un botón Sin acción y utilice los comandos [ACCEPT](../commands/accept) y[CANCEL](../commands/cancel)  para aceptar o cancelar el registro, una vez los campos hayan sido introducidos correctamente. Es recomendable utilizar esta segunda técnica y no la primera sintaxis de **REJECT**.
 
 Si utiliza la primera sintaxis, usted ejecuta **REJECT** para evitar que el usuario acepte un registro, generalmente porque el registro está incompleto o tiene entradas incorrectas. Si el usuario trata de aceptar el registro, la ejecución de **REJECT** evita la aceptación del registro; el registro permanece visualizado en el formulario. El usuario debe continuar con la entrada de datos hasta que el registro sea aceptable o se cancele el registro.
 
@@ -30,7 +30,7 @@ El mejor lugar para el comando **REJECT**, cuando se utiliza esta sintaxis, es e
 La segunda sintaxis de **REJECT** se ejecuta con el parámetro *campo*. En este caso, el cursor permanece en el área de entrada del campo, que obliga al usuario a introducir un valor correcto.   
 Con esta sintaxis, el comando **REJECT** debe obligatoriamente ser llamado en el evento formulario On Data Change.Debe colocar esta sintaxis del comando **REJECT** en el método de formulario o en el método de objeto del área de entrada. Si está utilizando **REJECT** para el formulario detallado de un subformulario para una tabla, colóquelo en el método de formulario o método de objeto para el formulario detallado. Este comando no tiene efecto en campos de subformularios.
 
-Puede utilizar [HIGHLIGHT TEXT](highlight-text.md) para seleccionar los datos en el campo que están siendo rechazados. 
+Puede utilizar [HIGHLIGHT TEXT](../commands/highlight-text) para seleccionar los datos en el campo que están siendo rechazados. 
 
 ## Ejemplo 1 
 
@@ -61,9 +61,9 @@ El siguiente ejemplo es parte de un método de objeto para un campo *\[Employees
 
 ## Ver también 
 
-[ACCEPT](accept.md)  
-[CANCEL](cancel.md)  
-[GOTO OBJECT](goto-object.md)  
+[ACCEPT](../commands/accept)  
+[CANCEL](../commands/cancel)  
+[GOTO OBJECT](../commands/goto-object)  
 
 ## Propiedades
 

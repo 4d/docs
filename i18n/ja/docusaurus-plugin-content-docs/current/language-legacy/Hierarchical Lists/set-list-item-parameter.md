@@ -1,4 +1,4 @@
----
+﻿---
 id: set-list-item-parameter
 title: SET LIST ITEM PARAMETER
 slug: /commands/set-list-item-parameter
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 1番目の \* 引数を渡した場合、*list* 引数はフォーム中のリストオブジェクトのオブジェクト名 (文字列) です。この引数を渡さない場合、*list* 引数はリスト参照番号 ([ListRef](# "階層リストへの参照")) です。1つしかフォーム上でリストオブジェクトを使用しない、または2番目の \* を省略してリスト構造を処理対象とする場合、いずれのシンタックスも使用できます。同じリストの複数のリストオブジェクトがフォーム上にあり、2番目の \* を渡してカレントの項目を処理する場合、リストオブジェクトごとにカレント項目が異なるため、オブジェクト名に基づくシンタックスを使用しなければなりません。
 
-*itemRef*には参照番号を渡すことができます。渡した項目参照番号を持つ項目が存在しない場合、コマンドは何も行いません。オプションとして*itemRef*に0を渡し、[APPEND TO LIST](append-to-list.md)コマンドを用いてリストへ最後に追加される項目を指定することができます。  
+*itemRef*には参照番号を渡すことができます。渡した項目参照番号を持つ項目が存在しない場合、コマンドは何も行いません。オプションとして*itemRef*に0を渡し、[APPEND TO LIST](../commands/append-to-list)コマンドを用いてリストへ最後に追加される項目を指定することができます。  
 最後に、*itemRef*には *\** を渡すことができます。この場合、コマンドはリストのカレント項目に対して適用されます。手動で複数のリスト項目が選択されている場合、最後に選択された項目がカレントリスト項目になります。選択された項目が存在しない場合、コマンドは何も行いません。
 
 *selector* には、以下のいづれかを渡すことができます:
@@ -47,7 +47,7 @@ displayed_sidebar: docs
 | -------------------------- | --- | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |  
 | Additional text            | 文字列 | 4D\_additional\_text       | この定数は*itemRef* 参照で参照する項目の右側にテキストを追加するのに使用します。この追加のタイトルは常にリストの右側に表示され、たとえユーザーが水平スクロールカーソルを移動させた場合でも表示されます。この定数を使用する場合、表示されるテキストを*value* 引数に渡します。 |  
 | Associated standard action | 文字列 | 4D\_standard\_action\_name | *itemRef* 参照に標準アクションを割り当てます。この場合、*value* 引数に標準アクション名と引数を渡す必要があります。例: "fontSize?value=10pt"。詳細な情報については、*デザインリファレンスマニュアル*の*標準アクション* の章を参照してください。  |
-* **カスタムのセレクター**: *selector* 引数にカスタムのテキストを渡し、テキスト、数値、ブール型の値と関連づけることができます。この値はリスト項目に格納され、[GET LIST ITEM PARAMETER](get-list-item-parameter.md) コマンドを使用して取り出すことができます。これにより階層リストに関連づけられたどのようなインタフェースもセットアップできます。例えば顧客名リストにおいて、年齢をリスト項目に関連付け、項目が選択されたときにのみそれを表示させることなどができます。
+* **カスタムのセレクター**: *selector* 引数にカスタムのテキストを渡し、テキスト、数値、ブール型の値と関連づけることができます。この値はリスト項目に格納され、[GET LIST ITEM PARAMETER](../commands/get-list-item-parameter) コマンドを使用して取り出すことができます。これにより階層リストに関連づけられたどのようなインタフェースもセットアップできます。例えば顧客名リストにおいて、年齢をリスト項目に関連付け、項目が選択されたときにのみそれを表示させることなどができます。
 
 ## 例題 
 
@@ -68,11 +68,11 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[APPEND TO LIST](append-to-list.md)  
-[Action info](action-info.md)  
-[GET LIST ITEM PARAMETER](get-list-item-parameter.md)  
-[GET LIST ITEM PARAMETER ARRAYS](get-list-item-parameter-arrays.md)  
-[INSERT IN LIST](insert-in-list.md)  
+[APPEND TO LIST](../commands/append-to-list)  
+[Action info](../commands/action-info)  
+[GET LIST ITEM PARAMETER](../commands/get-list-item-parameter)  
+[GET LIST ITEM PARAMETER ARRAYS](../commands/get-list-item-parameter-arrays)  
+[INSERT IN LIST](../commands/insert-in-list)  
 
 ## プロパティ
 

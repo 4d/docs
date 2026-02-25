@@ -1,4 +1,4 @@
----
+﻿---
 id: set-list-item-icon
 title: SET LIST ITEM ICON
 slug: /commands/set-list-item-icon
@@ -54,9 +54,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[SET LIST ITEM](set-list-item.md)  
-[SET LIST ITEM FONT](set-list-item-font.md)  
-[SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+[SET LIST ITEM](../commands/set-list-item)  
+[SET LIST ITEM FONT](../commands/set-list-item-font)  
+[SET LIST ITEM PROPERTIES](../commands/set-list-item-properties)  
 
 ## プロパティ
 

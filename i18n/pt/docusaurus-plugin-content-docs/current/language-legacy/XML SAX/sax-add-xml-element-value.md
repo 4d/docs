@@ -1,4 +1,4 @@
----
+﻿---
 id: sax-add-xml-element-value
 title: SAX ADD XML ELEMENT VALUE
 slug: /commands/sax-add-xml-element-value
@@ -33,11 +33,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAX ADD XML ELEMENT VALUE.Summary-->O comando SAX ADD XML ELEMENT VALUE adiciona diretamente no documento XML referenciado por *document*o os dados sem convertê-los.<!-- END REF--> Este comando é equivalente, por exemplo, a inserir um arquivo anexado em um e-mail.
 
-Em *dados*, pode passar diretamente uma cadeia de caracteres, ou uma variável 4D. O conteúdo da variável se converterá em texto antes de ser incluído no documento XML. Se *dado*s for avaliado como *undefined*, 4D usa uma string vazia. Se quiser codificar os conteúdos de dados, pode usar o comando [BASE64 ENCODE](base64-encode.md). Neste caso, precisa pasar um BLOB em *dados*.
+Em *dados*, pode passar diretamente uma cadeia de caracteres, ou uma variável 4D. O conteúdo da variável se converterá em texto antes de ser incluído no documento XML. Se *dado*s for avaliado como *undefined*, 4D usa uma string vazia. Se quiser codificar os conteúdos de dados, pode usar o comando [BASE64 ENCODE](../commands/base64-encode). Neste caso, precisa pasar um BLOB em *dados*.
 
-Se desejar codificar o conteúdo de dados, deve utilizar o comando [BASE64 ENCODE](base64-encode.md). Neste caso deve passar um BLOB em *dados*.  
+Se desejar codificar o conteúdo de dados, deve utilizar o comando [BASE64 ENCODE](../commands/base64-encode). Neste caso deve passar um BLOB em *dados*.  
   
-Por padrão, o comando codifica os caracteres especiais (< > ” ’...) conteúdos nos parâmetros *dados* a menos que você tenha desativado este mecanismo para o processo atual utilizando o comando [XML SET OPTIONS](xml-set-options.md) passando o valor XML Raw data à opção XML String encoding. Por exemplo:  
+Por padrão, o comando codifica os caracteres especiais (< > ” ’...) conteúdos nos parâmetros *dados* a menos que você tenha desativado este mecanismo para o processo atual utilizando o comando [XML SET OPTIONS](../commands/xml-set-options) passando o valor XML Raw data à opção XML String encoding. Por exemplo:  
 
 ```4d
  XML SET OPTIONS($docRef;XML string encoding;XML raw data)
@@ -64,8 +64,8 @@ Se o comando tiver sido executado corretamente, a variável sistema Ok assume o 
 
 ## Ver também 
 
-[SAX GET XML ELEMENT VALUE](sax-get-xml-element-value.md)  
-[XML SET OPTIONS](xml-set-options.md)  
+[SAX GET XML ELEMENT VALUE](../commands/sax-get-xml-element-value)  
+[XML SET OPTIONS](../commands/xml-set-options)  
 
 ## Propriedades
 

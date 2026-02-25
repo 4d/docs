@@ -1,4 +1,4 @@
----
+﻿---
 id: new-object
 title: New object
 slug: /commands/new-object
@@ -53,8 +53,8 @@ displayed_sidebar: docs
 
 以下の点に注意して下さい:
 
-* ポインターを渡した場合、それはそのままの形で保存されます。[JSON Stringify](json-stringify.md) コマンドを使用した際に評価されます。
-* 日付はカレントの"date inside objects"データベース設定(*互換性ページ*参照)に応じて、"yyyy-mm-dd" という日付か "YYYY-MM-DDTHH:mm:ss.SSSZ"というフォーマットの文字列で保存されます。4D日付をオブジェクトに保存する前にテキストに変換した場合、プログラムはデフォルトでローカルのタイムゾーンを使用します。[SET DATABASE PARAMETER](set-database-parameter.md) コマンドのDates inside objects セレクターを使用することで、この振る舞いを変更することができます。
+* ポインターを渡した場合、それはそのままの形で保存されます。[JSON Stringify](../commands/json-stringify) コマンドを使用した際に評価されます。
+* 日付はカレントの"date inside objects"データベース設定(*互換性ページ*参照)に応じて、"yyyy-mm-dd" という日付か "YYYY-MM-DDTHH:mm:ss.SSSZ"というフォーマットの文字列で保存されます。4D日付をオブジェクトに保存する前にテキストに変換した場合、プログラムはデフォルトでローカルのタイムゾーンを使用します。[SET DATABASE PARAMETER](../commands/set-database-parameter) コマンドのDates inside objects セレクターを使用することで、この振る舞いを変更することができます。
 * 時間を渡した場合、ミリ秒の数(実数)として保存されます。
 
 ## 例題 1 
@@ -117,7 +117,7 @@ displayed_sidebar: docs
 ## 参照 
 
   
-[New shared object](new-shared-object.md)  
+[New shared object](../commands/new-shared-object)  
 
 ## プロパティ
 

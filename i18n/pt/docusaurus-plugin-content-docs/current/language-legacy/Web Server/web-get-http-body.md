@@ -1,4 +1,4 @@
----
+﻿---
 id: web-get-http-body
 title: WEB GET HTTP BODY
 slug: /commands/web-get-http-body
@@ -59,8 +59,8 @@ Quando o formulário é enviado ao servidor web, a variável $textoPetição rec
 
 ## Ver também 
 
-[WEB GET BODY PART](web-get-body-part.md)  
-[WEB GET HTTP HEADER](web-get-http-header.md)  
+[WEB GET BODY PART](../commands/web-get-body-part)  
+[WEB GET HTTP HEADER](../commands/web-get-http-header)  
 
 ## Propriedades
 

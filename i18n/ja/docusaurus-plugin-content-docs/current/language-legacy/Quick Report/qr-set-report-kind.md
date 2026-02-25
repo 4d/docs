@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-report-kind
 title: QR SET REPORT KIND
 slug: /commands/qr-set-report-kind
@@ -47,7 +47,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[QR Get report kind](qr-get-report-kind.md)  
+[QR Get report kind](../commands/qr-get-report-kind)  
 
 ## プロパティ
 

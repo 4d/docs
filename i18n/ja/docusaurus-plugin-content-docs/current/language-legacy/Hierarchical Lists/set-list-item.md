@@ -1,4 +1,4 @@
----
+﻿---
 id: set-list-item
 title: SET LIST ITEM
 slug: /commands/set-list-item
@@ -84,11 +84,11 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[GET LIST ITEM](get-list-item.md)  
-[GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
-[SET LIST ITEM FONT](set-list-item-font.md)  
-[SET LIST ITEM ICON](set-list-item-icon.md)  
-[SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+[GET LIST ITEM](../commands/get-list-item)  
+[GET LIST ITEM PROPERTIES](../commands/get-list-item-properties)  
+[SET LIST ITEM FONT](../commands/set-list-item-font)  
+[SET LIST ITEM ICON](../commands/set-list-item-icon)  
+[SET LIST ITEM PROPERTIES](../commands/set-list-item-properties)  
 
 ## プロパティ
 

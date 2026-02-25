@@ -1,4 +1,4 @@
----
+﻿---
 id: set-menu-item-icon
 title: SET MENU ITEM ICON
 slug: /commands/set-menu-item-icon
@@ -55,7 +55,7 @@ Uso de una imagen ubicada en la carpeta Resources de la base:
 
 ## Ver también 
 
-[GET MENU ITEM ICON](get-menu-item-icon.md)  
+[GET MENU ITEM ICON](../commands/get-menu-item-icon)  
 
 ## Propiedades
 

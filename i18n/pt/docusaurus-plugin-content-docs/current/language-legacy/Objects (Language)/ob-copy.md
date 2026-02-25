@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-copy
 title: OB Copy
 slug: /commands/ob-copy
@@ -178,7 +178,7 @@ Imagine que queira copiar *$sharedObj* em *$sharedCol mas* como eles pertencem a
 
 ## Ver também 
 
-[OB Get](ob-get.md)  
+[OB Get](../commands/ob-get)  
 *Objetos compartidos e Coleções compartidas*  
 
 ## Propriedades

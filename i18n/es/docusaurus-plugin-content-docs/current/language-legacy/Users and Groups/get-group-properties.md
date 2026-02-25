@@ -1,4 +1,4 @@
----
+﻿---
 id: get-group-properties
 title: GET GROUP PROPERTIES
 slug: /commands/get-group-properties
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.GET GROUP PROPERTIES.Summary-->GET GROUP PROPERTIES devuelve las propiedades del grupo cuyo número de referencia se pasa en *refGrupo*.<!-- END REF--> Pase el número de referencia del grupo devuelto por el comando [GET GROUP LIST](get-group-list.md). 
+<!--REF #_command_.GET GROUP PROPERTIES.Summary-->GET GROUP PROPERTIES devuelve las propiedades del grupo cuyo número de referencia se pasa en *refGrupo*.<!-- END REF--> Pase el número de referencia del grupo devuelto por el comando [GET GROUP LIST](../commands/get-group-list). 
 
 Si no pasa un número de referencia válido, GET GROUP PROPERTIES devuelve parámetros vacíos.
 
@@ -48,9 +48,9 @@ Si no tiene privilegios de acceso para llamar al comando GET GROUP PROPERTIES o 
 
 ## Ver también 
 
-[GET GROUP LIST](get-group-list.md)  
-[GET USER LIST](get-user-list.md)  
-[Set group properties](set-group-properties.md)  
+[GET GROUP LIST](../commands/get-group-list)  
+[GET USER LIST](../commands/get-user-list)  
+[Set group properties](../commands/set-group-properties)  
 
 ## Propiedades
 

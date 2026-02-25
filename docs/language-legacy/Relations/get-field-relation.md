@@ -1,4 +1,4 @@
----
+﻿---
 id: get-field-relation
 title: GET FIELD RELATION
 slug: /commands/get-field-relation
@@ -65,7 +65,7 @@ The properties of the relation linking the \[Employees\]Company field to the \[C
 
 ![](../../assets/en/commands/pict31608.en.png)
 
-The following code illustrates the various possibilities offered by the **GET FIELD RELATION**, [GET AUTOMATIC RELATIONS](get-automatic-relations.md) and [SET FIELD RELATION](set-field-relation.md), [SET AUTOMATIC RELATIONS](set-automatic-relations.md) commands along with their effects:
+The following code illustrates the various possibilities offered by the **GET FIELD RELATION**, [GET AUTOMATIC RELATIONS](../commands/get-automatic-relations) and [SET FIELD RELATION](../commands/set-field-relation), [SET AUTOMATIC RELATIONS](../commands/set-automatic-relations) commands along with their effects:
 
 ```4d
  GET AUTOMATIC RELATIONS(one;many) //returns False, False
@@ -91,10 +91,10 @@ The following code illustrates the various possibilities offered by the **GET FI
 
 ## See also 
 
-[GET AUTOMATIC RELATIONS](get-automatic-relations.md)  
-[GET RELATION PROPERTIES](get-relation-properties.md)  
-[SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
-[SET FIELD RELATION](set-field-relation.md)  
+[GET AUTOMATIC RELATIONS](../commands/get-automatic-relations)  
+[GET RELATION PROPERTIES](../commands/get-relation-properties)  
+[SET AUTOMATIC RELATIONS](../commands/set-automatic-relations)  
+[SET FIELD RELATION](../commands/set-field-relation)  
 
 ## Properties
 

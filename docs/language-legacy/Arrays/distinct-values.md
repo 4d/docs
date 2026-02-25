@@ -1,4 +1,4 @@
----
+﻿---
 id: distinct-values
 title: DISTINCT VALUES
 slug: /commands/distinct-values
@@ -42,7 +42,7 @@ However, executing this command on unindexed fields will be slower. Also note th
 
 The array used by **DISTINCT VALUES** must be of the same type as the field passed as first parameter, otherwise the array is retyped. There is one exception to this rule: if the field is of the Picture type (and is associated with a keyword index), the corresponding array must be of the Text type.
 
-After the call, the size of the array is equal to the number of distinct values found in the selection. The command does not change the current selection or the current record. The **DISTINCT VALUES** command uses the index of the field, so the elements in *array* are returned sorted in ascending order. If this is the order you need, you do not need to call [SORT ARRAY](sort-array.md) after using **DISTINCT VALUES**.
+After the call, the size of the array is equal to the number of distinct values found in the selection. The command does not change the current selection or the current record. The **DISTINCT VALUES** command uses the index of the field, so the elements in *array* are returned sorted in ascending order. If this is the order you need, you do not need to call [SORT ARRAY](../commands/sort-array) after using **DISTINCT VALUES**.
 
 **Note:** When **DISTINCT VALUES** is executed with a text or picture field associated with a keyword index, the command fills the array with the keywords of the index. Unlike other types of data, the values returned differ according to the existence of the index. In the case of a Text field, the keyword index is always taken into account, even when the field is also associated with a standard index. If the Text or Picture field is not associated with a keyword index, the array is returned empty. 
 
@@ -50,7 +50,7 @@ The command accepts a *countArray* array as an optional parameter. When it is pa
 
 **Note:** The *countArray* parameter is not supported for text or picture fields that are associated with keyword indexes (in this context, it is returned empty). 
 
-**WARNING:** **DISTINCT VALUES** can create large arrays depending on the size of the selection and the number of different values in the records. Arrays reside in memory, therefore it is a good idea to test the result after the completion of the command. To do so, test the size of the resulting array or cover the call to the command, using an [ON ERR CALL](on-err-call.md) project method.
+**WARNING:** **DISTINCT VALUES** can create large arrays depending on the size of the selection and the number of different values in the records. Arrays reside in memory, therefore it is a good idea to test the result after the completion of the command. To do so, test the size of the resulting array or cover the call to the command, using an [ON ERR CALL](../commands/on-err-call) project method.
 
 **4D Server:** The command is optimized for 4D Server. The array is created and the values are calculated on the server machine; the array is then sent, in its entirety, to the client.
 
@@ -92,10 +92,10 @@ To compute statistics, you want to sort the number of distinct values in a field
 ## See also 
 
   
-[GET TEXT KEYWORDS](get-text-keywords.md)  
-[ON ERR CALL](on-err-call.md)  
-[SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
-[SELECTION TO ARRAY](selection-to-array.md)  
+[GET TEXT KEYWORDS](../commands/get-text-keywords)  
+[ON ERR CALL](../commands/on-err-call)  
+[SELECTION RANGE TO ARRAY](../commands/selection-range-to-array)  
+[SELECTION TO ARRAY](../commands/selection-to-array)  
 
 ## Properties
 

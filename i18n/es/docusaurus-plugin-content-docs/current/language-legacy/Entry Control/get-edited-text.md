@@ -1,4 +1,4 @@
----
+﻿---
 id: get-edited-text
 title: Get edited text
 slug: /commands/get-edited-text
@@ -76,7 +76,7 @@ Este es un ejemplo de cómo procesar inmediatamente los caracteres introducidos 
 ## Ver también 
 
 [Form event code](../commands/form-event-code)  
-[Is editing text](is-editing-text.md)  
+[Is editing text](../commands/is-editing-text)  
 
 ## Propiedades
 

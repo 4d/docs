@@ -1,4 +1,4 @@
----
+﻿---
 id: method-set-code
 title: METHOD SET CODE
 slug: /commands/method-set-code
@@ -69,7 +69,7 @@ displayed_sidebar: docs
   // %attributes = {"invisible":true,"lang":"fr","folder":"Security"}
 ```
 
-**注:** これらのメタデータは[METHOD GET CODE](method-get-code.md)コマンドで自動的に生成されます。サポートされる属性についての詳細な情報に関しては、[METHOD SET ATTRIBUTES](method-set-attributes.md) コマンドを参照して下さい。
+**注:** これらのメタデータは[METHOD GET CODE](../commands/method-get-code)コマンドで自動的に生成されます。サポートされる属性についての詳細な情報に関しては、[METHOD SET ATTRIBUTES](../commands/method-set-attributes) コマンドを参照して下さい。
 
 メタデータの「folder」プロパティに関しては、以下の点に留意して下さい。
 
@@ -113,7 +113,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[METHOD GET CODE](method-get-code.md)  
+[METHOD GET CODE](../commands/method-get-code)  
 
 ## プロパティ
 

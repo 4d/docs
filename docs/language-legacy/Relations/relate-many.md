@@ -1,4 +1,4 @@
----
+﻿---
 id: relate-many
 title: RELATE MANY
 slug: /commands/relate-many
@@ -48,7 +48,7 @@ On the other hand, the related records are not loaded if a record for the \[Comp
 * When the RELATE MANY command is applied to an empty selection, the command is not executed and the selection for the MANY table does not change.
 * For the command to work, the foreign key fields (Many fields) must be indexed.
 
-For example, the following method moves through each record of the \[Companies\] table. An alert box is displayed for each company. The alert box shows the number of people in the company (the number of related \[People\] records), and the number of parts they supply (the number of related \[Parts\] records). In the example, the argument to the [ALERT](alert.md) command is printed on multiple lines for clarity. 
+For example, the following method moves through each record of the \[Companies\] table. An alert box is displayed for each company. The alert box shows the number of people in the company (the number of related \[People\] records), and the number of parts they supply (the number of related \[Parts\] records). In the example, the argument to the [ALERT](../commands/alert) command is printed on multiple lines for clarity. 
 
 Note that the RELATE MANY command is needed, even though the relations are automatic.
 
@@ -65,8 +65,8 @@ Note that the RELATE MANY command is needed, even though the relations are autom
 
 ## See also 
 
-[OLD RELATED MANY](old-related-many.md)  
-[RELATE ONE](relate-one.md)  
+[OLD RELATED MANY](../commands/old-related-many)  
+[RELATE ONE](../commands/relate-one)  
 
 ## Properties
 

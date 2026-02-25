@@ -1,4 +1,4 @@
----
+﻿---
 id: timestamp
 title: Timestamp
 slug: /commands/timestamp
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 Chaque heure retournée par **Timestamp** est exprimée selon le standard ISO 8601\. Pour plus d'informations sur ce standard, veuillez consulter [la page qui lui est consacrée](https://fr.wikipedia.org/wiki/ISO%5F8601) sur Wikipedia.
 
-**Note :** Cette fonction n'est pas adaptée aux fonctions de chronométrage. Si vous souhaitez mesurer le temps écoulé, il est préférable d'utiliser la commande [Milliseconds](milliseconds.md).
+**Note :** Cette fonction n'est pas adaptée aux fonctions de chronométrage. Si vous souhaitez mesurer le temps écoulé, il est préférable d'utiliser la commande [Milliseconds](../commands/milliseconds).
 
 ## Exemple 
 
@@ -51,9 +51,9 @@ Résultat :
 
 ## Voir aussi 
 
-[Milliseconds](milliseconds.md)  
+[Milliseconds](../commands/milliseconds)  
 [String](../commands/string)  
-[Time](time.md)  
+[Time](../commands/time)  
 
 ## Propriétés
 

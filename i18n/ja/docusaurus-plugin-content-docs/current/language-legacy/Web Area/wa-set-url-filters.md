@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-set-url-filters
 title: WA SET URL FILTERS
 slug: /commands/wa-set-url-filters
@@ -45,9 +45,9 @@ displayed_sidebar: docs
 
 フィルタを無効にするには、コマンドを呼び出す際に空の配列を渡すか、配列の最後の要素で、*filtersArr* 配列に"*\**" を、*allowDenyArr* 配列に[True](true.md "True")を渡します。
 
-コマンドが実行されると、フィルタはWeb エリアのプロパティとなります。*filtersArr* と*allowDenyArr* が削除されたり初期化されたりしても、コマンドが再実行されるまでフィルタは有効です。エリアで有効になっているフィルタを取得するには、[WA GET URL FILTERS](wa-get-url-filters.md) コマンドを使用しなければなりません。
+コマンドが実行されると、フィルタはWeb エリアのプロパティとなります。*filtersArr* と*allowDenyArr* が削除されたり初期化されたりしても、コマンドが再実行されるまでフィルタは有効です。エリアで有効になっているフィルタを取得するには、[WA GET URL FILTERS](../commands/wa-get-url-filters) コマンドを使用しなければなりません。
 
-**重要**: このコマンドによって実行されるURLフィルタリングは、[WA OPEN URL](wa-open-url.md) コマンドと"javascript:"で始まるURLを除き、ページの主URLを変更するリクエストであればユーザーからのリクエストであってもjavascriptコードであっても4Dコードであっても、どのようなリクエストに対しても適用されます。
+**重要**: このコマンドによって実行されるURLフィルタリングは、[WA OPEN URL](../commands/wa-open-url) コマンドと"javascript:"で始まるURLを除き、ページの主URLを変更するリクエストであればユーザーからのリクエストであってもjavascriptコードであっても4Dコードであっても、どのようなリクエストに対しても適用されます。
 
 ## 例題 1 
 
@@ -147,8 +147,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WA GET URL FILTERS](wa-get-url-filters.md)  
-[WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)  
+[WA GET URL FILTERS](../commands/wa-get-url-filters)  
+[WA SET EXTERNAL LINKS FILTERS](../commands/wa-set-external-links-filters)  
 
 ## プロパティ
 

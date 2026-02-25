@@ -1,4 +1,4 @@
----
+﻿---
 id: query
 title: QUERY
 slug: /commands/query
@@ -126,7 +126,7 @@ Here are the rules for building multiple queries:
 
 No matter which way a query has been defined:
 
-* If the actual query operation is going to take some time to be performed, 4D automatically displays a message containing a progress thermometer. These messages can be turned on and off by using the [MESSAGES ON](messages-on.md) and [MESSAGES OFF](messages-off.md) commands. If the progress thermometer is displayed, the user can click on the Stop button to interrupt the query. If the query is completed, OK is set to 1\. Otherwise, if the query is interrupted, OK is set to 0 (zero).
+* If the actual query operation is going to take some time to be performed, 4D automatically displays a message containing a progress thermometer. These messages can be turned on and off by using the [MESSAGES ON](../commands/messages-on) and [MESSAGES OFF](../commands/messages-off) commands. If the progress thermometer is displayed, the user can click on the Stop button to interrupt the query. If the query is completed, OK is set to 1\. Otherwise, if the query is interrupted, OK is set to 0 (zero).
 * If any indexed fields are specified, the query is optimized every time that it is possible (indexed fields are searched first) resulting in a query that takes the least amount of time possible. The command makes use of composite indexes for queries using the AND (&).
 
 ## Example 5 
@@ -317,11 +317,11 @@ If the query is carried out correctly, the OK system variable is set to 1.
 The OK variable is set to 0 if:
 
 * the user clicks on the **Cancel**/**Stop** button,
-* in 'query and lock' mode (see the [SET QUERY AND LOCK](set-query-and-lock.md) command), the query has found at least one locked record. In this case as well, the LockedSet system set is updated.
+* in 'query and lock' mode (see the [SET QUERY AND LOCK](../commands/set-query-and-lock) command), the query has found at least one locked record. In this case as well, the LockedSet system set is updated.
 
 ## See also 
 
-[QUERY SELECTION](query-selection.md)  
+[QUERY SELECTION](../commands/query-selection)  
 
 ## Properties
 

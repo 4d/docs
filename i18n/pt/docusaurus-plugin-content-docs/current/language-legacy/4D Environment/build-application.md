@@ -1,4 +1,4 @@
----
+﻿---
 id: build-application
 title: BUILD APPLICATION
 slug: /commands/build-application
@@ -36,7 +36,7 @@ Um arquivo de configurações de construção de aplicação é um arquivo XML q
   
 Por padrão, 4D cria um arquivo de configurações de construção de aplicativo chamado "buildApp.4DSettings" para cada banco de dados e o coloca na pasta Configurações (Settings) do banco de dados.
 
-Se o banco ainda não foi compilado, ou se o código compilado está desatualizado, o comando irá iniciar primeiro o processo do compilador. Neste caso, a janela do compilador não aparece (a menos que ocorra um erro), apenas uma barra de progresso é exibida. Pode ocultar esta barra de progresso utilizando o comando [MESSAGES OFF](messages-off.md).
+Se o banco ainda não foi compilado, ou se o código compilado está desatualizado, o comando irá iniciar primeiro o processo do compilador. Neste caso, a janela do compilador não aparece (a menos que ocorra um erro), apenas uma barra de progresso é exibida. Pode ocultar esta barra de progresso utilizando o comando [MESSAGES OFF](../commands/messages-off).
 
 Se você não passar o parâmetro opcional *constrAppConfigurações*, o comando exibe uma caixa de diálogo de abrir de arquivo padrão,de modo que você possa selecionar um arquivo de configurações de construção de aplicativo. Quando a caixa de diálogo for validada, a variável de sistema Documento contém o caminho completo do arquivo de configurações aberto. 
 

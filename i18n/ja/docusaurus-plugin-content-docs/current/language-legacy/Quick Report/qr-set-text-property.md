@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-text-property
 title: QR SET TEXT PROPERTY
 slug: /commands/qr-set-text-property
@@ -62,7 +62,7 @@ displayed_sidebar: docs
 | qr alternate background color | 倍長整数 | 9  | 代替背景色                                         |
 | qr background color           | 倍長整数 | 8  | 背景色番号                                         |
 | qr bold                       | 倍長整数 | 3  | 太字スタイル属性 (0 または 1)                            |
-| qr font name                  | 倍長整数 | 10 | [FONT LIST](font-list.md) コマンドなどによって返されたフォント名 |
+| qr font name                  | 倍長整数 | 10 | [FONT LIST](../commands/font-list) コマンドなどによって返されたフォント名 |
 | qr font size                  | 倍長整数 | 2  | ポイント単位のフォントサイズ (9 \~ 255)                     |
 | qr italic                     | 倍長整数 | 4  | イタリックスタイル属性 (0 または1)                          |
 | qr justification              | 倍長整数 | 7  | テキスト整列属性 (0 = デフォルト, 1 = 左, 2 = 中央, 3 = 右)    |
@@ -95,7 +95,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[QR Get text property](qr-get-text-property.md)  
+[QR Get text property](../commands/qr-get-text-property)  
 
 ## プロパティ
 

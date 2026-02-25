@@ -1,4 +1,4 @@
----
+﻿---
 id: zip-read-archive
 slug: /commands/zip-read-archive
 title: ZIP Read archive
@@ -84,7 +84,7 @@ Pour extraire à partir du dossier root :
 [ZipArchive Class](../../API/ZipArchiveClass.md)
 [ZipFile Class](../../API/ZipFileClass.md)
 [ZipFolder Class](../../API/ZipFolderClass.md)
-[`ZIP Create archive`](zip-create-archive.md)
+[`ZIP Create archive`](../commands/zip-create-archive)
 
 ## Propriétés
 

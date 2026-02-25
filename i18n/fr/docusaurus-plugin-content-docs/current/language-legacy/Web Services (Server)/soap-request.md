@@ -1,4 +1,4 @@
----
+﻿---
 id: soap-request
 title: SOAP Request
 slug: /commands/soap-request
@@ -34,7 +34,7 @@ Cette commande peut être utilisée pour des raisons de sécurité dans la *Mét
 
 ## Voir aussi 
 
-[SOAP DECLARATION](soap-declaration.md)  
+[SOAP DECLARATION](../commands/soap-declaration)  
 
 ## Propriétés
 

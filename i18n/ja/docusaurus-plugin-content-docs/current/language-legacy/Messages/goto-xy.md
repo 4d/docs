@@ -1,4 +1,4 @@
----
+﻿---
 id: goto-xy
 title: GOTO XY
 slug: /commands/goto-xy
@@ -59,7 +59,7 @@ GOTO XY コマンドでカーソルの位置を指定してから、[MESSAGE](me
 
 ## 参照 
 
-[MESSAGE](message.md)  
+[MESSAGE](../commands/message)  
 
 ## プロパティ
 

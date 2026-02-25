@@ -1,4 +1,4 @@
----
+﻿---
 id: get-system-format
 title: GET SYSTEM FORMAT
 slug: /commands/get-system-format
@@ -53,7 +53,7 @@ Passez dans le paramètre *format* le type de paramètre dont vous souhaitez con
 
 ## Voir aussi 
 
-[OBJECT SET FORMAT](object-set-format.md)  
+[OBJECT SET FORMAT](../commands/object-set-format)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: find-in-field
 title: Find in field
 slug: /commands/find-in-field
@@ -35,7 +35,7 @@ Si no se encuentran registros, Find in field devuelve -1\.
 
 Después de llamar este comando, *valor* contiene el valor encontrado. Esta funcionalidad le permite efectuar búsquedas utilizando el carácter (“@”) en campos tipo Alfa y luego recuperar el valor encontrado. 
 
-**Nota:** por este principio, no se puede utilizar un parámetro ($1, $2, etc.) en *valor* porque esto causaría un mal funcionamiento en modo compilado. Del mismo modo, si pasa un campo en el parámetro *valor*, tenga en cuenta que su valor será reasignado si la consulta tiene éxito (el comando [Modified record](modified-record.md), en particular, devolverá True para el registro actual de la tabla).
+**Nota:** por este principio, no se puede utilizar un parámetro ($1, $2, etc.) en *valor* porque esto causaría un mal funcionamiento en modo compilado. Del mismo modo, si pasa un campo en el parámetro *valor*, tenga en cuenta que su valor será reasignado si la consulta tiene éxito (el comando [Modified record](../commands/modified-record), en particular, devolverá True para el registro actual de la tabla).
 
 Este comando no modifica la selección actual ni el registro actual.  
 

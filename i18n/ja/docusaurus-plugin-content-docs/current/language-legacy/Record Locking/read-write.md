@@ -1,4 +1,4 @@
----
+﻿---
 id: read-write
 title: READ WRITE
 slug: /commands/read-write
@@ -29,8 +29,8 @@ READ WRITEコマンドは、レコードを修正しその結果を保存しな�
 
 ## 参照 
 
-[READ ONLY](read-only.md)  
-[Read only state](read-only-state.md)  
+[READ ONLY](../commands/read-only)  
+[Read only state](../commands/read-only-state)  
 *レコードのロック*  
 
 ## プロパティ

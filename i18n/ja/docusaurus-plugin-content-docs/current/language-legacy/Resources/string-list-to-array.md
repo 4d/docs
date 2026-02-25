@@ -1,4 +1,4 @@
----
+﻿---
 id: string-list-to-array
 title: STRING LIST TO ARRAY
 slug: /commands/string-list-to-array
@@ -55,8 +55,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Get indexed string](../commands/get-indexed-string)  [Get string resource](get-string-resource.md)  
-[Get text resource](get-text-resource.md)  
+[Get indexed string](../commands/get-indexed-string)  [Get string resource](../commands/get-string-resource)  
+[Get text resource](../commands/get-text-resource)  
 
 ## プロパティ
 

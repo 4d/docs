@@ -1,4 +1,4 @@
----
+﻿---
 id: select-list-items-by-reference
 title: SELECT LIST ITEMS BY REFERENCE
 slug: /commands/select-list-items-by-reference
@@ -40,11 +40,11 @@ If you do not pass the *refArray* parameter, the *itemRef* parameter represents 
 
 The optional *refArray* parameter lets you select several items simultaneously within the list. In *refArray*, you must pass an array where each line indicates the fixed reference of an item to be selected. 
 
-In this case, the item designated by the *itemRef* parameter sets the new current item of the list among the resulting selection. It may or may not belong to the set of items defined by the array. The current item is, more particularly, the one that is edited if the [EDIT ITEM](edit-item.md) command is used. 
+In this case, the item designated by the *itemRef* parameter sets the new current item of the list among the resulting selection. It may or may not belong to the set of items defined by the array. The current item is, more particularly, the one that is edited if the [EDIT ITEM](../commands/edit-item) command is used. 
 
-**Note:** In order for several items to be selected simultaneously in a hierarchical list (manually or by programming), the *multiSelections* property must have been enabled for this list. This property is set using the [SET LIST PROPERTIES](set-list-properties.md) command.
+**Note:** In order for several items to be selected simultaneously in a hierarchical list (manually or by programming), the *multiSelections* property must have been enabled for this list. This property is set using the [SET LIST PROPERTIES](../commands/set-list-properties) command.
 
-If you work with item reference numbers, be sure to build a list in which the items have unique reference numbers; otherwise you will not be able to distinguish them. For more information, see the description of the [APPEND TO LIST](append-to-list.md) command.
+If you work with item reference numbers, be sure to build a list in which the items have unique reference numbers; otherwise you will not be able to distinguish them. For more information, see the description of the [APPEND TO LIST](../commands/append-to-list) command.
 
 ## Example 
 
@@ -63,9 +63,9 @@ If you work with item reference numbers, be sure to build a list in which the it
 
 ## See also 
 
-[EDIT ITEM](edit-item.md)  
-[SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md)  
-[Selected list items](selected-list-items.md)  
+[EDIT ITEM](../commands/edit-item)  
+[SELECT LIST ITEMS BY POSITION](../commands/select-list-items-by-position)  
+[Selected list items](../commands/selected-list-items)  
 
 ## Properties
 

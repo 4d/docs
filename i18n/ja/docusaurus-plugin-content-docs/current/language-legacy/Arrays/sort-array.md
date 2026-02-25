@@ -1,4 +1,4 @@
----
+﻿---
 id: sort-array
 title: SORT ARRAY
 slug: /commands/sort-array
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 最後の引数は、ソートの昇順または降順を指定します。引数に大なり記号（>）を指定すると昇順にソートします。引数に小なり記号(<)を指定すると降順にソートします。省略した場合は昇順にソートします。
 
-複数の配列を指定した場合、すべての配列が最初の配列の順番でソートされます。各配列ごとに個々にソートするわけではありません。その代り、同期した配列をソートしたい場合には [MULTI SORT ARRAY](multi-sort-array.md) コマンドを使用することができます。
+複数の配列を指定した場合、すべての配列が最初の配列の順番でソートされます。各配列ごとに個々にソートするわけではありません。その代り、同期した配列をソートしたい場合には [MULTI SORT ARRAY](../commands/multi-sort-array) コマンドを使用することができます。
 
 ## 例題 1 
 
@@ -78,10 +78,10 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Find in sorted array](find-in-sorted-array.md)  
-[MULTI SORT ARRAY](multi-sort-array.md)  
-[ORDER BY](order-by.md)  
-[SELECTION TO ARRAY](selection-to-array.md)  
+[Find in sorted array](../commands/find-in-sorted-array)  
+[MULTI SORT ARRAY](../commands/multi-sort-array)  
+[ORDER BY](../commands/order-by)  
+[SELECTION TO ARRAY](../commands/selection-to-array)  
 
 ## プロパティ
 

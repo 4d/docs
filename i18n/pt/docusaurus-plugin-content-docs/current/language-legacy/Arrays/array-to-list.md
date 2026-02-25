@@ -1,4 +1,4 @@
----
+﻿---
 id: array-to-list
 title: ARRAY TO LIST
 slug: /commands/array-to-list
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ARRAY TO LIST.Summary-->O comando ARRAY TO LIST cria ou substitui a lista hierárquica ou a lista de escolha (criada no editor LIsta) que é especificada em *lista* usando os elementos do *array* *.<!-- END REF-->*
 
-Pode passar no parâmetro opcional *lista*, uma lista de seleção (cadeia) ou uma referência de lista hierárquica (refLista). No segundo caso, esta lista deve ter sido criada previamente (por exemplo utilizando o comando [New list](new-list.md)) para que este comando funcione.
+Pode passar no parâmetro opcional *lista*, uma lista de seleção (cadeia) ou uma referência de lista hierárquica (refLista). No segundo caso, esta lista deve ter sido criada previamente (por exemplo utilizando o comando [New list](../commands/new-list)) para que este comando funcione.
 
 O parâmetro opcional *itemRefs*, se especificado, deve ser um array numérico sincronizado com o array *array*. Cada elemento, então, indica o número de referência dos elementos da lista para o elemento correspondente no *array*. Se você omitir este parâmetro, 4D automaticamente determina os número de referência dos elementos da lista como 1, 2,...N.
 
@@ -69,10 +69,10 @@ O comando ARRAY TO LIST gera o erro *\-9957* quando é aplicado a uma lista que 
 
 ## Ver também 
 
-[LIST TO ARRAY](list-to-array.md)  
-[Load list](load-list.md)  
-[ON ERR CALL](on-err-call.md)  
-[SAVE LIST](save-list.md)  
+[LIST TO ARRAY](../commands/list-to-array)  
+[Load list](../commands/load-list)  
+[ON ERR CALL](../commands/on-err-call)  
+[SAVE LIST](../commands/save-list)  
 
 ## Propriedades
 

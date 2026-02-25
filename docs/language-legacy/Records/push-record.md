@@ -1,4 +1,4 @@
----
+﻿---
 id: push-record
 title: PUSH RECORD
 slug: /commands/push-record
@@ -44,7 +44,7 @@ The following example pushes the record for the customer onto the record stack:
 
 ## See also 
 
-[POP RECORD](pop-record.md)  
+[POP RECORD](../commands/pop-record)  
 *Using the Record Stack*  
 
 ## Properties

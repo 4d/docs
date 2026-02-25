@@ -1,4 +1,4 @@
----
+﻿---
 id: delete-record
 title: DELETE RECORD
 slug: /commands/delete-record
@@ -32,8 +32,8 @@ displayed_sidebar: docs
 
 **Notes:**
 
-* If the current record is unloaded from memory before calling **DELETE RECORD** (for example, subsequent to an [UNLOAD RECORD](unload-record.md)), the current selection of *table* is empty after the deletion occurs.
-* The **DELETE RECORD** command does nothing when the table is in [READ ONLY](read-only.md) mode, regardless of whether the record to be deleted is locked or not.
+* If the current record is unloaded from memory before calling **DELETE RECORD** (for example, subsequent to an [UNLOAD RECORD](../commands/unload-record)), the current selection of *table* is empty after the deletion occurs.
+* The **DELETE RECORD** command does nothing when the table is in [READ ONLY](../commands/read-only) mode, regardless of whether the record to be deleted is locked or not.
 
 Deleting records is a permanent operation and cannot be undone (except when it is executed during a transaction, see *Using Transactions*).
 
@@ -53,7 +53,7 @@ The following example deletes an employee record. The code asks the user what em
 
 ## See also 
 
-[Locked](locked.md)  
+[Locked](../commands/locked)  
 *Triggers*  
 
 ## Properties

@@ -1,4 +1,4 @@
----
+﻿---
 id: form-set-input
 title: FORM SET INPUT
 slug: /commands/form-set-input
@@ -54,15 +54,15 @@ Pour plus d’informations sur les formulaires utilisateurs, reportez-vous à la
 
 Le formulaire entrée est affiché par de nombreuses commandes. Ces commandes sont généralement utilisées pour la saisie ou la modification de valeurs. Les commandes suivantes affichent un formulaire entrée : 
 
-* [ADD RECORD](add-record.md)
-* [DISPLAY RECORD](display-record.md)
-* [MODIFY RECORD](modify-record.md)
-* [QUERY BY EXAMPLE](query-by-example.md)
-Les commandes [DISPLAY SELECTION](display-selection.md) et [MODIFY SELECTION](modify-selection.md) affichent une liste d'enregistrements dans le formulaire sortie. Chacune d'entre elles permet ensuite à l'utilisateur de double-cliquer sur un enregistrement, qui s'affiche alors dans le formulaire entrée.
+* [ADD RECORD](../commands/add-record)
+* [DISPLAY RECORD](../commands/display-record)
+* [MODIFY RECORD](../commands/modify-record)
+* [QUERY BY EXAMPLE](../commands/query-by-example)
+Les commandes [DISPLAY SELECTION](../commands/display-selection) et [MODIFY SELECTION](../commands/modify-selection) affichent une liste d'enregistrements dans le formulaire sortie. Chacune d'entre elles permet ensuite à l'utilisateur de double-cliquer sur un enregistrement, qui s'affiche alors dans le formulaire entrée.
 
-Le formulaire entrée est aussi utilisé par les commandes d'import [IMPORT TEXT](import-text.md), [IMPORT SYLK](import-sylk.md) et [IMPORT DIF](import-dif.md).
+Le formulaire entrée est aussi utilisé par les commandes d'import [IMPORT TEXT](../commands/import-text), [IMPORT SYLK](../commands/import-sylk) et [IMPORT DIF](../commands/import-dif).
 
-Le paramètre optionnel *\** est destiné à être utilisé conjointement avec les propriétés du formulaire, que vous définissez en mode Développement dans la fenêtre des Propriétés du formulaire, et avec la commande [Open window](open-window.md). En passant le paramètre \*, vous indiquez à 4D d'utiliser les propriétés du formulaire pour redimensionner automatiquement la fenêtre lors de l'utilisation ultérieure de la fenêtre comme formulaire entrée ou comme dialogue. Reportez-vous à la description de la commande [Open window](open-window.md) pour plus d'informations sur ce point.
+Le paramètre optionnel *\** est destiné à être utilisé conjointement avec les propriétés du formulaire, que vous définissez en mode Développement dans la fenêtre des Propriétés du formulaire, et avec la commande [Open window](../commands/open-window). En passant le paramètre \*, vous indiquez à 4D d'utiliser les propriétés du formulaire pour redimensionner automatiquement la fenêtre lors de l'utilisation ultérieure de la fenêtre comme formulaire entrée ou comme dialogue. Reportez-vous à la description de la commande [Open window](../commands/open-window) pour plus d'informations sur ce point.
 
 **Note :** Que vous passiez ou non le paramètre \*, **FORM SET INPUT** change le formulaire entrée pour la table. 
 
@@ -106,17 +106,17 @@ Résultat :
 
 ## Voir aussi 
 
-[ADD RECORD](add-record.md)  
-[DISPLAY RECORD](display-record.md)  
-[DISPLAY SELECTION](display-selection.md)  
-[FORM SET OUTPUT](form-set-output.md)  
-[IMPORT DIF](import-dif.md)  
-[IMPORT SYLK](import-sylk.md)  
-[IMPORT TEXT](import-text.md)  
-[MODIFY RECORD](modify-record.md)  
-[MODIFY SELECTION](modify-selection.md)  
-[Open window](open-window.md)  
-[QUERY BY EXAMPLE](query-by-example.md)  
+[ADD RECORD](../commands/add-record)  
+[DISPLAY RECORD](../commands/display-record)  
+[DISPLAY SELECTION](../commands/display-selection)  
+[FORM SET OUTPUT](../commands/form-set-output)  
+[IMPORT DIF](../commands/import-dif)  
+[IMPORT SYLK](../commands/import-sylk)  
+[IMPORT TEXT](../commands/import-text)  
+[MODIFY RECORD](../commands/modify-record)  
+[MODIFY SELECTION](../commands/modify-selection)  
+[Open window](../commands/open-window)  
+[QUERY BY EXAMPLE](../commands/query-by-example)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: select-document
 title: Select document
 slug: /commands/select-document
@@ -110,8 +110,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Open document](open-document.md)  
-[Select folder](select-folder.md)  
+[Open document](../commands/open-document)  
+[Select folder](../commands/select-folder)  
 
 ## プロパティ
 

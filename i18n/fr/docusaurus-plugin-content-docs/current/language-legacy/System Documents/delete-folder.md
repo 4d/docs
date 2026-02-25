@@ -1,4 +1,4 @@
----
+﻿---
 id: delete-folder
 title: DELETE FOLDER
 slug: /commands/delete-folder
@@ -49,12 +49,12 @@ Par défaut pour des raisons de sécurité, si vous omettez le paramètre *optio
    (\*) sous Windows : -54 (Tentative d'écriture dans un fichier verrouillé)  
    sous macOS : -45 (Fichier verrouillé ou chemin d'accès invalide)
 
-Vous pouvez intercepter ces erreurs à l’aide d’une méthode installée par la commande [ON ERR CALL](on-err-call.md) .
+Vous pouvez intercepter ces erreurs à l’aide d’une méthode installée par la commande [ON ERR CALL](../commands/on-err-call) .
 
 ## Voir aussi 
 
   
-[DELETE DOCUMENT](delete-document.md)  
+[DELETE DOCUMENT](../commands/delete-document)  
 
 ## Propriétés
 

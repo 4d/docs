@@ -1,4 +1,4 @@
----
+﻿---
 id: delay-process
 title: DELAY PROCESS
 slug: /commands/delay-process
@@ -49,8 +49,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[HIDE PROCESS](hide-process.md)  
-[PAUSE PROCESS](pause-process.md)  
+[HIDE PROCESS](../commands/hide-process)  
+[PAUSE PROCESS](../commands/pause-process)  
 
 ## プロパティ
 

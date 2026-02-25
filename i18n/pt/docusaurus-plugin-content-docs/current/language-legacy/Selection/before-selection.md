@@ -1,4 +1,4 @@
----
+﻿---
 id: before-selection
 title: Before selection
 slug: /commands/before-selection
@@ -20,9 +20,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Before selection.Summary-->Before selection retorna TRUE quando o ponteiro do registro atual se encontra antes do primeiro registro da seleção atual de *tabela*.<!-- END REF--> Before selection geralmente é utilizado para verificar se o comando PREVIOUS RECORD tiver movido o ponteiro do registro atual antes do primeiro registro. Se a seleção atual estiver vazia, Before selection retorna TRUE.  
   
-Para mover o ponteiro do registro atual à seleção, utilize os comandos [FIRST RECORD](first-record.md), [LAST RECORD](last-record.md) ou [GOTO SELECTED RECORD](goto-selected-record.md). [NEXT RECORD](next-record.md).  
+Para mover o ponteiro do registro atual à seleção, utilize os comandos [FIRST RECORD](../commands/first-record), [LAST RECORD](../commands/last-record) ou [GOTO SELECTED RECORD](../commands/goto-selected-record). [NEXT RECORD](../commands/next-record).  
   
-Before selection retorna TRUE no cabeçalho quando um relatório está sendo impresso com [PRINT SELECTION](print-selection.md) ou a partir do comando de menu Imprimir. Pode utilizar o seguinte código para testar o primeiro cabeçalho e imprimir um cabeçalho especial para a primeira página:  
+Before selection retorna TRUE no cabeçalho quando um relatório está sendo impresso com [PRINT SELECTION](../commands/print-selection) ou a partir do comando de menu Imprimir. Pode utilizar o seguinte código para testar o primeiro cabeçalho e imprimir um cabeçalho especial para a primeira página:  
 
 ```4d
   // Método de um formulário de saída utilizado para um relatório
@@ -58,11 +58,11 @@ Este formulário é utilizado durante a impressão de um relatório. Define uma 
 
 ## Ver também 
 
-[End selection](end-selection.md)  
-[FIRST RECORD](first-record.md)  
+[End selection](../commands/end-selection)  
+[FIRST RECORD](../commands/first-record)  
 [Form event code](../commands/form-event-code)  
-[PREVIOUS RECORD](previous-record.md)  
-[PRINT SELECTION](print-selection.md)  
+[PREVIOUS RECORD](../commands/previous-record)  
+[PRINT SELECTION](../commands/print-selection)  
 
 ## Propriedades
 

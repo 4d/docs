@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-help-tip
 title: OBJECT SET HELP TIP
 slug: /commands/object-set-help-tip
@@ -37,16 +37,16 @@ If you pass the optional *\** parameter, this indicates that the *object* parame
 
 In the *helpTip* parameter, pass a character string for the contents of the message. If you pass an empty string "" , the help tip will be removed.
 
-When the form is executed, messages appear as help tips when the cursor moves over the field or object. The display delay and maximum duration of help tips can be controlled using the Tips delay and Tips duration selectors of the [SET DATABASE PARAMETER](set-database-parameter.md) command.
+When the form is executed, messages appear as help tips when the cursor moves over the field or object. The display delay and maximum duration of help tips can be controlled using the Tips delay and Tips duration selectors of the [SET DATABASE PARAMETER](../commands/set-database-parameter) command.
 
-You can use this command with a list box object to add help tips to list box rows and cells. For example, a list box object can have a different help tip per row. In this case, you would first need to determine the position of the cursor with the [LISTBOX GET CELL POSITION](listbox-get-cell-position.md) command. This is shown in an example below.
+You can use this command with a list box object to add help tips to list box rows and cells. For example, a list box object can have a different help tip per row. In this case, you would first need to determine the position of the cursor with the [LISTBOX GET CELL POSITION](../commands/listbox-get-cell-position) command. This is shown in an example below.
 
 When a help tip is already displayed, calling the **OBJECT SET HELP TIP** command closes it, opens a new tip at the mouse location and restarts the Tips duration counter, allowing dynamic handling of tips. 
 
 **Notes:** 
 
 * Help tip contents can also be set using the Form editor (see *Data entry controls and assistance*) and the Structure editor (see *Field properties*) in Design mode.
-* Help tips can be globally disabled for the application using the Tips enabled selector of the [SET DATABASE PARAMETER](set-database-parameter.md) command.
+* Help tips can be globally disabled for the application using the Tips enabled selector of the [SET DATABASE PARAMETER](../commands/set-database-parameter) command.
 
 ## Example 1 
 
@@ -140,8 +140,8 @@ The result is...
 
 ## See also 
 
-[OBJECT Get help tip](object-get-help-tip.md)  
-[SET DATABASE PARAMETER](set-database-parameter.md)  
+[OBJECT Get help tip](../commands/object-get-help-tip)  
+[SET DATABASE PARAMETER](../commands/set-database-parameter)  
 
 ## Properties
 

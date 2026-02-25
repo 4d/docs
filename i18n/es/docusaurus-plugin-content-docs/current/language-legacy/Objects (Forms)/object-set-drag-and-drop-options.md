@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-drag-and-drop-options
 title: OBJECT SET DRAG AND DROP OPTIONS
 slug: /commands/object-set-drag-and-drop-options
@@ -53,7 +53,7 @@ Definición de un área de texto en arrastrar y soltar auto:
 
 ## Ver también 
 
-[OBJECT GET DRAG AND DROP OPTIONS](object-get-drag-and-drop-options.md)  
+[OBJECT GET DRAG AND DROP OPTIONS](../commands/object-get-drag-and-drop-options)  
 
 ## Propiedades
 

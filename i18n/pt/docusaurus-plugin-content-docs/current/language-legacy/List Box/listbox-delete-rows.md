@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-delete-rows
 title: LISTBOX DELETE ROWS
 slug: /commands/listbox-delete-rows
@@ -48,8 +48,8 @@ Se o parâmetro *posição* é superior ao número de linhas do array do list bo
 
 ## Ver também 
 
-[LISTBOX Get number of rows](listbox-get-number-of-rows.md)  
-[LISTBOX INSERT ROWS](listbox-insert-rows.md)  
+[LISTBOX Get number of rows](../commands/listbox-get-number-of-rows)  
+[LISTBOX INSERT ROWS](../commands/listbox-insert-rows)  
 
 ## Propriedades
 

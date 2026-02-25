@@ -1,4 +1,4 @@
----
+﻿---
 id: register-client
 title: REGISTER CLIENT
 slug: /commands/register-client
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.REGISTER CLIENT.Summary-->REGISTER CLIENT コマンドは、4Dクライアントステーションを、*clientName*で指定した名前で4D Serverに登録し、他のクライアントもしくは4D Server (ストアドプロシージャから) が登録されたマシン上で、[`EXECUTE ON CLIENT`](execute-on-client.md) コマンドを使ってメソッドを実行できるようにします。<!-- END REF-->一旦登録されると、4Dクライアントは他のクライアント用に1つまたはそれ以上のメソッドを実行することができます。 
+<!--REF #_command_.REGISTER CLIENT.Summary-->REGISTER CLIENT コマンドは、4Dクライアントステーションを、*clientName*で指定した名前で4D Serverに登録し、他のクライアントもしくは4D Server (ストアドプロシージャから) が登録されたマシン上で、[`EXECUTE ON CLIENT`](../commands/execute-on-client) コマンドを使ってメソッドを実行できるようにします。<!-- END REF-->一旦登録されると、4Dクライアントは他のクライアント用に1つまたはそれ以上のメソッドを実行することができます。 
 
 **Notes:**
 
@@ -46,7 +46,7 @@ displayed_sidebar: docs
 * ローカルモードの4Dでこのコマンドが使用されても効果はありません。
 * ひとつ以上の4Dクライアントが同じ登録名を持つことができます。
 
-このコマンドが実行されると、クライアントステーション上に*clientName*という名のプロセスが作成されます。このプロセスは[`UNREGISTER CLIENT`](unregister-client.md) コマンドによってのみアボート可能です。  
+このコマンドが実行されると、クライアントステーション上に*clientName*という名のプロセスが作成されます。このプロセスは[`UNREGISTER CLIENT`](../commands/unregister-client) コマンドによってのみアボート可能です。  
 
 一度コマンドが実行されると、4Dクライアント名を動的に変更することはできません。これを実行するには、UNREGISTERCLIENTコマンドを呼び出し、再度REGISTER CLIENTコマンドを呼び出します。
 
@@ -142,9 +142,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[EXECUTE ON CLIENT](execute-on-client.md)  
-[GET REGISTERED CLIENTS](get-registered-clients.md)  
-[UNREGISTER CLIENT](unregister-client.md)  
+[EXECUTE ON CLIENT](../commands/execute-on-client)  
+[GET REGISTERED CLIENTS](../commands/get-registered-clients)  
+[UNREGISTER CLIENT](../commands/unregister-client)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: get-selected-menu-item-parameter
 title: Get selected menu item parameter
 slug: /commands/get-selected-menu-item-parameter
@@ -35,9 +35,9 @@ Se nenhuma linha de menu for selecionada, o comando retorna uma cadeia vazia"".
 
 ## Ver também 
 
-[Dynamic pop up menu](dynamic-pop-up-menu.md)  
-[Get menu item parameter](get-menu-item-parameter.md)  
-[SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
+[Dynamic pop up menu](../commands/dynamic-pop-up-menu)  
+[Get menu item parameter](../commands/get-menu-item-parameter)  
+[SET MENU ITEM PARAMETER](../commands/set-menu-item-parameter)  
 
 ## Propriedades
 

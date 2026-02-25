@@ -1,4 +1,4 @@
----
+﻿---
 id: get-group-list
 title: GET GROUP LIST
 slug: /commands/get-group-list
@@ -37,13 +37,13 @@ The array *groupNumbers*, synchronized with *groupNames*, is filled with the cor
 
 ## Error management 
 
-If you do not have the proper access privileges for calling GET GROUP LIST or if the Password system is already accessed by another process, an access privilege error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md).
+If you do not have the proper access privileges for calling GET GROUP LIST or if the Password system is already accessed by another process, an access privilege error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](../commands/on-err-call).
 
 ## See also 
 
-[GET GROUP PROPERTIES](get-group-properties.md)  
-[GET USER LIST](get-user-list.md)  
-[Set group properties](set-group-properties.md)  
+[GET GROUP PROPERTIES](../commands/get-group-properties)  
+[GET USER LIST](../commands/get-user-list)  
+[Set group properties](../commands/set-group-properties)  
 
 ## Properties
 

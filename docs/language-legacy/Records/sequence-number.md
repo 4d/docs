@@ -1,4 +1,4 @@
----
+﻿---
 id: sequence-number
 title: Sequence number
 slug: /commands/sequence-number
@@ -31,11 +31,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Sequence number.Summary-->**Sequence number** returns the next sequence number for *aTable*.<!-- END REF--> The sequence number is unique for each table. It is a non-repeating number that is incremented(\*) for each new record created for the table.
 
-(\*) For optimization reasons, the incrementation is started only at the first call of the **Sequence number** command or of a feature that gets access to the sequence number (see below). In addition, the numbering can be modified using the [SET DATABASE PARAMETER](set-database-parameter.md) command. Consequently, the returned value should not be considered as the count of records created in the *aTable*. 
+(\*) For optimization reasons, the incrementation is started only at the first call of the **Sequence number** command or of a feature that gets access to the sequence number (see below). In addition, the numbering can be modified using the [SET DATABASE PARAMETER](../commands/set-database-parameter) command. Consequently, the returned value should not be considered as the count of records created in the *aTable*. 
 
-By default, the numbering starts at 1\. You can change the numbering for a table using the [SET DATABASE PARAMETER](set-database-parameter.md) command. 
+By default, the numbering starts at 1\. You can change the numbering for a table using the [SET DATABASE PARAMETER](../commands/set-database-parameter) command. 
 
-**Note:** If there is no current record and the numbering has been modified via the [SET DATABASE PARAMETER](set-database-parameter.md) command, this number is in fact reserved for the next record creation but it will only be returned by the **Sequence number** function when the [SAVE RECORD](save-record.md) command has actually been called. 
+**Note:** If there is no current record and the numbering has been modified via the [SET DATABASE PARAMETER](../commands/set-database-parameter) command, this number is in fact reserved for the next record creation but it will only be returned by the **Sequence number** function when the [SAVE RECORD](../commands/save-record) command has actually been called. 
 
 The **Sequence number** function is useful in the following cases:
 
@@ -69,8 +69,8 @@ The following example is part of a form method. It tests to see if this is a new
 ## See also 
 
 *About Record Numbers*  
-[Record number](record-number.md)  
-[Selected record number](selected-record-number.md)  
+[Record number](../commands/record-number)  
+[Selected record number](../commands/selected-record-number)  
 
 ## Properties
 

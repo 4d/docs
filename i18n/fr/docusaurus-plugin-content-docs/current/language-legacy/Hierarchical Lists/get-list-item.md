@@ -1,4 +1,4 @@
----
+﻿---
 id: get-list-item
 title: GET LIST ITEM
 slug: /commands/get-list-item
@@ -40,7 +40,7 @@ Si vous passez le premier paramètre optionnel *\**, vous indiquez que le param�
 
 **Note :** Si vous utilisez le caractère @ dans le nom d'objet de la liste et que le formulaire contient plusieurs listes répondant à ce nom, la commande **GET LIST ITEM** s'appliquera au premier objet dont le nom correspond. 
 
-La position doit être exprimée relativement à l'état déployé/contracté de la liste et de ses sous-listes. Vous devez passer une valeur de position comprise entre 1 et la valeur retournée par [Count list items](count-list-items.md). Si vous passez une valeur située hors de cet intervalle, **GET LIST ITEM** retourne des valeurs vides (0, "", etc.).  
+La position doit être exprimée relativement à l'état déployé/contracté de la liste et de ses sous-listes. Vous devez passer une valeur de position comprise entre 1 et la valeur retournée par [Count list items](../commands/count-list-items). Si vous passez une valeur située hors de cet intervalle, **GET LIST ITEM** retourne des valeurs vides (0, "", etc.).  
 Si vous passez \* dans *positionElém*, la commande s’applique à l’élément courant de la liste. Si plusieurs éléments sont sélectionnés manuellement, l’élément courant est celui qui a été sélectionné en dernier. Si aucun élément n’est sélectionné, la commande retourne des valeurs vides. 
 
 Après l'appel, vous récupérez :
@@ -74,16 +74,16 @@ En partant de l'hypothèse que *hList* est une liste dont les éléments ont des
 
 ## Exemple 2 
 
-Reportez-vous à l'exemple de la commande [APPEND TO LIST](append-to-list.md).
+Reportez-vous à l'exemple de la commande [APPEND TO LIST](../commands/append-to-list).
 
 ## Voir aussi 
 
-[GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
-[List item parent](list-item-parent.md)  
-[List item position](list-item-position.md)  
-[Selected list items](selected-list-items.md)  
-[SET LIST ITEM](set-list-item.md)  
-[SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+[GET LIST ITEM PROPERTIES](../commands/get-list-item-properties)  
+[List item parent](../commands/list-item-parent)  
+[List item position](../commands/list-item-position)  
+[Selected list items](../commands/selected-list-items)  
+[SET LIST ITEM](../commands/set-list-item)  
+[SET LIST ITEM PROPERTIES](../commands/set-list-item-properties)  
 
 ## Propriétés
 

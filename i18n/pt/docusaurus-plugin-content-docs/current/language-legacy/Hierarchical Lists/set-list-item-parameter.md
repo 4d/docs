@@ -1,4 +1,4 @@
----
+﻿---
 id: set-list-item-parameter
 title: SET LIST ITEM PARAMETER
 slug: /commands/set-list-item-parameter
@@ -47,7 +47,7 @@ Em *seletor*, pode passar
 | -------------------------- | ------ | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | Additional text            | Cadeia | 4D\_additional\_text       | Esta constante é usada para adicionar texto à direita do item *itemRef*. Esse título adicional sempre vai ser exibido na parte direita da lista, mesmo quando o usuário mover a barra de rolagem horizontal. Quando usar esta constante, passe o texto a ser exibido em *value*. |  
 | Associated standard action | Cadeia | 4D\_standard\_action\_name | Associa uma ação padrão com o *itemRef*. Neste caso deve passar no parâmetro *valor* o nome de uma ação padrão com um parâmetro, por exemplo "fontSize?value=10pt". Para saber mais veja a seção *Ações padrões* no manual *Design Reference*.                                   |
-* Custom selector: pode passar em *seletor* todo texto personalizado e associá-lo com um valor de tipo texto, numérico ou booleano. Este valor será armazenado com o elemento e poderá ser recuperado utilizando o comando [GET LIST ITEM PARAMETER](get-list-item-parameter.md). Este princípio permite configurar todo tipo de interface associado com as listas hierárquicas. Por exemplo, em uma lista de nomes de clientes, pode guardar a idade de cada pessoa e mostrá-la unicamente quando o elemento correspondente seja selecionado.
+* Custom selector: pode passar em *seletor* todo texto personalizado e associá-lo com um valor de tipo texto, numérico ou booleano. Este valor será armazenado com o elemento e poderá ser recuperado utilizando o comando [GET LIST ITEM PARAMETER](../commands/get-list-item-parameter). Este princípio permite configurar todo tipo de interface associado com as listas hierárquicas. Por exemplo, em uma lista de nomes de clientes, pode guardar a idade de cada pessoa e mostrá-la unicamente quando o elemento correspondente seja selecionado.
 
 ## Exemplo 
 
@@ -71,11 +71,11 @@ APPEND TO LIST($myList;ak standard action title;1)
 
 ## Ver também 
 
-[APPEND TO LIST](append-to-list.md)  
-[Action info](action-info.md)  
-[GET LIST ITEM PARAMETER](get-list-item-parameter.md)  
-[GET LIST ITEM PARAMETER ARRAYS](get-list-item-parameter-arrays.md)  
-[INSERT IN LIST](insert-in-list.md)  
+[APPEND TO LIST](../commands/append-to-list)  
+[Action info](../commands/action-info)  
+[GET LIST ITEM PARAMETER](../commands/get-list-item-parameter)  
+[GET LIST ITEM PARAMETER ARRAYS](../commands/get-list-item-parameter-arrays)  
+[INSERT IN LIST](../commands/insert-in-list)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: display-record
 title: DISPLAY RECORD
 slug: /commands/display-record
@@ -41,7 +41,7 @@ DISPLAY RECORDは、しばしばオリジナルの進捗メッセージを表示
 
 ## 参照 
 
-[MESSAGE](message.md)  
+[MESSAGE](../commands/message)  
 
 ## プロパティ
 

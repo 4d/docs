@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-text-property
 title: QR Get text property
 slug: /commands/qr-get-text-property
@@ -63,7 +63,7 @@ displayed_sidebar: docs
 | qr alternate background color | Integer | 9     | Alternate background color number                                                |
 | qr background color           | Integer | 8     | Background color number                                                          |
 | qr bold                       | Integer | 3     | Bold style attribute (0 or 1)                                                    |
-| qr font name                  | Integer | 10    | Name of font as returned for example by the [FONT LIST](font-list.md) command    |
+| qr font name                  | Integer | 10    | Name of font as returned for example by the [FONT LIST](../commands/font-list) command    |
 | qr font size                  | Integer | 2     | Font size expressed in points (9 to 255)                                         |
 | qr italic                     | Integer | 4     | Italic style attribute (0 or 1)                                                  |
 | qr justification              | Integer | 7     | Justification attribute (0 for default, 1 for left, 2 for center or 3 for right) |
@@ -80,7 +80,7 @@ If you pass an invalid *property* number, the error -9854 will be generated.
 
 ## See also 
 
-[QR SET TEXT PROPERTY](qr-set-text-property.md)  
+[QR SET TEXT PROPERTY](../commands/qr-set-text-property)  
 
 ## Properties
 

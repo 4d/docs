@@ -1,4 +1,4 @@
----
+﻿---
 id: decrypt-data-blob
 title: Decrypt data BLOB
 slug: /commands/decrypt-data-blob
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 BLOB を復号化するのには、*keyObject* または *passPhrase* のいづれかを使用することができます: 
 
-* *keyObject*: 暗号鍵を格納したJSON オブジェクト。<!-- END REF-->その構造は、[New data key](new-data-key.md) コマンドによって返されるオブジェクトと同じです。
+* *keyObject*: 暗号鍵を格納したJSON オブジェクト。<!-- END REF-->その構造は、[New data key](../commands/new-data-key) コマンドによって返されるオブジェクトと同じです。
 * *passPhrase*: 暗号鍵を生成するのに使用した文字列です。
 
 **Decrypt data BLOB** の*salt* 引数に渡す数値は、暗号化の際に使用されたものと合致する必要があります。
@@ -63,14 +63,14 @@ BLOB を復号化するのには、*keyObject* または *passPhrase* のいづ�
  $decryptedFile.setContent($decryptedBlob)
 ```
 
-復号化で使用する*passPhrase* 引数および *salt* 引数は、暗号化の際に使用された*passPhrase* 引数および *salt* 引数と同一です([Encrypt data BLOB](encrypt-data-blob.md) の例題を参照して下さい)。
+復号化で使用する*passPhrase* 引数および *salt* 引数は、暗号化の際に使用された*passPhrase* 引数および *salt* 引数と同一です([Encrypt data BLOB](../commands/encrypt-data-blob) の例題を参照して下さい)。
 
 ## 参照 
 
   
-[Encrypt data BLOB](encrypt-data-blob.md)  
-[Encrypt data file](encrypt-data-file.md)  
-[New data key](new-data-key.md)  
+[Encrypt data BLOB](../commands/encrypt-data-blob)  
+[Encrypt data file](../commands/encrypt-data-file)  
+[New data key](../commands/new-data-key)  
 
 ## プロパティ
 

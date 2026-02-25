@@ -1,4 +1,4 @@
----
+﻿---
 id: set-process-variable
 title: SET PROCESS VARIABLE
 slug: /commands/set-process-variable
@@ -38,9 +38,9 @@ For each couple of *dstVar;expr* variables, the expression must be of a type com
 The current process “pokes” the variables of the destination process—the destination process is not warned in any way that another process is writing the instance of its variables.
 
 **4D Server:** Using 4D Client, you can write variables in a destination process executed on the server machine (stored procedure). To do so, put a minus sign before the process ID number in the *process* parameter.  
-“Intermachine” process communication, provided by the commands **SET PROCESS VARIABLE**, [GET PROCESS VARIABLE](get-process-variable.md) and [VARIABLE TO VARIABLE](variable-to-variable.md), is possible from client to server only. It is always a client process that reads or write the variables of a stored procedure. 
+“Intermachine” process communication, provided by the commands **SET PROCESS VARIABLE**, [GET PROCESS VARIABLE](../commands/get-process-variable) and [VARIABLE TO VARIABLE](../commands/variable-to-variable), is possible from client to server only. It is always a client process that reads or write the variables of a stored procedure. 
 
-**Tip:** If you do not know the ID number of the server process, you can still use the interprocess variables of the server. To do so, use any negative value in *process*. In other words, it is not necessary to know the ID number of the process to be able to use the **SET PROCESS VARIABLE** command with the interprocess variables of the server. This is useful when a stored procedure is launched using the [On Server Startup database method](on-server-startup-database-method.md). As client machines do not automatically know the ID number of that process, any negative value can be passed in the *process* parameter.
+**Tip:** If you do not know the ID number of the server process, you can still use the interprocess variables of the server. To do so, use any negative value in *process*. In other words, it is not necessary to know the ID number of the process to be able to use the **SET PROCESS VARIABLE** command with the interprocess variables of the server. This is useful when a stored procedure is launched using the [On Server Startup database method](../commands/on-server-startup-database-method). As client machines do not automatically know the ID number of that process, any negative value can be passed in the *process* parameter.
 
 ### Restrictions 
 
@@ -49,10 +49,10 @@ SET PROCESS VARIABLE does not accept local variables as destination variables.
 SET PROCESS VARIABLE accepts any type of destination process or interprocess variable, except:
 
 * Pointers
-* Arrays of any type. To write an array as a whole from one process to another one, use the command [VARIABLE TO VARIABLE](variable-to-variable.md). Note, however, that SET PROCESS VARIABLE allows you to write the element of an array.
+* Arrays of any type. To write an array as a whole from one process to another one, use the command [VARIABLE TO VARIABLE](../commands/variable-to-variable). Note, however, that SET PROCESS VARIABLE allows you to write the element of an array.
 * You cannot write the element of an array of pointers or the element of a two-dimensional array.
 
-The destination process must be a user process; it cannot be a kernel process. If the destination process does not exist, an error is generated. You can catch this error using an error-handling method installed with [ON ERR CALL](on-err-call.md).
+The destination process must be a user process; it cannot be a kernel process. If the destination process does not exist, an error is generated. You can catch this error using an error-handling method installed with [ON ERR CALL](../commands/on-err-call).
 
 ## Example 1 
 
@@ -104,10 +104,10 @@ This example writes the destination process instance of the variables *v1*, *v2*
 
 ## See also 
 
-[GET PROCESS VARIABLE](get-process-variable.md)  
-[POST OUTSIDE CALL](post-outside-call.md)  
+[GET PROCESS VARIABLE](../commands/get-process-variable)  
+[POST OUTSIDE CALL](../commands/post-outside-call)  
 [Processes](../../Develop/processes.md)  
-[VARIABLE TO VARIABLE](variable-to-variable.md)  
+[VARIABLE TO VARIABLE](../commands/variable-to-variable)  
 
 ## Properties
 

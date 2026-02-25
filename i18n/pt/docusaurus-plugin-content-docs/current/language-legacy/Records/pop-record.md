@@ -1,4 +1,4 @@
----
+﻿---
 id: pop-record
 title: POP RECORD
 slug: /commands/pop-record
@@ -33,7 +33,7 @@ O exemplo a seguir recupera o registro de um cliente na pilha:
 
 ## Ver também 
 
-[PUSH RECORD](push-record.md)  
+[PUSH RECORD](../commands/push-record)  
 *Usar a Pilha de Registros*  
 
 ## Propriedades

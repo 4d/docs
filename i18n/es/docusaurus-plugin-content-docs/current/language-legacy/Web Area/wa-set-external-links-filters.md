@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-set-external-links-filters
 title: WA SET EXTERNAL LINKS FILTERS
 slug: /commands/wa-set-external-links-filters
@@ -84,8 +84,8 @@ Este ejemplo combina los filtros de sitios y de enlaces externos:
 
 ## Ver también 
 
-[WA GET EXTERNAL LINKS FILTERS](wa-get-external-links-filters.md)  
-[WA SET URL FILTERS](wa-set-url-filters.md)  
+[WA GET EXTERNAL LINKS FILTERS](../commands/wa-get-external-links-filters)  
+[WA SET URL FILTERS](../commands/wa-set-url-filters)  
 
 ## Propiedades
 

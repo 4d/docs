@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-set-context
 title: WA SET CONTEXT
 slug: /commands/wa-set-context
@@ -71,7 +71,7 @@ $4d._myPrivateFunction(); // No hará nada porque la función es privada
 
 ### Ver también
 
-[WA Get context](wa-get-context.md)
+[WA Get context](../commands/wa-get-context)
 
 ### Propiedades
 

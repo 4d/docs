@@ -1,4 +1,4 @@
----
+﻿---
 id: method-set-comments
 title: METHOD SET COMMENTS
 slug: /commands/method-set-comments
@@ -74,7 +74,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[METHOD GET COMMENTS](method-get-comments.md)  
+[METHOD GET COMMENTS](../commands/method-get-comments)  
 
 ## プロパティ
 

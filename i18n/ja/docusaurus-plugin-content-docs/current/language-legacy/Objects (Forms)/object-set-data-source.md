@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-data-source
 title: OBJECT SET DATA SOURCE
 slug: /commands/object-set-data-source
@@ -43,7 +43,7 @@ displayed_sidebar: docs
 
 * データソースを変更する場合はリストボックスの型に注意する必要があります。たとえば、配列型のリストボックスの列のデータソースとして、フィールドを指定することはできない、ということです。
 * セレクション型のリストボックスの場合、リストボックスオブジェクトそのもののデータソースを読み取ったり変更したりはできません。セレクション型のリストボックスの変数は、データソースではなくて内部参照として扱っているからです。
-* このコマンドは主に配列型のリストボックスに対して使用されるものです。セレクション型のリストボックスに対しては、このコマンドの代わりに [LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md) コマンドを使用することができます。
+* このコマンドは主に配列型のリストボックスに対して使用されるものです。セレクション型のリストボックスに対しては、このコマンドの代わりに [LISTBOX SET COLUMN FORMULA](../commands/listbox-set-column-formula) コマンドを使用することができます。
 
 変更不可能なデータソースに対してこのコマンドが使用された場合、何も起こりません。
 
@@ -59,8 +59,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md)  
-[OBJECT Get data source](object-get-data-source.md)  
+[LISTBOX SET COLUMN FORMULA](../commands/listbox-set-column-formula)  
+[OBJECT Get data source](../commands/object-get-data-source)  
 
 ## プロパティ
 

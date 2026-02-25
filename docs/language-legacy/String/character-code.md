@@ -1,4 +1,4 @@
----
+﻿---
 id: character-code
 title: Character code
 slug: /commands/character-code
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 If there is more than one character in the string, **Character code** returns only the code of the first character.
 
-The [Char](char.md) function is the counterpart of **Character code**. It returns the character that the UTF-16 code represents. 
+The [Char](../commands/char) function is the counterpart of **Character code**. It returns the character that the UTF-16 code represents. 
 
 ## Example 1 
 
@@ -94,7 +94,7 @@ The second piece of code runs faster for two reasons: it does only one character
 
 ## See also 
 
-[Char](char.md)  
+[Char](../commands/char)  
 *Character Reference Symbols*  
 
 ## Properties

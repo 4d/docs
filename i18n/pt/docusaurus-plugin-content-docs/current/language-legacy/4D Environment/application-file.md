@@ -1,4 +1,4 @@
----
+﻿---
 id: application-file
 title: Application file
 slug: /commands/application-file
@@ -51,8 +51,8 @@ Ao iniciar seu banco de dados em Windows, você precisa verificar se uma bibliot
 
 ## Ver também 
 
-[Data file](data-file.md)  
-[Structure file](structure-file.md)  
+[Data file](../commands/data-file)  
+[Structure file](../commands/structure-file)  
 
 ## Propriedades
 

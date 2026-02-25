@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-entries
 title: OB Entries
 slug: /commands/ob-entries
@@ -64,8 +64,8 @@ L'utilisation d'un objet comme une hashmap (système clé/valeur) permet d'accé
 
 ## Voir aussi 
 
-[OB Keys](ob-keys.md)  
-[OB Values](ob-values.md)  
+[OB Keys](../commands/ob-keys)  
+[OB Values](../commands/ob-values)  
 
 ## Propriétés
 

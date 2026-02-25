@@ -1,4 +1,4 @@
----
+﻿---
 id: set-menu-item-mark
 title: SET MENU ITEM MARK
 slug: /commands/set-menu-item-mark
@@ -40,16 +40,16 @@ Si vous omettez le paramètre *process*, **SET MENU ITEM MARK** s'applique à la
 Si vous passez une chaîne vide dans *marque*, vous supprimez toute marque de la ligne de menu.   
 Sinon :
 
-* Sous Mac OS, le premier caractère de la chaîne devient la marque de la ligne de menu (généralement, le [Char](char.md)(18), qui est la coche standard de Mac OS, est utilisé).
+* Sous Mac OS, le premier caractère de la chaîne devient la marque de la ligne de menu (généralement, le [Char](../commands/char)(18), qui est la coche standard de Mac OS, est utilisé).
 * Sous Windows, la marque standard de Windows est associée au menu.
 
 ## Exemple 
 
-Reportez-vous à l'exemple de la commande [Get menu item mark](get-menu-item-mark.md).
+Reportez-vous à l'exemple de la commande [Get menu item mark](../commands/get-menu-item-mark).
 
 ## Voir aussi 
 
-[Get menu item mark](get-menu-item-mark.md)  
+[Get menu item mark](../commands/get-menu-item-mark)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: base64-decode
 title: BASE64 DECODE
 slug: /commands/base64-decode
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.BASE64 DECODE.Summary-->El comando **BASE64 DECODE** decodifica el texto o valor de blob codificado en formato Base64 o Base64URL pasado en el parámetro *aDecodificar*.<!-- END REF--> Para más información sobre los formatos Base64 y Base64URL, consulte la descripción del comando [BASE64 ENCODE](base64-encode.md). 
+<!--REF #_command_.BASE64 DECODE.Summary-->El comando **BASE64 DECODE** decodifica el texto o valor de blob codificado en formato Base64 o Base64URL pasado en el parámetro *aDecodificar*.<!-- END REF--> Para más información sobre los formatos Base64 y Base64URL, consulte la descripción del comando [BASE64 ENCODE](../commands/base64-encode). 
 
 Pase en *aDecodificar* el valor codificado de tipo texto o BLOB, en Base64 or Base64URL, a decodificar.
 
@@ -65,10 +65,10 @@ Este ejemplo le permite transferir una imagen vía un BLOB:
 
 ## Ver también 
 
-[BASE64 ENCODE](base64-encode.md)  
-[Generate digest](generate-digest.md)  
+[BASE64 ENCODE](../commands/base64-encode)  
+[Generate digest](../commands/generate-digest)  
 *Presentación de los comandos XML DOM*  
-[XML DECODE](xml-decode.md)  
+[XML DECODE](../commands/xml-decode)  
 
 ## Propiedades
 

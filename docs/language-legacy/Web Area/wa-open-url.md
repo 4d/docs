@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-open-url
 title: WA OPEN URL
 slug: /commands/wa-open-url
@@ -33,14 +33,14 @@ displayed_sidebar: docs
 
 If an empty string is passed in *url*, the command does nothing and no error is generated. To load a blank page into the Web area, pass the string "about:blank" in *url*.
 
-Like the existing [OPEN URL](open-url.md) command, **WA OPEN URL** accepts several types of syntaxes in the *url* parameter to designate the files:
+Like the existing [OPEN URL](../commands/open-url) command, **WA OPEN URL** accepts several types of syntaxes in the *url* parameter to designate the files:
 
 * posix syntax: "file:///c:/My%20File"
 * system syntax: "c:\\MyFolder\\MyFile" (Windows) or "MyDisk:MyFolder:MyFile" (macOS).
 
 **Note:** For compatibility, the "file://" syntax (using two "/") is accepted in 4D but it does not conform to RFC. We recommend using the "file:///" syntax (with three "/") that complies with RFC.
 
-On Mac OS, when FileVault is activated, you must use the Posix syntax. You can transform paths of the system using the [Convert path system to POSIX](convert-path-system-to-posix.md) command.
+On Mac OS, when FileVault is activated, you must use the Posix syntax. You can transform paths of the system using the [Convert path system to POSIX](../commands/convert-path-system-to-posix) command.
 
 This command has the same effect as modifying the value of the "URL" variable associated with the area. For example, if the variable of the area is named MyWArea\_url:
 
@@ -56,9 +56,9 @@ is the same as:
 
 ## See also 
 
-[OPEN URL](open-url.md)  
-[WA OPEN BACK URL](wa-open-back-url.md)  
-[WA OPEN FORWARD URL](wa-open-forward-url.md)  
+[OPEN URL](../commands/open-url)  
+[WA OPEN BACK URL](../commands/wa-open-back-url)  
+[WA OPEN FORWARD URL](../commands/wa-open-forward-url)  
 
 ## Properties
 

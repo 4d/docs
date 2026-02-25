@@ -1,4 +1,4 @@
----
+﻿---
 id: delete-from-blob
 title: DELETE FROM BLOB
 slug: /commands/delete-from-blob
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 ## See also 
 
-[INSERT IN BLOB](insert-in-blob.md)  
+[INSERT IN BLOB](../commands/insert-in-blob)  
 
 ## Properties
 

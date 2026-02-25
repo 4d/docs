@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-cancel-load
 title: SQL CANCEL LOAD
 slug: /commands/sql-cancel-load
@@ -61,8 +61,8 @@ Si el comando se ha ejecutado correctamente, la variable sistema OK devuelve 1\.
 
 ## Ver también 
 
-[SQL LOAD RECORD](sql-load-record.md)  
-[SQL LOGIN](sql-login.md)  
+[SQL LOAD RECORD](../commands/sql-load-record)  
+[SQL LOGIN](../commands/sql-login)  
 
 ## Propiedades
 

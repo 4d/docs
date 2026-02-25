@@ -1,4 +1,4 @@
----
+﻿---
 id: get-list-item-parameter
 title: GET LIST ITEM PARAMETER
 slug: /commands/get-list-item-parameter
@@ -38,16 +38,16 @@ Si pasa el primer parámetro opcional *\**, indica que el parámetro *lista* es 
 
 **Nota:** si utiliza el carácter @ en el nombre del objeto de la lisa y el formulario contiene varias listas que responden a este nombre, el comando GET LIST ITEM PARAMETER se aplicará al primer objeto cuyo nombre corresponda.
 
-Puede pasar un número de referencia en *refElem*. Si este número no corresponde a ningún elemento de la lista, el comando no hace nada. Igualmente puede pasar 0 en *refElem* para indicar el último elemento añadido a la lista (utilizando [APPEND TO LIST](append-to-list.md)).
+Puede pasar un número de referencia en *refElem*. Si este número no corresponde a ningún elemento de la lista, el comando no hace nada. Igualmente puede pasar 0 en *refElem* para indicar el último elemento añadido a la lista (utilizando [APPEND TO LIST](../commands/append-to-list)).
 
 Finalmente, puede pasar *\** en *refElem:* en este caso, el comando se aplicará al elemento actual de la lista. Si se seleccionan manualmente varios elementos, el elemento actual es el último seleccionado. Si ningún elemento fue seleccionado, el comando no hace nada.
 
-En *selector*, puede pasar la constante Additional text o Standard action (en el tema “*Listas jerárquicas*”) o todo valor personalizado. Para mayor información sobre los parámetros *selector* y *valor*, consulte la descripción del comando [SET LIST ITEM PARAMETER](set-list-item-parameter.md).
+En *selector*, puede pasar la constante Additional text o Standard action (en el tema “*Listas jerárquicas*”) o todo valor personalizado. Para mayor información sobre los parámetros *selector* y *valor*, consulte la descripción del comando [SET LIST ITEM PARAMETER](../commands/set-list-item-parameter).
 
 ## Ver también 
 
 *Listas jerárquicas*  
-[SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+[SET LIST ITEM PARAMETER](../commands/set-list-item-parameter)  
 
 ## Propiedades
 

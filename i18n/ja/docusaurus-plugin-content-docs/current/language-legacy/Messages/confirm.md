@@ -1,4 +1,4 @@
----
+﻿---
 id: confirm
 title: CONFIRM
 slug: /commands/confirm
@@ -101,8 +101,8 @@ Windowsにおいて以下のような確認ダイアログボックスを表示�
 
 ## 参照 
 
-[ALERT](alert.md)  
-[Request](request.md)  
+[ALERT](../commands/alert)  
+[Request](../commands/request)  
 
 ## プロパティ
 

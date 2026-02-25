@@ -1,4 +1,4 @@
----
+﻿---
 id: form-set-input
 title: FORM SET INPUT
 slug: /commands/form-set-input
@@ -57,14 +57,14 @@ displayed_sidebar: docs
 
 入力フォームは多くのコマンドで表示されますが、一般にデータの入力や修正に使用されます。以下のコマンドは、データ入力や検索用に入力フォームを表示します:
 
-* [ADD RECORD](add-record.md)
-* [DISPLAY RECORD](display-record.md)
-* [MODIFY RECORD](modify-record.md)
-* [QUERY BY EXAMPLE](query-by-example.md)
+* [ADD RECORD](../commands/add-record)
+* [DISPLAY RECORD](../commands/display-record)
+* [MODIFY RECORD](../commands/modify-record)
+* [QUERY BY EXAMPLE](../commands/query-by-example)
 
-[DISPLAY SELECTION](display-selection.md) や[MODIFY SELECTION](modify-selection.md) コマンドは、出力フォームを使用してレコードのリストを表示します。ユーザがリスト上のレコードをダブルクリックすると、入力フォームを表示します。 
+[DISPLAY SELECTION](../commands/display-selection) や[MODIFY SELECTION](../commands/modify-selection) コマンドは、出力フォームを使用してレコードのリストを表示します。ユーザがリスト上のレコードをダブルクリックすると、入力フォームを表示します。 
 
-データ読み込みコマンド[IMPORT TEXT](import-text.md)、[IMPORT SYLK](import-sylk.md) および[IMPORT DIF](import-dif.md) は、レコードの読み込みにカレント入力フォームを使用します。
+データ読み込みコマンド[IMPORT TEXT](../commands/import-text)、[IMPORT SYLK](../commands/import-sylk) および[IMPORT DIF](../commands/import-dif) は、レコードの読み込みにカレント入力フォームを使用します。
 
 オプション引数 *\** は、デザインモードのフォームプロパティウィンドウおよび[Open window](../commands/open-window) で使用されます。*\** を指定することにより、(ダイアログボックスや入力フォームとして) 次回フォームを使用する際、フォームプロパティの設定をもとに自動的にウィンドウサイズを変更するよう4Dに指示します。詳しくは[Open window](../commands/open-window) の節を参照してください。
 
@@ -110,17 +110,17 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ADD RECORD](add-record.md)  
-[DISPLAY RECORD](display-record.md)  
-[DISPLAY SELECTION](display-selection.md)  
-[FORM SET OUTPUT](form-set-output.md)  
-[IMPORT DIF](import-dif.md)  
-[IMPORT SYLK](import-sylk.md)  
-[IMPORT TEXT](import-text.md)  
-[MODIFY RECORD](modify-record.md)  
-[MODIFY SELECTION](modify-selection.md)  
+[ADD RECORD](../commands/add-record)  
+[DISPLAY RECORD](../commands/display-record)  
+[DISPLAY SELECTION](../commands/display-selection)  
+[FORM SET OUTPUT](../commands/form-set-output)  
+[IMPORT DIF](../commands/import-dif)  
+[IMPORT SYLK](../commands/import-sylk)  
+[IMPORT TEXT](../commands/import-text)  
+[MODIFY RECORD](../commands/modify-record)  
+[MODIFY SELECTION](../commands/modify-selection)  
 [Open window](../commands/open-window)  
-[QUERY BY EXAMPLE](query-by-example.md)  
+[QUERY BY EXAMPLE](../commands/query-by-example)  
 
 ## プロパティ
 

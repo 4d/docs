@@ -1,4 +1,4 @@
----
+﻿---
 id: users-to-blob
 title: USERS TO BLOB
 slug: /commands/users-to-blob
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 データベースのデザイナーおよび管理者のみが、このコマンドを実行することができます。他のユーザーが実行しようとすると、コマンドは何も行わず、権限エラー (-9949) が生成されます。
 
-生成されたBLOBは自動的に暗号化され、[BLOB TO USERS](blob-to-users.md) コマンドによってのみ解読することができます。ハードディスク上のファイル、またはフィールドにこのBLOBを保存することができます。
+生成されたBLOBは自動的に暗号化され、[BLOB TO USERS](../commands/blob-to-users) コマンドによってのみ解読することができます。ハードディスク上のファイル、またはフィールドにこのBLOBを保存することができます。
 
 このコマンドの機能は、ツールボックスを使ったグループとユーザーを保存することに相当します。唯一の違いは、このコマンドを使用すると、ファイルだけでなく、BLOBフィールド上にユーザーアカウントを格納することができるということです。
 
@@ -41,7 +41,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[BLOB TO USERS](blob-to-users.md)  
+[BLOB TO USERS](../commands/blob-to-users)  
 
 ## プロパティ
 

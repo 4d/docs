@@ -1,4 +1,4 @@
----
+﻿---
 id: get-highlight
 title: GET HIGHLIGHT
 slug: /commands/get-highlight
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 **注:** このコマンドをサブフォームのリストフォーム内にあるフィールドに対して使用することはできません。
 
-テキストは、ユーザによる指定や[HIGHLIGHT TEXT](highlight-text.md)コマンドの実行で反転させることができます。
+テキストは、ユーザによる指定や[HIGHLIGHT TEXT](../commands/highlight-text)コマンドの実行で反転させることができます。
 
 引数 *startSel* は反転表示された文字の最初の位置を返します。   
 引数 *endSel* は反転表示された文字の最後の位置に1を加えて返します。 
@@ -72,9 +72,9 @@ End if
 
 ## 参照 
 
-[FILTER KEYSTROKE](filter-keystroke.md)  
-[HIGHLIGHT TEXT](highlight-text.md)  
-[Keystroke](keystroke.md)  
+[FILTER KEYSTROKE](../commands/filter-keystroke)  
+[HIGHLIGHT TEXT](../commands/highlight-text)  
+[Keystroke](../commands/keystroke)  
 
 ## プロパティ
 

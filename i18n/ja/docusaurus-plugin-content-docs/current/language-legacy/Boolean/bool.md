@@ -1,4 +1,4 @@
----
+﻿---
 id: bool
 title: Bool
 slug: /commands/bool
@@ -58,7 +58,7 @@ displayed_sidebar: docs
 [Date](../commands/date)  
 [Num](../commands/num)  
 [String](../commands/string)  
-[Time](time.md)  
+[Time](../commands/time)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: year-of
 title: Year of
 slug: /commands/year-of
@@ -38,8 +38,8 @@ Ver o exemplo do comando [Current date](current-date.md "Current date").
 
 ## Ver também 
 
-[Day of](day-of.md)  
-[Month of](month-of.md)  
+[Day of](../commands/day-of)  
+[Month of](../commands/month-of)  
 
 ## Propriedades
 

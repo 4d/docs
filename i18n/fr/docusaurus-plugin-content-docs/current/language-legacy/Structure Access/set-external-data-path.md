@@ -1,4 +1,4 @@
----
+﻿---
 id: set-external-data-path
 title: SET EXTERNAL DATA PATH
 slug: /commands/set-external-data-path
@@ -69,8 +69,8 @@ Vous souhaitez enregistrer dans le champ image un fichier existant, stocké à l
 
 ## Voir aussi 
 
-[Get external data path](get-external-data-path.md)  
-[RELOAD EXTERNAL DATA](reload-external-data.md)  
+[Get external data path](../commands/get-external-data-path)  
+[RELOAD EXTERNAL DATA](../commands/reload-external-data)  
 
 ## Propriétés
 

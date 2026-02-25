@@ -1,4 +1,4 @@
----
+﻿---
 id: get-registered-clients
 title: GET REGISTERED CLIENTS
 slug: /commands/get-registered-clients
@@ -30,8 +30,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET REGISTERED CLIENTS.Summary-->The **GET REGISTERED CLIENTS** command fills two arrays<!-- END REF-->:
 
-* *clientLists* contains the list of clients who were “registered” by using the [REGISTER CLIENT](register-client.md) command.
-* *methods* supplies the list of each client’s “workload”. The workload is the number of methods that a 4D Client must still execute by calling the [EXECUTE ON CLIENT](execute-on-client.md) command (for more information, please refer to the description of the [EXECUTE ON CLIENT](execute-on-client.md) command).
+* *clientLists* contains the list of clients who were “registered” by using the [REGISTER CLIENT](../commands/register-client) command.
+* *methods* supplies the list of each client’s “workload”. The workload is the number of methods that a 4D Client must still execute by calling the [EXECUTE ON CLIENT](../commands/execute-on-client) command (for more information, please refer to the description of the [EXECUTE ON CLIENT](../commands/execute-on-client) command).
 
 ## Example 1 
 
@@ -45,7 +45,7 @@ Let’s assume that you want to obtain a list of all the registered clients and 
 
 ## Example 2 
 
-Refer to the example of the [REGISTER CLIENT](register-client.md) command.
+Refer to the example of the [REGISTER CLIENT](../commands/register-client) command.
 
 ## System variables and sets 
 
@@ -53,9 +53,9 @@ If the operation was successful, the OK system variable is equal to 1.
 
 ## See also 
 
-[EXECUTE ON CLIENT](execute-on-client.md)  
-[REGISTER CLIENT](register-client.md)  
-[UNREGISTER CLIENT](unregister-client.md)  
+[EXECUTE ON CLIENT](../commands/execute-on-client)  
+[REGISTER CLIENT](../commands/register-client)  
+[UNREGISTER CLIENT](../commands/unregister-client)  
 
 ## Properties
 

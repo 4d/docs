@@ -1,4 +1,4 @@
----
+﻿---
 id: font-file
 title: Font file
 slug: /commands/font-file
@@ -59,7 +59,7 @@ Desea asegurarse de que la fuente utilizada en un área de texto esté disponibl
 
 ## Ver también 
 
-[OBJECT SET FONT](object-set-font.md)  
+[OBJECT SET FONT](../commands/object-set-font)  
 
 ## Propiedades
 

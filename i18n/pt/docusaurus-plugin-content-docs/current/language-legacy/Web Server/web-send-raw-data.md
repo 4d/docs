@@ -1,4 +1,4 @@
----
+﻿---
 id: web-send-raw-data
 title: WEB SEND RAW DATA
 slug: /commands/web-send-raw-data
@@ -72,7 +72,7 @@ Todas as instruções **WEB SEND RAW DATA** que sigam a execução de **WEB SEND
  End if
 ```
 
-Combinado com o novo comando [WEB GET HTTP BODY](web-get-http-body.md) e com os outros comandos do tema “Servidor web”, este comando completa o conjunto de ferramentas disponíveis para os desenvolvedores 4D para tratar de maneira completamente personalizada as conexões HTTP entrantes e saintes. Estas ferramentas são apresentadas no diagrama abaixo:  
+Combinado com o novo comando [WEB GET HTTP BODY](../commands/web-get-http-body) e com os outros comandos do tema “Servidor web”, este comando completa o conjunto de ferramentas disponíveis para os desenvolvedores 4D para tratar de maneira completamente personalizada as conexões HTTP entrantes e saintes. Estas ferramentas são apresentadas no diagrama abaixo:  
   
 ![](../../assets/en/commands/pict856016.en.png)
 
@@ -94,8 +94,8 @@ Este exemplo ilustra o uso da opção chunked com o comando **WEB SEND RAW DATA*
 
 ## Ver também 
 
-[WEB GET HTTP BODY](web-get-http-body.md)  
-[WEB GET HTTP HEADER](web-get-http-header.md)  
+[WEB GET HTTP BODY](../commands/web-get-http-body)  
+[WEB GET HTTP HEADER](../commands/web-get-http-header)  
 
 ## Propriedades
 

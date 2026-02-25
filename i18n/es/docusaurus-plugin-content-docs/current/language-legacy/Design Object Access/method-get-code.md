@@ -1,4 +1,4 @@
----
+﻿---
 id: method-get-code
 title: METHOD GET CODE
 slug: /commands/method-get-code
@@ -57,7 +57,7 @@ No se pueden combinar las dos sintaxis.
 Si pasa una ruta de acceso no válida, el parámetro *codigo* se deja vacío y se genera un error.   
   
 En el texto del *codigo* generado por este comando: 
-* Los nombres de los comandos se escriben en inglés, excepto si utiliza una versión francesa de 4D y si tiene seleccionada la preferencia "Utilizar lenguaje francés y parámetros regionales sistema" (ver [Is a list](is-a-list.md)). Cuando se utiliza el parámetro *opcion*, el código puede contener tokens del lenguaje con el fin de que sea independiente del lenguaje de programación 4D y de la versión  (ver más adelante).
+* Los nombres de los comandos se escriben en inglés, excepto si utiliza una versión francesa de 4D y si tiene seleccionada la preferencia "Utilizar lenguaje francés y parámetros regionales sistema" (ver [Is a list](../commands/is-a-list)). Cuando se utiliza el parámetro *opcion*, el código puede contener tokens del lenguaje con el fin de que sea independiente del lenguaje de programación 4D y de la versión  (ver más adelante).
 * Para aumentar la legibilidad del código, el texto es indentado con los caracteres de tabulación en función de las estructuras de programación, al igual que en el editor de métodos.
 * Una línea se añade en el encabezado del código generado que contiene los metadatos utilizados para la importación del código, por ejemplo:  
 ```4d  
@@ -66,7 +66,7 @@ En el texto del *codigo* generado por este comando:
     
     
 Durante una importación, esta línea no se importa, se utiliza para definir los atributos correspondientes (los atributos no especificados se reinicializan a su valor por defecto). El atributo "lang" define el lenguaje de exportación e impide una importación en una aplicación en lenguaje diferente (en este caso, se genera un error). El atributo "folder" contiene el nombre de la carpeta padre del método; no se muestra cuando el método no tiene una carpeta padre.  
-Pueden definirse atributos adicionales. Para mayor información, consulte la descripción del comando [METHOD SET ATTRIBUTES](method-set-attributes.md).
+Pueden definirse atributos adicionales. Para mayor información, consulte la descripción del comando [METHOD SET ATTRIBUTES](../commands/method-set-attributes).
 
 El parámetro *opcion* le permite seleccionar el modo de exportación del código con respecto a los elementos del lenguaje tokenizados de los métodos: 
 
@@ -79,14 +79,14 @@ Los elementos tokenizados del lenguaje incluyen:
 * los nombres de tablas y campos,
 * los comandos de plug-ins 4D.
 
-El código exportado con sus tokens es independiente de todo cambio de nombre posterior de los elementos del lenguaje. Gracias a los tokens, el código suministrado en forma de texto siempre será interpretado correctamente por 4D, por ejemplo utilizando el comando [METHOD SET CODE](method-set-code.md) o copiar/pegar. Para más información sobre la sintaxis tokens 4D, consulte la sección *Utilizar tokens en fórmulas*.
+El código exportado con sus tokens es independiente de todo cambio de nombre posterior de los elementos del lenguaje. Gracias a los tokens, el código suministrado en forma de texto siempre será interpretado correctamente por 4D, por ejemplo utilizando el comando [METHOD SET CODE](../commands/method-set-code) o copiar/pegar. Para más información sobre la sintaxis tokens 4D, consulte la sección *Utilizar tokens en fórmulas*.
 
 Si el comando se ejecuta desde un componente, se aplica por defecto a los métodos del componente. Si pasa el parámetro *\**, accede a los métodos de la base local.
 
   
 ## Ejemplo 1 
 
-Consulte el ejemplo del comando [METHOD SET CODE](method-set-code.md).
+Consulte el ejemplo del comando [METHOD SET CODE](../commands/method-set-code).
 
 ## Ejemplo 2 
 
@@ -135,7 +135,7 @@ El documento resultante contendrá:
 
 ## Ver también 
 
-[METHOD SET CODE](method-set-code.md)  
+[METHOD SET CODE](../commands/method-set-code)  
 *Utilizar tokens en fórmulas*  
 
 ## Propiedades

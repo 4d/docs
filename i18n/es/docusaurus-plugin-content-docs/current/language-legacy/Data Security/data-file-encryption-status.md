@@ -1,4 +1,4 @@
----
+﻿---
 id: data-file-encryption-status
 title: Data file encryption status
 slug: /commands/data-file-encryption-status
@@ -55,8 +55,8 @@ El objeto devuelto contiene las siguientes propiedades:
 * previamente:  
    * antes de abrir este archivo de datos, utilizando un dispositivo conectado,  
    * con el comando *ds.provideDataKey( )* cuando se abre este archivo de datos,  
-   * después de abrir el archivo de datos, con el comando [Discover data key](discover-data-key.md)
-* utilizando el comando [Register data key](register-data-key.md)
+   * después de abrir el archivo de datos, con el comando [Discover data key](../commands/discover-data-key)
+* utilizando el comando [Register data key](../commands/register-data-key)
 
 ## Ejemplo 
 
@@ -79,7 +79,7 @@ Desea conocer el estado de cifrado de un archivo de datos que corresponde al arc
 ## Ver también 
 
   
-[Encrypt data file](encrypt-data-file.md)  
+[Encrypt data file](../commands/encrypt-data-file)  
 
 ## Propiedades
 

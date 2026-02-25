@@ -1,4 +1,4 @@
----
+﻿---
 id: pop-up-menu
 title: Pop up menu
 slug: /commands/pop-up-menu
@@ -101,7 +101,7 @@ This project method can be called from:
 
 * The method of a form object that reacts to a mouse click without waiting for the mouse button to be released (i.e., an invisible button)
 * A process that “spies” events and communicate with the other processes
-* An event-handling method installed using [ON ERR CALL](on-err-call.md).
+* An event-handling method installed using [ON ERR CALL](../commands/on-err-call).
 
 In the last two cases, the click does not need to occur in any form object. This is one of the advantages of the **Pop up menu** command. Generally, you use form objects to display pop-up menus. Using **Pop up menu**, you can display the menu anywhere.
 
@@ -113,8 +113,8 @@ The following is the pop-up menu as it appears on Windows (left) and Macintosh (
 
 ## See also 
 
-[Dynamic pop up menu](dynamic-pop-up-menu.md)  
-[MOUSE POSITION](mouse-position.md)  
+[Dynamic pop up menu](../commands/dynamic-pop-up-menu)  
+[MOUSE POSITION](../commands/mouse-position)  
 
 ## Properties
 

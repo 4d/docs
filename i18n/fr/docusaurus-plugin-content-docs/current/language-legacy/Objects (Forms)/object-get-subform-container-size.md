@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-subform-container-size
 title: OBJECT GET SUBFORM CONTAINER SIZE
 slug: /commands/object-get-subform-container-size
@@ -40,8 +40,8 @@ Cette commande est utile par exemple dans le cas où des objets du sous-formulai
 
 ## Voir aussi 
 
-[OBJECT GET SUBFORM](object-get-subform.md)  
-[OBJECT SET SUBFORM](object-set-subform.md)  
+[OBJECT GET SUBFORM](../commands/object-get-subform)  
+[OBJECT SET SUBFORM](../commands/object-set-subform)  
 
 ## Propriétés
 

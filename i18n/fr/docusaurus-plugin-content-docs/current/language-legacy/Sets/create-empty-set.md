@@ -1,4 +1,4 @@
----
+﻿---
 id: create-empty-set
 title: CREATE EMPTY SET
 slug: /commands/create-empty-set
@@ -18,9 +18,9 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.CREATE EMPTY SET.Summary-->**CREATE EMPTY SET** crée un ensemble vide, *ensemble*, pour *laTable*.<!-- END REF--> Vous pouvez ajouter des enregistrements dans cet ensemble à l'aide de la commande [ADD TO SET](add-to-set.md). Si un ensemble du même nom existe déjà, il est effacé et remplacé par le nouvel ensemble.
+<!--REF #_command_.CREATE EMPTY SET.Summary-->**CREATE EMPTY SET** crée un ensemble vide, *ensemble*, pour *laTable*.<!-- END REF--> Vous pouvez ajouter des enregistrements dans cet ensemble à l'aide de la commande [ADD TO SET](../commands/add-to-set). Si un ensemble du même nom existe déjà, il est effacé et remplacé par le nouvel ensemble.
 
-**Note :** Il n'est pas indispensable d'appeler la commande **CREATE EMPTY SET** avant d'utiliser la commande [CREATE SET](create-set.md).
+**Note :** Il n'est pas indispensable d'appeler la commande **CREATE EMPTY SET** avant d'utiliser la commande [CREATE SET](../commands/create-set).
 
 ## Exemple 
 
@@ -28,8 +28,8 @@ Reportez-vous à l'exemple proposé dans la section *Présentation des ensembles
 
 ## Voir aussi 
 
-[CLEAR SET](clear-set.md)  
-[CREATE SET](create-set.md)  
+[CLEAR SET](../commands/clear-set)  
+[CREATE SET](../commands/create-set)  
 
 ## Propriétés
 

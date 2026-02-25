@@ -1,4 +1,4 @@
----
+﻿---
 id: clear-list
 title: CLEAR LIST
 slug: /commands/clear-list
@@ -36,13 +36,13 @@ You do not need to clear a list attached to a form object via the Property List 
 
 To clear a sublist attached to an item (on any level) of another list currently displayed in a form, proceed as follows:
 
-1. Call [GET LIST ITEM](get-list-item.md) on the parent item to get the list reference of the sublist.
-2. Call [SET LIST ITEM](set-list-item.md) on the parent item to detach the sublist from the list item before clearing it.
-3. Call **CLEAR LIST** to clear the sublist whose reference number you obtained with [GET LIST ITEM](get-list-item.md).
+1. Call [GET LIST ITEM](../commands/get-list-item) on the parent item to get the list reference of the sublist.
+2. Call [SET LIST ITEM](../commands/set-list-item) on the parent item to detach the sublist from the list item before clearing it.
+3. Call **CLEAR LIST** to clear the sublist whose reference number you obtained with [GET LIST ITEM](../commands/get-list-item).
 
 ## Example 1 
 
-Within a clean-up routine that clears all objects and data that you no longer need (i.e., when a window is closed and a form unloaded), you may end up clearing a hierarchical list that may have already been cleared, depending on the user actions within the form. Use [Is a list](is-a-list.md) to clear the list only if necessary:
+Within a clean-up routine that clears all objects and data that you no longer need (i.e., when a window is closed and a form unloaded), you may end up clearing a hierarchical list that may have already been cleared, depending on the user actions within the form. Use [Is a list](../commands/is-a-list) to clear the list only if necessary:
 
 ```4d
   // Extract of clean-up routine
@@ -53,17 +53,17 @@ Within a clean-up routine that clears all objects and data that you no longer ne
 
 ## Example 2 
 
-See example for the [Load list](load-list.md) command.
+See example for the [Load list](../commands/load-list) command.
 
 ## Example 3 
 
-See example for the [BLOB to list](blob-to-list.md) command.
+See example for the [BLOB to list](../commands/blob-to-list) command.
 
 ## See also 
 
-[BLOB to list](blob-to-list.md)  
-[Load list](load-list.md)  
-[New list](new-list.md)  
+[BLOB to list](../commands/blob-to-list)  
+[Load list](../commands/load-list)  
+[New list](../commands/new-list)  
 
 ## Properties
 

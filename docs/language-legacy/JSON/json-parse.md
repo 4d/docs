@@ -1,4 +1,4 @@
----
+﻿---
 id: json-parse
 title: JSON Parse
 slug: /commands/json-parse
@@ -32,11 +32,11 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.JSON Parse.Summary-->The **JSON Parse** command parses the contents of a JSON-formatted string and extracts values that you can store in a 4D field or variable.<!-- END REF--> This command deserializes JSON data; it performs the opposite action of the [JSON Stringify](json-stringify.md) command.
+<!--REF #_command_.JSON Parse.Summary-->The **JSON Parse** command parses the contents of a JSON-formatted string and extracts values that you can store in a 4D field or variable.<!-- END REF--> This command deserializes JSON data; it performs the opposite action of the [JSON Stringify](../commands/json-stringify) command.
 
 In *jsonString*, pass the JSON-formatted string whose contents you want to parse. This string must be formatted correctly, otherwise a parsing error is generated. **JSON Parse** can therefore be used to validate JSON strings. 
 
-**Note:** If you use pointers, you must call the [JSON Stringify](json-stringify.md) command before calling **JSON Parse**. 
+**Note:** If you use pointers, you must call the [JSON Stringify](../commands/json-stringify) command before calling **JSON Parse**. 
 
 By default, if you omit the *type* parameter, 4D attempts to convert the value obtained into the type of the variable or field used to store the results (if one is defined). Otherwise, 4D attempts to infer its type. You can also force the type interpretation by passing the *type* parameter: pass one of the following constants, available in the *Field and Variable Types* theme:
 
@@ -133,7 +133,7 @@ If the current date storage setting is "date type", you can write:
 
 ## Example 4 
 
-This example shows the combined use of the [JSON Stringify](json-stringify.md) and **JSON Parse** commands:
+This example shows the combined use of the [JSON Stringify](../commands/json-stringify) and **JSON Parse** commands:
 
 ```4d
  var $JSONContact : Text
@@ -200,8 +200,8 @@ beta[1].golf:{line:10,offset:12}}}
 ## See also 
 
 *Field and Variable Types*  
-[JSON PARSE ARRAY](json-parse-array.md)  
-[JSON Stringify](json-stringify.md)  
+[JSON PARSE ARRAY](../commands/json-parse-array)  
+[JSON Stringify](../commands/json-stringify)  
 [JSON Validate](../commands/json-validate)  
 
 ## Properties

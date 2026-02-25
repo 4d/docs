@@ -1,4 +1,4 @@
----
+﻿---
 id: set-index
 title: SET INDEX
 slug: /commands/set-index
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 ## Nota de compatibilidad 
 
-<!--REF #_command_.SET INDEX.Summary-->**SET INDEX**, aunque es un comando heredado, todavía es totalmente compatible y puede permanecer en su aplicación, no es necesario volver a escribir el código existente.<!-- END REF--> Sin embargo, sería mejor utilizar [CREATE INDEX](create-index.md) y [DELETE INDEX](delete-index.md) para administrar los índices porque brindan más funcionalidades.
+<!--REF #_command_.SET INDEX.Summary-->**SET INDEX**, aunque es un comando heredado, todavía es totalmente compatible y puede permanecer en su aplicación, no es necesario volver a escribir el código existente.<!-- END REF--> Sin embargo, sería mejor utilizar [CREATE INDEX](../commands/create-index) y [DELETE INDEX](../commands/delete-index) para administrar los índices porque brindan más funcionalidades.
 
 ## Descripción 
 
@@ -62,9 +62,9 @@ El parámetro opcional *\** indica una indexación asincrónica (simultánea). U
 
 **Notas:**
 
-* Los índices creados por este comando no tienen nombres. No pueden ser borrados por el comando [DELETE INDEX](delete-index.md) utilizando la sintaxis basada en el nombre.
+* Los índices creados por este comando no tienen nombres. No pueden ser borrados por el comando [DELETE INDEX](../commands/delete-index) utilizando la sintaxis basada en el nombre.
 * Este comando no permite crear o borrar índices compuestos.
-* Este comando no permite borrar un índice de palabras claves creado por el comando [CREATE INDEX](create-index.md).
+* Este comando no permite borrar un índice de palabras claves creado por el comando [CREATE INDEX](../commands/create-index).
 
 ## Nota para despliegue 
 
@@ -97,11 +97,11 @@ Creación de un índice de palabras claves:
 
 ## Ver también 
 
-[CREATE INDEX](create-index.md)  
-[DELETE INDEX](delete-index.md)  
-[GET FIELD PROPERTIES](get-field-properties.md)  
-[ORDER BY](order-by.md)  
-[QUERY](query.md)  
+[CREATE INDEX](../commands/create-index)  
+[DELETE INDEX](../commands/delete-index)  
+[GET FIELD PROPERTIES](../commands/get-field-properties)  
+[ORDER BY](../commands/order-by)  
+[QUERY](../commands/query)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-border-style
 title: OBJECT SET BORDER STYLE
 slug: /commands/object-set-border-style
@@ -49,7 +49,7 @@ Passez dans le paramètre *styleBordure* la valeur de style de ligne que vous so
 
 ## Voir aussi 
 
-[OBJECT Get border style](object-get-border-style.md)  
+[OBJECT Get border style](../commands/object-get-border-style)  
 
 ## Propriétés
 

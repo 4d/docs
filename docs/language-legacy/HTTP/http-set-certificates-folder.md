@@ -1,4 +1,4 @@
----
+﻿---
 id: http-set-certificates-folder
 title: HTTP SET CERTIFICATES FOLDER
 slug: /commands/http-set-certificates-folder
@@ -44,9 +44,9 @@ In *certificatesFolder*, pass the pathname of the custom folder containing the c
 * (macOS): Disk:Applications:myserv:folder
 * (Windows): C:\\Applications\\myserv\\folder
 
-Once this command has been executed, the new path is immediately taken into account by commands such as [HTTP Request](http-request.md) that are executed later on (you do not have to restart the application). It is used in all the processes of the database.
+Once this command has been executed, the new path is immediately taken into account by commands such as [HTTP Request](../commands/http-request) that are executed later on (you do not have to restart the application). It is used in all the processes of the database.
 
-If the folder specified does not exist at the location defined, or if the pathname passed in *certificatesFolder* is not valid, an error is generated. You can intercept this error using an error-handling method installed by the [ON ERR CALL](on-err-call.md) command. 
+If the folder specified does not exist at the location defined, or if the pathname passed in *certificatesFolder* is not valid, an error is generated. You can intercept this error using an error-handling method installed by the [ON ERR CALL](../commands/on-err-call) command. 
 
 ## About SSL certificates 
 
@@ -66,8 +66,8 @@ You want to change certificates folder temporarily:
 
 ## See also 
 
-[GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
-[HTTP Get certificates folder](http-get-certificates-folder.md)  
+[GENERATE CERTIFICATE REQUEST](../commands/generate-certificate-request)  
+[HTTP Get certificates folder](../commands/http-get-certificates-folder)  
 
 ## Properties
 

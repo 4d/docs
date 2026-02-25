@@ -1,4 +1,4 @@
----
+﻿---
 id: data-file
 title: Data file
 slug: /commands/data-file
@@ -43,8 +43,8 @@ Si, par exemple, vous travaillez avec la base MesCDs qui se trouve dans le dossi
 
 ## Voir aussi 
 
-[Application file](application-file.md)  
-[Structure file](structure-file.md)  
+[Application file](../commands/application-file)  
+[Structure file](../commands/structure-file)  
 
 ## Propriétés
 

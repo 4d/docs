@@ -1,4 +1,4 @@
----
+﻿---
 id: query-by-attribute
 title: QUERY BY ATTRIBUTE
 slug: /commands/query-by-attribute
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUERY BY ATTRIBUTE.Summary-->La commande **QUERY BY ATTRIBUTE** recherche les enregistrements répondant au(x) critère(s) de recherche spécifié(s) à l'aide des paramètres *champObjet*, *cheminAttribut*, *opRech* et *valeur* et retourne une sélection d'enregistrements de *laTable*.<!-- END REF-->modifie la sélection courante de *laTable* pour le process courant. Le premier enregistrement de la nouvelle sélection devient l'enregistrement courant. Si vous omettez le paramètre *laTable*, la commande s'applique à la table par défaut. Si aucune table par défaut n'a été définie, une erreur est générée. 
 
-Le paramètre optionnel *opConj* est utilisé pour combiner plusieurs appels à **QUERY BY ATTRIBUTE** en cas de recherche multiple. Les opérateurs de conjonction utilisables sont les mêmes que ceux de la commande [QUERY](query.md) :
+Le paramètre optionnel *opConj* est utilisé pour combiner plusieurs appels à **QUERY BY ATTRIBUTE** en cas de recherche multiple. Les opérateurs de conjonction utilisables sont les mêmes que ceux de la commande [QUERY](../commands/query) :
 
 | **Conjonction** | **Symbole à utiliser avec QUERY BY ATTRIBUTE** |
 | --------------- | ---------------------------------------------- |
@@ -71,7 +71,7 @@ Le paramètre *opRech* est l'opérateur qui va permettre de comparer *champObjet
 
 (\*) Lorsqu'il est utilisé avec des éléments de tableau, l'opérateur # signifie "ne contient aucun".
 
-**Note :** Il est possible de définir le comparateur sous la forme d'une expression texte au lieu d'un symbole. Reportez-vous à la description de la commande [QUERY](query.md) pour plus d'informations. 
+**Note :** Il est possible de définir le comparateur sous la forme d'une expression texte au lieu d'un symbole. Reportez-vous à la description de la commande [QUERY](../commands/query) pour plus d'informations. 
 
 La *valeur* représente ce qui va être comparé au contenu de *cheminAttribut*. La valeur peut être toute expression du même type que *cheminAttribut*. Le type de la valeur n'est évalué qu'une seule fois, au démarrage de la recherche, et ne l'est donc pas pour chaque enregistrement. Si la recherche porte sur le contenu d'une chaîne de caractères, utilisez dans *valeur* le symbole "@" pour isoler le contenu à rechercher, par exemple "@Dupon@". Il est à noter, dans ce cas, que la recherche ne tire que partiellement parti de l'index (compacité du stockage des données).
 
@@ -121,19 +121,19 @@ Voici les règles à observer pour la construction de recherche par attribut à 
 * La première ligne ne doit pas contenir d'opérateur de conjonction,
 * Les suivantes peuvent débuter par un opérateur de conjonction. Si vous l'omettez, l'opérateur ET (&) est utilisé par défaut.
 * Toutes les lignes, à l'exception de la dernière, doivent s'achever par le symbole *\**.
-* **QUERY BY ATTRIBUTE** peut être combiné à des commandes [QUERY](query.md) classiques (voir exemple).
-* Pour lancer la recherche, ne passez pas le paramètre *\** dans la dernière ligne. Autre solution : vous pouvez exécuter la commande [QUERY](query.md) sans autre paramètre que la table.
+* **QUERY BY ATTRIBUTE** peut être combiné à des commandes [QUERY](../commands/query) classiques (voir exemple).
+* Pour lancer la recherche, ne passez pas le paramètre *\** dans la dernière ligne. Autre solution : vous pouvez exécuter la commande [QUERY](../commands/query) sans autre paramètre que la table.
 
 **Note :** Chaque table maintient sa propre construction de recherche courante. Cela signifie que vous pouvez créer de multiples recherches simultanément, une pour chaque table. 
 
 Quelle que soit la manière dont la recherche a été définie :
 
-* Si l'exécution d'une recherche nécessite un certain temps, 4D affiche automatiquement un message contenant un thermomètre de progression. Ce type de message peut être désactivé à l'aide des commandes [MESSAGES ON](messages-on.md) et [MESSAGES OFF](messages-off.md). Si le thermomètre de progression est affiché, l'utilisateur peut cliquer sur le bouton Stop pour interrompre l'opération. Si la recherche s'est correctement déroulée, la variable système OK prend la valeur 1\. Sinon, si la recherche est interrompue, OK prend la valeur 0 (zéro).
+* Si l'exécution d'une recherche nécessite un certain temps, 4D affiche automatiquement un message contenant un thermomètre de progression. Ce type de message peut être désactivé à l'aide des commandes [MESSAGES ON](../commands/messages-on) et [MESSAGES OFF](../commands/messages-off). Si le thermomètre de progression est affiché, l'utilisateur peut cliquer sur le bouton Stop pour interrompre l'opération. Si la recherche s'est correctement déroulée, la variable système OK prend la valeur 1\. Sinon, si la recherche est interrompue, OK prend la valeur 0 (zéro).
 * Si des champs objet indexés sont spécifiés, la recherche est optimisée à chaque fois que c'est possible (la recherche commence par les champs indexés), réduisant au maximum la durée de l'opération.
 
 ### Valeurs date dans l'objet 
 
-Les dates sont stockées dans les objets en fonction des paramètres de la base ; par défaut, la *timezone* est prise en compte (voir le sélecteur JSON use local time dans la commande [SET DATABASE PARAMETER](set-database-parameter.md)). 
+Les dates sont stockées dans les objets en fonction des paramètres de la base ; par défaut, la *timezone* est prise en compte (voir le sélecteur JSON use local time dans la commande [SET DATABASE PARAMETER](../commands/set-database-parameter)). 
 
 ```json
 !1973-05-22! -> "1973-05-21T23:00:00.000Z"
@@ -415,12 +415,12 @@ Si la recherche est correctement effectuée, la variable système OK prend la va
 La variable OK prend la valeur 0 si :
 
 * l'utilisateur clique sur le bouton **Annuler** / **Stop**,
-* en mode 'recherche et verrouillage' (cf. commande [SET QUERY AND LOCK](set-query-and-lock.md)), la recherche a trouvé au moins un enregistrement verrouillé. Dans ce cas également, l'ensemble système LockedSet est mis à jour.
+* en mode 'recherche et verrouillage' (cf. commande [SET QUERY AND LOCK](../commands/set-query-and-lock)), la recherche a trouvé au moins un enregistrement verrouillé. Dans ce cas également, l'ensemble système LockedSet est mis à jour.
 
 ## Voir aussi 
 
   
-[QUERY SELECTION BY ATTRIBUTE](query-selection-by-attribute.md)  
+[QUERY SELECTION BY ATTRIBUTE](../commands/query-selection-by-attribute)  
 *Structure des objets de langage 4D*  
 
 ## Propriétés

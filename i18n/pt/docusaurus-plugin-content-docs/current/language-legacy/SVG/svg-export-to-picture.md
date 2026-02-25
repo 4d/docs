@@ -1,4 +1,4 @@
----
+﻿---
 id: svg-export-to-picture
 title: SVG EXPORT TO PICTURE
 slug: /commands/svg-export-to-picture
@@ -63,8 +63,8 @@ O exemplo abaixo pode ser utilizado para mostrar “Hello World” em uma imagem
 
 ## Ver também 
 
-[DOM EXPORT TO FILE](dom-export-to-file.md)  
-[DOM EXPORT TO VAR](dom-export-to-var.md)  
+[DOM EXPORT TO FILE](../commands/dom-export-to-file)  
+[DOM EXPORT TO VAR](../commands/dom-export-to-var)  
 
 ## Propriedades
 

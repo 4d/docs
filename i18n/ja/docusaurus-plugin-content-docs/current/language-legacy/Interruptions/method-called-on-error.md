@@ -1,4 +1,4 @@
----
+﻿---
 id: method-called-on-error
 title: Method called on error
 slug: /commands/method-called-on-error
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.Method called on error.Summary-->**Method called on error** コマンドはカレントプロセス、または*scope* 引数で指定したスコープにおいて[ON ERR CALL](on-err-call.md) コマンドでインストールされたメソッドの名前を返します。<!-- END REF-->引数には、エラー処理メソッドの名前を取得したい実行コンテキストを渡します。以下の定数のいずれか1つを使用することができます:
+<!--REF #_command_.Method called on error.Summary-->**Method called on error** コマンドはカレントプロセス、または*scope* 引数で指定したスコープにおいて[ON ERR CALL](../commands/on-err-call) コマンドでインストールされたメソッドの名前を返します。<!-- END REF-->引数には、エラー処理メソッドの名前を取得したい実行コンテキストを渡します。以下の定数のいずれか1つを使用することができます:
 
 | 定数                        | 値 | コメント                                             |
 | ------------------------- | - | ------------------------------------------------ |
@@ -55,7 +55,7 @@ displayed_sidebar: docs
 ## 参照 
 
 *Error Handler*  
-[ON ERR CALL](on-err-call.md)  
+[ON ERR CALL](../commands/on-err-call)  
 
 ## プロパティ
 

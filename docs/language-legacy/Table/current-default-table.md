@@ -1,4 +1,4 @@
----
+﻿---
 id: current-default-table
 title: Current default table
 slug: /commands/current-default-table
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Current default table.Summary-->**Current default table** returns a pointer to the table that has been passed to the last call to [DEFAULT TABLE](default-table.md) for the current process.<!-- END REF-->
+<!--REF #_command_.Current default table.Summary-->**Current default table** returns a pointer to the table that has been passed to the last call to [DEFAULT TABLE](../commands/default-table) for the current process.<!-- END REF-->
 
 ## Example 
 
@@ -29,9 +29,9 @@ Provided a default table has been set, the following line of code sets the windo
 
 ## See also 
 
-[DEFAULT TABLE](default-table.md)  
-[Table](table.md)  
-[Table name](table-name.md)  
+[DEFAULT TABLE](../commands/default-table)  
+[Table](../commands/table)  
+[Table name](../commands/table-name)  
 
 ## Properties
 

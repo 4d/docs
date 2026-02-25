@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-value
 title: OBJECT Get value
 slug: /commands/object-get-value
@@ -45,11 +45,11 @@ displayed_sidebar: docs
 
 ## 例題 
 
-[OBJECT SET VALUE](object-set-value.md) コマンドの例題を参照してください。
+[OBJECT SET VALUE](../commands/object-set-value) コマンドの例題を参照してください。
 
 ## 参照 
 
-[OBJECT SET VALUE](object-set-value.md)  
+[OBJECT SET VALUE](../commands/object-set-value)  
 
 ## プロパティ
 

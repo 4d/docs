@@ -1,4 +1,4 @@
----
+﻿---
 id: select-folder
 title: Select folder
 slug: /commands/select-folder
@@ -53,14 +53,14 @@ El parámetro opcional *mensaje* le permite mostrar un mensaje en la caja de di�
 * El número de ruta de acceso memorizada (de 1 a 32 000) para mostrar la carpeta asociada. Esto significa que puede almacenar en memoria la ruta de acceso de la carpeta abierta cuando el usuario hace clic en el botón de selección; en otras palabras, la carpeta elegida por el usuario. Cuando se llama un número arbitrario (por ejemplo, 5) el comando muestra la carpeta del usuario por defecto del sistema (equivalente a pasar una cadena vacía). El usuario puede entonces navegar entre las carpetas en su disco duro. Cuando el usuario hace clic en el botón de selección, la ruta de acceso se memoriza y se asocia con el número 5\. Cuando posteriormente se llama el número 5, se utilizará por defecto la ruta de acceso memorizada. En caso de selección de una nueva ubicación, la ruta número 5 se actualizará, y así sucesivamente.  
 Este mecanismo puede utilizarse para memorizar hasta 32 000 rutas de acceso. Bajo Windows, cada ruta se conserva durante la sesión. Bajo macOS, las rutas quedan memorizadas de una sesión a otra. Si la ruta es incorrecta, el parámetro *rutaDefecto* se ignora.
 
-**Nota:** este mecanismo es idéntico al utilizado por el comando [Select document](select-document.md). Los números de rutas de acceso memorizadas se comparten entre los dos comandos.
+**Nota:** este mecanismo es idéntico al utilizado por el comando [Select document](../commands/select-document). Los números de rutas de acceso memorizadas se comparten entre los dos comandos.
 
 El parámetro *opciones* le permite beneficiarse de funciones adicionales bajo macOS. En este parámetro, puede pasar una de las siguientes constantes, del tema *Documentos sistema*: 
 
 | Constante        | Tipo         | Valor | Comentario                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ---------------- | ------------ | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Package open     | Entero largo | 2     | (Mac OS únicamente): autoriza la apertura de paquetes como carpetas y por lo tanto la visualización/selección de sus contenidos. Por defecto, si no se utiliza esta constante, el comando no permitirá la apertura de paquetes.                                                                                                                                                                                        |
-| Use sheet window | Entero largo | 16    | (Mac OS únicamente): muestra la caja de diálogo de selección en forma de una ventana hoja (esta opción se ignora en Windows). <br/>Las ventanas hojas son específicas para la interfaz macOS con animación gráfica (para mayor información, consulte la sección [DISPLAY SELECTION](display-selection.md)). Por defecto, si esta constante no se utiliza, el comando mostrará una caja de diálogo estándar. |
+| Use sheet window | Entero largo | 16    | (Mac OS únicamente): muestra la caja de diálogo de selección en forma de una ventana hoja (esta opción se ignora en Windows). <br/>Las ventanas hojas son específicas para la interfaz macOS con animación gráfica (para mayor información, consulte la sección [DISPLAY SELECTION](../commands/display-selection)). Por defecto, si esta constante no se utiliza, el comando mostrará una caja de diálogo estándar. |
 
 Puede pasar una constante o la combinación de dos. Estas opciones sólo son tenidas en cuenta bajo macOS. Bajo Windows, el parámetro *opciones* es ignorado si se pasa. 
 
@@ -98,9 +98,9 @@ El siguiente ejemplo le permite seleccionar la carpeta en la cual se almacenará
 
 ## Ver también 
 
-[CREATE FOLDER](create-folder.md)  
-[FOLDER LIST](folder-list.md)  
-[Select document](select-document.md)  
+[CREATE FOLDER](../commands/create-folder)  
+[FOLDER LIST](../commands/folder-list)  
+[Select document](../commands/select-document)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: open-printing-job
 title: OPEN PRINTING JOB
 slug: /commands/open-printing-job
@@ -26,15 +26,15 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.OPEN PRINTING JOB.Summary-->**OPEN PRINTING JOB** コマンドはプリントジョブを開き、[CLOSE PRINTING JOB](close-printing-job.md) コマンドが呼ばれるまで、続くすべてのプリント命令をスタックします。<!-- END REF-->このコマンドはプリントジョブのコントロールを可能にし、特に印刷中に他のプリントジョブが予期せず挿入されないようにします。
+<!--REF #_command_.OPEN PRINTING JOB.Summary-->**OPEN PRINTING JOB** コマンドはプリントジョブを開き、[CLOSE PRINTING JOB](../commands/close-printing-job) コマンドが呼ばれるまで、続くすべてのプリント命令をスタックします。<!-- END REF-->このコマンドはプリントジョブのコントロールを可能にし、特に印刷中に他のプリントジョブが予期せず挿入されないようにします。
 
 **OPEN PRINTING JOB** は、すべての 4D 印刷コマンド、クイックレポート、および 4D Write Pro 印刷コマンドで使用できます。
 
 印刷ジョブはプロセスに対しローカルであり、各プロセスは独自の印刷設定(印刷オプション、カレントプリンター、など)を持ちます。複数の印刷ジョブを同時に4D 内で開くことができます。
 
-[CLOSE PRINTING JOB](close-printing-job.md) コマンドを呼び出してプリントジョブを終了し、印刷ドキュメントをプリンタに送信しなければなりません。このコマンドを呼び出さないと、印刷ドキュメントはスタックに置かれたままとなります。
+[CLOSE PRINTING JOB](../commands/close-printing-job) コマンドを呼び出してプリントジョブを終了し、印刷ドキュメントをプリンタに送信しなければなりません。このコマンドを呼び出さないと、印刷ドキュメントはスタックに置かれたままとなります。
 
-**OPEN PRINTING JOB** はカレントの印刷設定を使用します (デフォルト設定または[SET PRINT OPTION](set-print-option.md) コマンドで設定された設定)。印刷設定を変更するコマンドは**OPEN PRINTING JOB** が呼ばれる前に実行されなければなりません。そうでなければエラーが生成されます(例外として、Orientation option は[SET PRINT OPTION](set-print-option.md) コマンドを使用することで印刷ジョブ内でも設定することが可能です)。
+**OPEN PRINTING JOB** はカレントの印刷設定を使用します (デフォルト設定または[SET PRINT OPTION](../commands/set-print-option) コマンドで設定された設定)。印刷設定を変更するコマンドは**OPEN PRINTING JOB** が呼ばれる前に実行されなければなりません。そうでなければエラーが生成されます(例外として、Orientation option は[SET PRINT OPTION](../commands/set-print-option) コマンドを使用することで印刷ジョブ内でも設定することが可能です)。
 
 **互換性に関する注意:** 4D v20 R4 以降、新規プロジェクトにおいては印刷ジョブはノンブロッキングとなります。詳細な情報については、互換性の設定の[ノンブロッキング印刷オプション](../../settings/compatibility.md) のドキュメンテーションを参照してください。
 
@@ -47,7 +47,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[CLOSE PRINTING JOB](close-printing-job.md)  
+[CLOSE PRINTING JOB](../commands/close-printing-job)  
 
 ## プロパティ
 

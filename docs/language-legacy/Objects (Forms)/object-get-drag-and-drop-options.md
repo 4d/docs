@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-drag-and-drop-options
 title: OBJECT GET DRAG AND DROP OPTIONS
 slug: /commands/object-get-drag-and-drop-options
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable. In this case, you pass a variable reference instead of a string. 
 
-The command returns the current drag and drop options, as set in Design mode or for the current process using the [OBJECT SET DRAG AND DROP OPTIONS](object-set-drag-and-drop-options.md) command.
+The command returns the current drag and drop options, as set in Design mode or for the current process using the [OBJECT SET DRAG AND DROP OPTIONS](../commands/object-set-drag-and-drop-options) command.
 
 Each parameter returns True or False according to whether the corresponding option is enabled or disabled:
 
@@ -47,7 +47,7 @@ Each parameter returns True or False according to whether the corresponding opti
 
 ## See also 
 
-[OBJECT SET DRAG AND DROP OPTIONS](object-set-drag-and-drop-options.md)  
+[OBJECT SET DRAG AND DROP OPTIONS](../commands/object-set-drag-and-drop-options)  
 
 ## Properties
 

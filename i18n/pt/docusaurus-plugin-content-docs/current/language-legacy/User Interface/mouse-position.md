@@ -1,4 +1,4 @@
----
+﻿---
 id: mouse-position
 title: MOUSE POSITION
 slug: /commands/mouse-position
@@ -31,18 +31,18 @@ O parâmetro *botaoMouse* retorna o estado dos botões, como foi descrito anteri
 
 ## Exemplo 
 
-Ver o exemplo do comando [Pop up menu](pop-up-menu.md).
+Ver o exemplo do comando [Pop up menu](../commands/pop-up-menu).
 
 ## Ver também 
 
-[Caps lock down](caps-lock-down.md)  
-[Macintosh command down](macintosh-command-down.md)  
-[Macintosh control down](macintosh-control-down.md)  
-[Macintosh option down](macintosh-option-down.md)  
-[ON EVENT CALL](on-event-call.md)  
-[Shift down](shift-down.md)  
-[Windows Alt down](windows-alt-down.md)  
-[Windows Ctrl down](windows-ctrl-down.md)  
+[Caps lock down](../commands/caps-lock-down)  
+[Macintosh command down](../commands/macintosh-command-down)  
+[Macintosh control down](../commands/macintosh-control-down)  
+[Macintosh option down](../commands/macintosh-option-down)  
+[ON EVENT CALL](../commands/on-event-call)  
+[Shift down](../commands/shift-down)  
+[Windows Alt down](../commands/windows-alt-down)  
+[Windows Ctrl down](../commands/windows-ctrl-down)  
 
 ## Propriedades
 

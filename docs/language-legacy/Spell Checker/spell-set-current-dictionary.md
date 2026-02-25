@@ -1,4 +1,4 @@
----
+﻿---
 id: spell-set-current-dictionary
 title: SPELL SET CURRENT DICTIONARY
 slug: /commands/spell-set-current-dictionary
@@ -38,11 +38,11 @@ displayed_sidebar: docs
 * Windows - the Hunspell dictionary corresponding to the application language,
 * Mac - the native spell checker.
 
-**Note:** For Mac, you can use the Hunspell dictionary via the [SET DATABASE PARAMETER](set-database-parameter.md) command. For more information, see the *Spellcheck configuration* section in the *Design Reference* manual. 
+**Note:** For Mac, you can use the Hunspell dictionary via the [SET DATABASE PARAMETER](../commands/set-database-parameter) command. For more information, see the *Spellcheck configuration* section in the *Design Reference* manual. 
 
 You can use the *dictionary* parameter to change the dictionary. You can pass either:
 
-* a Hunspell dictionary ID number (returned by the [SPELL GET DICTIONARY LIST](spell-get-dictionary-list.md) command),
+* a Hunspell dictionary ID number (returned by the [SPELL GET DICTIONARY LIST](../commands/spell-get-dictionary-list) command),
 * a Hunspell dictionary name (corresponding to the file name of the Hunspell dictionary, with or without its extension),
 * a BCP 47, ISO 639-1 or ISO 639-2 language code. For example, with the BCP 47 language code "en-US" indicates American English and "en-GB" specifies British English. These codes are redirected internally to the corresponding current dictionary (Hunspell or native Mac).
 
@@ -63,9 +63,9 @@ Loading of the "fr-classic" dictionary found in the Hunspell folder:
 
 ## See also 
 
-[SPELL CHECKING](spell-checking.md)  
-[SPELL Get current dictionary](spell-get-current-dictionary.md)  
-[SPELL GET DICTIONARY LIST](spell-get-dictionary-list.md)  
+[SPELL CHECKING](../commands/spell-checking)  
+[SPELL Get current dictionary](../commands/spell-get-current-dictionary)  
+[SPELL GET DICTIONARY LIST](../commands/spell-get-dictionary-list)  
 
 ## Properties
 

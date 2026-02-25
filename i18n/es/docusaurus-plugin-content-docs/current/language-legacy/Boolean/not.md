@@ -1,4 +1,4 @@
----
+﻿---
 id: not
 title: Not
 slug: /commands/not
@@ -32,8 +32,8 @@ Este ejemplo asigna primero Verdadero a una variable, luego cambia el valor de l
 
 ## Ver también 
 
-[False](false.md)  
-[True](true.md)  
+[False](../commands/false)  
+[True](../commands/true)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: register-client
 title: REGISTER CLIENT
 slug: /commands/register-client
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.REGISTER CLIENT.Summary-->The **REGISTER CLIENT** command "registers" a 4D client station with the name specified in *clientName* on 4D Server, so as to allow other clients or possibly 4D Server (by using stored methods) to execute methods on it by using the [`EXECUTE ON CLIENT`](execute-on-client.md) command.<!-- END REF--> Once it is registered, a 4D client can then execute one or more methods for other clients.
+<!--REF #_command_.REGISTER CLIENT.Summary-->The **REGISTER CLIENT** command "registers" a 4D client station with the name specified in *clientName* on 4D Server, so as to allow other clients or possibly 4D Server (by using stored methods) to execute methods on it by using the [`EXECUTE ON CLIENT`](../commands/execute-on-client) command.<!-- END REF--> Once it is registered, a 4D client can then execute one or more methods for other clients.
 
 **Notes:**
 
@@ -46,9 +46,9 @@ displayed_sidebar: docs
 * If this command is used with 4D in local mode, it has no effect.
 * More than one 4D client station can have the same registered name.
 
-When this command is executed, a process, named *clientName*, is created on the client station. This process can only be aborted by the [`UNREGISTER CLIENT`](unregister-client.md) command.   
+When this command is executed, a process, named *clientName*, is created on the client station. This process can only be aborted by the [`UNREGISTER CLIENT`](../commands/unregister-client) command.   
 
-Once the command is executed, it is not possible to modify a 4D client’s name on the fly. To do so, you must call the [`UNREGISTER CLIENT`](unregister-client.md) command, then the **REGISTER CLIENT** command.
+Once the command is executed, it is not possible to modify a 4D client’s name on the fly. To do so, you must call the [`UNREGISTER CLIENT`](../commands/unregister-client) command, then the **REGISTER CLIENT** command.
 
 ## Example 
 
@@ -135,9 +135,9 @@ If the 4D client is correctly registered, the OK system variable is equal to 1\.
 
 ## See also 
 
-[EXECUTE ON CLIENT](execute-on-client.md)  
-[GET REGISTERED CLIENTS](get-registered-clients.md)  
-[UNREGISTER CLIENT](unregister-client.md)  
+[EXECUTE ON CLIENT](../commands/execute-on-client)  
+[GET REGISTERED CLIENTS](../commands/get-registered-clients)  
+[UNREGISTER CLIENT](../commands/unregister-client)  
 
 ## Properties
 

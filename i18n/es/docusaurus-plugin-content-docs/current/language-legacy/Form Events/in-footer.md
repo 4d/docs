@@ -1,4 +1,4 @@
----
+﻿---
 id: in-footer
 title: In footer
 slug: /commands/in-footer
@@ -25,8 +25,8 @@ Para que se genere el ciclo de ejecución **In footer** asegúrese de que la pro
 
 ## Ver también 
 
-[In break](in-break.md)  
-[In header](in-header.md)  
+[In break](../commands/in-break)  
+[In header](../commands/in-header)  
 
 ## Propiedades
 

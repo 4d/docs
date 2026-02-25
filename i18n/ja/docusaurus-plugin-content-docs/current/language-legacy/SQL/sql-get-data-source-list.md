@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-get-data-source-list
 title: SQL GET DATA SOURCE LIST
 slug: /commands/sql-get-data-source-list
@@ -63,9 +63,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[SQL Get current data source](sql-get-current-data-source.md)  
-[SQL LOGIN](sql-login.md)  
-[SQL LOGOUT](sql-logout.md)  
+[SQL Get current data source](../commands/sql-get-current-data-source)  
+[SQL LOGIN](../commands/sql-login)  
+[SQL LOGOUT](../commands/sql-logout)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: method-called-on-event
 title: Method called on event
 slug: /commands/method-called-on-event
@@ -27,13 +27,13 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Method called on event.Summary-->La commande **Method called on event** retourne le nom de la méthode installée par la commande [ON EVENT CALL](on-event-call.md).<!-- END REF--> 
+<!--REF #_command_.Method called on event.Summary-->La commande **Method called on event** retourne le nom de la méthode installée par la commande [ON EVENT CALL](../commands/on-event-call).<!-- END REF--> 
 
 Si aucune méthode d’appel sur événement n’a été installée, une chaîne vide ("") est retournée.
 
 ## Voir aussi 
 
-[ON EVENT CALL](on-event-call.md)  
+[ON EVENT CALL](../commands/on-event-call)  
 
 ## Propriétés
 

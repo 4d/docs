@@ -1,4 +1,4 @@
----
+﻿---
 id: current-form-name
 title: Current form name
 slug: /commands/current-form-name
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current form name.Summary-->El comando **Current form name** devuelve el nombre del formulario actual definido para el proceso.<!-- END REF--> El formulario actual puede ser un formulario proyecto o un formulario tabla.
 
-Por defecto, si no se ha llamado al comando [FORM LOAD](../commands/form-load) en el proceso actual, el formulario actual es el que está siendo visualizado o impreso. Si ha llamado al comando [FORM LOAD](../commands/form-load) en el proceso, el formulario actual es el definido para este comando y permanece así hasta que llame a [FORM UNLOAD](form-unload.md) (o [CLOSE PRINTING JOB](close-printing-job.md)).
+Por defecto, si no se ha llamado al comando [FORM LOAD](../commands/form-load) en el proceso actual, el formulario actual es el que está siendo visualizado o impreso. Si ha llamado al comando [FORM LOAD](../commands/form-load) en el proceso, el formulario actual es el definido para este comando y permanece así hasta que llame a [FORM UNLOAD](../commands/form-unload) (o [CLOSE PRINTING JOB](../commands/close-printing-job)).
 
 El comando devuelve:
 

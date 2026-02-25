@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-get-preference
 title: WA GET PREFERENCE
 slug: /commands/wa-get-preference
@@ -55,7 +55,7 @@ Drag and drop is not supported with Web areas on Windows when the [Fluent UI ren
 
 ## See also 
 
-[WA SET PREFERENCE](wa-set-preference.md)  
+[WA SET PREFERENCE](../commands/wa-set-preference)  
 
 ## Properties
 

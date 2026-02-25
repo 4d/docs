@@ -1,4 +1,4 @@
----
+﻿---
 id: variable-to-blob
 title: VARIABLE TO BLOB
 slug: /commands/variable-to-blob
@@ -49,16 +49,16 @@ VARIABLE TO BLOB acepta todo tipo de variables (incluyendo otros BLOBs), excepto
 
 Note que:
 
-* si guarda una variable de tipo Entero largo que es una referencia a una lista jerárquica (ListRef), VARIABLE TO BLOB guardará la variable Entero largo, no la lista. Para guardar y recuperar las listas jerárquicas en un BLOB, utilice los comandos [LIST TO BLOB](list-to-blob.md) y [BLOB to list](blob-to-list.md).
+* si guarda una variable de tipo Entero largo que es una referencia a una lista jerárquica (ListRef), VARIABLE TO BLOB guardará la variable Entero largo, no la lista. Para guardar y recuperar las listas jerárquicas en un BLOB, utilice los comandos [LIST TO BLOB](../commands/list-to-blob) y [BLOB to list](../commands/blob-to-list).
 * si pasa un objeto o una colección en el parámetro *variable*, el comando ubica una copia (y no una referencia) en el BLOB. Si el objeto o colección contiene punteros, los valores no referenciados se guardan en el BLOB, no los punteros mismos.
 
-Sin embargo, si almacena una variable de tipo [Entero largo](# "Entre -2 millardos y +2 millardos") que es una referencia a una lista jerárquica ([ListRef](# "Una referencia a una lista jerárquica")), VARIABLE TO BLOB almacenará la variable [Entero largo](# "Entre -2 millardos y +2 millardos"), no la lista. Para guardar y recuperar las listas jerárquicas en un BLOB, utilice los comandos [LIST TO BLOB](list-to-blob.md) y [BLOB to list](blob-to-list.md).
+Sin embargo, si almacena una variable de tipo [Entero largo](# "Entre -2 millardos y +2 millardos") que es una referencia a una lista jerárquica ([ListRef](# "Una referencia a una lista jerárquica")), VARIABLE TO BLOB almacenará la variable [Entero largo](# "Entre -2 millardos y +2 millardos"), no la lista. Para guardar y recuperar las listas jerárquicas en un BLOB, utilice los comandos [LIST TO BLOB](../commands/list-to-blob) y [BLOB to list](../commands/blob-to-list).
 
-**Advertencia:** Si utiliza un BLOB para almacenar las variables, debe utilizar posteriormente el comando [BLOB TO VARIABLE](blob-to-variable.md) para recuperar el contenido del BLOB, porque las variables son almacenadas en BLOBs utilizando un formato interno de 4D.
+**Advertencia:** Si utiliza un BLOB para almacenar las variables, debe utilizar posteriormente el comando [BLOB TO VARIABLE](../commands/blob-to-variable) para recuperar el contenido del BLOB, porque las variables son almacenadas en BLOBs utilizando un formato interno de 4D.
 
 Después del llamar al comando, si la variable ha sido almacenada con éxito, la variable OK toma el valor 1\. Si la operación no se pudo realizar, la variable OK toma el valor 0; por ejemplo, por falta de memoria.
 
-**Nota sobre la independencia de la plataforma:** VARIABLE TO BLOB y [BLOB TO VARIABLE](blob-to-variable.md) utilizan un formato interno de 4D para administrar las variables almacenadas en los BLOBs. La ventaja es que usted no tiene que preocuparse por la conversión de bytes (byte swapping) entre plataformas mientras utiliza estos dos comandos. En otras palabras, un BLOB creado en Windows utilizando cualquiera de estos dos comandos puede ser reutilizado en Macintosh y viceversa.
+**Nota sobre la independencia de la plataforma:** VARIABLE TO BLOB y [BLOB TO VARIABLE](../commands/blob-to-variable) utilizan un formato interno de 4D para administrar las variables almacenadas en los BLOBs. La ventaja es que usted no tiene que preocuparse por la conversión de bytes (byte swapping) entre plataformas mientras utiliza estos dos comandos. En otras palabras, un BLOB creado en Windows utilizando cualquiera de estos dos comandos puede ser reutilizado en Macintosh y viceversa.
 
 ### Nota 
 
@@ -147,9 +147,9 @@ Después de añadir estos métodos a su aplicación, puede escribir:
 
 ## Ver también 
 
-[BLOB to list](blob-to-list.md)  
-[BLOB TO VARIABLE](blob-to-variable.md)  
-[LIST TO BLOB](list-to-blob.md)  
+[BLOB to list](../commands/blob-to-list)  
+[BLOB TO VARIABLE](../commands/blob-to-variable)  
+[LIST TO BLOB](../commands/list-to-blob)  
 
 ## Propiedades
 

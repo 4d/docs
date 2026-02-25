@@ -1,4 +1,4 @@
----
+﻿---
 id: query-by-example
 title: QUERY BY EXAMPLE
 slug: /commands/query-by-example
@@ -40,8 +40,8 @@ If the user clicks the Accept button or presses the Enter key, the OK system var
 
 ## See also 
 
-[ORDER BY](order-by.md)  
-[QUERY](query.md)  
+[ORDER BY](../commands/order-by)  
+[QUERY](../commands/query)  
 
 ## Properties
 

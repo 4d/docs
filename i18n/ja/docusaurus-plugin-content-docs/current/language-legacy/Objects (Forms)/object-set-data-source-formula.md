@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-data-source-formula
 title: OBJECT SET DATA SOURCE FORMULA
 slug: /commands/object-set-data-source-formula
@@ -53,7 +53,7 @@ OBJECT SET DATA SOURCE FORMULA(*;"DiscountedPriceInput"; $discountedFormula)
 
 ## 参照
 
-[OBJECT Get data source formula](object-get-data-source-formula.md)<br/>
+[OBJECT Get data source formula](../commands/object-get-data-source-formula)<br/>
 [LISTBOX SET COLUMN FORMULA](../commands/listbox-set-column-formula)<br/>
 [OBJECT SET DATA SOURCE](../commands/object-set-data-source)<br/>
 [OBJECT SET VALUE](../commands/object-set-value)

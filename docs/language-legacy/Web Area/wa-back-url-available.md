@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-back-url-available
 title: WA Back URL available
 slug: /commands/wa-back-url-available
@@ -35,8 +35,8 @@ The command returns **True** if a URL exists and **False** otherwise. More parti
 
 ## See also 
 
-[WA Forward URL available](wa-forward-url-available.md)  
-[WA OPEN BACK URL](wa-open-back-url.md)  
+[WA Forward URL available](../commands/wa-forward-url-available)  
+[WA OPEN BACK URL](../commands/wa-open-back-url)  
 
 ## Properties
 

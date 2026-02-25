@@ -1,4 +1,4 @@
----
+﻿---
 id: get-field-relation
 title: GET FIELD RELATION
 slug: /commands/get-field-relation
@@ -65,7 +65,7 @@ Las propiedades de la relación que une el campo \[Empleados\]Empresa con el cam
 
 ![](../../assets/en/commands/pict31608.es.png)
 
-El siguiente código ilustra las diferentes posibilidades ofrecidas por los comandos GET FIELD RELATION, [GET AUTOMATIC RELATIONS](get-automatic-relations.md) y [SET FIELD RELATION](set-field-relation.md), [SET AUTOMATIC RELATIONS](set-automatic-relations.md) así como sus efectos:
+El siguiente código ilustra las diferentes posibilidades ofrecidas por los comandos GET FIELD RELATION, [GET AUTOMATIC RELATIONS](../commands/get-automatic-relations) y [SET FIELD RELATION](../commands/set-field-relation), [SET AUTOMATIC RELATIONS](../commands/set-automatic-relations) así como sus efectos:
 
 ```4d
  GET AUTOMATIC RELATIONS(one;many) //devuelve False, False
@@ -91,10 +91,10 @@ El siguiente código ilustra las diferentes posibilidades ofrecidas por los coma
 
 ## Ver también 
 
-[GET AUTOMATIC RELATIONS](get-automatic-relations.md)  
-[GET RELATION PROPERTIES](get-relation-properties.md)  
-[SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
-[SET FIELD RELATION](set-field-relation.md)  
+[GET AUTOMATIC RELATIONS](../commands/get-automatic-relations)  
+[GET RELATION PROPERTIES](../commands/get-relation-properties)  
+[SET AUTOMATIC RELATIONS](../commands/set-automatic-relations)  
+[SET FIELD RELATION](../commands/set-field-relation)  
 
 ## Propiedades
 

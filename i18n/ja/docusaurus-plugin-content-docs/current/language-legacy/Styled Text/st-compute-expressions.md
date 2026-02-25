@@ -1,4 +1,4 @@
----
+﻿---
 id: st-compute-expressions
 title: ST COMPUTE EXPRESSIONS
 slug: /commands/st-compute-expressions
@@ -33,13 +33,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST COMPUTE EXPRESSIONS.Summary-->**ST COMPUTE EXPRESSIONS**コマンドは、*object* 引数で指定したマルチスタイルあるいは4D Write Proのフィールドあるいは変数内にあるダイナミック 4D 式を更新します。<!-- END REF-->
 
-マルチスタイルテキストエリアあるいは4D Write Pro エリアで使用されている 4D 式の詳細に関しては、 [ST INSERT EXPRESSION](st-insert-expression.md) コマンドの詳細を参照して下さい。
+マルチスタイルテキストエリアあるいは4D Write Pro エリアで使用されている 4D 式の詳細に関しては、 [ST INSERT EXPRESSION](../commands/st-insert-expression) コマンドの詳細を参照して下さい。
 
 このコマンドは *object* で指定したオブジェクト内の4D 式の結果を、カレントの内容に応じて更新してそれを表示します。例えば、挿入された4D 式が時刻であった場合、表示される時刻は **ST COMPUTE EXPRESSIONS** コマンドを使用するたびに変更されます。4D 式は以下のときにも更新されます:
 
 * 挿入されたとき
 * オブジェクトがロードされたとき
-* [ST FREEZE EXPRESSIONS](st-freeze-expressions.md) コマンドにおいて、2番目の *\** を渡して4D式が固定化されたとき
+* [ST FREEZE EXPRESSIONS](../commands/st-freeze-expressions) コマンドにおいて、2番目の *\** を渡して4D式が固定化されたとき
 
 **ST COMPUTE EXPRESSIONS** コマンドは SPAN タグも含めてスタイル付テキストを変更しません。 object で指定されたオブジェクト内に表示された標準テキストのみ変更します。処理された値はスタイル付テキストの中には保存されず、参照のみが保存されます。
 
@@ -78,8 +78,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ST FREEZE EXPRESSIONS](st-freeze-expressions.md)  
-[ST INSERT EXPRESSION](st-insert-expression.md)  
+[ST FREEZE EXPRESSIONS](../commands/st-freeze-expressions)  
+[ST INSERT EXPRESSION](../commands/st-insert-expression)  
 
 ## プロパティ
 

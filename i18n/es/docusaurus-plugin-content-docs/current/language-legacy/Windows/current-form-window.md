@@ -1,4 +1,4 @@
----
+﻿---
 id: current-form-window
 title: Current form window
 slug: /commands/current-form-window
@@ -35,7 +35,7 @@ La ventana del formulario actual puede ser generada automáticamente por un coma
 
 [Open form window](../commands/open-form-window)  
 [Open window](../commands/open-window)  
-[RESIZE FORM WINDOW](resize-form-window.md)  
+[RESIZE FORM WINDOW](../commands/resize-form-window)  
 
 ## Propiedades
 

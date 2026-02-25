@@ -1,4 +1,4 @@
----
+﻿---
 id: structure-file
 title: Structure file
 slug: /commands/structure-file
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Structure file.Summary-->La fonction **Structure file** retourne le chemin d'accès du fichier de structure de la base en cours d'utilisation.<!-- END REF-->* Avec les bases projets, la commande retourne le chemin d'accès du fichier **.4dproject.**
 
-**Note :** Dans le cas particulier d'une base compilée et fusionnée avec 4D Volume Desktop, cette commande retourne le chemin d'accès du fichier de l'application (fichier exécutable) sous Windows et macOS. Sous macOS, ce fichier est situé à l’intérieur du progiciel, dans le dossier \[Contents:MacOS\]. Ce fonctionnement provient d’un ancien mécanisme, conservé pour des raisons de compatibilité. Si vous souhaitez obtenir le nom long du progiciel lui-même, il est préférable d’utiliser la commande [Application file](application-file.md). L’astuce consiste à tester l’application à l’aide de la commande [Application type](application-type.md) puis à exécuter **Structure file** ou [Application file](application-file.md) en fonction du contexte.
+**Note :** Dans le cas particulier d'une base compilée et fusionnée avec 4D Volume Desktop, cette commande retourne le chemin d'accès du fichier de l'application (fichier exécutable) sous Windows et macOS. Sous macOS, ce fichier est situé à l’intérieur du progiciel, dans le dossier \[Contents:MacOS\]. Ce fonctionnement provient d’un ancien mécanisme, conservé pour des raisons de compatibilité. Si vous souhaitez obtenir le nom long du progiciel lui-même, il est préférable d’utiliser la commande [Application file](../commands/application-file). L’astuce consiste à tester l’application à l’aide de la commande [Application type](../commands/application-type) puis à exécuter **Structure file** ou [Application file](../commands/application-file) en fonction du contexte.
 
 **ATTENTION :** Si vous appelez cette commande lorsque vous utilisez 4D en mode distant, seul le nom du fichier de structure est renvoyé, pas le nom long.
 
@@ -74,9 +74,9 @@ L’exemple suivant permet de savoir si la méthode est appelée depuis un compo
 
 ## Voir aussi 
 
-[Application file](application-file.md)  
-[COMPONENT LIST](component-list.md)  
-[Data file](data-file.md)  
+[Application file](../commands/application-file)  
+[COMPONENT LIST](../commands/component-list)  
+[Data file](../commands/data-file)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-borders
 title: QR SET BORDERS
 slug: /commands/qr-set-borders
@@ -85,7 +85,7 @@ If you pass an invalid line parameter, the error -9855 will be generated.
 
 ## See also 
 
-[QR GET BORDERS](qr-get-borders.md)  
+[QR GET BORDERS](../commands/qr-get-borders)  
 
 ## Properties
 

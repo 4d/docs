@@ -1,4 +1,4 @@
----
+﻿---
 id: base64-encode
 title: BASE64 ENCODE
 slug: /commands/base64-encode
@@ -48,9 +48,9 @@ By default if the *\** parameter is omitted, the command uses a Base64 encoding.
 
 ## See also 
 
-[BASE64 DECODE](base64-decode.md)  
-[Generate digest](generate-digest.md)  
-[XML DECODE](xml-decode.md)  
+[BASE64 DECODE](../commands/base64-decode)  
+[Generate digest](../commands/generate-digest)  
+[XML DECODE](../commands/xml-decode)  
 
 ## Properties
 

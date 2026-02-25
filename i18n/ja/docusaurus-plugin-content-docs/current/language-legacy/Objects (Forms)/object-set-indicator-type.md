@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-indicator-type
 title: OBJECT SET INDICATOR TYPE
 slug: /commands/object-set-indicator-type
@@ -45,7 +45,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT Get indicator type](object-get-indicator-type.md)  
+[OBJECT Get indicator type](../commands/object-get-indicator-type)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: st-set-text
 title: ST SET TEXT
 slug: /commands/st-set-text
@@ -42,7 +42,7 @@ Se omitido o parâmetro *\**, indica que o parâmetro *objeto* é um campo ou um
 
 ### 
 
-Em *novoTexto*, passe o texto a inserir. O comando ST SET TEXT está desenhado para trabalhar com texto enriquecido (multi estilo) com etiquetas de tipo <span>. Em todos os demais casos (particularmente, quando trabalha com texto plano que contenha os caracteres <, > ou &), deve utilizar o comando [ST SET PLAIN TEXT](st-set-plain-text.md). Se passa texto plano com os caracteres <, > ou & ao comando ST SET TEXT, o comando no faz nada. Este princípio de funcionamento é necessário porque se inserir diretamente uma cadeia como "a<b" dentro de um texto enriquecido, não vai distorcionar a análise interna das etiquetas <span>. Neste caso, o caractere "<" deve ser previamente codificado como "&lt;", o qual pode ser feito utilizando o comando [ST SET PLAIN TEXT](st-set-plain-text.md) (ver também o exemplo deste comando).
+Em *novoTexto*, passe o texto a inserir. O comando ST SET TEXT está desenhado para trabalhar com texto enriquecido (multi estilo) com etiquetas de tipo <span>. Em todos os demais casos (particularmente, quando trabalha com texto plano que contenha os caracteres <, > ou &), deve utilizar o comando [ST SET PLAIN TEXT](../commands/st-set-plain-text). Se passa texto plano com os caracteres <, > ou & ao comando ST SET TEXT, o comando no faz nada. Este princípio de funcionamento é necessário porque se inserir diretamente uma cadeia como "a<b" dentro de um texto enriquecido, não vai distorcionar a análise interna das etiquetas <span>. Neste caso, o caractere "<" deve ser previamente codificado como "&lt;", o qual pode ser feito utilizando o comando [ST SET PLAIN TEXT](../commands/st-set-plain-text) (ver também o exemplo deste comando).
 
 Os parâmetros opcionais *inicioSel* e *fimSel* permitem designar uma seleção de texto no objeto. Os valores de *inicioSel* e *fimSel* oferecem uma seleção de texto sem formato, sem levar em consideração nenhum tipo de etiquetas de estilo no texto. A ação do comando varía segundo os parâmetros opcionais *inicioSel* e *fimSel*:
 
@@ -96,13 +96,13 @@ O campo e seu conteúdo são os seguintes:
 
 ## Exemplo 2 
 
-Consulte o exemplo do comando [ST SET PLAIN TEXT](st-set-plain-text.md). 
+Consulte o exemplo do comando [ST SET PLAIN TEXT](../commands/st-set-plain-text). 
 
 ## Ver também 
 
-[ST Get plain text](st-get-plain-text.md)  
-[ST Get text](st-get-text.md)  
-[ST SET PLAIN TEXT](st-set-plain-text.md)  
+[ST Get plain text](../commands/st-get-plain-text)  
+[ST Get text](../commands/st-get-text)  
+[ST SET PLAIN TEXT](../commands/st-set-plain-text)  
 
 ## Propriedades
 

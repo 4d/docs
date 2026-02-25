@@ -1,4 +1,4 @@
----
+﻿---
 id: insert-in-blob
 title: INSERT IN BLOB
 slug: /commands/insert-in-blob
@@ -42,7 +42,7 @@ Before the call, you pass in the *offset* parameter the position of the insertio
 
 ## See also 
 
-[DELETE FROM BLOB](delete-from-blob.md)  
+[DELETE FROM BLOB](../commands/delete-from-blob)  
 
 ## Properties
 

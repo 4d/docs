@@ -1,4 +1,4 @@
----
+﻿---
 id: get-document-properties
 title: GET DOCUMENT PROPERTIES
 slug: /commands/get-document-properties
@@ -109,7 +109,7 @@ return !01/01/95!+($timeStamp\86400)
  End case
 ```
 
-このトリガをデータベースに記述すると、以下のCREATE DOCUMENTATIONプロジェクトメソッドの作成に必要となるすべての準備が整います。ドキュメントの作成および更新の日付および時間の処理には**GET DOCUMENT PROPERTIES**コマンドおよび[SET DOCUMENT PROPERTIES](set-document-properties.md)コマンドを使用します。
+このトリガをデータベースに記述すると、以下のCREATE DOCUMENTATIONプロジェクトメソッドの作成に必要となるすべての準備が整います。ドキュメントの作成および更新の日付および時間の処理には**GET DOCUMENT PROPERTIES**コマンドおよび[SET DOCUMENT PROPERTIES](../commands/set-document-properties)コマンドを使用します。
 
 ```4d
   //CREATE DOCUMENTATIONプロジェクトメソッド
@@ -210,7 +210,7 @@ return !01/01/95!+($timeStamp\86400)
 
 ## 参照 
 
-[SET DOCUMENT PROPERTIES](set-document-properties.md)  
+[SET DOCUMENT PROPERTIES](../commands/set-document-properties)  
 
 ## プロパティ
 

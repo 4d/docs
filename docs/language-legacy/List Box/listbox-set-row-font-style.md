@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-row-font-style
 title: LISTBOX SET ROW FONT STYLE
 slug: /commands/listbox-set-row-font-style
@@ -55,7 +55,7 @@ In *style*, you pass a style value. You must use one (or a combination) of the c
 | Underline | Integer | 4     |
 
 If an array of font styles has been associated with the list box or column, only the element matching the row is modified. In other words, executing the command has the same effect, in this case, as modifying an element of the font style array.   
-If there is no font style array associated with the list box or column, one will be created dynamically when this command is called. You can access them using the [LISTBOX Get array](listbox-get-array.md) command.
+If there is no font style array associated with the list box or column, one will be created dynamically when this command is called. You can access them using the [LISTBOX Get array](../commands/listbox-get-array) command.
 
 If conflicting style properties are set for the column or the list box, an order of priority is applied. For more information, refer to the *Design Reference* manual. 
 
@@ -87,8 +87,8 @@ After the second statement, all the cells of the third row change to underlined 
 
 ## See also 
 
-[LISTBOX Get row font style](listbox-get-row-font-style.md)  
-[LISTBOX SET ROW COLOR](listbox-set-row-color.md)  
+[LISTBOX Get row font style](../commands/listbox-get-row-font-style)  
+[LISTBOX SET ROW COLOR](../commands/listbox-set-row-color)  
 
 ## Properties
 

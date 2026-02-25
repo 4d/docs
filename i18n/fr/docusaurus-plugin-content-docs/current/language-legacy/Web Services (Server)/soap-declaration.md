@@ -1,4 +1,4 @@
----
+﻿---
 id: soap-declaration
 title: SOAP DECLARATION
 slug: /commands/soap-declaration
@@ -97,9 +97,9 @@ Passez dans *entrée\_sortie* une valeur indiquant si le paramètre traité est 
 
 * Paramètres sortants :  
    * Is XML indique que le paramètre contient une structure XML,  
-   * Is DOM reference indique que le paramètre contient la référence DOM d’une structure XML. Dans ce cas, l’insertion de la structure XML dans le message SOAP équivaut à l’exécution de la commande [DOM EXPORT TO VAR](dom-export-to-var.md).
+   * Is DOM reference indique que le paramètre contient la référence DOM d’une structure XML. Dans ce cas, l’insertion de la structure XML dans le message SOAP équivaut à l’exécution de la commande [DOM EXPORT TO VAR](../commands/dom-export-to-var).
 
-**Note :** Dans le cas de références DOM utilisées en paramètres sortants, il est recommandé d’utiliser des références globales, créées par exemple au démarrage et closes à la fermeture de l’application. En effet, une référence DOM créée au sein du Web Service lui-même ne peut pas être refermée avec [DOM CLOSE XML](dom-close-xml.md) sinon le Web Service ne retourne plus rien. Les appels multiples au Web Service impliquent alors la création d’autant de références DOM non refermées, ce qui peut provoquer une saturation de la mémoire.
+**Note :** Dans le cas de références DOM utilisées en paramètres sortants, il est recommandé d’utiliser des références globales, créées par exemple au démarrage et closes à la fermeture de l’application. En effet, une référence DOM créée au sein du Web Service lui-même ne peut pas être refermée avec [DOM CLOSE XML](../commands/dom-close-xml) sinon le Web Service ne retourne plus rien. Les appels multiples au Web Service impliquent alors la création d’autant de références DOM non refermées, ce qui peut provoquer une saturation de la mémoire.
 
 * Paramètres entrants :  
    * Is XML indique que le paramètre doit recevoir un argument XML envoyé par le client SOAP.  
@@ -189,9 +189,9 @@ Cet exemple illustre l'effet des différents types de déclarations :
 
 ## Voir aussi 
 
-[Is data file locked](is-data-file-locked.md)  
-[SOAP Get info](soap-get-info.md)  
-[SOAP SEND FAULT](soap-send-fault.md)  
+[Is data file locked](../commands/is-data-file-locked)  
+[SOAP Get info](../commands/soap-get-info)  
+[SOAP SEND FAULT](../commands/soap-send-fault)  
 
 ## Propriétés
 

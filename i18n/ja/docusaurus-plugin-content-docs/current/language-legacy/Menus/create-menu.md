@@ -1,4 +1,4 @@
----
+﻿---
 id: create-menu
 title: Create menu
 slug: /commands/create-menu
@@ -32,16 +32,16 @@ displayed_sidebar: docs
 
 コマンドは新しいメニューの[MenuRef](# "Unique ID (16-character alphanumeric) of a menu")型のIDを返します。
 
-* オプションの*menu*引数を渡さない場合、空のメニューが作成されます。[RELEASE MENU](release-menu.md) や[SET MENU ITEM](set-menu-item.md)などのコマンドを使用して、メニューを構築、管理しなくてはなりません。
+* オプションの*menu*引数を渡さない場合、空のメニューが作成されます。[RELEASE MENU](../commands/release-menu) や[SET MENU ITEM](../commands/set-menu-item)などのコマンドを使用して、メニューを構築、管理しなくてはなりません。
 * *menu* 引数を渡すと、作成されるメニューはソースメニューの完全なコピーとなります。サブメニューを含む、ソースメニューのすべてのプロパティが、新しいメニューに適用されます。新しい[MenuRef](# "Unique ID (16-character alphanumeric) of a menu")参照がソースメニューと既存のサブメニューに作成されることに注意してください。
 
 *menu* 引数には、有効なメニュー参照、またはデザインモードで定義したメニュー名やメニュー番号を渡すことができます。最後のケースでは、新しいメニューはソースメニューバーのメニューやサブメニューで構成されます。
 
 **注:** *menu* 引数に無効な値を渡した場合、空のメニューが作成されます。
 
-このコマンドで作成されたメニューは、[SET MENU BAR](set-menu-bar.md) コマンドでメニューバーとして使用できます。
+このコマンドで作成されたメニューは、[SET MENU BAR](../commands/set-menu-bar) コマンドでメニューバーとして使用できます。
 
-[Create menu](create-menu.md)で作成したメニューが必要なくなったときには、[RELEASE MENU](release-menu.md)コマンドを呼び出して使用されているメモリを解放してください。
+[Create menu](../commands/create-menu)で作成したメニューが必要なくなったときには、[RELEASE MENU](../commands/release-menu)コマンドを呼び出して使用されているメモリを解放してください。
 
 ## 例題 
 
@@ -49,9 +49,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Dynamic pop up menu](dynamic-pop-up-menu.md)  
-[RELEASE MENU](release-menu.md)  
-[SET MENU BAR](set-menu-bar.md)  
+[Dynamic pop up menu](../commands/dynamic-pop-up-menu)  
+[RELEASE MENU](../commands/release-menu)  
+[SET MENU BAR](../commands/set-menu-bar)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: type
 title: Type
 slug: /commands/type
@@ -72,8 +72,8 @@ You can apply the Type function to fields, interprocess variables, process varia
 
 **Notes:** 
 
-* You can not apply the **Type** function to scalar expressions such as object properties (*emp.name*) or collection elements (*myColl\[5\]*). To do this, you must use the [Value type](value-type.md) command.
-* In compiled mode, calling **Type** on a method parameter declared as variant does not return Is variant but the actual data type (same as calling [Value type](value-type.md)).
+* You can not apply the **Type** function to scalar expressions such as object properties (*emp.name*) or collection elements (*myColl\[5\]*). To do this, you must use the [Value type](../commands/value-type) command.
+* In compiled mode, calling **Type** on a method parameter declared as variant does not return Is variant but the actual data type (same as calling [Value type](../commands/value-type)).
 
 ## Example 1 
 
@@ -152,13 +152,13 @@ In certain cases, for example when writing generic code, you may need to find ou
 
 ## Example 3 
 
-See example for the [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md) command.
+See example for the [APPEND DATA TO PASTEBOARD](../commands/append-data-to-pasteboard) command.
 
 ## See also 
 
-[Is a variable](is-a-variable.md)  
-[Undefined](undefined.md)  
-[Value type](value-type.md)  
+[Is a variable](../commands/is-a-variable)  
+[Undefined](../commands/undefined)  
+[Value type](../commands/value-type)  
 
 ## Properties
 

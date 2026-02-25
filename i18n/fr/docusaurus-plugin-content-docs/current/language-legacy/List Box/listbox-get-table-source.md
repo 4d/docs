@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-table-source
 title: LISTBOX GET TABLE SOURCE
 slug: /commands/listbox-get-table-source
@@ -44,7 +44,7 @@ Si la list box est associée à des tableaux, *numTable* retourne -1 et *nom*, s
 
 ## Voir aussi 
 
-[LISTBOX SET TABLE SOURCE](listbox-set-table-source.md)  
+[LISTBOX SET TABLE SOURCE](../commands/listbox-set-table-source)  
 
 ## Propriétés
 

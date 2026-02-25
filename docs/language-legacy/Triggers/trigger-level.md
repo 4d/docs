@@ -1,4 +1,4 @@
----
+﻿---
 id: trigger-level
 title: Trigger level
 slug: /commands/trigger-level
@@ -33,8 +33,8 @@ For more information on execution levels, see the topic *Cascading Triggers*.
 
 ## See also 
 
-[Trigger event](trigger-event.md)  
-[TRIGGER PROPERTIES](trigger-properties.md)  
+[Trigger event](../commands/trigger-event)  
+[TRIGGER PROPERTIES](../commands/trigger-properties)  
 *Triggers*  
 
 ## Properties

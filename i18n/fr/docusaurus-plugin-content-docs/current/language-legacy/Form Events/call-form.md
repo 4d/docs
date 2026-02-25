@@ -1,4 +1,4 @@
----
+﻿---
 id: call-form
 title: CALL FORM
 slug: /commands/call-form
@@ -113,7 +113,7 @@ Vous pouvez alors ajouter d'autres messages en exécutant à nouveau la commande
 ## Voir aussi 
 
   
-[CALL WORKER](call-worker.md)  
+[CALL WORKER](../commands/call-worker)  
 [DIALOG](../commands/dialog)  
 
 ## Propriétés

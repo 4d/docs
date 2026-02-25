@@ -1,4 +1,4 @@
----
+﻿---
 id: register-data-key
 title: Register data key
 slug: /commands/register-data-key
@@ -35,7 +35,7 @@ El llavero 4D es un conjunto de una o más llaves de cifrado de datos cargadas e
 En el primer parámetro, pase *curPassPhrase* o *curDataKey* que define la llave de cifrado a agregar:
 
 * *curPassPhrase*: cadena utilizada para generar la llave de cifrado. Cuando se utiliza este parámetro, se genera una llave de cifrado.
-* *curDataKey*: objeto (con propiedad *encodedKey*) que contiene la llave de cifrado de datos. Esta llave puede haberse generado con el comando [New data key](new-data-key.md).
+* *curDataKey*: objeto (con propiedad *encodedKey*) que contiene la llave de cifrado de datos. Esta llave puede haberse generado con el comando [New data key](../commands/new-data-key).
 
 **Valor devuelto**
 
@@ -59,7 +59,7 @@ En el primer parámetro, pase *curPassPhrase* o *curDataKey* que define la llave
 ## Ver también 
 
   
-[New data key](new-data-key.md)  
+[New data key](../commands/new-data-key)  
 
 ## Propiedades
 

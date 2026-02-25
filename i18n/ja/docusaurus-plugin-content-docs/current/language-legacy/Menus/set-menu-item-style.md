@@ -1,4 +1,4 @@
----
+﻿---
 id: set-menu-item-style
 title: SET MENU ITEM STYLE
 slug: /commands/set-menu-item-style
@@ -50,7 +50,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Get menu item style](get-menu-item-style.md)  
+[Get menu item style](../commands/get-menu-item-style)  
 
 ## プロパティ
 

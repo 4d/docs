@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-rgb-colors
 title: OBJECT GET RGB COLORS
 slug: /commands/object-get-rgb-colors
@@ -43,11 +43,11 @@ The RGB color values returned in the *foregroundColor*, *backgroundColor*, and *
 * if a parameter of [text](# "A character string that may contain from 0 to 2 GB of text") type is passed, the color is returned in CSS format with "#rrggbb" syntax (ex: "#0000FF")
 * if a parameter of [longint](# "Number between -2^31..(2^31)-1 (4-byte Integer)") type is passed, the color can be 4-byte Long Integer of the format (0x00RRGGBB) or negative values corresponding to the "system" colors.
 
-For more information about the format of the *foregroundColor*, *backgroundColor*, and *altBackgrndColor* parameters, refer to the description of the [OBJECT SET RGB COLORS](object-set-rgb-colors.md) command.
+For more information about the format of the *foregroundColor*, *backgroundColor*, and *altBackgrndColor* parameters, refer to the description of the [OBJECT SET RGB COLORS](../commands/object-set-rgb-colors) command.
 
 ## See also 
 
-[OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
+[OBJECT SET RGB COLORS](../commands/object-set-rgb-colors)  
 
 ## Properties
 

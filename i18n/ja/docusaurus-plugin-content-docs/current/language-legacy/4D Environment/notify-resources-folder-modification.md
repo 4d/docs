@@ -1,4 +1,4 @@
----
+﻿---
 id: notify-resources-folder-modification
 title: NOTIFY RESOURCES FOLDER MODIFICATION
 slug: /commands/notify-resources-folder-modification
@@ -41,11 +41,11 @@ displayed_sidebar: docs
 設定は以下のいずれかの方法で行います:
 
 * データベース設定のを使用してデータベース全体を対象に設定します。この場合、すべてのマシンに設定が適用されます。
-* [SET DATABASE PARAMETER](set-database-parameter.md)コマンドを使用して各リモートマシンごとに設定します (Auto Synchro Resources Folder セレクター)。この場合、この設定はデータベース設定を上書きし、セッション中そのリモートマシンにのみ適用されます。
+* [SET DATABASE PARAMETER](../commands/set-database-parameter)コマンドを使用して各リモートマシンごとに設定します (Auto Synchro Resources Folder セレクター)。この場合、この設定はデータベース設定を上書きし、セッション中そのリモートマシンにのみ適用されます。
 
 ## 参照 
 
-[Get 4D folder](get-4d-folder.md)  
+[Get 4D folder](../commands/get-4d-folder)  
 
 ## プロパティ
 

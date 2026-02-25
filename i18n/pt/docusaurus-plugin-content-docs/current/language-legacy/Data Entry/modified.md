@@ -1,4 +1,4 @@
----
+﻿---
 id: modified
 title: Modified
 slug: /commands/modified
@@ -37,9 +37,9 @@ Durante a entrada de dados, um campo é considerado modificado se o usuário edi
 
 Quando se executa um método, se considera que um campo foi modificado se lhe atribui um valor (diferente ou não).
 
-**Nota:** **Modified** sempre devolve [True](true.md "True") depois da execução dos comandos [PUSH RECORD](push-record.md) e [POP RECORD](pop-record.md). 
+**Nota:** **Modified** sempre devolve [True](true.md "True") depois da execução dos comandos [PUSH RECORD](../commands/push-record) e [POP RECORD](../commands/pop-record). 
 
-Em todos os casos, utilize o comando [Old](old.md) para detectar se o valor do campo realmente foi modificado.
+Em todos os casos, utilize o comando [Old](../commands/old) para detectar se o valor do campo realmente foi modificado.
 
 **Nota:** apesar de que **Modified** pode ser aplicado a todo tipo de campo, ele é utilizado com o comando \[#cmd id="35"/\], deve levar em conta as restrições que aplicam ao comando \[#cmd id="35"/\], Para mais detalhes, ver a descrição do comando \[#cmd id="35"/\],
 
@@ -79,7 +79,7 @@ Seleciona um registro para a tabela *\[umaTabela\]*, depois chama múltiplas sub
 ## Ver também 
 
 [Form event code](../commands/form-event-code)  
-[Old](old.md)  
+[Old](../commands/old)  
 
 ## Propriedades
 

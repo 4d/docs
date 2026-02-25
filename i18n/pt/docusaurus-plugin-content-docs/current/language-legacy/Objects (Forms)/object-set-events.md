@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-events
 title: OBJECT SET EVENTS
 slug: /commands/object-set-events
@@ -41,7 +41,7 @@ No parâmetro *arrEventos*, passe um array inteiro longo que contenha a lista de
   
 É importante levar em conta que o evento On Load não está incluído nesta lista: este evento não pode ser definido porque já foi gerado durante a execução do comando.
 
-Em *arrEventos*, também pode passar todo valor correspondente a um evento personalizado. Neste caso, recomendamos utilizar valores negativos (ver o comando [CALL SUBFORM CONTAINER](call-subform-container.md)).
+Em *arrEventos*, também pode passar todo valor correspondente a um evento personalizado. Neste caso, recomendamos utilizar valores negativos (ver o comando [CALL SUBFORM CONTAINER](../commands/call-subform-container)).
 
 O parâmetro *modo* se utiliza para definir o tratamento global a realizar para os elementos do array. Para isso, pode passar uma das seguintes constantes, que se encontra no tema "*Propriedades dos objetos* ":
 
@@ -116,7 +116,7 @@ Desativação de um só evento do formulário sem modificar os outros:
 ## Ver também 
 
 *Form event*  
-[OBJECT GET EVENTS](object-get-events.md)  
+[OBJECT GET EVENTS](../commands/object-get-events)  
 
 ## Propriedades
 

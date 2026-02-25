@@ -1,4 +1,4 @@
----
+﻿---
 id: execute-method
 title: EXECUTE METHOD
 slug: /commands/execute-method
@@ -44,7 +44,7 @@ If this command is executed correctly, the system variable OK is set to 1; other
 
 ## See also 
 
-[EXECUTE FORMULA](execute-formula.md)  
+[EXECUTE FORMULA](../commands/execute-formula)  
 
 ## Properties
 

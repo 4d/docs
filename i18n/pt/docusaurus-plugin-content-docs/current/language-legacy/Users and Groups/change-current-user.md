@@ -1,4 +1,4 @@
----
+﻿---
 id: change-current-user
 title: CHANGE CURRENT USER
 slug: /commands/change-current-user
@@ -34,16 +34,16 @@ displayed_sidebar: docs
 **Nota**:
 
 * Este comando não tem efeito em bancos de dados projeto abertos em modo monousuário.
-* se for definido um alias (apelido) para o usuário atual com o comando [SET USER ALIAS](set-user-alias.md), se restabelece mediante a chamada de comando **CHANGE CURRENT USER**..
+* se for definido um alias (apelido) para o usuário atual com o comando [SET USER ALIAS](../commands/set-user-alias), se restabelece mediante a chamada de comando **CHANGE CURRENT USER**..
 
 Se o comando CHANGE CURRENT USER for executado sem parâmetros, a caixa de diálogo de identificação do usuário da banco é mostrada. O usuário deve então introduzir ou selecionar um nome e senha válidos para entrar ao banco. O conteúdo da caixa de diálogo de conexão depende das opções definidas na página **Segurança** das Preferências do banco.  
   
   
 Do mesmo jeito, pode passar os parâmetros opcionais *usuario* e *senha* para especificar por programação a nova conta a utilizar.   
   
-Passe no parâmetro usuário o nome ou o número de referência única (*refUsuário*) da conta a utilizar. Os nomes e os números de usuário podem ser obtidos utilizando o comando [GET USER LIST](get-user-list.md).  
+Passe no parâmetro usuário o nome ou o número de referência única (*refUsuário*) da conta a utilizar. Os nomes e os números de usuário podem ser obtidos utilizando o comando [GET USER LIST](../commands/get-user-list).  
   
-Se a conta de usuário designada não existir ou tiver sido apagada, o erro -9979 é gerado. Pode interceptar este erro com o método de gestão de erros instalado pelo comando [ON ERR CALL](on-err-call.md) . Do contrário, pode chamar a função [Is user deleted](is-user-deleted.md) para testar a conta de usuário antes de chamar este comando.  
+Se a conta de usuário designada não existir ou tiver sido apagada, o erro -9979 é gerado. Pode interceptar este erro com o método de gestão de erros instalado pelo comando [ON ERR CALL](../commands/on-err-call) . Do contrário, pode chamar a função [Is user deleted](../commands/is-user-deleted) para testar a conta de usuário antes de chamar este comando.  
   
 Passe no parâmetro *senha* a senha não criptografada da conta de usuário. Se a senha não corresponder ao usuário, o comando devolverá a mensagem de erro -9978 e não fará nada.
 
@@ -59,9 +59,9 @@ O principio é o seguinte:
 **1**. A entrada no banco se realiza diretamente em modo “Usuário por padrão”, sem caixa de diálogo.  
   
 **2**. No , o desenvolvedor provoca a visualização de uma caixa de diálogo personalizada de entrada do nome de usuário e senha. Todos os tipos de processos podem ser vistos na caixa de diálogo:  
-\- É possível mostrar a lista de usuários da banco, como na caixa de diálogo de acesso padrão de 4D, utilizando o comando [GET USER LIST](get-user-list.md)  
+\- É possível mostrar a lista de usuários da banco, como na caixa de diálogo de acesso padrão de 4D, utilizando o comando [GET USER LIST](../commands/get-user-list)  
 \- O campo de entrada da senha pode conter vários controles com o fim de verificar a validez dos caracteres introduzidos (mínimo número de caracteres, unicidade, etc.).  
-\- Para que os caracteres de senhas sejam introduzidos de maneira que estejam mascarados em tela, pode utilizar o comando [FILTER KEYSTROKE](filter-keystroke.md) com a fonte especial *%password*.  
+\- Para que os caracteres de senhas sejam introduzidos de maneira que estejam mascarados em tela, pode utilizar o comando [FILTER KEYSTROKE](../commands/filter-keystroke) com a fonte especial *%password*.  
 \- As regras de vencimento podem ser aplicadas no momento em que a caixa de diálogo é confirmada: data de vencimento, mudança forçada à conexão inicial, bloqueio de conta depois de várias entradas incorretas, memorização de senhas já utilizadas, etc.  
 
 **3.** Quando se confirma a entrada, a informação requerida (nome de usuário e senha) são passadas ao comando CHANGE CURRENT USER para abrir o banco com os privilégios da conta do usuário.
@@ -78,8 +78,8 @@ O exemplo abaixo exibe a caixa de diálogo de conexão:
 
 ## Ver também 
 
-[CHANGE PASSWORD](change-password.md)  
-[SET USER ALIAS](set-user-alias.md)  
+[CHANGE PASSWORD](../commands/change-password)  
+[SET USER ALIAS](../commands/set-user-alias)  
 
 ## Propriedades
 

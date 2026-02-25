@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-events
 title: OBJECT SET EVENTS
 slug: /commands/object-set-events
@@ -44,11 +44,11 @@ displayed_sidebar: docs
 | ------------------------ | ---- | -- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | On Activate              | 倍長整数 | 11 | フォームウィンドウが最前面のウィンドウになった                                                                                                                                                                          |
 | On After Edit            | 倍長整数 | 45 | フォーカスのあるオブジェクトの内容が更新された                                                                                                                                                                          |
-| On After Keystroke       | 倍長整数 | 28 | フォーカスのあるオブジェクトに文字が入力されようとしている。[Get edited text](get-edited-text.md)はこの文字を含むオブジェクトのテキストを返す                                                                                                        |
+| On After Keystroke       | 倍長整数 | 28 | フォーカスのあるオブジェクトに文字が入力されようとしている。[Get edited text](../commands/get-edited-text)はこの文字を含むオブジェクトのテキストを返す                                                                                                        |
 | On After Sort            | 倍長整数 | 30 | (リストボックスのみ) リストボックスの列中で標準のソートが行われた                                                                                                                                                               |
 | On Arrow Click           | 倍長整数 | 38 | (3Dボタンのみ)3D ボタンの"三角"エリアがクリックされた                                                                                                                                                                  |
 | On Before Data Entry     | 倍長整数 | 41 | (リストボックスのみ) リストボックスセルが編集モードに変更されようとしている                                                                                                                                                          |
-| On Before Keystroke      | 倍長整数 | 17 | フォーカスのあるオブジェクトに文字が入力されようとしている。[Get edited text](get-edited-text.md)はこの文字を含まないオブジェクトのテキストを返す                                                                                                      |
+| On Before Keystroke      | 倍長整数 | 17 | フォーカスのあるオブジェクトに文字が入力されようとしている。[Get edited text](../commands/get-edited-text)はこの文字を含まないオブジェクトのテキストを返す                                                                                                      |
 | On Begin Drag Over       | 倍長整数 | 46 | オブジェクトがドラッグされている                                                                                                                                                                                 |
 | On Begin URL Loading     | 倍長整数 | 47 | (Webエリアのみ) 新しいURLがWeb エリアにロードされた                                                                                                                                                                 |
 | On bound variable change | 倍長整数 | 54 | サブフォームにバインドされた変数が更新された                                                                                                                                                                           |
@@ -81,7 +81,7 @@ displayed_sidebar: docs
 | On Mouse Move            | 倍長整数 | 37 | マウスカーソルがオブジェクトの描画エリア上で (最低1ピクセル) 動いたか、変更キー(Shift, Alt, Shift Lock)が押された<br/>イベントがオブジェクトに対してのみチェックされていた場合は、マウスカーソルがオブジェクトの描画エリア内にあった場合にのみイベントが生成されます。                                     |
 | On Open Detail           | 倍長整数 | 25 | 出力フォームまたはリストボックスに関連付けられた詳細フォームが開かれようとしている                                                                                                                                                        |
 | On Open External Link    | 倍長整数 | 52 | (Webエリアのみ) 外部URLがブラウザで開かれた                                                                                                                                                                       |
-| On Outside Call          | 倍長整数 | 10 | フォームが[POST OUTSIDE CALL](post-outside-call.md)による呼び出しを受けた                                                                                                                                        |
+| On Outside Call          | 倍長整数 | 10 | フォームが[POST OUTSIDE CALL](../commands/post-outside-call)による呼び出しを受けた                                                                                                                                        |
 | On Picture Scroll        | 倍長整数 | 59 | マウスやキーボードを使用して、ユーザーがピクチャーフィールドや変数の内容をスクロールした。                                                                                                                                                    |
 | On Plug in Area          | 倍長整数 | 19 | 外部オブジェクトのオブジェクトメソッドの実行がリクエストされた                                                                                                                                                                  |
 | On Printing Break        | 倍長整数 | 6  | フォームのブレークエリアのひとつが印刷されようとしている                                                                                                                                                                     |
@@ -91,7 +91,7 @@ displayed_sidebar: docs
 | On Row Moved             | 倍長整数 | 34 | (リストボックスのみ) リストボックスの行がユーザのドラッグ＆ドロップで移動された                                                                                                                                                        |
 | On Row Resize            | 倍長整数 | 60 | *(4D View Pro のみ)* 行の高さがユーザーのマウスによって変更された                                                                                                                                                        |
 | On Selection Change      | 倍長整数 | 31 | リストボックスと4D View Pro: 現在の行や列の選択が変更された リスト中のレコード: リストフォームまたはサブフォームにおいて、カレントレコードあるいはカレントセレクションの行選択が変更された 階層リスト: リスト中の選択がクリックやキーストロークなどで変更された 入力可フィールドや変数: クリックやキー押下により、選択されたテキストやカーソルの位置がエリア内で変更された |
-| On Timer                 | 倍長整数 | 27 | [SET TIMER](set-timer.md)コマンドで設定した時間が経過した                                                                                                                                                        |
+| On Timer                 | 倍長整数 | 27 | [SET TIMER](../commands/set-timer)コマンドで設定した時間が経過した                                                                                                                                                        |
 | On Unload                | 倍長整数 | 24 | フォームを閉じて解放しようとしている                                                                                                                                                                               |
 | On URL Filtering         | 倍長整数 | 51 | (Webエリアのみ) Web エリアがURLをブロックした                                                                                                                                                                    |
 | On URL Loading Error     | 倍長整数 | 50 | (Webエリアのみ) URLをロード中にエラーが発生した                                                                                                                                                                     |
@@ -102,7 +102,7 @@ displayed_sidebar: docs
 
 このリストでは On Load イベントが含まれていないことに注意して下さい。コマンドを実行した際には既にイベントが発生されてしまっているため、ここでは定義されていません。
 
-*arrEvents* 引数にはカスタムイベントに対応する値を渡すこともできます。この際には、負の値を使用することが推奨されます。( [CALL SUBFORM CONTAINER](call-subform-container.md) コマンドのドキュメントを参照して下さい。)
+*arrEvents* 引数にはカスタムイベントに対応する値を渡すこともできます。この際には、負の値を使用することが推奨されます。( [CALL SUBFORM CONTAINER](../commands/call-subform-container) コマンドのドキュメントを参照して下さい。)
 
 *mode* 引数には、配列の要素に対する全体的な処理の適用方法を決める値を渡します。 "*Form Objects (Properties)*" テーマ内にある、以下の定数のどれかを渡して指定して下さい。
 
@@ -177,7 +177,7 @@ displayed_sidebar: docs
 ## 参照 
 
 *Form Events*  
-[OBJECT GET EVENTS](object-get-events.md)  
+[OBJECT GET EVENTS](../commands/object-get-events)  
 
 ## プロパティ
 

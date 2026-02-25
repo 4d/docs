@@ -1,4 +1,4 @@
----
+﻿---
 id: adjust-table-cache-priority
 title: ADJUST TABLE CACHE PRIORITY
 slug: /commands/adjust-table-cache-priority
@@ -37,7 +37,7 @@ Una llamada a este comando reemplaza cualquier valor de prioridad previamente aj
 
 **Nota:** este comando sólo funciona en modo local (4D Server y 4D); No se puede utilizar en modo remoto 4D.
 
- Este comando controla la prioridad de los datos sólo en los campos escalares (tipos fecha, número o cadena). La prioridad para campos de tipo binario (Blobs, textos, imágenes y objetos) es manejada por el comando [ADJUST BLOBS CACHE PRIORITY](adjust-blobs-cache-priority.md). 
+ Este comando controla la prioridad de los datos sólo en los campos escalares (tipos fecha, número o cadena). La prioridad para campos de tipo binario (Blobs, textos, imágenes y objetos) es manejada por el comando [ADJUST BLOBS CACHE PRIORITY](../commands/adjust-blobs-cache-priority). 
 
 Pase en *prioridad* una de las siguientes constantes del tema "*Gestión*":
 
@@ -61,8 +61,8 @@ Usted desea cambiar temporalmente la prioridad de la caché de los campos escala
 
 ## Ver también 
 
-[Get adjusted table cache priority](get-adjusted-table-cache-priority.md)  
-[SET TABLE CACHE PRIORITY](set-table-cache-priority.md)  
+[Get adjusted table cache priority](../commands/get-adjusted-table-cache-priority)  
+[SET TABLE CACHE PRIORITY](../commands/set-table-cache-priority)  
 
 ## Propiedades
 

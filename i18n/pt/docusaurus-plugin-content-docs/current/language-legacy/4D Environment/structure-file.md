@@ -1,4 +1,4 @@
----
+﻿---
 id: structure-file
 title: Structure file
 slug: /commands/structure-file
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 * Com bancos de dados binários, o comando retorna a rota para o arquivo **.4db**.
 * Com bancos de dados projeto, o comando retorna a rota para o arquivo **.4dproject**.
 
-**Nota:** No caso específico de um banco de dados que foi compilado e se fundiu com 4D Desktop, este comando retorna o caminho do arquivo (da aplicação executável) no Windows e Mac OS. No Mac OS, este arquivo está localizado dentro do pacote de software, na pasta \[Contents:Mac OS\]. Isto deriva de um mecanismo antigo e é mantido por razões de compatibilidade. Se você deseja obter o nome completo do pacote de software em si, é preferível usar o comando [Application file](application-file.md). A técnica consiste em testar o aplicativo usando o comando [Application type](application-type.md), em seguida, a execução de Structure file ou [Application file](application-file.md), dependendo do contexto.
+**Nota:** No caso específico de um banco de dados que foi compilado e se fundiu com 4D Desktop, este comando retorna o caminho do arquivo (da aplicação executável) no Windows e Mac OS. No Mac OS, este arquivo está localizado dentro do pacote de software, na pasta \[Contents:Mac OS\]. Isto deriva de um mecanismo antigo e é mantido por razões de compatibilidade. Se você deseja obter o nome completo do pacote de software em si, é preferível usar o comando [Application file](../commands/application-file). A técnica consiste em testar o aplicativo usando o comando [Application type](../commands/application-type), em seguida, a execução de Structure file ou [Application file](../commands/application-file), dependendo do contexto.
 
 **ATENÇÃO:** Se você chamar este comando durante a execução de 4D Client, apenas o nome do arquivo de estrutura é retornada; o nome completo não é devolvido.
 
@@ -83,9 +83,9 @@ O exemplo a seguir pode ser usado para descobrir se o método é chamado de um c
 
 ## Ver também 
 
-[Application file](application-file.md)  
-[COMPONENT LIST](component-list.md)  
-[Data file](data-file.md)  
+[Application file](../commands/application-file)  
+[COMPONENT LIST](../commands/component-list)  
+[Data file](../commands/data-file)  
 
 ## Propriedades
 

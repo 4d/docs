@@ -1,4 +1,4 @@
----
+﻿---
 id: web-validate-digest
 title: WEB Validate digest
 slug: /commands/web-validate-digest
@@ -68,8 +68,8 @@ Exemple de *Méthode base Sur authentification Web* en mode Digest
 
 ## Voir aussi 
 
-[Generate digest](generate-digest.md)  
-[Validate password](validate-password.md)  
+[Generate digest](../commands/generate-digest)  
+[Validate password](../commands/validate-password)  
 
 ## Propriétés
 

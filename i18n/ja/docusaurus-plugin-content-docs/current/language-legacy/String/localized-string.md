@@ -1,4 +1,4 @@
----
+﻿---
 id: localized-string
 title: Localized string
 slug: /commands/localized-string
@@ -56,7 +56,7 @@ Note: XLIFFは大文字小文字を区別します。
 
 ## 参照 
 
-[Get database localization](get-database-localization.md)  
+[Get database localization](../commands/get-database-localization)  
 
 ## プロパティ
 

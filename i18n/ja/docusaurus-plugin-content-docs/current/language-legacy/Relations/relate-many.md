@@ -1,4 +1,4 @@
----
+﻿---
 id: relate-many
 title: RELATE MANY
 slug: /commands/relate-many
@@ -67,8 +67,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OLD RELATED MANY](old-related-many.md)  
-[RELATE ONE](relate-one.md)  
+[OLD RELATED MANY](../commands/old-related-many)  
+[RELATE ONE](../commands/relate-one)  
 
 ## プロパティ
 

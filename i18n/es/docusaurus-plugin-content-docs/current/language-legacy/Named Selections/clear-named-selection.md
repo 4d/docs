@@ -1,4 +1,4 @@
----
+﻿---
 id: clear-named-selection
 title: CLEAR NAMED SELECTION
 slug: /commands/clear-named-selection
@@ -23,9 +23,9 @@ Si *temp* fue creado por el comando [CUT NAMED SELECTION](cut-named-selection.md
 
 ## Ver también 
 
-[COPY NAMED SELECTION](copy-named-selection.md)  
-[CUT NAMED SELECTION](cut-named-selection.md)  
-[USE NAMED SELECTION](use-named-selection.md)  
+[COPY NAMED SELECTION](../commands/copy-named-selection)  
+[CUT NAMED SELECTION](../commands/cut-named-selection)  
+[USE NAMED SELECTION](../commands/use-named-selection)  
 
 ## Propiedades
 

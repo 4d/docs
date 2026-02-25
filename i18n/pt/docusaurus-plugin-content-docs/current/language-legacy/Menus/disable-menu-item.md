@@ -1,4 +1,4 @@
----
+﻿---
 id: disable-menu-item
 title: DISABLE MENU ITEM
 slug: /commands/disable-menu-item
@@ -42,7 +42,7 @@ Se o parâmetro *menuItem* designa um submenu hierárquico, todos os elementos d
 
 ## Ver também 
 
-[ENABLE MENU ITEM](enable-menu-item.md)  
+[ENABLE MENU ITEM](../commands/enable-menu-item)  
 
 ## Propriedades
 

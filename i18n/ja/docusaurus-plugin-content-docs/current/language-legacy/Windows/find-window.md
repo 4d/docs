@@ -1,4 +1,4 @@
----
+﻿---
 id: find-window
 title: Find window
 slug: /commands/find-window
@@ -40,8 +40,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Frontmost window](frontmost-window.md)  
-[Next window](next-window.md)  
+[Frontmost window](../commands/frontmost-window)  
+[Next window](../commands/next-window)  
 
 ## プロパティ
 

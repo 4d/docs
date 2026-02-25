@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-best-size
 title: OBJECT GET BEST SIZE
 slug: /commands/object-get-best-size
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.OBJECT GET BEST SIZE.Summary-->The **OBJECT GET BEST SIZE** command returns the *bestWidth* and *bestHeight* parameters, the “optimal” width and height of the form object designated by the *\** and *object* parameters.<!-- END REF--> These values are expressed in pixels. This command is particularly useful for displaying or printing complex reports, associated with the [OBJECT MOVE](object-move.md) command.
+<!--REF #_command_.OBJECT GET BEST SIZE.Summary-->The **OBJECT GET BEST SIZE** command returns the *bestWidth* and *bestHeight* parameters, the “optimal” width and height of the form object designated by the *\** and *object* parameters.<!-- END REF--> These values are expressed in pixels. This command is particularly useful for displaying or printing complex reports, associated with the [OBJECT MOVE](../commands/object-move) command.
 
 If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a character string). If you do not pass the \* parameter, this indicates that *object* is a field or a variable. In this case, do not pass a string but rather a field or variable reference (object type only).
 
@@ -50,16 +50,16 @@ The following objects are handled by this command:
 * Buttons
 * List box columns in display context (only visible rows are taken into account).
 
-For all other form object types (group areas, tabs, rectangles, straight lines, circles/ovals, external areas, etc.), the **OBJECT GET BEST SIZE** command returns the current object size (defined in the form editor and possibly using the [OBJECT MOVE](object-move.md) command).
+For all other form object types (group areas, tabs, rectangles, straight lines, circles/ovals, external areas, etc.), the **OBJECT GET BEST SIZE** command returns the current object size (defined in the form editor and possibly using the [OBJECT MOVE](../commands/object-move) command).
 
 ## Example 
 
-Refer to the example in the [SET PRINT MARKER](set-print-marker.md) command. 
+Refer to the example in the [SET PRINT MARKER](../commands/set-print-marker) command. 
 
 ## See also 
 
-[OBJECT MOVE](object-move.md)  
-[SET PRINT MARKER](set-print-marker.md)  
+[OBJECT MOVE](../commands/object-move)  
+[SET PRINT MARKER](../commands/set-print-marker)  
 
 ## Properties
 

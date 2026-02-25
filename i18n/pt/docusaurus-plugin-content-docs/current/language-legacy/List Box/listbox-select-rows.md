@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-select-rows
 title: LISTBOX SELECT ROWS
 slug: /commands/listbox-select-rows
@@ -94,7 +94,7 @@ Exemplo com a coleção de objetos:
 
 ## Ver também 
 
-[ LISTBOX SELECT ROW ](listbox-select-row.md)  
+[ LISTBOX SELECT ROW ](../commands/listbox-select-row)  
 
 ## Propriedades
 

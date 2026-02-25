@@ -1,4 +1,4 @@
----
+﻿---
 id: set-real-comparison-level
 title: SET REAL COMPARISON LEVEL
 slug: /commands/set-real-comparison-level
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 A computer always performs approximative real computations; therefore, testing real numbers for equality should take this approximation into account. 4D does this when comparing real numbers by testing whether or not the difference between the two numbers exceeds a certain value. This value is called the **epsilon** and works this way: 
 
-Given two real numbers *a* and *b*, if [Abs](abs.md)(a-b) is greater than the epsilon, the numbers are considered not equal; otherwise, the numbers are considered equal.
+Given two real numbers *a* and *b*, if [Abs](../commands/abs)(a-b) is greater than the epsilon, the numbers are considered not equal; otherwise, the numbers are considered equal.
 
 By default, 4D, sets the epsilon value to 10 power minus 6 (10^-6). Please note that the *epsilon* value should always be positive. Examples:
 

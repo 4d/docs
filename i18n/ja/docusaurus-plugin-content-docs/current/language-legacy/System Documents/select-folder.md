@@ -1,4 +1,4 @@
----
+﻿---
 id: select-folder
 title: Select folder
 slug: /commands/select-folder
@@ -52,14 +52,14 @@ displayed_sidebar: docs
     
 このメカニズムを利用して、32,000までのパス名を記憶できます。Windowsではセッションの間のみパスが保持ます。macOSでは、一つのセッションから次のセッションまで、パスが保持されています。パス名が正しくないと、引数*defaultPath*は無視されます。
 
-**Note:** このメカニズムは、[Select document](select-document.md) コマンドで使用しているメカニズムと同じです。記憶されたパス名の数は、この二つのコマンド間で共有されます。
+**Note:** このメカニズムは、[Select document](../commands/select-document) コマンドで使用しているメカニズムと同じです。記憶されたパス名の数は、この二つのコマンド間で共有されます。
 
 *options*引数はmacOSにおいて追加の機能を使用できるようにします。この引数に、*System Documents* テーマ中、以下のいずれかの定数を渡すことができます: 
 
 | 定数               | 型    | 値  | コメント                                                                                                                                                                                                                  |
 | ---------------- | ---- | -- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Package open     | 倍長整数 | 2  | (Mac OSのみ): パッケージをフォルダとして開きその内容を閲覧できます。この定数が使用されないと、コマンドはパッケージの開封を許可しません。                                                                                                                                             |
-| Use sheet window | 倍長整数 | 16 | (Mac OSのみ): 選択ダイアログボックスをシートウィンドウで表示します(Windowsでは、このオプションは無効です)。シートウィンドウはMac OS Xインタフェースに特有なもので、グラフィックアニメーションを伴います (詳細については、[DISPLAY SELECTION](display-selection.md)を参照してください) 。この定数が使用されないと、コマンドは標準なダイアログボックスを表示します。 |
+| Use sheet window | 倍長整数 | 16 | (Mac OSのみ): 選択ダイアログボックスをシートウィンドウで表示します(Windowsでは、このオプションは無効です)。シートウィンドウはMac OS Xインタフェースに特有なもので、グラフィックアニメーションを伴います (詳細については、[DISPLAY SELECTION](../commands/display-selection)を参照してください) 。この定数が使用されないと、コマンドは標準なダイアログボックスを表示します。 |
 
 1つあるいは両方を合計した値を渡すことができます。このオプションはmacOSでのみ使用できます。Windowsでは*options*引数は渡されても無視されます。
 
@@ -97,9 +97,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[CREATE FOLDER](create-folder.md)  
-[FOLDER LIST](folder-list.md)  
-[Select document](select-document.md)  
+[CREATE FOLDER](../commands/create-folder)  
+[FOLDER LIST](../commands/folder-list)  
+[Select document](../commands/select-document)  
 
 ## プロパティ
 

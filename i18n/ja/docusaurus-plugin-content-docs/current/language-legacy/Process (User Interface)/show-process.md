@@ -1,4 +1,4 @@
----
+﻿---
 id: show-process
 title: SHOW PROCESS
 slug: /commands/show-process
@@ -30,9 +30,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[BRING TO FRONT](bring-to-front.md)  
-[HIDE PROCESS](hide-process.md)  
-[Process state](process-state.md)  
+[BRING TO FRONT](../commands/bring-to-front)  
+[HIDE PROCESS](../commands/hide-process)  
+[Process state](../commands/process-state)  
 
 ## プロパティ
 

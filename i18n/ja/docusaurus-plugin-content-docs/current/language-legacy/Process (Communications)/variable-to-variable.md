@@ -1,4 +1,4 @@
----
+﻿---
 id: variable-to-variable
 title: VARIABLE TO VARIABLE
 slug: /commands/variable-to-variable
@@ -71,8 +71,8 @@ VARIABLE TO VARIABLE は、任意のタイプの送り先プロセスまたは�
 
 ## 参照 
 
-[GET PROCESS VARIABLE](get-process-variable.md)  
-[SET PROCESS VARIABLE](set-process-variable.md)  
+[GET PROCESS VARIABLE](../commands/get-process-variable)  
+[SET PROCESS VARIABLE](../commands/set-process-variable)  
 *プロセス*  
 
 ## プロパティ

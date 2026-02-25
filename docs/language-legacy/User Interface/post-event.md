@@ -1,4 +1,4 @@
----
+﻿---
 id: post-event
 title: POST EVENT
 slug: /commands/post-event
@@ -48,7 +48,7 @@ You pass one of the following values in *what*:
   
 If the event is a mouse-related event, you pass *0* (zero) in *message*. If the event is a keyboard-related event, you pass the code of the simulated character in *message*. 
 
-Usually, you pass the value returned by [Tickcount](tickcount.md) in *when*.
+Usually, you pass the value returned by [Tickcount](../commands/tickcount) in *when*.
 
 If the event is a mouse-related event, you pass the horizontal and vertical coordinates of the click in *mouseX* and *mouseY*. 
 
@@ -83,8 +83,8 @@ If you specify the *process* parameter, the event is sent to the process whose p
 
 ## See also 
 
-[POST CLICK](post-click.md)  
-[POST KEY](post-key.md)  
+[POST CLICK](../commands/post-click)  
+[POST KEY](../commands/post-key)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: verify-password-hash
 title: Verify password hash
 slug: /commands/verify-password-hash
@@ -31,11 +31,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Verify password hash.Summary-->**Verify password hash** ファンクションは、*hash* 引数で渡されたハッシュ値が、*password* 引数のパスワードと合致するかどうかを検証します。<!-- END REF-->
 
-このファンクションは*password* 引数のパスワードを、[Generate password hash](generate-password-hash.md) ファンクションで生成された*hash* 引数のハッシュと比較します。
+このファンクションは*password* 引数のパスワードを、[Generate password hash](../commands/generate-password-hash) ファンクションで生成された*hash* 引数のハッシュと比較します。
 
 ### エラー管理 
 
-以下のエラーが返される可能性があります。これらのエラーは[Last errors](../commands/last-errors)  および [ON ERR CALL](on-err-call.md) コマンドで分析することができます。
+以下のエラーが返される可能性があります。これらのエラーは[Last errors](../commands/last-errors)  および [ON ERR CALL](../commands/on-err-call) コマンドで分析することができます。
 
 | **番号** | **メッセージ**                       |
 | ------ | ------------------------------- |
@@ -46,7 +46,7 @@ displayed_sidebar: docs
 
 ## 例題 
 
-この例題では[Generate password hash](generate-password-hash.md) コマンドで作成済みで\[Users\] テーブルに保存されているパスワードハッシュを、新たに入力されたパスワードと検証する場合を考えます:   
+この例題では[Generate password hash](../commands/generate-password-hash) コマンドで作成済みで\[Users\] テーブルに保存されているパスワードハッシュを、新たに入力されたパスワードと検証する場合を考えます:   
 
 ```4d
  var $password : Text
@@ -64,7 +64,7 @@ displayed_sidebar: docs
 ## 参照 
 
   
-[Generate password hash](generate-password-hash.md)  
+[Generate password hash](../commands/generate-password-hash)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: is-in-set
 title: Is in set
 slug: /commands/is-in-set
@@ -35,8 +35,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ADD TO SET](add-to-set.md)  
-[REMOVE FROM SET](remove-from-set.md)  
+[ADD TO SET](../commands/add-to-set)  
+[REMOVE FROM SET](../commands/remove-from-set)  
 
 ## プロパティ
 

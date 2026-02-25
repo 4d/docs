@@ -1,4 +1,4 @@
----
+﻿---
 id: object-duplicate
 title: OBJECT DUPLICATE
 slug: /commands/object-duplicate
@@ -67,12 +67,12 @@ If the variable type is not compatible with the object, the command does nothing
 
 You use the *boundTo* parameter in two cases:
 
-* update of entry order: in this case, in *boundTo*, pass the name of the enterable object located just before the duplicated object. If you want for the new object to become the first object in the entry order of the page, pass the new Object First in entry order constant (see the [OBJECT Get pointer](object-get-pointer.md) command).
+* update of entry order: in this case, in *boundTo*, pass the name of the enterable object located just before the duplicated object. If you want for the new object to become the first object in the entry order of the page, pass the new Object First in entry order constant (see the [OBJECT Get pointer](../commands/object-get-pointer) command).
 * association with a group of radio buttons: radio buttons function in a coordinated fashion when they are grouped. If the duplicated object is a radio button, in *boundTo* pass the name of a radio button of the group to which you want to attach the new object.
 
 If you omit this parameter or pass an empty string, the new object becomes the last enterable object of the form page. 
 
-The new object can be moved and resized via the *moveH*, *moveV*, *resizeH* and *resizeV* parameters. As with the [OBJECT MOVE](object-move.md) command, the direction of the move or the resizing is specified by the sign of the values passed in the *moveH* and *moveV* parameters:
+The new object can be moved and resized via the *moveH*, *moveV*, *resizeH* and *resizeV* parameters. As with the [OBJECT MOVE](../commands/object-move) command, the direction of the move or the resizing is specified by the sign of the values passed in the *moveH* and *moveV* parameters:
 
 * If the value is positive, the move or resizing is carried out, respectively, to the right or downwards.
 * If the value is negative, the move or resizing is carried out, respectively, to the left or upwards.
@@ -88,7 +88,7 @@ For technical and logical reasons, **OBJECT DUPLICATE** cannot be called within 
 
 * On Load event generated in an object method
 * On Unload event
-* Event related to printing context (On Header, On Printing Detail, etc.). To print an object several times, you must use the [Print object](print-object.md) command.
+* Event related to printing context (On Header, On Printing Detail, etc.). To print an object several times, you must use the [Print object](../commands/print-object) command.
 
 When the command is called in a context that is not supported,the object is not duplicated and the *OK* variable is set to 0\. If it is called in a printing context, the error -10601 is generated as well.
 
@@ -113,8 +113,8 @@ Creation of a new radio button "bRadio6" based on the existing radio button "bRa
 ## See also 
 
 *Form Objects (Access)*  
-[OBJECT Get pointer](object-get-pointer.md)  
-[OBJECT MOVE](object-move.md)  
+[OBJECT Get pointer](../commands/object-get-pointer)  
+[OBJECT MOVE](../commands/object-move)  
 [OBJECT SET DATA SOURCE FORMULA](../commands/object-set-data-source-formula)
 
 ## Properties

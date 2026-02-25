@@ -1,4 +1,4 @@
----
+﻿---
 id: xml-set-options
 title: XML SET OPTIONS
 slug: /commands/xml-set-options
@@ -38,9 +38,9 @@ displayed_sidebar: docs
 変更したいオプションを*selector* 引数に渡し、新しい値を*value* 引数に渡します。*selector*/*value* のペアは必要なだけ渡すことができます。"*XML*"テーマ内にある、以下の定数を使用してください:
 
 このコマンドで設定されるオプションは、4DからXMLの方向でのみ利用されます (4DへのXML値の読み込みには効果ありません)。以下のコマンドがこのオプションを使用します:
-* [DOM SET XML ATTRIBUTE](dom-set-xml-attribute.md)
-* [DOM SET XML ELEMENT VALUE](dom-set-xml-element-value.md)
-* [SAX ADD XML ELEMENT VALUE](sax-add-xml-element-value.md)
+* [DOM SET XML ATTRIBUTE](../commands/dom-set-xml-attribute)
+* [DOM SET XML ELEMENT VALUE](../commands/dom-set-xml-element-value)
+* [SAX ADD XML ELEMENT VALUE](../commands/sax-add-xml-element-value)
 
 | 定数                   | 型    | 値 | コメント                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | -------------------- | ---- | - | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -60,7 +60,7 @@ displayed_sidebar: docs
 
 | 定数                             | 型    | 値 | コメント                                                                                                                                                                                                                                                                                                                                                                          |
 | ------------------------------ | ---- | - | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| XML DOM case sensitivity       | 倍長整数 | 8 | [DOM Get XML element](dom-get-xml-element.md) および [DOM Count XML elements](dom-count-xml-elements.md) コマンドにおける要素名の大文字と小文字の区別を指定します。<br/>取り得る値:<br/>XML case sensitive (デフォルト値): コマンドは大文字と小文字を区別します。XML case insensitive: コマンドは大文字と小文字を区別しません。                                                                                                                 |
+| XML DOM case sensitivity       | 倍長整数 | 8 | [DOM Get XML element](../commands/dom-get-xml-element) および [DOM Count XML elements](../commands/dom-count-xml-elements) コマンドにおける要素名の大文字と小文字の区別を指定します。<br/>取り得る値:<br/>XML case sensitive (デフォルト値): コマンドは大文字と小文字を区別します。XML case insensitive: コマンドは大文字と小文字を区別しません。                                                                                                                 |
 | XML external entity resolution | 倍長整数 | 7 | 外部エンティティがXMLドキュメント内で解決されるかどうかを管理します。デフォルトではセキュリティ上の理由から、DOMとSAXの4D XML解析は外部エンティティ解決を許可していません。このセレクターのスコープは呼び出しプロセス(プリエンプティブの場合)、あるいは全てのコオペラティブプロセス(コオペラティブプロセスから呼び出された場合)である点に注意して下さい。これは全てのXMLドキュメント全体的に適用されます(最初の引数は無視されますので、空の文字列を渡して下さい)。<br/>**取りうる値:**XML enabled: XMLドキュメント内での外部エンティティ解決を許可します。XML disabled (デフォルト値): 外部エンティティ解決を許可しない(外部エンティティ宣言は解析エラーを生成します) |
 
 ## 例題 
@@ -75,11 +75,11 @@ SVG ピクチャの挿入:
 
 ## 参照 
 
-[DOM SET XML ATTRIBUTE](dom-set-xml-attribute.md)  
-[DOM SET XML DECLARATION](dom-set-xml-declaration.md)  
-[DOM SET XML ELEMENT VALUE](dom-set-xml-element-value.md)  
-[SAX ADD XML ELEMENT VALUE](sax-add-xml-element-value.md)  
-[XML GET OPTIONS](xml-get-options.md)  
+[DOM SET XML ATTRIBUTE](../commands/dom-set-xml-attribute)  
+[DOM SET XML DECLARATION](../commands/dom-set-xml-declaration)  
+[DOM SET XML ELEMENT VALUE](../commands/dom-set-xml-element-value)  
+[SAX ADD XML ELEMENT VALUE](../commands/sax-add-xml-element-value)  
+[XML GET OPTIONS](../commands/xml-get-options)  
 
 ## プロパティ
 

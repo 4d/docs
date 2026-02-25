@@ -1,4 +1,4 @@
----
+﻿---
 id: application-file
 title: Application file
 slug: /commands/application-file
@@ -49,8 +49,8 @@ Lorsque vous démarrez votre base sous Windows, vous souhaitez vérifier qu'une 
 
 ## Voir aussi 
 
-[Data file](data-file.md)  
-[Structure file](structure-file.md)  
+[Data file](../commands/data-file)  
+[Structure file](../commands/structure-file)  
 
 ## Propriétés
 

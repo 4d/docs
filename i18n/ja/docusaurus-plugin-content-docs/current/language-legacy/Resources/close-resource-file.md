@@ -1,4 +1,4 @@
----
+﻿---
 id: close-resource-file
 title: CLOSE RESOURCE FILE
 slug: /commands/close-resource-file
@@ -35,11 +35,11 @@ displayed_sidebar: docs
 
 無効なリソースファイル参照番号を渡すと、このコマンドは何も行いません。
 
-[Open resource file](open-resource-file.md)を使って開いたリソースファイルに対し、**CLOSE RESOURCE FILE**コマンドを呼び出すことを忘れないでください。また、アプリケーションを終了する (または他のデータベースを開く) 場合、4Dは開かれたリソースファイルを自動的に閉じる点にも注目してください。
+[Open resource file](../commands/open-resource-file)を使って開いたリソースファイルに対し、**CLOSE RESOURCE FILE**コマンドを呼び出すことを忘れないでください。また、アプリケーションを終了する (または他のデータベースを開く) 場合、4Dは開かれたリソースファイルを自動的に閉じる点にも注目してください。
 
 ## 参照 
 
-[Open resource file](open-resource-file.md)  
+[Open resource file](../commands/open-resource-file)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-coordinates
 title: OBJECT GET COORDINATES
 slug: /commands/object-get-coordinates
@@ -95,10 +95,10 @@ O método devolve as coordenadas teóricas. Se o listbox é redimensionado, pode
 
 ## Ver também 
 
-[CONVERT COORDINATES](convert-coordinates.md)  
-[LISTBOX GET CELL COORDINATES](listbox-get-cell-coordinates.md)  
-[OBJECT MOVE](object-move.md)  
-[OBJECT SET COORDINATES](object-set-coordinates.md)  
+[CONVERT COORDINATES](../commands/convert-coordinates)  
+[LISTBOX GET CELL COORDINATES](../commands/listbox-get-cell-coordinates)  
+[OBJECT MOVE](../commands/object-move)  
+[OBJECT SET COORDINATES](../commands/object-set-coordinates)  
 
 ## Propriedades
 

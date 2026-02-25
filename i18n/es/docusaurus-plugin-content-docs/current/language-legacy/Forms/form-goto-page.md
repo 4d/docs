@@ -1,4 +1,4 @@
----
+﻿---
 id: form-goto-page
 title: FORM GOTO PAGE
 slug: /commands/form-goto-page
@@ -39,11 +39,11 @@ El parámetro *\** es útil cuando el comando se llama en el contexto de un subf
 
 ### Acerca de los comandos de gestión de páginas 
 
-Los botones de acción automática realizan las mismas tareas que los comandos [FORM FIRST PAGE](form-first-page.md), [FORM LAST PAGE](form-last-page.md), [FORM NEXT PAGE](form-next-page.md), [FORM PREVIOUS PAGE](form-previous-page.md) y [FORM GOTO PAGE](form-goto-page.md) que puede asociar a los objetos tales como pestañas, list box desplegables, etc. Siempre que sea posible, utilice botones de acción automática en lugar de los comandos. 
+Los botones de acción automática realizan las mismas tareas que los comandos [FORM FIRST PAGE](../commands/form-first-page), [FORM LAST PAGE](../commands/form-last-page), [FORM NEXT PAGE](../commands/form-next-page), [FORM PREVIOUS PAGE](../commands/form-previous-page) y [FORM GOTO PAGE](../commands/form-goto-page) que puede asociar a los objetos tales como pestañas, list box desplegables, etc. Siempre que sea posible, utilice botones de acción automática en lugar de los comandos. 
 
 Los comandos de gestión de página pueden utilizarse con formularios de entrada o con formularios de salida en cajas de diálogo. Los formularios de salida utilizan sólo la primera página. Un formulario siempre tiene por lo menos una página, la primera página. Recuerde que sin importar el número de páginas que tenga un formulario, sólo existe un método de formulario para cada formulario. 
 
-* Utilice el comando [FORM Get current page](form-get-current-page.md) para saber que página se está mostrando.
+* Utilice el comando [FORM Get current page](../commands/form-get-current-page) para saber que página se está mostrando.
 * Utilice [Form event code](../commands/form-event-code) On Page Change que se genera cada vez que la página actual del formulario cambia.
 
 **Nota:** cuando diseñaun formulario, puede trabajar con las páginas de la 1 a la X, como también con la página 0, en la cual pone los objetos que aparecen en todas las páginas. Cuando **utiliza** un formulario, y llama los comandos de página, usted trabaja con las páginas de la 1 a la X; la página 0 se combina automáticamente con la página que está siendo mostrada.
@@ -58,11 +58,11 @@ El siguiente ejemplo es un método de objeto para un botón que muestra una pág
 
 ## Ver también 
 
-[FORM FIRST PAGE](form-first-page.md)  
-[FORM Get current page](form-get-current-page.md)  
-[FORM LAST PAGE](form-last-page.md)  
-[FORM NEXT PAGE](form-next-page.md)  
-[FORM PREVIOUS PAGE](form-previous-page.md)  
+[FORM FIRST PAGE](../commands/form-first-page)  
+[FORM Get current page](../commands/form-get-current-page)  
+[FORM LAST PAGE](../commands/form-last-page)  
+[FORM NEXT PAGE](../commands/form-next-page)  
+[FORM PREVIOUS PAGE](../commands/form-previous-page)  
 
 ## Propiedades
 

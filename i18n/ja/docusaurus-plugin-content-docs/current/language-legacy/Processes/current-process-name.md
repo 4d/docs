@@ -1,4 +1,4 @@
----
+﻿---
 id: current-process-name
 title: Current process name
 slug: /commands/current-process-name
@@ -41,8 +41,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[CALL WORKER](call-worker.md)  
-[KILL WORKER](kill-worker.md)  
+[CALL WORKER](../commands/call-worker)  
+[KILL WORKER](../commands/kill-worker)  
 *ワーカーについて*  
 
 ## プロパティ

@@ -1,4 +1,4 @@
----
+﻿---
 id: set-database-localization
 title: SET DATABASE LOCALIZATION
 slug: /commands/set-database-localization
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET DATABASE LOCALIZATION.Summary-->The SET DATABASE LOCALIZATION command is used to modify the current language of the database for the current session.<!-- END REF-->
 
-The current language of the database lets you specify the .lproj folder where the program will look for the localized elements of the application (text and pictures). By default, 4D automatically determines the current language according to the contents of the **Resources** folder and the system environment (see the description of the [Get database localization](get-database-localization.md) command). SET DATABASE LOCALIZATION can be used to modify the default current language. 
+The current language of the database lets you specify the .lproj folder where the program will look for the localized elements of the application (text and pictures). By default, 4D automatically determines the current language according to the contents of the **Resources** folder and the system environment (see the description of the [Get database localization](../commands/get-database-localization) command). SET DATABASE LOCALIZATION can be used to modify the default current language. 
 
 The command does not modify the language of forms that are already loaded, only elements displayed after the command is called will take the new configuration into account. 
 
@@ -80,7 +80,7 @@ The interface of your application uses the static string ":xliff:shopping". The 
 
 ## See also 
 
-[Get database localization](get-database-localization.md)  
+[Get database localization](../commands/get-database-localization)  
 
 ## Properties
 

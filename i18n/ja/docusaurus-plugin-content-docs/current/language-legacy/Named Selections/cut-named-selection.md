@@ -1,4 +1,4 @@
----
+﻿---
 id: cut-named-selection
 title: CUT NAMED SELECTION
 slug: /commands/cut-named-selection
@@ -35,9 +35,9 @@ CUT NAMED SELECTIONは[COPY NAMED SELECTION](copy-named-selection.md "COPY NAMED
 
 ## 参照 
 
-[CLEAR NAMED SELECTION](clear-named-selection.md)  
-[COPY NAMED SELECTION](copy-named-selection.md)  
-[USE NAMED SELECTION](use-named-selection.md)  
+[CLEAR NAMED SELECTION](../commands/clear-named-selection)  
+[COPY NAMED SELECTION](../commands/copy-named-selection)  
+[USE NAMED SELECTION](../commands/use-named-selection)  
 
 ## プロパティ
 

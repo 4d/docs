@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-insert-column-formula
 title: LISTBOX INSERT COLUMN FORMULA
 slug: /commands/listbox-insert-column-formula
@@ -42,7 +42,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Summary-->**LISTBOX INSERT COLUMN FORMULA**コマンドは、*object*引数および *\** で指定されたリストボックスに列を挿入します。<!-- END REF--> 
 
-**LISTBOX INSERT COLUMN FORMULA**コマンドは[LISTBOX INSERT COLUMN](listbox-insert-column.md)コマンドと同様の動作を行いますが、列のコンテンツとしてフォーミュラを指定可能な点が異なります。
+**LISTBOX INSERT COLUMN FORMULA**コマンドは[LISTBOX INSERT COLUMN](../commands/listbox-insert-column)コマンドと同様の動作を行いますが、列のコンテンツとしてフォーミュラを指定可能な点が異なります。
 
 このタイプのコンテンツはリストボックスの"データソース"プロパティが**カレントセレクション**、**命名セレクション**、あるいは**コレクションまたはエンティティセレクション**に設定されている場合にのみ使用できます (この点に関する詳細は*リストボックスオブジェクトの管理*を参照してください)。
 
@@ -134,7 +134,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[LISTBOX INSERT COLUMN](listbox-insert-column.md)  
+[LISTBOX INSERT COLUMN](../commands/listbox-insert-column)  
 
 ## プロパティ
 

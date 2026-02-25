@@ -1,4 +1,4 @@
----
+﻿---
 id: next-record
 title: NEXT RECORD
 slug: /commands/next-record
@@ -27,11 +27,11 @@ Ver el ejemplo del comando [DISPLAY RECORD](display-record.md "DISPLAY RECORD").
 
 ## Ver también 
 
-[Before selection](before-selection.md)  
-[End selection](end-selection.md)  
-[FIRST RECORD](first-record.md)  
-[LAST RECORD](last-record.md)  
-[PREVIOUS RECORD](previous-record.md)  
+[Before selection](../commands/before-selection)  
+[End selection](../commands/end-selection)  
+[FIRST RECORD](../commands/first-record)  
+[LAST RECORD](../commands/last-record)  
+[PREVIOUS RECORD](../commands/previous-record)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: folder
 title: Folder
 slug: /commands/folder
@@ -73,7 +73,7 @@ displayed_sidebar: docs
 ## 参照
 
 [`4D.Folder` class](../../API/FolderClass.md)
-[File](file.md)  
+[File](../commands/file)  
 [Object to path](../commands/object-to-path)  
 [Path to object](../commands/path-to-object)
 

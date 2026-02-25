@@ -1,4 +1,4 @@
----
+﻿---
 id: get-field-relation
 title: GET FIELD RELATION
 slug: /commands/get-field-relation
@@ -65,7 +65,7 @@ Les propriétés du lien reliant le champ \[Employés\]Société au champ \[Soci
 
 ![](../../assets/en/commands/pict31608.fr.png)
 
-Le code ci-dessous illustre les différentes possibilités offertes par les commandes **GET FIELD RELATION**, [GET AUTOMATIC RELATIONS](get-automatic-relations.md) et [SET FIELD RELATION](set-field-relation.md), [SET AUTOMATIC RELATIONS](set-automatic-relations.md) ainsi que leurs effets :
+Le code ci-dessous illustre les différentes possibilités offertes par les commandes **GET FIELD RELATION**, [GET AUTOMATIC RELATIONS](../commands/get-automatic-relations) et [SET FIELD RELATION](../commands/set-field-relation), [SET AUTOMATIC RELATIONS](../commands/set-automatic-relations) ainsi que leurs effets :
 
 ```4d
  GET AUTOMATIC RELATIONS(liens_Appel;liens_Retour) //retourne Faux, Faux
@@ -92,10 +92,10 @@ Le code ci-dessous illustre les différentes possibilités offertes par les comm
 
 ## Voir aussi 
 
-[GET AUTOMATIC RELATIONS](get-automatic-relations.md)  
-[GET RELATION PROPERTIES](get-relation-properties.md)  
-[SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
-[SET FIELD RELATION](set-field-relation.md)  
+[GET AUTOMATIC RELATIONS](../commands/get-automatic-relations)  
+[GET RELATION PROPERTIES](../commands/get-relation-properties)  
+[SET AUTOMATIC RELATIONS](../commands/set-automatic-relations)  
+[SET FIELD RELATION](../commands/set-field-relation)  
 
 ## Propriétés
 

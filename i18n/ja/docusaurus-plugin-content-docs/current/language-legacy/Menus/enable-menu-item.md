@@ -1,4 +1,4 @@
----
+﻿---
 id: enable-menu-item
 title: ENABLE MENU ITEM
 slug: /commands/enable-menu-item
@@ -42,7 +42,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[DISABLE MENU ITEM](disable-menu-item.md)  
+[DISABLE MENU ITEM](../commands/disable-menu-item)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-html-template
 title: QR Get HTML template
 slug: /commands/qr-get-html-template
@@ -36,7 +36,7 @@ If you pass an invalid area number, the error -9850 will be generated.
 
 ## See also 
 
-[QR SET HTML TEMPLATE](qr-set-html-template.md)  
+[QR SET HTML TEMPLATE](../commands/qr-set-html-template)  
 
 ## Properties
 

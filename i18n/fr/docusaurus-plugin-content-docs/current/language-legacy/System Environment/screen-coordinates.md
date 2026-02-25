@@ -1,4 +1,4 @@
----
+﻿---
 id: screen-coordinates
 title: SCREEN COORDINATES
 slug: /commands/screen-coordinates
@@ -56,9 +56,9 @@ Les images suivantes illustrent les différences entre la zone de l'écran et la
 
 ## Voir aussi 
 
-[Count screens](count-screens.md)  
-[Menu bar screen](menu-bar-screen.md)  
-[SCREEN DEPTH](screen-depth.md)  
+[Count screens](../commands/count-screens)  
+[Menu bar screen](../commands/menu-bar-screen)  
+[SCREEN DEPTH](../commands/screen-depth)  
 
 ## Propriétés
 

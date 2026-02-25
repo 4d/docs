@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-get-first-child-xml-element
 title: DOM Get first child XML element
 slug: /commands/dom-get-first-child-xml-element
@@ -70,7 +70,7 @@ Se o comando for executado corretamente, a variável sistema OK assume o valor 1
 
 ## Ver também 
 
-[DOM Get next sibling XML element](dom-get-next-sibling-xml-element.md)  
+[DOM Get next sibling XML element](../commands/dom-get-next-sibling-xml-element)  
 
 ## Propriedades
 

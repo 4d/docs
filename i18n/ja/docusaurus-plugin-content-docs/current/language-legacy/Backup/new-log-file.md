@@ -1,4 +1,4 @@
----
+﻿---
 id: new-log-file
 title: New log file
 slug: /commands/new-log-file
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 :::warning
 
-ログファイルは常にデータファイルと関連づけられている必要があります。 もし、[`SELECT LOG FILE`](select-log-file.md) または [データベース設定ダイアログボックス](../../Backup/settings.md#設定) を使用してログファイルを有効化した直後に(バックアップをすることなく)このコマンドを呼び出した場合、必ずデータファイルと合致するコピーがあることを確認して下さい。そうでない場合、ログファイルを統合することはできません。
+ログファイルは常にデータファイルと関連づけられている必要があります。 もし、[`SELECT LOG FILE`](../commands/select-log-file) または [データベース設定ダイアログボックス](../../Backup/settings.md#設定) を使用してログファイルを有効化した直後に(バックアップをすることなく)このコマンドを呼び出した場合、必ずデータファイルと合致するコピーがあることを確認して下さい。そうでない場合、ログファイルを統合することはできません。
 
 :::
 
@@ -40,4 +40,4 @@ displayed_sidebar: docs
 
 ## 参照
 
-[SELECT LOG FILE](select-log-file.md)
+[SELECT LOG FILE](../commands/select-log-file)

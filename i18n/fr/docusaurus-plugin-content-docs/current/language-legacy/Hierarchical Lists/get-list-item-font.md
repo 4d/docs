@@ -1,4 +1,4 @@
----
+﻿---
 id: get-list-item-font
 title: Get list item font
 slug: /commands/get-list-item-font
@@ -36,12 +36,12 @@ Si vous passez le premier paramètre optionnel *\**, vous indiquez que le param�
 
 **Note :** Si vous utilisez le caractère @ dans le nom d'objet de la liste et que le formulaire contient plusieurs listes répondant à ce nom, la commande **Get list item font** s'appliquera au premier objet dont le nom correspond. 
 
-Vous pouvez passer un numéro de référence dans *réfElément*. Si ce numéro ne correspond à aucun élément de la liste, la commande ne fait rien. Vous pouvez également passer 0 dans *réfElément* afin de désigner le dernier élément ajouté à la liste (à l’aide de [APPEND TO LIST](append-to-list.md)).   
+Vous pouvez passer un numéro de référence dans *réfElément*. Si ce numéro ne correspond à aucun élément de la liste, la commande ne fait rien. Vous pouvez également passer 0 dans *réfElément* afin de désigner le dernier élément ajouté à la liste (à l’aide de [APPEND TO LIST](../commands/append-to-list)).   
 Vous pouvez enfin passer *\** dans *réfElément* : dans ce cas, la commande s’appliquera à l’élément courant de la liste. Si plusieurs éléments sont sélectionnés manuellement, l’élément courant est celui qui a été sélectionné en dernier. Si aucun élément n’est sélectionné, la commande ne fait rien.
 
 ## Voir aussi 
 
-[SET LIST ITEM FONT](set-list-item-font.md)  
+[SET LIST ITEM FONT](../commands/set-list-item-font)  
 
 ## Propriétés
 

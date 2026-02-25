@@ -1,4 +1,4 @@
----
+﻿---
 id: save-list
 title: SAVE LIST
 slug: /commands/save-list
@@ -36,7 +36,7 @@ Su contenido se reemplazará si ya hay una lista con el mismo nombre.
 
 ## Ver también 
 
-[Load list](load-list.md)  
+[Load list](../commands/load-list)  
 
 ## Propiedades
 

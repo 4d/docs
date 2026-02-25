@@ -1,4 +1,4 @@
----
+﻿---
 id: form-convert-to-dynamic
 title: FORM Convert to dynamic
 slug: /commands/form-convert-to-dynamic
@@ -68,7 +68,7 @@ Si ejecuta el código:
 ## Ver también 
 
 [DIALOG](../commands/dialog)  
-[Export structure file](export-structure-file.md)  
+[Export structure file](../commands/export-structure-file)  
 
 ## Propiedades
 

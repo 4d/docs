@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-title
 title: OBJECT SET TITLE
 slug: /commands/object-set-title
@@ -79,7 +79,7 @@ Você quer inserir os títulos em duas linhas:
 
 ## Ver também 
 
-[OBJECT Get title](object-get-title.md)  
+[OBJECT Get title](../commands/object-get-title)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: reload-external-data
 title: RELOAD EXTERNAL DATA
 slug: /commands/reload-external-data
@@ -33,11 +33,11 @@ Este comando é útil quando o campo de um registro já carregado em memória é
   
 A continuação deve recarregar os dados utilizando o comando **RELOAD EXTERNAL DATA** para atualizar o conteúdo do campo se for mostrado no formulário.
 
-**Nota**: o comando **RELOAD EXTERNAL DATA** só funciona em 4D local ou 4D Server. Não é possível recarregar individualmente um campo com 4D em modo remoto. Neste contexto, é necessário recarregar todos os registros (utilizando o comando [LOAD RECORD](load-record.md) por exemplo).
+**Nota**: o comando **RELOAD EXTERNAL DATA** só funciona em 4D local ou 4D Server. Não é possível recarregar individualmente um campo com 4D em modo remoto. Neste contexto, é necessário recarregar todos os registros (utilizando o comando [LOAD RECORD](../commands/load-record) por exemplo).
 
 ## Ver também 
 
-[SET EXTERNAL DATA PATH](set-external-data-path.md)  
+[SET EXTERNAL DATA PATH](../commands/set-external-data-path)  
 
 ## Propriedades
 

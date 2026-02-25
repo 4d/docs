@@ -1,4 +1,4 @@
----
+﻿---
 id: session-storage
 title: Session storage
 slug: /commands/session-storage
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 *id* 引数には、Storage を取得したいセッションのUUID を渡します 。 これは4D (4D Server、またはスタンドアロンセッションに対してはシングルユーザー版4D )によって自動的に割り振られるもので、[session オブジェクト](../../API/SessionClass.md) の[**.id**](../../API/SessionClass.md#id) プロパティに保存されています。 セッションが存在しない場合、コマンド**Null** はを返します。
 
-**注意:** セッションの識別子は、[Process activity](process-activity.md) コマンドを使用することで取得できます。
+**注意:** セッションの識別子は、[Process activity](../commands/process-activity) コマンドを使用することで取得できます。
 
 返されるオブジェクトは、セッションオブジェクトの [**.storage**](../../API/SessionClass.md#storage) プロパティです。  これはセッションの全てのプロセスから利用可能な情報を保存するために使用される共有オブジェクトです。
 
@@ -61,7 +61,7 @@ displayed_sidebar: docs
 
 ## 参照
 
-[Process activity](process-activity.md)
+[Process activity](../commands/process-activity)
 [Session](./session.md)
 
 ## プロパティ

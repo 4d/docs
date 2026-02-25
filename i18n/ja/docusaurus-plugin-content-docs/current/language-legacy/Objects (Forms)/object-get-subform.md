@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-subform
 title: OBJECT GET SUBFORM
 slug: /commands/object-get-subform
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 オプションの *\** 引数を渡すと、*object* 引数はオブジェクト名 (文字列) です。この引数を渡さない場合、*object* は変数であり、文字列ではなく変数参照を渡します。
 
-*tablePtr* 引数には使用されるフォームが属するテーブルへのポインターが返されます。サブフォームにプロジェクトフォームが指定されている場合、この引数には[Is nil pointer](is-nil-pointer.md)になります。 
+*tablePtr* 引数には使用されるフォームが属するテーブルへのポインターが返されます。サブフォームにプロジェクトフォームが指定されている場合、この引数には[Is nil pointer](../commands/is-nil-pointer)になります。 
 
 コマンドは*detailSubform* 引数および*listSubform* 引数(オプション)には、以下のものを返します:
 
@@ -50,8 +50,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT GET SUBFORM CONTAINER SIZE](object-get-subform-container-size.md)  
-[OBJECT SET SUBFORM](object-set-subform.md)  
+[OBJECT GET SUBFORM CONTAINER SIZE](../commands/object-get-subform-container-size)  
+[OBJECT SET SUBFORM](../commands/object-set-subform)  
 
 ## プロパティ
 

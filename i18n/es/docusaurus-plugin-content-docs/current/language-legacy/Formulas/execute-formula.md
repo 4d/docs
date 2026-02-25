@@ -1,4 +1,4 @@
----
+﻿---
 id: execute-formula
 title: EXECUTE FORMULA
 slug: /commands/execute-formula
@@ -43,11 +43,11 @@ La *instrucción* puede incluir los siguientes elementos:
 
 La fórmula puede incluir variables proceso e interproceso. La instrucción no puede contener instrucciones de control de flujo (If, While, etc.), porque la instrucción debe tener sólo una línea de código.
 
-Para asegurarse de que la *instruccion* sea evaluada correctamente independientemente del lenguaje o versión 4D utilizada, se recomienda utilizar la sintaxis tokenizada para los elementos cuyo nombre puede variar entre las diferentes versiones (comandos, tablas, campos, constantes). Por ejemplo, para insertar el comando [Current time](current-time.md), introduzca **'Current time:C178'**. Para más información, consulte *Utilizar tokens en fórmulas*.  
+Para asegurarse de que la *instruccion* sea evaluada correctamente independientemente del lenguaje o versión 4D utilizada, se recomienda utilizar la sintaxis tokenizada para los elementos cuyo nombre puede variar entre las diferentes versiones (comandos, tablas, campos, constantes). Por ejemplo, para insertar el comando [Current time](../commands/current-time), introduzca **'Current time:C178'**. Para más información, consulte *Utilizar tokens en fórmulas*.  
 
 **Notas:** 
 
-* Si la *instruccion* es un método proyecto, se recomienda utilizar [EXECUTE METHOD](execute-method.md) que le permite pasar parámetros.
+* Si la *instruccion* es un método proyecto, se recomienda utilizar [EXECUTE METHOD](../commands/execute-method) que le permite pasar parámetros.
 * No se recomienda llamar a ningún comando de declaración de variable como *C\_DATE* en *instruccion* ya que puede generar conflictos en el código.
 
 La fórmula puede incluir variables de proceso y variables entre procesos. Sin embargo, la declaración no puede contener el control de las instrucciones de flujo (If, While, etc.), ya que debe estar en una línea de código.
@@ -58,7 +58,7 @@ Para garantizar que la *instrucción* se evalúe correctamente, independientemen
 
 Por optimización, cada fórmula ejecutada vía **EXECUTE FORMULA** en modo compilado se puede almacenar en una memoria caché en la memoria dedicada. La fórmula se almacena en caché en forma tokenizada. Una vez que se coloca en la caché, sus ejecuciones posteriores están altamente optimizadas ya que el paso de tokenización se evita.
 
-El tamaño de la caché es cero por defecto (sin caché); debe ser creada o ajustada con el comando [SET DATABASE PARAMETER](set-database-parameter.md). Por ejemplo:
+El tamaño de la caché es cero por defecto (sin caché); debe ser creada o ajustada con el comando [SET DATABASE PARAMETER](../commands/set-database-parameter). Por ejemplo:
 
 ```4d
  SET DATABASE PARAMETER(Number of formulas in cache;0) //sin caché de fórmulas
@@ -78,8 +78,8 @@ Usted desea ejecutar una fórmula incluida las llamadas a los comandos y tablas 
 ## Ver también 
 
 [Command name](../commands/command-name)  
-[EDIT FORMULA](edit-formula.md)  
-[SET DATABASE PARAMETER](set-database-parameter.md)  
+[EDIT FORMULA](../commands/edit-formula)  
+[SET DATABASE PARAMETER](../commands/set-database-parameter)  
 
 ## Propiedades
 

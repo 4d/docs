@@ -1,4 +1,4 @@
----
+﻿---
 id: backup
 title: BACKUP
 slug: /commands/backup
@@ -41,13 +41,13 @@ displayed_sidebar: docs
 
 ## エラー管理 
 
-バックアップ中に問題が発生した場合、その問題に関する情報はバックアップログに書き込まれ、トップレベルのエラーだけが[On Backup Shutdownデータベースメソッド](on-backup-shutdown-database-method.md)に送られます。プログラミングでバックアップエラーを管理するには、このデータベースメソッドを利用することが重要です。
+バックアップ中に問題が発生した場合、その問題に関する情報はバックアップログに書き込まれ、トップレベルのエラーだけが[On Backup Shutdownデータベースメソッド](../commands/on-backup-shutdown-database-method)に送られます。プログラミングでバックアップエラーを管理するには、このデータベースメソッドを利用することが重要です。
 
 ## 参照 
 
-[BACKUP INFO](backup-info.md)  
+[BACKUP INFO](../commands/backup-info)  
 *On Backup Startupデータベースメソッド*  
-[RESTORE](restore.md)  
+[RESTORE](../commands/restore)  
 
 ## プロパティ
 

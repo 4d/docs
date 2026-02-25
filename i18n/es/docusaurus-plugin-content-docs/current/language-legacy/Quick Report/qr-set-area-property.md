@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-area-property
 title: QR SET AREA PROPERTY
 slug: /commands/qr-set-area-property
@@ -44,7 +44,7 @@ Si el parámetro *propiedad* es incorrecto, se genera el error -9852.
 
 ## Ver también 
 
-[QR Get area property](qr-get-area-property.md)  
+[QR Get area property](../commands/qr-get-area-property)  
 
 ## Propiedades
 

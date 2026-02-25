@@ -1,4 +1,4 @@
----
+﻿---
 id: volume-list
 title: VOLUME LIST
 slug: /commands/volume-list
@@ -50,9 +50,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[DOCUMENT LIST](document-list.md)  
-[FOLDER LIST](folder-list.md)  
-[VOLUME ATTRIBUTES](volume-attributes.md)  
+[DOCUMENT LIST](../commands/document-list)  
+[FOLDER LIST](../commands/folder-list)  
+[VOLUME ATTRIBUTES](../commands/volume-attributes)  
 
 ## プロパティ
 

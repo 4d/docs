@@ -1,4 +1,4 @@
----
+﻿---
 id: get-user-list
 title: GET USER LIST
 slug: /commands/get-user-list
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 El array *nomsUsuario* se llena con los nombres de usuarios mostrados en la ventana de contraseñas, incluyendo los usuarios cuyas cuentas están desactivadas (los nombres de los usuarios mostrados en verde en la ventana de contraseñas).
 
-**Nota:** utilice el comando [Is user deleted](is-user-deleted.md) para detectar los usuarios borrados.
+**Nota:** utilice el comando [Is user deleted](../commands/is-user-deleted) para detectar los usuarios borrados.
 
 El array *refUsuario*, sincronizado con *nomsUsuario*, se llena con los números de referencia únicos de los usuarios.
 
@@ -44,9 +44,9 @@ Si no tiene privilegios de acceso para llamar al comando GET USER LIST o si otro
 
 ## Ver también 
 
-[GET GROUP LIST](get-group-list.md)  
-[GET USER PROPERTIES](get-user-properties.md)  
-[Set user properties](set-user-properties.md)  
+[GET GROUP LIST](../commands/get-group-list)  
+[GET USER PROPERTIES](../commands/get-user-properties)  
+[Set user properties](../commands/set-user-properties)  
 
 ## Propiedades
 

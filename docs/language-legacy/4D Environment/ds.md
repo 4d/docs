@@ -1,4 +1,4 @@
----
+﻿---
 id: ds
 title: ds
 slug: /commands/ds
@@ -24,7 +24,7 @@ The `ds` command <!-- REF #_command_.ds.Summary -->returns a reference to the da
 
 If you omit the *localID* parameter (or pass an empty string ""), the command returns a reference to the datastore matching the local 4D database (or the 4D Server database in case of opening a remote database on 4D Server). The datastore is opened automatically and available directly through `ds`.
 
-You can also get a reference on an open remote datastore by passing its local id in the *localID* parameter. The datastore must have been previously opened with the [`Open datastore`](open-datastore.md) command by the current database (host or component). The local id is defined when using this command.
+You can also get a reference on an open remote datastore by passing its local id in the *localID* parameter. The datastore must have been previously opened with the [`Open datastore`](../commands/open-datastore) command by the current database (host or component). The local id is defined when using this command.
 
 >The scope of the local id is the database where the datastore has been opened.
 
@@ -70,7 +70,7 @@ $result:=ds.Employee.query("firstName = :1";"S@")
 
 ## See also 
 
-[Open datastore](open-datastore.md)  
+[Open datastore](../commands/open-datastore)  
 
 ## Properties
 

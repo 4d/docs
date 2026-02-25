@@ -1,4 +1,4 @@
----
+﻿---
 id: abort
 title: ABORT
 slug: /commands/abort
@@ -36,7 +36,7 @@ Aunque el comando ABORT está destinado a ser utilizado sólo desde un método d
 
 ## Ver también 
 
-[ON ERR CALL](on-err-call.md)  
+[ON ERR CALL](../commands/on-err-call)  
 
 ## Propiedades
 

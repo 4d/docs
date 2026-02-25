@@ -1,4 +1,4 @@
----
+﻿---
 id: truncate-table
 title: TRUNCATE TABLE
 slug: /commands/truncate-table
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.TRUNCATE TABLE.Summary-->The **TRUNCATE TABLE** command quickly deletes all the records of *aTable*.<!-- END REF--> After calling the command, there is no longer any current selection or current record.
 
-The effect of this command is similar to that of an [ALL RECORDS](all-records.md) / [DELETE SELECTION](delete-selection.md) sequence; however, its functioning differs on the following points:
+The effect of this command is similar to that of an [ALL RECORDS](../commands/all-records) / [DELETE SELECTION](../commands/delete-selection) sequence; however, its functioning differs on the following points:
 
 * No trigger is called
 * The referential integrity of the data is not checked.
@@ -50,7 +50,7 @@ If the command has been executed correctly, the OK system variable is set to 1\.
 
 ## See also 
 
-[DELETE SELECTION](delete-selection.md)  
+[DELETE SELECTION](../commands/delete-selection)  
 
 ## Properties
 

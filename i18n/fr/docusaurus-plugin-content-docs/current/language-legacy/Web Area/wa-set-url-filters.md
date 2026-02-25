@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-set-url-filters
 title: WA SET URL FILTERS
 slug: /commands/wa-set-url-filters
@@ -45,9 +45,9 @@ En cas de contradiction au niveau des paramétrages (autorisation et refus d’u
 
 Pour désactiver le filtrage des URLs, appelez la commande en lui passant des tableaux vides ou en passant respectivement les valeurs "*\**" et Vrai dans la dernière ligne des tableaux *tabFiltres* et *tabAutorisRefus*. 
 
-Une fois la commande exécutée, les filtres deviennent une propriété de la zone Web. Si les tableaux *tabFiltres* et *tabAutorisRefus* sont supprimés ou réinitialisés, les filtres restent actifs tant que la commande n’a pas été exécutée à nouveau. Pour connaître les filtres actifs pour une zone, vous devez utiliser la commande [WA GET URL FILTERS](wa-get-url-filters.md). 
+Une fois la commande exécutée, les filtres deviennent une propriété de la zone Web. Si les tableaux *tabFiltres* et *tabAutorisRefus* sont supprimés ou réinitialisés, les filtres restent actifs tant que la commande n’a pas été exécutée à nouveau. Pour connaître les filtres actifs pour une zone, vous devez utiliser la commande [WA GET URL FILTERS](../commands/wa-get-url-filters). 
 
-**Important :** Le filtrage des URLs effectué par cette commande s’applique à toute demande de changement de l'URL principal de la page, qu'elle provienne de l'utilisateur, du code javascript ou du code 4D, à l'exception de la commande [WA OPEN URL](wa-open-url.md) et des URLs commençant par "javascript:".
+**Important :** Le filtrage des URLs effectué par cette commande s’applique à toute demande de changement de l'URL principal de la page, qu'elle provienne de l'utilisateur, du code javascript ou du code 4D, à l'exception de la commande [WA OPEN URL](../commands/wa-open-url) et des URLs commençant par "javascript:".
 
 ## Exemple 1 
 
@@ -140,8 +140,8 @@ Vous souhaitez interdire des adresses IP spécifiques :
 
 ## Voir aussi 
 
-[WA GET URL FILTERS](wa-get-url-filters.md)  
-[WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)  
+[WA GET URL FILTERS](../commands/wa-get-url-filters)  
+[WA SET EXTERNAL LINKS FILTERS](../commands/wa-set-external-links-filters)  
 
 ## Propriétés
 

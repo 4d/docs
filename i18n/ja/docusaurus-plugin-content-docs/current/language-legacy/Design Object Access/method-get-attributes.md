@@ -1,4 +1,4 @@
----
+﻿---
 id: method-get-attributes
 title: METHOD GET ATTRIBUTES
 slug: /commands/method-get-attributes
@@ -40,7 +40,7 @@ displayed_sidebar: docs
 
 このコマンドがコンポーネントから実行された場合、デフォルトではコンポーネントメソッドに対して適用されます。*\** 引数を渡した場合、ホストデータベースのメソッドへとアクセスします。
 
-**注:** 既存の [METHOD Get attribute](method-get-attribute.md) コマンドは引き続きサポートはされますが、ブール型の値しか返せないため、4D Mobileプロパティのような拡張された属性に対しては使用はできません。
+**注:** 既存の [METHOD Get attribute](../commands/method-get-attribute) コマンドは引き続きサポートはされますが、ブール型の値しか返せないため、4D Mobileプロパティのような拡張された属性に対しては使用はできません。
 
 **互換性に関する注記:** 4D v18 以降、*published4DMobile* プロパティは廃止予定です。
 
@@ -74,7 +74,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[METHOD SET ATTRIBUTES](method-set-attributes.md)  
+[METHOD SET ATTRIBUTES](../commands/method-set-attributes)  
 
 ## プロパティ
 

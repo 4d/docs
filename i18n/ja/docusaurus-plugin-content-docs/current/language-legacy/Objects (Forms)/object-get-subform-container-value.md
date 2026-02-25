@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-subform-container-value
 title: OBJECT Get subform container value
 slug: /commands/object-get-subform-container-value
@@ -65,8 +65,8 @@ displayed_sidebar: docs
 ## 参照 
 
 [Form](../commands/form)  
-[OBJECT Get pointer](object-get-pointer.md)  
-[OBJECT SET SUBFORM CONTAINER VALUE](object-set-subform-container-value.md)  
+[OBJECT Get pointer](../commands/object-get-pointer)  
+[OBJECT SET SUBFORM CONTAINER VALUE](../commands/object-set-subform-container-value)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: print-label
 title: PRINT LABEL
 slug: /commands/print-label
@@ -41,7 +41,7 @@ Se especifica o parâmetro *documento*, PRINT LABEL lhe permite ter acesso ao As
 Como padrão, PRINT LABEL mostra a caixa de diálogo de impressão antes de imprimir. Se o usuário cancela uma das caixas de diálogo de impressão, o comando se cancela e as etiquetas não se imprimem.  
 Pode eliminar estas caixas de diálogo utilizando o parâmetro opcional asterisco (*\**) ou o parâmetro opcional “maior que” (*\>*):   
 • O parâmetro \* causa una impressão com os parâmetros de impressão atuais.  
-• Além disso, o parâmetro > provoca um trabalho de impressão sem reiniciar os parâmetros de impressão atuais. Este parâmetro é útil para executar várias chamadas sucessivas a PRINT LABEL (por exemplo ao interior de um loop) enquanto mantém os parâmetros de impressão personalizados previamente definidos. Para ver um exemplo sobre o uso deste parâmetro, consulte a descrição do comando [PRINT RECORD](print-record.md) .  
+• Além disso, o parâmetro > provoca um trabalho de impressão sem reiniciar os parâmetros de impressão atuais. Este parâmetro é útil para executar várias chamadas sucessivas a PRINT LABEL (por exemplo ao interior de um loop) enquanto mantém os parâmetros de impressão personalizados previamente definidos. Para ver um exemplo sobre o uso deste parâmetro, consulte a descrição do comando [PRINT RECORD](../commands/print-record) .  
 Note que este parâmetro não tem efeito se utilizar o assistente de criação de etiquetas.
 
 Se não utilizar o assistente de criação de etiquetas, a variável sistema OK toma o valor 1 se todas as etiquetas se imprimem; do contrário, toma o valor 0 (zero) (por exemplo, se o usuário clicou no botão **Cancelar** nas caixas de diálogo de impressão).
@@ -116,8 +116,8 @@ O exemplo a seguir lhe permite ao usuário efetuar uma pesquisa na tabela \[Pess
 
 ## Ver também 
 
-[PRINT SELECTION](print-selection.md)  
-[QR REPORT](qr-report.md)  
+[PRINT SELECTION](../commands/print-selection)  
+[QR REPORT](../commands/qr-report)  
 
 ## Propriedades
 

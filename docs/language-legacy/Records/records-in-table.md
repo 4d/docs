@@ -1,4 +1,4 @@
----
+﻿---
 id: records-in-table
 title: Records in table
 slug: /commands/records-in-table
@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Records in table.Summary-->**Records in table** returns the total number of records in aTable.<!-- END REF--> [Records in selection](records-in-selection.md) returns the number of records in the current selection only. If **Records in table** is used within a transaction, records created during the transaction will be taken into account.
+<!--REF #_command_.Records in table.Summary-->**Records in table** returns the total number of records in aTable.<!-- END REF--> [Records in selection](../commands/records-in-selection) returns the number of records in the current selection only. If **Records in table** is used within a transaction, records created during the transaction will be taken into account.
 
 ## Example 
 
@@ -30,7 +30,7 @@ The following example displays an alert that shows the number of records in a ta
 
 ## See also 
 
-[Records in selection](records-in-selection.md)  
+[Records in selection](../commands/records-in-selection)  
 
 ## Properties
 

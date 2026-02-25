@@ -1,4 +1,4 @@
----
+﻿---
 id: convert-picture
 title: CONVERT PICTURE
 slug: /commands/convert-picture
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CONVERT PICTURE.Summary-->The **CONVERT PICTURE** command converts *picture* into a new type.<!-- END REF-->
 
-The *codec* parameter indicates the type of picture to be generated. A Codec can be an extension (for example, “.gif”) or a Mime type (for example, “image/jpeg”). You can get a list of Codecs that are available using the [PICTURE CODEC LIST](picture-codec-list.md) command.
+The *codec* parameter indicates the type of picture to be generated. A Codec can be an extension (for example, “.gif”) or a Mime type (for example, “image/jpeg”). You can get a list of Codecs that are available using the [PICTURE CODEC LIST](../commands/picture-codec-list) command.
 
 If the *picture* field or variable is a compound type (if, for example, it is the result of a copy-paste action), only the information corresponding to the codec type are preserved in the resulting picture.
 
@@ -60,7 +60,7 @@ Conversion of a picture with 60% quality:
 
 ## See also 
 
-[PICTURE CODEC LIST](picture-codec-list.md)  
+[PICTURE CODEC LIST](../commands/picture-codec-list)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-get-property-names
 title: OB GET PROPERTY NAMES
 slug: /commands/ob-get-property-names
@@ -109,8 +109,8 @@ Utilizando um elemento de array de objetos:
 
 ## Ver também 
 
-[OB Get type](ob-get-type.md)  
-[OB SET NULL](ob-set-null.md)  
+[OB Get type](../commands/ob-get-type)  
+[OB SET NULL](../commands/ob-set-null)  
 
 ## Propriedades
 

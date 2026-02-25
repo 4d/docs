@@ -1,4 +1,4 @@
----
+﻿---
 id: uppercase
 title: Uppercase
 slug: /commands/uppercase
@@ -49,7 +49,7 @@ Ver o exemplo para [Lowercase](lowercase.md "Lowercase").
 
 ## Ver também 
 
-[Lowercase](lowercase.md)  
+[Lowercase](../commands/lowercase)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-scroll-position
 title: OBJECT GET SCROLL POSITION
 slug: /commands/object-get-scroll-position
@@ -42,7 +42,7 @@ If *object* designates a picture (variable or field), *vPosition* returns the ve
 
 ## See also 
 
-[OBJECT SET SCROLL POSITION](object-set-scroll-position.md)  
+[OBJECT SET SCROLL POSITION](../commands/object-set-scroll-position)  
 
 ## Properties
 

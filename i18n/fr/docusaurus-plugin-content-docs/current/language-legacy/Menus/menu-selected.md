@@ -1,4 +1,4 @@
----
+﻿---
 id: menu-selected
 title: Menu selected
 slug: /commands/menu-selected
@@ -42,7 +42,7 @@ La commande **Menu selected** permet de travailler avec des sous-menus hiérarch
  Ligne de menu:=Menu selected% 65536
 ```
 
-Vous pouvez également extraire ces valeurs à l'aide des [SET AUTOMATIC RELATIONS](set-automatic-relations.md), comme dans l'exemple suivant :
+Vous pouvez également extraire ces valeurs à l'aide des [SET AUTOMATIC RELATIONS](../commands/set-automatic-relations), comme dans l'exemple suivant :
 
 ```4d
  Menu:=(Menu selected & 0xFFFF0000)>>16
@@ -53,7 +53,7 @@ Menu choisi retourne 0 si aucune commande de menu n'est sélectionnée.
 
 ## Exemple 
 
-La méthode formulaire suivante utilise la fonction **Menu selected** pour fournir les arguments "menu" et "ligne de menu" à [SET MENU ITEM MARK](set-menu-item-mark.md) :
+La méthode formulaire suivante utilise la fonction **Menu selected** pour fournir les arguments "menu" et "ligne de menu" à [SET MENU ITEM MARK](../commands/set-menu-item-mark) :
 
 ```4d
  Case of

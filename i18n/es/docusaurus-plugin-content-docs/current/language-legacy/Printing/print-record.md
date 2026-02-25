@@ -1,4 +1,4 @@
----
+﻿---
 id: print-record
 title: PRINT RECORD
 slug: /commands/print-record
@@ -39,7 +39,7 @@ Puede imprimir subformularios y objetos externos con el comando **PRINT RECORD**
 Por defecto, **PRINT RECORD** muestra la caja de diálogo de trabajos de impresión antes de la impresión. Si el usuario cancela la cajas de diálogo, el comando se cancela y no se imprime el registro.  
 Puede suprimir esta caja de diálogo utilizando el parámetro opcional asterisco (*\**) o el parámetro opcional “mayor que” (*\>*):
 
-* El parámetro *\** produce un trabajo de impresión utilizando los parámetros de impresión actual (parámetros por defecto o definidos por los comandos *\_o\_PAGE SETUP* y/o [SET PRINT OPTION](set-print-option.md)).
+* El parámetro *\** produce un trabajo de impresión utilizando los parámetros de impresión actual (parámetros por defecto o definidos por los comandos *\_o\_PAGE SETUP* y/o [SET PRINT OPTION](../commands/set-print-option)).
 * Además, el parámetro *\>* produce un trabajo de impresión sin reinicializar los parámetros de impresión actual. Este parámetro es útil para ejecutar varias llamadas consecutivas a **PRINT RECORD** (por ejemplo al interior de un bucle) mientras mantiene los parámetros de impresión personalizados definidos previamente.
 
 **4D Server:** este comando puede ejecutarse en 4D Server dentro del marco de un procedimiento almacenado. En este contexto:

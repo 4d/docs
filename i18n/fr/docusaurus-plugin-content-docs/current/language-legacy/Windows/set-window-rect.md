@@ -1,4 +1,4 @@
----
+﻿---
 id: set-window-rect
 title: SET WINDOW RECT
 slug: /commands/set-window-rect
@@ -40,15 +40,15 @@ Si vous omettez le paramètre *fenêtre*, **SET WINDOW RECT** s'applique à la f
 
 Ces coordonnées doivent être exprimées relativement au coin supérieur gauche de la zone de contenu de la fenêtre d'application (sous Windows en mode MDI) ou de l'écran principal (sous macOS et Windows en mode SDI). Les coordonnées décrivent le rectangle correspondant à la zone de contenu de la fenêtre (en excluant les barres de titres et les bordures).
 
-**Attention :** Utilisez cette commande avec précaution, car vous pouvez déplacer une fenêtre en-dehors des limites de la fenêtre principale (sous Windows) ou de l'écran (sous Mac OS). Pour éviter cela, vous pouvez utiliser des fonctions telles que [Screen width](screen-width.md) et [Screen height](screen-height.md) pour bien vérifier les nouvelles coordonnées de la fenêtre.
+**Attention :** Utilisez cette commande avec précaution, car vous pouvez déplacer une fenêtre en-dehors des limites de la fenêtre principale (sous Windows) ou de l'écran (sous Mac OS). Pour éviter cela, vous pouvez utiliser des fonctions telles que [Screen width](../commands/screen-width) et [Screen height](../commands/screen-height) pour bien vérifier les nouvelles coordonnées de la fenêtre.
 
 Par défaut, l’exécution de la commande fait automatiquement passer au premier plan la fenêtre désignée par le paramètre *fenêtre* (lorsque ce paramètre est utilisé). Vous pouvez inactiver ce fonctionnement en passant *\** en dernier paramètre. Dans ce cas, la commande ne modifie pas le plan initial de la fenêtre (coordonnée "z"). 
 
-Cette commande n’affecte pas les objets du formulaire. Si la fenêtre contient un formulaire, les objets du formulaire ne sont pas déplacés ou redimensionnés par la commande (quelles que soient leurs propriétés). Seule la fenêtre est modifiée. Pour modifier une fenêtre de formulaire en tenant compte de ses propriétés de redimensionnement et des objets qu’elle contient, vous devez utiliser la commande [RESIZE FORM WINDOW](resize-form-window.md).
+Cette commande n’affecte pas les objets du formulaire. Si la fenêtre contient un formulaire, les objets du formulaire ne sont pas déplacés ou redimensionnés par la commande (quelles que soient leurs propriétés). Seule la fenêtre est modifiée. Pour modifier une fenêtre de formulaire en tenant compte de ses propriétés de redimensionnement et des objets qu’elle contient, vous devez utiliser la commande [RESIZE FORM WINDOW](../commands/resize-form-window).
 
 ## Exemple 1 
 
-Reportez-vous à l'exemple de la commande [WINDOW LIST](window-list.md).
+Reportez-vous à l'exemple de la commande [WINDOW LIST](../commands/window-list).
 
 ## Exemple 2 
 
@@ -68,10 +68,10 @@ La fenêtre apparaît ainsi :
 
 ## Voir aussi 
 
-[CONVERT COORDINATES](convert-coordinates.md)  
-[DRAG WINDOW](drag-window.md)  
-[GET WINDOW RECT](get-window-rect.md)  
-[RESIZE FORM WINDOW](resize-form-window.md)  
+[CONVERT COORDINATES](../commands/convert-coordinates)  
+[DRAG WINDOW](../commands/drag-window)  
+[GET WINDOW RECT](../commands/get-window-rect)  
+[RESIZE FORM WINDOW](../commands/resize-form-window)  
 
 ## Propriétés
 

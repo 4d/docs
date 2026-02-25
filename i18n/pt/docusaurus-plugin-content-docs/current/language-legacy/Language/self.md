@@ -1,4 +1,4 @@
----
+﻿---
 id: self
 title: Self
 slug: /commands/self
@@ -36,7 +36,7 @@ O comando Self devolve um ponteiro até o objeto cujo método de objeto se está
 
 Self se utiliza para referenciar uma variável em seu próprio método de objeto. Devolve um ponteiro válido só quando é chamada desde dentro de um método de objeto ou desde um método de projeto que se chama direta ou indiretamente por um método de objeto. 
 
-Se Self é chamada fora de contexto, devolve um ponteiro [Is nil pointer](is-nil-pointer.md) (*\->\[\]*).
+Se Self é chamada fora de contexto, devolve um ponteiro [Is nil pointer](../commands/is-nil-pointer) (*\->\[\]*).
 
 **Dica:** Self é muito útil quando vários objetos em um formulário devem efetuar a mesma ação, operada sobre eles mesmos.
 
@@ -52,8 +52,8 @@ Ver o exemplo do comando [RESOLVE POINTER](resolve-pointer.md "RESOLVE POINTER")
 
 ## Ver também 
 
-[OBJECT Get pointer](object-get-pointer.md)  
-[RESOLVE POINTER](resolve-pointer.md)  
+[OBJECT Get pointer](../commands/object-get-pointer)  
+[RESOLVE POINTER](../commands/resolve-pointer)  
 [This ](../commands/this)  
 
 ## Propriedades

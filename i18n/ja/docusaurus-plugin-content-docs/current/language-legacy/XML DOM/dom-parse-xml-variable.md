@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-parse-xml-variable
 title: DOM Parse XML variable
 slug: /commands/dom-parse-xml-variable
@@ -55,11 +55,11 @@ DTDを指定する方法は2つあります:
   
 ドキュメントをXMLスキーマで検証するには、三番目の引数に"dtd"の代わりに、"xsd"拡張子を持つファイルまたはURLへのパスを渡します。XMLスキーマによる検証はDTDのそれに比べより自由度がありパワフルであるといわれています。XSDドキュメントのランゲージはXMLに基づきます。特に、XMLスキーマはデータタイプをサポートします。XMLスキーマに関する詳細は、以下のWebサイトを参照してください: <http://www.w3.org/XML/Schema>  
 
-DTDやXSDが存在しなかったり、URLが正しくない場合など検証が行えない場合、エラーが生成されます。Errorシステム変数はエラー番号を示します。[ON ERR CALL](on-err-call.md)コマンドを使用してインストールされるエラー処理メソッドを使用して、このエラーをとらえることができます。
+DTDやXSDが存在しなかったり、URLが正しくない場合など検証が行えない場合、エラーが生成されます。Errorシステム変数はエラー番号を示します。[ON ERR CALL](../commands/on-err-call)コマンドを使用してインストールされるエラー処理メソッドを使用して、このエラーをとらえることができます。
 
 このコマンドは、メモリ中に展開されたドキュメントの仮想構造への参照を表す文字列 (ElementRef) を返します。この参照を他のXML解析コマンドで使用できます。
 
-**重要**: 参照の利用が終了したら、[DOM CLOSE XML](dom-close-xml.md)コマンドを使用してこの参照が使用しているメモリを解放することを忘れないでください。
+**重要**: 参照の利用が終了したら、[DOM CLOSE XML](../commands/dom-close-xml)コマンドを使用してこの参照が使用しているメモリを解放することを忘れないでください。
 
 ## 例題 1 
 
@@ -96,8 +96,8 @@ DTDやXSDが存在しなかったり、URLが正しくない場合など検証�
 
 ## 参照 
 
-[DOM CLOSE XML](dom-close-xml.md)  
-[DOM Parse XML source](dom-parse-xml-source.md)  
+[DOM CLOSE XML](../commands/dom-close-xml)  
+[DOM Parse XML source](../commands/dom-parse-xml-source)  
 
 ## プロパティ
 

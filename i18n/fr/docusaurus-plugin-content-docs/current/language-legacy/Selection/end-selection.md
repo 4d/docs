@@ -1,4 +1,4 @@
----
+﻿---
 id: end-selection
 title: End selection
 slug: /commands/end-selection
@@ -18,11 +18,11 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.End selection.Summary-->La fonction **End selection** retourne Vrai lorsque le pointeur de l'enregistrement courant se trouve après le dernier enregistrement de la sélection courante de *laTable*.<!-- END REF-->est généralement utilisée pour tester si l'appel à la commande [NEXT RECORD](next-record.md) place ou non le pointeur d'enregistrement courant derrière le dernier enregistrement de la sélection. Si la sélection courante est vide, **End selection** retourne Vrai.
+<!--REF #_command_.End selection.Summary-->La fonction **End selection** retourne Vrai lorsque le pointeur de l'enregistrement courant se trouve après le dernier enregistrement de la sélection courante de *laTable*.<!-- END REF-->est généralement utilisée pour tester si l'appel à la commande [NEXT RECORD](../commands/next-record) place ou non le pointeur d'enregistrement courant derrière le dernier enregistrement de la sélection. Si la sélection courante est vide, **End selection** retourne Vrai.
 
-Pour replacer le pointeur d'enregistrement courant dans la sélection, utilisez les commandes [FIRST RECORD](first-record.md), [LAST RECORD](last-record.md) ou [GOTO SELECTED RECORD](goto-selected-record.md). [PREVIOUS RECORD](previous-record.md) ne replace pas le pointeur dans la sélection.
+Pour replacer le pointeur d'enregistrement courant dans la sélection, utilisez les commandes [FIRST RECORD](../commands/first-record), [LAST RECORD](../commands/last-record) ou [GOTO SELECTED RECORD](../commands/goto-selected-record). [PREVIOUS RECORD](../commands/previous-record) ne replace pas le pointeur dans la sélection.
 
-**End selection** retourne également Vrai lors de l'impression du dernier pied de page d'un état, déclenchée par la commande [PRINT SELECTION](print-selection.md) ou le menu **Imprimer**. Vous pouvez utiliser l'instruction suivante pour intercepter le dernier pied de page et insérer une mention particulière :
+**End selection** retourne également Vrai lors de l'impression du dernier pied de page d'un état, déclenchée par la commande [PRINT SELECTION](../commands/print-selection) ou le menu **Imprimer**. Vous pouvez utiliser l'instruction suivante pour intercepter le dernier pied de page et insérer une mention particulière :
 
 ```4d
   // Méthode d'un formulaire sortie utilisé pour imprimer un état
@@ -58,11 +58,11 @@ La méthode formulaire de l'exemple suivant est utilisée lors de l'impression d
 
 ## Voir aussi 
 
-[Before selection](before-selection.md)  
+[Before selection](../commands/before-selection)  
 [Form event code](../commands/form-event-code)  
-[LAST RECORD](last-record.md)  
-[NEXT RECORD](next-record.md)  
-[PRINT SELECTION](print-selection.md)  
+[LAST RECORD](../commands/last-record)  
+[NEXT RECORD](../commands/next-record)  
+[PRINT SELECTION](../commands/print-selection)  
 
 ## Propriétés
 

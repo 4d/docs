@@ -1,4 +1,4 @@
----
+﻿---
 id: invoke-action
 title: INVOKE ACTION
 slug: /commands/invoke-action
@@ -54,7 +54,7 @@ displayed_sidebar: docs
 
 **注:** 標準の編集アクション(カット、コピー、ペースト、すべてを選択、削除、取り消す/やり直す)は*target* 引数を渡された場合、無視します。これらのアクションは常に、フォーカスが入っている編集可能オブジェクトコンテキストにおいて同期で実行されるからです。
 
-**INVOKE ACTION** コマンドはエラーを生成しません。例えば、指定したアクションがカレントのコンテキストでは利用不可能な場合などにおいてもエラーは生成されません。[Action info](action-info.md) コマンドを使用して、予定しているアクションを評価する必要があります。
+**INVOKE ACTION** コマンドはエラーを生成しません。例えば、指定したアクションがカレントのコンテキストでは利用不可能な場合などにおいてもエラーは生成されません。[Action info](../commands/action-info) コマンドを使用して、予定しているアクションを評価する必要があります。
 
 ## 例題 1 
 
@@ -74,7 +74,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Action info](action-info.md)  
+[Action info](../commands/action-info)  
 
 ## プロパティ
 

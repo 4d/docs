@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-report-table
 title: QR Get report table
 slug: /commands/qr-get-report-table
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[QR SET REPORT TABLE](qr-set-report-table.md)  
+[QR SET REPORT TABLE](../commands/qr-set-report-table)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-find-xml-element
 title: DOM Find XML element
 slug: /commands/dom-find-xml-element
@@ -145,8 +145,8 @@ An error is generated when:
 
 ## See also 
 
-[DOM Count XML elements](dom-count-xml-elements.md)  
-[DOM Create XML element](dom-create-xml-element.md)  
+[DOM Count XML elements](../commands/dom-count-xml-elements)  
+[DOM Create XML element](../commands/dom-create-xml-element)  
 
 ## Properties
 

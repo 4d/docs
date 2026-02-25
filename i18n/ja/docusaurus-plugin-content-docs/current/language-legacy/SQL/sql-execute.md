@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-execute
 title: SQL EXECUTE
 slug: /commands/sql-execute
@@ -168,7 +168,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[SQL LOAD RECORD](sql-load-record.md)  
+[SQL LOAD RECORD](../commands/sql-load-record)  
 
 ## プロパティ
 

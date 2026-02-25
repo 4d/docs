@@ -1,4 +1,4 @@
----
+﻿---
 id: array-integer
 title: ARRAY INTEGER
 slug: /commands/array-integer
@@ -57,8 +57,8 @@ Cet exemple crée un tableau interprocess de 50 éléments de type [Entier](# "N
 
 ## Voir aussi 
 
-[ARRAY LONGINT](array-longint.md)  
-[ARRAY REAL](array-real.md)  
+[ARRAY LONGINT](../commands/array-longint)  
+[ARRAY REAL](../commands/array-real)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: set-database-localization
 title: SET DATABASE LOCALIZATION
 slug: /commands/set-database-localization
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET DATABASE LOCALIZATION.Summary-->O comando SET DATABASE LOCALIZATION é utilizado para modificar o idioma atual do banco de dados para a sessão atual.<!-- END REF-->  
   
-A linguagem atual do banco de dados lhe permite especificar a pasta. lproj onde o programa irá procurar os itens localizados da aplicação (texto e imagens). Por padrão, 4D determina automaticamente a linguagem atual de acordo com o conteúdo da pasta de **Recursos** e do ambiente do sistema (veja a descrição do comando [Get database localization](get-database-localization.md)). SET DATABASE LOCALIZATION pode ser usado para modificar o idioma padrão atual.   
+A linguagem atual do banco de dados lhe permite especificar a pasta. lproj onde o programa irá procurar os itens localizados da aplicação (texto e imagens). Por padrão, 4D determina automaticamente a linguagem atual de acordo com o conteúdo da pasta de **Recursos** e do ambiente do sistema (veja a descrição do comando [Get database localization](../commands/get-database-localization)). SET DATABASE LOCALIZATION pode ser usado para modificar o idioma padrão atual.   
   
 O comando não modifica a linguagem dos formulários que já estão carregados, somente os elementos exibidos depois que o comando é chamado terão a nova configuração em conta.   
   
@@ -80,7 +80,7 @@ A interface do seu aplicativo usa a string estática ":xliff:shopping". Os arqui
 
 ## Ver também 
 
-[Get database localization](get-database-localization.md)  
+[Get database localization](../commands/get-database-localization)  
 
 ## Propriedades
 

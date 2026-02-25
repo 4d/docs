@@ -1,4 +1,4 @@
----
+﻿---
 id: on-event-call
 title: ON EVENT CALL
 slug: /commands/on-event-call
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 **Tip:** This command requires advanced programming knowledge. Usually, you do not need to use **ON EVENT CALL** for working with events. While using forms, 4D handles the events and sends them to the appropriate forms and objects. 
 
-**Tip:** Commands such as [MOUSE POSITION](mouse-position.md), [Shift down](shift-down.md), etc., can be used for getting information about events. These commands can be called from within object methods to get the information you need about an event involving an object. Using them spares you the writing of an algorithm based on the **ON EVENT CALL** scheme.
+**Tip:** Commands such as [MOUSE POSITION](../commands/mouse-position), [Shift down](../commands/shift-down), etc., can be used for getting information about events. These commands can be called from within object methods to get the information you need about an event involving an object. Using them spares you the writing of an algorithm based on the **ON EVENT CALL** scheme.
 
 The scope of this command is the current working session. By default, the method is run in a separate local process. You can have only one event-handling method at a time. To stop catching events with a method, call **ON EVENT CALL** again and pass an empty string in *eventMethod*.
 
@@ -35,7 +35,7 @@ The optional *processName* parameter names the process created by the **ON EVENT
 In the event-handling method, you can read the following system variables—MouseDown, KeyCode, Modifiers, MouseX, MouseY and MouseProc. Note that these variables are process variables. Their scope is therefore the event-handling process. Copy them into interprocess variables if you want their values available in another process.
 
 * The MouseDown system variable is set to 1 if the event is a mouse click, and to 0 if it is not.
-* The KeyCode system variable is set to the code for a keystroke. This variable may return an character code or a function key code. These codes are listed in the sections *Unicode Codes* and [EXPORT TEXT](export-text.md) (and its subsections) as well as in the section *Function Key Codes*. 4D provides predefined constants for the major ASCII Codes and for Function Keys. In the Explorer window, look for the themes of these constants.
+* The KeyCode system variable is set to the code for a keystroke. This variable may return an character code or a function key code. These codes are listed in the sections *Unicode Codes* and [EXPORT TEXT](../commands/export-text) (and its subsections) as well as in the section *Function Key Codes*. 4D provides predefined constants for the major ASCII Codes and for Function Keys. In the Explorer window, look for the themes of these constants.
 * The Modifiers system variable contains the modifier value. It indicates whether a modifier key was down when the event occurred. The following keys can be detected:
   
 | **Platform** | **Modifiers**                                                    |  
@@ -107,16 +107,16 @@ If **Ctrl+period** has been pressed, the event-handling method sets *◊vbWeStop
  End if
 ```
 
-Note that this example uses **ON EVENT CALL** because it performs a special printing report using the *\_o\_PAGE SETUP*, [Print form](../commands/print-form) and [PAGE BREAK](page-break.md) commands with a [ARRAY TO LIST](array-to-list.md) loop. 
+Note that this example uses **ON EVENT CALL** because it performs a special printing report using the *\_o\_PAGE SETUP*, [Print form](../commands/print-form) and [PAGE BREAK](../commands/page-break) commands with a [ARRAY TO LIST](../commands/array-to-list) loop. 
 
-If you print a report using [PRINT SELECTION](print-selection.md), you do NOT need to handle events that let the user interrupt the printing; this command does that for you.
+If you print a report using [PRINT SELECTION](../commands/print-selection), you do NOT need to handle events that let the user interrupt the printing; this command does that for you.
 
 ## See also 
 
-[FILTER EVENT](filter-event.md)  
-[MOUSE POSITION](mouse-position.md)  
-[Method called on event](method-called-on-event.md)  
-[Shift down](shift-down.md)  
+[FILTER EVENT](../commands/filter-event)  
+[MOUSE POSITION](../commands/mouse-position)  
+[Method called on event](../commands/method-called-on-event)  
+[Shift down](../commands/shift-down)  
 
 ## Properties
 

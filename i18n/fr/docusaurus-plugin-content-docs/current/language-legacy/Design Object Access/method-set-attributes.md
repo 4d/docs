@@ -1,4 +1,4 @@
----
+﻿---
 id: method-set-attributes
 title: METHOD SET ATTRIBUTES
 slug: /commands/method-set-attributes
@@ -36,11 +36,11 @@ Dans le paramètre *chemin*, vous pouvez passer soit un texte contenant un chemi
 
 Dans le paramètre *attributs*, vous pouvez passer un objet ou un tableau d'objets, selon le type de paramètre passé dans *chemin*, contenant tous les attributs à fixer pour la ou les méthode(s).
 
-Les attributs de méthodes doivent être définis à l'aide des commandes [OB SET](ob-set.md) ou [OB SET ARRAY](ob-set-array.md), avec les valeurs Vrai or Faux pour les attributs booléens, ou des valeurs spécifiques pour les attributs étendus. Seuls les attributs présents dans le paramètre *attributs* seront mis à jour dans les attributs des méthodes.
+Les attributs de méthodes doivent être définis à l'aide des commandes [OB SET](../commands/ob-set) ou [OB SET ARRAY](../commands/ob-set-array), avec les valeurs Vrai or Faux pour les attributs booléens, ou des valeurs spécifiques pour les attributs étendus. Seuls les attributs présents dans le paramètre *attributs* seront mis à jour dans les attributs des méthodes.
 
 Si la commande est exécutée depuis un composant, elle s’applique par défaut aux méthodes du composant. Si vous passez le paramètre *\**, elle accède aux méthodes de la base hôte.
 
-**Note :** La commande existante [METHOD SET ATTRIBUTE](method-set-attribute.md) reste prise en charge, toutefois comme elle ne peut retourner que des valeurs booléennes, elle ne peut pas être utilisée pour les attributs étendus tels que les propriétés 4D Mobile.
+**Note :** La commande existante [METHOD SET ATTRIBUTE](../commands/method-set-attribute) reste prise en charge, toutefois comme elle ne peut retourner que des valeurs booléennes, elle ne peut pas être utilisée pour les attributs étendus tels que les propriétés 4D Mobile.
 
 ### 
 
@@ -73,8 +73,8 @@ Vous souhaiter modifier un seul attribut :
 
 ## Voir aussi 
 
-[METHOD GET ATTRIBUTES](method-get-attributes.md)  
-[METHOD SET ATTRIBUTE](method-set-attribute.md)  
+[METHOD GET ATTRIBUTES](../commands/method-get-attributes)  
+[METHOD SET ATTRIBUTE](../commands/method-set-attribute)  
 
 ## Propriétés
 

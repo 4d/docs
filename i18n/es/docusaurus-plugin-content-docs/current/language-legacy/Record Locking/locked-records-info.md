@@ -1,4 +1,4 @@
----
+﻿---
 id: locked-records-info
 title: Locked records info
 slug: /commands/locked-records-info
@@ -35,7 +35,7 @@ Cada elemento de la colección "description object" identifica un registro bloqu
 | **Propiedad**     | **Tipo**      | **Descripción**                                                                                                                                                                                                                                                                                   |
 | ----------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | contextID         | UUID (Cadena) | UUID del contexto de la base responsable del bloqueo                                                                                                                                                                                                                                              |
-| contextAttributes | Objeto        | Objeto que contiene la misma información que el comando [LOCKED BY](locked-by.md) aplicado al registro, la diferencia es que **Locked records info** devuelve el nombre del usuario definido en el sistema y no el del usuario 4D, así como también información adicional (ver más adelante). |
+| contextAttributes | Objeto        | Objeto que contiene la misma información que el comando [LOCKED BY](../commands/locked-by) aplicado al registro, la diferencia es que **Locked records info** devuelve el nombre del usuario definido en el sistema y no el del usuario 4D, así como también información adicional (ver más adelante). |
 | recordNumber      | Entero largo  | Número de registro del registro bloqueado                                                                                                                                                                                                                                                         |
 
 El objeto *contextAttributes* se compone de las siguientes propiedades:
@@ -91,7 +91,7 @@ Si el código se ejecuta en un 4D Server y el bloqueo es causado por una máquin
 
 ## Ver también 
 
-[Locked](locked.md)  
+[Locked](../commands/locked)  
 
 ## Propiedades
 

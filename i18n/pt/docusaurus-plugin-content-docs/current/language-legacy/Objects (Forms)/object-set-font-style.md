@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-font-style
 title: OBJECT SET FONT STYLE
 slug: /commands/object-set-font-style
@@ -63,10 +63,10 @@ Este exemplo define o estilo de fonte Plain para todos os objetos de formulário
 ## Ver também 
 
 *Interação de comandos genéricos com textos multi estilos*  
-[OBJECT Get font style](object-get-font-style.md)  
-[OBJECT SET FONT](object-set-font.md)  
-[OBJECT SET FONT SIZE](object-set-font-size.md)  
-[SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+[OBJECT Get font style](../commands/object-get-font-style)  
+[OBJECT SET FONT](../commands/object-set-font)  
+[OBJECT SET FONT SIZE](../commands/object-set-font-size)  
+[SET LIST ITEM PROPERTIES](../commands/set-list-item-properties)  
 
 ## Propriedades
 

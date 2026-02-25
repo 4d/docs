@@ -1,4 +1,4 @@
----
+﻿---
 id: dec
 title: Dec
 slug: /commands/dec
@@ -31,7 +31,7 @@ O exemplo a seguir utiliza um valor monetário expresso como um número real, e 
 
 ## Ver também 
 
-[Int](int.md)  
+[Int](../commands/int)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: activated
 title: Activated
 slug: /commands/activated
@@ -21,13 +21,13 @@ displayed_sidebar: docs
 
 **Nota:** este comando es equivalente a usar [Form event code](../commands/form-event-code) y probar si devuelve el evento On Activate.
 
-**ATENCIÓN:** no ubique un comando como [TRACE](trace.md) o [ALERT](alert.md)en la fase **Activated** del formulario, ya que esto produce un bucle infinito.
+**ATENCIÓN:** no ubique un comando como [TRACE](../commands/trace) o [ALERT](../commands/alert)en la fase **Activated** del formulario, ya que esto produce un bucle infinito.
 
 **Nota:** para que el ciclo de ejecución **Activated** se genere, asegúrese de que la propiedad del evento On Activate del formulario se haya seleccionado en el entorno Diseño.
 
 ## Ver también 
 
-[Deactivated](deactivated.md)  
+[Deactivated](../commands/deactivated)  
 [Form event code](../commands/form-event-code)  
 
 ## Propiedades

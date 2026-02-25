@@ -1,4 +1,4 @@
----
+﻿---
 id: process-activity
 title: Process activity
 slug: /commands/process-activity
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-<!--REF #_command_.Process activity.Summary-->The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.<!-- END REF-->O comando **Process activity** retorna um snapshot dos processos em execução e/ou (4D Server apenas) sessões usuário conectadas em um dado momento. Este comando retorna todos os processos, incluindo processos internos que não são alcançáveis pelo comando [Informações do processo](process-info.md). 
+<!--REF #_command_.Process activity.Summary-->The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.<!-- END REF-->O comando **Process activity** retorna um snapshot dos processos em execução e/ou (4D Server apenas) sessões usuário conectadas em um dado momento. Este comando retorna todos os processos, incluindo processos internos que não são alcançáveis pelo comando [Informações do processo](../commands/process-info). 
 
 Por padrão quando usado sem quaisquer parâmetros, a **atividade de processo** retorna um objeto que contém as seguintes propriedades:
 
@@ -54,17 +54,17 @@ Quando executado em 4D em modo remoto ou local, `Processar atividade` sempre ret
 
 **Sessões**
 
-A propriedade "sessões" contém uma coleção de objetos descrevendo todas as sessões em execução no servidor. Para obter uma descrição das propriedades do objeto de sessão, consulte o comando [`Session info`](session-info.md).
+A propriedade "sessões" contém uma coleção de objetos descrevendo todas as sessões em execução no servidor. Para obter uma descrição das propriedades do objeto de sessão, consulte o comando [`Session info`](../commands/session-info).
 
 :::note
 
-Você pode obter o objeto de uma sessão usando o comando [Session](session.md).
+Você pode obter o objeto de uma sessão usando o comando [Session](../commands/session).
 
 :::
 
 **Processos**
 
-A propriedade "processes" contém uma coleção de objetos de processo descrevendo todos os processos em execução. Para obter uma descrição das propriedades do objeto de processo, consulte o comando [`Process info`](process-info.md).
+A propriedade "processes" contém uma coleção de objetos de processo descrevendo todos os processos em execução. Para obter uma descrição das propriedades do objeto de processo, consulte o comando [`Process info`](../commands/process-info).
 
 No servidor, o comando `Process activity` retorna uma propriedade adicional de "session":
 
@@ -108,7 +108,7 @@ Se quiser obter todos os processos relacionados à sessão atual:
 
 ## Veja também
 
-[`Process info`](process-info.md)
-[`Session info`](session-info.md)
-[Session storage](session-storage.md)  
+[`Process info`](../commands/process-info)
+[`Session info`](../commands/session-info)
+[Session storage](../commands/session-storage)  
 [WEB Get server info](../commands/web-get-server-info)

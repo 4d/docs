@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-get
 title: OB Get
 slug: /commands/ob-get
@@ -58,14 +58,14 @@ Por padrão, 4D devolve o valor da propriedade em seu tipo original. Pode "forç
 
 O comando devolve o valor da *propriedade*. Vários tipos de dados estão suportados. Leve em conta que:
 
-* Um ponteiro se devolve tal qual, pode ser avaliado utilizando o comando [JSON Stringify](json-stringify.md),
+* Um ponteiro se devolve tal qual, pode ser avaliado utilizando o comando [JSON Stringify](../commands/json-stringify),
 * dependendo das configurações de data de bancos de dados em atributos de objeto são armazenadas ou com tipo data ou tipo texto (a partir de 4D v16 R6). Para saber mais, veja a opção "Use date type instead of ISO date format in objects" em *Página Compatibilidade*. Para que OB Get interprete corretamente uma data armazenada como texto, é necessário usar a constante Is date (ver exemplo 5).
 * Em valores reais, o separador decimal é sempre um ponto "."
 * As horas se devolvem como um número. Horas são armazenadas em segundos como padrão em objetos (veja a nota de compatibilidade abaixo). Use a constanteIs time. para obter um valor de tempo formatado 4D
 
 **Nota de Compatibilidade:** 
 
-* Em versões anteriores a v17, tempos eram armazenados em milissegundos dentro de objetos. Por motivos de compatibilidade, esse comportamento anterior pode ser restaurado usando o seletor Times inside objects do comando [SET DATABASE PARAMETER](set-database-parameter.md).Qualquer que seja a configuração, o resultado será corrigido quando a constante Is time for passada.
+* Em versões anteriores a v17, tempos eram armazenados em milissegundos dentro de objetos. Por motivos de compatibilidade, esse comportamento anterior pode ser restaurado usando o seletor Times inside objects do comando [SET DATABASE PARAMETER](../commands/set-database-parameter).Qualquer que seja a configuração, o resultado será corrigido quando a constante Is time for passada.
 * (4D Write Pro) Em versões anteriores a v16 R6, quando *propriedade* definia um atributo de imagem 4D Write Pro (como wk image) um valor de texto contendo um dado URI era sempre retornado. A partir de 4D v16 R6, os atributos de imagem 4D Write Pro são sempre retornados como valores de imagem. Deve usar uma *propriedade* especifica como wk image url para obter o dado URI.
 * Em versões anteriores a v16 R4, quando *propriedade* continha um valor null e se o parâmetro *tipo* não fosse usado, 4D retornava uma string vazia. Em 4D v16 R4, a constante Is null é retornada nesse caso. Para preservar a compatiblidade, esta mudança é realizada só se a opção "Utilizar a notação objetos para acessar às propriedades de objetos (exige Unicode)" for ativada no banco de dados (ver o parágrafo *Página Compatibilidade*).
 
@@ -233,8 +233,8 @@ Se quiser conhecer o tamanho de uma imagem armazenada em um atributo objeto:
 
 ## Ver também 
 
-[OB Copy](ob-copy.md)  
-[OB SET](ob-set.md)  
+[OB Copy](../commands/ob-copy)  
+[OB SET](../commands/ob-set)  
 *Tipos de campos e variáveis*  
 
 ## Propriedades

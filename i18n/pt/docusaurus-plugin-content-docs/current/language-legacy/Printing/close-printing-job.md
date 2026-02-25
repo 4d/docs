@@ -1,4 +1,4 @@
----
+﻿---
 id: close-printing-job
 title: CLOSE PRINTING JOB
 slug: /commands/close-printing-job
@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.CLOSE PRINTING JOB.Summary-->O comando CLOSE PRINTING JOB permite fechar o trabalho de impressão previamente aberto pelo comando [OPEN PRINTING JOB](open-printing-job.md) e enviar à impressora atual o documento de impressão eventualmente construído.<!-- END REF-->
+<!--REF #_command_.CLOSE PRINTING JOB.Summary-->O comando CLOSE PRINTING JOB permite fechar o trabalho de impressão previamente aberto pelo comando [OPEN PRINTING JOB](../commands/open-printing-job) e enviar à impressora atual o documento de impressão eventualmente construído.<!-- END REF-->
 
 Quando tiver executado este comando, a impressora novamente está disponível para outros trabalhos de impressão.
 
@@ -34,7 +34,7 @@ Quando tiver executado este comando, a impressora novamente está disponível pa
 
 ## Ver também 
 
-[OPEN PRINTING JOB](open-printing-job.md)  
+[OPEN PRINTING JOB](../commands/open-printing-job)  
 
 ## Propriedades
 

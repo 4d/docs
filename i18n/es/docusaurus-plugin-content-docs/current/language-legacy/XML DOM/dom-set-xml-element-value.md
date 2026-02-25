@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-set-xml-element-value
 title: DOM SET XML ELEMENT VALUE
 slug: /commands/dom-set-xml-element-value
@@ -53,7 +53,7 @@ En *valorElement*, pase una cadena o una variable (o un campo) que contenga el n
 
 Cuando se pasa el parámetro opcional asterisco (\*), indica que el valor del elemento debe ser definido bajo la forma de CDATA. La forma especial CDATA permite escribir texto sin formato (ver ejemplo 2).
 
-**Nota:** si el elemento designado por *refElement* es de tipo BLOB procesado por este comando, lo codifica automáticamente en base64\. Sin embargo, el comando [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md) realiza automáticamente la operación inversa.
+**Nota:** si el elemento designado por *refElement* es de tipo BLOB procesado por este comando, lo codifica automáticamente en base64\. Sin embargo, el comando [DOM GET XML ELEMENT VALUE](../commands/dom-get-xml-element-value) realiza automáticamente la operación inversa.
 
 ### Nota sobre el procesamiento de caracteres de fin de línea 
 
@@ -128,8 +128,8 @@ Si el comando ha sido ejecutado correctamente, la variable sistema OK toma el va
 
 ## Ver también 
 
-[DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md)  
-[XML SET OPTIONS](xml-set-options.md)  
+[DOM GET XML ELEMENT VALUE](../commands/dom-get-xml-element-value)  
+[XML SET OPTIONS](../commands/xml-set-options)  
 
 ## Propiedades
 

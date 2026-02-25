@@ -1,4 +1,4 @@
----
+﻿---
 id: resize-form-window
 title: RESIZE FORM WINDOW
 slug: /commands/resize-form-window
@@ -34,7 +34,7 @@ Passe o número de píxels que desejar adicionar ao tamanho da janela atual nos 
   
 Este comando produce exactamente o mesmo resultado que um redimensionamento manual utilizando a casilla de redimensionamento (se o tipo de janela lo permite). Por conseguinte, o comando considera as propriedades de redimensionamento dos objetos e as limitações de tamanho definidas nas propriedades do formulário. Se, por exemplo, o comando redimensiona a janela a um tamanho superior ao máximo do formulário, o comando não tem efeito.  
   
-Por favor note que este comportamento é diferente do comportamento do comando [SET WINDOW RECT](set-window-rect.md), o qual não considera as propriedades do formulário nem seu conteúdo quando redimensionar a janela. Igualmente, note que este comando não necessariamente modifica o tamanho do formulário. Para modificar o tamanho de um formulário por programação, por favor consulte a descrição do comando [FORM SET SIZE](form-set-size.md)
+Por favor note que este comportamento é diferente do comportamento do comando [SET WINDOW RECT](../commands/set-window-rect), o qual não considera as propriedades do formulário nem seu conteúdo quando redimensionar a janela. Igualmente, note que este comando não necessariamente modifica o tamanho do formulário. Para modificar o tamanho de um formulário por programação, por favor consulte a descrição do comando [FORM SET SIZE](../commands/form-set-size)
 
 ## Exemplo 
 
@@ -54,9 +54,9 @@ Depois da execução desta linha:
 
 ## Ver também 
 
-[FORM GET PROPERTIES](form-get-properties.md)  
-[FORM SET SIZE](form-set-size.md)  
-[SET WINDOW RECT](set-window-rect.md)  
+[FORM GET PROPERTIES](../commands/form-get-properties)  
+[FORM SET SIZE](../commands/form-set-size)  
+[SET WINDOW RECT](../commands/set-window-rect)  
 
 ## Propriedades
 

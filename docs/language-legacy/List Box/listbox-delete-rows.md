@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-delete-rows
 title: LISTBOX DELETE ROWS
 slug: /commands/listbox-delete-rows
@@ -49,8 +49,8 @@ If the *rowPosition* value is higher than the total number of rows in the list b
 
 ## See also 
 
-[LISTBOX Get number of rows](listbox-get-number-of-rows.md)  
-[LISTBOX INSERT ROWS](listbox-insert-rows.md)  
+[LISTBOX Get number of rows](../commands/listbox-get-number-of-rows)  
+[LISTBOX INSERT ROWS](../commands/listbox-insert-rows)  
 
 ## Properties
 

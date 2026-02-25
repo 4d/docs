@@ -1,4 +1,4 @@
----
+﻿---
 id: cache-info
 title: Cache info
 slug: /commands/cache-info
@@ -64,7 +64,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[MEMORY STATISTICS](memory-statistics.md)  
+[MEMORY STATISTICS](../commands/memory-statistics)  
 
 ## プロパティ
 

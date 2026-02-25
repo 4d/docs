@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-rows-height
 title: LISTBOX Get rows height
 slug: /commands/listbox-get-rows-height
@@ -47,9 +47,9 @@ Por defecto, si omite el parámetro *unidad*, la altura de línea devuelta se ex
 
 ## Ver también 
 
-[LISTBOX Get auto row height ](listbox-get-auto-row-height.md)  
-[LISTBOX Get row height ](listbox-get-row-height.md)  
-[LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md)  
+[LISTBOX Get auto row height ](../commands/listbox-get-auto-row-height)  
+[LISTBOX Get row height ](../commands/listbox-get-row-height)  
+[LISTBOX SET ROWS HEIGHT](../commands/listbox-set-rows-height)  
 
 ## Propiedades
 

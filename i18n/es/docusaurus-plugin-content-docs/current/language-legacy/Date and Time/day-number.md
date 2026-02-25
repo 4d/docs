@@ -1,4 +1,4 @@
----
+﻿---
 id: day-number
 title: Day number
 slug: /commands/day-number
@@ -60,7 +60,7 @@ El siguiente ejemplo es una función que devuelve el día actual como una cadena
 
 ## Ver también 
 
-[Day of](day-of.md)  
+[Day of](../commands/day-of)  
 
 ## Propiedades
 

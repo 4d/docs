@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-action
 title: OBJECT Get action
 slug: /commands/object-get-action
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 Passar o parámetro opcional *\** indica que o parâmetro *objeto é* um nome de objeto (string). Se não passar este parâmetro, indica que o parâmetro *objeto* for um campo ou uma variável. Neste caso, se passar uma referência de campo ou variável ao invés de uma string (só objeto campo ou variável).
 
-Pode estabelecer uma ação padrão para um objeto no Editor de formulários utilizando a lista de propriedades ou utilizando o comando [OBJECT SET ACTION](object-set-action.md). **OBJECT Get action** devolve uma string que contenha o nome da ação padrão associada ao objeto (assim como seu parâmetro, se existir).
+Pode estabelecer uma ação padrão para um objeto no Editor de formulários utilizando a lista de propriedades ou utilizando o comando [OBJECT SET ACTION](../commands/object-set-action). **OBJECT Get action** devolve uma string que contenha o nome da ação padrão associada ao objeto (assim como seu parâmetro, se existir).
 
 Para obter uma lista completa de ações padrão, consulte a seção *Ações padrões* no manual de *Desenho*. 
 
@@ -55,7 +55,7 @@ Se quiser associar a ação "Cancelar" com todos os objetos no formulário que a
 
 ## Ver também 
 
-[OBJECT SET ACTION](object-set-action.md)  
+[OBJECT SET ACTION](../commands/object-set-action)  
 
 ## Propriedades
 

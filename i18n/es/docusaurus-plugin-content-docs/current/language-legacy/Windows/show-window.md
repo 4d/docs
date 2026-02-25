@@ -1,4 +1,4 @@
----
+﻿---
 id: show-window
 title: SHOW WINDOW
 slug: /commands/show-window
@@ -37,7 +37,7 @@ Consulte el ejemplo del comando [HIDE WINDOW](hide-window.md "HIDE WINDOW").
 
 #### Ver también 
 
-[HIDE WINDOW](hide-window.md)  
+[HIDE WINDOW](../commands/hide-window)  
 
 #### Propiedades
 

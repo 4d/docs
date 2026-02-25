@@ -1,4 +1,4 @@
----
+﻿---
 id: http-set-certificates-folder
 title: HTTP SET CERTIFICATES FOLDER
 slug: /commands/http-set-certificates-folder
@@ -46,7 +46,7 @@ Em *pastaCertificados*, passe a rota de acesso da pasta personalizada que conté
 
 Uma vez executado este comando, a nova rota é levada em conta imediatamente (não é necessário reiniciar a aplicação). Se utiliza em todos os processos da base.
 
-Se a pasta especificada não existe na localização definida, ou se a rota de acesso passada em *pastaCertificados* não é válida, é gerado um erro. Pode interceptar este erro utilizando um método de gestão de erros instalado pelo comando [ON ERR CALL](on-err-call.md).
+Se a pasta especificada não existe na localização definida, ou se a rota de acesso passada em *pastaCertificados* não é válida, é gerado um erro. Pode interceptar este erro utilizando um método de gestão de erros instalado pelo comando [ON ERR CALL](../commands/on-err-call).
 
 ## Sobre certificados SSL 
 
@@ -66,8 +66,8 @@ Você quer mudar temporalmente a pasta de certificados:
 
 ## Ver também 
 
-[GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
-[HTTP Get certificates folder](http-get-certificates-folder.md)  
+[GENERATE CERTIFICATE REQUEST](../commands/generate-certificate-request)  
+[HTTP Get certificates folder](../commands/http-get-certificates-folder)  
 
 ## Propriedades
 

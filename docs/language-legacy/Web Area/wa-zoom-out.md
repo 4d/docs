@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-zoom-out
 title: WA ZOOM OUT
 slug: /commands/wa-zoom-out
@@ -43,7 +43,7 @@ This command does nothing on Windows with the [Web system rendering engine](../.
 
 ## See also 
 
-[WA ZOOM IN](wa-zoom-in.md)  
+[WA ZOOM IN](../commands/wa-zoom-in)  
 
 ## Properties
 

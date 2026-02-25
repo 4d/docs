@@ -1,4 +1,4 @@
----
+﻿---
 id: set-group-properties
 title: Set group properties
 slug: /commands/set-group-properties
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Set group properties.Summary-->Set group properties コマンドは、引数 *groupID* に渡したユニークなグループID番号を持つ既存のグループのプロパティを変更・更新するか、新規グループを追加します。<!-- END REF-->
 
-既存グループのプロパティを変更する場合は、[GET GROUP LIST](get-group-list.md) コマンドによって返される有効なグループID番号を渡さなければなりません。
+既存グループのプロパティを変更する場合は、[GET GROUP LIST](../commands/get-group-list) コマンドによって返される有効なグループID番号を渡さなければなりません。
 
 新規グループを追加するには *groupID* に -1 を受け渡します (後述のバイナリデータベースに関する注記も参照ください)。
 
@@ -45,7 +45,7 @@ displayed_sidebar: docs
 
 (バイナリデータベースのみ) 引数 *owner* には新しいグループオーナー のID番号を渡します。プロジェクトデータベースにおいて、このパラメーターは無視されます。
 
-グループのすべてのプロパティを変更したいわけではない場合 (メンバーリスト以外、後述参照) 、変更したくないプロパティに関しては、あらかじめ [GET GROUP PROPERTIES](get-group-properties.md) コマンドを使って取得した値を受け渡します。
+グループのすべてのプロパティを変更したいわけではない場合 (メンバーリスト以外、後述参照) 、変更したくないプロパティに関しては、あらかじめ [GET GROUP PROPERTIES](../commands/get-group-properties) コマンドを使って取得した値を受け渡します。
 
 任意の引数 *members* が渡されない場合、グループのメンバーリストは変更されません。新規グループを追加する際に引数 *members* を渡さない場合には、そのグループはメンバーを持ちません。
 
@@ -64,9 +64,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[GET GROUP LIST](get-group-list.md)  
-[GET GROUP PROPERTIES](get-group-properties.md)  
-[GET USER LIST](get-user-list.md)  
+[GET GROUP LIST](../commands/get-group-list)  
+[GET GROUP PROPERTIES](../commands/get-group-properties)  
+[GET USER LIST](../commands/get-user-list)  
 
 ## プロパティ
 

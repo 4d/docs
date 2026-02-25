@@ -1,4 +1,4 @@
----
+﻿---
 id: open-data-file
 title: OPEN DATA FILE
 slug: /commands/open-data-file
@@ -32,9 +32,9 @@ displayed_sidebar: docs
 
 Pass the name or the full access path of the data file to open (file with a ".4DD" suffix) in the *accessPath* parameter. If you pass only the file name, it must be placed next to the structure file of the database.
 
-If the access path sets a valid data file, 4D quits the database in progress and re-opens it with the specified data file. In single-user mode, the [On Exit database method](on-exit-database-method.md) and the [On Startup database method](on-startup-database-method.md) are successively called.
+If the access path sets a valid data file, 4D quits the database in progress and re-opens it with the specified data file. In single-user mode, the [On Exit database method](../commands/on-exit-database-method) and the [On Startup database method](../commands/on-startup-database-method) are successively called.
 
-**Warning:** Since this command causes the application to quit before re-opening with the specified data file, it must be used with precaution in the [On Exit database method](on-exit-database-method.md) or in a method called by this database method, so as to avoid generating an infinite loop.
+**Warning:** Since this command causes the application to quit before re-opening with the specified data file, it must be used with precaution in the [On Exit database method](../commands/on-exit-database-method) or in a method called by this database method, so as to avoid generating an infinite loop.
 
 The command is executed in an asynchronous manner: after its call, 4D continues executing the rest of the method. Then, the application behaves as if the **Quit** command was selected in the **File** menu: open dialog boxes are cancelled, any open processes have 10 seconds to finish before being terminated, etc.
 
@@ -42,7 +42,7 @@ Before launching the operation, the command checks the validity of the specified
 
 If you pass an empty string in *accessPath*, the command will re-open the database without changing the data file.
 
-**4D Server:** Beginning with 4D v13, this command can be executed with 4D Server. In this context, it makes an internal call to [QUIT 4D](quit-4d.md) on the server (which causes a dialog box to appear on each remote machine indicating that the server is in the process of quitting) before opening the designated file.
+**4D Server:** Beginning with 4D v13, this command can be executed with 4D Server. In this context, it makes an internal call to [QUIT 4D](../commands/quit-4d) on the server (which causes a dialog box to appear on each remote machine indicating that the server is in the process of quitting) before opening the designated file.
 
 ## Example 
 
@@ -66,7 +66,7 @@ In the context of deploying a merged application, you want to open or create the
 
 ## See also 
 
-[CREATE DATA FILE](create-data-file.md)  
+[CREATE DATA FILE](../commands/create-data-file)  
 
 ## Properties
 

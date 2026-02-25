@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-help-tip
 title: OBJECT Get help tip
 slug: /commands/object-get-help-tip
@@ -33,7 +33,7 @@ displayed_sidebar: docs
   
 Si pasa el parámetro opcional *\**, indica que el parámetro *objeto* es un nombre de objeto (una cadena). Si no pasa este parámetro, esto indica que el parámetro *objeto* es una variable. En este caso, se pasa una referencia de variable en lugar de una cadena.  
   
-El comando devuelve el mensaje de ayuda actual asociado al objeto, tal como está definido en el modo Diseño o para el proceso utilizando el comando [OBJECT SET HELP TIP](object-set-help-tip.md). La cadena devuelta muestra el mensaje como aparece cuando se ejecuta el formulario. Si contiene elementos variables (*resname* xliff o referencias 4D), se interpretan en función del contexto. 
+El comando devuelve el mensaje de ayuda actual asociado al objeto, tal como está definido en el modo Diseño o para el proceso utilizando el comando [OBJECT SET HELP TIP](../commands/object-set-help-tip). La cadena devuelta muestra el mensaje como aparece cuando se ejecuta el formulario. Si contiene elementos variables (*resname* xliff o referencias 4D), se interpretan en función del contexto. 
 
 ## Ejemplo 
 
@@ -47,7 +47,7 @@ El título de un botón imagen se guarda en forma de mensaje de ayuda. Este tít
 
 ## Ver también 
 
-[OBJECT SET HELP TIP](object-set-help-tip.md)  
+[OBJECT SET HELP TIP](../commands/object-set-help-tip)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-data-source
 title: OBJECT Get data source
 slug: /commands/object-get-data-source
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get data source.Summary-->The **OBJECT Get data source** command returns the current data source of the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 
 
-You can define the data source for an object in Design mode using the Property List, or using the [OBJECT SET DATA SOURCE](object-set-data-source.md) command.
+You can define the data source for an object in Design mode using the Property List, or using the [OBJECT SET DATA SOURCE](../commands/object-set-data-source) command.
 
 Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
 
@@ -50,7 +50,7 @@ You execute the following code:
 
 ## See also 
 
-[OBJECT SET DATA SOURCE](object-set-data-source.md)  
+[OBJECT SET DATA SOURCE](../commands/object-set-data-source)  
 [OBJECT Get data source formula](../commands/object-get-data-source-formula)  
 
 ## Properties

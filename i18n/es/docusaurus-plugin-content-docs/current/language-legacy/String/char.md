@@ -1,4 +1,4 @@
----
+﻿---
 id: char
 title: Char
 slug: /commands/char
@@ -45,7 +45,7 @@ El siguiente ejemplo utiliza Char para insertar un retorno de carro en el texto 
 
 ## Ver también 
 
-[Character code](character-code.md)  
+[Character code](../commands/character-code)  
 *Códigos Unicode*  
 *Símbolos de referencia de caracteres*  
 

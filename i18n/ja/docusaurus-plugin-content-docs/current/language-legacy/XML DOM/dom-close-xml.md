@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-close-xml
 title: DOM CLOSE XML
 slug: /commands/dom-close-xml
@@ -38,8 +38,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[DOM Parse XML source](dom-parse-xml-source.md)  
-[DOM Parse XML variable](dom-parse-xml-variable.md)  
+[DOM Parse XML source](../commands/dom-parse-xml-source)  
+[DOM Parse XML variable](../commands/dom-parse-xml-variable)  
 
 ## プロパティ
 

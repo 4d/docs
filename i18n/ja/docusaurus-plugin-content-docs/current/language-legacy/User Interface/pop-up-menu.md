@@ -1,4 +1,4 @@
----
+﻿---
 id: pop-up-menu
 title: Pop up menu
 slug: /commands/pop-up-menu
@@ -110,8 +110,8 @@ Windows上 (左) とMacintosh上 (右)で表示されるポップアップメニ
 
 ## 参照 
 
-[Dynamic pop up menu](dynamic-pop-up-menu.md)  
-[MOUSE POSITION](mouse-position.md)  
+[Dynamic pop up menu](../commands/dynamic-pop-up-menu)  
+[MOUSE POSITION](../commands/mouse-position)  
 
 ## プロパティ
 

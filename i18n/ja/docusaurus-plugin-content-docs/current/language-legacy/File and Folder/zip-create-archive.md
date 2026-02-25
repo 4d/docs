@@ -1,4 +1,4 @@
----
+﻿---
 id: zip-create-archive
 title: ZIP Create archive
 slug: /commands/zip-create-archive
@@ -52,7 +52,7 @@ displayed_sidebar: docs
 
 *destinationFile* には、作成する ZIPアーカイブ (名前や位置など) を記述する `4D.File` オブジェクトを渡します。 作成した ZIPアーカイブがあらゆるソフトウェアで自動的に処理されるようにするため、".zip" 拡張子の使用が推奨されます。
 
-アーカイブが作成されると、[ZIP Read archive](zip-read-archive.md) を使用してアクセスすることができます。
+アーカイブが作成されると、[ZIP Read archive](../commands/zip-read-archive) を使用してアクセスすることができます。
 
 **ステータスオブジェクト**
 
@@ -163,7 +163,7 @@ $err:=ZIP Create archive($zip; $destination)
 [ZipArchive Class](../../API/ZipArchiveClass.md)
 [ZipFile Class](../../API/ZipFileClass.md)
 [ZipFolder Class](../../API/ZipFolderClass.md)
-[`ZIP Read archive`](zip-read-archive.md)
+[`ZIP Read archive`](../commands/zip-read-archive)
 
 ## プロパティ
 

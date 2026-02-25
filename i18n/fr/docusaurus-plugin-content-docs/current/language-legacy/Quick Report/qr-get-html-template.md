@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-html-template
 title: QR Get HTML template
 slug: /commands/qr-get-html-template
@@ -37,7 +37,7 @@ Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
 ## Voir aussi 
 
-[QR SET HTML TEMPLATE](qr-set-html-template.md)  
+[QR SET HTML TEMPLATE](../commands/qr-set-html-template)  
 
 ## Propriétés
 

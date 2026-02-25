@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-get-xml-element
 title: DOM Get XML element
 slug: /commands/dom-get-xml-element
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 El valor del elemento también se devuelve en el parámetro *valorElement*.
 
-**Nota:** por defecto, **DOM Get XML element** es sensible a las mayúsculas y minúsculas en relación con el parámetro *nomElement* (de acuerdo a los estándares xml). Puede controlar la sensibilidad de mayúsculas y minúsculas del comando utilizando el selector XML DOM case sensitivity del comando [XML SET OPTIONS](xml-set-options.md). 
+**Nota:** por defecto, **DOM Get XML element** es sensible a las mayúsculas y minúsculas en relación con el parámetro *nomElement* (de acuerdo a los estándares xml). Puede controlar la sensibilidad de mayúsculas y minúsculas del comando utilizando el selector XML DOM case sensitivity del comando [XML SET OPTIONS](../commands/xml-set-options). 
 
 ## Variables y conjuntos del sistema 
 
@@ -45,8 +45,8 @@ Si el comando ha sido ejecutado correctamente, la variable sistema OK toma el va
 
 ## Ver también 
 
-[DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md)  
-[XML SET OPTIONS](xml-set-options.md)  
+[DOM GET XML ELEMENT VALUE](../commands/dom-get-xml-element-value)  
+[XML SET OPTIONS](../commands/xml-set-options)  
 
 ## Propiedades
 

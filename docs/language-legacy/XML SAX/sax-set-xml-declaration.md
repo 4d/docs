@@ -1,4 +1,4 @@
----
+﻿---
 id: sax-set-xml-declaration
 title: SAX SET XML DECLARATION
 slug: /commands/sax-set-xml-declaration
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 **Note:** If you pass a character set that is not supported by 4D XML commands, UTF-8 will be used. Refer to *Character Sets* to see the list of character sets supported (UTF-8 is however recommended in most cases).
 * *standalone*: Indicates whether the document is standalone (**True**) or if it needs other files or external resources to operate (**False**). By default (if the command is not called or if the parameter is omitted), the document is not standalone.
 
-**Note:** You can specify the indentation of the document thanks to the [XML SET OPTIONS](xml-set-options.md) command before writing anything.
+**Note:** You can specify the indentation of the document thanks to the [XML SET OPTIONS](../commands/xml-set-options) command before writing anything.
 
 This command must be called one time per document and before the first XML set command in the document; otherwise, an error message will be generated.
 
@@ -57,7 +57,7 @@ The following code:
 
 ## See also 
 
-[SAX GET XML DOCUMENT VALUES](sax-get-xml-document-values.md)  
+[SAX GET XML DOCUMENT VALUES](../commands/sax-get-xml-document-values)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-events
 title: OBJECT GET EVENTS
 slug: /commands/object-get-events
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET EVENTS.Summary-->El comando **OBJECT GET EVENTS** permite obtener la configuración actual de los eventos formulario del formulario, del objeto o de los objetos designado(s) por los parámetros *objeto* y *\**.<!-- END REF--> 
 
-Los eventos formulario se pueden activar/desactivar, ya sea utilizando la lista de propiedades o utilizando el comando [OBJECT SET EVENTS](object-set-events.md) si se le llama en el proceso actual.
+Los eventos formulario se pueden activar/desactivar, ya sea utilizando la lista de propiedades o utilizando el comando [OBJECT SET EVENTS](../commands/object-set-events) si se le llama en el proceso actual.
 
 Si se pasa el parámetro opcional *\** indica que el parámetro *objeto* es un nombre de objeto (cadena). Si no se pasa este parámetro, indica que el parámetro *objeto* es un campo o una variable. En este caso, se pasa una referencia de campo o variable en lugar de una cadena (campo o variable objeto únicamente).   
 Para obtener la configuración de los eventos del formulario para el propio formulario, pase el parámetro opcional *\** y una cadena vacía "" en *objeto*: en este caso, usted designa el formulario actual.
@@ -57,7 +57,7 @@ Usted quiere activar dos eventos y obtener la lista de eventos para un objeto:
 
 ## Ver también 
 
-[OBJECT SET EVENTS](object-set-events.md)  
+[OBJECT SET EVENTS](../commands/object-set-events)  
 
 ## Propiedades
 

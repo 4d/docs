@@ -1,4 +1,4 @@
----
+﻿---
 id: set-print-preview
 title: SET PRINT PREVIEW
 slug: /commands/set-print-preview
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET PRINT PREVIEW.Summary-->**SET PRINT PREVIEW** allows you to programmatically check or uncheck the Preview on Screen option of the Print dialog box.<!-- END REF--> If you pass TRUE in *preview*, Preview on Screen will be checked, if you pass FALSE in *preview*, Preview on Screen will be unchecked. This setting is local to a process and does not affect the printing of other processes or users.
 
-**Note:** On Windows, you can define the print preview format using the [SET PRINT OPTION](set-print-option.md) command.
+**Note:** On Windows, you can define the print preview format using the [SET PRINT OPTION](../commands/set-print-option) command.
 
 ## Example 
 
@@ -47,8 +47,8 @@ The following example turns on the Preview on Screen option to display the resul
 
 ## See also 
 
-[Get print preview](get-print-preview.md)  
-[Is in print preview](is-in-print-preview.md)  
+[Get print preview](../commands/get-print-preview)  
+[Is in print preview](../commands/is-in-print-preview)  
 
 ## Properties
 

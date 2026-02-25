@@ -1,4 +1,4 @@
----
+﻿---
 id: find-in-array
 title: Find in array
 slug: /commands/find-in-array
@@ -118,11 +118,11 @@ You want to find an object reference:
 
 ## See also 
 
-[Count in array](count-in-array.md)  
-[DELETE FROM ARRAY](delete-from-array.md)  
-[Find in sorted array](find-in-sorted-array.md)  
-[INSERT IN ARRAY](insert-in-array.md)  
-[Size of array](size-of-array.md)  
+[Count in array](../commands/count-in-array)  
+[DELETE FROM ARRAY](../commands/delete-from-array)  
+[Find in sorted array](../commands/find-in-sorted-array)  
+[INSERT IN ARRAY](../commands/insert-in-array)  
+[Size of array](../commands/size-of-array)  
 
 ## Properties
 

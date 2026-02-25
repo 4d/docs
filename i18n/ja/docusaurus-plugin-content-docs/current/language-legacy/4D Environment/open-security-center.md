@@ -1,4 +1,4 @@
----
+﻿---
 id: open-security-center
 title: OPEN SECURITY CENTER
 slug: /commands/open-security-center
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[VERIFY CURRENT DATA FILE](verify-current-data-file.md)  
+[VERIFY CURRENT DATA FILE](../commands/verify-current-data-file)  
 
 ## プロパティ
 

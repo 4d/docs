@@ -1,4 +1,4 @@
----
+﻿---
 id: formula-from-string
 title: Formula from string
 slug: /commands/formula-from-string
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 O comando `Formula from string` <!-- REF #_command_.Formula from string.Summary -->cria um objeto `4D.Function` baseado na *formulaString* e, opcionalmente, um *context*<!-- END REF -->.  *formulaString* pode ser tão simples quanto um único valor ou tão complexo quanto um método projeto com parâmetros.
 
-Esse comando é como [`Formula`](formula.md), exceto pelo fato de que ele lida com uma fórmula baseada em texto e permite definir um contexto de execução. Esse comando é como [`Formula`](#formula), exceto pelo fato de que ele lida com uma fórmula baseada em texto e permite definir um contexto de execução. It is usually recommended to use the `Formula` command, except if the original formula was expressed as text (e.g., stored externally in a JSON file), or if you want to create a formula in a host database while calling `Formula from string` from a component. É altamente recomendável usar a sintaxe com tokens com esse comando.
+Esse comando é como [`Formula`](../commands/formula), exceto pelo fato de que ele lida com uma fórmula baseada em texto e permite definir um contexto de execução. Esse comando é como [`Formula`](#formula), exceto pelo fato de que ele lida com uma fórmula baseada em texto e permite definir um contexto de execução. It is usually recommended to use the `Formula` command, except if the original formula was expressed as text (e.g., stored externally in a JSON file), or if you want to create a formula in a host database while calling `Formula from string` from a component. É altamente recomendável usar a sintaxe com tokens com esse comando.
 
 > Como conteúdos de variáveis locais não podem ser acessados por nome em modo compilado, não podem ser usados em *formulaString*. An attempt to access a local variable with `Formula from string` will result in an error (-10737).
 
@@ -64,7 +64,7 @@ O código abaixo cria um diálogo aceitando uma fórmula em formato texto:
 
 ## Veja também
 
-[Formula](formula.md)\
+[Formula](../commands/formula)\
 [Parse formula](../commands/parse-formula)
 
 ## Propriedades

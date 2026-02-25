@@ -1,4 +1,4 @@
----
+﻿---
 id: st-compute-expressions
 title: ST COMPUTE EXPRESSIONS
 slug: /commands/st-compute-expressions
@@ -33,13 +33,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST COMPUTE EXPRESSIONS.Summary-->O comando **ST COMPUTE EXPRESSIONS** atualiza as expressões dinâmicas 4D encontradas no campo ou variável com multi-estilo ou 4D Write Pro definido pelo parâmetro *objeto*.<!-- END REF--> 
 
-Para obter mais informação sobre as expressões 4D utilizadas em áreas de texto de multi estilo ou 4D Write Pro, consulte a descrição do comando [ST INSERT EXPRESSION](st-insert-expression.md).  
+Para obter mais informação sobre as expressões 4D utilizadas em áreas de texto de multi estilo ou 4D Write Pro, consulte a descrição do comando [ST INSERT EXPRESSION](../commands/st-insert-expression).  
   
 O comando torna a avaliar o resultado das expressões presentes no *objeto* em função do contexto atual e mostra o resultado obtido. Por exemplo, se a expressão introduzida é a hora, o valor se modifica cada vez que se chama ao comando **ST COMPUTE EXPRESSIONS**. As expressões também se calculam:
 
 * quando se inserem
 * cuando se carrega o objeto
-* quando estão "congeladas" com o comando [ST FREEZE EXPRESSIONS](st-freeze-expressions.md), se passar o segundo parâmetro *\**.
+* quando estão "congeladas" com o comando [ST FREEZE EXPRESSIONS](../commands/st-freeze-expressions), se passar o segundo parâmetro *\**.
 **ST COMPUTE EXPRESSIONS** Não modifica o texto com estilo (que contém etiquetas *span*), e sim só o texto sem formato mostrado em *objeto*. Os valores calculados não se armazenam no texto com estilo, só sua referência se armazena ali.  
   
 Se passar o parâmetro opcional *\** indica que o parâmetro *objeto* é um nome de objeto (cadeia). Se não passar este parâmetro, indica que o parâmetro *objeto* é um campo ou uma variável. Neste caso, se passar uma referência de campo ou de variável no lugar de uma cadeia.  
@@ -77,8 +77,8 @@ Você deseja atualizar as referências incluídas na seleção de texto:
 
 ## Ver também 
 
-[ST FREEZE EXPRESSIONS](st-freeze-expressions.md)  
-[ST INSERT EXPRESSION](st-insert-expression.md)  
+[ST FREEZE EXPRESSIONS](../commands/st-freeze-expressions)  
+[ST INSERT EXPRESSION](../commands/st-insert-expression)  
 
 ## Propriedades
 

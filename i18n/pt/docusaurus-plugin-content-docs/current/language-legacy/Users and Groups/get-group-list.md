@@ -1,4 +1,4 @@
----
+﻿---
 id: get-group-list
 title: GET GROUP LIST
 slug: /commands/get-group-list
@@ -37,13 +37,13 @@ O array *numGrupos*, sincronizado com o array *nomGrupos*, se preenche com os n�
 
 ## Gestão de erros 
 
-Se não tiver privilégios de acesso para chamar ao comando GET GROUP LIST ou se outro processo já estiver aberto no sistema de senhas, um erro de privilégios de acesso é gerado. Pode interceptar este erro com um método de gestão de erros instalado por [ON ERR CALL](on-err-call.md).
+Se não tiver privilégios de acesso para chamar ao comando GET GROUP LIST ou se outro processo já estiver aberto no sistema de senhas, um erro de privilégios de acesso é gerado. Pode interceptar este erro com um método de gestão de erros instalado por [ON ERR CALL](../commands/on-err-call).
 
 ## Ver também 
 
-[GET GROUP PROPERTIES](get-group-properties.md)  
-[GET USER LIST](get-user-list.md)  
-[Set group properties](set-group-properties.md)  
+[GET GROUP PROPERTIES](../commands/get-group-properties)  
+[GET USER LIST](../commands/get-user-list)  
+[Set group properties](../commands/set-group-properties)  
 
 ## Propriedades
 

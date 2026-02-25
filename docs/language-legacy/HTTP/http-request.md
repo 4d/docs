@@ -1,4 +1,4 @@
----
+﻿---
 id: http-request
 title: HTTP Request
 slug: /commands/http-request
@@ -49,7 +49,7 @@ Pass the HTTP method of the request in the *httpMethod* parameter. You can use o
 | Constant            | Type   | Value   | Comment                                                        |
 | ------------------- | ------ | ------- | -------------------------------------------------------------- |
 | HTTP DELETE method  | Text | DELETE  | See *RFC 2616*                                                 |
-| HTTP GET method     | Text | GET     | See *RFC 2616*. Same as using [HTTP Get](http-get.md) command. |
+| HTTP GET method     | Text | GET     | See *RFC 2616*. Same as using [HTTP Get](../commands/http-get) command. |
 | HTTP HEAD method    | Text | HEAD    | See *RFC 2616*                                                 |
 | HTTP OPTIONS method | Text | OPTIONS | See *RFC 2616*                                                 |
 | HTTP POST method    | Text | POST    | See *RFC 2616*                                                 |
@@ -87,7 +87,7 @@ You can pass different types of variables in *response*:
 * Picture: When the result is expected to be a picture.
 * Object: When the result is expected to be an object.
 
-**Note:** When a text variable is passed in *response*, 4D will try to decode the data returned from the server. 4D first tries to retrieve the charset from the *content-type* header, then from the content using a BOM, and finally looks for any *http-equiv charset* (in html content) or *encoding* (for xml) attribute. If no charset can be detected, 4D will attempt to decode the response in ANSI. If the conversion fails, the resulting text will be empty. If you are unsure whether the server returns a charset information or a BOM, but you know the encoding, it is more accurate to pass *response* in BLOB and call [Convert to text](convert-to-text.md).
+**Note:** When a text variable is passed in *response*, 4D will try to decode the data returned from the server. 4D first tries to retrieve the charset from the *content-type* header, then from the content using a BOM, and finally looks for any *http-equiv charset* (in html content) or *encoding* (for xml) attribute. If no charset can be detected, 4D will attempt to decode the response in ANSI. If the conversion fails, the resulting text will be empty. If you are unsure whether the server returns a charset information or a BOM, but you know the encoding, it is more accurate to pass *response* in BLOB and call [Convert to text](../commands/convert-to-text).
 
 When you pass an object type variable in the *response* parameter, if the request returns a result with a text content-type, 4D attempts to parse the content as JSON and returns the parsed result as an object. Otherwise, a *4D.Blob* object is returned.
 
@@ -99,7 +99,7 @@ After this method is executed, these arrays contain the names and values of head
 The *\** parameter enables the keep-alive mechanism for the server connection. By default, if this parameter is omitted, keep-alive is not enabled.
 
 The command returns a standard HTTP status code (200=OK and so on) as returned by the server. The list of HTTP status codes is provided in *RFC 2616*.   
-If you are unable to connect to the server for a reason related to the network (DNS Failed, Server not reachable...), the command returns 0 and an error is generated. You can intercept errors using an error-handling method installed by the [ON ERR CALL](on-err-call.md) command.
+If you are unable to connect to the server for a reason related to the network (DNS Failed, Server not reachable...), the command returns 0 and an error is generated. You can intercept errors using an error-handling method installed by the [ON ERR CALL](../commands/on-err-call) command.
 
 ## Example 1 
 
@@ -137,7 +137,7 @@ Request to add a record in JSON to a remote database::
 
 ## See also 
 
-[HTTP Get](http-get.md)  
+[HTTP Get](../commands/http-get)  
 
 ## Properties
 

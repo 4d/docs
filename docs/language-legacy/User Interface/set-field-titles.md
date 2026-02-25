@@ -1,4 +1,4 @@
----
+﻿---
 id: set-field-titles
 title: SET FIELD TITLES
 slug: /commands/set-field-titles
@@ -58,19 +58,19 @@ Use the **SET FIELD TITLES** command for:
 
 * **SET FIELD TITLES** does NOT override the Invisible property of a field. When a field is set to be invisible at the Design level of your database, even though it is included in a call to **SET FIELD TITLES**, it will not appear in Application mode.
 * Plug-ins always access the "virtual" structure as specified by this command.
-* If the [SET TABLE TITLES](set-table-titles.md) command is called without any parameters, the "virtual" structure (including table and field custom names) is completely removed from the Application environment.
+* If the [SET TABLE TITLES](../commands/set-table-titles) command is called without any parameters, the "virtual" structure (including table and field custom names) is completely removed from the Application environment.
 
 ## Example 
 
-See example for the [SET TABLE TITLES](set-table-titles.md) command.
+See example for the [SET TABLE TITLES](../commands/set-table-titles) command.
 
 ## See also 
 
-[Field name](field-name.md)  
-[GET FIELD TITLES](get-field-titles.md)  
-[Last field number](last-field-number.md)  
-[Parse formula](parse-formula.md)  
-[SET TABLE TITLES](set-table-titles.md)  
+[Field name](../commands/field-name)  
+[GET FIELD TITLES](../commands/get-field-titles)  
+[Last field number](../commands/last-field-number)  
+[Parse formula](../commands/parse-formula)  
+[SET TABLE TITLES](../commands/set-table-titles)  
 
 ## Properties
 

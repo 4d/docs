@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-header-and-footer
 title: QR SET HEADER AND FOOTER
 slug: /commands/qr-set-header-and-footer
@@ -66,7 +66,7 @@ A seguiete instrução coloca o título “Título do centro” no cabeçalho do
 
 ## Ver também 
 
-[QR GET HEADER AND FOOTER](qr-get-header-and-footer.md)  
+[QR GET HEADER AND FOOTER](../commands/qr-get-header-and-footer)  
 
 ## Propriedades
 

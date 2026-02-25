@@ -1,4 +1,4 @@
----
+﻿---
 id: set-document-properties
 title: SET DOCUMENT PROPERTIES
 slug: /commands/set-document-properties
@@ -42,11 +42,11 @@ Avant l'appel :
 * Passez la date et l'heure de création du document dans *créé le* et *créé à*.
 * Passez la date et l'heure de la dernière modification du document dans *modifié le* et *modifié à*.
 
-L'heure et la date de création et de dernière modification sont gérées par le gestionnaire de fichiers de votre système, à chaque fois que vous créez ou modifiez un document. Cette commande vous permet de modifier ces propriétés, dans des buts particuliers. Reportez-vous à l'exemple de la commande [GET DOCUMENT PROPERTIES](get-document-properties.md).
+L'heure et la date de création et de dernière modification sont gérées par le gestionnaire de fichiers de votre système, à chaque fois que vous créez ou modifiez un document. Cette commande vous permet de modifier ces propriétés, dans des buts particuliers. Reportez-vous à l'exemple de la commande [GET DOCUMENT PROPERTIES](../commands/get-document-properties).
 
 ## Voir aussi 
 
-[GET DOCUMENT PROPERTIES](get-document-properties.md)  
+[GET DOCUMENT PROPERTIES](../commands/get-document-properties)  
 
 ## Propriétés
 

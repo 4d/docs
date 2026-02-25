@@ -1,4 +1,4 @@
----
+﻿---
 id: set-automatic-relations
 title: SET AUTOMATIC RELATIONS
 slug: /commands/set-automatic-relations
@@ -38,8 +38,8 @@ Este comando muda relações definidas como manuais em modo Desenho a automátic
   
 **Nota:** 
 
-* Quando passar [True](true.md "True") ao comando **SET AUTOMATIC RELATIONS**, o modo automático se "bloqueia" para todas as relações manuais durante a sessão. Neste caso, todas as chamadas ao comando [SET FIELD RELATION](set-field-relation.md) durante a mesma sessão se ignoram, sem importar se estavam antes ou depois de **SET AUTOMATIC RELATIONS**. Para "desbloquear" o modo automático e ter em conta as chamadas a [SET FIELD RELATION](set-field-relation.md), passe [False](false.md "False") a **SET AUTOMATIC RELATIONS**.
-* As funcionalidades automáticas são desativadas quando as tabelas relacionadas são visualizadas em um formulário listado mostrado utilizando [DISPLAY SELECTION](display-selection.md), [MODIFY SELECTION](modify-selection.md), ou um subformulário. Ver *Relações manuais e automáticas*.
+* Quando passar [True](true.md "True") ao comando **SET AUTOMATIC RELATIONS**, o modo automático se "bloqueia" para todas as relações manuais durante a sessão. Neste caso, todas as chamadas ao comando [SET FIELD RELATION](../commands/set-field-relation) durante a mesma sessão se ignoram, sem importar se estavam antes ou depois de **SET AUTOMATIC RELATIONS**. Para "desbloquear" o modo automático e ter em conta as chamadas a [SET FIELD RELATION](../commands/set-field-relation), passe [False](false.md "False") a **SET AUTOMATIC RELATIONS**.
+* As funcionalidades automáticas são desativadas quando as tabelas relacionadas são visualizadas em um formulário listado mostrado utilizando [DISPLAY SELECTION](../commands/display-selection), [MODIFY SELECTION](../commands/modify-selection), ou um subformulário. Ver *Relações manuais e automáticas*.
 
 ## Exemplo 
 
@@ -51,11 +51,11 @@ O exemplo a seguir torna automáticas todas as relações Muitos a Um e restabel
 
 ## Ver também 
 
-[GET AUTOMATIC RELATIONS](get-automatic-relations.md)  
-[GET RELATION PROPERTIES](get-relation-properties.md)  
-[SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
-[SELECTION TO ARRAY](selection-to-array.md)  
-[SET FIELD RELATION](set-field-relation.md)  
+[GET AUTOMATIC RELATIONS](../commands/get-automatic-relations)  
+[GET RELATION PROPERTIES](../commands/get-relation-properties)  
+[SELECTION RANGE TO ARRAY](../commands/selection-range-to-array)  
+[SELECTION TO ARRAY](../commands/selection-to-array)  
+[SET FIELD RELATION](../commands/set-field-relation)  
 *Sobre Relações*  
 
 ## Propriedades

@@ -1,4 +1,4 @@
----
+﻿---
 id: count-tasks
 title: Count tasks
 slug: /commands/count-tasks
@@ -27,10 +27,10 @@ Ver o exemplo para [Process state](process-state.md "Process state") e [On Exit 
 
 ## Ver também 
 
-[Count user processes](count-user-processes.md)  
-[Count users](count-users.md)  
+[Count user processes](../commands/count-user-processes)  
+[Count users](../commands/count-users)  
 [Process info](../commands/process-info)  
-[Process state](process-state.md)  
+[Process state](../commands/process-state)  
 
 ## Propriedades
 

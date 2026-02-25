@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-set
 title: OB SET
 slug: /commands/ob-set
@@ -42,8 +42,8 @@ Attention, le paramètre *propriété* tient compte des majuscules/minuscules.
 
 Passez dans le paramètre *valeur* la valeur de la propriété à définir. Plusieurs types de données sont pris en charge. A noter que :
 
-* si vous passez un pointeur, il est conservé tel quel, il est évalué à l’aide de la commande [JSON Stringify](json-stringify.md),
-* les dates sont stockées au format "YYYY-MM-DDTHH:mm:ss.SSSZ". Lors de la conversion d'une date 4D en texte avant stockage dans l'objet, par défaut le programme tient compte du fuseau horaire local. Vous pouvez modifier ce fonctionnement à l'aide du sélecteur JSON use local time de la commande [SET DATABASE PARAMETER](set-database-parameter.md).
+* si vous passez un pointeur, il est conservé tel quel, il est évalué à l’aide de la commande [JSON Stringify](../commands/json-stringify),
+* les dates sont stockées au format "YYYY-MM-DDTHH:mm:ss.SSSZ". Lors de la conversion d'une date 4D en texte avant stockage dans l'objet, par défaut le programme tient compte du fuseau horaire local. Vous pouvez modifier ce fonctionnement à l'aide du sélecteur JSON use local time de la commande [SET DATABASE PARAMETER](../commands/set-database-parameter).
 * si vous passez une heure, elle est stockée sous la forme d'un nombre de millisecondes (réel) dans *objet*.
 * si vous passez un objet de langage, la commande utilise la référence de l’objet et non une copie.
 
@@ -153,7 +153,7 @@ Si vous avez défini le champ \[Rect\]Desc en tant que champ objet, vous pouvez 
 
 ## Exemple 9 
 
-Vous souhaitez exporter des données en JSON contenant une date 4D que vous souhaitez convertir en chaîne sans fuseau horaire. A noter que la conversion a lieu au moment du stockage de la date dans l’objet, il faut donc appeler la commande [SET DATABASE PARAMETER](set-database-parameter.md) avant [OB SET](ob-set.md) : 
+Vous souhaitez exporter des données en JSON contenant une date 4D que vous souhaitez convertir en chaîne sans fuseau horaire. A noter que la conversion a lieu au moment du stockage de la date dans l’objet, il faut donc appeler la commande [SET DATABASE PARAMETER](../commands/set-database-parameter) avant [OB SET](../commands/ob-set) : 
 
 ```4d
  var $o : Object
@@ -208,10 +208,10 @@ Vous souhaitez stocker une image dans un champ objet. Vous pouvez écrire :
 
 ## Voir aussi 
 
-[OB Get](ob-get.md)  
-[OB REMOVE](ob-remove.md)  
-[OB SET ARRAY](ob-set-array.md)  
-[OB SET NULL](ob-set-null.md)  
+[OB Get](../commands/ob-get)  
+[OB REMOVE](../commands/ob-remove)  
+[OB SET ARRAY](../commands/ob-set-array)  
+[OB SET NULL](../commands/ob-set-null)  
 
 ## Propriétés
 

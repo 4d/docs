@@ -1,4 +1,4 @@
----
+﻿---
 id: records-in-set
 title: Records in set
 slug: /commands/records-in-set
@@ -33,8 +33,8 @@ El siguiente ejemplo muestra una alerta indicando el porcentaje de clientes que 
 
 ## Ver también 
 
-[Records in selection](records-in-selection.md)  
-[Records in table](records-in-table.md)  
+[Records in selection](../commands/records-in-selection)  
+[Records in table](../commands/records-in-table)  
 
 ## Propiedades
 

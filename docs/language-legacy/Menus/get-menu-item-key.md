@@ -1,4 +1,4 @@
----
+﻿---
 id: get-menu-item-key
 title: Get menu item key
 slug: /commands/get-menu-item-key
@@ -59,8 +59,8 @@ To obtain the shortcut associated with a menu item, it is useful to implement a 
 
 ## See also 
 
-[Get menu item key](get-menu-item-key.md)  
-[SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md)  
+[Get menu item key](../commands/get-menu-item-key)  
+[SET MENU ITEM SHORTCUT](../commands/set-menu-item-shortcut)  
 
 ## Properties
 

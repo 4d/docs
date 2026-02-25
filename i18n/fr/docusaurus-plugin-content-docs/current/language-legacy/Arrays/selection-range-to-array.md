@@ -1,4 +1,4 @@
----
+﻿---
 id: selection-range-to-array
 title: SELECTION RANGE TO ARRAY
 slug: /commands/selection-range-to-array
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SELECTION RANGE TO ARRAY.Summary-->**SELECTION RANGE TO ARRAY** crée un ou plusieurs tableau(x) et y copie des données en provenance des champs de la sélection courante ou les numéros des enregistrements de la sélection courante.<!-- END REF--> 
 
-A la différence de [SELECTION TO ARRAY](selection-to-array.md) qui s'applique à l'intégralité de la sélection courante, **SELECTION RANGE TO ARRAY** s'applique uniquement à une sous-sélection d'enregistrements, définie par les paramètres *début* et *fin*.
+A la différence de [SELECTION TO ARRAY](../commands/selection-to-array) qui s'applique à l'intégralité de la sélection courante, **SELECTION RANGE TO ARRAY** s'applique uniquement à une sous-sélection d'enregistrements, définie par les paramètres *début* et *fin*.
 
 Vous devez passer dans les paramètres *début* et *fin* des numéros d'enregistrements sous-sélectionnés s'inscrivant dans l'intervalle défini par la formule *1 <= début <= fin <= Enregistrements trouves (\[...\])*. 
 
@@ -45,11 +45,11 @@ Si vous passez des numéros d'enregistrements incorrects, vous obtiendrez les r�
 * Si *début > fin*, la commande ne retourne que les valeurs de l'enregistrement *début*.
 * Si les deux paramètres sont incompatibles avec la taille de la sous-sélection, les tableaux sont retournés vides
 
-Comme [SELECTION TO ARRAY](selection-to-array.md), **SELECTION RANGE TO ARRAY** s'applique à la sélection de la table passée en paramètre. La commande peut réaliser les opérations suivantes :
+Comme [SELECTION TO ARRAY](../commands/selection-to-array), **SELECTION RANGE TO ARRAY** s'applique à la sélection de la table passée en paramètre. La commande peut réaliser les opérations suivantes :
 
 * Charger les valeurs d'un ou plusieurs champs,
 * Charger les numéros des enregistrements, à l'aide de la syntaxe *...;\[table\];tableau;...*
-* Charger des valeurs de champs liés, s'il existe un lien automatique de N vers 1 entre les tables, ou si vous avez préalablement appelé la commande [SET AUTOMATIC RELATIONS](set-automatic-relations.md) pour rendre automatiques les liens manuels N vers 1 (dans les deux cas, les valeurs peuvent être chargées à travers plusieurs niveaux de liens N vers 1 entre les tables).
+* Charger des valeurs de champs liés, s'il existe un lien automatique de N vers 1 entre les tables, ou si vous avez préalablement appelé la commande [SET AUTOMATIC RELATIONS](../commands/set-automatic-relations) pour rendre automatiques les liens manuels N vers 1 (dans les deux cas, les valeurs peuvent être chargées à travers plusieurs niveaux de liens N vers 1 entre les tables).
 
 Chaque tableau est typé en fonction du type de champ.
 
@@ -62,11 +62,11 @@ A noter toutefois que **SELECTION RANGE TO ARRAY** appliquée à un champ de typ
 
 Si vous chargez les numéros des enregistrements, ils sont copiés dans un tableau de type Entier long. 
 
-**Note :** Il est possible d’appeler la commande **SELECTION RANGE TO ARRAY** avec uniquement les paramètres *début* et *fin*. Cette syntaxe particulière peut être employée pour lancer sur une sélection limitée l’exécution d’une série différée de commandes [SELECTION TO ARRAY](selection-to-array.md) utilisant le paramètre *\** (cf. exemple 4). 
+**Note :** Il est possible d’appeler la commande **SELECTION RANGE TO ARRAY** avec uniquement les paramètres *début* et *fin*. Cette syntaxe particulière peut être employée pour lancer sur une sélection limitée l’exécution d’une série différée de commandes [SELECTION TO ARRAY](../commands/selection-to-array) utilisant le paramètre *\** (cf. exemple 4). 
 
 **4D Server :** La commande **SELECTION RANGE TO ARRAY** est optimisée pour 4D Server. Chaque tableau est créé sur le serveur puis envoyé en totalité sur le poste client.
 
-**ATTENTION :** **SELECTION RANGE TO ARRAY** peut créer des tableaux de taille importante, en fonction de l'intervalle défini par *début* et *fin*, ainsi que du type et de la taille des données à charger. Comme les tableaux résident en mémoire, il peut être utile de tester la taille des tableaux créés après l'exécution de la commande, ou d'utiliser une méthode projet d'interception d'erreurs, installée par la commande [ON ERR CALL](on-err-call.md). 
+**ATTENTION :** **SELECTION RANGE TO ARRAY** peut créer des tableaux de taille importante, en fonction de l'intervalle défini par *début* et *fin*, ainsi que du type et de la taille des données à charger. Comme les tableaux résident en mémoire, il peut être utile de tester la taille des tableaux créés après l'exécution de la commande, ou d'utiliser une méthode projet d'interception d'erreurs, installée par la commande [ON ERR CALL](../commands/on-err-call). 
 
 Une fois la commande correctement exécutée, la taille des tableaux résultants est égale à *(fin-début)+1* — sauf si le paramètre *fin* est supérieur au nombre d'enregistrements dans la sélection. Dans ce cas, les tableaux contiennent *(Enregistrements trouves(\[...\])-début)+1* éléments.
 
@@ -116,9 +116,9 @@ Utilisation des 50 premiers enregistrements courants de la table \[Factures\] po
 
 ## Voir aussi 
 
-[ON ERR CALL](on-err-call.md)  
-[SELECTION TO ARRAY](selection-to-array.md)  
-[SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
+[ON ERR CALL](../commands/on-err-call)  
+[SELECTION TO ARRAY](../commands/selection-to-array)  
+[SET AUTOMATIC RELATIONS](../commands/set-automatic-relations)  
 
 ## Propriétés
 

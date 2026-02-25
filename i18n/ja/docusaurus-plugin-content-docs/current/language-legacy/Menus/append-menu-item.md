@@ -1,4 +1,4 @@
----
+﻿---
 id: append-menu-item
 title: APPEND MENU ITEM
 slug: /commands/append-menu-item
@@ -62,11 +62,11 @@ displayed_sidebar: docs
 
 *\** 引数を渡すと、項目テキストに含められた特別文字 (; ( !...) は標準の文字として扱われ、メタ文字ではなくなります。つまり"コピー (特別)..."や"検索/置換..."のようなメニュー項目を作成できるようになります。*\** 引数が渡されたときは、一回のコマンドの呼び出しで複数の項目を作成できないことに注意してください。この場合 ";" 文字は標準の文字として扱われます。
 
-**Note:** [GET MENU ITEMS](get-menu-items.md) および [Get menu item](get-menu-item.md) コマンドはメニュー項目が作られた方法により、メタ文字を返したり返さなかったりします。*\** オプション付きで作成された場合、メタ文字は標準文字として返されます。
+**Note:** [GET MENU ITEMS](../commands/get-menu-items) および [Get menu item](../commands/get-menu-item) コマンドはメニュー項目が作られた方法により、メタ文字を返したり返さなかったりします。*\** オプション付きで作成された場合、メタ文字は標準文字として返されます。
 
-オプションの*subMenu*引数を使用して、階層サブメニューとして追加するメニューを指定できます。[Create menu](create-menu.md) コマンド等を使用して作成されたメニュー参照 (MenuRef 型文字列) を渡さなければなりません。コマンドが2つ以上のメニュー項目を追加する場合、サブメニューは最初の項目に追加されます。
+オプションの*subMenu*引数を使用して、階層サブメニューとして追加するメニューを指定できます。[Create menu](../commands/create-menu) コマンド等を使用して作成されたメニュー参照 (MenuRef 型文字列) を渡さなければなりません。コマンドが2つ以上のメニュー項目を追加する場合、サブメニューは最初の項目に追加されます。
 
-**重要**: 新しいメニュー項目にはメソッドやアクションが割り当てられていません。これらは[SET MENU ITEM PROPERTY](set-menu-item-property.md) あるいは [SET MENU ITEM METHOD](set-menu-item-method.md) コマンドを使用して項目に割り当てるか、[Menu selected](menu-selected.md) コマンドを使ってフォームメソッドからこれを管理しなくてはなりません。
+**重要**: 新しいメニュー項目にはメソッドやアクションが割り当てられていません。これらは[SET MENU ITEM PROPERTY](../commands/set-menu-item-property) あるいは [SET MENU ITEM METHOD](../commands/set-menu-item-method) コマンドを使用して項目に割り当てるか、[Menu selected](../commands/menu-selected) コマンドを使ってフォームメソッドからこれを管理しなくてはなりません。
 
 ## 例題 
 
@@ -90,9 +90,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[DELETE MENU ITEM](delete-menu-item.md)  
-[INSERT MENU ITEM](insert-menu-item.md)  
-[SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
+[DELETE MENU ITEM](../commands/delete-menu-item)  
+[INSERT MENU ITEM](../commands/insert-menu-item)  
+[SET MENU ITEM PARAMETER](../commands/set-menu-item-parameter)  
 
 ## プロパティ
 

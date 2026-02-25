@@ -1,4 +1,4 @@
----
+﻿---
 id: new-process
 title: New process
 slug: /commands/new-process
@@ -45,7 +45,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New process.Summary-->La commande **New process** lance un nouveau process (sur la même machine) et retourne le numéro de ce process.<!-- END REF-->
 
-Si le process n'a pas pu être créé, par exemple s'il n'y a pas assez de mémoire, **New process** retourne zéro et une erreur est générée. Vous pouvez intercepter cette erreur à l'aide d'une méthode de gestion d'erreurs installée par la commande [`ON ERR CALL`](on-err-call.md).
+Si le process n'a pas pu être créé, par exemple s'il n'y a pas assez de mémoire, **New process** retourne zéro et une erreur est générée. Vous pouvez intercepter cette erreur à l'aide d'une méthode de gestion d'erreurs installée par la commande [`ON ERR CALL`](../commands/on-err-call).
 
 ### Méthode du process 
 
@@ -92,7 +92,7 @@ Examinons la méthode projet suivante :
  Until(OK=0)
 ```
 
-Si vous associez cette méthode projet à une commande de menu créé dans l'éditeur de barres de menus et que vous lui affectez la propriété **Démarrer un process**, 4D va automatiquement créer un nouveau process lors de l'exécution de la méthode. L'instruction [SET MENU BAR](set-menu-bar.md)(1) associe cette barre de menus au nouveau process. En l'absence de toute fenêtre (que vous pourriez avoir ouverte avec [Open window](open-window.md)), l'appel à [ADD RECORD](add-record.md) en créera une automatiquement.
+Si vous associez cette méthode projet à une commande de menu créé dans l'éditeur de barres de menus et que vous lui affectez la propriété **Démarrer un process**, 4D va automatiquement créer un nouveau process lors de l'exécution de la méthode. L'instruction [SET MENU BAR](../commands/set-menu-bar)(1) associe cette barre de menus au nouveau process. En l'absence de toute fenêtre (que vous pourriez avoir ouverte avec [Open window](../commands/open-window)), l'appel à [ADD RECORD](../commands/add-record) en créera une automatiquement.
 
 Si maintenant vous voulez pouvoir démarrer le process Ajout Clients lorsque vous cliquez sur un bouton situé dans un tableau de contrôle personnalisé, vous pouvez écrire : 
 
@@ -124,7 +124,7 @@ Dans l'éditeur de barres de menus, vous remplacez AJOUT CLIENTS par la méthode
 
 ## Voir aussi 
 
-[Execute on server](execute-on-server.md)  
+[Execute on server](../commands/execute-on-server)  
 [Process et Workers](../../Develop/processes.md)  
 [Process préemptifs](../../Develop/preemptive.md) 
 

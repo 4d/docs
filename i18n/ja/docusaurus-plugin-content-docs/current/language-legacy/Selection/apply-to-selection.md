@@ -1,4 +1,4 @@
----
+﻿---
 id: apply-to-selection
 title: APPLY TO SELECTION
 slug: /commands/apply-to-selection
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 **4D Server:** *statement*に渡されるコマンドはサーバでは実行されません。セレクションの各レコードは修正のためローカルのワークステーションに送り返されます。
 
-**APPLY TO SELECTION** を実行している間、処理の進捗を表すサーモメータが表示されます。**APPLY TO SELECTION** を呼び出す前に、[MESSAGES OFF](messages-off.md) を使用してサーモメータの表示を取り消すことができます。サーモメータが表示されると、ユーザは処理をキャンセルすることができます。
+**APPLY TO SELECTION** を実行している間、処理の進捗を表すサーモメータが表示されます。**APPLY TO SELECTION** を呼び出す前に、[MESSAGES OFF](../commands/messages-off) を使用してサーモメータの表示を取り消すことができます。サーモメータが表示されると、ユーザは処理をキャンセルすることができます。
 
 ## 例題 1 
 
@@ -73,7 +73,7 @@ APPLY TO SELECTION実行中にレコードを修正して、そのレコード�
 
 ## 参照 
 
-[EDIT FORMULA](edit-formula.md)  
+[EDIT FORMULA](../commands/edit-formula)  
 *セット*  
 
 ## プロパティ

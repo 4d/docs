@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-collapse
 title: LISTBOX COLLAPSE
 slug: /commands/listbox-collapse
@@ -61,7 +61,7 @@ This example collapses the first level of the break rows of the selection in the
 
 ## See also 
 
-[LISTBOX EXPAND](listbox-expand.md)  
+[LISTBOX EXPAND](../commands/listbox-expand)  
 
 ## Properties
 

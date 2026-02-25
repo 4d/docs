@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-events
 title: OBJECT GET EVENTS
 slug: /commands/object-get-events
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET EVENTS.Summary-->**OBJECT GET EVENTS**コマンドは、引数 *object* と *\** で指定したオブジェクトの、フォームイベントのカレントの設定を取得します。<!-- END REF-->
 
-フォームイベントはプロパティリストを通して有効化/無効化することができます。また、同一のプロセスにおいてなら [OBJECT SET EVENTS](object-set-events.md) コマンドを使用して設定することも可能です。
+フォームイベントはプロパティリストを通して有効化/無効化することができます。また、同一のプロセスにおいてなら [OBJECT SET EVENTS](../commands/object-set-events) コマンドを使用して設定することも可能です。
 
 任意の *\** 演算子を渡した場合、 *object* 引数でオブジェクト名を文字列で指定します。省略時には *object* 引数でフィールドまたは変数を指定します。  
 フォーム自体のイベントの設定を取得したい場合は、任意の *\** 演算子を渡したうえで、 *object* 引数に空の文字列 "" を渡します。こうすることでカレントフォームをこれで指定します。
@@ -57,7 +57,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT SET EVENTS](object-set-events.md)  
+[OBJECT SET EVENTS](../commands/object-set-events)  
 
 ## プロパティ
 

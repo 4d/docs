@@ -1,4 +1,4 @@
----
+﻿---
 id: save-set
 title: SAVE SET
 slug: /commands/save-set
@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAVE SET.Summary-->**SAVE SET** saves *set* to *document*, a document on disk.<!-- END REF-->
 
-The *document* does not need to have the same name as the set. If you supply an empty string for *document*, a Create File dialog box appears so that the user can enter the name of the document. You can load a saved set with the [LOAD SET](load-set.md) command.
+The *document* does not need to have the same name as the set. If you supply an empty string for *document*, a Create File dialog box appears so that the user can enter the name of the document. You can load a saved set with the [LOAD SET](../commands/load-set) command.
 
 If the user clicks Cancel in the Save File dialog box, or if there is an error during the save operation, the OK system variable is set to 0\. Otherwise, it is set to 1.
 
@@ -42,7 +42,7 @@ If the user clicks Cancel in the Save File dialog box, or if there is an error d
 
 ## See also 
 
-[LOAD SET](load-set.md)  
+[LOAD SET](../commands/load-set)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: get-field-properties
 title: GET FIELD PROPERTIES
 slug: /commands/get-field-properties
@@ -84,9 +84,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Field](field.md)  
-[Field name](field-name.md)  
-[SET INDEX](set-index.md)  
+[Field](../commands/field)  
+[Field name](../commands/field-name)  
+[SET INDEX](../commands/set-index)  
 
 ## プロパティ
 

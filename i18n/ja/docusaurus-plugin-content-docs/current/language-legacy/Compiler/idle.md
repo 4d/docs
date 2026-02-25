@@ -1,4 +1,4 @@
----
+﻿---
 id: idle
 title: IDLE
 slug: /commands/idle
@@ -51,7 +51,7 @@ EVENT METHODは以下のとおりです:
 
 ## 参照 
 
-[ON EVENT CALL](on-event-call.md)  
+[ON EVENT CALL](../commands/on-event-call)  
 *コンパイラコマンド*  
 
 ## プロパティ

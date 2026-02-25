@@ -1,4 +1,4 @@
----
+﻿---
 id: print-settings
 title: PRINT SETTINGS
 slug: /commands/print-settings
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.PRINT SETTINGS.Summary-->**PRINT SETTINGS** は印刷設定ダイアログボックスを表示します。<!-- END REF-->このコマンドを使用する場合、[Print form](../commands/print-form) や [OPEN PRINTING JOB](open-printing-job.md) コマンドよりも前に呼び出されなければなりません。
+<!--REF #_command_.PRINT SETTINGS.Summary-->**PRINT SETTINGS** は印刷設定ダイアログボックスを表示します。<!-- END REF-->このコマンドを使用する場合、[Print form](../commands/print-form) や [OPEN PRINTING JOB](../commands/open-printing-job) コマンドよりも前に呼び出されなければなりません。
 
 オプションの*dialType* パラメーターを使用して、表示する印刷設定ダイアログボックスを指定できます。次の *Print Options* テーマの定数を引数として受け渡すことができます:
 
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 | Page setup dialog | 1 | 用紙設定ダイアログを表示                   |
 | Print dialog      | 2 | プリントジョブダイアログボックスを表示(省略時のデフォルト) |
 
-**注:** プリントジョブダイアログボックスには、プリントジョブを画面で確認するためのプレビューチェックボックスがあります。**PRINT SETTINGS** を実行する前に [SET PRINT PREVIEW](set-print-preview.md) コマンドを使用して、このチェックボックスをあらかじめ設定したり、リセットしておくことができます。
+**注:** プリントジョブダイアログボックスには、プリントジョブを画面で確認するためのプレビューチェックボックスがあります。**PRINT SETTINGS** を実行する前に [SET PRINT PREVIEW](../commands/set-print-preview) コマンドを使用して、このチェックボックスをあらかじめ設定したり、リセットしておくことができます。
 
 ## 例題 
 
@@ -50,10 +50,10 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OPEN PRINTING JOB](open-printing-job.md)  
-[PAGE BREAK](page-break.md)  
+[OPEN PRINTING JOB](../commands/open-printing-job)  
+[PAGE BREAK](../commands/page-break)  
 [Print form](../commands/print-form)  
-[SET PRINT PREVIEW](set-print-preview.md)  
+[SET PRINT PREVIEW](../commands/set-print-preview)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: goto-record
 title: GOTO RECORD
 slug: /commands/goto-record
@@ -40,7 +40,7 @@ Veja o exemplo para Record Number.
 
 ## Ver também 
 
-[Record number](record-number.md)  
+[Record number](../commands/record-number)  
 *Sobre Números de Registros*  
 
 ## Propriedades

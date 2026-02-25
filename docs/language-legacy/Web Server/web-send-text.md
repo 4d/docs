@@ -1,4 +1,4 @@
----
+﻿---
 id: web-send-text
 title: WEB SEND TEXT
 slug: /commands/web-send-text
@@ -36,8 +36,8 @@ The *htmlText* parameter contains the data to be sent. Since 4D does not check t
 
 Any references to 4D variables and *4DSCRIPT* type tags in the text are always parsed.
 
-By default, if you omit the *type* parameter, 4D assumes that the data sent is of the "text/html" type. The command is then exactly the same as sending a BLOB of the "text/html" type using the [WEB SEND BLOB](web-send-blob.md) command.   
-You can also use the *type* parameter to specify the MIME type of the text to be sent. For more information about the MIME types supported, refer to the description of the [WEB SEND BLOB](web-send-blob.md) command.
+By default, if you omit the *type* parameter, 4D assumes that the data sent is of the "text/html" type. The command is then exactly the same as sending a BLOB of the "text/html" type using the [WEB SEND BLOB](../commands/web-send-blob) command.   
+You can also use the *type* parameter to specify the MIME type of the text to be sent. For more information about the MIME types supported, refer to the description of the [WEB SEND BLOB](../commands/web-send-blob) command.
 
 ## Example 
 
@@ -56,7 +56,7 @@ The following method:
 
 ## See also 
 
-[WEB SEND BLOB](web-send-blob.md)  
+[WEB SEND BLOB](../commands/web-send-blob)  
 
 ## Properties
 

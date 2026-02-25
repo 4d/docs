@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-row-color
 title: LISTBOX SET ROW COLOR
 slug: /commands/listbox-set-row-color
@@ -47,11 +47,11 @@ Em *fila*, passe o número da fila na que deseja aplicar a nova cor.
 
 **Nota:** O comando não leva em conta nenhum estado oculto/visível das filas do listbox.
 
-Em *cor*, passe um valor de cor RGB. Para obter mais informação sobre as cores RGB, consulte a descrição do comando [OBJECT SET RGB COLORS](object-set-rgb-colors.md). Se deseja que a fila herde o conjunto de cores para o nível mais alto, você pode passar a constante`lk inherited` no parâmetro *cor*.
+Em *cor*, passe um valor de cor RGB. Para obter mais informação sobre as cores RGB, consulte a descrição do comando [OBJECT SET RGB COLORS](../commands/object-set-rgb-colors). Se deseja que a fila herde o conjunto de cores para o nível mais alto, você pode passar a constante`lk inherited` no parâmetro *cor*.
 
 No parâmetro *tipoCor*, passe as constantes `lk background color`  ou `lk font color`  para indicar se deseja aplicar a cor para o fundo ou para a cor de fonte da fila. Se omitir este parâmetro, a cor se aplica para a cor de fonte.
 
-Este comando modifica os valores que se encontram no array de cores que podem ter sido definido para a coluna do listbox. Se estes acertos não estão definidos, o comando cria de forma dinâmica arrays que podem acessar mediante o comando [LISTBOX Get array](listbox-get-array.md).  
+Este comando modifica os valores que se encontram no array de cores que podem ter sido definido para a coluna do listbox. Se estes acertos não estão definidos, o comando cria de forma dinâmica arrays que podem acessar mediante o comando [LISTBOX Get array](../commands/listbox-get-array).  
   
 Se os valores de cor em conflito se definem usando as propriedades para os listboxes ou colunas do listbox, se aplica uma ordem de prioridade. Para obter mais informação, consulte o manual de *Desenho*.
 
@@ -73,9 +73,9 @@ Em um array de tipo list box, queremos estabelecer as cores de uma fila e para u
 ## Ver também 
 
 *List box*  
-[LISTBOX Get row color](listbox-get-row-color.md)  
-[LISTBOX Get row color as number](listbox-get-row-color-as-number.md)  
-[LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md)  
+[LISTBOX Get row color](../commands/listbox-get-row-color)  
+[LISTBOX Get row color as number](../commands/listbox-get-row-color-as-number)  
+[LISTBOX SET ROW FONT STYLE](../commands/listbox-set-row-font-style)  
 
 ## Propriedades
 

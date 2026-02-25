@@ -1,4 +1,4 @@
----
+﻿---
 id: execute-on-client
 title: EXECUTE ON CLIENT
 slug: /commands/execute-on-client
@@ -29,16 +29,16 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.EXECUTE ON CLIENT.Summary-->La commande **EXECUTE ON CLIENT** provoque l’exécution de la méthode *nomMéthode*, avec, éventuellement, le(s) paramètre(s) *param1.<!-- END REF-->.. paramN*, sur le ou les 4D Client inscrit(s) sous le nom *nomClient*. Le nom d’inscription du ou des 4D Client est défini par la commande [REGISTER CLIENT](register-client.md). 
+<!--REF #_command_.EXECUTE ON CLIENT.Summary-->La commande **EXECUTE ON CLIENT** provoque l’exécution de la méthode *nomMéthode*, avec, éventuellement, le(s) paramètre(s) *param1.<!-- END REF-->.. paramN*, sur le ou les 4D Client inscrit(s) sous le nom *nomClient*. Le nom d’inscription du ou des 4D Client est défini par la commande [REGISTER CLIENT](../commands/register-client). 
 
 Cette commande peut être appelée depuis un 4D Client ou une procédure stockée sur 4D Server.   
 Si la méthode admet des paramètres, passez-les après le nom de la méthode.
 
 L’exécution de la méthode sur le 4D Client s’effectue dans un process créé automatiquement sur le poste client, et portant le nom d’inscription du 4D Client.
 
-Si cette commande est appelée plusieurs fois de suite pour un même 4D Client, les ordres d’exécution seront empilés. Par conséquent, les méthodes seront traitées les unes à la suite des autres : les exécutions sont asynchrones. Plus l’empilement est grand, plus la “charge de travail” est grande pour le 4D Client. Vous pouvez connaître l’état de la charge de travail de chaque client à l’aide de la commande [GET REGISTERED CLIENTS](get-registered-clients.md).
+Si cette commande est appelée plusieurs fois de suite pour un même 4D Client, les ordres d’exécution seront empilés. Par conséquent, les méthodes seront traitées les unes à la suite des autres : les exécutions sont asynchrones. Plus l’empilement est grand, plus la “charge de travail” est grande pour le 4D Client. Vous pouvez connaître l’état de la charge de travail de chaque client à l’aide de la commande [GET REGISTERED CLIENTS](../commands/get-registered-clients).
 
-**Note :** L’empilement des ordres d’exécutions ne peut être modifié ou stoppé, sauf si le 4D Client est désinscrit à l’aide de la commande [UNREGISTER CLIENT](unregister-client.md).
+**Note :** L’empilement des ordres d’exécutions ne peut être modifié ou stoppé, sauf si le 4D Client est désinscrit à l’aide de la commande [UNREGISTER CLIENT](../commands/unregister-client).
 
 Il est possible d’exécuter simultanément la même méthode sur plusieurs ou sur la totalité des 4D Clients inscrits : pour cela, passez le caractère joker (@) dans le paramètre *nomClient*.
 
@@ -60,7 +60,7 @@ Vous souhaitez que tous les clients inscrits exécutent la méthode “VideTemp�
 
 ## Exemple 3 
 
-Reportez-vous à l’exemple de la commande [REGISTER CLIENT](register-client.md).
+Reportez-vous à l’exemple de la commande [REGISTER CLIENT](../commands/register-client).
 
 ## Variables et ensembles système 
 
@@ -68,10 +68,10 @@ La variable système OK prend la valeur 1 si 4D Server a correctement reçu la r
 
 ## Voir aussi 
 
-[Execute on server](execute-on-server.md)  
-[GET REGISTERED CLIENTS](get-registered-clients.md)  
-[REGISTER CLIENT](register-client.md)  
-[UNREGISTER CLIENT](unregister-client.md)  
+[Execute on server](../commands/execute-on-server)  
+[GET REGISTERED CLIENTS](../commands/get-registered-clients)  
+[REGISTER CLIENT](../commands/register-client)  
+[UNREGISTER CLIENT](../commands/unregister-client)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: web-server-list
 title: WEB Server list
 slug: /commands/web-server-list
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 サーバーが実際に実行中か否かに関わらず、`WEB Server list` コマンドは利用可能な Webサーバーをすべて返します。
 
-> デフォルトの Webサーバーオブジェクトは、4D 起動時に自動的にロードされます。 一方で、使用したいコンポーネントのWeb サーバーは、[`WEB Server`](web-server.md) コマンドによってそれぞれインスタンス化されている必要があります。
+> デフォルトの Webサーバーオブジェクトは、4D 起動時に自動的にロードされます。 一方で、使用したいコンポーネントのWeb サーバーは、[`WEB Server`](../commands/web-server) コマンドによってそれぞれインスタンス化されている必要があります。
 
 Webサーバオブジェクトの [.name](../../API/WebServerClass.md#name) プロパティを使用することで、リスト内の各 Webサーバーオブジェクトが関連づけられているデータベースまたはコンポーネントを識別することができます。
 
@@ -53,7 +53,7 @@ Webサーバオブジェクトの [.name](../../API/WebServerClass.md#name) プ�
 
 ## 参照
 
-[WEB Server](web-server.md)\
+[WEB Server](../commands/web-server)\
 [webServer.stop()](../../API/WebServerClass.md#stop)
 
 ## プロパティ

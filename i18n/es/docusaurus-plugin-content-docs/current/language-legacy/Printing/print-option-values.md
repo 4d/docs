@@ -1,4 +1,4 @@
----
+﻿---
 id: print-option-values
 title: PRINT OPTION VALUES
 slug: /commands/print-option-values
@@ -49,22 +49,22 @@ Si pasa Paper option en el parámetro *opcion*, el comando devolverá la siguien
 
 **Nota:** para obtener esta información, el driver de impresión debe tener acceso a un archivo (PostScript Printer Description) válido de la impresora.
 
-Para aplicar un formato de papel específico utilizando el comando [SET PRINT OPTION](set-print-option.md), puede pasar uno de los valores de *nomsArray*, los valores correspondientes de *info1Array* e *info2Array*.
+Para aplicar un formato de papel específico utilizando el comando [SET PRINT OPTION](../commands/set-print-option), puede pasar uno de los valores de *nomsArray*, los valores correspondientes de *info1Array* e *info2Array*.
 
 ***option* \= Paper source option (5)**
 
 **Nota:** esta opción sólo puede ser utilizada en Windows.
 
-Si pasa Paper source option en el parámetro *opcion*, el comando devuelve los nombres de las diferentes bandejas disponibles en *nomsArray* y sus números Windows ID internos en *info1Array* (*info2Array* permanece vacío). El orden de los valores en los arrays está definido por el driver de impresión. Para indicar una bandeja utilizando el comando [SET PRINT OPTION](set-print-option.md), debe pasar el índice del elemento que desea en el array *nomsArray* o *info1Array*.
+Si pasa Paper source option en el parámetro *opcion*, el comando devuelve los nombres de las diferentes bandejas disponibles en *nomsArray* y sus números Windows ID internos en *info1Array* (*info2Array* permanece vacío). El orden de los valores en los arrays está definido por el driver de impresión. Para indicar una bandeja utilizando el comando [SET PRINT OPTION](../commands/set-print-option), debe pasar el índice del elemento que desea en el array *nomsArray* o *info1Array*.
 
-Para mayor información sobre las diferentes opciones de impresión, consulte la descripción de los comandos [SET PRINT OPTION](set-print-option.md) y [GET PRINT OPTION](get-print-option.md).
+Para mayor información sobre las diferentes opciones de impresión, consulte la descripción de los comandos [SET PRINT OPTION](../commands/set-print-option) y [GET PRINT OPTION](../commands/get-print-option).
 
 Toda la información devuelta por estos comandos es suministrada por el sistema operativo. Consulte la documentación de su sistema para más detalles sobre opciones específicas.
 
 ## Ver también 
 
-[GET PRINT OPTION](get-print-option.md)  
-[SET PRINT OPTION](set-print-option.md)  
+[GET PRINT OPTION](../commands/get-print-option)  
+[SET PRINT OPTION](../commands/set-print-option)  
 
 ## Propiedades
 

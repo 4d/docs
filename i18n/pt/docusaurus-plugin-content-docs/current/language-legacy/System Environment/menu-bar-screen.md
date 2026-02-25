@@ -1,4 +1,4 @@
----
+﻿---
 id: menu-bar-screen
 title: Menu bar screen
 slug: /commands/menu-bar-screen
@@ -33,8 +33,8 @@ displayed_sidebar: docs
 
 ## Ver também 
 
-[Count screens](count-screens.md)  
-[Menu bar height](menu-bar-height.md)  
+[Count screens](../commands/count-screens)  
+[Menu bar height](../commands/menu-bar-height)  
 
 ## Propriedades
 

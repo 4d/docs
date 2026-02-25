@@ -1,4 +1,4 @@
----
+﻿---
 id: regenerate-missing-table
 title: REGENERATE MISSING TABLE
 slug: /commands/regenerate-missing-table
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.REGENERATE MISSING TABLE.Summary-->The **REGENERATE MISSING TABLE** command rebuilds the missing table whose name is passed in the *tableName* parameter.<!-- END REF--> When a missing table is rebuilt, it becomes visible in the Structure editor and its data can once again be accessed.
 
-Missing tables are tables whose data are present in the data file but that do not exist at the structure level. You can identify any missing tables that may be present in the application by using the [GET MISSING TABLE NAMES](get-missing-table-names.md) command.
+Missing tables are tables whose data are present in the data file but that do not exist at the structure level. You can identify any missing tables that may be present in the application by using the [GET MISSING TABLE NAMES](../commands/get-missing-table-names) command.
 
 If the table designated by the *tableName* parameter is not a missing table of the database, the command does nothing. 
 
@@ -70,7 +70,7 @@ This method regenerates all the missing tables that may be present in the databa
 
 ## See also 
 
-[GET MISSING TABLE NAMES](get-missing-table-names.md)  
+[GET MISSING TABLE NAMES](../commands/get-missing-table-names)  
 
 ## Properties
 

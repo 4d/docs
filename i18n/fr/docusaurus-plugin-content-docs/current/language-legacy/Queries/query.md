@@ -1,4 +1,4 @@
----
+﻿---
 id: query
 title: QUERY
 slug: /commands/query
@@ -123,7 +123,7 @@ Voici les règles à observer pour la construction de séquences de recherche :
 
 Quelle que soit la manière dont la recherche a été définie :
 
-* Si l'exécution d'une commande **QUERY** nécessite un certain temps, 4D affiche automatiquement un message contenant un thermomètre de progression. Ces thermomètres peuvent être cachés à l'aide des commandes [MESSAGES ON](messages-on.md) et [MESSAGES OFF](messages-off.md). Si le thermomètre de progression est affiché, l'utilisateur peut cliquer sur le bouton **Stop** pour interrompre l'opération. Si la recherche s'est correctement déroulée, la variable système OK prend la valeur 1\. Sinon, si la recherche est interrompue, OK prend la valeur 0 (zéro).
+* Si l'exécution d'une commande **QUERY** nécessite un certain temps, 4D affiche automatiquement un message contenant un thermomètre de progression. Ces thermomètres peuvent être cachés à l'aide des commandes [MESSAGES ON](../commands/messages-on) et [MESSAGES OFF](../commands/messages-off). Si le thermomètre de progression est affiché, l'utilisateur peut cliquer sur le bouton **Stop** pour interrompre l'opération. Si la recherche s'est correctement déroulée, la variable système OK prend la valeur 1\. Sinon, si la recherche est interrompue, OK prend la valeur 0 (zéro).
 * Si des champs indexés sont spécifiés, la recherche est optimisée à chaque fois que c'est possible (la recherche commence par les champs indexés), réduisant au maximum la durée de l'opération. La commande tire parti des index composites pour les recherches utilisant le **ET** (&).
 
 ## Exemple 5 
@@ -316,11 +316,11 @@ Si la recherche est correctement effectuée, la variable système OK prend la va
 La variable OK prend la valeur 0 si :
 
 * l'utilisateur clique sur le bouton **Annuler** / **Stop**,
-* en mode 'recherche et verrouillage' (cf. commande [SET QUERY AND LOCK](set-query-and-lock.md)), la recherche a trouvé au moins un enregistrement verrouillé. Dans ce cas également, l'ensemble système LockedSet est mis à jour.
+* en mode 'recherche et verrouillage' (cf. commande [SET QUERY AND LOCK](../commands/set-query-and-lock)), la recherche a trouvé au moins un enregistrement verrouillé. Dans ce cas également, l'ensemble système LockedSet est mis à jour.
 
 ## Voir aussi 
 
-[QUERY SELECTION](query-selection.md)  
+[QUERY SELECTION](../commands/query-selection)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-set-preference
 title: WA SET PREFERENCE
 slug: /commands/wa-set-preference
@@ -71,7 +71,7 @@ To enable URL drops in the 'myarea' Web area:
 
 ## See also 
 
-[WA GET PREFERENCE](wa-get-preference.md)  
+[WA GET PREFERENCE](../commands/wa-get-preference)  
 
 ## Properties
 

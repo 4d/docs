@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-find-xml-element-by-id
 title: DOM Find XML element by ID
 slug: /commands/dom-find-xml-element-by-id
@@ -39,7 +39,7 @@ The command returns the XML reference of the element found as a result.
 
 ## See also 
 
-[DOM Find XML element](dom-find-xml-element.md)  
+[DOM Find XML element](../commands/dom-find-xml-element)  
 
 ## Properties
 

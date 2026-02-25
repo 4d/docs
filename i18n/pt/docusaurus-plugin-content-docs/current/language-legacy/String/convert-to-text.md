@@ -1,4 +1,4 @@
----
+﻿---
 id: convert-to-text
 title: Convert to text
 slug: /commands/convert-to-text
@@ -43,7 +43,7 @@ Se o comando for executado corretamente, a variável OK assume o valor 1\. Do co
 
 ## Ver também 
 
-[CONVERT FROM TEXT](convert-from-text.md)  
+[CONVERT FROM TEXT](../commands/convert-from-text)  
 
 ## Propriedades
 

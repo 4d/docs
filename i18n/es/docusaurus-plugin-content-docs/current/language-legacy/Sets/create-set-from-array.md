@@ -1,4 +1,4 @@
----
+﻿---
 id: create-set-from-array
 title: CREATE SET FROM ARRAY
 slug: /commands/create-set-from-array
@@ -49,8 +49,8 @@ En un array de enteros largos, si un número de registro no es válido (registro
 
 ## Ver también 
 
-[BOOLEAN ARRAY FROM SET](boolean-array-from-set.md)  
-[CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
+[BOOLEAN ARRAY FROM SET](../commands/boolean-array-from-set)  
+[CREATE SELECTION FROM ARRAY](../commands/create-selection-from-array)  
 
 ## Propiedades
 

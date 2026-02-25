@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-totals-spacing
 title: QR GET TOTALS SPACING
 slug: /commands/qr-get-totals-spacing
@@ -47,7 +47,7 @@ If you pass an invalid *subtotal*, the error -9852 will be generated.
 
 ## See also 
 
-[QR SET TOTALS SPACING](qr-set-totals-spacing.md)  
+[QR SET TOTALS SPACING](../commands/qr-set-totals-spacing)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-set-array
 title: OB SET ARRAY
 slug: /commands/ob-set-array
@@ -143,8 +143,8 @@ Using a picture array:
 
 ## See also 
 
-[OB GET ARRAY](ob-get-array.md)  
-[OB SET](ob-set.md)  
+[OB GET ARRAY](../commands/ob-get-array)  
+[OB SET](../commands/ob-set)  
 *Type conversions between collections and 4D arrays*  
 
 ## Properties

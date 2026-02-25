@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-rgb-colors
 title: OBJECT SET RGB COLORS
 slug: /commands/object-set-rgb-colors
@@ -117,8 +117,8 @@ Cambia a fondo transparente con un color de fuente claro:
 
 ## Ver también 
 
-[OBJECT GET RGB COLORS](object-get-rgb-colors.md)  
-[Select RGB color](select-rgb-color.md)  
+[OBJECT GET RGB COLORS](../commands/object-get-rgb-colors)  
+[Select RGB color](../commands/select-rgb-color)  
 
 ## Propiedades
 

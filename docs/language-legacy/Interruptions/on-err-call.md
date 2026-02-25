@@ -1,4 +1,4 @@
----
+﻿---
 id: on-err-call
 title: ON ERR CALL
 slug: /commands/on-err-call
@@ -64,7 +64,7 @@ The error-handling method should manage the error in an appropriate way or prese
 * The 4D environment; for example, when you do not have enough memory for allocating an array.
 * The operating system on which the database is run; for example, disk full or I/O errors.
 
-The [ABORT](abort.md) command can be used to terminate processing. If you don’t call [ABORT](abort.md) in the error-handling method, 4D returns to the interrupted method and continues to execute the method. Use the [ABORT](abort.md) command when an error cannot be recovered.
+The [ABORT](../commands/abort) command can be used to terminate processing. If you don’t call [ABORT](../commands/abort) in the error-handling method, 4D returns to the interrupted method and continues to execute the method. Use the [ABORT](../commands/abort) command when an error cannot be recovered.
 
 If an error occurs in the error-handling method itself, 4D takes over error handling. Therefore, you should make sure that the error-handling method cannot generate an error. Also, you cannot use **ON ERR CALL** inside the error-handling method.
 
@@ -189,11 +189,11 @@ The following error-handling method ignores the user interruptions and displays 
 
 ## See also 
 
-[ABORT](abort.md)  
+[ABORT](../commands/abort)  
 *Error Handler*  
 [Last errors](../commands/last-errors)   
 [Last errors](../commands/last-errors)  
-[Method called on error](method-called-on-error.md)  
+[Method called on error](../commands/method-called-on-error)  
 *System Variables*  
 
 ## Properties

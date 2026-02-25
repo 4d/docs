@@ -1,4 +1,4 @@
----
+﻿---
 id: this
 title: This
 slug: /commands/this
@@ -47,7 +47,7 @@ $val:=$o.a //42
 ```
 
 
-> When calling the superclass constructor in a constructor using the [Super](super.md) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. See [this example](super.md#example-1).
+> When calling the superclass constructor in a constructor using the [Super](../commands/super) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. See [this example](super.md#example-1).
 
 In any cases, `This` refers to the object the method was called on, as if the method were on the object.
 
@@ -74,7 +74,7 @@ In this example, the object assigned to the variable $o doesn't have its own *f*
 
 ## Formula object
 
-In the context of the execution of a formula object created by the [Formula](formula.md) or [Formula from string](formula-from-string.md) commands, `This` returns a reference to the object currently processed by the formula.
+In the context of the execution of a formula object created by the [Formula](../commands/formula) or [Formula from string](../commands/formula-from-string) commands, `This` returns a reference to the object currently processed by the formula.
 
 For example, you want to use a project method as a formula encapsulated in an object:
 
@@ -185,7 +185,7 @@ Once the form is executed, the list box is automatically filled with the entity 
 ## See also 
 
 [Self](../commands/self)  
-[Super](super.md)  
+[Super](../commands/super)  
 
 ## Properties
 

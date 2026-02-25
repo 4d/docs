@@ -1,4 +1,4 @@
----
+﻿---
 id: ldap-login
 title: LDAP LOGIN
 slug: /commands/ldap-login
@@ -107,7 +107,7 @@ Este exemplo tenta conectar-se a um aplicativo:
 ## Ver também 
 
 *LDAP*  
-[LDAP LOGOUT](ldap-logout.md)  
+[LDAP LOGOUT](../commands/ldap-logout)  
 
 ## Propriedades
 

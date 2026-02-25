@@ -1,4 +1,4 @@
----
+﻿---
 id: create-index
 title: CREATE INDEX
 slug: /commands/create-index
@@ -49,7 +49,7 @@ El parámetro *tipoIndice* permite definir el tipo de índice a crear. Puede pas
 
 **Nota:** un índice B-Tree asociado a un campo de tipo texto almacena como máximo los primeros 1024 caracteres del campo. Por lo tanto en este contexto, las búsquedas en las cadenas que contienen más de 1024 caracteres fallarán. 
 
-Pase en *nomIndice* el nombre del índice a crear. Es necesario dar nombres a los índices si varios índices de diferentes tipos pueden asociarse a un mismo campo y si prefiere poder borrarlos individualmente con la ayuda del comando [DELETE INDEX](delete-index.md). Si el índice *nomIndice* ya existe, el comando no hace nada.
+Pase en *nomIndice* el nombre del índice a crear. Es necesario dar nombres a los índices si varios índices de diferentes tipos pueden asociarse a un mismo campo y si prefiere poder borrarlos individualmente con la ayuda del comando [DELETE INDEX](../commands/delete-index). Si el índice *nomIndice* ya existe, el comando no hace nada.
 
 El parámetro opcional *\**, cuando se pasa, permite efectuar la indexación en modo asincrónico. En este modo, el método original continua su ejecución después de la llamada del comando, sin importar si la indexación ha terminado o no. 
 
@@ -96,9 +96,9 @@ Creación de un índice compuesto en los campos “Ciudad” y “CodigoPostal�
 
 ## Ver también 
 
-[DELETE INDEX](delete-index.md)  
-[RESUME INDEXES](resume-indexes.md)  
-[SET INDEX](set-index.md)  
+[DELETE INDEX](../commands/delete-index)  
+[RESUME INDEXES](../commands/resume-indexes)  
+[SET INDEX](../commands/set-index)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: set-window-title
 title: SET WINDOW TITLE
 slug: /commands/set-window-title
@@ -61,7 +61,7 @@ Enquanto realiza uma entrada de dados em um formulário, você clica em um botã
 
 ## Ver também 
 
-[Get window title](get-window-title.md)  
+[Get window title](../commands/get-window-title)  
 
 ## Propriedades
 

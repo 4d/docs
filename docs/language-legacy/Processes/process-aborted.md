@@ -1,4 +1,4 @@
----
+﻿---
 id: process-aborted
 title: Process aborted
 slug: /commands/process-aborted
@@ -29,11 +29,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Process aborted.Summary-->The **Process aborted** command returns **True** if the process in which it is called is about to be interrupted unexpectedly, which means that the execution of the command was unable to reach its “normal” completion.<!-- END REF-->
 
-This status will happen very rarely. Processes are usually stopped before the code can be notified the "process aborted" condition. This condition might only happen in compiled loops not executing any 4D command. For more infomation about how 4D handles the closure of processes, please refer to the [On Exit database method](on-exit-database-method.md) page.
+This status will happen very rarely. Processes are usually stopped before the code can be notified the "process aborted" condition. This condition might only happen in compiled loops not executing any 4D command. For more infomation about how 4D handles the closure of processes, please refer to the [On Exit database method](../commands/on-exit-database-method) page.
 
 ## See also 
 
-[On Exit database method](on-exit-database-method.md)  
+[On Exit database method](../commands/on-exit-database-method)  
 
 ## Properties
 

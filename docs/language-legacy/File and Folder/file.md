@@ -1,4 +1,4 @@
----
+﻿---
 id: file
 title: File
 slug: /commands/file
@@ -84,7 +84,7 @@ If the command is called from a component, pass the optional `*` parameter to ge
 ## See also 
 
 [`4D.File` class](../../API/FileClass.md)  
-[Folder](folder.md)  
+[Folder](../commands/folder)  
 [Get 4D file](../commands/get-4d-file)  
 [Object to path](../commands/object-to-path)  
 [Path to object](../commands/path-to-object)

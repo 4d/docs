@@ -1,4 +1,4 @@
----
+﻿---
 id: set-print-marker
 title: SET PRINT MARKER
 slug: /commands/set-print-marker
@@ -191,14 +191,14 @@ El método de formulario List\_Imp3 es el siguiente:
 
 ## Ver também 
 
-[Get print marker](get-print-marker.md)  
-[OBJECT GET BEST SIZE](object-get-best-size.md)  
-[OBJECT GET COORDINATES](object-get-coordinates.md)  
-[OBJECT MOVE](object-move.md)  
-[PAGE BREAK](page-break.md)  
+[Get print marker](../commands/get-print-marker)  
+[OBJECT GET BEST SIZE](../commands/object-get-best-size)  
+[OBJECT GET COORDINATES](../commands/object-get-coordinates)  
+[OBJECT MOVE](../commands/object-move)  
+[PAGE BREAK](../commands/page-break)  
 [Print form](../commands/print-form)  
-[PRINT RECORD](print-record.md)  
-[PRINT SELECTION](print-selection.md)  
+[PRINT RECORD](../commands/print-record)  
+[PRINT SELECTION](../commands/print-selection)  
 
 ## Propriedades
 

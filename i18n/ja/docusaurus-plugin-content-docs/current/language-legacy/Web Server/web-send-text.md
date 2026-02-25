@@ -1,4 +1,4 @@
----
+﻿---
 id: web-send-text
 title: WEB SEND TEXT
 slug: /commands/web-send-text
@@ -36,8 +36,8 @@ displayed_sidebar: docs
 
 テキスト内での4D変数と *4DSCRIPT* 型タグへの参照は全て解析されます。
 
-*type* 引数を省略した場合、4Dは送信されたデータが "text/html" 型であると自動的に判断します。この場合、コマンドは [WEB SEND BLOB](web-send-blob.md) コマンドを使用して "text/html" 型のBLOBを送信したのと同一の挙動をします。  
-また、 *type* 引数を使用して送信したいテキストのMIME型を指定することもできます。サポートされているMIME型に関しての詳細な情報は、 [WEB SEND BLOB](web-send-blob.md) コマンドの詳細を参照して下さい。
+*type* 引数を省略した場合、4Dは送信されたデータが "text/html" 型であると自動的に判断します。この場合、コマンドは [WEB SEND BLOB](../commands/web-send-blob) コマンドを使用して "text/html" 型のBLOBを送信したのと同一の挙動をします。  
+また、 *type* 引数を使用して送信したいテキストのMIME型を指定することもできます。サポートされているMIME型に関しての詳細な情報は、 [WEB SEND BLOB](../commands/web-send-blob) コマンドの詳細を参照して下さい。
 
 ## 例題 
 
@@ -58,7 +58,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WEB SEND BLOB](web-send-blob.md)  
+[WEB SEND BLOB](../commands/web-send-blob)  
 
 ## プロパティ
 

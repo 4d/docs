@@ -1,4 +1,4 @@
----
+﻿---
 id: modify-selection
 title: MODIFY SELECTION
 slug: /commands/modify-selection
@@ -32,16 +32,16 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.MODIFY SELECTION.Summary-->La commande **MODIFY SELECTION** est quasiment identique à la commande [DISPLAY SELECTION](display-selection.md).<!-- END REF--> Reportez-vous à la commande [DISPLAY SELECTION](display-selection.md) pour une description détaillée.  
+<!--REF #_command_.MODIFY SELECTION.Summary-->La commande **MODIFY SELECTION** est quasiment identique à la commande [DISPLAY SELECTION](../commands/display-selection).<!-- END REF--> Reportez-vous à la commande [DISPLAY SELECTION](../commands/display-selection) pour une description détaillée.  
 Les seules différences entre ces deux commandes sont les suivantes :
 
-1\. [DISPLAY SELECTION](display-selection.md) et **MODIFY SELECTION** provoquent l'affichage des enregistrements de la sélection courante de *laTable* dans le formulaire sortie courant, ou dans le formulaire entrée lorsque vous double-cliquez sur un enregistrement. Avec **MODIFY SELECTION**, vous pouvez en plus modifier les champs de l'enregistrement dans le formulaire entrée lorsque vous double-cliquez dessus (s'il n'est pas déjà chargé par un autre utilisateur/process) ou en mode “Saisie en liste” (s'il est autorisé).
+1\. [DISPLAY SELECTION](../commands/display-selection) et **MODIFY SELECTION** provoquent l'affichage des enregistrements de la sélection courante de *laTable* dans le formulaire sortie courant, ou dans le formulaire entrée lorsque vous double-cliquez sur un enregistrement. Avec **MODIFY SELECTION**, vous pouvez en plus modifier les champs de l'enregistrement dans le formulaire entrée lorsque vous double-cliquez dessus (s'il n'est pas déjà chargé par un autre utilisateur/process) ou en mode “Saisie en liste” (s'il est autorisé).
 
-2\. [DISPLAY SELECTION](display-selection.md) charge les enregistrements en mode Lecture seulement dans le process courant, ce qui signifie qu'ils ne sont pas verrouillés en écriture pour les autres process. **MODIFY SELECTION** place tous les enregistrements de la sélection en mode Lecture-écriture, ce qui signifie qu'ils sont automatiquement verrouillés en écriture pour les autres process. **MODIFY SELECTION** libère les enregistrements lorsque son exécution est terminée.
+2\. [DISPLAY SELECTION](../commands/display-selection) charge les enregistrements en mode Lecture seulement dans le process courant, ce qui signifie qu'ils ne sont pas verrouillés en écriture pour les autres process. **MODIFY SELECTION** place tous les enregistrements de la sélection en mode Lecture-écriture, ce qui signifie qu'ils sont automatiquement verrouillés en écriture pour les autres process. **MODIFY SELECTION** libère les enregistrements lorsque son exécution est terminée.
 
 ## Voir aussi 
 
-[DISPLAY SELECTION](display-selection.md)  
+[DISPLAY SELECTION](../commands/display-selection)  
 [Form event code](../commands/form-event-code)  
 *Présentation des ensembles*  
 

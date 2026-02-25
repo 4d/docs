@@ -1,4 +1,4 @@
----
+﻿---
 id: insert-menu-item
 title: INSERT MENU ITEM
 slug: /commands/insert-menu-item
@@ -42,15 +42,15 @@ Si omite el parámetro *proceso*, **INSERT MENU ITEM** se aplica a la barra de m
 
 Si no pasa el parámetro \* *, INSERT MENU ITEM* le permite insertar uno o varios comandos de menú en una sola llamada.
 
-**INSERT MENU ITEM** funciona como [APPEND MENU ITEM](append-menu-item.md), excepto que le permite insertar los comandos en cualquier parte del menú, mientras que [APPEND MENU ITEM](append-menu-item.md) siempre los añade al final del menú.
+**INSERT MENU ITEM** funciona como [APPEND MENU ITEM](../commands/append-menu-item), excepto que le permite insertar los comandos en cualquier parte del menú, mientras que [APPEND MENU ITEM](../commands/append-menu-item) siempre los añade al final del menú.
 
-Consulte la descripción del comando [APPEND MENU ITEM](append-menu-item.md) para más información sobre la definición de los comandos de menús pasados en *itemtext*.
+Consulte la descripción del comando [APPEND MENU ITEM](../commands/append-menu-item) para más información sobre la definición de los comandos de menús pasados en *itemtext*.
 
 **Nota:** la constante ak standard action title es soportada en el parámetro *itemText* (4D v16 R3 y superior).
 
-El parámetro opcional *submenu* permite designar un menú como línea insertada y definir un submenú jerárquico. De pasar en este parámetro una referencia de menú (cadena de tipo MenuRef) especificando un menú creado, por ejemplo, utilizando el comando de menú [Create menu](create-menu.md). Si el comando añade más de una línea de menú, el submenú se asocia con la primera línea. 
+El parámetro opcional *submenu* permite designar un menú como línea insertada y definir un submenú jerárquico. De pasar en este parámetro una referencia de menú (cadena de tipo MenuRef) especificando un menú creado, por ejemplo, utilizando el comando de menú [Create menu](../commands/create-menu). Si el comando añade más de una línea de menú, el submenú se asocia con la primera línea. 
 
-**Importante:** las nuevas líneas no tienen métodos o acciones asociados. Deben asociarse utilizando los comandos [SET MENU ITEM PROPERTY](set-menu-item-property.md) o [SET MENU ITEM METHOD](set-menu-item-method.md), o los elementos también pueden ser administrados desde un método de formulario utilizando el comando [Menu selected](menu-selected.md).
+**Importante:** las nuevas líneas no tienen métodos o acciones asociados. Deben asociarse utilizando los comandos [SET MENU ITEM PROPERTY](../commands/set-menu-item-property) o [SET MENU ITEM METHOD](../commands/set-menu-item-method), o los elementos también pueden ser administrados desde un método de formulario utilizando el comando [Menu selected](../commands/menu-selected).
 
 ## Ejemplo 
 
@@ -66,8 +66,8 @@ El siguiente ejemplo crea un menú que consiste en dos comandos los cuales asign
 
 ## Ver también 
 
-[APPEND MENU ITEM](append-menu-item.md)  
-[SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
+[APPEND MENU ITEM](../commands/append-menu-item)  
+[SET MENU ITEM PARAMETER](../commands/set-menu-item-parameter)  
 
 ## Propiedades
 

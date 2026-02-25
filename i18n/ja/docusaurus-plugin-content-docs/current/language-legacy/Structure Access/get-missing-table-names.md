@@ -1,4 +1,4 @@
----
+﻿---
 id: get-missing-table-names
 title: GET MISSING TABLE NAMES
 slug: /commands/get-missing-table-names
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[REGENERATE MISSING TABLE](regenerate-missing-table.md)  
+[REGENERATE MISSING TABLE](../commands/regenerate-missing-table)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: minimize-window
 title: MINIMIZE WINDOW
 slug: /commands/minimize-window
@@ -47,7 +47,7 @@ O tamanho da janela é reduzido a seu tamanho inicial (seu tamanho antes de ser 
   
 Caixa de zoom/redução em Mac OS  
   
-Se as janelas às quais forem aplicados este comando não forem maximizadas previamente (manualmente ou utilizando [MAXIMIZE WINDOW](maximize-window.md)), ou se o tipo de janela não incluir uma caixa de zoom, o comando não tem efeito. Para maior informação sobre tipos de janelas, consulte a seção *Tipos de Janelas*.  
+Se as janelas às quais forem aplicados este comando não forem maximizadas previamente (manualmente ou utilizando [MAXIMIZE WINDOW](../commands/maximize-window)), ou se o tipo de janela não incluir uma caixa de zoom, o comando não tem efeito. Para maior informação sobre tipos de janelas, consulte a seção *Tipos de Janelas*.  
   
 **Nota**: esta função não deve se confundir com a redução de uma janela a um botão (Windows) ou no Dock (macOS), a qual é gerada através de um clique no botão abaixo:
 
@@ -60,8 +60,8 @@ Mac OS
 
 ## Ver também 
 
-[MAXIMIZE WINDOW](maximize-window.md)  
-[REDUCE RESTORE WINDOW](reduce-restore-window.md)  
+[MAXIMIZE WINDOW](../commands/maximize-window)  
+[REDUCE RESTORE WINDOW](../commands/reduce-restore-window)  
 
 ## Propriedades
 

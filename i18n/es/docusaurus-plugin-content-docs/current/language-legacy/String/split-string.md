@@ -1,4 +1,4 @@
----
+﻿---
 id: split-string
 title: Split string
 slug: /commands/split-string
@@ -68,7 +68,7 @@ El parámetro *separador* puede ser una cadena de múltiples caracteres:
 
 ## Ver también 
 
-[TEXT TO ARRAY](text-to-array.md)  
+[TEXT TO ARRAY](../commands/text-to-array)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: describe-query-execution
 title: DESCRIBE QUERY EXECUTION
 slug: /commands/describe-query-execution
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.DESCRIBE QUERY EXECUTION.Summary-->DESCRIBE QUERY EXECUTION コマンドはカレントプロセスにおいて、クエリの分析を有効にしたり無効にしたりします。<!-- END REF-->このコマンドは、4Dランゲージの[QUERY](query.md)コマンドのようなクエリの文脈でのみ機能します。
+<!--REF #_command_.DESCRIBE QUERY EXECUTION.Summary-->DESCRIBE QUERY EXECUTION コマンドはカレントプロセスにおいて、クエリの分析を有効にしたり無効にしたりします。<!-- END REF-->このコマンドは、4Dランゲージの[QUERY](../commands/query)コマンドのようなクエリの文脈でのみ機能します。
 
 *status* 引数に[True](true.md "True")を設定してこのコマンドを呼び出すと、クエリ分析モードが有効になります。このモードでは、4Dエンジンはデータに対して行われるクエリごとに2つの情報を内部的に記録します:
 
@@ -77,8 +77,8 @@ $vResultPath :
 
 ## 参照 
 
-[Last query path](last-query-path.md)  
-[Last query plan](last-query-plan.md)  
+[Last query path](../commands/last-query-path)  
+[Last query plan](../commands/last-query-plan)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: verify-password-hash
 title: Verify password hash
 slug: /commands/verify-password-hash
@@ -31,11 +31,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Verify password hash.Summary-->La fonction **Verify password hash** vérifie que l'empreinte cryptographique *hash* correspond bien au *motDePasse*.<!-- END REF-->
 
-Cette fonction compare *motDePasse* à un *hash* généré par la commande [Generate password hash](generate-password-hash.md).
+Cette fonction compare *motDePasse* à un *hash* généré par la commande [Generate password hash](../commands/generate-password-hash).
 
 ### Gestion des erreurs 
 
-Les erreurs suivantes peuvent être retournées. Vous pouvez récupérer et analyser les erreurs à l'aide des commandes [Last errors](../commands/last-errors)  et [ON ERR CALL](on-err-call.md).
+Les erreurs suivantes peuvent être retournées. Vous pouvez récupérer et analyser les erreurs à l'aide des commandes [Last errors](../commands/last-errors)  et [ON ERR CALL](../commands/on-err-call).
 
 | **Numéro** | **Message**                                              |
 | ---------- | -------------------------------------------------------- |
@@ -46,7 +46,7 @@ Les erreurs suivantes peuvent être retournées. Vous pouvez récupérer et anal
 
 ## Exemple 
 
-Cet exemple compare un hash de mot de passe créé par la commande [Generate password hash](generate-password-hash.md) et stocké dans la table \[Users\] avec un mot de passe qui vient d'être saisi :
+Cet exemple compare un hash de mot de passe créé par la commande [Generate password hash](../commands/generate-password-hash) et stocké dans la table \[Users\] avec un mot de passe qui vient d'être saisi :
 
 ```4d
  var $password : Text
@@ -64,7 +64,7 @@ Cet exemple compare un hash de mot de passe créé par la commande [Generate pas
 ## Voir aussi 
 
   
-[Generate password hash](generate-password-hash.md)  
+[Generate password hash](../commands/generate-password-hash)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: expand-blob
 title: EXPAND BLOB
 slug: /commands/expand-blob
@@ -75,8 +75,8 @@ BLOBが正しく解凍されるとOK変数は1に、そうでなければ0に設
 
 ## 参照 
 
-[BLOB PROPERTIES](blob-properties.md)  
-[COMPRESS BLOB](compress-blob.md)  
+[BLOB PROPERTIES](../commands/blob-properties)  
+[COMPRESS BLOB](../commands/compress-blob)  
 
 ## プロパティ
 

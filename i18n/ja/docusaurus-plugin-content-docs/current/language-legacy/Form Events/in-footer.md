@@ -1,4 +1,4 @@
----
+﻿---
 id: in-footer
 title: In footer
 slug: /commands/in-footer
@@ -25,8 +25,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[In break](in-break.md)  
-[In header](in-header.md)  
+[In break](../commands/in-break)  
+[In header](../commands/in-header)  
 
 ## プロパティ
 

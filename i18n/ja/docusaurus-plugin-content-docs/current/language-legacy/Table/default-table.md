@@ -1,4 +1,4 @@
----
+﻿---
 id: default-table
 title: DEFAULT TABLE
 slug: /commands/default-table
@@ -33,7 +33,7 @@ displayed_sidebar: docs
  FORM SET INPUT("form")
 ```
 
-デフォルトテーブ ルの設定のもう1つの目的は、テーブルに特定されないステートメントを作成することです。これによって、同じステートメントで異なるテーブルを操作するこ とができます。また、テーブルへのポインタを使用して、テーブルに特定されないコードを作成することもできます。この手法に関する詳細は、 [Table name](table-name.md) コマンドの説明を参照してください。  
+デフォルトテーブ ルの設定のもう1つの目的は、テーブルに特定されないステートメントを作成することです。これによって、同じステートメントで異なるテーブルを操作するこ とができます。また、テーブルへのポインタを使用して、テーブルに特定されないコードを作成することもできます。この手法に関する詳細は、 [Table name](../commands/table-name) コマンドの説明を参照してください。  
 フィールドを参照する場合テーブル名を省略することはできません。例えば、以下のように記述します:
 
 ```4d
@@ -74,8 +74,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Current default table](current-default-table.md)  
-[NO DEFAULT TABLE](no-default-table.md)  
+[Current default table](../commands/current-default-table)  
+[NO DEFAULT TABLE](../commands/no-default-table)  
 
 ## プロパティ
 

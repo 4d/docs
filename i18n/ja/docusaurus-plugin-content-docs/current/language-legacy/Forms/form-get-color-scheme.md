@@ -1,4 +1,4 @@
----
+﻿---
 id: form-get-color-scheme
 title: FORM Get color scheme
 slug: /commands/form-get-color-scheme
@@ -34,11 +34,11 @@ displayed_sidebar: docs
 フォームの実際のカラースキームは、以下の方法によって定義されます:
 
 * フォームの"Color Scheme"プロパティ(*colorScheme*を参照してください)
-* "Color Scheme"が"inherited"に設定されていた場合には、[SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) コマンドの呼び出し
-* [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) が呼び出されていない、または"inherited" 引数値で呼び出されていた場合には、データベース設定(コンポーネントの場合にはホストデータベース側の設定)
+* "Color Scheme"が"inherited"に設定されていた場合には、[SET APPLICATION COLOR SCHEME](../commands/set-application-color-scheme) コマンドの呼び出し
+* [SET APPLICATION COLOR SCHEME](../commands/set-application-color-scheme) が呼び出されていない、または"inherited" 引数値で呼び出されていた場合には、データベース設定(コンポーネントの場合にはホストデータベース側の設定)
 * データベース設定が"継承する"に設定されていた場合、OS のユーザー設定
 
-カラースキーム名の詳細については、[SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) コマンドの説明を参照してください。
+カラースキーム名の詳細については、[SET APPLICATION COLOR SCHEME](../commands/set-application-color-scheme) コマンドの説明を参照してください。
 
 ## 例題 
 
@@ -53,8 +53,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Get Application color scheme](get-application-color-scheme.md)  
-[SET APPLICATION COLOR SCHEME](set-application-color-scheme.md)  
+[Get Application color scheme](../commands/get-application-color-scheme)  
+[SET APPLICATION COLOR SCHEME](../commands/set-application-color-scheme)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: change-licenses
 title: CHANGE LICENSES
 slug: /commands/change-licenses
@@ -51,7 +51,7 @@ This way a user can activate licenses without having to modify the database.
 ## See also 
 
 [License info](../commands/license-info)  
-[Is license available](is-license-available.md)  
+[Is license available](../commands/is-license-available)  
 
 ## Properties
 

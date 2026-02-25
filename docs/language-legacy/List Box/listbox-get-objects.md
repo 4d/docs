@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-objects
 title: LISTBOX GET OBJECTS
 slug: /commands/listbox-get-objects
@@ -46,7 +46,7 @@ In *arrObjectNames*, you pass a text array that is automatically filled in by th
 
 The array returns the object names for all the columns (including column footers), regardless of whether or not they are visible. 
 
-This command is useful in the context of the parsing of a form using the [FORM LOAD](../commands/form-load), [FORM GET OBJECTS](form-get-objects.md) and [OBJECT Get type](object-get-type.md) commands. You can use it, when needed, to obtain the names of list box sub-objects.
+This command is useful in the context of the parsing of a form using the [FORM LOAD](../commands/form-load), [FORM GET OBJECTS](../commands/form-get-objects) and [OBJECT Get type](../commands/object-get-type) commands. You can use it, when needed, to obtain the names of list box sub-objects.
 
 ## Example 
 
@@ -70,7 +70,7 @@ You want to load a form and get a list of all the objects of list boxes that it 
 ## See also 
 
 [FORM LOAD](../commands/form-load)  
-[OBJECT Get type](object-get-type.md)  
+[OBJECT Get type](../commands/object-get-type)  
 
 ## Properties
 

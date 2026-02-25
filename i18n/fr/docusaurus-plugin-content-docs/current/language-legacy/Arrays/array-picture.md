@@ -1,4 +1,4 @@
----
+﻿---
 id: array-picture
 title: ARRAY PICTURE
 slug: /commands/array-picture
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 Lorsque vous appliquez la commande **ARRAY PICTURE** à un tableau existant :
 
-* Si vous agrandissez sa taille, les éléments existants ne sont pas modifiés, les nouveaux éléments sont initialisés à une image vide (ce qui signifie que la fonction [Picture size](picture-size.md) appliquée à l'un de ces éléments retourne 0).
+* Si vous agrandissez sa taille, les éléments existants ne sont pas modifiés, les nouveaux éléments sont initialisés à une image vide (ce qui signifie que la fonction [Picture size](../commands/picture-size) appliquée à l'un de ces éléments retourne 0).
 * Si vous réduisez sa taille, les éléments du "bas" du tableau sont supprimés et perdus.
 
 ## Exemple 1 

@@ -1,4 +1,4 @@
----
+﻿---
 id: set-list-item-properties
 title: SET LIST ITEM PROPERTIES
 slug: /commands/set-list-item-properties
@@ -41,16 +41,16 @@ displayed_sidebar: docs
 Si vous passez le premier paramètre optionnel *\**, vous indiquez que le paramètre *liste* est un nom d’objet (chaîne) correspondant à une représentation de liste dans le formulaire. Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *liste* est une référence de liste hiérarchique (RéfListe). Si vous utilisez une seule représentation de liste ou travaillez avec les éléments structurels (le second *\** est omis), vous pouvez utiliser indifféremment l’une ou l’autre syntaxe. En revanche, si vous utilisez plusieurs représentations d’une même liste et travaillez avec l’élément courant (le second *\** est passé), la syntaxe basée sur le nom d’objet est requise car chaque représentation peut disposer de son propre élément courant.
 
 Vous pouvez passer un numéro de référence dans *réfElément*. Si ce numéro ne correspond à aucun élément de la liste, la commande ne fait rien.   
-Vous pouvez également passer *0* dans *réfElément* afin de demander la modification du dernier élément ajouté à la liste (à l'aide de [APPEND TO LIST](append-to-list.md)).   
+Vous pouvez également passer *0* dans *réfElément* afin de demander la modification du dernier élément ajouté à la liste (à l'aide de [APPEND TO LIST](../commands/append-to-list)).   
 Vous pouvez enfin passer *\** dans *réfElément* : dans ce cas, la commande s’appliquera à l’élément courant de la liste. Si plusieurs éléments sont sélectionnés manuellement, l’élément courant est celui qui a été sélectionné en dernier. Si aucun élément n’est sélectionné, la commande ne fait rien.
 
 Si vous travaillez avec les numéros de référence des éléments, assurez-vous d'utiliser des numéros uniques, sinon vous ne pourrez pas différencier les éléments. Pour plus d'informations sur ce point, reportez-vous à la section *Gestion des listes hiérarchiques*.
 
-**Note :** Pour changer le libellé d'un élément ou de ses sous-listes, utilisez la commande [SET LIST ITEM](set-list-item.md).
+**Note :** Pour changer le libellé d'un élément ou de ses sous-listes, utilisez la commande [SET LIST ITEM](../commands/set-list-item).
 
 Si vous souhaitez que l'élément soit saisissable, passez Vrai dans le paramètre *saisissable*, sinon passez Faux.
 
-**Important :** Pour qu'un élément soit saisissable, il doit appartenir à une liste elle-même saisissable. Pour déclarer une liste saisissable, utilisez la commande [OBJECT SET ENTERABLE](object-set-enterable.md). La commande **SET LIST ITEM PROPERTIES** vous permet de déclarer un élément individuel saisissable ou non. La modification de la propriété saisissable au niveau de la liste ne change pas la propriété saisissable individuelle de chaque élément. Un élément ne peut être saisissable que si la liste **et** l'élément le sont.
+**Important :** Pour qu'un élément soit saisissable, il doit appartenir à une liste elle-même saisissable. Pour déclarer une liste saisissable, utilisez la commande [OBJECT SET ENTERABLE](../commands/object-set-enterable). La commande **SET LIST ITEM PROPERTIES** vous permet de déclarer un élément individuel saisissable ou non. La modification de la propriété saisissable au niveau de la liste ne change pas la propriété saisissable individuelle de chaque élément. Un élément ne peut être saisissable que si la liste **et** l'élément le sont.
 
 Vous pouvez définir le style de l'élément dans le paramètre *styles*. Vous passez une ou une combinaison des constantes prédéfinies suivantes (thème *Styles de caractères*) :
 
@@ -70,13 +70,13 @@ Dans le paramètre *icône*, vous pouvez passer une image pour l'utiliser comme 
 **Notes** **:**
 
 * Il est recommandé d'utiliser un chemin de fichier image, étant donné que la bibliothèque d'image est obsolète et n'est pas supportée dans les projets 4D.
-* Si vous souhaitez utiliser des expressions image 4D (champs, variables...) pour définir les icônes des éléments, utilisez la commande [SET LIST ITEM ICON](set-list-item-icon.md).
+* Si vous souhaitez utiliser des expressions image 4D (champs, variables...) pour définir les icônes des éléments, utilisez la commande [SET LIST ITEM ICON](../commands/set-list-item-icon).
 
-Le paramètre *couleur* (facultatif) permet de modifier la couleur du texte de l’élément. La couleur doit être définie sous forme de couleur RVB, c’est-à-dire un entier long de 4 octets au format 0x00RRVVBB. Pour plus d’informations sur ce format, reportez-vous à la description de la commande [OBJECT SET RGB COLORS](object-set-rgb-colors.md). Passez -1 dans le paramètre *couleur* pour rétablir la couleur d’origine de l’élément.
+Le paramètre *couleur* (facultatif) permet de modifier la couleur du texte de l’élément. La couleur doit être définie sous forme de couleur RVB, c’est-à-dire un entier long de 4 octets au format 0x00RRVVBB. Pour plus d’informations sur ce format, reportez-vous à la description de la commande [OBJECT SET RGB COLORS](../commands/object-set-rgb-colors). Passez -1 dans le paramètre *couleur* pour rétablir la couleur d’origine de l’élément.
 
 ## Exemple 1 
 
-Reportez-vous à l'exemple de la commande [APPEND TO LIST](append-to-list.md).
+Reportez-vous à l'exemple de la commande [APPEND TO LIST](../commands/append-to-list).
 
 ## Exemple 2 
 
@@ -88,10 +88,10 @@ L’exemple suivant passe le texte de l’élément courant de *liste* en gras e
 
 ## Voir aussi 
 
-[GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
+[GET LIST ITEM PROPERTIES](../commands/get-list-item-properties)  
 *Listes hiérarchiques*  
-[SET LIST ITEM](set-list-item.md)  
-[SET LIST ITEM ICON](set-list-item-icon.md)  
+[SET LIST ITEM](../commands/set-list-item)  
+[SET LIST ITEM ICON](../commands/set-list-item-icon)  
 
 ## Propriétés
 

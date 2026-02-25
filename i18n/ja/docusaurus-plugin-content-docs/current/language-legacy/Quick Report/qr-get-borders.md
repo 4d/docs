@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-borders
 title: QR GET BORDERS
 slug: /commands/qr-get-borders
@@ -78,7 +78,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[QR SET BORDERS](qr-set-borders.md)  
+[QR SET BORDERS](../commands/qr-set-borders)  
 
 ## プロパティ
 

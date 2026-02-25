@@ -1,4 +1,4 @@
----
+﻿---
 id: get-assert-enabled
 title: Get assert enabled
 slug: /commands/get-assert-enabled
@@ -33,9 +33,9 @@ Automaticamente, as asserções estão ativas mas é possível desativá-las uti
 
 ## Ver também 
 
-[ASSERT](assert.md)  
-[Asserted](asserted.md)  
-[SET ASSERT ENABLED](set-assert-enabled.md)  
+[ASSERT](../commands/assert)  
+[Asserted](../commands/asserted)  
+[SET ASSERT ENABLED](../commands/set-assert-enabled)  
 
 ## Propriedades
 

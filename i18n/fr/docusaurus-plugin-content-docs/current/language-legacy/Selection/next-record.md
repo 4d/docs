@@ -1,4 +1,4 @@
----
+﻿---
 id: next-record
 title: NEXT RECORD
 slug: /commands/next-record
@@ -17,21 +17,21 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.NEXT RECORD.Summary-->La commande **NEXT RECORD** place le pointeur d'enregistrement courant sur l'enregistrement suivant dans la sélection courante de *laTable* pour le process courant.<!-- END REF--> Si la sélection courante est vide, ou si [Before selection](before-selection.md) ou [End selection](end-selection.md) retourne Vrai, **NEXT RECORD** ne fait rien.
+<!--REF #_command_.NEXT RECORD.Summary-->La commande **NEXT RECORD** place le pointeur d'enregistrement courant sur l'enregistrement suivant dans la sélection courante de *laTable* pour le process courant.<!-- END REF--> Si la sélection courante est vide, ou si [Before selection](../commands/before-selection) ou [End selection](../commands/end-selection) retourne Vrai, **NEXT RECORD** ne fait rien.
 
-Si **NEXT RECORD** place le pointeur d'enregistrement courant après la fin de la sélection courante, [End selection](end-selection.md) retourne Vrai, et il n'y a alors plus d'enregistrement courant. Lorsque [End selection](end-selection.md) retourne Vrai, utilisez les commandes [FIRST RECORD](first-record.md), [LAST RECORD](last-record.md) ou [GOTO SELECTED RECORD](goto-selected-record.md) pour replacer le pointeur d'enregistrement courant dans la sélection courante. 
+Si **NEXT RECORD** place le pointeur d'enregistrement courant après la fin de la sélection courante, [End selection](../commands/end-selection) retourne Vrai, et il n'y a alors plus d'enregistrement courant. Lorsque [End selection](../commands/end-selection) retourne Vrai, utilisez les commandes [FIRST RECORD](../commands/first-record), [LAST RECORD](../commands/last-record) ou [GOTO SELECTED RECORD](../commands/goto-selected-record) pour replacer le pointeur d'enregistrement courant dans la sélection courante. 
 
 ## Exemple 
 
-Reportez-vous à l'exemple de la commande [DISPLAY RECORD](display-record.md).
+Reportez-vous à l'exemple de la commande [DISPLAY RECORD](../commands/display-record).
 
 ## Voir aussi 
 
-[Before selection](before-selection.md)  
-[End selection](end-selection.md)  
-[FIRST RECORD](first-record.md)  
-[LAST RECORD](last-record.md)  
-[PREVIOUS RECORD](previous-record.md)  
+[Before selection](../commands/before-selection)  
+[End selection](../commands/end-selection)  
+[FIRST RECORD](../commands/first-record)  
+[LAST RECORD](../commands/last-record)  
+[PREVIOUS RECORD](../commands/previous-record)  
 
 ## Propriétés
 

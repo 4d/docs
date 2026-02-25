@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-set-xml-element-value
 title: DOM SET XML ELEMENT VALUE
 slug: /commands/dom-set-xml-element-value
@@ -53,7 +53,7 @@ displayed_sidebar: docs
 
 オプションのアスタリスクを渡すと、要素の値はCDATAセクションに設定されます。テキストをそのまま挿入するために特別なCDATAの形式が使用されます (例題 2参照)。
 
-**注:** *elementRef* で指定された要素が**DOM SET XML ELEMENT VALUE** コマンドで処理されたBLOB の場合、それは自動でBase64 にエンコードされます。この場合[DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md) は自動で逆の処理を行います。
+**注:** *elementRef* で指定された要素が**DOM SET XML ELEMENT VALUE** コマンドで処理されたBLOB の場合、それは自動でBase64 にエンコードされます。この場合[DOM GET XML ELEMENT VALUE](../commands/dom-get-xml-element-value) は自動で逆の処理を行います。
 
 ### 行末文字の処理についての注意 
 
@@ -128,8 +128,8 @@ XML処理のルールに準拠するため、行末文字シークエンス(CR�
 
 ## 参照 
 
-[DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md)  
-[XML SET OPTIONS](xml-set-options.md)  
+[DOM GET XML ELEMENT VALUE](../commands/dom-get-xml-element-value)  
+[XML SET OPTIONS](../commands/xml-set-options)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: spell-check-text
 title: SPELL CHECK TEXT
 slug: /commands/spell-check-text
@@ -64,8 +64,8 @@ On souhaite compter le nombre de fautes potentielles dans un texte :
 
 ## Voir aussi 
 
-[SPELL ADD TO USER DICTIONARY](spell-add-to-user-dictionary.md)  
-[SPELL CHECKING](spell-checking.md)  
+[SPELL ADD TO USER DICTIONARY](../commands/spell-add-to-user-dictionary)  
+[SPELL CHECKING](../commands/spell-checking)  
 
 ## Propriétés
 

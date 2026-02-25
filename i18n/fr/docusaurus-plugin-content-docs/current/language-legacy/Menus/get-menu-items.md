@@ -1,4 +1,4 @@
----
+﻿---
 id: get-menu-items
 title: GET MENU ITEMS
 slug: /commands/get-menu-items
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET MENU ITEMS.Summary-->La commande **GET MENU ITEMS** retourne dans les tableaux *tabTitresMenu* et *tabRefsMenu* les libellés et les identifiants de toutes les lignes du menu ou de la barre de menus désigné(e) par le paramètre *menu*.<!-- END REF-->
 
-Vous pouvez passer dans *menu* un identifiant unique de menu ([RefMenu](# "Référence unique de menu (16 caractères alphanumériques)")), un numéro de barre de menus ou une référence de barre de menus obtenue via la commande [Get menu bar reference](get-menu-bar-reference.md).
+Vous pouvez passer dans *menu* un identifiant unique de menu ([RefMenu](# "Référence unique de menu (16 caractères alphanumériques)")), un numéro de barre de menus ou une référence de barre de menus obtenue via la commande [Get menu bar reference](../commands/get-menu-bar-reference).
 
 Lorsqu'aucune référence de menu n’est rattachée à une ligne, une chaîne vide est retournée dans l’élément de tableau correspondant.
 

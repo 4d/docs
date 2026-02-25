@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-number-of-columns
 title: LISTBOX Get number of columns
 slug: /commands/listbox-get-number-of-columns
@@ -36,7 +36,7 @@ Se passa o parâmetro opcional *\**, indica que o parâmetro *objeto* é um nome
 
 ## Ver também 
 
-[LISTBOX DELETE COLUMN](listbox-delete-column.md)  
+[LISTBOX DELETE COLUMN](../commands/listbox-delete-column)  
 
 ## Propriedades
 

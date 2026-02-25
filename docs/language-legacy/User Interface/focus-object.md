@@ -1,4 +1,4 @@
----
+﻿---
 id: focus-object
 title: Focus object
 slug: /commands/focus-object
@@ -28,11 +28,11 @@ displayed_sidebar: docs
 
 ## Compatibility Note 
 
-<!--REF #_command_.Focus object.Summary-->This command is kept only for compatibility reasons.<!-- END REF--> Starting with version 12 of 4D, it is recommended to use the [OBJECT Get pointer](object-get-pointer.md) command.
+<!--REF #_command_.Focus object.Summary-->This command is kept only for compatibility reasons.<!-- END REF--> Starting with version 12 of 4D, it is recommended to use the [OBJECT Get pointer](../commands/object-get-pointer) command.
 
 ## Description 
 
-**Focus object** returns a pointer to the object having the focus in the current form. If no object has the focus, the command returns [Is nil pointer](is-nil-pointer.md). You can use **Focus object** to perform an action on a form area without having to know which object is currently selected. Be sure to test that the object is the correct data type, using [Type](type.md), before performing an action on it. 
+**Focus object** returns a pointer to the object having the focus in the current form. If no object has the focus, the command returns [Is nil pointer](../commands/is-nil-pointer). You can use **Focus object** to perform an action on a form area without having to know which object is currently selected. Be sure to test that the object is the correct data type, using [Type](../commands/type), before performing an action on it. 
 
 **Note:** When it is used with a list box, the **Focus object** function returns a pointer to the list box or the column of the list box depending on the context. For more information, please refer to the *Managing List Box Objects* section.
 
@@ -56,7 +56,7 @@ The following example is an object method for a button. The object method change
 
 ## See also 
 
-[OBJECT Get pointer](object-get-pointer.md)  
+[OBJECT Get pointer](../commands/object-get-pointer)  
 
 ## Properties
 

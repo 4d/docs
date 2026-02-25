@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-column-formula
 title: LISTBOX Get column formula
 slug: /commands/listbox-get-column-formula
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md)  
+[LISTBOX SET COLUMN FORMULA](../commands/listbox-set-column-formula)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: set-picture-metadata
 title: SET PICTURE METADATA
 slug: /commands/set-picture-metadata
@@ -90,8 +90,8 @@ Cuanto todos los metadatos se manipulan vía una referencia de elementos DOM, la
 
 ## Ver también 
 
-[GET PICTURE KEYWORDS](get-picture-keywords.md)  
-[GET PICTURE METADATA](get-picture-metadata.md)  
+[GET PICTURE KEYWORDS](../commands/get-picture-keywords)  
+[GET PICTURE METADATA](../commands/get-picture-metadata)  
 *Nombres de metadatos imágenes*  
 *Picture Metadata Values*  
 

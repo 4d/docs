@@ -1,4 +1,4 @@
----
+﻿---
 id: web-service-set-parameter
 title: WEB SERVICE SET PARAMETER
 slug: /commands/web-service-set-parameter
@@ -84,8 +84,8 @@ Este exemplo define dois parâmetros:
 
 ## Ver também 
 
-[WEB SERVICE CALL](web-service-call.md)  
-[WEB SERVICE GET RESULT](web-service-get-result.md)  
+[WEB SERVICE CALL](../commands/web-service-call)  
+[WEB SERVICE GET RESULT](../commands/web-service-get-result)  
 
 ## Propriedades
 

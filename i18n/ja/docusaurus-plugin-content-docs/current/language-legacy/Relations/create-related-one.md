@@ -1,4 +1,4 @@
----
+﻿---
 id: create-related-one
 title: CREATE RELATED ONE
 slug: /commands/create-related-one
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[SAVE RELATED ONE](save-related-one.md)  
+[SAVE RELATED ONE](../commands/save-related-one)  
 
 ## プロパティ
 

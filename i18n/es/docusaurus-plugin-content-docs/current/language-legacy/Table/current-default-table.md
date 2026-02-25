@@ -1,4 +1,4 @@
----
+﻿---
 id: current-default-table
 title: Current default table
 slug: /commands/current-default-table
@@ -29,9 +29,9 @@ Siempre y cuando se haya definido una tabla por defecto, la siguiente línea de 
 
 ## Ver también 
 
-[DEFAULT TABLE](default-table.md)  
-[Table](table.md)  
-[Table name](table-name.md)  
+[DEFAULT TABLE](../commands/default-table)  
+[Table](../commands/table)  
+[Table name](../commands/table-name)  
 
 ## Propiedades
 

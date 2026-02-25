@@ -1,4 +1,4 @@
----
+﻿---
 id: method-get-folders
 title: METHOD GET FOLDERS
 slug: /commands/method-get-folders
@@ -41,7 +41,7 @@ Si la commande est exécutée depuis un composant, elle retourne par défaut les
 
 ## Voir aussi 
 
-[METHOD GET PATHS](method-get-paths.md)  
+[METHOD GET PATHS](../commands/method-get-paths)  
 
 ## Propriétés
 

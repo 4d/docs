@@ -1,4 +1,4 @@
----
+﻿---
 id: value-type
 title: Value type
 slug: /commands/value-type
@@ -64,7 +64,7 @@ Nota: As propriedades numéricas dos objetos sempre são consideradas valores re
  $vType:=Value type($o.value) //$vType=Is real
 ```
 
-Value type pode ser aplicado a qualquer expressão 4D válida, incluindo campos, variáveis e parâmetros. Neste caso, diferente do comando [Type](type.md), **Value type** devolve o tipo *internal* de valor resultante da avaliação da *expressão e* não seu tipo declarado. Dado que a linguagem 4D converte alguns tipos de valores internamente, o resultado de **Value type** pode diferir do tipo declarado. Por exemplo, 4D converte internamente os valores de campo de tipo "*Inteiro 64 bits*". Isso dá os resultados abaixo:
+Value type pode ser aplicado a qualquer expressão 4D válida, incluindo campos, variáveis e parâmetros. Neste caso, diferente do comando [Type](../commands/type), **Value type** devolve o tipo *internal* de valor resultante da avaliação da *expressão e* não seu tipo declarado. Dado que a linguagem 4D converte alguns tipos de valores internamente, o resultado de **Value type** pode diferir do tipo declarado. Por exemplo, 4D converte internamente os valores de campo de tipo "*Inteiro 64 bits*". Isso dá os resultados abaixo:
 
 ```4d
  $vType1:=Type([myTable]Long64field) //$vType=Is integer 64 bits
@@ -73,7 +73,7 @@ Value type pode ser aplicado a qualquer expressão 4D válida, incluindo campos,
 
 Outras diferenças estão relacionadas com arrays (a avaliação de um array devolve o índice de elementos atual) e o modo compilado. Na tabela abaixo estas diferenças são numeradas:
 
-| **Tipo declarado**      | [Type](type.md) **resultado** | **Value type resultado (interpretado)** | **Value type resultado (compilado)** | **Comentário**                                                                                         |
+| **Tipo declarado**      | [Type](../commands/type) **resultado** | **Value type resultado (interpretado)** | **Value type resultado (compilado)** | **Comentário**                                                                                         |
 | ----------------------- | ----------------------------- | --------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------ |
 | ARRAY TEXT($t;1)        | Text array                    | Is real                                 | Is longint                           | $t contém o índice de elemento atual, que é um número                                                  |
 | Campo *Alfa*            | Is alpha field                | Is text                                 | Is text                              | 4D maneja internamente todas as strings como textos                                                    |
@@ -87,7 +87,7 @@ Se quiser escrever um teste para um valor de tipo numérico válido para os modo
  If(Value type($myValue)=Is longint)|(Value type($myValue)=Is real)
 ```
 
-Nota de compatibilidade: A partir de 4D v16 R6, datas são armazenadas em propriedades de objeto ou com o tipo data ou como texto em formato data ISO. Para saber mais veja os comandos Dates inside objects ou [SET DATABASE PARAMETER](set-database-parameter.md).
+Nota de compatibilidade: A partir de 4D v16 R6, datas são armazenadas em propriedades de objeto ou com o tipo data ou como texto em formato data ISO. Para saber mais veja os comandos Dates inside objects ou [SET DATABASE PARAMETER](../commands/set-database-parameter).
 
 ## Exemplo 1 
 
@@ -126,8 +126,8 @@ var $sum : Real
 
 ## Ver também 
 
-[OB Get type](ob-get-type.md)  
-[Type](type.md)  
+[OB Get type](../commands/ob-get-type)  
+[Type](../commands/type)  
 
 ## Propriedades
 

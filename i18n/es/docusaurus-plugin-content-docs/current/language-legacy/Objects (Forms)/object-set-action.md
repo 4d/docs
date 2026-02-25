@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-action
 title: OBJECT SET ACTION
 slug: /commands/object-set-action
@@ -52,7 +52,7 @@ Usted desea asociar la acción estándar **Validate** con un botón:
 
 ## Ver también 
 
-[OBJECT Get action](object-get-action.md)  
+[OBJECT Get action](../commands/object-get-action)  
 
 ## Propiedades
 

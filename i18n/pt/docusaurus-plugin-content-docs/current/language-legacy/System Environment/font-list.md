@@ -1,4 +1,4 @@
----
+﻿---
 id: font-list
 title: FONT LIST
 slug: /commands/font-list
@@ -45,7 +45,7 @@ Sob macOS, quando passar o parâmetro opcional *\**, o comando enche o array *fo
 
 Sob Windows, o parâmetro *\** não tem efeito. O comando devolve sempre as famílias de fontes.
 
-**Nota:** Sob Mac OS, se utiliza o resultado deste comando com o comando [ST SET ATTRIBUTES](st-set-attributes.md), em uma área de texto multiestilo, não deve passar o parâmetro *\** (só famílias de fonte são compatíveis como Attribute font name). Essa limitação não aplica a áreas 4D Write Pro, que aceita tanto fontes quanto nomes de famílias de fonte. 
+**Nota:** Sob Mac OS, se utiliza o resultado deste comando com o comando [ST SET ATTRIBUTES](../commands/st-set-attributes), em uma área de texto multiestilo, não deve passar o parâmetro *\** (só famílias de fonte são compatíveis como Attribute font name). Essa limitação não aplica a áreas 4D Write Pro, que aceita tanto fontes quanto nomes de famílias de fonte. 
 
 ### Sobre fontes escaláveis 
 
@@ -85,10 +85,10 @@ Você quer obter uma lista de fontes recentes:
 
 ## Ver também 
 
-[FONT STYLE LIST](font-style-list.md)  
-[OBJECT SET FONT](object-set-font.md)  
-[SET RECENT FONTS](set-recent-fonts.md)  
-[ST SET ATTRIBUTES](st-set-attributes.md)  
+[FONT STYLE LIST](../commands/font-style-list)  
+[OBJECT SET FONT](../commands/object-set-font)  
+[SET RECENT FONTS](../commands/set-recent-fonts)  
+[ST SET ATTRIBUTES](../commands/st-set-attributes)  
 *Tipo de lista das fontes*  
 
 ## Propriedades

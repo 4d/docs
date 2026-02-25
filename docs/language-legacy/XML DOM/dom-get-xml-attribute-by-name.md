@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-get-xml-attribute-by-name
 title: DOM GET XML ATTRIBUTE BY NAME
 slug: /commands/dom-get-xml-attribute-by-name
@@ -60,8 +60,8 @@ If the command has been correctly executed, the system variable OK is set to 1\.
 
 ## See also 
 
-[DOM GET XML ATTRIBUTE BY INDEX](dom-get-xml-attribute-by-index.md)  
-[DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  
+[DOM GET XML ATTRIBUTE BY INDEX](../commands/dom-get-xml-attribute-by-index)  
+[DOM REMOVE XML ATTRIBUTE](../commands/dom-remove-xml-attribute)  
 
 ## Properties
 

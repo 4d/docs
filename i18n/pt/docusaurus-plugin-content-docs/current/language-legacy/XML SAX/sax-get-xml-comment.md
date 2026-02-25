@@ -1,4 +1,4 @@
----
+﻿---
 id: sax-get-xml-comment
 title: SAX GET XML COMMENT
 slug: /commands/sax-get-xml-comment
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.SAX GET XML COMMENT.Summary-->O comando SAX GET XML COMMENT devolve um *comentario* se um evento SAX de tipo XML Comment se gera no documento XML referenciado no parâmetro *documento*.<!-- END REF--> Para maior informação sobre os eventos SAX, consulte a descrição do comando [SAX Get XML node](sax-get-xml-node.md).
+<!--REF #_command_.SAX GET XML COMMENT.Summary-->O comando SAX GET XML COMMENT devolve um *comentario* se um evento SAX de tipo XML Comment se gera no documento XML referenciado no parâmetro *documento*.<!-- END REF--> Para maior informação sobre os eventos SAX, consulte a descrição do comando [SAX Get XML node](../commands/sax-get-xml-node).
 
 ## Variáveis e conjuntos do sistema 
 
@@ -36,8 +36,8 @@ Se o comando tiver sido executado corretamente, a variável sistema Ok assume o 
 
 ## Ver também 
 
-[SAX ADD XML COMMENT](sax-add-xml-comment.md)  
-[SAX Get XML node](sax-get-xml-node.md)  
+[SAX ADD XML COMMENT](../commands/sax-add-xml-comment)  
+[SAX Get XML node](../commands/sax-get-xml-node)  
 
 ## Propriedades
 

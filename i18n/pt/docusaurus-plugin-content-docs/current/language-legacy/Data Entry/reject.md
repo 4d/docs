@@ -1,4 +1,4 @@
----
+﻿---
 id: reject
 title: REJECT
 slug: /commands/reject
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 **Nota:** deve considerar utilizar as ferramentas integradas de validação de dados antes de utilizar este comando.
 
-A primeira sintaxe de REJECT evita que o usuário aceite um registro incompleto. Pode alcançar ol mesmo resultado sem utilizar REJECT, associe a tecla Intro com um botão Sem ação e utilize os comandos [ACCEPT](accept.md) e [CANCEL](cancel.md) para aceitar ou cancelar o registro, uma vez os campos foram introduzidos corretamente. É recomendável utilizar esta segunda técnica e não a primeira sintaxe de REJECT.
+A primeira sintaxe de REJECT evita que o usuário aceite um registro incompleto. Pode alcançar ol mesmo resultado sem utilizar REJECT, associe a tecla Intro com um botão Sem ação e utilize os comandos [ACCEPT](../commands/accept) e [CANCEL](../commands/cancel) para aceitar ou cancelar o registro, uma vez os campos foram introduzidos corretamente. É recomendável utilizar esta segunda técnica e não a primeira sintaxe de REJECT.
 
 Se utilizar a primeira sintaxe, você executa REJECT para evitar que o usuário aceite um registro, geralmente porque o registro está incompleto ou tem entradas incorretas. Se o usuário trata de aceitar o registro, a execução de REJECT evita a aceitação do registro; o registro permanece visualizado no formulário. O usuário deve continuar com a entrada de dados até que o registro seja aceitável ou o registro seja cancelado.
 
@@ -29,7 +29,7 @@ O melhor lugar para o comando REJECT, quando se utiliza esta sintaxe, é o méto
 
 A segunda sintaxe de REJECT se executa com o parâmetro *campo*. O cursor permanece na área de entrada do campo. Esta sintaxe de REJECTobriga ao usuário a introduzir um valor correto. É imperativo que chame o comando REJECT no evento de formulário On Data Change. Precisa colocar esta sintaxe do comando REJECT seja no método de formulário, ou no método de objeto da área de entrada. Se estiver usando REJECT para o formulário detalhado de um subformulário para uma tabela, coloque no método de formulário ou método de objeto para o Formulário Detalhado. Este comando não tem efeito nos campos nas áreas de subformulário.   
   
-Pode usar [HIGHLIGHT TEXT](highlight-text.md) para selecionar os dados no campo que está sendo rejeitado.
+Pode usar [HIGHLIGHT TEXT](../commands/highlight-text) para selecionar os dados no campo que está sendo rejeitado.
 
 ## Exemplo 1 
 
@@ -60,9 +60,9 @@ O seguinte exemplo é parte de um método de objeto para um campo *\[Empregados\
 
 ## Ver também 
 
-[ACCEPT](accept.md)  
-[CANCEL](cancel.md)  
-[GOTO OBJECT](goto-object.md)  
+[ACCEPT](../commands/accept)  
+[CANCEL](../commands/cancel)  
+[GOTO OBJECT](../commands/goto-object)  
 
 ## Propriedades
 

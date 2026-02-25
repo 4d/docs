@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-auto-row-height
 title: LISTBOX Get auto row height
 slug: /commands/listbox-get-auto-row-height
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX Get auto row height.Summary-->O comando **LISTBOX Get auto row height**  devolve o valor de altura de fila mínimo ou máximo actual definido para o objeto list box designado utilizando os parâmetros *objeto* e *\**.<!-- END REF-->
 
-O valor atual mínimo ou máximo da altura da fila pode ser definido na lista de propriedades (ver *Altura linha automática*) ou no processo atual utilizando o comando [LISTBOX SET AUTO ROW HEIGHT](listbox-set-auto-row-height.md).
+O valor atual mínimo ou máximo da altura da fila pode ser definido na lista de propriedades (ver *Altura linha automática*) ou no processo atual utilizando o comando [LISTBOX SET AUTO ROW HEIGHT](../commands/listbox-set-auto-row-height).
 
 **Nota**: Esse comando só pode ser usado com list boxes não hierárquicas baseadas em array.
 
@@ -68,9 +68,9 @@ vhMax:=LISTBOX Get auto row height(*;"LB";lk row max height;lk lines)
 
 ## Ver também 
 
-[LISTBOX Get row height ](listbox-get-row-height.md)  
-[LISTBOX Get rows height](listbox-get-rows-height.md)  
-[LISTBOX SET AUTO ROW HEIGHT](listbox-set-auto-row-height.md)  
+[LISTBOX Get row height ](../commands/listbox-get-row-height)  
+[LISTBOX Get rows height](../commands/listbox-get-rows-height)  
+[LISTBOX SET AUTO ROW HEIGHT](../commands/listbox-set-auto-row-height)  
 
 ## Propriedades
 

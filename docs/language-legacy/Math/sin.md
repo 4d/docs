@@ -1,4 +1,4 @@
----
+﻿---
 id: sin
 title: Sin
 slug: /commands/sin
@@ -22,9 +22,9 @@ displayed_sidebar: docs
 
 ## See also 
 
-[Arctan](arctan.md)  
-[Cos](cos.md)  
-[Tan](tan.md)  
+[Arctan](../commands/arctan)  
+[Cos](../commands/cos)  
+[Tan](../commands/tan)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: method-get-paths-form
 title: METHOD GET PATHS FORM
 slug: /commands/method-get-paths-form
@@ -79,7 +79,7 @@ List of all objects of the "input" form for the \[Employees\] table from a compo
 
 ## See also 
 
-[FORM GET NAMES](form-get-names.md)  
+[FORM GET NAMES](../commands/form-get-names)  
 
 ## Properties
 

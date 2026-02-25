@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-get-root-xml-element
 title: DOM Get root XML element
 slug: /commands/dom-get-root-xml-element
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## Ver también 
 
-[DOM Get parent XML element](dom-get-parent-xml-element.md)  
+[DOM Get parent XML element](../commands/dom-get-parent-xml-element)  
 
 ## Propiedades
 

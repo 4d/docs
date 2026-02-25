@@ -1,4 +1,4 @@
----
+﻿---
 id: hide-menu-bar
 title: HIDE MENU BAR
 slug: /commands/hide-menu-bar
@@ -52,9 +52,9 @@ El siguiente método muestra un registro en toda la pantalla (Macintosh) hasta q
 
 ## Ver también 
 
-[HIDE TOOL BAR](hide-tool-bar.md)  
-[SHOW MENU BAR](show-menu-bar.md)  
-[SHOW TOOL BAR](show-tool-bar.md)  
+[HIDE TOOL BAR](../commands/hide-tool-bar)  
+[SHOW MENU BAR](../commands/show-menu-bar)  
+[SHOW TOOL BAR](../commands/show-tool-bar)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: no-default-table
 title: NO DEFAULT TABLE
 slug: /commands/no-default-table
@@ -54,7 +54,7 @@ En una base que contiene un formulario de proyecto llamado “ElFormulario” y 
 
 ## Ver también 
 
-[DEFAULT TABLE](default-table.md)  
+[DEFAULT TABLE](../commands/default-table)  
 
 ## Propiedades
 

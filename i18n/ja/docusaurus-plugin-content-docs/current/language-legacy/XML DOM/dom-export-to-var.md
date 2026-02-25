@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-export-to-var
 title: DOM EXPORT TO VAR
 slug: /commands/dom-export-to-var
@@ -61,8 +61,8 @@ XMLにおいて、改行はそれがXML要素の内側あるいは間いずれ�
 
 ## 参照 
 
-[DOM EXPORT TO FILE](dom-export-to-file.md)  
-[SVG EXPORT TO PICTURE](svg-export-to-picture.md)  
+[DOM EXPORT TO FILE](../commands/dom-export-to-file)  
+[SVG EXPORT TO PICTURE](../commands/svg-export-to-picture)  
 
 ## プロパティ
 

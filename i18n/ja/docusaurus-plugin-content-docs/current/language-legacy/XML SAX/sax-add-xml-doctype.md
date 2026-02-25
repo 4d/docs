@@ -1,4 +1,4 @@
----
+﻿---
 id: sax-add-xml-doctype
 title: SAX ADD XML DOCTYPE
 slug: /commands/sax-add-xml-doctype
@@ -57,7 +57,7 @@ DocType文は書かれたXMLのタイプを示し、使用される Document Typ
 
 ## 参照 
 
-[SAX ADD XML COMMENT](sax-add-xml-comment.md)  
+[SAX ADD XML COMMENT](../commands/sax-add-xml-comment)  
 
 ## プロパティ
 

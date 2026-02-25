@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-row-height
 title: LISTBOX SET ROW HEIGHT
 slug: /commands/listbox-set-row-height
@@ -36,13 +36,13 @@ Se passar o parâmetro opcional *\**, indica que o parâmetro *objeto é* um nom
 
 Se a *fila* especificada não existir no list box, o comando não faz nada.
 
-A unidade utilizada para a *altura* especificada corresponde a definida globalmente para as filas de list box, seja na lista de propriedades ou por uma chamada anterior ao comando [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md).
+A unidade utilizada para a *altura* especificada corresponde a definida globalmente para as filas de list box, seja na lista de propriedades ou por uma chamada anterior ao comando [LISTBOX SET ROWS HEIGHT](../commands/listbox-set-rows-height).
 
 **Nota**: para mais informação sobre o cálculo da altura das filas, consulte o Manual de *Desenho*.
 
 Se não houver um array de altura de fila associado ao list box, este comando cria um dinâmico; do contrário, se utilizar o array existente especificado na propriedade **Array de altura de fila**. O uso deste comando para estabelecer a altura de fila individual produz o mesmo resultado visual que a associação de um array de altura de fila; Entretanto, preencher um array com valores de altura da fila for muito mais rápido que chamar a este comando em um loop para ajustar a altura das filas de uma em uma para o list box.
 
-**Nota importante:** se o comando [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) for chamado posteriormente com uma unidade diferente a que se definiu previamente, este valor predeterminado substituirá e reinicializará o array de altura das filas existentes definidas utilizando **LISTBOX SET ROW HEIGHT** (ver o exemplo).
+**Nota importante:** se o comando [LISTBOX SET ROWS HEIGHT](../commands/listbox-set-rows-height) for chamado posteriormente com uma unidade diferente a que se definiu previamente, este valor predeterminado substituirá e reinicializará o array de altura das filas existentes definidas utilizando **LISTBOX SET ROW HEIGHT** (ver o exemplo).
 
 ## Exemplo 1 
 
@@ -88,14 +88,14 @@ Por outro lado, se o código abaixo for executado posteriormente...
  LISTBOX SET ROWS HEIGHT(*;"listboxname";2;lk lines)
 ```
 
-... Então as filas 1, 5 e 11 voltam para a altura global de fila predeterminada estabelecida por [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) (ou seja, 2 linhas) já que a unidade mudou de píxels a linhas. Já que não há conversão automática aplicada, a mudança de unidades sempre resulta em altura de fila reinicializada no novo valor como padrão definido.
+... Então as filas 1, 5 e 11 voltam para a altura global de fila predeterminada estabelecida por [LISTBOX SET ROWS HEIGHT](../commands/listbox-set-rows-height) (ou seja, 2 linhas) já que a unidade mudou de píxels a linhas. Já que não há conversão automática aplicada, a mudança de unidades sempre resulta em altura de fila reinicializada no novo valor como padrão definido.
 
 ## Ver também 
 
   
-[LISTBOX Get row height ](listbox-get-row-height.md)  
-[LISTBOX SET AUTO ROW HEIGHT](listbox-set-auto-row-height.md)  
-[LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md)  
+[LISTBOX Get row height ](../commands/listbox-get-row-height)  
+[LISTBOX SET AUTO ROW HEIGHT](../commands/listbox-set-auto-row-height)  
+[LISTBOX SET ROWS HEIGHT](../commands/listbox-set-rows-height)  
 
 ## Propriedades
 

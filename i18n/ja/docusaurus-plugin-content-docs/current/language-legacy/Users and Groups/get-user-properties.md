@@ -1,4 +1,4 @@
----
+﻿---
 id: get-user-properties
 title: GET USER PROPERTIES
 slug: /commands/get-user-properties
@@ -35,16 +35,16 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.GET USER PROPERTIES.Summary-->GET USER PROPERTIES コマンドは、引数 *userID* に渡したユニークなユーザーID番号を持つユーザーに関する情報を返します。<!-- END REF-->必ず [GET USER LIST](get-user-list.md) コマンドによって返される有効なユーザーID番号を渡さなければなりません。
+<!--REF #_command_.GET USER PROPERTIES.Summary-->GET USER PROPERTIES コマンドは、引数 *userID* に渡したユニークなユーザーID番号を持つユーザーに関する情報を返します。<!-- END REF-->必ず [GET USER LIST](../commands/get-user-list) コマンドによって返される有効なユーザーID番号を渡さなければなりません。
 
-ユーザーアカウントが存在しない場合や削除されている場合、エラーコード -9979が返されます。[ON ERR CALL](on-err-call.md) コマンドを用いて実装されたエラー処理メソッドでこのエラーを検知することができます。また、あらかじめ [Is user deleted](is-user-deleted.md) でユーザーアカウントを検証してから、GET USER PROPERTIES コマンドを呼び出す方法もあります。
+ユーザーアカウントが存在しない場合や削除されている場合、エラーコード -9979が返されます。[ON ERR CALL](../commands/on-err-call) コマンドを用いて実装されたエラー処理メソッドでこのエラーを検知することができます。また、あらかじめ [Is user deleted](../commands/is-user-deleted) でユーザーアカウントを検証してから、GET USER PROPERTIES コマンドを呼び出す方法もあります。
 
 呼び出し後、引数 *name*、*startup、* *nbLogin* と *lastLogin* には、ユーザー名、スタートアップメソッド、ログインした回数と最後にログインした日付が返されます。
 
 **注:** 
 
 * *nbLogin* および *lastLogin* パラメーターはバイナリデータベースでのみ使用され、プロジェクトデータベースにおいては常に 0 および 00/00/00 が返されます。
-* *password* 引数は廃止予定となりました (常に空の文字列を返します)。ユーザーのパスワードをチェックしたい場合、[Validate password](validate-password.md) を使用して下さい。
+* *password* 引数は廃止予定となりました (常に空の文字列を返します)。ユーザーのパスワードをチェックしたい場合、[Validate password](../commands/validate-password) を使用して下さい。
 
 任意の引数 *memberships* を渡すと、ユーザーが属するグループのユニークなID番号が返されます。
 
@@ -60,11 +60,11 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[GET GROUP LIST](get-group-list.md)  
-[GET USER LIST](get-user-list.md)  
-[Is user deleted](is-user-deleted.md)  
-[Set user properties](set-user-properties.md)  
-[Validate password](validate-password.md)  
+[GET GROUP LIST](../commands/get-group-list)  
+[GET USER LIST](../commands/get-user-list)  
+[Is user deleted](../commands/is-user-deleted)  
+[Set user properties](../commands/set-user-properties)  
+[Validate password](../commands/validate-password)  
 
 ## プロパティ
 

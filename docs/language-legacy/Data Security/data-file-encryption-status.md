@@ -1,4 +1,4 @@
----
+﻿---
 id: data-file-encryption-status
 title: Data file encryption status
 slug: /commands/data-file-encryption-status
@@ -55,8 +55,8 @@ The returned object contains the following properties:
 * previously:  
    * before this data file was opened, using a connected device,  
    * with the *ds.provideDataKey( )* command when this data file was opened,  
-   * after the data file was opened, with the [Discover data key](discover-data-key.md) command
-* using the [Register data key](register-data-key.md) command
+   * after the data file was opened, with the [Discover data key](../commands/discover-data-key) command
+* using the [Register data key](../commands/register-data-key) command
 
 ## Example 
 
@@ -79,7 +79,7 @@ You want to know the encryption status of a data file that corresponds to the cu
 ## See also 
 
 [4D Blog - New 4D commands to work with encrypted data](https://blog.4d.com/new-4d-commands-to-work-with-encrypted-data/)  
-[Encrypt data file](encrypt-data-file.md)  
+[Encrypt data file](../commands/encrypt-data-file)  
 
 ## Properties
 

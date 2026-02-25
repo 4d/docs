@@ -1,4 +1,4 @@
----
+﻿---
 id: set-application-color-scheme
 title: SET APPLICATION COLOR SCHEME
 slug: /commands/set-application-color-scheme
@@ -46,8 +46,8 @@ displayed_sidebar: docs
 
 ## Voir aussi 
 
-[FORM Get color scheme](form-get-color-scheme.md)  
-[Get Application color scheme](get-application-color-scheme.md)  
+[FORM Get color scheme](../commands/form-get-color-scheme)  
+[Get Application color scheme](../commands/get-application-color-scheme)  
 
 ## Propriétés
 

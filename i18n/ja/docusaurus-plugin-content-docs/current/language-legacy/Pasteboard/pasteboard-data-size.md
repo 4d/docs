@@ -1,4 +1,4 @@
----
+﻿---
 id: pasteboard-data-size
 title: Pasteboard data size
 slug: /commands/pasteboard-data-size
@@ -101,9 +101,9 @@ You want to drag some private data from different objects in your form. You can 
 
 ## 参照 
 
-[GET PASTEBOARD DATA](get-pasteboard-data.md)  
-[GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
-[Get text from pasteboard](get-text-from-pasteboard.md)  
+[GET PASTEBOARD DATA](../commands/get-pasteboard-data)  
+[GET PICTURE FROM PASTEBOARD](../commands/get-picture-from-pasteboard)  
+[Get text from pasteboard](../commands/get-text-from-pasteboard)  
 *Pasteboard*  
 
 ## プロパティ

@@ -1,4 +1,4 @@
----
+﻿---
 id: printing-page
 title: Printing page
 slug: /commands/printing-page
@@ -38,7 +38,7 @@ The following example changes the position of the page numbers on a report so th
 
 ## See also 
 
-[PRINT SELECTION](print-selection.md)  
+[PRINT SELECTION](../commands/print-selection)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: window-list
 title: WINDOW LIST
 slug: /commands/window-list
@@ -60,8 +60,8 @@ The following project method tiles all the current open window, except floating 
 
 ## See also 
 
-[Window kind](window-kind.md)  
-[Window process](window-process.md)  
+[Window kind](../commands/window-kind)  
+[Window process](../commands/window-process)  
 
 ## Properties
 

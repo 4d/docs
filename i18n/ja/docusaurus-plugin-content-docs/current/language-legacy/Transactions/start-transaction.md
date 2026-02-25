@@ -1,4 +1,4 @@
----
+﻿---
 id: start-transaction
 title: START TRANSACTION
 slug: /commands/start-transaction
@@ -33,10 +33,10 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[CANCEL TRANSACTION](cancel-transaction.md)  
-[In transaction](in-transaction.md)  
-[Transaction level](transaction-level.md)  
-[VALIDATE TRANSACTION](validate-transaction.md)  
+[CANCEL TRANSACTION](../commands/cancel-transaction)  
+[In transaction](../commands/in-transaction)  
+[Transaction level](../commands/transaction-level)  
+[VALIDATE TRANSACTION](../commands/validate-transaction)  
 *トランザクションを使用する*  
 
 ## プロパティ

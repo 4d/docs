@@ -1,4 +1,4 @@
----
+﻿---
 id: delete-from-list
 title: DELETE FROM LIST
 slug: /commands/delete-from-list
@@ -53,8 +53,8 @@ El siguiente código borra el elemento seleccionado de la lista *hList*. Si el e
 
 ## Ver también 
 
-[CLEAR LIST](clear-list.md)  
-[GET LIST ITEM](get-list-item.md)  
+[CLEAR LIST](../commands/clear-list)  
+[GET LIST ITEM](../commands/get-list-item)  
 
 ## Propiedades
 

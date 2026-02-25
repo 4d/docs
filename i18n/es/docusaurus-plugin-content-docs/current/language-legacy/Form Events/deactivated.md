@@ -1,4 +1,4 @@
----
+﻿---
 id: deactivated
 title: Deactivated
 slug: /commands/deactivated
@@ -25,7 +25,7 @@ Para que se genere el ciclo de ejecución **Deactivated**, asegúrese de que la 
 
 ## Ver también 
 
-[Activated](activated.md)  
+[Activated](../commands/activated)  
 [Form event code](../commands/form-event-code)  
 
 ## Propiedades

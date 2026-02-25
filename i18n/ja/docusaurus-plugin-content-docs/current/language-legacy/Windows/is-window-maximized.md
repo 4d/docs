@@ -1,4 +1,4 @@
----
+﻿---
 id: is-window-maximized
 title: Is window maximized
 slug: /commands/is-window-maximized
@@ -44,8 +44,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Is window reduced](is-window-reduced.md)  
-[MAXIMIZE WINDOW](maximize-window.md)  
+[Is window reduced](../commands/is-window-reduced)  
+[MAXIMIZE WINDOW](../commands/maximize-window)  
 
 ## プロパティ
 

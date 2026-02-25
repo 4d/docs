@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-totals-spacing
 title: QR SET TOTALS SPACING
 slug: /commands/qr-set-totals-spacing
@@ -49,7 +49,7 @@ Se o parâmetro *subtotal*, é incorreto, se gera o erro -9852.
 
 ## Ver também 
 
-[QR GET TOTALS SPACING](qr-get-totals-spacing.md)  
+[QR GET TOTALS SPACING](../commands/qr-get-totals-spacing)  
 
 ## Propriedades
 

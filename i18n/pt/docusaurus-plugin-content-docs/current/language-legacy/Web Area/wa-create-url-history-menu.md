@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-create-url-history-menu
 title: WA Create URL history menu
 slug: /commands/wa-create-url-history-menu
@@ -44,9 +44,9 @@ Passe em *endereço* um valor que indique a lista a ser recuperada. Pode utiliza
 
 Se omitir o parâmetro *endereço*, se utiliza o valor 0.
 
-Quando tiver gerado o menu, pode mostrá-lo através do comando de 4D [Dynamic pop up menu](dynamic-pop-up-menu.md) e pode trabalhar com ele utilizando os comandos padrão de gestão de menus de 4D. A string retornada por esse comando contém o URL da página visitada (ver exemplo).  
+Quando tiver gerado o menu, pode mostrá-lo através do comando de 4D [Dynamic pop up menu](../commands/dynamic-pop-up-menu) e pode trabalhar com ele utilizando os comandos padrão de gestão de menus de 4D. A string retornada por esse comando contém o URL da página visitada (ver exemplo).  
   
-Chame o comando [RELEASE MENU](release-menu.md) para apagar um menu de histórico da URL quando já não for útil.
+Chame o comando [RELEASE MENU](../commands/release-menu) para apagar um menu de histórico da URL quando já não for útil.
 
 Nota de compatibilidade: a partir de 4D v19 R5, esse comando preenche um menu com apenas a URL atual para areas web usando o motor de renderização de Windows 
 
@@ -77,9 +77,9 @@ O código abaixo pode estar associado a um botão 3D com menu pop up chamado "An
 
 ## Ver também 
 
-[Dynamic pop up menu](dynamic-pop-up-menu.md)  
-[RELEASE MENU](release-menu.md)  
-[WA GET URL HISTORY](wa-get-url-history.md)  
+[Dynamic pop up menu](../commands/dynamic-pop-up-menu)  
+[RELEASE MENU](../commands/release-menu)  
+[WA GET URL HISTORY](../commands/wa-get-url-history)  
 
 ## Propriedades
 

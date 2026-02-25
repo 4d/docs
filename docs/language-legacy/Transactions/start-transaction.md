@@ -1,4 +1,4 @@
----
+﻿---
 id: start-transaction
 title: START TRANSACTION
 slug: /commands/start-transaction
@@ -33,11 +33,11 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
 
 ## See also 
 
-[CANCEL TRANSACTION](cancel-transaction.md)  
-[In transaction](in-transaction.md)  
-[Transaction level](transaction-level.md)  
+[CANCEL TRANSACTION](../commands/cancel-transaction)  
+[In transaction](../commands/in-transaction)  
+[Transaction level](../commands/transaction-level)  
 [Transactions](../../Develop-legacy/transactions.md)
-[VALIDATE TRANSACTION](validate-transaction.md)  
+[VALIDATE TRANSACTION](../commands/validate-transaction)  
 
 ## Properties
 

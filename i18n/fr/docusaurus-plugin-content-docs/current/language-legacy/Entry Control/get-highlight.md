@@ -1,4 +1,4 @@
----
+﻿---
 id: get-highlight
 title: GET HIGHLIGHT
 slug: /commands/get-highlight
@@ -37,7 +37,7 @@ Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *ob
 
 **Note :** Cette commande ne peut pas être utilisée avec des champs situés dans le formulaire en mode liste d'un sous-formulaire.
 
-Le texte peut être sélectionné par l'utilisateur ou par la commande [HIGHLIGHT TEXT](highlight-text.md).
+Le texte peut être sélectionné par l'utilisateur ou par la commande [HIGHLIGHT TEXT](../commands/highlight-text).
 
 Le paramètre *débutSél* retourne la position du premier caractère sélectionné.   
 Le paramètre *finSél* retourne la position du dernier caractère sélectionné plus un. 
@@ -59,7 +59,7 @@ End if
 
 ## Exemple 2 
 
-Reportez-vous à l'exemple de la commande [FILTER KEYSTROKE](filter-keystroke.md).
+Reportez-vous à l'exemple de la commande [FILTER KEYSTROKE](../commands/filter-keystroke).
 
 ## Exemple 3 
 
@@ -72,9 +72,9 @@ Modification du style du texte sélectionné :
 
 ## Voir aussi 
 
-[FILTER KEYSTROKE](filter-keystroke.md)  
-[HIGHLIGHT TEXT](highlight-text.md)  
-[Keystroke](keystroke.md)  
+[FILTER KEYSTROKE](../commands/filter-keystroke)  
+[HIGHLIGHT TEXT](../commands/highlight-text)  
+[Keystroke](../commands/keystroke)  
 
 ## Propriétés
 

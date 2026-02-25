@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-title
 title: OBJECT SET TITLE
 slug: /commands/object-set-title
@@ -54,7 +54,7 @@ If you want to set a title on more than one line, use the "\\" character ("\\\\"
 
 ## Example 1 
 
-The following example is the object method of a search button located in the footer area of an output form displayed using [MODIFY SELECTION](modify-selection.md). The method searches a table; depending on the search results, it enables or disables a button labeled *bDelete* and changes its title:
+The following example is the object method of a search button located in the footer area of an output form displayed using [MODIFY SELECTION](../commands/modify-selection). The method searches a table; depending on the search results, it enables or disables a button labeled *bDelete* and changes its title:
 
 ```4d
  QUERY([People];[People]Name=vName)
@@ -84,7 +84,7 @@ You want to insert titles on two lines:
 
 ## See also 
 
-[OBJECT Get title](object-get-title.md)  
+[OBJECT Get title](../commands/object-get-title)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: form-goto-page
 title: FORM GOTO PAGE
 slug: /commands/form-goto-page
@@ -39,11 +39,11 @@ The *\** parameter is useful when the command is called in the context of a page
 
 ### About form page management commands 
 
-Automatic action buttons perform the same tasks as the [FORM FIRST PAGE](form-first-page.md), [FORM LAST PAGE](form-last-page.md), [FORM NEXT PAGE](form-next-page.md), [FORM PREVIOUS PAGE](form-previous-page.md) and **FORM GOTO PAGE** commands that you can apply to objects such as tab controls, drop-down list boxes, and so on. Whenever appropriate, use automatic action buttons instead of commands. 
+Automatic action buttons perform the same tasks as the [FORM FIRST PAGE](../commands/form-first-page), [FORM LAST PAGE](../commands/form-last-page), [FORM NEXT PAGE](../commands/form-next-page), [FORM PREVIOUS PAGE](../commands/form-previous-page) and **FORM GOTO PAGE** commands that you can apply to objects such as tab controls, drop-down list boxes, and so on. Whenever appropriate, use automatic action buttons instead of commands. 
 
 Page commands can be used with input forms or with forms displayed in dialogs. Output forms use only the first page. A form always has at least one page—the first page. Remember that regardless of the number of pages a form has, only one form method exists for each form. 
 
-* Use the [FORM Get current page](form-get-current-page.md) command to find out which page is being displayed.
+* Use the [FORM Get current page](../commands/form-get-current-page) command to find out which page is being displayed.
 * Use the On Page Change [Form event code](../commands/form-event-code) that is generated each time the current page of the form changes.
 
 **Note:** When **designing** a form, you can work with pages 1 through X, as well as with page 0, in which you put objects that will appear in all of the pages. When **using** a form, and therefore when calling page commands, you work with pages 1 through X; page 0 is automatically combined with the page being displayed.
@@ -58,11 +58,11 @@ The following example is an object method for a button. It displays a specific p
 
 ## See also 
 
-[FORM FIRST PAGE](form-first-page.md)  
-[FORM Get current page](form-get-current-page.md)  
-[FORM LAST PAGE](form-last-page.md)  
-[FORM NEXT PAGE](form-next-page.md)  
-[FORM PREVIOUS PAGE](form-previous-page.md)  
+[FORM FIRST PAGE](../commands/form-first-page)  
+[FORM Get current page](../commands/form-get-current-page)  
+[FORM LAST PAGE](../commands/form-last-page)  
+[FORM NEXT PAGE](../commands/form-next-page)  
+[FORM PREVIOUS PAGE](../commands/form-previous-page)  
 
 ## Properties
 

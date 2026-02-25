@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-arrays
 title: LISTBOX GET ARRAYS
 slug: /commands/listbox-get-arrays
@@ -51,20 +51,20 @@ displayed_sidebar: docs
 * *arrColVars*配列には、リストボックス内の各列に関連付けられた変数（配列）へのポインタが代入されます。セレクションタイプのリストボックスの場合、*arrColVars* には:  
    * フィールドが関連付けられた列の場合、フィールドへのポインタ  
    * 変数が関連付けられた列の場合、変数へのポインタ  
-   * 式が関連付けられた列の場合、[Is nil pointer](is-nil-pointer.md)ポインタが格納されます。
+   * 式が関連付けられた列の場合、[Is nil pointer](../commands/is-nil-pointer)ポインタが格納されます。
 * *arrHeaderVars*配列には、リストボックス内の各列ヘッダに関連付けられた変数へのポインタが代入されます。
-* *arrColsVisible*配列には各列に関するブール値が代入され、リストボックス内の列が表示（[True](true.md)）または非表示（[False](false.md)）のいずれであるかを示します。
-* *arrStyles*配列には、4つの配列をそれぞれ指す4つのポインタが代入されます。これら4つの配列は、リストボックス内の各行に対してスタイルやフォントカラー、背景 色、各行のカスタムの表示管理を適用するために使用されます。これらの配列はデザインモードでリストボックスのプロパティリストで指定、あるいは[LISTBOX SET ARRAY](listbox-set-array.md) コマンドを使用して指定されたものです。リストボックスに対する配列が指定されていない場合、*arrStyles*内の対応する項目には[Is nil pointer](is-nil-pointer.md)ポインタが代入されます。  
+* *arrColsVisible*配列には各列に関するブール値が代入され、リストボックス内の列が表示（[True](../commands/true)）または非表示（[False](../commands/false)）のいずれであるかを示します。
+* *arrStyles*配列には、4つの配列をそれぞれ指す4つのポインタが代入されます。これら4つの配列は、リストボックス内の各行に対してスタイルやフォントカラー、背景 色、各行のカスタムの表示管理を適用するために使用されます。これらの配列はデザインモードでリストボックスのプロパティリストで指定、あるいは[LISTBOX SET ARRAY](../commands/listbox-set-array) コマンドを使用して指定されたものです。リストボックスに対する配列が指定されていない場合、*arrStyles*内の対応する項目には[Is nil pointer](../commands/is-nil-pointer)ポインタが代入されます。  
 4つめのポインターはブール型配列(非表示配列)、あるいは倍長整数配列(非表示、無効化、選択不可行を設定するのに使用する配列)に対応します。これは行管理配列に使用されている実装に基づきます(*リストボックス特有のプロパティ*を参照して下さい)。  
 レコードセレクション型およびコレクション/エンティティセレクション型のリストボックスでは、*arrStyles* には:  
    * 変数により設定された設定ごとに、変数へのポインタが、  
-   * 式により設定された設定ごとに、[Is nil pointer](is-nil-pointer.md)ポインタが格納されます。
+   * 式により設定された設定ごとに、[Is nil pointer](../commands/is-nil-pointer)ポインタが格納されます。
 
 ## 参照 
 
-[LISTBOX Get array](listbox-get-array.md)  
+[LISTBOX Get array](../commands/listbox-get-array)  
 [LISTBOX Get property](../commands/listbox-get-property)  
-[LISTBOX SET ARRAY](listbox-set-array.md)  
+[LISTBOX SET ARRAY](../commands/listbox-set-array)  
 
 ## プロパティ
 

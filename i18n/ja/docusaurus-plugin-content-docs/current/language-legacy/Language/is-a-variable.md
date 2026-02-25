@@ -1,4 +1,4 @@
----
+﻿---
 id: is-a-variable
 title: Is a variable
 slug: /commands/is-a-variable
@@ -20,12 +20,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is a variable.Summary-->**Is a variable**コマンドは、*aPointer*が定義済み変数を参照する場合にはTrueを返します。<!-- END REF-->その他の場合（フィールドやテーブルへのポインター、Nilポインター等）、この関数はFalseを返します。
 
-参照されている変数の名前やフィールド番号を知りたい場合、[RESOLVE POINTER](resolve-pointer.md)コマンドを使用します。
+参照されている変数の名前やフィールド番号を知りたい場合、[RESOLVE POINTER](../commands/resolve-pointer)コマンドを使用します。
 
 ## 参照 
 
-[Is nil pointer](is-nil-pointer.md)  
-[RESOLVE POINTER](resolve-pointer.md)  
+[Is nil pointer](../commands/is-nil-pointer)  
+[RESOLVE POINTER](../commands/resolve-pointer)  
 
 ## プロパティ
 

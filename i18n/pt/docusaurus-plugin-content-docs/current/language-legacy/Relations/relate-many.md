@@ -1,4 +1,4 @@
----
+﻿---
 id: relate-many
 title: RELATE MANY
 slug: /commands/relate-many
@@ -48,7 +48,7 @@ Por outra parte, os registros relacionados não são carregados se um registro d
 * Quando o comando RELATE MANY é aplicado a uma seleção vazia, o comando não é executado e a seleção para a tabela Muitos não muda.
 * Para que o comando funcione, os campos chave estrangeira (campos Muitos) devem estar indexados.
   
-Por exemplo, o método a seguir realiza um loop para cada registro da tabela \[Empresas\]. Para cada empresa, aparece uma caixa de alerta. A caixa de alerta mostra o número de pessoas na empresa (o número de registros relacionados na tabela \[Pessoas\]), e o número de partes que fornecem (o número de registros na tabela \[Partes\] que estão relacionados). No exemplo, o argumento para o comando [ALERT](alert.md) é impresso em varias linhas por claridade.  
+Por exemplo, o método a seguir realiza um loop para cada registro da tabela \[Empresas\]. Para cada empresa, aparece uma caixa de alerta. A caixa de alerta mostra o número de pessoas na empresa (o número de registros relacionados na tabela \[Pessoas\]), e o número de partes que fornecem (o número de registros na tabela \[Partes\] que estão relacionados). No exemplo, o argumento para o comando [ALERT](../commands/alert) é impresso em varias linhas por claridade.  
   
 Note que é necessário o comando RELATE MANY, mesmo que as relações sejam automáticas.   
 
@@ -66,8 +66,8 @@ Note que é necessário o comando RELATE MANY, mesmo que as relações sejam aut
 
 ## Ver também 
 
-[OLD RELATED MANY](old-related-many.md)  
-[RELATE ONE](relate-one.md)  
+[OLD RELATED MANY](../commands/old-related-many)  
+[RELATE ONE](../commands/relate-one)  
 
 ## Propriedades
 

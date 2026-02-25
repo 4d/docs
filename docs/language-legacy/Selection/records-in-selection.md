@@ -1,4 +1,4 @@
----
+﻿---
 id: records-in-selection
 title: Records in selection
 slug: /commands/records-in-selection
@@ -18,11 +18,11 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Records in selection.Summary-->**Records in selection** returns the number of records in the current selection of *aTable*.<!-- END REF--> In contrast, [Records in table](records-in-table.md) returns the total number of records in the table.
+<!--REF #_command_.Records in selection.Summary-->**Records in selection** returns the number of records in the current selection of *aTable*.<!-- END REF--> In contrast, [Records in table](../commands/records-in-table) returns the total number of records in the table.
 
 ## Example 
 
-The following example shows a loop technique commonly used to move through all the records in a selection. The same action can also be accomplished with the [APPLY TO SELECTION](apply-to-selection.md) command:
+The following example shows a loop technique commonly used to move through all the records in a selection. The same action can also be accomplished with the [APPLY TO SELECTION](../commands/apply-to-selection) command:
 
 ```4d
  FIRST RECORD([People]) // Start at first record in the selection
@@ -34,7 +34,7 @@ The following example shows a loop technique commonly used to move through all t
 
 ## See also 
 
-[Records in table](records-in-table.md)  
+[Records in table](../commands/records-in-table)  
 
 ## Properties
 

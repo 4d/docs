@@ -1,4 +1,4 @@
----
+﻿---
 id: query
 title: QUERY
 slug: /commands/query
@@ -318,11 +318,11 @@ Se a pesquisa é realizada corretamente, a variável sistema OK toma o valor 1.
 A variável Ok toma o valor 0 se:
 
 * o usuário clicar em **Cancelar** na caixa de diálogo de pesquisa,
-* em modo "pesquisa e bloqueio"! (ver o comando [SET QUERY AND LOCK](set-query-and-lock.md)), a pesquisa encontra, no mínimo, um registro bloqueado. Nese caso, igualmente, o conjunto sistema LockedSet é atualizado.
+* em modo "pesquisa e bloqueio"! (ver o comando [SET QUERY AND LOCK](../commands/set-query-and-lock)), a pesquisa encontra, no mínimo, um registro bloqueado. Nese caso, igualmente, o conjunto sistema LockedSet é atualizado.
 
 ## Ver também 
 
-[QUERY SELECTION](query-selection.md)  
+[QUERY SELECTION](../commands/query-selection)  
 
 ## Propriedades
 

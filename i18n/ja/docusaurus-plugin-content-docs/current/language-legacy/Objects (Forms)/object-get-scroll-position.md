@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-scroll-position
 title: OBJECT GET SCROLL POSITION
 slug: /commands/object-get-scroll-position
@@ -42,7 +42,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT SET SCROLL POSITION](object-set-scroll-position.md)  
+[OBJECT SET SCROLL POSITION](../commands/object-set-scroll-position)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: invoke-action
 title: INVOKE ACTION
 slug: /commands/invoke-action
@@ -54,7 +54,7 @@ Dependiendo del *objetivo*, la ejecución del comando **INVOKE ACTION** es sínc
 
 **Nota:** las acciones de edición estándar (Cortar, Copiar, Pegar, Seleccionar todo, Borrar, Deshacer/Rehacer) ignoran el parámetro *objetivo*, si se pasa. Tales acciones se ejecutan siempre de forma sincrónica en el contexto del objeto editable que tiene el foco.
 
-El comando **INVOKE ACTION** no genera un error, por ejemplo, si la acción solicitada no está disponible en el contexto actual. Debe validar la acción esperada utilizando el comando [Action info](action-info.md). 
+El comando **INVOKE ACTION** no genera un error, por ejemplo, si la acción solicitada no está disponible en el contexto actual. Debe validar la acción esperada utilizando el comando [Action info](../commands/action-info). 
 
 ## Ejemplo 1 
 
@@ -74,7 +74,7 @@ Usted desea ejecutar una acción estándar **Goto page** (página 3) en el formu
 
 ## Ver también 
 
-[Action info](action-info.md)  
+[Action info](../commands/action-info)  
 
 ## Propiedades
 

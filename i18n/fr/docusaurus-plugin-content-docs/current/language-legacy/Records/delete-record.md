@@ -1,4 +1,4 @@
----
+﻿---
 id: delete-record
 title: DELETE RECORD
 slug: /commands/delete-record
@@ -32,8 +32,8 @@ displayed_sidebar: docs
 
 **Notes :**
 
-* Si l'enregistrement courant est déchargé de la mémoire avant l'appel à **DELETE RECORD** (par exemple suite à un [UNLOAD RECORD](unload-record.md)), la sélection courante de *laTable* est vide à l'issue de la suppression.
-* La commande **DELETE RECORD** ne fait rien si la table est en mode [READ ONLY](read-only.md), indépendamment de l'état verrouillé ou non de l'enregistrement à supprimer.
+* Si l'enregistrement courant est déchargé de la mémoire avant l'appel à **DELETE RECORD** (par exemple suite à un [UNLOAD RECORD](../commands/unload-record)), la sélection courante de *laTable* est vide à l'issue de la suppression.
+* La commande **DELETE RECORD** ne fait rien si la table est en mode [READ ONLY](../commands/read-only), indépendamment de l'état verrouillé ou non de l'enregistrement à supprimer.
 
 La suppression d'enregistrements est une opération définitive et ne peut être annulée (sauf lorsqu'elle est exécutée durant une transaction, consultez *Utiliser des transactions*).
 
@@ -53,7 +53,7 @@ L'exemple suivant permet de supprimer l'enregistrement d'un employé. La méthod
 
 ## Voir aussi 
 
-[Locked](locked.md)  
+[Locked](../commands/locked)  
 *Présentation des triggers*  
 
 ## Propriétés

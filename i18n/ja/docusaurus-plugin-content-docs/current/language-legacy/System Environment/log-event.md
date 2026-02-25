@@ -1,4 +1,4 @@
----
+﻿---
 id: log-event
 title: LOG EVENT
 slug: /commands/log-event
@@ -40,9 +40,9 @@ displayed_sidebar: docs
 
 | 定数                           | 型    | 値 | コメント                                                                                                                                                                                                                                                                         |
 | ---------------------------- | ---- | - | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Into 4D commands log         | 倍長整数 | 3 | この値は4Dのコマンドログファイルがアクティブである場合、このファイルに*message*の内容を記録するよう4Dに指示します。4Dコマンドログファイルは[SET DATABASE PARAMETER](set-database-parameter.md)コマンド (セレクター34) を使用して有効にできます。 **注:** 4Dのログファイルは、**Logs**フォルダに配置されます([Get 4D folder](get-4d-folder.md)コマンドを参照) 。                               |
+| Into 4D commands log         | 倍長整数 | 3 | この値は4Dのコマンドログファイルがアクティブである場合、このファイルに*message*の内容を記録するよう4Dに指示します。4Dコマンドログファイルは[SET DATABASE PARAMETER](../commands/set-database-parameter)コマンド (セレクター34) を使用して有効にできます。 **注:** 4Dのログファイルは、**Logs**フォルダに配置されます([Get 4D folder](../commands/get-4d-folder)コマンドを参照) 。                               |
 | Into 4D debug message        | 倍長整数 | 1 | この値は4Dに*message*をシステムデバッギング環境へ送るよう指示します。結果はプラットホームにより異なります。Mac OSでは、コマンドはメッセージをコンソールへ送ります。Windowsでは、コマンドはメッセージをデバッグメッセージとして送ります。このメッセージを読むには、Microsoft Visual StudioまたはDebugViewユーティリティが必要です。<br/> (<http://technet.microsoft.com/en-us/sysinternals/bb896647.aspx>) |
-| Into 4D diagnostic log       | 倍長整数 | 5 | ログファイルが有効である場合に、メッセージを4Dのログファイルに記録するよう指示します。<br/>ログファイルは[SET DATABASE PARAMETER](set-database-parameter.md)コマンド (セレクター79) を使用して有効にできます。                                                                                                                              |
+| Into 4D diagnostic log       | 倍長整数 | 5 | ログファイルが有効である場合に、メッセージを4Dのログファイルに記録するよう指示します。<br/>ログファイルは[SET DATABASE PARAMETER](../commands/set-database-parameter)コマンド (セレクター79) を使用して有効にできます。                                                                                                                              |
 | Into 4D request log          | 倍長整数 | 2 | この値は4Dリクエストログがアクティブである場合、このファイルに*message*を記録するよう4Dに指示します。                                                                                                                                                                                                                    |
 | Into system standard outputs | 倍長整数 | 6 | この値は 4D に *message* を標準出力ストリームへ送るよう指示します。メッセージの送り先は*importance*の値により決まります: **stdout** : *importance* \= Information message または Warning message の場合 **stderr** : *importance* \= Error message の場合                                                                           |
 | Into Windows log events      | 倍長整数 | 0 | この値は、4Dに*message* をWindowsの"Log events" へ送るよう指示します。このログは起動しているアプリケーションから送られるメッセージを受け取り保存します。この場合オプションの*importance*引数を使用して*message*の重要度を設定できます (後述)。**<br/>Notes:** <br/>この特性を利用するには、Windows Log Eventsサービスが起動していなければなりません。Mac OSでは、コマンドはこの出力タイプでは何もしません。     |
@@ -65,7 +65,7 @@ displayed_sidebar: docs
 
 ## 例題 
 
-Windowsでデータベースが開かれた時の情報をログしたい場合は、以下のコードを[On Startupデータベースメソッド](on-startup-database-method.md)内に記述します。
+Windowsでデータベースが開かれた時の情報をログしたい場合は、以下のコードを[On Startupデータベースメソッド](../commands/on-startup-database-method)内に記述します。
 
 ```4d
  LOG EVENT(Into Windows log events;"The Invoice database was opened.")
@@ -75,7 +75,7 @@ Windowsでデータベースが開かれた時の情報をログしたい場合�
 
 ## 参照 
 
-[SET DATABASE PARAMETER](set-database-parameter.md)  
+[SET DATABASE PARAMETER](../commands/set-database-parameter)  
 
 
 ## プロパティ

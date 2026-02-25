@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-set-page-content
 title: WA SET PAGE CONTENT
 slug: /commands/wa-set-page-content
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 ## Note de compatibilité 
 
-<!--REF #_command_.WA SET PAGE CONTENT.Summary-->Cette commande historique n'est plus vraiment utile.<!-- END REF--> Avec le renforcement de la sécurité dans les navigateurs modernes, il existe de plus en plus de restrictions sur la modification du contenu des pages "à la volée". Une approche plus fiable consiste à créer un fichier local (par exemple dans le dossier temporaire) et à utiliser [WA OPEN URL](wa-open-url.md) pour le charger. Pour effacer le contenu, il suffit d'appeler **WA OPEN URL**(myArea;”about:blank”).
+<!--REF #_command_.WA SET PAGE CONTENT.Summary-->Cette commande historique n'est plus vraiment utile.<!-- END REF--> Avec le renforcement de la sécurité dans les navigateurs modernes, il existe de plus en plus de restrictions sur la modification du contenu des pages "à la volée". Une approche plus fiable consiste à créer un fichier local (par exemple dans le dossier temporaire) et à utiliser [WA OPEN URL](../commands/wa-open-url) pour le charger. Pour effacer le contenu, il suffit d'appeler **WA OPEN URL**(myArea;”about:blank”).
 
 ## Description 
 
@@ -55,7 +55,7 @@ Affichage de la phrase "Hello world !" et définition d’un URL de base "file:/
 
 ## Voir aussi 
 
-[WA Get page content](wa-get-page-content.md)  
+[WA Get page content](../commands/wa-get-page-content)  
 
 ## Propriétés
 

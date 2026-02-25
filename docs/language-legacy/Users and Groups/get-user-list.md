@@ -1,4 +1,4 @@
----
+﻿---
 id: get-user-list
 title: GET USER LIST
 slug: /commands/get-user-list
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 The array *userNames* is filled with the user names displayed in the Passwords window, including users whose accounts are disabled (user names displayed in green in the Passwords window).
 
-**Note:** Use the [Is user deleted](is-user-deleted.md) command to detect deleted users.
+**Note:** Use the [Is user deleted](../commands/is-user-deleted) command to detect deleted users.
 
 The array *userNumbers*, synchronized with *userNames*, is filled with the corresponding unique user ID numbers. 
 
@@ -40,13 +40,13 @@ The array *userNumbers*, synchronized with *userNames*, is filled with the corre
 
 ## Error management 
 
-If you do not have the proper access privileges for calling GET USER LIST or if the Password system is already accessed by another process, an access privilege error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md).
+If you do not have the proper access privileges for calling GET USER LIST or if the Password system is already accessed by another process, an access privilege error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](../commands/on-err-call).
 
 ## See also 
 
-[GET GROUP LIST](get-group-list.md)  
-[GET USER PROPERTIES](get-user-properties.md)  
-[Set user properties](set-user-properties.md)  
+[GET GROUP LIST](../commands/get-group-list)  
+[GET USER PROPERTIES](../commands/get-user-properties)  
+[Set user properties](../commands/set-user-properties)  
 
 ## Properties
 

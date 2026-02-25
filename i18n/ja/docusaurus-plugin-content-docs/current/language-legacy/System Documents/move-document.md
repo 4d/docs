@@ -1,4 +1,4 @@
----
+﻿---
 id: move-document
 title: MOVE DOCUMENT
 slug: /commands/move-document
@@ -60,7 +60,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[COPY DOCUMENT](copy-document.md)  
+[COPY DOCUMENT](../commands/copy-document)  
 
 ## プロパティ
 

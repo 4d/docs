@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-zoom-in
 title: WA ZOOM IN
 slug: /commands/wa-zoom-in
@@ -37,7 +37,7 @@ Sous Windows, la portée de cette commande est globale : le paramétrage est con
 
 ## Voir aussi 
 
-[WA ZOOM OUT](wa-zoom-out.md)  
+[WA ZOOM OUT](../commands/wa-zoom-out)  
 
 ## Propriétés
 

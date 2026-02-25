@@ -1,4 +1,4 @@
----
+﻿---
 id: round
 title: Round
 slug: /commands/round
@@ -38,7 +38,7 @@ The following example illustrates how Round works with different arguments. Each
 
 ## See also 
 
-[Trunc](trunc.md)  
+[Trunc](../commands/trunc)  
 
 ## Properties
 

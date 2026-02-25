@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-indicator-type
 title: OBJECT Get indicator type
 slug: /commands/object-get-indicator-type
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get indicator type.Summary-->**OBJECT Get indicator type**コマンドは、引数 *object* と *\** で指定したサーモメーターに割り当てられた、カレントのインジケーターの型を返します。<!-- END REF-->
 
-インジケーターのタイプは、デザインモードのプロパティリストを使用するか、新コマンド [OBJECT SET INDICATOR TYPE](object-set-indicator-type.md) を使用することによって定義できます。
+インジケーターのタイプは、デザインモードのプロパティリストを使用するか、新コマンド [OBJECT SET INDICATOR TYPE](../commands/object-set-indicator-type) を使用することによって定義できます。
 
 任意の *\** 演算子を渡した場合、 *object* 引数でオブジェクト名を文字列で指定します。省略時には *object* 引数でフィールドまたは変数を指定します。
 
@@ -45,7 +45,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT SET INDICATOR TYPE](object-set-indicator-type.md)  
+[OBJECT SET INDICATOR TYPE](../commands/object-set-indicator-type)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: get-list-properties
 title: GET LIST PROPERTIES
 slug: /commands/get-list-properties
@@ -43,13 +43,13 @@ Si le paramètre *doubleClic* vaut 1, le déploiement ou la contraction des sous
 Si le paramètre *multiSélection* vaut 0, la sélection multiple d’éléments (manuelle ou par programmation) n’est pas possible dans la liste. S’il vaut 1, la sélection multiple est permise.   
 Si le paramètre *modifiable* vaut 1, la liste est modifiable lorsqu’elle est affichée sous forme d’énumération dans les enregistrements. S’il vaut 0, la liste n’est pas modifiable. 
 
-Ces propriétés peuvent être définies à l'aide de la commande [SET LIST PROPERTIES](set-list-properties.md) et/ou dans l'éditeur d'énumérations en mode Développement, si la liste a été créée dans cet éditeur ou sauvegardée avec la commande [SAVE LIST](save-list.md).
+Ces propriétés peuvent être définies à l'aide de la commande [SET LIST PROPERTIES](../commands/set-list-properties) et/ou dans l'éditeur d'énumérations en mode Développement, si la liste a été créée dans cet éditeur ou sauvegardée avec la commande [SAVE LIST](../commands/save-list).
 
-Pour une description complète de ces propriétés d'apparence et de comportement, reportez-vous à la commande [SET LIST PROPERTIES](set-list-properties.md).
+Pour une description complète de ces propriétés d'apparence et de comportement, reportez-vous à la commande [SET LIST PROPERTIES](../commands/set-list-properties).
 
 ## Voir aussi 
 
-[SET LIST PROPERTIES](set-list-properties.md)  
+[SET LIST PROPERTIES](../commands/set-list-properties)  
 
 ## Propriétés
 

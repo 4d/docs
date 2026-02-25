@@ -1,4 +1,4 @@
----
+﻿---
 id: set-timeout
 title: SET TIMEOUT
 slug: /commands/set-timeout
@@ -23,13 +23,13 @@ Note que o tempo é o tempo total permitido para o comando ser executado, e não
 
 Os comandos que são afetados pela configuração de tempo limite são:
 
-* [RECEIVE PACKET](receive-packet.md)
+* [RECEIVE PACKET](../commands/receive-packet)
 * [RECEIVE RECORD](receive-record.md "RECEIVE RECORD")
 * [RECEIVE VARIABLE](receive-variable.md "RECEIVE VARIABLE")
 
 ## Exemplo 
 
-O exemplo a seguir define a porta serial para receber dados. Em seguida, ele define um limite de tempo. Os dados são lidos com [RECEIVE PACKET](receive-packet.md). Se os dados não forem recebidos em tempo, ocorre um erro:
+O exemplo a seguir define a porta serial para receber dados. Em seguida, ele define um limite de tempo. Os dados são lidos com [RECEIVE PACKET](../commands/receive-packet). Se os dados não forem recebidos em tempo, ocorre um erro:
 
 ```4d
  SET CHANNEL(MacOS serial port;Speed 9600+Data bits 8+Stop bits one+Parity none) // Abertura da porta serial
@@ -46,11 +46,11 @@ O exemplo a seguir define a porta serial para receber dados. Em seguida, ele def
 
 ## Ver também 
 
-[ON ERR CALL](on-err-call.md)  
-[RECEIVE BUFFER](receive-buffer.md)  
-[RECEIVE PACKET](receive-packet.md)  
-[RECEIVE RECORD](receive-record.md)  
-[RECEIVE VARIABLE](receive-variable.md)  
+[ON ERR CALL](../commands/on-err-call)  
+[RECEIVE BUFFER](../commands/receive-buffer)  
+[RECEIVE PACKET](../commands/receive-packet)  
+[RECEIVE RECORD](../commands/receive-record)  
+[RECEIVE VARIABLE](../commands/receive-variable)  
 
 ## Propriedades
 

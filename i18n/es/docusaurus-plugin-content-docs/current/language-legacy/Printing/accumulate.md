@@ -1,4 +1,4 @@
----
+﻿---
 id: accumulate
 title: ACCUMULATE
 slug: /commands/accumulate
@@ -44,10 +44,10 @@ Ver el ejemplo del comando [BREAK LEVEL](break-level.md "BREAK LEVEL").
 
 ## Ver también 
 
-[BREAK LEVEL](break-level.md)  
-[ORDER BY](order-by.md)  
-[PRINT SELECTION](print-selection.md)  
-[Subtotal](subtotal.md)  
+[BREAK LEVEL](../commands/break-level)  
+[ORDER BY](../commands/order-by)  
+[PRINT SELECTION](../commands/print-selection)  
+[Subtotal](../commands/subtotal)  
 
 ## Propiedades
 

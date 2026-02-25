@@ -1,4 +1,4 @@
----
+﻿---
 id: query-selection-by-attribute
 title: QUERY SELECTION BY ATTRIBUTE
 slug: /commands/query-selection-by-attribute
@@ -34,16 +34,16 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Summary-->**QUERY SELECTION BY ATTRIBUTE** は [QUERY BY ATTRIBUTE](query-by-attribute.md) と同じように動作します。<!-- END REF-->相違点は検索する範囲が異なるだけです:
+<!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Summary-->**QUERY SELECTION BY ATTRIBUTE** は [QUERY BY ATTRIBUTE](../commands/query-by-attribute) と同じように動作します。<!-- END REF-->相違点は検索する範囲が異なるだけです:
 
-* [QUERY BY ATTRIBUTE](query-by-attribute.md) はテーブルの全レコードからレコードを検索します。
+* [QUERY BY ATTRIBUTE](../commands/query-by-attribute) はテーブルの全レコードからレコードを検索します。
 * **QUERY SELECTION BY ATTRIBUTE** はテーブルのカレントセレクションからレコードを検索します。
 
 **QUERY SELECTION BY ATTRIBUTE** は*aTable* 内でレコードを検索します。**QUERY SELECTION BY ATTRIBUTE** コマンドはカレントプロセスにおいて、*aTable* のカレントセレクションを更新し、新しいカレントセレクションの先頭レコードをカレントレコードに設定します。
 
-詳細については [QUERY BY ATTRIBUTE](query-by-attribute.md) の説明を参照ください。
+詳細については [QUERY BY ATTRIBUTE](../commands/query-by-attribute) の説明を参照ください。
 
-**QUERY SELECTION BY ATTRIBUTE** コマンドは、クエリが \* 引数で結合された [QUERY BY ATTRIBUTE](query-by-attribute.md) (および [QUERY](query.md)) 呼び出しのシークエンスを使用して定義することが出来ない場合に有用です。例えば、カレントセレクションがクエリではなく、[USE SET](use-set.md) のようなコマンドによって作成されている場合などが該当します。
+**QUERY SELECTION BY ATTRIBUTE** コマンドは、クエリが \* 引数で結合された [QUERY BY ATTRIBUTE](../commands/query-by-attribute) (および [QUERY](../commands/query)) 呼び出しのシークエンスを使用して定義することが出来ない場合に有用です。例えば、カレントセレクションがクエリではなく、[USE SET](../commands/use-set) のようなコマンドによって作成されている場合などが該当します。
 
 ## 例題 
 
@@ -57,7 +57,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[QUERY BY ATTRIBUTE](query-by-attribute.md)  
+[QUERY BY ATTRIBUTE](../commands/query-by-attribute)  
 
 ## プロパティ
 

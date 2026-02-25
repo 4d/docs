@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-context-menu
 title: OBJECT SET CONTEXT MENU
 slug: /commands/object-set-context-menu
@@ -39,7 +39,7 @@ Passe **True** no parâmetro *menuContext* para ativar o menu contextual, e **Fa
 
 ## Ver também 
 
-[OBJECT Get context menu](object-get-context-menu.md)  
+[OBJECT Get context menu](../commands/object-get-context-menu)  
 
 ## Propriedades
 

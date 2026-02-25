@@ -1,4 +1,4 @@
----
+﻿---
 id: write-picture-file
 title: WRITE PICTURE FILE
 slug: /commands/write-picture-file
@@ -36,12 +36,12 @@ Puede pasar en *nomArchivo* la ruta de acceso completa del archivo a crear, o ú
   
 Tiene que indicarse la extensión del archivo.
 
-Si pasa una cadena vacía ("") en *nomArchivo*, aparece la caja de diálogo estándar de registro, permitiendo al usuario indicar el nombre, ubicación y formato del archivo a crear. Si se ha asociado un nombre por defecto al campo Imagen, se suministra en la caja de diálogo (ver el comando [SET PICTURE FILE NAME](set-picture-file-name.md)).
+Si pasa una cadena vacía ("") en *nomArchivo*, aparece la caja de diálogo estándar de registro, permitiendo al usuario indicar el nombre, ubicación y formato del archivo a crear. Si se ha asociado un nombre por defecto al campo Imagen, se suministra en la caja de diálogo (ver el comando [SET PICTURE FILE NAME](../commands/set-picture-file-name)).
 
 Pase en *imagen* la variable o campo imagen que contiene la imagen a almacenar en el disco.
 
 El parámetro opcional *codec* permite definir el formato en el cual la imagen se guardará. Un codec puede ser una extensión (por ejemplo ".gif") o un tipo Mime (por ejemplo "image/jpg").  
- Puede obtener una lista de codecs disponibles a través del comando [PICTURE CODEC LIST](picture-codec-list.md).
+ Puede obtener una lista de codecs disponibles a través del comando [PICTURE CODEC LIST](../commands/picture-codec-list).
 
 Si se omite el parámetro *codec*, el comando intentará determinar el *codec* basado en la extensión del nombre del archivo pasado en el parámetro *nomArchivo*. Por ejemplo, si pasa la instrucción:  
 
@@ -60,9 +60,9 @@ Si la ejecución del comando es correcta, la variable sistema Document contiene 
 ## Ver también 
 
 *Imágenes*  
-[PICTURE TO BLOB](picture-to-blob.md)  
-[READ PICTURE FILE](read-picture-file.md)  
-[SET PICTURE FILE NAME](set-picture-file-name.md)  
+[PICTURE TO BLOB](../commands/picture-to-blob)  
+[READ PICTURE FILE](../commands/read-picture-file)  
+[SET PICTURE FILE NAME](../commands/set-picture-file-name)  
 
 ## Propiedades
 

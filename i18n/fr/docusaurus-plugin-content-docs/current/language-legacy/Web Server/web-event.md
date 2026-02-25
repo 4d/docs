@@ -1,4 +1,4 @@
----
+﻿---
 id: web-event
 slug: /commands/web-event
 title: Web Event
@@ -85,7 +85,7 @@ exposed function hideOnLoad()
 
 ## Voir également
 
-[Web Form](web-form.md)</br>
+[Web Form](../commands/web-form)</br>
 [WebForm class](../../API/WebFormClass.md)</br>
 [WebFormItem class](../../API/WebFormItemClass.md)
 

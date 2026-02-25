@@ -1,4 +1,4 @@
----
+﻿---
 id: invoke-action
 title: INVOKE ACTION
 slug: /commands/invoke-action
@@ -54,7 +54,7 @@ Dependendo do *objetivo*, a execução do comando **INVOKE ACTION** é sincrôni
 
 **Nota:** as ações de edição padrão (Cortar, Copiar, Colar, Selecionar tudo, Apagar, Desfazer/Refazer) ignoram o parâmetro *objetivo*, se for passado. Tais ações podem ser executadas sempre de forma sincrônica no contexto de objeto editável que tenha o foco.
 
-O comando **INVOKE ACTION** não gera um erro, por exemplo, se a ação solicitada não estiver disponível no contexto atual. Deve validar a ação esperada utilizando o comando [Action info](action-info.md). 
+O comando **INVOKE ACTION** não gera um erro, por exemplo, se a ação solicitada não estiver disponível no contexto atual. Deve validar a ação esperada utilizando o comando [Action info](../commands/action-info). 
 
 ## Exemplo 1 
 
@@ -74,7 +74,7 @@ Se quiser executar uma ação padrão **Goto page** (página 3) no formulário p
 
 ## Ver também 
 
-[Action info](action-info.md)  
+[Action info](../commands/action-info)  
 
 ## Propriedades
 

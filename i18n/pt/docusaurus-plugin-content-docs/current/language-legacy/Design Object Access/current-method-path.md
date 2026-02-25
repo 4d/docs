@@ -1,4 +1,4 @@
----
+﻿---
 id: current-method-path
 title: Current method path
 slug: /commands/current-method-path
@@ -31,8 +31,8 @@ displayed_sidebar: docs
 
 ## Ver também 
 
-[METHOD Get path](method-get-path.md)  
-[METHOD GET PATHS](method-get-paths.md)  
+[METHOD Get path](../commands/method-get-path)  
+[METHOD GET PATHS](../commands/method-get-paths)  
 
 ## Propriedades
 

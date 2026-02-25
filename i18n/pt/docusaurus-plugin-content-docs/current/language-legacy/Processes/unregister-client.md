@@ -1,4 +1,4 @@
----
+﻿---
 id: unregister-client
 title: UNREGISTER CLIENT
 slug: /commands/unregister-client
@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.UNREGISTER CLIENT.Summary-->O comando UNREGISTER CLIENT cancela o registro de uma máquina 4D Client.<!-- END REF--> O cliente deverá ter sido registrado pelo comando [REGISTER CLIENT](register-client.md).
+<!--REF #_command_.UNREGISTER CLIENT.Summary-->O comando UNREGISTER CLIENT cancela o registro de uma máquina 4D Client.<!-- END REF--> O cliente deverá ter sido registrado pelo comando [REGISTER CLIENT](../commands/register-client).
 
 **Nota:** O registro de um cliente 4D é cancelado automaticamente quando o usuário sai da aplicação. 
 
@@ -34,7 +34,7 @@ Se a máquina cliente não foi registrada anteriormente ou se o comando foi exec
 
 ## Exemplo 
 
-Consulte o exemplo do comando [REGISTER CLIENT](register-client.md) .
+Consulte o exemplo do comando [REGISTER CLIENT](../commands/register-client) .
 
 ## Variáveis e conjuntos do sistema 
 
@@ -42,9 +42,9 @@ Se o registro de um cliente é cancelado corretamente, a variável do sistema OK
 
 ## Ver também 
 
-[EXECUTE ON CLIENT](execute-on-client.md)  
-[GET REGISTERED CLIENTS](get-registered-clients.md)  
-[REGISTER CLIENT](register-client.md)  
+[EXECUTE ON CLIENT](../commands/execute-on-client)  
+[GET REGISTERED CLIENTS](../commands/get-registered-clients)  
+[REGISTER CLIENT](../commands/register-client)  
 
 ## Propriedades
 

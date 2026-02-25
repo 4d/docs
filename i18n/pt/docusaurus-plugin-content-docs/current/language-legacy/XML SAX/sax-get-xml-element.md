@@ -1,4 +1,4 @@
----
+﻿---
 id: sax-get-xml-element
 title: SAX GET XML ELEMENT
 slug: /commands/sax-get-xml-element
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.SAX GET XML ELEMENT.Summary-->O comando SAX GET XML ELEMENT devolve diversa informação relativa ao elemento nome presente no documento XML referenciado por documento.<!-- END REF--> Este comando deve ser chamado com os eventos XML Start Element ou XML End Element SAX. No caso específico de XML End Element, os parâmetros de atributos não são manipulados. Para maior informação sobre os eventos SAX, consulte a descrição do comando [SAX Get XML node](sax-get-xml-node.md).  
+<!--REF #_command_.SAX GET XML ELEMENT.Summary-->O comando SAX GET XML ELEMENT devolve diversa informação relativa ao elemento nome presente no documento XML referenciado por documento.<!-- END REF--> Este comando deve ser chamado com os eventos XML Start Element ou XML End Element SAX. No caso específico de XML End Element, os parâmetros de atributos não são manipulados. Para maior informação sobre os eventos SAX, consulte a descrição do comando [SAX Get XML node](../commands/sax-get-xml-node).  
 
 O parâmetro *nome* contém o nome do elemento.  
   
@@ -68,7 +68,7 @@ Se o comando tiver sido executado corretamente, a variável sistema Ok assume o 
 
 ## Ver também 
 
-[SAX Get XML node](sax-get-xml-node.md)  
+[SAX Get XML node](../commands/sax-get-xml-node)  
 
 ## Propriedades
 

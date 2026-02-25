@@ -1,4 +1,4 @@
----
+﻿---
 id: open-document
 title: Open document
 slug: /commands/open-document
@@ -58,11 +58,11 @@ O parâmetro opcional *modo* permite definir o modo de abertura do arquivo *docu
 | Read Mode      | Inteiro longo | 2     |
 | Write Mode     | Inteiro longo | 1     |
 
-Quando um documento for aberto, Open document se localiza inicialmente ao começo do documento, enquanto [Append document](append-document.md) é localizado ao final do documento.  
+Quando um documento for aberto, Open document se localiza inicialmente ao começo do documento, enquanto [Append document](../commands/append-document) é localizado ao final do documento.  
 
-Quando abrir um documento, pode ler e escrever no documento utilizando os comandos [RECEIVE PACKET](receive-packet.md) e [SEND PACKET](send-packet.md) que pode combinar com os comandos [Get document position](get-document-position.md) e [SET DOCUMENT POSITION](set-document-position.md) para acessar diretamente a qualquer parte do documento.
+Quando abrir um documento, pode ler e escrever no documento utilizando os comandos [RECEIVE PACKET](../commands/receive-packet) e [SEND PACKET](../commands/send-packet) que pode combinar com os comandos [Get document position](../commands/get-document-position) e [SET DOCUMENT POSITION](../commands/set-document-position) para acessar diretamente a qualquer parte do documento.
 
-Não esqueça de, no final, chamar [CLOSE DOCUMENT](close-document.md) para o documento.
+Não esqueça de, no final, chamar [CLOSE DOCUMENT](../commands/close-document) para o documento.
 
 ## Exemplo 1 
 
@@ -108,8 +108,8 @@ Se passa o valor 3 em *modo*, a função retorna ?00:00:00? (sem referência de 
 
 ## Ver também 
 
-[Append document](append-document.md)  
-[Create document](create-document.md)  
+[Append document](../commands/append-document)  
+[Create document](../commands/create-document)  
 
 ## Propriedades
 

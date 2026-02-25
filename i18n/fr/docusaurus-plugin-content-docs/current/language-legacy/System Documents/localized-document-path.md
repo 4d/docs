@@ -1,4 +1,4 @@
----
+﻿---
 id: localized-document-path
 title: Localized document path
 slug: /commands/localized-document-path
@@ -24,7 +24,7 @@ Cette commande doit être utilisée dans le cadre d’une architecture d’appli
 
 Passez dans *cheminRelatif* le chemin d’accès relatif du document recherché. Le chemin saisi doit être relatif au premier niveau d’un dossier "xxx.lproj" de la base. La commande retournera un chemin d’accès complet en utilisant le dossier "xxx.lproj" correspondant à la langue courante de la base. 
 
-**Note :** La langue courante est définie soit automatiquement par 4D en fonction du contenu du dossier **Resources** (cf. commande [Get database localization](get-database-localization.md)), soit via la commande [SET DATABASE LOCALIZATION](set-database-localization.md). 
+**Note :** La langue courante est définie soit automatiquement par 4D en fonction du contenu du dossier **Resources** (cf. commande [Get database localization](../commands/get-database-localization)), soit via la commande [SET DATABASE LOCALIZATION](../commands/set-database-localization). 
 
 Vous pouvez exprimer le contenu du paramètre *cheminRelatif* à l’aide d’une syntaxe posix ou système. Par exemple :
 
@@ -67,7 +67,7 @@ Si la langue courante est, par exemple, le français canadien (fr-ca), la comman
 
 ## Voir aussi 
 
-[Get database localization](get-database-localization.md)  
+[Get database localization](../commands/get-database-localization)  
 
 ## Propriétés
 

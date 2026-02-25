@@ -1,4 +1,4 @@
----
+﻿---
 id: time
 title: Time
 slug: /commands/time
@@ -60,7 +60,7 @@ Pode expressar todo valor numérico como uma hora:
 
 ## Ver também 
 
-[ARRAY TIME](array-time.md)  
+[ARRAY TIME](../commands/array-time)  
 [Bool](../commands/bool)  
 [String](../commands/string)  
 [Time string](../commands/time-string)  

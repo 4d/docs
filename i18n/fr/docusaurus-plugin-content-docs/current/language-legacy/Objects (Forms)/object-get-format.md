@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-format
 title: OBJECT Get format
 slug: /commands/object-get-format
@@ -38,11 +38,11 @@ displayed_sidebar: docs
 
 Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (dans ce cas, passez une chaîne dans *objet*). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable.
 
-Cette commande retourne le format d’affichage courant de l’objet, c’est-à-dire le format défini en mode Développement ou à l’aide de la commande [OBJECT SET FORMAT](object-set-format.md). **OBJECT Get format** fonctionne avec tous les types d’objets de formulaire (champs ou variables) acceptant un format d’affichage : booléen, date, heure, image, chaîne, numérique, ainsi que les grilles de boutons, cadrans, thermomètres, règles, pop up menus image, boutons image, boutons 3D et en-têtes de list box. Pour plus d’informations sur les formats d’affichage de ces objets, reportez-vous à la documentation de la commande [OBJECT SET FORMAT](object-set-format.md).
+Cette commande retourne le format d’affichage courant de l’objet, c’est-à-dire le format défini en mode Développement ou à l’aide de la commande [OBJECT SET FORMAT](../commands/object-set-format). **OBJECT Get format** fonctionne avec tous les types d’objets de formulaire (champs ou variables) acceptant un format d’affichage : booléen, date, heure, image, chaîne, numérique, ainsi que les grilles de boutons, cadrans, thermomètres, règles, pop up menus image, boutons image, boutons 3D et en-têtes de list box. Pour plus d’informations sur les formats d’affichage de ces objets, reportez-vous à la documentation de la commande [OBJECT SET FORMAT](../commands/object-set-format).
 
 **Note :** Si vous appliquez la commande à un ensemble d’objets, seul le formatage du dernier objet pris en compte est retourné.
 
-Lorsque la commande **OBJECT Get format** est appliquée à des objets dont le format a été défini à l'aide d'une constante longint (objets date, heure ou image), la chaîne retournée correspond au code de caractère de la constante. Pour obtenir la valeur de la constante, il suffit d'appliquer la fonction [Character code](character-code.md) au résultat (voir ci-dessous).
+Lorsque la commande **OBJECT Get format** est appliquée à des objets dont le format a été défini à l'aide d'une constante longint (objets date, heure ou image), la chaîne retournée correspond au code de caractère de la constante. Pour obtenir la valeur de la constante, il suffit d'appliquer la fonction [Character code](../commands/character-code) au résultat (voir ci-dessous).
 
 ## Exemple 1 
 
@@ -79,7 +79,7 @@ Les formats personnalisés sont retournés inchangés :
 
 ## Voir aussi 
 
-[OBJECT SET FORMAT](object-set-format.md)  
+[OBJECT SET FORMAT](../commands/object-set-format)  
 
 ## Propriétés
 

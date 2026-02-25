@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-login
 title: SQL LOGIN
 slug: /commands/sql-login
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL LOGIN.Summary-->El comando **SQL LOGIN** permite conectarse a una fuente de datos SQL especificada en el parámetro *entradaDatos* y designa el objetivo de las búsquedas SQL ejecutadas posteriormente en el proceso actual: 
 
-* vía el comando [SQL EXECUTE](sql-execute.md),
+* vía el comando [SQL EXECUTE](../commands/sql-execute),
 * vía el código ubicado dentro de las etiquetas Begin SQL / End SQL (si se pasa el parámetro *\**).<!-- END REF-->
 
 La fuente de datos SQL puede ser:
@@ -76,7 +76,7 @@ Esta caja de diálogo incluye varias páginas. La página TCP/IP incluye los sig
    * Nombre de usuario y Contraseña: estas áreas pueden utilizarse para introducir los identificadores de conexión.  
    * Las páginas DSN de usuario y DSN de sistema muestran, respectivamente, la lista de usuario y fuentes de datos ODBC del sistema en el driver ODBC de la máquina. Estas páginas pueden utilizarse para seleccionar una fuente de datos e introducir identificadores para abrir una conexión con una fuente de datos externa ODBC.  
     
-Si se establece la conexión, la variable sistema OK toma el valor 1\. De lo contrario, toma el valor 0 y se genera un error. Este error puede interceptarse vía un método de gestión de errores instalado por el comando [ON ERR CALL](on-err-call.md).
+Si se establece la conexión, la variable sistema OK toma el valor 1\. De lo contrario, toma el valor 0 y se genera un error. Este error puede interceptarse vía un método de gestión de errores instalado por el comando [ON ERR CALL](../commands/on-err-call).
 * **Constante SQL\_INTERNAL**  
 Sintaxis: SQL\_INTERNAL  
 En este caso, el comando redirecciona las búsquedas SQL posteriores a la base 4D interna.
@@ -91,7 +91,7 @@ En este caso, el comando redirecciona las búsquedas SQL posteriores a la base 4
 
 El parámetro opcional *\** puede utilizarse para cambiar el objetivo del código SQL ejecutado dentro de las etiquetas Begin SQL/End SQL. Si no pasa este parámetro, el código ubicado dentro de las etiquetas Begin SQL/End SQL aún se enviará al motor SQL interno de 4D, sin tener en cuenta la configuración especificada por el comando **SQL LOGIN** . Si pasa este parámetro, el código SQL ejecutado dentro de las etiquetas Begin SQL/End SQL se enviará a la fuente especificada en el parámetro *entradaDatos*. 
 
-Para cerrar la conexión actual y liberar la memoria, simplemente ejecute el comando [SQL LOGOUT](sql-logout.md). Todas las búsquedas SQL se envían a la base 4D SQL interna.   
+Para cerrar la conexión actual y liberar la memoria, simplemente ejecute el comando [SQL LOGOUT](../commands/sql-logout). Todas las búsquedas SQL se envían a la base 4D SQL interna.   
 Si llama nuevamente a **SQL LOGIN**  sin haber cerrado explícitamente la conexión actual, la conexión se cerrará automáticamente. 
 
 **Nota:** en caso de falla de un intento de conexión externa vía **SQL LOGIN**, la base 4D interna se convierte automáticamente en la fuente de datos actual.
@@ -155,7 +155,7 @@ Apertura de una conexión directa en SSL con la aplicación 4D Server ejecutada 
 
 #### Ejemplo 7 
 
-Apertura de una conexión directa con la aplicación 4D Server ejecutada en la máquina que tiene la dirección IPv6 2a01: e35:2e41:c960:dc39:3eb0:f29b:3747 y responde en el puerto TCP 20150\. Las consultas SQL ejecutadas a través del comando [SQL EXECUTE](sql-execute.md) serán redirigidas a esta conexión; Las consultas incluidas en las etiquetas [Begin SQL](begin-sql.md)/[End SQL](end-sql.md) no se redirigirán.
+Apertura de una conexión directa con la aplicación 4D Server ejecutada en la máquina que tiene la dirección IPv6 2a01: e35:2e41:c960:dc39:3eb0:f29b:3747 y responde en el puerto TCP 20150\. Las consultas SQL ejecutadas a través del comando [SQL EXECUTE](../commands/sql-execute) serán redirigidas a esta conexión; Las consultas incluidas en las etiquetas [Begin SQL](../commands/begin-sql)/[End SQL](../commands/end-sql) no se redirigirán.
 
 ```4d
  SQL LOGIN("IP:[2a01:e35:2e41:c960:dc39:3eb0:f29b:3747]:20150";"John";"qwerty")
@@ -213,9 +213,9 @@ Si la conexión es exitosa, el variable sistema OK toma el valor 1; de lo contra
 
 #### Ver también 
 
-[Begin SQL](begin-sql.md)  
-[End SQL](end-sql.md)  
-[SQL LOGOUT](sql-logout.md)  
+[Begin SQL](../commands/begin-sql)  
+[End SQL](../commands/end-sql)  
+[SQL LOGOUT](../commands/sql-logout)  
 
 #### Propiedades
 

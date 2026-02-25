@@ -1,4 +1,4 @@
----
+﻿---
 id: get-table-titles
 title: GET TABLE TITLES
 slug: /commands/get-table-titles
@@ -28,9 +28,9 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.GET TABLE TITLES.Summary-->O comando GET TABLE TITLES preenche os arrays *tituloTabelas* e *numTabelas* com os nomes e números das tabelas da banco definidas na janela de estrutura ou através do comando [SET TABLE TITLES](set-table-titles.md).<!-- END REF--> O conteúdo desses dois arrays está sincronizado.  
+<!--REF #_command_.GET TABLE TITLES.Summary-->O comando GET TABLE TITLES preenche os arrays *tituloTabelas* e *numTabelas* com os nomes e números das tabelas da banco definidas na janela de estrutura ou através do comando [SET TABLE TITLES](../commands/set-table-titles).<!-- END REF--> O conteúdo desses dois arrays está sincronizado.  
 
-Se o comando [SET TABLE TITLES](set-table-titles.md) for chamado durante a sessão, GET TABLE TITLES só retorna os nomes “modificados” e os números das tabelas definidos utilizando este comando.  
+Se o comando [SET TABLE TITLES](../commands/set-table-titles) for chamado durante a sessão, GET TABLE TITLES só retorna os nomes “modificados” e os números das tabelas definidos utilizando este comando.  
   
 Do contrário, GET TABLE TITLES retorna os nomes das tabelas da banco definidos na janela de estrutura.  
   
@@ -38,8 +38,8 @@ Em ambos os casos, o comando não retorna as tabelas invisíveis.
 
 ## Ver também 
 
-[GET FIELD TITLES](get-field-titles.md)  
-[SET TABLE TITLES](set-table-titles.md)  
+[GET FIELD TITLES](../commands/get-field-titles)  
+[SET TABLE TITLES](../commands/set-table-titles)  
 
 ## Propriedades
 

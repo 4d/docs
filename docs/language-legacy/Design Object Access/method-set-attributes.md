@@ -1,4 +1,4 @@
----
+﻿---
 id: method-set-attributes
 title: METHOD SET ATTRIBUTES
 slug: /commands/method-set-attributes
@@ -36,7 +36,7 @@ In *path*, you can pass either a text containing a method path, or a text array 
 
 In *attributes*, you pass an object or an array of objects (depending on the kind of parameter you passed in *path*) containing all the attributes that you want to set for the method(s).
 
-Method attributes must be set using the [OB SET](ob-set.md) or [OB SET ARRAY](ob-set-array.md) commands, with True or False values for Boolean attributes, or specific values for extended attributes. Only attributes that are present in the *attributes* parameter will be updated in the method attributes.
+Method attributes must be set using the [OB SET](../commands/ob-set) or [OB SET ARRAY](../commands/ob-set-array) commands, with True or False values for Boolean attributes, or specific values for extended attributes. Only attributes that are present in the *attributes* parameter will be updated in the method attributes.
 
 If the command is executed from a component, by default it applies to the component methods. If you pass the *\** parameter, it accesses the methods of the host database.
 
@@ -62,8 +62,8 @@ You want to set a single attribute:
 
 ## See also 
 
-[METHOD GET ATTRIBUTES](method-get-attributes.md)  
-[METHOD SET ATTRIBUTE](method-set-attribute.md)  
+[METHOD GET ATTRIBUTES](../commands/method-get-attributes)  
+[METHOD SET ATTRIBUTE](../commands/method-set-attribute)  
 
 ## Properties
 

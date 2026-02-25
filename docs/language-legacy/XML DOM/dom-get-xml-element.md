@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-get-xml-element
 title: DOM Get XML element
 slug: /commands/dom-get-xml-element
@@ -43,7 +43,7 @@ The command fills the *attrNames* array, if passed, with the names of attributes
 
 The command also fills the *attrValues* array, if passed, with the values of attributes of the target element. If necessary, the command creates and sizes the array automatically. 
 
-**Note:** By default, **DOM Get XML element** is case sensitive regarding the *elementName* parameter (xml compliance). You can control the case sensitivity of the command using the XML DOM case sensitivity selector of the [XML SET OPTIONS](xml-set-options.md) command. 
+**Note:** By default, **DOM Get XML element** is case sensitive regarding the *elementName* parameter (xml compliance). You can control the case sensitivity of the command using the XML DOM case sensitivity selector of the [XML SET OPTIONS](../commands/xml-set-options) command. 
 
 ## System variables and sets 
 
@@ -51,8 +51,8 @@ If the command has been correctly executed, the system variable OK is set to 1. 
 
 ## See also 
 
-[DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md)  
-[XML SET OPTIONS](xml-set-options.md)  
+[DOM GET XML ELEMENT VALUE](../commands/dom-get-xml-element-value)  
+[XML SET OPTIONS](../commands/xml-set-options)  
 
 ## Properties
 

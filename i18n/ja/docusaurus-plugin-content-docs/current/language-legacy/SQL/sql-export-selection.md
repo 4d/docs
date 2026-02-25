@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-export-selection
 title: SQL EXPORT SELECTION
 slug: /commands/sql-export-selection
@@ -34,9 +34,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL EXPORT SELECTION.Summary-->SQL EXPORT SELECTION コマンドは、aTable引数で指定した4DテーブルのカレントセレクションをSQLフォーマットで書き出します。<!-- END REF-->
 
-このコマンドは[SQL EXPORT DATABASE](sql-export-database.md) コマンドとほぼ同様のものです。生成されたファイルは[SQL EXECUTE SCRIPT](sql-execute-script.md) コマンドで直接使用する事ができ、他の4Dデータベースへとデータを読み込むことができます。 SQL EXPORT SELECTION は*aTable* のカレントセレクションのみを書き出すのに対し、[SQL EXPORT DATABASE](sql-export-database.md) はデータベース全体を書き出します。また[SQL EXPORT DATABASE](sql-export-database.md) と異なり、 SQL EXPORT SELECTION は外部SQLデータベースでは動作しません。このコマンドはメインのデータベースでのみ使用できます。
+このコマンドは[SQL EXPORT DATABASE](../commands/sql-export-database) コマンドとほぼ同様のものです。生成されたファイルは[SQL EXECUTE SCRIPT](../commands/sql-execute-script) コマンドで直接使用する事ができ、他の4Dデータベースへとデータを読み込むことができます。 SQL EXPORT SELECTION は*aTable* のカレントセレクションのみを書き出すのに対し、[SQL EXPORT DATABASE](../commands/sql-export-database) はデータベース全体を書き出します。また[SQL EXPORT DATABASE](../commands/sql-export-database) と異なり、 SQL EXPORT SELECTION は外部SQLデータベースでは動作しません。このコマンドはメインのデータベースでのみ使用できます。
 
-これらのコマンドの動作と引数の説明については[SQL EXPORT DATABASE](sql-export-database.md) コマンドを参照してください。
+これらのコマンドの動作と引数の説明については[SQL EXPORT DATABASE](../commands/sql-export-database) コマンドを参照してください。
 
 カレントセレクションが空の場合、コマンドはなにも行いません。この場合、保存先フォルダは空にされないことに留意してください。
 
@@ -48,7 +48,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[SQL EXPORT DATABASE](sql-export-database.md)  
+[SQL EXPORT DATABASE](../commands/sql-export-database)  
 
 ## プロパティ
 

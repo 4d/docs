@@ -1,4 +1,4 @@
----
+﻿---
 id: spell-get-dictionary-list
 title: SPELL GET DICTIONARY LIST
 slug: /commands/spell-get-dictionary-list
@@ -34,10 +34,10 @@ displayed_sidebar: docs
 
 **Note:** For more information about Hunspell dictionaries, refer to the *Spell checking* section in the *Design Reference* manual. 
 
-* *langID* receives the ID numbers generated automatically and used with the [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md) command.  
+* *langID* receives the ID numbers generated automatically and used with the [SPELL SET CURRENT DICTIONARY](../commands/spell-set-current-dictionary) command.  
 Note that the IDs are unique and based on the file names. This command is mainly useful during development; you do not have to regenerate the IDs each time the database is executed.
 * *langFiles* receives the names of the dictionary files (without extensions) installed on the machine.
-* *langNames* receives the names of the languages expressed in the current application language. For example, for a French dictionary, the value "français (France)" is returned on a machine configured in French and "French (France)" on an English system. The language name is followed by "- Hunspell". This field is only valid for files "known" by 4D. For unknown files (for example, custom files), the name "N/A - Hunspell" is returned. This does not prevent you from using the dictionary (if the file concerned is valid), the ID returned may be passed to the [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md) command.
+* *langNames* receives the names of the languages expressed in the current application language. For example, for a French dictionary, the value "français (France)" is returned on a machine configured in French and "French (France)" on an English system. The language name is followed by "- Hunspell". This field is only valid for files "known" by 4D. For unknown files (for example, custom files), the name "N/A - Hunspell" is returned. This does not prevent you from using the dictionary (if the file concerned is valid), the ID returned may be passed to the [SPELL SET CURRENT DICTIONARY](../commands/spell-set-current-dictionary) command.
 
 ## Example 
 
@@ -63,7 +63,7 @@ You put "fr-classic+reform1990.aff" and "fr-classic+reform1990.dic" as well as "
 
 ## See also 
 
-[SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md)  
+[SPELL SET CURRENT DICTIONARY](../commands/spell-set-current-dictionary)  
 
 ## Properties
 

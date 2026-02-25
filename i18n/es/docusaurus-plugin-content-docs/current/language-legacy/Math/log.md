@@ -1,4 +1,4 @@
----
+﻿---
 id: log
 title: Log
 slug: /commands/log
@@ -32,7 +32,7 @@ La siguiente línea muestra 1:
 
 ## Ver también 
 
-[Exp](exp.md)  
+[Exp](../commands/exp)  
 
 ## Propiedades
 

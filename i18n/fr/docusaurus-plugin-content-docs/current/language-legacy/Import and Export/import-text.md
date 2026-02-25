@@ -1,4 +1,4 @@
----
+﻿---
 id: import-text
 title: IMPORT TEXT
 slug: /commands/import-text
@@ -39,9 +39,9 @@ L'événement On Validate est envoyé à la méthode du formulaire pour chaque e
 
 Le paramètre *document* peut contenir un chemin d'accès aux noms de volumes et de dossiers. Si vous passez une chaîne vide, la boîte de dialogue standard d'ouverture de fichiers est affichée. Si l'utilisateur annule le dialogue, l'opération d'import est annulée et la variable système OK est mise à 0\. 
 
-Un thermomètre de progression est affiché pendant l'import. L'utilisateur peut annuler l'opération en cliquant sur le bouton **Stop**. Les enregistrements déjà importés le resteront. Si l'import s'est correctement déroulé, la variable système OK est mise à 1\. En cas d'erreur ou d'interruption de l'opération, la variable système OK est mise à 0\. Vous pouvez cacher le thermomètre au moyen de la commande [MESSAGES OFF](messages-off.md).
+Un thermomètre de progression est affiché pendant l'import. L'utilisateur peut annuler l'opération en cliquant sur le bouton **Stop**. Les enregistrements déjà importés le resteront. Si l'import s'est correctement déroulé, la variable système OK est mise à 1\. En cas d'erreur ou d'interruption de l'opération, la variable système OK est mise à 0\. Vous pouvez cacher le thermomètre au moyen de la commande [MESSAGES OFF](../commands/messages-off).
 
-La commande utilise par défaut le jeu de caractères UTF-8\. Vous pouvez utiliser la commande [USE CHARACTER SET](use-character-set.md) pour modifier ce jeu de caractères. 
+La commande utilise par défaut le jeu de caractères UTF-8\. Vous pouvez utiliser la commande [USE CHARACTER SET](../commands/use-character-set) pour modifier ce jeu de caractères. 
 
 Lors de l'utilisation de **IMPORT TEXT**, le délimiteur de champs par défaut est le caractère de tabulation (code 9). Le délimiteur d'enregistrements par défaut est le retour chariot (code 13). Vous pouvez modifier ces valeurs par défaut en assignant de nouvelles valeurs aux variables système FldDelimit et RecDelimit. L'utilisateur peut modifier ces valeurs par défaut dans la boîte de dialogue d'import du mode Développement. Comme les champs Texte peuvent contenir des Retours chariot, soyez prudent si vous utilisez le Retour chariot comme délimiteur entre les champs à importer.
 
@@ -62,10 +62,10 @@ OK prend la valeur 1 si l'import s'est correctement déroulé, sinon elle prend 
 
 ## Voir aussi 
 
-[EXPORT TEXT](export-text.md)  
-[IMPORT DIF](import-dif.md)  
-[IMPORT SYLK](import-sylk.md)  
-[USE CHARACTER SET](use-character-set.md)  
+[EXPORT TEXT](../commands/export-text)  
+[IMPORT DIF](../commands/import-dif)  
+[IMPORT SYLK](../commands/import-sylk)  
+[USE CHARACTER SET](../commands/use-character-set)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-load-record
 title: SQL LOAD RECORD
 slug: /commands/sql-load-record
@@ -43,8 +43,8 @@ Si la commande a été correctement exécutée, la variable système OK retourne
 
 ## Voir aussi 
 
-[SQL CANCEL LOAD](sql-cancel-load.md)  
-[SQL EXECUTE](sql-execute.md)  
+[SQL CANCEL LOAD](../commands/sql-cancel-load)  
+[SQL EXECUTE](../commands/sql-execute)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-login
 title: SQL LOGIN
 slug: /commands/sql-login
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL LOGIN.Summary-->**SQL LOGIN**コマンドを使用すると、*dataEntry*引数で指定されたSQLデータソースへ接続することができます。<!-- END REF-->このコマンドは、カレントプロセスでこのコマンドの後に実行される以下のSQLクエリの対象を指定します:
 
-* [SQL EXECUTE](sql-execute.md)コマンド経由
+* [SQL EXECUTE](../commands/sql-execute)コマンド経由
 * Begin SQL / End SQLタグ内に記述されているコード経由 (\* 引数が渡された場合)
 
 SQLデータソースは次のいずれかです:
@@ -78,7 +78,7 @@ SQLクライアントは指定されたIPアドレスのコンピュータ上で
    * **ユーザ名**と**パスワード**: これらのエリアを使用して、接続認証情報を入力します。  
    * **ユーザDSN**と**システムDSN** ページは、コンピュータのODBC Driverマネージャで指定されているシステムおよびユーザODBCデータソースのリストそれぞれ表示します。これらのページでデータソースを選択したり、認証情報を入力したりして、外部ODBCデータソースに接続できます。  
     
-接続が確立されると、OKシステム変数が1に設定されます。そうでなければ0に設定され、エラーが生成されます。[ON ERR CALL](on-err-call.md)コマンドでインストールされているエラー処理メソッドでこのエラーをとらえることができます。
+接続が確立されると、OKシステム変数が1に設定されます。そうでなければ0に設定され、エラーが生成されます。[ON ERR CALL](../commands/on-err-call)コマンドでインストールされているエラー処理メソッドでこのエラーをとらえることができます。
 * **SQL\_INTERNAL定数**  
 シンタックス: SQL\_INTERNAL  
 コマンドは、続くSQLクエリを内部4Dデータベースに転送します。
@@ -92,7 +92,7 @@ SQLクライアントは指定されたIPアドレスのコンピュータ上で
 
 オプションの *\** 引数を使用して、Begin SQL / End SQL タグ内で実行されるSQLコードのターゲットを変更できます。この引数を渡さない場合、Begin SQL / End SQLタグ内に設定されているコードは、**SQL LOGIN**コマンドで指定されている設定を無視して、4Dの内部SQLエンジンに送られます。この引数を渡すと、Begin SQL / End SQLタグ内で実行されるSQLコードは、*dataEntry* 引数で指定されているソースへと送られます。
 
-接続を終了してメモリを解放するには、[SQL LOGOUT](sql-logout.md)コマンドを実行するだけです。続くすべてのSQLクエリは、内部4D SQLデータベースへと送られます。  
+接続を終了してメモリを解放するには、[SQL LOGOUT](../commands/sql-logout)コマンドを実行するだけです。続くすべてのSQLクエリは、内部4D SQLデータベースへと送られます。  
 現在の接続を明示的に終了しないで**SQL LOGIN**を再び呼び出すと、接続は自動的に終了します。
 
 **注:** **SQL LOGIN**による外部接続の試みに失敗した場合、内部4Dデータベースが自動でカレントデータソースとなります。
@@ -116,7 +116,7 @@ SQLクライアントは指定されたIPアドレスのコンピュータ上で
 
 ## 例題 2 
 
-ODBC プロトコル経由で外部データソース"MyOracle" と接続。[SQL EXECUTE](sql-execute.md)コマンドを用いて実行されたSQLクエリとBegin SQL / End SQLタグ内に収められているクエリは、この接続に送られます。
+ODBC プロトコル経由で外部データソース"MyOracle" と接続。[SQL EXECUTE](../commands/sql-execute)コマンドを用いて実行されたSQLクエリとBegin SQL / End SQLタグ内に収められているクエリは、この接続に送られます。
 
 ```4d
  SQL LOGIN("ODBC:MyOracle";"Scott";"tiger";*)
@@ -132,7 +132,7 @@ ODBC プロトコル経由で外部データソース"MyOracle" と接続。[SQL
 
 ## 例題 4 
 
-デフォルトのTCPポートで接続を受け付ける、IPアドレス192.168.45.34のコンピュータで実行される4D Serverアプリケーションとの直接接続を開きます。[SQL EXECUTE](sql-execute.md)コマンド経由で実行されるSQLクエリはこの接続に送られます。Begin SQL / End SQLタグ内に収められているクエリはこの接続に送られません。  
+デフォルトのTCPポートで接続を受け付ける、IPアドレス192.168.45.34のコンピュータで実行される4D Serverアプリケーションとの直接接続を開きます。[SQL EXECUTE](../commands/sql-execute)コマンド経由で実行されるSQLクエリはこの接続に送られます。Begin SQL / End SQLタグ内に収められているクエリはこの接続に送られません。  
 
 ```4d
  SQL LOGIN("IP:192.168.45.34";"John";"azerty")
@@ -140,7 +140,7 @@ ODBC プロトコル経由で外部データソース"MyOracle" と接続。[SQL
 
 ## 例題 5 
 
-TCPポート20150で接続を待ち受ける、IPアドレス192.168.45.34のコンピュータで実行される4D Serverアプリケーションとの直接接続を開きます。[SQL EXECUTE](sql-execute.md)コマンド経由で実行されるSQLクエリとBegin SQL / End SQLタグ内に収められているクエリは、この接続に送られます。  
+TCPポート20150で接続を待ち受ける、IPアドレス192.168.45.34のコンピュータで実行される4D Serverアプリケーションとの直接接続を開きます。[SQL EXECUTE](../commands/sql-execute)コマンド経由で実行されるSQLクエリとBegin SQL / End SQLタグ内に収められているクエリは、この接続に送られます。  
   
 ```4d
  SQL LOGIN("IP:192.168.45.34:20150";"John";"azerty";*)
@@ -156,7 +156,7 @@ IPアドレス192.168.45.34マシン、およびデフォルトのTCPポート�
 
 ## 例題 7 
 
-IPv6アドレス 2a01:e35:2e41:c960:dc39:3eb0:f29b:3747のマシン、およびTCPポート20150で動作する4D Serverアプリケーションに直接接続を開きます。[SQL EXECUTE](sql-execute.md) コマンドによって実行される SQL クエリはこの接続にリダイレクトされます。[Begin SQL](begin-sql.md)/[End SQL](end-sql.md) タグ内のクエリはリダイレクトされません。
+IPv6アドレス 2a01:e35:2e41:c960:dc39:3eb0:f29b:3747のマシン、およびTCPポート20150で動作する4D Serverアプリケーションに直接接続を開きます。[SQL EXECUTE](../commands/sql-execute) コマンドによって実行される SQL クエリはこの接続にリダイレクトされます。[Begin SQL](../commands/begin-sql)/[End SQL](../commands/end-sql) タグ内のクエリはリダイレクトされません。
 
 ```4d
  SQL LOGIN("IP:[2a01:e35:2e41:c960:dc39:3eb0:f29b:3747]:20150";"John";"qwerty")
@@ -164,7 +164,7 @@ IPv6アドレス 2a01:e35:2e41:c960:dc39:3eb0:f29b:3747のマシン、およびT
 
 ## 例題 8 
 
-ロー カルのネットワーク上で公開名"Accounts\_DB"のデータベースを公開する4D Serverアプリケーションとの直接接続を開きます。両方のデータベースのSQLサーバ用のTCPポート (環境設定のSQL/設定ページで設定) は一致していなければなりません (デフォルトで19812)。[SQL EXECUTE](sql-execute.md)コマンド 経由で実行されるSQLクエリはこの接続に送られます。Begin SQL / End SQLタグ内に収められているクエリはこの接続に送られません。  
+ロー カルのネットワーク上で公開名"Accounts\_DB"のデータベースを公開する4D Serverアプリケーションとの直接接続を開きます。両方のデータベースのSQLサーバ用のTCPポート (環境設定のSQL/設定ページで設定) は一致していなければなりません (デフォルトで19812)。[SQL EXECUTE](../commands/sql-execute)コマンド 経由で実行されるSQLクエリはこの接続に送られます。Begin SQL / End SQLタグ内に収められているクエリはこの接続に送られません。  
   
 ```4d
  SQL LOGIN("4D:Accounts_DB";"John";"azerty")
@@ -216,9 +216,9 @@ IPv6アドレス 2a01:e35:2e41:c960:dc39:3eb0:f29b:3747のマシン、およびT
 
 ## 参照 
 
-[Begin SQL](begin-sql.md)  
-[End SQL](end-sql.md)  
-[SQL LOGOUT](sql-logout.md)  
+[Begin SQL](../commands/begin-sql)  
+[End SQL](../commands/end-sql)  
+[SQL LOGOUT](../commands/sql-logout)  
 
 ## プロパティ
 

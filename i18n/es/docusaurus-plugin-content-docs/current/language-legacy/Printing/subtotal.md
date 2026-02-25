@@ -1,4 +1,4 @@
----
+﻿---
 id: subtotal
 title: Subtotal
 slug: /commands/subtotal
@@ -71,10 +71,10 @@ La función Subtotal es necesaria para mostrar valores en un formulario.
 
 ## Ver también 
 
-[ACCUMULATE](accumulate.md)  
-[BREAK LEVEL](break-level.md)  
-[Level](level.md)  
-[PRINT SELECTION](print-selection.md)  
+[ACCUMULATE](../commands/accumulate)  
+[BREAK LEVEL](../commands/break-level)  
+[Level](../commands/level)  
+[PRINT SELECTION](../commands/print-selection)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: distinct-attribute-values
 title: DISTINCT ATTRIBUTE VALUES
 slug: /commands/distinct-attribute-values
@@ -41,7 +41,7 @@ Depois da chamada, o tamanho do array é igual ao número de valores diferentes 
 
 ### Usar a propriedade virtual comprimento 
 
-Pode usar a propriedade virtual "comprimento" com este comando. Está automaticamente disponível para todos os atributos do tipo array e oferece o tamanho do array, ou seja, o número de elementos contidos pelo array. Esta propriedade foi criada para ser usada em pesquisas (ver **QUERY BY ATTRIBUTE**[QUERY BY ATTRIBUTE](query-by-attribute.md)). Pode também ser usada com o comando **DISTINCT ATTRIBUTE VALUES** para obter os diversos tamanhos de array para um atributo.
+Pode usar a propriedade virtual "comprimento" com este comando. Está automaticamente disponível para todos os atributos do tipo array e oferece o tamanho do array, ou seja, o número de elementos contidos pelo array. Esta propriedade foi criada para ser usada em pesquisas (ver **QUERY BY ATTRIBUTE**[QUERY BY ATTRIBUTE](../commands/query-by-attribute)). Pode também ser usada com o comando **DISTINCT ATTRIBUTE VALUES** para obter os diversos tamanhos de array para um atributo.
 
 ## Exemplo 
 
@@ -75,7 +75,7 @@ O array *aLAges* obtém os seguintes 9 elementos:
 ## Ver também 
 
   
-[DISTINCT ATTRIBUTE PATHS](distinct-attribute-paths.md)  
+[DISTINCT ATTRIBUTE PATHS](../commands/distinct-attribute-paths)  
 
 ## Propriedades
 

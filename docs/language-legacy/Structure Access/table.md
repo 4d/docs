@@ -1,4 +1,4 @@
----
+﻿---
 id: table
 title: Table
 slug: /commands/table
@@ -60,9 +60,9 @@ This example sets the *tableNum* variable to the table number of the table to wh
 
 ## See also 
 
-[Field](field.md)  
-[Last table number](last-table-number.md)  
-[Table name](table-name.md)  
+[Field](../commands/field)  
+[Last table number](../commands/last-table-number)  
+[Table name](../commands/table-name)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: get-group-list
 title: GET GROUP LIST
 slug: /commands/get-group-list
@@ -41,9 +41,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[GET GROUP PROPERTIES](get-group-properties.md)  
-[GET USER LIST](get-user-list.md)  
-[Set group properties](set-group-properties.md)  
+[GET GROUP PROPERTIES](../commands/get-group-properties)  
+[GET USER LIST](../commands/get-user-list)  
+[Set group properties](../commands/set-group-properties)  
 
 ## プロパティ
 

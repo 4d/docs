@@ -1,4 +1,4 @@
----
+﻿---
 id: web-get-body-part
 title: WEB GET BODY PART
 slug: /commands/web-get-body-part
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB GET BODY PART.Summary-->La commande **WEB GET BODY PART**, appelée dans le contexte d’un process Web, permet d’analyser la partie "corps" d’une requête multi-part.<!-- END REF--> 
 
-Passez dans le paramètre *partie* le numéro de la partie à analyser. Vous pouvez obtenir le nombre total de parties à l’aide de la commande [WEB Get body part count](web-get-body-part-count.md).
+Passez dans le paramètre *partie* le numéro de la partie à analyser. Vous pouvez obtenir le nombre total de parties à l’aide de la commande [WEB Get body part count](../commands/web-get-body-part-count).
 
 Le paramètre *contenuParti*e récupère le contenu de la partie. Lorsque les parties à récupérer sont des fichiers, vous devez passer un paramètre de type BLOB. Dans le cas de variables TEXT postées dans un formulaire Web, vous pouvez passer un paramètre de type texte. 
 
@@ -42,7 +42,7 @@ Le paramètre *nomPartie* récupère le nom de la variable du champ input HTTP.
 Les paramètres *typeMime* et *nomFichier* permettent de récupérer le type Mime et le nom du fichier d’origine, le cas échéant. *nomFichier* n’est renseigné que dans le cas où le fichier a été posté dans **<input type="file">**.  
 *typeMime* et *nomFichier* sont optionnels mais ne peuvent pas être passés séparément. 
 
-**Note :** Dans le cadre d’une requête multi-part, le premier tableau de la commande [WEB GET VARIABLES](web-get-variables.md) retourne toutes les parties du formulaire, dans le même ordre que la commande **WEB GET BODY PART**. Vous pouvez l’utiliser par exemple afin d’obtenir directement la position d'une partie du formulaire. 
+**Note :** Dans le cadre d’une requête multi-part, le premier tableau de la commande [WEB GET VARIABLES](../commands/web-get-variables) retourne toutes les parties du formulaire, dans le même ordre que la commande **WEB GET BODY PART**. Vous pouvez l’utiliser par exemple afin d’obtenir directement la position d'une partie du formulaire. 
 
 ## Exemple 
 
@@ -101,9 +101,9 @@ Voici le code de la méthode GetFile :
 
 ## Voir aussi 
 
-[WEB Get body part count](web-get-body-part-count.md)  
-[WEB GET HTTP BODY](web-get-http-body.md)  
-[WEB GET VARIABLES](web-get-variables.md)  
+[WEB Get body part count](../commands/web-get-body-part-count)  
+[WEB GET HTTP BODY](../commands/web-get-http-body)  
+[WEB GET VARIABLES](../commands/web-get-variables)  
 
 ## Propriétés
 

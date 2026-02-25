@@ -1,4 +1,4 @@
----
+﻿---
 id: verify-data-file
 title: VERIFY DATA FILE
 slug: /commands/verify-data-file
@@ -39,7 +39,7 @@ displayed_sidebar: docs
 
 *cheminStructure* désigne le fichier de structure (compilé ou non) associé au fichier de données à vérifier. Il peut s’agir du fichier de structure ouvert ou de tout autre fichier de structure. Vous devez passer un chemin d’accès complet, exprimé avec la syntaxe du système d’exploitation. Vous pouvez également passer une chaîne vide, dans ce cas une boîte de dialogue standard d’ouverture de fichiers apparaît, permettant à l’utilisateur de désigner le fichier de structure à utiliser.   
   
-*cheminDonnées* désigne un fichier de données 4D (.4DD). Il doit correspondre au fichier de structure défini par le paramètre *cheminStructure*. Attention, vous pouvez désigner le fichier de structure courant mais le fichier de données ne doit pas être le fichier courant (ouvert). Pour vérifier le fichier de données ouvert, utilisez la commande [VERIFY CURRENT DATA FILE](verify-current-data-file.md). Si vous tentez de vérifier le fichier de données courant avec la commande **VERIFY DATA FILE**, une erreur est générée.  
+*cheminDonnées* désigne un fichier de données 4D (.4DD). Il doit correspondre au fichier de structure défini par le paramètre *cheminStructure*. Attention, vous pouvez désigner le fichier de structure courant mais le fichier de données ne doit pas être le fichier courant (ouvert). Pour vérifier le fichier de données ouvert, utilisez la commande [VERIFY CURRENT DATA FILE](../commands/verify-current-data-file). Si vous tentez de vérifier le fichier de données courant avec la commande **VERIFY DATA FILE**, une erreur est générée.  
 Le fichier de données désigné est ouvert en lecture seulement. Vous devez veiller à ce qu’aucune application n’accède à ce fichier en écriture, sinon les résultats de la vérification pourront être faussés.   
 Vous pouvez passer dans le paramètre *cheminDonnées* une chaîne vide, un nom de fichier ou un chemin d’accès complet, exprimé dans la syntaxe du système d’exploitation. Si vous passez une chaîne vide, la boîte de dialogue standard d’ouverture de fichier apparaît, permettant à l’utilisateur de désigner le fichier à vérifier (à noter dans ce cas qu’il n’est pas possible de sélectionner le fichier de données courant). Si vous passez uniquement un nom de fichier de données, 4D le recherchera au même niveau que le fichier de structure défini.  
   
@@ -181,7 +181,7 @@ Si la méthode de rétro-appel passée n’existe pas, la vérification n’est 
 
 ## Voir aussi 
 
-[VERIFY CURRENT DATA FILE](verify-current-data-file.md)  
+[VERIFY CURRENT DATA FILE](../commands/verify-current-data-file)  
 
 ## Propriétés
 

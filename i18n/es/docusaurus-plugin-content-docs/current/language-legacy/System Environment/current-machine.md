@@ -1,4 +1,4 @@
----
+﻿---
 id: current-machine
 title: Current machine
 slug: /commands/current-machine
@@ -41,7 +41,7 @@ Incluso si no está corriendo la versión cliente/servidor de 4D, su aplicación
 
 ## Ver también 
 
-[Current system user](current-system-user.md)  
+[Current system user](../commands/current-system-user)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: read-picture-file
 title: READ PICTURE FILE
 slug: /commands/read-picture-file
@@ -39,7 +39,7 @@ displayed_sidebar: docs
 
 **Note:** 内部的なピクチャフォーマットは4D変数やフィールドに格納されます。 
 
-オプションの *\** 引数を渡すと、コマンドはすべてのタイプのファイルを受け入れます。この方法では、適切なcodecなしでもピクチャを扱うことができます ([BLOB TO PICTURE](blob-to-picture.md) コマンドの説明を参照してください)。
+オプションの *\** 引数を渡すと、コマンドはすべてのタイプのファイルを受け入れます。この方法では、適切なcodecなしでもピクチャを扱うことができます ([BLOB TO PICTURE](../commands/blob-to-picture) コマンドの説明を参照してください)。
 
 ## システム変数およびセット 
 
@@ -47,9 +47,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[BLOB TO PICTURE](blob-to-picture.md)  
-[PICTURE CODEC LIST](picture-codec-list.md)  
-[WRITE PICTURE FILE](write-picture-file.md)  
+[BLOB TO PICTURE](../commands/blob-to-picture)  
+[PICTURE CODEC LIST](../commands/picture-codec-list)  
+[WRITE PICTURE FILE](../commands/write-picture-file)  
 *ピクチャ*  
 
 ## プロパティ

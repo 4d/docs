@@ -1,4 +1,4 @@
----
+﻿---
 id: set-query-limit
 title: SET QUERY LIMIT
 slug: /commands/set-query-limit
@@ -38,18 +38,18 @@ To restore queries with no limit, call **SET QUERY LIMIT** again with *limit* eq
 
 **SET QUERY LIMIT** changes the behavior of the query commands:
 
-* [QUERY](query.md)
-* [QUERY SELECTION](query-selection.md)
-* [QUERY BY EXAMPLE](query-by-example.md)
-* [QUERY BY FORMULA](query-by-formula.md)
-* [QUERY BY SQL](query-by-sql.md)
-* [QUERY SELECTION BY FORMULA](query-selection-by-formula.md)
-* [QUERY SELECTION WITH ARRAY](query-selection-with-array.md)
-* [QUERY WITH ARRAY](query-with-array.md)
-* [QUERY BY ATTRIBUTE](query-by-attribute.md)
-* [QUERY SELECTION BY ATTRIBUTE](query-selection-by-attribute.md)
+* [QUERY](../commands/query)
+* [QUERY SELECTION](../commands/query-selection)
+* [QUERY BY EXAMPLE](../commands/query-by-example)
+* [QUERY BY FORMULA](../commands/query-by-formula)
+* [QUERY BY SQL](../commands/query-by-sql)
+* [QUERY SELECTION BY FORMULA](../commands/query-selection-by-formula)
+* [QUERY SELECTION WITH ARRAY](../commands/query-selection-with-array)
+* [QUERY WITH ARRAY](../commands/query-with-array)
+* [QUERY BY ATTRIBUTE](../commands/query-by-attribute)
+* [QUERY SELECTION BY ATTRIBUTE](../commands/query-selection-by-attribute)
 
-On the other hand, **SET QUERY LIMIT** does not affect the other commands that may change the current selection of a table, such as [ALL RECORDS](all-records.md), [RELATE MANY](relate-many.md), and so on.
+On the other hand, **SET QUERY LIMIT** does not affect the other commands that may change the current selection of a table, such as [ALL RECORDS](../commands/all-records), [RELATE MANY](../commands/relate-many), and so on.
 
 ## Example 1 
 
@@ -63,19 +63,19 @@ To perform a query corresponding to the request “...give me any ten customers 
 
 ## Example 2 
 
-See the second example for the [SET QUERY DESTINATION](set-query-destination.md) command.
+See the second example for the [SET QUERY DESTINATION](../commands/set-query-destination) command.
 
 ## See also 
 
-[Get query limit](get-query-limit.md)  
-[QUERY](query.md)  
-[QUERY BY EXAMPLE](query-by-example.md)  
-[QUERY BY FORMULA](query-by-formula.md)  
-[QUERY BY SQL](query-by-sql.md)  
-[QUERY SELECTION](query-selection.md)  
-[QUERY SELECTION BY FORMULA](query-selection-by-formula.md)  
-[QUERY WITH ARRAY](query-with-array.md)  
-[SET QUERY DESTINATION](set-query-destination.md)  
+[Get query limit](../commands/get-query-limit)  
+[QUERY](../commands/query)  
+[QUERY BY EXAMPLE](../commands/query-by-example)  
+[QUERY BY FORMULA](../commands/query-by-formula)  
+[QUERY BY SQL](../commands/query-by-sql)  
+[QUERY SELECTION](../commands/query-selection)  
+[QUERY SELECTION BY FORMULA](../commands/query-selection-by-formula)  
+[QUERY WITH ARRAY](../commands/query-with-array)  
+[SET QUERY DESTINATION](../commands/set-query-destination)  
 
 ## Properties
 

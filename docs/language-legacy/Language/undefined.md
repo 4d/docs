@@ -1,4 +1,4 @@
----
+﻿---
 id: undefined
 title: Undefined
 slug: /commands/undefined
@@ -53,7 +53,7 @@ In some cases, you may not want the parameter to be evaluated (for example, when
 
 ## Example 
 
-Here are the different results of the [Undefined](undefined.md) command as well as the [Null](null.md) command with object properties, depending on the context:
+Here are the different results of the [Undefined](../commands/undefined) command as well as the [Null](../commands/null) command with object properties, depending on the context:
 
 ```4d
  var vEmp : Object
@@ -73,7 +73,7 @@ Here are the different results of the [Undefined](undefined.md) command as well 
 
 ## See also 
 
-[CLEAR VARIABLE](clear-variable.md)  
+[CLEAR VARIABLE](../commands/clear-variable)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: graph
 title: GRAPH
 slug: /commands/graph
@@ -38,14 +38,14 @@ displayed_sidebar: docs
 
 Os gráficos gerados por este comando podem ser criados utilizando o o motor de renderização SVG integrado. Eles gostam de as funções de interface associadas com variáveis imagens: menu de contexto no modo Aplicação (inclusive permitindo a escolha do formato de exibição), barras de rolagem, etc. Os IDs são automaticamente atribuídos a elementos específicos no gráfico gerado, que pode manipular (ver próximo parágrafo).
 
-**Nota:** SVG (Scalable Vector Graphics) é um formato de arquivo gráfico vetorial (extensão .svg). Baseado em XML, este formato é estendido e pode ser mostrado mais particularmente em navegadores Web. Para maior informação, consulte a seguinte direção: [http://www.w3.org.Graphics/SVG](http://www.w3.org.graphics/SVG/)/. O comando [SVG EXPORT TO PICTURE](svg-export-to-picture.md) também pode ser utilizado para aproveitar o motor SVG integrado.
+**Nota:** SVG (Scalable Vector Graphics) é um formato de arquivo gráfico vetorial (extensão .svg). Baseado em XML, este formato é estendido e pode ser mostrado mais particularmente em navegadores Web. Para maior informação, consulte a seguinte direção: [http://www.w3.org.Graphics/SVG](http://www.w3.org.graphics/SVG/)/. O comando [SVG EXPORT TO PICTURE](../commands/svg-export-to-picture) também pode ser utilizado para aproveitar o motor SVG integrado.
 
 No parâmetro *grafImagem*, passe o nome da variável imagem que mostra o gráfico no formulário.
 
 O segundo parâmetro define o tipo de gráfico a utilizar. Há duas possibilidades:
 
-* passar um parâmetro *grafNum* de tipo *Inteiro longo* (todas as versões de 4D): neste caso, deve passar um número entre 1 e 8\. Os diferentes tipos de gráficos são descrtos no exemplo abaixo. Depois de desenhar um gráfico, pode mudar o tipo modificando o valor de *grafNum* e executando novamente o comando **GRAPH**. Depois pode modificar certas características do gráfico chamando ao comando [GRAPH SETTINGS](graph-settings.md). Ver o exemplo 1.
-* passar um parâmetro *grafParams* de tipo [Objeto](# "Estruturas de dados como objetos 4D nativos") (versões 4D de 64 bits somente , exceto 4D Server Windows 64 bits): neste caso, deve passar um objeto que contenha as diversas propriedades do gráfico a definir. Para isso, poede utilizar as constantes que são encontradas no tema "*Parâmetros de Gráficos*" (ver mais adiante). Esta sintaxe permite definir o tipo de gráfico junto com seus parâmetros específicos (legenda, xmin, etc.) em uma única chamada. Isto permite aos usuários salvar os gráficos gerados como imagens SVG regulares e faz com que seja possível visualizar os gráficos usando um navegador padrão como Firefox, Chrome, IE ou Safari (os gráficos gerados cumprem com a norma SVG implementada nos navegadores). Além disso, esta sintaxe lhe permite acessar a varios ajustes adicionais, que lhe permitem personalizar, por exemplo, o espaciado entre as barras, as margens, cores da barra, etc. Ver os exemplos 2, 3 y 4\. **Advertência**: se utilizar esta sintaxe, o comando [GRAPH SETTINGS](graph-settings.md) NÃO deve ser chamado.
+* passar um parâmetro *grafNum* de tipo *Inteiro longo* (todas as versões de 4D): neste caso, deve passar um número entre 1 e 8\. Os diferentes tipos de gráficos são descrtos no exemplo abaixo. Depois de desenhar um gráfico, pode mudar o tipo modificando o valor de *grafNum* e executando novamente o comando **GRAPH**. Depois pode modificar certas características do gráfico chamando ao comando [GRAPH SETTINGS](../commands/graph-settings). Ver o exemplo 1.
+* passar um parâmetro *grafParams* de tipo [Objeto](# "Estruturas de dados como objetos 4D nativos") (versões 4D de 64 bits somente , exceto 4D Server Windows 64 bits): neste caso, deve passar um objeto que contenha as diversas propriedades do gráfico a definir. Para isso, poede utilizar as constantes que são encontradas no tema "*Parâmetros de Gráficos*" (ver mais adiante). Esta sintaxe permite definir o tipo de gráfico junto com seus parâmetros específicos (legenda, xmin, etc.) em uma única chamada. Isto permite aos usuários salvar os gráficos gerados como imagens SVG regulares e faz com que seja possível visualizar os gráficos usando um navegador padrão como Firefox, Chrome, IE ou Safari (os gráficos gerados cumprem com a norma SVG implementada nos navegadores). Além disso, esta sintaxe lhe permite acessar a varios ajustes adicionais, que lhe permitem personalizar, por exemplo, o espaciado entre as barras, as margens, cores da barra, etc. Ver os exemplos 2, 3 y 4\. **Advertência**: se utilizar esta sintaxe, o comando [GRAPH SETTINGS](../commands/graph-settings) NÃO deve ser chamado.
 
   
 O parâmetro *xCategorias* define as etiquetas que serão utilizadas pelo eixo x. (a parte inferior do gráfico). Este dado pode ser de tipo alfa, hora, data ou numérico. Deve haver o mesmo número de elementos de array em *xCategorias* que em cada *yValores*.
@@ -293,9 +293,9 @@ Neste exemplo, personalizamos alguns parâmetros:
 ## Ver também 
 
   
-[GRAPH SETTINGS](graph-settings.md)  
+[GRAPH SETTINGS](../commands/graph-settings)  
 *Parâmetros de Gráficos*  
-[SVG EXPORT TO PICTURE](svg-export-to-picture.md)  
+[SVG EXPORT TO PICTURE](../commands/svg-export-to-picture)  
 
 ## Propriedades
 

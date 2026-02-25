@@ -1,4 +1,4 @@
----
+﻿---
 id: transform-picture
 title: TRANSFORM PICTURE
 slug: /commands/transform-picture
@@ -83,7 +83,7 @@ Este es un ejemplo de corte de una imagen (la imagen se muestra en el formulario
 
 #### Ver también 
 
-[COMBINE PICTURES](combine-pictures.md)  
+[COMBINE PICTURES](../commands/combine-pictures)  
 
 #### Propiedades
 

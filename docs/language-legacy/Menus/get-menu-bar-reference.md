@@ -1,4 +1,4 @@
----
+﻿---
 id: get-menu-bar-reference
 title: Get menu bar reference
 slug: /commands/get-menu-bar-reference
@@ -30,9 +30,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get menu bar reference.Summary-->The **Get menu bar reference** command returns the ID of the current menu bar or the menu bar of a specific process.<!-- END REF-->
 
-If the menu bar was created by the [Create menu](create-menu.md) command, this ID corresponds to the reference ID of the menu created. Otherwise, the command returns a specific internal ID(\*). In all cases, this [MenuRef](# "Unique ID (16-character alphanumeric) of a menu") ID may be used to reference the menu bar by all the other commands of the theme.
+If the menu bar was created by the [Create menu](../commands/create-menu) command, this ID corresponds to the reference ID of the menu created. Otherwise, the command returns a specific internal ID(\*). In all cases, this [MenuRef](# "Unique ID (16-character alphanumeric) of a menu") ID may be used to reference the menu bar by all the other commands of the theme.
 
-(\*)This specific ID is temporary and becomes invalid as soon as another menu bar is called with [SET MENU BAR](set-menu-bar.md). If you want to keep the reference of a menu created in the menu editor, you need to copy it in memory using [Create menu](create-menu.md). For example:  
+(\*)This specific ID is temporary and becomes invalid as soon as another menu bar is called with [SET MENU BAR](../commands/set-menu-bar). If you want to keep the reference of a menu created in the menu editor, you need to copy it in memory using [Create menu](../commands/create-menu). For example:  
 
 ```4d
  $vEditorRef:=Get menu bar reference(Frontmost process) //menu from the menu bar editor
@@ -46,11 +46,11 @@ The *process* parameter can be used to designate the process where you want to g
 
 ## Example 
 
-Refer to the example of the [GET MENU ITEMS](get-menu-items.md) command.
+Refer to the example of the [GET MENU ITEMS](../commands/get-menu-items) command.
 
 ## See also 
 
-[SET MENU BAR](set-menu-bar.md)  
+[SET MENU BAR](../commands/set-menu-bar)  
 
 ## Properties
 

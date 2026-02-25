@@ -1,4 +1,4 @@
----
+﻿---
 id: get-adjusted-table-cache-priority
 title: Get adjusted table cache priority
 slug: /commands/get-adjusted-table-cache-priority
@@ -36,9 +36,9 @@ Os tipos de campos de dados escalares incluem campos de tipo data/hora, numéric
 
 ## Ver também 
 
-[ADJUST TABLE CACHE PRIORITY](adjust-table-cache-priority.md)  
+[ADJUST TABLE CACHE PRIORITY](../commands/adjust-table-cache-priority)  
 *Gerenciar prioridades em cache de banco de dados*  
-[SET TABLE CACHE PRIORITY](set-table-cache-priority.md)  
+[SET TABLE CACHE PRIORITY](../commands/set-table-cache-priority)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: set-query-and-lock
 title: SET QUERY AND LOCK
 slug: /commands/set-query-and-lock
@@ -35,7 +35,7 @@ Este comando debe imperativamente utilizarse al interior de una transacción. Si
 
 Los registros están bloqueados para todas las tablas en la transacción actual.
 
-Cuando una instrucción **SET QUERY AND LOCK**(True) ha sido ejecutada, los comandos de búsqueda (por ejemplo [QUERY](query.md)) adoptan un funcionamiento específico si se encuentra un registro bloqueado:
+Cuando una instrucción **SET QUERY AND LOCK**(True) ha sido ejecutada, los comandos de búsqueda (por ejemplo [QUERY](../commands/query)) adoptan un funcionamiento específico si se encuentra un registro bloqueado:
 
 * La búsqueda se detiene y la variable sistema OK toma el valor 0,
 * La selección actual queda vacía,
@@ -47,22 +47,22 @@ Llame SET QUERY AND LOCK (False) con el fin de desactivar el mecanismo posterior
 
 SET QUERY AND LOCK modifica únicamente el comportamiento de los comandos de búsqueda en otras palabras:
 
-* [QUERY](query.md)
-* [QUERY SELECTION](query-selection.md)
-* [QUERY BY EXAMPLE](query-by-example.md)
-* [QUERY BY FORMULA](query-by-formula.md)
-* [QUERY BY SQL](query-by-sql.md)
-* [QUERY SELECTION BY FORMULA](query-selection-by-formula.md)
-* [QUERY SELECTION WITH ARRAY](query-selection-with-array.md)
-* [QUERY WITH ARRAY](query-with-array.md)
-* [QUERY BY ATTRIBUTE](query-by-attribute.md)
-* [QUERY SELECTION BY ATTRIBUTE](query-selection-by-attribute.md)
+* [QUERY](../commands/query)
+* [QUERY SELECTION](../commands/query-selection)
+* [QUERY BY EXAMPLE](../commands/query-by-example)
+* [QUERY BY FORMULA](../commands/query-by-formula)
+* [QUERY BY SQL](../commands/query-by-sql)
+* [QUERY SELECTION BY FORMULA](../commands/query-selection-by-formula)
+* [QUERY SELECTION WITH ARRAY](../commands/query-selection-with-array)
+* [QUERY WITH ARRAY](../commands/query-with-array)
+* [QUERY BY ATTRIBUTE](../commands/query-by-attribute)
+* [QUERY SELECTION BY ATTRIBUTE](../commands/query-selection-by-attribute)
 
-Sin embargo, SET QUERY AND LOCK no afecta los otros comandos que modifican la selección actual tales como #cmd id="47"/\], [RELATE MANY](relate-many.md), etc.
+Sin embargo, SET QUERY AND LOCK no afecta los otros comandos que modifican la selección actual tales como #cmd id="47"/\], [RELATE MANY](../commands/relate-many), etc.
 
 ## Ejemplo 
 
-En este ejemplo, no es posible borrar un cliente que habrías sido pasado de la categoría “C” a la categoría “A” en otro proceso entre [QUERY](query.md) y [DELETE SELECTION](delete-selection.md):
+En este ejemplo, no es posible borrar un cliente que habrías sido pasado de la categoría “C” a la categoría “A” en otro proceso entre [QUERY](../commands/query) y [DELETE SELECTION](../commands/delete-selection):
 
 ```4d
  START TRANSACTION
@@ -80,7 +80,7 @@ Si el comando no se llama en el contexto de una transacción, se genera un error
 
 ## Ver también 
 
-[QUERY](query.md)  
+[QUERY](../commands/query)  
 
 ## Propiedades
 

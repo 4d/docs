@@ -1,4 +1,4 @@
----
+﻿---
 id: use-entity-selection
 title: USE ENTITY SELECTION
 slug: /commands/use-entity-selection
@@ -45,7 +45,7 @@ USE ENTITY SELECTION($entitySel) //A seleção atual da tabela Employee é atual
 
 ## Veja também
 
-[Create entity selection](create-entity-selection.md)
+[Create entity selection](../commands/create-entity-selection)
 
 ## Propriedades
 

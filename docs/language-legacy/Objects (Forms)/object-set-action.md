@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-action
 title: OBJECT SET ACTION
 slug: /commands/object-set-action
@@ -50,7 +50,7 @@ You want to associate the **Validate** standard action with a button:
 
 ## See also 
 
-[OBJECT Get action](object-get-action.md)  
+[OBJECT Get action](../commands/object-get-action)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: query-by-sql
 title: QUERY BY SQL
 slug: /commands/query-by-sql
@@ -49,16 +49,16 @@ Por exemplo, a seguinte instrução:
    SELECT * FROM Empregados WHERE "nome=’josé’"
 ```
 
-O comando QUERY BY SQL é similar ao comando [QUERY BY FORMULA](query-by-formula.md). O comando procura registros na tabela especificada. Modifica a seleção atual de *tabela* para o processo atual e transforma o primeiro registro da nova seleção no registro atual.  
+O comando QUERY BY SQL é similar ao comando [QUERY BY FORMULA](../commands/query-by-formula). O comando procura registros na tabela especificada. Modifica a seleção atual de *tabela* para o processo atual e transforma o primeiro registro da nova seleção no registro atual.  
   
 **Nota**: o comando QUERY BY SQL não pode ser utilizado no contexto de uma conexão SQL externa; ele conecta diretamente ao motor SQL integrado de 4D.  
   
 QUERY BY SQL aplica *sqlFormula* a cada registro da seleção da tabela. *sqlFormula* é uma expressão booleana que deve devolver **True** ou **False**. Como sabe, no padrão SQL, uma condição de pesquisa pode ter um resultado **True, False** ou NULL. Todos os registros (filas) onde a condição de pesquisa retorna **True** são incluídas na nova seleção atual.  
   
-A expressão*sqlFormula* pode ser simples, como a comparação de um campo (coluna) com um valor; ou complexa, como um cálculo. Assim como [QUERY BY FORMULA](query-by-formula.md), QUERY BY SQL pode avaliar a informação nas tabelas relacionadas (ver o exemplo 4). *sqlFormula* deve ser uma instrução SQL válida, de acordo com o padrão SQL-2 e relativo às limitações atuais de implementação do SQL em 4D. Para maior informação sobre compatibilidade SQL em 4D, consulte *Manual de SQL* no manual 4D SQL.  
+A expressão*sqlFormula* pode ser simples, como a comparação de um campo (coluna) com um valor; ou complexa, como um cálculo. Assim como [QUERY BY FORMULA](../commands/query-by-formula), QUERY BY SQL pode avaliar a informação nas tabelas relacionadas (ver o exemplo 4). *sqlFormula* deve ser uma instrução SQL válida, de acordo com o padrão SQL-2 e relativo às limitações atuais de implementação do SQL em 4D. Para maior informação sobre compatibilidade SQL em 4D, consulte *Manual de SQL* no manual 4D SQL.  
 O parâmetro*sqlFormula* pode utilizar referências a expressões 4D. A Sintaxe a utilizar é a mesma que para os comandos SQL integrados ou o código incluído entre as etiquetas [Begin SQL](begin-sql.md "Begin SQL")/[End SQL](end-sql.md "End SQL"), ou seja: *<<MinhaVar>>* ou *:MinhaVar*.  
   
-**Nota:** este comando é compatível com os comandos [SET QUERY LIMIT](set-query-limit.md) e [SET QUERY DESTINATION](set-query-destination.md)  
+**Nota:** este comando é compatível com os comandos [SET QUERY LIMIT](../commands/set-query-limit) e [SET QUERY DESTINATION](../commands/set-query-destination)  
   
 **Lembrete:** as referências às variáveis locais não são possíveis em modo compilado. Para maior informação sobre a programação SQL em 4D, consulte a seção *Introdução aos comandos SQL*.   
 
@@ -71,7 +71,7 @@ QUERY BY SQL não utiliza relações entre tabelas definidas no editor de estrut
 ```
   
   
-Utilizando o comando [QUERY BY FORMULA](query-by-formula.md), pode escrever:  
+Utilizando o comando [QUERY BY FORMULA](../commands/query-by-formula), pode escrever:  
 
 ```4d
  QUERY BY FORMULA([Pessoas];[Cidades]População>1000)
@@ -86,7 +86,7 @@ Utilizando QUERY BY SQL, deve escrever a seguinte instrução, independente de s
 ```
   
   
-**Nota**: QUERY BY SQL trata as relações Um-a-Muitos e Muitos-a-Um de uma maneira diferente que [QUERY BY FORMULA](query-by-formula.md).
+**Nota**: QUERY BY SQL trata as relações Um-a-Muitos e Muitos-a-Um de uma maneira diferente que [QUERY BY FORMULA](../commands/query-by-formula).
 
 ## Exemplo 1 
 
@@ -148,7 +148,7 @@ Este exemplo mostra uma pesquisa utilizando tabelas relacionadas em 4D. Em SQL d
   
 Existe uma relação Muitos-a-Um de \[Linhas\_Faturas\]ID\_Fat com \[Faturas\]ID\_Fat.  
   
-Utilizando o comando [QUERY BY FORMULA](query-by-formula.md), pode escrever:  
+Utilizando o comando [QUERY BY FORMULA](../commands/query-by-formula), pode escrever:  
 
 ```4d
  QUERY BY FORMULA([Linhas_Faturas];([Linhas_Faturas]Codigo="FX-200") & (Month of([Faturas]Data_Fat)=4))
@@ -170,11 +170,11 @@ Quando utilizar o comando QUERY BY SQL:
 
 ## Variáveis e conjuntos do sistema 
 
-Se o formato da condição de pesquisa for correto, a variável Sistema OK assume o valor 1\. Do contrário, assume o valor 0, e o resultado do comando será uma seleção vazia e um erro é devolvido. Este erro pode ser interceptado por um método instalado utilizando o comando [ON ERR CALL](on-err-call.md).
+Se o formato da condição de pesquisa for correto, a variável Sistema OK assume o valor 1\. Do contrário, assume o valor 0, e o resultado do comando será uma seleção vazia e um erro é devolvido. Este erro pode ser interceptado por um método instalado utilizando o comando [ON ERR CALL](../commands/on-err-call).
 
 ## Ver também 
 
-[QUERY BY FORMULA](query-by-formula.md)  
+[QUERY BY FORMULA](../commands/query-by-formula)  
 
 ## Propriedades
 

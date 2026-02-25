@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-document-property
 title: QR SET DOCUMENT PROPERTY
 slug: /commands/qr-set-document-property
@@ -56,7 +56,7 @@ Si pasa un valor incorrecto en *propiedad* o *valor*, se genera el error corresp
 
 ## Ver también 
 
-[QR Get document property](qr-get-document-property.md)  
+[QR Get document property](../commands/qr-get-document-property)  
 
 ## Propiedades
 

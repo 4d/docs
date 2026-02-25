@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-command-status
 title: QR Get command status
 slug: /commands/qr-get-command-status
@@ -46,8 +46,8 @@ Si el parámetro *comando* es incorrecto, se genera el error -9852.
 
 ## Ver también 
 
-[QR EXECUTE COMMAND](qr-execute-command.md)  
-[QR ON COMMAND](qr-on-command.md)  
+[QR EXECUTE COMMAND](../commands/qr-execute-command)  
+[QR ON COMMAND](../commands/qr-on-command)  
 
 ## Propiedades
 

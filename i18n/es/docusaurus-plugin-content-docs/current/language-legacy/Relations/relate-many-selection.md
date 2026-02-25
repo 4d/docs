@@ -1,4 +1,4 @@
----
+﻿---
 id: relate-many-selection
 title: RELATE MANY SELECTION
 slug: /commands/relate-many-selection
@@ -43,9 +43,9 @@ Este ejemplo selecciona todas las facturas de clientes con crédito superior o i
 
 ## Ver también 
 
-[QUERY](query.md)  
-[RELATE ONE](relate-one.md)  
-[RELATE ONE SELECTION](relate-one-selection.md)  
+[QUERY](../commands/query)  
+[RELATE ONE](../commands/relate-one)  
+[RELATE ONE SELECTION](../commands/relate-one-selection)  
 
 ## Propiedades
 

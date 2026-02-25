@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-headers-height
 title: LISTBOX SET HEADERS HEIGHT
 slug: /commands/listbox-set-headers-height
@@ -50,7 +50,7 @@ Los encabezados deben respetar la altura mínima establecida por el sistema. Est
 
 ## Ver también 
 
-[LISTBOX Get headers height](listbox-get-headers-height.md)  
+[LISTBOX Get headers height](../commands/listbox-get-headers-height)  
 
 ## Propiedades
 

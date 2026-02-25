@@ -1,4 +1,4 @@
----
+﻿---
 id: web-set-root-folder
 title: WEB SET ROOT FOLDER
 slug: /commands/web-set-root-folder
@@ -43,14 +43,14 @@ The location of the root folder can be expression either in HTML syntax (URL typ
 **Notes:**
 
 * The Web server will need to be restarted in order for the new root folder to be taken into account.
-* You can find out the location of the current root folder at any time using the [Get 4D folder](get-4d-folder.md) command.
+* You can find out the location of the current root folder at any time using the [Get 4D folder](../commands/get-4d-folder) command.
 
-If you specify an invalid pathname, an OS File manager error is generated. You can intercept the error with an [ON ERR CALL](on-err-call.md) method. If you display an alert or a message from within the error method, it will appear on the browser side.
+If you specify an invalid pathname, an OS File manager error is generated. You can intercept the error with an [ON ERR CALL](../commands/on-err-call) method. If you display an alert or a message from within the error method, it will appear on the browser side.
 
 ## See also 
 
-[Get 4D folder](get-4d-folder.md)  
-[ON ERR CALL](on-err-call.md)  
+[Get 4D folder](../commands/get-4d-folder)  
+[ON ERR CALL](../commands/on-err-call)  
 
 ## Properties
 

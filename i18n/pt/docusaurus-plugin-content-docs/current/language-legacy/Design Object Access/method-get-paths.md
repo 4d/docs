@@ -1,4 +1,4 @@
----
+﻿---
 id: method-get-paths
 title: METHOD GET PATHS
 slug: /commands/method-get-paths
@@ -90,12 +90,12 @@ Recuperação dos métodos de projeto modificados desde o último backup:
 
 ## Exemplo 4 
 
-Consulte o exemplo do comando [METHOD SET CODE](method-set-code.md).
+Consulte o exemplo do comando [METHOD SET CODE](../commands/method-set-code).
 
 ## Ver também 
 
-[Current method path](current-method-path.md)  
-[METHOD GET FOLDERS](method-get-folders.md)  
+[Current method path](../commands/current-method-path)  
+[METHOD GET FOLDERS](../commands/method-get-folders)  
 
 ## Propriedades
 

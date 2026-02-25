@@ -1,4 +1,4 @@
----
+﻿---
 id: process-4d-tags
 title: PROCESS 4D TAGS
 slug: /commands/process-4d-tags
@@ -55,7 +55,7 @@ After command execution, the *outputResult* parameter receives the execution res
 
 The *outputResult* parameter may be a field or a variable of the Text type.
 
-**Note:** This command never calls the [On Web Authentication database method](on-web-authentication-database-method.md).
+**Note:** This command never calls the [On Web Authentication database method](../commands/on-web-authentication-database-method).
 
 ## Example 1 
 

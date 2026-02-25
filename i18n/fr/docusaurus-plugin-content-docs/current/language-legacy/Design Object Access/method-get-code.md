@@ -1,4 +1,4 @@
----
+﻿---
 id: method-get-code
 title: METHOD GET CODE
 slug: /commands/method-get-code
@@ -56,7 +56,7 @@ Si un chemin d’accès passé est invalide, le paramètre *code* est laissé vi
 
 Dans le texte du *code* généré par la commande :
 
-* Les noms des commandes sont écrits en anglais, hormis si vous utilisez une version française de 4D et avez coché la préférence "Utiliser langage français et paramètres régionaux système" (cf. [Is a list](is-a-list.md)). Le code peut contenir les *tokens* du langage afin de le rendre indépendant de la langue et de la version, si vous utilisez le paramètre *option* (cf. ci-dessous).
+* Les noms des commandes sont écrits en anglais, hormis si vous utilisez une version française de 4D et avez coché la préférence "Utiliser langage français et paramètres régionaux système" (cf. [Is a list](../commands/is-a-list)). Le code peut contenir les *tokens* du langage afin de le rendre indépendant de la langue et de la version, si vous utilisez le paramètre *option* (cf. ci-dessous).
 * Le texte est indenté avec des caractères de tabulation en fonction des structures de programmation, à l'instar de l'éditeur de méthodes, afin d'augmenter la lisibilité du code.
 * Une ligne est ajoutée en en-tête du code généré, contenant des métadonnées utilisées lors de l’import du code, par exemple :  
 ```4d  
@@ -64,7 +64,7 @@ Dans le texte du *code* généré par la commande :
 ```  
     
 En cas d’import, cette ligne n’est pas importée, elle est utilisée pour définir les attributs à appliquer (les attributs non spécifiés sont remis à leur valeur par défaut). L’attribut "lang" définit la langue d’export, il permet d’empêcher un import dans une application en langue différente (dans ce cas, une erreur est générée). L'attribut "folder" contient le nom du dossier parent de la méthode, il n’apparaît pas si la méthode n’a pas de dossier parent.  
-Des attributs supplémentaires peuvent être définis. Pour plus d'informations, reportez-vous à la description de la commande [METHOD SET ATTRIBUTES](method-set-attributes.md).
+Des attributs supplémentaires peuvent être définis. Pour plus d'informations, reportez-vous à la description de la commande [METHOD SET ATTRIBUTES](../commands/method-set-attributes).
 
 Le paramètre *option* vous permet de sélectionner le mode d'exportation du code concernant les éléments "tokenisés" de la ou des méthode(s) :
 
@@ -77,13 +77,13 @@ Les éléments tokenisés du langage sont :
 * les noms de tables et de champs,
 * les commandes des plug-ins 4D.
 
-Le code exporté avec ses tokens est indépendant de tout renommage ultérieur des éléments du langage. Grâce aux tokens, le code fourni sous forme de texte sera toujours correctement interprété par 4D, que ce soit via la commande [METHOD SET CODE](method-set-code.md) ou même le copier-coller. Pour plus d'informations sur la syntaxe tokens 4D, veuillez vous reporter à la section *Utiliser des tokens dans les formules*.
+Le code exporté avec ses tokens est indépendant de tout renommage ultérieur des éléments du langage. Grâce aux tokens, le code fourni sous forme de texte sera toujours correctement interprété par 4D, que ce soit via la commande [METHOD SET CODE](../commands/method-set-code) ou même le copier-coller. Pour plus d'informations sur la syntaxe tokens 4D, veuillez vous reporter à la section *Utiliser des tokens dans les formules*.
 
 Si la commande est exécutée depuis un composant, elle s’applique par défaut aux méthodes du composant. Si vous passez le paramètre *\**, elle accède aux méthodes de la base hôte.
 
 ## Exemple 1 
 
-Reportez-vous à l'exemple de la commande [METHOD SET CODE](method-set-code.md).
+Reportez-vous à l'exemple de la commande [METHOD SET CODE](../commands/method-set-code).
 
 ## Exemple 2 
 
@@ -132,7 +132,7 @@ Le document résultant contient alors :
 
 ## Voir aussi 
 
-[METHOD SET CODE](method-set-code.md)  
+[METHOD SET CODE](../commands/method-set-code)  
 *Utiliser des tokens dans les formules*  
 
 ## Propriétés

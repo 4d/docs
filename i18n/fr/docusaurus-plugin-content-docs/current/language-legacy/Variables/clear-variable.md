@@ -1,4 +1,4 @@
----
+﻿---
 id: clear-variable
 title: CLEAR VARIABLE
 slug: /commands/clear-variable
@@ -56,7 +56,7 @@ Dans un formulaire, vous utilisez une liste déroulante appelée *asMalListeD* n
 
 ## Voir aussi 
 
-[Undefined](undefined.md)  
+[Undefined](../commands/undefined)  
 
 ## Propriétés
 

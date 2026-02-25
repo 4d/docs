@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-info-row
 title: QR Get info row
 slug: /commands/qr-get-info-row
@@ -48,9 +48,9 @@ Si le paramètre *ligne* est incorrect, l’erreur -9852 est générée.
 
 ## Voir aussi 
 
-[QR GET INFO COLUMN](qr-get-info-column.md)  
-[QR SET INFO COLUMN](qr-set-info-column.md)  
-[QR SET INFO ROW](qr-set-info-row.md)  
+[QR GET INFO COLUMN](../commands/qr-get-info-column)  
+[QR SET INFO COLUMN](../commands/qr-set-info-column)  
+[QR SET INFO ROW](../commands/qr-set-info-row)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: temporary-folder
 title: Temporary folder
 slug: /commands/temporary-folder
@@ -31,11 +31,11 @@ displayed_sidebar: docs
 
 ## Example 
 
-See example for the [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md) command.
+See example for the [APPEND DATA TO PASTEBOARD](../commands/append-data-to-pasteboard) command.
 
 ## See also 
 
-[System folder](system-folder.md)  
+[System folder](../commands/system-folder)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: sax-get-xml-processing-instruction
 title: SAX GET XML PROCESSING INSTRUCTION
 slug: /commands/sax-get-xml-processing-instruction
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.SAX GET XML PROCESSING INSTRUCTION.Summary-->O comando SAX GET XML PROCESSING INSTRUCTION devolve o *nome* e o *valor* da instrução de processo XML analizada no documento XML referenciada por documento.<!-- END REF--> Este comando deve ser chamado com o evento XML Processing Instruction. Para maior informação sobre eventos SAX, consulte a descrição do comando [SAX Get XML node](sax-get-xml-node.md).  
+<!--REF #_command_.SAX GET XML PROCESSING INSTRUCTION.Summary-->O comando SAX GET XML PROCESSING INSTRUCTION devolve o *nome* e o *valor* da instrução de processo XML analizada no documento XML referenciada por documento.<!-- END REF--> Este comando deve ser chamado com o evento XML Processing Instruction. Para maior informação sobre eventos SAX, consulte a descrição do comando [SAX Get XML node](../commands/sax-get-xml-node).  
 
 ## Exemplo 
 
@@ -50,8 +50,8 @@ A instrução abaixo devolverá “PI” em *vNom* e “TextProcess” em *vValo
 
 ## Ver também 
 
-[SAX ADD PROCESSING INSTRUCTION](sax-add-processing-instruction.md)  
-[SAX Get XML node](sax-get-xml-node.md)  
+[SAX ADD PROCESSING INSTRUCTION](../commands/sax-add-processing-instruction)  
+[SAX Get XML node](../commands/sax-get-xml-node)  
 
 ## Propriedades
 

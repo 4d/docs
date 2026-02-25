@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-area-property
 title: QR SET AREA PROPERTY
 slug: /commands/qr-set-area-property
@@ -44,7 +44,7 @@ If you pass an invalid *property* parameter, the error -9852 will be generated.
 
 ## See also 
 
-[QR Get area property](qr-get-area-property.md)  
+[QR Get area property](../commands/qr-get-area-property)  
 
 ## Properties
 

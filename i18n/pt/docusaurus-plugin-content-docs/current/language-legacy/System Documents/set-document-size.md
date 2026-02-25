@@ -1,4 +1,4 @@
----
+﻿---
 id: set-document-size
 title: SET DOCUMENT SIZE
 slug: /commands/set-document-size
@@ -37,9 +37,9 @@ Em Macintosh, é modificado o tamanho do data fork do documento
 
 ## Ver também 
 
-[Get document position](get-document-position.md)  
-[Get document size](get-document-size.md)  
-[SET DOCUMENT POSITION](set-document-position.md)  
+[Get document position](../commands/get-document-position)  
+[Get document size](../commands/get-document-size)  
+[SET DOCUMENT POSITION](../commands/set-document-position)  
 
 ## Propriedades
 

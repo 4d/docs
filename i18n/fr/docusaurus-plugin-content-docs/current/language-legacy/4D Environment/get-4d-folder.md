@@ -1,4 +1,4 @@
----
+﻿---
 id: get-4d-folder
 title: Get 4D folder
 slug: /commands/get-4d-folder
@@ -126,7 +126,7 @@ Avec l'application 4D Client, cette constante équivaut strictement à la consta
 
 ### Dossier base syntaxe Unix 
 
-Dossier contenant le fichier de structure de la base. Cette constante désigne le même dossier que la précédente, mais le chemin d’accès retourné est exprimé avec la syntaxe Unix (Posix), du type /Users/... Cette syntaxe est principalement utile lorsque vous utilisez la commande [LAUNCH EXTERNAL PROCESS](launch-external-process.md) sous macOS. 
+Dossier contenant le fichier de structure de la base. Cette constante désigne le même dossier que la précédente, mais le chemin d’accès retourné est exprimé avec la syntaxe Unix (Posix), du type /Users/... Cette syntaxe est principalement utile lorsque vous utilisez la commande [LAUNCH EXTERNAL PROCESS](../commands/launch-external-process) sous macOS. 
 
 ### Dossier Resources courant 
 
@@ -151,7 +151,7 @@ Dossier Logs de la base. Ce dossier centralise les fichiers d’historique de la
 
 ### Dossier racine HTML 
 
-Dossier racine HTML courant de la base. Le chemin d’accès retourné est exprimé avec la syntaxe standard de la plate-forme courante. Le dossier racine HTML est le dossier dans lequel le serveur Web de 4D va chercher les pages et fichiers Web demandés. Par défaut, il est nommé **DossierWeb** et est placé à côté de fichier de structure (ou de sa copie locale dans le cas de 4D en mode distant). Son emplacement peut être défini dans la page Web/Configuration des Propriétés de la base ou dynamiquement via la commande [WEB SET ROOT FOLDER](web-set-root-folder.md).
+Dossier racine HTML courant de la base. Le chemin d’accès retourné est exprimé avec la syntaxe standard de la plate-forme courante. Le dossier racine HTML est le dossier dans lequel le serveur Web de 4D va chercher les pages et fichiers Web demandés. Par défaut, il est nommé **DossierWeb** et est placé à côté de fichier de structure (ou de sa copie locale dans le cas de 4D en mode distant). Son emplacement peut être défini dans la page Web/Configuration des Propriétés de la base ou dynamiquement via la commande [WEB SET ROOT FOLDER](../commands/web-set-root-folder).
 
 Remarque : sous Windows, dans les projets clients fusionnés, l'emplacement de ce dossier est modifié si la clé BuildApp *ShareLocalResourcesOnWindowsClient* est utilisée.   
   
@@ -180,7 +180,7 @@ Lorsque la commande est appelée depuis la base de données hôte, elle renvoie 
 
 ## Exemple 1 
 
-Pendant le démarrage d'une base mono-utilisateur, vous voulez charger (ou créer) vos propres paramètres et les stocker dans un dossier 4D. Pour cela, dans la [On Startup database method](on-startup-database-method.md), vous pouvez écrire les lignes de code similaires aux lignes suivantes :
+Pendant le démarrage d'une base mono-utilisateur, vous voulez charger (ou créer) vos propres paramètres et les stocker dans un dossier 4D. Pour cela, dans la [On Startup database method](../commands/on-startup-database-method), vous pouvez écrire les lignes de code similaires aux lignes suivantes :
 
 ```4d
  $vsNomDocPref:=Get 4D folder+"MesPrefs.prf" // Construire le chemin d'accès au fichier Préférences
@@ -211,7 +211,7 @@ Cet exemple illustre l’emploi de la constante Database folder UNIX syntax sous
  LAUNCH EXTERNAL PROCESS($mondossier;$in;$out;$err)
 ```
 
-**Note :** Sous Mac OS, il est nécessaire d’encadrer les chemins d’accès avec des guillemets lorsqu’ils contiennent des noms de fichiers ou de dossiers comportant des espaces. La séquence d’échappement "\\" permet d’insérer le caractère guillemets dans la chaîne. Vous pouvez également utiliser l’instruction [Char](char.md)(Double quote). 
+**Note :** Sous Mac OS, il est nécessaire d’encadrer les chemins d’accès avec des guillemets lorsqu’ils contiennent des noms de fichiers ou de dossiers comportant des espaces. La séquence d’échappement "\\" permet d’insérer le caractère guillemets dans la chaîne. Vous pouvez également utiliser l’instruction [Char](../commands/char)(Double quote). 
 
 ## Variables et ensembles système 
 
@@ -219,11 +219,11 @@ Si le paramètre *dossier* est invalide ou si le chemin d'accès retourné est v
 
 ## Voir aussi 
 
-[COMPONENT LIST](component-list.md)  
-[System folder](system-folder.md)  
-[Temporary folder](temporary-folder.md)  
-[Test path name](test-path-name.md)  
-[WEB SET ROOT FOLDER](web-set-root-folder.md)  
+[COMPONENT LIST](../commands/component-list)  
+[System folder](../commands/system-folder)  
+[Temporary folder](../commands/temporary-folder)  
+[Test path name](../commands/test-path-name)  
+[WEB SET ROOT FOLDER](../commands/web-set-root-folder)  
 
 ## Propriétés
 

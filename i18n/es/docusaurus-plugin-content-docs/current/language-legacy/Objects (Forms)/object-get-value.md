@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-value
 title: OBJECT Get value
 slug: /commands/object-get-value
@@ -45,11 +45,11 @@ Valor actual de la fuente de datos del objeto de formulario.
 
 ## Ejemplo 
 
-Ver el ejemplo para el comando [OBJECT SET VALUE](object-set-value.md). 
+Ver el ejemplo para el comando [OBJECT SET VALUE](../commands/object-set-value). 
 
 ## Ver también 
 
-[OBJECT SET VALUE](object-set-value.md)  
+[OBJECT SET VALUE](../commands/object-set-value)  
 
 ## Propiedades
 

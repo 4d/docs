@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-get-array
 title: OB GET ARRAY
 slug: /commands/ob-get-array
@@ -36,7 +36,7 @@ Passez dans le paramètre *propriété* le libellé de la propriété à lire. A
 
 ## Exemple 1 
 
-Soit le tableau objet défini dans l’exemple de la commande [OB SET ARRAY](ob-set-array.md) :
+Soit le tableau objet défini dans l’exemple de la commande [OB SET ARRAY](../commands/ob-set-array) :
 
 ![](../../assets/en/commands/pict1211436.fr.png)
 
@@ -63,7 +63,7 @@ On souhaite changer une valeur dans le premier élément du tableau :
 ## Voir aussi 
 
 *Conversions de type entre les collections et les tableaux 4D*  
-[OB SET ARRAY](ob-set-array.md)  
+[OB SET ARRAY](../commands/ob-set-array)  
 
 ## Propriétés
 

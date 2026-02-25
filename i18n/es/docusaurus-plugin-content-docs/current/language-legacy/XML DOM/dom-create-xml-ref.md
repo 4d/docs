@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-create-xml-ref
 title: DOM Create XML Ref
 slug: /commands/dom-create-xml-ref
@@ -108,8 +108,8 @@ Si el comando se ejecutó correctamente, la variable sistema OK toma el valor 1\
 
 ## Ver también 
 
-[DOM CLOSE XML](dom-close-xml.md)  
-[DOM SET XML DECLARATION](dom-set-xml-declaration.md)  
+[DOM CLOSE XML](../commands/dom-close-xml)  
+[DOM SET XML DECLARATION](../commands/dom-set-xml-declaration)  
 
 ## Propiedades
 

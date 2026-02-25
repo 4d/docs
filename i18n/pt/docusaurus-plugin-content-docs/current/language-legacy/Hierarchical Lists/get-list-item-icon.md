@@ -1,4 +1,4 @@
----
+﻿---
 id: get-list-item-icon
 title: GET LIST ITEM ICON
 slug: /commands/get-list-item-icon
@@ -48,8 +48,8 @@ Se nenhum ícone está associado ao elemento, a variável ícone seja retornada 
 
 ## Ver também 
 
-[GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
-[SET LIST ITEM ICON](set-list-item-icon.md)  
+[GET LIST ITEM PROPERTIES](../commands/get-list-item-properties)  
+[SET LIST ITEM ICON](../commands/set-list-item-icon)  
 
 ## Propriedades
 

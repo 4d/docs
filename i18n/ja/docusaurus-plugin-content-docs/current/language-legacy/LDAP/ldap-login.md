@@ -1,4 +1,4 @@
----
+﻿---
 id: ldap-login
 title: LDAP LOGIN
 slug: /commands/ldap-login
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.LDAP LOGIN.Summary-->**LDAP LOGIN** コマンドは*url* 引数で指定したLDAPサーバーに対し、*login* 引数と *password* 引数に渡された識別子をもって読み込み専用の接続を開きます。<!-- END REF-->サーバーに受け入れられた場合、[LDAP LOGOUT](ldap-logout.md) コマンドが実行されるまで(あるいはプロセスが閉じられるまで)、カレントプロセスにおいてその後に実行される全てのLDAP検索にはこの接続が使用されます。
+<!--REF #_command_.LDAP LOGIN.Summary-->**LDAP LOGIN** コマンドは*url* 引数で指定したLDAPサーバーに対し、*login* 引数と *password* 引数に渡された識別子をもって読み込み専用の接続を開きます。<!-- END REF-->サーバーに受け入れられた場合、[LDAP LOGOUT](../commands/ldap-logout) コマンドが実行されるまで(あるいはプロセスが閉じられるまで)、カレントプロセスにおいてその後に実行される全てのLDAP検索にはこの接続が使用されます。
 
 *url* 引数には、スキームとポート(デフォルトでは389)を含め、接続するLDAPサーバーへの完全なURLを渡します。この引数は[rfc2255](https://www.ietf.org/rfc/rfc2255.txt)に準拠している必要があります。  
 *url* 引数に対し、"ldaps"で始まる、特定のポート番号(例: "ldaps://svr.ldap.acme.com:1389" 等)を使用した場合、TLS経由の安全な接続を開くことができます。LDAPサーバーは、(少なくともMicrosoft Active Directoryに対する)SSL証明書を持っている必要があります。パスワードが通常のテキストとして送信される場合にはTLS接続の使用が強く推奨 されます(以下を参照して下さい)。
@@ -62,7 +62,7 @@ displayed_sidebar: docs
 
 ログイン引数が有効であった場合、LDAPサーバーへの接続が4Dプロセスにおいて開かれます。その結果LDAPコマンドを使用して情報の検索・取得ができるようになります。
 
-LDAPサーバーへの接続が必要なくなった倍には、必ず忘れずに[LDAP LOGOUT](ldap-logout.md) コマンドを呼び出して下さい。
+LDAPサーバーへの接続が必要なくなった倍には、必ず忘れずに[LDAP LOGOUT](../commands/ldap-logout) コマンドを呼び出して下さい。
 
 ## 例題 1 
 
@@ -106,7 +106,7 @@ LDAPサーバーにログインして、検索をしたい場合を考えます:
 ## 参照 
 
 *LDAP*  
-[LDAP LOGOUT](ldap-logout.md)  
+[LDAP LOGOUT](../commands/ldap-logout)  
 
 ## プロパティ
 

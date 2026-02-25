@@ -1,4 +1,4 @@
----
+﻿---
 id: order-by-formula
 title: ORDER BY FORMULA
 slug: /commands/order-by-formula
@@ -38,13 +38,13 @@ displayed_sidebar: docs
 
 **警告:** 引数($1...$n) は*formula* ではサポートされていません。
 
-**注:** **ORDER BY FORMULA** が[PRINT SELECTION](print-selection.md)、[BREAK LEVEL](break-level.md) とローカル変数に対して使用された場合、これら3つのコマンドは必ず同じメソッドから実行される必要があります。そうでない場合、エラーが生成されます。これは[PRINT SELECTION](print-selection.md) はブレーク値を計算するためには*formula* 引数のフォーミュラを再評価する必要があるからです。例えばメソッドから**ORDER BY FORMULA**( \[T1\] ; \[T1\]f1 > $value) を実行した場合、並び替えが行われ、メソッドが終了します。その後の[PRINT SELECTION](print-selection.md) と [BREAK LEVEL](break-level.md) の呼び出しは、*$value* がもう存在しないために*formula* 引数のフォーミュラが実行できないため、失敗に終わります。
+**注:** **ORDER BY FORMULA** が[PRINT SELECTION](../commands/print-selection)、[BREAK LEVEL](../commands/break-level) とローカル変数に対して使用された場合、これら3つのコマンドは必ず同じメソッドから実行される必要があります。そうでない場合、エラーが生成されます。これは[PRINT SELECTION](../commands/print-selection) はブレーク値を計算するためには*formula* 引数のフォーミュラを再評価する必要があるからです。例えばメソッドから**ORDER BY FORMULA**( \[T1\] ; \[T1\]f1 > $value) を実行した場合、並び替えが行われ、メソッドが終了します。その後の[PRINT SELECTION](../commands/print-selection) と [BREAK LEVEL](../commands/break-level) の呼び出しは、*$value* がもう存在しないために*formula* 引数のフォーミュラが実行できないため、失敗に終わります。
 
-ソートの定義方法に関係なく、実際のソート処理に時間がかかる場合は、4Dは自動的にインジケーターで進捗状況のメッセージを表示します。[MESSAGES ON](messages-on.md) コマンドと [MESSAGES OFF](messages-off.md) コマンドを使用して、メッセージを表示または非表示にすることができます。進捗インジケーターが表示された場合、ユーザは**中止**ボタンをクリックしてソートを中止することができます。ソートが正常に終了すると、システム変数OKには1がセットされ、それ以外の場合には0がセットされます。
+ソートの定義方法に関係なく、実際のソート処理に時間がかかる場合は、4Dは自動的にインジケーターで進捗状況のメッセージを表示します。[MESSAGES ON](../commands/messages-on) コマンドと [MESSAGES OFF](../commands/messages-off) コマンドを使用して、メッセージを表示または非表示にすることができます。進捗インジケーターが表示された場合、ユーザは**中止**ボタンをクリックしてソートを中止することができます。ソートが正常に終了すると、システム変数OKには1がセットされ、それ以外の場合には0がセットされます。
 
 **4D Server:** このコマンドはサーバ上で実行され、実行が最適化されるようになりました。*formula* 引数内で直接変数が呼ばれているとき、クライアントマシンの変数値を使用してソートを計算します。例えば、という**ORDER BY FORMULA(\[mytable\];\[mytable\]myfield\*myvariable)** コードは実行はサーバー側でされますが、クライアントマシンのmyvariable の中身を使用して実行されます。
 
-> **互換性に関する注意:** 4D Server v11までは、このコマンドはクライアントマシン上で実行されていました。この処理は、変換されたデータベースにおいては後方互換性のために維持されています。しかしながら、互換性プロパティ、あるいは[SET DATABASE PARAMETER](set-database-parameter.md) コマンドのセレクターを使用すると、変換されたデータベースにおいてもサーバー側での実行が有効化されます。
+> **互換性に関する注意:** 4D Server v11までは、このコマンドはクライアントマシン上で実行されていました。この処理は、変換されたデータベースにおいては後方互換性のために維持されています。しかしながら、互換性プロパティ、あるいは[SET DATABASE PARAMETER](../commands/set-database-parameter) コマンドのセレクターを使用すると、変換されたデータベースにおいてもサーバー側での実行が有効化されます。
 
 ## 例題 
 
@@ -56,7 +56,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ORDER BY](order-by.md)  
+[ORDER BY](../commands/order-by)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: print-option-values
 title: PRINT OPTION VALUES
 slug: /commands/print-option-values
@@ -36,8 +36,8 @@ Le paramètre *option* vous permet de désigner l’option à lire. Vous devez p
 
 | Constante           | Type        | Valeur | Comment                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ------------------- | ----------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Paper option        | Entier long | 1      | Si vous passez uniquement *valeur1*, il contient le nom du papier. Si vous passez les deux paramètres, *valeur1* contient la largeur du papier et *valeur2* contient la hauteur du papier. La largeur et la hauteur sont exprimées en points. Utilisez la commande [PRINT OPTION VALUES](print-option-values.md) pour connaître le nom, la hauteur et la largeur de tous les formats de papier proposés par l’imprimante. |
-| Paper source option | Entier long | 5      | (Windows uniqument) *valeur1* uniquement : numéro correspondant à l’indice, dans le tableau des bacs retourné par la commande [PRINT OPTION VALUES](print-option-values.md), du bac papier à utiliser. Cette option est utilisable sous Windows uniquement.                                                                                                                                                                     |
+| Paper option        | Entier long | 1      | Si vous passez uniquement *valeur1*, il contient le nom du papier. Si vous passez les deux paramètres, *valeur1* contient la largeur du papier et *valeur2* contient la hauteur du papier. La largeur et la hauteur sont exprimées en points. Utilisez la commande [PRINT OPTION VALUES](../commands/print-option-values) pour connaître le nom, la hauteur et la largeur de tous les formats de papier proposés par l’imprimante. |
+| Paper source option | Entier long | 5      | (Windows uniqument) *valeur1* uniquement : numéro correspondant à l’indice, dans le tableau des bacs retourné par la commande [PRINT OPTION VALUES](../commands/print-option-values), du bac papier à utiliser. Cette option est utilisable sous Windows uniquement.                                                                                                                                                                     |
 
 Après exécution de la commande, le tableau *tabNoms* ainsi que, le cas échéant, les tableaux *tabInfo1* et *tabInfo2* seront remplis par la commande avec les noms et informations des valeurs disponibles. 
 
@@ -49,14 +49,14 @@ Si vous passez la valeur 1 (Paper option) dans le paramètre *option*, la comman
 
 **Note :** Pour que vous puissiez obtenir ces informations, le pilote d’imprimante doit avoir accès à un fichier de description PostScript (PPD) valide de l’imprimante. 
 
-Pour utiliser un format de papier spécifique à l’aide de la commande [SET PRINT OPTION](set-print-option.md), vous pouvez passer soit une des valeurs du tableau *tabNoms*, soit les valeurs correspondantes des tableaux *tabInfo1* et *tabInfo2*.
+Pour utiliser un format de papier spécifique à l’aide de la commande [SET PRINT OPTION](../commands/set-print-option), vous pouvez passer soit une des valeurs du tableau *tabNoms*, soit les valeurs correspondantes des tableaux *tabInfo1* et *tabInfo2*.
 
 Si vous passez la valeur 5 (Paper source option) dans le paramètre *option*, la commande retourne dans le tableau *tabNoms* les noms des différents bacs disponibles et leur numéro Windows interne dans *tabInfo1* (*tabInfo2* reste vide).   
-L’ordre des valeurs dans les tableaux est défini par le pilote d’impression. Pour désigner un bac à l’aide de la commande [SET PRINT OPTION](set-print-option.md), vous devez passer l’indice de l’élément souhaité dans tableau *tabNoms* ou *tabInfo1*.
+L’ordre des valeurs dans les tableaux est défini par le pilote d’impression. Pour désigner un bac à l’aide de la commande [SET PRINT OPTION](../commands/set-print-option), vous devez passer l’indice de l’élément souhaité dans tableau *tabNoms* ou *tabInfo1*.
 
 **Note :** Cette option est utilisable sous Windows uniquement.
 
-Pour plus d’informations sur les différentes options d’impression, reportez-vous à la description des commandes [SET PRINT OPTION](set-print-option.md) et [GET PRINT OPTION](get-print-option.md). 
+Pour plus d’informations sur les différentes options d’impression, reportez-vous à la description des commandes [SET PRINT OPTION](../commands/set-print-option) et [GET PRINT OPTION](../commands/get-print-option). 
 
 Toutes les informations retournées par ces commandes sont fournies par le système d’exploitation. Reportez-vous à la documentation de votre système pour plus de détails sur certaines options. 
 
@@ -64,8 +64,8 @@ Toutes les informations retournées par ces commandes sont fournies par le syst�
 
 ## Voir aussi 
 
-[GET PRINT OPTION](get-print-option.md)  
-[SET PRINT OPTION](set-print-option.md)  
+[GET PRINT OPTION](../commands/get-print-option)  
+[SET PRINT OPTION](../commands/set-print-option)  
 
 ## Propriétés
 

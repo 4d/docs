@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-filter
 title: OBJECT SET FILTER
 slug: /commands/object-set-filter
@@ -67,8 +67,8 @@ El siguiente ejemplo permite únicamente la entrada de las letras “a,” “b,
 
 ## Ver también 
 
-[OBJECT Get filter](object-get-filter.md)  
-[OBJECT SET FORMAT](object-set-format.md)  
+[OBJECT Get filter](../commands/object-get-filter)  
+[OBJECT SET FORMAT](../commands/object-set-format)  
 
 ## Propiedades
 

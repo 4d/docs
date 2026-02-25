@@ -1,4 +1,4 @@
----
+﻿---
 id: picture-library-list
 title: PICTURE LIBRARY LIST
 slug: /commands/picture-library-list
@@ -45,7 +45,7 @@ La longueur maximale du nom d’une image de la bibliothèque est de 255 caract�
 
 Si la bibliothèque d’images est vide, les deux tableaux retournés seront vides.
 
-Pour obtenir le nombre d’images contenues dans la bibliothèque, il vous suffit de tester la taille d’un des deux tableaux à l'aide de la fonction [Size of array](size-of-array.md).
+Pour obtenir le nombre d’images contenues dans la bibliothèque, il vous suffit de tester la taille d’un des deux tableaux à l'aide de la fonction [Size of array](../commands/size-of-array).
 
 ## Exemple 1 
 
@@ -108,9 +108,9 @@ L'exemple suivant exporte la Bibliothèque d’Images vers un document stocké s
 
 ## Voir aussi 
 
-[GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
-[REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
-[SET PICTURE TO LIBRARY](set-picture-to-library.md)  
+[GET PICTURE FROM LIBRARY](../commands/get-picture-from-library)  
+[REMOVE PICTURE FROM LIBRARY](../commands/remove-picture-from-library)  
+[SET PICTURE TO LIBRARY](../commands/set-picture-to-library)  
 
 ## Propriétés
 

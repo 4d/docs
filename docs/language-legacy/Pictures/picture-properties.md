@@ -1,4 +1,4 @@
----
+﻿---
 id: picture-properties
 title: PICTURE PROPERTIES
 slug: /commands/picture-properties
@@ -41,7 +41,7 @@ The *hOffset*, *vOffset*, and *mode* parameters return the horizontal and vertic
 
 ## See also 
 
-[Picture size](picture-size.md)  
+[Picture size](../commands/picture-size)  
 
 ## Properties
 

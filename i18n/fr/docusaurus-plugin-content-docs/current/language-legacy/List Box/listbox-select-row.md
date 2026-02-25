@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-select-row
 title: LISTBOX SELECT ROW
 slug: /commands/listbox-select-row
@@ -49,24 +49,24 @@ Lorsque le paramètre *positionLigne* ne correspond pas strictement à un numér
 
 * Si *positionLigne* est <0, la commande ne fait rien, quelle que soit la valeur du paramètre *action*.
 * Si *positionLigne* vaut 0 et si le paramètre *action* contient lk replace selection ou est omis, toutes les lignes de la listbox sont sélectionnées. Si le paramètre *action* contient lk remove from selection, toutes les lignes de la listbox sont désélectionnées.
-* Si la valeur de *positionLigne* est supérieure au nombre total de lignes contenues dans la listbox (dans le cas d'une listbox de type tableau uniquement), le tableau booléen associé à la listbox est automatiquement redimensionné et l’action de sélection est effectuée. Ce mécanisme permet d’utiliser **LISTBOX SELECT ROW** avec des commandes “standard” de gestion de tableaux (telles que [APPEND TO ARRAY](append-to-array.md)) n’entraînant pas de synchronisation immédiate de la listbox.  
+* Si la valeur de *positionLigne* est supérieure au nombre total de lignes contenues dans la listbox (dans le cas d'une listbox de type tableau uniquement), le tableau booléen associé à la listbox est automatiquement redimensionné et l’action de sélection est effectuée. Ce mécanisme permet d’utiliser **LISTBOX SELECT ROW** avec des commandes “standard” de gestion de tableaux (telles que [APPEND TO ARRAY](../commands/append-to-array)) n’entraînant pas de synchronisation immédiate de la listbox.  
 A l’issue de l’exécution de la méthode, les tableaux sont synchronisés : si le tableau source de la listbox a effectivement été redimensionné, l’action de sélection est effectuée. Sinon, le tableau booléen associé à la listbox reprend sa taille initiale et la commande ne fait rien.
 
 **Notes :** 
 
-* Si vous souhaitez que la list box défile de manière à afficher la ligne nouvellement sélectionnée, utilisez la commande [OBJECT SET SCROLL POSITION](object-set-scroll-position.md).
-* Pour passer une ligne en mode édition (saisie), utilisez la commande [EDIT ITEM](edit-item.md).
+* Si vous souhaitez que la list box défile de manière à afficher la ligne nouvellement sélectionnée, utilisez la commande [OBJECT SET SCROLL POSITION](../commands/object-set-scroll-position).
+* Pour passer une ligne en mode édition (saisie), utilisez la commande [EDIT ITEM](../commands/edit-item).
 * Si le numéro passé dans *positionLigne* correspond à une ligne masquée dans la list box, la ligne est sélectionnée mais n'est pas affichée.
 * Si vous avez coché l'option **Cacher surlignage sélection** pour la list box, vous devrez gérer la représentation visuelle des sélections dans la list box à l'aide des options d'interface disponibles. Pour plus d'informations sur ce point, veuillez vous reporter au paragraphe *Personnaliser la représentation des sélections*.
 
 ## Voir aussi 
 
-[EDIT ITEM](edit-item.md)  
-[LISTBOX DELETE ROWS](listbox-delete-rows.md)  
-[LISTBOX INSERT ROWS](listbox-insert-rows.md)  
-[LISTBOX SELECT BREAK](listbox-select-break.md)  
-[LISTBOX SELECT ROWS](listbox-select-rows.md)  
-[OBJECT SET SCROLL POSITION](object-set-scroll-position.md)  
+[EDIT ITEM](../commands/edit-item)  
+[LISTBOX DELETE ROWS](../commands/listbox-delete-rows)  
+[LISTBOX INSERT ROWS](../commands/listbox-insert-rows)  
+[LISTBOX SELECT BREAK](../commands/listbox-select-break)  
+[LISTBOX SELECT ROWS](../commands/listbox-select-rows)  
+[OBJECT SET SCROLL POSITION](../commands/object-set-scroll-position)  
 
 ## Propriétés
 

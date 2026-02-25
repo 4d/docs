@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-locked-columns
 title: LISTBOX Get locked columns
 slug: /commands/listbox-get-locked-columns
@@ -33,14 +33,14 @@ displayed_sidebar: docs
 
 Se passado o parâmetro opcional *\**, indica que o parâmetro *objeto* é um nome de objeto (uma cadeia). Se não passa este parâmetro, indica que o parâmetro *objeto* é uma variável. Neste caso, passe uma referencia de variável no lugar de uma cadeia. 
 
-As colunas podem ser desbloqueadas via a Lista de propriedades ou com a ajuda do comando [LISTBOX SET LOCKED COLUMNS](listbox-set-locked-columns.md). Para maior informação, consulte o manual de *Desenho*.
+As colunas podem ser desbloqueadas via a Lista de propriedades ou com a ajuda do comando [LISTBOX SET LOCKED COLUMNS](../commands/listbox-set-locked-columns). Para maior informação, consulte o manual de *Desenho*.
 
 Se uma coluna é inserida ou é eliminada por programação dentro de uma área de bloqueio, o número de colunas devolvidas por este comando têm em conta esta mudança.  
  No entanto, o comando não tem em conta o estado visível/invisível das colunas.
 
 ## Ver também 
 
-[LISTBOX SET LOCKED COLUMNS](listbox-set-locked-columns.md)  
+[LISTBOX SET LOCKED COLUMNS](../commands/listbox-set-locked-columns)  
 
 ## Propriedades
 

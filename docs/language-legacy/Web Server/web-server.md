@@ -1,4 +1,4 @@
----
+﻿---
 id: web-server
 title: WEB Server
 slug: /commands/web-server
@@ -57,7 +57,7 @@ From your component, you want to know if the Web server of the host database is 
 
 ## See also 
 
-[WEB Server list](web-server-list.md)  
+[WEB Server list](../commands/web-server-list)  
 [webServer.stop()](../../API/WebServerClass.md#stop)  
 
 ## Properties

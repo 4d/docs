@@ -1,4 +1,4 @@
----
+﻿---
 id: boolean-array-from-set
 title: BOOLEAN ARRAY FROM SET
 slug: /commands/boolean-array-from-set
@@ -43,7 +43,7 @@ Si vous ne passez pas le paramètre *ensemble*, la commande utilisera l’ensemb
 
 ## Voir aussi 
 
-[CREATE SET FROM ARRAY](create-set-from-array.md)  
+[CREATE SET FROM ARRAY](../commands/create-set-from-array)  
 
 ## Propriétés
 

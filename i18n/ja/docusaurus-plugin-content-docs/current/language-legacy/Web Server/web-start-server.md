@@ -1,4 +1,4 @@
----
+﻿---
 id: web-start-server
 title: WEB START SERVER
 slug: /commands/web-start-server
@@ -36,7 +36,7 @@ Webサーバの起動が成功すると、OK に1が代入されます。その�
 
 ## 参照 
 
-[WEB STOP SERVER](web-stop-server.md)  
+[WEB STOP SERVER](../commands/web-stop-server)  
 
 ## プロパティ
 

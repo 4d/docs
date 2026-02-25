@@ -1,4 +1,4 @@
----
+﻿---
 id: edit-item
 title: EDIT ITEM
 slug: /commands/edit-item
@@ -40,9 +40,9 @@ displayed_sidebar: docs
 * 階層リスト
 * リストボックスカラム
 * サブフォーム (この場合*object*にはサブフォームオブジェクト名を渡します)
-* [DISPLAY SELECTION](display-selection.md) または [MODIFY SELECTION](modify-selection.md) で表示されたリストフォーム
+* [DISPLAY SELECTION](../commands/display-selection) または [MODIFY SELECTION](../commands/modify-selection) で表示されたリストフォーム
 
-コマンドがリストでない入力可オブジェクトに使用された場合、[GOTO OBJECT](goto-object.md) コマンドと同様に動作します。   
+コマンドがリストでない入力可オブジェクトに使用された場合、[GOTO OBJECT](../commands/goto-object) コマンドと同様に動作します。   
 このコマンドはリストや配列が空、あるいは非表示の際には何も行いません。またリストや配列が入力不可の場合、このコマンドは単に指定された項目を選択し、入力状態にはしません。リストボックスについては、列が入力を許可しない場合 (チェックボックスやドロップダウンリストの入力のみ許可される場合)、指定された要素がフォーカスを得ます。
 
 オプションの*item* 引数には編集モードにする、階層リストの場合項目位置を、複数選択モードでのリストボックスカラムやリストフォームやサブフォームでは行番号を指定します。この引数を渡さない場合、このコマンドは*object*のカレント項目に適用されます。カレントの項目がない場合、*object* の最初の項目が編集モードになります。
@@ -81,9 +81,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[GOTO OBJECT](goto-object.md)  
-[INSERT IN LIST](insert-in-list.md)  
-[SET LIST ITEM](set-list-item.md)  
+[GOTO OBJECT](../commands/goto-object)  
+[INSERT IN LIST](../commands/insert-in-list)  
+[SET LIST ITEM](../commands/set-list-item)  
 
 ## プロパティ
 

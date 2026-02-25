@@ -1,4 +1,4 @@
----
+﻿---
 id: edit-item
 title: EDIT ITEM
 slug: /commands/edit-item
@@ -40,9 +40,9 @@ Este comando aplica aos seguintes objetos editáveis:
 * Listas hierárquicas
 * Colunas de List boxes
 * Subformulários (neste caso, só um nome de objeto, ou subformulário, pode ser passada em *objeto*),
-* Formulários listados mostrados utilizando os comandos [DISPLAY SELECTION](display-selection.md) ou [MODIFY SELECTION](modify-selection.md).
+* Formulários listados mostrados utilizando os comandos [DISPLAY SELECTION](../commands/display-selection) ou [MODIFY SELECTION](../commands/modify-selection).
 
-Se o comando é utilizado com um objeto editável que não estiver na lista, age da mesma forma que o comando [GOTO OBJECT](goto-object.md).  
+Se o comando é utilizado com um objeto editável que não estiver na lista, age da mesma forma que o comando [GOTO OBJECT](../commands/goto-object).  
 O comando não faze nada se a lista ou o array estão vazios ou são invisíveis. Igualmente, se a lista ou o array não são editáveis, ou comando só seleciona o elemento especificado sem mudar ao modo edição. No caso das list boxes, se a coluna não permite a entrada de texto (entrada por caixas de seleção ou por listas suspensas unicamente), o elemento especificado toma o foco.
 
 O parâmetro opcional *item* lhe permite designar a posição do elemento (lista hierárquica) ou o número de linha (list box, formulários listados e subformulário em modo “seleção múltipla”) para mudar a modo de edição. Se não passar este parâmetro, o comando é aplicado ao elemento atual de *objeto*. Se não houver um elemento atual, o primeiro elemento de *objeto* modifica a modo edição.
@@ -82,9 +82,9 @@ Dadas duas colunas em una list box onde os nomes das variáveis são “Array1�
 
 ## Ver também 
 
-[GOTO OBJECT](goto-object.md)  
-[INSERT IN LIST](insert-in-list.md)  
-[SET LIST ITEM](set-list-item.md)  
+[GOTO OBJECT](../commands/goto-object)  
+[INSERT IN LIST](../commands/insert-in-list)  
+[SET LIST ITEM](../commands/set-list-item)  
 
 ## Propriedades
 

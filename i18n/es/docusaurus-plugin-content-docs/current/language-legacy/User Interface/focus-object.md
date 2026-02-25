@@ -1,4 +1,4 @@
----
+﻿---
 id: focus-object
 title: Focus object
 slug: /commands/focus-object
@@ -60,7 +60,7 @@ El siguiente ejemplo es un método de objeto para un botón. El método de objet
 
 ## Ver también 
 
-[OBJECT Get pointer](object-get-pointer.md)  
+[OBJECT Get pointer](../commands/object-get-pointer)  
 
 ## Propiedades
 

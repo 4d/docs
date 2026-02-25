@@ -1,4 +1,4 @@
----
+﻿---
 id: method-open-path
 title: METHOD OPEN PATH
 slug: /commands/method-open-path
@@ -41,7 +41,7 @@ Puede ejecutar este comando desde un componente, pero en este caso, debe pasar e
 ## Ver también 
 
 *Comandos del tema Acceso objetos diseño*  
-[METHOD Get path](method-get-path.md)  
+[METHOD Get path](../commands/method-get-path)  
 
 ## Propiedades
 

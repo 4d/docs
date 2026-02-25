@@ -1,4 +1,4 @@
----
+﻿---
 id: generate-encryption-keypair
 title: GENERATE ENCRYPTION KEYPAIR
 slug: /commands/generate-encryption-keypair
@@ -39,27 +39,27 @@ Le paramètre optionnel *longueur* vous permet de préciser la taille (en bits) 
 En contrepartie, plus les clés sont longues, plus les délais d’exécution ou de réponse seront importants, en particulier dans le cadre d’une connexion sécurisée.   
 Par défaut (si vous omettez le paramètre *longueur*), la taille des clés générée est de 512 bits. Vous pouvez générer des clés de 2048 bits, ce qui renforce la sécurité du cryptage, mais ralentira les connexions de votre application Web. Pour augmenter encore la sécurité, vous pouvez envisager de changer de paire de clés assez fréquemment, par exemple tous les six mois.
 
-Les clés générées par cette commande sont au format standard PKCS encodé en base64, ce qui signifie que leur contenu peut être copié et collé dans un e-mail en toute sécurité et sans risque d’altération. Une fois que vous avez obtenu une paire de clés, vous pouvez générer un document texte au format PEM (par exemple à l’aide de la commande [BLOB TO DOCUMENT](blob-to-document.md)) et stocker les clés dans un endroit sûr.
+Les clés générées par cette commande sont au format standard PKCS encodé en base64, ce qui signifie que leur contenu peut être copié et collé dans un e-mail en toute sécurité et sans risque d’altération. Une fois que vous avez obtenu une paire de clés, vous pouvez générer un document texte au format PEM (par exemple à l’aide de la commande [BLOB TO DOCUMENT](../commands/blob-to-document)) et stocker les clés dans un endroit sûr.
 
 **Important :** La clé privée ne doit jamais être diffusée, sous quelque forme que ce soit.
 
 ## RSA, clés privées et clés publiques 
 
 L’algorithme de cryptage RSA employé par la commande **GENERATE ENCRYPTION KEYPAIR** est basé sur un système de cryptage à double clé : une clé privée et une clé publique. Comme son nom l’indique, la clé publique peut être diffusée auprès de tiers, et permet le décryptage des informations. Il lui correspond une clé privée unique, utilisée pour crypter les données. La clé privée sert au cryptage ; la clé publique, au décryptage (ou inversement). Ce qui est crypté avec une clé ne peut être décrypté qu’avec l’autre.   
-Les fonctions de cryptage du protocole TLS/SSL sont basées sur ce principe, la clé publique étant incluse dans le certificat envoyé aux navigateurs (cf. section [WEB SERVICE SET PARAMETER](web-service-set-parameter.md)). 
+Les fonctions de cryptage du protocole TLS/SSL sont basées sur ce principe, la clé publique étant incluse dans le certificat envoyé aux navigateurs (cf. section [WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter)). 
 
-Ce mode de cryptage est également utilisé par la première syntaxe des commande [ENCRYPT BLOB](encrypt-blob.md) et [DECRYPT BLOB](decrypt-blob.md). Ce principe requiert que la clé publique soit diffusée de manière confidentielle.  
-Il est possible de mêler les clés publiques et privées de deux intervenants pour crypter des données de telle manière que seul le récepteur peut décrypter les données, et seul l’émetteur peut les avoir cryptées. C’est le principe de la seconde syntaxe des commandes [ENCRYPT BLOB](encrypt-blob.md) et [DECRYPT BLOB](decrypt-blob.md). 
+Ce mode de cryptage est également utilisé par la première syntaxe des commande [ENCRYPT BLOB](../commands/encrypt-blob) et [DECRYPT BLOB](../commands/decrypt-blob). Ce principe requiert que la clé publique soit diffusée de manière confidentielle.  
+Il est possible de mêler les clés publiques et privées de deux intervenants pour crypter des données de telle manière que seul le récepteur peut décrypter les données, et seul l’émetteur peut les avoir cryptées. C’est le principe de la seconde syntaxe des commandes [ENCRYPT BLOB](../commands/encrypt-blob) et [DECRYPT BLOB](../commands/decrypt-blob). 
 
 ## Exemple 
 
-Reportez-vous à l’exemple de la commande [ENCRYPT BLOB](encrypt-blob.md).
+Reportez-vous à l’exemple de la commande [ENCRYPT BLOB](../commands/encrypt-blob).
 
 ## Voir aussi 
 
-[DECRYPT BLOB](decrypt-blob.md)  
-[ENCRYPT BLOB](encrypt-blob.md)  
-[GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
+[DECRYPT BLOB](../commands/decrypt-blob)  
+[ENCRYPT BLOB](../commands/encrypt-blob)  
+[GENERATE CERTIFICATE REQUEST](../commands/generate-certificate-request)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-get-external-links-filters
 title: WA GET EXTERNAL LINKS FILTERS
 slug: /commands/wa-get-external-links-filters
@@ -32,12 +32,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA GET EXTERNAL LINKS FILTERS.Summary-->O comando WA GET EXTERNAL LINKS FILTERS retorna nos arrays *arrFiltro* e *permitirArrRecusar*, os filtros de links externos da área web designada pelos parâmetros *\** e *objeto*.<!-- END REF--> Se nenhum filtro estiver ativo, os arrays são retornados vazios.  
 
-Os filtros são instalados pelo comando [WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md). Se os arrays forem reinicializados durante a sessão, o comando WA GET EXTERNAL LINKS FILTERS permite conhecer a configuração atual.
+Os filtros são instalados pelo comando [WA SET EXTERNAL LINKS FILTERS](../commands/wa-set-external-links-filters). Se os arrays forem reinicializados durante a sessão, o comando WA GET EXTERNAL LINKS FILTERS permite conhecer a configuração atual.
 
 ## Ver também 
 
-[WA GET URL FILTERS](wa-get-url-filters.md)  
-[WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)  
+[WA GET URL FILTERS](../commands/wa-get-url-filters)  
+[WA SET EXTERNAL LINKS FILTERS](../commands/wa-set-external-links-filters)  
 
 ## Propriedades
 

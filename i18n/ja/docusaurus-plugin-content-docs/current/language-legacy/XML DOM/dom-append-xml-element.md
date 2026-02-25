@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-append-xml-element
 title: DOM Append XML element
 slug: /commands/dom-append-xml-element
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[DOM Insert XML element](dom-insert-xml-element.md)  
+[DOM Insert XML element](../commands/dom-insert-xml-element)  
 
 ## プロパティ
 

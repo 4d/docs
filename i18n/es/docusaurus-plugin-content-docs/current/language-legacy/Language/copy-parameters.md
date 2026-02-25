@@ -1,4 +1,4 @@
----
+﻿---
 id: copy-parameters
 title: Copy parameters
 slug: /commands/copy-parameters
@@ -91,7 +91,7 @@ Como el comando devuelve una colección, se puede utilizar con **.join()** para 
 
 ## Ver también 
 
-[Count parameters](count-parameters.md)  
+[Count parameters](../commands/count-parameters)  
 
 ## Propiedades
 

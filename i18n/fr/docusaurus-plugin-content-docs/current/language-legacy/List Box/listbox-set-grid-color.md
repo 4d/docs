@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-grid-color
 title: LISTBOX SET GRID COLOR
 slug: /commands/listbox-set-grid-color
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. Pour plus d'informations sur les noms d’objets, reportez-vous à la section *Objets de formulaires*. 
 
-Passez dans le paramètre *couleur* une valeur de couleur RVB. Pour plus d’informations sur les couleurs RVB, reportez-vous à la description de la commande [OBJECT SET RGB COLORS](object-set-rgb-colors.md). 
+Passez dans le paramètre *couleur* une valeur de couleur RVB. Pour plus d’informations sur les couleurs RVB, reportez-vous à la description de la commande [OBJECT SET RGB COLORS](../commands/object-set-rgb-colors). 
 
 Les paramètres *horizontal* et *vertical* vous permettent de spécifier les traits auxquels la couleur doit être appliquée :
 
@@ -45,9 +45,9 @@ Les paramètres *horizontal* et *vertical* vous permettent de spécifier les tra
 
 ## Voir aussi 
 
-[LISTBOX GET GRID COLORS](listbox-get-grid-colors.md)  
-[LISTBOX SET GRID](listbox-set-grid.md)  
-[OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
+[LISTBOX GET GRID COLORS](../commands/listbox-get-grid-colors)  
+[LISTBOX SET GRID](../commands/listbox-set-grid)  
+[OBJECT SET RGB COLORS](../commands/object-set-rgb-colors)  
 
 ## Propriétés
 

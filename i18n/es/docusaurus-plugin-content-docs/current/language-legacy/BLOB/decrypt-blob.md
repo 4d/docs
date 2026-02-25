@@ -1,4 +1,4 @@
----
+﻿---
 id: decrypt-blob
 title: DECRYPT BLOB
 slug: /commands/decrypt-blob
@@ -44,8 +44,8 @@ Consulte los ejemplos dados por el comando [ENCRYPT BLOB](encrypt-blob.md "ENCRY
 
 ## Ver también 
 
-[ENCRYPT BLOB](encrypt-blob.md)  
-[GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
+[ENCRYPT BLOB](../commands/encrypt-blob)  
+[GENERATE ENCRYPTION KEYPAIR](../commands/generate-encryption-keypair)  
 
 ## Propiedades
 

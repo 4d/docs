@@ -1,4 +1,4 @@
----
+﻿---
 id: decrypt-blob
 title: DECRYPT BLOB
 slug: /commands/decrypt-blob
@@ -44,8 +44,8 @@ DECRYPT BLOBコマンドは、（意図的かどうかに関わらず）BLOB内�
 
 ## 参照 
 
-[ENCRYPT BLOB](encrypt-blob.md)  
-[GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
+[ENCRYPT BLOB](../commands/encrypt-blob)  
+[GENERATE ENCRYPTION KEYPAIR](../commands/generate-encryption-keypair)  
 
 ## プロパティ
 

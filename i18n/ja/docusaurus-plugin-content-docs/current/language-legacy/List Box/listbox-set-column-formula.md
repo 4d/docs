@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-column-formula
 title: LISTBOX SET COLUMN FORMULA
 slug: /commands/listbox-set-column-formula
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX SET COLUMN FORMULA.Summary-->**LISTBOX SET COLUMN FORMULA**コマンドは*object*と*\** 引数で指定したリストボックス列に割り当てられた*formula*を変更します。<!-- END REF-->フォーミュラはリストボックスプロパティのデータソースが**カレントセレクション**、**命名セレクション**、あるいは**コレクションまたはエンティティセレクション**の場合のみ使用できます。
 
-**注:** [OBJECT SET DATA SOURCE](object-set-data-source.md) コマンドを使用することで、データソースを配列型リストボックスに定義できます。
+**注:** [OBJECT SET DATA SOURCE](../commands/object-set-data-source) コマンドを使用することで、データソースを配列型リストボックスに定義できます。
 
 オプションの *\** 引数を渡した場合、*object* 引数はオブジェクト名 (文字列) です。この引数を渡さない場合 *object* は変数です。この場合文字列ではなく変数参照を渡します。この引数はリストボックス列を指定しなければなりません。
 
@@ -51,8 +51,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[LISTBOX Get column formula](listbox-get-column-formula.md)  
-[OBJECT SET DATA SOURCE](object-set-data-source.md)  
+[LISTBOX Get column formula](../commands/listbox-get-column-formula)  
+[OBJECT SET DATA SOURCE](../commands/object-set-data-source)  
 
 ## プロパティ
 

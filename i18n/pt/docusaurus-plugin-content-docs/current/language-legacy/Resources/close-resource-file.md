@@ -1,4 +1,4 @@
----
+﻿---
 id: close-resource-file
 title: CLOSE RESOURCE FILE
 slug: /commands/close-resource-file
@@ -35,11 +35,11 @@ Se aplica **CLOSE RESOURCE FILE** ao arquivo de recursos da aplicação 4D ou do
   
 Se passa um número de referência de arquivo de recursos incorreto, o comando não faz nada.  
   
-Lembre chamar finalmente **CLOSE RESOURCE FILE** para um arquivo de recursos que tenha aberto utilizando [Open resource file](open-resource-file.md). Note que quando saia da aplicação (ou abre outro banco de dados), 4D fecha automaticamente todos os arquivos de recursos abertos.
+Lembre chamar finalmente **CLOSE RESOURCE FILE** para um arquivo de recursos que tenha aberto utilizando [Open resource file](../commands/open-resource-file). Note que quando saia da aplicação (ou abre outro banco de dados), 4D fecha automaticamente todos os arquivos de recursos abertos.
 
 ## Ver também 
 
-[Open resource file](open-resource-file.md)  
+[Open resource file](../commands/open-resource-file)  
 
 ## Propriedades
 

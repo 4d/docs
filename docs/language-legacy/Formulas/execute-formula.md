@@ -1,4 +1,4 @@
----
+﻿---
 id: execute-formula
 title: EXECUTE FORMULA
 slug: /commands/execute-formula
@@ -43,18 +43,18 @@ The *statement* can include the following elements:
 
 **Notes:** 
 
-* If *statement* is a project method, it is recommended to use the [EXECUTE METHOD](execute-method.md) that allows you to pass parameters.
+* If *statement* is a project method, it is recommended to use the [EXECUTE METHOD](../commands/execute-method) that allows you to pass parameters.
 * It is not recommend to call any variable declaration in *statement* since it can generate conflicts in the code.
 
 The formula can include process variables and interprocess variables. However, the statement cannot contain control of flow statements (If, While, etc.), because it must be in one line of code.
 
-To ensure that the *statement* will be evaluated correctly regardless of the 4D language or version used, we recommend using the *token* syntax for elements whose name might vary between different versions (commands, tables, fields, constants). For example, to insert the [Current time](current-time.md) command, enter '**Current time:C178**'. For more information about this, refer to *Using tokens in formulas*. 
+To ensure that the *statement* will be evaluated correctly regardless of the 4D language or version used, we recommend using the *token* syntax for elements whose name might vary between different versions (commands, tables, fields, constants). For example, to insert the [Current time](../commands/current-time) command, enter '**Current time:C178**'. For more information about this, refer to *Using tokens in formulas*. 
 
 ### Cache for formulas in compiled mode 
 
 For optimization purposes, each formula executed by **EXECUTE FORMULA** in compiled mode can be stored in a dedicated cache in memory. The formula is cached in tokenized form. Once it is placed in the cache, its subsequent executions are highly optimized since the tokenization step is bypassed. 
 
-The cache size is zero by default (no cache); it needs to be created or adjusted using the [SET DATABASE PARAMETER](set-database-parameter.md) command. For example:
+The cache size is zero by default (no cache); it needs to be created or adjusted using the [SET DATABASE PARAMETER](../commands/set-database-parameter) command. For example:
 
 ```4d
  SET DATABASE PARAMETER(Number of formulas in cache;0) //no cache for formulas
@@ -74,8 +74,8 @@ You want to execute a formula including calls to 4D commands and tables. Since t
 ## See also 
 
 [Command name](../commands/command-name)  
-[EDIT FORMULA](edit-formula.md)  
-[SET DATABASE PARAMETER](set-database-parameter.md)  
+[EDIT FORMULA](../commands/edit-formula)  
+[SET DATABASE PARAMETER](../commands/set-database-parameter)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: quit-4d
 title: QUIT 4D
 slug: /commands/quit-4d
@@ -36,14 +36,14 @@ El proceso del comando es diferente si se ejecuta en 4D (modo local o remoto) o 
 
 Después de llamar QUIT 4D, se detiene la ejecución del proceso actual, luego 4D efectúa las siguientes operaciones:
 
-* Si hay un [Método base On Exit](metodo-base-on-exit.md), 4D comienza a ejecutar este método dentro de un nuevo proceso local. Por ejemplo, puede utilizar este método base para informar a otros procesos, vía comunicación interproceso, que deben cerrar (entrada de datos) o detener la ejecución de operaciones iniciadas por el [Método base On Startup](metodo-base-on-startup.md) (conexión de 4D a otro servidor de bases de datos). Tenga en cuenta que 4D se cerrará en todo caso; el [Método base On Exit](metodo-base-on-exit.md) puede realizar la limpieza y cierre de todas las operaciones, pero el cierre de la base es ineludible.
-* Si no hay [Método base On Exit](metodo-base-on-exit.md), 4D cierra cada proceso en curso, uno por uno, sin distinción.
+* Si hay un [Método base On Exit](../commands/metodo-base-on-exit), 4D comienza a ejecutar este método dentro de un nuevo proceso local. Por ejemplo, puede utilizar este método base para informar a otros procesos, vía comunicación interproceso, que deben cerrar (entrada de datos) o detener la ejecución de operaciones iniciadas por el [Método base On Startup](../commands/metodo-base-on-startup) (conexión de 4D a otro servidor de bases de datos). Tenga en cuenta que 4D se cerrará en todo caso; el [Método base On Exit](../commands/metodo-base-on-exit) puede realizar la limpieza y cierre de todas las operaciones, pero el cierre de la base es ineludible.
+* Si no hay [Método base On Exit](../commands/metodo-base-on-exit), 4D cierra cada proceso en curso, uno por uno, sin distinción.
 
 Si el usuario está introduciendo datos, los registros se cancelarán y no se guardarán.   
 Si quiere permitirle al usuario guardar las modificaciones efectuadas en las ventanas del proceso actual, puede utilizar la comunicación interproceso para indicar a todos los otros procesos de usuario que la base está a punto de cerrarse. Para hacer esto, puede adoptar dos estrategias:
 
 * Efectuar estas operaciones desde el proceso actual antes de llamar QUIT 4D.
-* Manejar estas operaciones desde el [Método base On Exit](metodo-base-on-exit.md).
+* Manejar estas operaciones desde el [Método base On Exit](../commands/metodo-base-on-exit).
 
 También es posible una tercera estrategia. Antes de llamar QUIT 4D, pruebe si una ventana necesita validación; si ese es el caso, pida al usuario validar o cancelar esta ventana y luego seleccionar nuevamente Salir. Sin embargo, desde el punto de vista de la interfaz del usuario, las primeras dos estrategias son preferibles.
 
@@ -78,7 +78,7 @@ El método de proyecto siguiente está asociado al elemento de menú Salir en el
 
 ## Ver también 
 
-[Método base On Exit](metodo-base-on-exit.md)  
+[Método base On Exit](../commands/metodo-base-on-exit)  
 
 ## Propiedades
 

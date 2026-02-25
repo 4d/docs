@@ -1,4 +1,4 @@
----
+﻿---
 id: time
 title: Time
 slug: /commands/time
@@ -60,11 +60,11 @@ You can express any numerical value as a time:
 
 ## See also 
 
-[ARRAY TIME](array-time.md)  
-[Bool](bool.md)  
+[ARRAY TIME](../commands/array-time)  
+[Bool](../commands/bool)  
 [String](../commands/string)  
-[Time string](time-string.md)  
-[Timestamp](timestamp.md)  
+[Time string](../commands/time-string)  
+[Timestamp](../commands/timestamp)  
 
 ## Properties
 

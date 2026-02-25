@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-filter
 title: OBJECT Get filter
 slug: /commands/object-get-filter
@@ -35,7 +35,7 @@ Si vous passez le paramètre optionnel \*, vous indiquez que le paramètre *obje
 
 ## Voir aussi 
 
-[OBJECT SET FILTER](object-set-filter.md)  
+[OBJECT SET FILTER](../commands/object-set-filter)  
 
 ## Propriétés
 

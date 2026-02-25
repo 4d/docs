@@ -1,4 +1,4 @@
----
+﻿---
 id: load-variables
 title: LOAD VARIABLES
 slug: /commands/load-variables
@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.LOAD VARIABLES.Summary-->The **LOAD VARIABLES**  command loads one or more variables from the document specified by *document*.<!-- END REF--> The document must have been created using the [SAVE VARIABLES](save-variables.md) command.
+<!--REF #_command_.LOAD VARIABLES.Summary-->The **LOAD VARIABLES**  command loads one or more variables from the document specified by *document*.<!-- END REF--> The document must have been created using the [SAVE VARIABLES](../commands/save-variables) command.
 
 The variables *variable*, *variable2*...*variableN* are created; if they already exist, they are overwritten.
 
@@ -42,11 +42,11 @@ If the variables are loaded properly, the OK system variable is set to 1; otherw
 
 ## See also 
 
-[BLOB TO DOCUMENT](blob-to-document.md)  
-[BLOB TO VARIABLE](blob-to-variable.md)  
-[DOCUMENT TO BLOB](document-to-blob.md)  
-[RECEIVE VARIABLE](receive-variable.md)  
-[VARIABLE TO BLOB](variable-to-blob.md)  
+[BLOB TO DOCUMENT](../commands/blob-to-document)  
+[BLOB TO VARIABLE](../commands/blob-to-variable)  
+[DOCUMENT TO BLOB](../commands/document-to-blob)  
+[RECEIVE VARIABLE](../commands/receive-variable)  
+[VARIABLE TO BLOB](../commands/variable-to-blob)  
 
 ## Properties
 

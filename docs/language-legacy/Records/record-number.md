@@ -1,4 +1,4 @@
----
+﻿---
 id: record-number
 title: Record number
 slug: /commands/record-number
@@ -24,7 +24,7 @@ Record numbers can change. The record numbers of deleted records are reused.
 
 **4D Server:** This command returns a different result for the On Validate form event depending on whether it is executed on 4D in local mode or 4D in remote mode. In local mode, the command returns a record number (the record is considered as already created). In remote mode, the command returns -3 (`New record` constant) because, in this case, the record is already created on the server but the information has not yet been sent to the client.
 
-**Note:** It is recommended to use the [Is new record](is-new-record.md) command to check whether a record is in the process of being created. 
+**Note:** It is recommended to use the [Is new record](../commands/is-new-record) command to check whether a record is in the process of being created. 
 
 ## Example 
 
@@ -41,10 +41,10 @@ The following example saves the current record number and then searches for any 
 ## See also 
 
 *About Record Numbers*  
-[GOTO RECORD](goto-record.md)  
-[Is new record](is-new-record.md)  
-[Selected record number](selected-record-number.md)  
-[Sequence number](sequence-number.md)  
+[GOTO RECORD](../commands/goto-record)  
+[Is new record](../commands/is-new-record)  
+[Selected record number](../commands/selected-record-number)  
+[Sequence number](../commands/sequence-number)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: set-text-to-pasteboard
 title: SET TEXT TO PASTEBOARD
 slug: /commands/set-text-to-pasteboard
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 **Note:** In the case of copy/paste operations, the pasteboard is equivalent to the Clipboard 
 
-After you have put some text into the pasteboard, you can retrieve it using the [Get text from pasteboard](get-text-from-pasteboard.md) command or by calling for example [GET PASTEBOARD DATA](get-pasteboard-data.md) ("com.4d.private.text.native";...).
+After you have put some text into the pasteboard, you can retrieve it using the [Get text from pasteboard](../commands/get-text-from-pasteboard) command or by calling for example [GET PASTEBOARD DATA](../commands/get-pasteboard-data) ("com.4d.private.text.native";...).
 
 4D text expressions can contain up to 2 GB of text*.* 
 
@@ -40,7 +40,7 @@ After you have put some text into the pasteboard, you can retrieve it using the 
 
 ## Example 
 
-See the example for the [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md) command.
+See the example for the [APPEND DATA TO PASTEBOARD](../commands/append-data-to-pasteboard) command.
 
 ## System variables and sets 
 
@@ -48,8 +48,8 @@ If a copy of the text is correctly placed in the pasteboard, the OK variable is 
 
 ## See also 
 
-[APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
-[Get text from pasteboard](get-text-from-pasteboard.md)  
+[APPEND DATA TO PASTEBOARD](../commands/append-data-to-pasteboard)  
+[Get text from pasteboard](../commands/get-text-from-pasteboard)  
 
 ## Properties
 

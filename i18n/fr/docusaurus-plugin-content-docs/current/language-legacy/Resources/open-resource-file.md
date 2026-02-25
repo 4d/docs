@@ -1,4 +1,4 @@
----
+﻿---
 id: open-resource-file
 title: Open resource file
 slug: /commands/open-resource-file
@@ -41,9 +41,9 @@ Si le fichier de ressources est correctement ouvert, **Open resource file** reto
 * Sous Mac OS, si vous utilisez la boîte de dialogue standard d'ouverture de fichiers, tous les fichiers sont présentés par défaut. Pour ne faire apparaître que les fichiers d'un type particulier, spécifiez-le dans le paramètre optionnel *typeFichier*.
 * Sous Windows, si vous utilisez la boîte de dialogue standard d'ouverture de fichiers, tous les fichiers sont présentés par défaut. Pour ne faire apparaître que les fichiers d'un type particulier, passez dans *typeFichier* une extension de fichier Windows de 1 à 3 caractères ou un type de fichier Macintosh associé à une extension Windows à l'aide de la commande *\_o\_MAP FILE TYPES*.
 
-N'oubliez pas d'appeler finalement [CLOSE RESOURCE FILE](close-resource-file.md) pour le fichier de ressources. Notez cependant que 4D referme automatiquement tous les fichiers de ressources ouverts par l'intermédiaire de **Open resource file** lorsque vous quittez l'application ou ouvrez une autre base de données.
+N'oubliez pas d'appeler finalement [CLOSE RESOURCE FILE](../commands/close-resource-file) pour le fichier de ressources. Notez cependant que 4D referme automatiquement tous les fichiers de ressources ouverts par l'intermédiaire de **Open resource file** lorsque vous quittez l'application ou ouvrez une autre base de données.
 
-A la différence de la commande [Open document](open-document.md) qui ouvre par défaut un document avec un accès exclusif en lecture-écriture, **Open resource file** vous permet d'ouvrir un fichier de ressources déjà ouvert dans la session 4D. Par exemple, lorsque vous tentez d'ouvrir deux fois le même document avec [Open document](open-document.md), une erreur d'E/S vous est retournée lors de la seconde opération. En revanche, vous pouvez accéder à un fichier de ressources déjà ouvert lors de la session 4D : **Open resource file** retourne son numéro de référence. Même lorsque vous ouvrez plusieurs fois un fichier de ressources, il vous suffit d'appeler [CLOSE RESOURCE FILE](close-resource-file.md) une seule fois pour refermer ce fichier. Notez que ce fonctionnement n'est valable que lorsque le fichier de ressources est ouvert à l'intérieur de la session 4D. Si vous tentez d'ouvrir un fichier de ressources déjà ouvert par une autre application, une erreur d'E/S vous sera retournée.
+A la différence de la commande [Open document](../commands/open-document) qui ouvre par défaut un document avec un accès exclusif en lecture-écriture, **Open resource file** vous permet d'ouvrir un fichier de ressources déjà ouvert dans la session 4D. Par exemple, lorsque vous tentez d'ouvrir deux fois le même document avec [Open document](../commands/open-document), une erreur d'E/S vous est retournée lors de la seconde opération. En revanche, vous pouvez accéder à un fichier de ressources déjà ouvert lors de la session 4D : **Open resource file** retourne son numéro de référence. Même lorsque vous ouvrez plusieurs fois un fichier de ressources, il vous suffit d'appeler [CLOSE RESOURCE FILE](../commands/close-resource-file) une seule fois pour refermer ce fichier. Notez que ce fonctionnement n'est valable que lorsque le fichier de ressources est ouvert à l'intérieur de la session 4D. Si vous tentez d'ouvrir un fichier de ressources déjà ouvert par une autre application, une erreur d'E/S vous sera retournée.
 
 **ATTENTION :**
 
@@ -51,10 +51,10 @@ A la différence de la commande [Open document](open-document.md) qui ouvre par 
 * Bien que techniquement possible, l'accès au fichier de ressources de la structure de la base est fortement déconseillé car ce fonctionnement devient caduc lorsque la base est compilée et fusionnée avec 4D Desktop.  
 Si toutefois vous accédez au fichier de ressources de la structure et souhaitez ajouter, supprimer ou modifier des ressources par programmation, pensez à tester l'environnement dans lequel la base s'exécute. Avec 4D Server, cela posera certainement d'épineux problèmes. Si, par exemple, vous modifiez une ressource sur le poste serveur (via une méthode base ou une procédure stockée), vous allez en définitive perturber le système d'administration de 4D Server chargé de distribuer de manière transparente les ressources aux postes clients. Notez qu'avec 4D Client vous n'accédez pas directement au fichier de structure : il est situé sur le poste serveur.
 * Pour toutes ces raisons, si vous exploitez des ressources, vous devez les stocker dans vos propres fichiers.
-* Lorsque vous travaillez avec vos propres ressources, n'utilisez pas de numéros de ressources négatifs, ils sont réservés au Système d'exploitation. N'utilisez pas non plus de numéros situés entre 0 et 14 999, cet intervalle est réservé à 4D. Pour vos propres ressources, utilisez les numéros situés entre 15 000 et 32 767\. Rappelez-vous que dès qu'un fichier de ressources est ouvert, il devient le premier maillon de la chaîne des fichiers de ressources, et c'est dans ce fichier que les ressources seront recherchées en premier lieu. En conséquence, si vous stockez dans ce fichier des ressources dont les numéros appartiennent aux intervalles réservés au Système ou à 4D, ces ressources seront utilisées non seulement par les commandes telles que [GET RESOURCE](get-resource.md) mais également par les routines internes de l'application 4D elle-même. Si vous n'êtes pas absolument certain de ce que vous faites, n'utilisez pas les intervalles réservés, cela peut conduire à des erreurs système.
-* Un fichier de ressources est très structuré et ne peut contenir plus 2 700 ressources. Si vous travaillez avec des fichiers comportant un grand nombre de ressources, il est conseillé de tester ce nombre avant d'ajouter de nouvelles ressources à un fichier (reportez-vous à l'exemple Nombre de ressources dans la description de la commande [RESOURCE TYPE LIST](resource-type-list.md) ).
+* Lorsque vous travaillez avec vos propres ressources, n'utilisez pas de numéros de ressources négatifs, ils sont réservés au Système d'exploitation. N'utilisez pas non plus de numéros situés entre 0 et 14 999, cet intervalle est réservé à 4D. Pour vos propres ressources, utilisez les numéros situés entre 15 000 et 32 767\. Rappelez-vous que dès qu'un fichier de ressources est ouvert, il devient le premier maillon de la chaîne des fichiers de ressources, et c'est dans ce fichier que les ressources seront recherchées en premier lieu. En conséquence, si vous stockez dans ce fichier des ressources dont les numéros appartiennent aux intervalles réservés au Système ou à 4D, ces ressources seront utilisées non seulement par les commandes telles que [GET RESOURCE](../commands/get-resource) mais également par les routines internes de l'application 4D elle-même. Si vous n'êtes pas absolument certain de ce que vous faites, n'utilisez pas les intervalles réservés, cela peut conduire à des erreurs système.
+* Un fichier de ressources est très structuré et ne peut contenir plus 2 700 ressources. Si vous travaillez avec des fichiers comportant un grand nombre de ressources, il est conseillé de tester ce nombre avant d'ajouter de nouvelles ressources à un fichier (reportez-vous à l'exemple Nombre de ressources dans la description de la commande [RESOURCE TYPE LIST](../commands/resource-type-list) ).
 
-Une fois que vous avez ouvert un fichier de ressources, vous pouvez analyser son contenu à l'aide des commandes [RESOURCE TYPE LIST](resource-type-list.md) et [RESOURCE LIST](resource-list.md).
+Une fois que vous avez ouvert un fichier de ressources, vous pouvez analyser son contenu à l'aide des commandes [RESOURCE TYPE LIST](../commands/resource-type-list) et [RESOURCE LIST](../commands/resource-list).
 
 ## Exemple 1 
 
@@ -104,11 +104,11 @@ Si le fichier de ressources est correctement ouvert par l'intermédiaire de la b
 
 ## Gestion des erreurs 
 
-Si le fichier de ressources n'a pas pu être ouvert à la suite d'un problème de ressource ou d'E/S, une erreur est générée. Vous pouvez intercepter cette erreur à l'aide d'une méthode de gestion d'erreurs installée par la commande [ON ERR CALL](on-err-call.md).
+Si le fichier de ressources n'a pas pu être ouvert à la suite d'un problème de ressource ou d'E/S, une erreur est générée. Vous pouvez intercepter cette erreur à l'aide d'une méthode de gestion d'erreurs installée par la commande [ON ERR CALL](../commands/on-err-call).
 
 ## Voir aussi 
 
-[CLOSE RESOURCE FILE](close-resource-file.md)  
+[CLOSE RESOURCE FILE](../commands/close-resource-file)  
 *Ressources*  
 
 ## Propriétés

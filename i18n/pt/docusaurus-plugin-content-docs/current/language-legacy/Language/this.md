@@ -1,4 +1,4 @@
----
+﻿---
 id: this
 title: This
 slug: /commands/this
@@ -46,7 +46,7 @@ $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> Quando chamar o construtor da superclasse num construtor utilizando a palavra-chave [Super](super.md), esteja atento que `This` não deve ser chamado antes do construtor da superclasse, caso contrário é gerado um erro. Veja [este exemplo](super.md#exemplo-1).
+> Quando chamar o construtor da superclasse num construtor utilizando a palavra-chave [Super](../commands/super), esteja atento que `This` não deve ser chamado antes do construtor da superclasse, caso contrário é gerado um erro. Veja [este exemplo](super.md#exemplo-1).
 
 Em qualquer caso, `This` refere-se ao objeto em que o método foi chamado, como se o método estivesse no objeto.
 
@@ -71,7 +71,7 @@ Neste exemplo, o objeto atribuído à variável $o não tem sua própria proprie
 
 ## Objecto fórmula
 
-In the context of the execution of a formula object created by the [Formula](formula.md) or [Formula from string](formula-from-string.md) commands, `This` returns a reference to the object currently processed by the formula.
+In the context of the execution of a formula object created by the [Formula](../commands/formula) or [Formula from string](../commands/formula-from-string) commands, `This` returns a reference to the object currently processed by the formula.
 
 For example, you want to use a project method as a formula encapsulated in an object:
 
@@ -178,7 +178,7 @@ Once the form is executed, the list box is automatically filled with the entity 
 ## Veja também
 
 [Self](../commands/self)\
-[Super](super.md)
+[Super](../commands/super)
 
 ## Propriedades
 

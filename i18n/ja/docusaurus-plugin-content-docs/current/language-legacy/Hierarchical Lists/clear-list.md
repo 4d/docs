@@ -1,4 +1,4 @@
----
+﻿---
 id: clear-list
 title: CLEAR LIST
 slug: /commands/clear-list
@@ -61,9 +61,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[BLOB to list](blob-to-list.md)  
-[Load list](load-list.md)  
-[New list](new-list.md)  
+[BLOB to list](../commands/blob-to-list)  
+[Load list](../commands/load-list)  
+[New list](../commands/new-list)  
 
 ## プロパティ
 

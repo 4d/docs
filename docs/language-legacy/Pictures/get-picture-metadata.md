@@ -1,4 +1,4 @@
----
+﻿---
 id: get-picture-metadata
 title: GET PICTURE METADATA
 slug: /commands/get-picture-metadata
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.GET PICTURE METADATA.Summary-->The **GET PICTURE METADATA** command can be used to read the contents of the metadata (or meta-tags) found in *picture* (4D picture field or variable).<!-- END REF--> For more information about metadata, please refer to the description of the [SET PICTURE METADATA](set-picture-metadata.md) command.
+<!--REF #_command_.GET PICTURE METADATA.Summary-->The **GET PICTURE METADATA** command can be used to read the contents of the metadata (or meta-tags) found in *picture* (4D picture field or variable).<!-- END REF--> For more information about metadata, please refer to the description of the [SET PICTURE METADATA](../commands/set-picture-metadata) command.
 
 In the *metaName* parameter, pass a string specifying the type of metadata to retrieve. You can pass:
 
@@ -108,10 +108,10 @@ The *OK* system variable returns 1 if the retrieval of the metadata has proceede
 
 ## See also 
 
-[GET PICTURE KEYWORDS](get-picture-keywords.md)  
+[GET PICTURE KEYWORDS](../commands/get-picture-keywords)  
 *Picture Metadata Names*  
 *Picture Metadata Values*  
-[SET PICTURE METADATA](set-picture-metadata.md)  
+[SET PICTURE METADATA](../commands/set-picture-metadata)  
 
 ## Properties
 

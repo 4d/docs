@@ -1,4 +1,4 @@
----
+﻿---
 id: time-string
 title: Time string
 slug: /commands/time-string
@@ -37,7 +37,7 @@ The following example displays an alert box with the message, “46800 seconds i
 ## See also 
 
 [String](../commands/string)  
-[Time](time.md)  
+[Time](../commands/time)  
 
 ## Properties
 

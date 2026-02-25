@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-report-to-blob
 title: QR REPORT TO BLOB
 slug: /commands/qr-report-to-blob
@@ -42,7 +42,7 @@ L'instruction suivante affecte l'état rapide stocké dans la zone MaZone à un 
 
 ## Voir aussi 
 
-[QR BLOB TO REPORT](qr-blob-to-report.md)  
+[QR BLOB TO REPORT](../commands/qr-blob-to-report)  
 
 ## Propriétés
 

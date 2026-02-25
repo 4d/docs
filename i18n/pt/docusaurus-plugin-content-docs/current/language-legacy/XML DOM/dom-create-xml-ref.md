@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-create-xml-ref
 title: DOM Create XML Ref
 slug: /commands/dom-create-xml-ref
@@ -43,7 +43,7 @@ Note que é possível pôr um prefixo ao parâmetro raiz com o nome do espaço s
   
 Pode declarar um ou vários espaços de nome adicionais na árvore XML gerada, com a ajuda de pares *nSNome/nSValor*. Pode passar tantos pares nome/valor de espaço de nome quantos queira.  
   
-**Importante**: Lembre de chamar ao comando [DOM CLOSE XML](dom-close-xml.md) com o objetivo de liberar memória quando termine de utilizar a árvore XML.
+**Importante**: Lembre de chamar ao comando [DOM CLOSE XML](../commands/dom-close-xml) com o objetivo de liberar memória quando termine de utilizar a árvore XML.
 
 ## Exemplo 1 
 
@@ -108,8 +108,8 @@ Se o comando foi executado corretamente, a variável sistema Ok assume o valor 1
 
 ## Ver também 
 
-[DOM CLOSE XML](dom-close-xml.md)  
-[DOM SET XML DECLARATION](dom-set-xml-declaration.md)  
+[DOM CLOSE XML](../commands/dom-close-xml)  
+[DOM SET XML DECLARATION](../commands/dom-set-xml-declaration)  
 
 ## Propriedades
 

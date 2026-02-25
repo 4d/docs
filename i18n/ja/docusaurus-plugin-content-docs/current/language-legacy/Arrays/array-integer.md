@@ -1,4 +1,4 @@
----
+﻿---
 id: array-integer
 title: ARRAY INTEGER
 slug: /commands/array-integer
@@ -61,8 +61,8 @@ ARRAY INTEGERを既存の配列に適用する場合、
 
 ## 参照 
 
-[ARRAY LONGINT](array-longint.md)  
-[ARRAY REAL](array-real.md)  
+[ARRAY LONGINT](../commands/array-longint)  
+[ARRAY REAL](../commands/array-real)  
 
 ## プロパティ
 

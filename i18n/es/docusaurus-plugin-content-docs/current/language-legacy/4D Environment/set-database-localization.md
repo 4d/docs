@@ -1,4 +1,4 @@
----
+﻿---
 id: set-database-localization
 title: SET DATABASE LOCALIZATION
 slug: /commands/set-database-localization
@@ -80,7 +80,7 @@ La interfaz de su aplicación utiliza la cadena estática ":xliff:shopping". Los
 
 ## Ver también 
 
-[Get database localization](get-database-localization.md)  
+[Get database localization](../commands/get-database-localization)  
 
 ## Propiedades
 

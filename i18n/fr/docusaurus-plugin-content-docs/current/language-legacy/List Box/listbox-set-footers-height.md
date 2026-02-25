@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-footers-height
 title: LISTBOX SET FOOTERS HEIGHT
 slug: /commands/listbox-set-footers-height
@@ -45,7 +45,7 @@ Passez dans le paramètre *hauteur* la hauteur à définir. Par défaut, si vous
 
 ## Voir aussi 
 
-[LISTBOX Get footers height](listbox-get-footers-height.md)  
+[LISTBOX Get footers height](../commands/listbox-get-footers-height)  
 
 ## Propriétés
 

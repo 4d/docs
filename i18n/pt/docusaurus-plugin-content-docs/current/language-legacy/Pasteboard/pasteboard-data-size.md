@@ -1,4 +1,4 @@
----
+﻿---
 id: pasteboard-data-size
 title: Pasteboard data size
 slug: /commands/pasteboard-data-size
@@ -37,10 +37,10 @@ Passe em *tipodados* um valor que defina o tipo de dados a extrair. Pode passar 
 
 Depois de verificar que a área de transferência contém dados do tipo que desejar, pode extrair essa informação da área de transferência utilizando um dos seguintes comandos:
 
-* Se a área de transferência contém dados de tipo TEXT, pode obter essa informação utilizando o comando [Get text from pasteboard](get-text-from-pasteboard.md), o qual devolve um valor texto, ou o comando [GET PASTEBOARD DATA](get-pasteboard-data.md), que devolve o texto em um BLOB.
-* Se a área de transferência contém dados de tipo PICT, pode obter esses dados utilizando o comando [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md), que devolve a imagem em um campo ou uma variável ou o comando [GET PASTEBOARD DATA](get-pasteboard-data.md), que devolve a imagem em um BLOB.
-* Se o clipboard contém uma rota de acesso ao arquivo, pode extraí-la utilizando o comando [Get file from pasteboard](get-file-from-pasteboard.md) , que devolve a rota de acesso do arquivo.
-* Para qualquer outro tipo de dados, utilize o comando [GET PASTEBOARD DATA](get-pasteboard-data.md), o qual devolve os dados em um BLOB.
+* Se a área de transferência contém dados de tipo TEXT, pode obter essa informação utilizando o comando [Get text from pasteboard](../commands/get-text-from-pasteboard), o qual devolve um valor texto, ou o comando [GET PASTEBOARD DATA](../commands/get-pasteboard-data), que devolve o texto em um BLOB.
+* Se a área de transferência contém dados de tipo PICT, pode obter esses dados utilizando o comando [GET PICTURE FROM PASTEBOARD](../commands/get-picture-from-pasteboard), que devolve a imagem em um campo ou uma variável ou o comando [GET PASTEBOARD DATA](../commands/get-pasteboard-data), que devolve a imagem em um BLOB.
+* Se o clipboard contém uma rota de acesso ao arquivo, pode extraí-la utilizando o comando [Get file from pasteboard](../commands/get-file-from-pasteboard) , que devolve a rota de acesso do arquivo.
+* Para qualquer outro tipo de dados, utilize o comando [GET PASTEBOARD DATA](../commands/get-pasteboard-data), o qual devolve os dados em um BLOB.
 
 ## Exemplo 1 
 
@@ -100,9 +100,9 @@ Ver o exemplo do comando [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.m
 ## Ver também 
 
 *Área de trabalho*  
-[GET PASTEBOARD DATA](get-pasteboard-data.md)  
-[GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
-[Get text from pasteboard](get-text-from-pasteboard.md)  
+[GET PASTEBOARD DATA](../commands/get-pasteboard-data)  
+[GET PICTURE FROM PASTEBOARD](../commands/get-picture-from-pasteboard)  
+[Get text from pasteboard](../commands/get-text-from-pasteboard)  
 
 ## Propriedades
 

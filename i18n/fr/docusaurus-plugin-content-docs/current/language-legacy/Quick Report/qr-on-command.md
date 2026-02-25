@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-on-command
 title: QR ON COMMAND
 slug: /commands/qr-on-command
@@ -41,21 +41,21 @@ La méthode *nomMéthode* reçoit deux paramètres :
 
 | Constante            | Type        | Valeur | Comment                                                   |  
 | -------------------- | ----------- | ------ | --------------------------------------------------------- |  
-| qr cmd generate      | Entier long | 2008   | Utilisation de la commande [QR RUN](qr-run.md) conseillée |  
+| qr cmd generate      | Entier long | 2008   | Utilisation de la commande [QR RUN](../commands/qr-run) conseillée |  
 | qr cmd page setup    | Entier long | 2006   |                                                           |  
 | qr cmd print preview | Entier long | 2007   |                                                           |
 
 **Note :** Si vous souhaitez compiler votre base à l'aide du *Compilateur*, vous devez déclarer explicitement les paramètres $1 et $2 en entiers longs, même si vous ne les utilisez pas.
 
-Si vous souhaitez que la commande initiale choisie par l'utilisateur soit exécutée, utilisez l'instruction suivante dans la méthode *nomMéthode* : [QR EXECUTE COMMAND](qr-execute-command.md)($1;$2).
+Si vous souhaitez que la commande initiale choisie par l'utilisateur soit exécutée, utilisez l'instruction suivante dans la méthode *nomMéthode* : [QR EXECUTE COMMAND](../commands/qr-execute-command)($1;$2).
 
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
 ## Voir aussi 
 
 *QR Commandes*  
-[QR EXECUTE COMMAND](qr-execute-command.md)  
-[QR Get command status](qr-get-command-status.md)  
+[QR EXECUTE COMMAND](../commands/qr-execute-command)  
+[QR Get command status](../commands/qr-get-command-status)  
 
 ## Propriétés
 

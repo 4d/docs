@@ -1,4 +1,4 @@
----
+﻿---
 id: not
 title: Not
 slug: /commands/not
@@ -32,8 +32,8 @@ This example first assigns True to a variable, then changes the variable value t
 
 ## See also 
 
-[False](false.md)  
-[True](true.md)  
+[False](../commands/false)  
+[True](../commands/true)  
 
 ## Properties
 

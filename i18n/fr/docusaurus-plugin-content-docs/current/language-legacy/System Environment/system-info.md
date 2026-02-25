@@ -1,4 +1,4 @@
----
+﻿---
 id: system-info
 title: System info
 slug: /commands/system-info
@@ -55,7 +55,7 @@ La commande retourne les informations suivantes :
 
 
 
-(\*) Pour déterminer simplement la plate-forme utilisée, vous pouvez utiliser les commandes [Is macOS](is-macos.md) et [Is Windows](is-windows.md).
+(\*) Pour déterminer simplement la plate-forme utilisée, vous pouvez utiliser les commandes [Is macOS](../commands/is-macos) et [Is Windows](../commands/is-windows).
 
 **Note** : Dans le cas de machines virtuelles, les informations retournées sont celles de la machine virtuelle.
 
@@ -145,9 +145,9 @@ retourne un objet contenant les informations suivantes :
 
 ## Voir aussi 
 
-[Application info](application-info.md)  
-[Is macOS](is-macos.md)  
-[Is Windows](is-windows.md)  
+[Application info](../commands/application-info)  
+[Is macOS](../commands/is-macos)  
+[Is Windows](../commands/is-windows)  
 
 ## Propriétés
 

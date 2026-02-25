@@ -1,4 +1,4 @@
----
+﻿---
 id: delete-string
 title: Delete string
 slug: /commands/delete-string
@@ -44,9 +44,9 @@ The following example illustrates the use of Delete string. The results are assi
 
 ## See also 
 
-[Change string](change-string.md)  
-[Insert string](insert-string.md)  
-[Replace string](replace-string.md)  
+[Change string](../commands/change-string)  
+[Insert string](../commands/insert-string)  
+[Replace string](../commands/replace-string)  
 
 ## Properties
 

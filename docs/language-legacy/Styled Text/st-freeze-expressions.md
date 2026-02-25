@@ -1,4 +1,4 @@
----
+﻿---
 id: st-freeze-expressions
 title: ST FREEZE EXPRESSIONS
 slug: /commands/st-freeze-expressions
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST FREEZE EXPRESSIONS.Summary-->The **ST FREEZE EXPRESSIONS** command "freezes" the contents of expressions found in the multi-style text or 4D Write Pro field or variable designated by the *object* parameter.<!-- END REF--> This action converts dynamic expressions into static text or (4D Write Pro areas only) images and removes the associated references from the *object*. 
 
-For more information about 4D expressions used in multi-style text or 4D Write Pro areas, refer to the description of the [ST INSERT EXPRESSION](st-insert-expression.md) command.
+For more information about 4D expressions used in multi-style text or 4D Write Pro areas, refer to the description of the [ST INSERT EXPRESSION](../commands/st-insert-expression) command.
 
 The **ST FREEZE EXPRESSIONS** command stores the computed value of an expression at a given time. This operation is necessary particularly before each use of the *object* outside of the area (exports, storage in a disk file, printing, etc.) since only the reference of the expression is kept in the area itself. 
 
@@ -77,8 +77,8 @@ You want to insert the current time at the start of the text and then freeze it 
 
 ## See also 
 
-[ST COMPUTE EXPRESSIONS](st-compute-expressions.md)  
-[ST INSERT EXPRESSION](st-insert-expression.md)  
+[ST COMPUTE EXPRESSIONS](../commands/st-compute-expressions)  
+[ST INSERT EXPRESSION](../commands/st-insert-expression)  
 
 ## Properties
 

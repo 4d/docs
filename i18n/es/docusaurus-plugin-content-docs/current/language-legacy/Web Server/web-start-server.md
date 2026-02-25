@@ -1,4 +1,4 @@
----
+﻿---
 id: web-start-server
 title: WEB START SERVER
 slug: /commands/web-start-server
@@ -38,7 +38,7 @@ Si el servidor web se inicia correctamente, OK toma el valor *1*; de lo contrari
 
 ## Ver también 
 
-[WEB STOP SERVER](web-stop-server.md)  
+[WEB STOP SERVER](../commands/web-stop-server)  
 
 ## Propiedades
 

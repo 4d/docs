@@ -1,4 +1,4 @@
----
+﻿---
 id: resource-list
 title: RESOURCE LIST
 slug: /commands/resource-list
@@ -38,7 +38,7 @@ If you pass a valid resource file reference number in the optional parameter *re
 
 If you predeclare the arrays before calling **RESOURCE LIST**, you must predeclare *resIDs* as a Longint array and *resNames* as a String or Text array. If you do not predeclare the arrays, the command creates *resIDs* as a Longint array and *resNames* as a Text array.
 
-After the call, you can test the number of resources found by applying the [Size of array](size-of-array.md) command to the array *resIDs* or *resNames*.
+After the call, you can test the number of resources found by applying the [Size of array](../commands/size-of-array) command to the array *resIDs* or *resNames*.
 
 ## Example 1 
 
@@ -80,7 +80,7 @@ The following example copies the picture resources present in all currently open
 
 ## See also 
 
-[RESOURCE TYPE LIST](resource-type-list.md)  
+[RESOURCE TYPE LIST](../commands/resource-type-list)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: form-unload
 title: FORM UNLOAD
 slug: /commands/form-unload
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM UNLOAD.Summary-->**FORM UNLOAD**コマンドは、[FORM LOAD](../commands/form-load)コマンドで指定したカレントのフォームをメモリーから解放します。<!-- END REF-->.
 
-このコマンドは [FORM LOAD](../commands/form-load)コマンドを印刷以外の目的で使用したときには必ず呼び出さなければなりません(実際に印刷をしたときには、 [CLOSE PRINTING JOB](close-printing-job.md) コマンドを呼び出した際に自動的にカレントフォームは再度閉じられます)。
+このコマンドは [FORM LOAD](../commands/form-load)コマンドを印刷以外の目的で使用したときには必ず呼び出さなければなりません(実際に印刷をしたときには、 [CLOSE PRINTING JOB](../commands/close-printing-job) コマンドを呼び出した際に自動的にカレントフォームは再度閉じられます)。
 
 ## 参照 
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: count-parameters
 title: Count parameters
 slug: /commands/count-parameters
@@ -91,7 +91,7 @@ ou :
 ## Voir aussi 
 
 *Commandes du thème Compilateur*  
-[Copy parameters](copy-parameters.md)  
+[Copy parameters](../commands/copy-parameters)  
 
 ## Propriétés
 

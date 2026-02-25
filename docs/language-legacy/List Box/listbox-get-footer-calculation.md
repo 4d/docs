@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-footer-calculation
 title: LISTBOX Get footer calculation
 slug: /commands/listbox-get-footer-calculation
@@ -38,11 +38,11 @@ The *object* parameter can designate:
 * the variable or name of a footer area. In this case, the command returns the calculation associated with this area.
 * the variable or name of a list box column. In this case, the command returns the calculation associated with footer area of this column.
 
-You can compare the value returned with the constants of the *Listbox Footer Calculation* theme (see the [LISTBOX SET FOOTER CALCULATION](listbox-set-footer-calculation.md) command). 
+You can compare the value returned with the constants of the *Listbox Footer Calculation* theme (see the [LISTBOX SET FOOTER CALCULATION](../commands/listbox-set-footer-calculation) command). 
 
 ## See also 
 
-[LISTBOX SET FOOTER CALCULATION](listbox-set-footer-calculation.md)  
+[LISTBOX SET FOOTER CALCULATION](../commands/listbox-set-footer-calculation)  
 
 ## Properties
 

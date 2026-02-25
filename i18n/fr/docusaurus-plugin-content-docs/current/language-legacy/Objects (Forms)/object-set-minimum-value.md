@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-minimum-value
 title: OBJECT SET MINIMUM VALUE
 slug: /commands/object-set-minimum-value
@@ -39,8 +39,8 @@ Passez dans *valeurMini* la nouvelle valeur minimum à affecter à l’objet pou
 
 ## Voir aussi 
 
-[OBJECT GET MINIMUM VALUE](object-get-minimum-value.md)  
-[OBJECT SET MAXIMUM VALUE](object-set-maximum-value.md)  
+[OBJECT GET MINIMUM VALUE](../commands/object-get-minimum-value)  
+[OBJECT SET MAXIMUM VALUE](../commands/object-set-maximum-value)  
 
 ## Propriétés
 

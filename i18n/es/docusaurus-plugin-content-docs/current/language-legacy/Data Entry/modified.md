@@ -1,4 +1,4 @@
----
+﻿---
 id: modified
 title: Modified
 slug: /commands/modified
@@ -37,11 +37,11 @@ Durante la entrada de datos, un campo se considera modificado si el usuario edit
 
 Cuando se ejecuta un método, se considera que un campo ha sido modificado si se le asigna un valor (diferente o no).
 
-**Nota:** **Modified** siempre devuelve **True** después de la ejecución de los comandos [PUSH RECORD](push-record.md) y [POP RECORD](pop-record.md).
+**Nota:** **Modified** siempre devuelve **True** después de la ejecución de los comandos [PUSH RECORD](../commands/push-record) y [POP RECORD](../commands/pop-record).
 
-En todos los casos, utilice el comando [Old](old.md) apara detectar si el valor del campo en realidad ha sido modificado.
+En todos los casos, utilice el comando [Old](../commands/old) apara detectar si el valor del campo en realidad ha sido modificado.
 
-**Nota:** aunque **Modified** puede aplicarse a todo tipo de campo, si lo utiliza con el comando [Old](old.md), debe tener en cuenta las restricciones que aplican al comando [Old](old.md). Para más detalles, ver la descripción del comando [Old](old.md).
+**Nota:** aunque **Modified** puede aplicarse a todo tipo de campo, si lo utiliza con el comando [Old](../commands/old), debe tener en cuenta las restricciones que aplican al comando [Old](../commands/old). Para más detalles, ver la descripción del comando [Old](../commands/old).
 
 Durante la entrada de datos, generalmente es más fácil realizar operaciones en métodos objeto con ayuda del comando [Form event code](../commands/form-event-code) que utilizar la función **Modified** en los métodos formulario. Como un método de objeto recibe el evento On Data Change cuando se modifica un campo, el uso de un método de objeto es equivalente a utilizar **Modified** en un método de formulario.
 
@@ -79,7 +79,7 @@ Selecciona un registro para la tabla *\[unaTabla\]*, luego llama múltiples subr
 ## Ver también 
 
 [Form event code](../commands/form-event-code)  
-[Old](old.md)  
+[Old](../commands/old)  
 
 ## Propiedades
 

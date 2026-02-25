@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-pointer
 title: OBJECT Get pointer
 slug: /commands/object-get-pointer
@@ -35,9 +35,9 @@ displayed_sidebar: docs
 Este comando se puede utilizar para designar diferentes tipos de objetos en función del valor del parámetro selector. Puede pasar en este parámetro una de las siguientes constantes (del tema *Objetos de formulario (Acceso)*):  
 
 * Object current o *selector* omitido: si se omite el parámetro *selector* o pasar este selector, el comando devuelve un puntero a la variable asociada al objeto actual (objeto cuyo método está en ejecución).  
-**Nota**: este funcionamiento es estrictamente equivalente al funcionamiento previo del comando [Self](self.md). El comando [Self](self.md) se conserva únicamente por razones de compatibilidad.
+**Nota**: este funcionamiento es estrictamente equivalente al funcionamiento previo del comando [Self](../commands/self). El comando [Self](../commands/self) se conserva únicamente por razones de compatibilidad.
 * Object with focus: si pasa este selector, el comando devuelve un puntero a la variable asociada al objeto que tiene el foco en el formulario. Los últimos dos parámetros opcionales se ignoran si se pasan.  
-**Nota**: este funcionamiento es estrictamente equivalente al comando [Focus object](focus-object.md). El comando [Focus object](focus-object.md) ahora es obsoleto a partir de 4D v12.
+**Nota**: este funcionamiento es estrictamente equivalente al comando [Focus object](../commands/focus-object). El comando [Focus object](../commands/focus-object) ahora es obsoleto a partir de 4D v12.
 * Object subform container: si pasa este selector, el comando devuelve un puntero a la variable vinculada con el contenedor del subformulario. Los últimos dos parámetros opcionales se ignoran si se pasan. Este selector por lo tanto sólo puede utilizarse en el contexto de un formulario que se utiliza como un subformulario, con el fin de acceder a la variable asociada al objeto contenedor.
 * Object named: si pasa este selector, también debe pasar el segundo parámetro, nomObjeto. En este caso, el comando devuelve un puntero a la variable asociada al objeto cuyo nombre se pasó en este parámetro.  
 **Nota**: si *nomObjeto* corresponde a un subformulario y la opción "Subformulario salida" está seleccionada, el comando devuelve un puntero a la tabla del subformulario si una tabla fuente está especificada, de lo contrario devuelve Nil.
@@ -62,12 +62,12 @@ Dado un formulario "SF" utilizado dos veces como subformulario en el mismo formu
 
 ## Ver también 
 
-[Focus object](focus-object.md)  
-[OBJECT Get name](object-get-name.md)  
-[OBJECT Get subform container value](object-get-subform-container-value.md)  
+[Focus object](../commands/focus-object)  
+[OBJECT Get name](../commands/object-get-name)  
+[OBJECT Get subform container value](../commands/object-get-subform-container-value)  
 *Objetos (Formularios)*  
 *Objetos de formulario (Acceso)*  
-[Self](self.md)  
+[Self](../commands/self)  
 
 ## Propiedades
 

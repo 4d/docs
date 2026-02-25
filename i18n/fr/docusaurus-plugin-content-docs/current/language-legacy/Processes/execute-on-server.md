@@ -1,4 +1,4 @@
----
+﻿---
 id: execute-on-server
 title: Execute on server
 slug: /commands/execute-on-server
@@ -38,9 +38,9 @@ displayed_sidebar: docs
 
 **Execute on server** vous permet de démarrer une procédure stockée. Pour plus d'informations sur les procédures stockées, reportez-vous à la section *Procédures stockées* dans le manuel de référence de 4D Server. 
 
-Si vous appelez **Execute on server** sur un poste client, la commande retourne un numéro de process négatif. Si vous appelez **Execute on server** sur le poste serveur, la commande retourne un numéro de process positif. A noter que l'appel de la fonction [New process](new-process.md) sur le poste serveur est équivalent à l'appel de **Execute on server**.
+Si vous appelez **Execute on server** sur un poste client, la commande retourne un numéro de process négatif. Si vous appelez **Execute on server** sur le poste serveur, la commande retourne un numéro de process positif. A noter que l'appel de la fonction [New process](../commands/new-process) sur le poste serveur est équivalent à l'appel de **Execute on server**.
 
-Si le process n'a pas pu être créé (par exemple s'il n'y a pas assez de mémoire), **Execute on server** retourne zéro et une erreur est générée. Vous pouvez intercepter cette erreur à l'aide d'une méthode de gestion d'erreurs installée par la commande [ON ERR CALL](on-err-call.md).
+Si le process n'a pas pu être créé (par exemple s'il n'y a pas assez de mémoire), **Execute on server** retourne zéro et une erreur est générée. Vous pouvez intercepter cette erreur à l'aide d'une méthode de gestion d'erreurs installée par la commande [ON ERR CALL](../commands/on-err-call).
 
 ### Méthode du process 
 
@@ -61,7 +61,7 @@ Vous passez le nom du nouveau process dans *nom*. Avec 4D monoposte, ce nom s'af
 
 Vous pouvez omettre ce paramètre ; dans ce cas, le nom du process sera une chaîne vide. 
 
-**Attention :** A la différence de la commande [New process](new-process.md), vous ne devez pas avec **Execute on server** créer un process local en préfixant son nom du symbole dollar (*$*). Cela fonctionnerait correctement en version monoposte, car **Execute on server** se comporte comme [New process](new-process.md) dans cet environnement, mais, en client/serveur, cela génèrerait une erreur. 
+**Attention :** A la différence de la commande [New process](../commands/new-process), vous ne devez pas avec **Execute on server** créer un process local en préfixant son nom du symbole dollar (*$*). Cela fonctionnerait correctement en version monoposte, car **Execute on server** se comporte comme [New process](../commands/new-process) dans cet environnement, mais, en client/serveur, cela génèrerait une erreur. 
 
 ### Paramètres de la méthode process : 
 
@@ -93,7 +93,7 @@ La méthode WriteLog sera exécutée sur le serveur. Elle contient, par exemple 
 
 ## Exemple 2 
 
-L'exemple suivant démontre comment l'import de données peut être accéléré de manière spectaculaire en environnement client/serveur. La méthode Import classique listée ci-dessous vous permet de mesurer combien de temps prend un import d'enregistrements basé sur la commande [IMPORT TEXT](import-text.md) :
+L'exemple suivant démontre comment l'import de données peut être accéléré de manière spectaculaire en environnement client/serveur. La méthode Import classique listée ci-dessous vous permet de mesurer combien de temps prend un import d'enregistrements basé sur la commande [IMPORT TEXT](../commands/import-text) :
 
 ```4d
   // Méthode projet Import classique
@@ -197,8 +197,8 @@ Reportez-vous à la section *Services basés sur les procédures stockées (exem
 
 ## Voir aussi 
 
-[EXECUTE ON CLIENT](execute-on-client.md)  
-[New process](new-process.md)  
+[EXECUTE ON CLIENT](../commands/execute-on-client)  
+[New process](../commands/new-process)  
 
 ## Propriétés
 

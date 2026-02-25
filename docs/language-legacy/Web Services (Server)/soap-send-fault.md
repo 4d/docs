@@ -1,4 +1,4 @@
----
+﻿---
 id: soap-send-fault
 title: SOAP SEND FAULT
 slug: /commands/soap-send-fault
@@ -54,8 +54,8 @@ To go back to the example of the “Square\_root” Web Service provided in the 
 
 ## See also 
 
-[SOAP DECLARATION](soap-declaration.md)  
-[SOAP Get info](soap-get-info.md)  
+[SOAP DECLARATION](../commands/soap-declaration)  
+[SOAP Get info](../commands/soap-get-info)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: goto-record
 title: GOTO RECORD
 slug: /commands/goto-record
@@ -39,7 +39,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Record number](record-number.md)  
+[Record number](../commands/record-number)  
 *レコード番号について*  
 
 ## プロパティ

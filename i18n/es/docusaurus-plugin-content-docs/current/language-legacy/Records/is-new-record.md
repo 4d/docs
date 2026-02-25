@@ -1,4 +1,4 @@
----
+﻿---
 id: is-new-record
 title: Is new record
 slug: /commands/is-new-record
@@ -48,8 +48,8 @@ Las dos siguientes instrucciones siguientes son idénticas. La segunda se recomi
 
 ## Ver también 
 
-[Modified record](modified-record.md)  
-[Record number](record-number.md)  
+[Modified record](../commands/modified-record)  
+[Record number](../commands/record-number)  
 
 ## Propiedades
 

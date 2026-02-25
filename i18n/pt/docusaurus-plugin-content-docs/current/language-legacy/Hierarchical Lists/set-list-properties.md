@@ -1,4 +1,4 @@
----
+﻿---
 id: set-list-properties
 title: SET LIST PROPERTIES
 slug: /commands/set-list-properties
@@ -38,10 +38,10 @@ displayed_sidebar: docs
   
 Nota de compatibilidade: os parâmetros aparência e ícone são obsoletos, sempre devem ter o valor 0.  
   
-Nota: se desejar personalizar o ícone de cada elemento na lista, utilize o comando [SET LIST ITEM PROPERTIES](set-list-item-properties.md).  
+Nota: se desejar personalizar o ícone de cada elemento na lista, utilize o comando [SET LIST ITEM PROPERTIES](../commands/set-list-item-properties).  
   
 Se não passar o parâmetro altoLinea, a altura da linhaa de una lista hierárquica é determinada pela fonte e o tamanho de fonte utilizado pelo objeto. Também pode passar em parâmetro altoLinea a altura de línha mínima da lista hierárquica. Se o valor que passar for superior a altura das linhas definida pela fonte e o tamanho de fonte utilizado, a altura das linhas da lista hierárquicas será o valor passado.Passe 0 para definir a altura por padrão.  
-**Nota:** SET LIST PROPERTIES  afeta a aparência dos nós na lista hierárquica. Se preferir personalizar o ícone de cada elemento na lista, utilize o comando .[SET LIST ITEM PROPERTIES](set-list-item-properties.md). 
+**Nota:** SET LIST PROPERTIES  afeta a aparência dos nós na lista hierárquica. Se preferir personalizar o ícone de cada elemento na lista, utilize o comando .[SET LIST ITEM PROPERTIES](../commands/set-list-item-properties). 
 
 O parâmetro opcional *duploClique* lhe permite definir duplo clique em um elemento da lista pai não provoque a expansão ou contração da sub-lista. Como padrão, um duplo clique em um item da lista pai provoca que sua lista filho se expanda ou se contraia. Entretanto, algumas interfaces de usuário poderiam necessitar desativar este mecanismo. Para fazer isto, passe 1 no parâmetro *duploClique*.
 
@@ -54,7 +54,7 @@ O parâmetro opcional *multiSeleçao* lhe permite indicar se a lista deve aceita
 Automaticamente, como em versões anteriores de 4D, você não pode selecionar vários elementos de uma lista hierárquica simultaneamente. Se deseja que esta função esteja disponível para a lista, passe o valor 1 no parâmetro *multiSeleçao*. Nesse caso, as seleções múltiplas podem ser realizadas:
 
 \- manualmente, utilizando a combinação de teclas **Shift**+**clique** para una seleção continua ou **Ctrl**+**clique** (Windows) / **comando**+**clique** (macOS) para uma seleção descontinúa,  
-\- por programação, utilizando os comandos [SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md) e [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md).  
+\- por programação, utilizando os comandos [SELECT LIST ITEMS BY POSITION](../commands/select-list-items-by-position) e [SELECT LIST ITEMS BY REFERENCE](../commands/select-list-items-by-reference).  
 Se passa 0 e omite o parâmetro *multiSeleçao*, se aplicará o comportamento padrão. 
 
 O parâmetro opcional *editavel* lhe permite indicar se a lista deve ser editável pelo usuário quando é mostrada como uma lista de seleção associada a um campo ou a uma variável durante a entrada de dados. Quando a lista é editável, um botão **Modificar** é adicionado na janela da lista e o usuário pode adicionar, apagar e ordenar os valores através de um editor específico.   
@@ -74,9 +74,9 @@ Se deseja recusar a sublista de expandir/contrair ao dar duplo clique, pode escr
 
 ## Ver também 
 
-[GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
-[GET LIST PROPERTIES](get-list-properties.md)  
-[SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+[GET LIST ITEM PROPERTIES](../commands/get-list-item-properties)  
+[GET LIST PROPERTIES](../commands/get-list-properties)  
+[SET LIST ITEM PROPERTIES](../commands/set-list-item-properties)  
 
 ## Propriedades
 

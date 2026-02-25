@@ -1,4 +1,4 @@
----
+﻿---
 id: st-set-attributes
 title: ST SET ATTRIBUTES
 slug: /commands/st-set-attributes
@@ -114,8 +114,8 @@ En caso de error, no cambia la variable. Cuando ocurre un error en una variable 
 
 #### Ver también 
 
-[FONT LIST](font-list.md)  
-[ST GET ATTRIBUTES](st-get-attributes.md)  
+[FONT LIST](../commands/font-list)  
+[ST GET ATTRIBUTES](../commands/st-get-attributes)  
 
 #### Propiedades
 

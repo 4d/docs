@@ -1,4 +1,4 @@
----
+﻿---
 id: sum
 title: Sum
 slug: /commands/sum
@@ -61,7 +61,7 @@ O método a seguir é chamado para imprimir os registros na seleção e para ati
  PRINT SELECTION([Empregados])
 ```
 
-**Nota:** o parâmetro para o comando [BREAK LEVEL](break-level.md) deve ser igual ao número de quebras em seu informe. Para maior informação sobre o processo de quebras consulte os comandos do tema *Imprimir*.
+**Nota:** o parâmetro para o comando [BREAK LEVEL](../commands/break-level) deve ser igual ao número de quebras em seu informe. Para maior informação sobre o processo de quebras consulte os comandos do tema *Imprimir*.
 
 ## Exemplo 2 
 
@@ -76,18 +76,18 @@ Este exemplo permite obter a soma de todos os valores localizados num array:
 
 ## Exemplo 3 
 
-Para um exemplo de computar um atributo campo objeto, veja o exemplo 3 da descrição do comando [Average](average.md).
+Para um exemplo de computar um atributo campo objeto, veja o exemplo 3 da descrição do comando [Average](../commands/average).
 
 ## Ver também 
 
-[ACCUMULATE](accumulate.md)  
-[Average](average.md)  
-[BREAK LEVEL](break-level.md)  
-[Max](max.md)  
-[Min](min.md)  
-[ORDER BY](order-by.md)  
-[PRINT SELECTION](print-selection.md)  
-[Subtotal](subtotal.md)  
+[ACCUMULATE](../commands/accumulate)  
+[Average](../commands/average)  
+[BREAK LEVEL](../commands/break-level)  
+[Max](../commands/max)  
+[Min](../commands/min)  
+[ORDER BY](../commands/order-by)  
+[PRINT SELECTION](../commands/print-selection)  
+[Subtotal](../commands/subtotal)  
 
 ## Propriedades
 

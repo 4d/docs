@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-footer-calculation
 title: LISTBOX SET FOOTER CALCULATION
 slug: /commands/listbox-set-footer-calculation
@@ -61,7 +61,7 @@ Si el tipo de datos de la columna o de al menos una columna del list box (si obj
 
 ## Ver también 
 
-[LISTBOX Get footer calculation](listbox-get-footer-calculation.md)  
+[LISTBOX Get footer calculation](../commands/listbox-get-footer-calculation)  
 
 ## Propiedades
 

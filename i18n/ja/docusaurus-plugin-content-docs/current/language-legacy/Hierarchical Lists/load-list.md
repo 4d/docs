@@ -1,4 +1,4 @@
----
+﻿---
 id: load-list
 title: Load list
 slug: /commands/load-list
@@ -58,9 +58,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[CLEAR LIST](clear-list.md)  
-[Is a list](is-a-list.md)  
-[SAVE LIST](save-list.md)  
+[CLEAR LIST](../commands/clear-list)  
+[Is a list](../commands/is-a-list)  
+[SAVE LIST](../commands/save-list)  
 
 ## プロパティ
 

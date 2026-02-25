@@ -1,4 +1,4 @@
----
+﻿---
 id: window-process
 title: Window process
 slug: /commands/window-process
@@ -34,7 +34,7 @@ Si omite el parámetro *ventana*, Window process devuelve el número del proceso
 
 ## Ver también 
 
-[Current process](current-process.md)  
+[Current process](../commands/current-process)  
 
 ## Propiedades
 

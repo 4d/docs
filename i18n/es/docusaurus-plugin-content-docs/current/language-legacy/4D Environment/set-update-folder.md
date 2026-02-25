@@ -1,4 +1,4 @@
----
+﻿---
 id: set-update-folder
 title: SET UPDATE FOLDER
 slug: /commands/set-update-folder
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.SET UPDATE FOLDER.Summary-->El comando **SET UPDATE FOLDER** especifica la carpeta que contiene la actualización de la aplicación 4D fusionada actual.<!-- END REF--> Esta información se almacena en la sesión 4D hasta que se llama el método [RESTART 4D](restart-4d.md). Si se sale de la aplicación manualmente, esta información no se conserva.  
+<!--REF #_command_.SET UPDATE FOLDER.Summary-->El comando **SET UPDATE FOLDER** especifica la carpeta que contiene la actualización de la aplicación 4D fusionada actual.<!-- END REF--> Esta información se almacena en la sesión 4D hasta que se llama el método [RESTART 4D](../commands/restart-4d). Si se sale de la aplicación manualmente, esta información no se conserva.  
   
 Este comando está destinado a ser utilizado en un proceso de actualización automática de una aplicación fusionada (servidor o monopuesto). Para más información, consulte el capítulo *Terminar y desplegar aplicaciones finales* en el Manual de *Diseño*.  
   
@@ -38,16 +38,16 @@ En el parámetro *rutaCarpeta*, pase la ruta de acceso completa de la carpeta de
   
 **Nota**: le recomendamos que utilice los mismos nombres de la versión original para los archivos de la nueva versión de la aplicación, ya que la carpeta de la aplicación se sustituye durante la actualización. Si utiliza nombres diferentes para estos archivos, los atajos y/o rutas almacenados ya no funcionarán más.  
   
-Si los parámetros son válidos, la actualización se pone "en espera" en la sesión hasta que se llame el comando [RESTART 4D](restart-4d.md). Si ha ejecutado varias veces **SET UPDATE FOLDER** antes de llamar a \[[RESTART 4D](restart-4d.md), se tiene en cuenta la última llamada válida.  
+Si los parámetros son válidos, la actualización se pone "en espera" en la sesión hasta que se llame el comando [RESTART 4D](../commands/restart-4d). Si ha ejecutado varias veces **SET UPDATE FOLDER** antes de llamar a \[[RESTART 4D](../commands/restart-4d), se tiene en cuenta la última llamada válida.  
   
 Puede pasar una cadena vacía ("" ) en el parámetro *rutaCarpeta* para reinicializar la información de actualización para la sesión actual.  
   
 El parámetro opcional *erroresDiscretos* especifica cómo se reportan los errores por la herramienta "updater":  
 * si pasa **False** o si se omite este parámetro, los errores se registran en el historial de actualización y se muestran en una caja de diálogo de alerta.
 * si pasa **True**, los errores sólo se registran en el historial de actualización.
-Excepción: si la herramienta "updater" no puede crear el archivo de historial, se muestra una caja de diálogo de alerta, independientemente del valor del parámetro *erroresDiscretos*. Para más información, consulte la descripción del comando [Get last update log path](last-update-log-path.md).  
+Excepción: si la herramienta "updater" no puede crear el archivo de historial, se muestra una caja de diálogo de alerta, independientemente del valor del parámetro *erroresDiscretos*. Para más información, consulte la descripción del comando [Get last update log path](../commands/last-update-log-path).  
   
-Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1, de lo contrario, toma el valor 0\. Puede interceptar los errores generados por el comando utilizando un método instalado utilizando el comando [ON ERR CALL](on-err-call.md).
+Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1, de lo contrario, toma el valor 0\. Puede interceptar los errores generados por el comando utilizando un método instalado utilizando el comando [ON ERR CALL](../commands/on-err-call).
 
 ## Ejemplo 
 
@@ -63,8 +63,8 @@ Usted creó una carpeta "MyUpdates" en su disco, en la cual ubicó una nueva ver
 
 ## Ver también 
 
-[Get last update log path](last-update-log-path.md)  
-[RESTART 4D](restart-4d.md)  
+[Get last update log path](../commands/last-update-log-path)  
+[RESTART 4D](../commands/restart-4d)  
 
 ## Propiedades
 

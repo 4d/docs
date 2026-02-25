@@ -1,4 +1,4 @@
----
+﻿---
 id: method-open-path
 title: METHOD OPEN PATH
 slug: /commands/method-open-path
@@ -41,7 +41,7 @@ Vous pouvez exécuter cette commande depuis un composant, mais dans ce cas vous 
 ## Voir aussi 
 
 *Commandes du thème Accès objets développement*  
-[METHOD Get path](method-get-path.md)  
+[METHOD Get path](../commands/method-get-path)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: clear-semaphore
 title: CLEAR SEMAPHORE
 slug: /commands/clear-semaphore
@@ -28,8 +28,8 @@ Ver el ejemplo de [Semaphore](semaphore.md "Semaphore").
 ## Ver también 
 
 *Semáforos y señales*  
-[Semaphore](semaphore.md)  
-[Test semaphore](test-semaphore.md)  
+[Semaphore](../commands/semaphore)  
+[Test semaphore](../commands/test-semaphore)  
 
 ## Propiedades
 

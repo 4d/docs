@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-help-tip
 title: OBJECT SET HELP TIP
 slug: /commands/object-set-help-tip
@@ -37,16 +37,16 @@ displayed_sidebar: docs
 
 *helpTip* 引数にはメッセージの内容の文字列を渡します。空の文字列 ("")を渡すと、そのヘルプTipは削除されます。
 
-フォームが実行されると、マウスカーソルがフィールドやオブジェクト上に移動したとき、ヘルプTipを表示させることができます。Tips表示までの時差と、最大表示時間は、[SET DATABASE PARAMETER](set-database-parameter.md) コマンドのTips delay および Tips duration セレクターを使用することによってコントロールすることが可能です。
+フォームが実行されると、マウスカーソルがフィールドやオブジェクト上に移動したとき、ヘルプTipを表示させることができます。Tips表示までの時差と、最大表示時間は、[SET DATABASE PARAMETER](../commands/set-database-parameter) コマンドのTips delay および Tips duration セレクターを使用することによってコントロールすることが可能です。
 
-リストボックスオブジェクトに対してこのコマンドを使用することで、リストボックスの行とセルに対してヘルプTipsを追加することができます。例えば、リストボックスオブジェクトは各行ごとに異なるヘルプTipsを持つことができます。この場合、事前にカーソルの位置を[LISTBOX GET CELL POSITION](listbox-get-cell-position.md) コマンドで調べる必要があります。このやり方は以下の例題で示しています。
+リストボックスオブジェクトに対してこのコマンドを使用することで、リストボックスの行とセルに対してヘルプTipsを追加することができます。例えば、リストボックスオブジェクトは各行ごとに異なるヘルプTipsを持つことができます。この場合、事前にカーソルの位置を[LISTBOX GET CELL POSITION](../commands/listbox-get-cell-position) コマンドで調べる必要があります。このやり方は以下の例題で示しています。
 
 ヘルプTipsがすでに表示されている時、**OBJECT SET HELP TIP** コマンドを呼び出すとそのTipsは閉じられ、マウスの位置に新しいTipsを開くと同時にTips duration カウンターをリスタートさせます。これにより、Tipsの動的な管理が可能になります。
 
 **注:** 
 
 * ヘルプTipsの中身はデザインモードのフォームエディター(*データ入力の制御と補助*参照)およびストラクチャーエディター(*フィールドプロパティ*参照)を使用しても設定することができます。
-* ヘルプTipsは、[SET DATABASE PARAMETER](set-database-parameter.md) コマンドのTips enabled セレクターを使用することで、アプリケーション全体に対して有効化あるいは無効化することができます。
+* ヘルプTipsは、[SET DATABASE PARAMETER](../commands/set-database-parameter) コマンドのTips enabled セレクターを使用することで、アプリケーション全体に対して有効化あるいは無効化することができます。
 
 ## 例題 1 
 
@@ -140,8 +140,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT Get help tip](object-get-help-tip.md)  
-[SET DATABASE PARAMETER](set-database-parameter.md)  
+[OBJECT Get help tip](../commands/object-get-help-tip)  
+[SET DATABASE PARAMETER](../commands/set-database-parameter)  
 
 ## プロパティ
 

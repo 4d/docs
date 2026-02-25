@@ -1,4 +1,4 @@
----
+﻿---
 id: open-data-file
 title: OPEN DATA FILE
 slug: /commands/open-data-file
@@ -32,9 +32,9 @@ displayed_sidebar: docs
 
 Vous passez dans le paramètre *cheminAccès* le nom ou le chemin d’accès complet du fichier de données à ouvrir (fichier suffixé ".4DD"). Si vous passez uniquement un nom de fichier, il doit être placé à côté du fichier de structure de la base.
 
-Si ce chemin d’accès désigne un fichier de données valide, 4D quitte la base en cours et la rouvre avec le fichier de données spécifié. En mode monoposte, la [On Exit database method](on-exit-database-method.md) et la [On Startup database method](on-startup-database-method.md) sont successivement appelées.
+Si ce chemin d’accès désigne un fichier de données valide, 4D quitte la base en cours et la rouvre avec le fichier de données spécifié. En mode monoposte, la [On Exit database method](../commands/on-exit-database-method) et la [On Startup database method](../commands/on-startup-database-method) sont successivement appelées.
 
-**Attention :** Comme cette commande provoque la fermeture préalable de l'application, elle doit être utilisée avec précaution dans la [On Exit database method](on-exit-database-method.md) ou une méthode appelée par cette méthode base afin de ne pas générer de boucle sans fin.
+**Attention :** Comme cette commande provoque la fermeture préalable de l'application, elle doit être utilisée avec précaution dans la [On Exit database method](../commands/on-exit-database-method) ou une méthode appelée par cette méthode base afin de ne pas générer de boucle sans fin.
 
 La commande est exécutée de manière asynchrone : après son appel, 4D continue d’exécuter le reste de la méthode. Ensuite, l’application se comporte comme si la commande **Quitter** avait été sélectionnée dans le menu **Fichier** : les boîtes de dialogue ouvertes sont annulées, les process ouverts ont 10 secondes pour se terminer avant d’être tués, etc.
 
@@ -42,7 +42,7 @@ Avant de lancer l’opération, la commande teste la validité du fichier de don
 
 Si vous passez une chaîne vide dans *cheminAccès*, la commande rouvre la base sans changer de fichier de données.
 
-**4D Server :** A compter de 4D v13, cette commande peut être exécutée avec 4D Server. Dans ce contexte, elle effectue en interne un appel à [QUIT 4D](quit-4d.md) sur le serveur (entraînant l’apparition, sur chaque poste distant, d’une boîte de dialogue signalant que le serveur est en train de quitter) avant d'ouvrir le fichier désigné.
+**4D Server :** A compter de 4D v13, cette commande peut être exécutée avec 4D Server. Dans ce contexte, elle effectue en interne un appel à [QUIT 4D](../commands/quit-4d) sur le serveur (entraînant l’apparition, sur chaque poste distant, d’une boîte de dialogue signalant que le serveur est en train de quitter) avant d'ouvrir le fichier désigné.
 
 ## Exemple 
 
@@ -66,7 +66,7 @@ Dans le contexte du déploiement d'une application fusionnée, vous souhaitez ou
 
 ## Voir aussi 
 
-[CREATE DATA FILE](create-data-file.md)  
+[CREATE DATA FILE](../commands/create-data-file)  
 
 ## Propriétés
 

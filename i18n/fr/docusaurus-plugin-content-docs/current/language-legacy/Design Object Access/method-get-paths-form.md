@@ -1,4 +1,4 @@
----
+﻿---
 id: method-get-paths-form
 title: METHOD GET PATHS FORM
 slug: /commands/method-get-paths-form
@@ -79,7 +79,7 @@ Liste de tous les objets des formulaires "input" de la table \[Emp\] à partir d
 
 ## Voir aussi 
 
-[FORM GET NAMES](form-get-names.md)  
+[FORM GET NAMES](../commands/form-get-names)  
 
 ## Propriétés
 

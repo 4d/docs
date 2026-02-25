@@ -1,4 +1,4 @@
----
+﻿---
 id: clear-semaphore
 title: CLEAR SEMAPHORE
 slug: /commands/clear-semaphore
@@ -27,8 +27,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Semaphore](semaphore.md)  
-[Test semaphore](test-semaphore.md)  
+[Semaphore](../commands/semaphore)  
+[Test semaphore](../commands/test-semaphore)  
 *セマフォーとシグナル*  
 
 ## プロパティ

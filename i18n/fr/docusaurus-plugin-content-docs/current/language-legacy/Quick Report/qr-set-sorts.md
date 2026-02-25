@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-sorts
 title: QR SET SORTS
 slug: /commands/qr-set-sorts
@@ -56,7 +56,7 @@ Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
 ## Voir aussi 
 
-[QR GET SORTS](qr-get-sorts.md)  
+[QR GET SORTS](../commands/qr-get-sorts)  
 
 ## Propriétés
 

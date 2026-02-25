@@ -1,4 +1,4 @@
----
+﻿---
 id: launch-external-process
 title: LAUNCH EXTERNAL PROCESS
 slug: /commands/launch-external-process
@@ -46,12 +46,12 @@ macOSではアプリケーション名を渡すこともできます。4Dは環�
 
 オプションの*inputStream*引数は外部プロセスの*stdin*を格納します。コマンドが実行されると、引数*outputStream*と*errorStream* (渡した場合) は外部プロセスの*stdout*と*stderr*をそれぞれ返します。(例えばピクチャのような)バイナリデータを扱っている場合、文字列の代わりにBLOB引数を使用します。
 
-4D では**LAUNCH EXTERNAL PROCESS** のコンテキストで使用可能で、[SET ENVIRONMENT VARIABLE](set-environment-variable.md) コマンドを使用して設定可能な3つの特定の環境変数を提供しています:
+4D では**LAUNCH EXTERNAL PROCESS** のコンテキストで使用可能で、[SET ENVIRONMENT VARIABLE](../commands/set-environment-variable) コマンドを使用して設定可能な3つの特定の環境変数を提供しています:
 
 * *\_4D\_OPTION\_CURRENT\_DIRECTORY*: 開始する外部プロセスのカレントディレクトリを設定するために使用します。必ずディレクトリ (macOSではHFSタイプのシンタックス、WindowsではDOS) のパス名を*varValue* に渡してください。
 * *\_4D\_OPTION\_HIDE\_CONSOLE* (Windows のみ):DOSコンソールのウィンドウを隠すために使用します。今コンソールを隠すには"True" を*varValue* に渡します。コンソールを表示するには"False" を渡します。
 * *\_4D\_OPTION\_BLOCKING\_EXTERNAL\_PROCESS*: 非同期モードで外部プロセスを実行するために使用します。この場合他のアプリケーションをブロックしません。非同期実行を設定するには"False" を、同期実行を設定するには"True"(デフォルト値)をvarValue に渡してください。この変数に関しては、*varValue* に""(空の文字列)を渡しても何の変化もありません。  
-環境変数を、[SET ENVIRONMENT VARIABLE](set-environment-variable.md) コマンドを使用して"false" に設定した場合(非同期実行)、*outputStream* および *errorStream* 引数は返されません。
+環境変数を、[SET ENVIRONMENT VARIABLE](../commands/set-environment-variable) コマンドを使用して"false" に設定した場合(非同期実行)、*outputStream* および *errorStream* 引数は返されません。
 
 これらのカレントプロセスでの**LAUNCH EXTERNAL PROCESS** の次の呼び出しから有効です。
 
@@ -151,8 +151,8 @@ Application/UtilitiesフォルダにあるmacOS ターミナルを使用しま�
 
 ## 参照 
 
-[OPEN URL](open-url.md)  
-[SET ENVIRONMENT VARIABLE](set-environment-variable.md)  
+[OPEN URL](../commands/open-url)  
+[SET ENVIRONMENT VARIABLE](../commands/set-environment-variable)  
 
 ## プロパティ
 

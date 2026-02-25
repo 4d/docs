@@ -1,4 +1,4 @@
----
+﻿---
 id: get-menu-item-key
 title: Get menu item key
 slug: /commands/get-menu-item-key
@@ -58,8 +58,8 @@ Para obter um atalho associado com um comando de menu, é útil implementar uma 
 
 ## Ver também 
 
-[Get menu item key](get-menu-item-key.md)  
-[SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md)  
+[Get menu item key](../commands/get-menu-item-key)  
+[SET MENU ITEM SHORTCUT](../commands/set-menu-item-shortcut)  
 
 ## Propriedades
 

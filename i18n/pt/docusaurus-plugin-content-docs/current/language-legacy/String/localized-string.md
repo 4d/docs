@@ -1,4 +1,4 @@
----
+﻿---
 id: localized-string
 title: Localized string
 slug: /commands/localized-string
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 Este comando apenas funciona dentro de uma arquitetura XLIFF. Para maior informação sobre este tipo de arquitectura, por favor consulte a descripção de compatibilidade de XLIFF no manual de Desenho.  
   
-**Nota:**o comando [Get database localization](get-database-localization.md) pode ser utilizado para pesquisar a linguagem utilizada pela aplicação.  
+**Nota:**o comando [Get database localization](../commands/get-database-localization) pode ser utilizado para pesquisar a linguagem utilizada pela aplicação.  
 
 Passe em *recNome* o nome do recurso da string na qual deseja obter a tradução na linguagem objetivo atual.  
   
@@ -55,7 +55,7 @@ Se o comando for executado corretamente, a variável OK assume o valor 1\. Se *r
 
 ## Ver também 
 
-[Get database localization](get-database-localization.md)  
+[Get database localization](../commands/get-database-localization)  
 
 ## Propriedades
 

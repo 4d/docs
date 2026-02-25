@@ -1,4 +1,4 @@
----
+﻿---
 id: load-list
 title: Load list
 slug: /commands/load-list
@@ -57,9 +57,9 @@ Usted crea una base para el mercado internacional y necesita cambiar a los difer
 
 ## Ver también 
 
-[CLEAR LIST](clear-list.md)  
-[Is a list](is-a-list.md)  
-[SAVE LIST](save-list.md)  
+[CLEAR LIST](../commands/clear-list)  
+[Is a list](../commands/is-a-list)  
+[SAVE LIST](../commands/save-list)  
 
 ## Propiedades
 

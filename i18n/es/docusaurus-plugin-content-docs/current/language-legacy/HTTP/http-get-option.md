@@ -1,4 +1,4 @@
----
+﻿---
 id: http-get-option
 title: HTTP GET OPTION
 slug: /commands/http-get-option
@@ -35,7 +35,7 @@ Este comando se mantiene sólo por razones de compatibilidad. Ahora se recomiend
 
 ## Descripción 
 
-<!--REF #_command_.HTTP GET OPTION.Summary-->El comando **HTTP GET OPTION** devuelve el valor actual de las opciones HTTP (opciones utilizadas por el cliente para la próxima petición provocada por el comando [HTTP Get](http-get.md) o [HTTP Request](http-request.md)).<!-- END REF--> El valor actual de una opción puede ser el valor por defecto o puede haber sido modificado utilizando el comando [HTTP SET OPTION](http-set-option.md).
+<!--REF #_command_.HTTP GET OPTION.Summary-->El comando **HTTP GET OPTION** devuelve el valor actual de las opciones HTTP (opciones utilizadas por el cliente para la próxima petición provocada por el comando [HTTP Get](../commands/http-get) o [HTTP Request](../commands/http-request)).<!-- END REF--> El valor actual de una opción puede ser el valor por defecto o puede haber sido modificado utilizando el comando [HTTP SET OPTION](../commands/http-set-option).
 
 **Nota:** las opciones son locales al proceso actual. En un componente, son locales al componente en ejecución. 
 
@@ -55,7 +55,7 @@ En el parámetro *valor*, pase una variable para recibir el valor actual de la *
 
 ## Ver también 
 
-[HTTP SET OPTION](http-set-option.md)  
+[HTTP SET OPTION](../commands/http-set-option)  
 
 ## Propiedades
 

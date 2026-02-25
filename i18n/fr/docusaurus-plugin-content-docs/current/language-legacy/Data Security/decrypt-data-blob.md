@@ -1,4 +1,4 @@
----
+﻿---
 id: decrypt-data-blob
 title: Decrypt data BLOB
 slug: /commands/decrypt-data-blob
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 Vous pouvez utiliser un *keyObject* ou un *passPhrase* pour décrypter le BLOB :
 
-* keyObject : un objet JSON contenant la clé de chiffrement, avec la même structure que l'objet retourné par la commande [New data key](new-data-key.md)
+* keyObject : un objet JSON contenant la clé de chiffrement, avec la même structure que l'objet retourné par la commande [New data key](../commands/new-data-key)
 * passPhrase : une chaîne utilisée pour générer la clé de chiffrement
 
 Le nombre passé dans le paramètre *salt* de **Decrypt data BLOB** doit correspondre à celui utilisé pour le chiffrement.
@@ -62,14 +62,14 @@ L'exemple suivant montre comment décrypter un fichier chiffré situé dans le d
  $decryptedFile.setContent($decryptedBlob)
 ```
 
-Les paramètres *passPhrase* et le *salt* utilisés pour le déchiffrement sont identiques aux paramètres *passPhrase* et *salt* utilisés pour le cryptage (voir l'exemple [Encrypt data BLOB](encrypt-data-blob.md)).
+Les paramètres *passPhrase* et le *salt* utilisés pour le déchiffrement sont identiques aux paramètres *passPhrase* et *salt* utilisés pour le cryptage (voir l'exemple [Encrypt data BLOB](../commands/encrypt-data-blob)).
 
 ## Voir aussi 
 
   
-[Encrypt data BLOB](encrypt-data-blob.md)  
-[Encrypt data file](encrypt-data-file.md)  
-[New data key](new-data-key.md)  
+[Encrypt data BLOB](../commands/encrypt-data-blob)  
+[Encrypt data file](../commands/encrypt-data-file)  
+[New data key](../commands/new-data-key)  
 
 ## Propriétés
 

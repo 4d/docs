@@ -1,4 +1,4 @@
----
+﻿---
 id: st-insert-expression
 title: ST INSERT EXPRESSION
 slug: /commands/st-insert-expression
@@ -43,7 +43,7 @@ displayed_sidebar: docs
 **注:**
 
 * ピクチャー式(ピクチャー型変数等)を挿入することは、4D Write Pro エリアではサポートされています(*画像式の挿入* 参照)が、マルチスタイルテキストエリアではサポートされていません。
-* このコマンドでは、例え[SET TABLE TITLES](set-table-titles.md) や [SET FIELD TITLES](set-field-titles.md) コマンドなどを使用して"バーチャルな"ストラクチャーが定義されていたとしても、"実際の"フィールド名やテーブル名を渡す必要があります。
+* このコマンドでは、例え[SET TABLE TITLES](../commands/set-table-titles) や [SET FIELD TITLES](../commands/set-field-titles) コマンドなどを使用して"バーチャルな"ストラクチャーが定義されていたとしても、"実際の"フィールド名やテーブル名を渡す必要があります。
 
 *expression* で指定した4D式から返ってきた値がキャリッジリターンとタブを含んでいた場合、4D式が入っているオブジェクトに合わせてそのテキストを表示します。例えばこのとき、キャリッジリターンは改行として扱われます。
 
@@ -65,7 +65,7 @@ displayed_sidebar: docs
  "String([Table_1]Field_1;System date short)"
 ```
 
-特に何も指定しなければ、 expression の **値** がマルチスタイルテキストエリアに表示されます。また、 [ST SET OPTIONS](st-set-options.md) コマンドを使用することによって強制的に**参照**を表示させることもできます。
+特に何も指定しなければ、 expression の **値** がマルチスタイルテキストエリアに表示されます。また、 [ST SET OPTIONS](../commands/st-set-options) コマンドを使用することによって強制的に**参照**を表示させることもできます。
 
 任意の *startSel* 引数と *endSel* 引数は*object* 内のテキストの選択範囲を指定します。 *startSel* と *endSel* は標準テキストのみをカウントし、スタイルタグは文字数としてはカウントされません。参照は一文字としてカウントされるということに注意して下さい。
 
@@ -96,10 +96,10 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ST COMPUTE EXPRESSIONS](st-compute-expressions.md)  
-[ST FREEZE EXPRESSIONS](st-freeze-expressions.md)  
-[ST Get expression](st-get-expression.md)  
-[ST INSERT URL](st-insert-url.md)  
+[ST COMPUTE EXPRESSIONS](../commands/st-compute-expressions)  
+[ST FREEZE EXPRESSIONS](../commands/st-freeze-expressions)  
+[ST Get expression](../commands/st-get-expression)  
+[ST INSERT URL](../commands/st-insert-url)  
 
 ## プロパティ
 

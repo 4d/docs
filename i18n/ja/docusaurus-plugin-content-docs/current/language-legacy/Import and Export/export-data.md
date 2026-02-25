@@ -1,4 +1,4 @@
----
+﻿---
 id: export-data
 title: EXPORT DATA
 slug: /commands/export-data
@@ -40,7 +40,7 @@ displayed_sidebar: docs
 書き出しプロジェクトには、書き出しテーブルやフィールド、区切り符号のような書き出しに関するすべてのパラメターが含まれています。*project*引 数にはXMLで記述されたテキスト変数、定義済みのDOM要素への参照を格納したテキスト変数、またはBLOBのいずれかを渡せます。プロジェクトはプロ グラム (XMLフォーマットのプロジェクトのみ)、または書き出しダイアログボックスで事前に定義済みのパラメターをロードすることで作成できます。後者の場 合、2つの方法を利用できます:
 
 * 空のプロジェクト引数およびオプションの *\** 付きで**EXPORT DATA**コマンドを使用し、ダイアログでの設定内容を*project*引数に受け取って、それをテキストまたはBLOBフィールドに格納します (後述)。この方法ではプロジェクトをデータファイルに保存できます。
-* プロジェクトをディスクに保存し、[DOM Parse XML source](dom-parse-xml-source.md)コマンド等を使用してロードします。そしてその参照を*project*引数に渡します。
+* プロジェクトをディスクに保存し、[DOM Parse XML source](../commands/dom-parse-xml-source)コマンド等を使用してロードします。そしてその参照を*project*引数に渡します。
 
 **互換性に関する注意:** 4D v12より、読み込みプロジェクトはXMLにエンコードされるようになりました。4Dは以前のバージョンで作成された書き出しプロジェクト (BLOB形式) を開くことができます。しかし4D v12以降で作成されたプロジェクトをv11以前で開くことはできません。書き出しファイルを扱う際は、以降テキスト変数を使用することをお勧めします。
 
@@ -106,10 +106,10 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[EXPORT DIF](export-dif.md)  
-[EXPORT SYLK](export-sylk.md)  
-[EXPORT TEXT](export-text.md)  
-[IMPORT DATA](import-data.md)  
+[EXPORT DIF](../commands/export-dif)  
+[EXPORT SYLK](../commands/export-sylk)  
+[EXPORT TEXT](../commands/export-text)  
+[IMPORT DATA](../commands/import-data)  
 
 ## プロパティ
 

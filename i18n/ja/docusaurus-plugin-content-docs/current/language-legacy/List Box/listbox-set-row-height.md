@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-row-height
 title: LISTBOX SET ROW HEIGHT
 slug: /commands/listbox-set-row-height
@@ -36,11 +36,11 @@ displayed_sidebar: docs
 
 *row* に指定した行がリストボックスに存在しなかった場合、このコマンドは何もしません。
 
-指定した*height* 引数が使用する単位は、プロパティリスト、あるいは事前に使用した[LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md)コマンドなどでリストボックス行全体に対して定義されたものと対応します。
+指定した*height* 引数が使用する単位は、プロパティリスト、あるいは事前に使用した[LISTBOX SET ROWS HEIGHT](../commands/listbox-set-rows-height)コマンドなどでリストボックス行全体に対して定義されたものと対応します。
 
 **LISTBOX SET ROW HEIGHT**コマンドは、プロパティリスト内で指定されている行高さ配列が存在する場合にはそれを変更し(詳細な情報については、デザインリファレンスマニュアルの*行高さ配列*の章を参照して下さい)、そうでない場合には動的に行高さ配列を作成します。このコマンドを使用して個別の行の高さを設定することは、プロパティリストにて行高さ配列を設定する事と全く同じ視覚的な結果をもたらします。しかしながら、行高さ配列に値を入力する方が、このコマンドをループで呼び出してリストボックスの行を一つ一つ設定するより速いです。
 
-**重要な注記:** このコマンドのあとに、異なる高さの単位を指定して [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) コマンドを呼び出した場合、このコマンドで設定された値がデフォルト値として扱われ、**LISTBOX SET ROW HEIGHT**で設定された行の高さはどれも置き換えられ初期化されます (例題2参照)。
+**重要な注記:** このコマンドのあとに、異なる高さの単位を指定して [LISTBOX SET ROWS HEIGHT](../commands/listbox-set-rows-height) コマンドを呼び出した場合、このコマンドで設定された値がデフォルト値として扱われ、**LISTBOX SET ROW HEIGHT**で設定された行の高さはどれも置き換えられ初期化されます (例題2参照)。
 
 ## 例題 1 
 
@@ -86,14 +86,14 @@ displayed_sidebar: docs
  LISTBOX SET ROWS HEIGHT(*;"listboxname";2;lk lines)
 ```
 
-高さの単位がピクセルから行数に変更されたため、行1、5、11の高さ設定が [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) で指定されたグローバルのデフォルト値 (2行) にリセットされます。設定値が自動変換されないため、単位の変更は設定の初期化につながります。
+高さの単位がピクセルから行数に変更されたため、行1、5、11の高さ設定が [LISTBOX SET ROWS HEIGHT](../commands/listbox-set-rows-height) で指定されたグローバルのデフォルト値 (2行) にリセットされます。設定値が自動変換されないため、単位の変更は設定の初期化につながります。
 
 ## 参照 
 
   
-[LISTBOX Get row height](listbox-get-row-height.md)  
-[LISTBOX SET AUTO ROW HEIGHT](listbox-set-auto-row-height.md)  
-[LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md)  
+[LISTBOX Get row height](../commands/listbox-get-row-height)  
+[LISTBOX SET AUTO ROW HEIGHT](../commands/listbox-set-auto-row-height)  
+[LISTBOX SET ROWS HEIGHT](../commands/listbox-set-rows-height)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: array-to-selection
 title: ARRAY TO SELECTION
 slug: /commands/array-to-selection
@@ -39,10 +39,10 @@ Se uma seleção existir no momento da chamada, os elementos do array são coloc
 
 Todos os arrays devem apresentar o mesmo número de elementos. Se os arrays apresentarem tamanhos diferentes, um erro de sintaxe é gerado.
 
-Este comando tem o efeito reverso do [SELECTION TO ARRAY](selection-to-array.md). Entretanto, o comando **ARRAY TO SELECTION** não permite campos de diferentes tabelas, incluindo tabelas relacionadas, mesmo quando existe uma relação automática.
+Este comando tem o efeito reverso do [SELECTION TO ARRAY](../commands/selection-to-array). Entretanto, o comando **ARRAY TO SELECTION** não permite campos de diferentes tabelas, incluindo tabelas relacionadas, mesmo quando existe uma relação automática.
 
 Quando você passar o parâmetro *\**, 4D não executar a linha de instrução correspondente imediatamente, mas sim armazena na memória, desta forma você pode empilhar várias linhas terminando com um *\**. Todas essas linhas que aguarda sua execução são executadas por um final **ARRAY TO SELECTION** que não tem o parâmetro *\**. Por esta razão, o comando agora pode ser chamado sem parâmetros.  
- Como com o [QUERY](query.md), isto permite que você quebrar uma declaração complexas em um conjunto de linhas, que é mais fácil de ler e manter. Você também pode inserir declarações intermediárias.
+ Como com o [QUERY](../commands/query), isto permite que você quebrar uma declaração complexas em um conjunto de linhas, que é mais fácil de ler e manter. Você também pode inserir declarações intermediárias.
 
 **Advertência:** Utilize **ARRAY TO SELECTION** com cautela, porque este comando reescreve as informações dos registros existentes. Se um registro está bloqueado por outro processo durante a execução do **ARRAY TO SELECTION**, este registro não se modifica. Todos os registros bloqueados se colocam em LockedSet. Depois da execução de **ARRAY TO SELECTION**, você pode testar o conjunto LockedSet para ver se contém registros bloqueados. 
 
@@ -92,7 +92,7 @@ Se quiser copiar uma seleção de registroar para uma tablela arquivo selecionan
 
 ## Ver também 
 
-[SELECTION TO ARRAY](selection-to-array.md)  
+[SELECTION TO ARRAY](../commands/selection-to-array)  
 *Variáveis sistema*  
 
 ## Propriedades

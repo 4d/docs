@@ -1,4 +1,4 @@
----
+﻿---
 id: reject
 title: REJECT
 slug: /commands/reject
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 **Note:** You should consider the built-in data validation tools before using this command.
 
-The first form of **REJECT** prevents the user from accepting a record that is not complete. You can achieve the same result without using **REJECT** — you associate the Enter key with a No Action button and use the [ACCEPT](accept.md) and [CANCEL](cancel.md) commands to accept or cancel the record, after the fields have been entered correctly. It is recommended that you use this second technique and do not use the first form of **REJECT**.
+The first form of **REJECT** prevents the user from accepting a record that is not complete. You can achieve the same result without using **REJECT** — you associate the Enter key with a No Action button and use the [ACCEPT](../commands/accept) and [CANCEL](../commands/cancel) commands to accept or cancel the record, after the fields have been entered correctly. It is recommended that you use this second technique and do not use the first form of **REJECT**.
 
 If you use the first form, you execute **REJECT** to prevent the user from accepting a record, usually because the record is not complete or has inaccurate entries. If the user tries to accept the record, executing **REJECT** prevents the record from being accepted; the record remains displayed in the form. The user must continue with data entry until the record is acceptable, or cancel the record.
 
@@ -30,7 +30,7 @@ The best place to put this form of **REJECT** is in the object method of an Acce
 The second form of **REJECT** is executed with the *field* parameter. In this case, the cursor stays in the field area, which forces the user to enter a correct value.   
 With this syntax, it is imperative that you call the **REJECT** command in the On Data Change form event.You need to put this syntax of the **REJECT** command either in the form method, or in the object method of the entry area. If you are using **REJECT** for the subform’s Detail Form for a table, put it in the form method or object method for the Detail Form. This command has no effect on fields in subform areas.
 
-You can use [HIGHLIGHT TEXT](highlight-text.md) to select the data in the field that is being rejected.
+You can use [HIGHLIGHT TEXT](../commands/highlight-text) to select the data in the field that is being rejected.
 
 ## Example 1 
 
@@ -61,9 +61,9 @@ The following example is part of an object method for an *\[Employees\]Salary* f
 
 ## See also 
 
-[ACCEPT](accept.md)  
-[CANCEL](cancel.md)  
-[GOTO OBJECT](goto-object.md)  
+[ACCEPT](../commands/accept)  
+[CANCEL](../commands/cancel)  
+[GOTO OBJECT](../commands/goto-object)  
 
 ## Properties
 

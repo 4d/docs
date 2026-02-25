@@ -1,4 +1,4 @@
----
+﻿---
 id: select-document
 title: Select document
 slug: /commands/select-document
@@ -44,7 +44,7 @@ El parámetro *directorio* indica la carpeta cuyo contenido debe mostrarse inici
 Con este principio, puede almacenar en memoria la ruta de acceso de la carpeta abierta en el momento en que el usuario hace clic en el botón de selección, en otras palabras, la carpeta seleccionada por el usuario. Durante la primera llamada de un número arbitrario (por ejemplo, 5) el comando muestra la carpeta usuario por defecto del sistema operativo (equivalente a pasar una cadena vacía). El usuario podrá navegar las carpetas en el disco duro. Cuando el usuario hace clic en el botón de selección, la ruta de acceso se memoriza y asocia al número 5\. Durante las siguientes llamadas al número 5, la ruta de acceso memorizada será utilizada por defecto. En caso de que se seleccione una nueva ubicación, la ruta número 5 se actualiza.  
 Este mecanismo le permite memorizar hasta 32 000 rutas de acceso. Bajo Windows, cada ruta se conserva durante la sesión únicamente. Bajo Mac OS, las rutas son conservadas por el sistema y permanecen almacenadas de una sesión a otra.
 
-**Nota:** este mecanismo es el mismo al utilizado por el comando [Select folder](select-folder.md). Los números de las rutas de acceso memorizadas son compartidos por ambos comandos.
+**Nota:** este mecanismo es el mismo al utilizado por el comando [Select folder](../commands/select-folder). Los números de las rutas de acceso memorizadas son compartidos por ambos comandos.
 
 Pase en el parámetro *tiposArchivos* el o los tipo(s) de archivo(s) que pueden ser seleccionados en la caja de diálogo de apertura. Puede pasar una lista de varios tipos separados por un ; (punto y coma). Para cada tipo definido, una fila será añadida en el menú de selección del tipo de la caja de diálogo.
 
@@ -109,8 +109,8 @@ Si no se seleccionó ningún archivo (por ejemplo, si el usuario hace clic en el
 
 ## Ver también 
 
-[Open document](open-document.md)  
-[Select folder](select-folder.md)  
+[Open document](../commands/open-document)  
+[Select folder](../commands/select-folder)  
 
 ## Propiedades
 

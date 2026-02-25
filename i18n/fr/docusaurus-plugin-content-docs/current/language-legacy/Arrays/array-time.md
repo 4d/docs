@@ -1,4 +1,4 @@
----
+﻿---
 id: array-time
 title: ARRAY TIME
 slug: /commands/array-time
@@ -42,7 +42,7 @@ Lorsque vous appliquez la commande **ARRAY TIME** à un tableau existant :
 * Si vous agrandissez sa taille, les éléments existants ne sont pas modifiés, les nouveaux éléments sont initialisés à la valeur d’heure nulle (00:00:00).
 * Si vous réduisez sa taille, les éléments du "bas" du tableau sont supprimés et perdus.
 
-A noter que les commandes [SELECTION TO ARRAY](selection-to-array.md) et [SELECTION RANGE TO ARRAY](selection-range-to-array.md) appliquées à un champ de type Heure créent un tableau de type Heure uniquement si le tableau n’a pas déjà été défini dans un autre type, par exemple en entier long. 
+A noter que les commandes [SELECTION TO ARRAY](../commands/selection-to-array) et [SELECTION RANGE TO ARRAY](../commands/selection-range-to-array) appliquées à un champ de type Heure créent un tableau de type Heure uniquement si le tableau n’a pas déjà été défini dans un autre type, par exemple en entier long. 
 
 ## Exemple 1 
 
@@ -74,7 +74,7 @@ Comme les tableaux d’heures acceptent des valeurs numériques, le code suivant
 ## Voir aussi 
 
 *Créer des tableaux*  
-[Time](time.md)  
+[Time](../commands/time)  
 
 ## Propriétés
 

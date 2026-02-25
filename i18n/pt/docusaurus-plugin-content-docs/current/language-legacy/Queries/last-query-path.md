@@ -1,4 +1,4 @@
----
+﻿---
 id: last-query-path
 title: Last query path
 slug: /commands/last-query-path
@@ -34,8 +34,8 @@ A descrição da rota da última pesquisa pode ser comparada com a descrição d
 
 ## Ver também 
 
-[DESCRIBE QUERY EXECUTION](describe-query-execution.md)  
-[Last query plan](last-query-plan.md)  
+[DESCRIBE QUERY EXECUTION](../commands/describe-query-execution)  
+[Last query plan](../commands/last-query-plan)  
 
 ## Propriedades
 

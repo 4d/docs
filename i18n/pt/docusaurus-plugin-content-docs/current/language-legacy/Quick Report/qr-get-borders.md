@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-borders
 title: QR GET BORDERS
 slug: /commands/qr-get-borders
@@ -59,7 +59,7 @@ displayed_sidebar: docs
 | qr top border               | Inteiro longo | 2     |
 
   
-**Nota**: diferente do comando [QR SET BORDERS](qr-set-borders.md), QR GET BORDERS não aceita um valor acumulado. Deve provar por separado todos os parâmetros para ter uma descrição geral da borda da célula.  
+**Nota**: diferente do comando [QR SET BORDERS](../commands/qr-set-borders), QR GET BORDERS não aceita um valor acumulado. Deve provar por separado todos os parâmetros para ter uma descrição geral da borda da célula.  
   
 *grossura* é a largura de linha:  
   
@@ -78,7 +78,7 @@ Se o parâmetro *borda* é incorreto, se gera o erro -9854.
 
 ## Ver também 
 
-[QR SET BORDERS](qr-set-borders.md)  
+[QR SET BORDERS](../commands/qr-set-borders)  
 
 ## Propriedades
 

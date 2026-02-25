@@ -1,4 +1,4 @@
----
+﻿---
 id: web-get-body-part-count
 title: WEB Get body part count
 slug: /commands/web-get-body-part-count
@@ -31,11 +31,11 @@ displayed_sidebar: docs
 
 ## 例題 
 
-[WEB GET BODY PART](web-get-body-part.md) コマンドの例題を参照してください。 
+[WEB GET BODY PART](../commands/web-get-body-part) コマンドの例題を参照してください。 
 
 ## 参照 
 
-[WEB GET BODY PART](web-get-body-part.md)  
+[WEB GET BODY PART](../commands/web-get-body-part)  
 
 ## プロパティ
 

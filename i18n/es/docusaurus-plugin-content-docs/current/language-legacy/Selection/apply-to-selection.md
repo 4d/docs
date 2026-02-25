@@ -1,4 +1,4 @@
----
+﻿---
 id: apply-to-selection
 title: APPLY TO SELECTION
 slug: /commands/apply-to-selection
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 **4D Server:** el servidor no ejecuta ninguno de los comandos que se pasen en *sentencia*. Cada registro de la selección será enviado al equipo cliente para ser modificado.
 
-Un termómetro de progresión se muestra mientras se ejecuta **APPLY TO SELECTION**. Para ocultarlo, utilice [MESSAGES OFF](messages-off.md) antes de llamar a **APPLY TO SELECTION**. Si el termómetro de progreso se muestra, el usuario puede cancelar la operación.
+Un termómetro de progresión se muestra mientras se ejecuta **APPLY TO SELECTION**. Para ocultarlo, utilice [MESSAGES OFF](../commands/messages-off) antes de llamar a **APPLY TO SELECTION**. Si el termómetro de progreso se muestra, el usuario puede cancelar la operación.
 
 ## Ejemplo 1 
 
@@ -74,7 +74,7 @@ Si el usuario hace clic en el botón Detener en el termómetro de progresión, l
 ## Ver también 
 
 *Conjuntos*  
-[EDIT FORMULA](edit-formula.md)  
+[EDIT FORMULA](../commands/edit-formula)  
 
 ## Propiedades
 

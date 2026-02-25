@@ -1,4 +1,4 @@
----
+﻿---
 id: select-folder
 title: Select folder
 slug: /commands/select-folder
@@ -54,14 +54,14 @@ Vous pouvez utiliser le paramètre *répertoire* pour proposer un emplacement de
 * un numéro de chemin d’accès mémorisé (de 1 à 32000) pour afficher le dossier associé. Avec ce principe, vous pouvez conserver en mémoire le chemin d’accès du dossier ouvert au moment où l’utilisateur a cliqué sur le bouton de sélection, c’est-à-dire le dossier choisi par l’utilisateur. Lors du premier appel d’un numéro arbitraire (par exemple 5), la commande affiche le dossier d’utilisateur par défaut du système (équivaut à passer une chaîne vide). L’utilisateur peut alors éventuellement naviguer parmi les dossiers de son disque dur. Au moment où il clique sur le bouton de sélection, le chemin d’accès est mémorisé et associé au numéro 5\. Lors des appels suivants du numéro 5, le chemin d’accès mémorisé sera utilisé par défaut. En cas de sélection d’un nouvel emplacement, le chemin numéro 5 sera mis à jour, et ainsi de suite.  
 Ce mécanisme vous permet de mémoriser jusqu’à 32000 chemins d’accès. Sous Windows, chaque chemin est conservé durant la session uniquement. Sous macOS, les chemins restent mémorisés d’une session à l’autre. Si le chemin d’accès est incorrect, le paramètre *cheminDéfaut* est ignoré.
 
-**Note :** Ce mécanisme est identique à celui utilisé par la commande [Select document](select-document.md). Les numéros de chemins d’accès mémorisés sont partagés entre les deux commandes.
+**Note :** Ce mécanisme est identique à celui utilisé par la commande [Select document](../commands/select-document). Les numéros de chemins d’accès mémorisés sont partagés entre les deux commandes.
 
 Le paramètre *options* vous permet de bénéficier de fonctions supplémentaires sous macOS. Vous pouvez passer dans ce paramètre les constantes suivantes, placées dans le thème *Documents système* : 
 
 | Constante        | Type        | Valeur | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ---------------- | ----------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Package open     | Entier long | 2      | (Mac OS uniquement) Autorise l’ouverture des progiciels (packages) en tant que dossiers et donc la visualisation/sélection de leur contenu. Par défaut, si cette constante n’est pas utilisée, la commande n’autorise pas l’ouverture des progiciels.                                                                                                                                                                                                                                   |
-| Use sheet window | Entier long | 16     | (Mac OS uniquement) Affiche la boîte de dialogue de sélection sous forme de fenêtre feuille (cette option est ignorée sous Windows). <br/>Les fenêtres feuilles sont des fenêtres spécifiques de l’interface macOS, bénéficiant notamment d’une animation graphique (pour plus d’informations, reportez-vous à la section [DISPLAY SELECTION](display-selection.md)). Par défaut, si cette constante n’est pas utilisée, la commande affiche une boîte de dialogue standard. |
+| Use sheet window | Entier long | 16     | (Mac OS uniquement) Affiche la boîte de dialogue de sélection sous forme de fenêtre feuille (cette option est ignorée sous Windows). <br/>Les fenêtres feuilles sont des fenêtres spécifiques de l’interface macOS, bénéficiant notamment d’une animation graphique (pour plus d’informations, reportez-vous à la section [DISPLAY SELECTION](../commands/display-selection)). Par défaut, si cette constante n’est pas utilisée, la commande affiche une boîte de dialogue standard. |
 
 Vous pouvez passer une constante ou la combinaison des deux. Ces options sont prises en compte sous macOS uniquement. Sous Windows, le paramètre *options* est ignoré s’il est passé. 
 
@@ -94,9 +94,9 @@ L’exemple suivant permet de sélectionner le dossier dans lequel toutes les im
 
 ## Voir aussi 
 
-[CREATE FOLDER](create-folder.md)  
-[FOLDER LIST](folder-list.md)  
-[Select document](select-document.md)  
+[CREATE FOLDER](../commands/create-folder)  
+[FOLDER LIST](../commands/folder-list)  
+[Select document](../commands/select-document)  
 
 ## Propriétés
 

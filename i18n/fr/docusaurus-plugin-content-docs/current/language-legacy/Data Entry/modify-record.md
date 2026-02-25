@@ -1,4 +1,4 @@
----
+﻿---
 id: modify-record
 title: MODIFY RECORD
 slug: /commands/modify-record
@@ -26,19 +26,19 @@ Pour que vous puissiez utiliser **MODIFY RECORD**, l'enregistrement courant doit
 
 Si le formulaire comporte des boutons de navigation parmi les enregistrements de la sélection, ils restent utilisables, ce qui permet à l'utilisateur de modifier des enregistrements puis de se déplacer pour en modifier d'autres.
 
-L'enregistrement est sauvegardé si l'utilisateur clique sur un bouton du type Valider ou appuie sur la touche **Entrée**, ou encore si la commande [ACCEPT](accept.md) est exécutée. 
+L'enregistrement est sauvegardé si l'utilisateur clique sur un bouton du type Valider ou appuie sur la touche **Entrée**, ou encore si la commande [ACCEPT](../commands/accept) est exécutée. 
 
-L'enregistrement n'est pas sauvegardé si l'utilisateur clique sur un bouton du type **Annuler** ou appuie sur la touche d'annulation (**Echap** sous Windows, **Esc** sous Mac OS), ou encore si la commande [CANCEL](cancel.md) est exécutée. 
+L'enregistrement n'est pas sauvegardé si l'utilisateur clique sur un bouton du type **Annuler** ou appuie sur la touche d'annulation (**Echap** sous Windows, **Esc** sous Mac OS), ou encore si la commande [CANCEL](../commands/cancel) est exécutée. 
 
 Après un appel à **MODIFY RECORD**, la variable système OK prend la valeur 1 si l'enregistrement est validé, et 0 lorsqu'il est annulé. 
 
-**Note :** Même lorsqu'il est annulé, l'enregistrement reste en mémoire et peut être sauvegardé par la commande [SAVE RECORD](save-record.md) si celle-ci est appelée avant que le pointeur d'enregistrement courant ne soit modifié.
+**Note :** Même lorsqu'il est annulé, l'enregistrement reste en mémoire et peut être sauvegardé par la commande [SAVE RECORD](../commands/save-record) si celle-ci est appelée avant que le pointeur d'enregistrement courant ne soit modifié.
 
 Dans le cadre d'un **MODIFY RECORD**, si l'utilisateur n'effectue aucune modification dans l'enregistrement et le valide, l'enregistrement ne sera pas considéré comme modifié et ne sera pas sauvegardé une nouvelle fois. Les actions telles que le changement de la valeur d'une variable, la sélection de cases à cocher ou de boutons radio ne sont pas qualifiées de modifications. Seule la modification de la valeur d'un champ, par le biais d'une saisie manuelle ou d'une méthode, provoque une nouvelle sauvegarde de l'enregistrement.
 
 ## Exemple 
 
-Reportez-vous au second exemple de la commande [ADD RECORD](add-record.md). 
+Reportez-vous au second exemple de la commande [ADD RECORD](../commands/add-record). 
 
 ## Variables et ensembles système 
 
@@ -46,11 +46,11 @@ La variable système OK prend la valeur 1 lorsque l'enregistrement est validé e
 
 ## Voir aussi 
 
-[ADD RECORD](add-record.md)  
-[Locked](locked.md)  
-[Modified record](modified-record.md)  
-[READ WRITE](read-write.md)  
-[UNLOAD RECORD](unload-record.md)  
+[ADD RECORD](../commands/add-record)  
+[Locked](../commands/locked)  
+[Modified record](../commands/modified-record)  
+[READ WRITE](../commands/read-write)  
+[UNLOAD RECORD](../commands/unload-record)  
 
 ## Propriétés
 

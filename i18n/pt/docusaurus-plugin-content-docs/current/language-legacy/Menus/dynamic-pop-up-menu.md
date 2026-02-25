@@ -1,4 +1,4 @@
----
+﻿---
 id: dynamic-pop-up-menu
 title: Dynamic pop up menu
 slug: /commands/dynamic-pop-up-menu
@@ -34,13 +34,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Dynamic pop up menu.Summary-->O comando Dynamic pop up menu faz aparecer um menu suspenso hierárquico na localização atual do mouse ou na localização definida pelos parâmetros opcionais *Coordx* e *Coordy*.<!-- END REF-->
 
-O menu hierárquico utilizado deve ter sido criado com o comando [Create menu](create-menu.md). A referência devolvida por [Create menu](create-menu.md) deve ser passada no parâmetro *menu*.
+O menu hierárquico utilizado deve ter sido criado com o comando [Create menu](../commands/create-menu). A referência devolvida por [Create menu](../commands/create-menu) deve ser passada no parâmetro *menu*.
 
-**Nota:** o comando [Pop up menu](pop-up-menu.md) (tema “Interface de usuário”) pode ser utilizada para criar menus pop-up menus baseados em texto.
+**Nota:** o comando [Pop up menu](../commands/pop-up-menu) (tema “Interface de usuário”) pode ser utilizada para criar menus pop-up menus baseados em texto.
 
 De acordo com as regras padrão da interface, este comando geralmente deve ser chamado em resposta a um clique direito, ou quando o botão é mantido pressionado por um certo período de tempo (menu contextual por exemplo).
 
-O parâmetro opcional *porpadrao* pode ser utilizado para definir um elemento do menu suspenso selecionado automaticamente quando aparece o menu. Neste parâmetro, passe uma cadeia personalizada associada a referência do elemento de menu. Esta cadeia deve ter sido definida anteriormente com a ajuda do comando [SET MENU ITEM PARAMETER](set-menu-item-parameter.md). Se não passar este parâmetro, o primeiro elemento do menu será selecionado automaticamente.
+O parâmetro opcional *porpadrao* pode ser utilizado para definir um elemento do menu suspenso selecionado automaticamente quando aparece o menu. Neste parâmetro, passe uma cadeia personalizada associada a referência do elemento de menu. Esta cadeia deve ter sido definida anteriormente com a ajuda do comando [SET MENU ITEM PARAMETER](../commands/set-menu-item-parameter). Se não passar este parâmetro, o primeiro elemento do menu será selecionado automaticamente.
 
 **Nota:** Por padrão apenas um item de menu de nível superior pode ser selecionado.
 
@@ -48,11 +48,11 @@ Os parâmetros opcionais *CoordX* e *CoordY* podem ser utilizados para especific
 
 Se quer mostrar um menu suspenso associado a um botão 3D, não passe os parâmetros opcionais *CoordX* e *CoordY*. Neste caso, 4D calcula automaticamente a localização do menu relativo ao botão de acordo aos padrões de interface da plataforma atual. (the 3D button must have the "With pop-up menu/Linked" or "With pop-up menu/Separated" property).
 
-Se um elemento de menu for selecionado, o comando devolve sua cadeia de caracteres personalizada associada (tal como foi definido utilizando o comando [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)). Do contrario, o comando devolve uma cadeia vazia.
+Se um elemento de menu for selecionado, o comando devolve sua cadeia de caracteres personalizada associada (tal como foi definido utilizando o comando [SET MENU ITEM PARAMETER](../commands/set-menu-item-parameter)). Do contrario, o comando devolve uma cadeia vazia.
 
 Se uma ação padrão for associada a um item menu, é levado em consideração pelo comando **Dynamic pop up menu** em vários níveis:
 
-* se uma ação padrão associada não for ativada (ou seja, não puder ser chamada) no contexto do menu pop up, o item é automaticamente escondido. Pode saber se a ação foi ativada usando o comando [Action info](action-info.md).
+* se uma ação padrão associada não for ativada (ou seja, não puder ser chamada) no contexto do menu pop up, o item é automaticamente escondido. Pode saber se a ação foi ativada usando o comando [Action info](../commands/action-info).
 * Itens com uma ação toggle associada são automaticamente marcados, desmarcados ou "mixed" dependendo da seleção.
 * Se o título da ação foi estabelecido ao item usando a constante ak standard action title, o nome localizado é exibido no menu.
 * Quando o item for selecionado, a ação padrão associada é chamada (execução é assíncrona).
@@ -99,11 +99,11 @@ Este código permite criar um menu emergente dinâmico hierárquico baseado em a
 
 ## Ver também 
 
-[Get menu item parameter](get-menu-item-parameter.md)  
-[Get selected menu item parameter](get-selected-menu-item-parameter.md)  
-[Pop up menu](pop-up-menu.md)  
-[SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
-[SET MENU ITEM PROPERTY](set-menu-item-property.md)  
+[Get menu item parameter](../commands/get-menu-item-parameter)  
+[Get selected menu item parameter](../commands/get-selected-menu-item-parameter)  
+[Pop up menu](../commands/pop-up-menu)  
+[SET MENU ITEM PARAMETER](../commands/set-menu-item-parameter)  
+[SET MENU ITEM PROPERTY](../commands/set-menu-item-property)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: max
 title: Max
 slug: /commands/max
@@ -64,7 +64,7 @@ displayed_sidebar: docs
  PRINT SELECTION([Employees])
 ```
 
-**注:** [BREAK LEVEL](break-level.md)コマンドの引数は、印刷するレポートのブレーク数と同じ数でなければなりません。ブレーク処理に関する詳細は*印刷*コマンドを参照してください。
+**注:** [BREAK LEVEL](../commands/break-level)コマンドの引数は、印刷するレポートのブレーク数と同じ数でなければなりません。ブレーク処理に関する詳細は*印刷*コマンドを参照してください。
 
 ## 例題 2 
 
@@ -79,11 +79,11 @@ displayed_sidebar: docs
 
 ## 例題 3 
 
-オブジェクト型フィールドの属性を計算する例題については、[Average](average.md)コマンドの詳細の例題3を参照して下さい。
+オブジェクト型フィールドの属性を計算する例題については、[Average](../commands/average)コマンドの詳細の例題3を参照して下さい。
 
 ## 参照 
 
-[Min](min.md)  
+[Min](../commands/min)  
 
 ## プロパティ
 

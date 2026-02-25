@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-borders
 title: QR SET BORDERS
 slug: /commands/qr-set-borders
@@ -82,7 +82,7 @@ Se o parâmetro *largura* é incorreto, se gera o erro -9855.
 
 ## Ver também 
 
-[QR GET BORDERS](qr-get-borders.md)  
+[QR GET BORDERS](../commands/qr-get-borders)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: selected-record-number
 title: Selected record number
 slug: /commands/selected-record-number
@@ -35,8 +35,8 @@ El siguiente ejemplo guarda el número del registro actual de la selección en u
 ## Ver también 
 
 *Acerca de números de registros*  
-[GOTO SELECTED RECORD](goto-selected-record.md)  
-[Records in selection](records-in-selection.md)  
+[GOTO SELECTED RECORD](../commands/goto-selected-record)  
+[Records in selection](../commands/records-in-selection)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: delete-selection
 title: DELETE SELECTION
 slug: /commands/delete-selection
@@ -62,10 +62,10 @@ Si se encuentra un registro bloqueado durante la ejecución de DELETE SELECTION,
 ## Ver también 
 
 *Conjuntos*  
-[DISPLAY SELECTION](display-selection.md)  
-[MODIFY SELECTION](modify-selection.md)  
+[DISPLAY SELECTION](../commands/display-selection)  
+[MODIFY SELECTION](../commands/modify-selection)  
 *Record Locking*  
-[TRUNCATE TABLE](truncate-table.md)  
+[TRUNCATE TABLE](../commands/truncate-table)  
 
 ## Propiedades
 

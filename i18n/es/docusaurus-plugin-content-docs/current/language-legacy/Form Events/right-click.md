@@ -1,4 +1,4 @@
----
+﻿---
 id: right-click
 title: Right click
 slug: /commands/right-click
@@ -33,7 +33,7 @@ Este comando debe utilizarse únicamente en el contexto del evento de formulario
 
 ## Ver también 
 
-[Contextual click](contextual-click.md)  
+[Contextual click](../commands/contextual-click)  
 [Form event code](../commands/form-event-code)  
 
 ## Propiedades

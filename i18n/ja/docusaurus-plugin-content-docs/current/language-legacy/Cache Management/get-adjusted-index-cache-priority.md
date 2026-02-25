@@ -1,4 +1,4 @@
----
+﻿---
 id: get-adjusted-index-cache-priority
 title: Get adjusted index cache priority
 slug: /commands/get-adjusted-index-cache-priority
@@ -32,8 +32,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ADJUST INDEX CACHE PRIORITY](adjust-index-cache-priority.md)  
-[SET INDEX CACHE PRIORITY](set-index-cache-priority.md)  
+[ADJUST INDEX CACHE PRIORITY](../commands/adjust-index-cache-priority)  
+[SET INDEX CACHE PRIORITY](../commands/set-index-cache-priority)  
 *データベースキャッシュ内の優先度を管理*  
 
 ## プロパティ

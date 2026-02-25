@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-enabled
 title: OBJECT Get enabled
 slug: /commands/object-get-enabled
@@ -45,7 +45,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT SET ENABLED](object-set-enabled.md)  
+[OBJECT SET ENABLED](../commands/object-set-enabled)  
 
 ## プロパティ
 

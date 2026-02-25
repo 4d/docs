@@ -1,4 +1,4 @@
----
+﻿---
 id: max
 title: Max
 slug: /commands/max
@@ -64,7 +64,7 @@ The following method is called to print the records in the selection and to acti
  PRINT SELECTION([Employees])
 ```
 
-**Note:** The parameter to the [BREAK LEVEL](break-level.md) command should be equal to the number of breaks in your report. For more information about break processing, refer to the chapter *Printing*.
+**Note:** The parameter to the [BREAK LEVEL](../commands/break-level) command should be equal to the number of breaks in your report. For more information about break processing, refer to the chapter *Printing*.
 
 ## Example 2 
 
@@ -79,11 +79,11 @@ This example gets the highest value in the array:
 
 ## Example 3 
 
-For an example of computing an object field attribute, please refer to the example 3 of the [Average](average.md) command description.
+For an example of computing an object field attribute, please refer to the example 3 of the [Average](../commands/average) command description.
 
 ## See also 
 
-[Min](min.md)  
+[Min](../commands/min)  
 
 ## Properties
 

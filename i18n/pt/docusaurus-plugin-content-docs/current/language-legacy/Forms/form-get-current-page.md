@@ -1,4 +1,4 @@
----
+﻿---
 id: form-get-current-page
 title: FORM Get current page
 slug: /commands/form-get-current-page
@@ -76,11 +76,11 @@ Em um formulário, se seleciona um comando de menu da barra de menu ou quando o 
 
 ## Ver também 
 
-[FORM FIRST PAGE](form-first-page.md)  
-[FORM GOTO PAGE](form-goto-page.md)  
-[FORM LAST PAGE](form-last-page.md)  
-[FORM NEXT PAGE](form-next-page.md)  
-[FORM PREVIOUS PAGE](form-previous-page.md)  
+[FORM FIRST PAGE](../commands/form-first-page)  
+[FORM GOTO PAGE](../commands/form-goto-page)  
+[FORM LAST PAGE](../commands/form-last-page)  
+[FORM NEXT PAGE](../commands/form-next-page)  
+[FORM PREVIOUS PAGE](../commands/form-previous-page)  
 
 ## Propriedades
 

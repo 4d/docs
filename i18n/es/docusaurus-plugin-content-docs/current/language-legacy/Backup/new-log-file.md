@@ -1,4 +1,4 @@
----
+﻿---
 id: new-log-file
 title: New log file
 slug: /commands/new-log-file
@@ -31,7 +31,7 @@ The file is renamed with the current backup numbers of the database and of the l
 
 :::warning
 
-Un archivo de registro siempre debe estar relacionado con un archivo de datos. Si llama a este comando justo después de una activación del archivo de registro (sin copia de seguridad) usando [`SELECT LOG FILE`](select-log-file.md) o la [caja de diálogo de parámetros](../../Backup/settings.md#configuration), asegúrese de tener una copia coincidente de su archivo de datos, de lo contrario el archivo de registro no podría ser integrado.
+Un archivo de registro siempre debe estar relacionado con un archivo de datos. Si llama a este comando justo después de una activación del archivo de registro (sin copia de seguridad) usando [`SELECT LOG FILE`](../commands/select-log-file) o la [caja de diálogo de parámetros](../../Backup/settings.md#configuration), asegúrese de tener una copia coincidente de su archivo de datos, de lo contrario el archivo de registro no podría ser integrado.
 
 :::
 
@@ -41,4 +41,4 @@ En caso de error, el comando genera un código que puede ser interceptado con el
 
 ## Ver también
 
-[SELECT LOG FILE](select-log-file.md)
+[SELECT LOG FILE](../commands/select-log-file)

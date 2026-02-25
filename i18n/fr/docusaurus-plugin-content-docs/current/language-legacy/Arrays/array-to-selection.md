@@ -1,4 +1,4 @@
----
+﻿---
 id: array-to-selection
 title: ARRAY TO SELECTION
 slug: /commands/array-to-selection
@@ -39,10 +39,10 @@ Si une sélection existe au moment de l'appel, les éléments du tableau sont co
 
 Tous les tableaux doivent avoir le même nombre d'éléments. Si des tableaux ont des tailles différentes, une erreur de syntaxe est générée. 
 
-Cette commande effectue l'opération inverse de [SELECTION TO ARRAY](selection-to-array.md). Cependant, **ARRAY TO SELECTION** ne permet pas d'utiliser de champs en provenance de tables différentes ni de tables liées, même si un lien automatique existe.
+Cette commande effectue l'opération inverse de [SELECTION TO ARRAY](../commands/selection-to-array). Cependant, **ARRAY TO SELECTION** ne permet pas d'utiliser de champs en provenance de tables différentes ni de tables liées, même si un lien automatique existe.
 
 Si vous passez un *\** en dernier paramètre, 4D n’exécute pas immédiatement la ligne d’instruction correspondante mais la stocke en mémoire ; vous pouvez ainsi empiler plusieurs lignes se terminant par un *\**. L’ensemble des lignes en attente sera exécuté par une instruction **ARRAY TO SELECTION** finale sans paramètre *\**. A cette fin, la commande peut être appelée sans aucun paramètre.   
-A l’image de la commande [QUERY](query.md), ce principe vous permet de scinder une instruction complexe en un ensemble de lignes, plus lisibles et plus faciles à maintenir. Il est également possible d’insérer des instructions intermédiaires. 
+A l’image de la commande [QUERY](../commands/query), ce principe vous permet de scinder une instruction complexe en un ensemble de lignes, plus lisibles et plus faciles à maintenir. Il est également possible d’insérer des instructions intermédiaires. 
 
 **ATTENTION :** Comme **ARRAY TO SELECTION** remplace les informations éventuellement présentes dans les enregistrements existants, cette commande doit être utilisée avec prudence. Si un enregistrement est verrouillé par un autre process pendant l'exécution de la commande **ARRAY TO SELECTION**, il n'est pas modifié. Tous les enregistrements verrouillés sont placés dans l'ensemble LockedSet. Après l'exécution de **ARRAY TO SELECTION**, vous pouvez tester si l'ensemble LockedSet contient des enregistrements qui étaient verrouillés.
 
@@ -90,7 +90,7 @@ Vous souhaitez recopier la sélection d'enregistrements vers une table d'archive
 
 ## Voir aussi 
 
-[SELECTION TO ARRAY](selection-to-array.md)  
+[SELECTION TO ARRAY](../commands/selection-to-array)  
 *Variables système*  
 
 ## Propriétés

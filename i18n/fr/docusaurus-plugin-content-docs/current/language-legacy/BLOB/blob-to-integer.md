@@ -1,4 +1,4 @@
----
+﻿---
 id: blob-to-integer
 title: BLOB to integer
 slug: /commands/blob-to-integer
@@ -67,29 +67,29 @@ L'exemple suivant lit 20 valeurs entières d'un BLOB à partir de l'offset 0x200
   
  Voir aussi 
 
-[BLOB to longint](blob-to-longint.md)  
-[BLOB to real](blob-to-real.md)  
-[BLOB to text](blob-to-text.md)  
-[INTEGER TO BLOB](integer-to-blob.md)  
-[LONGINT TO BLOB](longint-to-blob.md)  
-[REAL TO BLOB](real-to-blob.md)  
-[TEXT TO BLOB](text-to-blob.md)  
+[BLOB to longint](../commands/blob-to-longint)  
+[BLOB to real](../commands/blob-to-real)  
+[BLOB to text](../commands/blob-to-text)  
+[INTEGER TO BLOB](../commands/integer-to-blob)  
+[LONGINT TO BLOB](../commands/longint-to-blob)  
+[REAL TO BLOB](../commands/real-to-blob)  
+[TEXT TO BLOB](../commands/text-to-blob)  
 
 ![](../../assets/en/commands/comment.png)Ajouter un commentaire 
 
-[Page préc.](blob-to-document.md) 
+[Page préc.](../commands/blob-to-document) 
 
-[Page suiv.](blob-to-list.md) 
+[Page suiv.](../commands/blob-to-list) 
 
 ## Voir aussi 
 
-[BLOB to longint](blob-to-longint.md)  
-[BLOB to real](blob-to-real.md)  
-[BLOB to text](blob-to-text.md)  
-[INTEGER TO BLOB](integer-to-blob.md)  
-[LONGINT TO BLOB](longint-to-blob.md)  
-[REAL TO BLOB](real-to-blob.md)  
-[TEXT TO BLOB](text-to-blob.md)  
+[BLOB to longint](../commands/blob-to-longint)  
+[BLOB to real](../commands/blob-to-real)  
+[BLOB to text](../commands/blob-to-text)  
+[INTEGER TO BLOB](../commands/integer-to-blob)  
+[LONGINT TO BLOB](../commands/longint-to-blob)  
+[REAL TO BLOB](../commands/real-to-blob)  
+[TEXT TO BLOB](../commands/text-to-blob)  
 
 ## Propriétés
 

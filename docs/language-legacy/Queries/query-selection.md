@@ -1,4 +1,4 @@
----
+﻿---
 id: query-selection
 title: QUERY SELECTION
 slug: /commands/query-selection
@@ -32,14 +32,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUERY SELECTION.Summary-->**QUERY SELECTION** looks for records in *aTable*.<!-- END REF--> The **QUERY SELECTION** command changes the current selection of *table* for the current process and makes the first record of the new selection the current record.
 
-**QUERY SELECTION** works and performs the same actions as [QUERY](query.md). The difference between the two commands is the scope of the query:
+**QUERY SELECTION** works and performs the same actions as [QUERY](../commands/query). The difference between the two commands is the scope of the query:
 
-* [QUERY](query.md) looks for records among all the records in the table.
+* [QUERY](../commands/query) looks for records among all the records in the table.
 * **QUERY SELECTION** looks for records among the records currently selected in the table.
 
-For more information, see the description of the [QUERY](query.md) command.
+For more information, see the description of the [QUERY](../commands/query) command.
 
-The **QUERY SELECTION** command is useful when a query cannot be defined using a sequence of [QUERY](query.md) calls joined with the *\** parameter. Typically, it is the case when you want to query a current selection that does not result from a previous query, but from a command such as [USE SET](use-set.md). 
+The **QUERY SELECTION** command is useful when a query cannot be defined using a sequence of [QUERY](../commands/query) calls joined with the *\** parameter. Typically, it is the case when you want to query a current selection that does not result from a previous query, but from a command such as [USE SET](../commands/use-set). 
 
 ## Example 
 
@@ -55,7 +55,7 @@ You will find all companies located in New York City, with a Stock Exchange acti
 
 ## See also 
 
-[QUERY](query.md)  
+[QUERY](../commands/query)  
 
 ## Properties
 

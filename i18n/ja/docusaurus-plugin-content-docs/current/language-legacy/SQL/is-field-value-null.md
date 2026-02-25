@@ -1,4 +1,4 @@
----
+﻿---
 id: is-field-value-null
 title: Is field value Null
 slug: /commands/is-field-value-null
@@ -34,12 +34,12 @@ displayed_sidebar: docs
 
 このコマンドによって返された値は、ストラクチャーエディターのフィールド定義において"*ヌル値を空値にマップ*" のオプションがチェックされていない場合に限り有効です。そうでない場合には、このコマンドは常に**False** を返します。
 
-**注:** このコマンドはオブジェクト型およびオブジェクトプロパティに対しては使用できません。オブジェクトフィールドのNull 値は、[Null](null.md) コマンドを通して管理されます。
+**注:** このコマンドはオブジェクト型およびオブジェクトプロパティに対しては使用できません。オブジェクトフィールドのNull 値は、[Null](../commands/null) コマンドを通して管理されます。
 
 ## 参照 
 
-[Null](null.md)  
-[SET FIELD VALUE NULL](set-field-value-null.md)  
+[Null](../commands/null)  
+[SET FIELD VALUE NULL](../commands/set-field-value-null)  
 
 ## プロパティ
 

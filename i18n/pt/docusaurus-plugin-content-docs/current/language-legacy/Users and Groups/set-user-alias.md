@@ -1,4 +1,4 @@
----
+﻿---
 id: set-user-alias
 title: SET USER ALIAS
 slug: /commands/set-user-alias
@@ -33,11 +33,11 @@ displayed_sidebar: docs
 
 No parâmetro *alias* (nome alternativo), passe o nome alternativo que se mostrará ao invés do nome da conta de usuário 4D atual.
 
-Quando for executado o comando, o *alias* é usado onde for devolvido ou mostrado a conta de usuário 4D atual, em particular nos comandos [Current user](current-user.md), [Process activity](../commands/process-activity) e [LOCKED BY](locked-by.md), ou o [ORDER BY FORMULA](order-by-formula.md) da janela de administração de 4D Server. Em ambientes cliente/servidor, este comando deve ser executado em aplicações remotas para que cada usuário se identifique no servidor, por exemplo, mediante o comando [Current user](current-user.md), mesmo se todas as aplicações remotas utilizam a mesma conta de usuário 4D.
+Quando for executado o comando, o *alias* é usado onde for devolvido ou mostrado a conta de usuário 4D atual, em particular nos comandos [Current user](../commands/current-user), [Process activity](../commands/process-activity) e [LOCKED BY](../commands/locked-by), ou o [ORDER BY FORMULA](../commands/order-by-formula) da janela de administração de 4D Server. Em ambientes cliente/servidor, este comando deve ser executado em aplicações remotas para que cada usuário se identifique no servidor, por exemplo, mediante o comando [Current user](../commands/current-user), mesmo se todas as aplicações remotas utilizam a mesma conta de usuário 4D.
 
 Para eliminar o *alias* de usuário 4D atual, chame a **SET USER ALIAS**("").
 
-**Nota**: ao chamar ao comando [CHANGE CURRENT USER](change-current-user.md) se restabelece o nome de alias para o usuário atual.
+**Nota**: ao chamar ao comando [CHANGE CURRENT USER](../commands/change-current-user) se restabelece o nome de alias para o usuário atual.
 
 ## Exemplo 
 
@@ -49,9 +49,9 @@ Seus usuários se administran através de uma tabela personalizada e utilizam a 
 
 ## Ver também 
 
-[CHANGE CURRENT USER](change-current-user.md)  
-[Current user](current-user.md)  
-[SET GROUP ACCESS](set-group-access.md)  
+[CHANGE CURRENT USER](../commands/change-current-user)  
+[Current user](../commands/current-user)  
+[SET GROUP ACCESS](../commands/set-group-access)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: execute-method
 title: EXECUTE METHOD
 slug: /commands/execute-method
@@ -43,7 +43,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[EXECUTE FORMULA](execute-formula.md)  
+[EXECUTE FORMULA](../commands/execute-formula)  
 
 ## プロパティ
 

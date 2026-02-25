@@ -1,4 +1,4 @@
----
+﻿---
 id: log-file-to-json
 title: LOG FILE TO JSON
 slug: /commands/log-file-to-json
@@ -38,7 +38,7 @@ In *destFolderPath*, pass the path of the folder where you want to store the JSO
 
 By default, the maximum size of the exported JSON file is 10 MB. When this size is reached, the file is closed and a new file is created. Limiting the size of each JSON file reduces memory requirements for analyzing the files. You can change the maximum size for the exported file by setting a value (in bytes) in the *maxSize* parameter. Passing 0 resets to the default size. Passing a negative value removes any size limit. 
 
-By default, if the *logPath* parameter is omitted, the command saves the current log file. If you want to export a specific log file, pass its path in the *logPath* parameter. The log file must be a file with the ".journal" extension. If you want to export an archived log file (".4bl" extension), you need to convert it beforehand using the [RESTORE](restore.md) command. You can pass an empty string ("") to display the standard open file dialog box, allowing the user to select the log file to save. The selected log file path is returned in the **Document** system variable.
+By default, if the *logPath* parameter is omitted, the command saves the current log file. If you want to export a specific log file, pass its path in the *logPath* parameter. The log file must be a file with the ".journal" extension. If you want to export an archived log file (".4bl" extension), you need to convert it beforehand using the [RESTORE](../commands/restore) command. You can pass an empty string ("") to display the standard open file dialog box, allowing the user to select the log file to save. The selected log file path is returned in the **Document** system variable.
 
 **Note:** When the command saves the current log file, the database is not locked. New operations can be executed while the file is being written on disk - these operations will not be included in the saved file.
 
@@ -107,7 +107,7 @@ The **LOG FILE TO JSON** command modifies the value of the OK and Document varia
 ## See also 
 
 [Download HDI database](http://download.4d.com/Demos/4D%5Fv15%5FR4/ExportLogToJSON%5FHDI.zip)  
-[INTEGRATE MIRROR LOG FILE](integrate-mirror-log-file.md)  
+[INTEGRATE MIRROR LOG FILE](../commands/integrate-mirror-log-file)  
 
 ## Properties
 

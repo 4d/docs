@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-open-url
 title: WA OPEN URL
 slug: /commands/wa-open-url
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 Se passar uma cadeia vazia em *url*, o comando WA OPEN URL não faz nada e não é gerado nenhum erro. Para carregar uma página vazia na área web, passe a cadeia "about:blank" em *url*.
 
-Como o comando [OPEN URL](open-url.md), **WA OPEN URL** aceita vários tipos de sintaxe no parâmetro *url* para designar os arquivos:
+Como o comando [OPEN URL](../commands/open-url), **WA OPEN URL** aceita vários tipos de sintaxe no parâmetro *url* para designar os arquivos:
 
 * sintaxe posix: "file:///c:/Meu%20Arquivo"
 * sintaxe sistema: "c:\\MinhaPasta\\MeuArquivo" (Windows) ou "MeuDisco:MinhaPasta:MeuArquivo" (macOS).
@@ -54,9 +54,9 @@ Este comando tem o mesmo efeito que a modificação do valor da variável "URL" 
 
 ## Ver também 
 
-[OPEN URL](open-url.md)  
-[WA OPEN BACK URL](wa-open-back-url.md)  
-[WA OPEN FORWARD URL](wa-open-forward-url.md)  
+[OPEN URL](../commands/open-url)  
+[WA OPEN BACK URL](../commands/wa-open-back-url)  
+[WA OPEN FORWARD URL](../commands/wa-open-forward-url)  
 
 ## Propriedades
 

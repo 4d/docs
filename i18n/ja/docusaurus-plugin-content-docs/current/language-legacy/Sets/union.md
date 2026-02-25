@@ -1,4 +1,4 @@
----
+﻿---
 id: union
 title: UNION
 slug: /commands/union
@@ -50,8 +50,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[DIFFERENCE](difference.md)  
-[INTERSECTION](intersection.md)  
+[DIFFERENCE](../commands/difference)  
+[INTERSECTION](../commands/intersection)  
 
 ## プロパティ
 

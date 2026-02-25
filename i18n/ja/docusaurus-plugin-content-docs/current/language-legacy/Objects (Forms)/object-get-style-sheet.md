@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-style-sheet
 title: OBJECT Get style sheet
 slug: /commands/object-get-style-sheet
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get style sheet.Summary-->**OBJECT Get style sheet**コマンドは、引数 *object* と *\** で指定したオブジェクトに関連付けられたスタイルシートの名前を返します。<!-- END REF-->
 
-スタイルシートはデザインモードにおいてプロパティリストで設定することができます。または、セッションの間においては、 [OBJECT SET STYLE SHEET](object-set-style-sheet.md) コマンドを使用して設定することもできます。
+スタイルシートはデザインモードにおいてプロパティリストで設定することができます。または、セッションの間においては、 [OBJECT SET STYLE SHEET](../commands/object-set-style-sheet) コマンドを使用して設定することもできます。
 
 任意の *\** 演算子を渡した場合、 *object* 引数でオブジェクト名を文字列で指定します。省略時には *object* 引数でフィールドまたは変数を指定します。
 
@@ -57,7 +57,7 @@ displayed_sidebar: docs
 ## 参照 
 
 *Font Styles*  
-[OBJECT SET STYLE SHEET](object-set-style-sheet.md)  
+[OBJECT SET STYLE SHEET](../commands/object-set-style-sheet)  
 
 ## プロパティ
 

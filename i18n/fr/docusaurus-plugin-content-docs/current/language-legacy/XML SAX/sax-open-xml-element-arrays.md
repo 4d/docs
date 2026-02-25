@@ -1,4 +1,4 @@
----
+﻿---
 id: sax-open-xml-element-arrays
 title: SAX OPEN XML ELEMENT ARRAYS
 slug: /commands/sax-open-xml-element-arrays
@@ -33,9 +33,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAX OPEN XML ELEMENT ARRAYS.Summary-->La commande **SAX OPEN XML ELEMENT ARRAYS** permet d’ajouter un nouvel élément dans le document XML référencé par *document* ainsi que, facultativement, des attributs et leurs valeurs sous forme de tableaux.<!-- END REF--> 
 
-Hormis la prise en charge de tableaux (cf. ci-dessous), cette commande est identique à [SAX OPEN XML ELEMENT](sax-open-xml-element.md). Reportez-vous à la description de cette commande pour le détail de son fonctionnement. 
+Hormis la prise en charge de tableaux (cf. ci-dessous), cette commande est identique à [SAX OPEN XML ELEMENT](../commands/sax-open-xml-element). Reportez-vous à la description de cette commande pour le détail de son fonctionnement. 
 
-**SAX OPEN XML ELEMENT ARRAYS** accepte des tableaux de type date, numérique, booléen et image comme paramètre(s) *tabValeursAttributs*. 4D effectue automatiquement les conversions nécessaires, vous pouvez paramétrer ces conversions à l’aide de la commande [XML SET OPTIONS](xml-set-options.md). 
+**SAX OPEN XML ELEMENT ARRAYS** accepte des tableaux de type date, numérique, booléen et image comme paramètre(s) *tabValeursAttributs*. 4D effectue automatiquement les conversions nécessaires, vous pouvez paramétrer ces conversions à l’aide de la commande [XML SET OPTIONS](../commands/xml-set-options). 
 
 Facultativement, la commande **SAX OPEN XML ELEMENT ARRAYS** permet de passer plusieurs couples d’attributs et de valeurs d’attributs sous forme de tableaux dans les paramètres *tabNomsAttributs* et *tabValeursAttributs*.   
 Les tableaux doivent avoir été créés au préalable et fonctionner par paires. Vous pouvez passer autant de couples de tableaux et autant d’éléments dans chaque couple que vous voulez. 
@@ -63,9 +63,9 @@ La méthode suivante :
 
 ## Voir aussi 
 
-[SAX CLOSE XML ELEMENT](sax-close-xml-element.md)  
-[SAX OPEN XML ELEMENT](sax-open-xml-element.md)  
-[XML SET OPTIONS](xml-set-options.md)  
+[SAX CLOSE XML ELEMENT](../commands/sax-close-xml-element)  
+[SAX OPEN XML ELEMENT](../commands/sax-open-xml-element)  
+[XML SET OPTIONS](../commands/xml-set-options)  
 
 ## Propriétés
 

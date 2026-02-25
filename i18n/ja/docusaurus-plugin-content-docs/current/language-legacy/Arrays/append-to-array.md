@@ -1,4 +1,4 @@
----
+﻿---
 id: append-to-array
 title: APPEND TO ARRAY
 slug: /commands/append-to-array
@@ -54,8 +54,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[DELETE FROM ARRAY](delete-from-array.md)  
-[INSERT IN ARRAY](insert-in-array.md)  
+[DELETE FROM ARRAY](../commands/delete-from-array)  
+[INSERT IN ARRAY](../commands/insert-in-array)  
 
 ## プロパティ
 

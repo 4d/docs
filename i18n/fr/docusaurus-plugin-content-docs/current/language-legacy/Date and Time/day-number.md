@@ -1,4 +1,4 @@
----
+﻿---
 id: day-number
 title: Day number
 slug: /commands/day-number
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 | Friday    | Entier long | 6      |
 | Saturday  | Entier long | 7      |
 
-**Note :** **Day number** retourne une valeur comprise entre 1 et 7\. Pour obtenir le numéro du jour dans le sens "date du mois", utilisez la fonction [Day of](day-of.md). 
+**Note :** **Day number** retourne une valeur comprise entre 1 et 7\. Pour obtenir le numéro du jour dans le sens "date du mois", utilisez la fonction [Day of](../commands/day-of). 
 
 ## Exemple 
 
@@ -60,7 +60,7 @@ L'exemple suivant est une fonction qui retourne le jour d'aujourd'hui sous forme
 
 ## Voir aussi 
 
-[Day of](day-of.md)  
+[Day of](../commands/day-of)  
 
 ## Propriétés
 

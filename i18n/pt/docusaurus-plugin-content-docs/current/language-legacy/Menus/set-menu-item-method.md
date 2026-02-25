@@ -1,4 +1,4 @@
----
+﻿---
 id: set-menu-item-method
 title: SET MENU ITEM METHOD
 slug: /commands/set-menu-item-method
@@ -46,7 +46,7 @@ Consulte o exemplo do comando [SET MENU BAR](set-menu-bar.md "SET MENU BAR").
 
 ## Ver também 
 
-[Get menu item method](get-menu-item-method.md)  
+[Get menu item method](../commands/get-menu-item-method)  
 
 ## Propriedades
 

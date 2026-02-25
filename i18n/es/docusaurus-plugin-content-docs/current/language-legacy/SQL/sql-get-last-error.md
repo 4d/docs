@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-get-last-error
 title: SQL GET LAST ERROR
 slug: /commands/sql-get-last-error
@@ -45,7 +45,7 @@ Los dos últimos parámetros sólo se llenan cuando el error viene de la fuente 
 ## Ver también 
 
 [Last errors](../commands/last-errors)   
-[ON ERR CALL](on-err-call.md)  
+[ON ERR CALL](../commands/on-err-call)  
 
 ## Propiedades
 

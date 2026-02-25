@@ -1,4 +1,4 @@
----
+﻿---
 id: is-window-reduced
 title: Is window reduced
 slug: /commands/is-window-reduced
@@ -32,8 +32,8 @@ displayed_sidebar: docs
 
 ## See also 
 
-[Is window maximized](is-window-maximized.md)  
-[REDUCE RESTORE WINDOW](reduce-restore-window.md)  
+[Is window maximized](../commands/is-window-maximized)  
+[REDUCE RESTORE WINDOW](../commands/reduce-restore-window)  
 
 ## Properties
 

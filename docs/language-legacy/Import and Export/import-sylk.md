@@ -1,4 +1,4 @@
----
+﻿---
 id: import-sylk
 title: IMPORT SYLK
 slug: /commands/import-sylk
@@ -28,9 +28,9 @@ An On Validate event is sent to the form method for each record that is imported
 
 The *document* parameter can include a path that contains volume and folder names. If you pass an empty string, the standard Open File dialog box is displayed. If the user cancels this dialog, the import operation is canceled, and the OK system variable is set to 0.
 
-A progress thermometer is displayed during the import. The user can cancel the operation by clicking a Stop button. Records that have already been imported will not be removed if the user presses the Stop button. If the import is successfully completed, the OK system variable is set to 1\. If an error occurs or the operation was interrupted, the OK variable is set to 0\. The thermometer can be hidden with the [MESSAGES OFF](messages-off.md) command.
+A progress thermometer is displayed during the import. The user can cancel the operation by clicking a Stop button. Records that have already been imported will not be removed if the user presses the Stop button. If the import is successfully completed, the OK system variable is set to 1\. If an error occurs or the operation was interrupted, the OK variable is set to 0\. The thermometer can be hidden with the [MESSAGES OFF](../commands/messages-off) command.
 
-By default, the command uses the UTF-8 character set. Since SYLK format documents generally use the ISO-8859-1 character set, you may need to use the [USE CHARACTER SET](use-character-set.md) command to specify the appropriate character set. 
+By default, the command uses the UTF-8 character set. Since SYLK format documents generally use the ISO-8859-1 character set, you may need to use the [USE CHARACTER SET](../commands/use-character-set) command to specify the appropriate character set. 
 
 When using **IMPORT SYLK**, the default field delimiter is the tab character (code 9). The default record delimiter is the carriage return (code 13). You can modify these values by assigning new values to the two *System Variables* *FldDelimit* and *RecDelimit*. The user can change these default values in the export dialog box of the Design mode. Since Text fields can contain carriage returns, be careful if you use the carriage return as the field delimiter for fields to be exported.
 
@@ -49,10 +49,10 @@ OK is set to 1 if the import is successfully complete; otherwise, it is set to 0
 
 ## See also 
 
-[EXPORT SYLK](export-sylk.md)  
-[IMPORT DIF](import-dif.md)  
-[IMPORT TEXT](import-text.md)  
-[USE CHARACTER SET](use-character-set.md)  
+[EXPORT SYLK](../commands/export-sylk)  
+[IMPORT DIF](../commands/import-dif)  
+[IMPORT TEXT](../commands/import-text)  
+[USE CHARACTER SET](../commands/use-character-set)  
 
 ## Properties
 

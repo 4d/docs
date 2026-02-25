@@ -1,4 +1,4 @@
----
+﻿---
 id: last-update-log-path
 title: Get last update log path
 slug: /commands/last-update-log-path
@@ -25,8 +25,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[RESTART 4D](restart-4d.md)  
-[SET UPDATE FOLDER](set-update-folder.md)  
+[RESTART 4D](../commands/restart-4d)  
+[SET UPDATE FOLDER](../commands/set-update-folder)  
 
 ## プロパティ
 

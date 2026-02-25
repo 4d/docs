@@ -1,4 +1,4 @@
----
+﻿---
 id: set-field-relation
 title: SET FIELD RELATION
 slug: /commands/set-field-relation
@@ -43,7 +43,7 @@ Passe nos parâmetros *um* e *muitos*, os valores que indicam o cambio de estado
 * Automatic (3) = Transformar automáticas as relações no processo atual.
 **Nota:** as mudanças realizadas com este comando só aplicam ao processo atual. A configuração das relações definida utilizando as opções da janela de propriedades da relação não é modificada.  
   
-**Note**: Se passar True ao comando [SET AUTOMATIC RELATIONS](set-automatic-relations.md) durante a mesma sessão, as chamadas ao comando SET FIELD RELATION se ignoram, sem importar se estão localizadas antes ou depois de [SET AUTOMATIC RELATIONS](set-automatic-relations.md). Para "bloquear" o modo automático e ter em conta chamadas a SET FIELD RELATION, passe False a [SET AUTOMATIC RELATIONS](set-automatic-relations.md).
+**Note**: Se passar True ao comando [SET AUTOMATIC RELATIONS](../commands/set-automatic-relations) durante a mesma sessão, as chamadas ao comando SET FIELD RELATION se ignoram, sem importar se estão localizadas antes ou depois de [SET AUTOMATIC RELATIONS](../commands/set-automatic-relations). Para "bloquear" o modo automático e ter em conta chamadas a SET FIELD RELATION, passe False a [SET AUTOMATIC RELATIONS](../commands/set-automatic-relations).
 
 ## Exemplo 
 
@@ -57,10 +57,10 @@ QR REPORT(\[Faturas\];Char(1))\[#/code4D\]
 
 ## Ver também 
 
-[GET AUTOMATIC RELATIONS](get-automatic-relations.md)  
-[GET FIELD RELATION](get-field-relation.md)  
-[GET RELATION PROPERTIES](get-relation-properties.md)  
-[SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
+[GET AUTOMATIC RELATIONS](../commands/get-automatic-relations)  
+[GET FIELD RELATION](../commands/get-field-relation)  
+[GET RELATION PROPERTIES](../commands/get-relation-properties)  
+[SET AUTOMATIC RELATIONS](../commands/set-automatic-relations)  
 
 ## Propriedades
 

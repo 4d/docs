@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-get-xml-attribute-by-index
 title: DOM GET XML ATTRIBUTE BY INDEX
 slug: /commands/dom-get-xml-attribute-by-index
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 Pase en *refElement* la referencia de un elemento XML y en *indexAtrib* el número de índice del atributo que quiere conocer el nombre. El nombre se devuelve en el parámetro *nomAtrib* y su valor se devuelve en el parámetro *valorAtrib*. 4D intentará convertir el valor obtenido en el tipo de variable pasada como parámetro.
 
-**Nota:** el número de índice no corresponde a la ubicación del atributo en el archivo XML mostrado en forma de texto. En XML, el índice de un atributo indica su posición entre los atributos clasificados por orden alfabético (en función de su nombre). Para ver una ilustración de este principio, consulte el ejemplo del comando [DOM Count XML attributes](dom-count-xml-attributes.md).
+**Nota:** el número de índice no corresponde a la ubicación del atributo en el archivo XML mostrado en forma de texto. En XML, el índice de un atributo indica su posición entre los atributos clasificados por orden alfabético (en función de su nombre). Para ver una ilustración de este principio, consulte el ejemplo del comando [DOM Count XML attributes](../commands/dom-count-xml-attributes).
 
 Si el valor pasado en *indexAtrib* es superior al número de atributos presentes en el elemento XML, se devuelve un error.
 
@@ -49,8 +49,8 @@ Si el comando ha sido ejecutado correctamente, la variable sistema OK toma el va
 
 ## Ver también 
 
-[DOM GET XML ATTRIBUTE BY NAME](dom-get-xml-attribute-by-name.md)  
-[DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  
+[DOM GET XML ATTRIBUTE BY NAME](../commands/dom-get-xml-attribute-by-name)  
+[DOM REMOVE XML ATTRIBUTE](../commands/dom-remove-xml-attribute)  
 
 ## Propiedades
 

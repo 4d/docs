@@ -1,4 +1,4 @@
----
+﻿---
 id: window-list
 title: WINDOW LIST
 slug: /commands/window-list
@@ -60,8 +60,8 @@ La méthode projet suivante place en "mosaïque" toutes les fenêtres ouvertes (
 
 ## Voir aussi 
 
-[Window kind](window-kind.md)  
-[Window process](window-process.md)  
+[Window kind](../commands/window-kind)  
+[Window process](../commands/window-process)  
 
 ## Propriétés
 

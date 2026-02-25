@@ -1,4 +1,4 @@
----
+﻿---
 id: dynamic-pop-up-menu
 title: Dynamic pop up menu
 slug: /commands/dynamic-pop-up-menu
@@ -33,13 +33,13 @@ displayed_sidebar: docs
 ## Description 
 
 <!--REF #_command_.Dynamic pop up menu.Summary-->La commande **Dynamic pop up menu** fait apparaître un pop up menu hiérarchique à l’emplacement courant de la souris ou à l’emplacement défini par les paramètres facultatifs *coordX* et *coordY*.<!-- END REF-->  
-Le menu hiérarchique utilisé doit avoir été créé à l’aide de la commande [Create menu](create-menu.md). La référence retournée par [Create menu](create-menu.md) doit être passée dans le paramètre *menu*.
+Le menu hiérarchique utilisé doit avoir été créé à l’aide de la commande [Create menu](../commands/create-menu). La référence retournée par [Create menu](../commands/create-menu) doit être passée dans le paramètre *menu*.
 
-**Note :** La commande [Pop up menu](pop-up-menu.md) (thème “Interface utilisateur”) permet de créer des pop up menus basés sur du texte.
+**Note :** La commande [Pop up menu](../commands/pop-up-menu) (thème “Interface utilisateur”) permet de créer des pop up menus basés sur du texte.
 
 Conformément aux règles standard d’interface, cette commande doit généralement être appelée en réponse à un clic droit, ou lorsque le bouton reste enfoncé un certain laps de temps (menu contextuel par exemple).
 
-Le paramètre facultatif *parDéfaut* vous permet de définir un élément du pop up menu sélectionné par défaut lorsque celui-ci apparaît. Passez dans ce paramètre la chaîne personnalisée associée à l’élément de menu. Cette chaîne doit avoir été préalablement définie à l’aide de la commande [SET MENU ITEM PARAMETER](set-menu-item-parameter.md). Si vous ne passez pas ce paramètre, le premier élément du menu sera sélectionné par défaut.
+Le paramètre facultatif *parDéfaut* vous permet de définir un élément du pop up menu sélectionné par défaut lorsque celui-ci apparaît. Passez dans ce paramètre la chaîne personnalisée associée à l’élément de menu. Cette chaîne doit avoir été préalablement définie à l’aide de la commande [SET MENU ITEM PARAMETER](../commands/set-menu-item-parameter). Si vous ne passez pas ce paramètre, le premier élément du menu sera sélectionné par défaut.
 
 **Note :** Seul une ligne de menu de premier niveau peut être sélectionnée par défaut.
 
@@ -47,11 +47,11 @@ Les paramètres facultatifs *coordX* et *coordY* permettent de désigner l’emp
 
 Si vous souhaitez afficher un pop up associé à un bouton 3D, il suffit de ne pas passer les paramètres facultatifs *coordX* et *coordY*. Dans ce cas, 4D calcule automatiquement l’emplacement du menu par rapport au bouton en fonction des normes d’interface de la plate-forme courante (le bouton 3D doit disposer de la propriété "Avec pop-up menu/Lié" ou "Avec pop-up menu/Séparé").
 
-Si une ligne de menu a été sélectionnée, la commande retourne sa chaîne de caractères personnalisée associée (telle que définie à l’aide de la commande [SET MENU ITEM PARAMETER](set-menu-item-parameter.md)). Sinon, la commande retourne une chaîne vide.
+Si une ligne de menu a été sélectionnée, la commande retourne sa chaîne de caractères personnalisée associée (telle que définie à l’aide de la commande [SET MENU ITEM PARAMETER](../commands/set-menu-item-parameter)). Sinon, la commande retourne une chaîne vide.
 
 Si une action standard est associée à une ligne de menu, elle est prise en compte par la commande **Dynamic pop up menu** à différents niveaux :
 
-* Si une action standard n'est pas activée (c'est-à-dire ne peut pas être appelée) dans le contexte du pop-up menu, le libellé est automatiquement caché. Vous pouvez savoir si une action est disponible en utilisant la commande [Action info](action-info.md).
+* Si une action standard n'est pas activée (c'est-à-dire ne peut pas être appelée) dans le contexte du pop-up menu, le libellé est automatiquement caché. Vous pouvez savoir si une action est disponible en utilisant la commande [Action info](../commands/action-info).
 * Les propriétés liées à une action associée sont automatiquement "checked", "unchecked" ou "mixed" selon la sélection.
 * Si le titre de l'action de la ligne de menu a été défini en utilisant la constante ak standard action title, le nom localisé est affiché dans le menu.
 * Lorsque la ligne de menu est sélectionnée, l'action standard associée est appelée (l'exécution est asynchrone).
@@ -98,11 +98,11 @@ paramRef:=Dynamic pop up menu($refMainContextMenu)
 
 ## Voir aussi 
 
-[Get menu item parameter](get-menu-item-parameter.md)  
-[Get selected menu item parameter](get-selected-menu-item-parameter.md)  
-[Pop up menu](pop-up-menu.md)  
-[SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
-[SET MENU ITEM PROPERTY](set-menu-item-property.md)  
+[Get menu item parameter](../commands/get-menu-item-parameter)  
+[Get selected menu item parameter](../commands/get-selected-menu-item-parameter)  
+[Pop up menu](../commands/pop-up-menu)  
+[SET MENU ITEM PARAMETER](../commands/set-menu-item-parameter)  
+[SET MENU ITEM PROPERTY](../commands/set-menu-item-property)  
 
 ## Propriétés
 

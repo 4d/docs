@@ -1,4 +1,4 @@
----
+﻿---
 id: method-set-attributes
 title: METHOD SET ATTRIBUTES
 slug: /commands/method-set-attributes
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 *attributes* 引数には、メソッドに対して設定したい属性をすべて含んだオブジェクト、またはオブジェクトの配列を渡します (渡した*path* 引数の種類によります)。
 
-メソッドの属性は[OB SET](ob-set.md) または [OB SET ARRAY](ob-set-array.md) コマンドを使用して設定する必要があります。ブール型の属性に対してTrueまたはFalseの値を、拡張された属性に対しては特定の値(例えば4D Mobile Property において"scope":"table" など)を設定します。*attributes* 引数に存在する属性のみがメソッド属性内で更新されます。
+メソッドの属性は[OB SET](../commands/ob-set) または [OB SET ARRAY](../commands/ob-set-array) コマンドを使用して設定する必要があります。ブール型の属性に対してTrueまたはFalseの値を、拡張された属性に対しては特定の値(例えば4D Mobile Property において"scope":"table" など)を設定します。*attributes* 引数に存在する属性のみがメソッド属性内で更新されます。
 
 コマンドがコンポーネントから実行された場合、デフォルトではコンポーネントメソッドに対して適用されます。*\** 引数を渡した場合、コマンドはホストデータベースのメソッドに適用されます。
 
@@ -62,8 +62,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[METHOD GET ATTRIBUTES](method-get-attributes.md)  
-[METHOD SET ATTRIBUTE](method-set-attribute.md)  
+[METHOD GET ATTRIBUTES](../commands/method-get-attributes)  
+[METHOD SET ATTRIBUTE](../commands/method-set-attribute)  
 
 ## プロパティ
 

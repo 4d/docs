@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-help-tip
 title: OBJECT Get help tip
 slug: /commands/object-get-help-tip
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 オプションの *\** 引数を渡すと、*object* 引数はオブジェクト名 (文字列) です。この引数を渡さない場合、*object* は変数であり、文字列ではなく変数参照を渡します。
 
-このコマンドは指定したオブジェクトにデザインモードあるいは[OBJECT SET HELP TIP](object-set-help-tip.md)コマンドでカレントプロセスに関連付けられた、現在のヘルプメッセージを返します。返される文字列はフォームが実行されたときに表示されるメッセージです。4D参照やxliff resnameなどの可変な値が含まれる場合、文脈に基づき解析された結果が返されます。
+このコマンドは指定したオブジェクトにデザインモードあるいは[OBJECT SET HELP TIP](../commands/object-set-help-tip)コマンドでカレントプロセスに関連付けられた、現在のヘルプメッセージを返します。返される文字列はフォームが実行されたときに表示されるメッセージです。4D参照やxliff resnameなどの可変な値が含まれる場合、文脈に基づき解析された結果が返されます。
 
 ## 例題 
 
@@ -47,7 +47,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT SET HELP TIP](object-set-help-tip.md)  
+[OBJECT SET HELP TIP](../commands/object-set-help-tip)  
 
 ## プロパティ
 

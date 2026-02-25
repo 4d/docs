@@ -1,4 +1,4 @@
----
+﻿---
 id: selection-to-json
 title: Selection to JSON
 slug: /commands/selection-to-json
@@ -46,7 +46,7 @@ Este comando suporta campos tipo Objeto: os dados desses campos são automaticam
  Selection to JSON([aTable];objectField)
 ```
 
-**Nota:** Depois de uma chamada a **Selection to JSON**, a seleção atual e registro atual permanecem o mesmo, mas o registro atual não é mais carregado. e poderia ter mudado (o último registro da seleçao atual é então o registro atual). Depois do comando Selection to JSON, utilize os comandos [LOAD RECORD](load-record.md) em combinação com [GOTO SELECTED RECORD](goto-selected-record.md) (se for necessário) utilize os valores dos campos no registro atual.
+**Nota:** Depois de uma chamada a **Selection to JSON**, a seleção atual e registro atual permanecem o mesmo, mas o registro atual não é mais carregado. e poderia ter mudado (o último registro da seleçao atual é então o registro atual). Depois do comando Selection to JSON, utilize os comandos [LOAD RECORD](../commands/load-record) em combinação com [GOTO SELECTED RECORD](../commands/goto-selected-record) (se for necessário) utilize os valores dos campos no registro atual.
 
 ## Exemplo 1 
 
@@ -103,7 +103,7 @@ Pode usar a sintaxe *modelo* para exportar campos de tabelas diferentes:
 
 ## Ver também 
 
-[JSON TO SELECTION](json-to-selection.md)  
+[JSON TO SELECTION](../commands/json-to-selection)  
 
 ## Propriedades
 

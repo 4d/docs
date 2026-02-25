@@ -1,4 +1,4 @@
----
+﻿---
 id: delete-menu-item
 title: DELETE MENU ITEM
 slug: /commands/delete-menu-item
@@ -44,8 +44,8 @@ Si omite el parámetro *proceso*, DELETE MENU ITEM se aplica a la barra de menú
 
 ## Ver también 
 
-[APPEND MENU ITEM](append-menu-item.md)  
-[INSERT MENU ITEM](insert-menu-item.md)  
+[APPEND MENU ITEM](../commands/append-menu-item)  
+[INSERT MENU ITEM](../commands/insert-menu-item)  
 
 ## Propiedades
 

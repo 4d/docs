@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-parse-xml-variable
 title: DOM Parse XML variable
 slug: /commands/dom-parse-xml-variable
@@ -54,11 +54,11 @@ Il existe deux moyens pour désigner une DTD :
 **Validation par schema**  
 Pour valider le document via un schéma XML, il suffit de passer dans le troisième paramètre un fichier ou un URL d’extension“xsd” au lieu de “dtd”. La validation par schéma XML est considérée comme plus souple et plus puissante que la validation par DTD. Le langage des documents XSD est basé sur le langage XML. Les schémas XML prennent notamment en charge des types de données. Pour plus d’informations sur les schémas XML, reportez-vous à l’adresse *http://www.w3.org/XML/Schema*.
 
-Si la validation ne peut être effectuée (pas de DTD ou d'XSD, URL incorrect, etc.), une erreur est générée. La variable système Error indique le numéro de l’erreur. Vous pouvez intercepter cette erreur à l’aide d’une méthode installée par la commande [ON ERR CALL](on-err-call.md). 
+Si la validation ne peut être effectuée (pas de DTD ou d'XSD, URL incorrect, etc.), une erreur est générée. La variable système Error indique le numéro de l’erreur. Vous pouvez intercepter cette erreur à l’aide d’une méthode installée par la commande [ON ERR CALL](../commands/on-err-call). 
 
 La commande retourne une chaîne de caractères (RefElément) constituant la référence en mémoire de la structure virtuelle de la variable. Cette référence devra être utilisée avec les autres commandes d’analyse XML. 
 
-**Important :** Une fois que vous n'en avez plus besoin, n'oubliez pas d'appeler la commande [DOM CLOSE XML](dom-close-xml.md) avec cette référence afin de libérer la mémoire.
+**Important :** Une fois que vous n'en avez plus besoin, n'oubliez pas d'appeler la commande [DOM CLOSE XML](../commands/dom-close-xml) avec cette référence afin de libérer la mémoire.
 
 ## Exemple 1 
 
@@ -95,8 +95,8 @@ Si la commande a été correctement exécutée, la variable système OK prend la
 
 ## Voir aussi 
 
-[DOM CLOSE XML](dom-close-xml.md)  
-[DOM Parse XML source](dom-parse-xml-source.md)  
+[DOM CLOSE XML](../commands/dom-close-xml)  
+[DOM Parse XML source](../commands/dom-parse-xml-source)  
 
 ## Propriétés
 

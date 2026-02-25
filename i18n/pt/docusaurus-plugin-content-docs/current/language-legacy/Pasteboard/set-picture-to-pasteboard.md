@@ -1,4 +1,4 @@
----
+﻿---
 id: set-picture-to-pasteboard
 title: SET PICTURE TO PASTEBOARD
 slug: /commands/set-picture-to-pasteboard
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 A imagem se passa a seu formato nativo (jpeg, tif, png, etc)
 
-Depois de colocar a imagem na área de transferência, pode recuperá-la utilizando o comando [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md) ou chamando [GET PASTEBOARD DATA](get-pasteboard-data.md)("com.4d.private.picture.gif";...).
+Depois de colocar a imagem na área de transferência, pode recuperá-la utilizando o comando [GET PICTURE FROM PASTEBOARD](../commands/get-picture-from-pasteboard) ou chamando [GET PASTEBOARD DATA](../commands/get-pasteboard-data)("com.4d.private.picture.gif";...).
 
 ## Exemplo 
 
@@ -59,8 +59,8 @@ Se não houver suficiente memória para colocar uma cópia da imagem na área de
 
 ## Ver também 
 
-[APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
-[GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
+[APPEND DATA TO PASTEBOARD](../commands/append-data-to-pasteboard)  
+[GET PICTURE FROM PASTEBOARD](../commands/get-picture-from-pasteboard)  
 
 ## Propriedades
 

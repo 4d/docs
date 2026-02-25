@@ -1,4 +1,4 @@
----
+﻿---
 id: "null"
 title: "Null"
 slug: /commands/null
@@ -33,15 +33,15 @@ This function allows you to assign or compare the **null** value to the followin
 
 | **Language elements**                                   | **Comments**                                                                                                                                                                                                                                                       |
 | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| object property values                                  | Comparing **Null** to an object property returns true if the property value is null, and false otherwise. To simplify code, comparing **Null** also returns true if the property does not exist in the object (i.e. is [Undefined](undefined.md)), see example 4\. |
+| object property values                                  | Comparing **Null** to an object property returns true if the property value is null, and false otherwise. To simplify code, comparing **Null** also returns true if the property does not exist in the object (i.e. is [Undefined](../commands/undefined)), see example 4\. |
 | collection elements                                     | When a collection is expanded by adding non-adjacent elements, any intermediary elements get automatically the **null** value.                                                                                                                                     |
 | object variables             | See (\*) below                                                                                                                                                                                                                                                     |
 | collection variables | See (\*) below                                                                                                                                                                                                                                                     |
 | pointer variables         | See (\*) below                                                                                                                                                                                                                                                     |
-| picture variables          | (\*) Assigning the **null** value to such a variable type clears its contents. In this case, it has the same effect as calling the [CLEAR VARIABLE](clear-variable.md) command.                                                                                    |
+| picture variables          | (\*) Assigning the **null** value to such a variable type clears its contents. In this case, it has the same effect as calling the [CLEAR VARIABLE](../commands/clear-variable) command.                                                                                    |
 | variant variables          |                                                                                                                                                                                                                                                                    |
 
-**Note:** This command cannot be used with scalar database fields. Null values in database fields are managed by the SQL engine, and are handled through the [Is field value Null](is-field-value-null.md) and [SET FIELD VALUE NULL](set-field-value-null.md) commands,
+**Note:** This command cannot be used with scalar database fields. Null values in database fields are managed by the SQL engine, and are handled through the [Is field value Null](../commands/is-field-value-null) and [SET FIELD VALUE NULL](../commands/set-field-value-null) commands,
 
 ## Example 1 
 
@@ -119,7 +119,7 @@ These examples show the various ways to assign or compare the **null** value to 
 
 ## Example 4 
 
-Here are the different results of the [Undefined](undefined.md) command as well as the [Null](null.md) command with object properties, depending on the context:
+Here are the different results of the [Undefined](../commands/undefined) command as well as the [Null](../commands/null) command with object properties, depending on the context:
 
 ```4d
  var vEmp : Object
@@ -139,9 +139,9 @@ Here are the different results of the [Undefined](undefined.md) command as well 
 
 ## See also 
 
-[Is field value Null](is-field-value-null.md)  
-[OB SET NULL](ob-set-null.md)  
-[SET FIELD VALUE NULL](set-field-value-null.md)  
+[Is field value Null](../commands/is-field-value-null)  
+[OB SET NULL](../commands/ob-set-null)  
+[SET FIELD VALUE NULL](../commands/set-field-value-null)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-enterable
 title: OBJECT SET ENTERABLE
 slug: /commands/object-set-enterable
@@ -52,7 +52,7 @@ displayed_sidebar: docs
 | obk not enterable               | 0 | ユーザーは、フォームオブジェクトに値を入力することができませんが、**入力オブジェクト**と**4D Write Pro エリア**はフォーカス可能です (他の入力不可オブジェクトは自動的にフォーカス不可となります)。 |  
 | obk not enterable not focusable | 2 | ユーザーは、フォームオブジェクトに値を入力することができず、**入力オブジェクト**と**4D Write Proエリア**もフォーカス不可となります。                                  |
 
-また、サブフォームと[MODIFY SELECTION](modify-selection.md)や[DISPLAY SELECTION](display-selection.md)コマンドを用いて表示されたリストフォームに対して、プログラムからリスト更新可モードを有効にするために、**OBJECT SET ENTERABLE**コマンドを使用することもできます:
+また、サブフォームと[MODIFY SELECTION](../commands/modify-selection)や[DISPLAY SELECTION](../commands/display-selection)コマンドを用いて表示されたリストフォームに対して、プログラムからリスト更新可モードを有効にするために、**OBJECT SET ENTERABLE**コマンドを使用することもできます:
 
 * サブフォームの場合、*entryArea*引数にサブフォームテーブル名またはサブフォームオブジェクト名を渡すことができます。例: **OBJECT SET ENTERABLE**(\*;"Subform";True) このコマンドはサブフォームに対してはサブフォームのフォームメソッドにおいてのみ動作します。
 * リストフォームの場合、*entryArea* 引数にはフォームのテーブル名を渡さなくてはなりません。例: **OBJECT SET ENTERABLE**(\[MyTable\];True)
@@ -85,8 +85,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT Get enterable](object-get-enterable.md)  
-[OBJECT SET VISIBLE](object-set-visible.md)  
+[OBJECT Get enterable](../commands/object-get-enterable)  
+[OBJECT SET VISIBLE](../commands/object-set-visible)  
 
 ## プロパティ
 

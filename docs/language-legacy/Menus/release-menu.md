@@ -1,4 +1,4 @@
----
+﻿---
 id: release-menu
 title: RELEASE MENU
 slug: /commands/release-menu
@@ -27,13 +27,13 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.RELEASE MENU.Summary-->The **RELEASE MENU** command removes the menu whose ID is passed in *menu* from memory.<!-- END REF--> This menu must have been created by the menu [Create menu](create-menu.md) command. The following rule applies: for each [Create menu](create-menu.md) there must be a corresponding [RELEASE MENU](release-menu.md).
+<!--REF #_command_.RELEASE MENU.Summary-->The **RELEASE MENU** command removes the menu whose ID is passed in *menu* from memory.<!-- END REF--> This menu must have been created by the menu [Create menu](../commands/create-menu) command. The following rule applies: for each [Create menu](../commands/create-menu) there must be a corresponding [RELEASE MENU](../commands/release-menu).
 
 The command removes every instance of the *menu* menu from every menu bar and every process. If the menu belongs to a menu bar which is in use, it will continue to work but can no longer be modified. It will only be truly removed from the memory when the last menu bar where it appears is no longer in use.
 
 This command can be used with menus that are used as menu bars.
 
-Any sub-menus used by *menu* are not removed if they were created directly using the [Create menu](create-menu.md) command. In this case, you must remove them individually (see the rule mentioned above). However, if the submenus come from the duplication of an existing menu, do not call [RELEASE MENU](release-menu.md) with them because 4D will erase them automatically.
+Any sub-menus used by *menu* are not removed if they were created directly using the [Create menu](../commands/create-menu) command. In this case, you must remove them individually (see the rule mentioned above). However, if the submenus come from the duplication of an existing menu, do not call [RELEASE MENU](../commands/release-menu) with them because 4D will erase them automatically.
 
 ## Example 
 
@@ -65,7 +65,7 @@ This example shows different ways to use this command:
 
 ## See also 
 
-[Create menu](create-menu.md)  
+[Create menu](../commands/create-menu)  
 
 ## Properties
 

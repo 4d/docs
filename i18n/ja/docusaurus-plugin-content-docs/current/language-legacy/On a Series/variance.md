@@ -1,4 +1,4 @@
----
+﻿---
 id: variance
 title: Variance
 slug: /commands/variance
@@ -62,7 +62,7 @@ displayed_sidebar: docs
  PRINT SELECTION([Students])
 ```
 
-**注:** [BREAK LEVEL](break-level.md)コマンドの引数は、印刷するレポートのブレーク数と同じ数でなければなりません。ブレーク処理に関する詳細は*印刷*コマンドを参照してください。
+**注:** [BREAK LEVEL](../commands/break-level)コマンドの引数は、印刷するレポートのブレーク数と同じ数でなければなりません。ブレーク処理に関する詳細は*印刷*コマンドを参照してください。
 
 ## 例題 2 
 
@@ -77,10 +77,10 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Average](average.md)  
-[Std deviation](std-deviation.md)  
-[Sum](sum.md)  
-[Sum squares](sum-squares.md)  
+[Average](../commands/average)  
+[Std deviation](../commands/std-deviation)  
+[Sum](../commands/sum)  
+[Sum squares](../commands/sum-squares)  
 
 ## プロパティ
 

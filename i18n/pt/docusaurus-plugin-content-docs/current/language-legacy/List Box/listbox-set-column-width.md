@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-column-width
 title: LISTBOX SET COLUMN WIDTH
 slug: /commands/listbox-set-column-width
@@ -45,7 +45,7 @@ Os parâmetros opcionais *larguraMin e* *larguraMax* permitem definir os limites
 
 ## Ver também 
 
-[LISTBOX Get column width](listbox-get-column-width.md)  
+[LISTBOX Get column width](../commands/listbox-get-column-width)  
 
 ## Propriedades
 

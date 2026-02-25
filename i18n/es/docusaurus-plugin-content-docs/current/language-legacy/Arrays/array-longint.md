@@ -1,4 +1,4 @@
----
+﻿---
 id: array-longint
 title: ARRAY LONGINT
 slug: /commands/array-longint
@@ -57,8 +57,8 @@ Este ejemplo crea un array interproceso de 4 bytes de 50 elementos de tipo [Ente
 
 ## Ver también 
 
-[ARRAY INTEGER](array-integer.md)  
-[ARRAY REAL](array-real.md)  
+[ARRAY INTEGER](../commands/array-integer)  
+[ARRAY REAL](../commands/array-real)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: show-tool-bar
 title: SHOW TOOL BAR
 slug: /commands/show-tool-bar
@@ -34,11 +34,11 @@ Se uma janela barra de ferramentas foi criada pelo comando [Open form window](..
 
 ## Exemplo 
 
-Consulte o exemplo do comando [HIDE TOOL BAR](hide-tool-bar.md).
+Consulte o exemplo do comando [HIDE TOOL BAR](../commands/hide-tool-bar).
 
 ## Ver também 
 
-[HIDE TOOL BAR](hide-tool-bar.md)  
+[HIDE TOOL BAR](../commands/hide-tool-bar)  
 
 ## Propriedades
 

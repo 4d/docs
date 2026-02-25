@@ -1,4 +1,4 @@
----
+﻿---
 id: set-printable-margin
 title: SET PRINTABLE MARGIN
 slug: /commands/set-printable-margin
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.SET PRINTABLE MARGIN.Summary-->La commande **SET PRINTABLE MARGIN** permet de fixer les valeurs des différentes marges d’impression lors de l’utilisation des commandes [Print form](../commands/print-form), [PRINT SELECTION](print-selection.md) et [PRINT RECORD](print-record.md).<!-- END REF-->
+<!--REF #_command_.SET PRINTABLE MARGIN.Summary-->La commande **SET PRINTABLE MARGIN** permet de fixer les valeurs des différentes marges d’impression lors de l’utilisation des commandes [Print form](../commands/print-form), [PRINT SELECTION](../commands/print-selection) et [PRINT RECORD](../commands/print-record).<!-- END REF-->
 
 Vous pouvez passer dans les paramètres *gauche*, *haut*, *droite* et *bas* une des valeurs suivantes :
 
@@ -42,7 +42,7 @@ Les valeurs des paramètres *droite* et *bas* sont relatives à la droite et au 
 
 Par défaut, 4D base ses impressions sur les marges imprimante. Une fois la commande **SET PRINTABLE MARGIN** exécutée, les paramètres modifiés seront conservés dans le même process pour toute la session.
 
-**Note :** Pour plus d'informations sur la gestion des marges d'impression dans 4D, reportez-vous à la description de la commande [GET PRINTABLE MARGIN](get-printable-margin.md). 
+**Note :** Pour plus d'informations sur la gestion des marges d'impression dans 4D, reportez-vous à la description de la commande [GET PRINTABLE MARGIN](../commands/get-printable-margin). 
 
 ## Exemple 1 
 
@@ -66,8 +66,8 @@ L’exemple suivant permet d’obtenir la taille du papier :
 
 ## Voir aussi 
 
-[GET PRINTABLE MARGIN](get-printable-margin.md)  
-[Get printed height](get-printed-height.md)  
+[GET PRINTABLE MARGIN](../commands/get-printable-margin)  
+[Get printed height](../commands/get-printed-height)  
 [Print form](../commands/print-form)  
 
 ## Propriétés

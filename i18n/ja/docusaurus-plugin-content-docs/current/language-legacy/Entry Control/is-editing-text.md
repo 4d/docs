@@ -1,4 +1,4 @@
----
+﻿---
 id: is-editing-text
 title: Is editing text
 slug: /commands/is-editing-text
@@ -68,8 +68,8 @@ displayed_sidebar: docs
 ## 参照 
 
   
-[FILTER KEYSTROKE](filter-keystroke.md)  
-[Get edited text](get-edited-text.md)  
+[FILTER KEYSTROKE](../commands/filter-keystroke)  
+[Get edited text](../commands/get-edited-text)  
 
 ## プロパティ
 

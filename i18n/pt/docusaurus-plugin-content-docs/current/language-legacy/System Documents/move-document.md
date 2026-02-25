@@ -1,4 +1,4 @@
----
+﻿---
 id: move-document
 title: MOVE DOCUMENT
 slug: /commands/move-document
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 Passe a rota de acesso completa ao documento existente em *rotaFonte* e o novo nome e/ou localização do documento em *rotaDest*.  
   
-**Advertência**: utilizando MOVE DOCUMENT, pode mover um documento desde e para qualquer diretório no mesmo volume. Se desejar mover um documento entre dois volumes diferentes, utilize o comando [COPY DOCUMENT](copy-document.md) para “mover” o documento, e depois apagar a cópia original com o comando [DELETE DOCUMENT](delete-document.md)..  
+**Advertência**: utilizando MOVE DOCUMENT, pode mover um documento desde e para qualquer diretório no mesmo volume. Se desejar mover um documento entre dois volumes diferentes, utilize o comando [COPY DOCUMENT](../commands/copy-document) para “mover” o documento, e depois apagar a cópia original com o comando [DELETE DOCUMENT](../commands/delete-document)..  
 
 ## Exemplo 1 
 
@@ -62,7 +62,7 @@ O exemplo abaixo move o documento DocNome:
 
 ## Ver também 
 
-[COPY DOCUMENT](copy-document.md)  
+[COPY DOCUMENT](../commands/copy-document)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: std-deviation
 title: Std deviation
 slug: /commands/std-deviation
@@ -52,7 +52,7 @@ O método a seguir é chamado para imprimir os registros na seleção e ativar o
  PRINT SELECTION([Tabela1])
 ```
 
-**Nota:** o parâmetro do comando [BREAK LEVEL](break-level.md) deve ser igual ao número de quebras de seu relatório. Para maior informação sobre quebras, consulte os comandos do capítulo *Imprimir*. 
+**Nota:** o parâmetro do comando [BREAK LEVEL](../commands/break-level) deve ser igual ao número de quebras de seu relatório. Para maior informação sobre quebras, consulte os comandos do capítulo *Imprimir*. 
 
 ## Exemplo 2 
 
@@ -67,10 +67,10 @@ Este exemplo obtém o desvio padrão de uma série de valores localizados num ar
 
 ## Ver também 
 
-[Average](average.md)  
-[Sum](sum.md)  
-[Sum squares](sum-squares.md)  
-[Variance](variance.md)  
+[Average](../commands/average)  
+[Sum](../commands/sum)  
+[Sum squares](../commands/sum-squares)  
+[Variance](../commands/variance)  
 
 ## Propriedades
 

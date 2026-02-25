@@ -1,4 +1,4 @@
----
+﻿---
 id: printers-list
 title: PRINTERS LIST
 slug: /commands/printers-list
@@ -44,7 +44,7 @@ You can pass a second optional array, *altNamesArray*. The contents of this arra
 
 The optional *modelsArray* parameter is used to get the model of each printer. 
 
-Use the [SET CURRENT PRINTER](set-current-printer.md) and [Get current printer](get-current-printer.md) commands to modify or get the selected printer in 4D. You must pass them the names returned in the first array (*namesArray*)
+Use the [SET CURRENT PRINTER](../commands/set-current-printer) and [Get current printer](../commands/get-current-printer) commands to modify or get the selected printer in 4D. You must pass them the names returned in the first array (*namesArray*)
 
 Under Windows, the name of a printer can be modified manually at the operating system level. On the other hand, its location and model type are linked to its physical characteristics. Therefore, you can use the optional array values to check the characteristics of the selected printer — typically, you can check that all the client machines use the same printer.
 
@@ -56,8 +56,8 @@ The system variable OK is set to 1 if the command has been executed correctly; o
 
 ## See also 
 
-[Get current printer](get-current-printer.md)  
-[SET CURRENT PRINTER](set-current-printer.md)  
+[Get current printer](../commands/get-current-printer)  
+[SET CURRENT PRINTER](../commands/set-current-printer)  
 
 ## Properties
 

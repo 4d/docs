@@ -1,4 +1,4 @@
----
+﻿---
 id: log-file-to-json
 title: LOG FILE TO JSON
 slug: /commands/log-file-to-json
@@ -38,7 +38,7 @@ En *rutaCarpetaDest*, pase la ruta de la carpeta en la que desea almacenar el ar
 
 De forma predeterminada, el tamaño máximo del archivo JSON exportada es de 10 MB. Cuando se alcanza este tamaño, el archivo se cierra y se crea un nuevo archivo. Limitar el tamaño de cada archivo JSON reduce los requerimientoos de memoria para el análisis de los archivos. Puede cambiar el tamaño máximo para el archivo exportado definiendo un valor (en bytes) en el parámetro *tamMax*. Pasar 0 restaura el tamaño predeterminado. Pasar un valor negativo elimina todo límite de tamaño. 
 
-Por defecto, si se omite el parámetro *rutaHist*, el comando guarda el archivo de historial actual. Si desea exportar un archivo de historial específico, pase su ruta en el parámetro *rutaHist*. El archivo de historial debe ser un archivo con una extensión ".journal". Si desea exportar un archivo de historial archivado (extensión ".4bl"), es necesario convertirlo de antemano con el comando [RESTORE](restore.md). Puede pasar una cadena vacía ("") para mostrar el diálogo estándar de abrir archivo, lo que permite al usuario seleccionar el archivo de historial a guardar. La ruta del archivo de historial seleccionado se devuelve en la variable sistema **Document**.
+Por defecto, si se omite el parámetro *rutaHist*, el comando guarda el archivo de historial actual. Si desea exportar un archivo de historial específico, pase su ruta en el parámetro *rutaHist*. El archivo de historial debe ser un archivo con una extensión ".journal". Si desea exportar un archivo de historial archivado (extensión ".4bl"), es necesario convertirlo de antemano con el comando [RESTORE](../commands/restore). Puede pasar una cadena vacía ("") para mostrar el diálogo estándar de abrir archivo, lo que permite al usuario seleccionar el archivo de historial a guardar. La ruta del archivo de historial seleccionado se devuelve en la variable sistema **Document**.
 
 **Nota:** cuando el comando guarda el archivo de historial actual, la base no está bloqueada. Las nuevas operaciones se pueden ejecutar mientras el archivo se escribe en el disco, estas operaciones no se incluirán en el archivo guardado.
 
@@ -107,7 +107,7 @@ El comando **LOG FILE TO JSON** modifica el valor de las variables sistema OK y 
 ## Ver también 
 
   
-[INTEGRATE MIRROR LOG FILE](integrate-mirror-log-file.md)  
+[INTEGRATE MIRROR LOG FILE](../commands/integrate-mirror-log-file)  
 
 ## Propiedades
 

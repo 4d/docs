@@ -1,4 +1,4 @@
----
+﻿---
 id: sax-add-xml-element-value
 title: SAX ADD XML ELEMENT VALUE
 slug: /commands/sax-add-xml-element-value
@@ -34,9 +34,9 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX ADD XML ELEMENT VALUE.Summary-->**SAX ADD XML ELEMENT VALUE** コマンドは、*document* で参照されるXMLドキュメントに*data* を変換せずに直接追加します。<!-- END REF-->このコマンドは例えば電子メールのボディに添付ファイルを挿入するのと同等です。
 
 *data* には、直接文字列を、または4D変数を渡せます。変数の内容はXMLドキュメントに挿入される前にテキストに変換されます。*data* が*undefined* に評価されてしまった場合、4D は空の文字列を使用します。  
-*data* の内容をエンコードしたい場合[BASE64 ENCODE](base64-encode.md) コマンドを使用しなければなりません。この場合もちろんBLOB を*data* に渡します。
+*data* の内容をエンコードしたい場合[BASE64 ENCODE](../commands/base64-encode) コマンドを使用しなければなりません。この場合もちろんBLOB を*data* に渡します。
 
-[XML SET OPTIONS](xml-set-options.md)コマンドのXML String encoding オプションにをXML Raw data 渡すことでカレントプロセスにおいてこのメカニズムを無効にしない限り、デフォルトでコマンドは*data* 引数に含まれる特別文字 (< > ” ’...) をエンコードします。例:  
+[XML SET OPTIONS](../commands/xml-set-options)コマンドのXML String encoding オプションにをXML Raw data 渡すことでカレントプロセスにおいてこのメカニズムを無効にしない限り、デフォルトでコマンドは*data* 引数に含まれる特別文字 (< > ” ’...) をエンコードします。例:  
 
 ```4d
  XML SET OPTIONS($docRef;XML string encoding;XML raw data)
@@ -63,8 +63,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[SAX GET XML ELEMENT VALUE](sax-get-xml-element-value.md)  
-[XML SET OPTIONS](xml-set-options.md)  
+[SAX GET XML ELEMENT VALUE](../commands/sax-get-xml-element-value)  
+[XML SET OPTIONS](../commands/xml-set-options)  
 
 ## プロパティ
 

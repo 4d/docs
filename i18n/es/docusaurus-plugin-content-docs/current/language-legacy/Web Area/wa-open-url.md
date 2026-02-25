@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-open-url
 title: WA OPEN URL
 slug: /commands/wa-open-url
@@ -33,14 +33,14 @@ displayed_sidebar: docs
 
 Si se pasa una cadena vacía en *url*, el comando WA OPEN URL no hace nada y no se genera ningún error. Para cargar una página vacía en el área web, pase la cadena "about:blank" en *url*.
 
-Como el comando [OPEN URL](open-url.md), **WA OPEN URL** acepta varios tipos de sintaxis en el parámetro *url* para designar los archivos:
+Como el comando [OPEN URL](../commands/open-url), **WA OPEN URL** acepta varios tipos de sintaxis en el parámetro *url* para designar los archivos:
 
 * sintaxis posix: "file:///c:/Mi%20Archivo"
 * sintaxis sistema: "c:\\MiCarpeta\\MiArchivo" (Windows) o "MiDisco:MiCarpeta:MiArchivo" (macOS).
 
 **Nota:** por compatibilidad, la sintaxis "file://" (uso de dos "/") se acepta en 4D pero no cumple con el RFC. Recomendamos utilizar la sintaxis "file:///" (con tres "/") que cumple con el RFC.
 
-En Mac OS, cuando FileVault está activo, debe utilizar la sintaxis Posix. Puede transformar las rutas del sistema utilizando el comando [Convert path system to POSIX](convert-path-system-to-posix.md).
+En Mac OS, cuando FileVault está activo, debe utilizar la sintaxis Posix. Puede transformar las rutas del sistema utilizando el comando [Convert path system to POSIX](../commands/convert-path-system-to-posix).
 
 Este comando tiene el mismo efecto que la modificación del valor de la variable "URL" asociada al área. Por ejemplo, si la variable del área se llama MiWArea\_url:
 
@@ -56,9 +56,9 @@ Es equivalente a:
 
 ## Ver también 
 
-[OPEN URL](open-url.md)  
-[WA OPEN BACK URL](wa-open-back-url.md)  
-[WA OPEN FORWARD URL](wa-open-forward-url.md)  
+[OPEN URL](../commands/open-url)  
+[WA OPEN BACK URL](../commands/wa-open-back-url)  
+[WA OPEN FORWARD URL](../commands/wa-open-forward-url)  
 
 ## Propiedades
 

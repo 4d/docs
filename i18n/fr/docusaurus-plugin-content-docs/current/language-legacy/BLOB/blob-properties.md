@@ -1,4 +1,4 @@
----
+﻿---
 id: blob-properties
 title: BLOB PROPERTIES
 slug: /commands/blob-properties
@@ -49,7 +49,7 @@ Le paramètre *tailleCourante* retourne la taille courante du BLOB. Si le BLOB e
 
 ## Exemple 1 
 
-Référez-vous aux exemples des commandes [COMPRESS BLOB](compress-blob.md) et [EXPAND BLOB](expand-blob.md).
+Référez-vous aux exemples des commandes [COMPRESS BLOB](../commands/compress-blob) et [EXPAND BLOB](../commands/expand-blob).
 
 ## Exemple 2 
 
@@ -88,8 +88,8 @@ Lorsque cette méthode est placée dans votre application, vous pouvez écrire :
 
 ## Voir aussi 
 
-[COMPRESS BLOB](compress-blob.md)  
-[EXPAND BLOB](expand-blob.md)  
+[COMPRESS BLOB](../commands/compress-blob)  
+[EXPAND BLOB](../commands/expand-blob)  
 
 ## Propriétés
 

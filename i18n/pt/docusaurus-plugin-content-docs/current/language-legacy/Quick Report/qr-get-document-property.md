@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-document-property
 title: QR Get document property
 slug: /commands/qr-get-document-property
@@ -57,7 +57,7 @@ Se passa um valor incorreto do parâmetro *propriedade*, se gera o erro -9852.
 
 ## Ver também 
 
-[QR SET DOCUMENT PROPERTY](qr-set-document-property.md)  
+[QR SET DOCUMENT PROPERTY](../commands/qr-set-document-property)  
 
 ## Propriedades
 

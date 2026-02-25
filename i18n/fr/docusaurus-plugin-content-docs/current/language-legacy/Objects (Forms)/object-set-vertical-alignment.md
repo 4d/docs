@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-vertical-alignment
 title: OBJECT SET VERTICAL ALIGNMENT
 slug: /commands/object-set-vertical-alignment
@@ -50,9 +50,9 @@ Les objets de formulaire auxquels un alignement vertical peut être appliqué so
 
 ## Voir aussi 
 
-[OBJECT Get horizontal alignment](object-get-horizontal-alignment.md)  
-[OBJECT Get vertical alignment](object-get-vertical-alignment.md)  
-[OBJECT SET HORIZONTAL ALIGNMENT](object-set-horizontal-alignment.md)  
+[OBJECT Get horizontal alignment](../commands/object-get-horizontal-alignment)  
+[OBJECT Get vertical alignment](../commands/object-get-vertical-alignment)  
+[OBJECT SET HORIZONTAL ALIGNMENT](../commands/object-set-horizontal-alignment)  
 
 ## Propriétés
 

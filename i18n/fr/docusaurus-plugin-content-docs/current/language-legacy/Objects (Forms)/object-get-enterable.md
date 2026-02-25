@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-enterable
 title: OBJECT Get enterable
 slug: /commands/object-get-enterable
@@ -35,7 +35,7 @@ Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *ob
 
 ## Voir aussi 
 
-[OBJECT SET ENTERABLE](object-set-enterable.md)  
+[OBJECT SET ENTERABLE](../commands/object-set-enterable)  
 
 ## Propriétés
 

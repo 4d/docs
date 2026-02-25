@@ -1,4 +1,4 @@
----
+﻿---
 id: backup
 title: BACKUP
 slug: /commands/backup
@@ -43,13 +43,13 @@ Se o backup é realizado corretamente, a variável do sistema OK recebe o valor 
 
 ## Gestão de erros 
 
-Em caso de que ocorram incidentes durante o backup, a informação relativa ao incidente se escreve no diário de backup e o erro de mais alto nível se envia unicamente ao [On Backup Shutdown database method](on-backup-shutdown-database-method.md). Portanto é importante utilizar este método base para poder administrar por programação os erros relacionados com o backup.
+Em caso de que ocorram incidentes durante o backup, a informação relativa ao incidente se escreve no diário de backup e o erro de mais alto nível se envia unicamente ao [On Backup Shutdown database method](../commands/on-backup-shutdown-database-method). Portanto é importante utilizar este método base para poder administrar por programação os erros relacionados com o backup.
 
 ## Ver também 
 
-[BACKUP INFO](backup-info.md)  
+[BACKUP INFO](../commands/backup-info)  
 *Método de Banco de Dados On Backup Startup*  
-[RESTORE](restore.md)  
+[RESTORE](../commands/restore)  
 
 ## Propriedades
 

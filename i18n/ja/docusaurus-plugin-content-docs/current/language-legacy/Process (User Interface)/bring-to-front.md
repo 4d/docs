@@ -1,4 +1,4 @@
----
+﻿---
 id: bring-to-front
 title: BRING TO FRONT
 slug: /commands/bring-to-front
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 このコマンドを使用して、アプリケーションプロセスとデザインプロセスを最前面にすることができます。
 
-**注:**プロセスに複数のウィンドウが含まれていて、その中で特定のものを最前面に配置したいときには、例えば [SET WINDOW RECT](set-window-rect.md) のようなコマンドを使用することが推奨されます。
+**注:**プロセスに複数のウィンドウが含まれていて、その中で特定のものを最前面に配置したいときには、例えば [SET WINDOW RECT](../commands/set-window-rect) のようなコマンドを使用することが推奨されます。
 
 ## 例題 
 
@@ -35,9 +35,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[HIDE PROCESS](hide-process.md)  
-[Process state](process-state.md)  
-[SHOW PROCESS](show-process.md)  
+[HIDE PROCESS](../commands/hide-process)  
+[Process state](../commands/process-state)  
+[SHOW PROCESS](../commands/show-process)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: this
 title: This
 slug: /commands/this
@@ -45,7 +45,7 @@ $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> Al llamar a la superclase del constructor en un constructor utilizando la palabra clave [Super](super.md), tenga en cuenta que `This` no debe ser llamado antes del constructor de la superclase, de lo contrario se genera un error. Ver [este ejemplo](super.md#example-1).
+> Al llamar a la superclase del constructor en un constructor utilizando la palabra clave [Super](../commands/super), tenga en cuenta que `This` no debe ser llamado antes del constructor de la superclase, de lo contrario se genera un error. Ver [este ejemplo](super.md#example-1).
 
 En todos los casos, `This` se refiere al objeto sobre el que se ha llamado el método, como si el método fuera una función del objeto.
 
@@ -70,7 +70,7 @@ En este ejemplo, el objeto asignado a la variable $o no tiene su propia propieda
 
 ## Objeto fórmula
 
-En el contexto de la ejecución de un objeto fórmula creado por los comandos [Formula](formula.md) o [Formula from string](formula-from-string.md), `This` devuelve una referencia al objeto actualmente procesado por la fórmula.
+En el contexto de la ejecución de un objeto fórmula creado por los comandos [Formula](../commands/formula) o [Formula from string](../commands/formula-from-string), `This` devuelve una referencia al objeto actualmente procesado por la fórmula.
 
 Por ejemplo, desea utilizar un método proyecto como una fórmula encapsulada en un objeto:
 
@@ -177,7 +177,7 @@ Una vez ejecutado el formulario, el list box se llena automáticamente con la se
 ## Ver también
 
 [Self](../commands/self)\
-[Super](super.md)
+[Super](../commands/super)
 
 ## Propiedades
 

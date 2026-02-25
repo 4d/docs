@@ -1,4 +1,4 @@
----
+﻿---
 id: insert-in-list
 title: INSERT IN LIST
 slug: /commands/insert-in-list
@@ -62,8 +62,8 @@ L'exemple suivant insère un élément (associé à aucune sous-liste) juste dev
 
 ## Voir aussi 
 
-[APPEND TO LIST](append-to-list.md)  
-[SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+[APPEND TO LIST](../commands/append-to-list)  
+[SET LIST ITEM PARAMETER](../commands/set-list-item-parameter)  
 
 ## Propriétés
 

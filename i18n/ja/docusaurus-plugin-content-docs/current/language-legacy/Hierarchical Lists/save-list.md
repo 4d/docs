@@ -1,4 +1,4 @@
----
+﻿---
 id: save-list
 title: SAVE LIST
 slug: /commands/save-list
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Load list](load-list.md)  
+[Load list](../commands/load-list)  
 
 ## プロパティ
 

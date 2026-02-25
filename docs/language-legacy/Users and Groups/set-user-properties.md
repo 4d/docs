@@ -1,4 +1,4 @@
----
+﻿---
 id: set-user-properties
 title: Set user properties
 slug: /commands/set-user-properties
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Set user properties.Summary-->Set user properties lets you change and update the properties of an existing user account whose unique user ID number you pass in *userID*, or add a new user.<!-- END REF-->
 
-If you are changing the properties of an existing user account, you must pass a valid user ID number returned by the [GET USER LIST](get-user-list.md) command. If the user account does not exist or has been deleted, the error -9979 is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md). Otherwise, you can call [Is user deleted](is-user-deleted.md) to test the user account before calling Set user properties.
+If you are changing the properties of an existing user account, you must pass a valid user ID number returned by the [GET USER LIST](../commands/get-user-list) command. If the user account does not exist or has been deleted, the error -9979 is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](../commands/on-err-call). Otherwise, you can call [Is user deleted](../commands/is-user-deleted) to test the user account before calling Set user properties.
 
 To add a new user, pass -1 in userID (see also notes below for binary databases).
 
@@ -47,11 +47,11 @@ After the call, if the user is successfully added or modified, its unique ID num
 If you do not pass -1, -2 or a valid user ID number, Set user properties does nothing.
 
 Before the call, you pass the new name, startup method, password, number of logins and date of last login for the user, in the *name*, *startup*, *password*, *nbLogin* and *lastLogin* parameters.You pass an unencrypted password in the *password* parameter. 4D will encrypt it for you before saving it in the user account.   
-If the new user name passed in *name* is not unique (there is already a user with the same name), the command does nothing and the error -9979 is returned. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md).
+If the new user name passed in *name* is not unique (there is already a user with the same name), the command does nothing and the error -9979 is returned. You can catch this error with an error-handling method installed using [ON ERR CALL](../commands/on-err-call).
 
 **Note:** The *nbLogin* and *lastLogin* parameters are used in binary databases only. They are ignored in project databases. 
 
-If you do not want to change all the properties of the user (aside from the memberships, see below), first call [GET USER PROPERTIES](get-user-properties.md) and pass the returned values for the properties you want to leave unchanged.
+If you do not want to change all the properties of the user (aside from the memberships, see below), first call [GET USER PROPERTIES](../commands/get-user-properties) and pass the returned values for the properties you want to leave unchanged.
 
 If you do not want to change the password for an account, pass the \* symbol as a value for the *password* parameter. This allows you to change the other properties of the user account without changing the password for the account.
 
@@ -68,12 +68,12 @@ If you do not have the proper access privileges for calling Set user properties 
 
 ## See also 
 
-[DELETE USER](delete-user.md)  
-[GET GROUP LIST](get-group-list.md)  
-[GET USER LIST](get-user-list.md)  
-[GET USER PROPERTIES](get-user-properties.md)  
-[Is user deleted](is-user-deleted.md)  
-[Validate password](validate-password.md)  
+[DELETE USER](../commands/delete-user)  
+[GET GROUP LIST](../commands/get-group-list)  
+[GET USER LIST](../commands/get-user-list)  
+[GET USER PROPERTIES](../commands/get-user-properties)  
+[Is user deleted](../commands/is-user-deleted)  
+[Validate password](../commands/validate-password)  
 
 ## Properties
 

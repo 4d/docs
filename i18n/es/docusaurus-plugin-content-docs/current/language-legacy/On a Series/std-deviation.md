@@ -1,4 +1,4 @@
----
+﻿---
 id: std-deviation
 title: Std deviation
 slug: /commands/std-deviation
@@ -69,10 +69,10 @@ Este ejemplo obtiene la desviación estándar de una serie de valores ubicados e
 
 ## Ver también 
 
-[Average](average.md)  
-[Sum](sum.md)  
-[Sum squares](sum-squares.md)  
-[Variance](variance.md)  
+[Average](../commands/average)  
+[Sum](../commands/sum)  
+[Sum squares](../commands/sum-squares)  
+[Variance](../commands/variance)  
 
 ## Propiedades
 

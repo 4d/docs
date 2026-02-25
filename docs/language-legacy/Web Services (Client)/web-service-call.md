@@ -1,4 +1,4 @@
----
+﻿---
 id: web-service-call
 title: WEB SERVICE CALL
 slug: /commands/web-service-call
@@ -35,14 +35,14 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.WEB SERVICE CALL.Summary-->The **WEB SERVICE CALL** command calls a Web Service by sending an HTTP request.<!-- END REF--> This request contains the SOAP message created previously using the [WEB SERVICE SET PARAMETER](web-service-set-parameter.md) command. 
+<!--REF #_command_.WEB SERVICE CALL.Summary-->The **WEB SERVICE CALL** command calls a Web Service by sending an HTTP request.<!-- END REF--> This request contains the SOAP message created previously using the [WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter) command. 
 
-Any subsequent call to the [WEB SERVICE SET PARAMETER](web-service-set-parameter.md) command will cause the creation of a new request. The execution of the WEB SERVICE CALL command also erases any result from a previously-called Web Service and replaces it with the new result(s). 
+Any subsequent call to the [WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter) command will cause the creation of a new request. The execution of the WEB SERVICE CALL command also erases any result from a previously-called Web Service and replaces it with the new result(s). 
 
 In *accessURL*, pass the complete URL allowing access to the Web Service (do not confuse this URL with that of the WSDL file, which describes the Web Service). 
 
 * **Access in secure mode (SSL)**: If you want to use a Web Service in secure mode using SSL, pass https:// in front of the URL instead of http://. This configuration automatically enables connection in secure mode.  
-Note that this command can use a server certificate (see the [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md) command). If this certificate is not valid (expired or revoked), the OK system variable is set to 0 and error 901 "Invalid server certificate" is returned. You can intercept this error using an error-handling method installed by the [ON ERR CALL](on-err-call.md) command.
+Note that this command can use a server certificate (see the [HTTP SET CERTIFICATES FOLDER](../commands/http-set-certificates-folder) command). If this certificate is not valid (expired or revoked), the OK system variable is set to 0 and error 901 "Invalid server certificate" is returned. You can intercept this error using an error-handling method installed by the [ON ERR CALL](../commands/on-err-call) command.
 
 In *soapAction*, pass the contents of the SOAPAction field of the request. This field generally contains the value “ServiceName#MethodName”. 
 
@@ -50,7 +50,7 @@ In *methodName*, pass the name of the remote method (belonging to the Web Servic
 
 In *namespace*, pass the XML namespace used for the SOAP request. For more information about XML namespaces, refer to the Design Mode manual of 4D.
 
-The optional *complexType* parameter specifies the configuration of the Web Service parameters sent or received (defined using the [WEB SERVICE SET PARAMETER](web-service-set-parameter.md) and [WEB SERVICE GET RESULT](web-service-get-result.md) commands). 
+The optional *complexType* parameter specifies the configuration of the Web Service parameters sent or received (defined using the [WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter) and [WEB SERVICE GET RESULT](../commands/web-service-get-result) commands). 
 
 The value of the *complexType* parameter depends on the publication mode of the Web Service (DOC or RPC, see the Design Reference manual of 4D) and on its own parameters.   
 In *complexType*, you must pass one of the following constants, located in the theme *Web Services (Client)*:
@@ -90,11 +90,11 @@ This configuration is the easiest to use. In this case, the *complexType* contai
   
 The parameters sent and responses received can be handled directly, without prior processing.   
   
-Refer to the example of the command [WEB SERVICE GET RESULT](web-service-get-result.md).
+Refer to the example of the command [WEB SERVICE GET RESULT](../commands/web-service-get-result).
 
 ### RPC mode, complex input and simple output 
 
-In this case, the *complexType* parameter contains the Web Service manual in constant. With this configuration, you must “manually” pass each XML source element in the form of a BLOB to the Web Service, using the [WEB SERVICE SET PARAMETER](web-service-set-parameter.md) command.   
+In this case, the *complexType* parameter contains the Web Service manual in constant. With this configuration, you must “manually” pass each XML source element in the form of a BLOB to the Web Service, using the [WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter) command.   
   
 It is up to you to format the initial BLOB as a valid XML element. As its first element, this BLOB must contain the first apparent “child” element of the <Body> element of the final request.   
   
@@ -110,7 +110,7 @@ It is up to you to format the initial BLOB as a valid XML element. As its first 
 
 ### RPC mode, simple input and complex output 
 
-In this case, the *complexType* parameter contains the Web Service manual out constant. Each output parameter will be returned by the Web Service in the form of an XML element stored in a BLOB. You retrieve this parameter using the [WEB SERVICE GET RESULT](web-service-get-result.md) command. You can then parse the contents of the BLOB received using the XML commands of 4D.   
+In this case, the *complexType* parameter contains the Web Service manual out constant. Each output parameter will be returned by the Web Service in the form of an XML element stored in a BLOB. You retrieve this parameter using the [WEB SERVICE GET RESULT](../commands/web-service-get-result) command. You can then parse the contents of the BLOB received using the XML commands of 4D.   
   
 **Example**  
 
@@ -170,8 +170,8 @@ If the request has been correctly routed and the Web Service has accepted it, th
 
 ## See also 
 
-[WEB SERVICE GET RESULT](web-service-get-result.md)  
-[WEB SERVICE SET PARAMETER](web-service-set-parameter.md)  
+[WEB SERVICE GET RESULT](../commands/web-service-get-result)  
+[WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter)  
 
 ## Properties
 

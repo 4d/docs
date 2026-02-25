@@ -1,4 +1,4 @@
----
+﻿---
 id: save-variables
 title: SAVE VARIABLES
 slug: /commands/save-variables
@@ -44,11 +44,11 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[BLOB TO DOCUMENT](blob-to-document.md)  
-[BLOB TO VARIABLE](blob-to-variable.md)  
-[DOCUMENT TO BLOB](document-to-blob.md)  
-[LOAD VARIABLES](load-variables.md)  
-[VARIABLE TO BLOB](variable-to-blob.md)  
+[BLOB TO DOCUMENT](../commands/blob-to-document)  
+[BLOB TO VARIABLE](../commands/blob-to-variable)  
+[DOCUMENT TO BLOB](../commands/document-to-blob)  
+[LOAD VARIABLES](../commands/load-variables)  
+[VARIABLE TO BLOB](../commands/variable-to-blob)  
 *システム変数*  
 
 ## プロパティ

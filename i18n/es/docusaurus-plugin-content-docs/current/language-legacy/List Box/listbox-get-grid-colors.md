@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-grid-colors
 title: LISTBOX GET GRID COLORS
 slug: /commands/listbox-get-grid-colors
@@ -42,7 +42,7 @@ En *colorH* y *colorV*, el comando devuelve los valores de los colores RGB. El f
 
 ## Ver también 
 
-[LISTBOX SET GRID COLOR](listbox-set-grid-color.md)  
+[LISTBOX SET GRID COLOR](../commands/listbox-set-grid-color)  
 
 ## Propiedades
 

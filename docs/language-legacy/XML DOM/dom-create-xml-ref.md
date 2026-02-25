@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-create-xml-ref
 title: DOM Create XML Ref
 slug: /commands/dom-create-xml-ref
@@ -42,7 +42,7 @@ Note that you can prefix the *root* parameter with the namespace name followed b
 
 You can declare one or more additional namespaces in the generated XML tree using *nameSpaceName/nameSpaceValue* pairs. You can pass as many namespace name/value pairs as you want. 
 
-**Important:** Remember to call the [DOM CLOSE XML](dom-close-xml.md) command in order to free up the memory when you have finished using the XML tree.
+**Important:** Remember to call the [DOM CLOSE XML](../commands/dom-close-xml) command in order to free up the memory when you have finished using the XML tree.
 
 ## Example 1 
 
@@ -108,8 +108,8 @@ If the command was executed correctly, the system variable OK is set to 1\. Othe
 
 ## See also 
 
-[DOM CLOSE XML](dom-close-xml.md)  
-[DOM SET XML DECLARATION](dom-set-xml-declaration.md)  
+[DOM CLOSE XML](../commands/dom-close-xml)  
+[DOM SET XML DECLARATION](../commands/dom-set-xml-declaration)  
 
 ## Properties
 

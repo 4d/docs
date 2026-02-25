@@ -1,4 +1,4 @@
----
+﻿---
 id: get-document-properties
 title: GET DOCUMENT PROPERTIES
 slug: /commands/get-document-properties
@@ -106,7 +106,7 @@ For ensuring that the records have their time stamps correctly updated no matter
  End case
 ```
 
-Once this is implemented in the database, we have all we need to write the project method CREATE DOCUMENTATION listed below. We use of **GET DOCUMENT PROPERTIES** and [SET DOCUMENT PROPERTIES](set-document-properties.md) for handling the date and time of creation and modification of the documents.
+Once this is implemented in the database, we have all we need to write the project method CREATE DOCUMENTATION listed below. We use of **GET DOCUMENT PROPERTIES** and [SET DOCUMENT PROPERTIES](../commands/set-document-properties) for handling the date and time of creation and modification of the documents.
 
 ```4d
   // CREATE DOCUMENTATION Project Method
@@ -215,7 +215,7 @@ Once this is implemented in the database, we have all we need to write the proje
 
 ## See also 
 
-[SET DOCUMENT PROPERTIES](set-document-properties.md)  
+[SET DOCUMENT PROPERTIES](../commands/set-document-properties)  
 
 ## Properties
 

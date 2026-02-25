@@ -1,4 +1,4 @@
----
+﻿---
 id: web-service-authenticate
 title: WEB SERVICE AUTHENTICATE
 slug: /commands/web-service-authenticate
@@ -36,9 +36,9 @@ displayed_sidebar: docs
 
 **Note:** For more information about the BASIC and DIGEST authentication methods, refer to the *Connection Security* section. 
 
-In the *name* and *password* parameters, pass the required identification information (user name and password). This information will be encoded and added to the HTTP request sent to the Web Service using the [WEB SERVICE CALL](web-service-call.md) command. It is thus necessary to call the **WEB SERVICE AUTHENTICATE** command before calling the [WEB SERVICE CALL](web-service-call.md) command.  
+In the *name* and *password* parameters, pass the required identification information (user name and password). This information will be encoded and added to the HTTP request sent to the Web Service using the [WEB SERVICE CALL](../commands/web-service-call) command. It is thus necessary to call the **WEB SERVICE AUTHENTICATE** command before calling the [WEB SERVICE CALL](../commands/web-service-call) command.  
 
-The optional *authMethod* parameter indicate the authentication method to be used for the next call to the [WEB SERVICE CALL](web-service-call.md) command. You can pass one of the following values:
+The optional *authMethod* parameter indicate the authentication method to be used for the next call to the [WEB SERVICE CALL](../commands/web-service-call) command. You can pass one of the following values:
 
 * 2 = use the DIGEST authentication method
 * 1 = use the BASIC authentication method
@@ -46,9 +46,9 @@ The optional *authMethod* parameter indicate the authentication method to be use
 
 If you pass the *\** parameter, you indicate that the authentication information is to be sent to an HTTP proxy. This configuration must be implemented when there is a proxy that requires authentication between the Web Service client and the Web Service itself. If the Web Service is itself authenticated, a double authentication is required (see the example). 
 
-By default, the authentication information is reset to zero after each request. Therefore, you must use the **WEB SERVICE AUTHENTICATE** command before each [WEB SERVICE CALL](web-service-call.md) command. It is nevertheless possible to keep this information temporarily using an option of the [WEB SERVICE SET OPTION](web-service-set-option.md) command. In this case, it is not necessary to execute the **WEB SERVICE AUTHENTICATE** command before each [WEB SERVICE CALL](web-service-call.md) command.
+By default, the authentication information is reset to zero after each request. Therefore, you must use the **WEB SERVICE AUTHENTICATE** command before each [WEB SERVICE CALL](../commands/web-service-call) command. It is nevertheless possible to keep this information temporarily using an option of the [WEB SERVICE SET OPTION](../commands/web-service-set-option) command. In this case, it is not necessary to execute the **WEB SERVICE AUTHENTICATE** command before each [WEB SERVICE CALL](../commands/web-service-call) command.
 
-If authentication fails, the SOAP server returns an error that you can identify using the [WEB SERVICE Get info](web-service-get-info.md) command.
+If authentication fails, the SOAP server returns an error that you can identify using the [WEB SERVICE Get info](../commands/web-service-get-info) command.
 
 ## Example 
 
@@ -64,8 +64,8 @@ Authentication with a Web Service located behind a proxy:
 
 ## See also 
 
-[WEB SERVICE CALL](web-service-call.md)  
-[WEB SERVICE Get info](web-service-get-info.md)  
+[WEB SERVICE CALL](../commands/web-service-call)  
+[WEB SERVICE Get info](../commands/web-service-get-info)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: get-field-titles
 title: GET FIELD TITLES
 slug: /commands/get-field-titles
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET FIELD TITLES.Summary-->O comando GET FIELD TITLES preenche os arrays *titulosCampos* e *numCampos* com os nomes e os números dos campos da *Tabela*.<!-- END REF--> Os conteúdos desses dois arrays estão sincronizados.  
 
-Se o comando [SET FIELD TITLES](set-field-titles.md) for chamado durante a sessão, GET FIELD TITLES retorna apenas os nomes “modificados” e os números dos campos definidos utilizando este comando.  
+Se o comando [SET FIELD TITLES](../commands/set-field-titles) for chamado durante a sessão, GET FIELD TITLES retorna apenas os nomes “modificados” e os números dos campos definidos utilizando este comando.  
   
 Do contrário, GET FIELD TITLES retorna os nomes dos campos do banco definidos na janela de Estrutura.  
   
@@ -39,8 +39,8 @@ Em ambos casos, o comando não retorna campos invisíveis.
 
 ## Ver também 
 
-[GET TABLE TITLES](get-table-titles.md)  
-[SET FIELD TITLES](set-field-titles.md)  
+[GET TABLE TITLES](../commands/get-table-titles)  
+[SET FIELD TITLES](../commands/set-field-titles)  
 
 ## Propriedades
 

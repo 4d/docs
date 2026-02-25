@@ -1,4 +1,4 @@
----
+﻿---
 id: sax-close-xml-element
 title: SAX CLOSE XML ELEMENT
 slug: /commands/sax-close-xml-element
@@ -47,8 +47,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[SAX OPEN XML ELEMENT](sax-open-xml-element.md)  
-[SAX OPEN XML ELEMENT ARRAYS](sax-open-xml-element-arrays.md)  
+[SAX OPEN XML ELEMENT](../commands/sax-open-xml-element)  
+[SAX OPEN XML ELEMENT ARRAYS](../commands/sax-open-xml-element-arrays)  
 
 ## プロパティ
 

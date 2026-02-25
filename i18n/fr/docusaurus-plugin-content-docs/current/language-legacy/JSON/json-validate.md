@@ -1,4 +1,4 @@
----
+﻿---
 id: json-validate
 title: JSON Validate
 slug: /commands/json-validate
@@ -33,13 +33,13 @@ displayed_sidebar: docs
 
 Passez dans *vJson* un objet JSON contenant le contenu JSON à valider.
 
-**Note :** Valider une chaine JSON consiste à vérifier qu'elle suit les règles définies dans le schéma JSON. C'est différent d'une vérification que le JSON est bien-formé, ce que fait la commande [JSON Parse](json-parse.md). 
+**Note :** Valider une chaine JSON consiste à vérifier qu'elle suit les règles définies dans le schéma JSON. C'est différent d'une vérification que le JSON est bien-formé, ce que fait la commande [JSON Parse](../commands/json-parse). 
 
 Passez dans *vSchema* le schéma JSON à utiliser pour la validation. Pour plus d'information sur la façon de créer un schéma JSON, vous pouvez consulter le site [json-schema.org](http://json-schema.org/).
 
 **Note :** Pour valider un objet JSON, 4D utilise la norme décrite dans le document [JSON Schema Validation](https://tools.ietf.org/html/draft-wright-json-schema-validation-00) (Ce document est toujours en phase d'écriture et peut évoluer dans le futur). L'implémentation de 4D est basée sur la version 4 de ce document.
 
- Si le schéma JSON n'est pas valide, 4D retourne un objet [Null](null.md) et génère une erreur pouvant être détectée par une méthode d'appel sur erreur.
+ Si le schéma JSON n'est pas valide, 4D retourne un objet [Null](../commands/null) et génère une erreur pouvant être détectée par une méthode d'appel sur erreur.
 
 Le **JSON Validate** retourne un objet qui fournit le statut de la validation. Cet objet peut contenir les propriétés suivantes :
 
@@ -54,9 +54,9 @@ Chaque objet Erreur de la collection *errors* contient les propriétés suivante
 | ----------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | *code*                  | Nombre   | Code d'erreur                                                                                                                                                                                                         |
 | *jsonPath*              | Chaîne   | Chemin d'accès JSON qui ne peut pas être validé dans *vJson*                                                                                                                                                          |
-| *line*                  | Nombre   | Numéro de ligne de l'erreur dans le fichier JSON. Cette propriété est renseignée si le fichier JSON est analysé par la commande [JSON Parse](json-parse.md) avec le paramètre *\**. Sinon la propriété est omise      |
+| *line*                  | Nombre   | Numéro de ligne de l'erreur dans le fichier JSON. Cette propriété est renseignée si le fichier JSON est analysé par la commande [JSON Parse](../commands/json-parse) avec le paramètre *\**. Sinon la propriété est omise      |
 | *message*               | Chaîne   | Message de l'erreur                                                                                                                                                                                                   |
-| *offset*                | Nombre   | Décalage de la ligne de l'erreur dans le fichier JSON. Cette propriété est renseignée si le fichier JSON est analysé par la commande [JSON Parse](json-parse.md) avec le paramètre *\**. Sinon la propriété est omise |
+| *offset*                | Nombre   | Décalage de la ligne de l'erreur dans le fichier JSON. Cette propriété est renseignée si le fichier JSON est analysé par la commande [JSON Parse](../commands/json-parse) avec le paramètre *\**. Sinon la propriété est omise |
 | *schemaPaths*           | Chaîne   | Chemin d'accès JSON dans le schéma qui cause l'erreur de validation                                                                                                                                                   |
 
 ### Gestion des erreurs 
@@ -115,7 +115,7 @@ Vous souhaitez valider un objet JSON avec un schéma et obtenir la liste des err
 
   
   
-[JSON Parse](json-parse.md)  
+[JSON Parse](../commands/json-parse)  
 
 ## Propriétés
 

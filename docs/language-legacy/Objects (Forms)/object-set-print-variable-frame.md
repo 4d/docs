@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-print-variable-frame
 title: OBJECT SET PRINT VARIABLE FRAME
 slug: /commands/object-set-print-variable-frame
@@ -53,7 +53,7 @@ The optional *fixedSubform* parameter lets you set an additional option when you
 
 ## See also 
 
-[OBJECT GET PRINT VARIABLE FRAME](object-get-print-variable-frame.md)  
+[OBJECT GET PRINT VARIABLE FRAME](../commands/object-get-print-variable-frame)  
 
 ## Properties
 

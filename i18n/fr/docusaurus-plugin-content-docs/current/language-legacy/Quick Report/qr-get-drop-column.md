@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-drop-column
 title: QR Get drop column
 slug: /commands/qr-get-drop-column
@@ -37,7 +37,7 @@ Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
 ## Voir aussi 
 
-[QR DELETE COLUMN](qr-delete-column.md)  
+[QR DELETE COLUMN](../commands/qr-delete-column)  
 
 ## Propriétés
 

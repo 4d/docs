@@ -1,4 +1,4 @@
----
+﻿---
 id: open-database
 title: OPEN DATABASE
 slug: /commands/open-database
@@ -40,9 +40,9 @@ No parâmetro *rotaArquivo*, passe o nome ou a rota de acesso completa da base a
 
 Se passar unicamente o nome de arquivo, deve ser colocado no mesmo nível que o arquivo de estrutura da base atual.
 
-Se a rota de acesso estabelecer um banco de dados válido, 4D fecha o banco em progresso e abre o banco de dados especificado. No modo monousuário, o [Semaphore](semaphore.md) do banco de dados fechado e o do banco aberto são chamados sucessivamente.
+Se a rota de acesso estabelecer um banco de dados válido, 4D fecha o banco em progresso e abre o banco de dados especificado. No modo monousuário, o [Semaphore](../commands/semaphore) do banco de dados fechado e o do banco aberto são chamados sucessivamente.
 
-**Atenção:** dado que este comando faz que a aplicação se feche antes da reabertura do banco de dados especificado, não se recomenda seu uso no [Método banco de dados On Startup](metodo-banco-de-dados-on-startup.md), ou em um método chamado por este método banco.
+**Atenção:** dado que este comando faz que a aplicação se feche antes da reabertura do banco de dados especificado, não se recomenda seu uso no [Método banco de dados On Startup](../commands/metodo-banco-de-dados-on-startup), ou em um método chamado por este método banco.
 
 O comando se executa de forma assíncrona: depois de sua chamada, 4D continua executando o resto do método.   
 Logo, a aplicação se comporta como se o comando **Sair** do menu **Arquivo** estivesse selecionado: as caixas de diálogo de abertura se cancelam, todos os processos abertos têm 10 segundos para terminar antes de serem terminados, etc.
@@ -57,7 +57,7 @@ Se o arquivo da base objetivo não se encontra ou é inválido, se devolve um er
 
 ## Exemplo 2 
 
-Se quiser selecionar um servidor no início desde uma aplicação monousuário. Pode executar este código desde um processo lançado por [Método banco de dados On Startup](metodo-banco-de-dados-on-startup.md):
+Se quiser selecionar um servidor no início desde uma aplicação monousuário. Pode executar este código desde um processo lançado por [Método banco de dados On Startup](../commands/metodo-banco-de-dados-on-startup):
 
 ```4d
  var $xml : Text

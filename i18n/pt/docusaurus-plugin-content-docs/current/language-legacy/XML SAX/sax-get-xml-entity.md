@@ -1,4 +1,4 @@
----
+﻿---
 id: sax-get-xml-entity
 title: SAX GET XML ENTITY
 slug: /commands/sax-get-xml-entity
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.SAX GET XML ENTITY.Summary-->O comando SAX GET XML ENTITY permite recuperar o nome e valor de uma entidade XML presente no documento XML referenciado por *documento*.<!-- END REF--> Este comando deve ser chamado com o evento XML Entity SAX. Para maior informação sobre os eventos SAX, consulte a descrição do comando [SAX Get XML node](sax-get-xml-node.md).
+<!--REF #_command_.SAX GET XML ENTITY.Summary-->O comando SAX GET XML ENTITY permite recuperar o nome e valor de uma entidade XML presente no documento XML referenciado por *documento*.<!-- END REF--> Este comando deve ser chamado com o evento XML Entity SAX. Para maior informação sobre os eventos SAX, consulte a descrição do comando [SAX Get XML node](../commands/sax-get-xml-node).
 
 ## Exemplo 
 
@@ -59,7 +59,7 @@ Se o comando tiver sido executado corretamente, a variável sistema Ok assume o 
 
 ## Ver também 
 
-[SAX Get XML node](sax-get-xml-node.md)  
+[SAX Get XML node](../commands/sax-get-xml-node)  
 
 ## Propriedades
 

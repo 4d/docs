@@ -1,4 +1,4 @@
----
+﻿---
 id: set-field-value-null
 title: SET FIELD VALUE NULL
 slug: /commands/set-field-value-null
@@ -38,8 +38,8 @@ NULL値は、4DのSQLカーネルによって使用されます。詳細につ�
 
 ## 参照 
 
-[Is field value Null](is-field-value-null.md)  
-[Null](null.md)  
+[Is field value Null](../commands/is-field-value-null)  
+[Null](../commands/null)  
 
 ## プロパティ
 

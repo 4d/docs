@@ -1,4 +1,4 @@
----
+﻿---
 id: picture-to-blob
 title: PICTURE TO BLOB
 slug: /commands/picture-to-blob
@@ -37,7 +37,7 @@ Usted pasa en el parámetro *imagen* una variable o un campo 4D de tipo imagen y
 Pase en el parámetro *codec* una cadena indicando el formato de conversión. 
 
 Un Codec puede ser una extensión (por ejemplo, "gif") o un tipo Mime (por ejemplo "image/jpg).  
- Puede obtener la lista de códigos disponibles vía el comando [PICTURE CODEC LIST](picture-codec-list.md). 
+ Puede obtener la lista de códigos disponibles vía el comando [PICTURE CODEC LIST](../commands/picture-codec-list). 
 
 Una vez el comando ha sido ejecutado, *blobImagen* contiene la imagen en el formato especificado.
 
@@ -61,9 +61,9 @@ Desea convertir una imagen de un formato propietario a formato GIF y mostrarlo e
 
 ## Ver también 
 
-[BLOB TO PICTURE](blob-to-picture.md)  
-[PICTURE CODEC LIST](picture-codec-list.md)  
-[WRITE PICTURE FILE](write-picture-file.md)  
+[BLOB TO PICTURE](../commands/blob-to-picture)  
+[PICTURE CODEC LIST](../commands/picture-codec-list)  
+[WRITE PICTURE FILE](../commands/write-picture-file)  
 
 ## Propiedades
 

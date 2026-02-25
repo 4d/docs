@@ -1,4 +1,4 @@
----
+﻿---
 id: web-legacy-close-session
 title: WEB LEGACY CLOSE SESSION
 slug: /commands/web-legacy-close-session
@@ -38,7 +38,7 @@ O comando **WEB LEGACY CLOSE SESSION** invalida a sessão existente designado pe
 Quando este comando é chamado desde um processo web ou desde qualquer outro processo:
 
 * a data de vencimento da cookie está definida em 0,
-* ou [On Web Legacy Close Session database method](on-web-legacy-close-session-database-method.md) é chamada, permitindo guardar a informação da sessão,
+* ou [On Web Legacy Close Session database method](../commands/on-web-legacy-close-session-database-method) é chamada, permitindo guardar a informação da sessão,
 * as seleções se apagam, os registros se desbloqueiam e as variáveis se reiniciam.
 
 Depois da execução deste comando, se um cliente web envia um pedido com uma cookie invalida, se abrirá uma nova sessão com uma nova cookie e será enviada.
@@ -47,7 +47,7 @@ Depois da execução deste comando, se um cliente web envia um pedido com uma co
 
 ## Ver também 
 
-[On Web Legacy Close Session database method](on-web-legacy-close-session-database-method.md)  
+[On Web Legacy Close Session database method](../commands/on-web-legacy-close-session-database-method)  
 *Web Sessions Management (Legacy)*  
 
 ## Propriedades

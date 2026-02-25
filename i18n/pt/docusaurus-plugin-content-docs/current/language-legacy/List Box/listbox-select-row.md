@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-select-row
 title: LISTBOX SELECT ROW
 slug: /commands/listbox-select-row
@@ -49,25 +49,25 @@ Quando o parâmetro *posição* não corresponde exatamente a um número de fila
 
 * Se *posi* *ção* é <0, o comando não faz nada, qualquer que seja o valor do parâmetro *ação*.
 * Se *posi* *ção* é 0 e o parâmetro *a* *ção* contém lk replace selection ou é omitido, todas as filas do list box são selecionadas. Se o parâmetro *a* *ção* contém lk remove from selection, todas as filas do list box são desmarcadas.
-* Se o valor de *posi* *ção* é superior ao número total de filas contidas no list box (só no caso de um array de tipo listbox), ou array booleano associado ao list box é redimensionado automaticamente e a ação de seleção é realizada. Este mecanismo permite utilizar  LISTBOX SELECT ROW com os comandos “padrão” de gestão de arrays (tais como [APPEND TO ARRAY](append-to-array.md)) que não provocam a sincronização imediata do listbox.
+* Se o valor de *posi* *ção* é superior ao número total de filas contidas no list box (só no caso de um array de tipo listbox), ou array booleano associado ao list box é redimensionado automaticamente e a ação de seleção é realizada. Este mecanismo permite utilizar  LISTBOX SELECT ROW com os comandos “padrão” de gestão de arrays (tais como [APPEND TO ARRAY](../commands/append-to-array)) que não provocam a sincronização imediata do listbox.
 
 Depois da execução do método, os arrays são sincronizados: se o array fonte do listbox for redimensionado efetivamente, a ação de seleção é realizada. Do contrário, o array booleano associado com o list box volta ao seu tamanho inicial e o comando não faz nada.
 
 **Notas:**
 
-* Se deseja que o list box tenha rolagem automaticamente para mostrar a fila selecionada, utilize o comando [OBJECT SET SCROLL POSITION ](object-set-scroll-position.md).
-* Para passar uma fila a modo edição (para permitir a entrada de dados), utilize o comando [EDIT ITEM](edit-item.md).
+* Se deseja que o list box tenha rolagem automaticamente para mostrar a fila selecionada, utilize o comando [OBJECT SET SCROLL POSITION ](../commands/object-set-scroll-position).
+* Para passar uma fila a modo edição (para permitir a entrada de dados), utilize o comando [EDIT ITEM](../commands/edit-item).
 * Se o número passado em *posição* corresponde a uma linha oculta no listbox, a linha é selecionada mas não é mostrada.
 * Se tiver selecionado a opção Ocultar o ressaltado de seleção para um list box, deverá fazer as seleções de list box visíveis utilizando as opções de interface disponíveis. Para maior informaçao sobre como fazer isto, ver *Personalizar a aparência*.
 
 ## Ver também 
 
-[EDIT ITEM](edit-item.md)  
-[LISTBOX DELETE ROWS](listbox-delete-rows.md)  
-[LISTBOX INSERT ROWS](listbox-insert-rows.md)  
-[LISTBOX SELECT BREAK](listbox-select-break.md)  
-[LISTBOX SELECT ROWS](listbox-select-rows.md)  
-[OBJECT SET SCROLL POSITION ](object-set-scroll-position.md)  
+[EDIT ITEM](../commands/edit-item)  
+[LISTBOX DELETE ROWS](../commands/listbox-delete-rows)  
+[LISTBOX INSERT ROWS](../commands/listbox-insert-rows)  
+[LISTBOX SELECT BREAK](../commands/listbox-select-break)  
+[LISTBOX SELECT ROWS](../commands/listbox-select-rows)  
+[OBJECT SET SCROLL POSITION ](../commands/object-set-scroll-position)  
 
 ## Propriedades
 

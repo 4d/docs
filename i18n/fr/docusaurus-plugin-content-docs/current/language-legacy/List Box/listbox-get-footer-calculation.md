@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-footer-calculation
 title: LISTBOX Get footer calculation
 slug: /commands/listbox-get-footer-calculation
@@ -38,11 +38,11 @@ Le paramètre *objet* peut désigner :
 * la variable ou le nom d’une zone de pied. Dans ce cas, la commande retourne le calcul associé à cette zone.
 * la variable ou le nom d’une colonne de list box. Dans ce cas, la commande retourne le calcul associé à la zone de pied de cette colonne.
 
-Vous pouvez comparer la valeur retournée aux constantes du thème *List box pied calcul* (cf. commande [LISTBOX SET FOOTER CALCULATION](listbox-set-footer-calculation.md)). 
+Vous pouvez comparer la valeur retournée aux constantes du thème *List box pied calcul* (cf. commande [LISTBOX SET FOOTER CALCULATION](../commands/listbox-set-footer-calculation)). 
 
 ## Voir aussi 
 
-[LISTBOX SET FOOTER CALCULATION](listbox-set-footer-calculation.md)  
+[LISTBOX SET FOOTER CALCULATION](../commands/listbox-set-footer-calculation)  
 
 ## Propriétés
 

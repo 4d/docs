@@ -1,4 +1,4 @@
----
+﻿---
 id: path-to-object
 title: Path to object
 slug: /commands/path-to-object
@@ -145,7 +145,7 @@ Si la última parte de la ruta es ".something", se considera como un nombre de a
 
 ## Ejemplo 2 
 
-Puede combinar este comando con [Object to path](object-to-path.md) para cambiar el nombre de un archivo en una ruta:
+Puede combinar este comando con [Object to path](../commands/object-to-path) para cambiar el nombre de un archivo en una ruta:
 
 ```4d
  var $o : Object
@@ -180,12 +180,12 @@ Desea saber la cantidad de subcarpetas en una ruta:
 
 ## Ver también 
 
-[Convert path POSIX to system](convert-path-posix-to-system.md)  
-[Convert path system to POSIX](convert-path-system-to-posix.md)  
+[Convert path POSIX to system](../commands/convert-path-posix-to-system)  
+[Convert path system to POSIX](../commands/convert-path-system-to-posix)  
 [File](../commands/file)    
-[Folder ](folder.md)  
-[Object to path](object-to-path.md)  
-[Test path name](test-path-name.md)  
+[Folder ](../commands/folder)  
+[Object to path](../commands/object-to-path)  
+[Test path name](../commands/test-path-name)  
 
 ## Propiedades
 

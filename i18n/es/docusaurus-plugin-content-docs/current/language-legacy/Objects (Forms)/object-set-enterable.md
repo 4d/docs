@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-enterable
 title: OBJECT SET ENTERABLE
 slug: /commands/object-set-enterable
@@ -52,7 +52,7 @@ Cuando *editable* es False:
 | obk not enterable               | 0     | Los usuarios no pueden ingresar valores en el objeto, pero un **objeto área de entrada** o un objeto **área 4D Write Pro** es enfocable (los otros objetos no editables no se pueden enfocar automáticamente). |  
 | obk not enterable not focusable | 2     | Los usuarios no pueden ingresar valores en el objeto y un objeto **área de entrada** y **área 4D Write Pro** no es enfocable.                                                                                  |
 
-El comando **OBJECT SET ENTERABLE** también puede utilizarse para activar por programación el modo “Editable en lista” para los subformularios y formularios listados mostrados utilizando los comandos [MODIFY SELECTION](modify-selection.md) y [DISPLAY SELECTION](display-selection.md):
+El comando **OBJECT SET ENTERABLE** también puede utilizarse para activar por programación el modo “Editable en lista” para los subformularios y formularios listados mostrados utilizando los comandos [MODIFY SELECTION](../commands/modify-selection) y [DISPLAY SELECTION](../commands/display-selection):
 
 * Para los subformularios, en el parámetro *areaEntrada*, pase el nombre de la tabla del subformulario o el nombre del objeto del subformulario, por ejemplo: **OBJECT SET ENTERABLE**(\*;"Subform";True). The command works in subforms only if it is in the form method of the subform.
 * Para los formularios listados, debe pasar el nombre de la tabla del formulario en el parámetro *areaEntrada*, por ejemplo: **OBJECT SET ENTERABLE**(\[MiTabla\];True).
@@ -85,8 +85,8 @@ Este es el método de objeto de una casilla de selección ubicada en el encabeza
 
 ## Ver también 
 
-[OBJECT Get enterable](object-get-enterable.md)  
-[OBJECT SET VISIBLE](object-set-visible.md)  
+[OBJECT Get enterable](../commands/object-get-enterable)  
+[OBJECT SET VISIBLE](../commands/object-set-visible)  
 
 ## Propiedades
 

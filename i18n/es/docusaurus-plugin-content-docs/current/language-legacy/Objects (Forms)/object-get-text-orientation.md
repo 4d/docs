@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-text-orientation
 title: OBJECT Get text orientation
 slug: /commands/object-get-text-orientation
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get text orientation.Summary-->El comando **OBJECT Get text orientation** devuelve el valor de orientación actual aplicado al texto del objeto o de los objetos designado(s) por los parámetros *objeto* y *\**.<!-- END REF-->
 
-Puede configurar la opción "Orientación" para un objeto en modo de diseño utilizando la lista de propiedades, o utilizando el comando [OBJECT SET TEXT ORIENTATION](object-set-text-orientation.md).
+Puede configurar la opción "Orientación" para un objeto en modo de diseño utilizando la lista de propiedades, o utilizando el comando [OBJECT SET TEXT ORIENTATION](../commands/object-set-text-orientation).
 
 Si pasa el parámetro opcional *\** indica que el parámetro *objeto* es un nombre de objeto (cadena). Si no se pasa este parámetro, indica que el parámetro *objeto* es un campo o una variable. En este caso, se pasa una referencia de campo o variable en lugar de una cadena (campo o variable objeto únicamente).
 
@@ -66,7 +66,7 @@ Cuando se ejecuta el formulario, si se llama a la siguiente declaración:
 
 ## Ver también 
 
-[OBJECT SET TEXT ORIENTATION](object-set-text-orientation.md)  
+[OBJECT SET TEXT ORIENTATION](../commands/object-set-text-orientation)  
 
 ## Propiedades
 

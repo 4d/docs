@@ -1,4 +1,4 @@
----
+﻿---
 id: form-set-output
 title: FORM SET OUTPUT
 slug: /commands/form-set-output
@@ -76,14 +76,14 @@ Os exemplos abaixo usam a rota a um formulário json para imprimir os registros 
 
 ## Ver também 
 
-[DISPLAY SELECTION](display-selection.md)  
-[EXPORT DIF](export-dif.md)  
-[EXPORT SYLK](export-sylk.md)  
-[EXPORT TEXT](export-text.md)  
-[FORM SET INPUT](form-set-input.md)  
-[MODIFY SELECTION](modify-selection.md)  
-[PRINT LABEL](print-label.md)  
-[PRINT SELECTION](print-selection.md)  
+[DISPLAY SELECTION](../commands/display-selection)  
+[EXPORT DIF](../commands/export-dif)  
+[EXPORT SYLK](../commands/export-sylk)  
+[EXPORT TEXT](../commands/export-text)  
+[FORM SET INPUT](../commands/form-set-input)  
+[MODIFY SELECTION](../commands/modify-selection)  
+[PRINT LABEL](../commands/print-label)  
+[PRINT SELECTION](../commands/print-selection)  
 
 ## Propriedades
 

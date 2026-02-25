@@ -1,4 +1,4 @@
----
+﻿---
 id: set-list-item-font
 title: SET LIST ITEM FONT
 slug: /commands/set-list-item-font
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 If you pass the first optional \* parameter, you indicate that the *list* parameter is an object name (string) corresponding to a representation of the list in the form. If you do not pass this parameter, you indicate that the *list* parameter is a hierarchical list reference ([ListRef](# "A Longint reference to a hierachical list")). If you only use a single representation of the list or work with structural items (the second \* is omitted), you can use either syntax. Conversely, if you use several representations of the same list and work with the current item (the second \* is passed), the syntax based on the object name is required since each representation can have its own current item. 
 
-You can pass a reference number in *itemRef*. If this number does not correspond to any item of the list, the command does nothing. You can also pass 0 in *itemRef* in order to request the modification of the last item added to the list (using [APPEND TO LIST](append-to-list.md)).
+You can pass a reference number in *itemRef*. If this number does not correspond to any item of the list, the command does nothing. You can also pass 0 in *itemRef* in order to request the modification of the last item added to the list (using [APPEND TO LIST](../commands/append-to-list)).
 
 Lastly, you can pass \* in *itemRef*: in this case, the command will apply to the current item of the list. If several items are selected manually, the current item is the one that was selected last. If no item is selected, the command does nothing.
 
@@ -50,10 +50,10 @@ Apply the Times font to the current item of the list:
 
 ## See also 
 
-[Get list item font](get-list-item-font.md)  
-[OBJECT SET FONT](object-set-font.md)  
-[SET LIST ITEM](set-list-item.md)  
-[SET LIST ITEM ICON](set-list-item-icon.md)  
+[Get list item font](../commands/get-list-item-font)  
+[OBJECT SET FONT](../commands/object-set-font)  
+[SET LIST ITEM](../commands/set-list-item)  
+[SET LIST ITEM ICON](../commands/set-list-item-icon)  
 
 ## Properties
 

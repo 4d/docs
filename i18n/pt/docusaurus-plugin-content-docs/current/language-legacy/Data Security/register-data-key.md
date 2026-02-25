@@ -1,4 +1,4 @@
----
+﻿---
 id: register-data-key
 title: Register data key
 slug: /commands/register-data-key
@@ -35,7 +35,7 @@ O chaveiro 4D é um conjunto de uma ou mais chaves de cifrado de dados carregada
 No primeiro parâmetro, passe *curPassPhrase* ou *curDataKey* que define a chave de cifrado a agregar:
 
 * *curPassPhrase*: string utilizada para gerar a chave de cifrado. Quando se utilizar este parâmetro, se gera uma chave de cifrado.
-* *curDataKey*: objeto (com propriedade *encodedKey*) que contém a chave de cifrado de dados. Esta chave pode ser gerada com o comando [New data key](new-data-key.md).
+* *curDataKey*: objeto (com propriedade *encodedKey*) que contém a chave de cifrado de dados. Esta chave pode ser gerada com o comando [New data key](../commands/new-data-key).
 
 **Valor devolvido**
 
@@ -59,7 +59,7 @@ No primeiro parâmetro, passe *curPassPhrase* ou *curDataKey* que define a chave
 ## Ver também 
 
   
-[New data key](new-data-key.md)  
+[New data key](../commands/new-data-key)  
 
 ## Propriedades
 

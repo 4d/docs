@@ -1,4 +1,4 @@
----
+﻿---
 id: log
 title: Log
 slug: /commands/log
@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Log.Summary-->Log returns the natural (Napierian) log of *number*.<!-- END REF--> Log is the inverse function of [Exp](exp.md).
+<!--REF #_command_.Log.Summary-->Log returns the natural (Napierian) log of *number*.<!-- END REF--> Log is the inverse function of [Exp](../commands/exp).
 
 **Note:** 4D provides the predefined constant *e number* (2.71828...).
 
@@ -32,7 +32,7 @@ The following line displays 1:
 
 ## See also 
 
-[Exp](exp.md)  
+[Exp](../commands/exp)  
 
 ## Properties
 

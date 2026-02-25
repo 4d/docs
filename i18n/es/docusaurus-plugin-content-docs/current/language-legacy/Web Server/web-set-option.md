@@ -1,4 +1,4 @@
----
+﻿---
 id: web-set-option
 title: WEB SET OPTION
 slug: /commands/web-set-option
@@ -96,8 +96,8 @@ Una entrada registrada se ve así:
 
 ## Ver también 
 
-[WEB GET OPTION](web-get-option.md)  
-[WEB LEGACY GET SESSION EXPIRATION](web-legacy-get-session-expiration.md)  
+[WEB GET OPTION](../commands/web-get-option)  
+[WEB LEGACY GET SESSION EXPIRATION](../commands/web-legacy-get-session-expiration)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: integrate-mirror-log-file
 title: INTEGRATE MIRROR LOG FILE
 slug: /commands/integrate-mirror-log-file
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.INTEGRATE MIRROR LOG FILE.Summary-->**Note préliminaire :** Cette commande ne fonctionne qu’avec 4D Server.<!-- END REF--> Elle ne peut être exécutée que via la commande [Execute on server](execute-on-server.md) ou dans une procédure stockée.
+<!--REF #_command_.INTEGRATE MIRROR LOG FILE.Summary-->**Note préliminaire :** Cette commande ne fonctionne qu’avec 4D Server.<!-- END REF--> Elle ne peut être exécutée que via la commande [Execute on server](../commands/execute-on-server) ou dans une procédure stockée.
 
 La commande **INTEGRATE MIRROR LOG FILE** permet d’intégrer le fichier d’historique désigné par *cheminAccès* dans une base 4D Server, à la suite de l’opération *numOpération*. La commande accepte d’intégrer tout fichier d’historique dans la base, même s’il ne correspond pas au fichier de données. Cette commande est particulièrement destinée à une utilisation dans le contexte d’une base miroir. 
 
@@ -111,7 +111,7 @@ Si l'intégration s'effectue correctement, la variable système OK prend la vale
 
 ## Voir aussi 
 
-[LOG FILE TO JSON](log-file-to-json.md)  
+[LOG FILE TO JSON](../commands/log-file-to-json)  
 
 ## Propriétés
 

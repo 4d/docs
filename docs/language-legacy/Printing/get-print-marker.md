@@ -1,4 +1,4 @@
----
+﻿---
 id: get-print-marker
 title: Get print marker
 slug: /commands/get-print-marker
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 This command can be used in two contexts:
 
-* During the On Header form event, in the context of [PRINT SELECTION](print-selection.md) and [PRINT RECORD](print-record.md) commands.
+* During the On Header form event, in the context of [PRINT SELECTION](../commands/print-selection) and [PRINT RECORD](../commands/print-record) commands.
 * During the On Printing Detail form event, in the context of the [Print form](../commands/print-form) command.
 
 The coordinates are returned in pixels (1 pixel = 1/72 inch). 
@@ -68,12 +68,12 @@ Pass one of the constants of the *Form Area* theme in the *markNum* parameter:
 
 ## Example 
 
-Refer to the example of the [SET PRINT MARKER](set-print-marker.md) command. 
+Refer to the example of the [SET PRINT MARKER](../commands/set-print-marker) command. 
 
 ## See also 
 
-[OBJECT MOVE](object-move.md)  
-[SET PRINT MARKER](set-print-marker.md)  
+[OBJECT MOVE](../commands/object-move)  
+[SET PRINT MARKER](../commands/set-print-marker)  
 
 ## Properties
 

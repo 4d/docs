@@ -1,4 +1,4 @@
----
+﻿---
 id: query-selection-with-array
 title: QUERY SELECTION WITH ARRAY
 slug: /commands/query-selection-with-array
@@ -30,16 +30,16 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUERY SELECTION WITH ARRAY.Summary-->La commande **QUERY SELECTION WITH ARRAY** recherche dans la sélection courante de la table du champ passé en premier paramètre les enregistrements pour lesquels la valeur de *champCible* est égale à au moins une des valeurs des éléments du *tableau*.<!-- END REF--> Les enregistrements trouvés constituent la nouvelle sélection courante.
 
-**QUERY SELECTION WITH ARRAY** fonctionne de la même manière que [QUERY WITH ARRAY](query-with-array.md). La différence entre ces deux commandes se situe au niveau de la portée de la recherche :
+**QUERY SELECTION WITH ARRAY** fonctionne de la même manière que [QUERY WITH ARRAY](../commands/query-with-array). La différence entre ces deux commandes se situe au niveau de la portée de la recherche :
 
-* [QUERY WITH ARRAY](query-with-array.md) effectue sa recherche parmi la totalité des enregistrements de la table de *champCible*.
+* [QUERY WITH ARRAY](../commands/query-with-array) effectue sa recherche parmi la totalité des enregistrements de la table de *champCible*.
 * **QUERY SELECTION WITH ARRAY** effectue sa recherche uniquement parmi les enregistrements de la sélection courante de la table de *champCible*.
 
-Pour plus d’informations, reportez-vous à la description de la commande [QUERY WITH ARRAY](query-with-array.md).
+Pour plus d’informations, reportez-vous à la description de la commande [QUERY WITH ARRAY](../commands/query-with-array).
 
 ## Voir aussi 
 
-[QUERY WITH ARRAY](query-with-array.md)  
+[QUERY WITH ARRAY](../commands/query-with-array)  
 
 ## Propriétés
 

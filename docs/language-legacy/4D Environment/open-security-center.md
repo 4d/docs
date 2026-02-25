@@ -1,4 +1,4 @@
----
+﻿---
 id: open-security-center
 title: OPEN SECURITY CENTER
 slug: /commands/open-security-center
@@ -30,12 +30,12 @@ displayed_sidebar: docs
 
 **Notes:** 
 
-* This command works on the same principle as a call to [DIALOG](../commands/dialog) with the *\** parameter: the MSC is displayed in a window and the command immediately returns control to the 4D code. If the current process finishes, the window is automatically closed by simulating a [CANCEL](cancel.md). So you need to manage its display through the code of the process being executed.
+* This command works on the same principle as a call to [DIALOG](../commands/dialog) with the *\** parameter: the MSC is displayed in a window and the command immediately returns control to the 4D code. If the current process finishes, the window is automatically closed by simulating a [CANCEL](../commands/cancel). So you need to manage its display through the code of the process being executed.
 * This command cannot be executed on a remote 4D application.
 
 ## See also 
 
-[VERIFY CURRENT DATA FILE](verify-current-data-file.md)  
+[VERIFY CURRENT DATA FILE](../commands/verify-current-data-file)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-best-size
 title: OBJECT GET BEST SIZE
 slug: /commands/object-get-best-size
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.OBJECT GET BEST SIZE.Summary-->**OBJECT GET BEST SIZE** コマンドは、引数 *\** と *object*で指定されたフォームオブジェクトの“最適な”幅と高さを、引数*bestWidth* と *bestHeight*に返します。<!-- END REF-->これらの値はピクセルで表わされます。このコマンドは複雑なレポートの表示や印刷に役立ち、[OBJECT MOVE](object-move.md) コマンドとともに使用します。  
+<!--REF #_command_.OBJECT GET BEST SIZE.Summary-->**OBJECT GET BEST SIZE** コマンドは、引数 *\** と *object*で指定されたフォームオブジェクトの“最適な”幅と高さを、引数*bestWidth* と *bestHeight*に返します。<!-- END REF-->これらの値はピクセルで表わされます。このコマンドは複雑なレポートの表示や印刷に役立ち、[OBJECT MOVE](../commands/object-move) コマンドとともに使用します。  
   
 オプションの *\** 引数を指定した場合、*object*はオブジェクト名です (文字列) 。オプションの \* 引数を省略すると、*object*はフィールドまたは変数です。この場合、文字列ではなくフィールドまたは変数参照 (フィールドまたは変数のみ) を指定します。
 
@@ -52,7 +52,7 @@ displayed_sidebar: docs
 * ボタン
 * ディスプレイコンテキストでのリストボックスカラム(表示されている行のみが考慮されます)。
 
-この他のオブジェクトタイプ（グループエリア、タブ、矩形、直線、円/楕円、プラグインエリア等）の場合、**OBJECT GET BEST SIZE** コマンドは現在のオブジェクトサイズ（フォームエディタや[OBJECT MOVE](object-move.md) コマンドで指定）を返します。
+この他のオブジェクトタイプ（グループエリア、タブ、矩形、直線、円/楕円、プラグインエリア等）の場合、**OBJECT GET BEST SIZE** コマンドは現在のオブジェクトサイズ（フォームエディタや[OBJECT MOVE](../commands/object-move) コマンドで指定）を返します。
 
 ## 例題 
 
@@ -60,8 +60,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT MOVE](object-move.md)  
-[SET PRINT MARKER](set-print-marker.md)  
+[OBJECT MOVE](../commands/object-move)  
+[SET PRINT MARKER](../commands/set-print-marker)  
 
 ## プロパティ
 

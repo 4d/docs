@@ -1,4 +1,4 @@
----
+﻿---
 id: new-collection
 title: New collection
 slug: /commands/new-collection
@@ -82,7 +82,7 @@ displayed_sidebar: docs
 
 ## 参照
 
-[New shared collection](new-shared-collection.md)\
+[New shared collection](../commands/new-shared-collection)\
 [Type](../commands/type)
 
 ## プロパティ

@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-row-height
 title: LISTBOX SET ROW HEIGHT
 slug: /commands/listbox-set-row-height
@@ -36,11 +36,11 @@ If you pass the optional *\** parameter, you indicate that the *object* paramete
 
 If the specified *row* does not exist in the list box, the command does nothing.
 
-The unit used for the specified *height* corresponds to the one defined globally for the list box rows, either in the Property list or by a prior call to the [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) command.
+The unit used for the specified *height* corresponds to the one defined globally for the list box rows, either in the Property list or by a prior call to the [LISTBOX SET ROWS HEIGHT](../commands/listbox-set-rows-height) command.
 
 The **LISTBOX SET ROW HEIGHT** command modifies the row height array specified in the Property List, if any (for more information, please see the *Row Height Array* section in the *Design Reference* manual); otherwise, its creates a row height array dynamically. Using this command to set individual row heights produces the exact same visual result as associating a row height array using the Property List; however, filling a row height array with values is much faster than calling this command in a loop to set row heights one by one for the list box.
 
-**Important note:** If the global [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) command is called subsequently with a different unit than the one previously defined, the default value set by this command will replace and reinitialize any row heights set using **LISTBOX SET ROW HEIGHT** (see example 2).
+**Important note:** If the global [LISTBOX SET ROWS HEIGHT](../commands/listbox-set-rows-height) command is called subsequently with a different unit than the one previously defined, the default value set by this command will replace and reinitialize any row heights set using **LISTBOX SET ROW HEIGHT** (see example 2).
 
 ## Example 1 
 
@@ -86,14 +86,14 @@ On the other hand, if the code below is executed subsequently…
  LISTBOX SET ROWS HEIGHT(*;"listboxname";2;lk lines)
 ```
 
-…then rows 1, 5 and 11 are reset to the global default row height set by [LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md) (i.e., 2 lines) because the unit has changed from pixels to lines**.** Since there is no automatic conversion applied, changing units always results in row heights being reinitialized to the new default value defined.
+…then rows 1, 5 and 11 are reset to the global default row height set by [LISTBOX SET ROWS HEIGHT](../commands/listbox-set-rows-height) (i.e., 2 lines) because the unit has changed from pixels to lines**.** Since there is no automatic conversion applied, changing units always results in row heights being reinitialized to the new default value defined.
 
 ## See also 
 
   
-[LISTBOX Get row height](listbox-get-row-height.md)  
-[LISTBOX SET AUTO ROW HEIGHT](listbox-set-auto-row-height.md)  
-[LISTBOX SET ROWS HEIGHT](listbox-set-rows-height.md)  
+[LISTBOX Get row height](../commands/listbox-get-row-height)  
+[LISTBOX SET AUTO ROW HEIGHT](../commands/listbox-set-auto-row-height)  
+[LISTBOX SET ROWS HEIGHT](../commands/listbox-set-rows-height)  
 
 ## Properties
 

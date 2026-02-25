@@ -1,4 +1,4 @@
----
+﻿---
 id: set-database-parameter
 title: SET DATABASE PARAMETER
 slug: /commands/set-database-parameter
@@ -105,7 +105,7 @@ If you pass a **positive** value in the *value*parameter, you set a global and p
 
 **Description**: Dynamic synchronization mode for *Resources* folder of 4D client machine that executed the command with that of the server. 
 
-When the contents of the *Resources* folder on the server has been modified or a user has requested synchronization (for example via the resources explorer or following the execution of the [SET DATABASE LOCALIZATION](set-database-localization.md) command), the server notifies the connected client machines. 
+When the contents of the *Resources* folder on the server has been modified or a user has requested synchronization (for example via the resources explorer or following the execution of the [SET DATABASE LOCALIZATION](../commands/set-database-localization) command), the server notifies the connected client machines. 
 
 Three synchronization modes are then possible on the client side. The Auto Synchro Resources Folder selector is used to specify the mode to be used by the client machine for the current session:
 
@@ -128,7 +128,7 @@ Three synchronization modes are then possible on the client side. The Auto Synch
 
 **Possible values**: longint > 1 (seconds)
 
-**Description**: Gets or sets the current cache flush periodicity, expressed in seconds. Modifying this value overrides the **Flush Cache every X Seconds** option in the [XML DECODE](xml-decode.md) of the Database settings for the session (it is not stored in the Database settings).
+**Description**: Gets or sets the current cache flush periodicity, expressed in seconds. Modifying this value overrides the **Flush Cache every X Seconds** option in the [XML DECODE](../commands/xml-decode) of the Database settings for the session (it is not stored in the Database settings).
 
 
 
@@ -156,7 +156,7 @@ By default, if this selector is not used, 4D unloads at least 10% of the cache w
 
 **Kept between two sessions**: Yes
 
-**Description**: *Constant obsolete (kept for compatibility reasons only).* We now recommend using the [WEB SET OPTION](web-set-option.md) and [WEB GET OPTION](web-get-option.md) commands for configuring the HTTP server.
+**Description**: *Constant obsolete (kept for compatibility reasons only).* We now recommend using the [WEB SET OPTION](../commands/web-set-option) and [WEB GET OPTION](../commands/web-get-option) commands for configuring the HTTP server.
 
 
 
@@ -171,7 +171,7 @@ By default, if this selector is not used, 4D unloads at least 10% of the cache w
 
 **Possible values**: Any integer value, 0 = keep all logs
 
-**Description**: Maximum number of files to keep in rotation for each type of log. By default, the 50 most recent files are kept. If you pass a value *X*, only the *X* most recent files are kept, with the oldest being erased automatically when a new one is created. This setting applies to all log files, i.e. request logs (selectors 28 and 45), debug log (selector 34), events log (selector 79), Web logs (selectors 29 and 84 of the [WEB SET OPTION](web-set-option.md) command), etc.
+**Description**: Maximum number of files to keep in rotation for each type of log. By default, the 50 most recent files are kept. If you pass a value *X*, only the *X* most recent files are kept, with the oldest being erased automatically when a new one is created. This setting applies to all log files, i.e. request logs (selectors 28 and 45), debug log (selector 34), events log (selector 79), Web logs (selectors 29 and 84 of the [WEB SET OPTION](../commands/web-set-option) command), etc.
 
 
 
@@ -310,7 +310,7 @@ For more information about this format and on the use of the *4DDebugLog* file, 
 
 - `Date type` (default value): 4D dates are stored with the date type within objects. When converted to JSON format, date attributes will be converted to strings which do not include a time. 
 - `String type with time zone`: Converts 4D dates into ISO strings and takes the local time zone into account. For example, converting the date 23/08/2013 gives you "2013-08-22T22:00:000Z" in JSON format when the operation is performed in France during Daylight Savings Time (GMT+2). This principle conforms to the standard operation of JavaScript.
-- `String type without time zone`: Converts 4D dates into ISO strings and does not take the local time zone into account. Taking the local time zone into account (previous option) can be a source of errors when you want to send JSON date values to someone in a different time zone. This is the case for example when you export a table using [Selection to JSON](selection-to-json.md) in France that is meant to be reimported in the US using [JSON TO SELECTION](json-to-selection.md). Since dates are re-interpreted in each time zone, the time values stored in the database will be different. When setting `String type without time zone`, converting the date 23/08/2013 will then give you "2013-08-23T00:00:00Z" in all cases.
+- `String type without time zone`: Converts 4D dates into ISO strings and does not take the local time zone into account. Taking the local time zone into account (previous option) can be a source of errors when you want to send JSON date values to someone in a different time zone. This is the case for example when you export a table using [Selection to JSON](../commands/selection-to-json) in France that is meant to be reimported in the US using [JSON TO SELECTION](../commands/json-to-selection). Since dates are re-interpreted in each time zone, the time values stored in the database will be different. When setting `String type without time zone`, converting the date 23/08/2013 will then give you "2013-08-23T00:00:00Z" in all cases.
 
 :::note
 
@@ -400,14 +400,14 @@ Possible values: 0 or 1 (0 = do not record, 1 = record)
 
 4D can continuously record a set of events related to the internal application operation into a diagnostic file. Information contained in this file is intended for the development of 4D applications and can be analyzed with the help of the 4D tech support (for more information, please refer to the *Description of log files* section on *developer.4d.com*). When you pass 1 in this selector, a diagnostic file is automatically created (or opened) in the database **Logs** folder. The file is named *4DDiagnosticLog\_X*.txt (or *4DDiagnosticLogServer\_X*.txt if generated on the server). Once this file reaches a size of 10 MB, it is closed and a new file is generated, with an incremented sequence number X. 
 
-Note that you can include custom information in this file using the [LOG EVENT](log-event.md) command.
+Note that you can include custom information in this file using the [LOG EVENT](../commands/log-event) command.
 
 
 
 
 ### Direct2D get active status (74)
 
-**Note**: You can only use this selector with the [Get database parameter](get-database-parameter.md) command and its value cannot be set.
+**Note**: You can only use this selector with the [Get database parameter](../commands/get-database-parameter) command and its value cannot be set.
 
 **Description**: Returns active implementation of Direct2D under Windows. 
 
@@ -454,7 +454,7 @@ For example, if you execute:
 
 **Kept between two sessions**: No
 
-**Description**: *Constant obsolete (kept for compatibility reasons only).* We now recommend using the [WEB SET OPTION](web-set-option.md) and [WEB GET OPTION](web-get-option.md) commands for configuring the HTTP server.
+**Description**: *Constant obsolete (kept for compatibility reasons only).* We now recommend using the [WEB SET OPTION](../commands/web-set-option) and [WEB GET OPTION](../commands/web-get-option) commands for configuring the HTTP server.
 
 
 
@@ -465,7 +465,7 @@ For example, if you execute:
 
 **Kept between two** **sessions**: No
 
-**Description**: *Constant obsolete (kept for compatibility reasons only).* We now recommend using the [WEB SET OPTION](web-set-option.md) and [WEB GET OPTION](web-get-option.md) commands for configuring the HTTP server.
+**Description**: *Constant obsolete (kept for compatibility reasons only).* We now recommend using the [WEB SET OPTION](../commands/web-set-option) and [WEB GET OPTION](../commands/web-get-option) commands for configuring the HTTP server.
 
 
 
@@ -476,7 +476,7 @@ For example, if you execute:
 
 **Kept between two sessions**: Yes
 
-**Description**: *Constant obsolete (kept for compatibility reasons only).* We now recommend using the [WEB SET OPTION](web-set-option.md) and [WEB GET OPTION](web-get-option.md) commands for configuring the HTTP server.
+**Description**: *Constant obsolete (kept for compatibility reasons only).* We now recommend using the [WEB SET OPTION](../commands/web-set-option) and [WEB GET OPTION](../commands/web-get-option) commands for configuring the HTTP server.
 
 
 
@@ -519,7 +519,7 @@ For more information on the 4DIMAPLog\_X.txt files, please refer to [Description
 
 ### Is current database a project (112)
 
-**Note:** You can only use this selector with the [Get database parameter](get-database-parameter.md) command and its value cannot be set.
+**Note:** You can only use this selector with the [Get database parameter](../commands/get-database-parameter) command and its value cannot be set.
 
 **Scope**: 4D application
 
@@ -530,7 +530,7 @@ For more information on the 4DIMAPLog\_X.txt files, please refer to [Description
 
 ### Is host database a project (113)
 
-**Note:** You can only use this selector with the [Get database parameter](get-database-parameter.md) command and its value cannot be set.
+**Note:** You can only use this selector with the [Get database parameter](../commands/get-database-parameter) command and its value cannot be set.
 
 **Scope**: 4D application
 
@@ -541,7 +541,7 @@ For more information on the 4DIMAPLog\_X.txt files, please refer to [Description
 
 ### Is host database writable (117)
 
-**Note:** You can only use this selector with the [Get database parameter](get-database-parameter.md) command and its value cannot be set.
+**Note:** You can only use this selector with the [Get database parameter](../commands/get-database-parameter) command and its value cannot be set.
 
 **Scope**: 4D application
 
@@ -613,7 +613,7 @@ SET DATABASE PARAMETER(Log command list;"-1666;-323")
 
 **Kept between two sessions**: Yes
 
-**Description**: *Constant obsolete (kept for compatibility reasons only).* We now recommend using the [WEB SET OPTION](web-set-option.md) and [WEB GET OPTION](web-get-option.md) commands for configuring the HTTP server.
+**Description**: *Constant obsolete (kept for compatibility reasons only).* We now recommend using the [WEB SET OPTION](../commands/web-set-option) and [WEB GET OPTION](../commands/web-get-option) commands for configuring the HTTP server.
 
 
 
@@ -624,7 +624,7 @@ SET DATABASE PARAMETER(Log command list;"-1666;-323")
 
 **Kept between two sessions**: Yes
 
-**Description**: *Constant obsolete (kept for compatibility reasons only).* We now recommend using the [WEB SET OPTION](web-set-option.md) and [WEB GET OPTION](web-get-option.md) commands for configuring the HTTP server.
+**Description**: *Constant obsolete (kept for compatibility reasons only).* We now recommend using the [WEB SET OPTION](../commands/web-set-option) and [WEB GET OPTION](../commands/web-get-option) commands for configuring the HTTP server.
 
 
 
@@ -660,7 +660,7 @@ SET DATABASE PARAMETER(Log command list;"-1666;-323")
 
 **Default value**: 0 (no cache) 
 
-**Description**: Sets or gets the maximum number of formulas to be kept in the cache of formulas, which is used by the [EXECUTE FORMULA](execute-formula.md) command. This limit is applied to all processes, but each process has its own formula cache. Caching formulas accelerates the [EXECUTE FORMULA](execute-formula.md) command execution in compiled mode since each cached formula is tokenized only once in this case. When you change the cache value, existing contents are reset even if the new size is larger than the previous one. Once the maximum number of formulas in the cache is reached, a new executed formula will erase the oldest one in the cache (FIFO mode). This parameter is only taken into account in compiled databases or compiled components.
+**Description**: Sets or gets the maximum number of formulas to be kept in the cache of formulas, which is used by the [EXECUTE FORMULA](../commands/execute-formula) command. This limit is applied to all processes, but each process has its own formula cache. Caching formulas accelerates the [EXECUTE FORMULA](../commands/execute-formula) command execution in compiled mode since each cached formula is tokenized only once in this case. When you change the cache value, existing contents are reset even if the new size is larger than the previous one. Once the maximum number of formulas in the cache is reached, a new executed formula will erase the oldest one in the cache (FIFO mode). This parameter is only taken into account in compiled databases or compiled components.
 
 
 
@@ -684,7 +684,7 @@ SET DATABASE PARAMETER(Log command list;"-1666;-323")
 
 **Possible values**: 0 (use database configuration), 1 (execute on client) or 2 (execute on server)
 
-**Description** : Execution location of [ORDER BY FORMULA](order-by-formula.md) command for the table passed in the parameter. 
+**Description** : Execution location of [ORDER BY FORMULA](../commands/order-by-formula) command for the table passed in the parameter. 
 
 When using a database in client-server mode, this command can be executed either on the server or on the client machine. This selector can be used to specify the execution location of this command (server or client). This mode can also be set in the database preferences. For more information, please refer to the description of selector 46, Query By Formula On Server.
 
@@ -774,7 +774,7 @@ The Port ID selector is useful for 4D Web Servers compiled and merged with 4D De
 
 **Possible values**: 0 (use database configuration), 1 (always use automatic relations) or 2 (use SQL joins if possible).
 
-**Description**: Operating mode of the [QUERY BY FORMULA](query-by-formula.md) and [QUERY SELECTION BY FORMULA](query-selection-by-formula.md) commands relating to the use of "SQL joins."
+**Description**: Operating mode of the [QUERY BY FORMULA](../commands/query-by-formula) and [QUERY SELECTION BY FORMULA](../commands/query-selection-by-formula) commands relating to the use of "SQL joins."
 
 In databases created starting with version 11.2 of 4D v11 SQL, these commands carry out joins based on the SQL joins model. This mechanism can be used to modify the selection of a table according to a query carried out on another table without these tables being connected by an automatic relation (necessary condition in previous versions of 4D).
 
@@ -782,7 +782,7 @@ The QUERY BY FORMULA Joins selector lets you specify the operating mode of the q
 
 - 0: Uses the current settings of the database (default value). In databases created starting with version 11.2 of 4D v11 SQL, "SQL joins" are always activated for queries by formula. In converted databases, this mechanism is not activated by default for compatibility reasons but can be implemented via a preference.
 - 1: Always use automatic relations (= functioning of previous versions of 4D). In this mode, a relation is necessary in order to set the selection of a table according to queries carried out on another table. 4D does not do "SQL joins."
-- 2: Use SQL joins if possible (= default operation of databases created in version 11.2 and higher of 4D v11 SQL ). In this mode, 4D establishes "SQL joins" for queries by formula when the formula is suited for it (with two notable exceptions, see the description of the [QUERY BY FORMULA](query-by-formula.md) or [QUERY SELECTION BY FORMULA](query-selection-by-formula.md) command).
+- 2: Use SQL joins if possible (= default operation of databases created in version 11.2 and higher of 4D v11 SQL ). In this mode, 4D establishes "SQL joins" for queries by formula when the formula is suited for it (with two notable exceptions, see the description of the [QUERY BY FORMULA](../commands/query-by-formula) or [QUERY SELECTION BY FORMULA](../commands/query-selection-by-formula) command).
 
 **Note:** With 4D in remote mode, "SQL joins" can only be used if the formulas are executed on the server (they must have access to the records). To configure where formulas are to be executed, please refer to selectors 46 and 47.
 
@@ -797,7 +797,7 @@ The QUERY BY FORMULA Joins selector lets you specify the operating mode of the q
 
 **Possible values**: 0 (use database configuration), 1 (execute on client) or 2 (execute on server)
 
-**Description**: Execution location of [QUERY BY FORMULA](query-by-formula.md) and [QUERY SELECTION BY FORMULA](query-selection-by-formula.md) commands for the *table* passed in the parameter. 
+**Description**: Execution location of [QUERY BY FORMULA](../commands/query-by-formula) and [QUERY SELECTION BY FORMULA](../commands/query-selection-by-formula) commands for the *table* passed in the parameter. 
 
 When using a database in client-server mode, the query "by formula" commands can be executed either on the server or on the client machine:
 
@@ -949,9 +949,9 @@ This setting applies to the main Web server (excluding Web server objects), the 
 
 When the cipher list has been modified, you will need to restart the server concerned in order for the new settings to be taken into account.
 
-To reset the cipher list to its default value (stored permanently in the SLI file), call the [SET DATABASE PARAMETER](set-database-parameter.md) command and pass an empty string ("") in the *value* parameter. 
+To reset the cipher list to its default value (stored permanently in the SLI file), call the [SET DATABASE PARAMETER](../commands/set-database-parameter) command and pass an empty string ("") in the *value* parameter. 
 
-**Note:** With the [Get database parameter](get-database-parameter.md) command, the cipher list is returned in the optional *stringValue* parameter and the return parameter is always 0.
+**Note:** With the [Get database parameter](../commands/get-database-parameter) command, the cipher list is returned in the optional *stringValue* parameter and the return parameter is always 0.
 
 
 
@@ -964,9 +964,9 @@ To reset the cipher list to its default value (stored permanently in the SLI fil
 
  **Possible values**: Any longint value.
 
-**Description**: This selector is used to modify or get the current unique number for records of the table passed as parameter. "Current number" means "last number used": if you modify this value using [SET DATABASE PARAMETER](set-database-parameter.md), the next record will be created with a number that consists of the value passed + 1\. This new number is the one returned by the [Sequence number](sequence-number.md) command as well in any field of the table to which the "Autoincrement" property has been assigned in the Structure editor or via SQL.
+**Description**: This selector is used to modify or get the current unique number for records of the table passed as parameter. "Current number" means "last number used": if you modify this value using [SET DATABASE PARAMETER](../commands/set-database-parameter), the next record will be created with a number that consists of the value passed + 1\. This new number is the one returned by the [Sequence number](../commands/sequence-number) command as well in any field of the table to which the "Autoincrement" property has been assigned in the Structure editor or via SQL.
 
-By default, this unique number is set by 4D and corresponds to the order of record creation. For additional information, refer to the documentation of the [Sequence number](sequence-number.md) command.
+By default, this unique number is set by 4D and corresponds to the order of record creation. For additional information, refer to the documentation of the [Sequence number](../commands/sequence-number) command.
 
 
 
@@ -1069,7 +1069,7 @@ This property can also be set by means of the "Use legacy network layer" option 
 
 **Description:** Custom string passed from one session to the next one when the 4D application is restarted. This selector is useful in the context of automated unit tests that require applications to restart with different parameters. 
 
-When used with [SET DATABASE PARAMETER](set-database-parameter.md), defines a new value that will be available within the next opened database after 4D is restarted manually or using the [OPEN DATABASE](open-database.md)(\*), [OPEN DATA FILE](open-data-file.md), or [RESTART 4D](restart-4d.md) commands. When used with [Get database parameter](get-database-parameter.md), gets the currently available user parameter value, defined using a command line (see *Command Line Interface*), the .4DLink file (see *Using a 4DLink file*), or a call to [SET DATABASE PARAMETER](set-database-parameter.md) during the previous session. (\*) If [SET DATABASE PARAMETER](set-database-parameter.md) sets a User param value before a call to [OPEN DATABASE](open-database.md) with a .4DLink file that also contains a user-param xml attribute, 4D takes into account only the parameter provided by [SET DATABASE PARAMETER](set-database-parameter.md).
+When used with [SET DATABASE PARAMETER](../commands/set-database-parameter), defines a new value that will be available within the next opened database after 4D is restarted manually or using the [OPEN DATABASE](../commands/open-database)(\*), [OPEN DATA FILE](../commands/open-data-file), or [RESTART 4D](../commands/restart-4d) commands. When used with [Get database parameter](../commands/get-database-parameter), gets the currently available user parameter value, defined using a command line (see *Command Line Interface*), the .4DLink file (see *Using a 4DLink file*), or a call to [SET DATABASE PARAMETER](../commands/set-database-parameter) during the previous session. (\*) If [SET DATABASE PARAMETER](../commands/set-database-parameter) sets a User param value before a call to [OPEN DATABASE](../commands/open-database) with a .4DLink file that also contains a user-param xml attribute, 4D takes into account only the parameter provided by [SET DATABASE PARAMETER](../commands/set-database-parameter).
 
 
 
@@ -1077,7 +1077,7 @@ When used with [SET DATABASE PARAMETER](set-database-parameter.md), defines a ne
 :::note 
 
 * The *table* parameter is only used by selectors 31, 46 and 47\. In all other cases, it is ignored if it is passed.
-* If a setting is not kept between sessions, but you want to ensure that it's always applied, you can execute it in the [On Startup database method](on-startup-database-method.md) or [On Server Startup database method](on-server-startup-database-method.md).
+* If a setting is not kept between sessions, but you want to ensure that it's always applied, you can execute it in the [On Startup database method](../commands/on-startup-database-method) or [On Server Startup database method](../commands/on-server-startup-database-method).
 
 :::
 
@@ -1122,7 +1122,7 @@ This example temporarily forces the execution of a query by formula command on t
 
 ## Example 3 
 
-You want to export data in JSON that contains a converted 4D date. Note that conversion occurs when the date is saved in the object, so you must call the [SET DATABASE PARAMETER](set-database-parameter.md) command before calling [OB SET](ob-set.md): 
+You want to export data in JSON that contains a converted 4D date. Note that conversion occurs when the date is saved in the object, so you must call the [SET DATABASE PARAMETER](../commands/set-database-parameter) command before calling [OB SET](../commands/ob-set): 
 
 ```4d
  var $o : Object
@@ -1134,9 +1134,9 @@ You want to export data in JSON that contains a converted 4D date. Note that con
 
 ## See also 
 
-[Get database parameter](get-database-parameter.md)  
-[LOG EVENT](log-event.md)  
-[QUERY SELECTION](query-selection.md)  
+[Get database parameter](../commands/get-database-parameter)  
+[LOG EVENT](../commands/log-event)  
+[QUERY SELECTION](../commands/query-selection)  
 
 ## Properties
 

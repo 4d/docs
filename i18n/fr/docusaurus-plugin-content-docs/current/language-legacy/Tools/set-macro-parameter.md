@@ -1,4 +1,4 @@
----
+﻿---
 id: set-macro-parameter
 title: SET MACRO PARAMETER
 slug: /commands/set-macro-parameter
@@ -41,7 +41,7 @@ Si aucun texte n’était sélectionné, *paramTexte* est inséré dans la méth
 
 ## Note 
 
- Pour que les commandes [GET MACRO PARAMETER](get-macro-parameter.md) et **SET MACRO PARAMETER** fonctionnent correctement, l'attribut “version” doit être déclaré dans la macro elle-même, de la façon suivante :
+ Pour que les commandes [GET MACRO PARAMETER](../commands/get-macro-parameter) et **SET MACRO PARAMETER** fonctionnent correctement, l'attribut “version” doit être déclaré dans la macro elle-même, de la façon suivante :
 
 ```xml
 <macro name="MaMacro" version="2">
@@ -67,7 +67,7 @@ Cette macro construit un nouveau texte qui sera retourné à la méthode appelan
 
 ## Voir aussi 
 
-[GET MACRO PARAMETER](get-macro-parameter.md)  
+[GET MACRO PARAMETER](../commands/get-macro-parameter)  
 
 ## Propriétés
 

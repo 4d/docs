@@ -1,4 +1,4 @@
----
+﻿---
 id: web-server
 slug: /commands/web-server
 title: WEB Server
@@ -54,7 +54,7 @@ L'objet Web server retourné contient les valeurs courantes des propriétés du 
 
 ## Voir également
 
-[WEB Server list](web-server-list.md)\
+[WEB Server list](../commands/web-server-list)\
 [webServer.stop()](../../API/WebServerClass.md#stop)
 
 ## Propriétés

@@ -1,4 +1,4 @@
----
+﻿---
 id: year-of
 title: Year of
 slug: /commands/year-of
@@ -34,12 +34,12 @@ The following example illustrates the use of **Year of**. The results are assign
 
 ## Example 2 
 
-See example for the command [Current date](current-date.md).
+See example for the command [Current date](../commands/current-date).
 
 ## See also 
 
-[Day of](day-of.md)  
-[Month of](month-of.md)  
+[Day of](../commands/day-of)  
+[Month of](../commands/month-of)  
 
 ## Properties
 

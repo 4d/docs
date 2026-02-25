@@ -1,4 +1,4 @@
----
+﻿---
 id: array-to-selection
 title: ARRAY TO SELECTION
 slug: /commands/array-to-selection
@@ -39,10 +39,10 @@ displayed_sidebar: docs
 
 すべての配列は同じ要素数でなければなりません。配列のサイズが異なる場合、シンタックスエラーが生成されます。
 
-このコマンドは[SELECTION TO ARRAY](selection-to-array.md)コマンドとは逆の動作を行います。しかし**ARRAY TO SELECTION**コマンドは、たとえ自動リレートが設定されていても、リレートテーブルを含む他のテーブルのフィールドを使用することはできません。
+このコマンドは[SELECTION TO ARRAY](../commands/selection-to-array)コマンドとは逆の動作を行います。しかし**ARRAY TO SELECTION**コマンドは、たとえ自動リレートが設定されていても、リレートテーブルを含む他のテーブルのフィールドを使用することはできません。
 
 *\** 引数を渡すと、4Dはその行の実行を遅延し、メモリに格納します。*\** で終わる行を使用して複数の行をスタックできます。スタックされた行は *\** なしの**ARRAY TO SELECTION**一回の呼び出しですべて実行されます。この目的のため、このコマンドを引数なしで呼び出すことができます。  
-これにより、[QUERY](query.md)コマンドのように、複雑な文を複数の行に分割して記述することができ、可読性が向上します。また途中の行の挿入も容易です。 
+これにより、[QUERY](../commands/query)コマンドのように、複雑な文を複数の行に分割して記述することができ、可読性が向上します。また途中の行の挿入も容易です。 
 
 **警告**: **ARRAY TO SELECTION**コマンドは、既存のレコードの情報を上書きします。十分に注意して使用してください。**ARRAY TO SELECTION**コマンド実行中、レコードが他のプロセスによりロックされていると、そのレコードは更新されません。ロックされたレコードは"**LockedSet**"というプロセスセットに入れられます。**ARRAY TO SELECTION**コマンド実行後に"**LockedSet**"セットをテストして、ロックされていたレコードの存在を知ることができます。
 
@@ -92,7 +92,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[SELECTION TO ARRAY](selection-to-array.md)  
+[SELECTION TO ARRAY](../commands/selection-to-array)  
 *システム変数*  
 
 ## プロパティ

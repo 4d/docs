@@ -1,4 +1,4 @@
----
+﻿---
 id: open-form-window
 title: Open form window
 slug: /commands/open-form-window
@@ -29,7 +29,7 @@ toc_max_heading_level: 3
 
 <!--REF #_command_.Open form window.Summary-->The Open form window command opens a new window using the size and resizing properties of the form *formName*.<!-- END REF-->
 
-**Note:** To know the main properties of a form, use the [FORM GET PROPERTIES\`](form-get-properties.md) command.
+**Note:** To know the main properties of a form, use the [FORM GET PROPERTIES\`](../commands/form-get-properties) command.
 
 In the *formName* parameter, you can pass:
 
@@ -37,7 +37,7 @@ In the *formName* parameter, you can pass:
 - o caminho (na sintaxe POSIX) para um arquivo .json válido que contém uma descrição do formulário a ser usado. See *Form file path*;
 - um objeto que contém uma descrição do formulário a ser usado.
 
-The *formName* is not displayed in the window. If you want to display the form, you have to call a command which loads a form ([`ADD RECORD`](add-record.md) for example).
+The *formName* is not displayed in the window. If you want to display the form, you have to call a command which loads a form ([`ADD RECORD`](../commands/add-record) for example).
 
 The optional *type* parameter allows you to specify a type for the window. You must pass one of the following predefined constants (integer, placed in the *Open Form Window* theme):
 
@@ -276,8 +276,8 @@ que é exibido:
 
 ## Veja também
 
-[FORM GET PROPERTIES](form-get-properties.md)  
-[Open window](open-window.md)
+[FORM GET PROPERTIES](../commands/form-get-properties)  
+[Open window](../commands/open-window)
 
 ## Propriedades
 

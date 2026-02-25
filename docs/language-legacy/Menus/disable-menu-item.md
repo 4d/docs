@@ -1,4 +1,4 @@
----
+﻿---
 id: disable-menu-item
 title: DISABLE MENU ITEM
 slug: /commands/disable-menu-item
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 If you omit the *process* parameter, DISABLE MENU ITEM applies to the menu bar for the current process. Otherwise, DISABLE MENU ITEM applies to the menu bar for the process whose reference number is passed in *process*. 
 
-If the *menuItem* parameter designates a hierarchical submenu, all the items of this menu and any submenus are disabled. This command also works with a menu bar created using the [Create menu](create-menu.md) command and installed with the [SET MENU BAR](set-menu-bar.md) command.
+If the *menuItem* parameter designates a hierarchical submenu, all the items of this menu and any submenus are disabled. This command also works with a menu bar created using the [Create menu](../commands/create-menu) command and installed with the [SET MENU BAR](../commands/set-menu-bar) command.
 
 **Note:** If you pass a [MenuRef](# "Unique ID (16-character alphanumeric) of a menu") in *menu*, the *process* parameter serves no purpose and will be ignored.
 
@@ -42,7 +42,7 @@ If the *menuItem* parameter designates a hierarchical submenu, all the items of 
 
 ## See also 
 
-[ENABLE MENU ITEM](enable-menu-item.md)  
+[ENABLE MENU ITEM](../commands/enable-menu-item)  
 
 ## Properties
 

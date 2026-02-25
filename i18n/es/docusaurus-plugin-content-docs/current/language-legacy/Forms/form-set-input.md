@@ -1,4 +1,4 @@
----
+﻿---
 id: form-set-input
 title: FORM SET INPUT
 slug: /commands/form-set-input
@@ -57,14 +57,14 @@ Para mayor información sobre formularios de usuario, consulte la sección *Pres
 
 Los formularios de entrada son mostrados por numerosos comandos, los cuales generalmente se utilizan para permitir al usuario introducir nuevos datos o modificar datos antiguos. Los siguientes comandos muestran un formulario de entrada para entrada de datos o búsquedas:
 
-* [ADD RECORD](add-record.md)
-* [DISPLAY RECORD](display-record.md)
-* [MODIFY RECORD](modify-record.md)
-* [QUERY BY EXAMPLE](query-by-example.md)
+* [ADD RECORD](../commands/add-record)
+* [DISPLAY RECORD](../commands/display-record)
+* [MODIFY RECORD](../commands/modify-record)
+* [QUERY BY EXAMPLE](../commands/query-by-example)
 
-Los comandos [DISPLAY SELECTION](display-selection.md) y [MODIFY SELECTION](modify-selection.md) muestran una lista de registros utilizando el formulario de salida. El usuario puede hacer doble clic en un registro en la lista y se muestra el formulario de entrada.
+Los comandos [DISPLAY SELECTION](../commands/display-selection) y [MODIFY SELECTION](../commands/modify-selection) muestran una lista de registros utilizando el formulario de salida. El usuario puede hacer doble clic en un registro en la lista y se muestra el formulario de entrada.
 
-Los comandos de importación [IMPORT TEXT](import-text.md), [IMPORT SYLK](import-sylk.md) e [IMPORT DIF](import-dif.md) utilizan el formulario de entrada actual para importar registros.
+Los comandos de importación [IMPORT TEXT](../commands/import-text), [IMPORT SYLK](../commands/import-sylk) e [IMPORT DIF](../commands/import-dif) utilizan el formulario de entrada actual para importar registros.
 
 El parámetro opcional *\** se utiliza en conjunto con las propiedades del formulario que definió en la ventana de propiedades del formulario del entorno Diseño y el comando [Open window](../commands/open-window). El especificar el parámetro \* le indica a 4D que utilice las propiedades del formulario para redimensionar automáticamente la ventana para el siguiente uso del formulario (como un formulario de entrada o como una caja de diálogo). Ver mayor información en [Open window](../commands/open-window).
 
@@ -110,17 +110,17 @@ que devuelve:
 
 ## Ver también 
 
-[ADD RECORD](add-record.md)  
-[DISPLAY RECORD](display-record.md)  
-[DISPLAY SELECTION](display-selection.md)  
-[FORM SET OUTPUT](form-set-output.md)  
-[IMPORT DIF](import-dif.md)  
-[IMPORT SYLK](import-sylk.md)  
-[IMPORT TEXT](import-text.md)  
-[MODIFY RECORD](modify-record.md)  
-[MODIFY SELECTION](modify-selection.md)  
+[ADD RECORD](../commands/add-record)  
+[DISPLAY RECORD](../commands/display-record)  
+[DISPLAY SELECTION](../commands/display-selection)  
+[FORM SET OUTPUT](../commands/form-set-output)  
+[IMPORT DIF](../commands/import-dif)  
+[IMPORT SYLK](../commands/import-sylk)  
+[IMPORT TEXT](../commands/import-text)  
+[MODIFY RECORD](../commands/modify-record)  
+[MODIFY SELECTION](../commands/modify-selection)  
 [Open window](../commands/open-window)  
-[QUERY BY EXAMPLE](query-by-example.md)  
+[QUERY BY EXAMPLE](../commands/query-by-example)  
 
 ## Propiedades
 

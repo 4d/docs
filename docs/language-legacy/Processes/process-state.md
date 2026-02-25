@@ -1,4 +1,4 @@
----
+﻿---
 id: process-state
 title: Process state
 slug: /commands/process-state
@@ -33,7 +33,7 @@ The function result can be one of the values provided by the following predefine
 | Waiting for internal flag | Integer | 4     |                                                                                                                                                                                                                                           |
 | Paused                    | Integer | 5     |                                                                                                                                                                                                                                           |
 
-If the process does not exist (which means you did not pass a number in the range 1 to [Count tasks](count-tasks.md)), **Process state** returns Does not exist (-100).
+If the process does not exist (which means you did not pass a number in the range 1 to [Count tasks](../commands/count-tasks)), **Process state** returns Does not exist (-100).
 
 ## Example 
 
@@ -58,7 +58,7 @@ The following example puts the name and process reference number for each proces
 
 ## See also 
 
-[Count tasks](count-tasks.md)  
+[Count tasks](../commands/count-tasks)  
 [Process info](../commands/process-info)  
 
 ## Properties

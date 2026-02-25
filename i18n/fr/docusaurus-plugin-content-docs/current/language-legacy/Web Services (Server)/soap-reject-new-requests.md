@@ -1,4 +1,4 @@
----
+﻿---
 id: soap-reject-new-requests
 title: SOAP REJECT NEW REQUESTS
 slug: /commands/soap-reject-new-requests
@@ -46,8 +46,8 @@ Vous souhaitez rejeter les nouvelles requêtes reçues par votre serveur Web Ser
 
 ## Voir aussi 
 
-[REJECT NEW REMOTE CONNECTIONS](reject-new-remote-connections.md)  
-[WEB Get server info](web-get-server-info.md)  
+[REJECT NEW REMOTE CONNECTIONS](../commands/reject-new-remote-connections)  
+[WEB Get server info](../commands/web-get-server-info)  
 
 ## Propriétés
 

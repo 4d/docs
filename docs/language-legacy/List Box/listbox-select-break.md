@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-select-break
 title: LISTBOX SELECT BREAK
 slug: /commands/listbox-select-break
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string.
 
-Break rows are added to represent the hierarchy but they do not correspond to existing rows in the array. To designate a break row to be selected, in the *row* and *column* parameters, you must pass the row and column number corresponding to the first occurrence in the corresponding array. These values are returned by the [LISTBOX GET CELL POSITION](listbox-get-cell-position.md) command when the user has selected a break row. This principle is described in the “Management of break rows” paragraph of the *Hierarchical list boxes* section. 
+Break rows are added to represent the hierarchy but they do not correspond to existing rows in the array. To designate a break row to be selected, in the *row* and *column* parameters, you must pass the row and column number corresponding to the first occurrence in the corresponding array. These values are returned by the [LISTBOX GET CELL POSITION](../commands/listbox-get-cell-position) command when the user has selected a break row. This principle is described in the “Management of break rows” paragraph of the *Hierarchical list boxes* section. 
 
 The *action* parameter, if it is passed, can set the selection action to be carried out when a selection of break rows already exists in the list box. You can pass a value or one of the following constants, found in the "*List Box*" theme:
 
@@ -72,8 +72,8 @@ Here is the result:
 
 ## See also 
 
-[LISTBOX GET CELL POSITION](listbox-get-cell-position.md)  
-[LISTBOX SELECT ROW](listbox-select-row.md)  
+[LISTBOX GET CELL POSITION](../commands/listbox-get-cell-position)  
+[LISTBOX SELECT ROW](../commands/listbox-select-row)  
 
 ## Properties
 

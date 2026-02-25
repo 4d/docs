@@ -1,4 +1,4 @@
----
+﻿---
 id: unload-record
 title: UNLOAD RECORD
 slug: /commands/unload-record
@@ -29,7 +29,7 @@ Se um registro tiver uma quantidade importante de dados, de campos de imagem, ou
 
 ## Ver também 
 
-[LOAD RECORD](load-record.md)  
+[LOAD RECORD](../commands/load-record)  
 *Record Locking*  
 
 ## Propriedades

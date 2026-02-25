@@ -1,4 +1,4 @@
----
+﻿---
 id: form-set-output
 title: FORM SET OUTPUT
 slug: /commands/form-set-output
@@ -52,7 +52,7 @@ El parámetro opcional *formUsuario* le permite especificar un formulario usuari
 
 Para mayor información sobre formularios usuario, consulte la sección *Presentación de los formularios de usuario*. 
 
-Los formularios de salida son utilizados por tres grupos de comandos. Un grupo muestra una lista de registros en pantalla, otro grupo genera informes, y el tercer grupo exporta datos. Los comandos [DISPLAY SELECTION](display-selection.md) y [MODIFY SELECTION](modify-selection.md)  muestran una lista de registros utilizando un formulario de salida. Utilice el formulario de salida durante la creación de informes con los comandos [PRINT LABEL](print-label.md) y [PRINT SELECTION](print-selection.md) . Cada uno de los comandos de exportación ([EXPORT DIF](export-dif.md), [EXPORT SYLK](export-sylk.md) y [EXPORT TEXT](export-text.md)) utiliza también el formulario de salida.
+Los formularios de salida son utilizados por tres grupos de comandos. Un grupo muestra una lista de registros en pantalla, otro grupo genera informes, y el tercer grupo exporta datos. Los comandos [DISPLAY SELECTION](../commands/display-selection) y [MODIFY SELECTION](../commands/modify-selection)  muestran una lista de registros utilizando un formulario de salida. Utilice el formulario de salida durante la creación de informes con los comandos [PRINT LABEL](../commands/print-label) y [PRINT SELECTION](../commands/print-selection) . Cada uno de los comandos de exportación ([EXPORT DIF](../commands/export-dif), [EXPORT SYLK](../commands/export-sylk) y [EXPORT TEXT](../commands/export-text)) utiliza también el formulario de salida.
 
 ## Ejemplo 1 
 
@@ -76,14 +76,14 @@ Los siguientes ejemplos usan la ruta a un formulario .json para imprimir los reg
 
 ## Ver también 
 
-[DISPLAY SELECTION](display-selection.md)  
-[EXPORT DIF](export-dif.md)  
-[EXPORT SYLK](export-sylk.md)  
-[EXPORT TEXT](export-text.md)  
-[FORM SET INPUT](form-set-input.md)  
-[MODIFY SELECTION](modify-selection.md)  
-[PRINT LABEL](print-label.md)  
-[PRINT SELECTION](print-selection.md)  
+[DISPLAY SELECTION](../commands/display-selection)  
+[EXPORT DIF](../commands/export-dif)  
+[EXPORT SYLK](../commands/export-sylk)  
+[EXPORT TEXT](../commands/export-text)  
+[FORM SET INPUT](../commands/form-set-input)  
+[MODIFY SELECTION](../commands/modify-selection)  
+[PRINT LABEL](../commands/print-label)  
+[PRINT SELECTION](../commands/print-selection)  
 
 ## Propiedades
 

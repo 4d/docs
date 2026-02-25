@@ -1,4 +1,4 @@
----
+﻿---
 id: execute-on-server
 title: Execute on server
 slug: /commands/execute-on-server
@@ -198,8 +198,8 @@ Consulte la sección *Servicios basados en los procedimientos almacenados (ejemp
 
 ## Ver también 
 
-[EXECUTE ON CLIENT](execute-on-client.md)  
-[New process](new-process.md)  
+[EXECUTE ON CLIENT](../commands/execute-on-client)  
+[New process](../commands/new-process)  
 
 ## Propiedades
 

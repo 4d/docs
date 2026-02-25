@@ -1,4 +1,4 @@
----
+﻿---
 id: create-alias
 title: CREATE ALIAS
 slug: /commands/create-alias
@@ -78,7 +78,7 @@ La variable système OK prend la valeur 1 si la commande a été correctement ex
 
 ## Voir aussi 
 
-[RESOLVE ALIAS](resolve-alias.md)  
+[RESOLVE ALIAS](../commands/resolve-alias)  
 
 ## Propriétés
 

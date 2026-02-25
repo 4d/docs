@@ -1,4 +1,4 @@
----
+﻿---
 id: ldap-search
 title: LDAP Search
 slug: /commands/ldap-search
@@ -94,7 +94,7 @@ Queremos obtener una array de todas las entradas que se encuentran en el atribut
 ## Ver también 
 
 *LDAP*  
-[LDAP SEARCH ALL](ldap-search-all.md)  
+[LDAP SEARCH ALL](../commands/ldap-search-all)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: encrypt-data-file
 title: Encrypt data file
 slug: /commands/encrypt-data-file
@@ -50,7 +50,7 @@ En el parámetro *rutaDatos*, puede pasar una cadena vacía, un nombre de archiv
 
 * **Para cifrar la base de datos por primera vez**, solo necesita pasar el parámetro *newPassPhrase* o *newDataKey* (los parámetros *curPassPhrase* o *curDataKey* no deben proporcionarse):  
    * *newPassPhrase*: cadena utilizada para generar la llave de cifrado (SHA de 256 bits)  
-   * *newDataKey*: objeto (con propiedad *encodedKey*) que contiene una nueva llave de cifrado de datos. Esta llave debería haberse generado con el comando [New data key](new-data-key.md).  
+   * *newDataKey*: objeto (con propiedad *encodedKey*) que contiene una nueva llave de cifrado de datos. Esta llave debería haberse generado con el comando [New data key](../commands/new-data-key).  
 **Nota:** *newPassPhrase* (o *newDataKey*) no se agrega al llavero 4D.
 * **Para volver a cifrar una base de datos** (es decir, la base de datos ya se ha cifrado), debe pasar tanto el parámetro *newPassPhrase* (o *newDataKey*), como la frase de contraseña actual (o la llave de datos actual). Esto es necesario para descifrar la base de datos antes de volver a cifrarla. Esta información se puede proporcionar de las siguientes maneras:  
    * pasando parámetros válidos de *curPassPhrase* (o *curDataKey*) al comando,  
@@ -70,7 +70,7 @@ El parámetro *método* se utiliza para establecer un método de retro llamada q
 | End of execution    | 4                     | 0                     | "Hecho"                                                                                                   | 0                                      | Reservado             |
 | Warning(\*)         | 5                     | Tipo de objeto        | Texto de error                                                                                            | Tabla o número de índice               | Reservado             |
 
-(\*) Advertencia devuelta en el paso de verificación (consulte el comando [VERIFY DATA FILE](verify-data-file.md)).
+(\*) Advertencia devuelta en el paso de verificación (consulte el comando [VERIFY DATA FILE](../commands/verify-data-file)).
 
 **Valor devuelto**
 
@@ -139,10 +139,10 @@ Vuelva a cifrar un archivo de datos encriptados con la llave actual (por ejemplo
 ## Ver también 
 
   
-[Data file encryption status](data-file-encryption-status.md)  
-[Decrypt data BLOB](decrypt-data-blob.md)  
-[Encrypt data BLOB](encrypt-data-blob.md)  
-[New data key](new-data-key.md)  
+[Data file encryption status](../commands/data-file-encryption-status)  
+[Decrypt data BLOB](../commands/decrypt-data-blob)  
+[Encrypt data BLOB](../commands/encrypt-data-blob)  
+[New data key](../commands/new-data-key)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-format
 title: OBJECT SET FORMAT
 slug: /commands/object-set-format
@@ -54,7 +54,7 @@ To format Boolean fields:
 
 To format Date or Time fields or variables, you can use:
 
-* either a **predefined format** available though constants of the *Date Display Formats* or *Time Display Formats* theme (longint value). In this case, you must pass [Char](char.md)(n) in *displayFormat*, where *n* is the constant:  
+* either a **predefined format** available though constants of the *Date Display Formats* or *Time Display Formats* theme (longint value). In this case, you must pass [Char](../commands/char)(n) in *displayFormat*, where *n* is the constant:  
     
 Dates:
   
@@ -375,9 +375,9 @@ Switching a thermometer to "Barber shop" mode:
 ## See also 
 
 [Example database (v15 R5)](https://download.4d.com/Demos/4D%5Fv15%5FR5/HDI%5FListBox%5FOBJECT%5FSET%5FFORMAT.zip)  
-[GET SYSTEM FORMAT](get-system-format.md)  
-[OBJECT Get format](object-get-format.md)  
-[OBJECT SET FILTER](object-set-filter.md)  
+[GET SYSTEM FORMAT](../commands/get-system-format)  
+[OBJECT Get format](../commands/object-get-format)  
+[OBJECT SET FILTER](../commands/object-set-filter)  
 
 ## Properties
 

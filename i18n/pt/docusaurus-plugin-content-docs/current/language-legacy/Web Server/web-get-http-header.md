@@ -1,4 +1,4 @@
----
+﻿---
 id: web-get-http-header
 title: WEB GET HTTP HEADER
 slug: /commands/web-get-http-header
@@ -128,8 +128,8 @@ O seguinte método permite recuperar o conteúdo de todo campo de cabeçalho de 
 
 ## Ver também 
 
-[WEB GET HTTP BODY](web-get-http-body.md)  
-[WEB SET HTTP HEADER](web-set-http-header.md)  
+[WEB GET HTTP BODY](../commands/web-get-http-body)  
+[WEB SET HTTP HEADER](../commands/web-set-http-header)  
 
 ## Propriedades
 

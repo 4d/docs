@@ -1,4 +1,4 @@
----
+﻿---
 id: create-selection-from-array
 title: CREATE SELECTION FROM ARRAY
 slug: /commands/create-selection-from-array
@@ -55,12 +55,12 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[CLEAR NAMED SELECTION](clear-named-selection.md)  
-[COPY NAMED SELECTION](copy-named-selection.md)  
-[CREATE SET FROM ARRAY](create-set-from-array.md)  
-[LONGINT ARRAY FROM SELECTION](longint-array-from-selection.md)  
-[SELECTION TO ARRAY](selection-to-array.md)  
-[USE NAMED SELECTION](use-named-selection.md)  
+[CLEAR NAMED SELECTION](../commands/clear-named-selection)  
+[COPY NAMED SELECTION](../commands/copy-named-selection)  
+[CREATE SET FROM ARRAY](../commands/create-set-from-array)  
+[LONGINT ARRAY FROM SELECTION](../commands/longint-array-from-selection)  
+[SELECTION TO ARRAY](../commands/selection-to-array)  
+[USE NAMED SELECTION](../commands/use-named-selection)  
 
 ## プロパティ
 

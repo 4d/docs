@@ -1,4 +1,4 @@
----
+﻿---
 id: session-info
 title: Session info
 slug: /commands/session-info
@@ -86,9 +86,9 @@ Here is an example of output object:
 ## See also 
 
 [`Session` class](../../API/SessionClass.md)
-[Session](session.md)
-[Session storage](session-storage.md)  
-[Process info](process-info.md)  
+[Session](../commands/session)
+[Session storage](../commands/session-storage)  
+[Process info](../commands/process-info)  
 
 
 ## Properties

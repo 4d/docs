@@ -1,4 +1,4 @@
----
+﻿---
 id: get-highlight
 title: GET HIGHLIGHT
 slug: /commands/get-highlight
@@ -37,7 +37,7 @@ Si pasa el parámetro opcional *\**, indica que el parámetro *objeto* es un nom
 
 **Nota:** este comando no puede utilizarse con campos ubicados en el formulario listado de un subformulario.
 
-El texto puede ser seleccionado por el usuario o por el comando [HIGHLIGHT TEXT](highlight-text.md).
+El texto puede ser seleccionado por el usuario o por el comando [HIGHLIGHT TEXT](../commands/highlight-text).
 
 El parámetro *inicioSel* devuelve la posición del primer carácter seleccionado.   
 El parámetro *finSel* devuelve la posición del último carácter seleccionado más uno. 
@@ -73,9 +73,9 @@ Modificación del estilo del texto resaltado:
 
 ## Ver también 
 
-[FILTER KEYSTROKE](filter-keystroke.md)  
-[HIGHLIGHT TEXT](highlight-text.md)  
-[Keystroke](keystroke.md)  
+[FILTER KEYSTROKE](../commands/filter-keystroke)  
+[HIGHLIGHT TEXT](../commands/highlight-text)  
+[Keystroke](../commands/keystroke)  
 
 ## Propiedades
 

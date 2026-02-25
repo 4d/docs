@@ -1,4 +1,4 @@
----
+﻿---
 id: data-file-encryption-status
 title: Data file encryption status
 slug: /commands/data-file-encryption-status
@@ -55,8 +55,8 @@ displayed_sidebar: docs
 * 事前に渡す:  
    * データファイルが開かれる前に、接続されているデバイスを使用して渡す  
    * データファイルが開かれる際に、*ds.provideDataKey( )* コマンドを使用して渡す  
-   * データファイルが開かれた後に、[Discover data key](discover-data-key.md) コマンドを使用して渡す
-* [Register data key](register-data-key.md) コマンドを使用して渡す
+   * データファイルが開かれた後に、[Discover data key](../commands/discover-data-key) コマンドを使用して渡す
+* [Register data key](../commands/register-data-key) コマンドを使用して渡す
 
 ## 例題 
 
@@ -79,7 +79,7 @@ displayed_sidebar: docs
 ## 参照 
 
   
-[Encrypt data file](encrypt-data-file.md)  
+[Encrypt data file](../commands/encrypt-data-file)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: restart-4d
 title: RESTART 4D
 slug: /commands/restart-4d
@@ -30,9 +30,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RESTART 4D.Summary-->El comando **RESTART 4D** provoca el reinicio de la aplicación 4D actual.<!-- END REF-->  
   
-Este comando es para uso en el contexto de una aplicación fusionada (cliente/servidor o mono puesto) y debe ser utilizado en junto con el comando [SET UPDATE FOLDER](set-update-folder.md). En este caso , el proceso de actualización automática se lanza: la nueva versión de la aplicación designada por [SET UPDATE FOLDER](set-update-folder.md) reemplaza automáticamente la versión actual en el momento del reinicio resultantes de **RESTART 4D**. La ruta de acceso al archivo de datos se guarda y se utiliza de forma automática.  
+Este comando es para uso en el contexto de una aplicación fusionada (cliente/servidor o mono puesto) y debe ser utilizado en junto con el comando [SET UPDATE FOLDER](../commands/set-update-folder). En este caso , el proceso de actualización automática se lanza: la nueva versión de la aplicación designada por [SET UPDATE FOLDER](../commands/set-update-folder) reemplaza automáticamente la versión actual en el momento del reinicio resultantes de **RESTART 4D**. La ruta de acceso al archivo de datos se guarda y se utiliza de forma automática.  
   
-Si no se ha definido información de actualización utilizando el comando [SET UPDATE FOLDER](set-update-folder.md) en la sesión actual, el comando reinicia simplemente la aplicación 4D con los archivos de estructura y de datos actuales.  
+Si no se ha definido información de actualización utilizando el comando [SET UPDATE FOLDER](../commands/set-update-folder) en la sesión actual, el comando reinicia simplemente la aplicación 4D con los archivos de estructura y de datos actuales.  
   
 Puede utilizar el parámetro *demora* para aplazar el reinicio de la aplicación con el fin de dar a los equipos cliente tiempo para desconectarse. Debe pasar un valor en segundos en *demora*. Si omite este parámetro, la aplicación servidor espera un máximo de 10 minutos, para que todas las aplicaciones cliente se desconecten. Después de este tiempo, todas las aplicaciones cliente se desconectan automáticamente.  
   
@@ -40,12 +40,12 @@ Puede utilizar el parámetro *demora* para aplazar el reinicio de la aplicación
   
 El parámetro opcional   *mensaje* muestra un mensaje personalizado para las aplicaciones cliente conectadas.  
   
-Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1, de lo contrario, toma el valor 0 y se reinicia la aplicación. Puede interceptar los errores generados por el comando utilizando un método instalado utilizando el comando [ON ERR CALL](on-err-call.md).
+Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1, de lo contrario, toma el valor 0 y se reinicia la aplicación. Puede interceptar los errores generados por el comando utilizando un método instalado utilizando el comando [ON ERR CALL](../commands/on-err-call).
 
 ## Ver también 
 
-[Get last update log path](last-update-log-path.md)  
-[SET UPDATE FOLDER](set-update-folder.md)  
+[Get last update log path](../commands/last-update-log-path)  
+[SET UPDATE FOLDER](../commands/set-update-folder)  
 
 ## Propiedades
 

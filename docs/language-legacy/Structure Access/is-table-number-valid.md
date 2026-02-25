@@ -1,4 +1,4 @@
----
+﻿---
 id: is-table-number-valid
 title: Is table number valid
 slug: /commands/is-table-number-valid
@@ -34,8 +34,8 @@ This command can be used to detect any table deletions, which create gaps in the
 
 ## See also 
 
-[Last table number](last-table-number.md)  
-[Is field number valid](is-field-number-valid.md)  
+[Last table number](../commands/last-table-number)  
+[Is field number valid](../commands/is-field-number-valid)  
 
 ## Properties
 

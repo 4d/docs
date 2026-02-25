@@ -1,4 +1,4 @@
----
+﻿---
 id: compact-data-file
 title: Compact data file
 slug: /commands/compact-data-file
@@ -58,7 +58,7 @@ O comando retorna o caminho completo da pasta criada.
 | Do not create log file  | Inteiro longo | 16384  | Geralmente, esse comando cria um arquivo de histórico em formato XML (veja o final da descrição do comando). Você pode cancelar esta operação a partir desta opção.                                                                                                                                                                                                                                                                                                                      |  
 | Timestamp log file name | Inteiro longo | 262144 | Quando esta opção for passada, o nome do arquivo de histórico gerado conterá a data e a hora de sua criação; como resulado, não substituirá nenhum arquivo de histórico gerado anteriormente. Como padrão, se esta opção não for passada, os nomes de arquivo de histórico não terão uma timestamp e cada novo arquivo gerado vai substituir o anterior.                                                                                                                                 |  
 | Update records          | Inteiro longo | 65536  | Força a reescrita de todos os registros após a atual definição de campos na estrutura.                                                                                                                                                                                                                                                                                                                                                                                                   |
-* O parâmetro metodo é usado para definir um método de callback que será chamado com durante a compactação, se a opção Create process for passada. Caso contrário, o método de callback nunca é chamado. Para obter mais informações sobre este método, consulte a descrição do comando [VERIFY DATA FILE](verify-data-file.md).
+* O parâmetro metodo é usado para definir um método de callback que será chamado com durante a compactação, se a opção Create process for passada. Caso contrário, o método de callback nunca é chamado. Para obter mais informações sobre este método, consulte a descrição do comando [VERIFY DATA FILE](../commands/verify-data-file).
 
 Por padrão, o comando **Compact data file** cria um arquivo de log no formato XML (se você não tiver passado a opção Do not create log file, consulte o parâmetro opções). Seu nome é baseado no arquivo de dados e é colocado próximo a esse arquivo. Por exemplo, para um arquivo de dados chamado "data.4dd", o arquivo de log será nomeado "data\_compact\_log.xml"
 
@@ -82,8 +82,8 @@ Se um arquivo de histórico for gerado, seu nome de caminho completo é retornad
 
 ## Ver também 
 
-[Table fragmentation](table-fragmentation.md)  
-[VERIFY DATA FILE](verify-data-file.md)  
+[Table fragmentation](../commands/table-fragmentation)  
+[VERIFY DATA FILE](../commands/verify-data-file)  
 
 ## Propriedades
 

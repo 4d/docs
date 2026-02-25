@@ -1,4 +1,4 @@
----
+﻿---
 id: svg-find-element-ids-by-rect
 title: SVG Find element IDs by rect
 slug: /commands/svg-find-element-ids-by-rect
@@ -52,7 +52,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[SVG Find element ID by coordinates](svg-find-element-id-by-coordinates.md)  
+[SVG Find element ID by coordinates](../commands/svg-find-element-id-by-coordinates)  
 
 ## プロパティ
 

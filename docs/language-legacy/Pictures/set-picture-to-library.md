@@ -1,4 +1,4 @@
----
+﻿---
 id: set-picture-to-library
 title: SET PICTURE TO LIBRARY
 slug: /commands/set-picture-to-library
@@ -67,7 +67,7 @@ No matter what the current contents of the Picture Library, the following exampl
 
 ## Example 2 
 
-The following example imports into the Picture Library the pictures (stored in a document on disk) created by the third example for the command [PICTURE LIBRARY LIST](picture-library-list.md):
+The following example imports into the Picture Library the pictures (stored in a document on disk) created by the third example for the command [PICTURE LIBRARY LIST](../commands/picture-library-list):
 
 ```4d
  SET CHANNEL(10;"")
@@ -107,9 +107,9 @@ If there is not enough memory to add the picture to the Picture Library, an erro
 
 ## See also 
 
-[GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
-[PICTURE LIBRARY LIST](picture-library-list.md)  
-[REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
+[GET PICTURE FROM LIBRARY](../commands/get-picture-from-library)  
+[PICTURE LIBRARY LIST](../commands/picture-library-list)  
+[REMOVE PICTURE FROM LIBRARY](../commands/remove-picture-from-library)  
 
 ## Properties
 

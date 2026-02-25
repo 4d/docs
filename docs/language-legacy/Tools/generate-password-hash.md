@@ -1,4 +1,4 @@
----
+﻿---
 id: generate-password-hash
 title: Generate password hash
 slug: /commands/generate-password-hash
@@ -44,7 +44,7 @@ In the *options* object, pass the properties to use when generating the password
 
 ### Error management 
 
-The following errors may be returned. You can review an error with the [Last errors](../commands/last-errors)  and [ON ERR CALL](on-err-call.md) commands.  
+The following errors may be returned. You can review an error with the [Last errors](../commands/last-errors)  and [ON ERR CALL](../commands/on-err-call) commands.  
 
 | **Number** | **Message**                                                                                |
 | ---------- | ------------------------------------------------------------------------------------------ |
@@ -72,13 +72,13 @@ This example generates a password hash using bcrypt with a cost factor 4.
  SAVE RECORD([Users])
 ```
 
-**Reminder**: Multiple passes of the same password will result in different hashed strings. This is a standard behavior for algorithms such as bcrypt, since the best practice is to create a new, random salt for every hash. Refer to the [Verify password hash](verify-password-hash.md) description for an example of how to check the passwords.
+**Reminder**: Multiple passes of the same password will result in different hashed strings. This is a standard behavior for algorithms such as bcrypt, since the best practice is to create a new, random salt for every hash. Refer to the [Verify password hash](../commands/verify-password-hash) description for an example of how to check the passwords.
 
 ## See also 
 
   
-[Generate digest](generate-digest.md)  
-[Verify password hash](verify-password-hash.md)  
+[Generate digest](../commands/generate-digest)  
+[Verify password hash](../commands/verify-password-hash)  
 
 ## Properties
 

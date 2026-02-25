@@ -1,4 +1,4 @@
----
+﻿---
 id: field-name
 title: Field name
 slug: /commands/field-name
@@ -48,9 +48,9 @@ This example displays an alert. This method passes a pointer to a field:
 
 ## See also 
 
-[Field](field.md)  
-[Last field number](last-field-number.md)  
-[Table name](table-name.md)  
+[Field](../commands/field)  
+[Last field number](../commands/last-field-number)  
+[Table name](../commands/table-name)  
 
 ## Properties
 

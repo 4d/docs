@@ -1,4 +1,4 @@
----
+﻿---
 id: get-plugin-access
 title: Get plugin access
 slug: /commands/get-plugin-access
@@ -43,8 +43,8 @@ Passez dans le paramètre *plugIn* le numéro du plug-in duquel vous souhaitez c
 
 ## Voir aussi 
 
-[SET GROUP ACCESS](set-group-access.md)  
-[SET PLUGIN ACCESS](set-plugin-access.md)  
+[SET GROUP ACCESS](../commands/set-group-access)  
+[SET PLUGIN ACCESS](../commands/set-plugin-access)  
 
 ## Propriétés
 

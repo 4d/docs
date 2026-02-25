@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-evaluate-javascript
 title: WA Evaluate JavaScript
 slug: /commands/wa-evaluate-javascript
@@ -115,7 +115,7 @@ You can then evaluate the JavaScript code from 4D:
 
 ## See also 
 
-[WA EXECUTE JAVASCRIPT FUNCTION](wa-execute-javascript-function.md)  
+[WA EXECUTE JAVASCRIPT FUNCTION](../commands/wa-execute-javascript-function)  
 
 ## Properties
 

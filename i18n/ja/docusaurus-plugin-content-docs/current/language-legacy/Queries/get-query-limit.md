@@ -1,4 +1,4 @@
----
+﻿---
 id: get-query-limit
 title: Get query limit
 slug: /commands/get-query-limit
@@ -29,13 +29,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get query limit.Summary-->**Get query limit**コマンドはカレントプロセスでクエリ結果として返されるレコードの上限値を返します。<!-- END REF-->
 
-この上限値は[SET QUERY LIMIT](set-query-limit.md)コマンドを使用して設定できます。 
+この上限値は[SET QUERY LIMIT](../commands/set-query-limit)コマンドを使用して設定できます。 
 
 デフォルトでは制限がなく、この場合コマンドは0を返します。
 
 ## 参照 
 
-[SET QUERY LIMIT](set-query-limit.md)  
+[SET QUERY LIMIT](../commands/set-query-limit)  
 
 ## プロパティ
 

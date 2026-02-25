@@ -1,4 +1,4 @@
----
+﻿---
 id: duplicate-record
 title: DUPLICATE RECORD
 slug: /commands/duplicate-record
@@ -28,15 +28,15 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.DUPLICATE RECORD.Summary-->**DUPLICATE RECORD** duplique l'enregistrement courant de *laTable*.<!-- END REF--> Ce nouvel enregistrement devient l'enregistrement courant. S'il n'y a pas d'enregistrement courant, **DUPLICATE RECORD** ne fait rien. Appelez la commande [SAVE RECORD](save-record.md) pour sauvegarder le nouvel enregistrement.
+<!--REF #_command_.DUPLICATE RECORD.Summary-->**DUPLICATE RECORD** duplique l'enregistrement courant de *laTable*.<!-- END REF--> Ce nouvel enregistrement devient l'enregistrement courant. S'il n'y a pas d'enregistrement courant, **DUPLICATE RECORD** ne fait rien. Appelez la commande [SAVE RECORD](../commands/save-record) pour sauvegarder le nouvel enregistrement.
 
-**DUPLICATE RECORD** peut être exécuté pendant la saisie des données. Vous pouvez donc dupliquer l'enregistrement qui est affiché à l'écran. N'oubliez pas que vous devez d'abord appeler [SAVE RECORD](save-record.md) si vous voulez sauvegarder les modifications apportées à l'enregistrement original. 
+**DUPLICATE RECORD** peut être exécuté pendant la saisie des données. Vous pouvez donc dupliquer l'enregistrement qui est affiché à l'écran. N'oubliez pas que vous devez d'abord appeler [SAVE RECORD](../commands/save-record) si vous voulez sauvegarder les modifications apportées à l'enregistrement original. 
 
 **Note de compatibilité :** A compter de la version 11 de 4D, cette commande ne prend plus en charge les sous-tables. 
 
 ## Voir aussi 
 
-[SAVE RECORD](save-record.md)  
+[SAVE RECORD](../commands/save-record)  
 
 ## Propriétés
 

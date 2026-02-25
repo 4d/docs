@@ -1,4 +1,4 @@
----
+﻿---
 id: array-to-selection
 title: ARRAY TO SELECTION
 slug: /commands/array-to-selection
@@ -39,10 +39,10 @@ If a selection exists at the time of the call, the elements of the array are put
 
 All the arrays must have the same number of elements. If the arrays are of different sizes, a syntax error is generated.
 
-This command does the reverse of [SELECTION TO ARRAY](selection-to-array.md). However, the **ARRAY TO SELECTION** command does not allow fields from different tables, including related tables, even when an automatic relation exists.
+This command does the reverse of [SELECTION TO ARRAY](../commands/selection-to-array). However, the **ARRAY TO SELECTION** command does not allow fields from different tables, including related tables, even when an automatic relation exists.
 
 When you pass the *\** parameter, 4D does not execute the corresponding statement line immediately but instead stores it in memory; this way you can stack several lines ending with an *\**. All of these lines awaiting execution are executed by one final **ARRAY TO SELECTION** statement that does not have the *\** parameter. For this reason, the command can now be called without any parameters.  
-As with the [QUERY](query.md) command, this lets you break up a complex statement into a set of lines, which is easier to read and to maintain. You can also insert intermediary statements. 
+As with the [QUERY](../commands/query) command, this lets you break up a complex statement into a set of lines, which is easier to read and to maintain. You can also insert intermediary statements. 
 
 **WARNING:** Use **ARRAY TO SELECTION** with caution, because it overwrites information in existing records. If a record is locked by another process during the execution of **ARRAY TO SELECTION**, that record is not modified. Any locked records are put into the process set called LockedSet. After **ARRAY TO SELECTION** has executed, you can test the set LockedSet to see if any records were locked.
 
@@ -92,7 +92,7 @@ You want to copy a selection of records to an archive table by selecting the fie
 
 ## See also 
 
-[SELECTION TO ARRAY](selection-to-array.md)  
+[SELECTION TO ARRAY](../commands/selection-to-array)  
 *System Variables*  
 
 ## Properties

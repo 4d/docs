@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-create-url-history-menu
 title: WA Create URL history menu
 slug: /commands/wa-create-url-history-menu
@@ -44,9 +44,9 @@ displayed_sidebar: docs
 
 *direction* 引数を省略すると、0 が使用されます。
 
-メニューが生成されたら、4Dの [Dynamic pop up menu](dynamic-pop-up-menu.md) コマンドで表示し、4Dの標準メニュー管理コマンドを使用して処理できます。このコマンドから返される文字列には、訪問したページのURLが含まれます (例題参照)。
+メニューが生成されたら、4Dの [Dynamic pop up menu](../commands/dynamic-pop-up-menu) コマンドで表示し、4Dの標準メニュー管理コマンドを使用して処理できます。このコマンドから返される文字列には、訪問したページのURLが含まれます (例題参照)。
 
-メニューを使用しなくなったら、[RELEASE MENU](release-menu.md) コマンドを呼び出してURL履歴メニューを削除します。
+メニューを使用しなくなったら、[RELEASE MENU](../commands/release-menu) コマンドを呼び出してURL履歴メニューを削除します。
 
 **互換性に関する注意:* 4D v19 R5 以降、このコマンドは* **Windows のシステムレンダリングエンジン を使用しているWeb エリアに対するカレントURL のみを格納したメニューを作成します。*
 
@@ -77,9 +77,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Dynamic pop up menu](dynamic-pop-up-menu.md)  
-[RELEASE MENU](release-menu.md)  
-[WA GET URL HISTORY](wa-get-url-history.md)  
+[Dynamic pop up menu](../commands/dynamic-pop-up-menu)  
+[RELEASE MENU](../commands/release-menu)  
+[WA GET URL HISTORY](../commands/wa-get-url-history)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-value
 title: OBJECT SET VALUE
 slug: /commands/object-set-value
@@ -50,7 +50,7 @@ Desea obtener el valor de la fuente de datos para un objeto de formulario, obten
 
 ## Ver también 
 
-[OBJECT Get value](object-get-value.md)  
+[OBJECT Get value](../commands/object-get-value)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: get-list-item-parameter
 title: GET LIST ITEM PARAMETER
 slug: /commands/get-list-item-parameter
@@ -38,15 +38,15 @@ Si vous passez le premier paramètre optionnel *\**, vous indiquez que le param�
 
 **Note :** Si vous utilisez le caractère @ dans le nom d'objet de la liste et que le formulaire contient plusieurs listes répondant à ce nom, la commande **GET LIST ITEM PARAMETER** s'appliquera au premier objet dont le nom correspond.
 
-Vous pouvez passer un numéro de référence dans *réfElément*. Si ce numéro ne correspond à aucun élément de la liste, la commande ne fait rien. Vous pouvez également passer 0 dans *réfElément* afin de désigner le dernier élément ajouté à la liste (à l’aide de [APPEND TO LIST](append-to-list.md)).   
+Vous pouvez passer un numéro de référence dans *réfElément*. Si ce numéro ne correspond à aucun élément de la liste, la commande ne fait rien. Vous pouvez également passer 0 dans *réfElément* afin de désigner le dernier élément ajouté à la liste (à l’aide de [APPEND TO LIST](../commands/append-to-list)).   
 Vous pouvez enfin passer *\** dans *réfElément* : dans ce cas, la commande s’appliquera à l’élément courant de la liste. Si plusieurs éléments sont sélectionnés manuellement, l’élément courant est celui qui a été sélectionné en dernier. Si aucun élément n’est sélectionné, la commande ne fait rien. 
 
-Vous pouvez passer dans *sélecteur* la constante Additional text ou Associated standard action (placées dans le thème “*Listes hiérarchiques*”) ou toute valeur personnalisée. Pour plus d’informations sur les paramètres *sélecteur* et *valeur*, reportez-vous à la description de la commande [SET LIST ITEM PARAMETER](set-list-item-parameter.md).
+Vous pouvez passer dans *sélecteur* la constante Additional text ou Associated standard action (placées dans le thème “*Listes hiérarchiques*”) ou toute valeur personnalisée. Pour plus d’informations sur les paramètres *sélecteur* et *valeur*, reportez-vous à la description de la commande [SET LIST ITEM PARAMETER](../commands/set-list-item-parameter).
 
 ## Voir aussi 
 
 *Listes hiérarchiques*  
-[SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+[SET LIST ITEM PARAMETER](../commands/set-list-item-parameter)  
 
 ## Propriétés
 

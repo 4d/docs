@@ -1,4 +1,4 @@
----
+﻿---
 id: localized-document-path
 title: Localized document path
 slug: /commands/localized-document-path
@@ -67,7 +67,7 @@ Resources フォルダの中身は以下のようになっています:
 
 ## 参照 
 
-[Get database localization](get-database-localization.md)  
+[Get database localization](../commands/get-database-localization)  
 
 ## プロパティ
 

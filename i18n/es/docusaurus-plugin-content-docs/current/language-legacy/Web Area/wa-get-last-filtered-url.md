@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-get-last-filtered-url
 title: WA Get last filtered URL
 slug: /commands/wa-get-last-filtered-url
@@ -41,10 +41,10 @@ Es recomendable llamar este comando en el contexto de los eventos de formulario 
 
 ## Ver también 
 
-[WA GET EXTERNAL LINKS FILTERS](wa-get-external-links-filters.md)  
-[WA GET URL FILTERS](wa-get-url-filters.md)  
-[WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)  
-[WA SET URL FILTERS](wa-set-url-filters.md)  
+[WA GET EXTERNAL LINKS FILTERS](../commands/wa-get-external-links-filters)  
+[WA GET URL FILTERS](../commands/wa-get-url-filters)  
+[WA SET EXTERNAL LINKS FILTERS](../commands/wa-set-external-links-filters)  
+[WA SET URL FILTERS](../commands/wa-set-url-filters)  
 
 ## Propiedades
 

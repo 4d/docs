@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-multiline
 title: OBJECT SET MULTILINE
 slug: /commands/object-set-multiline
@@ -54,7 +54,7 @@ Vous souhaitez interdire le multiligne dans une zone de saisie :
 
 ## Voir aussi 
 
-[OBJECT Get multiline](object-get-multiline.md)  
+[OBJECT Get multiline](../commands/object-get-multiline)  
 
 ## Propriétés
 

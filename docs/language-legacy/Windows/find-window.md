@@ -1,4 +1,4 @@
----
+﻿---
 id: find-window
 title: Find window
 slug: /commands/find-window
@@ -39,8 +39,8 @@ The *windowPart* parameter returns 3 if the window is touched, and 0 otherwise. 
 
 ## See also 
 
-[Frontmost window](frontmost-window.md)  
-[Next window](next-window.md)  
+[Frontmost window](../commands/frontmost-window)  
+[Next window](../commands/next-window)  
 
 ## Properties
 

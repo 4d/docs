@@ -1,4 +1,4 @@
----
+﻿---
 id: character-code
 title: Character code
 slug: /commands/character-code
@@ -33,7 +33,7 @@ displayed_sidebar: docs
   
 Se houver mais de um caractere na cadeia, Character code devolve unicamente o código do primeiro caractere.  
   
-A função [Char](char.md) é a contraparte de Character code Devolve o caractere designado por um código UTF-16.  
+A função [Char](../commands/char) é a contraparte de Character code Devolve o caractere designado por um código UTF-16.  
 
 ## Exemplo 1 
 
@@ -96,7 +96,7 @@ O segundo código é executado mais rápido por duas razões: apenas referencia 
 
 ## Ver também 
 
-[Char](char.md)  
+[Char](../commands/char)  
 *Símbolos de referência de caracteres*  
 
 ## Propriedades

@@ -1,4 +1,4 @@
----
+﻿---
 id: is-macos
 title: Is macOS
 slug: /commands/is-macos
@@ -43,8 +43,8 @@ Se quiser determinar se o sistema operativo atual for macOS:
 
 ## Ver também 
 
-[System info](system-info.md)  
-[Is Windows](is-windows.md)  
+[System info](../commands/system-info)  
+[Is Windows](../commands/is-windows)  
 
 ## Propriedades
 

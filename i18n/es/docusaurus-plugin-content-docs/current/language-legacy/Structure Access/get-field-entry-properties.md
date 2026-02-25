@@ -1,4 +1,4 @@
----
+﻿---
 id: get-field-entry-properties
 title: GET FIELD ENTRY PROPERTIES
 slug: /commands/get-field-entry-properties
@@ -53,9 +53,9 @@ Si ninguna lista está asociada al campo o si el tipo del campo no permite la as
 
 ## Ver también 
 
-[GET FIELD PROPERTIES](get-field-properties.md)  
-[GET RELATION PROPERTIES](get-relation-properties.md)  
-[GET TABLE PROPERTIES](get-table-properties.md)  
+[GET FIELD PROPERTIES](../commands/get-field-properties)  
+[GET RELATION PROPERTIES](../commands/get-relation-properties)  
+[GET TABLE PROPERTIES](../commands/get-table-properties)  
 
 ## Propiedades
 

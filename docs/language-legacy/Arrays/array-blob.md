@@ -1,4 +1,4 @@
----
+﻿---
 id: array-blob
 title: ARRAY BLOB
 slug: /commands/array-blob
@@ -39,7 +39,7 @@ The *size2* parameter is optional. If you pass it, this command creates a two-di
 
 When you apply the **ARRAY BLOB** command to an existing array:
 
-* If you enlarge its size, existing elements are not changed and new elements are initialized to an empty BLOB ([BLOB size](blob-size.md)\= 0).
+* If you enlarge its size, existing elements are not changed and new elements are initialized to an empty BLOB ([BLOB size](../commands/blob-size)\= 0).
 * If you reduce its size, elements at the "bottom" of the array are deleted and lost.
 
 ## Example 1 

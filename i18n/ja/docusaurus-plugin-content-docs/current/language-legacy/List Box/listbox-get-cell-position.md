@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-cell-position
 title: LISTBOX GET CELL POSITION
 slug: /commands/listbox-get-cell-position
@@ -62,12 +62,12 @@ displayed_sidebar: docs
 
 上記以外のイベントで使用された場合、**LISTBOX GET CELL POSITION**コマンドは*column*と*row*に0を返します。
 
-このコマンドは、マウスクリック、キーボード、(On Getting Focusを生成する)[EDIT ITEM](edit-item.md)コマンドによる選択または選択解除を考慮します。リストボックスの選択行がキーボードの矢印キーで変更された場合、*column*引数には0が返されます。この場合、*colVar*が渡されていれば[Is nil pointer](is-nil-pointer.md)が返されます。
+このコマンドは、マウスクリック、キーボード、(On Getting Focusを生成する)[EDIT ITEM](../commands/edit-item)コマンドによる選択または選択解除を考慮します。リストボックスの選択行がキーボードの矢印キーで変更された場合、*column*引数には0が返されます。この場合、*colVar*が渡されていれば[Is nil pointer](../commands/is-nil-pointer)が返されます。
 
 ## 参照 
 
-[LISTBOX GET CELL COORDINATES](listbox-get-cell-coordinates.md)  
-[LISTBOX SELECT BREAK](listbox-select-break.md)  
+[LISTBOX GET CELL COORDINATES](../commands/listbox-get-cell-coordinates)  
+[LISTBOX SELECT BREAK](../commands/listbox-select-break)  
 
 ## プロパティ
 

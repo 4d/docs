@@ -1,4 +1,4 @@
----
+﻿---
 id: text-to-document
 title: TEXT TO DOCUMENT
 slug: /commands/text-to-document
@@ -38,13 +38,13 @@ Passez dans *nomFichier* le nom ou le chemin d’accès du fichier à écrire. S
 * un chemin d’accès relatif au fichier de structure de l’application, par exemple "\\\\docs\\\\monFichier.txt" sous Windows ou "//docs/monFichier.txt" sous macOS.
 * un chemin d’accès absolu, par exemple "c:\\\\app\\\\docs\\\\monFichier.txt" sous Windows ou "MacHD/docs/monFichier.txt" sous macOS.
 
-Si vous souhaitez permettre à l’utilisateur de désigner le nom ou l’emplacement du document, utilisez les commandes [Open document](open-document.md) ou [Create document](create-document.md) ainsi que la variable système *Document*.
+Si vous souhaitez permettre à l’utilisateur de désigner le nom ou l’emplacement du document, utilisez les commandes [Open document](../commands/open-document) ou [Create document](../commands/create-document) ainsi que la variable système *Document*.
 
 **Note :** Par défaut, les documents générés par cette commande n’ont pas d’extension. Vous devez passer une extension dans *nomFichier*.
 
 Passez dans le paramètre *texte* le texte à écrire sur disque. Il peut s’agir d’une constante littérale ("mon texte"), d’un champ texte ou d’une variable texte 4D. 
 
-Vous pouvez passer dans *jeuCaractères* le jeu de caractères à utiliser pour l’écriture du document. Vous pouvez passer une chaîne contenant le nom standard du jeu (par exemple “ISO-8859-1” ou “UTF-8”) ou son identifiant MIBEnum (entier long). Pour plus d’informations sur la liste des jeux de caractères pris en charge par 4D, reportez-vous à la description de la commande [CONVERT FROM TEXT](convert-from-text.md). Si une BOM (Byte Order Mark) existe pour le jeu de caractères, 4D l’insère dans le document, sauf si le jeu de caractères utilisé contient le suffixe "-no-bom" (ex : "UTF-8-no-bom"). Si vous ne précisez pas de jeu de caractères, 4D utilise par défaut le jeu de caractères "UTF-8" défini sans BOM (sauf en mode compatibilité, voir *Page Compatibilité*). 
+Vous pouvez passer dans *jeuCaractères* le jeu de caractères à utiliser pour l’écriture du document. Vous pouvez passer une chaîne contenant le nom standard du jeu (par exemple “ISO-8859-1” ou “UTF-8”) ou son identifiant MIBEnum (entier long). Pour plus d’informations sur la liste des jeux de caractères pris en charge par 4D, reportez-vous à la description de la commande [CONVERT FROM TEXT](../commands/convert-from-text). Si une BOM (Byte Order Mark) existe pour le jeu de caractères, 4D l’insère dans le document, sauf si le jeu de caractères utilisé contient le suffixe "-no-bom" (ex : "UTF-8-no-bom"). Si vous ne précisez pas de jeu de caractères, 4D utilise par défaut le jeu de caractères "UTF-8" défini sans BOM (sauf en mode compatibilité, voir *Page Compatibilité*). 
 
 Vous pouvez passer dans *modeRetour* un entier long indiquant le traitement à effectuer sur les caractères de fin de ligne avant de les stocker dans le fichier. Vous pouvez passer une des constantes suivantes, placées dans le thème "*Documents système*" :
 
@@ -58,7 +58,7 @@ Vous pouvez passer dans *modeRetour* un entier long indiquant le traitement à e
 
 Par défaut, si le paramètre *modeRetour* est omis, les caractères de fin de ligne sont traités en mode natif (1).
 
-**Note :** Cette commande ne modifie pas la variable OK. En cas d’échec, une erreur est générée, que vous pouvez intercepter à l’aide d’une méthode installée par la commande [ON ERR CALL](on-err-call.md).
+**Note :** Cette commande ne modifie pas la variable OK. En cas d’échec, une erreur est générée, que vous pouvez intercepter à l’aide d’une méthode installée par la commande [ON ERR CALL](../commands/on-err-call).
 
 ## Exemple 1 
 
@@ -90,7 +90,7 @@ Exemple permettant à l’utilisateur de désigner l’emplacement du fichier à
 
 ## Voir aussi 
 
-[Document to text](document-to-text.md)  
+[Document to text](../commands/document-to-text)  
 *Documents système*  
 
 ## Propriétés

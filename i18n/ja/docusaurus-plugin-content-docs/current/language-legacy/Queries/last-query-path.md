@@ -1,4 +1,4 @@
----
+﻿---
 id: last-query-path
 title: Last query path
 slug: /commands/last-query-path
@@ -33,8 +33,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[DESCRIBE QUERY EXECUTION](describe-query-execution.md)  
-[Last query plan](last-query-plan.md)  
+[DESCRIBE QUERY EXECUTION](../commands/describe-query-execution)  
+[Last query plan](../commands/last-query-plan)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: create-record
 title: CREATE RECORD
 slug: /commands/create-record
@@ -17,11 +17,11 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.CREATE RECORD.Summary-->**CREATE RECORD**は、*aTable*に対して新しい空のレコードを作成しますが、このレコードは表示されません。<!-- END REF-->データ入力のために新しいレコードを作成して表示するには[ADD RECORD](add-record.md)を使用します。
+<!--REF #_command_.CREATE RECORD.Summary-->**CREATE RECORD**は、*aTable*に対して新しい空のレコードを作成しますが、このレコードは表示されません。<!-- END REF-->データ入力のために新しいレコードを作成して表示するには[ADD RECORD](../commands/add-record)を使用します。
 
-**CREATE RECORD**は、レコードデータの割り当てをプログラミング言語で実行する場合に、[ADD RECORD](add-record.md)の代わりに使用します。新しく作成されたレコードはカレントレコードとなりますが、カレントセレクションは変わりません。
+**CREATE RECORD**は、レコードデータの割り当てをプログラミング言語で実行する場合に、[ADD RECORD](../commands/add-record)の代わりに使用します。新しく作成されたレコードはカレントレコードとなりますが、カレントセレクションは変わりません。
 
-新しいレコードは、テーブルに対する[SAVE RECORD](save-record.md)コマンドを実行するまではメモリ上にのみ存在します。新しいカレントレコードが保存される前に (検索等によって) 変更されると、そのレコードは失われます。
+新しいレコードは、テーブルに対する[SAVE RECORD](../commands/save-record)コマンドを実行するまではメモリ上にのみ存在します。新しいカレントレコードが保存される前に (検索等によって) 変更されると、そのレコードは失われます。
 
 **注:** このコマンドでは、*aTable* に渡したテーブルが読み書き可能モードである必要はありません。テーブルが読み込みのみモードの場合でも使用する事ができます(*レコードのロック*を参照して下さい)。
 
@@ -45,9 +45,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ADD RECORD](add-record.md)  
-[MODIFY RECORD](modify-record.md)  
-[SAVE RECORD](save-record.md)  
+[ADD RECORD](../commands/add-record)  
+[MODIFY RECORD](../commands/modify-record)  
+[SAVE RECORD](../commands/save-record)  
 
 ## プロパティ
 

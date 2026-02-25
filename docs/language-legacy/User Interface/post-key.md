@@ -1,4 +1,4 @@
----
+﻿---
 id: post-key
 title: POST KEY
 slug: /commands/post-key
@@ -70,8 +70,8 @@ See example for the [Process number](../commands/process-number) command.
 
 *ASCII Codes*  
 *Function Key Codes*  
-[POST CLICK](post-click.md)  
-[POST EVENT](post-event.md)  
+[POST CLICK](../commands/post-click)  
+[POST EVENT](../commands/post-event)  
 
 ## Properties
 

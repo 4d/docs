@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-report-kind
 title: QR SET REPORT KIND
 slug: /commands/qr-set-report-kind
@@ -48,7 +48,7 @@ If you pass an invalid *type* value, the error -9852 will be generated.
 
 ## See also 
 
-[QR Get report kind](qr-get-report-kind.md)  
+[QR Get report kind](../commands/qr-get-report-kind)  
 
 ## Properties
 

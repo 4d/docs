@@ -1,4 +1,4 @@
----
+﻿---
 id: folder-list
 title: FOLDER LIST
 slug: /commands/folder-list
@@ -34,8 +34,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[DOCUMENT LIST](document-list.md)  
-[VOLUME LIST](volume-list.md)  
+[DOCUMENT LIST](../commands/document-list)  
+[VOLUME LIST](../commands/volume-list)  
 
 ## プロパティ
 

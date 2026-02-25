@@ -1,4 +1,4 @@
----
+﻿---
 id: selection-to-array
 title: SELECTION TO ARRAY
 slug: /commands/selection-to-array
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 * 1つまたは複数のフィールドから値をロードします。
 * *\[table\];array* シンタックスを使用してテーブルからレコード番号をロードします。
-* テー ブル間にn対1の自動リレートが設定されている場合や、[SET AUTOMATIC RELATIONS](set-automatic-relations.md)を事前に呼び出してn対1のマニュアルリレートを自動に変更した場合は、リレートフィールドの値をロードします。いずれの場合も、複 数レベルのn対1リレートを経てテーブルから値がロードされます。
+* テー ブル間にn対1の自動リレートが設定されている場合や、[SET AUTOMATIC RELATIONS](../commands/set-automatic-relations)を事前に呼び出してn対1のマニュアルリレートを自動に変更した場合は、リレートフィールドの値をロードします。いずれの場合も、複 数レベルのn対1リレートを経てテーブルから値がロードされます。
 
 各配列は、そのフィールドタイプに応じてタイプ定義されます。
 
@@ -52,13 +52,13 @@ displayed_sidebar: docs
 レコード番号をロードする場合、配列のタイプは倍長整数となります。
 
 *\** 引数を渡すと、4Dはその行の実行を遅延し、メモリに格納します。*\** で終わる行を使用して複数の行をスタックできます。スタックされた行は *\** なしの**SELECTION TO ARRAY**一回の呼び出しですべて実行されます。この目的のため、このコマンドを引数なしで呼び出すことができます。  
-これにより、[QUERY](query.md)コマンドのように、複雑な文を複数の行に分割して記述することができ、可読性が向上します。また途中の行の挿入も容易です ([ARRAY TO SELECTION](array-to-selection.md) コマンドの例題2参照)。 
+これにより、[QUERY](../commands/query)コマンドのように、複雑な文を複数の行に分割して記述することができ、可読性が向上します。また途中の行の挿入も容易です ([ARRAY TO SELECTION](../commands/array-to-selection) コマンドの例題2参照)。 
 
 **4D Server:** **SELECTION TO ARRAY**コマンドは4D Server用に最適化されています。各配列はサーバ上で作成され、配列全体がクライアントマシンに送信されます。
 
-**警告：** **SELECTION TO ARRAY**コマンドは、カレントセレクションの大きさやロードするデータサイズによっ て非常に大きな配列を作成する場合があります。配列はメモリ上に存在します。そのためコマンドの実行後、結果をテストするのは良いことです。これを行うに は、作成された配列のサイズをテストするか、[ON ERR CALL](on-err-call.md)を使用してコマンドの呼び出しをカバーします。
+**警告：** **SELECTION TO ARRAY**コマンドは、カレントセレクションの大きさやロードするデータサイズによっ て非常に大きな配列を作成する場合があります。配列はメモリ上に存在します。そのためコマンドの実行後、結果をテストするのは良いことです。これを行うに は、作成された配列のサイズをテストするか、[ON ERR CALL](../commands/on-err-call)を使用してコマンドの呼び出しをカバーします。
 
-**注:** **SELECTION TO ARRAY**コマンドを呼び出した後、カレントセレクションとカレントレコードは同じままですが、カレントレコードはロードされていません。もしカレントレコードのフィールド値を使いたい場合は**SELECTION TO ARRAY**コマンドの後に[LOAD RECORD](load-record.md)コマンドを使用してください。
+**注:** **SELECTION TO ARRAY**コマンドを呼び出した後、カレントセレクションとカレントレコードは同じままですが、カレントレコードはロードされていません。もしカレントレコードのフィールド値を使いたい場合は**SELECTION TO ARRAY**コマンドの後に[LOAD RECORD](../commands/load-record)コマンドを使用してください。
 
 ## 例題 1 
 
@@ -86,12 +86,12 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ARRAY TO SELECTION](array-to-selection.md)  
-[CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
-[MULTI SORT ARRAY](multi-sort-array.md)  
-[ON ERR CALL](on-err-call.md)  
-[SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
-[SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
+[ARRAY TO SELECTION](../commands/array-to-selection)  
+[CREATE SELECTION FROM ARRAY](../commands/create-selection-from-array)  
+[MULTI SORT ARRAY](../commands/multi-sort-array)  
+[ON ERR CALL](../commands/on-err-call)  
+[SELECTION RANGE TO ARRAY](../commands/selection-range-to-array)  
+[SET AUTOMATIC RELATIONS](../commands/set-automatic-relations)  
 
 ## プロパティ
 

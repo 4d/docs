@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-shortcut
 title: OBJECT GET SHORTCUT
 slug: /commands/object-get-shortcut
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. 
 
-Le paramètre *touche* retourne le caractère associé à la touche (dans le cas d’une touche standard) ou une chaîne entre crochets désignant la touche (dans le cas d’une touche de fonction). Vous pouvez comparer cette valeur aux constantes du thème *Touches équivalents clavier* (cf. commande [OBJECT SET SHORTCUT](object-set-shortcut.md)).
+Le paramètre *touche* retourne le caractère associé à la touche (dans le cas d’une touche standard) ou une chaîne entre crochets désignant la touche (dans le cas d’une touche de fonction). Vous pouvez comparer cette valeur aux constantes du thème *Touches équivalents clavier* (cf. commande [OBJECT SET SHORTCUT](../commands/object-set-shortcut)).
 
 Le paramètre *modifiers* retourne une valeur indiquant la ou les touche(s) de modification associée(s) à l’équivalent clavier. Si plusieurs touches de modification ont été combinées, la commande retourne le cumul de leurs valeurs. Vous pouvez comparer la valeur reçue aux constantes suivantes du thème *Evénements (Modifiers)* :
 
@@ -51,7 +51,7 @@ Si aucune touche de modification n’a été définie dans l’équivalent clavi
 
 ## Voir aussi 
 
-[OBJECT SET SHORTCUT](object-set-shortcut.md)  
+[OBJECT SET SHORTCUT](../commands/object-set-shortcut)  
 
 ## Propriétés
 

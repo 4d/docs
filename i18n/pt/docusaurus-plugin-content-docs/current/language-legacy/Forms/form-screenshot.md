@@ -1,4 +1,4 @@
----
+﻿---
 id: form-screenshot
 title: FORM SCREENSHOT
 slug: /commands/form-screenshot
@@ -43,7 +43,7 @@ Automaticamente, o comando retorna uma captura de tela da página 1 do formulár
 **Notas:** 
 
 * Àreas Web não são geradas na screenshot retornada.
-* Já que os primeiros dois parâmetros do comando são opcionais, não é possível passar uma função retornando um ponteiro, tal como [Current form table](current-form-table.md)\-> ou [Table](table.md)\->, diretamente como argumento. Apesar dessa sintaxe funcionar em modo interpretado, seria rejeitada durante a compilação, então use uma variável ponteiro intermediária nesse caso. Para saber mais, veja "*Direct use of commands returning pointers*".
+* Já que os primeiros dois parâmetros do comando são opcionais, não é possível passar uma função retornando um ponteiro, tal como [Current form table](../commands/current-form-table)\-> ou [Table](../commands/table)\->, diretamente como argumento. Apesar dessa sintaxe funcionar em modo interpretado, seria rejeitada durante a compilação, então use uma variável ponteiro intermediária nesse caso. Para saber mais, veja "*Direct use of commands returning pointers*".
 
 ## Ver também 
 

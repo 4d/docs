@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-column-formula
 title: LISTBOX SET COLUMN FORMULA
 slug: /commands/listbox-set-column-formula
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX SET COLUMN FORMULA.Summary-->El comando **LISTBOX SET COLUMN FORMULA** modifica la *formula* asociada a la columna de list box designada por los parámetros *objeto* y *\**.<!-- END REF--> Las fórmulas no se pueden utilizar cuando la propiedad “Fuente de datos” del list box es **Selección actual**, **Selección temporal** o **Colección** o **Selección de entidades**.
 
-**Nota:** puede utilizar el comando [OBJECT SET DATA SOURCE](object-set-data-source.md) para definir la fuente de datos de un list box tipo array. 
+**Nota:** puede utilizar el comando [OBJECT SET DATA SOURCE](../commands/object-set-data-source) para definir la fuente de datos de un list box tipo array. 
 
 Si pasa el parámetro opcional *\**, indica que el parámetro *objeto* es un nombre de objeto (una cadena). Si no pasa este parámetro, esto indica que el parámetro *objeto* es una variable. En este caso, se pasa una referencia de variable en lugar de una cadena. Este parámetro debe designar una columna del list box.  
   
@@ -51,8 +51,8 @@ El parámetro *tipoDatos* designa el tipo de datos resultantes de la ejecución 
 
 ## Ver también 
 
-[LISTBOX Get column formula](listbox-get-column-formula.md)  
-[OBJECT SET DATA SOURCE](object-set-data-source.md)  
+[LISTBOX Get column formula](../commands/listbox-get-column-formula)  
+[OBJECT SET DATA SOURCE](../commands/object-set-data-source)  
 
 ## Propiedades
 

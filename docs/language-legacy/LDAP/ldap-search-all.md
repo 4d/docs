@@ -1,4 +1,4 @@
----
+﻿---
 id: ldap-search-all
 title: LDAP SEARCH ALL
 slug: /commands/ldap-search-all
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.LDAP SEARCH ALL.Summary-->The **LDAP SEARCH ALL** command searches in the target LDAP server for all occurrences matching the criteria defined.<!-- END REF--> This command must be executed within a connection to an LDAP server opened with [LDAP LOGIN](ldap-login.md); otherwise a 1003 error is returned.
+<!--REF #_command_.LDAP SEARCH ALL.Summary-->The **LDAP SEARCH ALL** command searches in the target LDAP server for all occurrences matching the criteria defined.<!-- END REF--> This command must be executed within a connection to an LDAP server opened with [LDAP LOGIN](../commands/ldap-login); otherwise a 1003 error is returned.
 
 Note that LDAP servers usually impose a maximum number of entries that can be received from a search. For example, Microsoft Active directory limits this number to 1000 entries by default.
 
@@ -126,7 +126,7 @@ These examples illustrate the use of the *attributesAsArray* parameter:
 ## See also 
 
 *LDAP*  
-[LDAP Search](ldap-search.md)  
+[LDAP Search](../commands/ldap-search)  
 
 ## Properties
 

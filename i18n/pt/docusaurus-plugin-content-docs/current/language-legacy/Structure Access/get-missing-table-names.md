@@ -1,4 +1,4 @@
----
+﻿---
 id: get-missing-table-names
 title: GET MISSING TABLE NAMES
 slug: /commands/get-missing-table-names
@@ -37,13 +37,13 @@ Geralmente, o cenário é o seguinte:
 * o usuário adiciona tabelas personalizadas D e E, utilizando, por exemplo, os comandos  integrados de 4D, e salva os dados nessas tabelas,
 * O desenvolvedor oferece uma nova versão da estrutura, que não contenha as tabelas D e E.  
 Nesse caso, a versão usuário do banco ainda contém os dados das tabelas D e E, mas não são acessíveis. O comando GET MISSING TABLE NAMES devolverá os nomes "D" e "E".
-Quando tiver identificado as tabelas faltantes do banco, pode reativá-las através do comando [REGENERATE MISSING TABLE](regenerate-missing-table.md).  
+Quando tiver identificado as tabelas faltantes do banco, pode reativá-las através do comando [REGENERATE MISSING TABLE](../commands/regenerate-missing-table).  
   
 **Nota**: os dados das tabelas não encontradas são apagadas quando o arquivo de dados for encontrado (se as tabelas não forem regeneradas).
 
 ## Ver também 
 
-[REGENERATE MISSING TABLE](regenerate-missing-table.md)  
+[REGENERATE MISSING TABLE](../commands/regenerate-missing-table)  
 
 ## Propriedades
 

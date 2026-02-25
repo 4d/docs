@@ -1,4 +1,4 @@
----
+﻿---
 id: stop-sql-server
 title: STOP SQL SERVER
 slug: /commands/stop-sql-server
@@ -34,7 +34,7 @@ SQLサーバが起動していた場合、すべてのSQL接続が中断しま�
 
 ## 参照 
 
-[START SQL SERVER](start-sql-server.md)  
+[START SQL SERVER](../commands/start-sql-server)  
 
 ## プロパティ
 

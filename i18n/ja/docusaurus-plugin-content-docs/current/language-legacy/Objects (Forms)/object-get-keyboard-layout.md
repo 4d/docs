@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-keyboard-layout
 title: OBJECT Get keyboard layout
 slug: /commands/object-get-keyboard-layout
@@ -33,11 +33,11 @@ displayed_sidebar: docs
 
 オプションの *\** 引数を渡すと、*object* 引数はオブジェクト名 (文字列) です。この引数を渡さない場合、*object* は変数であり、文字列ではなく変数参照を渡します。
 
-このコマンドは使用する言語の (RFC3066、ISO639、そしてISO3166に基づく) コードを示す文字列を返します。詳細は[SET DATABASE LOCALIZATION](set-database-localization.md)コマンドの説明を参照してください。
+このコマンドは使用する言語の (RFC3066、ISO639、そしてISO3166に基づく) コードを示す文字列を返します。詳細は[SET DATABASE LOCALIZATION](../commands/set-database-localization)コマンドの説明を参照してください。
 
 ## 参照 
 
-[OBJECT SET KEYBOARD LAYOUT](object-set-keyboard-layout.md)  
+[OBJECT SET KEYBOARD LAYOUT](../commands/object-set-keyboard-layout)  
 
 ## プロパティ
 

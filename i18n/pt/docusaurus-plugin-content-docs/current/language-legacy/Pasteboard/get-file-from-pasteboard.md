@@ -1,4 +1,4 @@
----
+﻿---
 id: get-file-from-pasteboard
 title: Get file from pasteboard
 slug: /commands/get-file-from-pasteboard
@@ -52,7 +52,7 @@ O exemplo a seguir pode ser utilizado para recuperar em um array todas as rotas 
 
 ## Ver também 
 
-[SET FILE TO PASTEBOARD](set-file-to-pasteboard.md)  
+[SET FILE TO PASTEBOARD](../commands/set-file-to-pasteboard)  
 
 ## Propriedades
 

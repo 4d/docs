@@ -1,4 +1,4 @@
----
+﻿---
 id: semaphore
 title: Semaphore
 slug: /commands/semaphore
@@ -164,9 +164,9 @@ Sintaxe:
 
 ## Ver também 
 
-[CLEAR SEMAPHORE](clear-semaphore.md)  
+[CLEAR SEMAPHORE](../commands/clear-semaphore)  
 *Semáforos e Sinais*  
-[Test semaphore](test-semaphore.md)  
+[Test semaphore](../commands/test-semaphore)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-document-property
 title: QR Get document property
 slug: /commands/qr-get-document-property
@@ -46,7 +46,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[QR SET DOCUMENT PROPERTY](qr-set-document-property.md)  
+[QR SET DOCUMENT PROPERTY](../commands/qr-set-document-property)  
 
 ## プロパティ
 

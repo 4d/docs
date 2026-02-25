@@ -1,4 +1,4 @@
----
+﻿---
 id: abort
 title: ABORT
 slug: /commands/abort
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.ABORT.Summary-->The **ABORT** command is used from within an error-handling project method installed using the command [ON ERR CALL](on-err-call.md).<!-- END REF--> 
+<!--REF #_command_.ABORT.Summary-->The **ABORT** command is used from within an error-handling project method installed using the command [ON ERR CALL](../commands/on-err-call).<!-- END REF--> 
 
 If you do not have an error-handling project method, when an error occurs (for example, a database engine error) 4D displays its standard error dialog box and then interrupts the execution of your code. If the code being executed is:
 
@@ -36,7 +36,7 @@ Although the **ABORT** command is intended to be used only from within a error-h
 
 ## See also 
 
-[ON ERR CALL](on-err-call.md)  
+[ON ERR CALL](../commands/on-err-call)  
 
 ## Properties
 

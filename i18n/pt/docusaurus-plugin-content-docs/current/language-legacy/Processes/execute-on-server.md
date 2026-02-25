@@ -1,4 +1,4 @@
----
+﻿---
 id: execute-on-server
 title: Execute on server
 slug: /commands/execute-on-server
@@ -61,7 +61,7 @@ O nome do novo processo é passado em *nome*. Em monousuário, este nome aparece
 
 Você pode omitir este parâmetro; se isso acontecer, o nome do processo é uma string vazia.  
   
-**Atenção**: Ao contrário do comando [New process](new-process.md), não tente fazer com que o processo seja local em escopo,  colocando o prefixo cifrão (*$*) enquanto usa o comando **Execute on server.** Isso irá funcionar corretamente em um único usuário, porque **Execute on server age**  como [New process](new-process.md) neste ambiente. Por outro lado, em cliente / servidor, este irá gerar um erro.
+**Atenção**: Ao contrário do comando [New process](../commands/new-process), não tente fazer com que o processo seja local em escopo,  colocando o prefixo cifrão (*$*) enquanto usa o comando **Execute on server.** Isso irá funcionar corretamente em um único usuário, porque **Execute on server age**  como [New process](../commands/new-process) neste ambiente. Por outro lado, em cliente / servidor, este irá gerar um erro.
 
 ### Parâmetros do método processo 
 
@@ -94,7 +94,7 @@ O método WriteLog será executado no servidor. Contém, por exemplo:
 
 ## Exemplo 2 
 
-O exemplo abaixo mostra como a importação de dados pode ser acelerada de maneira dramática em Cliente/Servidor. O método Importacion Clasica listado abaixo permite medir quanto tempo leva uma importação de registros utilizando o comando [IMPORT TEXT](import-text.md) no lado Cliente  
+O exemplo abaixo mostra como a importação de dados pode ser acelerada de maneira dramática em Cliente/Servidor. O método Importacion Clasica listado abaixo permite medir quanto tempo leva uma importação de registros utilizando o comando [IMPORT TEXT](../commands/import-text) no lado Cliente  
 
 ```4d
   //Método de proyecto Importacion Clasica
@@ -208,8 +208,8 @@ Consulte a seção *Serviços baseados nos procedimentos armazenados (exemplo)* 
 
 ## Ver também 
 
-[EXECUTE ON CLIENT](execute-on-client.md)  
-[New process](new-process.md)  
+[EXECUTE ON CLIENT](../commands/execute-on-client)  
+[New process](../commands/new-process)  
 
 ## Propriedades
 

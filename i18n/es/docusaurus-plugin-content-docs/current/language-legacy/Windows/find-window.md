@@ -1,4 +1,4 @@
----
+﻿---
 id: find-window
 title: Find window
 slug: /commands/find-window
@@ -39,8 +39,8 @@ El parámetro *parteVentana* devuelve 3 si se toca la ventana, de lo contrario 0
 
 ## Ver también 
 
-[Frontmost window](frontmost-window.md)  
-[Next window](next-window.md)  
+[Frontmost window](../commands/frontmost-window)  
+[Next window](../commands/next-window)  
 
 ## Propiedades
 

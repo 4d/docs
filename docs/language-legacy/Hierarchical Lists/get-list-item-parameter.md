@@ -1,4 +1,4 @@
----
+﻿---
 id: get-list-item-parameter
 title: GET LIST ITEM PARAMETER
 slug: /commands/get-list-item-parameter
@@ -38,16 +38,16 @@ If you pass the first optional *\** parameter, you indicate that the *list* para
 
 **Note:** If you use the @ character in the object name of the list and the form contains several lists that match this name, the **GET LIST ITEM PARAMETER** command will be applied to the first object whose name corresponds.
 
-You can pass a reference number in *itemRef*. If this number does not correspond to an item in the list, the command does nothing. You can also pass 0 in *itemRef* to indicate the last item added to the list (using [APPEND TO LIST](append-to-list.md)).
+You can pass a reference number in *itemRef*. If this number does not correspond to an item in the list, the command does nothing. You can also pass 0 in *itemRef* to indicate the last item added to the list (using [APPEND TO LIST](../commands/append-to-list)).
 
 Lastly, you can pass *\** in *itemRef*: in this case, the command is applied to the current item of the list. If several items are selected manually, the current item is the last one that was selected. If no item is selected, the command does nothing.
 
-In *selector*, you can pass the Additional text or Associated standard action constants (found in the “*Hierarchical Lists*” theme) or any custom value. For more information about the *selector* and *value* parameters, please refer to the description of the [SET LIST ITEM PARAMETER](set-list-item-parameter.md) command.
+In *selector*, you can pass the Additional text or Associated standard action constants (found in the “*Hierarchical Lists*” theme) or any custom value. For more information about the *selector* and *value* parameters, please refer to the description of the [SET LIST ITEM PARAMETER](../commands/set-list-item-parameter) command.
 
 ## See also 
 
 [Hierarchical Lists](../../FormObjects/list_overview.md)
-[SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+[SET LIST ITEM PARAMETER](../commands/set-list-item-parameter)  
 
 ## Properties
 

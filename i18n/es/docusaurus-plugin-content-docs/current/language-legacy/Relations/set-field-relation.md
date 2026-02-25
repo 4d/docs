@@ -1,4 +1,4 @@
----
+﻿---
 id: set-field-relation
 title: SET FIELD RELATION
 slug: /commands/set-field-relation
@@ -46,7 +46,7 @@ Pase en los parámetros *uno* y *muchos*, los valores que indican el cambio de e
 
 **Nota:** los cambios realizados con este comando sólo aplican al proceso actual. La configuración de las relaciones definida utilizando las opciones de la ventana de propiedades de la relación no se modifica. 
 
-**Note**: si pasa True al comando [SET AUTOMATIC RELATIONS](set-automatic-relations.md) durante la misma sesión, las llamadas al comando SET FIELD RELATION se ignoran, sin importar si están ubicadas antes o después de [SET AUTOMATIC RELATIONS](set-automatic-relations.md). Para "bloquear" el modo automático y tener en cuenta llamadas a SET FIELD RELATION, pase False a [SET AUTOMATIC RELATIONS](set-automatic-relations.md).
+**Note**: si pasa True al comando [SET AUTOMATIC RELATIONS](../commands/set-automatic-relations) durante la misma sesión, las llamadas al comando SET FIELD RELATION se ignoran, sin importar si están ubicadas antes o después de [SET AUTOMATIC RELATIONS](../commands/set-automatic-relations). Para "bloquear" el modo automático y tener en cuenta llamadas a SET FIELD RELATION, pase False a [SET AUTOMATIC RELATIONS](../commands/set-automatic-relations).
 
 ## Ejemplo 
 
@@ -62,10 +62,10 @@ El siguiente código permite definir sólo las relaciones útiles como automáti
 
 ## Ver también 
 
-[GET AUTOMATIC RELATIONS](get-automatic-relations.md)  
-[GET FIELD RELATION](get-field-relation.md)  
-[GET RELATION PROPERTIES](get-relation-properties.md)  
-[SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
+[GET AUTOMATIC RELATIONS](../commands/get-automatic-relations)  
+[GET FIELD RELATION](../commands/get-field-relation)  
+[GET RELATION PROPERTIES](../commands/get-relation-properties)  
+[SET AUTOMATIC RELATIONS](../commands/set-automatic-relations)  
 
 ## Propiedades
 

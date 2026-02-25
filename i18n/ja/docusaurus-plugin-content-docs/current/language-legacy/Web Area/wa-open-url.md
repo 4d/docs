@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-open-url
 title: WA OPEN URL
 slug: /commands/wa-open-url
@@ -33,14 +33,14 @@ displayed_sidebar: docs
 
 *url*に空の文字列を渡すと、**WA OPEN URL**コマンドは何も行わず、エラーも生成されません。Webエリアに空のページをロードするには、*url*引数に"about:blank"文字列を渡します。
 
-既存の[OPEN URL](open-url.md)コマンドのように、**WA OPEN URL**はファイルを指定するための複数のシンタックスを*url* 引数に受け入れます:
+既存の[OPEN URL](../commands/open-url)コマンドのように、**WA OPEN URL**はファイルを指定するための複数のシンタックスを*url* 引数に受け入れます:
 
 * POSIXシンタックス: "file:///c:/My%20File"
 * システムシンタックス: "c:\\MyFolder\\MyFile" (Windows) または "MyDisk:MyFolder:MyFile" (macOS).
 
 **注:** 互換性のため (2つのスラッシュを使用する) "file://" シンタックスを4Dは受け入れますが、これはRFCに準拠していません。RFCに準拠した"file:///"シンタックス (3つのスラッシュ "/") 利用を推奨します。
 
-Mac OSにおいてFileVault が有効化されている場合には、Posix シンタックスを使用する必要があります。[Convert path system to POSIX](convert-path-system-to-posix.md) コマンドを使用してシステムのパスを変換することができます。
+Mac OSにおいてFileVault が有効化されている場合には、Posix シンタックスを使用する必要があります。[Convert path system to POSIX](../commands/convert-path-system-to-posix) コマンドを使用してシステムのパスを変換することができます。
 
 このコマンドは、Webエリアに関連付けられた"URL"変数の値を更新することと同じ効果があります。例として、エリアのURL変数がMyWArea\_urlのとき:
 
@@ -56,9 +56,9 @@ Mac OSにおいてFileVault が有効化されている場合には、Posix シ�
 
 ## 参照 
 
-[OPEN URL](open-url.md)  
-[WA OPEN BACK URL](wa-open-back-url.md)  
-[WA OPEN FORWARD URL](wa-open-forward-url.md)  
+[OPEN URL](../commands/open-url)  
+[WA OPEN BACK URL](../commands/wa-open-back-url)  
+[WA OPEN FORWARD URL](../commands/wa-open-forward-url)  
 
 ## プロパティ
 

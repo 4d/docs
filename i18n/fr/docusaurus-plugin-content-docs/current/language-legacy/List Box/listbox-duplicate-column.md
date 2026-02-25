@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-duplicate-column
 title: LISTBOX DUPLICATE COLUMN
 slug: /commands/listbox-duplicate-column
@@ -69,7 +69,7 @@ Vous pouvez dupliquer dynamiquement des colonnes de list box, 4D prenant automat
 
 Pour cela, **LISTBOX DUPLICATE COLUMN** accepte un pointeur **Nil** (**\->\[\]**) comme valeur pour les paramètres *variableCol* (list box de type tableau et collection/entity selection), *variableEntête* et *variablePied*. Dans ce cas, 4D va créer dynamiquement les variables requises lors de l'exécution de la commande (pour plus d'informations, reportez-vous à la section ). 
 
-A noter que les variables d'en-tête et de pied sont toujours créées avec un type spécifique (respectivement entier long et texte). A l'inverse, les variables de colonne ne peuvent pas être typées à la création car les list box acceptent différents types de tableaux pour ces variables (tableau texte, tableau entier, etc.). Vous devez donc définir manuellement le type du tableau (cf. exemple 2). Il est important d'effectuer ce typage avant d'appeler des commandes telles que [LISTBOX INSERT ROWS](listbox-insert-rows.md) pour insérer des nouveaux éléments dans le tableau. Ou bien, il est possible d'utiliser [APPEND TO ARRAY](append-to-array.md) pour à la fois typer le tableau et insérer des éléments. 
+A noter que les variables d'en-tête et de pied sont toujours créées avec un type spécifique (respectivement entier long et texte). A l'inverse, les variables de colonne ne peuvent pas être typées à la création car les list box acceptent différents types de tableaux pour ces variables (tableau texte, tableau entier, etc.). Vous devez donc définir manuellement le type du tableau (cf. exemple 2). Il est important d'effectuer ce typage avant d'appeler des commandes telles que [LISTBOX INSERT ROWS](../commands/listbox-insert-rows) pour insérer des nouveaux éléments dans le tableau. Ou bien, il est possible d'utiliser [APPEND TO ARRAY](../commands/append-to-array) pour à la fois typer le tableau et insérer des éléments. 
 
 ## Exemple 1 
 
@@ -105,7 +105,7 @@ Vous souhaitez dupliquer dynamiquement une colonne booléenne et modifier son ti
 
 ## Voir aussi 
 
-[LISTBOX MOVE COLUMN](listbox-move-column.md)  
+[LISTBOX MOVE COLUMN](../commands/listbox-move-column)  
 
 ## Propriétés
 

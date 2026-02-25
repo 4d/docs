@@ -1,4 +1,4 @@
----
+﻿---
 id: open-datastore
 title: Open datastore
 slug: /commands/open-datastore
@@ -122,7 +122,7 @@ user / password / timeout / tls を指定してリモートデータストアに
 
 ## 参照
 
-[ds](ds.md)
+[ds](../commands/ds)
 
 ## プロパティ
 

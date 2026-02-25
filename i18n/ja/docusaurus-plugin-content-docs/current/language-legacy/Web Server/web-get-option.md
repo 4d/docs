@@ -1,4 +1,4 @@
----
+﻿---
 id: web-get-option
 title: WEB GET OPTION
 slug: /commands/web-get-option
@@ -78,7 +78,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WEB SET OPTION](web-set-option.md)  
+[WEB SET OPTION](../commands/web-set-option)  
 
 ## プロパティ
 

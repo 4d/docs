@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-append-xml-element
 title: DOM Append XML element
 slug: /commands/dom-append-xml-element
@@ -35,11 +35,11 @@ Passez dans *refElémentSource* l’élément à ajouter. Cet élément doit êt
 
 ## Exemple 
 
-Voir l’exemple de la commande [DOM Insert XML element](dom-insert-xml-element.md).
+Voir l’exemple de la commande [DOM Insert XML element](../commands/dom-insert-xml-element).
 
 ## Voir aussi 
 
-[DOM Insert XML element](dom-insert-xml-element.md)  
+[DOM Insert XML element](../commands/dom-insert-xml-element)  
 
 ## Propriétés
 

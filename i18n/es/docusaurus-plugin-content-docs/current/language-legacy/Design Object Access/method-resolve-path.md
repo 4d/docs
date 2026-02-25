@@ -1,4 +1,4 @@
----
+﻿---
 id: method-resolve-path
 title: METHOD RESOLVE PATH
 slug: /commands/method-resolve-path
@@ -94,7 +94,7 @@ Resolución de una ruta de objeto de método formulario tabla:
 
 ## Ver también 
 
-[METHOD Get path](method-get-path.md)  
+[METHOD Get path](../commands/method-get-path)  
 
 ## Propiedades
 

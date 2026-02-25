@@ -1,4 +1,4 @@
----
+﻿---
 id: compress-blob
 title: COMPRESS BLOB
 slug: /commands/compress-blob
@@ -45,13 +45,13 @@ Se passar outro valor ou se ignorar o parametro compressão, o método de compre
 
 Após a chamada, a variável OK é definida como 1 se o BLOB foi bem compactado. Se a compressão não pôde ser executada, a variável OK é definida como 0\. Se a compressão não pôde ser realizada devido à falta de memória ou porque o real tamanho do blob é menor que 255 bytes, nenhum erro é gerado e o método continua a sua execução.
 
-Nos demais casos (isto é, o BLOB estiver danificado), o erro -10600 é gerado. Esse erro pode ser tratado usando o comando [ON ERR CALL](on-err-call.md).
+Nos demais casos (isto é, o BLOB estiver danificado), o erro -10600 é gerado. Esse erro pode ser tratado usando o comando [ON ERR CALL](../commands/on-err-call).
 
-Depois que um BLOB foi compactado, você pode expandi-lo usando o comando [ON ERR CALL](on-err-call.md).
+Depois que um BLOB foi compactado, você pode expandi-lo usando o comando [ON ERR CALL](../commands/on-err-call).
 
-Para detectar se o BLOB foi compactado, use o comando [BLOB PROPERTIES](blob-properties.md).
+Para detectar se o BLOB foi compactado, use o comando [BLOB PROPERTIES](../commands/blob-properties).
 
-Advertência: O BLOB comprimido ainda é um BLOB, então não há nada para impedi-lo de modificar o seu conteúdo. No entanto, se você fizer isso, o comando [EXPAND BLOB](expand-blob.md) não será capaz de descompactar o BLOB corretamente.
+Advertência: O BLOB comprimido ainda é um BLOB, então não há nada para impedi-lo de modificar o seu conteúdo. No entanto, se você fizer isso, o comando [EXPAND BLOB](../commands/expand-blob) não será capaz de descompactar o BLOB corretamente.
 
 ## Exemplo 1 
 
@@ -103,8 +103,8 @@ A variável OK é definida como 1 se o BLOB foi compactado com sucesso, caso con
 
 ## Ver também 
 
-[BLOB PROPERTIES](blob-properties.md)  
-[EXPAND BLOB](expand-blob.md)  
+[BLOB PROPERTIES](../commands/blob-properties)  
+[EXPAND BLOB](../commands/expand-blob)  
 
 ## Propriedades
 

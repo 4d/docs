@@ -1,4 +1,4 @@
----
+﻿---
 id: form-set-input
 title: FORM SET INPUT
 slug: /commands/form-set-input
@@ -108,17 +108,17 @@ o que retorna:
 
 ## Ver também 
 
-[ADD RECORD](add-record.md)  
-[DISPLAY RECORD](display-record.md)  
-[DISPLAY SELECTION](display-selection.md)  
-[FORM SET OUTPUT](form-set-output.md)  
-[IMPORT DIF](import-dif.md)  
-[IMPORT SYLK](import-sylk.md)  
-[IMPORT TEXT](import-text.md)  
-[MODIFY RECORD](modify-record.md)  
-[MODIFY SELECTION](modify-selection.md)  
+[ADD RECORD](../commands/add-record)  
+[DISPLAY RECORD](../commands/display-record)  
+[DISPLAY SELECTION](../commands/display-selection)  
+[FORM SET OUTPUT](../commands/form-set-output)  
+[IMPORT DIF](../commands/import-dif)  
+[IMPORT SYLK](../commands/import-sylk)  
+[IMPORT TEXT](../commands/import-text)  
+[MODIFY RECORD](../commands/modify-record)  
+[MODIFY SELECTION](../commands/modify-selection)  
 [Open window](../commands/open-window)  
-[QUERY BY EXAMPLE](query-by-example.md)  
+[QUERY BY EXAMPLE](../commands/query-by-example)  
 
 ## Propriedades
 

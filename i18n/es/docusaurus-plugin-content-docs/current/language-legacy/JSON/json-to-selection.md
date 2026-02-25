@@ -1,4 +1,4 @@
----
+﻿---
 id: json-to-selection
 title: JSON TO SELECTION
 slug: /commands/json-to-selection
@@ -79,7 +79,7 @@ Uso del comando **JSON TO SELECTION** para añadir los registros a la tabla \[Co
 
 ## Ver también 
 
-[Selection to JSON](selection-to-json.md)  
+[Selection to JSON](../commands/selection-to-json)  
 
 ## Propiedades
 

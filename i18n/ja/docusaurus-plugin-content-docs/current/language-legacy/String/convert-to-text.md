@@ -1,4 +1,4 @@
----
+﻿---
 id: convert-to-text
 title: Convert to text
 slug: /commands/convert-to-text
@@ -42,7 +42,7 @@ Convert to textはByte Order Marks (BOM) をサポートします。指定され
 
 ## 参照 
 
-[CONVERT FROM TEXT](convert-from-text.md)  
+[CONVERT FROM TEXT](../commands/convert-from-text)  
 
 ## プロパティ
 

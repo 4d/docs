@@ -1,4 +1,4 @@
----
+﻿---
 id: http-request
 title: HTTP Request
 slug: /commands/http-request
@@ -47,7 +47,7 @@ displayed_sidebar: docs
 | 定数                  | 型   | 値       | コメント                                           |
 | ------------------- | --- | ------- | ---------------------------------------------- |
 | HTTP DELETE method  | 文字列 | DELETE  | *RFC 2616*参照                                   |
-| HTTP GET method     | 文字列 | GET     | *RFC 2616*参照。[HTTP Get](http-get.md)を使用するのと同等。 |
+| HTTP GET method     | 文字列 | GET     | *RFC 2616*参照。[HTTP Get](../commands/http-get)を使用するのと同等。 |
 | HTTP HEAD method    | 文字列 | HEAD    | *RFC 2616*参照                                   |
 | HTTP OPTIONS method | 文字列 | OPTIONS |                                                |
 | HTTP POST method    | 文字列 | POST    | *RFC 2616*参照                                   |
@@ -85,7 +85,7 @@ http://[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
 * ピクチャー: 期待される結果がピクチャーの場合。
 * オブジェクト: 期待される結果がオブジェクトの場合。
 
-**注:** *response* 引数にテキスト変数が渡された場合、4Dはサーバーから返されたデータを解読しようとします。4Dはまず*content-type* ヘッダーから文字セットを取得しようとし、次にBOMの中身を使用し、最後は*http-equiv charset* (html コンテンツ内) あるいは *encoding* (xml用) 属性を探します。それでも文字セットが見つからない場合、4DはレスポンスをANSIで解読しようとします。変換が失敗した場合、返されるテキストは空になります。サーバーが文字セット情報あるいはBOMを返すかどうかが分からない一方エンコーディング情報を知っている場合には、BLOBに*response*変数を渡して[Convert to text](convert-to-text.md)を呼び出す方が正確です。
+**注:** *response* 引数にテキスト変数が渡された場合、4Dはサーバーから返されたデータを解読しようとします。4Dはまず*content-type* ヘッダーから文字セットを取得しようとし、次にBOMの中身を使用し、最後は*http-equiv charset* (html コンテンツ内) あるいは *encoding* (xml用) 属性を探します。それでも文字セットが見つからない場合、4DはレスポンスをANSIで解読しようとします。変換が失敗した場合、返されるテキストは空になります。サーバーが文字セット情報あるいはBOMを返すかどうかが分からない一方エンコーディング情報を知っている場合には、BLOBに*response*変数を渡して[Convert to text](../commands/convert-to-text)を呼び出す方が正確です。
 
 オブジェクト型の変数を *response* 引数に渡したとき、リクエストが テキストコンテンツ型と結果を返してきた場合、4D はコンテンツをJSONとして解析しようとし、解析された結果をオブジェクトとして返します。そうでない場合*4D.Blob* オブジェクトが返されます。
 
@@ -97,7 +97,7 @@ http://[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
 *\** 引数を使用してサーバー接続時にkeep-aliveメカニズムを有効にできます。デフォルトではこの引数が省略されると、keep-aliveは有効になりません。
 
 コマンドからは標準のHTTPステータスコードが返されます (200=OK等)。HTTPステータスコードについては*RFC 2616*を参照してください。   
-ネットワークに関連する理由 (DNS解決に失敗した、サーバーに接続できないなど...) により、サーバーに接続できない場合、コマンドは0を返し、エラーが生成されます。エラーは [ON ERR CALL](on-err-call.md) コマンドを使用してインストールされたエラー処理メソッドで処理できます。
+ネットワークに関連する理由 (DNS解決に失敗した、サーバーに接続できないなど...) により、サーバーに接続できない場合、コマンドは0を返し、エラーが生成されます。エラーは [ON ERR CALL](../commands/on-err-call) コマンドを使用してインストールされたエラー処理メソッドで処理できます。
 
 ## 例題 1 
 
@@ -133,7 +133,7 @@ http://[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
 
 ## 参照 
 
-[HTTP Get](http-get.md)  
+[HTTP Get](../commands/http-get)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: print-record
 title: PRINT RECORD
 slug: /commands/print-record
@@ -40,7 +40,7 @@ Por padrão, PRINT RECORD mostra a caixa de diálogo de impressão antes de impr
 
 Pode eliminar estas caixas de diálogo utilizando o parâmetro opcional asterisco (*\**) ou o parâmetro opcional “maior que” (*\>*):
 
-* O parâmetro *\** produz um trabalho de impressão utilizando os parâmetros de impressão atual (parâmetros por padrão ou definidos pelos comandos *\_o\_PAGE SETUP* ou [SET PRINT OPTION](set-print-option.md) ).
+* O parâmetro *\** produz um trabalho de impressão utilizando os parâmetros de impressão atual (parâmetros por padrão ou definidos pelos comandos *\_o\_PAGE SETUP* ou [SET PRINT OPTION](../commands/set-print-option) ).
 * Além disso, o parâmetro *\>* produz um trabalho de impressão sem reinicializar os parâmetro de impressão atual. Este parâmetro é útil para executar várias chamadas consecutivas a PRINT RECORD (por exemplo ao interior de um loop) enquanto mantém os parâmetros de impressão personalizados definidos previamente.
 
 **4D Server:** este comando pode ser executado em 4D Server dentro do marco de um procedimento armazenado. Neste contexto:
@@ -48,7 +48,7 @@ Pode eliminar estas caixas de diálogo utilizando o parâmetro opcional asterisc
 * Tenha certeza de que nenhuma caixa caixa de diálogo apareça na máquina servidor (exceto para uma necessidade específica). Para fazer isto, é necessário chamar ao comando com o parâmetro *\** ou *\>*.
 * Em caso de um problema com a impressora (sem papel, impressora desconectada, etc.), não gera mensagem de erro.
 
-**Aviso:** Não use o comando [PAGE BREAK](page-break.md) com PRINT RECORD. [PAGE BREAK](page-break.md) é reservado exclusivamente para uso combinado com o comando [Print form](../commands/print-form).
+**Aviso:** Não use o comando [PAGE BREAK](../commands/page-break) com PRINT RECORD. [PAGE BREAK](../commands/page-break) é reservado exclusivamente para uso combinado com o comando [Print form](../commands/print-form).
 
 ## Exemplo 1 
 

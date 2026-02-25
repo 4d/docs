@@ -1,4 +1,4 @@
----
+﻿---
 id: unregister-client
 title: UNREGISTER CLIENT
 slug: /commands/unregister-client
@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.UNREGISTER CLIENT.Summary-->The **UNREGISTER CLIENT** command “unregisters” a 4D client station.<!-- END REF--> The client must have already been registered by the [REGISTER CLIENT](register-client.md) command. 
+<!--REF #_command_.UNREGISTER CLIENT.Summary-->The **UNREGISTER CLIENT** command “unregisters” a 4D client station.<!-- END REF--> The client must have already been registered by the [REGISTER CLIENT](../commands/register-client) command. 
 
 **Note:** A 4D client is automatically unregistered when the user quits the application. 
 
@@ -34,7 +34,7 @@ If the client workstation was not previously registered or if the command was ex
 
 ## Example 
 
-Refer to the example for the [REGISTER CLIENT](register-client.md) command.
+Refer to the example for the [REGISTER CLIENT](../commands/register-client) command.
 
 ## System variables and sets 
 
@@ -42,9 +42,9 @@ If the client is correctly unregistered, the OK system variable is set to 1\. If
 
 ## See also 
 
-[EXECUTE ON CLIENT](execute-on-client.md)  
-[GET REGISTERED CLIENTS](get-registered-clients.md)  
-[REGISTER CLIENT](register-client.md)  
+[EXECUTE ON CLIENT](../commands/execute-on-client)  
+[GET REGISTERED CLIENTS](../commands/get-registered-clients)  
+[REGISTER CLIENT](../commands/register-client)  
 
 ## Properties
 

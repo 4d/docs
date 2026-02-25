@@ -1,4 +1,4 @@
----
+﻿---
 id: save-record
 title: SAVE RECORD
 slug: /commands/save-record
@@ -25,8 +25,8 @@ SAVE RECORD は、プログラムコードを使って新しく作成または�
 
 SAVE RECORD が必要とされる場合を次に示します:
 
-* [CREATE RECORD](create-record.md) や [DUPLICATE RECORD](duplicate-record.md)で作成した新しいレコードを保存する場合
-* [RECEIVE RECORD](receive-record.md)で取得したレコードを保存する場合
+* [CREATE RECORD](../commands/create-record) や [DUPLICATE RECORD](../commands/duplicate-record)で作成した新しいレコードを保存する場合
+* [RECEIVE RECORD](../commands/receive-record)で取得したレコードを保存する場合
 * メソッドによって修正したレコードを保存する場合
 * *\_o\_ADD SUBRECORD*、*\_o\_CREATE SUBRECORD*、*\_o\_MODIFY SUBRECORD* によって作成または修正したサブレコードを含むレコード保存する場合
 * カレントレコードを変更するようなコマンドを実行する前に、データ入力途中で表示されているレコードを保存する場合
@@ -49,8 +49,8 @@ SAVE RECORD が必要とされる場合を次に示します:
 
 ## 参照 
 
-[CREATE RECORD](create-record.md)  
-[Locked](locked.md)  
+[CREATE RECORD](../commands/create-record)  
+[Locked](../commands/locked)  
 *トリガ*  
 
 ## プロパティ

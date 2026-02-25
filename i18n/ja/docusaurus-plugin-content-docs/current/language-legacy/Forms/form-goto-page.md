@@ -1,4 +1,4 @@
----
+﻿---
 id: form-goto-page
 title: FORM GOTO PAGE
 slug: /commands/form-goto-page
@@ -39,11 +39,11 @@ displayed_sidebar: docs
 
 ### フォームページ管理コマンドについて 
 
-標準アクションボタンは[FORM FIRST PAGE](form-first-page.md)、[FORM LAST PAGE](form-last-page.md)、[FORM NEXT PAGE](form-next-page.md)、[FORM PREVIOUS PAGE](form-previous-page.md)そして**FORM GOTO PAGE**と同じ動作を行い、タブコントロールやドロップダウンリストなどのオブジェクトに割り当てることができます。可能な限り、コマンドの代わりに標準アクションボタンを使用してください。 
+標準アクションボタンは[FORM FIRST PAGE](../commands/form-first-page)、[FORM LAST PAGE](../commands/form-last-page)、[FORM NEXT PAGE](../commands/form-next-page)、[FORM PREVIOUS PAGE](../commands/form-previous-page)そして**FORM GOTO PAGE**と同じ動作を行い、タブコントロールやドロップダウンリストなどのオブジェクトに割り当てることができます。可能な限り、コマンドの代わりに標準アクションボタンを使用してください。 
 
 ページコマンドは入力フォーム、もしくはダイアログウインドウに表示されているフォームに使用できます。出力フォームは最初のページのみを使います。フォームには、常に少なくとも最初の1ページが含まれます。フォームのページ数にかかわらず、各フォーム対するフォームメソッドは1つのみという点に留意してください。
 
-表示されているページを確認するときは[FORM Get current page](form-get-current-page.md)コマンドを使用してください。
+表示されているページを確認するときは[FORM Get current page](../commands/form-get-current-page)コマンドを使用してください。
 
 **注:** フォームのデザインは１ページからXページについて、また0ページ（0ページに配置されたオブジェクトはすべてのページに表示される）について作業を行うことができます。フォームを使用してページコマンドを呼び出した場合、1ページからXページについての作業を行うことになります。0ページ目は自動的に表示されているページと組み合わされます。
 
@@ -57,11 +57,11 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[FORM FIRST PAGE](form-first-page.md)  
-[FORM Get current page](form-get-current-page.md)  
-[FORM LAST PAGE](form-last-page.md)  
-[FORM NEXT PAGE](form-next-page.md)  
-[FORM PREVIOUS PAGE](form-previous-page.md)  
+[FORM FIRST PAGE](../commands/form-first-page)  
+[FORM Get current page](../commands/form-get-current-page)  
+[FORM LAST PAGE](../commands/form-last-page)  
+[FORM NEXT PAGE](../commands/form-next-page)  
+[FORM PREVIOUS PAGE](../commands/form-previous-page)  
 
 ## プロパティ
 

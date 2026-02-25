@@ -1,4 +1,4 @@
----
+﻿---
 id: list-item-parent
 title: List item parent
 slug: /commands/list-item-parent
@@ -45,7 +45,7 @@ En retour, si un élément correspondant existe bien dans la liste et si cet él
 
 S'il n'existe pas d'élément numéro *réfElément*, ou si vous avez passé \* et qu’aucun élément n’est sélectionné, ou si cet élément n'a pas d'élément parent, **List item parent** retourne *0* (zéro).
 
-Si vous travaillez avec les numéros de référence des éléments, assurez-vous d'utiliser des numéros uniques, sinon vous ne pourrez pas différencier les éléments. Pour plus d'informations sur ce point, reportez-vous à la description de la commande [APPEND TO LIST](append-to-list.md).
+Si vous travaillez avec les numéros de référence des éléments, assurez-vous d'utiliser des numéros uniques, sinon vous ne pourrez pas différencier les éléments. Pour plus d'informations sur ce point, reportez-vous à la description de la commande [APPEND TO LIST](../commands/append-to-list).
 
 ## Exemple 
 
@@ -78,10 +78,10 @@ Voici les numéros de référence des éléments de cette liste :
 
 ## Voir aussi 
 
-[GET LIST ITEM](get-list-item.md)  
-[List item position](list-item-position.md)  
-[SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
-[SET LIST ITEM](set-list-item.md)  
+[GET LIST ITEM](../commands/get-list-item)  
+[List item position](../commands/list-item-position)  
+[SELECT LIST ITEMS BY REFERENCE](../commands/select-list-items-by-reference)  
+[SET LIST ITEM](../commands/set-list-item)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: read-write
 title: READ WRITE
 slug: /commands/read-write
@@ -29,8 +29,8 @@ Utilize READ WRITE quando tenha que modificar um registro e guardar as mudanças
 
 ## Ver também 
 
-[READ ONLY](read-only.md)  
-[Read only state](read-only-state.md)  
+[READ ONLY](../commands/read-only)  
+[Read only state](../commands/read-only-state)  
 *Record Locking*  
 
 ## Propriedades

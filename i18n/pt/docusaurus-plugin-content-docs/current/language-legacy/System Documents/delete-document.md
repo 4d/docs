@@ -1,4 +1,4 @@
----
+﻿---
 id: delete-document
 title: DELETE DOCUMENT
 slug: /commands/delete-document
@@ -52,7 +52,7 @@ O exemplo abaixo apaga o documento chamado Nota:
 
 ## Exemplo 2 
 
-Veja o exemplo do comando [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md).
+Veja o exemplo do comando [APPEND DATA TO PASTEBOARD](../commands/append-data-to-pasteboard).
 
 ## Variáveis e conjuntos do sistema 
 
@@ -60,7 +60,7 @@ A eliminação de um documento faz que a variável sistema assuma o valor 1\. Se
 
 ## Ver também 
 
-[Test path name](test-path-name.md)  
+[Test path name](../commands/test-path-name)  
 
 ## Propriedades
 

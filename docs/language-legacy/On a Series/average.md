@@ -1,4 +1,4 @@
----
+﻿---
 id: average
 title: Average
 slug: /commands/average
@@ -60,7 +60,7 @@ The following method is called to print the records in the selection and to acti
  PRINT SELECTION([Employees])
 ```
 
-**Note:** The parameter to the [BREAK LEVEL](break-level.md) command should be equal to the number of breaks in your report. For more information about break processing, refer to the chapter *Printing*.
+**Note:** The parameter to the [BREAK LEVEL](../commands/break-level) command should be equal to the number of breaks in your report. For more information about break processing, refer to the chapter *Printing*.
 
 ## Example 2 
 
@@ -96,14 +96,14 @@ You can perform the following computations:
 
 ## See also 
 
-[ACCUMULATE](accumulate.md)  
-[BREAK LEVEL](break-level.md)  
-[Max](max.md)  
-[Min](min.md)  
-[ORDER BY](order-by.md)  
-[PRINT SELECTION](print-selection.md)  
-[Subtotal](subtotal.md)  
-[Sum](sum.md)  
+[ACCUMULATE](../commands/accumulate)  
+[BREAK LEVEL](../commands/break-level)  
+[Max](../commands/max)  
+[Min](../commands/min)  
+[ORDER BY](../commands/order-by)  
+[PRINT SELECTION](../commands/print-selection)  
+[Subtotal](../commands/subtotal)  
+[Sum](../commands/sum)  
 
 ## Properties
 

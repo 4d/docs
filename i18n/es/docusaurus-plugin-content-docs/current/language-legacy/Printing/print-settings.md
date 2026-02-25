@@ -1,4 +1,4 @@
----
+﻿---
 id: print-settings
 title: PRINT SETTINGS
 slug: /commands/print-settings
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.PRINT SETTINGS.Summary-->PRINT SETTINGS muestra una caja de diálogo de impresión.<!-- END REF--> Este comando debe llamarse antes de una serie de comandos [Print form](../commands/print-form) o el comando [OPEN PRINTING JOB](open-printing-job.md).
+<!--REF #_command_.PRINT SETTINGS.Summary-->PRINT SETTINGS muestra una caja de diálogo de impresión.<!-- END REF--> Este comando debe llamarse antes de una serie de comandos [Print form](../commands/print-form) o el comando [OPEN PRINTING JOB](../commands/open-printing-job).
 
 El parámetro opcional *tipoDial* permite configurar la visualización de las caja de diálogo de impresión. Puede utilizar una de las siguientes constantes del tema *Opciones de impresión*. Las cajas de diálogo de impresión que aparecen dependerán de la versión de 4D, como se muestra en la siguiente tabla:
 
@@ -38,7 +38,7 @@ El parámetro opcional *tipoDial* permite configurar la visualización de las ca
 | Page setup dialog | 1     | Visualización del diálogo de configuración de página |
 | Print dialog      | 2     | Visualización de la caja de diálogo de Impresión     |
 
-**Nota:** la caja de diálogo de impresión contiene la opción **Preview on Screen** que permite al usuario previsualizar su trabajo de impresión. Puede preseleccionar o deseleccionar esta opción llamando [SET PRINT PREVIEW](set-print-preview.md) antes de llamar PRINT SETTINGS.
+**Nota:** la caja de diálogo de impresión contiene la opción **Preview on Screen** que permite al usuario previsualizar su trabajo de impresión. Puede preseleccionar o deseleccionar esta opción llamando [SET PRINT PREVIEW](../commands/set-print-preview) antes de llamar PRINT SETTINGS.
 
 ## Ejemplo 
 
@@ -50,10 +50,10 @@ Si el usuario hace clic en OK en ambas cajas de diálogo, la variable sistema OK
 
 ## Ver también 
 
-[OPEN PRINTING JOB](open-printing-job.md)  
-[PAGE BREAK](page-break.md)  
+[OPEN PRINTING JOB](../commands/open-printing-job)  
+[PAGE BREAK](../commands/page-break)  
 [Print form](../commands/print-form)  
-[SET PRINT PREVIEW](set-print-preview.md)  
+[SET PRINT PREVIEW](../commands/set-print-preview)  
 
 ## Propiedades
 

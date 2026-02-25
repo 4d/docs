@@ -1,4 +1,4 @@
----
+﻿---
 id: undefined
 title: Undefined
 slug: /commands/undefined
@@ -52,7 +52,7 @@ displayed_sidebar: docs
 
 ## 例題 
 
-オブジェクトプロパティを対象に、このコマンドおよび [Null](null.md) コマンドを使用した場合の結果の例です:
+オブジェクトプロパティを対象に、このコマンドおよび [Null](../commands/null) コマンドを使用した場合の結果の例です:
 
 ```4d
  var vEmp : Object
@@ -72,7 +72,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[CLEAR VARIABLE](clear-variable.md)  
+[CLEAR VARIABLE](../commands/clear-variable)  
 
 ## プロパティ
 

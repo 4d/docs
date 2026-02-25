@@ -1,4 +1,4 @@
----
+﻿---
 id: form-get-names
 title: FORM GET NAMES
 slug: /commands/form-get-names
@@ -75,7 +75,7 @@ Exemples d’utilisations type :
 ## Voir aussi 
 
 *Formulaires*  
-[METHOD GET PATHS FORM](method-get-paths-form.md)  
+[METHOD GET PATHS FORM](../commands/method-get-paths-form)  
 
 ## Propriétés
 

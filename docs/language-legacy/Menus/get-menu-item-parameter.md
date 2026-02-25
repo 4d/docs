@@ -1,4 +1,4 @@
----
+﻿---
 id: get-menu-item-parameter
 title: Get menu item parameter
 slug: /commands/get-menu-item-parameter
@@ -30,13 +30,13 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Get menu item parameter.Summary-->The **Get menu item parameter** command returns the custom character string associated with the menu item designated by the *menu* and *menuItem* parameters.<!-- END REF--> This string must have been set beforehand using the [SET MENU ITEM PARAMETER](set-menu-item-parameter.md) command.
+<!--REF #_command_.Get menu item parameter.Summary-->The **Get menu item parameter** command returns the custom character string associated with the menu item designated by the *menu* and *menuItem* parameters.<!-- END REF--> This string must have been set beforehand using the [SET MENU ITEM PARAMETER](../commands/set-menu-item-parameter) command.
 
 ## See also 
 
-[Dynamic pop up menu](dynamic-pop-up-menu.md)  
-[Get selected menu item parameter](get-selected-menu-item-parameter.md)  
-[SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
+[Dynamic pop up menu](../commands/dynamic-pop-up-menu)  
+[Get selected menu item parameter](../commands/get-selected-menu-item-parameter)  
+[SET MENU ITEM PARAMETER](../commands/set-menu-item-parameter)  
 
 ## Properties
 

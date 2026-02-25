@@ -1,4 +1,4 @@
----
+﻿---
 id: minimize-window
 title: MINIMIZE WINDOW
 slug: /commands/minimize-window
@@ -46,7 +46,7 @@ La fenêtre est réduite et retrouve sa taille initiale. Si vous ne passez pas l
 
 Case de zoom/réduction sous Mac OS 
 
-Si la ou les fenêtres concernées n'ont pas été préalablement maximisées (manuellement ou à l'aide de [MAXIMIZE WINDOW](maximize-window.md)), la commande ne fait rien. De même, si le type de *fenêtre* ne comporte pas de case de zoom, la commande ne fait rien (pour plus d'informations sur ce point, reportez-vous à la section *Types de fenêtres (compatibilité)*). 
+Si la ou les fenêtres concernées n'ont pas été préalablement maximisées (manuellement ou à l'aide de [MAXIMIZE WINDOW](../commands/maximize-window)), la commande ne fait rien. De même, si le type de *fenêtre* ne comporte pas de case de zoom, la commande ne fait rien (pour plus d'informations sur ce point, reportez-vous à la section *Types de fenêtres (compatibilité)*). 
 
 **Note :** Ne confondez pas cette fonction avec la réduction de la fenêtre sous forme d'icône (Windows) ou dans le Dock (macOS), accessible par l'intermédiaire du bouton suivant :  
 ![](../../assets/en/commands/pict39371.fr.png)  
@@ -57,8 +57,8 @@ Mac OS
 
 ## Voir aussi 
 
-[MAXIMIZE WINDOW](maximize-window.md)  
-[REDUCE RESTORE WINDOW](reduce-restore-window.md)  
+[MAXIMIZE WINDOW](../commands/maximize-window)  
+[REDUCE RESTORE WINDOW](../commands/reduce-restore-window)  
 
 ## Propriétés
 

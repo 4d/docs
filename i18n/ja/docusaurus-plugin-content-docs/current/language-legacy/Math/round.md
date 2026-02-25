@@ -1,4 +1,4 @@
----
+﻿---
 id: round
 title: Round
 slug: /commands/round
@@ -39,7 +39,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Trunc](trunc.md)  
+[Trunc](../commands/trunc)  
 
 ## プロパティ
 

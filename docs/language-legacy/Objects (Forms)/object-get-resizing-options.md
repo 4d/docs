@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-resizing-options
 title: OBJECT GET RESIZING OPTIONS
 slug: /commands/object-get-resizing-options
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable. In this case, you pass a variable reference instead of a string.
 
-The command returns the current resizing options, as set in the Design mode or for the process using the [OBJECT SET RESIZING OPTIONS](object-set-resizing-options.md) command. These options specify the display of the object when the form window is resized.
+The command returns the current resizing options, as set in the Design mode or for the process using the [OBJECT SET RESIZING OPTIONS](../commands/object-set-resizing-options) command. These options specify the display of the object when the form window is resized.
 
 The *horizontal* parameter returns a value indicating the horizontal resizing option that is set for the object. You can compare the value received with the following constants, found in the *Form Objects (Properties)* theme:
 
@@ -54,7 +54,7 @@ The *vertical* parameter returns a value indicating the vertical resizing option
 
 ## See also 
 
-[OBJECT SET RESIZING OPTIONS](object-set-resizing-options.md)  
+[OBJECT SET RESIZING OPTIONS](../commands/object-set-resizing-options)  
 
 ## Properties
 

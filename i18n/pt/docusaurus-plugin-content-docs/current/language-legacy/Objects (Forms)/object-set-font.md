@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-font
 title: OBJECT SET FONT
 slug: /commands/object-set-font
@@ -69,12 +69,12 @@ O seguinte exemplo utiliza a opção especial *%password*, desenhada para a entr
 
 ## Ver também 
 
-[Font file](font-file.md)  
-[FONT LIST](font-list.md)  
+[Font file](../commands/font-file)  
+[FONT LIST](../commands/font-list)  
 *Interação de comandos genéricos com textos multi estilos*  
-[OBJECT Get font](object-get-font.md)  
-[OBJECT SET FONT SIZE](object-set-font-size.md)  
-[OBJECT SET FONT STYLE](object-set-font-style.md)  
+[OBJECT Get font](../commands/object-get-font)  
+[OBJECT SET FONT SIZE](../commands/object-set-font-size)  
+[OBJECT SET FONT STYLE](../commands/object-set-font-style)  
 
 ## Propriedades
 

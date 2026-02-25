@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-maximum-value
 title: OBJECT SET MAXIMUM VALUE
 slug: /commands/object-set-maximum-value
@@ -39,8 +39,8 @@ Passez dans *valeurMaxi* la nouvelle valeur maximum à affecter à l’*objet* p
 
 ## Voir aussi 
 
-[OBJECT GET MAXIMUM VALUE](object-get-maximum-value.md)  
-[OBJECT SET MINIMUM VALUE](object-set-minimum-value.md)  
+[OBJECT GET MAXIMUM VALUE](../commands/object-get-maximum-value)  
+[OBJECT SET MINIMUM VALUE](../commands/object-set-minimum-value)  
 
 ## Propriétés
 

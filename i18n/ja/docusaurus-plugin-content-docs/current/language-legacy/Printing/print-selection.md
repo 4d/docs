@@ -1,4 +1,4 @@
----
+﻿---
 id: print-selection
 title: PRINT SELECTION
 slug: /commands/print-selection
@@ -35,8 +35,8 @@ displayed_sidebar: docs
 デフォルトで、**PRINT SELECTION** は印刷の前にプリントジョブダイアログボックスを表示します。ユーザが印刷ダイアログボックスをキャンセルをした場合、コマンドはキャンセルされ、印刷を行いません。  
 オプション引数の *\** または *\>* を使用して、ダイアログボックスの表示を取り消すことができます:
 
-* *\** 引数は、現在の印刷設定 (デフォルトの設定、もしくは *\_o\_PAGE SETUP* や [SET PRINT OPTION](set-print-option.md) コマンドで定義した設定) に従い、印刷処理を行います。
-* *\>* 引数は上記に加え、現在の印刷設定を再初期化することなく印刷を行います。この設定は、以前に設定した内容を継続し、(例えばループ中で) 連続した **PRINT SELECTION** コマンドを使用する時に役立ちます。この引数の使用例は[PRINT RECORD](print-record.md) コマンドの説明を参照してください。
+* *\** 引数は、現在の印刷設定 (デフォルトの設定、もしくは *\_o\_PAGE SETUP* や [SET PRINT OPTION](../commands/set-print-option) コマンドで定義した設定) に従い、印刷処理を行います。
+* *\>* 引数は上記に加え、現在の印刷設定を再初期化することなく印刷を行います。この設定は、以前に設定した内容を継続し、(例えばループ中で) 連続した **PRINT SELECTION** コマンドを使用する時に役立ちます。この引数の使用例は[PRINT RECORD](../commands/print-record) コマンドの説明を参照してください。
 
 印刷中には、デザインモードのプロパティリストウィンドウで有効にされたフォームおよびオブジェクトのイベントと、実際に発生しているイベントに応じて、出力フォームのフォームメソッドとオブジェクトメソッドが実行されます:
 
@@ -45,11 +45,11 @@ displayed_sidebar: docs
 * On Printing Breakイベントはブレークエリアを印刷する直前に生成されます。
 * On Printing Footerイベントははフッタを印刷する直前に生成されます。
 
-**PRINT SELECTION** が最初のヘッダーを印刷しているかどうかは、On Headerイベントで [Before selection](before-selection.md) を判定することによって調べることができます。またOn Printing Footerイベントで [End selection](end-selection.md) を判定することによって、最後のフッターかどうかをチェックすることができます。これら関数の詳細は、それぞれのコマンドや [Form event code](../commands/form-event-code)、[Level](level.md) の説明を参照してください。
+**PRINT SELECTION** が最初のヘッダーを印刷しているかどうかは、On Headerイベントで [Before selection](../commands/before-selection) を判定することによって調べることができます。またOn Printing Footerイベントで [End selection](../commands/end-selection) を判定することによって、最後のフッターかどうかをチェックすることができます。これら関数の詳細は、それぞれのコマンドや [Form event code](../commands/form-event-code)、[Level](../commands/level) の説明を参照してください。
 
-**PRINT SELECTION** を使用し、小計やブレーク付きでセレクションを印刷するには、まずそのセレクションをソートしなければなりません。次に、レポートの各ブレークエリアに、小計を変数に代入するオブジェクトメソッドを持つ変数を配置します。変数に値を代入する、[Sum](sum.md) や [Average](average.md) のような統計関数と算術関数を使用することもできます。詳細は[Subtotal](subtotal.md)、[BREAK LEVEL](break-level.md)、[ACCUMULATE](accumulate.md) コマンドの説明を参照してください。
+**PRINT SELECTION** を使用し、小計やブレーク付きでセレクションを印刷するには、まずそのセレクションをソートしなければなりません。次に、レポートの各ブレークエリアに、小計を変数に代入するオブジェクトメソッドを持つ変数を配置します。変数に値を代入する、[Sum](../commands/sum) や [Average](../commands/average) のような統計関数と算術関数を使用することもできます。詳細は[Subtotal](../commands/subtotal)、[BREAK LEVEL](../commands/break-level)、[ACCUMULATE](../commands/accumulate) コマンドの説明を参照してください。
 
-**警告:** **PRINT SELECTION** のコンテキストで [PAGE BREAK](page-break.md) コマンドを使用してはいけません。[PAGE BREAK](page-break.md) は [Print form](../commands/print-form) のコンテキストで使用します。
+**警告:** **PRINT SELECTION** のコンテキストで [PAGE BREAK](../commands/page-break) コマンドを使用してはいけません。[PAGE BREAK](../commands/page-break) は [Print form](../commands/print-form) のコンテキストで使用します。
 
 **PRINT SELECTION** の呼び出し後、プリントが正常に終了するとシステム変数OKに1がセットされます。プリントが中断された場合には、システム変数OKには0がセットされます（例えばユーザが印刷ダイアログボックスでキャンセルをクリックした場合）。
 
@@ -71,10 +71,10 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ACCUMULATE](accumulate.md)  
-[BREAK LEVEL](break-level.md)  
-[Level](level.md)  
-[Subtotal](subtotal.md)  
+[ACCUMULATE](../commands/accumulate)  
+[BREAK LEVEL](../commands/break-level)  
+[Level](../commands/level)  
+[Subtotal](../commands/subtotal)  
 
 ## プロパティ
 

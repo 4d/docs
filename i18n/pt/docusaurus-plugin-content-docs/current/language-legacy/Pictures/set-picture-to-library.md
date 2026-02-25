@@ -1,4 +1,4 @@
----
+﻿---
 id: set-picture-to-library
 title: SET PICTURE TO LIBRARY
 slug: /commands/set-picture-to-library
@@ -101,9 +101,9 @@ Se não houver suficiente memória para adicionar a imagem à biblioteca de imag
 
 ## Ver também 
 
-[GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
-[PICTURE LIBRARY LIST](picture-library-list.md)  
-[REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
+[GET PICTURE FROM LIBRARY](../commands/get-picture-from-library)  
+[PICTURE LIBRARY LIST](../commands/picture-library-list)  
+[REMOVE PICTURE FROM LIBRARY](../commands/remove-picture-from-library)  
 
 ## Propriedades
 

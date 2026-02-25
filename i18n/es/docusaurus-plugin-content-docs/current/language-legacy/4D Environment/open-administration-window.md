@@ -1,4 +1,4 @@
----
+﻿---
 id: open-administration-window
 title: OPEN ADMINISTRATION WINDOW
 slug: /commands/open-administration-window
@@ -60,7 +60,7 @@ Si el comando ha sido ejecutado correctamente, la variable sistema OK toma el va
 
 ## Ver también 
 
-[OPEN SECURITY CENTER](open-security-center.md)  
+[OPEN SECURITY CENTER](../commands/open-security-center)  
 
 ## Propiedades
 

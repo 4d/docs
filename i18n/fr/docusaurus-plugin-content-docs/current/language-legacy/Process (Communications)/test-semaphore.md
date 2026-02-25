@@ -1,4 +1,4 @@
----
+﻿---
 id: test-semaphore
 title: Test semaphore
 slug: /commands/test-semaphore
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Test semaphore.Summary-->La commande **Test semaphore** permet de tester l’existence d’un sémaphore.<!-- END REF--> 
 
-A la différence de la fonction [Semaphore](semaphore.md), **Test semaphore** ne crée pas le sémaphore s’il n’existe pas.   
+A la différence de la fonction [Semaphore](../commands/semaphore), **Test semaphore** ne crée pas le sémaphore s’il n’existe pas.   
 Si le sémaphore existe, la fonction retourne **Vrai**, s’il n’existe pas elle retourne **Faux**.
 
 **Note :** Attention, 4D tient compte de la casse des caractères en ce qui concerne les noms de sémaphores (le programme considère par exemple que "MonSémaphore" est différent de "monsémaphore"). 
@@ -55,8 +55,8 @@ Cet exemple permet de connaître l’état d’un traitement (en l’occurrence,
 
 ## Voir aussi 
 
-[CLEAR SEMAPHORE](clear-semaphore.md)  
-[Semaphore](semaphore.md)  
+[CLEAR SEMAPHORE](../commands/clear-semaphore)  
+[Semaphore](../commands/semaphore)  
 
 ## Propriétés
 

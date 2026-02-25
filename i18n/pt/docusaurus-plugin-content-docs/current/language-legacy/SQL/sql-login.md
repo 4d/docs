@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-login
 title: SQL LOGIN
 slug: /commands/sql-login
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL LOGIN.Summary-->O comando SQL LOGIN permite que se conecte a uma fonte de dados SQL especificada no parâmetro *entradaDados* .<!-- END REF--> Ele estabelece o objetivo das pesquisas SQL executadas posteriormente no processo atual: 
 
-•através do comando [SQL EXECUTE](sql-execute.md),  
+•através do comando [SQL EXECUTE](../commands/sql-execute),  
 • através do código localizado dentro das etiquetas Begin SQL / End SQL (se for passado o parâmetro *\**). 
 
 |A fonte de dados SQL pode ser:
@@ -76,7 +76,7 @@ Esta caixa de diálogo inclui varias páginas. A página TCP/IP inclui os seguin
    * Nome de usuário e Senha: estas áreas podem ser utilizadas para introduzir os identificadores de conexão.  
    * As páginas DSN de usuário e DSN de Sistema mostram, respectivamente, a lista de usuário e fontes de dados ODBC do Sistema no driver ODBC da máquina. Estas páginas podem ser utilizadas para selecionar uma fonte de dados e introduzir identificadores para abrir uma conexão com uma fonte de dados externa ODBC.  
     
- Se a conexão for estabelecida, a variável Sistema OK assume o valor 1\. Do contrário, assume o valor 0 e um erro é gerado. Este erro pode ser interceptado através de um método de gestão de erros instalado pelo comando [ON ERR CALL](on-err-call.md).
+ Se a conexão for estabelecida, a variável Sistema OK assume o valor 1\. Do contrário, assume o valor 0 e um erro é gerado. Este erro pode ser interceptado através de um método de gestão de erros instalado pelo comando [ON ERR CALL](../commands/on-err-call).
 * **Constante SQL\_INTERNAL**  
  Sintaxe: SQL\_INTERNAL.  
 Nesse caso, o comando redireciona as pesquisas SQL posteriores ao banco 4D interno.
@@ -91,7 +91,7 @@ Nesse caso, o comando redireciona as pesquisas SQL posteriores ao banco 4D inter
   
 O parâmetro opcional *\** pode ser utilizado para mudar o objetivo do código SQL executado dentro das etiquetas Begin SQL/End SQL. Se não passar este parâmetro, mesmo assim o código localizado dentro das etiquetas Begin SQL/End SQL será enviado ao motor SQL interno de 4D, sem considerar a configuração especificada pelo comando SQL LOGIN. Se passar este parâmetro, o código SQL executado dentro das etiquetas Begin SQL/End SQL se enviará a a fonte especificada no parâmetro *entradaDados*.  
   
-Para fechar a conexão atual e liberar a memoria, simplesmente execute o comando [SQL LOGOUT](sql-logout.md). Todas as pesquisas SQL são enviadas então ao banco 4D SQL interno.  
+Para fechar a conexão atual e liberar a memoria, simplesmente execute o comando [SQL LOGOUT](../commands/sql-logout). Todas as pesquisas SQL são enviadas então ao banco 4D SQL interno.  
 Se chamar novamente a SQL LOGIN sem ter fechado explicitamente a conexão atual, a conexão será fechada automaticamente.  
   
 **Nota:** em caso de falha de uma tentativa de conexão externa através de SQL LOGIN, o banco 4D interno é convertido automaticamente na fonte de dados atual.  
@@ -156,7 +156,7 @@ Abertura de uma conexão direta em SSL com a aplicação 4D Server executada na 
 
 ## Exemplo 7 
 
-Abertura de uma conexão direta com a aplicação 4D Server executada na máquina que tiver a direção IPv6 2a01: e35:2e41:c960:dc39:3eb0:f29b:3747 e responde na porta TCP 20150\. As consultas SQL executadas através de comando [SQL EXECUTE](sql-execute.md) serão redirigidas a esta conexão; As consultas incluidas nas etiquetas [Begin SQL](begin-sql.md)/[End SQL](end-sql.md) não serão redirigidas.
+Abertura de uma conexão direta com a aplicação 4D Server executada na máquina que tiver a direção IPv6 2a01: e35:2e41:c960:dc39:3eb0:f29b:3747 e responde na porta TCP 20150\. As consultas SQL executadas através de comando [SQL EXECUTE](../commands/sql-execute) serão redirigidas a esta conexão; As consultas incluidas nas etiquetas [Begin SQL](../commands/begin-sql)/[End SQL](../commands/end-sql) não serão redirigidas.
 
 ```4d
  SQL LOGIN("IP:[2a01:e35:2e41:c960:dc39:3eb0:f29b:3747]:20150";"John";"qwerty")
@@ -214,9 +214,9 @@ Se a conexão for exitosa, a variável sistema OK assume o valor 1, do contrári
 
 ## Ver também 
 
-[Begin SQL](begin-sql.md)  
-[End SQL](end-sql.md)  
-[SQL LOGOUT](sql-logout.md)  
+[Begin SQL](../commands/begin-sql)  
+[End SQL](../commands/end-sql)  
+[SQL LOGOUT](../commands/sql-logout)  
 
 ## Propriedades
 

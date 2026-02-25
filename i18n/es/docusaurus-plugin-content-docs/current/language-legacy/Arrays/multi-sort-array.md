@@ -1,4 +1,4 @@
----
+﻿---
 id: multi-sort-array
 title: MULTI SORT ARRAY
 slug: /commands/multi-sort-array
@@ -117,9 +117,9 @@ Si quiere que el array de nombres se utilice como tercer criterio de ordenación
 
 ## Ver también 
 
-[ORDER BY](order-by.md)  
-[SELECTION TO ARRAY](selection-to-array.md)  
-[SORT ARRAY](sort-array.md)  
+[ORDER BY](../commands/order-by)  
+[SELECTION TO ARRAY](../commands/selection-to-array)  
+[SORT ARRAY](../commands/sort-array)  
 
 ## Propiedades
 

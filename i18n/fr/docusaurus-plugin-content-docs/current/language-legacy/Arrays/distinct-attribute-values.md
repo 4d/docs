@@ -1,4 +1,4 @@
----
+﻿---
 id: distinct-attribute-values
 title: DISTINCT ATTRIBUTE VALUES
 slug: /commands/distinct-attribute-values
@@ -43,7 +43,7 @@ La commande ne modifie pas la sélection courante ni l'enregistrement courant.
 
 ### Utilisation de la propriété virtuelle length 
 
-Vous pouvez utiliser la propriété virtuelle "length" avec cette commande. Cette propriété est automatiquement disponible pour tous les attributs de type tableau, et retourne la taille du tableau, c'est-à-dire le nombre d'éléments qu'il contient. Elle est destinée à une utilisation avec la commande [QUERY BY ATTRIBUTE](query-by-attribute.md) mais est également disponible pour **DISTINCT ATTRIBUTE VALUES** afin d'obtenir les différentes tailles de tableaux pour un attribut.
+Vous pouvez utiliser la propriété virtuelle "length" avec cette commande. Cette propriété est automatiquement disponible pour tous les attributs de type tableau, et retourne la taille du tableau, c'est-à-dire le nombre d'éléments qu'il contient. Elle est destinée à une utilisation avec la commande [QUERY BY ATTRIBUTE](../commands/query-by-attribute) mais est également disponible pour **DISTINCT ATTRIBUTE VALUES** afin d'obtenir les différentes tailles de tableaux pour un attribut.
 
 ## Exemple 
 
@@ -106,7 +106,7 @@ Le tableau *aLChildNum* reçoit les éléments suivants :
 ## Voir aussi 
 
   
-[DISTINCT ATTRIBUTE PATHS](distinct-attribute-paths.md)  
+[DISTINCT ATTRIBUTE PATHS](../commands/distinct-attribute-paths)  
 
 ## Propriétés
 

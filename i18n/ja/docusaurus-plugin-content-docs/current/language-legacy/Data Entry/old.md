@@ -1,4 +1,4 @@
----
+﻿---
 id: old
 title: Old
 slug: /commands/old
@@ -53,7 +53,7 @@ Oldは、すべてのフィールドタイプに適用できます。
 
 ## 参照 
 
-[Modified](modified.md)  
+[Modified](../commands/modified)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: next-window
 title: Next window
 slug: /commands/next-window
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## See also 
 
-[Frontmost window](frontmost-window.md)  
+[Frontmost window](../commands/frontmost-window)  
 
 ## Properties
 

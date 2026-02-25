@@ -1,4 +1,4 @@
----
+﻿---
 id: web-get-statistics
 title: WEB GET STATISTICS
 slug: /commands/web-get-statistics
@@ -71,7 +71,7 @@ In the project method STATS, you write the following code:
  End for
 ```
 
-You can send the "stats.shtm" page using a URL link or using the [WEB SEND FILE](web-send-file.md) command.
+You can send the "stats.shtm" page using a URL link or using the [WEB SEND FILE](../commands/web-send-file) command.
 
 
 ## Properties

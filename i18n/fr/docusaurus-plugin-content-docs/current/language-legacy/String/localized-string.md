@@ -1,4 +1,4 @@
----
+﻿---
 id: localized-string
 title: Localized string
 slug: /commands/localized-string
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 Cette commande fonctionne uniquement dans le cadre d’une architecture XLIFF. Pour plus d’informations sur ce type d'architecture, reportez-vous à la description de la prise en charge du XLIFF dans le manuel *Mode Développement*.
 
-**Note :** La commande [Get database localization](get-database-localization.md) permet de connaître la langue utilisée par l’application.
+**Note :** La commande [Get database localization](../commands/get-database-localization) permet de connaître la langue utilisée par l’application.
 
 Passez dans *resName* le nom de ressource de la chaîne dont vous voulez obtenir la traduction dans la langue cible courante (target).
 
@@ -55,7 +55,7 @@ Si la commande a été exécutée correctement, la variable OK prend la valeur 1
 
 ## Voir aussi 
 
-[Get database localization](get-database-localization.md)  
+[Get database localization](../commands/get-database-localization)  
 
 ## Propriétés
 

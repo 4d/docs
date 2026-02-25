@@ -1,4 +1,4 @@
----
+﻿---
 id: redraw
 title: REDRAW
 slug: /commands/redraw
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[SET TIMER](set-timer.md)  
+[SET TIMER](../commands/set-timer)  
 
 ## プロパティ
 

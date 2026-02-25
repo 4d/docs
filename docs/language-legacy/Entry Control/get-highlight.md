@@ -1,4 +1,4 @@
----
+﻿---
 id: get-highlight
 title: GET HIGHLIGHT
 slug: /commands/get-highlight
@@ -37,7 +37,7 @@ If you pass the optional *\** parameter, you indicate that the *object* paramete
 
 **Note:** This command cannot be used with fields in the List form of a subform.
 
-Text can be highlighted by the user or by the [HIGHLIGHT TEXT](highlight-text.md) command.
+Text can be highlighted by the user or by the [HIGHLIGHT TEXT](../commands/highlight-text) command.
 
 The parameter *startSel* returns the position of the first highlighted character. 
 
@@ -60,7 +60,7 @@ End if
 
 ## Example 2 
 
-See example for the [FILTER KEYSTROKE](filter-keystroke.md) command.
+See example for the [FILTER KEYSTROKE](../commands/filter-keystroke) command.
 
 ## Example 3 
 
@@ -73,9 +73,9 @@ Modification of highlighted text style:
 
 ## See also 
 
-[FILTER KEYSTROKE](filter-keystroke.md)  
-[HIGHLIGHT TEXT](highlight-text.md)  
-[Keystroke](keystroke.md)  
+[FILTER KEYSTROKE](../commands/filter-keystroke)  
+[HIGHLIGHT TEXT](../commands/highlight-text)  
+[Keystroke](../commands/keystroke)  
 
 ## Properties
 

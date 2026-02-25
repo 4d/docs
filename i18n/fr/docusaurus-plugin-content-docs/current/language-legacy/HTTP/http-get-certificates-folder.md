@@ -1,4 +1,4 @@
----
+﻿---
 id: http-get-certificates-folder
 title: HTTP Get certificates folder
 slug: /commands/http-get-certificates-folder
@@ -35,7 +35,7 @@ Cette commande est maintenue pour des raisons de compatibilité uniquement. Il e
 
 <!--REF #_command_.HTTP Get certificates folder.Summary-->La commande **HTTP Get certificates folder** retourne le chemin d’accès complet du dossier de certificats client actif.<!-- END REF--> 
 
-Par défaut, 4D utilise le dossier "ClientCertificatesFolder" créé à côté du fichier de structure (dossier créé uniquement si nécessaire). Vous pouvez toutefois créer un dossier personnalisé pour le process courant à l’aide de la commande [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md).
+Par défaut, 4D utilise le dossier "ClientCertificatesFolder" créé à côté du fichier de structure (dossier créé uniquement si nécessaire). Vous pouvez toutefois créer un dossier personnalisé pour le process courant à l’aide de la commande [HTTP SET CERTIFICATES FOLDER](../commands/http-set-certificates-folder).
 
 ## Exemple 
 
@@ -51,7 +51,7 @@ Vous souhaitez changer temporairement de dossier de certificats :
 
 ## Voir aussi 
 
-[HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md)  
+[HTTP SET CERTIFICATES FOLDER](../commands/http-set-certificates-folder)  
 
 ## Propriétés
 

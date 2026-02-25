@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-name
 title: OBJECT Get name
 slug: /commands/object-get-name
@@ -47,7 +47,7 @@ Depois da execução deste método objeto, a variável *$btnName* contém o valo
 
 ## Ver também 
 
-[OBJECT Get pointer](object-get-pointer.md)  
+[OBJECT Get pointer](../commands/object-get-pointer)  
 *Objetos (Formulários)*  
 *Objetos de formulário (Acesso)*  
 

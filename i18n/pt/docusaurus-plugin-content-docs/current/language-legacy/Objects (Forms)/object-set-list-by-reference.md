@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-list-by-reference
 title: OBJECT SET LIST BY REFERENCE
 slug: /commands/object-set-list-by-reference
@@ -42,9 +42,9 @@ Por padrão, se omitido o parâmetro *tipoLista*, o comando define uma lista de 
 | Excluded list | Inteiro longo | 2     | Lista de valores não aceitos para a entrada (Opção "Exclusões" na lista de propriedades)  |
 | Required list | Inteiro longo | 1     | Lista só os valores aceitos para a entrada (Opção "Obrigatória" na Lista de Propriedades) |
 
-Em *lista*, passe o número de referência da lista hierárquica que deseja associar ao objeto. Esta lista deve ter sido gerada utilizando o comando [Copy list](copy-list.md), [Load list](load-list.md) ou [New list](new-list.md).  
+Em *lista*, passe o número de referência da lista hierárquica que deseja associar ao objeto. Esta lista deve ter sido gerada utilizando o comando [Copy list](../commands/copy-list), [Load list](../commands/load-list) ou [New list](../commands/new-list).  
   
-Para finalizar a associação de uma *lista* com um *objeto*, só passe 0 no parâmetro *lista* para o tipo de lista relativa. Eliminar uma associação de lista, não elimina a referência de lista em memoria. Lembre de chamar o comando [CLEAR LIST](clear-list.md) quando já não necessite a lista.
+Para finalizar a associação de uma *lista* com um *objeto*, só passe 0 no parâmetro *lista* para o tipo de lista relativa. Eliminar uma associação de lista, não elimina a referência de lista em memoria. Lembre de chamar o comando [CLEAR LIST](../commands/clear-list) quando já não necessite a lista.
 
 Lista de valores existentes são substituidas dependendo de como a lista é associada ao objeto formulário:
 
@@ -138,8 +138,8 @@ Com o propósito de atualizar a lista associada ao pop-up gerenciado por array, 
 
 ## Ver também 
 
-[OBJECT Get list reference](object-get-list-reference.md)  
-[OBJECT SET LIST BY NAME](object-set-list-by-name.md)  
+[OBJECT Get list reference](../commands/object-get-list-reference)  
+[OBJECT SET LIST BY NAME](../commands/object-set-list-by-name)  
 
 ## Propriedades
 

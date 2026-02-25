@@ -1,4 +1,4 @@
----
+﻿---
 id: get-resource-properties
 title: Get resource properties
 slug: /commands/get-resource-properties
@@ -40,7 +40,7 @@ O valor numérico devolvido por **Get resource properties** deve considerado com
 
 ## Exemplo 
 
-Ver o exemplo do comando [Get resource name](get-resource-name.md).
+Ver o exemplo do comando [Get resource name](../commands/get-resource-name).
 
 ## Variáveis e conjuntos do sistema 
 

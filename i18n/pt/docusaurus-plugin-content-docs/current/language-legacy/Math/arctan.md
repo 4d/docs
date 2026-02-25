@@ -1,4 +1,4 @@
----
+﻿---
 id: arctan
 title: Arctan
 slug: /commands/arctan
@@ -30,9 +30,9 @@ O exemplo a seguir mostra o valor de Pi:
 
 ## Ver também 
 
-[Cos](cos.md)  
-[Sin](sin.md)  
-[Tan](tan.md)  
+[Cos](../commands/cos)  
+[Sin](../commands/sin)  
+[Tan](../commands/tan)  
 
 ## Propriedades
 

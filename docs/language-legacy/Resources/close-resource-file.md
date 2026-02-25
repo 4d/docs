@@ -1,4 +1,4 @@
----
+﻿---
 id: close-resource-file
 title: CLOSE RESOURCE FILE
 slug: /commands/close-resource-file
@@ -35,11 +35,11 @@ If you apply **CLOSE RESOURCE FILE** to the 4D application or database resource 
 
 If you pass an invalid resource file reference number, the command does nothing.
 
-Remember to eventually call **CLOSE RESOURCE FILE** for a resource file that you have opened using [Open resource file](open-resource-file.md). Note that when you quit the application (or open another database), 4D automatically closes all the resource files you opened.
+Remember to eventually call **CLOSE RESOURCE FILE** for a resource file that you have opened using [Open resource file](../commands/open-resource-file). Note that when you quit the application (or open another database), 4D automatically closes all the resource files you opened.
 
 ## See also 
 
-[Open resource file](open-resource-file.md)  
+[Open resource file](../commands/open-resource-file)  
 
 ## Properties
 

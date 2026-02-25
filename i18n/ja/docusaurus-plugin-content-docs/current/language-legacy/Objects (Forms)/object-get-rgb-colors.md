@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-rgb-colors
 title: OBJECT GET RGB COLORS
 slug: /commands/object-get-rgb-colors
@@ -43,11 +43,11 @@ displayed_sidebar: docs
 * text 型の引数が渡された場合、カラーは"#rrggbb" シンタックスのCSS フォーマットで返されます。(例:"#0000FF")
 * longint 型の引数が渡された場合、カラーは4バイトの倍長整数フォーマット(0x00RRGGBB)または"system" カラーに対応する負の値で返されます。
 
-*foregroundColor*、*backgroundColor*、および*altBackgrndColor* 引数のフォーマットに関する詳細は[OBJECT SET RGB COLORS](object-set-rgb-colors.md) コマンドを参照してください。
+*foregroundColor*、*backgroundColor*、および*altBackgrndColor* 引数のフォーマットに関する詳細は[OBJECT SET RGB COLORS](../commands/object-set-rgb-colors) コマンドを参照してください。
 
 ## 参照 
 
-[OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
+[OBJECT SET RGB COLORS](../commands/object-set-rgb-colors)  
 
 ## プロパティ
 

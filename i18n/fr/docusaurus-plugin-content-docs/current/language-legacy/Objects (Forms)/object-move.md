@@ -1,4 +1,4 @@
----
+﻿---
 id: object-move
 title: OBJECT MOVE
 slug: /commands/object-move
@@ -51,7 +51,7 @@ Cette commande fonctionne uniquement dans les contextes suivants :
 
 * Formulaires entrée en mode saisie,
 * Formulaires affichés via la commande [DIALOG](../commands/dialog),
-* En-têtes et pieds de page des formulaires sortie affichés par les commandes [MODIFY SELECTION](modify-selection.md) ou [DISPLAY SELECTION](display-selection.md),
+* En-têtes et pieds de page des formulaires sortie affichés par les commandes [MODIFY SELECTION](../commands/modify-selection) ou [DISPLAY SELECTION](../commands/display-selection),
 * Formulaires en cours d'impression.
 
 ## Exemple 1 
@@ -72,9 +72,9 @@ L’instruction suivante place le bouton “Bouton\_1” aux coordonnées (10;20
 
 ## Voir aussi 
 
-[OBJECT DUPLICATE](object-duplicate.md)  
-[OBJECT GET COORDINATES](object-get-coordinates.md)  
-[OBJECT SET COORDINATES](object-set-coordinates.md)  
+[OBJECT DUPLICATE](../commands/object-duplicate)  
+[OBJECT GET COORDINATES](../commands/object-get-coordinates)  
+[OBJECT SET COORDINATES](../commands/object-set-coordinates)  
 
 ## Propriétés
 

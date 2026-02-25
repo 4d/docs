@@ -1,4 +1,4 @@
----
+﻿---
 id: open-resource-file
 title: Open resource file
 slug: /commands/open-resource-file
@@ -43,9 +43,9 @@ Em Macintosh, a caixa de diálogo padrão de apertura de arquivos é utilizada, 
   
 Em Windows, Se utiliza a caixa de diálogo padrão de apertura de arquivos, todos os arquivos se apresentam por padrão. Para mostrar arquivos de um tipo particular, passe em *tipoArquivo*, uma extensão de arquivo Windows de 1 a 3 caracteres ou um tipo de arquivo Macintosh associado a uma extensão Windows utilizando o comando *\_o\_MAP FILE TYPES*.  
   
-Lembre chamar [CLOSE RESOURCE FILE](close-resource-file.md) para o arquivo de recursos. Note, entretanto, que 4D fecha automaticamente todos os arquivos de recursos abertos utilizando **Open resource file**.  
+Lembre chamar [CLOSE RESOURCE FILE](../commands/close-resource-file) para o arquivo de recursos. Note, entretanto, que 4D fecha automaticamente todos os arquivos de recursos abertos utilizando **Open resource file**.  
   
-Ao contrário do comando [Open document](open-document.md), que abre por padrão um documento com um acesso exclusivo em leitura escritura, **Open resource file**, permite abrir um arquivo de recursos já aberto desde a sessão 4D. Por exemplo, se tentar abrir o mesmo documento duas vezes com [Open document](open-document.md), um erro de E/S será devolvido na segunda tentativa. Por outro lado, se tentar abrir um arquivo de recursos já aberto desde a sessão 4D, **Open resource file** devolverá seu número de referência. Mesmo se abrir um arquivo de recursos várias vezes, necessita chamar [CLOSE RESOURCE FILE](close-resource-file.md) uma única vez para fechar esse arquivo. Note que este funcionamento é válido apenas se o arquivo de recursos estiver aberto desde a sessão 4D; Se tentar abrir um arquivo de recursos já aberto por outra aplicação, obterá um erro E/S.
+Ao contrário do comando [Open document](../commands/open-document), que abre por padrão um documento com um acesso exclusivo em leitura escritura, **Open resource file**, permite abrir um arquivo de recursos já aberto desde a sessão 4D. Por exemplo, se tentar abrir o mesmo documento duas vezes com [Open document](../commands/open-document), um erro de E/S será devolvido na segunda tentativa. Por outro lado, se tentar abrir um arquivo de recursos já aberto desde a sessão 4D, **Open resource file** devolverá seu número de referência. Mesmo se abrir um arquivo de recursos várias vezes, necessita chamar [CLOSE RESOURCE FILE](../commands/close-resource-file) uma única vez para fechar esse arquivo. Note que este funcionamento é válido apenas se o arquivo de recursos estiver aberto desde a sessão 4D; Se tentar abrir um arquivo de recursos já aberto por outra aplicação, obterá um erro E/S.
 
 **Advertência:**
 
@@ -53,10 +53,10 @@ Ao contrário do comando [Open document](open-document.md), que abre por padrão
 * Mesmo que seja tecnicamente possível, não é recomendável utilizar o arquivo de recursos da estrutura do banco porque seu código não funcionará. Se o banco estiver compilado e fusionado com 4D Desktop.
 * Entretanto, se acessar ao arquivo de recursos da estrutura e deseja adicionar, apagar ou modificar os recursos por programação, tenha certeza de provar o ambiente no qual o banco é executado. Com 4D Server, isso provavelmente levará a sérios problemas. Por exemplo, se modificar um recurso na máquina do servidor (através de um método de banco de dados ou um procedimento armazenado), definitivamente afetará o sistema de administração integrado de 4D Server que distribui recursos (de manera transparente) às estações de trabalho. Note que com 4D Client, você não tem acesso direto ao arquivo de estrutura; está localizado na máquina servidora.
 * Por todas estas razões, se utiliza os recursos, guarde-os em seus próprios arquivos.
-* Quando trabalhe com seus próprios recursos, não utilize números de recursos negativos; os números negativos estão reservados para o sistema operativo. Não utilize números de recursos entre 0 e 14.999; esta faixa está reservada para 4D. Utilize a faixa entre 15.000 e 32.767 para seus próprios recursos. Lembre que uma vez tenha aberto um arquivo de recursos, será o primeiro arquivo onde será pesquisado na string de arquivos de recursos. Um recurso nesse arquivo foi guardado com um número que pertence às faixas reservadas para o Sistema ou para 4D, este recurso será utilizado não apenas por comandos como [GET RESOURCE](get-resource.md) como também por rotinas internas da aplicação 4D. Este pode poderia ser o resultado que você deseja obter, mas se não tiver certeza, NÃO utilize estas faixas, já que podem produzir erros do Sistema.
-* Um arquivo de recursos é altamente estruturado e não pode aceitar mais de 2.700 recursos por arquivo. Se deseja trabalhar com arquivos que contenham um grande número de recursos, é recomendável provar esse número antes de adicionar novos recursos a um arquivo. Consulte os exemplos de Count resources na descrição do comando [RESOURCE TYPE LIST](resource-type-list.md).
+* Quando trabalhe com seus próprios recursos, não utilize números de recursos negativos; os números negativos estão reservados para o sistema operativo. Não utilize números de recursos entre 0 e 14.999; esta faixa está reservada para 4D. Utilize a faixa entre 15.000 e 32.767 para seus próprios recursos. Lembre que uma vez tenha aberto um arquivo de recursos, será o primeiro arquivo onde será pesquisado na string de arquivos de recursos. Um recurso nesse arquivo foi guardado com um número que pertence às faixas reservadas para o Sistema ou para 4D, este recurso será utilizado não apenas por comandos como [GET RESOURCE](../commands/get-resource) como também por rotinas internas da aplicação 4D. Este pode poderia ser o resultado que você deseja obter, mas se não tiver certeza, NÃO utilize estas faixas, já que podem produzir erros do Sistema.
+* Um arquivo de recursos é altamente estruturado e não pode aceitar mais de 2.700 recursos por arquivo. Se deseja trabalhar com arquivos que contenham um grande número de recursos, é recomendável provar esse número antes de adicionar novos recursos a um arquivo. Consulte os exemplos de Count resources na descrição do comando [RESOURCE TYPE LIST](../commands/resource-type-list).
 
-Quando tiver aberto um arquivo de recursos, pode analizar seu conteúdo utilizando os comandos [RESOURCE TYPE LIST](resource-type-list.md) e [RESOURCE LIST](resource-list.md).
+Quando tiver aberto um arquivo de recursos, pode analizar seu conteúdo utilizando os comandos [RESOURCE TYPE LIST](../commands/resource-type-list) e [RESOURCE LIST](../commands/resource-list).
 
 ## Exemplo 1 
 
@@ -110,7 +110,7 @@ Se o arquivo de recursos não puder ser aberto por um problema do recurso ou de 
 
 ## Ver também 
 
-[CLOSE RESOURCE FILE](close-resource-file.md)  
+[CLOSE RESOURCE FILE](../commands/close-resource-file)  
 *Recursos*  
 
 ## Propriedades

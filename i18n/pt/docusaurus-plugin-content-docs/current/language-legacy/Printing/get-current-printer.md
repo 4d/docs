@@ -1,4 +1,4 @@
----
+﻿---
 id: get-current-printer
 title: Get current printer
 slug: /commands/get-current-printer
@@ -32,9 +32,9 @@ displayed_sidebar: docs
 
 Se a impressora atual for administrada utilizando um servidor de impressora (spooler), é devolvida a rota de acesso completa (em Windows) ou o nome do spooler (em Mac OS).
 
-Para obter a lista de impressoras disponíveis assim como informação adicional, utilize o comando [PRINTERS LIST](printers-list.md) . Para modificar la impressora atual, utilize o comando [SET CURRENT PRINTER](set-current-printer.md)
+Para obter a lista de impressoras disponíveis assim como informação adicional, utilize o comando [PRINTERS LIST](../commands/printers-list) . Para modificar la impressora atual, utilize o comando [SET CURRENT PRINTER](../commands/set-current-printer)
 
-**Nota:** Quando a constante Generic PDF driver for usada com [SET CURRENT PRINTER](set-current-printer.md), [Get current printer](get-current-printer.md) retorna "\_4d\_pdf\_printer" ou o nome do PDF driver
+**Nota:** Quando a constante Generic PDF driver for usada com [SET CURRENT PRINTER](../commands/set-current-printer), [Get current printer](../commands/get-current-printer) retorna "\_4d\_pdf\_printer" ou o nome do PDF driver
 
 ## Gestão de erros 
 
@@ -42,8 +42,8 @@ Se não tiver uma impressora instalada, um erro é gerado
 
 ## Ver também 
 
-[PRINTERS LIST](printers-list.md)  
-[SET CURRENT PRINTER](set-current-printer.md)  
+[PRINTERS LIST](../commands/printers-list)  
+[SET CURRENT PRINTER](../commands/set-current-printer)  
 
 ## Propriedades
 

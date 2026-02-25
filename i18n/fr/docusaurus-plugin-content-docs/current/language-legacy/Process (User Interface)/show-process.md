@@ -1,4 +1,4 @@
----
+﻿---
 id: show-process
 title: SHOW PROCESS
 slug: /commands/show-process
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.SHOW PROCESS.Summary-->**SHOW PROCESS** fait apparaître l'ensemble des fenêtres appartenant à *process*.<!-- END REF--> Cette commande ne passe pas les fenêtres de *process* au premier plan, utilisez pour cela la commande [BRING TO FRONT](bring-to-front.md).
+<!--REF #_command_.SHOW PROCESS.Summary-->**SHOW PROCESS** fait apparaître l'ensemble des fenêtres appartenant à *process*.<!-- END REF--> Cette commande ne passe pas les fenêtres de *process* au premier plan, utilisez pour cela la commande [BRING TO FRONT](../commands/bring-to-front).
 
 Si les fenêtres de *process* sont déjà affichées, cette commande ne fait rien.
 
@@ -31,9 +31,9 @@ L'exemple suivant affiche le process "Clients", s'il était caché auparavant. L
 
 ## Voir aussi 
 
-[BRING TO FRONT](bring-to-front.md)  
-[HIDE PROCESS](hide-process.md)  
-[Process state](process-state.md)  
+[BRING TO FRONT](../commands/bring-to-front)  
+[HIDE PROCESS](../commands/hide-process)  
+[Process state](../commands/process-state)  
 
 ## Propriétés
 

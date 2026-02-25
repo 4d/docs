@@ -1,4 +1,4 @@
----
+﻿---
 id: begin-sql
 title: Begin SQL
 slug: /commands/begin-sql
@@ -26,9 +26,9 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.Begin SQL.Summary-->**Begin SQL**はメソッドエディタで使用するキーワードで、プロセスのカレントデータソース (4Dの統合SQLエンジン、または[SQL LOGIN](sql-login.md)コマンドで特定されたソース) により解釈されるべき一連のコマンドの始まりを宣言します。<!-- END REF--> 
+<!--REF #_command_.Begin SQL.Summary-->**Begin SQL**はメソッドエディタで使用するキーワードで、プロセスのカレントデータソース (4Dの統合SQLエンジン、または[SQL LOGIN](../commands/sql-login)コマンドで特定されたソース) により解釈されるべき一連のコマンドの始まりを宣言します。<!-- END REF--> 
 
-**Begin SQL**で開始された一連のSQLコマンドは、[End SQL](end-sql.md)キーワードで閉じなければなりません。
+**Begin SQL**で開始された一連のSQLコマンドは、[End SQL](../commands/end-sql)キーワードで閉じなければなりません。
 
 これらのキーワードは以下のように動作します:
 
@@ -55,9 +55,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[End SQL](end-sql.md)  
-[SQL Get current data source](sql-get-current-data-source.md)  
-[SQL LOGIN](sql-login.md)  
+[End SQL](../commands/end-sql)  
+[SQL Get current data source](../commands/sql-get-current-data-source)  
+[SQL LOGIN](../commands/sql-login)  
 
 ## プロパティ
 

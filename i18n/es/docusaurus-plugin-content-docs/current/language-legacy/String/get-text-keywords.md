@@ -1,4 +1,4 @@
----
+﻿---
 id: get-text-keywords
 title: GET TEXT KEYWORDS
 slug: /commands/get-text-keywords
@@ -94,7 +94,7 @@ Para contar las palabras de un texto:
 
 ## Ver también 
 
-[DISTINCT VALUES](distinct-values.md)  
+[DISTINCT VALUES](../commands/distinct-values)  
 
 ## Propiedades
 

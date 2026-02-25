@@ -1,4 +1,4 @@
----
+﻿---
 id: display-selection
 title: DISPLAY SELECTION
 slug: /commands/display-selection
@@ -35,11 +35,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DISPLAY SELECTION.Summary-->DISPLAY SELECTION muestra la selección de *tabla*, utilizando el formulario de salida.<!-- END REF--> Los registros se muestran en una lista por la cual se puede desplazar similar a la del modo Diseño. Si el usuario hace doble clic en un registro, por defecto se muestra el registro en el formulario de entrada actual. La lista se muestra en la ventana del primer plano. 
 
-Para mostrar una selección y poder igualmente modificar un registro en el formulario de entrada actual después de hacer doble clic en él (como lo hace en la ventana del entorno Diseño), utilice [OBJECT SET ENTERABLE](object-set-enterable.md) en lugar de DISPLAY SELECTION.  
+Para mostrar una selección y poder igualmente modificar un registro en el formulario de entrada actual después de hacer doble clic en él (como lo hace en la ventana del entorno Diseño), utilice [OBJECT SET ENTERABLE](../commands/object-set-enterable) en lugar de DISPLAY SELECTION.  
   
 La información a continuación aplica a ambos comandos, excepto por la información sobre la modificación de registros.
 
-Después de ejecutar DISPLAY SELECTION, no hay registro actual. Utilice un comando tal como [FIRST RECORD](first-record.md) o [LAST RECORD](last-record.md) para seleccionar uno.
+Después de ejecutar DISPLAY SELECTION, no hay registro actual. Utilice un comando tal como [FIRST RECORD](../commands/first-record) o [LAST RECORD](../commands/last-record) para seleccionar uno.
 
 El parámetro *modoSeleccion* se utiliza para definir las posibilidades de selección de registros en la lista utilizando el ratón. En este parámetro puede pasar una de las siguientes constantes del tema “*Parámetro de formulario*”:
 
@@ -54,9 +54,9 @@ Si no pasa el parámetro *modoSelección*, por defecto se utiliza el modo “Sel
   
 El parámetro *entradaLista* le permite autorizar el modo “Entrada en lista” en la lista mostrada. Este modo permite al usuario seleccionar y modificar directamente los valores de los registros en el formulario de salida. Pase [True](true.md "True") para activar este modo o [False](false.md "False") para desactivarlo. Por defecto, si no pasa el parámetro *entradaLista*, el modo “Entrada en lista” se desactiva.  
   
-Recuerde que con el comando DISPLAY SELECTION, este parámetro sólo permite la selección de los valores en la lista y no su modificación. De hecho, el comando DISPLAY SELECTION carga los registros de la selección actual en modo sólo lectura. Sólo el comando [MODIFY SELECTION](modify-selection.md) permite efectivamente la entrada de valores. 
+Recuerde que con el comando DISPLAY SELECTION, este parámetro sólo permite la selección de los valores en la lista y no su modificación. De hecho, el comando DISPLAY SELECTION carga los registros de la selección actual en modo sólo lectura. Sólo el comando [MODIFY SELECTION](../commands/modify-selection) permite efectivamente la entrada de valores. 
 
-**Nota:** el comando [OBJECT SET ENTERABLE](object-set-enterable.md) permite activar o desactivar fácilmente el modo Entrada en lista. 
+**Nota:** el comando [OBJECT SET ENTERABLE](../commands/object-set-enterable) permite activar o desactivar fácilmente el modo Entrada en lista. 
 
 Algunas reglas relacionadas con el parámetro opcional *\**:
 
@@ -64,7 +64,7 @@ Algunas reglas relacionadas con el parámetro opcional *\**:
 \- Si el primer parámetro opcional *\** se especifica, el registro único será mostrado en el formulario de salida.   
 \- Si el primer parámetro opcional *\** se especifica y el usuario muestra el registro en el formulario de entrada haciendo doble clic en él, se ocultarán las barras de desplazamiento del formulario. Para anular este efecto, pase el segundo parámetro opcional \*.
 
-Puede poner botones personalizados en el área del encabezado o del pie de página del formulario de salida para terminar la ejecución del comando DISPLAY SELECTION. Puede utilizar los botones automáticos Aceptar o Cancelar para salir, o utilizar un método de objeto que llame a los comandos [ACCEPT](accept.md) o [CANCEL](cancel.md). Cuando un formulario de salida llamado por el comando DISPLAY SELECTION no tiene botones, sólo la tecla **Escape** (Windows) o **Esc** (macOS) permiten salir de la lista.
+Puede poner botones personalizados en el área del encabezado o del pie de página del formulario de salida para terminar la ejecución del comando DISPLAY SELECTION. Puede utilizar los botones automáticos Aceptar o Cancelar para salir, o utilizar un método de objeto que llame a los comandos [ACCEPT](../commands/accept) o [CANCEL](../commands/cancel). Cuando un formulario de salida llamado por el comando DISPLAY SELECTION no tiene botones, sólo la tecla **Escape** (Windows) o **Esc** (macOS) permiten salir de la lista.
 
 Durante y después de la ejecución de DISPLAY SELECTION, los registros que el usuario selecciona se conservan en un conjunto llamado UserSet. UserSet está disponible por medio de DISPLAY SELECTION a los métodos de objeto de los botones, a los métodos llamados por los comandos de menú, así como para el método de proyecto que llamó DISPLAY SELECTION.
 
@@ -115,7 +115,7 @@ También puede utilizar otros comandos, tales como [PRINT SELECTION](print-selec
 
 *Conjuntos*  
 [Form event code](../commands/form-event-code)  
-[MODIFY SELECTION](modify-selection.md)  
+[MODIFY SELECTION](../commands/modify-selection)  
 
 ## Propiedades
 

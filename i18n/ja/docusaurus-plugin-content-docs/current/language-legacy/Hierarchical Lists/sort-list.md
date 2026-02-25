@@ -1,4 +1,4 @@
----
+﻿---
 id: sort-list
 title: SORT LIST
 slug: /commands/sort-list
@@ -66,7 +66,7 @@ SORT LIST コマンドは、カレントリスト項目またはリストやサ�
 
 ## 参照 
 
-[Selected list items](selected-list-items.md)  
+[Selected list items](../commands/selected-list-items)  
 
 ## プロパティ
 

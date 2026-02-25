@@ -1,4 +1,4 @@
----
+﻿---
 id: query-by-sql
 title: QUERY BY SQL
 slug: /commands/query-by-sql
@@ -170,7 +170,7 @@ Si el formato de la condición de búsqueda es correcto, la variable sistema OK 
 
 ## Ver también 
 
-[QUERY BY FORMULA](query-by-formula.md)  
+[QUERY BY FORMULA](../commands/query-by-formula)  
 
 ## Propiedades
 

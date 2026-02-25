@@ -1,4 +1,4 @@
----
+﻿---
 id: open-database
 title: OPEN DATABASE
 slug: /commands/open-database
@@ -40,7 +40,7 @@ Dans le paramètre *filePath*, passez le nom le chemin d'accès complet de la ba
 
 Si vous passez uniquement un nom de fichier, il doit être placé au même niveau que le fichier de structure de la base courante. 
 
-Si le chemin d'accès est valide, 4D quitte la base ouverte et ouvre la base spécifiée. En mode monoposte, la [On Exit database method](on-exit-database-method.md) de la base refermée et la [On Startup database method](on-startup-database-method.md) (ou la [On Server Open Connection database method](on-server-open-connection-database-method.md)) de la base ouverte sont successivement appelées.
+Si le chemin d'accès est valide, 4D quitte la base ouverte et ouvre la base spécifiée. En mode monoposte, la [On Exit database method](../commands/on-exit-database-method) de la base refermée et la [On Startup database method](../commands/on-startup-database-method) (ou la [On Server Open Connection database method](../commands/on-server-open-connection-database-method)) de la base ouverte sont successivement appelées.
 
 **Attention :** Comme la commande entraîne la fermeture de l'application courant avant d'ouvrir la base spécifiée, il est généralement déconseillé de l'appeler dans la ou dans une méthode appelée par cette méthode base.
 
@@ -56,7 +56,7 @@ Si le fichier de base cible n'est pas trouvé ou est invalide, une erreur systè
 
 ## Exemple 2 
 
-Vous souhaitez sélectionner un serveur au démarrage, à partir d'une application monoposte. Vous pouvez exécuter ce code avec un process lancé par la [On Startup database method](on-startup-database-method.md) :
+Vous souhaitez sélectionner un serveur au démarrage, à partir d'une application monoposte. Vous pouvez exécuter ce code avec un process lancé par la [On Startup database method](../commands/on-startup-database-method) :
 
 ```4d
  var $xml : Text

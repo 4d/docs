@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-set-url-filters
 title: WA SET URL FILTERS
 slug: /commands/wa-set-url-filters
@@ -44,7 +44,7 @@ Em caso de contradição a nível dos parâmetros (autorização e recusa de uma
   
 Para desativar o filtro dos URLs, chame o comando e passe arrays vazios ou passe, respectivamente, os valores "\*" e True nos últimos elementos dos arrays *arrFiltro e permitirArrRecusar*.  
   
-Quando tiver executado o comando, os filtros são transformados em propriedade da área Web. Se os arrays *arrFiltro* e *permitirArrRecusar* são apagados ou reinicializados, os filtros permanecem ativos sempre que o comando não tiver sido executado novamente. Para conhecer os filtros ativos para uma área, deve utilizar o comando [WA GET URL FILTERS](wa-get-url-filters.md).  
+Quando tiver executado o comando, os filtros são transformados em propriedade da área Web. Se os arrays *arrFiltro* e *permitirArrRecusar* são apagados ou reinicializados, os filtros permanecem ativos sempre que o comando não tiver sido executado novamente. Para conhecer os filtros ativos para uma área, deve utilizar o comando [WA GET URL FILTERS](../commands/wa-get-url-filters).  
   
 **Importante**: o filtro dos URLs realizado por este comando apenas aplica a qualquer requisição para mudar a URL primária da página, seja do usuário, código javascript ou código 4D, exceto para o comando \[#cmd id="1020"/\] e URLs iniciando com "javascript:".
 
@@ -149,8 +149,8 @@ Imagine que deseja negar o acesso a endereços IP específicos:
 
 ## Ver também 
 
-[WA GET URL FILTERS](wa-get-url-filters.md)  
-[WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)  
+[WA GET URL FILTERS](../commands/wa-get-url-filters)  
+[WA SET EXTERNAL LINKS FILTERS](../commands/wa-set-external-links-filters)  
 
 ## Propriedades
 

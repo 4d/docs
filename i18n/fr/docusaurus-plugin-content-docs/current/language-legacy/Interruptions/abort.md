@@ -1,4 +1,4 @@
----
+﻿---
 id: abort
 title: ABORT
 slug: /commands/abort
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.ABORT.Summary-->La commande **ABORT** est destinée à être utilisée dans une méthode projet de gestion d'erreurs installée par la commande [ON ERR CALL](on-err-call.md).<!-- END REF--> 
+<!--REF #_command_.ABORT.Summary-->La commande **ABORT** est destinée à être utilisée dans une méthode projet de gestion d'erreurs installée par la commande [ON ERR CALL](../commands/on-err-call).<!-- END REF--> 
 
 Si vous n'avez pas installé de méthode projet de gestion d'erreurs, lorsqu'une erreur se produit (par exemple une erreur de la base de données), 4D affiche sa boîte de dialogue d'erreur standard et interrompt l'exécution de votre code :
 
@@ -34,7 +34,7 @@ Bien que la commande **ABORT** soit destinée à une utilisation au sein d'une m
 
 ## Voir aussi 
 
-[ON ERR CALL](on-err-call.md)  
+[ON ERR CALL](../commands/on-err-call)  
 
 ## Propriétés
 

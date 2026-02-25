@@ -1,4 +1,4 @@
----
+﻿---
 id: modify-record
 title: MODIFY RECORD
 slug: /commands/modify-record
@@ -42,11 +42,11 @@ MODIFY RECORDを使用したが、ユーザがレコードのデータを変更�
 
 ## 参照 
 
-[ADD RECORD](add-record.md)  
-[Locked](locked.md)  
-[Modified record](modified-record.md)  
-[READ WRITE](read-write.md)  
-[UNLOAD RECORD](unload-record.md)  
+[ADD RECORD](../commands/add-record)  
+[Locked](../commands/locked)  
+[Modified record](../commands/modified-record)  
+[READ WRITE](../commands/read-write)  
+[UNLOAD RECORD](../commands/unload-record)  
 
 ## プロパティ
 

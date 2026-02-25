@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-destination
 title: QR SET DESTINATION
 slug: /commands/qr-set-destination
@@ -43,9 +43,9 @@ In the *type* parameter, you can pass one of the constants of the *QR Output Des
 *qr printer* (1): If you pass a string containing a star ("\*") in the *specifics* parameter, no dialog box will be displayed during printing and the current print settings will be used automatically. This setting is necessary when you want to print the report on the server.
 
 *qr text file* (2): If you pass an empty string in the *specifics* parameter, a Save file dialog is displayed; otherwise the file is saved at the location indicated by the path.  
-The default field delimiter is the tab character (code 9). The default record delimiter is the carriage return character (code 13). You can change these defaults by assigning values to the two delimiter system variables: FldDelimit and RecDelimit. If under Windows, FldDelimit equals 13, a char 10 (line feed) will be appended after the carriage return. Be aware that these variables are used by other commands such as [IMPORT TEXT](import-text.md) for example. Changing them for the Quick Report editor, changes them everywhere in the application.
+The default field delimiter is the tab character (code 9). The default record delimiter is the carriage return character (code 13). You can change these defaults by assigning values to the two delimiter system variables: FldDelimit and RecDelimit. If under Windows, FldDelimit equals 13, a char 10 (line feed) will be appended after the carriage return. Be aware that these variables are used by other commands such as [IMPORT TEXT](../commands/import-text) for example. Changing them for the Quick Report editor, changes them everywhere in the application.
 
-*qr HTML file* (5): An HTML file is created using the template set by [QR SET HTML TEMPLATE](qr-set-html-template.md). For detailed information on how the translation is performed, please refer to the Design Reference manual.
+*qr HTML file* (5): An HTML file is created using the template set by [QR SET HTML TEMPLATE](../commands/qr-set-html-template). For detailed information on how the translation is performed, please refer to the Design Reference manual.
 
 If you pass an invalid *area* number, the error -9850 will be generated.  
 If the value of the destination *type* is incorrect, the error -9852 will be generated.
@@ -61,7 +61,7 @@ The following code sets the destination as being the text file "Mydoc.txt" and e
 
 ## See also 
 
-[QR GET DESTINATION](qr-get-destination.md)  
+[QR GET DESTINATION](../commands/qr-get-destination)  
 
 ## Properties
 

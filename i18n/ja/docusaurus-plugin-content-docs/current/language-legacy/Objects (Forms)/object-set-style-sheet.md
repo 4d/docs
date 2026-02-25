@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-style-sheet
 title: OBJECT SET STYLE SHEET
 slug: /commands/object-set-style-sheet
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 *styleSheetName* 引数の中には、 *object* 引数で指定したオブジェクトに適用するスタイルシートの名前等を渡します。渡せる値は以下の通りです。
 
-* 既存のスタイルシート名(指定したスタイルシートが存在しない場合は、 [ON ERR CALL](on-err-call.md) コマンドで割り込み可能なエラーが返されます)
+* 既存のスタイルシート名(指定したスタイルシートが存在しない場合は、 [ON ERR CALL](../commands/on-err-call) コマンドで割り込み可能なエラーが返されます)
 * 空の文字列 ("") （指定すると、適用していたスタイルシートが解除されます。）
 * "*Font Styles*" テーマ内にある以下の定数のいずれか(指定すると、"自動"スタイルシートが適用されます): 
  
@@ -48,8 +48,8 @@ displayed_sidebar: docs
 
 *object* 引数で指定したオブジェクトにデザインモードですでにスタイルシートが関連付けされている場合、このコマンドを呼び出すことによって、カレントプロセス中はスタイルシートが変更されます。
 
-セッション中、 [ST SET ATTRIBUTES](st-set-attributes.md) コマンド、 [ST SET TEXT](st-set-text.md) コマンド、 [OBJECT SET FONT](object-set-font.md) コマンド、または [OBJECT SET FONT SIZE](object-set-font-size.md) コマンド等をオブジェクトに使用してフォントやフォントサイズを変更した場合、スタイルシートへの参照はオブジェクトから自動的に削除されます。元からあったスタイルシートと同じ設定を適用しようとした場合でも同様に削除されます。  
-しかしながら、例えば [ST SET ATTRIBUTES](st-set-attributes.md) コマンドや [OBJECT SET FONT STYLE](object-set-font-style.md) コマンド等を使用してスタイル(太字、イタリック等)のみを変更した場合、 スタイルシートへの参照は削除されず、これらのプロパティはセッションの間スタイルシートへと追加されます。
+セッション中、 [ST SET ATTRIBUTES](../commands/st-set-attributes) コマンド、 [ST SET TEXT](../commands/st-set-text) コマンド、 [OBJECT SET FONT](../commands/object-set-font) コマンド、または [OBJECT SET FONT SIZE](../commands/object-set-font-size) コマンド等をオブジェクトに使用してフォントやフォントサイズを変更した場合、スタイルシートへの参照はオブジェクトから自動的に削除されます。元からあったスタイルシートと同じ設定を適用しようとした場合でも同様に削除されます。  
+しかしながら、例えば [ST SET ATTRIBUTES](../commands/st-set-attributes) コマンドや [OBJECT SET FONT STYLE](../commands/object-set-font-style) コマンド等を使用してスタイル(太字、イタリック等)のみを変更した場合、 スタイルシートへの参照は削除されず、これらのプロパティはセッションの間スタイルシートへと追加されます。
 
 ### 互換性に関する注意 
 
@@ -58,9 +58,9 @@ displayed_sidebar: docs
 ## 参照 
 
 *Font Styles*  
-[GET STYLE SHEET INFO](get-style-sheet-info.md)  
-[LIST OF STYLE SHEETS](list-of-style-sheets.md)  
-[OBJECT Get style sheet](object-get-style-sheet.md)  
+[GET STYLE SHEET INFO](../commands/get-style-sheet-info)  
+[LIST OF STYLE SHEETS](../commands/list-of-style-sheets)  
+[OBJECT Get style sheet](../commands/object-get-style-sheet)  
 
 ## プロパティ
 

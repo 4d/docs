@@ -1,4 +1,4 @@
----
+﻿---
 id: set-timeout
 title: SET TIMEOUT
 slug: /commands/set-timeout
@@ -46,11 +46,11 @@ El siguiente ejemplo fija el puerto serial para recibir datos y el timeout. Los 
 
 ## Ver también 
 
-[ON ERR CALL](on-err-call.md)  
-[RECEIVE BUFFER](receive-buffer.md)  
-[RECEIVE PACKET](receive-packet.md)  
-[RECEIVE RECORD](receive-record.md)  
-[RECEIVE VARIABLE](receive-variable.md)  
+[ON ERR CALL](../commands/on-err-call)  
+[RECEIVE BUFFER](../commands/receive-buffer)  
+[RECEIVE PACKET](../commands/receive-packet)  
+[RECEIVE RECORD](../commands/receive-record)  
+[RECEIVE VARIABLE](../commands/receive-variable)  
 
 ## Propiedades
 

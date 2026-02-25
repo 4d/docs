@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-column-formula
 title: LISTBOX Get column formula
 slug: /commands/listbox-get-column-formula
@@ -35,7 +35,7 @@ Si pasa el parámetro opcional *\**, indica que el parámetro *objeto* es un nom
 
 ## Ver también 
 
-[LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md)  
+[LISTBOX SET COLUMN FORMULA](../commands/listbox-set-column-formula)  
 
 ## Propiedades
 

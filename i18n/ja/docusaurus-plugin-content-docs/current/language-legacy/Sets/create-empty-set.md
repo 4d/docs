@@ -1,4 +1,4 @@
----
+﻿---
 id: create-empty-set
 title: CREATE EMPTY SET
 slug: /commands/create-empty-set
@@ -28,8 +28,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[CLEAR SET](clear-set.md)  
-[CREATE SET](create-set.md)  
+[CLEAR SET](../commands/clear-set)  
+[CREATE SET](../commands/create-set)  
 
 ## プロパティ
 

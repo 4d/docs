@@ -1,4 +1,4 @@
----
+﻿---
 id: restore-info
 title: RESTORE INFO
 slug: /commands/restore-info
@@ -37,7 +37,7 @@ The type and content of the *info1* and *info2* parameters depend on the value o
 
 ## See also 
 
-[RESTORE](restore.md)  
+[RESTORE](../commands/restore)  
 
 ## Properties
 

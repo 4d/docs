@@ -1,4 +1,4 @@
----
+﻿---
 id: resolve-alias
 title: RESOLVE ALIAS
 slug: /commands/resolve-alias
@@ -43,7 +43,7 @@ Si *rutaAlias* especifica un alias/atajo, la variable sistema OK toma el valor 1
 
 ## Ver también 
 
-[CREATE ALIAS](create-alias.md)  
+[CREATE ALIAS](../commands/create-alias)  
 
 ## Propiedades
 

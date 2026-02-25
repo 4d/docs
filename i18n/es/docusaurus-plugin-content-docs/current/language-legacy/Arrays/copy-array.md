@@ -1,4 +1,4 @@
----
+﻿---
 id: copy-array
 title: COPY ARRAY
 slug: /commands/copy-array
@@ -25,7 +25,7 @@ Los arrays *fuente* y *destino* pueden ser locales, proceso o interproceso. El a
 **Notas:**
 
 * En modo compilado, el array *destino* debe ser del mismo tipo que el array *fuente*. Thus, it is recommended to always use arrays of the same type to have similar behavior in interpreted and compiled modes.
-* Al copiar arrays de objetos, sólo se duplican las referencias de los objetos que las contienen y no los objetos. Esto significa que cualquier modificación realizada en un objeto de un array se aplicará a todas las instancias existentes del objeto en los arrays copiados. Si necesita duplicar objetos, debe utilizar el comando [OB Copy](ob-copy.md).
+* Al copiar arrays de objetos, sólo se duplican las referencias de los objetos que las contienen y no los objetos. Esto significa que cualquier modificación realizada en un objeto de un array se aplicará a todas las instancias existentes del objeto en los arrays copiados. Si necesita duplicar objetos, debe utilizar el comando [OB Copy](../commands/ob-copy).
 
 ## Ejemplo 
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: get-picture-from-library
 title: GET PICTURE FROM LIBRARY
 slug: /commands/get-picture-from-library
@@ -59,7 +59,7 @@ L’exemple suivant retourne dans la variable *$DDcom\_Prot\_MonImage* l’image
 
 ## Exemple 3 
 
-Reportez-vous au troisième exemple de la commande [PICTURE LIBRARY LIST](picture-library-list.md).
+Reportez-vous au troisième exemple de la commande [PICTURE LIBRARY LIST](../commands/picture-library-list).
 
 ## Variables et ensembles système 
 
@@ -71,9 +71,9 @@ S'il n'y a pas assez de mémoire pour retourner l’image, l'erreur –108 est g
 
 ## Voir aussi 
 
-[PICTURE LIBRARY LIST](picture-library-list.md)  
-[REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
-[SET PICTURE TO LIBRARY](set-picture-to-library.md)  
+[PICTURE LIBRARY LIST](../commands/picture-library-list)  
+[REMOVE PICTURE FROM LIBRARY](../commands/remove-picture-from-library)  
+[SET PICTURE TO LIBRARY](../commands/set-picture-to-library)  
 
 ## Propriétés
 

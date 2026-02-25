@@ -1,4 +1,4 @@
----
+﻿---
 id: set-user-properties
 title: Set user properties
 slug: /commands/set-user-properties
@@ -39,7 +39,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Set user properties.Summary-->**Set user properties** vous permet de modifier et de mettre à jour les propriétés d'un compte actif d'utilisateur existant dont le numéro de référence est passé dans le paramètre *réfUtilisateur*, ou d'ajouter un nouvel utilisateur.<!-- END REF-->
 
-Si vous modifiez les propriétés d'un utilisateur existant, vous devez passer le numéro de référence qui vous est renvoyé par la commande [GET USER LIST](get-user-list.md).
+Si vous modifiez les propriétés d'un utilisateur existant, vous devez passer le numéro de référence qui vous est renvoyé par la commande [GET USER LIST](../commands/get-user-list).
 
 Pour ajouter un nouvel utilisateur, il faut passer -1 à *réfUtilisateur* (voir les notes ci-dessous pour les bases binaires).
 
@@ -47,11 +47,11 @@ Si l'utilisateur a bien été créé ou modifié, **Set user properties** retour
 Si vous ne passez pas un numéro de référence d'utilisateur valide, **Set user properties** ne fait rien et retourne 0.
 
 Lorsque vous appelez cette commande, vous passez le nouveau nom, la nouvelle méthode de démarrage, le nouveau mot de passe, le nouveau nombre d'utilisations et la nouvelle date de dernière utilisation pour l'utilisateur dans les paramètres *nom*, *démarrage*, *motDePasse*, *nbUtilisation* et *dernièreUtilisation*. Vous passez un mot de passe non crypté dans le paramètre *motDePasse*. 4D cryptera ce mot de passe avant de le sauvegarder dans le compte de l'utilisateur.   
-Si le nouveau nom d'utilisateur passé dans *nom* n'est pas unique (un utilisateur de même nom existe déjà), la commande ne fait rien et l'erreur -9979 est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs installée par [ON ERR CALL](on-err-call.md).
+Si le nouveau nom d'utilisateur passé dans *nom* n'est pas unique (un utilisateur de même nom existe déjà), la commande ne fait rien et l'erreur -9979 est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs installée par [ON ERR CALL](../commands/on-err-call).
 
 **Note :** Les paramètres *nbUtilisation* et *dernièreUtilisation* sont utilisés uniquement dans les bases binaires. lls sont ignorés dans les bases projets.
 
-Si vous ne voulez pas modifier toutes les propriétés de l'utilisateur (à part son groupe, voir ci-dessous), appelez au préalable [GET USER PROPERTIES](get-user-properties.md) et passez les valeurs retournées dans celles que vous ne voulez pas modifier. Si vous ne voulez pas modifier le mot de passe de l'utilisateur, passez \* dans le paramètre *motDePasse*. Cela vous permet de changer les autres propriétés du compte de l’utilisateur, sans changer le mot de passe de ce compte.
+Si vous ne voulez pas modifier toutes les propriétés de l'utilisateur (à part son groupe, voir ci-dessous), appelez au préalable [GET USER PROPERTIES](../commands/get-user-properties) et passez les valeurs retournées dans celles que vous ne voulez pas modifier. Si vous ne voulez pas modifier le mot de passe de l'utilisateur, passez \* dans le paramètre *motDePasse*. Cela vous permet de changer les autres propriétés du compte de l’utilisateur, sans changer le mot de passe de ce compte.
 
 Si vous ne passez pas le paramètre optionnel *adhésions*, les adhésions de l'utilisateur restent inchangées. Si vous ne passez pas ce paramètre en cas d'ajout d'un utilisateur, il ne fera partie d'aucun groupe.
 
@@ -63,16 +63,16 @@ Si vous passez le paramètre optionnel *adhésions*, vous modifiez toutes les ad
 
 ## Gestion des erreurs 
 
-Si vous n'avez pas les privilèges d'accès pour appeler **Set user properties** ou si le système de mots de passe est déjà ouvert par un autre process, une erreur de privilège d'accès est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs installée par [ON ERR CALL](on-err-call.md).
+Si vous n'avez pas les privilèges d'accès pour appeler **Set user properties** ou si le système de mots de passe est déjà ouvert par un autre process, une erreur de privilège d'accès est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs installée par [ON ERR CALL](../commands/on-err-call).
 
 ## Voir aussi 
 
-[DELETE USER](delete-user.md)  
-[GET GROUP LIST](get-group-list.md)  
-[GET USER LIST](get-user-list.md)  
-[GET USER PROPERTIES](get-user-properties.md)  
-[Is user deleted](is-user-deleted.md)  
-[Validate password](validate-password.md)  
+[DELETE USER](../commands/delete-user)  
+[GET GROUP LIST](../commands/get-group-list)  
+[GET USER LIST](../commands/get-user-list)  
+[GET USER PROPERTIES](../commands/get-user-properties)  
+[Is user deleted](../commands/is-user-deleted)  
+[Validate password](../commands/validate-password)  
 
 ## Propriétés
 

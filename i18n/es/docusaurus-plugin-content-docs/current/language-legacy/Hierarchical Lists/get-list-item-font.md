@@ -1,4 +1,4 @@
----
+﻿---
 id: get-list-item-font
 title: Get list item font
 slug: /commands/get-list-item-font
@@ -42,7 +42,7 @@ Finalmente, puede pasar \* en *refElem*: en este caso, el comando se aplicará a
 
 ## Ver también 
 
-[SET LIST ITEM FONT](set-list-item-font.md)  
+[SET LIST ITEM FONT](../commands/set-list-item-font)  
 
 ## Propiedades
 

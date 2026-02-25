@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-set-preference
 title: WA SET PREFERENCE
 slug: /commands/wa-set-preference
@@ -64,7 +64,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WA GET PREFERENCE](wa-get-preference.md)  
+[WA GET PREFERENCE](../commands/wa-get-preference)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: set-channel
 title: SET CHANNEL
 slug: /commands/set-channel
@@ -162,19 +162,19 @@ SET CHANNELコマンドの第2の形式は、ドキュメントファイルの�
 
 ## 参照 
 
-[Append document](append-document.md)  
+[Append document](../commands/append-document)  
 *Communications*  
-[Create document](create-document.md)  
-[GET SERIAL PORT MAPPING](get-serial-port-mapping.md)  
-[Open document](open-document.md)  
-[RECEIVE BUFFER](receive-buffer.md)  
-[RECEIVE PACKET](receive-packet.md)  
-[RECEIVE RECORD](receive-record.md)  
-[RECEIVE VARIABLE](receive-variable.md)  
-[SEND PACKET](send-packet.md)  
-[SEND RECORD](send-record.md)  
-[SEND VARIABLE](send-variable.md)  
-[SET TIMEOUT](set-timeout.md)  
+[Create document](../commands/create-document)  
+[GET SERIAL PORT MAPPING](../commands/get-serial-port-mapping)  
+[Open document](../commands/open-document)  
+[RECEIVE BUFFER](../commands/receive-buffer)  
+[RECEIVE PACKET](../commands/receive-packet)  
+[RECEIVE RECORD](../commands/receive-record)  
+[RECEIVE VARIABLE](../commands/receive-variable)  
+[SEND PACKET](../commands/send-packet)  
+[SEND RECORD](../commands/send-record)  
+[SEND VARIABLE](../commands/send-variable)  
+[SET TIMEOUT](../commands/set-timeout)  
 
 ## プロパティ
 

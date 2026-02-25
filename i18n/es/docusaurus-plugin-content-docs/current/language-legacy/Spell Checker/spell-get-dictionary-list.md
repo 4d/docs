@@ -1,4 +1,4 @@
----
+﻿---
 id: spell-get-dictionary-list
 title: SPELL GET DICTIONARY LIST
 slug: /commands/spell-get-dictionary-list
@@ -34,10 +34,10 @@ displayed_sidebar: docs
   
 **Nota**: para mayor información sobre los diccionarios Hunspell, consulte la sección *Corrección ortográfica* en el *Manual de Diseño*.  
 
-* *lengID* recibe los números de ID generados automáticamente y utilizados con el comando [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md).  
+* *lengID* recibe los números de ID generados automáticamente y utilizados con el comando [SPELL SET CURRENT DICTIONARY](../commands/spell-set-current-dictionary).  
 Note que los IDs son únicos y basados en los nombres de los archivos. Este comando es útil principalmente en la fase de desarrollo; no tiene que regenerar los IDs cada vez que la base se ejecuta.
 * *lengArchivos* recibe los nombres de los archivos de diccionarios instalados en la máquina.
-* *lengNoms* recibe los nombres de los lenguajes expresados en el lenguaje actual de la aplicación. Por ejemplo, para un diccionario francés, el valor "français (France)" será devuelto en una máquina configurada en francés y "French (France)" en un sistema inglés. El nombre del lenguaje es seguido por "- Hunspell". Este campo sólo es válido para los archivos "conocidos" por 4D. Para los archivos no conocidos (por ejemplo, archivos personalizados), se devuelve el nombre "N/A - Hunspell". Este principio no le impide utilizar el diccionario (si el archivo correspondiente es válido), el ID devuelto puede ser pasado al comando [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md).
+* *lengNoms* recibe los nombres de los lenguajes expresados en el lenguaje actual de la aplicación. Por ejemplo, para un diccionario francés, el valor "français (France)" será devuelto en una máquina configurada en francés y "French (France)" en un sistema inglés. El nombre del lenguaje es seguido por "- Hunspell". Este campo sólo es válido para los archivos "conocidos" por 4D. Para los archivos no conocidos (por ejemplo, archivos personalizados), se devuelve el nombre "N/A - Hunspell". Este principio no le impide utilizar el diccionario (si el archivo correspondiente es válido), el ID devuelto puede ser pasado al comando [SPELL SET CURRENT DICTIONARY](../commands/spell-set-current-dictionary).
 
 ## Ejemplo 
 
@@ -63,7 +63,7 @@ Usted pone "fr-classic+reform1990.aff" y "fr-classic+reform1990.dic" como tambi�
 
 ## Ver también 
 
-[SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md)  
+[SPELL SET CURRENT DICTIONARY](../commands/spell-set-current-dictionary)  
 
 ## Propiedades
 

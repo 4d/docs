@@ -1,4 +1,4 @@
----
+﻿---
 id: get-pointer
 title: Get pointer
 slug: /commands/get-pointer
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get pointer.Summary-->O comando **Get pointer** devolve um ponteiro até uma variável processo ou interprocesso cujo nome se passa em *nomVar*.<!-- END REF-->
 
-Para levar um ponteiro até um campo, utilize [Field](field.md). Para levar um ponteiro até uma tabela, utilize [Table](table.md).
+Para levar um ponteiro até um campo, utilize [Field](../commands/field). Para levar um ponteiro até uma tabela, utilize [Table](../commands/table).
 
 **Nota:** pode passar expressões como, por exemplo, *NomArr+"{3}"*, assim como elementos de array 2D *(NomArr+"{3}{5}")* para **Get pointer**.  
 Entretanto, não pode passar elementos de variável *(NomArr+"{miVar}")*. 
@@ -62,8 +62,8 @@ Usando ponteiros para elementos de arrays bi-dimensionais:
 
 ## Ver também 
 
-[Field](field.md)  
-[Table](table.md)  
+[Field](../commands/field)  
+[Table](../commands/table)  
 
 ## Propriedades
 

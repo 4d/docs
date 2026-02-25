@@ -1,4 +1,4 @@
----
+﻿---
 id: file
 title: File
 slug: /commands/file
@@ -82,7 +82,7 @@ displayed_sidebar: docs
 ## 参照
 
 [`4D.File` class](../../API/FileClass.md)  
-[Folder](folder.md)  
+[Folder](../commands/folder)  
 [Get 4D file](../commands/get-4d-file)  
 [Object to path](../commands/object-to-path)  
 [Path to object](../commands/path-to-object)

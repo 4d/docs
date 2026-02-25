@@ -1,4 +1,4 @@
----
+﻿---
 id: form-set-vertical-resizing
 title: FORM SET VERTICAL RESIZING
 slug: /commands/form-set-vertical-resizing
@@ -46,9 +46,9 @@ Consulte el ejemplo del comando [FORM SET SIZE](form-set-size.md "FORM SET SIZE"
 
 ## Ver también 
 
-[FORM GET VERTICAL RESIZING](form-get-vertical-resizing.md)  
-[FORM SET HORIZONTAL RESIZING](form-set-horizontal-resizing.md)  
-[FORM SET SIZE](form-set-size.md)  
+[FORM GET VERTICAL RESIZING](../commands/form-get-vertical-resizing)  
+[FORM SET HORIZONTAL RESIZING](../commands/form-set-horizontal-resizing)  
+[FORM SET SIZE](../commands/form-set-size)  
 
 ## Propiedades
 

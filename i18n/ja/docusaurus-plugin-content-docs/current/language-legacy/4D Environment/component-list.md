@@ -1,4 +1,4 @@
----
+﻿---
 id: component-list
 title: COMPONENT LIST
 slug: /commands/component-list
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[PLUGIN LIST](plugin-list.md)  
+[PLUGIN LIST](../commands/plugin-list)  
 
 ## プロパティ
 

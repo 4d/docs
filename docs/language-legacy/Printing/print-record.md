@@ -1,4 +1,4 @@
----
+﻿---
 id: print-record
 title: PRINT RECORD
 slug: /commands/print-record
@@ -39,7 +39,7 @@ You can print subforms with the **PRINT RECORD** command. This is not possible w
 
 By default, **PRINT RECORD** displays the Print job dialog box before printing. If the user cancels the dialog box, the command is canceled and the record is not printed. You can suppress this dialog box by using either the optional asterisk (*\**) parameter or the optional “greater than” (*\>*) parameter:
 
-* The *\** parameter causes a print job using the current print parameters (default parameters or those defined by the *\_o\_PAGE SETUP* and/or [SET PRINT OPTION](set-print-option.md) commands).
+* The *\** parameter causes a print job using the current print parameters (default parameters or those defined by the *\_o\_PAGE SETUP* and/or [SET PRINT OPTION](../commands/set-print-option) commands).
 * Furthermore, the *\>* parameter causes a print job without reinitializing the current print parameters. This setting is useful for executing several successive calls to **PRINT RECORD** (e.g. inside a loop) while maintaining previously set customized print parameters.
 
 **4D Server:** This command can be executed on 4D Server in a stored procedure. In this context:
@@ -47,7 +47,7 @@ By default, **PRINT RECORD** displays the Print job dialog box before printing. 
 * Make sure that no dialog box appears on the server machine (except for a specific requirement). To do this, it is necessary to call the command with the *\** or *\>* parameter.
 * In the case of a problem concerning the printer (out of paper, printer disconnected, etc.), no error message is generated.
 
-**Warning:** Do not use the [PAGE BREAK](page-break.md) command with **PRINT RECORD**. [PAGE BREAK](page-break.md) is exclusively reserved for use in combination with the [Print form](../commands/print-form) command.
+**Warning:** Do not use the [PAGE BREAK](../commands/page-break) command with **PRINT RECORD**. [PAGE BREAK](../commands/page-break) is exclusively reserved for use in combination with the [Print form](../commands/print-form) command.
 
 ## Example 1 
 

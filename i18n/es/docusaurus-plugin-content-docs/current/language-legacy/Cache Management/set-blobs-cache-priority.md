@@ -1,4 +1,4 @@
----
+﻿---
 id: set-blobs-cache-priority
 title: SET BLOBS CACHE PRIORITY
 slug: /commands/set-blobs-cache-priority
@@ -58,8 +58,8 @@ En el , usted desea definir una prioridad alta para la tabla \[Customer\]:
 
 ## Ver también 
 
-[ADJUST BLOBS CACHE PRIORITY](adjust-blobs-cache-priority.md)  
-[Get adjusted blobs cache priority](get-adjusted-blobs-cache-priority.md)  
+[ADJUST BLOBS CACHE PRIORITY](../commands/adjust-blobs-cache-priority)  
+[Get adjusted blobs cache priority](../commands/get-adjusted-blobs-cache-priority)  
 
 ## Propiedades
 

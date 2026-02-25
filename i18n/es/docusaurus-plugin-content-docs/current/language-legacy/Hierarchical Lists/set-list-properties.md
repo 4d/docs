@@ -1,4 +1,4 @@
----
+﻿---
 id: set-list-properties
 title: SET LIST PROPERTIES
 slug: /commands/set-list-properties
@@ -38,11 +38,11 @@ displayed_sidebar: docs
 
 **Nota de compatibilidad:** los parámetros *apariencia* e *icono* son obsoletos, siempre deben tomar el valor 0\. 
 
-**Nota:** si desea personalizar el icono de cada elemento en la lista, utilice el comando [SET LIST ITEM PROPERTIES](set-list-item-properties.md).
+**Nota:** si desea personalizar el icono de cada elemento en la lista, utilice el comando [SET LIST ITEM PROPERTIES](../commands/set-list-item-properties).
 
 Si no pasa el parámetro *altoLinea*, la altura de línea de una lista jerárquica es determinada por la fuente y el tamaño de fuente utilizado por el objeto. También puede pasar en parámetro *altoLinea* la altura de línea mínima de la lista jerárquica. Si el valor que pasa es superior a la altura de las líneas definida por la fuente y el tamaño de fuente utilizado, la altura de las líneas de la lista jerárquicas será el valor pasado.Pase 0 para definir la altura por defecto.  
 
-**Nota:** **SET LIST PROPERTIES** afecta la apariencia de los nodos en la lista jerárquica. Si prefiere personalizar el icono de cada elemento en la lista, utilice el comando [SET LIST ITEM PROPERTIES](set-list-item-properties.md).
+**Nota:** **SET LIST PROPERTIES** afecta la apariencia de los nodos en la lista jerárquica. Si prefiere personalizar el icono de cada elemento en la lista, utilice el comando [SET LIST ITEM PROPERTIES](../commands/set-list-item-properties).
 
 El parámetro opcional *dobleClic* le permite definir que un doble clic en un elemento de la lista padre no provoque el despliegue o contracción de la sublista. Por defecto, un doble clic en un elemento de la lista padre provoca que su lista hijo se expanda o se contraiga. Sin embargo, algunas interfaces de usuario podrían necesita desactivar este mecanismo. Para hacer esto, pase 1 en el parámetro *dobleClic*.
 
@@ -55,7 +55,7 @@ El parámetro opcional *multiSeleccion* le permite indicar si la lista debe acep
 Por defecto, como en versiones anteriores de 4D, usted no puede seleccionar varios elementos de una lista jerárquica simultáneamente. Si quiere que esta función esté disponible para la lista, pase el valor 1 en el parámetro *multiSeleccion*. En ese caso, las selecciones múltiples pueden efectuarse:
 
 \- manualmente, utilizando la combinación de teclas **Mayús**+**clic** para una selección continúa o **Ctrl**+**clic** (Windows) / **comando**+**clic** (macOS) para una selección discontinúa,  
-\- por programación, utilizando los comandos [SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md) y [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md).  
+\- por programación, utilizando los comandos [SELECT LIST ITEMS BY POSITION](../commands/select-list-items-by-position) y [SELECT LIST ITEMS BY REFERENCE](../commands/select-list-items-by-reference).  
 Si pasa 0 y omite el parámetro *multiSeleccion*, se aplicará el comportamiento por defecto. 
 
 El parámetro opcional *editable* le permite indicar si la lista debe ser editable por el usuario cuando se muestra como una lista de selección asociada a un campo o a una variable durante la entrada de datos. Cuando la lista es editable, un botón **Modificar** se añade en la ventana de la lista y el usuario puede añadir, borrar y ordenar los valores a través de un editor específico.   
@@ -75,9 +75,9 @@ Desea rechazar la sublista de expandir/contraer al hacer doble clic. Puede escri
 
 ## Ver también 
 
-[GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
-[GET LIST PROPERTIES](get-list-properties.md)  
-[SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+[GET LIST ITEM PROPERTIES](../commands/get-list-item-properties)  
+[GET LIST PROPERTIES](../commands/get-list-properties)  
+[SET LIST ITEM PROPERTIES](../commands/set-list-item-properties)  
 
 ## Propiedades
 

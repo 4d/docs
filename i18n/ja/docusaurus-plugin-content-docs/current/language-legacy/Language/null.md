@@ -1,4 +1,4 @@
----
+﻿---
 id: "null"
 title: "Null"
 slug: /commands/null
@@ -33,15 +33,15 @@ displayed_sidebar: docs
 
 | **ランゲージ要素**                                | **補足**                                                                                                                                                                           |
 | ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| オブジェクトプロパティ値                               | **Null** をオブジェクトプロパティと比較すると、プロパティ値がnull の場合にはtrue、それ以外の場合にはfalseが返されます。コードの単純化のため、**Null** をオブジェクト内に存在しないプロパティ(つまり[Undefined](undefined.md))と比較した場合にもtrue を返します。詳細は例題4を参照してください。 |
+| オブジェクトプロパティ値                               | **Null** をオブジェクトプロパティと比較すると、プロパティ値がnull の場合にはtrue、それ以外の場合にはfalseが返されます。コードの単純化のため、**Null** をオブジェクト内に存在しないプロパティ(つまり[Undefined](../commands/undefined))と比較した場合にもtrue を返します。詳細は例題4を参照してください。 |
 | コレクション要素                                   | コレクションが連続しない要素を追加したことで拡張されたとき、その中間の要素は全て**null** 値を自動的に受け取ります。                                                                                                                   |
 | オブジェクト変数 | 以下の(\*)を参照のこと                                                                                                                                                                    |
 | コレクション変数 | 以下の(\*)を参照のこと                                                                                                                                                                    |
 | ポインター変数 | 以下の(\*)を参照のこと                                                                                                                                                                    |
-| ピクチャー変数 | (\*) これらの型の変数に**null** 値を割り当てると、コンテンツがクリアされます。この場合、[CLEAR VARIABLE](clear-variable.md) コマンドを呼び出すのと同じ効果があります。                                                                     |
+| ピクチャー変数 | (\*) これらの型の変数に**null** 値を割り当てると、コンテンツがクリアされます。この場合、[CLEAR VARIABLE](../commands/clear-variable) コマンドを呼び出すのと同じ効果があります。                                                                     |
 | バリアント変数 |                                                                                                                                                                                  |
 
-**注:** このコマンドはスカラーデータベースフィールドと使用することはできません。データベース内のNull 値はSQL エンジンによって管理されており、[Is field value Null](is-field-value-null.md) と[SET FIELD VALUE NULL](set-field-value-null.md) コマンドを通して管理されているからです。
+**注:** このコマンドはスカラーデータベースフィールドと使用することはできません。データベース内のNull 値はSQL エンジンによって管理されており、[Is field value Null](../commands/is-field-value-null) と[SET FIELD VALUE NULL](../commands/set-field-value-null) コマンドを通して管理されているからです。
 
 ## 例題 1 
 
@@ -119,7 +119,7 @@ displayed_sidebar: docs
 
 ## 例題 4 
 
-異なるコンテキストにおいて、オブジェクトプロパティを対象に、[Undefined](undefined.md) コマンドおよび [Null](null.md) コマンドを使用した場合の結果の例です:
+異なるコンテキストにおいて、オブジェクトプロパティを対象に、[Undefined](../commands/undefined) コマンドおよび [Null](../commands/null) コマンドを使用した場合の結果の例です:
 
 ```4d
  var vEmp : Object
@@ -139,9 +139,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Is field value Null](is-field-value-null.md)  
-[OB SET NULL](ob-set-null.md)  
-[SET FIELD VALUE NULL](set-field-value-null.md)  
+[Is field value Null](../commands/is-field-value-null)  
+[OB SET NULL](../commands/ob-set-null)  
+[SET FIELD VALUE NULL](../commands/set-field-value-null)  
 
 ## プロパティ
 

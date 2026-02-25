@@ -1,4 +1,4 @@
----
+﻿---
 id: caps-lock-down
 title: Caps lock down
 slug: /commands/caps-lock-down
@@ -35,12 +35,12 @@ Ver el ejemplo del comando [Shift down](shift-down.md "Shift down").
 
 ## Ver también 
 
-[Macintosh command down](macintosh-command-down.md)  
-[Macintosh control down](macintosh-control-down.md)  
-[Macintosh option down](macintosh-option-down.md)  
-[Shift down](shift-down.md)  
-[Windows Alt down](windows-alt-down.md)  
-[Windows Ctrl down](windows-ctrl-down.md)  
+[Macintosh command down](../commands/macintosh-command-down)  
+[Macintosh control down](../commands/macintosh-control-down)  
+[Macintosh option down](../commands/macintosh-option-down)  
+[Shift down](../commands/shift-down)  
+[Windows Alt down](../commands/windows-alt-down)  
+[Windows Ctrl down](../commands/windows-ctrl-down)  
 
 ## Propiedades
 

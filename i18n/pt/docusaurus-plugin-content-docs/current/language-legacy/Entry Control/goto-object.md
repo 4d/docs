@@ -1,4 +1,4 @@
----
+﻿---
 id: goto-object
 title: GOTO OBJECT
 slug: /commands/goto-object
@@ -62,8 +62,8 @@ Veja o exemplo do comando [REJECT](reject.md "REJECT").
 
 ## Ver também 
 
-[CALL SUBFORM CONTAINER](call-subform-container.md)  
-[REJECT](reject.md)  
+[CALL SUBFORM CONTAINER](../commands/call-subform-container)  
+[REJECT](../commands/reject)  
 
 ## Propriedades
 

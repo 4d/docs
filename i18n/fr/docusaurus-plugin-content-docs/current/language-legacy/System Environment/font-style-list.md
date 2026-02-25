@@ -1,4 +1,4 @@
----
+﻿---
 id: font-style-list
 title: FONT STYLE LIST
 slug: /commands/font-style-list
@@ -37,7 +37,7 @@ Dans *listeStylesPolice*, passez un tableau texte qui sera rempli avec la liste 
 
 Dans *listeNomsPolice*, passez un tableau texte qui sera rempli avec la liste complète des noms de police pris en charge par la *famillePolice*. A la différence du tableau *listeStylesPolice*, le tableau *listeNomsPolice* retourne des valeurs non localisées, i.e. des noms de police basés sur leur identifiant système. Ainsi, les noms de police seront indépendants de la langue du système. Les éléments de ce tableau sont des chaînes de caractères destinées à être utilisées avec l'attribut wk font de la commande 4D Write Pro *WP SET ATTRIBUTES*. Grâce à cette fonctionnalité, les documents 4D Write Pro stockent les noms de police et peuvent donc être ouverts sur différentes machines, quelle que soit la langue du système, sans problèmes de polices. 
 
- Si la *famillePolice* n'est pas trouvée sur la machine, les tableaux sont retournés vides. Pour connaître la liste des familles de police disponibles sur la machine, utilisez la commande [FONT LIST](font-list.md).
+ Si la *famillePolice* n'est pas trouvée sur la machine, les tableaux sont retournés vides. Pour connaître la liste des familles de police disponibles sur la machine, utilisez la commande [FONT LIST](../commands/font-list).
 
 ## Exemple 
 
@@ -69,7 +69,7 @@ Vous voulez sélectionner les styles de la famille de police "Verdana" (si elle 
 
 ## Voir aussi 
 
-[FONT LIST](font-list.md)  
+[FONT LIST](../commands/font-list)  
 
 ## Propriétés
 

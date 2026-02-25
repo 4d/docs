@@ -1,4 +1,4 @@
----
+﻿---
 id: restore
 title: RESTORE
 slug: /commands/restore
@@ -44,8 +44,8 @@ Nota: em um aplicativo 4D compilado e fusionado com 4D Volume Desktop, o comando
 
 ## Ver também 
 
-[BACKUP](backup.md)  
-[RESTORE INFO](restore-info.md)  
+[BACKUP](../commands/backup)  
+[RESTORE INFO](../commands/restore-info)  
 
 ## Propriedades
 

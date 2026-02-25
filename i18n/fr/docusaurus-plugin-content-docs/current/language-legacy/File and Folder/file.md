@@ -1,4 +1,4 @@
----
+﻿---
 id: file
 slug: /commands/file
 title: File
@@ -82,7 +82,7 @@ Si la commande est appelée à partir d'un composant, passez le paramètre optio
 ## Voir également
 
 [classe `4D.File`](../../API/FileClass.md)\
-[Folder](folder.md)\
+[Folder](../commands/folder)\
 [Get 4D file](../../commands-legacy/get-4d-file)\
 [Object to path](../../commands-legacy/object-to-path)\
 [Path to object](../../commands-legacy/path-to-object)

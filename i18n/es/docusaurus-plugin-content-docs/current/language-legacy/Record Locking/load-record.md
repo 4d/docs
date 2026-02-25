@@ -1,4 +1,4 @@
----
+﻿---
 id: load-record
 title: LOAD RECORD
 slug: /commands/load-record
@@ -35,9 +35,9 @@ En entornos multiusuario y multiprocesos, cuando necesite modificar un registro 
 
 ## Ver también 
 
-[Locked](locked.md)  
+[Locked](../commands/locked)  
 *Record Locking*  
-[UNLOAD RECORD](unload-record.md)  
+[UNLOAD RECORD](../commands/unload-record)  
 
 ## Propiedades
 

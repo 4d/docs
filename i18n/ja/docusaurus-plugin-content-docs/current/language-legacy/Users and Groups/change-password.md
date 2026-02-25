@@ -1,4 +1,4 @@
----
+﻿---
 id: change-password
 title: CHANGE PASSWORD
 slug: /commands/change-password
@@ -42,8 +42,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[CHANGE CURRENT USER](change-current-user.md)  
-[OBJECT SET FONT](object-set-font.md)  
+[CHANGE CURRENT USER](../commands/change-current-user)  
+[OBJECT SET FONT](../commands/object-set-font)  
 
 ## プロパティ
 

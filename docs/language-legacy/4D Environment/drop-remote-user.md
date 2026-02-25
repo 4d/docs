@@ -1,4 +1,4 @@
----
+﻿---
 id: drop-remote-user
 title: DROP REMOTE USER
 slug: /commands/drop-remote-user
@@ -51,8 +51,8 @@ You want to drop a specific remote user:
 
 ## See also 
 
-[REJECT NEW REMOTE CONNECTIONS](reject-new-remote-connections.md)  
-[SEND MESSAGE TO REMOTE USER](send-message-to-remote-user.md)  
+[REJECT NEW REMOTE CONNECTIONS](../commands/reject-new-remote-connections)  
+[SEND MESSAGE TO REMOTE USER](../commands/send-message-to-remote-user)  
 
 ## Properties
 

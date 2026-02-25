@@ -1,4 +1,4 @@
----
+﻿---
 id: resolve-alias
 title: RESOLVE ALIAS
 slug: /commands/resolve-alias
@@ -43,7 +43,7 @@ Se *rotaAlias* especifica um alias/atalho, a variável sistema OK assume o valor
 
 ## Ver também 
 
-[CREATE ALIAS](create-alias.md)  
+[CREATE ALIAS](../commands/create-alias)  
 
 ## Propriedades
 

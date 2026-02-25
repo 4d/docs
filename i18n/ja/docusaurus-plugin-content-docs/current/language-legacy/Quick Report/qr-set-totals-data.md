@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-totals-data
 title: QR SET TOTALS DATA
 slug: /commands/qr-set-totals-data
@@ -108,7 +108,7 @@ QR SET TOTALS DATA コマンドを使用し、特定のセルの詳細を設定�
 
 ## 参照 
 
-[QR GET TOTALS DATA](qr-get-totals-data.md)  
+[QR GET TOTALS DATA](../commands/qr-get-totals-data)  
 
 ## プロパティ
 

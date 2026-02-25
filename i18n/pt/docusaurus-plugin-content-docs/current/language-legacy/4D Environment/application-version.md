@@ -1,4 +1,4 @@
----
+﻿---
 id: application-version
 title: Application version
 slug: /commands/application-version
@@ -131,8 +131,8 @@ Você quer usar o número pequeno de versão da aplicação retornado pelo coman
 
 ## Ver também 
 
-[Application type](application-type.md)  
-[Version type](version-type.md)  
+[Application type](../commands/application-type)  
+[Version type](../commands/version-type)  
 
 ## Propriedades
 

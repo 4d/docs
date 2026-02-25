@@ -1,4 +1,4 @@
----
+﻿---
 id: form-load
 title: FORM LOAD
 slug: /commands/form-load
@@ -32,10 +32,10 @@ Quando o comando for executado a partir de um componente, ele carrega os formul�
 
 ### formData
 
-Opcionalmente, é possível passar parâmetros para o *form* usando o objeto *formData* ou o objeto de classe de formulário instanciado automaticamente pelo 4D se você tiver [associado uma classe de usuário ao formulário](../../FormEditor/properties_FormProperties.md#form-class). Todas as propriedades do objeto de dados do formulário estarão disponíveis no contexto do formulário por meio do comando [Form](form.md).
-Any properties of the form data object will then be available from within the form context through the [Form](form.md) command.
+Opcionalmente, é possível passar parâmetros para o *form* usando o objeto *formData* ou o objeto de classe de formulário instanciado automaticamente pelo 4D se você tiver [associado uma classe de usuário ao formulário](../../FormEditor/properties_FormProperties.md#form-class). Todas as propriedades do objeto de dados do formulário estarão disponíveis no contexto do formulário por meio do comando [Form](../commands/form).
+Any properties of the form data object will then be available from within the form context through the [Form](../commands/form) command.
 
-Para obter informações detalhadas sobre o objeto de dados do formulário, consulte o comando [`DIALOG`](dialog.md).
+Para obter informações detalhadas sobre o objeto de dados do formulário, consulte o comando [`DIALOG`](../commands/dialog).
 
 ### Impressão de dados
 

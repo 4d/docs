@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-get-last-filtered-url
 title: WA Get last filtered URL
 slug: /commands/wa-get-last-filtered-url
@@ -33,18 +33,18 @@ displayed_sidebar: docs
 
 L’URL peut avoir été filtré pour l’une des raisons suivantes :
 
-* l’URL est interdit à cause d’un filtre (commande [WA SET URL FILTERS](wa-set-url-filters.md)),
-* le lien est ouvert dans le navigateur par défaut (commande [WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)),
+* l’URL est interdit à cause d’un filtre (commande [WA SET URL FILTERS](../commands/wa-set-url-filters)),
+* le lien est ouvert dans le navigateur par défaut (commande [WA SET EXTERNAL LINKS FILTERS](../commands/wa-set-external-links-filters)),
 * l’URL tentait d’ouvrir une fenêtre pop up.
 
 Il est judicieux d’appeler cette commande dans le contexte des événements formulaire On URL Filtering, On Open External Link et On Window Opening Denied afin de connaître l’URL filtré. Pour plus d’informations, reportez-vous à la description de la commande [Form event code](../commands/form-event-code).
 
 ## Voir aussi 
 
-[WA GET EXTERNAL LINKS FILTERS](wa-get-external-links-filters.md)  
-[WA GET URL FILTERS](wa-get-url-filters.md)  
-[WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)  
-[WA SET URL FILTERS](wa-set-url-filters.md)  
+[WA GET EXTERNAL LINKS FILTERS](../commands/wa-get-external-links-filters)  
+[WA GET URL FILTERS](../commands/wa-get-url-filters)  
+[WA SET EXTERNAL LINKS FILTERS](../commands/wa-set-external-links-filters)  
+[WA SET URL FILTERS](../commands/wa-set-url-filters)  
 
 ## Propriétés
 

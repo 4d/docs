@@ -1,4 +1,4 @@
----
+﻿---
 id: process-4d-tags
 title: PROCESS 4D TAGS
 slug: /commands/process-4d-tags
@@ -62,9 +62,9 @@ Depois da execução do comando, o parâmetro *dadosSaida* recebe os dados do pa
 
 O parâmetro *dadosSaida* pode ser um campo ou uma variável de tipo Texto.
 
-Nota: este comando nunca chama a [On Web Authentication database method](on-web-authentication-database-method.md).
+Nota: este comando nunca chama a [On Web Authentication database method](../commands/on-web-authentication-database-method).
 
-**Nota**: este comando já não chama ao [On Web Authentication database method](on-web-authentication-database-method.md).
+**Nota**: este comando já não chama ao [On Web Authentication database method](../commands/on-web-authentication-database-method).
 
 ## Exemplo 1 
 

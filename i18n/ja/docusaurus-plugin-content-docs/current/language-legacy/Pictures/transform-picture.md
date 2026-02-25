@@ -1,4 +1,4 @@
----
+﻿---
 id: transform-picture
 title: TRANSFORM PICTURE
 slug: /commands/transform-picture
@@ -82,7 +82,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[COMBINE PICTURES](combine-pictures.md)  
+[COMBINE PICTURES](../commands/combine-pictures)  
 
 ## プロパティ
 

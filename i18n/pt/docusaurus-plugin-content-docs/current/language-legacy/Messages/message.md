@@ -1,4 +1,4 @@
----
+﻿---
 id: message
 title: MESSAGE
 slug: /commands/message
@@ -36,8 +36,8 @@ Se abrir uma janela com [Open window](../commands/open-window), todas as chamada
 * Se uma mensagem for mais larga que a janela, 4D insere automaticamente um retorno a linha.
 * Se uma mensagem tiver mais linhas que a janela, 4D automaticamente desce a página.
 * Para controlar quebras de linha, inclua retornos de carro — **Char(13)** — em sua mensagem.
-* Para exibir o texto em um lugar específico da janela, chame [GOTO XY](goto-xy.md).
-* Para apagar os conteúdos da janela, chame [ERASE WINDOW](erase-window.md).
+* Para exibir o texto em um lugar específico da janela, chame [GOTO XY](../commands/goto-xy).
+* Para apagar os conteúdos da janela, chame [ERASE WINDOW](../commands/erase-window).
 * A janela é apenas uma janela de output e não se redesenha quando outras janelas forem colocadas sobre ela.
 * Pode modificar a fonte e tamanho dos caracteres na janela através da página "Interface" nas Preferências de Banco de Dados.
 
@@ -121,9 +121,9 @@ O resultado é o seguinte (em Windows):
 
 ## Ver também 
 
-[CLOSE WINDOW](close-window.md)  
-[ERASE WINDOW](erase-window.md)  
-[GOTO XY](goto-xy.md)  
+[CLOSE WINDOW](../commands/close-window)  
+[ERASE WINDOW](../commands/erase-window)  
+[GOTO XY](../commands/goto-xy)  
 [Open window](../commands/open-window)  
 
 ## Propriedades

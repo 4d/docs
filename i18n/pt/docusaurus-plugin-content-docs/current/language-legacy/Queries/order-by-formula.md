@@ -1,4 +1,4 @@
----
+﻿---
 id: order-by-formula
 title: ORDER BY FORMULA
 slug: /commands/order-by-formula
@@ -38,14 +38,14 @@ O parâmetro *formula* pode ser de tipo Alfa, Real (Numérico), Inteiro, Inteiro
 
 **Aviso:** Parâmetros ($1...$n) não são compatíveis em *formula*. 
 
-**Nota: Se** **ORDER BY FORMULA** for usado em conjunção com [PRINT SELECTION](print-selection.md), [BREAK LEVEL](break-level.md) e uma variável local, os três comandos devem ser executados, desde o mesmo método, senão um erro será gerado. Isso é porque [PRINT SELECTION](print-selection.md) precisa reavaliar *formula* para computar as quebras de valores. Por exemplo, se executar **ORDER BY FORMULA**( \[T1\] ; \[T1\]f1 > $value) a partir de um método, a ordenação é feita e o método termina. Qualquer chamada subsequente a [PRINT SELECTION](print-selection.md) e [BREAK LEVEL](break-level.md) vai falhar porque *$value* não existe mais e *formula* não pode ser reavaliada. 
+**Nota: Se** **ORDER BY FORMULA** for usado em conjunção com [PRINT SELECTION](../commands/print-selection), [BREAK LEVEL](../commands/break-level) e uma variável local, os três comandos devem ser executados, desde o mesmo método, senão um erro será gerado. Isso é porque [PRINT SELECTION](../commands/print-selection) precisa reavaliar *formula* para computar as quebras de valores. Por exemplo, se executar **ORDER BY FORMULA**( \[T1\] ; \[T1\]f1 > $value) a partir de um método, a ordenação é feita e o método termina. Qualquer chamada subsequente a [PRINT SELECTION](../commands/print-selection) e [BREAK LEVEL](../commands/break-level) vai falhar porque *$value* não existe mais e *formula* não pode ser reavaliada. 
 
   
-Sem importar a maneira em que se define uma ordenação, se a operação de ordenação vai a demorar um certo tempo, 4D mostra automaticamente uma mensagem que contém um termômetro de progresso. Estas mensagens podem ser ativadas e desativadas utilizando os comandos [MESSAGES ON](messages-on.md) e [MESSAGES OFF](messages-off.md). Se for mostrado o termômetro de progressão, o usuário pode clicar no botão Deter para interromper a ordenação. Se a ordenação é completada corretamente, OK toma o valor 1\. Do contrário, se a ordenação for interrompida, OK toma o valor 0 (zero).  
+Sem importar a maneira em que se define uma ordenação, se a operação de ordenação vai a demorar um certo tempo, 4D mostra automaticamente uma mensagem que contém um termômetro de progresso. Estas mensagens podem ser ativadas e desativadas utilizando os comandos [MESSAGES ON](../commands/messages-on) e [MESSAGES OFF](../commands/messages-off). Se for mostrado o termômetro de progressão, o usuário pode clicar no botão Deter para interromper a ordenação. Se a ordenação é completada corretamente, OK toma o valor 1\. Do contrário, se a ordenação for interrompida, OK toma o valor 0 (zero).  
   
 **4D Server**: a partir da versão 11 de 4D Server, este comando é executado no servidor, o qual otimiza sua execução. Note que quando as variáveis são chamadas diretamente na expressão, a ordenação se calcula com o valor da variável na máquina cliente.Por exemplo, **ORDER BY FORMULA(\[mytable\];\[mytable\]myfield\*myvariable)** será executado no servidor mas com os conteúdos de minhavariavel da máquina cliente.
 
-> **Nota de Compatibilidade:** Até 4D Server v11, esse comando era executado na máquina cliente. Para compatibilidade reversa, essa operação é mantida em bancos de dados convertidos. Entretanto, uma propriedade de compatibilidade ou um seletor do comando [SET DATABASE PARAMETER](set-database-parameter.md) ativa execução do lado do servidor em bancos de dados convertidos.
+> **Nota de Compatibilidade:** Até 4D Server v11, esse comando era executado na máquina cliente. Para compatibilidade reversa, essa operação é mantida em bancos de dados convertidos. Entretanto, uma propriedade de compatibilidade ou um seletor do comando [SET DATABASE PARAMETER](../commands/set-database-parameter) ativa execução do lado do servidor em bancos de dados convertidos.
 
 ## Exemplo 
 
@@ -57,7 +57,7 @@ Este exemplo ordena os registros da tabela \[Pessoas\] em ordem descendente, bas
 
 ## Ver também 
 
-[ORDER BY](order-by.md)  
+[ORDER BY](../commands/order-by)  
 
 ## Propriedades
 

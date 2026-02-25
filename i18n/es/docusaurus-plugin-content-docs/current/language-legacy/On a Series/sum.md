@@ -1,4 +1,4 @@
----
+﻿---
 id: sum
 title: Sum
 slug: /commands/sum
@@ -75,18 +75,18 @@ Este ejemplo permite obtener la suma de todos los valores ubicados en un array:
 
 #### Ejemplo 3 
 
-Para un ejemplo de cálculo de un atributo campo de objeto, consulte el ejemplo 3 del comando [Average](average.md).
+Para un ejemplo de cálculo de un atributo campo de objeto, consulte el ejemplo 3 del comando [Average](../commands/average).
 
 #### Ver también 
 
-[ACCUMULATE](accumulate.md)  
-[Average](average.md)  
-[BREAK LEVEL](break-level.md)  
-[Max](max.md)  
-[Min](min.md)  
-[ORDER BY](order-by.md)  
-[PRINT SELECTION](print-selection.md)  
-[Subtotal](subtotal.md)  
+[ACCUMULATE](../commands/accumulate)  
+[Average](../commands/average)  
+[BREAK LEVEL](../commands/break-level)  
+[Max](../commands/max)  
+[Min](../commands/min)  
+[ORDER BY](../commands/order-by)  
+[PRINT SELECTION](../commands/print-selection)  
+[Subtotal](../commands/subtotal)  
 
 #### Propiedades
 

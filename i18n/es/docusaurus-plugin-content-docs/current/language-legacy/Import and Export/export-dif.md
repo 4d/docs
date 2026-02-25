@@ -1,4 +1,4 @@
----
+﻿---
 id: export-dif
 title: EXPORT DIF
 slug: /commands/export-dif
@@ -26,9 +26,9 @@ Un evento On Load se envía al método del formulario por cada registro exportad
 
 El parámetro *documento* puede dar nombre a un documento nuevo o existente. Si *documento* tiene el mismo nombre que un documento existente, el documento existente se sobrescribe. El *documento* puede incluir una ruta de acceso que contenga los nombres de los volúmenes y las carpetas. Si pasa una cadena vacía, aparece la caja de diálogo estándar de guardar archivos. Si el usuario cancela este diálogo, se cancela la operación de exportación, y la variable sistema OK toma el valor 0.
 
-Un termómetro de progreso aparece durante la exportación. El usuario puede cancelar la operación haciendo clic en el botón Detener. Si la exportación termina con éxito, la variable sistema OK toma el valor 1\. En caso de error o si la operación se interrumpe, la variable OK toma el valor 0\. El termómetro puede ocultarse con el comando [MESSAGES OFF](messages-off.md).
+Un termómetro de progreso aparece durante la exportación. El usuario puede cancelar la operación haciendo clic en el botón Detener. Si la exportación termina con éxito, la variable sistema OK toma el valor 1\. En caso de error o si la operación se interrumpe, la variable OK toma el valor 0\. El termómetro puede ocultarse con el comando [MESSAGES OFF](../commands/messages-off).
 
-El comando utiliza por defecto el conjunto de caracteres UTF-8\. Los documento en formato DIF utilizan por lo general el conjunto de caracteres IBM437, puede utilizar el comando [USE CHARACTER SET](use-character-set.md) para definir el conjunto de caracteres apropiado.
+El comando utiliza por defecto el conjunto de caracteres UTF-8\. Los documento en formato DIF utilizan por lo general el conjunto de caracteres IBM437, puede utilizar el comando [USE CHARACTER SET](../commands/use-character-set) para definir el conjunto de caracteres apropiado.
 
 Durante la utilización de EXPORT DIF , el delimitador de campos por defecto es el carácter de tabulación (código 9). El delimitador del registro por defecto es el retorno de carro (código 13). Puede modificar estos valores asignando nuevos valores a las dos *Variables sistema* FldDelimit y RecDelimit. El usuario puede cambiar estos valores en la caja de diálogo de exportación del entorno Diseño. Como los campos Texto pueden contener retornos de carro, sea cuidadoso si utiliza el retorno de carro como delimitador entre los campos a exportar.
 
@@ -47,10 +47,10 @@ OK toma el valor 1 si la exportación termina con éxito; de lo contrario, toma 
 
 ## Ver también 
 
-[EXPORT SYLK](export-sylk.md)  
-[EXPORT TEXT](export-text.md)  
-[IMPORT DIF](import-dif.md)  
-[USE CHARACTER SET](use-character-set.md)  
+[EXPORT SYLK](../commands/export-sylk)  
+[EXPORT TEXT](../commands/export-text)  
+[IMPORT DIF](../commands/import-dif)  
+[USE CHARACTER SET](../commands/use-character-set)  
 
 ## Propiedades
 

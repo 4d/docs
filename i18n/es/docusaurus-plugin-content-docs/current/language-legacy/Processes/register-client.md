@@ -1,4 +1,4 @@
----
+﻿---
 id: register-client
 title: REGISTER CLIENT
 slug: /commands/register-client
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.REGISTER CLIENT.Summary-->El comando **REGISTER CLIENT** “registra” un equipo cliente 4D con el nombre especificado en *nomCliente* en 4D Server, con el fin de permitir a otros clientes o posiblemente 4D Server (utilizando procedimientos almacenados) ejecutar métodos utilizando el comando [`EXECUTE ON CLIENT`](execute-on-client.md).<!-- END REF--> Una vez registrado, un cliente 4D puede ejecutar uno o varios métodos para otros clientes.
+<!--REF #_command_.REGISTER CLIENT.Summary-->El comando **REGISTER CLIENT** “registra” un equipo cliente 4D con el nombre especificado en *nomCliente* en 4D Server, con el fin de permitir a otros clientes o posiblemente 4D Server (utilizando procedimientos almacenados) ejecutar métodos utilizando el comando [`EXECUTE ON CLIENT`](../commands/execute-on-client).<!-- END REF--> Una vez registrado, un cliente 4D puede ejecutar uno o varios métodos para otros clientes.
 
 **Notas**:
 
@@ -46,9 +46,9 @@ displayed_sidebar: docs
 * Si este comando se utiliza con 4D en modo local, no tiene efecto.
 * Más de una estación 4D client puede tener el mismo nombre registrado.
 
-Cuando se ejecuta este comando, un proceso, llamado *nomClient*, se crea en el equipo cliente. Este proceso sólo puede ser abortado por el comando [`UNREGISTER CLIENT`](unregister-client.md).   
+Cuando se ejecuta este comando, un proceso, llamado *nomClient*, se crea en el equipo cliente. Este proceso sólo puede ser abortado por el comando [`UNREGISTER CLIENT`](../commands/unregister-client).   
 
-Una vez ejecutado el comando, no es posible modificar rápidamente el nombre del cliente 4D o el periodo de interrogación al servidor. Para hacerlo, debe llamar al comando [`UNREGISTER CLIENT`](unregister-client.md), y luego ejecutar el comando **REGISTER CLIENT**.
+Una vez ejecutado el comando, no es posible modificar rápidamente el nombre del cliente 4D o el periodo de interrogación al servidor. Para hacerlo, debe llamar al comando [`UNREGISTER CLIENT`](../commands/unregister-client), y luego ejecutar el comando **REGISTER CLIENT**.
 
 ## Ejemplo 
 
@@ -128,9 +128,9 @@ Si el cliente 4D está registrado correctamente, la variable sistema OK es igual
 
 ## Ver también 
 
-[EXECUTE ON CLIENT](execute-on-client.md)  
-[GET REGISTERED CLIENTS](get-registered-clients.md)  
-[UNREGISTER CLIENT](unregister-client.md)  
+[EXECUTE ON CLIENT](../commands/execute-on-client)  
+[GET REGISTERED CLIENTS](../commands/get-registered-clients)  
+[UNREGISTER CLIENT](../commands/unregister-client)  
 
 ## Propiedades
 

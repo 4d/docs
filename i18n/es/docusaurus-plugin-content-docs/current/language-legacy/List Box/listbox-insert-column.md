@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-insert-column
 title: LISTBOX INSERT COLUMN
 slug: /commands/listbox-insert-column
@@ -53,9 +53,9 @@ Pase el nombre del objeto y de la variable de la columna insertada en los parám
 Puede pasar un puntero **Nil (->\[\])** si utiliza el comando en un contexto dinámico cuando el formulario se ejecuta (ver abajo).
 * Con una selección tipo list box, debe pasar un campo o variable en el parámetro *variableCol*. El contenido de la columna será entonces el valor del campo o de la variable, evaluado para cada registro de la selección asociada al list box. Este tipo de contenidos sólo puede ser utilizado cuando la propiedad "Fuente de datos" del list box es Selección actual o Selección temporal (ver la sección *Gestión programada de los objetos de tipo List box*). Puede utilizar los campos o las variables de tipo cadena, numérico, Fecha, Hora, Imagen y Booleano.
 
-En el contexto de list boxes basadas en las selecciones de registros, **LISTBOX INSERT COLUMN** permite insertar elementos simples (campos o variables). Si quiere manipular expresiones más complejas (tales como fórmulas o métodos), debe utilizar el comando [LISTBOX INSERT COLUMN FORMULA](listbox-insert-column-formula.md).
+En el contexto de list boxes basadas en las selecciones de registros, **LISTBOX INSERT COLUMN** permite insertar elementos simples (campos o variables). Si quiere manipular expresiones más complejas (tales como fórmulas o métodos), debe utilizar el comando [LISTBOX INSERT COLUMN FORMULA](../commands/listbox-insert-column-formula).
 
-Los list box de tipo colección o selección de entidades también son soportados, sin embargo, dado que el parámetro *variableCol* no acepta expresiones, debe utilizar el comando [LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md) para asignar la fuente de datos. Es más preciso utilizar el comando [LISTBOX INSERT COLUMN FORMULA](listbox-insert-column-formula.md)  en este caso.
+Los list box de tipo colección o selección de entidades también son soportados, sin embargo, dado que el parámetro *variableCol* no acepta expresiones, debe utilizar el comando [LISTBOX SET COLUMN FORMULA](../commands/listbox-set-column-formula) para asignar la fuente de datos. Es más preciso utilizar el comando [LISTBOX INSERT COLUMN FORMULA](../commands/listbox-insert-column-formula)  en este caso.
 
 **Nota:** no es posible combinar en un mismo list box columnas de tipo array (fuente de datos array) y columnas de tipo campo o variable (fuente de datos selección).
 
@@ -71,7 +71,7 @@ Puede utilizar este comando para insertar columnas en los list box de forma din�
   
 Para ello, **LISTBOX INSERT COLUMN** acepta un puntero **Nil (->\[\])** como valor valor para los parámetros *variableCol* (list box de tipo array únicamente) *varEncabezado* y *variablePie*. En este caso, cuando se ejecuta el comando, 4D crea las variables requeridas dinámicamente (para más información, consulte la sección ).  
   
-Note que las variables de encabezado y de pie de página siempre se crean con un tipo específico (entero largo y texto, respectivamente). Por el contrario, las variables de columna no se pueden escribir durante la creación porque los list boxes aceptan diferentes tipos de arrays para estas variables (array texto, array entero, etc.). Esto significa que usted tiene que definir el tipo de array manualmente (ver el ejemplo 3). Es importante realizar esta escribiendo antes de llamar a comandos como [LISTBOX INSERT ROWS](listbox-insert-rows.md) para insertar nuevos elementos en el array. O bien, puede utilizar [APPEND TO ARRAY](append-to-array.md) tanto para definir el tipo del array como para la inserción de elementos.
+Note que las variables de encabezado y de pie de página siempre se crean con un tipo específico (entero largo y texto, respectivamente). Por el contrario, las variables de columna no se pueden escribir durante la creación porque los list boxes aceptan diferentes tipos de arrays para estas variables (array texto, array entero, etc.). Esto significa que usted tiene que definir el tipo de array manualmente (ver el ejemplo 3). Es importante realizar esta escribiendo antes de llamar a comandos como [LISTBOX INSERT ROWS](../commands/listbox-insert-rows) para insertar nuevos elementos en el array. O bien, puede utilizar [APPEND TO ARRAY](../commands/append-to-array) tanto para definir el tipo del array como para la inserción de elementos.
 
 ## Ejemplo 1 
 
@@ -112,8 +112,8 @@ Usted desea insertar una columna de forma dinámica en un array de tipo list box
 
 ## Ver también 
 
-[LISTBOX DELETE COLUMN](listbox-delete-column.md)  
-[LISTBOX INSERT COLUMN FORMULA](listbox-insert-column-formula.md)  
+[LISTBOX DELETE COLUMN](../commands/listbox-delete-column)  
+[LISTBOX INSERT COLUMN FORMULA](../commands/listbox-insert-column-formula)  
 
 ## Propiedades
 

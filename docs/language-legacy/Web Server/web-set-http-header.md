@@ -1,4 +1,4 @@
----
+﻿---
 id: web-set-http-header
 title: WEB SET HTTP HEADER
 slug: /commands/web-set-http-header
@@ -78,7 +78,7 @@ If you do not specify a state, it will automatically be HTTP/1.0 200 OK. By defa
 
 ## See also 
 
-[WEB GET HTTP HEADER](web-get-http-header.md)  
+[WEB GET HTTP HEADER](../commands/web-get-http-header)  
 
 ## Properties
 

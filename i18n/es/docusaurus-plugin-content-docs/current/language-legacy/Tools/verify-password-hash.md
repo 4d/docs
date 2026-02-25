@@ -1,4 +1,4 @@
----
+﻿---
 id: verify-password-hash
 title: Verify password hash
 slug: /commands/verify-password-hash
@@ -31,11 +31,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Verify password hash.Summary-->La función **Verify password hash** verifica que el hash dado coincida con la *contrasena* dada.<!-- END REF-->
 
-Esta función compara la *contrasena* con un *hash* generado por la función [Generate password hash](generate-password-hash.md).
+Esta función compara la *contrasena* con un *hash* generado por la función [Generate password hash](../commands/generate-password-hash).
 
 ### Gestión de errores 
 
-Se pueden devolver los errores siguientes. Puede revisar un error con los comandos [Last errors](../commands/last-errors)  y [ON ERR CALL](on-err-call.md).  
+Se pueden devolver los errores siguientes. Puede revisar un error con los comandos [Last errors](../commands/last-errors)  y [ON ERR CALL](../commands/on-err-call).  
 
 | **Número** | **Mensaje**                                           |
 | ---------- | ----------------------------------------------------- |
@@ -46,7 +46,7 @@ Se pueden devolver los errores siguientes. Puede revisar un error con los comand
 
 ## Ejemplo 
 
-Este ejemplo verifica un hash de contraseña creado previamente por [Generate password hash](generate-password-hash.md) y almacenado en una tabla \[Users\] con una contraseña introducida recientemente:
+Este ejemplo verifica un hash de contraseña creado previamente por [Generate password hash](../commands/generate-password-hash) y almacenado en una tabla \[Users\] con una contraseña introducida recientemente:
 
 ```4d
  var $password : Text
@@ -64,7 +64,7 @@ Este ejemplo verifica un hash de contraseña creado previamente por [Generate pa
 ## Ver también 
 
   
-[Generate password hash](generate-password-hash.md)  
+[Generate password hash](../commands/generate-password-hash)  
 
 ## Propiedades
 

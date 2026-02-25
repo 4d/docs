@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-scroll-position
 title: OBJECT SET SCROLL POSITION
 slug: /commands/object-set-scroll-position
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.OBJECT SET SCROLL POSITION.Summary-->**OBJECT SET SCROLL POSITION**コマンドを使用して、 ([MODIFY SELECTION](modify-selection.md)または[DISPLAY SELECTION](display-selection.md)コマンドを用いて表示される) リストフォーム、サブフォーム、階層リストなどの行、あるいはリストボックスの列や行、そしてさらにピクチャのピクセルをスクロールすることができます。<!-- END REF--> 
+<!--REF #_command_.OBJECT SET SCROLL POSITION.Summary-->**OBJECT SET SCROLL POSITION**コマンドを使用して、 ([MODIFY SELECTION](../commands/modify-selection)または[DISPLAY SELECTION](../commands/display-selection)コマンドを用いて表示される) リストフォーム、サブフォーム、階層リストなどの行、あるいはリストボックスの列や行、そしてさらにピクチャのピクセルをスクロールすることができます。<!-- END REF--> 
 
 **注**: プログラムによるスクロールは、フォーム上でスクロールバーが隠されていても可能です。
 
@@ -61,7 +61,7 @@ displayed_sidebar: docs
 * このコマンドで表示された行は (リストが実際にスクロールされると)、リスト中の先頭に配置されます。行がリストの最後の行である場合、このオプションは効果を持ちません。
 * ピクチャーの場合、リクエストされた座標は、これらの座標点が既にオブジェクト内に表示されていた場合でも、リクエストされた座標がピクチャー変数の原点(0,0)に置かれます。
 
-**注**: [HIGHLIGHT RECORDS](highlight-records.md)コマンドはオプション引数 *\** を使用してスクロール管理を**OBJECT SET SCROLL POSITION**コマンドに委譲することができます。 
+**注**: [HIGHLIGHT RECORDS](../commands/highlight-records)コマンドはオプション引数 *\** を使用してスクロール管理を**OBJECT SET SCROLL POSITION**コマンドに委譲することができます。 
 
 ## 例題 1 
 
@@ -103,9 +103,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[HIGHLIGHT RECORDS](highlight-records.md)  
-[LISTBOX SELECT ROW](listbox-select-row.md)  
-[OBJECT GET SCROLL POSITION](object-get-scroll-position.md)  
+[HIGHLIGHT RECORDS](../commands/highlight-records)  
+[LISTBOX SELECT ROW](../commands/listbox-select-row)  
+[OBJECT GET SCROLL POSITION](../commands/object-get-scroll-position)  
 
 ## プロパティ
 

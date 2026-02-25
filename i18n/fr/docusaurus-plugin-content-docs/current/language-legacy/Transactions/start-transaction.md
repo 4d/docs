@@ -1,4 +1,4 @@
----
+﻿---
 id: start-transaction
 title: START TRANSACTION
 slug: /commands/start-transaction
@@ -33,11 +33,11 @@ A compter de la version 11 de 4D, vous pouvez imbriquer plusieurs transactions (
 
 ## Voir aussi 
 
-[CANCEL TRANSACTION](cancel-transaction.md)  
-[In transaction](in-transaction.md)  
-[Transaction level](transaction-level.md)  
+[CANCEL TRANSACTION](../commands/cancel-transaction)  
+[In transaction](../commands/in-transaction)  
+[Transaction level](../commands/transaction-level)  
 [Transactions](../../Develop-legacy/transactions.md)
-[VALIDATE TRANSACTION](validate-transaction.md)  
+[VALIDATE TRANSACTION](../commands/validate-transaction)  
 
 ## Propriétés
 

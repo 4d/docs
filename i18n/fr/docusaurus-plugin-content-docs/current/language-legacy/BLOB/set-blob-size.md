@@ -1,4 +1,4 @@
----
+﻿---
 id: set-blob-size
 title: SET BLOB SIZE
 slug: /commands/set-blob-size
@@ -39,7 +39,7 @@ Si vous souhaitez que les nouveaux octets réservés (s'il y en a) pour le BLOB 
 
 ## Gestion des erreurs 
 
-Si vous ne pouvez pas redimensionner le BLOB parce qu'il n'y a pas assez de mémoire, l'erreur –*108* est générée. Vous pouvez installer une méthode avec la commande [ON ERR CALL](on-err-call.md) pour interrompre la méthode lorsqu'une erreur survient.
+Si vous ne pouvez pas redimensionner le BLOB parce qu'il n'y a pas assez de mémoire, l'erreur –*108* est générée. Vous pouvez installer une méthode avec la commande [ON ERR CALL](../commands/on-err-call) pour interrompre la méthode lorsqu'une erreur survient.
 
 ## Exemple 1 
 
@@ -61,7 +61,7 @@ L'exemple suivant crée un BLOB de 16 Ko et remplit chaque octet avec la valeur 
 
 ## Voir aussi 
 
-[BLOB size](blob-size.md)  
+[BLOB size](../commands/blob-size)  
 
 ## Propriétés
 

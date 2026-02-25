@@ -1,4 +1,4 @@
----
+﻿---
 id: get-serial-port-mapping
 title: GET SERIAL PORT MAPPING
 slug: /commands/get-serial-port-mapping
@@ -60,7 +60,7 @@ Mac OS Xでは、USBシリアルアダプターの使用時に、OSがポート�
 
 ## 参照 
 
-[SET CHANNEL](set-channel.md)  
+[SET CHANNEL](../commands/set-channel)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: one-record-select
 title: ONE RECORD SELECT
 slug: /commands/one-record-select
@@ -21,16 +21,16 @@ displayed_sidebar: docs
 
 ## Note 
 
-A l'origine, cette commande était utile pour "replacer" dans la sélection courante un enregistrement qui avait été empilé puis dépilé de la pile d'enregistrements pendant que la sélection de la table était modifiée. Cependant, puisque la commande [SET QUERY DESTINATION](set-query-destination.md) vous permet d'effectuer une recherche sans changer la sélection ni l'enregistrement courants de la table, vous n'avez plus besoin d'empiler et de dépiler un enregistrement courant pour effectuer une recherche sur sa table. Par conséquent, **ONE RECORD SELECT** est moins utile, à moins que vous ne souhaitiez expressément, pour une autre raison, réduire la sélection d'une table à l'enregistrement courant.
+A l'origine, cette commande était utile pour "replacer" dans la sélection courante un enregistrement qui avait été empilé puis dépilé de la pile d'enregistrements pendant que la sélection de la table était modifiée. Cependant, puisque la commande [SET QUERY DESTINATION](../commands/set-query-destination) vous permet d'effectuer une recherche sans changer la sélection ni l'enregistrement courants de la table, vous n'avez plus besoin d'empiler et de dépiler un enregistrement courant pour effectuer une recherche sur sa table. Par conséquent, **ONE RECORD SELECT** est moins utile, à moins que vous ne souhaitiez expressément, pour une autre raison, réduire la sélection d'une table à l'enregistrement courant.
 
 **Attention :** N'oubliez pas qu'un numéro d'enregistrement peut être réutilisé si l'enregistrement est supprimé et qu'un autre enregistrement est créé (voir *A propos des numéros d'enregistrements*).
 
 ## Voir aussi 
 
-[CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
+[CREATE SELECTION FROM ARRAY](../commands/create-selection-from-array)  
 *Présentation des Sélections Temporaires*  
-[SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
-[SELECTION TO ARRAY](selection-to-array.md)  
+[SELECTION RANGE TO ARRAY](../commands/selection-range-to-array)  
+[SELECTION TO ARRAY](../commands/selection-to-array)  
 
 ## Propriétés
 

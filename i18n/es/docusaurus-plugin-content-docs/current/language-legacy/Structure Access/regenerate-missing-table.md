@@ -1,4 +1,4 @@
----
+﻿---
 id: regenerate-missing-table
 title: REGENERATE MISSING TABLE
 slug: /commands/regenerate-missing-table
@@ -70,7 +70,7 @@ Este método regenera todas las tablas faltantes eventualmente presentes en la b
 
 ## Ver también 
 
-[GET MISSING TABLE NAMES](get-missing-table-names.md)  
+[GET MISSING TABLE NAMES](../commands/get-missing-table-names)  
 
 ## Propiedades
 

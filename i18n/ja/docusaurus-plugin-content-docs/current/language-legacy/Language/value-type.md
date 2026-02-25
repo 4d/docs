@@ -1,4 +1,4 @@
----
+﻿---
 id: value-type
 title: Value type
 slug: /commands/value-type
@@ -64,7 +64,7 @@ displayed_sidebar: docs
  $vType:=Value type($o.value) //$vType=Is real
 ```
 
-**Value type** コマンドは有効な4D式(フィールド、変数、引数を含む)であれば適用可能です。この場合、[Type](type.md) コマンドとは異なり、**Value type** は*expression* 引数に渡された式の結果の値の*内部的*な型を返し、*宣言された*型を返すわけではありません。4Dランゲージは内部的に値の型を変換することがあるため、**Value type** の結果は宣言された型とは異なることがあります。例えば、4Dは内部的に"*整数64bit*"型のフィールド値を変換します。このため、以下の例のような結果が出ることがあります:
+**Value type** コマンドは有効な4D式(フィールド、変数、引数を含む)であれば適用可能です。この場合、[Type](../commands/type) コマンドとは異なり、**Value type** は*expression* 引数に渡された式の結果の値の*内部的*な型を返し、*宣言された*型を返すわけではありません。4Dランゲージは内部的に値の型を変換することがあるため、**Value type** の結果は宣言された型とは異なることがあります。例えば、4Dは内部的に"*整数64bit*"型のフィールド値を変換します。このため、以下の例のような結果が出ることがあります:
 
 ```4d
  $vType1:=Type([myTable]Long64field) //$vType=Is integer 64 bits(64-bit整数型)
@@ -73,7 +73,7 @@ displayed_sidebar: docs
 
 他には配列(配列の評価はカレントの要素のインデックスを返します)やコンパイルモードなどが結果の差異に関係します。以下の表はこの差異をまとめたものです:
 
-| **宣言された型**       | [Type](type.md)**結果** | **Value type の結果(インタープリタ版)** | **Value type の結果(コンパイル版)** | **補足**                               |
+| **宣言された型**       | [Type](../commands/type)**結果** | **Value type の結果(インタープリタ版)** | **Value type の結果(コンパイル版)** | **補足**                               |
 | ---------------- | --------------------- | ---------------------------- | -------------------------- | ------------------------------------ |
 | ARRAY TEXT($t;1) | Text array            | Is real                      | Is longint                 | $t には数値であるカレントの要素インデックスが格納されます       |
 | *文字* field       | Is alpha field        | Is text                      | Is text                    | 4Dは内部的には全ての文字列をテキストとして管理します          |
@@ -87,7 +87,7 @@ displayed_sidebar: docs
  If(Value type($myValue)=Is longint)|(Value type($myValue)=Is real)
 ```
 
-**互換性に関する注意:** 4D v16 R6 以降、日付はオブジェクトプロパティ内では日付型あるいはISO日付フォーマットのテキストとして保存されています。詳細な情報については、[SET DATABASE PARAMETER](set-database-parameter.md) コマンドのDates inside objects セレクターを参照してください。
+**互換性に関する注意:** 4D v16 R6 以降、日付はオブジェクトプロパティ内では日付型あるいはISO日付フォーマットのテキストとして保存されています。詳細な情報については、[SET DATABASE PARAMETER](../commands/set-database-parameter) コマンドのDates inside objects セレクターを参照してください。
 
 ## 例題 1 
 
@@ -123,8 +123,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OB Get type](ob-get-type.md)  
-[Type](type.md)  
+[OB Get type](../commands/ob-get-type)  
+[Type](../commands/type)  
 
 ## プロパティ
 

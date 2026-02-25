@@ -1,4 +1,4 @@
----
+﻿---
 id: use-named-selection
 title: USE NAMED SELECTION
 slug: /commands/use-named-selection
@@ -28,9 +28,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[CLEAR NAMED SELECTION](clear-named-selection.md)  
-[COPY NAMED SELECTION](copy-named-selection.md)  
-[CUT NAMED SELECTION](cut-named-selection.md)  
+[CLEAR NAMED SELECTION](../commands/clear-named-selection)  
+[COPY NAMED SELECTION](../commands/copy-named-selection)  
+[CUT NAMED SELECTION](../commands/cut-named-selection)  
 
 ## プロパティ
 

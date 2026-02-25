@@ -1,4 +1,4 @@
----
+﻿---
 id: end-sql
 title: End SQL
 slug: /commands/end-sql
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Begin SQL](begin-sql.md)  
+[Begin SQL](../commands/begin-sql)  
 
 ## プロパティ
 

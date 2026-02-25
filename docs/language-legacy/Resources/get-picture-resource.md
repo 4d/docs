@@ -1,4 +1,4 @@
----
+﻿---
 id: get-picture-resource
 title: GET PICTURE RESOURCE
 slug: /commands/get-picture-resource
@@ -39,7 +39,7 @@ If you pass a valid resource file reference number in *resFile*, the resource is
 
 ## Example 
 
-See example for the [RESOURCE LIST](resource-list.md) command.
+See example for the [RESOURCE LIST](../commands/resource-list) command.
 
 ## System variables and sets 
 
@@ -47,11 +47,11 @@ If the resource is found, OK is set to 1\. Otherwise, it is set to 0 (zero).
 
 ## Error management 
 
-If there is not enough memory to load the picture, an error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md).
+If there is not enough memory to load the picture, an error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](../commands/on-err-call).
 
 ## See also 
 
-[ON ERR CALL](on-err-call.md)  
+[ON ERR CALL](../commands/on-err-call)  
 
 ## Properties
 

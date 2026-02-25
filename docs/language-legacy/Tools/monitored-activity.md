@@ -1,4 +1,4 @@
----
+﻿---
 id: monitored-activity
 title: Monitored activity
 slug: /commands/monitored-activity
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Monitored activity.Summary-->The **Monitored activity** command returns a collection of objects describing operations recorded according to the specifications set by the [START MONITORING ACTIVITY](start-monitoring-activity.md) command.<!-- END REF--> It can be called and executed on 4D remote, 4D Server, and 4D standalone applications (if *source* isn't from network activity).
+<!--REF #_command_.Monitored activity.Summary-->The **Monitored activity** command returns a collection of objects describing operations recorded according to the specifications set by the [START MONITORING ACTIVITY](../commands/start-monitoring-activity) command.<!-- END REF--> It can be called and executed on 4D remote, 4D Server, and 4D standalone applications (if *source* isn't from network activity).
 
 The objects in the returned collection have the following properties: 
 
@@ -29,7 +29,7 @@ The objects in the returned collection have the following properties:
 
 ### activityKind = Activity language (1) 
 
-**Note:** The *activityData* object uses the information defined by the [SET DATABASE PARAMETER](set-database-parameter.md) command for the *4DDebugLog.txt (standard)* (if any), otherwise it uses a default mode. Starting log recording during execution of the **Monitored activity** command will thus impact the returned results.
+**Note:** The *activityData* object uses the information defined by the [SET DATABASE PARAMETER](../commands/set-database-parameter) command for the *4DDebugLog.txt (standard)* (if any), otherwise it uses a default mode. Starting log recording during execution of the **Monitored activity** command will thus impact the returned results.
 
 *activityData* object:
 
@@ -68,8 +68,8 @@ The following additional properties are returned in the *activityData* object ac
 
 **Notes:** 
 
-* If the debug logs have been stopped on the 4D Server [Administration window](../../ServerWindow/overview.md), **Monitored activity** will return nothing. If the logs are restarted on the server or via the [START MONITORING ACTIVITY](start-monitoring-activity.md) command with Activity network, **Monitored activity** will resume returning network activity information.
-* The *activityData* object uses the information defined by the [SET DATABASE PARAMETER](set-database-parameter.md) command for the *4DRequestsLog.txt* (if any), otherwise it uses a default mode. Starting log recording during execution of the **Monitored activity** command will thus impact the returned results.
+* If the debug logs have been stopped on the 4D Server [Administration window](../../ServerWindow/overview.md), **Monitored activity** will return nothing. If the logs are restarted on the server or via the [START MONITORING ACTIVITY](../commands/start-monitoring-activity) command with Activity network, **Monitored activity** will resume returning network activity information.
+* The *activityData* object uses the information defined by the [SET DATABASE PARAMETER](../commands/set-database-parameter) command for the *4DRequestsLog.txt* (if any), otherwise it uses a default mode. Starting log recording during execution of the **Monitored activity** command will thus impact the returned results.
 
 *activityData* object:
 
@@ -80,7 +80,7 @@ The following additional properties are returned in the *activityData* object ac
 | systemID         | text     | System ID                                                                                                                                                                                                                                                                                           |
 | component        | text     | Component signature (*e.g.*, 4SQLS or dbmg)                                                                                                                                                                                                                                                         |
 | processInfoIndex | longint  | Corresponds to the "index" field in *4DRequestsLog\_ProcessInfo.txt* log, and permits linking a request to a process                                                                                                                                                                                |
-| request          | longint  | Request ID for c/s messages, SQL requests, or [LOG EVENT](log-event.md) messages                                                                                                                                                                                                                    |
+| request          | longint  | Request ID for c/s messages, SQL requests, or [LOG EVENT](../commands/log-event) messages                                                                                                                                                                                                                    |
 | bytesIn          | longint  | Number of bytes received                                                                                                                                                                                                                                                                            |
 | bytesOut         | longint  | Number of bytes sent                                                                                                                                                                                                                                                                                |
 | execDuration     | longint  | Depending on where generated:server\_duration . <br/>OR,exec\_duration when generated on the server --Time taken in microseconds for the server to process the request.                                                                                                                     |
@@ -91,7 +91,7 @@ The following additional properties are returned in the *activityData* object ac
 
 ### activityKind = Activity operations (4) 
 
-**Note:** The *activityData* object is similar to the one returned by the [ACTIVITY SNAPSHOT](activity-snapshot.md) command, except that it only thresholded and finished operations are returned.
+**Note:** The *activityData* object is similar to the one returned by the [ACTIVITY SNAPSHOT](../commands/activity-snapshot) command, except that it only thresholded and finished operations are returned.
 
 *activityData* object:
 
@@ -114,8 +114,8 @@ The following additional properties are returned in the *activityData* object ac
 | |  client\_uid         | text       | (c/s operations only) UUID of the client machine that launched the database operation                                                                                              |                                                                                                                                                                        |
 | |  is\_remote\_context | longint    | (c/s operations only) Indicates if operation was launced by the server via a stored procedure (value=0) or by a client (value=1)                                                   |                                                                                                                                                                        |
 | |  user4d\_id          | longint    | ID of the 4D user on the client machine                                                                                                                                            |                                                                                                                                                                        |
-| |  user4d\_alias       | text       | Alias set for the 4D user. See [SET USER ALIAS](set-user-alias.md)                                                                                                                 |                                                                                                                                                                        |
-| |  client\_version     | text       | Encoded string value that expresses the version number of the 4D environment returned by the [Application version](application-version.md) command                                 |                                                                                                                                                                        |
+| |  user4d\_alias       | text       | Alias set for the 4D user. See [SET USER ALIAS](../commands/set-user-alias)                                                                                                                 |                                                                                                                                                                        |
+| |  client\_version     | text       | Encoded string value that expresses the version number of the 4D environment returned by the [Application version](../commands/application-version) command                                 |                                                                                                                                                                        |
 | dbOperationDetails     |            | object                                                                                                                                                                             | Information about operation calls to the database engine                                                                                                               |
 | |  table               | text       | Name of the table in the operation                                                                                                                                                 |                                                                                                                                                                        |
 | |  field               | text       | Name of the table field in the operation                                                                                                                                           |                                                                                                                                                                        |
@@ -135,12 +135,12 @@ The following additional properties are returned in the *activityData* object ac
 
 ## Example 
 
-See example for **[START MONITORING ACTIVITY](start-monitoring-activity.md)**
+See example for **[START MONITORING ACTIVITY](../commands/start-monitoring-activity)**
 
 ## See also 
 
-[START MONITORING ACTIVITY](start-monitoring-activity.md)  
-[STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  
+[START MONITORING ACTIVITY](../commands/start-monitoring-activity)  
+[STOP MONITORING ACTIVITY](../commands/stop-monitoring-activity)  
 
 ## Properties
 

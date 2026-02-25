@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-insert-column
 title: QR INSERT COLUMN
 slug: /commands/qr-insert-column
@@ -49,7 +49,7 @@ The following statement inserts (or creates) a first column in a Quick Report ar
 
 ## See also 
 
-[QR DELETE COLUMN](qr-delete-column.md)  
+[QR DELETE COLUMN](../commands/qr-delete-column)  
 
 ## Properties
 

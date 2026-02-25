@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-font-style
 title: OBJECT Get font style
 slug: /commands/object-get-font-style
@@ -44,7 +44,7 @@ You can compare the value returned with the value of one or more of the followin
 
 ## See also 
 
-[OBJECT SET FONT STYLE](object-set-font-style.md)  
+[OBJECT SET FONT STYLE](../commands/object-set-font-style)  
 
 ## Properties
 

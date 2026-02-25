@@ -1,4 +1,4 @@
----
+﻿---
 id: frontmost-window
 title: Frontmost window
 slug: /commands/frontmost-window
@@ -32,8 +32,8 @@ displayed_sidebar: docs
 
 ## See also 
 
-[Frontmost process](frontmost-process.md)  
-[Next window](next-window.md)  
+[Frontmost process](../commands/frontmost-process)  
+[Next window](../commands/next-window)  
 
 ## Properties
 

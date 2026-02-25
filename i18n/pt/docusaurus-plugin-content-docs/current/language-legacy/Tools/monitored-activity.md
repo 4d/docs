@@ -1,4 +1,4 @@
----
+﻿---
 id: monitored-activity
 title: Monitored activity
 slug: /commands/monitored-activity
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.Monitored activity.Summary-->O comando **Monitored activity** devolve uma coleção de objetos que descrevem operações registradas de acordo com as especificações definidas pelo comando [START MONITORING ACTIVITY](start-monitoring-activity.md).<!-- END REF--> Pode ser chamado e executado em 4D remoto, 4D Server e aplicações 4D autonomas (se *fonte* não vier da atividade de rede).
+<!--REF #_command_.Monitored activity.Summary-->O comando **Monitored activity** devolve uma coleção de objetos que descrevem operações registradas de acordo com as especificações definidas pelo comando [START MONITORING ACTIVITY](../commands/start-monitoring-activity).<!-- END REF--> Pode ser chamado e executado em 4D remoto, 4D Server e aplicações 4D autonomas (se *fonte* não vier da atividade de rede).
 
 Os objetos na coleção devolvida têm as propriedades abaixo:
 
@@ -29,7 +29,7 @@ Os objetos na coleção devolvida têm as propriedades abaixo:
 
 ### activityKind = Activity language (1) 
 
-**Nota:** o objeto *activityData* utiliza a informação definida pelo comando [SET DATABASE PARAMETER](set-database-parameter.md) para *4DDebugLog.txt (standard)* (se corresponde), do contrário, utiliza um modo predeterminado. Iniciar a gravação de historial durante a execução do comando **Monitored activity** afetará os resultados devolvidos.
+**Nota:** o objeto *activityData* utiliza a informação definida pelo comando [SET DATABASE PARAMETER](../commands/set-database-parameter) para *4DDebugLog.txt (standard)* (se corresponde), do contrário, utiliza um modo predeterminado. Iniciar a gravação de historial durante a execução do comando **Monitored activity** afetará os resultados devolvidos.
 
 objeto *activityData*:
 
@@ -66,8 +66,8 @@ As propriedades abaixo adicionais são devolvidas no objeto *activityData* segun
 
 ### activityKind = Activity network (2) 
 
-* se os históricos de depuração foram parados no servidor 4D [Administration window](../../ServerWindow/overview.md), **Monitored activity** não devolverá nada. Se os históricos forem reiniciados no servidor ou mediante o comando [START MONITORING ACTIVITY](start-monitoring-activity.md) com Activity network, **Monitored activity** reiniciará a informação de atividad de rede.
-* o objeto *activityData* utiliza a informação definida pelo comando [SET DATABASE PARAMETER](set-database-parameter.md) para *4DRequestsLog.txt* (se corresponde), do contrário, utiliza um modo pré-determinado . Iniciar a gravação de historial durante a execução do comando **Monitored activity** impactará os resultados devolvidosobjeto *activityData*:
+* se os históricos de depuração foram parados no servidor 4D [Administration window](../../ServerWindow/overview.md), **Monitored activity** não devolverá nada. Se os históricos forem reiniciados no servidor ou mediante o comando [START MONITORING ACTIVITY](../commands/start-monitoring-activity) com Activity network, **Monitored activity** reiniciará a informação de atividad de rede.
+* o objeto *activityData* utiliza a informação definida pelo comando [SET DATABASE PARAMETER](../commands/set-database-parameter) para *4DRequestsLog.txt* (se corresponde), do contrário, utiliza um modo pré-determinado . Iniciar a gravação de historial durante a execução do comando **Monitored activity** impactará os resultados devolvidosobjeto *activityData*:
 
 | **P** **ropriedade <br/>** | **Tipo <br/>** | **Descrição<br/>**                                                                                                                                                                                                                                                                                                                             |
 | ---------------------------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -76,7 +76,7 @@ As propriedades abaixo adicionais são devolvidas no objeto *activityData* segun
 | systemID                           | texto                  | ID de sistema                                                                                                                                                                                                                                                                                                                                          |
 | component                          | texto                  | Assinatura do componente (p. ex., 4SQLS ou dbmg)                                                                                                                                                                                                                                                                                                       |
 | processInfoIndex                   | entero largo           | Corresponde ao campo "index" em histórico *4DRequestsLog\_ProcessInfo.txt*, e permite vincular uma solicitação a um processo                                                                                                                                                                                                                           |
-| request                            | entero largo           | ID de solicitação para mensagens c/s, petições SQL ou mensagens [LOG EVENT](log-event.md)                                                                                                                                                                                                                                                              |
+| request                            | entero largo           | ID de solicitação para mensagens c/s, petições SQL ou mensagens [LOG EVENT](../commands/log-event)                                                                                                                                                                                                                                                              |
 | bytesIn                            | entero largo           | Número de bytes recebidos                                                                                                                                                                                                                                                                                                                              |
 | bytesOut                           | entero largo           | Número de bytes enviados                                                                                                                                                                                                                                                                                                                               |
 | execDuration                       | entero largo           | Dependendo de onde seja gerado:server\_duration . <br/>OR,exec\_duration quando se gera no servidor --tempo que demora em microssegundos para que o servidor processe a solicitação. <br/><br/><br/><br/>                                                                                                      |
@@ -87,7 +87,7 @@ As propriedades abaixo adicionais são devolvidas no objeto *activityData* segun
 
 ### activityKind = Activity operations (4) 
 
-**Nota:** o objeto *activityData* é parecido com aquele retornado pelo comando [ACTIVITY SNAPSHOT](activity-snapshot.md), exceto que apenas operações terminadas são retornadas.
+**Nota:** o objeto *activityData* é parecido com aquele retornado pelo comando [ACTIVITY SNAPSHOT](../commands/activity-snapshot), exceto que apenas operações terminadas são retornadas.
 
 *activityData* object:
 
@@ -110,8 +110,8 @@ As propriedades abaixo adicionais são devolvidas no objeto *activityData* segun
 | |  client\_uid                | text       | (operações c/s somente) UUID da máquina cliente que lança a operação de banco de dados                                                                                                  |                                                                                                                                                                           |
 | |  is\_remote\_context        | longint    | (operações c/s somente) Indica se a operação foi lançada pelo servidor via um processo armazenado (valor=0) ou por um cliente (valor=1)                                                 |                                                                                                                                                                           |
 | |  user4d\_id                 | longint    | ID do usuário 4D na máquina cliente                                                                                                                                                     |                                                                                                                                                                           |
-| |  user4d\_alias              | text       | Alias/apelido estabelecido pelo usuário 4D. Veja [SET USER ALIAS](set-user-alias.md)                                                                                                    |                                                                                                                                                                           |
-| |  client\_version            | text       | Valor de string codificada que expressa o número da versão do ambiente 4D retornado pelo comando [Application version](application-version.md)                                          |                                                                                                                                                                           |
+| |  user4d\_alias              | text       | Alias/apelido estabelecido pelo usuário 4D. Veja [SET USER ALIAS](../commands/set-user-alias)                                                                                                    |                                                                                                                                                                           |
+| |  client\_version            | text       | Valor de string codificada que expressa o número da versão do ambiente 4D retornado pelo comando [Application version](../commands/application-version)                                          |                                                                                                                                                                           |
 | dbOperationDetails            |            | object                                                                                                                                                                                  | Informação sobre as chamadas da operação para o motor de banco de dados                                                                                                   |
 | |  table                      | text       | Nome da tabela na operação                                                                                                                                                              |                                                                                                                                                                           |
 | |  field                      | text       | Nome do campo tabela na operação                                                                                                                                                        |                                                                                                                                                                           |
@@ -131,12 +131,12 @@ As propriedades abaixo adicionais são devolvidas no objeto *activityData* segun
 
 ## Exemplo 
 
-Ver exemplos para **[START MONITORING ACTIVITY](start-monitoring-activity.md)**
+Ver exemplos para **[START MONITORING ACTIVITY](../commands/start-monitoring-activity)**
 
 ## Ver também 
 
-[START MONITORING ACTIVITY](start-monitoring-activity.md)  
-[STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  
+[START MONITORING ACTIVITY](../commands/start-monitoring-activity)  
+[STOP MONITORING ACTIVITY](../commands/stop-monitoring-activity)  
 
 ## Propriedades
 

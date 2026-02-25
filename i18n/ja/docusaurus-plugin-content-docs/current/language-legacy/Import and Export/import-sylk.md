@@ -1,4 +1,4 @@
----
+﻿---
 id: import-sylk
 title: IMPORT SYLK
 slug: /commands/import-sylk
@@ -28,9 +28,9 @@ displayed_sidebar: docs
 
 *document*にはボリューム名やフォルダ名等のパスを含めることができます。空の文字列を渡すと、標準のファイルを開くダイアログボックスが表示されます。ユーザがこのダイアログボックスをキャンセルすると、データ読み込み処理は中止され、システム変数OKには0がセットされます。
 
-データの読み込み処理中には進捗インジケータが表示されます。インジケータの中止ボタンをクリックすると、処理を中断します。しかし既に読み込まれ たレコードは取り除かれません。読み込みが正常に完了すると、システム変数OKに1がセットされ、エラーが発生、または処理が中断された場合には0がセッ トされます。インジケータを表示したくない場合には、 [MESSAGES OFF](messages-off.md) コマンドを使用してください。
+データの読み込み処理中には進捗インジケータが表示されます。インジケータの中止ボタンをクリックすると、処理を中断します。しかし既に読み込まれ たレコードは取り除かれません。読み込みが正常に完了すると、システム変数OKに1がセットされ、エラーが発生、または処理が中断された場合には0がセッ トされます。インジケータを表示したくない場合には、 [MESSAGES OFF](../commands/messages-off) コマンドを使用してください。
 
-コマンドはデフォルトでUTF-8文字セットを使用します。SYLKフォーマットドキュメントは一般的にISO-8859-1文字セットを使用するため、適切な文字セットを指定するために [USE CHARACTER SET](use-character-set.md) コマンドを使用する必要があるでしょう。
+コマンドはデフォルトでUTF-8文字セットを使用します。SYLKフォーマットドキュメントは一般的にISO-8859-1文字セットを使用するため、適切な文字セットを指定するために [USE CHARACTER SET](../commands/use-character-set) コマンドを使用する必要があるでしょう。
 
 IMPORT SYLK を使用する際、デフォルトのフィールド区切り文字はタブ文字 (コード 9) です。デフォルトのレコード区切り文字はキャリッジリターン (コード 13) です。これらの値は2つの*システム変数*、 FldDelimit と RecDelimit に新しい値を代入して変更できます。ユーザはこれらのデフォルト値をデザインモードの読み込みダイアログで変更できます。テキストフィールドにはタブやキャリッジリターンを含めることができるので、これらの値を区切り文字として使用する際は注意が必要です。
 
@@ -49,10 +49,10 @@ IMPORT SYLK を使用する際、デフォルトのフィールド区切り文�
 
 ## 参照 
 
-[EXPORT SYLK](export-sylk.md)  
-[IMPORT DIF](import-dif.md)  
-[IMPORT TEXT](import-text.md)  
-[USE CHARACTER SET](use-character-set.md)  
+[EXPORT SYLK](../commands/export-sylk)  
+[IMPORT DIF](../commands/import-dif)  
+[IMPORT TEXT](../commands/import-text)  
+[USE CHARACTER SET](../commands/use-character-set)  
 
 ## プロパティ
 

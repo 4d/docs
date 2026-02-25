@@ -1,4 +1,4 @@
----
+﻿---
 id: blob-to-list
 title: BLOB to list
 slug: /commands/blob-to-list
@@ -32,13 +32,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BLOB to list.Summary-->**BLOB to list** crée une nouvelle liste hiérarchique avec les données stockées dans le BLOB *blob* à l'offset d'octet (à partir de zéro) spécifié par *offset* et retourne un numéro de référence de liste hiérarchique pour cette nouvelle liste.<!-- END REF-->
 
-Les données présentes dans le BLOB doivent être compatibles avec la commande : généralement, vous utilisez des BLOBs préalablement remplis avec la commande [LIST TO BLOB](list-to-blob.md).
+Les données présentes dans le BLOB doivent être compatibles avec la commande : généralement, vous utilisez des BLOBs préalablement remplis avec la commande [LIST TO BLOB](../commands/list-to-blob).
 
 Si vous ne passez pas le paramètre optionnel *offset*, les valeurs de la liste sont lues à partir du début du BLOB. Si vous gérez un BLOB dans lequel plusieurs variables ou listes ont été stockées, vous devez passer le paramètre *offset* ainsi qu'une variable numérique. Avant l'appel, fixez cette variable numérique à l'offset désiré. Après l'appel, cette même variable numérique retourne l'offset de la variable suivante stockée dans le BLOB.
 
 Après l'appel, la variable OK prend la valeur 1 si la liste hiérarchique a été correctement créée. Si l'opération ne peut pas être effectuée à cause, par exemple, d'un manque de mémoire, la variable OK prend la valeur 0.
 
-**Note pour l'indépendance de plate-forme :** **BLOB to list** et [LIST TO BLOB](list-to-blob.md) utilisent un format interne 4D pour gérer les listes stockées dans des BLOBs. L'avantage est que vous n'avez pas besoin de vous soucier de la conversion des octets ("byte swapping") entre les plates-formes lorsque vous utilisez ces deux commandes. Autrement dit, avec ces commandes, un BLOB créé sous Windows peut être réutilisé sous Mac OS et vice-versa.
+**Note pour l'indépendance de plate-forme :** **BLOB to list** et [LIST TO BLOB](../commands/list-to-blob) utilisent un format interne 4D pour gérer les listes stockées dans des BLOBs. L'avantage est que vous n'avez pas besoin de vous soucier de la conversion des octets ("byte swapping") entre les plates-formes lorsque vous utilisez ces deux commandes. Autrement dit, avec ces commandes, un BLOB créé sous Windows peut être réutilisé sous Mac OS et vice-versa.
 
 ## Exemple 
 
@@ -70,7 +70,7 @@ La variable OK prend la valeur 1 si la liste a été correctement créée, sinon
 
 ## Voir aussi 
 
-[LIST TO BLOB](list-to-blob.md)  
+[LIST TO BLOB](../commands/list-to-blob)  
 
 ## Propriétés
 

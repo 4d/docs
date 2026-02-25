@@ -1,4 +1,4 @@
----
+﻿---
 id: is-table-number-valid
 title: Is table number valid
 slug: /commands/is-table-number-valid
@@ -34,8 +34,8 @@ Este comando permite detectar as eventuais eliminações de tabelas, que criam q
 
 ## Ver também 
 
-[Last table number](last-table-number.md)  
-[Is field number valid](is-field-number-valid.md)  
+[Last table number](../commands/last-table-number)  
+[Is field number valid](../commands/is-field-number-valid)  
 
 ## Propriedades
 

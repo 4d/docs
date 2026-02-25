@@ -1,4 +1,4 @@
----
+﻿---
 id: start-sql-server
 title: START SQL SERVER
 slug: /commands/start-sql-server
@@ -36,7 +36,7 @@ SQLサーバが正しく起動されるとOKシステム変数は1に、そう�
 
 ## 参照 
 
-[STOP SQL SERVER](stop-sql-server.md)  
+[STOP SQL SERVER](../commands/stop-sql-server)  
 
 ## プロパティ
 

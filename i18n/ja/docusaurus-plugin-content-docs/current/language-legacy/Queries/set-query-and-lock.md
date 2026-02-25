@@ -1,4 +1,4 @@
----
+﻿---
 id: set-query-and-lock
 title: SET QUERY AND LOCK
 slug: /commands/set-query-and-lock
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 カレントトランザクション中のすべてのテーブルのレコードがロックされます。
 
-**SET QUERY AND LOCK** (True) 文が実行されると、([QUERY](query.md)のような)クエリコマンドは、すでにロックされたレコードを見つけると、特定の動作を選択します:
+**SET QUERY AND LOCK** (True) 文が実行されると、([QUERY](../commands/query)のような)クエリコマンドは、すでにロックされたレコードを見つけると、特定の動作を選択します:
 
 * クエリが停止され、システム変数OKは0に設定されます,
 * カレントセレクションはクリアされます,
@@ -47,18 +47,18 @@ displayed_sidebar: docs
 
 **SET QUERY AND LOCK** は、下記のクエリコマンドの動作を変更します:
 
-* [QUERY](query.md)
-* [QUERY SELECTION](query-selection.md)
-* [QUERY BY EXAMPLE](query-by-example.md)
-* [QUERY BY FORMULA](query-by-formula.md)
-* [QUERY BY SQL](query-by-sql.md)
-* [QUERY SELECTION BY FORMULA](query-selection-by-formula.md)
-* [QUERY SELECTION WITH ARRAY](query-selection-with-array.md)
-* [QUERY WITH ARRAY](query-with-array.md)
-* [QUERY BY ATTRIBUTE](query-by-attribute.md)
-* [QUERY SELECTION BY ATTRIBUTE](query-selection-by-attribute.md)
+* [QUERY](../commands/query)
+* [QUERY SELECTION](../commands/query-selection)
+* [QUERY BY EXAMPLE](../commands/query-by-example)
+* [QUERY BY FORMULA](../commands/query-by-formula)
+* [QUERY BY SQL](../commands/query-by-sql)
+* [QUERY SELECTION BY FORMULA](../commands/query-selection-by-formula)
+* [QUERY SELECTION WITH ARRAY](../commands/query-selection-with-array)
+* [QUERY WITH ARRAY](../commands/query-with-array)
+* [QUERY BY ATTRIBUTE](../commands/query-by-attribute)
+* [QUERY SELECTION BY ATTRIBUTE](../commands/query-selection-by-attribute)
 
-これに対して**SET QUERY AND LOCK** は、[ALL RECORDS](all-records.md) や[RELATE MANY](relate-many.md) 等、テーブルのカレントセレクションを変更する他のコマンドには影響を与えません。
+これに対して**SET QUERY AND LOCK** は、[ALL RECORDS](../commands/all-records) や[RELATE MANY](../commands/relate-many) 等、テーブルのカレントセレクションを変更する他のコマンドには影響を与えません。
 
 ## 例題 
 
@@ -80,7 +80,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[QUERY](query.md)  
+[QUERY](../commands/query)  
 
 ## プロパティ
 

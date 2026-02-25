@@ -1,4 +1,4 @@
----
+﻿---
 id: sax-open-xml-element
 title: SAX OPEN XML ELEMENT
 slug: /commands/sax-open-xml-element
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 The added element is “open” in the document (the end tag is not added). To close an element created using this command, you must either:
 
-* Use the [SAX CLOSE XML ELEMENT](sax-close-xml-element.md) command, or
+* Use the [SAX CLOSE XML ELEMENT](../commands/sax-close-xml-element) command, or
 * Close the XML document. In this case, 4D will automatically add the necessary XML end tags.
 
 In *tag*, pass the name of the element to be created. This name may only contain letters, numbers and the characters “.”, “-“,”\_” and “:”. If an invalid character is passed in *tag*, an error will be generated. 
@@ -62,8 +62,8 @@ If an invalid character is passed in *tag*, an error is generated.
 
 ## See also 
 
-[SAX CLOSE XML ELEMENT](sax-close-xml-element.md)  
-[SAX OPEN XML ELEMENT ARRAYS](sax-open-xml-element-arrays.md)  
+[SAX CLOSE XML ELEMENT](../commands/sax-close-xml-element)  
+[SAX OPEN XML ELEMENT ARRAYS](../commands/sax-open-xml-element-arrays)  
 
 ## Properties
 

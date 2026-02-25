@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-format
 title: OBJECT SET FORMAT
 slug: /commands/object-set-format
@@ -52,7 +52,7 @@ Pour formater des champs booléens :
 
 Pour formater des champs ou des variables de type Date ou Heure, vous pouvez utiliser :
 
-* soit un **format prédéfini** disponible via des constantes du thème *Formats d'affichage des dates* ou *Formats d'affichage des heures* (valeur longint). Dans ce cas, il faut passer [Char](char.md)(n) dans *formatAffich*, où *n* est la constante :  
+* soit un **format prédéfini** disponible via des constantes du thème *Formats d'affichage des dates* ou *Formats d'affichage des heures* (valeur longint). Dans ce cas, il faut passer [Char](../commands/char)(n) dans *formatAffich*, où *n* est la constante :  
     
 Dates :  
 
@@ -107,7 +107,7 @@ Voir également l'exemple 2.
 
 ### Images 
 
-Pour formater des champs ou variables de type Image, passez [Char](char.md)(n) dans *formatAffich*, où *n* peut être une des constantes prédéfinies suivantes (thème *Formats d'affichage des images*) :  
+Pour formater des champs ou variables de type Image, passez [Char](../commands/char)(n) dans *formatAffich*, où *n* peut être une des constantes prédéfinies suivantes (thème *Formats d'affichage des images*) :  
 
 | Constante                   | Type        | Valeur |
 | --------------------------- | ----------- | ------ |
@@ -373,9 +373,9 @@ Passage d'un thermomètre en mode "Barber shop" :
 ## Voir aussi 
 
   
-[GET SYSTEM FORMAT](get-system-format.md)  
-[OBJECT Get format](object-get-format.md)  
-[OBJECT SET FILTER](object-set-filter.md)  
+[GET SYSTEM FORMAT](../commands/get-system-format)  
+[OBJECT Get format](../commands/object-get-format)  
+[OBJECT SET FILTER](../commands/object-set-filter)  
 
 ## Propriétés
 

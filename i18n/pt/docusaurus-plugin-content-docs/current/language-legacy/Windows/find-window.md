@@ -1,4 +1,4 @@
----
+﻿---
 id: find-window
 title: Find window
 slug: /commands/find-window
@@ -39,8 +39,8 @@ O parâmetro *parteJanela*, devolve 3 se toca a janela, caso contrário 0\. (**N
 
 ## Ver também 
 
-[Frontmost window](frontmost-window.md)  
-[Next window](next-window.md)  
+[Frontmost window](../commands/frontmost-window)  
+[Next window](../commands/next-window)  
 
 ## Propriedades
 

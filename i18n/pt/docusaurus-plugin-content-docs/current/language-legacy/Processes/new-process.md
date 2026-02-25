@@ -1,4 +1,4 @@
----
+﻿---
 id: new-process
 title: New process
 slug: /commands/new-process
@@ -85,7 +85,7 @@ Vejamos o seguinte método de projeto:
  Until(OK=0)
 ```
 
-Se associa este método de projeto a um comando de menu criado no Editor de barras de menu e lhe atribuí a propriedade **Iniciar um novo processo**, 4D automaticamente iniciará um novo processo no momento da execução do método. A instrução [SET MENU BAR](set-menu-bar.md)(1) associa esta barra de menus ao novo processo. Em ausência de janelas (que poderia ser aberta O \[#cmd id="153"/\]), a chamada a [ADD RECORD](add-record.md) abrirá automaticamente uma.
+Se associa este método de projeto a um comando de menu criado no Editor de barras de menu e lhe atribuí a propriedade **Iniciar um novo processo**, 4D automaticamente iniciará um novo processo no momento da execução do método. A instrução [SET MENU BAR](../commands/set-menu-bar)(1) associa esta barra de menus ao novo processo. Em ausência de janelas (que poderia ser aberta O \[#cmd id="153"/\]), a chamada a [ADD RECORD](../commands/add-record) abrirá automaticamente uma.
 
 Para poder iniciar o processo Adicionar clientes fazendo clique em um botão situado no painel de controle personalizado, pode escrever: 
 
@@ -117,7 +117,7 @@ No editor de barras de menus, pode substituir ADICIONAR CLIENTES pelo método IN
 
 ## Ver também 
 
-[Execute on server](execute-on-server.md)  
+[Execute on server](../commands/execute-on-server)  
 *Processos*  
 *Processos 4D Preemptivos*  
 

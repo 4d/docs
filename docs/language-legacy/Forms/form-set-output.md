@@ -1,4 +1,4 @@
----
+﻿---
 id: form-set-output
 title: FORM SET OUTPUT
 slug: /commands/form-set-output
@@ -52,7 +52,7 @@ The optional *userForm* parameter lets you specify a user form (coming from *for
 
 For more information about user forms, refer to the *Overview of user forms* section. 
 
-Output forms are used by three groups of commands. One group displays a list of records on screen, another group generates reports, and the third group exports data. The [DISPLAY SELECTION](display-selection.md) and [MODIFY SELECTION](modify-selection.md) commands display a list of records using an output form. You use the output form when creating reports with the [PRINT LABEL](print-label.md) and [PRINT SELECTION](print-selection.md) commands. Each of the export commands ([EXPORT DIF](export-dif.md), [EXPORT SYLK](export-sylk.md) and [EXPORT TEXT](export-text.md)) also uses the output form.
+Output forms are used by three groups of commands. One group displays a list of records on screen, another group generates reports, and the third group exports data. The [DISPLAY SELECTION](../commands/display-selection) and [MODIFY SELECTION](../commands/modify-selection) commands display a list of records using an output form. You use the output form when creating reports with the [PRINT LABEL](../commands/print-label) and [PRINT SELECTION](../commands/print-selection) commands. Each of the export commands ([EXPORT DIF](../commands/export-dif), [EXPORT SYLK](../commands/export-sylk) and [EXPORT TEXT](../commands/export-text)) also uses the output form.
 
 ## Example 1 
 
@@ -76,14 +76,14 @@ The following example uses the path to a .json form to print the records in an e
 
 ## See also 
 
-[DISPLAY SELECTION](display-selection.md)  
-[EXPORT DIF](export-dif.md)  
-[EXPORT SYLK](export-sylk.md)  
-[EXPORT TEXT](export-text.md)  
-[FORM SET INPUT](form-set-input.md)  
-[MODIFY SELECTION](modify-selection.md)  
-[PRINT LABEL](print-label.md)  
-[PRINT SELECTION](print-selection.md)  
+[DISPLAY SELECTION](../commands/display-selection)  
+[EXPORT DIF](../commands/export-dif)  
+[EXPORT SYLK](../commands/export-sylk)  
+[EXPORT TEXT](../commands/export-text)  
+[FORM SET INPUT](../commands/form-set-input)  
+[MODIFY SELECTION](../commands/modify-selection)  
+[PRINT LABEL](../commands/print-label)  
+[PRINT SELECTION](../commands/print-selection)  
 
 ## Properties
 

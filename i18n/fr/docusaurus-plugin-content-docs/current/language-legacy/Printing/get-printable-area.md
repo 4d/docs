@@ -1,4 +1,4 @@
----
+﻿---
 id: get-printable-area
 title: GET PRINTABLE AREA
 slug: /commands/get-printable-area
@@ -32,11 +32,11 @@ displayed_sidebar: docs
 
 Les tailles retournées ne varient pas d’une page à l’autre (après un saut de page par exemple). 
 
-Associée à la commande [Get printed height](get-printed-height.md), cette commande est utile pour connaître le nombre de pixels disponibles pour l’impression, ou pour centrer un objet dans la page. 
+Associée à la commande [Get printed height](../commands/get-printed-height), cette commande est utile pour connaître le nombre de pixels disponibles pour l’impression, ou pour centrer un objet dans la page. 
 
 Pour connaître la taille totale de la page, vous pouvez :
 
-* soit ajouter aux valeurs retournées par cette commande les marges fournies par la commande [GET PRINTABLE MARGIN](get-printable-margin.md).
+* soit ajouter aux valeurs retournées par cette commande les marges fournies par la commande [GET PRINTABLE MARGIN](../commands/get-printable-margin).
 * soit utiliser la syntaxe suivante :
 
 ```4d
@@ -44,11 +44,11 @@ Pour connaître la taille totale de la page, vous pouvez :
  GET PRINTABLE AREA(hPapier;lPapier) // Taille du papier
 ```
 
-**Note :** Pour plus d'informations sur la gestion des marges d'impression dans 4D, reportez-vous à la description de la commande [GET PRINTABLE MARGIN](get-printable-margin.md). 
+**Note :** Pour plus d'informations sur la gestion des marges d'impression dans 4D, reportez-vous à la description de la commande [GET PRINTABLE MARGIN](../commands/get-printable-margin). 
 
 ## Voir aussi 
 
-[GET PRINTABLE MARGIN](get-printable-margin.md)  
+[GET PRINTABLE MARGIN](../commands/get-printable-margin)  
 [Print form](../commands/print-form)  
 
 ## Propriétés

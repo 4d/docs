@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-scroll-position
 title: OBJECT SET SCROLL POSITION
 slug: /commands/object-set-scroll-position
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.OBJECT SET SCROLL POSITION.Summary-->El comando OBJECT SET SCROLL POSITION permite desplazar el contenido de varios tipos de objetos: líneas de un subformulario, de un formulario listado mostrado utilizando los comandos [MODIFY SELECTION](modify-selection.md), [DISPLAY SELECTION](display-selection.md)  o de una lista jerárquica, líneas y columnas de un list box o incluso los píxeles de una imagen.<!-- END REF-->  
+<!--REF #_command_.OBJECT SET SCROLL POSITION.Summary-->El comando OBJECT SET SCROLL POSITION permite desplazar el contenido de varios tipos de objetos: líneas de un subformulario, de un formulario listado mostrado utilizando los comandos [MODIFY SELECTION](../commands/modify-selection), [DISPLAY SELECTION](../commands/display-selection)  o de una lista jerárquica, líneas y columnas de un list box o incluso los píxeles de una imagen.<!-- END REF-->  
   
 **Nota:** el desplazamiento por programación de un objeto continúa siendo posible incluso si las barras de desplazamiento están ocultas en el formulario.
 
@@ -59,7 +59,7 @@ Si pasa el segundo parámetro opcional *\** *:*
 * La línea se vuelve visible por el comando (si la lista se desplazó) se ubicará en la primera posición de la lista. Si la línea se ubica al final de la lista, esta opción no tiene efecto.
 * En el contexto de una imagen, las coordenadas demandadas serán posicionadas en el origen de la variable imagen (0,0), incluso si las coordenadas ya son visibles en el objeto.
 
-**Nota:** el comando [HIGHLIGHT RECORDS](highlight-records.md) tiene un parámetro opcional *\** que permite delegar la gestión de desplazamiento en los formularios al comando OBJECT SET SCROLL POSITION . 
+**Nota:** el comando [HIGHLIGHT RECORDS](../commands/highlight-records) tiene un parámetro opcional *\** que permite delegar la gestión de desplazamiento en los formularios al comando OBJECT SET SCROLL POSITION . 
 
 ## Ejemplo 1 
 
@@ -101,9 +101,9 @@ Asegúrese de no omitir el segundo parámetro *\** en este caso, de lo contrario
 
 ## Ver también 
 
-[HIGHLIGHT RECORDS](highlight-records.md)  
-[LISTBOX SELECT ROW](listbox-select-row.md)  
-[OBJECT GET SCROLL POSITION](object-get-scroll-position.md)  
+[HIGHLIGHT RECORDS](../commands/highlight-records)  
+[LISTBOX SELECT ROW](../commands/listbox-select-row)  
+[OBJECT GET SCROLL POSITION](../commands/object-get-scroll-position)  
 
 ## Propiedades
 

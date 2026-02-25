@@ -1,4 +1,4 @@
----
+﻿---
 id: picture-to-blob
 title: PICTURE TO BLOB
 slug: /commands/picture-to-blob
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 ピクチャタイプの4Dフィールドや変数を*picture*引数に渡します。*pictureBlob*引数には、変換後のピクチャを納めるBLOB変数やフィールドを渡します。
 
 *codec* 引数には変換フォーマットを指定する文字列を渡します。   
-Codecは拡張子 (例 “.gif”), または Mimeタイプ (例 “image/jpeg”) です。利用可能なCodecは [PICTURE CODEC LIST](picture-codec-list.md) コマンドで取得できます。
+Codecは拡張子 (例 “.gif”), または Mimeタイプ (例 “image/jpeg”) です。利用可能なCodecは [PICTURE CODEC LIST](../commands/picture-codec-list) コマンドで取得できます。
 
 このコマンドを実行すると、*picturBlob*には指定したフォーマットのピクチャが納められます。
 
@@ -59,9 +59,9 @@ Codecは拡張子 (例 “.gif”), または Mimeタイプ (例 “image/jpeg�
 
 ## 参照 
 
-[BLOB TO PICTURE](blob-to-picture.md)  
-[PICTURE CODEC LIST](picture-codec-list.md)  
-[WRITE PICTURE FILE](write-picture-file.md)  
+[BLOB TO PICTURE](../commands/blob-to-picture)  
+[PICTURE CODEC LIST](../commands/picture-codec-list)  
+[WRITE PICTURE FILE](../commands/write-picture-file)  
 
 ## プロパティ
 

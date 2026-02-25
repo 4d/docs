@@ -1,4 +1,4 @@
----
+﻿---
 id: validate-password
 title: Validate password
 slug: /commands/validate-password
@@ -39,7 +39,7 @@ The optional *digest* parameter indicates whether the *password* parameter conta
 * When you pass **True**, this indicates that *password* contains a hashed password (digest mode),
 * When you pass **False** or omit this parameter, this indicates that *password* contains a plain-text password.
 
-This parameter is particularly helpful when using authentication database methods, in particular the [On REST Authentication database method](on-rest-authentication-database-method.md). 
+This parameter is particularly helpful when using authentication database methods, in particular the [On REST Authentication database method](../commands/on-rest-authentication-database-method). 
 
 The command execution is now delayed to prevent flooding (brute force attack), in other words, attempts of multiple user name/password combinations. As a result, after the 4th call to this command, it is run only after a period of 10 seconds. This delay is throughout the entire work station. 
 
@@ -63,7 +63,7 @@ This example checks whether the password of the user “Hardy” is “Laurel”
 
 ## Example 2 
 
-In the [On REST Authentication database method](on-rest-authentication-database-method.md), you want to test a connection request (using the 4D users of the database). You can just write:
+In the [On REST Authentication database method](../commands/on-rest-authentication-database-method), you want to test a connection request (using the 4D users of the database). You can just write:
 
 ```4d
  $0:=Validate password($1;$2;$3)
@@ -71,9 +71,9 @@ In the [On REST Authentication database method](on-rest-authentication-database-
 
 ## See also 
 
-[GET USER PROPERTIES](get-user-properties.md)  
-[Set user properties](set-user-properties.md)  
-[WEB Validate digest](web-validate-digest.md)  
+[GET USER PROPERTIES](../commands/get-user-properties)  
+[Set user properties](../commands/set-user-properties)  
+[WEB Validate digest](../commands/web-validate-digest)  
 
 ## Properties
 

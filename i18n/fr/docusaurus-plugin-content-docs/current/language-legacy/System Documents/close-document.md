@@ -1,4 +1,4 @@
----
+﻿---
 id: close-document
 title: CLOSE DOCUMENT
 slug: /commands/close-document
@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.CLOSE DOCUMENT.Summary-->**CLOSE DOCUMENT** ferme le document spécifié par *docRef*.<!-- END REF-->
 
-Fermer un document est le seul moyen de s'assurer que les données écrites dans le fichier sont sauvegardées. Vous devez fermer tous les documents ouverts par les commandes [Open document](open-document.md), [Create document](create-document.md) et [Append document](append-document.md).
+Fermer un document est le seul moyen de s'assurer que les données écrites dans le fichier sont sauvegardées. Vous devez fermer tous les documents ouverts par les commandes [Open document](../commands/open-document), [Create document](../commands/create-document) et [Append document](../commands/append-document).
 
 ## Exemple 
 
@@ -36,9 +36,9 @@ L'exemple suivant permet à l'utilisateur de créer un nouveau document, écrit 
 
 ## Voir aussi 
 
-[Append document](append-document.md)  
-[Create document](create-document.md)  
-[Open document](open-document.md)  
+[Append document](../commands/append-document)  
+[Create document](../commands/create-document)  
+[Open document](../commands/open-document)  
 
 ## Propriétés
 

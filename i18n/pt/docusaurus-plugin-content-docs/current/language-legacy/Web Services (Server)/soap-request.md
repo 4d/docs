@@ -1,4 +1,4 @@
----
+﻿---
 id: soap-request
 title: SOAP request
 slug: /commands/soap-request
@@ -34,7 +34,7 @@ Este comando pode ser utilizado por razões de segurança no *On Web Authenticat
 
 ## Ver também 
 
-[SOAP DECLARATION](soap-declaration.md)  
+[SOAP DECLARATION](../commands/soap-declaration)  
 
 ## Propriedades
 

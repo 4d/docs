@@ -1,4 +1,4 @@
----
+﻿---
 id: read-picture-file
 title: READ PICTURE FILE
 slug: /commands/read-picture-file
@@ -42,7 +42,7 @@ Pase en *imagen* la variable o el campo imagen que deba recibir la imagen leída
 
 **Nota:** el formato interno de la imagen se almacena dentro de la variable o campo 4D. 
 
-Si pasa el parámetro opcional *\**, el comando aceptará todo tipo de archivo. Esto significa que puede trabajar con imágenes sin necesariamente disponer de los codecs adecuados (ver la descripción del comando [BLOB TO PICTURE](blob-to-picture.md)).
+Si pasa el parámetro opcional *\**, el comando aceptará todo tipo de archivo. Esto significa que puede trabajar con imágenes sin necesariamente disponer de los codecs adecuados (ver la descripción del comando [BLOB TO PICTURE](../commands/blob-to-picture)).
 
 #### Variables y conjuntos del sistema 
 
@@ -50,10 +50,10 @@ Si la ejecución del comando es correcta, la variable sistema Document contiene 
 
 #### Ver también 
 
-[BLOB TO PICTURE](blob-to-picture.md)  
+[BLOB TO PICTURE](../commands/blob-to-picture)  
 *Imágenes*  
-[PICTURE CODEC LIST](picture-codec-list.md)  
-[WRITE PICTURE FILE](write-picture-file.md)  
+[PICTURE CODEC LIST](../commands/picture-codec-list)  
+[WRITE PICTURE FILE](../commands/write-picture-file)  
 
 #### Propiedades
 

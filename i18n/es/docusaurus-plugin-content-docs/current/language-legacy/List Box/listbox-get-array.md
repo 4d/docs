@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-array
 title: LISTBOX Get array
 slug: /commands/listbox-get-array
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 El comando **LISTBOX Get array** devuelve un puntero al array *tipoArray* del list box o de la columna de list box designada por los parámetros *objeto* y *\** .
 
-Los arrays de estilo, de color, de color de fondo o de control de líneas pueden estar asociados a los list box de tipo de array o (excepto el array de control de líneas) a las columnas de list box array usando la lista de propiedades en modo *Diseño* o el comando [LISTBOX SET ARRAY](listbox-set-array.md).
+Los arrays de estilo, de color, de color de fondo o de control de líneas pueden estar asociados a los list box de tipo de array o (excepto el array de control de líneas) a las columnas de list box array usando la lista de propiedades en modo *Diseño* o el comando [LISTBOX SET ARRAY](../commands/listbox-set-array).
 
 Si pasa el parámetro opcional *\**, indica que el parámetro *objeto* es un nombre de objeto (cadena). Si no se pasa este parámetro, indica que el parámetro *objeto* es una variable. En este caso, se pasa una referencia de variable en lugar de una cadena. Puede designar un list box o una columna de list box como parámetro *objeto*.
 
@@ -52,9 +52,9 @@ Pase en *tipoArray*, el tipo de array de propiedad a obtener. Puede utilizar una
 
 El comando devuelve uno de los siguientes valores:
 
-* [Is nil pointer](is-nil-pointer.md) si ningún array de la propiedad solicitada está asociado a la columna o al list box.
+* [Is nil pointer](../commands/is-nil-pointer) si ningún array de la propiedad solicitada está asociado a la columna o al list box.
 * un puntero al array de la propiedad solicitada, definido por el usuario.
-* un puntero al array de la propiedad solicitada, definido dinámicamente cuando se llama al comando [LISTBOX SET ROW COLOR](listbox-set-row-color.md) o [LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md)
+* un puntero al array de la propiedad solicitada, definido dinámicamente cuando se llama al comando [LISTBOX SET ROW COLOR](../commands/listbox-set-row-color) o [LISTBOX SET ROW FONT STYLE](../commands/listbox-set-row-font-style)
 
 ## Ejemplo 
 
@@ -72,8 +72,8 @@ Ejemplos típicos de uso:
 
 ## Ver también 
 
-[LISTBOX GET ARRAYS](listbox-get-arrays.md)  
-[LISTBOX SET ARRAY](listbox-set-array.md)  
+[LISTBOX GET ARRAYS](../commands/listbox-get-arrays)  
+[LISTBOX SET ARRAY](../commands/listbox-set-array)  
 
 ## Propiedades
 

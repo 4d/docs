@@ -1,4 +1,4 @@
----
+﻿---
 id: find-in-field
 title: Find in field
 slug: /commands/find-in-field
@@ -35,7 +35,7 @@ If no records are found, **Find in field** returns -1\.
 
 After calling this command, *value* contains the value found. This feature allows you to execute searches using the wildcard character (“@”) on Alpha fields and then retrieve the value found. 
 
-**Note:** Due to this principle, you cannot use a *parameter* ($1, $2, etc.) in *value* because this would cause malfunctions in compiled mode. Similarly, if you pass a field in the *value* parameter, keep in mind that its value will be reassigned if the query is successful (the command [Modified record](modified-record.md), in particular, will return True for the current record of the table).
+**Note:** Due to this principle, you cannot use a *parameter* ($1, $2, etc.) in *value* because this would cause malfunctions in compiled mode. Similarly, if you pass a field in the *value* parameter, keep in mind that its value will be reassigned if the query is successful (the command [Modified record](../commands/modified-record), in particular, will return True for the current record of the table).
 
 This command doesn’t modify the current selection or the current record.   
 It is fast and particularly useful to avoid creating double entries during data entry. 

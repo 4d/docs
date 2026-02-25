@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-get-data-source-list
 title: SQL GET DATA SOURCE LIST
 slug: /commands/sql-get-data-source-list
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL GET DATA SOURCE LIST.Summary-->The **SQL GET DATA SOURCE LIST** command returns, in the *sourceNamesArr* and *driversArr* arrays, the names and drivers of the *sourceType* type data sources defined in the ODBC manager of the operating system.<!-- END REF-->
 
-4D allows you to connect to an external ODBC data source directly via the language and execute SQL queries within a **Begin SQL/End SQL** tag structure. This works as follows: the SQL GET DATA SOURCE LIST command can be used to get a list of data sources present on the machine. The [SQL LOGIN](sql-login.md) command can then be used to designate the source to be used. You can then execute SQL queries using a **Begin SQL/End SQL** tag structure in the “current” source. To carry out queries using the 4D internal engine again, simply pass the [SQL LOGOUT](sql-logout.md) command. For more information about SQL commands in the Method editor, please refer to the *4D SQL Reference* manual.
+4D allows you to connect to an external ODBC data source directly via the language and execute SQL queries within a **Begin SQL/End SQL** tag structure. This works as follows: the SQL GET DATA SOURCE LIST command can be used to get a list of data sources present on the machine. The [SQL LOGIN](../commands/sql-login) command can then be used to designate the source to be used. You can then execute SQL queries using a **Begin SQL/End SQL** tag structure in the “current” source. To carry out queries using the 4D internal engine again, simply pass the [SQL LOGOUT](../commands/sql-logout) command. For more information about SQL commands in the Method editor, please refer to the *4D SQL Reference* manual.
 
 In *sourceType*, pass the type of data source that you want to retrieve. You can use one of the following constants, found in the “*SQL*” theme:
 
@@ -63,9 +63,9 @@ If the command is executed correctly, the OK system variable is set to 1\. Other
 
 ## See also 
 
-[SQL Get current data source](sql-get-current-data-source.md)  
-[SQL LOGIN](sql-login.md)  
-[SQL LOGOUT](sql-logout.md)  
+[SQL Get current data source](../commands/sql-get-current-data-source)  
+[SQL LOGIN](../commands/sql-login)  
+[SQL LOGOUT](../commands/sql-logout)  
 
 ## Properties
 

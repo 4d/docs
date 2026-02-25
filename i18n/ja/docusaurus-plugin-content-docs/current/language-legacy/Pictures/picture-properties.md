@@ -1,4 +1,4 @@
----
+﻿---
 id: picture-properties
 title: PICTURE PROPERTIES
 slug: /commands/picture-properties
@@ -41,7 +41,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Picture size](picture-size.md)  
+[Picture size](../commands/picture-size)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-shortcut
 title: OBJECT SET SHORTCUT
 slug: /commands/object-set-shortcut
@@ -100,7 +100,7 @@ Vous voulez associer un équivalent clavier différent en fonction de la langue 
 
 ## Voir aussi 
 
-[OBJECT GET SHORTCUT](object-get-shortcut.md)  
+[OBJECT GET SHORTCUT](../commands/object-get-shortcut)  
 
 ## Propriétés
 

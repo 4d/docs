@@ -1,4 +1,4 @@
----
+﻿---
 id: st-get-expression
 title: ST Get expression
 slug: /commands/st-get-expression
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 La commande retourne le libellé de l’expression tel qu’il a été inséré dans l’objet (par exemple "maméthode" ou "\[table1\]champ1"). La valeur courante de l’expression n’est pas retournée. 
 
-**Note :** Cette commande retourne des noms "réels" pour les champs et les tables, même si une structure "virtuelle" a été définie à l'aide des commandes [SET TABLE TITLES](set-table-titles.md) et [SET FIELD TITLES](set-field-titles.md).
+**Note :** Cette commande retourne des noms "réels" pour les champs et les tables, même si une structure "virtuelle" a été définie à l'aide des commandes [SET TABLE TITLES](../commands/set-table-titles) et [SET FIELD TITLES](../commands/set-field-titles).
 
 Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). A l’exécution, si l’objet a le focus, la commande retourne les informations de l’objet en cours d'édition ; si l’objet n'a pas le focus, la commande retourne les informations de la source de données de l’objet (variable ou champ).  
 Si vous omettez le paramètre *\**, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable. A l’exécution, la commande retourne les informations de la variable ou du champ.
@@ -102,7 +102,7 @@ Vous souhaitez exécuter une méthode 4D en réponse à un clic sur un lien util
 
 ## Voir aussi 
 
-[ST INSERT EXPRESSION](st-insert-expression.md)  
+[ST INSERT EXPRESSION](../commands/st-insert-expression)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: insert-menu-item
 title: INSERT MENU ITEM
 slug: /commands/insert-menu-item
@@ -42,15 +42,15 @@ displayed_sidebar: docs
 
 *\** 引数を渡さない場合、**INSERT MENU ITEM** は一度の呼び出しで1つまたは複数のメニュー項目の挿入ができます。
 
-**INSERT MENU ITEM** は、メニュー中の任意の場所に項目を挿入できるという点を除いて、[APPEND MENU ITEM](append-menu-item.md) のように動作します。[APPEND MENU ITEM](append-menu-item.md) は常にメニューの最後に項目を追加します。
+**INSERT MENU ITEM** は、メニュー中の任意の場所に項目を挿入できるという点を除いて、[APPEND MENU ITEM](../commands/append-menu-item) のように動作します。[APPEND MENU ITEM](../commands/append-menu-item) は常にメニューの最後に項目を追加します。
 
-*itemText*に渡す項目や*\** 引数の動作の定義については、[APPEND MENU ITEM](append-menu-item.md) コマンドの説明を参照してください。
+*itemText*に渡す項目や*\** 引数の動作の定義については、[APPEND MENU ITEM](../commands/append-menu-item) コマンドの説明を参照してください。
 
 **注:** *itemText* 引数では、ak standard action title 定数がサポートされています(4D v16 R3以降)。
 
-オプションの*subMenu* 引数を使用して、階層サブメニューとして追加するメニューを指定できます。[Create menu](create-menu.md) コマンド等を使用して作成されたメニュー参照 (MenuRef 型文字列) を渡さなければなりません。コマンドが2つ以上のメニュー項目を追加する場合、サブメニューは最初の項目に追加されます。
+オプションの*subMenu* 引数を使用して、階層サブメニューとして追加するメニューを指定できます。[Create menu](../commands/create-menu) コマンド等を使用して作成されたメニュー参照 (MenuRef 型文字列) を渡さなければなりません。コマンドが2つ以上のメニュー項目を追加する場合、サブメニューは最初の項目に追加されます。
 
-**重要**: 新しいメニュー項目には、メソッドやアクションが割り当てられていません。これらを[SET MENU ITEM PROPERTY](set-menu-item-property.md) や [SET MENU ITEM METHOD](set-menu-item-method.md) コマンドを使用して項目に割り当てるか、[Menu selected](menu-selected.md) コマンドを使ってフォームメソッドからこれを管理しなくてはなりません。
+**重要**: 新しいメニュー項目には、メソッドやアクションが割り当てられていません。これらを[SET MENU ITEM PROPERTY](../commands/set-menu-item-property) や [SET MENU ITEM METHOD](../commands/set-menu-item-method) コマンドを使用して項目に割り当てるか、[Menu selected](../commands/menu-selected) コマンドを使ってフォームメソッドからこれを管理しなくてはなりません。
 
 ## 例題 
 
@@ -66,8 +66,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[APPEND MENU ITEM](append-menu-item.md)  
-[SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
+[APPEND MENU ITEM](../commands/append-menu-item)  
+[SET MENU ITEM PARAMETER](../commands/set-menu-item-parameter)  
 
 ## プロパティ
 

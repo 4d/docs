@@ -1,4 +1,4 @@
----
+﻿---
 id: distinct-attribute-values
 title: DISTINCT ATTRIBUTE VALUES
 slug: /commands/distinct-attribute-values
@@ -41,7 +41,7 @@ After the call, the size of the array is equal to the number of distinct values 
 
 ### Using the .length virtual property 
 
-You can use the "length" virtual property with this command. It is automatically available for all attributes of the array type, and provides the size of the array, i.e. the number of elements it contains. This property is designed to be used in queries (see [QUERY BY ATTRIBUTE](query-by-attribute.md)). You can also use it with the **DISTINCT ATTRIBUTE VALUES** command to get the different array sizes for an attribute.
+You can use the "length" virtual property with this command. It is automatically available for all attributes of the array type, and provides the size of the array, i.e. the number of elements it contains. This property is designed to be used in queries (see [QUERY BY ATTRIBUTE](../commands/query-by-attribute)). You can also use it with the **DISTINCT ATTRIBUTE VALUES** command to get the different array sizes for an attribute.
 
 ## Example 
 
@@ -104,7 +104,7 @@ The *aLChildNum* array receives the following elements:
 ## See also 
 
   
-[DISTINCT ATTRIBUTE PATHS](distinct-attribute-paths.md)  
+[DISTINCT ATTRIBUTE PATHS](../commands/distinct-attribute-paths)  
 
 ## Properties
 

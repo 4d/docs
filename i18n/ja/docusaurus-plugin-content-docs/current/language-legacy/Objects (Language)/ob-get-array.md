@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-get-array
 title: OB GET ARRAY
 slug: /commands/ob-get-array
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 ## 例題 1 
 
-[OB SET ARRAY](ob-set-array.md) コマンドの例示で定義された以下のオブジェクトにおいて:
+[OB SET ARRAY](../commands/ob-set-array) コマンドの例示で定義された以下のオブジェクトにおいて:
 
 ![](../../assets/en/commands/pict1211436.en.png)
 
@@ -62,7 +62,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OB SET ARRAY](ob-set-array.md)  
+[OB SET ARRAY](../commands/ob-set-array)  
 *コレクションと4D配列間での型の変換*  
 
 ## プロパティ

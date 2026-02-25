@@ -1,4 +1,4 @@
----
+﻿---
 id: web-service-authenticate
 title: WEB SERVICE AUTHENTICATE
 slug: /commands/web-service-authenticate
@@ -36,9 +36,9 @@ displayed_sidebar: docs
 
 **Note :** Pour plus d’informations sur les méthodes d’authentification BASIC et DIGEST, reportez-vous à la section *Sécurité des connexions*.
 
-Passez dans les paramètres *nom* et *motDePasse* les informations d’identification requises (nom d’utilisateur et mot de passe). Ces informations seront encodées et ajoutées à la requête HTTP envoyée au Web Service via la commande [WEB SERVICE CALL](web-service-call.md). Il est donc nécessaire d’appeler la commande **WEB SERVICE AUTHENTICATE** avant la commande [WEB SERVICE CALL](web-service-call.md). 
+Passez dans les paramètres *nom* et *motDePasse* les informations d’identification requises (nom d’utilisateur et mot de passe). Ces informations seront encodées et ajoutées à la requête HTTP envoyée au Web Service via la commande [WEB SERVICE CALL](../commands/web-service-call). Il est donc nécessaire d’appeler la commande **WEB SERVICE AUTHENTICATE** avant la commande [WEB SERVICE CALL](../commands/web-service-call). 
 
-Le paramètre facultatif *méthodeAuth* permet d’indiquer la méthode d’authentification à utiliser pour le prochain appel de la commande [WEB SERVICE CALL](web-service-call.md). Vous pouvez passer l’une des valeurs suivantes :
+Le paramètre facultatif *méthodeAuth* permet d’indiquer la méthode d’authentification à utiliser pour le prochain appel de la commande [WEB SERVICE CALL](../commands/web-service-call). Vous pouvez passer l’une des valeurs suivantes :
 
 * 2 = utiliser la méthode d’authentification DIGEST
 * 1 = utiliser la méthode d’authentification BASIC
@@ -46,9 +46,9 @@ Le paramètre facultatif *méthodeAuth* permet d’indiquer la méthode d’auth
 
 Si vous passez le paramètre *\**, vous indiquez que les informations d’authentification s’adressent à un proxy HTTP. Ce paramétrage doit être mis en oeuvre lorsqu’il existe un proxy nécessitant une authentification entre le client du Web Service et le Web Service lui-même. Si le Web Service est lui-même authentifié, une double authentification est requise (cf. exemple). 
 
-Par défaut, les informations d’authentification sont réinitialisées après chaque requête. Vous devez donc utiliser la commande [WEB SERVICE AUTHENTICATE](web-service-authenticate.md) avant chaque [WEB SERVICE CALL](web-service-call.md). Il est toutefois possible de conserver temporairement ces informations à l'aide d'une option de la commande [WEB SERVICE SET OPTION](web-service-set-option.md). Dans ce cas, il n'est pas nécessaire d'exécuter la commande **WEB SERVICE AUTHENTICATE** avant chaque [WEB SERVICE CALL](web-service-call.md).
+Par défaut, les informations d’authentification sont réinitialisées après chaque requête. Vous devez donc utiliser la commande [WEB SERVICE AUTHENTICATE](../commands/web-service-authenticate) avant chaque [WEB SERVICE CALL](../commands/web-service-call). Il est toutefois possible de conserver temporairement ces informations à l'aide d'une option de la commande [WEB SERVICE SET OPTION](../commands/web-service-set-option). Dans ce cas, il n'est pas nécessaire d'exécuter la commande **WEB SERVICE AUTHENTICATE** avant chaque [WEB SERVICE CALL](../commands/web-service-call).
 
-En cas d’échec de l’authentification, le serveur SOAP retourne une erreur que vous pouvez identifier à l’aide de la commande [WEB SERVICE Get info](web-service-get-info.md).
+En cas d’échec de l’authentification, le serveur SOAP retourne une erreur que vous pouvez identifier à l’aide de la commande [WEB SERVICE Get info](../commands/web-service-get-info).
 
 ## Exemple 
 
@@ -64,8 +64,8 @@ Authentification auprès d’un Web Service situé derrière un proxy :
 
 ## Voir aussi 
 
-[WEB SERVICE CALL](web-service-call.md)  
-[WEB SERVICE Get info](web-service-get-info.md)  
+[WEB SERVICE CALL](../commands/web-service-call)  
+[WEB SERVICE Get info](../commands/web-service-get-info)  
 
 ## Propriétés
 

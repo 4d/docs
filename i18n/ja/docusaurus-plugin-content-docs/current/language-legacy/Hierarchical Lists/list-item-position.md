@@ -1,4 +1,4 @@
----
+﻿---
 id: list-item-position
 title: List item position
 slug: /commands/list-item-position
@@ -49,8 +49,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Count list items](count-list-items.md)  
-[SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
+[Count list items](../commands/count-list-items)  
+[SELECT LIST ITEMS BY REFERENCE](../commands/select-list-items-by-reference)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: open-url
 title: OPEN URL
 slug: /commands/open-url
@@ -95,7 +95,7 @@ Puede abrir un mismo archivo texto con diferentes aplicaciones utilizando el par
 
 ## Ver también 
 
-[LAUNCH EXTERNAL PROCESS](launch-external-process.md)  
+[LAUNCH EXTERNAL PROCESS](../commands/launch-external-process)  
 
 ## Propiedades
 

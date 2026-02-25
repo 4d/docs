@@ -1,4 +1,4 @@
----
+﻿---
 id: "false"
 title: "False"
 slug: /commands/false
@@ -29,8 +29,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Not](not.md)  
-[True](true.md)  
+[Not](../commands/not)  
+[True](../commands/true)  
 
 ## プロパティ
 

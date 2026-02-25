@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-cell-coordinates
 title: LISTBOX GET CELL COORDINATES
 slug: /commands/listbox-get-cell-coordinates
@@ -40,11 +40,11 @@ If you pass the optional *\** parameter, it indicates that the *object* paramete
 
 For consistency with the *OBJECT GET COORDINATES* command, the origin is the upper-left corner of the form which contains the cell. Also, the coordinates returned are theoretical; they take into account the scrolling state of the list box before any clipping occurs. As a result, the cell may be not visible (or only partially so) at its coordinates, and these coordinates may be outside the form limits (or even negative). To find out if the cell is displayed (and which part of it is visible) you need to compare the coordinates returned with the list box coordinates, while considering the following rules:
 
-* All cells are clipped to the coordinates of their parent list box (as returned by the [OBJECT GET COORDINATES](object-get-coordinates.md) command for the list box).
+* All cells are clipped to the coordinates of their parent list box (as returned by the [OBJECT GET COORDINATES](../commands/object-get-coordinates) command for the list box).
 * Header and footer sub-objects are displayed on top column content: when the coordinates of a cell intersect the coordinates of the header or footer rows, then the cell is not displayed at this intersection.
 * Elements of locked columns are displayed on top of elements of scrollable columns: when the coordinates of an element in a scrollable column intersect the coordinates of an element in a locked column, then it is not displayed at this intersection.
 
-For more information, please refer to the [OBJECT GET COORDINATES](object-get-coordinates.md) command description.
+For more information, please refer to the [OBJECT GET COORDINATES](../commands/object-get-coordinates) command description.
 
 ## Example 
 
@@ -63,8 +63,8 @@ You want to draw a red rectangle around the selected cell of a list box:
 
 ## See also 
 
-[LISTBOX GET CELL POSITION](listbox-get-cell-position.md)  
-[OBJECT GET COORDINATES](object-get-coordinates.md)  
+[LISTBOX GET CELL POSITION](../commands/listbox-get-cell-position)  
+[OBJECT GET COORDINATES](../commands/object-get-coordinates)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: spell-set-current-dictionary
 title: SPELL SET CURRENT DICTIONARY
 slug: /commands/spell-set-current-dictionary
@@ -38,11 +38,11 @@ displayed_sidebar: docs
 * Windows - アプリケーションの言語に対応するハンスペル辞書を使用します。
 * Mac - システムのスペルチェッカーを使用します。
 
-****Note:** Macにおいては、[SET DATABASE PARAMETER](set-database-parameter.md)コマンドを使用することでハンスペル辞書へと切り替えることもできます。詳細な情報に関しては、デザインリファレンスの*スペルチェック設定* のセクションを参照して下さい。
+****Note:** Macにおいては、[SET DATABASE PARAMETER](../commands/set-database-parameter)コマンドを使用することでハンスペル辞書へと切り替えることもできます。詳細な情報に関しては、デザインリファレンスの*スペルチェック設定* のセクションを参照して下さい。
 
 *dictionary* 引数を使用することによって、辞書を変更することが出来ます。以下のいづれかを渡す事ができます。
 
-* ハンスペルの辞書ID番号([SPELL GET DICTIONARY LIST](spell-get-dictionary-list.md) コマンドによって返されます)。
+* ハンスペルの辞書ID番号([SPELL GET DICTIONARY LIST](../commands/spell-get-dictionary-list) コマンドによって返されます)。
 * ハンスペルの辞書名(ハンスペル辞書のファイル名に対応、拡張子はあってもなくても可)。
 * a BCP 47、 ISO 639-1 または ISO 639-2 言語コード。例えば、BCP 47 言語コードでは、 "en-US" はアメリカ英語を意味し、 "en-GB" はイギリス英語を意味します。これらのコードは4D内部で対応するカレントの辞書へとリダイレクトされます(ハンスペルまたはMacシステム辞書)。
 
@@ -63,9 +63,9 @@ Hunspellフォルダーに配置した"fr-classic"辞書をロードする:
 
 ## 参照 
 
-[SPELL CHECKING](spell-checking.md)  
-[SPELL Get current dictionary](spell-get-current-dictionary.md)  
-[SPELL GET DICTIONARY LIST](spell-get-dictionary-list.md)  
+[SPELL CHECKING](../commands/spell-checking)  
+[SPELL Get current dictionary](../commands/spell-get-current-dictionary)  
+[SPELL GET DICTIONARY LIST](../commands/spell-get-dictionary-list)  
 
 ## プロパティ
 

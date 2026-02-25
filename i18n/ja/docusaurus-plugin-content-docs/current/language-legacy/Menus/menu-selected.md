@@ -1,4 +1,4 @@
----
+﻿---
 id: menu-selected
 title: Menu selected
 slug: /commands/menu-selected
@@ -53,7 +53,7 @@ displayed_sidebar: docs
 
 ## 例題 
 
-以下の例は[SET MENU ITEM MARK](set-menu-item-mark.md) コマンドのメニューとメニュー項目引数を求めるためにMenu selected を使用しています:
+以下の例は[SET MENU ITEM MARK](../commands/set-menu-item-mark) コマンドのメニューとメニュー項目引数を求めるためにMenu selected を使用しています:
 
 ```4d
  Case of

@@ -1,4 +1,4 @@
----
+﻿---
 id: temporary-folder
 title: Temporary folder
 slug: /commands/temporary-folder
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[System folder](system-folder.md)  
+[System folder](../commands/system-folder)  
 
 ## プロパティ
 

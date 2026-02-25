@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-subform-container-value
 title: OBJECT SET SUBFORM CONTAINER VALUE
 slug: /commands/object-set-subform-container-value
@@ -37,12 +37,12 @@ For more information on bound variables and form/subform interaction, see *Manag
 
 ## Example 
 
-A detailed example is available in the [OBJECT Get subform container value](object-get-subform-container-value.md) section.
+A detailed example is available in the [OBJECT Get subform container value](../commands/object-get-subform-container-value) section.
 
 ## See also 
 
 [Form](../commands/form)  
-[OBJECT Get subform container value](object-get-subform-container-value.md)  
+[OBJECT Get subform container value](../commands/object-get-subform-container-value)  
 
 ## Properties
 

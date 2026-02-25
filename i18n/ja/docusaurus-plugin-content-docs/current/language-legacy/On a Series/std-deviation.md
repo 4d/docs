@@ -1,4 +1,4 @@
----
+﻿---
 id: std-deviation
 title: Std deviation
 slug: /commands/std-deviation
@@ -52,7 +52,7 @@ displayed_sidebar: docs
  PRINT SELECTION([Table1])
 ```
 
-**注:** [BREAK LEVEL](break-level.md)コマンドの引数は、印刷するレポートのブレーク数と同じ数でなければなりません。ブレーク処理に関する詳細は*印刷*コマンドを参照してください。
+**注:** [BREAK LEVEL](../commands/break-level)コマンドの引数は、印刷するレポートのブレーク数と同じ数でなければなりません。ブレーク処理に関する詳細は*印刷*コマンドを参照してください。
 
 ## 例題 2 
 
@@ -67,10 +67,10 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Average](average.md)  
-[Sum](sum.md)  
-[Sum squares](sum-squares.md)  
-[Variance](variance.md)  
+[Average](../commands/average)  
+[Sum](../commands/sum)  
+[Sum squares](../commands/sum-squares)  
+[Variance](../commands/variance)  
 
 ## プロパティ
 

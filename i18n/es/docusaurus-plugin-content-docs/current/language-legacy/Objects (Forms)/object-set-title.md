@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-title
 title: OBJECT SET TITLE
 slug: /commands/object-set-title
@@ -50,7 +50,7 @@ No utilice retornos de carro en *titulo*.
 
 ## Ejemplo 1 
 
-El siguiente ejemplo es el método de objeto de un botón de búsqueda ubicado en el área de pie de página de un formulario de salida mostrado por el comando [MODIFY SELECTION](modify-selection.md). El método busca una tabla; dependiendo de los resultados de búsqueda, activa o desactiva un botón titulado *bEliminar* y cambia su título:
+El siguiente ejemplo es el método de objeto de un botón de búsqueda ubicado en el área de pie de página de un formulario de salida mostrado por el comando [MODIFY SELECTION](../commands/modify-selection). El método busca una tabla; dependiendo de los resultados de búsqueda, activa o desactiva un botón titulado *bEliminar* y cambia su título:
 
 ```4d
  QUERY([Personas];[Personas]Nombre=vNombre)
@@ -80,7 +80,7 @@ Usted quiere insertar los títulos en dos líneas:
 
 ## Ver también 
 
-[OBJECT Get title](object-get-title.md)  
+[OBJECT Get title](../commands/object-get-title)  
 
 ## Propiedades
 

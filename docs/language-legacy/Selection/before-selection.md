@@ -1,4 +1,4 @@
----
+﻿---
 id: before-selection
 title: Before selection
 slug: /commands/before-selection
@@ -18,11 +18,11 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Before selection.Summary-->**Before selection** returns TRUE when the current record pointer is before the first record of the current selection of *table*.<!-- END REF-->is commonly used to check whether or not [PREVIOUS RECORD](previous-record.md) has moved the current record pointer before the first record. If the current selection is empty, **Before selection** returns TRUE.
+<!--REF #_command_.Before selection.Summary-->**Before selection** returns TRUE when the current record pointer is before the first record of the current selection of *table*.<!-- END REF-->is commonly used to check whether or not [PREVIOUS RECORD](../commands/previous-record) has moved the current record pointer before the first record. If the current selection is empty, **Before selection** returns TRUE.
 
-To move the current record pointer back into the selection, use [FIRST RECORD](first-record.md), [LAST RECORD](last-record.md) or [GOTO SELECTED RECORD](goto-selected-record.md). [NEXT RECORD](next-record.md) does not move the pointer back into the selection.
+To move the current record pointer back into the selection, use [FIRST RECORD](../commands/first-record), [LAST RECORD](../commands/last-record) or [GOTO SELECTED RECORD](../commands/goto-selected-record). [NEXT RECORD](../commands/next-record) does not move the pointer back into the selection.
 
-**Before selection** also returns TRUE in the first header when a report is being printed with [PRINT SELECTION](print-selection.md) or from the Print menu. You can use the following code to test for the first header and print a special header for the first page:
+**Before selection** also returns TRUE in the first header when a report is being printed with [PRINT SELECTION](../commands/print-selection) or from the Print menu. You can use the following code to test for the first header and print a special header for the first page:
 
 ```4d
   // Method of a form being used as output form for a summary report
@@ -59,11 +59,11 @@ This form method is used during the printing of a report. It sets a variable, *v
 
 ## See also 
 
-[End selection](end-selection.md)  
-[FIRST RECORD](first-record.md)  
+[End selection](../commands/end-selection)  
+[FIRST RECORD](../commands/first-record)  
 [Form event code](../commands/form-event-code)  
-[PREVIOUS RECORD](previous-record.md)  
-[PRINT SELECTION](print-selection.md)  
+[PREVIOUS RECORD](../commands/previous-record)  
+[PRINT SELECTION](../commands/print-selection)  
 
 ## Properties
 

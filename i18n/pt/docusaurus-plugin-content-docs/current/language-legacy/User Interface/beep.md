@@ -1,4 +1,4 @@
----
+﻿---
 id: beep
 title: BEEP
 slug: /commands/beep
@@ -34,7 +34,7 @@ No exemplo abaixo, se uma pesquisa não encontrar nenhum registro, um bip é emi
 
 ## Ver também 
 
-[PLAY](play.md)  
+[PLAY](../commands/play)  
 
 ## Propriedades
 

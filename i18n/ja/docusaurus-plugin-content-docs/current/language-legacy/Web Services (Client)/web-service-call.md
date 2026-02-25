@@ -1,4 +1,4 @@
----
+﻿---
 id: web-service-call
 title: WEB SERVICE CALL
 slug: /commands/web-service-call
@@ -35,13 +35,13 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.WEB SERVICE CALL.Summary-->**WEB SERVICE CALL**コマンドは、HTTPリクエストを送ることでWebサービスを呼び出すために使用します。<!-- END REF-->このリクエストには、事前に[WEB SERVICE SET PARAMETER](web-service-set-parameter.md)コマンドを使用して作成したSOAPメッセージが含まれています。
+<!--REF #_command_.WEB SERVICE CALL.Summary-->**WEB SERVICE CALL**コマンドは、HTTPリクエストを送ることでWebサービスを呼び出すために使用します。<!-- END REF-->このリクエストには、事前に[WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter)コマンドを使用して作成したSOAPメッセージが含まれています。
 
-一連の[WEB SERVICE SET PARAMETER](web-service-set-parameter.md)コマンド呼び出しは、新しいリクエストを作成します。**WEB SERVICE CALL**コマンドの実行はまた、以前に呼び出したWebサービスの結果を消去し、新しい結果に置き換えます。
+一連の[WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter)コマンド呼び出しは、新しいリクエストを作成します。**WEB SERVICE CALL**コマンドの実行はまた、以前に呼び出したWebサービスの結果を消去し、新しい結果に置き換えます。
 
 *accessURL* には、Webサービスへアクセスできる完全なURLを渡します (このURLをWebサービスを説明するWSDLファイルのURLと混同しないでください) 。
 
-* ****保護モードでのアクセス(SSL)**: SSLを用いて、保護モードでWebサービスを使用したい場合、http://の代わりとしてURLの前にhttps://を渡します。この設定により、保護モードでの自動接続が可能になります。なお、このコマンドはサーバー認証を使用することができます( [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md) コマンドを参照して下さい)。この認証が有効でない(失効しているか無効である)場合、OKシステム変数は0に設定され、エラー901 "Invalid server certificate" が返されます。このエラーは [ON ERR CALL](on-err-call.md) コマンドに実装されたエラーハンドリングメソッドにより割り込み可能です。
+* ****保護モードでのアクセス(SSL)**: SSLを用いて、保護モードでWebサービスを使用したい場合、http://の代わりとしてURLの前にhttps://を渡します。この設定により、保護モードでの自動接続が可能になります。なお、このコマンドはサーバー認証を使用することができます( [HTTP SET CERTIFICATES FOLDER](../commands/http-set-certificates-folder) コマンドを参照して下さい)。この認証が有効でない(失効しているか無効である)場合、OKシステム変数は0に設定され、エラー901 "Invalid server certificate" が返されます。このエラーは [ON ERR CALL](../commands/on-err-call) コマンドに実装されたエラーハンドリングメソッドにより割り込み可能です。
 
 *soapAction* には、リクエストのSOAPActionフィールドの内容を渡します。このフィールドは一般的に"ServiceName#MethodName"値を含みます。
 
@@ -49,7 +49,7 @@ displayed_sidebar: docs
 
 *namespace* には、SOAPリクエストに使用するXML名前空間を渡します。XML名前空間に関する詳細は、4DのDesign Referenceマニュアルを参照してください。
 
-オプション引数 *complexType* は、([WEB SERVICE SET PARAMETER](web-service-set-parameter.md)と[WEB SERVICE GET RESULT](web-service-get-result.md)コマンドを使用して定義された) 送信および受信するWebサービス引数の設定を示します。
+オプション引数 *complexType* は、([WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter)と[WEB SERVICE GET RESULT](../commands/web-service-get-result)コマンドを使用して定義された) 送信および受信するWebサービス引数の設定を示します。
 
 引数 *complexType* の値は、Webサービスの公開モード (DOC または RPC、4DのDesign Referenceマニュアルを参照してください) とその引数により異なります。  
 *complexType* には*Web Services (Client)*テーマにある以下の定数の1つを必ず渡します:
@@ -91,11 +91,11 @@ displayed_sidebar: docs
 
 送られた引数と受け取った応答は、前処理されることなく直接的に処理できます。
 
-[WEB SERVICE GET RESULT](web-service-get-result.md)コマンドの例題を参照してください。
+[WEB SERVICE GET RESULT](../commands/web-service-get-result)コマンドの例題を参照してください。
 
 ### RPCモード、複合inputとシンプルoutput 
 
-この場合、引数 *complexType* には定数 Web Service Manual In が含まれます。この設定ではWebサービスに、[WEB SERVICE SET PARAMETER](web-service-set-parameter.md)コマンドを使用してBLOBの形でXMLソースの要素を必ず “手動で” 渡さなければなりません。
+この場合、引数 *complexType* には定数 Web Service Manual In が含まれます。この設定ではWebサービスに、[WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter)コマンドを使用してBLOBの形でXMLソースの要素を必ず “手動で” 渡さなければなりません。
 
 最初のBLOBを有効なXML要素としてフォーマットするかしないかを決定するのは、ユーザ次第です。最初の要素として、このBLOBには、最終リクエストの <body> 要素の最初に現れる “child” 要素が含まれなければなりません。   
   
@@ -110,7 +110,7 @@ WEB SERVICE SET PARAMETER("MyXMLBlob";$param)
 
 ### RPCモード、シンプルinputと複合output 
 
-この場合、引数*complexType*には、定数Web Service Manual Outが含まれます。それぞれの引数outputはBLOBに保存されているXML要素の形でWebサービスから返されます。[WEB SERVICE GET RESULT](web-service-get-result.md)コマンド. を使用してこの引数を取り出します。そして、受け取ったBLOBの内容を4Dの XMLコマンドを使用して解析します。  
+この場合、引数*complexType*には、定数Web Service Manual Outが含まれます。それぞれの引数outputはBLOBに保存されているXML要素の形でWebサービスから返されます。[WEB SERVICE GET RESULT](../commands/web-service-get-result)コマンド. を使用してこの引数を取り出します。そして、受け取ったBLOBの内容を4Dの XMLコマンドを使用して解析します。  
   
 例題  
   
@@ -168,8 +168,8 @@ DOCモード (または複合タイプのRPCモード) で公開されたWebサ�
 
 ## 参照 
 
-[WEB SERVICE GET RESULT](web-service-get-result.md)  
-[WEB SERVICE SET PARAMETER](web-service-set-parameter.md)  
+[WEB SERVICE GET RESULT](../commands/web-service-get-result)  
+[WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter)  
 
 ## プロパティ
 

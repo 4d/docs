@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-context-menu
 title: OBJECT Get context menu
 slug: /commands/object-get-context-menu
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get context menu.Summary-->**OBJECT Get context menu**コマンドは、引数 *object* と *\** で指定したオブジェクトの、"コンテキストメニュー"オプションのカレントの状態を返します。<!-- END REF-->
 
-コンテキストメニューのオプションは、デザインモードのプロパティリストを使用するか、 [OBJECT SET CONTEXT MENU](object-set-context-menu.md) という新しいコマンドを使用して設定することができます。
+コンテキストメニューのオプションは、デザインモードのプロパティリストを使用するか、 [OBJECT SET CONTEXT MENU](../commands/object-set-context-menu) という新しいコマンドを使用して設定することができます。
 
 任意の *\** 演算子を渡した場合、 *object* 引数でオブジェクト名を文字列で指定します。省略時には *object* 引数でフィールドまたは変数を指定します。
 
@@ -39,7 +39,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT SET CONTEXT MENU](object-set-context-menu.md)  
+[OBJECT SET CONTEXT MENU](../commands/object-set-context-menu)  
 
 ## プロパティ
 

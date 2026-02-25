@@ -1,4 +1,4 @@
----
+﻿---
 id: soap-declaration
 title: SOAP DECLARATION
 slug: /commands/soap-declaration
@@ -97,9 +97,9 @@ Pode declarar as variáveis de tipo "estrutura XML" e "DOM reference", de entrad
 
 * Parâmetros de saída
 * * Is XML indica que o parâmetro contém uma estrutura XML,  
-   * Is DOM reference indica que o parâmetro contém a referência DOM de uma estrutura XML. Neste caso, a inserção da estrutura XML na mensagem SOAP é equivalente a executar o comando [DOM EXPORT TO VAR](dom-export-to-var.md).
+   * Is DOM reference indica que o parâmetro contém a referência DOM de uma estrutura XML. Neste caso, a inserção da estrutura XML na mensagem SOAP é equivalente a executar o comando [DOM EXPORT TO VAR](../commands/dom-export-to-var).
 
-**Nota**: No caso das referências DOM utilizadas como parâmetros de saída, se recomenda utilizar as referências globais, criadas, por exemplo, ao início ou ao fechamento da aplicação. De fato, uma referência DOM criada dentro do mesmo serviço web não pode ser fechada com [DOM CLOSE XML](dom-close-xml.md), do contrário o serviço web não devolve nada. As chamadas múltiplas ao serviço web implicam portanto a criação de múltiplas referências DOM não fechadas, as quais podem provocar uma saturação da memória.
+**Nota**: No caso das referências DOM utilizadas como parâmetros de saída, se recomenda utilizar as referências globais, criadas, por exemplo, ao início ou ao fechamento da aplicação. De fato, uma referência DOM criada dentro do mesmo serviço web não pode ser fechada com [DOM CLOSE XML](../commands/dom-close-xml), do contrário o serviço web não devolve nada. As chamadas múltiplas ao serviço web implicam portanto a criação de múltiplas referências DOM não fechadas, as quais podem provocar uma saturação da memória.
 
 * Parâmetros de entrada
 * * Is XML indica que o parâmetro deve receber um argumento XML enviado pelo cliente SOAP.  
@@ -192,9 +192,9 @@ Este exemplo illustra os resultados dos diferentes tipos de declarações:
 
 ## Ver também 
 
-[Is data file locked](is-data-file-locked.md)  
-[SOAP get info](soap-get-info.md)  
-[SOAP SEND FAULT](soap-send-fault.md)  
+[Is data file locked](../commands/is-data-file-locked)  
+[SOAP get info](../commands/soap-get-info)  
+[SOAP SEND FAULT](../commands/soap-send-fault)  
 
 ## Propriedades
 

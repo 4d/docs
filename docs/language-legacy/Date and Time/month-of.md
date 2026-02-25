@@ -1,4 +1,4 @@
----
+﻿---
 id: month-of
 title: Month of
 slug: /commands/month-of
@@ -49,12 +49,12 @@ The following example illustrates the use of **Month of**. The results are assig
 
 ## Example 2 
 
-See example for the [Current date](current-date.md) command.
+See example for the [Current date](../commands/current-date) command.
 
 ## See also 
 
-[Day of](day-of.md)  
-[Year of](year-of.md)  
+[Day of](../commands/day-of)  
+[Year of](../commands/year-of)  
 
 ## Properties
 

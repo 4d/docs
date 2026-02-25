@@ -1,4 +1,4 @@
----
+﻿---
 id: highlight-text
 title: HIGHLIGHT TEXT
 slug: /commands/highlight-text
@@ -70,11 +70,11 @@ L'exemple suivant place le point d'insertion à la fin du champ *\[Produits\]Not
 
 ## Exemple 4 
 
-Reportez-vous à l'exemple de la commande [FILTER KEYSTROKE](filter-keystroke.md).
+Reportez-vous à l'exemple de la commande [FILTER KEYSTROKE](../commands/filter-keystroke).
 
 ## Voir aussi 
 
-[GET HIGHLIGHT](get-highlight.md)  
+[GET HIGHLIGHT](../commands/get-highlight)  
 
 ## Propriétés
 

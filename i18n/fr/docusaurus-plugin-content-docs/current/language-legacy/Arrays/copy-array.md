@@ -1,4 +1,4 @@
----
+﻿---
 id: copy-array
 title: COPY ARRAY
 slug: /commands/copy-array
@@ -25,7 +25,7 @@ Les tableaux *source* et *destination* peuvent être des tableaux locaux, proces
 **Notes :**
 
 * En mode compilé, le tableau *destination* doit être du même type que le tableau *source*. Ainsi, il est recommandé de toujours utiliser des tableaux du même type pour avoir un comportement similaire dans les modes interprété et compilé.
-* Lorsque vous copiez des tableaux d'objets, seules les références des objets qu'ils contiennent sont dupliquées, et non les objets eux-mêmes. Une modification effectuée sur un objet d'un tableau affectera toutes les instances existantes de l'objet dans les tableaux copiés. Si vous voulez dupliquer des objets, vous devez utiliser la commande [OB Copy](ob-copy.md).
+* Lorsque vous copiez des tableaux d'objets, seules les références des objets qu'ils contiennent sont dupliquées, et non les objets eux-mêmes. Une modification effectuée sur un objet d'un tableau affectera toutes les instances existantes de l'objet dans les tableaux copiés. Si vous voulez dupliquer des objets, vous devez utiliser la commande [OB Copy](../commands/ob-copy).
 
 ## Exemple 
 

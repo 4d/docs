@@ -1,4 +1,4 @@
----
+﻿---
 id: menu-selected
 title: Menu selected
 slug: /commands/menu-selected
@@ -53,7 +53,7 @@ If no menu commands are selected, **Menu selected** returns 0.
 
 ## Example 
 
-The following form method uses **Menu selected** to supply the menu and menu item arguments to [SET MENU ITEM MARK](set-menu-item-mark.md):
+The following form method uses **Menu selected** to supply the menu and menu item arguments to [SET MENU ITEM MARK](../commands/set-menu-item-mark):
 
 ```4d
  Case of

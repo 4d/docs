@@ -1,4 +1,4 @@
----
+﻿---
 id: set-text-to-pasteboard
 title: SET TEXT TO PASTEBOARD
 slug: /commands/set-text-to-pasteboard
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 **Nota:** no caso das operações copiar/colar, pasteboard é equivalente a clipboard.
 
-Depois de colocar texto na área de transferência, pode recuperá-lo utilizando o comando [Get text from pasteboard](get-text-from-pasteboard.md) ou chamando [GET PASTEBOARD DATA](get-pasteboard-data.md) ("com.4d.text.native";...).
+Depois de colocar texto na área de transferência, pode recuperá-lo utilizando o comando [Get text from pasteboard](../commands/get-text-from-pasteboard) ou chamando [GET PASTEBOARD DATA](../commands/get-pasteboard-data) ("com.4d.text.native";...).
 
 4D pode conter até 2 GB de texto
 
@@ -48,8 +48,8 @@ Se o texto se coloca corretamente na área de transferência, a variável OK tom
 
 ## Ver também 
 
-[APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
-[Get text from pasteboard](get-text-from-pasteboard.md)  
+[APPEND DATA TO PASTEBOARD](../commands/append-data-to-pasteboard)  
+[Get text from pasteboard](../commands/get-text-from-pasteboard)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: volume-attributes
 title: VOLUME ATTRIBUTES
 slug: /commands/volume-attributes
@@ -108,7 +108,7 @@ Votre application comprend des opérations par lots qui sont exécutées la nuit
 
 ## Voir aussi 
 
-[VOLUME LIST](volume-list.md)  
+[VOLUME LIST](../commands/volume-list)  
 
 ## Propriétés
 

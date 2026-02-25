@@ -1,4 +1,4 @@
----
+﻿---
 id: boolean-array-from-set
 title: BOOLEAN ARRAY FROM SET
 slug: /commands/boolean-array-from-set
@@ -43,7 +43,7 @@ Si no pasa el parámetro *conjunto*, el comando utilizará UserSet en el proceso
 
 ## Ver también 
 
-[CREATE SET FROM ARRAY](create-set-from-array.md)  
+[CREATE SET FROM ARRAY](../commands/create-set-from-array)  
 
 ## Propiedades
 

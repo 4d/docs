@@ -1,4 +1,4 @@
----
+﻿---
 id: blob-to-users
 title: BLOB TO USERS
 slug: /commands/blob-to-users
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.BLOB TO USERS.Summary-->The BLOB TO USERS command replaces the user accounts and groups found in the BLOB *users* in the current database.<!-- END REF--> The BLOB *users* is encrypted and must have been created using the [USERS TO BLOB](users-to-blob.md) command.
+<!--REF #_command_.BLOB TO USERS.Summary-->The BLOB TO USERS command replaces the user accounts and groups found in the BLOB *users* in the current database.<!-- END REF--> The BLOB *users* is encrypted and must have been created using the [USERS TO BLOB](../commands/users-to-blob) command.
 
 Only the database Administrator or Designer can execute this command. If another user attempts to execute it, the command does nothing and a privilege error (-9949) is generated.
 
@@ -57,7 +57,7 @@ If the command has been executed correctly, the system variable OK is set to 1\.
 
 ## See also 
 
-[USERS TO BLOB](users-to-blob.md)  
+[USERS TO BLOB](../commands/users-to-blob)  
 
 ## Properties
 

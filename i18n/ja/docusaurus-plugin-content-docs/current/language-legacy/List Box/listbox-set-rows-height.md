@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-rows-height
 title: LISTBOX SET ROWS HEIGHT
 slug: /commands/listbox-set-rows-height
@@ -47,9 +47,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[LISTBOX Get rows height](listbox-get-rows-height.md)  
-[LISTBOX SET AUTO ROW HEIGHT](listbox-set-auto-row-height.md)  
-[LISTBOX SET ROW HEIGHT](listbox-set-row-height.md)  
+[LISTBOX Get rows height](../commands/listbox-get-rows-height)  
+[LISTBOX SET AUTO ROW HEIGHT](../commands/listbox-set-auto-row-height)  
+[LISTBOX SET ROW HEIGHT](../commands/listbox-set-row-height)  
 
 ## プロパティ
 

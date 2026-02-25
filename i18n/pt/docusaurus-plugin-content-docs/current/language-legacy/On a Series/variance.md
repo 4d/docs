@@ -1,4 +1,4 @@
----
+﻿---
 id: variance
 title: Variance
 slug: /commands/variance
@@ -60,7 +60,7 @@ O método a seguir é chamado para imprimir os registros na seleção e ativar o
  PRINT SELECTION([Estudantes])
 ```
 
-**Nota:** o parâmetro do comando [BREAK LEVEL](break-level.md) deve ser igual ao número de quebras em seu relatório. Para maior informação sobre o processo de quebras, consulte os comandos do tema *Imprimir*.
+**Nota:** o parâmetro do comando [BREAK LEVEL](../commands/break-level) deve ser igual ao número de quebras em seu relatório. Para maior informação sobre o processo de quebras, consulte os comandos do tema *Imprimir*.
 
 ## Exemplo 2 
 
@@ -75,10 +75,10 @@ Este exemplo permite obter a variância de valores localizados num array:
 
 ## Ver também 
 
-[Average](average.md)  
-[Std deviation](std-deviation.md)  
-[Sum](sum.md)  
-[Sum squares](sum-squares.md)  
+[Average](../commands/average)  
+[Std deviation](../commands/std-deviation)  
+[Sum](../commands/sum)  
+[Sum squares](../commands/sum-squares)  
 
 ## Propriedades
 

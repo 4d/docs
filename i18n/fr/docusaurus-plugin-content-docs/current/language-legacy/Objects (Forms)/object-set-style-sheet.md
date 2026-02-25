@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-style-sheet
 title: OBJECT SET STYLE SHEET
 slug: /commands/object-set-style-sheet
@@ -36,7 +36,7 @@ Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *ob
 
 Passez dans le paramètre *nomFeuilleStyle* le nom de la feuille de style à appliquer à l’*objet*. Vous pouvez également passer soit :
 
-* un nom de feuille de style existante (si la feuille de style n’existe pas, une erreur est retournée, que vous pouvez intercepter l’aide d’une méthode installée par la commande [ON ERR CALL](on-err-call.md)),
+* un nom de feuille de style existante (si la feuille de style n’existe pas, une erreur est retournée, que vous pouvez intercepter l’aide d’une méthode installée par la commande [ON ERR CALL](../commands/on-err-call)),
 * une chaîne vide ("") pour ne pas appliquer de feuille de style à l’*objet*.
 * une des constantes suivantes du thème "*Styles de caractères*" pour appliquer une feuille de style automatique :  
 
@@ -48,7 +48,7 @@ Passez dans le paramètre *nomFeuilleStyle* le nom de la feuille de style à app
 
 Si une feuille de style avait déjà été associée à l’objet en mode Développement, l’appel de cette commande la remplace pour le process courant. 
 
-Si vous utilisez au cours de la session les commandes [ST SET ATTRIBUTES](st-set-attributes.md), [ST SET TEXT](st-set-text.md), [OBJECT SET FONT](object-set-font.md) ou [OBJECT SET FONT SIZE](object-set-font-size.md) sur l’*objet* afin de modifier sa police ou sa taille de police, la référence à la feuille de style est automatiquement supprimée de l’objet -- même si vous affectez des attributs identiques à ceux de la feuille de style. En revanche, si vous modifiez le style (gras, italique...), par exemple avec les commandes [ST SET ATTRIBUTES](st-set-attributes.md) ou [OBJECT SET FONT STYLE](object-set-font-style.md), ces nouvelles propriétés s’ajoutent à la feuille de style pour la durée de la session.
+Si vous utilisez au cours de la session les commandes [ST SET ATTRIBUTES](../commands/st-set-attributes), [ST SET TEXT](../commands/st-set-text), [OBJECT SET FONT](../commands/object-set-font) ou [OBJECT SET FONT SIZE](../commands/object-set-font-size) sur l’*objet* afin de modifier sa police ou sa taille de police, la référence à la feuille de style est automatiquement supprimée de l’objet -- même si vous affectez des attributs identiques à ceux de la feuille de style. En revanche, si vous modifiez le style (gras, italique...), par exemple avec les commandes [ST SET ATTRIBUTES](../commands/st-set-attributes) ou [OBJECT SET FONT STYLE](../commands/object-set-font-style), ces nouvelles propriétés s’ajoutent à la feuille de style pour la durée de la session.
 
 ### Note de compatibilité 
 
@@ -56,9 +56,9 @@ Dans **l'architecture Projet**, seules les trois feuilles de style automatiques 
 
 ## Voir aussi 
 
-[GET STYLE SHEET INFO](get-style-sheet-info.md)  
-[LIST OF STYLE SHEETS](list-of-style-sheets.md)  
-[OBJECT Get style sheet](object-get-style-sheet.md)  
+[GET STYLE SHEET INFO](../commands/get-style-sheet-info)  
+[LIST OF STYLE SHEETS](../commands/list-of-style-sheets)  
+[OBJECT Get style sheet](../commands/object-get-style-sheet)  
 *Styles de caractères*  
 
 ## Propriétés

@@ -1,4 +1,4 @@
----
+﻿---
 id: st-insert-url
 title: ST INSERT URL
 slug: /commands/st-insert-url
@@ -73,8 +73,8 @@ Usted desea insertar un enlace al sitio web de 4D para reemplazar el texto selec
 
 #### Ver también 
 
-[ST GET URL](st-get-url.md)  
-[ST INSERT EXPRESSION](st-insert-expression.md)  
+[ST GET URL](../commands/st-get-url)  
+[ST INSERT EXPRESSION](../commands/st-insert-expression)  
 
 #### Propiedades
 

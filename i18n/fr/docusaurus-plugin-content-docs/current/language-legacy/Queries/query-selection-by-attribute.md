@@ -1,4 +1,4 @@
----
+﻿---
 id: query-selection-by-attribute
 title: QUERY SELECTION BY ATTRIBUTE
 slug: /commands/query-selection-by-attribute
@@ -34,16 +34,16 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Summary-->**QUERY SELECTION BY ATTRIBUTE** fonctionne de la même façon et exécute les mêmes actions que la commande [QUERY BY ATTRIBUTE](query-by-attribute.md).<!-- END REF--> La différence entre ces deux commandes est la portée de la recherche :
+<!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Summary-->**QUERY SELECTION BY ATTRIBUTE** fonctionne de la même façon et exécute les mêmes actions que la commande [QUERY BY ATTRIBUTE](../commands/query-by-attribute).<!-- END REF--> La différence entre ces deux commandes est la portée de la recherche :
 
-* [QUERY BY ATTRIBUTE](query-by-attribute.md) recherche les enregistrements sur la totalité des enregistrements de la table.
+* [QUERY BY ATTRIBUTE](../commands/query-by-attribute) recherche les enregistrements sur la totalité des enregistrements de la table.
 * **QUERY SELECTION BY ATTRIBUTE** recherche les enregistrements dans la sélection courante de la table.
 
 **QUERY SELECTION BY ATTRIBUTE** recherche des enregistrements dans *laTable*. La commande **QUERY SELECTION BY ATTRIBUTE** change la sélection courante de l*aTable* pour le process courant et le premier enregistrement de la sélection devient l'enregistrement courant.
 
-Pour plus d'information, voir la description de la commande [QUERY BY ATTRIBUTE](query-by-attribute.md).
+Pour plus d'information, voir la description de la commande [QUERY BY ATTRIBUTE](../commands/query-by-attribute).
 
-La commande **QUERY SELECTION BY ATTRIBUTE** est utile lorsqu'une recherche ne peut pas être définie en utilisant la combinaison de plusieurs [QUERY BY ATTRIBUTE](query-by-attribute.md) (voire de plusieurs [QUERY](query.md)) appelées conjointement avec le paramètre \*. C'est typiquement le cas lorsque vous recherchez dans une sélection courante qui ne résulte pas d'une recherche mais d'une commande telle que [USE SET](use-set.md). 
+La commande **QUERY SELECTION BY ATTRIBUTE** est utile lorsqu'une recherche ne peut pas être définie en utilisant la combinaison de plusieurs [QUERY BY ATTRIBUTE](../commands/query-by-attribute) (voire de plusieurs [QUERY](../commands/query)) appelées conjointement avec le paramètre \*. C'est typiquement le cas lorsque vous recherchez dans une sélection courante qui ne résulte pas d'une recherche mais d'une commande telle que [USE SET](../commands/use-set). 
 
 ## Exemple 
 
@@ -57,7 +57,7 @@ Vous souhaitez trouver les personnes âgées entre 20 et 30 ans parmi les enregi
 
 ## Voir aussi 
 
-[QUERY BY ATTRIBUTE](query-by-attribute.md)  
+[QUERY BY ATTRIBUTE](../commands/query-by-attribute)  
 
 ## Propriétés
 

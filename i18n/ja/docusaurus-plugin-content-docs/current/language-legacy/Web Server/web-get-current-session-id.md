@@ -1,4 +1,4 @@
----
+﻿---
 id: web-get-current-session-id
 title: WEB Get current session ID
 slug: /commands/web-get-current-session-id
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WEB LEGACY GET SESSION EXPIRATION](web-legacy-get-session-expiration.md)  
+[WEB LEGACY GET SESSION EXPIRATION](../commands/web-legacy-get-session-expiration)  
 *Webセッション管理(旧式)*  
 
 ## プロパティ

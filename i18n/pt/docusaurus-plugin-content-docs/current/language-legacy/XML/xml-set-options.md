@@ -1,4 +1,4 @@
----
+﻿---
 id: xml-set-options
 title: XML SET OPTIONS
 slug: /commands/xml-set-options
@@ -39,9 +39,9 @@ Passe em *seletor* a opção a modificar e em *valor* o novo valor da opção. P
 
 As opções definidas por este comando são utilizadas unicamente no sentido 4D a XML (não tem efeito na leitura de valores XML em 4D). Os seguintes comandos utilizam as seguintes opções:
 
-* [DOM SET XML ATTRIBUTE](dom-set-xml-attribute.md)
-* [DOM SET XML ELEMENT VALUE](dom-set-xml-element-value.md)
-* [SAX ADD XML ELEMENT VALUE](sax-add-xml-element-value.md)
+* [DOM SET XML ATTRIBUTE](../commands/dom-set-xml-attribute)
+* [DOM SET XML ELEMENT VALUE](../commands/dom-set-xml-element-value)
+* [SAX ADD XML ELEMENT VALUE](../commands/sax-add-xml-element-value)
 
 | Constante            | Tipo          | Valor | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | -------------------- | ------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -62,7 +62,7 @@ As opções abaixo permitem que modifique algumas das propriedades padrão xml p
 | Constante                      | Tipo          | Valor | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | ------------------------------ | ------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | XML BOM                        | Inteiro longo | 9     | Especifica se os documentos XML incluem BOM.<br/>**Valores possíveis:** XML por padrão (por padrão): utiliza a configuração atual do banco de dados. Por padrão, BOM não é incluído - exceto em bancos de dados/projetos criados com versões 4D anteriores a v19.x, nas quais BOM era incluído. Veja configurações de Compatibilidad. *XML enabled*: inclui BOM *XML disabled*: não inclui BOM                                                                                                            |
-| XML DOM case sensitivity       | Inteiro longo | 8     | Especifica a sensibilidade à maiúsculas e minúsculas em relação aos nomes dos elementos dos comandos [DOM Get XML element](dom-get-xml-element.md) e [DOM Count XML elements](dom-count-xml-elements.md).<br/>Valores possíveis: XML case sensitive (valor predeterminado): os comandos distinguem entre maiúsculas e minúsculas XML case insensitive: os comandos não distinguen entre maiúsculas e minúsculas.                                                                                          |
+| XML DOM case sensitivity       | Inteiro longo | 8     | Especifica a sensibilidade à maiúsculas e minúsculas em relação aos nomes dos elementos dos comandos [DOM Get XML element](../commands/dom-get-xml-element) e [DOM Count XML elements](../commands/dom-count-xml-elements).<br/>Valores possíveis: XML case sensitive (valor predeterminado): os comandos distinguem entre maiúsculas e minúsculas XML case insensitive: os comandos não distinguen entre maiúsculas e minúsculas.                                                                                          |
 | XML external entity resolution | Inteiro longo | 7     | Controla se as entidades externas são resolvidas em documentos XML. De forma pré-determinada, por razões de segurança, os analisadores XML DOM e SAX 4D não permitem a resolução de entidades externas.<br/>**<br/>Valores possíveis:**<br/>XML enabled: permite a resolução de entidades externas em documentos XMLXML disabled (valor predeterminado): não permite a resolução de entidades externas (uma declaração de entidade externa gera um erro de análise)                       |
 | XML line ending                | Inteiro longo | 10    | Caracteres de final de linha em documentos XML escritos.<br/>**Valores possíveis:** XML por padrão (por padrão): utiliza a configuração atual do banco de dados. Por padrão é LF em macOS e CRLF em Windows. Entretanto, em macOS, nos bancos/projetos criados com versões de 4D antes de v19,x, por padrão era CR para DOM e CRLF para SAX. Ver também Parâmetros de compatibilidade. XML LF: utiliza LF (quebra de linha) XML CR: utiliza CR (carriage return/retorno de carro) XML CRLF: utiliza CR+LF |
 
@@ -78,11 +78,11 @@ Inserir uma imagem SVG:
 
 ## Ver também 
 
-[DOM SET XML ATTRIBUTE](dom-set-xml-attribute.md)  
-[DOM SET XML DECLARATION](dom-set-xml-declaration.md)  
-[DOM SET XML ELEMENT VALUE](dom-set-xml-element-value.md)  
-[SAX ADD XML ELEMENT VALUE](sax-add-xml-element-value.md)  
-[XML GET OPTIONS](xml-get-options.md)  
+[DOM SET XML ATTRIBUTE](../commands/dom-set-xml-attribute)  
+[DOM SET XML DECLARATION](../commands/dom-set-xml-declaration)  
+[DOM SET XML ELEMENT VALUE](../commands/dom-set-xml-element-value)  
+[SAX ADD XML ELEMENT VALUE](../commands/sax-add-xml-element-value)  
+[XML GET OPTIONS](../commands/xml-get-options)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: clear-variable
 title: CLEAR VARIABLE
 slug: /commands/clear-variable
@@ -56,7 +56,7 @@ En un formulario, utilice una lista desplegable llamada *asMiListaDesplegable* c
 
 ## Ver también 
 
-[Undefined](undefined.md)  
+[Undefined](../commands/undefined)  
 
 ## Propiedades
 

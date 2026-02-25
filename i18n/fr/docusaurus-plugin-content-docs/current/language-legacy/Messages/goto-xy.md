@@ -1,4 +1,4 @@
----
+﻿---
 id: goto-xy
 title: GOTO XY
 slug: /commands/goto-xy
@@ -18,21 +18,21 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.GOTO XY.Summary-->La commande **GOTO XY** est destinée à être utilisée conjointement avec la commande [MESSAGE](message.md) lorsque vous affichez des messages dans une fenêtre ouverte par la commande [Open window](open-window.md).<!-- END REF--> 
+<!--REF #_command_.GOTO XY.Summary-->La commande **GOTO XY** est destinée à être utilisée conjointement avec la commande [MESSAGE](../commands/message) lorsque vous affichez des messages dans une fenêtre ouverte par la commande [Open window](../commands/open-window).<!-- END REF--> 
 
 La commande **GOTO XY** détermine l'emplacement du curseur d'insertion des caractères (ce curseur est invivible) : elle définit les coordonnées auxquelles le prochain message s'affichera à l'intérieur de la fenêtre. 
 
-L'angle supérieur gauche de la fenêtre représente les coordonnées 0,0\. Le curseur est automatiquement positionné à 0,0 lorsqu'une fenêtre est créée ou après l'exécution de la commande [ERASE WINDOW](erase-window.md).
+L'angle supérieur gauche de la fenêtre représente les coordonnées 0,0\. Le curseur est automatiquement positionné à 0,0 lorsqu'une fenêtre est créée ou après l'exécution de la commande [ERASE WINDOW](../commands/erase-window).
 
-Après que **GOTO XY** ait défini l'emplacement du curseur, la commande [MESSAGE](message.md) peut être appelée pour afficher des caractères dans la fenêtre.
+Après que **GOTO XY** ait défini l'emplacement du curseur, la commande [MESSAGE](../commands/message) peut être appelée pour afficher des caractères dans la fenêtre.
 
 ## Exemple 1 
 
-Reportez-vous à l'exemple de la commande [MESSAGE](message.md).
+Reportez-vous à l'exemple de la commande [MESSAGE](../commands/message).
 
 ## Exemple 2 
 
-Reportez-vous à l'exemple de la fonction [Milliseconds](milliseconds.md).
+Reportez-vous à l'exemple de la fonction [Milliseconds](../commands/milliseconds).
 
 ## Exemple 3 
 
@@ -59,7 +59,7 @@ L'exemple ci-dessous :
 
 ## Voir aussi 
 
-[MESSAGE](message.md)  
+[MESSAGE](../commands/message)  
 
 ## Propriétés
 

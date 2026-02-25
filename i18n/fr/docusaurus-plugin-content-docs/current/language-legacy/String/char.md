@@ -1,4 +1,4 @@
----
+﻿---
 id: char
 title: Char
 slug: /commands/char
@@ -45,7 +45,7 @@ L'exemple suivant utilise la fonction **Char** pour insérer un retour chariot d
 
 ## Voir aussi 
 
-[Character code](character-code.md)  
+[Character code](../commands/character-code)  
 *Codes Unicode*  
 *Symboles d'indice de chaîne*  
 

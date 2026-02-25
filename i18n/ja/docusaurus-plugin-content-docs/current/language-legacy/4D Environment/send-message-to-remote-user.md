@@ -1,4 +1,4 @@
----
+﻿---
 id: send-message-to-remote-user
 title: SEND MESSAGE TO REMOTE USER
 slug: /commands/send-message-to-remote-user
@@ -61,7 +61,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[DROP REMOTE USER](drop-remote-user.md)  
+[DROP REMOTE USER](../commands/drop-remote-user)  
 
 ## プロパティ
 

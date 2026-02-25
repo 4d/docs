@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-style-sheet
 title: OBJECT Get style sheet
 slug: /commands/object-get-style-sheet
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get style sheet.Summary-->O comando **OBJECT Get style sheet** devolve o nome da folha de estilos associada ao objeto ou aos objetos designado(s) pelos parâmetros *objeto* e *\** .<!-- END REF-->  
   
-A folha de estilo pode ter sido atribuída em modo Desenho utilizando a lista de propriedades ou para o processo atual usando o comando [OBJECT SET STYLE SHEET](object-set-style-sheet.md).  
+A folha de estilo pode ter sido atribuída em modo Desenho utilizando a lista de propriedades ou para o processo atual usando o comando [OBJECT SET STYLE SHEET](../commands/object-set-style-sheet).  
   
 Ao passar o parâmetro opcional *\** indica que o parâmetro *objeto* é um nome de objeto (cadeia). Se não passar este parâmetro, indica que o parâmetro *objeto* é um campo ou uma variável. Neste caso, se passar uma referência de campo ou variável no lugar de uma cadeia (campo ou variável objeto unicamente).  
   
@@ -58,7 +58,7 @@ Em **arquitetura de projeto**, só as três folhas de estilo automáticas são c
 ## Ver também 
 
 *Estilos de fonte*  
-[OBJECT SET STYLE SHEET](object-set-style-sheet.md)  
+[OBJECT SET STYLE SHEET](../commands/object-set-style-sheet)  
 
 ## Propriedades
 

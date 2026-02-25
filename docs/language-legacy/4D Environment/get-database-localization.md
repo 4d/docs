@@ -1,4 +1,4 @@
----
+﻿---
 id: get-database-localization
 title: Get database localization
 slug: /commands/get-database-localization
@@ -38,7 +38,7 @@ Several different language settings can be used simultaneously in the applicatio
 
 | Constant                 | Type    | Value | Comment                                                                                                                                          |
 | ------------------------ | ------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Current localization     | Integer | 1     | Current language of the application: default language or language set via the [SET DATABASE LOCALIZATION](set-database-localization.md) command. |
+| Current localization     | Integer | 1     | Current language of the application: default language or language set via the [SET DATABASE LOCALIZATION](../commands/set-database-localization) command. |
 | Default localization     | Integer | 0     | Language set automatically by 4D on startup according to the Resources folder and the system environment (not modifiable).                       |
 | Internal 4D localization | Integer | 3     | Language used by 4D for sorts and text comparisons (set in the Preferences of the application).                                                  |
 | User system localization | Integer | 2     | Language set by the current user of the system.                                                                                                  |
@@ -63,8 +63,8 @@ The current language of the database determines the .lproj folder where the prog
 
 <h2 data-noindex>See also</h2>
 
-[Localized document path](localized-document-path.md)  
-[SET DATABASE LOCALIZATION](set-database-localization.md)  
+[Localized document path](../commands/localized-document-path)  
+[SET DATABASE LOCALIZATION](../commands/set-database-localization)  
 
 <h2 data-noindex>Properties</h2>
 

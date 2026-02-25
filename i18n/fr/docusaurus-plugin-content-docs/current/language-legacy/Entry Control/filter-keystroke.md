@@ -1,4 +1,4 @@
----
+﻿---
 id: filter-keystroke
 title: FILTER KEYSTROKE
 slug: /commands/filter-keystroke
@@ -31,9 +31,9 @@ displayed_sidebar: docs
 
 Si vous passez une chaîne vide, le filtrage clavier en cours est annulé.
 
-Vous appelez généralement **FILTER KEYSTROKE** dans une méthode formulaire ou objet lorsque vous gérez l'événement formulaire On Before Keystroke . Pour détecter les événements de frappe clavier, utilisez la commande [Form event code](../commands/form-event-code). Pour récupérer les caractères saisis au clavier, utilisez les fonctions [Keystroke](keystroke.md) ou [Get edited text](get-edited-text.md). 
+Vous appelez généralement **FILTER KEYSTROKE** dans une méthode formulaire ou objet lorsque vous gérez l'événement formulaire On Before Keystroke . Pour détecter les événements de frappe clavier, utilisez la commande [Form event code](../commands/form-event-code). Pour récupérer les caractères saisis au clavier, utilisez les fonctions [Keystroke](../commands/keystroke) ou [Get edited text](../commands/get-edited-text). 
 
-**IMPORTANT :** Si vous voulez effectuer des opérations “à la volée” en fonction de la valeur courante de la zone saisissable en cours de modification ainsi que du caractère à saisir, rappelez-vous que le texte affiché à l'écran n'est pas encore la valeur du champ ou de la variable. La valeur saisie dans une variable ou un champ ne lui est affectée que lorsque la zone est validée (lorsque l'utilisateur appuie sur la touche **Tabulation**, clique sur un bouton, etc.). En conséquence, pensez à placer les valeurs saisies dans une variable temporaire et à travailler avec celle-ci, puis à assigner cette variable à la zone de saisie (reportez-vous à l'exemple ci-dessous). Vous pouvez également utiliser la fonction [Get edited text](get-edited-text.md).
+**IMPORTANT :** Si vous voulez effectuer des opérations “à la volée” en fonction de la valeur courante de la zone saisissable en cours de modification ainsi que du caractère à saisir, rappelez-vous que le texte affiché à l'écran n'est pas encore la valeur du champ ou de la variable. La valeur saisie dans une variable ou un champ ne lui est affectée que lorsque la zone est validée (lorsque l'utilisateur appuie sur la touche **Tabulation**, clique sur un bouton, etc.). En conséquence, pensez à placer les valeurs saisies dans une variable temporaire et à travailler avec celle-ci, puis à assigner cette variable à la zone de saisie (reportez-vous à l'exemple ci-dessous). Vous pouvez également utiliser la fonction [Get edited text](../commands/get-edited-text).
 
 Utilisez la commande **FILTER KEYSTROKE** dans les cas suivants :
 
@@ -41,7 +41,7 @@ Utilisez la commande **FILTER KEYSTROKE** dans les cas suivants :
 * Pour créer un filtre de saisie non disponible en standard,
 * Pour implémenter des zones de recherche ou de pré-saisie dynamiques.
 
-**ATTENTION :** si vous appelez la commande [Keystroke](keystroke.md) après avoir appelé **FILTER KEYSTROKE**, c'est le caractère passé à cette commande qui sera retourné et non le caractère réellement saisi.
+**ATTENTION :** si vous appelez la commande [Keystroke](../commands/keystroke) après avoir appelé **FILTER KEYSTROKE**, c'est le caractère passé à cette commande qui sera retourné et non le caractère réellement saisi.
 
 ## Exemple 1 
 
@@ -81,7 +81,7 @@ Le code ci-dessous définit le comportement d'une zone de saisie de mot de passe
  End case
 ```
 
-Une fois la zone validée, vous récupérez le mot de passe réellement saisi par l'utilisateur dans la variable *vaMotPasseRéel*. La méthode Gérer frappe clavier est listée dans l'exemple de la commande [Keystroke](keystroke.md). 
+Une fois la zone validée, vous récupérez le mot de passe réellement saisi par l'utilisateur dans la variable *vaMotPasseRéel*. La méthode Gérer frappe clavier est listée dans l'exemple de la commande [Keystroke](../commands/keystroke). 
 
 ## Exemple 3 
 
@@ -249,9 +249,9 @@ La méthode obtenirTexteSelectionne est la suivante :
 ## Voir aussi 
 
 [Form event code](../commands/form-event-code)  
-[Get edited text](get-edited-text.md)  
-[Is editing text](is-editing-text.md)  
-[Keystroke](keystroke.md)  
+[Get edited text](../commands/get-edited-text)  
+[Is editing text](../commands/is-editing-text)  
+[Keystroke](../commands/keystroke)  
 
 ## Propriétés
 

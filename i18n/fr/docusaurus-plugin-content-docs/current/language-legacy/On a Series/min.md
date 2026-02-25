@@ -1,4 +1,4 @@
----
+﻿---
 id: min
 title: Min
 slug: /commands/min
@@ -64,7 +64,7 @@ La méthode suivante est appelée pour imprimer les enregistrements de la sélec
  PRINT SELECTION([Employés])
 ```
 
-**Note :** La valeur du paramètre de la commande [BREAK LEVEL](break-level.md) doit être égale au nombre de ruptures que contient l'état. Pour plus d'informations sur les ruptures, reportez-vous aux commandes du thème *Impressions*.
+**Note :** La valeur du paramètre de la commande [BREAK LEVEL](../commands/break-level) doit être égale au nombre de ruptures que contient l'état. Pour plus d'informations sur les ruptures, reportez-vous aux commandes du thème *Impressions*.
 
 ## Exemple 2 
 
@@ -87,11 +87,11 @@ Cet exemple vous permet d’obtenir la valeur la plus basse d’un tableau :
 
 ## Exemple 4 
 
-Pour un exemple de calcul utilisant un attribut de champ objet, veuillez vous reporter à l'exemple 3 de la commande [Average](average.md).
+Pour un exemple de calcul utilisant un attribut de champ objet, veuillez vous reporter à l'exemple 3 de la commande [Average](../commands/average).
 
 ## Voir aussi 
 
-[Max](max.md)  
+[Max](../commands/max)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: system-folder
 title: System folder
 slug: /commands/system-folder
@@ -62,8 +62,8 @@ If you omit the *type* parameter, the function will return the pathname to activ
 
 ## See also 
 
-[Get 4D folder](get-4d-folder.md)  
-[Temporary folder](temporary-folder.md)  
+[Get 4D folder](../commands/get-4d-folder)  
+[Temporary folder](../commands/temporary-folder)  
 
 ## Properties
 

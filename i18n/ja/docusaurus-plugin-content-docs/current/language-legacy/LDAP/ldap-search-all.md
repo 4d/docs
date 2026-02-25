@@ -1,4 +1,4 @@
----
+﻿---
 id: ldap-search-all
 title: LDAP SEARCH ALL
 slug: /commands/ldap-search-all
@@ -126,7 +126,7 @@ LDAPサーバーには通常、検索のために受け付けられるエント�
 ## 参照 
 
 *LDAP*  
-[LDAP Search](ldap-search.md)  
+[LDAP Search](../commands/ldap-search)  
 
 ## プロパティ
 

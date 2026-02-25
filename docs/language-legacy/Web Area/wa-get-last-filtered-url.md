@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-get-last-filtered-url
 title: WA Get last filtered URL
 slug: /commands/wa-get-last-filtered-url
@@ -33,18 +33,18 @@ displayed_sidebar: docs
 
 The URL may have been filtered for one of the following reasons:
 
-* The URL was denied because of a filter ([WA SET URL FILTERS](wa-set-url-filters.md) command),
-* The link is open in the default browser ([WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md) command),
+* The URL was denied because of a filter ([WA SET URL FILTERS](../commands/wa-set-url-filters) command),
+* The link is open in the default browser ([WA SET EXTERNAL LINKS FILTERS](../commands/wa-set-external-links-filters) command),
 * The URL attempts to open a pop-up window.
 
 It is advisable to call this command in the context of the On URL Filtering, On Open External Link and On Window Opening Denied form events in order to find out the URL that was filtered.
 
 ## See also 
 
-[WA GET EXTERNAL LINKS FILTERS](wa-get-external-links-filters.md)  
-[WA GET URL FILTERS](wa-get-url-filters.md)  
-[WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)  
-[WA SET URL FILTERS](wa-set-url-filters.md)  
+[WA GET EXTERNAL LINKS FILTERS](../commands/wa-get-external-links-filters)  
+[WA GET URL FILTERS](../commands/wa-get-url-filters)  
+[WA SET EXTERNAL LINKS FILTERS](../commands/wa-set-external-links-filters)  
+[WA SET URL FILTERS](../commands/wa-set-url-filters)  
 
 ## Properties
 

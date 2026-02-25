@@ -1,4 +1,4 @@
----
+﻿---
 id: intersection
 title: INTERSECTION
 slug: /commands/intersection
@@ -48,8 +48,8 @@ O exemplo a seguir pesquisa os clientes que são atendidos por dois representant
 
 ## Ver também 
 
-[DIFFERENCE](difference.md)  
-[UNION](union.md)  
+[DIFFERENCE](../commands/difference)  
+[UNION](../commands/union)  
 
 ## Propriedades
 

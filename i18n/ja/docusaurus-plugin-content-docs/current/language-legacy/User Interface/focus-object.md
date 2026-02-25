@@ -1,4 +1,4 @@
----
+﻿---
 id: focus-object
 title: Focus object
 slug: /commands/focus-object
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 Focus object はカレントフォーム中でフォーカスを持つオブジェクトへのポインタを返します。フォーカスを持つオブジェクトがない場合、コマンドはNilを返します。を使用して、どのオブジェクトが現在選択されているかを知る必要なく、フォームエリア上でアクションを実行できます。アクションを実行する前に[Type](type.md "Type")コマンドを使用して、オブジェクトが正しいデータ型かを確認してください。
 
-**Note:** Focus objectがリストボックスで使用された場合、コマンドはコンテキストに応じてリストボックスまたはリストボックスの列へのポインタを返します。詳細は[PRINT LABEL](print-label.md)*リストボックスオブジェクトの管理*を参照してください。
+**Note:** Focus objectがリストボックスで使用された場合、コマンドはコンテキストに応じてリストボックスまたはリストボックスの列へのポインタを返します。詳細は[PRINT LABEL](../commands/print-label)*リストボックスオブジェクトの管理*を参照してください。
 
 このコマンドはサブフォーム中のフィールドで使用することはできません。
 
@@ -56,7 +56,7 @@ Focus object はカレントフォーム中でフォーカスを持つオブジ�
 
 ## 参照 
 
-[OBJECT Get pointer](object-get-pointer.md)  
+[OBJECT Get pointer](../commands/object-get-pointer)  
 
 ## プロパティ
 

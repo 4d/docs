@@ -1,4 +1,4 @@
----
+﻿---
 id: path-to-object
 title: Path to object
 slug: /commands/path-to-object
@@ -145,7 +145,7 @@ If the last portion of the path is ".something", it is considered as a file name
 
 ## Example 2 
 
-You can combine this command with the [Object to path](object-to-path.md) to rename a file in a path:
+You can combine this command with the [Object to path](../commands/object-to-path) to rename a file in a path:
 
 ```4d
  var $o : Object
@@ -180,12 +180,12 @@ You want to know the number of subfolders contained in a path:
 
 ## See also 
 
-[Convert path POSIX to system](convert-path-posix-to-system.md)  
-[Convert path system to POSIX](convert-path-system-to-posix.md)  
+[Convert path POSIX to system](../commands/convert-path-posix-to-system)  
+[Convert path system to POSIX](../commands/convert-path-system-to-posix)  
 [File](../commands/file)  
 [Folder](../commands/folder)  
-[Object to path](object-to-path.md)  
-[Test path name](test-path-name.md)  
+[Object to path](../commands/object-to-path)  
+[Test path name](../commands/test-path-name)  
 
 ## Properties
 

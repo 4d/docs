@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-selection
 title: QR GET SELECTION
 slug: /commands/qr-get-selection
@@ -47,7 +47,7 @@ Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
 ## Voir aussi 
 
-[QR SET SELECTION](qr-set-selection.md)  
+[QR SET SELECTION](../commands/qr-set-selection)  
 
 ## Propriétés
 

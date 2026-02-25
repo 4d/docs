@@ -1,4 +1,4 @@
----
+﻿---
 id: generate-encryption-keypair
 title: GENERATE ENCRYPTION KEYPAIR
 slug: /commands/generate-encryption-keypair
@@ -41,7 +41,7 @@ displayed_sidebar: docs
 
 デフォルトでは (*length*を省略した場合)、生成される鍵のサイズは512ビットに設定されます。暗号の安全性を高めるために頻繁に、例えば6か月ごとに鍵を交換することもできます。2,048ビットの鍵を生成できますが、Webアプリケーションの接続速度は低下します。
 
-このコマンドはbase64で暗号化されたPKCSフォーマットで鍵を生成し、その内容を変更する必要なく電子メールにコピー＆ペーストできます。一対の鍵が生成されたら (例えば[BLOB TO DOCUMENT](blob-to-document.md) コマンドを使用して) PEMフォーマットのテキストドキュメントを作成することができ、これらの鍵を安全な場所に保管できます。
+このコマンドはbase64で暗号化されたPKCSフォーマットで鍵を生成し、その内容を変更する必要なく電子メールにコピー＆ペーストできます。一対の鍵が生成されたら (例えば[BLOB TO DOCUMENT](../commands/blob-to-document) コマンドを使用して) PEMフォーマットのテキストドキュメントを作成することができ、これらの鍵を安全な場所に保管できます。
 
 **警告:** 秘密鍵は常に秘密にしなければなりません。
 
@@ -49,10 +49,10 @@ displayed_sidebar: docs
 
 **GENERATE ENCRYPTION KEYPAIR** で使用するRSA暗号方 式は、秘密鍵と公開鍵という二重鍵暗号システムに基づいています。その名が示す通り、公開鍵は第三者に渡され、情報の復号に使用されます。公開鍵は情報の暗号化に使われるユニークな秘密鍵と一対です。このように、秘密鍵は暗号化に使用され、公開鍵は復号に使用されます (またはその逆)。一方の鍵を使って暗号化された情報は、もう一方の鍵を使用しなければ解読することはできません。
 
-TLS/SSLプロトコルの暗号化機能はこの原理に基づいており、証明書に納められた公開鍵がブラウザに送信されます。(詳細は[WEB SERVICE SET PARAMETER](web-service-set-parameter.md)の節を参照)。
+TLS/SSLプロトコルの暗号化機能はこの原理に基づいており、証明書に納められた公開鍵がブラウザに送信されます。(詳細は[WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter)の節を参照)。
 
-この暗号化モードは、[ENCRYPT BLOB](encrypt-blob.md)および[DECRYPT BLOB](decrypt-blob.md)の1番目のシンタックスでも使用されています。このシンタックスで用いる公開鍵は極秘に発行してください。  
-特定の受信者を復号可能な唯一の人とし、かつ送信者が暗号化を行った人であることを保証するために、2人の公開鍵と秘密鍵を合わせて情報の暗号化を行うことができます。この原理は[ENCRYPT BLOB](encrypt-blob.md)および[DECRYPT BLOB](decrypt-blob.md)の2番目のシンタックスで示されています。
+この暗号化モードは、[ENCRYPT BLOB](../commands/encrypt-blob)および[DECRYPT BLOB](../commands/decrypt-blob)の1番目のシンタックスでも使用されています。このシンタックスで用いる公開鍵は極秘に発行してください。  
+特定の受信者を復号可能な唯一の人とし、かつ送信者が暗号化を行った人であることを保証するために、2人の公開鍵と秘密鍵を合わせて情報の暗号化を行うことができます。この原理は[ENCRYPT BLOB](../commands/encrypt-blob)および[DECRYPT BLOB](../commands/decrypt-blob)の2番目のシンタックスで示されています。
 
 ## 例題 
 
@@ -60,9 +60,9 @@ TLS/SSLプロトコルの暗号化機能はこの原理に基づいており、�
 
 ## 参照 
 
-[DECRYPT BLOB](decrypt-blob.md)  
-[ENCRYPT BLOB](encrypt-blob.md)  
-[GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
+[DECRYPT BLOB](../commands/decrypt-blob)  
+[ENCRYPT BLOB](../commands/encrypt-blob)  
+[GENERATE CERTIFICATE REQUEST](../commands/generate-certificate-request)  
 
 ## プロパティ
 

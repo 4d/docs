@@ -1,4 +1,4 @@
----
+﻿---
 id: selection-range-to-array
 title: SELECTION RANGE TO ARRAY
 slug: /commands/selection-range-to-array
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SELECTION RANGE TO ARRAY.Summary-->**SELECTION RANGE TO ARRAY** crea uno o más arrays y copia los datos de los campos o números de registro de la selección actual en arrays.<!-- END REF--> 
 
-A diferencia de [SELECTION TO ARRAY](selection-to-array.md), que aplica a la totalidad de la selección actual, **SELECTION RANGE TO ARRAY** sólo aplica al rango de los registros seleccionados especificados por los parámetros *inicio y* *fin*.
+A diferencia de [SELECTION TO ARRAY](../commands/selection-to-array), que aplica a la totalidad de la selección actual, **SELECTION RANGE TO ARRAY** sólo aplica al rango de los registros seleccionados especificados por los parámetros *inicio y* *fin*.
 
 El comando espera que los números de registro seleccionados pasados en *inicio* y *fin* cumplan con la fórmula *1 <= inicio <= fin <= Records in selection (\[...\])*. 
 
@@ -45,13 +45,13 @@ Si pasa números de registros seleccionados incorrectos, el comando hace lo sigu
 * Si *inicio > fin*, devuelve los valores del registro cuyo registro seleccionado es *inicio* únicamente.
 * Si ambos parámetros son inconsistentes con el tamaño de la selección, devuelve arrays vacíos.
 
-Como [SELECTION TO ARRAY](selection-to-array.md), el comando **SELECTION RANGE TO ARRAY** aplica a la selección de la tabla especificada en el primer parámetro.
+Como [SELECTION TO ARRAY](../commands/selection-to-array), el comando **SELECTION RANGE TO ARRAY** aplica a la selección de la tabla especificada en el primer parámetro.
 
-Al igual que [SELECTION TO ARRAY](selection-to-array.md), **SELECTION RANGE TO ARRAY** también puede realizar las siguientes operaciones:
+Al igual que [SELECTION TO ARRAY](../commands/selection-to-array), **SELECTION RANGE TO ARRAY** también puede realizar las siguientes operaciones:
 
 * Cargar los valores de uno o varios campos.
 * Cargar los números de registros utilizando la sintaxis *...;\[tabla\];Array;...*
-* Cargar valores de campos relacionados, si existe una relación automática Muchos a Uno entre las tablas o si usted previamente ha llamado [SET AUTOMATIC RELATIONS](set-automatic-relations.md) para cambiar las relaciones Muchos a Uno manuales a automáticas. En ambos casos, los valores pueden cargarse a través de varios niveles de relaciones Muchos a Uno entre tablas.
+* Cargar valores de campos relacionados, si existe una relación automática Muchos a Uno entre las tablas o si usted previamente ha llamado [SET AUTOMATIC RELATIONS](../commands/set-automatic-relations) para cambiar las relaciones Muchos a Uno manuales a automáticas. En ambos casos, los valores pueden cargarse a través de varios niveles de relaciones Muchos a Uno entre tablas.
 
 Cada array se digita de acuerdo al tipo de campo. 
 
@@ -64,11 +64,11 @@ Cuando aplica **SELECTION RANGE TO ARRAY** a un campo de tipo Hora, note que cre
 
 Si carga los números de los registros, se copian en un array de tipo Entero largo.
 
-**Nota:** puede llamar al comando **SELECTION RANGE TO ARRAY** con sólo los parámetros *inicio* y *fin*. Utilice esta sintaxis especial para lanzar, en una selección limitada la ejecución de una serie diferida de comandos [SELECTION TO ARRAY](selection-to-array.md) utilizando el parámetro *\** (ver ejemplo 4\]). 
+**Nota:** puede llamar al comando **SELECTION RANGE TO ARRAY** con sólo los parámetros *inicio* y *fin*. Utilice esta sintaxis especial para lanzar, en una selección limitada la ejecución de una serie diferida de comandos [SELECTION TO ARRAY](../commands/selection-to-array) utilizando el parámetro *\** (ver ejemplo 4\]). 
 
 **4D Server**: **SELECTION RANGE TO ARRAY** es optimizado por 4D Server. Cada array se crea en el servidor y luego se envía, en su totalidad, al equipo cliente. 
 
-**Advertencia:** **SELECTION RANGE TO ARRAY** puede crear arrays grandes, dependiendo del rango definido en *inicio* y *fin,* y en el tipo y tamaño de los datos a cargar. Los arrays residen en memoria, de manera que es buena idea probar el resultado después de la ejecución del comando. Para hacerlo, pruebe el tamaño de cada array resultante o cubra la llamada al comando, utilizando un método de proyecto [ON ERR CALL](on-err-call.md).
+**Advertencia:** **SELECTION RANGE TO ARRAY** puede crear arrays grandes, dependiendo del rango definido en *inicio* y *fin,* y en el tipo y tamaño de los datos a cargar. Los arrays residen en memoria, de manera que es buena idea probar el resultado después de la ejecución del comando. Para hacerlo, pruebe el tamaño de cada array resultante o cubra la llamada al comando, utilizando un método de proyecto [ON ERR CALL](../commands/on-err-call).
 
 Si el comando se ejecuta correctamente, el tamaño de cada array resultante es igual a *(fin-inicio)+1*, excepto si el parámetro *fin* es superior al número de registros en la selección. En tal caso, cada array resultante contiene *(Registros en selección(\[...\])-inicio)+1* elementos.
 
@@ -118,9 +118,9 @@ Uso de los 50 primeros registros actuales de la tabla \[Facturas\] para cargar v
 
 ## Ver también 
 
-[ON ERR CALL](on-err-call.md)  
-[SELECTION TO ARRAY](selection-to-array.md)  
-[SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
+[ON ERR CALL](../commands/on-err-call)  
+[SELECTION TO ARRAY](../commands/selection-to-array)  
+[SET AUTOMATIC RELATIONS](../commands/set-automatic-relations)  
 
 ## Propiedades
 

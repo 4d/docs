@@ -1,4 +1,4 @@
----
+﻿---
 id: highlight-text
 title: HIGHLIGHT TEXT
 slug: /commands/highlight-text
@@ -77,11 +77,11 @@ The following example moves the insertion point to the end of the enterable fiel
 
 ## Example 4 
 
-See example for the [FILTER KEYSTROKE](filter-keystroke.md) command.
+See example for the [FILTER KEYSTROKE](../commands/filter-keystroke) command.
 
 ## See also 
 
-[GET HIGHLIGHT](get-highlight.md)  
+[GET HIGHLIGHT](../commands/get-highlight)  
 
 ## Properties
 

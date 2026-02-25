@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-table-source
 title: LISTBOX SET TABLE SOURCE
 slug: /commands/listbox-set-table-source
@@ -50,7 +50,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[LISTBOX GET TABLE SOURCE](listbox-get-table-source.md)  
+[LISTBOX GET TABLE SOURCE](../commands/listbox-get-table-source)  
 
 ## プロパティ
 

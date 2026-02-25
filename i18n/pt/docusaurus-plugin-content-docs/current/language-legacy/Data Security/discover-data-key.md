@@ -1,4 +1,4 @@
----
+﻿---
 id: discover-data-key
 title: Discover data key
 slug: /commands/discover-data-key
@@ -60,7 +60,7 @@ Os archivos chave (arquivos de extensão ".4DKeyChain") devem ser armazenados no
 ## Ver também 
 
   
-[New data key](new-data-key.md)  
+[New data key](../commands/new-data-key)  
 
 ## Propriedades
 

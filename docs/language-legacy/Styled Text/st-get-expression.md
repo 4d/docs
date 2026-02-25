@@ -1,4 +1,4 @@
----
+﻿---
 id: st-get-expression
 title: ST Get expression
 slug: /commands/st-get-expression
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 The command returns the label of the expression as it was inserted into the object (for example "mymethod" or "\[table1\]field1"). The current value of the expression is not returned. 
 
-**Note:** This command returns "real" names for fields and tables, even if a "virtual" structure has been defined using [SET TABLE TITLES](set-table-titles.md) and [SET FIELD TITLES](set-field-titles.md) commands. 
+**Note:** This command returns "real" names for fields and tables, even if a "virtual" structure has been defined using [SET TABLE TITLES](../commands/set-table-titles) and [SET FIELD TITLES](../commands/set-field-titles) commands. 
 
 Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). During execution, if the object has the focus, the command returns the information of the object being edited; if the object does not have the focus, the command returns the information of the object’s data source (variable or field).  
 If you omit the *\** parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string. During execution, the command returns the information of the variable or field.
@@ -102,7 +102,7 @@ You want to execute a 4D method when a user link is clicked:
 
 ## See also 
 
-[ST INSERT EXPRESSION](st-insert-expression.md)  
+[ST INSERT EXPRESSION](../commands/st-insert-expression)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: set-list-item
 title: SET LIST ITEM
 slug: /commands/set-list-item
@@ -39,7 +39,7 @@ displayed_sidebar: docs
 Si vous passez le premier paramètre optionnel *\**, vous indiquez que le paramètre *liste* est un nom d’objet (chaîne) correspondant à une représentation de liste dans le formulaire. Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *liste* est une référence de liste hiérarchique ([RéfListe](# "Expression de type Entier long identifiant de façon unique une liste hiérarchique")). Si vous utilisez une seule représentation de liste ou travaillez avec les éléments structurels (le second *\** est omis), vous pouvez utiliser indifféremment l’une ou l’autre syntaxe. En revanche, si vous utilisez plusieurs représentations d’une même liste et travaillez avec l’élément courant (le second *\** est passé), la syntaxe basée sur le nom d’objet est requise car chaque représentation peut disposer de son propre élément courant.
 
 Vous pouvez passer un numéro de référence dans *réfElément*. Si ce numéro ne correspond à aucun élément de la liste, la commande ne fait rien.   
-Vous pouvez également passer *0* dans *réfElément* afin de désigner le dernier élément ajouté à la liste (à l'aide de [APPEND TO LIST](append-to-list.md)).   
+Vous pouvez également passer *0* dans *réfElément* afin de désigner le dernier élément ajouté à la liste (à l'aide de [APPEND TO LIST](../commands/append-to-list)).   
 Vous pouvez enfin passer *\** dans *réfElément* : dans ce cas, la commande s’appliquera à l’élément courant de la liste. Si plusieurs éléments sont sélectionnés manuellement, l’élément courant est celui qui a été sélectionné en dernier. Si aucun élément n’est sélectionné, la commande ne fait rien.
 
 Si vous travaillez avec les numéros de référence des éléments, assurez-vous d'utiliser des numéros uniques, sinon vous ne pourrez pas différencier les éléments. Pour plus d'informations sur ce point, reportez-vous à la section *Gestion des listes hiérarchiques*.
@@ -48,7 +48,7 @@ Vous pouvez passer le nouveau libellé de l'élément dans le paramètre *libell
 
 Si vous voulez associer une sous-liste à l'élément, passez le numéro de référence de la sous-liste dans le paramètre *sous\_Liste*. Dans ce cas, vous devez également spécifier si la nouvelle sous-liste devra apparaître déployée ou contractée en passant respectivement Vrai ou Faux dans le paramètre *déployée*.
 
-Si vous voulez dissocier de l'élément une sous-liste qui lui est actuellement rattachée, passez *0* (zéro) dans *sous\_Liste*. Dans ce cas, il est conseillé d'avoir préalablement obtenu le numéro de référence de cette liste à l'aide de la commande [APPEND TO LIST](append-to-list.md), afin de pouvoir effacer la sous-liste avec la commande [CLEAR LIST](clear-list.md) si vous n'en avez plus besoin.
+Si vous voulez dissocier de l'élément une sous-liste qui lui est actuellement rattachée, passez *0* (zéro) dans *sous\_Liste*. Dans ce cas, il est conseillé d'avoir préalablement obtenu le numéro de référence de cette liste à l'aide de la commande [APPEND TO LIST](../commands/append-to-list), afin de pouvoir effacer la sous-liste avec la commande [CLEAR LIST](../commands/clear-list) si vous n'en avez plus besoin.
 
 Si vous ne souhaitez pas modifier les propriétés de sous-liste de l'élément, passez *\-1* dans le paramètre *sous\_Liste*.
 
@@ -75,19 +75,19 @@ Nous supposons que *hList* est une liste dont les éléments ont des numéros de
 
 ## Exemple 2 
 
-Reportez-vous à l'exemple de la commande [GET LIST ITEM](get-list-item.md).   
+Reportez-vous à l'exemple de la commande [GET LIST ITEM](../commands/get-list-item).   
 
 ## Exemple 3 
 
-Reportez-vous à l'exemple de la commande [APPEND TO LIST](append-to-list.md).
+Reportez-vous à l'exemple de la commande [APPEND TO LIST](../commands/append-to-list).
 
 ## Voir aussi 
 
-[GET LIST ITEM](get-list-item.md)  
-[GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
-[SET LIST ITEM FONT](set-list-item-font.md)  
-[SET LIST ITEM ICON](set-list-item-icon.md)  
-[SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+[GET LIST ITEM](../commands/get-list-item)  
+[GET LIST ITEM PROPERTIES](../commands/get-list-item-properties)  
+[SET LIST ITEM FONT](../commands/set-list-item-font)  
+[SET LIST ITEM ICON](../commands/set-list-item-icon)  
+[SET LIST ITEM PROPERTIES](../commands/set-list-item-properties)  
 
 ## Propriétés
 

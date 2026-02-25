@@ -1,4 +1,4 @@
----
+﻿---
 id: resolve-alias
 title: RESOLVE ALIAS
 slug: /commands/resolve-alias
@@ -44,7 +44,7 @@ Si *cheminAlias* désigne bien un alias/raccourci, la variable système OK prend
 
 ## Voir aussi 
 
-[CREATE ALIAS](create-alias.md)  
+[CREATE ALIAS](../commands/create-alias)  
 
 ## Propriétés
 

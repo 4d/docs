@@ -1,4 +1,4 @@
----
+﻿---
 id: before-selection
 title: Before selection
 slug: /commands/before-selection
@@ -18,11 +18,11 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Before selection.Summary-->La fonction **Before selection** retourne Vrai lorsque le pointeur d'enregistrement courant se trouve avant le premier enregistrement de la sélection courante de *laTable*.<!-- END REF-->est généralement utilisée pour vérifier si la commande [PREVIOUS RECORD](previous-record.md) a déplacé le pointeur d'enregistrement courant avant le premier enregistrement. Si la sélection courante est vide, **Before selection** retourne Vrai.
+<!--REF #_command_.Before selection.Summary-->La fonction **Before selection** retourne Vrai lorsque le pointeur d'enregistrement courant se trouve avant le premier enregistrement de la sélection courante de *laTable*.<!-- END REF-->est généralement utilisée pour vérifier si la commande [PREVIOUS RECORD](../commands/previous-record) a déplacé le pointeur d'enregistrement courant avant le premier enregistrement. Si la sélection courante est vide, **Before selection** retourne Vrai.
 
-Pour replacer le pointeur d'enregistrement courant dans la sélection courante, utilisez les commandes [FIRST RECORD](first-record.md), [LAST RECORD](last-record.md) ou [GOTO SELECTED RECORD](goto-selected-record.md). [NEXT RECORD](next-record.md) ne replace pas le pointeur d'enregistrement courant dans la sélection courante.
+Pour replacer le pointeur d'enregistrement courant dans la sélection courante, utilisez les commandes [FIRST RECORD](../commands/first-record), [LAST RECORD](../commands/last-record) ou [GOTO SELECTED RECORD](../commands/goto-selected-record). [NEXT RECORD](../commands/next-record) ne replace pas le pointeur d'enregistrement courant dans la sélection courante.
 
-**Before selection** retourne Vrai dans l'en-tête lorsqu'un état est en cours d'impression à l'aide de la commande [PRINT SELECTION](print-selection.md) ou à partir de la commande de menu Imprimer. Vous pouvez utiliser le code suivant pour tester le premier en-tête et imprimer un en-tête spécial pour la première page :
+**Before selection** retourne Vrai dans l'en-tête lorsqu'un état est en cours d'impression à l'aide de la commande [PRINT SELECTION](../commands/print-selection) ou à partir de la commande de menu Imprimer. Vous pouvez utiliser le code suivant pour tester le premier en-tête et imprimer un en-tête spécial pour la première page :
 
 ```4d
   // Méthode d'un formulaire sortie utilisé pour un état
@@ -60,11 +60,11 @@ La méthode formulaire suivante est utilisée pendant l'impression d'un état. E
 
 ## Voir aussi 
 
-[End selection](end-selection.md)  
-[FIRST RECORD](first-record.md)  
+[End selection](../commands/end-selection)  
+[FIRST RECORD](../commands/first-record)  
 [Form event code](../commands/form-event-code)  
-[PREVIOUS RECORD](previous-record.md)  
-[PRINT SELECTION](print-selection.md)  
+[PREVIOUS RECORD](../commands/previous-record)  
+[PRINT SELECTION](../commands/print-selection)  
 
 ## Propriétés
 

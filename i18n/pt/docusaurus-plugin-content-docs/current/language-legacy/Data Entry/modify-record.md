@@ -1,4 +1,4 @@
----
+﻿---
 id: modify-record
 title: MODIFY RECORD
 slug: /commands/modify-record
@@ -37,7 +37,7 @@ Se estiver utilizando MODIFY RECORD e o usuário não realiza nenhuma modificaç
 
 ## Exemplos 
 
-Ver o exemplo do comando [ADD RECORD](add-record.md).
+Ver o exemplo do comando [ADD RECORD](../commands/add-record).
 
 ## Variáveis e conjuntos do sistema 
 
@@ -45,11 +45,11 @@ A variável sistema OK toma o valor 1 se aceitar o registro e 0 se o cancelar. A
 
 ## Ver também 
 
-[ADD RECORD](add-record.md)  
-[Locked](locked.md)  
-[Modified record](modified-record.md)  
-[READ WRITE](read-write.md)  
-[UNLOAD RECORD](unload-record.md)  
+[ADD RECORD](../commands/add-record)  
+[Locked](../commands/locked)  
+[Modified record](../commands/modified-record)  
+[READ WRITE](../commands/read-write)  
+[UNLOAD RECORD](../commands/unload-record)  
 
 ## Propriedades
 

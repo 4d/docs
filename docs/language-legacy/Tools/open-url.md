@@ -1,4 +1,4 @@
----
+﻿---
 id: open-url
 title: OPEN URL
 slug: /commands/open-url
@@ -94,7 +94,7 @@ The *appName* parameter lets you open the same text file using different applica
 
 ## See also 
 
-[LAUNCH EXTERNAL PROCESS](launch-external-process.md)  
+[LAUNCH EXTERNAL PROCESS](../commands/launch-external-process)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-text-orientation
 title: OBJECT SET TEXT ORIENTATION
 slug: /commands/object-set-text-orientation
@@ -60,7 +60,7 @@ Deseja aplicar uma orientação de 270° a uma variável em seu formulário:
 
 ## Ver também 
 
-[OBJECT Get text orientation](object-get-text-orientation.md)  
+[OBJECT Get text orientation](../commands/object-get-text-orientation)  
 
 ## Propriedades
 

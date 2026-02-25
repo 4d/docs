@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-visible
 title: OBJECT Get visible
 slug: /commands/object-get-visible
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT SET VISIBLE](object-set-visible.md)  
+[OBJECT SET VISIBLE](../commands/object-set-visible)  
 
 ## プロパティ
 

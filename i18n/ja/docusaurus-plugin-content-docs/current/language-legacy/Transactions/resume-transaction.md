@@ -1,4 +1,4 @@
----
+﻿---
 id: resume-transaction
 title: RESUME TRANSACTION
 slug: /commands/resume-transaction
@@ -26,14 +26,14 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.RESUME TRANSACTION.Summary-->**RESUME TRANSACTION**コマンドは、カレントプロセスの同レベルにおいて [SUSPEND TRANSACTION](suspend-transaction.md) によって停止していたトランザクションを再開させます。<!-- END REF-->このコマンド後に実行されたオペレーションはトランザクションコントロール下で実行されます (ただし複数の停止されていたトランザクションがネストされていた場合を除きます)。
+<!--REF #_command_.RESUME TRANSACTION.Summary-->**RESUME TRANSACTION**コマンドは、カレントプロセスの同レベルにおいて [SUSPEND TRANSACTION](../commands/suspend-transaction) によって停止していたトランザクションを再開させます。<!-- END REF-->このコマンド後に実行されたオペレーションはトランザクションコントロール下で実行されます (ただし複数の停止されていたトランザクションがネストされていた場合を除きます)。
 
 詳細については、 *トランザクションの停止* を参照ください。
 
 ## 参照 
 
-[Active transaction](active-transaction.md)  
-[SUSPEND TRANSACTION](suspend-transaction.md)  
+[Active transaction](../commands/active-transaction)  
+[SUSPEND TRANSACTION](../commands/suspend-transaction)  
 *トランザクションの停止*  
 
 ## プロパティ

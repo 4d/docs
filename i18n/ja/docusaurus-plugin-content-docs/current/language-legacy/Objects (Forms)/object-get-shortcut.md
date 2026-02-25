@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-shortcut
 title: OBJECT GET SHORTCUT
 slug: /commands/object-get-shortcut
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 オプションの *\** 引数を渡すと、*object* 引数はオブジェクト名 (文字列) です。この引数を渡さない場合、*object* は変数であり、文字列ではなく変数参照を渡します。
 
-*key* 引数にはそのオブジェクトに割り当てられたキー (標準キーの場合)、またはキーの値を示すブラケットで囲まれた文字列 (ファンクションキーの場合) が返されます。この値を*Shortcut and Associated Keys*テーマの定数と比較できます ([OBJECT SET SHORTCUT](object-set-shortcut.md)コマンド参照)。
+*key* 引数にはそのオブジェクトに割り当てられたキー (標準キーの場合)、またはキーの値を示すブラケットで囲まれた文字列 (ファンクションキーの場合) が返されます。この値を*Shortcut and Associated Keys*テーマの定数と比較できます ([OBJECT SET SHORTCUT](../commands/object-set-shortcut)コマンド参照)。
 
 *modifiers* 引数にはそのショートカットに関連付けられたモディファイアーキーを表す値が返されます。複数のモディファイアーキーが組み合わせて指定されている場合、コマンドはその合計値を返します。この値を*Events (Modifiers)*テーマの以下の定数と比較できます:
 
@@ -51,7 +51,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT SET SHORTCUT](object-set-shortcut.md)  
+[OBJECT SET SHORTCUT](../commands/object-set-shortcut)  
 
 ## プロパティ
 

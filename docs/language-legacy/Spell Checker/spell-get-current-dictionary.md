@@ -1,4 +1,4 @@
----
+﻿---
 id: spell-get-current-dictionary
 title: SPELL Get current dictionary
 slug: /commands/spell-get-current-dictionary
@@ -44,7 +44,7 @@ We want to display the language of the current dictionary:
 
 ## See also 
 
-[SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md)  
+[SPELL SET CURRENT DICTIONARY](../commands/spell-set-current-dictionary)  
 
 ## Properties
 

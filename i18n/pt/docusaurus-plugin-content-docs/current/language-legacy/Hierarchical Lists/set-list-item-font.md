@@ -1,4 +1,4 @@
----
+﻿---
 id: set-list-item-font
 title: SET LIST ITEM FONT
 slug: /commands/set-list-item-font
@@ -36,7 +36,7 @@ Se passa o primeiro parâmetro opcional \*, indica que o parâmetro *lista* é u
 
 Por último, pode passar \* no *refElem*: neste caso, o comando se aplicará ao elemento atual da lista. Se vários elementos se selecionam manualmente, o elemento atual é aquele que foi selecionado de último. Se nenhum elemento está selecionado, o comando não faz nada.
 
-Pode passar um número de referência em *refElem*. Se este número não corresponde a nenhum elemento da lista, o comando não faz nada. Também pode passar 0 em *refElem* para obter a fonte do último elemento adicionado à lista (utilizando [APPEND TO LIST](append-to-list.md)).
+Pode passar um número de referência em *refElem*. Se este número não corresponde a nenhum elemento da lista, o comando não faz nada. Também pode passar 0 em *refElem* para obter a fonte do último elemento adicionado à lista (utilizando [APPEND TO LIST](../commands/append-to-list)).
 
 Finalmente, pode passar \* em *refElem*: neste caso, o comando se aplicará ao elemento atual da lista. Se vários elementos são selecionados manualmente, o elemento atual é o último selecionado. Se nenhum elemento estiver selecionado, o comando não faz nada.  
   
@@ -52,10 +52,10 @@ Aplicar a fonte Times ao elemento atual da lista:
 
 ## Ver também 
 
-[Get list item font](get-list-item-font.md)  
-[OBJECT SET FONT](object-set-font.md)  
-[SET LIST ITEM](set-list-item.md)  
-[SET LIST ITEM ICON](set-list-item-icon.md)  
+[Get list item font](../commands/get-list-item-font)  
+[OBJECT SET FONT](../commands/object-set-font)  
+[SET LIST ITEM](../commands/set-list-item)  
+[SET LIST ITEM ICON](../commands/set-list-item-icon)  
 
 ## Propriedades
 

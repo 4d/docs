@@ -1,4 +1,4 @@
----
+﻿---
 id: http-get-certificates-folder
 title: HTTP Get certificates folder
 slug: /commands/http-get-certificates-folder
@@ -49,7 +49,7 @@ Usted quiere cambiar temporalmente la carpeta de certificados:
 
 ## Ver también 
 
-[HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md)  
+[HTTP SET CERTIFICATES FOLDER](../commands/http-set-certificates-folder)  
 
 ## Propiedades
 

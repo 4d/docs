@@ -1,4 +1,4 @@
----
+﻿---
 id: activity-snapshot
 title: ACTIVITY SNAPSHOT
 slug: /commands/activity-snapshot
@@ -63,7 +63,7 @@ Esta es un descripción de cada propiedad devuelta:
    * *client\_uid* (cadena): opcional, uuid del cliente que lanzó la operación  
    * *is\_remote\_context* (booleano, 0 o 1): opcional, indica si la operación de la base fue lanzada por un cliente (valor 1) o por el servidor por medio del procedimiento almacenado (valor 0)  
    * *user4d\_id* (num): número del ID del usuario 4D actual del lado del cliente  
-   * *client\_version* (cadena): cuatro dígitos representan la versión del motor 4D de la aplicación, como los devolvió el comando [Application version](application-version.md).  
+   * *client\_version* (cadena): cuatro dígitos representan la versión del motor 4D de la aplicación, como los devolvió el comando [Application version](../commands/application-version).  
 **Nota:** client\_uid and is\_remote\_context sólo está disponible en modo cliente/servidor. client\_uid sólo se devuelve si la operación de la base de datos se inició en un equipo cliente.
 * *dbOperationDetails* (objeto): propiedad devuelta únicamente si la operación llama al motor de base de datos (este es el caso, por ejemplo, para búsqueda y ordenaciones). Este es un objeto que contiene información específica relacionada con la operación en sí. Las propiedades disponibles dependen del tipo de la operación de base de datos realizada. Más específicamente, estas propiedades incluyen:  
    * table (cadena): nombre de la tabla implicado en la operación  

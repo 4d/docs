@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-title
 title: OBJECT SET TITLE
 slug: /commands/object-set-title
@@ -53,7 +53,7 @@ displayed_sidebar: docs
 
 ## 例題 1 
 
-以下の例は、[MODIFY SELECTION](modify-selection.md)を使用して表示された出力フォームのフッタエリアにある検索ボタンのオブジェクトメソッドです。このメソッドはテーブルを検索し、その検索結果に応じて*bDelete*ボタンを使用可または不可にして、そのボタンタイトルを変更します:
+以下の例は、[MODIFY SELECTION](../commands/modify-selection)を使用して表示された出力フォームのフッタエリアにある検索ボタンのオブジェクトメソッドです。このメソッドはテーブルを検索し、その検索結果に応じて*bDelete*ボタンを使用可または不可にして、そのボタンタイトルを変更します:
 
 ```4d
  QUERY([People];[People]Name=vName)
@@ -84,7 +84,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT Get title](object-get-title.md)  
+[OBJECT Get title](../commands/object-get-title)  
 
 ## プロパティ
 

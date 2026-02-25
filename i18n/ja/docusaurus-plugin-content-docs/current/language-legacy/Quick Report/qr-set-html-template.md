@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-html-template
 title: QR SET HTML TEMPLATE
 slug: /commands/qr-set-html-template
@@ -80,7 +80,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[QR Get HTML template](qr-get-html-template.md)  
+[QR Get HTML template](../commands/qr-get-html-template)  
 
 ## プロパティ
 

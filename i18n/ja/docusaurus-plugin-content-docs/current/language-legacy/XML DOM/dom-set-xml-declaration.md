@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-set-xml-declaration
 title: DOM SET XML DECLARATION
 slug: /commands/dom-set-xml-declaration
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 * *encoding*: ドキュメント中で使用されるエンコーディングを指定します。デフォルトで (コマンドが呼び出されないと) UTF-8文字セットが使用されます。  
 **注:** 4D XMLコマンドによってサポートされていないエンコーディングを渡した場合、UTF-8が使用されます。サポートされている文字コードの一覧については*文字セット* を参照して下さい(ただし、多くの場合においてUTF-8が推奨されます)。
 * *standalone*: ツリーがスタンドアロン ([True](true.md "True")) か、それが他のファイルや外部リソースを処理のために必要とするか ([False](false.md "False")) を指定します。デフォルトで (コマンドが呼び出されないか引数が省略されると) 、ツリーはスタンドアロンではありません。
-**互換性に関するメモ:** *indentation*引数は以前のバージョンの4Dとの互換性のために保持されていますが、その利用はv12では推奨されません。今後ドキュメントのインデントを指定するには、[XML SET OPTIONS](xml-set-options.md) コマンドの利用を強く推奨します。
+**互換性に関するメモ:** *indentation*引数は以前のバージョンの4Dとの互換性のために保持されていますが、その利用はv12では推奨されません。今後ドキュメントのインデントを指定するには、[XML SET OPTIONS](../commands/xml-set-options) コマンドの利用を強く推奨します。
 
 ## 例題 
 
@@ -49,8 +49,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[DOM Create XML Ref](dom-create-xml-ref.md)  
-[XML SET OPTIONS](xml-set-options.md)  
+[DOM Create XML Ref](../commands/dom-create-xml-ref)  
+[XML SET OPTIONS](../commands/xml-set-options)  
 
 ## プロパティ
 

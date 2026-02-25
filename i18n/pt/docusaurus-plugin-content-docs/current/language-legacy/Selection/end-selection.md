@@ -1,4 +1,4 @@
----
+﻿---
 id: end-selection
 title: End selection
 slug: /commands/end-selection
@@ -18,11 +18,11 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.End selection.Summary-->End selection retorna TRUE quando o ponteiro do registro atual está além do último registro da seleção atual de tabela.<!-- END REF--> End selection se utiliza geralmente para testar se a chamada ao comando [NEXT RECORD](next-record.md) ha movido ou não o ponteiro do registro atual detrás do último registro da seleção. Se a seleção atual está vazia, End selection retorna TRUE.  
+<!--REF #_command_.End selection.Summary-->End selection retorna TRUE quando o ponteiro do registro atual está além do último registro da seleção atual de tabela.<!-- END REF--> End selection se utiliza geralmente para testar se a chamada ao comando [NEXT RECORD](../commands/next-record) ha movido ou não o ponteiro do registro atual detrás do último registro da seleção. Se a seleção atual está vazia, End selection retorna TRUE.  
   
-Para mover o ponteiro do registro atual dentro da seleção, utilize [FIRST RECORD](first-record.md), [LAST RECORD](last-record.md) ou [GOTO SELECTED RECORD](goto-selected-record.md). [PREVIOUS RECORD](previous-record.md) não mova o ponteiro à seleção.  
+Para mover o ponteiro do registro atual dentro da seleção, utilize [FIRST RECORD](../commands/first-record), [LAST RECORD](../commands/last-record) ou [GOTO SELECTED RECORD](../commands/goto-selected-record). [PREVIOUS RECORD](../commands/previous-record) não mova o ponteiro à seleção.  
   
-End selection retorna também TRUE quando o último rodapé de um relatório se imprime com [PRINT SELECTION](print-selection.md) ou desde o menu Imprimir. Pode utilizar o seguinte código para testar o último rodapé e imprimir um rodapé especial para a última página:  
+End selection retorna também TRUE quando o último rodapé de um relatório se imprime com [PRINT SELECTION](../commands/print-selection) ou desde o menu Imprimir. Pode utilizar o seguinte código para testar o último rodapé e imprimir um rodapé especial para a última página:  
 
 ```4d
   // Método de um formulário de saída utilizado para imprimir um relatório $vpFormTabela:=Current form table
@@ -57,11 +57,11 @@ Este método de formulário é utilizado durante a impressão de um relatório. 
 
 ## Ver também 
 
-[Before selection](before-selection.md)  
+[Before selection](../commands/before-selection)  
 [Form event code](../commands/form-event-code)  
-[LAST RECORD](last-record.md)  
-[NEXT RECORD](next-record.md)  
-[PRINT SELECTION](print-selection.md)  
+[LAST RECORD](../commands/last-record)  
+[NEXT RECORD](../commands/next-record)  
+[PRINT SELECTION](../commands/print-selection)  
 
 ## Propriedades
 

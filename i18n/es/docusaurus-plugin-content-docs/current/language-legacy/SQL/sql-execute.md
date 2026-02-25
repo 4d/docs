@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-execute
 title: SQL EXECUTE
 slug: /commands/sql-execute
@@ -168,7 +168,7 @@ Si el comando se ejecuta correctamente, la variable sistema OK devuelve 1, de lo
 
 ## Ver también 
 
-[SQL LOAD RECORD](sql-load-record.md)  
+[SQL LOAD RECORD](../commands/sql-load-record)  
 
 ## Propiedades
 

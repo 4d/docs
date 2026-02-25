@@ -1,4 +1,4 @@
----
+﻿---
 id: print-settings
 title: PRINT SETTINGS
 slug: /commands/print-settings
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.PRINT SETTINGS.Summary-->La commande **PRINT SETTINGS** provoque l'affichage d'une boîte de dialogue d'impression.<!-- END REF--> Cette commande doit être appelée avant une série de commandes [Print form](../commands/print-form) ou la commande [OPEN PRINTING JOB](open-printing-job.md).
+<!--REF #_command_.PRINT SETTINGS.Summary-->La commande **PRINT SETTINGS** provoque l'affichage d'une boîte de dialogue d'impression.<!-- END REF--> Cette commande doit être appelée avant une série de commandes [Print form](../commands/print-form) ou la commande [OPEN PRINTING JOB](../commands/open-printing-job).
 
 Le paramètre facultatif *typeDial* permet de configurer l’affichage de la boîte de dialogue d’impression. Vous pouvez utiliser l'une des constantes suivantes du thème *Options d'impression* :
 
@@ -38,7 +38,7 @@ Le paramètre facultatif *typeDial* permet de configurer l’affichage de la bo�
 | Page setup dialog | 1      | Affichage de la boîte de dialogue Format d'impression               |
 | Print dialog      | 2      | Affichage de la boîte de dialogue d'impression (par défaut si omis) |
 
-**Note :** La boîte de dialogue d'impression comporte l'option **Imprimer à l'écran** permettant à l'utilisateur de visualiser son impression à l'écran. Vous pouvez présélectionner ou désélectionner cette option par un appel préalable à la commande [SET PRINT PREVIEW](set-print-preview.md).
+**Note :** La boîte de dialogue d'impression comporte l'option **Imprimer à l'écran** permettant à l'utilisateur de visualiser son impression à l'écran. Vous pouvez présélectionner ou désélectionner cette option par un appel préalable à la commande [SET PRINT PREVIEW](../commands/set-print-preview).
 
 ## Exemple 
 
@@ -50,10 +50,10 @@ Si l'utilisateur clique sur le bouton OK dans chaque boîte de dialogue, la vari
 
 ## Voir aussi 
 
-[OPEN PRINTING JOB](open-printing-job.md)  
-[PAGE BREAK](page-break.md)  
+[OPEN PRINTING JOB](../commands/open-printing-job)  
+[PAGE BREAK](../commands/page-break)  
 [Print form](../commands/print-form)  
-[SET PRINT PREVIEW](set-print-preview.md)  
+[SET PRINT PREVIEW](../commands/set-print-preview)  
 
 ## Propriétés
 

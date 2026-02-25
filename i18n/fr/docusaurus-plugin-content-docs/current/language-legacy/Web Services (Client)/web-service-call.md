@@ -1,4 +1,4 @@
----
+﻿---
 id: web-service-call
 title: WEB SERVICE CALL
 slug: /commands/web-service-call
@@ -35,14 +35,14 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.WEB SERVICE CALL.Summary-->La commande **WEB SERVICE CALL** permet d’invoquer un Web Service en envoyant une requête HTTP.<!-- END REF--> Cette requête contient le message SOAP préalablement construit à l’aide de la commande [WEB SERVICE SET PARAMETER](web-service-set-parameter.md). 
+<!--REF #_command_.WEB SERVICE CALL.Summary-->La commande **WEB SERVICE CALL** permet d’invoquer un Web Service en envoyant une requête HTTP.<!-- END REF--> Cette requête contient le message SOAP préalablement construit à l’aide de la commande [WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter). 
 
-Tout appel ultérieur à la commande [WEB SERVICE SET PARAMETER](web-service-set-parameter.md) provoquera la construction d’une nouvelle requête. L’exécution d’une commande **WEB SERVICE CALL** efface également tout éventuel résultat de Web Service précédemment appelé et le remplace par le(s) nouveau(x) résultats. 
+Tout appel ultérieur à la commande [WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter) provoquera la construction d’une nouvelle requête. L’exécution d’une commande **WEB SERVICE CALL** efface également tout éventuel résultat de Web Service précédemment appelé et le remplace par le(s) nouveau(x) résultats. 
 
 Passez dans *urlAccès* l’URL complet permettant d’accéder au Web Service (ne confondez pas cet URL avec celui du fichier WSDL, décrivant le Web Service). 
 
 * **Accès en mode sécurisé (SSL)** : Si vous souhaitez utiliser le Web Service en mode sécurisé (SSL), passez simplement https:// en tête de l’URL au lieu de http://. Ce paramétrage active automatiquement la connexion en mode sécurisé.  
-A noter que cette commande peut utiliser un certificat serveur (cf. commande [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md)). Si le certificat n’est pas valide (expiré ou révoqué), la variable système OK prend la valeur 0 et l’erreur 901 "Certificat serveur invalide" est retournée. Vous pouvez intercepter cette erreur à l’aide d’une méthode d’appel sur erreur installée par la commande [ON ERR CALL](on-err-call.md).
+A noter que cette commande peut utiliser un certificat serveur (cf. commande [HTTP SET CERTIFICATES FOLDER](../commands/http-set-certificates-folder)). Si le certificat n’est pas valide (expiré ou révoqué), la variable système OK prend la valeur 0 et l’erreur 901 "Certificat serveur invalide" est retournée. Vous pouvez intercepter cette erreur à l’aide d’une méthode d’appel sur erreur installée par la commande [ON ERR CALL](../commands/on-err-call).
 
 Passez dans le paramètre *soapAction* le contenu du champ SOAPAction de la requête. Ce champ contient généralement la valeur “NomService#NomMéthode”. 
 
@@ -50,7 +50,7 @@ Passez dans le paramètre *nomMéthode* le nom de la méthode distante (apparten
 
 Passez dans le paramètre *nameSpace* l’espace de nommage XML utilisé pour la requête SOAP. Pour plus d’informations sur l’espace de nommage XML, reportez-vous au manuel *Mode Développement* de 4D.
 
-Le paramètre optionnel *typeComposé* permet d'indiquer la configuration des paramètres Web Service envoyés ou reçus (définis à l’aide des commandes [WEB SERVICE SET PARAMETER](web-service-set-parameter.md) et [WEB SERVICE GET RESULT](web-service-get-result.md)). La valeur du paramètre *typeComposé* dépend du mode de publication du Web Service (DOC ou RPC, cf. manuel *Mode Développement*) et de ses paramètres.   
+Le paramètre optionnel *typeComposé* permet d'indiquer la configuration des paramètres Web Service envoyés ou reçus (définis à l’aide des commandes [WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter) et [WEB SERVICE GET RESULT](../commands/web-service-get-result)). La valeur du paramètre *typeComposé* dépend du mode de publication du Web Service (DOC ou RPC, cf. manuel *Mode Développement*) et de ses paramètres.   
 Vous devez passer dans *typeComposé* l’une des constantes suivantes, placées dans le thème *Web Services (Client)* :
 
 | Constante              | Type        | Valeur |
@@ -83,11 +83,11 @@ Les cinq configurations décrites ci-dessous peuvent donc être mises en oeuvre.
 
 Cette configuration est la plus simple à utiliser. Dans ce cas, le paramètre *typeComposé* contient la constante Web Service dynamic ou est omis.   
 Les paramètres envoyés et les réponses reçues peuvent être manipulés directement, sans traitement préalable.   
-Reportez-vous à l’exemple de la commande [WEB SERVICE GET RESULT](web-service-get-result.md).
+Reportez-vous à l’exemple de la commande [WEB SERVICE GET RESULT](../commands/web-service-get-result).
 
 ### Mode RPC, entrée composée et sortie simple 
 
-Dans ce cas, le paramètre *typeComposé* contient la constante Web Service manual in. Avec cette configuration, vous devez passer “manuellement” au Web Service chaque élément xml source sous la forme d'un BLOB, à l’aide de la commande [WEB SERVICE SET PARAMETER](web-service-set-parameter.md).  
+Dans ce cas, le paramètre *typeComposé* contient la constante Web Service manual in. Avec cette configuration, vous devez passer “manuellement” au Web Service chaque élément xml source sous la forme d'un BLOB, à l’aide de la commande [WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter).  
 Il vous appartient de formater le BLOB initial sous forme d’élément xml valide. Ce BLOB doit contenir comme premier élément le premier élément “fils” supposé de l’élément <Body> de la requête finale. 
 
 * Exemple
@@ -102,7 +102,7 @@ Il vous appartient de formater le BLOB initial sous forme d’élément xml vali
 
 ### Mode RPC, entrée simple et sortie composée 
 
-Dans ce cas, le paramètre *typeComposé* contient la constante Web Service manual out. Chaque paramètre de sortie sera retourné par le Web Service sous forme d’élément xml stocké dans un BLOB. Vous récupérez ce paramètre à l’aide de la commande [WEB SERVICE GET RESULT](web-service-get-result.md). Vous pourrez ensuite analyser le contenu du BLOB reçu à l’aide des commandes XML de 4D. 
+Dans ce cas, le paramètre *typeComposé* contient la constante Web Service manual out. Chaque paramètre de sortie sera retourné par le Web Service sous forme d’élément xml stocké dans un BLOB. Vous récupérez ce paramètre à l’aide de la commande [WEB SERVICE GET RESULT](../commands/web-service-get-result). Vous pourrez ensuite analyser le contenu du BLOB reçu à l’aide des commandes XML de 4D. 
 
 * Exemple
 
@@ -153,7 +153,7 @@ La méthode proxy sera appelée de la manière suivante : *$BlobXMLresult:=$prox
 * Ecrire la méthode permettant de placer les valeurs réelles des paramètres dans le code xml ; ce code doit ensuite être placé dans le BLOB *$BlobXMLparam*.
 * Pour l’analyse de la réponse, vous pouvez également utiliser un outil de test en ligne, ou tirer parti du WSDL qui spécifie les éléments retournés.
 
-Le paramètre *\** permet d'optimiser les appels. Lorsqu'il est passé, la commande ne referme pas la connexion utilisée par le process à l’issue de son exécution. Dans ce cas, l’appel suivant à [WEB SERVICE CALL](web-service-call.md) réutilise cette même connexion si le paramètre \* est passé, et ainsi de suite. Pour refermer la connexion, il suffit d’exécuter la commande [WEB SERVICE CALL](web-service-call.md) sans le paramètre \*. Ce mécanisme permet d’accélérer sensiblement les traitements en cas d’appels successifs de plusieurs Web Services sur le même serveur, notamment en configuration WAN (via Internet par exemple). A noter que ce mécanisme s’appuie sur le paramétrage “keep-alive” du serveur Web. Ce paramétrage définit généralement un nombre maximal de requêtes via une même connexion, et peut même les interdire. Si les requêtes [WEB SERVICE CALL](web-service-call.md) enchaînées dans la même connexion atteignent ce nombre maximal ou si les connexions keep-alive ne sont pas autorisées, 4D créera une nouvelle connexion pour chaque requête.
+Le paramètre *\** permet d'optimiser les appels. Lorsqu'il est passé, la commande ne referme pas la connexion utilisée par le process à l’issue de son exécution. Dans ce cas, l’appel suivant à [WEB SERVICE CALL](../commands/web-service-call) réutilise cette même connexion si le paramètre \* est passé, et ainsi de suite. Pour refermer la connexion, il suffit d’exécuter la commande [WEB SERVICE CALL](../commands/web-service-call) sans le paramètre \*. Ce mécanisme permet d’accélérer sensiblement les traitements en cas d’appels successifs de plusieurs Web Services sur le même serveur, notamment en configuration WAN (via Internet par exemple). A noter que ce mécanisme s’appuie sur le paramétrage “keep-alive” du serveur Web. Ce paramétrage définit généralement un nombre maximal de requêtes via une même connexion, et peut même les interdire. Si les requêtes [WEB SERVICE CALL](../commands/web-service-call) enchaînées dans la même connexion atteignent ce nombre maximal ou si les connexions keep-alive ne sont pas autorisées, 4D créera une nouvelle connexion pour chaque requête.
 
 ## Variables et ensembles système 
 
@@ -161,8 +161,8 @@ Si la requête est correctement acheminée et que le Web Service l’a acceptée
 
 ## Voir aussi 
 
-[WEB SERVICE GET RESULT](web-service-get-result.md)  
-[WEB SERVICE SET PARAMETER](web-service-set-parameter.md)  
+[WEB SERVICE GET RESULT](../commands/web-service-get-result)  
+[WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter)  
 
 ## Propriétés
 

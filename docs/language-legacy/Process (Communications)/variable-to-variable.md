@@ -1,4 +1,4 @@
----
+﻿---
 id: variable-to-variable
 title: VARIABLE TO VARIABLE
 slug: /commands/variable-to-variable
@@ -31,12 +31,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.VARIABLE TO VARIABLE.Summary-->The **VARIABLE TO VARIABLE** command writes the *dstVar* process variables (*dstVar2*, etc.) of the destination process whose number is passed in *process* using the values of the variables *srcVar1* *srcVar2*, etc.<!-- END REF-->
 
-**VARIABLE TO VARIABLE** has the same action as [SET PROCESS VARIABLE](set-process-variable.md), with the following differences: 
+**VARIABLE TO VARIABLE** has the same action as [SET PROCESS VARIABLE](../commands/set-process-variable), with the following differences: 
 
-* You pass source expressions to [SET PROCESS VARIABLE](set-process-variable.md), and therefore cannot pass an array as a whole. You must exclusively pass source variables to **VARIABLE TO VARIABLE**, and therefore can pass an array as a whole.
-* Each destination variable of [SET PROCESS VARIABLE](set-process-variable.md) can be a variable or an array element, but cannot be an array as a whole. Each destination variable of **VARIABLE TO VARIABLE** can be a variable or an array or an array element.
+* You pass source expressions to [SET PROCESS VARIABLE](../commands/set-process-variable), and therefore cannot pass an array as a whole. You must exclusively pass source variables to **VARIABLE TO VARIABLE**, and therefore can pass an array as a whole.
+* Each destination variable of [SET PROCESS VARIABLE](../commands/set-process-variable) can be a variable or an array element, but cannot be an array as a whole. Each destination variable of **VARIABLE TO VARIABLE** can be a variable or an array or an array element.
 
-**4D Server:** “Intermachine” process communication, provided by the commands [GET PROCESS VARIABLE](get-process-variable.md), [SET PROCESS VARIABLE](set-process-variable.md) and **VARIABLE TO VARIABLE**, is possible from client to server only. It is always a client process that reads or write the variables of a stored procedure. 
+**4D Server:** “Intermachine” process communication, provided by the commands [GET PROCESS VARIABLE](../commands/get-process-variable), [SET PROCESS VARIABLE](../commands/set-process-variable) and **VARIABLE TO VARIABLE**, is possible from client to server only. It is always a client process that reads or write the variables of a stored procedure. 
 
 For each couple of *dstVar;expr* variables, the source variable must be of a type compatible with the destination variable, otherwise you may end up with a meaningless value in the variable. In interpreted mode, if a destination variable does not exist, it is created and assigned with the type and value of the source variable.
 
@@ -52,7 +52,7 @@ The current process “pokes” the variables of the destination process—the d
 * Array of pointers
 * Two-dimensional arrays
 
-The destination process must be a user process; it cannot be a kernel process. If the destination process does not exist, an error is generated. You can catch this error using an error-handling method installed with [ON ERR CALL](on-err-call.md).
+The destination process must be a user process; it cannot be a kernel process. If the destination process does not exist, an error is generated. You can catch this error using an error-handling method installed with [ON ERR CALL](../commands/on-err-call).
 
 ## Example 
 
@@ -68,9 +68,9 @@ The following example reads a process array from the process indicated by *$vlPr
 
 ## See also 
 
-[GET PROCESS VARIABLE](get-process-variable.md)  
+[GET PROCESS VARIABLE](../commands/get-process-variable)  
 [Processes](../../Develop/processes.md)  
-[SET PROCESS VARIABLE](set-process-variable.md)  
+[SET PROCESS VARIABLE](../commands/set-process-variable)  
 
 ## Properties
 

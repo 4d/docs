@@ -1,4 +1,4 @@
----
+﻿---
 id: current-default-table
 title: Current default table
 slug: /commands/current-default-table
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Current default table.Summary-->**Current default table** retourne un pointeur vers la table qui a été passée au dernier appel de la commande [DEFAULT TABLE](default-table.md) pour le process courant.<!-- END REF-->
+<!--REF #_command_.Current default table.Summary-->**Current default table** retourne un pointeur vers la table qui a été passée au dernier appel de la commande [DEFAULT TABLE](../commands/default-table) pour le process courant.<!-- END REF-->
 
 ## Exemple 
 
@@ -29,9 +29,9 @@ La ligne de code suivante inscrit le nom de la table courante par défaut dans l
 
 ## Voir aussi 
 
-[DEFAULT TABLE](default-table.md)  
-[Table](table.md)  
-[Table name](table-name.md)  
+[DEFAULT TABLE](../commands/default-table)  
+[Table](../commands/table)  
+[Table name](../commands/table-name)  
 
 ## Propriétés
 

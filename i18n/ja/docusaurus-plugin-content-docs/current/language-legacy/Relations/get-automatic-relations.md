@@ -1,4 +1,4 @@
----
+﻿---
 id: get-automatic-relations
 title: GET AUTOMATIC RELATIONS
 slug: /commands/get-automatic-relations
@@ -41,9 +41,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[GET FIELD RELATION](get-field-relation.md)  
-[GET RELATION PROPERTIES](get-relation-properties.md)  
-[SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
+[GET FIELD RELATION](../commands/get-field-relation)  
+[GET RELATION PROPERTIES](../commands/get-relation-properties)  
+[SET AUTOMATIC RELATIONS](../commands/set-automatic-relations)  
 
 ## プロパティ
 

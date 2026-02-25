@@ -1,4 +1,4 @@
----
+﻿---
 id: list-to-array
 title: LIST TO ARRAY
 slug: /commands/list-to-array
@@ -40,7 +40,7 @@ If you do not set the array as an Alpha or Text type beforehand, LIST TO ARRAY c
 
 The optional *itemRefs* parameter (a numeric array) returns the list item reference numbers. 
 
-You can use LIST TO ARRAY to build an array based on the first level items of a list. However, this command does not allow you to work with any of the list's child items. When working with hierarchical lists, we recommend that you use the hierarchical lists commands, in particular [Load list](load-list.md).
+You can use LIST TO ARRAY to build an array based on the first level items of a list. However, this command does not allow you to work with any of the list's child items. When working with hierarchical lists, we recommend that you use the hierarchical lists commands, in particular [Load list](../commands/load-list).
 
 ## Example 1 
 
@@ -94,9 +94,9 @@ If you execute the following statement:
 
 ## See also 
 
-[ARRAY TO LIST](array-to-list.md)  
-[Load list](load-list.md)  
-[SAVE LIST](save-list.md)  
+[ARRAY TO LIST](../commands/array-to-list)  
+[Load list](../commands/load-list)  
+[SAVE LIST](../commands/save-list)  
 
 ## Properties
 

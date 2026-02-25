@@ -1,4 +1,4 @@
----
+﻿---
 id: get-database-localization
 title: Get database localization
 slug: /commands/get-database-localization
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 | 定数                       | 型    | 値 | コメント                                                                                              |
 | ------------------------ | ---- | - | ------------------------------------------------------------------------------------------------- |
-| Current localization     | 倍長整数 | 1 | アプリケーションのカレント言語: デフォルト言語または[SET DATABASE LOCALIZATION](set-database-localization.md)コマンドで設定された言語。 |
+| Current localization     | 倍長整数 | 1 | アプリケーションのカレント言語: デフォルト言語または[SET DATABASE LOCALIZATION](../commands/set-database-localization)コマンドで設定された言語。 |
 | Default localization     | 倍長整数 | 0 | Resourcesフォルダとシステム環境に基づき、4Dが起動時に自動で設定する言語 (変更不可)。                                                 |
 | Internal 4D localization | 倍長整数 | 3 | 並び替えやテキスト比較で4Dが使用する言語 (アプリケーションの環境設定で設定)。                                                         |
 | User system localization | 倍長整数 | 2 | システムのカレントユーザーが設定した言語                                                                              |
@@ -62,8 +62,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Localized document path](localized-document-path.md)  
-[SET DATABASE LOCALIZATION](set-database-localization.md)  
+[Localized document path](../commands/localized-document-path)  
+[SET DATABASE LOCALIZATION](../commands/set-database-localization)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: print-selection
 title: PRINT SELECTION
 slug: /commands/print-selection
@@ -34,8 +34,8 @@ displayed_sidebar: docs
   
 Por padrão, PRINT SELECTION mostra as caixas de diálogo de impressão (na versão 32-bits) ou a caixa de diálogo de Formato de Impressão (na versão 4D 64-bits), antes de imprimir. Se o usuário cancelar uma das caixas de diálogo de impressão, o comando se cancela e o relatório não se imprime. Pode eliminar estas caixas de diálogo utilizando o parâmetro opcional asterisco (\*) ou o parâmetro opcional “maior que” (>):
 
-• O parâmetro \* provoca um trabalho de impressão utilizando os parâmetros de impressão atuais (parâmetros por padrão ou aqueles definidos pelos comandos *\_o\_PAGE SETUP* ou [SET PRINT OPTION](set-print-option.md)).  
-• Além disso, o parâmetro > provoca um trabalho de impressão sem reiniciar os parâmetros de impressão atuais. Este parâmetro é útil para executar várias chamadas sucessivas a PRINT SELECTION (por exemplo ao interior de um loop) conservando os parâmetros de impressão personalizados previamente definidos. Para ver um exemplo de utilização deste parâmetro, consulte a descrição do comando [PRINT RECORD](print-record.md).
+• O parâmetro \* provoca um trabalho de impressão utilizando os parâmetros de impressão atuais (parâmetros por padrão ou aqueles definidos pelos comandos *\_o\_PAGE SETUP* ou [SET PRINT OPTION](../commands/set-print-option)).  
+• Além disso, o parâmetro > provoca um trabalho de impressão sem reiniciar os parâmetros de impressão atuais. Este parâmetro é útil para executar várias chamadas sucessivas a PRINT SELECTION (por exemplo ao interior de um loop) conservando os parâmetros de impressão personalizados previamente definidos. Para ver um exemplo de utilização deste parâmetro, consulte a descrição do comando [PRINT RECORD](../commands/print-record).
 
 Durante a impressão, o método de formulário de saída e os métodos de objeto do formulário se executam em função dos eventos selecionados nas propriedades dos formulários e dos objetos, no ambiente Desenho, assim como dos eventos gerados efetivamente:  
   
@@ -44,11 +44,11 @@ Durante a impressão, o método de formulário de saída e os métodos de objeto
  \* Um evento On Printing Break é gerado logo antes que uma área de quebra se imprima.  
  \* Um evento On Printing Footer é gerado logo antes que um pé de página se imprima.  
   
-Pode saber se PRINT SELECTION está imprimindo o primeiro cabeçalho provando [Before selection](before-selection.md) durante um evento On Header. Igualmente pode verificar o último pé de página, provando End selection durante um evento On Printing Footer. Para maior informação, consulte a descrição destes comandos, como também dos comandos [Form event code](../commands/form-event-code) e [Level ](level.md).  
+Pode saber se PRINT SELECTION está imprimindo o primeiro cabeçalho provando [Before selection](../commands/before-selection) durante um evento On Header. Igualmente pode verificar o último pé de página, provando End selection durante um evento On Printing Footer. Para maior informação, consulte a descrição destes comandos, como também dos comandos [Form event code](../commands/form-event-code) e [Level ](../commands/level).  
   
-Para imprimir uma seleção ordenada com subtotais ou quebras utilizando PRINT SELECTION, deve primeiro ordenar a seleção. Depois, em cada área de quebra do relatório, incluir uma variável com um método de objeto que atribui o subtotal à variável . Igualmente pode utilizar funções estatísticas e aritméticas como [Sum](sum.md) e [Average](average.md) para atribuir valores às variáveis. Para maior informação, consulte as descrições de [Subtotal](subtotal.md), [BREAK LEVEL](break-level.md) e [ACCUMULATE](accumulate.md).  
+Para imprimir uma seleção ordenada com subtotais ou quebras utilizando PRINT SELECTION, deve primeiro ordenar a seleção. Depois, em cada área de quebra do relatório, incluir uma variável com um método de objeto que atribui o subtotal à variável . Igualmente pode utilizar funções estatísticas e aritméticas como [Sum](../commands/sum) e [Average](../commands/average) para atribuir valores às variáveis. Para maior informação, consulte as descrições de [Subtotal](../commands/subtotal), [BREAK LEVEL](../commands/break-level) e [ACCUMULATE](../commands/accumulate).  
   
-**Aviso**: Não use [PAGE BREAK](page-break.md) com o comando PRINT SELECTION. [PAGE BREAK](page-break.md) é usada com o comando [Print form](../commands/print-form).  
+**Aviso**: Não use [PAGE BREAK](../commands/page-break) com o comando PRINT SELECTION. [PAGE BREAK](../commands/page-break) é usada com o comando [Print form](../commands/print-form).  
   
 Depois de um chamado a PRINT SELECTION, a variável OK toma o valor 1 se a impressão for completada. Se a impressão foi interrompida, a variável OK toma o valor 0 (zero) (por exemplo se o usuário clicar em Cancelar nas caixas de diálogo de impressão).  
   
@@ -59,7 +59,7 @@ Depois de um chamado a PRINT SELECTION, a variável OK toma o valor 1 se a impre
   
 ## Exemplo 
 
-O exemplo a seguir seleciona todos os registros na tabela \[Pessoas\]. O comando [DISPLAY SELECTION](display-selection.md) é então chamado para mostrar os registros e permitir ao usuário selecionar os registros a imprimir. Finalmente, utiliza os registros selecionados com o comando [USE SET](use-set.md), e os imprime com [PRINT SELECTION](print-selection.md):
+O exemplo a seguir seleciona todos os registros na tabela \[Pessoas\]. O comando [DISPLAY SELECTION](../commands/display-selection) é então chamado para mostrar os registros e permitir ao usuário selecionar os registros a imprimir. Finalmente, utiliza os registros selecionados com o comando [USE SET](../commands/use-set), e os imprime com [PRINT SELECTION](../commands/print-selection):
 
 ```4d
  ALL RECORDS([Pessoas]) // Seleção de todos os registros
@@ -70,10 +70,10 @@ O exemplo a seguir seleciona todos os registros na tabela \[Pessoas\]. O comando
 
 ## Ver também 
 
-[ACCUMULATE](accumulate.md)  
-[BREAK LEVEL](break-level.md)  
-[Level ](level.md)  
-[Subtotal](subtotal.md)  
+[ACCUMULATE](../commands/accumulate)  
+[BREAK LEVEL](../commands/break-level)  
+[Level ](../commands/level)  
+[Subtotal](../commands/subtotal)  
 
 ## Propriedades
 

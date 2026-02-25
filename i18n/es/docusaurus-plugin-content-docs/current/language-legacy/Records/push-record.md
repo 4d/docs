@@ -1,4 +1,4 @@
----
+﻿---
 id: push-record
 title: PUSH RECORD
 slug: /commands/push-record
@@ -44,7 +44,7 @@ El siguiente ejemplo apila el registro de un cliente:
 
 ## Ver también 
 
-[POP RECORD](pop-record.md)  
+[POP RECORD](../commands/pop-record)  
 *Uso de la pila de registros*  
 
 ## Propiedades

@@ -1,4 +1,4 @@
----
+﻿---
 id: object-duplicate
 title: OBJECT DUPLICATE
 slug: /commands/object-duplicate
@@ -66,12 +66,12 @@ Si le type de la variable est incompatible avec l’objet, la commande ne fait r
 
 Vous utilisez le paramètre *reliéA* dans deux cas :
 
-* mise à jour de l’ordre de saisie : dans ce cas, passez dans *reliéA* le nom de l’objet saisissable situé juste avant l’objet dupliqué. Si vous souhaitez que le nouvel objet devienne le premier objet dans l’ordre de saisie de la page, passez la constante Object First in entry order (cf. commande [OBJECT Get pointer](object-get-pointer.md)).
+* mise à jour de l’ordre de saisie : dans ce cas, passez dans *reliéA* le nom de l’objet saisissable situé juste avant l’objet dupliqué. Si vous souhaitez que le nouvel objet devienne le premier objet dans l’ordre de saisie de la page, passez la constante Object First in entry order (cf. commande [OBJECT Get pointer](../commands/object-get-pointer)).
 * association à un groupe de boutons radio : les boutons radios fonctionnent de façon coordonnée lorsqu’ils sont groupés. Si l’objet dupliqué est un bouton radio, passez dans *reliéA* le nom d’un bouton radio du groupe auquel rattacher le nouvel objet.
 
 Si vous omettez ce paramètre ou passez une chaîne vide, le nouvel objet devient le dernier objet saisissable de la page du formulaire. Dans le cas d’un bouton radio, l’objet est rattaché au groupe du bouton source. 
 
-Le nouvel objet peut être déplacé et redimensionné via les paramètres *dépH*, *dépV*, *redimH* et *redimV*. Comme pour la commande [OBJECT MOVE](object-move.md), le sens du déplacement ou du redimensionnement est défini par le signe des valeurs passées dans les paramètres *dépH* et *dépV* :
+Le nouvel objet peut être déplacé et redimensionné via les paramètres *dépH*, *dépV*, *redimH* et *redimV*. Comme pour la commande [OBJECT MOVE](../commands/object-move), le sens du déplacement ou du redimensionnement est défini par le signe des valeurs passées dans les paramètres *dépH* et *dépV* :
 
 * Si la valeur est positive, le déplacement ou le redimensionnement s’effectue respectivement vers la droite ou vers le bas.
 * Si la valeur est négative, le déplacement ou le redimensionnement s’effectue respectivement vers la gauche ou vers le haut.
@@ -87,7 +87,7 @@ Pour des raisons techniques et logiques, **OBJECT DUPLICATE** ne peut pas être 
 
 * Evénement On Load généré dans une méthode objet
 * Evénement On Unload.
-* Evénement lié à un contexte d’impression (On Header, On Printing Detail, etc.). Pour imprimer plusieurs fois un objet, vous devez utiliser la commande [Print object](print-object.md).
+* Evénement lié à un contexte d’impression (On Header, On Printing Detail, etc.). Pour imprimer plusieurs fois un objet, vous devez utiliser la commande [Print object](../commands/print-object).
 
 Lorsque la commande est appelée dans un contexte non pris en charge, l’objet n’est pas dupliqué et la variable OK prend la valeur 0\. Si elle est appelée dans un contexte d’impression, l’erreur -10601 est en outre générée.
 
@@ -111,8 +111,8 @@ Création d’un nouveau bouton radio "bRadio6" basé sur le bouton radio exista
 
 ## Voir aussi 
 
-[OBJECT Get pointer](object-get-pointer.md)  
-[OBJECT MOVE](object-move.md)  
+[OBJECT Get pointer](../commands/object-get-pointer)  
+[OBJECT MOVE](../commands/object-move)  
 *Objets de formulaire (Accès)*  
 
 ## Propriétés

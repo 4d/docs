@@ -1,4 +1,4 @@
----
+﻿---
 id: display-record
 title: DISPLAY RECORD
 slug: /commands/display-record
@@ -41,7 +41,7 @@ O exemplo a seguir mostra uma série de registros como uma apresentação de sli
 
 ## Ver também 
 
-[MESSAGE](message.md)  
+[MESSAGE](../commands/message)  
 
 ## Propriedades
 

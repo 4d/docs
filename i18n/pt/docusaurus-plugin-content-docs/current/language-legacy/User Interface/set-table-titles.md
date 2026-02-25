@@ -1,4 +1,4 @@
----
+﻿---
 id: set-table-titles
 title: SET TABLE TITLES
 slug: /commands/set-table-titles
@@ -187,11 +187,11 @@ Se quiser remover todos os campos personalizados e nomes de tabela definidos:
 
 ## Ver também 
 
-[Last table number](last-table-number.md)  
-[GET TABLE TITLES](get-table-titles.md)  
-[Parse formula](parse-formula.md)  
-[SET FIELD TITLES](set-field-titles.md)  
-[Table name](table-name.md)  
+[Last table number](../commands/last-table-number)  
+[GET TABLE TITLES](../commands/get-table-titles)  
+[Parse formula](../commands/parse-formula)  
+[SET FIELD TITLES](../commands/set-field-titles)  
+[Table name](../commands/table-name)  
 
 ## Propriedades
 

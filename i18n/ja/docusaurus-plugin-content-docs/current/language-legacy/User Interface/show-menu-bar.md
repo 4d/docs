@@ -1,4 +1,4 @@
----
+﻿---
 id: show-menu-bar
 title: SHOW MENU BAR
 slug: /commands/show-menu-bar
@@ -36,9 +36,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[HIDE MENU BAR](hide-menu-bar.md)  
-[HIDE TOOL BAR](hide-tool-bar.md)  
-[SHOW TOOL BAR](show-tool-bar.md)  
+[HIDE MENU BAR](../commands/hide-menu-bar)  
+[HIDE TOOL BAR](../commands/hide-tool-bar)  
+[SHOW TOOL BAR](../commands/show-tool-bar)  
 
 ## プロパティ
 

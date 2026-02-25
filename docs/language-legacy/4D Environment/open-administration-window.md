@@ -1,4 +1,4 @@
----
+﻿---
 id: open-administration-window
 title: OPEN ADMINISTRATION WINDOW
 slug: /commands/open-administration-window
@@ -60,7 +60,7 @@ If the command has been executed correctly, the OK system variable is set to 1\.
 
 ## See also 
 
-[OPEN SECURITY CENTER](open-security-center.md)  
+[OPEN SECURITY CENTER](../commands/open-security-center)  
 
 ## Properties
 

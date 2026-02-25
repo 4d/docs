@@ -1,4 +1,4 @@
----
+﻿---
 id: frontmost-process
 title: Frontmost process
 slug: /commands/frontmost-process
@@ -33,8 +33,8 @@ Ver el ejemplo para [BRING TO FRONT](bring-to-front.md "BRING TO FRONT").
 
 ## Ver también 
 
-[BRING TO FRONT](bring-to-front.md)  
-[WINDOW LIST](window-list.md)  
+[BRING TO FRONT](../commands/bring-to-front)  
+[WINDOW LIST](../commands/window-list)  
 
 ## Propiedades
 

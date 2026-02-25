@@ -1,4 +1,4 @@
----
+﻿---
 id: set-update-folder
 title: SET UPDATE FOLDER
 slug: /commands/set-update-folder
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.SET UPDATE FOLDER.Summary-->La commande **SET UPDATE FOLDER** permet de définir le dossier contenant la mise à jour de l’application 4D fusionnée courante.<!-- END REF--> Cette information est mémorisée durant la session 4D jusqu’à l’appel de la commande [RESTART 4D](restart-4d.md). Si l’application est quittée manuellement, cette information n'est pas conservée.
+<!--REF #_command_.SET UPDATE FOLDER.Summary-->La commande **SET UPDATE FOLDER** permet de définir le dossier contenant la mise à jour de l’application 4D fusionnée courante.<!-- END REF--> Cette information est mémorisée durant la session 4D jusqu’à l’appel de la commande [RESTART 4D](../commands/restart-4d). Si l’application est quittée manuellement, cette information n'est pas conservée.
 
 Cette commande est destinée à être utilisée dans un processus de mise à jour automatique d’une application fusionnée (serveur ou monoposte). Pour plus d’informations, reportez-vous à la section *Finaliser et déployer les applications finales* dans le manuel *Mode Développement*.
 
@@ -38,7 +38,7 @@ Passez dans le paramètre *cheminDossier* le chemin d’accès complet du dossie
 
 **Note :** Il est fortement conseillé d’utiliser pour les fichiers des nouvelles versions des applications le même nom que ceux des applications elles-mêmes, car le processus de mise à jour remplace le dossier de l’application. Si vous utilisez des noms différents, les raccourcis et chemins mémorisés ne fonctionneront plus. 
 
-Si les paramètres sont valides, la mise à jour est placée "en attente" dans la session jusqu’à l’appel de la commande [RESTART 4D](restart-4d.md). Si vous exécutez plusieurs fois **SET UPDATE FOLDER** avant [RESTART 4D](restart-4d.md), le dernier appel valide est pris en compte. 
+Si les paramètres sont valides, la mise à jour est placée "en attente" dans la session jusqu’à l’appel de la commande [RESTART 4D](../commands/restart-4d). Si vous exécutez plusieurs fois **SET UPDATE FOLDER** avant [RESTART 4D](../commands/restart-4d), le dernier appel valide est pris en compte. 
 
 Vous pouvez passer une chaîne vide ("") dans *cheminDossier* pour réinitialiser les informations de mise à jour pour la session courante. 
 
@@ -47,9 +47,9 @@ Le paramètre optionnel *erreursDiscrètes* permet de définir le mode de report
 * si vous passez **Faux** ou si ce paramètre est omis, les erreurs sont inscrites dans le journal des mises à jour et affichées dans une boîte de dialogue d’alerte.
 * si vous passez **Vrai**, les erreurs sont uniquement inscrites dans le journal des mises à jour.
 
-Exception : s'il n'est pas possible de créer un fichier journal, une boîte de dialogue d’alerte est affichée, quelle que soit la valeur du paramètre *erreursDiscrètes*. Pour plus d'informations, reportez-vous à la description de la commande [Get last update log path](last-update-log-path.md).
+Exception : s'il n'est pas possible de créer un fichier journal, une boîte de dialogue d’alerte est affichée, quelle que soit la valeur du paramètre *erreursDiscrètes*. Pour plus d'informations, reportez-vous à la description de la commande [Get last update log path](../commands/last-update-log-path).
 
-Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0\. Vous pouvez intercepter les erreurs éventuellement générées par la commande à l’aide d’une méthode installée via la commande [ON ERR CALL](on-err-call.md). 
+Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0\. Vous pouvez intercepter les erreurs éventuellement générées par la commande à l’aide d’une méthode installée via la commande [ON ERR CALL](../commands/on-err-call). 
 
 ## Exemple 
 
@@ -65,8 +65,8 @@ Vous avez créé un dossier "MesMisesAJour" sur votre disque, dans lequel vous a
 
 ## Voir aussi 
 
-[Get last update log path](last-update-log-path.md)  
-[RESTART 4D](restart-4d.md)  
+[Get last update log path](../commands/last-update-log-path)  
+[RESTART 4D](../commands/restart-4d)  
 
 ## Propriétés
 

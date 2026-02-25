@@ -1,4 +1,4 @@
----
+﻿---
 id: sax-add-xml-cdata
 title: SAX ADD XML CDATA
 slug: /commands/sax-add-xml-cdata
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 The text included in a CData section is ignored by the XML interpreter. 
 
-If you want to encode the contents of data, you must use the [BASE64 ENCODE](base64-encode.md) command. In this case, of course, you must pass a BLOB in *data*. 
+If you want to encode the contents of data, you must use the [BASE64 ENCODE](../commands/base64-encode) command. In this case, of course, you must pass a BLOB in *data*. 
 
 In order for this command to operate correctly, an element must be open. Otherwise, an error will be generated. 
 
@@ -86,7 +86,7 @@ If the command has been executed correctly, the system variable OK is set to 1\.
 
 ## See also 
 
-[SAX GET XML CDATA](sax-get-xml-cdata.md)  
+[SAX GET XML CDATA](../commands/sax-get-xml-cdata)  
 
 ## Properties
 

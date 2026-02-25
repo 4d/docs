@@ -1,4 +1,4 @@
----
+﻿---
 id: get-picture-keywords
 title: GET PICTURE KEYWORDS
 slug: /commands/get-picture-keywords
@@ -39,12 +39,12 @@ Si vous passez le paramètre *\**, la méthode ne retourne que les "valeurs disc
 
 Si l’image ne contient pas de mots-clés ou de métadonnées IPTC/Keywords, la commande retourne un tableau vide, aucune erreur n’est générée. 
 
-**Note :** Les résultats retournés par cette commande peuvent différer en fonction de la valeur courante de la propriété de la base "N’utiliser que les caractères non alphanumériques pour les mots clés" (cf. paragraphe [DOM GET XML CHILD NODES](dom-get-xml-child-nodes.md)). 
+**Note :** Les résultats retournés par cette commande peuvent différer en fonction de la valeur courante de la propriété de la base "N’utiliser que les caractères non alphanumériques pour les mots clés" (cf. paragraphe [DOM GET XML CHILD NODES](../commands/dom-get-xml-child-nodes)). 
 
 ## Voir aussi 
 
-[GET PICTURE METADATA](get-picture-metadata.md)  
-[SET PICTURE METADATA](set-picture-metadata.md)  
+[GET PICTURE METADATA](../commands/get-picture-metadata)  
+[SET PICTURE METADATA](../commands/set-picture-metadata)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: encrypt-blob
 title: ENCRYPT BLOB
 slug: /commands/encrypt-blob
@@ -30,16 +30,16 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.ENCRYPT BLOB.Summary-->El comando ENCRYPT BLOB cifra el contenido del BLOB *aCifrar* con la ayuda de la llave privada del emisor *enviarLlavePriv*, así como también opcionalmente la llave pública del receptor *recepLlavePub*.<!-- END REF--> Estas llaves deben ser generadas por el comando [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md) (en el tema “Protocolo de seguridad”). 
+<!--REF #_command_.ENCRYPT BLOB.Summary-->El comando ENCRYPT BLOB cifra el contenido del BLOB *aCifrar* con la ayuda de la llave privada del emisor *enviarLlavePriv*, así como también opcionalmente la llave pública del receptor *recepLlavePub*.<!-- END REF--> Estas llaves deben ser generadas por el comando [GENERATE ENCRYPTION KEYPAIR](../commands/generate-encryption-keypair) (en el tema “Protocolo de seguridad”). 
 
-**Nota:** este comando utiliza el algoritmo y las funcionalidades de cifrado del protocolo TLS. Para utilizar este comando, asegúrese de que los componentes necesarios para el funcionamiento del protocolo TLS estén instalados correctamente en su equipo, incluso si no quiere utilizar TLS para conexiones con el servidor Web 4D. Para información detallada sobre este protocolo, consulte la sección [WEB SERVICE SET PARAMETER](web-service-set-parameter.md).
+**Nota:** este comando utiliza el algoritmo y las funcionalidades de cifrado del protocolo TLS. Para utilizar este comando, asegúrese de que los componentes necesarios para el funcionamiento del protocolo TLS estén instalados correctamente en su equipo, incluso si no quiere utilizar TLS para conexiones con el servidor Web 4D. Para información detallada sobre este protocolo, consulte la sección [WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter).
 
 * Si una llave se utiliza para el cifrado (la llave privada del emisor), sólo las personas que tengan la llave pública podrán leer la información. Este sistema garantiza que el emisor haya cifrado la información.
 * El uso simultáneo de la llave privada del emisor y la llave pública del receptor garantiza que sólo un receptor podrá leer la información.
 
 El BLOB que contiene las llaves tiene un formato interno PKCS. Este formato estándar, multiplataforma, permite intercambiar o manipular las llaves simplemente haciendo copiar-pegar en un email o archivo de texto.
 
-Una vez ejecutado el comando, el BLOB *aCifrar* contiene los datos cifrados que serán descifrados sólo con el comando [DECRYPT BLOB](decrypt-blob.md), con la llave pública del emisor pasada como parámetro. 
+Una vez ejecutado el comando, el BLOB *aCifrar* contiene los datos cifrados que serán descifrados sólo con el comando [DECRYPT BLOB](../commands/decrypt-blob), con la llave pública del emisor pasada como parámetro. 
 
 Además, si la llave pública opcional ha sido utilizada para cifrar la información, la llave privada del receptor también será necesaria para descifrar. 
 
@@ -194,9 +194,9 @@ Una empresa quiere utilizar el Internet para intercambiar información. Cada fil
 ## Ver también 
 
   
-[DECRYPT BLOB](decrypt-blob.md)  
-[Encrypt data BLOB](encrypt-data-blob.md)  
-[GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
+[DECRYPT BLOB](../commands/decrypt-blob)  
+[Encrypt data BLOB](../commands/encrypt-data-blob)  
+[GENERATE ENCRYPTION KEYPAIR](../commands/generate-encryption-keypair)  
 
 ## Propiedades
 

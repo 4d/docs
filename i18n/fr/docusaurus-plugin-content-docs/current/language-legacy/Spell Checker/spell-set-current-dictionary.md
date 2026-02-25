@@ -1,4 +1,4 @@
----
+﻿---
 id: spell-set-current-dictionary
 title: SPELL SET CURRENT DICTIONARY
 slug: /commands/spell-set-current-dictionary
@@ -38,11 +38,11 @@ displayed_sidebar: docs
 * sous Windows, le dictionnaire Hunspell correspondant à la langue de l'application,
 * par défaut sous macOS, le correcteur orthographique natif.
 
-**Note :** Sous macOS, vous pouvez utiliser le dictionnaire Hunspell à l'aide de la commande [SET DATABASE PARAMETER](set-database-parameter.md). Pour plus d'informations, reportez-vous à la section *Configuration du correcteur* dans le manuel *Mode Développement*.
+**Note :** Sous macOS, vous pouvez utiliser le dictionnaire Hunspell à l'aide de la commande [SET DATABASE PARAMETER](../commands/set-database-parameter). Pour plus d'informations, reportez-vous à la section *Configuration du correcteur* dans le manuel *Mode Développement*.
 
 Vous pouvez changer de dictionnaire à l'aide du paramètre *dictionnaire*. Vous pouvez passer soit :
 
-* un numéro d'ID de dictionnaire Hunspell (retourné par la commande [SPELL GET DICTIONARY LIST](spell-get-dictionary-list.md)),
+* un numéro d'ID de dictionnaire Hunspell (retourné par la commande [SPELL GET DICTIONARY LIST](../commands/spell-get-dictionary-list)),
 * un nom de dictionnaire Hunspell (correspondant au nom du fichier de dictionnaire Hunspell avec ou sans extension),
 * un code de langue BCP 47, ISO 639-1 ou ISO 639-2\. Par exemple, "fr-FR" désigne le français de France et "fr-BE" le français de Belgique avec le code de langue BCP 47\. Ces codes sont redirigés en interne vers le dictionnaire courant correspondant (Hunspell ou natif macOS).
 
@@ -63,9 +63,9 @@ Chargement du dictionnaire "fr-classique" présent dans le dossier Hunspell :
 
 ## Voir aussi 
 
-[SPELL CHECKING](spell-checking.md)  
-[SPELL Get current dictionary](spell-get-current-dictionary.md)  
-[SPELL GET DICTIONARY LIST](spell-get-dictionary-list.md)  
+[SPELL CHECKING](../commands/spell-checking)  
+[SPELL Get current dictionary](../commands/spell-get-current-dictionary)  
+[SPELL GET DICTIONARY LIST](../commands/spell-get-dictionary-list)  
 
 ## Propriétés
 

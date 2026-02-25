@@ -1,4 +1,4 @@
----
+﻿---
 id: spell-set-current-dictionary
 title: SPELL SET CURRENT DICTIONARY
 slug: /commands/spell-set-current-dictionary
@@ -38,11 +38,11 @@ displayed_sidebar: docs
 * bajo Windows, el diccionario Hunspell correspondiente al lenguaje de la aplicación,
 * por defecto bajo macOS, el corrector ortográfico nativo.
 
-**Nota**: bajo macOS, puede utilizar el diccionario Hunspell con la ayuda del comando [SET DATABASE PARAMETER](set-database-parameter.md). Para mayor información, consulte la sección *Configuración del corrector* en el manual de Diseño.
+**Nota**: bajo macOS, puede utilizar el diccionario Hunspell con la ayuda del comando [SET DATABASE PARAMETER](../commands/set-database-parameter). Para mayor información, consulte la sección *Configuración del corrector* en el manual de Diseño.
 
 Puede utilizar el parámetro *diccionario* para cambiar el diccionario. Puede pasar:
 
-* un número de identificación de diccionario Hunspell (devuelto por el comando [SPELL GET DICTIONARY LIST](spell-get-dictionary-list.md)),
+* un número de identificación de diccionario Hunspell (devuelto por el comando [SPELL GET DICTIONARY LIST](../commands/spell-get-dictionary-list)),
 * un nombre de diccionario Hunspell (que corresponde al nombre de archivo del diccionario Hunspell, con o sin la extensión),
 * un código de lenguaje BCP 47, ISO 639-1 o ISO 639-2\. Por ejemplo, con el código de lenguaje BCP 47, "en-US" designa Inglés Americano y "en-GB" designa Inglés británico. Estos códigos son redirigidos internamente al diccionario actual correspondiente (Hunspell o nativo macOS).
 
@@ -63,9 +63,9 @@ Carga del diccionario "fr-classic" presente en la carpeta Hunspell:
 
 ## Ver también 
 
-[SPELL CHECKING](spell-checking.md)  
-[SPELL Get current dictionary](spell-get-current-dictionary.md)  
-[SPELL GET DICTIONARY LIST](spell-get-dictionary-list.md)  
+[SPELL CHECKING](../commands/spell-checking)  
+[SPELL Get current dictionary](../commands/spell-get-current-dictionary)  
+[SPELL GET DICTIONARY LIST](../commands/spell-get-dictionary-list)  
 
 ## Propiedades
 

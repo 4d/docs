@@ -1,4 +1,4 @@
----
+﻿---
 id: print-settings-to-blob
 title: Print settings to BLOB
 slug: /commands/print-settings-to-blob
@@ -33,9 +33,9 @@ displayed_sidebar: docs
 * Layout parameters such as paper, orientation, scale, etc.
 * Print parameters such as number of copies, paper source, etc.
 
-This command must be used in conjunction with the [BLOB to print settings](blob-to-print-settings.md) command. These commands allow you to save a user's current print settings and reload them subsequently so that users will not need to specify their parameters each time they start a print job. In addition, it allows you to save "private" printer settings (specific to the printer driver) that are not available as standard printing parameters. 
+This command must be used in conjunction with the [BLOB to print settings](../commands/blob-to-print-settings) command. These commands allow you to save a user's current print settings and reload them subsequently so that users will not need to specify their parameters each time they start a print job. In addition, it allows you to save "private" printer settings (specific to the printer driver) that are not available as standard printing parameters. 
 
-The BLOB generated must not be modified by programming; it can only be used by the [BLOB to print settings](blob-to-print-settings.md) command.
+The BLOB generated must not be modified by programming; it can only be used by the [BLOB to print settings](../commands/blob-to-print-settings) command.
 
 The command returns 1 if the BLOB has been generated correctly, and 0 if no current printer is selected.
 
@@ -64,7 +64,7 @@ You want to store the current print settings to disk:
 ## See also 
 
   
-[BLOB to print settings](blob-to-print-settings.md)  
+[BLOB to print settings](../commands/blob-to-print-settings)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: clear-pasteboard
 title: CLEAR PASTEBOARD
 slug: /commands/clear-pasteboard
@@ -51,7 +51,7 @@ Ver el ejemplo del comando [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard
 
 ## Ver también 
 
-[APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
+[APPEND DATA TO PASTEBOARD](../commands/append-data-to-pasteboard)  
 
 ## Propiedades
 

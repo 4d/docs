@@ -1,4 +1,4 @@
----
+﻿---
 id: application-version
 title: Application version
 slug: /commands/application-version
@@ -132,8 +132,8 @@ Usted desea utilizar el valor de la versión corta de la aplicación devuelto po
 
 ## Ver también 
 
-[Application type](application-type.md)  
-[Version type](version-type.md)  
+[Application type](../commands/application-type)  
+[Version type](../commands/version-type)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: locked-by
 title: LOCKED BY
 slug: /commands/locked-by
@@ -40,7 +40,7 @@ displayed_sidebar: docs
 
 Si el registro no está bloqueado, *proceso* devuelve 0 y *usuario*, *equipo*, y *nombreProceso* devuelven cadenas vacías. Si trata de cargar en modo lectura/escritura un registro que ha sido borrado, *proceso* devuelve -1 y *usuario*, *equipo*, y *nombreProceso* devuelven cadenas vacías.
 
-El parámetro *usuario4D*  devuelto corresponde al nombre del usuario definido en el editor de contraseñas de 4D o el alias de usuario definido con [SET USER ALIAS](set-user-alias.md) (si lo hay). Si no hay sistema de contraseñas, devuelve “Diseñador”.
+El parámetro *usuario4D*  devuelto corresponde al nombre del usuario definido en el editor de contraseñas de 4D o el alias de usuario definido con [SET USER ALIAS](../commands/set-user-alias) (si lo hay). Si no hay sistema de contraseñas, devuelve “Diseñador”.
 
 El parámetro *sesionUsuario* devuelto corresponde al nombre del usuario que abrió la sesión en el equipo cliente (este nombre aparece en la ventana de administración de 4D Server para cada proceso abierto).
 
@@ -53,7 +53,7 @@ Si el registro ha sido bloqueado por una *petición $lock REST*:
 
 ## Ver también 
 
-[Locked](locked.md)  
+[Locked](../commands/locked)  
 *Record Locking*  
 
 ## Propiedades

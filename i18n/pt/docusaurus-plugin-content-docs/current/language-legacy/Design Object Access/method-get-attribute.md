@@ -1,4 +1,4 @@
----
+﻿---
 id: method-get-attribute
 title: METHOD Get attribute
 slug: /commands/method-get-attribute
@@ -52,7 +52,7 @@ O comando retorna **True** se for selecionado um atributo e **False** se for des
 
 ## Ver também 
 
-[METHOD SET ATTRIBUTE](method-set-attribute.md)  
+[METHOD SET ATTRIBUTE](../commands/method-set-attribute)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: bring-to-front
 title: BRING TO FRONT
 slug: /commands/bring-to-front
@@ -17,11 +17,11 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.BRING TO FRONT.Summary-->BRING TO FRONT pasa todas las ventanas que pertenecen a *process* al primer plano.<!-- END REF--> Si el proceso ya está en el primer plano, el comando no hace nada. Si el proceso está oculto, debe utilizar [SHOW PROCESS](show-process.md) para mostrar el proceso, de lo contrario BRING TO FRONT no tiene efecto.
+<!--REF #_command_.BRING TO FRONT.Summary-->BRING TO FRONT pasa todas las ventanas que pertenecen a *process* al primer plano.<!-- END REF--> Si el proceso ya está en el primer plano, el comando no hace nada. Si el proceso está oculto, debe utilizar [SHOW PROCESS](../commands/show-process) para mostrar el proceso, de lo contrario BRING TO FRONT no tiene efecto.
 
 Los procesos Principal y Diseño pueden pasarse al primer plano utilizando este comando.
 
-**Nota:** cuando el proceso contiene varias ventanas y quiere pasar al primer plano una ventana específica, es preferible utilizar por ejemplo, el comando [SET WINDOW RECT](set-window-rect.md).
+**Nota:** cuando el proceso contiene varias ventanas y quiere pasar al primer plano una ventana específica, es preferible utilizar por ejemplo, el comando [SET WINDOW RECT](../commands/set-window-rect).
 
 ## Ejemplo 
 
@@ -35,9 +35,9 @@ El siguiente ejemplo es un método que puede ser ejecutado desde un menú. Él v
 
 ## Ver también 
 
-[HIDE PROCESS](hide-process.md)  
-[Process state](process-state.md)  
-[SHOW PROCESS](show-process.md)  
+[HIDE PROCESS](../commands/hide-process)  
+[Process state](../commands/process-state)  
+[SHOW PROCESS](../commands/show-process)  
 
 ## Propiedades
 

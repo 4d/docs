@@ -1,4 +1,4 @@
----
+﻿---
 id: window-process
 title: Window process
 slug: /commands/window-process
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Current process](current-process.md)  
+[Current process](../commands/current-process)  
 
 ## プロパティ
 

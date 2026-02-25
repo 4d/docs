@@ -1,4 +1,4 @@
----
+﻿---
 id: open-printing-job
 title: OPEN PRINTING JOB
 slug: /commands/open-printing-job
@@ -26,15 +26,15 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.OPEN PRINTING JOB.Summary-->El comando **OPEN PRINTING JOB** abre una tarea de impresión y apila todas las órdenes de impresión ejecutadas hasta que se llame el comando [CLOSE PRINTING JOB](close-printing-job.md).<!-- END REF--> Este comando le permite controlar los trabajos de impresión y, más particularmente, asegurar que ninguna tarea de impresión inesperada pueda ser insertada en una secuencia de impresión.
+<!--REF #_command_.OPEN PRINTING JOB.Summary-->El comando **OPEN PRINTING JOB** abre una tarea de impresión y apila todas las órdenes de impresión ejecutadas hasta que se llame el comando [CLOSE PRINTING JOB](../commands/close-printing-job).<!-- END REF--> Este comando le permite controlar los trabajos de impresión y, más particularmente, asegurar que ninguna tarea de impresión inesperada pueda ser insertada en una secuencia de impresión.
 
 El comando **OPEN PRINTING JOB** puede utilizarse con todos los comandos de impresión 4D, los comandos del editor de informes rápidos, y los comandos de impresión de 4D Write Pro. 
 
 El trabajo de impresión es local al proceso, cada proceso tiene su propia configuración de impresión (opciones de impresión, impresora actual, etc.). Varios trabajos de impresión pueden estar abiertos al mismo tiempo en 4D.
 
-Debe llamar al comando [CLOSE PRINTING JOB](close-printing-job.md) para determinar el trabajo de impresión y enviar el documento de impresión a la impresora. Si omite este comando, el documento de impresión permanecerá en la pila.
+Debe llamar al comando [CLOSE PRINTING JOB](../commands/close-printing-job) para determinar el trabajo de impresión y enviar el documento de impresión a la impresora. Si omite este comando, el documento de impresión permanecerá en la pila.
 
-**OPEN PRINTING JOB** utiliza la configuración de impresión actual (configuración predeterminada o definida mediante el comando [SET PRINT OPTION](set-print-option.md)). Los comandos que modifican la configuración de impresión deben ser llamados antes de **OPEN PRINTING JOB**, de lo contrario se genera un error (excepción: el comando Orientation option puede ser llamado por el comando [SET PRINT OPTION](set-print-option.md) dentro de un trabajo de impresión).
+**OPEN PRINTING JOB** utiliza la configuración de impresión actual (configuración predeterminada o definida mediante el comando [SET PRINT OPTION](../commands/set-print-option)). Los comandos que modifican la configuración de impresión deben ser llamados antes de **OPEN PRINTING JOB**, de lo contrario se genera un error (excepción: el comando Orientation option puede ser llamado por el comando [SET PRINT OPTION](../commands/set-print-option) dentro de un trabajo de impresión).
 
 **Nota de compatibilidad**: a partir de 4D v20 R4, los trabajos de impresión no se bloquean en los nuevos proyectos. Para más información, consulte la documentación de la [opción de impresión sin bloqueo](../../settings/compatibility.md) en los parámetros de compatibilidad.
 
@@ -47,7 +47,7 @@ La variable sistema OK toma el valor 1 si el trabajo de impresión se ha abierto
 
 ## Ver también 
 
-[CLOSE PRINTING JOB](close-printing-job.md)  
+[CLOSE PRINTING JOB](../commands/close-printing-job)  
 
 ## Propiedades
 

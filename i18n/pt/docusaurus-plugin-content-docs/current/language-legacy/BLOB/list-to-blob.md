@@ -1,4 +1,4 @@
----
+﻿---
 id: list-to-blob
 title: LIST TO BLOB
 slug: /commands/list-to-blob
@@ -53,10 +53,10 @@ Veja o exemplo para o comando [BLOB to list](blob-to-list.md "BLOB to list").
 
 ## Ver também 
 
-[BLOB to list](blob-to-list.md)  
-[BLOB TO VARIABLE](blob-to-variable.md)  
-[SAVE LIST](save-list.md)  
-[VARIABLE TO BLOB](variable-to-blob.md)  
+[BLOB to list](../commands/blob-to-list)  
+[BLOB TO VARIABLE](../commands/blob-to-variable)  
+[SAVE LIST](../commands/save-list)  
+[VARIABLE TO BLOB](../commands/variable-to-blob)  
 
 ## Propriedades
 

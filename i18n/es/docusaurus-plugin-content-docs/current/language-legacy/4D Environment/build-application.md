@@ -1,4 +1,4 @@
----
+﻿---
 id: build-application
 title: BUILD APPLICATION
 slug: /commands/build-application
@@ -35,7 +35,7 @@ Un archivo de configuración de creación de aplicación es un archivo XML que c
 
 Por defecto, 4D crea para cada base un proyecto de aplicación llamado “buildapp.xml” (por defecto) para cada base y lo ubica en la subcarpeta BuildApp en la carpeta Preferencias de la base.
 
-Si la base no ha sido compilada aún o si el código compilado está desactualizado, el comando lanza primero el proceso de compilación. En este caso, no aparece la ventana del compilador (a menos que ocurra un error), sólo se muestra una barra de progreso. Puede ocultar esta barra de progreso utilizando el comando [MESSAGES OFF](messages-off.md).
+Si la base no ha sido compilada aún o si el código compilado está desactualizado, el comando lanza primero el proceso de compilación. En este caso, no aparece la ventana del compilador (a menos que ocurra un error), sólo se muestra una barra de progreso. Puede ocultar esta barra de progreso utilizando el comando [MESSAGES OFF](../commands/messages-off).
 
 Si no pasa el parámetro opcional *confCreacionApp*, el comando muestra una caja de diálogo estándar de apertura de archivos, de manera que pueda designar un archivo de proyecto. Cuando la caja de diálogo se valida, la variable sistema Document contiene la ruta de acceso completa del archivo seleccionado.
 

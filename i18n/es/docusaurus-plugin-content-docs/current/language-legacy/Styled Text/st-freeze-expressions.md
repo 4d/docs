@@ -1,4 +1,4 @@
----
+﻿---
 id: st-freeze-expressions
 title: ST FREEZE EXPRESSIONS
 slug: /commands/st-freeze-expressions
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST FREEZE EXPRESSIONS.Summary-->El comando **ST FREEZE EXPRESSIONS** "congela" el contenido de las expresiones encontradas en un campo o variable ya sea 4D Write Pro o multiestilo designado por el parámetro *objeto*.<!-- END REF--> Esta acción convierte expresiones dinámicas en texto estático o imágenes (áreas 4D Write Pro únicamente) y elimina las referencias asociadas al *objeto*. 
 
-Para más información acerca de expresiones 4D usadas en áreas de texto multiestilo o 4D Write Pro, consulte la descripción del comando [ST INSERT EXPRESSION](st-insert-expression.md).
+Para más información acerca de expresiones 4D usadas en áreas de texto multiestilo o 4D Write Pro, consulte la descripción del comando [ST INSERT EXPRESSION](../commands/st-insert-expression).
 
 El comando **ST FREEZE EXPRESSIONS** almacena el valor calculado de una expresión en un momento dado. Esta operación es necesaria particularmente antes de cada uso del *objeto* fuera del área estilo (exportaciones, almacenamiento en un archivo de disco, impresión, etc.) ya que solo la referencia de la expresión se mantiene en el área.
 
@@ -77,8 +77,8 @@ Usted quiere insertar la hora actual al inicio del texto y luego congelarla ante
 
 #### Ver también 
 
-[ST COMPUTE EXPRESSIONS](st-compute-expressions.md)  
-[ST INSERT EXPRESSION](st-insert-expression.md)  
+[ST COMPUTE EXPRESSIONS](../commands/st-compute-expressions)  
+[ST INSERT EXPRESSION](../commands/st-insert-expression)  
 
 #### Propiedades
 

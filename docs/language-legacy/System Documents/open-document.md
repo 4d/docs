@@ -1,4 +1,4 @@
----
+﻿---
 id: open-document
 title: Open document
 slug: /commands/open-document
@@ -57,11 +57,11 @@ The optional *mode* parameter allows you to define how *document* is to be opene
 | Read Mode      | Integer | 2     |
 | Write Mode     | Integer | 1     |
 
-If a document is open, **Open document** initially sets the file position at the beginning of the document while [Append document](append-document.md) sets it at the end of the document.
+If a document is open, **Open document** initially sets the file position at the beginning of the document while [Append document](../commands/append-document) sets it at the end of the document.
 
-Once you have opened a document, you can read and write in the document using the [RECEIVE PACKET](receive-packet.md) and [SEND PACKET](send-packet.md) commands that you can combine with the [Get document position](get-document-position.md) and [SET DOCUMENT POSITION](set-document-position.md) commands in order to directly access any part of the document.
+Once you have opened a document, you can read and write in the document using the [RECEIVE PACKET](../commands/receive-packet) and [SEND PACKET](../commands/send-packet) commands that you can combine with the [Get document position](../commands/get-document-position) and [SET DOCUMENT POSITION](../commands/set-document-position) commands in order to directly access any part of the document.
 
-Do not forget to eventually call [CLOSE DOCUMENT](close-document.md) for the document.
+Do not forget to eventually call [CLOSE DOCUMENT](../commands/close-document) for the document.
 
 ## Example 1 
 
@@ -98,8 +98,8 @@ If you call **Open document** with a mode of 3, the function returns ?00:00:00? 
 
 ## See also 
 
-[Append document](append-document.md)  
-[Create document](create-document.md)  
+[Append document](../commands/append-document)  
+[Create document](../commands/create-document)  
 
 ## Properties
 

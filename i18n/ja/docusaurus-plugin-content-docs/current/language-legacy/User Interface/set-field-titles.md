@@ -1,4 +1,4 @@
----
+﻿---
 id: set-field-titles
 title: SET FIELD TITLES
 slug: /commands/set-field-titles
@@ -61,7 +61,7 @@ displayed_sidebar: docs
 
 * **SET FIELD TITLES** コマンドはフィールドの非表示属性を上書きしません。データベースの設計レベルでフィールドが非表示として設定されている場合、**SET FIELD TITLES** コマンドへの呼び出しにそのフィールドを指定しても、アプリケーションモードにおいてフィールドは表示されません。
 * プラグインは常にコマンドによって指定された仮想ストラクチャへアクセスします。
-* [SET TABLE TITLES](set-table-titles.md) コマンドが引数なしに呼び出された場合、(カスタムのテーブル名およびフィールド名を含め)"バーチャル"なストラクチャーはアプリケーション環境からは完全に削除されます。
+* [SET TABLE TITLES](../commands/set-table-titles) コマンドが引数なしに呼び出された場合、(カスタムのテーブル名およびフィールド名を含め)"バーチャル"なストラクチャーはアプリケーション環境からは完全に削除されます。
 
 ## 例題 
 
@@ -69,11 +69,11 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Field name](field-name.md)  
-[GET FIELD TITLES](get-field-titles.md)  
-[Last field number](last-field-number.md)  
-[Parse formula](parse-formula.md)  
-[SET TABLE TITLES](set-table-titles.md)  
+[Field name](../commands/field-name)  
+[GET FIELD TITLES](../commands/get-field-titles)  
+[Last field number](../commands/last-field-number)  
+[Parse formula](../commands/parse-formula)  
+[SET TABLE TITLES](../commands/set-table-titles)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: write-picture-file
 title: WRITE PICTURE FILE
 slug: /commands/write-picture-file
@@ -37,11 +37,11 @@ Pode passar em *nomArquivo* a rota de acesso completa do arquivo a criar, ou uni
 Tem que ser indicado a extensão do arquivo.
 
 Se passa uma string vazia ("") em *nomArquivo*, aparece a caixa de diálogo padrão de registro, permitindo ao usuário indicar o nome, localização e formato do arquivo a criar.   
-Se um nome padrão é associado com o campo imagem, ele é fornecido na caixa de diálogo (ver o comando [SET PICTURE FILE NAME](set-picture-file-name.md)).
+Se um nome padrão é associado com o campo imagem, ele é fornecido na caixa de diálogo (ver o comando [SET PICTURE FILE NAME](../commands/set-picture-file-name)).
 
 Passe em *imagem* a variável ou campo imagem que contém a imagem a armazenar no disco.
 
-O parâmetro opcional *codec* permite definir o formato no qual a imagem será guardado. Um codec pode ser uma extensão (por exemplo ".gif") ou um tipo Mime (por exemplo "image/jpg") Pode obter uma lista de codecs disponíveis através do comando [PICTURE CODEC LIST](picture-codec-list.md).
+O parâmetro opcional *codec* permite definir o formato no qual a imagem será guardado. Um codec pode ser uma extensão (por exemplo ".gif") ou um tipo Mime (por exemplo "image/jpg") Pode obter uma lista de codecs disponíveis através do comando [PICTURE CODEC LIST](../commands/picture-codec-list).
 
 Se for omitido o parâmetro *codec*, o comando tentará determinar o *codec* baseado na extensão do nome do arquivo passado no parâmetro *nomArquivo*. Por exemplo, se passa a instrução:  
 
@@ -60,9 +60,9 @@ Se a execução do comando for correta, a variável sistema Document contém a r
 ## Ver também 
 
 *Imagens*  
-[PICTURE TO BLOB](picture-to-blob.md)  
-[READ PICTURE FILE](read-picture-file.md)  
-[SET PICTURE FILE NAME](set-picture-file-name.md)  
+[PICTURE TO BLOB](../commands/picture-to-blob)  
+[READ PICTURE FILE](../commands/read-picture-file)  
+[SET PICTURE FILE NAME](../commands/set-picture-file-name)  
 
 ## Propriedades
 

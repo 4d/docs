@@ -1,4 +1,4 @@
----
+﻿---
 id: post-click
 title: POST CLICK
 slug: /commands/post-click
@@ -38,8 +38,8 @@ Se especificar o parâmetro processo *processo*, o clique é enviado ao processo
 
 ## Ver também 
 
-[POST EVENT](post-event.md)  
-[POST KEY](post-key.md)  
+[POST EVENT](../commands/post-event)  
+[POST KEY](../commands/post-key)  
 
 ## Propriedades
 

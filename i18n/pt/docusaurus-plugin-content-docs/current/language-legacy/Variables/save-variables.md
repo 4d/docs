@@ -1,4 +1,4 @@
----
+﻿---
 id: save-variables
 title: SAVE VARIABLES
 slug: /commands/save-variables
@@ -26,7 +26,7 @@ Se passar uma cadeia vazia em *documento*, aparece uma caixa de diálogo padrão
 
 Se as variáveis forem guardadas corretamente, a variável OK assume o valor 1\. Se não, OK toma o valor 0.  
   
-**Nota**: quando escrever variáveis em documentos com SAVE VARIABLES, 4D utiliza um formato de dados interno. Pode recuperar as variáveis apenas com o comando [LOAD VARIABLES](load-variables.md). Não use [RECEIVE PACKET](receive-packet.md) ou [RECEIVE VARIABLE](receive-variable.md) para ler um documento criado por SAVE VARIABLES.  
+**Nota**: quando escrever variáveis em documentos com SAVE VARIABLES, 4D utiliza um formato de dados interno. Pode recuperar as variáveis apenas com o comando [LOAD VARIABLES](../commands/load-variables). Não use [RECEIVE PACKET](../commands/receive-packet) ou [RECEIVE VARIABLE](../commands/receive-variable) para ler um documento criado por SAVE VARIABLES.  
   
 **Aviso**: este comando não é compatível com variáveis de tipo array. Para estas variáveis use os comandos do tema BLOB.
 
@@ -44,11 +44,11 @@ Se as variáveis são guardadas corretamente, a variável sistema OK assume o va
 
 ## Ver também 
 
-[BLOB TO DOCUMENT](blob-to-document.md)  
-[BLOB TO VARIABLE](blob-to-variable.md)  
-[DOCUMENT TO BLOB](document-to-blob.md)  
-[LOAD VARIABLES](load-variables.md)  
-[VARIABLE TO BLOB](variable-to-blob.md)  
+[BLOB TO DOCUMENT](../commands/blob-to-document)  
+[BLOB TO VARIABLE](../commands/blob-to-variable)  
+[DOCUMENT TO BLOB](../commands/document-to-blob)  
+[LOAD VARIABLES](../commands/load-variables)  
+[VARIABLE TO BLOB](../commands/variable-to-blob)  
 *Variáveis sistema*  
 
 ## Propriedades

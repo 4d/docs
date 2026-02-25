@@ -1,4 +1,4 @@
----
+﻿---
 id: set-query-destination
 title: SET QUERY DESTINATION
 slug: /commands/set-query-destination
@@ -79,7 +79,7 @@ The records found by any subsequent query will end up in the named selection *"m
 **Notes:** 
 
 * If the named selection does not exist beforehand, it will be created automatically at the end of the query.
-* This command manages named selections like the [CUT NAMED SELECTION](cut-named-selection.md) command: only references are kept. Once the named selection is used, it no longer exists.
+* This command manages named selections like the [CUT NAMED SELECTION](../commands/cut-named-selection) command: only references are kept. Once the named selection is used, it no longer exists.
 With:  
 
 ```4d
@@ -94,7 +94,7 @@ Or:
  SET QUERY DESTINATION(Into variable;"";->$vlResult)
 ```
 
-**Note:** This second syntax facilitates the joint use of the command with [GET QUERY DESTINATION](get-query-destination.md). 
+**Note:** This second syntax facilitates the joint use of the command with [GET QUERY DESTINATION](../commands/get-query-destination). 
 
 The number of records found by any subsequent query will end up in the variable *$vlResult*. The current selection and the current record for the table involved by the query are left unchanged.
 
@@ -102,18 +102,18 @@ The number of records found by any subsequent query will end up in the variable 
 
 **SET QUERY DESTINATION** changes the behavior of the query commands only:
 
-* [QUERY](query.md)
-* [QUERY SELECTION](query-selection.md)
-* [QUERY BY EXAMPLE](query-by-example.md)
-* [QUERY BY FORMULA](query-by-formula.md)
-* [QUERY BY SQL](query-by-sql.md)
-* [QUERY SELECTION BY FORMULA](query-selection-by-formula.md)
-* [QUERY SELECTION WITH ARRAY](query-selection-with-array.md)
-* [QUERY WITH ARRAY](query-with-array.md)
-* [QUERY BY ATTRIBUTE](query-by-attribute.md)
-* [QUERY SELECTION BY ATTRIBUTE](query-selection-by-attribute.md)
+* [QUERY](../commands/query)
+* [QUERY SELECTION](../commands/query-selection)
+* [QUERY BY EXAMPLE](../commands/query-by-example)
+* [QUERY BY FORMULA](../commands/query-by-formula)
+* [QUERY BY SQL](../commands/query-by-sql)
+* [QUERY SELECTION BY FORMULA](../commands/query-selection-by-formula)
+* [QUERY SELECTION WITH ARRAY](../commands/query-selection-with-array)
+* [QUERY WITH ARRAY](../commands/query-with-array)
+* [QUERY BY ATTRIBUTE](../commands/query-by-attribute)
+* [QUERY SELECTION BY ATTRIBUTE](../commands/query-selection-by-attribute)
 
-On the other hand, **SET QUERY DESTINATION** does not affect other commands that may change the current selection of a table such as [ALL RECORDS](all-records.md), [RELATE MANY](relate-many.md) and so on.
+On the other hand, **SET QUERY DESTINATION** does not affect other commands that may change the current selection of a table such as [ALL RECORDS](../commands/all-records), [RELATE MANY](../commands/relate-many) and so on.
 
 ## Example 1 
 
@@ -257,15 +257,15 @@ After this project method is implemented in your application, you can write:
 
 ## See also 
 
-[GET QUERY DESTINATION](get-query-destination.md)  
-[QUERY](query.md)  
-[QUERY BY EXAMPLE](query-by-example.md)  
-[QUERY BY FORMULA](query-by-formula.md)  
-[QUERY BY SQL](query-by-sql.md)  
-[QUERY SELECTION](query-selection.md)  
-[QUERY SELECTION BY FORMULA](query-selection-by-formula.md)  
-[QUERY WITH ARRAY](query-with-array.md)  
-[SET QUERY LIMIT](set-query-limit.md)  
+[GET QUERY DESTINATION](../commands/get-query-destination)  
+[QUERY](../commands/query)  
+[QUERY BY EXAMPLE](../commands/query-by-example)  
+[QUERY BY FORMULA](../commands/query-by-formula)  
+[QUERY BY SQL](../commands/query-by-sql)  
+[QUERY SELECTION](../commands/query-selection)  
+[QUERY SELECTION BY FORMULA](../commands/query-selection-by-formula)  
+[QUERY WITH ARRAY](../commands/query-with-array)  
+[SET QUERY LIMIT](../commands/set-query-limit)  
 
 ## Properties
 

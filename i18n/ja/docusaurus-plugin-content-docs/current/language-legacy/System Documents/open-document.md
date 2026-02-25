@@ -1,4 +1,4 @@
----
+﻿---
 id: open-document
 title: Open document
 slug: /commands/open-document
@@ -56,11 +56,11 @@ Windowsでは、標準的なMac OSのファイルタイプ (4Dは内部的に対
 | Write Mode     | 倍長整数 | 1 |
   
   
-ドキュメントが開かれると、**Open document**はドキュメントの最初にファイルの書き込み/読み込み位置を設定します。一方、[Append document](append-document.md)は、ドキュメントの最後にファイルの書き込み/読み込み位置を設定します。 
+ドキュメントが開かれると、**Open document**はドキュメントの最初にファイルの書き込み/読み込み位置を設定します。一方、[Append document](../commands/append-document)は、ドキュメントの最後にファイルの書き込み/読み込み位置を設定します。 
 
-ドキュメントを開くと、[RECEIVE PACKET](receive-packet.md)と[SEND PACKET](send-packet.md) コマンドを使用してドキュメントを読んだり、書いたりすることができます。これらのコマンドを[Get document position](get-document-position.md) および[SET DOCUMENT POSITION](set-document-position.md) コマンドと組み合わせることにより、ドキュメントのあらゆる箇所へ直接アクセスすることが可能となります。
+ドキュメントを開くと、[RECEIVE PACKET](../commands/receive-packet)と[SEND PACKET](../commands/send-packet) コマンドを使用してドキュメントを読んだり、書いたりすることができます。これらのコマンドを[Get document position](../commands/get-document-position) および[SET DOCUMENT POSITION](../commands/set-document-position) コマンドと組み合わせることにより、ドキュメントのあらゆる箇所へ直接アクセスすることが可能となります。
 
-最後に、開かれたドキュメントに対して、[CLOSE DOCUMENT](close-document.md)を呼び出すことを忘れないようにしてください。
+最後に、開かれたドキュメントに対して、[CLOSE DOCUMENT](../commands/close-document)を呼び出すことを忘れないようにしてください。
 
 ## 例題 1 
 
@@ -97,8 +97,8 @@ Open documentを3のモードで呼ぶと、関数は?00:00:00? (ドキュメン
 
 ## 参照 
 
-[Append document](append-document.md)  
-[Create document](create-document.md)  
+[Append document](../commands/append-document)  
+[Create document](../commands/create-document)  
 
 ## プロパティ
 

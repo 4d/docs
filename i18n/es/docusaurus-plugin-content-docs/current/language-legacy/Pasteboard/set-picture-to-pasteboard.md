@@ -1,4 +1,4 @@
----
+﻿---
 id: set-picture-to-pasteboard
 title: SET PICTURE TO PASTEBOARD
 slug: /commands/set-picture-to-pasteboard
@@ -59,8 +59,8 @@ Si no hay suficiente memoria para colocar una copia de la imagen en el portapape
 
 ## Ver también 
 
-[APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
-[GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
+[APPEND DATA TO PASTEBOARD](../commands/append-data-to-pasteboard)  
+[GET PICTURE FROM PASTEBOARD](../commands/get-picture-from-pasteboard)  
 
 ## Propiedades
 

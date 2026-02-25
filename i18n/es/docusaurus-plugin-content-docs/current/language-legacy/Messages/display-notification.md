@@ -1,4 +1,4 @@
----
+﻿---
 id: display-notification
 title: DISPLAY NOTIFICATION
 slug: /commands/display-notification
@@ -52,7 +52,7 @@ Bajo Windows, se muestra la ventana del mensaje si no se detecta actividad en la
 
 ## Ver también 
 
-[ALERT](alert.md)  
+[ALERT](../commands/alert)  
 
 ## Propiedades
 

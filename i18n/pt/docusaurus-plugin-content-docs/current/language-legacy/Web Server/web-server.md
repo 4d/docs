@@ -1,4 +1,4 @@
----
+﻿---
 id: web-server
 title: WEB Server
 slug: /commands/web-server
@@ -54,7 +54,7 @@ Do seu componente, você quer saber se o servidor Web do banco de dados host est
 
 ## Veja também
 
-[WEB Server list](web-server-list.md)\
+[WEB Server list](../commands/web-server-list)\
 [webServer.stop()](../../API/WebServerClass.md#stop)
 
 ## Propriedades

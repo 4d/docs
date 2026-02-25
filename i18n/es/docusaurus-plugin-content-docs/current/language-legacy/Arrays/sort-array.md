@@ -1,4 +1,4 @@
----
+﻿---
 id: sort-array
 title: SORT ARRAY
 slug: /commands/sort-array
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 El último parámetro especifica si ordenar el *array* en orden ascendente o descendente. El símbolo “mayor que” (>) indica un orden ascendente; el símbolo “menor que” (<) indica un orden descendente. Si no especifica el orden, la ordenación es ascendente.
 
-Si se especifica más de un array, los arrays se ordenan siguiendo el definido para el primer array; las ordenaciones multiniveles no son posibles. En su lugar puede utilizar el comando [MULTI SORT ARRAY](multi-sort-array.md) si desea ordenar arrays sincronizados.
+Si se especifica más de un array, los arrays se ordenan siguiendo el definido para el primer array; las ordenaciones multiniveles no son posibles. En su lugar puede utilizar el comando [MULTI SORT ARRAY](../commands/multi-sort-array) si desea ordenar arrays sincronizados.
 
 #### Ejemplo 1 
 
@@ -78,10 +78,10 @@ Usted visualiza los nombres de una tabla *\[Personas\]* en una ventana flotante.
 
 #### Ver también 
 
-[Find in sorted array](find-in-sorted-array.md)  
-[MULTI SORT ARRAY](multi-sort-array.md)  
-[ORDER BY](order-by.md)  
-[SELECTION TO ARRAY](selection-to-array.md)  
+[Find in sorted array](../commands/find-in-sorted-array)  
+[MULTI SORT ARRAY](../commands/multi-sort-array)  
+[ORDER BY](../commands/order-by)  
+[SELECTION TO ARRAY](../commands/selection-to-array)  
 
 #### Propiedades
 

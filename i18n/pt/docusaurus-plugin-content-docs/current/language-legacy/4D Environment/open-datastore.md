@@ -1,4 +1,4 @@
----
+﻿---
 id: open-datastore
 title: Open datastore
 slug: /commands/open-datastore
@@ -121,7 +121,7 @@ Em caso de erro, o comando retorna **Null**. Se não for possível acessar o arm
 
 ## Veja também
 
-[ds](ds.md)
+[ds](../commands/ds)
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: import-text
 title: IMPORT TEXT
 slug: /commands/import-text
@@ -39,9 +39,9 @@ El evento On Validate es enviado al método de formulario para cada registro imp
 
 El parámetro *documento* puede incluir una ruta de acceso a los nombres de los volúmenes y carpetas. Si pasa una cadena vacía, aparece la caja de diálogo estándar de apertura de archivos. Si el usuario cancela este diálogo, la operación de importación se cancela, y la variable sistema OK toma el valor 0.
 
-Un termómetro de progreso aparece durante la importación. El usuario puede cancelar la operación haciendo clic en el botón Detener. Los registros que ya han sido importados no se eliminarán si el usuario presiona el botón Detener. Si la importación se completa con éxito, la variable sistema OK toma el valor 1\. En caso de error o si la operación se interrumpe, la variable OK toma el valor 0\. El termómetro puede ocultarse con el comando [MESSAGES OFF](messages-off.md).
+Un termómetro de progreso aparece durante la importación. El usuario puede cancelar la operación haciendo clic en el botón Detener. Los registros que ya han sido importados no se eliminarán si el usuario presiona el botón Detener. Si la importación se completa con éxito, la variable sistema OK toma el valor 1\. En caso de error o si la operación se interrumpe, la variable OK toma el valor 0\. El termómetro puede ocultarse con el comando [MESSAGES OFF](../commands/messages-off).
 
-El comando utiliza por defecto el conjunto de caracteres UTF-8\. Usted puede utilizar el comando [USE CHARACTER SET](use-character-set.md) para modificar este conjunto de caracteres.
+El comando utiliza por defecto el conjunto de caracteres UTF-8\. Usted puede utilizar el comando [USE CHARACTER SET](../commands/use-character-set) para modificar este conjunto de caracteres.
 
 Durante la utilización de IMPORT TEXT, el delimitador de campos por defecto es el carácter de tabulación (code 9). El delimitador de registros por defecto es el retorno de carro (code 13). Puede cambiar estos valores por defecto asignando nuevos valores a las *Variables sistema*: *FldDelimit* y *RecDelimit*. El usuario puede cambiar los valores por defecto en la caja de diálogo de importación del entorno Diseño. Los campos texto pueden contener retornos de carro, por lo tanto, tenga cuidado cuando utilice como delimitador un retorno de carro si está importando campos texto. 
 
@@ -62,10 +62,10 @@ OK toma el valor 1 si la importación termina con éxito; de lo contrario, toma 
 
 ## Ver también 
 
-[EXPORT TEXT](export-text.md)  
-[IMPORT DIF](import-dif.md)  
-[IMPORT SYLK](import-sylk.md)  
-[USE CHARACTER SET](use-character-set.md)  
+[EXPORT TEXT](../commands/export-text)  
+[IMPORT DIF](../commands/import-dif)  
+[IMPORT SYLK](../commands/import-sylk)  
+[USE CHARACTER SET](../commands/use-character-set)  
 
 ## Propiedades
 

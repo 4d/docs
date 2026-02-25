@@ -1,4 +1,4 @@
----
+﻿---
 id: generate-password-hash
 title: Generate password hash
 slug: /commands/generate-password-hash
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Generate password hash.Summary-->La commande **Generate password hash** retourne un *hash* de *motDePasse*, généré par un algorithme de hachage cryptographique.<!-- END REF-->
 
-Passez une chaîne dans le paramètre *motDePasse*. La commande **Generate password hash** retourne un hash, aussi appelé empreinte cryptographique, de ce mot de passe. Une empreinte cryptographique différente est générée à chaque appel de la commande avec le même mot de passe. Vous devrez utiliser la commande [Verify password hash](verify-password-hash.md) pour contrôler cette empreinte. 
+Passez une chaîne dans le paramètre *motDePasse*. La commande **Generate password hash** retourne un hash, aussi appelé empreinte cryptographique, de ce mot de passe. Une empreinte cryptographique différente est générée à chaque appel de la commande avec le même mot de passe. Vous devrez utiliser la commande [Verify password hash](../commands/verify-password-hash) pour contrôler cette empreinte. 
 
 Dans l'objet *options*, passez les propriétés à utiliser lors de la génération de l'empreinte du mot de passe. Les valeurs possibles sont listées dans ce tableau : 
 
@@ -44,7 +44,7 @@ Dans l'objet *options*, passez les propriétés à utiliser lors de la générat
 
 ### Gestion des erreurs 
 
-Les erreurs suivantes peuvent être retournées. Vous pouvez récupérer et analyser les erreurs à l'aide des commandes [Last errors](../commands/last-errors)  et [ON ERR CALL](on-err-call.md).  
+Les erreurs suivantes peuvent être retournées. Vous pouvez récupérer et analyser les erreurs à l'aide des commandes [Last errors](../commands/last-errors)  et [ON ERR CALL](../commands/on-err-call).  
 
 | **Numéro** | **Message**                                                                                |
 | ---------- | ------------------------------------------------------------------------------------------ |
@@ -72,13 +72,13 @@ Cet exemple génère un hash de mot de passe à l'aide de bcrypt avec un coût d
  SAVE RECORD([Users])
 ```
 
-**Rappel** : Un hash différent est généré à chaque appel de la commande avec le même mot de passe. Ce fonctionnement est standard pour les algorithmes tels que bcrypt, puisque les bonnes pratiques consistent à créer un nouveau salage aléatoire pour chaque hash. Reportez-vous à la description de la commande [Verify password hash](verify-password-hash.md) pour un exemple de vérification des mots de passe.
+**Rappel** : Un hash différent est généré à chaque appel de la commande avec le même mot de passe. Ce fonctionnement est standard pour les algorithmes tels que bcrypt, puisque les bonnes pratiques consistent à créer un nouveau salage aléatoire pour chaque hash. Reportez-vous à la description de la commande [Verify password hash](../commands/verify-password-hash) pour un exemple de vérification des mots de passe.
 
 ## Voir aussi 
 
   
-[Generate digest](generate-digest.md)  
-[Verify password hash](verify-password-hash.md)  
+[Generate digest](../commands/generate-digest)  
+[Verify password hash](../commands/verify-password-hash)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: execute-formula
 title: EXECUTE FORMULA
 slug: /commands/execute-formula
@@ -44,7 +44,7 @@ A instrução pode estar em:
   
 **Notas:** 
 
-* Se l *instrução* for um método projeto, se recomenda utilizar [EXECUTE METHOD](execute-method.md) que lhe permite passar parâmetros.
+* Se l *instrução* for um método projeto, se recomenda utilizar [EXECUTE METHOD](../commands/execute-method) que lhe permite passar parâmetros.
 * Não se recomenda chamar a nenhum comando de declaração de variável como *C\_DATE* em *instrução* já que pode gerar conflitos no código.
 
 A fórmula pode incluir variáveis de processo e variáveis entre processos. Entretanto, a declaração não pode conter o controle das instruções de fluxo (If, While, etc.), já que deve estar em uma linha de código.
@@ -55,7 +55,7 @@ Para garantir que a *instrução* seja avaliada corretamente, independentemente 
 
 Por otimização, cada fórmula executada vía **EXECUTE FORMULA** em modo compilado pode ser armazenada em uma memória caché na memória dedicada. A fórmula é armazenada em caché em forma tokenizada. Uma vez que se coloca na caché, suas execuções posteriores estão altamente otimizadas já que o passo de tokenização se evita.
 
-O tamanho da cache é zero como padrão (sem caché); deve ser criada ou ajustada com o comando [SET DATABASE PARAMETER](set-database-parameter.md). Por exemplo:
+O tamanho da cache é zero como padrão (sem caché); deve ser criada ou ajustada com o comando [SET DATABASE PARAMETER](../commands/set-database-parameter). Por exemplo:
 
 ```4d
  SET DATABASE PARAMETER(Number of formulas in cache;0) //sem caché de fórmulas
@@ -75,8 +75,8 @@ Se quiser executar instruções usando chamadas para comandos 4D e tabelas. Já 
 ## Ver também 
 
 [Command name](../commands/command-name)  
-[EDIT FORMULA](edit-formula.md)  
-[SET DATABASE PARAMETER](set-database-parameter.md)  
+[EDIT FORMULA](../commands/edit-formula)  
+[SET DATABASE PARAMETER](../commands/set-database-parameter)  
 
 ## Propriedades
 

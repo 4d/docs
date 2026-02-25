@@ -1,4 +1,4 @@
----
+﻿---
 id: sum-squares
 title: Sum squares
 slug: /commands/sum-squares
@@ -52,7 +52,7 @@ O método a seguir se chama para imprimir os registros na seleção e ativar o p
  PRINT SELECTION([Tabela1])
 ```
 
-**Nota:** o parâmetro do comando [BREAK LEVEL](break-level.md) deve ser igual ao número de quebras em seu relatório. Para maior informação sobre o processo de quebras, consulte os comandos do capítulo *Imprimir*. 
+**Nota:** o parâmetro do comando [BREAK LEVEL](../commands/break-level) deve ser igual ao número de quebras em seu relatório. Para maior informação sobre o processo de quebras, consulte os comandos do capítulo *Imprimir*. 
 
 ## Exemplo 2 
 
@@ -67,10 +67,10 @@ Este exemplo permite obter a soma de quadrados dos valores localizados num array
 
 ## Ver também 
 
-[Average](average.md)  
-[Std deviation](std-deviation.md)  
-[Sum](sum.md)  
-[Variance](variance.md)  
+[Average](../commands/average)  
+[Std deviation](../commands/std-deviation)  
+[Sum](../commands/sum)  
+[Variance](../commands/variance)  
 
 ## Propriedades
 

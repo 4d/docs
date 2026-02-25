@@ -1,4 +1,4 @@
----
+﻿---
 id: get-window-rect
 title: GET WINDOW RECT
 slug: /commands/get-window-rect
@@ -46,8 +46,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[CONVERT COORDINATES](convert-coordinates.md)  
-[SET WINDOW RECT](set-window-rect.md)  
+[CONVERT COORDINATES](../commands/convert-coordinates)  
+[SET WINDOW RECT](../commands/set-window-rect)  
 
 ## プロパティ
 

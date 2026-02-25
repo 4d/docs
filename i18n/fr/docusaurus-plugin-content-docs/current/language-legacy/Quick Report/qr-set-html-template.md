@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-html-template
 title: QR SET HTML TEMPLATE
 slug: /commands/qr-set-html-template
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 Le modèle est construit à l'aide d'un ensemble de balises de traitement des données. Ce fonctionnement vous permet de générer des documents HTML proches des états originaux ou des documents à l'apparence entièrement personnalisée.
 
-**Note :** Vous devez appeler au préalable [QR SET DESTINATION](qr-set-destination.md) pour définir le format HTML comme destination de sortie.
+**Note :** Vous devez appeler au préalable [QR SET DESTINATION](../commands/qr-set-destination) pour définir le format HTML comme destination de sortie.
 
 ## Balises HTML 
 
@@ -79,7 +79,7 @@ Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
 ## Voir aussi 
 
-[QR Get HTML template](qr-get-html-template.md)  
+[QR Get HTML template](../commands/qr-get-html-template)  
 
 ## Propriétés
 

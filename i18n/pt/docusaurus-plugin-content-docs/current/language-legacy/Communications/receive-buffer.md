@@ -1,4 +1,4 @@
----
+﻿---
 id: receive-buffer
 title: RECEIVE BUFFER
 slug: /commands/receive-buffer
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.RECEIVE BUFFER.Summary-->RECEIVE BUFFER lê a porta serial que foi aberta anteriormente com [SET CHANNEL](set-channel.md).<!-- END REF--> A porta serial tem um buffer que preenche com caracteres até que um comando lê a partir do buffer. RECEIVE BUFFER recebe os caracteres do buffer serial, colocá-os em *receiveVar* e limpa o buffer. Se não houver caracteres no buffer, então *receiveVar* não conterá nada.
+<!--REF #_command_.RECEIVE BUFFER.Summary-->RECEIVE BUFFER lê a porta serial que foi aberta anteriormente com [SET CHANNEL](../commands/set-channel).<!-- END REF--> A porta serial tem um buffer que preenche com caracteres até que um comando lê a partir do buffer. RECEIVE BUFFER recebe os caracteres do buffer serial, colocá-os em *receiveVar* e limpa o buffer. Se não houver caracteres no buffer, então *receiveVar* não conterá nada.
 
 **Em Windows**  
 A porta serial de buffer do Windows é limitada a 10 Kbytes. Isso significa que o buffer pode realizar um overflow. Quando ela estiver cheia e novos caracteres forem recebidos, os novos caracteres substituem os antigos caracteres. Os caracteres antigos estão perdidos e, portanto, é essencial que o buffer seja lido rapidamente quando novos caracteres são recebidos.
@@ -37,9 +37,9 @@ A porta serial de buffer do Windows é limitada a 10 Kbytes. Isso significa que 
 A porta serial buffer no macOS é capacidade ilimitada (dependendo da memória disponível). Se o buffer estiver cheio e novos caracteres são recebidos, os novos caracteres substituem os antigos caracteres. Os caracteres antigos estão perdidos e, portanto, é essencial que o buffer seja lido rapidamente quando novos caracteres são recebidos. 
 
   
-RECEIVE BUFFER é diferente de [RECEIVE PACKET](receive-packet.md), ele leva o que está no buffer e, em seguida, retorna imediatamente. [RECEIVE PACKET](receive-packet.md) aguarda até encontrar um caractere específico ou até que um determinado número de caracteres estejam no buffer
+RECEIVE BUFFER é diferente de [RECEIVE PACKET](../commands/receive-packet), ele leva o que está no buffer e, em seguida, retorna imediatamente. [RECEIVE PACKET](../commands/receive-packet) aguarda até encontrar um caractere específico ou até que um determinado número de caracteres estejam no buffer
 
-Durante a execução do RECEIVE BUFFER, o usuário pode interromper a recepção pressionando **Ctrl-Alt-Shift** (Windows) ou **Command** \+ **Option** \+ **Shift** (Macintosh). Esta interrupção gera um erro -9994, que você pode pegar com um método de tratamento de erros instalado usando [ON ERR CALL](on-err-call.md). 
+Durante a execução do RECEIVE BUFFER, o usuário pode interromper a recepção pressionando **Ctrl-Alt-Shift** (Windows) ou **Command** \+ **Option** \+ **Shift** (Macintosh). Esta interrupção gera um erro -9994, que você pode pegar com um método de tratamento de erros instalado usando [ON ERR CALL](../commands/on-err-call). 
 
 ## Exemplo 
 
@@ -68,15 +68,15 @@ Para parar de ouvir a porta serial, basta executar:
  ◊IP_Escutar_Porta_Serial:=False
 ```
 
-Note que o acesso à variável interprocesso *vtBuffer* deve ser protegida por um semáforo, de modo que os processos não causarão conflito. Veja o comando [Semaphore](semaphore.md) para obter mais informações.
+Note que o acesso à variável interprocesso *vtBuffer* deve ser protegida por um semáforo, de modo que os processos não causarão conflito. Veja o comando [Semaphore](../commands/semaphore) para obter mais informações.
 
 ## Ver também 
 
-[ON ERR CALL](on-err-call.md)  
-[RECEIVE PACKET](receive-packet.md)  
-[Semaphore](semaphore.md)  
-[SET CHANNEL](set-channel.md)  
-[USE CHARACTER SET](use-character-set.md)  
+[ON ERR CALL](../commands/on-err-call)  
+[RECEIVE PACKET](../commands/receive-packet)  
+[Semaphore](../commands/semaphore)  
+[SET CHANNEL](../commands/set-channel)  
+[USE CHARACTER SET](../commands/use-character-set)  
 
 ## Propriedades
 

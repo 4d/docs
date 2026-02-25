@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-count-xml-elements
 title: DOM Count XML elements
 slug: /commands/dom-count-xml-elements
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.DOM Count XML elements.Summary-->El comando DOM Count XML elements devuelve el número de elementos “hijo” dependientes del elemento padre *refElement* y llamado *nomElement*.<!-- END REF-->por defecto, **DOM Count XML elements** es sensible a las mayúsculas y minúsculas con respecto el parámetro *nomElement* (de acuerdo a los estándares XML). Puede controlar la sensibilidad de mayúsculas y minúsculas del comando utilizando el selector XML DOM case sensitivity del comando [XML SET OPTIONS](xml-set-options.md). 
+<!--REF #_command_.DOM Count XML elements.Summary-->El comando DOM Count XML elements devuelve el número de elementos “hijo” dependientes del elemento padre *refElement* y llamado *nomElement*.<!-- END REF-->por defecto, **DOM Count XML elements** es sensible a las mayúsculas y minúsculas con respecto el parámetro *nomElement* (de acuerdo a los estándares XML). Puede controlar la sensibilidad de mayúsculas y minúsculas del comando utilizando el selector XML DOM case sensitivity del comando [XML SET OPTIONS](../commands/xml-set-options). 
 
 ## Variables y conjuntos del sistema 
 
@@ -39,8 +39,8 @@ Si el comando se ha ejecutado correctamente, la variable sistema OK toma el valo
 
 ## Ver también 
 
-[DOM Get XML element](dom-get-xml-element.md)  
-[XML SET OPTIONS](xml-set-options.md)  
+[DOM Get XML element](../commands/dom-get-xml-element)  
+[XML SET OPTIONS](../commands/xml-set-options)  
 
 ## Propiedades
 

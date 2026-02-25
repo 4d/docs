@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-destination
 title: QR SET DESTINATION
 slug: /commands/qr-set-destination
@@ -45,11 +45,11 @@ Passez dans le paramètre *type* une des constantes du thème *QR Destination de
 *qr printer* (1) : Si vous passez une chaîne contenant une étoile ("\*") dans le paramètre *spécificités*, aucune boîte de dialogue ne sera affichée lors de l'impression, les paramètres d'impression courants seront automatiquement utilisés. Ce paramétrage est nécessaire si vous souhaitez imprimer l'état sur le serveur. 
 
 *qr text file* (2) : Si vous passez une chaîne vide dans le paramètre *spécificités*, une boîte de dialogue standard d'enregistrement de fichiers apparaît. Si vous passez un chemin d'accès valide, l'état rapide sera enregistré à l'emplacement indiqué.   
-Par défaut, le délimiteur de champ est le caractère Tabulation (code 9) et le délimiteur d'enregistrement est le caractère Retour chariot (code 13). Vous pouvez modifier ces caractères par défaut en changeant la valeur des variables système FldDelimit et RecDelimit. Sous Windows, si FldDelimit vaut 13, un caractère 10 (Saut de ligne) sera ajouté après le Retour chariot. Tenez compte du fait que ces variables sont utilisées par d'autres commandes, par exemple [IMPORT TEXT](import-text.md). Toute modification de ces variables est répercutée sur l'ensemble de l'application.
+Par défaut, le délimiteur de champ est le caractère Tabulation (code 9) et le délimiteur d'enregistrement est le caractère Retour chariot (code 13). Vous pouvez modifier ces caractères par défaut en changeant la valeur des variables système FldDelimit et RecDelimit. Sous Windows, si FldDelimit vaut 13, un caractère 10 (Saut de ligne) sera ajouté après le Retour chariot. Tenez compte du fait que ces variables sont utilisées par d'autres commandes, par exemple [IMPORT TEXT](../commands/import-text). Toute modification de ces variables est répercutée sur l'ensemble de l'application.
 
 *qr 4D View area* (3) : Si l'utilisateur courant dispose du plug-in 4D View, une fenêtre externe 4D View est créée et affiche les résultats des paramètres courants de la zone d'état rapide. 
 
-*qr HTML file* (5) : Un fichier HTML est généré d'après les paramètres courants de la zone d'état rapide. Le fichier HTML est basé sur le modèle défini par la commande [QR SET HTML TEMPLATE](qr-set-html-template.md). Pour plus d'informations sur le mode de conversion des données, veuillez vous référer au manuel Mode Développement. 
+*qr HTML file* (5) : Un fichier HTML est généré d'après les paramètres courants de la zone d'état rapide. Le fichier HTML est basé sur le modèle défini par la commande [QR SET HTML TEMPLATE](../commands/qr-set-html-template). Pour plus d'informations sur le mode de conversion des données, veuillez vous référer au manuel Mode Développement. 
 
 Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.  
 Si la valeur de *type* de destination est incorrecte, l’erreur -9852 est générée.
@@ -65,7 +65,7 @@ L'exemple suivant définit le fichier texte "MonDoc.txt" comme type de destinati
 
 ## Voir aussi 
 
-[QR GET DESTINATION](qr-get-destination.md)  
+[QR GET DESTINATION](../commands/qr-get-destination)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: is-user-deleted
 title: Is user deleted
 slug: /commands/is-user-deleted
@@ -34,13 +34,13 @@ Si le compte n'existe pas ou a été supprimé, la fonction **Is user deleted** 
 
 ## Gestion des erreurs 
 
-Si vous n'avez pas les privilèges d'accès pour appeler **Is user deleted** ou si un autre process accède déjà au système de mots de passe, une erreur de privilège d'accès est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs utilisant la commande [ON ERR CALL](on-err-call.md).
+Si vous n'avez pas les privilèges d'accès pour appeler **Is user deleted** ou si un autre process accède déjà au système de mots de passe, une erreur de privilège d'accès est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs utilisant la commande [ON ERR CALL](../commands/on-err-call).
 
 ## Voir aussi 
 
-[DELETE USER](delete-user.md)  
-[GET USER PROPERTIES](get-user-properties.md)  
-[Set user properties](set-user-properties.md)  
+[DELETE USER](../commands/delete-user)  
+[GET USER PROPERTIES](../commands/get-user-properties)  
+[Set user properties](../commands/set-user-properties)  
 
 ## Propriétés
 

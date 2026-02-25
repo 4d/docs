@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-insert-column
 title: LISTBOX INSERT COLUMN
 slug: /commands/listbox-insert-column
@@ -52,8 +52,8 @@ displayed_sidebar: docs
 * 配列タイプのリストボックスの場合、列に表示する内容が格納された配列の名前を渡します。フォームが実行される際、動的なコンテキストにおいてこのコマンドを使用する場合、Nil (->\[\]) ポインターを渡す事ができます(以下を参照して下さい)。
 * セレクション型のリストボックスの場合、*colVariable*引 数にはフィールドまたは変数を渡します。結果列の内容は、リストボックスに関連付けられたセレクションのレコードごとに評価されるフィールドまたは変数の 値となります。このタイプのコンテンツは、リストボックスの"データソース"プロパティでカレントセレクションまたは命名セレクションを指定した場合にの み使用できます (*リストボックスオブジェクトの管理*を参照)。文字列, 数値, 日付, 時間, ピクチャ, ブールタイプのフィールドや変数を使用できます。
 
-レコードのセレクションに基づいたリストボックスのコンテキストでは、**LISTBOX INSERT COLUMN**はフィールドや変数などの単純な要素を挿入するために使用できます。フォーミュラやメソッドなどのより複雑な表現式を使用したい場合は[LISTBOX INSERT COLUMN FORMULA](listbox-insert-column-formula.md)コマンドを使用します。  
-コレクション型/エンティティセレクション型のリストボックスもサポートされますが、しかしながら*colName* 引数が式を受け付けないため、データソースを指定するには[LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md) コマンドを使用する必要があります。この場合には[LISTBOX INSERT COLUMN FORMULA](listbox-insert-column-formula.md) コマンドを使用するほうがより適切です。
+レコードのセレクションに基づいたリストボックスのコンテキストでは、**LISTBOX INSERT COLUMN**はフィールドや変数などの単純な要素を挿入するために使用できます。フォーミュラやメソッドなどのより複雑な表現式を使用したい場合は[LISTBOX INSERT COLUMN FORMULA](../commands/listbox-insert-column-formula)コマンドを使用します。  
+コレクション型/エンティティセレクション型のリストボックスもサポートされますが、しかしながら*colName* 引数が式を受け付けないため、データソースを指定するには[LISTBOX SET COLUMN FORMULA](../commands/listbox-set-column-formula) コマンドを使用する必要があります。この場合には[LISTBOX INSERT COLUMN FORMULA](../commands/listbox-insert-column-formula) コマンドを使用するほうがより適切です。
 
 **注:** 同じリストボックス内で、配列をデータソースとする列と、フィールドや変数をデータソースとする列を混在させることはできません。
 
@@ -69,7 +69,7 @@ displayed_sidebar: docs
   
 これを可能にするため、**LISTBOX DUPLICATE COLUMN** は *colVariable* (配列型リストボックスのみ)、*headerVar*、 *footerVar* 引数において**Nil** (**\->\[\]**) ポインターを引数として受け入れるようになりました。Nilポインターを渡してコマンドを実行すると、4Dは必要な変数を動的に作成します(詳細に関しては、 のセクションを参照して下さい)。  
   
-ヘッ ダー変数とフッター変数は常に特定のタイプで作成されるという点に注意して下さい(ヘッダーは倍長整数、フッターはテキスト)。反対に、カラム変数は作成 時にタイプを指定することはできません。リストボックスはカラム変数に対して、異なるタイプの配列(テキスト配列、倍長整数配列、等々)を受け入れること ができるからです。これはつまり配列のタイプを手動で設定しなければならないという事です(例題3を参照して下さい)。こういったタイプの指定は、配列に 新しい要素を挿入するために [LISTBOX INSERT ROWS](listbox-insert-rows.md) などのコマンドを呼び出す前に実行しなければなりません。その他には、 [APPEND TO ARRAY](append-to-array.md) を使用して配列の型を指定し、要素を挿入することができます。
+ヘッ ダー変数とフッター変数は常に特定のタイプで作成されるという点に注意して下さい(ヘッダーは倍長整数、フッターはテキスト)。反対に、カラム変数は作成 時にタイプを指定することはできません。リストボックスはカラム変数に対して、異なるタイプの配列(テキスト配列、倍長整数配列、等々)を受け入れること ができるからです。これはつまり配列のタイプを手動で設定しなければならないという事です(例題3を参照して下さい)。こういったタイプの指定は、配列に 新しい要素を挿入するために [LISTBOX INSERT ROWS](../commands/listbox-insert-rows) などのコマンドを呼び出す前に実行しなければなりません。その他には、 [APPEND TO ARRAY](../commands/append-to-array) を使用して配列の型を指定し、要素を挿入することができます。
 
 ## 例題 1 
 
@@ -110,8 +110,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[LISTBOX DELETE COLUMN](listbox-delete-column.md)  
-[LISTBOX INSERT COLUMN FORMULA](listbox-insert-column-formula.md)  
+[LISTBOX DELETE COLUMN](../commands/listbox-delete-column)  
+[LISTBOX INSERT COLUMN FORMULA](../commands/listbox-insert-column-formula)  
 
 ## プロパティ
 

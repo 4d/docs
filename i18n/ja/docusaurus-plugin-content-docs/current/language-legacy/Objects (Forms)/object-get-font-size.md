@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-font-size
 title: OBJECT Get font size
 slug: /commands/object-get-font-size
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT SET FONT SIZE](object-set-font-size.md)  
+[OBJECT SET FONT SIZE](../commands/object-set-font-size)  
 
 ## プロパティ
 

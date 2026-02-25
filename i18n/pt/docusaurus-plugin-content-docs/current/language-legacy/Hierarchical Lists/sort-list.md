@@ -1,4 +1,4 @@
----
+﻿---
 id: sort-list
 title: SORT LIST
 slug: /commands/sort-list
@@ -67,7 +67,7 @@ A lista se verá assim:
 
 ## Ver também 
 
-[Selected list items](selected-list-items.md)  
+[Selected list items](../commands/selected-list-items)  
 
 ## Propriedades
 

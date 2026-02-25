@@ -1,4 +1,4 @@
----
+﻿---
 id: get-group-access
 title: Get group access
 slug: /commands/get-group-access
@@ -46,7 +46,7 @@ Desea verificar si el usuario actual pertenece al grupo "plugins":
 
 ## Ver también 
 
-[SET GROUP ACCESS](set-group-access.md)  
+[SET GROUP ACCESS](../commands/set-group-access)  
 
 ## Propiedades
 

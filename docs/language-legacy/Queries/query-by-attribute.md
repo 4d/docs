@@ -1,4 +1,4 @@
----
+﻿---
 id: query-by-attribute
 title: QUERY BY ATTRIBUTE
 slug: /commands/query-by-attribute
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUERY BY ATTRIBUTE.Summary-->**QUERY BY ATTRIBUTE** looks for records matching the query string defined using the *objectField*, *attributePath*, *queryOp* and *value* parameters, and returns a selection of records for *aTable*.<!-- END REF-->changes the current selection of *aTable* for the current process and makes the first record of the new selection the current record. If the *aTable* parameter is omitted, the command applies to the default table. If no default table has been set, an error occurs.
 
-The optional *conjOp* parameter is used to join **QUERY BY ATTRIBUTE** calls when defining multiple queries. The conjunction operators available are the same as the ones for the [QUERY](query.md) command:
+The optional *conjOp* parameter is used to join **QUERY BY ATTRIBUTE** calls when defining multiple queries. The conjunction operators available are the same as the ones for the [QUERY](../commands/query) command:
 
 | **Conjunction** | **Symbol to use with QUERY BY ATTRIBUTE** |
 | --------------- | ----------------------------------------- |
@@ -69,7 +69,7 @@ The *queryOp* parameter is the comparison operator that is applied between *obje
 
 (\*) When used with array elements, the # operator means "does not contain any". 
 
-**Note:** It is also possible to specify the comparison operator as a text expression instead of a symbol. See the [QUERY](query.md) command description for more information. 
+**Note:** It is also possible to specify the comparison operator as a text expression instead of a symbol. See the [QUERY](../commands/query) command description for more information. 
 
 *value* is the data against which the *attributePath* will be compared. The value can be any expression that evaluates to the same data type as *attributePath*. The value is evaluated once, at the beginning of the query. The value is not evaluated for each record. To query for a string contained within a string (a "contains" query), use the wildcard symbol (@) in *value* to isolate the string to be searched for as shown in this example: "@Smith@". Note that in this case, the search only partially benefits from the index (compactness of data storage).
 
@@ -118,19 +118,19 @@ Here are the rules for building multiple queries by attribute:
 * The first query argument must not contain a conjunction.
 * Each successive query argument can begin with a conjunction. If you omit it, the AND (&) operator is used by default.
 * All queries, except the final query, must use the *\** parameter.
-* **QUERY BY ATTRIBUTE** can be mixed with [QUERY](query.md) commands (see example).
-* To perform the query, do not specify the *\** parameter in the last **QUERY BY ATTRIBUTE** command. Alternatively, you can execute the [QUERY](query.md) command without any parameters other than the table.
+* **QUERY BY ATTRIBUTE** can be mixed with [QUERY](../commands/query) commands (see example).
+* To perform the query, do not specify the *\** parameter in the last **QUERY BY ATTRIBUTE** command. Alternatively, you can execute the [QUERY](../commands/query) command without any parameters other than the table.
 
 **Note:** Each table maintains its own currently-built query. This means that you can create multiple queries simultaneously, one for each table. 
 
 No matter which way a query has been defined:
 
-* If the actual query operation is going to take some time to be performed, 4D automatically displays a message containing a progress meter. These messages can be turned on and off by using the [MESSAGES ON](messages-on.md) and [MESSAGES OFF](messages-off.md)  commands. If a progress meter is displayed, the user can click on the **Stop** button to interrupt the query. If the query is completed, OK is set to 1\. Otherwise, if the query is interrupted, OK is set to 0 (zero).
+* If the actual query operation is going to take some time to be performed, 4D automatically displays a message containing a progress meter. These messages can be turned on and off by using the [MESSAGES ON](../commands/messages-on) and [MESSAGES OFF](../commands/messages-off)  commands. If a progress meter is displayed, the user can click on the **Stop** button to interrupt the query. If the query is completed, OK is set to 1\. Otherwise, if the query is interrupted, OK is set to 0 (zero).
 * If any indexed object fields are specified, the query is optimized every time that it is possible (indexed fields are searched first) resulting in a query that takes the least amount of time possible.
 
 ### Date values in the object 
 
-Dates are stored in objects according to database settings; by default, the time zone is taken into account (see the JSON use local time selector in the [SET DATABASE PARAMETER](set-database-parameter.md) command). 
+Dates are stored in objects according to database settings; by default, the time zone is taken into account (see the JSON use local time selector in the [SET DATABASE PARAMETER](../commands/set-database-parameter) command). 
 
 ```json
 !1973-05-22! -> "1973-05-21T23:00:00.000Z"
@@ -412,12 +412,12 @@ If the query is carried out correctly, the OK system variable is set to 1.
 The OK variable is set to 0 if:
 
 * the user clicks on the **Cancel**/**Stop** button,
-* in 'query and lock' mode (see the [SET QUERY AND LOCK](set-query-and-lock.md) command), the query has found at least one locked record. In this case as well, the LockedSet system set is updated.
+* in 'query and lock' mode (see the [SET QUERY AND LOCK](../commands/set-query-and-lock) command), the query has found at least one locked record. In this case as well, the LockedSet system set is updated.
 
 ## See also 
 
   
-[QUERY SELECTION BY ATTRIBUTE](query-selection-by-attribute.md)  
+[QUERY SELECTION BY ATTRIBUTE](../commands/query-selection-by-attribute)  
 *Structure of 4D language objects*  
 
 ## Properties

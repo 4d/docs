@@ -1,4 +1,4 @@
----
+﻿---
 id: encrypt-blob
 title: ENCRYPT BLOB
 slug: /commands/encrypt-blob
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.ENCRYPT BLOB.Summary-->O comando ENCRYPT BLOB criptograma o conteúdo do BLOB *toEncrypt* com a chave privada do remetente *sendPrivKey*, bem como, opcionalmente, a chave pública do destinatário *recipPubKey*.<!-- END REF--> Estas chaves devem ser geradas pelo comando [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md) (no âmbito do tema "Protocolo Seguro").
+<!--REF #_command_.ENCRYPT BLOB.Summary-->O comando ENCRYPT BLOB criptograma o conteúdo do BLOB *toEncrypt* com a chave privada do remetente *sendPrivKey*, bem como, opcionalmente, a chave pública do destinatário *recipPubKey*.<!-- END REF--> Estas chaves devem ser geradas pelo comando [GENERATE ENCRYPTION KEYPAIR](../commands/generate-encryption-keypair) (no âmbito do tema "Protocolo Seguro").
 
 **Nota:** Este comando usa o algoritmo do protocolo SSL e recursos de criptografia. Para poder usar este comando, certifique-se que os componentes necessários para o protocolo SSL estão corretamente instalados em sua máquina - mesmo que você não queira usar SSL para conexões de servidor Web de 4D. Para obter informações detalhadas sobre esse protocolo, consulte *developer.4d.com*.
 
@@ -39,7 +39,7 @@ displayed_sidebar: docs
 
 O BLOB contendo as chaves tem um formato PKCS interno. Este formato de plataforma padrão permite a troca ou o tratamento de chaves simplesmente copiando-colando em um e-mail ou um arquivo de texto.
 
-Uma vez que o comando foi executado, o BLOB *toEncrypt* contém os dados criptografados, que serão descriptografados apenas com o comando [DECRYPT BLOB](decrypt-blob.md), com a chave pública do remetente passada como parâmetro.
+Uma vez que o comando foi executado, o BLOB *toEncrypt* contém os dados criptografados, que serão descriptografados apenas com o comando [DECRYPT BLOB](../commands/decrypt-blob), com a chave pública do remetente passada como parâmetro.
 
 Além disso, se chave pública do destinatário opcional foi usada para criptografar as informações, a chave privada do destinatário também será necessária para descriptografar.
 
@@ -194,9 +194,9 @@ A empresa quer usar a Internet para trocar informações. Cada filial recebe inf
 ## Ver também 
 
   
-[DECRYPT BLOB](decrypt-blob.md)  
-[Encrypt data BLOB](encrypt-data-blob.md)  
-[GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
+[DECRYPT BLOB](../commands/decrypt-blob)  
+[Encrypt data BLOB](../commands/encrypt-data-blob)  
+[GENERATE ENCRYPTION KEYPAIR](../commands/generate-encryption-keypair)  
 
 ## Propriedades
 

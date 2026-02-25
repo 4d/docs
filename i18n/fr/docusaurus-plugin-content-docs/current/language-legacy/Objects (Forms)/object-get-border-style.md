@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-border-style
 title: OBJECT Get border style
 slug: /commands/object-get-border-style
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get border style.Summary-->La commande **OBJECT Get border style** retourne le style de ligne de bordure de l’objet ou des objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 
 
-Le style de bordure d’un objet peut avoir été défini en mode Développement via la Liste des propriétés, ou à l’aide de la commande [OBJECT SET BORDER STYLE](object-set-border-style.md). 
+Le style de bordure d’un objet peut avoir été défini en mode Développement via la Liste des propriétés, ou à l’aide de la commande [OBJECT SET BORDER STYLE](../commands/object-set-border-style). 
 
 Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).
 
@@ -49,7 +49,7 @@ La commande retourne une valeur correspondant au style de la bordure. Vous pouve
 
 ## Voir aussi 
 
-[OBJECT SET BORDER STYLE](object-set-border-style.md)  
+[OBJECT SET BORDER STYLE](../commands/object-set-border-style)  
 
 ## Propriétés
 

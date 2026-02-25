@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-drop-column
 title: QR Get drop column
 slug: /commands/qr-get-drop-column
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[QR DELETE COLUMN](qr-delete-column.md)  
+[QR DELETE COLUMN](../commands/qr-delete-column)  
 
 ## プロパティ
 

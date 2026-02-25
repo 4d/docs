@@ -1,4 +1,4 @@
----
+﻿---
 id: delete-from-list
 title: DELETE FROM LIST
 slug: /commands/delete-from-list
@@ -39,9 +39,9 @@ If you pass *\** in *itemRef*, you delete the currently selected item in the lis
 
 Otherwise, you specify the item reference number of the item you want to delete. If there is no item with the item reference number you passed, the command does nothing.
 
-If you work with item reference numbers, build a list in which the items have unique reference numbers, otherwise you will not be able to distinguish the items. For more information, see the description of the [APPEND TO LIST](append-to-list.md) command.
+If you work with item reference numbers, build a list in which the items have unique reference numbers, otherwise you will not be able to distinguish the items. For more information, see the description of the [APPEND TO LIST](../commands/append-to-list) command.
 
-No matter which item you delete, you should specify the optional *\** parameter to let 4D automatically delete the sublist attached to the item, if any. If you do not specify the *\** parameter, it is a good idea to have previously obtained the list reference number of the sublist (if any) attached to the item, so that you can delete it, if necessary, using the [CLEAR LIST](clear-list.md) command.
+No matter which item you delete, you should specify the optional *\** parameter to let 4D automatically delete the sublist attached to the item, if any. If you do not specify the *\** parameter, it is a good idea to have previously obtained the list reference number of the sublist (if any) attached to the item, so that you can delete it, if necessary, using the [CLEAR LIST](../commands/clear-list) command.
 
 ## Example 
 
@@ -53,8 +53,8 @@ The following code deletes the currently selected item of the list *hList*. If t
 
 ## See also 
 
-[CLEAR LIST](clear-list.md)  
-[GET LIST ITEM](get-list-item.md)  
+[CLEAR LIST](../commands/clear-list)  
+[GET LIST ITEM](../commands/get-list-item)  
 
 ## Properties
 

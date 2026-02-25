@@ -1,4 +1,4 @@
----
+﻿---
 id: set-macro-parameter
 title: SET MACRO PARAMETER
 slug: /commands/set-macro-parameter
@@ -41,7 +41,7 @@ If no text has been selected, *paramText* is inserted into the method.
 
 ## Note 
 
- In order for the [GET MACRO PARAMETER](get-macro-parameter.md) and **SET MACRO PARAMETER** commands to work correctly, the new “version” attribute must be declared in the macro itself. The “version” attribute must be declared as follows:
+ In order for the [GET MACRO PARAMETER](../commands/get-macro-parameter) and **SET MACRO PARAMETER** commands to work correctly, the new “version” attribute must be declared in the macro itself. The “version” attribute must be declared as follows:
 
 ```xml
 <macro name="MyMacro" version="2">
@@ -67,7 +67,7 @@ This macro builds a new text that will be returned to the calling method:
 
 ## See also 
 
-[GET MACRO PARAMETER](get-macro-parameter.md)  
+[GET MACRO PARAMETER](../commands/get-macro-parameter)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: get-highlighted-records
 title: GET HIGHLIGHTED RECORDS
 slug: /commands/get-highlighted-records
@@ -53,7 +53,7 @@ GET HIGHLIGHTED RECORDSコマンドはフォーム以外のコンテキストで
 
 ## 参照 
 
-[HIGHLIGHT RECORDS](highlight-records.md)  
+[HIGHLIGHT RECORDS](../commands/highlight-records)  
 
 ## プロパティ
 

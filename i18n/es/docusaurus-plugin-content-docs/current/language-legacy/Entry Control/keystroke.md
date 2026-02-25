@@ -1,4 +1,4 @@
----
+﻿---
 id: keystroke
 title: Keystroke
 slug: /commands/keystroke
@@ -177,9 +177,9 @@ Utilizando las habilidades de la comunicación interproceso de 4D, puede constru
 
 ## Ver también 
 
-[FILTER KEYSTROKE](filter-keystroke.md)  
+[FILTER KEYSTROKE](../commands/filter-keystroke)  
 [Form event code](../commands/form-event-code)  
-[Get edited text](get-edited-text.md)  
+[Get edited text](../commands/get-edited-text)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-column-formula
 title: LISTBOX SET COLUMN FORMULA
 slug: /commands/listbox-set-column-formula
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX SET COLUMN FORMULA.Summary-->La commande **LISTBOX SET COLUMN FORMULA** permet de modifier la *formule* associée à la colonne de list box désignée par les paramètres *objet* et *\**.<!-- END REF--> Les formules ne peuvent être utilisées que lorsque la propriété “Source de données” de la list box est **Sélection courante**, **Sélection temporaire** ou **Collection ou entity selection**.
 
-**Note :** Vous pouvez utiliser la commande [OBJECT SET DATA SOURCE](object-set-data-source.md) pour définir la source de données d'une list box de type tableau. 
+**Note :** Vous pouvez utiliser la commande [OBJECT SET DATA SOURCE](../commands/object-set-data-source) pour définir la source de données d'une list box de type tableau. 
 
 Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. Ce paramètre doit désigner une colonne de la listbox.
 
@@ -51,8 +51,8 @@ Le paramètre *typeDonnées* permet de désigner le type des données issues de 
 
 ## Voir aussi 
 
-[LISTBOX Get column formula](listbox-get-column-formula.md)  
-[OBJECT SET DATA SOURCE](object-set-data-source.md)  
+[LISTBOX Get column formula](../commands/listbox-get-column-formula)  
+[OBJECT SET DATA SOURCE](../commands/object-set-data-source)  
 
 ## Propriétés
 

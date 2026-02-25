@@ -1,4 +1,4 @@
----
+﻿---
 id: create-folder
 title: CREATE FOLDER
 slug: /commands/create-folder
@@ -82,8 +82,8 @@ Création du sous-dossier "\\February\\" dans le dossier existant "C:\\Archives\
 
 ## Voir aussi 
 
-[FOLDER LIST](folder-list.md)  
-[Test path name](test-path-name.md)  
+[FOLDER LIST](../commands/folder-list)  
+[Test path name](../commands/test-path-name)  
 
 ## Propriétés
 

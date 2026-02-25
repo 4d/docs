@@ -1,4 +1,4 @@
----
+﻿---
 id: method-get-attributes
 title: METHOD GET ATTRIBUTES
 slug: /commands/method-get-attributes
@@ -72,7 +72,7 @@ A l'issue de l'exécution, $att contient, par exemple :
 
 ## Voir aussi 
 
-[METHOD SET ATTRIBUTES](method-set-attributes.md)  
+[METHOD SET ATTRIBUTES](../commands/method-set-attributes)  
 
 ## Propriétés
 

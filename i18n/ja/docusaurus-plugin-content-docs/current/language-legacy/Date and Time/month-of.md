@@ -1,4 +1,4 @@
----
+﻿---
 id: month-of
 title: Month of
 slug: /commands/month-of
@@ -53,8 +53,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Day of](day-of.md)  
-[Year of](year-of.md)  
+[Day of](../commands/day-of)  
+[Year of](../commands/year-of)  
 
 ## プロパティ
 

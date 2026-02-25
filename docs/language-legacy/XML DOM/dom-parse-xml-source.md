@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-parse-xml-source
 title: DOM Parse XML source
 slug: /commands/dom-parse-xml-source
@@ -63,11 +63,11 @@ There are two ways to specify a DTD:
 **Validation by schema**  
 To validate the document via an XML schema, you just need to pass a file or URL with an “xsd” extension instead of a “dtd” one in the third parameter. Validation by XML schema is considered to be more flexible and more powerful than validation by DTD. The language of XSD documents is based on XML language. More particularly, XML schemas support data types. For more information about XML schemas, please refer to the following address: *http://www.w3.org/XML/Schema*.
 
-If validation cannot be performed (no DTD or XSD, incorrect URL, etc.), an error is generated. The Error system variable indicates the error number. You can intercept this error using a method installed by the [ON ERR CALL](on-err-call.md) command.
+If validation cannot be performed (no DTD or XSD, incorrect URL, etc.), an error is generated. The Error system variable indicates the error number. You can intercept this error using a method installed by the [ON ERR CALL](../commands/on-err-call) command.
 
 The command returns a 16-character string (ElementRef) making up the reference in the memory of the document virtual structure. This reference should be used with other XML parsing commands. 
 
-**Important:** Once you no longer have any need for it, remember to call the [DOM CLOSE XML](dom-close-xml.md) command with this reference in order to free up the memory.
+**Important:** Once you no longer have any need for it, remember to call the [DOM CLOSE XML](../commands/dom-close-xml) command with this reference in order to free up the memory.
 
 ## Example 1 
 
@@ -107,8 +107,8 @@ If the command has been correctly executed, the system variable OK is set to 1\.
 
 ## See also 
 
-[DOM CLOSE XML](dom-close-xml.md)  
-[DOM Parse XML variable](dom-parse-xml-variable.md)  
+[DOM CLOSE XML](../commands/dom-close-xml)  
+[DOM Parse XML variable](../commands/dom-parse-xml-variable)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: current-form-table
 title: Current form table
 slug: /commands/current-form-table
@@ -73,9 +73,9 @@ Para esto, utilice el método de objeto para crear la variable *vsCurrentRecord*
 ## Ver también 
 
 [DIALOG](../commands/dialog)  
-[FORM SET INPUT](form-set-input.md)  
-[FORM SET OUTPUT](form-set-output.md)  
-[PRINT SELECTION](print-selection.md)  
+[FORM SET INPUT](../commands/form-set-input)  
+[FORM SET OUTPUT](../commands/form-set-output)  
+[PRINT SELECTION](../commands/print-selection)  
 
 ## Propiedades
 

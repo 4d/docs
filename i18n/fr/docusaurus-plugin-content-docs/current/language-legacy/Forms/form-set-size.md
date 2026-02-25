@@ -1,4 +1,4 @@
----
+﻿---
 id: form-set-size
 title: FORM SET SIZE
 slug: /commands/form-set-size
@@ -72,7 +72,7 @@ Dans ce cas, vous devez passer dans *horizontal* et *vertical* la largeur et la 
 
 La commande **FORM SET SIZE** modifie la taille du formulaire mais tient compte de ses propriétés de redimensionnement. Par exemple, si la largeur minimale du formulaire est de 500 pixels et si la commande définit une largeur de 400 pixels, la nouvelle largeur du formulaire sera de 500 pixels. 
 
-A noter également que cette commande ne modifie pas la taille de la fenêtre du formulaire (il est possible de redimensionner un formulaire sans que la taille de la fenêtre soit modifiée, et inversement). Pour modifier la taille de la fenêtre d’un formulaire, reportez-vous à la description de la commande [RESIZE FORM WINDOW](resize-form-window.md). 
+A noter également que cette commande ne modifie pas la taille de la fenêtre du formulaire (il est possible de redimensionner un formulaire sans que la taille de la fenêtre soit modifiée, et inversement). Pour modifier la taille de la fenêtre d’un formulaire, reportez-vous à la description de la commande [RESIZE FORM WINDOW](../commands/resize-form-window). 
 
 ## Exemple 
 
@@ -135,8 +135,8 @@ La méthode objet associée à ce bouton est la suivante :
 
 ## Voir aussi 
 
-[FORM SET HORIZONTAL RESIZING](form-set-horizontal-resizing.md)  
-[FORM SET VERTICAL RESIZING](form-set-vertical-resizing.md)  
+[FORM SET HORIZONTAL RESIZING](../commands/form-set-horizontal-resizing)  
+[FORM SET VERTICAL RESIZING](../commands/form-set-vertical-resizing)  
 
 ## Propriétés
 

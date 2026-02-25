@@ -1,4 +1,4 @@
----
+﻿---
 id: get-missing-table-names
 title: GET MISSING TABLE NAMES
 slug: /commands/get-missing-table-names
@@ -44,7 +44,7 @@ Una vez haya identificado las tablas faltantes de la base, puede reactivarlas v�
 
 ## Ver también 
 
-[REGENERATE MISSING TABLE](regenerate-missing-table.md)  
+[REGENERATE MISSING TABLE](../commands/regenerate-missing-table)  
 
 ## Propiedades
 

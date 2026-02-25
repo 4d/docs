@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-shortcut
 title: OBJECT GET SHORTCUT
 slug: /commands/object-get-shortcut
@@ -34,7 +34,7 @@ displayed_sidebar: docs
   
 Si pasa el parámetro opcional *\**, indica que el parámetro *objeto* es un nombre de objeto (una cadena). Si no pasa este parámetro, esto indica que el parámetro *objeto* es una variable. En este caso, se pasa una referencia de variable en lugar de una cadena.  
   
-El parámetro *tecla* devuelve el carácter asociado a la tecla (en el caso de una tecla estándar) o una cadena entre corchetes que designa la tecla (en el caso de una tecla función). Puede comparar este valor con las constantes del tema *Atajos de teclado* (ver el comando [OBJECT SET SHORTCUT](object-set-shortcut.md)).  
+El parámetro *tecla* devuelve el carácter asociado a la tecla (en el caso de una tecla estándar) o una cadena entre corchetes que designa la tecla (en el caso de una tecla función). Puede comparar este valor con las constantes del tema *Atajos de teclado* (ver el comando [OBJECT SET SHORTCUT](../commands/object-set-shortcut)).  
   
 El parámetro *modificadores* devuelve un valor que indica la(s) tecla(s) modificadora(s) asociada(s) al atajo. Si hay varias teclas modificadoras combinadas, el comando devuelve la suma de sus valores. Puede comparar el valor recibido con las siguientes constantes, del tema *Eventos (Modificadores)*:
 
@@ -52,7 +52,7 @@ Si ninguna tecla de modificación se ha definido para el atajo, modificadores de
 
 ## Ver también 
 
-[OBJECT SET SHORTCUT](object-set-shortcut.md)  
+[OBJECT SET SHORTCUT](../commands/object-set-shortcut)  
 
 ## Propiedades
 

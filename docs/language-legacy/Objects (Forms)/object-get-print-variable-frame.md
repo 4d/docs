@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-print-variable-frame
 title: OBJECT GET PRINT VARIABLE FRAME
 slug: /commands/object-get-print-variable-frame
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET PRINT VARIABLE FRAME.Summary-->The **OBJECT GET PRINT VARIABLE FRAME** command gets the current configuration of the variable frame print options for the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 
 
-Variable frame printing properties can be defined using the Property List, or using the [OBJECT SET PRINT VARIABLE FRAME](object-set-print-variable-frame.md) command.
+Variable frame printing properties can be defined using the Property List, or using the [OBJECT SET PRINT VARIABLE FRAME](../commands/object-set-print-variable-frame) command.
 
 Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, this indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
 
@@ -47,7 +47,7 @@ If the *object* is a subform and if variable frame printing is disabled (**False
 
 ## See also 
 
-[OBJECT SET PRINT VARIABLE FRAME](object-set-print-variable-frame.md)  
+[OBJECT SET PRINT VARIABLE FRAME](../commands/object-set-print-variable-frame)  
 
 ## Properties
 

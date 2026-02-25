@@ -1,4 +1,4 @@
----
+﻿---
 id: reload-external-data
 title: RELOAD EXTERNAL DATA
 slug: /commands/reload-external-data
@@ -33,11 +33,11 @@ displayed_sidebar: docs
 
 このような場合において、フォーム上にフィールドが表示されている場合、その内容を再描画するために**RELOAD EXTERNAL DATA**コマンドを使用してデータを再読み込みしなければなりません。
 
-**注:** **RELOAD EXTERNAL DATA**コ マンドは4Dローカルモードおよび4D Server上でのみ動作します。4Dリモートモードで個々にフィールドをリロードすることはできません。4Dリモートモードの場合 (例えば[LOAD RECORD](load-record.md)コマンドを使用して) レコード全体をリロードしなければなりません。
+**注:** **RELOAD EXTERNAL DATA**コ マンドは4Dローカルモードおよび4D Server上でのみ動作します。4Dリモートモードで個々にフィールドをリロードすることはできません。4Dリモートモードの場合 (例えば[LOAD RECORD](../commands/load-record)コマンドを使用して) レコード全体をリロードしなければなりません。
 
 ## 参照 
 
-[SET EXTERNAL DATA PATH](set-external-data-path.md)  
+[SET EXTERNAL DATA PATH](../commands/set-external-data-path)  
 
 ## プロパティ
 

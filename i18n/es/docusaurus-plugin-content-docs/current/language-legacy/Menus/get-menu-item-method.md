@@ -1,4 +1,4 @@
----
+﻿---
 id: get-menu-item-method
 title: Get menu item method
 slug: /commands/get-menu-item-method
@@ -40,7 +40,7 @@ El comando devuelve el nombre del método 4D como una cadena de caracteres (expr
 
 ## Ver también 
 
-[SET MENU ITEM METHOD](set-menu-item-method.md)  
+[SET MENU ITEM METHOD](../commands/set-menu-item-method)  
 
 ## Propiedades
 

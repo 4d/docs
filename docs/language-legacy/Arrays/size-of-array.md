@@ -1,4 +1,4 @@
----
+﻿---
 id: size-of-array
 title: Size of array
 slug: /commands/size-of-array
@@ -46,8 +46,8 @@ The following example returns the number of columns for a row in a two-dimension
 
 ## See also 
 
-[DELETE FROM ARRAY](delete-from-array.md)  
-[INSERT IN ARRAY](insert-in-array.md)  
+[DELETE FROM ARRAY](../commands/delete-from-array)  
+[INSERT IN ARRAY](../commands/insert-in-array)  
 
 ## Properties
 

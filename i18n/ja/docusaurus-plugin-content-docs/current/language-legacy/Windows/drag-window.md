@@ -1,4 +1,4 @@
----
+﻿---
 id: drag-window
 title: DRAG WINDOW
 slug: /commands/drag-window
@@ -57,8 +57,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[GET WINDOW RECT](get-window-rect.md)  
-[SET WINDOW RECT](set-window-rect.md)  
+[GET WINDOW RECT](../commands/get-window-rect)  
+[SET WINDOW RECT](../commands/set-window-rect)  
 
 ## プロパティ
 

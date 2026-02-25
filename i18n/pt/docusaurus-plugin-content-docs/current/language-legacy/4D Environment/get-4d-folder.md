@@ -1,4 +1,4 @@
----
+﻿---
 id: get-4d-folder
 title: Get 4D folder
 slug: /commands/get-4d-folder
@@ -128,7 +128,7 @@ Com a aplicação 4D Client, essa constante é rigorosamente equivalente à cons
 
 ### Pasta base sintaxe Unix (Database Folder Unix Syntax) 
 
-Pasta contendo o arquivo de estrutura de banco de dados. Esta constante designa a mesma pasta que o anterior, mas o caminho retornado é expressado utilizando a sintaxe UNIX (POSIX), de tipo /Users/ ... Esta sintaxe é usada principalmente quando você usa o comando [LAUNCH EXTERNAL PROCESS](launch-external-process.md) sob macOS.
+Pasta contendo o arquivo de estrutura de banco de dados. Esta constante designa a mesma pasta que o anterior, mas o caminho retornado é expressado utilizando a sintaxe UNIX (POSIX), de tipo /Users/ ... Esta sintaxe é usada principalmente quando você usa o comando [LAUNCH EXTERNAL PROCESS](../commands/launch-external-process) sob macOS.
 
 ### Pasta Current Resources 
 
@@ -154,12 +154,12 @@ A pasta Logs do banco de dados criada no mesmo nível da estrutura de arquivo. E
 
 **Notas:** 
 
-* Uma pasta adicional Logs, que está na pasta de preferências de usuário de sistema (Active 4D Folder é usada para arquivos de histórico de manutenção (compactar, verificar, reparar). É recomendado chamar [Get 4D file](get-4d-file.md) (compactação de arquivo de log) por exemplo quando quiser acessar tais arquivos de log). Esta pasta Logs também é usada em casos onde a pasta Logs normal não pode ser escrita
+* Uma pasta adicional Logs, que está na pasta de preferências de usuário de sistema (Active 4D Folder é usada para arquivos de histórico de manutenção (compactar, verificar, reparar). É recomendado chamar [Get 4D file](../commands/get-4d-file) (compactação de arquivo de log) por exemplo quando quiser acessar tais arquivos de log). Esta pasta Logs também é usada em casos onde a pasta Logs normal não pode ser escrita
 * Se a pasta Logs não existe para o banco de dados, executando o comando **Get 4D folder** com a constante Logs Folder irá criá-la.
 
 ### Pasta HTML Root 
 
-Pasta HTML raiz do banco de dados. O caminho retornado é expressado com a sintaxe padrão da plataforma atual. A pasta raiz HTML é a pasta na qual o servidor Web 4D olha para as páginas Web e arquivos solicitados. Por padrão, ela é denominada **WebFolder** e é colocado ao lado da estrutura de arquivo (ou sua cópia local, no caso de 4D em modo remoto). Sua localização pode ser definida na página de Configuração das preferências ou dinamicamente através do comando [WEB SET ROOT FOLDER](web-set-root-folder.md).
+Pasta HTML raiz do banco de dados. O caminho retornado é expressado com a sintaxe padrão da plataforma atual. A pasta raiz HTML é a pasta na qual o servidor Web 4D olha para as páginas Web e arquivos solicitados. Por padrão, ela é denominada **WebFolder** e é colocado ao lado da estrutura de arquivo (ou sua cópia local, no caso de 4D em modo remoto). Sua localização pode ser definida na página de Configuração das preferências ou dinamicamente através do comando [WEB SET ROOT FOLDER](../commands/web-set-root-folder).
 
 Note: Em Windows, em projetos cliente fusionados, a localização desta pasta é modificada se a chave *ShareLocalResourcesOnWindowsClient*  BuildApp for usada.
 
@@ -185,7 +185,7 @@ A pasta database (Database folder e Database folder UNIX syntax) retornada difer
 
 ## Exemplo 1 
 
-Durante a inicialização de um banco de dados único, você deseja carregar (ou criar) as suas próprias configurações em um arquivo localizado na pasta 4D. Para fazer isso, em [Método banco de dados On Startup](metodo-banco-de-dados-on-startup.md),, você pode escrever um código semelhante a este:
+Durante a inicialização de um banco de dados único, você deseja carregar (ou criar) as suas próprias configurações em um arquivo localizado na pasta 4D. Para fazer isso, em [Método banco de dados On Startup](../commands/metodo-banco-de-dados-on-startup),, você pode escrever um código semelhante a este:
 
 ```4d
  $vsPrefDocName:=Get 4D folder+"MyPrefs.prf" //Constrói nome rota ao arquivo Preferences
@@ -224,11 +224,11 @@ Se o parâmetro *pasta* não é válido ou se o endereço de acesso retornado é
 
 ## Ver também 
 
-[COMPONENT LIST](component-list.md)  
-[System folder](system-folder.md)  
-[Temporary folder](temporary-folder.md)  
-[Test path name](test-path-name.md)  
-[WEB SET ROOT FOLDER](web-set-root-folder.md)  
+[COMPONENT LIST](../commands/component-list)  
+[System folder](../commands/system-folder)  
+[Temporary folder](../commands/temporary-folder)  
+[Test path name](../commands/test-path-name)  
+[WEB SET ROOT FOLDER](../commands/web-set-root-folder)  
 
 ## Propriedades
 

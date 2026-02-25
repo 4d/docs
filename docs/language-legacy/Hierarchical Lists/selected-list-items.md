@@ -1,4 +1,4 @@
----
+﻿---
 id: selected-list-items
 title: Selected list items
 slug: /commands/selected-list-items
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 If you pass the first optional *\** parameter, you indicate that the *list* parameter is an object name (string) corresponding to a representation of the list in the form. If you do not pass this parameter, you indicate that the *list* parameter is a hierarchical list reference ([ListRef](# "A Longint reference to a hierachical list")). If you only use a single representation of the list or work with item references (the second *\** is passed), you can use either syntax. Conversely, if you use several representations of the same list and work with the item positions (the second *\** is omitted), the syntax based on the object name is required since each representation can have its own expanded/collapsed item configuration.
 
-**Note:** If you use the @ character in the name of the list object and the form contains several lists that match with this name, the [Selected list items](selected-list-items.md) command will only apply to the first object whose name corresponds. 
+**Note:** If you use the @ character in the name of the list object and the form contains several lists that match with this name, the [Selected list items](../commands/selected-list-items) command will only apply to the first object whose name corresponds. 
 
 In the case of multiple selection, the command can also return in the *itemsArray* array, the position or reference of each item selected. You apply this command to a list displayed in a form to detect which item(s) the user has selected. 
 
@@ -48,7 +48,7 @@ You can pass a longint array in the *itemsArray* parameter. If necessary, the ar
 * the fixed reference of each item selected if the \* parameter is passed.  
 If no items have been selected, the array is returned empty.
 
-**Note:** In the event of multiple selections, the command returns the position or reference of the first item that was selected in *list*, either by the user (manual selections) or by the [SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md) or [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md) commands (programmed selection). 
+**Note:** In the event of multiple selections, the command returns the position or reference of the first item that was selected in *list*, either by the user (manual selections) or by the [SELECT LIST ITEMS BY POSITION](../commands/select-list-items-by-position) or [SELECT LIST ITEMS BY REFERENCE](../commands/select-list-items-by-reference) commands (programmed selection). 
 
 If the list has sublists, you apply the command to the main list (the one actually defined in the form), not one of its sublists. The positions are expressed relative to the top item of the main list, using the current expanded/collapsed state of the list and its sublist.
 
@@ -94,8 +94,8 @@ Here a list named *hList,* shown in the Application environment:
 
 ## See also 
 
-[SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md)  
-[SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
+[SELECT LIST ITEMS BY POSITION](../commands/select-list-items-by-position)  
+[SELECT LIST ITEMS BY REFERENCE](../commands/select-list-items-by-reference)  
 
 ## Properties
 

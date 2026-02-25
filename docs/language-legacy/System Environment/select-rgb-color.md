@@ -1,4 +1,4 @@
----
+﻿---
 id: select-rgb-color
 title: Select RGB color
 slug: /commands/select-rgb-color
@@ -37,7 +37,7 @@ The system color selection window appears as follows:
 | -------------------------------------------- | ------------------------------------------- |
 | ![](../../assets/en/commands/pict942577.fr.png) | ![](../../assets/en/commands/pict43385.en.png) |
 
-The optional *defaultColor* parameter preselects a color in the window. This parameter can be used, for example, to restore by default the last color set by the user. Pass an RGB-format color value in this parameter (for more information, refer to the description of the [OBJECT SET RGB COLORS](object-set-rgb-colors.md) command). You can use one of the constants in the *SET RGB COLORS* theme. If the *defaultColor* parameter is omitted or if you pass 0, the color black is selected when the dialog box is opened. 
+The optional *defaultColor* parameter preselects a color in the window. This parameter can be used, for example, to restore by default the last color set by the user. Pass an RGB-format color value in this parameter (for more information, refer to the description of the [OBJECT SET RGB COLORS](../commands/object-set-rgb-colors) command). You can use one of the constants in the *SET RGB COLORS* theme. If the *defaultColor* parameter is omitted or if you pass 0, the color black is selected when the dialog box is opened. 
 
 The optional *message* parameter customizes the title of the system window. By default, if this parameter is omitted, the title “Colors” is displayed.
 
@@ -50,7 +50,7 @@ The effect of validating this dialog box differs depending on the platform:
 
 ## See also 
 
-[OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
+[OBJECT SET RGB COLORS](../commands/object-set-rgb-colors)  
 
 ## Properties
 

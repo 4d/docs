@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-remove
 title: OB REMOVE
 slug: /commands/ob-remove
@@ -48,7 +48,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OB SET](ob-set.md)  
+[OB SET](../commands/ob-set)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: count-menu-items
 title: Count menu items
 slug: /commands/count-menu-items
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Count menus](count-menus.md)  
+[Count menus](../commands/count-menus)  
 
 ## プロパティ
 

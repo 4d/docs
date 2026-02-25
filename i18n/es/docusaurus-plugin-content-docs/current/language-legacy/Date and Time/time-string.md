@@ -1,4 +1,4 @@
----
+﻿---
 id: time-string
 title: Time string
 slug: /commands/time-string
@@ -37,7 +37,7 @@ El siguiente muestra una caja de alerta con el mensaje, “46 800 segundos repre
 ## Ver también 
 
 [String](../commands/string)  
-[Time](time.md)  
+[Time](../commands/time)  
 
 ## Propiedades
 

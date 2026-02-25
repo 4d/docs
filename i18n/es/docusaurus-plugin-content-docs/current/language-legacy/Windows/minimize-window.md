@@ -1,4 +1,4 @@
----
+﻿---
 id: minimize-window
 title: MINIMIZE WINDOW
 slug: /commands/minimize-window
@@ -61,8 +61,8 @@ Mac OS
 
 ## Ver también 
 
-[MAXIMIZE WINDOW](maximize-window.md)  
-[REDUCE RESTORE WINDOW](reduce-restore-window.md)  
+[MAXIMIZE WINDOW](../commands/maximize-window)  
+[REDUCE RESTORE WINDOW](../commands/reduce-restore-window)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: call-worker
 title: CALL WORKER
 slug: /commands/call-worker
@@ -60,7 +60,7 @@ Também pode passar parâmetros ao *metodo* utilizando um ou mais parâmetros op
 * Os ponteiros as variáveis, particularmente as variáveis locais e de processo, não são recomendadas já que estas variáveis podem estar indefinidas no momento de seu acesso pelo método de processo.
 * Se passar um parâmetro de tipo Objeto ou uma Coleção **por cópia**, ou seja, 4D cria uma copia do objeto ou da coleção no processo de destino se o worker for encontrado em um processo diferente do que chama ao comando **CALL WORKER**. Neste contexto, se passar um parâmetro objeto ou coleção **por referência**, deve usar um objeto ou coleção partilhados (ver *Objetos compartidos e Coleções compartidas*).
 
-Um processo worker se mantém vivo até que a aplicação esteja fechada ou o comando [KILL WORKER](kill-worker.md) se chame explicitamente. Para liberar memória, não esqueça de chamar a este comando quando um processo worker já não for necessário.
+Um processo worker se mantém vivo até que a aplicação esteja fechada ou o comando [KILL WORKER](../commands/kill-worker) se chame explicitamente. Para liberar memória, não esqueça de chamar a este comando quando um processo worker já não for necessário.
 
 ## Exemplo 
 
@@ -93,9 +93,9 @@ O código de *workerMethod é*:
 
 ## Ver também 
 
-[CALL FORM](call-form.md)  
-[Current process name](current-process-name.md)  
-[KILL WORKER](kill-worker.md)  
+[CALL FORM](../commands/call-form)  
+[Current process name](../commands/current-process-name)  
+[KILL WORKER](../commands/kill-worker)  
 *Sobre Workers*  
 
 ## Propriedades

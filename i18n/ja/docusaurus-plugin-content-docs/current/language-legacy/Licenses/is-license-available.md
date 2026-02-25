@@ -1,4 +1,4 @@
----
+﻿---
 id: is-license-available
 title: Is license available
 slug: /commands/is-license-available
@@ -48,17 +48,17 @@ Is license available コマンドは次のような3通りの使用が可能で�
 | 4D Web license         | 倍長整数 | 808464945 |  
 | 4D Write license       | 倍長整数 | 808464697 |  
     
-この方法では、対応するプラグインのライセンスが有効な場合、コマンドは [True](true.md "True") を返します。コマンドはデザインモード、[SET PLUGIN ACCESS](set-plugin-access.md) コマンドの結果等を考慮に入れて結果を返します。  
+この方法では、対応するプラグインのライセンスが有効な場合、コマンドは [True](true.md "True") を返します。コマンドはデザインモード、[SET PLUGIN ACCESS](../commands/set-plugin-access) コマンドの結果等を考慮に入れて結果を返します。  
 プラグインがデモモードで動作している場合、Is license available は[False](false.md "False") を返します。
 * プラグイン “4BNX” リソースのID番号を引数licenseに直接渡す場合、コマンドは、前述の通りに動作します。
 
 ## 参照 
 
-[CHANGE LICENSES](change-licenses.md)  
+[CHANGE LICENSES](../commands/change-licenses)  
 [License info](../commands/license-info)  
-[Get plugin access](get-plugin-access.md)  
-[PLUGIN LIST](plugin-list.md)  
-[SET PLUGIN ACCESS](set-plugin-access.md)  
+[Get plugin access](../commands/get-plugin-access)  
+[PLUGIN LIST](../commands/plugin-list)  
+[SET PLUGIN ACCESS](../commands/set-plugin-access)  
 
 ## プロパティ
 

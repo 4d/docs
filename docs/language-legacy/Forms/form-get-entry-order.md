@@ -1,4 +1,4 @@
----
+﻿---
 id: form-get-entry-order
 title: FORM GET ENTRY ORDER
 slug: /commands/form-get-entry-order
@@ -31,14 +31,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM GET ENTRY ORDER.Summary-->The **FORM GET ENTRY ORDER** command returns in *objectNames* the sorted names of objects that define the form entry order.<!-- END REF--> 
 
-* If you do not pass the *\** parameter, **FORM GET ENTRY ORDER** returns the entry order as it was previously declared with the [FORM SET ENTRY ORDER](form-set-entry-order.md) command. You can omit or pass the *pageNumber* parameter:  
+* If you do not pass the *\** parameter, **FORM GET ENTRY ORDER** returns the entry order as it was previously declared with the [FORM SET ENTRY ORDER](../commands/form-set-entry-order) command. You can omit or pass the *pageNumber* parameter:  
    * if you omit the *pageNumber* parameter, the *objectNames* array returns the entry order for the current page,  
    * if you pass the *pageNumber* parameter, the *objectNames* array returns the entry order for the *pageNumber* page.  
-In both cases, if the [FORM SET ENTRY ORDER](form-set-entry-order.md) command was not previously called for the current form, the *objectNames* array is returned empty.
-* If you pass the *\** as parameter, **FORM GET ENTRY ORDER** returns the actual entry order of the current page, i.e. the *objectNames* array only contains **valid** object names (for more information on valid objects, please refer to the [FORM SET ENTRY ORDER](form-set-entry-order.md) command description). The actual form entry order can be:  
+In both cases, if the [FORM SET ENTRY ORDER](../commands/form-set-entry-order) command was not previously called for the current form, the *objectNames* array is returned empty.
+* If you pass the *\** as parameter, **FORM GET ENTRY ORDER** returns the actual entry order of the current page, i.e. the *objectNames* array only contains **valid** object names (for more information on valid objects, please refer to the [FORM SET ENTRY ORDER](../commands/form-set-entry-order) command description). The actual form entry order can be:  
    * the default form entry order, based upon object layering,  
    * or the form editor's entry order (see *Modifying data entry order*), if it has been used,  
-   * or the entry order set by a call to the [FORM SET ENTRY ORDER](form-set-entry-order.md) command in the current process, if it has been used.  
+   * or the entry order set by a call to the [FORM SET ENTRY ORDER](../commands/form-set-entry-order) command in the current process, if it has been used.  
 The actual entry order always includes objects from page 0 and from inherited form(s).
 
 **Note:** The entry order within a subform is not returned when this command is applied to the parent form. 
@@ -63,7 +63,7 @@ You want to exclude some objects from the current entry order:
 
 ## See also 
 
-[FORM SET ENTRY ORDER](form-set-entry-order.md)  
+[FORM SET ENTRY ORDER](../commands/form-set-entry-order)  
 
 ## Properties
 

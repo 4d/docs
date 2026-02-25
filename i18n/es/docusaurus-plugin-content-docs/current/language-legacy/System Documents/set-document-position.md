@@ -1,4 +1,4 @@
----
+﻿---
 id: set-document-position
 title: SET DOCUMENT POSITION
 slug: /commands/set-document-position
@@ -40,9 +40,9 @@ Dependiendo del ancla puede pasar valores positivos o negativos en *offset*.
 
 ## Ver también 
 
-[Get document position](get-document-position.md)  
-[RECEIVE PACKET](receive-packet.md)  
-[SEND PACKET](send-packet.md)  
+[Get document position](../commands/get-document-position)  
+[RECEIVE PACKET](../commands/receive-packet)  
+[SEND PACKET](../commands/send-packet)  
 
 ## Propiedades
 

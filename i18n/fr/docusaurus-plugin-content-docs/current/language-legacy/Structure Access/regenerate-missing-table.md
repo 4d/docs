@@ -1,4 +1,4 @@
----
+﻿---
 id: regenerate-missing-table
 title: REGENERATE MISSING TABLE
 slug: /commands/regenerate-missing-table
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.REGENERATE MISSING TABLE.Summary-->La commande **REGENERATE MISSING TABLE** reconstruit la table manquante dont vous avez passé le nom dans le paramètre *nomTable*.<!-- END REF--> Lorsqu’une table manquante est reconstruite, elle devient visible dans l’éditeur de Structure et ses données sont de nouveau accessibles.
 
-Les tables manquantes sont des tables dont les données sont présentes dans le fichier de données mais qui n’existent pas au niveau de la structure. Vous pouvez identifier les tables manquantes éventuellement présentes dans l’application à l’aide de la commande [GET MISSING TABLE NAMES](get-missing-table-names.md). 
+Les tables manquantes sont des tables dont les données sont présentes dans le fichier de données mais qui n’existent pas au niveau de la structure. Vous pouvez identifier les tables manquantes éventuellement présentes dans l’application à l’aide de la commande [GET MISSING TABLE NAMES](../commands/get-missing-table-names). 
 
 Si la table désignée par le paramètre *nomTable* n’est pas une table manquante de la base, la commande ne fait rien. 
 
@@ -70,7 +70,7 @@ Cette méthode regénère toutes les tables manquantes éventuellement présente
 
 ## Voir aussi 
 
-[GET MISSING TABLE NAMES](get-missing-table-names.md)  
+[GET MISSING TABLE NAMES](../commands/get-missing-table-names)  
 
 ## Propriétés
 

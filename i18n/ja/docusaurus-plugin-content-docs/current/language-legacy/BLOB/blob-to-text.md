@@ -1,4 +1,4 @@
----
+﻿---
 id: blob-to-text
 title: BLOB to text
 slug: /commands/blob-to-text
@@ -64,14 +64,14 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[BLOB to integer](blob-to-integer.md)  
-[BLOB to longint](blob-to-longint.md)  
-[BLOB to real](blob-to-real.md)  
-[Convert to text](convert-to-text.md)  
-[INTEGER TO BLOB](integer-to-blob.md)  
-[LONGINT TO BLOB](longint-to-blob.md)  
-[REAL TO BLOB](real-to-blob.md)  
-[TEXT TO BLOB](text-to-blob.md)  
+[BLOB to integer](../commands/blob-to-integer)  
+[BLOB to longint](../commands/blob-to-longint)  
+[BLOB to real](../commands/blob-to-real)  
+[Convert to text](../commands/convert-to-text)  
+[INTEGER TO BLOB](../commands/integer-to-blob)  
+[LONGINT TO BLOB](../commands/longint-to-blob)  
+[REAL TO BLOB](../commands/real-to-blob)  
+[TEXT TO BLOB](../commands/text-to-blob)  
 
 ## プロパティ
 

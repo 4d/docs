@@ -1,4 +1,4 @@
----
+﻿---
 id: push-record
 title: PUSH RECORD
 slug: /commands/push-record
@@ -44,7 +44,7 @@ L'exemple suivant empile l'enregistrement d'un client :
 
 ## Voir aussi 
 
-[POP RECORD](pop-record.md)  
+[POP RECORD](../commands/pop-record)  
 *Utiliser la pile d'enregistrements*  
 
 ## Propriétés

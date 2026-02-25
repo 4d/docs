@@ -1,4 +1,4 @@
----
+﻿---
 id: find-in-field
 title: Find in field
 slug: /commands/find-in-field
@@ -36,7 +36,7 @@ Si aucun enregistrement ne correspond au critère, **Find in field** retourne -1
 
 Après l’appel, le paramètre *valeur* contient la valeur effectivement trouvée. Ce fonctionnement permet d’effectuer des recherches utilisant le caractère “@” sur des champs de type alpha, et pour lesquelles il est nécessaire de récupérer la valeur trouvée. 
 
-**Note :** Du fait de ce principe, vous ne pouvez pas utiliser un *paramètre* ($1, $2...) dans *valeur* car cela entraînerait des dysfonctionnements en mode compilé. De même, si vous passez un champ dans le paramètre *valeur*, gardez à l'esprit que sa valeur sera réaffectée si la recherche aboutit (la commande [Modified record](modified-record.md), notamment, retournera Vrai pour l'enregistrement courant de la table).
+**Note :** Du fait de ce principe, vous ne pouvez pas utiliser un *paramètre* ($1, $2...) dans *valeur* car cela entraînerait des dysfonctionnements en mode compilé. De même, si vous passez un champ dans le paramètre *valeur*, gardez à l'esprit que sa valeur sera réaffectée si la recherche aboutit (la commande [Modified record](../commands/modified-record), notamment, retournera Vrai pour l'enregistrement courant de la table).
 
 La commande ne modifie ni la sélection courante, ni l’enregistrement courant.
 

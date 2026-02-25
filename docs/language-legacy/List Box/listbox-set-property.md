@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-property
 title: LISTBOX SET PROPERTY
 slug: /commands/listbox-set-property
@@ -86,7 +86,7 @@ You want to set a maximum width for the column whose name is "ProductNumber":
 
   
 *List Box*  
-[LISTBOX Get property](listbox-get-property.md)  
+[LISTBOX Get property](../commands/listbox-get-property)  
 
 ## Properties
 

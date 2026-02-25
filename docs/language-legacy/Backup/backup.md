@@ -1,4 +1,4 @@
----
+﻿---
 id: backup
 title: BACKUP
 slug: /commands/backup
@@ -42,13 +42,13 @@ If the backup is performed correctly, the system variable OK is set to 1; otherw
 
 ## Error management 
 
-If an incident occurs during backup, information about the incident is written in the backup log and the top-level error is sent only to the [On Backup Shutdown database method](on-backup-shutdown-database-method.md). It is therefore particularly important to use this database method in order to be able to manage back-up related errors using programming.
+If an incident occurs during backup, information about the incident is written in the backup log and the top-level error is sent only to the [On Backup Shutdown database method](../commands/on-backup-shutdown-database-method). It is therefore particularly important to use this database method in order to be able to manage back-up related errors using programming.
 
 ## See also 
 
-[BACKUP INFO](backup-info.md)  
+[BACKUP INFO](../commands/backup-info)  
 *On Backup Startup Database Method*  
-[RESTORE](restore.md)  
+[RESTORE](../commands/restore)  
 
 ## Properties
 

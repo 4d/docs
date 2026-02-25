@@ -1,4 +1,4 @@
----
+﻿---
 id: is-macos
 title: Is macOS
 slug: /commands/is-macos
@@ -43,8 +43,8 @@ Vous voulez déterminer si le système d'exploitation courant est macOS :
 
 #### Voir aussi 
 
-[System info](system-info.md)  
-[Is Windows](is-windows.md)  
+[System info](../commands/system-info)  
+[Is Windows](../commands/is-windows)  
 
 #### Propriétés
 

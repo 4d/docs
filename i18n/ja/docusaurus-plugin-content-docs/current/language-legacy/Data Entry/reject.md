@@ -1,4 +1,4 @@
----
+﻿---
 id: reject
 title: REJECT
 slug: /commands/reject
@@ -61,9 +61,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ACCEPT](accept.md)  
-[CANCEL](cancel.md)  
-[GOTO OBJECT](goto-object.md)  
+[ACCEPT](../commands/accept)  
+[CANCEL](../commands/cancel)  
+[GOTO OBJECT](../commands/goto-object)  
 
 ## プロパティ
 

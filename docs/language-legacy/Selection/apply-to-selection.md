@@ -1,4 +1,4 @@
----
+﻿---
 id: apply-to-selection
 title: APPLY TO SELECTION
 slug: /commands/apply-to-selection
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 **4D Server:** The server does not execute any of the commands that may be passed in *statement*. Every record in the selection will be sent back to the local workstation to be modified.
 
-The progress thermometer is displayed while **APPLY TO SELECTION** is executing. To hide it, use [MESSAGES OFF](messages-off.md) prior to the call to **APPLY TO SELECTION**. If the progress thermometer is displayed, the user can cancel the operation.
+The progress thermometer is displayed while **APPLY TO SELECTION** is executing. To hide it, use [MESSAGES OFF](../commands/messages-off) prior to the call to **APPLY TO SELECTION**. If the progress thermometer is displayed, the user can cancel the operation.
 
 ## Example 1 
 
@@ -73,7 +73,7 @@ If the user clicks the Stop button in the progress thermometer, the OK system va
 
 ## See also 
 
-[EDIT FORMULA](edit-formula.md)  
+[EDIT FORMULA](../commands/edit-formula)  
 *Sets*  
 
 ## Properties

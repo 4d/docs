@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-action
 title: OBJECT Get action
 slug: /commands/object-get-action
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 Passer le paramètre optionnel *\** indique que le paramètre *objet* est un nom d'objet (une chaîne). Si vous ne passez pas ce paramètre, cela signifie que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous passez une référence à un champ ou une variable au lieu d'une chaîne (champ ou objet variable seulement).
 
-Vous pouvez fixer une action standard sur un objet dans l'éditeur de formulaire, en utilisant la Liste des propriétés ou en utilisant la commande [OBJECT SET ACTION](object-set-action.md). **OBJECT Get action** retourne une chaîne contenant le nom de l'action standard associée à l'objet (ainsi que son paramètre s'il y en a un).
+Vous pouvez fixer une action standard sur un objet dans l'éditeur de formulaire, en utilisant la Liste des propriétés ou en utilisant la commande [OBJECT SET ACTION](../commands/object-set-action). **OBJECT Get action** retourne une chaîne contenant le nom de l'action standard associée à l'objet (ainsi que son paramètre s'il y en a un).
 
 Pour une liste complète des actions standard, référez-vous à la section *Actions standard* dans le manuel *Mode Développement*. 
 
@@ -55,7 +55,7 @@ Vous souhaitez associer l'action "Annuler" à tous les objets du formulaire qui 
 
 ## Voir aussi 
 
-[OBJECT SET ACTION](object-set-action.md)  
+[OBJECT SET ACTION](../commands/object-set-action)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: goto-xy
 title: GOTO XY
 slug: /commands/goto-xy
@@ -59,7 +59,7 @@ Mostra a janela a seguir (em Macintosh) por 30 segundos:
 
 ## Ver também 
 
-[MESSAGE](message.md)  
+[MESSAGE](../commands/message)  
 
 ## Propriedades
 

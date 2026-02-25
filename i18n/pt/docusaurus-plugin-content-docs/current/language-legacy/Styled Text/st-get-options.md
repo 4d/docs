@@ -1,4 +1,4 @@
----
+﻿---
 id: st-get-options
 title: ST GET OPTIONS
 slug: /commands/st-get-options
@@ -45,7 +45,7 @@ Passe o código da opção a ler no parâmetro *opcao*. O comando devolve em *va
 
 ## Ver também 
 
-[ST SET OPTIONS](st-set-options.md)  
+[ST SET OPTIONS](../commands/st-set-options)  
 
 ## Propriedades
 

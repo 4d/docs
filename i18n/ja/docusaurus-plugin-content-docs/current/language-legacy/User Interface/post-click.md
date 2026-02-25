@@ -1,4 +1,4 @@
----
+﻿---
 id: post-click
 title: POST CLICK
 slug: /commands/post-click
@@ -38,8 +38,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[POST EVENT](post-event.md)  
-[POST KEY](post-key.md)  
+[POST EVENT](../commands/post-event)  
+[POST KEY](../commands/post-key)  
 
 ## プロパティ
 

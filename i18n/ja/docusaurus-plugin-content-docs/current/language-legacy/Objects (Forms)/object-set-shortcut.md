@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-shortcut
 title: OBJECT SET SHORTCUT
 slug: /commands/object-set-shortcut
@@ -98,7 +98,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT GET SHORTCUT](object-get-shortcut.md)  
+[OBJECT GET SHORTCUT](../commands/object-get-shortcut)  
 
 ## プロパティ
 

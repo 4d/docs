@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-zoom-out
 title: WA ZOOM OUT
 slug: /commands/wa-zoom-out
@@ -37,7 +37,7 @@ Windows では、このコマンドのスコープはグローバルです。4D 
 
 ## 参照 
 
-[WA ZOOM IN](wa-zoom-in.md)  
+[WA ZOOM IN](../commands/wa-zoom-in)  
 
 ## プロパティ
 

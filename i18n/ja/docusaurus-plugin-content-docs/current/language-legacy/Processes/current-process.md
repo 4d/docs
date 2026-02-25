@@ -1,4 +1,4 @@
----
+﻿---
 id: current-process
 title: Current process
 slug: /commands/current-process
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 [Process number](../commands/process-number)  
 [Process info](../commands/process-info)  
-[Process state](process-state.md)  
+[Process state](../commands/process-state)  
 
 ## プロパティ
 

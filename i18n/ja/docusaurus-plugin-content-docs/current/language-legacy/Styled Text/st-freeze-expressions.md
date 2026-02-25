@@ -1,4 +1,4 @@
----
+﻿---
 id: st-freeze-expressions
 title: ST FREEZE EXPRESSIONS
 slug: /commands/st-freeze-expressions
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST FREEZE EXPRESSIONS.Summary-->**ST FREEZE EXPRESSIONS**コマンドは、*object* 引数で指定されたマルチスタイルテキストあるいは4D Write Proのフィールドまたは変数内の4D 式の内容を固定化します。<!-- END REF-->これにより、ダイナミックな4D式はスタティックなテキストあるいは画像(4D Write Pro エリアのみ)へと変換され、*object* に関連付けられた参照は解除されます。
 
-マルチスタイルテキストあるいは4D Write Pro エリアの中で使用される4D 式の詳細については、 [ST INSERT EXPRESSION](st-insert-expression.md) を参照して下さい。
+マルチスタイルテキストあるいは4D Write Pro エリアの中で使用される4D 式の詳細については、 [ST INSERT EXPRESSION](../commands/st-insert-expression) を参照して下さい。
 
 **ST FREEZE EXPRESSIONS** コマンドは、変更された4D式の値を保存します。この操作は特に、*object* をエリア外で使用する(書き出し、ディスクファイルへの保存、印刷等)際に必要になります。なぜなら、エリアのそのものには、4D式への参照しか保存されていないからです。
 
@@ -76,8 +76,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ST COMPUTE EXPRESSIONS](st-compute-expressions.md)  
-[ST INSERT EXPRESSION](st-insert-expression.md)  
+[ST COMPUTE EXPRESSIONS](../commands/st-compute-expressions)  
+[ST INSERT EXPRESSION](../commands/st-insert-expression)  
 
 ## プロパティ
 

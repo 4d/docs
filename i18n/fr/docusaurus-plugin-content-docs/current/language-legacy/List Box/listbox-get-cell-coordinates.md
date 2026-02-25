@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-cell-coordinates
 title: LISTBOX GET CELL COORDINATES
 slug: /commands/listbox-get-cell-coordinates
@@ -38,13 +38,13 @@ displayed_sidebar: docs
 
 Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne de caractères). Si vous ne passez pas le paramètre *\**, vous indiquez que l'objet est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable de type objet uniquement).
 
-Par cohérence avec la commande [OBJECT GET COORDINATES](object-get-coordinates.md), le point d'origine est le coin supérieur gauche du formulaire qui contient la cellule. Aussi, les coordonnées retournées sont théoriques ; elles tiennent compte du défilement éventuel de la list box avant son affichage à l'intérieur de son cadre. En résultat, la cellule peut ne pas être visible (ou être visible seulement en partie) à ses coordonnées, et ces coordonnées peuvent se situer au-delà des limites du formulaire (voire être négatives). Pour savoir si la cellule est visible (et quelle partie) vous devez comparer les coordonnées retournées avec celles de la list box elle-même, en tenant compte des règles suivantes :
+Par cohérence avec la commande [OBJECT GET COORDINATES](../commands/object-get-coordinates), le point d'origine est le coin supérieur gauche du formulaire qui contient la cellule. Aussi, les coordonnées retournées sont théoriques ; elles tiennent compte du défilement éventuel de la list box avant son affichage à l'intérieur de son cadre. En résultat, la cellule peut ne pas être visible (ou être visible seulement en partie) à ses coordonnées, et ces coordonnées peuvent se situer au-delà des limites du formulaire (voire être négatives). Pour savoir si la cellule est visible (et quelle partie) vous devez comparer les coordonnées retournées avec celles de la list box elle-même, en tenant compte des règles suivantes :
 
-* Les limites des cellules dépendent des coordonnées de leur list box parente (telles que retournées par la commande [OBJECT GET COORDINATES](object-get-coordinates.md) pour la list box).
+* Les limites des cellules dépendent des coordonnées de leur list box parente (telles que retournées par la commande [OBJECT GET COORDINATES](../commands/object-get-coordinates) pour la list box).
 * Les sous-objets en-tête et pied sont affichés au-dessus du contenu des colonnes : lorsque les coordonnées d'une cellule coupent celles d'une ligne d'en-tête ou de pied, la cellule n'est pas affichée à l'emplacement de l'intersection.
 * Les éléments des colonnes verrouillées sont affichés au-dessus des éléments des colonnes défilables : lorsque les coordonnées d'un élément d'une colonne défilable croisent celles d'un élément d'une colonne verrouillée, l'élément défilable n'est pas affiché à l'emplacement de l'intersection.
 
-Pour plus d'informations, veuillez vous reporter à la description de la commande [OBJECT GET COORDINATES](object-get-coordinates.md).
+Pour plus d'informations, veuillez vous reporter à la description de la commande [OBJECT GET COORDINATES](../commands/object-get-coordinates).
 
 ## Exemple 
 
@@ -63,8 +63,8 @@ Vous souhaitez afficher un rectangle rouge autour de la cellule sélectionnée d
 
 ## Voir aussi 
 
-[LISTBOX GET CELL POSITION](listbox-get-cell-position.md)  
-[OBJECT GET COORDINATES](object-get-coordinates.md)  
+[LISTBOX GET CELL POSITION](../commands/listbox-get-cell-position)  
+[OBJECT GET COORDINATES](../commands/object-get-coordinates)  
 
 ## Propriétés
 

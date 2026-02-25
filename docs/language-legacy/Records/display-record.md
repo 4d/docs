@@ -1,4 +1,4 @@
----
+﻿---
 id: display-record
 title: DISPLAY RECORD
 slug: /commands/display-record
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.DISPLAY RECORD.Summary-->The **DISPLAY RECORD** command displays the current record of *aTable*, using the current input form.<!-- END REF--> The record is displayed only until an event redraws the window. Such an event might be the execution of an [ADD RECORD](add-record.md) command, returning to an input form, or returning to the menu bar. **DISPLAY RECORD** does nothing if there is no current record.
+<!--REF #_command_.DISPLAY RECORD.Summary-->The **DISPLAY RECORD** command displays the current record of *aTable*, using the current input form.<!-- END REF--> The record is displayed only until an event redraws the window. Such an event might be the execution of an [ADD RECORD](../commands/add-record) command, returning to an input form, or returning to the menu bar. **DISPLAY RECORD** does nothing if there is no current record.
 
 **DISPLAY RECORD** is often used to display custom progress messages. It can also be used to generate a free-running slide show.
 
@@ -41,7 +41,7 @@ The following example displays a series of records as a slide show:
 
 ## See also 
 
-[MESSAGE](message.md)  
+[MESSAGE](../commands/message)  
 
 ## Properties
 

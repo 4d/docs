@@ -1,4 +1,4 @@
----
+﻿---
 id: dialog
 title: DIALOG
 slug: /commands/dialog
@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 このコマンドは、フォームを基にした、カスタマイズされた高度なユーザーインターフェースで動作するように設計されています。 これを使用してデータベースや他の場所からの情報を表示したり、あるいはデータ入力機能を提供することができます。 [ADD RECORD](../commands/add-record) や [MODIFY RECORD](../commands/modify-record) とは異なり、**DIALOG** コマンドは、フォームとそのコンテンツ、内容、評価ボタンなどに対して、完全にコントロールすることができます。
 
-このコマンドは通常、次の例にあるように、洗練されたフォームを表示するために[Open form window](open-form-window.md) コマンドと一緒に呼び出されます:
+このコマンドは通常、次の例にあるように、洗練されたフォームを表示するために[Open form window](../commands/open-form-window) コマンドと一緒に呼び出されます:
 
 ![](../../assets/en/commands/pict3541609.en.png)
 
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 - 使用するフォームの詳細を格納している有効な.josn ファイルへのパス(POSIX シンタックス)
 - 使用するフォームの詳細を格納しているオブジェクト
 
-オプションとして、*form* 引数で指定したフォームに"form data" オブジェクトを使用して引数を渡すことができます。 form data オブジェクト内のプロパティであればどれも[Form](form.md) コマンドを使用することでフォームコンテキストから利用可能になります。 例えば、{"version","12"} というプロパティを格納するform data オブジェクトを使用した場合、以下のように呼び出しをすることで"version" プロパティの値を取得したり設定することが可能です:
+オプションとして、*form* 引数で指定したフォームに"form data" オブジェクトを使用して引数を渡すことができます。 form data オブジェクト内のプロパティであればどれも[Form](../commands/form) コマンドを使用することでフォームコンテキストから利用可能になります。 例えば、{"version","12"} というプロパティを格納するform data オブジェクトを使用した場合、以下のように呼び出しをすることで"version" プロパティの値を取得したり設定することが可能です:
 
 ```4d
  $v:=Form.version //"12"
@@ -45,9 +45,9 @@ displayed_sidebar: docs
 
 "form data" オブジェクトに値を入れるためには、以下の2つの方法があります:
 
-- *formData* 引数を使用する方法。 *formData* に対してローカル変数を使用することで、呼び出しコンテキストに関係なく、安全にフォームに引数を渡すことができます。 特に、同じフォームが同じプロセス内で他の場所から呼び出された場合、[Form](form.md).myProperty と呼び出すだけで、常にその特定の値にアクセスすることができます。 さらに、オブジェクトは参照によって渡されるため、ユーザーがプロパティの値をフォーム内で変更した場合、その値は自動的にオブジェクト自身内に保存されます。
+- *formData* 引数を使用する方法。 *formData* に対してローカル変数を使用することで、呼び出しコンテキストに関係なく、安全にフォームに引数を渡すことができます。 特に、同じフォームが同じプロセス内で他の場所から呼び出された場合、[Form](../commands/form).myProperty と呼び出すだけで、常にその特定の値にアクセスすることができます。 さらに、オブジェクトは参照によって渡されるため、ユーザーがプロパティの値をフォーム内で変更した場合、その値は自動的にオブジェクト自身内に保存されます。
 
-- [ユーザークラスをフォームに割り当てる](../../FormEditor/properties_FormProperties.md#form-class)ことで、4D はフォームがロードされる際に自動的にこのクラスのオブジェクトをインスタンス化します。 オブジェクトプロパティおよび関数は[Form](form.md) から返されるオブジェクト内で自動的に利用可能になります。 例えば、`Form.myFunction()` と書くことができます。
+- [ユーザークラスをフォームに割り当てる](../../FormEditor/properties_FormProperties.md#form-class)ことで、4D はフォームがロードされる際に自動的にこのクラスのオブジェクトをインスタンス化します。 オブジェクトプロパティおよび関数は[Form](../commands/form) から返されるオブジェクト内で自動的に利用可能になります。 例えば、`Form.myFunction()` と書くことができます。
 
 :::note
 
@@ -91,7 +91,7 @@ displayed_sidebar: docs
 
 **注:** "Children" オブジェクトフィールドはこの例題においての構造を示すために表示されているだけです。
 
-検証フォームにおいて、[Form](form.md) オブジェクトプロパティを変数へと割り当てているものとします:
+検証フォームにおいて、[Form](../commands/form) オブジェクトプロパティを変数へと割り当てているものとします:
 
 ![](../../assets/en/commands/pict3541682.en.png)
 
@@ -171,8 +171,8 @@ displayed_sidebar: docs
 [ADD RECORD](../commands/add-record)\
 [CALL FORM](../commands/call-form)\
 [CANCEL](../commands/cancel)\
-[Form](form.md)\
-[Open window](open-window.md)
+[Form](../commands/form)\
+[Open window](../commands/open-window)
 
 ## プロパティ
 

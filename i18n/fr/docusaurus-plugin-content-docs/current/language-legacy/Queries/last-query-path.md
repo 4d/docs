@@ -1,4 +1,4 @@
----
+﻿---
 id: last-query-path
 title: Last query path
 slug: /commands/last-query-path
@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 #### Description 
 
-<!--REF #_command_.Last query path.Summary-->La commande **Last query path** retourne la description interne détaillée du chemin réel de la dernière recherche effectuée sur les données.<!-- END REF--> Pour plus d’informations sur les descriptions de recherches, reportez-vous à la documentation de la commande [DESCRIBE QUERY EXECUTION](describe-query-execution.md). 
+<!--REF #_command_.Last query path.Summary-->La commande **Last query path** retourne la description interne détaillée du chemin réel de la dernière recherche effectuée sur les données.<!-- END REF--> Pour plus d’informations sur les descriptions de recherches, reportez-vous à la documentation de la commande [DESCRIBE QUERY EXECUTION](../commands/describe-query-execution). 
 
 Cette description est retournée au format Texte ou XML en fonction de la valeur passée dans le paramètre *formatDesc*. Vous pouvez passer une des constantes suivantes, placées dans le thème “*Recherches*” : 
 
@@ -27,14 +27,14 @@ Cette description est retournée au format Texte ou XML en fonction de la valeur
 | Description in text format | Entier long | 0      |
 | Description in XML format  | Entier long | 1      |
 
-Cette commande retourne une valeur significative si la commande [DESCRIBE QUERY EXECUTION](describe-query-execution.md) a été exécutée au cours de la session. 
+Cette commande retourne une valeur significative si la commande [DESCRIBE QUERY EXECUTION](../commands/describe-query-execution) a été exécutée au cours de la session. 
 
-La description du chemin de la dernière recherche peut être comparée à la description du plan prévu de la dernière recherche (obtenue à l’aide de la commande [Last query plan](last-query-plan.md)) à des fins d’optimisations.
+La description du chemin de la dernière recherche peut être comparée à la description du plan prévu de la dernière recherche (obtenue à l’aide de la commande [Last query plan](../commands/last-query-plan)) à des fins d’optimisations.
 
 #### Voir aussi 
 
-[DESCRIBE QUERY EXECUTION](describe-query-execution.md)  
-[Last query plan](last-query-plan.md)  
+[DESCRIBE QUERY EXECUTION](../commands/describe-query-execution)  
+[Last query plan](../commands/last-query-plan)  
 
 #### Propriétés
 

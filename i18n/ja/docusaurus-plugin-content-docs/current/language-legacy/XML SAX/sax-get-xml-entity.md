@@ -1,4 +1,4 @@
----
+﻿---
 id: sax-get-xml-entity
 title: SAX GET XML ENTITY
 slug: /commands/sax-get-xml-entity
@@ -59,7 +59,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[SAX Get XML node](sax-get-xml-node.md)  
+[SAX Get XML node](../commands/sax-get-xml-node)  
 
 ## プロパティ
 

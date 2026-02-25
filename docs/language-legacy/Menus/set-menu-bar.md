@@ -1,4 +1,4 @@
----
+﻿---
 id: set-menu-bar
 title: SET MENU BAR
 slug: /commands/set-menu-bar
@@ -40,7 +40,7 @@ The optional *process* parameter changes the menu bar of the specified process t
 
 The optional *\** parameter allows you to save the state of the menu bar. If this parameter is omitted, **SET MENU BAR** reinitializes the menu bar when the command is executed.
 
-For example, suppose that **SET MENU BAR**(1) is executed. Next, several menu commands are disabled using the [DISABLE MENU ITEM](disable-menu-item.md) command.
+For example, suppose that **SET MENU BAR**(1) is executed. Next, several menu commands are disabled using the [DISABLE MENU ITEM](../commands/disable-menu-item) command.
 
 If **SET MENU BAR** **(1)** is executed a second time, either from the same process or from a different process, all menu commands will revert to their initial enabled state.
 

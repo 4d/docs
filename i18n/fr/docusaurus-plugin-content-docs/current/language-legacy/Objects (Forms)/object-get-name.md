@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-name
 title: OBJECT Get name
 slug: /commands/object-get-name
@@ -47,7 +47,7 @@ Après l’exécution de cette méthode objet, la variable *$nomBtn* contient la
 
 ## Voir aussi 
 
-[OBJECT Get pointer](object-get-pointer.md)  
+[OBJECT Get pointer](../commands/object-get-pointer)  
 *Objets (Formulaires)*  
 *Objets de formulaire (Accès)*  
 

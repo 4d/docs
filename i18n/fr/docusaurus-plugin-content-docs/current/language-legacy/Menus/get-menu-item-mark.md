@@ -1,4 +1,4 @@
----
+﻿---
 id: get-menu-item-mark
 title: Get menu item mark
 slug: /commands/get-menu-item-mark
@@ -39,7 +39,7 @@ Si vous omettez le paramètre *process*, **Get menu item mark** s'applique à la
 
 Si la ligne de menu n'a pas de marque ou si le paramètre *ligneMenu* désigne un sous-menu hiérarchique, **Get menu item mark** retourne une chaîne vide.
 
-**Note :** Pour plus d'informations sur les marques des lignes de menus sous Mac OS et Windows, reportez-vous à la description de la commande [SET MENU ITEM MARK](set-menu-item-mark.md).
+**Note :** Pour plus d'informations sur les marques des lignes de menus sous Mac OS et Windows, reportez-vous à la description de la commande [SET MENU ITEM MARK](../commands/set-menu-item-mark).
 
 ## Exemple 
 
@@ -51,7 +51,7 @@ L'exemple suivant inverse l'état marqué d'une ligne de menu :
 
 ## Voir aussi 
 
-[SET MENU ITEM MARK](set-menu-item-mark.md)  
+[SET MENU ITEM MARK](../commands/set-menu-item-mark)  
 
 ## Propriétés
 

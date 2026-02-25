@@ -1,4 +1,4 @@
----
+﻿---
 id: regenerate-missing-table
 title: REGENERATE MISSING TABLE
 slug: /commands/regenerate-missing-table
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.REGENERATE MISSING TABLE.Summary-->O comando REGENERATE MISSING TABLE reconstrui a tabela não encontrada cujo nome é passado no parâmetro *nomTabela*.<!-- END REF--> Quando se reconstrui uma tabela não encontrada, ela se torna visível no editor de estrutura e seus dados são acessíveis novamente.  
   
-As tabelas não encontradas são tabelas cujos dados estão presentes no arquivo de dados mas que não existem a nível da estrutura. Pode identificar as tabelas não encontradas que possam estar presentes, utilizando o comando [GET MISSING TABLE NAMES](get-missing-table-names.md).  
+As tabelas não encontradas são tabelas cujos dados estão presentes no arquivo de dados mas que não existem a nível da estrutura. Pode identificar as tabelas não encontradas que possam estar presentes, utilizando o comando [GET MISSING TABLE NAMES](../commands/get-missing-table-names).  
   
 Se a tabela designada pelo parâmetro *nomTabela* não for uma tabela faltante do banco, o comando não faz nada.
 
@@ -70,7 +70,7 @@ Este método regenera todas as tabelas não encontradas eventualmente presentes 
 
 ## Ver também 
 
-[GET MISSING TABLE NAMES](get-missing-table-names.md)  
+[GET MISSING TABLE NAMES](../commands/get-missing-table-names)  
 
 ## Propriedades
 

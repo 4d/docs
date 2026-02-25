@@ -1,4 +1,4 @@
----
+﻿---
 id: quit-4d
 title: QUIT 4D
 slug: /commands/quit-4d
@@ -36,14 +36,14 @@ Le mécanismes mis en jeu par la commande sont différents suivant qu'elle est e
 
 Après un appel à **QUIT 4D**, l'exécution du process courant est stoppée, puis 4D effectue les opérations suivantes :
 
-* Si une [On Exit database method](on-exit-database-method.md) existe, 4D l'exécute dans un nouveau process local. Par exemple, vous pouvez utiliser cette méthode base pour informer les autres process, via la communication interprocess, qu'ils doivent être fermés (s'ils sont en saisie de données) ou stopper l'exécution des opérations démarrées dans la [On Startup database method](on-startup-database-method.md) (connexion de 4D à un autre serveur de bases de données). Notez que 4D quittera dans tous les cas : la [On Exit database method](on-exit-database-method.md) peut assurer le nettoyage et la fermeture de toutes les opérations que vous voulez, mais la fermeture de la base est inéluctable.
-* S'il n'existe pas de [On Exit database method](on-exit-database-method.md), 4D ferme tous les process un par un, sans distinction.
+* Si une [On Exit database method](../commands/on-exit-database-method) existe, 4D l'exécute dans un nouveau process local. Par exemple, vous pouvez utiliser cette méthode base pour informer les autres process, via la communication interprocess, qu'ils doivent être fermés (s'ils sont en saisie de données) ou stopper l'exécution des opérations démarrées dans la [On Startup database method](../commands/on-startup-database-method) (connexion de 4D à un autre serveur de bases de données). Notez que 4D quittera dans tous les cas : la [On Exit database method](../commands/on-exit-database-method) peut assurer le nettoyage et la fermeture de toutes les opérations que vous voulez, mais la fermeture de la base est inéluctable.
+* S'il n'existe pas de [On Exit database method](../commands/on-exit-database-method), 4D ferme tous les process un par un, sans distinction.
 
 Si l'utilisateur est en saisie de données, les enregistrements seront annulés et non validés.   
 Si vous voulez permettre à l'utilisateur de sauvegarder ses modifications effectuées dans les fenêtres du process courant, vous pouvez utiliser la communication interprocess pour indiquer à tous les autres process utilisateur que la base est sur le point d'être quittée. Pour cela, vous pouvez adopter deux stratégies :
 
 * Effectuer ces opérations depuis le process courant avant d'appeler **QUIT 4D**.
-* Traiter ces opérations depuis la [On Exit database method](on-exit-database-method.md).
+* Traiter ces opérations depuis la [On Exit database method](../commands/on-exit-database-method).
 
 Une troisième stratégie est également possible. Avant d'appeler **QUIT 4D**, vous testez si une fenêtre nécessite une validation. Si c'est le cas, vous demandez à l'utilisateur de valider ou d'annuler cette fenêtre puis de choisir Quitter de nouveau. Cependant, du point de vue purement "interface utilisateur", les deux premières solutions sont préférables.
 
@@ -76,7 +76,7 @@ La méthode projet suivante est associée à la commande **Quitter** du menu **F
 
 ## Voir aussi 
 
-[On Exit database method](on-exit-database-method.md)  
+[On Exit database method](../commands/on-exit-database-method)  
 
 ## Propriétés
 

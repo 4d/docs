@@ -1,4 +1,4 @@
----
+﻿---
 id: get-indexed-string
 title: Get indexed string
 slug: /commands/get-indexed-string
@@ -36,7 +36,7 @@ La commande **Get indexed string** retourne :
 * soit <!--REF #_command_.Get indexed string.Summary-->une des chaînes stockées dans la ressource liste de chaînes ("STR#") dont vous avez passé le numéro d'ID dans *resNum*<!-- END REF-->,
 * soit une chaîne stockée dans un fichier XLIFF ouvert dont vous avez passé l'attribut 'id' de l'élément 'group' dans *resNum* (cf. ci-dessous "Compatibilité avec l'architecture XLIFF").
 
-Vous passez le numéro de la chaîne dans *strNum*. Les chaînes d'une ressource liste de chaînes sont numérotées de 1 à N. Pour récupérer toutes les chaînes (et donc leur nombre) d'une ressource liste de chaînes, utilisez la commande [STRING LIST TO ARRAY](string-list-to-array.md).
+Vous passez le numéro de la chaîne dans *strNum*. Les chaînes d'une ressource liste de chaînes sont numérotées de 1 à N. Pour récupérer toutes les chaînes (et donc leur nombre) d'une ressource liste de chaînes, utilisez la commande [STRING LIST TO ARRAY](../commands/string-list-to-array).
 
 Si la ressource n'est pas trouvée, ou si la chaîne n'est pas trouvée à l'intérieur de la ressource, une chaîne vide est retournée et la variable système OK prend la valeur 0 (zéro).
 
@@ -54,9 +54,9 @@ OK prend la valeur 1 si la ressource est trouvée, sinon elle prend la valeur 0 
 
 ## Voir aussi 
 
-[Get string resource](get-string-resource.md)  
-[Get text resource](get-text-resource.md)  
-[STRING LIST TO ARRAY](string-list-to-array.md)  
+[Get string resource](../commands/get-string-resource)  
+[Get text resource](../commands/get-text-resource)  
+[STRING LIST TO ARRAY](../commands/string-list-to-array)  
 
 ## Propriétés
 

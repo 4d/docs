@@ -1,4 +1,4 @@
----
+﻿---
 id: method-get-path
 title: METHOD Get path
 slug: /commands/method-get-path
@@ -73,9 +73,9 @@ Si la commande est exécutée depuis un composant, elle retourne par défaut les
 
 ## Voir aussi 
 
-[Current method path](current-method-path.md)  
-[METHOD OPEN PATH](method-open-path.md)  
-[METHOD RESOLVE PATH](method-resolve-path.md)  
+[Current method path](../commands/current-method-path)  
+[METHOD OPEN PATH](../commands/method-open-path)  
+[METHOD RESOLVE PATH](../commands/method-resolve-path)  
 
 ## Propriétés
 

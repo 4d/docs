@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-command-status
 title: QR Get command status
 slug: /commands/qr-get-command-status
@@ -45,8 +45,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[QR EXECUTE COMMAND](qr-execute-command.md)  
-[QR ON COMMAND](qr-on-command.md)  
+[QR EXECUTE COMMAND](../commands/qr-execute-command)  
+[QR ON COMMAND](../commands/qr-on-command)  
 
 ## プロパティ
 

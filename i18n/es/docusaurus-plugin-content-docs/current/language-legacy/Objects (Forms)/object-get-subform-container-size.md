@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-subform-container-size
 title: OBJECT GET SUBFORM CONTAINER SIZE
 slug: /commands/object-get-subform-container-size
@@ -42,8 +42,8 @@ El evento On Resize se genera en el método formulario del subformulario si el o
 
 ## Ver también 
 
-[OBJECT GET SUBFORM](object-get-subform.md)  
-[OBJECT SET SUBFORM](object-set-subform.md)  
+[OBJECT GET SUBFORM](../commands/object-get-subform)  
+[OBJECT SET SUBFORM](../commands/object-set-subform)  
 
 ## Propiedades
 

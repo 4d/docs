@@ -1,4 +1,4 @@
----
+﻿---
 id: displayed-line-number
 title: Displayed line number
 slug: /commands/displayed-line-number
@@ -30,9 +30,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Displayed line number.Summary-->The **Displayed line number** command only works with the On Display Detail form event.<!-- END REF--> It returns the number of the row being processed while a list of records or list box rows is displayed on screen. If **Displayed line number** is called other than when displaying a list or a list box, it returns 0.
 
-In the case of a list of records, when the displayed row is not empty (when it is linked to a record), the value returned by **Displayed line number** is identical to the value returned by [Selected record number](selected-record-number.md).
+In the case of a list of records, when the displayed row is not empty (when it is linked to a record), the value returned by **Displayed line number** is identical to the value returned by [Selected record number](../commands/selected-record-number).
 
-Like [Selected record number](selected-record-number.md), **Displayed line number** starts at 1\. This command is useful if you want to process each row of a list form or list box displayed on screen, including empty rows. 
+Like [Selected record number](../commands/selected-record-number), **Displayed line number** starts at 1\. This command is useful if you want to process each row of a list form or list box displayed on screen, including empty rows. 
 
 ## Example 
 
@@ -56,7 +56,7 @@ This example lets you apply an alternating color to a list form displayed on scr
 ## See also 
 
 [Form event code](../commands/form-event-code)  
-[Selected record number](selected-record-number.md)  
+[Selected record number](../commands/selected-record-number)  
 
 ## Properties
 

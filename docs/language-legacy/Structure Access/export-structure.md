@@ -1,4 +1,4 @@
----
+﻿---
 id: export-structure
 title: EXPORT STRUCTURE
 slug: /commands/export-structure
@@ -43,7 +43,7 @@ By default if you omit the *format* parameter, the command exports the structure
 The command generates the same XML or HTML code as the **Export >** **Structure definition to XML file... or** **Export >** **Structure definition to HTML file...**menu item (see *Exporting and importing structure definitions*).
 
 * **xml format**: the internal "grammar" of 4D structure definitions is documented by means of DTD files — also used for the validation of XML files. The DTD files used by 4D are grouped together in the **DTD** folder, found next to the 4D application. The **base\_core.dtd** and **common.dtd** files are used for structure definitions. For more information, you can consult these files along with the comments they contain.  
-A structure definition exported in XML format can be imported in another database (see [IMPORT STRUCTURE](import-structure.md)).
+A structure definition exported in XML format can be imported in another database (see [IMPORT STRUCTURE](../commands/import-structure)).
 * **html format**: the command generates raw HTML code which includes references to a folder containing external resources such as pictures or css, required for HTML representation. If you want to save this code in an HTML page to be displayed in a browser, you can reuse the folder created by the **Export >** **Structure definition to HTML file...** menu item, or create your own resources folder.
 
 ## Example 1 
@@ -68,7 +68,7 @@ You want to export the current database structure in html format:
 
 ## See also 
 
-[IMPORT STRUCTURE](import-structure.md)  
+[IMPORT STRUCTURE](../commands/import-structure)  
 
 ## Properties
 

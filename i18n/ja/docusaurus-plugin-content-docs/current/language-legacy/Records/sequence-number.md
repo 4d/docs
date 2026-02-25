@@ -1,4 +1,4 @@
----
+﻿---
 id: sequence-number
 title: Sequence number
 slug: /commands/sequence-number
@@ -31,11 +31,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Sequence number.Summary-->**Sequence number** は、*aTable*の次のシーケンス番号を返します。<!-- END REF-->シーケンス番号は、各テーブルにおいて固有のものです。この番号は、*aTable*に対して新しいレコードが追加されるたびに加算される、決して重複することのない番号です。
 
-(\*) 最適化のため、**Sequence number** コマンドまたはその他のシーケンス番号にアクセスする機能を最初に処理したときに初めてインクリメントが開始します (後述参照)。また、増分値は [SET DATABASE PARAMETER](set-database-parameter.md) コマンドによって変更することができます。したがって、戻り値を *aTable* に作成されたレコード数の参考にはできないことに注意が必要です。
+(\*) 最適化のため、**Sequence number** コマンドまたはその他のシーケンス番号にアクセスする機能を最初に処理したときに初めてインクリメントが開始します (後述参照)。また、増分値は [SET DATABASE PARAMETER](../commands/set-database-parameter) コマンドによって変更することができます。したがって、戻り値を *aTable* に作成されたレコード数の参考にはできないことに注意が必要です。
 
-番号は1から始まります。[SET DATABASE PARAMETER](set-database-parameter.md) コマンドを使用して、番号を変更することができます。 
+番号は1から始まります。[SET DATABASE PARAMETER](../commands/set-database-parameter) コマンドを使用して、番号を変更することができます。 
 
-**注:** カレントレコードが存在しておらず、[SET DATABASE PARAMETER](set-database-parameter.md) コマンドによって増分値も変更されている場合、戻り値は次のレコード作成のために予約されたものですが、 [SAVE RECORD](save-record.md) コマンドが成功した場合にかぎり **Sequence number** 関数によって返されます。
+**注:** カレントレコードが存在しておらず、[SET DATABASE PARAMETER](../commands/set-database-parameter) コマンドによって増分値も変更されている場合、戻り値は次のレコード作成のために予約されたものですが、 [SAVE RECORD](../commands/save-record) コマンドが成功した場合にかぎり **Sequence number** 関数によって返されます。
 
 **Sequence number** が便利なケース:
 
@@ -68,8 +68,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Record number](record-number.md)  
-[Selected record number](selected-record-number.md)  
+[Record number](../commands/record-number)  
+[Selected record number](../commands/selected-record-number)  
 *レコード番号について*  
 
 ## プロパティ

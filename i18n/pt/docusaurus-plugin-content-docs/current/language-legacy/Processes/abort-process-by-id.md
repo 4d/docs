@@ -1,4 +1,4 @@
----
+﻿---
 id: abort-process-by-id
 title: ABORT PROCESS BY ID
 slug: /commands/abort-process-by-id
@@ -53,7 +53,7 @@ Se quiser deter o processo selecionado da coleção de processos que são mostra
 
 ## Ver também 
 
-[PAUSE PROCESS](pause-process.md)  
+[PAUSE PROCESS](../commands/pause-process)  
 
 ## Propriedades
 

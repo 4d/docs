@@ -1,4 +1,4 @@
----
+﻿---
 id: web-stop-server
 title: WEB STOP SERVER
 slug: /commands/web-stop-server
@@ -34,7 +34,7 @@ If the Web server has not been started, the command does nothing.
 
 ## See also 
 
-[WEB START SERVER](web-start-server.md)  
+[WEB START SERVER](../commands/web-start-server)  
 
 ## Properties
 

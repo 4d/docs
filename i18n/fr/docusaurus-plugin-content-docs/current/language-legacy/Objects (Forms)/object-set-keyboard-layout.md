@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-keyboard-layout
 title: OBJECT SET KEYBOARD LAYOUT
 slug: /commands/object-set-keyboard-layout
@@ -33,11 +33,11 @@ displayed_sidebar: docs
 
 Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable ou un champ. Dans ce cas, vous ne passez pas une nom mais une référence.
 
-Passez dans le paramètre *codeLangue* une chaîne indiquant le code de langue à utiliser, basé sur les RFC3066, ISO639 et ISO3166\. Pour plus d’informations, reportez-vous à la description de la commande [SET DATABASE LOCALIZATION](set-database-localization.md). 
+Passez dans le paramètre *codeLangue* une chaîne indiquant le code de langue à utiliser, basé sur les RFC3066, ISO639 et ISO3166\. Pour plus d’informations, reportez-vous à la description de la commande [SET DATABASE LOCALIZATION](../commands/set-database-localization). 
 
 ## Voir aussi 
 
-[OBJECT Get keyboard layout](object-get-keyboard-layout.md)  
+[OBJECT Get keyboard layout](../commands/object-get-keyboard-layout)  
 
 ## Propriétés
 

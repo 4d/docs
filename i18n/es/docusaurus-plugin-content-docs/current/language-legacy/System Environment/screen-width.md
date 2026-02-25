@@ -1,4 +1,4 @@
----
+﻿---
 id: screen-width
 title: Screen width
 slug: /commands/screen-width
@@ -24,8 +24,8 @@ En Macintosh, Screen width devuelve el largo de la pantalla principal, es decir 
 
 ## Ver también 
 
-[SCREEN COORDINATES](screen-coordinates.md)  
-[Screen height](screen-height.md)  
+[SCREEN COORDINATES](../commands/screen-coordinates)  
+[Screen height](../commands/screen-height)  
 
 ## Propiedades
 

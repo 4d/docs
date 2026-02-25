@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-instance-of
 title: OB Instance of
 slug: /commands/ob-instance-of
@@ -61,7 +61,7 @@ Polygon というクラスを作成した場合を考えます:
 
 ## 参照 
 
-[OB Class](ob-class.md)  
+[OB Class](../commands/ob-class)  
 
 ## プロパティ
 

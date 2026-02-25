@@ -1,4 +1,4 @@
----
+﻿---
 id: set-timer
 title: SET TIMER
 slug: /commands/set-timer
@@ -56,7 +56,7 @@ Vous souhaitez que, lorsqu’un formulaire est affiché à l’écran, un bip so
 ## Voir aussi 
 
 [Form event code](../commands/form-event-code)  
-[REDRAW](redraw.md)  
+[REDRAW](../commands/redraw)  
 
 ## Propriétés
 

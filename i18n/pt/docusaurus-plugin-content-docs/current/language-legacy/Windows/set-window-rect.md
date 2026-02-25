@@ -1,4 +1,4 @@
----
+﻿---
 id: set-window-rect
 title: SET WINDOW RECT
 slug: /commands/set-window-rect
@@ -42,15 +42,15 @@ Este comando pode redimensionar e mover a janela, dependendo das novas coordenad
   
 As coordenadas devem ser expressas com relação ao canto superior esquerdo da área de conteúdo da janela da aplicação (em modo MDI Windows) ou da tela principal (em MacOS e modo SDI Windows). As coordenadas indicam o retângulo correspondente à área de conteúdo da janela (excluindo as barras de títulos e as margens).
 
-**Aviso**: utilize este comando com precaução, poderia mover uma janela mais além dos limites da janela principal (em Windows) ou da tela (em Macintosh). Para evitar isto, utilize comandos como [Screen width](screen-width.md) e [Screen height](screen-height.md) para verificar as novas coordenadas da janela.  
+**Aviso**: utilize este comando com precaução, poderia mover uma janela mais além dos limites da janela principal (em Windows) ou da tela (em Macintosh). Para evitar isto, utilize comandos como [Screen width](../commands/screen-width) e [Screen height](../commands/screen-height) para verificar as novas coordenadas da janela.  
   
 Por padrão, executar este comando, automaticamente move a janela designada pelo parâmetro *janela* ao primeiro plano (se o parâmetro for usado). Você pode desativar isso passando o parâmtero *\** como o último parâmetro. neste caso, o comando não vai mais mudar o nível original (coordenada "z") da janela.  
   
-Este comando não afeta os objetos de formulário. Se a janela contiver um formulário, os objetos do formulário não são movidos ou redimensionados pelo comando (sem importar suas propriedades). Apenas se modifica a janela. Para modificar uma janela de formulário considerando suas propriedades de redimensionamento e os objetos que contém, deve utilizar o comando [RESIZE FORM WINDOW](resize-form-window.md).
+Este comando não afeta os objetos de formulário. Se a janela contiver um formulário, os objetos do formulário não são movidos ou redimensionados pelo comando (sem importar suas propriedades). Apenas se modifica a janela. Para modificar uma janela de formulário considerando suas propriedades de redimensionamento e os objetos que contém, deve utilizar o comando [RESIZE FORM WINDOW](../commands/resize-form-window).
 
 ## Exemplo 1 
 
-Ver o exemplo do comando [WINDOW LIST](window-list.md).
+Ver o exemplo do comando [WINDOW LIST](../commands/window-list).
 
 ## Exemplo 2 
 
@@ -70,10 +70,10 @@ A janela aparece desta forma:
 
 ## Ver também 
 
-[CONVERT COORDINATES](convert-coordinates.md)  
-[DRAG WINDOW](drag-window.md)  
-[GET WINDOW RECT](get-window-rect.md)  
-[RESIZE FORM WINDOW](resize-form-window.md)  
+[CONVERT COORDINATES](../commands/convert-coordinates)  
+[DRAG WINDOW](../commands/drag-window)  
+[GET WINDOW RECT](../commands/get-window-rect)  
+[RESIZE FORM WINDOW](../commands/resize-form-window)  
 
 ## Propriedades
 

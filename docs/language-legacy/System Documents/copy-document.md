@@ -1,4 +1,4 @@
----
+﻿---
 id: copy-document
 title: COPY DOCUMENT
 slug: /commands/copy-document
@@ -132,7 +132,7 @@ The following examples create different files and folders in the database folder
 
 ## See also 
 
-[MOVE DOCUMENT](move-document.md)  
+[MOVE DOCUMENT](../commands/move-document)  
 *System Documents*  
 
 ## Properties

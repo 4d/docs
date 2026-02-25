@@ -1,4 +1,4 @@
----
+﻿---
 id: current-date
 title: Current date
 slug: /commands/current-date
@@ -96,9 +96,9 @@ La méthode projet suivante vous permet de traiter cette question :
 
 ## Voir aussi 
 
-[Day of](day-of.md)  
-[Month of](month-of.md)  
-[Year of](year-of.md)  
+[Day of](../commands/day-of)  
+[Month of](../commands/month-of)  
+[Year of](../commands/year-of)  
 
 ## Propriétés
 

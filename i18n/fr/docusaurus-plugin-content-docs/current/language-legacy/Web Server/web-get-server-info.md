@@ -1,4 +1,4 @@
----
+﻿---
 id: web-get-server-info
 title: WEB Get server info
 slug: /commands/web-get-server-info
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB Get server info.Summary-->La commande **WEB Get server info** retourne un objet contenant des informations détaillées sur la session courante du serveur Web 4D.<!-- END REF--> Les informations retournées incluent le serveur SOAP.
 
-**Note :** Les informations retournées par cette commande décrivent les paramètres d'exécution du serveur Web. Ces paramètres peuvent différer de ceux retournés par la commande [WEB GET OPTION](web-get-option.md), car ils dépendent de la configuration système, des ressources disponibles, etc.
+**Note :** Les informations retournées par cette commande décrivent les paramètres d'exécution du serveur Web. Ces paramètres peuvent différer de ceux retournés par la commande [WEB GET OPTION](../commands/web-get-option), car ils dépendent de la configuration système, des ressources disponibles, etc.
 
 Par défaut, la commande ne retourne pas la propriété "cache", car elle peut être de taille importante. Toutefois, si vous souhaitez connaître les informations sur le cache, passez Vrai dans le paramètre optionnel *avecCache*.
 
@@ -139,7 +139,7 @@ $webServerInfo:=WEB Get server info(True)
 
 [License info](../commands/license-info)  
 [Process activity](../commands/process-activity)  
-[SOAP REJECT NEW REQUESTS](soap-reject-new-requests.md)  
+[SOAP REJECT NEW REQUESTS](../commands/soap-reject-new-requests)  
 
 ## Propriétés
 

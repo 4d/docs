@@ -1,4 +1,4 @@
----
+﻿---
 id: generate-digest
 title: Generate digest
 slug: /commands/generate-digest
@@ -45,7 +45,7 @@ Passez dans le paramètre *algorithme* une valeur désignant la fonction de hach
 | SHA256 digest       | Entier long | 3      | Famille *SHA-2.* Séquence de 256 bits retournée en tant que chaîne de 64 caractères hexadécimaux.               |
 | SHA512 digest       | Entier long | 4      | Famille *SHA-2*. Séquence de 512 bits retournée en tant que chaîne de 128 caractères hexadécimaux.              |
 
-**Note :** Il est fortement déconseillé d'utiliser les algorithmes MD5 ou SHA pour gérer les mots de passe ; si vous souhaitez vérifier des mots de passe, nous recommandons l'utilisation des commandes [Generate password hash](generate-password-hash.md) et [Verify password hash](verify-password-hash.md).
+**Note :** Il est fortement déconseillé d'utiliser les algorithmes MD5 ou SHA pour gérer les mots de passe ; si vous souhaitez vérifier des mots de passe, nous recommandons l'utilisation des commandes [Generate password hash](../commands/generate-password-hash) et [Verify password hash](../commands/verify-password-hash).
 
 Par défaut, si le paramètre *\** est omis, la digest retournée est cyptée en hexadécimal. Passez le paramètre *\** si vous souhaitez qu'elle soit chiffrée en Base64URL.
 
@@ -92,11 +92,11 @@ Ces exemples illustrent comment récupérer la clé digest d’un texte :
 
 ## Voir aussi 
 
-[BASE64 DECODE](base64-decode.md)  
-[BASE64 ENCODE](base64-encode.md)  
-[Generate password hash](generate-password-hash.md)  
+[BASE64 DECODE](../commands/base64-decode)  
+[BASE64 ENCODE](../commands/base64-encode)  
+[Generate password hash](../commands/generate-password-hash)  
 *Protocole sécurisé*  
-[WEB Validate digest](web-validate-digest.md)  
+[WEB Validate digest](../commands/web-validate-digest)  
 
 ## Propriétés
 

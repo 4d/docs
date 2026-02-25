@@ -1,4 +1,4 @@
----
+﻿---
 id: blob-to-document
 title: BLOB TO DOCUMENT
 slug: /commands/blob-to-document
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 ## Descrição 
 
 <!--REF #_command_.BLOB TO DOCUMENT.Summary-->**BLOB TO DOCUMENT** reescreve todo o conteúdo do documento utilizando os dados armazenados no blob.<!-- END REF-->.  
-Você pode passar o nome de um documento existente no *documento*. Se o documento não existir, o comando o cria. Se você passar o nome de um documento existente, certifique-se que ele não está aberto, caso contrário, será gerado um erro. Se você quiser deixar o usuário escolher o documento, use os comandos [Open document](open-document.md) ou [Create document](create-document.md) e utilize a variável de processo *documento* (ver exemplo).
+Você pode passar o nome de um documento existente no *documento*. Se o documento não existir, o comando o cria. Se você passar o nome de um documento existente, certifique-se que ele não está aberto, caso contrário, será gerado um erro. Se você quiser deixar o usuário escolher o documento, use os comandos [Open document](../commands/open-document) ou [Create document](../commands/create-document) e utilize a variável de processo *documento* (ver exemplo).
 
 **Nota de Compatibilidade:** O \* opcional (gestão de resource fork em versões antigas de Mac OS) não é mais compatível com 4D a partir de 4D v16\. Para saber mais veja *Propriedades obsoletas ou removidas*.
 
@@ -62,9 +62,9 @@ Em todos os casos, você pode interceptar o erro usando um método [ON ERR CALL]
 
 ## Ver também 
 
-[Create document](create-document.md)  
-[DOCUMENT TO BLOB](document-to-blob.md)  
-[Open document](open-document.md)  
+[Create document](../commands/create-document)  
+[DOCUMENT TO BLOB](../commands/document-to-blob)  
+[Open document](../commands/open-document)  
 
 ## Propriedades
 

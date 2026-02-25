@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-grid
 title: LISTBOX GET GRID
 slug: /commands/listbox-get-grid
@@ -38,7 +38,7 @@ In *horizontal* and *vertical*, the command returns the value **True** or **Fals
 
 ## See also 
 
-[LISTBOX SET GRID](listbox-set-grid.md)  
+[LISTBOX SET GRID](../commands/listbox-set-grid)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-execute-javascript-function
 title: WA EXECUTE JAVASCRIPT FUNCTION
 slug: /commands/wa-execute-javascript-function
@@ -105,7 +105,7 @@ WA EXECUTE JAVASCRIPT FUNCTION(*;"WA";"Qodly.setSource";$Result;$Source;$Value)
 ## See also 
 
 [Enhance your Desktop Interface with Web widgets using 4D Qodly Pro](https://blog.4d.com/build-modern-hybrid-desktop-apps-with-4d-and-qodly-pro/) (blog post)<br/>
-[WA Evaluate JavaScript](wa-evaluate-javascript.md)  
+[WA Evaluate JavaScript](../commands/wa-evaluate-javascript)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-title
 title: OBJECT SET TITLE
 slug: /commands/object-set-title
@@ -54,7 +54,7 @@ Si vous souhaitez définir un libellé sur plusieurs lignes, utilisez le caract�
 
 ## Exemple 1 
 
-L'exemple suivant est la méthode objet d'un bouton de recherche situé dans la zone de pied de page d'un formulaire sortie affiché par la commande [MODIFY SELECTION](modify-selection.md). La méthode effectue une recherche dans une table et active ou inactive le bouton intitulé *bSuppr* et change son titre, en fonction des résultats de la recherche :
+L'exemple suivant est la méthode objet d'un bouton de recherche situé dans la zone de pied de page d'un formulaire sortie affiché par la commande [MODIFY SELECTION](../commands/modify-selection). La méthode effectue une recherche dans une table et active ou inactive le bouton intitulé *bSuppr* et change son titre, en fonction des résultats de la recherche :
 
 ```4d
  QUERY([Personnes];[Personnes]Nom=vNom)
@@ -84,7 +84,7 @@ Vous souhaitez insérer des libellés sur deux lignes :
 
 ## Voir aussi 
 
-[OBJECT Get title](object-get-title.md)  
+[OBJECT Get title](../commands/object-get-title)  
 
 ## Propriétés
 

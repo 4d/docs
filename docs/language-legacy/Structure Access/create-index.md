@@ -1,4 +1,4 @@
----
+﻿---
 id: create-index
 title: CREATE INDEX
 slug: /commands/create-index
@@ -49,7 +49,7 @@ The *indexType* parameter sets the type of index to be created. You can pass one
 
 **Note:** A B-Tree index associated with a Text type field stores the first 1024 characters of the field (maximum). Therefore in this context, searches for strings containing more than 1024 characters will fail. 
 
-In the *indexName* parameter, you pass the name of the index to be created. Naming the index is necessary if several different types of indexes can be associated with the same field and if you want to be able to delete them individually using the [DELETE INDEX](delete-index.md) command. If the *indexName* index already exists, the command does nothing.
+In the *indexName* parameter, you pass the name of the index to be created. Naming the index is necessary if several different types of indexes can be associated with the same field and if you want to be able to delete them individually using the [DELETE INDEX](../commands/delete-index) command. If the *indexName* index already exists, the command does nothing.
 
 The optional *\** parameter, when it is passed, performs indexing in asynchronous mode. In this mode, the original method continues its execution after the call from the command, regardless of whether or not the indexing is finished.
 
@@ -96,9 +96,9 @@ Creation of a composite index on the “City” and “Zipcode” fields of the 
 
 ## See also 
 
-[DELETE INDEX](delete-index.md)  
-[RESUME INDEXES](resume-indexes.md)  
-[SET INDEX](set-index.md)  
+[DELETE INDEX](../commands/delete-index)  
+[RESUME INDEXES](../commands/resume-indexes)  
+[SET INDEX](../commands/set-index)  
 
 ## Properties
 

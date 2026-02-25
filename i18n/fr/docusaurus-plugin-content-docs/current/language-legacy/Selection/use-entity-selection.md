@@ -1,4 +1,4 @@
----
+﻿---
 id: use-entity-selection
 slug: /commands/use-entity-selection
 title: USE ENTITY SELECTION
@@ -45,7 +45,7 @@ USE ENTITY SELECTION($entitySel) //La sélection courante de la table Employee e
 
 ## Voir également
 
-[Create entity selection](create-entity-selection.md)
+[Create entity selection](../commands/create-entity-selection)
 
 ## Propriétés
 

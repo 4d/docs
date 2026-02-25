@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-font-style
 title: OBJECT SET FONT STYLE
 slug: /commands/object-set-font-style
@@ -65,10 +65,10 @@ L'exemple suivant définit le style de police Normal pour tous les objets de for
 ## Voir aussi 
 
 *Notes de programmation*  
-[OBJECT Get font style](object-get-font-style.md)  
-[OBJECT SET FONT](object-set-font.md)  
-[OBJECT SET FONT SIZE](object-set-font-size.md)  
-[SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+[OBJECT Get font style](../commands/object-get-font-style)  
+[OBJECT SET FONT](../commands/object-set-font)  
+[OBJECT SET FONT SIZE](../commands/object-set-font-size)  
+[SET LIST ITEM PROPERTIES](../commands/set-list-item-properties)  
 
 ## Propriétés
 

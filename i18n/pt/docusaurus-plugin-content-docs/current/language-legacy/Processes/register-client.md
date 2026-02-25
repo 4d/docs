@@ -1,4 +1,4 @@
----
+﻿---
 id: register-client
 title: REGISTER CLIENT
 slug: /commands/register-client
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.REGISTER CLIENT.Summary-->O comando REGISTER CLIENT “registra” uma máquina cliente com o nome especificado em *nomeCliente* no 4D Server, a fim de permitir outros clientes ou eventualmente 4D server (utilizando métodos armazenados) executar métodos fazendo uso do comando [EXECUTE ON CLIENT](execute-on-client.md).<!-- END REF--> Uma vez registrado, um cliente 4D pode executar um ou vários métodos para outros clientes.
+<!--REF #_command_.REGISTER CLIENT.Summary-->O comando REGISTER CLIENT “registra” uma máquina cliente com o nome especificado em *nomeCliente* no 4D Server, a fim de permitir outros clientes ou eventualmente 4D server (utilizando métodos armazenados) executar métodos fazendo uso do comando [EXECUTE ON CLIENT](../commands/execute-on-client).<!-- END REF--> Uma vez registrado, um cliente 4D pode executar um ou vários métodos para outros clientes.
 
 **Notas:**
 
@@ -38,11 +38,11 @@ displayed_sidebar: docs
 * Se este comando é utilizado com 4D em modo local, não tem efeito.
 * Mais de uma estação 4D client pode ter o mesmo nome registrado.
 
-Quando este comando é executado, um processo chamado *nomeCliente*, é criado na máquina cliente. Este processo somente pode ser interrompido pelo comando [UNREGISTER CLIENT](unregister-client.md). Se passar o parâmetro opcional \*, o processo criado é local. 4D adiciona automaticamente o símbolo dólar ($) ao começo do nome do processo. Do contrário, o processo é global.
+Quando este comando é executado, um processo chamado *nomeCliente*, é criado na máquina cliente. Este processo somente pode ser interrompido pelo comando [UNREGISTER CLIENT](../commands/unregister-client). Se passar o parâmetro opcional \*, o processo criado é local. 4D adiciona automaticamente o símbolo dólar ($) ao começo do nome do processo. Do contrário, o processo é global.
 
 **Nota de compatibilidade:** a partir da versão 11,3 de 4D, tem sido otimizados os mecanismos de comunicação servidor/cliente. Agora o servidor envia as petições de execução diretamente aos clientes registrados quando é necessário (tecnologia "push"). O principio anterior, onde os clientes procuravam periodicamente o servidor, não é mais usado. O parâmetro *periodo* é ignorado se passado.
 
-Uma vez executado o comando, não é possível modificar rapidamente o nome do cliente 4D. Para poder fazê-lo, deve chamar o comando [UNREGISTER CLIENT](unregister-client.md) e depois o comando REGISTER CLIENT.
+Uma vez executado o comando, não é possível modificar rapidamente o nome do cliente 4D. Para poder fazê-lo, deve chamar o comando [UNREGISTER CLIENT](../commands/unregister-client) e depois o comando REGISTER CLIENT.
 
 ## Exemplo 
 
@@ -122,9 +122,9 @@ Se um cliente 4D está registrado corretamente, a variável do sistema OK é igu
 
 ## Ver também 
 
-[EXECUTE ON CLIENT](execute-on-client.md)  
-[GET REGISTERED CLIENTS](get-registered-clients.md)  
-[UNREGISTER CLIENT](unregister-client.md)  
+[EXECUTE ON CLIENT](../commands/execute-on-client)  
+[GET REGISTERED CLIENTS](../commands/get-registered-clients)  
+[UNREGISTER CLIENT](../commands/unregister-client)  
 
 ## Propriedades
 

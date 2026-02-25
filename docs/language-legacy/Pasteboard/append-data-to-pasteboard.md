@@ -1,4 +1,4 @@
----
+﻿---
 id: append-data-to-pasteboard
 title: APPEND DATA TO PASTEBOARD
 slug: /commands/append-data-to-pasteboard
@@ -37,13 +37,13 @@ In *dataType*, pass a value specifying the type of data to be added. You can pas
 
 **Note for Windows users:** When the command is used with Text type data (*dataType* is "TEXT", com.4d.private.text.native or com.4d.private.text.utf16), the string contained in the BLOB parameter *data* must end with the NULL character under Windows. 
 
-Usually, you will use the APPEND DATA TO PASTEBOARD command to append multiple instances of the same data to the pasteboard or to append data that is not text or a picture. To append new data to the pasteboard, you must first clear the pasteboard using the [CLEAR PASTEBOARD](clear-pasteboard.md) command.
+Usually, you will use the APPEND DATA TO PASTEBOARD command to append multiple instances of the same data to the pasteboard or to append data that is not text or a picture. To append new data to the pasteboard, you must first clear the pasteboard using the [CLEAR PASTEBOARD](../commands/clear-pasteboard) command.
 
 If you want to clear and append:
 
-* text to the pasteboard, use the [SET TEXT TO PASTEBOARD](set-text-to-pasteboard.md) command,
-* a picture to the pasteboard, use the [SET PICTURE TO PASTEBOARD](set-picture-to-pasteboard.md) command.
-* a file pathname (drag and drop), use the [SET FILE TO PASTEBOARD](set-file-to-pasteboard.md) command.
+* text to the pasteboard, use the [SET TEXT TO PASTEBOARD](../commands/set-text-to-pasteboard) command,
+* a picture to the pasteboard, use the [SET PICTURE TO PASTEBOARD](../commands/set-picture-to-pasteboard) command.
+* a file pathname (drag and drop), use the [SET FILE TO PASTEBOARD](../commands/set-file-to-pasteboard) command.
 
 However, note that if a BLOB actually contains some text or a picture, you can use the APPEND DATA TO PASTEBOARD command to append a text or a picture to the pasteboard.
 
@@ -227,9 +227,9 @@ If the BLOB data is correctly appended to the pasteboard, OK is set to 1; otherw
 
 ## See also 
 
-[CLEAR PASTEBOARD](clear-pasteboard.md)  
-[SET PICTURE TO PASTEBOARD](set-picture-to-pasteboard.md)  
-[SET TEXT TO PASTEBOARD](set-text-to-pasteboard.md)  
+[CLEAR PASTEBOARD](../commands/clear-pasteboard)  
+[SET PICTURE TO PASTEBOARD](../commands/set-picture-to-pasteboard)  
+[SET TEXT TO PASTEBOARD](../commands/set-text-to-pasteboard)  
 
 ## Properties
 

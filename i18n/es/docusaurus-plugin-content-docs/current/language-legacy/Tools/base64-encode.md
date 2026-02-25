@@ -1,4 +1,4 @@
----
+﻿---
 id: base64-encode
 title: BASE64 ENCODE
 slug: /commands/base64-encode
@@ -48,10 +48,10 @@ Por defecto, si se omite el parámetro *\**, el comando utiliza una codificació
 
 ## Ver también 
 
-[BASE64 DECODE](base64-decode.md)  
-[Generate digest](generate-digest.md)  
+[BASE64 DECODE](../commands/base64-decode)  
+[Generate digest](../commands/generate-digest)  
 *Presentación de los comandos XML DOM*  
-[XML DECODE](xml-decode.md)  
+[XML DECODE](../commands/xml-decode)  
 
 ## Propiedades
 

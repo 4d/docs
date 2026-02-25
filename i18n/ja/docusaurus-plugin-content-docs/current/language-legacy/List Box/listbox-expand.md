@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-expand
 title: LISTBOX EXPAND
 slug: /commands/listbox-expand
@@ -90,7 +90,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[LISTBOX COLLAPSE](listbox-collapse.md)  
+[LISTBOX COLLAPSE](../commands/listbox-collapse)  
 
 ## プロパティ
 

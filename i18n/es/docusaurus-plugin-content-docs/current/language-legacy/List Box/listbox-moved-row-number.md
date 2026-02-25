@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-moved-row-number
 title: LISTBOX MOVED ROW NUMBER
 slug: /commands/listbox-moved-row-number
@@ -45,7 +45,7 @@ Este comando debe utilizarse con el evento de formulario On row moved (ver el co
 ## Ver también 
 
 [Form event code](../commands/form-event-code)  
-[LISTBOX MOVED COLUMN NUMBER](listbox-moved-column-number.md)  
+[LISTBOX MOVED COLUMN NUMBER](../commands/listbox-moved-column-number)  
 
 ## Propiedades
 

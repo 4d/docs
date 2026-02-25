@@ -1,4 +1,4 @@
----
+﻿---
 id: value-type
 title: Value type
 slug: /commands/value-type
@@ -64,7 +64,7 @@ Cette commande est destinée à retourner le type des expressions *scalaires*, c
  $vType:=Value type($o.value) //$vType=Est un réel
 ```
 
-**Value type** peut être appliquée à toute expression 4D valide, y compris les champs, les variables ou les paramètres. Dans ce cas, à la différence de la commande [Type](type.md), **Value type** retourne le type *interne* de la valeur résultant de l'évaluation de l'*expression*, et non son type *declaré*. Comme le langage de 4D convertit certains types de valeurs en interne, le résultat de **Value type** peut différer du type déclaré. Par exemple, 4D convertit en interne les valeurs des champs de type "*Entier 64 bits*". Vous pouvez obtenir les résultats suivants :
+**Value type** peut être appliquée à toute expression 4D valide, y compris les champs, les variables ou les paramètres. Dans ce cas, à la différence de la commande [Type](../commands/type), **Value type** retourne le type *interne* de la valeur résultant de l'évaluation de l'*expression*, et non son type *declaré*. Comme le langage de 4D convertit certains types de valeurs en interne, le résultat de **Value type** peut différer du type déclaré. Par exemple, 4D convertit en interne les valeurs des champs de type "*Entier 64 bits*". Vous pouvez obtenir les résultats suivants :
 
 ```4d
  $vType1:=Type([myTable]Long64field) //$vType=Est un entier 64 bits
@@ -73,7 +73,7 @@ Cette commande est destinée à retourner le type des expressions *scalaires*, c
 
 D'autres différences relatives aux tableaux (l'évaluation d'un tableau retourne l'indice de l'élément courant) et au mode compilé sont à noter. Le tableau suivant liste ces différences :
 
-| **Type déclaré**       | **Résultat de** [Type](type.md) | **Résultat de Value type (interprété)** | **Résultat de Value type (compilé)** | **Commentaire**                                                                                                          |
+| **Type déclaré**       | **Résultat de** [Type](../commands/type) | **Résultat de Value type (interprété)** | **Résultat de Value type (compilé)** | **Commentaire**                                                                                                          |
 | ---------------------- | ------------------------------- | --------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
 | TABLEAU TEXTE($t;1)    | Text array                      | Is real                                 | Is longint                           | $t contient l'indice de l'élément courant, qui est un numérique                                                          |
 | Champ *Alpha*          | Is alpha field                  | Is text                                 | Is text                              | 4D manipule en interne toutes les chaînes en texte                                                                       |
@@ -87,7 +87,7 @@ D'autres différences relatives aux tableaux (l'évaluation d'un tableau retourn
  If(Value type($myValue)=Is longint)|(Value type($myValue)=Est un réel)
 ```
 
-**Note de compatibilité :** A compter de 4D v16 R6, les dates sont stockées dans les propriétés d'objets soit avec le type date, soit en texte au format date ISO. Pour plus d'informations, reportez-vous à la description du sélecteur Dates inside objects de la commande [SET DATABASE PARAMETER](set-database-parameter.md).
+**Note de compatibilité :** A compter de 4D v16 R6, les dates sont stockées dans les propriétés d'objets soit avec le type date, soit en texte au format date ISO. Pour plus d'informations, reportez-vous à la description du sélecteur Dates inside objects de la commande [SET DATABASE PARAMETER](../commands/set-database-parameter).
 
 ## Exemple 1 
 
@@ -123,8 +123,8 @@ Vous souhaitez obtenir la somme de toutes les valeurs numériques dans une colle
 
 ## Voir aussi 
 
-[OB Get type](ob-get-type.md)  
-[Type](type.md)  
+[OB Get type](../commands/ob-get-type)  
+[Type](../commands/type)  
 
 ## Propriétés
 

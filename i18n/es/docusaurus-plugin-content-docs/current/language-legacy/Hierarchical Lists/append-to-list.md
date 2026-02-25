@@ -1,4 +1,4 @@
----
+﻿---
 id: append-to-list
 title: APPEND TO LIST
 slug: /commands/append-to-list
@@ -45,8 +45,8 @@ La referencia de la lista que pasa en *sublista* debe hacer referencia a una lis
 
 **Consejos:**
 
-* Para insertar un nuevo elemento en una lista, utilice [INSERT IN LIST](insert-in-list.md). Para cambiar el texto de un elemento existente o modificar su lista hija al igual que su estado desplegado, utilice [SET LIST ITEM](set-list-item.md).
-* Para cambiar la apariencia del nuevo elemento añadido utilice [SET LIST ITEM PROPERTIES](set-list-item-properties.md).
+* Para insertar un nuevo elemento en una lista, utilice [INSERT IN LIST](../commands/insert-in-list). Para cambiar el texto de un elemento existente o modificar su lista hija al igual que su estado desplegado, utilice [SET LIST ITEM](../commands/set-list-item).
+* Para cambiar la apariencia del nuevo elemento añadido utilice [SET LIST ITEM PROPERTIES](../commands/set-list-item-properties).
 
 ## Ejemplo 
 
@@ -163,10 +163,10 @@ Cuando el formulario se ejecuta, la lista se verá de esta forma:
 
 ## Ver también 
 
-[INSERT IN LIST](insert-in-list.md)  
-[SET LIST ITEM](set-list-item.md)  
-[SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
-[SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+[INSERT IN LIST](../commands/insert-in-list)  
+[SET LIST ITEM](../commands/set-list-item)  
+[SET LIST ITEM PARAMETER](../commands/set-list-item-parameter)  
+[SET LIST ITEM PROPERTIES](../commands/set-list-item-properties)  
 
 ## Propiedades
 

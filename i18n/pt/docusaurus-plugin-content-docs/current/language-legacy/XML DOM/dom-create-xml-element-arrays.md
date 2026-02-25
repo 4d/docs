@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-create-xml-element-arrays
 title: DOM Create XML element arrays
 slug: /commands/dom-create-xml-element-arrays
@@ -35,7 +35,7 @@ displayed_sidebar: docs
   
 Exceto pelos arrays compatíveis (ver abaixo), este comando é idêntico a DOM Criate XML element. Por favor consulte a descrição deste comando para conhecer maiores detalhes de seu funcionamento.   
   
-Opcionalmente, o comando permite passar vários pares de atributos e valores de atributos na forma de arrays nos parâmetros *arrayNomsAtrib* e *arrayValoresAtrib*. Em *arrayValoresAtrib*, pode passar arrays de tipo texto, data, numérico e imagem. 4D realiza automaticamente as conversões necessarias; pode modificar estas conversões utilizando o comando [XML SET OPTIONS](xml-set-options.md).  
+Opcionalmente, o comando permite passar vários pares de atributos e valores de atributos na forma de arrays nos parâmetros *arrayNomsAtrib* e *arrayValoresAtrib*. Em *arrayValoresAtrib*, pode passar arrays de tipo texto, data, numérico e imagem. 4D realiza automaticamente as conversões necessarias; pode modificar estas conversões utilizando o comando [XML SET OPTIONS](../commands/xml-set-options).  
   
 Os arrays devem ter sido criados previamente e funcionar aos pares. Pode passar tantos pares de arrays e de elementos quantos queira em cada par.
 
@@ -72,7 +72,7 @@ Para isso, basta escrever:
 
 ## Ver também 
 
-[DOM Create XML element](dom-create-xml-element.md)  
+[DOM Create XML element](../commands/dom-create-xml-element)  
 
 ## Propriedades
 

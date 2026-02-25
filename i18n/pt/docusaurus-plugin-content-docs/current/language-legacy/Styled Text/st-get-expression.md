@@ -1,4 +1,4 @@
----
+﻿---
 id: st-get-expression
 title: ST Get expression
 slug: /commands/st-get-expression
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 O comando devolve a etiqueta da expressão, como foi inserida no objeto (por exemplo, "mymethod" ou "\[tabela1\]campo1"). Não se devolve o valor atual da expressão.
 
-**Nota**: este comando devolve nomes "reais" para os campos e as tabelas, mesmo se tiver sido definida uma estrutura "virtual" utilizando os comandos [SET TABLE TITLES](set-table-titles.md) e [SET FIELD TITLES](set-field-titles.md).
+**Nota**: este comando devolve nomes "reais" para os campos e as tabelas, mesmo se tiver sido definida uma estrutura "virtual" utilizando os comandos [SET TABLE TITLES](../commands/set-table-titles) e [SET FIELD TITLES](../commands/set-field-titles).
 
 Se passar o parâmetro opcional *\** indica que o parâmetro *objeto* é um nome de objeto (cadeia). Durante a execução, se o objeto tem o foco, o comando devolve a informação do objeto que se está editando, e se o objeto não tem o foco, o comando devolve a informação da fonte de dados do objeto (variável ou campo).  
 Se omitir o parâmetro *\**, indica que o parâmetro *objeto* é um campo ou uma variável. Neste caso, se passar uma referência de campo ou variável no lugar de uma cadeia. Durante a execução, o comando devolve a informação da variável ou do campo.  
@@ -103,7 +103,7 @@ Você quer executar um método 4D quando é feito clique em um link de um usuár
 
 ## Ver também 
 
-[ST INSERT EXPRESSION](st-insert-expression.md)  
+[ST INSERT EXPRESSION](../commands/st-insert-expression)  
 
 ## Propriedades
 

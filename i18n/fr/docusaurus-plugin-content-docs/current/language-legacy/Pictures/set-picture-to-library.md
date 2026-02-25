@@ -1,4 +1,4 @@
----
+﻿---
 id: set-picture-to-library
 title: SET PICTURE TO LIBRARY
 slug: /commands/set-picture-to-library
@@ -67,7 +67,7 @@ Quel que soit le contenu courant de la bibliothèque d’images, l’exemple sui
 
 ## Exemple 2 
 
-L’exemple suivant importe dans la bibliothèque des images stockées dans un document sur disque, créé par le troisième exemple de la commande [PICTURE LIBRARY LIST](picture-library-list.md) :
+L’exemple suivant importe dans la bibliothèque des images stockées dans un document sur disque, créé par le troisième exemple de la commande [PICTURE LIBRARY LIST](../commands/picture-library-list) :
 
 ```4d
  SET CHANNEL(10;"")
@@ -107,9 +107,9 @@ S'il n'y a pas assez de mémoire pour retourner l’image, l'erreur –108 est g
 
 ## Voir aussi 
 
-[GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
-[PICTURE LIBRARY LIST](picture-library-list.md)  
-[REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
+[GET PICTURE FROM LIBRARY](../commands/get-picture-from-library)  
+[PICTURE LIBRARY LIST](../commands/picture-library-list)  
+[REMOVE PICTURE FROM LIBRARY](../commands/remove-picture-from-library)  
 
 ## Propriétés
 

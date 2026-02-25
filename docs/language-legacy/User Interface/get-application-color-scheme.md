@@ -1,4 +1,4 @@
----
+﻿---
 id: get-application-color-scheme
 title: Get Application color scheme
 slug: /commands/get-application-color-scheme
@@ -34,13 +34,13 @@ displayed_sidebar: docs
 
 The actual color scheme is defined by:
 
-* a call to the [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) command;
-* if [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) was not called or called with "inherited" parameter value, the [color scheme Settings](../../settings/interface.md#color-scheme) (host database Settings in case of a component);
+* a call to the [SET APPLICATION COLOR SCHEME](../commands/set-application-color-scheme) command;
+* if [SET APPLICATION COLOR SCHEME](../commands/set-application-color-scheme) was not called or called with "inherited" parameter value, the [color scheme Settings](../../settings/interface.md#color-scheme) (host database Settings in case of a component);
 * if settings set to "inherited", the OS user preferences.
 
 The *\** parameter is useful when the command is called from a component: when it is passed, the command returns the color scheme of the host database. 
 
-Please refer to the [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) command description for details about color scheme names. 
+Please refer to the [SET APPLICATION COLOR SCHEME](../commands/set-application-color-scheme) command description for details about color scheme names. 
 
 ## Example 
 
@@ -53,8 +53,8 @@ Please refer to the [SET APPLICATION COLOR SCHEME](set-application-color-scheme.
 
 ## See also 
 
-[FORM Get color scheme](form-get-color-scheme.md)  
-[SET APPLICATION COLOR SCHEME](set-application-color-scheme.md)  
+[FORM Get color scheme](../commands/form-get-color-scheme)  
+[SET APPLICATION COLOR SCHEME](../commands/set-application-color-scheme)  
 
 ## Properties
 

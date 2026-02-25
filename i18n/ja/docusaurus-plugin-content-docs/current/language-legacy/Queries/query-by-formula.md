@@ -1,4 +1,4 @@
----
+﻿---
 id: query-by-formula
 title: QUERY BY FORMULA
 slug: /commands/query-by-formula
@@ -31,11 +31,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUERY BY FORMULA.Summary-->**QUERY BY FORMULA**は*aTable*からレコードを検索します。<!-- END REF-->**QUERY BY FORMULA**は、カレントプロセスの*aTable*のカレントセレクションを変更し、セレクションの先頭のレコ－ドをカレントレコ－ドにします。
 
-**QUERY BY FORMULA**と[QUERY SELECTION BY FORMULA](query-selection-by-formula.md)は、全く同じように機能しますが、**QUERY BY FORMULA**がテーブルのすべてのレコードを検索対象とするのに対して、[QUERY SELECTION BY FORMULA](query-selection-by-formula.md)コマンドはカレントセレクションのレコードのみを検索対象とします。
+**QUERY BY FORMULA**と[QUERY SELECTION BY FORMULA](../commands/query-selection-by-formula)は、全く同じように機能しますが、**QUERY BY FORMULA**がテーブルのすべてのレコードを検索対象とするのに対して、[QUERY SELECTION BY FORMULA](../commands/query-selection-by-formula)コマンドはカレントセレクションのレコードのみを検索対象とします。
 
 両方のコマンドは、テーブルまたはセレクションの各レコードに対して*queryFormula*を適用します。*queryFormula*はTRUEかFALSEのいずれかの状態に評価されるブール式です。*queryFormula*でTRUEに評価されたレコードを新しいセレクションに追加します。
 
-*queryFormula*は、フィールドと値とを比較するだけの単純なものから、計算、またはリレート先テーブルの情報を評価するような複雑なものまで処理します。*queryFormula*には4Dの関数 (コマンド) や開発者が作成した関数 (メソッド) や式 (フォーミュラ) を使用することができます。文字フィールドやテキストフィールドに対して作業を実行する場合は、*queryFormula*にワイルドカード (@) を使用することもできます。詳しい情報は[QUERY](query.md)コマンドの例を参照してください。
+*queryFormula*は、フィールドと値とを比較するだけの単純なものから、計算、またはリレート先テーブルの情報を評価するような複雑なものまで処理します。*queryFormula*には4Dの関数 (コマンド) や開発者が作成した関数 (メソッド) や式 (フォーミュラ) を使用することができます。文字フィールドやテキストフィールドに対して作業を実行する場合は、*queryFormula*にワイルドカード (@) を使用することもできます。詳しい情報は[QUERY](../commands/query)コマンドの例を参照してください。
 
 **警告:** 引数($1...$n) は*queryFormula* ではサポートされていません。
 
@@ -43,13 +43,13 @@ displayed_sidebar: docs
 
 検索が完了すると、新しいセレクションの最初のレコードがディスクからロードされカレントレコードになります。
 
-これらのコマンドは最適化され、特にインデックスを利用します。クエリのタイプが許す場合、これらのコマンドは[QUERY](query.md)コマンドと同じのクエリを実行します。例えば
+これらのコマンドは最適化され、特にインデックスを利用します。クエリのタイプが許す場合、これらのコマンドは[QUERY](../commands/query)コマンドと同じのクエリを実行します。例えば
 
 **QUERY BY FORMULA**(\[mytable\]; \[mytable\]myfield=value)
 
 は可能であればインデックスを使用し、
 
-[QUERY](query.md)(\[mytable\]; \[mytable\]myfield=value)
+[QUERY](../commands/query)(\[mytable\]; \[mytable\]myfield=value)
 
 と同じに実行されます。4Dは最適化可能な部分を先に検索し、他の残りのクエリと合算することで、部分的に最適化できないクエリも最適化します。例えば、
 
@@ -75,11 +75,11 @@ displayed_sidebar: docs
 * フォーミュラが *{ フィールド ; 比較演算子; 値}* の形式の要素に分解できない場合
 * 同じテーブルの2つのフィールドが比較されている場合
 
-> ****互換性に関する注意:** v11 以前のバージョンから返還されたデータベースとの互換性のため、JOINメカニズムを無効にできます。これには[SET DATABASE PARAMETER](set-database-parameter.md)コマンドのセレクターを使用します。
+> ****互換性に関する注意:** v11 以前のバージョンから返還されたデータベースとの互換性のため、JOINメカニズムを無効にできます。これには[SET DATABASE PARAMETER](../commands/set-database-parameter)コマンドのセレクターを使用します。
 
 **4D Server:** このコマンドはサーバ上で実行され、実行が最適化されるようになりました。*queryFormula*内で直接変数が呼ばれているとき、クライアントマシンの変数値を使用してクエリを計算します。例えば**QUERY BY FORMULA**(\[mytable\];\[mytable\]myfield=myvariable)というステートメントはサーバ上で実行されますが、*myvariable*変数の内容はクライアントマシンのものが使用されます。
 
-**互換性に関する注意:** 4D Server v11までは、このコマンドはクライアントマシン上で実行されていました。後方互換性のために、この振る舞いは変換されたデータベースでは維持されています。しかしながら、互換性プロパティ、あるいは[SET DATABASE PARAMETER](set-database-parameter.md) コマンドのセレクターを使用することで、変換されたデータベースでもサーバー側での実行が有効化されます。
+**互換性に関する注意:** 4D Server v11までは、このコマンドはクライアントマシン上で実行されていました。後方互換性のために、この振る舞いは変換されたデータベースでは維持されています。しかしながら、互換性プロパティ、あるいは[SET DATABASE PARAMETER](../commands/set-database-parameter) コマンドのセレクターを使用することで、変換されたデータベースでもサーバー側での実行が有効化されます。
 
 ## 例題 1 
 
@@ -107,10 +107,10 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[QUERY](query.md)  
-[QUERY BY SQL](query-by-sql.md)  
-[QUERY SELECTION](query-selection.md)  
-[QUERY SELECTION BY FORMULA](query-selection-by-formula.md)  
+[QUERY](../commands/query)  
+[QUERY BY SQL](../commands/query-by-sql)  
+[QUERY SELECTION](../commands/query-selection)  
+[QUERY SELECTION BY FORMULA](../commands/query-selection-by-formula)  
 
 ## プロパティ
 

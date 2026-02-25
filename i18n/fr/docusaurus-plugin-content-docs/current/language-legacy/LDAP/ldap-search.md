@@ -1,4 +1,4 @@
----
+﻿---
 id: ldap-search
 title: LDAP Search
 slug: /commands/ldap-search
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.LDAP Search.Summary-->La commande **LDAP Search** recherche sur le serveur LDAP cible la première occurrence correspondant aux critères définis.<!-- END REF--> Cette commande doit être exécutée dans le contexte d'une connexion serveur LDAP ouverte par la commande [LDAP LOGIN](ldap-login.md) dans le process courant ; sinon une erreur 1003 est retournée.
+<!--REF #_command_.LDAP Search.Summary-->La commande **LDAP Search** recherche sur le serveur LDAP cible la première occurrence correspondant aux critères définis.<!-- END REF--> Cette commande doit être exécutée dans le contexte d'une connexion serveur LDAP ouverte par la commande [LDAP LOGIN](../commands/ldap-login) dans le process courant ; sinon une erreur 1003 est retournée.
 
 Dans *dnRootEntry*, passez le *Distinguished Name* de l'élément racine du serveur LDAP ; la recherche démarrera à partir de cet élément.
 
@@ -94,7 +94,7 @@ Vous voulez obtenir un tableau de toutes les entrées trouvées pour l'attribut 
 ## Voir aussi 
 
 *LDAP*  
-[LDAP SEARCH ALL](ldap-search-all.md)  
+[LDAP SEARCH ALL](../commands/ldap-search-all)  
 
 ## Propriétés
 

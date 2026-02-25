@@ -1,4 +1,4 @@
----
+﻿---
 id: resume-transaction
 title: RESUME TRANSACTION
 slug: /commands/resume-transaction
@@ -32,8 +32,8 @@ Para saber mais, consulte *Suspender as transações*.
 
 ## Ver também 
 
-[Active transaction](active-transaction.md)  
-[SUSPEND TRANSACTION](suspend-transaction.md)  
+[Active transaction](../commands/active-transaction)  
+[SUSPEND TRANSACTION](../commands/suspend-transaction)  
 *Suspender as transações*  
 
 ## Propriedades

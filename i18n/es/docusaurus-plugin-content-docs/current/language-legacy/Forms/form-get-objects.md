@@ -1,4 +1,4 @@
----
+﻿---
 id: form-get-objects
 title: FORM GET OBJECTS
 slug: /commands/form-get-objects
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM GET OBJECTS.Summary-->El comando FORM GET OBJECTS devuelve en forma de array(s) la lista de todos los objetos presentes en el formulario actual.<!-- END REF--> Esta lista puede estar restringida a la página actual del formulario y puede excluir los objetos de los formularios heredados. El comando puede ser utilizado con los formularios de entrada y de salida.
 
-**Nota:** el comando no incluye partes del list box. Para analizar un formulario para los objetos del  list box, debe utilizarse [LISTBOX GET OBJECTS](listbox-get-objects.md) o [LISTBOX GET ARRAYS](listbox-get-arrays.md) (ver el ejemplo a continuación para una combinación de [FORM GET OBJECTS](form-get-objects.md), [OBJECT Get type](object-get-type.md) y [LISTBOX GET OBJECTS](listbox-get-objects.md)).
+**Nota:** el comando no incluye partes del list box. Para analizar un formulario para los objetos del  list box, debe utilizarse [LISTBOX GET OBJECTS](../commands/listbox-get-objects) o [LISTBOX GET ARRAYS](../commands/listbox-get-arrays) (ver el ejemplo a continuación para una combinación de [FORM GET OBJECTS](../commands/form-get-objects), [OBJECT Get type](../commands/object-get-type) y [LISTBOX GET OBJECTS](../commands/listbox-get-objects)).
 
 Si un array pasado como parámetro no ha sido declarado previamente, el comando lo crea y dimensiona automáticamente. Sin embargo, pensando en la compilación de la aplicación, le recomendamos declarar explícitamente cada array. 
 
@@ -135,7 +135,7 @@ Usted quiere cargar un formulario y obtener la lista de todos los objetos de los
 
 ## Ver también 
 
-[FORM GET PROPERTIES](form-get-properties.md)  
+[FORM GET PROPERTIES](../commands/form-get-properties)  
 *Objetos (Formularios)*  
 *Objetos de formulario (Acceso)*  
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-drop-column
 title: QR Get drop column
 slug: /commands/qr-get-drop-column
@@ -37,7 +37,7 @@ Se passa um número de *area* inválido, se gera o erro -9850.
 
 ## Ver também 
 
-[QR DELETE COLUMN](qr-delete-column.md)  
+[QR DELETE COLUMN](../commands/qr-delete-column)  
 
 ## Propriedades
 

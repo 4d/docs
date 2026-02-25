@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-three-states-checkbox
 title: OBJECT Get three states checkbox
 slug: /commands/object-get-three-states-checkbox
@@ -31,11 +31,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get three states checkbox.Summary-->The **OBJECT Get three states checkbox** command returns the current state of the "Three-States" property for the checkbox(es) designated by the *object* and *\** parameters.<!-- END REF--> 
 
-You can set the "Three-States" property either using the Property List, or using the [OBJECT SET THREE STATES CHECKBOX](object-set-three-states-checkbox.md) command if it was called in the current process.
+You can set the "Three-States" property either using the Property List, or using the [OBJECT SET THREE STATES CHECKBOX](../commands/object-set-three-states-checkbox) command if it was called in the current process.
 
 ## See also 
 
-[OBJECT SET THREE STATES CHECKBOX](object-set-three-states-checkbox.md)  
+[OBJECT SET THREE STATES CHECKBOX](../commands/object-set-three-states-checkbox)  
 
 ## Properties
 

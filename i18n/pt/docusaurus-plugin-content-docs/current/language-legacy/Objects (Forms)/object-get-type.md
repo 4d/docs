@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-type
 title: OBJECT Get type
 slug: /commands/object-get-type
@@ -106,7 +106,7 @@ Você quer carregar um formulário e obter a lista de todos os objetos dos list 
 ## Ver também 
 
 [FORM LOAD](../commands/form-load)  
-[LISTBOX GET OBJECTS](listbox-get-objects.md)  
+[LISTBOX GET OBJECTS](../commands/listbox-get-objects)  
 
 ## Propriedades
 

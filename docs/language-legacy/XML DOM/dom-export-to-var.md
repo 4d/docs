@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-export-to-var
 title: DOM EXPORT TO VAR
 slug: /commands/dom-export-to-var
@@ -34,7 +34,7 @@ Pass the root element reference to export in *elementRef*.
 
 Pass the name of the variable that must contain the XML tree in *vXmlVar*. This variable must either be a Text or BLOB type. You can select the type depending on what you plan on doing next or the size that the tree can reach (remember that when not in Unicode mode, Text type variables are limited to 32 K of text, whereas in Unicode mode, this limit is 2 GB). 
 
-Keep in mind that if you use a Text variable to store *elementRef* when not in Unicode mode, , it will be encoded using the “current” Mac character set (i.e. Mac Roman on most Western systems). This means that the text returned will lose its original encoding (encoding="xxx"). In this case, the *vVarXml* variable allows you to view or store the code but NOT to generate a valid XML document (using the [SEND PACKET](send-packet.md) command for example). 
+Keep in mind that if you use a Text variable to store *elementRef* when not in Unicode mode, , it will be encoded using the “current” Mac character set (i.e. Mac Roman on most Western systems). This means that the text returned will lose its original encoding (encoding="xxx"). In this case, the *vVarXml* variable allows you to view or store the code but NOT to generate a valid XML document (using the [SEND PACKET](../commands/send-packet) command for example). 
 
 In Unicode mode, the original encoding is kept in the variable.
 
@@ -46,9 +46,9 @@ In XML, line breaks are not significant regardless of whether they are within or
 
 By default, XML files are written without BOM (Byte order mask). 
 
-You can control the XML line ending and BOM management using the [XML SET OPTIONS](xml-set-options.md) command. 
+You can control the XML line ending and BOM management using the [XML SET OPTIONS](../commands/xml-set-options) command. 
 
-**Compatibility Note:** In databases/projects created with 4D versions up to 19.x, by default 4D uses CR as end-of-line characters on macOS and a BOM. To enable the new default settings, check compatibility settings (see *Compatibility page*) or use the [XML SET OPTIONS](xml-set-options.md) command. 
+**Compatibility Note:** In databases/projects created with 4D versions up to 19.x, by default 4D uses CR as end-of-line characters on macOS and a BOM. To enable the new default settings, check compatibility settings (see *Compatibility page*) or use the [XML SET OPTIONS](../commands/xml-set-options) command. 
 
 ## Example 
 
@@ -65,8 +65,8 @@ If the command has been executed correctly, the system variable OK is set to 1\.
 
 ## See also 
 
-[DOM EXPORT TO FILE](dom-export-to-file.md)  
-[SVG EXPORT TO PICTURE](svg-export-to-picture.md)  
+[DOM EXPORT TO FILE](../commands/dom-export-to-file)  
+[SVG EXPORT TO PICTURE](../commands/svg-export-to-picture)  
 
 ## Properties
 

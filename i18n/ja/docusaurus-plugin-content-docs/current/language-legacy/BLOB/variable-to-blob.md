@@ -1,4 +1,4 @@
----
+﻿---
 id: variable-to-blob
 title: VARIABLE TO BLOB
 slug: /commands/variable-to-blob
@@ -47,18 +47,18 @@ displayed_sidebar: docs
 * ポインタ
 * ポインタ配列
 以下の点に注意して下さい:
-* 階層リスト ([ListRef](# "階層リストへの参照")) への参照である倍長整数の変数を保存した場合には、**VARIABLE TO BLOB**コマンドは階層リストではなく倍長整数変数を格納します。BLOB内に階層リストを格納、またはBLOBから階層リストを取り出すには、[LIST TO BLOB](list-to-blob.md) と [BLOB to list](blob-to-list.md) を使用します。
+* 階層リスト ([ListRef](# "階層リストへの参照")) への参照である倍長整数の変数を保存した場合には、**VARIABLE TO BLOB**コマンドは階層リストではなく倍長整数変数を格納します。BLOB内に階層リストを格納、またはBLOBから階層リストを取り出すには、[LIST TO BLOB](../commands/list-to-blob) と [BLOB to list](../commands/blob-to-list) を使用します。
 * オブジェクトまたはコレクションが*variable*引数として渡された場合、コマンドはそのコピーを（参照ではなく）BLOBに格納する。。オブジェクトまたはコレクションがポインターを含んでいた場合、ポインター自身ではなくそれが参照していた値が保存されます。
 
-ただし、階層リスト ([ListRef](# "階層リストへの参照")) への参照である倍長整数の変数を格納した場合には、**VARIABLE TO BLOB**コマンドは階層リストではなく倍長整数変数を格納します。BLOB内に階層リストを格納、またはBLOBから階層リストを取り出すには、[LIST TO BLOB](list-to-blob.md) と [BLOB to list](blob-to-list.md) を使用します。 
+ただし、階層リスト ([ListRef](# "階層リストへの参照")) への参照である倍長整数の変数を格納した場合には、**VARIABLE TO BLOB**コマンドは階層リストではなく倍長整数変数を格納します。BLOB内に階層リストを格納、またはBLOBから階層リストを取り出すには、[LIST TO BLOB](../commands/list-to-blob) と [BLOB to list](../commands/blob-to-list) を使用します。 
 
-**警告:** 変数を格納するためにBLOBを使用したら、格納されたBLOBの内容を読み出すには[BLOB TO VARIABLE](blob-to-variable.md) コマンドを使用しなければなりません。変数は4D内部形式を使用してBLOBに格納されるためです。
+**警告:** 変数を格納するためにBLOBを使用したら、格納されたBLOBの内容を読み出すには[BLOB TO VARIABLE](../commands/blob-to-variable) コマンドを使用しなければなりません。変数は4D内部形式を使用してBLOBに格納されるためです。
 
 呼び出し後、変数が正常に格納された場合には、システム変数OKは1に設定されます。変数を格納するために必要なメモリがない等の理由で処理が実行できなかった場合には、システム変数OKは0に設定されます。
 
 **プラットフォーム独立互換性に関する注意**
 
-**VARIABLE TO BLOB** と [BLOB TO VARIABLE](blob-to-variable.md) は4Dの内部フォーマットを使用してBLOBに格納された変数を取り扱います。この利点として、これら二つのコマンドを使用する際、プラットフォーム間の バイトスワップを気にする必要はありません。言い換えればこれらのコマンドを使用してWindowsで作成されたBLOBを Mac OS で使用す る、あるいはその逆を行うことができます。
+**VARIABLE TO BLOB** と [BLOB TO VARIABLE](../commands/blob-to-variable) は4Dの内部フォーマットを使用してBLOBに格納された変数を取り扱います。この利点として、これら二つのコマンドを使用する際、プラットフォーム間の バイトスワップを気にする必要はありません。言い換えればこれらのコマンドを使用してWindowsで作成されたBLOBを Mac OS で使用す る、あるいはその逆を行うことができます。
 
 ### 注 
 
@@ -141,9 +141,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[BLOB to list](blob-to-list.md)  
-[BLOB TO VARIABLE](blob-to-variable.md)  
-[LIST TO BLOB](list-to-blob.md)  
+[BLOB to list](../commands/blob-to-list)  
+[BLOB TO VARIABLE](../commands/blob-to-variable)  
+[LIST TO BLOB](../commands/list-to-blob)  
 
 ## プロパティ
 

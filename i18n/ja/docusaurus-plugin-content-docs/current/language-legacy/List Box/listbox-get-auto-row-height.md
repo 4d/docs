@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-auto-row-height
 title: LISTBOX Get auto row height
 slug: /commands/listbox-get-auto-row-height
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX Get auto row height.Summary-->**LISTBOX Get auto row height** コマンドは、*object* 引数および *\** 引数を使用して指定したリストボックスオブジェクトの行の高さのカレンとの最小値あるいは最大値を返します。<!-- END REF-->
 
-行の高さのカレントの最小値あるいは最大値は、プロパティリストを使用(*自動行高* 参照)して、あるいはカレントプロセスにおいて[LISTBOX SET AUTO ROW HEIGHT](listbox-set-auto-row-height.md) コマンドを使用することで設定可能です。
+行の高さのカレントの最小値あるいは最大値は、プロパティリストを使用(*自動行高* 参照)して、あるいはカレントプロセスにおいて[LISTBOX SET AUTO ROW HEIGHT](../commands/listbox-set-auto-row-height) コマンドを使用することで設定可能です。
 
 **注**: このコマンドは"コレクションまたはエンティティセレクション型"および"配列型"のリストボックスにおいてのみ利用可能です。
 
@@ -65,9 +65,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[LISTBOX Get row height](listbox-get-row-height.md)  
-[LISTBOX Get rows height](listbox-get-rows-height.md)  
-[LISTBOX SET AUTO ROW HEIGHT](listbox-set-auto-row-height.md)  
+[LISTBOX Get row height](../commands/listbox-get-row-height)  
+[LISTBOX Get rows height](../commands/listbox-get-rows-height)  
+[LISTBOX SET AUTO ROW HEIGHT](../commands/listbox-set-auto-row-height)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: set-assert-enabled
 title: SET ASSERT ENABLED
 slug: /commands/set-assert-enabled
@@ -28,13 +28,13 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.SET ASSERT ENABLED.Summary-->**SET ASSERT ENABLED** コマンドを使用してアプリケーションの4Dコードに挿入されたアサーションを無効にしたり、再度有効にしたりできます。<!-- END REF-->アサーションに関する詳細は[ASSERT](assert.md)コマンドの説明を参照してください。
+<!--REF #_command_.SET ASSERT ENABLED.Summary-->**SET ASSERT ENABLED** コマンドを使用してアプリケーションの4Dコードに挿入されたアサーションを無効にしたり、再度有効にしたりできます。<!-- END REF-->アサーションに関する詳細は[ASSERT](../commands/assert)コマンドの説明を参照してください。
 
-デフォルトで、プログラムに追加されたアサーションは、インタープリタモードでもコンパイル済みモードでも有効です。このコマンドは、ときにアサーションの評価に実行時間のコストが必要であったり、アプリケーションのエンドユーザからアサーションを隠ぺいしたいなどの理由で、アサーションを無効にしたいときに使用できます。典型的には、**SET ASSERT ENABLED**コマンドを[On Startupデータベースメソッド](on-startup-database-method.md)で使用して、 アプリケーションがテストモードや運用モードかによって、アサーションを有効にしたり無効にしたりします。
+デフォルトで、プログラムに追加されたアサーションは、インタープリタモードでもコンパイル済みモードでも有効です。このコマンドは、ときにアサーションの評価に実行時間のコストが必要であったり、アプリケーションのエンドユーザからアサーションを隠ぺいしたいなどの理由で、アサーションを無効にしたいときに使用できます。典型的には、**SET ASSERT ENABLED**コマンドを[On Startupデータベースメソッド](../commands/on-startup-database-method)で使用して、 アプリケーションがテストモードや運用モードかによって、アサーションを有効にしたり無効にしたりします。
 
 デフォルトで**SET ASSERT ENABLED**コマンドはアプリケーションのすべてのプロセスに効果を及ぼします。コマンドの効果をカレントプロセスに限定するには、 *\** 引数を渡します。
 
-アサーションが無効にされていると、[ASSERT](assert.md)コマンドに渡された式は評価されないことに留意してください。[ASSERT](assert.md)を呼び出すコード行は動作においてもパフォーマンスにおいても、 アプリケーションの処理に一切影響を及ぼしません。
+アサーションが無効にされていると、[ASSERT](../commands/assert)コマンドに渡された式は評価されないことに留意してください。[ASSERT](../commands/assert)を呼び出すコード行は動作においてもパフォーマンスにおいても、 アプリケーションの処理に一切影響を及ぼしません。
 
 ## 例題 
 
@@ -47,9 +47,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ASSERT](assert.md)  
-[Asserted](asserted.md)  
-[Get assert enabled](get-assert-enabled.md)  
+[ASSERT](../commands/assert)  
+[Asserted](../commands/asserted)  
+[Get assert enabled](../commands/get-assert-enabled)  
 
 ## プロパティ
 

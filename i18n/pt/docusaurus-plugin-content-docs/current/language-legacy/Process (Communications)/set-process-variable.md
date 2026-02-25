@@ -1,4 +1,4 @@
----
+﻿---
 id: set-process-variable
 title: SET PROCESS VARIABLE
 slug: /commands/set-process-variable
@@ -104,10 +104,10 @@ Este exemplo escreve a instância das variáveis *v1*, *v2* e *v3* utilizando a 
 
 ## Ver também 
 
-[GET PROCESS VARIABLE](get-process-variable.md)  
-[POST OUTSIDE CALL](post-outside-call.md)  
+[GET PROCESS VARIABLE](../commands/get-process-variable)  
+[POST OUTSIDE CALL](../commands/post-outside-call)  
 *Processos*  
-[VARIABLE TO VARIABLE](variable-to-variable.md)  
+[VARIABLE TO VARIABLE](../commands/variable-to-variable)  
 
 ## Propriedades
 

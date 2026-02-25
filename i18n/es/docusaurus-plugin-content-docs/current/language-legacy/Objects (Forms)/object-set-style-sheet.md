@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-style-sheet
 title: OBJECT SET STYLE SHEET
 slug: /commands/object-set-style-sheet
@@ -36,7 +36,7 @@ Al pasar el parámetro opcional *\** se indica que el parámetro *objeto* es un 
 
 Pase en el parámetro *nomHojaEstilo*, el nombre de la hoja de estilo a aplicar al *objeto*. También puede pasar:
 
-* el nombre de una hoja de estilos existente (si la hoja de estilo no existe, se devuelve un error, que puede interceptar utilizando un método instalado por el comando [ON ERR CALL](on-err-call.md)).
+* el nombre de una hoja de estilos existente (si la hoja de estilo no existe, se devuelve un error, que puede interceptar utilizando un método instalado por el comando [ON ERR CALL](../commands/on-err-call)).
 * una cadena vacía ("") para no aplicar la hoja de estilo al *objeto*, o
 * una de las siguiente constantes del tema "*Estilos de fuente*" para aplicar una hoja de estilo automática:  
 
@@ -48,7 +48,7 @@ Pase en el parámetro *nomHojaEstilo*, el nombre de la hoja de estilo a aplicar 
 
 Si una hoja de estilo ya se había asociado al objeto en modo Diseño, la llamada de este comando la reemplaza para el proceso actual.
 
-Si durante la sesión, utiliza los comandos [ST SET ATTRIBUTES](st-set-attributes.md), [ST SET TEXT](st-set-text.md), [OBJECT SET FONT](object-set-font.md) o [OBJECT SET FONT SIZE](object-set-font-size.md) en el *objeto* con el fin de modificar su fuente o el tamaño de fuente, la referencia a la hoja de estilos se borra automáticamente del objeto, incluso si asigna los mismos atributos que los de la hoja de estilos. Sin embargo, si se modifica el estilo (negrita, cursiva, etc.), por ejemplo con los comandos [ST SET ATTRIBUTES](st-set-attributes.md) o [OBJECT SET FONT STYLE](object-set-font-style.md), se añaden estas nuevas propiedades a la hoja de estilo por la duración de la sesión.
+Si durante la sesión, utiliza los comandos [ST SET ATTRIBUTES](../commands/st-set-attributes), [ST SET TEXT](../commands/st-set-text), [OBJECT SET FONT](../commands/object-set-font) o [OBJECT SET FONT SIZE](../commands/object-set-font-size) en el *objeto* con el fin de modificar su fuente o el tamaño de fuente, la referencia a la hoja de estilos se borra automáticamente del objeto, incluso si asigna los mismos atributos que los de la hoja de estilos. Sin embargo, si se modifica el estilo (negrita, cursiva, etc.), por ejemplo con los comandos [ST SET ATTRIBUTES](../commands/st-set-attributes) o [OBJECT SET FONT STYLE](../commands/object-set-font-style), se añaden estas nuevas propiedades a la hoja de estilo por la duración de la sesión.
 
 ### Nota de compatibilidad 
 
@@ -58,9 +58,9 @@ En la **arquitectura proyecto**, este comando sólo soporta las tres hojas de es
 ## Ver también 
 
 *Estilos de fuente*  
-[GET STYLE SHEET INFO](get-style-sheet-info.md)  
-[LIST OF STYLE SHEETS](list-of-style-sheets.md)  
-[OBJECT Get style sheet](object-get-style-sheet.md)  
+[GET STYLE SHEET INFO](../commands/get-style-sheet-info)  
+[LIST OF STYLE SHEETS](../commands/list-of-style-sheets)  
+[OBJECT Get style sheet](../commands/object-get-style-sheet)  
 
 ## Propiedades
 

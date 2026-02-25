@@ -1,4 +1,4 @@
----
+﻿---
 id: compact-data-file
 title: Compact data file
 slug: /commands/compact-data-file
@@ -58,7 +58,7 @@ El comando devuelve la ruta de acceso completa de la carpeta creada efectivament
 | Do not create log file  | Entero largo | 16384  | Por lo general, este comando crea un archivo de historial en formato XML (consulte el final de la descripción del comando). Con esta opción, no se creará un archivo de historial.                                                                                                                                                                                                                                                                                                               |  
 | Timestamp log file name | Entero largo | 262144 | Cuando esta opción se pasa, el nombre del archivo de historial generado contendrá la fecha y hora de su creación; como resultado, no reemplazará cualquier archivo de historial generado anteriormente. Por defecto, si no se pasa esta opción, los nombres de archivos de historial no son marcados con la fecha y hora y cada nuevo archivo generado sustituye al anterior.                                                                                                                    |  
 | Update records          | Entero largo | 65536  | Fuerza la rescritura de todos los registros en función de la definición actual de los campos en la estructura                                                                                                                                                                                                                                                                                                                                                                                    |
-* El parámetro *metodo* se utiliza para designar un método de retrollamada que será llamado regularmente durante la compactación si se pasa la opción Create process. De lo contrario, el método de retrollamada nunca será llamado. Para mayor información sobre este método, por favor consulte la descripción del comando [VERIFY DATA FILE](verify-data-file.md).
+* El parámetro *metodo* se utiliza para designar un método de retrollamada que será llamado regularmente durante la compactación si se pasa la opción Create process. De lo contrario, el método de retrollamada nunca será llamado. Para mayor información sobre este método, por favor consulte la descripción del comando [VERIFY DATA FILE](../commands/verify-data-file).
 
 Por defecto, el comando **Compact data file** crea un archivo de historial en formato XML (si no ha pasado la opción Do not create log file, ver el parámetro *opciones*). Su nombre está basado en el archivo de estructura de la base actual y está ubicado en la carpeta **Logs** de esta base. Por ejemplo, para un archivo de estructura llamado “myDB.4db,” el archivo de historial será llamado “myDB\_Compact\_Log.xml.”
 
@@ -82,8 +82,8 @@ Si la operación de compactación se lleva a cabo correctamente, la variable sis
 
 ## Ver también 
 
-[Table fragmentation](table-fragmentation.md)  
-[VERIFY DATA FILE](verify-data-file.md)  
+[Table fragmentation](../commands/table-fragmentation)  
+[VERIFY DATA FILE](../commands/verify-data-file)  
 
 ## Propiedades
 

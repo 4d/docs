@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-report-kind
 title: QR Get report kind
 slug: /commands/qr-get-report-kind
@@ -44,7 +44,7 @@ If you pass an invalid *area* number, the error -9850 will be generated.
 
 ## See also 
 
-[QR SET REPORT KIND](qr-set-report-kind.md)  
+[QR SET REPORT KIND](../commands/qr-set-report-kind)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: query-with-array
 title: QUERY WITH ARRAY
 slug: /commands/query-with-array
@@ -51,7 +51,7 @@ El siguiente ejemplo le permite recuperar los registros de clientes franceses y 
 
 ## Ver también 
 
-[QUERY SELECTION WITH ARRAY](query-selection-with-array.md)  
+[QUERY SELECTION WITH ARRAY](../commands/query-selection-with-array)  
 
 ## Propiedades
 

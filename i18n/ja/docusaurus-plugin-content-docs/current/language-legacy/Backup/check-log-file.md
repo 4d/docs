@@ -1,4 +1,4 @@
----
+﻿---
 id: check-log-file
 title: CHECK LOG FILE
 slug: /commands/check-log-file
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[RESTORE](restore.md)  
+[RESTORE](../commands/restore)  
 *バックアップマネージャエラー (1401 -> 1421)*  
 
 ## プロパティ

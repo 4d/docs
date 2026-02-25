@@ -1,4 +1,4 @@
----
+﻿---
 id: get-picture-metadata
 title: GET PICTURE METADATA
 slug: /commands/get-picture-metadata
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.GET PICTURE METADATA.Summary-->**GET PICTURE METADATA**コマンドを使用して *picture* で指定したピクチャ (4Dのピクチャフィールドや変数) 内のメタデータ (またはメタタグ) の内容を読みだすことができます。<!-- END REF--> メタデータに関する詳細は[SET PICTURE METADATA](set-picture-metadata.md)コマンドの説明を参照してください。
+<!--REF #_command_.GET PICTURE METADATA.Summary-->**GET PICTURE METADATA**コマンドを使用して *picture* で指定したピクチャ (4Dのピクチャフィールドや変数) 内のメタデータ (またはメタタグ) の内容を読みだすことができます。<!-- END REF--> メタデータに関する詳細は[SET PICTURE METADATA](../commands/set-picture-metadata)コマンドの説明を参照してください。
 
 *metaName*引数には取り出すメタデータのタイプを指定する文字列を渡します。以下を渡すことができます:
 
@@ -108,10 +108,10 @@ DOMツリーストラクチャを使用する
 
 ## 参照 
 
-[GET PICTURE KEYWORDS](get-picture-keywords.md)  
+[GET PICTURE KEYWORDS](../commands/get-picture-keywords)  
 *Picture Metadata Names*  
 *Picture Metadata Values*  
-[SET PICTURE METADATA](set-picture-metadata.md)  
+[SET PICTURE METADATA](../commands/set-picture-metadata)  
 
 ## プロパティ
 

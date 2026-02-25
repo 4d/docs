@@ -1,4 +1,4 @@
----
+﻿---
 id: pause-indexes
 title: PAUSE INDEXES
 slug: /commands/pause-indexes
@@ -33,15 +33,15 @@ Os índices não se eliminam fisicamente dos dados (arquivo .4DIndx) ou da estru
   
 Este comando é especialmente útil quando é importado ou modificado grandes quantidades de dados em tabelas que têm vários índices. Como 4D deve atualizar os índices cada vez que um registro é validado, a operação poderia tomar uma quantidade considerável de tempo. Desativar os índices de antemão permite acelerar significativamente a operação.  
   
-Para reativar os índices depois de terminada a operação, pode chamar ao comando [RESUME INDEXES](resume-indexes.md) para *aTabela*.  
+Para reativar os índices depois de terminada a operação, pode chamar ao comando [RESUME INDEXES](../commands/resume-indexes) para *aTabela*.  
   
-**Nota*:*** Pode obter um resultado similar utilizando os comandos [CREATE INDEX](create-index.md) e [DELETE INDEX](delete-index.md), mas com diferenças:
+**Nota*:*** Pode obter um resultado similar utilizando os comandos [CREATE INDEX](../commands/create-index) e [DELETE INDEX](../commands/delete-index), mas com diferenças:
 
-* é necessário chamar a [DELETE INDEX](delete-index.md) / [CREATE INDEX](create-index.md) para cada índice em*Tabela*.
-* chamar aos comandos [DELETE INDEX](delete-index.md) / [CREATE INDEX](create-index.md) muda o número interno do índice, o que não ocorre com **PAUSE INDEXES** / [RESUME INDEXES](resume-indexes.md). Mudar o número de índice gerará uma reindexação automática dos dados se o conjunto de dados mudar.
+* é necessário chamar a [DELETE INDEX](../commands/delete-index) / [CREATE INDEX](../commands/create-index) para cada índice em*Tabela*.
+* chamar aos comandos [DELETE INDEX](../commands/delete-index) / [CREATE INDEX](../commands/create-index) muda o número interno do índice, o que não ocorre com **PAUSE INDEXES** / [RESUME INDEXES](../commands/resume-indexes). Mudar o número de índice gerará uma reindexação automática dos dados se o conjunto de dados mudar.
 
   
-É chamado o comando **PAUSE INDEXES** para uma tabela e logo sai da base sem ter chamado ao comando [RESUME INDEXES](resume-indexes.md) para esta tabela, todos os índices da tabela são reconstruídos automaticamente quando reiniciada a base.  
+É chamado o comando **PAUSE INDEXES** para uma tabela e logo sai da base sem ter chamado ao comando [RESUME INDEXES](../commands/resume-indexes) para esta tabela, todos os índices da tabela são reconstruídos automaticamente quando reiniciada a base.  
   
 **Nota**: Este comando não pode ser executado desde um 4D remoto.
 
@@ -57,8 +57,8 @@ Exemplo de método de importação massivo de dados:
 
 ## Ver também 
 
-[DELETE INDEX](delete-index.md)  
-[RESUME INDEXES](resume-indexes.md)  
+[DELETE INDEX](../commands/delete-index)  
+[RESUME INDEXES](../commands/resume-indexes)  
 
 ## Propriedades
 

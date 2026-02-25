@@ -1,4 +1,4 @@
----
+﻿---
 id: blob-to-users
 title: BLOB TO USERS
 slug: /commands/blob-to-users
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.BLOB TO USERS.Summary-->BLOB TO USERS コマンドは、データベース内で管理者によって作成されたユーザーアカウントとグループを *users* BLOBに格納されたアカウントとグループで上書きします。<!-- END REF--> *users* BLOBは暗号化されており、[USERS TO BLOB](users-to-blob.md) コマンドを使用して作成されていなければなりません。
+<!--REF #_command_.BLOB TO USERS.Summary-->BLOB TO USERS コマンドは、データベース内で管理者によって作成されたユーザーアカウントとグループを *users* BLOBに格納されたアカウントとグループで上書きします。<!-- END REF--> *users* BLOBは暗号化されており、[USERS TO BLOB](../commands/users-to-blob) コマンドを使用して作成されていなければなりません。
 
 データベースのデザイナーおよび管理者のみが、このコマンドを実行できます。他のユーザーが実行しようとすると、コマンドは何も行わず、権限エラー (-9949) が生成されます。
 
@@ -57,7 +57,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[USERS TO BLOB](users-to-blob.md)  
+[USERS TO BLOB](../commands/users-to-blob)  
 
 ## プロパティ
 

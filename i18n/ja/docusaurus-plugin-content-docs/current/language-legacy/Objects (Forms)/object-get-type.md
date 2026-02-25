@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-type
 title: OBJECT Get type
 slug: /commands/object-get-type
@@ -105,7 +105,7 @@ displayed_sidebar: docs
 ## 参照 
 
 [FORM LOAD](../commands/form-load)  
-[LISTBOX GET OBJECTS](listbox-get-objects.md)  
+[LISTBOX GET OBJECTS](../commands/listbox-get-objects)  
 
 ## プロパティ
 

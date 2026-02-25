@@ -1,4 +1,4 @@
----
+﻿---
 id: form-get-objects
 title: FORM GET OBJECTS
 slug: /commands/form-get-objects
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM GET OBJECTS.Summary-->FORM GET OBJECTS コマンドは、カレントフォーム に存在する全オブジェクトのリストを配列形式で返します。<!-- END REF-->このリストは、カレントフォームページのオブジェクトに限定することができ、また継承されたフォームのオブジェクトを除外することができます。このコマンドは、入力フォームおよび出力フォームの双方で使用することができます。
 
-**注:** コマンドはリストボックス部分は含めません。フォームのリストボックスオブジェクトを解析したい場合には、[LISTBOX GET OBJECTS](listbox-get-objects.md) または [LISTBOX GET ARRAYS](listbox-get-arrays.md) を使用してください([FORM GET OBJECTS](form-get-objects.md)、[OBJECT Get type](object-get-type.md) および [LISTBOX GET OBJECTS](listbox-get-objects.md) を組み合わせた使用法については、以下の例題を参照してください)。
+**注:** コマンドはリストボックス部分は含めません。フォームのリストボックスオブジェクトを解析したい場合には、[LISTBOX GET OBJECTS](../commands/listbox-get-objects) または [LISTBOX GET ARRAYS](../commands/listbox-get-arrays) を使用してください([FORM GET OBJECTS](../commands/form-get-objects)、[OBJECT Get type](../commands/object-get-type) および [LISTBOX GET OBJECTS](../commands/listbox-get-objects) を組み合わせた使用法については、以下の例題を参照してください)。
 
 引数として渡した配列が事前に定義されていない場合、コマンドはその配列を作成し、サイズを自動的に設定します。しかし、アプリケーションをコンパイルする場合を考慮し、各配列を明示的に宣言することをお勧めします。
 
@@ -42,7 +42,7 @@ displayed_sidebar: docs
 
 コマンドにより代入される他の任意の配列は、1番目の配列との同期が取られます。
 
-任意の引数*variablesArray*にはポインタ配列を渡し、この配列にはオブジェクトに関連付けられている変数やフィールドへのポインタが格納されます。オブジェクトに関連付けられた変数が存在しない場合、[Is nil pointer](is-nil-pointer.md) ポインタが返されます。“サブフォーム”オブジェクトタイプが存在する場合、サブフォームのテーブルへのポインタが返されます。
+任意の引数*variablesArray*にはポインタ配列を渡し、この配列にはオブジェクトに関連付けられている変数やフィールドへのポインタが格納されます。オブジェクトに関連付けられた変数が存在しない場合、[Is nil pointer](../commands/is-nil-pointer) ポインタが返されます。“サブフォーム”オブジェクトタイプが存在する場合、サブフォームのテーブルへのポインタが返されます。
 
 3番目の配列（任意）*pagesArray*には、フォームのページ番号が代入されます。この配列の各要素には、対応するオブジェクトのページ番号が格納されます。
 
@@ -134,7 +134,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[FORM GET PROPERTIES](form-get-properties.md)  
+[FORM GET PROPERTIES](../commands/form-get-properties)  
 *Form Objects (Access)*  
 *オブジェクト(フォーム)*  
 

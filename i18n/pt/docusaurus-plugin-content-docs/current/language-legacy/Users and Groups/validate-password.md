@@ -1,4 +1,4 @@
----
+﻿---
 id: validate-password
 title: Validate password
 slug: /commands/validate-password
@@ -38,7 +38,7 @@ O parâmetro opcional *digest* indica se o parâmetro *senha* contém uma senha 
 * Se passar **True**, indica que o parâmetro *senha* contém uma senha em forma hash (modo digest),
 * Se passar **False** ou omite este parâmetro, indica que *senha* contém uma senha em texto plano.
 
-Este parâmetro é particularmente útil quando se utilizam métodos base de autenticação, em particular o [On 4D Mobile Authentication database method](on-4d-mobile-authentication-database-method.md).
+Este parâmetro é particularmente útil quando se utilizam métodos base de autenticação, em particular o [On 4D Mobile Authentication database method](../commands/on-4d-mobile-authentication-database-method).
 
 O comando é atrasado com o objetivo de evitar ataques de força bruta (flooding), em outras palavras, tentativas de múltiplas combinações de nomes de usuário/senha. Como resultado, depois da quarta chamada a este comando, não se executa por um período de 10 segundos. Este atraso é global a estação de trabalho.
 
@@ -62,7 +62,7 @@ O exemplo verifica se a senha do usuário “Hardy” for “Laurel”:
 
 ## Exemplo 2 
 
-No [On 4D Mobile Authentication database method](on-4d-mobile-authentication-database-method.md), você pode provar um pedido de conexão (utilizando os usuários 4D da base). Pode escrever:
+No [On 4D Mobile Authentication database method](../commands/on-4d-mobile-authentication-database-method), você pode provar um pedido de conexão (utilizando os usuários 4D da base). Pode escrever:
 
 ```4d
  $0:=Validate password($1;$2;$3)
@@ -70,9 +70,9 @@ No [On 4D Mobile Authentication database method](on-4d-mobile-authentication-dat
 
 ## Ver também 
 
-[GET USER PROPERTIES](get-user-properties.md)  
-[Set user properties](set-user-properties.md)  
-[WEB Validate digest](web-validate-digest.md)  
+[GET USER PROPERTIES](../commands/get-user-properties)  
+[Set user properties](../commands/set-user-properties)  
+[WEB Validate digest](../commands/web-validate-digest)  
 
 ## Propriedades
 

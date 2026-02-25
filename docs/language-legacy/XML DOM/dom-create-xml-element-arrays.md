@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-create-xml-element-arrays
 title: DOM Create XML element arrays
 slug: /commands/dom-create-xml-element-arrays
@@ -33,9 +33,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Create XML element arrays.Summary-->The **DOM Create XML element arrays** command is used to add a new element in the *elementRef* XML element, as well as, optionally, attributes and their values in the form of arrays.<!-- END REF-->
 
-Apart from supporting arrays (see below), this command is identical to [DOM Create XML element](dom-create-xml-element.md). Please refer to the description of this command for the details of its functioning. 
+Apart from supporting arrays (see below), this command is identical to [DOM Create XML element](../commands/dom-create-xml-element). Please refer to the description of this command for the details of its functioning. 
 
-Optionally, this command can be used to pass several pairs of attributes and attribute values as arrays in the *attribNamesArray* and *attribValuesArray* parameters. In *attribValuesArray*, you can pass arrays of the text, date, number, and picture type. 4D automatically carries out the necessary conversions; you can modify these conversions using the [XML SET OPTIONS](xml-set-options.md) command. 
+Optionally, this command can be used to pass several pairs of attributes and attribute values as arrays in the *attribNamesArray* and *attribValuesArray* parameters. In *attribValuesArray*, you can pass arrays of the text, date, number, and picture type. 4D automatically carries out the necessary conversions; you can modify these conversions using the [XML SET OPTIONS](../commands/xml-set-options) command. 
 
 The arrays must have been created beforehand and function by pairs. You can pass as many pairs of arrays and as many elements in each pair as you want. 
 
@@ -72,7 +72,7 @@ For this, you can simply write:
 
 ## See also 
 
-[DOM Create XML element](dom-create-xml-element.md)  
+[DOM Create XML element](../commands/dom-create-xml-element)  
 
 ## Properties
 

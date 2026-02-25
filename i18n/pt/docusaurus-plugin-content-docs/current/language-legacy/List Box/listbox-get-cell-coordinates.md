@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-cell-coordinates
 title: LISTBOX GET CELL COORDINATES
 slug: /commands/listbox-get-cell-coordinates
@@ -62,8 +62,8 @@ Você quer desenhar um retângulo vermelho arredor da célula selecionada de um 
 
 ## Ver também 
 
-[LISTBOX GET CELL POSITION](listbox-get-cell-position.md)  
-[OBJECT GET COORDINATES](object-get-coordinates.md)  
+[LISTBOX GET CELL POSITION](../commands/listbox-get-cell-position)  
+[OBJECT GET COORDINATES](../commands/object-get-coordinates)  
 
 ## Propriedades
 

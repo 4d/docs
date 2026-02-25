@@ -1,4 +1,4 @@
----
+﻿---
 id: query-selection-by-formula
 title: QUERY SELECTION BY FORMULA
 slug: /commands/query-selection-by-formula
@@ -31,18 +31,18 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUERY SELECTION BY FORMULA.Summary-->La commande **QUERY SELECTION BY FORMULA** vous permet de rechercher des enregistrements dans *laTable*.<!-- END REF-->modifie la sélection courante de *laTable* pour le process courant et fait du premier enregistrement le nouvel enregistrement courant. 
 
-**QUERY SELECTION BY FORMULA** fonctionne de la même manière que [QUERY BY FORMULA](query-by-formula.md). La différence entre ces deux commandes se situe au niveau de la portée de la recherche :
+**QUERY SELECTION BY FORMULA** fonctionne de la même manière que [QUERY BY FORMULA](../commands/query-by-formula). La différence entre ces deux commandes se situe au niveau de la portée de la recherche :
 
-* [QUERY BY FORMULA](query-by-formula.md) effectue sa recherche parmi la totalité des enregistrements de la table.
+* [QUERY BY FORMULA](../commands/query-by-formula) effectue sa recherche parmi la totalité des enregistrements de la table.
 * **QUERY SELECTION BY FORMULA** effectue sa recherche uniquement parmi les enregistrements de la sélection courante.
 
-Pour plus d'informations, reportez-vous à la description de la commande [QUERY BY FORMULA](query-by-formula.md).
+Pour plus d'informations, reportez-vous à la description de la commande [QUERY BY FORMULA](../commands/query-by-formula).
 
 ## Voir aussi 
 
-[QUERY](query.md)  
-[QUERY BY FORMULA](query-by-formula.md)  
-[QUERY SELECTION](query-selection.md)  
+[QUERY](../commands/query)  
+[QUERY BY FORMULA](../commands/query-by-formula)  
+[QUERY SELECTION](../commands/query-selection)  
 
 ## Propriétés
 

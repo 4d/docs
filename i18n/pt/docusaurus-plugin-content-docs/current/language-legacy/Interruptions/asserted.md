@@ -1,4 +1,4 @@
----
+﻿---
 id: asserted
 title: Asserted
 slug: /commands/asserted
@@ -29,11 +29,11 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.Asserted.Summary-->O comando Asserted tem um funcionamento similar ao do comando [ASSERT](assert.md), com a diferença de que retorna um valor que é o resultado da avaliação do parâmetro *expressaoBool*.<!-- END REF--> Permite utilizar uma asserção durante a avaliação de uma condição (ver o exemplo). Para maior informação sobre o funcionamento das asserções e os parâmetros deste comando, consulte a descrição do comando [ASSERT](assert.md).
+<!--REF #_command_.Asserted.Summary-->O comando Asserted tem um funcionamento similar ao do comando [ASSERT](../commands/assert), com a diferença de que retorna um valor que é o resultado da avaliação do parâmetro *expressaoBool*.<!-- END REF--> Permite utilizar uma asserção durante a avaliação de uma condição (ver o exemplo). Para maior informação sobre o funcionamento das asserções e os parâmetros deste comando, consulte a descrição do comando [ASSERT](../commands/assert).
 
-Asserted aceita uma expressão Booleana como parâmetro e retorna o resultado da avaliação desta expressão. Se a expressão é falsa e se as asserções estão ativas (ver o comando [SET ASSERT ENABLED](set-assert-enabled.md)), é gerado o erro -10518, exatamente que para o comando [ASSERT](assert.md). Se as asserções estão inativas, Asserted retorna o resultado da expressão que foi passada sem disparar um erro.
+Asserted aceita uma expressão Booleana como parâmetro e retorna o resultado da avaliação desta expressão. Se a expressão é falsa e se as asserções estão ativas (ver o comando [SET ASSERT ENABLED](../commands/set-assert-enabled)), é gerado o erro -10518, exatamente que para o comando [ASSERT](../commands/assert). Se as asserções estão inativas, Asserted retorna o resultado da expressão que foi passada sem disparar um erro.
 
-Nota: Como o comando [ASSERT](assert.md), Asserted funciona em modo interpretado e compilado. 
+Nota: Como o comando [ASSERT](../commands/assert), Asserted funciona em modo interpretado e compilado. 
 
 ## Exemplo 
 
@@ -50,9 +50,9 @@ Inserir uma asserção na avaliação de uma expressão:
 
 ## Ver também 
 
-[ASSERT](assert.md)  
-[Get assert enabled](get-assert-enabled.md)  
-[SET ASSERT ENABLED](set-assert-enabled.md)  
+[ASSERT](../commands/assert)  
+[Get assert enabled](../commands/get-assert-enabled)  
+[SET ASSERT ENABLED](../commands/set-assert-enabled)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: verify-data-file
 title: VERIFY DATA FILE
 slug: /commands/verify-data-file
@@ -39,7 +39,7 @@ displayed_sidebar: docs
 
 **Nota:** para maiores informações sobre o processo de verificação de dados, consulte o Manual de Desenho. endereçoEstrutura seleciona o arquivo de estrutura (compilado ou não) associado com o arquivo de dados a ser verificado. Pode se tratar do arquivo de estrutura aberto ou de qualquer outro arquivo de estrutura. Você deve passar um nome de endereço completo, expressado com a sintaxe do sistema operacional. Também pode passar uma string vazia, neste caso aparece uma caixa de diálogo padrão de abertura de arquivos que permite ao usuário selecionar o arquivo de estrutura a ser utilizado.
 
-*endereçoDados* seleciona um arquivo de dados 4D (.4DD). Deve corresponder ao arquivo de estrutura definido pelo parâmetro *endereçoEstrutura*. Atenção, você pode selecionar o arquivo de estrutura atual mas o arquivo de dados não deve ser o arquivo atual (aberto). Para verificar se o arquivo de dados está aberto, utilize o comando [VERIFY CURRENT DATA FILE](verify-current-data-file.md). Se você tenta verificar o arquivo de dados atual com o comando VERIFY DATA FILE, é gerado um erro.
+*endereçoDados* seleciona um arquivo de dados 4D (.4DD). Deve corresponder ao arquivo de estrutura definido pelo parâmetro *endereçoEstrutura*. Atenção, você pode selecionar o arquivo de estrutura atual mas o arquivo de dados não deve ser o arquivo atual (aberto). Para verificar se o arquivo de dados está aberto, utilize o comando [VERIFY CURRENT DATA FILE](../commands/verify-current-data-file). Se você tenta verificar o arquivo de dados atual com o comando VERIFY DATA FILE, é gerado um erro.
 
 O arquivo de dados selecionado é aberto em modo somente leitura. Você deve ter certeza que nenhuma aplicação acesse a este arquivo em modo escrita, caso contrário os resultados da verificação poderiam ser distorcidos.
 
@@ -167,7 +167,7 @@ Se o método de callback não existir, a verificação não é efetuada, é gera
 
 ## Ver também 
 
-[VERIFY CURRENT DATA FILE](verify-current-data-file.md)  
+[VERIFY CURRENT DATA FILE](../commands/verify-current-data-file)  
 
 ## Propriedades
 

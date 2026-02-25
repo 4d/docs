@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-column-width
 title: LISTBOX Get column width
 slug: /commands/listbox-get-column-width
@@ -42,7 +42,7 @@ Si no se ha definido ningún valor de ancho mínimo y/o máximo para la columna,
 
 ## Ver también 
 
-[LISTBOX SET COLUMN WIDTH](listbox-set-column-width.md)  
+[LISTBOX SET COLUMN WIDTH](../commands/listbox-set-column-width)  
 
 ## Propiedades
 

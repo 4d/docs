@@ -1,4 +1,4 @@
----
+﻿---
 id: highlight-text
 title: HIGHLIGHT TEXT
 slug: /commands/highlight-text
@@ -74,7 +74,7 @@ HIGHLIGHT TEXT コマンドは、サブフォームのコンテキストにお�
 
 ## 参照 
 
-[GET HIGHLIGHT](get-highlight.md)  
+[GET HIGHLIGHT](../commands/get-highlight)  
 
 ## プロパティ
 

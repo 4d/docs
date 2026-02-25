@@ -1,4 +1,4 @@
----
+﻿---
 id: copy-named-selection
 title: COPY NAMED SELECTION
 slug: /commands/copy-named-selection
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 A named selection does not actually contain the records, but only an ordered list of references to records. Each reference to a record takes 4 bytes in memory. This means that when a selection is copied using the **COPY NAMED SELECTION** command, the amount of memory required is 4 bytes multiplied by the number of records in the selection. Since named selections reside in memory, you should have enough memory for the named selection as well as the current selection of the table in the process.
 
-Use the [CLEAR NAMED SELECTION](clear-named-selection.md) command to free the memory used by *name*.
+Use the [CLEAR NAMED SELECTION](../commands/clear-named-selection) command to free the memory used by *name*.
 
 ## Example 
 
@@ -49,9 +49,9 @@ The following example allows you to check if there are other overdue invoices in
 
 ## See also 
 
-[CLEAR NAMED SELECTION](clear-named-selection.md)  
-[CUT NAMED SELECTION](cut-named-selection.md)  
-[USE NAMED SELECTION](use-named-selection.md)  
+[CLEAR NAMED SELECTION](../commands/clear-named-selection)  
+[CUT NAMED SELECTION](../commands/cut-named-selection)  
+[USE NAMED SELECTION](../commands/use-named-selection)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: bool
 title: Bool
 slug: /commands/bool
@@ -58,7 +58,7 @@ Selecciona un valor dependiendo del contenido de un atributo de campo de objeto,
 [Date](../commands/date)  
 [Num](../commands/num)  
 [String](../commands/string)  
-[Time](time.md)  
+[Time](../commands/time)  
 
 ## Propiedades
 

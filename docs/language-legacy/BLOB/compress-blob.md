@@ -1,4 +1,4 @@
----
+﻿---
 id: compress-blob
 title: COMPRESS BLOB
 slug: /commands/compress-blob
@@ -47,13 +47,13 @@ If you pass another value or if you omit the *compression* parameter, compressio
 **Note:** This command only compresses BLOBs that are greater than or equal to 255 bytes.
 
 After the call, the OK variable is set to 1 if the BLOB has been successfully compressed. If the compression could not be performed, the OK variable is set to 0\. If the compression could not be performed because of a lack of memory or because the actual size of the blob is less than 255 bytes, no error is generated and the method resumes its execution.   
-In any other cases (i.e. the BLOB is damaged), the error -10600 is generated. This error can be trapped using the [ON ERR CALL](on-err-call.md) command.
+In any other cases (i.e. the BLOB is damaged), the error -10600 is generated. This error can be trapped using the [ON ERR CALL](../commands/on-err-call) command.
 
-After a BLOB has been compressed, you can expand it using the [EXPAND BLOB](expand-blob.md) command.
+After a BLOB has been compressed, you can expand it using the [EXPAND BLOB](../commands/expand-blob) command.
 
-To detect if a BLOB has been compressed, use the [BLOB PROPERTIES](blob-properties.md) command*.*
+To detect if a BLOB has been compressed, use the [BLOB PROPERTIES](../commands/blob-properties) command*.*
 
-**WARNING:** A compressed BLOB is still a BLOB, so there is nothing to stop you from modifying its contents. However, if you do so, the [EXPAND BLOB](expand-blob.md) command will not be able to decompress the BLOB properly.
+**WARNING:** A compressed BLOB is still a BLOB, so there is nothing to stop you from modifying its contents. However, if you do so, the [EXPAND BLOB](../commands/expand-blob) command will not be able to decompress the BLOB properly.
 
 ## Example 1 
 
@@ -104,8 +104,8 @@ The OK variable is set to 1 if the BLOB has been successfully compressed; otherw
 
 ## See also 
 
-[BLOB PROPERTIES](blob-properties.md)  
-[EXPAND BLOB](expand-blob.md)  
+[BLOB PROPERTIES](../commands/blob-properties)  
+[EXPAND BLOB](../commands/expand-blob)  
 
 ## Properties
 

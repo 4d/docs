@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-hierarchy
 title: LISTBOX SET HIERARCHY
 slug: /commands/listbox-set-hierarchy
@@ -63,7 +63,7 @@ Definition of the aCountry, aRegion and aCity arrays as the hierarchy of a list 
 
 ## See also 
 
-[LISTBOX GET HIERARCHY](listbox-get-hierarchy.md)  
+[LISTBOX GET HIERARCHY](../commands/listbox-get-hierarchy)  
 
 ## Properties
 

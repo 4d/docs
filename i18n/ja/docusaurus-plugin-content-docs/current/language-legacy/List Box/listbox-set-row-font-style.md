@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-row-font-style
 title: LISTBOX SET ROW FONT STYLE
 slug: /commands/listbox-set-row-font-style
@@ -55,7 +55,7 @@ displayed_sidebar: docs
 | Underline | 倍長整数 | 4 |
 
 リストボックスや列にフォントスタイル配列が設定されている場合、指定された列の要素に関してのみ変更されます。言い換えると、この場合コマンドを実行するのはフォントスタイル配列の要素を変更するのと同等の効果があります。  
-リストボックスや列にフォントスタイル配列が何も設定されていない場合、このコマンドが使用されたときに作成されます。この配列には[LISTBOX Get array](listbox-get-array.md) コマンドを使用することによってアクセス可能です。
+リストボックスや列にフォントスタイル配列が何も設定されていない場合、このコマンドが使用されたときに作成されます。この配列には[LISTBOX Get array](../commands/listbox-get-array) コマンドを使用することによってアクセス可能です。
 
 他のリストボックスプロパティ(一般のプロパティ、行スタイル配列など)によって、このコマンドと異なるフォントスタイルが指定された場合、4D内の優先順位に応じて処理されます。この優先順位の詳細に関しては、 *Design Reference* マニュアルを参照して下さい。
 
@@ -87,8 +87,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[LISTBOX Get row font style](listbox-get-row-font-style.md)  
-[LISTBOX SET ROW COLOR](listbox-set-row-color.md)  
+[LISTBOX Get row font style](../commands/listbox-get-row-font-style)  
+[LISTBOX SET ROW COLOR](../commands/listbox-set-row-color)  
 
 ## プロパティ
 

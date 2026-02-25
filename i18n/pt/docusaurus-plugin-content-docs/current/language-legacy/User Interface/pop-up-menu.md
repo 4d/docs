@@ -1,4 +1,4 @@
----
+﻿---
 id: pop-up-menu
 title: Pop up menu
 slug: /commands/pop-up-menu
@@ -116,7 +116,7 @@ Este método de projeto pode ser chamado desde:
 
 * o método de um objeto de formulário que reage a um clique sem esperar que o botão do mouse seja liberado (por exemplo um botão invisível)
 * um processo que “espi a” os eventos e se comunica com os outros processos
-* um método de gestão de eventos instalado pelo comando [ON ERR CALL](on-err-call.md).
+* um método de gestão de eventos instalado pelo comando [ON ERR CALL](../commands/on-err-call).
 
 Nos dois últimos casos, não é necessário que o clique seja produzido em um objeto de formulário. Esta é uma das janelas do comando Pop up menu. Geralmente, os menus pop up são mostrados através de objetos de formulário. Com Pop up menu, pode mostrar um menu pop up em qualquer lugar.  
   
@@ -128,8 +128,8 @@ O próximo é o menu pop-up tal como aparece em Windows (esquerda) e Macintosh (
 
 ## Ver também 
 
-[Dynamic pop up menu](dynamic-pop-up-menu.md)  
-[MOUSE POSITION](mouse-position.md)  
+[Dynamic pop up menu](../commands/dynamic-pop-up-menu)  
+[MOUSE POSITION](../commands/mouse-position)  
 
 ## Propriedades
 

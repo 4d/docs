@@ -1,4 +1,4 @@
----
+﻿---
 id: call-subform-container
 title: CALL SUBFORM CONTAINER
 slug: /commands/call-subform-container
@@ -40,7 +40,7 @@ In *event*, you can pass one of the [4D form events that are supported by subfor
 ## See also 
 
 [Form event code](../commands/form-event-code)  
-[GOTO OBJECT](goto-object.md)  
+[GOTO OBJECT](../commands/goto-object)  
 
 ## Properties
 

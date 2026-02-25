@@ -1,4 +1,4 @@
----
+﻿---
 id: get-menu-title
 title: Get menu title
 slug: /commands/get-menu-title
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Count menus](count-menus.md)  
+[Count menus](../commands/count-menus)  
 
 ## プロパティ
 

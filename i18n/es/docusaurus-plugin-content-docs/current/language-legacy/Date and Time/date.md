@@ -1,4 +1,4 @@
----
+﻿---
 id: date
 title: Date
 slug: /commands/date
@@ -46,13 +46,13 @@ Si *expresion* no corresponde al formato ISO, los parámetros regionales definid
 * si el valor introducido es superior o igual a 30, 4D considera que la fecha pertenece al siglo 20 y añade 19 delante del valor.
 * si el valor introducido es inferior a 30, 4D considera que la fecha pertenece al siglo 21 y añade 20 delante del valor.
 
-Este mecanismo puede configurarse utilizando el comando [SET DEFAULT CENTURY](set-default-century.md).  
+Este mecanismo puede configurarse utilizando el comando [SET DEFAULT CENTURY](../commands/set-default-century).  
 Los siguientes caracteres son separadores de fecha válidos: barra oblicua (/), espacio, punto (.), coma (,) y guión (-).
 
 * Si se pasa una fecha invalida (tal como "13/35/94" o "aa/12/94") en *expresion*, **Date** devolverá una fecha vacía (!00/00/00!). Es su responsabilidad verificar que *expresion* sea una fecha válida.
 * Si la expresión *expresion* se evalúa como indefinida, **Date** devuelve una fecha vacía (!00/00/00!). Esto es útil cuando se espera que el resultado de una expresión (por ejemplo, un atributo objeto) sea una fecha, incluso si puede ser indefinido (por ejemplo un atributo objeto).
 
-**Nota**: a partir de 4D v16 R6, las fechas pueden almacenarse en atributos objeto como valores de tipo de fecha. En versiones anteriores, solo podían almacenarse como cadenas (para más información sobre esta opción, consulte la sección *Página Compatibilidad*, "Utilizar el tipo fecha en lugar del formato fecha ISO en los objetos"). Para saber si un atributo contiene una fecha almacenada como una cadena o como una fecha, debe usar el comando [Value type](value-type.md) (ver el último ejemplo).
+**Nota**: a partir de 4D v16 R6, las fechas pueden almacenarse en atributos objeto como valores de tipo de fecha. En versiones anteriores, solo podían almacenarse como cadenas (para más información sobre esta opción, consulte la sección *Página Compatibilidad*, "Utilizar el tipo fecha en lugar del formato fecha ISO en los objetos"). Para saber si un atributo contiene una fecha almacenada como una cadena o como una fecha, debe usar el comando [Value type](../commands/value-type) (ver el último ejemplo).
 
 **Expresión tipo fecha**  
 Si la *expresion* es del tipo de fecha, **Date** devuelve la fecha pasada en el parámetro 'tal como está'. Esto es particularmente útil en el contexto de la programación genérica utilizando punteros o atributos de objeto.

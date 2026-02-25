@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-name
 title: OBJECT Get name
 slug: /commands/object-get-name
@@ -48,7 +48,7 @@ displayed_sidebar: docs
 ## 参照 
 
 *Form Objects (Access)*  
-[OBJECT Get pointer](object-get-pointer.md)  
+[OBJECT Get pointer](../commands/object-get-pointer)  
 *オブジェクト(フォーム)*  
 
 ## プロパティ

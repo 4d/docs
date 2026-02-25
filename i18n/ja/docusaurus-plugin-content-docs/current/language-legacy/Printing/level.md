@@ -1,4 +1,4 @@
----
+﻿---
 id: level
 title: Level
 slug: /commands/level
@@ -64,10 +64,10 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ACCUMULATE](accumulate.md)  
-[BREAK LEVEL](break-level.md)  
+[ACCUMULATE](../commands/accumulate)  
+[BREAK LEVEL](../commands/break-level)  
 [Form event code](../commands/form-event-code)  
-[PRINT SELECTION](print-selection.md)  
+[PRINT SELECTION](../commands/print-selection)  
 
 ## プロパティ
 

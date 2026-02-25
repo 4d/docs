@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-table-source
 title: LISTBOX GET TABLE SOURCE
 slug: /commands/listbox-get-table-source
@@ -45,7 +45,7 @@ Se o list box está associado com arrays, *numTabela* devolve -1 e *tempo*, se �
 
 ## Ver também 
 
-[LISTBOX SET TABLE SOURCE](listbox-set-table-source.md)  
+[LISTBOX SET TABLE SOURCE](../commands/listbox-set-table-source)  
 
 ## Propriedades
 

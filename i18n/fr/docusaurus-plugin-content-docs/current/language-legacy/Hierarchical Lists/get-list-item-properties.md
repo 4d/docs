@@ -1,4 +1,4 @@
----
+﻿---
 id: get-list-item-properties
 title: GET LIST ITEM PROPERTIES
 slug: /commands/get-list-item-properties
@@ -44,7 +44,7 @@ Si vous passez le premier paramètre optionnel *\**, vous indiquez que le param�
 Vous pouvez passer dans *réfElément* un numéro de référence, la valeur 0 afin de désigner le dernier élément ajouté à la liste ou encore \* afin de désigner l’élément courant de la liste. Si plusieurs éléments sont sélectionnés, l’élément courant est celui qui a été sélectionné en dernier.  
 Si vous passez \* et qu'aucun élément n’est sélectionné ou si le numéro de référence d'élément ne correspond à aucun élément de la liste, la commande laisse les paramètres inchangés.
 
-Si vous travaillez avec les numéros de référence des éléments, assurez-vous d'utiliser des numéros uniques, sinon vous ne pourrez pas différencier les éléments. Pour plus d'informations sur ce point, reportez-vous à la description de la commande [APPEND TO LIST](append-to-list.md).
+Si vous travaillez avec les numéros de référence des éléments, assurez-vous d'utiliser des numéros uniques, sinon vous ne pourrez pas différencier les éléments. Pour plus d'informations sur ce point, reportez-vous à la description de la commande [APPEND TO LIST](../commands/append-to-list).
 
 Après l'appel :
 
@@ -54,17 +54,17 @@ Après l'appel :
    * Si l'icône a été renseignée à l'aide d'un fichier image, la commande retourne dans icône le chemin d'accès à l'aide du modèle **path:<filesystem** **path>**  
    * Si l'icône a été renseignée à l'aide d'une image issue de la bibliothèque (bases de données binaires uniquement), la commande retourne soit le nom soit le numéro de l'image, en fonction de du type de variable passé dans le paramètre. Le modèle suivant est utilisé pour un nom : **pictlib:<name>**. Si vous n'attribuez pas à la valeur icône un type spécifique, par défaut le nom de l'image est retourné (texte). Si aucune icône n'est associée à l'élément, la commande retourne une valeur vide.  
          
-   **Note :** Vous pouvez récupérer dans une variable image l'icône associée à un élément à l’aide de la commande [GET LIST ITEM ICON](get-list-item-icon.md).
+   **Note :** Vous pouvez récupérer dans une variable image l'icône associée à un élément à l’aide de la commande [GET LIST ITEM ICON](../commands/get-list-item-icon).
 * *couleur* retourne la couleur du texte de l’élément désigné.
 
-Pour plus d'informations sur ces propriétés, reportez-vous à la description de la commande [SET LIST ITEM PROPERTIES](set-list-item-properties.md).
+Pour plus d'informations sur ces propriétés, reportez-vous à la description de la commande [SET LIST ITEM PROPERTIES](../commands/set-list-item-properties).
 
 ## Voir aussi 
 
-[GET LIST ITEM](get-list-item.md)  
-[GET LIST ITEM ICON](get-list-item-icon.md)  
-[SET LIST ITEM](set-list-item.md)  
-[SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+[GET LIST ITEM](../commands/get-list-item)  
+[GET LIST ITEM ICON](../commands/get-list-item-icon)  
+[SET LIST ITEM](../commands/set-list-item)  
+[SET LIST ITEM PROPERTIES](../commands/set-list-item-properties)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: application-version
 title: Application version
 slug: /commands/application-version
@@ -130,8 +130,8 @@ Le code suivant reconstitue le numéro de version de l'application et permet de 
 
 ## Voir aussi 
 
-[Application type](application-type.md)  
-[Version type](version-type.md)  
+[Application type](../commands/application-type)  
+[Version type](../commands/version-type)  
 
 ## Propriétés
 

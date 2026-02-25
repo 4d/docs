@@ -1,4 +1,4 @@
----
+﻿---
 id: set-list-item
 title: SET LIST ITEM
 slug: /commands/set-list-item
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 If you pass the first optional *\** parameter, you indicate that the *list* parameter is an object name (string) corresponding to a representation of the list in the form. If you do not pass this parameter, you indicate that the *list* parameter is a hierarchical list reference ([ListRef](# "A Longint reference to a hierachical list")). If you only use a single representation of the list or work with structural items (the second *\** is omitted), you can use either syntax. Conversely, if you use several representations of the same list and work with the current item (the second *\** is passed), the syntax based on the object name is required since each representation can have its own current item.
 
-You can pass a reference number in *itemRef*. If there is no item with the item reference number you passed, the command does nothing. You can optionally pass *0* in *itemRef* to designate the last item added to the list using [APPEND TO LIST](append-to-list.md).
+You can pass a reference number in *itemRef*. If there is no item with the item reference number you passed, the command does nothing. You can optionally pass *0* in *itemRef* to designate the last item added to the list using [APPEND TO LIST](../commands/append-to-list).
 
 Lastly, you can pass *\** in *itemRef*: in this case, the command will apply to the current item of the list. If several items are selected manually, the current item is the one that was selected last. If no item is selected, the command does nothing.
 
@@ -48,7 +48,7 @@ You pass the new text for the item in *newItemText*. To change the item referenc
 
 To attach a list to the item, pass the list reference number in *subList*. In this case, you also specify if the newly sublist is expanded by passing TRUE in *expanded*; otherwise, pass FALSE.
 
-To detach a sublist already attached to the item, pass *0* (zero) in *sublist*. In this case, it is a good idea to have previously obtained the reference number of that list using [APPEND TO LIST](append-to-list.md), so you can later delete the sublist using [CLEAR LIST](clear-list.md), if you no longer need it.
+To detach a sublist already attached to the item, pass *0* (zero) in *sublist*. In this case, it is a good idea to have previously obtained the reference number of that list using [APPEND TO LIST](../commands/append-to-list), so you can later delete the sublist using [CLEAR LIST](../commands/clear-list), if you no longer need it.
 
 If you do not want to change the sublist property of the item, pass *\-1* in *sublist*.
 
@@ -77,19 +77,19 @@ If you do not want to change the sublist property of the item, pass *\-1* in *su
 
 ## Example 2 
 
-See example for the [GET LIST ITEM](get-list-item.md) command.
+See example for the [GET LIST ITEM](../commands/get-list-item) command.
 
 ## Example 3 
 
-See example for the [APPEND TO LIST](append-to-list.md) command.
+See example for the [APPEND TO LIST](../commands/append-to-list) command.
 
 ## See also 
 
-[GET LIST ITEM](get-list-item.md)  
-[GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
-[SET LIST ITEM FONT](set-list-item-font.md)  
-[SET LIST ITEM ICON](set-list-item-icon.md)  
-[SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+[GET LIST ITEM](../commands/get-list-item)  
+[GET LIST ITEM PROPERTIES](../commands/get-list-item-properties)  
+[SET LIST ITEM FONT](../commands/set-list-item-font)  
+[SET LIST ITEM ICON](../commands/set-list-item-icon)  
+[SET LIST ITEM PROPERTIES](../commands/set-list-item-properties)  
 
 ## Properties
 

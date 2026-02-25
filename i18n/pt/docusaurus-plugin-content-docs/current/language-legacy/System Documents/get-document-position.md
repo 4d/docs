@@ -1,4 +1,4 @@
----
+﻿---
 id: get-document-position
 title: Get document position
 slug: /commands/get-document-position
@@ -30,13 +30,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get document position.Summary-->Este comando apenas funciona em um documento aberto cujo número de referência se passa no parâmetro *docRef*.<!-- END REF--> 
 
-Get document position devolve a posição, a partir do início do documento, onde ocorrerá a próxima leitura ([RECEIVE PACKET](receive-packet.md)) ou escrita ([SEND PACKET](send-packet.md)).
+Get document position devolve a posição, a partir do início do documento, onde ocorrerá a próxima leitura ([RECEIVE PACKET](../commands/receive-packet)) ou escrita ([SEND PACKET](../commands/send-packet)).
 
 ## Ver também 
 
-[RECEIVE PACKET](receive-packet.md)  
-[SEND PACKET](send-packet.md)  
-[SET DOCUMENT POSITION](set-document-position.md)  
+[RECEIVE PACKET](../commands/receive-packet)  
+[SEND PACKET](../commands/send-packet)  
+[SET DOCUMENT POSITION](../commands/set-document-position)  
 
 ## Propriedades
 

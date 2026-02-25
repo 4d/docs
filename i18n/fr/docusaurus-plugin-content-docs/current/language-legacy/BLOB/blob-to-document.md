@@ -1,4 +1,4 @@
----
+﻿---
 id: blob-to-document
 title: BLOB TO DOCUMENT
 slug: /commands/blob-to-document
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 ## Description 
 
 <!--REF #_command_.BLOB TO DOCUMENT.Summary-->**BLOB TO DOCUMENT** écrit le contenu de *document* en utilisant les données stockées dans *blob*.<!-- END REF-->   
-Vous pouvez passer dans *document* le nom d’un document existant ou non. Si le *document* n’existe pas, la commande le crée. Si vous passez le nom d’un document existant, assurez-vous qu'il n'est pas déjà ouvert, sinon une erreur est générée. Si vous voulez que l'utilisateur choisisse le document, appelez les routines [Open document](open-document.md) ou [Create document](create-document.md) et utilisez la variable système Document (cf. exemple ci-dessous). 
+Vous pouvez passer dans *document* le nom d’un document existant ou non. Si le *document* n’existe pas, la commande le crée. Si vous passez le nom d’un document existant, assurez-vous qu'il n'est pas déjà ouvert, sinon une erreur est générée. Si vous voulez que l'utilisateur choisisse le document, appelez les routines [Open document](../commands/open-document) ou [Create document](../commands/create-document) et utilisez la variable système Document (cf. exemple ci-dessous). 
 
 ## Exemple 
 
@@ -56,13 +56,13 @@ La variable système OK prend la valeur 1 si le document est correctement écrit
 * L'espace sur disque peut être insuffisant pour l'écriture du contenu du document.
 * Une erreur d'Entrée/Sortie peut survenir si le document est verrouillé, s'il se trouve sur un volume verrouillé ou si un problème survient lors de l'écriture du document.
 
-Dans tous les cas, vous pouvez gérer les erreurs en utilisant la commande [ON ERR CALL](on-err-call.md).
+Dans tous les cas, vous pouvez gérer les erreurs en utilisant la commande [ON ERR CALL](../commands/on-err-call).
 
 ## Voir aussi 
 
-[Create document](create-document.md)  
-[DOCUMENT TO BLOB](document-to-blob.md)  
-[Open document](open-document.md)  
+[Create document](../commands/create-document)  
+[DOCUMENT TO BLOB](../commands/document-to-blob)  
+[Open document](../commands/open-document)  
 
 ## Propriétés
 

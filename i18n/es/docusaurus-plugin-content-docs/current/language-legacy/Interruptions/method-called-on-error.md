@@ -1,4 +1,4 @@
----
+﻿---
 id: method-called-on-error
 title: Method called on error
 slug: /commands/method-called-on-error
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.Method called on error.Summary-->El comando **Method called on error** devuelve el nombre del método instalado por el comando [ON ERR CALL](on-err-call.md) para el proceso actual o el *alcance* definido.<!-- END REF-->
+<!--REF #_command_.Method called on error.Summary-->El comando **Method called on error** devuelve el nombre del método instalado por el comando [ON ERR CALL](../commands/on-err-call) para el proceso actual o el *alcance* definido.<!-- END REF-->
 
 En el parámetro *alcance*, se pasa el contexto de ejecución para el que se desea obtener el nombre del método manejador de errores. Puede utilizar una de las siguientes constantes:
 
@@ -57,7 +57,7 @@ Este comando es particularmente útil en el contexto de componentes porque le pe
 ## Ver también 
 
 *Gestión de errores*  
-[ON ERR CALL](on-err-call.md)  
+[ON ERR CALL](../commands/on-err-call)  
 
 ## Propiedades
 

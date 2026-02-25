@@ -1,4 +1,4 @@
----
+﻿---
 id: create-document
 title: Create document
 slug: /commands/create-document
@@ -50,9 +50,9 @@ If you do not want to restrict the displayed files to one or more types, pass th
 
 On Windows you pass a Windows file extension or Macintosh file type mapped through the *\_o\_MAP FILE TYPES* mechanism. If you want to create a document without an extension, a document containing several extensions, or a document containing an extension with more than three characters, do not use the *type* parameters and pass the full name in *document* (see example2).
 
-Once you have created and opened a document, you can write and read the document using the [RECEIVE PACKET](receive-packet.md) and [SEND PACKET](send-packet.md) commands that you can combine with the [Get document position](get-document-position.md) and [SET DOCUMENT POSITION](set-document-position.md) commands in order to directly access any part of the document.
+Once you have created and opened a document, you can write and read the document using the [RECEIVE PACKET](../commands/receive-packet) and [SEND PACKET](../commands/send-packet) commands that you can combine with the [Get document position](../commands/get-document-position) and [SET DOCUMENT POSITION](../commands/set-document-position) commands in order to directly access any part of the document.
 
-Do not forget to eventually call [CLOSE DOCUMENT](close-document.md) for the document.
+Do not forget to eventually call [CLOSE DOCUMENT](../commands/close-document) for the document.
 
 ## Example 1 
 
@@ -83,8 +83,8 @@ If the document has been created correctly, the system variable OK is set to 1 a
 
 ## See also 
 
-[Append document](append-document.md)  
-[Open document](open-document.md)  
+[Append document](../commands/append-document)  
+[Open document](../commands/open-document)  
 
 ## Properties
 

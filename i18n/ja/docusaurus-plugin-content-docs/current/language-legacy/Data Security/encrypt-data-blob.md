@@ -1,4 +1,4 @@
----
+﻿---
 id: encrypt-data-blob
 title: Encrypt data BLOB
 slug: /commands/encrypt-data-blob
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 BLOB を暗号化するのには、*keyObject* または *passPhrase* のいづれかを使用することができます: 
 
-* *keyObject*: 暗号鍵を格納したJSON オブジェクト。その構造は、[New data key](new-data-key.md) コマンドによって返されるオブジェクトと同じです。
+* *keyObject*: 暗号鍵を格納したJSON オブジェクト。その構造は、[New data key](../commands/new-data-key) コマンドによって返されるオブジェクトと同じです。
 * *passPhrase*: 暗号鍵を生成するのに使用した文字列です。
 
 *salt* 引数には、暗号化をより堅牢にするために使用される数字を渡します。
@@ -44,7 +44,7 @@ BLOB を暗号化するのには、*keyObject* または *passPhrase* のいづ�
 
 エラーが起きた場合には、空のBLOB が返され、コマンドはFalse を返します。
 
-**注:** **Encrypt data BLOB** を使用してBLOB を暗号化する場合、返される*encryptedBlob* 引数内のBLOB は、16 バイトの整数倍になります。これは暗号化アルゴリズムによるものです。結果として、もし*blobToEncrypt* 引数に渡すBLOB が16 バイトの整数倍でなかった場合、コマンドは自動的に末尾にnull バイトを追加してBLOB を16バイトの整数倍に変換します。BLOB を[Decrypt data BLOB](decrypt-data-blob.md) で復号化する際にエラーが起きるのを避けるため、テキストファイルではないファイルを使用する際には*blobToEncrypt* 引数のサイズを管理する必要があります。これの詳細なやり方については、[こちらのブログ記事(英文)](https://blog.4d.com/encrypt-your-own-data-with-the-4d-algorithm/) を参照して下さい。
+**注:** **Encrypt data BLOB** を使用してBLOB を暗号化する場合、返される*encryptedBlob* 引数内のBLOB は、16 バイトの整数倍になります。これは暗号化アルゴリズムによるものです。結果として、もし*blobToEncrypt* 引数に渡すBLOB が16 バイトの整数倍でなかった場合、コマンドは自動的に末尾にnull バイトを追加してBLOB を16バイトの整数倍に変換します。BLOB を[Decrypt data BLOB](../commands/decrypt-data-blob) で復号化する際にエラーが起きるのを避けるため、テキストファイルではないファイルを使用する際には*blobToEncrypt* 引数のサイズを管理する必要があります。これの詳細なやり方については、[こちらのブログ記事(英文)](https://blog.4d.com/encrypt-your-own-data-with-the-4d-algorithm/) を参照して下さい。
 
 ## 例題 
 
@@ -67,10 +67,10 @@ BLOB を暗号化するのには、*keyObject* または *passPhrase* のいづ�
 ## 参照 
 
   
-[Decrypt data BLOB](decrypt-data-blob.md)  
-[ENCRYPT BLOB](encrypt-blob.md)  
-[Encrypt data file](encrypt-data-file.md)  
-[New data key](new-data-key.md)  
+[Decrypt data BLOB](../commands/decrypt-data-blob)  
+[ENCRYPT BLOB](../commands/encrypt-blob)  
+[Encrypt data file](../commands/encrypt-data-file)  
+[New data key](../commands/new-data-key)  
 
 ## プロパティ
 

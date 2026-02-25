@@ -1,4 +1,4 @@
----
+﻿---
 id: get-picture-resource
 title: GET PICTURE RESOURCE
 slug: /commands/get-picture-resource
@@ -51,7 +51,7 @@ Si no hay suficiente memoria para cargar la imagen, se genera un error. Puede in
 
 ## Ver también 
 
-[ON ERR CALL](on-err-call.md)  
+[ON ERR CALL](../commands/on-err-call)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: get-group-properties
 title: GET GROUP PROPERTIES
 slug: /commands/get-group-properties
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.GET GROUP PROPERTIES.Summary-->**GET GROUP PROPERTIES** retourne les propriétés du groupe dont le numéro de référence est passé dans *réfGroupe*.<!-- END REF--> Vous passez le numéro de référence du groupe retourné par la commande [GET GROUP LIST](get-group-list.md). 
+<!--REF #_command_.GET GROUP PROPERTIES.Summary-->**GET GROUP PROPERTIES** retourne les propriétés du groupe dont le numéro de référence est passé dans *réfGroupe*.<!-- END REF--> Vous passez le numéro de référence du groupe retourné par la commande [GET GROUP LIST](../commands/get-group-list). 
 
 Si vous ne passez pas un numéro de référence valide, **GET GROUP PROPERTIES** renvoie des paramètres vides.
 
@@ -44,13 +44,13 @@ Si vous passez le paramètre optionnel *membres*, ce tableau contiendra les num�
 
 ## Gestion des erreurs 
 
-Si vous n'avez pas les privilèges d'accès pour appeler la commande **GET GROUP PROPERTIES** ou si le système de Mots de passe est déjà ouvert par un autre process, une erreur de privilège d'accès est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs installée par [ON ERR CALL](on-err-call.md).
+Si vous n'avez pas les privilèges d'accès pour appeler la commande **GET GROUP PROPERTIES** ou si le système de Mots de passe est déjà ouvert par un autre process, une erreur de privilège d'accès est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs installée par [ON ERR CALL](../commands/on-err-call).
 
 ## Voir aussi 
 
-[GET GROUP LIST](get-group-list.md)  
-[GET USER LIST](get-user-list.md)  
-[Set group properties](set-group-properties.md)  
+[GET GROUP LIST](../commands/get-group-list)  
+[GET USER LIST](../commands/get-user-list)  
+[Set group properties](../commands/set-group-properties)  
 
 ## Propriétés
 

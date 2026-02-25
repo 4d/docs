@@ -1,4 +1,4 @@
----
+﻿---
 id: current-system-user
 title: Current system user
 slug: /commands/current-system-user
@@ -36,7 +36,7 @@ Ver o exemplo do comando [Current machine](current-machine.md "Current machine")
 
 ## Ver também 
 
-[Current machine](current-machine.md)  
+[Current machine](../commands/current-machine)  
 
 ## Propriedades
 

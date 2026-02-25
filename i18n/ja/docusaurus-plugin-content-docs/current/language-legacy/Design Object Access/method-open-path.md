@@ -1,4 +1,4 @@
----
+﻿---
 id: method-open-path
 title: METHOD OPEN PATH
 slug: /commands/method-open-path
@@ -42,7 +42,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[METHOD Get path](method-get-path.md)  
+[METHOD Get path](../commands/method-get-path)  
 *デザインオブジェクトアクセスコマンド*  
 
 ## プロパティ

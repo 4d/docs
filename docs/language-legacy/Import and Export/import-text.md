@@ -1,4 +1,4 @@
----
+﻿---
 id: import-text
 title: IMPORT TEXT
 slug: /commands/import-text
@@ -39,9 +39,9 @@ An On Validate event is sent to the form method for each record that is imported
 
 The *document* parameter can include a path that contains volume and folder names. If you pass an empty string, the standard Open File dialog box is displayed. If the user cancels this dialog, the import operation is canceled, and the OK system variable is set to 0.
 
-A progress thermometer is displayed during import. The user can cancel the operation by clicking a button labeled Stop. Records that have already been imported will not be removed if the user presses the Stop button. If the import is successfully completed, the OK system variable is set to 1\. If an error occurs or the operation was interrupted, the OK variable is set to 0\. The thermometer can be hidden with the [MESSAGES OFF](messages-off.md) command.
+A progress thermometer is displayed during import. The user can cancel the operation by clicking a button labeled Stop. Records that have already been imported will not be removed if the user presses the Stop button. If the import is successfully completed, the OK system variable is set to 1\. If an error occurs or the operation was interrupted, the OK variable is set to 0\. The thermometer can be hidden with the [MESSAGES OFF](../commands/messages-off) command.
 
-By default, the command uses the UTF-8 character set. You can use the [USE CHARACTER SET](use-character-set.md) command to change this character set. 
+By default, the command uses the UTF-8 character set. You can use the [USE CHARACTER SET](../commands/use-character-set) command to change this character set. 
 
 Using **IMPORT TEXT**, the default field delimiter is the tab character (code 9). The default record delimiter is the carriage return character (code 13). You can change these defaults by assigning values to the two delimiter *System Variables*: *FldDelimit* and *RecDelimit*. The user can change the defaults in the Design environment’s Import Data dialog box. Text fields may contain carriage returns, therefore, be careful when using a carriage return as a delimiter if you are importing text fields.
 
@@ -62,10 +62,10 @@ OK is set to 1 if the import is successfully completed; otherwise, it is set to 
 
 ## See also 
 
-[EXPORT TEXT](export-text.md)  
-[IMPORT DIF](import-dif.md)  
-[IMPORT SYLK](import-sylk.md)  
-[USE CHARACTER SET](use-character-set.md)  
+[EXPORT TEXT](../commands/export-text)  
+[IMPORT DIF](../commands/import-dif)  
+[IMPORT SYLK](../commands/import-sylk)  
+[USE CHARACTER SET](../commands/use-character-set)  
 
 ## Properties
 

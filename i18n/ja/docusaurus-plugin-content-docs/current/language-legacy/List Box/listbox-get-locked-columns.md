@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-locked-columns
 title: LISTBOX Get locked columns
 slug: /commands/listbox-get-locked-columns
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 オプションの *\** 引数を渡した場合、*object* 引数はオブジェクト名 (文字列) です。この引数を渡さない場合 *object* は変数です。この場合文字列ではなく変数参照を渡します。
 
-列はプロパティリストや[LISTBOX SET LOCKED COLUMNS](listbox-set-locked-columns.md)コマンドを使用してロックできます。詳細はデザインリファレンスマニュアルを参照してください。
+列はプロパティリストや[LISTBOX SET LOCKED COLUMNS](../commands/listbox-set-locked-columns)コマンドを使用してロックできます。詳細はデザインリファレンスマニュアルを参照してください。
 
 ロックされたエリア内でプログラムを使用して列が挿入されたり削除されたりすると、このコマンドから返される列数も変更されます。例えばロックされた列をひとつ削除すると、ロックされた列の数はひとつ減ります。同様にロックされたエリアにプログラムで列を挿入すると、この列は自動でロックされ、ロックされた列数は一つ増えます。 
 
@@ -41,7 +41,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[LISTBOX SET LOCKED COLUMNS](listbox-set-locked-columns.md)  
+[LISTBOX SET LOCKED COLUMNS](../commands/listbox-set-locked-columns)  
 
 ## プロパティ
 

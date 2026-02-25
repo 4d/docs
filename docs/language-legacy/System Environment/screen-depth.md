@@ -1,4 +1,4 @@
----
+﻿---
 id: screen-depth
 title: SCREEN DEPTH
 slug: /commands/screen-depth
@@ -70,7 +70,7 @@ Your application displays many color graphics. Somewhere in your database, you c
 
 ## See also 
 
-[Count screens](count-screens.md)  
+[Count screens](../commands/count-screens)  
 
 
 ## Properties

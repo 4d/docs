@@ -1,4 +1,4 @@
----
+﻿---
 id: show-menu-bar
 title: SHOW MENU BAR
 slug: /commands/show-menu-bar
@@ -32,13 +32,13 @@ Se a barra de menus já estiver visível, o comando não faz nada.
 
 ## Exemplo 
 
-Ver exemplo do comando [HIDE MENU BAR](hide-menu-bar.md).
+Ver exemplo do comando [HIDE MENU BAR](../commands/hide-menu-bar).
 
 ## Ver também 
 
-[HIDE MENU BAR](hide-menu-bar.md)  
-[HIDE TOOL BAR](hide-tool-bar.md)  
-[SHOW TOOL BAR](show-tool-bar.md)  
+[HIDE MENU BAR](../commands/hide-menu-bar)  
+[HIDE TOOL BAR](../commands/hide-tool-bar)  
+[SHOW TOOL BAR](../commands/show-tool-bar)  
 
 ## Propriedades
 

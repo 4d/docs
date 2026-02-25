@@ -1,4 +1,4 @@
----
+﻿---
 id: encrypt-data-file
 title: Encrypt data file
 slug: /commands/encrypt-data-file
@@ -51,7 +51,7 @@ Dans le paramètre *cheminDonnées*, vous pouvez passer une chaine vide, un nom 
 * **Pour chiffrer la base pour la première fois,** il vous suffit de passer le paramètre*nouvellePhraseSecrète* ou *nouvelleCléDonnées*  
  (Les paramètres *nouvellePhraseSecrète* ou *nouvelleCléDonnées* ne doivent pas être fournis) :  
    * *nouvellePhraseSecrète* : Chaine utilisée pour générer la clé de chiffrement (SHA 256 bits)  
-   * *nouvelleCléDonnées* : Objet (avec la propriété *encodedKey*) qui contient une nouvelle clé de chiffrement des données. Cette clé devrait avoir été générée à l'aide de la commande [New data key](new-data-key.md).  
+   * *nouvelleCléDonnées* : Objet (avec la propriété *encodedKey*) qui contient une nouvelle clé de chiffrement des données. Cette clé devrait avoir été générée à l'aide de la commande [New data key](../commands/new-data-key).  
     
 **Note :** Le paramètre *nouvellePhraseSecrète* (ou *nouvelleCléDonnées*) n'est pas ajouté au trousseau 4D.
 * **Pour rechiffrer une base** (*i.e.* la base a déjà été chiffrée), vous devez passer le paramètre *nouvellePhraseSecrète* (ou *nouvelleCléDonnées*) et la phrase secrète courante (ou la clé de données courante). Ceci est nécessaire au déchiffrement de la base avant de la re-chiffrer. Ces informations peuvent être fournies comme suit :  
@@ -72,7 +72,7 @@ Le paramètre *nomMéthode* est utilisé pour fixer une méthode de rétro-appel
 | End of execution    | 4                    | 0                              | "Ok"                                                                                            | 0                               | Réservé                        |
 | Warning(\*)         | 5                    | Type d'objet                   | Texte d'erreur                                                                                  | Numéro de table ou d'indice     | Réservé                        |
 
-(\*) Avertissement renvoyé lors de l'étape de vérification (voir la commande [VERIFY DATA FILE](verify-data-file.md)).
+(\*) Avertissement renvoyé lors de l'étape de vérification (voir la commande [VERIFY DATA FILE](../commands/verify-data-file)).
 
 **Valeur retournée**
 
@@ -144,10 +144,10 @@ $folder:=Encrypt data file(Structure file;"myData.4DD")
 ## Voir aussi 
 
   
-[Data file encryption status](data-file-encryption-status.md)  
-[Decrypt data BLOB](decrypt-data-blob.md)  
-[Encrypt data BLOB](encrypt-data-blob.md)  
-[New data key](new-data-key.md)  
+[Data file encryption status](../commands/data-file-encryption-status)  
+[Decrypt data BLOB](../commands/decrypt-data-blob)  
+[Encrypt data BLOB](../commands/encrypt-data-blob)  
+[New data key](../commands/new-data-key)  
 
 ## Propriétés
 

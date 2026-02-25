@@ -1,4 +1,4 @@
----
+﻿---
 id: save-record
 title: SAVE RECORD
 slug: /commands/save-record
@@ -25,8 +25,8 @@ Si vous appelez la commande **SAVE RECORD** alors qu'aucun champ n'a été modif
 
 L'utilisation de **SAVE RECORD** est nécessaire dans les cas suivants :
 
-* Pour sauvegarder un enregistrement créé par les commandes [CREATE RECORD](create-record.md) ou [DUPLICATE RECORD](duplicate-record.md),
-* Pour sauvegarder des données issues de la commande [RECEIVE RECORD](receive-record.md),
+* Pour sauvegarder un enregistrement créé par les commandes [CREATE RECORD](../commands/create-record) ou [DUPLICATE RECORD](../commands/duplicate-record),
+* Pour sauvegarder des données issues de la commande [RECEIVE RECORD](../commands/receive-record),
 * Pour sauvegarder un enregistrement modifié par une méthode,
 * Pour sauvegarder un enregistrement contenant un sous-enregistrement ayant été créé ou modifié par la commande *\_o\_ADD SUBRECORD*, *\_o\_CREATE SUBRECORD*, ou *\_o\_MODIFY SUBRECORD*,
 * Pendant la saisie de données, pour sauvegarder l'enregistrement affiché avant d'appeler une commande qui change l'enregistrement courant,
@@ -47,8 +47,8 @@ L'exemple suivant est une partie d'une méthode récupérant des enregistrements
 
 ## Voir aussi 
 
-[CREATE RECORD](create-record.md)  
-[Locked](locked.md)  
+[CREATE RECORD](../commands/create-record)  
+[Locked](../commands/locked)  
 *Présentation des triggers*  
 
 ## Propriétés

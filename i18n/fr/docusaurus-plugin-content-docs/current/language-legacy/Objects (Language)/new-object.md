@@ -1,4 +1,4 @@
----
+﻿---
 id: new-object
 title: New object
 slug: /commands/new-object
@@ -53,8 +53,8 @@ Optionnellement, vous pouvez pré-remplir le nouvel objet en passant une ou plus
 
 Notez que :
 
-* si vous passez un pointeur, il est récupéré tel quel ; il sera évalué lors de l'utilisation de commandes telles que [JSON Stringify](json-stringify.md),
-* les dates sont stockées sous forme de date "yyyy-mm-dd" ou de chaîne au format "YYYY-MM-DDTHH:mm:ss.SSSZ" en fonction du paramétrage courant relatif au stockage des dates dans les objets (cf. *Page Compatibilité*). Lorsque vous convertissez des dates 4D en texte, avant de les stocker dans l'objet, par défaut, le programme utilise l'heure locale de la zone. Vous pouvez modifier ce comportement en utilisant le sélecteur Dates inside objects de la commande [SET DATABASE PARAMETER](set-database-parameter.md).
+* si vous passez un pointeur, il est récupéré tel quel ; il sera évalué lors de l'utilisation de commandes telles que [JSON Stringify](../commands/json-stringify),
+* les dates sont stockées sous forme de date "yyyy-mm-dd" ou de chaîne au format "YYYY-MM-DDTHH:mm:ss.SSSZ" en fonction du paramétrage courant relatif au stockage des dates dans les objets (cf. *Page Compatibilité*). Lorsque vous convertissez des dates 4D en texte, avant de les stocker dans l'objet, par défaut, le programme utilise l'heure locale de la zone. Vous pouvez modifier ce comportement en utilisant le sélecteur Dates inside objects de la commande [SET DATABASE PARAMETER](../commands/set-database-parameter).
 * si vous passez une heure, elle est stockée en nombre de millisecondes (réel).
 
 ## Exemple 1 
@@ -117,7 +117,7 @@ Avec cette commande, vous pouvez aisément gérer des objets en boucle :
 ## Voir aussi 
 
   
-[New shared object](new-shared-object.md)  
+[New shared object](../commands/new-shared-object)  
 
 ## Propriétés
 

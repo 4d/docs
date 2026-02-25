@@ -1,4 +1,4 @@
----
+﻿---
 id: is-nil-pointer
 title: Is nil pointer
 slug: /commands/is-nil-pointer
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is nil pointer.Summary-->The **Is nil pointer** command returns True if the pointer you pass in *aPointer* is Nil (*\->\[\]*).<!-- END REF--> It returns False in all other cases (pointer to field, table or variable).
 
-If you want to find out the name of the variable or the number of the field that is being pointed to, you can use the [RESOLVE POINTER](resolve-pointer.md) command.
+If you want to find out the name of the variable or the number of the field that is being pointed to, you can use the [RESOLVE POINTER](../commands/resolve-pointer) command.
 
 ## Example 
 
@@ -47,8 +47,8 @@ If you want to find out the name of the variable or the number of the field that
 
 ## See also 
 
-[Is a variable](is-a-variable.md)  
-[RESOLVE POINTER](resolve-pointer.md)  
+[Is a variable](../commands/is-a-variable)  
+[RESOLVE POINTER](../commands/resolve-pointer)  
 
 ## Properties
 

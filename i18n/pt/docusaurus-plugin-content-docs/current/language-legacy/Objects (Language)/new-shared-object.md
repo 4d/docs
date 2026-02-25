@@ -1,4 +1,4 @@
----
+﻿---
 id: new-shared-object
 title: New shared object
 slug: /commands/new-shared-object
@@ -76,7 +76,7 @@ Se quiser criar e modificar um objeto compartido. A estrutura deve ser chamada p
 
 ## Ver também 
 
-[New object](new-object.md)  
+[New object](../commands/new-object)  
 [New shared collection](../commands/new-shared-collection)  
 *Objetos compartidos e Coleções compartidas*  
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: old-related-one
 title: OLD RELATED ONE
 slug: /commands/old-related-one
@@ -40,10 +40,10 @@ Si el comando se ejecuta correctamente y si los registros relacionados se han ca
 
 ## Ver también 
 
-[Old](old.md)  
-[OLD RELATED MANY](old-related-many.md)  
-[RELATE ONE](relate-one.md)  
-[SAVE RELATED ONE](save-related-one.md)  
+[Old](../commands/old)  
+[OLD RELATED MANY](../commands/old-related-many)  
+[RELATE ONE](../commands/relate-one)  
+[SAVE RELATED ONE](../commands/save-related-one)  
 
 ## Propiedades
 

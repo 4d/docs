@@ -1,4 +1,4 @@
----
+﻿---
 id: method-called-on-event
 title: Method called on event
 slug: /commands/method-called-on-event
@@ -33,7 +33,7 @@ Si no se ha instalado un ningún método, se devuelve una cadena vacía ("").
 
 ## Ver también 
 
-[ON EVENT CALL](on-event-call.md)  
+[ON EVENT CALL](../commands/on-event-call)  
 
 ## Propiedades
 

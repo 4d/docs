@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-info-column
 title: QR SET INFO COLUMN
 slug: /commands/qr-set-info-column
@@ -85,13 +85,13 @@ La méthode suivante affecte une taille automatique à toutes les colonnes d'un 
 ```
 
   
-A noter que, comme vous voulez modifier uniquement la taille de la colonne, vous devez utiliser la commande [QR GET INFO COLUMN](qr-get-info-column.md) pour récupérer les propriétés courantes de la colonne puis les passer à **QR SET INFO COLUMN** afin de les conserver inchangées, excepté pour la taille.
+A noter que, comme vous voulez modifier uniquement la taille de la colonne, vous devez utiliser la commande [QR GET INFO COLUMN](../commands/qr-get-info-column) pour récupérer les propriétés courantes de la colonne puis les passer à **QR SET INFO COLUMN** afin de les conserver inchangées, excepté pour la taille.
 
 * Source de données (objet) et format d'affichage  
 Dans ce cas, la numérotation des colonnes s'effectue de la manière suivante :  
 ![](../../assets/en/commands/pict31031.fr.png)
 
-A noter qu'il n'est pas possible d'adresser toutes les cellules avec la commande **QR SET INFO COLUMN**, les cellules non numérotées dans le schéma ci-dessus doivent être gérées à l'aide de la commande [QR SET TOTALS DATA](qr-set-totals-data.md).
+A noter qu'il n'est pas possible d'adresser toutes les cellules avec la commande **QR SET INFO COLUMN**, les cellules non numérotées dans le schéma ci-dessus doivent être gérées à l'aide de la commande [QR SET TOTALS DATA](../commands/qr-set-totals-data).
 
 Le code suivant associe des sources de données aux trois cellules nécessaires à la construction d'un état en tableau croisé simple :
 
@@ -113,9 +113,9 @@ Si le paramètre *numColonne* est incorrect, l’erreur -9852 est générée.
 
 ## Voir aussi 
 
-[QR GET INFO COLUMN](qr-get-info-column.md)  
-[QR Get info row](qr-get-info-row.md)  
-[QR SET INFO ROW](qr-set-info-row.md)  
+[QR GET INFO COLUMN](../commands/qr-get-info-column)  
+[QR Get info row](../commands/qr-get-info-row)  
+[QR SET INFO ROW](../commands/qr-set-info-row)  
 
 ## Propriétés
 

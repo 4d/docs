@@ -1,4 +1,4 @@
----
+﻿---
 id: json-parse
 title: JSON Parse
 slug: /commands/json-parse
@@ -32,11 +32,11 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.JSON Parse.Summary-->La commande **JSON Parse** analyse (parse) le contenu d’une chaîne formatée en JSON et en extrait des valeurs que vous pouvez stocker dans un champ ou une variable 4D.<!-- END REF--> Cette commande désérialise des données JSON ; elle effectue l’action inverse de la commande [JSON Stringify](json-stringify.md).
+<!--REF #_command_.JSON Parse.Summary-->La commande **JSON Parse** analyse (parse) le contenu d’une chaîne formatée en JSON et en extrait des valeurs que vous pouvez stocker dans un champ ou une variable 4D.<!-- END REF--> Cette commande désérialise des données JSON ; elle effectue l’action inverse de la commande [JSON Stringify](../commands/json-stringify).
 
 Passez dans *chaîneJSON* la chaîne au format JSON dont vous souhaitez analyser le contenu. Cette chaîne doit être correctement formatée, sinon une erreur de parsing est générée. **JSON Parse** peut donc être utilisée pour valider du JSON. 
 
-**Note :** Si vous utilisez des pointeurs, vous devez appeler la commande [JSON Stringify](json-stringify.md) avant **JSON Parse**. 
+**Note :** Si vous utilisez des pointeurs, vous devez appeler la commande [JSON Stringify](../commands/json-stringify) avant **JSON Parse**. 
 
 Par défaut, si vous omettez le paramètre *type*, 4D tentera de convertir la valeur obtenue dans le type de la variable ou du champ utilisé pour stocker le résultat (s’il est défini). Sinon, 4D tentera de déduire le type. Vous pouvez également forcer l’interprétation du type en passant le paramètre *type* : passez une des constantes suivantes du thème *Types champs et variables* :
 
@@ -133,7 +133,7 @@ Si le paramétrage courant de stockage de date est "type date", vous pouvez écr
 
 ## Exemple 4 
 
-Cet exemple montre l’utilisation conjointe des commandes [JSON Stringify](json-stringify.md) et **JSON Parse** :
+Cet exemple montre l’utilisation conjointe des commandes [JSON Stringify](../commands/json-stringify) et **JSON Parse** :
 
 ```4d
  var $JSONContact : Text
@@ -199,9 +199,9 @@ beta[1].golf:{line:10,offset:12}}}
 
 ## Voir aussi 
 
-[JSON PARSE ARRAY](json-parse-array.md)  
-[JSON Stringify](json-stringify.md)  
-[JSON Validate](json-validate.md)  
+[JSON PARSE ARRAY](../commands/json-parse-array)  
+[JSON Stringify](../commands/json-stringify)  
+[JSON Validate](../commands/json-validate)  
 *Types champs et variables*  
 
 ## Propriétés

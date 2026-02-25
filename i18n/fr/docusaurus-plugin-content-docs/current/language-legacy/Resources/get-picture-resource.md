@@ -1,4 +1,4 @@
----
+﻿---
 id: get-picture-resource
 title: GET PICTURE RESOURCE
 slug: /commands/get-picture-resource
@@ -40,7 +40,7 @@ Si vous passez un numéro de référence de fichier de ressources valide dans *r
 
 ## Exemple 
 
-Reportez-vous à l'exemple de la commande [RESOURCE LIST](resource-list.md).
+Reportez-vous à l'exemple de la commande [RESOURCE LIST](../commands/resource-list).
 
 ## Variables et ensembles système 
 
@@ -48,11 +48,11 @@ La variable système OK prend la valeur 1 si la ressource est trouvée, sinon el
 
 ## Gestion des erreurs 
 
-S'il n'y a pas assez de mémoire disponible pour charger l'image, une erreur est générée. Vous pouvez intercepter cette erreur à l'aide d'une méthode de gestion d'erreurs installée par la commande [ON ERR CALL](on-err-call.md).
+S'il n'y a pas assez de mémoire disponible pour charger l'image, une erreur est générée. Vous pouvez intercepter cette erreur à l'aide d'une méthode de gestion d'erreurs installée par la commande [ON ERR CALL](../commands/on-err-call).
 
 ## Voir aussi 
 
-[ON ERR CALL](on-err-call.md)  
+[ON ERR CALL](../commands/on-err-call)  
 
 ## Propriétés
 

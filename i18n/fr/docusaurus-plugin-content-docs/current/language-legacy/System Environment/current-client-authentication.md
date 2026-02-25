@@ -1,4 +1,4 @@
----
+﻿---
 id: current-client-authentication
 title: Current client authentication
 slug: /commands/current-client-authentication
@@ -64,7 +64,7 @@ Dans votre base 4D Server, vous avez conçu un système de contrôle d'accès ba
 1. Dans la page "Sécurité" de la boîte de dialogue des Propriétés de la base, désignez un "Utilisateur par défaut" :  
 ![](../../assets/en/commands/pict2909681.fr.png)  
 Avec ce paramétrage, aucune boîte de dialogue d'identification n'est affichée pour les utilisateurs 4D distants qui se connectent au serveur -- tous les clients sont connectés par défaut en tant que "Bob".
-2. Dans la [On Server Open Connection database method](on-server-open-connection-database-method.md), ajoutez le code suivant afin d'authentifier l'utilisateur auprès de l'Active Directory:
+2. Dans la [On Server Open Connection database method](../commands/on-server-open-connection-database-method), ajoutez le code suivant afin d'authentifier l'utilisateur auprès de l'Active Directory:
 
 ```4d
   //Méthode base Sur ouverture connexion serveur

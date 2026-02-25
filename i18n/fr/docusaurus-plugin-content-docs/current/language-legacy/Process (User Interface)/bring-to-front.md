@@ -1,4 +1,4 @@
----
+﻿---
 id: bring-to-front
 title: BRING TO FRONT
 slug: /commands/bring-to-front
@@ -17,11 +17,11 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.BRING TO FRONT.Summary-->**BRING TO FRONT** passe les fenêtres du process de numéro *process* au premier plan.<!-- END REF--> Toutes les fenêtres appartenant à *process* passent au premier plan. Si le process est déjà au premier plan, la commande ne fait rien. Si le process est caché, il faut utiliser la commande [SHOW PROCESS](show-process.md) pour faire d'abord apparaître le process, sinon **BRING TO FRONT** ne fait rien.
+<!--REF #_command_.BRING TO FRONT.Summary-->**BRING TO FRONT** passe les fenêtres du process de numéro *process* au premier plan.<!-- END REF--> Toutes les fenêtres appartenant à *process* passent au premier plan. Si le process est déjà au premier plan, la commande ne fait rien. Si le process est caché, il faut utiliser la commande [SHOW PROCESS](../commands/show-process) pour faire d'abord apparaître le process, sinon **BRING TO FRONT** ne fait rien.
 
 Le Process principal et le Process de structure peuvent être passés au premier plan à l'aide de cette commande.
 
-**Note :** Si le process contient plusieurs fenêtres et que vous souhaitez passer au premier plan une fenêtre spécifique, il est préférable d'utiliser par exemple la commande [SET WINDOW RECT](set-window-rect.md). 
+**Note :** Si le process contient plusieurs fenêtres et que vous souhaitez passer au premier plan une fenêtre spécifique, il est préférable d'utiliser par exemple la commande [SET WINDOW RECT](../commands/set-window-rect). 
 
 ## Exemple 
 
@@ -35,9 +35,9 @@ L'exemple suivant est une méthode qui peut être exécutée à partir d'une com
 
 ## Voir aussi 
 
-[HIDE PROCESS](hide-process.md)  
-[Process state](process-state.md)  
-[SHOW PROCESS](show-process.md)  
+[HIDE PROCESS](../commands/hide-process)  
+[Process state](../commands/process-state)  
+[SHOW PROCESS](../commands/show-process)  
 
 ## Propriétés
 

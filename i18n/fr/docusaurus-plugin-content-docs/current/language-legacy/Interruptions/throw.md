@@ -1,4 +1,4 @@
----
+﻿---
 id: throw
 title: throw
 slug: /commands/throw
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 Lorsque vous rencontrez une situation d'erreur dans votre code 4D, vous pouvez utiliser la commande **throw** pour générer explicitement une erreur et fournir un message d'erreur spécifique ou un numéro d'erreur. Cela peut être utile pour signaler des conditions exceptionnelles ou des entrées non valides.
 
-Les erreurs générées à l'aide de la commande **throw** sont gérées par le moteur 4D comme des erreurs normales : la boîte de dialogue d'erreur standard est affichée, sauf si une méthode d'interception a été installée à l'aide de la commande [ON ERR CALL](on-err-call.md).
+Les erreurs générées à l'aide de la commande **throw** sont gérées par le moteur 4D comme des erreurs normales : la boîte de dialogue d'erreur standard est affichée, sauf si une méthode d'interception a été installée à l'aide de la commande [ON ERR CALL](../commands/on-err-call).
 
 La commande prend en charge trois syntaxes :
 
@@ -66,10 +66,10 @@ Lorsque vous utilisez cette syntaxe, l'objet *errorObj* est renvoyé dans [Last 
 
 ### **throw** 
 
-Elle lance toutes les erreurs courantes en ***mode différé***, ce qui signifie qu'elles seront ajoutées à une pile et traitées au retour de la méthode appelante. Ceci est typiquement fait à l'intérieur d'un [ON ERR CALL](on-err-call.md) callback.
+Elle lance toutes les erreurs courantes en ***mode différé***, ce qui signifie qu'elles seront ajoutées à une pile et traitées au retour de la méthode appelante. Ceci est typiquement fait à l'intérieur d'un [ON ERR CALL](../commands/on-err-call) callback.
 
-* **Dans une application :** Lorsqu'une erreur survient, elle est ajoutée à la pile d'erreurs et la méthode [ON ERR CALL](on-err-call.md) de l'application est appelée à la fin de la méthode courante. La fonction [Last errors](../commands/last-errors) renvoie la pile d'erreurs.
-* **Par conséquent, dans un composant** : La pile d'erreurs peut être envoyée à l'application hôte et la méthode [ON ERR CALL](on-err-call.md) de l'application hôte est appelée.
+* **Dans une application :** Lorsqu'une erreur survient, elle est ajoutée à la pile d'erreurs et la méthode [ON ERR CALL](../commands/on-err-call) de l'application est appelée à la fin de la méthode courante. La fonction [Last errors](../commands/last-errors) renvoie la pile d'erreurs.
+* **Par conséquent, dans un composant** : La pile d'erreurs peut être envoyée à l'application hôte et la méthode [ON ERR CALL](../commands/on-err-call) de l'application hôte est appelée.
 
 ## Example 1 
 
@@ -115,9 +115,9 @@ throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFi
 
 ## Voir aussi 
 
-[ASSERT](assert.md)  
+[ASSERT](../commands/assert)  
 [Last errors](../commands/last-errors)  
-[ON ERR CALL](on-err-call.md)  
+[ON ERR CALL](../commands/on-err-call)  
 
 ## Propriétés
 

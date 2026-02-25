@@ -1,4 +1,4 @@
----
+﻿---
 id: st-set-plain-text
 title: ST SET PLAIN TEXT
 slug: /commands/st-set-plain-text
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST SET PLAIN TEXT.Summary-->La commande **ST SET PLAIN TEXT** insère le texte passé dans le paramètre *nouvTexte* dans le champ ou la variable de texte multistyle désigné(e) par le paramètre *objet*.<!-- END REF--> Cette commande s’applique uniquement au texte brut du paramètre *objet*, sans modifier les éventuelles balises de style qu’il contient. 
 
-A la différence de la commande [ST SET TEXT](st-set-text.md), **ST SET PLAIN TEXT** permet d’insérer uniquement du texte sans style. Le texte *nouvTexte* ne doit pas contenir de balises de style. S’il contient les caractères <, > ou &, ils seront considérés comme des caractères standard et seront convertis en entités HTML :
+A la différence de la commande [ST SET TEXT](../commands/st-set-text), **ST SET PLAIN TEXT** permet d’insérer uniquement du texte sans style. Le texte *nouvTexte* ne doit pas contenir de balises de style. S’il contient les caractères <, > ou &, ils seront considérés comme des caractères standard et seront convertis en entités HTML :
 
 * '&' est converti en &amp;
 * '<' est converti en &lt;
@@ -51,9 +51,9 @@ Passez dans *nouvTexte* le texte brut à insérer.
 
 Les paramètres optionnels *débutSél* et *finSél* vous permettent de désigner une sélection de texte dans *objet*. Les valeurs *débutSél* et *finSél* expriment une sélection de texte brut, sans tenir compte des balises de style éventuellement présentes dans le texte. L’action de la commande diffère en fonction des paramètres facultatifs *débutSél* et *finSél* :
 
-* si vous omettez *débutSél* et *finSél*, [ST SET PLAIN TEXT](st-set-plain-text.md) remplace la totalité du texte de *objet* par *nouvTexte*,
-* si vous passez uniquement *débutSél* ou si les valeurs de *débutSél* et *finSél* sont égales, [ST SET PLAIN TEXT](st-set-plain-text.md) insère le texte *nouvTexte* dans *objet* à partir de *débutSél*,
-* si vous passez *débutSél* et *finSél*, [ST SET PLAIN TEXT](st-set-plain-text.md) remplace le texte brut défini par ces bornes avec le texte *nouvTexte*.
+* si vous omettez *débutSél* et *finSél*, [ST SET PLAIN TEXT](../commands/st-set-plain-text) remplace la totalité du texte de *objet* par *nouvTexte*,
+* si vous passez uniquement *débutSél* ou si les valeurs de *débutSél* et *finSél* sont égales, [ST SET PLAIN TEXT](../commands/st-set-plain-text) insère le texte *nouvTexte* dans *objet* à partir de *débutSél*,
+* si vous passez *débutSél* et *finSél*, [ST SET PLAIN TEXT](../commands/st-set-plain-text) remplace le texte brut défini par ces bornes avec le texte *nouvTexte*.
 * vous pouvez passer 0 dans *finSél* afin de désigner automatiquement le dernier caractère du texte (passez 1 dans *débutSél* pour désigner le premier caractère).
 
 4D propose des constantes prédéfinies afin de désigner automatiquement des bornes de sélection dans les paramètres *débutSél* et *finSél*. Ces constantes sont placées dans le thème "*Texte multistyle*" : 
@@ -77,7 +77,7 @@ Soit la variable texte multistyle suivante :
 
 ![](../../assets/en/commands/pict572269.fr.png)
 
-Vous voulez insérer des noms de sociétés stockés dans un champ texte. Ces noms peuvent comporter par exemple le caractère "&". Dans ce cas, il est nécessaire d'utiliser la commande [ST SET PLAIN TEXT](st-set-plain-text.md) :
+Vous voulez insérer des noms de sociétés stockés dans un champ texte. Ces noms peuvent comporter par exemple le caractère "&". Dans ce cas, il est nécessaire d'utiliser la commande [ST SET PLAIN TEXT](../commands/st-set-plain-text) :
 
 ```4d
  ST SET PLAIN TEXT(monTexteStyl;[Société]Nom;33;34)
@@ -93,7 +93,7 @@ Voici le texte brut contenu dans la variable :
 
 Vous pouvez constater que le texte inséré a été encapsulé au sein d'une paire de balises de style supplémentaires. Ces balises correspondent au style du caractère précédent l'insertion. Ce mécanisme permet de garantir un affichage correct des champs multistyles dans tous les cas de figure. 
 
-**Note :** Si vous aviez utilisé la commande [ST SET TEXT](st-set-text.md) dans ce cas, 4D n'aurait rien inséré, car la présence du caractère "&" non encodé empêcherait l'interprétation des balises de style présentes dans la variable. Pour plus d'informations, reportez-vous à la description de cette commande. 
+**Note :** Si vous aviez utilisé la commande [ST SET TEXT](../commands/st-set-text) dans ce cas, 4D n'aurait rien inséré, car la présence du caractère "&" non encodé empêcherait l'interprétation des balises de style présentes dans la variable. Pour plus d'informations, reportez-vous à la description de cette commande. 
 
 ## Variables et ensembles système 
 
@@ -103,8 +103,8 @@ A noter qu’en cas d’erreur, la variable n’est pas modifiée. Lorsqu’une 
 
 ## Voir aussi 
 
-[ST Get plain text](st-get-plain-text.md)  
-[ST SET TEXT](st-set-text.md)  
+[ST Get plain text](../commands/st-get-plain-text)  
+[ST SET TEXT](../commands/st-set-text)  
 
 ## Propriétés
 

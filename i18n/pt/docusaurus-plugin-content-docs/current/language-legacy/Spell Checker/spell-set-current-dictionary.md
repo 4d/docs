@@ -1,4 +1,4 @@
----
+﻿---
 id: spell-set-current-dictionary
 title: SPELL SET CURRENT DICTIONARY
 slug: /commands/spell-set-current-dictionary
@@ -38,10 +38,10 @@ Por padrão, 4D utiliza o dicionário:
 * Em Windows, o dicionário Hunspell correspondente a linguagem da aplicação,
 * Em macOS, o corretor ortográfico nativo.
 
-**Nota**: Para maior informação sobre os dicionários Hunspell, consulte [SET DATABASE PARAMETER](set-database-parameter.md) . Para saber mais, veja *Configuração da correção ortográfica*. 
+**Nota**: Para maior informação sobre os dicionários Hunspell, consulte [SET DATABASE PARAMETER](../commands/set-database-parameter) . Para saber mais, veja *Configuração da correção ortográfica*. 
 
  Pode utilizar o parâmetro *dicionario* para mudar o dicionário. Pode passar:
-* Um número de identificação de dicionário Hunspell (devolvido pelo comando [SPELL GET DICTIONARY LIST](spell-get-dictionary-list.md)),
+* Um número de identificação de dicionário Hunspell (devolvido pelo comando [SPELL GET DICTIONARY LIST](../commands/spell-get-dictionary-list)),
 * Um nome de dicionário Hunspell (que corresponde ao nome de arquivo do dicionário Hunspell, com ou sem a extensão),
 * Um código de linguagem BCP 47, ISO 639-1 ou ISO 639-2\. Por exemplo, com o código de linguagem BCP 47, "en-US" designa Inglês Americano e "en-GB" designa Inglês Britânico. Estes códigos são dirigidos internamente ao dicionário atual correspondente (Hunspell ou nativo macOS).
 
@@ -62,9 +62,9 @@ Loading of the "fr-classic" dictionary found in the Hunspell folder:
 
 ## Ver também 
 
-[SPELL CHECKING](spell-checking.md)  
-[SPELL Get current dictionary](spell-get-current-dictionary.md)  
-[SPELL GET DICTIONARY LIST](spell-get-dictionary-list.md)  
+[SPELL CHECKING](../commands/spell-checking)  
+[SPELL Get current dictionary](../commands/spell-get-current-dictionary)  
+[SPELL GET DICTIONARY LIST](../commands/spell-get-dictionary-list)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-copy
 title: OB Copy
 slug: /commands/ob-copy
@@ -177,7 +177,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OB Get](ob-get.md)  
+[OB Get](../commands/ob-get)  
 *共有オブジェクトと共有コレクション*  
 
 ## プロパティ

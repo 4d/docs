@@ -1,4 +1,4 @@
----
+﻿---
 id: stop-monitoring-activity
 title: STOP MONITORING ACTIVITY
 slug: /commands/stop-monitoring-activity
@@ -26,18 +26,18 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.STOP MONITORING ACTIVITY.Summary-->El comando **STOP MONITORING ACTIVITY** detiene el seguimiento de las actividades iniciadas con el comando [START MONITORING ACTIVITY](start-monitoring-activity.md).<!-- END REF--> Después de la ejecución de este comando, se vacía cualquier registro de actividad en la memoria.
+<!--REF #_command_.STOP MONITORING ACTIVITY.Summary-->El comando **STOP MONITORING ACTIVITY** detiene el seguimiento de las actividades iniciadas con el comando [START MONITORING ACTIVITY](../commands/start-monitoring-activity).<!-- END REF--> Después de la ejecución de este comando, se vacía cualquier registro de actividad en la memoria.
 
 Este comando se puede llamar y ejecutar en 4D remoto, 4D Server y en aplicaciones 4D autonomas.
 
 ## Ejemplo 
 
-Ver ejemplo para **[START MONITORING ACTIVITY](start-monitoring-activity.md)**.
+Ver ejemplo para **[START MONITORING ACTIVITY](../commands/start-monitoring-activity)**.
 
 ## Ver también 
 
-[Monitored activity](monitored-activity.md)  
-[START MONITORING ACTIVITY](start-monitoring-activity.md)  
+[Monitored activity](../commands/monitored-activity)  
+[START MONITORING ACTIVITY](../commands/start-monitoring-activity)  
 
 ## Propiedades
 

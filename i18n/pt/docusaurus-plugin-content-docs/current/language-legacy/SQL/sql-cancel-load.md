@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-cancel-load
 title: SQL CANCEL LOAD
 slug: /commands/sql-cancel-load
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL CANCEL LOAD.Summary-->O comando SQL CANCEL LOAD finaliza a solicitação *SELECT* atual e inicializa os parâmetros.<!-- END REF-->  
   
-Este comando se utiliza para executar varias pedidos *SELECT* dentro da mesma conexão (ou seja o mesmo cursor) iniciada pelo comando [SQL LOGIN](sql-login.md). 
+Este comando se utiliza para executar varias pedidos *SELECT* dentro da mesma conexão (ou seja o mesmo cursor) iniciada pelo comando [SQL LOGIN](../commands/sql-login). 
 
 ## Exemplo 
 
@@ -61,8 +61,8 @@ Se o comando for executado corretamente, a variável sistema OK retorna 1\. Do c
 
 ## Ver também 
 
-[SQL LOAD RECORD](sql-load-record.md)  
-[SQL LOGIN](sql-login.md)  
+[SQL LOAD RECORD](../commands/sql-load-record)  
+[SQL LOGIN](../commands/sql-login)  
 
 ## Propriedades
 

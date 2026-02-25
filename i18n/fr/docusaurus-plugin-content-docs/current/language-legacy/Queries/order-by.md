@@ -1,4 +1,4 @@
----
+﻿---
 id: order-by
 title: ORDER BY
 slug: /commands/order-by
@@ -50,7 +50,7 @@ Si les champs triés sont inclus dans un index composite, **ORDER BY** tire part
 Pour indiquer que le tri ne doit pas être immédiatement effectué, passez en dernier paramètre le symbole *\**. 4D attendra de rencontrer une nouvelle ligne de tri ne se terminant pas par *\** pour exécuter le tri. Cette possibilité est utile pour gérer les tris multicritères dans le cadre d'interfaces personnalisées.  
 **Attention :** lorsque vous utilisez cette syntaxe, vous ne pouvez passer qu'un seul niveau de tri (un seul champ) par ligne d'instruction.
 
-Quelle que soit la manière dont le tri est défini, si l'opération risque de prendre un certain temps, 4D affiche automatiquement un message contenant un thermomètre de progression. Vous pouvez décider d'afficher ou de ne pas afficher ce message pour le process à l'aide des commandes [MESSAGES OFF](messages-off.md) et [MESSAGES ON](messages-on.md). Si le thermomètre de progression est affiché, l'utilisateur peut cliquer sur le bouton **Stop** pour interrompre l'opération. Si le tri s'est correctement déroulé, la variable système OK prend la valeur 1\. Sinon, si le tri est interrompu, OK prend la valeur 0 (zéro).
+Quelle que soit la manière dont le tri est défini, si l'opération risque de prendre un certain temps, 4D affiche automatiquement un message contenant un thermomètre de progression. Vous pouvez décider d'afficher ou de ne pas afficher ce message pour le process à l'aide des commandes [MESSAGES OFF](../commands/messages-off) et [MESSAGES ON](../commands/messages-on). Si le thermomètre de progression est affiché, l'utilisateur peut cliquer sur le bouton **Stop** pour interrompre l'opération. Si le tri s'est correctement déroulé, la variable système OK prend la valeur 1\. Sinon, si le tri est interrompu, OK prend la valeur 0 (zéro).
 
 ### 
 
@@ -209,11 +209,11 @@ Chaque bouton appelle la méthode projet MULTITRIS en passant un pointeur sur le
  End if
 ```
 
-Quelle que soit la manière dont le tri est défini, si l'opération risque de prendre un certain temps, 4D affiche automatiquement un message contenant un thermomètre de progression. Vous pouvez décider d'afficher ou de ne pas afficher ce message pour le process à l'aide des commandes [MESSAGES ON](messages-on.md) et [MESSAGES OFF](messages-off.md). Si le thermomètre de progression est affiché, l'utilisateur peut cliquer sur le bouton **Stop** pour interrompre l'opération. Si le tri s'est correctement déroulé, la variable système OK prend la valeur 1\. Sinon, si le tri est interrompu, OK prend la valeur 0 (zéro).
+Quelle que soit la manière dont le tri est défini, si l'opération risque de prendre un certain temps, 4D affiche automatiquement un message contenant un thermomètre de progression. Vous pouvez décider d'afficher ou de ne pas afficher ce message pour le process à l'aide des commandes [MESSAGES ON](../commands/messages-on) et [MESSAGES OFF](../commands/messages-off). Si le thermomètre de progression est affiché, l'utilisateur peut cliquer sur le bouton **Stop** pour interrompre l'opération. Si le tri s'est correctement déroulé, la variable système OK prend la valeur 1\. Sinon, si le tri est interrompu, OK prend la valeur 0 (zéro).
 
 ## Voir aussi 
 
-[ORDER BY FORMULA](order-by-formula.md)  
+[ORDER BY FORMULA](../commands/order-by-formula)  
 
 ## Propriétés
 

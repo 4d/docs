@@ -1,4 +1,4 @@
----
+﻿---
 id: http-authenticate
 title: HTTP AUTHENTICATE
 slug: /commands/http-authenticate
@@ -38,7 +38,7 @@ This command is maintained for compatibility reasons only. It is now recommended
 
 <!--REF #_command_.HTTP AUTHENTICATE.Summary-->The **HTTP AUTHENTICATE** command enables HTTP requests to servers requiring authentication of the client application.<!-- END REF--> The BASIC and DIGEST methods are supported, as well as the presence of a proxy.
 
-In the *name* and *password* parameters, you pass the id information required (user name and password). This information is encoded and added to the next HTTP request sent using the [HTTP Request](http-request.md) or [HTTP Get](http-get.md) command, so you need to call the **HTTP AUTHENTICATE** command before each HTTP request.
+In the *name* and *password* parameters, you pass the id information required (user name and password). This information is encoded and added to the next HTTP request sent using the [HTTP Request](../commands/http-request) or [HTTP Get](../commands/http-get) command, so you need to call the **HTTP AUTHENTICATE** command before each HTTP request.
 
 The optional *authMethod* parameter indicates the authentication method to use. You pass one of the following constants, found in the *HTTP Client* theme:
 
@@ -51,7 +51,7 @@ If you omit the *authMethod* parameter (or pass 0), you let the program choose t
 
 If you pass the *\** parameter, this indicates that the authentication information is intended for an HTTP proxy. This setting must be implemented when there is a proxy requiring authentication between the client and the HTTP server. If the server itself is authenticated, a double authentication is necessary.
 
-By default, authentication information is stored temporarily and reused for each request in the current process. However, it is possible to reset this information after each request using an option set by the [HTTP SET OPTION](http-set-option.md) command. In this case, you will have to execute the **HTTP AUTHENTICATE** command before each call to [HTTP Request](http-request.md) or [HTTP Get](http-get.md).
+By default, authentication information is stored temporarily and reused for each request in the current process. However, it is possible to reset this information after each request using an option set by the [HTTP SET OPTION](../commands/http-set-option) command. In this case, you will have to execute the **HTTP AUTHENTICATE** command before each call to [HTTP Request](../commands/http-request) or [HTTP Get](../commands/http-get).
 
 ## Example 
 
@@ -67,7 +67,7 @@ Examples of requests with authentication:
 
 ## See also 
 
-[HTTP SET OPTION](http-set-option.md)  
+[HTTP SET OPTION](../commands/http-set-option)  
 
 ## Properties
 

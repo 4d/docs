@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-list-name
 title: OBJECT Get list name
 slug: /commands/object-get-list-name
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.OBJECT Get list name.Summary-->O comando OBJECT Get list name devolve o nome da lista associada ao objeto ou a um grupo de objetos designados por *objeto*.<!-- END REF--> 4D lhe permite associar uma lista de opções (criada com o editor de listas em modo Desenho) com objetos de formulário utilizando o editor de formulários ou o comando [OBJECT SET LIST BY NAME](object-set-list-by-name.md).  
+<!--REF #_command_.OBJECT Get list name.Summary-->O comando OBJECT Get list name devolve o nome da lista associada ao objeto ou a um grupo de objetos designados por *objeto*.<!-- END REF--> 4D lhe permite associar uma lista de opções (criada com o editor de listas em modo Desenho) com objetos de formulário utilizando o editor de formulários ou o comando [OBJECT SET LIST BY NAME](../commands/object-set-list-by-name).  
   
 Se pasa o parâmetro opcional *\**, indica que o parâmetro objeto é um nome de objeto (cadeia). Se não passa este parâmetro, indica que o parâmetro objeto é um campo ou uma variável. Neeste caso, se passa uma referência de campo ou variável (campo ou variável objeto unicamente) ao invés de uma cadeia.  
   
@@ -49,8 +49,8 @@ Se nenhuma lista do tipo definido está associada ao *objeto*, o comando devolve
 
 ## Ver também 
 
-[OBJECT Get list reference](object-get-list-reference.md)  
-[OBJECT SET LIST BY NAME](object-set-list-by-name.md)  
+[OBJECT Get list reference](../commands/object-get-list-reference)  
+[OBJECT SET LIST BY NAME](../commands/object-set-list-by-name)  
 
 ## Propriedades
 

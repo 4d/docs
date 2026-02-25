@@ -1,4 +1,4 @@
----
+﻿---
 id: list-item-position
 title: List item position
 slug: /commands/list-item-position
@@ -41,7 +41,7 @@ Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *li
 
 La position est exprimée relativement à l'élément supérieur de la liste, en tenant compte de l'état déployé/contracté de la liste et de ses sous-listes. 
 
-Le résultat est donc compris entre 1 et la valeur retournée par [Count list items](count-list-items.md). 
+Le résultat est donc compris entre 1 et la valeur retournée par [Count list items](../commands/count-list-items). 
 
 Si l'élément n'est pas visible car il est inclus dans une liste contractée, **List item position** déploie la liste correspondante de manière à ce que l'élément devienne visible. 
 
@@ -49,8 +49,8 @@ Si l'élément n'existe pas, **List item position** retourne *0*.
 
 ## Voir aussi 
 
-[Count list items](count-list-items.md)  
-[SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
+[Count list items](../commands/count-list-items)  
+[SELECT LIST ITEMS BY REFERENCE](../commands/select-list-items-by-reference)  
 
 ## Propriétés
 

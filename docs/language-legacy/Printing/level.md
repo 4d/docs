@@ -1,4 +1,4 @@
----
+﻿---
 id: level
 title: Level
 slug: /commands/level
@@ -64,10 +64,10 @@ This example is a template for a form method. It shows each of the possible even
 
 ## See also 
 
-[ACCUMULATE](accumulate.md)  
-[BREAK LEVEL](break-level.md)  
+[ACCUMULATE](../commands/accumulate)  
+[BREAK LEVEL](../commands/break-level)  
 [Form event code](../commands/form-event-code)  
-[PRINT SELECTION](print-selection.md)  
+[PRINT SELECTION](../commands/print-selection)  
 
 ## Properties
 

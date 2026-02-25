@@ -1,4 +1,4 @@
----
+﻿---
 id: blob-to-print-settings
 title: BLOB to print settings
 slug: /commands/blob-to-print-settings
@@ -29,16 +29,16 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.BLOB to print settings.Summary-->La commande **BLOB to print settings** remplace les paramètres d’impression courants de 4D par les paramètres stockés dans le BLOB *paramImpression*.<!-- END REF--> Ce BLOB doit avoir été généré par la commande [Print settings to BLOB](print-settings-to-blob.md).
+<!--REF #_command_.BLOB to print settings.Summary-->La commande **BLOB to print settings** remplace les paramètres d’impression courants de 4D par les paramètres stockés dans le BLOB *paramImpression*.<!-- END REF--> Ce BLOB doit avoir été généré par la commande [Print settings to BLOB](../commands/print-settings-to-blob).
 
 Le paramètre *param* permet de définir la façon de gérer les paramètres de base "nombre de copies" et "plage d'impression" : 
 
 * si vous passez 0 ou omettez ce paramètre, les valeurs stockées dans le BLOB sont utilisées pour l'impression.
 * si vous passez 1, les valeurs sont réinitialisées aux valeurs par défaut : le nombre de copies est fixé à 1, et la plage d'impression est fixée à "toutes les pages".
 
-Les paramètres d'impression s'appliquent aux [paramètres courants de l'impression 4D](../../settings/compatibility.md) jusqu'à ce qu'une commande telle que [SET PRINT OPTION](set-print-option.md) ou [PRINT SELECTION](print-selection.md) sans le paramètre > les modifie. Les paramètres fixés sont utilisés plus particulièrement par les commandes [PRINT SELECTION](print-selection.md), [PRINT LABEL](print-label.md), [PRINT RECORD](print-record.md), [Print form](../commands/print-form) et [QR REPORT](qr-report.md), ainsi que par les commandes d'impression dans les menus de 4D, y compris ceux de l'environnement Développement.
+Les paramètres d'impression s'appliquent aux [paramètres courants de l'impression 4D](../../settings/compatibility.md) jusqu'à ce qu'une commande telle que [SET PRINT OPTION](../commands/set-print-option) ou [PRINT SELECTION](../commands/print-selection) sans le paramètre > les modifie. Les paramètres fixés sont utilisés plus particulièrement par les commandes [PRINT SELECTION](../commands/print-selection), [PRINT LABEL](../commands/print-label), [PRINT RECORD](../commands/print-record), [Print form](../commands/print-form) et [QR REPORT](../commands/qr-report), ainsi que par les commandes d'impression dans les menus de 4D, y compris ceux de l'environnement Développement.
 
-Les commandes [PRINT SELECTION](print-selection.md), [PRINT LABEL](print-label.md) et [PRINT RECORD](print-record.md) doivent être appelées avec le paramètre *\>* (si applicable) de façon à ce que les paramètres définis par **BLOB to print settings** soient gardés.
+Les commandes [PRINT SELECTION](../commands/print-selection), [PRINT LABEL](../commands/print-label) et [PRINT RECORD](../commands/print-record) doivent être appelées avec le paramètre *\>* (si applicable) de façon à ce que les paramètres définis par **BLOB to print settings** soient gardés.
 
 La commande retourne un des codes d'état suivants :
 
@@ -82,7 +82,7 @@ Vous voulez appliquer des paramètres d'impression précédemment stockés sur d
 
 ## Voir aussi 
 
-[Print settings to BLOB](print-settings-to-blob.md)  
+[Print settings to BLOB](../commands/print-settings-to-blob)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: window-process
 title: Window process
 slug: /commands/window-process
@@ -34,7 +34,7 @@ Se omitir o parâmetro *janela*, Window process devolve o número do processo da
 
 ## Ver também 
 
-[Current process](current-process.md)  
+[Current process](../commands/current-process)  
 
 ## Propriedades
 

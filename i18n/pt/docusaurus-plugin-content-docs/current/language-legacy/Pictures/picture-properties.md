@@ -1,4 +1,4 @@
----
+﻿---
 id: picture-properties
 title: PICTURE PROPERTIES
 slug: /commands/picture-properties
@@ -41,7 +41,7 @@ Os parâmetros *hDesp*, *vDesp*, e *modo* devolvem as posições horizontal e ve
 
 ## Ver também 
 
-[Picture size](picture-size.md)  
+[Picture size](../commands/picture-size)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: get-pointer
 title: Get pointer
 slug: /commands/get-pointer
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get pointer.Summary-->The **Get pointer** command returns a pointer to the process or interprocess variable whose name you pass in *varName*.<!-- END REF-->
 
-To get a pointer to a field, use [Field](field.md). To get a pointer to a table, use [Table](table.md).
+To get a pointer to a field, use [Field](../commands/field). To get a pointer to a table, use [Table](../commands/table).
 
 **Note:** You can pass expressions such as, for example, *ArrName+"{3}"*, as well as 2D array elements (*ArrName+"{3}{5}"*) to **Get pointer**.  
 However, you cannot pass variable elements (*ArrName+"{myVar}"*). 
@@ -62,8 +62,8 @@ Using pointers to elements of two-dimensional arrays:
 
 ## See also 
 
-[Field](field.md)  
-[Table](table.md)  
+[Field](../commands/field)  
+[Table](../commands/table)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: method-get-folders
 title: METHOD GET FOLDERS
 slug: /commands/method-get-folders
@@ -41,7 +41,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[METHOD GET PATHS](method-get-paths.md)  
+[METHOD GET PATHS](../commands/method-get-paths)  
 
 ## プロパティ
 

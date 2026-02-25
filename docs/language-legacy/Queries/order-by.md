@@ -1,4 +1,4 @@
----
+﻿---
 id: order-by
 title: ORDER BY
 slug: /commands/order-by
@@ -50,7 +50,7 @@ If the sorted fields are included in a composite index, **ORDER BY** uses the in
 For multiple sorts (sorts on multiple fields), you can call **ORDER BY** as many times as necessary and specify the optional *\** parameter, except for the last **ORDER BY** call, which starts the actual sort operation. This feature is useful for multiple sorts management in customized user interfaces.   
 **Warning:** with this syntax, you can pass only one sort level (field) per **ORDER BY** call.
 
-No matter what way a sort has been defined, if the actual sort operation is going to take some time to be performed, 4D automatically displays a message containing a progress thermometer. These messages can be turned on and off by using the commands [MESSAGES ON](messages-on.md) and [MESSAGES OFF](messages-off.md). If the progress thermometer is displayed, the user can click the Stop button to interrupt the sort. 
+No matter what way a sort has been defined, if the actual sort operation is going to take some time to be performed, 4D automatically displays a message containing a progress thermometer. These messages can be turned on and off by using the commands [MESSAGES ON](../commands/messages-on) and [MESSAGES OFF](../commands/messages-off). If the progress thermometer is displayed, the user can click the Stop button to interrupt the sort. 
 
 If the sort is performed without interruption, the OK variable is set to *1*. If the user clicks Cancel or Stop, the **ORDER BY** terminates with no sort actually performed, and sets the OK variable to *0* (zero).
 
@@ -210,7 +210,7 @@ Each button calls the MULTILEVEL project method with a pointer to the correspond
 
 ## See also 
 
-[ORDER BY FORMULA](order-by-formula.md)  
+[ORDER BY FORMULA](../commands/order-by-formula)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: get-picture-formats
 title: GET PICTURE FORMATS
 slug: /commands/get-picture-formats
@@ -34,7 +34,7 @@ O comando **GET PICTURE FORMATS** devolve um array de todos os IDs codec contido
 
 No parâmetro *imagem*, se passa uma variável imagem cujos formatos deseja que sejam devolvidos no array *codecIDs*. 
 
-Os identificadores codec devolvidos são definidos por 4D exatamente da mesma maneira que para o comando **PICTURE CODEC LIST**[PICTURE CODEC LIST](picture-codec-list.md). Podem ser devolvidos das seguintes formas:
+Os identificadores codec devolvidos são definidos por 4D exatamente da mesma maneira que para o comando **PICTURE CODEC LIST**[PICTURE CODEC LIST](../commands/picture-codec-list). Podem ser devolvidos das seguintes formas:
 
 * Como extensões (por exemplo, ".gif")
 * Como tipos Mime (por exemplo, “image/jpeg”)
@@ -43,7 +43,7 @@ Os identificadores codec devolvidos são definidos por 4D exatamente da mesma ma
 **Notas:** 
 
 * Os seguintes codecs, manejados internamente por 4D, sempre são devolvidos como extensões: JPEG, PNG, TIFF, GIF, BMP, SVG, PDF, EMF.
-* Os códigos QuickTime de 4 caracteres podem ser devolvidos nos bancos de dados onde a opção de compatibilidade QuickTime support tenha sido definida (utilizando o comando [SET DATABASE PARAMETER](set-database-parameter.md)). Entretanto, QuickTime já não é compatível com 4D e não é recomendado o uso de codecs QuickTime.
+* Os códigos QuickTime de 4 caracteres podem ser devolvidos nos bancos de dados onde a opção de compatibilidade QuickTime support tenha sido definida (utilizando o comando [SET DATABASE PARAMETER](../commands/set-database-parameter)). Entretanto, QuickTime já não é compatível com 4D e não é recomendado o uso de codecs QuickTime.
 
 Para saber mais sobre os IDs codec imagen, consulte *Imagens* 
 

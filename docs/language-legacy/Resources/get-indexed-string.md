@@ -1,4 +1,4 @@
----
+﻿---
 id: get-indexed-string
 title: Get indexed string
 slug: /commands/get-indexed-string
@@ -36,7 +36,7 @@ The **Get indexed string** command returns:
 * Either <!--REF #_command_.Get indexed string.Summary-->one of the strings stored in the string list (“STR#”) resource whose ID is passed in *resID*.<!-- END REF-->
 * Or a string stored in an open XLIFF file whose 'id' attribute of the 'group' element is passed in *resID* (see "Compatibility with XLIFF architecture" below).
 
-You pass the number of the string in *strID*. The strings of a string list resource are numbered from 1 to N. To get all the strings (and their numbers) of a string list resource, use the [STRING LIST TO ARRAY](string-list-to-array.md) command.
+You pass the number of the string in *strID*. The strings of a string list resource are numbered from 1 to N. To get all the strings (and their numbers) of a string list resource, use the [STRING LIST TO ARRAY](../commands/string-list-to-array) command.
 
 If the resource or the string within the resource is not found, an empty string is returned and the OK variable is set to 0 (zero).
 
@@ -54,9 +54,9 @@ If the resource is found, OK is set to 1\. Otherwise, it is set to 0 (zero).
 
 ## See also 
 
-[Get string resource](get-string-resource.md)  
-[Get text resource](get-text-resource.md)  
-[STRING LIST TO ARRAY](string-list-to-array.md)  
+[Get string resource](../commands/get-string-resource)  
+[Get text resource](../commands/get-text-resource)  
+[STRING LIST TO ARRAY](../commands/string-list-to-array)  
 
 ## Properties
 

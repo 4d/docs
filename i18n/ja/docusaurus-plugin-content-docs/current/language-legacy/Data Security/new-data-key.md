@@ -1,4 +1,4 @@
----
+﻿---
 id: new-data-key
 title: New data key
 slug: /commands/new-data-key
@@ -62,11 +62,11 @@ displayed_sidebar: docs
 ## 参照 
 
   
-[Decrypt data BLOB](decrypt-data-blob.md)  
-[Discover data key](discover-data-key.md)  
-[Encrypt data BLOB](encrypt-data-blob.md)  
-[Encrypt data file](encrypt-data-file.md)  
-[Register data key](register-data-key.md)  
+[Decrypt data BLOB](../commands/decrypt-data-blob)  
+[Discover data key](../commands/discover-data-key)  
+[Encrypt data BLOB](../commands/encrypt-data-blob)  
+[Encrypt data file](../commands/encrypt-data-file)  
+[Register data key](../commands/register-data-key)  
 
 ## プロパティ
 

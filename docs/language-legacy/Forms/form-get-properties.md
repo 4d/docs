@@ -1,4 +1,4 @@
----
+﻿---
 id: form-get-properties
 title: FORM GET PROPERTIES
 slug: /commands/form-get-properties
@@ -51,8 +51,8 @@ The *title* parameter returns the title of the form's window as it was defined i
 
 ## See also 
 
-[FORM GET OBJECTS](form-get-objects.md)  
-[FORM SET SIZE](form-set-size.md)  
+[FORM GET OBJECTS](../commands/form-get-objects)  
+[FORM SET SIZE](../commands/form-set-size)  
 [Open form window](../commands/open-form-window)  
 
 ## Properties

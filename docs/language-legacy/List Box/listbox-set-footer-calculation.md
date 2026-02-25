@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-footer-calculation
 title: LISTBOX SET FOOTER CALCULATION
 slug: /commands/listbox-set-footer-calculation
@@ -60,7 +60,7 @@ If the data type of a column or of even one column of the list box (when object 
 
 ## See also 
 
-[LISTBOX Get footer calculation](listbox-get-footer-calculation.md)  
+[LISTBOX Get footer calculation](../commands/listbox-get-footer-calculation)  
 
 ## Properties
 

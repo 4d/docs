@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-text-property
 title: QR SET TEXT PROPERTY
 slug: /commands/qr-set-text-property
@@ -63,7 +63,7 @@ Passez dans *propriété* la valeur de la propriété de texte à modifier. Vous
 | qr alternate background color | Entier long | 9      | Numéro de couleur de fond alternée                                                    |
 | qr background color           | Entier long | 8      | Numéro de couleur de fond                                                             |
 | qr bold                       | Entier long | 3      | Attribut gras (0 ou 1)                                                                |
-| qr font name                  | Entier long | 10     | Nom de police tel que retourné par exemple par la commande [FONT LIST](font-list.md). |
+| qr font name                  | Entier long | 10     | Nom de police tel que retourné par exemple par la commande [FONT LIST](../commands/font-list). |
 | qr font size                  | Entier long | 2      | Taille de police en points (9 à 255)                                                  |
 | qr italic                     | Entier long | 4      | Attribut italique (0 ou 1)                                                            |
 | qr justification              | Entier long | 7      | Attribut de justification (0 = par défaut, 1 = gauche, 2 = centre et 3 = droite)      |
@@ -96,7 +96,7 @@ Cette méthode définit plusieurs attributs pour l'intitulé de la première col
 
 ## Voir aussi 
 
-[QR Get text property](qr-get-text-property.md)  
+[QR Get text property](../commands/qr-get-text-property)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: printers-list
 title: PRINTERS LIST
 slug: /commands/printers-list
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 
 オプション引数*modelsArray* を渡した場合、各プリンタのモデルを取得できます。
 
-4Dで選択されたプリンタの変更や取得を行うには、[SET CURRENT PRINTER](set-current-printer.md) および [Get current printer](get-current-printer.md) コマンドを使用します。最初の配列 (*namesArray* ) に返された名前を渡さなければなりません。
+4Dで選択されたプリンタの変更や取得を行うには、[SET CURRENT PRINTER](../commands/set-current-printer) および [Get current printer](../commands/get-current-printer) コマンドを使用します。最初の配列 (*namesArray* ) に返された名前を渡さなければなりません。
 
 Windows上では、プリンタ名はOSレベルで手動にて変更することができます。一方、プリンタの場所とモデルタイプは、その物理的特性に関連しています。したがって、オプションの配列に返された値を使用して、選択したプリンタの特性を調べることができます。特に、クライアントマシンがすべて同じプリンタを使用していることをチェックすることができます。
 
@@ -56,8 +56,8 @@ macOS上では、プリンタ名 (プリンタサーバの名前) を使用し�
 
 ## 参照 
 
-[Get current printer](get-current-printer.md)  
-[SET CURRENT PRINTER](set-current-printer.md)  
+[Get current printer](../commands/get-current-printer)  
+[SET CURRENT PRINTER](../commands/set-current-printer)  
 
 ## プロパティ
 

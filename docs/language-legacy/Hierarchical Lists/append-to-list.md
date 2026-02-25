@@ -1,4 +1,4 @@
----
+﻿---
 id: append-to-list
 title: APPEND TO LIST
 slug: /commands/append-to-list
@@ -45,8 +45,8 @@ The list reference you pass in *sublist* must refer to an existing list. The exi
 
 **Tips**
 
-* To insert a new item in a list, use [INSERT IN LIST](insert-in-list.md). To change the text of an existing item or modify its child list as well as its expanded state, use [SET LIST ITEM](set-list-item.md).
-* To change the appearance of the new appended item use [SET LIST ITEM PROPERTIES](set-list-item-properties.md).
+* To insert a new item in a list, use [INSERT IN LIST](../commands/insert-in-list). To change the text of an existing item or modify its child list as well as its expanded state, use [SET LIST ITEM](../commands/set-list-item).
+* To change the appearance of the new appended item use [SET LIST ITEM PROPERTIES](../commands/set-list-item-properties).
 
 ## Example 
 
@@ -154,7 +154,7 @@ In this example, there is only one reason to distinguish \[Departments\] items a
 
 1\. We store record IDs in the item reference numbers; therefore, we will probably end up with \[Departments\] items whose item reference numbers are the same as \[Employees\] items.
 
-2\. We use the [List item parent](list-item-parent.md) command to retrieve the parent of the selected item. If we click on an \[Employees\] item whose associated record ID is #10, and if there is also a \[Departments\] item #10, the \[Departments\] item will be found first by [List item parent](list-item-parent.md) when it browses the lists to locate the item with the item reference number we pass. The command will return the parent of the \[Departments\] item and not the parent of the \[Employees\] item.
+2\. We use the [List item parent](../commands/list-item-parent) command to retrieve the parent of the selected item. If we click on an \[Employees\] item whose associated record ID is #10, and if there is also a \[Departments\] item #10, the \[Departments\] item will be found first by [List item parent](../commands/list-item-parent) when it browses the lists to locate the item with the item reference number we pass. The command will return the parent of the \[Departments\] item and not the parent of the \[Employees\] item.
 
 Therefore, we made the item reference numbers unique, not because we wanted unique numbers, but because we needed to distinguish \[Departments\] and \[Employees\] records.
 
@@ -166,10 +166,10 @@ When the form is executed, the list will look like this:
 
 ## See also 
 
-[INSERT IN LIST](insert-in-list.md)  
-[SET LIST ITEM](set-list-item.md)  
-[SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
-[SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+[INSERT IN LIST](../commands/insert-in-list)  
+[SET LIST ITEM](../commands/set-list-item)  
+[SET LIST ITEM PARAMETER](../commands/set-list-item-parameter)  
+[SET LIST ITEM PROPERTIES](../commands/set-list-item-properties)  
 
 ## Properties
 

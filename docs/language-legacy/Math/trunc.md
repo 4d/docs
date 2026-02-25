@@ -1,4 +1,4 @@
----
+﻿---
 id: trunc
 title: Trunc
 slug: /commands/trunc
@@ -36,7 +36,7 @@ The following example illustrates how Trunc works with different arguments. Each
 
 ## See also 
 
-[Round](round.md)  
+[Round](../commands/round)  
 
 ## Properties
 

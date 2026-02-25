@@ -1,4 +1,4 @@
----
+﻿---
 id: convert-from-text
 title: CONVERT FROM TEXT
 slug: /commands/convert-from-text
@@ -201,7 +201,7 @@ CONVERT FROM TEXTと[Convert to text](convert-to-text.md "Convert to text")コ�
 
 ## 参照 
 
-[Convert to text](convert-to-text.md)  
+[Convert to text](../commands/convert-to-text)  
 
 ## プロパティ
 

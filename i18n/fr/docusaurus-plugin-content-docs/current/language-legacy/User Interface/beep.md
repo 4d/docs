@@ -1,4 +1,4 @@
----
+﻿---
 id: beep
 title: BEEP
 slug: /commands/beep
@@ -34,7 +34,7 @@ Dans l'exemple suivant, un bip est émis et une alerte affichée lorsqu'aucun en
 
 ## Voir aussi 
 
-[PLAY](play.md)  
+[PLAY](../commands/play)  
 
 ## Propriétés
 

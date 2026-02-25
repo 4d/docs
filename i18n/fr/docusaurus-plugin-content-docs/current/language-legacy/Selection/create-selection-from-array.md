@@ -1,4 +1,4 @@
----
+﻿---
 id: create-selection-from-array
 title: CREATE SELECTION FROM ARRAY
 slug: /commands/create-selection-from-array
@@ -49,16 +49,16 @@ Lorsque vous utilisez la commande avec un tableau de booléens, le Nième élém
 
 ## Gestion des erreurs 
 
-Si un numéro d'enregistrement est invalide (enregistrement non créé), l’erreur -10503 est générée. Vous pouvez intercepter cette erreur à l'aide d'une méthode installée par la commande [ON ERR CALL](on-err-call.md).
+Si un numéro d'enregistrement est invalide (enregistrement non créé), l’erreur -10503 est générée. Vous pouvez intercepter cette erreur à l'aide d'une méthode installée par la commande [ON ERR CALL](../commands/on-err-call).
 
 ## Voir aussi 
 
-[CLEAR NAMED SELECTION](clear-named-selection.md)  
-[COPY NAMED SELECTION](copy-named-selection.md)  
-[CREATE SET FROM ARRAY](create-set-from-array.md)  
-[LONGINT ARRAY FROM SELECTION](longint-array-from-selection.md)  
-[SELECTION TO ARRAY](selection-to-array.md)  
-[USE NAMED SELECTION](use-named-selection.md)  
+[CLEAR NAMED SELECTION](../commands/clear-named-selection)  
+[COPY NAMED SELECTION](../commands/copy-named-selection)  
+[CREATE SET FROM ARRAY](../commands/create-set-from-array)  
+[LONGINT ARRAY FROM SELECTION](../commands/longint-array-from-selection)  
+[SELECTION TO ARRAY](../commands/selection-to-array)  
+[USE NAMED SELECTION](../commands/use-named-selection)  
 
 ## Propriétés
 

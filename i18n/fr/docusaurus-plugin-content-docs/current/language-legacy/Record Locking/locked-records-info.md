@@ -1,4 +1,4 @@
----
+﻿---
 id: locked-records-info
 title: Locked records info
 slug: /commands/locked-records-info
@@ -33,7 +33,7 @@ Chaque élément de collection "objet description" identifie un enregistrement v
 | **Propriété**     | **Type**      | **Description**                                                                                                                                                                                                                                                                                                                                  |
 | ----------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | contextID         | UUID (Chaîne) | UUID du contexte de la base à l'origine du verrouillage                                                                                                                                                                                                                                                                                          |
-| contextAttributes | Objet         | Objet contenant des informations semblables à la commande [LOCKED BY](locked-by.md) mais appliquées à l'enregistrement, à la différence près que **Locked records info** retourne uniquement le nom de l'utilisateur défini dans le système (et pas celui de l'utilisateur 4D) ainsi que des informations supplémentaires (voir ci-dessous). |
+| contextAttributes | Objet         | Objet contenant des informations semblables à la commande [LOCKED BY](../commands/locked-by) mais appliquées à l'enregistrement, à la différence près que **Locked records info** retourne uniquement le nom de l'utilisateur défini dans le système (et pas celui de l'utilisateur 4D) ainsi que des informations supplémentaires (voir ci-dessous). |
 | recordNumber      | Entier long   | Numéro de l'enregistrement verrouillé                                                                                                                                                                                                                                                                                                            |
 
 L'objet *contextAttributes* est constitué des propriétés suivantes :
@@ -42,7 +42,7 @@ L'objet *contextAttributes* est constitué des propriétés suivantes :
 | -------------------------------------------------------------------------------------------------------------------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | task\_id                                                                                                                         | Numérique     | Numéro de référence du process                                                                                                 |
 | user\_name                                                                                                                       | Chaîne        | Nom de l'utilisateur défini dans le système d'exploitation                                                                     |
-| user4d\_alias                                                                                                                    | texte         | Alias utilisateur défini avec [SET USER ALIAS](set-user-alias.md), sinon le nom d'utilisateur dans le répertoire de la base 4D |
+| user4d\_alias                                                                                                                    | texte         | Alias utilisateur défini avec [SET USER ALIAS](../commands/set-user-alias), sinon le nom d'utilisateur dans le répertoire de la base 4D |
 | user4d\_id                                                                                                                       | Numérique     | Numéro de l'utilisateur 4D(\*)                                                                                                 |
 | host\_name                                                                                                                       | Chaîne        | Nom de la machine hôte                                                                                                         |
 | task\_name                                                                                                                       | Chaîne        | Nom du process                                                                                                                 |
@@ -89,7 +89,7 @@ Si le code est exécuté sur 4D Server et que le verrouillage est causé par un 
 
 ## Voir aussi 
 
-[Locked](locked.md)  
+[Locked](../commands/locked)  
 
 ## Propriétés
 

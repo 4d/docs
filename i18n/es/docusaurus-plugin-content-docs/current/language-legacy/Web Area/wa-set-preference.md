@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-set-preference
 title: WA SET PREFERENCE
 slug: /commands/wa-set-preference
@@ -64,7 +64,7 @@ Para activar la URL suéltela en el área web 'myarea':
 
 ## Ver también 
 
-[WA GET PREFERENCE](wa-get-preference.md)  
+[WA GET PREFERENCE](../commands/wa-get-preference)  
 
 ## Propiedades
 

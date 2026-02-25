@@ -1,4 +1,4 @@
----
+﻿---
 id: plugin-list
 title: PLUGIN LIST
 slug: /commands/plugin-list
@@ -37,10 +37,10 @@ PLUGIN LIST leva todos os plug-ins em consideração, incluindo aqueles que est�
 
 ## Ver também 
 
-[COMPONENT LIST](component-list.md)  
-[Get plugin access](get-plugin-access.md)  
-[Is license available](is-license-available.md)  
-[SET PLUGIN ACCESS](set-plugin-access.md)  
+[COMPONENT LIST](../commands/component-list)  
+[Get plugin access](../commands/get-plugin-access)  
+[Is license available](../commands/is-license-available)  
+[SET PLUGIN ACCESS](../commands/set-plugin-access)  
 
 ## Propriedades
 

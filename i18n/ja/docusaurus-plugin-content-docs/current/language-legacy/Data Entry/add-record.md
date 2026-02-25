@@ -1,4 +1,4 @@
----
+﻿---
 id: add-record
 title: ADD RECORD
 slug: /commands/add-record
@@ -36,15 +36,15 @@ displayed_sidebar: docs
 
 **ADD RECORD** は、ユーザがレコードを受け入れるか取り消すまでフォームを表示します。ユ－ザが複数のレコ－ドを追加する場合は、新しいレコードごとに1回ずつコマンドを実行しなければなりません。
 
-ユーザが保存ボタンをクリック、またはenterキーを押す、または[ACCEPT](accept.md)コマンドが実行されると、レコードが保存されます。
+ユーザが保存ボタンをクリック、またはenterキーを押す、または[ACCEPT](../commands/accept)コマンドが実行されると、レコードが保存されます。
 
-ユーザがキャンセルボタンをクリック、またはキャンセルキーコンビネーション (WindowsではCtrl-ピリオド、Mac OSではCommand-ピリオド) を押す、または[CANCEL](cancel.md) コマンドが実行されると、レコードは保存されません。
+ユーザがキャンセルボタンをクリック、またはキャンセルキーコンビネーション (WindowsではCtrl-ピリオド、Mac OSではCommand-ピリオド) を押す、または[CANCEL](../commands/cancel) コマンドが実行されると、レコードは保存されません。
 
 **注:** このコマンドでは、*aTable* に渡したテーブルが読み書き可能モードである必要はありません。テーブルが読み込みのみモードの場合でも使用する事ができます(*レコードのロック*を参照して下さい)。
 
 **ADD RECORD** の呼び出し後、システム変数OKにはレコードが受け入れられると1が、キャンセルされると0が設定されます。
 
-**Note:** キャンセルされた場合でも、レコードはメモリ上に残されたままとなります。カレントレコードポインタが変更される前に[SAVE RECORD](save-record.md)コマンドを実行すれば、レコードは保存されます。
+**Note:** キャンセルされた場合でも、レコードはメモリ上に残されたままとなります。カレントレコードポインタが変更される前に[SAVE RECORD](../commands/save-record)コマンドを実行すれば、レコードは保存されます。
 
 ## 例題 1 
 
@@ -86,11 +86,11 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ACCEPT](accept.md)  
-[CANCEL](cancel.md)  
-[CREATE RECORD](create-record.md)  
-[MODIFY RECORD](modify-record.md)  
-[SAVE RECORD](save-record.md)  
+[ACCEPT](../commands/accept)  
+[CANCEL](../commands/cancel)  
+[CREATE RECORD](../commands/create-record)  
+[MODIFY RECORD](../commands/modify-record)  
+[SAVE RECORD](../commands/save-record)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-set-option
 title: SQL SET OPTION
 slug: /commands/sql-set-option
@@ -56,7 +56,7 @@ Si la commande a été correctement exécutée, la variable système OK retourne
 
 ## Voir aussi 
 
-[SQL GET OPTION](sql-get-option.md)  
+[SQL GET OPTION](../commands/sql-get-option)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: count-tasks
 title: Count tasks
 slug: /commands/count-tasks
@@ -23,14 +23,14 @@ Ce nombre inclut tous les process, qu'ils soient créés par vos soins ou par 4D
 
 ## Exemple 
 
-Référez-vous à l'exemple de [Process state](process-state.md) et [Semaphore](semaphore.md).
+Référez-vous à l'exemple de [Process state](../commands/process-state) et [Semaphore](../commands/semaphore).
 
 ## Voir aussi 
 
-[Count user processes](count-user-processes.md)  
-[Count users](count-users.md)  
+[Count user processes](../commands/count-user-processes)  
+[Count users](../commands/count-users)  
 [Process info](../commands/process-info)  
-[Process state](process-state.md)  
+[Process state](../commands/process-state)  
 
 ## Propriétés
 

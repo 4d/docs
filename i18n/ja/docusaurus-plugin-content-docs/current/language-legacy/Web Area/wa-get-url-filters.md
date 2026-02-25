@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-get-url-filters
 title: WA GET URL FILTERS
 slug: /commands/wa-get-url-filters
@@ -36,8 +36,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WA GET EXTERNAL LINKS FILTERS](wa-get-external-links-filters.md)  
-[WA SET URL FILTERS](wa-set-url-filters.md)  
+[WA GET EXTERNAL LINKS FILTERS](../commands/wa-get-external-links-filters)  
+[WA SET URL FILTERS](../commands/wa-set-url-filters)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: web-validate-digest
 title: WEB Validate digest
 slug: /commands/web-validate-digest
@@ -65,8 +65,8 @@ Example using *On Web Authentication Database Method* in Digest mode:
 
 ## See also 
 
-[Generate digest](generate-digest.md)  
-[Validate password](validate-password.md)  
+[Generate digest](../commands/generate-digest)  
+[Validate password](../commands/validate-password)  
 
 ## Properties
 

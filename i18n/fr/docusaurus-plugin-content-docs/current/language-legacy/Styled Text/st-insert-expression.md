@@ -1,4 +1,4 @@
----
+﻿---
 id: st-insert-expression
 title: ST INSERT EXPRESSION
 slug: /commands/st-insert-expression
@@ -62,7 +62,7 @@ Par exemple :
  "Chaine([Table_1]Champ_1;Système date court)"
 ```
 
-Par défaut, les **valeurs** des expressions sont affichées dans les zones de texte multistyle. Vous pouvez forcer l’affichage des **références** à l’aide de la commande [ST SET OPTIONS](st-set-options.md). 
+Par défaut, les **valeurs** des expressions sont affichées dans les zones de texte multistyle. Vous pouvez forcer l’affichage des **références** à l’aide de la commande [ST SET OPTIONS](../commands/st-set-options). 
 
 Les paramètres optionnels *débutSél* et *finSél* permettent de désigner une sélection de texte dans *objet*. Les valeurs *débutSél* et *finSél* expriment une sélection de texte brut, sans tenir compte des balises de style éventuellement présentes dans le texte. 
 
@@ -93,10 +93,10 @@ Vous souhaitez remplacer le texte sélectionné par la valeur d'un champ :
 
 ## Voir aussi 
 
-[ST COMPUTE EXPRESSIONS](st-compute-expressions.md)  
-[ST FREEZE EXPRESSIONS](st-freeze-expressions.md)  
-[ST Get expression](st-get-expression.md)  
-[ST INSERT URL](st-insert-url.md)  
+[ST COMPUTE EXPRESSIONS](../commands/st-compute-expressions)  
+[ST FREEZE EXPRESSIONS](../commands/st-freeze-expressions)  
+[ST Get expression](../commands/st-get-expression)  
+[ST INSERT URL](../commands/st-insert-url)  
 
 ## Propriétés
 

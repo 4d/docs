@@ -1,4 +1,4 @@
----
+﻿---
 id: set-external-data-path
 title: SET EXTERNAL DATA PATH
 slug: /commands/set-external-data-path
@@ -73,8 +73,8 @@ You want to save an existing file in the picture field, stored outside of the da
 
 ## See also 
 
-[Get external data path](get-external-data-path.md)  
-[RELOAD EXTERNAL DATA](reload-external-data.md)  
+[Get external data path](../commands/get-external-data-path)  
+[RELOAD EXTERNAL DATA](../commands/reload-external-data)  
 
 ## Properties
 

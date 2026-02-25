@@ -1,4 +1,4 @@
----
+﻿---
 id: data-file-encryption-status
 title: Data file encryption status
 slug: /commands/data-file-encryption-status
@@ -55,8 +55,8 @@ L'objet retourné contient les propriétés suivantes :
 * précédemment :  
    * avant l'ouverture de ce fichier de données, sur un appareil connecté,  
    * via la commande *ds.provideDataKey( )* à l'ouverture de ce fichier de données,  
-   * après l'ouverture du fichier de données, via la commande [Discover data key](discover-data-key.md)
-* via la commande [Register data key](register-data-key.md)
+   * après l'ouverture du fichier de données, via la commande [Discover data key](../commands/discover-data-key)
+* via la commande [Register data key](../commands/register-data-key)
 
 ## Exemple 
 
@@ -79,7 +79,7 @@ Vous souhaitez connaitre le statut de chiffrement d'un fichier de données corre
 ## Voir aussi 
 
   
-[Encrypt data file](encrypt-data-file.md)  
+[Encrypt data file](../commands/encrypt-data-file)  
 
 ## Propriétés
 

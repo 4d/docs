@@ -1,4 +1,4 @@
----
+﻿---
 id: load-set
 title: LOAD SET
 slug: /commands/load-set
@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.LOAD SET.Summary-->LOAD SET carrega um conjunto desde o arquivo *documento*, criado com o comando [SAVE SET](save-set.md).<!-- END REF-->  
+<!--REF #_command_.LOAD SET.Summary-->LOAD SET carrega um conjunto desde o arquivo *documento*, criado com o comando [SAVE SET](../commands/save-set).<!-- END REF-->  
   
 O conjunto guardado em *documento* deve aplicar a *tabela*. O conjunto criado em memória é reescrito se já existir.
 
@@ -43,7 +43,7 @@ Se o usuário clicar em Cancelar na caixa de diálogo de abrir arquivos, ou se f
 
 ## Ver também 
 
-[SAVE SET](save-set.md)  
+[SAVE SET](../commands/save-set)  
 
 ## Propriedades
 

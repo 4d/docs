@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-open-back-url
 title: WA OPEN BACK URL
 slug: /commands/wa-open-back-url
@@ -34,8 +34,8 @@ Si no hay un URL precedente, el comando no hace nada. Puede probar la disponibil
 
 ## Ver también 
 
-[WA OPEN FORWARD URL](wa-open-forward-url.md)  
-[WA OPEN URL](wa-open-url.md)  
+[WA OPEN FORWARD URL](../commands/wa-open-forward-url)  
+[WA OPEN URL](../commands/wa-open-url)  
 
 ## Propiedades
 

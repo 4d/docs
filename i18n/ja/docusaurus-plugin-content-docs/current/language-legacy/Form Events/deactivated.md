@@ -1,4 +1,4 @@
----
+﻿---
 id: deactivated
 title: Deactivated
 slug: /commands/deactivated
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Activated](activated.md)  
+[Activated](../commands/activated)  
 [Form event code](../commands/form-event-code)  
 
 ## プロパティ

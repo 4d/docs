@@ -1,4 +1,4 @@
----
+﻿---
 id: soap-declaration
 title: SOAP DECLARATION
 slug: /commands/soap-declaration
@@ -197,9 +197,9 @@ Este ejemplo illustra los resultados de los diferentes tipos de declaraciones:
 
 #### Ver también 
 
-[Is data file locked](is-data-file-locked.md)  
-[SOAP get info](soap-get-info.md)  
-[SOAP SEND FAULT](soap-send-fault.md)  
+[Is data file locked](../commands/is-data-file-locked)  
+[SOAP get info](../commands/soap-get-info)  
+[SOAP SEND FAULT](../commands/soap-send-fault)  
 
 #### Propiedades
 

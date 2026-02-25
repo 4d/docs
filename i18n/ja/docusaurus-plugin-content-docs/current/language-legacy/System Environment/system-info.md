@@ -1,4 +1,4 @@
----
+﻿---
 id: system-info
 title: System info
 slug: /commands/system-info
@@ -54,7 +54,7 @@ displayed_sidebar: docs
 |                   | name           |             | 文字列                                | Mac のに- ボリューム名                                                                                                                                                      | "iMac-27-Program6"                                                              |
 
 
-(\*) 使用されているプラットフォームを調べるだけであれば、二つのコマンドが利用可能です: [Is macOS](is-macos.md) および [Is Windows](is-windows.md)
+(\*) 使用されているプラットフォームを調べるだけであれば、二つのコマンドが利用可能です: [Is macOS](../commands/is-macos) および [Is Windows](../commands/is-windows)
 
 **注**: バーチャルマシンの場合、返される情報はバーチャルマシンのものとなります。
 
@@ -145,8 +145,8 @@ Windows マシン上で以下のコードを実行した場合:
 ## 参照 
 
 [Application info](../commands/application-info)  
-[Is macOS](is-macos.md)  
-[Is Windows](is-windows.md)  
+[Is macOS](../commands/is-macos)  
+[Is Windows](../commands/is-windows)  
 
 ## プロパティ
 

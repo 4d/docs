@@ -1,4 +1,4 @@
----
+﻿---
 id: copy-parameters
 title: Copy parameters
 slug: /commands/copy-parameters
@@ -91,7 +91,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Count parameters](count-parameters.md)  
+[Count parameters](../commands/count-parameters)  
 
 ## プロパティ
 

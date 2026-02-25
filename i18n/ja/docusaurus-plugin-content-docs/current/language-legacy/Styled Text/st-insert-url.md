@@ -1,4 +1,4 @@
----
+﻿---
 id: st-insert-url
 title: ST INSERT URL
 slug: /commands/st-insert-url
@@ -73,8 +73,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ST GET URL](st-get-url.md)  
-[ST INSERT EXPRESSION](st-insert-expression.md)  
+[ST GET URL](../commands/st-get-url)  
+[ST INSERT EXPRESSION](../commands/st-insert-expression)  
 
 ## プロパティ
 

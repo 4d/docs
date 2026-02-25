@@ -1,4 +1,4 @@
----
+﻿---
 id: set-list-properties
 title: SET LIST PROPERTIES
 slug: /commands/set-list-properties
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 **Note de compatibilité :** Les paramètres *apparence* et *icône* sont obsolètes, ils doivent toujours prendre la valeur 0\. 
 
-**Note :** Si vous voulez personnaliser l'icône de chaque élément d'une liste hiérarchique, utilisez la commande [SET LIST ITEM PROPERTIES](set-list-item-properties.md). 
+**Note :** Si vous voulez personnaliser l'icône de chaque élément d'une liste hiérarchique, utilisez la commande [SET LIST ITEM PROPERTIES](../commands/set-list-item-properties). 
 
 Si vous ne passez pas le paramètre *hauteurLigne*, la hauteur de ligne d'une liste hiérarchique sera déterminée par la police et la taille de police utilisées pour l'objet. Vous pouvez également passer dans le paramètre *hauteurLigne* la hauteur minimale des lignes de la liste hiérarchique. Si la valeur que vous passez est supérieure à la hauteur des lignes définie par la police et la taille de police, elle sera utilisée pour fixer la hauteur des lignes. Passez 0 pour utiliser la hauteur par défaut.
 
@@ -49,7 +49,7 @@ Si vous passez 0 ou omettez ce paramètre, le fonctionnement par défaut est app
 Le paramètre facultatif *multiSélection* permet d’indiquer si la liste doit accepter les sélections multiples.   
 Par défaut, il n’est pas possible de sélectionner simultanément plusieurs éléments d’une liste hiérarchique. Si vous souhaitez que cette fonction soit disponible pour la liste, passez la valeur 1 dans le paramètre *multiSélection*. Dans ce cas, les sélections multiples peuvent être effectuées :  
 \- manuellement, à l’aide des combinaisons de touches **Maj**+**clic** pour une sélection continue ou **Ctrl**+**clic** (Windows) / **Commande**+**clic** (macOS) pour une sélection discontinue,  
-\- par programmation, à l’aide des commandes [SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md) et [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md).  
+\- par programmation, à l’aide des commandes [SELECT LIST ITEMS BY POSITION](../commands/select-list-items-by-position) et [SELECT LIST ITEMS BY REFERENCE](../commands/select-list-items-by-reference).  
 Si vous passez 0 ou omettez le paramètre *multiSélection*, le fonctionnement par défaut est appliqué. 
 
 Le paramètre facultatif *modifiable* permet d’indiquer si la liste sera modifiable par l’utilisateur lorsqu’elle sera affichée sous forme d’énumération associée à un champ ou une variable en saisie. Lorsque l’énumération est modifiable, un bouton **Modifier** est inséré dans la fenêtre d’énumération et l’utilisateur peut ajouter, supprimer et trier les valeurs via un éditeur spécifique.   
@@ -69,9 +69,9 @@ Vous souhaitez interdire le déploiement/contraction sur double-clic. Vous pouve
 
 ## Voir aussi 
 
-[GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
-[GET LIST PROPERTIES](get-list-properties.md)  
-[SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+[GET LIST ITEM PROPERTIES](../commands/get-list-item-properties)  
+[GET LIST PROPERTIES](../commands/get-list-properties)  
+[SET LIST ITEM PROPERTIES](../commands/set-list-item-properties)  
 
 ## Propriétés
 

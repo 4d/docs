@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-auto-spellcheck
 title: OBJECT Get auto spellcheck
 slug: /commands/object-get-auto-spellcheck
@@ -42,7 +42,7 @@ El comando devuelve **True** cuando la corrección ortográfica automática est�
 
 ## Ver también 
 
-[OBJECT SET AUTO SPELLCHECK](object-set-auto-spellcheck.md)  
+[OBJECT SET AUTO SPELLCHECK](../commands/object-set-auto-spellcheck)  
 
 ## Propiedades
 

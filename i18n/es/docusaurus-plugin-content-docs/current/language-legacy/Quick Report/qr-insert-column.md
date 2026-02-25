@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-insert-column
 title: QR INSERT COLUMN
 slug: /commands/qr-insert-column
@@ -49,7 +49,7 @@ La siguiente instrucción inserta (o crea) una primera columna en el área MiAre
 
 ## Ver también 
 
-[QR DELETE COLUMN](qr-delete-column.md)  
+[QR DELETE COLUMN](../commands/qr-delete-column)  
 
 ## Propiedades
 

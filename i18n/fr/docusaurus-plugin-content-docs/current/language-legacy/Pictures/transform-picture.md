@@ -1,4 +1,4 @@
----
+﻿---
 id: transform-picture
 title: TRANSFORM PICTURE
 slug: /commands/transform-picture
@@ -83,7 +83,7 @@ Voici un exemple de recadrage (l’image est affichée dans le formulaire avec l
 
 ## Voir aussi 
 
-[COMBINE PICTURES](combine-pictures.md)  
+[COMBINE PICTURES](../commands/combine-pictures)  
 
 ## Propriétés
 

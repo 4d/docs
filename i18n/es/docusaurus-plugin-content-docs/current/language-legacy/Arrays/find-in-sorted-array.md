@@ -1,4 +1,4 @@
----
+﻿---
 id: find-in-sorted-array
 title: Find in sorted array
 slug: /commands/find-in-sorted-array
@@ -34,22 +34,22 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Find in sorted array.Summary-->**Tema:** Arrays
 
-El nuevo comando **Find in sorted array** devuelve **true** si al menos un elemento en el *array* ordenado con el *valor* y opcionalmente devuelve la posición de los elementos correspondientes.<!-- END REF--> A diferencia de [Find in array](find-in-array.md), **Find in sorted array** sólo funciona con un *array* ordenado y ofrece información sobre la posición de las ocurrencias, lo que le permite insertar elementos si es necesario.
+El nuevo comando **Find in sorted array** devuelve **true** si al menos un elemento en el *array* ordenado con el *valor* y opcionalmente devuelve la posición de los elementos correspondientes.<!-- END REF--> A diferencia de [Find in array](../commands/find-in-array), **Find in sorted array** sólo funciona con un *array* ordenado y ofrece información sobre la posición de las ocurrencias, lo que le permite insertar elementos si es necesario.
 
 El *array* debe estar ya ordenado y debe coincidir con el orden especificado por el parámetro *\> or <* (es decir, el símbolo "mayor que" para el orden ascendente y el símbolo "menor que" para el orden descendente). El comando **Find in sorted array** tomará ventaja de la ordenación y uso de un algoritmo de *búsqueda binaria*, que es mucho más eficiente para grandes arrays (para más información, consulte la [página algoritmo de búsqueda binaria en Wikipedia](http://en.wikipedia.org/wiki/Binary%5Fsearch%5Falgorithm)). Sin embargo, si el array no está ordenado correctamente, el resultado puede ser incorrecto.
 
 **Nota:** cuando se utiliza este comando con un array ordenado de tipo Object, sólo se puede pasar una referencia a objeto en *valor*. 
 
-El comando ignorará la indicación de ordenación y se comporta como un [Find in array](find-in-array.md) estándar (búsqueda secuencial, devolviendo -1 para *posPrim* y *posUlt* si no se encuentra el *valor*) en cualquiera de los siguientes casos:
+El comando ignorará la indicación de ordenación y se comporta como un [Find in array](../commands/find-in-array) estándar (búsqueda secuencial, devolviendo -1 para *posPrim* y *posUlt* si no se encuentra el *valor*) en cualquiera de los siguientes casos:
 
 * si el tipo de array no se puede ordenar (por ejemplo arrays puntero),
 * si el array es de tipo booleano (no preciso),
 * si la base de datos no es Unicode (modo compatibilidad) y el array es una cadena o array texto,
 * cuando se busca en un array text para una cadena que incluye un comodín ('@') al principio o en el medio de la cadena (utilizando una búsqueda binaria con un carácter comodín no es posible porque los elementos correspondientes pueden no ser contiguos en el array).
 
-En caso de que el comando devuelva **False**, el valor devuelto en *posPrim* se puede pasar a [INSERT IN ARRAY](insert-in-array.md) para insertar el *valor*en el array manteniendo el array ordenado. Esta secuencia es más rápida que la inserción de un nuevo elemento al final del array y luego llamar a [SORT ARRAY](sort-array.md) para moverlo al lugar correcto.  
+En caso de que el comando devuelva **False**, el valor devuelto en *posPrim* se puede pasar a [INSERT IN ARRAY](../commands/insert-in-array) para insertar el *valor*en el array manteniendo el array ordenado. Esta secuencia es más rápida que la inserción de un nuevo elemento al final del array y luego llamar a [SORT ARRAY](../commands/sort-array) para moverlo al lugar correcto.  
   
-El valor devuelto en *posUlt* se puede utilizar en conjunto con el valor devuelto en *posPrim* para iterar sobre cada elemento del array correspondiente al *valor* (vía un [ARRAY TO LIST](array-to-list.md)) o para encontrar el número total de ocurrencias (como lo encontraría [Count in array](count-in-array.md), pero más rápido).
+El valor devuelto en *posUlt* se puede utilizar en conjunto con el valor devuelto en *posPrim* para iterar sobre cada elemento del array correspondiente al *valor* (vía un [ARRAY TO LIST](../commands/array-to-list)) o para encontrar el número total de ocurrencias (como lo encontraría [Count in array](../commands/count-in-array), pero más rápido).
 
 ## Ejemplo 1 
 
@@ -83,9 +83,9 @@ Usted quiere encontrar el número de ocurrencias de las cadenas que comienzan po
 
 ## Ver también 
 
-[Count in array](count-in-array.md)  
-[Find in array](find-in-array.md)  
-[SORT ARRAY](sort-array.md)  
+[Count in array](../commands/count-in-array)  
+[Find in array](../commands/find-in-array)  
+[SORT ARRAY](../commands/sort-array)  
 
 ## Propiedades
 

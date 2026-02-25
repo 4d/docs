@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-cell-position
 title: LISTBOX GET CELL POSITION
 slug: /commands/listbox-get-cell-position
@@ -62,12 +62,12 @@ Cuando los parámetros *X* y *Y* no se utilizan, este comando sólo puede llamar
 
 Cuando el comando se llama fuera de este contexto, **LISTBOX GET CELL POSITION** devuelve 0 en *columna* y *fila*.
 
-Este comando tiene en cuenta las acciones de selección o deselección efectuadas con el ratón, con el teclado, o utilizando el comando [EDIT ITEM](edit-item.md) (el cual genera el evento On Getting Focus). Si la selección se modifica utilizando las flechas del teclado, *columna* devuelve 0\. En ese caso, el parámetro *varCol* devuelve [Is nil pointer](is-nil-pointer.md) si se pasa.
+Este comando tiene en cuenta las acciones de selección o deselección efectuadas con el ratón, con el teclado, o utilizando el comando [EDIT ITEM](../commands/edit-item) (el cual genera el evento On Getting Focus). Si la selección se modifica utilizando las flechas del teclado, *columna* devuelve 0\. En ese caso, el parámetro *varCol* devuelve [Is nil pointer](../commands/is-nil-pointer) si se pasa.
 
 ## Ver también 
 
-[LISTBOX GET CELL COORDINATES](listbox-get-cell-coordinates.md)  
-[LISTBOX SELECT BREAK](listbox-select-break.md)  
+[LISTBOX GET CELL COORDINATES](../commands/listbox-get-cell-coordinates)  
+[LISTBOX SELECT BREAK](../commands/listbox-select-break)  
 
 ## Propiedades
 

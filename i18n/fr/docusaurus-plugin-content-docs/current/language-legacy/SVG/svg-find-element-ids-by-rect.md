@@ -1,4 +1,4 @@
----
+﻿---
 id: svg-find-element-ids-by-rect
 title: SVG Find element IDs by rect
 slug: /commands/svg-find-element-ids-by-rect
@@ -41,7 +41,7 @@ La commande retourne Vrai si au moins un élément est trouvé (c’est-à-dire 
 Cette commande permet notamment de gérer des interfaces graphiques interactives. 
 
 Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objetImage* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objetImage* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).  
-Si vous travaillez avec un champ ou une variable image, la commande utilise l'image d'origine, correspondant à la source de données (*datasource*). En revanche, si vous travaillez avec un objet du formulaire, la commande utilise l'image courante, éventuellement modifiée via la commande [SVG SET ATTRIBUTE](svg-set-attribute.md) et qui est conservée avec les propriétés de l'objet du formulaire.
+Si vous travaillez avec un champ ou une variable image, la commande utilise l'image d'origine, correspondant à la source de données (*datasource*). En revanche, si vous travaillez avec un objet du formulaire, la commande utilise l'image courante, éventuellement modifiée via la commande [SVG SET ATTRIBUTE](../commands/svg-set-attribute) et qui est conservée avec les propriétés de l'objet du formulaire.
 
 Les coordonnées passées dans les paramètres *x* et *y* doivent être exprimées en pixels relativement à l’angle supérieur gauche de l’image (0,0). Vous pouvez utiliser les valeurs retournées par les *Variables système* MouseX et MouseY. Ces variables sont mises à jour dans les événements formulaire On Clicked, On Double Clicked ainsi que On Mouse Enter et On Mouse Move. 
 
@@ -51,7 +51,7 @@ Tous les ID d’éléments dont le rectangle englobant est en intersection avec 
 
 ## Voir aussi 
 
-[SVG Find element ID by coordinates](svg-find-element-id-by-coordinates.md)  
+[SVG Find element ID by coordinates](../commands/svg-find-element-id-by-coordinates)  
 
 ## Propriétés
 

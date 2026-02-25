@@ -1,4 +1,4 @@
----
+﻿---
 id: unload-record
 title: UNLOAD RECORD
 slug: /commands/unload-record
@@ -23,13 +23,13 @@ If the record is unlocked for the local user (locked for the other users), **UNL
 
 Although **UNLOAD RECORD** unloads it from memory, the record remains the current record. When another record is made the current record, the previous current record is automatically unloaded and therefore unlocked for other users. Always execute this command when you have finished modifying a record and want to make it available to other users, while retaining the record as your current record.
 
-If a record has a large amount of data, picture fields, or external documents (such as 4D Write Pro documents), you may not want to keep the current record in memory unless you need to modify it. In this case, use the **UNLOAD RECORD** command to keep the current record without having it in memory. You free the memory occupied by the record, but you do not have access to its field values. If you later need access to the values of the record, use the [LOAD RECORD](load-record.md) command.
+If a record has a large amount of data, picture fields, or external documents (such as 4D Write Pro documents), you may not want to keep the current record in memory unless you need to modify it. In this case, use the **UNLOAD RECORD** command to keep the current record without having it in memory. You free the memory occupied by the record, but you do not have access to its field values. If you later need access to the values of the record, use the [LOAD RECORD](../commands/load-record) command.
 
 **Note:** When it is used in a transaction, the **UNLOAD RECORD** command unloads the current record only for the process that manages the transaction. For other processes, the record stays locked as long as the transaction has not been validated (or cancelled).
 
 ## See also 
 
-[LOAD RECORD](load-record.md)  
+[LOAD RECORD](../commands/load-record)  
 *Record Locking*  
 
 ## Properties

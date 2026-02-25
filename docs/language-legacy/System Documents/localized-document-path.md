@@ -1,4 +1,4 @@
----
+﻿---
 id: localized-document-path
 title: Localized document path
 slug: /commands/localized-document-path
@@ -24,7 +24,7 @@ This command must be used within a multi-language application architecture based
 
 Pass the relative pathname of the document to be searched for in *relativePath*. The path entered must be relative to the first level of the "xxx.lproj" folder of the database. The command will return a complete pathname using the "xxx.lproj" folder corresponding to the current language of the database. 
 
-**Note:** The current language is either set automatically by 4D according to the contents of the **Resources** folder (see the [Get database localization](get-database-localization.md) command), or via the [SET DATABASE LOCALIZATION](set-database-localization.md) command).
+**Note:** The current language is either set automatically by 4D according to the contents of the **Resources** folder (see the [Get database localization](../commands/get-database-localization) command), or via the [SET DATABASE LOCALIZATION](../commands/set-database-localization) command).
 
 You can express the contents of the *relativePath* parameter using a system or a POSIX syntax. For example:
 
@@ -67,7 +67,7 @@ If the current language is, for example, French Canadian (fr-ca), the command re
 
 ## See also 
 
-[Get database localization](get-database-localization.md)  
+[Get database localization](../commands/get-database-localization)  
 
 ## Properties
 

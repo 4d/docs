@@ -1,4 +1,4 @@
----
+﻿---
 id: convert-from-text
 title: CONVERT FROM TEXT
 slug: /commands/convert-from-text
@@ -35,7 +35,7 @@ No parâmetro *texto4D*, passe o texto a converter. Este texto está expresso no
   
 Em *conjuntoCaracteres*, passe o conjunto de caracteres a utilizar para a conversão. Pode passar uma string que contenha o nome padrão do conjunto (por exemplo “ISO-8859-1” ou “UTF-8”), ou seu identificador MIBEnum.  
 
-Abaixo uma lista de conjuntos de caracteres compatíveis com os comandos CONVERT FROM TEXT and [Convert to text](convert-to-text.md)
+Abaixo uma lista de conjuntos de caracteres compatíveis com os comandos CONVERT FROM TEXT and [Convert to text](../commands/convert-to-text)
 
 | **MIBEnum** | **Nome(s)**1017    | UTF-32 |
 | ----------- | ------------------ | ------ |
@@ -189,7 +189,7 @@ Abaixo uma lista de conjuntos de caracteres compatíveis com os comandos CONVERT
   
 Para maior informação sobre os nomes dos conjuntos de caracteres, por favor consulte a seguinte endereço: *http://www.iana.org/assignments/character-sets*  
   
-Depois da execução do comando, o texto convertido será retornado no BLOB *blobConvertido*. Este BLOB poderá ser lido pelo comando [Convert to text](convert-to-text.md).
+Depois da execução do comando, o texto convertido será retornado no BLOB *blobConvertido*. Este BLOB poderá ser lido pelo comando [Convert to text](../commands/convert-to-text).
 
 ## Variáveis e conjuntos do sistema 
 
@@ -197,7 +197,7 @@ Se o comando tiver sido executado corretamente, a variável OK assume o valor 1\
 
 ## Ver também 
 
-[Convert to text](convert-to-text.md)  
+[Convert to text](../commands/convert-to-text)  
 
 ## Propriedades
 

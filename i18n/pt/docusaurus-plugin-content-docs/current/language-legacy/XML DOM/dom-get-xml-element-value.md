@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-get-xml-element-value
 title: DOM GET XML ELEMENT VALUE
 slug: /commands/dom-get-xml-element-value
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 O parâmetro opcional *cDATA* se utiliza para recuperar os conteúdos das seções CDATA do elemento XML *refElement*. Como com o parâmetro *valorElement*, 4D tentará converter o valor obtido para o mesmo tipo da variável passada como parâmetro, e se o tipo de variável não for definida, o tipo texto é usado como padrão.   
   
-**Nota**: se o elemento designado por refElement for um BLOB processado pelo comando [DOM SET XML ELEMENT VALUE](dom-set-xml-element-value.md), tiver sido codificado automaticamente em banco64\. Portanto, o comando tentará automaticamente decodificar em base 64.
+**Nota**: se o elemento designado por refElement for um BLOB processado pelo comando [DOM SET XML ELEMENT VALUE](../commands/dom-set-xml-element-value), tiver sido codificado automaticamente em banco64\. Portanto, o comando tentará automaticamente decodificar em base 64.
 
 ## Exemplo 
 
@@ -54,9 +54,9 @@ Se o comando tiver sido executado corretamente, a variável sistema Ok assume o 
 
 ## Ver também 
 
-[DOM Get XML element](dom-get-xml-element.md)  
-[DOM GET XML ELEMENT NAME](dom-get-xml-element-name.md)  
-[DOM SET XML ELEMENT VALUE](dom-set-xml-element-value.md)  
+[DOM Get XML element](../commands/dom-get-xml-element)  
+[DOM GET XML ELEMENT NAME](../commands/dom-get-xml-element-name)  
+[DOM SET XML ELEMENT VALUE](../commands/dom-set-xml-element-value)  
 
 ## Propriedades
 

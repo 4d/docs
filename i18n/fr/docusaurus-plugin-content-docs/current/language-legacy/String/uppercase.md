@@ -1,4 +1,4 @@
----
+﻿---
 id: uppercase
 title: Uppercase
 slug: /commands/uppercase
@@ -45,11 +45,11 @@ Cet exemple compare les résultats obtenus suivant que le paramètre \* a été 
 
 ## Exemple 2 
 
-Reportez-vous à l'exemple de [Lowercase](lowercase.md).
+Reportez-vous à l'exemple de [Lowercase](../commands/lowercase).
 
 ## Voir aussi 
 
-[Lowercase](lowercase.md)  
+[Lowercase](../commands/lowercase)  
 
 ## Propriétés
 

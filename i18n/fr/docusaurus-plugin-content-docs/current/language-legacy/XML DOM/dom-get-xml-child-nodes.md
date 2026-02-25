@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-get-xml-child-nodes
 title: DOM GET XML CHILD NODES
 slug: /commands/dom-get-xml-child-nodes
@@ -42,7 +42,7 @@ Les types des noeuds enfants sont retournés dans le tableau *tabTypesEnfants*. 
 | XML DOCTYPE                | Entier long | 10     |
 | XML ELEMENT                | Entier long | 11     |
 
-Pour plus d’informations, reportez-vous à la description de la commande [DOM Append XML child node](dom-append-xml-child-node.md).
+Pour plus d’informations, reportez-vous à la description de la commande [DOM Append XML child node](../commands/dom-append-xml-child-node).
 
 Le tableau *tabRefsNoeuds* reçoit les valeurs ou les références des éléments en fonction de leur nature (contenus ou instructions).
 
@@ -72,8 +72,8 @@ Après l’exécution de ces instructions :
 
 ## Voir aussi 
 
-[DOM Append XML child node](dom-append-xml-child-node.md)  
-[DOM Get XML document ref](dom-get-xml-document-ref.md)  
+[DOM Append XML child node](../commands/dom-append-xml-child-node)  
+[DOM Get XML document ref](../commands/dom-get-xml-document-ref)  
 
 ## Propriétés
 

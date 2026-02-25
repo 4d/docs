@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-footer-calculation
 title: LISTBOX Get footer calculation
 slug: /commands/listbox-get-footer-calculation
@@ -37,11 +37,11 @@ O parâmetro *objeto* pode designar:
 
 * a variável e o nome de uma área de rodapé de página. Neste caso, o comando devolve o cálculo associado a esta área.
 * a variável e o nome de uma coluna de list box. Neste caso, el comando devolve o cálculo associado a esta área de rodapé de página desta coluna.
-Pode comparar o valor devolvido com as constantes do tema *Listbox Footer Calculation* (ver o comando [LISTBOX SET FOOTER CALCULATION](listbox-set-footer-calculation.md)).
+Pode comparar o valor devolvido com as constantes do tema *Listbox Footer Calculation* (ver o comando [LISTBOX SET FOOTER CALCULATION](../commands/listbox-set-footer-calculation)).
 
 ## Ver também 
 
-[LISTBOX SET FOOTER CALCULATION](listbox-set-footer-calculation.md)  
+[LISTBOX SET FOOTER CALCULATION](../commands/listbox-set-footer-calculation)  
 
 ## Propriedades
 

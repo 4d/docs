@@ -1,4 +1,4 @@
----
+﻿---
 id: tan
 title: Tan
 slug: /commands/tan
@@ -24,9 +24,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Arctan](arctan.md)  
-[Cos](cos.md)  
-[Sin](sin.md)  
+[Arctan](../commands/arctan)  
+[Cos](../commands/cos)  
+[Sin](../commands/sin)  
 
 ## プロパティ
 

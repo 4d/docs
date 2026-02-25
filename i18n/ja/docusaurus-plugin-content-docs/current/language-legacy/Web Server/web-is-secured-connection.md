@@ -1,4 +1,4 @@
----
+﻿---
 id: web-is-secured-connection
 title: WEB Is secured connection
 slug: /commands/web-is-secured-connection
@@ -33,13 +33,13 @@ displayed_sidebar: docs
 * TLS/SSLを経由して接続された場合、関数はTrueを返します。
 * 非保護モードで接続された場合、関数はFalseを返します。
 
-**注:** TLSプロトコルに関する詳細は[WEB SERVICE SET PARAMETER](web-service-set-parameter.md)を参照してください。 
+**注:** TLSプロトコルに関する詳細は[WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter)を参照してください。 
 
 このコマンドを使用して、非保護モードで実行された接続を拒否することも可能です。
 
 ## 参照 
 
-[GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
+[GENERATE CERTIFICATE REQUEST](../commands/generate-certificate-request)  
 
 ## プロパティ
 

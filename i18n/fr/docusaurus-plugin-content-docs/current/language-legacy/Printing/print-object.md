@@ -1,4 +1,4 @@
----
+﻿---
 id: print-object
 title: Print object
 slug: /commands/print-object
@@ -41,18 +41,18 @@ Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *ob
 
 Les paramètres *posX* et *posY* définissent le point de départ de l’impression du ou des objet(s). Ces valeurs doivent être exprimées en pixels. Si ces paramètres sont omis, l’objet sera imprimé en fonction de son emplacement dans le formulaire. 
 
-Les paramètres *largeur* et *hauteur* vous permettent de définir la largeur et la hauteur de l’objet de formulaire. La commande **Print object** ne gère pas les objets de taille variable. Vous devez utiliser la commande [OBJECT GET BEST SIZE](object-get-best-size.md) pour prendre en charge la taille des objets. Vous pouvez également utiliser la commande [OBJECT GET BEST SIZE](object-get-best-size.md) pour connaître la taille la plus adéquate pour les objets contenant du texte. De même, **Print object** ne provoque pas de sauts de page automatiques. Vous devez les gérer en fonction de vos besoins. 
+Les paramètres *largeur* et *hauteur* vous permettent de définir la largeur et la hauteur de l’objet de formulaire. La commande **Print object** ne gère pas les objets de taille variable. Vous devez utiliser la commande [OBJECT GET BEST SIZE](../commands/object-get-best-size) pour prendre en charge la taille des objets. Vous pouvez également utiliser la commande [OBJECT GET BEST SIZE](../commands/object-get-best-size) pour connaître la taille la plus adéquate pour les objets contenant du texte. De même, **Print object** ne provoque pas de sauts de page automatiques. Vous devez les gérer en fonction de vos besoins. 
 
 Vous pouvez utiliser les commandes de 4D pour modifier à la volée les propriétés des objets (couleur, taille...).
 
-La commande retourne Vrai si l’objet a été imprimé entièrement et Faux dans le cas contraire, c’est-à-dire si l’intégralité des données associées à l’objet n’a pas pu être imprimée dans le cadre imposé. Typiquement, la commande retourne Faux lors de l’impression d’une list box, si toutes les lignes de la list box n’ont pas pu être imprimées. Dans ce cas, il suffit d’appeler la commande **Print object** de façon répétée, jusqu’à ce qu’elle retourne Vrai : un mécanisme spécifique provoque automatiquement le défilement du contenu de l’objet après chaque appel. Si l'utilisateur annule l'impression, une erreur -128 est générée et peut être interceptée à l'aide de [ON ERR CALL](on-err-call.md).
+La commande retourne Vrai si l’objet a été imprimé entièrement et Faux dans le cas contraire, c’est-à-dire si l’intégralité des données associées à l’objet n’a pas pu être imprimée dans le cadre imposé. Typiquement, la commande retourne Faux lors de l’impression d’une list box, si toutes les lignes de la list box n’ont pas pu être imprimées. Dans ce cas, il suffit d’appeler la commande **Print object** de façon répétée, jusqu’à ce qu’elle retourne Vrai : un mécanisme spécifique provoque automatiquement le défilement du contenu de l’objet après chaque appel. Si l'utilisateur annule l'impression, une erreur -128 est générée et peut être interceptée à l'aide de [ON ERR CALL](../commands/on-err-call).
 
 **Notes :**  
 
 * Dans la version actuelle de 4D, seuls les objets de type list box bénéficient de ce mécanisme (la commande retourne toujours Vrai pour tous les autres types d’objets).
-* La commande [LISTBOX GET PRINT INFORMATION](listbox-get-print-information.md) permet de contrôler le statut de l’impression durant l’opération.
+* La commande [LISTBOX GET PRINT INFORMATION](../commands/listbox-get-print-information) permet de contrôler le statut de l’impression durant l’opération.
 
-La commande **Print object** peut être utilisée uniquement dans le contexte d’une tâche d’impression préalablement ouverte avec la commande [OPEN PRINTING JOB](open-printing-job.md). Si elle n’est pas appelée dans ce contexte, la commande ne fait rien. Plusieurs commandes **Print object** peuvent être appelées dans la même tâche d’impression. 
+La commande **Print object** peut être utilisée uniquement dans le contexte d’une tâche d’impression préalablement ouverte avec la commande [OPEN PRINTING JOB](../commands/open-printing-job). Si elle n’est pas appelée dans ce contexte, la commande ne fait rien. Plusieurs commandes **Print object** peuvent être appelées dans la même tâche d’impression. 
 
 **Note :** Les listes hiérarchiques, les sous-formulaires et les zones Web ne sont pas imprimables.
 

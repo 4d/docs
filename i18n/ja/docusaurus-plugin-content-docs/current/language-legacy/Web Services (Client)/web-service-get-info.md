@@ -1,4 +1,4 @@
----
+﻿---
 id: web-service-get-info
 title: WEB SERVICE Get info
 slug: /commands/web-service-get-info
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.WEB SERVICE Get info.Summary-->**WEB SERVICE Get info**コマンドは、リモートのWebサービスに送信された最新のSOAPリクエストの 実行中に生成されたエラーについての情報を返します。<!-- END REF-->このコマンドは一般的に[ON ERR CALL](on-err-call.md)コマンドでインストールされたエラー処理メソッド内から呼び出します。
+<!--REF #_command_.WEB SERVICE Get info.Summary-->**WEB SERVICE Get info**コマンドは、リモートのWebサービスに送信された最新のSOAPリクエストの 実行中に生成されたエラーについての情報を返します。<!-- END REF-->このコマンドは一般的に[ON ERR CALL](../commands/on-err-call)コマンドでインストールされたエラー処理メソッド内から呼び出します。
 
 *infoType* 引数には、取得したい情報を指定します。*Web Services (Client)*テーマの以下の定数を渡します:
 

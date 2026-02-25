@@ -1,4 +1,4 @@
----
+﻿---
 id: describe-query-execution
 title: DESCRIBE QUERY EXECUTION
 slug: /commands/describe-query-execution
@@ -27,13 +27,13 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.DESCRIBE QUERY EXECUTION.Summary-->O comando DESCRIBE QUERY EXECUTION permite ativar ou desativar o modo de análise da execução de pesquisas para o processo atual.<!-- END REF--> O comando funciona unicamente no contexto dos comandos de pesquisa da linguagem 4D tal como [QUERY](query.md).   
+<!--REF #_command_.DESCRIBE QUERY EXECUTION.Summary-->O comando DESCRIBE QUERY EXECUTION permite ativar ou desativar o modo de análise da execução de pesquisas para o processo atual.<!-- END REF--> O comando funciona unicamente no contexto dos comandos de pesquisa da linguagem 4D tal como [QUERY](../commands/query).   
   
 A chamada do comando com o parâmetro *estado* em [True](true.md "True") ativa o modo da análise de pesquisas. Neste modo, o motor de 4D registra internamente duas séries de informações específicas para cada pesquisa posterior efetuada sobre os dados:  
 
 * Uma descrição interna detalhada da pesquisa justo antes de sua execução, em outras palavras, a pesquisa prévia (o plano de pesquisa),
 * Uma descrição interna detalhada da pesquisa que foi executada realmente (a rota de pesquisa).
-A informação registrada inclui o tipo de pesquisa (indexada, seqüencial), o número de registro encontrados e o tempo necessário para cada critério de pesquisa a executar. Pode ler esta informação utilizando os comandos [Last query plan](last-query-plan.md) e [Last query path](last-query-path.md).  
+A informação registrada inclui o tipo de pesquisa (indexada, seqüencial), o número de registro encontrados e o tempo necessário para cada critério de pesquisa a executar. Pode ler esta informação utilizando os comandos [Last query plan](../commands/last-query-plan) e [Last query path](../commands/last-query-path).  
   
 Geralmente, a descrição do plano de uma pesquisa e sua rota são idênticos, mas poderiam eventualmente ser diferentes porque 4D poderia implementar otimizações dinâmicas durante a execução da pesquisa para melhorar o rendimento. Por exemplo, una pesquisa indexada pode ser convertida dinamicamente em uma pesquisa seqüencial se o motor 4D estima que seria mais rápida, este é o caso, quando o número de registros nos quais é realizada a pesquisa for baixo.  
   
@@ -76,8 +76,8 @@ $vResultPath :
 
 ## Ver também 
 
-[Last query path](last-query-path.md)  
-[Last query plan](last-query-plan.md)  
+[Last query path](../commands/last-query-path)  
+[Last query plan](../commands/last-query-plan)  
 
 ## Propriedades
 

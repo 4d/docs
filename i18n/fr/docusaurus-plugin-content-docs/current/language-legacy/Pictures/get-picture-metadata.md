@@ -1,4 +1,4 @@
----
+﻿---
 id: get-picture-metadata
 title: GET PICTURE METADATA
 slug: /commands/get-picture-metadata
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.GET PICTURE METADATA.Summary-->La commande **GET PICTURE METADATA** permet de lire le contenu de métadonnées (ou méta-balises) présentes dans *image* (champ ou une variable image 4D).<!-- END REF--> Pour plus d’informations sur les métadonnées, reportez-vous à la description de la commande [SET PICTURE METADATA](set-picture-metadata.md).
+<!--REF #_command_.GET PICTURE METADATA.Summary-->La commande **GET PICTURE METADATA** permet de lire le contenu de métadonnées (ou méta-balises) présentes dans *image* (champ ou une variable image 4D).<!-- END REF--> Pour plus d’informations sur les métadonnées, reportez-vous à la description de la commande [SET PICTURE METADATA](../commands/set-picture-metadata).
 
 Passez dans le paramètre *nomMeta* une chaîne désignant le type de métadonnée à récupérer. Vous pouvez passer :
 
@@ -106,9 +106,9 @@ La variable système OK retourne 1 si la récupération des métadonnées s’es
 
 ## Voir aussi 
 
-[GET PICTURE KEYWORDS](get-picture-keywords.md)  
+[GET PICTURE KEYWORDS](../commands/get-picture-keywords)  
 *Noms des métadonnées images*  
-[SET PICTURE METADATA](set-picture-metadata.md)  
+[SET PICTURE METADATA](../commands/set-picture-metadata)  
 *Valeurs des métadonnées images*  
 
 ## Propriétés

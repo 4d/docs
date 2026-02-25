@@ -1,4 +1,4 @@
----
+﻿---
 id: get-list-item-font
 title: Get list item font
 slug: /commands/get-list-item-font
@@ -36,13 +36,13 @@ If you pass the first optional \* parameter, you indicate that the *list* parame
 
 **Note:** If you use the @ character in the object name of the list and the form contains several lists that match this name, the **Get list item font** command will be applied to the first object whose name corresponds.
 
-You can pass a reference number in *itemRef*. If this number does not correspond to any item of the list, the command does nothing. You can also pass 0 in *itemRef* in order to get the font of the last item added to the list (using [APPEND TO LIST](append-to-list.md)).
+You can pass a reference number in *itemRef*. If this number does not correspond to any item of the list, the command does nothing. You can also pass 0 in *itemRef* in order to get the font of the last item added to the list (using [APPEND TO LIST](../commands/append-to-list)).
 
 Lastly, you can pass \* in *itemRef*: in this case, the command will get the font of the current item of the list. If several items are selected manually, the current item is the one that was selected last. If no item is selected, the command does nothing.
 
 ## See also 
 
-[SET LIST ITEM FONT](set-list-item-font.md)  
+[SET LIST ITEM FONT](../commands/set-list-item-font)  
 
 ## Properties
 

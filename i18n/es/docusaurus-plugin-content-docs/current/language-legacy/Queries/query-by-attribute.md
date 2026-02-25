@@ -1,4 +1,4 @@
----
+﻿---
 id: query-by-attribute
 title: QUERY BY ATTRIBUTE
 slug: /commands/query-by-attribute
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUERY BY ATTRIBUTE.Summary-->**QUERY BY ATTRIBUTE** busca los registros que coincidan con la cadena de consulta definida utilizando los parámetros *campoObjeto*, *rutaAtributo*, *opBusq* y *valor*, y devuelve una selección de registros para *tabla*.<!-- END REF-->cambia la selección actual de *tabla* para el proceso actual y vuelve el primer registro de la nueva selección el registro actual. Si se omite el parámetro *tabla*, el comando se aplica a la tabla por defecto. Si no se ha definido ninguna tabla por defecto, se produce un error.
 
-El parámetro opcional *opC* *onj* se utilizar para combinar varias llamadas a **QUERY BY ATTRIBUTE** en caso de búsquedas múltiples. Los operadores de conjunción disponibles son los mismos que los del comando [QUERY](query.md):
+El parámetro opcional *opC* *onj* se utilizar para combinar varias llamadas a **QUERY BY ATTRIBUTE** en caso de búsquedas múltiples. Los operadores de conjunción disponibles son los mismos que los del comando [QUERY](../commands/query):
 
 | **Conjunción** | **Símbolo a utilizar con QUERY BY ATTRIBUTE** |
 | -------------- | --------------------------------------------- |
@@ -71,7 +71,7 @@ El parámetro *opBusq* es el operador de comparación que se aplica entre *campo
 
 (\*) Cuando se utiliza con los elementos del array, el operador # significa "no contiene ninguno". 
 
-**Nota:** se puede especificar el operador de comparación como una expresión texto en lugar de un símbolo. Consulte la descripción del comando [QUERY](query.md) para más información. 
+**Nota:** se puede especificar el operador de comparación como una expresión texto en lugar de un símbolo. Consulte la descripción del comando [QUERY](../commands/query) para más información. 
 
 *valor* valor es el dato contra el que se va a comparar *rutaAtributo*. El valor que puede ser cualquier expresión del mismo tipo que *rutaAtributo*. El valor se evalúa una vez, al inicio de la búsqueda. El valor no se evalúa para cada registro. Para buscar una cadena dentro de una cadena (una búsqueda "contains"), utilice el símbolo arroba (@) en *valor* para aislar la cadena a buscar, como se muestra en este ejemplo: "@Smith@". Note que en este caso, la búsqueda sólo se beneficia parcialmente desde el índice (compacidad de almacenamiento de datos).
 
@@ -120,19 +120,19 @@ Aquí están las reglas a seguir para la construcción de varias búsquedas por 
 * La primera línea no debe contener una conjunción.
 * Cada argumento de búsqueda sucesivo puede comenzar con una conjunción. Si lo omite, el operador AND (&) se utiliza por defecto.
 * Todas las líneas, excepto la última, deben utilizar el parámetro *\**.
-* **QUERY BY ATTRIBUTE** se puede combinar con los comandos [QUERY](query.md) (ver ejemplo).
-* Para realizar la búsqueda, no especifique el parámetro *\** en el último comando **QUERY BY ATTRIBUTE**. Alternativamente, puede ejecutar el comando [QUERY](query.md) sin parámetros distintos a la tabla.
+* **QUERY BY ATTRIBUTE** se puede combinar con los comandos [QUERY](../commands/query) (ver ejemplo).
+* Para realizar la búsqueda, no especifique el parámetro *\** en el último comando **QUERY BY ATTRIBUTE**. Alternativamente, puede ejecutar el comando [QUERY](../commands/query) sin parámetros distintos a la tabla.
 
 **Nota:** cada tabla mantiene su propia construcción de búsqueda actual. Esto significa que puede crear varias búsquedas simultáneamente, una para cada tabla.
 
 No importa la forma en que una búsqueda se haya definido:
 
-* Si la operación de búsqueda va a tomar algún tiempo para llevarse a cabo, 4D muestra automáticamente un mensaje que contiene un termómetro de progreso. Estos mensajes se pueden activar y desactivar mediante el uso de los comandos [MESSAGES ON](messages-on.md) y [MESSAGES OFF](messages-off.md). Si se muestra un termómetro de progreso, el usuario puede hacer clic en el botón Detener para interrumpir la búsqueda. Si se completa la consulta, OK toma el valor 1\. De lo contrario, si la consulta se interrumpe, OK toma el valor 0 (cero).
+* Si la operación de búsqueda va a tomar algún tiempo para llevarse a cabo, 4D muestra automáticamente un mensaje que contiene un termómetro de progreso. Estos mensajes se pueden activar y desactivar mediante el uso de los comandos [MESSAGES ON](../commands/messages-on) y [MESSAGES OFF](../commands/messages-off). Si se muestra un termómetro de progreso, el usuario puede hacer clic en el botón Detener para interrumpir la búsqueda. Si se completa la consulta, OK toma el valor 1\. De lo contrario, si la consulta se interrumpe, OK toma el valor 0 (cero).
 * Si no se especifica ningún campo objeto indexado, la búsqueda se optimiza cada vez que es posible (los campos indexados se buscan primero), resultando en una búsqueda que toma la menor cantidad de tiempo posible.
 
 ### Valores fecha en el objeto 
 
-Las fechas se almacenan en los objetos en función de los parámetros de la base; por defecto, se tiene en cuenta la zona horaria (ver el selector JSON use local time en el comando [SET DATABASE PARAMETER](set-database-parameter.md)). 
+Las fechas se almacenan en los objetos en función de los parámetros de la base; por defecto, se tiene en cuenta la zona horaria (ver el selector JSON use local time en el comando [SET DATABASE PARAMETER](../commands/set-database-parameter)). 
 
 ```json
 !1973-05-22! -> "1973-05-21T23:00:00.000Z"
@@ -416,7 +416,7 @@ La variable OK toma el valor 0 si: - el usuario hace clic en Cancelar en la caja
 
   
 *Estructura de los objetos de lenguaje 4D*  
-[QUERY SELECTION BY ATTRIBUTE](query-selection-by-attribute.md)  
+[QUERY SELECTION BY ATTRIBUTE](../commands/query-selection-by-attribute)  
 
 ## Propiedades
 

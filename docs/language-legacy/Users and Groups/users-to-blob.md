@@ -1,4 +1,4 @@
----
+﻿---
 id: users-to-blob
 title: USERS TO BLOB
 slug: /commands/users-to-blob
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 Only the database Administrator or the Designer can execute this command. If another user tries to execute it, the command does nothing and a privilege error (-9949) is generated.
 
-The generated BLOB is encrypted automatically and can only be read using the [BLOB TO USERS](blob-to-users.md) command. You can store this BLOB in a file on your hard disk or in a field.
+The generated BLOB is encrypted automatically and can only be read using the [BLOB TO USERS](../commands/blob-to-users) command. You can store this BLOB in a file on your hard disk or in a field.
 
 This command is the equivalent of recording groups and users from the Toolbar. The only difference is that it lets you store user accounts in a BLOB field and not just in a file.
 
@@ -41,7 +41,7 @@ This lets you keep a backup of users in the database data and, as such, implemen
 
 ## See also 
 
-[BLOB TO USERS](blob-to-users.md)  
+[BLOB TO USERS](../commands/blob-to-users)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: clear-set
 title: CLEAR SET
 slug: /commands/clear-set
@@ -25,9 +25,9 @@ Ver el ejemplo del comando [USE SET](use-set.md "USE SET").
 
 ## Ver también 
 
-[CREATE EMPTY SET](create-empty-set.md)  
-[CREATE SET](create-set.md)  
-[LOAD SET](load-set.md)  
+[CREATE EMPTY SET](../commands/create-empty-set)  
+[CREATE SET](../commands/create-set)  
+[LOAD SET](../commands/load-set)  
 
 ## Propiedades
 

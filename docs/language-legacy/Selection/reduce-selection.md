@@ -1,4 +1,4 @@
----
+﻿---
 id: reduce-selection
 title: REDUCE SELECTION
 slug: /commands/reduce-selection
@@ -55,9 +55,9 @@ The following example first finds the correct statistics for a worldwide contest
 
 ## See also 
 
-[ORDER BY](order-by.md)  
-[QUERY](query.md)  
-[SCAN INDEX](scan-index.md)  
+[ORDER BY](../commands/order-by)  
+[QUERY](../commands/query)  
+[SCAN INDEX](../commands/scan-index)  
 *Sets*  
 
 ## Properties

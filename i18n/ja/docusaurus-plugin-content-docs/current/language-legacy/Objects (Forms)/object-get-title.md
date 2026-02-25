@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-title
 title: OBJECT Get title
 slug: /commands/object-get-title
@@ -40,7 +40,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT SET TITLE](object-set-title.md)  
+[OBJECT SET TITLE](../commands/object-set-title)  
 
 ## プロパティ
 

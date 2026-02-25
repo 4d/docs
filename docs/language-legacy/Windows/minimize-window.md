@@ -1,4 +1,4 @@
----
+﻿---
 id: minimize-window
 title: MINIMIZE WINDOW
 slug: /commands/minimize-window
@@ -45,7 +45,7 @@ The size of the window is set to its initial size (i.e. its size before being ma
 ![](../../assets/en/commands/pict39370.en.png)  
 Reduction/zoom box on Mac OS
 
-If the windows to which the command is applied were not previously maximized (manually or using [MAXIMIZE WINDOW](maximize-window.md)), or if the window type does not include a zoom box, the command has no effect. For more information on window types, refer to the *Window Types (compatibility)* section. 
+If the windows to which the command is applied were not previously maximized (manually or using [MAXIMIZE WINDOW](../commands/maximize-window)), or if the window type does not include a zoom box, the command has no effect. For more information on window types, refer to the *Window Types (compatibility)* section. 
 
 **Note:** This function is not to be confused with minimizing a window to a button (Windows) or in the Dock (macOS), which is triggered by a click on the button shown:
 
@@ -57,8 +57,8 @@ Mac OS
 
 ## See also 
 
-[MAXIMIZE WINDOW](maximize-window.md)  
-[REDUCE RESTORE WINDOW](reduce-restore-window.md)  
+[MAXIMIZE WINDOW](../commands/maximize-window)  
+[REDUCE RESTORE WINDOW](../commands/reduce-restore-window)  
 
 ## Properties
 

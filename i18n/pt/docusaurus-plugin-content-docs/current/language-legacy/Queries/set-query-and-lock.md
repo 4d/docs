@@ -1,4 +1,4 @@
----
+﻿---
 id: set-query-and-lock
 title: SET QUERY AND LOCK
 slug: /commands/set-query-and-lock
@@ -47,18 +47,18 @@ Chame SET QUERY AND LOCK(False) com o objetivo de desativar o mecanismo posterio
 
 SET QUERY AND LOCK modifica unicamente o comportamento dos comandos de pesquisa em outras palavras:
 
-* [QUERY](query.md)
-* [QUERY SELECTION](query-selection.md)
-* [QUERY BY EXAMPLE](query-by-example.md)
-* [QUERY BY FORMULA](query-by-formula.md)
-* [QUERY BY SQL](query-by-sql.md)
-* [QUERY SELECTION BY FORMULA](query-selection-by-formula.md)
-* [QUERY SELECTION WITH ARRAY](query-selection-with-array.md)
-* [QUERY WITH ARRAY](query-with-array.md)
-* [QUERY BY ATTRIBUTE](query-by-attribute.md)
-* [QUERY SELECTION BY ATTRIBUTE](query-selection-by-attribute.md)
+* [QUERY](../commands/query)
+* [QUERY SELECTION](../commands/query-selection)
+* [QUERY BY EXAMPLE](../commands/query-by-example)
+* [QUERY BY FORMULA](../commands/query-by-formula)
+* [QUERY BY SQL](../commands/query-by-sql)
+* [QUERY SELECTION BY FORMULA](../commands/query-selection-by-formula)
+* [QUERY SELECTION WITH ARRAY](../commands/query-selection-with-array)
+* [QUERY WITH ARRAY](../commands/query-with-array)
+* [QUERY BY ATTRIBUTE](../commands/query-by-attribute)
+* [QUERY SELECTION BY ATTRIBUTE](../commands/query-selection-by-attribute)
 
-Entretanto, SET QUERY AND LOCK não afeta os outros comandos que modificam a seleção atual tais como as **[ALL RECORDS](all-records.md), [RELATE MANY](relate-many.md)** etc.
+Entretanto, SET QUERY AND LOCK não afeta os outros comandos que modificam a seleção atual tais como as **[ALL RECORDS](../commands/all-records), [RELATE MANY](../commands/relate-many)** etc.
 
 ## Exemplo 
 
@@ -80,7 +80,7 @@ Se o comando não é chamado no contexto de uma transação, um erro é gerado.
 
 ## Ver também 
 
-[QUERY](query.md)  
+[QUERY](../commands/query)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: variance
 title: Variance
 slug: /commands/variance
@@ -60,7 +60,7 @@ The following method is called to print the records in the selection and to acti
  PRINT SELECTION([Students])
 ```
 
-**Note:** The parameter to the [BREAK LEVEL](break-level.md) command should be equal to the number of breaks in your report. For more information about break processing, refer to the chapter *Printing*.
+**Note:** The parameter to the [BREAK LEVEL](../commands/break-level) command should be equal to the number of breaks in your report. For more information about break processing, refer to the chapter *Printing*.
 
 ## Example 2 
 
@@ -75,10 +75,10 @@ This example gets the variance of the values placed in an array:
 
 ## See also 
 
-[Average](average.md)  
-[Std deviation](std-deviation.md)  
-[Sum](sum.md)  
-[Sum squares](sum-squares.md)  
+[Average](../commands/average)  
+[Std deviation](../commands/std-deviation)  
+[Sum](../commands/sum)  
+[Sum squares](../commands/sum-squares)  
 
 ## Properties
 

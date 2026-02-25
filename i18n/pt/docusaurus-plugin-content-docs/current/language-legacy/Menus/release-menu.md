@@ -1,4 +1,4 @@
----
+﻿---
 id: release-menu
 title: RELEASE MENU
 slug: /commands/release-menu
@@ -27,13 +27,13 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.RELEASE MENU.Summary-->O comando RELEASE MENU apaga da memória o menu cuja referência se passa em *menu*.<!-- END REF-->. A regra é a seguinte: a cada [Create menu](create-menu.md) deve corresponder um [RELEASE MENU](release-menu.md). 
+<!--REF #_command_.RELEASE MENU.Summary-->O comando RELEASE MENU apaga da memória o menu cuja referência se passa em *menu*.<!-- END REF-->. A regra é a seguinte: a cada [Create menu](../commands/create-menu) deve corresponder um [RELEASE MENU](../commands/release-menu). 
 
 O comando elimina todas as instâncias de *menu* em todas as barras de menu e todos os processos. Se o menu pertence a uma barra de menu em uso, continuará funcionando mas não poderá ser modificada. Só será apagado realmente da memória quando a última barra de menus na que apareça não esteja mais em uso.
 
 Este comando pode ser utilizado com menus usados como barras de menus.
 
-Os submenus utilizados por *menu* não são apagados se foram criados utilizando o comando [Create menu](create-menu.md). Neste caso, devem ser eliminados individualmente (ver a regra mencionada anteriormente). Entretanto, se os submenus vêm da duplicação de um menu existente, não chame [RELEASE MENU](release-menu.md) com suas instâncias porque 4D as apagará automaticamente.
+Os submenus utilizados por *menu* não são apagados se foram criados utilizando o comando [Create menu](../commands/create-menu). Neste caso, devem ser eliminados individualmente (ver a regra mencionada anteriormente). Entretanto, se os submenus vêm da duplicação de um menu existente, não chame [RELEASE MENU](../commands/release-menu) com suas instâncias porque 4D as apagará automaticamente.
 
 ## Exemplo 
 
@@ -65,7 +65,7 @@ Este exemplo mostra as diferentes formas de utilizar este comando:
 
 ## Ver também 
 
-[Create menu](create-menu.md)  
+[Create menu](../commands/create-menu)  
 
 ## Propriedades
 

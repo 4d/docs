@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-text-orientation
 title: OBJECT SET TEXT ORIENTATION
 slug: /commands/object-set-text-orientation
@@ -59,7 +59,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT Get text orientation](object-get-text-orientation.md)  
+[OBJECT Get text orientation](../commands/object-get-text-orientation)  
 
 ## プロパティ
 

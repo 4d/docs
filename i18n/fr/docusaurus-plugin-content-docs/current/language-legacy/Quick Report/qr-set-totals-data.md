@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-totals-data
 title: QR SET TOTALS DATA
 slug: /commands/qr-set-totals-data
@@ -106,7 +106,7 @@ Si le paramètre *numRupture* est incorrect, l’erreur -9853 est générée.
 
 ## Voir aussi 
 
-[QR GET TOTALS DATA](qr-get-totals-data.md)  
+[QR GET TOTALS DATA](../commands/qr-get-totals-data)  
 
 ## Propriétés
 

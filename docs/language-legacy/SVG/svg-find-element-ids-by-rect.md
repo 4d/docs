@@ -1,4 +1,4 @@
----
+﻿---
 id: svg-find-element-ids-by-rect
 title: SVG Find element IDs by rect
 slug: /commands/svg-find-element-ids-by-rect
@@ -42,7 +42,7 @@ This command can be used in particular to manage interactive graphic interfaces.
 
 If you pass the optional *\** parameter, you indicate that the *pictureObject* parameter is an object name (string). If you do not pass this parameter, you indicate that the *pictureObject* parameter is a field or a variable. In this case, you pass a field or variable reference (object field or variable only) instead of a string. 
 
-If you are working with a picture field or variable, the command uses the original picture, corresponding to the data source. However, if you are working with a form object, the command uses the current picture, that may have been modified via the [SVG SET ATTRIBUTE](svg-set-attribute.md) command and that is kept with the properties of the form object.
+If you are working with a picture field or variable, the command uses the original picture, corresponding to the data source. However, if you are working with a form object, the command uses the current picture, that may have been modified via the [SVG SET ATTRIBUTE](../commands/svg-set-attribute) command and that is kept with the properties of the form object.
 
 The coordinates passed in the *x* and *y* parameters must be expressed in pixels in relation to the top left corner of the picture (0,0). You can use the values returned by the MouseX and MouseY *System Variables*. These variables are updated in the On Clicked and On Double Clicked form events as well as the in the On Mouse Enter and On Mouse Move form events. 
 
@@ -52,7 +52,7 @@ All elements whose bounding rectangle intersects with the selection rectangle ar
 
 ## See also 
 
-[SVG Find element ID by coordinates](svg-find-element-id-by-coordinates.md)  
+[SVG Find element ID by coordinates](../commands/svg-find-element-id-by-coordinates)  
 
 ## Properties
 

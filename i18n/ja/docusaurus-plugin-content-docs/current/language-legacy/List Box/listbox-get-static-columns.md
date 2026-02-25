@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-static-columns
 title: LISTBOX Get static columns
 slug: /commands/listbox-get-static-columns
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 オプションの *\** 引数を渡した場合、*object* 引数はオブジェクト名 (文字列) です。この引数を渡さない場合 *object* は変数です。この場合文字列ではなく変数参照を渡します。
 
-スタティック列はプロパティリストや[LISTBOX SET STATIC COLUMNS](listbox-set-static-columns.md)コマンドを使用して設定できます。
+スタティック列はプロパティリストや[LISTBOX SET STATIC COLUMNS](../commands/listbox-set-static-columns)コマンドを使用して設定できます。
 
 スタティック列内でプログラムを使用して列が挿入されたり削除されたりすると、このコマンドから返される列数も変更されます。   
 しかしコマンドは列の表示/非表示状態は考慮に入れません。
@@ -42,7 +42,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[LISTBOX SET STATIC COLUMNS](listbox-set-static-columns.md)  
+[LISTBOX SET STATIC COLUMNS](../commands/listbox-set-static-columns)  
 
 ## プロパティ
 

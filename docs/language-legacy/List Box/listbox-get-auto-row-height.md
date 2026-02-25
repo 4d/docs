@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-auto-row-height
 title: LISTBOX Get auto row height
 slug: /commands/listbox-get-auto-row-height
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX Get auto row height.Summary-->The **LISTBOX Get auto row height** command returns the current minimum or maximum row height value set for the list box object designated using the *object* and *\** parameters.<!-- END REF-->
 
-The current minimum or maximum row height value can be set either in the Property list (see *Automatic Row Height*) or in the current process using the [LISTBOX SET AUTO ROW HEIGHT](listbox-set-auto-row-height.md) command.
+The current minimum or maximum row height value can be set either in the Property list (see *Automatic Row Height*) or in the current process using the [LISTBOX SET AUTO ROW HEIGHT](../commands/listbox-set-auto-row-height) command.
 
 **Note**: This command can be used with "collection or entity selection" and "array" list boxes only.
 
@@ -65,9 +65,9 @@ You want to get the maximum number of lines for a list box row:
 
 ## See also 
 
-[LISTBOX Get row height](listbox-get-row-height.md)  
-[LISTBOX Get rows height](listbox-get-rows-height.md)  
-[LISTBOX SET AUTO ROW HEIGHT](listbox-set-auto-row-height.md)  
+[LISTBOX Get row height](../commands/listbox-get-row-height)  
+[LISTBOX Get rows height](../commands/listbox-get-rows-height)  
+[LISTBOX SET AUTO ROW HEIGHT](../commands/listbox-set-auto-row-height)  
 
 ## Properties
 

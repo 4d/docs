@@ -1,4 +1,4 @@
----
+﻿---
 id: set-document-position
 title: SET DOCUMENT POSITION
 slug: /commands/set-document-position
@@ -40,9 +40,9 @@ SET DOCUMENT POSITION コマンドは、引数*offset*に渡す、以下の読�
 
 ## 参照 
 
-[Get document position](get-document-position.md)  
-[RECEIVE PACKET](receive-packet.md)  
-[SEND PACKET](send-packet.md)  
+[Get document position](../commands/get-document-position)  
+[RECEIVE PACKET](../commands/receive-packet)  
+[SEND PACKET](../commands/send-packet)  
 
 ## プロパティ
 

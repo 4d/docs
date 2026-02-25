@@ -1,4 +1,4 @@
----
+﻿---
 id: backup-info
 title: BACKUP INFO
 slug: /commands/backup-info
@@ -32,7 +32,7 @@ Pase el tipo de información a obtener en *selector*. El tipo y el contenido de 
 
 ## Ver también 
 
-[RESTORE](restore.md)  
+[RESTORE](../commands/restore)  
 
 ## Propiedades
 

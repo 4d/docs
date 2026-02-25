@@ -1,4 +1,4 @@
----
+﻿---
 id: generate-certificate-request
 title: GENERATE CERTIFICATE REQUEST
 slug: /commands/generate-certificate-request
@@ -32,13 +32,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GENERATE CERTIFICATE REQUEST.Summary-->**GENERATE CERTIFICATE REQUEST** コマンドは、Verisign(R)等の認証局で使用されているPKCSフォーマットで証明書リクエストを生成します。<!-- END REF-->証明書はSSL暗号化プロトコルの重要な役割を持ちます。これはSSLモードで接続している各ブラウザに送信され、Webサイトの“IDカード” (このコマンドに指定した情報をもとに作成) とともに、ブラウザが受信情報の解読に使用できる公開鍵も納められています。さらにこの証明書には、整合性を保証する認証局により加えられた各種情報も納められます。
 
-**Note:** 4D Webサーバで使用するSSLプロトコルに関する詳細は[WEB SERVICE SET PARAMETER](web-service-set-parameter.md) の節を参照してください。
+**Note:** 4D Webサーバで使用するSSLプロトコルに関する詳細は[WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter) の節を参照してください。
 
-証明書リクエストには、[GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md) コマンドで生成した一対の鍵が使用され、各種情報が納められます。認証局では、このリクエストと他の引数を組み合わせて証明書を作成します。
+証明書リクエストには、[GENERATE ENCRYPTION KEYPAIR](../commands/generate-encryption-keypair) コマンドで生成した一対の鍵が使用され、各種情報が納められます。認証局では、このリクエストと他の引数を組み合わせて証明書を作成します。
 
-*privKey* には[GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md) コマンドで生成した秘密鍵を納めたBLOBを渡します。
+*privKey* には[GENERATE ENCRYPTION KEYPAIR](../commands/generate-encryption-keypair) コマンドで生成した秘密鍵を納めたBLOBを渡します。
 
-*certifRequest*には空のBLOBを渡します。コマンドが実行されると、この引数には証明書リクエストがbase64で暗号化されたPKCSフォーマットで納められます。このリクエストを認証局へ提出する目的で、例えば[BLOB TO DOCUMENT](blob-to-document.md) コマンドを使用して、.pemの接尾辞がついたテキストファイルへ保存することができます。
+*certifRequest*には空のBLOBを渡します。コマンドが実行されると、この引数には証明書リクエストがbase64で暗号化されたPKCSフォーマットで納められます。このリクエストを認証局へ提出する目的で、例えば[BLOB TO DOCUMENT](../commands/blob-to-document) コマンドを使用して、.pemの接尾辞がついたテキストファイルへ保存することができます。
 
 **警告:** 秘密鍵はリクエストの作成に使用しますが、認証局へ送信してはいけません。
 
@@ -58,7 +58,7 @@ displayed_sidebar: docs
 
 ## 例題 
 
-“Certificate request”フォームには、標準の証明書リクエストで必要となる6つのフィールドが含まれています。**Generate**ボタンは証明書リクエストを納めたドキュメントをディスク上に作成します。([GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md) コマンドで作成された) 秘密鍵を納めた“Privatekey.txt”もディスク上に存在している必要があります:
+“Certificate request”フォームには、標準の証明書リクエストで必要となる6つのフィールドが含まれています。**Generate**ボタンは証明書リクエストを納めたドキュメントをディスク上に作成します。([GENERATE ENCRYPTION KEYPAIR](../commands/generate-encryption-keypair) コマンドで作成された) 秘密鍵を納めた“Privatekey.txt”もディスク上に存在している必要があります:
 
 ![](../../assets/en/commands/pict32461.ja.png)  
   
@@ -95,8 +95,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
-[HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md)  
+[GENERATE ENCRYPTION KEYPAIR](../commands/generate-encryption-keypair)  
+[HTTP SET CERTIFICATES FOLDER](../commands/http-set-certificates-folder)  
 
 ## プロパティ
 

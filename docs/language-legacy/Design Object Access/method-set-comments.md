@@ -1,4 +1,4 @@
----
+﻿---
 id: method-set-comments
 title: METHOD SET COMMENTS
 slug: /commands/method-set-comments
@@ -72,7 +72,7 @@ Add a modification date to an existing trigger documentation:
 
 ## See also 
 
-[METHOD GET COMMENTS](method-get-comments.md)  
+[METHOD GET COMMENTS](../commands/method-get-comments)  
 
 ## Properties
 

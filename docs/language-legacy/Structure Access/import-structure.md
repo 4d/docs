@@ -1,4 +1,4 @@
----
+﻿---
 id: import-structure
 title: IMPORT STRUCTURE
 slug: /commands/import-structure
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 The *xmlStructure* parameter must contain a valid 4D structure definition in XML format. There are several ways to obtain a valid structure definition:
 
-* Execute the [EXPORT STRUCTURE](export-structure.md) command,
+* Execute the [EXPORT STRUCTURE](../commands/export-structure) command,
 * Select the **Export > Structure definition to XML file...** menu item found in 4D's Design mode (see *Exporting and importing structure definitions*),
 * Create or modify a custom XML file based on public DTDs found in the "DTD" folder of the 4D application.
 
@@ -58,7 +58,7 @@ You want to import a saved structure definition into the current database:
 
 ## See also 
 
-[EXPORT STRUCTURE](export-structure.md)  
+[EXPORT STRUCTURE](../commands/export-structure)  
 
 ## Properties
 

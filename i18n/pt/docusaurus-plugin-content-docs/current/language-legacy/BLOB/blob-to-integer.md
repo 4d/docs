@@ -1,4 +1,4 @@
----
+﻿---
 id: blob-to-integer
 title: BLOB to integer
 slug: /commands/blob-to-integer
@@ -64,13 +64,13 @@ O exemplo a seguir lê 20 valores inteiros de um BLOB, iniciando no offset 0x200
 
 ## Ver também 
 
-[BLOB to longint](blob-to-longint.md)  
-[BLOB to real](blob-to-real.md)  
-[BLOB to text](blob-to-text.md)  
-[INTEGER TO BLOB](integer-to-blob.md)  
-[LONGINT TO BLOB](longint-to-blob.md)  
-[REAL TO BLOB](real-to-blob.md)  
-[TEXT TO BLOB](text-to-blob.md)  
+[BLOB to longint](../commands/blob-to-longint)  
+[BLOB to real](../commands/blob-to-real)  
+[BLOB to text](../commands/blob-to-text)  
+[INTEGER TO BLOB](../commands/integer-to-blob)  
+[LONGINT TO BLOB](../commands/longint-to-blob)  
+[REAL TO BLOB](../commands/real-to-blob)  
+[TEXT TO BLOB](../commands/text-to-blob)  
 
 ## Propriedades
 

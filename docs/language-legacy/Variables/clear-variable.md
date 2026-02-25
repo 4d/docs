@@ -1,4 +1,4 @@
----
+﻿---
 id: clear-variable
 title: CLEAR VARIABLE
 slug: /commands/clear-variable
@@ -56,7 +56,7 @@ In a form, you are using the drop-down list *asMyDropDown* whose sole purpose is
 
 ## See also 
 
-[Undefined](undefined.md)  
+[Undefined](../commands/undefined)  
 
 ## Properties
 

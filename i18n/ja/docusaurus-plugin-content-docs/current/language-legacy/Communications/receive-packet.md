@@ -1,4 +1,4 @@
----
+﻿---
 id: receive-packet
 title: RECEIVE PACKET
 slug: /commands/receive-packet
@@ -33,13 +33,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RECEIVE PACKET.Summary-->RECEIVE PACKET コマンドは、シリアルポートまたはドキュメントから文字を読み込みます。<!-- END REF--> 
 
-*docRef*を指定した場合、このコマンドは [Open document](open-document.md), [Create document](create-document.md) または [Append document](append-document.md) で開かれたドキュメントからデータを取得します。*docRef*を指定しない場合、このコマンドは [SET CHANNEL](set-channel.md)コマンドで開かれたシリアルポートかドキュメントからデータを取得します。
+*docRef*を指定した場合、このコマンドは [Open document](../commands/open-document), [Create document](../commands/create-document) または [Append document](../commands/append-document) で開かれたドキュメントからデータを取得します。*docRef*を指定しない場合、このコマンドは [SET CHANNEL](../commands/set-channel)コマンドで開かれたシリアルポートかドキュメントからデータを取得します。
 
-読み込み元に関わらず、読み込まれた文字は、テキスト、文字、またはBLOB型の*receiveVar*変数に返されます。文字が [SEND PACKET](send-packet.md) コマンドで送信された場合、型はパレットが送信された際の型に対応しなければなりません。
+読み込み元に関わらず、読み込まれた文字は、テキスト、文字、またはBLOB型の*receiveVar*変数に返されます。文字が [SEND PACKET](../commands/send-packet) コマンドで送信された場合、型はパレットが送信された際の型に対応しなければなりません。
 
 Notes:
 
-* 受信したパケットがBLOB型の場合、コマンドは [USE CHARACTER SET](use-character-set.md) コマンドで指定された文字セットを考慮しません。BLOBには変更されないデータが返されます。
+* 受信したパケットがBLOB型の場合、コマンドは [USE CHARACTER SET](../commands/use-character-set) コマンドで指定された文字セットを考慮しません。BLOBには変更されないデータが返されます。
 * テキスト型のパケットを受信した場合、 RECEIVE PACKET コ マンドはByte Order Marks (BOM) をサポートします。この場合、カレントの文字セットがUnicodeタイプ (UTF-8, UTF-16またはUTF-32) であれば、4Dは受信した先頭のバイトでBOMの識別を試みます。BOMが検知されると、それは*receiveVar*変数から取り除かれ、4Dは現在の文字セットではなくBOMで指定された文字セットを使用します。
 
 特定の文字数まで読み込むためには、*numBytes*にその数を渡します。*receiveVar*がテキスト型の場合、一回の呼び出しで、Unicodeモードでは2GB (理論的な値) までのテキストを読み込めます。
@@ -49,13 +49,13 @@ Notes:
 この場合、*stopChar*で指定した文字を見つけることが出来なければ:
 
 * RECEIVE PACKET がドキュメントを読み込むとき、ドキュメントの最後で読み込みを終了します。
-* RECEIVE PACKET がシリアルポートから読み込むとき、タイムアウト ([SET TIMEOUT](set-timeout.md)参照) に達するか、または利用者が割込（以下を参照）をかけるまで待ち続けます。
+* RECEIVE PACKET がシリアルポートから読み込むとき、タイムアウト ([SET TIMEOUT](../commands/set-timeout)参照) に達するか、または利用者が割込（以下を参照）をかけるまで待ち続けます。
 
-RECEIVE PACKET の実行中、利用者はCtrl＋Alt＋Shift (Windows) またはコマンド＋Option＋Shift (Macintosh)キーを押下することで、割込をかけることが出来ます。割込が発生するとエラー-9994が生成され、 [ON ERR CALL](on-err-call.md)でインストールされたエラー処理メソッドでとらえることができます。通常、シリアルポートで通信している場合のみ、割込を処理します。
+RECEIVE PACKET の実行中、利用者はCtrl＋Alt＋Shift (Windows) またはコマンド＋Option＋Shift (Macintosh)キーを押下することで、割込をかけることが出来ます。割込が発生するとエラー-9994が生成され、 [ON ERR CALL](../commands/on-err-call)でインストールされたエラー処理メソッドでとらえることができます。通常、シリアルポートで通信している場合のみ、割込を処理します。
 
 ドキュメントを読み込む場合、最初のRECEIVE PACKET コマンドは、ドキュメントファイルの先頭から読み込みを開始します。その後のデータ読み込みは、最後に読み込まれたバイトの次から開始します。
 
-**Note:** このコマンドは、 [SET CHANNEL](set-channel.md) を用いて開かれたドキュメントに対して有効です。一方で、 [Open document](open-document.md), [Create document](create-document.md) または [Append document](append-document.md)で開かれたドキュメントに関しては、 [Get document position](get-document-position.md) または [SET DOCUMENT POSITION](set-document-position.md) コマンドを使用して、次の書き込み ([SEND PACKET](send-packet.md)) や読み込み(RECEIVE PACKET) を行うドキュメント中の位置を取得したり設定したりできます。
+**Note:** このコマンドは、 [SET CHANNEL](../commands/set-channel) を用いて開かれたドキュメントに対して有効です。一方で、 [Open document](../commands/open-document), [Create document](../commands/create-document) または [Append document](../commands/append-document)で開かれたドキュメントに関しては、 [Get document position](../commands/get-document-position) または [SET DOCUMENT POSITION](../commands/set-document-position) コマンドを使用して、次の書き込み ([SEND PACKET](../commands/send-packet)) や読み込み(RECEIVE PACKET) を行うドキュメント中の位置を取得したり設定したりできます。
 
 ファイルの最後を越えて読み込もうとした場合、 RECEIVE PACKET は、そのポイントまでに読み込んだデータを返し、システム変数OKに1を代入します。その次の RECEIVE PACKET は空の文字列を返し、システム変数OKに0を代入します。
 
@@ -121,12 +121,12 @@ RECEIVE PACKET呼び出し後、エラーなしでパケットを受信すれば
 
 ## 参照 
 
-[Get document position](get-document-position.md)  
-[RECEIVE BUFFER](receive-buffer.md)  
-[SEND PACKET](send-packet.md)  
-[SET DOCUMENT POSITION](set-document-position.md)  
-[SET TIMEOUT](set-timeout.md)  
-[USE CHARACTER SET](use-character-set.md)  
+[Get document position](../commands/get-document-position)  
+[RECEIVE BUFFER](../commands/receive-buffer)  
+[SEND PACKET](../commands/send-packet)  
+[SET DOCUMENT POSITION](../commands/set-document-position)  
+[SET TIMEOUT](../commands/set-timeout)  
+[USE CHARACTER SET](../commands/use-character-set)  
 
 ## プロパティ
 

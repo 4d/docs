@@ -1,4 +1,4 @@
----
+﻿---
 id: get-menu-item-modifiers
 title: Get menu item modifiers
 slug: /commands/get-menu-item-modifiers
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get menu item modifiers.Summary-->The **Get menu item modifiers** command returns any additional modifier(s) associated with the standard shortcut of the menu item designated by the *menu* and *menuItem* parameters.<!-- END REF-->
 
-The standard shortcut is composed of the Command (macOS) or Ctrl (Windows) key plus a custom key. The standard shortcut is managed using the [SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md) and [Get menu item key](get-menu-item-key.md) commands.
+The standard shortcut is composed of the Command (macOS) or Ctrl (Windows) key plus a custom key. The standard shortcut is managed using the [SET MENU ITEM SHORTCUT](../commands/set-menu-item-shortcut) and [Get menu item key](../commands/get-menu-item-key) commands.
 
 The additional modifiers are the Shift key and the Option (macOS) /Alt (Windows) key. These modifiers can only be used when a standard shortcut has been specified beforehand.
 
@@ -56,12 +56,12 @@ If you pass a menu number, the command will take the corresponding menu in the m
 
 ## Example 
 
-Refer to the example of the [Get menu item key](get-menu-item-key.md) command. 
+Refer to the example of the [Get menu item key](../commands/get-menu-item-key) command. 
 
 ## See also 
 
-[Get menu item key](get-menu-item-key.md)  
-[SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md)  
+[Get menu item key](../commands/get-menu-item-key)  
+[SET MENU ITEM SHORTCUT](../commands/set-menu-item-shortcut)  
 
 ## Properties
 

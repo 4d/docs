@@ -1,4 +1,4 @@
----
+﻿---
 id: get-list-item
 title: GET LIST ITEM
 slug: /commands/get-list-item
@@ -72,12 +72,12 @@ Consulte el ejemplo del comando [APPEND TO LIST](append-to-list.md "APPEND TO LI
 
 ## Ver también 
 
-[GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
-[List item parent](list-item-parent.md)  
-[List item position](list-item-position.md)  
-[Selected list items](selected-list-items.md)  
-[SET LIST ITEM](set-list-item.md)  
-[SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+[GET LIST ITEM PROPERTIES](../commands/get-list-item-properties)  
+[List item parent](../commands/list-item-parent)  
+[List item position](../commands/list-item-position)  
+[Selected list items](../commands/selected-list-items)  
+[SET LIST ITEM](../commands/set-list-item)  
+[SET LIST ITEM PROPERTIES](../commands/set-list-item-properties)  
 
 ## Propiedades
 

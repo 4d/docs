@@ -1,4 +1,4 @@
----
+﻿---
 id: frontmost-process
 title: Frontmost process
 slug: /commands/frontmost-process
@@ -29,12 +29,12 @@ If the **Frontmost process** function is used from within a floating window form
 
 ## Example 
 
-See the example for [BRING TO FRONT](bring-to-front.md).
+See the example for [BRING TO FRONT](../commands/bring-to-front).
 
 ## See also 
 
-[BRING TO FRONT](bring-to-front.md)  
-[WINDOW LIST](window-list.md)  
+[BRING TO FRONT](../commands/bring-to-front)  
+[WINDOW LIST](../commands/window-list)  
 
 ## Properties
 

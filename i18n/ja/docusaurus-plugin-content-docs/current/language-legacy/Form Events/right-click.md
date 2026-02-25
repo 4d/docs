@@ -1,4 +1,4 @@
----
+﻿---
 id: right-click
 title: Right click
 slug: /commands/right-click
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Contextual click](contextual-click.md)  
+[Contextual click](../commands/contextual-click)  
 [Form event code](../commands/form-event-code)  
 
 ## プロパティ

@@ -1,4 +1,4 @@
----
+﻿---
 id: array-object
 title: ARRAY OBJECT
 slug: /commands/array-object
@@ -39,7 +39,7 @@ Le paramètre *taille2* est optionnel. Si vous le spécifiez, cette commande cr�
 
 Lorsque vous appliquez la commande **ARRAY OBJECT** à un tableau existant :
 
-* Si vous agrandissez sa taille, les éléments existants ne sont pas modifiés, les nouveaux éléments sont indéfinis. Vous pouvez tester si un élément est défini à l’aide de la commande [OB Is defined](ob-is-defined.md).
+* Si vous agrandissez sa taille, les éléments existants ne sont pas modifiés, les nouveaux éléments sont indéfinis. Vous pouvez tester si un élément est défini à l’aide de la commande [OB Is defined](../commands/ob-is-defined).
 * Si vous réduisez sa taille, les éléments du "bas" du tableau sont supprimés et perdus.
 
 ## Exemple 1 

@@ -1,4 +1,4 @@
----
+﻿---
 id: expand-blob
 title: EXPAND BLOB
 slug: /commands/expand-blob
@@ -75,8 +75,8 @@ A variável OK é definida como 1 se o BLOB foi expandido com êxito, caso contr
 
 ## Ver também 
 
-[BLOB PROPERTIES](blob-properties.md)  
-[COMPRESS BLOB](compress-blob.md)  
+[BLOB PROPERTIES](../commands/blob-properties)  
+[COMPRESS BLOB](../commands/compress-blob)  
 
 ## Propriedades
 

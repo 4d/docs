@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-placeholder
 title: OBJECT Get placeholder
 slug: /commands/object-get-placeholder
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get placeholder.Summary-->El comando **OBJECT Get placeholder** devuelve el texto de ejemplo asociado al objeto o a los objetos designado(s) por los parámetros *objeto* y *\**.<!-- END REF--> Si no hay ningún texto del marcador asociado con el objeto, el comando devuelve una cadena vacía.
 
-Puede definir el texto del marcador, ya sea usando la lista de propiedades o utilizando el comando [OBJECT SET PLACEHOLDER](object-set-placeholder.md).
+Puede definir el texto del marcador, ya sea usando la lista de propiedades o utilizando el comando [OBJECT SET PLACEHOLDER](../commands/object-set-placeholder).
 
 Si pasa el parámetro opcional *\** indica que el parámetro *objeto* es un nombre de objeto (cadena). Si no se pasa este parámetro, indica que el parámetro *objeto* es un campo o una variable. En este caso, se pasa una referencia de campo o variable en lugar de una cadena (campo o variable de objeto únicamente).
 
@@ -47,7 +47,7 @@ Si quiere recibir el texto del marcador de campo:
 
 ## Ver también 
 
-[OBJECT SET PLACEHOLDER](object-set-placeholder.md)  
+[OBJECT SET PLACEHOLDER](../commands/object-set-placeholder)  
 
 ## Propiedades
 

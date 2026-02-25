@@ -1,4 +1,4 @@
----
+﻿---
 id: resume-process
 title: RESUME PROCESS
 slug: /commands/resume-process
@@ -25,8 +25,8 @@ Si *proceso* ha sido retrasado anteriormente, consulte los comandos [PAUSE PROCE
 
 ## Ver también 
 
-[DELAY PROCESS](delay-process.md)  
-[PAUSE PROCESS](pause-process.md)  
+[DELAY PROCESS](../commands/delay-process)  
+[PAUSE PROCESS](../commands/pause-process)  
 
 ## Propiedades
 

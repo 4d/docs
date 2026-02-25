@@ -1,4 +1,4 @@
----
+﻿---
 id: load-set
 title: LOAD SET
 slug: /commands/load-set
@@ -43,7 +43,7 @@ Si el usuario hace clic en Cancelar en la caja de diálogo de abrir archivos, o 
 
 ## Ver también 
 
-[SAVE SET](save-set.md)  
+[SAVE SET](../commands/save-set)  
 
 ## Propiedades
 

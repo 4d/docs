@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-enabled
 title: OBJECT SET ENABLED
 slug: /commands/object-set-enabled
@@ -49,7 +49,7 @@ Cette commande peut être appliquée aux types d'objets suivants :
 
 ## Voir aussi 
 
-[OBJECT Get enabled](object-get-enabled.md)  
+[OBJECT Get enabled](../commands/object-get-enabled)  
 
 ## Propriétés
 

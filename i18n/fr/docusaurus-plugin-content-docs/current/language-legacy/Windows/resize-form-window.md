@@ -1,4 +1,4 @@
----
+﻿---
 id: resize-form-window
 title: RESIZE FORM WINDOW
 slug: /commands/resize-form-window
@@ -34,9 +34,9 @@ Passez dans les paramètres *largeur* et *hauteur* le nombre de pixels que vous 
 
 Cette commande produit exactement le même résultat qu’un redimensionnement manuel de la fenêtre à l’aide de la case de redimensionnement (si le type de fenêtre le permet). Par conséquent, la commande tient compte des propriétés de redimensionnement des objets et des contraintes de taille définies dans les propriétés du formulaire : si par exemple la commande entraîne un redimensionnement de la fenêtre supérieur à la taille maximale du formulaire, elle n’a pas d’effet. 
 
-A noter que ce fonctionnement est différent de celui de la commande [SET WINDOW RECT](set-window-rect.md), qui ne tient pas compte des propriétés du formulaire ni de son contenu en cas de redimensionnement de la fenêtre. 
+A noter que ce fonctionnement est différent de celui de la commande [SET WINDOW RECT](../commands/set-window-rect), qui ne tient pas compte des propriétés du formulaire ni de son contenu en cas de redimensionnement de la fenêtre. 
 
-A noter également que cette commande ne modifie pas forcément les dimensions du formulaire lui-même. Pour modifier par programmation la taille d’un formulaire, reportez-vous à la description de la commande [FORM SET SIZE](form-set-size.md).
+A noter également que cette commande ne modifie pas forcément les dimensions du formulaire lui-même. Pour modifier par programmation la taille d’un formulaire, reportez-vous à la description de la commande [FORM SET SIZE](../commands/form-set-size).
 
 ## Exemple 
 
@@ -56,9 +56,9 @@ Après l'exécution de cette ligne :
 
 ## Voir aussi 
 
-[FORM GET PROPERTIES](form-get-properties.md)  
-[FORM SET SIZE](form-set-size.md)  
-[SET WINDOW RECT](set-window-rect.md)  
+[FORM GET PROPERTIES](../commands/form-get-properties)  
+[FORM SET SIZE](../commands/form-set-size)  
+[SET WINDOW RECT](../commands/set-window-rect)  
 
 ## Propriétés
 

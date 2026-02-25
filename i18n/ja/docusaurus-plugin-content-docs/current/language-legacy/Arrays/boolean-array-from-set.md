@@ -1,4 +1,4 @@
----
+﻿---
 id: boolean-array-from-set
 title: BOOLEAN ARRAY FROM SET
 slug: /commands/boolean-array-from-set
@@ -43,7 +43,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[CREATE SET FROM ARRAY](create-set-from-array.md)  
+[CREATE SET FROM ARRAY](../commands/create-set-from-array)  
 
 ## プロパティ
 

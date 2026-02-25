@@ -1,4 +1,4 @@
----
+﻿---
 id: append-document
 title: Append document
 slug: /commands/append-document
@@ -49,8 +49,8 @@ Append documentの使用についての詳細は、[Open document](open-document
 
 ## 参照 
 
-[Create document](create-document.md)  
-[Open document](open-document.md)  
+[Create document](../commands/create-document)  
+[Open document](../commands/open-document)  
 
 ## プロパティ
 

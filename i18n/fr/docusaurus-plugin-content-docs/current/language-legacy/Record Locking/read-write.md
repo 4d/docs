@@ -1,4 +1,4 @@
----
+﻿---
 id: read-write
 title: READ WRITE
 slug: /commands/read-write
@@ -29,8 +29,8 @@ Utilisez **READ WRITE** lorsque vous devez modifier un enregistrement et sauvega
 
 ## Voir aussi 
 
-[READ ONLY](read-only.md)  
-[Read only state](read-only-state.md)  
+[READ ONLY](../commands/read-only)  
+[Read only state](../commands/read-only-state)  
 *Verrouillage d'enregistrements*  
 
 ## Propriétés

@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-visible
 title: OBJECT SET VISIBLE
 slug: /commands/object-set-visible
@@ -69,8 +69,8 @@ ou:
 
 ## Ver também 
 
-[OBJECT Get visible](object-get-visible.md)  
-[OBJECT SET ENTERABLE](object-set-enterable.md)  
+[OBJECT Get visible](../commands/object-get-visible)  
+[OBJECT SET ENTERABLE](../commands/object-set-enterable)  
 
 ## Propriedades
 

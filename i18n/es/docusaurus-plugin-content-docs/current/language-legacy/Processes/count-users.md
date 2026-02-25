@@ -1,4 +1,4 @@
----
+﻿---
 id: count-users
 title: Count users
 slug: /commands/count-users
@@ -23,8 +23,8 @@ Cuando se ejecuta en una aplicación 4D monousuario, **Count users** devuelve 1.
 
 ## Ver también 
 
-[Count tasks](count-tasks.md)  
-[Count user processes](count-user-processes.md)  
+[Count tasks](../commands/count-tasks)  
+[Count user processes](../commands/count-user-processes)  
 
 ## Propiedades
 

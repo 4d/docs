@@ -1,4 +1,4 @@
----
+﻿---
 id: get-edited-text
 title: Get edited text
 slug: /commands/get-edited-text
@@ -76,7 +76,7 @@ Here is an example of how to process on the fly characters entered in a text fie
 ## See also 
 
 [Form event code](../commands/form-event-code)  
-[Is editing text](is-editing-text.md)  
+[Is editing text](../commands/is-editing-text)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: blob-to-print-settings
 title: BLOB to print settings
 slug: /commands/blob-to-print-settings
@@ -29,16 +29,16 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.BLOB to print settings.Summary-->**BLOB to print settings** コマンドは、4Dの現プリンタ設定を *printSettings* BLOBに格納された内容で置き換えます。<!-- END REF-->このBLOBは [Print settings to BLOB](print-settings-to-blob.md) または  4D Pack コマンドで生成されていなければなりません (後述参照)。
+<!--REF #_command_.BLOB to print settings.Summary-->**BLOB to print settings** コマンドは、4Dの現プリンタ設定を *printSettings* BLOBに格納された内容で置き換えます。<!-- END REF-->このBLOBは [Print settings to BLOB](../commands/print-settings-to-blob) または  4D Pack コマンドで生成されていなければなりません (後述参照)。
 
 *params* パラメーターには、"部数" および "印刷範囲" の基本設定の扱いを指定します:
 
 * 0 または省略: BLOB に保存されている値が採用されます
 * 1: これらの値をデフォルト値にリセットします (部数: 1; 印刷範囲: すべて)
 
-新しいプリント設定はカレントプリンターに対して適用され、*\>* 引数なしで呼び出された *\_o\_PAGE SETUP* や [SET PRINT OPTION](set-print-option.md)、[PRINT SELECTION](print-selection.md) などのコマンドが設定を変更するまで、[カレントの 4D 印刷設定](../../settings/compatibility.md) に対して適用されます。具体的には [PRINT SELECTION](print-selection.md), [PRINT LABEL](print-label.md), [PRINT RECORD](print-record.md), [Print form](../commands/print-form) と [QR REPORT](qr-report.md) コマンドのほか、4Dのメニューコマンド (デザインモード含む) で、この印刷設定使用されます。
+新しいプリント設定はカレントプリンターに対して適用され、*\>* 引数なしで呼び出された *\_o\_PAGE SETUP* や [SET PRINT OPTION](../commands/set-print-option)、[PRINT SELECTION](../commands/print-selection) などのコマンドが設定を変更するまで、[カレントの 4D 印刷設定](../../settings/compatibility.md) に対して適用されます。具体的には [PRINT SELECTION](../commands/print-selection), [PRINT LABEL](../commands/print-label), [PRINT RECORD](../commands/print-record), [Print form](../commands/print-form) と [QR REPORT](../commands/qr-report) コマンドのほか、4Dのメニューコマンド (デザインモード含む) で、この印刷設定使用されます。
 
-**BLOB to print settings**で定義した設定を保持するためには、[PRINT SELECTION](print-selection.md), [PRINT LABEL](print-label.md), および [PRINT RECORD](print-record.md) コマンドは *\>* 引数付きで呼び出さなければなりません。
+**BLOB to print settings**で定義した設定を保持するためには、[PRINT SELECTION](../commands/print-selection), [PRINT LABEL](../commands/print-label), および [PRINT RECORD](../commands/print-record) コマンドは *\>* 引数付きで呼び出さなければなりません。
 
 このコマンドは次のいずれかの値を返します:
 
@@ -56,7 +56,7 @@ displayed_sidebar: docs
 
 ### 4D Pack コマンドとの互換性 
 
-4D Pack の旧  コマンドで生成された印刷設定 BLOB は **BLOB to print settings** で使用できますが、[Print settings to BLOB](print-settings-to-blob.md) で保存した BLOB を  で使用することはできません。
+4D Pack の旧  コマンドで生成された印刷設定 BLOB は **BLOB to print settings** で使用できますが、[Print settings to BLOB](../commands/print-settings-to-blob) で保存した BLOB を  で使用することはできません。
 
 The **BLOB to print settings** コマンドは、コマンドに比べてより多くの印刷情報を格納する事ができます。
 
@@ -86,7 +86,7 @@ The **BLOB to print settings** コマンドは、コマンドに比べてより�
 
 ## 参照 
 
-[Print settings to BLOB](print-settings-to-blob.md)  
+[Print settings to BLOB](../commands/print-settings-to-blob)  
 
 ## プロパティ
 

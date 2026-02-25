@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-multiline
 title: OBJECT SET MULTILINE
 slug: /commands/object-set-multiline
@@ -53,7 +53,7 @@ Você quer proibir várias linhas em uma área de entrada:
 
 ## Ver também 
 
-[OBJECT Get multiline](object-get-multiline.md)  
+[OBJECT Get multiline](../commands/object-get-multiline)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: get-pointer
 title: Get pointer
 slug: /commands/get-pointer
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get pointer.Summary-->**Get pointer** retourne un pointeur vers la variable process ou interprocess dont le nom est passé dans *nomVar*.<!-- END REF-->
 
-Pour récupérer un pointeur vers un champ, utilisez la fonction [Field](field.md). Pour récupérer un pointeur vers une table, utilisez la fonction [Table](table.md).
+Pour récupérer un pointeur vers un champ, utilisez la fonction [Field](../commands/field). Pour récupérer un pointeur vers une table, utilisez la fonction [Table](../commands/table).
 
 **Note :** Vous pouvez passer à **Get pointer** des expressions telles que, par exemple, *tTabNom+"{3}"* ainsi que des éléments de tableau 2D (*tTabNom+"{3}{5}"*).  
 En revanche, vous ne ne pouvez pas passer d'indices variables (*tTabNom+"{maVar}"*).
@@ -62,8 +62,8 @@ Utilisation de pointeurs vers des éléments de tableaux à deux dimensions :
 
 ## Voir aussi 
 
-[Field](field.md)  
-[Table](table.md)  
+[Field](../commands/field)  
+[Table](../commands/table)  
 
 ## Propriétés
 

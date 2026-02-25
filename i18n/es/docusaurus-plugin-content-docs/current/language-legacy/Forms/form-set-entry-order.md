@@ -1,4 +1,4 @@
----
+﻿---
 id: form-set-entry-order
 title: FORM SET ENTRY ORDER
 slug: /commands/form-set-entry-order
@@ -36,14 +36,14 @@ Pase en *nomObjetos* un array que contenga los nombres de los objetos de formula
 * existe en el formulario (su nombre está definido),
 * se utiliza en la página actual (o en la página *numPag*, ver abajo). Tenga en cuenta que una página de formulario incluye los objetos de la página 0 y los objetos del formulario heredado.
 
-Si se detecta un objeto no válido en tiempo de ejecución, simplemente se omite y 4D intentará utilizar el siguiente objeto válido en el array *nomObjetos*. Puede conocer el orden de entrada actual de la página actual (basada en objetos válidos) utilizando el comando [FORM GET ENTRY ORDER](form-get-entry-order.md) con el parámetro \*. 
+Si se detecta un objeto no válido en tiempo de ejecución, simplemente se omite y 4D intentará utilizar el siguiente objeto válido en el array *nomObjetos*. Puede conocer el orden de entrada actual de la página actual (basada en objetos válidos) utilizando el comando [FORM GET ENTRY ORDER](../commands/form-get-entry-order) con el parámetro \*. 
 
 Opcionalmente, puede pasar el *numPag* para el cual definir el orden de entrada. Si se omite, el comando se aplica a la página actual.
 
 **Notas:** 
 
 * El orden de entrada de un subformulario se define en el propio subformulario. Debe llamar al comando **FORM SET ENTRY ORDER** en el contexto del subformulario.
-* Este comando no define el primer objeto enfocable en el formulario en tiempo de ejecución. Si desea definir un primer objeto en el orden de entrada, debe utilizar el comando [GOTO OBJECT](goto-object.md) en el evento On Load del formulario. Si utilizó el comando [OBJECT DUPLICATE](object-duplicate.md), puede definir el objeto duplicado como el primero pasando la constante Object First in entry order en el parámetro *ligadoA*.
+* Este comando no define el primer objeto enfocable en el formulario en tiempo de ejecución. Si desea definir un primer objeto en el orden de entrada, debe utilizar el comando [GOTO OBJECT](../commands/goto-object) en el evento On Load del formulario. Si utilizó el comando [OBJECT DUPLICATE](../commands/object-duplicate), puede definir el objeto duplicado como el primero pasando la constante Object First in entry order en el parámetro *ligadoA*.
 
   
 **Acerca del orden de entrada de los datos**  
@@ -64,7 +64,7 @@ Usted desea definir el orden de entrada de los objetos en el formulario basado e
 
 ## Ver también 
 
-[FORM GET ENTRY ORDER](form-get-entry-order.md)  
+[FORM GET ENTRY ORDER](../commands/form-get-entry-order)  
 
 ## Propiedades
 

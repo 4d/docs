@@ -1,4 +1,4 @@
----
+﻿---
 id: close-window
 title: CLOSE WINDOW
 slug: /commands/close-window
@@ -25,7 +25,7 @@ Se passar um número de referência de janela externa no parâmetro *janela*, CL
 
 ## Exemplo 
 
-O seguinte exemplo abre uma janela formulario e cria novos registros com o comando [ADD RECORD](add-record.md). Ao serem adicionados os registros, a janela se fecha com **CLOSE WINDOW**:
+O seguinte exemplo abre uma janela formulario e cria novos registros com o comando [ADD RECORD](../commands/add-record). Ao serem adicionados os registros, a janela se fecha com **CLOSE WINDOW**:
 
 ```4d
  FORM SET INPUT([Employees];"Entry")

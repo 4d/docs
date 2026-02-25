@@ -1,4 +1,4 @@
----
+﻿---
 id: get-query-destination
 title: GET QUERY DESTINATION
 slug: /commands/get-query-destination
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.GET QUERY DESTINATION.Summary-->El comando **GET QUERY DESTINATION** devuelve el destino actual de los resultados de las búsquedas para el proceso en curso.<!-- END REF--> Por defecto, los resultados de las búsquedas modifican la selección actual, pero puede modificar este funcionamiento con la ayuda del comando [SET QUERY DESTINATION](set-query-destination.md).
+<!--REF #_command_.GET QUERY DESTINATION.Summary-->El comando **GET QUERY DESTINATION** devuelve el destino actual de los resultados de las búsquedas para el proceso en curso.<!-- END REF--> Por defecto, los resultados de las búsquedas modifican la selección actual, pero puede modificar este funcionamiento con la ayuda del comando [SET QUERY DESTINATION](../commands/set-query-destination).
 
 En el parámetro *destinoTipo*, 4D devuelve un valor indicando el destino actual de las búsquedas y en el parámetro *destinoObjeto* devuelve el nombre del destino (si aplica). Puede comparar el valor del parámetro *destinoTipo* con las constantes del tema *Destinos de búsqueda*:
 
@@ -67,7 +67,7 @@ Queremos modificar temporalmente el destino de búsqueda y restablecer los pará
 
 ## Ver también 
 
-[SET QUERY DESTINATION](set-query-destination.md)  
+[SET QUERY DESTINATION](../commands/set-query-destination)  
 
 ## Propiedades
 

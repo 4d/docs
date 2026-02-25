@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-delete-column
 title: QR DELETE COLUMN
 slug: /commands/qr-delete-column
@@ -45,7 +45,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[QR INSERT COLUMN](qr-insert-column.md)  
+[QR INSERT COLUMN](../commands/qr-insert-column)  
 
 ## プロパティ
 

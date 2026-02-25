@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-grid-color
 title: LISTBOX SET GRID COLOR
 slug: /commands/listbox-set-grid-color
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. For more information about object names, refer to the *Object Properties* section. 
 
-Pass the RGB color value in *color*. For more information on RGB colors, refer to the description of the [OBJECT SET RGB COLORS](object-set-rgb-colors.md) command. 
+Pass the RGB color value in *color*. For more information on RGB colors, refer to the description of the [OBJECT SET RGB COLORS](../commands/object-set-rgb-colors) command. 
 
 The *horizontal* and *vertical* parameters allow you to set the grid lines to which you will apply a color:
 
@@ -45,9 +45,9 @@ The *horizontal* and *vertical* parameters allow you to set the grid lines to wh
 
 ## See also 
 
-[LISTBOX GET GRID COLORS](listbox-get-grid-colors.md)  
-[LISTBOX SET GRID](listbox-set-grid.md)  
-[OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
+[LISTBOX GET GRID COLORS](../commands/listbox-get-grid-colors)  
+[LISTBOX SET GRID](../commands/listbox-set-grid)  
+[OBJECT SET RGB COLORS](../commands/object-set-rgb-colors)  
 
 ## Properties
 

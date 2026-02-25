@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-logout
 title: SQL LOGOUT
 slug: /commands/sql-logout
@@ -30,11 +30,11 @@ displayed_sidebar: docs
 
 ## Variables et ensembles système 
 
-Si la connexion a été correctement refermée, la variable système OK prend la valeur 1, sinon elle prend la valeur 0\. Vous pouvez intercepter les éventuelles erreurs à l’aide d’une méthode installée par la commande [ON ERR CALL](on-err-call.md).
+Si la connexion a été correctement refermée, la variable système OK prend la valeur 1, sinon elle prend la valeur 0\. Vous pouvez intercepter les éventuelles erreurs à l’aide d’une méthode installée par la commande [ON ERR CALL](../commands/on-err-call).
 
 ## Voir aussi 
 
-[SQL LOGIN](sql-login.md)  
+[SQL LOGIN](../commands/sql-login)  
 
 ## Propriétés
 

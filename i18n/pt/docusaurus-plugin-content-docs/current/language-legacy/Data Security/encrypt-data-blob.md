@@ -1,4 +1,4 @@
----
+﻿---
 id: encrypt-data-blob
 title: Encrypt data BLOB
 slug: /commands/encrypt-data-blob
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 Pode usar um *objetoChave* ou uma *passefrase* para criptografar o BLOB: 
 
-* *objetoChave*: um objeto JSON que contém a chave de criptografia com a mesma estrutura que o objeto retornado pelo comando [New data key](new-data-key.md)
+* *objetoChave*: um objeto JSON que contém a chave de criptografia com a mesma estrutura que o objeto retornado pelo comando [New data key](../commands/new-data-key)
 * *passefrase*: uma string usada para gerar a chave de criptografia
 
 Passe em *salt* (sal de criptografia) um número que será usado para tornar a criptografia mais robusta.
@@ -44,7 +44,7 @@ Se a criptografia tiver sucesso, os dados criptografados são retornados no par�
 
 No caso de um erro, o BLOB é retornada vazia e o comando retorna False.
 
-**Nota:** Quando criptografar um blob usando **Encrypt data BLOB**, o resultado *blobCriptografado* é um múltiplo de 16 bytes por causa do algoritmo de criptografia. Como consequência, se *blobCriptografar* não for um múltiplo de 16 bytes, o comando automaticamente vira para um múltiplo de 16 bytes para adicionar null bytes no final. Para evitar erros quando decriptografar o blob com [Decrypt data BLOB](decrypt-data-blob.md), precisa manejar o tamanho de *blobCritpgrafar* quando trabalhar com arquivos que não forem arquivos de texto. Para um exemplo detalhado de como fazer isso, veja [esse artigo no blog](https://blog.4d.com/encrypt-your-own-data-with-the-4d-algorithm/). 
+**Nota:** Quando criptografar um blob usando **Encrypt data BLOB**, o resultado *blobCriptografado* é um múltiplo de 16 bytes por causa do algoritmo de criptografia. Como consequência, se *blobCriptografar* não for um múltiplo de 16 bytes, o comando automaticamente vira para um múltiplo de 16 bytes para adicionar null bytes no final. Para evitar erros quando decriptografar o blob com [Decrypt data BLOB](../commands/decrypt-data-blob), precisa manejar o tamanho de *blobCritpgrafar* quando trabalhar com arquivos que não forem arquivos de texto. Para um exemplo detalhado de como fazer isso, veja [esse artigo no blog](https://blog.4d.com/encrypt-your-own-data-with-the-4d-algorithm/). 
 
 ## Exemplo 
 
@@ -67,10 +67,10 @@ Para criptografar um arquivo texto na pasta RESOURCES no banco de dados:
 ## Ver também 
 
   
-[Decrypt data BLOB](decrypt-data-blob.md)  
-[ENCRYPT BLOB](encrypt-blob.md)  
-[Encrypt data file](encrypt-data-file.md)  
-[New data key](new-data-key.md)  
+[Decrypt data BLOB](../commands/decrypt-data-blob)  
+[ENCRYPT BLOB](../commands/encrypt-blob)  
+[Encrypt data file](../commands/encrypt-data-file)  
+[New data key](../commands/new-data-key)  
 
 ## Propriedades
 

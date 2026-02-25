@@ -1,4 +1,4 @@
----
+﻿---
 id: form
 title: Formulario
 slug: /commands/form
@@ -27,13 +27,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Form.Summary-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).<!-- END REF-->El comando **Form** devuelve el objeto asociado al formulario actual (instanciado a partir del parámetro *formData* o de la clase de usuario asignada en el editor de formularios). 4D asocia automáticamente un objeto al formulario actual en los siguientes casos:
 
-- el formulario actual ha sido cargado por uno de los comandos [`DIALOG`](dialog.md), [`Print form`](print-form.md), o [`FORM LOAD`](form-load.md),
+- el formulario actual ha sido cargado por uno de los comandos [`DIALOG`](../commands/dialog), [`Print form`](../commands/print-form), o [`FORM LOAD`](../commands/form-load),
 - el formulario actual es un subformulario,
 - un formulario de tabla se muestra actualmente en la pantalla.
 
 ### Comandos (DIALOG...)
 
-Si el formulario actual se está mostrando o cargando mediante una llamada a los comandos [DIALOG](dialog.md), [`Print form`](print-form.md), o [`FORM LOAD`](form-load.md), **Form** devuelve cualquiera de los dos:
+Si el formulario actual se está mostrando o cargando mediante una llamada a los comandos [DIALOG](../commands/dialog), [`Print form`](../commands/print-form), o [`FORM LOAD`](../commands/form-load), **Form** devuelve cualquiera de los dos:
 
 - el objeto *formData* pasado como parámetro a este comando, si existe,
 - o, un objeto instanciado de la [clase de usuario asociada al formulario](../../FormEditor/properties_FormProperties.md#form-class), si existe,
@@ -110,7 +110,7 @@ Si se editan los valores y se presiona el botón OK, se actualiza el campo (desp
 
 ## Ver también
 
-[DIALOG](dialog.md)
+[DIALOG](../commands/dialog)
 
 ## Propiedades
 

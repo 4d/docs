@@ -1,4 +1,4 @@
----
+﻿---
 id: application-file
 title: Application file
 slug: /commands/application-file
@@ -51,8 +51,8 @@ Al iniciar su base de datos en Windows, necesita verificar si una librería DLL 
 
 ## Ver también 
 
-[Data file](data-file.md)  
-[Structure file](structure-file.md)  
+[Data file](../commands/data-file)  
+[Structure file](../commands/structure-file)  
 
 ## Propiedades
 

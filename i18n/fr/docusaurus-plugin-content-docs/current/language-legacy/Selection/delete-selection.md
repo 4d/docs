@@ -1,4 +1,4 @@
----
+﻿---
 id: delete-selection
 title: DELETE SELECTION
 slug: /commands/delete-selection
@@ -61,10 +61,10 @@ Lorsqu'un **DELETE SELECTION** rencontre un enregistrement verrouillé, celui-ci
 
 ## Voir aussi 
 
-[DISPLAY SELECTION](display-selection.md)  
-[MODIFY SELECTION](modify-selection.md)  
+[DISPLAY SELECTION](../commands/display-selection)  
+[MODIFY SELECTION](../commands/modify-selection)  
 *Présentation des ensembles*  
-[TRUNCATE TABLE](truncate-table.md)  
+[TRUNCATE TABLE](../commands/truncate-table)  
 *Verrouillage d'enregistrements*  
 
 ## Propriétés

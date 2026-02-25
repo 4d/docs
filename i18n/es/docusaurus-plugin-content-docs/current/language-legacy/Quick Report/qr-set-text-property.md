@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-text-property
 title: QR SET TEXT PROPERTY
 slug: /commands/qr-set-text-property
@@ -63,7 +63,7 @@ displayed_sidebar: docs
 | qr alternate background color | Entero largo | 9     | Número de color de fondo alterno                                                          |
 | qr background color           | Entero largo | 8     | Número de color de fondo                                                                  |
 | qr bold                       | Entero largo | 3     | Atributo negrita (0 ó 1)                                                                  |
-| qr font name                  | Entero largo | 10    | Nombre de la fuente como la devuelve por ejemplo el comando [FONT LIST](font-list.md)     |
+| qr font name                  | Entero largo | 10    | Nombre de la fuente como la devuelve por ejemplo el comando [FONT LIST](../commands/font-list)     |
 | qr font size                  | Entero largo | 2     | Tamaño de fuente expresado en puntos (9 a 255)                                            |
 | qr italic                     | Entero largo | 4     | Atributo itálica (0 ó 1)                                                                  |
 | qr justification              | Entero largo | 7     | Atributo de justificación (0 por defecto, 1 a la izquierda, 2 al centro y 3 a la derecha) |
@@ -96,7 +96,7 @@ Este método define varios atributos para el título de la primera columna:
 
 ## Ver también 
 
-[QR Get text property](qr-get-text-property.md)  
+[QR Get text property](../commands/qr-get-text-property)  
 
 ## Propiedades
 

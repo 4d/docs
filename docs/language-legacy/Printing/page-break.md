@@ -1,4 +1,4 @@
----
+﻿---
 id: page-break
 title: PAGE BREAK
 slug: /commands/page-break
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.PAGE BREAK.Summary-->**PAGE BREAK** triggers the printing of the data that has been sent to the printer and ejects the page.<!-- END REF--> **PAGE BREAK** is used with [Print form](../commands/print-form) (in the context of the On Printing Detail form event) to force page breaks and to print the last page created in memory. Do not use **PAGE BREAK** with the [PRINT SELECTION](print-selection.md) command. Instead, use [Subtotal](subtotal.md) or [BREAK LEVEL](break-level.md) with the optional parameter to generate page breaks.
+<!--REF #_command_.PAGE BREAK.Summary-->**PAGE BREAK** triggers the printing of the data that has been sent to the printer and ejects the page.<!-- END REF--> **PAGE BREAK** is used with [Print form](../commands/print-form) (in the context of the On Printing Detail form event) to force page breaks and to print the last page created in memory. Do not use **PAGE BREAK** with the [PRINT SELECTION](../commands/print-selection) command. Instead, use [Subtotal](../commands/subtotal) or [BREAK LEVEL](../commands/break-level) with the optional parameter to generate page breaks.
 
 The *\** and *\>* parameters are both optional.
 
@@ -51,11 +51,11 @@ See example for the [Print form](../commands/print-form) command.
 
 ## Example 2 
 
-Refer to the example of the [SET PRINT MARKER](set-print-marker.md) command.
+Refer to the example of the [SET PRINT MARKER](../commands/set-print-marker) command.
 
 ## See also 
 
-[CANCEL](cancel.md)  
+[CANCEL](../commands/cancel)  
 [Print form](../commands/print-form)  
 
 ## Properties

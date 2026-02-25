@@ -1,4 +1,4 @@
----
+﻿---
 id: blob-properties
 title: BLOB PROPERTIES
 slug: /commands/blob-properties
@@ -49,7 +49,7 @@ The parameter *currentSize* returns the current size of the BLOB. If the BLOB is
 
 ## Example 1 
 
-See examples for the commands [COMPRESS BLOB](compress-blob.md) and [EXPAND BLOB](expand-blob.md).
+See examples for the commands [COMPRESS BLOB](../commands/compress-blob) and [EXPAND BLOB](../commands/expand-blob).
 
 ## Example 2 
 
@@ -89,8 +89,8 @@ After this method has been added to your application, you can use it this way:
 
 ## See also 
 
-[COMPRESS BLOB](compress-blob.md)  
-[EXPAND BLOB](expand-blob.md)  
+[COMPRESS BLOB](../commands/compress-blob)  
+[EXPAND BLOB](../commands/expand-blob)  
 
 ## Properties
 

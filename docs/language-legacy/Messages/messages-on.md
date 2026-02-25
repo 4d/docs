@@ -1,4 +1,4 @@
----
+﻿---
 id: messages-on
 title: MESSAGES ON
 slug: /commands/messages-on
@@ -27,11 +27,11 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.MESSAGES ON.Summary-->See the description of the [MESSAGES OFF](messages-off.md) command.<!-- END REF-->
+<!--REF #_command_.MESSAGES ON.Summary-->See the description of the [MESSAGES OFF](../commands/messages-off) command.<!-- END REF-->
 
 ## See also 
 
-[MESSAGES OFF](messages-off.md)  
+[MESSAGES OFF](../commands/messages-off)  
 
 ## Properties
 

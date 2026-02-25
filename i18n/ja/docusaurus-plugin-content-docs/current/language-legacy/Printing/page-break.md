@@ -1,4 +1,4 @@
----
+﻿---
 id: page-break
 title: PAGE BREAK
 slug: /commands/page-break
@@ -55,7 +55,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[CANCEL](cancel.md)  
+[CANCEL](../commands/cancel)  
 [Print form](../commands/print-form)  
 
 ## プロパティ

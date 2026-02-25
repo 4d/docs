@@ -1,4 +1,4 @@
----
+﻿---
 id: set-menu-item-icon
 title: SET MENU ITEM ICON
 slug: /commands/set-menu-item-icon
@@ -58,7 +58,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[GET MENU ITEM ICON](get-menu-item-icon.md)  
+[GET MENU ITEM ICON](../commands/get-menu-item-icon)  
 
 ## プロパティ
 

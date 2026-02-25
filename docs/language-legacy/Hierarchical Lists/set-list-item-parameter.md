@@ -1,4 +1,4 @@
----
+﻿---
 id: set-list-item-parameter
 title: SET LIST ITEM PARAMETER
 slug: /commands/set-list-item-parameter
@@ -48,7 +48,7 @@ In *selector*, you can pass either:
 | -------------------------- | ------ | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | Additional text            | Text | 4D\_additional\_text       | This constant is used to add text to the right of the *itemRef* item. This additional title will always be displayed in the right part of the list, even when the user moves the horizontal scrolling cursor. When you use this constant, pass the text to be displayed in *value*.     |  
 | Associated standard action | Text | 4D\_standard\_action\_name | Associate a standard action with the *itemRef*. In this case, you must pass in the *value* parameter a standard action name with a parameter, for example "fontSize?value=10pt". For more information, please refer to the *Standard actions* section in the *Design Reference* manual. |
-* or a **custom selector**: You can also pass custom text and associate it with a value of the Text, Number or Boolean type in *selector*. This value will be stored with the list item and may be retrieved using the [GET LIST ITEM PARAMETER](get-list-item-parameter.md) command. This lets you set up any type of interface associated with hierarchical lists. For example, in a list of customer names, you can store the age of each person and only display it when the corresponding item is selected.
+* or a **custom selector**: You can also pass custom text and associate it with a value of the Text, Number or Boolean type in *selector*. This value will be stored with the list item and may be retrieved using the [GET LIST ITEM PARAMETER](../commands/get-list-item-parameter) command. This lets you set up any type of interface associated with hierarchical lists. For example, in a list of customer names, you can store the age of each person and only display it when the corresponding item is selected.
 
 ## Example 
 
@@ -69,11 +69,11 @@ You want to set as choice list of a hierarchical pop up menu a custom list of fo
 
 ## See also 
 
-[APPEND TO LIST](append-to-list.md)  
-[Action info](action-info.md)  
-[GET LIST ITEM PARAMETER](get-list-item-parameter.md)  
-[GET LIST ITEM PARAMETER ARRAYS](get-list-item-parameter-arrays.md)  
-[INSERT IN LIST](insert-in-list.md)  
+[APPEND TO LIST](../commands/append-to-list)  
+[Action info](../commands/action-info)  
+[GET LIST ITEM PARAMETER](../commands/get-list-item-parameter)  
+[GET LIST ITEM PARAMETER ARRAYS](../commands/get-list-item-parameter-arrays)  
+[INSERT IN LIST](../commands/insert-in-list)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: accept
 title: ACCEPT
 slug: /commands/accept
@@ -32,11 +32,11 @@ Não é possível concatenar vários ACCEPT. A execução consecutiva de dois co
 
 ### Modo Headless 
 
-**O comando ACCEPT** é permitido no modo headless (computador sem periféricos), no contexto de áreas offscreen criadas por *VP Run offscreen area* ou [WA Run offscreen area](wa-run-offscreen-area.md). 
+**O comando ACCEPT** é permitido no modo headless (computador sem periféricos), no contexto de áreas offscreen criadas por *VP Run offscreen area* ou [WA Run offscreen area](../commands/wa-run-offscreen-area). 
 
 ## Ver também 
 
-[CANCEL](cancel.md)  
+[CANCEL](../commands/cancel)  
 
 ## Propriedades
 

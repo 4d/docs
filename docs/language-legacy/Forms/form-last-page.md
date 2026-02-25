@@ -1,4 +1,4 @@
----
+﻿---
 id: form-last-page
 title: FORM LAST PAGE
 slug: /commands/form-last-page
@@ -39,11 +39,11 @@ The following example is a one-line method called from a menu command. It displa
 
 ## See also 
 
-[FORM FIRST PAGE](form-first-page.md)  
-[FORM Get current page](form-get-current-page.md)  
-[FORM GOTO PAGE](form-goto-page.md)  
-[FORM NEXT PAGE](form-next-page.md)  
-[FORM PREVIOUS PAGE](form-previous-page.md)  
+[FORM FIRST PAGE](../commands/form-first-page)  
+[FORM Get current page](../commands/form-get-current-page)  
+[FORM GOTO PAGE](../commands/form-goto-page)  
+[FORM NEXT PAGE](../commands/form-next-page)  
+[FORM PREVIOUS PAGE](../commands/form-previous-page)  
 
 ## Properties
 

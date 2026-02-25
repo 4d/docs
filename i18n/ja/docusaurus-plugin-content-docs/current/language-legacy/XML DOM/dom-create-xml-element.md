@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-create-xml-element
 title: DOM Create XML element
 slug: /commands/dom-create-xml-element
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.DOM Create XML element.Summary-->**DOM Create XML element** コマンドは、*elementRef* で参照されるXML中の*xPath* 引数で指定された位置に新しい要素を作成し、また必要であれば属性を追加します。<!-- END REF-->にはルートの要素参照 (例えば[DOM Create XML Ref](dom-create-xml-ref.md) コマンドで作成された) を渡します。
+<!--REF #_command_.DOM Create XML element.Summary-->**DOM Create XML element** コマンドは、*elementRef* で参照されるXML中の*xPath* 引数で指定された位置に新しい要素を作成し、また必要であれば属性を追加します。<!-- END REF-->にはルートの要素参照 (例えば[DOM Create XML Ref](../commands/dom-create-xml-ref) コマンドで作成された) を渡します。
 
 *xPath* 引数には、XPath 記法を使用して表現された、作成するパスを渡します(詳細な情報については、*XPath記法のサポート (DOM)*の章を参照してください)。以下のパス式がサポートされます: 
 
@@ -48,7 +48,7 @@ displayed_sidebar: docs
 
 存在しないパス要素があれば、それは作成されます。パス要素が既に存在する場合、新しいノードが追加されます。
 
-**注:** *elementRef* 引数を使用して一つまたはそれ以上のツリーの名前空間を定義していた場合([DOM Create XML Ref](dom-create-xml-ref.md) コマンド参照)、使用したい名前空間のあとに*xPath* 引数を指定する必要があります(例: “MyNameSpace:MyElement”)。
+**注:** *elementRef* 引数を使用して一つまたはそれ以上のツリーの名前空間を定義していた場合([DOM Create XML Ref](../commands/dom-create-xml-ref) コマンド参照)、使用したい名前空間のあとに*xPath* 引数を指定する必要があります(例: “MyNameSpace:MyElement”)。
 
 任意の*attrName* および *attrValue* 引数には、属性/属性値のペアを渡すことができます(変数、フィールドまたはリテラル値形式が可能です)。渡すペアの数に制限はありません。
 
@@ -168,9 +168,9 @@ $aAttrName1:="Font"
 
 ## 参照 
 
-[DOM Create XML element arrays](dom-create-xml-element-arrays.md)  
-[DOM Get XML element](dom-get-xml-element.md)  
-[DOM REMOVE XML ELEMENT](dom-remove-xml-element.md)  
+[DOM Create XML element arrays](../commands/dom-create-xml-element-arrays)  
+[DOM Get XML element](../commands/dom-get-xml-element)  
+[DOM REMOVE XML ELEMENT](../commands/dom-remove-xml-element)  
 
 ## プロパティ
 

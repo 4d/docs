@@ -1,4 +1,4 @@
----
+﻿---
 id: read-only-state
 title: Read only state
 slug: /commands/read-only-state
@@ -35,8 +35,8 @@ The following example tests the state of an \[Invoice\] table. If the state of t
 
 ## See also 
 
-[READ ONLY](read-only.md)  
-[READ WRITE](read-write.md)  
+[READ ONLY](../commands/read-only)  
+[READ WRITE](../commands/read-write)  
 *Record Locking*  
 
 ## Properties

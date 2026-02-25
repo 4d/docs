@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-font
 title: OBJECT Get font
 slug: /commands/object-get-font
@@ -35,7 +35,7 @@ If you pass the optional *\** parameter, you indicate that the *object* paramete
 
 ## See also 
 
-[OBJECT SET FONT](object-set-font.md)  
+[OBJECT SET FONT](../commands/object-set-font)  
 
 ## Properties
 

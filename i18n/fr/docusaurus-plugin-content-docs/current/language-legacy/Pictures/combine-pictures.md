@@ -1,4 +1,4 @@
----
+﻿---
 id: combine-pictures
 title: COMBINE PICTURES
 slug: /commands/combine-pictures
@@ -61,7 +61,7 @@ Résultat :
 
 ## Voir aussi 
 
-[TRANSFORM PICTURE](transform-picture.md)  
+[TRANSFORM PICTURE](../commands/transform-picture)  
 
 ## Propriétés
 

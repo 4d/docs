@@ -1,4 +1,4 @@
----
+﻿---
 id: size-of-array
 title: Size of array
 slug: /commands/size-of-array
@@ -46,8 +46,8 @@ L'exemple suivant retourne le nombre de colonnes d'une ligne d'un tableau à deu
 
 ## Voir aussi 
 
-[DELETE FROM ARRAY](delete-from-array.md)  
-[INSERT IN ARRAY](insert-in-array.md)  
+[DELETE FROM ARRAY](../commands/delete-from-array)  
+[INSERT IN ARRAY](../commands/insert-in-array)  
 
 ## Propriétés
 

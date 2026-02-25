@@ -1,4 +1,4 @@
----
+﻿---
 id: average
 title: Average
 slug: /commands/average
@@ -60,7 +60,7 @@ El siguiente método se llama para imprimir los registros en la selección y act
  PRINT SELECTION([Empleados])
 ```
 
-**Nota:** el parámetro del comando [BREAK LEVEL](break-level.md) debe ser igual al número de rupturas en su informe. Para mayor información sobre rupturas, consulte *Impresión*. 
+**Nota:** el parámetro del comando [BREAK LEVEL](../commands/break-level) debe ser igual al número de rupturas en su informe. Para mayor información sobre rupturas, consulte *Impresión*. 
 
 ## Ejemplo 2 
 
@@ -96,14 +96,14 @@ Puede hacer los siguientes cálculos:
 
 ## Ver también 
 
-[ACCUMULATE](accumulate.md)  
-[BREAK LEVEL](break-level.md)  
-[Max](max.md)  
-[Min](min.md)  
-[ORDER BY](order-by.md)  
-[PRINT SELECTION](print-selection.md)  
-[Subtotal](subtotal.md)  
-[Sum](sum.md)  
+[ACCUMULATE](../commands/accumulate)  
+[BREAK LEVEL](../commands/break-level)  
+[Max](../commands/max)  
+[Min](../commands/min)  
+[ORDER BY](../commands/order-by)  
+[PRINT SELECTION](../commands/print-selection)  
+[Subtotal](../commands/subtotal)  
+[Sum](../commands/sum)  
 
 ## Propiedades
 

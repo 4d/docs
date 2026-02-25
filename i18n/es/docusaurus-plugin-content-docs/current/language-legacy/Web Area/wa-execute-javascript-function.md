@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-execute-javascript-function
 title: WA EXECUTE JAVASCRIPT FUNCTION
 slug: /commands/wa-execute-javascript-function
@@ -70,7 +70,7 @@ La función JavaScript "getCustomerInfo" recibe un número ID como parámetro y 
 
 ## Ver también 
 
-[WA Evaluate JavaScript](wa-evaluate-javascript.md)  
+[WA Evaluate JavaScript](../commands/wa-evaluate-javascript)  
 
 ## Propiedades
 

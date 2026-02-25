@@ -1,4 +1,4 @@
----
+﻿---
 id: list-to-array
 title: LIST TO ARRAY
 slug: /commands/list-to-array
@@ -40,7 +40,7 @@ Si no define previamente el array como de tipo Alfa o Texto, LIST TO ARRAY crea 
 
 El parámetro opcional *refElements* (un array de tipo numérico) devuelve los números de referencia de los elementos de la lista. 
 
-Puede utilizar LIST TO ARRAY para construir un array basado en los elementos de primer nivel de una lista. Sin embargo, este comando no le permite trabajar con los elementos de las sublistas. Para trabajar con listas jerárquicas, utilice los comandos de listas jerárquicas, en particular [Load list](load-list.md).
+Puede utilizar LIST TO ARRAY para construir un array basado en los elementos de primer nivel de una lista. Sin embargo, este comando no le permite trabajar con los elementos de las sublistas. Para trabajar con listas jerárquicas, utilice los comandos de listas jerárquicas, en particular [Load list](../commands/load-list).
 
 ## Ejemplo 1 
 
@@ -94,9 +94,9 @@ Si ejecuta la siguiente instrucción:
 
 ## Ver también 
 
-[ARRAY TO LIST](array-to-list.md)  
-[Load list](load-list.md)  
-[SAVE LIST](save-list.md)  
+[ARRAY TO LIST](../commands/array-to-list)  
+[Load list](../commands/load-list)  
+[SAVE LIST](../commands/save-list)  
 
 ## Propiedades
 

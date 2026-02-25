@@ -1,4 +1,4 @@
----
+﻿---
 id: outside-call
 title: Outside call
 slug: /commands/outside-call
@@ -26,7 +26,7 @@ Para que se genere el ciclo de ejecución **Outside call**, asegúrese de que la
 ## Ver también 
 
 [Form event code](../commands/form-event-code)  
-[POST OUTSIDE CALL](post-outside-call.md)  
+[POST OUTSIDE CALL](../commands/post-outside-call)  
 
 ## Propiedades
 

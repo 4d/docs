@@ -1,4 +1,4 @@
----
+﻿---
 id: compress-blob
 title: COMPRESS BLOB
 slug: /commands/compress-blob
@@ -46,13 +46,13 @@ displayed_sidebar: docs
 **注**: このコマンドは、サイズが255バイト以上のBLOBだけを圧縮します。
 
 呼び出し後、BLOBが圧縮されればOK変数に1が設定されます。メモリ不足やBLOBサイズが255バイト未満などの理由で圧縮が行われなかった場合、OK変数に0が設定されます。エラーは生成されず、メソッドは実行をレジュームします。   
-(BLOBが壊れているなど) 他のケースの場合、エラー-10600が生成されます。このエラーは[ON ERR CALL](on-err-call.md)コマンドを使用してとらえることができます。
+(BLOBが壊れているなど) 他のケースの場合、エラー-10600が生成されます。このエラーは[ON ERR CALL](../commands/on-err-call)コマンドを使用してとらえることができます。
 
-BLOB圧縮後、[EXPAND BLOB](expand-blob.md)コマンドを使用して解凍できます。
+BLOB圧縮後、[EXPAND BLOB](../commands/expand-blob)コマンドを使用して解凍できます。
 
-BLOBが圧縮されているかどうかを知るには[BLOB PROPERTIES](blob-properties.md)コマンドを使用します。
+BLOBが圧縮されているかどうかを知るには[BLOB PROPERTIES](../commands/blob-properties)コマンドを使用します。
 
-**警告:** 圧縮されたBLOBもBLOBであり、そのコンテンツを編集できます。しかしそうしてしまうと、[EXPAND BLOB](expand-blob.md)コマンドは正しくBLOBを解凍できなくなります。
+**警告:** 圧縮されたBLOBもBLOBであり、そのコンテンツを編集できます。しかしそうしてしまうと、[EXPAND BLOB](../commands/expand-blob)コマンドは正しくBLOBを解凍できなくなります。
 
 ## 例題 1 
 
@@ -103,8 +103,8 @@ BLOBが正しく圧縮されると、システム変数OKは1に設定されま�
 
 ## 参照 
 
-[BLOB PROPERTIES](blob-properties.md)  
-[EXPAND BLOB](expand-blob.md)  
+[BLOB PROPERTIES](../commands/blob-properties)  
+[EXPAND BLOB](../commands/expand-blob)  
 
 ## プロパティ
 

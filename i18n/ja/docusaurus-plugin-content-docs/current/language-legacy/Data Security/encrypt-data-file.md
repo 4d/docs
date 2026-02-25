@@ -1,4 +1,4 @@
----
+﻿---
 id: encrypt-data-file
 title: Encrypt data file
 slug: /commands/encrypt-data-file
@@ -50,7 +50,7 @@ displayed_sidebar: docs
 
 * **データベースを最初に暗号化するときに限り、**渡すのは*newPassPhrase* あるいは *newDataKey* 引数だけです(逆に、*curPassPhrase* または *curDataKey* 引数は渡してはいけません):  
    * *newPassPhrase*: 暗号化キーを生成するのに使用する文字列(SHA 256-bit)  
-   * *newDataKey*: 新しいデータ暗号化キーを(*encodedKey* プロパティに)格納しているオブジェクト。このキーは[New data key](new-data-key.md) コマンドで生成されている必要があります。  
+   * *newDataKey*: 新しいデータ暗号化キーを(*encodedKey* プロパティに)格納しているオブジェクト。このキーは[New data key](../commands/new-data-key) コマンドで生成されている必要があります。  
     
 **注:** *newPassPhrase* (あるいは *newDataKey*) は4D キーチェーンには追加されません。
 * **データベースを再暗号化するとき**(つまり既に暗号化されているデータベースをもう一度暗号化するとき)は、*newPassPhrase* (あるいは *newDataKey*) 引数とカレントのパスフレーズ(またはカレントのデータキー)の両方を渡す必要があります。これは再暗号化のマーにデータベースの復号化が必要になるからです。これらの情報は、以下のように渡すことができます:  
@@ -71,7 +71,7 @@ displayed_sidebar: docs
 | End of execution    | 4             | 0             | "Done"                                                                              | 0                | 予約済み          |
 | Warning(\*)         | 5             | オブジェクト型       | エラーのテキスト                                                                            | インデックス番号またはテーブル  | 予約済み          |
 
-(\*) 検証ステップで返された警告([VERIFY DATA FILE](verify-data-file.md) コマンドを参照のこと)
+(\*) 検証ステップで返された警告([VERIFY DATA FILE](../commands/verify-data-file) コマンドを参照のこと)
 
 **戻り値**
 
@@ -140,10 +140,10 @@ displayed_sidebar: docs
 ## 参照 
 
   
-[Data file encryption status](data-file-encryption-status.md)  
-[Decrypt data BLOB](decrypt-data-blob.md)  
-[Encrypt data BLOB](encrypt-data-blob.md)  
-[New data key](new-data-key.md)  
+[Data file encryption status](../commands/data-file-encryption-status)  
+[Decrypt data BLOB](../commands/decrypt-data-blob)  
+[Encrypt data BLOB](../commands/encrypt-data-blob)  
+[New data key](../commands/new-data-key)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: pop-record
 title: POP RECORD
 slug: /commands/pop-record
@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.POP RECORD.Summary-->**POP RECORD** pops a record belonging to *aTable* from the table’s record stack, and makes the record the current record.<!-- END REF-->
 
-If you push a record, change the selection to not include the pushed record, and then pop the record, the current record is not in the current selection. To designate the popped record as the current selection, use [ONE RECORD SELECT](one-record-select.md). If you use any commands that move the record pointer before saving the record, you will lose the copy in memory.
+If you push a record, change the selection to not include the pushed record, and then pop the record, the current record is not in the current selection. To designate the popped record as the current selection, use [ONE RECORD SELECT](../commands/one-record-select). If you use any commands that move the record pointer before saving the record, you will lose the copy in memory.
 
 ## Example 
 
@@ -31,7 +31,7 @@ The following example pops the record for the customer off the record stack:
 
 ## See also 
 
-[PUSH RECORD](push-record.md)  
+[PUSH RECORD](../commands/push-record)  
 *Using the Record Stack*  
 
 ## Properties

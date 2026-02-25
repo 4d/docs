@@ -1,4 +1,4 @@
----
+﻿---
 id: begin-sql
 title: Begin SQL
 slug: /commands/begin-sql
@@ -54,9 +54,9 @@ Note que o *Depurador* 4D avaliará o código SQL linha por linha. Em alguns cas
 
 ## Ver também 
 
-[End SQL](end-sql.md)  
-[SQL Get current data source](sql-get-current-data-source.md)  
-[SQL LOGIN](sql-login.md)  
+[End SQL](../commands/end-sql)  
+[SQL Get current data source](../commands/sql-get-current-data-source)  
+[SQL LOGIN](../commands/sql-login)  
 
 ## Propriedades
 

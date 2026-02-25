@@ -1,4 +1,4 @@
----
+﻿---
 id: launch-external-process
 title: LAUNCH EXTERNAL PROCESS
 slug: /commands/launch-external-process
@@ -51,12 +51,12 @@ Le paramètre *fluxEntrée* (facultatif) contient le *stdin* du process externe.
 
 XXX
 
-4D fournit trois variables d'environnement spécifiques qui peuvent être définies à l'aide de [SET ENVIRONMENT VARIABLE](set-environment-variable.md) et utilisées dans le contexte de **LAUNCH EXTERNAL PROCESS**:
+4D fournit trois variables d'environnement spécifiques qui peuvent être définies à l'aide de [SET ENVIRONMENT VARIABLE](../commands/set-environment-variable) et utilisées dans le contexte de **LAUNCH EXTERNAL PROCESS**:
 
 * *\_4D\_OPTION\_CURRENT\_DIRECTORY* : permet de définir le répertoire courant du process externe à lancer. Vous devez passer dans *valeurVar* le chemin d’accès du répertoire (syntaxe type HFS sous Mac OS et DOS sous Windows)
 * *\_4D\_OPTION\_HIDE\_CONSOLE* (Windows uniquement) : permet de masquer la fenêtre de la console DOS. Vous devez passer "true" dans *valeurVar* pour masquer la console ou "false" pour l’afficher.
 * *\_4D\_OPTION\_BLOCKING\_EXTERNAL\_PROCESS* : permet d'exécuter le process externe en mode asynchrone, c'est-à-dire non bloquant pour les autres applications. Vous devez passer "false" dans *valeurVar* pour définir une exécution asynchrone ou "true" pour une exécution synchrone (par défaut). Passer "" dans *valeurVar* ne fera rien.  
-Si vous définissez la variable d'environnement *\_4D\_OPTION\_BLOCKING\_EXTERNAL\_PROCESS* sur "faux" via la commande [SET ENVIRONMENT VARIABLE](set-environment-variable.md) (exécution asynchrone), les paramètres *fluxSortie* et *fluxErreur* ne sont pas retournés.
+Si vous définissez la variable d'environnement *\_4D\_OPTION\_BLOCKING\_EXTERNAL\_PROCESS* sur "faux" via la commande [SET ENVIRONMENT VARIABLE](../commands/set-environment-variable) (exécution asynchrone), les paramètres *fluxSortie* et *fluxErreur* ne sont pas retournés.
 
 Ces variables sont valides dans le process courant pour le prochain appel à **LANCER PROCESS EXTERNE**.
 
@@ -159,8 +159,8 @@ Si la commande a été exécutée correctement, la variable système OK prend la
 
 ## Voir aussi 
 
-[OPEN URL](open-url.md)  
-[SET ENVIRONMENT VARIABLE](set-environment-variable.md)  
+[OPEN URL](../commands/open-url)  
+[SET ENVIRONMENT VARIABLE](../commands/set-environment-variable)  
 
 ## Propriétés
 

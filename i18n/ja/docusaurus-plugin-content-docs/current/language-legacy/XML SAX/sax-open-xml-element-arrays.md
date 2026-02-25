@@ -1,4 +1,4 @@
----
+﻿---
 id: sax-open-xml-element-arrays
 title: SAX OPEN XML ELEMENT ARRAYS
 slug: /commands/sax-open-xml-element-arrays
@@ -64,9 +64,9 @@ SAX OPEN XML ELEMENT ARRAYS は日付、数値、ブール、そしてピクチ�
 
 ## 参照 
 
-[SAX CLOSE XML ELEMENT](sax-close-xml-element.md)  
-[SAX OPEN XML ELEMENT](sax-open-xml-element.md)  
-[XML SET OPTIONS](xml-set-options.md)  
+[SAX CLOSE XML ELEMENT](../commands/sax-close-xml-element)  
+[SAX OPEN XML ELEMENT](../commands/sax-open-xml-element)  
+[XML SET OPTIONS](../commands/xml-set-options)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: "null"
 title: "Null"
 slug: /commands/null
@@ -33,15 +33,15 @@ Cette fonction vous permet d'affecter ou de comparer la valeur **null** aux éle
 
 | **Eléments du langage 4D**                                      | **Commentaire**                                                                                                                                                                                                                                                                                     |
 | --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Valeurs de propriétés d'objets                                  | La comparaison de **Null** avec une propriété d'objet vaut Vrai si la valeur de la propriété est null et Faux dans les autres cas. Par soucis de simplicité, comparer **Null** sera également Vrai si la propriété n'existe pas dans l'objet (i.e. est [Undefined](undefined.md)), voir exemple 4\. |
+| Valeurs de propriétés d'objets                                  | La comparaison de **Null** avec une propriété d'objet vaut Vrai si la valeur de la propriété est null et Faux dans les autres cas. Par soucis de simplicité, comparer **Null** sera également Vrai si la propriété n'existe pas dans l'objet (i.e. est [Undefined](../commands/undefined)), voir exemple 4\. |
 | Eléments de collections                                         | Lorsqu'une collection est étendue automatiquement par l'ajout d'éléments non adjacents, tous les éléments intermédiaires ajoutés prennent la valeur **null** par défaut.                                                                                                                            |
 | Variables de type objet (*C\_OBJECT*)              | Voir (\*) ci-dessous                                                                                                                                                                                                                                                                                |
 | Variables de type collection (*C\_COLLECTION*) | Voir (\*) ci-dessous                                                                                                                                                                                                                                                                                |
 | Variables de type pointeur (*C\_POINTER*)         | Voir (\*) ci-dessous                                                                                                                                                                                                                                                                                |
-| Variables de type image (*C\_PICTURE*)            | (\*) Affecter la valeur **null** à une variable de ce type efface son contenu. Cela a le même effet qu'appeler la commande [CLEAR VARIABLE](clear-variable.md)                                                                                                                                      |
+| Variables de type image (*C\_PICTURE*)            | (\*) Affecter la valeur **null** à une variable de ce type efface son contenu. Cela a le même effet qu'appeler la commande [CLEAR VARIABLE](../commands/clear-variable)                                                                                                                                      |
 | variables variant (*C\_VARIANT*)                  |                                                                                                                                                                                                                                                                                                     |
 
-**Note :** Cette commande ne peut pas être utilisée avec les champs scalaires de la base de données. Les valeurs Null dans les champs de la base sont prises en charge par le moteur SQL, et sont gérés via les commandes [Is field value Null](is-field-value-null.md) et [SET FIELD VALUE NULL](set-field-value-null.md),
+**Note :** Cette commande ne peut pas être utilisée avec les champs scalaires de la base de données. Les valeurs Null dans les champs de la base sont prises en charge par le moteur SQL, et sont gérés via les commandes [Is field value Null](../commands/is-field-value-null) et [SET FIELD VALUE NULL](../commands/set-field-value-null),
 
 ## Exemple 1 
 
@@ -121,7 +121,7 @@ Ces exemples illustrent les diverses manières d'affecter ou de comparer la vale
 
 ## Exemple 4 
 
-Cet exemple compare les différents résultats de la commande [Undefined](undefined.md) et de la commande [Null](null.md) appliquées aux propriétés d'objets, en fonction du contexte :
+Cet exemple compare les différents résultats de la commande [Undefined](../commands/undefined) et de la commande [Null](../commands/null) appliquées aux propriétés d'objets, en fonction du contexte :
 
 ```4d
  var vEmp : Object
@@ -141,9 +141,9 @@ Cet exemple compare les différents résultats de la commande [Undefined](undefi
 
 ## Voir aussi 
 
-[Is field value Null](is-field-value-null.md)  
-[OB SET NULL](ob-set-null.md)  
-[SET FIELD VALUE NULL](set-field-value-null.md)  
+[Is field value Null](../commands/is-field-value-null)  
+[OB SET NULL](../commands/ob-set-null)  
+[SET FIELD VALUE NULL](../commands/set-field-value-null)  
 
 ## Propriétés
 

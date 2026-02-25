@@ -1,4 +1,4 @@
----
+﻿---
 id: blob-to-list
 title: BLOB to list
 slug: /commands/blob-to-list
@@ -32,13 +32,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BLOB to list.Summary-->The BLOB to list command creates a new hierarchical list with the data stored within the BLOB *blob* at the byte offset (starting at zero) specified by *offset* and returns a List Reference number for that new list.<!-- END REF-->
 
-The BLOB data must be consistent with the command. Typically, you will use BLOBs that you previously filled out using the command [LIST TO BLOB](list-to-blob.md).
+The BLOB data must be consistent with the command. Typically, you will use BLOBs that you previously filled out using the command [LIST TO BLOB](../commands/list-to-blob).
 
 If you do not specify the optional *offset* parameter, the list data is read starting from the beginning of the BLOB. If you deal with a BLOB in which several variables or lists have been stored, you must pass the *offset* parameter and, in addition, you must pass a numeric variable. Before the call, set this numeric variable to the appropriate offset. After the call, that same numeric variable returns the offset of the next variable stored within the BLOB.
 
 After the call, if the hierarchical list has been successfully created, the OK variable is set to 1\. If the operation could not be performed, the OK variable is set to 0; for example, if there was not enough memory.
 
-**Note regarding Platform Independence:** BLOB to list and [LIST TO BLOB](list-to-blob.md) use a 4D internal format for handling lists stored in BLOBs. As a benefit, you do not need to worry about byte swapping between platforms when using these two commands. In other words, a BLOB created on Windows using those two commands can be reused on Macintosh and vice-versa.
+**Note regarding Platform Independence:** BLOB to list and [LIST TO BLOB](../commands/list-to-blob) use a 4D internal format for handling lists stored in BLOBs. As a benefit, you do not need to worry about byte swapping between platforms when using these two commands. In other words, a BLOB created on Windows using those two commands can be reused on Macintosh and vice-versa.
 
 ## Example 
 
@@ -70,7 +70,7 @@ The OK variable is set to 1 if the list has been successfully created, otherwise
 
 ## See also 
 
-[LIST TO BLOB](list-to-blob.md)  
+[LIST TO BLOB](../commands/list-to-blob)  
 
 ## Properties
 

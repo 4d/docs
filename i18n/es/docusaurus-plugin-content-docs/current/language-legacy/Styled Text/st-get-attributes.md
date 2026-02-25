@@ -1,4 +1,4 @@
----
+﻿---
 id: st-get-attributes
 title: ST GET ATTRIBUTES
 slug: /commands/st-get-attributes
@@ -115,7 +115,7 @@ En caso de error, no cambia la variable. Cuando ocurre un error en una variable 
 
 #### Ver también 
 
-[ST SET ATTRIBUTES](st-set-attributes.md)  
+[ST SET ATTRIBUTES](../commands/st-set-attributes)  
 
 #### Propiedades
 

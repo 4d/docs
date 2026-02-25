@@ -1,4 +1,4 @@
----
+﻿---
 id: on-event-call
 title: ON EVENT CALL
 slug: /commands/on-event-call
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 **Consejo:** este comando necesita un nivel de conocimiento avanzado en programación. Generalmente, no necesita utilizar **ON EVENT CALL** para trabajar con eventos. Cuando utiliza formularios, 4D administra los eventos y los envía a los objetos y formularios apropiados. 
 
-**Consejo:** comandos tales como [MOUSE POSITION](mouse-position.md), [Shift down](shift-down.md), etc., para obtener información sobre eventos. Estos comandos pueden llamarse desde los métodos de objeto para obtener la información que necesita sobre un evento involucrado con un objeto. Utilizarlos le ahorra la escritura de un algoritmo basado en una estructura de tipo **ON EVENT CALL**.
+**Consejo:** comandos tales como [MOUSE POSITION](../commands/mouse-position), [Shift down](../commands/shift-down), etc., para obtener información sobre eventos. Estos comandos pueden llamarse desde los métodos de objeto para obtener la información que necesita sobre un evento involucrado con un objeto. Utilizarlos le ahorra la escritura de un algoritmo basado en una estructura de tipo **ON EVENT CALL**.
 
 El alcance de este comando es la sesión de trabajo actual. Por defecto, el método se ejecuta en un proceso local separado. Sólo puede tener un método de gestión de eventos a la vez. Para detener un método de gestión de eventos, llame nuevamente **ON EVENT CALL** y pase una cadena vacía en *metodoEvento*.
 
@@ -35,7 +35,7 @@ El parámetro opcional *nomProces* da nombre al proceso creado por el comando ON
 En el método de gestión de eventos, puede leer las siguientes variables sistema MouseDown, KeyCode, Modifiers, MouseX, MouseY y MouseProc. Note que estas variables son variables proceso. Su alcance es por lo tanto el proceso de gestión de eventos. Cópielas en las variables interproceso si quiere que sus valores estén disponibles en otro proceso.
 
 * La variable sistema MouseDown toma el valor 1 si el evento es un clic del ratón y 0 si no.
-* La variable sistema KeyCode contiene el código del carácter digitado en el teclado o el código de una tecla de función. Consulte las secciones *Códigos Unicode* y [EXPORT TEXT](export-text.md) que listan los códigos de caracteres utilizados por 4D, así como también la sección *Códigos de teclas de función*.4D ofrece constantes predefinidas para los principales y teclas de funciones. En la ventana del explorador, busque los temas de estas constantes.
+* La variable sistema KeyCode contiene el código del carácter digitado en el teclado o el código de una tecla de función. Consulte las secciones *Códigos Unicode* y [EXPORT TEXT](../commands/export-text) que listan los códigos de caracteres utilizados por 4D, así como también la sección *Códigos de teclas de función*.4D ofrece constantes predefinidas para los principales y teclas de funciones. En la ventana del explorador, busque los temas de estas constantes.
 * La variable sistema Modifiers contiene el valor modificador. Indica si una tecla de modificación ha sido presionada cuando el evento ocurrió. Las siguientes teclas pueden ser detectadas:  
 
 | **Plataforma** | **Modificadores**                                            |  
@@ -112,10 +112,10 @@ Si imprime un informe utilizando [PRINT SELECTION](print-selection.md "PRINT SEL
 
 ## Ver también 
 
-[FILTER EVENT](filter-event.md)  
-[MOUSE POSITION](mouse-position.md)  
-[Method called on event](method-called-on-event.md)  
-[Shift down](shift-down.md)  
+[FILTER EVENT](../commands/filter-event)  
+[MOUSE POSITION](../commands/mouse-position)  
+[Method called on event](../commands/method-called-on-event)  
+[Shift down](../commands/shift-down)  
 
 ## Propiedades
 

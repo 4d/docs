@@ -1,4 +1,4 @@
----
+﻿---
 id: validate-transaction
 title: VALIDATE TRANSACTION
 slug: /commands/validate-transaction
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.VALIDATE TRANSACTION.Summary-->**VALIDATE TRANSACTION** accepts the [transaction](../../Develop-legacy/transactions.md) that was started with [START TRANSACTION](start-transaction.md) of the corresponding level in the current process.<!-- END REF--> The command saves the changes to the data of the database that occurred during the transaction.
+<!--REF #_command_.VALIDATE TRANSACTION.Summary-->**VALIDATE TRANSACTION** accepts the [transaction](../../Develop-legacy/transactions.md) that was started with [START TRANSACTION](../commands/start-transaction) of the corresponding level in the current process.<!-- END REF--> The command saves the changes to the data of the database that occurred during the transaction.
 
 You can nest several transactions (sub-transactions). If the main transaction is cancelled, all the sub-transactions are cancelled, even if they have been validated individually using this command.
 
@@ -35,13 +35,13 @@ You can nest several transactions (sub-transactions). If the main transaction is
 
 The system variable OK is set to 1 if the transaction has been validated correctly; otherwise, it is set to 0.
 
-Note that when OK is set to 0, the transaction is automatically cancelled internally (equivalent to [CANCEL TRANSACTION](cancel-transaction.md)). Consequently, you must not explicitly call [CANCEL TRANSACTION](cancel-transaction.md) if OK=0, particularly in the context of nested transactions, because the cancellation will then be applied to the higher level transaction. 
+Note that when OK is set to 0, the transaction is automatically cancelled internally (equivalent to [CANCEL TRANSACTION](../commands/cancel-transaction)). Consequently, you must not explicitly call [CANCEL TRANSACTION](../commands/cancel-transaction) if OK=0, particularly in the context of nested transactions, because the cancellation will then be applied to the higher level transaction. 
 
 ## See also 
 
-[CANCEL TRANSACTION](cancel-transaction.md)  
-[In transaction](in-transaction.md)  
-[START TRANSACTION](start-transaction.md)  
+[CANCEL TRANSACTION](../commands/cancel-transaction)  
+[In transaction](../commands/in-transaction)  
+[START TRANSACTION](../commands/start-transaction)  
 [Transactions](../../Develop-legacy/transactions.md)
 
 ## Properties

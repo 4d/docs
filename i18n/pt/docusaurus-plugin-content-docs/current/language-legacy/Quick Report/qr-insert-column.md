@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-insert-column
 title: QR INSERT COLUMN
 slug: /commands/qr-insert-column
@@ -49,7 +49,7 @@ A seguinte instrução insere (ou cria) uma primeira coluna na área MinhaArea, 
 
 ## Ver também 
 
-[QR DELETE COLUMN](qr-delete-column.md)  
+[QR DELETE COLUMN](../commands/qr-delete-column)  
 
 ## Propriedades
 

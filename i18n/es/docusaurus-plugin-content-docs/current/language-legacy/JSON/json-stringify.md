@@ -1,4 +1,4 @@
----
+﻿---
 id: json-stringify
 title: JSON Stringify
 slug: /commands/json-stringify
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.JSON Stringify.Summary-->El comando **JSON Stringify** convierte el parámetro *valor* en una cadena JSON.<!-- END REF--> Este comando realiza la acción opuesta del comando [JSON Parse](json-parse.md).  
+<!--REF #_command_.JSON Stringify.Summary-->El comando **JSON Stringify** convierte el parámetro *valor* en una cadena JSON.<!-- END REF--> Este comando realiza la acción opuesta del comando [JSON Parse](../commands/json-parse).  
   
 Pase los datos a serializar en *valor*. Se pueden expresar en forma escalar (cadena, número, fecha u hora) o vía un objeto 4D o una colección.
 
@@ -181,8 +181,8 @@ $myTxtCol="[33,"mike","2017-08-28",false]"
 
 ## Ver también 
 
-[JSON Parse](json-parse.md)  
-[JSON Stringify array](json-stringify-array.md)  
+[JSON Parse](../commands/json-parse)  
+[JSON Stringify array](../commands/json-stringify-array)  
 
 ## Propiedades
 

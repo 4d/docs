@@ -1,4 +1,4 @@
----
+﻿---
 id: printers-list
 title: PRINTERS LIST
 slug: /commands/printers-list
@@ -44,7 +44,7 @@ Pode passar um segundo array opcional, *altNomesArray*. O conteúdo de este arra
 
 O parâmetro opcional *modelosArray* se utiliza para obter o modelo de cada impressora.   
   
-Utilize os comandos [SET CURRENT PRINTER](set-current-printer.md) e [Get current printer](get-current-printer.md) para modificar ou obter a impressora selecionada em 4D. Deve passar os nomes devolvidos no primeiro array (*nomesArray*).  
+Utilize os comandos [SET CURRENT PRINTER](../commands/set-current-printer) e [Get current printer](../commands/get-current-printer) para modificar ou obter a impressora selecionada em 4D. Deve passar os nomes devolvidos no primeiro array (*nomesArray*).  
   
 Em Windows, o nome de una impressora pode ser modificado manualmente ao nível do sistema de operação. Por outro lado, sua localização e seu modelo estão associados a suas características físicas. Portanto, você pode utilizar os valores de array opcionais para verificar as características da impressora selecionada, geralmente, você pode verificar que todos as máquinas dos clientes utilizam a mesma impressora.  
   
@@ -56,8 +56,8 @@ A variável sistema OK toma o valor 1 se o comando tiver sido executado corretam
 
 ## Ver também 
 
-[Get current printer](get-current-printer.md)  
-[SET CURRENT PRINTER](set-current-printer.md)  
+[Get current printer](../commands/get-current-printer)  
+[SET CURRENT PRINTER](../commands/set-current-printer)  
 
 ## Propriedades
 

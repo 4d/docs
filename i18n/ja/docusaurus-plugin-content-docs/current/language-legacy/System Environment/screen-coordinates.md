@@ -1,4 +1,4 @@
----
+﻿---
 id: screen-coordinates
 title: SCREEN COORDINATES
 slug: /commands/screen-coordinates
@@ -56,9 +56,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Count screens](count-screens.md)  
-[Menu bar screen](menu-bar-screen.md)  
-[SCREEN DEPTH](screen-depth.md)  
+[Count screens](../commands/count-screens)  
+[Menu bar screen](../commands/menu-bar-screen)  
+[SCREEN DEPTH](../commands/screen-depth)  
 
 ## プロパティ
 

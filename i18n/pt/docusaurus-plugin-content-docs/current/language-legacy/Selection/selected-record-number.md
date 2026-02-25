@@ -1,4 +1,4 @@
----
+﻿---
 id: selected-record-number
 title: Selected record number
 slug: /commands/selected-record-number
@@ -20,9 +20,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Selected record number.Summary-->Selected record number retorna a posição do registro atual na seleção atual de *tabela*.<!-- END REF-->
 
-Se a seleção não estiver vazia e se o registro atual estiver contido na seleção, Selected record number retorna um valor entre 1 e [Records in selection](records-in-selection.md). Se a seleção estiver vazia, ou se não houver registro atual, retorna 0 (zero).  
+Se a seleção não estiver vazia e se o registro atual estiver contido na seleção, Selected record number retorna um valor entre 1 e [Records in selection](../commands/records-in-selection). Se a seleção estiver vazia, ou se não houver registro atual, retorna 0 (zero).  
 
-O número do registro na seleção é diferente do número retornado por [Record number](record-number.md), que retorna o número do registro físico na tabela. O número do registro na seleção depende da seleção e do registro atual.
+O número do registro na seleção é diferente do número retornado por [Record number](../commands/record-number), que retorna o número do registro físico na tabela. O número do registro na seleção depende da seleção e do registro atual.
 
 ## Exemplo 
 
@@ -34,8 +34,8 @@ O seguinte exemplo guarda o número do registro atual da seleção em uma variá
 
 ## Ver também 
 
-[GOTO SELECTED RECORD](goto-selected-record.md)  
-[Records in selection](records-in-selection.md)  
+[GOTO SELECTED RECORD](../commands/goto-selected-record)  
+[Records in selection](../commands/records-in-selection)  
 *Sobre Números de Registros*  
 
 ## Propriedades

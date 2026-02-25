@@ -1,4 +1,4 @@
----
+﻿---
 id: in-transaction
 title: In transaction
 slug: /commands/in-transaction
@@ -37,11 +37,11 @@ Se realiza as operações (adição, modificação, ou eliminação de registros
 
 ## Ver também 
 
-[Active transaction](active-transaction.md)  
-[CANCEL TRANSACTION](cancel-transaction.md)  
-[START TRANSACTION](start-transaction.md)  
+[Active transaction](../commands/active-transaction)  
+[CANCEL TRANSACTION](../commands/cancel-transaction)  
+[START TRANSACTION](../commands/start-transaction)  
 *Triggers*  
-[VALIDATE TRANSACTION](validate-transaction.md)  
+[VALIDATE TRANSACTION](../commands/validate-transaction)  
 
 ## Propriedades
 

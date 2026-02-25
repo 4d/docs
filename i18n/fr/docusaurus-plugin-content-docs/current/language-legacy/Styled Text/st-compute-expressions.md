@@ -1,4 +1,4 @@
----
+﻿---
 id: st-compute-expressions
 title: ST COMPUTE EXPRESSIONS
 slug: /commands/st-compute-expressions
@@ -33,13 +33,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST COMPUTE EXPRESSIONS.Summary-->La commande **ST COMPUTE EXPRESSIONS** met à jour les expressions 4D dynamiques situées dans le champ ou la variable de texte multistyle ou de 4D Write Pro désigné(e) par le paramètre *objet*.<!-- END REF--> 
 
-Pour plus d’informations sur les expressions 4D utilisables dans les zone de texte multistyle ou une zone 4D Write Pro, reportez-vous à la description de la commande [ST INSERT EXPRESSION](st-insert-expression.md).
+Pour plus d’informations sur les expressions 4D utilisables dans les zone de texte multistyle ou une zone 4D Write Pro, reportez-vous à la description de la commande [ST INSERT EXPRESSION](../commands/st-insert-expression).
 
  La commande réévalue le résultat des expressions présentes dans l’*objet* en fonction du contexte courant et affiche le résultat obtenu. Par exemple, si l’expression insérée est l’heure, la valeur sera modifiée à chaque appel de la commande **ST COMPUTE EXPRESSIONS**. Les expressions sont également calculées :
 
 * au moment de leur insertion
 * au chargement de l’objet
-* lorsqu’elles sont "figées" à l’aide de la commande [ST FREEZE EXPRESSIONS](st-freeze-expressions.md), si le deuxième paramètre \* est passé.
+* lorsqu’elles sont "figées" à l’aide de la commande [ST FREEZE EXPRESSIONS](../commands/st-freeze-expressions), si le deuxième paramètre \* est passé.
 
 **ST COMPUTE EXPRESSIONS** ne modifie pas le texte stylé (contenant les balises *span*) mais uniquement le texte brut affiché dans *objet*. Les valeurs calculées ne sont pas stockées dans le texte stylé, seule leur référence y est stockée. 
 
@@ -78,8 +78,8 @@ Vous souhaitez mettre à jour les références incluses dans la sélection de te
 
 ## Voir aussi 
 
-[ST FREEZE EXPRESSIONS](st-freeze-expressions.md)  
-[ST INSERT EXPRESSION](st-insert-expression.md)  
+[ST FREEZE EXPRESSIONS](../commands/st-freeze-expressions)  
+[ST INSERT EXPRESSION](../commands/st-insert-expression)  
 
 ## Propriétés
 

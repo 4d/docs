@@ -1,4 +1,4 @@
----
+﻿---
 id: resource-type-list
 title: RESOURCE TYPE LIST
 slug: /commands/resource-type-list
@@ -89,7 +89,7 @@ Una vez este método de proyecto se implementa en una base, puede escribir:
 
 ## Ver también 
 
-[RESOURCE LIST](resource-list.md)  
+[RESOURCE LIST](../commands/resource-list)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: json-stringify-array
 title: JSON Stringify array
 slug: /commands/json-stringify-array
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.JSON Stringify array.Summary-->La commande **JSON Stringify array** convertit le tableau 4D *tab* en un tableau JSON sérialisé.<!-- END REF--> Cette commande effectue l’action inverse de la commande [JSON PARSE ARRAY](json-parse-array.md).
+<!--REF #_command_.JSON Stringify array.Summary-->La commande **JSON Stringify array** convertit le tableau 4D *tab* en un tableau JSON sérialisé.<!-- END REF--> Cette commande effectue l’action inverse de la commande [JSON PARSE ARRAY](../commands/json-parse-array).
 
 Passez dans *tab* un tableau 4D contenant les données à sérialiser. Le tableau peut être de type texte, réel, booléen, pointeur ou objet.
 
@@ -118,8 +118,8 @@ Conversion d’une sélection 4D dans un tableau objet :
 
 ## Voir aussi 
 
-[JSON PARSE ARRAY](json-parse-array.md)  
-[JSON Stringify](json-stringify.md)  
+[JSON PARSE ARRAY](../commands/json-parse-array)  
+[JSON Stringify](../commands/json-stringify)  
 
 ## Propriétés
 

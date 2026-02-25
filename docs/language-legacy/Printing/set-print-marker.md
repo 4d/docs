@@ -1,4 +1,4 @@
----
+﻿---
 id: set-print-marker
 title: SET PRINT MARKER
 slug: /commands/set-print-marker
@@ -30,11 +30,11 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.SET PRINT MARKER.Summary-->The **SET PRINT MARKER** command enables the definition of the marker position during printing.<!-- END REF--> Combined with the [Get print marker](get-print-marker.md), [OBJECT MOVE](object-move.md) or [Print form](../commands/print-form) commands, this command allows you to adjust the size of the print areas. 
+<!--REF #_command_.SET PRINT MARKER.Summary-->The **SET PRINT MARKER** command enables the definition of the marker position during printing.<!-- END REF--> Combined with the [Get print marker](../commands/get-print-marker), [OBJECT MOVE](../commands/object-move) or [Print form](../commands/print-form) commands, this command allows you to adjust the size of the print areas. 
 
 **SET PRINT MARKER** can be used in two contexts:
 
-* during the On Header form event, in the context of [PRINT SELECTION](print-selection.md) and [PRINT RECORD](print-record.md) commands.
+* during the On Header form event, in the context of [PRINT SELECTION](../commands/print-selection) and [PRINT RECORD](../commands/print-record) commands.
 * during the On Printing Detail form event, in the context of the [Print form](../commands/print-form) command. This operation facilitates the printing of customized reports (see example).
 The effect of the command is limited to printing; no modification appears on the screen. The modifications made to the forms are not saved. 
 
@@ -184,14 +184,14 @@ The Print\_List3 form method is as follows:
 
 ## See also 
 
-[Get print marker](get-print-marker.md)  
-[OBJECT GET BEST SIZE](object-get-best-size.md)  
-[OBJECT GET COORDINATES](object-get-coordinates.md)  
-[OBJECT MOVE](object-move.md)  
-[PAGE BREAK](page-break.md)  
+[Get print marker](../commands/get-print-marker)  
+[OBJECT GET BEST SIZE](../commands/object-get-best-size)  
+[OBJECT GET COORDINATES](../commands/object-get-coordinates)  
+[OBJECT MOVE](../commands/object-move)  
+[PAGE BREAK](../commands/page-break)  
 [Print form](../commands/print-form)  
-[PRINT RECORD](print-record.md)  
-[PRINT SELECTION](print-selection.md)  
+[PRINT RECORD](../commands/print-record)  
+[PRINT SELECTION](../commands/print-selection)  
 
 ## Properties
 

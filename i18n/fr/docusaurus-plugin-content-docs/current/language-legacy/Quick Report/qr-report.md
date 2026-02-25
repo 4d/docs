@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-report
 title: QR REPORT
 slug: /commands/qr-report
@@ -37,18 +37,18 @@ displayed_sidebar: docs
 **Notes :**
 
 * L'éditeur n'apparaît pas si la *laTable* a été déclarée “Invisible”.
-* Lorsque l'éditeur est appelé via la commande **QR REPORT**, les liens entre les tables conservent leur statut manuel, le cas échéant. Ce principe permet au développeur de gérer lui-même ce statut à l'aide des commandes [SET AUTOMATIC RELATIONS](set-automatic-relations.md) et [SET FIELD RELATION](set-field-relation.md). Toutefois, n'oubliez pas que les automatismes sont désactivés lorsque les tables liées sont visualisées dans un formulaire liste affiché à l'aide de [DISPLAY SELECTION](display-selection.md), [MODIFY SELECTION](modify-selection.md) ou d'un sous-formulaire. Voir *Liens manuels et automatiques*.
-* L'éditeur est appelé dans une fenêtre externe, il n'est pas possible d'utiliser la commande [QR ON COMMAND](qr-on-command.md) dans ce contexte. Vous pouvez cependant utiliser le paramètre *nomMéthode* afin d'exécuter du code personnalisé lorsqu'une commande d'interface est activée (cf. ci-dessous).
+* Lorsque l'éditeur est appelé via la commande **QR REPORT**, les liens entre les tables conservent leur statut manuel, le cas échéant. Ce principe permet au développeur de gérer lui-même ce statut à l'aide des commandes [SET AUTOMATIC RELATIONS](../commands/set-automatic-relations) et [SET FIELD RELATION](../commands/set-field-relation). Toutefois, n'oubliez pas que les automatismes sont désactivés lorsque les tables liées sont visualisées dans un formulaire liste affiché à l'aide de [DISPLAY SELECTION](../commands/display-selection), [MODIFY SELECTION](../commands/modify-selection) ou d'un sous-formulaire. Voir *Liens manuels et automatiques*.
+* L'éditeur est appelé dans une fenêtre externe, il n'est pas possible d'utiliser la commande [QR ON COMMAND](../commands/qr-on-command) dans ce contexte. Vous pouvez cependant utiliser le paramètre *nomMéthode* afin d'exécuter du code personnalisé lorsqu'une commande d'interface est activée (cf. ci-dessous).
 
 Le paramètre *nomFichier* désigne un modèle d'état créé dans l'éditeur d'états rapides et sauvegardé sur disque. Le document stocke les paramètres de l'état, pas les enregistrements. Si une chaîne vide ("") est passée dans *nomFichier*, **QR REPORT** affiche une boîte de dialogue d'ouverture de fichiers, dans laquelle l'utilisateur peut choisir un modèle d'état à imprimer.   
-Si le paramètre *nomFichier* spécifie un document qui n'existe pas (si vous passez, par exemple, [Char](char.md)(1) dans *nomFichier*), l'éditeur d'états rapides s'affiche.
+Si le paramètre *nomFichier* spécifie un document qui n'existe pas (si vous passez, par exemple, [Char](../commands/char)(1) dans *nomFichier*), l'éditeur d'états rapides s'affiche.
 
-Le paramètre *nomMéthode* désigne une méthode projet 4D qui sera exécutée chaque fois qu'une commande de gestion de documents de l'éditeur d'états rapides sera appelée via un clic sur un bouton. L'utilisation de ce paramètre équivaut à l'utilisation de [QR ON COMMAND](qr-on-command.md) dans la fenêtre de l'éditeur d'états rapides ([QR ON COMMAND](qr-on-command.md) fonctionne uniquement pour une une zone intégrée). Par exemple, vous pouvez utiliser ce paramètre pour modifier le jeu de caratètres utilisé par l'état rapide. La méthode *nomMéthode* reçoit deux paramètres :
+Le paramètre *nomMéthode* désigne une méthode projet 4D qui sera exécutée chaque fois qu'une commande de gestion de documents de l'éditeur d'états rapides sera appelée via un clic sur un bouton. L'utilisation de ce paramètre équivaut à l'utilisation de [QR ON COMMAND](../commands/qr-on-command) dans la fenêtre de l'éditeur d'états rapides ([QR ON COMMAND](../commands/qr-on-command) fonctionne uniquement pour une une zone intégrée). Par exemple, vous pouvez utiliser ce paramètre pour modifier le jeu de caratètres utilisé par l'état rapide. La méthode *nomMéthode* reçoit deux paramètres :
 
 | **Paramètre** | **Type**    | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | ------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | $area            | Entier long | Référence de la zone                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| $command            | Entier long | Numéro de la commande sélectionnée. À comparer avec les constantes suivantes du thème *QR Commandes* (seuls les événements listés sont pris en charge) : <table> <thead> <tr> <td>Constante</td> <td>Valeur</td> <td>Comment</td> </tr> </thead> <tbody> <tr> <td>qr cmd generate</td> <td>2008</td> <td>Utilisation de la commande [QR RUN](qr-run.md) conseillée</td> </tr><tr> <td>qr cmd open</td> <td>2001</td> <td></td> </tr><tr> <td>qr cmd page setup</td> <td>2006</td> <td></td> </tr><tr> <td>qr cmd print preview</td> <td>2007</td> <td></td> </tr><tr> <td>qr cmd save</td> <td>2002</td> <td></td> </tr><tr> <td>qr cmd save as</td> <td>2003</td> <td></td> </tr> </tbody> </table> |
+| $command            | Entier long | Numéro de la commande sélectionnée. À comparer avec les constantes suivantes du thème *QR Commandes* (seuls les événements listés sont pris en charge) : <table> <thead> <tr> <td>Constante</td> <td>Valeur</td> <td>Comment</td> </tr> </thead> <tbody> <tr> <td>qr cmd generate</td> <td>2008</td> <td>Utilisation de la commande [QR RUN](../commands/qr-run) conseillée</td> </tr><tr> <td>qr cmd open</td> <td>2001</td> <td></td> </tr><tr> <td>qr cmd page setup</td> <td>2006</td> <td></td> </tr><tr> <td>qr cmd print preview</td> <td>2007</td> <td></td> </tr><tr> <td>qr cmd save</td> <td>2002</td> <td></td> </tr><tr> <td>qr cmd save as</td> <td>2003</td> <td></td> </tr> </tbody> </table> |
 
 **Note :** Si vous souhaitez compiler votre base de données, vous devez déclarer explicitement les paramètres $area et $command comme entiers longs, même si vous ne les utilisez pas.
 
@@ -105,7 +105,7 @@ L'exemple suivant permet à l'utilisateur d'effectuer une recherche dans la tabl
 
 ## Exemple 4 
 
-Reportez-vous à l'exemple de la commande [SET FIELD RELATION](set-field-relation.md). 
+Reportez-vous à l'exemple de la commande [SET FIELD RELATION](../commands/set-field-relation). 
 
 ## Exemple 5 
 
@@ -141,8 +141,8 @@ La méthode maCallbackMeth convertit l’état lorsqu’il est généré :
 
 ## Voir aussi 
 
-[PRINT LABEL](print-label.md)  
-[PRINT SELECTION](print-selection.md)  
+[PRINT LABEL](../commands/print-label)  
+[PRINT SELECTION](../commands/print-selection)  
 [SET ALLOWED METHODS](../commands/set-allowed-methods)  
 
 ## Propriétés

@@ -1,4 +1,4 @@
----
+﻿---
 id: add-to-date
 title: Add to date
 slug: /commands/add-to-date
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Add to date.Summary-->The **Add to date** command adds *years*, *months,* and *days* to the date you pass in *aDate*, then returns the result.<!-- END REF-->
 
-Although you can use the [Self](self.md) to add days to a date, **Add to date** allows you to quickly add months and years without having to deal with the number of days per month or leap years (as you would when using the + date operator).
+Although you can use the [Self](../commands/self) to add days to a date, **Add to date** allows you to quickly add months and years without having to deal with the number of days per month or leap years (as you would when using the + date operator).
 
 ## Example 
 

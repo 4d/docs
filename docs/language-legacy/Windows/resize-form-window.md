@@ -1,4 +1,4 @@
----
+﻿---
 id: resize-form-window
 title: RESIZE FORM WINDOW
 slug: /commands/resize-form-window
@@ -34,7 +34,7 @@ Pass the number of pixels that you would like to add to the current window size 
 
 This command produces the exact same result as a manual window resize using the resize box (if the window type allows it). As a result, the command takes into consideration resize properties for objects and size limitations defined in the form properties. If, for example, the command resizes a window to a size greater than what is allowed in the form, the command will have no effect. 
 
-Please note that this behavior is different than that of the [SET WINDOW RECT](set-window-rect.md) command, which does not take form properties nor content into account when resizing the window. Also, note that this command does not necessarily modify the form size. To modify the size of a form by programming, please see the [FORM SET SIZE](form-set-size.md) command.
+Please note that this behavior is different than that of the [SET WINDOW RECT](../commands/set-window-rect) command, which does not take form properties nor content into account when resizing the window. Also, note that this command does not necessarily modify the form size. To modify the size of a form by programming, please see the [FORM SET SIZE](../commands/form-set-size) command.
 
 ## Example 
 
@@ -54,9 +54,9 @@ After execution of this line:
 
 ## See also 
 
-[FORM GET PROPERTIES](form-get-properties.md)  
-[FORM SET SIZE](form-set-size.md)  
-[SET WINDOW RECT](set-window-rect.md)  
+[FORM GET PROPERTIES](../commands/form-get-properties)  
+[FORM SET SIZE](../commands/form-set-size)  
+[SET WINDOW RECT](../commands/set-window-rect)  
 
 ## Properties
 

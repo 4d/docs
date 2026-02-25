@@ -1,4 +1,4 @@
----
+﻿---
 id: set-macro-parameter
 title: SET MACRO PARAMETER
 slug: /commands/set-macro-parameter
@@ -68,7 +68,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[GET MACRO PARAMETER](get-macro-parameter.md)  
+[GET MACRO PARAMETER](../commands/get-macro-parameter)  
 
 ## プロパティ
 

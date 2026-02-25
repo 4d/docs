@@ -1,4 +1,4 @@
----
+﻿---
 id: order-by-attribute
 title: ORDER BY ATTRIBUTE
 slug: /commands/order-by-attribute
@@ -56,11 +56,11 @@ If the field attribute value is **null** for some records (i.e. the attribute va
 You can sort the selection on one level or on several levels. For each sort level, you specify an *aField*, an *attributePath* and the sorting order in *order*. If you pass the “greater than” symbol (>), the order is ascending. If you pass the “less than” symbol (<), the order is descending. If you do not specify the sorting order, ascending order is the default.   
 If only one field is specified (one level sort) and it is indexed, the index is used for the order. If the field is not indexed or if there is more than one field, the order is performed sequentially. 
 
-For multiple sorts (sorts on multiple fields), you can call **ORDER BY ATTRIBUTE** as many times as necessary and specify the optional *\** parameter, except for the last **ORDER BY ATTRIBUTE** call, which starts the actual sort operation. This feature is useful for multiple sorts management in customized user interfaces. Note that you can combine **ORDER BY ATTRIBUTE** calls with [ORDER BY](order-by.md) calls.
+For multiple sorts (sorts on multiple fields), you can call **ORDER BY ATTRIBUTE** as many times as necessary and specify the optional *\** parameter, except for the last **ORDER BY ATTRIBUTE** call, which starts the actual sort operation. This feature is useful for multiple sorts management in customized user interfaces. Note that you can combine **ORDER BY ATTRIBUTE** calls with [ORDER BY](../commands/order-by) calls.
 
 **Note:** With this syntax, you can pass only one sort level (field) per **ORDER BY ATTRIBUTE** call.
 
-No matter what way a sort has been defined, if the actual sort operation is going to take some time to be performed, 4D automatically displays a message containing a progress thermometer. These message can be turned on and off by using the [MESSAGES ON](messages-on.md) and [MESSAGES OFF](messages-off.md) commands. If the progress thermometer is displayed, the user can click the **Stop** button to interrupt the sort. If the sort is completed, OK is set to 1\. Otherwise, if the sort is interrupted, OK is set to 0 (zero).
+No matter what way a sort has been defined, if the actual sort operation is going to take some time to be performed, 4D automatically displays a message containing a progress thermometer. These message can be turned on and off by using the [MESSAGES ON](../commands/messages-on) and [MESSAGES OFF](../commands/messages-off) commands. If the progress thermometer is displayed, the user can click the **Stop** button to interrupt the sort. If the sort is completed, OK is set to 1\. Otherwise, if the sort is interrupted, OK is set to 0 (zero).
 
 ## Example 
 

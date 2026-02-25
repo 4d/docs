@@ -1,4 +1,4 @@
----
+﻿---
 id: receive-record
 title: RECEIVE RECORD
 slug: /commands/receive-record
@@ -150,9 +150,9 @@ La variable sistema OK toma el valor 1 si se recibe el registro. De lo contrario
 
 ## Ver también 
 
-[RECEIVE VARIABLE](receive-variable.md)  
-[SEND RECORD](send-record.md)  
-[SEND VARIABLE](send-variable.md)  
+[RECEIVE VARIABLE](../commands/receive-variable)  
+[SEND RECORD](../commands/send-record)  
+[SEND VARIABLE](../commands/send-variable)  
 
 ## Propiedades
 

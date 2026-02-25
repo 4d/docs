@@ -1,4 +1,4 @@
----
+﻿---
 id: form-event
 title: FORM Event
 slug: /commands/form-event
@@ -99,7 +99,7 @@ El list box resultante cuando se seleccionan líneas:
 ## Ver también
 
 [Form Events](../../Events/overview.md)
-[Form event code](form-event-code.md)
+[Form event code](../commands/form-event-code)
 
 ## Propiedades
 

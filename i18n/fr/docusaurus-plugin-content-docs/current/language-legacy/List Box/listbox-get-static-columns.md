@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-static-columns
 title: LISTBOX Get static columns
 slug: /commands/listbox-get-static-columns
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d'objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable.
 
-Les colonnes statiques peuvent avoir été définies via la Liste des propriétés ou à l’aide de la commande [LISTBOX SET STATIC COLUMNS](listbox-set-static-columns.md). 
+Les colonnes statiques peuvent avoir été définies via la Liste des propriétés ou à l’aide de la commande [LISTBOX SET STATIC COLUMNS](../commands/listbox-set-static-columns). 
 
 Si une colonne a été insérée ou supprimée par programmation à l’intérieur d’un ensemble de colonnes statiques, le nombre de colonnes retourné par cette commande tient compte de cette modification. En revanche, la commande ne tient pas compte du statut visible/invisible des colonnes.
 
@@ -41,7 +41,7 @@ Si une colonne a été insérée ou supprimée par programmation à l’intérie
 
 ## Voir aussi 
 
-[LISTBOX SET STATIC COLUMNS](listbox-set-static-columns.md)  
+[LISTBOX SET STATIC COLUMNS](../commands/listbox-set-static-columns)  
 
 ## Propriétés
 

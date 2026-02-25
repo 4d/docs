@@ -1,4 +1,4 @@
----
+﻿---
 id: close-window
 title: CLOSE WINDOW
 slug: /commands/close-window
@@ -23,7 +23,7 @@ Es inútil pasar un número a CLOSE WINDOW cuando lo utiliza para cerrar las ven
 
 ## Ejemplo 
 
-El siguiente ejemplo abre una ventana formulario y crea nuevos registros con el comando [ADD RECORD](add-record.md). Una vez añadidos los registros, la ventana se cierra con **CLOSE WINDOW**:
+El siguiente ejemplo abre una ventana formulario y crea nuevos registros con el comando [ADD RECORD](../commands/add-record). Una vez añadidos los registros, la ventana se cierra con **CLOSE WINDOW**:
 
 ```4d
  FORM SET INPUT([Employees];"Entry")

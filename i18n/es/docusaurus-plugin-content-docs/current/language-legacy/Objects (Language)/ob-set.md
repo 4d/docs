@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-set
 title: OB SET
 slug: /commands/ob-set
@@ -40,7 +40,7 @@ En el parámetro *propiedad*, pase la etiqueta de la propiedad a crear o modific
 Tenga en cuenta, que el parámetro *propiedad* es sensible a las mayúsculas y minúsculas.
 
 En el parámetro *valor*, pase el valor que desea definir para la propiedad. Se admiten varios tipos de datos. Tenga en cuenta que:  
-* si pasa un puntero, se mantiene como es, se evalúa utilizando el comando [JSON Stringify](json-stringify.md)
+* si pasa un puntero, se mantiene como es, se evalúa utilizando el comando [JSON Stringify](../commands/json-stringify)
 * si pasa una fecha, se almacenará con el tipo de fecha o como texto en formato ISO dependiendo de la configuración actual de la fecha de la base. Para más información, consulte la opción "Utilizar tipo de fecha en lugar de formato de fecha ISO en objetos" en *Página Compatibilidad*.
 * si pasa una hora, se almacena en forma de un número de segundos (real) en *objeto*
 * si pasa un objeto de lenguaje o una colección, el comando utiliza una referencia y no una copia. Toda modificación aplicada al objeto o colección se informará a todas las referencias
@@ -152,7 +152,7 @@ Si ha definido el campo \[Rect\]Desc como un campo objeto, puede escribir:
 
 ## Ejemplo 9 
 
-Usted quiere exportar datos en JSON que contienen una fecha 4D que desea convertir en una cadena sin información de zona horaria. Note que la conversión ocurre cuando la fecha se guarda en el objeto, debe llamar al comando [SET DATABASE PARAMETER](set-database-parameter.md) antes de llamar a [OB SET](ob-set.md): 
+Usted quiere exportar datos en JSON que contienen una fecha 4D que desea convertir en una cadena sin información de zona horaria. Note que la conversión ocurre cuando la fecha se guarda en el objeto, debe llamar al comando [SET DATABASE PARAMETER](../commands/set-database-parameter) antes de llamar a [OB SET](../commands/ob-set): 
 
 ```4d
  var $o : Object
@@ -208,10 +208,10 @@ Usted desea almacenar una imagen en un campo objeto. Puede escribir:
 
 ## Ver también 
 
-[OB Get](ob-get.md)  
-[OB REMOVE](ob-remove.md)  
-[OB SET ARRAY](ob-set-array.md)  
-[OB SET NULL](ob-set-null.md)  
+[OB Get](../commands/ob-get)  
+[OB REMOVE](../commands/ob-remove)  
+[OB SET ARRAY](../commands/ob-set-array)  
+[OB SET NULL](../commands/ob-set-null)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: hide-tool-bar
 title: HIDE TOOL BAR
 slug: /commands/hide-tool-bar
@@ -52,7 +52,7 @@ To prevent this, in the On Resize form event of the standard window, you need to
 
 ## See also 
 
-[SHOW TOOL BAR](show-tool-bar.md)  
+[SHOW TOOL BAR](../commands/show-tool-bar)  
 
 ## Properties
 

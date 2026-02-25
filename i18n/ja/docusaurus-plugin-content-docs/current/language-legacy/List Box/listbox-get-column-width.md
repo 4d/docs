@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-column-width
 title: LISTBOX Get column width
 slug: /commands/listbox-get-column-width
@@ -42,7 +42,7 @@ LISTBOX Get column width は列サイズ変更の制限値を *minWidth* と *ma
 
 ## 参照 
 
-[LISTBOX SET COLUMN WIDTH](listbox-set-column-width.md)  
+[LISTBOX SET COLUMN WIDTH](../commands/listbox-set-column-width)  
 
 ## プロパティ
 

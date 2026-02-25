@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-set
 title: OB SET
 slug: /commands/ob-set
@@ -43,7 +43,7 @@ Tenha em conta, que o parâmetro *propriedade* é sensível as maiúsculas e min
   
 No parâmetro *valor*, passe o valor que deseja definir para a propriedade. Se admitem vários tipos de dados. Tenha em conta que:
 
-* Se passar um ponteiro, é mantido como ele é, se avalia utilizando o comando [JSON Stringify](json-stringify.md)
+* Se passar um ponteiro, é mantido como ele é, se avalia utilizando o comando [JSON Stringify](../commands/json-stringify)
 * Se passar uma data, será armazenada como tipo data ou como um texto em formato ISO dependendo da sua configuração atual de banco de dados. Para saber mais, veja a opção "Use date type instead of ISO date format in objects" em *Página Compatibilidade*.
 * Se passar uma hora, se armazena em forma de um número de milissegundos (Real) em *objeto*
 * Se passar um objeto de linguagem, o comando utiliza a referência do objeto e não uma cópia. Qualquer modificação aplicada ao objeto ou coleção será reportada para todas as referências.
@@ -155,7 +155,7 @@ Se você tiver definido o campo \[Rect\]Desc como um campo objeto, pode escrever
 
 ## Exemplo 9 
 
-Se quiser exportar dados em JSON que contém uma data 4D convertida. Note que a conversão ocorre quando a data se guarda no objeto, deve chamar ao comando [SET DATABASE PARAMETER](set-database-parameter.md) antes de chamar a [OB SET](ob-set.md): 
+Se quiser exportar dados em JSON que contém uma data 4D convertida. Note que a conversão ocorre quando a data se guarda no objeto, deve chamar ao comando [SET DATABASE PARAMETER](../commands/set-database-parameter) antes de chamar a [OB SET](../commands/ob-set): 
 
 ```4d
  var $o : Object
@@ -210,10 +210,10 @@ Se quiser armazenar uma imagem em um campo objeto. Pode escrever:
 
 ## Ver também 
 
-[OB Get](ob-get.md)  
-[OB REMOVE](ob-remove.md)  
-[OB SET ARRAY](ob-set-array.md)  
-[OB SET NULL](ob-set-null.md)  
+[OB Get](../commands/ob-get)  
+[OB REMOVE](../commands/ob-remove)  
+[OB SET ARRAY](../commands/ob-set-array)  
+[OB SET NULL](../commands/ob-set-null)  
 
 ## Propriedades
 

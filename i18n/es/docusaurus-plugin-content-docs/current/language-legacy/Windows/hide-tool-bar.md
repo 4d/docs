@@ -1,4 +1,4 @@
----
+﻿---
 id: hide-tool-bar
 title: HIDE TOOL BAR
 slug: /commands/hide-tool-bar
@@ -52,7 +52,7 @@ Para evitar esto, en el evento formulario On Resize de la ventana estándar, es 
 
 ## Ver también 
 
-[SHOW TOOL BAR](show-tool-bar.md)  
+[SHOW TOOL BAR](../commands/show-tool-bar)  
 
 ## Propiedades
 

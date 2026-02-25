@@ -1,4 +1,4 @@
----
+﻿---
 id: truncate-table
 title: TRUNCATE TABLE
 slug: /commands/truncate-table
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.TRUNCATE TABLE.Summary-->O comando TRUNCATE TABLE \[#descv\]apaga rapidamente todos os registros de *tabela*.<!-- END REF--> Depois de chamar o comando, não há uma seleção atual nem um registro atual.  
   
-O efeito deste comando é similar ao de uma sequência [ALL RECORDS](all-records.md) / [DELETE SELECTION](delete-selection.md); entretanto, seu funcionamento difere nos seguintes pontos:  
+O efeito deste comando é similar ao de uma sequência [ALL RECORDS](../commands/all-records) / [DELETE SELECTION](../commands/delete-selection); entretanto, seu funcionamento difere nos seguintes pontos:  
 
 * Não se chama o trigger
 * A integridade referencial dos dados não é controlada.
@@ -50,7 +50,7 @@ Se o comando tiver sido executado corretamente, a variável sistema OK assume o 
 
 ## Ver também 
 
-[DELETE SELECTION](delete-selection.md)  
+[DELETE SELECTION](../commands/delete-selection)  
 
 ## Propriedades
 

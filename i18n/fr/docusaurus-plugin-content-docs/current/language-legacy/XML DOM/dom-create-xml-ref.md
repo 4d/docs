@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-create-xml-ref
 title: DOM Create XML Ref
 slug: /commands/dom-create-xml-ref
@@ -42,7 +42,7 @@ A noter qu'il est possible de préfixer le paramètre *racine* avec le nom de l�
 
 Vous pouvez déclarer un ou plusieurs espace(s) de nommage supplémentaire(s) dans l’arbre XML généré, à l’aide de couples *nSNom / nSValeur*. Vous pouvez passer autant de couples nom / valeur d’espace de nommage que vous voulez. 
 
-**Important :** N'oubliez pas d'appeler la commande [DOM CLOSE XML](dom-close-xml.md) afin de libérer la mémoire lorsque vous avez terminé d'utiliser l'arbre XML.
+**Important :** N'oubliez pas d'appeler la commande [DOM CLOSE XML](../commands/dom-close-xml) afin de libérer la mémoire lorsque vous avez terminé d'utiliser l'arbre XML.
 
 ## Exemple 1 
 
@@ -107,8 +107,8 @@ Si la commande a été exécutée correctement, la variable système OK prend la
 
 ## Voir aussi 
 
-[DOM CLOSE XML](dom-close-xml.md)  
-[DOM SET XML DECLARATION](dom-set-xml-declaration.md)  
+[DOM CLOSE XML](../commands/dom-close-xml)  
+[DOM SET XML DECLARATION](../commands/dom-set-xml-declaration)  
 
 ## Propriétés
 

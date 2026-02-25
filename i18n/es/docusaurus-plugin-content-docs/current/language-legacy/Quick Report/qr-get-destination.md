@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-destination
 title: QR GET DESTINATION
 slug: /commands/qr-get-destination
@@ -47,7 +47,7 @@ Si pasa un número de *area* incorrecto, se genera el error -9850.
 
 ## Ver también 
 
-[QR SET DESTINATION](qr-set-destination.md)  
+[QR SET DESTINATION](../commands/qr-set-destination)  
 
 ## Propiedades
 

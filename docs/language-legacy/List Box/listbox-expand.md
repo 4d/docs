@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-expand
 title: LISTBOX EXPAND
 slug: /commands/listbox-expand
@@ -90,7 +90,7 @@ This example illustrates different ways of using the command. Given the followin
 
 ## See also 
 
-[LISTBOX COLLAPSE](listbox-collapse.md)  
+[LISTBOX COLLAPSE](../commands/listbox-collapse)  
 
 ## Properties
 

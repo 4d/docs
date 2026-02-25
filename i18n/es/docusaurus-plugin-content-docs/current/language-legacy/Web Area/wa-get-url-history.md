@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-get-url-history
 title: WA GET URL HISTORY
 slug: /commands/wa-get-url-history
@@ -55,7 +55,7 @@ Si se pasa, el parámetro *arrTitulos* contiene la lista de los nombres de venta
 
 ## Ver también 
 
-[WA Create URL history menu](wa-create-url-history-menu.md)  
+[WA Create URL history menu](../commands/wa-create-url-history-menu)  
 
 ## Propiedades
 

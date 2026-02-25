@@ -1,4 +1,4 @@
----
+﻿---
 id: dynamic-pop-up-menu
 title: Dynamic pop up menu
 slug: /commands/dynamic-pop-up-menu
@@ -34,13 +34,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Dynamic pop up menu.Summary-->The **Dynamic pop up menu** causes a hierarchical pop-up menu to appear at the current location of the mouse or at the location set by the optional *xCoord* and *yCoord* parameters.<!-- END REF-->
 
-The hierarchical menu used must have been created using the [Create menu](create-menu.md) command. The reference returned by [Create menu](create-menu.md) must then be passed in the *menu* parameter.
+The hierarchical menu used must have been created using the [Create menu](../commands/create-menu) command. The reference returned by [Create menu](../commands/create-menu) must then be passed in the *menu* parameter.
 
-**Note:** The [Pop up menu](pop-up-menu.md) command (“User Interface” theme) can be used to create pop-up menus based on text.
+**Note:** The [Pop up menu](../commands/pop-up-menu) command (“User Interface” theme) can be used to create pop-up menus based on text.
 
 In conformity with standard interface rules, this command must generally be called in response to a right mouse click or when the button is held down a certain period of time (context menu for example).
 
-The optional *default* parameter can be used to set an item of the popup menu as selected by default whenever the menu appears. In this parameter, pass a custom string associated with the menu item. This string must have been set beforehand using the [SET MENU ITEM PARAMETER](set-menu-item-parameter.md) command. If you do not pass this parameter, the first item of the menu will be selected by default.
+The optional *default* parameter can be used to set an item of the popup menu as selected by default whenever the menu appears. In this parameter, pass a custom string associated with the menu item. This string must have been set beforehand using the [SET MENU ITEM PARAMETER](../commands/set-menu-item-parameter) command. If you do not pass this parameter, the first item of the menu will be selected by default.
 
 **Note:** Only a top level menu item can be selected by default.
 
@@ -48,11 +48,11 @@ The optional *xCoord* and *yCoord* parameters can be used to specify the locatio
 
 If you want to display a pop-up menu associated with a 3D button, then do not pass the optional *xCoord* and *yCoord* parameters. In this case, 4D automatically calculates the location of the menu with respect to the button according to the interface standards of the current platform (the 3D button must have the "With pop-up menu/Linked" or "With pop-up menu/Separated" property).
 
-If a menu item has been selected, the command returns its associated custom character string (such as it has been defined using the [SET MENU ITEM PARAMETER](set-menu-item-parameter.md) command). Otherwise, the command returns an empty string. 
+If a menu item has been selected, the command returns its associated custom character string (such as it has been defined using the [SET MENU ITEM PARAMETER](../commands/set-menu-item-parameter) command). Otherwise, the command returns an empty string. 
 
 If a standard action is associated to a menu item, it is taken into account by the **Dynamic pop up menu** command at several levels:
 
-* If an associated standard action is not enabled (i.e. it cannot be invoked) in the context of the pop up menu, the item is automatically hidden. You can know if an action is enabled using the [Action info](action-info.md) command.
+* If an associated standard action is not enabled (i.e. it cannot be invoked) in the context of the pop up menu, the item is automatically hidden. You can know if an action is enabled using the [Action info](../commands/action-info) command.
 * Items with a toggle associated action are automatically checked, unchecked or "mixed" depending on the selection.
 * If the action title has been set to the item using the ak standard action title constant, the localized name is displayed in the menu.
 * When the item is selected, the associated standard action is invoked (execution is asynchronous).
@@ -99,11 +99,11 @@ This code allows creating a hierarchical dynamic pop up menu built upon standard
 
 ## See also 
 
-[Get menu item parameter](get-menu-item-parameter.md)  
-[Get selected menu item parameter](get-selected-menu-item-parameter.md)  
-[Pop up menu](pop-up-menu.md)  
-[SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
-[SET MENU ITEM PROPERTY](set-menu-item-property.md)  
+[Get menu item parameter](../commands/get-menu-item-parameter)  
+[Get selected menu item parameter](../commands/get-selected-menu-item-parameter)  
+[Pop up menu](../commands/pop-up-menu)  
+[SET MENU ITEM PARAMETER](../commands/set-menu-item-parameter)  
+[SET MENU ITEM PROPERTY](../commands/set-menu-item-property)  
 
 ## Properties
 

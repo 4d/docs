@@ -1,4 +1,4 @@
----
+﻿---
 id: set-document-properties
 title: SET DOCUMENT PROPERTIES
 slug: /commands/set-document-properties
@@ -42,11 +42,11 @@ Antes de chamar:
 * Passe a data e hora de criação do documento em *criadoEm* e *criadoAs*.
 * Passe a data e hora da última modificação do documento em *modificadoEm* e *modificadoAs*.
 
-As datas e horas de criação e última modificação são administradas pelo administrador de arquivos de seu sistema cada vez que cria ou acessa a um documento. Utilizando este comando, pode modificar estas propriedades em casos particulares. Ver o exemplo do comando [GET DOCUMENT PROPERTIES](get-document-properties.md).
+As datas e horas de criação e última modificação são administradas pelo administrador de arquivos de seu sistema cada vez que cria ou acessa a um documento. Utilizando este comando, pode modificar estas propriedades em casos particulares. Ver o exemplo do comando [GET DOCUMENT PROPERTIES](../commands/get-document-properties).
 
 ## Ver também 
 
-[GET DOCUMENT PROPERTIES](get-document-properties.md)  
+[GET DOCUMENT PROPERTIES](../commands/get-document-properties)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: copy-parameters
 title: Copy parameters
 slug: /commands/copy-parameters
@@ -91,7 +91,7 @@ Puisque la commande retourne une collection, elle peut être utilisée avec **.j
 
 ## Voir aussi 
 
-[Count parameters](count-parameters.md)  
+[Count parameters](../commands/count-parameters)  
 
 ## Propriétés
 

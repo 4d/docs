@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-best-size
 title: OBJECT GET BEST SIZE
 slug: /commands/object-get-best-size
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.OBJECT GET BEST SIZE.Summary-->O comando **OBJECT GET BEST SIZE** devolve nos parâmetros *largOpt* e *altOpt*, a largo e alto “ótimo” do objeto de formulário designado pelos parâmetros *\** e *objeto*.<!-- END REF--> Estes valores se expressan em píxeles. Este comando é particularmente útil para a visualização ou impressão de relatórios complexos, associados ao comando [OBJECT MOVE](object-move.md).
+<!--REF #_command_.OBJECT GET BEST SIZE.Summary-->O comando **OBJECT GET BEST SIZE** devolve nos parâmetros *largOpt* e *altOpt*, a largo e alto “ótimo” do objeto de formulário designado pelos parâmetros *\** e *objeto*.<!-- END REF--> Estes valores se expressan em píxeles. Este comando é particularmente útil para a visualização ou impressão de relatórios complexos, associados ao comando [OBJECT MOVE](../commands/object-move).
 
 Se passa o parâmetro opcional *\**, indica que o parâmetro *objeto* é um nome de objeto (uma string de caracteres). Se não passa o parâmetro \*, indica que *objeto* é um campo ou uma variável. Neste caso, você não passa uma string mas uma referência de um campo ou de uma variável (de tipo objeto unicamente).
 
@@ -54,7 +54,7 @@ Os objetos a seguir são manejados por este comando:
 * Botões.
 * Colunas List box em contexto display (só as linhas visíveis são levadas em consideração).
 
-Para todos os outros tipos de objetos de formulário (áreas de grupos, abas, retângulos, linhas retas, círculos/óvais, áreas externas, etc.), o comando **OBJECT GET BEST SIZE** devolve o tamanho do objeto atual (definido no editor de formulários e eventualmente utilizando o comando [OBJECT MOVE](object-move.md)).
+Para todos os outros tipos de objetos de formulário (áreas de grupos, abas, retângulos, linhas retas, círculos/óvais, áreas externas, etc.), o comando **OBJECT GET BEST SIZE** devolve o tamanho do objeto atual (definido no editor de formulários e eventualmente utilizando o comando [OBJECT MOVE](../commands/object-move)).
 
 ## Exemplo 
 
@@ -62,8 +62,8 @@ Consulte o exemplo no comando [SET PRINT MARKER](set-print-marker.md "SET PRINT 
 
 ## Ver também 
 
-[OBJECT MOVE](object-move.md)  
-[SET PRINT MARKER](set-print-marker.md)  
+[OBJECT MOVE](../commands/object-move)  
+[SET PRINT MARKER](../commands/set-print-marker)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-number-of-rows
 title: LISTBOX Get number of rows
 slug: /commands/listbox-get-number-of-rows
@@ -41,8 +41,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[LISTBOX DELETE ROWS](listbox-delete-rows.md)  
-[LISTBOX INSERT ROWS](listbox-insert-rows.md)  
+[LISTBOX DELETE ROWS](../commands/listbox-delete-rows)  
+[LISTBOX INSERT ROWS](../commands/listbox-insert-rows)  
 
 ## プロパティ
 

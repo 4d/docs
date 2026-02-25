@@ -1,4 +1,4 @@
----
+﻿---
 id: convert-from-text
 title: CONVERT FROM TEXT
 slug: /commands/convert-from-text
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 Passez dans le paramètre *texte4D* le texte devant être converti. Ce texte est exprimé dans le jeu de caractères de 4D. Dans les bases de données créées à partir de la version 11, 4D utilise le jeu de caractères Unicode par défaut.
 
-Passez dans *jeuCaractères* le jeu de caractères à utiliser pour la conversion. Vous pouvez passer une chaîne contenant le nom standard du jeu (par exemple “ISO-8859-1” ou “UTF-8”) ou son identifiant MIBEnum. Voici la liste des jeux de caractères pris en charge par les commandes **CONVERT FROM TEXT** et [Convert to text](convert-to-text.md) :
+Passez dans *jeuCaractères* le jeu de caractères à utiliser pour la conversion. Vous pouvez passer une chaîne contenant le nom standard du jeu (par exemple “ISO-8859-1” ou “UTF-8”) ou son identifiant MIBEnum. Voici la liste des jeux de caractères pris en charge par les commandes **CONVERT FROM TEXT** et [Convert to text](../commands/convert-to-text) :
 
 | **MIBEnum** | **Nom(s)**         |
 | ----------- | ------------------ |
@@ -188,7 +188,7 @@ Passez dans *jeuCaractères* le jeu de caractères à utiliser pour la conversio
 
 Pour plus d’informations sur les noms des jeux de caractères, reportez-vous à l’adresse <http://www.iana.org/assignments/character-sets>
 
-Après l’exécution de la commande, le texte converti est retourné dans le BLOB *blobConverti*. Ce BLOB pourra être relu par la commande [Convert to text](convert-to-text.md). 
+Après l’exécution de la commande, le texte converti est retourné dans le BLOB *blobConverti*. Ce BLOB pourra être relu par la commande [Convert to text](../commands/convert-to-text). 
 
 ## Variables et ensembles système 
 
@@ -196,7 +196,7 @@ Si la commande a été correctement exécutée, la variable OK prend la valeur 1
 
 ## Voir aussi 
 
-[Convert to text](convert-to-text.md)  
+[Convert to text](../commands/convert-to-text)  
 
 ## Propriétés
 

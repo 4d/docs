@@ -1,4 +1,4 @@
----
+﻿---
 id: active-transaction
 title: Active transaction
 slug: /commands/active-transaction
@@ -27,9 +27,9 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Active transaction.Summary-->The **Active transaction** command returns **True** if the current process is in transaction, and this transaction is not suspended.<!-- END REF--> It returns **False** if there is no current transaction, or if the current transaction is suspended. A transaction can be suspended using the [SUSPEND TRANSACTION](suspend-transaction.md) command. 
+<!--REF #_command_.Active transaction.Summary-->The **Active transaction** command returns **True** if the current process is in transaction, and this transaction is not suspended.<!-- END REF--> It returns **False** if there is no current transaction, or if the current transaction is suspended. A transaction can be suspended using the [SUSPEND TRANSACTION](../commands/suspend-transaction) command. 
 
-Since the command will also return **False** if the current process is not in transaction, you may need to check using the [In transaction](in-transaction.md) command to know whether the process is in transaction. 
+Since the command will also return **False** if the current process is not in transaction, you may need to check using the [In transaction](../commands/in-transaction) command to know whether the process is in transaction. 
 
 For more information, please refer to the [Suspending transactions](../../Develop-legacy/transactions.md#suspending-transactions) section. 
 
@@ -51,9 +51,9 @@ You want to know the current transaction status:
 
 ## See also 
 
-[In transaction](in-transaction.md)  
-[RESUME TRANSACTION](resume-transaction.md)  
-[SUSPEND TRANSACTION](suspend-transaction.md)  
+[In transaction](../commands/in-transaction)  
+[RESUME TRANSACTION](../commands/resume-transaction)  
+[SUSPEND TRANSACTION](../commands/suspend-transaction)  
 [Suspending transactions](../../Develop-legacy/transactions.md#suspending-transactions)
 
 ## Properties

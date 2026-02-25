@@ -1,4 +1,4 @@
----
+﻿---
 id: form-set-input
 title: FORM SET INPUT
 slug: /commands/form-set-input
@@ -57,14 +57,14 @@ For more information about user forms, refer to the *Overview of user forms* sec
 
 Input forms are displayed by a number of commands, which are generally used to allow the user to enter new data or modify old data. The following commands display an input form for data entry or query purposes:
 
-* [ADD RECORD](add-record.md)
-* [DISPLAY RECORD](display-record.md)
-* [MODIFY RECORD](modify-record.md)
-* [QUERY BY EXAMPLE](query-by-example.md)
+* [ADD RECORD](../commands/add-record)
+* [DISPLAY RECORD](../commands/display-record)
+* [MODIFY RECORD](../commands/modify-record)
+* [QUERY BY EXAMPLE](../commands/query-by-example)
 
-The [DISPLAY SELECTION](display-selection.md) and [MODIFY SELECTION](modify-selection.md) commands display a list of records using the output form. The user can double-click on a record in the list, which displays the input form.
+The [DISPLAY SELECTION](../commands/display-selection) and [MODIFY SELECTION](../commands/modify-selection) commands display a list of records using the output form. The user can double-click on a record in the list, which displays the input form.
 
-The import commands [IMPORT TEXT](import-text.md), [IMPORT SYLK](import-sylk.md) and [IMPORT DIF](import-dif.md) use the current input form for importing records.
+The import commands [IMPORT TEXT](../commands/import-text), [IMPORT SYLK](../commands/import-sylk) and [IMPORT DIF](../commands/import-dif) use the current input form for importing records.
 
 The optional *\** parameter is used in conjunction with the form properties you set in the Design environment's Form Properties window and the command [Open window](../commands/open-window). Specifying the \* parameter tells 4D to use the form properties to automatically resize the window for the next use of the form (as an input form or as a dialog box). See [Open window](../commands/open-window) for more information.
 
@@ -110,17 +110,17 @@ which displays:
 
 ## See also 
 
-[ADD RECORD](add-record.md)  
-[DISPLAY RECORD](display-record.md)  
-[DISPLAY SELECTION](display-selection.md)  
-[FORM SET OUTPUT](form-set-output.md)  
-[IMPORT DIF](import-dif.md)  
-[IMPORT SYLK](import-sylk.md)  
-[IMPORT TEXT](import-text.md)  
-[MODIFY RECORD](modify-record.md)  
-[MODIFY SELECTION](modify-selection.md)  
+[ADD RECORD](../commands/add-record)  
+[DISPLAY RECORD](../commands/display-record)  
+[DISPLAY SELECTION](../commands/display-selection)  
+[FORM SET OUTPUT](../commands/form-set-output)  
+[IMPORT DIF](../commands/import-dif)  
+[IMPORT SYLK](../commands/import-sylk)  
+[IMPORT TEXT](../commands/import-text)  
+[MODIFY RECORD](../commands/modify-record)  
+[MODIFY SELECTION](../commands/modify-selection)  
 [Open window](../commands/open-window)  
-[QUERY BY EXAMPLE](query-by-example.md)  
+[QUERY BY EXAMPLE](../commands/query-by-example)  
 
 ## Properties
 

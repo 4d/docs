@@ -1,4 +1,4 @@
----
+﻿---
 id: relate-one-selection
 title: RELATE ONE SELECTION
 slug: /commands/relate-one-selection
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 Este comando sólo puede utilizarse si hay una relación de  la *tablaN* a la *tabla1*. **RELATE ONE SELECTION** puede funcionar a través de varios niveles de relaciones. Puede haber varias tablas relacionadas entre la *tablaN* y la *tabla1*. 
 
-Las relaciones pueden ser manuales o automáticas. Cuando existen relaciones automáticas, **RELATE ONE SELECTION** siempre las utiliza en primer lugar. Cuando hay varios caminos posibles desde la tabla de inicio a la tabla de destino, **RELATE ONE SELECTION** toma el más corto, utilizando las relaciones automáticas (si las hay). Si existen rutas del mismo tamaño y desea controlar la ruta utilizada, o si desea «forzar» el uso de relaciones manuales, deberá utilizar el comando [`SET FIELD RELATION`](set-field-relation.md).
+Las relaciones pueden ser manuales o automáticas. Cuando existen relaciones automáticas, **RELATE ONE SELECTION** siempre las utiliza en primer lugar. Cuando hay varios caminos posibles desde la tabla de inicio a la tabla de destino, **RELATE ONE SELECTION** toma el más corto, utilizando las relaciones automáticas (si las hay). Si existen rutas del mismo tamaño y desea controlar la ruta utilizada, o si desea «forzar» el uso de relaciones manuales, deberá utilizar el comando [`SET FIELD RELATION`](../commands/set-field-relation).
 
 ## Ejemplo 
 
@@ -67,9 +67,9 @@ La siguiente técnica utiliza **RELATE ONE SELECTION** para obtener el mismo res
 ## Ver también 
 
 *Conjuntos*  
-[QUERY](query.md)  
-[RELATE MANY SELECTION](relate-many-selection.md)  
-[RELATE ONE](relate-one.md)  
+[QUERY](../commands/query)  
+[RELATE MANY SELECTION](../commands/relate-many-selection)  
+[RELATE ONE](../commands/relate-one)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: goto-selected-record
 title: GOTO SELECTED RECORD
 slug: /commands/goto-selected-record
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.GOTO SELECTED RECORD.Summary-->**GOTO SELECTED RECORD** moves to the specified record in the current selection of *aTable* and makes that record the current record.<!-- END REF--> The current selection does not change. The *record* parameter is not the same as the number returned by [Record number](record-number.md); it represents the record’s position in the current selection. The record’s position depends on how the selection is made and whether or not the selection is sorted.
+<!--REF #_command_.GOTO SELECTED RECORD.Summary-->**GOTO SELECTED RECORD** moves to the specified record in the current selection of *aTable* and makes that record the current record.<!-- END REF--> The current selection does not change. The *record* parameter is not the same as the number returned by [Record number](../commands/record-number); it represents the record’s position in the current selection. The record’s position depends on how the selection is made and whether or not the selection is sorted.
 
 **GOTO SELECTED RECORD** does nothing if:
 
@@ -73,7 +73,7 @@ The following object method for *atNames* selects the correct record in the \[Pe
 
 ## See also 
 
-[Selected record number](selected-record-number.md)  
+[Selected record number](../commands/selected-record-number)  
 
 ## Properties
 

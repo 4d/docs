@@ -1,4 +1,4 @@
----
+﻿---
 id: set-cache-size
 title: SET CACHE SIZE
 slug: /commands/set-cache-size
@@ -50,7 +50,7 @@ Vous voulez ajouter 100 Mo à la taille du cache de votre base. Vous pouvez écr
 
 ## Voir aussi 
 
-[Get cache size](get-cache-size.md)  
+[Get cache size](../commands/get-cache-size)  
 
 ## Propriétés
 

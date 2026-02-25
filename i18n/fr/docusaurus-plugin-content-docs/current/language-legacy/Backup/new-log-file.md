@@ -1,4 +1,4 @@
----
+﻿---
 id: new-log-file
 slug: /commands/new-log-file
 title: New log file
@@ -30,7 +30,7 @@ Le fichier est renommé avec les numéros de sauvegarde courants de la base de d
 
 :::warning
 
-Un fichier journal doit toujours être associé à un fichier de données. Si vous appelez cette commande juste après l'activation d'un fichier journal (sans sauvegarde) en utilisant [`SELECT LOG FILE`](select-log-file.md) ou la [boîte de dialogue des Settings](../../Backup/settings.md#configuration), assurez-vous d'avoir une copie correspondante de votre fichier de données, sinon le fichier journal ne pourrait pas être intégré.
+Un fichier journal doit toujours être associé à un fichier de données. Si vous appelez cette commande juste après l'activation d'un fichier journal (sans sauvegarde) en utilisant [`SELECT LOG FILE`](../commands/select-log-file) ou la [boîte de dialogue des Settings](../../Backup/settings.md#configuration), assurez-vous d'avoir une copie correspondante de votre fichier de données, sinon le fichier journal ne pourrait pas être intégré.
 
 :::
 
@@ -40,4 +40,4 @@ En cas d'erreur, la commande génère un code qui peut être intercepté à l'ai
 
 ## Voir également
 
-[SELECT LOG FILE](select-log-file.md)
+[SELECT LOG FILE](../commands/select-log-file)

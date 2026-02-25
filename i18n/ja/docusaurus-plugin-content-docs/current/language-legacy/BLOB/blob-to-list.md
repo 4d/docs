@@ -1,4 +1,4 @@
----
+﻿---
 id: blob-to-list
 title: BLOB to list
 slug: /commands/blob-to-list
@@ -72,7 +72,7 @@ BLOB to listや[LIST TO BLOB](list-to-blob.md "LIST TO BLOB")は、 BLOBに格�
 
 ## 参照 
 
-[LIST TO BLOB](list-to-blob.md)  
+[LIST TO BLOB](../commands/list-to-blob)  
 
 ## プロパティ
 

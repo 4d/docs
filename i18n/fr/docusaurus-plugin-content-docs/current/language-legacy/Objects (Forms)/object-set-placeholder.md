@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-placeholder
 title: OBJECT SET PLACEHOLDER
 slug: /commands/object-set-placeholder
@@ -55,7 +55,7 @@ Vous souhaitez afficher le texte exemple "Recherche" dans une combo box :
 
 ## Voir aussi 
 
-[OBJECT Get placeholder](object-get-placeholder.md)  
+[OBJECT Get placeholder](../commands/object-get-placeholder)  
 
 ## Propriétés
 

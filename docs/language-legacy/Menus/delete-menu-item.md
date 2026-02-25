@@ -1,4 +1,4 @@
----
+﻿---
 id: delete-menu-item
 title: DELETE MENU ITEM
 slug: /commands/delete-menu-item
@@ -32,9 +32,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DELETE MENU ITEM.Summary-->The **DELETE MENU ITEM** command deletes the menu item whose menu number or reference is passed in *menu* and whose item number is passed in *menuItem*.<!-- END REF--> You can pass -1 in *menuItem* in order to indicate the last item added to *menu*.
 
-If the menu item specified by *menu* and *menuItem* is itself a menu managed by reference and created, for example, using the [Create menu](create-menu.md) command, **DELETE MENU ITEM** will only delete the instance of the *menuItem* in *menu*. The submenu referenced by the *menuItem* will continue to exist in memory. You must use the [RELEASE MENU](release-menu.md) command in order to definitively delete a menu that is managed by reference. 
+If the menu item specified by *menu* and *menuItem* is itself a menu managed by reference and created, for example, using the [Create menu](../commands/create-menu) command, **DELETE MENU ITEM** will only delete the instance of the *menuItem* in *menu*. The submenu referenced by the *menuItem* will continue to exist in memory. You must use the [RELEASE MENU](../commands/release-menu) command in order to definitively delete a menu that is managed by reference. 
 
-This command also works with a menu bar created using the [Create menu](create-menu.md) command and installed with the [SET MENU BAR](set-menu-bar.md) command.
+This command also works with a menu bar created using the [Create menu](../commands/create-menu) command and installed with the [SET MENU BAR](../commands/set-menu-bar) command.
 
 If you omit the *process* parameter, **DELETE MENU ITEM** applies to the menu bar for the current process. Otherwise, **DELETE MENU ITEM** applies to the menu bar for the process whose reference number is passed in *process*. 
 
@@ -44,8 +44,8 @@ If you omit the *process* parameter, **DELETE MENU ITEM** applies to the menu ba
 
 ## See also 
 
-[APPEND MENU ITEM](append-menu-item.md)  
-[INSERT MENU ITEM](insert-menu-item.md)  
+[APPEND MENU ITEM](../commands/append-menu-item)  
+[INSERT MENU ITEM](../commands/insert-menu-item)  
 
 ## Properties
 

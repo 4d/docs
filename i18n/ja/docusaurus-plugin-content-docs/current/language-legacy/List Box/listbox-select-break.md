@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-select-break
 title: LISTBOX SELECT BREAK
 slug: /commands/listbox-select-break
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 オプションの*\** 引数を渡した場合、*object*引数はオブジェクト名 (文字列) です。この引数を渡さない場合*object*は変数です。この場合、文字列ではなく変数参照を渡します。
 
-ブレーク行は階層を表現するために追加されますが、それは配列の既存の行には対応しません。選択するためにブレーク行を指定するには、*row*および*column*引数に、対応する配列中の最初のオカレンスに対応する行と列の番号を渡さなければなりません。これらの値はユーザがブレーク行を選択したとき、[LISTBOX GET CELL POSITION](listbox-get-cell-position.md) コマンドから返されます。この原則は*階層リストボックス*の"選択や位置の管理" で説明されています。
+ブレーク行は階層を表現するために追加されますが、それは配列の既存の行には対応しません。選択するためにブレーク行を指定するには、*row*および*column*引数に、対応する配列中の最初のオカレンスに対応する行と列の番号を渡さなければなりません。これらの値はユーザがブレーク行を選択したとき、[LISTBOX GET CELL POSITION](../commands/listbox-get-cell-position) コマンドから返されます。この原則は*階層リストボックス*の"選択や位置の管理" で説明されています。
 
 *action*引数が渡されると、ブレーク行が既にリストボックス中に存在するときの実行する選択アクションを設定できます。値または"*List Box*"テーマの以下の定数を渡すことができます:
 
@@ -72,8 +72,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[LISTBOX GET CELL POSITION](listbox-get-cell-position.md)  
-[LISTBOX SELECT ROW](listbox-select-row.md)  
+[LISTBOX GET CELL POSITION](../commands/listbox-get-cell-position)  
+[LISTBOX SELECT ROW](../commands/listbox-select-row)  
 
 ## プロパティ
 

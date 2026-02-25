@@ -1,4 +1,4 @@
----
+﻿---
 id: save-record
 title: SAVE RECORD
 slug: /commands/save-record
@@ -25,8 +25,8 @@ If you call the **SAVE RECORD** command when no field has been modified in the r
 
 Here are some cases where **SAVE RECORD** is required:
 
-* To save a new record created with [CREATE RECORD](create-record.md) or [DUPLICATE RECORD](duplicate-record.md)
-* To save data from [RECEIVE RECORD](receive-record.md)
+* To save a new record created with [CREATE RECORD](../commands/create-record) or [DUPLICATE RECORD](../commands/duplicate-record)
+* To save data from [RECEIVE RECORD](../commands/receive-record)
 * To save a record modified by a method
 * To save a record that contains new or modified subrecord data following an *\_o\_ADD SUBRECORD*, *\_o\_CREATE SUBRECORD*, or *\_o\_MODIFY SUBRECORD* command
 * During data entry to save the displayed record before using a command that changes the current record
@@ -49,8 +49,8 @@ The following example is part of a method that reads records from a document. Th
 
 ## See also 
 
-[CREATE RECORD](create-record.md)  
-[Locked](locked.md)  
+[CREATE RECORD](../commands/create-record)  
+[Locked](../commands/locked)  
 *Triggers*  
 
 ## Properties

@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-parse-xml-variable
 title: DOM Parse XML variable
 slug: /commands/dom-parse-xml-variable
@@ -53,11 +53,11 @@ Hay dos formas de especificar un DTD:
 **Validación por esquema** 
 Para validar el documento vía un esquema XML, sólo debe pasar un archivo o URL con una extensión "xsd" en lugar de una "dtd" en el tercer parámetro. La validación por esquema XML se considera más flexible y poderosa que la validación por DTD. El lenguaje de documentos XSD está basado en lenguaje XML. Los esquemas XML soportan particularmente tipos de datos. Para mayor información sobre los esquemas XML, consulte la siguiente dirección: *http://www.w3.org/XML/Schema*.
 
-Si no se puede efectuar la validación (no DTD o XSD, URL incorrecto, etc.), se genera un error. La variable sistema Error indica el número del error. Puede interceptar este error con la ayuda de un método instalado por el comando [ON ERR CALL](on-err-call.md).
+Si no se puede efectuar la validación (no DTD o XSD, URL incorrecto, etc.), se genera un error. La variable sistema Error indica el número del error. Puede interceptar este error con la ayuda de un método instalado por el comando [ON ERR CALL](../commands/on-err-call).
 
 El comando devuelve una cadena de caracteres (RefElement) que constituye la referencia en memoria de la estructura virtual de la variable. Esta referencia debe utilizarse con otros comandos de análisis XML. 
 
-**Importante:** una vez no lo necesite más, recuerde llamar al comando [DOM CLOSE XML](dom-close-xml.md) con esta referencia para liberar memoria.
+**Importante:** una vez no lo necesite más, recuerde llamar al comando [DOM CLOSE XML](../commands/dom-close-xml) con esta referencia para liberar memoria.
 
 ## Ejemplo 1 
 
@@ -94,8 +94,8 @@ Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\.
 
 ## Ver también 
 
-[DOM CLOSE XML](dom-close-xml.md)  
-[DOM Parse XML source](dom-parse-xml-source.md)  
+[DOM CLOSE XML](../commands/dom-close-xml)  
+[DOM Parse XML source](../commands/dom-parse-xml-source)  
 
 ## Propiedades
 

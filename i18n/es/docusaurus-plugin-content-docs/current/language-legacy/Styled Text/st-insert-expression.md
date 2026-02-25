@@ -1,4 +1,4 @@
----
+﻿---
 id: st-insert-expression
 title: ST INSERT EXPRESSION
 slug: /commands/st-insert-expression
@@ -41,7 +41,7 @@ En el parámetro *expresión*, se pasa la expresión 4D a evaluar en el *objeto*
 **Notas:**
 
 * Insertar expresiones imagen (por ejemplo variables de tipo imagen) se soporta en áreas 4D Write Pro (ver *Expresiones Imagen*) pero no se soporta en áreas de texto multi estilo.
-* Este comando espera nombres "reales" para los campos y las tablas, incluso si se ha definido una estructura "virtual" utilizando los comandos [SET TABLE TITLES](set-table-titles.md) y [SET FIELD TITLES](set-field-titles.md).
+* Este comando espera nombres "reales" para los campos y las tablas, incluso si se ha definido una estructura "virtual" utilizando los comandos [SET TABLE TITLES](../commands/set-table-titles) y [SET FIELD TITLES](../commands/set-field-titles).
 
 Si *expresión* retorna un valor que contiene retornos de carro y tabulaciones, 4D formatea el texto de acuerdo al objeto que alberga la expresión; caracteres de retorno de carro se interpretan como rupturas de línea.
 
@@ -64,7 +64,7 @@ Por ejemplo:
 ```
   
   
-Por defecto, los **valores** de expresión se muestran en las áreas de texto multiestilo. Puede forzar la visualización de las **referencias** utilizando el comando [ST SET OPTIONS](st-set-options.md). 
+Por defecto, los **valores** de expresión se muestran en las áreas de texto multiestilo. Puede forzar la visualización de las **referencias** utilizando el comando [ST SET OPTIONS](../commands/st-set-options). 
 
 Los parámetros opcionales *inicioSel* y *finSel* designan una selección de texto en *objeto*. Los valores *inicioSel* y *finSel* expresan una selección de texto plano, sin tener en cuenta etiquetas de estilo que pueden estar presentes.
 
@@ -95,10 +95,10 @@ Desea reemplazar el texto seleccionado con el resultado de un método proyecto:
 
 #### Ver también 
 
-[ST COMPUTE EXPRESSIONS](st-compute-expressions.md)  
-[ST FREEZE EXPRESSIONS](st-freeze-expressions.md)  
-[ST Get expression](st-get-expression.md)  
-[ST INSERT URL](st-insert-url.md)  
+[ST COMPUTE EXPRESSIONS](../commands/st-compute-expressions)  
+[ST FREEZE EXPRESSIONS](../commands/st-freeze-expressions)  
+[ST Get expression](../commands/st-get-expression)  
+[ST INSERT URL](../commands/st-insert-url)  
 
 #### Propiedades
 

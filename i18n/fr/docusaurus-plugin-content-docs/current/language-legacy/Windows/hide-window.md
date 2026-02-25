@@ -1,4 +1,4 @@
----
+﻿---
 id: hide-window
 title: HIDE WINDOW
 slug: /commands/hide-window
@@ -33,10 +33,10 @@ La fenêtre disparaît de l'écran mais reste ouverte. Vous pouvez continuer à 
 
 Pour réafficher une fenêtre masquée par **HIDE WINDOW** :
 
-* Utilisez la commande [SHOW WINDOW](show-window.md) et passez-lui le numéro de référence de la fenêtre.
+* Utilisez la commande [SHOW WINDOW](../commands/show-window) et passez-lui le numéro de référence de la fenêtre.
 * Ou bien, utilisez la page **Process** de l'Explorateur d'exécution. Sélectionnez le process dans lequel la fenêtre est gérée (process de gestion de la fenêtre ou Process principal) puis cliquez sur le bouton **Montrer**.
 
-Si vous souhaitez cacher toutes les fenêtres d'un process, utilisez la commande [HIDE PROCESS](hide-process.md).
+Si vous souhaitez cacher toutes les fenêtres d'un process, utilisez la commande [HIDE PROCESS](../commands/hide-process).
 
 ## Exemple 
 
@@ -56,7 +56,7 @@ Cet exemple est la méthode d'un bouton placé dans un formulaire entrée. Ce bo
 
 ## Voir aussi 
 
-[SHOW WINDOW](show-window.md)  
+[SHOW WINDOW](../commands/show-window)  
 
 ## Propriétés
 

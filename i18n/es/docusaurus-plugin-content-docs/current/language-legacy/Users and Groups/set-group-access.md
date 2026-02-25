@@ -1,4 +1,4 @@
----
+﻿---
 id: set-group-access
 title: SET GROUP ACCESS
 slug: /commands/set-group-access
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 **Notas:** 
 
-* El alcance de este comando es la sesión actual. Llamar a [CHANGE CURRENT USER](change-current-user.md) después, por ejemplo, restablecería las membresías definidas.
+* El alcance de este comando es la sesión actual. Llamar a [CHANGE CURRENT USER](../commands/change-current-user) después, por ejemplo, restablecería las membresías definidas.
 * Este comando solo se puede invocar desde aplicaciones 4D remotas o 4D mono usuario. No está permitido en 4D Server.
 
 Pase en el parámetro *grupos* una colección de nombres de grupo existentes a los que debe pertenecer la cuenta de usuario 4D (si no existe un nombre de grupo, se ignora). Si pasa una colección vacía, la cuenta de usuario 4D ya no pertenecerá a ningún grupo.
@@ -52,10 +52,10 @@ Desea promocionar al usuario actual a los grupos "admin" y "plugins" para la ses
 
 ## Ver también 
 
-[Get group access](get-group-access.md)  
-[Get plugin access](get-plugin-access.md)  
-[SET PLUGIN ACCESS](set-plugin-access.md)  
-[SET USER ALIAS](set-user-alias.md)  
+[Get group access](../commands/get-group-access)  
+[Get plugin access](../commands/get-plugin-access)  
+[SET PLUGIN ACCESS](../commands/set-plugin-access)  
+[SET USER ALIAS](../commands/set-user-alias)  
 
 ## Propiedades
 

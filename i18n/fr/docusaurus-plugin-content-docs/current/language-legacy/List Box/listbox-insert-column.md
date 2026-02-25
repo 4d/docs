@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-insert-column
 title: LISTBOX INSERT COLUMN
 slug: /commands/listbox-insert-column
@@ -52,8 +52,8 @@ Passez dans les paramètres *nomCol* et *variableCol* le nom d’objet et la var
 * Dans le cadre d'une list box de type tableau, le nom de la variable correspond au nom du tableau dont le contenu sera affiché dans la colonne. Vous pouvez passer un pointeur Nil (->\[\]) si vous utilisez la commande dans un contexte dynamique à l'exécution du formulaire (cf. ci-dessous).
 * Dans le cadre d'une list box de type sélection, vous pouvez passer un champ ou une variable dans le paramètre *variableCol*. Le contenu de la colonne sera alors la valeur du champ ou de la variable, évaluée pour chaque enregistrement de la sélection associée à la list box. Ce type de contenu ne peut être utilisé que lorsque la propriété “Source de données” de la list box est Sélection courante ou Sélection temporaire (cf. section *Gestion programmée des objets de type List box*). Vous pouvez utiliser des champs ou des variables de type chaîne, numérique, Date, Heure, Image et Booléen.
 
-Dans le contexte de list box basées sur des sélections d'enregsitrements, **LISTBOX INSERT COLUMN** permet d’insérer des éléments simples (champs ou variables). Si vous souhaitez manipuler des expressions plus complexes (telles que des formules ou des méthodes), vous devez utiliser la commande [LISTBOX INSERT COLUMN FORMULA](listbox-insert-column-formula.md).  
-Les list box de type collection ou entity selection sont également prises en charge, mais comme le paramètre *variableCol* n'accepte pas les expressions, vous devrez utiliser la commande [LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md) pour assigner la source de données. Il est plus judicieux dans ce cas d'utiliser directement la commande [LISTBOX INSERT COLUMN FORMULA](listbox-insert-column-formula.md).
+Dans le contexte de list box basées sur des sélections d'enregsitrements, **LISTBOX INSERT COLUMN** permet d’insérer des éléments simples (champs ou variables). Si vous souhaitez manipuler des expressions plus complexes (telles que des formules ou des méthodes), vous devez utiliser la commande [LISTBOX INSERT COLUMN FORMULA](../commands/listbox-insert-column-formula).  
+Les list box de type collection ou entity selection sont également prises en charge, mais comme le paramètre *variableCol* n'accepte pas les expressions, vous devrez utiliser la commande [LISTBOX SET COLUMN FORMULA](../commands/listbox-set-column-formula) pour assigner la source de données. Il est plus judicieux dans ce cas d'utiliser directement la commande [LISTBOX INSERT COLUMN FORMULA](../commands/listbox-insert-column-formula).
 
 **Note :** Il n’est pas possible de combiner dans une même list box des colonnes de type tableau (source de données tableaux) et des colonnes de type champ ou variable (source de données sélection).
 
@@ -69,7 +69,7 @@ Vous pouvez utiliser cette commande pour insérer dynamiquement des colonnes dan
 
 Pour cela, **LISTBOX INSERT COLUMN** accepte un pointeur **Nil** (**\->\[\]**) comme valeur pour les paramètres *variableCol* (list box de type tableau uniquement), *variableEntête* et *variablePied*. Dans ce cas, 4D va créer dynamiquement les variables requises lors de l'exécution de la commande (pour plus d'informations, reportez-vous à la section ). 
 
-A noter que les variables d'en-tête et de pied sont toujours créées avec un type spécifique (respectivement entier long et texte). A l'inverse, les variables de colonne ne peuvent pas être typées à la création car les list box acceptent différents types de tableaux pour ces variables (tableau texte, tableau entier, etc.). Vous devez donc définir manuellement le type du tableau (cf. exemple 3). Il est important d'effectuer ce typage avant d'appeler des commandes telles que [LISTBOX INSERT ROWS](listbox-insert-rows.md) pour insérer des nouveaux éléments dans le tableau. Ou bien, il est possible d'utiliser [APPEND TO ARRAY](append-to-array.md) pour à la fois typer le tableau et insérer des éléments. 
+A noter que les variables d'en-tête et de pied sont toujours créées avec un type spécifique (respectivement entier long et texte). A l'inverse, les variables de colonne ne peuvent pas être typées à la création car les list box acceptent différents types de tableaux pour ces variables (tableau texte, tableau entier, etc.). Vous devez donc définir manuellement le type du tableau (cf. exemple 3). Il est important d'effectuer ce typage avant d'appeler des commandes telles que [LISTBOX INSERT ROWS](../commands/listbox-insert-rows) pour insérer des nouveaux éléments dans le tableau. Ou bien, il est possible d'utiliser [APPEND TO ARRAY](../commands/append-to-array) pour à la fois typer le tableau et insérer des éléments. 
 
 #### Exemple 1 
 
@@ -110,8 +110,8 @@ Vous souhaitez insérer dynamiquement une colonne dans une list box de type tabl
 
 #### Voir aussi 
 
-[LISTBOX DELETE COLUMN](listbox-delete-column.md)  
-[LISTBOX INSERT COLUMN FORMULA](listbox-insert-column-formula.md)  
+[LISTBOX DELETE COLUMN](../commands/listbox-delete-column)  
+[LISTBOX INSERT COLUMN FORMULA](../commands/listbox-insert-column-formula)  
 
 #### Propriétés
 

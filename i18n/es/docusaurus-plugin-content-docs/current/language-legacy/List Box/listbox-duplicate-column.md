@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-duplicate-column
 title: LISTBOX DUPLICATE COLUMN
 slug: /commands/listbox-duplicate-column
@@ -53,7 +53,7 @@ La nueva columna duplicada aparece justo antes de la columna designada por el pa
 En los parámetros *nomCol* y *varCol*, pase el nombre del objeto y de la variable de la nueva columna duplicada.  
 * Para list box de tipo array, *varCol* corresponde al nombre del array cuyo contenido se mostrará en la columna. Puede pasar un puntero Nil (->\[\]) en un contexto dinámico (ver abajo).
 * Para list box de tipo selección, puede pasar un campo o una variable en el parámetro *varCol*. Así que el contenido de la columna será el valor del campo o de la variable, evaluada para cada registro de la selección asociada al list box. Este tipo de contenido sólo se puede utilizar cuando la propiedad "Fuente de datos" del list box es Selección actual o Selección temporal.
-* Para los list box de tipo colección o selección de entidades, pase un puntero Nil (->\[\]) en *varCol*; deberá llamar a [LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md) luego para especificar la expresión fuente de datos.
+* Para los list box de tipo colección o selección de entidades, pase un puntero Nil (->\[\]) en *varCol*; deberá llamar a [LISTBOX SET COLUMN FORMULA](../commands/listbox-set-column-formula) luego para especificar la expresión fuente de datos.
 Recuerde que la fuente de datos de la columna original no se duplica: debe establecer una variable, array o campo fuente de la nueva columna duplicada.  
   
 En los parámetros *nomEncab* y *variableEncab*, pase el nombre del objeto y la variable del encabezado de la nueva columna duplicada. También puede pasar el nombre del objeto y la variable del pie de la columna insertada en los parámetros *nomPie* y *variablePie*. Si omite el parámetro *variablePie*, 4D utiliza una variable dinámica.  
@@ -68,7 +68,7 @@ Puede duplicar dinámicamente las columnas de list box y 4D se encarga automáti
   
 Para ello, **LISTBOX DUPLICATE COLUMN** acepta un puntero **Nil** (**\->\[\]**) como valor para los parámetros *varCol* (con list box de tipo selección de entidades/colección y array), *varEncab* y *varPie*. En este caso, cuando se ejecuta el comando, 4D crea las variables requeridas dinámicamente (para más información, consulte la sección ).   
   
-Note que las variables de encabezado y de pie de página siempre se crean con un tipo específico (entero largo y texto, respectivamente). Por el contrario, las variables de columna no se pueden escribir durante la creación porque los list boxes aceptan diferentes tipos de arrays para estas variables (array texto, array entero, etc.). Esto significa que usted tiene que fijar el tipo de array manualmente (ver ejemplo 2). Es importante digitar antes de llamar a comandos como [LISTBOX INSERT ROWS](listbox-insert-rows.md) para insertar nuevos elementos en el array. O bien, puede utilizar [APPEND TO ARRAY](append-to-array.md) tanto para definir el tipo del array y la inserción de elementos.
+Note que las variables de encabezado y de pie de página siempre se crean con un tipo específico (entero largo y texto, respectivamente). Por el contrario, las variables de columna no se pueden escribir durante la creación porque los list boxes aceptan diferentes tipos de arrays para estas variables (array texto, array entero, etc.). Esto significa que usted tiene que fijar el tipo de array manualmente (ver ejemplo 2). Es importante digitar antes de llamar a comandos como [LISTBOX INSERT ROWS](../commands/listbox-insert-rows) para insertar nuevos elementos en el array. O bien, puede utilizar [APPEND TO ARRAY](../commands/append-to-array) tanto para definir el tipo del array y la inserción de elementos.
 
 ## Ejemplo 1 
 
@@ -94,11 +94,11 @@ A partir de 4D v14 R3, puede duplicar dinámicamente las columnas de list box y 
   
 Para ello, **LISTBOX DUPLICATE COLUMN** acepta un puntero **Nil** (**\->\[\]**) como valor para los parámetros *varCol* (list box de tipo array únicamente), *varEncab* y *varPie*. En este caso, cuando se ejecuta el comando, 4D crea las variables requeridas dinámicamente (para más información, consulte la sección ).   
   
-Note que las variables de encabezado y de pie de página siempre se crean con un tipo específico (entero largo y texto, respectivamente). Por el contrario, las variables de columna no se pueden escribir durante la creación porque los list boxes aceptan diferentes tipos de arrays para estas variables (array texto, array entero, etc.). Esto significa que usted tiene que fijar el tipo de array manualmente (ver ejemplo 2). Es importante digitar antes de llamar a comandos como [LISTBOX INSERT ROWS](listbox-insert-rows.md) para insertar nuevos elementos en el array. O bien, puede utilizar [APPEND TO ARRAY](append-to-array.md) tanto para definir el tipo del array y la inserción de elementos.
+Note que las variables de encabezado y de pie de página siempre se crean con un tipo específico (entero largo y texto, respectivamente). Por el contrario, las variables de columna no se pueden escribir durante la creación porque los list boxes aceptan diferentes tipos de arrays para estas variables (array texto, array entero, etc.). Esto significa que usted tiene que fijar el tipo de array manualmente (ver ejemplo 2). Es importante digitar antes de llamar a comandos como [LISTBOX INSERT ROWS](../commands/listbox-insert-rows) para insertar nuevos elementos en el array. O bien, puede utilizar [APPEND TO ARRAY](../commands/append-to-array) tanto para definir el tipo del array y la inserción de elementos.
 
 ## Ver también 
 
-[LISTBOX MOVE COLUMN](listbox-move-column.md)  
+[LISTBOX MOVE COLUMN](../commands/listbox-move-column)  
 
 ## Propiedades
 

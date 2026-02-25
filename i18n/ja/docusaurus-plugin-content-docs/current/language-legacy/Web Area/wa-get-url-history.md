@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-get-url-history
 title: WA GET URL HISTORY
 slug: /commands/wa-get-url-history
@@ -55,7 +55,7 @@ URLは時間順に並びかえられます。
 
 ## 参照 
 
-[WA Create URL history menu](wa-create-url-history-menu.md)  
+[WA Create URL history menu](../commands/wa-create-url-history-menu)  
 
 ## プロパティ
 

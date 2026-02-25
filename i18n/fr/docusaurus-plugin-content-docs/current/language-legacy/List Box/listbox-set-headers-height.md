@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-headers-height
 title: LISTBOX SET HEADERS HEIGHT
 slug: /commands/listbox-set-headers-height
@@ -49,7 +49,7 @@ Les en-têtes doivent respecter une hauteur minimale, définie par le système d
 
 ## Voir aussi 
 
-[LISTBOX Get headers height](listbox-get-headers-height.md)  
+[LISTBOX Get headers height](../commands/listbox-get-headers-height)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: print-option-values
 title: PRINT OPTION VALUES
 slug: /commands/print-option-values
@@ -49,22 +49,22 @@ If you pass Paper option in the *option* parameter, the command will return the 
 
 **Note:** In order to obtain this information, the print driver must have access to a valid PPD (PostScript Printer Description) file for the printer.
 
-To apply a specific paper format using the [SET PRINT OPTION](set-print-option.md) command, you can either pass one of the values of *namesArray*, or the corresponding values of *info1Array* and *info2Array*.
+To apply a specific paper format using the [SET PRINT OPTION](../commands/set-print-option) command, you can either pass one of the values of *namesArray*, or the corresponding values of *info1Array* and *info2Array*.
 
 ***option* \= Paper source option (5)**
 
 **Note:** This option can only be used under Windows.
 
-If you pass Paper source option in the *option* parameter, the command returns the names of the different trays available in *namesArray*, and their internal Windows ID numbers in *info1Array* (*info2Array* remains empty). The order of the values in the arrays is defined by the print driver. To indicate a tray using the [SET PRINT OPTION](set-print-option.md) command, you must pass the index, as found in the *namesArray* or *info1Array* arrays, of the element desired.
+If you pass Paper source option in the *option* parameter, the command returns the names of the different trays available in *namesArray*, and their internal Windows ID numbers in *info1Array* (*info2Array* remains empty). The order of the values in the arrays is defined by the print driver. To indicate a tray using the [SET PRINT OPTION](../commands/set-print-option) command, you must pass the index, as found in the *namesArray* or *info1Array* arrays, of the element desired.
 
-For more information on the different print options, refer to the description of the [SET PRINT OPTION](set-print-option.md) and [GET PRINT OPTION](get-print-option.md) commands.
+For more information on the different print options, refer to the description of the [SET PRINT OPTION](../commands/set-print-option) and [GET PRINT OPTION](../commands/get-print-option) commands.
 
 All the information returned by these commands is supplied by the operating system. Refer to the documentation of your system for more details about specific options.
 
 ## See also 
 
-[GET PRINT OPTION](get-print-option.md)  
-[SET PRINT OPTION](set-print-option.md)  
+[GET PRINT OPTION](../commands/get-print-option)  
+[SET PRINT OPTION](../commands/set-print-option)  
 
 ## Properties
 

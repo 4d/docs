@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-print-variable-frame
 title: OBJECT SET PRINT VARIABLE FRAME
 slug: /commands/object-set-print-variable-frame
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET PRINT VARIABLE FRAME.Summary-->**OBJECT SET PRINT VARIABLE FRAME**コマンドは、引数 *object* と *\** で指定したオブジェクトの印刷時可変のプロパティを、変更します。<!-- END REF-->
 
-このプロパティはテキスト型・ピクチャー型の変数とフィールド、そしてサブフォームにのみ存在します。サブフォームの場合は更に固定長印刷のオプションも存在します。詳細な情報に関しては、 *Design Reference* マニュアルの [WA OPEN BACK URL](wa-open-back-url.md) を参照して下さい。このコマンドは、印刷時可変のプロパティがないオブジェクトに対しては何もしません。
+このプロパティはテキスト型・ピクチャー型の変数とフィールド、そしてサブフォームにのみ存在します。サブフォームの場合は更に固定長印刷のオプションも存在します。詳細な情報に関しては、 *Design Reference* マニュアルの [WA OPEN BACK URL](../commands/wa-open-back-url) を参照して下さい。このコマンドは、印刷時可変のプロパティがないオブジェクトに対しては何もしません。
 
 このプロパティは以下のオブジェクトにおいてのみ存在します:
 
@@ -55,7 +55,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT GET PRINT VARIABLE FRAME](object-get-print-variable-frame.md)  
+[OBJECT GET PRINT VARIABLE FRAME](../commands/object-get-print-variable-frame)  
 
 ## プロパティ
 

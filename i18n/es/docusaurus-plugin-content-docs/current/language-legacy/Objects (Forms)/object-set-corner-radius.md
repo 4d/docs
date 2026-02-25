@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-corner-radius
 title: OBJECT SET CORNER RADIUS
 slug: /commands/object-set-corner-radius
@@ -77,7 +77,7 @@ Tenga en cuenta que para las áreas de texto (así como las entradas), a diferen
 
 ## Ver también 
 
-[OBJECT Get corner radius](object-get-corner-radius.md)  
+[OBJECT Get corner radius](../commands/object-get-corner-radius)  
 
 ## Propiedades
 

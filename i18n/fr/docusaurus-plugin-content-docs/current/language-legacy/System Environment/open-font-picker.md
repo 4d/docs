@@ -1,4 +1,4 @@
----
+﻿---
 id: open-font-picker
 title: OPEN FONT PICKER
 slug: /commands/open-font-picker
@@ -53,7 +53,7 @@ Le code du bouton est le suivant :
 
 ## Voir aussi 
 
-[OPEN COLOR PICKER](open-color-picker.md)  
+[OPEN COLOR PICKER](../commands/open-color-picker)  
 
 ## Propriétés
 

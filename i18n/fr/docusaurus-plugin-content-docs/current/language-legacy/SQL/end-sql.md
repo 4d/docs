@@ -1,4 +1,4 @@
----
+﻿---
 id: end-sql
 title: End SQL
 slug: /commands/end-sql
@@ -28,11 +28,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.End SQL.Summary-->**End SQL** est un mot-clé indiquant dans l'éditeur de méthodes la fin d'une séquence de commandes SQL.<!-- END REF--> 
 
-Une séquence d'instructions SQL doit être encadrée par les mot-clés [Begin SQL](begin-sql.md) et **End SQL**. Pour plus d'informations, reportez-vous à la description du mot-clé [Begin SQL](begin-sql.md). 
+Une séquence d'instructions SQL doit être encadrée par les mot-clés [Begin SQL](../commands/begin-sql) et **End SQL**. Pour plus d'informations, reportez-vous à la description du mot-clé [Begin SQL](../commands/begin-sql). 
 
 ## Voir aussi 
 
-[Begin SQL](begin-sql.md)  
+[Begin SQL](../commands/begin-sql)  
 
 ## Propriétés
 

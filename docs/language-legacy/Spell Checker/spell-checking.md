@@ -1,4 +1,4 @@
----
+﻿---
 id: spell-checking
 title: SPELL CHECKING
 slug: /commands/spell-checking
@@ -30,9 +30,9 @@ displayed_sidebar: docs
 
 **Note:** If you want to trigger the spellcheck by clicking a button in the form, make sure that this button does not have the "Focusable" property set.
 
-Spell checking starts with the first word of the field or variable. If an unknown word is detected, the spell check dialog box appears (for more information, refer to the Design Reference manual of 4D). 4D uses the current dictionary (corresponding to the language of the application) unless you have used the [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md) command.
+Spell checking starts with the first word of the field or variable. If an unknown word is detected, the spell check dialog box appears (for more information, refer to the Design Reference manual of 4D). 4D uses the current dictionary (corresponding to the language of the application) unless you have used the [SPELL SET CURRENT DICTIONARY](../commands/spell-set-current-dictionary) command.
 
-**Warning:** The **SPELL CHECKING** command affects the text that is being entered in the form, and not the associated data source (field or variable). This means that if you call this command from the On Data Change or On Losing Focus form events (not recommended), it will not affect the stored text since 4D has already assigned the entered text to the data source at this point. In this case, you need to assign the edited result to the data source yourself, using the [Get edited text](get-edited-text.md) command. For example:  
+**Warning:** The **SPELL CHECKING** command affects the text that is being entered in the form, and not the associated data source (field or variable). This means that if you call this command from the On Data Change or On Losing Focus form events (not recommended), it will not affect the stored text since 4D has already assigned the entered text to the data source at this point. In this case, you need to assign the edited result to the data source yourself, using the [Get edited text](../commands/get-edited-text) command. For example:  
 
 ```4d
  If(Form event code=On Data Change)
@@ -43,8 +43,8 @@ Spell checking starts with the first word of the field or variable. If an unknow
 
 ## See also 
 
-[SPELL CHECK TEXT](spell-check-text.md)  
-[SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md)  
+[SPELL CHECK TEXT](../commands/spell-check-text)  
+[SPELL SET CURRENT DICTIONARY](../commands/spell-set-current-dictionary)  
 
 ## Properties
 

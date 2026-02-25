@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-hierarchy
 title: LISTBOX GET HIERARCHY
 slug: /commands/listbox-get-hierarchy
@@ -45,7 +45,7 @@ Se o list box está em modo hierárquico, o comando preenche o array *hierarquia
 
 ## Ver também 
 
-[LISTBOX SET HIERARCHY](listbox-set-hierarchy.md)  
+[LISTBOX SET HIERARCHY](../commands/listbox-set-hierarchy)  
 
 ## Propriedades
 

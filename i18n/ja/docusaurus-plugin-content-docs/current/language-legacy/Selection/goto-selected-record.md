@@ -1,4 +1,4 @@
----
+﻿---
 id: goto-selected-record
 title: GOTO SELECTED RECORD
 slug: /commands/goto-selected-record
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.GOTO SELECTED RECORD.Summary-->**GOTO SELECTED RECORD**は、*aTable*のカレントセレクション内の指定されたレコードに移動し、そのレコードをカレントレコードにします。<!-- END REF-->カレントセレクションは変更されません。*record*にはカレントセレクション内のレコードの位置を指定します。[Record number](record-number.md)で求められるレコード番号ではありません。このレコード位置はセレクションの作成方法およびセレクションがソートされているかどうかによって変わります。
+<!--REF #_command_.GOTO SELECTED RECORD.Summary-->**GOTO SELECTED RECORD**は、*aTable*のカレントセレクション内の指定されたレコードに移動し、そのレコードをカレントレコードにします。<!-- END REF-->カレントセレクションは変更されません。*record*にはカレントセレクション内のレコードの位置を指定します。[Record number](../commands/record-number)で求められるレコード番号ではありません。このレコード位置はセレクションの作成方法およびセレクションがソートされているかどうかによって変わります。
 
 **GOTO SELECTED RECORD** は以下の場合なにも行いません:
 
@@ -73,7 +73,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Selected record number](selected-record-number.md)  
+[Selected record number](../commands/selected-record-number)  
 
 ## プロパティ
 

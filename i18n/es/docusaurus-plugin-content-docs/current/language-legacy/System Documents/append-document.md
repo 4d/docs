@@ -1,4 +1,4 @@
----
+﻿---
 id: append-document
 title: Append document
 slug: /commands/append-document
@@ -49,8 +49,8 @@ El siguiente ejemplo abre un documento existente llamado Nota, añade la cadena 
 
 ## Ver también 
 
-[Create document](create-document.md)  
-[Open document](open-document.md)  
+[Create document](../commands/create-document)  
+[Open document](../commands/open-document)  
 
 ## Propiedades
 

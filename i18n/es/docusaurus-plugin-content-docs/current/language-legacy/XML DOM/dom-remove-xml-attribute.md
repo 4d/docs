@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-remove-xml-attribute
 title: DOM REMOVE XML ATTRIBUTE
 slug: /commands/dom-remove-xml-attribute
@@ -52,10 +52,10 @@ El siguiente código permite remover el primer atributo "N=1":
 
 ## Ver también 
 
-[DOM GET XML ATTRIBUTE BY INDEX](dom-get-xml-attribute-by-index.md)  
-[DOM GET XML ATTRIBUTE BY NAME](dom-get-xml-attribute-by-name.md)  
-[DOM REMOVE XML ELEMENT](dom-remove-xml-element.md)  
-[DOM SET XML ATTRIBUTE](dom-set-xml-attribute.md)  
+[DOM GET XML ATTRIBUTE BY INDEX](../commands/dom-get-xml-attribute-by-index)  
+[DOM GET XML ATTRIBUTE BY NAME](../commands/dom-get-xml-attribute-by-name)  
+[DOM REMOVE XML ELEMENT](../commands/dom-remove-xml-element)  
+[DOM SET XML ATTRIBUTE](../commands/dom-set-xml-attribute)  
 
 ## Propiedades
 

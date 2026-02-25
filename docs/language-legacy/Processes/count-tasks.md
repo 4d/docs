@@ -1,4 +1,4 @@
----
+﻿---
 id: count-tasks
 title: Count tasks
 slug: /commands/count-tasks
@@ -23,14 +23,14 @@ This number takes into account all processes, even those that are automatically 
 
 ## Example 
 
-See the example for [Process state](process-state.md) and for the [Semaphore](semaphore.md).
+See the example for [Process state](../commands/process-state) and for the [Semaphore](../commands/semaphore).
 
 ## See also 
 
-[Count user processes](count-user-processes.md)  
-[Count users](count-users.md)  
+[Count user processes](../commands/count-user-processes)  
+[Count users](../commands/count-users)  
 [Process info](../commands/process-info)  
-[Process state](process-state.md)  
+[Process state](../commands/process-state)  
 
 ## Properties
 

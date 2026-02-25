@@ -1,4 +1,4 @@
----
+﻿---
 id: action-info
 title: Action info
 slug: /commands/action-info
@@ -61,8 +61,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[INVOKE ACTION](invoke-action.md)  
-[SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+[INVOKE ACTION](../commands/invoke-action)  
+[SET LIST ITEM PARAMETER](../commands/set-list-item-parameter)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-insert-xml-element
 title: DOM Insert XML element
 slug: /commands/dom-insert-xml-element
@@ -91,7 +91,7 @@ $rootRef:=DOM Parse XML source("") //selección de documento XML
 
 ## Ver también 
 
-[DOM Append XML element](dom-append-xml-element.md)  
+[DOM Append XML element](../commands/dom-append-xml-element)  
 
 ## Propiedades
 

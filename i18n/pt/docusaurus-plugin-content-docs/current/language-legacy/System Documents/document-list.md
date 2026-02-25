@@ -1,4 +1,4 @@
----
+﻿---
 id: document-list
 title: DOCUMENT LIST
 slug: /commands/document-list
@@ -47,7 +47,7 @@ Por padrão, se você omitir o parâmetro *opções*, apenas os nomes dos docume
 * Com a opção Posix path no modo relativo (opção 4 somente), os caminhos não começam com "/".
 * Com a opção Posix path no modo absoluto (opção 4 + 2), os caminhos sempre começam com "/".
 
-Se não houver documentos na localização especificada, o comando retorna um array vazio. Se a rota de acesso que for passada em *rotaAcesso* for incorreta, **DOCUMENT LIST**  gera um erro de administrador de arquivos que pode interceptar utilizando o método [ON ERR CALL](on-err-call.md).
+Se não houver documentos na localização especificada, o comando retorna um array vazio. Se a rota de acesso que for passada em *rotaAcesso* for incorreta, **DOCUMENT LIST**  gera um erro de administrador de arquivos que pode interceptar utilizando o método [ON ERR CALL](../commands/on-err-call).
 
 ## Exemplo 1 
 
@@ -124,8 +124,8 @@ Lista de todos os documentos em modo recursivo Posix (relativo):
 
 ## Ver também 
 
-[FOLDER LIST](folder-list.md)  
-[VOLUME LIST](volume-list.md)  
+[FOLDER LIST](../commands/folder-list)  
+[VOLUME LIST](../commands/volume-list)  
 
 ## Propriedades
 

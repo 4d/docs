@@ -1,4 +1,4 @@
----
+﻿---
 id: split-string
 title: Split string
 slug: /commands/split-string
@@ -68,7 +68,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[TEXT TO ARRAY](text-to-array.md)  
+[TEXT TO ARRAY](../commands/text-to-array)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: count-screens
 title: Count screens
 slug: /commands/count-screens
@@ -32,11 +32,11 @@ displayed_sidebar: docs
 
 ## Voir aussi 
 
-[Menu bar screen](menu-bar-screen.md)  
-[SCREEN COORDINATES](screen-coordinates.md)  
-[SCREEN DEPTH](screen-depth.md)  
-[Screen height](screen-height.md)  
-[Screen width](screen-width.md)  
+[Menu bar screen](../commands/menu-bar-screen)  
+[SCREEN COORDINATES](../commands/screen-coordinates)  
+[SCREEN DEPTH](../commands/screen-depth)  
+[Screen height](../commands/screen-height)  
+[Screen width](../commands/screen-width)  
 
 ## Propriétés
 

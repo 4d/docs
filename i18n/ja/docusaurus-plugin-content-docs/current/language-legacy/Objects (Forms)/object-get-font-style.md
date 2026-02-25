@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-font-style
 title: OBJECT Get font style
 slug: /commands/object-get-font-style
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT SET FONT STYLE](object-set-font-style.md)  
+[OBJECT SET FONT STYLE](../commands/object-set-font-style)  
 
 ## プロパティ
 

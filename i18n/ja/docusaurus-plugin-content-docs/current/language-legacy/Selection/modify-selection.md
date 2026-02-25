@@ -1,4 +1,4 @@
----
+﻿---
 id: modify-selection
 title: MODIFY SELECTION
 slug: /commands/modify-selection
@@ -39,7 +39,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[DISPLAY SELECTION](display-selection.md)  
+[DISPLAY SELECTION](../commands/display-selection)  
 [Form event code](../commands/form-event-code)  
 *セット*  
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: transform-picture
 title: TRANSFORM PICTURE
 slug: /commands/transform-picture
@@ -82,7 +82,7 @@ Here is an example of cropping a picture (the picture is displayed in the form w
 
 ## See also 
 
-[COMBINE PICTURES](combine-pictures.md)  
+[COMBINE PICTURES](../commands/combine-pictures)  
 
 ## Properties
 

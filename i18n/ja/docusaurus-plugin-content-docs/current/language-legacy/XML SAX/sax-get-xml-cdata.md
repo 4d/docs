@@ -1,4 +1,4 @@
----
+﻿---
 id: sax-get-xml-cdata
 title: SAX GET XML CDATA
 slug: /commands/sax-get-xml-cdata
@@ -29,11 +29,11 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.SAX GET XML CDATA.Summary-->**SAX GET XML CDATA**コマンドを使用して、*document* 引数で参照されるXMLドキュメント中に存在するXML要素のCDATA *value* を取得できます。<!-- END REF-->このコマンドはXML CDATA SAX イベント内で呼び出さなければなりません。SAXイベントに関する詳細は[SAX Get XML node](sax-get-xml-node.md)コマンドの説明を参照してください。
+<!--REF #_command_.SAX GET XML CDATA.Summary-->**SAX GET XML CDATA**コマンドを使用して、*document* 引数で参照されるXMLドキュメント中に存在するXML要素のCDATA *value* を取得できます。<!-- END REF-->このコマンドはXML CDATA SAX イベント内で呼び出さなければなりません。SAXイベントに関する詳細は[SAX Get XML node](../commands/sax-get-xml-node)コマンドの説明を参照してください。
 
 32 KBを超えるデータを取得するにはテキスト型の変数を*value*に渡します (データベースはUnicodeモードで実行されていなければなりません)。
 
-**互換性に関する注記:** 4D v12以降、base64でエンコードされたCDATAの内容は**SAX GET XML CDATA**コマンドにより自動でデコードされるようになりました。[BASE64 DECODE](base64-decode.md)コマンドを呼び出す必要はありません。
+**互換性に関する注記:** 4D v12以降、base64でエンコードされたCDATAの内容は**SAX GET XML CDATA**コマンドにより自動でデコードされるようになりました。[BASE64 DECODE](../commands/base64-decode)コマンドを呼び出す必要はありません。
 
 ## 例題 
 
@@ -60,8 +60,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[SAX ADD XML CDATA](sax-add-xml-cdata.md)  
-[SAX Get XML node](sax-get-xml-node.md)  
+[SAX ADD XML CDATA](../commands/sax-add-xml-cdata)  
+[SAX Get XML node](../commands/sax-get-xml-node)  
 
 ## プロパティ
 

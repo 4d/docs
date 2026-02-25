@@ -1,4 +1,4 @@
----
+﻿---
 id: print-record
 title: PRINT RECORD
 slug: /commands/print-record
@@ -39,7 +39,7 @@ displayed_sidebar: docs
 デフォルトで **PRINT RECORD** は印刷の前にプリントジョブダイアログボックスを表示します。 印刷ダイアログをユーザーがキャンセルした場合、**PRINT RECORD** はキャンセルされ、印刷は行われません。  
 このダイアログの表示を省略するには、オプション引数 *\** または *\>* を使います:
 
-* *\** 引数は、現在の印刷設定 (デフォルトの設定、もしくは *\_o\_PAGE SETUP* や [SET PRINT OPTION](set-print-option.md) コマンドで定義した設定) に従い、印刷処理を行います。
+* *\** 引数は、現在の印刷設定 (デフォルトの設定、もしくは *\_o\_PAGE SETUP* や [SET PRINT OPTION](../commands/set-print-option) コマンドで定義した設定) に従い、印刷処理を行います。
 * *\>* 引数は上記に加え、現在の印刷設定を再初期化することなく印刷を行います。この設定は、以前に設定した内容を継続し、(例えばループ中で) 連続した **PRINT RECORD** コマンドを使用する時に役立ちます。
 
 **4D Server:** このコマンドは、ストアドプロシージャー内において4D Server上で実行することができます。この状況では、次の制約があります:
@@ -47,7 +47,7 @@ displayed_sidebar: docs
 * サーバーマシン上ではダイアログボックスを一切表示しないでください (特定の必要性がある場合を除く)。そのためにはこのコマンドを *\** または *\>* 引数付きで呼び出さなければなりません。
 * プリンター関連の問題が発生しても (用紙切れ、プリンター接続切断等) 、エラーメッセージは生成されません。
 
-**警告:** **PRINT RECORD** と一緒に [PAGE BREAK](page-break.md) コマンドを使用してはいけません。[PAGE BREAK](page-break.md) コマンドは [Print form](../commands/print-form) で使用されるように設計されています。
+**警告:** **PRINT RECORD** と一緒に [PAGE BREAK](../commands/page-break) コマンドを使用してはいけません。[PAGE BREAK](../commands/page-break) コマンドは [Print form](../commands/print-form) で使用されるように設計されています。
 
 ## 例題 1 
 

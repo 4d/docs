@@ -1,4 +1,4 @@
----
+﻿---
 id: ldap-search
 title: LDAP Search
 slug: /commands/ldap-search
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.LDAP Search.Summary-->O comando **LDAP Search** encontra a primeira ocorrência que corresponde aos critérios definidos no servidor LDAP alvo.<!-- END REF--> Este comando deve ser executado em uma conexão com um servidor LDAP aberta com [LDAP LOGIN](ldap-login.md); caso contrário, é devolvido um erro 1003.  
+<!--REF #_command_.LDAP Search.Summary-->O comando **LDAP Search** encontra a primeira ocorrência que corresponde aos critérios definidos no servidor LDAP alvo.<!-- END REF--> Este comando deve ser executado em uma conexão com um servidor LDAP aberta com [LDAP LOGIN](../commands/ldap-login); caso contrário, é devolvido um erro 1003.  
   
 Em *dnRootEntry*, passar o *Distinguished Name* do elemento raiz do servidor LDAP; a pesquisa irá recomeçar a partir deste elemento.  
   
@@ -94,7 +94,7 @@ Queremos obter um array de todas as entradas que se encontram no atributo "membe
 ## Ver também 
 
 *LDAP*  
-[LDAP SEARCH ALL](ldap-search-all.md)  
+[LDAP SEARCH ALL](../commands/ldap-search-all)  
 
 ## Propriedades
 

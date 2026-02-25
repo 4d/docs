@@ -1,4 +1,4 @@
----
+﻿---
 id: kill-worker
 title: KILL WORKER
 slug: /commands/kill-worker
@@ -34,9 +34,9 @@ Cette commande ne peut être utilisée qu'avec des process workers. Pour plus d'
 Dans le paramètre *process*, vous pouvez passer soit le nom soit le numéro du process worker que vous voulez tuer. Si aucun process worker avec le nom ou le numéro spécifié existe, **KILL WORKER** ne fait rien.  
 Lorsque le paramètre *process* est omis, **KILL WORKER** s'applique au process worker courant et équivaut donc à **KILL WORKER*(Numero du process courant)*.
 
-Lorsque la commande est appliquée à un worker qui n’a pas été créé explicitement par la commande [CALL WORKER](call-worker.md) (par exemple, le process worker principal de l'application), elle vide uniquement sa boîte aux lettres.
+Lorsque la commande est appliquée à un worker qui n’a pas été créé explicitement par la commande [CALL WORKER](../commands/call-worker) (par exemple, le process worker principal de l'application), elle vide uniquement sa boîte aux lettres.
 
-Si la commande [CALL WORKER](call-worker.md) est appelée pour envoyer un message à un worker qui vient juste d'être tué par **KILL WORKER**, un nouveau process est démarré. Pour être sûr qu'il y a un seul process lancé à la fois pour un worker, le nouveau process attendra que que le précédent soit effectivement terminé. A noter cependant que si la commande [CALL WORKER](call-worker.md) est appelée depuis un worker pour qu'il s'envoie lui-même un message alors qu'il vient juste d'être tué par **KILL WORKER**, la commande ne fait rien. 
+Si la commande [CALL WORKER](../commands/call-worker) est appelée pour envoyer un message à un worker qui vient juste d'être tué par **KILL WORKER**, un nouveau process est démarré. Pour être sûr qu'il y a un seul process lancé à la fois pour un worker, le nouveau process attendra que que le précédent soit effectivement terminé. A noter cependant que si la commande [CALL WORKER](../commands/call-worker) est appelée depuis un worker pour qu'il s'envoie lui-même un message alors qu'il vient juste d'être tué par **KILL WORKER**, la commande ne fait rien. 
 
 #### Exemple 
 
@@ -63,8 +63,8 @@ Dans la méthode du process worker (*leWorker*), vous ajoutez du code pour gére
 #### Voir aussi 
 
 *A propos des workers*  
-[CALL WORKER](call-worker.md)  
-[Current process name](current-process-name.md)  
+[CALL WORKER](../commands/call-worker)  
+[Current process name](../commands/current-process-name)  
 
 #### Propriétés
 

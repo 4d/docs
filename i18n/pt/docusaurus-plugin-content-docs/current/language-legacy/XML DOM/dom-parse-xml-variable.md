@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-parse-xml-variable
 title: DOM Parse XML variable
 slug: /commands/dom-parse-xml-variable
@@ -53,11 +53,11 @@ Há duas formas de especificar um DTD:
   
 Para validar o documento através de um esquema XML, apenas deve passar um arquivo ou URL com uma extensão "xsd" ao invés de uma "dtd" no terceiro parâmetro. A validação por esquema XML é considerada mais flexível e poderosa que a validação por DTD. A linguagem de documentos XSD está baseada em linguagem XML. Os esquemas XML são compatíveis particularmente tipos de dados. Para maior informação sobre os esquemas XML, consulte o seguinte endereço: http://www.w3.org/XML/Schema.  
   
-Se não puder realizar a validação (não DTD ou XSD, URL incorreto, etc.), um erro é gerado. A variável sistema Erro indica o número do erro. Pode interceptar este erro com a ajuda de um método instalado pelo comando [ON ERR CALL](on-err-call.md)  
+Se não puder realizar a validação (não DTD ou XSD, URL incorreto, etc.), um erro é gerado. A variável sistema Erro indica o número do erro. Pode interceptar este erro com a ajuda de um método instalado pelo comando [ON ERR CALL](../commands/on-err-call)  
   
 O comando retorna uma cadeia de caracteres (RefElement) que constitui a referência em memória da estrutura virtual da variável. Esta referência deve ser utilizada com outros comandos de análise XML.  
 
-**Importante**: quando não tiver mais necessidade dele, lembre de chamar o comando [DOM CLOSE XML](dom-close-xml.md) com essa referência para liberar memória.
+**Importante**: quando não tiver mais necessidade dele, lembre de chamar o comando [DOM CLOSE XML](../commands/dom-close-xml) com essa referência para liberar memória.
 
 ## Exemplo 1 
 
@@ -94,8 +94,8 @@ Se o comando tiver sido executado corretamente, a variável sistema Ok assume o 
 
 ## Ver também 
 
-[DOM CLOSE XML](dom-close-xml.md)  
-[DOM Parse XML source](dom-parse-xml-source.md)  
+[DOM CLOSE XML](../commands/dom-close-xml)  
+[DOM Parse XML source](../commands/dom-parse-xml-source)  
 
 ## Propriedades
 

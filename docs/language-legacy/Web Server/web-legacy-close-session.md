@@ -1,4 +1,4 @@
----
+﻿---
 id: web-legacy-close-session
 title: WEB LEGACY CLOSE SESSION
 slug: /commands/web-legacy-close-session
@@ -38,7 +38,7 @@ The **WEB LEGACY CLOSE SESSION** command invalidates an existing session designa
 When this command is called from a Web process or any other process:
 
 * The cookie expiration date is set to 0,
-* The [On Web Legacy Close Session database method](on-web-legacy-close-session-database-method.md) is called, allowing you to store session information,
+* The [On Web Legacy Close Session database method](../commands/on-web-legacy-close-session-database-method) is called, allowing you to store session information,
 * Selections are erased, records are unlocked and variables are reset.
 
 After this command is executed, if a Web client sends a request using an invalid cookie, a new session is opened and a new cookie is sent.
@@ -47,7 +47,7 @@ After this command is executed, if a Web client sends a request using an invalid
 
 ## See also 
 
-[On Web Legacy Close Session database method](on-web-legacy-close-session-database-method.md)  
+[On Web Legacy Close Session database method](../commands/on-web-legacy-close-session-database-method)  
 *Web Sessions Management (Legacy)*  
 
 ## Properties

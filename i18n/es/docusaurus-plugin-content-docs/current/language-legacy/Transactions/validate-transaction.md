@@ -1,4 +1,4 @@
----
+﻿---
 id: validate-transaction
 title: VALIDATE TRANSACTION
 slug: /commands/validate-transaction
@@ -35,13 +35,13 @@ A partir de la versión 11 de 4D, puede anidar varias transacciones (subtransacc
 
 La variable sistema OK toma el valor 1 si la transacción se ha validado correctamente; de lo contrario, toma el valor 0.
 
-Tenga en cuenta que cuando OK toma el valor 0, la transacción automáticamente se cancela internamente (equivalente a [CANCEL TRANSACTION](cancel-transaction.md)). Por lo tanto, no debe llamar explícitamente [CANCEL TRANSACTION](cancel-transaction.md) si OK=0, particularmente en el contexto de las transacciones anidadas, ya que la cancelación se aplicará entonces a la transacción de nivel superior.
+Tenga en cuenta que cuando OK toma el valor 0, la transacción automáticamente se cancela internamente (equivalente a [CANCEL TRANSACTION](../commands/cancel-transaction)). Por lo tanto, no debe llamar explícitamente [CANCEL TRANSACTION](../commands/cancel-transaction) si OK=0, particularmente en el contexto de las transacciones anidadas, ya que la cancelación se aplicará entonces a la transacción de nivel superior.
 
 ## Ver también 
 
-[CANCEL TRANSACTION](cancel-transaction.md)  
-[In transaction](in-transaction.md)  
-[START TRANSACTION](start-transaction.md)  
+[CANCEL TRANSACTION](../commands/cancel-transaction)  
+[In transaction](../commands/in-transaction)  
+[START TRANSACTION](../commands/start-transaction)  
 *Utilización de transacciones*  
 
 ## Propiedades

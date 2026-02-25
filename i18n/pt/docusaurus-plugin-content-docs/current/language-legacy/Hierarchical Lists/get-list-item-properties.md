@@ -1,4 +1,4 @@
----
+﻿---
 id: get-list-item-properties
 title: GET LIST ITEM PROPERTIES
 slug: /commands/get-list-item-properties
@@ -45,7 +45,7 @@ Em *refElem*, pode passar um número de referência, ou o valor 0 com o objetivo
 
 Se passa \* e nenhum elemento for selecionado ou se o número de referência do elemento não corresponde a nenhum elemento da lista, o comando deixa os parâmetros sem mudanças.
 
-Se trabalhar com números de referência dos elementos, construa uma lista na qual os elementos tenham números de referencia únicos, do contrário não poderá diferenciar os elementos. Para maior informação, consulte a descrição do comando [APPEND TO LIST](append-to-list.md).
+Se trabalhar com números de referência dos elementos, construa uma lista na qual os elementos tenham números de referencia únicos, do contrário não poderá diferenciar os elementos. Para maior informação, consulte a descrição do comando [APPEND TO LIST](../commands/append-to-list).
 
 Depois de a chamar:
 
@@ -54,17 +54,17 @@ Depois de a chamar:
 * *icone* retorna o ícone ou a imagem associada ao elemento, *0* se não houver nenhum.
 * Se o ícone foi especificado como um arquivo de imagem, o comando retorna em ícone uma rota usando o padrão **path:<filesystem path>**.
 * Se o ícone tiver sido especificado usando uma biblioteca de imagen (apenas em banco de dados bináriso), o comando retorna ou o número ou o nome da imagem, dependendo do tipo de variável passado no parâmetro. O padrão a seguir é usado para o nome : **pictlib:<name>**. Se não atribuir um tipo especifico para a variável *ícone*, como padrão, o nome da imagem é retornado (texto). Se nenhum ícone estiver associado com o ícone, o comando retorna um valor em branco.  
-**Nota:** pode recuperar, em uma variável imagem, o ícone associado com um elemento utilizando o comando [GET LIST ITEM ICON](get-list-item-icon.md)
+**Nota:** pode recuperar, em uma variável imagem, o ícone associado com um elemento utilizando o comando [GET LIST ITEM ICON](../commands/get-list-item-icon)
 * *cor* retorna a cor do texto do elemento especificado.
 
-Para maior informação sobre estas propriedades, consulte a descrição do comando [SET LIST ITEM PROPERTIES](set-list-item-properties.md).
+Para maior informação sobre estas propriedades, consulte a descrição do comando [SET LIST ITEM PROPERTIES](../commands/set-list-item-properties).
 
 ## Ver também 
 
-[GET LIST ITEM](get-list-item.md)  
-[GET LIST ITEM ICON](get-list-item-icon.md)  
-[SET LIST ITEM](set-list-item.md)  
-[SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+[GET LIST ITEM](../commands/get-list-item)  
+[GET LIST ITEM ICON](../commands/get-list-item-icon)  
+[SET LIST ITEM](../commands/set-list-item)  
+[SET LIST ITEM PROPERTIES](../commands/set-list-item-properties)  
 
 ## Propriedades
 

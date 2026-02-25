@@ -1,4 +1,4 @@
----
+﻿---
 id: get-picture-keywords
 title: GET PICTURE KEYWORDS
 slug: /commands/get-picture-keywords
@@ -39,12 +39,12 @@ If you pass the *\** parameter, the method only returns "distinct values" of key
 
 If the picture does not contain keywords or IPTC/Keywords metadata, the command returns an empty array and no error is generated.
 
-**Note:** Results returned by this command can differ according to the current value of the "Consider only non-alphanumeric chars for keywords" database setting (see the [DOM GET XML CHILD NODES](dom-get-xml-child-nodes.md)). 
+**Note:** Results returned by this command can differ according to the current value of the "Consider only non-alphanumeric chars for keywords" database setting (see the [DOM GET XML CHILD NODES](../commands/dom-get-xml-child-nodes)). 
 
 ## See also 
 
-[GET PICTURE METADATA](get-picture-metadata.md)  
-[SET PICTURE METADATA](set-picture-metadata.md)  
+[GET PICTURE METADATA](../commands/get-picture-metadata)  
+[SET PICTURE METADATA](../commands/set-picture-metadata)  
 
 ## Properties
 

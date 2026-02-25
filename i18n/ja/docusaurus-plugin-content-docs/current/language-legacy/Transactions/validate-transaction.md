@@ -1,4 +1,4 @@
----
+﻿---
 id: validate-transaction
 title: VALIDATE TRANSACTION
 slug: /commands/validate-transaction
@@ -35,13 +35,13 @@ displayed_sidebar: docs
 
 トランザクションが正しく認証されると、システム変数OKに1が代入されます。その他の場合は0が代入されます。
 
-OK変数に0が代入された場合、トランザクションは自動的に内部でキャンセルされるという点に注意して下さい([CANCEL TRANSACTION](cancel-transaction.md)と同等)。結果として、特にネストされたトランザクションではキャンセルが高いレベルのトランザクションにまで適用されてしまうため、OK=0の場合には明示的に[CANCEL TRANSACTION](cancel-transaction.md)を呼び出してはいけません。
+OK変数に0が代入された場合、トランザクションは自動的に内部でキャンセルされるという点に注意して下さい([CANCEL TRANSACTION](../commands/cancel-transaction)と同等)。結果として、特にネストされたトランザクションではキャンセルが高いレベルのトランザクションにまで適用されてしまうため、OK=0の場合には明示的に[CANCEL TRANSACTION](../commands/cancel-transaction)を呼び出してはいけません。
 
 ## 参照 
 
-[CANCEL TRANSACTION](cancel-transaction.md)  
-[In transaction](in-transaction.md)  
-[START TRANSACTION](start-transaction.md)  
+[CANCEL TRANSACTION](../commands/cancel-transaction)  
+[In transaction](../commands/in-transaction)  
+[START TRANSACTION](../commands/start-transaction)  
 *トランザクションを使用する*  
 
 ## プロパティ

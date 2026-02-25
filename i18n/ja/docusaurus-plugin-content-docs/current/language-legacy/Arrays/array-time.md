@@ -1,4 +1,4 @@
----
+﻿---
 id: array-time
 title: ARRAY TIME
 slug: /commands/array-time
@@ -42,7 +42,7 @@ displayed_sidebar: docs
 * サイズを拡大する場合、既存の要素は何も変更されず、新しく追加された要素はnull時間の値(00:00:00)で初期化されます。
 * サイズを縮小する場合は、 "底"にある要素から削除されていきます。
 
-[SELECTION TO ARRAY](selection-to-array.md) または [SELECTION RANGE TO ARRAY](selection-range-to-array.md) のコマンドを Time 型のフィールドに対して適用した場合、これらのコマンドはコピー先の配列が他の型(例えば倍長整数など)に定義されていない場合に限り、時間型の配列を作成します。
+[SELECTION TO ARRAY](../commands/selection-to-array) または [SELECTION RANGE TO ARRAY](../commands/selection-range-to-array) のコマンドを Time 型のフィールドに対して適用した場合、これらのコマンドはコピー先の配列が他の型(例えば倍長整数など)に定義されていない場合に限り、時間型の配列を作成します。
 
 ## 例題 1 
 
@@ -73,7 +73,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Time](time.md)  
+[Time](../commands/time)  
 *配列を作成する*  
 
 ## プロパティ

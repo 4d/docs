@@ -1,4 +1,4 @@
----
+﻿---
 id: zip-read-archive
 title: ZIP Read archive
 slug: /commands/zip-read-archive
@@ -84,7 +84,7 @@ Para ler todos os conteúdos de um arquivo sem extraí-lo da pasta root:
 [ZipArchive Class](../../API/ZipArchiveClass.md)
 [ZipFile Class](../../API/ZipFileClass.md)
 [ZipFolder Class](../../API/ZipFolderClass.md)
-[`ZIP Create archive`](zip-create-archive.md)
+[`ZIP Create archive`](../commands/zip-create-archive)
 
 ## Propriedades
 

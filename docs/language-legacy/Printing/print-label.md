@@ -1,4 +1,4 @@
----
+﻿---
 id: print-label
 title: PRINT LABEL
 slug: /commands/print-label
@@ -42,7 +42,7 @@ If you specify the *document* parameter, **PRINT LABEL** enables you to access t
 By default, **PRINT LABEL** displays the Print job dialog box before printing. If the user cancels the dialog box, the command is canceled and the labels are not printed. You can suppress these dialog box by using either the optional asterisk (*\**) parameter or the optional “greater than” (*\>*) parameter:
 
 * The *\** parameter causes a print job using the current print parameters.
-* Furthermore, the *\>* parameter causes a print job without reinitializing the current print parameters. This setting is useful for executing several successive calls to **PRINT LABEL** (ex. inside a loop) while maintaining previously set customized print parameters. For an example of use of this parameter, refer to the [PRINT RECORD](print-record.md) command description.
+* Furthermore, the *\>* parameter causes a print job without reinitializing the current print parameters. This setting is useful for executing several successive calls to **PRINT LABEL** (ex. inside a loop) while maintaining previously set customized print parameters. For an example of use of this parameter, refer to the [PRINT RECORD](../commands/print-record) command description.
 
 Note that this parameter has no effect if the Label Wizard is involved.
 
@@ -118,8 +118,8 @@ The following example lets the user query the \[People\] table, and then display
 
 ## See also 
 
-[PRINT SELECTION](print-selection.md)  
-[QR REPORT](qr-report.md)  
+[PRINT SELECTION](../commands/print-selection)  
+[QR REPORT](../commands/qr-report)  
 
 ## Properties
 

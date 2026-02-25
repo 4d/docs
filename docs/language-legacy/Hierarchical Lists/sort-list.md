@@ -1,4 +1,4 @@
----
+﻿---
 id: sort-list
 title: SORT LIST
 slug: /commands/sort-list
@@ -34,7 +34,7 @@ To sort in ascending *order*, pass *\>*. To sort in descending *order*, pass <. 
 
 **SORT LIST** sorts all levels of the list; it first sorts the items of the list, then it sorts the items in each sublist (if any), and so on, through all the levels of the list. This is why you will usually apply **SORT LIST** to a list in a form. Sorting a sublist is of little interest because the order will be changed by a call to a higher level.
 
-**SORT LIST** does not change the current list item nor the current expanded/collapsed state of the list and sublists. However, because the current item can be moved by the sorting operation, [Selected list items](selected-list-items.md) may return a different position before and after the sort.
+**SORT LIST** does not change the current list item nor the current expanded/collapsed state of the list and sublists. However, because the current item can be moved by the sorting operation, [Selected list items](../commands/selected-list-items) may return a different position before and after the sort.
 
 ## Example 
 
@@ -66,7 +66,7 @@ The list looks like:
 
 ## See also 
 
-[Selected list items](selected-list-items.md)  
+[Selected list items](../commands/selected-list-items)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: select-list-items-by-reference
 title: SELECT LIST ITEMS BY REFERENCE
 slug: /commands/select-list-items-by-reference
@@ -59,9 +59,9 @@ Se trabalha com os números de referência dos elementos, tenha certeza de const
 
 ## Ver também 
 
-[EDIT ITEM](edit-item.md)  
-[SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md)  
-[Selected list items](selected-list-items.md)  
+[EDIT ITEM](../commands/edit-item)  
+[SELECT LIST ITEMS BY POSITION](../commands/select-list-items-by-position)  
+[Selected list items](../commands/selected-list-items)  
 
 ## Propriedades
 

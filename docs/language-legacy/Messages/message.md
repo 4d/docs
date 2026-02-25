@@ -1,4 +1,4 @@
----
+﻿---
 id: message
 title: MESSAGE
 slug: /commands/message
@@ -36,8 +36,8 @@ If a window is opened with [Open window](../commands/open-window), all subsequen
 * If a message is wider than the window, 4D automatically performs text wrap.
 * If a message has more lines than the window, 4D automatically scrolls the message window.
 * To control line breaks, include carriage returns — **Char(13)** — into your message.
-* To display the text at a particular place in the window, call [GOTO XY](goto-xy.md).
-* To erase the contents of the window, call [ERASE WINDOW](erase-window.md).
+* To display the text at a particular place in the window, call [GOTO XY](../commands/goto-xy).
+* To erase the contents of the window, call [ERASE WINDOW](../commands/erase-window).
 * The window is only an output window and does not redraw when other windows overlap it.
 * You can modify the font and size of characters displayed in the window by means of the "Interface" page in the Database Settings.
 
@@ -97,7 +97,7 @@ This provides the following result (shown here on Windows):
 
 ## Example 4 
 
-Using [GOTO XY](goto-xy.md) and writing some additional lines:
+Using [GOTO XY](../commands/goto-xy) and writing some additional lines:
 
 ```4d
  Open window(50;50;500;250;5;"Operation in Progress")
@@ -121,9 +121,9 @@ This provides the following result (shown here on Windows):
 
 ## See also 
 
-[CLOSE WINDOW](close-window.md)  
-[ERASE WINDOW](erase-window.md)  
-[GOTO XY](goto-xy.md)  
+[CLOSE WINDOW](../commands/close-window)  
+[ERASE WINDOW](../commands/erase-window)  
+[GOTO XY](../commands/goto-xy)  
 [Open window](../commands/open-window)  
 
 ## Properties

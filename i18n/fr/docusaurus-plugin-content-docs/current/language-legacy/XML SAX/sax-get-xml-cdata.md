@@ -1,4 +1,4 @@
----
+﻿---
 id: sax-get-xml-cdata
 title: SAX GET XML CDATA
 slug: /commands/sax-get-xml-cdata
@@ -29,11 +29,11 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.SAX GET XML CDATA.Summary-->La commande **SAX GET XML CDATA** permet de récupérer la *valeur* CDATA d’un élément XML existant dans le document XML référencé par *document*.<!-- END REF--> Elle doit être appelée dans le contexte d’un événement SAX XML CDATA. Pour plus d'informations sur les événements SAX, reportez-vous à la description de la commande [SAX Get XML node](sax-get-xml-node.md). 
+<!--REF #_command_.SAX GET XML CDATA.Summary-->La commande **SAX GET XML CDATA** permet de récupérer la *valeur* CDATA d’un élément XML existant dans le document XML référencé par *document*.<!-- END REF--> Elle doit être appelée dans le contexte d’un événement SAX XML CDATA. Pour plus d'informations sur les événements SAX, reportez-vous à la description de la commande [SAX Get XML node](../commands/sax-get-xml-node). 
 
 Passez une variable *valeur* de type Texte si vous souhaitez récupérer des données de taille supérieure à 32 Ko (la base doit fonctionner en mode Unicode). 
 
-**Note de compatibilité :** A compter de 4D v12, les contenus CDATA encodés en base64 sont automatiquement décodés par la commande **SAX GET XML CDATA**, il est donc inutile d'appeler la commande [BASE64 DECODE](base64-decode.md). 
+**Note de compatibilité :** A compter de 4D v12, les contenus CDATA encodés en base64 sont automatiquement décodés par la commande **SAX GET XML CDATA**, il est donc inutile d'appeler la commande [BASE64 DECODE](../commands/base64-decode). 
 
 ## Exemple 
 
@@ -60,8 +60,8 @@ Si la commande a été exécutée correctement, la variable système OK prend la
 
 ## Voir aussi 
 
-[SAX ADD XML CDATA](sax-add-xml-cdata.md)  
-[SAX Get XML node](sax-get-xml-node.md)  
+[SAX ADD XML CDATA](../commands/sax-add-xml-cdata)  
+[SAX Get XML node](../commands/sax-get-xml-node)  
 
 ## Propriétés
 

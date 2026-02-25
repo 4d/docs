@@ -1,4 +1,4 @@
----
+﻿---
 id: form-next-page
 title: FORM NEXT PAGE
 slug: /commands/form-next-page
@@ -39,11 +39,11 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[FORM FIRST PAGE](form-first-page.md)  
-[FORM Get current page](form-get-current-page.md)  
-[FORM GOTO PAGE](form-goto-page.md)  
-[FORM LAST PAGE](form-last-page.md)  
-[FORM PREVIOUS PAGE](form-previous-page.md)  
+[FORM FIRST PAGE](../commands/form-first-page)  
+[FORM Get current page](../commands/form-get-current-page)  
+[FORM GOTO PAGE](../commands/form-goto-page)  
+[FORM LAST PAGE](../commands/form-last-page)  
+[FORM PREVIOUS PAGE](../commands/form-previous-page)  
 
 ## プロパティ
 

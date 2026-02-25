@@ -1,4 +1,4 @@
----
+﻿---
 id: is-picture-file
 title: Is picture file
 slug: /commands/is-picture-file
@@ -39,7 +39,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[PICTURE CODEC LIST](picture-codec-list.md)  
+[PICTURE CODEC LIST](../commands/picture-codec-list)  
 
 ## プロパティ
 

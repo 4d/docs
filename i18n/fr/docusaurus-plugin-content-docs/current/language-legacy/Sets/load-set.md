@@ -1,4 +1,4 @@
----
+﻿---
 id: load-set
 title: LOAD SET
 slug: /commands/load-set
@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.LOAD SET.Summary-->**LOAD SET** charge un ensemble depuis le fichier *nomFichier*, créé à l'aide de la commande [SAVE SET](save-set.md).<!-- END REF-->
+<!--REF #_command_.LOAD SET.Summary-->**LOAD SET** charge un ensemble depuis le fichier *nomFichier*, créé à l'aide de la commande [SAVE SET](../commands/save-set).<!-- END REF-->
 
 L'ensemble stocké dans *nomFichier* doit s'appliquer à *laTable*. Si *ensemble* existait déjà en mémoire, il est réécrit.
 
@@ -44,7 +44,7 @@ Si l'utilisateur clique sur Annuler dans la boîte de dialogue d'ouverture de fi
 
 ## Voir aussi 
 
-[SAVE SET](save-set.md)  
+[SAVE SET](../commands/save-set)  
 
 ## Propriétés
 

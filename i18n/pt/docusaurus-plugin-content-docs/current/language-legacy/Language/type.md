@@ -1,4 +1,4 @@
----
+﻿---
 id: type
 title: Type
 slug: /commands/type
@@ -72,8 +72,8 @@ Se pode aplicar a função Type a campos, variáveis interprocesso, variáveis p
 
 **Nota:** 
 
-* Não se pode aplicar a função **Type** a expressões escalares tais como propriedades de objeto (*emp.name*) ou itens coleção (*myColl\[5\]*). Para fazer isso, deve usar o comando [Value type](value-type.md)
-* Em modo compilado, chamar **Type** em um parâmetro método ($0, $ptrTable...) declarado como *C\_VARIANT* não retorna Is variante sim o tipo de dados (mesma coisa que chamar [Value type](value-type.md))
+* Não se pode aplicar a função **Type** a expressões escalares tais como propriedades de objeto (*emp.name*) ou itens coleção (*myColl\[5\]*). Para fazer isso, deve usar o comando [Value type](../commands/value-type)
+* Em modo compilado, chamar **Type** em um parâmetro método ($0, $ptrTable...) declarado como *C\_VARIANT* não retorna Is variante sim o tipo de dados (mesma coisa que chamar [Value type](../commands/value-type))
 
 ## Exemplo 1 
 
@@ -151,9 +151,9 @@ Ver exemplo do comando [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md 
 
 ## Ver também 
 
-[Is a variable](is-a-variable.md)  
-[Undefined](undefined.md)  
-[Value type](value-type.md)  
+[Is a variable](../commands/is-a-variable)  
+[Undefined](../commands/undefined)  
+[Value type](../commands/value-type)  
 
 ## Propriedades
 

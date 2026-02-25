@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-visible
 title: OBJECT Get visible
 slug: /commands/object-get-visible
@@ -35,7 +35,7 @@ Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *ob
 
 ## Voir aussi 
 
-[OBJECT SET VISIBLE](object-set-visible.md)  
+[OBJECT SET VISIBLE](../commands/object-set-visible)  
 
 ## Propriétés
 

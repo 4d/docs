@@ -1,4 +1,4 @@
----
+﻿---
 id: get-highlighted-records
 title: GET HIGHLIGHTED RECORDS
 slug: /commands/get-highlighted-records
@@ -54,7 +54,7 @@ Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\.
 
 ## Ver también 
 
-[HIGHLIGHT RECORDS](highlight-records.md)  
+[HIGHLIGHT RECORDS](../commands/highlight-records)  
 
 ## Propiedades
 

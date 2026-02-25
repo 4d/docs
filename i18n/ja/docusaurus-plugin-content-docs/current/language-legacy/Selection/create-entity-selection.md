@@ -1,4 +1,4 @@
----
+﻿---
 id: create-entity-selection
 title: Create entity selection
 slug: /commands/create-entity-selection
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 ソートされたカレントセレクションの場合、[順列のある](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) エンティティセレクションが作成されます (カレントセレクションの並び順が受け継がれます)。  カレントセレクションがソートされていない場合、順列のないエンティティセレクションが作成されます。
 
-[`ds`](ds.md) において *dsTable* が公開されていない場合には、エラーが返されます。 リモートデータストアの場合は、このコマンドは使用できません。 リモートデータストアの場合は、このコマンドは使用できません。
+[`ds`](../commands/ds) において *dsTable* が公開されていない場合には、エラーが返されます。 リモートデータストアの場合は、このコマンドは使用できません。 リモートデータストアの場合は、このコマンドは使用できません。
 
 任意の *settings* には、以下のプロパティを持つオブジェクトを渡せます:
 
@@ -43,7 +43,7 @@ $employees:=Create entity selection([Employee])
 
 ## 参照
 
-[USE ENTITY SELECTION](use-entity-selection.md)<br/>[`dataClass.newSelection()`](../../API/DataClassClass.md#newselection)
+[USE ENTITY SELECTION](../commands/use-entity-selection)<br/>[`dataClass.newSelection()`](../../API/DataClassClass.md#newselection)
 
 ## プロパティ
 

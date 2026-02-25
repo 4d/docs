@@ -1,4 +1,4 @@
----
+﻿---
 id: clear-variable
 title: CLEAR VARIABLE
 slug: /commands/clear-variable
@@ -56,7 +56,7 @@ Em um formulário, utilize uma lista suspensa (drop down) chamada *MinhaListaSus
 
 ## Ver também 
 
-[Undefined](undefined.md)  
+[Undefined](../commands/undefined)  
 
 ## Propriedades
 

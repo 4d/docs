@@ -1,4 +1,4 @@
----
+﻿---
 id: web-set-root-folder
 title: WEB SET ROOT FOLDER
 slug: /commands/web-set-root-folder
@@ -43,14 +43,14 @@ L'emplacement du dossier racine peut être exprimé soit en syntaxe HTML (type U
 **Notes :**
 
 * La prise en compte du nouveau dossier racine nécessite le redémarrage du serveur Web.
-* Vous pouvez connaître à tout moment l'emplacement du dossier racine courant à l'aide de la commande [Get 4D folder](get-4d-folder.md).
+* Vous pouvez connaître à tout moment l'emplacement du dossier racine courant à l'aide de la commande [Get 4D folder](../commands/get-4d-folder).
 
-Si vous passez un chemin d'accès invalide, une erreur liée à la gestion de fichiers du système d'exploitation est générée. Vous pouvez intercepter l'erreur à l'aide d'une méthode installée par la commande [ON ERR CALL](on-err-call.md). Si la méthode affiche une boîte de dialogue d'alerte ou de message, celle-ci apparaît sur l'écran du navigateur. 
+Si vous passez un chemin d'accès invalide, une erreur liée à la gestion de fichiers du système d'exploitation est générée. Vous pouvez intercepter l'erreur à l'aide d'une méthode installée par la commande [ON ERR CALL](../commands/on-err-call). Si la méthode affiche une boîte de dialogue d'alerte ou de message, celle-ci apparaît sur l'écran du navigateur. 
 
 ## Voir aussi 
 
-[Get 4D folder](get-4d-folder.md)  
-[ON ERR CALL](on-err-call.md)  
+[Get 4D folder](../commands/get-4d-folder)  
+[ON ERR CALL](../commands/on-err-call)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: web-get-option
 title: WEB GET OPTION
 slug: /commands/web-get-option
@@ -80,7 +80,7 @@ When you use the Web debug log *selector*, you can receive one of the following 
 
 ## See also 
 
-[WEB SET OPTION](web-set-option.md)  
+[WEB SET OPTION](../commands/web-set-option)  
 
 ## Properties
 

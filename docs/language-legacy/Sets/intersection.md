@@ -1,4 +1,4 @@
----
+﻿---
 id: intersection
 title: INTERSECTION
 slug: /commands/intersection
@@ -49,8 +49,8 @@ The following example finds the customers who are served by two sales representa
 
 ## See also 
 
-[DIFFERENCE](difference.md)  
-[UNION](union.md)  
+[DIFFERENCE](../commands/difference)  
+[UNION](../commands/union)  
 
 ## Properties
 

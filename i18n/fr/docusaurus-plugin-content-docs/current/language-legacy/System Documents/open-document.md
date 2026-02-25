@@ -1,4 +1,4 @@
----
+﻿---
 id: open-document
 title: Open document
 slug: /commands/open-document
@@ -57,11 +57,11 @@ Le paramètre optionnel *mode* permet de définir le mode d’ouverture du fichi
 | Write Mode     | Entier long | 1      |
 
   
-Lorsqu'un document est ouvert, **Open document** se place initialement au début du document, alors que [Append document](append-document.md) se place à la fin. 
+Lorsqu'un document est ouvert, **Open document** se place initialement au début du document, alors que [Append document](../commands/append-document) se place à la fin. 
 
-Une fois que vous avez ouvert un document, vous pouvez écrire ou lire des valeurs dans ce document à l'aide des commandes [RECEIVE PACKET](receive-packet.md) et [SEND PACKET](send-packet.md), que vous pouvez combiner avec les commandes [Get document position](get-document-position.md) et [SET DOCUMENT POSITION](set-document-position.md) pour accéder directement à certains endroits du document. 
+Une fois que vous avez ouvert un document, vous pouvez écrire ou lire des valeurs dans ce document à l'aide des commandes [RECEIVE PACKET](../commands/receive-packet) et [SEND PACKET](../commands/send-packet), que vous pouvez combiner avec les commandes [Get document position](../commands/get-document-position) et [SET DOCUMENT POSITION](../commands/set-document-position) pour accéder directement à certains endroits du document. 
 
-N'oubliez pas d'appeler finalement [CLOSE DOCUMENT](close-document.md) pour le document. 
+N'oubliez pas d'appeler finalement [CLOSE DOCUMENT](../commands/close-document) pour le document. 
 
 ## Exemple 1 
 
@@ -97,8 +97,8 @@ Si vous passez la valeur 3 dans *mode*, la fonction retourne ?00:00:00? (pas de 
 
 ## Voir aussi 
 
-[Append document](append-document.md)  
-[Create document](create-document.md)  
+[Append document](../commands/append-document)  
+[Create document](../commands/create-document)  
 
 ## Propriétés
 

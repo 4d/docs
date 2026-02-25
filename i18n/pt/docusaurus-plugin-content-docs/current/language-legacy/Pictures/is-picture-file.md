@@ -1,4 +1,4 @@
----
+﻿---
 id: is-picture-file
 title: Is picture file
 slug: /commands/is-picture-file
@@ -39,7 +39,7 @@ Se não passa o parâmetro *\**, o comando prova o arquivo buscando sua extensã
 
 ## Ver também 
 
-[PICTURE CODEC LIST](picture-codec-list.md)  
+[PICTURE CODEC LIST](../commands/picture-codec-list)  
 
 ## Propriedades
 

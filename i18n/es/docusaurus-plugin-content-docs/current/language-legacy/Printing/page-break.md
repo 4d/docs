@@ -1,4 +1,4 @@
----
+﻿---
 id: page-break
 title: PAGE BREAK
 slug: /commands/page-break
@@ -55,7 +55,7 @@ Consulte el ejemplo del comando [SET PRINT MARKER](set-print-marker.md "SET PRIN
 
 ## Ver también 
 
-[CANCEL](cancel.md)  
+[CANCEL](../commands/cancel)  
 [Print form](../commands/print-form)  
 
 ## Propiedades

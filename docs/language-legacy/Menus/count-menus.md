@@ -1,4 +1,4 @@
----
+﻿---
 id: count-menus
 title: Count menus
 slug: /commands/count-menus
@@ -34,7 +34,7 @@ If you omit the *process* parameter, **Count menus** applies to the menu bar for
 
 ## See also 
 
-[Count menu items](count-menu-items.md)  
+[Count menu items](../commands/count-menu-items)  
 
 ## Properties
 

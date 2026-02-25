@@ -1,4 +1,4 @@
----
+﻿---
 id: end-selection
 title: End selection
 slug: /commands/end-selection
@@ -18,11 +18,11 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.End selection.Summary-->**End selection** は、カレントレコードポインタが*aTable*のカレントセレクションの後ろにある場合TRUEを返します。<!-- END REF-->一般に**End selection** は、[NEXT RECORD](next-record.md) コマンドで、カレントレコードポインタが最後のレコードの後に移動したかどうかをチェックするために使用します。カレントセレクションが空の場合、**End selection** はTRUEを返します。
+<!--REF #_command_.End selection.Summary-->**End selection** は、カレントレコードポインタが*aTable*のカレントセレクションの後ろにある場合TRUEを返します。<!-- END REF-->一般に**End selection** は、[NEXT RECORD](../commands/next-record) コマンドで、カレントレコードポインタが最後のレコードの後に移動したかどうかをチェックするために使用します。カレントセレクションが空の場合、**End selection** はTRUEを返します。
 
-カレントレコードのポインタをセレクション内に戻すには、[FIRST RECORD](first-record.md)、[LAST RECORD](last-record.md) または [GOTO SELECTED RECORD](goto-selected-record.md) を使用します。[PREVIOUS RECORD](previous-record.md) では、ポインタはセレクション内に戻りません。
+カレントレコードのポインタをセレクション内に戻すには、[FIRST RECORD](../commands/first-record)、[LAST RECORD](../commands/last-record) または [GOTO SELECTED RECORD](../commands/goto-selected-record) を使用します。[PREVIOUS RECORD](../commands/previous-record) では、ポインタはセレクション内に戻りません。
 
-[PRINT SELECTION](print-selection.md) またはプリント...メニューを選択してレポートを印刷する場合、**End selection** は最後のフッタでTRUEを返します。以下のステートメントを使用して、最後のフッタを判定して最終ページに特殊なフッタを印刷することができます:
+[PRINT SELECTION](../commands/print-selection) またはプリント...メニューを選択してレポートを印刷する場合、**End selection** は最後のフッタでTRUEを返します。以下のステートメントを使用して、最後のフッタを判定して最終ページに特殊なフッタを印刷することができます:
 
 ```4d
   // 集計レポートの出力用フォームのフォームメソッド
@@ -58,11 +58,11 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Before selection](before-selection.md)  
+[Before selection](../commands/before-selection)  
 [Form event code](../commands/form-event-code)  
-[LAST RECORD](last-record.md)  
-[NEXT RECORD](next-record.md)  
-[PRINT SELECTION](print-selection.md)  
+[LAST RECORD](../commands/last-record)  
+[NEXT RECORD](../commands/next-record)  
+[PRINT SELECTION](../commands/print-selection)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: array-time
 title: ARRAY TIME
 slug: /commands/array-time
@@ -42,7 +42,7 @@ Cuando aplica el comando **ARRAY TIME** a un array existente :
 * Si amplía su tamaño, los elementos existentes no cambian y los nuevos elementos se inicializan en el valor de hora nulo (00:00:00 ) .
 * Si reduce su tamaño, se eliminan y pierden los elementos de abajo del array.
 
-Cuando aplica [SELECTION TO ARRAY](selection-to-array.md) o [SELECTION RANGE TO ARRAY](selection-range-to-array.md) a un campo de tipo Hora, tenga en cuenta que sólo crean un array de tipo Hora si el array no se ha definido como otro tipo, tal como Entero largo, por ejemplo.
+Cuando aplica [SELECTION TO ARRAY](../commands/selection-to-array) o [SELECTION RANGE TO ARRAY](../commands/selection-range-to-array) a un campo de tipo Hora, tenga en cuenta que sólo crean un array de tipo Hora si el array no se ha definido como otro tipo, tal como Entero largo, por ejemplo.
 
 ## Ejemplo 1 
 
@@ -74,7 +74,7 @@ Como los arrays de horas aceptan valores numéricos, el siguiente código es vá
 ## Ver también 
 
 *Creación de arrays*  
-[Time](time.md)  
+[Time](../commands/time)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-footers-height
 title: LISTBOX Get footers height
 slug: /commands/listbox-get-footers-height
@@ -45,7 +45,7 @@ By default, if you omit the *unit* parameter, the height of the row returned is 
 
 ## See also 
 
-[LISTBOX SET FOOTERS HEIGHT](listbox-set-footers-height.md)  
+[LISTBOX SET FOOTERS HEIGHT](../commands/listbox-set-footers-height)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-get-option
 title: SQL GET OPTION
 slug: /commands/sql-get-option
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL GET OPTION.Summary-->O comando SQL GET OPTION retorna o *valor* atual da opção passada no parâmetro *opçao*.<!-- END REF-->  
   
-Para maior informação sobre as diferentes opções e seus valores associados, consulte a descrição do comando [SQL SET OPTION](sql-set-option.md).
+Para maior informação sobre as diferentes opções e seus valores associados, consulte a descrição do comando [SQL SET OPTION](../commands/sql-set-option).
 
 ## Variáveis e conjuntos do sistema 
 
@@ -38,7 +38,7 @@ Se o comando for executado corretamente, a variável Sistema OK assume o valor 1
 
 ## Ver também 
 
-[SQL SET OPTION](sql-set-option.md)  
+[SQL SET OPTION](../commands/sql-set-option)  
 
 ## Propriedades
 

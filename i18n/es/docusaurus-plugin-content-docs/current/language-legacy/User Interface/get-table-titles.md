@@ -1,4 +1,4 @@
----
+﻿---
 id: get-table-titles
 title: GET TABLE TITLES
 slug: /commands/get-table-titles
@@ -38,8 +38,8 @@ En ambos casos, el comando no devuelve las tablas invisibles.
 
 ## Ver también 
 
-[GET FIELD TITLES](get-field-titles.md)  
-[SET TABLE TITLES](set-table-titles.md)  
+[GET FIELD TITLES](../commands/get-field-titles)  
+[SET TABLE TITLES](../commands/set-table-titles)  
 
 ## Propiedades
 

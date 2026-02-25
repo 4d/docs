@@ -1,4 +1,4 @@
----
+﻿---
 id: cut-named-selection
 title: CUT NAMED SELECTION
 slug: /commands/cut-named-selection
@@ -18,11 +18,11 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.CUT NAMED SELECTION.Summary-->**CUT NAMED SELECTION** crée la sélection temporaire *nom* et y place la sélection courante de *laTable*.<!-- END REF--> A la différence de [COPY NAMED SELECTION](copy-named-selection.md), cette commande ne copie pas la sélection, mais la déplace.
+<!--REF #_command_.CUT NAMED SELECTION.Summary-->**CUT NAMED SELECTION** crée la sélection temporaire *nom* et y place la sélection courante de *laTable*.<!-- END REF--> A la différence de [COPY NAMED SELECTION](../commands/copy-named-selection), cette commande ne copie pas la sélection, mais la déplace.
 
 Après l'exécution de cette commande, la sélection courante de *laTable* dans le process courant est vide. En conséquence, **CUT NAMED SELECTION** ne doit pas être utilisée lorsqu'un enregistrement est en cours de modification.
 
-En termes d'utilisation de la mémoire, **CUT NAMED SELECTION** est plus économique que [COPY NAMED SELECTION](copy-named-selection.md). En effet, [COPY NAMED SELECTION](copy-named-selection.md) utilise 4 octets de mémoire pour chaque enregistrement de la sélection. Avec **CUT NAMED SELECTION**, seule la référence à la sélection est déplacée.
+En termes d'utilisation de la mémoire, **CUT NAMED SELECTION** est plus économique que [COPY NAMED SELECTION](../commands/copy-named-selection). En effet, [COPY NAMED SELECTION](../commands/copy-named-selection) utilise 4 octets de mémoire pour chaque enregistrement de la sélection. Avec **CUT NAMED SELECTION**, seule la référence à la sélection est déplacée.
 
 ## Exemple 
 
@@ -35,9 +35,9 @@ La méthode suivante vide la sélection courante de la table *\[Clients\]* :
 
 ## Voir aussi 
 
-[CLEAR NAMED SELECTION](clear-named-selection.md)  
-[COPY NAMED SELECTION](copy-named-selection.md)  
-[USE NAMED SELECTION](use-named-selection.md)  
+[CLEAR NAMED SELECTION](../commands/clear-named-selection)  
+[COPY NAMED SELECTION](../commands/copy-named-selection)  
+[USE NAMED SELECTION](../commands/use-named-selection)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: new-object
 title: New object
 slug: /commands/new-object
@@ -53,8 +53,8 @@ Optionnally, you can prefill the new object by passing one or several *property*
 
 Note that:
 
-* if you pass a pointer, it is kept as is; it will evaluated when using commands such as [JSON Stringify](json-stringify.md),
-* dates are stored as "yyyy-mm-dd" dates or strings with the "YYYY-MM-DDTHH:mm:ss.SSSZ" format, according to the current "dates inside objects" database setting (see *Compatibility page*). When converting 4D dates into text prior to storing them in the object, by default the program takes the local time zone into account. You can modify this behavior using the Dates inside objects selector of the [SET DATABASE PARAMETER](set-database-parameter.md) command.
+* if you pass a pointer, it is kept as is; it will evaluated when using commands such as [JSON Stringify](../commands/json-stringify),
+* dates are stored as "yyyy-mm-dd" dates or strings with the "YYYY-MM-DDTHH:mm:ss.SSSZ" format, according to the current "dates inside objects" database setting (see *Compatibility page*). When converting 4D dates into text prior to storing them in the object, by default the program takes the local time zone into account. You can modify this behavior using the Dates inside objects selector of the [SET DATABASE PARAMETER](../commands/set-database-parameter) command.
 * if you pass a time, it is stored as a number of milliseconds (Real).
 
 ## Example 1 
@@ -117,7 +117,7 @@ With this command, you can easily handle objects in loops:
 ## See also 
 
   
-[New shared object](new-shared-object.md)  
+[New shared object](../commands/new-shared-object)  
 
 ## Properties
 

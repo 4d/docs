@@ -1,4 +1,4 @@
----
+﻿---
 id: set-menu-item-style
 title: SET MENU ITEM STYLE
 slug: /commands/set-menu-item-style
@@ -50,7 +50,7 @@ En el parámetro *itemEstilo* puede definir el estilo del elemento. Pase una com
 
 ## Ver también 
 
-[Get menu item style](get-menu-item-style.md)  
+[Get menu item style](../commands/get-menu-item-style)  
 
 ## Propiedades
 

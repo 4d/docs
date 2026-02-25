@@ -1,4 +1,4 @@
----
+﻿---
 id: decrypt-data-blob
 title: Decrypt data BLOB
 slug: /commands/decrypt-data-blob
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 Puede utilizar un *objetoLlave* o una *frasePasar* para descifrar el BLOB:
 
-* *objetoLlave*: un objeto JSON que contiene la llave de cifrado, con la misma estructura que el objeto devuelto por el comando [New data key](new-data-key.md)
+* *objetoLlave*: un objeto JSON que contiene la llave de cifrado, con la misma estructura que el objeto devuelto por el comando [New data key](../commands/new-data-key)
 * *frasePasar*: una cadena utilizada para generar la llave de cifrado
 
 El número pasado en el parámetro *sal* de **Decrypt data BLOB** debe coincidir con el utilizado para el cifrado.
@@ -62,14 +62,14 @@ El siguiente ejemplo muestra cómo descifrar un archivo encriptado ubicado en la
  $decryptedFile.setContent($decryptedBlob)
 ```
 
-La *frasePasar* y la *sal* utilizadas para el descifrado son idénticas a la *frasePasar*  y la *sal* utilizadas para el cifrado (ver el ejemplo [Encrypt data BLOB](encrypt-data-blob.md)).
+La *frasePasar* y la *sal* utilizadas para el descifrado son idénticas a la *frasePasar*  y la *sal* utilizadas para el cifrado (ver el ejemplo [Encrypt data BLOB](../commands/encrypt-data-blob)).
 
 ## Ver también 
 
   
-[Encrypt data BLOB](encrypt-data-blob.md)  
-[Encrypt data file](encrypt-data-file.md)  
-[New data key](new-data-key.md)  
+[Encrypt data BLOB](../commands/encrypt-data-blob)  
+[Encrypt data file](../commands/encrypt-data-file)  
+[New data key](../commands/new-data-key)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: string-list-to-array
 title: STRING LIST TO ARRAY
 slug: /commands/string-list-to-array
@@ -53,8 +53,8 @@ Si se encuentra el recurso, la variable sistema OK toma el valor 1, de lo contra
 
 ## Ver también 
 
-[Get indexed string](../commands/get-indexed-string)  [Get string resource](get-string-resource.md)  
-[Get text resource](get-text-resource.md)  
+[Get indexed string](../commands/get-indexed-string)  [Get string resource](../commands/get-string-resource)  
+[Get text resource](../commands/get-text-resource)  
 
 ## Propiedades
 

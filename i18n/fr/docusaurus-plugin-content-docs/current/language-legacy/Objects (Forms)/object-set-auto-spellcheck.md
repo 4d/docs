@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-auto-spellcheck
 title: OBJECT SET AUTO SPELLCHECK
 slug: /commands/object-set-auto-spellcheck
@@ -42,7 +42,7 @@ Passez **Vrai** dans *correctionAuto* pour activer la correction automatique pou
 
 ## Voir aussi 
 
-[OBJECT Get auto spellcheck](object-get-auto-spellcheck.md)  
+[OBJECT Get auto spellcheck](../commands/object-get-auto-spellcheck)  
 
 ## Propriétés
 

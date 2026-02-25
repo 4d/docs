@@ -1,4 +1,4 @@
----
+﻿---
 id: milliseconds
 title: Milliseconds
 slug: /commands/milliseconds
@@ -56,8 +56,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Current time](current-time.md)  
-[Tickcount](tickcount.md)  
+[Current time](../commands/current-time)  
+[Tickcount](../commands/tickcount)  
 [Timestamp](../commands/timestamp)  
 
 ## プロパティ

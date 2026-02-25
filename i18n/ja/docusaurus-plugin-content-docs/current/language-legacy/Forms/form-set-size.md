@@ -1,4 +1,4 @@
----
+﻿---
 id: form-set-size
 title: FORM SET SIZE
 slug: /commands/form-set-size
@@ -69,7 +69,7 @@ displayed_sidebar: docs
 この場合、*horizontal* と *vertical*にはそれぞれフォームの高さと幅を指定します。
 
 **FORM SET SIZE** コマンドはフォームサイズを変更しますが、サイズ調整プロパティも考慮します。例えば、フォームの最小幅が500ピクセルの場合に、コマンドで幅を400ピクセルに設定すると、新しいフォーム幅は500ピクセルになります。  
-また、このコマンドはフォームウィンドウのサイズは変更しないという点に注意してください。ウインドウサイズを変更しないでフォームサイズを変えることもできます（その逆も同様）。フォームウィンドウのサイズを変更する方法については、[RESIZE FORM WINDOW](resize-form-window.md) コマンドを参照してください。
+また、このコマンドはフォームウィンドウのサイズは変更しないという点に注意してください。ウインドウサイズを変更しないでフォームサイズを変えることもできます（その逆も同様）。フォームウィンドウのサイズを変更する方法については、[RESIZE FORM WINDOW](../commands/resize-form-window) コマンドを参照してください。
 
 ## 例題 
 
@@ -132,8 +132,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[FORM SET HORIZONTAL RESIZING](form-set-horizontal-resizing.md)  
-[FORM SET VERTICAL RESIZING](form-set-vertical-resizing.md)  
+[FORM SET HORIZONTAL RESIZING](../commands/form-set-horizontal-resizing)  
+[FORM SET VERTICAL RESIZING](../commands/form-set-vertical-resizing)  
 
 ## プロパティ
 

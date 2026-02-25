@@ -1,4 +1,4 @@
----
+﻿---
 id: date
 title: Date
 slug: /commands/date
@@ -44,7 +44,7 @@ When the *expression* does not match the ISO format, the regional settings defin
 * If the value is greater than or equal to 30, 4D considers the century to be the 20th and adds 19 to the beginning of the value.
 * If the value is less than 30, 4D considers the century to be the 21st and adds 20 to the beginning of the value.
 
-This mechanism can be configured using the [SET DEFAULT CENTURY](set-default-century.md) command.   
+This mechanism can be configured using the [SET DEFAULT CENTURY](../commands/set-default-century) command.   
 The following characters are valid date separators: slash (/), space, period (.), comma (,), and dash (-).
 
 * If you pass an invalid date (such as "13/35/94" or "aa/12/94") in *expression*, **Date** returns an empty date (00/00/00). It is your responsibility to verify that *expression* is a valid date.
@@ -104,7 +104,7 @@ You want to get a date from an object attribute, whatever the current attribute 
 
 ## See also 
 
-[Bool](bool.md)  
+[Bool](../commands/bool)  
 [String](../commands/string)  
 
 ## Properties

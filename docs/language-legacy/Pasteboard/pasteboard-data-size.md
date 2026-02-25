@@ -1,4 +1,4 @@
----
+﻿---
 id: pasteboard-data-size
 title: Pasteboard data size
 slug: /commands/pasteboard-data-size
@@ -39,10 +39,10 @@ In *dataType*, pass a value specifying the type of data to be checked for. You c
 
 After you have detected that the pasteboard contains data of the type in which you are interested, you can extract that data from the pasteboard using one the following commands:
 
-* If the pasteboard contains text type data, you can obtain that data using the [Get text from pasteboard](get-text-from-pasteboard.md) command, which returns a text value, or the [GET PASTEBOARD DATA](get-pasteboard-data.md) command, which returns the text in a BLOB.
-* If the pasteboard contains picture type data, you can obtain that data using the [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md) command, which returns the picture in a picture field or variable, or the [GET PASTEBOARD DATA](get-pasteboard-data.md) command*,* which returns the picture in a BLOB.
-* If the pasteboard contains a file pathname, you can extract it using the [Get file from pasteboard](get-file-from-pasteboard.md) command, which will return the file pathname.
-* For any other data type, use the [GET PASTEBOARD DATA](get-pasteboard-data.md) command, which returns the data in a BLOB.
+* If the pasteboard contains text type data, you can obtain that data using the [Get text from pasteboard](../commands/get-text-from-pasteboard) command, which returns a text value, or the [GET PASTEBOARD DATA](../commands/get-pasteboard-data) command, which returns the text in a BLOB.
+* If the pasteboard contains picture type data, you can obtain that data using the [GET PICTURE FROM PASTEBOARD](../commands/get-picture-from-pasteboard) command, which returns the picture in a picture field or variable, or the [GET PASTEBOARD DATA](../commands/get-pasteboard-data) command*,* which returns the picture in a BLOB.
+* If the pasteboard contains a file pathname, you can extract it using the [Get file from pasteboard](../commands/get-file-from-pasteboard) command, which will return the file pathname.
+* For any other data type, use the [GET PASTEBOARD DATA](../commands/get-pasteboard-data) command, which returns the data in a BLOB.
 
 ## Example 1 
 
@@ -96,13 +96,13 @@ You want to drag some private data from different objects in your form. You can 
 
 ## Example 4 
 
-See the example for the [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md) command.
+See the example for the [APPEND DATA TO PASTEBOARD](../commands/append-data-to-pasteboard) command.
 
 ## See also 
 
-[GET PASTEBOARD DATA](get-pasteboard-data.md)  
-[GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
-[Get text from pasteboard](get-text-from-pasteboard.md)  
+[GET PASTEBOARD DATA](../commands/get-pasteboard-data)  
+[GET PICTURE FROM PASTEBOARD](../commands/get-picture-from-pasteboard)  
+[Get text from pasteboard](../commands/get-text-from-pasteboard)  
 *Pasteboard*  
 
 ## Properties

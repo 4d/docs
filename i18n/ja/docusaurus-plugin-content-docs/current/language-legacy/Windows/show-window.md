@@ -1,4 +1,4 @@
----
+﻿---
 id: show-window
 title: SHOW WINDOW
 slug: /commands/show-window
@@ -37,7 +37,7 @@ SHOW WINDOWコマンドを使用するには、ウィンドウが[HIDE WINDOW](h
 
 ## 参照 
 
-[HIDE WINDOW](hide-window.md)  
+[HIDE WINDOW](../commands/hide-window)  
 
 ## プロパティ
 

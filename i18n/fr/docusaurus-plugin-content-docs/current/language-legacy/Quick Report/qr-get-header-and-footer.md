@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-header-and-footer
 title: QR GET HEADER AND FOOTER
 slug: /commands/qr-get-header-and-footer
@@ -76,7 +76,7 @@ La méthode suivante affiche le contenu et la hauteur des libellés des en-tête
 
 ## Voir aussi 
 
-[QR SET HEADER AND FOOTER](qr-set-header-and-footer.md)  
+[QR SET HEADER AND FOOTER](../commands/qr-set-header-and-footer)  
 
 ## Propriétés
 

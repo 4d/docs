@@ -1,4 +1,4 @@
----
+﻿---
 id: replace-string
 title: Replace string
 slug: /commands/replace-string
@@ -81,9 +81,9 @@ The following example illustrates the use of the \* parameter in the case of a d
 
 ## See also 
 
-[Change string](change-string.md)  
-[Delete string](delete-string.md)  
-[Insert string](insert-string.md)  
+[Change string](../commands/change-string)  
+[Delete string](../commands/delete-string)  
+[Insert string](../commands/insert-string)  
 
 ## Properties
 

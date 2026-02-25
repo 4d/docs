@@ -1,4 +1,4 @@
----
+﻿---
 id: delete-index
 title: DELETE INDEX
 slug: /commands/delete-index
@@ -56,9 +56,9 @@ This example illustrates both syntaxes of the command:
 
 ## See also 
 
-[CREATE INDEX](create-index.md)  
-[PAUSE INDEXES](pause-indexes.md)  
-[SET INDEX](set-index.md)  
+[CREATE INDEX](../commands/create-index)  
+[PAUSE INDEXES](../commands/pause-indexes)  
+[SET INDEX](../commands/set-index)  
 
 ## Properties
 

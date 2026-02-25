@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-totals-spacing
 title: QR SET TOTALS SPACING
 slug: /commands/qr-set-totals-spacing
@@ -48,7 +48,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[QR GET TOTALS SPACING](qr-get-totals-spacing.md)  
+[QR GET TOTALS SPACING](../commands/qr-get-totals-spacing)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: displayed-line-number
 title: Displayed line number
 slug: /commands/displayed-line-number
@@ -56,7 +56,7 @@ Este ejemplo le permite aplicar un color alterno en un formulario listado mostra
 ## Ver también 
 
 [Form event code](../commands/form-event-code)  
-[Selected record number](selected-record-number.md)  
+[Selected record number](../commands/selected-record-number)  
 
 ## Propiedades
 

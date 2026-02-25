@@ -1,4 +1,4 @@
----
+﻿---
 id: previous-record
 title: PREVIOUS RECORD
 slug: /commands/previous-record
@@ -23,11 +23,11 @@ PREVIOUS RECORDで、カレントセレクションの前にカレントレコ�
 
 ## 参照 
 
-[Before selection](before-selection.md)  
-[End selection](end-selection.md)  
-[FIRST RECORD](first-record.md)  
-[LAST RECORD](last-record.md)  
-[NEXT RECORD](next-record.md)  
+[Before selection](../commands/before-selection)  
+[End selection](../commands/end-selection)  
+[FIRST RECORD](../commands/first-record)  
+[LAST RECORD](../commands/last-record)  
+[NEXT RECORD](../commands/next-record)  
 
 ## プロパティ
 

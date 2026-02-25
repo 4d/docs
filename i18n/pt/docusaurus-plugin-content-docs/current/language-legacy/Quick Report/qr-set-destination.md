@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-destination
 title: QR SET DESTINATION
 slug: /commands/qr-set-destination
@@ -44,11 +44,11 @@ No parâmetro *tipo*, passe uma das constantes do tema *QR Destino de saída*. O
 
 *qr text file* (2): se passar uma cadeia vazia como no parâmetro *especificos*, é mostrada uma caixa de diálogo padrão de guardar arquivo. Se passar uma rota de acesso válida, o relatório rápido será guardado na localização indicada.   
   
-Por padrão, o delimitador do campo é o caractere tab (ASCII 9). O delimitador de registro por padrão é o caractere retorno de carro (ASCII 13). Pode mudar esses caracteres por padrão atribuindo valores às variáveis sistema: FldDelimit e RecDelimit. Se em Windows, FldDelimit é igual a 13, um caractere 10 (salto de linha) será adicionado depois do retorno de carro. Considere que essas variáveis são utilizadas por outros comandos como por exemplo [IMPORT TEXT](import-text.md) Toda modificação dessas variáveis repercute em toda a aplicação.  
+Por padrão, o delimitador do campo é o caractere tab (ASCII 9). O delimitador de registro por padrão é o caractere retorno de carro (ASCII 13). Pode mudar esses caracteres por padrão atribuindo valores às variáveis sistema: FldDelimit e RecDelimit. Se em Windows, FldDelimit é igual a 13, um caractere 10 (salto de linha) será adicionado depois do retorno de carro. Considere que essas variáveis são utilizadas por outros comandos como por exemplo [IMPORT TEXT](../commands/import-text) Toda modificação dessas variáveis repercute em toda a aplicação.  
   
 *qr 4D View area* (3): se o usuário tiver 4D View, é criada uma janela externa 4D View e mostra os resultados dos parâmetros atuais da área do relatório rápido.  
   
-*qr HTML file* (5): é criado um arquivo HTML utilizando o modelo definido por [QR SET HTML TEMPLATE](qr-set-html-template.md). Para maior informação sobre o modo de conversão dos dados, consulte o manual de Desenho.
+*qr HTML file* (5): é criado um arquivo HTML utilizando o modelo definido por [QR SET HTML TEMPLATE](../commands/qr-set-html-template). Para maior informação sobre o modo de conversão dos dados, consulte o manual de Desenho.
 
 Se passar um número de *area* inválido, é gerado o erro -9850.  
 Se o valor do destino *tipo* é incorreto, é gerado o erro -9852.
@@ -64,7 +64,7 @@ O código a seguir define o arquivo texto Midoc.txt como tipo de destino do rela
 
 ## Ver também 
 
-[QR GET DESTINATION](qr-get-destination.md)  
+[QR GET DESTINATION](../commands/qr-get-destination)  
 
 ## Propriedades
 

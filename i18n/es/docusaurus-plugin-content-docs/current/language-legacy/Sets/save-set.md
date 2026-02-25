@@ -1,4 +1,4 @@
----
+﻿---
 id: save-set
 title: SAVE SET
 slug: /commands/save-set
@@ -42,7 +42,7 @@ Si el usuario hace clic en el botón Cancelar en la caja de diálogo de guardar 
 
 ## Ver también 
 
-[LOAD SET](load-set.md)  
+[LOAD SET](../commands/load-set)  
 
 ## Propiedades
 

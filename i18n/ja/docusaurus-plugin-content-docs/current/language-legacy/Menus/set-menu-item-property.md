@@ -1,4 +1,4 @@
----
+﻿---
 id: set-menu-item-property
 title: SET MENU ITEM PROPERTY
 slug: /commands/set-menu-item-property
@@ -53,12 +53,12 @@ Associated Standard Action プロパティの場合、*value* 引数には標準
     
 **互換性に関する注意:** 以前のリリースにおいては、*割り当てられた標準アクションの値*テーマの定数は*value* 引数(倍調整数)に使われていました。4D v16 R3以降、これは廃止予定となりますが、互換性のために引き続きサポートはされています。  
 **注意:** メニュー項目が階層サブメニューのタイトルと対応する場合、メニュー項目が選択された時に標準アクションは呼び出されません。
-* **カスタムプロパティ**: *property* 引数には、カスタムのテキストを渡し、テキスト、数値、ブール型の*value*引数に割り当てることができます。この*value* 引数は項目と一緒に保存され、[GET MENU ITEM PROPERTY](get-menu-item-property.md)コマンドを使用して取得することができます。*property*引数にはどのようなカスタムの文字列を使用することもできますが、4Dで既に使用されているタイトルは使用しないようにしてください(慣習として、4Dによって設定されているプロパティは"\_4D\_"で始まります)。
+* **カスタムプロパティ**: *property* 引数には、カスタムのテキストを渡し、テキスト、数値、ブール型の*value*引数に割り当てることができます。この*value* 引数は項目と一緒に保存され、[GET MENU ITEM PROPERTY](../commands/get-menu-item-property)コマンドを使用して取得することができます。*property*引数にはどのようなカスタムの文字列を使用することもできますが、4Dで既に使用されているタイトルは使用しないようにしてください(慣習として、4Dによって設定されているプロパティは"\_4D\_"で始まります)。
 
 ## 参照 
 
-[Dynamic pop up menu](dynamic-pop-up-menu.md)  
-[GET MENU ITEM PROPERTY](get-menu-item-property.md)  
+[Dynamic pop up menu](../commands/dynamic-pop-up-menu)  
+[GET MENU ITEM PROPERTY](../commands/get-menu-item-property)  
 
 ## プロパティ
 

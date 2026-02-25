@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-shortcut
 title: OBJECT GET SHORTCUT
 slug: /commands/object-get-shortcut
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable. In this case, you pass a variable reference instead of a string.
 
-The *key* parameter returns the character associated with the key (in the case of a standard key) or a string enclosed in brackets designating the key (in the case of a function key). You can compare this value with the constants of the *Shortcut and Associated Keys* theme (see the [OBJECT SET SHORTCUT](object-set-shortcut.md) command).
+The *key* parameter returns the character associated with the key (in the case of a standard key) or a string enclosed in brackets designating the key (in the case of a function key). You can compare this value with the constants of the *Shortcut and Associated Keys* theme (see the [OBJECT SET SHORTCUT](../commands/object-set-shortcut) command).
 
 The *modifiers* parameter returns a value indicating the modifier key(s) associated with the shortcut. If there are several modifier keys combined, the command returns the sum of their values. You can compare the value returned with the following constants of the *Events (Modifiers)* theme:
 
@@ -51,7 +51,7 @@ If there are no modifier keys for the shortcut, *modifiers* returns 0\.
 
 ## See also 
 
-[OBJECT SET SHORTCUT](object-set-shortcut.md)  
+[OBJECT SET SHORTCUT](../commands/object-set-shortcut)  
 
 ## Properties
 

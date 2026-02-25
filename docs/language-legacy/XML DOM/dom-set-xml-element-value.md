@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-set-xml-element-value
 title: DOM SET XML ELEMENT VALUE
 slug: /commands/dom-set-xml-element-value
@@ -53,7 +53,7 @@ In *elementValue*, pass a string or a variable (or a field) containing the new v
 
 When the optional asterisk (\*) parameter is passed, this indicates that the value of the element must be set in the form of CDATA. The special CDATA form can be used to write raw text as is (see example 2).
 
-**Note:** If the element designated by *elementRef* is a BLOB processed by this command, it is automatically encoded in base64\. In this case, the [DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md) command does automatically the reverse operation.
+**Note:** If the element designated by *elementRef* is a BLOB processed by this command, it is automatically encoded in base64\. In this case, the [DOM GET XML ELEMENT VALUE](../commands/dom-get-xml-element-value) command does automatically the reverse operation.
 
 ### Note about processing end-of-line characters 
 
@@ -128,8 +128,8 @@ If the command has been executed correctly, the system variable OK is set to 1\.
 
 ## See also 
 
-[DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md)  
-[XML SET OPTIONS](xml-set-options.md)  
+[DOM GET XML ELEMENT VALUE](../commands/dom-get-xml-element-value)  
+[XML SET OPTIONS](../commands/xml-set-options)  
 
 ## Properties
 

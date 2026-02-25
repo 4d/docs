@@ -1,4 +1,4 @@
----
+﻿---
 id: set-group-access
 title: SET GROUP ACCESS
 slug: /commands/set-group-access
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 **Notes:** 
 
-* The scope of this command is the current session. Calling [CHANGE CURRENT USER](change-current-user.md) afterwards for example would reset defined memberships.
+* The scope of this command is the current session. Calling [CHANGE CURRENT USER](../commands/change-current-user) afterwards for example would reset defined memberships.
 * This command can only be called from 4D remote or 4D single-user applications. It is not allowed on 4D Server.
 
 Pass in the *groups* parameter a collection of existing group name(s) to which the 4D user account must belong (if a group name does not exist, it is ignored). If you pass an empty collection, the 4D user account will no longer belong to any group. 
@@ -51,10 +51,10 @@ You want to promote the current user to the "admin" and "plugins" groups for the
 
 ## See also 
 
-[Get group access](get-group-access.md)  
-[Get plugin access](get-plugin-access.md)  
-[SET PLUGIN ACCESS](set-plugin-access.md)  
-[SET USER ALIAS](set-user-alias.md)  
+[Get group access](../commands/get-group-access)  
+[Get plugin access](../commands/get-plugin-access)  
+[SET PLUGIN ACCESS](../commands/set-plugin-access)  
+[SET USER ALIAS](../commands/set-user-alias)  
 
 ## Properties
 

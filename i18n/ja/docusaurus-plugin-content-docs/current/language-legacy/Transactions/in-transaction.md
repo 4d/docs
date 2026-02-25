@@ -1,4 +1,4 @@
----
+﻿---
 id: in-transaction
 title: In transaction
 slug: /commands/in-transaction
@@ -37,10 +37,10 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Active transaction](active-transaction.md)  
-[CANCEL TRANSACTION](cancel-transaction.md)  
-[START TRANSACTION](start-transaction.md)  
-[VALIDATE TRANSACTION](validate-transaction.md)  
+[Active transaction](../commands/active-transaction)  
+[CANCEL TRANSACTION](../commands/cancel-transaction)  
+[START TRANSACTION](../commands/start-transaction)  
+[VALIDATE TRANSACTION](../commands/validate-transaction)  
 *トリガ*  
 
 ## プロパティ

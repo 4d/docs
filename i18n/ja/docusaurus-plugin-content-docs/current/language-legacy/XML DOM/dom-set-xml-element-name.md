@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-set-xml-element-name
 title: DOM SET XML ELEMENT NAME
 slug: /commands/dom-set-xml-element-name
@@ -69,7 +69,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[DOM GET XML ELEMENT NAME](dom-get-xml-element-name.md)  
+[DOM GET XML ELEMENT NAME](../commands/dom-get-xml-element-name)  
 
 ## プロパティ
 

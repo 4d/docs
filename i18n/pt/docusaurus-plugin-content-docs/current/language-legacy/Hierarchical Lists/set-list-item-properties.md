@@ -1,4 +1,4 @@
----
+﻿---
 id: set-list-item-properties
 title: SET LIST ITEM PROPERTIES
 slug: /commands/set-list-item-properties
@@ -40,19 +40,19 @@ displayed_sidebar: docs
 
 Se passa o primeiro parâmetro opcional \*, indica que o parâmetro *lista* é um nome de objeto (string) correspondente a uma representação da lista no formulário. Se não passar este parâmetro, indica que o parâmetro *lista* é uma referência de lista hierárquica (RefLista). Se utiliza uma só representação de lista ou trabalha com elementos estruturais (o segundo \* é omitido), pode utilizar indiferentemente uma ou outra sintaxe. Pelo contrário, se utiliza várias representações de uma mesma lista e trabalha com o elemento atual (se passa o segundo \*), a sintaxe baseada no nome do objeto se necessita já que cada representação pode ter seu próprio elemento atual.
 
-Pode passar um número de referência em *refElem*. Se este número não corresponde a nenhum elemento da lista, o comando não faz nada. Também pode passar 0 em *refElem* para obter a fonte do último elemento adicionado à lista (utilizando [APPEND TO LIST](append-to-list.md).).
+Pode passar um número de referência em *refElem*. Se este número não corresponde a nenhum elemento da lista, o comando não faz nada. Também pode passar 0 em *refElem* para obter a fonte do último elemento adicionado à lista (utilizando [APPEND TO LIST](../commands/append-to-list).).
 
 Finalmente, pode passar \* em *refElem*: neste caso, o comando se aplicará ao elemento atual da lista. Se vários elementos são selecionados manualmente, o elemento atual é o último selecionado. Se nenhum elemento estiver selecionado, o comando não faz nada.
 
 Se trabalha com os números de referência dos elementos, construa uma lista na qual os elementos tenham números de referência únicos, do contrário não poderá diferenciar os elementos. Para maior informação, consulte 
 
-**Nota:** para modificar o texto do elemento ou sua sublista, utilize o comando [SET LIST ITEM](set-list-item.md).
+**Nota:** para modificar o texto do elemento ou sua sublista, utilize o comando [SET LIST ITEM](../commands/set-list-item).
 
 Para fazer com que um elemento seja editável, passe TRUE em *editavel*; ou do contrário, passe FALSE.
 
 **Importante**
 
-Para que um elemento seja editável, deve pertenecer a uma lista que seja editável. Para fazer que uma lista seja editável, utilize o comando [OBJECT SET ENTERABLE](object-set-enterable.md) . Para fazer que um item individual seja editável, utilize SET LIST ITEM PROPERTIES. . A modificação da propriedade editável a nível da lista não afeta as propriedades individuais de cada elemento. Entretanto, um item pode ser editável só se sua lista for editável.
+Para que um elemento seja editável, deve pertenecer a uma lista que seja editável. Para fazer que uma lista seja editável, utilize o comando [OBJECT SET ENTERABLE](../commands/object-set-enterable) . Para fazer que um item individual seja editável, utilize SET LIST ITEM PROPERTIES. . A modificação da propriedade editável a nível da lista não afeta as propriedades individuais de cada elemento. Entretanto, um item pode ser editável só se sua lista for editável.
 
 Para especificar o estilo de fonte do item use os parâmetros de estilo. Pase uma combinação (uma ou uma soma) das constantes pré-definidas abaixo tema (*Estilos de fonte*) :  
   
@@ -72,9 +72,9 @@ No parâmetro í*cone*, pode passar uma imagem a ser usada como ícone para o í
 **Notas:**
 
 * Uso da rota de arquivo de imagem é recomendado já que a Biblioteca de Imagens está obsoleta e já não é mais compatível com projetos 4D
-* Se quiser usar expressões de imagem 4D (campos, variáveis, etc) para especificar o ícone dos itens, use o comando [SET LIST ITEM ICON](set-list-item-icon.md).
+* Se quiser usar expressões de imagem 4D (campos, variáveis, etc) para especificar o ícone dos itens, use o comando [SET LIST ITEM ICON](../commands/set-list-item-icon).
 
-O parâmetro *cor* (opcional) deixa que modifique a cor do texto item. A cor deve ser especificada no formato de cor RGB, ou seja, um inteiro longo de 4-byte no formato 0x00RRGGBB. Para saber mais sobre este formato, veja a descrição do comando [OBJECT SET RGB COLORS](object-set-rgb-colors.md). Passe -1 no parâmetro *cor* para apagar a cor original do item.
+O parâmetro *cor* (opcional) deixa que modifique a cor do texto item. A cor deve ser especificada no formato de cor RGB, ou seja, um inteiro longo de 4-byte no formato 0x00RRGGBB. Para saber mais sobre este formato, veja a descrição do comando [OBJECT SET RGB COLORS](../commands/object-set-rgb-colors). Passe -1 no parâmetro *cor* para apagar a cor original do item.
 
 ## Exemplo 1 
 
@@ -90,10 +90,10 @@ O exemplo a seguir modifica o texto do elemento atual de *lista* negrito e verme
 
 ## Ver também 
 
-[GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
+[GET LIST ITEM PROPERTIES](../commands/get-list-item-properties)  
 *Listas hierárquicas*  
-[SET LIST ITEM](set-list-item.md)  
-[SET LIST ITEM ICON](set-list-item-icon.md)  
+[SET LIST ITEM](../commands/set-list-item)  
+[SET LIST ITEM ICON](../commands/set-list-item-icon)  
 
 ## Propriedades
 

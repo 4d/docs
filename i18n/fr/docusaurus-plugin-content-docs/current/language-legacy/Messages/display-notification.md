@@ -1,4 +1,4 @@
----
+﻿---
 id: display-notification
 title: DISPLAY NOTIFICATION
 slug: /commands/display-notification
@@ -52,7 +52,7 @@ Sous Windows, la fenêtre du message reste affichée tant qu'aucune activité n'
 
 ## Voir aussi 
 
-[ALERT](alert.md)  
+[ALERT](../commands/alert)  
 
 ## Propriétés
 

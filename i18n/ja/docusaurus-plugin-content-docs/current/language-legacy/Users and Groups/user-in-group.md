@@ -1,4 +1,4 @@
----
+﻿---
 id: user-in-group
 title: User in group
 slug: /commands/user-in-group
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.User in group.Summary-->User in group コマンドは*user* が*group* に存在する場合、[True](true.md "True")を返します。<!-- END REF-->
 
-**注意:** このコマンドは*user* 引数にはユーザーアカウント名を想定しています(ユーザーエイリアスはサポートしません)。アプリケーション内でユーザーエイリアスを定義してあった場合、[Current user](current-user.md) コマンドに4D user account 引数を渡して必ずユーザーアカウントを返すようにしてください(例題を参照してください)。
+**注意:** このコマンドは*user* 引数にはユーザーアカウント名を想定しています(ユーザーエイリアスはサポートしません)。アプリケーション内でユーザーエイリアスを定義してあった場合、[Current user](../commands/current-user) コマンドに4D user account 引数を渡して必ずユーザーアカウントを返すようにしてください(例題を参照してください)。
 
 ## 例題 
 
@@ -43,7 +43,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Current user](current-user.md)  
+[Current user](../commands/current-user)  
 
 ## プロパティ
 

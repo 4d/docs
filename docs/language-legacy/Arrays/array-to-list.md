@@ -1,4 +1,4 @@
----
+﻿---
 id: array-to-list
 title: ARRAY TO LIST
 slug: /commands/array-to-list
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ARRAY TO LIST.Summary-->The ARRAY TO LIST command creates or replaces the hierarchical list or the choice list (created in the List editor) that is specified in *list* using the elements of the array *array.<!-- END REF-->*
 
-In the *list* parameter, you can either pass a choice list (string) or a hierarchical list reference ([ListRef](# "A Longint reference to a hierachical list")). In the latter case, this list must have already been created previously (for example using the [New list](new-list.md) command) in order for this command to work.
+In the *list* parameter, you can either pass a choice list (string) or a hierarchical list reference ([ListRef](# "A Longint reference to a hierachical list")). In the latter case, this list must have already been created previously (for example using the [New list](../commands/new-list) command) in order for this command to work.
 
 The optional *itemRefs* parameter, if specified, must be a numeric array synchronized with the array *array*. Each element, then, indicates the list item reference number for the corresponding element in *array*. If you omit this parameter, 4D automatically sets the list item reference numbers to 1, 2... N.
 
@@ -69,10 +69,10 @@ An error *\-9957* is generated when ARRAY TO LIST is applied to a list that is c
 
 ## See also 
 
-[LIST TO ARRAY](list-to-array.md)  
-[Load list](load-list.md)  
-[ON ERR CALL](on-err-call.md)  
-[SAVE LIST](save-list.md)  
+[LIST TO ARRAY](../commands/list-to-array)  
+[Load list](../commands/load-list)  
+[ON ERR CALL](../commands/on-err-call)  
+[SAVE LIST](../commands/save-list)  
 
 ## Properties
 

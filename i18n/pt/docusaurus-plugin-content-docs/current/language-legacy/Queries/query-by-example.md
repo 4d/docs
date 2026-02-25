@@ -1,4 +1,4 @@
----
+﻿---
 id: query-by-example
 title: QUERY BY EXAMPLE
 slug: /commands/query-by-example
@@ -40,8 +40,8 @@ Se o usuário clicar no botão Aceitar, ou pressionar a tecla Enter, a variável
 
 ## Ver também 
 
-[ORDER BY](order-by.md)  
-[QUERY](query.md)  
+[ORDER BY](../commands/order-by)  
+[QUERY](../commands/query)  
 
 ## Propriedades
 

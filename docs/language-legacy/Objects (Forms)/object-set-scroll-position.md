@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-scroll-position
 title: OBJECT SET SCROLL POSITION
 slug: /commands/object-set-scroll-position
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET SCROLL POSITION.Summary-->The **OBJECT SET SCROLL POSITION** command allows scrolling the contents of several types of objects: the lines of a subform, of a list form (displayed using the [MODIFY SELECTION](modify-selection.md) or [DISPLAY SELECTION](display-selection.md) commands), or of a hierarchical list, the rows and columns of a list box or even the pixels of a picture.<!-- END REF-->
+<!--REF #_command_.OBJECT SET SCROLL POSITION.Summary-->The **OBJECT SET SCROLL POSITION** command allows scrolling the contents of several types of objects: the lines of a subform, of a list form (displayed using the [MODIFY SELECTION](../commands/modify-selection) or [DISPLAY SELECTION](../commands/display-selection) commands), or of a hierarchical list, the rows and columns of a list box or even the pixels of a picture.<!-- END REF-->
 
 **Note:** Scrolling via programming remains possible even if scrollbars have been hidden in the form.
 
@@ -60,7 +60,7 @@ If you pass the second optional *\** parameter:
 * the line made visible using the command (if the list was scrolled) will be placed in the first position of the list. If the line is situated at the end of the list, this option has no effect.
 * in the context of a picture, the coordinates requested will be placed at the origin of the picture variable (0,0), even if these coordinates were already shown in the object.
 
-**Note:** The [HIGHLIGHT RECORDS](highlight-records.md) command features an optional *\** parameter that allows delegating scroll management to the **OBJECT SET SCROLL POSITION** command. 
+**Note:** The [HIGHLIGHT RECORDS](../commands/highlight-records) command features an optional *\** parameter that allows delegating scroll management to the **OBJECT SET SCROLL POSITION** command. 
 
 ## Example 1 
 
@@ -102,9 +102,9 @@ Make sure that you do not omit the second *\** parameter in this case, otherwise
 
 ## See also 
 
-[HIGHLIGHT RECORDS](highlight-records.md)  
-[LISTBOX SELECT ROW](listbox-select-row.md)  
-[OBJECT GET SCROLL POSITION](object-get-scroll-position.md)  
+[HIGHLIGHT RECORDS](../commands/highlight-records)  
+[LISTBOX SELECT ROW](../commands/listbox-select-row)  
+[OBJECT GET SCROLL POSITION](../commands/object-get-scroll-position)  
 
 ## Properties
 

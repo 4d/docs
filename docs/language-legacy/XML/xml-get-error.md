@@ -1,4 +1,4 @@
----
+﻿---
 id: xml-get-error
 title: XML GET ERROR
 slug: /commands/xml-get-error
@@ -41,7 +41,7 @@ If the command has been correctly executed, the system variable OK is set to 1\.
 
 ## See also 
 
-[DOM Get XML information](dom-get-xml-information.md)  
+[DOM Get XML information](../commands/dom-get-xml-information)  
 
 ## Properties
 

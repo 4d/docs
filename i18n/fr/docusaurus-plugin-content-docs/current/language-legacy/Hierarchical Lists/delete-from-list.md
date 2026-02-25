@@ -1,4 +1,4 @@
----
+﻿---
 id: delete-from-list
 title: DELETE FROM LIST
 slug: /commands/delete-from-list
@@ -38,9 +38,9 @@ Si vous passez le premier paramètre optionnel *\**, vous indiquez que le param�
 Si vous passez *\** dans *réfElément*, vous supprimez l'élément actuellement sélectionné de la liste. Vous pouvez également passer 0 dans ce paramètre afin de demander la suppression du dernier élément ajouté à la liste.   
 Sinon, vous spécifiez le numéro de référence de l'élément à supprimer. Si le numéro ne correspond à aucun élément de la *liste*, la commande ne fait rien. 
 
-Si vous travaillez avec les numéros de référence des éléments, veillez à construire une liste dans laquelle les éléments ont des numéros de référence uniques, sinon vous ne pourrez les différencier. Pour plus d'informations sur ce point, reportez-vous à la description de la commande [APPEND TO LIST](append-to-list.md).
+Si vous travaillez avec les numéros de référence des éléments, veillez à construire une liste dans laquelle les éléments ont des numéros de référence uniques, sinon vous ne pourrez les différencier. Pour plus d'informations sur ce point, reportez-vous à la description de la commande [APPEND TO LIST](../commands/append-to-list).
 
-Quel que soit l'élément que vous supprimez, vous pouvez passer un troisième paramètre optionnel, *\**, pour indiquer à 4D de supprimer automatiquement de la mémoire la sous-liste rattachée à l'élément, s'il en existe. Si vous ne passez pas ce paramètre, il est préférable de récupérer au préalable le numéro de référence de la sous-liste (éventuelle) rattachée à l'élément, de manière à pouvoir si besoin est supprimer cette sous-liste à l'aide de la commande [CLEAR LIST](clear-list.md).
+Quel que soit l'élément que vous supprimez, vous pouvez passer un troisième paramètre optionnel, *\**, pour indiquer à 4D de supprimer automatiquement de la mémoire la sous-liste rattachée à l'élément, s'il en existe. Si vous ne passez pas ce paramètre, il est préférable de récupérer au préalable le numéro de référence de la sous-liste (éventuelle) rattachée à l'élément, de manière à pouvoir si besoin est supprimer cette sous-liste à l'aide de la commande [CLEAR LIST](../commands/clear-list).
 
 ## Exemple 
 
@@ -52,8 +52,8 @@ L'exemple suivant supprime l'élément sélectionné de la liste *hList*. Si une
 
 ## Voir aussi 
 
-[CLEAR LIST](clear-list.md)  
-[GET LIST ITEM](get-list-item.md)  
+[CLEAR LIST](../commands/clear-list)  
+[GET LIST ITEM](../commands/get-list-item)  
 
 ## Propriétés
 

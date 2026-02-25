@@ -1,4 +1,4 @@
----
+﻿---
 id: change-password
 title: CHANGE PASSWORD
 slug: /commands/change-password
@@ -42,8 +42,8 @@ The following example allows the user to change his or her password.
 
 ## See also 
 
-[CHANGE CURRENT USER](change-current-user.md)  
-[OBJECT SET FONT](object-set-font.md)  
+[CHANGE CURRENT USER](../commands/change-current-user)  
+[OBJECT SET FONT](../commands/object-set-font)  
 
 ## Properties
 

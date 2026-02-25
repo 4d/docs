@@ -1,4 +1,4 @@
----
+﻿---
 id: get-database-parameter
 title: Get database parameter
 slug: /commands/get-database-parameter
@@ -102,7 +102,7 @@ effectuer une modification globale et permanente : la nouvelle valeur s’appliq
 
 **Description** :  Mode de synchronisation dynamique du dossier *Resources* du poste client 4D ayant exécuté la commande avec celui du serveur. 
 
-Lorsque le contenu du dossier *Resources* sur le serveur a été modifié ou qu’une demande de synchronisation a été émise (via l’explorateur de ressources ou suite à l'exécution de la commande [NOTIFY RESOURCES FOLDER MODIFICATION](notify-resources-folder-modification.md)), le serveur notifie les clients connectés. 
+Lorsque le contenu du dossier *Resources* sur le serveur a été modifié ou qu’une demande de synchronisation a été émise (via l’explorateur de ressources ou suite à l'exécution de la commande [NOTIFY RESOURCES FOLDER MODIFICATION](../commands/notify-resources-folder-modification)), le serveur notifie les clients connectés. 
 
 Trois modes de synchronisation sont alors possibles côté client. Le sélecteur Auto synchro resources folder vous permet de définir le mode à utiliser pour le poste client et la session courante :
 
@@ -122,7 +122,7 @@ Portée : 4D local, 4D Server
 
 **Valeurs possibles** : entier long > 1 (secondes)
 
-**Description** : Permet de lire ou de fixer la valeur courante de périodicité de l'écriture du cache de données sur le disque, exprimée en secondes. Si elle est modifiée, cette valeur remplace la valeur définie par l'option **Ecriture cache toutes les <n> secondes/minutes** dans la [XML DECODE](xml-decode.md) des Propriétés de la base durant la session courante (elle n'est pas stockée dans les Propriétés de la base).
+**Description** : Permet de lire ou de fixer la valeur courante de périodicité de l'écriture du cache de données sur le disque, exprimée en secondes. Si elle est modifiée, cette valeur remplace la valeur définie par l'option **Ecriture cache toutes les <n> secondes/minutes** dans la [XML DECODE](../commands/xml-decode) des Propriétés de la base durant la session courante (elle n'est pas stockée dans les Propriétés de la base).
 
 
 
@@ -150,7 +150,7 @@ Par défaut, si ce sélecteur n’est pas utilisé, 4D décharge au minimum 10 %
 
 **Conservé entre deux sessions** : Oui
 
-**Description** : *Constante obsolète (conservée par compatibilité uniquement).* Il est désormais conseillé d'utiliser les commandes [WEB SET OPTION](web-set-option.md) et [WEB GET OPTION](web-get-option.md) pour le paramétrage du serveur HTTP.
+**Description** : *Constante obsolète (conservée par compatibilité uniquement).* Il est désormais conseillé d'utiliser les commandes [WEB SET OPTION](../commands/web-set-option) et [WEB GET OPTION](../commands/web-get-option) pour le paramétrage du serveur HTTP.
 
 
 
@@ -165,7 +165,7 @@ Par défaut, si ce sélecteur n’est pas utilisé, 4D décharge au minimum 10 %
 
 **Valeurs possibles** : Toute valeur entière, 0 = conserver tous les journaux
 
-**Description** : Nombre maximum de fichiers à conserver par roulement pour chaque type de journal. Par défaut, les 50 fichiers les plus récents sont conservés. Si vous passez une valeur N, seuls les N fichiers les plus récents seront conservés, le plus ancien étant automatiquement effacé à la création d'un nouveau. Ce paramétrage s'applique à tous les fichiers journaux, notamment le journal des requêtes (sélecteurs 28 et 45), le journal de débogage (sélecteur 34), le journal des événements (sélecteur 79), l'historique des requêtes Web (sélecteurs 29 et 84 de la commande [WEB SET OPTION](web-set-option.md)), etc.
+**Description** : Nombre maximum de fichiers à conserver par roulement pour chaque type de journal. Par défaut, les 50 fichiers les plus récents sont conservés. Si vous passez une valeur N, seuls les N fichiers les plus récents seront conservés, le plus ancien étant automatiquement effacé à la création d'un nouveau. Ce paramétrage s'applique à tous les fichiers journaux, notamment le journal des requêtes (sélecteurs 28 et 45), le journal de débogage (sélecteur 34), le journal des événements (sélecteur 79), l'historique des requêtes Web (sélecteurs 29 et 84 de la commande [WEB SET OPTION](../commands/web-set-option)), etc.
 
 
 
@@ -300,7 +300,7 @@ Le fonctionnement de ce sélecteur est identique à celui du sélecteur 29 ; il 
 
 Lorsque ce sélecteur vaut Date type (valeur par défaut dans les bases créées à compter de 4D v17), les dates 4D sont stockées avec le type date dans les objets, en tenant compte des paramétrages de date locaux. Lorsqu'ils sont exportés au format JSON, les attributs date seront convertis en chaînes qui ne contiennent pas l'heure (**Note :** ce paramétrage peut être défini au niveau des paramètres de la base via l'option "Utiliser le type date au lieu du format date ISO dans les objets" dans la *Page Compatibilité*).
 
-Si vous passez String type with time zone dans ce sélecteur, les dates 4D seront converties en chaînes ISO en tenant compte du fuseau horaire local. Par exemple, la conversion de la date !23/08/2013! donne "2013-08-22T22:00:00Z" au format JSON lorsque l’opération est effectuée en France en été (GMT+2). Ce principe est conforme au fonctionnement standard de JavaScript. Ce fonctionnement peut être source d’erreurs si vous souhaitez envoyer des valeurs de date en JSON à une personne qui se trouve dans un autre fuseau horaire. C’est le cas par exemple pour l’exportation d’une table avec [Selection to JSON](selection-to-json.md) en France destiné à être réimporté aux USA avec [JSON TO SELECTION](json-to-selection.md). Par défaut, les dates étant réinterprétées dans chaque fuseau horaire, les valeurs stockées dans la base seront différentes. Dans ce cas, vous pouvez modifier le mode de conversion des dates afin qu’il ne tienne pas compte du fuseau horaire en passant String type without time zone dans ce sélecteur. La conversion de la date !23/08/2013! donnera alors "2013-08-23T00:00:00Z" dans tous les cas.
+Si vous passez String type with time zone dans ce sélecteur, les dates 4D seront converties en chaînes ISO en tenant compte du fuseau horaire local. Par exemple, la conversion de la date !23/08/2013! donne "2013-08-22T22:00:00Z" au format JSON lorsque l’opération est effectuée en France en été (GMT+2). Ce principe est conforme au fonctionnement standard de JavaScript. Ce fonctionnement peut être source d’erreurs si vous souhaitez envoyer des valeurs de date en JSON à une personne qui se trouve dans un autre fuseau horaire. C’est le cas par exemple pour l’exportation d’une table avec [Selection to JSON](../commands/selection-to-json) en France destiné à être réimporté aux USA avec [JSON TO SELECTION](../commands/json-to-selection). Par défaut, les dates étant réinterprétées dans chaque fuseau horaire, les valeurs stockées dans la base seront différentes. Dans ce cas, vous pouvez modifier le mode de conversion des dates afin qu’il ne tienne pas compte du fuseau horaire en passant String type without time zone dans ce sélecteur. La conversion de la date !23/08/2013! donnera alors "2013-08-23T00:00:00Z" dans tous les cas.
 
 
 
@@ -379,14 +379,14 @@ Dans tout type d'application 4D (4D tous modes, 4D Server, 4D Volume Desktop), e
 
 4D vous permet d’enregistrer de manière continue dans un fichier de diagnostic un ensemble d’événements relatifs au fonctionnement interne de l’application. Les informations contenues dans ce fichier sont destinées à la mise au point des applications 4D et pourront être analysées avec l’aide des services techniques de 4D (pour plus d'informations, reportez-vous à la section *Description des fichiers d'historique* sur *developer.4d.com*). Lorsque vous passez 1 dans ce sélecteur, un fichier de diagnostic est automatiquement créé (ou ouvert) dans le dossier **Logs** de la base. Le fichier est nommé *4DDiagnosticLog\_N*.txt (ou *4DDiagnosticLogServer\_N.*txt s'il est généré sur le serveur). Une fois que le fichier atteint une taille de 10 Mo, il est refermé et un nouveau fichier est généré, avec un numéro séquentiel N incrémenté.
 
-A noter qu’il est possible d’inclure des informations personnalisées dans ce fichier à l’aide de la commande [LOG EVENT](log-event.md).
+A noter qu’il est possible d’inclure des informations personnalisées dans ce fichier à l’aide de la commande [LOG EVENT](../commands/log-event).
 
 
 
 
 ### Direct2D get active status (74)
 
-**Note :** Ce sélecteur peut être utilisé uniquement avec la commande [Get database parameter](get-database-parameter.md), sa valeur ne peut pas être fixée.
+**Note :** Ce sélecteur peut être utilisé uniquement avec la commande [Get database parameter](../commands/get-database-parameter), sa valeur ne peut pas être fixée.
 
 **Description** : Retourne l’implémentation active de Direct2D sous Windows. 
 
@@ -431,7 +431,7 @@ Direct2D software (3) (Mode par défaut) : à partir de Windows 7, utilisation d
 
  **Conservé** **entre deux sessions** : Non
 
- **Description** : *Constante obsolète (conservée par compatibilité uniquement).* Il est désormais conseillé d'utiliser les commandes [WEB SET OPTION](web-set-option.md) et [WEB GET OPTION](web-get-option.md) pour le paramétrage du serveur HTTP.
+ **Description** : *Constante obsolète (conservée par compatibilité uniquement).* Il est désormais conseillé d'utiliser les commandes [WEB SET OPTION](../commands/web-set-option) et [WEB GET OPTION](../commands/web-get-option) pour le paramétrage du serveur HTTP.
 
 
 
@@ -442,7 +442,7 @@ Direct2D software (3) (Mode par défaut) : à partir de Windows 7, utilisation d
 
  **Conservé** **entre deux sessions** : Non
 
- **Description** : *Constante obsolète (conservée par compatibilité uniquement).* Il est désormais conseillé d'utiliser les commandes [WEB SET OPTION](web-set-option.md) et [WEB GET OPTION](web-get-option.md) pour le paramétrage du serveur HTTP.
+ **Description** : *Constante obsolète (conservée par compatibilité uniquement).* Il est désormais conseillé d'utiliser les commandes [WEB SET OPTION](../commands/web-set-option) et [WEB GET OPTION](../commands/web-get-option) pour le paramétrage du serveur HTTP.
 
 
 
@@ -453,7 +453,7 @@ Direct2D software (3) (Mode par défaut) : à partir de Windows 7, utilisation d
 
  **Conservé** **entre deux sessions** : Oui
 
- **Description** : *Constante obsolète (conservée par compatibilité uniquement).* Il est désormais conseillé d'utiliser les commandes [WEB SET OPTION](web-set-option.md) et [WEB GET OPTION](web-get-option.md) pour le paramétrage du serveur HTTP.
+ **Description** : *Constante obsolète (conservée par compatibilité uniquement).* Il est désormais conseillé d'utiliser les commandes [WEB SET OPTION](../commands/web-set-option) et [WEB GET OPTION](../commands/web-get-option) pour le paramétrage du serveur HTTP.
 
 
 
@@ -496,7 +496,7 @@ Pour plus d'informations sur les fichiers 4DIMAPLog\_N.txt, reportez-vous à la 
 
 ### Is current database a project (112)
 
-**Note :**  Vous pouvez utiliser ce sélecteur uniquement à l'aide de la commande [Get database parameter](get-database-parameter.md) et ses valeurs ne peuvent pas être définies.
+**Note :**  Vous pouvez utiliser ce sélecteur uniquement à l'aide de la commande [Get database parameter](../commands/get-database-parameter) et ses valeurs ne peuvent pas être définies.
 
 **Portée** : Application 4D
 
@@ -507,7 +507,7 @@ Pour plus d'informations sur les fichiers 4DIMAPLog\_N.txt, reportez-vous à la 
 
 ### Is host database a project (113)
 
-**Note :**  Vous pouvez utiliser ce sélecteur uniquement à l'aide de la commande [Get database parameter](get-database-parameter.md) et ses valeurs ne peuvent pas être définies.
+**Note :**  Vous pouvez utiliser ce sélecteur uniquement à l'aide de la commande [Get database parameter](../commands/get-database-parameter) et ses valeurs ne peuvent pas être définies.
 
 **Portée** : Application 4D
 
@@ -518,7 +518,7 @@ Pour plus d'informations sur les fichiers 4DIMAPLog\_N.txt, reportez-vous à la 
 
 ### Is host database writable (117)
 
-**Note :** Vous pouvez utiliser ce sélecteur uniquement avec la commande [Get database parameter](get-database-parameter.md) et sa valeur ne peut pas être définie.
+**Note :** Vous pouvez utiliser ce sélecteur uniquement avec la commande [Get database parameter](../commands/get-database-parameter) et sa valeur ne peut pas être définie.
 
 **Portée** : Application 4D 
 
@@ -588,7 +588,7 @@ SET DATABASE PARAMETER(Log command list;"-1666;-323") 
 
 **Conservé entre deux sessions** : Oui
 
-**Description** : *Constante obsolète (conservée par compatibilité uniquement).* Il est désormais conseillé d'utiliser les commandes [WEB SET OPTION](web-set-option.md) et [WEB GET OPTION](web-get-option.md) pour le paramétrage du serveur HTTP.
+**Description** : *Constante obsolète (conservée par compatibilité uniquement).* Il est désormais conseillé d'utiliser les commandes [WEB SET OPTION](../commands/web-set-option) et [WEB GET OPTION](../commands/web-get-option) pour le paramétrage du serveur HTTP.
 
 
 
@@ -599,7 +599,7 @@ SET DATABASE PARAMETER(Log command list;"-1666;-323") 
 
  **Conservé** **entre deux sessions** : Oui
 
- **Description** : *Constante obsolète (conservée par compatibilité uniquement).* Il est désormais conseillé d'utiliser les commandes [WEB SET OPTION](web-set-option.md) et [WEB GET OPTION](web-get-option.md) pour le paramétrage du serveur HTTP.
+ **Description** : *Constante obsolète (conservée par compatibilité uniquement).* Il est désormais conseillé d'utiliser les commandes [WEB SET OPTION](../commands/web-set-option) et [WEB GET OPTION](../commands/web-get-option) pour le paramétrage du serveur HTTP.
 
 
 
@@ -633,7 +633,7 @@ SET DATABASE PARAMETER(Log command list;"-1666;-323") 
 
 **Valeur par défaut** : 0 (pas de cache) 
 
-**Description** : Fixe ou lit le nombre maximum de formules à conserver dans le cache des formules, qui est utilisé par la commande [EXECUTE FORMULA](execute-formula.md). Cette limite est appliquée à tous les process, mais chaque process dispose de son propre cache de formules. Placer des formules dans le cache accélère l'exécution de la commande [EXECUTE FORMULA](execute-formula.md) en mode compilé puisque chaque formule en cache est tokenisée une seule fois dans ce cas. Lorsque vous modifiez la valeur du cache, son contenu est réinitialisé même si la nouvelle valeur est supérieure à la précédente. Une fois le nombre maximum de formules en cache atteint, toute nouvelle formule exécutée écrase la plus ancienne dans le cache (mode FIFO). Ce paramètre est pris en compte uniquement dans les bases ou les composants compilés.
+**Description** : Fixe ou lit le nombre maximum de formules à conserver dans le cache des formules, qui est utilisé par la commande [EXECUTE FORMULA](../commands/execute-formula). Cette limite est appliquée à tous les process, mais chaque process dispose de son propre cache de formules. Placer des formules dans le cache accélère l'exécution de la commande [EXECUTE FORMULA](../commands/execute-formula) en mode compilé puisque chaque formule en cache est tokenisée une seule fois dans ce cas. Lorsque vous modifiez la valeur du cache, son contenu est réinitialisé même si la nouvelle valeur est supérieure à la précédente. Une fois le nombre maximum de formules en cache atteint, toute nouvelle formule exécutée écrase la plus ancienne dans le cache (mode FIFO). Ce paramètre est pris en compte uniquement dans les bases ou les composants compilés.
 
 
 
@@ -657,9 +657,9 @@ SET DATABASE PARAMETER(Log command list;"-1666;-323") 
 
  **Valeurs possibles** : 0 (utiliser le paramétrage de la base), 1 (exécuter sur le client) ou 2 (exécuter sur le serveur)
 
-**Description** : Emplacement de l’exécution de la commande [ORDER BY FORMULA](order-by-formula.md) pour la table passée en paramètre. 
+**Description** : Emplacement de l’exécution de la commande [ORDER BY FORMULA](../commands/order-by-formula) pour la table passée en paramètre. 
 
-Dans le cadre de l’exploitation d’une base en client-serveur, la commande [ORDER BY FORMULA](order-by-formula.md) peut être exécutée soit sur le serveur soit sur le client. Ce sélecteur permet de définir l’emplacement de l’exécution de cette commande (serveur ou client). Ce mode peut également être défini dans les préférences de la base. Pour plus d’informations, reportez-vous à la description du sélecteur 46, Query by formula on server.
+Dans le cadre de l’exploitation d’une base en client-serveur, la commande [ORDER BY FORMULA](../commands/order-by-formula) peut être exécutée soit sur le serveur soit sur le client. Ce sélecteur permet de définir l’emplacement de l’exécution de cette commande (serveur ou client). Ce mode peut également être défini dans les préférences de la base. Pour plus d’informations, reportez-vous à la description du sélecteur 46, Query by formula on server.
 
 **Note :** Si vous souhaitez pouvoir activer les jointures "type SQL" (cf. sélecteur Query by formula joins), vous devez toujours exécuter les formules sur le serveur afin qu'elle ait accès aux enregistrements. Attention, dans ce contexte, la formule ne doit pas contenir d'appel à une méthode, sinon elle est automatiquement basculée sur le poste distant.
 
@@ -746,13 +746,13 @@ Le sélecteur Port ID est utile dans le cadre de serveurs Web 4D compilés et fu
 
  **Valeurs possibles** : 0 (utiliser paramétrages de la base), 1 (toujours utiliser les liens auto) ou 2 (utiliser les jointures SQL si possible).
 
-**Description** : Mode de fonctionnement des commandes [QUERY BY FORMULA](query-by-formula.md) et [QUERY SELECTION BY FORMULA](query-selection-by-formula.md) relatif à l’utilisation de "jointures SQL".
+**Description** : Mode de fonctionnement des commandes [QUERY BY FORMULA](../commands/query-by-formula) et [QUERY SELECTION BY FORMULA](../commands/query-selection-by-formula) relatif à l’utilisation de "jointures SQL".
 
 Dans les bases de données créées à compter de la version 11.2 de 4D v11 SQL, ces commandes effectuent des jointures sur le modèle des jointures SQL. Ce mécanisme permet de modifier la sélection d’une table en fonction d’une recherche effectuée sur une autre table sans que les tables soient reliées par un lien automatique (condition nécessaire dans les versions précédentes de 4D).
 
 Le sélecteur Query by formula joins vous permet de définir le mode de fonctionnement des commandes de recherche par formule pour le process courant :
 
-0 : utiliser les paramètres courants de la base (valeur par défaut). Dans les bases de données créées à compter de la version 11.2 de 4D v11 SQL, les "jointures SQL" sont toujours activées pour les recherches par formule. Dans les bases de données converties, ce mécanisme est inactivé par défaut pour des raisons des compatibilité mais peut être mis en oeuvre via une préférence.1 : toujours utiliser les liens auto (= fonctionnement des versions précédentes de 4D). Dans ce mode, un lien est nécessaire pour définir la sélection d’une table en fonction de recherches effectuées dans une autre table. 4D n’effectue pas de "jointures SQL".2 : utiliser les jointures SQL si possible (= fonctionnement par défaut des bases créées en version 11.2 et suivantes de 4D v11 SQL). Dans ce mode, 4D établit des "jointures SQL" pour les recherches par formule lorsque la formule s’y prête (à deux exceptions près, voir la description de la commande commandes [QUERY BY FORMULA](query-by-formula.md) ou [QUERY SELECTION BY FORMULA](query-selection-by-formula.md). **Note :** Avec 4D en mode distant, les "jointures SQL" ne peuvent être utilisées que si les formules sont exécutées sur le serveur (elles doivent avoir accès aux enregistrements). Pour configurer le lieu d'exécution des formules, reportez-vous aux sélecteurs 46 et 47.
+0 : utiliser les paramètres courants de la base (valeur par défaut). Dans les bases de données créées à compter de la version 11.2 de 4D v11 SQL, les "jointures SQL" sont toujours activées pour les recherches par formule. Dans les bases de données converties, ce mécanisme est inactivé par défaut pour des raisons des compatibilité mais peut être mis en oeuvre via une préférence.1 : toujours utiliser les liens auto (= fonctionnement des versions précédentes de 4D). Dans ce mode, un lien est nécessaire pour définir la sélection d’une table en fonction de recherches effectuées dans une autre table. 4D n’effectue pas de "jointures SQL".2 : utiliser les jointures SQL si possible (= fonctionnement par défaut des bases créées en version 11.2 et suivantes de 4D v11 SQL). Dans ce mode, 4D établit des "jointures SQL" pour les recherches par formule lorsque la formule s’y prête (à deux exceptions près, voir la description de la commande commandes [QUERY BY FORMULA](../commands/query-by-formula) ou [QUERY SELECTION BY FORMULA](../commands/query-selection-by-formula). **Note :** Avec 4D en mode distant, les "jointures SQL" ne peuvent être utilisées que si les formules sont exécutées sur le serveur (elles doivent avoir accès aux enregistrements). Pour configurer le lieu d'exécution des formules, reportez-vous aux sélecteurs 46 et 47.
 
 
 
@@ -765,7 +765,7 @@ Le sélecteur Query by formula joins vous permet de définir le mode de fonction
 
  **Valeurs possibles** : 0 (utiliser le paramétrage de la base), 1 (exécuter sur le client) ou 2 (exécuter sur le serveur)
 
-**Description** : Emplacement de l’exécution des commandes [QUERY BY FORMULA](query-by-formula.md) et [QUERY SELECTION BY FORMULA](query-selection-by-formula.md) pour la *table* passée en paramètre. 
+**Description** : Emplacement de l’exécution des commandes [QUERY BY FORMULA](../commands/query-by-formula) et [QUERY SELECTION BY FORMULA](../commands/query-selection-by-formula) pour la *table* passée en paramètre. 
 
 Dans le cadre de l’exploitation d’une base en client-serveur, les commandes de recherche "par formule" peuvent exécutées soit sur le serveur soit sur le client :
 
@@ -817,7 +817,7 @@ Vous souhaitez que votre application redémarre après un premier lancement. L'a
 %HOMEPATH%\Desktop\4D\4D.exe %HOMEPATH%\Documents\myDB.4dbase\myDB.4db --user-param "Premier lancement"
 ```
 
-Dans la [On Startup database method](on-startup-database-method.md), vous pouvez écrire :
+Dans la [On Startup database method](../commands/on-startup-database-method), vous pouvez écrire :
 
 ```4d
  var $realVal : Real
@@ -835,10 +835,10 @@ Dans la [On Startup database method](on-startup-database-method.md), vous pouvez
 
 ## Voir aussi 
 
-[DISTINCT VALUES](distinct-values.md)  
-[Application info](application-info.md)  
-[QUERY SELECTION](query-selection.md)  
-[SET DATABASE PARAMETER](set-database-parameter.md)  
+[DISTINCT VALUES](../commands/distinct-values)  
+[Application info](../commands/application-info)  
+[QUERY SELECTION](../commands/query-selection)  
+[SET DATABASE PARAMETER](../commands/set-database-parameter)  
 
 ## Propriétés
 

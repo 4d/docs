@@ -1,4 +1,4 @@
----
+﻿---
 id: set-list-item-font
 title: SET LIST ITEM FONT
 slug: /commands/set-list-item-font
@@ -50,10 +50,10 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Get list item font](get-list-item-font.md)  
-[OBJECT SET FONT](object-set-font.md)  
-[SET LIST ITEM](set-list-item.md)  
-[SET LIST ITEM ICON](set-list-item-icon.md)  
+[Get list item font](../commands/get-list-item-font)  
+[OBJECT SET FONT](../commands/object-set-font)  
+[SET LIST ITEM](../commands/set-list-item)  
+[SET LIST ITEM ICON](../commands/set-list-item-icon)  
 
 ## プロパティ
 

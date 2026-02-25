@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-border-style
 title: OBJECT Get border style
 slug: /commands/object-get-border-style
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get border style.Summary-->**OBJECT Get border style**コマンドは、*object*引数で指定したオブジェクトに設定された境界線スタイルを返します。<!-- END REF--> 
 
-オブジェクトの境界線スタイルはデザインモードのプロパティリストを使用するか、新コマンド [OBJECT SET BORDER STYLE](object-set-border-style.md) を使用することで設定できます。
+オブジェクトの境界線スタイルはデザインモードのプロパティリストを使用するか、新コマンド [OBJECT SET BORDER STYLE](../commands/object-set-border-style) を使用することで設定できます。
 
 任意の *\** 演算子を渡した場合、 *object* 引数でオブジェクト名を文字列で指定します。省略時には *object* 引数でフィールドまたは変数を指定します。
 
@@ -49,7 +49,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT SET BORDER STYLE](object-set-border-style.md)  
+[OBJECT SET BORDER STYLE](../commands/object-set-border-style)  
 
 ## プロパティ
 

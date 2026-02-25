@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-type
 title: OBJECT Get type
 slug: /commands/object-get-type
@@ -106,7 +106,7 @@ You want to load a form and get a list of all the objects of list boxes that it 
 ## See also 
 
 [FORM LOAD](../commands/form-load)  
-[LISTBOX GET OBJECTS](listbox-get-objects.md)  
+[LISTBOX GET OBJECTS](../commands/listbox-get-objects)  
 
 ## Properties
 

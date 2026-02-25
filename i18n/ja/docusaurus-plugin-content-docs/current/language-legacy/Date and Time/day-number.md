@@ -1,4 +1,4 @@
----
+﻿---
 id: day-number
 title: Day number
 slug: /commands/day-number
@@ -60,7 +60,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Day of](day-of.md)  
+[Day of](../commands/day-of)  
 
 ## プロパティ
 

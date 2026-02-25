@@ -1,4 +1,4 @@
----
+﻿---
 id: undefined
 title: Undefined
 slug: /commands/undefined
@@ -53,7 +53,7 @@ En algunos casos, es posible que no desee que se evalúe el parámetro (por ejem
 
 #### Ejemplo 
 
-Aquí están los diferentes resultados del comando [Undefined](undefined.md) así como también del comando [Null](null.md) aplicados a las propiedades de objetos, dependiendo del contexto:
+Aquí están los diferentes resultados del comando [Undefined](../commands/undefined) así como también del comando [Null](../commands/null) aplicados a las propiedades de objetos, dependiendo del contexto:
 
 ```4d
  var vEmp : Object
@@ -73,7 +73,7 @@ Aquí están los diferentes resultados del comando [Undefined](undefined.md) as�
 
 #### Ver también 
 
-[CLEAR VARIABLE](clear-variable.md)  
+[CLEAR VARIABLE](../commands/clear-variable)  
 
 #### Propiedades
 

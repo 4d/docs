@@ -1,4 +1,4 @@
----
+﻿---
 id: get-group-properties
 title: GET GROUP PROPERTIES
 slug: /commands/get-group-properties
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.GET GROUP PROPERTIES.Summary-->GET GROUP PROPERTIES コマンドは、引数 *groupID* に渡したユニークなグループID番号を持つグループのプロパティを返します。<!-- END REF-->[GET GROUP LIST](get-group-list.md) コマンドによって返される有効なグループID番号を必ず渡さなければなりません。
+<!--REF #_command_.GET GROUP PROPERTIES.Summary-->GET GROUP PROPERTIES コマンドは、引数 *groupID* に渡したユニークなグループID番号を持つグループのプロパティを返します。<!-- END REF-->[GET GROUP LIST](../commands/get-group-list) コマンドによって返される有効なグループID番号を必ず渡さなければなりません。
 
 有効なグループID番号を渡さなかった場合、GET GROUP PROPERTIES は空の引数を返します。
 
@@ -48,9 +48,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[GET GROUP LIST](get-group-list.md)  
-[GET USER LIST](get-user-list.md)  
-[Set group properties](set-group-properties.md)  
+[GET GROUP LIST](../commands/get-group-list)  
+[GET USER LIST](../commands/get-user-list)  
+[Set group properties](../commands/set-group-properties)  
 
 ## プロパティ
 

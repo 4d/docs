@@ -1,4 +1,4 @@
----
+﻿---
 id: is-in-print-preview
 title: Is in print preview
 slug: /commands/is-in-print-preview
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Is in print preview.Summary-->**Is in print preview**コマンドは印刷ダイアログボックスで印刷プレビューオプションが選択されている場合Trueを返し、そうでなければFalseを返します。<!-- END REF-->この設定はカレントプロセスに対し有効です。 
 
-[Get print preview](get-print-preview.md)コマンドをと異なり、**Is in print preview**はユーザーがダイアログボックスでの設定を終えた後の、オプションの最終的な値を返します。なのでこのコマンドを使用すれば実際に印刷がプレビューモードで行われるのかどうかを判定できます。
+[Get print preview](../commands/get-print-preview)コマンドをと異なり、**Is in print preview**はユーザーがダイアログボックスでの設定を終えた後の、オプションの最終的な値を返します。なのでこのコマンドを使用すれば実際に印刷がプレビューモードで行われるのかどうかを判定できます。
 
 ## 例題 
 
@@ -54,8 +54,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Get print preview](get-print-preview.md)  
-[SET PRINT PREVIEW](set-print-preview.md)  
+[Get print preview](../commands/get-print-preview)  
+[SET PRINT PREVIEW](../commands/set-print-preview)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: append-to-list
 title: APPEND TO LIST
 slug: /commands/append-to-list
@@ -45,8 +45,8 @@ La référence de la liste que vous passez dans *sous\_Liste* doit être une lis
 
 **Conseils :**
 
-* Pour insérer un nouvel élément dans une liste, utilisez [INSERT IN LIST](insert-in-list.md). Pour modifier le libellé d'un élément existant ou sa sous-liste, ainsi que son état déployé/contracté, utilisez [SET LIST ITEM](set-list-item.md).
-* Pour changer l'apparence de l'élément ajouté, utilisez [SET LIST ITEM PROPERTIES](set-list-item-properties.md).
+* Pour insérer un nouvel élément dans une liste, utilisez [INSERT IN LIST](../commands/insert-in-list). Pour modifier le libellé d'un élément existant ou sa sous-liste, ainsi que son état déployé/contracté, utilisez [SET LIST ITEM](../commands/set-list-item).
+* Pour changer l'apparence de l'élément ajouté, utilisez [SET LIST ITEM PROPERTIES](../commands/set-list-item-properties).
 
 ## Exemple 
 
@@ -145,7 +145,7 @@ Dans cet exemple, il y a une seule raison d'établir une distinction entre les �
 
 1\. Nous stockons des ID d'enregistrements dans les numéros de référence des éléments. En conséquence, nous avons toutes les chances de rencontrer des éléments Départements dont les numéros de référence sont les mêmes que ceux des éléments Employés.
 
-2\. Nous utilisons la commande [List item parent](list-item-parent.md) pour récupérer le parent de l'élément sélectionné. Si nous cliquons sur un élément Employés dont le numéro d'ID associé est 10, et s'il existe aussi un élément Départements qui a le numéro 10, l'élément Départements sera trouvé en premier par [List item parent](list-item-parent.md) quand cette fonction passera la liste en revue pour repérer l'élément avec le numéro de référence que nous passons. La commande retournera le parent de l'élément Départements et non celui de l'élément Employés.
+2\. Nous utilisons la commande [List item parent](../commands/list-item-parent) pour récupérer le parent de l'élément sélectionné. Si nous cliquons sur un élément Employés dont le numéro d'ID associé est 10, et s'il existe aussi un élément Départements qui a le numéro 10, l'élément Départements sera trouvé en premier par [List item parent](../commands/list-item-parent) quand cette fonction passera la liste en revue pour repérer l'élément avec le numéro de référence que nous passons. La commande retournera le parent de l'élément Départements et non celui de l'élément Employés.
 
 C'est pourquoi nous avons choisi des numéros de référence d'éléments uniques, non pas pour des questions de principe, mais parce que nous devions différencier les éléments de Départements et d'Employés. 
 
@@ -157,10 +157,10 @@ Dans le formulaire en exécution, la liste apparaîtra ainsi :
 
 ## Voir aussi 
 
-[INSERT IN LIST](insert-in-list.md)  
-[SET LIST ITEM](set-list-item.md)  
-[SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
-[SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+[INSERT IN LIST](../commands/insert-in-list)  
+[SET LIST ITEM](../commands/set-list-item)  
+[SET LIST ITEM PARAMETER](../commands/set-list-item-parameter)  
+[SET LIST ITEM PROPERTIES](../commands/set-list-item-properties)  
 
 ## Propriétés
 

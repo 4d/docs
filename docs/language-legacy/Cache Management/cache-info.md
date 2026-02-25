@@ -1,4 +1,4 @@
----
+﻿---
 id: cache-info
 title: Cache info
 slug: /commands/cache-info
@@ -64,7 +64,7 @@ You want to get cache information for the database and all opened components:
 
 ## See also 
 
-[MEMORY STATISTICS](memory-statistics.md)  
+[MEMORY STATISTICS](../commands/memory-statistics)  
 
 ## Properties
 

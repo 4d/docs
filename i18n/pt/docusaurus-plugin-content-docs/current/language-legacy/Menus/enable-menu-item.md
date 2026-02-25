@@ -1,4 +1,4 @@
----
+﻿---
 id: enable-menu-item
 title: ENABLE MENU ITEM
 slug: /commands/enable-menu-item
@@ -40,7 +40,7 @@ Se omite o parâmetro *processo*, ENABLE MENU ITEM é aplicado a barra de menus 
 
 ## Ver também 
 
-[DISABLE MENU ITEM](disable-menu-item.md)  
+[DISABLE MENU ITEM](../commands/disable-menu-item)  
 
 ## Propriedades
 

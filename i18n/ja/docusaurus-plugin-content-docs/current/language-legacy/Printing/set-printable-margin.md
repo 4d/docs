@@ -1,4 +1,4 @@
----
+﻿---
 id: set-printable-margin
 title: SET PRINTABLE MARGIN
 slug: /commands/set-printable-margin
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.SET PRINTABLE MARGIN.Summary-->SET PRINTABLE MARGIN コマンドを使用すると、[Print form](../commands/print-form)、[PRINT SELECTION](print-selection.md)または [PRINT RECORD](print-record.md) コマンドの使用時に、各種印刷マージンの値を設定することができます。<!-- END REF-->
+<!--REF #_command_.SET PRINTABLE MARGIN.Summary-->SET PRINTABLE MARGIN コマンドを使用すると、[Print form](../commands/print-form)、[PRINT SELECTION](../commands/print-selection)または [PRINT RECORD](../commands/print-record) コマンドの使用時に、各種印刷マージンの値を設定することができます。<!-- END REF-->
 
 引数*left*, *top*, *right*, *bottom*には、以下の値のいずれかを渡すことができます:
 
@@ -66,8 +66,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[GET PRINTABLE MARGIN](get-printable-margin.md)  
-[Get printed height](get-printed-height.md)  
+[GET PRINTABLE MARGIN](../commands/get-printable-margin)  
+[Get printed height](../commands/get-printed-height)  
 [Print form](../commands/print-form)  
 
 ## プロパティ

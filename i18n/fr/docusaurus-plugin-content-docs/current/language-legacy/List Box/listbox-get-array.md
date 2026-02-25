@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-array
 title: LISTBOX Get array
 slug: /commands/listbox-get-array
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 La commande **LISTBOX Get array** retourne un pointeur vers le tableau *typeTab* de la list box ou de la colonne de list box désignée par les paramètres *objet* et *\**.
 
-Des tableaux de style, de couleur, de couleur de fond ou de contrôle des lignes peuvent être associés aux list box de type tableau ou (hormis le tableau de contrôle des lignes) aux colonnes de list box tableau via la Liste des propriétés en mode Développement ou la commande [LISTBOX SET ARRAY](listbox-set-array.md).
+Des tableaux de style, de couleur, de couleur de fond ou de contrôle des lignes peuvent être associés aux list box de type tableau ou (hormis le tableau de contrôle des lignes) aux colonnes de list box tableau via la Liste des propriétés en mode Développement ou la commande [LISTBOX SET ARRAY](../commands/listbox-set-array).
 
 Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. Vous pouvez désigner comme paramètre *objet* une list box ou une colonne de list box. 
 
@@ -52,9 +52,9 @@ Passez dans *typeTab* le type du tableau de propriété à obtenir. Vous pouvez 
 
 La commande retourne une des valeurs suivantes :
 
-* [Is nil pointer](is-nil-pointer.md) si aucun tableau de la propriété demandée n’est associé à la colonne ou à la list box
+* [Is nil pointer](../commands/is-nil-pointer) si aucun tableau de la propriété demandée n’est associé à la colonne ou à la list box
 * un pointeur vers le tableau de la propriété demandée, défini par l’utilisateur
-* un pointeur vers le tableau de la propriété demandée, défini dynamiquement lors de l’appel de la commande [LISTBOX SET ROW COLOR](listbox-set-row-color.md) ou [LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md).
+* un pointeur vers le tableau de la propriété demandée, défini dynamiquement lors de l’appel de la commande [LISTBOX SET ROW COLOR](../commands/listbox-set-row-color) ou [LISTBOX SET ROW FONT STYLE](../commands/listbox-set-row-font-style).
 
 ## Exemple 
 
@@ -72,8 +72,8 @@ Exemples type d’utilisation :
 
 ## Voir aussi 
 
-[LISTBOX GET ARRAYS](listbox-get-arrays.md)  
-[LISTBOX SET ARRAY](listbox-set-array.md)  
+[LISTBOX GET ARRAYS](../commands/listbox-get-arrays)  
+[LISTBOX SET ARRAY](../commands/listbox-set-array)  
 
 ## Propriétés
 

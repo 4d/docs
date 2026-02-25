@@ -1,4 +1,4 @@
----
+﻿---
 id: sax-add-processing-instruction
 title: SAX ADD PROCESSING INSTRUCTION
 slug: /commands/sax-add-processing-instruction
@@ -56,7 +56,7 @@ Se ou comando tiver sido executado corretamente, a variável sistema Ok assume o
 
 ## Ver também 
 
-[SAX GET XML PROCESSING INSTRUCTION](sax-get-xml-processing-instruction.md)  
+[SAX GET XML PROCESSING INSTRUCTION](../commands/sax-get-xml-processing-instruction)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: array-boolean
 title: ARRAY BOOLEAN
 slug: /commands/array-boolean
@@ -61,7 +61,7 @@ Este exemplo cria um array interprocesso de 50 elementos do tipo Booleano e dete
 
 ## Ver também 
 
-[ARRAY INTEGER](array-integer.md)  
+[ARRAY INTEGER](../commands/array-integer)  
 
 ## Propriedades
 

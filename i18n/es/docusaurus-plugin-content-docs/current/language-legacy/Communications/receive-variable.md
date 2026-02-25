@@ -1,4 +1,4 @@
----
+﻿---
 id: receive-variable
 title: RECEIVE VARIABLE
 slug: /commands/receive-variable
@@ -39,10 +39,10 @@ La variable sistema OK toma el valor 1 si se recibe la variable. De lo contrario
 
 ## Ver también 
 
-[ON ERR CALL](on-err-call.md)  
-[RECEIVE RECORD](receive-record.md)  
-[SEND RECORD](send-record.md)  
-[SEND VARIABLE](send-variable.md)  
+[ON ERR CALL](../commands/on-err-call)  
+[RECEIVE RECORD](../commands/receive-record)  
+[SEND RECORD](../commands/send-record)  
+[SEND VARIABLE](../commands/send-variable)  
 
 ## Propiedades
 

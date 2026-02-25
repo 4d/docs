@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-format
 title: OBJECT SET FORMAT
 slug: /commands/object-set-format
@@ -54,7 +54,7 @@ Para dar formato a campos booleanos, há duas possibilidades:
 
 Para dar formato aos campos ou variáveis Data or Hora, é possível usar:
 
-* um **formato pré-definido** disponível através das constantes do tema *Formatos de saída de datas* ou *Formatos de saída de hora* (valor longint). Neste caso, passe [Char](char.md)(n) em *displayFormat*, onde *n* é a constante:  
+* um **formato pré-definido** disponível através das constantes do tema *Formatos de saída de datas* ou *Formatos de saída de hora* (valor longint). Neste caso, passe [Char](../commands/char)(n) em *displayFormat*, onde *n* é a constante:  
     
 Dates:  
 
@@ -382,9 +382,9 @@ Passe um termômetro ao modo "Barber shop"
 ## Ver também 
 
   
-[GET SYSTEM FORMAT](get-system-format.md)  
-[OBJECT Get format](object-get-format.md)  
-[OBJECT SET FILTER](object-set-filter.md)  
+[GET SYSTEM FORMAT](../commands/get-system-format)  
+[OBJECT Get format](../commands/object-get-format)  
+[OBJECT SET FILTER](../commands/object-set-filter)  
 
 ## Propriedades
 

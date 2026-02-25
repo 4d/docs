@@ -1,4 +1,4 @@
----
+﻿---
 id: form-screenshot
 title: FORM SCREENSHOT
 slug: /commands/form-screenshot
@@ -43,7 +43,7 @@ Por defecto, el comando devuelve una captura de pantalla de la página 1 del for
 **Notas:** 
 
 * Las áreas web no se dibujan en la captura de pantalla devuelta.
-* Los dos primeros parámetros de este comando son opcionales, no puede pasar directamente como un argumento una función que devuelva un puntero como [Current form table](current-form-table.md)\-> o [Table](table.md)\->. Aunque esta sintaxis funcionaría en modo interpretado, sería rechazada durante la compilación, así que es necesario en este caso utilizar una variable puntero intermediaria. Para obtener más información, consulte "*Uso directo de los comandos que devuelven punteros*".
+* Los dos primeros parámetros de este comando son opcionales, no puede pasar directamente como un argumento una función que devuelva un puntero como [Current form table](../commands/current-form-table)\-> o [Table](../commands/table)\->. Aunque esta sintaxis funcionaría en modo interpretado, sería rechazada durante la compilación, así que es necesario en este caso utilizar una variable puntero intermediaria. Para obtener más información, consulte "*Uso directo de los comandos que devuelven punteros*".
 
 ## Ver también 
 

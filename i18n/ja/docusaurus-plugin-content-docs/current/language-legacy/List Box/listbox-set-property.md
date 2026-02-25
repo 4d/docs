@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-property
 title: LISTBOX SET PROPERTY
 slug: /commands/listbox-set-property
@@ -85,7 +85,7 @@ displayed_sidebar: docs
 ## 参照
 
 *List Box*  
-[LISTBOX Get property](listbox-get-property.md)
+[LISTBOX Get property](../commands/listbox-get-property)
 
 ## プロパティ
 

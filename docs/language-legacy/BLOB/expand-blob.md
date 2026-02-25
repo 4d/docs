@@ -1,4 +1,4 @@
----
+﻿---
 id: expand-blob
 title: EXPAND BLOB
 slug: /commands/expand-blob
@@ -28,14 +28,14 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.EXPAND BLOB.Summary-->The **EXPAND BLOB** command expands the BLOB *blob* that was previously compressed using the [COMPRESS BLOB](compress-blob.md) command*.<!-- END REF-->*
+<!--REF #_command_.EXPAND BLOB.Summary-->The **EXPAND BLOB** command expands the BLOB *blob* that was previously compressed using the [COMPRESS BLOB](../commands/compress-blob) command*.<!-- END REF-->*
 
 After the call, the OK variable is set to 1 if the BLOB has been expanded. If the expansion could not be performed, the OK variable is set to 0.
 
 If the expansion could not be performed because of a lack of memory, no error is generated and the method resumes its execution.   
-In any other case (i.e. the BLOB has not been compressed or is damaged), the error -10600 is generated. This error can be trapped using the [ON ERR CALL](on-err-call.md) command. 
+In any other case (i.e. the BLOB has not been compressed or is damaged), the error -10600 is generated. This error can be trapped using the [ON ERR CALL](../commands/on-err-call) command. 
 
-To check if a BLOB has been compressed, use the [BLOB PROPERTIES](blob-properties.md) command.
+To check if a BLOB has been compressed, use the [BLOB PROPERTIES](../commands/blob-properties) command.
 
 ## Example 1 
 
@@ -75,8 +75,8 @@ The OK variable is set to 1 if the BLOB has been successfully expanded, otherwis
 
 ## See also 
 
-[BLOB PROPERTIES](blob-properties.md)  
-[COMPRESS BLOB](compress-blob.md)  
+[BLOB PROPERTIES](../commands/blob-properties)  
+[COMPRESS BLOB](../commands/compress-blob)  
 
 ## Properties
 

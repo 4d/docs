@@ -1,4 +1,4 @@
----
+﻿---
 id: set-database-parameter
 title: SET DATABASE PARAMETER
 slug: /commands/set-database-parameter
@@ -127,7 +127,7 @@ displayed_sidebar: docs
 
 **取りうる値**: 倍長整数 > 1 (秒)
 
-**詳細**: 秒単位で指定された、キャッシュ保存頻度を取得あるいは設定します。この値を変更すると、データベース設定の[XML DECODE](xml-decode.md)内の**キャッシュを保存: X秒毎**オプションをセッション中の間上書きします(これはデータベース設定には保存されません)。
+**詳細**: 秒単位で指定された、キャッシュ保存頻度を取得あるいは設定します。この値を変更すると、データベース設定の[XML DECODE](../commands/xml-decode)内の**キャッシュを保存: X秒毎**オプションをセッション中の間上書きします(これはデータベース設定には保存されません)。
 
 
 
@@ -151,7 +151,7 @@ displayed_sidebar: docs
 
 ### Character set (17)
 
-**説明**: 廃止 (互換性のために保持)。HTTPサーバー設定を変更するためには[WEB SET OPTION](web-set-option.md)と[WEB GET OPTION](web-get-option.md)コマンドを使用してください。
+**説明**: 廃止 (互換性のために保持)。HTTPサーバー設定を変更するためには[WEB SET OPTION](../commands/web-set-option)と[WEB GET OPTION](../commands/web-get-option)コマンドを使用してください。
 
 
 
@@ -164,7 +164,7 @@ displayed_sidebar: docs
 
 取りうる値**: 任意の整数値、0 = 全てのログを保持**
 
-詳細**: 各タイプのロゴのローテーションに保存するファイル数の最大値。デフォルトでは、直近の50 ファイルが保持されます。*X* という値を渡した場合、直近の*X* 個のファイルのみが保持され、最も古いファイルは新しいファイルが作成されたときに自動的に削除されます。この設定は全てのログファイルに対して適用されます:リクエストログ(セレクター28と45)、デバッグログ(セレクター34)、イベントログ(セレクター79)、Web ログ([WEB SET OPTION](web-set-option.md)コマンドのセレクター29と84)、などです。
+詳細**: 各タイプのロゴのローテーションに保存するファイル数の最大値。デフォルトでは、直近の50 ファイルが保持されます。*X* という値を渡した場合、直近の*X* 個のファイルのみが保持され、最も古いファイルは新しいファイルが作成されたときに自動的に削除されます。この設定は全てのログファイルに対して適用されます:リクエストログ(セレクター28と45)、デバッグログ(セレクター34)、イベントログ(セレクター79)、Web ログ([WEB SET OPTION](../commands/web-set-option)コマンドのセレクター29と84)、などです。
 
 
 
@@ -313,7 +313,7 @@ displayed_sidebar: docs
 
 セレクターの値がDate type (4D v17以降で作成されたデータベースにおけるデフォルト)のとき、4D 日付はオブジェクト内で日付型として保存され、ローカルの日付設定に準拠します。JSON フォーマットに変換された時、日付属性は、時間を含まない文字列へと変換されます(**注:** この設定は、データベース設定のにある"オブジェクト内ではISO日付フォーマットの代わりに日付型を使用"オプションによって設定することができます)。
 
-セレクターにを渡した場合、4D 日付はローカルなタイムゾーンを考慮に入れつつISO 文字列に変換されます。例えば、例えば、23/08/2013という日付の変 換を、フランスのサマータイム(GMT+2)にて実行した場合、JSONフォーマットの"2013-08-22T22:00:00Z"という結 果が返されます。この原理はJavaScriptの標準のオペレーションに従うものです。これは異なるタイムゾーンにいる人にJSON日付の値を 送る場合には、エラーの原因となりかねません。例えば、[Selection to JSON](selection-to-json.md)を使ってフランスでエクスポートされたテーブルを[JSON TO SELECTION](json-to-selection.md) を使用してアメリカで再インポートする、というような場合です。日付の値は、デフォルトではそれぞれのタイムゾーンにおいて再変換 されるため、データベース内に保存された値は異なってしまいます。こういった場合には、このセレクターにString type without time zoneを渡す事によって、タイムゾーンを考慮しないよ うに日付の変換モードを変更することができます。すると、23/08/2013という日付を変換した場合に は、"2013-08-23T00:00:00Z"という値を返すようになります。
+セレクターにを渡した場合、4D 日付はローカルなタイムゾーンを考慮に入れつつISO 文字列に変換されます。例えば、例えば、23/08/2013という日付の変 換を、フランスのサマータイム(GMT+2)にて実行した場合、JSONフォーマットの"2013-08-22T22:00:00Z"という結 果が返されます。この原理はJavaScriptの標準のオペレーションに従うものです。これは異なるタイムゾーンにいる人にJSON日付の値を 送る場合には、エラーの原因となりかねません。例えば、[Selection to JSON](../commands/selection-to-json)を使ってフランスでエクスポートされたテーブルを[JSON TO SELECTION](../commands/json-to-selection) を使用してアメリカで再インポートする、というような場合です。日付の値は、デフォルトではそれぞれのタイムゾーンにおいて再変換 されるため、データベース内に保存された値は異なってしまいます。こういった場合には、このセレクターにString type without time zoneを渡す事によって、タイムゾーンを考慮しないよ うに日付の変換モードを変更することができます。すると、23/08/2013という日付を変換した場合に は、"2013-08-23T00:00:00Z"という値を返すようになります。
 
 
 
@@ -396,14 +396,14 @@ SET DATABASE PARAMETER (34;0) // ファイルを無効化
 
 4Dは診断ファイルの中に内部的なアプリケーション処理に関連するイベントを継続的に記録することができます。このファイルに含まれる情報は4Dアプリケーション開発のために使用され、4D社の技術サポート担当により解析されます。このセレクターに1を渡すと、データベースの**Logs** フォルダ内に診断ファイルが自動的に作成されます(またはすでに存在する場合には開かれます)。ファイルには*4DDiagnosticLog\_X*.txt (あるいはサーバー側で生成された場合には *4DDiagnosticLogServer\_X*.txt) という名前が付けられます。このファイルのサイズが10MBに達するとそのファイルは閉じられ、DatabaseName\_N.txtが生成されます (Ｎは連番)。
 
-[LOG EVENT](log-event.md)コマンドを使用してカスタム情報をこのファイルに書き込むこともできます。
+[LOG EVENT](../commands/log-event)コマンドを使用してカスタム情報をこのファイルに書き込むこともできます。
 
 
 
 
 ### Direct2D get active status (74)
 
-**注:** このセレクターは[Get database parameter](get-database-parameter.md)コマンドでのみ使用することができ、設定することはできません。
+**注:** このセレクターは[Get database parameter](../commands/get-database-parameter)コマンドでのみ使用することができ、設定することはできません。
 
 説明: WindowsにおいてDirect2Dのアクティブな実装を返します。
 
@@ -437,21 +437,21 @@ SET DATABASE PARAMETER (34;0) // ファイルを無効化
 
 ### HTTP compression level (50)
 
-**説明**: 廃止 (互換性のために保持)。HTTPサーバー設定を変更するためには[WEB SET OPTION](web-set-option.md)と[WEB GET OPTION](web-get-option.md)コマンドを使用してください。
+**説明**: 廃止 (互換性のために保持)。HTTPサーバー設定を変更するためには[WEB SET OPTION](../commands/web-set-option)と[WEB GET OPTION](../commands/web-get-option)コマンドを使用してください。
 
 
 
 
 ### HTTP compression threshold (51)
 
-**説明**: 廃止 (互換性のために保持)。HTTPサーバー設定を変更するためには[WEB SET OPTION](web-set-option.md)と[WEB GET OPTION](web-get-option.md)コマンドを使用してください。
+**説明**: 廃止 (互換性のために保持)。HTTPサーバー設定を変更するためには[WEB SET OPTION](../commands/web-set-option)と[WEB GET OPTION](../commands/web-get-option)コマンドを使用してください。
 
 
 
 
 ### HTTPS Port ID (39)
 
-**説明**: 廃止 (互換性のために保持)。HTTPサーバー設定を変更するためには[WEB SET OPTION](web-set-option.md)と[WEB GET OPTION](web-get-option.md)コマンドを使用してください。
+**説明**: 廃止 (互換性のために保持)。HTTPサーバー設定を変更するためには[WEB SET OPTION](../commands/web-set-option)と[WEB GET OPTION](../commands/web-get-option)コマンドを使用してください。
 
 
 
@@ -504,7 +504,7 @@ SET DATABASE PARAMETER (34;0) // ファイルを無効化
 
 ### Is current database a project (112)
 
-**注:** このセレクターは[Get database parameter](get-database-parameter.md) コマンドでのみ使用可能で、その値を設定することはできません。
+**注:** このセレクターは[Get database parameter](../commands/get-database-parameter) コマンドでのみ使用可能で、その値を設定することはできません。
 
 : 4D アプリケーション**
 
@@ -515,7 +515,7 @@ SET DATABASE PARAMETER (34;0) // ファイルを無効化
 
 ### Is host database a project (113)
 
-**注:** このセレクターは[Get database parameter](get-database-parameter.md) コマンドでのみ使用可能で、その値を設定することはできません。
+**注:** このセレクターは[Get database parameter](../commands/get-database-parameter) コマンドでのみ使用可能で、その値を設定することはできません。
 
 : 4D アプリケーション**
 
@@ -526,7 +526,7 @@ SET DATABASE PARAMETER (34;0) // ファイルを無効化
 
 ### Is host database writable (117)
 
-**注:** このセレクターは[Get database parameter](get-database-parameter.md) コマンドでしか使用できず、この値を設定することはできません。
+**注:** このセレクターは[Get database parameter](../commands/get-database-parameter) コマンドでしか使用できず、この値を設定することはできません。
 
 **スコープ**: 4D アプリケーション
 
@@ -587,14 +587,14 @@ SET DATABASE PARAMETER (34;0) // ファイルを無効化
 
 ### Max concurrent Web processes (18)
 
-**説明**: 廃止 (互換性のために保持)。HTTPサーバー設定を変更するためには[WEB SET OPTION](web-set-option.md)と[WEB GET OPTION](web-get-option.md)コマンドを使用してください。
+**説明**: 廃止 (互換性のために保持)。HTTPサーバー設定を変更するためには[WEB SET OPTION](../commands/web-set-option)と[WEB GET OPTION](../commands/web-get-option)コマンドを使用してください。
 
 
 
 
 ### Maximum Web requests size (27)
 
-**説明**: 廃止 (互換性のために保持)。HTTPサーバー設定を変更するためには[WEB SET OPTION](web-set-option.md)と[WEB GET OPTION](web-get-option.md)コマンドを使用してください。
+**説明**: 廃止 (互換性のために保持)。HTTPサーバー設定を変更するためには[WEB SET OPTION](../commands/web-set-option)と[WEB GET OPTION](../commands/web-get-option)コマンドを使用してください。
 
 
 
@@ -628,7 +628,7 @@ SET DATABASE PARAMETER (34;0) // ファイルを無効化
 
 **デフォルト値**: 0 (キャッシュなし)
 
-**詳細**: フォーミュラのキャッシュに保存されるフォーミュラの最大数を設定あるいは取得します。これは[EXECUTE FORMULA](execute-formula.md)コマンドで使用されます。この上限は全てのプロセスに適用されますが、各プロセスにはそれぞれ独自のフォーミュラ用キャッシュがあります。フォーミュラをキャッシュすると、それぞれのフォーミュラはこの場合1度しかトークン化されないため、コンパイル済みモードでの[EXECUTE FORMULA](execute-formula.md)コマンドの実行が速くなります。キャッシュ値を変化させると、例え新しいサイズが以前のものより大きくても、既存の中身は全てリセットされます。キャッシュ内のフォーミュラ数が上限値に達すると、その後新しく実行されたフォーミュラはキャッシュ内の一番古いものを消去します(FIFOモード)。この引数は、コンパイルされたデータベース、あるいはコンパイルされたコンポーネントでのみ考慮されます。
+**詳細**: フォーミュラのキャッシュに保存されるフォーミュラの最大数を設定あるいは取得します。これは[EXECUTE FORMULA](../commands/execute-formula)コマンドで使用されます。この上限は全てのプロセスに適用されますが、各プロセスにはそれぞれ独自のフォーミュラ用キャッシュがあります。フォーミュラをキャッシュすると、それぞれのフォーミュラはこの場合1度しかトークン化されないため、コンパイル済みモードでの[EXECUTE FORMULA](../commands/execute-formula)コマンドの実行が速くなります。キャッシュ値を変化させると、例え新しいサイズが以前のものより大きくても、既存の中身は全てリセットされます。キャッシュ内のフォーミュラ数が上限値に達すると、その後新しく実行されたフォーミュラはキャッシュ内の一番古いものを消去します(FIFOモード)。この引数は、コンパイルされたデータベース、あるいはコンパイルされたコンポーネントでのみ考慮されます。
 
 
 
@@ -889,7 +889,7 @@ QUERY BY FORMULA Joinsセレクタで、カレントプロセスの、フォー�
 
 
 
-このオプションはアプリケーション環境設定の[CALL SUBFORM CONTAINER](call-subform-container.md) で設定できます。
+このオプションはアプリケーション環境設定の[CALL SUBFORM CONTAINER](../commands/call-subform-container) で設定できます。
 
 
 
@@ -921,9 +921,9 @@ QUERY BY FORMULA Joinsセレクタで、カレントプロセスの、フォー�
 
 暗号リストが変更された場合、新しい設定が使用されるようにするためには関係するサーバーを再起動する必要があります。
 
-暗号リストを (SLIファイルに恒久的に格納された) デフォルト値に再設定するには、*value*引数に空の文字列 ("") を渡して [SET DATABASE PARAMETER](set-database-parameter.md) コマンドを呼び出します。 
+暗号リストを (SLIファイルに恒久的に格納された) デフォルト値に再設定するには、*value*引数に空の文字列 ("") を渡して [SET DATABASE PARAMETER](../commands/set-database-parameter) コマンドを呼び出します。 
 
-**注**: [Get database parameter](get-database-parameter.md) コマンドで暗号リストはオプションの *stringValue* 引数に返され、戻り値は常に0となります。
+**注**: [Get database parameter](../commands/get-database-parameter) コマンドで暗号リストはオプションの *stringValue* 引数に返され、戻り値は常に0となります。
 
 
 
@@ -1043,14 +1043,14 @@ QUERY BY FORMULA Joinsセレクタで、カレントプロセスの、フォー�
 
 **取りうる値**: 任意のカスタムの文字列
 
-**説明:** 4D アプリケーションが再起動される際に、ひとつのセッションから次のセッションへと渡されるカスタムの文字列です。このセレクターは異なる引数を使用してアプリケーションを再起動する必要がある、自動化されたユニットテストなどのコンテキストで有用です。[SET DATABASE PARAMETER](set-database-parameter.md) で使用された場合、手動で、あるいは[OPEN DATABASE](open-database.md)(\*)、 [OPEN DATA FILE](open-data-file.md)、 または [RESTART 4D](restart-4d.md) コマンドを使用して4D が再起動したあとに開かれるデータベースで利用可能となる新しい値を定義します。[Get database parameter](get-database-parameter.md) で使用された場合、コマンドライン(*コマンドラインインターフェース* 参照)、4DLink ファイル(*4DLinkファイルを使用する* 参照)、あるいは前のセッションでの[SET DATABASE PARAMETER](set-database-parameter.md) への呼び出しなどを使用して定義された、現在利用可能なユーザー引数値を取得します。(\*) [SET DATABASE PARAMETER](set-database-parameter.md)がUser param value を設定した後に、[OPEN DATABASE](open-database.md)にuser-param xml 属性を含む.4DLink ファイル渡して呼び出した場合、4D は[SET DATABASE PARAMETER](set-database-parameter.md)で提供された引数のみを考慮します。
+**説明:** 4D アプリケーションが再起動される際に、ひとつのセッションから次のセッションへと渡されるカスタムの文字列です。このセレクターは異なる引数を使用してアプリケーションを再起動する必要がある、自動化されたユニットテストなどのコンテキストで有用です。[SET DATABASE PARAMETER](../commands/set-database-parameter) で使用された場合、手動で、あるいは[OPEN DATABASE](../commands/open-database)(\*)、 [OPEN DATA FILE](../commands/open-data-file)、 または [RESTART 4D](../commands/restart-4d) コマンドを使用して4D が再起動したあとに開かれるデータベースで利用可能となる新しい値を定義します。[Get database parameter](../commands/get-database-parameter) で使用された場合、コマンドライン(*コマンドラインインターフェース* 参照)、4DLink ファイル(*4DLinkファイルを使用する* 参照)、あるいは前のセッションでの[SET DATABASE PARAMETER](../commands/set-database-parameter) への呼び出しなどを使用して定義された、現在利用可能なユーザー引数値を取得します。(\*) [SET DATABASE PARAMETER](../commands/set-database-parameter)がUser param value を設定した後に、[OPEN DATABASE](../commands/open-database)にuser-param xml 属性を含む.4DLink ファイル渡して呼び出した場合、4D は[SET DATABASE PARAMETER](../commands/set-database-parameter)で提供された引数のみを考慮します。
 
 
   
 注意:
 
 * *table* 引数はセレクター31, 46, そして47で使用されます。それ以外の場合、この引数は無視されます。
-* 異なるセッション間で値が保持されない定数について、その値を確実に適用したい場合には、[On Startupデータベースメソッド](on-startup-database-method.md) あるいは [On Server Startupデータベースメソッド](on-server-startup-database-method.md). 内において実行して下さい。
+* 異なるセッション間で値が保持されない定数について、その値を確実に適用したい場合には、[On Startupデータベースメソッド](../commands/on-startup-database-method) あるいは [On Server Startupデータベースメソッド](../commands/on-server-startup-database-method). 内において実行して下さい。
 
 ## スレッドセーフなセレクター 
 
@@ -1094,7 +1094,7 @@ QUERY BY FORMULA Joinsセレクタで、カレントプロセスの、フォー�
 
 ## 例題 3 
 
-変換された4D date を含む JSON形式のデータを書き出したい場合を考えます。変換が起きるのは日付がオブジェクトに保存されたときなので、 [OB SET](ob-set.md)コマンドが呼び出される前に [SET DATABASE PARAMETER](set-database-parameter.md)コマンドを使用する必要があることに注意して下さい: 
+変換された4D date を含む JSON形式のデータを書き出したい場合を考えます。変換が起きるのは日付がオブジェクトに保存されたときなので、 [OB SET](../commands/ob-set)コマンドが呼び出される前に [SET DATABASE PARAMETER](../commands/set-database-parameter)コマンドを使用する必要があることに注意して下さい: 
 
 ```4d
  var $o : Object
@@ -1106,9 +1106,9 @@ QUERY BY FORMULA Joinsセレクタで、カレントプロセスの、フォー�
 
 ## 参照 
 
-[Get database parameter](get-database-parameter.md)  
-[LOG EVENT](log-event.md)  
-[QUERY SELECTION](query-selection.md)  
+[Get database parameter](../commands/get-database-parameter)  
+[LOG EVENT](../commands/log-event)  
+[QUERY SELECTION](../commands/query-selection)  
 
 ## プロパティ
 

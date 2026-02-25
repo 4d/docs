@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-set-url-filters
 title: WA SET URL FILTERS
 slug: /commands/wa-set-url-filters
@@ -45,9 +45,9 @@ If there is a contradiction at the configuration level (the same URL is both all
 
 To disable URL filtering, call the command and pass empty arrays or pass, respectively, the values "*\**" and **True** in the last elements of the *filtersArr* and *allowDenyArr* arrays.
 
-Once the command has been executed, the filters become a property of the Web area. If the *filtersArr* and *allowDenyArr* arrays are deleted or reinitialized, the filters remain active as long as the command has not been executed again. To find out the active filters for an area, you must use the [WA GET URL FILTERS](wa-get-url-filters.md) command. 
+Once the command has been executed, the filters become a property of the Web area. If the *filtersArr* and *allowDenyArr* arrays are deleted or reinitialized, the filters remain active as long as the command has not been executed again. To find out the active filters for an area, you must use the [WA GET URL FILTERS](../commands/wa-get-url-filters) command. 
 
-**Important:** The URL filtering performed by this command applies to any request to change the primary URL of the page, whether from the user, javascript code or 4D code, except for the [WA OPEN URL](wa-open-url.md) command and URLs starting with "javascript:".
+**Important:** The URL filtering performed by this command applies to any request to change the primary URL of the page, whether from the user, javascript code or 4D code, except for the [WA OPEN URL](../commands/wa-open-url) command and URLs starting with "javascript:".
 
 ## Example 1 
 
@@ -147,8 +147,8 @@ You want to deny access to specific IP addresses:
 
 ## See also 
 
-[WA GET URL FILTERS](wa-get-url-filters.md)  
-[WA SET EXTERNAL LINKS FILTERS](wa-set-external-links-filters.md)  
+[WA GET URL FILTERS](../commands/wa-get-url-filters)  
+[WA SET EXTERNAL LINKS FILTERS](../commands/wa-set-external-links-filters)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: post-key
 title: POST KEY
 slug: /commands/post-key
@@ -44,8 +44,8 @@ displayed_sidebar: docs
 ## 参照 
 
 *ASCII Codes*  
-[POST CLICK](post-click.md)  
-[POST EVENT](post-event.md)  
+[POST CLICK](../commands/post-click)  
+[POST EVENT](../commands/post-event)  
 *ファンクションキーコード*  
 
 ## プロパティ

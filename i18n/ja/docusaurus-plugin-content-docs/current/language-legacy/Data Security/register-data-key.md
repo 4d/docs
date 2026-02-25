@@ -1,4 +1,4 @@
----
+﻿---
 id: register-data-key
 title: Register data key
 slug: /commands/register-data-key
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 第一引数には、追加する暗号化キーを定義する、*curPassPhrase* 引数または *curDataKey* 引数のどちらかを渡してください:
 
 * *curPassPhrase*: 暗号化キーを生成するのに使用された文字列。この引数を使用する場合、暗号化キーが生成されます。
-* *curDataKey*: データ暗号化キーを格納するオブジェクト(*encodedKey* プロパティを持つ)。このキーは[New data key](new-data-key.md) コマンドで生成された可能性があります。
+* *curDataKey*: データ暗号化キーを格納するオブジェクト(*encodedKey* プロパティを持つ)。このキーは[New data key](../commands/new-data-key) コマンドで生成された可能性があります。
 
 **返される値**
 
@@ -59,7 +59,7 @@ displayed_sidebar: docs
 ## 参照 
 
   
-[New data key](new-data-key.md)  
+[New data key](../commands/new-data-key)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: set-real-comparison-level
 title: SET REAL COMPARISON LEVEL
 slug: /commands/set-real-comparison-level
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET REAL COMPARISON LEVEL.Summary-->La commande **SET REAL COMPARISON LEVEL** définit la valeur *epsilon* utilisée par 4D lors d'une comparaison d'égalité des valeurs et expressions de type Réel.<!-- END REF-->
 
 Comme un ordinateur effectue des calculs approximatifs sur les réels, les tests sur l'égalité de valeurs réelles doivent tenir compte de cette approximation. Pour cela, 4D, lorsqu'il compare des valeurs réelles, teste en fait si la différence entre les deux valeurs est supérieure ou non à une certaine valeur. Cette valeur s'appelle l'**epsilon** et fonctionne de la manière suivante :   
-Soient deux valeurs réelles *a* et *b*. Si [Abs](abs.md)(a-b) est supérieur à l'epsilon, les valeurs sont considérées comme différentes ; sinon, elles sont déclarées égales.  
+Soient deux valeurs réelles *a* et *b*. Si [Abs](../commands/abs)(a-b) est supérieur à l'epsilon, les valeurs sont considérées comme différentes ; sinon, elles sont déclarées égales.  
 Par défaut, 4D fixe la valeur epsilon à 10 à la puissance moins 6 (10^-6). Exemples :
 
 * *0,00001=0,00002* retourne Faux car la différence *0,00001* est supérieure à *10^-6*.

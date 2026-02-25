@@ -1,4 +1,4 @@
----
+﻿---
 id: query-selection-with-array
 title: QUERY SELECTION WITH ARRAY
 slug: /commands/query-selection-with-array
@@ -39,7 +39,7 @@ QUERY SELECTION WITH ARRAYは[QUERY WITH ARRAY](query-with-array.md "QUERY WITH 
 
 ## 参照 
 
-[QUERY WITH ARRAY](query-with-array.md)  
+[QUERY WITH ARRAY](../commands/query-with-array)  
 
 ## プロパティ
 

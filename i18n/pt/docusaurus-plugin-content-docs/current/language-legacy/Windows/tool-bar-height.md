@@ -1,4 +1,4 @@
----
+﻿---
 id: tool-bar-height
 title: Tool bar height
 slug: /commands/tool-bar-height
@@ -34,9 +34,9 @@ Se não se mostrar nenhuma barra de ferramentas, o comando devolve 0.
 
 ## Ver também 
 
-[HIDE TOOL BAR](hide-tool-bar.md)  
-[Menu bar height](menu-bar-height.md)  
-[SHOW TOOL BAR](show-tool-bar.md)  
+[HIDE TOOL BAR](../commands/hide-tool-bar)  
+[Menu bar height](../commands/menu-bar-height)  
+[SHOW TOOL BAR](../commands/show-tool-bar)  
 
 ## Propriedades
 

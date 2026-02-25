@@ -1,4 +1,4 @@
----
+﻿---
 id: transaction-level
 title: Transaction level
 slug: /commands/transaction-level
@@ -31,8 +31,8 @@ displayed_sidebar: docs
 
 ## See also 
 
-[In transaction](in-transaction.md)  
-[START TRANSACTION](start-transaction.md)  
+[In transaction](../commands/in-transaction)  
+[START TRANSACTION](../commands/start-transaction)  
 [Transactions](../../Develop-legacy/transactions.md)
 
 ## Properties

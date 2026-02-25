@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-export-to-file
 title: DOM EXPORT TO FILE
 slug: /commands/dom-export-to-file
@@ -46,9 +46,9 @@ Nota: Se deseja manter os retornos de carro, deve incluir em um elemento XML CDA
 
 Como padrão, arquivos XML são escritos sem BOM (Byte order mask). 
 
-Pode controlar o final de linha de XML e gerenciamento BOM com o comando [XML SET OPTIONS](xml-set-options.md). 
+Pode controlar o final de linha de XML e gerenciamento BOM com o comando [XML SET OPTIONS](../commands/xml-set-options). 
 
-**Nota de compatibilidade**: em bancos de dados/projetos criados com versões 4D anteriores a v19.x, como padrão 4D usava CR como caracteres de final de linha em macOS e BOM. Para ativar as novas configurações padrão, marque as configurações de compatibilidade (ver *Página Compatibilidade*) ou use o comando [XML SET OPTIONS](xml-set-options.md). 
+**Nota de compatibilidade**: em bancos de dados/projetos criados com versões 4D anteriores a v19.x, como padrão 4D usava CR como caracteres de final de linha em macOS e BOM. Para ativar as novas configurações padrão, marque as configurações de compatibilidade (ver *Página Compatibilidade*) ou use o comando [XML SET OPTIONS](../commands/xml-set-options). 
 
 ## Exemplo 
 
@@ -72,8 +72,8 @@ Se gera um erro quando:
 
 ## Ver também 
 
-[DOM EXPORT TO VAR](dom-export-to-var.md)  
-[SVG EXPORT TO PICTURE](svg-export-to-picture.md)  
+[DOM EXPORT TO VAR](../commands/dom-export-to-var)  
+[SVG EXPORT TO PICTURE](../commands/svg-export-to-picture)  
 
 ## Propriedades
 

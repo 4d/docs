@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-headers-height
 title: LISTBOX SET HEADERS HEIGHT
 slug: /commands/listbox-set-headers-height
@@ -49,7 +49,7 @@ Headers must respect the minimum height set by the system. This height is 24 pix
 
 ## See also 
 
-[LISTBOX Get headers height](listbox-get-headers-height.md)  
+[LISTBOX Get headers height](../commands/listbox-get-headers-height)  
 
 ## Properties
 

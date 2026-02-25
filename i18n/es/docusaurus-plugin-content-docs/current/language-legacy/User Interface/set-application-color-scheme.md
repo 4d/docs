@@ -1,4 +1,4 @@
----
+﻿---
 id: set-application-color-scheme
 title: SET APPLICATION COLOR SCHEME
 slug: /commands/set-application-color-scheme
@@ -46,8 +46,8 @@ En el parámetro *esquemaColor*, pase un esquema de color a aplicar:
 
 ## Ver también 
 
-[FORM Get color scheme](form-get-color-scheme.md)  
-[Get Application color scheme](get-application-color-scheme.md)  
+[FORM Get color scheme](../commands/form-get-color-scheme)  
+[Get Application color scheme](../commands/get-application-color-scheme)  
 
 ## Propiedades
 

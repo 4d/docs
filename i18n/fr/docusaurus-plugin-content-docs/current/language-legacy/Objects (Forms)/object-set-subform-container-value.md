@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-subform-container-value
 title: OBJECT SET SUBFORM CONTAINER VALUE
 slug: /commands/object-set-subform-container-value
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 ## Voir aussi 
 
 [Form](../commands/form)  
-[OBJECT Get subform container value](object-get-subform-container-value.md)  
+[OBJECT Get subform container value](../commands/object-get-subform-container-value)  
 
 ## Propriétés
 

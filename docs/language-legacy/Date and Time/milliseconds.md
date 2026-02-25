@@ -1,4 +1,4 @@
----
+﻿---
 id: milliseconds
 title: Milliseconds
 slug: /commands/milliseconds
@@ -56,9 +56,9 @@ The following code waits up to 5 seconds for a locked record to become unlocked 
 
 ## See also 
 
-[Current time](current-time.md)  
-[Tickcount](tickcount.md)  
-[Timestamp](timestamp.md)  
+[Current time](../commands/current-time)  
+[Tickcount](../commands/tickcount)  
+[Timestamp](../commands/timestamp)  
 
 ## Properties
 

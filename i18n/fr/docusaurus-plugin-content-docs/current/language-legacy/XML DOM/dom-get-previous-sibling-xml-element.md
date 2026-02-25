@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-get-previous-sibling-xml-element
 title: DOM Get previous sibling XML element
 slug: /commands/dom-get-previous-sibling-xml-element
@@ -44,7 +44,7 @@ Si la commande a été correctement exécutée et si l’élément référencé 
 
 ## Voir aussi 
 
-[DOM Get next sibling XML element](dom-get-next-sibling-xml-element.md)  
+[DOM Get next sibling XML element](../commands/dom-get-next-sibling-xml-element)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-scroll-position
 title: OBJECT GET SCROLL POSITION
 slug: /commands/object-get-scroll-position
@@ -42,7 +42,7 @@ Si *objet* désigne une image (variable ou champ), *positionLigne* retourne le d
 
 ## Voir aussi 
 
-[OBJECT SET SCROLL POSITION](object-set-scroll-position.md)  
+[OBJECT SET SCROLL POSITION](../commands/object-set-scroll-position)  
 
 ## Propriétés
 

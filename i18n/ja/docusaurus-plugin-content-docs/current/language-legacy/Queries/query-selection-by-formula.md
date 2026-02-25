@@ -1,4 +1,4 @@
----
+﻿---
 id: query-selection-by-formula
 title: QUERY SELECTION BY FORMULA
 slug: /commands/query-selection-by-formula
@@ -40,9 +40,9 @@ QUERY SELECTION BY FORMULAは[QUERY BY FORMULA](query-by-formula.md "QUERY BY FO
 
 ## 参照 
 
-[QUERY](query.md)  
-[QUERY BY FORMULA](query-by-formula.md)  
-[QUERY SELECTION](query-selection.md)  
+[QUERY](../commands/query)  
+[QUERY BY FORMULA](../commands/query-by-formula)  
+[QUERY SELECTION](../commands/query-selection)  
 
 ## プロパティ
 

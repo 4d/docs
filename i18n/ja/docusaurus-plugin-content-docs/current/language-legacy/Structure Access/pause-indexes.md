@@ -1,4 +1,4 @@
----
+﻿---
 id: pause-indexes
 title: PAUSE INDEXES
 slug: /commands/pause-indexes
@@ -33,14 +33,14 @@ displayed_sidebar: docs
 
 このコマンドは主に複数のインデックスを持つテーブルのデータを、大量にインポートないし修正する際に有用です。4Dはレコードが検証されるたびにインデックスを更新しなければならないので、このオペレーションは相当な時間を要する可能性があります。インデックスを事前に無効化しておくことでオペレーションの飛躍的にスピードアップさせることが出来ます。
 
-オペレーションが終了した後にインデックスを再開させるためには、 *aTable* に [RESUME INDEXES](resume-indexes.md) コマンドをしようします。 
+オペレーションが終了した後にインデックスを再開させるためには、 *aTable* に [RESUME INDEXES](../commands/resume-indexes) コマンドをしようします。 
 
-**注:** [CREATE INDEX](create-index.md) コマンドと [DELETE INDEX](delete-index.md) コマンドを使用することによって似たような結果を得ることが出来ますが、そこには大きな違いがあります:
+**注:** [CREATE INDEX](../commands/create-index) コマンドと [DELETE INDEX](../commands/delete-index) コマンドを使用することによって似たような結果を得ることが出来ますが、そこには大きな違いがあります:
 
-* *aTable* のそれぞれのインデックスに対して[DELETE INDEX](delete-index.md) / [CREATE INDEX](create-index.md) コマンドを呼び出す必要があります。
-* [DELETE INDEX](delete-index.md) / [CREATE INDEX](create-index.md) コマンドを呼び出すと、インデックスの内部番号が変わりますが、**PAUSE INDEXES** / [RESUME INDEXES](resume-indexes.md) ではその限りではありません。インデックス番号が変わると、データセットを変更するときにデータの自動再インデックスが生成されます。
+* *aTable* のそれぞれのインデックスに対して[DELETE INDEX](../commands/delete-index) / [CREATE INDEX](../commands/create-index) コマンドを呼び出す必要があります。
+* [DELETE INDEX](../commands/delete-index) / [CREATE INDEX](../commands/create-index) コマンドを呼び出すと、インデックスの内部番号が変わりますが、**PAUSE INDEXES** / [RESUME INDEXES](../commands/resume-indexes) ではその限りではありません。インデックス番号が変わると、データセットを変更するときにデータの自動再インデックスが生成されます。
 
-**PAUSE INDEXES** コマンドをテーブルに使用し、 [RESUME INDEXES](resume-indexes.md) コマンドをそのテーブルに使用することなくデータベースを閉じた場合、このテーブルのインデックスはデータベースが再開したときに全て自動的にリビルドされます。
+**PAUSE INDEXES** コマンドをテーブルに使用し、 [RESUME INDEXES](../commands/resume-indexes) コマンドをそのテーブルに使用することなくデータベースを閉じた場合、このテーブルのインデックスはデータベースが再開したときに全て自動的にリビルドされます。
 
 **注:** このコマンドは4Dリモートからは実行することができません。
 
@@ -56,8 +56,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[DELETE INDEX](delete-index.md)  
-[RESUME INDEXES](resume-indexes.md)  
+[DELETE INDEX](../commands/delete-index)  
+[RESUME INDEXES](../commands/resume-indexes)  
 
 ## プロパティ
 

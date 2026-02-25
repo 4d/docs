@@ -1,4 +1,4 @@
----
+﻿---
 id: append-to-list
 title: APPEND TO LIST
 slug: /commands/append-to-list
@@ -45,8 +45,8 @@ displayed_sidebar: docs
 
 **Tips:**
 
-* リストに新規項目を挿入するには、 [INSERT IN LIST](insert-in-list.md)コマンドを使用します。既存の項目のテキストや、そのサブリスト、展開または縮小状態の変更を行うには、 [SET LIST ITEM](set-list-item.md)コマンドを使用します。
-* 新たに追加された項目のアピアランスを変更するには、[SET LIST ITEM PROPERTIES](set-list-item-properties.md)コマンドを使用します。
+* リストに新規項目を挿入するには、 [INSERT IN LIST](../commands/insert-in-list)コマンドを使用します。既存の項目のテキストや、そのサブリスト、展開または縮小状態の変更を行うには、 [SET LIST ITEM](../commands/set-list-item)コマンドを使用します。
+* 新たに追加された項目のアピアランスを変更するには、[SET LIST ITEM PROPERTIES](../commands/set-list-item-properties)コマンドを使用します。
 
 ## 例題 
 
@@ -170,10 +170,10 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[INSERT IN LIST](insert-in-list.md)  
-[SET LIST ITEM](set-list-item.md)  
-[SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
-[SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+[INSERT IN LIST](../commands/insert-in-list)  
+[SET LIST ITEM](../commands/set-list-item)  
+[SET LIST ITEM PARAMETER](../commands/set-list-item-parameter)  
+[SET LIST ITEM PROPERTIES](../commands/set-list-item-properties)  
 
 ## プロパティ
 

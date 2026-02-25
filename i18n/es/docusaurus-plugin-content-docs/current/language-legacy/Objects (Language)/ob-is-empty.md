@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-is-empty
 title: OB Is empty
 slug: /commands/ob-is-empty
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 ## Ejemplo 
 
-Estos son los diferentes resultados de este comando como también del comando [OB Is defined](ob-is-defined.md), dependiendo del contexto:
+Estos son los diferentes resultados de este comando como también del comando [OB Is defined](../commands/ob-is-defined), dependiendo del contexto:
 
 ```4d
  var $ref : Object
@@ -53,7 +53,7 @@ Estos son los diferentes resultados de este comando como también del comando [O
 
 ## Ver también 
 
-[OB Is defined](ob-is-defined.md)  
+[OB Is defined](../commands/ob-is-defined)  
 
 ## Propiedades
 

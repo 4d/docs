@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-three-states-checkbox
 title: OBJECT Get three states checkbox
 slug: /commands/object-get-three-states-checkbox
@@ -31,11 +31,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get three states checkbox.Summary-->**OBJECT Get three states checkbox**コマンドは、引数 *object* と *\** で指定したチェックボックスの"スリーステート"プロパティの、カレントの状態を返します。<!-- END REF-->
 
-スリーステートのプロパティは、プロパティリストを使用するか、同一プロセスにおいてであれば [OBJECT SET THREE STATES CHECKBOX](object-set-three-states-checkbox.md) を呼び出して設定することができます。
+スリーステートのプロパティは、プロパティリストを使用するか、同一プロセスにおいてであれば [OBJECT SET THREE STATES CHECKBOX](../commands/object-set-three-states-checkbox) を呼び出して設定することができます。
 
 ## 参照 
 
-[OBJECT SET THREE STATES CHECKBOX](object-set-three-states-checkbox.md)  
+[OBJECT SET THREE STATES CHECKBOX](../commands/object-set-three-states-checkbox)  
 
 ## プロパティ
 

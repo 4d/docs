@@ -1,4 +1,4 @@
----
+﻿---
 id: create-entity-selection
 title: Create entity selection
 slug: /commands/create-entity-selection
@@ -24,7 +24,7 @@ The `Create entity selection` command <!--REF #_command_.Create entity selection
 
 If the current selection is sorted, an [ordered](../../ORDA/dsMapping.md#ordered-or-unordered-entity-selection) entity selection is created (the order of the current selection is kept). If the current selection is unsorted, an unordered entity selection is created.
 
-If the *dsTable* is not exposed in [`ds`](ds.md), an error is returned. This command cannot be used with a Remote datastore.
+If the *dsTable* is not exposed in [`ds`](../commands/ds), an error is returned. This command cannot be used with a Remote datastore.
 
 In the optional *settings* parameter, you can pass an object containing the following property:
 
@@ -45,7 +45,7 @@ $employees:=Create entity selection([Employee])
 
 ## See also 
 
-[USE ENTITY SELECTION](use-entity-selection.md)<br/>[`dataClass.newSelection()`](../../API/DataClassClass.md#newselection)
+[USE ENTITY SELECTION](../commands/use-entity-selection)<br/>[`dataClass.newSelection()`](../../API/DataClassClass.md#newselection)
 
 ## Properties
 

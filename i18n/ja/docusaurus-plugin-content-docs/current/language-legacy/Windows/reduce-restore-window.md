@@ -1,4 +1,4 @@
----
+﻿---
 id: reduce-restore-window
 title: REDUCE RESTORE WINDOW
 slug: /commands/reduce-restore-window
@@ -38,9 +38,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Is window reduced](is-window-reduced.md)  
-[MAXIMIZE WINDOW](maximize-window.md)  
-[MINIMIZE WINDOW](minimize-window.md)  
+[Is window reduced](../commands/is-window-reduced)  
+[MAXIMIZE WINDOW](../commands/maximize-window)  
+[MINIMIZE WINDOW](../commands/minimize-window)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: idle
 title: IDLE
 slug: /commands/idle
@@ -52,7 +52,7 @@ con:
 ## Ver también 
 
 *Comandos del Compilador*  
-[ON EVENT CALL](on-event-call.md)  
+[ON EVENT CALL](../commands/on-event-call)  
 
 ## Propiedades
 

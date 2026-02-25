@@ -1,4 +1,4 @@
----
+﻿---
 id: http-set-certificates-folder
 title: HTTP SET CERTIFICATES FOLDER
 slug: /commands/http-set-certificates-folder
@@ -44,9 +44,9 @@ Passez dans *dossierCertificats* le chemin d’accès du dossier personnalisé c
 * (macOS) : Disk:Applications:myserv:folder
 * (Windows) : C:\\Applications\\myserv\\folder
 
-Lorsque cette commande a été exécutée, le nouveau chemin est immédiatement pris en compte par les commandes telles que [HTTP Request](http-request.md) exécutées ultérieurement (il n’est pas nécessaire de redémarrer l’application). Il est utilisé dans tous les process de la base.
+Lorsque cette commande a été exécutée, le nouveau chemin est immédiatement pris en compte par les commandes telles que [HTTP Request](../commands/http-request) exécutées ultérieurement (il n’est pas nécessaire de redémarrer l’application). Il est utilisé dans tous les process de la base.
 
-Si le dossier spécifié n’existe pas à l’emplacement défini ou si le chemin d’accès passé dans *dossierCertificats* est invalide, une erreur est générée, que vous pouvez intercepter à l’aide d’une méthode de gestion d’erreurs installée par la commande [ON ERR CALL](on-err-call.md). 
+Si le dossier spécifié n’existe pas à l’emplacement défini ou si le chemin d’accès passé dans *dossierCertificats* est invalide, une erreur est générée, que vous pouvez intercepter à l’aide d’une méthode de gestion d’erreurs installée par la commande [ON ERR CALL](../commands/on-err-call). 
 
 ## A propos des certificats SSL 
 
@@ -66,8 +66,8 @@ Vous souhaitez changer temporairement de dossier de certificats :
 
 ## Voir aussi 
 
-[GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
-[HTTP Get certificates folder](http-get-certificates-folder.md)  
+[GENERATE CERTIFICATE REQUEST](../commands/generate-certificate-request)  
+[HTTP Get certificates folder](../commands/http-get-certificates-folder)  
 
 ## Propriétés
 

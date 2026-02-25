@@ -1,4 +1,4 @@
----
+﻿---
 id: first-record
 title: FIRST RECORD
 slug: /commands/first-record
@@ -31,11 +31,11 @@ El siguiente ejemplo carga el primer registro de la tabla \[Clientes\]:
 
 ## Ver también 
 
-[Before selection](before-selection.md)  
-[End selection](end-selection.md)  
-[LAST RECORD](last-record.md)  
-[NEXT RECORD](next-record.md)  
-[PREVIOUS RECORD](previous-record.md)  
+[Before selection](../commands/before-selection)  
+[End selection](../commands/end-selection)  
+[LAST RECORD](../commands/last-record)  
+[NEXT RECORD](../commands/next-record)  
+[PREVIOUS RECORD](../commands/previous-record)  
 
 ## Propiedades
 

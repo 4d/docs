@@ -1,4 +1,4 @@
----
+﻿---
 id: http-set-certificates-folder
 title: HTTP SET CERTIFICATES FOLDER
 slug: /commands/http-set-certificates-folder
@@ -46,9 +46,9 @@ displayed_sidebar: docs
 
 自動的に作成されます。
 
-このコマンドが実行されると新しいパスはその後に実行される[HTTP Request](http-request.md) などのコマンドに対し、直ちに有効になります(アプリケーションを再起動する必要はありません)。このコマンドはデータベースの全てのプロセスで使用されます。
+このコマンドが実行されると新しいパスはその後に実行される[HTTP Request](../commands/http-request) などのコマンドに対し、直ちに有効になります(アプリケーションを再起動する必要はありません)。このコマンドはデータベースの全てのプロセスで使用されます。
 
-指定されたフォルダが定義された場所にない場合、または*certificatesFolder* に渡したパス名が有効でない場合、エラーが生成されます。このエラーは [ON ERR CALL](on-err-call.md) によって実装されたエラーハンドリングメソッドによって割り込むことができます。
+指定されたフォルダが定義された場所にない場合、または*certificatesFolder* に渡したパス名が有効でない場合、エラーが生成されます。このエラーは [ON ERR CALL](../commands/on-err-call) によって実装されたエラーハンドリングメソッドによって割り込むことができます。
 
 ## SSL 証明書について 
 
@@ -68,8 +68,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
-[HTTP Get certificates folder](http-get-certificates-folder.md)  
+[GENERATE CERTIFICATE REQUEST](../commands/generate-certificate-request)  
+[HTTP Get certificates folder](../commands/http-get-certificates-folder)  
 
 ## プロパティ
 

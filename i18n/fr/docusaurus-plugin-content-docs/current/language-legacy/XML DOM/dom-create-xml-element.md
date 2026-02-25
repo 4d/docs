@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-create-xml-element
 title: DOM Create XML element
 slug: /commands/dom-create-xml-element
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Create XML element.Summary-->La commande **DOM Create XML element** permet de créer un nouvel élément dans l’élément XML *refElément*, à l’emplacement du noeud désigné par le paramètre *xPath*, et de lui ajouter éventuellement des attributs.<!-- END REF-->
 
-Passez dans *refElément* la référence de l’élément racine (créé par exemple à l’aide de la commande [DOM Create XML Ref](dom-create-xml-ref.md)).
+Passez dans *refElément* la référence de l’élément racine (créé par exemple à l’aide de la commande [DOM Create XML Ref](../commands/dom-create-xml-ref)).
 
 Passez dans *xPath* le chemin de l’élément à créer, exprimé à l'aide de la notation XPath (pour plus d'informations, reportez-vous à la section *Utilisation de la notation XPath*). Les expressions de chemin suivantes sont prises en charge :
 
@@ -50,7 +50,7 @@ Il est possible de passer directement dans *xPath* un nom d'élément simple afi
 
 Si des éléments de chemin n'existent pas, ils sont alors créés. Si les éléments de chemin existent déjà, un nouveau noeud est ajouté.
 
-**Note :** Si vous avez défini un ou plusieurs espace(s) de nommage pour l’arbre désigné par *refElément* (cf. commande [DOM Create XML Ref](dom-create-xml-ref.md)), vous devez préfixer le paramètre *xPath* du nom de l’espace à utiliser (par exemple “MonNameSpace:MonElément”).
+**Note :** Si vous avez défini un ou plusieurs espace(s) de nommage pour l’arbre désigné par *refElément* (cf. commande [DOM Create XML Ref](../commands/dom-create-xml-ref)), vous devez préfixer le paramètre *xPath* du nom de l’espace à utiliser (par exemple “MonNameSpace:MonElément”).
 
 Vous pouvez passer dans les paramètres facultatifs *nomAttribut* et *valeurAttribut* un couple attribut / valeur d’attribut (sous forme de variables, champs ou valeurs littérales). Vous pouvez passer autant de couples que vous voulez.   
   
@@ -161,9 +161,9 @@ Une erreur est générée lorsque :
 
 ## Voir aussi 
 
-[DOM Create XML element arrays](dom-create-xml-element-arrays.md)  
-[DOM Get XML element](dom-get-xml-element.md)  
-[DOM REMOVE XML ELEMENT](dom-remove-xml-element.md)  
+[DOM Create XML element arrays](../commands/dom-create-xml-element-arrays)  
+[DOM Get XML element](../commands/dom-get-xml-element)  
+[DOM REMOVE XML ELEMENT](../commands/dom-remove-xml-element)  
 
 ## Propriétés
 

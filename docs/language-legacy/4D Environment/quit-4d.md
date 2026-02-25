@@ -1,4 +1,4 @@
----
+﻿---
 id: quit-4d
 title: QUIT 4D
 slug: /commands/quit-4d
@@ -36,15 +36,15 @@ The command processing is different whether it is executed on 4D (local or remot
 
 After you call QUIT 4D, the current process stops its execution, then 4D acts as follows:
 
-* If there is an [On Exit database method](on-exit-database-method.md), 4D starts executing this method within a newly created local process. For example, you can use this database method to inform other processes, via interprocess communication, that they must close (data entry) or stop the execution of operations started by the [On Startup database method](on-startup-database-method.md) (connection from 4D to another database server). Note that 4D will eventually quit; the [On Exit database method](on-exit-database-method.md) can perform all the cleanup or closing operations you wish, but cannot refuse the quit and will at some point end.
-* If there is no [On Exit database method](on-exit-database-method.md), 4D aborts each running process one by one, without distinction.
+* If there is an [On Exit database method](../commands/on-exit-database-method), 4D starts executing this method within a newly created local process. For example, you can use this database method to inform other processes, via interprocess communication, that they must close (data entry) or stop the execution of operations started by the [On Startup database method](../commands/on-startup-database-method) (connection from 4D to another database server). Note that 4D will eventually quit; the [On Exit database method](../commands/on-exit-database-method) can perform all the cleanup or closing operations you wish, but cannot refuse the quit and will at some point end.
+* If there is no [On Exit database method](../commands/on-exit-database-method), 4D aborts each running process one by one, without distinction.
 
 If the user is performing data entry, the records will be cancelled and not saved.
 
 If you want to let the user save data entry modifications made in the current open windows, you can use interprocess communication to signal all the other user processes that the database is going to be exited. To do so, you can adopt two strategies:
 
 * Perform these operations from within the current process before calling QUIT 4D
-* Handle these operations from within the [On Exit database method](on-exit-database-method.md).
+* Handle these operations from within the [On Exit database method](../commands/on-exit-database-method).
 
 A third strategy is also possible. Before calling QUIT 4D, you check whether a window will need validation; if that is the case, you ask the user to validate or cancel these windows and then to choose Quit again. However, from a user interface standpoint, the first two strategies are preferable.
 
@@ -79,7 +79,7 @@ The project method listed here is associated with the Quit or Exit menu item in 
 
 ## See also 
 
-[On Exit database method](on-exit-database-method.md)  
+[On Exit database method](../commands/on-exit-database-method)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: post-outside-call
 title: POST OUTSIDE CALL
 slug: /commands/post-outside-call
@@ -42,21 +42,21 @@ Si *proceso* (el proceso llamado) no está mostrando un formulario actualmente, 
 
 **Nota:** la recepción del evento On Outside Call en un formulario de entrada provoca el cambio del contexto de entrada del formulario. En particular, si un campo estaba siendo editado, se genera el evento On Data Change. 
 
-El proceso llamante (el proceso en el cual el comando **POST OUTSIDE CALL** se ejecuta) no “espera”, **POST OUTSIDE CALL** tiene un efecto inmediato. Si es necesario, debe escribir un bucle de espera para tratar una eventual respuesta del proceso llamante, utilizando las variables interproceso o las variables proceso (reservadas para este propósito) que pueden ser leídas y escritas entre los dos procesos (utilizando [GET PROCESS VARIABLE](get-process-variable.md) y [SET PROCESS VARIABLE](set-process-variable.md)).
+El proceso llamante (el proceso en el cual el comando **POST OUTSIDE CALL** se ejecuta) no “espera”, **POST OUTSIDE CALL** tiene un efecto inmediato. Si es necesario, debe escribir un bucle de espera para tratar una eventual respuesta del proceso llamante, utilizando las variables interproceso o las variables proceso (reservadas para este propósito) que pueden ser leídas y escritas entre los dos procesos (utilizando [GET PROCESS VARIABLE](../commands/get-process-variable) y [SET PROCESS VARIABLE](../commands/set-process-variable)).
 
-Para comunicarse entre procesos que no muestran formularios, utilice los comandos [GET PROCESS VARIABLE](get-process-variable.md) y [SET PROCESS VARIABLE](set-process-variable.md).
+Para comunicarse entre procesos que no muestran formularios, utilice los comandos [GET PROCESS VARIABLE](../commands/get-process-variable) y [SET PROCESS VARIABLE](../commands/set-process-variable).
 
 **Tip:** **POST OUTSIDE CALL** acepta la sintaxis alterna **POST OUTSIDE CALL**(-1). Para no volver lenta la ejecución de los métodos, 4D no rediseña las variables interproceso cada vez que son modificadas. Si pasa -1 en lugar de un número de referencia de proceso en el parámetro *proceso*, 4D no llama ningún proceso. En lugar de eso, rediseña todas las variables interproceso mostradas actualmente en todas las ventanas de todos los procesos que se ejecutan en el mismo equipo.
 
 ## Ejemplo 
 
-Ver el ejemplo de la sección [Semáforo](semaphore.md).
+Ver el ejemplo de la sección [Semáforo](../commands/semaphore).
 
 ## Ver también 
 
 [Form event code](../commands/form-event-code)  
-[GET PROCESS VARIABLE](get-process-variable.md)  
-[SET PROCESS VARIABLE](set-process-variable.md)  
+[GET PROCESS VARIABLE](../commands/get-process-variable)  
+[SET PROCESS VARIABLE](../commands/set-process-variable)  
 
 ## Propiedades
 

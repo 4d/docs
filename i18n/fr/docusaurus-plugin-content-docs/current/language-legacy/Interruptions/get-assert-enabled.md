@@ -1,4 +1,4 @@
----
+﻿---
 id: get-assert-enabled
 title: Get assert enabled
 slug: /commands/get-assert-enabled
@@ -27,15 +27,15 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Get assert enabled.Summary-->La commande **Get assert enabled** retourne Vrai ou Faux suivant que les assertions sont actives ou non dans le process courant.<!-- END REF--> Pour plus d’informations sur les assertions, reportez-vous à la description de la commande [ASSERT](assert.md). 
+<!--REF #_command_.Get assert enabled.Summary-->La commande **Get assert enabled** retourne Vrai ou Faux suivant que les assertions sont actives ou non dans le process courant.<!-- END REF--> Pour plus d’informations sur les assertions, reportez-vous à la description de la commande [ASSERT](../commands/assert). 
 
-Par défaut, les assertions sont actives mais elles peuvent avoir été désactivées à l’aide de la commande [SET ASSERT ENABLED](set-assert-enabled.md). 
+Par défaut, les assertions sont actives mais elles peuvent avoir été désactivées à l’aide de la commande [SET ASSERT ENABLED](../commands/set-assert-enabled). 
 
 ## Voir aussi 
 
-[ASSERT](assert.md)  
-[Asserted](asserted.md)  
-[SET ASSERT ENABLED](set-assert-enabled.md)  
+[ASSERT](../commands/assert)  
+[Asserted](../commands/asserted)  
+[SET ASSERT ENABLED](../commands/set-assert-enabled)  
 
 ## Propriétés
 

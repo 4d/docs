@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-set-null
 title: OB SET NULL
 slug: /commands/ob-set-null
@@ -49,9 +49,9 @@ Queremos colocar o valor nulo na propriedade "idade" para Lea:
 
 ## Ver também 
 
-[Null](null.md)  
-[OB GET PROPERTY NAMES](ob-get-property-names.md)  
-[OB SET](ob-set.md)  
+[Null](../commands/null)  
+[OB GET PROPERTY NAMES](../commands/ob-get-property-names)  
+[OB SET](../commands/ob-set)  
 
 ## Propriedades
 

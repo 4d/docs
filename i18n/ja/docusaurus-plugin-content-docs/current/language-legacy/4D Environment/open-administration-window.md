@@ -1,4 +1,4 @@
----
+﻿---
 id: open-administration-window
 title: OPEN ADMINISTRATION WINDOW
 slug: /commands/open-administration-window
@@ -60,7 +60,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OPEN SECURITY CENTER](open-security-center.md)  
+[OPEN SECURITY CENTER](../commands/open-security-center)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: exp
 title: Exp
 slug: /commands/exp
@@ -32,7 +32,7 @@ O exemplo a seguir atribui a exponencial de 1 a *vrE* (o log de *vrE* é 1):
 
 ## Ver também 
 
-[Log](log.md)  
+[Log](../commands/log)  
 
 ## Propriedades
 

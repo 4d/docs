@@ -1,4 +1,4 @@
----
+﻿---
 id: load-record
 title: LOAD RECORD
 slug: /commands/load-record
@@ -34,8 +34,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Locked](locked.md)  
-[UNLOAD RECORD](unload-record.md)  
+[Locked](../commands/locked)  
+[UNLOAD RECORD](../commands/unload-record)  
 *レコードのロック*  
 
 ## プロパティ

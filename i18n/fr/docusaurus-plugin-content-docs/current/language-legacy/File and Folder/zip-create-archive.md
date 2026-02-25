@@ -1,4 +1,4 @@
----
+﻿---
 id: zip-create-archive
 slug: /commands/zip-create-archive
 title: ZIP Create archive
@@ -52,7 +52,7 @@ Vous pouvez passer un objet 4D.File, 4D.Folder, ou une structure Zip en tant que
 
 Dans le paramètre *destinationFile*, passez un objet `4D.File` décrivant l'archive ZIP à créer (nom, emplacement, etc.). Il est conseillé d'utiliser l'extension ".zip" si vous souhaitez que l'archive ZIP soit traitée automatiquement par un logiciel.
 
-Une fois que l'archive est créée, vous pouvez utiliser la commande [ZIP Read archive](zip-read-archive.md) pour y accéder.
+Une fois que l'archive est créée, vous pouvez utiliser la commande [ZIP Read archive](../commands/zip-read-archive) pour y accéder.
 
 **Status object**
 
@@ -163,7 +163,7 @@ $err:=ZIP Create archive($zip; $destination)
 [ZipArchive Class](../../API/ZipArchiveClass.md)
 [ZipFile Class](../../API/ZipFileClass.md)
 [ZipFolder Class](../../API/ZipFolderClass.md)
-[`ZIP Read archive`](zip-read-archive.md)
+[`ZIP Read archive`](../commands/zip-read-archive)
 
 ## Propriétés
 

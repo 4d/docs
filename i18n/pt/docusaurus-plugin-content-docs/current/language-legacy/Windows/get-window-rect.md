@@ -1,4 +1,4 @@
----
+﻿---
 id: get-window-rect
 title: GET WINDOW RECT
 slug: /commands/get-window-rect
@@ -42,12 +42,12 @@ As coordenadas retornadas são expressadas em relação ao canto superior esquer
 
 ## Exemplo 
 
-Ver o exemplo do comando [WINDOW LIST](window-list.md)..
+Ver o exemplo do comando [WINDOW LIST](../commands/window-list)..
 
 ## Ver também 
 
-[CONVERT COORDINATES](convert-coordinates.md)  
-[SET WINDOW RECT](set-window-rect.md)  
+[CONVERT COORDINATES](../commands/convert-coordinates)  
+[SET WINDOW RECT](../commands/set-window-rect)  
 
 ## Propriedades
 

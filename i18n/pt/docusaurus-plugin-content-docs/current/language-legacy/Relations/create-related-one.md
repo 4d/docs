@@ -1,4 +1,4 @@
----
+﻿---
 id: create-related-one
 title: CREATE RELATED ONE
 slug: /commands/create-related-one
@@ -25,7 +25,7 @@ Se já existe um registro relacionado, CREATE RELATED ONE atua como [RELATE ONE]
 
 ## Ver também 
 
-[SAVE RELATED ONE](save-related-one.md)  
+[SAVE RELATED ONE](../commands/save-related-one)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: table-name
 title: Table name
 slug: /commands/table-name
@@ -35,11 +35,11 @@ O seguinte é um exemplo de um método genérico que mostra os registros de uma 
 
 ## Ver também 
 
-[Field name](field-name.md)  
-[Last table number](last-table-number.md)  
-[SET FIELD TITLES](set-field-titles.md)  
-[SET TABLE TITLES](set-table-titles.md)  
-[Table](table.md)  
+[Field name](../commands/field-name)  
+[Last table number](../commands/last-table-number)  
+[SET FIELD TITLES](../commands/set-field-titles)  
+[SET TABLE TITLES](../commands/set-table-titles)  
+[Table](../commands/table)  
 
 ## Propriedades
 

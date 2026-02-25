@@ -1,4 +1,4 @@
----
+﻿---
 id: set-field-titles
 title: SET FIELD TITLES
 slug: /commands/set-field-titles
@@ -60,7 +60,7 @@ Utilice el comando **SET FIELD TITLES** para:
 
 * **SET FIELD TITLES** NO anula el efecto de la propiedad invisible de un campo. Cuando un campo se define para que sea invisible al nivel de la estructura, no aparecerá en modo Aplicación, aunque se incluya en una llamada a **SET FIELD TITLES**.
 * Los plug-ins siempre acceden a la estructura "virtual" como está especificado por este comando.
-* Si se llama el comando [SET TABLE TITLES](set-table-titles.md) sin parámetros, la estructura "virtual" (incluyendo los nombres de tablas y campos personalizados) se elimina completamente del entorno Aplicación.
+* Si se llama el comando [SET TABLE TITLES](../commands/set-table-titles) sin parámetros, la estructura "virtual" (incluyendo los nombres de tablas y campos personalizados) se elimina completamente del entorno Aplicación.
 
 ## Ejemplo 
 
@@ -68,11 +68,11 @@ Ver el ejemplo del comando [SET TABLE TITLES](set-table-titles.md "SET TABLE TIT
 
 ## Ver también 
 
-[Field name](field-name.md)  
-[GET FIELD TITLES](get-field-titles.md)  
-[Last field number](last-field-number.md)  
-[Parse formula](parse-formula.md)  
-[SET TABLE TITLES](set-table-titles.md)  
+[Field name](../commands/field-name)  
+[GET FIELD TITLES](../commands/get-field-titles)  
+[Last field number](../commands/last-field-number)  
+[Parse formula](../commands/parse-formula)  
+[SET TABLE TITLES](../commands/set-table-titles)  
 
 ## Propiedades
 

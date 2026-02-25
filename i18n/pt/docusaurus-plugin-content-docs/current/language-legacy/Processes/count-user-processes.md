@@ -1,4 +1,4 @@
----
+﻿---
 id: count-user-processes
 title: Count user processes
 slug: /commands/count-user-processes
@@ -32,8 +32,8 @@ displayed_sidebar: docs
 
 ## Ver também 
 
-[Count tasks](count-tasks.md)  
-[Count users](count-users.md)  
+[Count tasks](../commands/count-tasks)  
+[Count users](../commands/count-users)  
 
 ## Propriedades
 

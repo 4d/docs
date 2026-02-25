@@ -1,4 +1,4 @@
----
+﻿---
 id: array-time
 title: ARRAY TIME
 slug: /commands/array-time
@@ -42,7 +42,7 @@ When you apply the **ARRAY TIME** command to an existing array:
 * If you enlarge its size, existing elements are not changed and new elements are initialized to the null time value (00:00:00).
 * If you reduce its size, elements at the "bottom" of the array are deleted and lost.
 
-When you apply [SELECTION TO ARRAY](selection-to-array.md) or [SELECTION RANGE TO ARRAY](selection-range-to-array.md) to a Time type field, note that they only create a Time type array if the array has not already been defined as another type, such as Longint for example. 
+When you apply [SELECTION TO ARRAY](../commands/selection-to-array) or [SELECTION RANGE TO ARRAY](../commands/selection-range-to-array) to a Time type field, note that they only create a Time type array if the array has not already been defined as another type, such as Longint for example. 
 
 ## Example 1 
 
@@ -74,7 +74,7 @@ Since time arrays accept numeric values, the following code is valid:
 ## See also 
 
 *Creating Arrays*  
-[Time](time.md)  
+[Time](../commands/time)  
 
 ## Properties
 

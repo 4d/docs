@@ -1,4 +1,4 @@
----
+﻿---
 id: picture-codec-list
 title: PICTURE CODEC LIST
 slug: /commands/picture-codec-list
@@ -40,13 +40,13 @@ Les identifiants des codecs peuvent être retournés dans le tableau *tabCodecs*
 
 La forme renvoyée par la commande dépend du mode de déclaration du codec au niveau du système d’exploitation. Le tableau facultatif *tabNoms* permet de récupérer le nom de chaque codec. Ces noms sont plus explicites que les identifiants. Ce tableau permet par exemple de construire et d’afficher un menu listant les codecs disponibles.
 
-Par défaut, si vous ne passez pas le paramètre *\**, la commande retourne uniquement les codecs utilisables pour encoder (écrire) les images. Ces identifiants peuvent être utilisés dans le paramètre *format* des commandes d’exportation d’images [WRITE PICTURE FILE](write-picture-file.md) et [PICTURE TO BLOB](picture-to-blob.md).  
+Par défaut, si vous ne passez pas le paramètre *\**, la commande retourne uniquement les codecs utilisables pour encoder (écrire) les images. Ces identifiants peuvent être utilisés dans le paramètre *format* des commandes d’exportation d’images [WRITE PICTURE FILE](../commands/write-picture-file) et [PICTURE TO BLOB](../commands/picture-to-blob).  
  Si vous passez le paramètre *\**, la commande retourne également la liste des codecs utilisables pour décoder (lire) les images. Les deux listes ne sont pas exclusives, certains codecs de lecture et d’écriture sont identiques. Les codecs destinés à l’encodage des images pourront généralement être utilisés pour le décodage. En revanche, les codecs de décodage ne permettent pas forcément l’encodage. Par exemple, le codec ".jpg" sera présent dans les deux listes, tandis que le codec ".xbmp" sera présent dans la liste des codecs de lecture mais dans celle d’écriture.
 
 ## Voir aussi 
 
 *Introduction aux images*  
-[Is picture file](is-picture-file.md)  
+[Is picture file](../commands/is-picture-file)  
 
 ## Propriétés
 

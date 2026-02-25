@@ -1,4 +1,4 @@
----
+﻿---
 id: new-shared-collection
 title: New shared collection
 slug: /commands/new-shared-collection
@@ -69,7 +69,7 @@ Esta función modifica la colección original.
 
 ## Ver también
 
-[New collection](new-collection.md)\
+[New collection](../commands/new-collection)\
 [New shared object](../commands/new-shared-object)\
 *Shared objects and shared collections*
 

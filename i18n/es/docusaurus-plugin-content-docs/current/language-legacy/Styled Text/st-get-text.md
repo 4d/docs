@@ -1,4 +1,4 @@
----
+﻿---
 id: st-get-text
 title: ST Get text
 slug: /commands/st-get-text
@@ -71,9 +71,9 @@ En caso de error, no cambia la variable. Cuando ocurre un error en una variable 
 
 #### Ver también 
 
-[ST Get plain text](st-get-plain-text.md)  
-[ST SET TEXT](st-set-text.md)  
-[TEXT TO ARRAY](text-to-array.md)  
+[ST Get plain text](../commands/st-get-plain-text)  
+[ST SET TEXT](../commands/st-set-text)  
+[TEXT TO ARRAY](../commands/text-to-array)  
 
 #### Propiedades
 

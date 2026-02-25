@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-set
 title: OB SET
 slug: /commands/ob-set
@@ -41,7 +41,7 @@ displayed_sidebar: docs
 
 *value* 引数には、プロパティに設定したい値を渡して下さい。渡せる値としては複数の型がサポートされています。渡す際には以下のことに注意して下さい:
 
-* ポインターを渡した場合、それはそのままの形で保存されます。値を解決するためには [JSON Stringify](json-stringify.md) コマンドを使用します。
+* ポインターを渡した場合、それはそのままの形で保存されます。値を解決するためには [JSON Stringify](../commands/json-stringify) コマンドを使用します。
 * 日付を渡した場合、カレントのデータベース日付設定によって日付型あるいはISOフォーマットのテキストとして保存されます。詳細な情報については、*互換性ページ*内の"オブジェクトではISO日付フォーマットの代わりに日付型を使用する"オプションを参照してください。
 * 時間を渡した場合、*object* 内に秒数(実数)として保存されます。
 * ランゲージオブジェクトまたはコレクションを渡した場合、コマンドはオブジェクトの参照を使用し、実際にコピーを作成するわけではありません。このため、オブジェクトまたはコレクションを編集した場合、同参照の使用先すべてに影響します。
@@ -153,7 +153,7 @@ displayed_sidebar: docs
 
 ## 例題 9 
 
-4D日付を、タイムゾーン情報を含まない文字列に変換してJSONにデータを書き出したい場合を考えます。変換が起きるのは日付がオブジェクトに保存されたときなので、 [OB SET](ob-set.md)コマンドが呼び出される前に [SET DATABASE PARAMETER](set-database-parameter.md)コマンドを使用する必要があることに注意して下さい:  
+4D日付を、タイムゾーン情報を含まない文字列に変換してJSONにデータを書き出したい場合を考えます。変換が起きるのは日付がオブジェクトに保存されたときなので、 [OB SET](../commands/ob-set)コマンドが呼び出される前に [SET DATABASE PARAMETER](../commands/set-database-parameter)コマンドを使用する必要があることに注意して下さい:  
   
 ```4d
  var $o : Object
@@ -208,10 +208,10 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OB Get](ob-get.md)  
-[OB REMOVE](ob-remove.md)  
-[OB SET ARRAY](ob-set-array.md)  
-[OB SET NULL](ob-set-null.md)  
+[OB Get](../commands/ob-get)  
+[OB REMOVE](../commands/ob-remove)  
+[OB SET ARRAY](../commands/ob-set-array)  
+[OB SET NULL](../commands/ob-set-null)  
 
 ## プロパティ
 

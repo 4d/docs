@@ -1,4 +1,4 @@
----
+﻿---
 id: tickcount
 title: Tickcount
 slug: /commands/tickcount
@@ -31,12 +31,12 @@ displayed_sidebar: docs
 
 ## Example 
 
-See example for the command [Milliseconds](milliseconds.md).
+See example for the command [Milliseconds](../commands/milliseconds).
 
 ## See also 
 
-[Current time](current-time.md)  
-[Milliseconds](milliseconds.md)  
+[Current time](../commands/current-time)  
+[Milliseconds](../commands/milliseconds)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: multi-sort-array
 title: MULTI SORT ARRAY
 slug: /commands/multi-sort-array
@@ -50,7 +50,7 @@ Les niveaux de tris sont déterminés par l’ordre dans lequel les tableaux son
 
 * **Seconde syntaxe : TABLEAU MULTI TRI (tabPointeurs; tabTris)**
 
-Cette syntaxe, plus complexe, est précieuse pour les développements génériques (par exemple, vous pouvez créer une méthode générique de tri des tableaux de tout type, ou encore générer l’équivalent d’un [SORT ARRAY](sort-array.md) générique).
+Cette syntaxe, plus complexe, est précieuse pour les développements génériques (par exemple, vous pouvez créer une méthode générique de tri des tableaux de tout type, ou encore générer l’équivalent d’un [SORT ARRAY](../commands/sort-array) générique).
 
 La paramètre *tabPointeurs* contient le nom d’un tableau de pointeurs de tableaux ; chaque élément de ce tableau est un pointeur désignant un tableau à trier. Les tris seront effectués dans l’ordre des pointeurs de tableaux défini par *tabPointeurs*. **Attention**, tous les tableaux pointés par *tabPointeurs* doivent avoir le même nombre d'éléments.
 
@@ -113,13 +113,13 @@ L’exemple suivant utilise la seconde syntaxe : il crée quatre tableaux et les
  MULTI SORT ARRAY(tab_Pointeurs;tab_Tris)
 ```
 
-Si vous souhaitez que le tableau des noms soit utilisé comme troisième critère de tri, il vous suffit d’assigner la valeur 1 à l’élément tab\_Tris{3}. Ou bien, si vous souhaitez que les tableaux soient triés uniquement sur le critère des villes, assignez la valeur 0 aux éléments tab\_Tris{2}, tab\_Tris{3} et tab\_Tris{4}. De cette manière, vous obtenez un résultat identique à [SORT ARRAY](sort-array.md)(tab\_Villes;tab\_Société;tab\_Noms;tab\_NumTel;>). 
+Si vous souhaitez que le tableau des noms soit utilisé comme troisième critère de tri, il vous suffit d’assigner la valeur 1 à l’élément tab\_Tris{3}. Ou bien, si vous souhaitez que les tableaux soient triés uniquement sur le critère des villes, assignez la valeur 0 aux éléments tab\_Tris{2}, tab\_Tris{3} et tab\_Tris{4}. De cette manière, vous obtenez un résultat identique à [SORT ARRAY](../commands/sort-array)(tab\_Villes;tab\_Société;tab\_Noms;tab\_NumTel;>). 
 
 ## Voir aussi 
 
-[ORDER BY](order-by.md)  
-[SELECTION TO ARRAY](selection-to-array.md)  
-[SORT ARRAY](sort-array.md)  
+[ORDER BY](../commands/order-by)  
+[SELECTION TO ARRAY](../commands/selection-to-array)  
+[SORT ARRAY](../commands/sort-array)  
 
 ## Propriétés
 

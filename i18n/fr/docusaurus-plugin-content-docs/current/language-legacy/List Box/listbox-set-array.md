@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-array
 title: LISTBOX SET ARRAY
 slug: /commands/listbox-set-array
@@ -78,8 +78,8 @@ Vous voulez associer un tableau de hauteurs de ligne à une list box :
 
 ## Voir aussi 
 
-[LISTBOX Get array](listbox-get-array.md)  
-[LISTBOX GET ARRAYS](listbox-get-arrays.md)  
+[LISTBOX Get array](../commands/listbox-get-array)  
+[LISTBOX GET ARRAYS](../commands/listbox-get-arrays)  
 
 ## Propriétés
 

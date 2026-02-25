@@ -1,4 +1,4 @@
----
+﻿---
 id: http-authenticate
 title: HTTP AUTHENTICATE
 slug: /commands/http-authenticate
@@ -38,7 +38,7 @@ Este comando se mantiene sólo por razones de compatibilidad. Ahora se recomiend
 
 <!--REF #_command_.HTTP AUTHENTICATE.Summary-->El comando **HTTP AUTHENTICATE** permite efectuar peticiones HTTP a los servidores que necesitan la autenticación de la aplicación cliente.<!-- END REF--> Los métodos BASIC y DIGEST son compatibles, así como también la presencia de un proxy.  
   
-En los parámetros *nombre* y *clave*, pase la información de identificación requerida(nombre de usuario y contraseña). Esta información se codifica y añade a la siguiente petición HTTP enviada utilizando el comando [HTTP Request](http-request.md) o [HTTP Get](http-get.md), de manera que es necesario llamar al comando **HTTP AUTHENTICATE** antes de cada petición HTTP.  
+En los parámetros *nombre* y *clave*, pase la información de identificación requerida(nombre de usuario y contraseña). Esta información se codifica y añade a la siguiente petición HTTP enviada utilizando el comando [HTTP Request](../commands/http-request) o [HTTP Get](../commands/http-get), de manera que es necesario llamar al comando **HTTP AUTHENTICATE** antes de cada petición HTTP.  
   
 El parámetro opcional *metodoAut* permite indicar el método de autenticación a utilizar. Puede pasar una de las siguientes constantes, del tema *HTTP Client*:
 
@@ -52,7 +52,7 @@ Si omite el parámetro *metodoAut* (o pasa 0), deja que el programa elija el mé
   
 Si pasa el parámetro *\**, indica que la información de autenticación se dirige a un proxy HTTP. Esta configuración debe implementarse cuando hay un proxy que requiere autenticación entre el cliente y el servidor HTTP. Si el servidor mismo se autentica, es necesaria una autenticación doble.
 
-Por defecto, la información de autenticación se conserva y reutiliza en el proceso actual. Sin embargo, es posible reiniciar esta información utilizando una opción del comando [HTTP SET OPTION](http-set-option.md). En este caso, será necesario ejecutar el comando **HTTP AUTHENTICATE** antes de cada llamada a [HTTP Request](http-request.md) o [HTTP Get](http-get.md).
+Por defecto, la información de autenticación se conserva y reutiliza en el proceso actual. Sin embargo, es posible reiniciar esta información utilizando una opción del comando [HTTP SET OPTION](../commands/http-set-option). En este caso, será necesario ejecutar el comando **HTTP AUTHENTICATE** antes de cada llamada a [HTTP Request](../commands/http-request) o [HTTP Get](../commands/http-get).
 
 ## Ejemplo 
 
@@ -68,7 +68,7 @@ Ejemplos de peticiones con autenticación:
 
 ## Ver también 
 
-[HTTP SET OPTION](http-set-option.md)  
+[HTTP SET OPTION](../commands/http-set-option)  
 
 ## Propiedades
 

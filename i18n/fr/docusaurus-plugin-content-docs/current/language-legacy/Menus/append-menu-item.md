@@ -1,4 +1,4 @@
----
+﻿---
 id: append-menu-item
 title: APPEND MENU ITEM
 slug: /commands/append-menu-item
@@ -59,11 +59,11 @@ Si vous ne passez pas le paramètre *\**, **APPEND MENU ITEM** vous permet d'ajo
 
 Si vous passez le paramètre *\**, les caractères "spéciaux" inclus dans les libellés des lignes (*; ( !*...) seront considérés comme des caractères standard et non comme des métacaractères. Ce principe vous permet de créer des lignes avec un libellé tel que "**Copier (spécial)...**" ou "**Chercher/Remplacer..."**. A noter que lorsque le paramètre *\** est passé, vous ne pouvez pas créer plusieurs lignes en un seul appel, le caractère ";" étant considéré comme un caractère standard. 
 
-**Note :** Les commandes [GET MENU ITEMS](get-menu-items.md) et [Get menu item](get-menu-item.md) retourneront ou non les métacaractères d’un libellé en fonction de son mode de création : s’il a été créé avec l’option *\**, les métacaractères seront retournés en tant que caractères standard.
+**Note :** Les commandes [GET MENU ITEMS](../commands/get-menu-items) et [Get menu item](../commands/get-menu-item) retourneront ou non les métacaractères d’un libellé en fonction de son mode de création : s’il a été créé avec l’option *\**, les métacaractères seront retournés en tant que caractères standard.
 
-Le paramètre facultatif *sousMenu* vous permet de désigner un menu comme ligne ajoutée et donc de définir un sous-menu hiérarchique. Vous devez passer dans ce paramètre une référence de menu (chaîne de type [RefMenu](# "Référence unique de menu (16 caractères alphanumériques)")) désignant un menu créé par exemple à l’aide de la commande [Create menu](create-menu.md). Si la commande ajoute plusieurs lignes de menus, le sous-menu est associé à la première ligne.
+Le paramètre facultatif *sousMenu* vous permet de désigner un menu comme ligne ajoutée et donc de définir un sous-menu hiérarchique. Vous devez passer dans ce paramètre une référence de menu (chaîne de type [RefMenu](# "Référence unique de menu (16 caractères alphanumériques)")) désignant un menu créé par exemple à l’aide de la commande [Create menu](../commands/create-menu). Si la commande ajoute plusieurs lignes de menus, le sous-menu est associé à la première ligne.
 
-**Important :** Les nouvelles lignes n'ont pas de méthodes ou d'actions associées. Vous devez leur associer une action ou une méthode via les commandes [SET MENU ITEM PROPERTY](set-menu-item-property.md) ou [SET MENU ITEM METHOD](set-menu-item-method.md) ou encore les gérer à partir d'une méthode formulaire qui utilise la fonction [Menu selected](menu-selected.md).
+**Important :** Les nouvelles lignes n'ont pas de méthodes ou d'actions associées. Vous devez leur associer une action ou une méthode via les commandes [SET MENU ITEM PROPERTY](../commands/set-menu-item-property) ou [SET MENU ITEM METHOD](../commands/set-menu-item-method) ou encore les gérer à partir d'une méthode formulaire qui utilise la fonction [Menu selected](../commands/menu-selected).
 
 ## Exemple 
 
@@ -87,9 +87,9 @@ Ensuite, dans toute méthode formulaire ou projet, vous pouvez écrire :
 
 ## Voir aussi 
 
-[DELETE MENU ITEM](delete-menu-item.md)  
-[INSERT MENU ITEM](insert-menu-item.md)  
-[SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
+[DELETE MENU ITEM](../commands/delete-menu-item)  
+[INSERT MENU ITEM](../commands/insert-menu-item)  
+[SET MENU ITEM PARAMETER](../commands/set-menu-item-parameter)  
 
 ## Propriétés
 

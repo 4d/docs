@@ -1,4 +1,4 @@
----
+﻿---
 id: window-kind
 title: Window kind
 slug: /commands/window-kind
@@ -43,13 +43,13 @@ Si vous omettez le paramètre *fenêtre*, **Window kind** s'applique à la fenê
 
 ## Exemple 
 
-Reportez-vous à l'exemple de la commande [WINDOW LIST](window-list.md).
+Reportez-vous à l'exemple de la commande [WINDOW LIST](../commands/window-list).
 
 ## Voir aussi 
 
-[GET WINDOW RECT](get-window-rect.md)  
-[Get window title](get-window-title.md)  
-[Window process](window-process.md)  
+[GET WINDOW RECT](../commands/get-window-rect)  
+[Get window title](../commands/get-window-title)  
+[Window process](../commands/window-process)  
 
 ## Propriétés
 

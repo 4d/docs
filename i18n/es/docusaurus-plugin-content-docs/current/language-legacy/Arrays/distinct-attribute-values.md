@@ -1,4 +1,4 @@
----
+﻿---
 id: distinct-attribute-values
 title: DISTINCT ATTRIBUTE VALUES
 slug: /commands/distinct-attribute-values
@@ -41,7 +41,7 @@ Después de la llamada, el tamaño del array es igual al número de valores dist
 
 ### Utilización de la propiedad virtual .length 
 
-Puede utilizar la propiedad virtual "longitud" con este comando. Está disponible automáticamente para todos los atributos de tipo array, y ofrece el tamaño del array, es decir, el número de elementos que contiene. Esta propiedad está diseñada para ser utilizada en búsquedas (ver **QUERY BY ATTRIBUTE**[QUERY BY ATTRIBUTE](query-by-attribute.md)). También se puede utilizar con el comando **DISTINCT ATTRIBUTE VALUES** para obtener los diferentes tamaños de array para un atributo.
+Puede utilizar la propiedad virtual "longitud" con este comando. Está disponible automáticamente para todos los atributos de tipo array, y ofrece el tamaño del array, es decir, el número de elementos que contiene. Esta propiedad está diseñada para ser utilizada en búsquedas (ver **QUERY BY ATTRIBUTE**[QUERY BY ATTRIBUTE](../commands/query-by-attribute)). También se puede utilizar con el comando **DISTINCT ATTRIBUTE VALUES** para obtener los diferentes tamaños de array para un atributo.
 
 ## Ejemplo 
 
@@ -75,7 +75,7 @@ El array *aLAges* obtiene los siguientes 9 elementos:
 ## Ver también 
 
   
-[DISTINCT ATTRIBUTE PATHS](distinct-attribute-paths.md)  
+[DISTINCT ATTRIBUTE PATHS](../commands/distinct-attribute-paths)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-document-property
 title: QR SET DOCUMENT PROPERTY
 slug: /commands/qr-set-document-property
@@ -45,7 +45,7 @@ Si la valeur du paramètre *propriété* ou *valeur* est incorrecte, l’erreur 
 
 ## Voir aussi 
 
-[QR Get document property](qr-get-document-property.md)  
+[QR Get document property](../commands/qr-get-document-property)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-export-to-file
 title: DOM EXPORT TO FILE
 slug: /commands/dom-export-to-file
@@ -45,9 +45,9 @@ Lors des opérations d'import et d'export, les caractères de saut de ligne peuv
 
 Par défaut, les fichiers XML sont écrits sans BOM (Byte order mask). 
 
-Vous pouvez contrôler le traitement des fins de ligne XML et du BOM à l'aide de la commande [XML SET OPTIONS](xml-set-options.md). 
+Vous pouvez contrôler le traitement des fins de ligne XML et du BOM à l'aide de la commande [XML SET OPTIONS](../commands/xml-set-options). 
 
-**Note de compatibilité** : Dans les bases /projets créés avec des versions de 4D allant jusqu'à la v19.x, 4D utilise par défaut CR comme caractère de fin de ligne sur macOS et ainsi qu'un BOM. Pour activer les nouveaux paramètres par défaut, vérifiez les paramètres de compatibilité (voir la page Compatibilité) ou utilisez la commande [XML SET OPTIONS](xml-set-options.md). 
+**Note de compatibilité** : Dans les bases /projets créés avec des versions de 4D allant jusqu'à la v19.x, 4D utilise par défaut CR comme caractère de fin de ligne sur macOS et ainsi qu'un BOM. Pour activer les nouveaux paramètres par défaut, vérifiez les paramètres de compatibilité (voir la page Compatibilité) ou utilisez la commande [XML SET OPTIONS](../commands/xml-set-options). 
 
 ## Exemple 
 
@@ -71,8 +71,8 @@ Une erreur est générée lorsque :
 
 ## Voir aussi 
 
-[DOM EXPORT TO VAR](dom-export-to-var.md)  
-[SVG EXPORT TO PICTURE](svg-export-to-picture.md)  
+[DOM EXPORT TO VAR](../commands/dom-export-to-var)  
+[SVG EXPORT TO PICTURE](../commands/svg-export-to-picture)  
 
 ## Propriétés
 

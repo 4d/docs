@@ -1,4 +1,4 @@
----
+﻿---
 id: list-to-array
 title: LIST TO ARRAY
 slug: /commands/list-to-array
@@ -40,7 +40,7 @@ Se não definir previamente o array como de tipo Alfa ou Texto, LIST TO ARRAY cr
 
 O parâmetro opcional *itemRefs* (um array de tipo numérico) retorna os números de referência dos elementos da lista. 
 
-É possível continuar utilizando LIST TO ARRAY para construir um array baseado nos elementos de primeiro nível de uma lista. Entretanto, este comando não lhe permite trabalhar com os elementos das sub-listas. Para trabalhar com listas hierárquicas, utilize os comandos de listas hierárquicas, em particular [Load list](load-list.md).
+É possível continuar utilizando LIST TO ARRAY para construir um array baseado nos elementos de primeiro nível de uma lista. Entretanto, este comando não lhe permite trabalhar com os elementos das sub-listas. Para trabalhar com listas hierárquicas, utilize os comandos de listas hierárquicas, em particular [Load list](../commands/load-list).
 
 ## Exemplo 1 
 
@@ -94,9 +94,9 @@ Se executa a seguinte instrução:
 
 ## Ver também 
 
-[ARRAY TO LIST](array-to-list.md)  
-[Load list](load-list.md)  
-[SAVE LIST](save-list.md)  
+[ARRAY TO LIST](../commands/array-to-list)  
+[Load list](../commands/load-list)  
+[SAVE LIST](../commands/save-list)  
 
 ## Propriedades
 

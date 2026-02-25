@@ -1,4 +1,4 @@
----
+﻿---
 id: subtotal
 title: Subtotal
 slug: /commands/subtotal
@@ -30,9 +30,9 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.Subtotal.Summary-->**Subtotal** は、現在または最後のブレークレベルにおける*data*の小計を返します。<!-- END REF-->**Subtotal** は、ソートされたセレクションを[PRINT SELECTION](print-selection.md) コマンドで印刷する場合と、デザインモードでプリント...メニューから印刷を行う場合にのみ機能します。*data*引数のタイプは実数、整数、倍長整数のいずれかでなければなりません。フォームのブレークエリアに変数を配置し、**Subtotal** の結果を代入します。
+<!--REF #_command_.Subtotal.Summary-->**Subtotal** は、現在または最後のブレークレベルにおける*data*の小計を返します。<!-- END REF-->**Subtotal** は、ソートされたセレクションを[PRINT SELECTION](../commands/print-selection) コマンドで印刷する場合と、デザインモードでプリント...メニューから印刷を行う場合にのみ機能します。*data*引数のタイプは実数、整数、倍長整数のいずれかでなければなりません。フォームのブレークエリアに変数を配置し、**Subtotal** の結果を代入します。
 
-**警告:** ブレーク処理を行ない、小計を計算するレポートを印刷する前に、[BREAK LEVEL](break-level.md) と[ACCUMULATE](accumulate.md) コマンドを実行しなければなりません。このコマンドの最後の説明を参照してください。
+**警告:** ブレーク処理を行ない、小計を計算するレポートを印刷する前に、[BREAK LEVEL](../commands/break-level) と[ACCUMULATE](../commands/accumulate) コマンドを実行しなければなりません。このコマンドの最後の説明を参照してください。
 
 **Subtotal** の2番目の引数 (オプション) で印刷中にページブレークを行わせることができます。*pageBreak*が0の場合、**Subtotal** は改ページを行いません。*pageBreak*が1の場合、**Subtotal** はレベル1の各ブレークに対して改ページを行います。*pageBreak*が2の場合、**Subtotal** はレベル1と2の各ブレークに対して改ページを行います。
 
@@ -40,7 +40,7 @@ displayed_sidebar: docs
 
 ## 例題 
 
-以下の例は、フォームのブレークエリア (B0、B0マーカの上のエリア) のオブジェクトメソッドです。*vSalary*変数はブレークエリアにあります。このブレークレベルが発生すると、変数に\[Employees\]Salaryフィールドの小計が代入されます。ブレーク処理は事前に[BREAK LEVEL](break-level.md) と [ACCUMULATE](accumulate.md) コマンドを使用して有効にされていなければなりません。
+以下の例は、フォームのブレークエリア (B0、B0マーカの上のエリア) のオブジェクトメソッドです。*vSalary*変数はブレークエリアにあります。このブレークレベルが発生すると、変数に\[Employees\]Salaryフィールドの小計が代入されます。ブレーク処理は事前に[BREAK LEVEL](../commands/break-level) と [ACCUMULATE](../commands/accumulate) コマンドを使用して有効にされていなければなりません。
 
 ```4d
  Case of
@@ -67,10 +67,10 @@ Subtotal関数はフォームに値を表示するために必要です。
 
 ## 参照 
 
-[ACCUMULATE](accumulate.md)  
-[BREAK LEVEL](break-level.md)  
-[Level](level.md)  
-[PRINT SELECTION](print-selection.md)  
+[ACCUMULATE](../commands/accumulate)  
+[BREAK LEVEL](../commands/break-level)  
+[Level](../commands/level)  
+[PRINT SELECTION](../commands/print-selection)  
 
 ## プロパティ
 

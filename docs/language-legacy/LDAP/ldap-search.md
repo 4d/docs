@@ -1,4 +1,4 @@
----
+﻿---
 id: ldap-search
 title: LDAP Search
 slug: /commands/ldap-search
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.LDAP Search.Summary-->The **LDAP Search** command searches in the target LDAP server for the first occurrence matching the criteria defined.<!-- END REF--> This command must be executed within a connection to an LDAP server opened with [LDAP LOGIN](ldap-login.md); otherwise a 1003 error is returned.
+<!--REF #_command_.LDAP Search.Summary-->The **LDAP Search** command searches in the target LDAP server for the first occurrence matching the criteria defined.<!-- END REF--> This command must be executed within a connection to an LDAP server opened with [LDAP LOGIN](../commands/ldap-login); otherwise a 1003 error is returned.
 
 In *dnRootEntry*, pass the *Distinguished Name* of the LDAP server root entry; the search will start at this entry.
 
@@ -94,7 +94,7 @@ We want to get an array of all entries found for the "memberOf" attribute:
 ## See also 
 
 *LDAP*  
-[LDAP SEARCH ALL](ldap-search-all.md)  
+[LDAP SEARCH ALL](../commands/ldap-search-all)  
 
 ## Properties
 

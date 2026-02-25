@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-focus-rectangle-invisible
 title: OBJECT SET FOCUS RECTANGLE INVISIBLE
 slug: /commands/object-set-focus-rectangle-invisible
@@ -39,7 +39,7 @@ Pase **True** en el parámetro *invisible* para ocultar el rectángulo de foco y
 
 ## Ver también 
 
-[OBJECT Get focus rectangle invisible](object-get-focus-rectangle-invisible.md)  
+[OBJECT Get focus rectangle invisible](../commands/object-get-focus-rectangle-invisible)  
 
 ## Propiedades
 

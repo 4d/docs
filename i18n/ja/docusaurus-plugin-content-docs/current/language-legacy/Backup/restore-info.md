@@ -1,4 +1,4 @@
----
+﻿---
 id: restore-info
 title: RESTORE INFO
 slug: /commands/restore-info
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[RESTORE](restore.md)  
+[RESTORE](../commands/restore)  
 
 ## プロパティ
 

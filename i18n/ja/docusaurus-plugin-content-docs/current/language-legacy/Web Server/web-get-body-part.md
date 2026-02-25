@@ -1,4 +1,4 @@
----
+﻿---
 id: web-get-body-part
 title: WEB GET BODY PART
 slug: /commands/web-get-body-part
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.WEB GET BODY PART.Summary-->**WEB GET BODY PART**コマンドはWebプロセスのコンテキストで使用され、マルチパートリクエストのボディ部を解析します。<!-- END REF-->引数には解析対象のパート番号を渡します。総パート数は[WEB Get body part count](web-get-body-part-count.md)コマンドで取得できます。
+<!--REF #_command_.WEB GET BODY PART.Summary-->**WEB GET BODY PART**コマンドはWebプロセスのコンテキストで使用され、マルチパートリクエストのボディ部を解析します。<!-- END REF-->引数には解析対象のパート番号を渡します。総パート数は[WEB Get body part count](../commands/web-get-body-part-count)コマンドで取得できます。
 
 *contents* 引数にはパートのコンテンツが返されます。取得するパートがファイルの場合、BLOB型の引数を渡さなければなりません。Webフォームから送信されるテキストデータの場合、テキスト型の引数を渡すことができます。 
 
@@ -40,7 +40,7 @@ displayed_sidebar: docs
 *mimeType* と *fileName* 引数には、送信されたファイルのMIMEタイプと名前が返されます。*fileName* はフォーム要素 **<input type="file">** を使用してファイルが送信された場合のみ値が返されます。  
 *mimeType* と *fileName* はオプションですが、使用する場合はペアで渡さなければなりません。
 
-**注:** マルチパートリクエストのコンテキストでは、[WEB GET VARIABLES](web-get-variables.md)コマンドで取得できる名前配列にはフォームのすべてのパートが含まれます。順番は**WEB GET BODY PART**コマンドと同じです。フォーム中のパートの位置を取得するためにこのコマンドを使用できます。
+**注:** マルチパートリクエストのコンテキストでは、[WEB GET VARIABLES](../commands/web-get-variables)コマンドで取得できる名前配列にはフォームのすべてのパートが含まれます。順番は**WEB GET BODY PART**コマンドと同じです。フォーム中のパートの位置を取得するためにこのコマンドを使用できます。
 
 **警告:** *mimeType* と *fileName* 引数に返される情報は、Webサーバーに送信されたHTTPリクエストに基づくもので、ファイルの内容は検証されません。それらの情報が正当であるかどうかの検証は開発者が行わなければなりません。
 
@@ -102,9 +102,9 @@ GetFileのコードは以下の通りです:
 
 ## 参照 
 
-[WEB Get body part count](web-get-body-part-count.md)  
-[WEB GET HTTP BODY](web-get-http-body.md)  
-[WEB GET VARIABLES](web-get-variables.md)  
+[WEB Get body part count](../commands/web-get-body-part-count)  
+[WEB GET HTTP BODY](../commands/web-get-http-body)  
+[WEB GET VARIABLES](../commands/web-get-variables)  
 
 ## プロパティ
 

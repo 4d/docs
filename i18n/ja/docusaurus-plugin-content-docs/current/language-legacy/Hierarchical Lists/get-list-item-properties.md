@@ -1,4 +1,4 @@
----
+﻿---
 id: get-list-item-properties
 title: GET LIST ITEM PROPERTIES
 slug: /commands/get-list-item-properties
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 *itemRef* に項目参照番号を渡すことができます。0を渡した場合、リストに最後に追加された項目が処理の対象となります。*\** を渡した場合、コマンドは現在選択されている項目を処理の対象とします。複数の項目が選択されている場合、カレントの項目は最後に選択された項目です。  
 \* を渡して項目が選択されていない場合や項目参照番号を渡してその項目が存在しない場合、コマンドはパラメーターを変更しません。
 
-項目参照番号を使用して作業を実行する場合、項目がユニークな参照番号を持つリストを作成します。そうでなければ、項目を区別できません。詳細については[APPEND TO LIST](append-to-list.md)の説明を参照してください。
+項目参照番号を使用して作業を実行する場合、項目がユニークな参照番号を持つリストを作成します。そうでなければ、項目を区別できません。詳細については[APPEND TO LIST](../commands/append-to-list)の説明を参照してください。
 
 呼出し後に、以下の値を取得できます:
 
@@ -54,17 +54,17 @@ displayed_sidebar: docs
    * ピクチャーファイルを使用してアイコンが指定されていた場合、コマンドは *icon* にピクチャーのパス名 ( **path:<filesystem path>** ) を返します。  
    * アイコンがライブラリピクチャー (バイナリデータベースのみ) を使用して指定されていた場合、コマンドはこの引数に渡された変数の型に応じ、ピクチャー名 ( **pictlib:<name>**) あるいは番号のいずれかを返します。なお、*icon* 変数の型を指定しなかった場合は、デフォルトでピクチャー名が返されます (テキスト)。アイコンが割り当てられていない場合、コマンドは空値を返します。  
          
-   **注:** [GET LIST ITEM ICON](get-list-item-icon.md) コマンドを使用すれば、ピクチャー変数にアイコンを取得できます。
+   **注:** [GET LIST ITEM ICON](../commands/get-list-item-icon) コマンドを使用すれば、ピクチャー変数にアイコンを取得できます。
 * *color*には項目のテキストカラーが返されます。
 
-これらのプロパティに関する詳細は、[SET LIST ITEM PROPERTIES](set-list-item-properties.md) コマンドの説明を参照してください。
+これらのプロパティに関する詳細は、[SET LIST ITEM PROPERTIES](../commands/set-list-item-properties) コマンドの説明を参照してください。
 
 ## 参照 
 
-[GET LIST ITEM](get-list-item.md)  
-[GET LIST ITEM ICON](get-list-item-icon.md)  
-[SET LIST ITEM](set-list-item.md)  
-[SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+[GET LIST ITEM](../commands/get-list-item)  
+[GET LIST ITEM ICON](../commands/get-list-item-icon)  
+[SET LIST ITEM](../commands/set-list-item)  
+[SET LIST ITEM PROPERTIES](../commands/set-list-item-properties)  
 
 ## プロパティ
 

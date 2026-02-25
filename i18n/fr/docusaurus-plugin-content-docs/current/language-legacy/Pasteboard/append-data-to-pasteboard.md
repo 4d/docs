@@ -1,4 +1,4 @@
----
+﻿---
 id: append-data-to-pasteboard
 title: APPEND DATA TO PASTEBOARD
 slug: /commands/append-data-to-pasteboard
@@ -37,13 +37,13 @@ Passez dans *typeDonnées* une valeur définissant le type de données à ajoute
 
 **Note pour les utilisateurs Windows :** Lorsque la commande est utilisée avec des données de type texte (*typeDonnées* vaut "TEXT", com.4d.private.text.native ou com.4d.private.text.utf16), la chaîne contenue dans le paramètre BLOB *données* doit se terminer par le caractère NULL sous Windows. 
 
-Généralement, vous utilisez la commande **APPEND DATA TO PASTEBOARD** pour placer plusieurs instances des mêmes données dans le conteneur de données ou pour y ajouter des valeurs qui ne sont pas du texte ou une image. Pour ajouter de nouvelles données au conteneur, il faut d'abord l'effacer à l'aide de la commande [CLEAR PASTEBOARD](clear-pasteboard.md). 
+Généralement, vous utilisez la commande **APPEND DATA TO PASTEBOARD** pour placer plusieurs instances des mêmes données dans le conteneur de données ou pour y ajouter des valeurs qui ne sont pas du texte ou une image. Pour ajouter de nouvelles données au conteneur, il faut d'abord l'effacer à l'aide de la commande [CLEAR PASTEBOARD](../commands/clear-pasteboard). 
 
 Si vous voulez effacer le conteneur et y ajouter :
 
-* du texte, utilisez la commande [SET TEXT TO PASTEBOARD](set-text-to-pasteboard.md),
-* une image, utilisez la commande [SET PICTURE TO PASTEBOARD](set-picture-to-pasteboard.md),
-* un chemin d'accès de fichier (glisser-déposer), utilisez la commande [SET FILE TO PASTEBOARD](set-file-to-pasteboard.md).
+* du texte, utilisez la commande [SET TEXT TO PASTEBOARD](../commands/set-text-to-pasteboard),
+* une image, utilisez la commande [SET PICTURE TO PASTEBOARD](../commands/set-picture-to-pasteboard),
+* un chemin d'accès de fichier (glisser-déposer), utilisez la commande [SET FILE TO PASTEBOARD](../commands/set-file-to-pasteboard).
 
 Notez cependant que si un BLOB contient du texte ou une image, vous pouvez utiliser la commande **APPEND DATA TO PASTEBOARD** pour y ajouter du texte ou une image.
 
@@ -219,9 +219,9 @@ Si les données dans le BLOB sont correctement ajoutées au conteneur, la variab
 
 ## Voir aussi 
 
-[CLEAR PASTEBOARD](clear-pasteboard.md)  
-[SET PICTURE TO PASTEBOARD](set-picture-to-pasteboard.md)  
-[SET TEXT TO PASTEBOARD](set-text-to-pasteboard.md)  
+[CLEAR PASTEBOARD](../commands/clear-pasteboard)  
+[SET PICTURE TO PASTEBOARD](../commands/set-picture-to-pasteboard)  
+[SET TEXT TO PASTEBOARD](../commands/set-text-to-pasteboard)  
 
 ## Propriétés
 

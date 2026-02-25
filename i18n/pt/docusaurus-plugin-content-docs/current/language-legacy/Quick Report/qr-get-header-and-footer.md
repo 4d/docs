@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-header-and-footer
 title: QR GET HEADER AND FOOTER
 slug: /commands/qr-get-header-and-footer
@@ -77,7 +77,7 @@ O código a seguir recupera o conteúdo e a altura do título do cabeçalho e os
 
 ## Ver também 
 
-[QR SET HEADER AND FOOTER](qr-set-header-and-footer.md)  
+[QR SET HEADER AND FOOTER](../commands/qr-set-header-and-footer)  
 
 ## Propriedades
 

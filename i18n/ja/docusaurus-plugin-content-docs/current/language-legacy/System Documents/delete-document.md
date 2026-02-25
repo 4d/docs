@@ -1,4 +1,4 @@
----
+﻿---
 id: delete-document
 title: DELETE DOCUMENT
 slug: /commands/delete-document
@@ -62,7 +62,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Test path name](test-path-name.md)  
+[Test path name](../commands/test-path-name)  
 
 ## プロパティ
 

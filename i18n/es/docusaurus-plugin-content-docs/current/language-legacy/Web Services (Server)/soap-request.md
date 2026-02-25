@@ -1,4 +1,4 @@
----
+﻿---
 id: soap-request
 title: SOAP request
 slug: /commands/soap-request
@@ -25,4 +25,4 @@ Este comando puede utilizarse por razones de seguridad en el *Método de base On
 
 #### Ver también 
 
-[SOAP DECLARATION](soap-declaration.md)  
+[SOAP DECLARATION](../commands/soap-declaration)  

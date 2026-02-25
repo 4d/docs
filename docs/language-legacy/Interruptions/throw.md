@@ -1,4 +1,4 @@
----
+﻿---
 id: throw
 title: throw
 slug: /commands/throw
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 When you encounter a situation in your 4D code where an error condition arises, you can use the **throw** command to explicitly throw an error and provide a specific error message or error number. This can be useful for signaling exceptional conditions or invalid inputs.
 
-Errors thrown using the **throw** command are managed by the 4D runtime as any normal error: the standard error dialog is displayed unless an interception method has been installed using the [ON ERR CALL](on-err-call.md) command.
+Errors thrown using the **throw** command are managed by the 4D runtime as any normal error: the standard error dialog is displayed unless an interception method has been installed using the [ON ERR CALL](../commands/on-err-call) command.
 
 The command supports three syntaxes:
 
@@ -63,10 +63,10 @@ When you use this syntax, the *errorObj* object is returned in [Last errors](../
 
 ### **throw** 
 
-It throws all current errors in **deferred mode**, meaning they will be added to a stack and handled when the calling method returns. This is typically done from within an [ON ERR CALL](on-err-call.md) callback.
+It throws all current errors in **deferred mode**, meaning they will be added to a stack and handled when the calling method returns. This is typically done from within an [ON ERR CALL](../commands/on-err-call) callback.
 
-* **In an application:** When an error occurs, it is added to the error stack and the [ON ERR CALL](on-err-call.md) method of the application is called at the end of the current method. The [Last errors](../commands/last-errors) function returns the stack of errors.
-* **As a consequence, in a component:** The stack of errors can be sent to the host application and the [ON ERR CALL](on-err-call.md) method of the host application is called.
+* **In an application:** When an error occurs, it is added to the error stack and the [ON ERR CALL](../commands/on-err-call) method of the application is called at the end of the current method. The [Last errors](../commands/last-errors) function returns the stack of errors.
+* **As a consequence, in a component:** The stack of errors can be sent to the host application and the [ON ERR CALL](../commands/on-err-call) method of the host application is called.
 
 ## Example 1 
 
@@ -110,9 +110,9 @@ throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFi
 
 ## See also 
 
-[ASSERT](assert.md)  
+[ASSERT](../commands/assert)  
 [Last errors](../commands/last-errors)  
-[ON ERR CALL](on-err-call.md)  
+[ON ERR CALL](../commands/on-err-call)  
 
 ## Properties
 

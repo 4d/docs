@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-borders
 title: QR SET BORDERS
 slug: /commands/qr-set-borders
@@ -86,7 +86,7 @@ Si le paramètre *épaisseur* est incorrect, l’erreur -9855 est générée.
 
 ## Voir aussi 
 
-[QR GET BORDERS](qr-get-borders.md)  
+[QR GET BORDERS](../commands/qr-get-borders)  
 
 ## Propriétés
 

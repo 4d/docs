@@ -1,4 +1,4 @@
----
+﻿---
 id: set-menu-item-property
 title: SET MENU ITEM PROPERTY
 slug: /commands/set-menu-item-property
@@ -57,7 +57,7 @@ Considere que no caso da propriedade Associated Standard Action, pode passar no 
   
 Note: se o item menu corresponder ao título do submenu hierárquico, a ação padrão não será chamada quando o item menu for selecionado
 
-Proprierdade personalizada - Nesta propriedade pode passar qualquer texto personalizado e associar um valor do texto, núemro ou tipo Booleano. Este valor será armazenado com o item e pode ser recuperado usando o comando [GET MENU ITEM PROPERTY](get-menu-item-property.md). Pode usar qualquer string personalziada na propriedade parâmetro, simplesmente tenha certeza de não usar um título usado por 4D (por convenção, propriedades estabelecidas por 4D começam com “4D\_”).
+Proprierdade personalizada - Nesta propriedade pode passar qualquer texto personalizado e associar um valor do texto, núemro ou tipo Booleano. Este valor será armazenado com o item e pode ser recuperado usando o comando [GET MENU ITEM PROPERTY](../commands/get-menu-item-property). Pode usar qualquer string personalziada na propriedade parâmetro, simplesmente tenha certeza de não usar um título usado por 4D (por convenção, propriedades estabelecidas por 4D começam com “4D\_”).
 
 ## Exemplo
 
@@ -73,8 +73,8 @@ Proprierdade personalizada - Nesta propriedade pode passar qualquer texto person
 
 ## Ver também 
 
-[Dynamic pop up menu](dynamic-pop-up-menu.md)  
-[GET MENU ITEM PROPERTY](get-menu-item-property.md)  
+[Dynamic pop up menu](../commands/dynamic-pop-up-menu)  
+[GET MENU ITEM PROPERTY](../commands/get-menu-item-property)  
 
 ## Propriedades
 

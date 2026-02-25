@@ -1,4 +1,4 @@
----
+﻿---
 id: font-list
 title: FONT LIST
 slug: /commands/font-list
@@ -44,7 +44,7 @@ Le paramètre *typeListe* vous permet de désigner le type de liste de police à
 Si vous passez le paramètre optionnel *\**, sous macOS la commande remplira le tableau *polices* avec les noms des polices elles-mêmes et non avec les noms des famillesde police. Le fonctionnement par défaut simplifie la gestion programmée des zones de texte multistyle, qui utilisent des familles de police. Si vous passez le paramètre *\**, les noms de police, par exemple "Arial bold", "Arial italic", "Arial narrow italic", seront retournés au lieu des familles "Arial", "Arial black" ou "Arial narrow".  
 Sous Windows, le paramètre *\** n’a aucun effet. La commande retourne toujours les familles de police.
 
-**Note :** Sous macOS, si vous utilisez le résultat de cette commande avec la commande [ST SET ATTRIBUTES](st-set-attributes.md) dans une zone de texte multistyle, il est impératif de ne pas passer le paramètre *\** (seuls les noms de familles sont acceptés comme Attribute font name). Cette limitation ne s'applique pas aux zones 4D Write Pro, qui acceptent des noms de polices ou des noms de familles. 
+**Note :** Sous macOS, si vous utilisez le résultat de cette commande avec la commande [ST SET ATTRIBUTES](../commands/st-set-attributes) dans une zone de texte multistyle, il est impératif de ne pas passer le paramètre *\** (seuls les noms de familles sont acceptés comme Attribute font name). Cette limitation ne s'applique pas aux zones 4D Write Pro, qui acceptent des noms de polices ou des noms de familles. 
 
 ### A propos des polices vectorielles 
 
@@ -82,10 +82,10 @@ Vous souhaitez obtenir la liste des polices récentes :
 
 ## Voir aussi 
 
-[FONT STYLE LIST](font-style-list.md)  
-[OBJECT SET FONT](object-set-font.md)  
-[SET RECENT FONTS](set-recent-fonts.md)  
-[ST SET ATTRIBUTES](st-set-attributes.md)  
+[FONT STYLE LIST](../commands/font-style-list)  
+[OBJECT SET FONT](../commands/object-set-font)  
+[SET RECENT FONTS](../commands/set-recent-fonts)  
+[ST SET ATTRIBUTES](../commands/st-set-attributes)  
 *Type de liste des polices*  
 
 ## Propriétés

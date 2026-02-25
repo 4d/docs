@@ -1,4 +1,4 @@
----
+﻿---
 id: adjust-blobs-cache-priority
 title: ADJUST BLOBS CACHE PRIORITY
 slug: /commands/adjust-blobs-cache-priority
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 **注:** このコマンドはローカルモード(4D Server と4D)でのみ動作します。リモートモードの4Dでは使用できません。
 
-"Blob"データフィールドには、BLOB、テキスト、ピクチャー、そしてオブジェクトが含まれます。このコマンドは、これらのデータがデータファイルにのみ保存されている場合に限りこれらの優先度を管理します。スカラー型のフィールド(日付、数値、文字列型)の優先度については、[ADJUST TABLE CACHE PRIORITY](adjust-table-cache-priority.md)コマンドを使用して調整します。
+"Blob"データフィールドには、BLOB、テキスト、ピクチャー、そしてオブジェクトが含まれます。このコマンドは、これらのデータがデータファイルにのみ保存されている場合に限りこれらの優先度を管理します。スカラー型のフィールド(日付、数値、文字列型)の優先度については、[ADJUST TABLE CACHE PRIORITY](../commands/adjust-table-cache-priority)コマンドを使用して調整します。
 
 *priority* 引数には、"*Cache Management*" テーマ内にある、以下の定数のうちのどれか一つを使用することができます:
 
@@ -62,8 +62,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Get adjusted blobs cache priority](get-adjusted-blobs-cache-priority.md)  
-[SET BLOBS CACHE PRIORITY](set-blobs-cache-priority.md)  
+[Get adjusted blobs cache priority](../commands/get-adjusted-blobs-cache-priority)  
+[SET BLOBS CACHE PRIORITY](../commands/set-blobs-cache-priority)  
 
 ## プロパティ
 

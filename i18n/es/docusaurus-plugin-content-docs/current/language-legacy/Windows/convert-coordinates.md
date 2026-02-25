@@ -1,4 +1,4 @@
----
+﻿---
 id: convert-coordinates
 title: CONVERT COORDINATES
 slug: /commands/convert-coordinates
@@ -41,11 +41,11 @@ En el parámetro *de*, pase el sistema de coordenadas inicial del punto de entra
 | XY Current form   | Entero largo | 1     | El origen es la esquina superior izquierda del formulario actual                                                                                                      |
 | XY Current window | Entero largo | 2     | El origen es la esquina superior izquierda de la ventana actual                                                                                                       |
 | XY Main window    | Entero largo | 4     | En Windows: origen es la esquina superior izquierda de la ventana principal; en macOS: igual que XY Screen                                                             |
-| XY Screen         | Entero largo | 3     | El origen es la esquina superior izquierda de la pantalla principal (igual que para el comando [SCREEN COORDINATES](screen-coordinates.md))<br/><br/> |
+| XY Screen         | Entero largo | 3     | El origen es la esquina superior izquierda de la pantalla principal (igual que para el comando [SCREEN COORDINATES](../commands/screen-coordinates))<br/><br/> |
 
 Cuando este comando se llama desde el método de un subformulario o un objeto de un subformulario, y si uno de los selectores es XY Current form, a continuación, las coordenadas son relativas al subformulario en sí, no a su formulario padre.
 
-Al convertir desde/hacia la posición de una ventana de formulario (por ejemplo, una conversión desde los resultados de [GET WINDOW RECT](get-window-rect.md), o con los valores pasados ​​a [Open form window](../commands/open-form-window)), XY Main window debe ser utilizado, ya que es el sistema de coordenadas utilizado por los comandos de la ventana en Windows. También se puede utilizar para este propósito en macOS, donde es equivalente a XY Screen.
+Al convertir desde/hacia la posición de una ventana de formulario (por ejemplo, una conversión desde los resultados de [GET WINDOW RECT](../commands/get-window-rect), o con los valores pasados ​​a [Open form window](../commands/open-form-window)), XY Main window debe ser utilizado, ya que es el sistema de coordenadas utilizado por los comandos de la ventana en Windows. También se puede utilizar para este propósito en macOS, donde es equivalente a XY Screen.
 
 Cuando *de* es XY Current form y el punto se encuentra en la sección del cuerpo de un formulario listado, el resultado depende del contexto de llamada del comando:
 
@@ -76,7 +76,7 @@ Usted quiere abrir un menú emergente situado en la esquina inferior izquierda d
 
 ## Ejemplo 2 
 
-Usted quiere abrir una ventana emergente en la posición del cursor del ratón. En Windows, es necesario convertir las coordenadas desde [MOUSE POSITION](mouse-position.md) (con el parámetro \*) devolviendo valores basados en la posición de la ventana MDI:
+Usted quiere abrir una ventana emergente en la posición del cursor del ratón. En Windows, es necesario convertir las coordenadas desde [MOUSE POSITION](../commands/mouse-position) (con el parámetro \*) devolviendo valores basados en la posición de la ventana MDI:
 
 ```4d
  var $mouseX;$mouseY;$mouseButtons : Integer
@@ -90,10 +90,10 @@ Usted quiere abrir una ventana emergente en la posición del cursor del ratón. 
 
 ## Ver también 
 
-[GET WINDOW RECT](get-window-rect.md)  
-[OBJECT GET COORDINATES](object-get-coordinates.md)  
-[OBJECT SET COORDINATES](object-set-coordinates.md)  
-[SET WINDOW RECT](set-window-rect.md)  
+[GET WINDOW RECT](../commands/get-window-rect)  
+[OBJECT GET COORDINATES](../commands/object-get-coordinates)  
+[OBJECT SET COORDINATES](../commands/object-set-coordinates)  
+[SET WINDOW RECT](../commands/set-window-rect)  
 
 ## Propiedades
 

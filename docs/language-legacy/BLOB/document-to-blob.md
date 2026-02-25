@@ -1,4 +1,4 @@
----
+﻿---
 id: document-to-blob
 title: DOCUMENT TO BLOB
 slug: /commands/document-to-blob
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.DOCUMENT TO BLOB.Summary-->DOCUMENT TO BLOB loads the whole contents of *document* into *blob*.<!-- END REF--> You must pass the name of an existing document that is not already open, otherwise an error will be generated. To let the user choose the document to be loaded into the BLOB, use the command [Open document](open-document.md) and the process variable *document* (see Example).
+<!--REF #_command_.DOCUMENT TO BLOB.Summary-->DOCUMENT TO BLOB loads the whole contents of *document* into *blob*.<!-- END REF--> You must pass the name of an existing document that is not already open, otherwise an error will be generated. To let the user choose the document to be loaded into the BLOB, use the command [Open document](../commands/open-document) and the process variable *document* (see Example).
 
 ## Example 
 
@@ -56,12 +56,12 @@ OK is set to 1 if the document is correctly loaded, otherwise OK is set to 0 and
 * An I/O error can occur if the document is locked, located on a locked volume, or if there is problem in reading the document.
 * If there is not enough memory to load the document, an error -108 is generated.
 
-In each case, you can trap the error using an [ON ERR CALL](on-err-call.md) interruption method.
+In each case, you can trap the error using an [ON ERR CALL](../commands/on-err-call) interruption method.
 
 ## See also 
 
-[BLOB TO DOCUMENT](blob-to-document.md)  
-[Open document](open-document.md)  
+[BLOB TO DOCUMENT](../commands/blob-to-document)  
+[Open document](../commands/open-document)  
 
 ## Properties
 

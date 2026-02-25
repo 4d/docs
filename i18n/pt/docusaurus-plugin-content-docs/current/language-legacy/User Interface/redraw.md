@@ -1,4 +1,4 @@
----
+﻿---
 id: redraw
 title: REDRAW
 slug: /commands/redraw
@@ -35,7 +35,7 @@ No contexto dos list boxes em modo seleção,quando a instrução REDRAW for apl
 
 ## Ver também 
 
-[SET TIMER](set-timer.md)  
+[SET TIMER](../commands/set-timer)  
 
 ## Propriedades
 

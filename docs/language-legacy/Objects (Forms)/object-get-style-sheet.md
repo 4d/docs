@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-style-sheet
 title: OBJECT Get style sheet
 slug: /commands/object-get-style-sheet
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get style sheet.Summary-->The **OBJECT Get style sheet** command returns the name of the style sheet associated with the object(s) designated by the *object* and *\** parameters.<!-- END REF-->
 
-Style sheets may have been assigned in Design mode using the Property List, or for the current process using the [OBJECT SET STYLE SHEET](object-set-style-sheet.md) command.
+Style sheets may have been assigned in Design mode using the Property List, or for the current process using the [OBJECT SET STYLE SHEET](../commands/object-set-style-sheet) command.
 
 Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
 
@@ -57,7 +57,7 @@ In **project architecture**, only the three automatic style sheets are supported
 ## See also 
 
 *Font Styles*  
-[OBJECT SET STYLE SHEET](object-set-style-sheet.md)  
+[OBJECT SET STYLE SHEET](../commands/object-set-style-sheet)  
 
 ## Properties
 

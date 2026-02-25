@@ -1,4 +1,4 @@
----
+﻿---
 id: set-blob-size
 title: SET BLOB SIZE
 slug: /commands/set-blob-size
@@ -61,7 +61,7 @@ O exemplo a seguir cria um BLOB de 16K cheios de 0xFF:
 
 ## Ver também 
 
-[BLOB size](blob-size.md)  
+[BLOB size](../commands/blob-size)  
 
 ## Propriedades
 

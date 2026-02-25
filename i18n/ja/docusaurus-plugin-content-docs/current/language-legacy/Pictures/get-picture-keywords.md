@@ -1,4 +1,4 @@
----
+﻿---
 id: get-picture-keywords
 title: GET PICTURE KEYWORDS
 slug: /commands/get-picture-keywords
@@ -37,12 +37,12 @@ displayed_sidebar: docs
 
 ピクチャーにIPTC/Keywordsメターデータが含まれない場合、コマンドは空の配列を返し、エラーは生成されません。
 
-**注:** このコマンドから返される結果はデータベース設定の"非文字・非数字のみをキーワード区切り文字とする"の現在値により異なります ([DOM GET XML CHILD NODES](dom-get-xml-child-nodes.md)参照)。
+**注:** このコマンドから返される結果はデータベース設定の"非文字・非数字のみをキーワード区切り文字とする"の現在値により異なります ([DOM GET XML CHILD NODES](../commands/dom-get-xml-child-nodes)参照)。
 
 ## 参照 
 
-[GET PICTURE METADATA](get-picture-metadata.md)  
-[SET PICTURE METADATA](set-picture-metadata.md)  
+[GET PICTURE METADATA](../commands/get-picture-metadata)  
+[SET PICTURE METADATA](../commands/set-picture-metadata)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-minimum-value
 title: OBJECT SET MINIMUM VALUE
 slug: /commands/object-set-minimum-value
@@ -39,8 +39,8 @@ Em *valorMinimo*, passe o novo valor mínimo a atribuir ao objeto para o process
 
 ## Ver também 
 
-[OBJECT GET MINIMUM VALUE](object-get-minimum-value.md)  
-[OBJECT SET MAXIMUM VALUE](object-set-maximum-value.md)  
+[OBJECT GET MINIMUM VALUE](../commands/object-get-minimum-value)  
+[OBJECT SET MAXIMUM VALUE](../commands/object-set-maximum-value)  
 
 ## Propriedades
 

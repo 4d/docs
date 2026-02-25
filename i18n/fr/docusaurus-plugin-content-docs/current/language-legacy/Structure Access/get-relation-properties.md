@@ -1,4 +1,4 @@
----
+﻿---
 id: get-relation-properties
 title: GET RELATION PROPERTIES
 slug: /commands/get-relation-properties
@@ -49,11 +49,11 @@ Après l’exécution de la commande :
 
 ## Voir aussi 
 
-[GET FIELD ENTRY PROPERTIES](get-field-entry-properties.md)  
-[GET FIELD PROPERTIES](get-field-properties.md)  
-[GET TABLE PROPERTIES](get-table-properties.md)  
-[SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
-[SET FIELD RELATION](set-field-relation.md)  
+[GET FIELD ENTRY PROPERTIES](../commands/get-field-entry-properties)  
+[GET FIELD PROPERTIES](../commands/get-field-properties)  
+[GET TABLE PROPERTIES](../commands/get-table-properties)  
+[SET AUTOMATIC RELATIONS](../commands/set-automatic-relations)  
+[SET FIELD RELATION](../commands/set-field-relation)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: set-database-localization
 title: SET DATABASE LOCALIZATION
 slug: /commands/set-database-localization
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET DATABASE LOCALIZATION.Summary-->**SET DATABASE LOCALIZATION**コマンドを使用して、カレントセッションのデータベースカレント言語を変更できます。<!-- END REF-->
 
-データベースのカレント言語は、アプリケーションのローカライズされた要素 (テキストおよびピクチャ) をプログラムが検索する場所である.lprojフォルダを指定します。デフォルトで4Dは、 Resourcesの内容およびシステム環境に基づき自動でカレント言語を決定します ([Get database localization](get-database-localization.md) コマンドの説明参照)。**SET DATABASE LOCALIZATION**を使用して、デフォルトのカレント言語を変更できます。
+データベースのカレント言語は、アプリケーションのローカライズされた要素 (テキストおよびピクチャ) をプログラムが検索する場所である.lprojフォルダを指定します。デフォルトで4Dは、 Resourcesの内容およびシステム環境に基づき自動でカレント言語を決定します ([Get database localization](../commands/get-database-localization) コマンドの説明参照)。**SET DATABASE LOCALIZATION**を使用して、デフォルトのカレント言語を変更できます。
 
 コマンドは既にロードされたフォームの言語を変更しません。コマンドが呼び出された後に表示された要素のみが、新しい設定の効果を得ます。 
 
@@ -80,7 +80,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Get database localization](get-database-localization.md)  
+[Get database localization](../commands/get-database-localization)  
 
 ## プロパティ
 

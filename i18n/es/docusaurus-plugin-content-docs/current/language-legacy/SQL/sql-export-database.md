@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-export-database
 title: SQL EXPORT DATABASE
 slug: /commands/sql-export-database
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 **Nota:** este comando no puede utilizarse con una conexión externa abierta directamente o vía ODBC. 
 
-Para cada tabla, el comando genera un archivo de texto con las instrucciones SQL necesarias para la importación de los datos en otra base. Este archivo puede ser utilizado directamente por el comando [SQL EXECUTE SCRIPT](sql-execute-script.md) para importar los datos en otra base 4D. 
+Para cada tabla, el comando genera un archivo de texto con las instrucciones SQL necesarias para la importación de los datos en otra base. Este archivo puede ser utilizado directamente por el comando [SQL EXECUTE SCRIPT](../commands/sql-execute-script) para importar los datos en otra base 4D. 
 
 Los archivos de exportación se crearán en una carpeta llamada "SQLExport" ubicada en la carpeta de destino designada por el parámetro rutaCarpeta. Por favor tenga en cuenta que si la carpeta "SQLExport" ya existe en la ubicación especificada, el comando se reemplazará sin que se muestre ningún mensaje de advertencia.   
 Si pasa una cadena vacía en este parámetro, 4D muestra una caja de diálogo estándar permitiéndole al usuario designar la carpeta de destino. Por defecto, la caja de diálogo muestra la carpeta actual del usuario que abrió la sesión ("Mis Documentos" bajo Windows o "Documents" bajo Mac OS).
@@ -67,7 +67,7 @@ Si la exportación se realiza correctamente, la variable OK toma el valor 1\. De
 
 ## Ver también 
 
-[SQL EXPORT SELECTION](sql-export-selection.md)  
+[SQL EXPORT SELECTION](../commands/sql-export-selection)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: parse-formula
 title: Parse formula
 slug: /commands/parse-formula
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 * 4D ランゲージ要素をトークナイズド形式の4D ランゲージへと変換することができます。
 * トークナイズド形式の4D ランゲージを4D ランゲージ要素へと変換することができます。
 
-**\** バーチャルストラクチャーは* *[SET TABLE TITLES](set-table-titles.md) and [SET FIELD TITLES](set-field-titles.md) コマンドを使用して定義されます(* *\* 引数必須)。* 
+**\** バーチャルストラクチャーは* *[SET TABLE TITLES](../commands/set-table-titles) and [SET FIELD TITLES](../commands/set-field-titles) コマンドを使用して定義されます(* *\* 引数必須)。* 
 
 **\*\** トークナイズドされた形式とは、以下のようなトークンシンタックス形式の標準テキストで表現された4D ランゲージおよびストラクチャー要素です(* *フォーミュラ内でのトークンの使用 参照)* *:*
 
@@ -103,8 +103,8 @@ displayed_sidebar: docs
 ## 参照 
 
 [Formula from string](../commands/formula-from-string)  
-[SET FIELD TITLES](set-field-titles.md)  
-[SET TABLE TITLES](set-table-titles.md)  
+[SET FIELD TITLES](../commands/set-field-titles)  
+[SET TABLE TITLES](../commands/set-table-titles)  
 *フォーミュラ内でのトークンの使用*  
 
 ## プロパティ

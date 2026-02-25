@@ -1,4 +1,4 @@
----
+﻿---
 id: export-text
 title: EXPORT TEXT
 slug: /commands/export-text
@@ -37,9 +37,9 @@ An On Load event is sent to the form method for each record that is exported. Us
 
 The *document* parameter can name a new or existing document. If *document* is given the same name as an existing document, the existing document is overwritten. The *document* can include a path that contains volume and folder names. If you pass an empty string, the standard Save File dialog box is displayed. If the user cancels this dialog, the export operation is canceled, and the OK system variable is set to 0.
 
-A progress thermometer is displayed during export. The user can cancel the operation by clicking a Stop button. If the export is successfully completed, the OK system variable is set to 1\. If the operation is canceled or an error occurs, the OK system variable is set to 0\. The thermometer can be hidden with the [MESSAGES OFF](messages-off.md) command.
+A progress thermometer is displayed during export. The user can cancel the operation by clicking a Stop button. If the export is successfully completed, the OK system variable is set to 1\. If the operation is canceled or an error occurs, the OK system variable is set to 0\. The thermometer can be hidden with the [MESSAGES OFF](../commands/messages-off) command.
 
-By default, the command uses by default the UTF-8 character set. You can use the [USE CHARACTER SET](use-character-set.md) command to change this character set. 
+By default, the command uses by default the UTF-8 character set. You can use the [USE CHARACTER SET](../commands/use-character-set) command to change this character set. 
 
 Using EXPORT TEXT, the default field delimiter is the tab character (code 9). The default record delimiter is the carriage return character (code 13) under macOS and the carraige return+line feed (code 13 + code 10) under Windows. You can change these defaults by assigning values to the two delimiter *System Variables*: **FldDelimit** and **RecDelimit**. The user can change the default values in the Design environment Export Data dialog box. Note that if exported fields contain characters defined as field or record delimiters, these characters are automatically replaced with spaces in the exported file, in order to avoid disrupting the importing process.
 
@@ -60,10 +60,10 @@ OK is set to 1 if the export is successfully completed; otherwise, it is set to 
 
 ## See also 
 
-[EXPORT DIF](export-dif.md)  
-[EXPORT SYLK](export-sylk.md)  
-[IMPORT TEXT](import-text.md)  
-[USE CHARACTER SET](use-character-set.md)  
+[EXPORT DIF](../commands/export-dif)  
+[EXPORT SYLK](../commands/export-sylk)  
+[IMPORT TEXT](../commands/import-text)  
+[USE CHARACTER SET](../commands/use-character-set)  
 
 ## Properties
 

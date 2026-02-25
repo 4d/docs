@@ -1,4 +1,4 @@
----
+﻿---
 id: register-client
 title: REGISTER CLIENT
 slug: /commands/register-client
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.REGISTER CLIENT.Summary-->La commande **REGISTER CLIENT** “inscrit” un poste client 4D sous le nom *nomClient* auprès de 4D Server, afin de permettre que d’autres clients ou éventuellement 4D Server (par l’intermédiaire de procédures stockées) puissent y exécuter des méthodes à l’aide de la commande [`EXECUTE ON CLIENT`](execute-on-client.md).<!-- END REF--> Une fois inscrit, un client 4D peut donc exécuter une ou plusieurs méthodes pour le compte d’autres clients.
+<!--REF #_command_.REGISTER CLIENT.Summary-->La commande **REGISTER CLIENT** “inscrit” un poste client 4D sous le nom *nomClient* auprès de 4D Server, afin de permettre que d’autres clients ou éventuellement 4D Server (par l’intermédiaire de procédures stockées) puissent y exécuter des méthodes à l’aide de la commande [`EXECUTE ON CLIENT`](../commands/execute-on-client).<!-- END REF--> Une fois inscrit, un client 4D peut donc exécuter une ou plusieurs méthodes pour le compte d’autres clients.
 
 **Notes :** 
 
@@ -45,9 +45,9 @@ displayed_sidebar: docs
 * Lorsqu’elle est utilisée avec 4D en mode local, cette commande ne fait rien.
 * Plusieurs postes clients 4D peuvent avoir le même nom d’inscription.
 
-A l’issue de l’exécution de la commande, un process, nommé *nomClient*, est créé sur le poste client. Ce process ne peut être détruit que par la commande [`UNREGISTER CLIENT`](unregister-client.md).   
+A l’issue de l’exécution de la commande, un process, nommé *nomClient*, est créé sur le poste client. Ce process ne peut être détruit que par la commande [`UNREGISTER CLIENT`](../commands/unregister-client).   
 
-Une fois la commande exécutée, il n’est pas possible de modifier “à la volée” le nom du client 4D. Pour cela, il est nécessaire d’appeler la commande [`UNREGISTER CLIENT`](unregister-client.md) puis d’exécuter à nouveau **REGISTER CLIENT**.
+Une fois la commande exécutée, il n’est pas possible de modifier “à la volée” le nom du client 4D. Pour cela, il est nécessaire d’appeler la commande [`UNREGISTER CLIENT`](../commands/unregister-client) puis d’exécuter à nouveau **REGISTER CLIENT**.
 
 ## Exemple 
 
@@ -138,9 +138,9 @@ Si le poste client est correctement inscrit, la variable système OK prend la va
 
 ## Voir aussi 
 
-[EXECUTE ON CLIENT](execute-on-client.md)  
-[GET REGISTERED CLIENTS](get-registered-clients.md)  
-[UNREGISTER CLIENT](unregister-client.md)  
+[EXECUTE ON CLIENT](../commands/execute-on-client)  
+[GET REGISTERED CLIENTS](../commands/get-registered-clients)  
+[UNREGISTER CLIENT](../commands/unregister-client)  
 
 ## Propriétés
 

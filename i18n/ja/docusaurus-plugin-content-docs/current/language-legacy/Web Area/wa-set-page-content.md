@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-set-page-content
 title: WA SET PAGE CONTENT
 slug: /commands/wa-set-page-content
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 ## 互換性に関する注意 
 
-<!--REF #_command_.WA SET PAGE CONTENT.Summary-->この歴史的なコマンドは現実的にはもはや実用的とは言えません。<!-- END REF-->現代的なブラウザにおいてはセキュリティが厳格化されているため、ページコンテンツを"オンザフライ"で変更することに対しては制約が増える一方です。より信頼性のある方法としてはローカルなファイルを(例: 一時フォルダ内などに)作成し、[WA OPEN URL](wa-open-url.md) を使用してロードすることです。コンテンツを消去するためには、**WA OPEN URL**(myArea;”about:blank”) を呼び出してください。
+<!--REF #_command_.WA SET PAGE CONTENT.Summary-->この歴史的なコマンドは現実的にはもはや実用的とは言えません。<!-- END REF-->現代的なブラウザにおいてはセキュリティが厳格化されているため、ページコンテンツを"オンザフライ"で変更することに対しては制約が増える一方です。より信頼性のある方法としてはローカルなファイルを(例: 一時フォルダ内などに)作成し、[WA OPEN URL](../commands/wa-open-url) を使用してロードすることです。コンテンツを消去するためには、**WA OPEN URL**(myArea;”about:blank”) を呼び出してください。
 
 ## 説明 
 
@@ -51,7 +51,7 @@ WA SET PAGE CONTENT(MyWArea;"<html><body><h1>Hello World!</h1></body></html>";"f
 
 ## 参照 
 
-[WA Get page content](wa-get-page-content.md)  
+[WA Get page content](../commands/wa-get-page-content)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: break-level
 title: BREAK LEVEL
 slug: /commands/break-level
@@ -29,9 +29,9 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.BREAK LEVEL.Summary-->**BREAK LEVEL** spécifie le nombre de niveaux de rupture dans un état créé à l'aide de la commande [PRINT SELECTION](print-selection.md).<!-- END REF-->
+<!--REF #_command_.BREAK LEVEL.Summary-->**BREAK LEVEL** spécifie le nombre de niveaux de rupture dans un état créé à l'aide de la commande [PRINT SELECTION](../commands/print-selection).<!-- END REF-->
 
-Vous **devez** appeler **BREAK LEVEL** et [ACCUMULATE](accumulate.md) avant la génération de chaque état dans lequel vous voulez utiliser des ruptures. Ces commandes activent le traitement des ruptures pour un état. Pour plus d'informations, reportez-vous à la description de la commande [Subtotal](subtotal.md). 
+Vous **devez** appeler **BREAK LEVEL** et [ACCUMULATE](../commands/accumulate) avant la génération de chaque état dans lequel vous voulez utiliser des ruptures. Ces commandes activent le traitement des ruptures pour un état. Pour plus d'informations, reportez-vous à la description de la commande [Subtotal](../commands/subtotal). 
 
 Le paramètre *niveau* indique le dernier niveau de rupture pour lequel vous voulez utiliser des ruptures. Ce nombre doit être inférieur ou égal aux niveaux de tris que vous aurez effectués avant l'impression. Si vous avez effectué un tri sur davantage de niveaux, ces niveaux seront imprimés triés, mais ne comporteront pas de rupture.
 
@@ -41,7 +41,7 @@ Le second paramètre (optionnel), *sautPage*, permet de provoquer un saut de pag
 
 ## Exemple 
 
-L'exemple suivant imprime un état avec deux niveaux de rupture. La sélection est triée sur quatre champs, mais la commande **BREAK LEVEL** ne spécifie que deux niveaux de rupture. Seul un champ est cumulé à l'aide de la commande [ACCUMULATE](accumulate.md) :
+L'exemple suivant imprime un état avec deux niveaux de rupture. La sélection est triée sur quatre champs, mais la commande **BREAK LEVEL** ne spécifie que deux niveaux de rupture. Seul un champ est cumulé à l'aide de la commande [ACCUMULATE](../commands/accumulate) :
 
 ```4d
  ORDER BY([Emp]Service;>;[Emp]Titre;>;[Emp]Nom;>;Emp]Prénom;>) // Trier sur quatre champs
@@ -53,10 +53,10 @@ L'exemple suivant imprime un état avec deux niveaux de rupture. La sélection e
 
 ## Voir aussi 
 
-[ACCUMULATE](accumulate.md)  
-[ORDER BY](order-by.md)  
-[PRINT SELECTION](print-selection.md)  
-[Subtotal](subtotal.md)  
+[ACCUMULATE](../commands/accumulate)  
+[ORDER BY](../commands/order-by)  
+[PRINT SELECTION](../commands/print-selection)  
+[Subtotal](../commands/subtotal)  
 
 ## Propriétés
 

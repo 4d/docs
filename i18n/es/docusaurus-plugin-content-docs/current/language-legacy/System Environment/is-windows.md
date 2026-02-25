@@ -1,4 +1,4 @@
----
+﻿---
 id: is-windows
 title: Is Windows
 slug: /commands/is-windows
@@ -43,8 +43,8 @@ Desea determinar si el sistema operativo actual es Windows:
 
 ## Ver también 
 
-[System info](system-info.md)  
-[Is macOS](is-macos.md)  
+[System info](../commands/system-info)  
+[Is macOS](../commands/is-macos)  
 
 ## Propiedades
 

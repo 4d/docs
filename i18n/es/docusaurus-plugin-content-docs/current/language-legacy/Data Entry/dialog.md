@@ -1,4 +1,4 @@
----
+﻿---
 id: dialog
 title: DIALOG
 slug: /commands/dialog
@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 Este comando está diseñado para trabajar con interfaces de usuario personalizadas y avanzadas basadas en formularios. Puede utilizarlo para mostrar información procedente de la base de datos o de otras ubicaciones, o para proporcionar funciones de entrada de datos. A diferencia de [ADD RECORD](../commands/add-record) o [MODIFY RECORD](../commands/modify-record), **DIALOG** le ofrece un control total sobre el formulario, su contenido y los botones de navegación y validación.
 
-Este comando suele invocarse junto con el comando [Open form window](open-form-window.md) para mostrar formularios sofisticados, como se muestra en el siguiente ejemplo:
+Este comando suele invocarse junto con el comando [Open form window](../commands/open-form-window) para mostrar formularios sofisticados, como se muestra en el siguiente ejemplo:
 
 ![](../../assets/en/commands/pict3541609.en.png)
 
@@ -36,7 +36,7 @@ En el parámetro *form*, puede pasar:
 - la ruta (en sintaxis POSIX) a un archivo .json válido que contenga una descripción del formulario a utilizar;
 - un objeto que contiene la descripción del formulario a utilizar.
 
-Opcionalmente, puede pasar uno o varios parámetros al *form* utilizando un objeto "form data". Todas las propiedades del objeto de datos del formulario estarán entonces disponibles desde el contexto del formulario a través del comando [Form](form.md). Por ejemplo, si utiliza un objeto de datos de formulario que contenga {"version"; "12"}, podrá obtener o definir el valor de la propiedad "version" en el formulario llamando a:
+Opcionalmente, puede pasar uno o varios parámetros al *form* utilizando un objeto "form data". Todas las propiedades del objeto de datos del formulario estarán entonces disponibles desde el contexto del formulario a través del comando [Form](../commands/form). Por ejemplo, si utiliza un objeto de datos de formulario que contenga {"version"; "12"}, podrá obtener o definir el valor de la propiedad "version" en el formulario llamando a:
 
 ```4d
  $v:=Form.version //"12"
@@ -45,9 +45,9 @@ Opcionalmente, puede pasar uno o varios parámetros al *form* utilizando un obje
 
 Para llenar el objeto "form data", tiene dos posibilidades:
 
-- usar el parámetro *formData*. Usar una variable local para *formData* le permite pasar con seguridad parámetros a sus formularios, sea cual sea el contexto de llamada. En particular, si el mismo formulario se llama desde diferentes lugares en el mismo proceso, siempre podrá acceder a sus valores específicos simplemente llamando a [Form](form.md).myProperty. Además, como los objetos se pasan por referencia, si el usuario modifica el valor de una propiedad en el formulario, se guardará automáticamente en el propio objeto.
+- usar el parámetro *formData*. Usar una variable local para *formData* le permite pasar con seguridad parámetros a sus formularios, sea cual sea el contexto de llamada. En particular, si el mismo formulario se llama desde diferentes lugares en el mismo proceso, siempre podrá acceder a sus valores específicos simplemente llamando a [Form](../commands/form).myProperty. Además, como los objetos se pasan por referencia, si el usuario modifica el valor de una propiedad en el formulario, se guardará automáticamente en el propio objeto.
 
-- [asociar una clase usuario al formulario](../../FormEditor/properties_FormProperties.md#form-class), en cuyo caso 4D instanciará automáticamente un objeto de esta clase cuando se cargará el formulario. Las propiedades y funciones del objeto estarán automáticamente disponibles a través del objeto devuelto por [Form](form.md). Puede escribir por ejemplo `Form.myFunction()`.
+- [asociar una clase usuario al formulario](../../FormEditor/properties_FormProperties.md#form-class), en cuyo caso 4D instanciará automáticamente un objeto de esta clase cuando se cargará el formulario. Las propiedades y funciones del objeto estarán automáticamente disponibles a través del objeto devuelto por [Form](../commands/form). Puede escribir por ejemplo `Form.myFunction()`.
 
 :::note
 
@@ -90,7 +90,7 @@ En un formulario que muestra el registro de una persona, un botón "Check childr
 
 **Nota:** el campo objeto "Children" se representa sólo para mostrar su estructura en este ejemplo.
 
-En el formulario de verificación, ha asignado algunas propiedades del objeto [Form](form.md) a variables:
+En el formulario de verificación, ha asignado algunas propiedades del objeto [Form](../commands/form) a variables:
 
 ![](../../assets/en/commands/pict3541682.en.png)
 
@@ -170,8 +170,8 @@ Tras una llamada a **DIALOG**, si se acepta el diálogo, OK se pone en 1; si se 
 [ADD RECORD](../commands/add-record)\
 [CALL FORM](../commands/call-form)\
 [CANCEL](../commands/cancel)\
-[Form](form.md)\
-[Open window](open-window.md)
+[Form](../commands/form)\
+[Open window](../commands/open-window)
 
 ## Propiedades
 

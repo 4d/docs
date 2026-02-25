@@ -1,4 +1,4 @@
----
+﻿---
 id: folder
 title: Folder
 slug: /commands/folder
@@ -73,7 +73,7 @@ Si el comando se llama desde un componente, pase el parámetro opcional `*` para
 ## Ver también
 
 [`4D.Folder` class](../../API/FolderClass.md)
-[File](file.md)  
+[File](../commands/file)  
 [Object to path](../commands/object-to-path)  
 [Path to object](../commands/path-to-object)
 

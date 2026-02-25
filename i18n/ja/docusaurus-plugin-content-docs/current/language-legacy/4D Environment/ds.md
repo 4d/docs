@@ -1,4 +1,4 @@
----
+﻿---
 id: ds
 title: ds
 slug: /commands/ds
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 *localID* を省略した (または空の文字列 "" を渡した) 場合には、ローカル4Dデータベース (4D Server でリモートデータベースを開いている場合にはそのデータベース) に合致するデータストアの参照を返します。 データストアは自動的に開かれ、`ds` を介して直接利用することができます。
 
-開かれているリモートデータストアのローカルIDを *localID* パラメーターに渡すと、その参照を取得できます。 このデータストアは、あらかじめカレントデータベース (ホストまたはコンポーネント) によって [`Open datastore`](open-datastore.md) コマンドで開かれている必要があります。 このコマンドを使用したときにローカルIDが定義されます。
+開かれているリモートデータストアのローカルIDを *localID* パラメーターに渡すと、その参照を取得できます。 このデータストアは、あらかじめカレントデータベース (ホストまたはコンポーネント) によって [`Open datastore`](../commands/open-datastore) コマンドで開かれている必要があります。 このコマンドを使用したときにローカルIDが定義されます。
 
 > ローカルIDのスコープは、当該データストアを開いたデータベースです。
 
@@ -67,7 +67,7 @@ $result:=ds.Employee.query("firstName = :1";"S@")
 
 ## 参照
 
-[Open datastore](open-datastore.md)
+[Open datastore](../commands/open-datastore)
 
 ## プロパティ
 

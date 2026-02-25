@@ -1,4 +1,4 @@
----
+﻿---
 id: get-list-item-parameter-arrays
 title: GET LIST ITEM PARAMETER ARRAYS
 slug: /commands/get-list-item-parameter-arrays
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Summary-->La commande **GET LIST ITEM PARAMETER ARRAYS** permet de récupérer en un seul appel l’ensemble des paramètres (ainsi que, optionnellement, leurs valeurs) associés à l’élément *refElément* de la liste hiérarchique dont vous avez passé la référence ou le nom d’objet dans le paramètre *liste*.<!-- END REF--> 
 
-Les paramètres associés aux éléments permettent de stocker des informations supplémentaires sur chaque élément. Ils sont définis à l’aide de la commande [SET LIST ITEM PARAMETER](set-list-item-parameter.md). 
+Les paramètres associés aux éléments permettent de stocker des informations supplémentaires sur chaque élément. Ils sont définis à l’aide de la commande [SET LIST ITEM PARAMETER](../commands/set-list-item-parameter). 
 
 Si vous passez le premier paramètre optionnel *\**, vous indiquez que le paramètre *liste* est un nom d’objet (chaîne) correspondant à une représentation de liste dans le formulaire. Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *liste* est une référence de liste hiérarchique ([RefListe](# "Expression de type Entier long identifiant de façon unique une liste hiérarchique")). Si vous utilisez une seule représentation de liste ou travaillez avec les éléments structurels (le second *\** est omis), vous pouvez utiliser indifféremment l’une ou l’autre syntaxe. En revanche, si vous utilisez plusieurs représentations d’une même liste et travaillez avec l’élément courant (le second *\** est passé), la syntaxe basée sur le nom d’objet est requise car chaque représentation peut disposer de son propre élément courant.
 
@@ -85,7 +85,7 @@ Si on souhaite récupérer également les valeurs des paramètres, on peut écri
 
 ## Voir aussi 
 
-[SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+[SET LIST ITEM PARAMETER](../commands/set-list-item-parameter)  
 
 ## Propriétés
 

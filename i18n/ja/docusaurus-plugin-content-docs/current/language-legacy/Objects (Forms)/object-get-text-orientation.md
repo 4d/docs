@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-text-orientation
 title: OBJECT Get text orientation
 slug: /commands/object-get-text-orientation
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get text orientation.Summary-->**OBJECT Get text orientation**コマンドは、引数 *object* と *\** で指定したオブジェクトのテキストに適用されたカレントの方向の値を返します。<!-- END REF-->
 
-「方向」のオプションは、デザインモードのプロパティリストを使用するか、 [OBJECT SET TEXT ORIENTATION](object-set-text-orientation.md) という新しいコマンドを使用して設定することができます。
+「方向」のオプションは、デザインモードのプロパティリストを使用するか、 [OBJECT SET TEXT ORIENTATION](../commands/object-set-text-orientation) という新しいコマンドを使用して設定することができます。
 
 任意の *\** 演算子を渡した場合、 *object* 引数でオブジェクト名を文字列で指定します。省略時には *object* 引数でフィールドまたは変数を指定します。
 
@@ -66,7 +66,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT SET TEXT ORIENTATION](object-set-text-orientation.md)  
+[OBJECT SET TEXT ORIENTATION](../commands/object-set-text-orientation)  
 
 ## プロパティ
 

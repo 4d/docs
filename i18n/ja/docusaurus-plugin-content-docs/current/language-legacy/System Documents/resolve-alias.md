@@ -1,4 +1,4 @@
----
+﻿---
 id: resolve-alias
 title: RESOLVE ALIAS
 slug: /commands/resolve-alias
@@ -41,7 +41,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[CREATE ALIAS](create-alias.md)  
+[CREATE ALIAS](../commands/create-alias)  
 
 ## プロパティ
 

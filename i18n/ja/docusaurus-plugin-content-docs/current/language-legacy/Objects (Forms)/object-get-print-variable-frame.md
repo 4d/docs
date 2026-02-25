@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-print-variable-frame
 title: OBJECT GET PRINT VARIABLE FRAME
 slug: /commands/object-get-print-variable-frame
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET PRINT VARIABLE FRAME.Summary-->**OBJECT GET PRINT VARIABLE FRAME**コマンドは、引数 *object* と *\** で指定したオブジェクトの印刷時可変オプションのカレントの設定を取得します。<!-- END REF-->
 
-フレーム印刷のプロパティはプロパティリストか、 [OBJECT SET PRINT VARIABLE FRAME](object-set-print-variable-frame.md) という新しいコマンドを使用することで設定できます。
+フレーム印刷のプロパティはプロパティリストか、 [OBJECT SET PRINT VARIABLE FRAME](../commands/object-set-print-variable-frame) という新しいコマンドを使用することで設定できます。
 
 任意の *\** 演算子を渡した場合、 *object* 引数でオブジェクト名を文字列で指定します。省略時には *object* 引数でフィールドまたは変数を指定します。
 
@@ -47,7 +47,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT SET PRINT VARIABLE FRAME](object-set-print-variable-frame.md)  
+[OBJECT SET PRINT VARIABLE FRAME](../commands/object-set-print-variable-frame)  
 
 ## プロパティ
 

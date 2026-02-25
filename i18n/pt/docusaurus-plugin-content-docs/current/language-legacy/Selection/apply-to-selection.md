@@ -1,4 +1,4 @@
----
+﻿---
 id: apply-to-selection
 title: APPLY TO SELECTION
 slug: /commands/apply-to-selection
@@ -37,7 +37,7 @@ APPLY TO SELECTION pode ser utilizado para reunir informação da seleção de r
   
 **4D Server**: o servidor não executa nenhum dos comandos que são passados em *formula*. Cada registro da seleção será enviado a máquina cliente para ser modificada.  
   
-Um termômetro de progressão é mostrado enquanto é executado APPLY TO SELECTION. Para ocultá-lo, utilize [MESSAGES OFF](messages-off.md) antes de chamar a APPLY TO SELECTION. Se o termômetro de progresso é mostrado, o usuário pode cancelar a operação.
+Um termômetro de progressão é mostrado enquanto é executado APPLY TO SELECTION. Para ocultá-lo, utilize [MESSAGES OFF](../commands/messages-off) antes de chamar a APPLY TO SELECTION. Se o termômetro de progresso é mostrado, o usuário pode cancelar a operação.
 
 ## Exemplo 1 
 
@@ -74,7 +74,7 @@ Se o usuário clicar no botão Deter no termômetro de progressão, a variável 
 ## Ver também 
 
 *Conjuntos*  
-[EDIT FORMULA](edit-formula.md)  
+[EDIT FORMULA](../commands/edit-formula)  
 
 ## Propriedades
 

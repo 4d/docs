@@ -1,4 +1,4 @@
----
+﻿---
 id: send-packet
 title: SEND PACKET
 slug: /commands/send-packet
@@ -29,19 +29,19 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.SEND PACKET.Summary-->El comando SEND PACKET envía un paquete a un puerto serial o a un documento.<!-- END REF--> Si *docRef* se especifica, el paquete se escribe en el documento referenciado por *docRef*. Si *docRef* no se especifica, el paquete se escribe para el puerto serial o documento previamente abierto por el comando [SET CHANNEL](set-channel.md). 
+<!--REF #_command_.SEND PACKET.Summary-->El comando SEND PACKET envía un paquete a un puerto serial o a un documento.<!-- END REF--> Si *docRef* se especifica, el paquete se escribe en el documento referenciado por *docRef*. Si *docRef* no se especifica, el paquete se escribe para el puerto serial o documento previamente abierto por el comando [SET CHANNEL](../commands/set-channel). 
 
 Un *paquete* es sólo una serie simple de datos, generalmente una cadena de caracteres.
 
 También puede pasar un BLOB en *paquete*. Esto le permite evitar las restricciones relacionadas con la codificación de los caracteres enviados en modo texto (ver ejemplo 2).
 
-**Nota:** cuando pasa un BLOB en *paquete*, el comando no tiene en cuenta ningún conjunto de caracteres definido por el comando [USE CHARACTER SET](use-character-set.md). El BLOB se envía sin ninguna modificación.
+**Nota:** cuando pasa un BLOB en *paquete*, el comando no tiene en cuenta ningún conjunto de caracteres definido por el comando [USE CHARACTER SET](../commands/use-character-set). El BLOB se envía sin ninguna modificación.
 
-Antes de utilizar SEND PACKET, debe abrir un puerto serial o un documento con [SET CHANNEL](set-channel.md), o abrir un documento con uno de los comandos de gestión de documentos.
+Antes de utilizar SEND PACKET, debe abrir un puerto serial o un documento con [SET CHANNEL](../commands/set-channel), o abrir un documento con uno de los comandos de gestión de documentos.
 
-Cuando escribe un documento, el primer SEND PACKET comienza a escribir al comienzo del documento a menos que el documento hubiera sido abierto con [USE CHARACTER SET](use-character-set.md). Hasta el momento en que el documento se cierra, cada paquete subsiguiente se añade a los paquetes enviados anteriormente.
+Cuando escribe un documento, el primer SEND PACKET comienza a escribir al comienzo del documento a menos que el documento hubiera sido abierto con [USE CHARACTER SET](../commands/use-character-set). Hasta el momento en que el documento se cierra, cada paquete subsiguiente se añade a los paquetes enviados anteriormente.
 
-**Nota:** este comando es útil para un documento abierto con [SET CHANNEL](set-channel.md). Por otra parte, para un documento abierto con [Open document](open-document.md), [Create document](create-document.md) o [Append document](append-document.md), usted puede utilizar los comandos [Get document position](get-document-position.md) y [SET DOCUMENT POSITION](set-document-position.md) para obtener y cambiar la ubicación en el documento donde ocurrirá la próxima escritura (SEND PACKET) o lectura ([RECEIVE PACKET](receive-packet.md)).
+**Nota:** este comando es útil para un documento abierto con [SET CHANNEL](../commands/set-channel). Por otra parte, para un documento abierto con [Open document](../commands/open-document), [Create document](../commands/create-document) o [Append document](../commands/append-document), usted puede utilizar los comandos [Get document position](../commands/get-document-position) y [SET DOCUMENT POSITION](../commands/set-document-position) para obtener y cambiar la ubicación en el documento donde ocurrirá la próxima escritura (SEND PACKET) o lectura ([RECEIVE PACKET](../commands/receive-packet)).
 
 ## Ejemplo 1 
 
@@ -92,9 +92,9 @@ Este ejemplo ilustra el envío y recuperación de caracteres extendidos vía un 
 
 ## Ver también 
 
-[Get document position](get-document-position.md)  
-[RECEIVE PACKET](receive-packet.md)  
-[SET DOCUMENT POSITION](set-document-position.md)  
+[Get document position](../commands/get-document-position)  
+[RECEIVE PACKET](../commands/receive-packet)  
+[SET DOCUMENT POSITION](../commands/set-document-position)  
 
 ## Propiedades
 

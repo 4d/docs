@@ -1,4 +1,4 @@
----
+﻿---
 id: create-empty-set
 title: CREATE EMPTY SET
 slug: /commands/create-empty-set
@@ -18,9 +18,9 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.CREATE EMPTY SET.Summary-->**CREATE EMPTY SET** creates a new empty set, *set*, for *aTable*.<!-- END REF--> You can add records to this set with the [ADD TO SET](add-to-set.md) command. If a set with the same name already exists, the existing set is cleared by the new set.
+<!--REF #_command_.CREATE EMPTY SET.Summary-->**CREATE EMPTY SET** creates a new empty set, *set*, for *aTable*.<!-- END REF--> You can add records to this set with the [ADD TO SET](../commands/add-to-set) command. If a set with the same name already exists, the existing set is cleared by the new set.
 
-**Note:** You do not need to use **CREATE EMPTY SET** before using [CREATE SET](create-set.md).
+**Note:** You do not need to use **CREATE EMPTY SET** before using [CREATE SET](../commands/create-set).
 
 ## Example 
 
@@ -28,8 +28,8 @@ Please refer to the examples of the *Sets* section.
 
 ## See also 
 
-[CLEAR SET](clear-set.md)  
-[CREATE SET](create-set.md)  
+[CLEAR SET](../commands/clear-set)  
+[CREATE SET](../commands/create-set)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: pop-up-menu
 title: Pop up menu
 slug: /commands/pop-up-menu
@@ -50,12 +50,12 @@ Vous définissez les éléments du pop up menu à l'aide du paramètre *contenu*
 | <O | Contours (Mac OS seulement) |  
 | <S | Relief (Mac OS seulement)   |
 * Pour associer une coche à un élément, insérez dans son libellé un point d'exclamation "*!*" suivi du caractère que vous voulez utiliser comme coche.  
-   * Sous Mac OS, le caractère passé est directement affiché. Pour afficher la coche standard quelle que soit la version ou la langue du système, utilisez l'instruction [Char](char.md)(18).  
+   * Sous Mac OS, le caractère passé est directement affiché. Pour afficher la coche standard quelle que soit la version ou la langue du système, utilisez l'instruction [Char](../commands/char)(18).  
    * Sous Windows, une coche standard est affichée (quel que soit le caractère passé).
 * Pour associer une icône à un élément, insérez dans son libellé un accent circonflexe "^" suivi d'un caractère dont le code moins 48 plus 256 (ou plus 208) représente un numéro de ressource d'icône Mac OS.
 * Pour ajouter un raccourci clavier à un élément, insérez dans son libellé une barre oblique "*/*" suivie du caractère de raccourci. Notez que cette dernière option est uniquement informative (aucun raccourci clavier n'active le pop up menu), cependant vous pouvez indiquer un raccourci clavier si l'élément du pop up menu dispose d'une commande équivalente dans la barre de menus principale de votre application.
 
-Astuce : Il est possible de désactiver le mécanisme d'interprétation des caractères spéciaux (!, /, etc.) dans un élément de pop up menu afin, par exemple, de faire figurer ces caractères dans les libellés. Pour cela, il suffit de faire débuter la définition de l'élément contenue dans le paramètre *contenu* par l'instruction [Char](char.md)(1) (ex : **Caractere*(1)+"1/4"* pour définir un élément "1/4").
+Astuce : Il est possible de désactiver le mécanisme d'interprétation des caractères spéciaux (!, /, etc.) dans un élément de pop up menu afin, par exemple, de faire figurer ces caractères dans les libellés. Pour cela, il suffit de faire débuter la définition de l'élément contenue dans le paramètre *contenu* par l'instruction [Char](../commands/char)(1) (ex : **Caractere*(1)+"1/4"* pour définir un élément "1/4").
 
 Le paramètre optionnel *parDéfaut* vous permet de définir l'élément du pop up menu sélectionné par défaut lorsque celui-ci apparaît. Passez une valeur située entre 1 et le nombre d'éléments du menu. Si vous ne passez pas ce paramètre, le premier élément du menu sera sélectionné par défaut. Si vous passez également les paramètres *coordX* et *coordY* (cf. ci-dessous), ce paramètre est ignoré.
 
@@ -98,7 +98,7 @@ Cette méthode projet peut être appelée d'une des manières suivantes :
 
 * depuis la méthode d'un objet réagissant à un clic souris, et n'attendant pas que le bouton soit relâché (par exemple un bouton invisible),
 * depuis un process qui “épie” les événements et communique avec les autres process,
-* depuis une méthode de gestion d'événements installée par la commande [ON ERR CALL](on-err-call.md).
+* depuis une méthode de gestion d'événements installée par la commande [ON ERR CALL](../commands/on-err-call).
 
 Dans les deux derniers cas, il n'est pas nécessaire que le clic se produise dans un objet de formulaire. C'est l'un des avantages de la commande **Pop up menu**. Généralement, les pop up menus sont affichés par l'intermédiaire d'objets de formulaire. Avec **Pop up menu**, vous pouvez faire apparaître un pop up menu n'importe où. 
 
@@ -110,8 +110,8 @@ Voici le pop up menu tel qu'il s'affiche sous Windows (à gauche) et sous Mac OS
 
 ## Voir aussi 
 
-[Dynamic pop up menu](dynamic-pop-up-menu.md)  
-[MOUSE POSITION](mouse-position.md)  
+[Dynamic pop up menu](../commands/dynamic-pop-up-menu)  
+[MOUSE POSITION](../commands/mouse-position)  
 
 ## Propriétés
 

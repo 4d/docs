@@ -1,4 +1,4 @@
----
+﻿---
 id: array-integer
 title: ARRAY INTEGER
 slug: /commands/array-integer
@@ -57,8 +57,8 @@ This example creates an interprocess array of 50 2-byte [Integer](# "Number betw
 
 ## See also 
 
-[ARRAY LONGINT](array-longint.md)  
-[ARRAY REAL](array-real.md)  
+[ARRAY LONGINT](../commands/array-longint)  
+[ARRAY REAL](../commands/array-real)  
 
 ## Properties
 

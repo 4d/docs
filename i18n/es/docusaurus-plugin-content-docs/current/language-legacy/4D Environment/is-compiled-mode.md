@@ -1,4 +1,4 @@
----
+﻿---
 id: is-compiled-mode
 title: Is compiled mode
 slug: /commands/is-compiled-mode
@@ -55,8 +55,8 @@ En una de sus rutinas, usted incluyó el código de depuración de la base, úti
 
 ## Ver también 
 
-[IDLE](idle.md)  
-[Undefined](undefined.md)  
+[IDLE](../commands/idle)  
+[Undefined](../commands/undefined)  
 
 ## Propiedades
 

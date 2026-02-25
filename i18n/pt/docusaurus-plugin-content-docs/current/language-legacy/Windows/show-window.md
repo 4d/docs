@@ -1,4 +1,4 @@
----
+﻿---
 id: show-window
 title: SHOW WINDOW
 slug: /commands/show-window
@@ -29,15 +29,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SHOW WINDOW.Summary-->O comando SHOW WINDOW permite mostrar a janela cujo número foi passado em *janela*.<!-- END REF--> Se for omitido este parâmetro, se mostrará a janela do primeiro plano do processo atual.  
 
-Para utilizar o comando SHOW WINDOW, a janela deve ter sido ocultada utilizando o comando [HIDE WINDOW](hide-window.md). Se a janela já for visível, o comando não faz nada.
+Para utilizar o comando SHOW WINDOW, a janela deve ter sido ocultada utilizando o comando [HIDE WINDOW](../commands/hide-window). Se a janela já for visível, o comando não faz nada.
 
 ## Exemplo 
 
-Consulte o exemplo do comando [HIDE WINDOW](hide-window.md). 
+Consulte o exemplo do comando [HIDE WINDOW](../commands/hide-window). 
 
 ## Ver também 
 
-[HIDE WINDOW](hide-window.md)  
+[HIDE WINDOW](../commands/hide-window)  
 
 ## Propriedades
 

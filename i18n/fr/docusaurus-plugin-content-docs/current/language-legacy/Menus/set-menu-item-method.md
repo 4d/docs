@@ -1,4 +1,4 @@
----
+﻿---
 id: set-menu-item-method
 title: SET MENU ITEM METHOD
 slug: /commands/set-menu-item-method
@@ -41,11 +41,11 @@ Passez dans *nomMéthode* le nom de la méthode 4D sous la forme d’une chaîne
 
 ## Exemple 
 
-Reportez-vous aux exemple de la commande [SET MENU BAR](set-menu-bar.md). 
+Reportez-vous aux exemple de la commande [SET MENU BAR](../commands/set-menu-bar). 
 
 ## Voir aussi 
 
-[Get menu item method](get-menu-item-method.md)  
+[Get menu item method](../commands/get-menu-item-method)  
 
 ## Propriétés
 

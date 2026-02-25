@@ -1,4 +1,4 @@
----
+﻿---
 id: is-user-deleted
 title: Is user deleted
 slug: /commands/is-user-deleted
@@ -34,13 +34,13 @@ If the user account does not exist or has been deleted, Is user deleted returns 
 
 ## Error management 
 
-If you do not have the proper access privileges for calling Is user deleted or if the Password system is already accessed by another process, an access privilege error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md).
+If you do not have the proper access privileges for calling Is user deleted or if the Password system is already accessed by another process, an access privilege error is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](../commands/on-err-call).
 
 ## See also 
 
-[DELETE USER](delete-user.md)  
-[GET USER PROPERTIES](get-user-properties.md)  
-[Set user properties](set-user-properties.md)  
+[DELETE USER](../commands/delete-user)  
+[GET USER PROPERTIES](../commands/get-user-properties)  
+[Set user properties](../commands/set-user-properties)  
 
 ## Properties
 

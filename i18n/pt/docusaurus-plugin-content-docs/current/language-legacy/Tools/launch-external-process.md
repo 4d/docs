@@ -1,4 +1,4 @@
----
+﻿---
 id: launch-external-process
 title: LAUNCH EXTERNAL PROCESS
 slug: /commands/launch-external-process
@@ -50,12 +50,12 @@ Em macOS, pode também passar apenas o nome da aplicação a executar; 4D utiliz
   
 O parâmetro *fluxoEntrada* (opcional) contém o *stdin* do processo externo. Quando o comando tiver sido executado, os parâmetros *fluxoSaida* e *fluxoErro* (se for passado) retornam respectivamente o *stdout* e o *stderr* do processo externo. Pode utilizar os parâmetros de tipo BLOB ao invés das cadeias de caracteres se gerenciar dados binários (como imagens).  
   
-4D oferece três variáveis de ambiente específicas que podem ser configuradas utilizando [SET ENVIRONMENT VARIABLE](set-environment-variable.md) e estão disponíveis para seu uso no contexto de **LAUNCH EXTERNAL PROCESS**:
+4D oferece três variáveis de ambiente específicas que podem ser configuradas utilizando [SET ENVIRONMENT VARIABLE](../commands/set-environment-variable) e estão disponíveis para seu uso no contexto de **LAUNCH EXTERNAL PROCESS**:
 
 * *\_4D\_OPTION\_CURRENT\_DIRECTORY*: se utiliza para definir o diretório atual de processo externo que se iniciará. Em *valorVar*, deve passar a rota de acesso de diretório (sintaxe de tipo HFS em macOS e DOS em Windows).
 * *\_4D\_OPTION\_HIDE\_CONSOLE* (Windows unicamente): permite ocultar a janela de console DOS. Deve passar "true" em *valorVar* para ocultar o console ou "false" para mostrar
 * *\_4D\_OPTION\_BLOCKING\_EXTERNAL\_PROCESS*: permite executar o processo externo em modo assincrônico, em outras palavras, sem bloqueio para as outras aplicações. Deve passar "false" em *valorVar* para definir uma execução assincrônica ou "true" para uma execução sincrônica (padrão normal). Para esta variável, passar "" em *valorVar* não faz nada.  
-Se definir a variável do ambiente *\_4D\_OPTION\_BLOCKING\_EXTERNAL\_PROCESS* como "false" via o comando [SET ENVIRONMENT VARIABLE](set-environment-variable.md) (execução assincrônica), os parâmetros *fluxoSaida* e *fluxoErro* não são devolvidos.
+Se definir a variável do ambiente *\_4D\_OPTION\_BLOCKING\_EXTERNAL\_PROCESS* como "false" via o comando [SET ENVIRONMENT VARIABLE](../commands/set-environment-variable) (execução assincrônica), os parâmetros *fluxoSaida* e *fluxoErro* não são devolvidos.
 
 Estas variáveis são válidas no processo atual para a chamada abaixo a **LAUNCH EXTERNAL PROCESS**.
   
@@ -147,8 +147,8 @@ Se o comando for executado corretamente, a variável sistema OK assume o valor 1
 
 ## Ver também 
 
-[OPEN URL](open-url.md)  
-[SET ENVIRONMENT VARIABLE](set-environment-variable.md)  
+[OPEN URL](../commands/open-url)  
+[SET ENVIRONMENT VARIABLE](../commands/set-environment-variable)  
 
 ## Propriedades
 

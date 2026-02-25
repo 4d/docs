@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-help-tip
 title: OBJECT Get help tip
 slug: /commands/object-get-help-tip
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable. In this case, you pass a variable reference instead of a string.
 
-The command returns the current help message associated with the object, as it is defined in Design mode or for the process using the [OBJECT SET HELP TIP](object-set-help-tip.md) command. The string returned shows the message as it appears when the form is executed. If it contains variable items (xliff *resname* or 4D references), they are interpreted according to the context. 
+The command returns the current help message associated with the object, as it is defined in Design mode or for the process using the [OBJECT SET HELP TIP](../commands/object-set-help-tip) command. The string returned shows the message as it appears when the form is executed. If it contains variable items (xliff *resname* or 4D references), they are interpreted according to the context. 
 
 ## Example 
 
@@ -47,7 +47,7 @@ The title of a picture button is stored as a help message. This title is stored 
 
 ## See also 
 
-[OBJECT SET HELP TIP](object-set-help-tip.md)  
+[OBJECT SET HELP TIP](../commands/object-set-help-tip)  
 
 ## Properties
 

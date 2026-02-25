@@ -1,4 +1,4 @@
----
+﻿---
 id: form-get-vertical-resizing
 title: FORM GET VERTICAL RESIZING
 slug: /commands/form-get-vertical-resizing
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 ## Ver también 
 
-[FORM SET VERTICAL RESIZING](form-set-vertical-resizing.md)  
+[FORM SET VERTICAL RESIZING](../commands/form-set-vertical-resizing)  
 
 ## Propiedades
 

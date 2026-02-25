@@ -1,4 +1,4 @@
----
+﻿---
 id: character-code
 title: Character code
 slug: /commands/character-code
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 characterが1文字より多い場合、 **Character code** は最初の文字だけをコードに変換します。
 
-**Character code** の逆の変換を実行する関数が [Char](char.md) コマンドです。UTF-16コードが示す文字を返します。
+**Character code** の逆の変換を実行する関数が [Char](../commands/char) コマンドです。UTF-16コードが示す文字を返します。
 
 ## 例題 1 
 
@@ -94,7 +94,7 @@ characterが1文字より多い場合、 **Character code** は最初の文字�
 
 ## 参照 
 
-[Char](char.md)  
+[Char](../commands/char)  
 *文字参照記号*  
 
 ## プロパティ

@@ -1,4 +1,4 @@
----
+﻿---
 id: reject-new-remote-connections
 title: REJECT NEW REMOTE CONNECTIONS
 slug: /commands/reject-new-remote-connections
@@ -46,9 +46,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[DROP REMOTE USER](drop-remote-user.md)  
+[DROP REMOTE USER](../commands/drop-remote-user)  
 [Application info](../commands/application-info)  
-[SOAP REJECT NEW REQUESTS](soap-reject-new-requests.md)  
+[SOAP REJECT NEW REQUESTS](../commands/soap-reject-new-requests)  
 
 ## プロパティ
 

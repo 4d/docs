@@ -1,4 +1,4 @@
----
+﻿---
 id: disable-menu-item
 title: DISABLE MENU ITEM
 slug: /commands/disable-menu-item
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DISABLE MENU ITEM.Summary-->**DISABLE MENU ITEM** désactive la commande de menu dont vous avez passé le numéro ou la référence de menu et le numéro de ligne dans *menu* et *ligneMenu*.<!-- END REF--> Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajoutée au *menu*.
 
-Si le paramètre *ligneMenu* désigne un sous-menu hiérarchique, toutes les lignes de ce menu et de ses éventuels sous-menus sont inactivées. Cette commande fonctionne également avec une barre de menus créée avec la commande [Create menu](create-menu.md) et installée avec la commande [SET MENU BAR](set-menu-bar.md).
+Si le paramètre *ligneMenu* désigne un sous-menu hiérarchique, toutes les lignes de ce menu et de ses éventuels sous-menus sont inactivées. Cette commande fonctionne également avec une barre de menus créée avec la commande [Create menu](../commands/create-menu) et installée avec la commande [SET MENU BAR](../commands/set-menu-bar).
 
 Si vous omettez le paramètre *process*, **DISABLE MENU ITEM** s'applique à la barre de menus du process courant. Sinon, **DISABLE MENU ITEM** s'applique à la barre de menus du process dont vous avez passé le numéro dans *process*. 
 
@@ -42,7 +42,7 @@ Si vous omettez le paramètre *process*, **DISABLE MENU ITEM** s'applique à la 
 
 ## Voir aussi 
 
-[ENABLE MENU ITEM](enable-menu-item.md)  
+[ENABLE MENU ITEM](../commands/enable-menu-item)  
 
 ## Propriétés
 

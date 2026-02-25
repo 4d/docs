@@ -1,4 +1,4 @@
----
+﻿---
 id: get-database-parameter
 title: Get database parameter
 slug: /commands/get-database-parameter
@@ -129,7 +129,7 @@ Tres modos de sincronización son posibles del lado del cliente. El selector Aut
 
 **Valores posibles:** entero largo > 1 (segundos)
 
-**Descripción**: obtiene o establece la periodicidad del vaciado de la caché, expresado en segundos. La modificación de este valor prevalece sobre la opción **Vaciar caché cada X segundos** en [XML DECODE](xml-decode.md) de la configuración de la base para la sesión (que no se almacena en las Propiedades de la base).
+**Descripción**: obtiene o establece la periodicidad del vaciado de la caché, expresado en segundos. La modificación de este valor prevalece sobre la opción **Vaciar caché cada X segundos** en [XML DECODE](../commands/xml-decode) de la configuración de la base para la sesión (que no se almacena en las Propiedades de la base).
 
 
 
@@ -157,10 +157,10 @@ Por defecto, si este selector no se utiliza, 4D descarga mínimo 10% de la cach�
 
 **Se conserva entre dos sesiones**: sí
 
-**Descripción:** constante obsoleta (se conserva por compatibilidad únicamente). Ahora recomendamos utilizar los comandos [WEB SET OPTION](web-set-option.md) y [WEB GET OPTION](web-get-option.md) para la configuración del servidor HTTP.
+**Descripción:** constante obsoleta (se conserva por compatibilidad únicamente). Ahora recomendamos utilizar los comandos [WEB SET OPTION](../commands/web-set-option) y [WEB GET OPTION](../commands/web-get-option) para la configuración del servidor HTTP.
 
 
-**Descripción:** *constante obsoleta (se conserva por compatibilidad únicamente).* Ahora recomendamos utilizar los comandos [WEB SET OPTION](web-set-option.md) y [WEB GET OPTION](web-get-option.md) para la configuración del servidor HTTP.
+**Descripción:** *constante obsoleta (se conserva por compatibilidad únicamente).* Ahora recomendamos utilizar los comandos [WEB SET OPTION](../commands/web-set-option) y [WEB GET OPTION](../commands/web-get-option) para la configuración del servidor HTTP.
 
 
 
@@ -174,7 +174,7 @@ Por defecto, si este selector no se utiliza, 4D descarga mínimo 10% de la cach�
 
 **Valores posibles**: todo valor entero, 0 = conservar todos los registros
 
-**Descripción**: número máximo de archivos a conservar en rotación para cada tipo de registro. Por defecto, todos los archivos se conservan. Si pasa un valor *X*, solo los *X* archivos más recientes se conservan, el más antiguo se borra automáticamente cuando se crea uno nuevo. Esta parametrización se aplica a cada uno de los siguientes archivos de registro: registros de peticiones (selectores 28 y 45), registro de depuración (selector 34), registro de eventos (selector 79), así como el historial de peticiones web (selectores 29 y 84 del comando [WEB SET OPTION](web-set-option.md)), etc.
+**Descripción**: número máximo de archivos a conservar en rotación para cada tipo de registro. Por defecto, todos los archivos se conservan. Si pasa un valor *X*, solo los *X* archivos más recientes se conservan, el más antiguo se borra automáticamente cuando se crea uno nuevo. Esta parametrización se aplica a cada uno de los siguientes archivos de registro: registros de peticiones (selectores 28 y 45), registro de depuración (selector 34), registro de eventos (selector 79), así como el historial de peticiones web (selectores 29 y 84 del comando [WEB SET OPTION](../commands/web-set-option)), etc.
 
 
 
@@ -313,7 +313,7 @@ Para más información sobre este formato y sobre el uso del archivo *4DDebugLog
 
 Cuando el valor del selector es Date type (valor predeterminado para las bases creadas con 4D v17 y superior), las fechas 4D se almacenan con el tipo de fecha dentro de los objetos, con respecto a la configuración de fecha local. Cuando se convierte a formato JSON, los atributos de fecha se convertirán en cadenas que no incluyen un tiempo. (**Nota:** esta configuración se puede definir mediante la opción "Utilizar tipo de fecha en lugar del formato de fecha ISO en objetos" que se encuentra en *Página Compatibilidad* de la configuración de la base).
 
-Si pasa String type with time zone en este selector, convertirá las fechas 4D en cadenas ISO y tendrá en cuenta la zona horaria local. Por ejemplo, la conversión de la fecha 23/08/2013 le da "2013-08-22T22: 00: 000Z" en formato JSON cuando la operación se realiza en Francia durante el horario de verano (GMT+ 2). Este principio se ajusta al funcionamiento estándar de JavaScript. Esto puede ser una fuente de errores cuando desea enviar valores de fecha JSON a alguien en un huso horario diferente. Por ejemplo, cuando exporta una tabla usando [Selection to JSON](selection-to-json.md) en Francia que se debe reimportar en los EE. UU. utilizando [JSON TO SELECTION](json-to-selection.md). Dado que las fechas se vuelven a interpretar en cada zona horaria, los valores almacenados en la base de datos serán diferentes. En este caso, puede modificar el modo de conversión de las fechas para que no tengan en cuenta la zona horaria pasando String type without time zone en este selector. La conversión de la fecha 23/08/2013 le dará "2013-08-23T00: 00: 00Z" en todos los casos.
+Si pasa String type with time zone en este selector, convertirá las fechas 4D en cadenas ISO y tendrá en cuenta la zona horaria local. Por ejemplo, la conversión de la fecha 23/08/2013 le da "2013-08-22T22: 00: 000Z" en formato JSON cuando la operación se realiza en Francia durante el horario de verano (GMT+ 2). Este principio se ajusta al funcionamiento estándar de JavaScript. Esto puede ser una fuente de errores cuando desea enviar valores de fecha JSON a alguien en un huso horario diferente. Por ejemplo, cuando exporta una tabla usando [Selection to JSON](../commands/selection-to-json) en Francia que se debe reimportar en los EE. UU. utilizando [JSON TO SELECTION](../commands/json-to-selection). Dado que las fechas se vuelven a interpretar en cada zona horaria, los valores almacenados en la base de datos serán diferentes. En este caso, puede modificar el modo de conversión de las fechas para que no tengan en cuenta la zona horaria pasando String type without time zone en este selector. La conversión de la fecha 23/08/2013 le dará "2013-08-23T00: 00: 00Z" en todos los casos.
 
 
 
@@ -398,7 +398,7 @@ Este selector se ofrece únicamente con fines de depuración y debe utilizarse c
 
 4D permite guardar de manera continua en un archivo de diagnóstico un conjunto de eventos relativos al funcionamiento interno de la aplicación. La información contenida en este archivo está destinada a la actualización de las aplicaciones 4D y puede ser analizada con ayuda de los servicios técnicos de 4D. Cuando pasa 1 en este selector, el archivo de diagnóstico, llamado *NomBase.txt*, se crea automáticamente (o abre) en la carpeta **Logs** de la base. Una vez el archivo alcance un tamaño de 10 MB, se cierra y se genera un nuevo archivo *NomBase\_N.txt*, con un número secuencial N incrementado.
 
-Note que es posible incluir la información personalizada en este archivo con ayuda del comando [LOG EVENT](log-event.md).
+Note que es posible incluir la información personalizada en este archivo con ayuda del comando [LOG EVENT](../commands/log-event).
 
 
 
@@ -450,7 +450,7 @@ $mode:=Get database parameter(Direct2D get active status)
 
 **Se conserva entre dos sesiones**: no
 
-**Descripción**: *constante obsoleta (se conserva por compatibilidad únicamente).* Se recomienda utilizar los comandos [WEB SET OPTION](web-set-option.md) y [WEB GET OPTION](web-get-option.md) para la configuración del servidor HTTP.
+**Descripción**: *constante obsoleta (se conserva por compatibilidad únicamente).* Se recomienda utilizar los comandos [WEB SET OPTION](../commands/web-set-option) y [WEB GET OPTION](../commands/web-get-option) para la configuración del servidor HTTP.
 
 
 
@@ -461,7 +461,7 @@ $mode:=Get database parameter(Direct2D get active status)
 
 **Se conserva entre dos sesiones**: no
 
-**Descripción**: *constante obsoleta (se conserva por compatibilidad únicamente).* Se recomienda utilizar los comandos [WEB SET OPTION](web-set-option.md) y [WEB GET OPTION](web-get-option.md) para la configuración del servidor HTTP.
+**Descripción**: *constante obsoleta (se conserva por compatibilidad únicamente).* Se recomienda utilizar los comandos [WEB SET OPTION](../commands/web-set-option) y [WEB GET OPTION](../commands/web-get-option) para la configuración del servidor HTTP.
 
 
 
@@ -472,7 +472,7 @@ $mode:=Get database parameter(Direct2D get active status)
 
 **Se conserva entre dos sesiones**: sí
 
-**Descripción**: *constante obsoleta (se conserva por compatibilidad únicamente).* Se recomienda utilizar los comandos [WEB SET OPTION](web-set-option.md) y [WEB GET OPTION](web-get-option.md) para la configuración del servidor HTTP.
+**Descripción**: *constante obsoleta (se conserva por compatibilidad únicamente).* Se recomienda utilizar los comandos [WEB SET OPTION](../commands/web-set-option) y [WEB GET OPTION](../commands/web-get-option) para la configuración del servidor HTTP.
 
 
 ### Idle connections timeout (54)
@@ -517,7 +517,7 @@ Para más información sobre los archivos 4DIMAPLog\_X.txt, consulte la sección
 
 ### Is current database a project (112)
 
-**Nota:** solo puede utilizar este selector con el comando [Get database parameter](get-database-parameter.md) y su valor no se puede definir.
+**Nota:** solo puede utilizar este selector con el comando [Get database parameter](../commands/get-database-parameter) y su valor no se puede definir.
 
 **Alcance**: aplicación 4D
 
@@ -528,7 +528,7 @@ Para más información sobre los archivos 4DIMAPLog\_X.txt, consulte la sección
 
 ### Is host database a project (113)
 
-**Nota:** solo puede utilizar este selector con el comando [Get database parameter](get-database-parameter.md) y su valor no se puede definir.
+**Nota:** solo puede utilizar este selector con el comando [Get database parameter](../commands/get-database-parameter) y su valor no se puede definir.
 
 **Alcance**: aplicación 4D
 
@@ -539,7 +539,7 @@ Para más información sobre los archivos 4DIMAPLog\_X.txt, consulte la sección
 
 ### Is host database writable (117)
 
-**Nota**: solo puede utilizar este selector con el comando [Get database parameter](get-database-parameter.md) y su valor no se puede definir.
+**Nota**: solo puede utilizar este selector con el comando [Get database parameter](../commands/get-database-parameter) y su valor no se puede definir.
 
 **Alcance**: aplicación 4D
 
@@ -629,7 +629,7 @@ SET DATABASE PARAMETER(Log command list;"-1666;-323")
 
 **Se conserva entre dos sesiones**: sí
 
-**Descripción**: *constante obsoleta (se conserva por compatibilidad únicamente).* Se recomienda utilizar los comandos [WEB SET OPTION](web-set-option.md) y [WEB GET OPTION](web-get-option.md) para la configuración del servidor HTTP.
+**Descripción**: *constante obsoleta (se conserva por compatibilidad únicamente).* Se recomienda utilizar los comandos [WEB SET OPTION](../commands/web-set-option) y [WEB GET OPTION](../commands/web-get-option) para la configuración del servidor HTTP.
 
 
 
@@ -640,7 +640,7 @@ SET DATABASE PARAMETER(Log command list;"-1666;-323")
 
 **Se conserva entre dos sesiones**: sí
 
-**Descripción**: Constante obsoleta (se conserva por compatibilidad únicamente). Se recomienda utilizar los comandos [WEB SET OPTION](web-set-option.md) y [WEB GET OPTION](web-get-option.md) para la configuración del servidor HTTP.
+**Descripción**: Constante obsoleta (se conserva por compatibilidad únicamente). Se recomienda utilizar los comandos [WEB SET OPTION](../commands/web-set-option) y [WEB GET OPTION](../commands/web-get-option) para la configuración del servidor HTTP.
 
 
 
@@ -676,7 +676,7 @@ SET DATABASE PARAMETER(Log command list;"-1666;-323")
 
 **Valor por defecto**: 0 (sin caché) 
 
-**Descripción**: establece u obtiene el número máximo de fórmulas a conservar en la memoria caché de fórmulas, que es utilizado por el comando [EXECUTE FORMULA](execute-formula.md). Este límite se aplica a todos los procesos, pero cada proceso tiene su propia caché de fórmulas. Ubicar las fórmulas en la caché acelera la ejecución del comando [EXECUTE FORMULA](execute-formula.md) en modo compilado, ya que cada fórmula en caché se tokeniza sólo una vez en este caso.Cuando se cambia el valor de la memoria caché, el contenido existente se restablecen incluso si el nuevo tamaño es más grande que el anterior. Una vez se alcanza el número máximo de fórmulas en la memoria caché, una nueva fórmula ejecutada borrará a la más antigua de la memoria caché (modo FIFO). Este parámetro sólo se tiene en cuenta en las bases o componentes compilados.
+**Descripción**: establece u obtiene el número máximo de fórmulas a conservar en la memoria caché de fórmulas, que es utilizado por el comando [EXECUTE FORMULA](../commands/execute-formula). Este límite se aplica a todos los procesos, pero cada proceso tiene su propia caché de fórmulas. Ubicar las fórmulas en la caché acelera la ejecución del comando [EXECUTE FORMULA](../commands/execute-formula) en modo compilado, ya que cada fórmula en caché se tokeniza sólo una vez en este caso.Cuando se cambia el valor de la memoria caché, el contenido existente se restablecen incluso si el nuevo tamaño es más grande que el anterior. Una vez se alcanza el número máximo de fórmulas en la memoria caché, una nueva fórmula ejecutada borrará a la más antigua de la memoria caché (modo FIFO). Este parámetro sólo se tiene en cuenta en las bases o componentes compilados.
 
 
 
@@ -931,7 +931,7 @@ Para obtener más información sobre los archivos 4DSMTPLog\_X.txt, consulte la 
 
 Por defecto, el valor es 1 (sensible a las mayúsculas y minúsculas): el motor SQL diferencia entre mayúsculas y minúsculas y entre caracteres acentuados al comparar cadenas (ordenaciones y búsquedas). Por ejemplo “ABC”= “ABC” pero “ABC” # “Abc.” En algunos casos, por ejemplo para alinear el funcionamiento del motor SQL con el del motor 4D, podría querer que las comparaciones de cadenas no tengan en cuenta las mayúsculas y minúsculas (“ABC”=“Abc”). 
 
-Esta opción también puede definirse en la [CALL SUBFORM CONTAINER](call-subform-container.md) de las Preferencias de la base.
+Esta opción también puede definirse en la [CALL SUBFORM CONTAINER](../commands/call-subform-container) de las Preferencias de la base.
 
 
 
@@ -967,9 +967,9 @@ Esta configuración se aplica al servidor web principal (excluyendo los objetos 
 
 Cuando la lista de cifrado se modifica, debe reiniciar el servidor correspondiente para que los nuevos parámetros sean tenidos en cuenta. 
 
-Para reinicializar la lista de cifrado a su valor por defecto (guardado permanentemente en el archivo SLI), llame al comando [SET DATABASE PARAMETER](set-database-parameter.md) y pase una cadena vacía ("") en el parámetro *valor*. 
+Para reinicializar la lista de cifrado a su valor por defecto (guardado permanentemente en el archivo SLI), llame al comando [SET DATABASE PARAMETER](../commands/set-database-parameter) y pase una cadena vacía ("") en el parámetro *valor*. 
 
-**Nota:** con el comando [Get database parameter](get-database-parameter.md), la lista de cifrado se devuelve en el parámetro opcional *valorAlfa* y el parámetro de retorno es siempre 0.
+**Nota:** con el comando [Get database parameter](../commands/get-database-parameter), la lista de cifrado se devuelve en el parámetro opcional *valorAlfa* y el parámetro de retorno es siempre 0.
 
 
 ### Table sequence number (31)
@@ -1085,7 +1085,7 @@ Esta propiedad también se puede definir mediante la opción "Usar capa de red a
 
 **Descripción:** cadena personalizada pasada de una sesión a la siguiente cuando se reinicia la aplicación 4D. Este selector es útil en el contexto de pruebas unitarias automatizadas que requieren que las aplicaciones se reinicien con diferentes parámetros.
 
-Cuando se utiliza con [SET DATABASE PARAMETER](set-database-parameter.md), define un nuevo valor que estará disponible en la próxima base de datos abierta después de que 4D se reinicie manualmente o utilizando los comandos [OPEN DATABASE](open-database.md)(\*), [OPEN DATA FILE](open-data-file.md), o [RESTART 4D](restart-4d.md). Cuando se utiliza con [Get database parameter](get-database-parameter.md), obtiene el valor del parámetro de usuario actualmente disponible, definido mediante una línea de comando (ver *Interfaz de línea de comando*), el archivo .4DLink (ver *Usar un archivo 4DLink*), o una llamada a [SET DATABASE PARAMETER](set-database-parameter.md) durante la sesión anterior. (\*) Si [SET DATABASE PARAMETER](set-database-parameter.md) define un User param value antes de una llamada a [OPEN DATABASE](open-database.md) con un archivo .4DLink que también contiene un atributo xml user-param, 4D 4D tiene en cuenta solo el parámetro ofrecido por [SET DATABASE PARAMETER](set-database-parameter.md).
+Cuando se utiliza con [SET DATABASE PARAMETER](../commands/set-database-parameter), define un nuevo valor que estará disponible en la próxima base de datos abierta después de que 4D se reinicie manualmente o utilizando los comandos [OPEN DATABASE](../commands/open-database)(\*), [OPEN DATA FILE](../commands/open-data-file), o [RESTART 4D](../commands/restart-4d). Cuando se utiliza con [Get database parameter](../commands/get-database-parameter), obtiene el valor del parámetro de usuario actualmente disponible, definido mediante una línea de comando (ver *Interfaz de línea de comando*), el archivo .4DLink (ver *Usar un archivo 4DLink*), o una llamada a [SET DATABASE PARAMETER](../commands/set-database-parameter) durante la sesión anterior. (\*) Si [SET DATABASE PARAMETER](../commands/set-database-parameter) define un User param value antes de una llamada a [OPEN DATABASE](../commands/open-database) con un archivo .4DLink que también contiene un atributo xml user-param, 4D 4D tiene en cuenta solo el parámetro ofrecido por [SET DATABASE PARAMETER](../commands/set-database-parameter).
 
 
 
@@ -1118,7 +1118,7 @@ Desea que su aplicación se reinicie después de un primer lanzamiento. La aplic
 %HOMEPATH%\Desktop\4D\4D.exe %HOMEPATH%\Documents\myDB.4dbase\myDB.4db --user-param "First launch"
 ```
 
-En el [Método base On Startup](metodo-base-on-startup.md), usted escribe:
+En el [Método base On Startup](../commands/metodo-base-on-startup), usted escribe:
 
 ```4d
  var $realVal : Real
@@ -1136,10 +1136,10 @@ En el [Método base On Startup](metodo-base-on-startup.md), usted escribe:
 
 ## Ver también 
 
-[DISTINCT VALUES](distinct-values.md)  
+[DISTINCT VALUES](../commands/distinct-values)  
 [Application info](../commands/application-info)  
-[QUERY SELECTION](query-selection.md)  
-[SET DATABASE PARAMETER](set-database-parameter.md)  
+[QUERY SELECTION](../commands/query-selection)  
+[SET DATABASE PARAMETER](../commands/set-database-parameter)  
 
 ## Propiedades
 

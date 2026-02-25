@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-delete-offscreen-area
 title: QR DELETE OFFSCREEN AREA
 slug: /commands/qr-delete-offscreen-area
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[QR New offscreen area](qr-new-offscreen-area.md)  
+[QR New offscreen area](../commands/qr-new-offscreen-area)  
 
 ## プロパティ
 

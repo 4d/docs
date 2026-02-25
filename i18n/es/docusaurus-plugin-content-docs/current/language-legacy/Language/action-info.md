@@ -1,4 +1,4 @@
----
+﻿---
 id: action-info
 title: Action info
 slug: /commands/action-info
@@ -65,8 +65,8 @@ Desea saber si la acción copiar está disponible (es decir, si se han seleccion
 
 ## Ver también 
 
-[INVOKE ACTION](invoke-action.md)  
-[SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+[INVOKE ACTION](../commands/invoke-action)  
+[SET LIST ITEM PARAMETER](../commands/set-list-item-parameter)  
 
 ## Propiedades
 

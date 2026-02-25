@@ -1,4 +1,4 @@
----
+﻿---
 id: table-fragmentation
 title: Table fragmentation
 slug: /commands/table-fragmentation
@@ -42,7 +42,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Compact data file](compact-data-file.md)  
+[Compact data file](../commands/compact-data-file)  
 
 ## プロパティ
 

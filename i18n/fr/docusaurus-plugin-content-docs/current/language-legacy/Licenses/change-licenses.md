@@ -1,4 +1,4 @@
----
+﻿---
 id: change-licenses
 title: CHANGE LICENSES
 slug: /commands/change-licenses
@@ -51,7 +51,7 @@ Vous permettrez ainsi à un utilisateur d‘activer des licences sans avoir à m
 ## Voir aussi 
 
 [License info](../commands/license-info)  
-[Is license available](is-license-available.md)  
+[Is license available](../commands/is-license-available)  
 
 ## Propriétés
 

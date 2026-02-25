@@ -1,4 +1,4 @@
----
+﻿---
 id: locked-by
 title: LOCKED BY
 slug: /commands/locked-by
@@ -39,7 +39,7 @@ displayed_sidebar: docs
 
 Se o registro não estiver bloqueado, *processo* devolve 0 e *usuario4D, sessaoUsuario*, e *nomeProcesso* devolvem cadeias vazias. Se quer carregar em modo leitura/escritura um registro que foi apagado, *processo* devolve -1 e *usuario, maquina*, e *nomeProcesso* devolvem strings vazias.  
   
-O parâmetro *usuario4D* devolvido corresponde ao nome do usuário do sistema de senha 4D ou o apelido, como definido com [SET USER ALIAS](set-user-alias.md) (se houver). Se não há sistema de senhas ou um apelido definido, devolve “Desenhista”.  
+O parâmetro *usuario4D* devolvido corresponde ao nome do usuário do sistema de senha 4D ou o apelido, como definido com [SET USER ALIAS](../commands/set-user-alias) (se houver). Se não há sistema de senhas ou um apelido definido, devolve “Desenhista”.  
   
 O parâmetro *sessaoUsuario* devolvido corresponde ao nome do usuário que abriu a sessão na máquina cliente (este nome aparece na janela de administração de 4D Server para cada processo aberto).
 
@@ -52,7 +52,7 @@ nomeProcesso devolve o endereço IP do locker, p. ex. "127.0.0.1"
 
 ## Ver também 
 
-[Locked](locked.md)  
+[Locked](../commands/locked)  
 *Record Locking*  
 
 ## Propriedades

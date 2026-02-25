@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-headers-height
 title: LISTBOX Get headers height
 slug: /commands/listbox-get-headers-height
@@ -45,7 +45,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[LISTBOX SET HEADERS HEIGHT](listbox-set-headers-height.md)  
+[LISTBOX SET HEADERS HEIGHT](../commands/listbox-set-headers-height)  
 
 ## プロパティ
 

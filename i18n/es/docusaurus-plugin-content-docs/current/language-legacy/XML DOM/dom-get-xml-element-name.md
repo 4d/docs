@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-get-xml-element-name
 title: DOM GET XML ELEMENT NAME
 slug: /commands/dom-get-xml-element-name
@@ -50,9 +50,9 @@ Si el comando ha sido ejecutado correctamente, la variable sistema OK toma el va
 
 ## Ver también 
 
-[DOM Get XML element](dom-get-xml-element.md)  
-[DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md)  
-[DOM SET XML ELEMENT NAME](dom-set-xml-element-name.md)  
+[DOM Get XML element](../commands/dom-get-xml-element)  
+[DOM GET XML ELEMENT VALUE](../commands/dom-get-xml-element-value)  
+[DOM SET XML ELEMENT NAME](../commands/dom-set-xml-element-name)  
 
 ## Propiedades
 

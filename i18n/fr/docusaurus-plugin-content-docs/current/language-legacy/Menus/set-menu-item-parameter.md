@@ -1,4 +1,4 @@
----
+﻿---
 id: set-menu-item-parameter
 title: SET MENU ITEM PARAMETER
 slug: /commands/set-menu-item-parameter
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET MENU ITEM PARAMETER.Summary-->La commande **SET MENU ITEM PARAMETER** vous permet d’associer une chaîne de caractères personnalisée à la ligne de menu désignée par les paramètres *menu* et *ligneMenu*.<!-- END REF--> 
 
-Ce paramètre sera principalement utilisé par la commande [Dynamic pop up menu](dynamic-pop-up-menu.md).
+Ce paramètre sera principalement utilisé par la commande [Dynamic pop up menu](../commands/dynamic-pop-up-menu).
 
 ## Exemple 
 
@@ -51,9 +51,9 @@ Ce code permet de proposer un menu comportant le libellé des fenêtres ouvertes
 
 ## Voir aussi 
 
-[Dynamic pop up menu](dynamic-pop-up-menu.md)  
-[Get menu item parameter](get-menu-item-parameter.md)  
-[Get selected menu item parameter](get-selected-menu-item-parameter.md)  
+[Dynamic pop up menu](../commands/dynamic-pop-up-menu)  
+[Get menu item parameter](../commands/get-menu-item-parameter)  
+[Get selected menu item parameter](../commands/get-selected-menu-item-parameter)  
 
 ## Propriétés
 

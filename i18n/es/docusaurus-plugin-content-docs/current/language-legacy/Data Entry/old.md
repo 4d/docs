@@ -1,4 +1,4 @@
----
+﻿---
 id: old
 title: Old
 slug: /commands/old
@@ -51,7 +51,7 @@ Para restaurar el valor original de un campo, asígnele el valor devuelto por Ol
 
 ## Ver también 
 
-[Modified](modified.md)  
+[Modified](../commands/modified)  
 
 ## Propiedades
 

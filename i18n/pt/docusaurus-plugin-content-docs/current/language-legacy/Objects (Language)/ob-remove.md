@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-remove
 title: OB REMOVE
 slug: /commands/ob-remove
@@ -49,7 +49,7 @@ Você quer eliminar a propriedade "idade" de um objeto:
 
 ## Ver também 
 
-[OB SET](ob-set.md)  
+[OB SET](../commands/ob-set)  
 
 ## Propriedades
 

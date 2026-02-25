@@ -1,4 +1,4 @@
----
+﻿---
 id: get-pasteboard-data
 title: GET PASTEBOARD DATA
 slug: /commands/get-pasteboard-data
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 In *dataType*, pass a value specifying the type of data to be retrieved. You can pass a 4D signature, a UTI type (macOS), a format name/number (Windows), or a 4-character type (compatibility). For more information about these types, please refer to the *Managing Pasteboards* section. 
 
-**Note:** You cannot read file type data with this command; in order to do this, you have to use the [Get file from pasteboard](get-file-from-pasteboard.md) command. 
+**Note:** You cannot read file type data with this command; in order to do this, you have to use the [Get file from pasteboard](../commands/get-file-from-pasteboard) command. 
 
 ## Example 
 
@@ -63,9 +63,9 @@ If the data is correctly extracted, OK is set to 1; otherwise OK is set to 0 and
 
 ## See also 
 
-[APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
-[GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
-[Get text from pasteboard](get-text-from-pasteboard.md)  
+[APPEND DATA TO PASTEBOARD](../commands/append-data-to-pasteboard)  
+[GET PICTURE FROM PASTEBOARD](../commands/get-picture-from-pasteboard)  
+[Get text from pasteboard](../commands/get-text-from-pasteboard)  
 
 ## Properties
 

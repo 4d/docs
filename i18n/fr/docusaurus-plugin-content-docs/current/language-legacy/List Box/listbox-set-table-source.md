@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-table-source
 title: LISTBOX SET TABLE SOURCE
 slug: /commands/listbox-set-table-source
@@ -49,7 +49,7 @@ Si la list box contenait déjà des colonnes, leur contenu est mis à jour à l�
 
 ## Voir aussi 
 
-[LISTBOX GET TABLE SOURCE](listbox-get-table-source.md)  
+[LISTBOX GET TABLE SOURCE](../commands/listbox-get-table-source)  
 
 ## Propriétés
 

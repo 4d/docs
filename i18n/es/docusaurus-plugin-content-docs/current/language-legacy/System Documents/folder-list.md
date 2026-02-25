@@ -1,4 +1,4 @@
----
+﻿---
 id: folder-list
 title: FOLDER LIST
 slug: /commands/folder-list
@@ -34,8 +34,8 @@ Si no hay carpetas en la ubicación especificada, el comando devuelve un array v
 
 ## Ver también 
 
-[DOCUMENT LIST](document-list.md)  
-[VOLUME LIST](volume-list.md)  
+[DOCUMENT LIST](../commands/document-list)  
+[VOLUME LIST](../commands/volume-list)  
 
 ## Propiedades
 

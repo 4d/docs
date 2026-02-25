@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-insert-column-formula
 title: LISTBOX INSERT COLUMN FORMULA
 slug: /commands/listbox-insert-column-formula
@@ -41,7 +41,7 @@ displayed_sidebar: docs
 ## Descripción 
 
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Summary-->El comando **LISTBOX INSERT COLUMN FORMULA** inserta una columna en el listbox designado por los parámetros *objeto* y *\**.<!-- END REF-->  
-El comando **LISTBOX INSERT COLUMN FORMULA** es similar al comando [LISTBOX INSERT COLUMN](listbox-insert-column.md) excepto que puede utilizarse para introducir una fórmula como contenido de una columna.
+El comando **LISTBOX INSERT COLUMN FORMULA** es similar al comando [LISTBOX INSERT COLUMN](../commands/listbox-insert-column) excepto que puede utilizarse para introducir una fórmula como contenido de una columna.
 
 Este tipo de contenido solo puede utilizarse cuando la propiedad “Fuente de datos” del list box es **Selección actual**, **Selección temporal** o **Colección o Selección de entidades** (para mayor información, consulte la sección *Gestión programada de los objetos de tipo List box*).
 
@@ -132,7 +132,7 @@ La columna se añade al list box:
 
 ## Ver también 
 
-[LISTBOX INSERT COLUMN](listbox-insert-column.md)  
+[LISTBOX INSERT COLUMN](../commands/listbox-insert-column)  
 
 ## Propiedades
 

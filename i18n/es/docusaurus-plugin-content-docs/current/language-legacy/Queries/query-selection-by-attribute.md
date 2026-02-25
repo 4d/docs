@@ -1,4 +1,4 @@
----
+﻿---
 id: query-selection-by-attribute
 title: QUERY SELECTION BY ATTRIBUTE
 slug: /commands/query-selection-by-attribute
@@ -34,16 +34,16 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Summary-->**QUERY SELECTION BY ATTRIBUTE** trabaja y realiza las mismas acciones que [QUERY BY ATTRIBUTE](query-by-attribute.md).<!-- END REF--> La diferencia entre estos dos comandos es el alcance de la búsqueda:
+<!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Summary-->**QUERY SELECTION BY ATTRIBUTE** trabaja y realiza las mismas acciones que [QUERY BY ATTRIBUTE](../commands/query-by-attribute).<!-- END REF--> La diferencia entre estos dos comandos es el alcance de la búsqueda:
 
-* [QUERY BY ATTRIBUTE](query-by-attribute.md) busca los registros entre todos los registros de la tabla.
+* [QUERY BY ATTRIBUTE](../commands/query-by-attribute) busca los registros entre todos los registros de la tabla.
 * **QUERY SELECTION BY ATTRIBUTE** busca los registros entre los registros seleccionados actualmente en la tabla.
 
 **QUERY SELECTION BY ATTRIBUTE** busca los registros en *tabla*. El comando **QUERY SELECTION BY ATTRIBUTE** cambia la selección actual de *tabla* para el proceso actual y vuelve el primer registro de la nueva selección el registro actual.
 
-Para más información, consulte la descripción del comando [QUERY BY ATTRIBUTE](query-by-attribute.md).
+Para más información, consulte la descripción del comando [QUERY BY ATTRIBUTE](../commands/query-by-attribute).
 
-El comando **QUERY SELECTION BY ATTRIBUTE** es útil cuando una búsqueda no se puede definir mediante una combinación de [QUERY BY ATTRIBUTE](query-by-attribute.md) (e incluso [QUERY](query.md)) llamadas junto con el parámetro *\**. Por lo general, este es el caso cuando se desea consultar una selección actual que no sea resultado de una búsqueda previa, pero a partir de un comando como [USE SET](use-set.md).
+El comando **QUERY SELECTION BY ATTRIBUTE** es útil cuando una búsqueda no se puede definir mediante una combinación de [QUERY BY ATTRIBUTE](../commands/query-by-attribute) (e incluso [QUERY](../commands/query)) llamadas junto con el parámetro *\**. Por lo general, este es el caso cuando se desea consultar una selección actual que no sea resultado de una búsqueda previa, pero a partir de un comando como [USE SET](../commands/use-set).
 
 ## Ejemplo 
 
@@ -59,7 +59,7 @@ Usted quiere encontrar personas con una edad entre 20 y 30, entre los registros 
 
 ## Ver también 
 
-[QUERY BY ATTRIBUTE](query-by-attribute.md)  
+[QUERY BY ATTRIBUTE](../commands/query-by-attribute)  
 
 ## Propiedades
 

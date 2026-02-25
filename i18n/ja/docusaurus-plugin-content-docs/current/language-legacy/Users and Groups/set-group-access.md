@@ -1,4 +1,4 @@
----
+﻿---
 id: set-group-access
 title: SET GROUP ACCESS
 slug: /commands/set-group-access
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 **注:** 
 
-* このコマンドのスコープはカレントセッションです。例えば[CHANGE CURRENT USER](change-current-user.md) をその後に呼び出した場合、定義された所属情報は全てリセットされます。
+* このコマンドのスコープはカレントセッションです。例えば[CHANGE CURRENT USER](../commands/change-current-user) をその後に呼び出した場合、定義された所属情報は全てリセットされます。
 * このコマンドはリモートの4D、またはシングルユーザー版の4D アプリケーションでのみ呼び出し可能です。4D Server では呼び出しは許可されていません。
 
 *groups* 引数には、4D ユーザーアカウントを所属させる既存のグループ名のコレクションを渡します(存在しないグループ名を渡した場合、それは無視されます)。空のコレクションを渡した場合、4D ユーザーアカウントはどのグループにも所属していない状態になります。
@@ -51,10 +51,10 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Get group access](get-group-access.md)  
-[Get plugin access](get-plugin-access.md)  
-[SET PLUGIN ACCESS](set-plugin-access.md)  
-[SET USER ALIAS](set-user-alias.md)  
+[Get group access](../commands/get-group-access)  
+[Get plugin access](../commands/get-plugin-access)  
+[SET PLUGIN ACCESS](../commands/set-plugin-access)  
+[SET USER ALIAS](../commands/set-user-alias)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: get-database-localization
 title: Get database localization
 slug: /commands/get-database-localization
@@ -63,8 +63,8 @@ El lenguaje actual de la base permite definir la carpeta .lproj en la que el pro
 
 ## Ver también 
 
-[Localized document path](localized-document-path.md)  
-[SET DATABASE LOCALIZATION](set-database-localization.md)  
+[Localized document path](../commands/localized-document-path)  
+[SET DATABASE LOCALIZATION](../commands/set-database-localization)  
 
 ## Propiedades
 

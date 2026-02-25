@@ -1,4 +1,4 @@
----
+﻿---
 id: form-event-code
 title: Form event code
 slug: /commands/form-event-code
@@ -346,7 +346,7 @@ As a result, the red rectangle follows the scrolling of the list box:
 [CALL SUBFORM CONTAINER](../commands/call-subform-container)  
 [Current form table](../commands/current-form-table)  
 [FILTER KEYSTROKE](../commands/filter-keystroke)  
-[FORM Event](form-event.md)  
+[FORM Event](../commands/form-event)  
 [Get edited text](../commands/get-edited-text)  
 [Keystroke](../commands/keystroke)  
 [POST OUTSIDE CALL](../commands/post-outside-call)  

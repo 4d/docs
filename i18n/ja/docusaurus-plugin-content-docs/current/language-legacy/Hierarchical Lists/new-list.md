@@ -1,4 +1,4 @@
----
+﻿---
 id: new-list
 title: New list
 slug: /commands/new-list
@@ -48,14 +48,14 @@ New listを使用して階層リストを作成した後は、以下のことが
 
 ## 参照 
 
-[APPEND TO LIST](append-to-list.md)  
-[BLOB to list](blob-to-list.md)  
-[CLEAR LIST](clear-list.md)  
-[Copy list](copy-list.md)  
-[DELETE FROM LIST](delete-from-list.md)  
-[INSERT IN LIST](insert-in-list.md)  
-[LIST TO BLOB](list-to-blob.md)  
-[Load list](load-list.md)  
+[APPEND TO LIST](../commands/append-to-list)  
+[BLOB to list](../commands/blob-to-list)  
+[CLEAR LIST](../commands/clear-list)  
+[Copy list](../commands/copy-list)  
+[DELETE FROM LIST](../commands/delete-from-list)  
+[INSERT IN LIST](../commands/insert-in-list)  
+[LIST TO BLOB](../commands/list-to-blob)  
+[Load list](../commands/load-list)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-report-kind
 title: QR SET REPORT KIND
 slug: /commands/qr-set-report-kind
@@ -49,7 +49,7 @@ Se passa um valor incorreto do parâmetro *propriedade*, se gera o erro -9852.
 
 ## Ver também 
 
-[QR Get report kind](qr-get-report-kind.md)  
+[QR Get report kind](../commands/qr-get-report-kind)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: set-window-document-icon
 title: SET WINDOW DOCUMENT ICON
 slug: /commands/set-window-document-icon
@@ -78,4 +78,4 @@ In this example, we want to create four windows:
 
 ## Veja também
 
-[Create entity selection](create-entity-selection.md)
+[Create entity selection](../commands/create-entity-selection)

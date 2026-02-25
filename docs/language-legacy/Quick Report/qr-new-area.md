@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-new-area
 title: QR NEW AREA
 slug: /commands/qr-new-area
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 ## See also 
 
-[QR New offscreen area](qr-new-offscreen-area.md)  
+[QR New offscreen area](../commands/qr-new-offscreen-area)  
 
 ## Properties
 

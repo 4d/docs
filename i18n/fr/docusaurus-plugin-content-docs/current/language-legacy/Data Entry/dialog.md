@@ -1,4 +1,4 @@
----
+﻿---
 id: dialog
 slug: /commands/dialog
 title: DIALOG
@@ -36,7 +36,7 @@ Dans le paramètre *form*, vous pouvez passer soit :
 - le chemin (en syntaxe POSIX) d'un fichier .json valide contenant la description du formulaire à utiliser,
 - un objet contenant la description du formulaire à utiliser.
 
-Optionnellement, vous pouvez passer un ou plusieurs paramètre(s) au *form* à l'aide d'un objet "form data" (données du formulaire). Toutes les propriétés de l'objet de données du formulaire seront alors disponibles dans le contexte du formulaire par le biais de la commande [Form](form.md). Par exemple, si vous utilisez un objet de données de formulaire contenant {"version" ; "12"}, vous pourrez obtenir ou définir la valeur de la propriété "version" dans le formulaire en appelant :
+Optionnellement, vous pouvez passer un ou plusieurs paramètre(s) au *form* à l'aide d'un objet "form data" (données du formulaire). Toutes les propriétés de l'objet de données du formulaire seront alors disponibles dans le contexte du formulaire par le biais de la commande [Form](../commands/form). Par exemple, si vous utilisez un objet de données de formulaire contenant {"version" ; "12"}, vous pourrez obtenir ou définir la valeur de la propriété "version" dans le formulaire en appelant :
 
 ```4d
  $v:=Form.version //"12"
@@ -45,9 +45,9 @@ Optionnellement, vous pouvez passer un ou plusieurs paramètre(s) au *form* à l
 
 Pour remplir l'objet "form data", vous avez deux possibilités :
 
-- utiliser le paramètre *formData*. L'utilisation d'une variable locale pour *formData* vous permet de passer en toute sécurité des paramètres à vos formulaires, quel que soit le contexte d'appel. En particulier, si le même formulaire est appelé à différents endroits dans le même process, vous pourrez toujours accéder à ses valeurs spécifiques en appelant simplement [Form](form.md).myProperty. De plus, les objets étant transmis par référence, si l'utilisateur modifie la valeur d'une propriété dans le formulaire, celle-ci sera automatiquement sauvegardée dans l'objet lui-même.
+- utiliser le paramètre *formData*. L'utilisation d'une variable locale pour *formData* vous permet de passer en toute sécurité des paramètres à vos formulaires, quel que soit le contexte d'appel. En particulier, si le même formulaire est appelé à différents endroits dans le même process, vous pourrez toujours accéder à ses valeurs spécifiques en appelant simplement [Form](../commands/form).myProperty. De plus, les objets étant transmis par référence, si l'utilisateur modifie la valeur d'une propriété dans le formulaire, celle-ci sera automatiquement sauvegardée dans l'objet lui-même.
 
-- [associer une classe utilisateur au formulaire](../../FormEditor/properties_FormProperties.md#form-class), auquel cas 4D instanciera automatiquement un objet de cette classe lorsque le formulaire sera chargé. Les propriétés et les fonctions de l'objet seront automatiquement disponibles via l'objet renvoyé par [Form](form.md). Vous pouvez écrire par exemple `Form.myFunction()`.
+- [associer une classe utilisateur au formulaire](../../FormEditor/properties_FormProperties.md#form-class), auquel cas 4D instanciera automatiquement un objet de cette classe lorsque le formulaire sera chargé. Les propriétés et les fonctions de l'objet seront automatiquement disponibles via l'objet renvoyé par [Form](../commands/form). Vous pouvez écrire par exemple `Form.myFunction()`.
 
 :::note
 
@@ -91,7 +91,7 @@ Dans un formulaire affichant l'enregistrement d'une personne, un bouton ouvre un
 
 **Note :** Le champ objet "enfants" est représenté uniquement dans cet exemple afin de faire apparaître sa structure.
 
-Dans le formulaire de vérification, vous avez assigné des propriétés d'objet [Form](form.md) aux variables :
+Dans le formulaire de vérification, vous avez assigné des propriétés d'objet [Form](../commands/form) aux variables :
 
 ![](../../assets/en/commands/pict3541682.en.png)
 
@@ -171,7 +171,7 @@ Après un appel à **DIALOG**, si le dialogue est accepté, OK est mis à 1 ; s'
 [ADD RECORD](../../commands-legacy/add-record)\
 [CALL FORM](../../commands-legacy/call-form)\
 [CANCEL](../../commands-legacy/cancel)\
-[Form](form.md)\
+[Form](../commands/form)\
 [Open window](../../commands-legacy/open-window)
 
 ## Propriétés

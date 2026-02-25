@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-borders
 title: QR GET BORDERS
 slug: /commands/qr-get-borders
@@ -60,7 +60,7 @@ displayed_sidebar: docs
 | qr right border             | Integer | 4     | Right border             |
 | qr top border               | Integer | 2     | Top border               |
 
-**Note:** Unlike the command [QR SET BORDERS](qr-set-borders.md), **QR GET BORDERS** does not accept a cumulative value. You must test all the parameters separately to have an overall view of the cell border.
+**Note:** Unlike the command [QR SET BORDERS](../commands/qr-set-borders), **QR GET BORDERS** does not accept a cumulative value. You must test all the parameters separately to have an overall view of the cell border.
 
 *line* is the thickness of the line:
 
@@ -79,7 +79,7 @@ If you pass an invalid *border* parameter, the error -9854 will be generated.
 
 ## See also 
 
-[QR SET BORDERS](qr-set-borders.md)  
+[QR SET BORDERS](../commands/qr-set-borders)  
 
 ## Properties
 

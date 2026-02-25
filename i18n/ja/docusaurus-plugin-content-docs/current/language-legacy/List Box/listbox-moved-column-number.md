@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-moved-column-number
 title: LISTBOX MOVED COLUMN NUMBER
 slug: /commands/listbox-moved-column-number
@@ -42,7 +42,7 @@ displayed_sidebar: docs
 ## 参照 
 
 [Form event code](../commands/form-event-code)  
-[LISTBOX MOVED ROW NUMBER](listbox-moved-row-number.md)  
+[LISTBOX MOVED ROW NUMBER](../commands/listbox-moved-row-number)  
 
 ## プロパティ
 

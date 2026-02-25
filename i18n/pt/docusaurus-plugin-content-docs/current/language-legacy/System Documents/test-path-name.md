@@ -1,4 +1,4 @@
----
+﻿---
 id: test-path-name
 title: Test path name
 slug: /commands/test-path-name
@@ -57,11 +57,11 @@ O seguinte exemplo prova a presença do documento “Diário” na pasta da base
 
 ## Ver também 
 
-[Convert path system to POSIX](convert-path-system-to-posix.md)  
-[Create document](create-document.md)  
-[CREATE FOLDER](create-folder.md)  
-[Object to path](object-to-path.md)  
-[Path to object ](path-to-object.md)  
+[Convert path system to POSIX](../commands/convert-path-system-to-posix)  
+[Create document](../commands/create-document)  
+[CREATE FOLDER](../commands/create-folder)  
+[Object to path](../commands/object-to-path)  
+[Path to object ](../commands/path-to-object)  
 
 ## Propriedades
 

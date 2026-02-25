@@ -1,4 +1,4 @@
----
+﻿---
 id: locked-records-info
 title: Locked records info
 slug: /commands/locked-records-info
@@ -33,7 +33,7 @@ Each "description object" collection element identifies a locked record in the s
 | **Property**      | **Type**      | **Description**                                                                                                                                                                                                                                                                         |
 | ----------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | contextID         | UUID (String) | UUID of the database context responsible for the lock                                                                                                                                                                                                                                   |
-| contextAttributes | Object        | Object containing information similar to the [LOCKED BY](locked-by.md) command but applied to the record, the difference being that **Locked records info** returns the user name defined in the system and not that of the 4D user, as well as additional information (see below). |
+| contextAttributes | Object        | Object containing information similar to the [LOCKED BY](../commands/locked-by) command but applied to the record, the difference being that **Locked records info** returns the user name defined in the system and not that of the 4D user, as well as additional information (see below). |
 | recordNumber      | Integer       | Record number of the locked record                                                                                                                                                                                                                                                      |
 
 The *contextAttributes* object is made up of the following properties:
@@ -42,7 +42,7 @@ The *contextAttributes* object is made up of the following properties:
 | ------------------------------------------------------------------------------------------ | ------------- | ------------------------------------------------------------------------------------------------------------- |
 | task\_id                                                                                   | Number        | Process reference number                                                                                      |
 | user\_name                                                                                 | Text        | User name defined by operating system                                                                         |
-| user4d\_alias                                                                              | Text        | User alias defined with [SET USER ALIAS](set-user-alias.md), otherwise user name in the 4D database directory |
+| user4d\_alias                                                                              | Text        | User alias defined with [SET USER ALIAS](../commands/set-user-alias), otherwise user name in the 4D database directory |
 | user4d\_id                                                                                 | Number        | 4D user number(\*)                                                                                            |
 | host\_name                                                                                 | Text        | Name of host machine                                                                                          |
 | task\_name                                                                                 | Text        | Process name                                                                                                  |
@@ -89,7 +89,7 @@ If the code is executed on a 4D Server and the locking is caused by a remote cli
 
 ## See also 
 
-[Locked](locked.md)  
+[Locked](../commands/locked)  
 
 ## Properties
 

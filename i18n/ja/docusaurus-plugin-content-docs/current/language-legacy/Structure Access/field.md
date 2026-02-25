@@ -1,4 +1,4 @@
----
+﻿---
 id: field
 title: Field
 slug: /commands/field
@@ -52,10 +52,10 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Field name](field-name.md)  
-[GET FIELD PROPERTIES](get-field-properties.md)  
-[Last field number](last-field-number.md)  
-[Table](table.md)  
+[Field name](../commands/field-name)  
+[GET FIELD PROPERTIES](../commands/get-field-properties)  
+[Last field number](../commands/last-field-number)  
+[Table](../commands/table)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: verify-current-data-file
 title: VERIFY CURRENT DATA FILE
 slug: /commands/verify-current-data-file
@@ -35,8 +35,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.VERIFY CURRENT DATA FILE.Summary-->El comando VERIFY CURRENT DATA FILE efectúa una verificación estructural de los objetos encontrados en el archivo de datos abierto actualmente por 4D.<!-- END REF--> 
 
-Este comando tiene un funcionamiento idéntico al del comando [VERIFY DATA FILE](verify-data-file.md), excepto que sólo aplica al archivo de datos actual de la base de datos abierta. No son necesarios los parámetros que especifican la estructura y los datos.  
-Consulte el comando [VERIFY DATA FILE](verify-data-file.md) para la descripción de los parámetros.
+Este comando tiene un funcionamiento idéntico al del comando [VERIFY DATA FILE](../commands/verify-data-file), excepto que sólo aplica al archivo de datos actual de la base de datos abierta. No son necesarios los parámetros que especifican la estructura y los datos.  
+Consulte el comando [VERIFY DATA FILE](../commands/verify-data-file) para la descripción de los parámetros.
 
 Si pasa el comando VERIFY CURRENT DATA FILE sin parámetros, la verificación se lleva a cabo con los valores por defecto de los parámetros:
 
@@ -55,7 +55,7 @@ Si el método de retrollamada no existe, la verificación no se efectúa, se gen
 
 ## Ver también 
 
-[VERIFY DATA FILE](verify-data-file.md)  
+[VERIFY DATA FILE](../commands/verify-data-file)  
 
 ## Propiedades
 

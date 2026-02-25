@@ -1,4 +1,4 @@
----
+﻿---
 id: get-user-list
 title: GET USER LIST
 slug: /commands/get-user-list
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 Le tableau *nomsUtil* est rempli avec les noms des utilisateurs, y compris ceux dont le compte est supprimé (les utilisateurs dont le nom apparaît en vert dans la fenêtre des mots de passe).
 
-**Note :** Utilisez la commande [Is user deleted](is-user-deleted.md) pour savoir si un compte utilisateur est supprimé.
+**Note :** Utilisez la commande [Is user deleted](../commands/is-user-deleted) pour savoir si un compte utilisateur est supprimé.
 
 Le tableau *réfsUtil*, synchronisé avec *nomsUtil*, est rempli avec les numéros de référence uniques des utilisateurs. 
 
@@ -40,13 +40,13 @@ Le tableau *réfsUtil*, synchronisé avec *nomsUtil*, est rempli avec les numér
 
 ## Gestion des erreurs 
 
-Si vous n'avez pas les privilèges d'accès pour appeler la commande **GET USER LIST** ou si le système des Mots de passe est déjà ouvert par un autre process, une erreur de privilège d'accès est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs installée par [ON ERR CALL](on-err-call.md).
+Si vous n'avez pas les privilèges d'accès pour appeler la commande **GET USER LIST** ou si le système des Mots de passe est déjà ouvert par un autre process, une erreur de privilège d'accès est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs installée par [ON ERR CALL](../commands/on-err-call).
 
 ## Voir aussi 
 
-[GET GROUP LIST](get-group-list.md)  
-[GET USER PROPERTIES](get-user-properties.md)  
-[Set user properties](set-user-properties.md)  
+[GET GROUP LIST](../commands/get-group-list)  
+[GET USER PROPERTIES](../commands/get-user-properties)  
+[Set user properties](../commands/set-user-properties)  
 
 ## Propriétés
 

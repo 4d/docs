@@ -1,4 +1,4 @@
----
+﻿---
 id: collection-to-array
 title: COLLECTION TO ARRAY
 slug: /commands/collection-to-array
@@ -75,7 +75,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ARRAY TO COLLECTION](array-to-collection.md)  
+[ARRAY TO COLLECTION](../commands/array-to-collection)  
 *コレクションと4D配列間での型の変換*  
 
 ## プロパティ

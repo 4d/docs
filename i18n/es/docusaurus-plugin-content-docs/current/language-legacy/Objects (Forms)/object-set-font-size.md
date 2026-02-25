@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-font-size
 title: OBJECT SET FONT SIZE
 slug: /commands/object-set-font-size
@@ -60,9 +60,9 @@ El siguiente ejemplo define el tamaño de fuente para todos los objetos de formu
 ## Ver también 
 
 *Interacción de comandos genéricos con textos multiestilos*  
-[OBJECT Get font size](object-get-font-size.md)  
-[OBJECT SET FONT](object-set-font.md)  
-[OBJECT SET FONT STYLE](object-set-font-style.md)  
+[OBJECT Get font size](../commands/object-get-font-size)  
+[OBJECT SET FONT](../commands/object-set-font)  
+[OBJECT SET FONT STYLE](../commands/object-set-font-style)  
 
 ## Propiedades
 

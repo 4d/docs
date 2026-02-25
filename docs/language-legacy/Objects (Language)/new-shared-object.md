@@ -1,4 +1,4 @@
----
+﻿---
 id: new-shared-object
 title: New shared object
 slug: /commands/new-shared-object
@@ -76,7 +76,7 @@ You want to create and modify a shared object. The structure must be called for 
 
 ## See also 
 
-[New object](new-object.md)  
+[New object](../commands/new-object)  
 [New shared collection](../commands/new-shared-collection)  
 *Shared objects and shared collections*  
 

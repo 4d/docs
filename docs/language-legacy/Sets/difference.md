@@ -1,4 +1,4 @@
----
+﻿---
 id: difference
 title: DIFFERENCE
 slug: /commands/difference
@@ -55,8 +55,8 @@ At the bottom of the list of records is a button with an object method. The obje
 
 ## See also 
 
-[INTERSECTION](intersection.md)  
-[UNION](union.md)  
+[INTERSECTION](../commands/intersection)  
+[UNION](../commands/union)  
 
 ## Properties
 

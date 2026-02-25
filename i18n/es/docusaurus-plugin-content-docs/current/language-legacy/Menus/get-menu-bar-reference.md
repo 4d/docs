@@ -1,4 +1,4 @@
----
+﻿---
 id: get-menu-bar-reference
 title: Get menu bar reference
 slug: /commands/get-menu-bar-reference
@@ -30,9 +30,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get menu bar reference.Summary-->El comando **Get menu bar reference** devuelve la identificación única de la barra de menús actual o de la barra de menús de un proceso específico.<!-- END REF-->
 
-Si la barra de menús fue creada por el comando [Create menu](create-menu.md), este identificación corresponde a la referencia única del menú creado. De lo contrario, el comando devuelve una identificación(\*). interna específica. En todos los casos, esta identificación, MenuRef puede utilizarse para referenciar la barra de menús par todos los otros comandos del tema.
+Si la barra de menús fue creada por el comando [Create menu](../commands/create-menu), este identificación corresponde a la referencia única del menú creado. De lo contrario, el comando devuelve una identificación(\*). interna específica. En todos los casos, esta identificación, MenuRef puede utilizarse para referenciar la barra de menús par todos los otros comandos del tema.
 
-(\*) Este ID específico es temporal y deja de ser válido tan pronto como se llame a otra barra de menú con [SET MENU BAR](set-menu-bar.md). Si desea conservar la referencia de un menú creado en el editor de menú, debe copiarlo en la memoria utilizando [Create menu](create-menu.md). Por ejemplo:  
+(\*) Este ID específico es temporal y deja de ser válido tan pronto como se llame a otra barra de menú con [SET MENU BAR](../commands/set-menu-bar). Si desea conservar la referencia de un menú creado en el editor de menú, debe copiarlo en la memoria utilizando [Create menu](../commands/create-menu). Por ejemplo:  
 
 ```4d
  $vEditorRef:=Get menu bar reference(Frontmost process) //menú del editor de barras de menú
@@ -50,7 +50,7 @@ Consulte el ejemplo del comando [GET MENU ITEMS](get-menu-items.md "GET MENU ITE
 
 ## Ver también 
 
-[SET MENU BAR](set-menu-bar.md)  
+[SET MENU BAR](../commands/set-menu-bar)  
 
 ## Propiedades
 

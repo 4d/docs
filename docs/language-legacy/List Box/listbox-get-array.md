@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-array
 title: LISTBOX Get array
 slug: /commands/listbox-get-array
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 The **LISTBOX Get array** command returns a pointer to the *arrType* array of the list box or list box column designated by the *object* and *\** parameters.
 
-Style, color, background color or row control arrays can be associated with array type list boxes or (except for row control arrays) with the columns of array type list boxes, using the Property list in Design mode or using the [LISTBOX SET ARRAY](listbox-set-array.md) command. 
+Style, color, background color or row control arrays can be associated with array type list boxes or (except for row control arrays) with the columns of array type list boxes, using the Property list in Design mode or using the [LISTBOX SET ARRAY](../commands/listbox-set-array) command. 
 
 Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a variable. In this case, you pass a variable reference instead of a string. You can designate a list box or a list box column in the *object* parameter. 
 
@@ -52,9 +52,9 @@ In *arrType*, pass the type of array for the property you want to get. You can u
 
 The command returns one of the following values:
 
-* [Is nil pointer](is-nil-pointer.md) if no array for the requested property is associated with the column or the list box.
+* [Is nil pointer](../commands/is-nil-pointer) if no array for the requested property is associated with the column or the list box.
 * a pointer to the array of the requested property, defined by the user.
-* a pointer to the array of the requested property, defined dynamically when calling the [LISTBOX SET ROW COLOR](listbox-set-row-color.md) or [LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md) command.
+* a pointer to the array of the requested property, defined dynamically when calling the [LISTBOX SET ROW COLOR](../commands/listbox-set-row-color) or [LISTBOX SET ROW FONT STYLE](../commands/listbox-set-row-font-style) command.
 
 ## Example 
 
@@ -72,8 +72,8 @@ Typical examples of use:
 
 ## See also 
 
-[LISTBOX GET ARRAYS](listbox-get-arrays.md)  
-[LISTBOX SET ARRAY](listbox-set-array.md)  
+[LISTBOX GET ARRAYS](../commands/listbox-get-arrays)  
+[LISTBOX SET ARRAY](../commands/listbox-set-array)  
 
 ## Properties
 

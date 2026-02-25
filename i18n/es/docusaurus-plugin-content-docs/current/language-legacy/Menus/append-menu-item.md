@@ -1,4 +1,4 @@
----
+﻿---
 id: append-menu-item
 title: APPEND MENU ITEM
 slug: /commands/append-menu-item
@@ -63,11 +63,11 @@ Las líneas a añadir se definen con el parámetro *itemText* de la siguiente ma
 
 Si pasa el parámetro *\**, los caracteres "especiales" (*; ( !*...) incluidos en el texto del elemento se considerarán como caracteres estándar y no como metacaracteres. Esto permite crear elementos de menú tales como "Copiar (especial)..." o "Buscar/Reemplazar...". Note que cuando se pasa el parámetro *\**, no puede crear varios elementos en una sola llamada ya que el carácter ";" es considerado como un carácter estándar.
 
-**Nota:** los comandos [GET MENU ITEMS](get-menu-items.md) y [Get menu item](get-menu-item.md) devolverán o no los metacaracteres en el texto de un elemento de menú dependiendo de cómo fue creado: si fue creado con la opción *\**, los metacaracteres serán devueltos como caracteres estándar.  
+**Nota:** los comandos [GET MENU ITEMS](../commands/get-menu-items) y [Get menu item](../commands/get-menu-item) devolverán o no los metacaracteres en el texto de un elemento de menú dependiendo de cómo fue creado: si fue creado con la opción *\**, los metacaracteres serán devueltos como caracteres estándar.  
   
-El parámetro opcional *subMenu* permite designar un menú como elemento añadido y por lo tanto definir un submenú jerárquico. Debe pasar en este parámetro una referencia de menú (cadena de tipo [MenuRef](# "Unique ID (16-character alphanumeric) of a menu")) especificando un menú creado por ejemplo, utilizando el comando [Create menu](create-menu.md). Si el comando añade más de un elemento de menú, el submenú se asocia a la primera línea. 
+El parámetro opcional *subMenu* permite designar un menú como elemento añadido y por lo tanto definir un submenú jerárquico. Debe pasar en este parámetro una referencia de menú (cadena de tipo [MenuRef](# "Unique ID (16-character alphanumeric) of a menu")) especificando un menú creado por ejemplo, utilizando el comando [Create menu](../commands/create-menu). Si el comando añade más de un elemento de menú, el submenú se asocia a la primera línea. 
 
-**Importante:** las nuevas líneas no tienen métodos o acciones asociados. Estos deben asociarse con los elementos utilizando los comandos [SET MENU ITEM PROPERTY](set-menu-item-property.md) o [SET MENU ITEM METHOD](set-menu-item-method.md), o los elementos también pueden ser administradas por un método de formulario utilizando el comando [Menu selected](menu-selected.md).
+**Importante:** las nuevas líneas no tienen métodos o acciones asociados. Estos deben asociarse con los elementos utilizando los comandos [SET MENU ITEM PROPERTY](../commands/set-menu-item-property) o [SET MENU ITEM METHOD](../commands/set-menu-item-method), o los elementos también pueden ser administradas por un método de formulario utilizando el comando [Menu selected](../commands/menu-selected).
 
 ## Ejemplo 
 
@@ -91,9 +91,9 @@ Entonces, en todo método de formulario o de proyecto, puede escribir:
 
 ## Ver también 
 
-[DELETE MENU ITEM](delete-menu-item.md)  
-[INSERT MENU ITEM](insert-menu-item.md)  
-[SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
+[DELETE MENU ITEM](../commands/delete-menu-item)  
+[INSERT MENU ITEM](../commands/insert-menu-item)  
+[SET MENU ITEM PARAMETER](../commands/set-menu-item-parameter)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-selection
 title: QR SET SELECTION
 slug: /commands/qr-set-selection
@@ -46,7 +46,7 @@ Se passa um número de *area* inválido, se gera o erro -9850.
 
 ## Ver também 
 
-[QR GET SELECTION](qr-get-selection.md)  
+[QR GET SELECTION](../commands/qr-get-selection)  
 
 ## Propriedades
 

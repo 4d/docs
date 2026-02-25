@@ -1,4 +1,4 @@
----
+﻿---
 id: append-to-array
 title: APPEND TO ARRAY
 slug: /commands/append-to-array
@@ -53,8 +53,8 @@ O seguinte código:
 
 ## Ver também 
 
-[DELETE FROM ARRAY](delete-from-array.md)  
-[INSERT IN ARRAY](insert-in-array.md)  
+[DELETE FROM ARRAY](../commands/delete-from-array)  
+[INSERT IN ARRAY](../commands/insert-in-array)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: erase-window
 title: ERASE WINDOW
 slug: /commands/erase-window
@@ -32,14 +32,14 @@ displayed_sidebar: docs
 
 Si vous omettez le paramètre *fenêtre*, **ERASE WINDOW** efface le contenu de la fenêtre de premier plan du process courant. 
 
-Généralement, vous utiliserez **ERASE WINDOW** en combinaison avec [MESSAGE](message.md) et [GOTO XY](goto-xy.md). Dans ce cas, **ERASE WINDOW** efface le contenu de la fenêtre et place le curseur dans son angle supérieur gauche, c'est-à-dire à la position correspondant à [GOTO XY](goto-xy.md)(0; 0). 
+Généralement, vous utiliserez **ERASE WINDOW** en combinaison avec [MESSAGE](../commands/message) et [GOTO XY](../commands/goto-xy). Dans ce cas, **ERASE WINDOW** efface le contenu de la fenêtre et place le curseur dans son angle supérieur gauche, c'est-à-dire à la position correspondant à [GOTO XY](../commands/goto-xy)(0; 0). 
 
-Ne confondez pas **ERASE WINDOW**, qui efface le contenu d'une fenêtre, et [GOTO XY](goto-xy.md), qui supprime la fenêtre de l'écran.
+Ne confondez pas **ERASE WINDOW**, qui efface le contenu d'une fenêtre, et [GOTO XY](../commands/goto-xy), qui supprime la fenêtre de l'écran.
 
 ## Voir aussi 
 
-[GOTO XY](goto-xy.md)  
-[MESSAGE](message.md)  
+[GOTO XY](../commands/goto-xy)  
+[MESSAGE](../commands/message)  
 
 ## Propriétés
 

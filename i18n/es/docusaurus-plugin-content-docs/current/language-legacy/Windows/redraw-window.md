@@ -1,4 +1,4 @@
----
+﻿---
 id: redraw-window
 title: REDRAW WINDOW
 slug: /commands/redraw-window
@@ -35,7 +35,7 @@ Si omite el parámetro *ventana*, REDRAW WINDOW aplica a la ventana del primer p
 
 ## Ver también 
 
-[ERASE WINDOW](erase-window.md)  
+[ERASE WINDOW](../commands/erase-window)  
 
 ## Propiedades
 

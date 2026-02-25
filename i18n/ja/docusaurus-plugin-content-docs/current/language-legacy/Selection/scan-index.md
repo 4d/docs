@@ -1,4 +1,4 @@
----
+﻿---
 id: scan-index
 title: SCAN INDEX
 slug: /commands/scan-index
@@ -48,9 +48,9 @@ SCAN INDEXは、インデックスフィールドにのみ使用できます。�
 
 ## 参照 
 
-[ORDER BY](order-by.md)  
-[QUERY](query.md)  
-[REDUCE SELECTION](reduce-selection.md)  
+[ORDER BY](../commands/order-by)  
+[QUERY](../commands/query)  
+[REDUCE SELECTION](../commands/reduce-selection)  
 
 ## プロパティ
 

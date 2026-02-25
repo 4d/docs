@@ -1,4 +1,4 @@
----
+﻿---
 id: form-get-objects
 title: FORM GET OBJECTS
 slug: /commands/form-get-objects
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM GET OBJECTS.Summary-->The FORM GET OBJECTS command returns the list of all objects present in the current form in the form of (an) array(s).<!-- END REF--> This list can be restricted to the current form page and can exclude objects of inherited forms. The command can be used with both input and output forms.
 
-**Note:** The command does not include list box parts. To parse a form for the list box objects, [LISTBOX GET OBJECTS](listbox-get-objects.md) or [LISTBOX GET ARRAYS](listbox-get-arrays.md) should be used (see example below for a combination of [FORM GET OBJECTS](form-get-objects.md), [OBJECT Get type](object-get-type.md) and [LISTBOX GET OBJECTS](listbox-get-objects.md)).
+**Note:** The command does not include list box parts. To parse a form for the list box objects, [LISTBOX GET OBJECTS](../commands/listbox-get-objects) or [LISTBOX GET ARRAYS](../commands/listbox-get-arrays) should be used (see example below for a combination of [FORM GET OBJECTS](../commands/form-get-objects), [OBJECT Get type](../commands/object-get-type) and [LISTBOX GET OBJECTS](../commands/listbox-get-objects)).
 
 If an array passed as a parameter is not previously declared, the command creates it and automatically sets its size. However, in the interest of compiling the application, we recommend that you explicitly declare each array. 
 
@@ -42,7 +42,7 @@ Pass the name of the string array that will contain object names (each object na
 
 The other arrays optionally filled by the command are synchronized with the first array. 
 
-Pass the name of the pointer array that already contains pointers to variables or fields associated with objects in the optional *variablesArray* parameter. If an object does not have an associated variable, the pointer [Is nil pointer](is-nil-pointer.md) is returned. If there is a “subform” type object, a pointer to the table of the subform is returned.
+Pass the name of the pointer array that already contains pointers to variables or fields associated with objects in the optional *variablesArray* parameter. If an object does not have an associated variable, the pointer [Is nil pointer](../commands/is-nil-pointer) is returned. If there is a “subform” type object, a pointer to the table of the subform is returned.
 
 The third array (optional), *pagesArray*, is filled with the form page numbers. Each line of this array contains the page number of the corresponding object. 
 
@@ -134,7 +134,7 @@ You want to load a form and get a list of all the objects of list boxes that it 
 
 ## See also 
 
-[FORM GET PROPERTIES](form-get-properties.md)  
+[FORM GET PROPERTIES](../commands/form-get-properties)  
 *Form Objects (Access)*  
 *Objects (Forms)*  
 

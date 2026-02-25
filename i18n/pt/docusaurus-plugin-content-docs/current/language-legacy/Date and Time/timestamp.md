@@ -1,4 +1,4 @@
----
+﻿---
 id: timestamp
 title: Timestamp
 slug: /commands/timestamp
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 Cada hora devolvida por **Timestamp** é expressa de acordo com a norma ISO 8601\. Para saber mais sobre este padrão, consulte: <https://en.wikipedia.org/wiki/ISO%5F8601>
 
-**Note:** esta função não é adequada para tempos; Deve utilizar [Milliseconds](milliseconds.md) quando desejar medir o tempo transcorrido.
+**Note:** esta função não é adequada para tempos; Deve utilizar [Milliseconds](../commands/milliseconds) quando desejar medir o tempo transcorrido.
 
 ## Exemplo 
 
@@ -51,9 +51,9 @@ Resultado:
 
 ## Ver também 
 
-[Milliseconds](milliseconds.md)  
+[Milliseconds](../commands/milliseconds)  
 [String](../commands/string)  
-[Time](time.md)  
+[Time](../commands/time)  
 
 ## Propriedades
 

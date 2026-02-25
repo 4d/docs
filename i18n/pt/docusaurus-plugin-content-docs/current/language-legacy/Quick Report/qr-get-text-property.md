@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-text-property
 title: QR Get text property
 slug: /commands/qr-get-text-property
@@ -64,7 +64,7 @@ displayed_sidebar: docs
 | qr alternate background color | Inteiro longo | 9     |                                                                              |
 | qr background color           | Inteiro longo | 8     |                                                                              |
 | qr bold                       | Inteiro longo | 3     |                                                                              |
-| qr font name                  | Inteiro longo | 10    | Nome da fonte como a devolve por exemplo o comando [FONT LIST](font-list.md) |
+| qr font name                  | Inteiro longo | 10    | Nome da fonte como a devolve por exemplo o comando [FONT LIST](../commands/font-list) |
 | qr font size                  | Inteiro longo | 2     |                                                                              |
 | qr italic                     | Inteiro longo | 4     |                                                                              |
 | qr justification              | Inteiro longo | 7     |                                                                              |
@@ -79,7 +79,7 @@ Se o parâmetro *propriedade* é incorreto, se gera o erro -9854.
 
 ## Ver também 
 
-[QR SET TEXT PROPERTY](qr-set-text-property.md)  
+[QR SET TEXT PROPERTY](../commands/qr-set-text-property)  
 
 ## Propriedades
 

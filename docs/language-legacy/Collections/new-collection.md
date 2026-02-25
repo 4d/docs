@@ -1,4 +1,4 @@
----
+﻿---
 id: new-collection
 title: New collection
 slug: /commands/new-collection
@@ -82,7 +82,7 @@ You create a new collection and then add a new element:
 
 ## See also 
 
-[New shared collection](new-shared-collection.md)  
+[New shared collection](../commands/new-shared-collection)  
 [Type](../commands/type)  
 
 ## Properties

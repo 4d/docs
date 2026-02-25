@@ -1,4 +1,4 @@
----
+﻿---
 id: picture-library-list
 title: PICTURE LIBRARY LIST
 slug: /commands/picture-library-list
@@ -46,7 +46,7 @@ The maximum length of a Picture Library graphic name is 255 characters.
 
 If there are no pictures in the Picture Library, both arrays are returned empty.
 
-To obtain the number of pictures currently stored in the Picture Library, use the [Size of array](size-of-array.md) command to get the size of one of the two arrays.
+To obtain the number of pictures currently stored in the Picture Library, use the [Size of array](../commands/size-of-array) command to get the size of one of the two arrays.
 
 ## Example 1 
 
@@ -109,9 +109,9 @@ The following example exports the Picture Library to a document on disk:
 
 ## See also 
 
-[GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
-[REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
-[SET PICTURE TO LIBRARY](set-picture-to-library.md)  
+[GET PICTURE FROM LIBRARY](../commands/get-picture-from-library)  
+[REMOVE PICTURE FROM LIBRARY](../commands/remove-picture-from-library)  
+[SET PICTURE TO LIBRARY](../commands/set-picture-to-library)  
 
 ## Properties
 

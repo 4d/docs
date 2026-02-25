@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-array
 title: LISTBOX Get array
 slug: /commands/listbox-get-array
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 O comando **LISTBOX Get array** devolve um ponteiro ao array associado ao estilo ou a cor do list box ou da coluna de list box designada pelos parâmetros *objeto* e *\** .
 
-Os arrays de estilo, cor ou cor de fundo podem estar associados aos list box de tipo de array usando a lista de propriedades em modo *Desenho* ou o comando [LISTBOX SET ARRAY](listbox-set-array.md).
+Os arrays de estilo, cor ou cor de fundo podem estar associados aos list box de tipo de array usando a lista de propriedades em modo *Desenho* ou o comando [LISTBOX SET ARRAY](../commands/listbox-set-array).
 
 Se passar o parâmetro opcional *\**, indica que o parâmetro *objeto* é um nome de objeto (cadeia). Se não passar este parâmetro, indica que o parâmetro *objeto* é uma variável. Neste caso, passa uma referência de variável no lugar de uma cadeia. Pode designar um list box ou uma coluna de list box como parâmetro *objeto*.
 
@@ -52,9 +52,9 @@ Passe em *tipoArray*, o tipo de array de propriedade a obter. Pode utilizar uma 
 
 O comando devolve um dos seguintes valores:
 
-* [Is nil pointer](is-nil-pointer.md) Se nenhum array da propriedade solicitada está associado a coluna ou ao list box.
+* [Is nil pointer](../commands/is-nil-pointer) Se nenhum array da propriedade solicitada está associado a coluna ou ao list box.
 * Um ponteiro ao array da propriedade solicitada, definido pelo usuário.
-* Um ponteiro ao array da propriedade solicitada, definido dinamicamente quando se chama ao comando [LISTBOX SET ROW COLOR](listbox-set-row-color.md) ou [LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md)
+* Um ponteiro ao array da propriedade solicitada, definido dinamicamente quando se chama ao comando [LISTBOX SET ROW COLOR](../commands/listbox-set-row-color) ou [LISTBOX SET ROW FONT STYLE](../commands/listbox-set-row-font-style)
 
 ## Exemplo 
 
@@ -72,8 +72,8 @@ Exemplos típicos de uso:
 
 ## Ver também 
 
-[LISTBOX GET ARRAYS](listbox-get-arrays.md)  
-[LISTBOX SET ARRAY](listbox-set-array.md)  
+[LISTBOX GET ARRAYS](../commands/listbox-get-arrays)  
+[LISTBOX SET ARRAY](../commands/listbox-set-array)  
 
 ## Propriedades
 

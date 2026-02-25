@@ -1,4 +1,4 @@
----
+﻿---
 id: select-list-items-by-reference
 title: SELECT LIST ITEMS BY REFERENCE
 slug: /commands/select-list-items-by-reference
@@ -37,11 +37,11 @@ Si un élément n'est pas visible (car il est par exemple inclus dans une liste 
 Si vous ne passez pas le paramètre *tabRéfs*, le paramètre *réfElément* représente la référence de l'élément à sélectionner. Si le numéro d'élément ne correspond à aucun élément de la liste, la commande ne fait rien. Vous pouvez également passer la valeur 0 dans ce paramètre afin de désigner le dernier élément ajouté à la liste.
 
 Le paramètre facultatif *tabRéfs* permet de sélectionner simultanément plusieurs éléments au sein de la liste. Vous devez passer dans *tabRéfs* un tableau dont chaque ligne indique la référence absolue d’un élément à sélectionner.  
-Dans ce cas, l’élément désigné par le paramètre *refElém* désigne parmi la sélection résultante le nouvel élément courant de la liste. Il peut appartenir ou non à l’ensemble d’éléments définis par le tableau. L’élément courant est notamment celui qui passe en mode édition si la commande [EDIT ITEM](edit-item.md) est utilisée. 
+Dans ce cas, l’élément désigné par le paramètre *refElém* désigne parmi la sélection résultante le nouvel élément courant de la liste. Il peut appartenir ou non à l’ensemble d’éléments définis par le tableau. L’élément courant est notamment celui qui passe en mode édition si la commande [EDIT ITEM](../commands/edit-item) est utilisée. 
 
-**Note :** Pour que plusieurs éléments puissent être sélectionnés simultanément dans une liste hiérarchique (manuellement ou par programmation), la propriété *multiSélection* doit avoir été activée pour cette liste. Cette propriété est définie via la commande [SET LIST PROPERTIES](set-list-properties.md). 
+**Note :** Pour que plusieurs éléments puissent être sélectionnés simultanément dans une liste hiérarchique (manuellement ou par programmation), la propriété *multiSélection* doit avoir été activée pour cette liste. Cette propriété est définie via la commande [SET LIST PROPERTIES](../commands/set-list-properties). 
 
-Lorsque vous travaillez avec les numéros de référence des éléments, assurez-vous d'utiliser des numéros uniques, sinon vous ne pourrez pas différencier les éléments. Pour plus d'informations sur ce point, reportez-vous à la description de la commande [APPEND TO LIST](append-to-list.md).
+Lorsque vous travaillez avec les numéros de référence des éléments, assurez-vous d'utiliser des numéros uniques, sinon vous ne pourrez pas différencier les éléments. Pour plus d'informations sur ce point, reportez-vous à la description de la commande [APPEND TO LIST](../commands/append-to-list).
 
 ## Exemple 
 
@@ -59,9 +59,9 @@ En supposant que *hList* est une liste dont les éléments ont des numéros de r
 
 ## Voir aussi 
 
-[EDIT ITEM](edit-item.md)  
-[SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md)  
-[Selected list items](selected-list-items.md)  
+[EDIT ITEM](../commands/edit-item)  
+[SELECT LIST ITEMS BY POSITION](../commands/select-list-items-by-position)  
+[Selected list items](../commands/selected-list-items)  
 
 ## Propriétés
 

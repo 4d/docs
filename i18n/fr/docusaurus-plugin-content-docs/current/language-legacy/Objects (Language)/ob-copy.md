@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-copy
 title: OB Copy
 slug: /commands/ob-copy
@@ -177,7 +177,7 @@ Nous souhaitons copier *$sharedObj* dans *$sharedColl.* Etant donné qu'ils appa
 
 ## Voir aussi 
 
-[OB Get](ob-get.md)  
+[OB Get](../commands/ob-get)  
 *Objets partagés et collections partagées*  
 
 ## Propriétés

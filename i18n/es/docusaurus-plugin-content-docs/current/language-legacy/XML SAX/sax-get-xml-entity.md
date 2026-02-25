@@ -1,4 +1,4 @@
----
+﻿---
 id: sax-get-xml-entity
 title: SAX GET XML ENTITY
 slug: /commands/sax-get-xml-entity
@@ -59,7 +59,7 @@ Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\.
 
 ## Ver también 
 
-[SAX Get XML node](sax-get-xml-node.md)  
+[SAX Get XML node](../commands/sax-get-xml-node)  
 
 ## Propiedades
 

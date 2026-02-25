@@ -1,4 +1,4 @@
----
+﻿---
 id: selected-record-number
 title: Selected record number
 slug: /commands/selected-record-number
@@ -34,8 +34,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[GOTO SELECTED RECORD](goto-selected-record.md)  
-[Records in selection](records-in-selection.md)  
+[GOTO SELECTED RECORD](../commands/goto-selected-record)  
+[Records in selection](../commands/records-in-selection)  
 *レコード番号について*  
 
 ## プロパティ

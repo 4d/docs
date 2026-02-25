@@ -1,4 +1,4 @@
----
+﻿---
 id: export-dif
 title: EXPORT DIF
 slug: /commands/export-dif
@@ -26,9 +26,9 @@ An On Load event is sent to the form method for each record that is exported. Us
 
 The *document* parameter can name a new or existing document. If *document* is given the same name as an existing document, the existing document is overwritten. The *document* can include a path that contains volume and folder names. If you pass an empty string, the standard Save File dialog box is displayed. If the user cancels this dialog, the export operation is canceled, and the OK system variable is set to 0.
 
-A progress thermometer is displayed during export. The user can cancel the operation by clicking a Stop button. If the export is successfully completed, the OK system variable is set to 1\. If the operation is canceled or an error occurs, the OK system variable is set to 0\. The thermometer can be hidden with the [MESSAGES OFF](messages-off.md) command.
+A progress thermometer is displayed during export. The user can cancel the operation by clicking a Stop button. If the export is successfully completed, the OK system variable is set to 1\. If the operation is canceled or an error occurs, the OK system variable is set to 0\. The thermometer can be hidden with the [MESSAGES OFF](../commands/messages-off) command.
 
-By default, the command uses the UTF-8 character set. Since DIF format documents generally use the IBM437 character set, you may need to use the [USE CHARACTER SET](use-character-set.md) command to specify the appropriate character set. 
+By default, the command uses the UTF-8 character set. Since DIF format documents generally use the IBM437 character set, you may need to use the [USE CHARACTER SET](../commands/use-character-set) command to specify the appropriate character set. 
 
 When using EXPORT DIF, the default field delimiter is the tab character (code 9). The default record delimiter is the carriage return (code 13). You can modify these values by assigning new values to the two *System Variables* FldDelimit and RecDelimit. The user can change these default values in the export dialog box of the Design mode. Since Text fields can contain carriage returns, be careful if you use the carriage return as the field delimiter for fields to be exported.
 
@@ -47,10 +47,10 @@ OK is set to 1 if the export is successfully completed; otherwise, it is set to 
 
 ## See also 
 
-[EXPORT SYLK](export-sylk.md)  
-[EXPORT TEXT](export-text.md)  
-[IMPORT DIF](import-dif.md)  
-[USE CHARACTER SET](use-character-set.md)  
+[EXPORT SYLK](../commands/export-sylk)  
+[EXPORT TEXT](../commands/export-text)  
+[IMPORT DIF](../commands/import-dif)  
+[USE CHARACTER SET](../commands/use-character-set)  
 
 ## Properties
 

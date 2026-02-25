@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-set-option
 title: SQL SET OPTION
 slug: /commands/sql-set-option
@@ -37,11 +37,11 @@ displayed_sidebar: docs
 | ---------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | SQL asynchronous       | 1     | 0 = Synchronous connection (default value), 1 (or value other than 0) = Asynchronous connection                                                                                                                                                                                                    |
 | SQL charset            | 100   | Text encoding used for requests sent to external sources (via the SQL pass-through). The modification is carried out for the current process and the current connection.<br/>Possible values: MIBEnum identifier (see note 2) or value -2 (see note 3)<br/>By default: 106 (UTF-8) |
-| SQL connection timeout | 5     | Maximum timeout awaiting response when executing the [SQL LOGIN](sql-login.md) command. This value must be set before opening the connection in order to be taken into account<br/>Possible values: time in seconds<br/>By default: no timeout                                     |
+| SQL connection timeout | 5     | Maximum timeout awaiting response when executing the [SQL LOGIN](../commands/sql-login) command. This value must be set before opening the connection in order to be taken into account<br/>Possible values: time in seconds<br/>By default: no timeout                                     |
 | SQL data chunk size    | 6     | Size of data chunk to be sent to the server. This option is mainly useful with Sybase ODBC driver which does not support actual data chunk. Setting a value greater than the default one allows larger data to be sent at a time. Value: size in bytes<br/>By default: 8000                |
 | SQL max data length    | 3     | Maximum length of data returned                                                                                                                                                                                                                                                                    |
 | SQL max rows           | 2     | Maximum number of rows in resulting group (used for previews)                                                                                                                                                                                                                                      |
-| SQL query timeout      | 4     | Maximum timeout awaiting response when executing the [SQL EXECUTE](sql-execute.md) command. <br/>Values: time in seconds<br/>By default: no timeout                                                                                                                                |
+| SQL query timeout      | 4     | Maximum timeout awaiting response when executing the [SQL EXECUTE](../commands/sql-execute) command. <br/>Values: time in seconds<br/>By default: no timeout                                                                                                                                |
 
 **Notes:**
 
@@ -57,7 +57,7 @@ If the command was properly executed, the system variable OK returns 1\. Otherwi
 
 ## See also 
 
-[SQL GET OPTION](sql-get-option.md)  
+[SQL GET OPTION](../commands/sql-get-option)  
 
 ## Properties
 

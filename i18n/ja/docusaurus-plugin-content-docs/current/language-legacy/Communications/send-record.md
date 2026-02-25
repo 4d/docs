@@ -1,4 +1,4 @@
----
+﻿---
 id: send-record
 title: SEND RECORD
 slug: /commands/send-record
@@ -44,9 +44,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[RECEIVE RECORD](receive-record.md)  
-[RECEIVE VARIABLE](receive-variable.md)  
-[SEND VARIABLE](send-variable.md)  
+[RECEIVE RECORD](../commands/receive-record)  
+[RECEIVE VARIABLE](../commands/receive-variable)  
+[SEND VARIABLE](../commands/send-variable)  
 
 ## プロパティ
 

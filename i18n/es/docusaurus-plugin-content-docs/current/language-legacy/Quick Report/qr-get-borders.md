@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-borders
 title: QR GET BORDERS
 slug: /commands/qr-get-borders
@@ -58,7 +58,7 @@ displayed_sidebar: docs
 | qr right border             | Entero largo | 4     | Borde derecho             |
 | qr top border               | Entero largo | 2     | Borde superior            |
 
-**Nota:** a diferencia del comando [QR SET BORDERS](qr-set-borders.md), QR GET BORDERS no acepta un valor acumulativo. Debe probar todos los parámetros por separado para tener una visión general del borde de celda.
+**Nota:** a diferencia del comando [QR SET BORDERS](../commands/qr-set-borders), QR GET BORDERS no acepta un valor acumulativo. Debe probar todos los parámetros por separado para tener una visión general del borde de celda.
 
 *grueso* es el grueso de la línea:
 
@@ -80,7 +80,7 @@ Si el parámetro *area* es incorrecto, se genera el error -9850.
 
 ## Ver también 
 
-[QR SET BORDERS](qr-set-borders.md)  
+[QR SET BORDERS](../commands/qr-set-borders)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: application-version
 title: Application version
 slug: /commands/application-version
@@ -129,8 +129,8 @@ You want to use the application's short version value returned by the command to
 
 ## See also 
 
-[Application type](application-type.md)  
-[Version type](version-type.md)  
+[Application type](../commands/application-type)  
+[Version type](../commands/version-type)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: st-get-url
 title: ST GET URL
 slug: /commands/st-get-url
@@ -81,7 +81,7 @@ When there is a double-click event, you check that there is in fact an URL, and 
 
 ## See also 
 
-[ST INSERT URL](st-insert-url.md)  
+[ST INSERT URL](../commands/st-insert-url)  
 
 ## Properties
 

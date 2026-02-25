@@ -1,4 +1,4 @@
----
+﻿---
 id: save-set
 title: SAVE SET
 slug: /commands/save-set
@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAVE SET.Summary-->**SAVE SET** sauvegarde *ensemble* dans le fichier disque *document*.<!-- END REF-->
 
-Il n'est pas nécessaire que *document* ait le même nom que l'ensemble. Si vous passez une chaîne vide dans *document*, une boîte de dialogue standard de sauvegarde de fichiers apparaît, permettant à l'utilisateur de saisir un nom de fichier. Vous pourrez utiliser la commande [LOAD SET](load-set.md) pour charger un ensemble stocké sur disque.
+Il n'est pas nécessaire que *document* ait le même nom que l'ensemble. Si vous passez une chaîne vide dans *document*, une boîte de dialogue standard de sauvegarde de fichiers apparaît, permettant à l'utilisateur de saisir un nom de fichier. Vous pourrez utiliser la commande [LOAD SET](../commands/load-set) pour charger un ensemble stocké sur disque.
 
 Si l'utilisateur clique sur le bouton Annuler dans la boîte de dialogue de sauvegarde de fichiers, ou si une erreur se produit lors de la sauvegarde, la variable système OK prend la valeur 0\. Sinon, elle prend la valeur 1.
 
@@ -42,7 +42,7 @@ Si l'utilisateur clique sur le bouton Annuler dans la boîte de dialogue standar
 
 ## Voir aussi 
 
-[LOAD SET](load-set.md)  
+[LOAD SET](../commands/load-set)  
 
 ## Propriétés
 

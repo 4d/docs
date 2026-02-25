@@ -1,4 +1,4 @@
----
+﻿---
 id: export-sylk
 title: EXPORT SYLK
 slug: /commands/export-sylk
@@ -47,10 +47,10 @@ OK is set to 1 if the export is successfully completed; otherwise, it is set to 
 
 ## See also 
 
-[EXPORT DIF](export-dif.md)  
-[EXPORT TEXT](export-text.md)  
-[IMPORT SYLK](import-sylk.md)  
-[USE CHARACTER SET](use-character-set.md)  
+[EXPORT DIF](../commands/export-dif)  
+[EXPORT TEXT](../commands/export-text)  
+[IMPORT SYLK](../commands/import-sylk)  
+[USE CHARACTER SET](../commands/use-character-set)  
 
 ## Properties
 

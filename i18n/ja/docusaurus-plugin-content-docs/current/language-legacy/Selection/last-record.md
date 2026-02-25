@@ -1,4 +1,4 @@
----
+﻿---
 id: last-record
 title: LAST RECORD
 slug: /commands/last-record
@@ -29,11 +29,11 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Before selection](before-selection.md)  
-[End selection](end-selection.md)  
-[FIRST RECORD](first-record.md)  
-[NEXT RECORD](next-record.md)  
-[PREVIOUS RECORD](previous-record.md)  
+[Before selection](../commands/before-selection)  
+[End selection](../commands/end-selection)  
+[FIRST RECORD](../commands/first-record)  
+[NEXT RECORD](../commands/next-record)  
+[PREVIOUS RECORD](../commands/previous-record)  
 
 ## プロパティ
 

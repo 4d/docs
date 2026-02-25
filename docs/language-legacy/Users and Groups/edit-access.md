@@ -1,4 +1,4 @@
----
+﻿---
 id: edit-access
 title: EDIT ACCESS
 slug: /commands/edit-access
@@ -34,8 +34,8 @@ The following example displays the Users and User groups management window to th
 
 ## See also 
 
-[CHANGE CURRENT USER](change-current-user.md)  
-[CHANGE PASSWORD](change-password.md)  
+[CHANGE CURRENT USER](../commands/change-current-user)  
+[CHANGE PASSWORD](../commands/change-password)  
 
 ## Properties
 

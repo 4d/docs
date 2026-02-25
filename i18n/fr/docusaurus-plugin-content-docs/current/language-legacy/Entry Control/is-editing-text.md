@@ -1,4 +1,4 @@
----
+﻿---
 id: is-editing-text
 title: Is editing text
 slug: /commands/is-editing-text
@@ -68,8 +68,8 @@ Pour permettre à l'utilisateur de sélectionner une ligne commençant par la le
 ## Voir aussi 
 
   
-[FILTER KEYSTROKE](filter-keystroke.md)  
-[Get edited text](get-edited-text.md)  
+[FILTER KEYSTROKE](../commands/filter-keystroke)  
+[Get edited text](../commands/get-edited-text)  
 
 ## Propriétés
 

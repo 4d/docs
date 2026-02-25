@@ -1,4 +1,4 @@
----
+﻿---
 id: get-document-properties
 title: GET DOCUMENT PROPERTIES
 slug: /commands/get-document-properties
@@ -108,7 +108,7 @@ Para garantir que os marcadores dos registros sejam atualizados corretamente, se
  End case
 ```
 
-Quando esse método tiver sido implementado no banco de dados, nóste mos todo o que precisamos para escrever o método de projeto CRIAR DOCUMENTAÇÂO listado abaixo. Nós usamos **GET DOCUMENT PROPERTIES** e [SET DOCUMENT PROPERTIES](set-document-properties.md) para manipular as datas e horas de criação e modificação dos documentos.\`
+Quando esse método tiver sido implementado no banco de dados, nóste mos todo o que precisamos para escrever o método de projeto CRIAR DOCUMENTAÇÂO listado abaixo. Nós usamos **GET DOCUMENT PROPERTIES** e [SET DOCUMENT PROPERTIES](../commands/set-document-properties) para manipular as datas e horas de criação e modificação dos documentos.\`
 
 ```4d
  Metodo de projeto CRIAR DOCUMENTAÇAO
@@ -219,7 +219,7 @@ Quando esse método tiver sido implementado no banco de dados, nóste mos todo o
 
 ## Ver também 
 
-[SET DOCUMENT PROPERTIES](set-document-properties.md)  
+[SET DOCUMENT PROPERTIES](../commands/set-document-properties)  
 
 ## Propriedades
 

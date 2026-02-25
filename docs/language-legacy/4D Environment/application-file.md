@@ -1,4 +1,4 @@
----
+﻿---
 id: application-file
 title: Application file
 slug: /commands/application-file
@@ -49,8 +49,8 @@ At startup on Windows, you need to check if a DLL Library is correctly located a
 
 ## See also 
 
-[Data file](data-file.md)  
-[Structure file](structure-file.md)  
+[Data file](../commands/data-file)  
+[Structure file](../commands/structure-file)  
 
 ## Properties
 

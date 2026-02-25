@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-get-xml-document-ref
 title: DOM Get XML document ref
 slug: /commands/dom-get-xml-document-ref
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Get XML document ref.Summary-->La commande **DOM Get XML document ref** permet de récupérer la référence de l’élément "document" de l’arbre DOM dont vous avez passé la référence dans *refElément*.<!-- END REF--> L’élément document est le premier élément d’un arbre DOM ; c’est le parent de l’élément racine. 
 
-La référence de l’élément document vous permet de manipuler les noeuds "Doctype" et "Instructions de traitement". Elle ne peut être utilisée qu’avec les commandes [DOM Append XML child node](dom-append-xml-child-node.md) et [DOM GET XML CHILD NODES](dom-get-xml-child-nodes.md).
+La référence de l’élément document vous permet de manipuler les noeuds "Doctype" et "Instructions de traitement". Elle ne peut être utilisée qu’avec les commandes [DOM Append XML child node](../commands/dom-append-xml-child-node) et [DOM GET XML CHILD NODES](../commands/dom-get-xml-child-nodes).
 
 A ce niveau, vous pouvez uniquement ajouter des instructions de traitement, des commentaires ou remplacer le noeud Doctype. Vous ne pouvez pas y créer de noeud CDATA ou texte. 
 
@@ -63,8 +63,8 @@ Dans cet exemple nous cherchons à retrouver la déclaration de DTD du document 
 
 ## Voir aussi 
 
-[DOM Append XML child node](dom-append-xml-child-node.md)  
-[DOM GET XML CHILD NODES](dom-get-xml-child-nodes.md)  
+[DOM Append XML child node](../commands/dom-append-xml-child-node)  
+[DOM GET XML CHILD NODES](../commands/dom-get-xml-child-nodes)  
 
 ## Propriétés
 

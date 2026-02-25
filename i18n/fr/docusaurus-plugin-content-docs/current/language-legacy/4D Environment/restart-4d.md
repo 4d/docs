@@ -1,4 +1,4 @@
----
+﻿---
 id: restart-4d
 title: RESTART 4D
 slug: /commands/restart-4d
@@ -30,9 +30,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.RESTART 4D.Summary-->La commande **RESTART 4D** provoque le redémarrage de l’application 4D courante.<!-- END REF--> 
 
-Cette commande est principalement destinée à une utilisation dans le contexte d’une application fusionnée (client/serveur ou monoposte) et en combinaison avec la commande [SET UPDATE FOLDER](set-update-folder.md). Dans ce cas, le processus de mise à jour automatique est enclenché : la nouvelle version de l’application désignée par [SET UPDATE FOLDER](set-update-folder.md) remplace automatiquement la version courante au moment du redémarrage consécutif à **RESTART 4D**. Le chemin d’accès au fichier de données est mémorisé et est automatiquement utilisé. 
+Cette commande est principalement destinée à une utilisation dans le contexte d’une application fusionnée (client/serveur ou monoposte) et en combinaison avec la commande [SET UPDATE FOLDER](../commands/set-update-folder). Dans ce cas, le processus de mise à jour automatique est enclenché : la nouvelle version de l’application désignée par [SET UPDATE FOLDER](../commands/set-update-folder) remplace automatiquement la version courante au moment du redémarrage consécutif à **RESTART 4D**. Le chemin d’accès au fichier de données est mémorisé et est automatiquement utilisé. 
 
-Si aucune information de mise à jour n’a été définie via la commande [SET UPDATE FOLDER](set-update-folder.md) dans la session courante, la commande redémarre simplement l’application 4D avec les fichiers de structure et de données courants. 
+Si aucune information de mise à jour n’a été définie via la commande [SET UPDATE FOLDER](../commands/set-update-folder) dans la session courante, la commande redémarre simplement l’application 4D avec les fichiers de structure et de données courants. 
 
 Le paramètre *délai* permet de différer le redémarrage de l’application afin de laisser aux postes clients le temps de se déconnecter. Vous devez passer une valeur en secondes dans *délai*. Si vous omettez ce paramètre, l’application serveur attendra que toutes les applications clientes se soient déconnectées, dans un délai maximum de 10 minutes. Au-delà, toutes les applications clientes sont automatiquement déconnectées. 
 
@@ -40,12 +40,12 @@ Le paramètre *délai* permet de différer le redémarrage de l’application af
 
 Le paramètre optionnel *message* vous permet d’afficher un message personnalisé aux applications clientes connectées. 
 
-Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et l’application redémarre. Vous pouvez intercepter les erreurs éventuellement générées par la commande à l’aide d’une méthode installée via la commande [ON ERR CALL](on-err-call.md). 
+Si la commande a été exécutée correctement, la variable système OK prend la valeur 1, sinon elle prend la valeur 0 et l’application redémarre. Vous pouvez intercepter les erreurs éventuellement générées par la commande à l’aide d’une méthode installée via la commande [ON ERR CALL](../commands/on-err-call). 
 
 ## Voir aussi 
 
-[Get last update log path](last-update-log-path.md)  
-[SET UPDATE FOLDER](set-update-folder.md)  
+[Get last update log path](../commands/last-update-log-path)  
+[SET UPDATE FOLDER](../commands/set-update-folder)  
 
 ## Propriétés
 

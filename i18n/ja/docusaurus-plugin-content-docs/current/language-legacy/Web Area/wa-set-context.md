@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-set-context
 title: WA SET CONTEXT
 slug: /commands/wa-set-context
@@ -71,7 +71,7 @@ $4d._myPrivateFunction(); // 関数が非公開扱いになっているため何
 
 ### 参照
 
-[WA Get context](wa-get-context.md)
+[WA Get context](../commands/wa-get-context)
 
 ### プロパティ
 

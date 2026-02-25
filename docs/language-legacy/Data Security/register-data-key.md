@@ -1,4 +1,4 @@
----
+﻿---
 id: register-data-key
 title: Register data key
 slug: /commands/register-data-key
@@ -36,7 +36,7 @@ The 4D keychain is a set of one or more data encryption key(s) loaded in memory 
 In the first parameter, pass the *curPassPhrase* or *curDataKey* that defines the encryption key to add:
 
 * *curPassPhrase*: String used to generate the encryption key. When you use this parameter, an encryption key is generated.
-* *curDataKey*: Object (with *encodedKey* property) that contains the data encryption key. This key may have been generated with the [New data key](new-data-key.md) command.
+* *curDataKey*: Object (with *encodedKey* property) that contains the data encryption key. This key may have been generated with the [New data key](../commands/new-data-key) command.
 
 **Returned value**
 
@@ -60,7 +60,7 @@ In the first parameter, pass the *curPassPhrase* or *curDataKey* that defines th
 ## See also 
 
 [4D Blog - New 4D commands to work with encrypted data](https://blog.4d.com/new-4d-commands-to-work-with-encrypted-data/)  
-[New data key](new-data-key.md)  
+[New data key](../commands/new-data-key)  
 
 ## Properties
 

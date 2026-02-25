@@ -1,4 +1,4 @@
----
+﻿---
 id: is-in-set
 title: Is in set
 slug: /commands/is-in-set
@@ -36,8 +36,8 @@ O seguinte exemplo é um método de objeto de um botão que testa se o registro 
 
 ## Ver também 
 
-[ADD TO SET](add-to-set.md)  
-[REMOVE FROM SET](remove-from-set.md)  
+[ADD TO SET](../commands/add-to-set)  
+[REMOVE FROM SET](../commands/remove-from-set)  
 
 ## Propriedades
 

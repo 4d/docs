@@ -1,4 +1,4 @@
----
+﻿---
 id: web-service-get-result
 title: WEB SERVICE GET RESULT
 slug: /commands/web-service-get-result
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.WEB SERVICE GET RESULT.Summary-->The **WEB SERVICE GET RESULT** command retrieves a value sent back by the Web Service as a result of the processing performed.<!-- END REF-->This command must be used only after the [WEB SERVICE CALL](web-service-call.md) command. 
+<!--REF #_command_.WEB SERVICE GET RESULT.Summary-->The **WEB SERVICE GET RESULT** command retrieves a value sent back by the Web Service as a result of the processing performed.<!-- END REF-->This command must be used only after the [WEB SERVICE CALL](../commands/web-service-call) command. 
 
 The *returnValue* parameter receives the value sent back by the Web Service. Pass a 4D variable in this parameter. This variable is generally $result, corresponding to the value returned by the proxy method. It is, however, possible to use intermediary variables (you must use process variables only). 
 
@@ -60,8 +60,8 @@ Imagine that a Web Service returns the current time in any city in the world. Th
 
 ## See also 
 
-[WEB SERVICE CALL](web-service-call.md)  
-[WEB SERVICE SET PARAMETER](web-service-set-parameter.md)  
+[WEB SERVICE CALL](../commands/web-service-call)  
+[WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter)  
 
 ## Properties
 

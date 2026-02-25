@@ -1,4 +1,4 @@
----
+﻿---
 id: add-record
 title: ADD RECORD
 slug: /commands/add-record
@@ -36,15 +36,15 @@ Le formulaire est affiché dans la fenêtre se trouvant au premier plan du proce
 
 **ADD RECORD** affiche le formulaire jusqu'à ce que l'utilisateur valide ou annule l'enregistrement. Si l'utilisateur ajoute plusieurs enregistrements, la commande doit être appelée pour chaque nouvel enregistrement. 
 
-L'enregistrement est sauvegardé si l'utilisateur clique sur un bouton du type Valider ou appuie sur la touche Entrée, ou encore si la commande [ACCEPT](accept.md) est exécutée. 
+L'enregistrement est sauvegardé si l'utilisateur clique sur un bouton du type Valider ou appuie sur la touche Entrée, ou encore si la commande [ACCEPT](../commands/accept) est exécutée. 
 
-L'enregistrement n'est pas sauvegardé si l'utilisateur clique sur un bouton du type **Annuler** ou appuie sur la touche d'annulation (**Echap** sous Windows, **Esc** sous Mac OS), ou encore si la commande [CANCEL](cancel.md) est exécutée. 
+L'enregistrement n'est pas sauvegardé si l'utilisateur clique sur un bouton du type **Annuler** ou appuie sur la touche d'annulation (**Echap** sous Windows, **Esc** sous Mac OS), ou encore si la commande [CANCEL](../commands/cancel) est exécutée. 
 
 **Note :** Cette commande ne nécessite pas que *laTable* soit en mode lecture/écriture. Elle peut être utilisée même lorsque la table est en mode lecture seulement (cf. section *Verrouillage d'enregistrements*). 
 
 Après un appel à **ADD RECORD**, la variable système OK prend la valeur 1 si l'enregistrement est validé et 0 s'il est annulé.
 
-**Note :** Même lorsqu'il est annulé, l'enregistrement reste en mémoire et peut être sauvegardé avec la commande [SAVE RECORD](save-record.md) si celle-ci est exécutée avant que le pointeur d'enregistrement courant ne soit modifié.
+**Note :** Même lorsqu'il est annulé, l'enregistrement reste en mémoire et peut être sauvegardé avec la commande [SAVE RECORD](../commands/save-record) si celle-ci est exécutée avant que le pointeur d'enregistrement courant ne soit modifié.
 
 ## Exemple 1 
 
@@ -59,7 +59,7 @@ L'exemple suivant est une boucle souvent utilisée pour créer des enregistremen
 
 ## Exemple 2 
 
-L'exemple suivant permet de rechercher un client dans la base. Le déroulement de la méthode dépend du résultat de la recherche. Si aucun client n'a été trouvé, l'utilisateur est autorisé à créer un nouveau client à l'aide de la commande **ADD RECORD**. Si au moins un client a été trouvé, le premier enregistrement est affiché pour modification, à l'aide de la commande [MODIFY RECORD](modify-record.md) :
+L'exemple suivant permet de rechercher un client dans la base. Le déroulement de la méthode dépend du résultat de la recherche. Si aucun client n'a été trouvé, l'utilisateur est autorisé à créer un nouveau client à l'aide de la commande **ADD RECORD**. Si au moins un client a été trouvé, le premier enregistrement est affiché pour modification, à l'aide de la commande [MODIFY RECORD](../commands/modify-record) :
 
 ```4d
  READ WRITE([Clients])
@@ -86,11 +86,11 @@ La variable système OK prend la valeur 1 si l'enregistrement est validé et 0 s
 
 ## Voir aussi 
 
-[ACCEPT](accept.md)  
-[CANCEL](cancel.md)  
-[CREATE RECORD](create-record.md)  
-[MODIFY RECORD](modify-record.md)  
-[SAVE RECORD](save-record.md)  
+[ACCEPT](../commands/accept)  
+[CANCEL](../commands/cancel)  
+[CREATE RECORD](../commands/create-record)  
+[MODIFY RECORD](../commands/modify-record)  
+[SAVE RECORD](../commands/save-record)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: set-document-position
 title: SET DOCUMENT POSITION
 slug: /commands/set-document-position
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.SET DOCUMENT POSITION.Summary-->This command operates only on a document currently open whose document reference number you pass in *docRef*.<!-- END REF-->sets the position you pass in *offset* where the next read ([RECEIVE PACKET](receive-packet.md)) or write ([SEND PACKET](send-packet.md)) will occur.
+<!--REF #_command_.SET DOCUMENT POSITION.Summary-->This command operates only on a document currently open whose document reference number you pass in *docRef*.<!-- END REF-->sets the position you pass in *offset* where the next read ([RECEIVE PACKET](../commands/receive-packet)) or write ([SEND PACKET](../commands/send-packet)) will occur.
 
 If you omit the optional *anchor* parameter, the position is relative to the beginning of the document. If you do specify the *anchor* parameter, you pass one of the values listed above. 
 
@@ -38,9 +38,9 @@ Depending on the anchor you can pass positive or negative values in *offset*.
 
 ## See also 
 
-[Get document position](get-document-position.md)  
-[RECEIVE PACKET](receive-packet.md)  
-[SEND PACKET](send-packet.md)  
+[Get document position](../commands/get-document-position)  
+[RECEIVE PACKET](../commands/receive-packet)  
+[SEND PACKET](../commands/send-packet)  
 
 ## Properties
 

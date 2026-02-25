@@ -1,4 +1,4 @@
----
+﻿---
 id: set-channel
 title: SET CHANNEL
 slug: /commands/set-channel
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET CHANNEL.Summary-->O comando SET CHANNEL abre uma porta serial ou um documento.<!-- END REF--> Você pode abrir apenas uma porta serial ou um documento de uma vez com este comando. Para fechar uma porta serial aberta, passe SET CHANNEL (11).
 
-**Nota histórica:** Este comando era originalmente o primeiro comando 4D utilizado para trabalhar com portas seriais e documentos em disquetes. Desde aquela época, novos comandos foram adicionados. Hoje, você normalmente irá trabalhar com documentos no disco usando os comandos [Open document](open-document.md "Open document"), [Create document](create-document.md "Create document") e [Append document](append-document.md "Append document"). Com esses comandos, você pode ler e escrever caracteres para e de documentos usando [SEND PACKET](send-packet.md "SEND PACKET") ou [RECEIVE PACKET](receive-packet.md) (estes comandos funcionam com SET CHANNEL, também). No entanto, se você quiser usar os comandos [SEND VARIABLE](send-variable.md "SEND VARIABLE"), [RECEIVE VARIABLE](receive-variable.md "RECEIVE VARIABLE"), [SEND RECORD](send-record.md "SEND RECORD") e [RECEIVE RECORD](receive-record.md "RECEIVE RECORD"), você deve usar SET CHANNEL para acessar o documento no disco. 
+**Nota histórica:** Este comando era originalmente o primeiro comando 4D utilizado para trabalhar com portas seriais e documentos em disquetes. Desde aquela época, novos comandos foram adicionados. Hoje, você normalmente irá trabalhar com documentos no disco usando os comandos [Open document](open-document.md "Open document"), [Create document](create-document.md "Create document") e [Append document](append-document.md "Append document"). Com esses comandos, você pode ler e escrever caracteres para e de documentos usando [SEND PACKET](send-packet.md "SEND PACKET") ou [RECEIVE PACKET](../commands/receive-packet) (estes comandos funcionam com SET CHANNEL, também). No entanto, se você quiser usar os comandos [SEND VARIABLE](send-variable.md "SEND VARIABLE"), [RECEIVE VARIABLE](receive-variable.md "RECEIVE VARIABLE"), [SEND RECORD](send-record.md "SEND RECORD") e [RECEIVE RECORD](receive-record.md "RECEIVE RECORD"), você deve usar SET CHANNEL para acessar o documento no disco. 
 
 A descrição de SET CHANNEL é composta de duas seções:
 
@@ -34,7 +34,7 @@ A descrição de SET CHANNEL é composta de duas seções:
 
 ## Trabalho com portas seriais: SET CHANNEL (porta, configurações) 
 
-A primeira forma do comando SET CHANNEL abre uma porta serial, atribui o protocolo de criação e informação de outra porta. Os dados podem ser enviados com [SEND PACKET](send-packet.md "SEND PACKET"), [SEND RECORD](send-record.md "SEND RECORD") ou [SEND VARIABLE](send-variable.md "SEND VARIABLE") e recebido com [RECEIVE BUFFER](receive-buffer.md "RECEIVE BUFFER"), [RECEIVE PACKET](receive-packet.md), [RECEIVE RECORD](receive-record.md "RECEIVE RECORD") ou [RECEIVE VARIABLE](receive-variable.md "RECEIVE VARIABLE").
+A primeira forma do comando SET CHANNEL abre uma porta serial, atribui o protocolo de criação e informação de outra porta. Os dados podem ser enviados com [SEND PACKET](send-packet.md "SEND PACKET"), [SEND RECORD](send-record.md "SEND RECORD") ou [SEND VARIABLE](send-variable.md "SEND VARIABLE") e recebido com [RECEIVE BUFFER](receive-buffer.md "RECEIVE BUFFER"), [RECEIVE PACKET](../commands/receive-packet), [RECEIVE RECORD](receive-record.md "RECEIVE RECORD") ou [RECEIVE VARIABLE](receive-variable.md "RECEIVE VARIABLE").
 
 * O primeiro parâmetro, *porta*, seleciona a porta e o protocolo. Você pode dirigir até 99 portas seriais (uma de cada vez):
 
@@ -158,19 +158,19 @@ Veja os exemplos para os comandos [RECEIVE BUFFER](receive-buffer.md "RECEIVE BU
 
 ## Ver também 
 
-[Append document](append-document.md)  
+[Append document](../commands/append-document)  
 *Comunicações*  
-[Create document](create-document.md)  
-[GET SERIAL PORT MAPPING](get-serial-port-mapping.md)  
-[Open document](open-document.md)  
-[RECEIVE BUFFER](receive-buffer.md)  
-[RECEIVE PACKET](receive-packet.md)  
-[RECEIVE RECORD](receive-record.md)  
-[RECEIVE VARIABLE](receive-variable.md)  
-[SEND PACKET](send-packet.md)  
-[SEND RECORD](send-record.md)  
-[SEND VARIABLE](send-variable.md)  
-[SET TIMEOUT](set-timeout.md)  
+[Create document](../commands/create-document)  
+[GET SERIAL PORT MAPPING](../commands/get-serial-port-mapping)  
+[Open document](../commands/open-document)  
+[RECEIVE BUFFER](../commands/receive-buffer)  
+[RECEIVE PACKET](../commands/receive-packet)  
+[RECEIVE RECORD](../commands/receive-record)  
+[RECEIVE VARIABLE](../commands/receive-variable)  
+[SEND PACKET](../commands/send-packet)  
+[SEND RECORD](../commands/send-record)  
+[SEND VARIABLE](../commands/send-variable)  
+[SET TIMEOUT](../commands/set-timeout)  
 
 ## Propriedades
 

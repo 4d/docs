@@ -1,4 +1,4 @@
----
+﻿---
 id: messages-off
 title: MESSAGES OFF
 slug: /commands/messages-off
@@ -28,40 +28,40 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.MESSAGES OFF.Summary-->Los comandos MESSAGES OFF y [MESSAGES ON](messages-on.md) encienden y apagan los termómetros de progresión mostrados por 4D mientras se ejecutan operaciones de larga duración.<!-- END REF--> Por defecto, se muestran los mensajes. 
+<!--REF #_command_.MESSAGES OFF.Summary-->Los comandos MESSAGES OFF y [MESSAGES ON](../commands/messages-on) encienden y apagan los termómetros de progresión mostrados por 4D mientras se ejecutan operaciones de larga duración.<!-- END REF--> Por defecto, se muestran los mensajes. 
 
 Estas son las operaciones que pueden mostrar termómetros de progreso: aplicación de una fórmula, generación de un informe rápido, exportación de datos, importación de datos, ordenación, generación de un gráfico, búsqueda, búsqueda por formulario, búsqueda por fórmula.
 
 La siguiente tabla lista los comandos que muestran termómetros de progreso:
 
-[APPLY TO SELECTION](apply-to-selection.md)  
-[Average](average.md)  
-[BUILD APPLICATION](build-application.md)  
-[DISTINCT VALUES](distinct-values.md)  
-[EXPORT DIF](export-dif.md)  
-[EXPORT SYLK](export-sylk.md)  
-[EXPORT TEXT](export-text.md)  
+[APPLY TO SELECTION](../commands/apply-to-selection)  
+[Average](../commands/average)  
+[BUILD APPLICATION](../commands/build-application)  
+[DISTINCT VALUES](../commands/distinct-values)  
+[EXPORT DIF](../commands/export-dif)  
+[EXPORT SYLK](../commands/export-sylk)  
+[EXPORT TEXT](../commands/export-text)  
   
-[IMPORT DIF](import-dif.md)  
-[IMPORT SYLK](import-sylk.md)  
-[IMPORT TEXT](import-text.md)  
-[Max](max.md)  
-[Min](min.md)  
-[ORDER BY](order-by.md)  
-[ORDER BY FORMULA](order-by-formula.md)  
-[QR REPORT](qr-report.md)  
-[QUERY](query.md)  
-[QUERY BY FORMULA](query-by-formula.md)  
-[QUERY BY EXAMPLE](query-by-example.md)  
-[QUERY SELECTION](query-selection.md)  
-[QUERY SELECTION BY FORMULA](query-selection-by-formula.md)  
-[REDUCE SELECTION](reduce-selection.md)  
-[RELATE MANY SELECTION](relate-many-selection.md)  
-[RELATE ONE SELECTION](relate-one-selection.md)  
-[SCAN INDEX](scan-index.md)  
-[Sum](sum.md)
+[IMPORT DIF](../commands/import-dif)  
+[IMPORT SYLK](../commands/import-sylk)  
+[IMPORT TEXT](../commands/import-text)  
+[Max](../commands/max)  
+[Min](../commands/min)  
+[ORDER BY](../commands/order-by)  
+[ORDER BY FORMULA](../commands/order-by-formula)  
+[QR REPORT](../commands/qr-report)  
+[QUERY](../commands/query)  
+[QUERY BY FORMULA](../commands/query-by-formula)  
+[QUERY BY EXAMPLE](../commands/query-by-example)  
+[QUERY SELECTION](../commands/query-selection)  
+[QUERY SELECTION BY FORMULA](../commands/query-selection-by-formula)  
+[REDUCE SELECTION](../commands/reduce-selection)  
+[RELATE MANY SELECTION](../commands/relate-many-selection)  
+[RELATE ONE SELECTION](../commands/relate-one-selection)  
+[SCAN INDEX](../commands/scan-index)  
+[Sum](../commands/sum)
 
-**Nota para 4D Server:** las ventanas de mensajes de progreso no se muestran en el servidor desde que estas operaciones se listan automáticamente en la *\_o\_PAGE SETUP* de la ventana de administración. Si desea forzar la visualización de estas ventanas de progreso, debe llamar al comando [MESSAGES ON](messages-on.md) en el servidor. 
+**Nota para 4D Server:** las ventanas de mensajes de progreso no se muestran en el servidor desde que estas operaciones se listan automáticamente en la *\_o\_PAGE SETUP* de la ventana de administración. Si desea forzar la visualización de estas ventanas de progreso, debe llamar al comando [MESSAGES ON](../commands/messages-on) en el servidor. 
 
 ## Ejemplo 
 
@@ -75,7 +75,7 @@ El siguiente ejemplo suprime los termómetros de progreso antes de efectuar una 
 
 ## Ver también 
 
-[MESSAGES ON](messages-on.md)  
+[MESSAGES ON](../commands/messages-on)  
 
 ## Propiedades
 

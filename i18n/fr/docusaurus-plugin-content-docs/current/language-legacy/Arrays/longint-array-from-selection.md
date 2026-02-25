@@ -1,4 +1,4 @@
----
+﻿---
 id: longint-array-from-selection
 title: LONGINT ARRAY FROM SELECTION
 slug: /commands/longint-array-from-selection
@@ -47,7 +47,7 @@ Vous voulez récupérer les numéros des enregistrements de la sélection couran
 
 ## Voir aussi 
 
-[CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
+[CREATE SELECTION FROM ARRAY](../commands/create-selection-from-array)  
 
 ## Propriétés
 

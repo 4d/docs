@@ -1,4 +1,4 @@
----
+﻿---
 id: macintosh-control-down
 title: Macintosh control down
 slug: /commands/macintosh-control-down
@@ -33,16 +33,16 @@ Macintosh control down retorna TRUE se a tecla Control de Macintosh estiver pres
 
 ## Exemplo 
 
-Ver exemplo do comando [Shift down](shift-down.md).
+Ver exemplo do comando [Shift down](../commands/shift-down).
 
 ## Ver também 
 
-[Caps lock down](caps-lock-down.md)  
-[Macintosh command down](macintosh-command-down.md)  
-[Macintosh option down](macintosh-option-down.md)  
-[Shift down](shift-down.md)  
-[Windows Alt down](windows-alt-down.md)  
-[Windows Ctrl down](windows-ctrl-down.md)  
+[Caps lock down](../commands/caps-lock-down)  
+[Macintosh command down](../commands/macintosh-command-down)  
+[Macintosh option down](../commands/macintosh-option-down)  
+[Shift down](../commands/shift-down)  
+[Windows Alt down](../commands/windows-alt-down)  
+[Windows Ctrl down](../commands/windows-ctrl-down)  
 
 ## Propriedades
 

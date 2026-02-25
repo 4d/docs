@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-footers-height
 title: LISTBOX Get footers height
 slug: /commands/listbox-get-footers-height
@@ -46,7 +46,7 @@ Por defeito, é omitido o parâmetro *unidad*e, a altura de linha devolvida se e
 
 ## Ver também 
 
-[LISTBOX SET FOOTERS HEIGHT](listbox-set-footers-height.md)  
+[LISTBOX SET FOOTERS HEIGHT](../commands/listbox-set-footers-height)  
 
 ## Propriedades
 

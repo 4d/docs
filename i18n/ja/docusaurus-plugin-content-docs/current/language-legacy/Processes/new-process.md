@@ -1,4 +1,4 @@
----
+﻿---
 id: new-process
 title: New process
 slug: /commands/new-process
@@ -123,7 +123,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Execute on server](execute-on-server.md)  
+[Execute on server](../commands/execute-on-server)  
 *プリエンプティブ4Dプロセス*  
 *プロセス*  
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: change-licenses
 title: CHANGE LICENSES
 slug: /commands/change-licenses
@@ -51,7 +51,7 @@ CHANGE LICENSES は、顧客に配付されたコンパイル済みのシング�
 ## 参照 
 
 [License info](../commands/license-info)  
-[Is license available](is-license-available.md)  
+[Is license available](../commands/is-license-available)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: modify-selection
 title: MODIFY SELECTION
 slug: /commands/modify-selection
@@ -32,15 +32,15 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.MODIFY SELECTION.Summary-->**MODIFY SELECTION** does almost the same thing as [DISPLAY SELECTION](display-selection.md).<!-- END REF--> Refer to the description of [DISPLAY SELECTION](display-selection.md) for details. The differences between the two commands are:
+<!--REF #_command_.MODIFY SELECTION.Summary-->**MODIFY SELECTION** does almost the same thing as [DISPLAY SELECTION](../commands/display-selection).<!-- END REF--> Refer to the description of [DISPLAY SELECTION](../commands/display-selection) for details. The differences between the two commands are:
 
-1\. [DISPLAY SELECTION](display-selection.md) and **MODIFY SELECTION** enable you to display the current selected records in list mode, or in the input form when you double-click on a record. Using **MODIFY SELECTION**, you can also modify the fields of the record in the input form when you double-click on it, if it is not already in use by another process or user, or in “Enter in List” mode (if it is authorized).
+1\. [DISPLAY SELECTION](../commands/display-selection) and **MODIFY SELECTION** enable you to display the current selected records in list mode, or in the input form when you double-click on a record. Using **MODIFY SELECTION**, you can also modify the fields of the record in the input form when you double-click on it, if it is not already in use by another process or user, or in “Enter in List” mode (if it is authorized).
 
-2\. [DISPLAY SELECTION](display-selection.md) loads the records in Read-only mode in the current process, which means that they are not locked for writing in the other processes. **MODIFY SELECTION** places all the records of the selection in Read-Write mode, which means that they are automatically locked for writing in other processes. **MODIFY SELECTION** frees the records when its execution is completed.
+2\. [DISPLAY SELECTION](../commands/display-selection) loads the records in Read-only mode in the current process, which means that they are not locked for writing in the other processes. **MODIFY SELECTION** places all the records of the selection in Read-Write mode, which means that they are automatically locked for writing in other processes. **MODIFY SELECTION** frees the records when its execution is completed.
 
 ## See also 
 
-[DISPLAY SELECTION](display-selection.md)  
+[DISPLAY SELECTION](../commands/display-selection)  
 [Form event code](../commands/form-event-code)  
 *Sets*  
 

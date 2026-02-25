@@ -1,4 +1,4 @@
----
+﻿---
 id: form-get-entry-order
 title: FORM GET ENTRY ORDER
 slug: /commands/form-get-entry-order
@@ -30,14 +30,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM GET ENTRY ORDER.Summary-->**FORM GET ENTRY ORDER** コマンドは フォーム上のオブジェクトの名前を、その入力順に並べて *objectNames* に返します。<!-- END REF-->
 
-* *\** パラメーターを省略した場合、**FORM GET ENTRY ORDER** は最後に [FORM SET ENTRY ORDER](form-set-entry-order.md) コマンドによって定義された入力順を返します。*pageNumber* パラメーターは任意です:  
+* *\** パラメーターを省略した場合、**FORM GET ENTRY ORDER** は最後に [FORM SET ENTRY ORDER](../commands/form-set-entry-order) コマンドによって定義された入力順を返します。*pageNumber* パラメーターは任意です:  
    * *pageNumber* を省略した場合、*objectNames* 配列はカレントページの入力順を返します。  
    * *pageNumber* を指定した場合、*objectNames* 配列は *pageNumber* で指定されたページの入力順を返します。  
-どちらの場合でも、カレントフォームに対して [FORM SET ENTRY ORDER](form-set-entry-order.md) コマンドが前もってコールされていないと、*objectNames* 配列は空で返されます。
-* *\** を渡した場合には、**FORM GET ENTRY ORDER** はカレントページの実際の入力順を返します。つまり、*objectNames* 配列には**有効な**オブジェクト名のみが返されます (有効なオブジェクトについての詳細は [FORM SET ENTRY ORDER](form-set-entry-order.md) コマンドの説明を参照ください)。実際のフォーム入力順は次のいずれかを反映します:  
+どちらの場合でも、カレントフォームに対して [FORM SET ENTRY ORDER](../commands/form-set-entry-order) コマンドが前もってコールされていないと、*objectNames* 配列は空で返されます。
+* *\** を渡した場合には、**FORM GET ENTRY ORDER** はカレントページの実際の入力順を返します。つまり、*objectNames* 配列には**有効な**オブジェクト名のみが返されます (有効なオブジェクトについての詳細は [FORM SET ENTRY ORDER](../commands/form-set-entry-order) コマンドの説明を参照ください)。実際のフォーム入力順は次のいずれかを反映します:  
    * オブジェクトの階層に準じたデフォルトのフォーム入力順  
    * フォームエディターが使用された場合はその入力順 (*データの入力順を変更する* 参照)  
-   * [FORM SET ENTRY ORDER](form-set-entry-order.md) コマンドがカレントプロセスで呼び出された場合には、その入力順  
+   * [FORM SET ENTRY ORDER](../commands/form-set-entry-order) コマンドがカレントプロセスで呼び出された場合には、その入力順  
 実際の入力順にはページ 0 および継承フォームのオブジェクトが常に含まれます。
 
 **注:** このコマンドが親フォームに対して呼ばれた場合、サブフォーム内の入力順は返されません。
@@ -62,7 +62,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[FORM SET ENTRY ORDER](form-set-entry-order.md)  
+[FORM SET ENTRY ORDER](../commands/form-set-entry-order)  
 
 ## プロパティ
 

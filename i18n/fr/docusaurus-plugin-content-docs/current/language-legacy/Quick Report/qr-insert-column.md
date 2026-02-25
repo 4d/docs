@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-insert-column
 title: QR INSERT COLUMN
 slug: /commands/qr-insert-column
@@ -49,7 +49,7 @@ La ligne suivante insère (ou crée) une première colonne dans la zone MaZone e
 
 ## Voir aussi 
 
-[QR DELETE COLUMN](qr-delete-column.md)  
+[QR DELETE COLUMN](../commands/qr-delete-column)  
 
 ## Propriétés
 

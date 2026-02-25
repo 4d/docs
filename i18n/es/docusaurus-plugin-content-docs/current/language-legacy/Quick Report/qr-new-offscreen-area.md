@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-new-offscreen-area
 title: QR New offscreen area
 slug: /commands/qr-new-offscreen-area
@@ -31,8 +31,8 @@ displayed_sidebar: docs
 
 ## Ver también 
 
-[QR DELETE OFFSCREEN AREA](qr-delete-offscreen-area.md)  
-[QR NEW AREA](qr-new-area.md)  
+[QR DELETE OFFSCREEN AREA](../commands/qr-delete-offscreen-area)  
+[QR NEW AREA](../commands/qr-new-area)  
 
 ## Propiedades
 

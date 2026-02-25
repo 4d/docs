@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-delete-column
 title: QR DELETE COLUMN
 slug: /commands/qr-delete-column
@@ -45,7 +45,7 @@ The following example makes sure the report is a list report and deletes the thi
 
 ## See also 
 
-[QR INSERT COLUMN](qr-insert-column.md)  
+[QR INSERT COLUMN](../commands/qr-insert-column)  
 
 ## Properties
 

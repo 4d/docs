@@ -1,4 +1,4 @@
----
+﻿---
 id: monitored-activity
 title: Monitored activity
 slug: /commands/monitored-activity
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Monitored activity.Summary-->La commande **Monitored activity** retourne une collection d'objets décrivant les opérations enregistrées selon les spécifications définies par la commande [START MONITORING ACTIVITY](start-monitoring-activity.md).<!-- END REF--> Elle peut être appelée et exécutée sur un 4D distant, 4D Server ou des applications 4D autonomes (si *source* n'est pas issu de l'activité réseau).
+<!--REF #_command_.Monitored activity.Summary-->La commande **Monitored activity** retourne une collection d'objets décrivant les opérations enregistrées selon les spécifications définies par la commande [START MONITORING ACTIVITY](../commands/start-monitoring-activity).<!-- END REF--> Elle peut être appelée et exécutée sur un 4D distant, 4D Server ou des applications 4D autonomes (si *source* n'est pas issu de l'activité réseau).
 
 Les objets de la collection retournée possèdent les propriétés suivantes :
 
@@ -29,7 +29,7 @@ Les objets de la collection retournée possèdent les propriétés suivantes :
 
 ### activityKind = langage de l'activité (1) 
 
-**Note :** L'objet *activityData* utilise les informations définies par la commande [SET DATABASE PARAMETER](set-database-parameter.md) pour *4DDebugLog.txt (standard)* (le cas échéant), sinon, elle utilise un mode par défaut. Le lancement de l'enregistrement des requêtes durant l'exécution de la commande **Monitored activity** aura une incidence sur les résultats retournés.
+**Note :** L'objet *activityData* utilise les informations définies par la commande [SET DATABASE PARAMETER](../commands/set-database-parameter) pour *4DDebugLog.txt (standard)* (le cas échéant), sinon, elle utilise un mode par défaut. Le lancement de l'enregistrement des requêtes durant l'exécution de la commande **Monitored activity** aura une incidence sur les résultats retournés.
 
 Objet *activityData* :
 
@@ -68,8 +68,8 @@ Les propriétés supplémentaires suivantes sont retournées dans l'objet *activ
 
 **Notes :**
 
-* Si le journal de débogage a été stoppé sur la [Administration window](../../ServerWindow/overview.md) de 4D Server, la commande **Monitored activity** ne retourne rien. Si le journal est relancé sur le serveur ou à l'aide de la commande [START MONITORING ACTIVITY](start-monitoring-activity.md) avec Activity network, **Monitored activity** reprendra la génération des informations de l'activité réseau.
-* L'objet *activityData* utilise les informations définies par la commande [SET DATABASE PARAMETER](set-database-parameter.md) pour *4DRequestsLog.txt* (le cas échéant), sinon, elle utilise un mode par défaut. Le lancement de l'enregistrement des requêtes durant l'exécution de la commande **Monitored activity** aura une incidence sur les résultats retournés.
+* Si le journal de débogage a été stoppé sur la [Administration window](../../ServerWindow/overview.md) de 4D Server, la commande **Monitored activity** ne retourne rien. Si le journal est relancé sur le serveur ou à l'aide de la commande [START MONITORING ACTIVITY](../commands/start-monitoring-activity) avec Activity network, **Monitored activity** reprendra la génération des informations de l'activité réseau.
+* L'objet *activityData* utilise les informations définies par la commande [SET DATABASE PARAMETER](../commands/set-database-parameter) pour *4DRequestsLog.txt* (le cas échéant), sinon, elle utilise un mode par défaut. Le lancement de l'enregistrement des requêtes durant l'exécution de la commande **Monitored activity** aura une incidence sur les résultats retournés.
 
 L'objet *activityData* :
 
@@ -80,7 +80,7 @@ L'objet *activityData* :
 | systemID         | texte       | ID du système                                                                                                                                                                                                                                                                                                                                                                      |
 | component        | texte       | Signature du composant (par exemple '4SQLS' ou 'dbmg')                                                                                                                                                                                                                                                                                                                             |
 | processInfoIndex | entier long | Correspond au champ "index" dans le fichier d'historique *4DRequestsLog\_ProcessInfo.txt*, et permet de relier une requête à un process                                                                                                                                                                                                                                            |
-| request          | entier long | ID de requête pour les messages c/s, les requêtes SQL, ou les messages [LOG EVENT](log-event.md)                                                                                                                                                                                                                                                                                   |
+| request          | entier long | ID de requête pour les messages c/s, les requêtes SQL, ou les messages [LOG EVENT](../commands/log-event)                                                                                                                                                                                                                                                                                   |
 | bytesIn          | entier long | Nombre d'octets reçus                                                                                                                                                                                                                                                                                                                                                              |
 | bytesOut         | entier long | Nombre d'octets envoyés                                                                                                                                                                                                                                                                                                                                                            |
 | execDuration     | entier long | En fonction de l'emplacement de leur génération :server\_duration . <br/>OU,exec\_duration lorsqu'il est généré sur le serveur  \--Temps en microsecondes pris par le serveur pour traiter la requête.  .                                                                                                                                                                  |
@@ -91,7 +91,7 @@ L'objet *activityData* :
 
 ### activityKind = opérations de l'activité (4) 
 
-**Note :** L'objet *activityData* et l'objet retourné par la commande [ACTIVITY SNAPSHOT](activity-snapshot.md) sont similaires, excepté que *activityData* est soumis à un seuil et que les opérations terminées sont retournées :
+**Note :** L'objet *activityData* et l'objet retourné par la commande [ACTIVITY SNAPSHOT](../commands/activity-snapshot) sont similaires, excepté que *activityData* est soumis à un seuil et que les opérations terminées sont retournées :
 
 L'objet *activityData* :
 
@@ -114,8 +114,8 @@ L'objet *activityData* :
 | |  client\_uid         | text       | (opération en c/s uniquement) UUID de la machine cliente ayant lancé l'opération dans la base de données                                                                           |                                                                                                                                                                                                  |
 | |  is\_remote\_context | longint    | (opération en c/s uniquement) Indique si l'opération a été lancée par le serveur via une procédure stockée (valeur=0) ou par un client (valeur=1)                                  |                                                                                                                                                                                                  |
 | |  user4d\_id          | longint    | ID de l'utilisateur 4D sur la machine cliente                                                                                                                                      |                                                                                                                                                                                                  |
-| |  user4d\_alias       | text       | Alias défini pour l'utilisateur 4D. Voir [SET USER ALIAS](set-user-alias.md)                                                                                                       |                                                                                                                                                                                                  |
-| |  client\_version     | text       | Valeur de chaîne encodée qui exprime le numéro de version de l'environnement 4D retourné par la commande [Application version](application-version.md)                             |                                                                                                                                                                                                  |
+| |  user4d\_alias       | text       | Alias défini pour l'utilisateur 4D. Voir [SET USER ALIAS](../commands/set-user-alias)                                                                                                       |                                                                                                                                                                                                  |
+| |  client\_version     | text       | Valeur de chaîne encodée qui exprime le numéro de version de l'environnement 4D retourné par la commande [Application version](../commands/application-version)                             |                                                                                                                                                                                                  |
 | dbOperationDetails     |            | object                                                                                                                                                                             | Informations sur les appels d'opérations vers le moteur de base de données                                                                                                                       |
 | |  table               | text       | Nom de la table dans l'opération                                                                                                                                                   |                                                                                                                                                                                                  |
 | |  field               | text       | Nom du champ de la table dans l'opération                                                                                                                                          |                                                                                                                                                                                                  |
@@ -135,12 +135,12 @@ L'objet *activityData* :
 
 ## Exemple 
 
-Voir l'exemple de **[START MONITORING ACTIVITY](start-monitoring-activity.md).**
+Voir l'exemple de **[START MONITORING ACTIVITY](../commands/start-monitoring-activity).**
 
 ## Voir aussi 
 
-[START MONITORING ACTIVITY](start-monitoring-activity.md)  
-[STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  
+[START MONITORING ACTIVITY](../commands/start-monitoring-activity)  
+[STOP MONITORING ACTIVITY](../commands/stop-monitoring-activity)  
 
 ## Propriétés
 

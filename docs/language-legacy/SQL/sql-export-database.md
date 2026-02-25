@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-export-database
 title: SQL EXPORT DATABASE
 slug: /commands/sql-export-database
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 **Note:** This command cannot be used with an external connection that has been opened directly or via ODBC. 
 
-For each table, the command generates a text file containing the SQL statements necessary for importing data into another database. This file can be used directly by the [SQL EXECUTE SCRIPT](sql-execute-script.md) command in order to import data into another 4D database. 
+For each table, the command generates a text file containing the SQL statements necessary for importing data into another database. This file can be used directly by the [SQL EXECUTE SCRIPT](../commands/sql-execute-script) command in order to import data into another 4D database. 
 
 The export files will be placed in a folder named "SQLExport" that is created in the destination folder designated by the *folderPath* parameter. Please note that if an "SQLExport" folder already exists at the location specified, the command will replace it without any warning message being displayed.   
 If you pass an empty string in this parameter, 4D displays a standard dialog box which lets the user designate the destination folder. By default, the dialog box displays the current folder of the user that opened the session ("My Documents" under Windows or "Documents" under Mac OS).
@@ -67,7 +67,7 @@ If the export has been carried out correctly, the OK variable is set to 1\. Othe
 
 ## See also 
 
-[SQL EXPORT SELECTION](sql-export-selection.md)  
+[SQL EXPORT SELECTION](../commands/sql-export-selection)  
 
 ## Properties
 

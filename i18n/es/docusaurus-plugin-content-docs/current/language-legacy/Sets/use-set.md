@@ -1,4 +1,4 @@
----
+﻿---
 id: use-set
 title: USE SET
 slug: /commands/use-set
@@ -35,8 +35,8 @@ El siguiente ejemplo utiliza [LOAD SET](load-set.md "LOAD SET") para cargar un c
 
 #### Ver también 
 
-[CLEAR SET](clear-set.md)  
-[LOAD SET](load-set.md)  
+[CLEAR SET](../commands/clear-set)  
+[LOAD SET](../commands/load-set)  
 
 #### Propiedades
 

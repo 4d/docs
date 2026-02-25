@@ -1,4 +1,4 @@
----
+﻿---
 id: web-form
 title: Web Form
 slug: /commands/web-form
@@ -31,7 +31,7 @@ The command returns `null` if it is called in a request that does not originate 
 
 ## Veja também
 
-[Web Event](web-event.md)</br>
+[Web Event](../commands/web-event)</br>
 [WebForm class](../../API/WebFormClass.md)</br>
 [WebFormItem class](../../API/WebFormItemClass.md)
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: remove-from-set
 title: REMOVE FROM SET
 slug: /commands/remove-from-set
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## See also 
 
-[ADD TO SET](add-to-set.md)  
+[ADD TO SET](../commands/add-to-set)  
 
 ## Properties
 

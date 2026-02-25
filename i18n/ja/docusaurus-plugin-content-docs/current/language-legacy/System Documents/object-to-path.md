@@ -1,4 +1,4 @@
----
+﻿---
 id: object-to-path
 title: Object to path
 slug: /commands/object-to-path
@@ -42,7 +42,7 @@ displayed_sidebar: docs
 | extension    | テキスト  | 最後のファイル名あるいはフォルダ名の拡張子。"."で始まります(省略可能)。拡張子をつけない場合には" "(空の文字列)を渡します。                                                                              |
 | isFolder     | ブール   | 名前がフォルダ名である場合にはTrue、それ以外の場合にはFalse(デフォルトはFalse です)                                                                                              |
 
-通常、*pathObject* は[Path to object](path-to-object.md) コマンドによって生成されますが、オブジェクトはどのような手段を用いて作成しても構いません。**Object to path** コマンドは文字列を受け取るだけだという点に注意してください。パスが指定されたパスタイプに対して有効であるかをチェックすることはしませんし、指定されたファイルあるいはフォルダが実際に存在するかどうかもチェックはしません。
+通常、*pathObject* は[Path to object](../commands/path-to-object) コマンドによって生成されますが、オブジェクトはどのような手段を用いて作成しても構いません。**Object to path** コマンドは文字列を受け取るだけだという点に注意してください。パスが指定されたパスタイプに対して有効であるかをチェックすることはしませんし、指定されたファイルあるいはフォルダが実際に存在するかどうかもチェックはしません。
 
 ## 例題 
 
@@ -61,12 +61,12 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Convert path POSIX to system](convert-path-posix-to-system.md)  
-[Convert path system to POSIX](convert-path-system-to-posix.md)  
+[Convert path POSIX to system](../commands/convert-path-posix-to-system)  
+[Convert path system to POSIX](../commands/convert-path-system-to-posix)  
 [File](../commands/file)    
 [Folder](../commands/folder)    
-[Path to object](path-to-object.md)  
-[Test path name](test-path-name.md)  
+[Path to object](../commands/path-to-object)  
+[Test path name](../commands/test-path-name)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: export-data
 title: EXPORT DATA
 slug: /commands/export-data
@@ -106,10 +106,10 @@ Si el usuario hace clic en **Cancelar** en la caja de diálogo estándar de abri
 
 ## Ver también 
 
-[EXPORT DIF](export-dif.md)  
-[EXPORT SYLK](export-sylk.md)  
-[EXPORT TEXT](export-text.md)  
-[IMPORT DATA](import-data.md)  
+[EXPORT DIF](../commands/export-dif)  
+[EXPORT SYLK](../commands/export-sylk)  
+[EXPORT TEXT](../commands/export-text)  
+[IMPORT DATA](../commands/import-data)  
 
 ## Propiedades
 

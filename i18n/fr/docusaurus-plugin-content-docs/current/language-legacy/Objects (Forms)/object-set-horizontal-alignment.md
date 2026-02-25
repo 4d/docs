@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-horizontal-alignment
 title: OBJECT SET HORIZONTAL ALIGNMENT
 slug: /commands/object-set-horizontal-alignment
@@ -69,9 +69,9 @@ Les objets de formulaire auxquels vous pouvez appliquer cette commande sont les 
 
 ## Voir aussi 
 
-[OBJECT Get horizontal alignment](object-get-horizontal-alignment.md)  
-[OBJECT Get vertical alignment](object-get-vertical-alignment.md)  
-[OBJECT SET VERTICAL ALIGNMENT](object-set-vertical-alignment.md)  
+[OBJECT Get horizontal alignment](../commands/object-get-horizontal-alignment)  
+[OBJECT Get vertical alignment](../commands/object-get-vertical-alignment)  
+[OBJECT SET VERTICAL ALIGNMENT](../commands/object-set-vertical-alignment)  
 
 ## Propriétés
 

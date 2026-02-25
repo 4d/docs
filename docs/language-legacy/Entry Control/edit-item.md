@@ -1,4 +1,4 @@
----
+﻿---
 id: edit-item
 title: EDIT ITEM
 slug: /commands/edit-item
@@ -39,9 +39,9 @@ This command applies to the following enterable objects:
 * Hierarchical lists
 * List box columns
 * Subforms (in this case, only an object name — the subform — can be passed in *object*),
-* List forms displayed using the [DISPLAY SELECTION](display-selection.md) or [MODIFY SELECTION](modify-selection.md) commands.
+* List forms displayed using the [DISPLAY SELECTION](../commands/display-selection) or [MODIFY SELECTION](../commands/modify-selection) commands.
 
-If the command is used with an enterable object that is not a list, it then acts the same as the [GOTO OBJECT](goto-object.md) command.   
+If the command is used with an enterable object that is not a list, it then acts the same as the [GOTO OBJECT](../commands/goto-object) command.   
 The command does nothing if the list or the array is empty or invisible. Also, if the list or the array is not enterable, the command only selects the specified item without changing to editing mode. Regarding list boxes, if the column does not allow text entry (entry by check boxes or drop-down lists only), the specified element gets the focus.
 
 The optional *item* parameter allows you to set the position of the item (hierarchical list) or the row number (list box column, list form and subform in “multiple selection” mode) to change to editing mode. If you do not pass this parameter, the command is applied to the current item for *object*. If there is no current item, the first item of *object* changes to editing mode.
@@ -80,9 +80,9 @@ Given two columns in a list box whose variable names are “Array1” and “Arr
 
 ## See also 
 
-[GOTO OBJECT](goto-object.md)  
-[INSERT IN LIST](insert-in-list.md)  
-[SET LIST ITEM](set-list-item.md)  
+[GOTO OBJECT](../commands/goto-object)  
+[INSERT IN LIST](../commands/insert-in-list)  
+[SET LIST ITEM](../commands/set-list-item)  
 
 ## Properties
 

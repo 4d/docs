@@ -1,4 +1,4 @@
----
+﻿---
 id: is-license-available
 title: Is license available
 slug: /commands/is-license-available
@@ -49,17 +49,17 @@ El comando Is license available puede utilizarse de tres maneras diferentes:
 | 4D Web license         | Entero largo | 808464945 |  
 | 4D Write license       | Entero largo | 808464697 |  
     
-En este caso, el comando devuelve [True](true.md "True") si el plug-in correspondiente tiene una licencia disponible. El comando tiene en cuenta las licencias efectuadas en modo Diseño o vía el comando [SET PLUGIN ACCESS](set-plugin-access.md).  
+En este caso, el comando devuelve [True](true.md "True") si el plug-in correspondiente tiene una licencia disponible. El comando tiene en cuenta las licencias efectuadas en modo Diseño o vía el comando [SET PLUGIN ACCESS](../commands/set-plugin-access).  
 Is license available devuelve [False](false.md "False") si el plug-in está funcionando en modo demostración.
 * Pase en el parámetro *licencia* el número de identificación del recurso “4BNX” del plug-in. En este caso, el comando se comporta como se indicó anteriormente.
 
 ## Ver también 
 
-[CHANGE LICENSES](change-licenses.md)  
+[CHANGE LICENSES](../commands/change-licenses)  
 [License info](../commands/license-info)  
-[Get plugin access](get-plugin-access.md)  
-[PLUGIN LIST](plugin-list.md)  
-[SET PLUGIN ACCESS](set-plugin-access.md)  
+[Get plugin access](../commands/get-plugin-access)  
+[PLUGIN LIST](../commands/plugin-list)  
+[SET PLUGIN ACCESS](../commands/set-plugin-access)  
 
 ## Propiedades
 

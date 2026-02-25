@@ -1,4 +1,4 @@
----
+﻿---
 id: screen-depth
 title: SCREEN DEPTH
 slug: /commands/screen-depth
@@ -70,7 +70,7 @@ Su aplicación muestra varios gráficos a color. Puede escribir en alguna parte 
 
 ## Ver también 
 
-[Count screens](count-screens.md)  
+[Count screens](../commands/count-screens)  
 
 
 ## Propiedades

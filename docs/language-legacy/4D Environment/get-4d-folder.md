@@ -1,4 +1,4 @@
----
+﻿---
 id: get-4d-folder
 title: Get 4D folder
 slug: /commands/get-4d-folder
@@ -124,7 +124,7 @@ With the 4D Client application, this constant is strictly equivalent to the prev
 
 ### Database Folder Unix Syntax 
 
-Folder containing the database structure file. This constant designates the same folder as the previous one but the pathname returned is expressed using the Unix syntax (Posix), of the type /Users/... This syntax is mainly used when you use the [LAUNCH EXTERNAL PROCESS](launch-external-process.md) command under macOS.
+Folder containing the database structure file. This constant designates the same folder as the previous one but the pathname returned is expressed using the Unix syntax (Posix), of the type /Users/... This syntax is mainly used when you use the [LAUNCH EXTERNAL PROCESS](../commands/launch-external-process) command under macOS.
 
 ### Current Resources folder 
 
@@ -149,12 +149,12 @@ The Logs folder of the database, located at the same level as the data file. Thi
 
 **Notes**: 
 
-* An additional Logs folder, located in the system user preferences folder (Active 4D Folder), is used for maintenance log files (compact, verify, repair). It recommended to call [Get 4D file](get-4d-file.md)(Compacting log file) for example when you want to access such log files. This Logs folder is also used in cases where regular Logs folder cannot be written.
+* An additional Logs folder, located in the system user preferences folder (Active 4D Folder), is used for maintenance log files (compact, verify, repair). It recommended to call [Get 4D file](../commands/get-4d-file)(Compacting log file) for example when you want to access such log files. This Logs folder is also used in cases where regular Logs folder cannot be written.
 * If the Logs folder does not exist for the database, executing the **Get 4D folder** command with the Logs folder constant will create it in the appropriate location.
 
 ### HTML Root Folder 
 
-Current HTML root folder of the database. The pathname returned is expressed with the standard syntax of the current platform. The HTML root folder is the folder in which the 4D Web server looks for the requested Web pages and files. By default, it is named **WebFolder** and is placed next to the structure file (or its local copy in the case of 4D in remote mode). Its location can be set on the Web/Configuration page of the Preferences or dynamically via the [WEB SET ROOT FOLDER](web-set-root-folder.md) command.
+Current HTML root folder of the database. The pathname returned is expressed with the standard syntax of the current platform. The HTML root folder is the folder in which the 4D Web server looks for the requested Web pages and files. By default, it is named **WebFolder** and is placed next to the structure file (or its local copy in the case of 4D in remote mode). Its location can be set on the Web/Configuration page of the Preferences or dynamically via the [WEB SET ROOT FOLDER](../commands/web-set-root-folder) command.
 
 **Note:** On Windows, in merged client projects, the location of this folder is modified if the *ShareLocalResourcesOnWindowsClient* BuildApp key is used. 
 
@@ -180,7 +180,7 @@ The database folder (Database folder and Database folder UNIX syntax) returned d
 
 ## Example 1 
 
-During the startup of a single-user database, you want to load (or create) your own settings in a file located in the 4D folder. To do so, in the [On Startup database method](on-startup-database-method.md), you can write code similar to this:
+During the startup of a single-user database, you want to load (or create) your own settings in a file located in the 4D folder. To do so, in the [On Startup database method](../commands/on-startup-database-method), you can write code similar to this:
 
 ```4d
  $vsPrefDocName:=Get 4D folder+"MyPrefs.prf" //Build pathname to the Preferences file
@@ -219,11 +219,11 @@ If the *folder* parameter is invalid or if the pathname returned is empty, the O
 
 ## See also 
 
-[COMPONENT LIST](component-list.md)  
-[System folder](system-folder.md)  
-[Temporary folder](temporary-folder.md)  
-[Test path name](test-path-name.md)  
-[WEB SET ROOT FOLDER](web-set-root-folder.md)  
+[COMPONENT LIST](../commands/component-list)  
+[System folder](../commands/system-folder)  
+[Temporary folder](../commands/temporary-folder)  
+[Test path name](../commands/test-path-name)  
+[WEB SET ROOT FOLDER](../commands/web-set-root-folder)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: show-tool-bar
 title: SHOW TOOL BAR
 slug: /commands/show-tool-bar
@@ -34,11 +34,11 @@ displayed_sidebar: docs
 
 ## 例題 
 
-[HIDE TOOL BAR](hide-tool-bar.md) コマンドの例題を参照して下さい。
+[HIDE TOOL BAR](../commands/hide-tool-bar) コマンドの例題を参照して下さい。
 
 ## 参照 
 
-[HIDE TOOL BAR](hide-tool-bar.md)  
+[HIDE TOOL BAR](../commands/hide-tool-bar)  
 
 ## プロパティ
 

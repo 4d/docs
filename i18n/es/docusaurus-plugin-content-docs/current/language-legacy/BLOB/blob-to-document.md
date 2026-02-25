@@ -1,4 +1,4 @@
----
+﻿---
 id: blob-to-document
 title: BLOB TO DOCUMENT
 slug: /commands/blob-to-document
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.BLOB TO DOCUMENT.Summary-->BLOB TO DOCUMENT escribe los datos de *documento* utilizando los datos almacenados en *blob*.<!-- END REF--> Puede pasar el nombre de un documento existente en *documento*. Si el documento no existe, el comando lo crea. Si pasa el nombre de un documento existente, asegúrese de que el documento no esté abierto, de lo contrario se generará un error. Si quiere permitir que el usuario elija el documento, utilice los comandos [Open document](open-document.md) o [Create document](create-document.md) y utilice la variable sistema *documento* (ver ejemplo).
+<!--REF #_command_.BLOB TO DOCUMENT.Summary-->BLOB TO DOCUMENT escribe los datos de *documento* utilizando los datos almacenados en *blob*.<!-- END REF--> Puede pasar el nombre de un documento existente en *documento*. Si el documento no existe, el comando lo crea. Si pasa el nombre de un documento existente, asegúrese de que el documento no esté abierto, de lo contrario se generará un error. Si quiere permitir que el usuario elija el documento, utilice los comandos [Open document](../commands/open-document) o [Create document](../commands/create-document) y utilice la variable sistema *documento* (ver ejemplo).
 
 ## Ejemplo 
 
@@ -59,9 +59,9 @@ En todos los casos, puede interceptar el error utilizando un método de interrup
 
 ## Ver también 
 
-[Create document](create-document.md)  
-[DOCUMENT TO BLOB](document-to-blob.md)  
-[Open document](open-document.md)  
+[Create document](../commands/create-document)  
+[DOCUMENT TO BLOB](../commands/document-to-blob)  
+[Open document](../commands/open-document)  
 
 ## Propiedades
 

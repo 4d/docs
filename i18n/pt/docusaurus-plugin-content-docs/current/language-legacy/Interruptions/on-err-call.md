@@ -1,4 +1,4 @@
----
+﻿---
 id: on-err-call
 title: ON ERR CALL
 slug: /commands/on-err-call
@@ -62,7 +62,7 @@ O método de gestão de erros deve tratar os erros de maneira apropriada ou most
 * O ambiente de 4D; por exemplo, quando não tem suficiente memoria para encher um array.
 * O sistema operativo no qual é executado o banco; por exemplo, disco cheio ou erros de entrada/saída.
 
-O comando [ABORT](abort.md) pode ser utilizado para terminar o processo. Se não chamar [ABORT](abort.md) no método instalado, 4D devolve o método interrompido e continua a execução do método. Utilize o comando [ABORT](abort.md) quando a execução não pode ser recuperado.
+O comando [ABORT](../commands/abort) pode ser utilizado para terminar o processo. Se não chamar [ABORT](../commands/abort) no método instalado, 4D devolve o método interrompido e continua a execução do método. Utilize o comando [ABORT](../commands/abort) quando a execução não pode ser recuperado.
 
 Se ocorrer um erro no método de gestão de erros, 4D retoma o controle da gestão de erros. Portanto, deve ter certeza de que o método de gestão de erros não possa gerar um erro. Igualmente, não pode utilizar **ON ERR CALL** dentro do método de gestão de erros.
 
@@ -194,11 +194,11 @@ O método abaixo de gestão de erros ignora as interrupções de usuário e most
 
 ## Ver também 
 
-[ABORT](abort.md)  
+[ABORT](../commands/abort)  
 *Error Handler*  
 [Last errors](../commands/last-errors)   
 [Last errors](../commands/last-errors)  
-[Method called on error](method-called-on-error.md)  
+[Method called on error](../commands/method-called-on-error)  
 *Variáveis sistema*  
 
 ## Propriedades

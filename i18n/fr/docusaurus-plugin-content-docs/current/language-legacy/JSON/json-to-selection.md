@@ -1,4 +1,4 @@
----
+﻿---
 id: json-to-selection
 title: JSON TO SELECTION
 slug: /commands/json-to-selection
@@ -79,7 +79,7 @@ Utilisation de la commande **JSON TO SELECTION** pour ajouter des enregistrement
 
 ## Voir aussi 
 
-[Selection to JSON](selection-to-json.md)  
+[Selection to JSON](../commands/selection-to-json)  
 
 ## Propriétés
 

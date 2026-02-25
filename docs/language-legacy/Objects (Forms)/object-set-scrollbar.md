@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-scrollbar
 title: OBJECT SET SCROLLBAR
 slug: /commands/object-set-scrollbar
@@ -56,9 +56,9 @@ The following table indicates the values you can pass in the *horizontal* and *v
 ## See also 
 
 [LISTBOX Get property](../commands/listbox-get-property)  
-[LISTBOX SET GRID](listbox-set-grid.md)  
-[OBJECT GET SCROLLBAR](object-get-scrollbar.md)  
-[OBJECT SET VISIBLE](object-set-visible.md)  
+[LISTBOX SET GRID](../commands/listbox-set-grid)  
+[OBJECT GET SCROLLBAR](../commands/object-get-scrollbar)  
+[OBJECT SET VISIBLE](../commands/object-set-visible)  
 
 ## Properties
 

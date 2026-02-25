@@ -1,4 +1,4 @@
----
+﻿---
 id: process-state
 title: Process state
 slug: /commands/process-state
@@ -58,7 +58,7 @@ El siguiente ejemplo coloca el nombre y número de referencia para cada proceso 
 
 ## Ver también 
 
-[Count tasks](count-tasks.md)  
+[Count tasks](../commands/count-tasks)  
 [Process info](../commands/process-info)  
 
 ## Propiedades

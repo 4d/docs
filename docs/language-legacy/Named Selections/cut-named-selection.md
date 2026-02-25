@@ -1,4 +1,4 @@
----
+﻿---
 id: cut-named-selection
 title: CUT NAMED SELECTION
 slug: /commands/cut-named-selection
@@ -18,11 +18,11 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.CUT NAMED SELECTION.Summary-->**CUT NAMED SELECTION** creates a named selection *name* and moves the current selection of *aTable* to it.<!-- END REF--> This command differs from [COPY NAMED SELECTION](copy-named-selection.md) in that it does not copy the current selection, but moves the current selection of *table* itself.
+<!--REF #_command_.CUT NAMED SELECTION.Summary-->**CUT NAMED SELECTION** creates a named selection *name* and moves the current selection of *aTable* to it.<!-- END REF--> This command differs from [COPY NAMED SELECTION](../commands/copy-named-selection) in that it does not copy the current selection, but moves the current selection of *table* itself.
 
 After the command has been executed, the current selection of *aTable* in the current process becomes empty. Therefore, **CUT NAMED SELECTION** should not be used while a record is being modified.
 
-**CUT NAMED SELECTION** is more memory efficient than [COPY NAMED SELECTION](copy-named-selection.md). With [COPY NAMED SELECTION](copy-named-selection.md), 4 bytes times the number of selected records is duplicated in memory. With **CUT NAMED SELECTION**, only the reference to the list is moved.
+**CUT NAMED SELECTION** is more memory efficient than [COPY NAMED SELECTION](../commands/copy-named-selection). With [COPY NAMED SELECTION](../commands/copy-named-selection), 4 bytes times the number of selected records is duplicated in memory. With **CUT NAMED SELECTION**, only the reference to the list is moved.
 
 ## Example 
 
@@ -35,9 +35,9 @@ The following method empties the current selection of a table *\[Customers\]*:
 
 ## See also 
 
-[CLEAR NAMED SELECTION](clear-named-selection.md)  
-[COPY NAMED SELECTION](copy-named-selection.md)  
-[USE NAMED SELECTION](use-named-selection.md)  
+[CLEAR NAMED SELECTION](../commands/clear-named-selection)  
+[COPY NAMED SELECTION](../commands/copy-named-selection)  
+[USE NAMED SELECTION](../commands/use-named-selection)  
 
 ## Properties
 

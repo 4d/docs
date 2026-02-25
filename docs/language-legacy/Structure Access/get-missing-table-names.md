@@ -1,4 +1,4 @@
----
+﻿---
 id: get-missing-table-names
 title: GET MISSING TABLE NAMES
 slug: /commands/get-missing-table-names
@@ -38,13 +38,13 @@ Typically, the scenario is as follows:
 * The developer provides a new version of the structure. It does not contain tables D and E.  
 In this case, the user version of the database still contains data from tables D and E, but it cannot be accessed. The **GET MISSING TABLE NAMES** command will return the names "D" and "E".
 
-Once you have identified the missing tables of the database, you can reactivate them via the [REGENERATE MISSING TABLE](regenerate-missing-table.md) command.
+Once you have identified the missing tables of the database, you can reactivate them via the [REGENERATE MISSING TABLE](../commands/regenerate-missing-table) command.
 
 **Note:** The data of missing tables are erased when the data file is compacted (if the tables have not been regenerated). 
 
 ## See also 
 
-[REGENERATE MISSING TABLE](regenerate-missing-table.md)  
+[REGENERATE MISSING TABLE](../commands/regenerate-missing-table)  
 
 ## Properties
 

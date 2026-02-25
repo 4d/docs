@@ -1,4 +1,4 @@
----
+﻿---
 id: form-set-size
 title: FORM SET SIZE
 slug: /commands/form-set-size
@@ -70,7 +70,7 @@ In you want to have a fixed form size, you must use the following syntax:
 In this case, you must pass the width and height (in pixels) of the form in *horizontal* and *vertical*. 
 
 The **FORM SET SIZE** command changes the size of the form, but also takes into account the resizing properties. For example, if the minimum width of a form is 500 pixels and if the command sets a width of 400 pixels, the new form width will be 500 pixels.   
-Also note that this command does not change the size of the form window (you can resize a form without changing the size of the window and vice versa). To change the size of the form window, refer to the [RESIZE FORM WINDOW](resize-form-window.md) command. 
+Also note that this command does not change the size of the form window (you can resize a form without changing the size of the window and vice versa). To change the size of the form window, refer to the [RESIZE FORM WINDOW](../commands/resize-form-window) command. 
 
 ## Example 
 
@@ -133,8 +133,8 @@ The object method associated with this button is as follows:
 
 ## See also 
 
-[FORM SET HORIZONTAL RESIZING](form-set-horizontal-resizing.md)  
-[FORM SET VERTICAL RESIZING](form-set-vertical-resizing.md)  
+[FORM SET HORIZONTAL RESIZING](../commands/form-set-horizontal-resizing)  
+[FORM SET VERTICAL RESIZING](../commands/form-set-vertical-resizing)  
 
 ## Properties
 

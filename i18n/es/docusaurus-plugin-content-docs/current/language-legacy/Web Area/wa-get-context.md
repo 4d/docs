@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-get-context
 title: WA Get context
 slug: /commands/wa-get-context
@@ -43,7 +43,7 @@ Verificación de la existencia de un contexto:
 
 ### Ver también
 
-[WA SET CONTEXT](wa-set-context.md)
+[WA SET CONTEXT](../commands/wa-set-context)
 
 ### Propiedades
 

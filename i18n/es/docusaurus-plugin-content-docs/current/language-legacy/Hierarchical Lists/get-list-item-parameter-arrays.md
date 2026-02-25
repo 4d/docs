@@ -1,4 +1,4 @@
----
+﻿---
 id: get-list-item-parameter-arrays
 title: GET LIST ITEM PARAMETER ARRAYS
 slug: /commands/get-list-item-parameter-arrays
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Summary-->El comando **GET LIST ITEM PARAMETER ARRAYS** permite recuperar en una sola llamada el conjunto de los parámetros (así como también, opcionalmente, sus valores) asociados al elemento *refElemento* de la lista jerárquica cuya referencia o nombre de objeto se pasó en el parámetro *lista*.<!-- END REF-->
 
-Los parámetros asociados a los elementos permiten almacenar información adicional sobre cada elemento. Se definen con la ayuda del comando [SET LIST ITEM PARAMETER](set-list-item-parameter.md).
+Los parámetros asociados a los elementos permiten almacenar información adicional sobre cada elemento. Se definen con la ayuda del comando [SET LIST ITEM PARAMETER](../commands/set-list-item-parameter).
 
 Si pasa el primer parámetro opcional *\**, indica que el parámetro *lista* es un nombre de objeto (cadena) correspondiente a una representación de lista en el formulario. Si no pasa este parámetro, indica que el parámetro *lista* es una referencia de lista jerárquica (*RefList*). Si utiliza una sola representación de lista o trabaja con los elementos estructurales (el segundo *\** se omite), puede utilizar indiferentemente una u otra sintaxis. Sin embargo, si utiliza varias representaciones de una misma lista y trabaja con el elemento actual (se pasa el segundo \*), debe utilizar la sintaxis basada en el nombre del objeto, ya que cada representación puede tener su propio elemento actual.
 
@@ -86,7 +86,7 @@ Si también quiere obtener los valores de los parámetros, escriba:
 
 ## Ver también 
 
-[SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+[SET LIST ITEM PARAMETER](../commands/set-list-item-parameter)  
 
 ## Propiedades
 

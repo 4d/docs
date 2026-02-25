@@ -1,4 +1,4 @@
----
+﻿---
 id: web-set-root-folder
 title: WEB SET ROOT FOLDER
 slug: /commands/web-set-root-folder
@@ -44,14 +44,14 @@ Notas:
 
 Será necessário reiniciar o servidor web para que a nova pasta de raiz seja levada em consideração
 
-Pode saber a qualquer momento a localização da pasta raiz utilizando o comando [Get 4D folder](get-4d-folder.md).
+Pode saber a qualquer momento a localização da pasta raiz utilizando o comando [Get 4D folder](../commands/get-4d-folder).
 
-Se especificar uma rota de acesso inválida, será gerado um erro do administrador arquivos do sistema operativo. Pode interceptar o erro com um método [ON ERR CALL](on-err-call.md). Se o método mostrar uma caixa de diálogo de alerta ou uma mensagem, aparecerá do lado do navegador.
+Se especificar uma rota de acesso inválida, será gerado um erro do administrador arquivos do sistema operativo. Pode interceptar o erro com um método [ON ERR CALL](../commands/on-err-call). Se o método mostrar uma caixa de diálogo de alerta ou uma mensagem, aparecerá do lado do navegador.
 
 ## Ver também 
 
-[Get 4D folder](get-4d-folder.md)  
-[ON ERR CALL](on-err-call.md)  
+[Get 4D folder](../commands/get-4d-folder)  
+[ON ERR CALL](../commands/on-err-call)  
 
 ## Propriedades
 

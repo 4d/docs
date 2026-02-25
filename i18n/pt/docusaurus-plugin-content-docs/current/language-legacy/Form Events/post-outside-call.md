@@ -1,4 +1,4 @@
----
+﻿---
 id: post-outside-call
 title: POST OUTSIDE CALL
 slug: /commands/post-outside-call
@@ -40,7 +40,7 @@ POST OUTSIDE CALL chama ao formulário mostrado na janela do primeiro plano de *
 
  Se *processo* (o processo chamado) não está mostrando um formulário atualmente, não passa nada. O formulário mostrado no processo chamado recebe um evento [Outside call](outside-call.md "Outside call"). Este evento deve ter sido selecionado para este formulário na janela **Propriedades do formulário** do ambiente Desenho, e você deve administrar o evento no método de formulário. Se o evento não estiver selecionado ou se não for administrado no método de formulário, o comando não faz nada.  
   
-Para se comunicar entre processos que não mostram formulários, utilize os comandos [GET PROCESS VARIABLE](get-process-variable.md) e [SET PROCESS VARIABLE](set-process-variable.md).
+Para se comunicar entre processos que não mostram formulários, utilize os comandos [GET PROCESS VARIABLE](../commands/get-process-variable) e [SET PROCESS VARIABLE](../commands/set-process-variable).
 
 **Dica:** **POST OUTSIDE CALL** aceita a sintaxe alterna **POST OUTSIDE CALL**(-1). Para não tornar lenta a execução dos métodos, 4D não redesenha as variáveis interprocesso cada vez que são modificadas. Se passar -1 ao invés de um número de referência de processo no parâmetro *processo*, 4D não chama nenhum processo. Ao invés disso, redesenha todas as variáveis interprocesso mostradas atualmente em todas as janelas de todos os processos que executam na mesma máquina.
 
@@ -51,8 +51,8 @@ Ver o exemplo de [On Exit Database Method](metodo-banco-de-dados-on-exit.md "On 
 ## Ver também 
 
 [Form event code](../commands/form-event-code)  
-[GET PROCESS VARIABLE](get-process-variable.md)  
-[SET PROCESS VARIABLE](set-process-variable.md)  
+[GET PROCESS VARIABLE](../commands/get-process-variable)  
+[SET PROCESS VARIABLE](../commands/set-process-variable)  
 
 ## Propriedades
 

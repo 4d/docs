@@ -1,4 +1,4 @@
----
+﻿---
 id: list-item-parent
 title: List item parent
 slug: /commands/list-item-parent
@@ -80,10 +80,10 @@ Os números de referência dos elementos são os seguintes:
 
 ## Ver também 
 
-[GET LIST ITEM](get-list-item.md)  
-[List item position](list-item-position.md)  
-[SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
-[SET LIST ITEM](set-list-item.md)  
+[GET LIST ITEM](../commands/get-list-item)  
+[List item position](../commands/list-item-position)  
+[SELECT LIST ITEMS BY REFERENCE](../commands/select-list-items-by-reference)  
+[SET LIST ITEM](../commands/set-list-item)  
 
 ## Propriedades
 

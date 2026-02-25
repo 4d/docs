@@ -1,4 +1,4 @@
----
+﻿---
 id: get-list-item-properties
 title: GET LIST ITEM PROPERTIES
 slug: /commands/get-list-item-properties
@@ -45,7 +45,7 @@ In *itemRef*, you can pass either a reference number, or the value 0 in order to
 
 If you pass \* and no item is selected or if there is no item with the item reference number that is passed, the command leaves the parameters unchanged.
 
-If you work with item reference numbers, build a list in which items have unique reference numbers, otherwise you will not be able to distinguish the items. For more information, refer to the description of the command [APPEND TO LIST](append-to-list.md).
+If you work with item reference numbers, build a list in which items have unique reference numbers, otherwise you will not be able to distinguish the items. For more information, refer to the description of the command [APPEND TO LIST](../commands/append-to-list).
 
 After the call:
 
@@ -55,17 +55,17 @@ After the call:
    * If the icon has been specified using a picture file, the command returns in *icon* the pathname using the **path:<filesystem path>** pattern.  
    * If the icon has been specified using a library picture (binary databases only), the command returns either the number or the name of the picture, depending on the type of variable passed in this parameter. The following pattern is used for a name: **pictlib:<name>**. If you do not attribute a specific type to the *icon* variable, by default, the name of the picture is returned (text). If no icon is associated with the item, the command returns a blank value.  
          
-   **Note:** You can retrieve, in a picture variable, the icon associated with an item using the [GET LIST ITEM ICON](get-list-item-icon.md) command*.*
+   **Note:** You can retrieve, in a picture variable, the icon associated with an item using the [GET LIST ITEM ICON](../commands/get-list-item-icon) command*.*
 * *color* returns the color of the text of the item specified.
 
-For details about these properties, see the description of the command [SET LIST ITEM PROPERTIES](set-list-item-properties.md).
+For details about these properties, see the description of the command [SET LIST ITEM PROPERTIES](../commands/set-list-item-properties).
 
 ## See also 
 
-[GET LIST ITEM](get-list-item.md)  
-[GET LIST ITEM ICON](get-list-item-icon.md)  
-[SET LIST ITEM](set-list-item.md)  
-[SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+[GET LIST ITEM](../commands/get-list-item)  
+[GET LIST ITEM ICON](../commands/get-list-item-icon)  
+[SET LIST ITEM](../commands/set-list-item)  
+[SET LIST ITEM PROPERTIES](../commands/set-list-item-properties)  
 
 ## Properties
 

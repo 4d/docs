@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-get-array
 title: OB GET ARRAY
 slug: /commands/ob-get-array
@@ -36,7 +36,7 @@ In the *property* parameter, pass the label of the property to be read. Note tha
 
 ## Example 1 
 
-Given an object array defined in the example of the [OB SET ARRAY](ob-set-array.md) command:
+Given an object array defined in the example of the [OB SET ARRAY](../commands/ob-set-array) command:
 
 ![](../../assets/en/commands/pict1211436.en.png)
 
@@ -62,7 +62,7 @@ We want to change a value in the first element of the array:
 
 ## See also 
 
-[OB SET ARRAY](ob-set-array.md)  
+[OB SET ARRAY](../commands/ob-set-array)  
 *Type conversions between collections and 4D arrays*  
 
 ## Properties

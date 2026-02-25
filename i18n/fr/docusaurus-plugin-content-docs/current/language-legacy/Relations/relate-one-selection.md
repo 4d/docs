@@ -1,4 +1,4 @@
----
+﻿---
 id: relate-one-selection
 title: RELATE ONE SELECTION
 slug: /commands/relate-one-selection
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 Cette commande ne peut être utilisée que s'il existe un lien de N vers *1*. **RELATE ONE SELECTION** peut opérer au travers de plusieurs niveaux de liens. Il peut y avoir plusieurs tables liées entre la table N et la table *1*. Les liens peuvent être manuels ou automatiques.
 
-**RELATE ONE SELECTION** utilise le chemin "le plus court" pour passer de la table de départ à la table d'arrivée. Si plusieurs chemins existants sont de taille équivalente, vous devez faire appel à la commande [SET FIELD RELATION](set-field-relation.md) si vous souhaitez contrôler le chemin emprunté. 
+**RELATE ONE SELECTION** utilise le chemin "le plus court" pour passer de la table de départ à la table d'arrivée. Si plusieurs chemins existants sont de taille équivalente, vous devez faire appel à la commande [SET FIELD RELATION](../commands/set-field-relation) si vous souhaitez contrôler le chemin emprunté. 
 
 ## Exemple 
 
@@ -66,9 +66,9 @@ L'exemple suivant parvient au même résultat que le précédent :
 ## Voir aussi 
 
 *Présentation des ensembles*  
-[QUERY](query.md)  
-[RELATE MANY SELECTION](relate-many-selection.md)  
-[RELATE ONE](relate-one.md)  
+[QUERY](../commands/query)  
+[RELATE MANY SELECTION](../commands/relate-many-selection)  
+[RELATE ONE](../commands/relate-one)  
 
 ## Propriétés
 

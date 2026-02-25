@@ -1,4 +1,4 @@
----
+﻿---
 id: filter-keystroke
 title: FILTER KEYSTROKE
 slug: /commands/filter-keystroke
@@ -82,7 +82,7 @@ FILTER KEYSTROKE は以下の目的で使用できます:
 
 データ入力が確定されると、ユーザが実際に入力したデータは*vsActualPassword* に格納されています。
 
-注意: Handle keystroke メソッドは[Keystroke](keystroke.md) の節で紹介されています。
+注意: Handle keystroke メソッドは[Keystroke](../commands/keystroke) の節で紹介されています。
 
 ## 例題 3 
 
@@ -253,9 +253,9 @@ Get highlighted text メソッド:
 ## 参照 
 
 [Form event code](../commands/form-event-code)  
-[Get edited text](get-edited-text.md)  
-[Is editing text](is-editing-text.md)  
-[Keystroke](keystroke.md)  
+[Get edited text](../commands/get-edited-text)  
+[Is editing text](../commands/is-editing-text)  
+[Keystroke](../commands/keystroke)  
 
 
 ## プロパティ

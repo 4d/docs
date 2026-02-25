@@ -1,4 +1,4 @@
----
+﻿---
 id: get-printable-margin
 title: GET PRINTABLE MARGIN
 slug: /commands/get-printable-margin
@@ -30,17 +30,17 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.GET PRINTABLE MARGIN.Summary-->El comando GET PRINTABLE MARGIN devuelve los valores actuales de los diferentes márgenes definidos utilizando los comandos [Print form](../commands/print-form), [PRINT SELECTION](print-selection.md) y [PRINT RECORD](print-record.md).<!-- END REF--> 
+<!--REF #_command_.GET PRINTABLE MARGIN.Summary-->El comando GET PRINTABLE MARGIN devuelve los valores actuales de los diferentes márgenes definidos utilizando los comandos [Print form](../commands/print-form), [PRINT SELECTION](../commands/print-selection) y [PRINT RECORD](../commands/print-record).<!-- END REF--> 
 
 Los valores son devueltos en píxeles con respecto al borde del papel. 
 
-Es posible obtener el tamaño del papel como también calcular el área imprimible utilizando la función [GET PRINTABLE AREA](get-printable-area.md) .
+Es posible obtener el tamaño del papel como también calcular el área imprimible utilizando la función [GET PRINTABLE AREA](../commands/get-printable-area) .
 
 ### Gestión de márgenes de impresión 
 
 Por defecto, en 4D el cálculo de las impresiones se efectúa sobre la base de los “márgenes de la impresora”. La ventaja de este sistema es que los formularios se adaptan automáticamente a las nuevas impresoras (ya que están situados en el área imprimible). Por otra parte, en el caso de los formularios pre-impresos, no era posible posicionar los elementos a imprimir de manera precisa porque un cambio de impresora podía modificar los márgenes de la impresora.
 
-Es posible basar la impresión de los formularios efectuados utilizando los comandos [Print form](../commands/print-form), [PRINT SELECTION](print-selection.md) y [PRINT RECORD](print-record.md) sobre un margen fijo el cual es idéntico en cada impresora: los márgenes del papel, es decir, los límites físicos de la hoja. Para hacer esto, simplemente utilice los comandos [GET PRINTABLE MARGIN](get-printable-margin.md), [SET PRINTABLE MARGIN](set-printable-margin.md) y [GET PRINTABLE AREA](get-printable-area.md).
+Es posible basar la impresión de los formularios efectuados utilizando los comandos [Print form](../commands/print-form), [PRINT SELECTION](../commands/print-selection) y [PRINT RECORD](../commands/print-record) sobre un margen fijo el cual es idéntico en cada impresora: los márgenes del papel, es decir, los límites físicos de la hoja. Para hacer esto, simplemente utilice los comandos [GET PRINTABLE MARGIN](../commands/get-printable-margin), [SET PRINTABLE MARGIN](../commands/set-printable-margin) y [GET PRINTABLE AREA](../commands/get-printable-area).
 
 ## Terminología de impresión 
 
@@ -52,9 +52,9 @@ Es posible basar la impresión de los formularios efectuados utilizando los coma
 
 ## Ver también 
 
-[GET PRINTABLE AREA](get-printable-area.md)  
+[GET PRINTABLE AREA](../commands/get-printable-area)  
 [Print form](../commands/print-form)  
-[SET PRINTABLE MARGIN](set-printable-margin.md)  
+[SET PRINTABLE MARGIN](../commands/set-printable-margin)  
 
 ## Propiedades
 

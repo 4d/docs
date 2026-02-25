@@ -1,4 +1,4 @@
----
+﻿---
 id: relate-many-selection
 title: RELATE MANY SELECTION
 slug: /commands/relate-many-selection
@@ -43,9 +43,9 @@ This example selects all invoices made to the customers whose credit is greater 
 
 ## See also 
 
-[QUERY](query.md)  
-[RELATE ONE](relate-one.md)  
-[RELATE ONE SELECTION](relate-one-selection.md)  
+[QUERY](../commands/query)  
+[RELATE ONE](../commands/relate-one)  
+[RELATE ONE SELECTION](../commands/relate-one-selection)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: set-about
 title: SET ABOUT
 slug: /commands/set-about
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 このコマンドは4D (すべてのモード)、4D Desktop、および4D Serverで使用されます。サーバマシンで実行されると、新しいプロセス上で実行されます。
 
-**注意:** Windows では、このコマンドは、**ヘルプ**メニュー内の[SET HELP MENU](set-help-menu.md) コマンドで作成された"4D について"の行を変更します。
+**注意:** Windows では、このコマンドは、**ヘルプ**メニュー内の[SET HELP MENU](../commands/set-help-menu) コマンドで作成された"4D について"の行を変更します。
 
 ## 例題 1 
 
@@ -55,7 +55,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[SET HELP MENU](set-help-menu.md)  
+[SET HELP MENU](../commands/set-help-menu)  
 
 ## プロパティ
 

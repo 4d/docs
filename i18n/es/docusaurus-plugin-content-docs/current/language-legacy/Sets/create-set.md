@@ -1,4 +1,4 @@
----
+﻿---
 id: create-set
 title: CREATE SET
 slug: /commands/create-set
@@ -32,8 +32,8 @@ El siguiente ejemplo crea un conjunto después de efectuar una búsqueda, de man
 
 ## Ver también 
 
-[CLEAR SET](clear-set.md)  
-[CREATE EMPTY SET](create-empty-set.md)  
+[CLEAR SET](../commands/clear-set)  
+[CREATE EMPTY SET](../commands/create-empty-set)  
 
 ## Propiedades
 

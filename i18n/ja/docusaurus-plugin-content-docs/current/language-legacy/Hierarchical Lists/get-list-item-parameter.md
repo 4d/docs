@@ -1,4 +1,4 @@
----
+﻿---
 id: get-list-item-parameter
 title: GET LIST ITEM PARAMETER
 slug: /commands/get-list-item-parameter
@@ -40,12 +40,12 @@ displayed_sidebar: docs
 
 *itemRef*に項目参照番号を渡すことができます。対応する項目がない場合、コマンドは何も行いません。0を渡した場合、リストに最後に追加された項目が処理の対象となります。*\** を渡した場合、コマンドは現在選択されている項目を処理の対象とします。複数の項目が選択されている場合、カレントの項目は最後に選択された項目です。項目が選択されていない場合、コマンドは何も行いません。
 
-*selector*には“*Hierarchical Lists*”テーマのAdditional text 定数またはStandard action 定数、あるいは任意のカスタム値を渡すことができます。*selector* と *value* 引数に関する詳細は、[SET LIST ITEM PARAMETER](set-list-item-parameter.md) コマンドの説明を参照してください。
+*selector*には“*Hierarchical Lists*”テーマのAdditional text 定数またはStandard action 定数、あるいは任意のカスタム値を渡すことができます。*selector* と *value* 引数に関する詳細は、[SET LIST ITEM PARAMETER](../commands/set-list-item-parameter) コマンドの説明を参照してください。
 
 ## 参照 
 
 *Hierarchical Lists*  
-[SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+[SET LIST ITEM PARAMETER](../commands/set-list-item-parameter)  
 
 ## プロパティ
 

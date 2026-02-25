@@ -1,4 +1,4 @@
----
+﻿---
 id: integrate-mirror-log-file
 title: INTEGRATE MIRROR LOG FILE
 slug: /commands/integrate-mirror-log-file
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.INTEGRATE MIRROR LOG FILE.Summary-->**注意事項:**このコマンドは4D Serverでのみ作動します。<!-- END REF-->[Execute on server](execute-on-server.md)コマンド経由あるいはストアドプロシージャー内でのみ実行可能です。
+<!--REF #_command_.INTEGRATE MIRROR LOG FILE.Summary-->**注意事項:**このコマンドは4D Serverでのみ作動します。<!-- END REF-->[Execute on server](../commands/execute-on-server)コマンド経由あるいはストアドプロシージャー内でのみ実行可能です。
 
 **INTEGRATE MIRROR LOG FILE** コマンドは、*pathName* で指定したログファイルの、引数*operationNum*番より後のオペレーションを、4D Server データベースへと統合します。 このコマンドはどんなログファイルをもデータベースに統合することができます(たとえログファイルがカレントのデータファイルと対応していなくても 受け入れます)。このコマンドは特にミラーデータベースのコンテキストで使用することを目的としています。
 
@@ -110,7 +110,7 @@ Blobまたはピクチャーの値の場合、その保存場所に応じて異�
 
 ## 参照 
 
-[LOG FILE TO JSON](log-file-to-json.md)  
+[LOG FILE TO JSON](../commands/log-file-to-json)  
 
 ## プロパティ
 

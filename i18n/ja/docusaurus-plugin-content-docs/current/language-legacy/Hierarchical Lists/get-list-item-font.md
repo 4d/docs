@@ -1,4 +1,4 @@
----
+﻿---
 id: get-list-item-font
 title: Get list item font
 slug: /commands/get-list-item-font
@@ -41,7 +41,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[SET LIST ITEM FONT](set-list-item-font.md)  
+[SET LIST ITEM FONT](../commands/set-list-item-font)  
 
 ## プロパティ
 

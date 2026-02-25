@@ -1,4 +1,4 @@
----
+﻿---
 id: process-activity
 title: Process activity
 slug: /commands/process-activity
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Process activity.Summary-->The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.<!-- END REF--> This command returns all processes, including internal processes that are not reachable by the [Process info](process-info.md) command. 
+<!--REF #_command_.Process activity.Summary-->The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.<!-- END REF--> This command returns all processes, including internal processes that are not reachable by the [Process info](../commands/process-info) command. 
 
 By default when used without any parameters, **Process activity** returns an object containing the following properties: 
 
@@ -57,17 +57,17 @@ When executed on 4D in remote or local mode, `Process activity` always returns t
 
 **Sessions**
 
-The "sessions" property contains a collection of objects describing all running sessions on the server. For a description of session object properties, please refer to the [`Session info`](session-info.md) command.
+The "sessions" property contains a collection of objects describing all running sessions on the server. For a description of session object properties, please refer to the [`Session info`](../commands/session-info) command.
 
 :::note 
 
-You can get the object of a session using the [Session](session.md) command.
+You can get the object of a session using the [Session](../commands/session) command.
 
 :::
 
 **Processes** 
 
-The "processes" property contains a collection of process objects describing all running processes. For a description of process object properties, please refer to the [`Process info`](process-info.md) command.
+The "processes" property contains a collection of process objects describing all running processes. For a description of process object properties, please refer to the [`Process info`](../commands/process-info) command.
 
 On the server, the `Process activity` command returns an additional "session" property:
 
@@ -111,7 +111,7 @@ You want to get all processes related to the current session:
 
 ## See also 
 
-[`Process info`](process-info.md)
-[`Session info`](session-info.md)
-[Session storage](session-storage.md)  
+[`Process info`](../commands/process-info)
+[`Session info`](../commands/session-info)
+[Session storage](../commands/session-storage)  
 [WEB Get server info](../commands/web-get-server-info)  

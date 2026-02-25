@@ -1,4 +1,4 @@
----
+﻿---
 id: start-sql-server
 title: START SQL SERVER
 slug: /commands/start-sql-server
@@ -36,7 +36,7 @@ Si le serveur SQL a été correctement lancé, la variable système OK prend la 
 
 ## Voir aussi 
 
-[STOP SQL SERVER](stop-sql-server.md)  
+[STOP SQL SERVER](../commands/stop-sql-server)  
 
 ## Propriétés
 

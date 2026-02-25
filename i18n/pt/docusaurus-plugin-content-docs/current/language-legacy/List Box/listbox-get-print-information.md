@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-print-information
 title: LISTBOX GET PRINT INFORMATION
 slug: /commands/listbox-get-print-information
@@ -34,15 +34,15 @@ displayed_sidebar: docs
   
 Se passa o parâmetro opcional *\**, indica que o parâmetro *objeto* es um nome de objeto (cadena). Se não passa este parâmetro, indica que o parâmetro *objeto* é uma variável. Neste caso, se passa uma referência de variável ao invés de uma string.   
   
-Este comando deve ser chamado no contexto da impressão de um list box através do comando [Print object](print-object.md) . Fora deste contexto, não devolve valores significativos.  
+Este comando deve ser chamado no contexto da impressão de um list box através do comando [Print object](../commands/print-object) . Fora deste contexto, não devolve valores significativos.  
   
 Passe em *selector* um valor que indique a informação a encontrar e em *info* uma variável de tipo numérico ou BLOB. Em *seletor*, pode passar uma das seguintes constantes, do tema "*List box*":
 
 | Constante                  | Tipo          | Valor | Comentário                                                                                                                                                                                                                                                                                                                                                                                       |
 | -------------------------- | ------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| lk last printed row number | Inteiro longo | 0     | Retorna em *info* o número da última linha impressa. permite conhecer o número da próxima linha a ser impressa.O número retornado pode ser maior ao número de linhas efetivamente impressas se a list box contém as linhas invisíveis ou se o comando [OBJECT SET SCROLL POSITION ](object-set-scroll-position.md) é chamado. Por exemplo, se as linhas 1, 18 e 20 foram impressas, *info* é 20. |
+| lk last printed row number | Inteiro longo | 0     | Retorna em *info* o número da última linha impressa. permite conhecer o número da próxima linha a ser impressa.O número retornado pode ser maior ao número de linhas efetivamente impressas se a list box contém as linhas invisíveis ou se o comando [OBJECT SET SCROLL POSITION ](../commands/object-set-scroll-position) é chamado. Por exemplo, se as linhas 1, 18 e 20 foram impressas, *info* é 20. |
 | lk printed height          | Inteiro longo | 3     | Retorna em *info* a altura em pixels do objeto efetivamente impresso (incluindo cabeçalhos, linhas, etc.). Lembre que se o número de linhas a ser impressas é menor do que a "capacidade" da list box, sua altura diminui automaticamente.                                                                                                                                                       |
-| lk printed rows            | Inteiro longo | 1     | Retorna em *info* o número de linhas efetivamente impressas durante a última chamada ao comando [Print object](print-object.md). este número inclui as possíveis quebras de linha adicionadas no caso de uma list box hierárquica. Por exemplo, *info* é 10 se a list box contém 20 linhas e as linhas ímpares estão ocultas.                                                                    |
+| lk printed rows            | Inteiro longo | 1     | Retorna em *info* o número de linhas efetivamente impressas durante a última chamada ao comando [Print object](../commands/print-object). este número inclui as possíveis quebras de linha adicionadas no caso de uma list box hierárquica. Por exemplo, *info* é 10 se a list box contém 20 linhas e as linhas ímpares estão ocultas.                                                                    |
 | lk printing is over        | Inteiro longo | 2     | Retorna em *info* um booleano indicando se a última linha (visível) da list box foi impressa. true = a linha foi impressa; do contrário, False.                                                                                                                                                                                                                                                  |
 
 Para maior informação sobre os princípios de impressão de list boxes, consulte *Imprimir list boxes*.

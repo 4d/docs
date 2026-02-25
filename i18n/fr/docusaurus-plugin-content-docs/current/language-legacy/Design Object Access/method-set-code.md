@@ -1,4 +1,4 @@
----
+﻿---
 id: method-set-code
 title: METHOD SET CODE
 slug: /commands/method-set-code
@@ -67,7 +67,7 @@ Lors de l'appel de **METHOD SET CODE**, par défaut les attributs des méthodes 
   // %attributes = {"invisible":true,"lang":"fr","folder":"Security"}
 ```
 
-**Note :** Ces métadonnées sont générées automatiquement par la commande [METHOD GET CODE](method-get-code.md). Pour plus d'informations sur les attributs pris en charge, reportez-vous à la description de la commande [METHOD SET ATTRIBUTES](method-set-attributes.md).
+**Note :** Ces métadonnées sont générées automatiquement par la commande [METHOD GET CODE](../commands/method-get-code). Pour plus d'informations sur les attributs pris en charge, reportez-vous à la description de la commande [METHOD SET ATTRIBUTES](../commands/method-set-attributes).
 
 Concernant la propriété "folder" des métadonnées :
 
@@ -111,7 +111,7 @@ Cet exemple permet d’exporter et d’importer la totalité des méthodes proje
 
 ## Voir aussi 
 
-[METHOD GET CODE](method-get-code.md)  
+[METHOD GET CODE](../commands/method-get-code)  
 
 ## Propriétés
 

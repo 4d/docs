@@ -1,4 +1,4 @@
----
+﻿---
 id: volume-attributes
 title: VOLUME ATTRIBUTES
 slug: /commands/volume-attributes
@@ -106,7 +106,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[VOLUME LIST](volume-list.md)  
+[VOLUME LIST](../commands/volume-list)  
 
 ## プロパティ
 

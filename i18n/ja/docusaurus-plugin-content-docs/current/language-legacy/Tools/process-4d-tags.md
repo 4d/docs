@@ -1,4 +1,4 @@
----
+﻿---
 id: process-4d-tags
 title: PROCESS 4D TAGS
 slug: /commands/process-4d-tags
@@ -55,7 +55,7 @@ displayed_sidebar: docs
 
 引数 *outputResult* はテキスト型のフィールドまたは変数です。
 
-**注:** このコマンドは[On Web Authenticationデータベースメソッド](on-web-authentication-database-method.md)を呼び出しません。
+**注:** このコマンドは[On Web Authenticationデータベースメソッド](../commands/on-web-authentication-database-method)を呼び出しません。
 
 ## 例題 1 
 

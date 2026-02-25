@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-data-source
 title: OBJECT SET DATA SOURCE
 slug: /commands/object-set-data-source
@@ -43,7 +43,7 @@ En el caso de los list box, se deben tener en cuenta los siguientes puntos:
 
 * Los cambios de fuentes de datos deben tener en cuenta el tipo de list box: por ejemplo, no es posible utilizar un campo como fuente de datos de una columna de en un list box de tipo array.
 * Para los list box de tipo selección, no es posible modificar o leer la fuente de datos del objeto list box en sí: ​​en este caso, se trata de una referencia interna y no de una fuente de datos.
-* Este comando se utiliza en el contexto de los list box de tipo array. Para los list box de tipo selección, puede en vez utilizar el comando \[[LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md)
+* Este comando se utiliza en el contexto de los list box de tipo array. Para los list box de tipo selección, puede en vez utilizar el comando \[[LISTBOX SET COLUMN FORMULA](../commands/listbox-set-column-formula)
 
 Si este comando se aplica a una fuente de datos que no se puede editar, no hace nada.
 
@@ -59,8 +59,8 @@ Mudança da fonte de dados para uma área de entrada:
 
 ## Ver também 
 
-[LISTBOX SET COLUMN FORMULA](listbox-set-column-formula.md)  
-[OBJECT Get data source](object-get-data-source.md)  
+[LISTBOX SET COLUMN FORMULA](../commands/listbox-set-column-formula)  
+[OBJECT Get data source](../commands/object-get-data-source)  
 
 ## Propriedades
 

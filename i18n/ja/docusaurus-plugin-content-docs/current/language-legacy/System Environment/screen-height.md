@@ -1,4 +1,4 @@
----
+﻿---
 id: screen-height
 title: Screen height
 slug: /commands/screen-height
@@ -24,8 +24,8 @@ Macintoshでは、Screen height はメイン画面の高さを返します。メ
 
 ## 参照 
 
-[SCREEN COORDINATES](screen-coordinates.md)  
-[Screen width](screen-width.md)  
+[SCREEN COORDINATES](../commands/screen-coordinates)  
+[Screen width](../commands/screen-width)  
 
 ## プロパティ
 

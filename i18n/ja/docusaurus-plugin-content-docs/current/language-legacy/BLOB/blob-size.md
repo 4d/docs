@@ -1,4 +1,4 @@
----
+﻿---
 id: blob-size
 title: BLOB size
 slug: /commands/blob-size
@@ -40,7 +40,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[SET BLOB SIZE](set-blob-size.md)  
+[SET BLOB SIZE](../commands/set-blob-size)  
 
 ## プロパティ
 

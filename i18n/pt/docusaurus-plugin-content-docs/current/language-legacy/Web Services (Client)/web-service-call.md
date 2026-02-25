@@ -1,4 +1,4 @@
----
+﻿---
 id: web-service-call
 title: WEB SERVICE CALL
 slug: /commands/web-service-call
@@ -35,9 +35,9 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.WEB SERVICE CALL.Summary-->O comando **WEB SERVICE CALL** se utiliza para chamar um serviço web enviando uma petição HTTP.<!-- END REF--> Esta petição contém a mensagem SOAP criada previamente utilizando o comando [WEB SERVICE SET PARAMETER](web-service-set-parameter.md) .  
+<!--REF #_command_.WEB SERVICE CALL.Summary-->O comando **WEB SERVICE CALL** se utiliza para chamar um serviço web enviando uma petição HTTP.<!-- END REF--> Esta petição contém a mensagem SOAP criada previamente utilizando o comando [WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter) .  
 
-Toda chamada posterior ao comando [WEB SERVICE SET PARAMETER](web-service-set-parameter.md) provocará a criação de uma nova petição. A execução de um comando WEB SERVICE CALL também apaga todo resultado do serviço web chamado anteriormente e o substitui com os novos resultados.  
+Toda chamada posterior ao comando [WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter) provocará a criação de uma nova petição. A execução de um comando WEB SERVICE CALL também apaga todo resultado do serviço web chamado anteriormente e o substitui com os novos resultados.  
   
 Em *urlAcesso*, passe a URL completa que permite acessar ao serviço web (não confunda esta URL com a do arquivo WSDL, que descreve o serviço web).
 
@@ -45,7 +45,7 @@ Em *urlAcesso*, passe a URL completa que permite acessar ao serviço web (não c
   
 Se desejar utilizar um serviço web em modo seguro utilizando SSL, passe https:// na frente da URL ao invés de http://. Esta configuração ativa automaticamente a conexão em modo seguro.
 
-Note que este comando pode utilizar um certificado servidor (ver o comando [HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md)). Se este certificado não é válido (vencido ou revogado), a variável sistema OK toma o valor e se devolve o erro 901 "Certificado servidor inválido". Pode interceptar este erro utilizando um método de gestão de erros instalado pelo comando [ON ERR CALL](on-err-call.md).   
+Note que este comando pode utilizar um certificado servidor (ver o comando [HTTP SET CERTIFICATES FOLDER](../commands/http-set-certificates-folder)). Se este certificado não é válido (vencido ou revogado), a variável sistema OK toma o valor e se devolve o erro 901 "Certificado servidor inválido". Pode interceptar este erro utilizando um método de gestão de erros instalado pelo comando [ON ERR CALL](../commands/on-err-call).   
   
 Em *soapAction*, passe o conteúdo do campo SOAPAction da petição. Este campo contém geralmente o valor “ServiceName#MethodName”.
 
@@ -53,7 +53,7 @@ Em *nomMetodo*, passe o nome do método remoto (que pertence ao serviço Web) qu
 
 Em *nomEspaço*, passe o espaço do nome XML (namespace) utilizado para a petição SOAP. Para maior informação sobre os nomes de espaços XML, consulte o Manual de Desenho.
 
-O parâmetro opcional *tipoComplexo* especifica a configuração dos parâmetros web Service enviados ou recebidos (definidos utilizando os comandos [WEB SERVICE SET PARAMETER](web-service-set-parameter.md) e [WEB SERVICE GET RESULT](web-service-get-result.md)).
+O parâmetro opcional *tipoComplexo* especifica a configuração dos parâmetros web Service enviados ou recebidos (definidos utilizando os comandos [WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter) e [WEB SERVICE GET RESULT](../commands/web-service-get-result)).
 
 O valor do parâmetro *tipoComplexo* depende do modo de publicação do serviço web (DOC ou RPC, ver o Manual de Desenho) e seus próprios parâmetros.
 
@@ -94,11 +94,11 @@ Esta configuração é a mais fácil de utilizar. Neste caso, o parâmetro *tipo
   
 Os parâmetros enviados e as respostas recebidas podem ser manipulados diretamente, sem processamento prévio.  
   
-Consulte o exemplo do comando [WEB SERVICE GET RESULT](web-service-get-result.md)
+Consulte o exemplo do comando [WEB SERVICE GET RESULT](../commands/web-service-get-result)
 
 ### modo RPC, entrada complexa e saída simples 
 
-Neste caso, o parâmetro *tipoComplexo* contém a constante Web Service Manual In. Com esta configuração, deve passar “manualmente” ao serviço Web cada elemento XML fonte na forma de um BLOB, com a ajuda do comando [WEB SERVICE SET PARAMETER](web-service-set-parameter.md).   
+Neste caso, o parâmetro *tipoComplexo* contém a constante Web Service Manual In. Com esta configuração, deve passar “manualmente” ao serviço Web cada elemento XML fonte na forma de um BLOB, com a ajuda do comando [WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter).   
   
 Depende de você formatar o BLOB inicial como um elemento XML válido. Este BLOB deve conter como primeiro elemento o primeiro elemento “filho” do elemento <Body> da petição final.
 
@@ -115,7 +115,7 @@ Exemplo
 
 ### modo RPC, entrada simples e saída complexa 
 
-Neste caso, o parâmetro t*ipoComplexo* contém a constante Web Service Manual Out. Cada parâmetro de saída será retornado pelo serviço Web na forma do elemento XML armazenado em um BLOB. Recupera este parâmetro utilizando o comando [WEB SERVICE GET RESULT](web-service-get-result.md).Depois pode analizar o conteúdo do BLOB recebido utilizando os comandos XML de 4D.  
+Neste caso, o parâmetro t*ipoComplexo* contém a constante Web Service Manual Out. Cada parâmetro de saída será retornado pelo serviço Web na forma do elemento XML armazenado em um BLOB. Recupera este parâmetro utilizando o comando [WEB SERVICE GET RESULT](../commands/web-service-get-result).Depois pode analizar o conteúdo do BLOB recebido utilizando os comandos XML de 4D.  
   
 **Exemplo** 
   
@@ -180,8 +180,8 @@ Se a petição for corretamente encaminhada, e o Web Service a aceitar, a variá
 
 ## Ver também 
 
-[WEB SERVICE GET RESULT](web-service-get-result.md)  
-[WEB SERVICE SET PARAMETER](web-service-set-parameter.md)  
+[WEB SERVICE GET RESULT](../commands/web-service-get-result)  
+[WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: session
 slug: /commands/session
 title: Session
@@ -130,7 +130,7 @@ IP:port/4DACTION/action_Session
 
 ## Voir également
 
-[Session storage](session-storage.md)  
+[Session storage](../commands/session-storage)  
 [Session API](../../API/SessionClass.md)
 [Desktop sessions](../../Desktop/sessions.md)
 [Web server user sessions](../../WebServer/sessions.md)  

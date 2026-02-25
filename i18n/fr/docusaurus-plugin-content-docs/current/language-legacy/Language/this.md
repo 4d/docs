@@ -1,4 +1,4 @@
----
+﻿---
 id: this
 slug: /commands/this
 title: This
@@ -45,7 +45,7 @@ $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> En cas d'appel de la superclasse du constructeur depuis le constructeur en utilisant le mot-clé [Super](super.md), n'oubliez pas que `This` ne doit pas être appelé avant le constructeur de la superclasse, sinon une erreur est générée. Voir [cet exemple](super.md#example-1).
+> En cas d'appel de la superclasse du constructeur depuis le constructeur en utilisant le mot-clé [Super](../commands/super), n'oubliez pas que `This` ne doit pas être appelé avant le constructeur de la superclasse, sinon une erreur est générée. Voir [cet exemple](super.md#example-1).
 
 Dans tous les cas, `This` se réfère à l'objet sur lequel la fonction a été appelée, comme s'il s'agissait d'une fonction de l'objet.
 
@@ -70,7 +70,7 @@ Dans cet exemple, l'objet affecté à la variable $o n'a pas de propriété *f*,
 
 ## Objet formule
 
-Dans le contexte de l'exécution d'un objet formule créé par les commandes [Formula](formula.md) ou [Formula from string](formula-from-string.md), `This` renvoie une référence à l'objet en cours de traitement par la formule.
+Dans le contexte de l'exécution d'un objet formule créé par les commandes [Formula](../commands/formula) ou [Formula from string](../commands/formula-from-string), `This` renvoie une référence à l'objet en cours de traitement par la formule.
 
 Par exemple, vous souhaitez utiliser une méthode projet en tant que formule encapsulée dans un objet :
 
@@ -177,7 +177,7 @@ Une fois le formulaire exécuté, la list box est automatiquement remplie avec l
 ## Voir également
 
 [Self](../../commands-legacy/self)\
-[Super](super.md)
+[Super](../commands/super)
 
 ## Propriétés
 

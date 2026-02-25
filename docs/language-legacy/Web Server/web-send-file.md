@@ -1,4 +1,4 @@
----
+﻿---
 id: web-send-file
 title: WEB SEND FILE
 slug: /commands/web-send-file
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 By default, 4D looks for the HTML document within the root folder, defined in the Database Settings. 
 
 This command accepts as a parameter either pathnames in Posix syntax (names of directories or folders are separated with a slash "/") or in the system syntax.  
-Specifying an invalid pathname generates an error related to file management for your operating system. You can intercept this error using a method installed by the [ON ERR CALL](on-err-call.md) command. If the method displays a warning or message dialog box, it will appear on the browser machine.
+Specifying an invalid pathname generates an error related to file management for your operating system. You can intercept this error using a method installed by the [ON ERR CALL](../commands/on-err-call) command. If the method displays a warning or message dialog box, it will appear on the browser machine.
 
 Once **WEB SEND FILE** is executed, the OK system variable is updated: if the file to be sent exists and if the timeout has not run out, OK is equal to 1\. Otherwise, it is equal to 0.
 
@@ -63,7 +63,7 @@ If the file to be sent exists and if the timeout has not run out, OK is set to 1
 
 ## See also 
 
-[WEB SEND BLOB](web-send-blob.md)  
+[WEB SEND BLOB](../commands/web-send-blob)  
 
 ## Properties
 

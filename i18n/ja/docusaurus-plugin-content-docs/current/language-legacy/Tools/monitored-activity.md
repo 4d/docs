@@ -1,4 +1,4 @@
----
+﻿---
 id: monitored-activity
 title: Monitored activity
 slug: /commands/monitored-activity
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.Monitored activity.Summary-->**Monitored activity** コマンドは、[START MONITORING ACTIVITY](start-monitoring-activity.md) コマンドによって設定された詳細に応じて記録されたオペレーションを表すオブジェクトのコレクションを返します。<!-- END REF-->このコマンドは4D リモート、4D Server、スタンドアロン版の4D において実行または呼び出し可能です(ただしスタンドアロン版は*source* 引数で指定されたソースがネットワークアクティビティでない場合のみ可能)。
+<!--REF #_command_.Monitored activity.Summary-->**Monitored activity** コマンドは、[START MONITORING ACTIVITY](../commands/start-monitoring-activity) コマンドによって設定された詳細に応じて記録されたオペレーションを表すオブジェクトのコレクションを返します。<!-- END REF-->このコマンドは4D リモート、4D Server、スタンドアロン版の4D において実行または呼び出し可能です(ただしスタンドアロン版は*source* 引数で指定されたソースがネットワークアクティビティでない場合のみ可能)。
 
 返されたコレクション内のオブジェクトは、以下のようなプロパティを格納しています:
 
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ### activityKind = Activity language (1) 
 
-**注:** *activityData* オブジェクトは*4DDebugLog.txt (標準)* においては[SET DATABASE PARAMETER](set-database-parameter.md) コマンドで定義された情報を(あれば)使用しますが、それ以外の場合にはデフォルトモードを使用します。そのため、コマンドの実行中にログ記録を開始した場合には、返される戻り値に影響します。
+**注:** *activityData* オブジェクトは*4DDebugLog.txt (標準)* においては[SET DATABASE PARAMETER](../commands/set-database-parameter) コマンドで定義された情報を(あれば)使用しますが、それ以外の場合にはデフォルトモードを使用します。そのため、コマンドの実行中にログ記録を開始した場合には、返される戻り値に影響します。
 
 *activityData* オブジェクト:
 
@@ -68,8 +68,8 @@ displayed_sidebar: docs
 
 ****注:** 
 
-* デバッグログが4D Server の[Administration window](../../ServerWindow/overview.md)にて停止されている場合、**Monitored activity** は何も返しません。ログがサーバー上で、あるいは[START MONITORING ACTIVITY](start-monitoring-activity.md) コマンドとActivity network を使用して再開されていた場合、**Monitored activity** コマンドはネットワークアクティビティ情報を返すのを再開します。
-* *activityData* オブジェクトは*4DRequestsLog.txt* においては[SET DATABASE PARAMETER](set-database-parameter.md) コマンドで定義された情報を(あれは)使用しますが、それ以外の場合にはデフォルトモードを使用します。そのため、**Monitored activity** コマンドの実行中にログ記録を開始した場合には、返される戻り値に影響します。
+* デバッグログが4D Server の[Administration window](../../ServerWindow/overview.md)にて停止されている場合、**Monitored activity** は何も返しません。ログがサーバー上で、あるいは[START MONITORING ACTIVITY](../commands/start-monitoring-activity) コマンドとActivity network を使用して再開されていた場合、**Monitored activity** コマンドはネットワークアクティビティ情報を返すのを再開します。
+* *activityData* オブジェクトは*4DRequestsLog.txt* においては[SET DATABASE PARAMETER](../commands/set-database-parameter) コマンドで定義された情報を(あれは)使用しますが、それ以外の場合にはデフォルトモードを使用します。そのため、**Monitored activity** コマンドの実行中にログ記録を開始した場合には、返される戻り値に影響します。
 
 *activityData* オブジェクト:
 
@@ -80,7 +80,7 @@ displayed_sidebar: docs
 | systemID               | テキスト               | システムID                                                                                                                                                          |
 | component              | テキスト               | コンポーネント署名(*例:* 4SQLS または dbmg)                                                                                                                                  |
 | processInfoIndex       | 倍長整数               | *4DRequestsLog\_ProcessInfo.txt* ログの"index"フィールドに対応し、リクエストとプロセスがリンクするのを許可します。                                                                                   |
-| request                | 倍長整数               | C/Sメッセージ、SQL リクエスト、[LOG EVENT](log-event.md) メッセージのリクエストID                                                                                                      |
+| request                | 倍長整数               | C/Sメッセージ、SQL リクエスト、[LOG EVENT](../commands/log-event) メッセージのリクエストID                                                                                                      |
 | bytesIn                | 倍長整数               | 受信したバイト数                                                                                                                                                        |
 | bytesOut               | 倍長整数               | 送信したバイト数                                                                                                                                                        |
 | execDuration           | 倍長整数               | 生成された場所に応じて変化します:server\_duration . <br/>またはサーバーで生成された場合にはexec\_duration --サーバーがリクエストを処理するのにかかった時間(マイクロ秒単位)                                             |
@@ -91,7 +91,7 @@ displayed_sidebar: docs
 
 ### activityKind = Activity operations (4) 
 
-**注:** *activityData* オブジェクトは[ACTIVITY SNAPSHOT](activity-snapshot.md) コマンドから返されるものに近いですが、閾値と完了したオペレーションのみが返されるという点が異なります。
+**注:** *activityData* オブジェクトは[ACTIVITY SNAPSHOT](../commands/activity-snapshot) コマンドから返されるものに近いですが、閾値と完了したオペレーションのみが返されるという点が異なります。
 
 *activityData* オブジェクト:
 
@@ -114,8 +114,8 @@ displayed_sidebar: docs
 | |  client\_uid          | テキスト   | (C/S オペレーションのみ)データベースオペレーションをローンチしたクライアントマシンのUUID                                                                                          |                                                                                                                                |
 | |  is\_remote\_context  | 倍長整数   | (C/S オペレーションのみ)オペレーションが、ストアドプロシージャ経由でサーバーでローンチされた(値=0)か、クライアントでローンチされた(値=1)を表す                                                             |                                                                                                                                |
 | |  user4d\_id           | 倍長整数   | クライアントマシン上の4D ユーザーのID                                                                                                                      |                                                                                                                                |
-| |  user4d\_alias        | テキスト   | 4D ユーザーのエイリアスセット。[SET USER ALIAS](set-user-alias.md) を参照してください。                                                                            |                                                                                                                                |
-| |  client\_version      | テキスト   | [Application version](application-version.md) コマンドによって返される、4D環境のバージョン番号を表すエンコードされた文字列値                                                     |                                                                                                                                |
+| |  user4d\_alias        | テキスト   | 4D ユーザーのエイリアスセット。[SET USER ALIAS](../commands/set-user-alias) を参照してください。                                                                            |                                                                                                                                |
+| |  client\_version      | テキスト   | [Application version](../commands/application-version) コマンドによって返される、4D環境のバージョン番号を表すエンコードされた文字列値                                                     |                                                                                                                                |
 | dbOperationDetails      |        | オブジェクト                                                                                                                                     | データベースエンジン絵のオペレーション呼び出しについての情報                                                                                                 |
 | |  table                | テキスト   | オペレーション内のテーブル名                                                                                                                             |                                                                                                                                |
 | |  field                | テキスト   | オペレーションのフィールド名                                                                                                                             |                                                                                                                                |
@@ -135,12 +135,12 @@ displayed_sidebar: docs
 
 ## 例題 
 
-**[START MONITORING ACTIVITY](start-monitoring-activity.md)**の例題を参照してください
+**[START MONITORING ACTIVITY](../commands/start-monitoring-activity)**の例題を参照してください
 
 ## 参照 
 
-[START MONITORING ACTIVITY](start-monitoring-activity.md)  
-[STOP MONITORING ACTIVITY](stop-monitoring-activity.md)  
+[START MONITORING ACTIVITY](../commands/start-monitoring-activity)  
+[STOP MONITORING ACTIVITY](../commands/stop-monitoring-activity)  
 
 ## プロパティ
 

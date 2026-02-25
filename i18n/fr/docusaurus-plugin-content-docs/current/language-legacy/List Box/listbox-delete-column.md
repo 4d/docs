@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-delete-column
 title: LISTBOX DELETE COLUMN
 slug: /commands/listbox-delete-column
@@ -44,8 +44,8 @@ Si le paramètre *positionCol* est supérieur au nombre de colonnes de la list b
 
 ## Voir aussi 
 
-[LISTBOX Get number of columns](listbox-get-number-of-columns.md)  
-[LISTBOX INSERT COLUMN](listbox-insert-column.md)  
+[LISTBOX Get number of columns](../commands/listbox-get-number-of-columns)  
+[LISTBOX INSERT COLUMN](../commands/listbox-insert-column)  
 
 ## Propriétés
 

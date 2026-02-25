@@ -1,4 +1,4 @@
----
+﻿---
 id: localized-document-path
 title: Localized document path
 slug: /commands/localized-document-path
@@ -66,7 +66,7 @@ Si el lenguaje actual es, por ejemplo, francés canadiense (fr-ca), el comando d
 
 ## Ver también 
 
-[Get database localization](get-database-localization.md)  
+[Get database localization](../commands/get-database-localization)  
 
 ## Propiedades
 

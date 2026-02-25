@@ -1,4 +1,4 @@
----
+﻿---
 id: set-channel
 title: SET CHANNEL
 slug: /commands/set-channel
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET CHANNEL.Summary-->La commande **SET CHANNEL** permet d'ouvrir un port série ou un document.<!-- END REF--> Vous ne pouvez ouvrir qu'un port série ou un document à la fois avec cette commande.
 
-**Note historique :** A l'origine, **SET CHANNEL** a été la première commande 4D permettant de travailler avec les ports série et des documents sur disque. Depuis, de nouvelles commandes ont été ajoutées. Aujourd'hui, vous pouvez généralement travailler avec des documents sur disque à l'aide des commandes [Open document](open-document.md), [Create document](create-document.md) et [Append document](append-document.md), puis lire et écrire des caractères dans les documents avec [Create document](create-document.md) et [RECEIVE PACKET](receive-packet.md) (ces deux commandes fonctionnent aussi avec **SET CHANNEL**). Cependant, si vous souhaitez utiliser les commandes [SEND VARIABLE](send-variable.md), [RECEIVE VARIABLE](receive-variable.md), [SEND RECORD](send-record.md) et [RECEIVE RECORD](receive-record.md), vous devez appeler **SET CHANNEL** pour accéder aux documents sur disque. 
+**Note historique :** A l'origine, **SET CHANNEL** a été la première commande 4D permettant de travailler avec les ports série et des documents sur disque. Depuis, de nouvelles commandes ont été ajoutées. Aujourd'hui, vous pouvez généralement travailler avec des documents sur disque à l'aide des commandes [Open document](../commands/open-document), [Create document](../commands/create-document) et [Append document](../commands/append-document), puis lire et écrire des caractères dans les documents avec [Create document](../commands/create-document) et [RECEIVE PACKET](../commands/receive-packet) (ces deux commandes fonctionnent aussi avec **SET CHANNEL**). Cependant, si vous souhaitez utiliser les commandes [SEND VARIABLE](../commands/send-variable), [RECEIVE VARIABLE](../commands/receive-variable), [SEND RECORD](../commands/send-record) et [RECEIVE RECORD](../commands/receive-record), vous devez appeler **SET CHANNEL** pour accéder aux documents sur disque. 
 
 La description de la commande **SET CHANNEL** se compose de deux sections :
 
@@ -34,7 +34,7 @@ La description de la commande **SET CHANNEL** se compose de deux sections :
 
 ## Travailler avec les ports série : REGLER SERIE(port;param) 
 
-La première syntaxe de **SET CHANNEL** ouvre un port série et définit le protocole de communication ainsi que des informations supplémentaires. Les données peuvent être envoyées par les commandes [SEND PACKET](send-packet.md), [SEND RECORD](send-record.md) ou [SEND VARIABLE](send-variable.md), et reçues par les commandes [RECEIVE BUFFER](receive-buffer.md), [RECEIVE PACKET](receive-packet.md), [RECEIVE VARIABLE](receive-variable.md) ou [RECEIVE RECORD](receive-record.md).
+La première syntaxe de **SET CHANNEL** ouvre un port série et définit le protocole de communication ainsi que des informations supplémentaires. Les données peuvent être envoyées par les commandes [SEND PACKET](../commands/send-packet), [SEND RECORD](../commands/send-record) ou [SEND VARIABLE](../commands/send-variable), et reçues par les commandes [RECEIVE BUFFER](../commands/receive-buffer), [RECEIVE PACKET](../commands/receive-packet), [RECEIVE VARIABLE](../commands/receive-variable) ou [RECEIVE RECORD](../commands/receive-record).
 
 * Le premier paramètre, *port*, définit le port et le protocole utilisés. Vous pouvez adresser jusqu'à 99 ports série (un par un).  
 Le tableau suivant liste les valeurs possibles du paramètre *port* :  
@@ -156,23 +156,23 @@ Toutes les opérations décrites dans ce tableau modifient la variable système 
 
 ### Exemple 4 
 
-Reportez-vous aux exemples des commandes [RECEIVE BUFFER](receive-buffer.md), [SET TIMEOUT](set-timeout.md) et [RECEIVE RECORD](receive-record.md).
+Reportez-vous aux exemples des commandes [RECEIVE BUFFER](../commands/receive-buffer), [SET TIMEOUT](../commands/set-timeout) et [RECEIVE RECORD](../commands/receive-record).
 
 ## Voir aussi 
 
-[Append document](append-document.md)  
+[Append document](../commands/append-document)  
 *Communications*  
-[Create document](create-document.md)  
-[GET SERIAL PORT MAPPING](get-serial-port-mapping.md)  
-[Open document](open-document.md)  
-[RECEIVE BUFFER](receive-buffer.md)  
-[RECEIVE PACKET](receive-packet.md)  
-[RECEIVE RECORD](receive-record.md)  
-[RECEIVE VARIABLE](receive-variable.md)  
-[SEND PACKET](send-packet.md)  
-[SEND RECORD](send-record.md)  
-[SEND VARIABLE](send-variable.md)  
-[SET TIMEOUT](set-timeout.md)  
+[Create document](../commands/create-document)  
+[GET SERIAL PORT MAPPING](../commands/get-serial-port-mapping)  
+[Open document](../commands/open-document)  
+[RECEIVE BUFFER](../commands/receive-buffer)  
+[RECEIVE PACKET](../commands/receive-packet)  
+[RECEIVE RECORD](../commands/receive-record)  
+[RECEIVE VARIABLE](../commands/receive-variable)  
+[SEND PACKET](../commands/send-packet)  
+[SEND RECORD](../commands/send-record)  
+[SEND VARIABLE](../commands/send-variable)  
+[SET TIMEOUT](../commands/set-timeout)  
 
 ## Propriétés
 

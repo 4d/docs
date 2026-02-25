@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-row-font-style
 title: LISTBOX SET ROW FONT STYLE
 slug: /commands/listbox-set-row-font-style
@@ -56,7 +56,7 @@ En *estilo*, se pasa un valor de estilo. Debe utilizar uno (o una combinación) 
   
   
 Si un array de estilos de fuente se ha asociado con el list box o columna, sólo el elemento correspondiente a la fila se modifica. En otras palabras, la ejecución del comando tiene el mismo efecto, en este caso, como modificación de un elemento del array estilo de fuente.  
-Si no hay un array estilo de fuente asociado con el list box o columna, se creará de forma dinámica cuando se llama a este comando. Se puede acceder a ellos usando el comando [LISTBOX Get array](listbox-get-array.md).  
+Si no hay un array estilo de fuente asociado con el list box o columna, se creará de forma dinámica cuando se llama a este comando. Se puede acceder a ellos usando el comando [LISTBOX Get array](../commands/listbox-get-array).  
   
 Si las propiedades de estilo en conflicto se establecen para la columna o el list box, se aplica un orden de prioridad. Para obtener más información, consulte el manual de *Diseño*.  
   
@@ -88,8 +88,8 @@ Después de la segunda declaración, todas las celdas de la tercera fila cambian
 
 ## Ver también 
 
-[LISTBOX Get row font style](listbox-get-row-font-style.md)  
-[LISTBOX SET ROW COLOR](listbox-set-row-color.md)  
+[LISTBOX Get row font style](../commands/listbox-get-row-font-style)  
+[LISTBOX SET ROW COLOR](../commands/listbox-set-row-color)  
 
 ## Propiedades
 

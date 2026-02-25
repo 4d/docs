@@ -1,4 +1,4 @@
----
+﻿---
 id: form
 title: フォーム
 slug: /commands/form
@@ -27,13 +27,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Form.Summary-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).<!-- END REF-->**Form** コマンドはカレントフォームに割り当てられている( *formData* 引数、またはフォームエディターで割り当てられたユーザークラスによってインスタンス化された) オブジェクトを返します。 4D は以下の場合にはカレントフォームに自動的にオブジェクトを割り当てます:
 
-- カレントフォームが、[`DIALOG`](dialog.md)、[`Print form`](print-form.md) あるいは [`FORM LOAD`](form-load.md) コマンドのいずれか一つによってロードされた場合。
+- カレントフォームが、[`DIALOG`](../commands/dialog)、[`Print form`](../commands/print-form) あるいは [`FORM LOAD`](../commands/form-load) コマンドのいずれか一つによってロードされた場合。
 - カレントフォームがサブフォームである場合。
 - テーブルフォームが現在画面上に表示されている場合。
 
 ### コマンド(DIALOGなど)
 
-カレントのフォームが[DIALOG](dialog.md)、[`Print form`](print-form.md) あるいは [`FORM LOAD`](form-load.md) コマンドによって表示あるいはロードされていた場合、は以下のいずれかのものを返します:
+カレントのフォームが[DIALOG](../commands/dialog)、[`Print form`](../commands/print-form) あるいは [`FORM LOAD`](../commands/form-load) コマンドによって表示あるいはロードされていた場合、は以下のいずれかのものを返します:
 
 - コマンドに引数として渡された*formData* オブジェクト(あれば)。
 - [フォームに割り当てられているユーザークラス](../../FormEditor/properties_FormProperties.md#form-class) のインスタンス化されたオブジェクト(あれば)。
@@ -110,7 +110,7 @@ displayed_sidebar: docs
 
 ## 参照
 
-[DIALOG](dialog.md)
+[DIALOG](../commands/dialog)
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: printers-list
 title: PRINTERS LIST
 slug: /commands/printers-list
@@ -44,7 +44,7 @@ Vous pouvez passer un deuxième tableau facultatif, *tabNomsAlt*. Le contenu de 
 
 Le paramètre facultatif *tabModèles* permet de récupérer le modèle de chaque imprimante.
 
-Utilisez les commandes [SET CURRENT PRINTER](set-current-printer.md) et [Get current printer](get-current-printer.md) pour modifier ou connaître l’imprimante sélectionnée dans 4D. Vous devez leur passer les noms retournés dans le premier tableau (*tabNoms*).
+Utilisez les commandes [SET CURRENT PRINTER](../commands/set-current-printer) et [Get current printer](../commands/get-current-printer) pour modifier ou connaître l’imprimante sélectionnée dans 4D. Vous devez leur passer les noms retournés dans le premier tableau (*tabNoms*).
 
 Sous Windows, le nom d’une imprimante peut être modifié manuellement au niveau du système d’exploitation. En revanche, son emplacement et son modèle sont liés à ses caractéristiques physiques. Vous pouvez donc utiliser les valeurs des tableaux optionnels pour vérifier les caractéristiques de l’imprimante sélectionnée — typiquement, vous pouvez vérifier que tous les clients utilisent la même imprimante.  
 Sous macOS, cette vérification peut s’effectuer sur le nom de l’imprimante (nom du serveur d’impression), qui est le même pour chaque poste connecté.
@@ -55,8 +55,8 @@ La variable système OK prend la valeur 1 si la commande a été exécutée corr
 
 ## Voir aussi 
 
-[Get current printer](get-current-printer.md)  
-[SET CURRENT PRINTER](set-current-printer.md)  
+[Get current printer](../commands/get-current-printer)  
+[SET CURRENT PRINTER](../commands/set-current-printer)  
 
 ## Propriétés
 

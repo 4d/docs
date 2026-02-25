@@ -1,4 +1,4 @@
----
+﻿---
 id: duplicate-record
 title: DUPLICATE RECORD
 slug: /commands/duplicate-record
@@ -36,7 +36,7 @@ DUPLICATE RECORDはデータ入力中にも実行可能です。これにより�
 
 ## 参照 
 
-[SAVE RECORD](save-record.md)  
+[SAVE RECORD](../commands/save-record)  
 
 ## プロパティ
 

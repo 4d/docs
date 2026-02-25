@@ -1,4 +1,4 @@
----
+﻿---
 id: compress-blob
 title: COMPRESS BLOB
 slug: /commands/compress-blob
@@ -45,13 +45,13 @@ Si pasa otro valor o si omite el parámetro *compresion*, se utiliza el método 
 
 Después de llamar este comando, la variable OK toma el valor 1 si el BLOB fue comprimido correctamente. Si la compresión no se pudo realizar, la variable OK toma el valor 0\. Si la compresión no se pudo efectuar por falta de memoria o porque el tamaño actual del blob es menor de 255 bytes, no se genera un error, y el método continua su ejecución.
 
-En otros casos si el error es causado por un problema más importante (el BLOB está dañado), se genera el error -10600\. Este error, puede ser interceptado con la ayuda de un método instalado por el comando [ON ERR CALL](on-err-call.md).
+En otros casos si el error es causado por un problema más importante (el BLOB está dañado), se genera el error -10600\. Este error, puede ser interceptado con la ayuda de un método instalado por el comando [ON ERR CALL](../commands/on-err-call).
 
-Después de comprimir un BLOB, puede expandirlo utilizando el comando [EXPAND BLOB](expand-blob.md).
+Después de comprimir un BLOB, puede expandirlo utilizando el comando [EXPAND BLOB](../commands/expand-blob).
 
-Para detectar si un BLOB ha sido comprimido, utilice el comando [BLOB PROPERTIES](blob-properties.md).  
+Para detectar si un BLOB ha sido comprimido, utilice el comando [BLOB PROPERTIES](../commands/blob-properties).  
 
-**Advertencia:** un BLOB comprimido continua siendo un BLOB, de manera que no hay nada que le impida modificar su contenido. Sin embargo, si lo modifica, el comando [EXPAND BLOB](expand-blob.md) no podrá descomprimir el BLOB correctamente.
+**Advertencia:** un BLOB comprimido continua siendo un BLOB, de manera que no hay nada que le impida modificar su contenido. Sin embargo, si lo modifica, el comando [EXPAND BLOB](../commands/expand-blob) no podrá descomprimir el BLOB correctamente.
 
 ## Ejemplo 1 
 
@@ -102,8 +102,8 @@ La variable OK toma el valor 1 si el BLOB se comprime correctamente; de lo contr
 
 ## Ver también 
 
-[BLOB PROPERTIES](blob-properties.md)  
-[EXPAND BLOB](expand-blob.md)  
+[BLOB PROPERTIES](../commands/blob-properties)  
+[EXPAND BLOB](../commands/expand-blob)  
 
 ## Propiedades
 

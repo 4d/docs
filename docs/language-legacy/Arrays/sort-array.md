@@ -1,4 +1,4 @@
----
+﻿---
 id: sort-array
 title: SORT ARRAY
 slug: /commands/sort-array
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 The last parameter specifies whether to sort *array* in ascending or descending *order*. The “greater than” symbol (>) indicates an ascending sort; the “less than” symbol (<) indicates a descending sort. If you do not specify the sorting order, then the sort is ascending.
 
-If more than one array is specified, the arrays are sorted following the sort order of the first array; no multi-level sorting is performed here. Instead you can use the [MULTI SORT ARRAY](multi-sort-array.md) command when you want to sort synchronized arrays.
+If more than one array is specified, the arrays are sorted following the sort order of the first array; no multi-level sorting is performed here. Instead you can use the [MULTI SORT ARRAY](../commands/multi-sort-array) command when you want to sort synchronized arrays.
 
 ## Example 1 
 
@@ -78,10 +78,10 @@ You display the names from a *\[People\]* table in a floating window. When you c
 
 ## See also 
 
-[Find in sorted array](find-in-sorted-array.md)  
-[MULTI SORT ARRAY](multi-sort-array.md)  
-[ORDER BY](order-by.md)  
-[SELECTION TO ARRAY](selection-to-array.md)  
+[Find in sorted array](../commands/find-in-sorted-array)  
+[MULTI SORT ARRAY](../commands/multi-sort-array)  
+[ORDER BY](../commands/order-by)  
+[SELECTION TO ARRAY](../commands/selection-to-array)  
 
 ## Properties
 

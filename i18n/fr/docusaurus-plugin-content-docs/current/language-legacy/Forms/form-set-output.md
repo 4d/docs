@@ -1,4 +1,4 @@
----
+﻿---
 id: form-set-output
 title: FORM SET OUTPUT
 slug: /commands/form-set-output
@@ -56,19 +56,19 @@ Les formulaires sortie sont exploités par trois groupes de commandes. Le premie
 
 Chacune des commandes suivantes affiche une liste d'enregistrements dans un formulaire sortie :
 
-* [DISPLAY SELECTION](display-selection.md)
-* [MODIFY SELECTION](modify-selection.md)
+* [DISPLAY SELECTION](../commands/display-selection)
+* [MODIFY SELECTION](../commands/modify-selection)
 
 Vous utilisez le formulaire sortie lorsque vous créez des états à l'aide des commandes suivantes : 
 
-* [PRINT LABEL](print-label.md)
-* [PRINT SELECTION](print-selection.md)
+* [PRINT LABEL](../commands/print-label)
+* [PRINT SELECTION](../commands/print-selection)
 
  Chacune des commandes d'export suivantes utilise également le formulaire sortie : 
 
-* [EXPORT DIF](export-dif.md)
-* [EXPORT SYLK](export-sylk.md)
-* [EXPORT TEXT](export-text.md)
+* [EXPORT DIF](../commands/export-dif)
+* [EXPORT SYLK](../commands/export-sylk)
+* [EXPORT TEXT](../commands/export-text)
 
 ## Exemple 1 
 
@@ -92,14 +92,14 @@ L'exemple suivant utilise un formulaire décrit dans un fichier .json :
 
 ## Voir aussi 
 
-[DISPLAY SELECTION](display-selection.md)  
-[EXPORT DIF](export-dif.md)  
-[EXPORT SYLK](export-sylk.md)  
-[EXPORT TEXT](export-text.md)  
-[FORM SET INPUT](form-set-input.md)  
-[MODIFY SELECTION](modify-selection.md)  
-[PRINT LABEL](print-label.md)  
-[PRINT SELECTION](print-selection.md)  
+[DISPLAY SELECTION](../commands/display-selection)  
+[EXPORT DIF](../commands/export-dif)  
+[EXPORT SYLK](../commands/export-sylk)  
+[EXPORT TEXT](../commands/export-text)  
+[FORM SET INPUT](../commands/form-set-input)  
+[MODIFY SELECTION](../commands/modify-selection)  
+[PRINT LABEL](../commands/print-label)  
+[PRINT SELECTION](../commands/print-selection)  
 
 ## Propriétés
 

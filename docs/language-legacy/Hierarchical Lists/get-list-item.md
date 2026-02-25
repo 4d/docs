@@ -1,4 +1,4 @@
----
+﻿---
 id: get-list-item
 title: GET LIST ITEM
 slug: /commands/get-list-item
@@ -40,7 +40,7 @@ If you pass the first optional *\** parameter, you indicate that the *list* para
 
 **Note:** If you use the @ character in the name of the list object and the form contains several lists that match with this name, the **GET LIST ITEM** command will only apply to the first object whose name corresponds. 
 
-The position must be expressed relatively, using the current expanded/collapsed state of the list and its sublist. You pass a position value between 1 and the value returned by [Count list items](count-list-items.md). If you pass a value outside this range, **GET LIST ITEM** returns empty values (0, "", etc.).
+The position must be expressed relatively, using the current expanded/collapsed state of the list and its sublist. You pass a position value between 1 and the value returned by [Count list items](../commands/count-list-items). If you pass a value outside this range, **GET LIST ITEM** returns empty values (0, "", etc.).
 
 After the call, you retrieve:
 
@@ -68,16 +68,16 @@ If you passed the optional parameters *sublist* and *expanded*:
 
 ## Example 2 
 
-Refer to the example of the [APPEND TO LIST](append-to-list.md) command.
+Refer to the example of the [APPEND TO LIST](../commands/append-to-list) command.
 
 ## See also 
 
-[GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
-[List item parent](list-item-parent.md)  
-[List item position](list-item-position.md)  
-[Selected list items](selected-list-items.md)  
-[SET LIST ITEM](set-list-item.md)  
-[SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+[GET LIST ITEM PROPERTIES](../commands/get-list-item-properties)  
+[List item parent](../commands/list-item-parent)  
+[List item position](../commands/list-item-position)  
+[Selected list items](../commands/selected-list-items)  
+[SET LIST ITEM](../commands/set-list-item)  
+[SET LIST ITEM PROPERTIES](../commands/set-list-item-properties)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: get-menu-item-style
 title: Get menu item style
 slug: /commands/get-menu-item-style
@@ -58,7 +58,7 @@ Para provar se um elemento de menu é mostrado em negrito, escreve:
 
 ## Ver também 
 
-[SET MENU ITEM STYLE](set-menu-item-style.md)  
+[SET MENU ITEM STYLE](../commands/set-menu-item-style)  
 
 ## Propriedades
 

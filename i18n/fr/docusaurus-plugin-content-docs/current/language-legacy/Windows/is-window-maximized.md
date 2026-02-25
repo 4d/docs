@@ -1,4 +1,4 @@
----
+﻿---
 id: is-window-maximized
 title: Is window maximized
 slug: /commands/is-window-maximized
@@ -44,8 +44,8 @@ Vous souhaitez passer entre l'état maximisé et l'état précédent :
 
 ## Voir aussi 
 
-[Is window reduced](is-window-reduced.md)  
-[MAXIMIZE WINDOW](maximize-window.md)  
+[Is window reduced](../commands/is-window-reduced)  
+[MAXIMIZE WINDOW](../commands/maximize-window)  
 
 ## Propriétés
 

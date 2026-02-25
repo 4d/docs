@@ -1,4 +1,4 @@
----
+﻿---
 id: execute-on-client
 title: EXECUTE ON CLIENT
 slug: /commands/execute-on-client
@@ -69,10 +69,10 @@ OKシステム変数は、4D Serverがメソッドの実行要求を正しく受
 
 ## 参照 
 
-[Execute on server](execute-on-server.md)  
-[GET REGISTERED CLIENTS](get-registered-clients.md)  
-[REGISTER CLIENT](register-client.md)  
-[UNREGISTER CLIENT](unregister-client.md)  
+[Execute on server](../commands/execute-on-server)  
+[GET REGISTERED CLIENTS](../commands/get-registered-clients)  
+[REGISTER CLIENT](../commands/register-client)  
+[UNREGISTER CLIENT](../commands/unregister-client)  
 
 ## プロパティ
 

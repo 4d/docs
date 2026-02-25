@@ -1,4 +1,4 @@
----
+﻿---
 id: sax-get-xml-processing-instruction
 title: SAX GET XML PROCESSING INSTRUCTION
 slug: /commands/sax-get-xml-processing-instruction
@@ -50,8 +50,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[SAX ADD PROCESSING INSTRUCTION](sax-add-processing-instruction.md)  
-[SAX Get XML node](sax-get-xml-node.md)  
+[SAX ADD PROCESSING INSTRUCTION](../commands/sax-add-processing-instruction)  
+[SAX Get XML node](../commands/sax-get-xml-node)  
 
 ## プロパティ
 

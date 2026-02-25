@@ -1,4 +1,4 @@
----
+﻿---
 id: multi-sort-array
 title: MULTI SORT ARRAY
 slug: /commands/multi-sort-array
@@ -49,7 +49,7 @@ The sort levels are determined by the order in which the arrays are passed to th
 
 * **Second syntax: MULTI SORT ARRAY (ptrArrayName; sortArrayName)**
 
-This syntax, more complex, is also invaluable for generic developments (for example, you can create a generic method for sorting arrays of all types, or yet again, create the equivalent of a generic [SORT ARRAY](sort-array.md) command).
+This syntax, more complex, is also invaluable for generic developments (for example, you can create a generic method for sorting arrays of all types, or yet again, create the equivalent of a generic [SORT ARRAY](../commands/sort-array) command).
 
 The *ptrArrayName* parameter contains the name of an array of array pointers; each element of this array is a pointer designating an array to be sorted. The sorts are performed in the order of the array pointers defined by *ptrArrayName*. **Warning:** all the arrays pointed to by *ptrArrayName* must have the same number of elements.
 
@@ -112,13 +112,13 @@ The following example uses the second syntax: it creates four arrays and sorts t
  MULTI SORT ARRAY(pointers_Array;sorts_Array)
 ```
 
-If you want the array of names be used as a third sort criterion, you need to assign the value 1 to the sorts\_Array{3} element. Or else, if you want the arrays to be sorted only by the city criterion, assign the value 0 to the sorts\_Array{2}, sorts\_Array{3} and sorts\_Array{4} elements. In this way, you obtain an identical result to [SORT ARRAY](sort-array.md)(cities;companies;names;telNums;>). 
+If you want the array of names be used as a third sort criterion, you need to assign the value 1 to the sorts\_Array{3} element. Or else, if you want the arrays to be sorted only by the city criterion, assign the value 0 to the sorts\_Array{2}, sorts\_Array{3} and sorts\_Array{4} elements. In this way, you obtain an identical result to [SORT ARRAY](../commands/sort-array)(cities;companies;names;telNums;>). 
 
 ## See also 
 
-[ORDER BY](order-by.md)  
-[SELECTION TO ARRAY](selection-to-array.md)  
-[SORT ARRAY](sort-array.md)  
+[ORDER BY](../commands/order-by)  
+[SELECTION TO ARRAY](../commands/selection-to-array)  
+[SORT ARRAY](../commands/sort-array)  
 
 ## Properties
 

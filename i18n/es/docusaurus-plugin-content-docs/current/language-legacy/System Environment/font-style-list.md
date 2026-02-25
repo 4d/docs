@@ -1,4 +1,4 @@
----
+﻿---
 id: font-style-list
 title: FONT STYLE LIST
 slug: /commands/font-style-list
@@ -37,7 +37,7 @@ En *listaEstilosFuente*, pase un array texto para ser llenado con la lista de es
 
 En *listaNomsFuente*, pase un array texto para ser llenado con la lista completa de nombres de fuentes soportadas por la *familiaFuente*. A diferencia del array *listaEstilosFuente*, el array *listaNomsFuente* devuelve los valores no localizados, es decir, los nombres de fuentes basados en la identificación del sistema. Por lo tanto, los nombres de fuentes serán independientes del idioma del sistema. Los elementos de este array son cadenas destinadas a ser utilizadas con el atributo wk font del comando 4D Write Pro   *WP SET ATTRIBUTES*. Al utilizar esta funcionalidad, los documentos 4D Write Pro pueden almacenar nombres de fuente y que luego se abrirán en máquinas utilizando cualquier lenguaje del sistema sin problemas de fuentes.
 
- Si la *familiaFuente* no se encuentra en la máquina, los arrays se devuelven vacíos. Para obtener la lista de familias de fuentes disponibles en la máquina, utilice el comando [FONT LIST](font-list.md).
+ Si la *familiaFuente* no se encuentra en la máquina, los arrays se devuelven vacíos. Para obtener la lista de familias de fuentes disponibles en la máquina, utilice el comando [FONT LIST](../commands/font-list).
 
 ## Ejemplo 
 
@@ -69,7 +69,7 @@ Usted desea seleccionar estilos de la familia de fuentes "Verdana" (si está dis
 
 ## Ver también 
 
-[FONT LIST](font-list.md)  
+[FONT LIST](../commands/font-list)  
 
 ## Propiedades
 

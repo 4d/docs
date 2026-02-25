@@ -1,4 +1,4 @@
----
+﻿---
 id: erase-window
 title: ERASE WINDOW
 slug: /commands/erase-window
@@ -38,8 +38,8 @@ No confunda ERASE WINDOW, que borra el contenido de una ventana, con [CLOSE WIND
 
 ## Ver también 
 
-[GOTO XY](goto-xy.md)  
-[MESSAGE](message.md)  
+[GOTO XY](../commands/goto-xy)  
+[MESSAGE](../commands/message)  
 
 ## Propiedades
 

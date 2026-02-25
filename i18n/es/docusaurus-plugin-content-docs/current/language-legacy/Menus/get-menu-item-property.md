@@ -1,4 +1,4 @@
----
+﻿---
 id: get-menu-item-property
 title: GET MENU ITEM PROPERTY
 slug: /commands/get-menu-item-property
@@ -38,13 +38,13 @@ Puede pasar -1 en *lineaMenu* para especificar el último elemento añadido a *m
 
 En *menu*, puede pasar una referencia de menú ([MenuRef](# "Unique ID (16-character alphanumeric) of a menu")) o un número de menú. Si pasa una referencia de menú, el parámetro *proceso* no es necesario y será ignorado si se pasa. Si pasa un número de menú, el comando tendrá en cuenta el menú correspondiente en la barra de menús principal del proceso actual. Si quiere designar otro proceso, pase su número en el parámetro opcional *proceso*.
 
-En el parámetro *propiedad*, pase la propiedad para la cual quiere obtener el valor. Puede utilizar una de las constantes del tema “*Propiedades de ítem de menú*” o una cadena correspondiente a una propiedad personalizada. Para mayor información sobre las propiedades de los menús y sus valores, consulte la descripción del comando [SET MENU ITEM PROPERTY](set-menu-item-property.md).
+En el parámetro *propiedad*, pase la propiedad para la cual quiere obtener el valor. Puede utilizar una de las constantes del tema “*Propiedades de ítem de menú*” o una cadena correspondiente a una propiedad personalizada. Para mayor información sobre las propiedades de los menús y sus valores, consulte la descripción del comando [SET MENU ITEM PROPERTY](../commands/set-menu-item-property).
 
 **Nota de compatibilidad**: por defecto, si la variable *valor* no se escribe o declara explícitamente como texto, el comando devolverá un nombre *Acción estándar*. Si desea obtener un valor numérico tal como se define en el tema de la constante *Valores para acción estándar asociada* (obsoleto), debe declarar la variable *valor* como entero largo.
 
 ## Ver también 
 
-[SET MENU ITEM PROPERTY](set-menu-item-property.md)  
+[SET MENU ITEM PROPERTY](../commands/set-menu-item-property)  
 
 ## Propiedades
 

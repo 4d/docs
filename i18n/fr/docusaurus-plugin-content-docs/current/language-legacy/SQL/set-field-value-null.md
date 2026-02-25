@@ -1,4 +1,4 @@
----
+﻿---
 id: set-field-value-null
 title: SET FIELD VALUE NULL
 slug: /commands/set-field-value-null
@@ -38,8 +38,8 @@ La valeur NULL est exploitée par le moteur SQL de 4D. Pour plus d’information
 
 ## Voir aussi 
 
-[Is field value Null](is-field-value-null.md)  
-[Null](null.md)  
+[Is field value Null](../commands/is-field-value-null)  
+[Null](../commands/null)  
 
 ## Propriétés
 

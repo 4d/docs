@@ -1,4 +1,4 @@
----
+﻿---
 id: edit-item
 title: EDIT ITEM
 slug: /commands/edit-item
@@ -39,9 +39,9 @@ Cette commande s’applique aux objets saisissables suivants :
 * Listes hiérarchiques
 * Colonnes de list box
 * Sous-formulaires (dans ce cas, seul un nom d’objet — le sous-formulaire — peut être passé dans *objet*),
-* Formulaires liste affichés via la commande [DISPLAY SELECTION](display-selection.md) ou [MODIFY SELECTION](modify-selection.md).
+* Formulaires liste affichés via la commande [DISPLAY SELECTION](../commands/display-selection) ou [MODIFY SELECTION](../commands/modify-selection).
 
-Si la commande est utilisée avec un objet saisissable qui n’est pas une liste, elle équivaut à la commande [GOTO OBJECT](goto-object.md).   
+Si la commande est utilisée avec un objet saisissable qui n’est pas une liste, elle équivaut à la commande [GOTO OBJECT](../commands/goto-object).   
 La commande ne fait rien si la liste ou le tableau désigné(e) est vide ou invisible. Si la liste ou le tableau n’est pas saisissable, la commande sélectionne (sans passer en édition) l’élément spécifié.  
 Dans le cadre d'une list box, si la colonne n'autorise pas la saisie de texte (saisie par case à cocher ou menu déroulant uniquement), l'élément spécifié prend le focus.
 
@@ -81,9 +81,9 @@ Soient deux colonnes d’une list box dont les noms de variables associées sont
 
 ## Voir aussi 
 
-[GOTO OBJECT](goto-object.md)  
-[INSERT IN LIST](insert-in-list.md)  
-[SET LIST ITEM](set-list-item.md)  
+[GOTO OBJECT](../commands/goto-object)  
+[INSERT IN LIST](../commands/insert-in-list)  
+[SET LIST ITEM](../commands/set-list-item)  
 
 ## Propriétés
 

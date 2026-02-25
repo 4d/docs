@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-focus-rectangle-invisible
 title: OBJECT SET FOCUS RECTANGLE INVISIBLE
 slug: /commands/object-set-focus-rectangle-invisible
@@ -39,7 +39,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT Get focus rectangle invisible](object-get-focus-rectangle-invisible.md)  
+[OBJECT Get focus rectangle invisible](../commands/object-get-focus-rectangle-invisible)  
 
 ## プロパティ
 

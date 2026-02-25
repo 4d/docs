@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-create-xml-element-arrays
 title: DOM Create XML element arrays
 slug: /commands/dom-create-xml-element-arrays
@@ -33,9 +33,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Create XML element arrays.Summary-->La commande **DOM Create XML element arrays** permet d’ajouter un nouvel élément dans l’élément XML *refElément* ainsi que, facultativement, des attributs et leurs valeurs sous forme de tableaux.<!-- END REF-->
 
-Hormis la prise en charge de tableaux (cf. ci-dessous), cette commande est identique à [DOM Create XML element](dom-create-xml-element.md). Reportez-vous à la description de cette commande pour le détail de son fonctionnement. 
+Hormis la prise en charge de tableaux (cf. ci-dessous), cette commande est identique à [DOM Create XML element](../commands/dom-create-xml-element). Reportez-vous à la description de cette commande pour le détail de son fonctionnement. 
 
-Facultativement, la commande **DOM Create XML element arrays** permet de passer plusieurs couples d’attributs et de valeurs d’attributs sous forme de tableaux dans les paramètres *tabNomsAttributs* et *tabValeursAttributs*. Vous pouvez passer dans *tabValeursAttributs* des tableaux de type texte, date, numérique et image. 4D effectue automatiquement les conversions nécessaires, vous pouvez modifier ces conversions à l’aide de la commande [XML SET OPTIONS](xml-set-options.md). 
+Facultativement, la commande **DOM Create XML element arrays** permet de passer plusieurs couples d’attributs et de valeurs d’attributs sous forme de tableaux dans les paramètres *tabNomsAttributs* et *tabValeursAttributs*. Vous pouvez passer dans *tabValeursAttributs* des tableaux de type texte, date, numérique et image. 4D effectue automatiquement les conversions nécessaires, vous pouvez modifier ces conversions à l’aide de la commande [XML SET OPTIONS](../commands/xml-set-options). 
 
 Les tableaux doivent avoir été créés au préalable et fonctionner par paires. Vous pouvez passer autant de couples de tableaux et autant d’éléments dans chaque couple que vous voulez. 
 
@@ -72,7 +72,7 @@ Pour cela, il suffit d'écrire :
 
 ## Voir aussi 
 
-[DOM Create XML element](dom-create-xml-element.md)  
+[DOM Create XML element](../commands/dom-create-xml-element)  
 
 ## Propriétés
 

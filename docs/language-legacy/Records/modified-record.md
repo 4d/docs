@@ -1,4 +1,4 @@
----
+﻿---
 id: modified-record
 title: Modified record
 slug: /commands/modified-record
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 Note that this function always returns True in the following contexts:
 
 * the current record is a new record,
-* after the execution of the [PUSH RECORD](push-record.md) and [POP RECORD](pop-record.md) commands,
+* after the execution of the [PUSH RECORD](../commands/push-record) and [POP RECORD](../commands/pop-record) commands,
 * as soon as a value has been assigned to a field of the record, even if it is the same value as the former one. For example, **Modified record** returns True after the following statement is executed:  
 ```4d  
  [Table_1]Field_1:=[Table_1]Field_1  
@@ -41,9 +41,9 @@ The following example shows a typical use for **Modified record**:
 
 ## See also 
 
-[Modified](modified.md)  
-[Old](old.md)  
-[SAVE RECORD](save-record.md)  
+[Modified](../commands/modified)  
+[Old](../commands/old)  
+[SAVE RECORD](../commands/save-record)  
 
 ## Properties
 

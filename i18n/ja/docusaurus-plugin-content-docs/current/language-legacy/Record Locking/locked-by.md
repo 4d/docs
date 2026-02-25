@@ -1,4 +1,4 @@
----
+﻿---
 id: locked-by
 title: LOCKED BY
 slug: /commands/locked-by
@@ -40,7 +40,7 @@ displayed_sidebar: docs
 
 レコードがロックされていない場合、*process* は0を返し、*4Duser*、*sessionUser*、および*processName* は空の文字列を返します。読み込み状態でロードしようとしたレコードが削除されている場合には、*process* は-1を返し、*4Duser*、*sessionUser*、および*processName* は空の文字列を返します。
 
-*4Duser* 引数は、4D パスワードシステムのユーザー名、あるいは[SET USER ALIAS](set-user-alias.md) で定義されたユーザーエイリアスです(あれば)。パスワードシステムがない場合あるいはエイリアスが定義されていない場合でも、“Designer” が返されます。
+*4Duser* 引数は、4D パスワードシステムのユーザー名、あるいは[SET USER ALIAS](../commands/set-user-alias) で定義されたユーザーエイリアスです(あれば)。パスワードシステムがない場合あるいはエイリアスが定義されていない場合でも、“Designer” が返されます。
 
 *sessionUser* 引数はクライアントマシンでセッションを開いたユーザ名に対応します。この名前は特に、4D Serverの管理ウィンドウに、開かれたプロセスごとに表示されます。
 
@@ -53,7 +53,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Locked](locked.md)  
+[Locked](../commands/locked)  
 *レコードのロック*  
 
 ## プロパティ

@@ -1,4 +1,4 @@
----
+﻿---
 id: set-environment-variable
 title: SET ENVIRONMENT VARIABLE
 slug: /commands/set-environment-variable
@@ -36,25 +36,25 @@ This command is maintained for compatibility reasons only. It is now recommended
 
 ## Description 
 
-<!--REF #_command_.SET ENVIRONMENT VARIABLE.Summary-->The **SET ENVIRONMENT VARIABLE** command allows you to set the value of an environment variable under macOS and Windows.<!-- END REF--> It is meant to be used with the [LAUNCH EXTERNAL PROCESS](launch-external-process.md) command. 
+<!--REF #_command_.SET ENVIRONMENT VARIABLE.Summary-->The **SET ENVIRONMENT VARIABLE** command allows you to set the value of an environment variable under macOS and Windows.<!-- END REF--> It is meant to be used with the [LAUNCH EXTERNAL PROCESS](../commands/launch-external-process) command. 
 
 Pass the name of the variable to define in *varName* and its value in *varValue*.
 
 * To get the general list of environment variables and possible values, please refer to the technical documentation of your operating system.
-* Three specific environment variables are available for use in the context of the [LAUNCH EXTERNAL PROCESS](launch-external-process.md) command:  
+* Three specific environment variables are available for use in the context of the [LAUNCH EXTERNAL PROCESS](../commands/launch-external-process) command:  
 *\_4D\_OPTION\_CURRENT\_DIRECTORY*  
 *\_4D\_OPTION\_HIDE\_CONSOLE* (Windows only)  
 *\_4D\_OPTION\_BLOCKING\_EXTERNAL\_PROCESS*.  
     
-For information on these variables, please refer to the documentation for the [LAUNCH EXTERNAL PROCESS](launch-external-process.md) command.
+For information on these variables, please refer to the documentation for the [LAUNCH EXTERNAL PROCESS](../commands/launch-external-process) command.
 
 ## Example 
 
-Refer to examples of the [LAUNCH EXTERNAL PROCESS](launch-external-process.md) command. 
+Refer to examples of the [LAUNCH EXTERNAL PROCESS](../commands/launch-external-process) command. 
 
 ## See also 
 
-[LAUNCH EXTERNAL PROCESS](launch-external-process.md)  
+[LAUNCH EXTERNAL PROCESS](../commands/launch-external-process)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: st-set-plain-text
 title: ST SET PLAIN TEXT
 slug: /commands/st-set-plain-text
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ST SET PLAIN TEXT.Summary-->**ST SET PLAIN TEXT**コマンドは*object*引数で指定されたマルチスタイルテキストや変数に、*newText*引数に渡されたテキストを挿入します。<!-- END REF-->このコマンドは*object*引数のプレーンテキストにのみ適用され、そこに含まれるスタイルタグを変更しません。 
 
-[ST SET TEXT](st-set-text.md)コマンドと異なり、**ST SET PLAIN TEXT**はプレーンテキストのみを挿入します。*newText*にスタイルタグを含めることはできません。もし"<"や">"、"&"文字が含まれる場合、これらは標準の文字として扱われ、HTML実体参照に変換されます:
+[ST SET TEXT](../commands/st-set-text)コマンドと異なり、**ST SET PLAIN TEXT**はプレーンテキストのみを挿入します。*newText*にスタイルタグを含めることはできません。もし"<"や">"、"&"文字が含まれる場合、これらは標準の文字として扱われ、HTML実体参照に変換されます:
 
 * '&' -> &amp;
 * '<' -> &lt;
@@ -93,7 +93,7 @@ displayed_sidebar: docs
 
 挿入されたテキストは追加のスタイルタグ中にあることが分かります。このスタイルタグは挿入前の文字に設定されていたスタイルタグに対応します。このメカニズムにより、すべてのケースでリッチテキストエリアが正しく表示されるようになります。
 
-**注:** このケースで [ST SET TEXT](st-set-text.md) コマンドを使用すると、4Dはテキストを挿入できない場合があります。エンコードされていない"&"のような文字が存在す る場合、変数中のスタイルタグの解釈が妨げられるためです。詳細はこのコマンドの説明を参照してください。
+**注:** このケースで [ST SET TEXT](../commands/st-set-text) コマンドを使用すると、4Dはテキストを挿入できない場合があります。エンコードされていない"&"のような文字が存在す る場合、変数中のスタイルタグの解釈が妨げられるためです。詳細はこのコマンドの説明を参照してください。
 
 ## システム変数およびセット 
 
@@ -103,8 +103,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ST Get plain text](st-get-plain-text.md)  
-[ST SET TEXT](st-set-text.md)  
+[ST Get plain text](../commands/st-get-plain-text)  
+[ST SET TEXT](../commands/st-set-text)  
 
 ## プロパティ
 

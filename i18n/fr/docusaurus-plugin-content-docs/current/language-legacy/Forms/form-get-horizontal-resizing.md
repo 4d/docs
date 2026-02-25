@@ -1,4 +1,4 @@
----
+﻿---
 id: form-get-horizontal-resizing
 title: FORM GET HORIZONTAL RESIZING
 slug: /commands/form-get-horizontal-resizing
@@ -29,11 +29,11 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.FORM GET HORIZONTAL RESIZING.Summary-->La commande **FORM GET HORIZONTAL RESIZING** retourne dans les variables *redimension*, *largeurMini* et *largeurMaxi* les propriétés de redimensionnement horizontal du formulaire courant.<!-- END REF--> Ces propriétés peuvent avoir été définies pour le formulaire dans l’éditeur de formulaires en mode Développement ou pour le process courant via la commande [FORM SET HORIZONTAL RESIZING](form-set-horizontal-resizing.md).
+<!--REF #_command_.FORM GET HORIZONTAL RESIZING.Summary-->La commande **FORM GET HORIZONTAL RESIZING** retourne dans les variables *redimension*, *largeurMini* et *largeurMaxi* les propriétés de redimensionnement horizontal du formulaire courant.<!-- END REF--> Ces propriétés peuvent avoir été définies pour le formulaire dans l’éditeur de formulaires en mode Développement ou pour le process courant via la commande [FORM SET HORIZONTAL RESIZING](../commands/form-set-horizontal-resizing).
 
 ## Voir aussi 
 
-[FORM SET HORIZONTAL RESIZING](form-set-horizontal-resizing.md)  
+[FORM SET HORIZONTAL RESIZING](../commands/form-set-horizontal-resizing)  
 
 ## Propriétés
 

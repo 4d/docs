@@ -1,4 +1,4 @@
----
+﻿---
 id: next-window
 title: Next window
 slug: /commands/next-window
@@ -34,7 +34,7 @@ El comando Next window devuelve el número de referencia de la ventana ubicada �
 
 ## Ver también 
 
-[Frontmost window](frontmost-window.md)  
+[Frontmost window](../commands/frontmost-window)  
 
 ## Propiedades
 

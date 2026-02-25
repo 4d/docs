@@ -1,4 +1,4 @@
----
+﻿---
 id: open-database
 title: OPEN DATABASE
 slug: /commands/open-database
@@ -40,9 +40,9 @@ In the *filePath* parameter, pass the name or full access path of the database t
 
 If you pass only a file name, this file must be placed at the same level as the structure file of the current database.
 
-If the access path defines a valid database, 4D quits the database that is already open and then opens the specified database. In single-user mode, the [On Exit database method](on-exit-database-method.md) of the database being closed and the [On Startup database method](on-startup-database-method.md) (or the [On Server Open Connection database method](on-server-open-connection-database-method.md)) of the database being opened are called successively.
+If the access path defines a valid database, 4D quits the database that is already open and then opens the specified database. In single-user mode, the [On Exit database method](../commands/on-exit-database-method) of the database being closed and the [On Startup database method](../commands/on-startup-database-method) (or the [On Server Open Connection database method](../commands/on-server-open-connection-database-method)) of the database being opened are called successively.
 
-**Warning:** Since this command causes the application to quit before re-opening with the specified database, it is usually not recommended to use it in the [On Startup database method](on-startup-database-method.md) or in a method called by this database method. 
+**Warning:** Since this command causes the application to quit before re-opening with the specified database, it is usually not recommended to use it in the [On Startup database method](../commands/on-startup-database-method) or in a method called by this database method. 
 
 The command is executed in an asynchronous manner: after its call, 4D continues executing the rest of the method. Then, the application behaves as if the **Quit** command was selected in the **File** menu: open dialog boxes are cancelled, any open processes have 10 seconds to finish before being terminated, and so on.
 
@@ -56,7 +56,7 @@ If the target database file is not found or is invalid, a standard file system e
 
 ## Example 2 
 
-You want to select a server at startup from a single-user application. You could execute this code from a process launched by the [On Startup database method](on-startup-database-method.md):
+You want to select a server at startup from a single-user application. You could execute this code from a process launched by the [On Startup database method](../commands/on-startup-database-method):
 
 ```4d
  var $xml : Text

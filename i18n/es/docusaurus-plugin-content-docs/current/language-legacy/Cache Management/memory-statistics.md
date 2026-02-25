@@ -1,4 +1,4 @@
----
+﻿---
 id: memory-statistics
 title: MEMORY STATISTICS
 slug: /commands/memory-statistics
@@ -28,7 +28,7 @@ Después de ejecutar el comando, las estadísticas solicitadas se entregan en lo
 
 ## Ver también 
 
-[Cache info](cache-info.md)  
+[Cache info](../commands/cache-info)  
 
 ## Propiedades
 

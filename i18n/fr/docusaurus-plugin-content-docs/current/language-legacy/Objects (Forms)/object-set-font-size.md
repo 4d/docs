@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-font-size
 title: OBJECT SET FONT SIZE
 slug: /commands/object-set-font-size
@@ -60,9 +60,9 @@ L'exemple suivant définit la taille de police de tous les objets de formulaire 
 ## Voir aussi 
 
 *Notes de programmation*  
-[OBJECT Get font size](object-get-font-size.md)  
-[OBJECT SET FONT](object-set-font.md)  
-[OBJECT SET FONT STYLE](object-set-font-style.md)  
+[OBJECT Get font size](../commands/object-get-font-size)  
+[OBJECT SET FONT](../commands/object-set-font)  
+[OBJECT SET FONT STYLE](../commands/object-set-font-style)  
 
 ## Propriétés
 

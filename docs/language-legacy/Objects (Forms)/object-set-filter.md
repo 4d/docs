@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-filter
 title: OBJECT SET FILTER
 slug: /commands/object-set-filter
@@ -67,8 +67,8 @@ The following example allows only the letters “a,” “b,” “c,” or “g
 
 ## See also 
 
-[OBJECT Get filter](object-get-filter.md)  
-[OBJECT SET FORMAT](object-set-format.md)  
+[OBJECT Get filter](../commands/object-get-filter)  
+[OBJECT SET FORMAT](../commands/object-set-format)  
 
 ## Properties
 

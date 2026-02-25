@@ -1,4 +1,4 @@
----
+﻿---
 id: keystroke
 title: Keystroke
 slug: /commands/keystroke
@@ -31,9 +31,9 @@ displayed_sidebar: docs
 
 En général, vous appelez **Keystroke** dans une méthode formulaire ou objet, lors de la gestion des événements formulaire On Before Keystroke et On After Keystroke. Pour détecter les événements de frappe clavier, utilisez la commande [Form event code](../commands/form-event-code). 
 
-Si vous voulez remplacer un caractère saisi par l'utilisateur par un autre, utilisez la commande [FILTER KEYSTROKE](filter-keystroke.md).
+Si vous voulez remplacer un caractère saisi par l'utilisateur par un autre, utilisez la commande [FILTER KEYSTROKE](../commands/filter-keystroke).
 
-**IMPORTANT :** Si vous voulez effectuer des opérations “à la volée” en fonction de la valeur courante de la zone saisissable en cours de modification ainsi que du caractère à saisir, rappelez-vous que le texte affiché à l'écran n'est pas encore la valeur du champ ou de la variable. La valeur saisie dans une variable ou un champ ne lui est affectée que lorsque la zone est validée (si l'utilisateur appuie sur la touche Tabulation, clique sur un bouton, etc.). En conséquence, pensez à placer les valeurs saisies dans une variable temporaire et à travailler avec celle-ci, ou utilisez la commande [Get edited text](get-edited-text.md). Vous devez procéder ainsi si vous souhaitez connaître la valeur courante du texte pour effectuer des actions spéciales.
+**IMPORTANT :** Si vous voulez effectuer des opérations “à la volée” en fonction de la valeur courante de la zone saisissable en cours de modification ainsi que du caractère à saisir, rappelez-vous que le texte affiché à l'écran n'est pas encore la valeur du champ ou de la variable. La valeur saisie dans une variable ou un champ ne lui est affectée que lorsque la zone est validée (si l'utilisateur appuie sur la touche Tabulation, clique sur un bouton, etc.). En conséquence, pensez à placer les valeurs saisies dans une variable temporaire et à travailler avec celle-ci, ou utilisez la commande [Get edited text](../commands/get-edited-text). Vous devez procéder ainsi si vous souhaitez connaître la valeur courante du texte pour effectuer des actions spéciales.
 
 Vous pouvez utiliser la commande **Keystroke** pour :
 
@@ -45,7 +45,7 @@ Vous pouvez utiliser la commande **Keystroke** pour :
 
 ## Exemple 1 
 
-Référez-vous aux exemples de la commande [FILTER KEYSTROKE](filter-keystroke.md).
+Référez-vous aux exemples de la commande [FILTER KEYSTROKE](../commands/filter-keystroke).
 
 ## Exemple 2 
 
@@ -173,9 +173,9 @@ A l'aide des possibilités de communication interprocess de 4D, vous pouvez cons
 
 ## Voir aussi 
 
-[FILTER KEYSTROKE](filter-keystroke.md)  
+[FILTER KEYSTROKE](../commands/filter-keystroke)  
 [Form event code](../commands/form-event-code)  
-[Get edited text](get-edited-text.md)  
+[Get edited text](../commands/get-edited-text)  
 
 ## Propriétés
 

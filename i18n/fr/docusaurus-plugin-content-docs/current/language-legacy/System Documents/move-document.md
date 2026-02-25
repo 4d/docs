@@ -1,4 +1,4 @@
----
+﻿---
 id: move-document
 title: MOVE DOCUMENT
 slug: /commands/move-document
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 Vous passez le chemin d'accès complet au document existant dans le paramètre *cheminSource* et le nouveau nom et/ou emplacement du document dans *cheminDest*.
 
-**Attention :** Avec **MOVE DOCUMENT**, vous pouvez déplacer un document depuis et vers tous les dossiers du même volume. Si vous souhaitez déplacer un document entre deux volumes différents, utilisez la commande [COPY DOCUMENT](copy-document.md) pour “déplacer” le document puis effacez le document original avec la commande [DELETE DOCUMENT](delete-document.md).
+**Attention :** Avec **MOVE DOCUMENT**, vous pouvez déplacer un document depuis et vers tous les dossiers du même volume. Si vous souhaitez déplacer un document entre deux volumes différents, utilisez la commande [COPY DOCUMENT](../commands/copy-document) pour “déplacer” le document puis effacez le document original avec la commande [DELETE DOCUMENT](../commands/delete-document).
 
 ## Exemple 1 
 
@@ -62,7 +62,7 @@ L'exemple suivant déplace le document DocNom :
 
 ## Voir aussi 
 
-[COPY DOCUMENT](copy-document.md)  
+[COPY DOCUMENT](../commands/copy-document)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: list-to-array
 title: LIST TO ARRAY
 slug: /commands/list-to-array
@@ -40,7 +40,7 @@ displayed_sidebar: docs
 
 オプションの*itemRefs*引数(数値配列)には、リスト項目の参照番号が返されます。
 
-引き続き LIST TO ARRAY コマンドを使い、階層リストの第一レベル要素に基づく配列を構築できます。しかしこのコマンドは子項目を返しません。階層リストで作業する場合、階層リストコマンド、特に [Load list](load-list.md) の使用が推奨されます。
+引き続き LIST TO ARRAY コマンドを使い、階層リストの第一レベル要素に基づく配列を構築できます。しかしこのコマンドは子項目を返しません。階層リストで作業する場合、階層リストコマンド、特に [Load list](../commands/load-list) の使用が推奨されます。
 
 ## 例題 1 
 
@@ -94,9 +94,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ARRAY TO LIST](array-to-list.md)  
-[Load list](load-list.md)  
-[SAVE LIST](save-list.md)  
+[ARRAY TO LIST](../commands/array-to-list)  
+[Load list](../commands/load-list)  
+[SAVE LIST](../commands/save-list)  
 
 ## プロパティ
 

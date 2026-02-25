@@ -1,4 +1,4 @@
----
+﻿---
 id: set-picture-metadata
 title: SET PICTURE METADATA
 slug: /commands/set-picture-metadata
@@ -89,8 +89,8 @@ DOM参照を使用してGPSブロックを設定します:
 
 ## 参照 
 
-[GET PICTURE KEYWORDS](get-picture-keywords.md)  
-[GET PICTURE METADATA](get-picture-metadata.md)  
+[GET PICTURE KEYWORDS](../commands/get-picture-keywords)  
+[GET PICTURE METADATA](../commands/get-picture-metadata)  
 *Picture Metadata Names*  
 *Picture Metadata Values*  
 

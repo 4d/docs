@@ -1,4 +1,4 @@
----
+﻿---
 id: count-in-array
 title: Count in array
 slug: /commands/count-in-array
@@ -67,8 +67,8 @@ Vous voulez compter les références d'objets dans un tableau d'objets :
 
 ## Voir aussi 
 
-[Find in array](find-in-array.md)  
-[Find in sorted array](find-in-sorted-array.md)  
+[Find in array](../commands/find-in-array)  
+[Find in sorted array](../commands/find-in-sorted-array)  
 
 ## Propriétés
 

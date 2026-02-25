@@ -1,4 +1,4 @@
----
+﻿---
 id: is-windows
 title: Is Windows
 slug: /commands/is-windows
@@ -43,8 +43,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[System info](system-info.md)  
-[Is macOS](is-macos.md)  
+[System info](../commands/system-info)  
+[Is macOS](../commands/is-macos)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: level
 title: Level
 slug: /commands/level
@@ -64,10 +64,10 @@ Este ejemplo es una plantilla para un método de formulario. Muestra cada evento
 
 ## Ver también 
 
-[ACCUMULATE](accumulate.md)  
-[BREAK LEVEL](break-level.md)  
+[ACCUMULATE](../commands/accumulate)  
+[BREAK LEVEL](../commands/break-level)  
 [Form event code](../commands/form-event-code)  
-[PRINT SELECTION](print-selection.md)  
+[PRINT SELECTION](../commands/print-selection)  
 
 ## Propiedades
 

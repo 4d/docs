@@ -1,4 +1,4 @@
----
+﻿---
 id: method-resolve-path
 title: METHOD RESOLVE PATH
 slug: /commands/method-resolve-path
@@ -93,7 +93,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[METHOD Get path](method-get-path.md)  
+[METHOD Get path](../commands/method-get-path)  
 
 ## プロパティ
 

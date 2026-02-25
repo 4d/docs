@@ -1,4 +1,4 @@
----
+﻿---
 id: self
 title: Self
 slug: /commands/self
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 ## Compatibility Note 
 
-<!--REF #_command_.Self.Summary-->This command is kept only for compatibility reasons.<!-- END REF--> Starting with version 12 of 4D, it is recommended to use the [OBJECT Get pointer](object-get-pointer.md) command.
+<!--REF #_command_.Self.Summary-->This command is kept only for compatibility reasons.<!-- END REF--> Starting with version 12 of 4D, it is recommended to use the [OBJECT Get pointer](../commands/object-get-pointer) command.
 
 ## Description 
 
@@ -36,7 +36,7 @@ The **Self**  command returns a pointer to the object whose object method is cur
 
 **Self** is used to reference a variable within its own object method. It returns a valid pointer when it is called from within an object method or from within a project method that is called directly or indirectly by an object method. 
 
-If **Self** is called out of context, it returns a [Is nil pointer](is-nil-pointer.md) pointer (*\->\[\]*).
+If **Self** is called out of context, it returns a [Is nil pointer](../commands/is-nil-pointer) pointer (*\->\[\]*).
 
 **Tip:** **Self** is useful when several objects on a form need to perform the same task, yet operate on themselves.
 
@@ -44,12 +44,12 @@ If **Self** is called out of context, it returns a [Is nil pointer](is-nil-point
 
 ## Example 
 
-See the example for the [RESOLVE POINTER](resolve-pointer.md) command.
+See the example for the [RESOLVE POINTER](../commands/resolve-pointer) command.
 
 ## See also 
 
-[OBJECT Get pointer](object-get-pointer.md)  
-[RESOLVE POINTER](resolve-pointer.md)  
+[OBJECT Get pointer](../commands/object-get-pointer)  
+[RESOLVE POINTER](../commands/resolve-pointer)  
 [This](../commands/this)  
 
 ## Properties

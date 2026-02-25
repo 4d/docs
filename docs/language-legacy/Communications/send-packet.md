@@ -1,4 +1,4 @@
----
+﻿---
 id: send-packet
 title: SEND PACKET
 slug: /commands/send-packet
@@ -29,18 +29,18 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.SEND PACKET.Summary-->**SEND PACKET** sends a packet to a serial port or to a document.<!-- END REF--> If *docRef* is specified, the packet is written to the document referenced by *docRef*. If *docRef* is not specified, the packet is written to the serial port or document previously opened by the [SET CHANNEL](set-channel.md) command. 
+<!--REF #_command_.SEND PACKET.Summary-->**SEND PACKET** sends a packet to a serial port or to a document.<!-- END REF--> If *docRef* is specified, the packet is written to the document referenced by *docRef*. If *docRef* is not specified, the packet is written to the serial port or document previously opened by the [SET CHANNEL](../commands/set-channel) command. 
 
 A *packet* is just a piece of data, generally a string of characters.  
 You can also pass a BLOB in *packet*. This allows you to bypass the constraints related to encoding for characters sent in text mode (see example 2).
 
-**Note:** When you pass a BLOB in *packet*, the command does not take into account any character set defined by the [USE CHARACTER SET](use-character-set.md) command. The BLOB is sent without any modification.
+**Note:** When you pass a BLOB in *packet*, the command does not take into account any character set defined by the [USE CHARACTER SET](../commands/use-character-set) command. The BLOB is sent without any modification.
 
-Before you use SEND PACKET, you must open a serial port or a document with [SET CHANNEL](set-channel.md), or open a document with one of the document commands.
+Before you use SEND PACKET, you must open a serial port or a document with [SET CHANNEL](../commands/set-channel), or open a document with one of the document commands.
 
-When writing to a document, the first SEND PACKET begins writing at the beginning of the document unless the document was opened with [USE CHARACTER SET](use-character-set.md). Until the document is closed, each subsequent packet is appended to any previously sent packets.
+When writing to a document, the first SEND PACKET begins writing at the beginning of the document unless the document was opened with [USE CHARACTER SET](../commands/use-character-set). Until the document is closed, each subsequent packet is appended to any previously sent packets.
 
-**Note:** This command is useful for a document opened with [SET CHANNEL](set-channel.md). On the other hand, for a document opened with [Open document](open-document.md), [Create document](create-document.md) or [Append document](append-document.md), you can use the commands [Get document position](get-document-position.md) and [SET DOCUMENT POSITION](set-document-position.md) to get and change the location in the document where the next writing (SEND PACKET) or reading ([RECEIVE PACKET](receive-packet.md)) will occur.
+**Note:** This command is useful for a document opened with [SET CHANNEL](../commands/set-channel). On the other hand, for a document opened with [Open document](../commands/open-document), [Create document](../commands/create-document) or [Append document](../commands/append-document), you can use the commands [Get document position](../commands/get-document-position) and [SET DOCUMENT POSITION](../commands/set-document-position) to get and change the location in the document where the next writing (SEND PACKET) or reading ([RECEIVE PACKET](../commands/receive-packet)) will occur.
 
 ## Example 1 
 
@@ -91,9 +91,9 @@ This example illustrates the sending and retrieval of extended characters via a 
 
 ## See also 
 
-[Get document position](get-document-position.md)  
-[RECEIVE PACKET](receive-packet.md)  
-[SET DOCUMENT POSITION](set-document-position.md)  
+[Get document position](../commands/get-document-position)  
+[RECEIVE PACKET](../commands/receive-packet)  
+[SET DOCUMENT POSITION](../commands/set-document-position)  
 
 ## Properties
 

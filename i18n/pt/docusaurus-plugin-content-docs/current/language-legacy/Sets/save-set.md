@@ -1,4 +1,4 @@
----
+﻿---
 id: save-set
 title: SAVE SET
 slug: /commands/save-set
@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAVE SET.Summary-->SAVE SET guarda *conjunto* no arquivo *documento*.<!-- END REF-->  
 
-Não é necessário que *documento* tenha o mesmo nome que o conjunto. Se passar uma string vazia em *documento*, aparece uma caixa de diálogo de salvar arquivos de maneira que o usuário possa introduzir o nome do documento. Com o comando [LOAD SET](load-set.md) pode carregar um conjunto guardado.
+Não é necessário que *documento* tenha o mesmo nome que o conjunto. Se passar uma string vazia em *documento*, aparece uma caixa de diálogo de salvar arquivos de maneira que o usuário possa introduzir o nome do documento. Com o comando [LOAD SET](../commands/load-set) pode carregar um conjunto guardado.
 
 Se o usuário clicar em Cancelar na caixa de diálogo de Salvar Arquivo, ou se acontecer um erro durante a operação de salvar, a variável sistema OK assume o valor 0\. Do contrário, assume o valor 1.  
   
@@ -43,7 +43,7 @@ Se o usuário clicar no botão Cancelar na caixa de diálogo de salvar arquivos,
 
 ## Ver também 
 
-[LOAD SET](load-set.md)  
+[LOAD SET](../commands/load-set)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: web-send-file
 title: WEB SEND FILE
 slug: /commands/web-send-file
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 Por defecto, 4D busca el documento HTML al interior de la carpeta raíz, definida en las Propiedades de la base.  
 Este comando acepta como parámetro una ruta de acceso expresada en sintaxis Poxis (nombres de directorios o de carpetas separados por una barra oblicua "/") o en sintaxis sistema.  
-Si pasa una ruta de acceso inválida, se genera un error asociado a la gestión de los archivos de su sistema operativo. Puede interceptar este error utilizando un método instalado por el comando [ON ERR CALL](on-err-call.md). Si el método muestra una caja de diálogo de alerta o de mensaje, aparecerá en el equipo del navegador. 
+Si pasa una ruta de acceso inválida, se genera un error asociado a la gestión de los archivos de su sistema operativo. Puede interceptar este error utilizando un método instalado por el comando [ON ERR CALL](../commands/on-err-call). Si el método muestra una caja de diálogo de alerta o de mensaje, aparecerá en el equipo del navegador. 
 
 Una vez se ejecuta **WEB SEND FILE**, la variable sistema OK se actualiza: si el archivo a enviar existe y si el timeout no ha pasado, OK toma el valor 1\. De lo contrario, toma el valor 0\. 
 
@@ -64,7 +64,7 @@ Si el archivo a enviar existe y si el timeout no ha pasado, OK toma el valor 1\.
 
 ## Ver también 
 
-[WEB SEND BLOB](web-send-blob.md)  
+[WEB SEND BLOB](../commands/web-send-blob)  
 
 ## Propiedades
 

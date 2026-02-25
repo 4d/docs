@@ -1,4 +1,4 @@
----
+﻿---
 id: variable-to-variable
 title: VARIABLE TO VARIABLE
 slug: /commands/variable-to-variable
@@ -31,12 +31,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.VARIABLE TO VARIABLE.Summary-->La commande **VARIABLE TO VARIABLE** écrit la valeur de la ou des variable(s) *varSource1* (*varSource2*, etc.), dans la ou les variable(s) process *varDestination* (*varDestination2*, etc.) du process de destination dont vous avez passé le numéro dans *process*.<!-- END REF-->
 
-**VARIABLE TO VARIABLE** a un fonctionnement semblable à celui de la commande [SET PROCESS VARIABLE](set-process-variable.md), avec cependant les différences suivantes : 
+**VARIABLE TO VARIABLE** a un fonctionnement semblable à celui de la commande [SET PROCESS VARIABLE](../commands/set-process-variable), avec cependant les différences suivantes : 
 
-* Alors que vous passez comme source à [SET PROCESS VARIABLE](set-process-variable.md)des expressions (et donc vous ne pouvez pas passer un tableau en totalité), vous devez passer comme source à **VARIABLE TO VARIABLE** uniquement des variables (et donc vous pouvez passer un tableau en totalité).
-* Avec [SET PROCESS VARIABLE](set-process-variable.md), chaque variable de destination peut être une variable ou un élément de tableau, mais ne peut pas être un tableau. Avec **VARIABLE TO VARIABLE**, chaque variable de destination peut être une variable, un tableau ou un élément de tableau.
+* Alors que vous passez comme source à [SET PROCESS VARIABLE](../commands/set-process-variable)des expressions (et donc vous ne pouvez pas passer un tableau en totalité), vous devez passer comme source à **VARIABLE TO VARIABLE** uniquement des variables (et donc vous pouvez passer un tableau en totalité).
+* Avec [SET PROCESS VARIABLE](../commands/set-process-variable), chaque variable de destination peut être une variable ou un élément de tableau, mais ne peut pas être un tableau. Avec **VARIABLE TO VARIABLE**, chaque variable de destination peut être une variable, un tableau ou un élément de tableau.
 
-**4D Server :** La communication process “intermachine” permise par les commandes **VARIABLE TO VARIABLE**, [SET PROCESS VARIABLE](set-process-variable.md) et [GET PROCESS VARIABLE](get-process-variable.md) n’est possible que du client vers le serveur. C’est toujours un process client qui lit ou écrit les variables d’une procédure stockée.
+**4D Server :** La communication process “intermachine” permise par les commandes **VARIABLE TO VARIABLE**, [SET PROCESS VARIABLE](../commands/set-process-variable) et [GET PROCESS VARIABLE](../commands/get-process-variable) n’est possible que du client vers le serveur. C’est toujours un process client qui lit ou écrit les variables d’une procédure stockée.
 
 Pour chaque association *varDestination;varSource*, le type de la variable source doit être compatible avec la variable de destination, sinon vous pourrez obtenir des variables avec des valeurs non significatives. En mode interprété, si la variable de destination n'existe pas, elle est créée puis le type et la valeur de la variable source lui sont affectés.
 
@@ -52,7 +52,7 @@ Lorsque le process courant écrit les variables du process de destination, ce de
 * Tableau de pointeurs
 * Tableau à deux dimensions
 
-Le process de destination doit être un process utilisateur, ce ne peut être un des process du moteur de 4D. Si le process de destination n'existe pas, une erreur est retournée. Vous pouvez intercepter cette erreur à l'aide d'une méthode de gestion d'erreurs installée par la commande [ON ERR CALL](on-err-call.md).
+Le process de destination doit être un process utilisateur, ce ne peut être un des process du moteur de 4D. Si le process de destination n'existe pas, une erreur est retournée. Vous pouvez intercepter cette erreur à l'aide d'une méthode de gestion d'erreurs installée par la commande [ON ERR CALL](../commands/on-err-call).
 
 ## Exemple 
 
@@ -68,9 +68,9 @@ L'exemple suivant récupère un tableau process depuis le process désigné par 
 
 ## Voir aussi 
 
-[GET PROCESS VARIABLE](get-process-variable.md)  
+[GET PROCESS VARIABLE](../commands/get-process-variable)  
 *Introduction aux process*  
-[SET PROCESS VARIABLE](set-process-variable.md)  
+[SET PROCESS VARIABLE](../commands/set-process-variable)  
 
 ## Propriétés
 

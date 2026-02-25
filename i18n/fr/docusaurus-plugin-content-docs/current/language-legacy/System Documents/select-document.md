@@ -1,4 +1,4 @@
----
+﻿---
 id: select-document
 title: Select document
 slug: /commands/select-document
@@ -44,7 +44,7 @@ Le paramètre *répertoire* indique le dossier dont le contenu doit être affich
 Avec ce principe, vous pouvez conserver en mémoire le chemin d’accès du dossier ouvert au moment où l’utilisateur a cliqué sur le bouton de sélection, c’est-à-dire le dossier choisi par l’utilisateur. Lors du premier appel d’un numéro arbitraire (par exemple 5), la commande affiche le dossier d’utilisateur par défaut du système (équivaut à passer une chaîne vide). L’utilisateur pourra alors éventuellement naviguer parmi les dossiers de son disque dur. Au moment où il cliquera sur le bouton de sélection, le chemin d’accès sera mémorisé et associé au numéro 5\. Lors des appels suivants du numéro 5, le chemin d’accès mémorisé sera utilisé par défaut. En cas de sélection d’un nouvel emplacement, le chemin numéro 5 sera mis à jour, et ainsi de suite.  
 Ce mécanisme vous permet de mémoriser jusqu’à 32000 chemins d’accès. Sous Windows, chaque chemin est conservé durant la session uniquement. Sous Mac OS, les chemins sont conservés par le système, ils restent mémorisés d’une session à l’autre.
 
-**Note :** Ce mécanisme est identique à celui utilisé par la commande [Select folder](select-folder.md). Les numéros de chemins d’accès mémorisés sont partagés entre les deux commandes.
+**Note :** Ce mécanisme est identique à celui utilisé par la commande [Select folder](../commands/select-folder). Les numéros de chemins d’accès mémorisés sont partagés entre les deux commandes.
 
 Passez dans le paramètre *typeFichiers* le ou les type(s) de fichier(s) pouvant être sélectionnés dans la boîte de dialogue d’ouverture. Vous pouvez passer une liste de plusieurs types séparés par un *;* (point virgule). Pour chaque type défini, une ligne sera ajoutée dans le menu de choix de type de la boîte de dialogue. 
 
@@ -108,8 +108,8 @@ Si aucun fichier n’a été sélectionné (par exemple si l’utilisateur a cli
 
 ## Voir aussi 
 
-[Open document](open-document.md)  
-[Select folder](select-folder.md)  
+[Open document](../commands/open-document)  
+[Select folder](../commands/select-folder)  
 
 ## Propriétés
 

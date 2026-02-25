@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-drag-and-drop-options
 title: OBJECT GET DRAG AND DROP OPTIONS
 slug: /commands/object-get-drag-and-drop-options
@@ -36,7 +36,7 @@ displayed_sidebar: docs
   
 Se passado o parâmetro opcional *\**, indica que o parâmetro *objeto* é um nome de objeto (uma cadeia). Se não passa este parâmetro, isto indica que o parâmetro *objeto* é uma variável. Neste caso, é passada uma referencia de variável em lugar de uma cadeia.  
   
-O comando devolve as opções de arrastar e soltar atuais, como estão definidas em modo *Desenho* ou para o processo atual utilizando o comando [OBJECT SET DRAG AND DROP OPTIONS](object-set-drag-and-drop-options.md).  
+O comando devolve as opções de arrastar e soltar atuais, como estão definidas em modo *Desenho* ou para o processo atual utilizando o comando [OBJECT SET DRAG AND DROP OPTIONS](../commands/object-set-drag-and-drop-options).  
   
 Cada parâmetro devolve True ou False dependendo se a opção correspondente está ativa ou inativa. 
 
@@ -47,7 +47,7 @@ Cada parâmetro devolve True ou False dependendo se a opção correspondente est
 
 ## Ver também 
 
-[OBJECT SET DRAG AND DROP OPTIONS](object-set-drag-and-drop-options.md)  
+[OBJECT SET DRAG AND DROP OPTIONS](../commands/object-set-drag-and-drop-options)  
 
 ## Propriedades
 

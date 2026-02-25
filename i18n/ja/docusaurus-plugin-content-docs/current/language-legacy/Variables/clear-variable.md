@@ -1,4 +1,4 @@
----
+﻿---
 id: clear-variable
 title: CLEAR VARIABLE
 slug: /commands/clear-variable
@@ -56,7 +56,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Undefined](undefined.md)  
+[Undefined](../commands/undefined)  
 
 ## プロパティ
 

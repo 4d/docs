@@ -1,4 +1,4 @@
----
+﻿---
 id: use-set
 title: USE SET
 slug: /commands/use-set
@@ -35,8 +35,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[CLEAR SET](clear-set.md)  
-[LOAD SET](load-set.md)  
+[CLEAR SET](../commands/clear-set)  
+[LOAD SET](../commands/load-set)  
 
 ## プロパティ
 

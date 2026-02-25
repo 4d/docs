@@ -1,4 +1,4 @@
----
+﻿---
 id: st-set-attributes
 title: ST SET ATTRIBUTES
 slug: /commands/st-set-attributes
@@ -114,8 +114,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[FONT LIST](font-list.md)  
-[ST GET ATTRIBUTES](st-get-attributes.md)  
+[FONT LIST](../commands/font-list)  
+[ST GET ATTRIBUTES](../commands/st-get-attributes)  
 
 ## プロパティ
 

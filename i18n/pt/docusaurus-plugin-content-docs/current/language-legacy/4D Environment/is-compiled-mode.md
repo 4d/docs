@@ -1,4 +1,4 @@
----
+﻿---
 id: is-compiled-mode
 title: Is compiled mode
 slug: /commands/is-compiled-mode
@@ -52,8 +52,8 @@ Em uma de suas rotinas, você inclui a depuração do código apenas quando voc�
 
 ## Ver também 
 
-[IDLE](idle.md)  
-[Undefined](undefined.md)  
+[IDLE](../commands/idle)  
+[Undefined](../commands/undefined)  
 
 ## Propriedades
 

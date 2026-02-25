@@ -1,4 +1,4 @@
----
+﻿---
 id: compact-data-file
 title: Compact data file
 slug: /commands/compact-data-file
@@ -57,7 +57,7 @@ La commande retourne le chemin d’accès complet du dossier effectivement cré�
 | Do not create log file  | Entier long | 16384  | En principe, la commande crée un fichier d’historique au format xml (reportez-vous à la fin de la description de la commande). Vous pouvez annuler ce fonctionnement en passant cette option.                                                                                                                                                                                                                                                                                                                    |  
 | Timestamp log file name | Entier long | 262144 | Lorsque cette option est passée, le nom du fichier d'historique généré contiendra la date et l'heure de sa création, par conséquent il ne remplacera aucun fichier d'historique éventuellement déjà généré. Par défaut, si cette option n'est pas passée, le nom du fichier n'est pas horodaté, et chaque nouveau fichier généré remplace le précédent.                                                                                                                                                          |  
 | Update records          | Entier long | 65536  | Forcer la réécriture de tous les enregistrements suivant la définition courante des champs dans la structure                                                                                                                                                                                                                                                                                                                                                                                                     |
-* Le paramètre *méthode* permet de désigner une méthode de rétro-appel qui sera régulièrement appelée durant le compactage si l’option Create process a été passée. Dans le cas contraire, la méthode de rétro-appel n’est jamais appelée. Pour plus d’informations sur cette méthode, reportez-vous à la description de la commande [VERIFY DATA FILE](verify-data-file.md).
+* Le paramètre *méthode* permet de désigner une méthode de rétro-appel qui sera régulièrement appelée durant le compactage si l’option Create process a été passée. Dans le cas contraire, la méthode de rétro-appel n’est jamais appelée. Pour plus d’informations sur cette méthode, reportez-vous à la description de la commande [VERIFY DATA FILE](../commands/verify-data-file).
 
 Par défaut, la commande **Compact data file** crée un fichier d'historique au format xml (si vous n'avez pas passé l'option Do not create log file, cf. paramètre *options*). Son nom est basé sur celui du fichier de structure de la base et il est placé dans le dossier **Logs** de cette base. Par exemple, pour un fichier de structure nommé “myDB.4db”, le fichier d’historique sera nommé “myDB\_Compact\_Log.xml”.   
 Si vous avez passé l'option Timestamp log file name, le nom du fichier d'historique inclut la date et l'heure de sa création sous la forme "AAAA-MM-JJ HH-MM-SS", ce qui donne par exemple : “myDB\_Compact\_Log\_2015-09-27 15-20-35.xml”. Ce principe permet d'éviter que chaque nouveau fichier d'historique écrase le précédent, mais pourra nécessiter ultérieurement une action manuelle afin de supprimer les fichiers superflus.   
@@ -80,8 +80,8 @@ Si l’opération de compactage s’est déroulée correctement, la variable sys
 
 ## Voir aussi 
 
-[Table fragmentation](table-fragmentation.md)  
-[VERIFY DATA FILE](verify-data-file.md)  
+[Table fragmentation](../commands/table-fragmentation)  
+[VERIFY DATA FILE](../commands/verify-data-file)  
 
 ## Propriétés
 

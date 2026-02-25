@@ -1,4 +1,4 @@
----
+﻿---
 id: volume-attributes
 title: VOLUME ATTRIBUTES
 slug: /commands/volume-attributes
@@ -106,7 +106,7 @@ Once this project method is added to your application, you can for instance writ
 
 ## See also 
 
-[VOLUME LIST](volume-list.md)  
+[VOLUME LIST](../commands/volume-list)  
 
 ## Properties
 

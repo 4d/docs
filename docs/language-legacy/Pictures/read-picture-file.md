@@ -1,4 +1,4 @@
----
+﻿---
 id: read-picture-file
 title: READ PICTURE FILE
 slug: /commands/read-picture-file
@@ -35,13 +35,13 @@ displayed_sidebar: docs
 You can pass in *fileName* the full pathname of the file to read, or a file name only. If you pass only the file name, it should be located next to the database structure file. Under Windows, the file extension must be indicated.  
 If an empty string ("") is passed in *fileName*, the standard Open file dialog box appears and the user selects the file to be read, as well as the available formats.
 
-You can get the list of available formats using the [PICTURE CODEC LIST](picture-codec-list.md) command.
+You can get the list of available formats using the [PICTURE CODEC LIST](../commands/picture-codec-list) command.
 
 You pass in *picture* the picture variable or field which will receive the picture read.
 
 **Note:** The internal picture format is stored within the 4D variable or field.
 
-If you pass the optional *\** parameter, the command will accept any type of file. This means that you can work with pictures without necessarily having the suitable codecs (see the description of the [BLOB TO PICTURE](blob-to-picture.md) command).
+If you pass the optional *\** parameter, the command will accept any type of file. This means that you can work with pictures without necessarily having the suitable codecs (see the description of the [BLOB TO PICTURE](../commands/blob-to-picture) command).
 
 ## System variables and sets 
 
@@ -49,10 +49,10 @@ If the command is executed successfully, the system variable Document contains t
 
 ## See also 
 
-[BLOB TO PICTURE](blob-to-picture.md)  
-[PICTURE CODEC LIST](picture-codec-list.md)  
+[BLOB TO PICTURE](../commands/blob-to-picture)  
+[PICTURE CODEC LIST](../commands/picture-codec-list)  
 *Pictures*  
-[WRITE PICTURE FILE](write-picture-file.md)  
+[WRITE PICTURE FILE](../commands/write-picture-file)  
 
 ## Properties
 

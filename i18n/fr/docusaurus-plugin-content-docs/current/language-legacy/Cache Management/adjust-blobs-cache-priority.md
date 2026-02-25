@@ -1,4 +1,4 @@
----
+﻿---
 id: adjust-blobs-cache-priority
 title: ADJUST BLOBS CACHE PRIORITY
 slug: /commands/adjust-blobs-cache-priority
@@ -36,7 +36,7 @@ La commande **ADJUST BLOBS CACHE PRIORITY** modifie la valeur de *priorité* des
 
 **Note :** Cette commande fonctionne en mode local seulement (4D Server et 4D) ; elle ne peut pas être utilisée avec 4D en mode distant.
 
- Les champs de données "blobs" incluent les types BLOB, texte, image et objet. La commande modifie la priorité de ces données uniquement lorsqu'elles sont stockées dans le fichier de données. La priorité des champs de données scalaires (telles que des dates ou des numériques) est ajustée par la commande [ADJUST TABLE CACHE PRIORITY](adjust-table-cache-priority.md). 
+ Les champs de données "blobs" incluent les types BLOB, texte, image et objet. La commande modifie la priorité de ces données uniquement lorsqu'elles sont stockées dans le fichier de données. La priorité des champs de données scalaires (telles que des dates ou des numériques) est ajustée par la commande [ADJUST TABLE CACHE PRIORITY](../commands/adjust-table-cache-priority). 
 
 Passez dans le paramètre *priorité* une des constantes du thème "*Gestion du cache*" :
 
@@ -62,8 +62,8 @@ Vous souhaitez modifier temporairement la priorité des champs Texte de la table
 
 ## Voir aussi 
 
-[Get adjusted blobs cache priority](get-adjusted-blobs-cache-priority.md)  
-[SET BLOBS CACHE PRIORITY](set-blobs-cache-priority.md)  
+[Get adjusted blobs cache priority](../commands/get-adjusted-blobs-cache-priority)  
+[SET BLOBS CACHE PRIORITY](../commands/set-blobs-cache-priority)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-get-preference
 title: WA GET PREFERENCE
 slug: /commands/wa-get-preference
@@ -50,7 +50,7 @@ Passez dans le paramètre *valeur* une variable devant recevoir la valeur couran
 
 ## Voir aussi 
 
-[WA SET PREFERENCE](wa-set-preference.md)  
+[WA SET PREFERENCE](../commands/wa-set-preference)  
 
 ## Propriétés
 

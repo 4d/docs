@@ -1,4 +1,4 @@
----
+﻿---
 id: request
 title: Request
 slug: /commands/request
@@ -89,8 +89,8 @@ Mostrará la siguiente caja de diálogo (en Windows):
 
 ## Ver también 
 
-[ALERT](alert.md)  
-[CONFIRM](confirm.md)  
+[ALERT](../commands/alert)  
+[CONFIRM](../commands/confirm)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: web-service-get-result
 title: WEB SERVICE GET RESULT
 slug: /commands/web-service-get-result
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB SERVICE GET RESULT.Summary-->O comando **WEB SERVICE GET RESULT** permite recuperar um valor enviado pelo serviço web como resultado do processo realizado.<!-- END REF-->  
 
-**Nota**: este comando deve ser utilizado apenas depois do comando [WEB SERVICE CALL](web-service-call.md).  
+**Nota**: este comando deve ser utilizado apenas depois do comando [WEB SERVICE CALL](../commands/web-service-call).  
   
 O parâmetro *valorRetornado* recebe o valor reenviado pelo serviço web. Passe neste parâmetro uma variável 4D. Esta variável é geralmente $result, que corresponde ao valor retornado pelo método proxy. Entretanto, é possível utilizar variáveis intermediárias (deve utilizar as variáveis de processo apenas).  
   
@@ -62,8 +62,8 @@ Imagine um serviço web que devolve a hora atual em qualquer cidade do mundo. Os
 
 ## Ver também 
 
-[WEB SERVICE CALL](web-service-call.md)  
-[WEB SERVICE SET PARAMETER](web-service-set-parameter.md)  
+[WEB SERVICE CALL](../commands/web-service-call)  
+[WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: selection-to-array
 title: SELECTION TO ARRAY
 slug: /commands/selection-to-array
@@ -39,7 +39,7 @@ The command **SELECTION TO ARRAY** applies to the selection for the table design
 
 * Load values from one or several fields.
 * Load Record numbers from the table using the syntax *\[table\];array*
-* Load values from related fields, provided that there is a Many to One automatic relation between the tables or provided that you have previously called [SET AUTOMATIC RELATIONS](set-automatic-relations.md) to make manual Many to One relations automatic. In both cases, values are loaded from tables through several levels of Many to One relations.
+* Load values from related fields, provided that there is a Many to One automatic relation between the tables or provided that you have previously called [SET AUTOMATIC RELATIONS](../commands/set-automatic-relations) to make manual Many to One relations automatic. In both cases, values are loaded from tables through several levels of Many to One relations.
 
 Each array is typed according to the field type. 
 
@@ -53,13 +53,13 @@ When you apply **SELECTION TO ARRAY** to a Time type field, it is important to n
 If you load record numbers, they are copied into a Long Integer array.
 
 When you pass the *\** parameter, 4D does not execute the corresponding statement line immediately but instead stores it in memory; this way you can stack several lines ending with an *\**. All of these lines awaiting execution are executed by one final **SELECTION TO ARRAY** statement that does not have the *\** parameter. For this reason, the command can now be called without any parameters. In this case, array types are verified when the final line (without the *\** parameter) is executed.   
-As with the [QUERY](query.md) command, this lets you break up a complex statement into a set of lines, which is easier to read and to maintain. You can also insert intermediary statements or build an array within a loop (see example 2 of the [ARRAY TO SELECTION](array-to-selection.md) command). 
+As with the [QUERY](../commands/query) command, this lets you break up a complex statement into a set of lines, which is easier to read and to maintain. You can also insert intermediary statements or build an array within a loop (see example 2 of the [ARRAY TO SELECTION](../commands/array-to-selection) command). 
 
 **4D Server:** The **SELECTION TO ARRAY** command is optimized for 4D Server. Each array is created on the server and then sent, in its entirety, to the client machine.
 
-**WARNING:** The **SELECTION TO ARRAY** command can create large arrays, depending on the size of the current selection and on the type and size of the data you are loading. Arrays reside in memory, so it is a good idea to test the result after the command is completed. To do so, test the size of each resulting array or cover the call to the command, using an [ON ERR CALL](on-err-call.md) project method.
+**WARNING:** The **SELECTION TO ARRAY** command can create large arrays, depending on the size of the current selection and on the type and size of the data you are loading. Arrays reside in memory, so it is a good idea to test the result after the command is completed. To do so, test the size of each resulting array or cover the call to the command, using an [ON ERR CALL](../commands/on-err-call) project method.
 
-**Note:** After a call to **SELECTION TO ARRAY**, the current selection and current record remain the same, but the current record is no longer loaded. If you need to use the values of the fields in the current record, use the [LOAD RECORD](load-record.md) command after the **SELECTION TO ARRAY** command.
+**Note:** After a call to **SELECTION TO ARRAY**, the current selection and current record remain the same, but the current record is no longer loaded. If you need to use the values of the fields in the current record, use the [LOAD RECORD](../commands/load-record) command after the **SELECTION TO ARRAY** command.
 
 ## Example 1 
 
@@ -87,12 +87,12 @@ The same example can be written:
 
 ## See also 
 
-[ARRAY TO SELECTION](array-to-selection.md)  
-[CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
-[MULTI SORT ARRAY](multi-sort-array.md)  
-[ON ERR CALL](on-err-call.md)  
-[SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
-[SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
+[ARRAY TO SELECTION](../commands/array-to-selection)  
+[CREATE SELECTION FROM ARRAY](../commands/create-selection-from-array)  
+[MULTI SORT ARRAY](../commands/multi-sort-array)  
+[ON ERR CALL](../commands/on-err-call)  
+[SELECTION RANGE TO ARRAY](../commands/selection-range-to-array)  
+[SET AUTOMATIC RELATIONS](../commands/set-automatic-relations)  
 
 ## Properties
 

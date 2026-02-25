@@ -1,4 +1,4 @@
----
+﻿---
 id: generate-certificate-request
 title: GENERATE CERTIFICATE REQUEST
 slug: /commands/generate-certificate-request
@@ -32,13 +32,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GENERATE CERTIFICATE REQUEST.Summary-->La commande **GENERATE CERTIFICATE REQUEST** permet de générer une demande de certificat au format PKCS, directement exploitable par des autorités de certification telles que Verisign® ou Thawthe®.<!-- END REF--> Le certificat est une pièce essentielle du fonctionnement du protocole SSL dans le cadre d’un serveur Web. Il est envoyé à chaque browser se connectant en mode SSL. Il contient la “carte d’identité” du site Web (reprenant les informations que vous saisissez dans la commande), ainsi que sa clé publique — permettant aux browsers de décrypter les informations reçues. En outre, le certificat contient diverses informations ajoutées par l’autorité de certification.
 
-**Note :** Pour plus d’informations sur le fonctionnement du protocole SSL avec le serveur Web 4D, reportez-vous à la section [WEB SERVICE SET PARAMETER](web-service-set-parameter.md). 
+**Note :** Pour plus d’informations sur le fonctionnement du protocole SSL avec le serveur Web 4D, reportez-vous à la section [WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter). 
 
-La demande de certificat nécessite une paire de clés générée à l’aide de la commande [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md) et contient diverses informations. C’est en combinant cette demande avec d’autres paramètres qui lui sont propres, que l’autorité de certification sera en mesure de générer un certificat.
+La demande de certificat nécessite une paire de clés générée à l’aide de la commande [GENERATE ENCRYPTION KEYPAIR](../commands/generate-encryption-keypair) et contient diverses informations. C’est en combinant cette demande avec d’autres paramètres qui lui sont propres, que l’autorité de certification sera en mesure de générer un certificat.
 
-Passez dans *cléPrivée* un BLOB contenant la clé privée générée avec la commande [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md). 
+Passez dans *cléPrivée* un BLOB contenant la clé privée générée avec la commande [GENERATE ENCRYPTION KEYPAIR](../commands/generate-encryption-keypair). 
 
-Passez dans *demCertif* un BLOB vide. Après l’exécution de la commande, il contiendra la demande de certificat au format PKCS encodé en base64\. Vous pouvez stocker directement ce contenu dans un fichier texte suffixé .pem, par exemple à l’aide de la commande [BLOB TO DOCUMENT](blob-to-document.md), pour la faire parvenir à l’autorité de certification.
+Passez dans *demCertif* un BLOB vide. Après l’exécution de la commande, il contiendra la demande de certificat au format PKCS encodé en base64\. Vous pouvez stocker directement ce contenu dans un fichier texte suffixé .pem, par exemple à l’aide de la commande [BLOB TO DOCUMENT](../commands/blob-to-document), pour la faire parvenir à l’autorité de certification.
 
 **Important :** La clé privée est utilisée pour générer la demande de certificat mais ne doit pas être envoyée à l’autorité de certification.
 
@@ -58,7 +58,7 @@ L’ordre dans lequel les codes et les informations sont insérés dans les tabl
 
 ## Exemple 
 
-Un formulaire “Demande de certificat” comporte les six champs nécessaires à l’établissement d’une demande de certificat standard. Le bouton **Générer** crée un document sur disque contenant la demande de certificat. Le document “Cléprivée.txt” contient la clé privée (générée à l’aide la commande [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)) doit déjà être présent sur le disque.
+Un formulaire “Demande de certificat” comporte les six champs nécessaires à l’établissement d’une demande de certificat standard. Le bouton **Générer** crée un document sur disque contenant la demande de certificat. Le document “Cléprivée.txt” contient la clé privée (générée à l’aide la commande [GENERATE ENCRYPTION KEYPAIR](../commands/generate-encryption-keypair)) doit déjà être présent sur le disque.
 
 ![](../../assets/en/commands/pict32461.fr.png)
 
@@ -92,8 +92,8 @@ Un formulaire “Demande de certificat” comporte les six champs nécessaires �
 
 ## Voir aussi 
 
-[GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
-[HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md)  
+[GENERATE ENCRYPTION KEYPAIR](../commands/generate-encryption-keypair)  
+[HTTP SET CERTIFICATES FOLDER](../commands/http-set-certificates-folder)  
 
 ## Propriétés
 

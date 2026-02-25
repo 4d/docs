@@ -1,4 +1,4 @@
----
+﻿---
 id: current-time
 title: Current time
 slug: /commands/current-time
@@ -48,9 +48,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Milliseconds](milliseconds.md)  
+[Milliseconds](../commands/milliseconds)  
 [String](../commands/string)  
-[Tickcount](tickcount.md)  
+[Tickcount](../commands/tickcount)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-scrollbar
 title: OBJECT GET SCROLLBAR
 slug: /commands/object-get-scrollbar
@@ -52,11 +52,11 @@ Este comando se puede utilizar con los siguientes objetos de formulario:
 * list boxes,
 * listas jerárquicas,
 * subformularios.
-Para obtener más información, consulte la descripción del comando [OBJECT SET SCROLLBAR](object-set-scrollbar.md).
+Para obtener más información, consulte la descripción del comando [OBJECT SET SCROLLBAR](../commands/object-set-scrollbar).
 
 ## Ver también 
 
-[OBJECT SET SCROLLBAR](object-set-scrollbar.md)  
+[OBJECT SET SCROLLBAR](../commands/object-set-scrollbar)  
 
 ## Propiedades
 

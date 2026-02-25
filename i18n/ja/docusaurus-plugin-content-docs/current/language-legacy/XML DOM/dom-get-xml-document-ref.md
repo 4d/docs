@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-get-xml-document-ref
 title: DOM Get XML document ref
 slug: /commands/dom-get-xml-document-ref
@@ -63,8 +63,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[DOM Append XML child node](dom-append-xml-child-node.md)  
-[DOM GET XML CHILD NODES](dom-get-xml-child-nodes.md)  
+[DOM Append XML child node](../commands/dom-append-xml-child-node)  
+[DOM GET XML CHILD NODES](../commands/dom-get-xml-child-nodes)  
 
 ## プロパティ
 

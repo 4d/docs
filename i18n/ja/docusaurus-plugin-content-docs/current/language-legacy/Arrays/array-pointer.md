@@ -1,4 +1,4 @@
----
+﻿---
 id: array-pointer
 title: ARRAY POINTER
 slug: /commands/array-pointer
@@ -29,7 +29,7 @@ displayed_sidebar: docs
   
 **ARRAY POINTER** を既存の配列に適用する場合、  
   
-* 配列サイズを増やす場合、既存の値は保持され、新しい要素はヌルポインタで初期化されます。この新しい要素に[Is nil pointer](is-nil-pointer.md) を適用するとTrueが返されます。
+* 配列サイズを増やす場合、既存の値は保持され、新しい要素はヌルポインタで初期化されます。この新しい要素に[Is nil pointer](../commands/is-nil-pointer) を適用するとTrueが返されます。
 * 配列サイズを減らす場合、後ろの要素は配列から削除され、失われます。
 
 ## 例題 1 

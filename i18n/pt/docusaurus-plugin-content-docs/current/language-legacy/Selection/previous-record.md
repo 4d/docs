@@ -1,4 +1,4 @@
----
+﻿---
 id: previous-record
 title: PREVIOUS RECORD
 slug: /commands/previous-record
@@ -17,17 +17,17 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.PREVIOUS RECORD.Summary-->PREVIOUS RECORD move o ponteiro do registro atual ao registro anterior na seleção de *tabela* para o processo atual.<!-- END REF--> Se a seleção atual estiver vazia, ou se [Before selection](before-selection.md) ou [End selection](end-selection.md) for TRUE, PREVIOUS RECORD não tem nenhum efeito.  
+<!--REF #_command_.PREVIOUS RECORD.Summary-->PREVIOUS RECORD move o ponteiro do registro atual ao registro anterior na seleção de *tabela* para o processo atual.<!-- END REF--> Se a seleção atual estiver vazia, ou se [Before selection](../commands/before-selection) ou [End selection](../commands/end-selection) for TRUE, PREVIOUS RECORD não tem nenhum efeito.  
   
-Se PREVIOUS RECORD move o ponteiro do registro atual antes da seleção atual, Before selection retorna TRUE, e não há registro atual. Se [End selection](end-selection.md) retorna TRUE, utilize [FIRST RECORD](first-record.md), [LAST RECORD](last-record.md) ou [GOTO SELECTED RECORD](goto-selected-record.md) para mover o ponteiro do registro atual na seleção atual.
+Se PREVIOUS RECORD move o ponteiro do registro atual antes da seleção atual, Before selection retorna TRUE, e não há registro atual. Se [End selection](../commands/end-selection) retorna TRUE, utilize [FIRST RECORD](../commands/first-record), [LAST RECORD](../commands/last-record) ou [GOTO SELECTED RECORD](../commands/goto-selected-record) para mover o ponteiro do registro atual na seleção atual.
 
 ## Ver também 
 
-[Before selection](before-selection.md)  
-[End selection](end-selection.md)  
-[FIRST RECORD](first-record.md)  
-[LAST RECORD](last-record.md)  
-[NEXT RECORD](next-record.md)  
+[Before selection](../commands/before-selection)  
+[End selection](../commands/end-selection)  
+[FIRST RECORD](../commands/first-record)  
+[LAST RECORD](../commands/last-record)  
+[NEXT RECORD](../commands/next-record)  
 
 ## Propriedades
 

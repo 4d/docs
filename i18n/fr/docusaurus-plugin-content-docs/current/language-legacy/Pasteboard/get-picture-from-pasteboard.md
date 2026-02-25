@@ -1,4 +1,4 @@
----
+﻿---
 id: get-picture-from-pasteboard
 title: GET PICTURE FROM PASTEBOARD
 slug: /commands/get-picture-from-pasteboard
@@ -50,9 +50,9 @@ Si l'image est correctement extraite, OK prend la valeur 1\. Sinon, OK prend la 
 
 ## Voir aussi 
 
-[GET PASTEBOARD DATA](get-pasteboard-data.md)  
-[Get text from pasteboard](get-text-from-pasteboard.md)  
-[Pasteboard data size](pasteboard-data-size.md)  
+[GET PASTEBOARD DATA](../commands/get-pasteboard-data)  
+[Get text from pasteboard](../commands/get-text-from-pasteboard)  
+[Pasteboard data size](../commands/pasteboard-data-size)  
 
 ## Propriétés
 

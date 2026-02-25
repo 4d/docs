@@ -1,4 +1,4 @@
----
+﻿---
 id: get-database-parameter
 title: Get database parameter
 slug: /commands/get-database-parameter
@@ -99,7 +99,7 @@ O seletor Port ID é útil no marco de servidores web 4D compilados e fusionados
 
 **Se conserva entre duas sessões**: sim**
 
-Descrição:** Constante obsoleto (mantido apenas para compatibilidade). Agora nós recomendamos usar os comandos [WEB SET OPTION](web-set-option.md) e [WEB GET OPTION](web-get-option.md) para a configuração do servidor HTTP.
+Descrição:** Constante obsoleto (mantido apenas para compatibilidade). Agora nós recomendamos usar os comandos [WEB SET OPTION](../commands/web-set-option) e [WEB GET OPTION](../commands/web-get-option) para a configuração do servidor HTTP.
 
 
 
@@ -111,7 +111,7 @@ Descrição:** Constante obsoleto (mantido apenas para compatibilidade). Agora n
 
 **Se conserva entre duas sessões**: sim **Valores**: todo valor entre 10 e 32 000\. O valor por padrão é 100.
 
-**Descrição**:Constante obsoleta (se conserva por compatibilidade unicamente). Se recomenda utilizar os comandos [WEB SET OPTION](web-set-option.md) e [WEB GET OPTION](web-get-option.md) para a configuração do servidor HTTP.
+**Descrição**:Constante obsoleta (se conserva por compatibilidade unicamente). Se recomenda utilizar os comandos [WEB SET OPTION](../commands/web-set-option) e [WEB GET OPTION](../commands/web-get-option) para a configuração do servidor HTTP.
 
 
 
@@ -161,7 +161,7 @@ Descrição:** Constante obsoleto (mantido apenas para compatibilidade). Agora n
 
 **Valores possíveis**: 500 000 a 2 147 483 648.
 
-**Descrição**: Constante obsoleta (se conserva por compatibilidade unicamente). Se recomenda utilizar os comandos [WEB SET OPTION](web-set-option.md) e [WEB GET OPTION](web-get-option.md) para a configuração do servidor HTTP.
+**Descrição**: Constante obsoleta (se conserva por compatibilidade unicamente). Se recomenda utilizar os comandos [WEB SET OPTION](../commands/web-set-option) e [WEB GET OPTION](../commands/web-get-option) para a configuração do servidor HTTP.
 
 
 
@@ -271,7 +271,7 @@ Quando modifica este valor, é necessário reiniciar a máquina servidor para qu
 
 **Se conserva entre duas sessões**: sim
 
-**Descrição**: Constante obsoleta (se conserva por compatibilidade unicamente). Se recomenda utilizar os comandos [WEB SET OPTION](web-set-option.md) e [WEB GET OPTION](web-get-option.md) para a configuração do servidor HTTP.
+**Descrição**: Constante obsoleta (se conserva por compatibilidade unicamente). Se recomenda utilizar os comandos [WEB SET OPTION](../commands/web-set-option) e [WEB GET OPTION](../commands/web-get-option) para a configuração do servidor HTTP.
 
 
 
@@ -439,7 +439,7 @@ O seletor QUERY BY FORMULA Joins permite definir o modo de funcionamento dos com
 
 **Valores possíveis**: todo valor de tipo inteiro longo
 
-**Descrição**: Constante obsoleta (se conserva por compatibilidade unicamente). Se recomenda utilizar os comandos [WEB SET OPTION](web-set-option.md) e [WEB GET OPTION](web-get-option.md) para a configuração do servidor HTTP.
+**Descrição**: Constante obsoleta (se conserva por compatibilidade unicamente). Se recomenda utilizar os comandos [WEB SET OPTION](../commands/web-set-option) e [WEB GET OPTION](../commands/web-get-option) para a configuração do servidor HTTP.
 
 
 
@@ -525,11 +525,11 @@ Este parâmetro se aplica ao servidor Web principal (excluindo objetos servidor 
 
 Quando a lista de cifrado tiver sido modificada, deve reiniciar o servidor correspondente para que os novos parâmetros sejam levados em consideração.
 
-Para reinicializar a lista de cifrado a seu valor por padrão (guardado permanentemente no arquivo SLI), chame o comando [SET DATABASE PARAMETER](set-database-parameter.md) e passe uma string vazia ("") no parâmetro valor.
+Para reinicializar a lista de cifrado a seu valor por padrão (guardado permanentemente no arquivo SLI), chame o comando [SET DATABASE PARAMETER](../commands/set-database-parameter) e passe uma string vazia ("") no parâmetro valor.
 
 
 
-**Nota**: com o comando [Get database parameter](get-database-parameter.md), a lista de cifrado é retornada no parâmetro opcional valorAlfa e o parâmetro de retorno é sempre 0.
+**Nota**: com o comando [Get database parameter](../commands/get-database-parameter), a lista de cifrado é retornada no parâmetro opcional valorAlfa e o parâmetro de retorno é sempre 0.
 
 
 
@@ -643,7 +643,7 @@ Este seletor permite que você restrinja a quantidade de informação armazenada
 
 Passar String type with time zone nesse seltor converte datas 4D em strings ISO e leva em conta a zona horária local. Por exemplo, a conversão da data 23/08/2013 dá "2013-08-22T22:00:00Z" em formato JSON quando a operação se realiza na França durante o horário de verão (GMT +2). Este princípio se ajusta a operação padrão de JavaScript.
 
-Este funcionamento pode ser uma fonte de erros se deseja enviar valores de data em JSON a uma pessoa que se encontra em uma zona horária diferente. Este é o caso, por exemplo, ao exportar uma tabela usando [Selection to JSON](selection-to-json.md) em França que está destinado a ser importada para os E.U.A com [JSON TO SELECTION](json-to-selection.md). Por padrão, as datas retornam a ser interpretadas em cada fuso horário, os valores armazenados na base serão diferentes. Neste caso, pode modificar o modo de conversão de datas para que não se leve em conta o fuso horário ao passar 0 no seletor. A conversão da data 23/08/2013 logo lhe dará "2013-08-23T00:00:00Z" em todos os casos.
+Este funcionamento pode ser uma fonte de erros se deseja enviar valores de data em JSON a uma pessoa que se encontra em uma zona horária diferente. Este é o caso, por exemplo, ao exportar uma tabela usando [Selection to JSON](../commands/selection-to-json) em França que está destinado a ser importada para os E.U.A com [JSON TO SELECTION](../commands/json-to-selection). Por padrão, as datas retornam a ser interpretadas em cada fuso horário, os valores armazenados na base serão diferentes. Neste caso, pode modificar o modo de conversão de datas para que não se leve em conta o fuso horário ao passar 0 no seletor. A conversão da data 23/08/2013 logo lhe dará "2013-08-23T00:00:00Z" em todos os casos.
 
 
 
@@ -705,7 +705,7 @@ Deverá reiniciar a aplicação para que este parâmetro seja levado em conta. N
 
 **Valores possíveis**: qualquer valor inteiro, 0 = conservar todos os registros
 
-**Descrição**: número máximo de arquivos a conservar em rotação para cada tipo de registro. Como padrão, todos os arquivos são conservados. Se passar um valor X, só os X arquivos mais recentes são conservados, o mais antigo é apagado automaticamente quando se cria um novo. Este ajuste é aplicado a a cada um dos seguintes arquivos de registro: registros de petições (seletores 28 e 45), registro de depuração (seletor 34), registro de eventos (seletor 79), assim como o histórico de petições web e o histórico de depuração Web (seletores 29 e 84 do comando [WEB SET OPTION](web-set-option.md)).
+**Descrição**: número máximo de arquivos a conservar em rotação para cada tipo de registro. Como padrão, todos os arquivos são conservados. Se passar um valor X, só os X arquivos mais recentes são conservados, o mais antigo é apagado automaticamente quando se cria um novo. Este ajuste é aplicado a a cada um dos seguintes arquivos de registro: registros de petições (seletores 28 e 45), registro de depuração (seletor 34), registro de eventos (seletor 79), assim como o histórico de petições web e o histórico de depuração Web (seletores 29 e 84 do comando [WEB SET OPTION](../commands/web-set-option)).
 
 
 
@@ -719,7 +719,7 @@ Deverá reiniciar a aplicação para que este parâmetro seja levado em conta. N
 
 **Valor padrão**: 0 (sem cache) 
 
-**Descrição**: estabelece ou obtém o número máximo de fórmulas a conservar na memória cache de fórmulas, que é utilizado pelo comando [EXECUTE FORMULA](execute-formula.md). Este limite é aplicado a todos os processos, mas cada processo tem sua própria cache de fórmulas. Localizar as fórmulas na cache acelera a execução do comando [EXECUTE FORMULA](execute-formula.md) em modo compilado, já que cada fórmula em cache se tokeniza só uma vez neste caso.Quando se modifica o valor da memória cache, o conteúdo existente se restabelece mesmo se o novo tamanho for maior que o anterior. Quando for alcançado o número máximo de fórmulas na memória cache, uma nova fórmula executada apagará a mais antiga da memória cache (modo FIFO). Este parâmetro só é levado em consideração nos bancos de dados ou componentes compilados.
+**Descrição**: estabelece ou obtém o número máximo de fórmulas a conservar na memória cache de fórmulas, que é utilizado pelo comando [EXECUTE FORMULA](../commands/execute-formula). Este limite é aplicado a todos os processos, mas cada processo tem sua própria cache de fórmulas. Localizar as fórmulas na cache acelera a execução do comando [EXECUTE FORMULA](../commands/execute-formula) em modo compilado, já que cada fórmula em cache se tokeniza só uma vez neste caso.Quando se modifica o valor da memória cache, o conteúdo existente se restabelece mesmo se o novo tamanho for maior que o anterior. Quando for alcançado o número máximo de fórmulas na memória cache, uma nova fórmula executada apagará a mais antiga da memória cache (modo FIFO). Este parâmetro só é levado em consideração nos bancos de dados ou componentes compilados.
 
 
 
@@ -744,7 +744,7 @@ Deverá reiniciar a aplicação para que este parâmetro seja levado em conta. N
 
 **Valores possíveis**: longint > 1 (segundos)
 
-**Descrição**: Obtém ou estabelece a peridiocidade de esvaziamento da cache atual, expressa em segundos. Modificar este valor sobrepuja a opção **Flush Cache every X Seconds** em [XML DECODE](xml-decode.md) das configurações de Bancos de Dados para a sessão (não é armazenada nas configurações do Banco de Dados).
+**Descrição**: Obtém ou estabelece a peridiocidade de esvaziamento da cache atual, expressa em segundos. Modificar este valor sobrepuja a opção **Flush Cache every X Seconds** em [XML DECODE](../commands/xml-decode) das configurações de Bancos de Dados para a sessão (não é armazenada nas configurações do Banco de Dados).
 
 
 
@@ -824,7 +824,7 @@ TLSv1\_0 \- TLS 1.0, introduzido em 1999 como uma atualização de SSL v3.0\. TL
 
 **Descrição:** String personalizada passada de uma sessão para a próxima quando a aplicação 4D for reiniciada. Esse seletor é útil no contexto de testes de unidade automáticos que exigem que a aplicação reinicie com parâmetros diferentes. 
 
-Quando usados com [SET DATABASE PARAMETER](set-database-parameter.md), define um novo valor que estará disponível dentro do novo banco de dados aberto depois que 4D for reiniciado manualmente ou usando os comandos [OPEN DATABASE](open-database.md)(\*), [OPEN DATA FILE](open-data-file.md), ou [RESTART 4D](restart-4d.md). Quando usados com [Get database parameter](get-database-parameter.md), obtém o valor do parâmetro de usuário disponível definido usando a linha de comando (ver *Interface da linha de comando*), o arquivo .4DLink (ver *Usar um arquivo 4DLink*), ou uma chamada a [SET DATABASE PARAMETER](set-database-parameter.md) durante a sessão anterior. (\*) se [SET DATABASE PARAMETER](set-database-parameter.md) estabelecer User param value antes da chamada a [OPEN DATABASE](open-database.md) com o arquivo .4DLink que também contém um atributo usuário param xml. 4D leva em consideração apenas o parâmetro fornecido por [SET DATABASE PARAMETER](set-database-parameter.md).
+Quando usados com [SET DATABASE PARAMETER](../commands/set-database-parameter), define um novo valor que estará disponível dentro do novo banco de dados aberto depois que 4D for reiniciado manualmente ou usando os comandos [OPEN DATABASE](../commands/open-database)(\*), [OPEN DATA FILE](../commands/open-data-file), ou [RESTART 4D](../commands/restart-4d). Quando usados com [Get database parameter](../commands/get-database-parameter), obtém o valor do parâmetro de usuário disponível definido usando a linha de comando (ver *Interface da linha de comando*), o arquivo .4DLink (ver *Usar um arquivo 4DLink*), ou uma chamada a [SET DATABASE PARAMETER](../commands/set-database-parameter) durante a sessão anterior. (\*) se [SET DATABASE PARAMETER](../commands/set-database-parameter) estabelecer User param value antes da chamada a [OPEN DATABASE](../commands/open-database) com o arquivo .4DLink que também contém um atributo usuário param xml. 4D leva em consideração apenas o parâmetro fornecido por [SET DATABASE PARAMETER](../commands/set-database-parameter).
 
 
 
@@ -876,7 +876,7 @@ Para saber mais sobre este formato e o uso de arquivo *4DDebugLog*, veja *Descri
 
 ### Is current database a project (112)
 
-**Nota:** Só se pode usar este seletor com o comando [Get database parameter](get-database-parameter.md) e seu valor não pode ser estabelecido.
+**Nota:** Só se pode usar este seletor com o comando [Get database parameter](../commands/get-database-parameter) e seu valor não pode ser estabelecido.
 
 **Escopo**: aplicação 4D
 
@@ -886,7 +886,7 @@ Para saber mais sobre este formato e o uso de arquivo *4DDebugLog*, veja *Descri
 
 ### Is host database a project (113)
 
-**Nota:** só se pode usar este seletor com o comando [Get database parameter](get-database-parameter.md) e seu valor não pode ser estabelecido.
+**Nota:** só se pode usar este seletor com o comando [Get database parameter](../commands/get-database-parameter) e seu valor não pode ser estabelecido.
 
 **Escopo**: aplicação 4D
 
@@ -936,7 +936,7 @@ Para mais informação sobre os arquivos 4DPOP3Log\_X.txt, consulte a seção *D
 
 ### Is host database writable (117)
 
-**Nota:** só pode usar este seletor com o comando [Get database parameter](get-database-parameter.md) e seu valor não pode ser estabelecido.
+**Nota:** só pode usar este seletor com o comando [Get database parameter](../commands/get-database-parameter) e seu valor não pode ser estabelecido.
 
 **Escopo**: aplicação 4D
 
@@ -1030,7 +1030,7 @@ Imagine que queira que sua aplicação reinicie após a primeira execução. A a
 %HOMEPATH%\Desktop\4D\4D.exe %HOMEPATH%\Documents\myDB.4dbase\myDB.4db --user-param "First launch"
 ```
 
-Em [Método banco de dados On Startup](metodo-banco-de-dados-on-startup.md), pode escrever:
+Em [Método banco de dados On Startup](../commands/metodo-banco-de-dados-on-startup), pode escrever:
 
 ```4d
  var $realVal : Real
@@ -1048,10 +1048,10 @@ Em [Método banco de dados On Startup](metodo-banco-de-dados-on-startup.md), pod
 
 ## Ver também 
 
-[DISTINCT VALUES](distinct-values.md)  
+[DISTINCT VALUES](../commands/distinct-values)  
 [Application info](../commands/application-info)  
-[QUERY SELECTION](query-selection.md)  
-[SET DATABASE PARAMETER](set-database-parameter.md)  
+[QUERY SELECTION](../commands/query-selection)  
+[SET DATABASE PARAMETER](../commands/set-database-parameter)  
 
 ## Propriedades
 

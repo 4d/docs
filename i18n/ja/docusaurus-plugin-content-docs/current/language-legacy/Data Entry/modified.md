@@ -1,4 +1,4 @@
----
+﻿---
 id: modified
 title: Modified
 slug: /commands/modified
@@ -37,11 +37,11 @@ displayed_sidebar: docs
 
 メソッドの実行時には、フィールドに値が割り当てられると（異なる値かどうかに関係なく）、フィールドが編集されたものと解釈されます。
 
-**注:** **Modified** は、[PUSH RECORD](push-record.md) と[POP RECORD](pop-record.md) コマンド実行後は、常に[True](true.md "True")を返します。
+**注:** **Modified** は、[PUSH RECORD](../commands/push-record) と[POP RECORD](../commands/pop-record) コマンド実行後は、常に[True](true.md "True")を返します。
 
-いずれの場合でも、フィールドの値が実際に変更されたかどうかを調べるには、[Old](old.md) コマンドを使用します。
+いずれの場合でも、フィールドの値が実際に変更されたかどうかを調べるには、[Old](../commands/old) コマンドを使用します。
 
-**注:** **Modified** はあらゆるタイプのフィールドに対して適用できますが、このコマンドを[Old](old.md) コマンドと組み合わせて使用する場合には、[Old](old.md) コマンドの制約に注意してください。詳細については[Old](old.md) コマンドの説明を参照してください。
+**注:** **Modified** はあらゆるタイプのフィールドに対して適用できますが、このコマンドを[Old](../commands/old) コマンドと組み合わせて使用する場合には、[Old](../commands/old) コマンドの制約に注意してください。詳細については[Old](../commands/old) コマンドの説明を参照してください。
 
 データ入力時には、フォームメソッドで**Modified** を使用するよりも、オブジェクトメソッドで[Form event code](../commands/form-event-code) を使用して処理を実行する方が簡単です。フィールドが修正される度にOn Data Changeイベントがオブジェクトメソッドに送信されるので、オブジェクトメソッドの利用はフォームメソッドで**Modified** を使用したのと同じ意味を持ちます。
 
@@ -79,7 +79,7 @@ displayed_sidebar: docs
 ## 参照 
 
 [Form event code](../commands/form-event-code)  
-[Old](old.md)  
+[Old](../commands/old)  
 
 ## プロパティ
 

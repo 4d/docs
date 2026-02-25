@@ -1,4 +1,4 @@
----
+﻿---
 id: set-database-localization
 title: SET DATABASE LOCALIZATION
 slug: /commands/set-database-localization
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET DATABASE LOCALIZATION.Summary-->La commande **SET DATABASE LOCALIZATION** permet de modifier la langue courante de la base pour la session courante.<!-- END REF-->
 
-La langue courante de la base permet de définir le dossier .lproj dans lequel le programme va chercher les éléments localisés de l’application (textes et images). Par défaut, 4D détermine automatiquement la langue courante en fonction du contenu du dossier **Resources** et de l'environnement système (cf. description de la commande [Get database localization](get-database-localization.md)). **SET DATABASE LOCALIZATION** vous permet de modifier la langue courante par défaut. 
+La langue courante de la base permet de définir le dossier .lproj dans lequel le programme va chercher les éléments localisés de l’application (textes et images). Par défaut, 4D détermine automatiquement la langue courante en fonction du contenu du dossier **Resources** et de l'environnement système (cf. description de la commande [Get database localization](../commands/get-database-localization)). **SET DATABASE LOCALIZATION** vous permet de modifier la langue courante par défaut. 
 
 La commande ne modifie pas la langue des formulaires déjà chargés, seuls les éléments affichés postérieurement à l’appel de la commande tiendront compte du nouveau paramétrage. 
 
@@ -80,7 +80,7 @@ L’interface de votre application utilise la chaîne statique ":xliff:shopping"
 
 ## Voir aussi 
 
-[Get database localization](get-database-localization.md)  
+[Get database localization](../commands/get-database-localization)  
 
 ## Propriétés
 

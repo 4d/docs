@@ -1,4 +1,4 @@
----
+﻿---
 id: set-window-rect
 title: SET WINDOW RECT
 slug: /commands/set-window-rect
@@ -42,15 +42,15 @@ displayed_sidebar: docs
 
 座標は、アプリケーションウィンドウのコンテンツエリア(MDI モードのWindows) またはメインスクリーン(macOS とSDI モードのWindows) の左上隅に対する相対座標で表します。座標はウィンドウの内容領域に対応する四角を表します (タイトルバーと枠線を除く)。
 
-**警告:** このコマンドを使用すると、ウィンドウをメインウィンドウ (Windows) やスクリーン (Macintosh) の外に動かすことができてしまうことに注意してください。これを避けるには[Screen width](screen-width.md)や[Screen height](screen-height.md)などのコマンドを使用してウィンドウの新しい座標を検証します。
+**警告:** このコマンドを使用すると、ウィンドウをメインウィンドウ (Windows) やスクリーン (Macintosh) の外に動かすことができてしまうことに注意してください。これを避けるには[Screen width](../commands/screen-width)や[Screen height](../commands/screen-height)などのコマンドを使用してウィンドウの新しい座標を検証します。
 
 このコマンドを実行するとデフォルトで自動的に、*window* 引数で指定されたウィンドウが最前面に移動されます (*window*引数が使用されている場合)。最後の引数として *\** を渡すとこの動作を無効にできます。この場合コマンドはウィンドウの元の順番 (z座標) を変更しません。
 
-このコマンドはフォームオブジェクトには影響しません。ウィンドウに表示されているフォーム中のフォームオブジェクトは、 (プロパティ設定にかかわらず) このコマンドにより移動やリサイズはされません。ウィンドウのみが更新されます。オブジェクトのリサイズプロパティを考慮に入れたフォームウィンドウのサイズ変更を行うには[RESIZE FORM WINDOW](resize-form-window.md)コマンドを使用します。
+このコマンドはフォームオブジェクトには影響しません。ウィンドウに表示されているフォーム中のフォームオブジェクトは、 (プロパティ設定にかかわらず) このコマンドにより移動やリサイズはされません。ウィンドウのみが更新されます。オブジェクトのリサイズプロパティを考慮に入れたフォームウィンドウのサイズ変更を行うには[RESIZE FORM WINDOW](../commands/resize-form-window)コマンドを使用します。
 
 ## 例題 1 
 
-[WINDOW LIST](window-list.md)コマンドの例題参照
+[WINDOW LIST](../commands/window-list)コマンドの例題参照
 
 ## 例題 2 
 
@@ -70,10 +70,10 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[CONVERT COORDINATES](convert-coordinates.md)  
-[DRAG WINDOW](drag-window.md)  
-[GET WINDOW RECT](get-window-rect.md)  
-[RESIZE FORM WINDOW](resize-form-window.md)  
+[CONVERT COORDINATES](../commands/convert-coordinates)  
+[DRAG WINDOW](../commands/drag-window)  
+[GET WINDOW RECT](../commands/get-window-rect)  
+[RESIZE FORM WINDOW](../commands/resize-form-window)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: set-assert-enabled
 title: SET ASSERT ENABLED
 slug: /commands/set-assert-enabled
@@ -28,13 +28,13 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.SET ASSERT ENABLED.Summary-->La commande **SET ASSERT ENABLED** permet de désactiver ou de réactiver les assertions éventuellement insérées dans le code 4D de l’application.<!-- END REF--> Pour plus d’informations sur les assertions, reportez-vous à la description de la commande [ASSERT](assert.md). 
+<!--REF #_command_.SET ASSERT ENABLED.Summary-->La commande **SET ASSERT ENABLED** permet de désactiver ou de réactiver les assertions éventuellement insérées dans le code 4D de l’application.<!-- END REF--> Pour plus d’informations sur les assertions, reportez-vous à la description de la commande [ASSERT](../commands/assert). 
 
-Par défaut, les assertions ajoutées dans le programme sont actives, en mode interprété et en mode compilé. Cette commande est utile pour les désactiver car leur évaluation peut parfois être coûteuse en temps d’exécution et vous pouvez aussi souhaiter les masquer pour l’utilisateur final de l’application. Typiquement, la commande **SET ASSERT ENABLED** pourra être utilisée dans la [On Startup database method](on-startup-database-method.md) afin d’activer ou non les assertions suivant que l’application est en mode "Test" ou en mode "Production". 
+Par défaut, les assertions ajoutées dans le programme sont actives, en mode interprété et en mode compilé. Cette commande est utile pour les désactiver car leur évaluation peut parfois être coûteuse en temps d’exécution et vous pouvez aussi souhaiter les masquer pour l’utilisateur final de l’application. Typiquement, la commande **SET ASSERT ENABLED** pourra être utilisée dans la [On Startup database method](../commands/on-startup-database-method) afin d’activer ou non les assertions suivant que l’application est en mode "Test" ou en mode "Production". 
 
 Par défaut, la commande **SET ASSERT ENABLED** agit sur tous les process de l’application déjà créés ou créés par la suite. Pour restreindre l’effet de la commande au process courant uniquement, passez le paramètre *\**.
 
-A noter que lorsque les assertions sont désactivées, les expressions passées aux commandes [ASSERT](assert.md) ne sont plus évaluées. Les lignes de code appelant [ASSERT](assert.md) n’ont alors plus aucun effet sur le fonctionnement de l’application, ni en termes de comportement ni en terme de performances.
+A noter que lorsque les assertions sont désactivées, les expressions passées aux commandes [ASSERT](../commands/assert) ne sont plus évaluées. Les lignes de code appelant [ASSERT](../commands/assert) n’ont alors plus aucun effet sur le fonctionnement de l’application, ni en termes de comportement ni en terme de performances.
 
 ## Exemple 
 
@@ -47,9 +47,9 @@ Désactivation globale des assertions :
 
 ## Voir aussi 
 
-[ASSERT](assert.md)  
-[Asserted](asserted.md)  
-[Get assert enabled](get-assert-enabled.md)  
+[ASSERT](../commands/assert)  
+[Asserted](../commands/asserted)  
+[Get assert enabled](../commands/get-assert-enabled)  
 
 ## Propriétés
 

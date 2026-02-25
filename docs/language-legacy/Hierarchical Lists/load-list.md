@@ -1,4 +1,4 @@
----
+﻿---
 id: load-list
 title: Load list
 slug: /commands/load-list
@@ -30,17 +30,17 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Load list.Summary-->**Load list** creates a new hierarchical list whose contents are copied from the list and whose name you pass in *listName*.<!-- END REF--> It then returns the list reference number to the newly created list. 
 
-To find out the lists specified in the database, use the [LIST OF CHOICE LISTS](list-of-choice-lists.md) command. 
+To find out the lists specified in the database, use the [LIST OF CHOICE LISTS](../commands/list-of-choice-lists) command. 
 
-To make sure that the list specified by *listName* exists, use the [Is a list](is-a-list.md) function.
+To make sure that the list specified by *listName* exists, use the [Is a list](../commands/is-a-list) function.
 
 Note that the new list is a copy of the list defined in the Design environment. Consequently, any modifications made to the new list will not affect the list defined in the Design environment. Conversely, any subsequent modifications made to the list defined in the Design environment will not affect the list that you just created.
 
-If you modify the newly created list and want to permanently save the changes, call [SAVE LIST](save-list.md). 
+If you modify the newly created list and want to permanently save the changes, call [SAVE LIST](../commands/save-list). 
 
-Remember to call [CLEAR LIST](clear-list.md) in order to delete the newly created list when you have finished with it. Otherwise, it will stay in memory until the end of the working session or until the process in which it was created ends or is aborted.
+Remember to call [CLEAR LIST](../commands/clear-list) in order to delete the newly created list when you have finished with it. Otherwise, it will stay in memory until the end of the working session or until the process in which it was created ends or is aborted.
 
-**Tip:** If you associate a list with a form object (hierarchical list, tab control, or hierarchical pop-up menu) using the Choice List property in the Property List window, you do not need to call **Load list** or [CLEAR LIST](clear-list.md) from the method of the object. 4D loads and clears the list automatically for you.
+**Tip:** If you associate a list with a form object (hierarchical list, tab control, or hierarchical pop-up menu) using the Choice List property in the Property List window, you do not need to call **Load list** or [CLEAR LIST](../commands/clear-list) from the method of the object. 4D loads and clears the list automatically for you.
 
 ## Example 
 
@@ -59,9 +59,9 @@ You create a database for the international market and you need to switch to dif
 
 ## See also 
 
-[CLEAR LIST](clear-list.md)  
-[Is a list](is-a-list.md)  
-[SAVE LIST](save-list.md)  
+[CLEAR LIST](../commands/clear-list)  
+[Is a list](../commands/is-a-list)  
+[SAVE LIST](../commands/save-list)  
 
 ## Properties
 

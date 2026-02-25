@@ -1,4 +1,4 @@
----
+﻿---
 id: export-structure
 title: EXPORT STRUCTURE
 slug: /commands/export-structure
@@ -44,7 +44,7 @@ O comando gera o mesmo código XML ou HTML que os itens de menu Export > Structu
 
 xml format: a gramática interna das definições de estrutura 4D está documentada em arquivos DTD - também usados para a validação de arquivos XML. Os arquivos DTD usados por 4D estão agrupados juntos na pasta DTD, ao lado da aplicação 4D. Os arquivos base\_core.dtd e common.dtd são usados para definições de estrutura. Para saber mais, consulte estes arquivos com os comentários que contêm.
 
-Uma definição de estrutura exportada em formato XML pode ser importada em outra database (ver [IMPORT STRUCTURE](import-structure.md)).
+Uma definição de estrutura exportada em formato XML pode ser importada em outra database (ver [IMPORT STRUCTURE](../commands/import-structure)).
 
 html format: o comando gera código HTML raw que inclui referências a uma pasta contendo recursos externos tais como imagens ou css, exigido para a representação HTML. Se quiser salvar este código em uma página HTML a ser exibida no navegador, pode reutilizar a pasta criada pelo item de mneu Export > Structure definition to HTML file... , ou criar sua pasta de recursos própria. 
 
@@ -70,7 +70,7 @@ Se quiser exportar a estrutura atual do banco de dados em formato html:
 
 ## Ver também 
 
-[IMPORT STRUCTURE](import-structure.md)  
+[IMPORT STRUCTURE](../commands/import-structure)  
 
 ## Propriedades
 

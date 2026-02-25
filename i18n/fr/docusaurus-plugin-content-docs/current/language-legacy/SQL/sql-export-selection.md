@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-export-selection
 title: SQL EXPORT SELECTION
 slug: /commands/sql-export-selection
@@ -34,9 +34,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL EXPORT SELECTION.Summary-->La commande **SQL EXPORT SELECTION** exporte au format SQL les enregistrements de la sélection courante de la table 4D désignée par le paramètre *laTable*.<!-- END REF--> 
 
-Cette commande est quasiment identique à la commande [SQL EXPORT DATABASE](sql-export-database.md). Le fichier généré peut être utilisé directement par la commande [SQL EXECUTE SCRIPT](sql-execute-script.md) afin d’importer les données dans une autre base 4D. La seule différence entre ces deux commandes est le fait que **SQL EXPORT SELECTION** exporte uniquement la sélection courante de *laTable* alors que [SQL EXPORT DATABASE](sql-export-database.md) exporte la totalité des données de la base. De même, à la différence de [SQL EXPORT DATABASE](sql-export-database.md), la commande **SQL EXPORT SELECTION** ne fonctionne pas avec les bases SQL externes. Elle ne peut être utilisée qu’avec la base principale. 
+Cette commande est quasiment identique à la commande [SQL EXPORT DATABASE](../commands/sql-export-database). Le fichier généré peut être utilisé directement par la commande [SQL EXECUTE SCRIPT](../commands/sql-execute-script) afin d’importer les données dans une autre base 4D. La seule différence entre ces deux commandes est le fait que **SQL EXPORT SELECTION** exporte uniquement la sélection courante de *laTable* alors que [SQL EXPORT DATABASE](../commands/sql-export-database) exporte la totalité des données de la base. De même, à la différence de [SQL EXPORT DATABASE](../commands/sql-export-database), la commande **SQL EXPORT SELECTION** ne fonctionne pas avec les bases SQL externes. Elle ne peut être utilisée qu’avec la base principale. 
 
-Reportez-vous à la description de la commande [SQL EXPORT DATABASE](sql-export-database.md) pour le détail du fonctionnement et des paramètres de ces commandes.
+Reportez-vous à la description de la commande [SQL EXPORT DATABASE](../commands/sql-export-database) pour le détail du fonctionnement et des paramètres de ces commandes.
 
 Si la sélection courante est vide, la commande ne fait rien. A noter que dans ce cas, le dossier de destination n’est pas vidé. 
 
@@ -48,7 +48,7 @@ Si l’export s’est déroulé correctement, la variable *OK* prend la valeur 1
 
 ## Voir aussi 
 
-[SQL EXPORT DATABASE](sql-export-database.md)  
+[SQL EXPORT DATABASE](../commands/sql-export-database)  
 
 ## Propriétés
 

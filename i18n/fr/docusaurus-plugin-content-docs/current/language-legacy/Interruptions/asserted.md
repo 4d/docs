@@ -1,4 +1,4 @@
----
+﻿---
 id: asserted
 title: Asserted
 slug: /commands/asserted
@@ -29,11 +29,11 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Asserted.Summary-->La commande **Asserted** a un fonctionnement semblable à celui de la commande [ASSERT](assert.md), à la différence près qu’elle retourne une valeur issue de l’évaluation du paramètre *expressionBool*.<!-- END REF--> Elle permet donc d’utiliser une assertion lors de l’évaluation d’une condition (cf. exemple). Pour plus d’informations sur le fonctionnement des assertions et sur les paramètres de cette commande, reportez-vous à la description de la commande [ASSERT](assert.md).
+<!--REF #_command_.Asserted.Summary-->La commande **Asserted** a un fonctionnement semblable à celui de la commande [ASSERT](../commands/assert), à la différence près qu’elle retourne une valeur issue de l’évaluation du paramètre *expressionBool*.<!-- END REF--> Elle permet donc d’utiliser une assertion lors de l’évaluation d’une condition (cf. exemple). Pour plus d’informations sur le fonctionnement des assertions et sur les paramètres de cette commande, reportez-vous à la description de la commande [ASSERT](../commands/assert).
 
-**Asserted** accepte une expression booléenne en paramètre et retourne le résultat de l’évaluation de cette expression. Si l’expression est fausse et si les assertions sont activées (cf. commande [SET ASSERT ENABLED](set-assert-enabled.md)), l’erreur -10518 est générée, exactement comme pour la commande [ASSERT](assert.md). Si les assertions sont inactivées, **Asserted** retourne simplement le résultat de l’expression qui lui est passée sans déclencher d’erreur.
+**Asserted** accepte une expression booléenne en paramètre et retourne le résultat de l’évaluation de cette expression. Si l’expression est fausse et si les assertions sont activées (cf. commande [SET ASSERT ENABLED](../commands/set-assert-enabled)), l’erreur -10518 est générée, exactement comme pour la commande [ASSERT](../commands/assert). Si les assertions sont inactivées, **Asserted** retourne simplement le résultat de l’expression qui lui est passée sans déclencher d’erreur.
 
-**Note :** Comme la commande [ASSERT](assert.md), **Asserted** fonctionne en mode interprété et en mode compilé. 
+**Note :** Comme la commande [ASSERT](../commands/assert), **Asserted** fonctionne en mode interprété et en mode compilé. 
 
 ## Exemple 
 
@@ -50,9 +50,9 @@ Insertion d’une assertion dans l’évaluation d’une expression :
 
 ## Voir aussi 
 
-[ASSERT](assert.md)  
-[Get assert enabled](get-assert-enabled.md)  
-[SET ASSERT ENABLED](set-assert-enabled.md)  
+[ASSERT](../commands/assert)  
+[Get assert enabled](../commands/get-assert-enabled)  
+[SET ASSERT ENABLED](../commands/set-assert-enabled)  
 
 ## Propriétés
 

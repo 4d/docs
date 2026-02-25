@@ -1,4 +1,4 @@
----
+﻿---
 id: user-in-group
 title: User in group
 slug: /commands/user-in-group
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.User in group.Summary-->La fonction **User in group** retourne Vrai si *nomUtilisateur* appartient au *groupe*.<!-- END REF-->
 
-**Note :** Cette commande attend comme paramètre *nomUtilisateur* un nom de compte utilisateur (elle ne prend pas en charge les alias d'utilisateurs). Si vous avez défini des alias d'utilisateurs dans votre application, passez le paramètre 4D user account à la commande [Current user](current-user.md) pour vous assurer qu'elle retourne un nom de compte utilisateur (voir exemple).
+**Note :** Cette commande attend comme paramètre *nomUtilisateur* un nom de compte utilisateur (elle ne prend pas en charge les alias d'utilisateurs). Si vous avez défini des alias d'utilisateurs dans votre application, passez le paramètre 4D user account à la commande [Current user](../commands/current-user) pour vous assurer qu'elle retourne un nom de compte utilisateur (voir exemple).
 
 ## Exemple 
 
@@ -43,7 +43,7 @@ L'exemple suivant recherche des factures. Si l'utilisateur courant est dans le g
 
 ## Voir aussi 
 
-[Current user](current-user.md)  
+[Current user](../commands/current-user)  
 
 ## Propriétés
 

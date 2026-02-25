@@ -1,4 +1,4 @@
----
+﻿---
 id: confirm
 title: CONFIRM
 slug: /commands/confirm
@@ -103,8 +103,8 @@ Mostrará a seguinte caixa de diálogo de confirmação (em Macintosh):
 
 ## Ver também 
 
-[ALERT](alert.md)  
-[Request](request.md)  
+[ALERT](../commands/alert)  
+[Request](../commands/request)  
 
 ## Propriedades
 

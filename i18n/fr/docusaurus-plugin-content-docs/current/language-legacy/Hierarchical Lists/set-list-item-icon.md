@@ -1,4 +1,4 @@
----
+﻿---
 id: set-list-item-icon
 title: SET LIST ITEM ICON
 slug: /commands/set-list-item-icon
@@ -32,11 +32,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET LIST ITEM ICON.Summary-->La commande **SET LIST ITEM ICON** permet de modifier l’icône associée à l’élément désigné par le paramètre *réfElément* de la liste dont vous avez passé le numéro de référence ou le nom d’objet dans *liste*.<!-- END REF-->
 
-**Note :** Il est possible de modifier l’icône associée à un élément à l’aide de la commande [SET LIST ITEM PROPERTIES](set-list-item-properties.md). Toutefois, [SET LIST ITEM PROPERTIES](set-list-item-properties.md) accepte uniquement des références d’images statiques (références de ressources ou images de la bibliothèque).
+**Note :** Il est possible de modifier l’icône associée à un élément à l’aide de la commande [SET LIST ITEM PROPERTIES](../commands/set-list-item-properties). Toutefois, [SET LIST ITEM PROPERTIES](../commands/set-list-item-properties) accepte uniquement des références d’images statiques (références de ressources ou images de la bibliothèque).
 
 Si vous passez le premier paramètre optionnel *\**, vous indiquez que le paramètre *liste* est un nom d’objet (chaîne) correspondant à une représentation de liste dans le formulaire. Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *liste* est une référence de liste hiérarchique ([RéfListe](# "Expression de type Entier long identifiant de façon unique une liste hiérarchique")). Si vous utilisez une seule représentation de liste ou travaillez avec les éléments structurels (le second *\** est omis), vous pouvez utiliser indifféremment l’une ou l’autre syntaxe. En revanche, si vous utilisez plusieurs représentations d’une même liste et travaillez avec l’élément courant (le second *\** est passé), la syntaxe basée sur le nom d’objet est requise car chaque représentation peut disposer de son propre élément courant.
 
-Vous pouvez passer un numéro de référence dans *réfElément*. Si ce numéro ne correspond à aucun élément de la liste, la commande ne fait rien. Vous pouvez également passer 0 dans *réfElément* afin de demander la modification du dernier élément ajouté à la liste (à l’aide de [APPEND TO LIST](append-to-list.md)).  
+Vous pouvez passer un numéro de référence dans *réfElément*. Si ce numéro ne correspond à aucun élément de la liste, la commande ne fait rien. Vous pouvez également passer 0 dans *réfElément* afin de demander la modification du dernier élément ajouté à la liste (à l’aide de [APPEND TO LIST](../commands/append-to-list)).  
 Vous pouvez enfin passer *\** dans *réfElément* : dans ce cas, la commande s’appliquera à l’élément courant de la liste. Si plusieurs éléments sont sélectionnés manuellement, l’élément courant est celui qui a été sélectionné en dernier. Si aucun élément n’est sélectionné, la commande ne fait rien.
 
 Passez dans le paramètre *icône* une expression image 4D valide (champ, variable, pointeur, etc.). L’image sera placée à gauche de l’élément. 
@@ -54,9 +54,9 @@ Affectation d'une même image à deux éléments différents. Ce code est optimi
 
 ## Voir aussi 
 
-[SET LIST ITEM](set-list-item.md)  
-[SET LIST ITEM FONT](set-list-item-font.md)  
-[SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+[SET LIST ITEM](../commands/set-list-item)  
+[SET LIST ITEM FONT](../commands/set-list-item-font)  
+[SET LIST ITEM PROPERTIES](../commands/set-list-item-properties)  
 
 ## Propriétés
 

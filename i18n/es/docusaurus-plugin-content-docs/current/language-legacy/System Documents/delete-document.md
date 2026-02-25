@@ -1,4 +1,4 @@
----
+﻿---
 id: delete-document
 title: DELETE DOCUMENT
 slug: /commands/delete-document
@@ -59,7 +59,7 @@ La eliminación de un documento hace que la variable sistema tome el valor 1\. S
 
 ## Ver también 
 
-[Test path name](test-path-name.md)  
+[Test path name](../commands/test-path-name)  
 
 ## Propiedades
 

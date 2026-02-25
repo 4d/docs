@@ -1,4 +1,4 @@
----
+﻿---
 id: query-by-example
 title: QUERY BY EXAMPLE
 slug: /commands/query-by-example
@@ -40,8 +40,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ORDER BY](order-by.md)  
-[QUERY](query.md)  
+[ORDER BY](../commands/order-by)  
+[QUERY](../commands/query)  
 
 ## プロパティ
 

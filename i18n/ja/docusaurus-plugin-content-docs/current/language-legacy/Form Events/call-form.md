@@ -1,4 +1,4 @@
----
+﻿---
 id: call-form
 title: CALL FORM
 slug: /commands/call-form
@@ -113,7 +113,7 @@ displayed_sidebar: docs
 ## 参照 
 
   
-[CALL WORKER](call-worker.md)  
+[CALL WORKER](../commands/call-worker)  
 [DIALOG](../commands/dialog)  
 
 ## プロパティ

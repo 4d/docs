@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-select-rows
 title: LISTBOX SELECT ROWS
 slug: /commands/listbox-select-rows
@@ -94,7 +94,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[LISTBOX SELECT ROW](listbox-select-row.md)  
+[LISTBOX SELECT ROW](../commands/listbox-select-row)  
 
 ## プロパティ
 

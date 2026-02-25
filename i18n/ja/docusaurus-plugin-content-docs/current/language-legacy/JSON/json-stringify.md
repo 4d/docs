@@ -1,4 +1,4 @@
----
+﻿---
 id: json-stringify
 title: JSON Stringify
 slug: /commands/json-stringify
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.JSON Stringify.Summary-->**JSON Stringify**コマンドは、 *value* 引数を、JSON文字列へと変換します。<!-- END REF-->このコマンドは[JSON Parse](json-parse.md) コマンドと逆の挙動をします。
+<!--REF #_command_.JSON Stringify.Summary-->**JSON Stringify**コマンドは、 *value* 引数を、JSON文字列へと変換します。<!-- END REF-->このコマンドは[JSON Parse](../commands/json-parse) コマンドと逆の挙動をします。
 
 シリアライズしたいデータを*value* に渡します。スカラー値(文字列、数字、日付または時間)または4Dオブジェクトあるいはコレクションを渡す事ができます。
 
@@ -185,8 +185,8 @@ $myTxtCol="[33,"mike","2017-08-28",false]"
 
 ## 参照 
 
-[JSON Parse](json-parse.md)  
-[JSON Stringify array](json-stringify-array.md)  
+[JSON Parse](../commands/json-parse)  
+[JSON Stringify array](../commands/json-stringify-array)  
 
 ## プロパティ
 

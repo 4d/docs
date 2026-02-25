@@ -1,4 +1,4 @@
----
+﻿---
 id: get-subrecord-key
 title: Get subrecord key
 slug: /commands/get-subrecord-key
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 Ce principe permet de préserver le fonctionnement des bases de données converties, mais il est fortement conseillé de remplacer les mécanismes des sous-tables par ceux des tables standard. 
 
-La première étape de ce processus consiste à supprimer le lien automatique spécial, ce qui désactive définitivement les mécanismes hérités des sous-tables. Cette opération nécessite ensuite de réécrire le code associé. La commande [Get subrecord key](get-subrecord-key.md) accompagne cette réécriture en renvoyant l’identifiant interne utilisé par le lien. Elle permet de s’affranchir du lien et donc de travailler avec la sélection de l’ancienne sous-table, que le lien soit présent ou non. 
+La première étape de ce processus consiste à supprimer le lien automatique spécial, ce qui désactive définitivement les mécanismes hérités des sous-tables. Cette opération nécessite ensuite de réécrire le code associé. La commande [Get subrecord key](../commands/get-subrecord-key) accompagne cette réécriture en renvoyant l’identifiant interne utilisé par le lien. Elle permet de s’affranchir du lien et donc de travailler avec la sélection de l’ancienne sous-table, que le lien soit présent ou non. 
 
 Examinons par exemple la structure (convertie) suivante : 
 
@@ -63,7 +63,7 @@ Vous pouvez désormais remplacer ce code par :
  End for
 ```
 
-**Note :** S’il n’y a pas d’enregistrement courant chargé au moment de son exécution, [Get subrecord key](get-subrecord-key.md) retourne 0\. 
+**Note :** S’il n’y a pas d’enregistrement courant chargé au moment de son exécution, [Get subrecord key](../commands/get-subrecord-key) retourne 0\. 
 
 Le second code présente le double avantage d’utiliser des commandes standard de 4D et de fonctionner de manière identique, que le lien soit présent ou non. Lorsque vous supprimerez le lien, la commande retournera simplement la valeur clé stockée dans le champ Entier long. 
 

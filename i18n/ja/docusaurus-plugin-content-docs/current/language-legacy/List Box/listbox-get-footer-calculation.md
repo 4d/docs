@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-footer-calculation
 title: LISTBOX Get footer calculation
 slug: /commands/listbox-get-footer-calculation
@@ -38,11 +38,11 @@ displayed_sidebar: docs
 * フッターエリアの変数またはオブジェクト名。この場合コマンドはこのエリアに割り当てられた自動計算のタイプを返します。
 * リストボックス列の変数またはオブジェクト名。この場合コマンドはこの列のフッターエリアに割り当てられた自動計算のタイプを返します。
 
-返される値を*Listbox Footer Calculation*テーマの定数と比較することができます ([LISTBOX SET FOOTER CALCULATION](listbox-set-footer-calculation.md)コマンド参照)。 
+返される値を*Listbox Footer Calculation*テーマの定数と比較することができます ([LISTBOX SET FOOTER CALCULATION](../commands/listbox-set-footer-calculation)コマンド参照)。 
 
 ## 参照 
 
-[LISTBOX SET FOOTER CALCULATION](listbox-set-footer-calculation.md)  
+[LISTBOX SET FOOTER CALCULATION](../commands/listbox-set-footer-calculation)  
 
 ## プロパティ
 

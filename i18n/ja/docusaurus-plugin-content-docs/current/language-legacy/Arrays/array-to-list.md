@@ -1,4 +1,4 @@
----
+﻿---
 id: array-to-list
 title: ARRAY TO LIST
 slug: /commands/array-to-list
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ARRAY TO LIST.Summary-->ARRAY TO LIST コマンドは、配列*array*の要素を使用して、(デザインモードのリストエディタで作成される)階層リストまたは選択リスト*list*リストを作成または置き換えます。<!-- END REF-->
 
-*list* 引数には、選択リスト(文字列)または階層リスト参照([ListRef](# "階層リストへの参照")) を渡すことが出来ます。後者の場合、このコマンドが動くためには、渡すリストは (例えば [New list](new-list.md) コマンドを使用するなどして) 事前に作成されている必要があります。
+*list* 引数には、選択リスト(文字列)または階層リスト参照([ListRef](# "階層リストへの参照")) を渡すことが出来ます。後者の場合、このコマンドが動くためには、渡すリストは (例えば [New list](../commands/new-list) コマンドを使用するなどして) 事前に作成されている必要があります。
 
 任意の引数*itemRefs*が渡される場合、この配列は数値配列で、*array*配列と同期していなければなりません。各要素は、*array*の対応する要素のリスト項目参照番号を表わします。この引数を省略した場合、4Dにより自動的に1、2...Nという項目参照番号が設定されます。
 
@@ -69,10 +69,10 @@ ARRAY TO LIST コマンドを使い、配列の要素に基づくリストを作
 
 ## 参照 
 
-[LIST TO ARRAY](list-to-array.md)  
-[Load list](load-list.md)  
-[ON ERR CALL](on-err-call.md)  
-[SAVE LIST](save-list.md)  
+[LIST TO ARRAY](../commands/list-to-array)  
+[Load list](../commands/load-list)  
+[ON ERR CALL](../commands/on-err-call)  
+[SAVE LIST](../commands/save-list)  
 
 ## プロパティ
 

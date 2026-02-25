@@ -1,4 +1,4 @@
----
+﻿---
 id: set-table-cache-priority
 title: SET TABLE CACHE PRIORITY
 slug: /commands/set-table-cache-priority
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 **注:** このコマンドはローカルモード(4D Serverあるいは4D)においてのみ動作します。リモートモードの4Dでは使用できません。
 
-このコマンドははスカラーフィールド(日付、数値、あるいは文字列型)内のデータに対してのみ優先度を管理します。バイナリー型(Blob、テキスト、ピクチャー、およびオブジェクト)のフィールドの優先度は[SET BLOBS CACHE PRIORITY](set-blobs-cache-priority.md) コマンドで管理されます。
+このコマンドははスカラーフィールド(日付、数値、あるいは文字列型)内のデータに対してのみ優先度を管理します。バイナリー型(Blob、テキスト、ピクチャー、およびオブジェクト)のフィールドの優先度は[SET BLOBS CACHE PRIORITY](../commands/set-blobs-cache-priority) コマンドで管理されます。
 
 *priority* 引数には、"*Cache Management*"テーマ内にある以下の定数のうちのどれか一つを渡します:
 
@@ -58,9 +58,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ADJUST INDEX CACHE PRIORITY](adjust-index-cache-priority.md)  
-[ADJUST TABLE CACHE PRIORITY](adjust-table-cache-priority.md)  
-[Get adjusted table cache priority](get-adjusted-table-cache-priority.md)  
+[ADJUST INDEX CACHE PRIORITY](../commands/adjust-index-cache-priority)  
+[ADJUST TABLE CACHE PRIORITY](../commands/adjust-table-cache-priority)  
+[Get adjusted table cache priority](../commands/get-adjusted-table-cache-priority)  
 
 ## プロパティ
 

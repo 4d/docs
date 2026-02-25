@@ -1,4 +1,4 @@
----
+﻿---
 id: select-folder
 title: Select folder
 slug: /commands/select-folder
@@ -52,14 +52,14 @@ The optional parameter *message* allows you to display a message in the dialog b
 * The number of a memorized pathname (from 1 to 32,000) to display the associated folder. This means that you can store in memory the pathname of the folder that is open when the user clicks on the selection button; in other words, the folder chosen by the user. When calling a random number (for instance, 5) the command displays the default user folder of the system (equivalent to passing an empty string). The user may then browse among the folders on their harddisk. When the user clicks on the selection button, the pathname is memorized and associated with the number 5\. When the number 5 is called subsequently, the memorized pathnname will be used by default. If a new location is selected, the path number 5 will be updated, and so on.  
 This mechanism can be used to memorize up to 32,000 pathnames. Under Windows, each path is only kept during the session. Under macOS, the paths remain memorized from one session to the next. If the pathname is incorrect, the *defaultPath* parameter is ignored.
 
-**Note:** This mechanism is identical to the one used by the [Select document](select-document.md) command. The numbers of memorized pathnames are shared between both these commands.
+**Note:** This mechanism is identical to the one used by the [Select document](../commands/select-document) command. The numbers of memorized pathnames are shared between both these commands.
 
 The *options* parameter lets you benefit from additional functions under macOS. In this parameter, you can pass one of the following constants, found in the *System Documents* theme: 
 
 | Constant         | Type    | Value | Comment                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ---------------- | ------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Package open     | Integer | 2     | (Mac OS only): Authorizes the opening of packages as folders and thus the viewing /selection of their contents. By default, if this constant is not used, the command will not allow the opening of packages.                                                                                                                                                                                           |
-| Use sheet window | Integer | 16    | (Mac OS only): Displays the selection dialog box in the form of a sheet window (this option is ignored under Windows). <br/>Sheet windows are specific to the macOS interface which have graphic animation (for more information, refer to the [DISPLAY SELECTION](display-selection.md) section). By default, if this constant is not used, the command will display a standard dialog box. |
+| Use sheet window | Integer | 16    | (Mac OS only): Displays the selection dialog box in the form of a sheet window (this option is ignored under Windows). <br/>Sheet windows are specific to the macOS interface which have graphic animation (for more information, refer to the [DISPLAY SELECTION](../commands/display-selection) section). By default, if this constant is not used, the command will display a standard dialog box. |
 
 You can pass a single constant or a combination of both. These options are only taken into account under macOS. Under Windows, the *options* parameter is ignored if it is passed. 
 
@@ -95,9 +95,9 @@ The following example allows you to select the folder in which the pictures in t
 
 ## See also 
 
-[CREATE FOLDER](create-folder.md)  
-[FOLDER LIST](folder-list.md)  
-[Select document](select-document.md)  
+[CREATE FOLDER](../commands/create-folder)  
+[FOLDER LIST](../commands/folder-list)  
+[Select document](../commands/select-document)  
 
 ## Properties
 

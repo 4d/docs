@@ -1,4 +1,4 @@
----
+﻿---
 id: type
 title: Type
 slug: /commands/type
@@ -72,8 +72,8 @@ Type ファンクションはフィールド、インタープロセス変数、
 
 **注:** 
 
-* **Type** ファンクションは、オブジェクトプロパティ*(emp.name)* やコレクション要素(*myColl\[5\]*) などのスカラー式に対して適用することができません。これには、[Value type](value-type.md) コマンドを使用する必要があります。
-* コンパイル済みモードでは、*C\_VARIANT* として宣言されたメソッド引数($0, $ptrTable...) に対して**Type** を呼び出した場合、Is variant は返されず、実際のデータ型が返されます([Value type](value-type.md) を呼んだ場合と同じ)
+* **Type** ファンクションは、オブジェクトプロパティ*(emp.name)* やコレクション要素(*myColl\[5\]*) などのスカラー式に対して適用することができません。これには、[Value type](../commands/value-type) コマンドを使用する必要があります。
+* コンパイル済みモードでは、*C\_VARIANT* として宣言されたメソッド引数($0, $ptrTable...) に対して**Type** を呼び出した場合、Is variant は返されず、実際のデータ型が返されます([Value type](../commands/value-type) を呼んだ場合と同じ)
 
 ## 例題 1 
 
@@ -156,9 +156,9 @@ Type ファンクションはフィールド、インタープロセス変数、
 
 ## 参照 
 
-[Is a variable](is-a-variable.md)  
-[Undefined](undefined.md)  
-[Value type](value-type.md)  
+[Is a variable](../commands/is-a-variable)  
+[Undefined](../commands/undefined)  
+[Value type](../commands/value-type)  
 
 ## プロパティ
 

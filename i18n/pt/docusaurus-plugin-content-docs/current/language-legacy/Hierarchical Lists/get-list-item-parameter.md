@@ -1,4 +1,4 @@
----
+﻿---
 id: get-list-item-parameter
 title: GET LIST ITEM PARAMETER
 slug: /commands/get-list-item-parameter
@@ -38,16 +38,16 @@ Se passa o primeiro parâmetro opcional \*, indica que o parâmetro *lista* é u
 
 **Nota:** se utiliza o caractere @ no nome de objeto da lista e o formulário contém várias listas que correspondem a este nome, ou GET LIST ITEM PARAMETER se aplicará ao primeiro objeto cujo nome corresponda.
 
-Pode passar um número de referência em *refElem*. Se este número não corresponde a nenhum elemento da lista, o comando não faz nada. Também pode passar 0 em *refElem* para obter a fonte do último elemento adicionado à lista (utilizando [APPEND TO LIST](append-to-list.md)). 
+Pode passar um número de referência em *refElem*. Se este número não corresponde a nenhum elemento da lista, o comando não faz nada. Também pode passar 0 em *refElem* para obter a fonte do último elemento adicionado à lista (utilizando [APPEND TO LIST](../commands/append-to-list)). 
 
 Finalmente, pode passar \* em *refElem*: neste caso, o comando se aplicará ao elemento atual da lista. Se vários elementos são selecionados manualmente, o elemento atual é o último selecionado. Se nenhum elemento estiver selecionado, o comando não faz nada.
 
-Em *seletor*, pode passar a constante Additional text ou a constante de ação padrão (localizada no tema “*Listas hierárquicas*”) ou qualquer valor personalizado. Para maior informação sobre os parâmetros *seletor* e *valor*, consulte a descrição do comando [SET LIST ITEM PARAMETER](set-list-item-parameter.md).
+Em *seletor*, pode passar a constante Additional text ou a constante de ação padrão (localizada no tema “*Listas hierárquicas*”) ou qualquer valor personalizado. Para maior informação sobre os parâmetros *seletor* e *valor*, consulte a descrição do comando [SET LIST ITEM PARAMETER](../commands/set-list-item-parameter).
 
 ## Ver também 
 
 *Listas hierárquicas*  
-[SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+[SET LIST ITEM PARAMETER](../commands/set-list-item-parameter)  
 
 ## Propriedades
 

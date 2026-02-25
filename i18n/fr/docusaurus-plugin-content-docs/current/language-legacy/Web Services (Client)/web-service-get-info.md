@@ -1,4 +1,4 @@
----
+﻿---
 id: web-service-get-info
 title: WEB SERVICE Get info
 slug: /commands/web-service-get-info
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.WEB SERVICE Get info.Summary-->La commande **WEB SERVICE Get info** retourne des informations relatives à l'erreur éventuellement générée lors de l’exécution de la dernière requête SOAP adressée à un Web Service.<!-- END REF--> Cette commande doit généralement être appelée dans le cadre d'une méthode d'appel sur erreur installée par la commande [ON ERR CALL](on-err-call.md).
+<!--REF #_command_.WEB SERVICE Get info.Summary-->La commande **WEB SERVICE Get info** retourne des informations relatives à l'erreur éventuellement générée lors de l’exécution de la dernière requête SOAP adressée à un Web Service.<!-- END REF--> Cette commande doit généralement être appelée dans le cadre d'une méthode d'appel sur erreur installée par la commande [ON ERR CALL](../commands/on-err-call).
 
 Le paramètre *typeInfo* vous permet d’indiquer le type d’information que vous souhaitez obtenir. Vous devez passer une des constantes suivantes, placées dans le thème *Web Services (Client)* :
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: sequence-number
 title: Sequence number
 slug: /commands/sequence-number
@@ -31,11 +31,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Sequence number.Summary-->**Sequence number** retourne le prochain numéro automatique de *laTable*.<!-- END REF--> Ce numéro est unique pour chaque table. C'est une valeur qui ne se répète pas et qui est incrémentée à chaque enregistrement nouvellement créé dans la table(\*). 
 
-(\*) Pour des raisons d'optimisation, la numérotation automatique est activée uniquement au premier appel de la commande **Sequence number** ou d'une des fonctions qui y accèdent (cf. ci-dessous). De plus, le compteur peut être réinitialisé via [SET DATABASE PARAMETER](set-database-parameter.md). Par conséquent, la valeur retournée ne correspond pas nécessairement au nombre d'enregistrements ayant été créés dans *laTable*. 
+(\*) Pour des raisons d'optimisation, la numérotation automatique est activée uniquement au premier appel de la commande **Sequence number** ou d'une des fonctions qui y accèdent (cf. ci-dessous). De plus, le compteur peut être réinitialisé via [SET DATABASE PARAMETER](../commands/set-database-parameter). Par conséquent, la valeur retournée ne correspond pas nécessairement au nombre d'enregistrements ayant été créés dans *laTable*. 
 
-Par défaut, la numérotation commence à 1 ; vous pouvez toutefois modifier la numérotation automatique des enregistrements de *laTable* à l'aide de la commande [SET DATABASE PARAMETER](set-database-parameter.md). 
+Par défaut, la numérotation commence à 1 ; vous pouvez toutefois modifier la numérotation automatique des enregistrements de *laTable* à l'aide de la commande [SET DATABASE PARAMETER](../commands/set-database-parameter). 
 
-**Note :** S'il n'y a pas d'enregistrement courant et que la numérotation a été modifiée via la commande [SET DATABASE PARAMETER](set-database-parameter.md), le numéro est bien réservé pour la prochaine création d'enregistrement mais ne sera retourné par la fonction **Sequence number** que lorsque la commande [SAVE RECORD](save-record.md) sera effectivement appelée. 
+**Note :** S'il n'y a pas d'enregistrement courant et que la numérotation a été modifiée via la commande [SET DATABASE PARAMETER](../commands/set-database-parameter), le numéro est bien réservé pour la prochaine création d'enregistrement mais ne sera retourné par la fonction **Sequence number** que lorsque la commande [SAVE RECORD](../commands/save-record) sera effectivement appelée. 
 
 Le numéro retourné par cette fonction pour *laTable* est identique à celui généré si vous avez coché l'option **Incrémentation auto** dans l'Inspecteur de Structure pour un champ de *laTable* ou si vous fixez #N comme valeur par défaut pour un champ de *laTable* dans un formulaire (référez-vous au manuel *Mode Développement* de 4D). 
 
@@ -67,8 +67,8 @@ L'exemple suivant fait partie d'une méthode formulaire. Ces lignes de code test
 ## Voir aussi 
 
 *A propos des numéros d'enregistrements*  
-[Record number](record-number.md)  
-[Selected record number](selected-record-number.md)  
+[Record number](../commands/record-number)  
+[Selected record number](../commands/selected-record-number)  
 
 ## Propriétés
 

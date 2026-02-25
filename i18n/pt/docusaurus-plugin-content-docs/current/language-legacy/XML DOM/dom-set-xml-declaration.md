@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-set-xml-declaration
 title: DOM SET XML DECLARATION
 slug: /commands/dom-set-xml-declaration
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 * codificação: indica o conjunto de caracteres utilizado no documento. Como padrão (se não for chamado ao comando), se utiliza o conjunto de caracteres UTF-8 (Unicode comprimido).  
 **Nota:** se passar um conjunto de caracteres que não seja suportado por comandos 4D XML, será usado UTF-8\. Veja *Conjuntos de caracteres* para uma lista de conjuntos de caracteres suportados (entretanto para a maioria dos casos UTF-8 é recomendado).
 * autônomo: indica se a árvore é autônoma (True) ou se necesita outros arquivos ou recursos externos para seu funcionamento (False). Como padrão (se o comando não for chamado ou se for omitido o parâmetro), a árvore não é autônoma.
-**Nota de compatibilidade**: O parâmetro indentação se conserva por razões de compatibilidade com as versões anteriores de 4D mas seu uso não é recomendado em 4D v12\. De agora em diante, para especificar a indentação do documento, se recomenda utilizar o comando [XML SET OPTIONS](xml-set-options.md)
+**Nota de compatibilidade**: O parâmetro indentação se conserva por razões de compatibilidade com as versões anteriores de 4D mas seu uso não é recomendado em 4D v12\. De agora em diante, para especificar a indentação do documento, se recomenda utilizar o comando [XML SET OPTIONS](../commands/xml-set-options)
 
 ## Exemplo 
 
@@ -49,8 +49,8 @@ O exemplo define a codificação a utilizar e a opção autônoma do elemento *e
 
 ## Ver também 
 
-[DOM Create XML Ref](dom-create-xml-ref.md)  
-[XML SET OPTIONS](xml-set-options.md)  
+[DOM Create XML Ref](../commands/dom-create-xml-ref)  
+[XML SET OPTIONS](../commands/xml-set-options)  
 
 ## Propriedades
 

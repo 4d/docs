@@ -1,4 +1,4 @@
----
+﻿---
 id: process-info
 slug: /commands/process-info
 title: Process info
@@ -159,6 +159,6 @@ $preemptive:=Process info(Current process).preemptive
 ## Voir également
 
 [Count tasks](../../commands-legacy/count-tasks)\
-[Process activity](process-activity.md)\
+[Process activity](../commands/process-activity)\
 [Process state](../../commands-legacy/process-state)\
-[Session info](session-info.md)
+[Session info](../commands/session-info)

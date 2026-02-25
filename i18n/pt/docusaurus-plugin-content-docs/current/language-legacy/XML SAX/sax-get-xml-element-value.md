@@ -1,4 +1,4 @@
----
+﻿---
 id: sax-get-xml-element-value
 title: SAX GET XML ELEMENT VALUE
 slug: /commands/sax-get-xml-element-value
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.SAX GET XML ELEMENT VALUE.Summary-->O comando SAX GET XML ELEMENT VALUE permite recuperar o valor de um elemento XML existente no documento XML referenciado por *documento*.<!-- END REF--> Este comando deve ser chamado no contexto de um evento XML DATA SAX. Para maior informação sobre os eventos SAX, consulte a descrição do comando [SAX Get XML node](sax-get-xml-node.md) .  
+<!--REF #_command_.SAX GET XML ELEMENT VALUE.Summary-->O comando SAX GET XML ELEMENT VALUE permite recuperar o valor de um elemento XML existente no documento XML referenciado por *documento*.<!-- END REF--> Este comando deve ser chamado no contexto de um evento XML DATA SAX. Para maior informação sobre os eventos SAX, consulte a descrição do comando [SAX Get XML node](../commands/sax-get-xml-node) .  
 
 Passe no parâmetro valor uma variável de tipo Texto ou BLOB. Se passa um BLOB, o comando automaticamente tentará decodificá-lo em base64.
 
@@ -55,8 +55,8 @@ Se o comando se executa corretamente, a variável sistema OK toma o valor 1\. Ca
 
 ## Ver também 
 
-[SAX ADD XML ELEMENT VALUE](sax-add-xml-element-value.md)  
-[SAX Get XML node](sax-get-xml-node.md)  
+[SAX ADD XML ELEMENT VALUE](../commands/sax-add-xml-element-value)  
+[SAX Get XML node](../commands/sax-get-xml-node)  
 
 ## Propriedades
 

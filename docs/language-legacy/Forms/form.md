@@ -1,4 +1,4 @@
----
+﻿---
 id: form
 title: Form
 slug: /commands/form
@@ -26,13 +26,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Form.Summary-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).<!-- END REF--> 4D automatically associates an object to the current form in the following cases:
 
-* the current form has been loaded by one of the [`DIALOG`](dialog.md), [`Print form`](print-form.md), or [`FORM LOAD`](form-load.md) commands,
+* the current form has been loaded by one of the [`DIALOG`](../commands/dialog), [`Print form`](../commands/print-form), or [`FORM LOAD`](../commands/form-load) commands,
 * the current form is a subform,
 * a table form is currently displayed on screen.
 
 ### Commands (DIALOG...) 
 
-If the current form is being displayed or loaded by a call to the [DIALOG](dialog.md), [`Print form`](print-form.md), or [`FORM LOAD`](form-load.md) commands, **Form** returns either:
+If the current form is being displayed or loaded by a call to the [DIALOG](../commands/dialog), [`Print form`](../commands/print-form), or [`FORM LOAD`](../commands/form-load) commands, **Form** returns either:
 
 - the *formData* object passed as parameter to this command, if any,
 - or, an instantiated object of the [user class associated to the form](../../FormEditor/properties_FormProperties.md#form-class), if any,
@@ -108,7 +108,7 @@ If values are edited and the OK button is clicked, the field is updated (the par
 ## See also 
 
 
-[DIALOG](dialog.md)  
+[DIALOG](../commands/dialog)  
 
 ## Properties
 

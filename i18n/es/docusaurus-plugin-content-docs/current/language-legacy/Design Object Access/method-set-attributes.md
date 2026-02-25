@@ -1,4 +1,4 @@
----
+﻿---
 id: method-set-attributes
 title: METHOD SET ATTRIBUTES
 slug: /commands/method-set-attributes
@@ -38,11 +38,11 @@ En *ruta*, puede pasar ya sea un texto que contiene una ruta de método, o un ar
 
 En *atributos*, se pasa un objeto o un array de objetos (en función del tipo de parámetro pasado en *ruta*) que contiene todos los atributos que desea definir para los métodos.
 
-Los atributos de métodos deben definirse con los comandos [OB SET](ob-set.md) o [OB SET ARRAY](ob-set-array.md), con los valores True o False para los atributos booleanos, o los valores específicos para los atributos extendidos. Sólo los atributos que están presentes en el parámetro *atributos* se actualizarán en los atributos de los métodos.
+Los atributos de métodos deben definirse con los comandos [OB SET](../commands/ob-set) o [OB SET ARRAY](../commands/ob-set-array), con los valores True o False para los atributos booleanos, o los valores específicos para los atributos extendidos. Sólo los atributos que están presentes en el parámetro *atributos* se actualizarán en los atributos de los métodos.
 
 Si el comando se ejecuta desde un componente, por defecto se aplica a los métodos del componente. Si pasa el parámetro *\**, accede a los métodos de la base local.
 
-**Nota:** el comando existente [METHOD SET ATTRIBUTE](method-set-attribute.md) aún se soporta pero ya que sólo puede manejar valores booleanos, no se puede utilizar para atributos extendidos tales como propiedades 4D Mobile.
+**Nota:** el comando existente [METHOD SET ATTRIBUTE](../commands/method-set-attribute) aún se soporta pero ya que sólo puede manejar valores booleanos, no se puede utilizar para atributos extendidos tales como propiedades 4D Mobile.
 
 ### 
 
@@ -66,8 +66,8 @@ Usted desea modificar un solo atributo:
 
 ## Ver también 
 
-[METHOD GET ATTRIBUTES](method-get-attributes.md)  
-[METHOD SET ATTRIBUTE](method-set-attribute.md)  
+[METHOD GET ATTRIBUTES](../commands/method-get-attributes)  
+[METHOD SET ATTRIBUTE](../commands/method-set-attribute)  
 
 ## Propiedades
 

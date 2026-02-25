@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-set-parameter
 title: SQL SET PARAMETER
 slug: /commands/sql-set-parameter
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 SQLリクエスト内におかれた*?*記号が4Dオブジェクトの値で置き換えられます（標準のシンタックス）。  
 リクエストに複数の*?*記号が含まれる場合、**SQL SET PARAMETER**コマンドを複数回呼び出す必要があります。4Dオブジェクトの値は、コマンドの実行順に合わせてリクエスト内で順次割り当てられます。
 
-**警告:** このコマンドはSQLリクエストに渡されるパラメーターを扱うために使用します。4DオブジェクトをSQLリクエストの結果に関連付けるためにSQL param outを使用することはできません。SQLリクエストの結果は例えば[SQL EXECUTE](sql-execute.md)コマンドの *boundObj* パラメーターを使用して取り出されます (*SQLコマンドの概要*参照)。**SQL SET PARAMETER**コマンドは主にリクエストに渡されるパラメーター (SQL param in) を設定することを意図しています。SQL param out と SQL param in out はパラメーターを返すかもしれないSQLストアードプロシージャーのコンテキストで使用されるために予約されています。
+**警告:** このコマンドはSQLリクエストに渡されるパラメーターを扱うために使用します。4DオブジェクトをSQLリクエストの結果に関連付けるためにSQL param outを使用することはできません。SQLリクエストの結果は例えば[SQL EXECUTE](../commands/sql-execute)コマンドの *boundObj* パラメーターを使用して取り出されます (*SQLコマンドの概要*参照)。**SQL SET PARAMETER**コマンドは主にリクエストに渡されるパラメーター (SQL param in) を設定することを意図しています。SQL param out と SQL param in out はパラメーターを返すかもしれないSQLストアードプロシージャーのコンテキストで使用されるために予約されています。
 
 ## 例題 1 
 

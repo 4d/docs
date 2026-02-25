@@ -1,4 +1,4 @@
----
+﻿---
 id: graph-settings
 title: GRAPH SETTINGS
 slug: /commands/graph-settings
@@ -39,9 +39,9 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.GRAPH SETTINGS.Summary-->GRAPH SETTINGS permite cambiar los parámetros de los gráficos mostrados en un formulario.<!-- END REF--> El gráfico debe haber sido definido con el comando [GRAPH](graph.md). GRAPH SETTINGS no tiene efecto en un gráfico de tipo sectores. Este comando debe llamarse obligatoriamente en el mismo proceso que el formulario.
+<!--REF #_command_.GRAPH SETTINGS.Summary-->GRAPH SETTINGS permite cambiar los parámetros de los gráficos mostrados en un formulario.<!-- END REF--> El gráfico debe haber sido definido con el comando [GRAPH](../commands/graph). GRAPH SETTINGS no tiene efecto en un gráfico de tipo sectores. Este comando debe llamarse obligatoriamente en el mismo proceso que el formulario.
 
-**Nota:** no debe llamar este comando si el gráfico se generó utilizando el comando [GRAPH](graph.md) con el parámetro *grafParams* de tipo [Objeto](# "Datos estructurados como forma de objeto nativo 4D"). Consulte la descripción del comando [GRAPH](graph.md) para más información.
+**Nota:** no debe llamar este comando si el gráfico se generó utilizando el comando [GRAPH](../commands/graph) con el parámetro *grafParams* de tipo [Objeto](# "Datos estructurados como forma de objeto nativo 4D"). Consulte la descripción del comando [GRAPH](../commands/graph) para más información.
 
 Los parámetros *xmin*, *xmax*, *ymin*, y *ymax* fijan los valores mínimos y máximos para sus respectivos ejes del gráfico. Si el valor de un par de estos parámetros es un valor nulo, (0, ?00:00:00?, ó !00/00/00!, dependiendo del tipo de dato), se utilizarán los valores del gráfico por defecto. Los parámetros *xmin* y *xmax* sólo se tienen en cuenta para gráficos proporcionales (*xprop* es **True**).
 
@@ -57,7 +57,7 @@ Ver el ejemplo del comando [GRAPH](graph.md "GRAPH").
 
 ## Ver también 
 
-[GRAPH](graph.md)  
+[GRAPH](../commands/graph)  
 
 ## Propiedades
 

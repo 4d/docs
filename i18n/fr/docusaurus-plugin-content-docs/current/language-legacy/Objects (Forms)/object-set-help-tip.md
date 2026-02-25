@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-help-tip
 title: OBJECT SET HELP TIP
 slug: /commands/object-set-help-tip
@@ -37,16 +37,16 @@ Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *ob
 
 Passez dans le paramètre *messageAide* une chaîne de caractères contenant le message à afficher. Si vous passez une chaîne vide "", l'infobulle est supprimée.
 
-Lorsque le formulaire est exécuté, les messages d'aide apparaissent sous forme d'infobulle à chaque fois que le curseur de la souris survole le champ ou l'objet. Le délai d'affichage et la durée maximum d'affichage des messages d'aide peuvent être contrôlés en utilisant les sélecteurs Tips delay et Tips duration de la commande [SET DATABASE PARAMETER](set-database-parameter.md).
+Lorsque le formulaire est exécuté, les messages d'aide apparaissent sous forme d'infobulle à chaque fois que le curseur de la souris survole le champ ou l'objet. Le délai d'affichage et la durée maximum d'affichage des messages d'aide peuvent être contrôlés en utilisant les sélecteurs Tips delay et Tips duration de la commande [SET DATABASE PARAMETER](../commands/set-database-parameter).
 
-Note : Vous pouvez utiliser cette commande avec une list box afin d'associer des infobulles aux lignes et cellules de la list box. Par exemple, un objet list box peut comporter une infobulle différente par ligne. Ce cas nécessite de déterminer au préalable la position du curseur à l'aide de la commande [LISTBOX GET CELL POSITION](listbox-get-cell-position.md). Ce principe est présenté dans un exemple ci-dessous.
+Note : Vous pouvez utiliser cette commande avec une list box afin d'associer des infobulles aux lignes et cellules de la list box. Par exemple, un objet list box peut comporter une infobulle différente par ligne. Ce cas nécessite de déterminer au préalable la position du curseur à l'aide de la commande [LISTBOX GET CELL POSITION](../commands/listbox-get-cell-position). Ce principe est présenté dans un exemple ci-dessous.
 
 Lorsqu'un message d'aide est déjà affiché, l'utilisation de la commande **OBJECT SET HELP TIP** le ferme, ouvre un nouveau message d'aide à l'endroit où se trouve la souris et redémarre le compteur Tips duration, permettant une gestion dynamique des messages d'aide.
 
 **Notes :** 
 
 * Les messages d'aide peuvent également être définis via l'éditeur de formulaires (voir *Contrôles et aides à la saisie*) et l'éditeur de structure (voir *Propriétés des champs*) en mode Développement.
-* Les messages d'aide peuvent être globalement désactivés pour l'application en utilisant le sélecteur Tips enabled de la commande [SET DATABASE PARAMETER](set-database-parameter.md).
+* Les messages d'aide peuvent être globalement désactivés pour l'application en utilisant le sélecteur Tips enabled de la commande [SET DATABASE PARAMETER](../commands/set-database-parameter).
 
 ## Exemple 1 
 
@@ -135,8 +135,8 @@ Résultat :
 
 ## Voir aussi 
 
-[OBJECT Get help tip](object-get-help-tip.md)  
-[SET DATABASE PARAMETER](set-database-parameter.md)  
+[OBJECT Get help tip](../commands/object-get-help-tip)  
+[SET DATABASE PARAMETER](../commands/set-database-parameter)  
 
 ## Propriétés
 

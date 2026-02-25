@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-placeholder
 title: OBJECT Get placeholder
 slug: /commands/object-get-placeholder
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get placeholder.Summary-->**OBJECT Get placeholder**コマンドは、引数 *object* と *\** で指定したオブジェクトと関連付けられたプレースホルダーテキストを返します。<!-- END REF-->オブジェクトにプレースホルダーテキストが何も関連付けられていない場合は、空の文字列を返します。
 
-プ レースホルダーテキストは、プロパティリストを使用するか、 [OBJECT SET PLACEHOLDER](object-set-placeholder.md) コマンドを使用することで定義できます。
+プ レースホルダーテキストは、プロパティリストを使用するか、 [OBJECT SET PLACEHOLDER](../commands/object-set-placeholder) コマンドを使用することで定義できます。
 
 任意の \* 演算子を渡した場合、 object 引数でオブジェクト名を文字列で指定します。省略時には object 引数でフィールドまたは変数を指定します。
 
@@ -47,7 +47,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT SET PLACEHOLDER](object-set-placeholder.md)  
+[OBJECT SET PLACEHOLDER](../commands/object-set-placeholder)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: sax-get-xml-document-values
 title: SAX GET XML DOCUMENT VALUES
 slug: /commands/sax-get-xml-document-values
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAX GET XML DOCUMENT VALUES.Summary-->La commande **SAX GET XML DOCUMENT VALUES** extrait des informations élémentaires de l’en-tête XML du document XML référencé par *document*.<!-- END REF--> 
 
-La commande retourne respectivement le type d’encodage, la version et la propriété “autonome” du document dans les paramètres *encodage*, *version* et *autonome*. Cette commande doit être utilisée dans le contexte de l’événement SAX XML start document. Pour plus d'informations sur les événements SAX, reportez-vous à la description de la commande [SAX Get XML node](sax-get-xml-node.md). 
+La commande retourne respectivement le type d’encodage, la version et la propriété “autonome” du document dans les paramètres *encodage*, *version* et *autonome*. Cette commande doit être utilisée dans le contexte de l’événement SAX XML start document. Pour plus d'informations sur les événements SAX, reportez-vous à la description de la commande [SAX Get XML node](../commands/sax-get-xml-node). 
 
 ## Variables et ensembles système 
 
@@ -40,8 +40,8 @@ Si la commande a été exécutée correctement, la variable système OK prend la
 
 ## Voir aussi 
 
-[SAX Get XML node](sax-get-xml-node.md)  
-[SAX SET XML DECLARATION](sax-set-xml-declaration.md)  
+[SAX Get XML node](../commands/sax-get-xml-node)  
+[SAX SET XML DECLARATION](../commands/sax-set-xml-declaration)  
 
 ## Propriétés
 

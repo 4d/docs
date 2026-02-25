@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-minimum-value
 title: OBJECT GET MINIMUM VALUE
 slug: /commands/object-get-minimum-value
@@ -31,14 +31,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET MINIMUM VALUE.Summary-->La commande **OBJECT GET MINIMUM VALUE** retourne dans la variable *valeurMini* la valeur minimum courante de l’objet ou des objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF-->
 
-La propriété "Valeur minimum" peut être définie via la Liste des propriétés en mode Développement ou via la commande [OBJECT SET MINIMUM VALUE](object-set-minimum-value.md).
+La propriété "Valeur minimum" peut être définie via la Liste des propriétés en mode Développement ou via la commande [OBJECT SET MINIMUM VALUE](../commands/object-set-minimum-value).
 
 Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).
 
 ## Voir aussi 
 
-[OBJECT GET MAXIMUM VALUE](object-get-maximum-value.md)  
-[OBJECT SET MINIMUM VALUE](object-set-minimum-value.md)  
+[OBJECT GET MAXIMUM VALUE](../commands/object-get-maximum-value)  
+[OBJECT SET MINIMUM VALUE](../commands/object-set-minimum-value)  
 
 ## Propriétés
 

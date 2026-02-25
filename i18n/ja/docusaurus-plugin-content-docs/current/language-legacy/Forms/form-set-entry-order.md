@@ -1,4 +1,4 @@
----
+﻿---
 id: form-set-entry-order
 title: FORM SET ENTRY ORDER
 slug: /commands/form-set-entry-order
@@ -37,14 +37,14 @@ displayed_sidebar: docs
 * カレントページ上 (または *pageNumber* ページ上、後述参照) で使用されている。  
 **注:** フォームページにはページ 0 および継承されたフォームオブジェクトが含まれることに留意してください。
 
-ランタイムにおいて無効なオブジェクトが検知された場合には、4D はこれを無視して、*objectNames* 配列の次の要素に移ります。有効なオブジェクトのみが含まれたカレントページの実際の入力順は、\* パラメーターを指定した [FORM GET ENTRY ORDER](form-get-entry-order.md) コマンドによって確認することができます。 
+ランタイムにおいて無効なオブジェクトが検知された場合には、4D はこれを無視して、*objectNames* 配列の次の要素に移ります。有効なオブジェクトのみが含まれたカレントページの実際の入力順は、\* パラメーターを指定した [FORM GET ENTRY ORDER](../commands/form-get-entry-order) コマンドによって確認することができます。 
 
 任意のパラメーター *pageNumber* を使って、入力順を設定するページを指定することができます。省略した場合には、カレントページが対象となります。
 
 **注:** 
 
 * サブフォームの入力順はサブフォームにて定義されます。これを設定するには **FORM SET ENTRY ORDER** コマンドをサブフォームのコンテキスト内で呼び出す必要があります。
-* このコマンドは、ランタイムにおいてフォーム上で最初にフォーカスされるオブジェクトは指定しません。入力順の先頭オブジェクトを指定するには、フォームの On Load イベント内で [GOTO OBJECT](goto-object.md) コマンドを呼び出す必要があります。[OBJECT DUPLICATE](object-duplicate.md) コマンドを使用する場合には、*boundTo* パラメーターに Object First in entry order 定数を渡すことで、複製オブジェクトを先頭に設定することができます。
+* このコマンドは、ランタイムにおいてフォーム上で最初にフォーカスされるオブジェクトは指定しません。入力順の先頭オブジェクトを指定するには、フォームの On Load イベント内で [GOTO OBJECT](../commands/goto-object) コマンドを呼び出す必要があります。[OBJECT DUPLICATE](../commands/object-duplicate) コマンドを使用する場合には、*boundTo* パラメーターに Object First in entry order 定数を渡すことで、複製オブジェクトを先頭に設定することができます。
 
 **データ入力順について**  
 データ入力順とは、フォーム上で**Tab** キーや**改行**キーを押したときに、フィールドやサブフォーム、その他のアクティブオブジェクトが選択される順番です。**Shift+Tab**や**Shift+改行**キーを押すことで逆方向に移動することもできます。入力順はデフォルトで定義されているほか、フォームエディターにおいて変更することが可能です。詳細については *デザインリファレンス* マニュアルの *データの入力順を変更する* を参照ください。
@@ -64,7 +64,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[FORM GET ENTRY ORDER](form-get-entry-order.md)  
+[FORM GET ENTRY ORDER](../commands/form-get-entry-order)  
 
 ## プロパティ
 

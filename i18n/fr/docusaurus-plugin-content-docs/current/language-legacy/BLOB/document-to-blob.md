@@ -1,4 +1,4 @@
----
+﻿---
 id: document-to-blob
 title: DOCUMENT TO BLOB
 slug: /commands/document-to-blob
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.DOCUMENT TO BLOB.Summary-->**DOCUMENT TO BLOB** charge le contenu de *document* dans *blob*.<!-- END REF--> Vous devez passer un nom de document valide, c'est-à-dire qui désigne un document existant qui n'est pas déjà ouvert, sinon une erreur sera générée. Si vous voulez que l'utilisateur choisisse le document, utilisez la routine [Open document](open-document.md) et la variable système Document (cf. l'exemple ci-dessous). 
+<!--REF #_command_.DOCUMENT TO BLOB.Summary-->**DOCUMENT TO BLOB** charge le contenu de *document* dans *blob*.<!-- END REF--> Vous devez passer un nom de document valide, c'est-à-dire qui désigne un document existant qui n'est pas déjà ouvert, sinon une erreur sera générée. Si vous voulez que l'utilisateur choisisse le document, utilisez la routine [Open document](../commands/open-document) et la variable système Document (cf. l'exemple ci-dessous). 
 
 ## Exemple 
 
@@ -56,12 +56,12 @@ La variable système OK prend la valeur 1 si le document est correctement lu. Si
 * Une erreur d'Entrée/Sortie peut survenir si le document est verrouillé, s'il se trouve sur un volume verrouillé ou si un problème survient pendant la lecture du document.
 * S'il n'y a pas assez de mémoire pour charger le document, une erreur -108 est générée.
 
-Dans tous les cas, vous pouvez gérer les erreurs en utilisant la commande [ON ERR CALL](on-err-call.md).
+Dans tous les cas, vous pouvez gérer les erreurs en utilisant la commande [ON ERR CALL](../commands/on-err-call).
 
 ## Voir aussi 
 
-[BLOB TO DOCUMENT](blob-to-document.md)  
-[Open document](open-document.md)  
+[BLOB TO DOCUMENT](../commands/blob-to-document)  
+[Open document](../commands/open-document)  
 
 ## Propriétés
 

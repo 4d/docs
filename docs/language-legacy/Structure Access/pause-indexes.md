@@ -1,4 +1,4 @@
----
+﻿---
 id: pause-indexes
 title: PAUSE INDEXES
 slug: /commands/pause-indexes
@@ -33,14 +33,14 @@ The indexes are not physically deleted from the data (.4DIndx file) or the struc
 
 This command is mainly useful when you are importing or modifying large amounts of data in tables that have several indexes. Since 4D must update the indexes each time a record is validated, the operation could take a considerable amount of time. Disabling the indexes beforehand can significantly speed up the operation. 
 
-To resume the indexes after the operation is over, you can just call the [RESUME INDEXES](resume-indexes.md) command for *aTable*. 
+To resume the indexes after the operation is over, you can just call the [RESUME INDEXES](../commands/resume-indexes) command for *aTable*. 
 
-**Note:** You can obtain a similar result by using the [CREATE INDEX](create-index.md) and [DELETE INDEX](delete-index.md) commands, but with notable differences:
+**Note:** You can obtain a similar result by using the [CREATE INDEX](../commands/create-index) and [DELETE INDEX](../commands/delete-index) commands, but with notable differences:
 
-* it is necessary to call [DELETE INDEX](delete-index.md) / [CREATE INDEX](create-index.md) for each index in *aTable*.
-* calling the [DELETE INDEX](delete-index.md) / [CREATE INDEX](create-index.md) commands change the internal number of the index, which is not the case with **PAUSE INDEXES** / [RESUME INDEXES](resume-indexes.md). Changing the index number will generate an automatic reindexing of the data if the dataset changes.
+* it is necessary to call [DELETE INDEX](../commands/delete-index) / [CREATE INDEX](../commands/create-index) for each index in *aTable*.
+* calling the [DELETE INDEX](../commands/delete-index) / [CREATE INDEX](../commands/create-index) commands change the internal number of the index, which is not the case with **PAUSE INDEXES** / [RESUME INDEXES](../commands/resume-indexes). Changing the index number will generate an automatic reindexing of the data if the dataset changes.
 
-If you call the **PAUSE INDEXES** command for a table and then quit the database without having called the [RESUME INDEXES](resume-indexes.md) command for this table, all this table’s indexes are automatically rebuilt when the database is restarted. 
+If you call the **PAUSE INDEXES** command for a table and then quit the database without having called the [RESUME INDEXES](../commands/resume-indexes) command for this table, all this table’s indexes are automatically rebuilt when the database is restarted. 
 
 **Note:** This command cannot be executed from a 4D remote.
 
@@ -56,8 +56,8 @@ Example of method for importing large amounts of data:
 
 ## See also 
 
-[DELETE INDEX](delete-index.md)  
-[RESUME INDEXES](resume-indexes.md)  
+[DELETE INDEX](../commands/delete-index)  
+[RESUME INDEXES](../commands/resume-indexes)  
 
 ## Properties
 

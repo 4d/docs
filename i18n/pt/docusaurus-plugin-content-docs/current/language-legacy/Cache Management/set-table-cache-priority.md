@@ -1,4 +1,4 @@
----
+﻿---
 id: set-table-cache-priority
 title: SET TABLE CACHE PRIORITY
 slug: /commands/set-table-cache-priority
@@ -36,7 +36,7 @@ O comando **SET TABLE CACHE PRIORITY** estabelece uma *prioridade* específica p
 
 **Nota:** Este comando só funciona em modo local (4D Server e 4D); não pode ser usado em modo remoto 4D. 
 
-Este comando gerencia prioridade para dados apenas em campos escalares (data, número ou tipo string). Prioridade para campos de tipo binário (Blobs, textos, imagens e objetos) é manejada pelo comando [SET BLOBS CACHE PRIORITY](set-blobs-cache-priority.md). 
+Este comando gerencia prioridade para dados apenas em campos escalares (data, número ou tipo string). Prioridade para campos de tipo binário (Blobs, textos, imagens e objetos) é manejada pelo comando [SET BLOBS CACHE PRIORITY](../commands/set-blobs-cache-priority). 
 
 Passe em *prioridade* uma das constantes abaixo do tema "*Gestão de Cache*":
 
@@ -58,9 +58,9 @@ Em , se quiser estabelecer uma prioridade mais alta para os dados escalares \[Cu
 
 ## Ver também 
 
-[ADJUST INDEX CACHE PRIORITY](adjust-index-cache-priority.md)  
-[ADJUST TABLE CACHE PRIORITY](adjust-table-cache-priority.md)  
-[Get adjusted table cache priority](get-adjusted-table-cache-priority.md)  
+[ADJUST INDEX CACHE PRIORITY](../commands/adjust-index-cache-priority)  
+[ADJUST TABLE CACHE PRIORITY](../commands/adjust-table-cache-priority)  
+[Get adjusted table cache priority](../commands/get-adjusted-table-cache-priority)  
 
 ## Propriedades
 

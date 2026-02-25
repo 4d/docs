@@ -1,4 +1,4 @@
----
+﻿---
 id: load-variables
 title: LOAD VARIABLES
 slug: /commands/load-variables
@@ -42,11 +42,11 @@ Si las variables se cargan correctamente, la variable sistema OK toma el valor 1
 
 ## Ver también 
 
-[BLOB TO DOCUMENT](blob-to-document.md)  
-[BLOB TO VARIABLE](blob-to-variable.md)  
-[DOCUMENT TO BLOB](document-to-blob.md)  
-[RECEIVE VARIABLE](receive-variable.md)  
-[VARIABLE TO BLOB](variable-to-blob.md)  
+[BLOB TO DOCUMENT](../commands/blob-to-document)  
+[BLOB TO VARIABLE](../commands/blob-to-variable)  
+[DOCUMENT TO BLOB](../commands/document-to-blob)  
+[RECEIVE VARIABLE](../commands/receive-variable)  
+[VARIABLE TO BLOB](../commands/variable-to-blob)  
 
 ## Propiedades
 

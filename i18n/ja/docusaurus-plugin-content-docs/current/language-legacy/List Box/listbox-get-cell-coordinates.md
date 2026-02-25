@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-cell-coordinates
 title: LISTBOX GET CELL COORDINATES
 slug: /commands/listbox-get-cell-coordinates
@@ -63,8 +63,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[LISTBOX GET CELL POSITION](listbox-get-cell-position.md)  
-[OBJECT GET COORDINATES](object-get-coordinates.md)  
+[LISTBOX GET CELL POSITION](../commands/listbox-get-cell-position)  
+[OBJECT GET COORDINATES](../commands/object-get-coordinates)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-create-xml-element-arrays
 title: DOM Create XML element arrays
 slug: /commands/dom-create-xml-element-arrays
@@ -72,7 +72,7 @@ Para esto, es suficiente escribir:
 
 ## Ver también 
 
-[DOM Create XML element](dom-create-xml-element.md)  
+[DOM Create XML element](../commands/dom-create-xml-element)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: append-document
 title: Append document
 slug: /commands/append-document
@@ -30,11 +30,11 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.Append document.Summary-->O comando Append document faz a mesma coisa que [Open document](open-document.md): permite abrir um documento em disco.<!-- END REF-->  
+<!--REF #_command_.Append document.Summary-->O comando Append document faz a mesma coisa que [Open document](../commands/open-document): permite abrir um documento em disco.<!-- END REF-->  
   
 A única diferença é que Append document define a localização do arquivo ao final do documento enquanto que [Open document](open-document.md "Open document") o faz ao princípio.  
   
-Para maior informação consulte [Open document](open-document.md) .
+Para maior informação consulte [Open document](../commands/open-document) .
 
 ## Exemplo 
 
@@ -49,8 +49,8 @@ O exemplo abaixo abre um documento existente chamado Nota, adiciona a string “
 
 ## Ver também 
 
-[Create document](create-document.md)  
-[Open document](open-document.md)  
+[Create document](../commands/create-document)  
+[Open document](../commands/open-document)  
 
 ## Propriedades
 

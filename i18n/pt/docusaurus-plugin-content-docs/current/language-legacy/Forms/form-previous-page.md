@@ -1,4 +1,4 @@
----
+﻿---
 id: form-previous-page
 title: FORM PREVIOUS PAGE
 slug: /commands/form-previous-page
@@ -30,8 +30,8 @@ O exemplo a seguir é um método de uma linha chamado por um comando de menu, o 
 
 ## Ver também 
 
-[FORM FIRST PAGE](form-first-page.md)  
-[FORM Get current page](form-get-current-page.md)  
-[FORM GOTO PAGE](form-goto-page.md)  
-[FORM LAST PAGE](form-last-page.md)  
-[FORM NEXT PAGE](form-next-page.md)  
+[FORM FIRST PAGE](../commands/form-first-page)  
+[FORM Get current page](../commands/form-get-current-page)  
+[FORM GOTO PAGE](../commands/form-goto-page)  
+[FORM LAST PAGE](../commands/form-last-page)  
+[FORM NEXT PAGE](../commands/form-next-page)  

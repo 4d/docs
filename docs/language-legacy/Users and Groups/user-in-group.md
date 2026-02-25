@@ -1,4 +1,4 @@
----
+﻿---
 id: user-in-group
 title: User in group
 slug: /commands/user-in-group
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.User in group.Summary-->User in group returns TRUE if *user* is in *group*.<!-- END REF-->
 
-**Note:** This command expects a user account name in the *user* parameter (it does not support user aliases). If you have defined user aliases in your applicaton, pass the 4D user account parameter to the [Current user](current-user.md) command to make sure it returns a user account (see example).
+**Note:** This command expects a user account name in the *user* parameter (it does not support user aliases). If you have defined user aliases in your applicaton, pass the 4D user account parameter to the [Current user](../commands/current-user) command to make sure it returns a user account (see example).
 
 ## Example 
 
@@ -43,7 +43,7 @@ The following example searches for specific invoices. If the current user is in 
 
 ## See also 
 
-[Current user](current-user.md)  
+[Current user](../commands/current-user)  
 
 ## Properties
 

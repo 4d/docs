@@ -1,4 +1,4 @@
----
+﻿---
 id: create-menu
 title: Create menu
 slug: /commands/create-menu
@@ -32,16 +32,16 @@ displayed_sidebar: docs
 
 El comando devuelve un identificador único de tipo MenuRef para el nuevo menú.
 
-* Si no pasa el parámetro opcional *menu*, el menú será creado vacío. Debe construirlo y administrarlo utilizando los comandos [RELEASE MENU](release-menu.md), [SET MENU ITEM](set-menu-item.md), etc.
+* Si no pasa el parámetro opcional *menu*, el menú será creado vacío. Debe construirlo y administrarlo utilizando los comandos [RELEASE MENU](../commands/release-menu), [SET MENU ITEM](../commands/set-menu-item), etc.
 * Si pasa el parámetro *menu*, el menú creado será una copia exacta del menú fuente designado por este parámetro. Todas las propiedades del menú fuente, incluyendo los submenús asociados, serán aplicadas al nuevo menú. Note que una nueva referencia MenuRef se crea para el menú fuente y para cada submenú asociado existente.
 
 En el parámetro *menu*, puede pasar una referencia de menú válida, o el número o nombre de una barra de menús definida en el entorno Diseño. En este último caso, el nuevo menú estará constituido por los menús y submenús de la barra de menús fuente.
 
 **Nota:** si pasa un valor invalido en *menu*, se crea un menú vacío.
 
-Un menú creado por este comando puede ser utilizado como barra de menús utilizando el comando [SET MENU BAR](set-menu-bar.md).
+Un menú creado por este comando puede ser utilizado como barra de menús utilizando el comando [SET MENU BAR](../commands/set-menu-bar).
 
-Cuando ya no necesite el menú creado por [Create menu](create-menu.md), recuerde llamar al comando [RELEASE MENU](release-menu.md) para liberar la memoria que está siendo utilizada. 
+Cuando ya no necesite el menú creado por [Create menu](../commands/create-menu), recuerde llamar al comando [RELEASE MENU](../commands/release-menu) para liberar la memoria que está siendo utilizada. 
 
 ## Ejemplo 
 
@@ -49,9 +49,9 @@ Consulte el ejemplo del comando [SET MENU BAR](set-menu-bar.md "SET MENU BAR").
 
 ## Ver también 
 
-[Dynamic pop up menu](dynamic-pop-up-menu.md)  
-[RELEASE MENU](release-menu.md)  
-[SET MENU BAR](set-menu-bar.md)  
+[Dynamic pop up menu](../commands/dynamic-pop-up-menu)  
+[RELEASE MENU](../commands/release-menu)  
+[SET MENU BAR](../commands/set-menu-bar)  
 
 ## Propiedades
 

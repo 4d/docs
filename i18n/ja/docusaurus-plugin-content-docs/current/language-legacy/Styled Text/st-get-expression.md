@@ -1,4 +1,4 @@
----
+﻿---
 id: st-get-expression
 title: ST Get expression
 slug: /commands/st-get-expression
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 このコマンドは、オブジェクト内に挿入された4D式の内容を返します(結果は、例えば "mymethod" や"\[table1\]field1" 等になります)。 4D式の値は返されません。
 
-**注:** このコマンドは、"バーチャルな"ストラクチャーが[SET TABLE TITLES](set-table-titles.md) および [SET FIELD TITLES](set-field-titles.md) コマンドを使用して定義されていたとしても、フィールドとテーブルに関しては"実際の"名前を返します。
+**注:** このコマンドは、"バーチャルな"ストラクチャーが[SET TABLE TITLES](../commands/set-table-titles) および [SET FIELD TITLES](../commands/set-field-titles) コマンドを使用して定義されていたとしても、フィールドとテーブルに関しては"実際の"名前を返します。
 
 任意の *\** 演算子を渡した場合、 *object* 引数でオブジェクト名を文字列で指定します。このとき、オブジェクトがフォーカスされていた場合にはコマンドは編集中のテキストに関しての情報を返し、オブジェクトがフォーカスされていない場合にはコマンドはオブジェクトのデータソースの情報を返します。  
 省略時には *object* 引数でフィールドまたは変数を指定します。この場合にはコマンドは変数またはフィールドの情報を返します。
@@ -102,7 +102,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ST INSERT EXPRESSION](st-insert-expression.md)  
+[ST INSERT EXPRESSION](../commands/st-insert-expression)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: read-only
 title: READ ONLY
 slug: /commands/read-only
@@ -26,8 +26,8 @@ Use READ ONLY when you do not need to modify the record or records.
 
 ## See also 
 
-[Read only state](read-only-state.md)  
-[READ WRITE](read-write.md)  
+[Read only state](../commands/read-only-state)  
+[READ WRITE](../commands/read-write)  
 *Record Locking*  
 
 ## Properties

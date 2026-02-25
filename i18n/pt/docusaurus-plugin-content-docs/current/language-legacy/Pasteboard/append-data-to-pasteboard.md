@@ -1,4 +1,4 @@
----
+﻿---
 id: append-data-to-pasteboard
 title: APPEND DATA TO PASTEBOARD
 slug: /commands/append-data-to-pasteboard
@@ -39,13 +39,13 @@ Passe em *tipoDados* um valor definindo o tipo de dados a adicionar. Pode passar
 
 Se os dados do BLOB se adiciona corretamente a área de transferência, a variável OK toma o valor 1\. Do contrário a variável OK toma o valor 0 e se pode gerar um erro.
 
-Geralmente, se utiliza o comando APPEND DATA TO PASTEBOARD para agregar múltiplas instâncias dos mesmos dados a área de transferência ou para adicionar dados que não são de tipo TEXT ou PICT. Para adicionar novos dados a área de transferência, primeiro deve limpar a área de transferência utilizando o comando [CLEAR PASTEBOARD](clear-pasteboard.md).
+Geralmente, se utiliza o comando APPEND DATA TO PASTEBOARD para agregar múltiplas instâncias dos mesmos dados a área de transferência ou para adicionar dados que não são de tipo TEXT ou PICT. Para adicionar novos dados a área de transferência, primeiro deve limpar a área de transferência utilizando o comando [CLEAR PASTEBOARD](../commands/clear-pasteboard).
 
 Se quer limpar e adiciona:
 
-* texto para a área de transferência, utilize o comando [SET TEXT TO PASTEBOARD](set-text-to-pasteboard.md),
-* uma imagem para a área de transferência, utilize o comando [SET PICTURE TO PASTEBOARD](set-picture-to-pasteboard.md),
-* um nome do caminho do arquivo arrastar/soltar, utilize o comando [SET FILE TO PASTEBOARD](set-file-to-pasteboard.md).
+* texto para a área de transferência, utilize o comando [SET TEXT TO PASTEBOARD](../commands/set-text-to-pasteboard),
+* uma imagem para a área de transferência, utilize o comando [SET PICTURE TO PASTEBOARD](../commands/set-picture-to-pasteboard),
+* um nome do caminho do arquivo arrastar/soltar, utilize o comando [SET FILE TO PASTEBOARD](../commands/set-file-to-pasteboard).
 
 Entretanto, note que se um BLOB contiver texto ou uma imagem, você pode utilizar o comando APPEND DATA TO PASTEBOARD para adicionar um texto ou uma imagem para a área de transferências.
 
@@ -226,9 +226,9 @@ Se os dados no BLOB são adicionados corretamente á área de transferência, a 
 
 ## Ver também 
 
-[CLEAR PASTEBOARD](clear-pasteboard.md)  
-[SET PICTURE TO PASTEBOARD](set-picture-to-pasteboard.md)  
-[SET TEXT TO PASTEBOARD](set-text-to-pasteboard.md)  
+[CLEAR PASTEBOARD](../commands/clear-pasteboard)  
+[SET PICTURE TO PASTEBOARD](../commands/set-picture-to-pasteboard)  
+[SET TEXT TO PASTEBOARD](../commands/set-text-to-pasteboard)  
 
 ## Propriedades
 

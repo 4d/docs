@@ -1,4 +1,4 @@
----
+﻿---
 id: form-set-size
 title: FORM SET SIZE
 slug: /commands/form-set-size
@@ -132,8 +132,8 @@ El método de objeto asociado con este botón es el siguiente:
 
 ## Ver también 
 
-[FORM SET HORIZONTAL RESIZING](form-set-horizontal-resizing.md)  
-[FORM SET VERTICAL RESIZING](form-set-vertical-resizing.md)  
+[FORM SET HORIZONTAL RESIZING](../commands/form-set-horizontal-resizing)  
+[FORM SET VERTICAL RESIZING](../commands/form-set-vertical-resizing)  
 
 ## Propiedades
 

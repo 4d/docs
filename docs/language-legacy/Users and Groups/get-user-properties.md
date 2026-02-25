@@ -1,4 +1,4 @@
----
+﻿---
 id: get-user-properties
 title: GET USER PROPERTIES
 slug: /commands/get-user-properties
@@ -35,16 +35,16 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.GET USER PROPERTIES.Summary-->**GET USER PROPERTIES** returns the information about the user whose unique user ID number you pass in *userID*.<!-- END REF--> You must pass a valid user ID number returned by the [GET USER LIST](get-user-list.md) command.
+<!--REF #_command_.GET USER PROPERTIES.Summary-->**GET USER PROPERTIES** returns the information about the user whose unique user ID number you pass in *userID*.<!-- END REF--> You must pass a valid user ID number returned by the [GET USER LIST](../commands/get-user-list) command.
 
-If the user account does not exist or has been deleted, the error -9979 is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](on-err-call.md). Otherwise, you can call [Is user deleted](is-user-deleted.md) to test the user account before calling **GET USER PROPERTIES**.
+If the user account does not exist or has been deleted, the error -9979 is generated. You can catch this error with an error-handling method installed using [ON ERR CALL](../commands/on-err-call). Otherwise, you can call [Is user deleted](../commands/is-user-deleted) to test the user account before calling **GET USER PROPERTIES**.
 
 After the call, you retrieve the name, startup method, number of logins and date of last login for the user, in the parameters *name*, *startup*, *nbLogin* and *lastLogin*.
 
 **Notes:** 
 
 * The *nbLogin* and *lastLogin* parameters are used in binary databases only. They always return respectively 0 and 00/00/00 in project databases.
-* The *password* parameter is obsolete (it always returns an empty string). If you want to check a user's password, use the [Validate password](validate-password.md) function.
+* The *password* parameter is obsolete (it always returns an empty string). If you want to check a user's password, use the [Validate password](../commands/validate-password) function.
 
 If you pass the optional *memberships* parameter, the unique ID numbers of the groups to which the user belongs are returned. 
 
@@ -60,11 +60,11 @@ If you do not have the proper access privileges for calling GET USER PROPERTIES 
 
 ## See also 
 
-[GET GROUP LIST](get-group-list.md)  
-[GET USER LIST](get-user-list.md)  
-[Is user deleted](is-user-deleted.md)  
-[Set user properties](set-user-properties.md)  
-[Validate password](validate-password.md)  
+[GET GROUP LIST](../commands/get-group-list)  
+[GET USER LIST](../commands/get-user-list)  
+[Is user deleted](../commands/is-user-deleted)  
+[Set user properties](../commands/set-user-properties)  
+[Validate password](../commands/validate-password)  
 
 ## Properties
 

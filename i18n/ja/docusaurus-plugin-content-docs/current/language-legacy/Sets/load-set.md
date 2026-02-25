@@ -1,4 +1,4 @@
----
+﻿---
 id: load-set
 title: LOAD SET
 slug: /commands/load-set
@@ -43,7 +43,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[SAVE SET](save-set.md)  
+[SAVE SET](../commands/save-set)  
 
 ## プロパティ
 

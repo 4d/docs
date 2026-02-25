@@ -1,4 +1,4 @@
----
+﻿---
 id: set-menu-item-mark
 title: SET MENU ITEM MARK
 slug: /commands/set-menu-item-mark
@@ -48,7 +48,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Get menu item mark](get-menu-item-mark.md)  
+[Get menu item mark](../commands/get-menu-item-mark)  
 
 ## プロパティ
 

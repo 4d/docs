@@ -1,4 +1,4 @@
----
+﻿---
 id: copy-blob
 title: COPY BLOB
 slug: /commands/copy-blob
@@ -39,8 +39,8 @@ The copy starts at the position (expressed relative to the beginning of the sour
 
 ## See also 
 
-[DELETE FROM BLOB](delete-from-blob.md)  
-[INSERT IN BLOB](insert-in-blob.md)  
+[DELETE FROM BLOB](../commands/delete-from-blob)  
+[INSERT IN BLOB](../commands/insert-in-blob)  
 
 ## Properties
 

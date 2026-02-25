@@ -1,4 +1,4 @@
----
+﻿---
 id: table
 title: Table
 slug: /commands/table
@@ -61,9 +61,9 @@ Este exemplo, a variável *numTabela* é igual ao número da tabela a qual perte
 
 ## Ver também 
 
-[Field](field.md)  
-[Last table number](last-table-number.md)  
-[Table name](table-name.md)  
+[Field](../commands/field)  
+[Last table number](../commands/last-table-number)  
+[Table name](../commands/table-name)  
 
 ## Propriedades
 

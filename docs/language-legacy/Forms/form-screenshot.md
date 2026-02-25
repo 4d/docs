@@ -1,4 +1,4 @@
----
+﻿---
 id: form-screenshot
 title: FORM SCREENSHOT
 slug: /commands/form-screenshot
@@ -43,7 +43,7 @@ By default, the command returns a screenshot of page 1 of the form. If you only 
 **Notes:** 
 
 * Web areas are not rendered in the returned screenshot.
-* Since the first two parameters of this command are optional, you cannot pass a function returning a pointer, such as [Current form table](current-form-table.md)\-> or [Table](table.md)\->, directly as an argument. Although this syntax would work in interpreted mode, it would be rejected during compilation, so instead you need to use an intermediate pointer variable in this case. For more information, refer to "*Direct use of commands returning pointers*".
+* Since the first two parameters of this command are optional, you cannot pass a function returning a pointer, such as [Current form table](../commands/current-form-table)\-> or [Table](../commands/table)\->, directly as an argument. Although this syntax would work in interpreted mode, it would be rejected during compilation, so instead you need to use an intermediate pointer variable in this case. For more information, refer to "*Direct use of commands returning pointers*".
 
 ## See also 
 

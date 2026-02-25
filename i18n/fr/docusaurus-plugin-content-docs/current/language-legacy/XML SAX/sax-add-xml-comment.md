@@ -1,4 +1,4 @@
----
+﻿---
 id: sax-add-xml-comment
 title: SAX ADD XML COMMENT
 slug: /commands/sax-add-xml-comment
@@ -57,7 +57,7 @@ En cas d’erreur, la commande retourne une erreur qui peut être interceptée v
 
 ## Voir aussi 
 
-[SAX ADD XML DOCTYPE](sax-add-xml-doctype.md)  
+[SAX ADD XML DOCTYPE](../commands/sax-add-xml-doctype)  
 
 ## Propriétés
 

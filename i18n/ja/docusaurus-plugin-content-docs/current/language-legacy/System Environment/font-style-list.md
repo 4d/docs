@@ -1,4 +1,4 @@
----
+﻿---
 id: font-style-list
 title: FONT STYLE LIST
 slug: /commands/font-style-list
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 *fontNameList*引数には、*fontFamily*引数のフォントファミリーでサポートされるフォント名の完全な一覧を受け取るテキスト配列を渡します。*fontStyleList*配列とは異なり、*fontNameList*配列はローカライズされていない値、つまりシステム認証に基づいたフォント名を返します。そのため、返されるフォント名はシステム言語とは独立しています。この配列の要素は、*WP SET ATTRIBUTES*コマンドのwk font4D Write Pro属性で使用される事を想定している文字列です。この機能を使用すれば、4D Write Proドキュメントはフォント名を保存し、その後どのようなシステム言語のマシンで開いてもフォントの問題を引き起こす事なく開くことができます。
 
-*fontFamily*で指定したフォントファミリーがマシン上に見つからない場合、空の配列が返されます。マシン上で使用可能なフォントファミリーの一覧を取得するためには、[FONT LIST](font-list.md)コマンドを使用して下さい。
+*fontFamily*で指定したフォントファミリーがマシン上に見つからない場合、空の配列が返されます。マシン上で使用可能なフォントファミリーの一覧を取得するためには、[FONT LIST](../commands/font-list)コマンドを使用して下さい。
 
 ## 例題 
 
@@ -69,7 +69,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[FONT LIST](font-list.md)  
+[FONT LIST](../commands/font-list)  
 
 ## プロパティ
 

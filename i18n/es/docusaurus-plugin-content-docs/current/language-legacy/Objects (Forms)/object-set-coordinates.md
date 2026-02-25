@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-coordinates
 title: OBJECT SET COORDINATES
 slug: /commands/object-set-coordinates
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET COORDINATES.Summary-->El comando **OBJECT SET COORDINATES** modifica la ubicación y, opcionalmente, el tamaño del objeto o de los objetos designados por los parámetros *objeto* y *\** para el proceso actual.<!-- END REF-->  
   
-**Nota:** este comando es equivalente a utilizar el comando [OBJECT MOVE](object-move.md) y pasar el segundo parámetro *\**.  
+**Nota:** este comando es equivalente a utilizar el comando [OBJECT MOVE](../commands/object-move) y pasar el segundo parámetro *\**.  
   
 Si pasa el parámetro opcional *\** indica que el parámetro *objeto* es un nombre de  objeto (cadena). Si no pasa este parámetro, indica que el parámetro *objeto* es un campo o una variable. En este caso, se pasa una referencia de campo o variable en lugar de una cadena (campo o variable objeto únicamente).  
   
@@ -42,13 +42,13 @@ En los parámetros *izquierda* y *sup*, pase las nuevas coordenadas absolutas de
   
 También puede pasar los valores de coordenadas absolutas en los parámetros *derecha* e *inf*, que indican la esquina inferior derecha del objeto. Si esta esquina no corresponde a la esquina del objeto después de la aplicación de los parámetros *izquierda* y *sup*, el objeto cambia de tamaño en consecuencia.  
   
-**Nota:** si desea mover un objeto con respecto a su posición inicial, se recomienda utilizar el comando existente [OBJECT MOVE](object-move.md).  
+**Nota:** si desea mover un objeto con respecto a su posición inicial, se recomienda utilizar el comando existente [OBJECT MOVE](../commands/object-move).  
   
 Este comando sólo funciona en los siguientes contextos:
 
 * Los formularios de entrada en el modo entrada,
 * Formulario mostrados usando el comando [DIALOG](../commands/dialog),
-* Encabezados y pies de página de formularios de salida mostrados por el comando [MODIFY SELECTION](modify-selection.md) o [DISPLAY SELECTION](display-selection.md),
+* Encabezados y pies de página de formularios de salida mostrados por el comando [MODIFY SELECTION](../commands/modify-selection) o [DISPLAY SELECTION](../commands/display-selection),
 * Los formularios en impresión.
 
 ## Ejemplo 
@@ -63,9 +63,9 @@ La siguiente declaración ubica el objeto "button\_1" en las coordenadas (10,20)
 
 ## Ver también 
 
-[CONVERT COORDINATES](convert-coordinates.md)  
-[OBJECT GET COORDINATES](object-get-coordinates.md)  
-[OBJECT MOVE](object-move.md)  
+[CONVERT COORDINATES](../commands/convert-coordinates)  
+[OBJECT GET COORDINATES](../commands/object-get-coordinates)  
+[OBJECT MOVE](../commands/object-move)  
 
 ## Propiedades
 

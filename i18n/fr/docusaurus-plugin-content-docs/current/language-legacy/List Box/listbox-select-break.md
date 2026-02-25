@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-select-break
 title: LISTBOX SELECT BREAK
 slug: /commands/listbox-select-break
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d'objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable.
 
-Les lignes de rupture sont ajoutées pour représenter la hiérarchie mais ne correspondent pas à des lignes de tableaux existantes. Pour désigner une ligne de rupture à sélectionner, vous devez passer dans les paramètres *ligne* et *colonne* des numéros de ligne et de colonne correspondant à la première occurrence dans le tableau correspondant. Ces valeurs sont retournées par la commande [LISTBOX GET CELL POSITION](listbox-get-cell-position.md) lorsque l’utilisateur a sélectionné une ligne de rupture. Ce principe est détaillé dans le paragraphe “Gestion des lignes de rupture” de la section *List box hiérarchiques*. 
+Les lignes de rupture sont ajoutées pour représenter la hiérarchie mais ne correspondent pas à des lignes de tableaux existantes. Pour désigner une ligne de rupture à sélectionner, vous devez passer dans les paramètres *ligne* et *colonne* des numéros de ligne et de colonne correspondant à la première occurrence dans le tableau correspondant. Ces valeurs sont retournées par la commande [LISTBOX GET CELL POSITION](../commands/listbox-get-cell-position) lorsque l’utilisateur a sélectionné une ligne de rupture. Ce principe est détaillé dans le paragraphe “Gestion des lignes de rupture” de la section *List box hiérarchiques*. 
 
 Le paramètre *action*, s’il est passé, permet de définir l’action de sélection à effectuer lorsqu’une sélection de lignes de rupture existe déjà dans la list box. Vous pouvez passer une valeur ou l’une des constantes suivantes, placées dans le thème "*List box*" :
 
@@ -72,8 +72,8 @@ Voici le résultat :
 
 ## Voir aussi 
 
-[LISTBOX GET CELL POSITION](listbox-get-cell-position.md)  
-[LISTBOX SELECT ROW](listbox-select-row.md)  
+[LISTBOX GET CELL POSITION](../commands/listbox-get-cell-position)  
+[LISTBOX SELECT ROW](../commands/listbox-select-row)  
 
 ## Propriétés
 

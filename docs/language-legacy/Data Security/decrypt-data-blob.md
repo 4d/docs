@@ -1,4 +1,4 @@
----
+﻿---
 id: decrypt-data-blob
 title: Decrypt data BLOB
 slug: /commands/decrypt-data-blob
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 You can use either a *keyObject* or a *passPhrase* to decrypt the BLOB: 
 
-* *keyObject*: a JSON object containing the encryption key, with the same structure as the object returned by the [New data key](new-data-key.md) command
+* *keyObject*: a JSON object containing the encryption key, with the same structure as the object returned by the [New data key](../commands/new-data-key) command
 * *passPhrase*: a string used to generate the encryption key
 
 The number passed in the *salt* parameter of **Decrypt data BLOB** must match the one used for encryption.
@@ -63,14 +63,14 @@ The following example shows how to decrypt an encrypted file located in the RESO
  $decryptedFile.setContent($decryptedBlob)
 ```
 
-The *passPhrase* and *salt* used for decryption are identical to the *passPhrase* and *salt* used for encryption (see the [Encrypt data BLOB](encrypt-data-blob.md) example).
+The *passPhrase* and *salt* used for decryption are identical to the *passPhrase* and *salt* used for encryption (see the [Encrypt data BLOB](../commands/encrypt-data-blob) example).
 
 ## See also 
 
-[Encrypt data BLOB](encrypt-data-blob.md)  
-[Encrypt data file](encrypt-data-file.md)  
+[Encrypt data BLOB](../commands/encrypt-data-blob)  
+[Encrypt data file](../commands/encrypt-data-file)  
 [Encrypt your own data with the 4D algorithm](https://blog.4d.com/encrypt-your-own-data-with-the-4d-algorithm)  
-[New data key](new-data-key.md)  
+[New data key](../commands/new-data-key)  
 
 ## Properties
 

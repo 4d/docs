@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-list-name
 title: OBJECT Get list name
 slug: /commands/object-get-list-name
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.OBJECT Get list name.Summary-->La commande **OBJECT Get list name** retourne le nom de l’énumération associée à l'objet ou au groupe d'objets désigné par *objet*.<!-- END REF--> 4D vous permet d'associer une énumération (créée avec l'éditeur d'énumérations en mode Développement) aux objets de formulaire via l'éditeur de formulaires ou la commande [OBJECT SET LIST BY NAME](object-set-list-by-name.md).
+<!--REF #_command_.OBJECT Get list name.Summary-->La commande **OBJECT Get list name** retourne le nom de l’énumération associée à l'objet ou au groupe d'objets désigné par *objet*.<!-- END REF--> 4D vous permet d'associer une énumération (créée avec l'éditeur d'énumérations en mode Développement) aux objets de formulaire via l'éditeur de formulaires ou la commande [OBJECT SET LIST BY NAME](../commands/object-set-list-by-name).
 
 Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d'objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).
 
@@ -48,8 +48,8 @@ Si aucune liste du type défini n’est associée à l’*objet*, la commande re
 
 ## Voir aussi 
 
-[OBJECT Get list reference](object-get-list-reference.md)  
-[OBJECT SET LIST BY NAME](object-set-list-by-name.md)  
+[OBJECT Get list reference](../commands/object-get-list-reference)  
+[OBJECT SET LIST BY NAME](../commands/object-set-list-by-name)  
 
 ## Propriétés
 

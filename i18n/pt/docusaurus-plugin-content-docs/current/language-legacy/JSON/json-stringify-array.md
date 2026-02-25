@@ -1,4 +1,4 @@
----
+﻿---
 id: json-stringify-array
 title: JSON Stringify array
 slug: /commands/json-stringify-array
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.JSON Stringify array.Summary-->O comando **JSON Stringify array** converte o array *array* 4D em um array JSON serializado.<!-- END REF--> Este comando realiza a ação inversa do comando [JSON PARSE ARRAY](json-parse-array.md).  
+<!--REF #_command_.JSON Stringify array.Summary-->O comando **JSON Stringify array** converte o array *array* 4D em um array JSON serializado.<!-- END REF--> Este comando realiza a ação inversa do comando [JSON PARSE ARRAY](../commands/json-parse-array).  
   
 Em *array*, passe um array 4D com os dados a serializar. Este array pode ser de tipo de texto, real, booleano, ponteiro ou objeto.
 
@@ -118,8 +118,8 @@ Conversão de uma seleção 4D em um array objeto:
 
 ## Ver também 
 
-[JSON PARSE ARRAY](json-parse-array.md)  
-[JSON Stringify](json-stringify.md)  
+[JSON PARSE ARRAY](../commands/json-parse-array)  
+[JSON Stringify](../commands/json-stringify)  
 
 ## Propriedades
 

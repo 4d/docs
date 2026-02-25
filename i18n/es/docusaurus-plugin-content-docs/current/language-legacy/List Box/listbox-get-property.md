@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-property
 title: LISTBOX Get property
 slug: /commands/listbox-get-property
@@ -100,7 +100,7 @@ Dado un list box "MyListbox", si ejecuta la siguiente instrucción:
 ## Ver también
 
 [LISTBOX SET GRID](../commands/listbox-set-grid)  
-[LISTBOX SET PROPERTY](listbox-set-property.md)  
+[LISTBOX SET PROPERTY](../commands/listbox-set-property)  
 [OBJECT SET SCROLLBAR](../commands/object-set-scrollbar)
 
 ## Propiedades

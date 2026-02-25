@@ -1,4 +1,4 @@
----
+﻿---
 id: set-automatic-relations
 title: SET AUTOMATIC RELATIONS
 slug: /commands/set-automatic-relations
@@ -38,8 +38,8 @@ Les liens définis comme automatiques en mode Développement ne sont pas affect�
 
 **Notes :** 
 
-* Lorsque vous passez Vrai à la commande **SET AUTOMATIC RELATIONS**, le mode automatique est "verrouillé" pour tous les liens manuels au cours de la session. Dans ce cas, les éventuels appels à la commande [SET FIELD RELATION](set-field-relation.md) dans la même session sont ignorés, qu'ils soient placés avant ou après **SET AUTOMATIC RELATIONS**. Pour "déverrouiller" le mode automatique et prendre en compte les appels à [SET FIELD RELATION](set-field-relation.md), passez Faux à **SET AUTOMATIC RELATIONS**.
-* Les automatismes sont désactivés lorsque les tables liées sont visualisées dans un formulaire liste affiché à l'aide de [DISPLAY SELECTION](display-selection.md), [MODIFY SELECTION](modify-selection.md) ou d'un sous-formulaire. Voir *Liens manuels et automatiques*.
+* Lorsque vous passez Vrai à la commande **SET AUTOMATIC RELATIONS**, le mode automatique est "verrouillé" pour tous les liens manuels au cours de la session. Dans ce cas, les éventuels appels à la commande [SET FIELD RELATION](../commands/set-field-relation) dans la même session sont ignorés, qu'ils soient placés avant ou après **SET AUTOMATIC RELATIONS**. Pour "déverrouiller" le mode automatique et prendre en compte les appels à [SET FIELD RELATION](../commands/set-field-relation), passez Faux à **SET AUTOMATIC RELATIONS**.
+* Les automatismes sont désactivés lorsque les tables liées sont visualisées dans un formulaire liste affiché à l'aide de [DISPLAY SELECTION](../commands/display-selection), [MODIFY SELECTION](../commands/modify-selection) ou d'un sous-formulaire. Voir *Liens manuels et automatiques*.
 
 ## Exemple 
 
@@ -51,12 +51,12 @@ L'exemple suivant rend tous les liens N vers 1 automatiques et rétablit en manu
 
 ## Voir aussi 
 
-[GET AUTOMATIC RELATIONS](get-automatic-relations.md)  
-[GET RELATION PROPERTIES](get-relation-properties.md)  
+[GET AUTOMATIC RELATIONS](../commands/get-automatic-relations)  
+[GET RELATION PROPERTIES](../commands/get-relation-properties)  
 *Présentation des liens*  
-[SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
-[SELECTION TO ARRAY](selection-to-array.md)  
-[SET FIELD RELATION](set-field-relation.md)  
+[SELECTION RANGE TO ARRAY](../commands/selection-range-to-array)  
+[SELECTION TO ARRAY](../commands/selection-to-array)  
+[SET FIELD RELATION](../commands/set-field-relation)  
 
 ## Propriétés
 

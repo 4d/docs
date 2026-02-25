@@ -1,4 +1,4 @@
----
+﻿---
 id: post-outside-call
 title: POST OUTSIDE CALL
 slug: /commands/post-outside-call
@@ -42,21 +42,21 @@ Si *process* (le process appelé) n'a aucune fenêtre ou si aucun formulaire n'e
 
 **Note :** La réception de l'événement On Outside Call dans un formulaire entrée provoque le changement du contexte de saisie du formulaire. En particulier, si un champ était en cours de modification, l'événement formulaire On Data Change est généré. 
 
-Le process appelant (dans lequel la commande **POST OUTSIDE CALL** est exécutée) n'attend pas : **POST OUTSIDE CALL** a un effet immédiat. Il est de votre ressort d'écrire, si nécessaire, une boucle d'attente pour traiter une éventuelle réponse du process appelé à l'aide des variables interprocess ou des variables process (réservées à cette utilisation) pouvant être lues et écrites entre les deux process avec les commandes [GET PROCESS VARIABLE](get-process-variable.md) et [SET PROCESS VARIABLE](set-process-variable.md). 
+Le process appelant (dans lequel la commande **POST OUTSIDE CALL** est exécutée) n'attend pas : **POST OUTSIDE CALL** a un effet immédiat. Il est de votre ressort d'écrire, si nécessaire, une boucle d'attente pour traiter une éventuelle réponse du process appelé à l'aide des variables interprocess ou des variables process (réservées à cette utilisation) pouvant être lues et écrites entre les deux process avec les commandes [GET PROCESS VARIABLE](../commands/get-process-variable) et [SET PROCESS VARIABLE](../commands/set-process-variable). 
 
-Si vous voulez établir une communication entre des process qui n'affichent pas de formulaires, utilisez les commandes [GET PROCESS VARIABLE](get-process-variable.md) et [SET PROCESS VARIABLE](set-process-variable.md).
+Si vous voulez établir une communication entre des process qui n'affichent pas de formulaires, utilisez les commandes [GET PROCESS VARIABLE](../commands/get-process-variable) et [SET PROCESS VARIABLE](../commands/set-process-variable).
 
 **POST OUTSIDE CALL** accepte la syntaxe alternative **POST OUTSIDE CALL**(-1). Pour ne pas ralentir l'exécution d'une méthode, 4D ne redessine pas les variables interprocess à chaque fois qu'elles sont modifiées. Si vous passez -1 au lieu du numéro du process dans le paramètre *process* de la commande **POST OUTSIDE CALL**, toutes les variables interprocess affichées dans toutes les fenêtres de tous les process seront mises à jour et redessinées.
 
 ## Exemple 
 
-Reportez-vous à l'exemple de la section [Semaphore](semaphore.md).
+Reportez-vous à l'exemple de la section [Semaphore](../commands/semaphore).
 
 ## Voir aussi 
 
 [Form event code](../commands/form-event-code)  
-[GET PROCESS VARIABLE](get-process-variable.md)  
-[SET PROCESS VARIABLE](set-process-variable.md)  
+[GET PROCESS VARIABLE](../commands/get-process-variable)  
+[SET PROCESS VARIABLE](../commands/set-process-variable)  
 
 ## Propriétés
 

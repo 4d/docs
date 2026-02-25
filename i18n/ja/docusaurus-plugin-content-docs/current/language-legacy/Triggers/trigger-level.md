@@ -1,4 +1,4 @@
----
+﻿---
 id: trigger-level
 title: Trigger level
 slug: /commands/trigger-level
@@ -33,8 +33,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Trigger event](trigger-event.md)  
-[TRIGGER PROPERTIES](trigger-properties.md)  
+[Trigger event](../commands/trigger-event)  
+[TRIGGER PROPERTIES](../commands/trigger-properties)  
 *トリガ*  
 
 ## プロパティ

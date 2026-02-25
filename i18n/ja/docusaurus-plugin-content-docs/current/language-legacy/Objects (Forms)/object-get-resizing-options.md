@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-resizing-options
 title: OBJECT GET RESIZING OPTIONS
 slug: /commands/object-get-resizing-options
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 オプションの *\** 引数を渡すと、*object* 引数はオブジェクト名 (文字列) です。この引数を渡さない場合、*object* は変数であり、文字列ではなく変数参照を渡します。
 
-このコマンドはデザインモードや[OBJECT SET RESIZING OPTIONS](object-set-resizing-options.md)コマンドを使用してプロセスに設定された、リサイズに関するオプションの現在の設定値を返します。これらのオプションはフォームウィンドウのサイズが変更されたときのオブジェクトの表示方法を規定します。
+このコマンドはデザインモードや[OBJECT SET RESIZING OPTIONS](../commands/object-set-resizing-options)コマンドを使用してプロセスに設定された、リサイズに関するオプションの現在の設定値を返します。これらのオプションはフォームウィンドウのサイズが変更されたときのオブジェクトの表示方法を規定します。
 
 *horizontal* 引数には横方向のリサイズオプション設定値が返されます。この値を*Form Objects (Properties)*テーマの以下の定数と比較できます:
 
@@ -54,7 +54,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT SET RESIZING OPTIONS](object-set-resizing-options.md)  
+[OBJECT SET RESIZING OPTIONS](../commands/object-set-resizing-options)  
 
 ## プロパティ
 

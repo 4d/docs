@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-placeholder
 title: OBJECT SET PLACEHOLDER
 slug: /commands/object-set-placeholder
@@ -56,7 +56,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT Get placeholder](object-get-placeholder.md)  
+[OBJECT Get placeholder](../commands/object-get-placeholder)  
 
 ## プロパティ
 

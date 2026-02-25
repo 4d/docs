@@ -1,4 +1,4 @@
----
+﻿---
 id: system-info
 title: System info
 slug: /commands/system-info
@@ -54,7 +54,7 @@ El comando devuelve la siguiente información:
 |                   | name         |             | cadena                               | solo en Mac - nombre del volumen                                                                                                                                                                                   | "iMac-27-Program6"                                                              |
 
 
-(\*) Para determinar solo la plataforma que se utiliza, hay dos comandos disponibles: [Is macOS](is-macos.md) y [Is Windows](is-windows.md).
+(\*) Para determinar solo la plataforma que se utiliza, hay dos comandos disponibles: [Is macOS](../commands/is-macos) y [Is Windows](../commands/is-windows).
 
 **Nota**: en el caso de las máquinas virtuales, la información devuelta será la de la máquina virtual.
 
@@ -145,8 +145,8 @@ devuelve un objeto que contiene la siguiente información:
 ## Ver también 
 
 [Application info](../commands/application-info)  
-[Is macOS](is-macos.md)  
-[Is Windows](is-windows.md)  
+[Is macOS](../commands/is-macos)  
+[Is Windows](../commands/is-windows)  
 
 ## Propiedades
 

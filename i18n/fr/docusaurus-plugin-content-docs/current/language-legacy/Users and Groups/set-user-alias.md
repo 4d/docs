@@ -1,4 +1,4 @@
----
+﻿---
 id: set-user-alias
 title: SET USER ALIAS
 slug: /commands/set-user-alias
@@ -33,11 +33,11 @@ displayed_sidebar: docs
 
 Dans le paramètre *alias*, passez le nom personnalisé à afficher à la place de celui du compte utilisateur 4D courant. 
 
-Une fois que la commande est exécutée, l'*alias* est utilisé là où le compte utilisateur 4D a été retourné ou affiché, en particulier dans les commandes [Current user](current-user.md), [Process activity](../commands/process-activity) et [LOCKED BY](locked-by.md), ou dans la [ORDER BY FORMULA](order-by-formula.md) de la fenêtre d'administration de 4D Server. Dans les environnements en client/serveur, cette commande doit être exécutée sur des applications distantes afin que chaque utilisateur soit identifié sur le serveur à l'aide, par exemple, de la commande [Current user](current-user.md), même si toutes les applications distantes utilisent le même compte utilisateur 4D.
+Une fois que la commande est exécutée, l'*alias* est utilisé là où le compte utilisateur 4D a été retourné ou affiché, en particulier dans les commandes [Current user](../commands/current-user), [Process activity](../commands/process-activity) et [LOCKED BY](../commands/locked-by), ou dans la [ORDER BY FORMULA](../commands/order-by-formula) de la fenêtre d'administration de 4D Server. Dans les environnements en client/serveur, cette commande doit être exécutée sur des applications distantes afin que chaque utilisateur soit identifié sur le serveur à l'aide, par exemple, de la commande [Current user](../commands/current-user), même si toutes les applications distantes utilisent le même compte utilisateur 4D.
 
 Pour supprimer l'*alias* de l'utilisateur 4D courant, appelez **SET USER ALIAS**("").
 
-**Note :** La commande [CHANGE CURRENT USER](change-current-user.md) réinitialise l'alias de l'utilisateur courant. 
+**Note :** La commande [CHANGE CURRENT USER](../commands/change-current-user) réinitialise l'alias de l'utilisateur courant. 
 
 ## Exemple 
 
@@ -49,9 +49,9 @@ Vos utilisateurs sont gérés via une table personnalisée et utilisent le même
 
 ## Voir aussi 
 
-[CHANGE CURRENT USER](change-current-user.md)  
-[Current user](current-user.md)  
-[SET GROUP ACCESS](set-group-access.md)  
+[CHANGE CURRENT USER](../commands/change-current-user)  
+[Current user](../commands/current-user)  
+[SET GROUP ACCESS](../commands/set-group-access)  
 
 ## Propriétés
 

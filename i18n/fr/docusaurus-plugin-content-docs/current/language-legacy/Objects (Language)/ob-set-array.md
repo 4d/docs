@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-set-array
 title: OB SET ARRAY
 slug: /commands/ob-set-array
@@ -132,8 +132,8 @@ Utilisation d'un champ objet :
 ## Voir aussi 
 
 *Conversions de type entre les collections et les tableaux 4D*  
-[OB GET ARRAY](ob-get-array.md)  
-[OB SET](ob-set.md)  
+[OB GET ARRAY](../commands/ob-get-array)  
+[OB SET](../commands/ob-set)  
 
 ## Propriétés
 

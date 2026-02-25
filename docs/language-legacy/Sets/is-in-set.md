@@ -1,4 +1,4 @@
----
+﻿---
 id: is-in-set
 title: Is in set
 slug: /commands/is-in-set
@@ -34,8 +34,8 @@ The following example is a button object method. It tests to see whether or not 
 
 ## See also 
 
-[ADD TO SET](add-to-set.md)  
-[REMOVE FROM SET](remove-from-set.md)  
+[ADD TO SET](../commands/add-to-set)  
+[REMOVE FROM SET](../commands/remove-from-set)  
 
 ## Properties
 

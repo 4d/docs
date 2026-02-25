@@ -1,4 +1,4 @@
----
+﻿---
 id: parse-formula
 title: Parse formula
 slug: /commands/parse-formula
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 * Los elementos de lenguaje 4D se pueden convertir a equivalentes de lenguaje 4D tokenizados
 * Los equivalentes del lenguaje 4D tokenizados se pueden convertir a elementos de lenguaje 4D
 
-**\*** **Las estructuras virtuales se definen utilizando los comandos [SET TABLE TITLES](set-table-titles.md) y [SET FIELD TITLES](set-field-titles.md) (\** **parámetro requerido).* 
+**\*** **Las estructuras virtuales se definen utilizando los comandos [SET TABLE TITLES](../commands/set-table-titles) y [SET FIELD TITLES](../commands/set-field-titles) (\** **parámetro requerido).* 
 
 **\*\*** **Los equivalentes tokenizados son elementos* **de estructura* *y del lenguaje 4D en texto sin formato expresados ​​con la sintaxis del token, como se muestra a continuación (consulte también* *Utilizar tokens en fórmulas):* 
 
@@ -104,8 +104,8 @@ Utilizando las tablas del **Ejemplo 1**:
 ## Ver también 
 
 [Formula from string](../commands/formula-from-string)  
-[SET FIELD TITLES](set-field-titles.md)  
-[SET TABLE TITLES](set-table-titles.md)  
+[SET FIELD TITLES](../commands/set-field-titles)  
+[SET TABLE TITLES](../commands/set-table-titles)  
 *Utilizar tokens en fórmulas*  
 
 ## Propiedades

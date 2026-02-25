@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-resizing-options
 title: OBJECT SET RESIZING OPTIONS
 slug: /commands/object-set-resizing-options
@@ -53,7 +53,7 @@ En el parámetro *vertical*, pase un valor que indique la opción de redimension
 
 ## Ver también 
 
-[OBJECT GET RESIZING OPTIONS](object-get-resizing-options.md)  
+[OBJECT GET RESIZING OPTIONS](../commands/object-get-resizing-options)  
 
 ## Propiedades
 

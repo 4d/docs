@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-placeholder
 title: OBJECT SET PLACEHOLDER
 slug: /commands/object-set-placeholder
@@ -55,7 +55,7 @@ You want to display "Search" as placeholder text in a combo box:
 
 ## See also 
 
-[OBJECT Get placeholder](object-get-placeholder.md)  
+[OBJECT Get placeholder](../commands/object-get-placeholder)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: distinct-values
 title: DISTINCT VALUES
 slug: /commands/distinct-values
@@ -42,7 +42,7 @@ displayed_sidebar: docs
 
 **DISTINCT VALUES** で使用される配列は、第一引数渡すフィールドと型が一致している必要があります。一致していない場合、配列の型は修正されます。このルールには一つの例外 があります: フィールドがピクチャ型である(かつキーワードインデックスと関連付けられている)場合、対応する配列はテキスト型でなければなりません。
 
-コマンドの呼び出し後、配列のサイズはセレクション中の重複しない値の数と同じです。コマンドはカレントセレクションまたはカレントレコードを変更することはありません。 **DISTINCT VALUES** コマンドはフィールドのインデックスを使用するので、*array*中の要素は昇順でソートされて返されます。これが目的の並べ替え順であれば、**DISTINCT VALUES**を使用した後に[SORT ARRAY](sort-array.md)コマンドを呼び出す必要はありません。
+コマンドの呼び出し後、配列のサイズはセレクション中の重複しない値の数と同じです。コマンドはカレントセレクションまたはカレントレコードを変更することはありません。 **DISTINCT VALUES** コマンドはフィールドのインデックスを使用するので、*array*中の要素は昇順でソートされて返されます。これが目的の並べ替え順であれば、**DISTINCT VALUES**を使用した後に[SORT ARRAY](../commands/sort-array)コマンドを呼び出す必要はありません。
 
 **注**: **DISTINCT VALUES**を キーワードインデックスが適用されたテキストまたはピクチャーフィールドに対して実行すると、コマンドはインデックスのキーワードで構成される配列を作成します。他のタイ プのデータと異なり、返される値はインデックスの存在により異なります。テキストフィールドの場合、フィールドに標準のインデックスが定義されていても、 常にキーワードインデックスが採用されます。テキストやピクチャーフィールドにキーワードインデックスが割り当てられていない場合、空の配列が返されます。  
 
@@ -50,7 +50,7 @@ displayed_sidebar: docs
 
 **注:** *countArray*引数は、テキストフィールドまたはキーワードインデックスと関連づけられているピクチャーフィールドに関してはサポートされません。
 
-**警告**: **DISTINCT VALUES**コマンドは、セレクション及びそこ に含まれる重複しない値の数によって非常に大きな配列を作成する場合があります。配列はメモリ上に存在します。そのためコマンドの実行後、結果をテストす るのは良いことです。これを行うには、作成された配列のサイズをテストするか、[ON ERR CALL](on-err-call.md)プロジェクトメソッドを使用してコマンドの呼び出しをカバーします。
+**警告**: **DISTINCT VALUES**コマンドは、セレクション及びそこ に含まれる重複しない値の数によって非常に大きな配列を作成する場合があります。配列はメモリ上に存在します。そのためコマンドの実行後、結果をテストす るのは良いことです。これを行うには、作成された配列のサイズをテストするか、[ON ERR CALL](../commands/on-err-call)プロジェクトメソッドを使用してコマンドの呼び出しをカバーします。
 
 **4D Server:** このコマンドは4D Server用に最適化されています。サーバ側で配列の作成と値の計算が行われ、その後全体がクライアントに送られます。
 
@@ -92,10 +92,10 @@ displayed_sidebar: docs
 ## 参照 
 
   
-[GET TEXT KEYWORDS](get-text-keywords.md)  
-[ON ERR CALL](on-err-call.md)  
-[SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
-[SELECTION TO ARRAY](selection-to-array.md)  
+[GET TEXT KEYWORDS](../commands/get-text-keywords)  
+[ON ERR CALL](../commands/on-err-call)  
+[SELECTION RANGE TO ARRAY](../commands/selection-range-to-array)  
+[SELECTION TO ARRAY](../commands/selection-to-array)  
 
 ## プロパティ
 

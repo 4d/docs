@@ -1,4 +1,4 @@
----
+﻿---
 id: web-set-root-folder
 title: WEB SET ROOT FOLDER
 slug: /commands/web-set-root-folder
@@ -50,8 +50,8 @@ Si especifica una ruta de acceso invalida, se generará un error del administrad
 
 ## Ver también 
 
-[Get 4D folder](get-4d-folder.md)  
-[ON ERR CALL](on-err-call.md)  
+[Get 4D folder](../commands/get-4d-folder)  
+[ON ERR CALL](../commands/on-err-call)  
 
 ## Propiedades
 

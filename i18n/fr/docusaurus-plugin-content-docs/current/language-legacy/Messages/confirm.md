@@ -1,4 +1,4 @@
----
+﻿---
 id: confirm
 title: CONFIRM
 slug: /commands/confirm
@@ -102,8 +102,8 @@ La ligne :
 
 ## Voir aussi 
 
-[ALERT](alert.md)  
-[Request](request.md)  
+[ALERT](../commands/alert)  
+[Request](../commands/request)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: display-record
 title: DISPLAY RECORD
 slug: /commands/display-record
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.DISPLAY RECORD.Summary-->**DISPLAY RECORD** affiche l'enregistrement courant de *laTable* dans le formulaire entrée courant.<!-- END REF--> L'enregistrement reste affiché jusqu'à ce qu'un événement provoque un redessinement de la fenêtre. Cet événement peut être l'exécution d'un [ADD RECORD](add-record.md), le retour au formulaire entrée ou à la barre de menus. **DISPLAY RECORD** ne fait rien s'il n'y a pas d'enregistrement courant.
+<!--REF #_command_.DISPLAY RECORD.Summary-->**DISPLAY RECORD** affiche l'enregistrement courant de *laTable* dans le formulaire entrée courant.<!-- END REF--> L'enregistrement reste affiché jusqu'à ce qu'un événement provoque un redessinement de la fenêtre. Cet événement peut être l'exécution d'un [ADD RECORD](../commands/add-record), le retour au formulaire entrée ou à la barre de menus. **DISPLAY RECORD** ne fait rien s'il n'y a pas d'enregistrement courant.
 
 **DISPLAY RECORD** est souvent utilisé pour afficher des messages de progression personnalisés. Cette commande peut également servir à générer un "slide show" automatique. 
 
@@ -39,7 +39,7 @@ L'exemple suivant affiche une série d'enregistrements sous forme de slide show 
 
 ## Voir aussi 
 
-[MESSAGE](message.md)  
+[MESSAGE](../commands/message)  
 
 ## Propriétés
 

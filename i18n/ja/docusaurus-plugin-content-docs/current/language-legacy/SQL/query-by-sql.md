@@ -1,4 +1,4 @@
----
+﻿---
 id: query-by-sql
 title: QUERY BY SQL
 slug: /commands/query-by-sql
@@ -167,7 +167,7 @@ QUERY BY SQL コマンドを使用する場合:
 
 ## 参照 
 
-[QUERY BY FORMULA](query-by-formula.md)  
+[QUERY BY FORMULA](../commands/query-by-formula)  
 
 ## プロパティ
 

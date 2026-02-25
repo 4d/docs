@@ -1,4 +1,4 @@
----
+﻿---
 id: modified
 title: Modified
 slug: /commands/modified
@@ -37,11 +37,11 @@ During data entry, a field is considered modified if the user has edited the fie
 
 When executing a method, a field is considered to be modified if it has been assigned a value (different or not). 
 
-**Note:** **Modified** always returns [True](true.md "True") after the execution of the [PUSH RECORD](push-record.md) and [POP RECORD](pop-record.md) commands.
+**Note:** **Modified** always returns [True](true.md "True") after the execution of the [PUSH RECORD](../commands/push-record) and [POP RECORD](../commands/pop-record) commands.
 
-In all cases, use the [Old](old.md) command to detect whether the field value has actually been changed.
+In all cases, use the [Old](../commands/old) command to detect whether the field value has actually been changed.
 
-**Note:** Although **Modified** can be applied to any type of field, if you use it in combination with the [Old](old.md) command, be aware of the restrictions that apply to the [Old](old.md) command. For details, see the description of the [Old](old.md) command.
+**Note:** Although **Modified** can be applied to any type of field, if you use it in combination with the [Old](../commands/old) command, be aware of the restrictions that apply to the [Old](../commands/old) command. For details, see the description of the [Old](../commands/old) command.
 
 During data entry, it is usually easier to perform operations in object methods using the [Form event code](../commands/form-event-code) command than to use **Modified** in form methods. Since an object method is sent an On Data Change event whenever a field is modified, the use of an object method is equivalent to using **Modified** in a form method.
 
@@ -79,7 +79,7 @@ You select a record for the table *\[anyTable\]*, then you call multiple subrout
 ## See also 
 
 [Form event code](../commands/form-event-code)  
-[Old](old.md)  
+[Old](../commands/old)  
 
 ## Properties
 

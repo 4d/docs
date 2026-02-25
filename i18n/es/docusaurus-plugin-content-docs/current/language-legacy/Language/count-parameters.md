@@ -1,4 +1,4 @@
----
+﻿---
 id: count-parameters
 title: Count parameters
 slug: /commands/count-parameters
@@ -92,7 +92,7 @@ o:
 ## Ver también 
 
 *Comandos del Compilador*  
-[Copy parameters](copy-parameters.md)  
+[Copy parameters](../commands/copy-parameters)  
 
 ## Propiedades
 

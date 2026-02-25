@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-get-type
 title: OB Get type
 slug: /commands/ob-get-type
@@ -66,8 +66,8 @@ Queremos obter o tipo de valores padrão:
 
 ## Ver também 
 
-[OB GET PROPERTY NAMES](ob-get-property-names.md)  
-[Value type](value-type.md)  
+[OB GET PROPERTY NAMES](../commands/ob-get-property-names)  
+[Value type](../commands/value-type)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: set-field-relation
 title: SET FIELD RELATION
 slug: /commands/set-field-relation
@@ -48,7 +48,7 @@ displayed_sidebar: docs
 
 **Note:** このコマンドを使用して行った変更は、カレントプロセスに対してのみ適用されます。リレートプロパティウィンドウのオプションを用いて指定されたリレート設定は変更されません。
 
-**Note:** [SET AUTOMATIC RELATIONS](set-automatic-relations.md)コマンドに対して[True](true.md "True") を同じセッション中に渡したとき、**SET FIELD RELATION**への呼び出しは、それが[SET AUTOMATIC RELATIONS](set-automatic-relations.md)の前にあろうと後ろにあろうと無視されます。自動モードをロックして**SET FIELD RELATION**への呼び出しを有効化するためには、[SET AUTOMATIC RELATIONS](set-automatic-relations.md)に[False](false.md "False") を渡します。
+**Note:** [SET AUTOMATIC RELATIONS](../commands/set-automatic-relations)コマンドに対して[True](true.md "True") を同じセッション中に渡したとき、**SET FIELD RELATION**への呼び出しは、それが[SET AUTOMATIC RELATIONS](../commands/set-automatic-relations)の前にあろうと後ろにあろうと無視されます。自動モードをロックして**SET FIELD RELATION**への呼び出しを有効化するためには、[SET AUTOMATIC RELATIONS](../commands/set-automatic-relations)に[False](false.md "False") を渡します。
 
 ## 例題 
 
@@ -64,10 +64,10 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[GET AUTOMATIC RELATIONS](get-automatic-relations.md)  
-[GET FIELD RELATION](get-field-relation.md)  
-[GET RELATION PROPERTIES](get-relation-properties.md)  
-[SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
+[GET AUTOMATIC RELATIONS](../commands/get-automatic-relations)  
+[GET FIELD RELATION](../commands/get-field-relation)  
+[GET RELATION PROPERTIES](../commands/get-relation-properties)  
+[SET AUTOMATIC RELATIONS](../commands/set-automatic-relations)  
 
 ## プロパティ
 

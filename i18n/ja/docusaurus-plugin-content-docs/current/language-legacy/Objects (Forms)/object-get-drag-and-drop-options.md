@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-drag-and-drop-options
 title: OBJECT GET DRAG AND DROP OPTIONS
 slug: /commands/object-get-drag-and-drop-options
@@ -36,9 +36,9 @@ displayed_sidebar: docs
 
 オプションの *\** 引数を渡すと、*object* 引数はオブジェクト名 (文字列) です。この引数を渡さない場合、*object* は変数であり、文字列ではなく変数参照を渡します。
 
-このコマンドはデザインモードや[OBJECT SET DRAG AND DROP OPTIONS](object-set-drag-and-drop-options.md)コマンドを使用してカレントプロセスに設定された、現在のドラッグ＆ドロップオプションを返します。
+このコマンドはデザインモードや[OBJECT SET DRAG AND DROP OPTIONS](../commands/object-set-drag-and-drop-options)コマンドを使用してカレントプロセスに設定された、現在のドラッグ＆ドロップオプションを返します。
 
-コマンドはデザインモードや[OBJECT SET DRAG AND DROP OPTIONS](object-set-drag-and-drop-options.md)コマンドを使用してカレントプロセスに設定された現在のドラッグ＆ドロップオプションを返します。
+コマンドはデザインモードや[OBJECT SET DRAG AND DROP OPTIONS](../commands/object-set-drag-and-drop-options)コマンドを使用してカレントプロセスに設定された現在のドラッグ＆ドロップオプションを返します。
 
 各パラメーターは対応するオプションが有効か無効かによってTrueまたはFalseを返します:
 
@@ -49,7 +49,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT SET DRAG AND DROP OPTIONS](object-set-drag-and-drop-options.md)  
+[OBJECT SET DRAG AND DROP OPTIONS](../commands/object-set-drag-and-drop-options)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-get-xml-information
 title: DOM Get XML information
 slug: /commands/dom-get-xml-information
@@ -45,7 +45,7 @@ Passez dans *infoXML* un code indiquant le type d’information à récupérer. 
 
 ## Voir aussi 
 
-[XML GET ERROR](xml-get-error.md)  
+[XML GET ERROR](../commands/xml-get-error)  
 
 ## Propriétés
 

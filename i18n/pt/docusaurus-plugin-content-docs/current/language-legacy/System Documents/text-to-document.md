@@ -1,4 +1,4 @@
----
+﻿---
 id: text-to-document
 title: TEXT TO DOCUMENT
 slug: /commands/text-to-document
@@ -38,13 +38,13 @@ Em *nomeArquivo*, passe o nome ou caminho de acesso do arquivo a escrever. Se o 
 * Um caminho de acesso relativo ao arquivo de estrutura da aplicação, por exemplo, "\\\\docs\\\\meuArquivo.txt" em Windows ou ":docs:meuArquivo.txt" em macOS.
 * Um caminho de acesso absoluto, por exemplo, "c:\\\\app\\\\docs\\\\meuArquivo.txt" em Windows ou "MacHD:docs:meuArquivo.txt" em macOS.
 
-Se deseja que o usuário seja capaz de indicar o nome ou a localização do documento, utilize os comandos [Open document](open-document.md) ou [Create document](create-document.md) , assim como a variável do sistema *Document*.
+Se deseja que o usuário seja capaz de indicar o nome ou a localização do documento, utilize os comandos [Open document](../commands/open-document) ou [Create document](../commands/create-document) , assim como a variável do sistema *Document*.
 
 **Nota:** Por padrão, os documentos gerados por este comando não tem uma extensão. Deve passar uma extensão em *nomeArquivo*. Também pode utilizar o comando *\_o\_SET DOCUMENT TYPE*.  
   
 Em *texto*, passe o texto a escrever no disco. Pode ser uma constante literal ("meu texto"), ou um campo ou variável texto 4D.  
   
-Em *conjCaracteres*, passe o conjunto de caracteres a utilizar para a escritura do documento. Pode passar uma cadeia com o nome padrão do conjunto (por exemplo, "ISO-8859-1" ou "UTF-8") ou seu ID MIBEnum (inteiro longo). Para mais informação sobre a lista de conjuntos de caracteres suportados por 4D, consulte a descrição do comando [CONVERT FROM TEXT](convert-from-text.md). Se um Byte Order Mark (BOM) existe para o conjunto de caracteres, 4D o insere no documento. Se não se especifica um conjunto de caracteres, 4D utiliza por padrão o conjunto de caracteres "UTF\_8 " e um BOM.  
+Em *conjCaracteres*, passe o conjunto de caracteres a utilizar para a escritura do documento. Pode passar uma cadeia com o nome padrão do conjunto (por exemplo, "ISO-8859-1" ou "UTF-8") ou seu ID MIBEnum (inteiro longo). Para mais informação sobre a lista de conjuntos de caracteres suportados por 4D, consulte a descrição do comando [CONVERT FROM TEXT](../commands/convert-from-text). Se um Byte Order Mark (BOM) existe para o conjunto de caracteres, 4D o insere no documento. Se não se especifica um conjunto de caracteres, 4D utiliza por padrão o conjunto de caracteres "UTF\_8 " e um BOM.  
   
 Em *modoRetorno*, pode passar um inteiro longo que indica o processo a aplicar aos caracteres de fim de linha antes de guardar eles no arquivo. Pode passar uma das seguintes constantes, localizadas no tema "*Documentos Sistema*":
 
@@ -60,7 +60,7 @@ Por padrão, se omitir o parâmetro *modoRetorno*, os caracteres de fim de linha
 
 **Nota de Compatibilidade**: Opções de Compatibilidade estão disponíveis para gerenciamento EOL e BOM. Veja *Página Compatibilidade*.
 
-**Nota:** Este comando não modifica a variável OK. Em caso de falha, é gerado um erro que pode interceptar utilizando um método instalado pelo comando [ON ERR CALL](on-err-call.md).
+**Nota:** Este comando não modifica a variável OK. Em caso de falha, é gerado um erro que pode interceptar utilizando um método instalado pelo comando [ON ERR CALL](../commands/on-err-call).
 
 ## Exemplo 1 
 
@@ -92,7 +92,7 @@ Exemplo que permite ao usuário indicar a localização do arquivo a criar:
 
 ## Ver também 
 
-[Document to text](document-to-text.md)  
+[Document to text](../commands/document-to-text)  
 *Documentos Sistema*  
 
 ## Propriedades

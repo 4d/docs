@@ -1,4 +1,4 @@
----
+﻿---
 id: list-to-blob
 title: LIST TO BLOB
 slug: /commands/list-to-blob
@@ -37,11 +37,11 @@ Si vous ne passez pas le paramètre optionnel \*, la liste hiérarchique est sto
 
 Quel que soit l'endroit où vous placez la liste, la taille du BLOB sera augmentée si nécessaire en fonction de l'emplacement que vous avez défini (plus jusqu'à la taille de la liste le cas échéant). Les octets redéfinis (autres que ceux que vous venez d'écrire) sont initialisés à la valeur zéro. 
 
-**ATTENTION :** Si vous utilisez un BLOB pour stocker des listes, appelez ensuite la commande [BLOB to list](blob-to-list.md) pour relire le contenu du BLOB car les listes sont stockées dans les BLOBs avec un format interne 4D.
+**ATTENTION :** Si vous utilisez un BLOB pour stocker des listes, appelez ensuite la commande [BLOB to list](../commands/blob-to-list) pour relire le contenu du BLOB car les listes sont stockées dans les BLOBs avec un format interne 4D.
 
 Après l'exécution de la commande, la variable OK prend la valeur 1 si la liste hiérarchique a été correctement stockée. Si l'opération n'a pas pu être effectuée car, par exemple, il n'y avait pas assez de mémoire disponible, la variable OK prend la valeur 0.
 
-**Note pour l'indépendance de plate-forme :** **LIST TO BLOB** et [BLOB to list](blob-to-list.md) utilisent un format interne 4D pour gérer les listes stockées dans des BLOBs. L'avantage est que vous n'avez pas besoin de vous soucier de la conversion des octets ("byte swapping") entre les plates-formes lorsque vous utilisez ces deux commandes. Autrement dit, avec ces commandes, un BLOB créé sous Windows peut être réutilisé sous Mac OS et vice-versa.
+**Note pour l'indépendance de plate-forme :** **LIST TO BLOB** et [BLOB to list](../commands/blob-to-list) utilisent un format interne 4D pour gérer les listes stockées dans des BLOBs. L'avantage est que vous n'avez pas besoin de vous soucier de la conversion des octets ("byte swapping") entre les plates-formes lorsque vous utilisez ces deux commandes. Autrement dit, avec ces commandes, un BLOB créé sous Windows peut être réutilisé sous Mac OS et vice-versa.
 
 ### Note 
 
@@ -49,14 +49,14 @@ Après l'exécution de la commande, la variable OK prend la valeur 1 si la liste
 
 ## Exemple 
 
-Reportez-vous à l'exemple de la fonction [BLOB to list](blob-to-list.md).
+Reportez-vous à l'exemple de la fonction [BLOB to list](../commands/blob-to-list).
 
 ## Voir aussi 
 
-[BLOB to list](blob-to-list.md)  
-[BLOB TO VARIABLE](blob-to-variable.md)  
-[SAVE LIST](save-list.md)  
-[VARIABLE TO BLOB](variable-to-blob.md)  
+[BLOB to list](../commands/blob-to-list)  
+[BLOB TO VARIABLE](../commands/blob-to-variable)  
+[SAVE LIST](../commands/save-list)  
+[VARIABLE TO BLOB](../commands/variable-to-blob)  
 
 ## Propriétés
 

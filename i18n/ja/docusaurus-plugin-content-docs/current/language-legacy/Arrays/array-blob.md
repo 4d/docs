@@ -1,4 +1,4 @@
----
+﻿---
 id: array-blob
 title: ARRAY BLOB
 slug: /commands/array-blob
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 **ARRAY BLOB** コマンドを既存の配列に対して使用する場合、以下のことに気を付けてください:
 
-* サイズを拡大する場合、既存の要素は何も変更されず、新しく追加された要素は空のBLOBで初期化されます([BLOB size](blob-size.md)\= 0)
+* サイズを拡大する場合、既存の要素は何も変更されず、新しく追加された要素は空のBLOBで初期化されます([BLOB size](../commands/blob-size)\= 0)
 * サイズを縮小する場合は、 "底"にある要素から削除されていきます。
 
 ## 例題 1 

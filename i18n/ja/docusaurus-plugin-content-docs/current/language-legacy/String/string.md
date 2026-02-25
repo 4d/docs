@@ -1,4 +1,4 @@
----
+﻿---
 id: string
 title: String
 slug: /commands/string
@@ -257,7 +257,7 @@ displayed_sidebar: docs
 
 [Bool](../commands/bool)  
 [Date](../commands/date)  
-[Num](num.md)  
+[Num](../commands/num)  
 [Time string](../commands/time-string)  
 [Timestamp](../commands/timestamp)
 

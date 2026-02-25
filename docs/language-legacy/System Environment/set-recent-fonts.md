@@ -1,4 +1,4 @@
----
+﻿---
 id: set-recent-fonts
 title: SET RECENT FONTS
 slug: /commands/set-recent-fonts
@@ -52,7 +52,7 @@ Then the menu contains:
 
 ## See also 
 
-[FONT LIST](font-list.md)  
+[FONT LIST](../commands/font-list)  
 
 ## Properties
 

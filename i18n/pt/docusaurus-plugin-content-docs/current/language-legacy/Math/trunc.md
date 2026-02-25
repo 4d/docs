@@ -1,4 +1,4 @@
----
+﻿---
 id: trunc
 title: Trunc
 slug: /commands/trunc
@@ -36,7 +36,7 @@ O exemplo a seguir ilustra a maneira como **Trunc** funciona com diferentes argu
 
 ## Ver também 
 
-[Round](round.md)  
+[Round](../commands/round)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: version-type
 title: Version type
 slug: /commands/version-type
@@ -56,8 +56,8 @@ Ce test permet d’exécuter du code différent selon que la version est une app
 
 ## Voir aussi 
 
-[Application type](application-type.md)  
-[Application version](application-version.md)  
+[Application type](../commands/application-type)  
+[Application version](../commands/application-version)  
 
 ## Propriétés
 

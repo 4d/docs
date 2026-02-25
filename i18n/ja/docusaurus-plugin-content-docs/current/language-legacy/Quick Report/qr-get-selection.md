@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-selection
 title: QR GET SELECTION
 slug: /commands/qr-get-selection
@@ -49,7 +49,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[QR SET SELECTION](qr-set-selection.md)  
+[QR SET SELECTION](../commands/qr-set-selection)  
 
 ## プロパティ
 

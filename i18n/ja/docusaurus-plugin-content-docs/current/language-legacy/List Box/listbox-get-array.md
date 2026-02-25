@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-array
 title: LISTBOX Get array
 slug: /commands/listbox-get-array
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 **LISTBOX Get array**コマンドは、 *object* と *\** によって指定されたリストボックスまたはリストボックスコラムの配列へのポインターを*arrType* 配列に返します。
 
-スタイル、カラー、背景色、または行管理配列は、デザインモードのプロパティリスト、あるいは [LISTBOX SET ARRAY](listbox-set-array.md) コマンドを使用することで、配列型のリストボックス、または (行管理配列以外のみ) 配列型リストボックスのカラムと関連付けすることができます。
+スタイル、カラー、背景色、または行管理配列は、デザインモードのプロパティリスト、あるいは [LISTBOX SET ARRAY](../commands/listbox-set-array) コマンドを使用することで、配列型のリストボックス、または (行管理配列以外のみ) 配列型リストボックスのカラムと関連付けすることができます。
 
 任意の \* 演算子を渡した場合、 *object* 引数でオブジェクト名を文字列で指定します。省略時には *object* 引数で変数を指定します。対象がリストボックスなのか列なのかを、 *object* 引数で指定します。
 
@@ -52,9 +52,9 @@ displayed_sidebar: docs
 
 戻り値は以下のどれかになります:
 
-* 要求されたプロパティの配列がそのリストボックスまたは列に関連付けされていない場合、[Is nil pointer](is-nil-pointer.md)が返ってきます。
+* 要求されたプロパティの配列がそのリストボックスまたは列に関連付けされていない場合、[Is nil pointer](../commands/is-nil-pointer)が返ってきます。
 * ユーザーによって定義されたプロパティの配列へのポインター
-* [LISTBOX SET ROW COLOR](listbox-set-row-color.md) や [LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md) コマンドを使用して設定されたプロパティの配列へのポインター
+* [LISTBOX SET ROW COLOR](../commands/listbox-set-row-color) や [LISTBOX SET ROW FONT STYLE](../commands/listbox-set-row-font-style) コマンドを使用して設定されたプロパティの配列へのポインター
 
 ## 例題 
 
@@ -72,8 +72,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[LISTBOX GET ARRAYS](listbox-get-arrays.md)  
-[LISTBOX SET ARRAY](listbox-set-array.md)  
+[LISTBOX GET ARRAYS](../commands/listbox-get-arrays)  
+[LISTBOX SET ARRAY](../commands/listbox-set-array)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: web-legacy-get-session-expiration
 title: WEB LEGACY GET SESSION EXPIRATION
 slug: /commands/web-legacy-get-session-expiration
@@ -48,9 +48,9 @@ The *expDate* parameter receives the expiration date and the *expTime* parameter
 
 ## See also 
 
-[WEB Get current session ID](web-get-current-session-id.md)  
+[WEB Get current session ID](../commands/web-get-current-session-id)  
 *Web Sessions Management (Legacy)*  
-[WEB SET OPTION](web-set-option.md)  
+[WEB SET OPTION](../commands/web-set-option)  
 
 ## Properties
 

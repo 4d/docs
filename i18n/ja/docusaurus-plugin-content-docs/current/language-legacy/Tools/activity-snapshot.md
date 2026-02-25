@@ -1,4 +1,4 @@
----
+﻿---
 id: activity-snapshot
 title: ACTIVITY SNAPSHOT
 slug: /commands/activity-snapshot
@@ -63,7 +63,7 @@ displayed_sidebar: docs
    * *client\_uid* (文字列): 任意。オペレーションを起動したクライアントのUUID  
    * *is\_remote\_context* (ブール、0 または 1): 任意。データベースオペレーションがクライアントによって起動されたのか(値1)、ストアドプロシージャーから起動されたのか(値0)を表します。  
    * *user4d\_id* (数字): クライアント側のカレントの4DユーザーのID番号  
-   * *client\_version* (文字列): アプリケーションの4Dエンジンのバージョンを表す4桁の数字。 [Application version](application-version.md) コマンドで返されるものと同じ  
+   * *client\_version* (文字列): アプリケーションの4Dエンジンのバージョンを表す4桁の数字。 [Application version](../commands/application-version) コマンドで返されるものと同じ  
 **注:** client\_uid と is\_remote\_context は、クライアント/サーバーモードでのみ使用可能です。client\_uid はクライアントマシンからデータベースオペレーションが開始された場合のみ返されます。
 * *dbOperationDetails* (オブジェクト): このプロパティはオペレーションがデータベースエンジンを呼び出した場合にのみ返されます(例えばクエリや並べ替えなどが相当します)。これはオペレーション自身に関連する特定の情報を含んだオブジェクトです。返されるプロパティは、実行されたデータベースオペレーションのタイプによります。具体的には、プロパティには以下が含まれます:  
    * table (文字列): オペレーションに関連したテーブルの名前  

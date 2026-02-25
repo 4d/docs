@@ -1,4 +1,4 @@
----
+﻿---
 id: execute-formula
 title: EXECUTE FORMULA
 slug: /commands/execute-formula
@@ -43,18 +43,18 @@ displayed_sidebar: docs
 
 **注:** 
 
-* *statement* がプロジェクトメソッドである場合、引数を渡すことのできる[EXECUTE METHOD](execute-method.md) を使用することが推奨されます。
+* *statement* がプロジェクトメソッドである場合、引数を渡すことのできる[EXECUTE METHOD](../commands/execute-method) を使用することが推奨されます。
 * *statement* 内にて、例えば*C\_DATE* のような、変数の宣言コマンドを呼び出すことは推奨されていません。コード内で衝突を起こす可能性があるためです。
 
 フォーミュラにはプロセス変数とインタープロセス変数を含めることができます。しかし*statement*は1行でなければならないため、(*If*, While, などの) フローコントロールを含めることはできません。
 
-使用する4Dの言語やバージョンやに関わらず、*statement* が正常に評価されると言う事を保証するためには、異なるバージョン間において名前が変化する可能性のある要素(コマンド、テーブル、フィールド、定数)に対しては*トークン*シンタックスを使用する事が推奨されます。例えば、[Current time](current-time.md)コマンドを挿入するためには'**Current time:C178**'と入力します。この点についてのより詳細な情報については、*フォーミュラ内でのトークンの使用*を参照して下さい。
+使用する4Dの言語やバージョンやに関わらず、*statement* が正常に評価されると言う事を保証するためには、異なるバージョン間において名前が変化する可能性のある要素(コマンド、テーブル、フィールド、定数)に対しては*トークン*シンタックスを使用する事が推奨されます。例えば、[Current time](../commands/current-time)コマンドを挿入するためには'**Current time:C178**'と入力します。この点についてのより詳細な情報については、*フォーミュラ内でのトークンの使用*を参照して下さい。
 
 ### コンパイル済みモードでのフォーミュラのキャッシュ 
 
 最適化のために、**EXECUTE FORMULA**によってコンパイル済みモードで実行されたそれぞれのフォーミュラは、メモリ内の専用のキャッシュに保存する事が可能です。フォーミュラはトークナイズドされた形でキャッシュされます。一度キャッシュに保存されると、その後の実行はトークン化のステップをスキップするため、大幅に最適化されます。
 
-キャッシュサイズはデフォルトではゼロです(キャッシュなし)。[SET DATABASE PARAMETER](set-database-parameter.md)コマンドを使用してキャッシュを作成または調整する必要があります。例えば:
+キャッシュサイズはデフォルトではゼロです(キャッシュなし)。[SET DATABASE PARAMETER](../commands/set-database-parameter)コマンドを使用してキャッシュを作成または調整する必要があります。例えば:
 
 ```4d
  SET DATABASE PARAMETER(Number of formulas in cache;0) //フォーミュラのキャッシュはなし
@@ -74,8 +74,8 @@ displayed_sidebar: docs
 ## 参照 
 
 [Command name](../commands/command-name)  
-[EDIT FORMULA](edit-formula.md)  
-[SET DATABASE PARAMETER](set-database-parameter.md)  
+[EDIT FORMULA](../commands/edit-formula)  
+[SET DATABASE PARAMETER](../commands/set-database-parameter)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: tickcount
 title: Tickcount
 slug: /commands/tickcount
@@ -35,8 +35,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Current time](current-time.md)  
-[Milliseconds](milliseconds.md)  
+[Current time](../commands/current-time)  
+[Milliseconds](../commands/milliseconds)  
 
 ## プロパティ
 

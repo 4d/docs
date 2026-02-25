@@ -1,4 +1,4 @@
----
+﻿---
 id: get-menu-item-icon
 title: GET MENU ITEM ICON
 slug: /commands/get-menu-item-icon
@@ -45,7 +45,7 @@ If no icon is associated with the menu item, the command returns a blank value.
 
 ## See also 
 
-[SET MENU ITEM ICON](set-menu-item-icon.md)  
+[SET MENU ITEM ICON](../commands/set-menu-item-icon)  
 
 ## Properties
 

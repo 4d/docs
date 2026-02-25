@@ -1,4 +1,4 @@
----
+﻿---
 id: get-query-destination
 title: GET QUERY DESTINATION
 slug: /commands/get-query-destination
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.GET QUERY DESTINATION.Summary-->The **GET QUERY DESTINATION** command returns the current destination of query results for the process underway.<!-- END REF--> By default, query results modify the current selection, but you can change this using the [SET QUERY DESTINATION](set-query-destination.md) command.
+<!--REF #_command_.GET QUERY DESTINATION.Summary-->The **GET QUERY DESTINATION** command returns the current destination of query results for the process underway.<!-- END REF--> By default, query results modify the current selection, but you can change this using the [SET QUERY DESTINATION](../commands/set-query-destination) command.
 
 In the *destinationType* parameter, 4D returns a value indicating the current destination of queries and in the *destinationObject* parameter it returns the name of the destination (if applicable). You can compare the value of the *destinationType* parameter with the constants of the *Queries* theme:
 
@@ -67,7 +67,7 @@ We want to modify the query destination temporarily and then restore the previou
 
 ## See also 
 
-[SET QUERY DESTINATION](set-query-destination.md)  
+[SET QUERY DESTINATION](../commands/set-query-destination)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: type
 title: Type
 slug: /commands/type
@@ -72,8 +72,8 @@ Vous pouvez appliquer la fonction **Type** aux champs, variables interprocess, v
 
 **Notes :** 
 
-* Vous ne pouvez pas appliquer la fonction **Type** aux expressions scalaires telles que les propriétés d'objets (*emp.name*) ou les éléments de collections (*maColl\[5\]*). Pour cela, vous devez utiliser la commande [Value type](value-type.md).
-* En mode compilé, si vous appelez la commande **Type** pour un paramètre de méthode ($0, $ptrTable...) déclaré comme *C\_VARIANT*, cela ne retournera pas Is variant mais plutôt le type de données courantes (de même si vous appelez la commande [Value type](value-type.md)).
+* Vous ne pouvez pas appliquer la fonction **Type** aux expressions scalaires telles que les propriétés d'objets (*emp.name*) ou les éléments de collections (*maColl\[5\]*). Pour cela, vous devez utiliser la commande [Value type](../commands/value-type).
+* En mode compilé, si vous appelez la commande **Type** pour un paramètre de méthode ($0, $ptrTable...) déclaré comme *C\_VARIANT*, cela ne retournera pas Is variant mais plutôt le type de données courantes (de même si vous appelez la commande [Value type](../commands/value-type)).
 
 ## Exemple 1 
 
@@ -151,13 +151,13 @@ Dans certains cas, par exemple pour écrire du code générique, il peut être n
 
 ## Exemple 3 
 
-Référez-vous à l'exemple de la commande [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md).
+Référez-vous à l'exemple de la commande [APPEND DATA TO PASTEBOARD](../commands/append-data-to-pasteboard).
 
 ## Voir aussi 
 
-[Is a variable](is-a-variable.md)  
-[Undefined](undefined.md)  
-[Value type](value-type.md)  
+[Is a variable](../commands/is-a-variable)  
+[Undefined](../commands/undefined)  
+[Value type](../commands/value-type)  
 
 ## Propriétés
 

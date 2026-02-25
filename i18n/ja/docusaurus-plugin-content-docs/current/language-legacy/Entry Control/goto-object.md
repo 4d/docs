@@ -1,4 +1,4 @@
----
+﻿---
 id: goto-object
 title: GOTO OBJECT
 slug: /commands/goto-object
@@ -62,8 +62,8 @@ GOTO OBJECTコマンドは以下のように使用します:
 
 ## 参照 
 
-[CALL SUBFORM CONTAINER](call-subform-container.md)  
-[REJECT](reject.md)  
+[CALL SUBFORM CONTAINER](../commands/call-subform-container)  
+[REJECT](../commands/reject)  
 
 ## プロパティ
 

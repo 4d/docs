@@ -1,4 +1,4 @@
----
+﻿---
 id: select-list-items-by-position
 title: SELECT LIST ITEMS BY POSITION
 slug: /commands/select-list-items-by-position
@@ -37,14 +37,14 @@ Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *li
 
 **Note :** Si vous utilisez le caractère @ dans le nom d'objet de la liste et que le formulaire contient plusieurs listes répondant à ce nom, la commande **SELECT LIST ITEMS BY POSITION** s'appliquera au premier objet dont le nom correspond.
 
-La position des éléments est toujours exprimée en tenant compte de l'état déployé/contracté de la liste et de ses sous-listes. Passez des positions comprises entre 1 et la valeur retournée par [Count list items](count-list-items.md). Si vous passez une valeur située en-dehors de cet intervalle, aucun élément n'est sélectionné. 
+La position des éléments est toujours exprimée en tenant compte de l'état déployé/contracté de la liste et de ses sous-listes. Passez des positions comprises entre 1 et la valeur retournée par [Count list items](../commands/count-list-items). Si vous passez une valeur située en-dehors de cet intervalle, aucun élément n'est sélectionné. 
 
 Si vous ne passez pas le paramètre *tabPositions*, le paramètre *positionElém* représente la position de l'élément à sélectionner. 
 
 Le paramètre facultatif *tabPositions* permet de sélectionner simultanément plusieurs éléments au sein de la *liste*. Vous devez passer dans *tabPositions* un tableau dont chaque ligne indique la position d’un élément à sélectionner.   
-Lorsque vous passez ce paramètre, l’élément désigné par le paramètre *positionElém* désigne parmi la sélection résultante le nouvel élément courant de la liste. Il peut appartenir ou non à l’ensemble d’éléments définis par le tableau. L’élément courant est notamment celui qui passe en mode édition si la commande [EDIT ITEM](edit-item.md) est utilisée. 
+Lorsque vous passez ce paramètre, l’élément désigné par le paramètre *positionElém* désigne parmi la sélection résultante le nouvel élément courant de la liste. Il peut appartenir ou non à l’ensemble d’éléments définis par le tableau. L’élément courant est notamment celui qui passe en mode édition si la commande [EDIT ITEM](../commands/edit-item) est utilisée. 
 
-**Note :** Pour que plusieurs éléments puissent être sélectionnés simultanément dans une liste hiérarchique (manuellement ou par programmation), la propriété *multiSélection* doit avoir été activée pour cette liste. Cette propriété est définie via la commande [SET LIST PROPERTIES](set-list-properties.md). 
+**Note :** Pour que plusieurs éléments puissent être sélectionnés simultanément dans une liste hiérarchique (manuellement ou par programmation), la propriété *multiSélection* doit avoir été activée pour cette liste. Cette propriété est définie via la commande [SET LIST PROPERTIES](../commands/set-list-properties). 
 
 ## Exemple 
 
@@ -81,9 +81,9 @@ Après l'exécution des lignes de code suivantes :
 
 ## Voir aussi 
 
-[EDIT ITEM](edit-item.md)  
-[SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
-[Selected list items](selected-list-items.md)  
+[EDIT ITEM](../commands/edit-item)  
+[SELECT LIST ITEMS BY REFERENCE](../commands/select-list-items-by-reference)  
+[Selected list items](../commands/selected-list-items)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: previous-record
 title: PREVIOUS RECORD
 slug: /commands/previous-record
@@ -17,17 +17,17 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.PREVIOUS RECORD.Summary-->**PREVIOUS RECORD** moves the current record pointer to the previous record in the current selection of *aTable* for the current process.<!-- END REF--> If the current selection is empty, or if [Before selection](before-selection.md) or [End selection](end-selection.md) is TRUE, **PREVIOUS RECORD** has no effect.
+<!--REF #_command_.PREVIOUS RECORD.Summary-->**PREVIOUS RECORD** moves the current record pointer to the previous record in the current selection of *aTable* for the current process.<!-- END REF--> If the current selection is empty, or if [Before selection](../commands/before-selection) or [End selection](../commands/end-selection) is TRUE, **PREVIOUS RECORD** has no effect.
 
-If **PREVIOUS RECORD** moves the current record pointer before the current selection, [End selection](end-selection.md) returns TRUE, and there is no current record. If [End selection](end-selection.md) returns TRUE, use [FIRST RECORD](first-record.md), [LAST RECORD](last-record.md) or [GOTO SELECTED RECORD](goto-selected-record.md) to move the current record pointer back into the current selection.
+If **PREVIOUS RECORD** moves the current record pointer before the current selection, [End selection](../commands/end-selection) returns TRUE, and there is no current record. If [End selection](../commands/end-selection) returns TRUE, use [FIRST RECORD](../commands/first-record), [LAST RECORD](../commands/last-record) or [GOTO SELECTED RECORD](../commands/goto-selected-record) to move the current record pointer back into the current selection.
 
 ## See also 
 
-[Before selection](before-selection.md)  
-[End selection](end-selection.md)  
-[FIRST RECORD](first-record.md)  
-[LAST RECORD](last-record.md)  
-[NEXT RECORD](next-record.md)  
+[Before selection](../commands/before-selection)  
+[End selection](../commands/end-selection)  
+[FIRST RECORD](../commands/first-record)  
+[LAST RECORD](../commands/last-record)  
+[NEXT RECORD](../commands/next-record)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: execute-formula
 title: EXECUTE FORMULA
 slug: /commands/execute-formula
@@ -43,18 +43,18 @@ L'*instruction* peut notamment contenir les éléments suivants :
 
 **Notes :** 
 
-* Si *instruction* est une méthode projet, il est recommandé d'utiliser [EXECUTE METHOD](execute-method.md) qui permet de passer des paramètres.
+* Si *instruction* est une méthode projet, il est recommandé d'utiliser [EXECUTE METHOD](../commands/execute-method) qui permet de passer des paramètres.
 * Il est déconseillé d'appeler des commandes de déclaration de variables telles que *C\_DATE* dans *instruction* afin d'éviter tout risque de conflit de type.
 
 La formule peut utiliser des variables process et interprocess. En revanche, *instruction* ne doit pas contenir d'instructions de contrôle de flux (Si, Tant que...) car le code doit "tenir" sur une seule ligne.
 
-Pour assurer une évaluation correcte de l'*instruction* quelle que soit la langue ou la version de 4D, il est recommandé d'utiliser la syntaxe *tokenisée* pour les éléments dont le nom peut varier au fil des versions (commandes, tables, champs, constantes). Par exemple, pour insérer la commande [Current time](current-time.md), saisissez '**Current time:C178**'. Pour plus d'informations sur ce point, reportez-vous à la section *Utiliser des tokens dans les formules*.
+Pour assurer une évaluation correcte de l'*instruction* quelle que soit la langue ou la version de 4D, il est recommandé d'utiliser la syntaxe *tokenisée* pour les éléments dont le nom peut varier au fil des versions (commandes, tables, champs, constantes). Par exemple, pour insérer la commande [Current time](../commands/current-time), saisissez '**Current time:C178**'. Pour plus d'informations sur ce point, reportez-vous à la section *Utiliser des tokens dans les formules*.
 
 ### Cache de formules en mode compilé 
 
 A des fins d'optimisation, chaque formule exécutée via **EXECUTE FORMULA** en mode compilé peut être conservée en mémoire dans un cache dédié. La formule est stockée sous forme de références (*tokens*). Une fois placée dans le cache, une formule s'exécutera de manière beaucoup plus rapide par la suite car la phase de *tokenisation* sera évitée. 
 
-La taille du cache est de zéro par défaut (pas de cache) ; vous devez le créer et l'ajuster à l'aide de la commande [SET DATABASE PARAMETER](set-database-parameter.md). Par exemple :
+La taille du cache est de zéro par défaut (pas de cache) ; vous devez le créer et l'ajuster à l'aide de la commande [SET DATABASE PARAMETER](../commands/set-database-parameter). Par exemple :
 
 ```4d
  SET DATABASE PARAMETER(Number of formulas in cache;0) //pas de cache de formules
@@ -74,8 +74,8 @@ Vous voulez exécuter une formule incluant des appels à des commandes et des ta
 ## Voir aussi 
 
 [Command name](../commands/command-name)  
-[EDIT FORMULA](edit-formula.md)  
-[SET DATABASE PARAMETER](set-database-parameter.md)  
+[EDIT FORMULA](../commands/edit-formula)  
+[SET DATABASE PARAMETER](../commands/set-database-parameter)  
 
 ## Propriétés
 

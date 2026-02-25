@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-arrays
 title: LISTBOX GET ARRAYS
 slug: /commands/listbox-get-arrays
@@ -54,7 +54,7 @@ Once the command is executed:
    * For a column associated with an expression, a Nil pointer.
 * The *arrHeaderVars* array contains pointers toward variables associated with each column header of the list box.
 * The *arrColsVisible* array contains a Boolean value for each column, indicating whether the column is visible ([True](true.md "True")) or hidden ([False](false.md "False")) in the list box.
-* The *arrStyles* array contains, for an array type list box, four pointers to four arrays that allow the applying of a specific style, font color, background color and custom display control to each row of the list box. These arrays are associated with the list box in the Property List of the Design environment or using the [LISTBOX SET ARRAY](listbox-set-array.md) command. If an array is not specified for the list box, the corresponding item in *arrStyles* will contain a Nil pointer.  
+* The *arrStyles* array contains, for an array type list box, four pointers to four arrays that allow the applying of a specific style, font color, background color and custom display control to each row of the list box. These arrays are associated with the list box in the Property List of the Design environment or using the [LISTBOX SET ARRAY](../commands/listbox-set-array) command. If an array is not specified for the list box, the corresponding item in *arrStyles* will contain a Nil pointer.  
 The fourth pointer corresponds either to a Boolean array (Hidden Rows Array), or to a longint array (array used to set hidden, disabled and non-selectable rows) based on the implementation used for the row control array (see *List box specific properties*).  
 For record selection, collection or entity selection type list boxes, *arrStyles* contains:  
    * For each configuration set via a variable, a pointer to the variable,  
@@ -62,9 +62,9 @@ For record selection, collection or entity selection type list boxes, *arrStyles
 
 ## See also 
 
-[LISTBOX Get array](listbox-get-array.md)  
+[LISTBOX Get array](../commands/listbox-get-array)  
 [LISTBOX Get property](../commands/listbox-get-property)  
-[LISTBOX SET ARRAY](listbox-set-array.md)  
+[LISTBOX SET ARRAY](../commands/listbox-set-array)  
 
 ## Properties
 

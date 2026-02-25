@@ -1,4 +1,4 @@
----
+﻿---
 id: quit-4d
 title: QUIT 4D
 slug: /commands/quit-4d
@@ -36,14 +36,14 @@ O processamento de comando é diferente se for executado em 4D (modo local ou re
 
 Depois que você chamar QUIT 4D, o atual processo pára a sua execução, em seguida, 4D atua da seguinte forma:
 
-* Se houver um método [Método banco de dados On Exit](metodo-banco-de-dados-on-exit.md), 4D começa a executar esse método dentro de um processo local recém-criado. Por exemplo, você pode usar esse método de banco de dados para informar os outros processos, por meio da comunicação entre processos, que eles devem fechar (entrada de dados) ou interromper a execução das operações iniciadas no método [Método banco de dados On Startup](metodo-banco-de-dados-on-startup.md) (conexão de 4D para outro servidor de banco de dados). Note que 4D poderá eventualmente fechar, o método [Método banco de dados On Exit](metodo-banco-de-dados-on-exit.md) pode realizar todas as operações de limpeza ou o fechamento quiser, mas não pode recusar a sair e irá fazê-lo, em algum ponto final.
-* Se não houver nenhum método [Método banco de dados On Exit](metodo-banco-de-dados-on-exit.md), 4D anula processo em execução um por um, sem distinção.
+* Se houver um método [Método banco de dados On Exit](../commands/metodo-banco-de-dados-on-exit), 4D começa a executar esse método dentro de um processo local recém-criado. Por exemplo, você pode usar esse método de banco de dados para informar os outros processos, por meio da comunicação entre processos, que eles devem fechar (entrada de dados) ou interromper a execução das operações iniciadas no método [Método banco de dados On Startup](../commands/metodo-banco-de-dados-on-startup) (conexão de 4D para outro servidor de banco de dados). Note que 4D poderá eventualmente fechar, o método [Método banco de dados On Exit](../commands/metodo-banco-de-dados-on-exit) pode realizar todas as operações de limpeza ou o fechamento quiser, mas não pode recusar a sair e irá fazê-lo, em algum ponto final.
+* Se não houver nenhum método [Método banco de dados On Exit](../commands/metodo-banco-de-dados-on-exit), 4D anula processo em execução um por um, sem distinção.
 
 Se o usuário estiver realizando uma entrada de dados, os registros serão cancelados e não serão salvos.   
 Se você quiser deixar o usuário salvar as modificações de entrada de dados feitas nas janelas abertas, você pode usar a comunicação entre processos para sinalizar todos os outros processos de usuário que o banco será fechado. Para fazer isso, você pode adotar duas estratégias:
 
 * A realização das operações de dentro do processo atual antes de chamar QUIT 4D.
-* Lidar com essas operações a partir do banco no método [Método banco de dados On Exit](metodo-banco-de-dados-on-exit.md).
+* Lidar com essas operações a partir do banco no método [Método banco de dados On Exit](../commands/metodo-banco-de-dados-on-exit).
 
 Uma terceira estratégia também é possível. Antes de chamar QUIT 4D, você verifica se uma janela vai precisar de validação, se for esse o caso, você pode pedir ao usuário para validar ou anular as janelas e, em seguida, escolher Quit de novo. No entanto, do ponto de vista da interface do usuário, as duas primeiras estratégias são preferíveis.
 
@@ -78,7 +78,7 @@ O método de projeto listado aqui está associado com o item Quit ou Exit do men
 
 ## Ver também 
 
-[Método banco de dados On Exit](metodo-banco-de-dados-on-exit.md)  
+[Método banco de dados On Exit](../commands/metodo-banco-de-dados-on-exit)  
 
 ## Propriedades
 

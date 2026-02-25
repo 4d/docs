@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-report-table
 title: QR SET REPORT TABLE
 slug: /commands/qr-set-report-table
@@ -37,7 +37,7 @@ Si le paramètre *numTable* est incorrect, l’erreur -9852 est générée.
 
 ## Voir aussi 
 
-[QR Get report table](qr-get-report-table.md)  
+[QR Get report table](../commands/qr-get-report-table)  
 
 ## Propriétés
 

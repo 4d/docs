@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-report-kind
 title: QR SET REPORT KIND
 slug: /commands/qr-set-report-kind
@@ -44,7 +44,7 @@ Si la valeur de *type* est incorrecte, l’erreur -9852 est générée.
 
 ## Voir aussi 
 
-[QR Get report kind](qr-get-report-kind.md)  
+[QR Get report kind](../commands/qr-get-report-kind)  
 
 ## Propriétés
 

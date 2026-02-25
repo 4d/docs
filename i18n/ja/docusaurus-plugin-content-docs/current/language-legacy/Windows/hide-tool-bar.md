@@ -1,4 +1,4 @@
----
+﻿---
 id: hide-tool-bar
 title: HIDE TOOL BAR
 slug: /commands/hide-tool-bar
@@ -52,7 +52,7 @@ macOS において、カスタムのツールバーとHas full screen mode Mac �
 
 ## 参照 
 
-[SHOW TOOL BAR](show-tool-bar.md)  
+[SHOW TOOL BAR](../commands/show-tool-bar)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: copy-document
 title: COPY DOCUMENT
 slug: /commands/copy-document
@@ -133,7 +133,7 @@ Les exemples suivants créent différents fichiers et dossiers dans le dossier d
 
 ## Voir aussi 
 
-[MOVE DOCUMENT](move-document.md)  
+[MOVE DOCUMENT](../commands/move-document)  
 *Présentation des documents système*  
 
 ## Propriétés

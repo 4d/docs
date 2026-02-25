@@ -1,4 +1,4 @@
----
+﻿---
 id: selection-to-json
 title: Selection to JSON
 slug: /commands/selection-to-json
@@ -46,7 +46,7 @@ displayed_sidebar: docs
  Selection to JSON([aTable];objectField)
 ```
 
-**注:** **Selection to JSON**コマンドを呼び出した後、カレントセレクションは同じままですが、カレントレコードはロードされておらず、変更されている可能性もあります(その場合、カレントセレクションの最後のレコードがカレントレコードになります)。**Selection to JSON**コマンドのあと、カレントレコード内のフィールドの値を使用したい場合には[LOAD RECORD](load-record.md) コマンドと、(必要であれば)[GOTO SELECTED RECORD](goto-selected-record.md) コマンドを組み合わせて呼んで下さい。
+**注:** **Selection to JSON**コマンドを呼び出した後、カレントセレクションは同じままですが、カレントレコードはロードされておらず、変更されている可能性もあります(その場合、カレントセレクションの最後のレコードがカレントレコードになります)。**Selection to JSON**コマンドのあと、カレントレコード内のフィールドの値を使用したい場合には[LOAD RECORD](../commands/load-record) コマンドと、(必要であれば)[GOTO SELECTED RECORD](../commands/goto-selected-record) コマンドを組み合わせて呼んで下さい。
 
 ## 例題 1 
 
@@ -102,7 +102,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[JSON TO SELECTION](json-to-selection.md)  
+[JSON TO SELECTION](../commands/json-to-selection)  
 
 ## プロパティ
 

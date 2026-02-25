@@ -1,4 +1,4 @@
----
+﻿---
 id: set-index-cache-priority
 title: SET INDEX CACHE PRIORITY
 slug: /commands/set-index-cache-priority
@@ -58,8 +58,8 @@ Em , se quiser estabelecer uma alta prioridade para os índices campo \[Customer
 
 ## Ver também 
 
-[ADJUST INDEX CACHE PRIORITY](adjust-index-cache-priority.md)  
-[Get adjusted index cache priority](get-adjusted-index-cache-priority.md)  
+[ADJUST INDEX CACHE PRIORITY](../commands/adjust-index-cache-priority)  
+[Get adjusted index cache priority](../commands/get-adjusted-index-cache-priority)  
 
 ## Propriedades
 

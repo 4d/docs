@@ -1,4 +1,4 @@
----
+﻿---
 id: ldap-search-all
 title: LDAP SEARCH ALL
 slug: /commands/ldap-search-all
@@ -126,7 +126,7 @@ Estos ejemplos ilustran el uso del parámetro *atributosEnArray*:
 ## Ver también 
 
 *LDAP*  
-[LDAP Search](ldap-search.md)  
+[LDAP Search](../commands/ldap-search)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: get-picture-formats
 title: GET PICTURE FORMATS
 slug: /commands/get-picture-formats
@@ -32,14 +32,14 @@ displayed_sidebar: docs
 
 *picture*引数には、含まれるフォーマットを*codecIDs*配列内に取得したいピクチャーフィールドあるいは変数を渡します。
 
-返されるコーデックIDは、[PICTURE CODEC LIST](picture-codec-list.md)コマンドと同様に4Dによって確立されます。これらは以下の形式で受け取ることが可能です:
+返されるコーデックIDは、[PICTURE CODEC LIST](../commands/picture-codec-list)コマンドと同様に4Dによって確立されます。これらは以下の形式で受け取ることが可能です:
 
 * 拡張子(例：“.gif”)
 * Mimeタイプ(例：“image/jpeg”)
 * 4文字のQuickTimeコード
 **注** **:** 
 * 4Dによって内部的に管理される以下のコーデックについては、必ず拡張子形式で返されます:JPEG、PNG、TIFF、GIF、BMP、SVG、PDF、EMF
-* 4文字のQuickTimeコードは、QuickTime support互換性オプションが([SET DATABASE PARAMETER](set-database-parameter.md)コマンドを使用して)設定されているデータベースにおいて返すことが可能です。しかしながら、QuickTimeは4Dではサポートされておらず、QuickTimeコーデックの使用は推奨されません。
+* 4文字のQuickTimeコードは、QuickTime support互換性オプションが([SET DATABASE PARAMETER](../commands/set-database-parameter)コマンドを使用して)設定されているデータベースにおいて返すことが可能です。しかしながら、QuickTimeは4Dではサポートされておらず、QuickTimeコーデックの使用は推奨されません。
 
 ピクチャーコーデックIDについてのより詳細な情報については、*ピクチャ*の章を参照して下さい。
 

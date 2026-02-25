@@ -1,4 +1,4 @@
----
+﻿---
 id: call-subform-container
 title: CALL SUBFORM CONTAINER
 slug: /commands/call-subform-container
@@ -40,7 +40,7 @@ displayed_sidebar: docs
 ## 参照 
 
 [Form event code](../commands/form-event-code)  
-[GOTO OBJECT](goto-object.md)  
+[GOTO OBJECT](../commands/goto-object)  
 
 ## プロパティ
 

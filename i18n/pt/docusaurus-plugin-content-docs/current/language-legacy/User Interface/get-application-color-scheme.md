@@ -1,4 +1,4 @@
----
+﻿---
 id: get-application-color-scheme
 title: Get Application color scheme
 slug: /commands/get-application-color-scheme
@@ -34,13 +34,13 @@ displayed_sidebar: docs
 
 O esquema de cores é definido por:
 
-* uma chamada ao comando [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md);
-* Se [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) não for chamado ou então for chamado com o parâmetro "inherited/herdado", vá em Configurações (Configurações do banco de dados host no caso de um componente);
+* uma chamada ao comando [SET APPLICATION COLOR SCHEME](../commands/set-application-color-scheme);
+* Se [SET APPLICATION COLOR SCHEME](../commands/set-application-color-scheme) não for chamado ou então for chamado com o parâmetro "inherited/herdado", vá em Configurações (Configurações do banco de dados host no caso de um componente);
 * Se configurações estiver estabelecido como "inherited", nas preferências de usuário do sistema operativo.
 
 O parâmetro *\** é útil quando o comando for chamado de um componente: quando for passado, o comando retorna o esquema de cores do banco de dados host. 
 
-Veja a descrição do comando [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) para detalhes sobre os nomes de esquema de cores. 
+Veja a descrição do comando [SET APPLICATION COLOR SCHEME](../commands/set-application-color-scheme) para detalhes sobre os nomes de esquema de cores. 
 
 ## Exemplo 
 
@@ -53,8 +53,8 @@ Veja a descrição do comando [SET APPLICATION COLOR SCHEME](set-application-col
 
 ## Ver também 
 
-[FORM Get color scheme](form-get-color-scheme.md)  
-[SET APPLICATION COLOR SCHEME](set-application-color-scheme.md)  
+[FORM Get color scheme](../commands/form-get-color-scheme)  
+[SET APPLICATION COLOR SCHEME](../commands/set-application-color-scheme)  
 
 ## Propriedades
 

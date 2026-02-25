@@ -1,4 +1,4 @@
----
+﻿---
 id: component-list
 title: COMPONENT LIST
 slug: /commands/component-list
@@ -44,7 +44,7 @@ Para mayor información sobre componentes 4D, por favor consulte el *Manual de D
 
 ## Ver también 
 
-[PLUGIN LIST](plugin-list.md)  
+[PLUGIN LIST](../commands/plugin-list)  
 
 ## Propiedades
 

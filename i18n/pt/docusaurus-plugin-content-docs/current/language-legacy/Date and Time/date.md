@@ -1,4 +1,4 @@
----
+﻿---
 id: date
 title: Date
 slug: /commands/date
@@ -46,13 +46,13 @@ Se *dataCadeia* não corresponde ao formato ISO, os parâmetros regionais defini
 * Se o valor introduzido é superior ou igual a 30, 4D considera que a data pertence ao século 20 e adiciona 19 a frente do valor.
 * Se o valor introduzido é inferior a 30, 4D considera que a data pertence ao século 21 e agrega 20 à frente do valor.
 
-Este mecanismo pode ser configurado utilizando o comando [SET DEFAULT CENTURY](set-default-century.md).   
+Este mecanismo pode ser configurado utilizando o comando [SET DEFAULT CENTURY](../commands/set-default-century).   
 Os seguintes caracteres são separadores de datas válidas: barra oblíqua (/), espaço, ponto (.), vírgula (,) e hífen (-).  
   
 Se passar uma data inválida (tal como "13/35/94" ou "aa/12/94"), em *dataCadeia*, Date devolverá uma data inválida (!00/00/00!). É sua responsabilidade verificar que *dataCadeia* seja uma data válida.  
 Se avaliar a expressão dateString como undefined, Date retorna uma data vazia (00/00/00). Isso é útil quando espera o resultado de uma expressão (por exemplo um atributo de objeto) possa ser uma data, mesmo se puder ser indefido (por exemplo um atributo objeto).  
   
-Nota: a partir de 4D v16 R6, datas podem ser armazenadas em atributos de objeto como valores de tipo de dados. Em versões anteriores, só podiam ser armazenadas como strings (para saber mais sobre essa opção, veja a seção *Página Compatibilidade*, "Use date type instead of ISO date format in objects"). Para saber se um atributo contém uma data armazenada como uma string ou como uma data, precisa usar o comando [Value type](value-type.md) (ver último exemplo).
+Nota: a partir de 4D v16 R6, datas podem ser armazenadas em atributos de objeto como valores de tipo de dados. Em versões anteriores, só podiam ser armazenadas como strings (para saber mais sobre essa opção, veja a seção *Página Compatibilidade*, "Use date type instead of ISO date format in objects"). Para saber se um atributo contém uma data armazenada como uma string ou como uma data, precisa usar o comando [Value type](../commands/value-type) (ver último exemplo).
 
 **Expressão tipo data**  
 Se a *expresao for* do tipo de data, **Date** devolve a dataa passada no parâmetro 'tal como está'. Isto é particularmente útil no contexto da programação genérica utilizando ponteiros ou atributos de objeto.

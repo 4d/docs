@@ -1,4 +1,4 @@
----
+﻿---
 id: change-current-user
 title: CHANGE CURRENT USER
 slug: /commands/change-current-user
@@ -34,15 +34,15 @@ displayed_sidebar: docs
 **Notes :**
 
 * Cette commande ne produit aucun effet dans une base projet ouverte en monoposte.
-* Si un alias a été défini pour l'utilisateur courant avec la commande [SET USER ALIAS](set-user-alias.md), il est réinitialisé en appelant la commande **CHANGE CURRENT USER**.
+* Si un alias a été défini pour l'utilisateur courant avec la commande [SET USER ALIAS](../commands/set-user-alias), il est réinitialisé en appelant la commande **CHANGE CURRENT USER**.
 
 Si la commande **CHANGE CURRENT USER** est exécutée sans paramètres, la boîte de dialogue de connexion à la base s'affiche. L'utilisateur doit alors saisir ou sélectionner un nom et un mot de passe valides pour entrer dans la base. Le contenu de la boîte de dialogue de connexion dépend des options définies dans la page **Sécurité** des Propriétés de la base.
 
 Vous pouvez également passer les deux paramètres facultatifs *utilisateur* et *motDePasse* afin de spécifier par programmation le nouveau compte à utiliser. 
 
-Passez dans le paramètre *utilisateur* le nom ou le numéro de référence unique (*réfUtilisateur*) du compte à utiliser. Les noms et les numéros des utilisateurs peuvent être obtenus via la commande [GET USER LIST](get-user-list.md).
+Passez dans le paramètre *utilisateur* le nom ou le numéro de référence unique (*réfUtilisateur*) du compte à utiliser. Les noms et les numéros des utilisateurs peuvent être obtenus via la commande [GET USER LIST](../commands/get-user-list).
 
-Si le compte d’utilisateur désigné n’existe pas ou a été supprimé, l’erreur -9979 est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d’erreurs installée par la commande [ON ERR CALL](on-err-call.md). Sinon, vous pouvez appeler la fonction [Is user deleted](is-user-deleted.md) pour tester le compte utilisateur avant d’appeler cette commande.
+Si le compte d’utilisateur désigné n’existe pas ou a été supprimé, l’erreur -9979 est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d’erreurs installée par la commande [ON ERR CALL](../commands/on-err-call). Sinon, vous pouvez appeler la fonction [Is user deleted](../commands/is-user-deleted) pour tester le compte utilisateur avant d’appeler cette commande.
 
 Passez dans le paramètre *motDePasse* le mot de passe non crypté du compte de l’utilisateur. Si le mot de passe ne correspond pas à l’utilisateur, la commande ne fait rien et l’erreur -9978 est générée.
 
@@ -57,10 +57,10 @@ Le principe est le suivant :
 
 **1.** L’entrée dans la base s’effectue directement en mode “Utilisateur par défaut”, sans boîte de dialogue. 
 
-**2.** Dans la , le développeur provoque l’affichage d’une boîte de dialogue personnalisée de saisie du nom d’utilisateur et du mot de passe (à l’aide de la commande [DIALOG](../commands/dialog) ou [ADD RECORD](add-record.md) par exemple). Tout type de traitement peut être envisagé dans la boîte de dialogue :   
-\- Il est possible d’afficher la liste des utilisateurs de la base, comme dans la boîte de dialogue d’accès standard de 4D, à l’aide de la commande [GET USER LIST](get-user-list.md).   
+**2.** Dans la , le développeur provoque l’affichage d’une boîte de dialogue personnalisée de saisie du nom d’utilisateur et du mot de passe (à l’aide de la commande [DIALOG](../commands/dialog) ou [ADD RECORD](../commands/add-record) par exemple). Tout type de traitement peut être envisagé dans la boîte de dialogue :   
+\- Il est possible d’afficher la liste des utilisateurs de la base, comme dans la boîte de dialogue d’accès standard de 4D, à l’aide de la commande [GET USER LIST](../commands/get-user-list).   
 \- Le champ de saisie du mot de passe peut contenir divers contrôles afin de vérifier la validité des caractères saisis (nombre minimum de caractères, unicité...).   
-\- Pour les caractères du mot de passe saisi soient brouillés à l'écran, vous pouvez utiliser la commande [FILTER KEYSTROKE](filter-keystroke.md).   
+\- Pour les caractères du mot de passe saisi soient brouillés à l'écran, vous pouvez utiliser la commande [FILTER KEYSTROKE](../commands/filter-keystroke).   
 \- Des règles d’expiration peuvent être appliquées au moment de la validation de la boîte de dialogue : date d’expiration, changement forcé à la première connexion, verrouillage du compte après plusieurs saisies erronées, mémorisation des mots de passe déjà utilisés... 
 
 **3.** Lorsque la saisie est validée, les informations requises (nom d’utilisateur et mot de passe) sont passées à la commande **CHANGE CURRENT USER** afin d’ouvrir la base avec les privilèges du compte utilisateur.
@@ -77,8 +77,8 @@ L'exemple suivant affiche simplement la boîte de dialogue de connexion :
 
 ## Voir aussi 
 
-[CHANGE PASSWORD](change-password.md)  
-[SET USER ALIAS](set-user-alias.md)  
+[CHANGE PASSWORD](../commands/change-password)  
+[SET USER ALIAS](../commands/set-user-alias)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: set-list-item-properties
 title: SET LIST ITEM PROPERTIES
 slug: /commands/set-list-item-properties
@@ -40,19 +40,19 @@ displayed_sidebar: docs
 
 オプションの第一引数 *\** を渡すと、*list* 引数はフォーム上のリストオブジェクトに対応するオブジェクト名 (文字列) です。この引数を渡さない場合、*list* 引数は階層リスト参照 ([ListRef](# "階層リストへの参照")) です。リストオブジェクトを一つしか使わない場合や、2番目の *\** を使用しない場合は、両方のシンタックスを使用できます。他方フォーム上に同じ階層リストを参照する複数のオブジェクトがある場合で、2番目の *\** を渡してカレント項目を参照する場合、それぞれのオブジェクトが個別にカレント項目をもつので、オブジェクト名に基づくシンタックスを使用しなければなりません。
 
-*itemRef*には参照番号を渡すことができます。渡された項目参照番号を持つ項目が存在しない場合、コマンドは何も動作しません。オプションとして*itemRef*に0を渡すことによって、[APPEND TO LIST](append-to-list.md) コマンドを使用してリストに追加した最後の項目を変更することができます。
+*itemRef*には参照番号を渡すことができます。渡された項目参照番号を持つ項目が存在しない場合、コマンドは何も動作しません。オプションとして*itemRef*に0を渡すことによって、[APPEND TO LIST](../commands/append-to-list) コマンドを使用してリストに追加した最後の項目を変更することができます。
 
 最後に、引数*itemRef*に *\** を渡すことができます。この場合、コマンドはリストのカレント項目に対して適用されます。手動で複数のリスト項目が選択されている場合、最後に選択された項目がカレントリスト項目となります。選択された項目が存在しない場合、コマンドは何も行いません。
 
 項目参照番号を使用して作業を実行する場合、項目がユニークな参照番号を持つリストを作成します。そうでなければ、項目を区別できません。詳細については、*階層リストの管理* を参照してください。
 
-**注:** 項目のテキストまたはそのサブリストを変更するには、[SET LIST ITEM](set-list-item.md) コマンドを使用します。
+**注:** 項目のテキストまたはそのサブリストを変更するには、[SET LIST ITEM](../commands/set-list-item) コマンドを使用します。
 
 項目を入力可能にする場合は、*enterable*引数にTRUEを渡し、そうでない場合はFALSEを渡します。
 
 **重要**: 項目を入力可にするには、その項目が入力可であるリストに属している必要があります。
 
-[OBJECT SET ENTERABLE](object-set-enterable.md) コマンドを使用すると、リスト全体を入力可または入力不可にすることができます。**SET LIST ITEM PROPERTIES** コマンドを使用すると、個々のリスト項目を入力可または入力不可にすることができます。入力可プロパティをリストレベルで変更しても、項目の入力可プロパティは変更されません。しかし、項目に入力できるのは、そのリストが入力可な場合のみです。
+[OBJECT SET ENTERABLE](../commands/object-set-enterable) コマンドを使用すると、リスト全体を入力可または入力不可にすることができます。**SET LIST ITEM PROPERTIES** コマンドを使用すると、個々のリスト項目を入力可または入力不可にすることができます。入力可プロパティをリストレベルで変更しても、項目の入力可プロパティは変更されません。しかし、項目に入力できるのは、そのリストが入力可な場合のみです。
 
 項目のフォントスタイルは、*styles*引数で指定します。以下の定義済定数の1つ、または複数を組み合わせて渡します:
 
@@ -72,9 +72,9 @@ displayed_sidebar: docs
 **注:**
 
 * ピクチャーライブラリは プロジェクトモードのデータベースではサポートされないため、ピクチャーファイル参照を使った方法が推奨されます。
-* 4D ピクチャー式 (フィールド, 変数, 等) を使用して項目アイコンを指定するには、[SET LIST ITEM ICON](set-list-item-icon.md) コマンドを使用します。
+* 4D ピクチャー式 (フィールド, 変数, 等) を使用して項目アイコンを指定するには、[SET LIST ITEM ICON](../commands/set-list-item-icon) コマンドを使用します。
 
-*color* 引数 (オプション) を使用して、項目テキストの色を変更することができます。この色はRGBフォーマット、例えば0x00RRGGBB形式の4バイトの倍長整数で指定しなくてはなりません。このフォーマットに関する詳細は、[OBJECT SET RGB COLORS](object-set-rgb-colors.md) コマンドの説明を参照してください。項目をオリジナルの色にリセットするには、*color*引数に-1を渡します。
+*color* 引数 (オプション) を使用して、項目テキストの色を変更することができます。この色はRGBフォーマット、例えば0x00RRGGBB形式の4バイトの倍長整数で指定しなくてはなりません。このフォーマットに関する詳細は、[OBJECT SET RGB COLORS](../commands/object-set-rgb-colors) コマンドの説明を参照してください。項目をオリジナルの色にリセットするには、*color*引数に-1を渡します。
 
 ## 例題 1 
 
@@ -90,10 +90,10 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
+[GET LIST ITEM PROPERTIES](../commands/get-list-item-properties)  
 *Hierarchical Lists*  
-[SET LIST ITEM](set-list-item.md)  
-[SET LIST ITEM ICON](set-list-item-icon.md)  
+[SET LIST ITEM](../commands/set-list-item)  
+[SET LIST ITEM ICON](../commands/set-list-item-icon)  
 
 ## プロパティ
 

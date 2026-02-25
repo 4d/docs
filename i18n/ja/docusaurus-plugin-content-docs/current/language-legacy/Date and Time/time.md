@@ -1,4 +1,4 @@
----
+﻿---
 id: time
 title: Time
 slug: /commands/time
@@ -58,7 +58,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ARRAY TIME](array-time.md)  
+[ARRAY TIME](../commands/array-time)  
 [Bool](../commands/bool)  
 [String](../commands/string)  
 [Time string](../commands/time-string)  

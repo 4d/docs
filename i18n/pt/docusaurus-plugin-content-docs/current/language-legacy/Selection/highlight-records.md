@@ -1,4 +1,4 @@
----
+﻿---
 id: highlight-records
 title: HIGHLIGHT RECORDS
 slug: /commands/highlight-records
@@ -37,15 +37,15 @@ displayed_sidebar: docs
 O parâmetro *tabela* permite designar a tabela da qual selecionar os registros. Este parâmetro pode ser utilizado, particularmente, para selecionar os registros dos subformulários incluídos, os quais não pertencem à tabela atual (ver a seguir).  
 
 * Se passa um nome de conjunto válido em *nomConjunto*, o comando será aplicado aos registros desse conjunto para a *tabela* definida.
-* Se omite o parâmetro *nomConjunto*, o comando selecionará unicamente os registros do conjunto UserSet atual. Este conjunto apenas é manejado em modo Desenho em caso de chamar os comandos [DISPLAY SELECTION](display-selection.md) /[MODIFY SELECTION](modify-selection.md). Se deseja selecionar os registros de um subformulário, deve passar um nome de tabela e de conjunto. Para maior informação sobre o conjunto UserSet, consulte a seção *Conjuntos*
+* Se omite o parâmetro *nomConjunto*, o comando selecionará unicamente os registros do conjunto UserSet atual. Este conjunto apenas é manejado em modo Desenho em caso de chamar os comandos [DISPLAY SELECTION](../commands/display-selection) /[MODIFY SELECTION](../commands/modify-selection). Se deseja selecionar os registros de um subformulário, deve passar um nome de tabela e de conjunto. Para maior informação sobre o conjunto UserSet, consulte a seção *Conjuntos*
 
-Quando se passa o parâmetro \*, provoca a inativação da função de rolagem automático da lista se os registros selecionados não forem visíveis. Este mecanismo autoriza a gestão personalizadas da rolagem através do comando [OBJECT SET SCROLL POSITION ](object-set-scroll-position.md).  
+Quando se passa o parâmetro \*, provoca a inativação da função de rolagem automático da lista se os registros selecionados não forem visíveis. Este mecanismo autoriza a gestão personalizadas da rolagem através do comando [OBJECT SET SCROLL POSITION ](../commands/object-set-scroll-position).  
   
-**Nota**: no marco dos subformulários incluídos, o comando HIGHLIGHT RECORDS não faz nada se a propriedade de seleção **Várias linhas** não estiver selecionada para o formulário. Neste caso, para selecionar uma linha, deve utilizar o comando [GOTO SELECTED RECORD](goto-selected-record.md).
+**Nota**: no marco dos subformulários incluídos, o comando HIGHLIGHT RECORDS não faz nada se a propriedade de seleção **Várias linhas** não estiver selecionada para o formulário. Neste caso, para selecionar uma linha, deve utilizar o comando [GOTO SELECTED RECORD](../commands/goto-selected-record).
 
 ## Exemplo 
 
-Em um formulário de saída mostrado pelo comando [MODIFY SELECTION](modify-selection.md), você deseja que o usuário possa realizar pesquisas sem que a seleção atual seja modificada. Para fazer isto, coloque um botão **Procurar** no formulário e associe-o com o seguinte método:
+Em um formulário de saída mostrado pelo comando [MODIFY SELECTION](../commands/modify-selection), você deseja que o usuário possa realizar pesquisas sem que a seleção atual seja modificada. Para fazer isto, coloque um botão **Procurar** no formulário e associe-o com o seguinte método:
 
 ```4d
  SET QUERY DESTINATION(Into set;"UserSet")
@@ -58,8 +58,8 @@ Quando o usuário clicar no botão, aparece a caixa de diálogo padrão procurar
 
 ## Ver também 
 
-[GET HIGHLIGHTED RECORDS](get-highlighted-records.md)  
-[OBJECT SET SCROLL POSITION ](object-set-scroll-position.md)  
+[GET HIGHLIGHTED RECORDS](../commands/get-highlighted-records)  
+[OBJECT SET SCROLL POSITION ](../commands/object-set-scroll-position)  
 
 ## Propriedades
 

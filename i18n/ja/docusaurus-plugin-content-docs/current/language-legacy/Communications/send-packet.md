@@ -1,4 +1,4 @@
----
+﻿---
 id: send-packet
 title: SEND PACKET
 slug: /commands/send-packet
@@ -29,18 +29,18 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.SEND PACKET.Summary-->SEND PACKET は、シリアルポートやドキュメントにパケットを送ります。<!-- END REF-->*docRef*を指定した場合、パケットは*docRef*で参照されるドキュメントに書き込まれます。*docRef*を指定しない場合、あらかじめ [SET CHANNEL](set-channel.md) コマンドで開かれたシリアルポートまたはドキュメントにパケットを書き込みます。 
+<!--REF #_command_.SEND PACKET.Summary-->SEND PACKET は、シリアルポートやドキュメントにパケットを送ります。<!-- END REF-->*docRef*を指定した場合、パケットは*docRef*で参照されるドキュメントに書き込まれます。*docRef*を指定しない場合、あらかじめ [SET CHANNEL](../commands/set-channel) コマンドで開かれたシリアルポートまたはドキュメントにパケットを書き込みます。 
 
 *packet*はデ－タの一部であり、一般的には文字列です。  
 *packet*にBLOBを渡すこともできます。これにより、テキストモードで送信される文字のエンコーディングに関連する制約を回避できます (例題 2参照)。
 
-**Note:** *packet*にBLOBを渡す場合、コマンドは [USE CHARACTER SET](use-character-set.md)  コマンドで定義された文字セットを考慮しません。BLOBは変更されずに送信されます。
+**Note:** *packet*にBLOBを渡す場合、コマンドは [USE CHARACTER SET](../commands/use-character-set)  コマンドで定義された文字セットを考慮しません。BLOBは変更されずに送信されます。
 
-SEND PACKETコマンドを使用する前に、 [SET CHANNEL](set-channel.md) コマンドでシリアルポートやドキュメントを開くか、ドキュメントコマンドを使用してドキュメントを開かなければなりません。
+SEND PACKETコマンドを使用する前に、 [SET CHANNEL](../commands/set-channel) コマンドでシリアルポートやドキュメントを開くか、ドキュメントコマンドを使用してドキュメントを開かなければなりません。
 
-既存のドキュメントに書き込む場合は、ドキュメントが [USE CHARACTER SET](use-character-set.md) で開かれていない限り、最初のSEND PACKET コマンドはドキュメントの先頭から書き始めます。それに続くSEND PACKET コマンドは、ドキュメントファイルが閉じられるまでパケットを後ろに書き加えます。
+既存のドキュメントに書き込む場合は、ドキュメントが [USE CHARACTER SET](../commands/use-character-set) で開かれていない限り、最初のSEND PACKET コマンドはドキュメントの先頭から書き始めます。それに続くSEND PACKET コマンドは、ドキュメントファイルが閉じられるまでパケットを後ろに書き加えます。
 
-**Note:** このコマンドは [SET CHANNEL](set-channel.md) で開かれたドキュメントに対して有効です。一方で、 [Open document](open-document.md), [Create document](create-document.md) あるいは [Append document](append-document.md) で開かれたドキュメントに関しては、 [Get document position](get-document-position.md) や [SET DOCUMENT POSITION](set-document-position.md) コマンドを使用して、次の書き込み (SEND PACKET) や読み込み ([RECEIVE PACKET](receive-packet.md)) を行うドキュメント中の位置を取得したり設定したりできます。
+**Note:** このコマンドは [SET CHANNEL](../commands/set-channel) で開かれたドキュメントに対して有効です。一方で、 [Open document](../commands/open-document), [Create document](../commands/create-document) あるいは [Append document](../commands/append-document) で開かれたドキュメントに関しては、 [Get document position](../commands/get-document-position) や [SET DOCUMENT POSITION](../commands/set-document-position) コマンドを使用して、次の書き込み (SEND PACKET) や読み込み ([RECEIVE PACKET](../commands/receive-packet)) を行うドキュメント中の位置を取得したり設定したりできます。
 
 ## 例題 1 
 
@@ -90,9 +90,9 @@ SEND PACKETコマンドを使用する前に、 [SET CHANNEL](set-channel.md) �
 
 ## 参照 
 
-[Get document position](get-document-position.md)  
-[RECEIVE PACKET](receive-packet.md)  
-[SET DOCUMENT POSITION](set-document-position.md)  
+[Get document position](../commands/get-document-position)  
+[RECEIVE PACKET](../commands/receive-packet)  
+[SET DOCUMENT POSITION](../commands/set-document-position)  
 
 ## プロパティ
 

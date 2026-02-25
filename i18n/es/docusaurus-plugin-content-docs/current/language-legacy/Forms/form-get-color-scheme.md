@@ -1,4 +1,4 @@
----
+﻿---
 id: form-get-color-scheme
 title: FORM Get color scheme
 slug: /commands/form-get-color-scheme
@@ -34,11 +34,11 @@ displayed_sidebar: docs
 El esquema de color real de un formulario se define por:
 
 * la propiedad del formulario "Color Scheme" (ver [*colorScheme*](../../FormEditor/properties_FormProperties.md#color-scheme));
-* si "Color Scheme" es "heredado", una llamada al comando [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md);
-* si [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) no se llama o se llama con el valor del parámetro "heredado", la Configuración (configuración de la base local en caso de un componente);
+* si "Color Scheme" es "heredado", una llamada al comando [SET APPLICATION COLOR SCHEME](../commands/set-application-color-scheme);
+* si [SET APPLICATION COLOR SCHEME](../commands/set-application-color-scheme) no se llama o se llama con el valor del parámetro "heredado", la Configuración (configuración de la base local en caso de un componente);
 * si si la configuración se define como "heredada", las preferencias del usuario del sistema operativo.
 
-Consulte el comando [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) para obtener detalles sobre los nombres de las combinaciones de colores. 
+Consulte el comando [SET APPLICATION COLOR SCHEME](../commands/set-application-color-scheme) para obtener detalles sobre los nombres de las combinaciones de colores. 
 
 ## Ejemplo 
 
@@ -53,8 +53,8 @@ Desea cargar una imagen según el esquema actual del formulario:
 
 ## Ver también 
 
-[Get Application color scheme](get-application-color-scheme.md)  
-[SET APPLICATION COLOR SCHEME](set-application-color-scheme.md)  
+[Get Application color scheme](../commands/get-application-color-scheme)  
+[SET APPLICATION COLOR SCHEME](../commands/set-application-color-scheme)  
 
 ## Propiedades
 

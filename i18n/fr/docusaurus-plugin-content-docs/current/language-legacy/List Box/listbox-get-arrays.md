@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-arrays
 title: LISTBOX GET ARRAYS
 slug: /commands/listbox-get-arrays
@@ -54,7 +54,7 @@ A l’issue de l’exécution de la commande :
    * pour une colonne associée à une expression, un pointeur Nil.
 * Le tableau *tabVarEntêtes* contient des pointeurs vers les variables associées à chaque en-tête de colonne de la list box.
 * Le tableau *tabColsVisibles* contient une valeur booléenne pour chaque colonne, indiquant si la colonne est visible (valeur Vrai) ou masquée (valeur Faux) dans la list box.
-* Le tableau *tabStyles* contient, pour une list box de type tableau, quatre pointeurs vers les quatre tableaux permettant d’appliquer individuellement un style, une couleur de police, une couleur de fond et un contrôle d'affichage personnalisés à chaque ligne de la list box. Ces tableaux sont associés à la list box dans la Liste des propriétés en mode Développement ou via la commande [LISTBOX SET ARRAY](listbox-set-array.md). Si un tableau n’est pas spécifié pour la list box, l’élément correspondant de *tabStyles* contient un pointeur Nil.  
+* Le tableau *tabStyles* contient, pour une list box de type tableau, quatre pointeurs vers les quatre tableaux permettant d’appliquer individuellement un style, une couleur de police, une couleur de fond et un contrôle d'affichage personnalisés à chaque ligne de la list box. Ces tableaux sont associés à la list box dans la Liste des propriétés en mode Développement ou via la commande [LISTBOX SET ARRAY](../commands/listbox-set-array). Si un tableau n’est pas spécifié pour la list box, l’élément correspondant de *tabStyles* contient un pointeur Nil.  
 Le quatrième pointeur correspond soit à un tableau booléen (tableau de lignes masquées), soit à un tableau d'entiers longs (tableau permettant de définir les lignes masquées, désactivées et non sélectionnables) en fonction de l'implémentation utilisée pour le tableau de contrôle des lignes (cf. section *Propriétés spécifiques des List box*).  
 Pour une list box de type sélection, collection ou entity selection, *tabStyles* contient :  
    * pour chaque paramétrage défini via une variable, un pointeur vers la variable,  
@@ -62,9 +62,9 @@ Pour une list box de type sélection, collection ou entity selection, *tabStyles
 
 ## Voir aussi 
 
-[LISTBOX Get array](listbox-get-array.md)  
+[LISTBOX Get array](../commands/listbox-get-array)  
 [LISTBOX Get property](../commands/listbox-get-property)  
-[LISTBOX SET ARRAY](listbox-set-array.md)  
+[LISTBOX SET ARRAY](../commands/listbox-set-array)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-enterable
 title: OBJECT SET ENTERABLE
 slug: /commands/object-set-enterable
@@ -52,7 +52,7 @@ When *enterable* is False:
 | obk not enterable               | 0     | Users cannot enter values in the object but an **input object** or a **4D Write Pro area** is focusable (other not enterable objects are automatically not focusable). |  
 | obk not enterable not focusable | 2     | Users cannot enter values in the object and an **input object** or a **4D Write Pro area** is not focusable.                                                           |
 
-The **OBJECT SET ENTERABLE** command can also be used to enable the “Enter in List” mode by programming for subforms and list forms displayed using the [MODIFY SELECTION](modify-selection.md) and [DISPLAY SELECTION](display-selection.md) commands:
+The **OBJECT SET ENTERABLE** command can also be used to enable the “Enter in List” mode by programming for subforms and list forms displayed using the [MODIFY SELECTION](../commands/modify-selection) and [DISPLAY SELECTION](../commands/display-selection) commands:
 
 * For subforms, in the *enterable* parameter, pass either the name of the subform table or the name of the subform object itself, for example: **OBJECT SET ENTERABLE**(\*;"Subform";True). The command works in subforms only if it is in the form method of the subform.
 * For list forms, you must pass the name of the form table in the *enterable* parameter, for example: **OBJECT SET ENTERABLE**(\[MyTable\];True).
@@ -85,8 +85,8 @@ Here is the object method of a checkbox located in the header of a list in order
 
 ## See also 
 
-[OBJECT Get enterable](object-get-enterable.md)  
-[OBJECT SET VISIBLE](object-set-visible.md)  
+[OBJECT Get enterable](../commands/object-get-enterable)  
+[OBJECT SET VISIBLE](../commands/object-set-visible)  
 
 ## Properties
 

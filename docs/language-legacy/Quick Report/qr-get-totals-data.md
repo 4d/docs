@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-totals-data
 title: QR GET TOTALS DATA
 slug: /commands/qr-get-totals-data
@@ -83,7 +83,7 @@ If you pass an invalid *breakNum* number, the error -9853 will be generated.
 
 ## See also 
 
-[QR SET TOTALS DATA](qr-set-totals-data.md)  
+[QR SET TOTALS DATA](../commands/qr-set-totals-data)  
 
 ## Properties
 

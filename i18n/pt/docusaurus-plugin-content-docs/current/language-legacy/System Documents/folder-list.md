@@ -1,4 +1,4 @@
----
+﻿---
 id: folder-list
 title: FOLDER LIST
 slug: /commands/folder-list
@@ -32,12 +32,12 @@ displayed_sidebar: docs
 
 **Nota**: deve passar uma rota de acesso absoluta no parâmetro *rotaAcesso*.  
   
-Se não houver pastas na localização especificada, o comando retorna um array vacío. Se a rota de acesso que se passa em *rotaAcesso* é incorreta, FOLDER LIST gera um erro do administrador de arquivos que pode interceptar utilizando um método [ON ERR CALL](on-err-call.md).
+Se não houver pastas na localização especificada, o comando retorna um array vacío. Se a rota de acesso que se passa em *rotaAcesso* é incorreta, FOLDER LIST gera um erro do administrador de arquivos que pode interceptar utilizando um método [ON ERR CALL](../commands/on-err-call).
 
 ## Ver também 
 
-[DOCUMENT LIST](document-list.md)  
-[VOLUME LIST](volume-list.md)  
+[DOCUMENT LIST](../commands/document-list)  
+[VOLUME LIST](../commands/volume-list)  
 
 ## Propriedades
 

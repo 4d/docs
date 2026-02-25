@@ -1,4 +1,4 @@
----
+﻿---
 id: maximize-window
 title: MAXIMIZE WINDOW
 slug: /commands/maximize-window
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 Este comando tiene el mismo efecto que un clic en el zoom de una ventana de la aplicación 4D. En Windows, la ventana que desea maximizar debe tener un cuadro de zoom. Si el tipo de *ventana* no tiene un cuadro de zoom, el comando no hace nada.
 
-Un clic posterior en la cuadro de zoom o la llamada al comando [MINIMIZE WINDOW](minimize-window.md) reduce la ventana a su tamaño inicial. En Windows, una llamada a [MINIMIZE WINDOW](minimize-window.md) sin parámetros hace que todas las ventanas de la aplicación vuelvan a su tamaño inicial.
+Un clic posterior en la cuadro de zoom o la llamada al comando [MINIMIZE WINDOW](../commands/minimize-window) reduce la ventana a su tamaño inicial. En Windows, una llamada a [MINIMIZE WINDOW](../commands/minimize-window) sin parámetros hace que todas las ventanas de la aplicación vuelvan a su tamaño inicial.
 
 Si *ventana* ya está maximizada, el comando no hace nada.
 
@@ -91,9 +91,9 @@ En este contexto, si el usuario hace clic en el botón:
 
 ## Ver también 
 
-[Is window maximized](is-window-maximized.md)  
-[MINIMIZE WINDOW](minimize-window.md)  
-[REDUCE RESTORE WINDOW](reduce-restore-window.md)  
+[Is window maximized](../commands/is-window-maximized)  
+[MINIMIZE WINDOW](../commands/minimize-window)  
+[REDUCE RESTORE WINDOW](../commands/reduce-restore-window)  
 
 ## Propiedades
 

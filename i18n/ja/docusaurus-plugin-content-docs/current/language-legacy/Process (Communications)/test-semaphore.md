@@ -1,4 +1,4 @@
----
+﻿---
 id: test-semaphore
 title: Test semaphore
 slug: /commands/test-semaphore
@@ -53,8 +53,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[CLEAR SEMAPHORE](clear-semaphore.md)  
-[Semaphore](semaphore.md)  
+[CLEAR SEMAPHORE](../commands/clear-semaphore)  
+[Semaphore](../commands/semaphore)  
 
 ## プロパティ
 

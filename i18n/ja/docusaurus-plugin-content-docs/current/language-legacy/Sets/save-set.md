@@ -1,4 +1,4 @@
----
+﻿---
 id: save-set
 title: SAVE SET
 slug: /commands/save-set
@@ -42,7 +42,7 @@ SAVE SETコマンドは、時間のかかる検索の結果をディスクに保
 
 ## 参照 
 
-[LOAD SET](load-set.md)  
+[LOAD SET](../commands/load-set)  
 
 ## プロパティ
 

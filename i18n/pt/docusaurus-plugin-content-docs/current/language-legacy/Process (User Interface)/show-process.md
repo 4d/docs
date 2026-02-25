@@ -1,4 +1,4 @@
----
+﻿---
 id: show-process
 title: SHOW PROCESS
 slug: /commands/show-process
@@ -30,9 +30,9 @@ O exemplo a seguir mostra um processo chamado Clientes, que foi ocultado previam
 
 ## Ver também 
 
-[BRING TO FRONT](bring-to-front.md)  
-[HIDE PROCESS](hide-process.md)  
-[Process state](process-state.md)  
+[BRING TO FRONT](../commands/bring-to-front)  
+[HIDE PROCESS](../commands/hide-process)  
+[Process state](../commands/process-state)  
 
 ## Propriedades
 

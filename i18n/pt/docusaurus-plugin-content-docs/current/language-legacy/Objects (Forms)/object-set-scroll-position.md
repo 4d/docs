@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-scroll-position
 title: OBJECT SET SCROLL POSITION
 slug: /commands/object-set-scroll-position
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.OBJECT SET SCROLL POSITION.Summary-->O comando OBJECT SET SCROLL POSITION permite deslocar o conteúdo de vários tipos de objetos: linhas de um subformulário, de um formulário listado mostrado utilizando os comandos [MODIFY SELECTION](modify-selection.md), [DISPLAY SELECTION](display-selection.md) ou de uma lista hierárquica, linhas e colunas de um list box ou inclusive os píxels de uma imagem.<!-- END REF-->  
+<!--REF #_command_.OBJECT SET SCROLL POSITION.Summary-->O comando OBJECT SET SCROLL POSITION permite deslocar o conteúdo de vários tipos de objetos: linhas de um subformulário, de um formulário listado mostrado utilizando os comandos [MODIFY SELECTION](../commands/modify-selection), [DISPLAY SELECTION](../commands/display-selection) ou de uma lista hierárquica, linhas e colunas de um list box ou inclusive os píxels de uma imagem.<!-- END REF-->  
   
 **Nota:** O deslocamento por programação de um objeto continua sendo possível inclusive se as barras de deslocamento estão ocultas no formulário.  
   
@@ -60,7 +60,7 @@ Se passa o segundo parâmetro opcional *\**:
 * A linha que ficou visível utilizando o comando (se a lista se deslocou) se localizará na primeira posição da lista. Se a linha se localiza ao final da lista, esta opção não tem efeito.
 * No contexto de uma imagem, as coordenadas demandadas serão posicionadas na origem da variável imagem (0,0), inclusive se as coordenadas já são visíveis no objeto.
 
-**Nota:** O comando [HIGHLIGHT RECORDS](highlight-records.md) tem um parâmetro opcional *\** que permite delegar a gestão de rolagem nos formulários ao comando OBJECT SET SCROLL POSITION . 
+**Nota:** O comando [HIGHLIGHT RECORDS](../commands/highlight-records) tem um parâmetro opcional *\** que permite delegar a gestão de rolagem nos formulários ao comando OBJECT SET SCROLL POSITION . 
 
 ## Exemplo 1 
 
@@ -102,9 +102,9 @@ Tenha a certeza de não omitir o segundo parâmetro *\** neste caso, caso contr�
 
 ## Ver também 
 
-[ LISTBOX SELECT ROW ](listbox-select-row.md)  
-[HIGHLIGHT RECORDS](highlight-records.md)  
-[OBJECT GET SCROLL POSITION](object-get-scroll-position.md)  
+[ LISTBOX SELECT ROW ](../commands/listbox-select-row)  
+[HIGHLIGHT RECORDS](../commands/highlight-records)  
+[OBJECT GET SCROLL POSITION](../commands/object-get-scroll-position)  
 
 ## Propriedades
 

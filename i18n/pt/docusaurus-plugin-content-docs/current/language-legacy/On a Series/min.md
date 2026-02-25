@@ -1,4 +1,4 @@
----
+﻿---
 id: min
 title: Min
 slug: /commands/min
@@ -65,7 +65,7 @@ O método a seguir é chamado para imprimir os registros na seleção e ativar o
  PRINT SELECTION([Empregados])
 ```
 
-**Nota:** o parâmetro do comando [BREAK LEVEL](break-level.md) deve ser igual ao número de quebras em seu relatório. Para maior informação sobre quebras, consulte os comandos do tema *Imprimir*. 
+**Nota:** o parâmetro do comando [BREAK LEVEL](../commands/break-level) deve ser igual ao número de quebras em seu relatório. Para maior informação sobre quebras, consulte os comandos do tema *Imprimir*. 
 
 ## Exemplo 2 
 
@@ -88,11 +88,11 @@ Este exemplo obtém o valor mínimo no array:
 
 ## Exemplo 4 
 
-Para um exemplo de computar um atributo campo objeto, veja o exemplo 3 da descrição do comando [Average](average.md).
+Para um exemplo de computar um atributo campo objeto, veja o exemplo 3 da descrição do comando [Average](../commands/average).
 
 ## Ver também 
 
-[Max](max.md)  
+[Max](../commands/max)  
 
 ## Propriedades
 

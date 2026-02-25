@@ -1,4 +1,4 @@
----
+﻿---
 id: sax-get-xml-entity
 title: SAX GET XML ENTITY
 slug: /commands/sax-get-xml-entity
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.SAX GET XML ENTITY.Summary-->The **SAX GET XML ENTITY** command allows you to get the *name* and *value* of an XML entity that exists in the XML document referenced in the *document* parameter.<!-- END REF--> This command must be called with the XML Entity SAX event. For more information about SAX events, refer to the description of the [SAX Get XML node](sax-get-xml-node.md) command. 
+<!--REF #_command_.SAX GET XML ENTITY.Summary-->The **SAX GET XML ENTITY** command allows you to get the *name* and *value* of an XML entity that exists in the XML document referenced in the *document* parameter.<!-- END REF--> This command must be called with the XML Entity SAX event. For more information about SAX events, refer to the description of the [SAX Get XML node](../commands/sax-get-xml-node) command. 
 
 ## Example 
 
@@ -59,7 +59,7 @@ If the command has been executed correctly, the system variable OK is set to 1\.
 
 ## See also 
 
-[SAX Get XML node](sax-get-xml-node.md)  
+[SAX Get XML node](../commands/sax-get-xml-node)  
 
 ## Properties
 

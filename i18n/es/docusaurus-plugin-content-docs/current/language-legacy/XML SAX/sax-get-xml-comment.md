@@ -1,4 +1,4 @@
----
+﻿---
 id: sax-get-xml-comment
 title: SAX GET XML COMMENT
 slug: /commands/sax-get-xml-comment
@@ -36,8 +36,8 @@ Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\.
 
 ## Ver también 
 
-[SAX ADD XML COMMENT](sax-add-xml-comment.md)  
-[SAX Get XML node](sax-get-xml-node.md)  
+[SAX ADD XML COMMENT](../commands/sax-add-xml-comment)  
+[SAX Get XML node](../commands/sax-get-xml-node)  
 
 ## Propiedades
 

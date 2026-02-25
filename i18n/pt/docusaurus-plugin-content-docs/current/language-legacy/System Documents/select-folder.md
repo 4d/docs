@@ -1,4 +1,4 @@
----
+﻿---
 id: select-folder
 title: Select folder
 slug: /commands/select-folder
@@ -52,7 +52,7 @@ Pode utilizar o parâmetro *rotaPadrao* para oferecer uma localização de pasta
 * O número de rota de acesso memorizada (de 1 a 32.000) para mostrar a pasta associada. Isto significa que pode armazenar em memória a rota de acesso da pasta aberta quando o usuário clicar no botão de seleção; em outras palavras, a pasta escolhida pelo usuário. Quando for chamado um número arbitrário (por exemplo, 5) o comando mostra a pasta do usuário por padrão do sistema (equivalente a passar uma string vazia). O usuário pode então navegar entre as pastas em seu disco rígido. Quando o usuário clicar no botão de seleção, a rota de acesso é memorizada e se associa com o número 5\. Quando posteriormente se chama o número 5, se utilizará por padrão a rota de acesso memorizada. Em caso de seleção de uma nova localização, a rota número 5 será atualizado, e assim sucessivamente.  
 Este mecanismo pode ser utilizado para memorizar até 32.000 rotas de acesso. Em Windows, cada rota é conservada durante a sessão. Em Mac OS, as rotas ficam memorizadas de uma sessão a outra. Se a rota for incorreta, o parâmetro *rotaPadrao* será ignorado.
 
-**Note:** Este mecanismo é idêntico ao usado pelo comando [Select document](select-document.md). O número de rotas memorizadas é passado entre os dois comandos.
+**Note:** Este mecanismo é idêntico ao usado pelo comando [Select document](../commands/select-document). O número de rotas memorizadas é passado entre os dois comandos.
 
 O parâmetro opções permite que você se beneficie de funções adicionais no Mac OS. Nesse parâmetro, você pode passar uma das seguintes constantes, encontradas no tema *Documentos Sistema*: 
 
@@ -100,9 +100,9 @@ O exemplo abaixo lhe permite selecionar a pasta na qual serão armazenadas as im
 
 ## Ver também 
 
-[CREATE FOLDER](create-folder.md)  
-[FOLDER LIST](folder-list.md)  
-[Select document](select-document.md)  
+[CREATE FOLDER](../commands/create-folder)  
+[FOLDER LIST](../commands/folder-list)  
+[Select document](../commands/select-document)  
 
 ## Propriedades
 

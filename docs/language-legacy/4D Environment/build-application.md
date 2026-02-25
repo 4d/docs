@@ -1,4 +1,4 @@
----
+﻿---
 id: build-application
 title: BUILD APPLICATION
 slug: /commands/build-application
@@ -35,7 +35,7 @@ A build application settings file is an XML file that contains all the parameter
 
 By default, 4D creates a build application settings file named “buildApp.4DSettings” for each database and places it in the Settings folder of the database.
 
-If the database has not yet been compiled or if the compiled code is outdated, the command will first launch the compiler process. In this case, the compiler window does not appear (unless an error occurs), only a progress bar is displayed. You can hide this progress bar using the [MESSAGES OFF](messages-off.md) command.
+If the database has not yet been compiled or if the compiled code is outdated, the command will first launch the compiler process. In this case, the compiler window does not appear (unless an error occurs), only a progress bar is displayed. You can hide this progress bar using the [MESSAGES OFF](../commands/messages-off) command.
 
 If you do not pass the optional *buildAppSettings* parameter, the command displays a standard open file dialog box, so that you can designate a build application settings file. When the dialog box has been validated, the system variable Document contains the full pathname of the open settings file.
 
@@ -58,7 +58,7 @@ The system variable OK is set to 1 if the command has been correctly executed. O
 
 ## Error Handling 
 
-If the command fails, an error is generated that you can intercept using the [ON ERR CALL](on-err-call.md) command.
+If the command fails, an error is generated that you can intercept using the [ON ERR CALL](../commands/on-err-call) command.
 
 ## See also 
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: abort-process-by-id
 title: ABORT PROCESS BY ID
 slug: /commands/abort-process-by-id
@@ -51,7 +51,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[PAUSE PROCESS](pause-process.md)  
+[PAUSE PROCESS](../commands/pause-process)  
 
 ## プロパティ
 

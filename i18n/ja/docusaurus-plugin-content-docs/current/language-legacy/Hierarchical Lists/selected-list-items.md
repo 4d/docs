@@ -1,4 +1,4 @@
----
+﻿---
 id: selected-list-items
 title: Selected list items
 slug: /commands/selected-list-items
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 オプションの第一引数 *\** を渡すと、*list* 引数はフォーム上のリストオブジェクトに対応するオブジェクト名 (文字列) です。この引数を渡さない場合、*list* 引数は階層リスト参照 ([ListRef](# "階層リストへの参照")) です。リストオブジェクトを一つしか使わない場合または2番目の *\** を渡して項目参照番号を扱う場合、両方のシンタックスを使用できます。他方フォーム上に同じ階層リストを参照する複数のオブジェクトがあり、2番目の *\** を省略して項目位置を扱う場合、それぞれのオブジェクトが個別に展開/折りたたみ状態をもつので、オブジェクト名に基づくシンタックスを使用しなければなりません。
 
-**Note:** オブジェクト名に @ 文字を使用することで、フォーム内に名前に対応するオブジェクトが複数検索された場合、[Selected list items](selected-list-items.md) コマンドは最初に見つけたオブジェクトを処理の対象とします。
+**Note:** オブジェクト名に @ 文字を使用することで、フォーム内に名前に対応するオブジェクトが複数検索された場合、[Selected list items](../commands/selected-list-items) コマンドは最初に見つけたオブジェクトを処理の対象とします。
 
 複数の項目が選択される場合、コマンドは*itemsArray* 配列に選択された項目の参照または位置を返します。ユーザが選択した項目を知るために、フォーム上のリストに対しこのコマンドを適用できます。
 
@@ -49,7 +49,7 @@ displayed_sidebar: docs
 
 選択された項目が存在しない場合、空の配列が返されます。
 
-**Note:** 選択項目が複数存在する場合、コマンドは、ユーザー(手動のセレクション)あるいは[SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md) または [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md) コマンド(プログラムされたセレクション)によって*list* のリスト内で選択された、最初の項目の位置または参照を返します。
+**Note:** 選択項目が複数存在する場合、コマンドは、ユーザー(手動のセレクション)あるいは[SELECT LIST ITEMS BY POSITION](../commands/select-list-items-by-position) または [SELECT LIST ITEMS BY REFERENCE](../commands/select-list-items-by-reference) コマンド(プログラムされたセレクション)によって*list* のリスト内で選択された、最初の項目の位置または参照を返します。
 
 リストにサブリストがある場合、このコマンドサブリストではなく、メインリスト（フォームで実際に定義されたリスト）に適用します。位置は、リストとそのサブリストの現在の展開または縮小状態を用いて、メインリストの最上位の項目と相対的に表わされます。
 
@@ -96,8 +96,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md)  
-[SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
+[SELECT LIST ITEMS BY POSITION](../commands/select-list-items-by-position)  
+[SELECT LIST ITEMS BY REFERENCE](../commands/select-list-items-by-reference)  
 
 ## プロパティ
 

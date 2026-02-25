@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-values
 title: OB Values
 slug: /commands/ob-values
@@ -54,8 +54,8 @@ You want a collection with all property values of an object:
 
 ## See also 
 
-[OB Entries](ob-entries.md)  
-[OB Keys](ob-keys.md)  
+[OB Entries](../commands/ob-entries)  
+[OB Keys](../commands/ob-keys)  
 
 ## Properties
 

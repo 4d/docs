@@ -1,4 +1,4 @@
----
+﻿---
 id: contextual-click
 title: Contextual click
 slug: /commands/contextual-click
@@ -51,7 +51,7 @@ Cette méthode, associée à une zone de défilement, permet de changer la valeu
 ## Voir aussi 
 
 [Form event code](../commands/form-event-code)  
-[Right click](right-click.md)  
+[Right click](../commands/right-click)  
 
 ## Propriétés
 

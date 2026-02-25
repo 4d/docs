@@ -1,4 +1,4 @@
----
+﻿---
 id: add-to-date
 title: Add to date
 slug: /commands/add-to-date
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Add to date.Summary-->O comando Add to date adiciona *anos*, *meses,* e *dias* a data passada em *data*, depois retorna a data resultante.<!-- END REF-->
 
-Mesmo que você possa utilizar os [Self](self.md) para adicionar dias a uma data, Add to date lhe permite rapidamente adicionar meses e anos sem ter que lidar com o número de dias ao mês ou anos bissextos (como seria feito quando utiliza o operador + em datas).
+Mesmo que você possa utilizar os [Self](../commands/self) para adicionar dias a uma data, Add to date lhe permite rapidamente adicionar meses e anos sem ter que lidar com o número de dias ao mês ou anos bissextos (como seria feito quando utiliza o operador + em datas).
 
 ## Exemplo 
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: get-printed-height
 title: Get printed height
 slug: /commands/get-printed-height
@@ -39,9 +39,9 @@ Los márgenes de impresión derecha e izquierda no influyen en el valor devuelto
 
 ## Ver también 
 
-[GET PRINTABLE AREA](get-printable-area.md)  
+[GET PRINTABLE AREA](../commands/get-printable-area)  
 [Print form](../commands/print-form)  
-[SET PRINTABLE MARGIN](set-printable-margin.md)  
+[SET PRINTABLE MARGIN](../commands/set-printable-margin)  
 
 ## Propiedades
 

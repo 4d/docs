@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-login
 title: SQL LOGIN
 slug: /commands/sql-login
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL LOGIN.Summary-->The **SQL LOGIN** command allows you to connect to an SQL data source specified in the *dataEntry* parameter.<!-- END REF--> It designates the target of the SQL queries executed subsequently in the current process: 
 
-* via the [SQL EXECUTE](sql-execute.md) command,
+* via the [SQL EXECUTE](../commands/sql-execute) command,
 * via code placed within the Begin SQL / End SQL tags (if the *\** parameter is passed).
 
 The SQL data source can either be:
@@ -77,7 +77,7 @@ This dialog box includes several pages. The TCP/IP page includes the following e
    * User Name and Password: These areas can be used to enter the con-nection identifiers.  
    * The User DSN and System DSN pages display, respectively, the list of user and system ODBC data sources specified in the ODBC driver of the machine. These pages can be used to select a data source and enter the identifiers in order to open a connection with an external ODBC data source.  
     
-If the connection is established, the OK system variable is set to 1\. Otherwise, it is set to 0 and an error is generated. This error can be intercepted via an error-handling method installed by the [ON ERR CALL](on-err-call.md) command.
+If the connection is established, the OK system variable is set to 1\. Otherwise, it is set to 0 and an error is generated. This error can be intercepted via an error-handling method installed by the [ON ERR CALL](../commands/on-err-call) command.
 * **SQL\_INTERNAL constant**  
 Syntax: SQL\_INTERNAL  
 In this case, the command redirects subsequent SQL queries to the internal 4D database.
@@ -92,7 +92,7 @@ In this case, the command redirects subsequent SQL queries to the internal 4D da
 
 The optional *\** parameter can be used to change the target of the SQL code executed within the Begin SQL/End SQL tags. If you do not pass this parameter, the code placed within the Begin SQL/End SQL tags will still be sent to the internal SQL engine of 4D, without taking the configuration specified by the **SQL LOGIN** command into account. If you do pass this parameter, the SQL code executed within the Begin SQL/End SQL tags will be sent to the source specified in the *dataEntry* parameter. 
 
-To close the current connection and free the memory, simply execute the [SQL LOGOUT](sql-logout.md) command. All the SQL queries are then sent to the internal 4D SQL database.   
+To close the current connection and free the memory, simply execute the [SQL LOGOUT](../commands/sql-logout) command. All the SQL queries are then sent to the internal 4D SQL database.   
 If you call **SQL LOGIN** again without having explicitly closed the current connection, it will be closed automatically. 
 
 **Note:** In the case where an external connection attempt via **SQL LOGIN** fails, the internal 4D database automatically becomes the current data source.
@@ -156,7 +156,7 @@ Opening of a direct connection in TLS with the 4D Server application running on 
 
 ## Example 7 
 
-Opening of a direct connection with the 4D Server application executed on the machine having the IPv6 address 2a01:e35:2e41:c960:dc39:3eb0:f29b:3747 and replying on the TCP port 20150\. The SQL queries executed via the [SQL EXECUTE](sql-execute.md) command will be redirected to this connection; the queries included within the [Begin SQL](begin-sql.md)/[End SQL](end-sql.md) tags will not be redirected.
+Opening of a direct connection with the 4D Server application executed on the machine having the IPv6 address 2a01:e35:2e41:c960:dc39:3eb0:f29b:3747 and replying on the TCP port 20150\. The SQL queries executed via the [SQL EXECUTE](../commands/sql-execute) command will be redirected to this connection; the queries included within the [Begin SQL](../commands/begin-sql)/[End SQL](../commands/end-sql) tags will not be redirected.
 
 ```4d
  SQL LOGIN("IP:[2a01:e35:2e41:c960:dc39:3eb0:f29b:3747]:20150";"John";"qwerty")
@@ -217,9 +217,9 @@ If the connection is successful, the system variable OK is set to 1; otherwise, 
 
 ## See also 
 
-[Begin SQL](begin-sql.md)  
-[End SQL](end-sql.md)  
-[SQL LOGOUT](sql-logout.md)  
+[Begin SQL](../commands/begin-sql)  
+[End SQL](../commands/end-sql)  
+[SQL LOGOUT](../commands/sql-logout)  
 
 ## Properties
 

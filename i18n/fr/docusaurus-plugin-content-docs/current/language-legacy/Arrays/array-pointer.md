@@ -1,4 +1,4 @@
----
+﻿---
 id: array-pointer
 title: ARRAY POINTER
 slug: /commands/array-pointer
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 Lorsque vous appliquez la commande **ARRAY POINTER** à un tableau existant :
 
-* Si vous agrandissez sa taille, les éléments existants ne sont pas modifiés, les nouveaux éléments sont initialisés à un pointeur nul (ce qui signifie que la fonction [Is nil pointer](is-nil-pointer.md) appliquée à l'un de ces éléments retourne Vrai).
+* Si vous agrandissez sa taille, les éléments existants ne sont pas modifiés, les nouveaux éléments sont initialisés à un pointeur nul (ce qui signifie que la fonction [Is nil pointer](../commands/is-nil-pointer) appliquée à l'un de ces éléments retourne Vrai).
 * Si vous réduisez sa taille, les éléments du "bas" du tableau sont supprimés et perdus.
 
 ## Exemple 1 

@@ -1,4 +1,4 @@
----
+﻿---
 id: font-list
 title: FONT LIST
 slug: /commands/font-list
@@ -45,7 +45,7 @@ The *listType* parameter lets you designate the type of font list you want to ge
 Under macOS, when you pass the optional *\** parameter, the command populates the *fonts* array with the names of the fonts themselves, and not with the names of the font families. The default operation simplifies programmed management of rich text areas, which use font families. If you pass the *\** parameter, font names, for example, "Arial bold", "Arial italic", "Arial narrow italic," are returned instead of families, such as "Arial", "Arial black" or "Arial narrow".  
 Under Windows, the *\** parameter has no effect. The command still returns the font families.
 
-**Note:** Under macOS, if you use the result of this command with [ST SET ATTRIBUTES](st-set-attributes.md) in a multi-style text area, you must not pass the *\** parameter (only font families are supported as Attribute font name). This limitation does not apply to 4D Write Pro areas, which accept either font or font family names. 
+**Note:** Under macOS, if you use the result of this command with [ST SET ATTRIBUTES](../commands/st-set-attributes) in a multi-style text area, you must not pass the *\** parameter (only font families are supported as Attribute font name). This limitation does not apply to 4D Write Pro areas, which accept either font or font family names. 
 
 ### About scalable fonts 
 
@@ -84,11 +84,11 @@ You want to get a list of recent fonts:
 
 ## See also 
 
-[FONT STYLE LIST](font-style-list.md)  
+[FONT STYLE LIST](../commands/font-style-list)  
 *Font Type List*  
-[OBJECT SET FONT](object-set-font.md)  
-[SET RECENT FONTS](set-recent-fonts.md)  
-[ST SET ATTRIBUTES](st-set-attributes.md)  
+[OBJECT SET FONT](../commands/object-set-font)  
+[SET RECENT FONTS](../commands/set-recent-fonts)  
+[ST SET ATTRIBUTES](../commands/st-set-attributes)  
 
 ## Properties
 

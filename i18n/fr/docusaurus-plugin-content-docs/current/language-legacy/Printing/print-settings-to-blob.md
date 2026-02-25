@@ -1,4 +1,4 @@
----
+﻿---
 id: print-settings-to-blob
 title: Print settings to BLOB
 slug: /commands/print-settings-to-blob
@@ -33,9 +33,9 @@ displayed_sidebar: docs
 * Paramètres de mise en page comme le papier, l'orientation, l'échelle...
 * Paramètres d'impression comme le nombre de copies, la source du papier...
 
-Cette commande doit être utilisée conjointement avec la commande [BLOB to print settings](blob-to-print-settings.md). Ces commandes vous permettent de sauvegarder les paramètres d'impression de l'utilisateur courant et de les recharger pour qu'il n'ait pas à préciser ses paramètres chaque fois qu'il imprime. De plus, cela permet de garder des paramètres d'impression "privés" (spécifiques à un pilote d'imprimante) qui ne sont pas disponibles dans les paramètres d'impression standard. 
+Cette commande doit être utilisée conjointement avec la commande [BLOB to print settings](../commands/blob-to-print-settings). Ces commandes vous permettent de sauvegarder les paramètres d'impression de l'utilisateur courant et de les recharger pour qu'il n'ait pas à préciser ses paramètres chaque fois qu'il imprime. De plus, cela permet de garder des paramètres d'impression "privés" (spécifiques à un pilote d'imprimante) qui ne sont pas disponibles dans les paramètres d'impression standard. 
 
-Le BLOB généré ne doit pas être modifié par programmation : il ne peut être utilisé qu'avec la commande [BLOB to print settings](blob-to-print-settings.md).
+Le BLOB généré ne doit pas être modifié par programmation : il ne peut être utilisé qu'avec la commande [BLOB to print settings](../commands/blob-to-print-settings).
 
 La commande retourne 1 si le BLOB a été correctement généré et 0 si aucune imprimante courante n'est sélectionnée.
 
@@ -65,7 +65,7 @@ Vous voulez sauvegarder les paramètres d'impression courants sur disque :
 ## Voir aussi 
 
   
-[BLOB to print settings](blob-to-print-settings.md)  
+[BLOB to print settings](../commands/blob-to-print-settings)  
 
 ## Propriétés
 

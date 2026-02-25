@@ -1,4 +1,4 @@
----
+﻿---
 id: keystroke
 title: Keystroke
 slug: /commands/keystroke
@@ -31,11 +31,11 @@ displayed_sidebar: docs
 
 Usually, you will call **Keystroke** within a form or object method while handling an On Before Keystroke or On After Keystroke form event. To detect keystroke events, use the command [Form event code](../commands/form-event-code). 
 
-To replace the character actually entered by the user with another character, use the command [FILTER KEYSTROKE](filter-keystroke.md).
+To replace the character actually entered by the user with another character, use the command [FILTER KEYSTROKE](../commands/filter-keystroke).
 
 **Note:** The **Keystroke** function does not work in subforms.
 
-**IMPORTANT NOTE:** If you want to perform some “on the fly” operations depending on the current value of the enterable area being edited, as well as the new character to be entered, remember that the text you see on screen is NOT YET the value of the data source field or variable for the area being edited. The data source field or variable is assigned the entered value after the data entry for the area is validated (e.g., tabulation to another area, click on a button, and so on). It is therefore up to you to “shadow” the data entry into a variable and then to work with this shadow value. You must do so if you need to know the current text value for executing any particular actions. You can also use the function [Get edited text](get-edited-text.md).
+**IMPORTANT NOTE:** If you want to perform some “on the fly” operations depending on the current value of the enterable area being edited, as well as the new character to be entered, remember that the text you see on screen is NOT YET the value of the data source field or variable for the area being edited. The data source field or variable is assigned the entered value after the data entry for the area is validated (e.g., tabulation to another area, click on a button, and so on). It is therefore up to you to “shadow” the data entry into a variable and then to work with this shadow value. You must do so if you need to know the current text value for executing any particular actions. You can also use the function [Get edited text](../commands/get-edited-text).
 
 You will use the command **Keystroke** for:
 
@@ -45,7 +45,7 @@ You will use the command **Keystroke** for:
 
 ## Example 1 
 
-See examples for the [FILTER KEYSTROKE](filter-keystroke.md) command.
+See examples for the [FILTER KEYSTROKE](../commands/filter-keystroke) command.
 
 ## Example 2 
 
@@ -177,9 +177,9 @@ Using the interprocess communication capabilities of 4D, you can similarily buil
 
 ## See also 
 
-[FILTER KEYSTROKE](filter-keystroke.md)  
+[FILTER KEYSTROKE](../commands/filter-keystroke)  
 [Form event code](../commands/form-event-code)  
-[Get edited text](get-edited-text.md)  
+[Get edited text](../commands/get-edited-text)  
 
 ## Properties
 

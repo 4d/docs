@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-print-variable-frame
 title: OBJECT GET PRINT VARIABLE FRAME
 slug: /commands/object-get-print-variable-frame
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET PRINT VARIABLE FRAME.Summary-->La commande **OBJECT GET PRINT VARIABLE FRAME** vous permet de d’obtenir la configuration courante des options d’impression en taille variable de l’objet ou des objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 
 
-Les propriétés d’impression en taille variable peuvent être définies via la Liste des propriétés ou la commande [OBJECT SET PRINT VARIABLE FRAME](object-set-print-variable-frame.md). 
+Les propriétés d’impression en taille variable peuvent être définies via la Liste des propriétés ou la commande [OBJECT SET PRINT VARIABLE FRAME](../commands/object-set-print-variable-frame). 
 
 Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).
 
@@ -47,7 +47,7 @@ Si l’*objet* est un sous-formulaire et si l’impression en taille variable es
 
 ## Voir aussi 
 
-[OBJECT SET PRINT VARIABLE FRAME](object-set-print-variable-frame.md)  
+[OBJECT SET PRINT VARIABLE FRAME](../commands/object-set-print-variable-frame)  
 
 ## Propriétés
 

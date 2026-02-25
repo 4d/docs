@@ -1,4 +1,4 @@
----
+﻿---
 id: on-event-call
 title: ON EVENT CALL
 slug: /commands/on-event-call
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 **Conseil :** Cette commande nécessite un niveau de connaissances avancé en programmation. Généralement, vous n'avez pas besoin d'appeler **ON EVENT CALL** pour traiter les événements. Lorsque vous utilisez des formulaires, 4D gère pour vous les événements et les retourne aux formulaires et objets appropriés. 
 
-**Astuce :** Les commandes telles que [MOUSE POSITION](mouse-position.md), [Shift down](shift-down.md), etc., permettent de récupérer des informations sur les événements. Ces commandes, dans une certaine mesure, peuvent être appelées depuis les méthodes objet pour traiter les informations dont vous avez besoin. Elles peuvent ainsi vous épargner l'écriture d'un algorithme basé sur une structure du type **ON EVENT CALL**.
+**Astuce :** Les commandes telles que [MOUSE POSITION](../commands/mouse-position), [Shift down](../commands/shift-down), etc., permettent de récupérer des informations sur les événements. Ces commandes, dans une certaine mesure, peuvent être appelées depuis les méthodes objet pour traiter les informations dont vous avez besoin. Elles peuvent ainsi vous épargner l'écriture d'un algorithme basé sur une structure du type **ON EVENT CALL**.
 
 La portée de cette commande est la session de travail. Par défaut, la méthode est exécutée dans un process local séparé. Vous ne pouvez avoir qu'une méthode de gestion d'événement à la fois. Pour désinstaller une méthode de gestion d'événement, appelez de nouveau **ON EVENT CALL** et passez une chaîne vide dans *méthodeEvén*.
 
@@ -35,7 +35,7 @@ Le paramètre optionnel *nomProcess* permet de donner un nom au process créé p
 Dans la méthode de gestion d'événement, vous pouvez lire les variables système suivantes : MouseDown, KeyCode, Modifiers, MouseX, MouseY et MouseProc. Notez que ces variables sont des variables process. Leur portée est donc le process de gestion d'événements. Copiez-les dans des variables interprocess si vous souhaitez que leurs valeurs soient disponibles dans un autre process. 
 
 * La variable système MouseDown contient 1 s'il y a eu un clic souris, 0 sinon.
-* La variable système KeyCode contient le code du caractère tapé au clavier, ou le code d'une touche de fonction. Référez-vous aux sections *Codes Unicode* and [EXPORT TEXT](export-text.md) qui listent les codes de caractères utilisés par 4D, ainsi qu'à la section *Codes des touches de fonction*. 4D fournit des constantes prédéfinies pour les principaux codes ASCII et touches de fonctions. Vous pouvez les visualiser à l'aide la fenêtre de l'Explorateur, dans les thèmes correspondants.
+* La variable système KeyCode contient le code du caractère tapé au clavier, ou le code d'une touche de fonction. Référez-vous aux sections *Codes Unicode* and [EXPORT TEXT](../commands/export-text) qui listent les codes de caractères utilisés par 4D, ainsi qu'à la section *Codes des touches de fonction*. 4D fournit des constantes prédéfinies pour les principaux codes ASCII et touches de fonctions. Vous pouvez les visualiser à l'aide la fenêtre de l'Explorateur, dans les thèmes correspondants.
 * La variable système Modifiers permet de savoir si une touche de modification (*modifier*) était enfoncée au moment où l'événement s'est produit. Les touches suivantes peuvent être détectées :  
 
 | **Plate-forme** | **Modifiers**                                                     |  
@@ -107,16 +107,16 @@ La méthode de gestion d'événement teste si la combinaison de touches **Ctrl**
  End if
 ```
 
-Notez que **ON EVENT CALL** est utilisé dans cet exemple car un état spécial est imprimé à l'aide des commandes *\_o\_PAGE SETUP*, [Print form](../commands/print-form) et [PAGE BREAK](page-break.md) dans une structure de type [ARRAY TO LIST](array-to-list.md).
+Notez que **ON EVENT CALL** est utilisé dans cet exemple car un état spécial est imprimé à l'aide des commandes *\_o\_PAGE SETUP*, [Print form](../commands/print-form) et [PAGE BREAK](../commands/page-break) dans une structure de type [ARRAY TO LIST](../commands/array-to-list).
 
-Lorsque vous imprimez un état à l'aide la commande [PRINT SELECTION](print-selection.md), vous n'avez pas besoin de gérer les événements permettant à l'utilisateur d'interrompre l'impression, [PRINT SELECTION](print-selection.md) le fait pour vous.
+Lorsque vous imprimez un état à l'aide la commande [PRINT SELECTION](../commands/print-selection), vous n'avez pas besoin de gérer les événements permettant à l'utilisateur d'interrompre l'impression, [PRINT SELECTION](../commands/print-selection) le fait pour vous.
 
 ## Voir aussi 
 
-[FILTER EVENT](filter-event.md)  
-[MOUSE POSITION](mouse-position.md)  
-[Method called on event](method-called-on-event.md)  
-[Shift down](shift-down.md)  
+[FILTER EVENT](../commands/filter-event)  
+[MOUSE POSITION](../commands/mouse-position)  
+[Method called on event](../commands/method-called-on-event)  
+[Shift down](../commands/shift-down)  
 
 ## Propriétés
 

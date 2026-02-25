@@ -1,4 +1,4 @@
----
+﻿---
 id: delete-record
 title: DELETE RECORD
 slug: /commands/delete-record
@@ -32,8 +32,8 @@ displayed_sidebar: docs
 
 **Notas:** 
 
-* si el registro actual es descargado de la memoria antes de la llamada a DELETE RECORD (por ejemplo en respuesta a un [UNLOAD RECORD](unload-record.md)), la selección actual de tabla está vacía después de la eliminación.
-* el comando DELETE RECORD no hace nada cuando la tabla está en modo [READ ONLY](read-only.md), independientemente de si el registro a borrar está bloqueado o no.
+* si el registro actual es descargado de la memoria antes de la llamada a DELETE RECORD (por ejemplo en respuesta a un [UNLOAD RECORD](../commands/unload-record)), la selección actual de tabla está vacía después de la eliminación.
+* el comando DELETE RECORD no hace nada cuando la tabla está en modo [READ ONLY](../commands/read-only), independientemente de si el registro a borrar está bloqueado o no.
 
 La eliminación de registros es una operación permanente y no puede deshacerse (excepto cuando se ejecuta durante una transacción, ver *Utilización de transacciones*).
 
@@ -53,7 +53,7 @@ El siguiente ejemplo borra un registro de un empleado. El código pregunta al us
 
 ## Ver también 
 
-[Locked](locked.md)  
+[Locked](../commands/locked)  
 *Triggers*  
 
 ## Propiedades

@@ -1,4 +1,4 @@
----
+﻿---
 id: svg-find-element-ids-by-rect
 title: SVG Find element IDs by rect
 slug: /commands/svg-find-element-ids-by-rect
@@ -42,7 +42,7 @@ Este comando permite administrar interfaces gráficas interativas.
   
 Se passa o parâmetro opcional \*, indica que o parâmetro *objetoImagem* é um nome de objeto (string). Se não passar este parâmetro, indica que o parâmetro *objetoImagem* é um campo ou uma variável. Neste caso, passe uma referência de campo ou variável (campo ou variável objeto unicamente) ao invés de uma string. 
 
-Se trabalha com um campo ou variável imagem, o comando utiliza a imagem de origen, correspondente a fonte de dados. Entretanto, se trabalha com um objeto de formulário, o comando utiliza a imagem atual, que pode ser modificada através do comando [SVG SET ATTRIBUTE](svg-set-attribute.md) e que é conservado com as propriedades do objeto de formulário.  
+Se trabalha com um campo ou variável imagem, o comando utiliza a imagem de origen, correspondente a fonte de dados. Entretanto, se trabalha com um objeto de formulário, o comando utiliza a imagem atual, que pode ser modificada através do comando [SVG SET ATTRIBUTE](../commands/svg-set-attribute) e que é conservado com as propriedades do objeto de formulário.  
   
 As coordenadas passadas nos parâmetros *x* e *y* devem expressos em píxels em relação com a esquina superior esquerda da imagem (0,0). Pode utilizar os valores devolvidos pelas Variávels de sistema MouseX e MouseY. Estas variáveis são atualizadas nos eventos de formulário On Clicked e On Double Clicked assim como nos eventos de formulário On Mouse Enter e On Mouse Enter e On Mouse Move.  
 
@@ -52,7 +52,7 @@ Todos os elementos cujo retângulo circundante está em intersecção com o ret�
 
 ## Ver também 
 
-[SVG Find element ID by coordinates](svg-find-element-id-by-coordinates.md)  
+[SVG Find element ID by coordinates](../commands/svg-find-element-id-by-coordinates)  
 
 ## Propriedades
 

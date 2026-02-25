@@ -1,4 +1,4 @@
----
+﻿---
 id: semaphore
 title: Semaphore
 slug: /commands/semaphore
@@ -162,8 +162,8 @@ var $T_Sema_local;$T_Message : Text
 
 ## 参照 
 
-[CLEAR SEMAPHORE](clear-semaphore.md)  
-[Test semaphore](test-semaphore.md)  
+[CLEAR SEMAPHORE](../commands/clear-semaphore)  
+[Test semaphore](../commands/test-semaphore)  
 *セマフォーとシグナル*  
 
 ## プロパティ

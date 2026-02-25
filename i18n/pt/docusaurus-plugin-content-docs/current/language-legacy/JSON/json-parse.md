@@ -1,4 +1,4 @@
----
+﻿---
 id: json-parse
 title: JSON Parse
 slug: /commands/json-parse
@@ -32,11 +32,11 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.JSON Parse.Summary-->O comando **JSON Parse** analisa o conteúdo de uma cadeia com formato JSON e extraem os valores que podem armazenar em um campo ou variável 4D.<!-- END REF--> Este comando não realiza os dados JSON, realiza a ação inversa do comando [JSON Stringify](json-stringify.md).  
+<!--REF #_command_.JSON Parse.Summary-->O comando **JSON Parse** analisa o conteúdo de uma cadeia com formato JSON e extraem os valores que podem armazenar em um campo ou variável 4D.<!-- END REF--> Este comando não realiza os dados JSON, realiza a ação inversa do comando [JSON Stringify](../commands/json-stringify).  
   
 Em *cadeiaJSON*, passe a cadeia com formato JSON cujo conteúdo deseja analisar. Esta cadeia deve ter o formato correto, caso contrário é gerado um erro de análise.  
   
-**Nota**: Se utilizar ponteiros, deve chamar ao comando [JSON Stringify](json-stringify.md) antes de chamar a **JSON Parse**.  
+**Nota**: Se utilizar ponteiros, deve chamar ao comando [JSON Stringify](../commands/json-stringify) antes de chamar a **JSON Parse**.  
   
 Por padrão, se omitir o parâmetro *tipo*, 4D tentará converter o valor obtido no tipo da variável ou do campo que se utiliza para armazenar os resultados (se foi definido). Caso contrário, 4D tenta deduzir seu tipo. Também pode forçar a interpretação do tipo passando o parâmetro *tipo*: passe uma das seguintes constantes, disponíveis no tema *Tipos de campos e variáveis*:
 
@@ -135,7 +135,7 @@ Se a configuração atual de armazenagem de data for "date type", pode escrever:
 
 ## Exemplo 4 
 
-Este exemplo mostra o uso combinado dos comandos [JSON Stringify](json-stringify.md) e **JSON Parse**:
+Este exemplo mostra o uso combinado dos comandos [JSON Stringify](../commands/json-stringify) e **JSON Parse**:
 
 #code4D\]C\_TEXT($JSONContact)  
 C\_OBJECT($Contact;$Contact2)  
@@ -199,8 +199,8 @@ beta[1].golf:{line:10,offset:12}}}
 
 ## Ver também 
 
-[JSON PARSE ARRAY](json-parse-array.md)  
-[JSON Stringify](json-stringify.md)  
+[JSON PARSE ARRAY](../commands/json-parse-array)  
+[JSON Stringify](../commands/json-stringify)  
 [JSON Validate](../commands/json-validate)  
 *Tipos de campos e variáveis*  
 

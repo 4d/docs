@@ -1,4 +1,4 @@
----
+﻿---
 id: document-to-blob
 title: DOCUMENT TO BLOB
 slug: /commands/document-to-blob
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.DOCUMENT TO BLOB.Summary-->DOCUMENT TO BLOB は、*document*の内容全体を*blob*にロードします。<!-- END REF-->開かれていない既存のドキュメントを渡さなければなりません。そうでなければエラーが生成されます。ドキュメントをユーザが選択できるようにするには、[Open document](open-document.md) およびプロセス変数*document* を使用します(例題を参照)。
+<!--REF #_command_.DOCUMENT TO BLOB.Summary-->DOCUMENT TO BLOB は、*document*の内容全体を*blob*にロードします。<!-- END REF-->開かれていない既存のドキュメントを渡さなければなりません。そうでなければエラーが生成されます。ドキュメントをユーザが選択できるようにするには、[Open document](../commands/open-document) およびプロセス変数*document* を使用します(例題を参照)。
 
 ## 例題 
 
@@ -60,8 +60,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[BLOB TO DOCUMENT](blob-to-document.md)  
-[Open document](open-document.md)  
+[BLOB TO DOCUMENT](../commands/blob-to-document)  
+[Open document](../commands/open-document)  
 
 ## プロパティ
 

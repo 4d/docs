@@ -1,4 +1,4 @@
----
+﻿---
 id: message
 title: MESSAGE
 slug: /commands/message
@@ -36,8 +36,8 @@ Si se abre una ventana con [Open window](../commands/open-window.md "Open window
 * Si un mensaje es más largo que la ventana, 4D inserta automáticamente un retorno a la línea.
 * Si un mensaje tiene más líneas que la ventana, 4D automáticamente desplaza el mensaje en la ventana.
 * Para controlar los saltos de línea automáticos, incluya retornos de carro, — **Char(13)** —, en su mensaje.
-* Para mostrar el texto en un lugar en particular de la ventana, llame [GOTO XY](goto-xy.md)..
-* Para borrar los contenidos de la ventana, llame [ERASE WINDOW](erase-window.md)..
+* Para mostrar el texto en un lugar en particular de la ventana, llame [GOTO XY](../commands/goto-xy)..
+* Para borrar los contenidos de la ventana, llame [ERASE WINDOW](../commands/erase-window)..
 * La ventana es sólo una ventana de salida y su contenido no puede ser rediseñado cuando otras ventanas se colocan sobre ella.
 * Puede modificar la fuente y el tamaño de los caracteres mostrados en la ventana a través de la página "Interfaz" en las Propiedades de la base.
 
@@ -121,9 +121,9 @@ El resultado es el siguiente (en Windows):
 
 ## Ver también 
 
-[CLOSE WINDOW](close-window.md)  
-[ERASE WINDOW](erase-window.md)  
-[GOTO XY](goto-xy.md)  
+[CLOSE WINDOW](../commands/close-window)  
+[ERASE WINDOW](../commands/erase-window)  
+[GOTO XY](../commands/goto-xy)  
 [Open window](../commands/open-window)  
 
 ## Propiedades

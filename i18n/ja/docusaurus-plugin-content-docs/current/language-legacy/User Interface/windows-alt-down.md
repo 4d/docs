@@ -1,4 +1,4 @@
----
+﻿---
 id: windows-alt-down
 title: Windows Alt down
 slug: /commands/windows-alt-down
@@ -35,12 +35,12 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Caps lock down](caps-lock-down.md)  
-[Macintosh command down](macintosh-command-down.md)  
-[Macintosh control down](macintosh-control-down.md)  
-[Macintosh option down](macintosh-option-down.md)  
-[Shift down](shift-down.md)  
-[Windows Ctrl down](windows-ctrl-down.md)  
+[Caps lock down](../commands/caps-lock-down)  
+[Macintosh command down](../commands/macintosh-command-down)  
+[Macintosh control down](../commands/macintosh-control-down)  
+[Macintosh option down](../commands/macintosh-option-down)  
+[Shift down](../commands/shift-down)  
+[Windows Ctrl down](../commands/windows-ctrl-down)  
 
 ## プロパティ
 

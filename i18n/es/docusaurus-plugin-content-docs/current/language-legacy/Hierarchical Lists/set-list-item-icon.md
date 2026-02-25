@@ -1,4 +1,4 @@
----
+﻿---
 id: set-list-item-icon
 title: SET LIST ITEM ICON
 slug: /commands/set-list-item-icon
@@ -32,11 +32,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET LIST ITEM ICON.Summary-->El comando SET LIST ITEM ICON permite modificar el icono asociado al elemento especificado por el parámetro *refElem* de la lista cuyo número de referencia o nombre de objeto se pasa en *lista* 
 
-**Nota:** es posible modificar el icono asociado con un elemento utilizando el comando [SET LIST ITEM PROPERTIES](set-list-item-properties.md).<!-- END REF--> Sin embargo, este comando acepta únicamente las referencias de imágenes estáticas (referencias de recursos o imágenes de la librería de imágenes).
+**Nota:** es posible modificar el icono asociado con un elemento utilizando el comando [SET LIST ITEM PROPERTIES](../commands/set-list-item-properties).<!-- END REF--> Sin embargo, este comando acepta únicamente las referencias de imágenes estáticas (referencias de recursos o imágenes de la librería de imágenes).
 
 Si pasa el primer parámetro opcional \*, indica que el parámetro lista es un nombre de objeto (cadena) correspondiente a una representación de la lista en el formulario. Si no pasa este parámetro, indica que el parámetro lista es una referencia de lista jerárquica (RefLista). Si utiliza una sola representación de lista o trabaja con los elementos estructurales (el segundo \* se omite), puede utilizar indiferentemente una u otra sintaxis. Por el contrario, si utiliza varias representaciones de la misma lista y trabaja con el elemento actual (se pasa el segundo \*), se requiere la sintaxis basada en el nombre del objeto ya que cada representación puede tener su propio elemento actual.
 
-Puede pasar un número de referencia en refElem. Si este número no corresponde a ningún elemento en la lista, el comando no hace nada. Igualmente puede pasar 0 en refElem para indicar el último elemento añadido a la lista (utilizando [APPEND TO LIST](append-to-list.md)).
+Puede pasar un número de referencia en refElem. Si este número no corresponde a ningún elemento en la lista, el comando no hace nada. Igualmente puede pasar 0 en refElem para indicar el último elemento añadido a la lista (utilizando [APPEND TO LIST](../commands/append-to-list)).
 
 Por último, puede pasar *\** en *refElem*: en este caso, el comando será aplicado al elemento actual de la lista. Si se seleccionan varios elementos manualmente, el elemento actual es el último seleccionado. Si ningún elemento está seleccionado, el comando no hace nada.
 
@@ -55,9 +55,9 @@ Queremos asignar la misma imagen a dos elementos diferentes. El siguiente códig
 
 ## Ver también 
 
-[SET LIST ITEM](set-list-item.md)  
-[SET LIST ITEM FONT](set-list-item-font.md)  
-[SET LIST ITEM PROPERTIES](set-list-item-properties.md)  
+[SET LIST ITEM](../commands/set-list-item)  
+[SET LIST ITEM FONT](../commands/set-list-item-font)  
+[SET LIST ITEM PROPERTIES](../commands/set-list-item-properties)  
 
 ## Propiedades
 

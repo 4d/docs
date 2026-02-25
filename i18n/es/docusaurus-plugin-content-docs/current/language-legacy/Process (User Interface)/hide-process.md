@@ -1,4 +1,4 @@
----
+﻿---
 id: hide-process
 title: HIDE PROCESS
 slug: /commands/hide-process
@@ -35,8 +35,8 @@ El siguiente ejemplo oculta todas las ventanas que pertenecen al proceso actual:
 
 ## Ver también 
 
-[Process state](process-state.md)  
-[SHOW PROCESS](show-process.md)  
+[Process state](../commands/process-state)  
+[SHOW PROCESS](../commands/show-process)  
 
 ## Propiedades
 

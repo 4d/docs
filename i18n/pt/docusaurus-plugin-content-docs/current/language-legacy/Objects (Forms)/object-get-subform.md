@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-subform
 title: OBJECT GET SUBFORM
 slug: /commands/object-get-subform
@@ -36,7 +36,7 @@ displayed_sidebar: docs
   
 Se passa o parâmetro opcional *\**, indica que o parâmetro *objeto* é um nome de objeto (uma cadeia). Se não passa este parâmetro, isto indica que o parâmetro *objeto* é uma variável. Neste caso, se passa uma referencia de variável em lugar de uma cadeia.  
   
-No parâmetro *pontTabela*, o comando devolve um ponteiro à tabela dele ou dos formulário(s) utilizado(s). Se o sub-formulário utiliza um formulário projeto, o parâmetro contém [Is nil pointer](is-nil-pointer.md).  
+No parâmetro *pontTabela*, o comando devolve um ponteiro à tabela dele ou dos formulário(s) utilizado(s). Se o sub-formulário utiliza um formulário projeto, o parâmetro contém [Is nil pointer](../commands/is-nil-pointer).  
   
 No parâmetro *subFormDet*, e (opcionalmente) subFormList ,o comando devolve:  
 
@@ -51,8 +51,8 @@ Se não houver formulário lista, uma string vazia é devolvida no parâmetro *s
 
 ## Ver também 
 
-[OBJECT GET SUBFORM CONTAINER SIZE](object-get-subform-container-size.md)  
-[OBJECT SET SUBFORM](object-set-subform.md)  
+[OBJECT GET SUBFORM CONTAINER SIZE](../commands/object-get-subform-container-size)  
+[OBJECT SET SUBFORM](../commands/object-set-subform)  
 
 ## Propriedades
 

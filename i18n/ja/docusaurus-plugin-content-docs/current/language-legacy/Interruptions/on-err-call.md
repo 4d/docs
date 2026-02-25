@@ -1,4 +1,4 @@
----
+﻿---
 id: on-err-call
 title: ON ERR CALL
 slug: /commands/on-err-call
@@ -64,7 +64,7 @@ displayed_sidebar: docs
 * 4D環境: 例えば配列に割り当てるために十分なメモリがない場合。
 * データベースが稼働しているOS: 例えばディスクに空きがなかったり、I/Oエラーの場合。
 
-実行を中断するには、[ABORT](abort.md) コマンドを使用できます。エラー処理メソッドで[ABORT](abort.md) コマンドを使用しない場合、4Dは割り込みをかけたメソッドに制御を戻し、メソッドの実行を続けます。エラーをリカバーできないときに[ABORT](abort.md) コマンドを使用します。
+実行を中断するには、[ABORT](../commands/abort) コマンドを使用できます。エラー処理メソッドで[ABORT](../commands/abort) コマンドを使用しない場合、4Dは割り込みをかけたメソッドに制御を戻し、メソッドの実行を続けます。エラーをリカバーできないときに[ABORT](../commands/abort) コマンドを使用します。
 
 エラー処理メソッド自体でエラーが発生した場合は、4Dがエラー管理を引き継ぎます。したがって、エラー処理メソッドでエラーが発生しないように十分注意してください。また、エラー処理メソッドでは**ON ERR CALL** コマンドを使用することはできません。
 
@@ -190,11 +190,11 @@ IO ERROR HANDLERプロジェクトメソッドは以下のようになります:
 
 ## 参照 
 
-[ABORT](abort.md)  
+[ABORT](../commands/abort)  
 *Error Handler*  
 [Last errors](../commands/last-errors)   
 [Last errors](../commands/last-errors)  
-[Method called on error](method-called-on-error.md)  
+[Method called on error](../commands/method-called-on-error)  
 *システム変数*  
 
 ## プロパティ

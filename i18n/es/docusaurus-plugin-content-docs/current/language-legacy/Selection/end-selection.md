@@ -1,4 +1,4 @@
----
+﻿---
 id: end-selection
 title: End selection
 slug: /commands/end-selection
@@ -18,11 +18,11 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.End selection.Summary-->**End selection** devuelve TRUE cuando el puntero del registro actual está más allá del último registro de la selección actual de *tabla*.<!-- END REF-->se utiliza generalmente para probar si la llamada al comando [NEXT RECORD](next-record.md) ha movido o no el puntero del registro actual detrás del último registro de la selección. Si la selección actual está vacía, **End selection** devuelve TRUE.
+<!--REF #_command_.End selection.Summary-->**End selection** devuelve TRUE cuando el puntero del registro actual está más allá del último registro de la selección actual de *tabla*.<!-- END REF-->se utiliza generalmente para probar si la llamada al comando [NEXT RECORD](../commands/next-record) ha movido o no el puntero del registro actual detrás del último registro de la selección. Si la selección actual está vacía, **End selection** devuelve TRUE.
 
-Para mover el puntero del registro actual dentro de la selección, utilice [FIRST RECORD](first-record.md), [LAST RECORD](last-record.md) o [GOTO SELECTED RECORD](goto-selected-record.md). [PREVIOUS RECORD](previous-record.md) no mueva el puntero a la selección.
+Para mover el puntero del registro actual dentro de la selección, utilice [FIRST RECORD](../commands/first-record), [LAST RECORD](../commands/last-record) o [GOTO SELECTED RECORD](../commands/goto-selected-record). [PREVIOUS RECORD](../commands/previous-record) no mueva el puntero a la selección.
 
-**End selection** devuelve también TRUE cuando el último pie de página de un informe se imprime con [PRINT SELECTION](print-selection.md) o desde el menú Imprimir. Puede utilizar el siguiente código para probar el último pie de de página e imprimir un pie de página especial para la última página:
+**End selection** devuelve también TRUE cuando el último pie de página de un informe se imprime con [PRINT SELECTION](../commands/print-selection) o desde el menú Imprimir. Puede utilizar el siguiente código para probar el último pie de de página e imprimir un pie de página especial para la última página:
 
 ```4d
   // Método de un formulario de salida utilizado para imprimir un informe
@@ -58,11 +58,11 @@ Este método de formulario se utiliza durante la impresión de un informe. Se de
 
 ## Ver también 
 
-[Before selection](before-selection.md)  
+[Before selection](../commands/before-selection)  
 [Form event code](../commands/form-event-code)  
-[LAST RECORD](last-record.md)  
-[NEXT RECORD](next-record.md)  
-[PRINT SELECTION](print-selection.md)  
+[LAST RECORD](../commands/last-record)  
+[NEXT RECORD](../commands/next-record)  
+[PRINT SELECTION](../commands/print-selection)  
 
 ## Propiedades
 

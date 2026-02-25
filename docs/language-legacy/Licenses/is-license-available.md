@@ -1,4 +1,4 @@
----
+﻿---
 id: is-license-available
 title: Is license available
 slug: /commands/is-license-available
@@ -49,17 +49,17 @@ The Is license available command can be used in three different ways:
 | 4D Web license         | Integer | 808464945 |  
 | 4D Write license       | Integer | 808464697 |  
     
-In this case, the command returns [True](true.md "True") if the corresponding plug-in has a license available. The command takes into account any licenses attributed in Design mode or via the [SET PLUGIN ACCESS](set-plugin-access.md) command.  
+In this case, the command returns [True](true.md "True") if the corresponding plug-in has a license available. The command takes into account any licenses attributed in Design mode or via the [SET PLUGIN ACCESS](../commands/set-plugin-access) command.  
 Is license available returns [False](false.md "False") if the plug-in is operating in demo mode.
 * You pass the ID number of the plug-in “4BNX” resource directly in the license parameter. In this case, the command behaves as described above.
 
 ## See also 
 
-[CHANGE LICENSES](change-licenses.md)  
+[CHANGE LICENSES](../commands/change-licenses)  
 [License info](../commands/license-info)  
-[Get plugin access](get-plugin-access.md)  
-[PLUGIN LIST](plugin-list.md)  
-[SET PLUGIN ACCESS](set-plugin-access.md)  
+[Get plugin access](../commands/get-plugin-access)  
+[PLUGIN LIST](../commands/plugin-list)  
+[SET PLUGIN ACCESS](../commands/set-plugin-access)  
 
 ## Properties
 

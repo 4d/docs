@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-insert-rows
 title: LISTBOX INSERT ROWS
 slug: /commands/listbox-insert-rows
@@ -47,7 +47,7 @@ If the *rowPosition* value is higher than the total number of rows in the list b
 
 ## See also 
 
-[LISTBOX DELETE ROWS](listbox-delete-rows.md)  
+[LISTBOX DELETE ROWS](../commands/listbox-delete-rows)  
 
 ## Properties
 

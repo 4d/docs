@@ -1,4 +1,4 @@
----
+﻿---
 id: set-external-data-path
 title: SET EXTERNAL DATA PATH
 slug: /commands/set-external-data-path
@@ -68,8 +68,8 @@ Usted desea guardar el contenido de un archivo existente en el campo imagen, alm
 
 ## Ver también 
 
-[Get external data path](get-external-data-path.md)  
-[RELOAD EXTERNAL DATA](reload-external-data.md)  
+[Get external data path](../commands/get-external-data-path)  
+[RELOAD EXTERNAL DATA](../commands/reload-external-data)  
 
 ## Propiedades
 

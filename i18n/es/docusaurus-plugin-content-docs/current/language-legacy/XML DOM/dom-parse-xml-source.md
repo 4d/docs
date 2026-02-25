@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-parse-xml-source
 title: DOM Parse XML source
 slug: /commands/dom-parse-xml-source
@@ -61,11 +61,11 @@ Hay dos formas de especificar una DTD:
 **Validación por esquema**  
 Para validar el documento vía un esquema XML, sólo necesita pasar en el tercer parámetro un archivo o un URL de extensión “xsd” en lugar de un “dtd”. La validación por esquema XML se considera más flexible y poderosa que la validación por DTD. El lenguaje de los documentos XSD está basado en el lenguaje XML. Más particularmente, los esquemas XML soportan tipos de datos. Para mayor información sobre los esquemas XML, por favor consulte la siguiente dirección: *http://www.w3.org/XML/Schema*.
 
-Si la validación no se puede efectuar (no DTD o XSD, URL incorrecto, etc.), se genera un error. La variable sistema Error indica el número del error. Puede interceptar este error utilizando un método instalado por el comando [ON ERR CALL](on-err-call.md).
+Si la validación no se puede efectuar (no DTD o XSD, URL incorrecto, etc.), se genera un error. La variable sistema Error indica el número del error. Puede interceptar este error utilizando un método instalado por el comando [ON ERR CALL](../commands/on-err-call).
 
 El comando devuelve una cadena de 16 caracteres (RefElement) constituyendo la referencia en memoria de la estructura virtual del documento. Esta referencia debe utilizarse con los otros comandos de análisis XML. 
 
-**Importante:** una vez no lo necesite, recuerde llamar al comando [DOM CLOSE XML](dom-close-xml.md) con esta referencia con el fin de liberar memoria. 
+**Importante:** una vez no lo necesite, recuerde llamar al comando [DOM CLOSE XML](../commands/dom-close-xml) con esta referencia con el fin de liberar memoria. 
 
 ## Ejemplo 1 
 
@@ -105,8 +105,8 @@ Si el comando ha sido ejecutado correctamente, la variable sistema OK toma el va
 
 ## Ver también 
 
-[DOM CLOSE XML](dom-close-xml.md)  
-[DOM Parse XML variable](dom-parse-xml-variable.md)  
+[DOM CLOSE XML](../commands/dom-close-xml)  
+[DOM Parse XML variable](../commands/dom-parse-xml-variable)  
 
 ## Propiedades
 

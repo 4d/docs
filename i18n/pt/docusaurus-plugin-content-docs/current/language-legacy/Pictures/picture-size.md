@@ -1,4 +1,4 @@
----
+﻿---
 id: picture-size
 title: Picture size
 slug: /commands/picture-size
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 ## Ver também 
 
-[PICTURE PROPERTIES](picture-properties.md)  
+[PICTURE PROPERTIES](../commands/picture-properties)  
 
 ## Propriedades
 

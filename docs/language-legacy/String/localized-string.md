@@ -1,4 +1,4 @@
----
+﻿---
 id: localized-string
 title: Localized string
 slug: /commands/localized-string
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 This command only works within an XLIFF architecture. For more information about this type of architecture, please refer to the description of XLIFF support in the *Design Reference* manual.
 
-**Note:** The [Get database localization](get-database-localization.md) command can be used to find out the language used by the application.
+**Note:** The [Get database localization](../commands/get-database-localization) command can be used to find out the language used by the application.
 
 Pass the resource name of the string for which you want to get the translation into the current target language in *resName*.
 
@@ -55,7 +55,7 @@ If the command is executed correctly, the OK variable is set to 1\. If *resName*
 
 ## See also 
 
-[Get database localization](get-database-localization.md)  
+[Get database localization](../commands/get-database-localization)  
 
 ## Properties
 

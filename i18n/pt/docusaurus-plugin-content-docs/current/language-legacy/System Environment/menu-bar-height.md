@@ -1,4 +1,4 @@
----
+﻿---
 id: menu-bar-height
 title: Menu bar height
 slug: /commands/menu-bar-height
@@ -38,9 +38,9 @@ O comando retorna 0:
 
 ## Ver também 
 
-[HIDE MENU BAR](hide-menu-bar.md)  
-[Menu bar screen](menu-bar-screen.md)  
-[SHOW MENU BAR](show-menu-bar.md)  
+[HIDE MENU BAR](../commands/hide-menu-bar)  
+[Menu bar screen](../commands/menu-bar-screen)  
+[SHOW MENU BAR](../commands/show-menu-bar)  
 
 ## Propriedades
 

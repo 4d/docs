@@ -1,4 +1,4 @@
----
+﻿---
 id: volume-list
 title: VOLUME LIST
 slug: /commands/volume-list
@@ -48,9 +48,9 @@ Utilizando un área de desplazamiento llamada *atVolumenes,* usted quiere mostra
 
 ## Ver también 
 
-[DOCUMENT LIST](document-list.md)  
-[FOLDER LIST](folder-list.md)  
-[VOLUME ATTRIBUTES](volume-attributes.md)  
+[DOCUMENT LIST](../commands/document-list)  
+[FOLDER LIST](../commands/folder-list)  
+[VOLUME ATTRIBUTES](../commands/volume-attributes)  
 
 ## Propiedades
 

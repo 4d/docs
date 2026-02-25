@@ -1,4 +1,4 @@
----
+﻿---
 id: collection-to-array
 title: COLLECTION TO ARRAY
 slug: /commands/collection-to-array
@@ -75,7 +75,7 @@ Se quiser copiar diferentes valores de propriedade de uma coleção de objetos e
 
 ## Ver também 
 
-[ARRAY TO COLLECTION ](array-to-collection.md)  
+[ARRAY TO COLLECTION ](../commands/array-to-collection)  
 *Conversões de Tipo entre coleções e arrays 4D*  
 
 ## Propriedades

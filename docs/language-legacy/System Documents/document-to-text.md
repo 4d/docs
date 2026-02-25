@@ -1,4 +1,4 @@
----
+﻿---
 id: document-to-text
 title: Document to text
 slug: /commands/document-to-text
@@ -38,7 +38,7 @@ In *fileName*, pass the name or pathname of the file to be read. The file must e
 * a pathname relative to the structure file of the application, for example "\\\\docs\\\\myFile.txt" under Windows or "/docs/myFile.txt" under macOS.
 * an absolute pathname, for example "c:\\\\app\\\\docs\\\\myFile.txt" under Windows or "MacHD/docs/myFile.txt" under macOS.
 
-In *charSet*, you pass the character set to be used for reading the contents. You can pass a string containing the standard set name (for example “ISO-8859-1” or “UTF-8”) or its MIBEnum ID (longint). For more information about the list of character sets supported by 4D, refer to the description of the [CONVERT FROM TEXT](convert-from-text.md) command.
+In *charSet*, you pass the character set to be used for reading the contents. You can pass a string containing the standard set name (for example “ISO-8859-1” or “UTF-8”) or its MIBEnum ID (longint). For more information about the list of character sets supported by 4D, refer to the description of the [CONVERT FROM TEXT](../commands/convert-from-text) command.
 
 If the document contains a Byte Order Mark (BOM), 4D uses the character set that it has set instead of the one specified in *charSet* (this parameter is then ignored). 
 
@@ -61,7 +61,7 @@ By default, when you omit the *breakMode* parameter, line breaks are processed i
 
 **Compatibility Note**: compatibility options are available for EOL and BOM management. See *Compatibility page*.
 
-**Note:** This command does not modify the OK variable. In case of failure, an error is generated that you can intercept using a method installed by the [ON ERR CALL](on-err-call.md) command.
+**Note:** This command does not modify the OK variable. In case of failure, an error is generated that you can intercept using a method installed by the [ON ERR CALL](../commands/on-err-call) command.
 
 ## Example 
 
@@ -88,7 +88,7 @@ When you execute this code:
 ## See also 
 
 *System Documents*  
-[TEXT TO DOCUMENT](text-to-document.md)  
+[TEXT TO DOCUMENT](../commands/text-to-document)  
 
 ## Properties
 

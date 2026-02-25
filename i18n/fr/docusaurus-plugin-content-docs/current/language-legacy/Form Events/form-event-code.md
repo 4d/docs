@@ -1,4 +1,4 @@
----
+﻿---
 id: form-event-code
 title: Form event code
 slug: /commands/form-event-code
@@ -344,7 +344,7 @@ En résultat, le rectangle rouge suit bien le défilement de la list box :
 [CALL SUBFORM CONTAINER](../../commands-legacy/call-subform-container)\
 [Current form table](../../commands-legacy/current-form-table)\
 [FILTER KEYSTROKE](../../commands-legacy/filter-keystroke)\
-[FORM Event](form-event.md)\
+[FORM Event](../commands/form-event)\
 [Get edited text](../../commands-legacy/get-edited-text)\
 [Keystroke](../../commands-legacy/keystroke)\
 [POST OUTSIDE CALL](../../commands-legacy/post-outside-call)\

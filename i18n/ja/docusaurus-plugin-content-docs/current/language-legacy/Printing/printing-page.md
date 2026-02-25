@@ -1,4 +1,4 @@
----
+﻿---
 id: printing-page
 title: Printing page
 slug: /commands/printing-page
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[PRINT SELECTION](print-selection.md)  
+[PRINT SELECTION](../commands/print-selection)  
 
 ## プロパティ
 

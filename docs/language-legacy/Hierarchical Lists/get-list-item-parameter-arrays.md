@@ -1,4 +1,4 @@
----
+﻿---
 id: get-list-item-parameter-arrays
 title: GET LIST ITEM PARAMETER ARRAYS
 slug: /commands/get-list-item-parameter-arrays
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Summary-->The **GET LIST ITEM PARAMETER ARRAYS** command lets you retrieve all the parameters in a single call (as well as, optionally, their values) that are associated with the *itemRef* item in the hierarchical list whose reference or object name is passed in the *list* parameter.<!-- END REF-->
 
-Parameters associated with items store additional information about each item. They are set using the [SET LIST ITEM PARAMETER](set-list-item-parameter.md) command.
+Parameters associated with items store additional information about each item. They are set using the [SET LIST ITEM PARAMETER](../commands/set-list-item-parameter) command.
 
 If you pass the first optional *\** parameter, this indicates that *list* is an object name (string) corresponding to a list representation in the form. If you do not pass this parameter, this indicates that *list* is a hierarchical list reference ([ListRef](# "A Longint reference to a hierachical list")). If you use a single list representation or work with structural items (second *\** omitted), you can use either syntax. However, if you use several representations of the same list and work with the current item (second *\** passed), you must use the syntax based on the object name because each representation may have its own current item.
 
@@ -85,7 +85,7 @@ If you want to get the parameter values as well, you write:
 
 ## See also 
 
-[SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+[SET LIST ITEM PARAMETER](../commands/set-list-item-parameter)  
 
 ## Properties
 

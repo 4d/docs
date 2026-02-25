@@ -1,4 +1,4 @@
----
+﻿---
 id: method-get-comments
 title: METHOD GET COMMENTS
 slug: /commands/method-get-comments
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.METHOD GET COMMENTS.Summary-->**METHOD GET COMMENTS**コマンドは*path*引数で指定したメソッドのドキュメンテーションを*comments*引数に返します。<!-- END REF-->
 
-このコマンドを使用して取得することのできるドキュメンテーションは、4Dエクスプローラーのコメント欄で定義されたものです ([METHOD GET CODE](method-get-code.md)コマンドを使用して取得できるコード内のコメント行ではありません)。コメントはスタイル付きテキストです:
+このコマンドを使用して取得することのできるドキュメンテーションは、4Dエクスプローラーのコメント欄で定義されたものです ([METHOD GET CODE](../commands/method-get-code)コマンドを使用して取得できるコード内のコメント行ではありません)。コメントはスタイル付きテキストです:
 
 データベースのタイプによって格納されるものが異なります:
 
@@ -64,7 +64,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[METHOD SET COMMENTS](method-set-comments.md)  
+[METHOD SET COMMENTS](../commands/method-set-comments)  
 
 ## プロパティ
 

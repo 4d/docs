@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-get-next-sibling-xml-element
 title: DOM Get next sibling XML element
 slug: /commands/dom-get-next-sibling-xml-element
@@ -73,7 +73,7 @@ Si la commande a été correctement exécutée et si l’élément analysé n’
 
 ## Voir aussi 
 
-[DOM Get first child XML element](dom-get-first-child-xml-element.md)  
+[DOM Get first child XML element](../commands/dom-get-first-child-xml-element)  
 
 ## Propriétés
 

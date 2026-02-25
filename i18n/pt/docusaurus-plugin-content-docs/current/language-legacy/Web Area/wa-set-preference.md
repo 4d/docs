@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-set-preference
 title: WA SET PREFERENCE
 slug: /commands/wa-set-preference
@@ -67,7 +67,7 @@ WA SET PREFERENCE( *;"myarea"; WA enable URL drop ; True)
 
 ## Ver também 
 
-[WA GET PREFERENCE](wa-get-preference.md)  
+[WA GET PREFERENCE](../commands/wa-get-preference)  
 
 ## Propriedades
 

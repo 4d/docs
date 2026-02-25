@@ -1,4 +1,4 @@
----
+﻿---
 id: generate-certificate-request
 title: GENERATE CERTIFICATE REQUEST
 slug: /commands/generate-certificate-request
@@ -32,12 +32,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GENERATE CERTIFICATE REQUEST.Summary-->O comando GENERATE CERTIFICATE REQUEST gera uma pedido de certificação ao formato PKCS o qual pode ser utilizado diretamente pelas autoridades de certificação tal como Verisign(R).<!-- END REF--> O certificado é uma parte importante no protocolo seguro SSL. O certificado é enviado a cada navegador que se conecta em modo SSL e contém a “carteira de identidade” do sitio web (com a informação introduzida no comando), além de sua chave pública permitindo aos navegadores decifrar a informação recebida. Além disso, o certificado contém diferente informação adicionada pela autoridade de certificação a qual garante sua integridade.
 
-**Nota**: para maior informação sobre o protocolo SSL utilizado com o servidor web 4D, consulte a seção [WEB SERVICE SET PARAMETER](web-service-set-parameter.md).  
+**Nota**: para maior informação sobre o protocolo SSL utilizado com o servidor web 4D, consulte a seção [WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter).  
   
-O pedido de certificação utiliza um par de chaves geradas por o comando [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md) e contem diferente informação. A autoridade de certificação gerará seu certificado combinando esta solicitação com outros parâmetros.  
-Passe em *chavPriv* um BLOB que contenha a chave privada gera com o comando [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md).  
+O pedido de certificação utiliza um par de chaves geradas por o comando [GENERATE ENCRYPTION KEYPAIR](../commands/generate-encryption-keypair) e contem diferente informação. A autoridade de certificação gerará seu certificado combinando esta solicitação com outros parâmetros.  
+Passe em *chavPriv* um BLOB que contenha a chave privada gera com o comando [GENERATE ENCRYPTION KEYPAIR](../commands/generate-encryption-keypair).  
   
-Passe em *peticaoCertificado* um BLOB vazio. Quando o comando tiver sido executado, contém o pedido de certificação ao formato PKCS. Pode armazenar este pedido em um arquivo de texto, por exemplo utilizando o comando [BLOB TO DOCUMENT](blob-to-document.md), para apresentá-lo à autoridade de certificação.  
+Passe em *peticaoCertificado* um BLOB vazio. Quando o comando tiver sido executado, contém o pedido de certificação ao formato PKCS. Pode armazenar este pedido em um arquivo de texto, por exemplo utilizando o comando [BLOB TO DOCUMENT](../commands/blob-to-document), para apresentá-lo à autoridade de certificação.  
   
 **Advertência**: a chave privada se utiliza para gerar o pedido de certificação mas NÃO deve ser enviada a a autoridade de certificação.  
   
@@ -96,8 +96,8 @@ Este es o método do botão **Gerar**
 
 ## Ver também 
 
-[GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
-[HTTP SET CERTIFICATES FOLDER](http-set-certificates-folder.md)  
+[GENERATE ENCRYPTION KEYPAIR](../commands/generate-encryption-keypair)  
+[HTTP SET CERTIFICATES FOLDER](../commands/http-set-certificates-folder)  
 
 ## Propriedades
 

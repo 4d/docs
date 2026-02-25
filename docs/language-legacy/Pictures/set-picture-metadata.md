@@ -1,4 +1,4 @@
----
+﻿---
 id: set-picture-metadata
 title: SET PICTURE METADATA
 slug: /commands/set-picture-metadata
@@ -89,8 +89,8 @@ When all the metadata are handled via a DOM element reference, the tags are stor
 
 ## See also 
 
-[GET PICTURE KEYWORDS](get-picture-keywords.md)  
-[GET PICTURE METADATA](get-picture-metadata.md)  
+[GET PICTURE KEYWORDS](../commands/get-picture-keywords)  
+[GET PICTURE METADATA](../commands/get-picture-metadata)  
 *Picture Metadata Names*  
 *Picture Metadata Values*  
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-hierarchy
 title: LISTBOX SET HIERARCHY
 slug: /commands/listbox-set-hierarchy
@@ -62,7 +62,7 @@ aCountry、aRegion、そしてaCity配列をリストボックスの階層とし
 
 ## 参照 
 
-[LISTBOX GET HIERARCHY](listbox-get-hierarchy.md)  
+[LISTBOX GET HIERARCHY](../commands/listbox-get-hierarchy)  
 
 ## プロパティ
 

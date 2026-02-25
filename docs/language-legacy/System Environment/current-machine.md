@@ -1,4 +1,4 @@
----
+﻿---
 id: current-machine
 title: Current machine
 slug: /commands/current-machine
@@ -41,7 +41,7 @@ Even if you are not running with the Client/Server version of the 4D environment
 
 ## See also 
 
-[Current system user](current-system-user.md)  
+[Current system user](../commands/current-system-user)  
 
 ## Properties
 

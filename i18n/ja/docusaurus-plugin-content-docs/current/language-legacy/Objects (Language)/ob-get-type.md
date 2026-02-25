@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-get-type
 title: OB Get type
 slug: /commands/ob-get-type
@@ -65,8 +65,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OB GET PROPERTY NAMES](ob-get-property-names.md)  
-[Value type](value-type.md)  
+[OB GET PROPERTY NAMES](../commands/ob-get-property-names)  
+[Value type](../commands/value-type)  
 
 ## プロパティ
 

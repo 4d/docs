@@ -1,4 +1,4 @@
----
+﻿---
 id: import-data
 title: IMPORT DATA
 slug: /commands/import-data
@@ -40,7 +40,7 @@ displayed_sidebar: docs
 読み込みプロジェクトには、読み込むテーブルやフィールド、区切り符号のような読み込みに関するすべてのパラメターが含まれています。*project*引数にはXMLで記述されたテキスト変数、定義済みのDOM要素への参照を格納したテキスト変数、またはBLOBのいずれかを渡せます。プロジェクトはプログラム (XMLフォーマットのプロジェクトのみ)、または読み込みダイアログボックスで事前に定義済みのパラメターをロードすることで作成できます。後者の場合、2つの方法を利用できます:
 
 * 空のプロジェクト引数およびオプションの *\** 付きで**IMPORT DATA**コマンドを使用し、ダイアログでの設定内容を*project*引数に受け取って、それをテキストまたはBLOBフィールドに格納します (後述)。この方法ではプロジェクトをデータファイルに保存できます。
-* プロジェクトをディスクに保存し、[DOM Parse XML source](dom-parse-xml-source.md)コマンド等を使用してロードします。そしてその参照を*project*引数に渡します。
+* プロジェクトをディスクに保存し、[DOM Parse XML source](../commands/dom-parse-xml-source)コマンド等を使用してロードします。そしてその参照を*project*引数に渡します。
 
 **互換性に関する注意:** 4D v12より、読み込みプロジェクトはXMLにエンコードされるようになりました。4Dは以前のバージョンで作成された読み込みプロジェクト (BLOB形式) を開くことができます。しかし4D v12以降で作成されたプロジェクトをv11以前で開くことはできません。読み込みファイルを扱う際は、以降テキスト変数を使用することをお勧めします。
 
@@ -56,10 +56,10 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[EXPORT DATA](export-data.md)  
-[IMPORT DIF](import-dif.md)  
-[IMPORT SYLK](import-sylk.md)  
-[IMPORT TEXT](import-text.md)  
+[EXPORT DATA](../commands/export-data)  
+[IMPORT DIF](../commands/import-dif)  
+[IMPORT SYLK](../commands/import-sylk)  
+[IMPORT TEXT](../commands/import-text)  
 
 ## プロパティ
 

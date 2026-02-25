@@ -1,4 +1,4 @@
----
+﻿---
 id: is-user-deleted
 title: Is user deleted
 slug: /commands/is-user-deleted
@@ -38,9 +38,9 @@ Si no tiene privilegios de acceso para llamar al comando Is user deleted o si ot
 
 ## Ver también 
 
-[DELETE USER](delete-user.md)  
-[GET USER PROPERTIES](get-user-properties.md)  
-[Set user properties](set-user-properties.md)  
+[DELETE USER](../commands/delete-user)  
+[GET USER PROPERTIES](../commands/get-user-properties)  
+[Set user properties](../commands/set-user-properties)  
 
 ## Propiedades
 

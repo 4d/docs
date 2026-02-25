@@ -1,4 +1,4 @@
----
+﻿---
 id: get-picture-file-name
 title: Get picture file name
 slug: /commands/get-picture-file-name
@@ -30,13 +30,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Get picture file name.Summary-->La commande **Get picture file name** retourne le nom par défaut courant de l’image passée en paramètre.<!-- END REF--> 
 
-Le nom par défaut est utilisé lors de l’exportation de l’image dans un fichier disque. Il peut être défini automatiquement à partir du nom d’origine du fichier image importé dans le champ ou la variable image, ou à l’aide de la commande [SET PICTURE FILE NAME](set-picture-file-name.md). Pour plus d’informations, reportez-vous au manuel *Mode Développement*. 
+Le nom par défaut est utilisé lors de l’exportation de l’image dans un fichier disque. Il peut être défini automatiquement à partir du nom d’origine du fichier image importé dans le champ ou la variable image, ou à l’aide de la commande [SET PICTURE FILE NAME](../commands/set-picture-file-name). Pour plus d’informations, reportez-vous au manuel *Mode Développement*. 
 
 Si l’image n’a pas de nom par défaut, la commande retourne une chaîne vide. 
 
 ## Voir aussi 
 
-[SET PICTURE FILE NAME](set-picture-file-name.md)  
+[SET PICTURE FILE NAME](../commands/set-picture-file-name)  
 
 ## Propriétés
 

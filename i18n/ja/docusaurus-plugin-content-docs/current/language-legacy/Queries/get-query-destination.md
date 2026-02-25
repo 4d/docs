@@ -1,4 +1,4 @@
----
+﻿---
 id: get-query-destination
 title: GET QUERY DESTINATION
 slug: /commands/get-query-destination
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.GET QUERY DESTINATION.Summary-->**GET QUERY DESTINATION**コマンドは実行中のプロセスのクエリ結果の格納先を返します。<!-- END REF-->デフォルトでクエリの結果はカレントセレクションとして反映されます。しかしこの動作は[SET QUERY DESTINATION](set-query-destination.md)コマンドを使用して変更できます。
+<!--REF #_command_.GET QUERY DESTINATION.Summary-->**GET QUERY DESTINATION**コマンドは実行中のプロセスのクエリ結果の格納先を返します。<!-- END REF-->デフォルトでクエリの結果はカレントセレクションとして反映されます。しかしこの動作は[SET QUERY DESTINATION](../commands/set-query-destination)コマンドを使用して変更できます。
 
 *destinationType* 引数にはクエリの格納先を示す値が、そして *destinationObject* 引数には格納先の名前が返されます (指定されている場合)。*destinationType* に返される値は*Queries*テーマの定数と比較できます:
 
@@ -67,7 +67,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[SET QUERY DESTINATION](set-query-destination.md)  
+[SET QUERY DESTINATION](../commands/set-query-destination)  
 
 ## プロパティ
 

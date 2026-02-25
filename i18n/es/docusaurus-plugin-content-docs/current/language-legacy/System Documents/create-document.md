@@ -1,4 +1,4 @@
----
+﻿---
 id: create-document
 title: Create document
 slug: /commands/create-document
@@ -50,9 +50,9 @@ Si no quiere restringir los archivos mostrados a uno o a más tipos, pase "\*" (
 
 En Windows pase una extensión de archivo Windows o un tipo de archivo Mac OS asociado con la ayuda del comando *\_o\_MAP FILE TYPES*. Si quiere crear un documento sin extensión, un documento con varias extensiones, o un documento con una extensión de más de tres caracteres, no utilice el parámetro *elTipo* y pase el nombre completo en *documento* (ver ejemplo 2).
 
-Una vez haya creado y abierto un documento, puede escribir o leer los valores del documento utilizando los comandos [RECEIVE PACKET](receive-packet.md) y [SEND PACKET](send-packet.md) que puede combinar con los comandos [Get document position](get-document-position.md) y [SET DOCUMENT POSITION](set-document-position.md) para acceder directamente a ciertas partes del documento.
+Una vez haya creado y abierto un documento, puede escribir o leer los valores del documento utilizando los comandos [RECEIVE PACKET](../commands/receive-packet) y [SEND PACKET](../commands/send-packet) que puede combinar con los comandos [Get document position](../commands/get-document-position) y [SET DOCUMENT POSITION](../commands/set-document-position) para acceder directamente a ciertas partes del documento.
 
-No olvide llamar finalmente a [CLOSE DOCUMENT](close-document.md) para el documento.
+No olvide llamar finalmente a [CLOSE DOCUMENT](../commands/close-document) para el documento.
 
 ## Ejemplo 1 
 
@@ -83,8 +83,8 @@ Si el documento se crea correctamente, la variable sistema OK toma el valor 1 y 
 
 ## Ver también 
 
-[Append document](append-document.md)  
-[Open document](open-document.md)  
+[Append document](../commands/append-document)  
+[Open document](../commands/open-document)  
 
 ## Propiedades
 

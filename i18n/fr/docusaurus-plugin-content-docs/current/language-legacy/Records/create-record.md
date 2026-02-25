@@ -1,4 +1,4 @@
----
+﻿---
 id: create-record
 title: CREATE RECORD
 slug: /commands/create-record
@@ -17,11 +17,11 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.CREATE RECORD.Summary-->**CREATE RECORD** crée un nouvel enregistrement vide pour *laTable*, mais ne l'affiche pas à l'écran.<!-- END REF--> Vous devez utiliser la commande [ADD RECORD](add-record.md) pour créer un nouvel enregistrement et l'afficher dans un formulaire entrée. 
+<!--REF #_command_.CREATE RECORD.Summary-->**CREATE RECORD** crée un nouvel enregistrement vide pour *laTable*, mais ne l'affiche pas à l'écran.<!-- END REF--> Vous devez utiliser la commande [ADD RECORD](../commands/add-record) pour créer un nouvel enregistrement et l'afficher dans un formulaire entrée. 
 
-Utilisez **CREATE RECORD** plutôt que [ADD RECORD](add-record.md) lorsque les valeurs de l'enregistrement sont entrées par programmation. Le nouvel enregistrement devient l'enregistrement courant mais la sélection courante n'est pas modifiée.
+Utilisez **CREATE RECORD** plutôt que [ADD RECORD](../commands/add-record) lorsque les valeurs de l'enregistrement sont entrées par programmation. Le nouvel enregistrement devient l'enregistrement courant mais la sélection courante n'est pas modifiée.
 
-L'enregistrement est créé uniquement en mémoire et doit être sauvegardé à l'aide de [SAVE RECORD](save-record.md). Si vous changez d'enregistrement courant (par exemple à la suite d'une recherche) avant la sauvegarde, l'enregistrement créé est perdu.
+L'enregistrement est créé uniquement en mémoire et doit être sauvegardé à l'aide de [SAVE RECORD](../commands/save-record). Si vous changez d'enregistrement courant (par exemple à la suite d'une recherche) avant la sauvegarde, l'enregistrement créé est perdu.
 
 **Note :** Cette commande ne nécessite pas que *laTable* soit en mode lecture/écriture. Elle peut être utilisée même lorsque la table est en mode lecture seulement (cf. section *Verrouillage d'enregistrements*). 
 
@@ -45,9 +45,9 @@ L'exemple suivant archive les enregistrements datant de plus de 30 jours. Cette 
 
 ## Voir aussi 
 
-[ADD RECORD](add-record.md)  
-[MODIFY RECORD](modify-record.md)  
-[SAVE RECORD](save-record.md)  
+[ADD RECORD](../commands/add-record)  
+[MODIFY RECORD](../commands/modify-record)  
+[SAVE RECORD](../commands/save-record)  
 
 ## Propriétés
 

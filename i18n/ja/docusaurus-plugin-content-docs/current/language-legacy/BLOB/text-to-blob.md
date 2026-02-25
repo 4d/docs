@@ -1,4 +1,4 @@
----
+﻿---
 id: text-to-blob
 title: TEXT TO BLOB
 slug: /commands/text-to-blob
@@ -51,7 +51,7 @@ displayed_sidebar: docs
 
 * “UTF8”から始まる定数は、Unicodeモードのアプリケーションでのみ使用できます。
 * “Mac”から始まる定数は、32 KBまでのテキストを扱えます。
-* UTF-8以外の文字セットを使用するには[CONVERT FROM TEXT](convert-from-text.md)コマンドを使用します。
+* UTF-8以外の文字セットを使用するには[CONVERT FROM TEXT](../commands/convert-from-text)コマンドを使用します。
 
 これらのフォーマットについて説明します:
 
@@ -108,14 +108,14 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[BLOB to integer](blob-to-integer.md)  
-[BLOB to longint](blob-to-longint.md)  
-[BLOB to real](blob-to-real.md)  
-[BLOB to text](blob-to-text.md)  
-[CONVERT FROM TEXT](convert-from-text.md)  
-[INTEGER TO BLOB](integer-to-blob.md)  
-[LONGINT TO BLOB](longint-to-blob.md)  
-[REAL TO BLOB](real-to-blob.md)  
+[BLOB to integer](../commands/blob-to-integer)  
+[BLOB to longint](../commands/blob-to-longint)  
+[BLOB to real](../commands/blob-to-real)  
+[BLOB to text](../commands/blob-to-text)  
+[CONVERT FROM TEXT](../commands/convert-from-text)  
+[INTEGER TO BLOB](../commands/integer-to-blob)  
+[LONGINT TO BLOB](../commands/longint-to-blob)  
+[REAL TO BLOB](../commands/real-to-blob)  
 
 ## プロパティ
 

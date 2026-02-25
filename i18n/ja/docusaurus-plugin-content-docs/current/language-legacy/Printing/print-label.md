@@ -1,4 +1,4 @@
----
+﻿---
 id: print-label
 title: PRINT LABEL
 slug: /commands/print-label
@@ -42,7 +42,7 @@ displayed_sidebar: docs
 オプションの *\** または *\>* 引数を使用することで、印刷ダイアログボックスを抑制することが出来ます:
 
 * *\** 引数は、現在の印刷設定 に従い、印刷処理を行います。
-* *\>* 引数は上記に加え、現在の印刷設定を再初期化することなく印刷を行います。この設定は、以前に設定した内容を継続し、(例えばループ中で) 連続した**PRINT LABEL** コマンドを使用する時に役立ちます。この引数の使用例は [PRINT RECORD](print-record.md) コマンドの例を参照してください。
+* *\>* 引数は上記に加え、現在の印刷設定を再初期化することなく印刷を行います。この設定は、以前に設定した内容を継続し、(例えばループ中で) 連続した**PRINT LABEL** コマンドを使用する時に役立ちます。この引数の使用例は [PRINT RECORD](../commands/print-record) コマンドの例を参照してください。
 
 これらの引数はラベルウィザード使用時には効果を持たないことに注意してください。
 
@@ -118,8 +118,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[PRINT SELECTION](print-selection.md)  
-[QR REPORT](qr-report.md)  
+[PRINT SELECTION](../commands/print-selection)  
+[QR REPORT](../commands/qr-report)  
 
 ## プロパティ
 

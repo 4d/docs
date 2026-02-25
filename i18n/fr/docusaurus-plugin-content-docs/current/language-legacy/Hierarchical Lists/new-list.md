@@ -1,4 +1,4 @@
----
+﻿---
 id: new-list
 title: New list
 slug: /commands/new-list
@@ -29,33 +29,33 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New list.Summary-->La commande **New list** crée une nouvelle liste hiérarchique vide en mémoire et retourne son numéro de référence unique.<!-- END REF-->
 
-**ATTENTION :** Les listes hiérarchiques résident en mémoire. Une fois que vous en avez terminé avec une liste hiérarchique, il est important que vous l'effaciez à l'aide de la commande [CLEAR LIST](clear-list.md). Ainsi, vous libérez la mémoire occupée par la liste hiérarchique dont vous n'avez plus besoin.
+**ATTENTION :** Les listes hiérarchiques résident en mémoire. Une fois que vous en avez terminé avec une liste hiérarchique, il est important que vous l'effaciez à l'aide de la commande [CLEAR LIST](../commands/clear-list). Ainsi, vous libérez la mémoire occupée par la liste hiérarchique dont vous n'avez plus besoin.
 
 D'autres commandes vous permettent de créer des listes hiérarchiques :
 
-* [Copy list](copy-list.md) crée une nouvelle liste en dupliquant une liste existante.
-* [Load list](load-list.md) crée une nouvelle liste en chargeant une énumération créée (manuellement ou par programmation) dans l'éditeur d'énumérations du mode Développement.
-* [BLOB to list](blob-to-list.md) crée une nouvelle liste à partir du contenu d'un BLOB dans lequel une liste avait été préalablement stockée.
+* [Copy list](../commands/copy-list) crée une nouvelle liste en dupliquant une liste existante.
+* [Load list](../commands/load-list) crée une nouvelle liste en chargeant une énumération créée (manuellement ou par programmation) dans l'éditeur d'énumérations du mode Développement.
+* [BLOB to list](../commands/blob-to-list) crée une nouvelle liste à partir du contenu d'un BLOB dans lequel une liste avait été préalablement stockée.
 
 Une fois que vous avez créé une liste hiérarchique à l'aide de la commande **New list**, vous pouvez :
 
-* Ajouter des éléments à la liste à l'aide des commandes [APPEND TO LIST](append-to-list.md) et [INSERT IN LIST](insert-in-list.md).
-* Supprimer des éléments de cette liste à l'aide de la commande [DELETE FROM LIST](delete-from-list.md).
+* Ajouter des éléments à la liste à l'aide des commandes [APPEND TO LIST](../commands/append-to-list) et [INSERT IN LIST](../commands/insert-in-list).
+* Supprimer des éléments de cette liste à l'aide de la commande [DELETE FROM LIST](../commands/delete-from-list).
 
 ## Exemple 
 
-Reportez-vous à l'exemple de la commande [APPEND TO LIST](append-to-list.md).
+Reportez-vous à l'exemple de la commande [APPEND TO LIST](../commands/append-to-list).
 
 ## Voir aussi 
 
-[APPEND TO LIST](append-to-list.md)  
-[BLOB to list](blob-to-list.md)  
-[CLEAR LIST](clear-list.md)  
-[Copy list](copy-list.md)  
-[DELETE FROM LIST](delete-from-list.md)  
-[INSERT IN LIST](insert-in-list.md)  
-[LIST TO BLOB](list-to-blob.md)  
-[Load list](load-list.md)  
+[APPEND TO LIST](../commands/append-to-list)  
+[BLOB to list](../commands/blob-to-list)  
+[CLEAR LIST](../commands/clear-list)  
+[Copy list](../commands/copy-list)  
+[DELETE FROM LIST](../commands/delete-from-list)  
+[INSERT IN LIST](../commands/insert-in-list)  
+[LIST TO BLOB](../commands/list-to-blob)  
+[Load list](../commands/load-list)  
 
 ## Propriétés
 

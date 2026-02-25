@@ -1,4 +1,4 @@
----
+﻿---
 id: difference
 title: DIFFERENCE
 slug: /commands/difference
@@ -55,8 +55,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[INTERSECTION](intersection.md)  
-[UNION](union.md)  
+[INTERSECTION](../commands/intersection)  
+[UNION](../commands/union)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-on-command
 title: QR ON COMMAND
 slug: /commands/qr-on-command
@@ -41,21 +41,21 @@ Si *area* es igual a cero, *nomMetodo* se aplicará a todas las áreas del edito
 
 | Constante            | Tipo         | Valor | Comentario                                                                  |  
 | -------------------- | ------------ | ----- | --------------------------------------------------------------------------- |  
-| qr cmd generate      | Entero largo | 2008  | Compatible editor 64 bits (uso del comando [QR RUN](qr-run.md) recomendado) |  
+| qr cmd generate      | Entero largo | 2008  | Compatible editor 64 bits (uso del comando [QR RUN](../commands/qr-run) recomendado) |  
 | qr cmd page setup    | Entero largo | 2006  | Compatible editor 64 bits                                                   |  
 | qr cmd print preview | Entero largo | 2007  | Compatible editor 64 bits                                                   |
 
 **Nota:** si planea compilar la base, es necesario declarar explícitamente los parámetros *$1* y *$2* como Enteros largos, incluso si no los utiliza.
 
-Si quiere que el comando inicial se ejecute, debe incluir la siguiente instrucción en el método: [QR EXECUTE COMMAND](qr-execute-command.md)($1;$2).
+Si quiere que el comando inicial se ejecute, debe incluir la siguiente instrucción en el método: [QR EXECUTE COMMAND](../commands/qr-execute-command)($1;$2).
 
 Si pasa un número de *area* inválido, se genera el error -9850.
 
 ## Ver también 
 
 *QR Comandos*  
-[QR EXECUTE COMMAND](qr-execute-command.md)  
-[QR Get command status](qr-get-command-status.md)  
+[QR EXECUTE COMMAND](../commands/qr-execute-command)  
+[QR Get command status](../commands/qr-get-command-status)  
 
 ## Propiedades
 

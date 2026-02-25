@@ -1,4 +1,4 @@
----
+﻿---
 id: write-picture-file
 title: WRITE PICTURE FILE
 slug: /commands/write-picture-file
@@ -34,11 +34,11 @@ displayed_sidebar: docs
 
 You can pass in *fileName* the full pathname to the file to create, or a file name only. If you just pass the file name, the file will be located next to the database structure file. The file extension has to be indicated.
 
-If an empty string ("") is passed in *fileName*, the standard Save file dialog box is displayed and the user can indicate the name, location and format of the file to create. If a default name is associated with the Picture field, it is provided in the dialog box (see the [SET PICTURE FILE NAME](set-picture-file-name.md) command). 
+If an empty string ("") is passed in *fileName*, the standard Save file dialog box is displayed and the user can indicate the name, location and format of the file to create. If a default name is associated with the Picture field, it is provided in the dialog box (see the [SET PICTURE FILE NAME](../commands/set-picture-file-name) command). 
 
 You will pass in *picture* the picture variable or field which contains the picture to save on disk.
 
-The optional *codec* parameter can be used to define the format in which the picture will be saved. A Codec can be an extension (for example, “.gif”) or a Mime type (for example “image/jpeg”). You can get a list of available Codecs via the [PICTURE CODEC LIST](picture-codec-list.md) command.
+The optional *codec* parameter can be used to define the format in which the picture will be saved. A Codec can be an extension (for example, “.gif”) or a Mime type (for example “image/jpeg”). You can get a list of available Codecs via the [PICTURE CODEC LIST](../commands/picture-codec-list) command.
 
 If you omit the *codec* parameter, the command will attempt to determine the codec based on the extension of the file name passed in the *fileName* parameter. For example, if you pass the statement:  
 
@@ -56,10 +56,10 @@ If the command is executed successfully, the system variable Document contains t
 
 ## See also 
 
-[PICTURE TO BLOB](picture-to-blob.md)  
+[PICTURE TO BLOB](../commands/picture-to-blob)  
 *Pictures*  
-[READ PICTURE FILE](read-picture-file.md)  
-[SET PICTURE FILE NAME](set-picture-file-name.md)  
+[READ PICTURE FILE](../commands/read-picture-file)  
+[SET PICTURE FILE NAME](../commands/set-picture-file-name)  
 
 ## Properties
 

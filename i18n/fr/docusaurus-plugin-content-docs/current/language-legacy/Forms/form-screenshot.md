@@ -1,4 +1,4 @@
----
+﻿---
 id: form-screenshot
 title: FORM SCREENSHOT
 slug: /commands/form-screenshot
@@ -43,7 +43,7 @@ Par défaut, la commande capture la page 1 du formulaire. Si vous souhaitez capt
 **Notes :** 
 
 * Les zones Web ne sont pas dessinées dans la capture écran retournée par la commande.
-* Les deux premiers paramètres de cette commande étant optionnels, il n'est pas possible de passer directement comme argument une fonction retournant un pointeur telle que [Current form table](current-form-table.md)\-> ou [Table](table.md)\->. Cette syntaxe fonctionnera en mode interprété mais sera rejetée lors de la compilation. Il est nécessaire dans ce cas d'utiliser une variable pointeur intermédiaire. Pour plus d'informations, reportez-vous au paragraphe "*Utilisation directe de commandes retournant des pointeurs*".
+* Les deux premiers paramètres de cette commande étant optionnels, il n'est pas possible de passer directement comme argument une fonction retournant un pointeur telle que [Current form table](../commands/current-form-table)\-> ou [Table](../commands/table)\->. Cette syntaxe fonctionnera en mode interprété mais sera rejetée lors de la compilation. Il est nécessaire dans ce cas d'utiliser une variable pointeur intermédiaire. Pour plus d'informations, reportez-vous au paragraphe "*Utilisation directe de commandes retournant des pointeurs*".
 
 ## Voir aussi 
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-row-color-as-number
 title: LISTBOX Get row color as number
 slug: /commands/listbox-get-row-color-as-number
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 **LISTBOX Get row color as number**コマンドは、 *object* と *\** によって指定されたリストボックス内の、行またはセルの色を、0x00rrggbb フォーマットの数値で返します。
 
-**注:** カラーをCSS 文字列で取得したい場合、[LISTBOX Get row color](listbox-get-row-color.md) コマンドを使用する必要があります。カラーフォーマットについての詳細な情報については、[OBJECT SET RGB COLORS](object-set-rgb-colors.md) コマンドの詳細を参照してください。
+**注:** カラーをCSS 文字列で取得したい場合、[LISTBOX Get row color](../commands/listbox-get-row-color) コマンドを使用する必要があります。カラーフォーマットについての詳細な情報については、[OBJECT SET RGB COLORS](../commands/object-set-rgb-colors) コマンドの詳細を参照してください。
 
 任意の *\** 演算子を渡した場合、 *object* 引数でオブジェクト名を文字列で指定します。省略時には *object* 引数で変数を指定します。  
 対象がリストボックスなのか列なのかを、 object 引数で指定します。
@@ -70,8 +70,8 @@ displayed_sidebar: docs
 ## 参照 
 
 *List Box*  
-[LISTBOX Get row color](listbox-get-row-color.md)  
-[LISTBOX SET ROW COLOR](listbox-set-row-color.md)  
+[LISTBOX Get row color](../commands/listbox-get-row-color)  
+[LISTBOX SET ROW COLOR](../commands/listbox-set-row-color)  
 
 ## プロパティ
 

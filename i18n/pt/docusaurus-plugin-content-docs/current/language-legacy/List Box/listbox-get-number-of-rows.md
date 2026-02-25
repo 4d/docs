@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-number-of-rows
 title: LISTBOX Get number of rows
 slug: /commands/listbox-get-number-of-rows
@@ -41,8 +41,8 @@ Se passa o parâmetro opcional *\**, indica que o parâmetro *objeto* é um nome
 
 ## Ver também 
 
-[LISTBOX DELETE ROWS](listbox-delete-rows.md)  
-[LISTBOX INSERT ROWS](listbox-insert-rows.md)  
+[LISTBOX DELETE ROWS](../commands/listbox-delete-rows)  
+[LISTBOX INSERT ROWS](../commands/listbox-insert-rows)  
 
 ## Propriedades
 

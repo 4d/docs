@@ -1,4 +1,4 @@
----
+﻿---
 id: query-selection-by-formula
 title: QUERY SELECTION BY FORMULA
 slug: /commands/query-selection-by-formula
@@ -31,18 +31,18 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUERY SELECTION BY FORMULA.Summary-->**QUERY SELECTION BY FORMULA** looks for records in *aTable*.<!-- END REF-->changes the current selection of *aTable* for the current process and makes the first record of the new selection the current record. 
 
-**QUERY SELECTION BY FORMULA** performs the same actions as [QUERY BY FORMULA](query-by-formula.md). The difference between the two commands is the scope of the query:
+**QUERY SELECTION BY FORMULA** performs the same actions as [QUERY BY FORMULA](../commands/query-by-formula). The difference between the two commands is the scope of the query:
 
-* [QUERY BY FORMULA](query-by-formula.md) looks for records among all the records in the table.
+* [QUERY BY FORMULA](../commands/query-by-formula) looks for records among all the records in the table.
 * **QUERY SELECTION BY FORMULA** looks for records among the records currently selected in the table.
 
-For more information, see the description of the [QUERY BY FORMULA](query-by-formula.md) command.
+For more information, see the description of the [QUERY BY FORMULA](../commands/query-by-formula) command.
 
 ## See also 
 
-[QUERY](query.md)  
-[QUERY BY FORMULA](query-by-formula.md)  
-[QUERY SELECTION](query-selection.md)  
+[QUERY](../commands/query)  
+[QUERY BY FORMULA](../commands/query-by-formula)  
+[QUERY SELECTION](../commands/query-selection)  
 
 ## Properties
 

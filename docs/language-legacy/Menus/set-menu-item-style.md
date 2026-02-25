@@ -1,4 +1,4 @@
----
+﻿---
 id: set-menu-item-style
 title: SET MENU ITEM STYLE
 slug: /commands/set-menu-item-style
@@ -54,7 +54,7 @@ The `Underline` style is not supported on Windows with [Fluent UI](../../FormEdi
 
 ## See also 
 
-[Get menu item style](get-menu-item-style.md)  
+[Get menu item style](../commands/get-menu-item-style)  
 
 ## Properties
 

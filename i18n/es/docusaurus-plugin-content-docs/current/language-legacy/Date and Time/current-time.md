@@ -1,4 +1,4 @@
----
+﻿---
 id: current-time
 title: Current time
 slug: /commands/current-time
@@ -48,9 +48,9 @@ El siguiente ejemplo extrae las horas, minutos y segundos de la hora actual:
 
 ## Ver también 
 
-[Milliseconds](milliseconds.md)  
+[Milliseconds](../commands/milliseconds)  
 [String](../commands/string)  
-[Tickcount](tickcount.md)  
+[Tickcount](../commands/tickcount)  
 
 ## Propiedades
 

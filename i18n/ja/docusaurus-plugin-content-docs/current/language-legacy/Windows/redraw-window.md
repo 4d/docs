@@ -1,4 +1,4 @@
----
+﻿---
 id: redraw-window
 title: REDRAW WINDOW
 slug: /commands/redraw-window
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ERASE WINDOW](erase-window.md)  
+[ERASE WINDOW](../commands/erase-window)  
 
 ## プロパティ
 

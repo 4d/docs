@@ -1,4 +1,4 @@
----
+﻿---
 id: form-event
 title: FORM Event
 slug: /commands/form-event
@@ -99,7 +99,7 @@ The resulting list box when rows are selected:
 ## See also 
 
 [Form Events](../../Events/overview.md)
-[Form event code](form-event-code.md)  
+[Form event code](../commands/form-event-code)  
 
 ## Properties
 

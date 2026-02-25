@@ -1,4 +1,4 @@
----
+﻿---
 id: get-menu-item-style
 title: Get menu item style
 slug: /commands/get-menu-item-style
@@ -58,7 +58,7 @@ Get menu item style はテーマの定義済み定数 (ひとつまたは和) �
 
 ## 参照 
 
-[SET MENU ITEM STYLE](set-menu-item-style.md)  
+[SET MENU ITEM STYLE](../commands/set-menu-item-style)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: post-event
 title: POST EVENT
 slug: /commands/post-event
@@ -47,7 +47,7 @@ Passe uma das próximas constantes pré-definidas em *que*:
 
 Se o evento for um evento relacionado com o mouse, passe *0* (zero) em *mensagem*. Se o evento for um evento relacionado com o teclado, passe o código do caractere simulado em *mensagem*.  
   
-Geralmente, se passa o valor retornado por [Tickcount](tickcount.md) em *quando*.  
+Geralmente, se passa o valor retornado por [Tickcount](../commands/tickcount) em *quando*.  
 Se o evento for um evento relacionado com o mouse, passe as coordenadas horizontal e vertical do clique em *mouseX* e *mouseY*.  
   
 No parâmetro *modificadores*, passe uma constante ou uma combinação de constantes do tema *Eventos (Modificadores)*.   
@@ -81,8 +81,8 @@ Se passa o parâmetro *processo,* o evento é enviado através do processo cujo 
 
 ## Ver também 
 
-[POST CLICK](post-click.md)  
-[POST KEY](post-key.md)  
+[POST CLICK](../commands/post-click)  
+[POST KEY](../commands/post-key)  
 
 ## Propriedades
 

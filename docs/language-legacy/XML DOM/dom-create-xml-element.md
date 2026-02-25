@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-create-xml-element
 title: DOM Create XML element
 slug: /commands/dom-create-xml-element
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DOM Create XML element.Summary-->The **DOM Create XML element** command creates a new element in the XML element *elementRef* in the path set by the *xPath* parameter and adds attributes to it if necessary.<!-- END REF--> 
 
-Pass the root element reference in *elementRef* (created, for example, using the [DOM Create XML Ref](dom-create-xml-ref.md) command).
+Pass the root element reference in *elementRef* (created, for example, using the [DOM Create XML Ref](../commands/dom-create-xml-ref) command).
 
 In *xPath*, pass the path of the element to create, expressed using the XPath notation (for more information, see the *Support of XPath notation (DOM)* section). The following path expressions are supported: 
 
@@ -50,7 +50,7 @@ It is possible to pass a simple item name directly in the *xPath* parameter in o
 
 If any path elements do not exist, they are created. If path elements already exist, a new node is added.
 
-**Note:** If you have defined one or more namespaces for the tree set using *elementRef* (see the [DOM Create XML Ref](dom-create-xml-ref.md) command), you must precede the *xPath* parameter with the namespace to be used (for example, “MyNameSpace:MyElement”).
+**Note:** If you have defined one or more namespaces for the tree set using *elementRef* (see the [DOM Create XML Ref](../commands/dom-create-xml-ref) command), you must precede the *xPath* parameter with the namespace to be used (for example, “MyNameSpace:MyElement”).
 
 You can pass attribute/attribute value pairs (in the form of variables, fields or literal values) in the optional *attrName* and *attrValue* parameters. You can pass as many pairs as you want.
 
@@ -187,9 +187,9 @@ An error is generated when:
 
 ## See also 
 
-[DOM Create XML element arrays](dom-create-xml-element-arrays.md)  
-[DOM Get XML element](dom-get-xml-element.md)  
-[DOM REMOVE XML ELEMENT](dom-remove-xml-element.md)  
+[DOM Create XML element arrays](../commands/dom-create-xml-element-arrays)  
+[DOM Get XML element](../commands/dom-get-xml-element)  
+[DOM REMOVE XML ELEMENT](../commands/dom-remove-xml-element)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-multiline
 title: OBJECT SET MULTILINE
 slug: /commands/object-set-multiline
@@ -53,7 +53,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT Get multiline](object-get-multiline.md)  
+[OBJECT Get multiline](../commands/object-get-multiline)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: create-set
 title: CREATE SET
 slug: /commands/create-set
@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.CREATE SET.Summary-->**CREATE SET** crée un nouvel ensemble, *ensemble*, pour *laTable*, et y place la sélection courante.<!-- END REF--> Le pointeur d'enregistrement courant de la table est sauvegardé avec *ensemble*. Si *ensemble* est passé à la commande [USE SET](use-set.md), la sélection courante et l'enregistrement courant sont restitués. Comme pour tout ensemble, il ne peut y avoir de tri, et lorsque *ensemble* est appelé, l'ordre par défaut est utilisé. Si un ensemble du même nom existe déjà, il est effacé et remplacé par le nouvel ensemble.
+<!--REF #_command_.CREATE SET.Summary-->**CREATE SET** crée un nouvel ensemble, *ensemble*, pour *laTable*, et y place la sélection courante.<!-- END REF--> Le pointeur d'enregistrement courant de la table est sauvegardé avec *ensemble*. Si *ensemble* est passé à la commande [USE SET](../commands/use-set), la sélection courante et l'enregistrement courant sont restitués. Comme pour tout ensemble, il ne peut y avoir de tri, et lorsque *ensemble* est appelé, l'ordre par défaut est utilisé. Si un ensemble du même nom existe déjà, il est effacé et remplacé par le nouvel ensemble.
 
 ## Exemple 
 
@@ -32,8 +32,8 @@ L'exemple suivant crée un ensemble après qu'une recherche ait été effectuée
 
 ## Voir aussi 
 
-[CLEAR SET](clear-set.md)  
-[CREATE EMPTY SET](create-empty-set.md)  
+[CLEAR SET](../commands/clear-set)  
+[CREATE EMPTY SET](../commands/create-empty-set)  
 
 ## Propriétés
 

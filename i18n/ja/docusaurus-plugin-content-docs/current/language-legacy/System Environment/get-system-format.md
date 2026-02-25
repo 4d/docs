@@ -1,4 +1,4 @@
----
+﻿---
 id: get-system-format
 title: GET SYSTEM FORMAT
 slug: /commands/get-system-format
@@ -53,7 +53,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT SET FORMAT](object-set-format.md)  
+[OBJECT SET FORMAT](../commands/object-set-format)  
 
 ## プロパティ
 

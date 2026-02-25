@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-get-xml-element-value
 title: DOM GET XML ELEMENT VALUE
 slug: /commands/dom-get-xml-element-value
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 オプションの *cDATA* 引数を使用して、*elementRef* 要素のCDATAセクションの値を所得できます。*elementValue* 引数のように、4Dは取得した値を渡した変数と同じ型に変換します。変数の型が定義されていない場合、値はデフォルトでテキスト型で返されます。
 
-**Note:** *elementRef*で指定された要素が[DOM SET XML ELEMENT VALUE](dom-set-xml-element-value.md) コマンドで処理されたBLOBの場合、それは自動でBase64でエンコードされています。このコマンドは自動でBase64のデコードを試みます。
+**Note:** *elementRef*で指定された要素が[DOM SET XML ELEMENT VALUE](../commands/dom-set-xml-element-value) コマンドで処理されたBLOBの場合、それは自動でBase64でエンコードされています。このコマンドは自動でBase64のデコードを試みます。
 
 ## 例題 
 
@@ -54,9 +54,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[DOM Get XML element](dom-get-xml-element.md)  
-[DOM GET XML ELEMENT NAME](dom-get-xml-element-name.md)  
-[DOM SET XML ELEMENT VALUE](dom-set-xml-element-value.md)  
+[DOM Get XML element](../commands/dom-get-xml-element)  
+[DOM GET XML ELEMENT NAME](../commands/dom-get-xml-element-name)  
+[DOM SET XML ELEMENT VALUE](../commands/dom-set-xml-element-value)  
 
 ## プロパティ
 

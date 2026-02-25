@@ -1,4 +1,4 @@
----
+﻿---
 id: last-field-number
 title: Last field number
 slug: /commands/last-field-number
@@ -40,10 +40,10 @@ El siguiente método de proyecto crea el array *asCampos*, con los nombres de lo
 
 ## Ver también 
 
-[Field name](field-name.md)  
-[GET FIELD PROPERTIES](get-field-properties.md)  
-[Last table number](last-table-number.md)  
-[Is field number valid](is-field-number-valid.md)  
+[Field name](../commands/field-name)  
+[GET FIELD PROPERTIES](../commands/get-field-properties)  
+[Last table number](../commands/last-table-number)  
+[Is field number valid](../commands/is-field-number-valid)  
 
 ## Propiedades
 

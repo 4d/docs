@@ -1,4 +1,4 @@
----
+﻿---
 id: array-blob
 title: ARRAY BLOB
 slug: /commands/array-blob
@@ -39,7 +39,7 @@ Le paramètre *taille2* est optionnel. Si vous le spécifiez, cette commande cr�
 
 Lorsque vous appliquez la commande **ARRAY BLOB** à un tableau existant :
 
-* Si vous agrandissez sa taille, les éléments existants ne sont pas modifiés, les nouveaux éléments sont initialisés à un BLOB vide ([BLOB size](blob-size.md) \= 0).
+* Si vous agrandissez sa taille, les éléments existants ne sont pas modifiés, les nouveaux éléments sont initialisés à un BLOB vide ([BLOB size](../commands/blob-size) \= 0).
 * Si vous réduisez sa taille, les éléments du "bas" du tableau sont supprimés et perdus.
 
 ## Exemple 1 

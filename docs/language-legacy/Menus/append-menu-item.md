@@ -1,4 +1,4 @@
----
+﻿---
 id: append-menu-item
 title: APPEND MENU ITEM
 slug: /commands/append-menu-item
@@ -63,11 +63,11 @@ You define the items to be appended with the parameter *itemText* as follows:
 
 If you pass the *\** parameter, the "special" characters (*; ( !*...) included in the item text will be considered as standard characters and not as metacharacters. This means that you can create menu items like "**Copy (special)...**" or "**Find/Replace...**". Note that when the *\** parameter is passed, you cannot create several items in a single call since the ";" character is considered as a standard character. 
 
-**Note:** The [GET MENU ITEMS](get-menu-items.md) and [Get menu item](get-menu-item.md) commands will or will not return any metacharacters in the text of a menu item depending on how it was created: if it was created with the *\** option, metacharacters will be returned as standard characters.
+**Note:** The [GET MENU ITEMS](../commands/get-menu-items) and [Get menu item](../commands/get-menu-item) commands will or will not return any metacharacters in the text of a menu item depending on how it was created: if it was created with the *\** option, metacharacters will be returned as standard characters.
 
-The optional *subMenu* parameter can be used to indicate a menu as the added item and thus position a hierarchical submenu. You must pass a menu reference ([MenuRef](# "Unique ID (16-character alphanumeric) of a menu") type string) specifying a menu created, for example, using the [Create menu](create-menu.md) command. If the command adds more than one menu item, the submenu is associated with the first item.
+The optional *subMenu* parameter can be used to indicate a menu as the added item and thus position a hierarchical submenu. You must pass a menu reference ([MenuRef](# "Unique ID (16-character alphanumeric) of a menu") type string) specifying a menu created, for example, using the [Create menu](../commands/create-menu) command. If the command adds more than one menu item, the submenu is associated with the first item.
 
-**Important:** The new items do not have any associated methods or actions. These must be associated with the items using the [SET MENU ITEM PROPERTY](set-menu-item-property.md) or [SET MENU ITEM METHOD](set-menu-item-method.md) commands, or the items can also be managed from within a form method using the [Menu selected](menu-selected.md) command.
+**Important:** The new items do not have any associated methods or actions. These must be associated with the items using the [SET MENU ITEM PROPERTY](../commands/set-menu-item-property) or [SET MENU ITEM METHOD](../commands/set-menu-item-method) commands, or the items can also be managed from within a form method using the [Menu selected](../commands/menu-selected) command.
 
 ## Example 
 
@@ -91,9 +91,9 @@ Then, in any form or project method, you can write:
 
 ## See also 
 
-[DELETE MENU ITEM](delete-menu-item.md)  
-[INSERT MENU ITEM](insert-menu-item.md)  
-[SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
+[DELETE MENU ITEM](../commands/delete-menu-item)  
+[INSERT MENU ITEM](../commands/insert-menu-item)  
+[SET MENU ITEM PARAMETER](../commands/set-menu-item-parameter)  
 
 ## Properties
 

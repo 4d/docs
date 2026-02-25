@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-array
 title: LISTBOX SET ARRAY
 slug: /commands/listbox-set-array
@@ -76,8 +76,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[LISTBOX Get array](listbox-get-array.md)  
-[LISTBOX GET ARRAYS](listbox-get-arrays.md)  
+[LISTBOX Get array](../commands/listbox-get-array)  
+[LISTBOX GET ARRAYS](../commands/listbox-get-arrays)  
 
 ## プロパティ
 

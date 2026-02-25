@@ -1,4 +1,4 @@
----
+﻿---
 id: web-stop-server
 title: WEB STOP SERVER
 slug: /commands/web-stop-server
@@ -33,7 +33,7 @@ Webサーバが起動していない場合、コマンドは何も行いませ�
 
 ## 参照 
 
-[WEB START SERVER](web-start-server.md)  
+[WEB START SERVER](../commands/web-start-server)  
 
 ## プロパティ
 

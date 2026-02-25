@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-select-row
 title: LISTBOX SELECT ROW
 slug: /commands/listbox-select-row
@@ -49,24 +49,24 @@ When the *position* parameter does not correspond exactly to an existing row num
 
 * If *position* is <0, the command does nothing, regardless of the *action* parameter value.
 * If *position* is 0 and if the *action* parameter contains lk replace selection or is omitted, all the rows of the listbox are selected. If the *action* parameter contains lk remove from selection, all the listbox rows are deselected.
-* If the *position* value is greater than the total number of rows contained in the listbox (only in the case of an array type listbox), the Boolean array associated with the listbox is automatically resized and the selection action is carried out. This mechanism means that you can use LISTBOX SELECT ROW with “standard” array management commands (such as [APPEND TO ARRAY](append-to-array.md)) that do not cause immediate synchronization of the listbox.  
+* If the *position* value is greater than the total number of rows contained in the listbox (only in the case of an array type listbox), the Boolean array associated with the listbox is automatically resized and the selection action is carried out. This mechanism means that you can use LISTBOX SELECT ROW with “standard” array management commands (such as [APPEND TO ARRAY](../commands/append-to-array)) that do not cause immediate synchronization of the listbox.  
 After execution of the method, the arrays are synchronized: if the source array of the listbox has indeed been resized, the selection action is carried out. Otherwise, the Boolean array associated with the listbox returns to its initial size and the command does nothing.
 
 **Notes:** 
 
-* If you want the list box to scroll automatically in order to display the row selected, use the [OBJECT SET SCROLL POSITION](object-set-scroll-position.md) command.
-* To switch a row into editing mode (to allow data entry), use the [EDIT ITEM](edit-item.md) command.
+* If you want the list box to scroll automatically in order to display the row selected, use the [OBJECT SET SCROLL POSITION](../commands/object-set-scroll-position) command.
+* To switch a row into editing mode (to allow data entry), use the [EDIT ITEM](../commands/edit-item) command.
 * If the number passed in *position* corresponds to a hidden row in the list box, the row is selected but not displayed.
 * If you have checked the **Hide selection highlight** option for a list box, you will need to make list box selections visible using available interface options. For more information about how to do this, see *Customizing the appearance of selections*.
 
 ## See also 
 
-[EDIT ITEM](edit-item.md)  
-[LISTBOX DELETE ROWS](listbox-delete-rows.md)  
-[LISTBOX INSERT ROWS](listbox-insert-rows.md)  
-[LISTBOX SELECT BREAK](listbox-select-break.md)  
-[LISTBOX SELECT ROWS](listbox-select-rows.md)  
-[OBJECT SET SCROLL POSITION](object-set-scroll-position.md)  
+[EDIT ITEM](../commands/edit-item)  
+[LISTBOX DELETE ROWS](../commands/listbox-delete-rows)  
+[LISTBOX INSERT ROWS](../commands/listbox-insert-rows)  
+[LISTBOX SELECT BREAK](../commands/listbox-select-break)  
+[LISTBOX SELECT ROWS](../commands/listbox-select-rows)  
+[OBJECT SET SCROLL POSITION](../commands/object-set-scroll-position)  
 
 ## Properties
 

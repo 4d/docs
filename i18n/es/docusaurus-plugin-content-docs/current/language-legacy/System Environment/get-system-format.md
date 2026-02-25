@@ -1,4 +1,4 @@
----
+﻿---
 id: get-system-format
 title: GET SYSTEM FORMAT
 slug: /commands/get-system-format
@@ -53,7 +53,7 @@ En el parámetro *formato*, pase el tipo del parámetro del que quiere conocer e
 
 ## Ver también 
 
-[OBJECT SET FORMAT](object-set-format.md)  
+[OBJECT SET FORMAT](../commands/object-set-format)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: send-packet
 title: SEND PACKET
 slug: /commands/send-packet
@@ -29,19 +29,19 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.SEND PACKET.Summary-->O comando SEND PACKET envia um pacote para uma porta serial ou a um documento.<!-- END REF--> Se *docRef* é especificado, o pacote é escrito no documento referenciado por *docRef*. Se *docRef* não for especificado, o pacote está escrito na porta serial ou no documento anteriormente aberto pelo comando [SET CHANNEL](set-channel.md). 
+<!--REF #_command_.SEND PACKET.Summary-->O comando SEND PACKET envia um pacote para uma porta serial ou a um documento.<!-- END REF--> Se *docRef* é especificado, o pacote é escrito no documento referenciado por *docRef*. Se *docRef* não for especificado, o pacote está escrito na porta serial ou no documento anteriormente aberto pelo comando [SET CHANNEL](../commands/set-channel). 
 
 Um *pacote* é apenas um pedaço de dados, geralmente uma cadeia de caracteres.
 
 Você também pode passar um BLOB no *pacote*. Isso lhe permite ignorar as restrições relacionadas com a codificação de caracteres enviados em modo texto (ver exemplo 2).
 
-**Nota:** Quando você passa um BLOB no *pacote*, o comando não leva em conta qualquer conjunto de caracteres definido pelo comando [USE CHARACTER SET](use-character-set.md). O BLOB é enviado sem nenhuma modificação.
+**Nota:** Quando você passa um BLOB no *pacote*, o comando não leva em conta qualquer conjunto de caracteres definido pelo comando [USE CHARACTER SET](../commands/use-character-set). O BLOB é enviado sem nenhuma modificação.
 
-Antes de usar SEND PACKET, você deve abrir uma porta serial ou um documento com [SET CHANNEL](set-channel.md), ou abrir um documento com um dos comandos de documento.
+Antes de usar SEND PACKET, você deve abrir uma porta serial ou um documento com [SET CHANNEL](../commands/set-channel), ou abrir um documento com um dos comandos de documento.
 
-Ao escrever um documento, o primeiro SEND PACKET começa a escrever no início do documento a menos que o documento seja aberto com [USE CHARACTER SET](use-character-set.md). Até que o documento seja fechado, cada pacote subseqüente é adicionado a quaisquer pacotes enviados anteriormente.
+Ao escrever um documento, o primeiro SEND PACKET começa a escrever no início do documento a menos que o documento seja aberto com [USE CHARACTER SET](../commands/use-character-set). Até que o documento seja fechado, cada pacote subseqüente é adicionado a quaisquer pacotes enviados anteriormente.
 
-**Nota:** Este comando é útil para um documento aberto com [SET CHANNEL](set-channel.md). Por outro lado, para um documento aberto com o [Open document](open-document.md), [Create document](create-document.md) ou [Append document](append-document.md), você pode usar os comandos [Get document position](get-document-position.md) e [SET DOCUMENT POSITION](set-document-position.md) para obter e alterar o local no documento onde a próxima escrita (SEND PACKET) ou leitura ([RECEIVE PACKET](receive-packet.md)) irá ocorrer.
+**Nota:** Este comando é útil para um documento aberto com [SET CHANNEL](../commands/set-channel). Por outro lado, para um documento aberto com o [Open document](../commands/open-document), [Create document](../commands/create-document) ou [Append document](../commands/append-document), você pode usar os comandos [Get document position](../commands/get-document-position) e [SET DOCUMENT POSITION](../commands/set-document-position) para obter e alterar o local no documento onde a próxima escrita (SEND PACKET) ou leitura ([RECEIVE PACKET](../commands/receive-packet)) irá ocorrer.
 
 ## Exemplo 1 
 
@@ -92,9 +92,9 @@ Este exemplo ilustra o envio e recuperação de caracteres estendidos através d
 
 ## Ver também 
 
-[Get document position](get-document-position.md)  
-[RECEIVE PACKET](receive-packet.md)  
-[SET DOCUMENT POSITION](set-document-position.md)  
+[Get document position](../commands/get-document-position)  
+[RECEIVE PACKET](../commands/receive-packet)  
+[SET DOCUMENT POSITION](../commands/set-document-position)  
 
 ## Propriedades
 

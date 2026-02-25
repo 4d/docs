@@ -1,4 +1,4 @@
----
+﻿---
 id: get-edited-text
 title: Get edited text
 slug: /commands/get-edited-text
@@ -77,7 +77,7 @@ End if
 ## Ver também 
 
 [Form event code](../commands/form-event-code)  
-[Is editing text](is-editing-text.md)  
+[Is editing text](../commands/is-editing-text)  
 
 ## Propriedades
 

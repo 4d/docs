@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-blob-to-report
 title: QR BLOB TO REPORT
 slug: /commands/qr-blob-to-report
@@ -54,7 +54,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[QR REPORT TO BLOB](qr-report-to-blob.md)  
+[QR REPORT TO BLOB](../commands/qr-report-to-blob)  
 
 ## プロパティ
 

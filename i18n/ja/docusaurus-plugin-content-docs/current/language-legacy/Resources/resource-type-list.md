@@ -1,4 +1,4 @@
----
+﻿---
 id: resource-type-list
 title: RESOURCE TYPE LIST
 slug: /commands/resource-type-list
@@ -89,7 +89,7 @@ RESOURCE TYPE LISTを呼び出す前に、*resTypes*配列を文字列配列ま�
 
 ## 参照 
 
-[RESOURCE LIST](resource-list.md)  
+[RESOURCE LIST](../commands/resource-list)  
 
 ## プロパティ
 

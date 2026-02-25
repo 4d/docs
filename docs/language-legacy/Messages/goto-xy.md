@@ -1,4 +1,4 @@
----
+﻿---
 id: goto-xy
 title: GOTO XY
 slug: /commands/goto-xy
@@ -18,21 +18,21 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.GOTO XY.Summary-->The **GOTO XY** command is used in conjunction with the [MESSAGE](message.md) command when you display messages in a window opened using [Open window](../commands/open-window).<!-- END REF-->  
+<!--REF #_command_.GOTO XY.Summary-->The **GOTO XY** command is used in conjunction with the [MESSAGE](../commands/message) command when you display messages in a window opened using [Open window](../commands/open-window).<!-- END REF-->  
   
 **GOTO XY** positions the character cursor (an invisible cursor) to set the location of the next message in the window.
 
-The upper-left corner is position 0,0\. The cursor is automatically placed at 0,0 when a window is opened and after [ERASE WINDOW](erase-window.md) is executed.
+The upper-left corner is position 0,0\. The cursor is automatically placed at 0,0 when a window is opened and after [ERASE WINDOW](../commands/erase-window) is executed.
 
-After **GOTO XY** positions the cursor, you can use [MESSAGE](message.md) to display characters in the window.
+After **GOTO XY** positions the cursor, you can use [MESSAGE](../commands/message) to display characters in the window.
 
 ## Example 1 
 
-See example for the [MESSAGE](message.md) command.
+See example for the [MESSAGE](../commands/message) command.
 
 ## Example 2 
 
-See example for the [Milliseconds](milliseconds.md) command.
+See example for the [Milliseconds](../commands/milliseconds) command.
 
 ## Example 3 
 
@@ -59,7 +59,7 @@ displays the following window (on Macintosh) for 30 seconds:
 
 ## See also 
 
-[MESSAGE](message.md)  
+[MESSAGE](../commands/message)  
 
 ## Properties
 

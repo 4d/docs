@@ -1,4 +1,4 @@
----
+﻿---
 id: adjust-table-cache-priority
 title: ADJUST TABLE CACHE PRIORITY
 slug: /commands/adjust-table-cache-priority
@@ -36,7 +36,7 @@ The **ADJUST TABLE CACHE PRIORITY** command modifies the *priority* value of the
 
 **Note:** This command only works in local mode (4D Server and 4D); it cannot be used in 4D remote mode. 
 
- This command handles priority for data in scalar fields only (date, number, or string types). Priority for fields of binary type (Blobs, texts, pictures, and objects) is handled by the [ADJUST BLOBS CACHE PRIORITY](adjust-blobs-cache-priority.md) command. 
+ This command handles priority for data in scalar fields only (date, number, or string types). Priority for fields of binary type (Blobs, texts, pictures, and objects) is handled by the [ADJUST BLOBS CACHE PRIORITY](../commands/adjust-blobs-cache-priority) command. 
 
 In the *priority* parameter, pass one of the following constants from the "*Cache Management*" theme:
 
@@ -60,8 +60,8 @@ You want to temporarily change the cache priority for the \[Docs\] scalar fields
 
 ## See also 
 
-[Get adjusted table cache priority](get-adjusted-table-cache-priority.md)  
-[SET TABLE CACHE PRIORITY](set-table-cache-priority.md)  
+[Get adjusted table cache priority](../commands/get-adjusted-table-cache-priority)  
+[SET TABLE CACHE PRIORITY](../commands/set-table-cache-priority)  
 
 ## Properties
 

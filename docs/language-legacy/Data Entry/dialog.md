@@ -1,4 +1,4 @@
----
+﻿---
 id: dialog
 title: DIALOG
 slug: /commands/dialog
@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 This command is designed to work with customized and advanced user interfaces based on forms. You can use it to display information coming from the database or other locations, or to provide data entry features. Unlike [ADD RECORD](../commands/add-record) or [MODIFY RECORD](../commands/modify-record), **DIALOG** gives you full control over the form, its contents and the navigation and validation buttons. 
 
-This command is typically called along with the [Open form window](open-form-window.md) to display sophisticated forms, as shown in the following example: 
+This command is typically called along with the [Open form window](../commands/open-form-window) to display sophisticated forms, as shown in the following example: 
 
 ![](../../assets/en/commands/pict3541609.en.png)
 
@@ -36,7 +36,7 @@ In the *form* parameter, you can pass:
 * the path (in POSIX syntax) to a valid .json file containing a description of the form to use;
 * an object containing a description of the form to use.
 
-Optionally, you can pass parameter(s) to the *form* using a "form data" object. Any properties of the form data object will then be available from within the form context through the [Form](form.md) command. For example, if you use a form data object containing {"version";"12"}, you will be able to get or set the value of the "version" property in the form by calling:
+Optionally, you can pass parameter(s) to the *form* using a "form data" object. Any properties of the form data object will then be available from within the form context through the [Form](../commands/form) command. For example, if you use a form data object containing {"version";"12"}, you will be able to get or set the value of the "version" property in the form by calling:
 
 ```4d
  $v:=Form.version //"12"
@@ -45,9 +45,9 @@ Optionally, you can pass parameter(s) to the *form* using a "form data" object. 
 
 To fill the "form data" object, you have two possibilities:
 
-- use the *formData* parameter. Using a local variable for *formData* allows you to safely pass parameters to your forms, whatever the calling context. In particular, if the same form is called from different places in the same process, you will always be able to access its specific values by simply calling [Form](form.md).myProperty. Moreover, since objects are passed by reference, if the user modifies a property value in the form, it will automatically be saved in the object itself.
+- use the *formData* parameter. Using a local variable for *formData* allows you to safely pass parameters to your forms, whatever the calling context. In particular, if the same form is called from different places in the same process, you will always be able to access its specific values by simply calling [Form](../commands/form).myProperty. Moreover, since objects are passed by reference, if the user modifies a property value in the form, it will automatically be saved in the object itself.
 
-- [associate a user class to the form](../../FormEditor/properties_FormProperties.md#form-class), in which case 4D will automatically instantiate an object of this class when the form will be loaded. The object properties and functions will be automatically available through the object returned by [Form](form.md). You could write for example `Form.myFunction()`.  
+- [associate a user class to the form](../../FormEditor/properties_FormProperties.md#form-class), in which case 4D will automatically instantiate an object of this class when the form will be loaded. The object properties and functions will be automatically available through the object returned by [Form](../commands/form). You could write for example `Form.myFunction()`.  
 
 :::note
 
@@ -90,7 +90,7 @@ In a form displaying the record of a person, a "Check children" button opens a d
 
 **Note:** The "Children" object field is represented only to show its structure for this example.
 
-In the verification form, you have assigned some [Form](form.md) object properties to variables:
+In the verification form, you have assigned some [Form](../commands/form) object properties to variables:
 
 ![](../../assets/en/commands/pict3541682.en.png)
 
@@ -170,8 +170,8 @@ After a call to **DIALOG**, if the dialog is accepted, OK is set to 1; if it is 
 [ADD RECORD](../commands/add-record)  
 [CALL FORM](../commands/call-form)  
 [CANCEL](../commands/cancel)  
-[Form](form.md)  
-[Open window](open-window.md)  
+[Form](../commands/form)  
+[Open window](../commands/open-window)  
 
 ## Properties
 

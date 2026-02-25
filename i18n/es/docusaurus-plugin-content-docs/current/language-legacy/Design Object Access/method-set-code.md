@@ -1,4 +1,4 @@
----
+﻿---
 id: method-set-code
 title: METHOD SET CODE
 slug: /commands/method-set-code
@@ -67,7 +67,7 @@ Cuando se llama **METHOD SET CODE**, los atributos de los métodos se reiniciali
   // %attributes = {"invisible":true,"lang":"fr","folder":"Security"}
 ```
 
-**Nota:** estos metadatos son generados automáticamente por el comando [METHOD GET CODE](method-get-code.md). Para más información sobre los atributos soportados, consulte la descripción del comando [METHOD SET ATTRIBUTES](method-set-attributes.md).
+**Nota:** estos metadatos son generados automáticamente por el comando [METHOD GET CODE](../commands/method-get-code). Para más información sobre los atributos soportados, consulte la descripción del comando [METHOD SET ATTRIBUTES](../commands/method-set-attributes).
 
 Concerniente a la propiedad "folder" de los metadatos:
 
@@ -111,7 +111,7 @@ Este ejemplo exporta e importa la totalidad de los métodos proyecto de una apli
 
 ## Ver también 
 
-[METHOD GET CODE](method-get-code.md)  
+[METHOD GET CODE](../commands/method-get-code)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: session-storage
 slug: /commands/session-storage
 title: Session storage
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 Dans *id*, indiquez l'UUID de la session pour laquelle vous souhaitez obtenir le stockage. Il est automatiquement attribué par 4D (4D Server ou, pour les sessions autonomes, 4D monoposte) et est stocké dans la propriété [**.id**](../../API/SessionClass.md#id) de l'[objet session](../../API/SessionClass.md). Si la session n'existe pas, la commande renvoie **Null**.
 
-**Note:** Vous pouvez obtenir les identifiants de session à l'aide de la commande [Process activity](process-activity.md).
+**Note:** Vous pouvez obtenir les identifiants de session à l'aide de la commande [Process activity](../commands/process-activity).
 
 L'objet renvoyé est la propriété [**.storage**](../../API/SessionClass.md#storage) de la session. Il s'agit d'un objet partagé utilisé pour stocker des informations accessibles à tous les process de la session.
 
@@ -61,7 +61,7 @@ Cette méthode modifie la valeur d'une propriété "settings" stockée dans l'ob
 
 ## Voir également
 
-[Process activity](process-activity.md)\
+[Process activity](../commands/process-activity)\
 [Session](./session.md)
 
 ## Propriétés

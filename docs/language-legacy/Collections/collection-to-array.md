@@ -1,4 +1,4 @@
----
+﻿---
 id: collection-to-array
 title: COLLECTION TO ARRAY
 slug: /commands/collection-to-array
@@ -75,7 +75,7 @@ You want to copy different property values from a collection of objects in diffe
 
 ## See also 
 
-[ARRAY TO COLLECTION](array-to-collection.md)  
+[ARRAY TO COLLECTION](../commands/array-to-collection)  
 *Type conversions between collections and 4D arrays*  
 
 ## Properties

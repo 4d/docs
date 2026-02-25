@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-destination
 title: QR GET DESTINATION
 slug: /commands/qr-get-destination
@@ -45,7 +45,7 @@ Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 
 ## Voir aussi 
 
-[QR SET DESTINATION](qr-set-destination.md)  
+[QR SET DESTINATION](../commands/qr-set-destination)  
 
 ## Propriétés
 

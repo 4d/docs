@@ -1,4 +1,4 @@
----
+﻿---
 id: path-to-object
 title: Path to object
 slug: /commands/path-to-object
@@ -147,7 +147,7 @@ Si la dernière partie du chemin est ".something", c'est considéré comme un no
 
 ## Exemple 2 
 
-Vous pouvez combiner cette commande avec [Object to path](object-to-path.md) pour renommer un fichier dans un chemin :
+Vous pouvez combiner cette commande avec [Object to path](../commands/object-to-path) pour renommer un fichier dans un chemin :
 
 ```4d
  var $o : Object
@@ -182,12 +182,12 @@ Vous voulez connaître le nombre de sous-dossiers contenus dans un chemin :
 
 ## Voir aussi 
 
-[Convert path POSIX to system](convert-path-posix-to-system.md)  
-[Convert path system to POSIX](convert-path-system-to-posix.md)  
+[Convert path POSIX to system](../commands/convert-path-posix-to-system)  
+[Convert path system to POSIX](../commands/convert-path-system-to-posix)  
 [File](../commands/file)    
 [Folder](../commands/folder)    
-[Object to path](object-to-path.md)  
-[Test path name](test-path-name.md)  
+[Object to path](../commands/object-to-path)  
+[Test path name](../commands/test-path-name)  
 
 ## Propriétés
 

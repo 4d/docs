@@ -1,4 +1,4 @@
----
+﻿---
 id: select-rgb-color
 title: Select RGB color
 slug: /commands/select-rgb-color
@@ -37,7 +37,7 @@ La ventana sistema de selección de color se ve de esta manera:
 | -------------------------------------------- | ------------------------------------------- |
 | ![](../../assets/en/commands/pict942577.fr.png) | ![](../../assets/en/commands/pict43386.en.png) |
 
-El parámetro opcional *colorDefecto* permite preseleccionar un color en la ventana. Este parámetro permite por ejemplo restaurar por defecto el último color definido por el usuario. Pase en este parámetro un valor de color formato RGB (para mayor información, consulte la descripción del comando [OBJECT SET RGB COLORS](object-set-rgb-colors.md)). Puede utilizar una de las constantes del tema *DEFINIR COLORES RVA*. Si se omite el parámetro *colorDefecto* o si pasa 0, el color negro es seleccionado al abrir la caja de diálogo.
+El parámetro opcional *colorDefecto* permite preseleccionar un color en la ventana. Este parámetro permite por ejemplo restaurar por defecto el último color definido por el usuario. Pase en este parámetro un valor de color formato RGB (para mayor información, consulte la descripción del comando [OBJECT SET RGB COLORS](../commands/object-set-rgb-colors)). Puede utilizar una de las constantes del tema *DEFINIR COLORES RVA*. Si se omite el parámetro *colorDefecto* o si pasa 0, el color negro es seleccionado al abrir la caja de diálogo.
 
 El parámetro opcional *mensaje* permite personalizar el título de la ventana sistema. Por defecto, si se omite este parámetro, aparece el título “Colores”.
 
@@ -50,7 +50,7 @@ El efecto de la validación de esta caja de diálogo difiere dependiendo de la p
 
 ## Ver también 
 
-[OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
+[OBJECT SET RGB COLORS](../commands/object-set-rgb-colors)  
 
 ## Propiedades
 

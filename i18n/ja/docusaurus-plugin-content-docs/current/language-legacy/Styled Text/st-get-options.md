@@ -1,4 +1,4 @@
----
+﻿---
 id: st-get-options
 title: ST GET OPTIONS
 slug: /commands/st-get-options
@@ -45,7 +45,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ST SET OPTIONS](st-set-options.md)  
+[ST SET OPTIONS](../commands/st-set-options)  
 
 ## プロパティ
 

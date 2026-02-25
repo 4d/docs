@@ -1,4 +1,4 @@
----
+﻿---
 id: method-get-folders
 title: METHOD GET FOLDERS
 slug: /commands/method-get-folders
@@ -40,7 +40,7 @@ Si se ejecuta este comando desde un componente, devuelve por defecto las rutas d
 
 ## Ver también 
 
-[METHOD GET PATHS](method-get-paths.md)  
+[METHOD GET PATHS](../commands/method-get-paths)  
 
 ## Propiedades
 

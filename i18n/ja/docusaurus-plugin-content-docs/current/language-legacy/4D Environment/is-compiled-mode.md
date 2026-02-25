@@ -1,4 +1,4 @@
----
+﻿---
 id: is-compiled-mode
 title: Is compiled mode
 slug: /commands/is-compiled-mode
@@ -52,8 +52,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[IDLE](idle.md)  
-[Undefined](undefined.md)  
+[IDLE](../commands/idle)  
+[Undefined](../commands/undefined)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: get-window-title
 title: Get window title
 slug: /commands/get-window-title
@@ -34,11 +34,11 @@ Se omitir o parâmetro *janela*, Get window title devolve o título da janela do
 
 ## Exemplo 
 
-Ver exemplo do comando [SET WINDOW TITLE](set-window-title.md).
+Ver exemplo do comando [SET WINDOW TITLE](../commands/set-window-title).
 
 ## Ver também 
 
-[SET WINDOW TITLE](set-window-title.md)  
+[SET WINDOW TITLE](../commands/set-window-title)  
 
 ## Propriedades
 

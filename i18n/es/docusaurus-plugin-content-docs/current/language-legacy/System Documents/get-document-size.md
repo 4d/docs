@@ -1,4 +1,4 @@
----
+﻿---
 id: get-document-size
 title: Get document size
 slug: /commands/get-document-size
@@ -39,9 +39,9 @@ En Macintosh, si no pasa el parámetro opcional *\**, se devuelve el tamaño del
 
 ## Ver también 
 
-[Get document position](get-document-position.md)  
-[SET DOCUMENT POSITION](set-document-position.md)  
-[SET DOCUMENT SIZE](set-document-size.md)  
+[Get document position](../commands/get-document-position)  
+[SET DOCUMENT POSITION](../commands/set-document-position)  
+[SET DOCUMENT SIZE](../commands/set-document-size)  
 
 ## Propiedades
 

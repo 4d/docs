@@ -1,4 +1,4 @@
----
+﻿---
 id: substring
 title: Substring
 slug: /commands/substring
@@ -65,7 +65,7 @@ O seguinte método de projeto adiciona os parágrafos que são encontrados no te
 
 ## Ver também 
 
-[Position](position.md)  
+[Position](../commands/position)  
 
 ## Propriedades
 

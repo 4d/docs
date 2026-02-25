@@ -1,4 +1,4 @@
----
+﻿---
 id: current-system-user
 title: Current system user
 slug: /commands/current-system-user
@@ -32,11 +32,11 @@ displayed_sidebar: docs
 
 ## Example 
 
-See example for the [Current machine](current-machine.md) command.
+See example for the [Current machine](../commands/current-machine) command.
 
 ## See also 
 
-[Current machine](current-machine.md)  
+[Current machine](../commands/current-machine)  
 
 ## Properties
 

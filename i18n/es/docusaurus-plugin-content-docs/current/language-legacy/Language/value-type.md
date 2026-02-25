@@ -1,4 +1,4 @@
----
+﻿---
 id: value-type
 title: Value type
 slug: /commands/value-type
@@ -64,7 +64,7 @@ Este comando está designado para devolver el tipo de una expresión escalar, po
  $vType:=Value type($o.value) //$vType=Is real
 ```
 
-**Value type** se puede aplicar a cualquier expresión 4D válida, incluyendo campos, variables y parámetros. En este caso, a diferencia del comando [Type](type.md), **Value type** devuelve el tipo *internal* del valor resultante de la evaluación de la *expresion* y no su tipo declarado. Dado que el lenguaje 4D convierte algunos tipos de valores internamente, el resultado de **Value type** puede diferir del tipo declarado. Por ejemplo, 4D convierte internamente los valores de campo de tipo "*Entero 64 bits*". Esto da los siguientes resultados:
+**Value type** se puede aplicar a cualquier expresión 4D válida, incluyendo campos, variables y parámetros. En este caso, a diferencia del comando [Type](../commands/type), **Value type** devuelve el tipo *internal* del valor resultante de la evaluación de la *expresion* y no su tipo declarado. Dado que el lenguaje 4D convierte algunos tipos de valores internamente, el resultado de **Value type** puede diferir del tipo declarado. Por ejemplo, 4D convierte internamente los valores de campo de tipo "*Entero 64 bits*". Esto da los siguientes resultados:
 
 ```4d
  $vType1:=Type([myTable]Long64field) //$vType=Is integer 64 bits
@@ -73,7 +73,7 @@ Este comando está designado para devolver el tipo de una expresión escalar, po
 
 Otras diferencias están relacionadas con arrays (la evaluación de una array devuelve el índice de elementos actual) y el modo compilado. En la tabla siguiente se enumeran estas diferencias:
 
-| **Tipo declarado**     | [Type](type.md) **resultado** | **Value type resultado (interpretado)** | **Value type resultado (compilado)** | **Comentario**                                                                                          |
+| **Tipo declarado**     | [Type](../commands/type) **resultado** | **Value type resultado (interpretado)** | **Value type resultado (compilado)** | **Comentario**                                                                                          |
 | ---------------------- | ----------------------------- | --------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------- |
 | ARRAY TEXT($t;1)       | Text array                    | Is real                                 | Is longint                           | $t contiene el índice del elemento actual, que es un número                                             |
 | Campo *Alfa*           | Is alpha field                | Is text                                 | Is text                              | 4D maneja internamente todas las cadenas como textos                                                    |
@@ -87,7 +87,7 @@ Otras diferencias están relacionadas con arrays (la evaluación de una array de
  If(Value type($myValue)=Is longint)|(Value type($myValue)=Is real)
 ```
 
-**Nota de compatibilidad:** a partir de 4D v16 R6, las fechas se almacenan en las propiedades objeto, ya sea con el tipo fecha o como texto en formato de fecha ISO. Para más información, consulte el selector Dates inside objects del comando [SET DATABASE PARAMETER](set-database-parameter.md).
+**Nota de compatibilidad:** a partir de 4D v16 R6, las fechas se almacenan en las propiedades objeto, ya sea con el tipo fecha o como texto en formato de fecha ISO. Para más información, consulte el selector Dates inside objects del comando [SET DATABASE PARAMETER](../commands/set-database-parameter).
 
 ## Ejemplo 1 
 
@@ -123,8 +123,8 @@ Desea obtener la suma de todos los valores numéricos en una colección:
 
 ## Ver también 
 
-[OB Get type](ob-get-type.md)  
-[Type](type.md)  
+[OB Get type](../commands/ob-get-type)  
+[Type](../commands/type)  
 
 ## Propiedades
 

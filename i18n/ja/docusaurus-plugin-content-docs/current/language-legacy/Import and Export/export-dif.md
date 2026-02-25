@@ -1,4 +1,4 @@
----
+﻿---
 id: export-dif
 title: EXPORT DIF
 slug: /commands/export-dif
@@ -47,10 +47,10 @@ EXPORT DIF を使用する際、デフォルトのフィールド区切り文字
 
 ## 参照 
 
-[EXPORT SYLK](export-sylk.md)  
-[EXPORT TEXT](export-text.md)  
-[IMPORT DIF](import-dif.md)  
-[USE CHARACTER SET](use-character-set.md)  
+[EXPORT SYLK](../commands/export-sylk)  
+[EXPORT TEXT](../commands/export-text)  
+[IMPORT DIF](../commands/import-dif)  
+[USE CHARACTER SET](../commands/use-character-set)  
 
 ## プロパティ
 

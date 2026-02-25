@@ -1,4 +1,4 @@
----
+﻿---
 id: set-assert-enabled
 title: SET ASSERT ENABLED
 slug: /commands/set-assert-enabled
@@ -28,13 +28,13 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.SET ASSERT ENABLED.Summary-->El comando **SET ASSERT ENABLED** se utiliza para desactivar o reactivar las aserciones insertadas en el código 4D de la aplicación.<!-- END REF--> Para mayor información sobre aseciones, consulte la descripción del comando [ASSERT](assert.md). 
+<!--REF #_command_.SET ASSERT ENABLED.Summary-->El comando **SET ASSERT ENABLED** se utiliza para desactivar o reactivar las aserciones insertadas en el código 4D de la aplicación.<!-- END REF--> Para mayor información sobre aseciones, consulte la descripción del comando [ASSERT](../commands/assert). 
 
 Por defecto, las aserciones añadidas en el programa están activas, en modo interpretado y en modo compilado. Este comando es útil para desactivarlas ya que su evaluación puede ser costosa en términos de tiempo de ejecución y usted también podría querer ocultarlas del usuario final de la aplicación. Por lo general, el comando **SET ASSERT ENABLED** puede utilizarse en el método base On Startup para activar o desactivar aserciones en función de si la aplicación está en modo "Prueba" o en modo "Producción". 
 
 Por defecto, el comando **SET ASSERT ENABLED** afecta todos los procesos de la aplicación. Para restringir el efecto del comando al proceso actual únicamente, pase el parámetro *\**.
 
-Por favor tenga en cuenta que cuando las aserciones están desactivadas, las expresiones pasadas a los comandos [ASSERT](assert.md) no se evalúan. Las líneas de código que llaman a [ASSERT](assert.md) no tienen más efecto en el funcionamiento de la aplicación, ni en términos de comportamiento ni en términos de rendimiento. 
+Por favor tenga en cuenta que cuando las aserciones están desactivadas, las expresiones pasadas a los comandos [ASSERT](../commands/assert) no se evalúan. Las líneas de código que llaman a [ASSERT](../commands/assert) no tienen más efecto en el funcionamiento de la aplicación, ni en términos de comportamiento ni en términos de rendimiento. 
 
 ## Ejemplo 
 
@@ -47,9 +47,9 @@ Desactivación de aserciones:
 
 ## Ver también 
 
-[ASSERT](assert.md)  
-[Asserted](asserted.md)  
-[Get assert enabled](get-assert-enabled.md)  
+[ASSERT](../commands/assert)  
+[Asserted](../commands/asserted)  
+[Get assert enabled](../commands/get-assert-enabled)  
 
 ## Propiedades
 

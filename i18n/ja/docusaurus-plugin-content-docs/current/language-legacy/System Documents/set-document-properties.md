@@ -1,4 +1,4 @@
----
+﻿---
 id: set-document-properties
 title: SET DOCUMENT PROPERTIES
 slug: /commands/set-document-properties
@@ -46,7 +46,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[GET DOCUMENT PROPERTIES](get-document-properties.md)  
+[GET DOCUMENT PROPERTIES](../commands/get-document-properties)  
 
 ## プロパティ
 

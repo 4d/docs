@@ -1,4 +1,4 @@
----
+﻿---
 id: read-write
 title: READ WRITE
 slug: /commands/read-write
@@ -30,8 +30,8 @@ Use READ WRITE when you must modify a record and save the changes. Also use READ
 
 ## See also 
 
-[READ ONLY](read-only.md)  
-[Read only state](read-only-state.md)  
+[READ ONLY](../commands/read-only)  
+[Read only state](../commands/read-only-state)  
 *Record Locking*  
 
 ## Properties

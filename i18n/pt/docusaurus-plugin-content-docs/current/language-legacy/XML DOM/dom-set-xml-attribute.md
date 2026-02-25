@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-set-xml-attribute
 title: DOM SET XML ATTRIBUTE
 slug: /commands/dom-set-xml-attribute
@@ -76,10 +76,10 @@ Se o comando tiver sido executado corretamente, a variável sistema Ok assume o 
 
 ## Ver também 
 
-[DOM GET XML ATTRIBUTE BY INDEX](dom-get-xml-attribute-by-index.md)  
-[DOM GET XML ATTRIBUTE BY NAME](dom-get-xml-attribute-by-name.md)  
-[DOM REMOVE XML ATTRIBUTE](dom-remove-xml-attribute.md)  
-[XML SET OPTIONS](xml-set-options.md)  
+[DOM GET XML ATTRIBUTE BY INDEX](../commands/dom-get-xml-attribute-by-index)  
+[DOM GET XML ATTRIBUTE BY NAME](../commands/dom-get-xml-attribute-by-name)  
+[DOM REMOVE XML ATTRIBUTE](../commands/dom-remove-xml-attribute)  
+[XML SET OPTIONS](../commands/xml-set-options)  
 
 ## Propriedades
 

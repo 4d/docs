@@ -1,4 +1,4 @@
----
+﻿---
 id: array-to-collection
 title: ARRAY TO COLLECTION
 slug: /commands/array-to-collection
@@ -92,7 +92,7 @@ Vous souhaiter copier un tableau texte dans une collection partagée :
 
 ## Voir aussi 
 
-[COLLECTION TO ARRAY](collection-to-array.md)  
+[COLLECTION TO ARRAY](../commands/collection-to-array)  
 *Conversions de type entre les collections et les tableaux 4D*  
 
 ## Propriétés

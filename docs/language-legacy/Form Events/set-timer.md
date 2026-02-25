@@ -1,4 +1,4 @@
----
+﻿---
 id: set-timer
 title: SET TIMER
 slug: /commands/set-timer
@@ -56,7 +56,7 @@ Let’s imagine that you want, when a form is displayed on screen, the computer 
 ## See also 
 
 [Form event code](../commands/form-event-code)  
-[REDRAW](redraw.md)  
+[REDRAW](../commands/redraw)  
 
 ## Properties
 

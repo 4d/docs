@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-collapse
 title: LISTBOX COLLAPSE
 slug: /commands/listbox-collapse
@@ -61,7 +61,7 @@ Este ejemplo colapsa el primer nivel de líneas de ruptura de la selección en e
 
 ## Ver también 
 
-[LISTBOX EXPAND](listbox-expand.md)  
+[LISTBOX EXPAND](../commands/listbox-expand)  
 
 ## Propiedades
 

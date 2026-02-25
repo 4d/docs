@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-run-offscreen-area
 title: WA Run offscreen area
 slug: /commands/wa-run-offscreen-area
@@ -40,7 +40,7 @@ displayed_sidebar: docs
 | url                    | テキスト \| fileオブジェクト | Web エリアに読み込まれるURL またはファイル。省略時またはnull の場合、空のページが読み込まれます。                                                                                                                                                                                                       |
 | area                   | テキスト               | Web エリア名。省略時またはnull の場合、汎用的な名前(例: OffscreenArea1)が割り当てられます。                                                                                                                                                                                                   |
 | onEvent                | オブジェクト(フォーミュラ)     | Web エリアの準備ができたときにローンチされるコールバックメソッド。以下のどちらかを使用できます:<br/> クラスの*onEvent* ファンクション [Formula](../commands/formula) オブジェクト  デフォルトでは、コールバックメソッドはOn Load、On Unload、On End URL Loading、On URL Loading Error またはOn Timer イベントにおいて呼び出されます。                                 |
-| autoQuit               | ブール                | True(デフォルト値)の場合、On End URL Loading または On URL Loading Error イベントが発生したときにはコマンドはフォーミュラの実行を中止します。<br/><br/>Falseの場合、Web エリアを閉じるためには呼び出された[CANCEL](cancel.md) または [ACCEPT](accept.md) コールバックメソッドまたはプロジェクトメソッド内においてコマンドを$4d オブジェクトとともに使用する必要があります。 |
+| autoQuit               | ブール                | True(デフォルト値)の場合、On End URL Loading または On URL Loading Error イベントが発生したときにはコマンドはフォーミュラの実行を中止します。<br/><br/>Falseの場合、Web エリアを閉じるためには呼び出された[CANCEL](../commands/cancel) または [ACCEPT](../commands/accept) コールバックメソッドまたはプロジェクトメソッド内においてコマンドを$4d オブジェクトとともに使用する必要があります。 |
 | timeout                | 実数                 | イベントが何も生成されなければエリアが自動的に閉じてしまうまでの最大時間(秒単位)。0 設定された場合、制限は適用されません。デフォルトの値: 60                                                                                                                                                                                    |
 | result                 | (任意)               | 返す処理の結果(あれば)                                                                                                                                                                                                                                                  |
 | <customProperty>       | (任意)               | コールバックまたは$4d メソッド内で利用可能なカスタムの属性                                                                                                                                                                                                                               |
@@ -60,18 +60,18 @@ displayed_sidebar: docs
 
 コールバックメソッドでは、以下のコマンドを使用することができます:
 
-* [ACCEPT](accept.md)
-* [CANCEL](cancel.md)
-* [SET TIMER](set-timer.md)
-* [WA Evaluate JavaScript](wa-evaluate-javascript.md)
-* [WA EXECUTE JAVASCRIPT FUNCTION](wa-execute-javascript-function.md)
-* [WA Get current URL](wa-get-current-url.md)
-* [WA GET LAST URL ERROR](wa-get-last-url-error.md)
-* [WA Get page content](wa-get-page-content.md)
-* [WA Get page title](wa-get-page-title.md)
-* [WA OPEN URL](wa-open-url.md)
-* [WA REFRESH CURRENT URL](wa-refresh-current-url.md)
-* [WA STOP LOADING URL](wa-stop-loading-url.md)
+* [ACCEPT](../commands/accept)
+* [CANCEL](../commands/cancel)
+* [SET TIMER](../commands/set-timer)
+* [WA Evaluate JavaScript](../commands/wa-evaluate-javascript)
+* [WA EXECUTE JAVASCRIPT FUNCTION](../commands/wa-execute-javascript-function)
+* [WA Get current URL](../commands/wa-get-current-url)
+* [WA GET LAST URL ERROR](../commands/wa-get-last-url-error)
+* [WA Get page content](../commands/wa-get-page-content)
+* [WA Get page title](../commands/wa-get-page-title)
+* [WA OPEN URL](../commands/wa-open-url)
+* [WA REFRESH CURRENT URL](../commands/wa-refresh-current-url)
+* [WA STOP LOADING URL](../commands/wa-stop-loading-url)
 
 ## 例題 
 
@@ -101,12 +101,12 @@ displayed_sidebar: docs
 
 ## システム変数およびセット 
 
-タイムアウトに達した場合、または*onEvent* で[CANCEL](cancel.md) が呼び出された場合、OK システム変数は0に設定され、それ以外の場合には1に設定されます。
+タイムアウトに達した場合、または*onEvent* で[CANCEL](../commands/cancel) が呼び出された場合、OK システム変数は0に設定され、それ以外の場合には1に設定されます。
 
 ## 参照 
 
 [FORM Event](../commands/form-event)  
-[WA OPEN WEB INSPECTOR](wa-open-web-inspector.md)  
+[WA OPEN WEB INSPECTOR](../commands/wa-open-web-inspector)  
 *Webエリアのプログラムによる管理*  
 
 ## プロパティ

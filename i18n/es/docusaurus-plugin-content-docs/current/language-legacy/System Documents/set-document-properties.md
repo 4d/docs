@@ -1,4 +1,4 @@
----
+﻿---
 id: set-document-properties
 title: SET DOCUMENT PROPERTIES
 slug: /commands/set-document-properties
@@ -46,7 +46,7 @@ Las fechas y horas de creación y última modificación son administradas por el
 
 ## Ver también 
 
-[GET DOCUMENT PROPERTIES](get-document-properties.md)  
+[GET DOCUMENT PROPERTIES](../commands/get-document-properties)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: locked-by
 title: LOCKED BY
 slug: /commands/locked-by
@@ -40,7 +40,7 @@ displayed_sidebar: docs
 
 Si l'enregistrement n'est pas verrouillé, *process* prend la valeur 0 et *utilisateur4D*, *utilisateurSession* et *nomProcess* retournent des chaînes vides. Si vous essayez de charger en lecture/écriture un enregistrement qui a été supprimé, *process* retourne -1 et *utilisateur4D*, *utilisateurSession* et *nomProcess* retournent des chaînes vides.
 
-Le paramètre *utilisateur4D* est le nom de l'utilisateur défini dans l'éditeur de mots de passe de 4D ou bien l'alias de l'utilisateur tel qu'il a été défini avec la commande [SET USER ALIAS](set-user-alias.md) (le cas échéant). Si aucun mot de passe ou alias n'a été défini, "Super\_Utilisateur" est retourné.
+Le paramètre *utilisateur4D* est le nom de l'utilisateur défini dans l'éditeur de mots de passe de 4D ou bien l'alias de l'utilisateur tel qu'il a été défini avec la commande [SET USER ALIAS](../commands/set-user-alias) (le cas échéant). Si aucun mot de passe ou alias n'a été défini, "Super\_Utilisateur" est retourné.
 
 Le paramètre *utilisateurSession* retourné correspond au nom de l'utilisateur ayant ouvert la session sur le poste client (ce nom est notamment affiché dans la fenêtre d'administration de 4D Server pour chaque process ouvert).
 
@@ -53,7 +53,7 @@ Si l'enregistrement a été verrouillé par une *requête REST $lock*:
 
 ## Voir aussi 
 
-[Locked](locked.md)  
+[Locked](../commands/locked)  
 *Verrouillage d'enregistrements*  
 
 ## Propriétés

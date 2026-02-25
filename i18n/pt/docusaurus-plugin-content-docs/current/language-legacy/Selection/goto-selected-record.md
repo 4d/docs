@@ -1,4 +1,4 @@
----
+﻿---
 id: goto-selected-record
 title: GOTO SELECTED RECORD
 slug: /commands/goto-selected-record
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.GOTO SELECTED RECORD.Summary-->GOTO SELECTED RECORD move o registro especificado na seleção atual de *tabela* o registro atual.<!-- END REF--> A seleção atual de tabela não muda. O parâmetro *registro* não é o mesmo do número retornado por [Record number](record-number.md); Este parâmetro representa a posição do registro na seleção atual. A posição do registro depende da maneira na qual a seleção tenha sido criada e ordenada.  
+<!--REF #_command_.GOTO SELECTED RECORD.Summary-->GOTO SELECTED RECORD move o registro especificado na seleção atual de *tabela* o registro atual.<!-- END REF--> A seleção atual de tabela não muda. O parâmetro *registro* não é o mesmo do número retornado por [Record number](../commands/record-number); Este parâmetro representa a posição do registro na seleção atual. A posição do registro depende da maneira na qual a seleção tenha sido criada e ordenada.  
 
 **GOTO SELECTED RECORD** não faz nada se:
 
@@ -71,7 +71,7 @@ O seguinte método de objeto para *atNomes* seleciona o registro correto na sele
 
 ## Ver também 
 
-[Selected record number](selected-record-number.md)  
+[Selected record number](../commands/selected-record-number)  
 
 ## Propriedades
 

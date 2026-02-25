@@ -1,4 +1,4 @@
----
+﻿---
 id: play
 title: PLAY
 slug: /commands/play
@@ -68,7 +68,7 @@ Exemple de son système sous macOS :
 
 ## Voir aussi 
 
-[BEEP](beep.md)  
+[BEEP](../commands/beep)  
 
 ## Propriétés
 

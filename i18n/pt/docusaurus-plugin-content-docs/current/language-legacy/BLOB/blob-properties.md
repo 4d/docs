@@ -1,4 +1,4 @@
----
+﻿---
 id: blob-properties
 title: BLOB PROPERTIES
 slug: /commands/blob-properties
@@ -86,8 +86,8 @@ Depois que este método tenha sido adicionado à sua aplicação, você pode us�
 
 ## Ver também 
 
-[COMPRESS BLOB](compress-blob.md)  
-[EXPAND BLOB](expand-blob.md)  
+[COMPRESS BLOB](../commands/compress-blob)  
+[EXPAND BLOB](../commands/expand-blob)  
 
 ## Propriedades
 

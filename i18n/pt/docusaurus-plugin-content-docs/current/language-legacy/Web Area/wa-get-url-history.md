@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-get-url-history
 title: WA GET URL HISTORY
 slug: /commands/wa-get-url-history
@@ -55,7 +55,7 @@ Nota de Compatibilidade: A partir de 4D v19 R5, esse comando só retorna a URL a
 
 ## Ver também 
 
-[WA Create URL history menu](wa-create-url-history-menu.md)  
+[WA Create URL history menu](../commands/wa-create-url-history-menu)  
 
 ## Propriedades
 

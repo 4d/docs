@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-row-color
 title: LISTBOX SET ROW COLOR
 slug: /commands/listbox-set-row-color
@@ -47,11 +47,11 @@ displayed_sidebar: docs
 
 **注:** このコマンドは列の表示/非表示の状態は無視します。
 
-*color* 引数には、指定したい色をRGBカラー値で渡します。RGBカラーについての詳細は、 [OBJECT SET RGB COLORS](object-set-rgb-colors.md) コマンドの詳細を参照して下さい。一つ上の行の配色をそのまま使用したい場合には、*color* 引数 に`lk inherited` 定数を渡します。
+*color* 引数には、指定したい色をRGBカラー値で渡します。RGBカラーについての詳細は、 [OBJECT SET RGB COLORS](../commands/object-set-rgb-colors) コマンドの詳細を参照して下さい。一つ上の行の配色をそのまま使用したい場合には、*color* 引数 に`lk inherited` 定数を渡します。
 
 *colorType* 引数には、行の背景色を指定したいのかフォントカラーを指定したのかによって、 `lk background color`  または `lk font color`  のどちらかの定数を渡します。省略時には、指定した色はフォントカラーとして使用されます。
 
-このコマンドは、列またはリストボックスに対して定義されていた可能性のあるカラー配列内の値を変更します。この配列が未定義だった場合、このコマンドは、 [LISTBOX Get array](listbox-get-array.md) コマンドを使用してアクセス可能な配列を動的に作成します。
+このコマンドは、列またはリストボックスに対して定義されていた可能性のあるカラー配列内の値を変更します。この配列が未定義だった場合、このコマンドは、 [LISTBOX Get array](../commands/listbox-get-array) コマンドを使用してアクセス可能な配列を動的に作成します。
 
 他のリストボックスプロパティ(全体のプロパティ、列のカラー配列など)によって、このコマンドと異なる色が指定された場合、4D内の優先順位に応じて処理されます。この優先順位の詳細に関しては、 *Design Reference* を参照して下さい。a
 
@@ -74,9 +74,9 @@ displayed_sidebar: docs
 ## 参照 
 
 *List Box*  
-[LISTBOX Get row color](listbox-get-row-color.md)  
-[LISTBOX Get row color as number](listbox-get-row-color-as-number.md)  
-[LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md)  
+[LISTBOX Get row color](../commands/listbox-get-row-color)  
+[LISTBOX Get row color as number](../commands/listbox-get-row-color-as-number)  
+[LISTBOX SET ROW FONT STYLE](../commands/listbox-set-row-font-style)  
 
 ## プロパティ
 

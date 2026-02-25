@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-list-by-reference
 title: OBJECT SET LIST BY REFERENCE
 slug: /commands/object-set-list-by-reference
@@ -42,9 +42,9 @@ displayed_sidebar: docs
 | Excluded list | 倍長整数 | 2 | 入力できない値のリスト。(プロパティリスト内の「除外リスト」)       |
 | Required list | 倍長整数 | 1 | 入力可能な値のリスト(プロパティリストの"指定リスト"オプション)。    |
 
-*list* 引数には、オブジェクトに関連付けたい階層リストの参照番号を渡します。このリストは、 [Copy list](copy-list.md) コマンド、 [Load list](load-list.md) コマンド、または [New list](new-list.md) コマンドを使用してすでに生成されている必要があります。
+*list* 引数には、オブジェクトに関連付けたい階層リストの参照番号を渡します。このリストは、 [Copy list](../commands/copy-list) コマンド、 [Load list](../commands/load-list) コマンド、または [New list](../commands/new-list) コマンドを使用してすでに生成されている必要があります。
 
-*object* と *list* の関連付けを解除するためには、解除したいリストの種類に対し、*list* 引数に 0 を渡します。リストの関連付けを解除しても、リスト参照はメモリーからは消去されません。リストが不要になった時には [CLEAR LIST](clear-list.md) コマンドを使用して下さい。
+*object* と *list* の関連付けを解除するためには、解除したいリストの種類に対し、*list* 引数に 0 を渡します。リストの関連付けを解除しても、リスト参照はメモリーからは消去されません。リストが不要になった時には [CLEAR LIST](../commands/clear-list) コマンドを使用して下さい。
 
 値の既存のリストは、そのリストがフォームオブジェクトに割り当てられた方法によって上書きされます:
 
@@ -137,8 +137,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT Get list reference](object-get-list-reference.md)  
-[OBJECT SET LIST BY NAME](object-set-list-by-name.md)  
+[OBJECT Get list reference](../commands/object-get-list-reference)  
+[OBJECT SET LIST BY NAME](../commands/object-set-list-by-name)  
 
 ## プロパティ
 

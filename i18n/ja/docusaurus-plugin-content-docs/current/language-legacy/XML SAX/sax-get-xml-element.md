@@ -1,4 +1,4 @@
----
+﻿---
 id: sax-get-xml-element
 title: SAX GET XML ELEMENT
 slug: /commands/sax-get-xml-element
@@ -72,7 +72,7 @@ tAttrValues{3} には "333"が返されます。
 
 ## 参照 
 
-[SAX Get XML node](sax-get-xml-node.md)  
+[SAX Get XML node](../commands/sax-get-xml-node)  
 
 ## プロパティ
 

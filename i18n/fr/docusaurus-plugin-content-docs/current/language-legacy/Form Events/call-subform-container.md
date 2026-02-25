@@ -1,4 +1,4 @@
----
+﻿---
 id: call-subform-container
 title: CALL SUBFORM CONTAINER
 slug: /commands/call-subform-container
@@ -40,7 +40,7 @@ Vous pouvez passer dans *événement* un des [événements formulaire 4D pris en
 ## Voir aussi 
 
 [Form event code](../commands/form-event-code)  
-[GOTO OBJECT](goto-object.md)  
+[GOTO OBJECT](../commands/goto-object)  
 
 ## Propriétés
 

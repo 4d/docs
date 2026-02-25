@@ -1,4 +1,4 @@
----
+﻿---
 id: get-application-color-scheme
 title: Get Application color scheme
 slug: /commands/get-application-color-scheme
@@ -34,13 +34,13 @@ displayed_sidebar: docs
 
 実際のカラースキームは以下の方法で定義することができます:
 
-* [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) コマンドを呼び出す
-* [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) コマンドが呼び出されていない、あるいは引数値で呼び出されていた場合、データベース設定(コンポーネントの場合にはホストデータベース設定が適用されます)
+* [SET APPLICATION COLOR SCHEME](../commands/set-application-color-scheme) コマンドを呼び出す
+* [SET APPLICATION COLOR SCHEME](../commands/set-application-color-scheme) コマンドが呼び出されていない、あるいは引数値で呼び出されていた場合、データベース設定(コンポーネントの場合にはホストデータベース設定が適用されます)
 * 設定が"継承する"に設定されていた場合にはOS のユーザー設定
 
 *\** 引数は、このコマンドがコンポーネントから呼び出された場合に有用です。渡された場合、コマンドはホストデータベースのカラースキームを返します。
 
-カラースキーム名の詳細については、[SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) コマンドの詳細を参照してください。
+カラースキーム名の詳細については、[SET APPLICATION COLOR SCHEME](../commands/set-application-color-scheme) コマンドの詳細を参照してください。
 
 ## 例題 
 
@@ -53,8 +53,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[FORM Get color scheme](form-get-color-scheme.md)  
-[SET APPLICATION COLOR SCHEME](set-application-color-scheme.md)  
+[FORM Get color scheme](../commands/form-get-color-scheme)  
+[SET APPLICATION COLOR SCHEME](../commands/set-application-color-scheme)  
 
 ## プロパティ
 

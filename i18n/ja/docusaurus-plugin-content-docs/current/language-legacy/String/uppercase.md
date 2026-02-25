@@ -1,4 +1,4 @@
----
+﻿---
 id: uppercase
 title: Uppercase
 slug: /commands/uppercase
@@ -49,7 +49,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Lowercase](lowercase.md)  
+[Lowercase](../commands/lowercase)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: scan-index
 title: SCAN INDEX
 slug: /commands/scan-index
@@ -50,9 +50,9 @@ O seguinte exemplo envia cartas aos 50 piores clientes e aos 50 melhores cliente
 
 ## Ver também 
 
-[ORDER BY](order-by.md)  
-[QUERY](query.md)  
-[REDUCE SELECTION](reduce-selection.md)  
+[ORDER BY](../commands/order-by)  
+[QUERY](../commands/query)  
+[REDUCE SELECTION](../commands/reduce-selection)  
 
 ## Propriedades
 

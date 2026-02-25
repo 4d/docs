@@ -1,4 +1,4 @@
----
+﻿---
 id: get-serial-port-mapping
 title: GET SERIAL PORT MAPPING
 slug: /commands/get-serial-port-mapping
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 Cette commande est utile sous macOS car le système alloue dynamiquement les numéros des ports série lorsque vous utilisez un adaptateur série USB. A l’aide de cette commande, vous pouvez adresser les ports série étendus via leur nom (invariable), quel que soit leur numéro.
 
-**Note :** Cette commande ne retourne pas de valeurs significatives avec les ports standard. Si vous souhaitez adresser un port standard, vous devez passer directement sa valeur (0 ou 1) à la commande [SET CHANNEL](set-channel.md) (ancien mode de fonctionnement de 4D). 
+**Note :** Cette commande ne retourne pas de valeurs significatives avec les ports standard. Si vous souhaitez adresser un port standard, vous devez passer directement sa valeur (0 ou 1) à la commande [SET CHANNEL](../commands/set-channel) (ancien mode de fonctionnement de 4D). 
 
 ## Exemple 
 
@@ -60,7 +60,7 @@ Cette méthode projet permet d'adresser le même port série (sans protocole), q
 
 ## Voir aussi 
 
-[SET CHANNEL](set-channel.md)  
+[SET CHANNEL](../commands/set-channel)  
 
 ## Propriétés
 

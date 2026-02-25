@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-command-status
 title: QR Get command status
 slug: /commands/qr-get-command-status
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 La commande **QR Get command status** peut être utilisée dans deux types de contextes :
 
 * comme simple instruction pour déterminer si une commande est active ou non.
-* dans une méthode installée par [QR ON COMMAND](qr-on-command.md) afin de connaître le sous-élément sélectionné. Dans cette méthode, *$1* contient la référence de la *zone* et *$2* le numéro de la commande.
+* dans une méthode installée par [QR ON COMMAND](../commands/qr-on-command) afin de connaître le sous-élément sélectionné. Dans cette méthode, *$1* contient la référence de la *zone* et *$2* le numéro de la commande.
 
 Passez dans paramètre *numCommande* une des constantes du thème *QR Commandes* :
 
@@ -62,7 +62,7 @@ Passez dans paramètre *numCommande* une des constantes du thème *QR Commandes*
 | qr cmd font color palette     | Entier long | 1002   |                                                           |
 | qr cmd font dropdown          | Entier long | 1000   |                                                           |
 | qr cmd format                 | Entier long | 2606   |                                                           |
-| qr cmd generate               | Entier long | 2008   | Utilisation de la commande [QR RUN](qr-run.md) conseillée |
+| qr cmd generate               | Entier long | 2008   | Utilisation de la commande [QR RUN](../commands/qr-run) conseillée |
 | qr cmd graph destination      | Entier long | 2502   |                                                           |
 | qr cmd header and footer      | Entier long | 2005   |                                                           |
 | qr cmd hide column            | Entier long | 2602   |                                                           |
@@ -100,8 +100,8 @@ Si le paramètre *numCommande* est incorrect, l’erreur -9852 est générée.
 
 ## Voir aussi 
 
-[QR EXECUTE COMMAND](qr-execute-command.md)  
-[QR ON COMMAND](qr-on-command.md)  
+[QR EXECUTE COMMAND](../commands/qr-execute-command)  
+[QR ON COMMAND](../commands/qr-on-command)  
 
 ## Propriétés
 

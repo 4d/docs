@@ -1,4 +1,4 @@
----
+﻿---
 id: application-info
 title: Application info
 slug: /commands/application-info
@@ -45,7 +45,7 @@ L'objet retourné contient les propriétés suivantes :
 | \[ \].ip                    | chaîne     | Adresse IP                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | "192.167.1.2"                                   |
 | useQUICNetworkLayer         | booléen    | Vrai si la couche réseau QUIC est utilisée pour le serveur d'application et le serveur db4d (*beta* dans 4D v20, voir *Page Compatibilité*). Non retourné en mode local. Valeurs possibles : vrai, faux. Pour plus d'informations, voir cet [article de blog.](https://blog.4d.com/quic-network/)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | faux                                            |
 
-(\*) Sur Windows, vous devez vous assurer que ce compteur est préalablement initialisé, en appelant par exemple la commande **Application info** dans la [On Startup database method](on-startup-database-method.md).
+(\*) Sur Windows, vous devez vous assurer que ce compteur est préalablement initialisé, en appelant par exemple la commande **Application info** dans la [On Startup database method](../commands/on-startup-database-method).
 
 ## Exemple
 
@@ -129,10 +129,10 @@ Si le code est exécuté sur 4D Server, l'objet contient (par exemple) :
 
 ## Voir aussi 
 
-[Execute on server](execute-on-server.md)  
-[Get database parameter](get-database-parameter.md)  
-[System info](system-info.md)  
-[REJECT NEW REMOTE CONNECTIONS](reject-new-remote-connections.md)  
+[Execute on server](../commands/execute-on-server)  
+[Get database parameter](../commands/get-database-parameter)  
+[System info](../commands/system-info)  
+[REJECT NEW REMOTE CONNECTIONS](../commands/reject-new-remote-connections)  
 
 ## Propriétés
 

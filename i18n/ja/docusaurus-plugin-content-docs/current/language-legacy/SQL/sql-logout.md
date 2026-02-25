@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-logout
 title: SQL LOGOUT
 slug: /commands/sql-logout
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[SQL LOGIN](sql-login.md)  
+[SQL LOGIN](../commands/sql-login)  
 
 ## プロパティ
 

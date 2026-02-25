@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-class
 title: OB Class
 slug: /commands/ob-class
@@ -53,7 +53,7 @@ Luego, en un método, puedes escribir:
 
 ## Ver también 
 
-[OB Instance of](ob-instance-of.md)  
+[OB Instance of](../commands/ob-instance-of)  
 
 ## Propiedades
 

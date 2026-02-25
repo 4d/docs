@@ -1,4 +1,4 @@
----
+﻿---
 id: reject-new-remote-connections
 title: REJECT NEW REMOTE CONNECTIONS
 slug: /commands/reject-new-remote-connections
@@ -48,9 +48,9 @@ Se quiser rejeitar ou aceitar as novas conexões de clientes:
 
 ## Ver também 
 
-[DROP REMOTE USER](drop-remote-user.md)  
+[DROP REMOTE USER](../commands/drop-remote-user)  
 [Application info](../commands/application-info)  
-[SOAP REJECT NEW REQUESTS](soap-reject-new-requests.md)  
+[SOAP REJECT NEW REQUESTS](../commands/soap-reject-new-requests)  
 
 ## Propriedades
 

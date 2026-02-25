@@ -1,4 +1,4 @@
----
+﻿---
 id: variable-to-variable
 title: VARIABLE TO VARIABLE
 slug: /commands/variable-to-variable
@@ -67,9 +67,9 @@ El siguiente ejemplo lee un array proceso desde el proceso indicado por *$vlProc
 
 ## Ver también 
 
-[GET PROCESS VARIABLE](get-process-variable.md)  
+[GET PROCESS VARIABLE](../commands/get-process-variable)  
 *Procesos*  
-[SET PROCESS VARIABLE](set-process-variable.md)  
+[SET PROCESS VARIABLE](../commands/set-process-variable)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: get-cache-size
 title: Get cache size
 slug: /commands/get-cache-size
@@ -31,11 +31,11 @@ displayed_sidebar: docs
 
 ## Exemple 
 
-Voir l'exemple de la commande [SET CACHE SIZE](set-cache-size.md). 
+Voir l'exemple de la commande [SET CACHE SIZE](../commands/set-cache-size). 
 
 ## Voir aussi 
 
-[SET CACHE SIZE](set-cache-size.md)  
+[SET CACHE SIZE](../commands/set-cache-size)  
 
 ## Propriétés
 

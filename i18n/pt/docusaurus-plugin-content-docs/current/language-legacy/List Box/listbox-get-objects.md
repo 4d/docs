@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-objects
 title: LISTBOX GET OBJECTS
 slug: /commands/listbox-get-objects
@@ -46,7 +46,7 @@ Em *arrayNomObjeto*, passe um array texto que é enchido automaticamente pelo co
 
 O array devolve os nomes dos objetos de todas as colunas (incluindo os pés de coluna), independentemente de se são ou não visíveis.  
   
-Este comando é útil no contexto da análise de um formulário utilizando os comandos [FORM LOAD](../commands/form-load), [FORM GET OBJECTS](form-get-objects.md) e [OBJECT Get type](object-get-type.md). Se pode utilizar, quando seja necessário, para obter os nomes dos sub objetos dos list box.
+Este comando é útil no contexto da análise de um formulário utilizando os comandos [FORM LOAD](../commands/form-load), [FORM GET OBJECTS](../commands/form-get-objects) e [OBJECT Get type](../commands/object-get-type). Se pode utilizar, quando seja necessário, para obter os nomes dos sub objetos dos list box.
 
 ## Exemplo 
 
@@ -70,7 +70,7 @@ Você quer carregar um formulário e obter a lista de todos os objetos dos list 
 ## Ver também 
 
 [FORM LOAD](../commands/form-load)  
-[OBJECT Get type](object-get-type.md)  
+[OBJECT Get type](../commands/object-get-type)  
 
 ## Propriedades
 

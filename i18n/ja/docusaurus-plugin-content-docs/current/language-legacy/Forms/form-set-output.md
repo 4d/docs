@@ -1,4 +1,4 @@
----
+﻿---
 id: form-set-output
 title: FORM SET OUTPUT
 slug: /commands/form-set-output
@@ -52,7 +52,7 @@ displayed_sidebar: docs
 
 ユーザフォームに関する詳細は*ユーザフォームの概要* の節を参照してください。
 
-出力フォームは3つのコマンドグループ（画面上にレコードをリスト表示するグループ、レポートを作成するグループ、データを書き出すグループ）で使用されます。[DISPLAY SELECTION](display-selection.md) や [MODIFY SELECTION](modify-selection.md) コマンドは、出力フォームを使用してレコードのリストを表示します。[PRINT LABEL](print-label.md) や 60 コマンドを使用してレポートを作成する際にも出力フォームを使用します。各データ書き出しコマンド（[EXPORT DIF](export-dif.md)、85 そして [EXPORT TEXT](export-text.md)）でも出力フォームを使用します。
+出力フォームは3つのコマンドグループ（画面上にレコードをリスト表示するグループ、レポートを作成するグループ、データを書き出すグループ）で使用されます。[DISPLAY SELECTION](../commands/display-selection) や [MODIFY SELECTION](../commands/modify-selection) コマンドは、出力フォームを使用してレコードのリストを表示します。[PRINT LABEL](../commands/print-label) や 60 コマンドを使用してレポートを作成する際にも出力フォームを使用します。各データ書き出しコマンド（[EXPORT DIF](../commands/export-dif)、85 そして [EXPORT TEXT](../commands/export-text)）でも出力フォームを使用します。
 
 ## 例題 1 
 
@@ -76,14 +76,14 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[DISPLAY SELECTION](display-selection.md)  
-[EXPORT DIF](export-dif.md)  
-[EXPORT SYLK](export-sylk.md)  
-[EXPORT TEXT](export-text.md)  
-[FORM SET INPUT](form-set-input.md)  
-[MODIFY SELECTION](modify-selection.md)  
-[PRINT LABEL](print-label.md)  
-[PRINT SELECTION](print-selection.md)  
+[DISPLAY SELECTION](../commands/display-selection)  
+[EXPORT DIF](../commands/export-dif)  
+[EXPORT SYLK](../commands/export-sylk)  
+[EXPORT TEXT](../commands/export-text)  
+[FORM SET INPUT](../commands/form-set-input)  
+[MODIFY SELECTION](../commands/modify-selection)  
+[PRINT LABEL](../commands/print-label)  
+[PRINT SELECTION](../commands/print-selection)  
 
 ## プロパティ
 

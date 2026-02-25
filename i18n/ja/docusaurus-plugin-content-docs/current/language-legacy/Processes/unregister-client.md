@@ -1,4 +1,4 @@
----
+﻿---
 id: unregister-client
 title: UNREGISTER CLIENT
 slug: /commands/unregister-client
@@ -44,9 +44,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[EXECUTE ON CLIENT](execute-on-client.md)  
-[GET REGISTERED CLIENTS](get-registered-clients.md)  
-[REGISTER CLIENT](register-client.md)  
+[EXECUTE ON CLIENT](../commands/execute-on-client)  
+[GET REGISTERED CLIENTS](../commands/get-registered-clients)  
+[REGISTER CLIENT](../commands/register-client)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: current-machine
 title: Current machine
 slug: /commands/current-machine
@@ -41,7 +41,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Current system user](current-system-user.md)  
+[Current system user](../commands/current-system-user)  
 
 ## プロパティ
 

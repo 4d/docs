@@ -1,4 +1,4 @@
----
+﻿---
 id: set-menu-item-property
 title: SET MENU ITEM PROPERTY
 slug: /commands/set-menu-item-property
@@ -50,7 +50,7 @@ Passez dans le paramètre *propriété* la propriété dont vous souhaitez modif
 
 Pour plus d’informations sur les propriétés standard des lignes de menus, reportez-vous au chapitre “Créer des menus personnalisés” dans le manuel Mode Développement.
 
-**Propriété personnalisée** : vous pouvez passer dans *propriété* tout texte personnalisé et lui associer une *valeur* de type texte, numérique ou booléen. Cette *valeur* sera stockée avec l’élément et pourra être récupérée via la commande [GET MENU ITEM PROPERTY](get-menu-item-property.md). Vous pouvez utiliser toute chaîne personnalisée dans le paramètre *propriété*, veillez simplement à ne pas utiliser de libellé utilisé par 4D (par convention, les propriétés définies par 4D débutent par les caractères “4D\_”).
+**Propriété personnalisée** : vous pouvez passer dans *propriété* tout texte personnalisé et lui associer une *valeur* de type texte, numérique ou booléen. Cette *valeur* sera stockée avec l’élément et pourra être récupérée via la commande [GET MENU ITEM PROPERTY](../commands/get-menu-item-property). Vous pouvez utiliser toute chaîne personnalisée dans le paramètre *propriété*, veillez simplement à ne pas utiliser de libellé utilisé par 4D (par convention, les propriétés définies par 4D débutent par les caractères “4D\_”).
 
 **Note :** Si la ligne de menu correspond au libellé d’un sous-menu hiérarchique, l’action standard ne sera pas appelée lorsque la ligne de menu sera sélectionnée.
 
@@ -68,8 +68,8 @@ Pour plus d’informations sur les propriétés standard des lignes de menus, re
 
 ## Voir aussi 
 
-[Dynamic pop up menu](dynamic-pop-up-menu.md)  
-[GET MENU ITEM PROPERTY](get-menu-item-property.md)  
+[Dynamic pop up menu](../commands/dynamic-pop-up-menu)  
+[GET MENU ITEM PROPERTY](../commands/get-menu-item-property)  
 
 ## Propriétés
 

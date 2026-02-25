@@ -1,4 +1,4 @@
----
+﻿---
 id: document-to-blob
 title: DOCUMENT TO BLOB
 slug: /commands/document-to-blob
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.DOCUMENT TO BLOB.Summary-->DOCUMENT TO BLOB carrega todo o conteúdo do *documento* em *blob*.<!-- END REF--> Você deve passar o nome de um documento existente que não esteja aberto, caso contrário um erro será gerado. Para deixar o usuário escolher o documento a ser carregado para o BLOB, use o comando [Open document](open-document.md) e variável de processo do *documento* (ver exemplo).
+<!--REF #_command_.DOCUMENT TO BLOB.Summary-->DOCUMENT TO BLOB carrega todo o conteúdo do *documento* em *blob*.<!-- END REF--> Você deve passar o nome de um documento existente que não esteja aberto, caso contrário um erro será gerado. Para deixar o usuário escolher o documento a ser carregado para o BLOB, use o comando [Open document](../commands/open-document) e variável de processo do *documento* (ver exemplo).
 
 ## Exemplo 
 
@@ -60,8 +60,8 @@ Em cada caso, você pode interceptar o erro usando um método de interrupção [
 
 ## Ver também 
 
-[BLOB TO DOCUMENT](blob-to-document.md)  
-[Open document](open-document.md)  
+[BLOB TO DOCUMENT](../commands/blob-to-document)  
+[Open document](../commands/open-document)  
 
 ## Propriedades
 

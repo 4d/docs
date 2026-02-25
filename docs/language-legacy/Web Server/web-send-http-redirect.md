@@ -1,4 +1,4 @@
----
+﻿---
 id: web-send-http-redirect
 title: WEB SEND HTTP REDIRECT
 slug: /commands/web-send-http-redirect
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 The *url* parameter contains the new URL that allows you to redirect the request. If this parameter is a url to a file, it must contain the reference to this file, for example: **WEB SEND HTTP REDIRECT** ("/MyPage.HTM"). 
 
-This command prevails over commands that send data ([WEB SEND FILE](web-send-file.md), [WEB SEND BLOB](web-send-blob.md), etc.) that may be in the same method. 
+This command prevails over commands that send data ([WEB SEND FILE](../commands/web-send-file), [WEB SEND BLOB](../commands/web-send-blob), etc.) that may be in the same method. 
 
 This command also allows you to redirect a request to another Web server. 
 

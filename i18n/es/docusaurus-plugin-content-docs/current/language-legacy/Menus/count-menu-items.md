@@ -1,4 +1,4 @@
----
+﻿---
 id: count-menu-items
 title: Count menu items
 slug: /commands/count-menu-items
@@ -38,7 +38,7 @@ Si omite el parámetro *proceso*, Count menu items se aplica a la barra de menú
 
 ## Ver también 
 
-[Count menus](count-menus.md)  
+[Count menus](../commands/count-menus)  
 
 ## Propiedades
 

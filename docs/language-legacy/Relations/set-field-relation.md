@@ -1,4 +1,4 @@
----
+﻿---
 id: set-field-relation
 title: SET FIELD RELATION
 slug: /commands/set-field-relation
@@ -47,7 +47,7 @@ In the *one* and *many* parameters, pass the values indicating the changing of t
 
 **Note:** Changes made using this command only apply to the current process. The configuration of the relations set using the options in the Relation properties window is not modified. 
 
-**Note:** If you passed [True](true.md "True") to the [SET AUTOMATIC RELATIONS](set-automatic-relations.md) command during the same session, calls to **SET FIELD RELATION** are ignored, regardless of whether they are placed before or after [SET AUTOMATIC RELATIONS](set-automatic-relations.md). To "lock" the automatic mode and take calls to **SET FIELD RELATION** into account, pass [False](false.md "False") to [SET AUTOMATIC RELATIONS](set-automatic-relations.md).
+**Note:** If you passed [True](true.md "True") to the [SET AUTOMATIC RELATIONS](../commands/set-automatic-relations) command during the same session, calls to **SET FIELD RELATION** are ignored, regardless of whether they are placed before or after [SET AUTOMATIC RELATIONS](../commands/set-automatic-relations). To "lock" the automatic mode and take calls to **SET FIELD RELATION** into account, pass [False](false.md "False") to [SET AUTOMATIC RELATIONS](../commands/set-automatic-relations).
 
 ## Example 
 
@@ -63,10 +63,10 @@ The following code allows setting only useful relations as automatic in the Quic
 
 ## See also 
 
-[GET AUTOMATIC RELATIONS](get-automatic-relations.md)  
-[GET FIELD RELATION](get-field-relation.md)  
-[GET RELATION PROPERTIES](get-relation-properties.md)  
-[SET AUTOMATIC RELATIONS](set-automatic-relations.md)  
+[GET AUTOMATIC RELATIONS](../commands/get-automatic-relations)  
+[GET FIELD RELATION](../commands/get-field-relation)  
+[GET RELATION PROPERTIES](../commands/get-relation-properties)  
+[SET AUTOMATIC RELATIONS](../commands/set-automatic-relations)  
 
 ## Properties
 

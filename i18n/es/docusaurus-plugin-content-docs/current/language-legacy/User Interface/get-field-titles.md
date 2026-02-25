@@ -1,4 +1,4 @@
----
+﻿---
 id: get-field-titles
 title: GET FIELD TITLES
 slug: /commands/get-field-titles
@@ -39,8 +39,8 @@ En ambos casos, el comando no devuelve campos invisibles.
 
 ## Ver también 
 
-[GET TABLE TITLES](get-table-titles.md)  
-[SET FIELD TITLES](set-field-titles.md)  
+[GET TABLE TITLES](../commands/get-table-titles)  
+[SET FIELD TITLES](../commands/set-field-titles)  
 
 ## Propiedades
 

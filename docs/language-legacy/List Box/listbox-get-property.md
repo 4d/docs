@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-property
 title: LISTBOX Get property
 slug: /commands/listbox-get-property
@@ -101,7 +101,7 @@ Given a list box "MyListbox", if you execute the following statement:
 ## See also 
 
 [LISTBOX SET GRID](../commands/listbox-set-grid)  
-[LISTBOX SET PROPERTY](listbox-set-property.md)  
+[LISTBOX SET PROPERTY](../commands/listbox-set-property)  
 [OBJECT SET SCROLLBAR](../commands/object-set-scrollbar)  
 
 ## Properties

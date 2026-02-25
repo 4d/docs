@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-corner-radius
 title: OBJECT Get corner radius
 slug: /commands/object-get-corner-radius
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.OBJECT Get corner radius.Summary-->The **OBJECT Get corner radius** command returns the current value of the corner radius for the object designated by the *object* parameter.<!-- END REF--> This value may have been set at the form level using the *Corner radius property* or for the current process using the [OBJECT SET CORNER RADIUS](object-set-corner-radius.md) command.
+<!--REF #_command_.OBJECT Get corner radius.Summary-->The **OBJECT Get corner radius** command returns the current value of the corner radius for the object designated by the *object* parameter.<!-- END REF--> This value may have been set at the form level using the *Corner radius property* or for the current process using the [OBJECT SET CORNER RADIUS](../commands/object-set-corner-radius) command.
 
 The **OBJECT Get corner radius** command can be used with the following form objects:
 
@@ -58,7 +58,7 @@ The following code could be added to a button method:
 
 ## See also 
 
-[OBJECT SET CORNER RADIUS](object-set-corner-radius.md)  
+[OBJECT SET CORNER RADIUS](../commands/object-set-corner-radius)  
 
 ## Properties
 

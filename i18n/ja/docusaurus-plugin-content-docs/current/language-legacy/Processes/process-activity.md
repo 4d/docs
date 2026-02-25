@@ -1,4 +1,4 @@
----
+﻿---
 id: process-activity
 title: Process activity
 slug: /commands/process-activity
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 ## 説明
 
-<!--REF #_command_.Process activity.Summary-->The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.<!-- END REF-->**Process activity** コマンドは特定の時刻での、実行中のプロセスや接続ユーザーセッション (4D Server のみ) のスナップショットを返します。 このコマンドは、全てのプロセスを返します。これには、[Process info](process-info.md) コマンドでもアクセスできない内部プロセスも含まれます。 
+<!--REF #_command_.Process activity.Summary-->The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.<!-- END REF-->**Process activity** コマンドは特定の時刻での、実行中のプロセスや接続ユーザーセッション (4D Server のみ) のスナップショットを返します。 このコマンドは、全てのプロセスを返します。これには、[Process info](../commands/process-info) コマンドでもアクセスできない内部プロセスも含まれます。 
 
 デフォルトで、引数を渡さずに使用した場合、**Process activity** は以下のプロパティを格納したオブジェクトを返します:
 
@@ -54,17 +54,17 @@ displayed_sidebar: docs
 
 **Sessions**
 
-"sessions" プロパティには、サーバーで実行中の全てのユーザーセッション を記述するオブジェクトのコレクションが格納されます。 セッションオブジェクトのプロパティの詳細については、[`Session info`](session-info.md) コマンドを参照してください。
+"sessions" プロパティには、サーバーで実行中の全てのユーザーセッション を記述するオブジェクトのコレクションが格納されます。 セッションオブジェクトのプロパティの詳細については、[`Session info`](../commands/session-info) コマンドを参照してください。
 
 :::note
 
-セッションのオブジェクトは、[Session](session.md) コマンドを使用することで取得できます。
+セッションのオブジェクトは、[Session](../commands/session) コマンドを使用することで取得できます。
 
 :::
 
 **Processes**
 
-"process" プロパティには、サーバーで実行中の全てのプロセスを記述するオブジェクトのコレクションが格納されます。 プロセスオブジェクトのプロパティの詳細な情報については、[`Process info`](process-info.md) コマンドを参照してください。
+"process" プロパティには、サーバーで実行中の全てのプロセスを記述するオブジェクトのコレクションが格納されます。 プロセスオブジェクトのプロパティの詳細な情報については、[`Process info`](../commands/process-info) コマンドを参照してください。
 
 サーバー上では、`Process activity` コマンドは追加の"session" プロパティを返します:
 
@@ -108,7 +108,7 @@ displayed_sidebar: docs
 
 ## 参照
 
-[`Process info`](process-info.md)
-[`Session info`](session-info.md)
-[Session storage](session-storage.md)  
+[`Process info`](../commands/process-info)
+[`Session info`](../commands/session-info)
+[Session storage](../commands/session-storage)  
 [WEB Get server info](../commands/web-get-server-info)

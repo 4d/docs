@@ -1,4 +1,4 @@
----
+﻿---
 id: set-group-properties
 title: Set group properties
 slug: /commands/set-group-properties
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Set group properties.Summary-->**Set group properties** vous permet de modifier et de mettre à jour les propriétés d'un groupe existant dont vous passez le numéro de référence unique dans *réfGroupe*, ou d'ajouter un nouveau groupe.<!-- END REF-->
 
-Pour modifier les propriétés d'un groupe existant, vous devez passer son numéro de référence tel que retourné dans la commande [GET GROUP LIST](get-group-list.md). 
+Pour modifier les propriétés d'un groupe existant, vous devez passer son numéro de référence tel que retourné dans la commande [GET GROUP LIST](../commands/get-group-list). 
 
 Si vous voulez ajouter un nouveau groupe, passez -1 dans *réfGroupe* (voir également la note ci-dessous pour les bases binaires). 
 
@@ -46,7 +46,7 @@ Passez le nouveau nom du groupe dans le paramètre *nom*.
 
 *(Bases binaires uniquement) :* Passez le numéro de référence du nouveau propriétaire du groupe dans le paramètre propriétaire. Ce paramètre est ignoré dans les bases projets. 
 
-Si vous ne voulez pas modifier toutes les propriétés du groupe (à part ses membres, voir ci-dessous), passez les valeurs retournées par [GET GROUP PROPERTIES](get-group-properties.md) dans les paramètres que vous voulez laisser inchangés.
+Si vous ne voulez pas modifier toutes les propriétés du groupe (à part ses membres, voir ci-dessous), passez les valeurs retournées par [GET GROUP PROPERTIES](../commands/get-group-properties) dans les paramètres que vous voulez laisser inchangés.
 
 Si vous ne passez pas le paramètre optionnel *membres*, la liste courante des membres du groupe reste inchangée. Si vous ne le faites pas lors d'une création d'un groupe, le groupe n'aura pas de membres.
 
@@ -61,13 +61,13 @@ Si vous voulez enlever tous les membres d'un groupe, passez un tableau vide dans
 
 ## Gestion des erreurs 
 
-Si vous n'avez pas les privilèges d'accès pour appeler la commande **Set group properties** ou si le système de mots de passe est déjà ouvert par un autre process, une erreur de privilège d'accès est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs installée par [ON ERR CALL](on-err-call.md).
+Si vous n'avez pas les privilèges d'accès pour appeler la commande **Set group properties** ou si le système de mots de passe est déjà ouvert par un autre process, une erreur de privilège d'accès est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs installée par [ON ERR CALL](../commands/on-err-call).
 
 ## Voir aussi 
 
-[GET GROUP LIST](get-group-list.md)  
-[GET GROUP PROPERTIES](get-group-properties.md)  
-[GET USER LIST](get-user-list.md)  
+[GET GROUP LIST](../commands/get-group-list)  
+[GET GROUP PROPERTIES](../commands/get-group-properties)  
+[GET USER LIST](../commands/get-user-list)  
 
 ## Propriétés
 

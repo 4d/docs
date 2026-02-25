@@ -1,4 +1,4 @@
----
+﻿---
 id: get-macro-parameter
 title: GET MACRO PARAMETER
 slug: /commands/get-macro-parameter
@@ -46,7 +46,7 @@ Consulte o exemplo do comando [SET MACRO PARAMETER](set-macro-parameter.md "SET 
 
 ## Ver também 
 
-[SET MACRO PARAMETER](set-macro-parameter.md)  
+[SET MACRO PARAMETER](../commands/set-macro-parameter)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: get-group-properties
 title: GET GROUP PROPERTIES
 slug: /commands/get-group-properties
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.GET GROUP PROPERTIES.Summary-->GET GROUP PROPERTIES retorna as propriedades do grupo cujo número de referência único de ID de grupo pode passar em *GrupoID*.<!-- END REF--> Deve passar o número de referência do grupo retornado pelo comando [GET GROUP LIST](get-group-list.md). 
+<!--REF #_command_.GET GROUP PROPERTIES.Summary-->GET GROUP PROPERTIES retorna as propriedades do grupo cujo número de referência único de ID de grupo pode passar em *GrupoID*.<!-- END REF--> Deve passar o número de referência do grupo retornado pelo comando [GET GROUP LIST](../commands/get-group-list). 
 
 Se não passar um número de referência válido, GET GROUP PROPERTIES retorna parâmetros vazios.
 
@@ -44,13 +44,13 @@ Nota para bancos de dados binários: Valores de grupo e ID de usuários dependem
 
 ## Gestão de erros 
 
-Se não tiver privilégios de acesso para chamar ao comando GET GROUP PROPERTIES ou se outro processo abrir no sistema de senhas, um erro de privilégios de acesso é gerado. Pode interceptar este erro com um método de gestão de erros instalado por [ON ERR CALL](on-err-call.md).
+Se não tiver privilégios de acesso para chamar ao comando GET GROUP PROPERTIES ou se outro processo abrir no sistema de senhas, um erro de privilégios de acesso é gerado. Pode interceptar este erro com um método de gestão de erros instalado por [ON ERR CALL](../commands/on-err-call).
 
 ## Ver também 
 
-[GET GROUP LIST](get-group-list.md)  
-[GET USER LIST](get-user-list.md)  
-[Set group properties](set-group-properties.md)  
+[GET GROUP LIST](../commands/get-group-list)  
+[GET USER LIST](../commands/get-user-list)  
+[Set group properties](../commands/set-group-properties)  
 
 ## Propriedades
 

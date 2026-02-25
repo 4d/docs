@@ -1,4 +1,4 @@
----
+﻿---
 id: svg-export-to-picture
 title: SVG EXPORT TO PICTURE
 slug: /commands/svg-export-to-picture
@@ -62,8 +62,8 @@ L’exemple suivant permet d’afficher “Hello World” dans une image 4D :
 
 ## Voir aussi 
 
-[DOM EXPORT TO FILE](dom-export-to-file.md)  
-[DOM EXPORT TO VAR](dom-export-to-var.md)  
+[DOM EXPORT TO FILE](../commands/dom-export-to-file)  
+[DOM EXPORT TO VAR](../commands/dom-export-to-var)  
 
 ## Propriétés
 

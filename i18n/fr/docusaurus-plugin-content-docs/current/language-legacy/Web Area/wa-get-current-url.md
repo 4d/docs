@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-get-current-url
 title: WA Get current URL
 slug: /commands/wa-get-current-url
@@ -46,7 +46,7 @@ La page affichée est l’URL "www.apple.com" et la page "www.4d.com" est en cou
 
 ## Voir aussi 
 
-[WA OPEN URL](wa-open-url.md)  
+[WA OPEN URL](../commands/wa-open-url)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: sequence-number
 title: Sequence number
 slug: /commands/sequence-number
@@ -31,13 +31,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Sequence number.Summary-->Sequence number devuelve el próximo número automático de *tabla*.<!-- END REF--> El número de secuencia es único para cada tabla. Este número es único para cada tabla. Este valor no se repite y se incrementa por cada nuevo registro creado en la tabla (\*).  
 
-(\*) Por razones de optimización, la numeración automática sólo se inicia en la primera llamada del comando **Sequence number** o de una funcionalidad que tenga acceso al número de secuencia (ver abajo). Además, la numeración se puede modificar utilizando el comando [SET DATABASE PARAMETER](set-database-parameter.md). Por lo tanto, el valor devuelto no se debe considerar como el número de registros creados en *tabla*.
+(\*) Por razones de optimización, la numeración automática sólo se inicia en la primera llamada del comando **Sequence number** o de una funcionalidad que tenga acceso al número de secuencia (ver abajo). Además, la numeración se puede modificar utilizando el comando [SET DATABASE PARAMETER](../commands/set-database-parameter). Por lo tanto, el valor devuelto no se debe considerar como el número de registros creados en *tabla*.
 
-Por defecto, la numeración comienza en 1\. Puede cambiar la numeración para una tabla utilizando el comando [SET DATABASE PARAMETER](set-database-parameter.md). 
+Por defecto, la numeración comienza en 1\. Puede cambiar la numeración para una tabla utilizando el comando [SET DATABASE PARAMETER](../commands/set-database-parameter). 
 
-**Nota:** si no hay un registro actual y la numeración se ha modificado a través del comando [SET DATABASE PARAMETER](set-database-parameter.md), este número se reserva para la próxima creación de registro, pero sólo será devuelto por la función
+**Nota:** si no hay un registro actual y la numeración se ha modificado a través del comando [SET DATABASE PARAMETER](../commands/set-database-parameter), este número se reserva para la próxima creación de registro, pero sólo será devuelto por la función
 
-**Sequence number** cuando el comando [SAVE RECORD](save-record.md) se haya llamado. 
+**Sequence number** cuando el comando [SAVE RECORD](../commands/save-record) se haya llamado. 
 
 La función **Sequence number** es útil en los siguientes casos:  
 * Si el número de secuencia es mayor que 1
@@ -70,8 +70,8 @@ El siguiente ejemplo es parte de un método de formulario. Estas líneas de cód
 ## Ver también 
 
 *Acerca de números de registros*  
-[Record number](record-number.md)  
-[Selected record number](selected-record-number.md)  
+[Record number](../commands/record-number)  
+[Selected record number](../commands/selected-record-number)  
 
 ## Propiedades
 

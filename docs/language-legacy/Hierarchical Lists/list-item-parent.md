@@ -1,4 +1,4 @@
----
+﻿---
 id: list-item-parent
 title: List item parent
 slug: /commands/list-item-parent
@@ -45,7 +45,7 @@ In return, if the corresponding item exists in the list and if this item is in a
 
 If there is no item with the item reference number you passed, or if you have passed \* and no item is selected, or if the item has no parent, **List item parent** returns 0 (zero).
 
-If you work with item reference numbers, be sure to build a list in which the items have unique reference numbers; otherwise you will not be able to distinguish the items. For more information, see the description of the [APPEND TO LIST](append-to-list.md) command.
+If you work with item reference numbers, be sure to build a list in which the items have unique reference numbers; otherwise you will not be able to distinguish the items. For more information, see the description of the [APPEND TO LIST](../commands/append-to-list) command.
 
 ## Example 
 
@@ -79,10 +79,10 @@ The item reference numbers are set as follows:
 
 ## See also 
 
-[GET LIST ITEM](get-list-item.md)  
-[List item position](list-item-position.md)  
-[SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
-[SET LIST ITEM](set-list-item.md)  
+[GET LIST ITEM](../commands/get-list-item)  
+[List item position](../commands/list-item-position)  
+[SELECT LIST ITEMS BY REFERENCE](../commands/select-list-items-by-reference)  
+[SET LIST ITEM](../commands/set-list-item)  
 
 ## Properties
 

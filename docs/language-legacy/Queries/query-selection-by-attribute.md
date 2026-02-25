@@ -1,4 +1,4 @@
----
+﻿---
 id: query-selection-by-attribute
 title: QUERY SELECTION BY ATTRIBUTE
 slug: /commands/query-selection-by-attribute
@@ -34,16 +34,16 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Summary-->**QUERY SELECTION BY ATTRIBUTE** works and performs the same actions as [QUERY BY ATTRIBUTE](query-by-attribute.md).<!-- END REF--> The difference between these two commands is the scope of the query:
+<!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Summary-->**QUERY SELECTION BY ATTRIBUTE** works and performs the same actions as [QUERY BY ATTRIBUTE](../commands/query-by-attribute).<!-- END REF--> The difference between these two commands is the scope of the query:
 
-* [QUERY BY ATTRIBUTE](query-by-attribute.md) looks for records among all the records in the table.
+* [QUERY BY ATTRIBUTE](../commands/query-by-attribute) looks for records among all the records in the table.
 * **QUERY SELECTION BY ATTRIBUTE** looks for records among the records currently selected in the table.
 
 **QUERY SELECTION BY ATTRIBUTE** looks for records in *aTable*. The **QUERY SELECTION BY ATTRIBUTE** command changes the current selection of *aTable* for the current process and makes the first record of the new selection the current record.
 
-For more information, see the description of the [QUERY BY ATTRIBUTE](query-by-attribute.md) command.
+For more information, see the description of the [QUERY BY ATTRIBUTE](../commands/query-by-attribute) command.
 
-The **QUERY SELECTION BY ATTRIBUTE** command is useful when a query cannot be defined using a combination of [QUERY BY ATTRIBUTE](query-by-attribute.md) (and even [QUERY](query.md)) calls joined with the \* parameter. Typically, this is the case when you want to query a current selection that does not result from a previous query, but from a command such as [USE SET](use-set.md). 
+The **QUERY SELECTION BY ATTRIBUTE** command is useful when a query cannot be defined using a combination of [QUERY BY ATTRIBUTE](../commands/query-by-attribute) (and even [QUERY](../commands/query)) calls joined with the \* parameter. Typically, this is the case when you want to query a current selection that does not result from a previous query, but from a command such as [USE SET](../commands/use-set). 
 
 ## Example 
 
@@ -57,7 +57,7 @@ You want to find people with an age between 20 and 30, among the records that we
 
 ## See also 
 
-[QUERY BY ATTRIBUTE](query-by-attribute.md)  
+[QUERY BY ATTRIBUTE](../commands/query-by-attribute)  
 
 ## Properties
 

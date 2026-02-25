@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-headers-height
 title: LISTBOX Get headers height
 slug: /commands/listbox-get-headers-height
@@ -45,7 +45,7 @@ Por defeito, se omitido o parâmetro *unidade*, a altura de linha devolvida se e
 
 ## Ver também 
 
-[LISTBOX SET HEADERS HEIGHT](listbox-set-headers-height.md)  
+[LISTBOX SET HEADERS HEIGHT](../commands/listbox-set-headers-height)  
 
 ## Propriedades
 

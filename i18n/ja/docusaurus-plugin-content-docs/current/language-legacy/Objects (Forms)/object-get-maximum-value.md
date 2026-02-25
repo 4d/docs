@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-maximum-value
 title: OBJECT GET MAXIMUM VALUE
 slug: /commands/object-get-maximum-value
@@ -31,14 +31,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET MAXIMUM VALUE.Summary-->**OBJECT GET MAXIMUM VALUE**コマンドは、引数 *object* と *\** で指定したオブジェクトのカレントの最大値を、 *maxValue* 変数の中に返します。<!-- END REF-->
 
-最大値のプロパティは、デザインモードのプロパティリストを使用するか、新コマンド [OBJECT SET MAXIMUM VALUE](object-set-maximum-value.md) を使用することによって定義できます。
+最大値のプロパティは、デザインモードのプロパティリストを使用するか、新コマンド [OBJECT SET MAXIMUM VALUE](../commands/object-set-maximum-value) を使用することによって定義できます。
 
 任意の *\** 演算子を渡した場合、 *object* 引数でオブジェクト名を文字列で指定します。省略時には *object* 引数でフィールドまたは変数を指定します。
 
 ## 参照 
 
-[OBJECT GET MINIMUM VALUE](object-get-minimum-value.md)  
-[OBJECT SET MAXIMUM VALUE](object-set-maximum-value.md)  
+[OBJECT GET MINIMUM VALUE](../commands/object-get-minimum-value)  
+[OBJECT SET MAXIMUM VALUE](../commands/object-set-maximum-value)  
 
 ## プロパティ
 

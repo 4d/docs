@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-title
 title: OBJECT Get title
 slug: /commands/object-get-title
@@ -41,7 +41,7 @@ If you pass the optional *\** parameter, you indicate that the *object* paramete
 
 ## See also 
 
-[OBJECT SET TITLE](object-set-title.md)  
+[OBJECT SET TITLE](../commands/object-set-title)  
 
 ## Properties
 

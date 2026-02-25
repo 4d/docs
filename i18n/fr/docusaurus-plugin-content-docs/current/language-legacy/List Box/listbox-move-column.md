@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-move-column
 title: LISTBOX MOVE COLUMN
 slug: /commands/listbox-move-column
@@ -51,7 +51,7 @@ Vous souhaitez intervertir les 2e et 3e colonnes de la list box :
 
 #### Voir aussi 
 
-[LISTBOX DUPLICATE COLUMN](listbox-duplicate-column.md)  
+[LISTBOX DUPLICATE COLUMN](../commands/listbox-duplicate-column)  
 
 #### Propriétés
 

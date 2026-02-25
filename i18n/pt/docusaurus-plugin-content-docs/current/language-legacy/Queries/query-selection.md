@@ -1,4 +1,4 @@
----
+﻿---
 id: query-selection
 title: QUERY SELECTION
 slug: /commands/query-selection
@@ -32,14 +32,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUERY SELECTION.Summary-->**QUERY SELECTION** busca registros em *tabela*.<!-- END REF--> O comando **QUERY SELECTION** muda a seleção atual de *tabela* para o processo atual e faz do primeiro registro da nova seleção no registro atual.
 
-**QUERY SELECTION** funciona e realiza as mesmas ações que [QUERY](query.md). A diferença entre os dois comandos é o alcance da pesquisa:
+**QUERY SELECTION** funciona e realiza as mesmas ações que [QUERY](../commands/query). A diferença entre os dois comandos é o alcance da pesquisa:
 
-* [QUERY](query.md) busca registros entre os registros na tabela.
+* [QUERY](../commands/query) busca registros entre os registros na tabela.
 * **QUERY SELECTION** busca registros entre os registros da seleção atual da tabela.
 
-Para maior informação, consulte a descrição do comando [QUERY](query.md).
+Para maior informação, consulte a descrição do comando [QUERY](../commands/query).
 
-O comando **QUERY SELECTION** é útil quando uma pesquisa não pode ser definida usando a sequência [QUERY](query.md) chamadas unidas com o parâmetro *\** . Tipicamente, é o caso quando quer pesquisar uma seleção atual que não resulta de uma pesquisa anterior, mas de um comando como por exemplo [USE SET](use-set.md). 
+O comando **QUERY SELECTION** é útil quando uma pesquisa não pode ser definida usando a sequência [QUERY](../commands/query) chamadas unidas com o parâmetro *\** . Tipicamente, é o caso quando quer pesquisar uma seleção atual que não resulta de uma pesquisa anterior, mas de um comando como por exemplo [USE SET](../commands/use-set). 
 
 ## Exemplo 
 
@@ -55,7 +55,7 @@ Isso faz com que encontre todas as empresas localizadas em Nova Iorque, com ativ
 
 ## Ver também 
 
-[QUERY](query.md)  
+[QUERY](../commands/query)  
 
 ## Propriedades
 

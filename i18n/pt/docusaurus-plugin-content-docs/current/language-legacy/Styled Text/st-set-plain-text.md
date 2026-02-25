@@ -1,4 +1,4 @@
----
+﻿---
 id: st-set-plain-text
 title: ST SET PLAIN TEXT
 slug: /commands/st-set-plain-text
@@ -32,9 +32,9 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.ST SET PLAIN TEXT.Summary-->O comando [ST SET PLAIN TEXT](st-set-plain-text.md) insere o texto passado no parâmetro *novTexto* no campo ou a variável de texto com estilo designado pelo parâmetro *objeto* .<!-- END REF--> Este comando aplica unicamente ao texto plano do parâmetro *objeto*, sem modificar as possíveis etiquetas de estilo que contenha. 
+<!--REF #_command_.ST SET PLAIN TEXT.Summary-->O comando [ST SET PLAIN TEXT](../commands/st-set-plain-text) insere o texto passado no parâmetro *novTexto* no campo ou a variável de texto com estilo designado pelo parâmetro *objeto* .<!-- END REF--> Este comando aplica unicamente ao texto plano do parâmetro *objeto*, sem modificar as possíveis etiquetas de estilo que contenha. 
 
-A diferença do comando [ST SET TEXT](st-set-text.md), [ST SET PLAIN TEXT](st-set-plain-text.md) insere unicamente texto plano. Não deve passar texto com etiquetas de estilo em *novTexto*. Se conter os caracteres <, > ou &, se consideram como caracteres normais e são convertidos em entidades HTML:
+A diferença do comando [ST SET TEXT](../commands/st-set-text), [ST SET PLAIN TEXT](../commands/st-set-plain-text) insere unicamente texto plano. Não deve passar texto com etiquetas de estilo em *novTexto*. Se conter os caracteres <, > ou &, se consideram como caracteres normais e são convertidos em entidades HTML:
 
 * '&' se converte em &amp;
 * '<' se converte em &lt;
@@ -51,9 +51,9 @@ Em *novTexto*, passe o texto plano a inserir.
 
 Os parâmetros opcionais *inicioSel* e *fimSel* permitem designar uma seleção de texto em *objeto*. Os valores de *inicioSel* e *fimSel* dão uma seleção de texto sem formato, sem considerar nenhum tipo de etiquetas de estilo no texto. A ação do comando varia segundo os parâmetros opcionais *inicioSel* e *fimSel*:
 
-* Se omite *inicioSel* e *fimSel*, [ST SET PLAIN TEXT](st-set-plain-text.md) substitui todo o texto de *objeto* por *novTexto* ,
-* Se passa unicamente *inicioSel* ou se os valores de *inicioSel* e *fimSel* são iguais, [ST SET PLAIN TEXT](st-set-plain-text.md) insere o texto *novTexto* em *objeto* a partir de *inicioSel*,
-* Se passa *inicioSel* e *fimSel*, [ST SET PLAIN TEXT](st-set-plain-text.md) substitui o texto sem formato definido por estes limites pelo texto *novTexto*.
+* Se omite *inicioSel* e *fimSel*, [ST SET PLAIN TEXT](../commands/st-set-plain-text) substitui todo o texto de *objeto* por *novTexto* ,
+* Se passa unicamente *inicioSel* ou se os valores de *inicioSel* e *fimSel* são iguais, [ST SET PLAIN TEXT](../commands/st-set-plain-text) insere o texto *novTexto* em *objeto* a partir de *inicioSel*,
+* Se passa *inicioSel* e *fimSel*, [ST SET PLAIN TEXT](../commands/st-set-plain-text) substitui o texto sem formato definido por estes limites pelo texto *novTexto*.
 * Pode passar 0 em *fimSel*para designar automaticamente o último caractere do texto (passe 1 em *inicioSel* para designar o primeiro caractere do texto).
 
 4D oferece constantes pré definidas que pode utilizar para designar automaticamente os limites da seleção nos parâmetros *inicioSel* e *fimSel*. Estas constantes estão disponíveis no tema "*Texto multi estilo*": 
@@ -77,7 +77,7 @@ Dada a seguinte variável texto multiestilo:
 
 ![](../../assets/en/commands/pict572269.en.png)
 
-Você quer inserir nomes de empresas guardadas em um campo texto. Estes nomes podem conter, por exemplo o caractere "&". Neste caso, deverá utilizar o comando [ST SET PLAIN TEXT](st-set-plain-text.md):
+Você quer inserir nomes de empresas guardadas em um campo texto. Estes nomes podem conter, por exemplo o caractere "&". Neste caso, deverá utilizar o comando [ST SET PLAIN TEXT](../commands/st-set-plain-text):
 
 ```4d
  ST SET PLAIN TEXT(meuTextoEstilo;[Empresa]Nome;33;34)
@@ -93,7 +93,7 @@ Este é o texto sem formato conteúdo na variável:
 
 Pode constatar que o texto inserido se encapsulou dentro de um par de etiquetas de estilo adicionais. Estas etiquetas correspondem ao estilo dos caracteres antes da inserção. Este mecanismo permite garantir uma visualização correta dos campos multiestilos em todos os casos. 
 
-**Nota:** se utiliza o comando [ST SET TEXT](st-set-text.md) neste caso, 4D no insere nada porque a presença do caractere "&" não codificado evita a interpretação das etiquetas de estilo presentes na variável. Para maior informação, consulte a descrição de este comando. 
+**Nota:** se utiliza o comando [ST SET TEXT](../commands/st-set-text) neste caso, 4D no insere nada porque a presença do caractere "&" não codificado evita a interpretação das etiquetas de estilo presentes na variável. Para maior informação, consulte a descrição de este comando. 
 
 ## Variáveis e conjuntos do sistema 
 
@@ -103,8 +103,8 @@ No caso de um erro, a variável não muda. Quando se produz um erro em uma vari�
 
 ## Ver também 
 
-[ST Get plain text](st-get-plain-text.md)  
-[ST SET TEXT](st-set-text.md)  
+[ST Get plain text](../commands/st-get-plain-text)  
+[ST SET TEXT](../commands/st-set-text)  
 
 ## Propriedades
 

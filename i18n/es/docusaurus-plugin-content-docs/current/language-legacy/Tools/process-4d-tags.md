@@ -1,4 +1,4 @@
----
+﻿---
 id: process-4d-tags
 title: PROCESS 4D TAGS
 slug: /commands/process-4d-tags
@@ -55,7 +55,7 @@ Un conjunto dedicado de variables locales se define en el contexto de ejecución
 Después de la ejecución del comando, el parámetro *datosSalida* recibe el resultado de la ejecución del parámetro *plantillaEntrada*, junto con el resultado del proceso de las etiquetas 4D que contiene, cuando aplica. Si *datosEntrada* no contiene las etiquetas 4D o produce una cadena vacía, el contenido de *datosSalida* es idéntico al de *plantillaEntrada*.  
 El parámetro *datosSalida* puede ser un campo o una variable de tipo Texto.
 
-**Nota**: este comando nunca llama al [Método base On Web Authentication](metodo-base-on-web-authentication.md).
+**Nota**: este comando nunca llama al [Método base On Web Authentication](../commands/metodo-base-on-web-authentication).
 
 ## Ejemplo 1 
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-is-defined
 title: OB Is defined
 slug: /commands/ob-is-defined
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 By default, if you omit the *property* parameter, the command checks whether the *object* is defined. An object is defined if its contents has been initialized. 
 
-**Note:** An object can be defined but empty. To find out if an object is undefined or empty, use the [OB Is empty](ob-is-empty.md) command. 
+**Note:** An object can be defined but empty. To find out if an object is undefined or empty, use the [OB Is empty](../commands/ob-is-empty) command. 
 
 If you pass the *property* parameter, the command checks whether this property exists in *object*. Note that the *property* parameter is case sensitive. 
 
@@ -72,7 +72,7 @@ This test is equivalent to:
 
 ## See also 
 
-[OB Is empty](ob-is-empty.md)  
+[OB Is empty](../commands/ob-is-empty)  
 
 ## Properties
 

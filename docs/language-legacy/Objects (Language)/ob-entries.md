@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-entries
 title: OB Entries
 slug: /commands/ob-entries
@@ -64,8 +64,8 @@ Using an object as an hash map (key / value system) provides a quick and direct 
 
 ## See also 
 
-[OB Keys](ob-keys.md)  
-[OB Values](ob-values.md)  
+[OB Keys](../commands/ob-keys)  
+[OB Values](../commands/ob-values)  
 
 ## Properties
 

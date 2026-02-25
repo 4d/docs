@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-sorts
 title: QR GET SORTS
 slug: /commands/qr-get-sorts
@@ -46,7 +46,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[QR SET SORTS](qr-set-sorts.md)  
+[QR SET SORTS](../commands/qr-set-sorts)  
 
 ## プロパティ
 

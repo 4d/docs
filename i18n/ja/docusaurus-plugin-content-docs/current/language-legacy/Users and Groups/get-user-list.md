@@ -1,4 +1,4 @@
----
+﻿---
 id: get-user-list
 title: GET USER LIST
 slug: /commands/get-user-list
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 配列 *userNames* には、パスワードウィンドウで表示されるユーザー名が代入されます。これには、無効となったアカウントを持つユーザーも含まれます (パスワードウィンドウではユーザー名が緑色で表示されます) 。
 
-**注:** 削除されたユーザーを検出するには、[Is user deleted](is-user-deleted.md) コマンドを使用してください。
+**注:** 削除されたユーザーを検出するには、[Is user deleted](../commands/is-user-deleted) コマンドを使用してください。
 
 配列 *userNames* と同期されている配列 *userNumbers* には、対応するユニークなユーザーID番号が代入されます。
 
@@ -44,9 +44,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[GET GROUP LIST](get-group-list.md)  
-[GET USER PROPERTIES](get-user-properties.md)  
-[Set user properties](set-user-properties.md)  
+[GET GROUP LIST](../commands/get-group-list)  
+[GET USER PROPERTIES](../commands/get-user-properties)  
+[Set user properties](../commands/set-user-properties)  
 
 ## プロパティ
 

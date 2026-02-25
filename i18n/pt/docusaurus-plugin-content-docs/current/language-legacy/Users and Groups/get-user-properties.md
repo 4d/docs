@@ -1,4 +1,4 @@
----
+﻿---
 id: get-user-properties
 title: GET USER PROPERTIES
 slug: /commands/get-user-properties
@@ -35,9 +35,9 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.GET USER PROPERTIES.Summary-->GET USER PROPERTIES retorna a informação sobre o usuário cujo número de referência se passa no parâmetro *refUsuario*.<!-- END REF--> Deve passar um número de referência de usuário retornado pelo comando [GET USER LIST](get-user-list.md).
+<!--REF #_command_.GET USER PROPERTIES.Summary-->GET USER PROPERTIES retorna a informação sobre o usuário cujo número de referência se passa no parâmetro *refUsuario*.<!-- END REF--> Deve passar um número de referência de usuário retornado pelo comando [GET USER LIST](../commands/get-user-list).
 
-Se a conta de usuário não existir ou tiver sido apagada, se gera o erro -9979\. Pode interceptar este erro com um método de gestão de erros instalado por [ON ERR CALL](on-err-call.md). Senão, pode chamar [Is user deleted](is-user-deleted.md) para testar a conta de usuário antes de chamarGET USER PROPERTIES.
+Se a conta de usuário não existir ou tiver sido apagada, se gera o erro -9979\. Pode interceptar este erro com um método de gestão de erros instalado por [ON ERR CALL](../commands/on-err-call). Senão, pode chamar [Is user deleted](../commands/is-user-deleted) para testar a conta de usuário antes de chamarGET USER PROPERTIES.
 
 Depois da chamada, recupera o nome, método de inicio, senha criptografada, número de logins e a data da última utilização do banco nos parâmetros *nome, inicio, senha, numLogin* e *ultLogin.*
 
@@ -45,7 +45,7 @@ Depois da chamada, recupera o nome, método de inicio, senha criptografada, núm
 **Notas**:
 
 * os parâmetros numLogin e ultLogin são usados apenas em bancos de dados binários. Sempre retornam, respectivamente, 0 e 00/00/00 em bancos de dados projeto
-* o parâmetro *senha* é obsoleto (sempre devolve uma string vazia). Se deseja verificar a senha de um usuário, utilize a função [Validate password](validate-password.md).
+* o parâmetro *senha* é obsoleto (sempre devolve uma string vazia). Se deseja verificar a senha de um usuário, utilize a função [Validate password](../commands/validate-password).
 
 Se passa o parâmetro opcional *adesao*, recupera os números de referência únicos dos grupos aos quais pertence o usuário.  
   
@@ -58,15 +58,15 @@ Nota para bancos de dados binários. Valors das IDs de referência de grupo e de
 
 ## Gestão de erros 
 
-Se não tiver privilégios de acesso para chamar ao comando GET USER PROPERTIES ou se outro processo abriu no sistema de senhas, um erro de privilégios de acesso é gerado. Pode interceptar este erro com un método de gestão de erros instalado por [ON ERR CALL](on-err-call.md).
+Se não tiver privilégios de acesso para chamar ao comando GET USER PROPERTIES ou se outro processo abriu no sistema de senhas, um erro de privilégios de acesso é gerado. Pode interceptar este erro com un método de gestão de erros instalado por [ON ERR CALL](../commands/on-err-call).
 
 ## Ver também 
 
-[GET GROUP LIST](get-group-list.md)  
-[GET USER LIST](get-user-list.md)  
-[Is user deleted](is-user-deleted.md)  
-[Set user properties](set-user-properties.md)  
-[Validate password](validate-password.md)  
+[GET GROUP LIST](../commands/get-group-list)  
+[GET USER LIST](../commands/get-user-list)  
+[Is user deleted](../commands/is-user-deleted)  
+[Set user properties](../commands/set-user-properties)  
+[Validate password](../commands/validate-password)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: set-blob-size
 title: SET BLOB SIZE
 slug: /commands/set-blob-size
@@ -39,7 +39,7 @@ If you want to allocate new bytes to a BLOB and want to have those bytes initial
 
 ## Error Handling 
 
-If you cannot resize a BLOB due to insufficient memory, the error -108 is generated. You can trap this error using an [ON ERR CALL](on-err-call.md) interruption method.
+If you cannot resize a BLOB due to insufficient memory, the error -108 is generated. You can trap this error using an [ON ERR CALL](../commands/on-err-call) interruption method.
 
 ## Example 1 
 
@@ -61,7 +61,7 @@ The following example creates a BLOB of 16K filled of 0xFF:
 
 ## See also 
 
-[BLOB size](blob-size.md)  
+[BLOB size](../commands/blob-size)  
 
 ## Properties
 

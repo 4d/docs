@@ -1,4 +1,4 @@
----
+﻿---
 id: relate-many
 title: RELATE MANY
 slug: /commands/relate-many
@@ -47,7 +47,7 @@ Por otra parte, los registros relacionados no se cargan si un registro de la tab
 • Cuando el comando RELATE MANY se aplica a una selección vacía, el comando no se ejecuta y la selección para la tabla Muchos no cambia.  
 • Para que el comando funcione, los campos llave foránea (campos Muchos) deben estar indexados. 
 
-Por ejemplo, el siguiente método efectúa un bucle por cada registro de la tabla \[Empresas\]. Para cada empresa, aparece una caja de alerta. La caja de alerta muestra el número de personas en la empresa (el número de registros relacionados en la tabla \[Personas\]), y el número de partes que suministran (el número de registros en la tabla \[Partes\] que están relacionados). En el ejemplo, el argumento para el comando [ALERT](alert.md) se imprime en varias líneas por claridad. 
+Por ejemplo, el siguiente método efectúa un bucle por cada registro de la tabla \[Empresas\]. Para cada empresa, aparece una caja de alerta. La caja de alerta muestra el número de personas en la empresa (el número de registros relacionados en la tabla \[Personas\]), y el número de partes que suministran (el número de registros en la tabla \[Partes\] que están relacionados). En el ejemplo, el argumento para el comando [ALERT](../commands/alert) se imprime en varias líneas por claridad. 
 
 Note que es necesario el comando RELATE MANY, aunque las relaciones sean automáticas.
 
@@ -65,8 +65,8 @@ Note que es necesario el comando RELATE MANY, aunque las relaciones sean automá
 
 ## Ver también 
 
-[OLD RELATED MANY](old-related-many.md)  
-[RELATE ONE](relate-one.md)  
+[OLD RELATED MANY](../commands/old-related-many)  
+[RELATE ONE](../commands/relate-one)  
 
 ## Propiedades
 

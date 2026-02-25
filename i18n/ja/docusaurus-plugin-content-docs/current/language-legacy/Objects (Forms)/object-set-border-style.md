@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-border-style
 title: OBJECT SET BORDER STYLE
 slug: /commands/object-set-border-style
@@ -49,7 +49,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT Get border style](object-get-border-style.md)  
+[OBJECT Get border style](../commands/object-get-border-style)  
 
 ## プロパティ
 

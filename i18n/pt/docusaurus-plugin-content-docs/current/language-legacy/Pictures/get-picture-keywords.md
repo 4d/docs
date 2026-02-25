@@ -1,4 +1,4 @@
----
+﻿---
 id: get-picture-keywords
 title: GET PICTURE KEYWORDS
 slug: /commands/get-picture-keywords
@@ -39,12 +39,12 @@ Se passado o parâmetro *\**, o método só devolve os "valores diferentes" de p
   
 Caso a imagem não contém palavras-chaves ou metadados IPTC/Keywords, o comando devolve um array vazio, não é gerado nenhum erro.  
   
-**Nota**: os resultados devolvidos por este comando podem diferir em função do valor atual da propriedade da base "Considerar unicamente caracteres não alfanuméricos para as palavras-chaves" (ver o parágrafo [DOM GET XML CHILD NODES](dom-get-xml-child-nodes.md)).
+**Nota**: os resultados devolvidos por este comando podem diferir em função do valor atual da propriedade da base "Considerar unicamente caracteres não alfanuméricos para as palavras-chaves" (ver o parágrafo [DOM GET XML CHILD NODES](../commands/dom-get-xml-child-nodes)).
 
 ## Ver também 
 
-[GET PICTURE METADATA](get-picture-metadata.md)  
-[SET PICTURE METADATA](set-picture-metadata.md)  
+[GET PICTURE METADATA](../commands/get-picture-metadata)  
+[SET PICTURE METADATA](../commands/set-picture-metadata)  
 
 ## Propriedades
 

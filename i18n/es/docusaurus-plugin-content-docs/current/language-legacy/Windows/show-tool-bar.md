@@ -1,4 +1,4 @@
----
+﻿---
 id: show-tool-bar
 title: SHOW TOOL BAR
 slug: /commands/show-tool-bar
@@ -34,11 +34,11 @@ Si una ventana barra de herramientas ha sido creada por el comando [Open form wi
 
 #### Ejemplo 
 
-Consulte el ejemplo del comando [HIDE TOOL BAR](hide-tool-bar.md).
+Consulte el ejemplo del comando [HIDE TOOL BAR](../commands/hide-tool-bar).
 
 #### Ver también 
 
-[HIDE TOOL BAR](hide-tool-bar.md)  
+[HIDE TOOL BAR](../commands/hide-tool-bar)  
 
 #### Propiedades
 

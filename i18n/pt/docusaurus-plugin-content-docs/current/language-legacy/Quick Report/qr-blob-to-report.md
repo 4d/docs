@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-blob-to-report
 title: QR BLOB TO REPORT
 slug: /commands/qr-blob-to-report
@@ -54,7 +54,7 @@ A instrução a seguir recupera o relatório rápido armazenado em Campo4 e o mo
 
 ## Ver também 
 
-[QR REPORT TO BLOB](qr-report-to-blob.md)  
+[QR REPORT TO BLOB](../commands/qr-report-to-blob)  
 
 ## Propriedades
 

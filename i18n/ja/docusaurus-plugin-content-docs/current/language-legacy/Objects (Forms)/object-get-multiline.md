@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-multiline
 title: OBJECT Get multiline
 slug: /commands/object-get-multiline
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get multiline.Summary-->**OBJECT Get multiline**コマンドは、引数 *object* と *\** で指定したオブジェクトの、"複数行"のオプションのカレントの状態を返します。<!-- END REF-->
 
-「複数行」のオプションはデザインモードのプロパティリストを使用するか、 [OBJECT SET MULTILINE](object-set-multiline.md) という新しいコマンドを使用して設定することができます。
+「複数行」のオプションはデザインモードのプロパティリストを使用するか、 [OBJECT SET MULTILINE](../commands/object-set-multiline) という新しいコマンドを使用して設定することができます。
 
 任意の *\** 演算子を渡した場合、 *object* 引数でオブジェクト名を文字列で指定します。省略時には *object* 引数でフィールドまたは変数を指定します。
 
@@ -47,7 +47,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT SET MULTILINE](object-set-multiline.md)  
+[OBJECT SET MULTILINE](../commands/object-set-multiline)  
 
 ## プロパティ
 

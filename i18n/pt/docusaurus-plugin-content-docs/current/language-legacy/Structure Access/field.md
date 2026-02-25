@@ -1,4 +1,4 @@
----
+﻿---
 id: field
 title: Field
 slug: /commands/field
@@ -56,10 +56,10 @@ No seguinte exemplo, a variável *numCampo* for igual ao número do campo de \[T
 
 ## Ver também 
 
-[Field name](field-name.md)  
-[GET FIELD PROPERTIES](get-field-properties.md)  
-[Last field number](last-field-number.md)  
-[Table](table.md)  
+[Field name](../commands/field-name)  
+[GET FIELD PROPERTIES](../commands/get-field-properties)  
+[Last field number](../commands/last-field-number)  
+[Table](../commands/table)  
 
 ## Propriedades
 

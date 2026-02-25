@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-vertical-alignment
 title: OBJECT Get vertical alignment
 slug: /commands/object-get-vertical-alignment
@@ -51,9 +51,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT Get horizontal alignment](object-get-horizontal-alignment.md)  
-[OBJECT SET HORIZONTAL ALIGNMENT](object-set-horizontal-alignment.md)  
-[OBJECT SET VERTICAL ALIGNMENT](object-set-vertical-alignment.md)  
+[OBJECT Get horizontal alignment](../commands/object-get-horizontal-alignment)  
+[OBJECT SET HORIZONTAL ALIGNMENT](../commands/object-set-horizontal-alignment)  
+[OBJECT SET VERTICAL ALIGNMENT](../commands/object-set-vertical-alignment)  
 
 ## プロパティ
 

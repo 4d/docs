@@ -1,4 +1,4 @@
----
+﻿---
 id: localized-document-path
 title: Localized document path
 slug: /commands/localized-document-path
@@ -24,7 +24,7 @@ Este comando deve ser usado dentro de uma arquitetura de aplicação multi-lingu
   
 Passe em *rotaRelativa* a rota de acesso relativa do documento a buscar. A rota especificada deve ser relativa ao primeiro nível da pasta "xxx.lproj" da banco de dados. O comando devolverá uma rota de acesso completa utilizando a pasta "xxx.lproj" correspondente ao idioma atual do banco de dados.  
   
-**Nota**: o idioma atual é definido automáticamente por 4D em função do conteúdo da pasta Resources (vea o comando [Get database localization](get-database-localization.md) ), ou através do comando [SET DATABASE LOCALIZATION](set-database-localization.md).
+**Nota**: o idioma atual é definido automáticamente por 4D em função do conteúdo da pasta Resources (vea o comando [Get database localization](../commands/get-database-localization) ), ou através do comando [SET DATABASE LOCALIZATION](../commands/set-database-localization).
 
 Pode expressar o conteúdo do parâmetro *rotaRelativa* utilizando uma sintaxe POSIX ou sistema. Por exemplo:  
 * xsl/log.xsl (sintaxe POSIX: utilizável em Mac OS ou Windows)
@@ -66,7 +66,7 @@ Se a linguagem atuarl for, por exemplo, francês canadense (fr-ca), o comando de
 
 ## Ver também 
 
-[Get database localization](get-database-localization.md)  
+[Get database localization](../commands/get-database-localization)  
 
 ## Propriedades
 

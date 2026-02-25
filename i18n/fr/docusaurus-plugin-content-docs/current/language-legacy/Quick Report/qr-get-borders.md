@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-borders
 title: QR GET BORDERS
 slug: /commands/qr-get-borders
@@ -60,7 +60,7 @@ Le paramètre *encadrement* permet d'indiquer la bordure de cellule à lire. Pas
 | qr right border             | Entier long | 4      | Bordure droite                 |
 | qr top border               | Entier long | 2      | Bordure supérieure             |
 
-**Note :** A la différence de la commande [QR SET BORDERS](qr-set-borders.md), **QR GET BORDERS** n'accepte pas de valeurs cumulées. Vous devez tester séparément toutes les valeurs pour obtenir une description globale de l'encadrement de la cellule. 
+**Note :** A la différence de la commande [QR SET BORDERS](../commands/qr-set-borders), **QR GET BORDERS** n'accepte pas de valeurs cumulées. Vous devez tester séparément toutes les valeurs pour obtenir une description globale de l'encadrement de la cellule. 
 
 Le paramètre *épaisseur* retourne l'épaisseur de l'encadrement :
 
@@ -79,7 +79,7 @@ Si le paramètre *encadrement* est incorrect, l’erreur -9854 est générée.
 
 ## Voir aussi 
 
-[QR SET BORDERS](qr-set-borders.md)  
+[QR SET BORDERS](../commands/qr-set-borders)  
 
 ## Propriétés
 

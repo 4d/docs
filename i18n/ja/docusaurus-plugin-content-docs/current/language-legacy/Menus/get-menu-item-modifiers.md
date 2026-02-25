@@ -1,4 +1,4 @@
----
+﻿---
 id: get-menu-item-modifiers
 title: Get menu item modifiers
 slug: /commands/get-menu-item-modifiers
@@ -55,8 +55,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Get menu item key](get-menu-item-key.md)  
-[SET MENU ITEM SHORTCUT](set-menu-item-shortcut.md)  
+[Get menu item key](../commands/get-menu-item-key)  
+[SET MENU ITEM SHORTCUT](../commands/set-menu-item-shortcut)  
 
 ## プロパティ
 

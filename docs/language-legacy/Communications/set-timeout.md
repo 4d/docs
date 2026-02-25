@@ -1,4 +1,4 @@
----
+﻿---
 id: set-timeout
 title: SET TIMEOUT
 slug: /commands/set-timeout
@@ -17,19 +17,19 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.SET TIMEOUT.Summary-->**SET TIMEOUT** specifies how much time a serial port command has to complete.<!-- END REF--> If the serial port command does not complete within the specified time, *seconds*, the serial port command is canceled, an error -9990 is generated, and the OK system variable is set to 0\. You can catch the error with an error-handling method installed using [ON ERR CALL](on-err-call.md).
+<!--REF #_command_.SET TIMEOUT.Summary-->**SET TIMEOUT** specifies how much time a serial port command has to complete.<!-- END REF--> If the serial port command does not complete within the specified time, *seconds*, the serial port command is canceled, an error -9990 is generated, and the OK system variable is set to 0\. You can catch the error with an error-handling method installed using [ON ERR CALL](../commands/on-err-call).
 
 Note that the time is the total time allowed for the command to execute, not the time between characters received. To cancel a previous setting and stop monitoring serial port communication, use a setting of 0 for *seconds*.
 
 The commands that are affected by the timeout setting are:
 
-* [RECEIVE PACKET](receive-packet.md)
-* [RECEIVE RECORD](receive-record.md)
-* [RECEIVE VARIABLE](receive-variable.md)
+* [RECEIVE PACKET](../commands/receive-packet)
+* [RECEIVE RECORD](../commands/receive-record)
+* [RECEIVE VARIABLE](../commands/receive-variable)
 
 ## Example 
 
-The following example sets the serial port to receive data. It then sets a time-out. The data is read with [RECEIVE PACKET](receive-packet.md). If the data is not received in time, an error occurs:
+The following example sets the serial port to receive data. It then sets a time-out. The data is read with [RECEIVE PACKET](../commands/receive-packet). If the data is not received in time, an error occurs:
 
 ```4d
  SET CHANNEL(MacOS serial port;Speed 9600+Data bits 8+Stop bits one+Parity none) // Open Serial Port
@@ -46,11 +46,11 @@ The following example sets the serial port to receive data. It then sets a time-
 
 ## See also 
 
-[ON ERR CALL](on-err-call.md)  
-[RECEIVE BUFFER](receive-buffer.md)  
-[RECEIVE PACKET](receive-packet.md)  
-[RECEIVE RECORD](receive-record.md)  
-[RECEIVE VARIABLE](receive-variable.md)  
+[ON ERR CALL](../commands/on-err-call)  
+[RECEIVE BUFFER](../commands/receive-buffer)  
+[RECEIVE PACKET](../commands/receive-packet)  
+[RECEIVE RECORD](../commands/receive-record)  
+[RECEIVE VARIABLE](../commands/receive-variable)  
 
 ## Properties
 

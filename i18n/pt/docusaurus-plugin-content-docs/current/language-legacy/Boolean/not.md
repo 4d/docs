@@ -1,4 +1,4 @@
----
+﻿---
 id: not
 title: Not
 slug: /commands/not
@@ -32,8 +32,8 @@ Este exemplo atribui primeiro Verdadeiro a uma variável, logo muda o valor da v
 
 ## Ver também 
 
-[False](false.md)  
-[True](true.md)  
+[False](../commands/false)  
+[True](../commands/true)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-execute-script
 title: SQL EXECUTE SCRIPT
 slug: /commands/sql-execute-script
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 Pass the complete pathname of the text file containing the SQL statements to be executed in the *scriptPath* parameter. The pathname must be expressed using the syntax of the current system. If you pass an empty string ("") in *scriptPath*, a standard Open document dialog box will be displayed so that the user can select the script file to be executed. 
 
-**Note:** The [SQL EXPORT DATABASE](sql-export-database.md) and [SQL EXPORT SELECTION](sql-export-selection.md) commands automatically generate this script file.
+**Note:** The [SQL EXPORT DATABASE](../commands/sql-export-database) and [SQL EXPORT SELECTION](../commands/sql-export-selection) commands automatically generate this script file.
 
 The *errorAction* parameter is used to configure the functioning of the command when an error occurs during script execution. You can pass one of the three following constants, placed in the *SQL* theme:
 
@@ -52,7 +52,7 @@ The *attribName* and *attribValue* parameters must be passed by pairs. These par
 | --------------------- | ------ | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | SQL use access rights | Text | SQL\_Use\_Access\_Rights | Used to restrict the access rights to be applied during execution of the SQL commands of the script. When you use this attribute, you must pass 0 or 1 in *attribValue*: <br/>*attribValue* \= 1: 4D uses the access rights of the current 4D user.*attribValue* \= 0 (or attribute not specified): 4D does not restrict access, the Designer rights are used. |
 
-If the 4D log file is activated (via the selectors 28 or 45 of the [SET DATABASE PARAMETER](set-database-parameter.md) command), each SQL command executed will generate an entry with the following information:
+If the 4D log file is activated (via the selectors 28 or 45 of the [SET DATABASE PARAMETER](../commands/set-database-parameter) command), each SQL command executed will generate an entry with the following information:
 
 * Type of SQL command
 * Number of records affected by the command

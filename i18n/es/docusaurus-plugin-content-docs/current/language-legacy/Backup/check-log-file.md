@@ -1,4 +1,4 @@
----
+﻿---
 id: check-log-file
 title: CHECK LOG FILE
 slug: /commands/check-log-file
@@ -45,7 +45,7 @@ Puede interceptar estos errores utilizando un método de manejo de errores insta
 ## Ver también 
 
 *Errores de gestión de backup*  
-[RESTORE](restore.md)  
+[RESTORE](../commands/restore)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: system-folder
 title: System folder
 slug: /commands/system-folder
@@ -62,8 +62,8 @@ Si omite el parámetro *tipo*, la función devolverá la ruta a la carpeta siste
 
 #### Ver también 
 
-[Get 4D folder](get-4d-folder.md)  
-[Temporary folder](temporary-folder.md)  
+[Get 4D folder](../commands/get-4d-folder)  
+[Temporary folder](../commands/temporary-folder)  
 
 #### Propiedades
 

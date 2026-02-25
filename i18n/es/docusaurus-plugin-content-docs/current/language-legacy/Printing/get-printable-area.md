@@ -1,4 +1,4 @@
----
+﻿---
 id: get-printable-area
 title: GET PRINTABLE AREA
 slug: /commands/get-printable-area
@@ -48,7 +48,7 @@ Para saber el tamaño total de la página, puede:
 
 ## Ver también 
 
-[GET PRINTABLE MARGIN](get-printable-margin.md)  
+[GET PRINTABLE MARGIN](../commands/get-printable-margin)  
 [Print form](../commands/print-form)  
 
 ## Propiedades

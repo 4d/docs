@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-row-color
 title: LISTBOX SET ROW COLOR
 slug: /commands/listbox-set-row-color
@@ -47,11 +47,11 @@ In *row*, pass the number of the row where you want to apply the new color.
 
 **Note:** The command does not take any hidden/visible states of the list box rows into account.
 
-In *color*, pass an RGB color value. For more information about RGB colors, refer to the description of the [OBJECT SET RGB COLORS](object-set-rgb-colors.md) command. If you want the row to inherit the color set for the higher level, you can pass the`lk inherited` constant in *color*.
+In *color*, pass an RGB color value. For more information about RGB colors, refer to the description of the [OBJECT SET RGB COLORS](../commands/object-set-rgb-colors) command. If you want the row to inherit the color set for the higher level, you can pass the`lk inherited` constant in *color*.
 
 In the *colorType* parameter, pass the `lk background color`  or `lk font color`  constants to indicate whether you want to apply the color as the background or the font color of the row. If you omit this parameter, the color is applied as the font color. 
 
-This command modifies values found in the array of colors that may have been defined for the column or list box. If these arrays are not already defined, the command dynamically creates arrays that you can access using the [LISTBOX Get array](listbox-get-array.md) command. 
+This command modifies values found in the array of colors that may have been defined for the column or list box. If these arrays are not already defined, the command dynamically creates arrays that you can access using the [LISTBOX Get array](../commands/listbox-get-array) command. 
 
 If conflicting color values are set using properties for list boxes or list box columns, an order of priority is applied. For more information, refer to the *Design Reference* manual.
 
@@ -73,9 +73,9 @@ In an array type list box, we want to set colors for a row and for one cell in t
 ## See also 
 
 *List Box*  
-[LISTBOX Get row color](listbox-get-row-color.md)  
-[LISTBOX Get row color as number](listbox-get-row-color-as-number.md)  
-[LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md)  
+[LISTBOX Get row color](../commands/listbox-get-row-color)  
+[LISTBOX Get row color as number](../commands/listbox-get-row-color-as-number)  
+[LISTBOX SET ROW FONT STYLE](../commands/listbox-set-row-font-style)  
 
 ## Properties
 

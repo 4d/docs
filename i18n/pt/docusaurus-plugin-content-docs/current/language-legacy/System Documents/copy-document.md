@@ -1,4 +1,4 @@
----
+﻿---
 id: copy-document
 title: COPY DOCUMENT
 slug: /commands/copy-document
@@ -131,7 +131,7 @@ Os seguintes exemplos criam diferentes arquivos e pastas na pasta da base (exemp
 ## Ver também 
 
 *Documentos de Sistema*  
-[MOVE DOCUMENT](move-document.md)  
+[MOVE DOCUMENT](../commands/move-document)  
 
 ## Propriedades
 

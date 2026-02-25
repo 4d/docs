@@ -1,4 +1,4 @@
----
+﻿---
 id: clear-set
 title: CLEAR SET
 slug: /commands/clear-set
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.CLEAR SET.Summary-->CLEAR SET Apaga *conjunto* da memória e libera a memória utilizada por *conjunto*.<!-- END REF--> O comando não afeta as tabelas, seleções, ou registros. Para salvar um conjunto antes de apagá-lo, utilize o comando [SAVE SET](save-set.md). Como os conjuntos utilizam memória, é bom apagá-los quando não forem mais necessários.  
+<!--REF #_command_.CLEAR SET.Summary-->CLEAR SET Apaga *conjunto* da memória e libera a memória utilizada por *conjunto*.<!-- END REF--> O comando não afeta as tabelas, seleções, ou registros. Para salvar um conjunto antes de apagá-lo, utilize o comando [SAVE SET](../commands/save-set). Como os conjuntos utilizam memória, é bom apagá-los quando não forem mais necessários.  
 
 ## Exemplo 
 
@@ -25,9 +25,9 @@ Ver o exemplo do comando [USE SET](use-set.md "USE SET").
 
 ## Ver também 
 
-[CREATE EMPTY SET](create-empty-set.md)  
-[CREATE SET](create-set.md)  
-[LOAD SET](load-set.md)  
+[CREATE EMPTY SET](../commands/create-empty-set)  
+[CREATE SET](../commands/create-set)  
+[LOAD SET](../commands/load-set)  
 
 ## Propriedades
 

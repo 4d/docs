@@ -1,4 +1,4 @@
----
+﻿---
 id: selected-list-items
 title: Selected list items
 slug: /commands/selected-list-items
@@ -48,7 +48,7 @@ Pode passar um array inteiro longo no parâmetro *arrayElem.* Se for necessário
 * a referência fixa de cada elemento selecionado se for passada o parâmetro \*.  
 Se não forem selecionados elementos, o array é retornado vazio.
 
-**Nota:** em caso de seleção múltipla, o comando retorna a posição ou referência do elemento atual de *lista*. O elemento atual é o último item no que o usuário clica (seleção manual) ou o elemento designado pelos comandos #cmd id="381"/\] ou [SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md) (seleção por programação). 
+**Nota:** em caso de seleção múltipla, o comando retorna a posição ou referência do elemento atual de *lista*. O elemento atual é o último item no que o usuário clica (seleção manual) ou o elemento designado pelos comandos #cmd id="381"/\] ou [SELECT LIST ITEMS BY REFERENCE](../commands/select-list-items-by-reference) (seleção por programação). 
 
 Se a lista têm sub-listas, aplique o comando à lista principal (a que está definida no formulário), e não a uma de suas sub-listas. As posições são expressas com relação ao elemento superior da lista principal, utilizando o estado atual contraído/expandido da lista e suas sub-listas.
 
@@ -95,8 +95,8 @@ Esta é uma lista chamada *hList,* mostrada no ambiente Aplicação:
 
 ## Ver também 
 
-[SELECT LIST ITEMS BY POSITION](select-list-items-by-position.md)  
-[SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
+[SELECT LIST ITEMS BY POSITION](../commands/select-list-items-by-position)  
+[SELECT LIST ITEMS BY REFERENCE](../commands/select-list-items-by-reference)  
 
 ## Propriedades
 

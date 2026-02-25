@@ -1,4 +1,4 @@
----
+﻿---
 id: delete-menu-item
 title: DELETE MENU ITEM
 slug: /commands/delete-menu-item
@@ -32,8 +32,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DELETE MENU ITEM.Summary-->La commande **DELETE MENU ITEM** supprime la ligne de menu dont vous avez passé le numéro ou la référence de menu et le numéro de ligne dans *menu* et *ligneMenu*.<!-- END REF--> Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajoutée au *menu*.
 
-Si la ligne de menu désignée par *menu* et *ligneMenu* est elle-même un menu géré par référence et créé par exemple à l’aide la commande [Create menu](create-menu.md), **DELETE MENU ITEM** supprimera uniquement l’instance de *ligneMenu* dans *menu*. Le sous-menu référencé par *ligneMenu* continuera d’exister en mémoire. Vous devez utiliser la commande [RELEASE MENU](release-menu.md) afin de supprimer définitevement un menu géré par référence.   
-Cette commande fonctionne également avec une barre de menus créée avec la commande [Create menu](create-menu.md) et installée avec la commande [SET MENU BAR](set-menu-bar.md).
+Si la ligne de menu désignée par *menu* et *ligneMenu* est elle-même un menu géré par référence et créé par exemple à l’aide la commande [Create menu](../commands/create-menu), **DELETE MENU ITEM** supprimera uniquement l’instance de *ligneMenu* dans *menu*. Le sous-menu référencé par *ligneMenu* continuera d’exister en mémoire. Vous devez utiliser la commande [RELEASE MENU](../commands/release-menu) afin de supprimer définitevement un menu géré par référence.   
+Cette commande fonctionne également avec une barre de menus créée avec la commande [Create menu](../commands/create-menu) et installée avec la commande [SET MENU BAR](../commands/set-menu-bar).
 
 Si vous omettez le paramètre *process*, **DELETE MENU ITEM** s'applique à la barre de menus du process courant. Sinon, **DELETE MENU ITEM** s'applique à la barre de menus du process dont vous avez passé le numéro dans *process*. 
 
@@ -43,8 +43,8 @@ Si vous omettez le paramètre *process*, **DELETE MENU ITEM** s'applique à la b
 
 ## Voir aussi 
 
-[APPEND MENU ITEM](append-menu-item.md)  
-[INSERT MENU ITEM](insert-menu-item.md)  
+[APPEND MENU ITEM](../commands/append-menu-item)  
+[INSERT MENU ITEM](../commands/insert-menu-item)  
 
 ## Propriétés
 

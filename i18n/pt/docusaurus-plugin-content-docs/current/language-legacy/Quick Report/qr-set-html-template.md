@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-html-template
 title: QR SET HTML TEMPLATE
 slug: /commands/qr-set-html-template
@@ -84,7 +84,7 @@ Se passa um número de área inválido, se gera o erro -9850.
 
 ## Ver também 
 
-[QR Get HTML template](qr-get-html-template.md)  
+[QR Get HTML template](../commands/qr-get-html-template)  
 
 ## Propriedades
 

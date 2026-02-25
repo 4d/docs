@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-insert-column-formula
 title: LISTBOX INSERT COLUMN FORMULA
 slug: /commands/listbox-insert-column-formula
@@ -42,7 +42,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Summary-->The **LISTBOX INSERT COLUMN FORMULA** command inserts a column into the list box designated by the *object* and *\** parameters.<!-- END REF--> 
 
-The **LISTBOX INSERT COLUMN FORMULA** command is similar to the [LISTBOX INSERT COLUMN](listbox-insert-column.md) command except that it can be used to enter a formula as the contents of a column.
+The **LISTBOX INSERT COLUMN FORMULA** command is similar to the [LISTBOX INSERT COLUMN](../commands/listbox-insert-column) command except that it can be used to enter a formula as the contents of a column.
 
 This type of contents can only be used when the “Data Source” property of the list box is set to **Current Selection**, **Named Selection**, or **Collection or Entity Selection** (for more information about this, please refer to the *Managing List Box Objects* section).
 
@@ -133,7 +133,7 @@ The column is added to the list box:
 
 ## See also 
 
-[LISTBOX INSERT COLUMN](listbox-insert-column.md)  
+[LISTBOX INSERT COLUMN](../commands/listbox-insert-column)  
 
 ## Properties
 

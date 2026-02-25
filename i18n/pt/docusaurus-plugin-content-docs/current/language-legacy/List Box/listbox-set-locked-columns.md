@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-locked-columns
 title: LISTBOX SET LOCKED COLUMNS
 slug: /commands/listbox-set-locked-columns
@@ -41,8 +41,8 @@ Para eliminar o bloqueio de colunas, passe 0 em *numColunas*.
 
 ## Ver também 
 
-[LISTBOX Get locked columns](listbox-get-locked-columns.md)  
-[LISTBOX SET STATIC COLUMNS](listbox-set-static-columns.md)  
+[LISTBOX Get locked columns](../commands/listbox-get-locked-columns)  
+[LISTBOX SET STATIC COLUMNS](../commands/listbox-set-static-columns)  
 
 ## Propriedades
 

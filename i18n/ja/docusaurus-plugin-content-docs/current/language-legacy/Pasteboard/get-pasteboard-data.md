@@ -1,4 +1,4 @@
----
+﻿---
 id: get-pasteboard-data
 title: GET PASTEBOARD DATA
 slug: /commands/get-pasteboard-data
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 *dataType*には取り出すデータのタイプを指定します。4D シグネチャ、UTI タイプ (macOS), フォーマット名/番号 (Windows), または4文字のタイプ (互換性)を指定できます。これらのタイプについては *ペーストボードの管理* の節を参照してください。 
 
-**注:** このコマンドではファイル型のデータを読み出すことは出来ません。それをするためには[Get file from pasteboard](get-file-from-pasteboard.md) コマンドを使用する必要があります。
+**注:** このコマンドではファイル型のデータを読み出すことは出来ません。それをするためには[Get file from pasteboard](../commands/get-file-from-pasteboard) コマンドを使用する必要があります。
 
 ## 例題 
 
@@ -63,9 +63,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
-[GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
-[Get text from pasteboard](get-text-from-pasteboard.md)  
+[APPEND DATA TO PASTEBOARD](../commands/append-data-to-pasteboard)  
+[GET PICTURE FROM PASTEBOARD](../commands/get-picture-from-pasteboard)  
+[Get text from pasteboard](../commands/get-text-from-pasteboard)  
 
 ## プロパティ
 

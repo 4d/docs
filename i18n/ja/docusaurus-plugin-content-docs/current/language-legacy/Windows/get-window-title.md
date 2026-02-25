@@ -1,4 +1,4 @@
----
+﻿---
 id: get-window-title
 title: Get window title
 slug: /commands/get-window-title
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[SET WINDOW TITLE](set-window-title.md)  
+[SET WINDOW TITLE](../commands/set-window-title)  
 
 ## プロパティ
 

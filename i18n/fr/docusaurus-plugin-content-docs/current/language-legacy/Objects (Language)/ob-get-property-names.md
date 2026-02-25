@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-get-property-names
 title: OB GET PROPERTY NAMES
 slug: /commands/ob-get-property-names
@@ -108,8 +108,8 @@ Utilisation d’un élément de tableau d’objets :
 
 ## Voir aussi 
 
-[OB Get type](ob-get-type.md)  
-[OB SET NULL](ob-set-null.md)  
+[OB Get type](../commands/ob-get-type)  
+[OB SET NULL](../commands/ob-set-null)  
 
 ## Propriétés
 

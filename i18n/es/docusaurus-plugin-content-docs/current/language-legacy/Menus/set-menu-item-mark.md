@@ -1,4 +1,4 @@
----
+﻿---
 id: set-menu-item-mark
 title: SET MENU ITEM MARK
 slug: /commands/set-menu-item-mark
@@ -48,7 +48,7 @@ Ver ejemplo para el comando [Get menu item mark](get-menu-item-mark.md "Get menu
 
 ## Ver también 
 
-[Get menu item mark](get-menu-item-mark.md)  
+[Get menu item mark](../commands/get-menu-item-mark)  
 
 ## Propiedades
 

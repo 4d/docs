@@ -1,4 +1,4 @@
----
+﻿---
 id: sort-array
 title: SORT ARRAY
 slug: /commands/sort-array
@@ -26,7 +26,7 @@ O último parâmetro especifica se ordenar o *array* em ordem ascendente ou desc
 
 Se mais de um array for especificado, os arrays são classificados segundo a ordem de classificação do primeiro array; nenhuma ordenação multinível é realizada aqui.
 
-No seu lugar pode utilizar o comando [MULTI SORT ARRAY](multi-sort-array.md) se deseja ordenar arrays sincronizados.
+No seu lugar pode utilizar o comando [MULTI SORT ARRAY](../commands/multi-sort-array) se deseja ordenar arrays sincronizados.
 
 ## Exemplo 1 
 
@@ -79,10 +79,10 @@ Você exibe os nomes da tabela *\[Pessoas\]* em uma janela flutuante. Quando voc
 
 ## Ver também 
 
-[Find in sorted array](find-in-sorted-array.md)  
-[MULTI SORT ARRAY](multi-sort-array.md)  
-[ORDER BY](order-by.md)  
-[SELECTION TO ARRAY](selection-to-array.md)  
+[Find in sorted array](../commands/find-in-sorted-array)  
+[MULTI SORT ARRAY](../commands/multi-sort-array)  
+[ORDER BY](../commands/order-by)  
+[SELECTION TO ARRAY](../commands/selection-to-array)  
 
 ## Propriedades
 

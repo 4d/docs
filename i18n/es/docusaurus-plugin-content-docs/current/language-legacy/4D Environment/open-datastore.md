@@ -1,4 +1,4 @@
----
+﻿---
 id: open-datastore
 title: Open datastore
 slug: /commands/open-datastore
@@ -121,7 +121,7 @@ En caso de error, el comando devuelve **Null**. Si no se puede acceder al almac�
 
 ## Ver también
 
-[ds](ds.md)
+[ds](../commands/ds)
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-get-page-content
 title: WA Get page content
 slug: /commands/wa-get-page-content
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WA SET PAGE CONTENT](wa-set-page-content.md)  
+[WA SET PAGE CONTENT](../commands/wa-set-page-content)  
 
 ## プロパティ
 

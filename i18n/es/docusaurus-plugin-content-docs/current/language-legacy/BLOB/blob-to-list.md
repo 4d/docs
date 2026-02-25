@@ -1,4 +1,4 @@
----
+﻿---
 id: blob-to-list
 title: BLOB to list
 slug: /commands/blob-to-list
@@ -70,7 +70,7 @@ La variable OK toma el valor 1 si la lista se crea correctamente, de lo contrari
 
 ## Ver también 
 
-[LIST TO BLOB](list-to-blob.md)  
+[LIST TO BLOB](../commands/list-to-blob)  
 
 ## Propiedades
 

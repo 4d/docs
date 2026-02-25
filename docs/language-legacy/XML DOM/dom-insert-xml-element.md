@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-insert-xml-element
 title: DOM Insert XML element
 slug: /commands/dom-insert-xml-element
@@ -85,7 +85,7 @@ To do this, simply execute the following code:
 
 ## See also 
 
-[DOM Append XML element](dom-append-xml-element.md)  
+[DOM Append XML element](../commands/dom-append-xml-element)  
 
 ## Properties
 

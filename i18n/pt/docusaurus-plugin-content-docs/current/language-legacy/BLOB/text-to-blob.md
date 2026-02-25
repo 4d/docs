@@ -1,4 +1,4 @@
----
+﻿---
 id: text-to-blob
 title: TEXT TO BLOB
 slug: /commands/text-to-blob
@@ -52,7 +52,7 @@ Se você omitir o parâmetro *textFormat*, por padrão 4D usa o formato Mac C st
 
 * As constantes "UTF8" podem ser usadas somente quando o aplicativo é executado no modo Unicode.
 * As constantes "Mac" não podem trabalhar com textos maiores que 32 KB.
-* Se você deseja trabalhar com conjuntos de caracteres diferentes a UTF8, use o comando [CONVERT FROM TEXT](convert-from-text.md) .
+* Se você deseja trabalhar com conjuntos de caracteres diferentes a UTF8, use o comando [CONVERT FROM TEXT](../commands/convert-from-text) .
 
 A tabela a seguir descreve cada um desses formatos:
 
@@ -111,14 +111,14 @@ Depois de executar este código:
 
 ## Ver também 
 
-[BLOB to integer](blob-to-integer.md)  
-[BLOB to longint](blob-to-longint.md)  
-[BLOB to real](blob-to-real.md)  
-[BLOB to text](blob-to-text.md)  
-[CONVERT FROM TEXT](convert-from-text.md)  
-[INTEGER TO BLOB](integer-to-blob.md)  
-[LONGINT TO BLOB](longint-to-blob.md)  
-[REAL TO BLOB](real-to-blob.md)  
+[BLOB to integer](../commands/blob-to-integer)  
+[BLOB to longint](../commands/blob-to-longint)  
+[BLOB to real](../commands/blob-to-real)  
+[BLOB to text](../commands/blob-to-text)  
+[CONVERT FROM TEXT](../commands/convert-from-text)  
+[INTEGER TO BLOB](../commands/integer-to-blob)  
+[LONGINT TO BLOB](../commands/longint-to-blob)  
+[REAL TO BLOB](../commands/real-to-blob)  
 
 ## Propriedades
 

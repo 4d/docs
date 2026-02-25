@@ -1,4 +1,4 @@
----
+﻿---
 id: active-transaction
 title: Active transaction
 slug: /commands/active-transaction
@@ -27,9 +27,9 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.Active transaction.Summary-->**Active transaction**コマンドは、カレントプロセスがトランザクション中であり、かつそのトランザクションが停止されていない場合に**True**を返します。<!-- END REF-->カレントトランザクションがない場合、あるいはカレントトランザクションが停止されている場合には**False**を返します。トランザクションは [SUSPEND TRANSACTION](suspend-transaction.md) コマンドによって一時停止することができます。
+<!--REF #_command_.Active transaction.Summary-->**Active transaction**コマンドは、カレントプロセスがトランザクション中であり、かつそのトランザクションが停止されていない場合に**True**を返します。<!-- END REF-->カレントトランザクションがない場合、あるいはカレントトランザクションが停止されている場合には**False**を返します。トランザクションは [SUSPEND TRANSACTION](../commands/suspend-transaction) コマンドによって一時停止することができます。
 
-このコマンドはカレントプロセスがトランザクション中でない場合にも**False**を返すため、[In transaction](in-transaction.md) コマンドを使ってプロセスがトランザクション中であるかどうかをチェックする必要もあるかもしれません。
+このコマンドはカレントプロセスがトランザクション中でない場合にも**False**を返すため、[In transaction](../commands/in-transaction) コマンドを使ってプロセスがトランザクション中であるかどうかをチェックする必要もあるかもしれません。
 
 詳細については、*トランザクションの停止*を参照ください。
 
@@ -51,9 +51,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[In transaction](in-transaction.md)  
-[RESUME TRANSACTION](resume-transaction.md)  
-[SUSPEND TRANSACTION](suspend-transaction.md)  
+[In transaction](../commands/in-transaction)  
+[RESUME TRANSACTION](../commands/resume-transaction)  
+[SUSPEND TRANSACTION](../commands/suspend-transaction)  
 *トランザクションの停止*  
 
 ## プロパティ

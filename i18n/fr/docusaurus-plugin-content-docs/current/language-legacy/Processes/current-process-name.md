@@ -1,4 +1,4 @@
----
+﻿---
 id: current-process-name
 title: Current process name
 slug: /commands/current-process-name
@@ -42,8 +42,8 @@ Vous voulez appeler un process worker et lui passer comme paramètre le nom du p
 ## Voir aussi 
 
 *A propos des workers*  
-[CALL WORKER](call-worker.md)  
-[KILL WORKER](kill-worker.md)  
+[CALL WORKER](../commands/call-worker)  
+[KILL WORKER](../commands/kill-worker)  
 
 ## Propriétés
 

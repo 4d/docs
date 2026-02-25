@@ -1,4 +1,4 @@
----
+﻿---
 id: verify-current-data-file
 title: VERIFY CURRENT DATA FILE
 slug: /commands/verify-current-data-file
@@ -35,8 +35,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.VERIFY CURRENT DATA FILE.Summary-->VERIFY CURRENT DATA FILEコマンドは、4Dが現在開いているデータファイル中にあるオブジェクトの、構造的な検証を行います。<!-- END REF-->
 
-このコマンドは、開かれたデータベースのカレントのデータファイルのみに適用されることを除き、[VERIFY DATA FILE](verify-data-file.md)コマンドと同じ機能を持ちます。そのため、ストラクチャとデータを指定する引数は必要ありません。  
-引数の説明は[VERIFY DATA FILE](verify-data-file.md)コマンドを参照してください。
+このコマンドは、開かれたデータベースのカレントのデータファイルのみに適用されることを除き、[VERIFY DATA FILE](../commands/verify-data-file)コマンドと同じ機能を持ちます。そのため、ストラクチャとデータを指定する引数は必要ありません。  
+引数の説明は[VERIFY DATA FILE](../commands/verify-data-file)コマンドを参照してください。
 
 VERIFY CURRENT DATA FILEコマンドを引数なしで呼び出すと、デフォルトの設定値を使用して検証が行われます:
 
@@ -55,7 +55,7 @@ VERIFY CURRENT DATA FILEコマンドを引数なしで呼び出すと、デフ�
 
 ## 参照 
 
-[VERIFY DATA FILE](verify-data-file.md)  
+[VERIFY DATA FILE](../commands/verify-data-file)  
 
 ## プロパティ
 

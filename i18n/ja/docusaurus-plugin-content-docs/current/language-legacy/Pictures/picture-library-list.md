@@ -1,4 +1,4 @@
----
+﻿---
 id: picture-library-list
 title: PICTURE LIBRARY LIST
 slug: /commands/picture-library-list
@@ -108,9 +108,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[GET PICTURE FROM LIBRARY](get-picture-from-library.md)  
-[REMOVE PICTURE FROM LIBRARY](remove-picture-from-library.md)  
-[SET PICTURE TO LIBRARY](set-picture-to-library.md)  
+[GET PICTURE FROM LIBRARY](../commands/get-picture-from-library)  
+[REMOVE PICTURE FROM LIBRARY](../commands/remove-picture-from-library)  
+[SET PICTURE TO LIBRARY](../commands/set-picture-to-library)  
 
 ## プロパティ
 

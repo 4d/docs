@@ -1,4 +1,4 @@
----
+﻿---
 id: web-send-http-redirect
 title: WEB SEND HTTP REDIRECT
 slug: /commands/web-send-http-redirect
@@ -33,13 +33,13 @@ displayed_sidebar: docs
 
 引数 *url* は、リクエストをリダイレクトすることができる新しいURLを格納しています。この引数がファイルへのurlである場合、**WEB SEND HTTP REDIRECT** ("/MyPage.HTM") のようにファイルへの参照を保持していなければなりません。
 
-このコマンドは同じメソッド内にあるデータを送るコマンド ([WEB SEND FILE](web-send-file.md)、[WEB SEND BLOB](web-send-blob.md)など) より優先されます。
+このコマンドは同じメソッド内にあるデータを送るコマンド ([WEB SEND FILE](../commands/web-send-file)、[WEB SEND BLOB](../commands/web-send-blob)など) より優先されます。
 
 また、このコマンドを使用すると、リクエストを他のWebサーバーへリダイレクトすることも可能です。
 
 4DはURLの特殊文字を自動的にエンコードします。 *\** を渡すと、4Dはそれらをエンコードしません。
 
-このコマンドが送信するHTTPステータスコードは**302: Moved Temporarily**です。"301 Moved Permanently"ステータスを送信したい場合は、[WEB SET HTTP HEADER](web-set-http-header.md)を使用して、"*X-STATUS"フィールドに”301”*を設定します。 
+このコマンドが送信するHTTPステータスコードは**302: Moved Temporarily**です。"301 Moved Permanently"ステータスを送信したい場合は、[WEB SET HTTP HEADER](../commands/web-set-http-header)を使用して、"*X-STATUS"フィールドに”301”*を設定します。 
 
 ## 例題 
 

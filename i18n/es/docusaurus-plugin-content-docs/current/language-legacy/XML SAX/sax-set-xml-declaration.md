@@ -1,4 +1,4 @@
----
+﻿---
 id: sax-set-xml-declaration
 title: SAX SET XML DECLARATION
 slug: /commands/sax-set-xml-declaration
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 Este comando debe llamarse una sola vez por documento y antes del primer comando de escritura XML en el documento; de lo contrario, se generará un mensaje de error.  
   
-**Nota:** puede especificar la indentación del documento gracias al comando [XML SET OPTIONS](xml-set-options.md) antes de escribir cualquier cosa.
+**Nota:** puede especificar la indentación del documento gracias al comando [XML SET OPTIONS](../commands/xml-set-options) antes de escribir cualquier cosa.
 
 Este comando debe llamarse una sola vez por documento y antes del primer comando de escritura XML en el documento; de lo contrario, se generará un mensaje de error.
 
@@ -58,7 +58,7 @@ El siguiente código:
 
 ## Ver también 
 
-[SAX GET XML DOCUMENT VALUES](sax-get-xml-document-values.md)  
+[SAX GET XML DOCUMENT VALUES](../commands/sax-get-xml-document-values)  
 
 ## Propiedades
 

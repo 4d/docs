@@ -1,4 +1,4 @@
----
+﻿---
 id: print-settings
 title: PRINT SETTINGS
 slug: /commands/print-settings
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.PRINT SETTINGS.Summary-->**PRINT SETTINGS** displays a printing dialog box.<!-- END REF--> This command must be called before a series of [Print form](../commands/print-form) commands or the [OPEN PRINTING JOB](open-printing-job.md) command.
+<!--REF #_command_.PRINT SETTINGS.Summary-->**PRINT SETTINGS** displays a printing dialog box.<!-- END REF--> This command must be called before a series of [Print form](../commands/print-form) commands or the [OPEN PRINTING JOB](../commands/open-printing-job) command.
 
 The optional *dialType* parameter can be used to configure the display of the printing dialog box. You can use one of the following constants from the *Print Options* theme:
 
@@ -38,7 +38,7 @@ The optional *dialType* parameter can be used to configure the display of the pr
 | Page setup dialog | 1     | Display the Page setup dialog box                     |
 | Print dialog      | 2     | Display the Print job dialog box (default if omitted) |
 
-**Note:** The Print Job dialog box contains a **Preview on Screen** check box that allows the user to preview their print job. You can preset or reset this option by calling [SET PRINT PREVIEW](set-print-preview.md) before calling **PRINT SETTINGS**.
+**Note:** The Print Job dialog box contains a **Preview on Screen** check box that allows the user to preview their print job. You can preset or reset this option by calling [SET PRINT PREVIEW](../commands/set-print-preview) before calling **PRINT SETTINGS**.
 
 ## Example 
 
@@ -50,10 +50,10 @@ If the user clicks OK in both dialog boxes, the OK system variable is set to 1\.
 
 ## See also 
 
-[OPEN PRINTING JOB](open-printing-job.md)  
-[PAGE BREAK](page-break.md)  
+[OPEN PRINTING JOB](../commands/open-printing-job)  
+[PAGE BREAK](../commands/page-break)  
 [Print form](../commands/print-form)  
-[SET PRINT PREVIEW](set-print-preview.md)  
+[SET PRINT PREVIEW](../commands/set-print-preview)  
 
 ## Properties
 

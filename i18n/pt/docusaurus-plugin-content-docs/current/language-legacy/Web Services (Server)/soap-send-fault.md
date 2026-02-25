@@ -1,4 +1,4 @@
----
+﻿---
 id: soap-send-fault
 title: SOAP SEND FAULT
 slug: /commands/soap-send-fault
@@ -55,8 +55,8 @@ Regresando ao exemplo do serviço Web “Raiz\_quadrada” da descrição do com
 
 ## Ver também 
 
-[SOAP DECLARATION](soap-declaration.md)  
-[SOAP get info](soap-get-info.md)  
+[SOAP DECLARATION](../commands/soap-declaration)  
+[SOAP get info](../commands/soap-get-info)  
 
 ## Propriedades
 

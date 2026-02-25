@@ -1,4 +1,4 @@
----
+﻿---
 id: count-user-processes
 title: Count user processes
 slug: /commands/count-user-processes
@@ -35,8 +35,8 @@ Count user processesは、ユーザが直接あるいは間接に開いたプロ
 
 ## 参照 
 
-[Count tasks](count-tasks.md)  
-[Count users](count-users.md)  
+[Count tasks](../commands/count-tasks)  
+[Count users](../commands/count-users)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-pointer
 title: OBJECT Get pointer
 slug: /commands/object-get-pointer
@@ -35,9 +35,9 @@ displayed_sidebar: docs
 Cette commande permet de désigner différents types d'objets en fonction du paramètre *sélecteur*. Vous pouvez passer dans ce paramètre l’une des constantes suivantes (placées dans le thème *Objets de formulaire (Accès)*) :
 
 * Object current ou *sélecteur* omis : Si vous omettez le paramètre *sélecteur* ou passez ce sélecteur, la commande retourne un pointeur vers la variable associée à l’objet courant (objet dont la méthode est en cours d’exécution).  
-**Note :** Ce fonctionnement équivaut strictement à celui de la commande historique [Self](self.md). La commande [Self](self.md) est conservée pour des raisons de compatibilité uniquement.
+**Note :** Ce fonctionnement équivaut strictement à celui de la commande historique [Self](../commands/self). La commande [Self](../commands/self) est conservée pour des raisons de compatibilité uniquement.
 * Object with focus : Si vous passez ce sélecteur, la commande retourne un pointeur vers la variable associée à l’objet ayant le focus dans le formulaire. Les deux derniers paramètres optionnels sont ignorés s’ils sont passés.  
-**Note :** Ce fonctionnement équivaut strictement à celui de la commande [Focus object](focus-object.md). La commande [Focus object](focus-object.md) est obsolète à compter de 4D v12\.
+**Note :** Ce fonctionnement équivaut strictement à celui de la commande [Focus object](../commands/focus-object). La commande [Focus object](../commands/focus-object) est obsolète à compter de 4D v12\.
 * Object subform container : Si vous passez ce sélecteur, la commande retourne un pointeur vers la variable liée au conteneur du sous-formulaire. Les deux derniers paramètres optionnels sont ignorés s’ils sont passés. Ce sélecteur ne peut donc être utilisé que dans le contexte d’un formulaire utilisé comme sous-formulaire, afin d’accéder à la variable liée à l’objet conteneur.
 * Object named : Si vous passez ce sélecteur, vous devez également passer le deuxième paramètre, *nomObjet*. Dans ce cas, la commande retourne un pointeur vers la variable associée à l’objet dont vous avez passé le nom dans ce paramètre.  
 **Note :** Si *nomObjet* correspond à un sous-formulaire et que l’option "Sous-formulaire liste" est cochée, la commande retourne un pointeur vers la table du sous-formulaire si une table source est définie et Nil dans le cas contraire.
@@ -59,12 +59,12 @@ Soit un formulaire "SF" utilisé deux fois comme sous-formulaire dans le même f
 
 ## Voir aussi 
 
-[Focus object](focus-object.md)  
-[OBJECT Get name](object-get-name.md)  
-[OBJECT Get subform container value](object-get-subform-container-value.md)  
+[Focus object](../commands/focus-object)  
+[OBJECT Get name](../commands/object-get-name)  
+[OBJECT Get subform container value](../commands/object-get-subform-container-value)  
 *Objets (Formulaires)*  
 *Objets de formulaire (Accès)*  
-[Self](self.md)  
+[Self](../commands/self)  
 
 ## Propriétés
 

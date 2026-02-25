@@ -1,4 +1,4 @@
----
+﻿---
 id: web-server-list
 title: WEB Server list
 slug: /commands/web-server-list
@@ -34,7 +34,7 @@ Uma aplicação 4D pode conter em qualquer lugar de um a vários servidores Web:
 
 All available Web servers are returned by the `WEB Server list` command, whether they are actually running or not.
 
-> O objeto do servidor Web padrão é carregado automaticamente pelo 4D na inicialização. Por outro lado, cada servidor Web de componentes que você deseja usar precisa ser instanciado usando o comando [`WEB Server`](web-server.md).
+> O objeto do servidor Web padrão é carregado automaticamente pelo 4D na inicialização. Por outro lado, cada servidor Web de componentes que você deseja usar precisa ser instanciado usando o comando [`WEB Server`](../commands/web-server).
 
 You can use the [.name](../../API/WebServerClass.md#name) property of the Web server object to identify the project or component to which each Web server object in the list is attached.
 
@@ -53,7 +53,7 @@ Queremos saber quantos servidores rodando estão disponíveis:
 
 ## Veja também
 
-[WEB Server](web-server.md)\
+[WEB Server](../commands/web-server)\
 [webServer.stop()](../../API/WebServerClass.md#stop)
 
 ## Propriedades

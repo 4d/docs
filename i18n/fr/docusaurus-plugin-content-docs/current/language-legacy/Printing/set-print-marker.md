@@ -1,4 +1,4 @@
----
+﻿---
 id: set-print-marker
 title: SET PRINT MARKER
 slug: /commands/set-print-marker
@@ -30,11 +30,11 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.SET PRINT MARKER.Summary-->La commande **SET PRINT MARKER** permet de définir la position d’un taquet au moment de l’impression.<!-- END REF--> Combinée aux commandes [Get print marker](get-print-marker.md), [OBJECT MOVE](object-move.md) ou [Print form](../commands/print-form), cette commande permet d’ajuster la taille des zones d’impression. 
+<!--REF #_command_.SET PRINT MARKER.Summary-->La commande **SET PRINT MARKER** permet de définir la position d’un taquet au moment de l’impression.<!-- END REF--> Combinée aux commandes [Get print marker](../commands/get-print-marker), [OBJECT MOVE](../commands/object-move) ou [Print form](../commands/print-form), cette commande permet d’ajuster la taille des zones d’impression. 
 
 **SET PRINT MARKER** peut être appelée dans deux contextes : 
 
-* lors de l’événement formulaire On Header, dans le cadre de l’utilisation des commandes [PRINT SELECTION](print-selection.md) et [PRINT RECORD](print-record.md).
+* lors de l’événement formulaire On Header, dans le cadre de l’utilisation des commandes [PRINT SELECTION](../commands/print-selection) et [PRINT RECORD](../commands/print-record).
 * lors de l’événement formulaire On Printing Detail, dans le cadre de l’utilisation de la commande [Print form](../commands/print-form). Ce fonctionnement facilite l’impression d’états personnalisés (voir exemple).
 
 L’effet de la commande est limité à l’impression, aucune modification n’apparaît à l’écran. Les modifications apportées aux formulaires ne sont pas sauvegardées. 
@@ -185,14 +185,14 @@ La méthode du formulaire Print\_List3 est la suivante :
 
 ## Voir aussi 
 
-[Get print marker](get-print-marker.md)  
-[OBJECT GET BEST SIZE](object-get-best-size.md)  
-[OBJECT GET COORDINATES](object-get-coordinates.md)  
-[OBJECT MOVE](object-move.md)  
-[PAGE BREAK](page-break.md)  
+[Get print marker](../commands/get-print-marker)  
+[OBJECT GET BEST SIZE](../commands/object-get-best-size)  
+[OBJECT GET COORDINATES](../commands/object-get-coordinates)  
+[OBJECT MOVE](../commands/object-move)  
+[PAGE BREAK](../commands/page-break)  
 [Print form](../commands/print-form)  
-[PRINT RECORD](print-record.md)  
-[PRINT SELECTION](print-selection.md)  
+[PRINT RECORD](../commands/print-record)  
+[PRINT SELECTION](../commands/print-selection)  
 
 ## Propriétés
 

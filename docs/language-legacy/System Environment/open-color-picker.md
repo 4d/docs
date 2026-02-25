@@ -1,4 +1,4 @@
----
+﻿---
 id: open-color-picker
 title: OPEN COLOR PICKER
 slug: /commands/open-color-picker
@@ -39,7 +39,7 @@ If the color was changed, the On After Edit form event is generated for the obje
 
 ## See also 
 
-[OPEN FONT PICKER](open-font-picker.md)  
+[OPEN FONT PICKER](../commands/open-font-picker)  
 
 ## Properties
 

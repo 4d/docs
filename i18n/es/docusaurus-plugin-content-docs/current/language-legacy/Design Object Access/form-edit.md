@@ -1,4 +1,4 @@
----
+﻿---
 id: form-edit
 title: FORM EDIT
 slug: /commands/form-edit
@@ -35,7 +35,7 @@ Si se pasa el parámetro opcional *aTable*, se indica la tabla asociada a *form*
 
 En el parámetro *form*, pasa el nombre del formulario a abrir en el editor de formularios de 4D. Si pasa un nombre que no existe, se genera el error 81 ("Formulario no encontrado").
 
-Opcionalmente, puede pasar en *object* el nombre de un objeto formulario o de un grupo para seleccionarlo automáticamente en el editor de formularios de 4D. Esta función le permite, por ejemplo, ahorrar tiempo al depurar un formulario basándose en los errores de expresión devueltos por [`Compilar proyecto`](compile-project.md).
+Opcionalmente, puede pasar en *object* el nombre de un objeto formulario o de un grupo para seleccionarlo automáticamente en el editor de formularios de 4D. Esta función le permite, por ejemplo, ahorrar tiempo al depurar un formulario basándose en los errores de expresión devueltos por [`Compilar proyecto`](../commands/compile-project).
 
 Si *object* no se encuentra en *form*, el formulario se abre y no se devuelve ningún error.
 

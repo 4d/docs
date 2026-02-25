@@ -1,4 +1,4 @@
----
+﻿---
 id: array-object
 title: ARRAY OBJECT
 slug: /commands/array-object
@@ -39,7 +39,7 @@ The *size2* parameter is optional. If you pass it, this command creates a two-di
 
 When you apply the **ARRAY OBJECT** command to an existing array:
 
-* If you enlarge its size, existing elements are not changed and new elements are undefined. You can test whether an element is defined using the [OB Is defined](ob-is-defined.md) command.
+* If you enlarge its size, existing elements are not changed and new elements are undefined. You can test whether an element is defined using the [OB Is defined](../commands/ob-is-defined) command.
 * If you reduce its size, elements at the "bottom" of the array are deleted and lost.
 
 ## Example 1 

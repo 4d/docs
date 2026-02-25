@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-on-command
 title: QR ON COMMAND
 slug: /commands/qr-on-command
@@ -40,21 +40,21 @@ Se *area* for igual a zero, *nomMetodo* se aplicará a todas as áreas do editor
 * *$2* é o número do comando selecionado (Inteiro longo). Pode comparar este valor com as constantes do tema *QR Comandos*.  
 | Constante            | Tipo          | Valor | Comentário                                     |  
 | -------------------- | ------------- | ----- | ---------------------------------------------- |  
-| qr cmd generate      | Inteiro longo | 2008  | uso do comando [QR RUN](qr-run.md) recomendado |  
+| qr cmd generate      | Inteiro longo | 2008  | uso do comando [QR RUN](../commands/qr-run) recomendado |  
 | qr cmd page setup    | Inteiro longo | 2006  |                                                |  
 | qr cmd print preview | Inteiro longo | 2007  |                                                |
 
 **Nota**: Se planeja compilar o banco, é necessário declarar explicitamente os parâmetros *$1* e *$2* como Inteiros longos, inclusive se não os utilizar.  
   
-Se deseja que o comando inicial seja executado, deve incluir a seguinte instrução no método: [QR EXECUTE COMMAND](qr-execute-command.md)($1;$2).  
+Se deseja que o comando inicial seja executado, deve incluir a seguinte instrução no método: [QR EXECUTE COMMAND](../commands/qr-execute-command)($1;$2).  
   
 Se passa um número de *area* inválido, se gera o erro -9850.
 
 ## Ver também 
 
 *QR Comandos*  
-[QR EXECUTE COMMAND](qr-execute-command.md)  
-[QR Get command status](qr-get-command-status.md)  
+[QR EXECUTE COMMAND](../commands/qr-execute-command)  
+[QR Get command status](../commands/qr-get-command-status)  
 
 ## Propriedades
 

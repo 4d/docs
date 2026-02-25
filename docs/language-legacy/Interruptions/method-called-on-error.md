@@ -1,4 +1,4 @@
----
+﻿---
 id: method-called-on-error
 title: Method called on error
 slug: /commands/method-called-on-error
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Method called on error.Summary-->The **Method called on error** command returns the name of the method installed by the [ON ERR CALL](on-err-call.md) command for the current process or the defined *scope*.<!-- END REF-->
+<!--REF #_command_.Method called on error.Summary-->The **Method called on error** command returns the name of the method installed by the [ON ERR CALL](../commands/on-err-call) command for the current process or the defined *scope*.<!-- END REF-->
 
 In the *scope* parameter, pass the execution context for which you want to get the name of the error handler method. You can use one of the following constants:
 
@@ -57,7 +57,7 @@ This command is particularly useful in the context of components because it enab
 ## See also 
 
 *Error Handler*  
-[ON ERR CALL](on-err-call.md)  
+[ON ERR CALL](../commands/on-err-call)  
 
 ## Properties
 

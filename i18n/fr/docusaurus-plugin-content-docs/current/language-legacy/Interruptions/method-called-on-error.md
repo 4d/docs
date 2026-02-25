@@ -1,4 +1,4 @@
----
+﻿---
 id: method-called-on-error
 title: Method called on error
 slug: /commands/method-called-on-error
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Method called on error.Summary-->La commande **Method called on error** retourne le nom de la méthode installée par la commande [ON ERR CALL](on-err-call.md) pour le process courant ou la *portée* définie.<!-- END REF-->
+<!--REF #_command_.Method called on error.Summary-->La commande **Method called on error** retourne le nom de la méthode installée par la commande [ON ERR CALL](../commands/on-err-call) pour le process courant ou la *portée* définie.<!-- END REF-->
 
 Dans le paramètre *portée*, passez le contexte d'exécution pour lequel vous voulez obtenir le nom de la méthode de gestion d'erreurs. Vous pouvez utiliser l'une des constantes suivantes :
 
@@ -57,7 +57,7 @@ Cette commande est particulièrement utile dans le cadre des composants, car ell
 ## Voir aussi 
 
 *Gestionnaire d'erreur*  
-[ON ERR CALL](on-err-call.md)  
+[ON ERR CALL](../commands/on-err-call)  
 
 ## Propriétés
 

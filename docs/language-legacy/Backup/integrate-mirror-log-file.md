@@ -1,4 +1,4 @@
----
+﻿---
 id: integrate-mirror-log-file
 title: INTEGRATE MIRROR LOG FILE
 slug: /commands/integrate-mirror-log-file
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.INTEGRATE MIRROR LOG FILE.Summary-->**Preliminary note:** This command only works with 4D Server.<!-- END REF--> It can only be executed via the [Execute on server](execute-on-server.md) command or in a stored procedure.
+<!--REF #_command_.INTEGRATE MIRROR LOG FILE.Summary-->**Preliminary note:** This command only works with 4D Server.<!-- END REF--> It can only be executed via the [Execute on server](../commands/execute-on-server) command or in a stored procedure.
 
 The **INTEGRATE MIRROR LOG FILE** integrates the log file designated by *pathName* into a 4D Server database, after the *operationNum* operation. The command accepts to integrate any log file into the database, even if it does not correspond to the the data file. This command is specifically intended for use in the context of a mirror database. 
 
@@ -110,7 +110,7 @@ If the integration is carried out correctly, the system variable OK is set to 1;
 
 ## See also 
 
-[LOG FILE TO JSON](log-file-to-json.md)  
+[LOG FILE TO JSON](../commands/log-file-to-json)  
 
 ## Properties
 

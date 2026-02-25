@@ -1,4 +1,4 @@
----
+﻿---
 id: outside-call
 title: Outside call
 slug: /commands/outside-call
@@ -26,7 +26,7 @@ displayed_sidebar: docs
 ## 参照 
 
 [Form event code](../commands/form-event-code)  
-[POST OUTSIDE CALL](post-outside-call.md)  
+[POST OUTSIDE CALL](../commands/post-outside-call)  
 
 ## プロパティ
 

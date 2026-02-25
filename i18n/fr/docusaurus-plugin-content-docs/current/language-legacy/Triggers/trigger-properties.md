@@ -1,4 +1,4 @@
----
+﻿---
 id: trigger-properties
 title: TRIGGER PROPERTIES
 slug: /commands/trigger-properties
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.TRIGGER PROPERTIES.Summary-->La commande **TRIGGER PROPERTIES** fournit des informations sur le niveau d'exécution du trigger que vous avez passé dans *niveauTrigger*.<!-- END REF--> Vous devez utiliser conjointement **TRIGGER PROPERTIES** et [Trigger level](trigger-level.md) pour effectuer différentes actions en fonction de la cascade du trigger. Reportez-vous à la description des triggers en cascade dans la section *Présentation des triggers*.
+<!--REF #_command_.TRIGGER PROPERTIES.Summary-->La commande **TRIGGER PROPERTIES** fournit des informations sur le niveau d'exécution du trigger que vous avez passé dans *niveauTrigger*.<!-- END REF--> Vous devez utiliser conjointement **TRIGGER PROPERTIES** et [Trigger level](../commands/trigger-level) pour effectuer différentes actions en fonction de la cascade du trigger. Reportez-vous à la description des triggers en cascade dans la section *Présentation des triggers*.
 
 Si vous passez un niveau d'exécution de trigger inexistant, la commande retourne 0 (zéro) dans chaque paramètre.
 
@@ -49,8 +49,8 @@ Le numéro de table et d'enregistrement pour l'enregistrement concerné par l'é
 
 *A propos des numéros d'enregistrements*  
 *Présentation des triggers*  
-[Trigger event](trigger-event.md)  
-[Trigger level](trigger-level.md)  
+[Trigger event](../commands/trigger-event)  
+[Trigger level](../commands/trigger-level)  
 
 ## Propriétés
 

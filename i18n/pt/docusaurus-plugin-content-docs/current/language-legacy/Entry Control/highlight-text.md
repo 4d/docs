@@ -1,4 +1,4 @@
----
+﻿---
 id: highlight-text
 title: HIGHLIGHT TEXT
 slug: /commands/highlight-text
@@ -73,7 +73,7 @@ Ver o exemplo do comando [FILTER KEYSTROKE](filter-keystroke.md "FILTER KEYSTROK
 
 ## Ver também 
 
-[GET HIGHLIGHT](get-highlight.md)  
+[GET HIGHLIGHT](../commands/get-highlight)  
 
 ## Propriedades
 

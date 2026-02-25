@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-format
 title: OBJECT Get format
 slug: /commands/object-get-format
@@ -38,11 +38,11 @@ displayed_sidebar: docs
 
 Si pasa el parámetro opcional *\**, indica un nombre de objeto (en este caso, pase una cadena en *objeto*). Si omite este parámetro, indica que el parámetro *objeto* es un campo o una variable. En este caso, usted no pasa una cadena, sino una referencia de campo o de variable.
 
-Este comando devuelve el formato de salida actual del objeto, es decir el formato definido en el entorno Diseño o utilizando el comando [OBJECT SET FORMAT](object-set-format.md). OBJECT Get format funciona con todos los tipos de objetos de formulario (campos o variables) que aceptan un formato de salida: booleano, fecha, hora, imagen, cadena, numérico, como también con rejillas de botones, dials, termómetros, reglas, menús imagen desplegable, botones imagen, botones 3D y encabezados de list box. Para mayor información sobre formatos de salida de estos objetos, consulte la documentación del comando [OBJECT SET FORMAT](object-set-format.md). 
+Este comando devuelve el formato de salida actual del objeto, es decir el formato definido en el entorno Diseño o utilizando el comando [OBJECT SET FORMAT](../commands/object-set-format). OBJECT Get format funciona con todos los tipos de objetos de formulario (campos o variables) que aceptan un formato de salida: booleano, fecha, hora, imagen, cadena, numérico, como también con rejillas de botones, dials, termómetros, reglas, menús imagen desplegable, botones imagen, botones 3D y encabezados de list box. Para mayor información sobre formatos de salida de estos objetos, consulte la documentación del comando [OBJECT SET FORMAT](../commands/object-set-format). 
 
 **Nota:** si aplica el comando a un conjunto de objetos, el formulario, se devuelve el formulario del último objeto seleccionado.  
   
-Cuando el comando OBJECT Get format se aplica a objetos de tipo fecha, hora o imagen (formatos definidos como constantes), la cadena que se devuelve corresponde al código del carácter de la constante. Para obtener el valor de la constante, simplemente aplique la función [Character code](character-code.md) al resultado (ver ejemplo a continuación). 
+Cuando el comando OBJECT Get format se aplica a objetos de tipo fecha, hora o imagen (formatos definidos como constantes), la cadena que se devuelve corresponde al código del carácter de la constante. Para obtener el valor de la constante, simplemente aplique la función [Character code](../commands/character-code) al resultado (ver ejemplo a continuación). 
 
 ## Ejemplo 1 
 
@@ -79,7 +79,7 @@ Customized formats are returned untouched:
 
 ## Ver también 
 
-[OBJECT SET FORMAT](object-set-format.md)  
+[OBJECT SET FORMAT](../commands/object-set-format)  
 
 ## Propiedades
 

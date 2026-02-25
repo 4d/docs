@@ -1,4 +1,4 @@
----
+﻿---
 id: relate-one
 title: RELATE ONE
 slug: /commands/relate-one
@@ -100,8 +100,8 @@ If the command has been executed correctly and if the related records have been 
 
 ## See also 
 
-[OLD RELATED ONE](old-related-one.md)  
-[RELATE MANY](relate-many.md)  
+[OLD RELATED ONE](../commands/old-related-one)  
+[RELATE MANY](../commands/relate-many)  
 
 ## Properties
 

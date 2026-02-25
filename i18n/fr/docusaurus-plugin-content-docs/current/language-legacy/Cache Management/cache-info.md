@@ -1,4 +1,4 @@
----
+﻿---
 id: cache-info
 title: Cache info
 slug: /commands/cache-info
@@ -64,7 +64,7 @@ Vous souhaitez obtenir des informations sur la base courante et tous les composa
 
 ## Voir aussi 
 
-[MEMORY STATISTICS](memory-statistics.md)  
+[MEMORY STATISTICS](../commands/memory-statistics)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-header-and-footer
 title: QR SET HEADER AND FOOTER
 slug: /commands/qr-set-header-and-footer
@@ -66,7 +66,7 @@ The following statement places the title “Center title” in the header for th
 
 ## See also 
 
-[QR GET HEADER AND FOOTER](qr-get-header-and-footer.md)  
+[QR GET HEADER AND FOOTER](../commands/qr-get-header-and-footer)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: set-menu-item-parameter
 title: SET MENU ITEM PARAMETER
 slug: /commands/set-menu-item-parameter
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET MENU ITEM PARAMETER.Summary-->The **SET MENU ITEM PARAMETER** command associates a custom character string with a menu item designated by the *menu* and *menuItem* parameters.<!-- END REF-->
 
-This parameter is mainly used by the [Dynamic pop up menu](dynamic-pop-up-menu.md) command.
+This parameter is mainly used by the [Dynamic pop up menu](../commands/dynamic-pop-up-menu) command.
 
 ## Example 
 
@@ -51,9 +51,9 @@ This code provides a menu including the names of the open windows and lets you g
 
 ## See also 
 
-[Dynamic pop up menu](dynamic-pop-up-menu.md)  
-[Get menu item parameter](get-menu-item-parameter.md)  
-[Get selected menu item parameter](get-selected-menu-item-parameter.md)  
+[Dynamic pop up menu](../commands/dynamic-pop-up-menu)  
+[Get menu item parameter](../commands/get-menu-item-parameter)  
+[Get selected menu item parameter](../commands/get-selected-menu-item-parameter)  
 
 ## Properties
 

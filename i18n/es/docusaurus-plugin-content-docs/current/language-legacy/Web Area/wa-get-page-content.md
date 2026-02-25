@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-get-page-content
 title: WA Get page content
 slug: /commands/wa-get-page-content
@@ -35,7 +35,7 @@ Este comando devuelve una cadena vacía si el contenido de la página actual no 
 
 ## Ver también 
 
-[WA SET PAGE CONTENT](wa-set-page-content.md)  
+[WA SET PAGE CONTENT](../commands/wa-set-page-content)  
 
 ## Propiedades
 

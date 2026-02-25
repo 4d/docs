@@ -1,4 +1,4 @@
----
+﻿---
 id: text-to-array
 title: TEXT TO ARRAY
 slug: /commands/text-to-array
@@ -116,9 +116,9 @@ You need to print in a 400-pixel wide area, a text with a maximum of 80 lines an
 
 ## See also 
 
-[Split string](split-string.md)  
-[ST Get plain text](st-get-plain-text.md)  
-[ST Get text](st-get-text.md)  
+[Split string](../commands/split-string)  
+[ST Get plain text](../commands/st-get-plain-text)  
+[ST Get text](../commands/st-get-text)  
 
 ## Properties
 

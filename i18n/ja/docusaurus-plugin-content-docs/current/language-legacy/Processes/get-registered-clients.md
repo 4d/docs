@@ -1,4 +1,4 @@
----
+﻿---
 id: get-registered-clients
 title: GET REGISTERED CLIENTS
 slug: /commands/get-registered-clients
@@ -55,9 +55,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[EXECUTE ON CLIENT](execute-on-client.md)  
-[REGISTER CLIENT](register-client.md)  
-[UNREGISTER CLIENT](unregister-client.md)  
+[EXECUTE ON CLIENT](../commands/execute-on-client)  
+[REGISTER CLIENT](../commands/register-client)  
+[UNREGISTER CLIENT](../commands/unregister-client)  
 
 ## プロパティ
 

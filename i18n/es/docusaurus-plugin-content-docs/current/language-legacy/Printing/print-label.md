@@ -1,4 +1,4 @@
----
+﻿---
 id: print-label
 title: PRINT LABEL
 slug: /commands/print-label
@@ -42,7 +42,7 @@ Por defecto, **PRINT LABEL** muestra la caja de diálogo de impresión. Si el us
 
 Puede suprimir esta caja de diálogo utilizando el parámetro opcional asterisco (*\**) o el parámetro opcional “mayor que” (*\>*):   
 • El parámetro \* causa una impresión con los parámetros de impresión actuales.  
-• Además, el parámetro > provoca un trabajo de impresión sin reinicializar los parámetros de impresión actuales. Este parámetro es útil para ejecutar varias llamadas sucesivas a **PRINT LABEL** (por ejemplo al interior de un bucle) mientras mantiene los parámetros de impresión personalizados previamente definidos. Para ver un ejemplo sobre el uso de este parámetro, consulte la descripción del comando [PRINT RECORD](print-record.md).  
+• Además, el parámetro > provoca un trabajo de impresión sin reinicializar los parámetros de impresión actuales. Este parámetro es útil para ejecutar varias llamadas sucesivas a **PRINT LABEL** (por ejemplo al interior de un bucle) mientras mantiene los parámetros de impresión personalizados previamente definidos. Para ver un ejemplo sobre el uso de este parámetro, consulte la descripción del comando [PRINT RECORD](../commands/print-record).  
 Note que este parámetro no tiene efecto si se utiliza el asistente de creación de etiquetas.
 
 Si no se utiliza el asistente de creación de etiquetas, la variable sistema OK toma el valor 1 si todas las etiquetas se imprimen; de lo contrario, toma el valor 0 (cero) (por ejemplo, si el usuario hizo clic en el botón **Cancelar** en las caja de diálogo de impresión).
@@ -117,8 +117,8 @@ El siguiente ejemplo le permite al usuario efectuar una búsqueda en la tabla \[
 
 ## Ver también 
 
-[PRINT SELECTION](print-selection.md)  
-[QR REPORT](qr-report.md)  
+[PRINT SELECTION](../commands/print-selection)  
+[QR REPORT](../commands/qr-report)  
 
 ## Propiedades
 

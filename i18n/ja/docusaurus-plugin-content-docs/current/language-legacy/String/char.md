@@ -1,4 +1,4 @@
----
+﻿---
 id: char
 title: Char
 slug: /commands/char
@@ -43,7 +43,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Character code](character-code.md)  
+[Character code](../commands/character-code)  
 *Unicodeコード*  
 *文字参照記号*  
 

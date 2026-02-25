@@ -1,4 +1,4 @@
----
+﻿---
 id: query-selection
 title: QUERY SELECTION
 slug: /commands/query-selection
@@ -32,14 +32,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUERY SELECTION.Summary-->**QUERY SELECTION** recherche des enregistrements dans *laTable*.<!-- END REF-->modifie la sélection courante de *laTable* pour le process courant. Le premier enregistrement de la nouvelle sélection devient l'enregistrement courant.
 
-**QUERY SELECTION** a un fonctionnement et des effets proches de ceux de [QUERY](query.md). La différence entre ces deux commandes est la portée de la recherche :
+**QUERY SELECTION** a un fonctionnement et des effets proches de ceux de [QUERY](../commands/query). La différence entre ces deux commandes est la portée de la recherche :
 
-* [QUERY](query.md) recherche des enregistrements dans la table.
+* [QUERY](../commands/query) recherche des enregistrements dans la table.
 * **QUERY SELECTION** recherche des enregistrements parmi la sélection courante de la table.
 
-Pour plus d'informations, reportez-vous à la description de la commande [QUERY](query.md).
+Pour plus d'informations, reportez-vous à la description de la commande [QUERY](../commands/query).
 
-La commande **QUERY SELECTION** est utile lorsqu'une recherche ne peut pas être exprimée via une séquence d'appels à [QUERY](query.md) reliés à l'aide du paramètre *\**. Typiquement, c'est le cas lorsque vous souhaitez effectuer une recherche dans une sélection courante qui ne résulte pas d'une précédente recherche, mais de l'exécution d'une commande telle que [USE SET](use-set.md). 
+La commande **QUERY SELECTION** est utile lorsqu'une recherche ne peut pas être exprimée via une séquence d'appels à [QUERY](../commands/query) reliés à l'aide du paramètre *\**. Typiquement, c'est le cas lorsque vous souhaitez effectuer une recherche dans une sélection courante qui ne résulte pas d'une précédente recherche, mais de l'exécution d'une commande telle que [USE SET](../commands/use-set). 
 
 ## Exemple 
 
@@ -55,7 +55,7 @@ Vous trouvez donc toutes les sociétés basées à Paris, dont l'activité est b
 
 ## Voir aussi 
 
-[QUERY](query.md)  
+[QUERY](../commands/query)  
 
 ## Propriétés
 

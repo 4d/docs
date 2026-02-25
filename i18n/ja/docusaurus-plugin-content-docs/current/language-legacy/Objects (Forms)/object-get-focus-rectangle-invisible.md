@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-focus-rectangle-invisible
 title: OBJECT Get focus rectangle invisible
 slug: /commands/object-get-focus-rectangle-invisible
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.OBJECT Get focus rectangle invisible.Summary-->**OBJECT Get focus rectangle invisible**コマンドは*object* と *\** 引数で指定したオブジェクトのフォーカスの四角に関するカレントプロセス内の表示オプションを返します。<!-- END REF-->この設定は、フォームエディターのプロパティリストの入力可能オブジェクトで利用できる**フォーカスの四角を隠す**オプションに対応します。 このコマンドはデザインモードや[OBJECT SET FOCUS RECTANGLE INVISIBLE](object-set-focus-rectangle-invisible.md)コマンドを使用して指定されたこのオプションに関する現在の設定値を返します。
+<!--REF #_command_.OBJECT Get focus rectangle invisible.Summary-->**OBJECT Get focus rectangle invisible**コマンドは*object* と *\** 引数で指定したオブジェクトのフォーカスの四角に関するカレントプロセス内の表示オプションを返します。<!-- END REF-->この設定は、フォームエディターのプロパティリストの入力可能オブジェクトで利用できる**フォーカスの四角を隠す**オプションに対応します。 このコマンドはデザインモードや[OBJECT SET FOCUS RECTANGLE INVISIBLE](../commands/object-set-focus-rectangle-invisible)コマンドを使用して指定されたこのオプションに関する現在の設定値を返します。
 
 **注:** このオプションはMac OSでのみ利用できます。Windowsでは効果がありません。 
 
@@ -39,7 +39,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT SET FOCUS RECTANGLE INVISIBLE](object-set-focus-rectangle-invisible.md)  
+[OBJECT SET FOCUS RECTANGLE INVISIBLE](../commands/object-set-focus-rectangle-invisible)  
 
 ## プロパティ
 

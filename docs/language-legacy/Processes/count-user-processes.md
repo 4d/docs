@@ -1,4 +1,4 @@
----
+﻿---
 id: count-user-processes
 title: Count user processes
 slug: /commands/count-user-processes
@@ -32,12 +32,12 @@ displayed_sidebar: docs
 
 The Count user processes function returns the number of processes opened directly or indirectly by the user (processes for which the *origin* parameter returned by the [Process info](../commands/process-info) command is greater than or equal to 0). 
 
-**Note:** The "live" processes are processes whose status is neither *aborted*, nor *does not exist* (see the [Process state](process-state.md) command). 
+**Note:** The "live" processes are processes whose status is neither *aborted*, nor *does not exist* (see the [Process state](../commands/process-state) command). 
 
 ## See also 
 
-[Count tasks](count-tasks.md)  
-[Count users](count-users.md)  
+[Count tasks](../commands/count-tasks)  
+[Count users](../commands/count-users)  
 
 ## Properties
 

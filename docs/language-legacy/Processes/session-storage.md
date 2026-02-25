@@ -1,4 +1,4 @@
----
+﻿---
 id: session-storage
 title: Session storage
 slug: /commands/session-storage
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 In *id*, pass the UUID of the session for which you want to get the storage. It is automatically assigned by 4D (4D Server or, for standalone sessions, 4D single-user) and is stored in the [**.id**](../../API/SessionClass.md#id) property of the [session object](../../API/SessionClass.md). If the session does not exist, the command returns **Null**. 
 
-**Note:** You can get the session identifiers using the [Process activity](process-activity.md) command. 
+**Note:** You can get the session identifiers using the [Process activity](../commands/process-activity) command. 
 
 The returned object is the [**.storage**](../../API/SessionClass.md#storage) property of the session. It is a shared object used to store information available to all processes of the session.
 
@@ -63,7 +63,7 @@ This method modifies the value of a "settings" property stored in the storage ob
 
 ## See also 
 
-[Process activity](process-activity.md)  
+[Process activity](../commands/process-activity)  
 [Session](./session.md)  
 
 ## Properties

@@ -1,4 +1,4 @@
----
+﻿---
 id: erase-window
 title: ERASE WINDOW
 slug: /commands/erase-window
@@ -32,14 +32,14 @@ displayed_sidebar: docs
 
 If you omit the *window* parameter, **ERASE WINDOW** clears the contents of the frontmost window for the current process.
 
-Usually, you will use **ERASE WINDOW** in combination with [MESSAGE](message.md) and [GOTO XY](goto-xy.md). In this case, **ERASE WINDOW** clears the contents of the window and moves the cursor to the upper-left corner of the window, the [GOTO XY](goto-xy.md)(0; 0) position. 
+Usually, you will use **ERASE WINDOW** in combination with [MESSAGE](../commands/message) and [GOTO XY](../commands/goto-xy). In this case, **ERASE WINDOW** clears the contents of the window and moves the cursor to the upper-left corner of the window, the [GOTO XY](../commands/goto-xy)(0; 0) position. 
 
-Do not confuse **ERASE WINDOW**, which clears the contents of a window, with [CLOSE WINDOW](close-window.md), which removes the window from the screen.
+Do not confuse **ERASE WINDOW**, which clears the contents of a window, with [CLOSE WINDOW](../commands/close-window), which removes the window from the screen.
 
 ## See also 
 
-[GOTO XY](goto-xy.md)  
-[MESSAGE](message.md)  
+[GOTO XY](../commands/goto-xy)  
+[MESSAGE](../commands/message)  
 
 ## Properties
 

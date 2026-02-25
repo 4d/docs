@@ -1,4 +1,4 @@
----
+﻿---
 id: soap-get-info
 title: SOAP Get info
 slug: /commands/soap-get-info
@@ -41,12 +41,12 @@ Passez dans le paramètre *numInfo* le numéro du type d’information SOAP à c
 | SOAP method name  | Entier long | 1      | Nom de la méthode offerte comme Web Service sur le point d’être exécutée |
 | SOAP service name | Entier long | 2      | Nom du Web Service auquel appartient la méthode                          |
 
-**Note :** Pour des raisons de sécurité également, il est possible de définir la taille maximale des requêtes Web Services adressées à 4D. Ce paramétrage est effectué à l’aide de la commande [SET DATABASE PARAMETER](set-database-parameter.md) (thème “Définition structure”).
+**Note :** Pour des raisons de sécurité également, il est possible de définir la taille maximale des requêtes Web Services adressées à 4D. Ce paramétrage est effectué à l’aide de la commande [SET DATABASE PARAMETER](../commands/set-database-parameter) (thème “Définition structure”).
 
 ## Voir aussi 
 
-[SET DATABASE PARAMETER](set-database-parameter.md)  
-[SOAP SEND FAULT](soap-send-fault.md)  
+[SET DATABASE PARAMETER](../commands/set-database-parameter)  
+[SOAP SEND FAULT](../commands/soap-send-fault)  
 
 ## Propriétés
 

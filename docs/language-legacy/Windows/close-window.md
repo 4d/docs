@@ -1,4 +1,4 @@
----
+﻿---
 id: close-window
 title: CLOSE WINDOW
 slug: /commands/close-window
@@ -25,7 +25,7 @@ If you pass an external window reference number in the *Window* parameter, **CLO
 
 ## Example 
 
-The following example opens a form window and adds new records with the [ADD RECORD](add-record.md) command. When the records have been added, the window is closed with **CLOSE WINDOW**:
+The following example opens a form window and adds new records with the [ADD RECORD](../commands/add-record) command. When the records have been added, the window is closed with **CLOSE WINDOW**:
 
 ```4d
  FORM SET INPUT([Employees];"Entry")

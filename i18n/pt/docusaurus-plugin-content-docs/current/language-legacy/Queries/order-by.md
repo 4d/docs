@@ -1,4 +1,4 @@
----
+﻿---
 id: order-by
 title: ORDER BY
 slug: /commands/order-by
@@ -52,7 +52,7 @@ Se os campos ordenados estiverem incluídos em um índice composto, **ORDER BY**
 Para ordenações múltiplas (ordenar em vários campos), pode chamar**ORDER BY** tantas vezes quantas seja necessárias e especificar o parâmetro opcional *\**, exceto para a última chamada **ORDER BY**, que inicia a operação de ordenação real. Esta funcionalidade é útil para a gestão de ordenações multi-critérios em interfaces de usuário personalizadas.  
 **Atenção** com esta sintaxe, só pode passar um nível de ordenação (campo) por linha de instrução.
 
-Não importa como tenha definido uma ordenação, se a operação de ordenação real for tomar algum tempo para ser realizada, 4D mostra automaticamente uma mensagem que contém um termômetro de progresso. Estas mensagens podem ser ativadas e desativadas utilizando os comandos [MESSAGES ON](messages-on.md) e [MESSAGES OFF](messages-off.md). Se for mostrado o termômetro de progresso, o usuário pode clicar no botão Deter para interromper a ordenação.
+Não importa como tenha definido uma ordenação, se a operação de ordenação real for tomar algum tempo para ser realizada, 4D mostra automaticamente uma mensagem que contém um termômetro de progresso. Estas mensagens podem ser ativadas e desativadas utilizando os comandos [MESSAGES ON](../commands/messages-on) e [MESSAGES OFF](../commands/messages-off). Se for mostrado o termômetro de progresso, o usuário pode clicar no botão Deter para interromper a ordenação.
 
 Se a ordenação for realizada corretamente, a variável OK assume o valor *1*. Se o usuário clicar em Cancelar, ORDER BY termina sem efetuar a ordenação, e a variável OK assume o valor *0* (zero).
 
@@ -216,7 +216,7 @@ Sem importar como se defina a ordenação, se a operação de ordenação vai a 
 
 ## Ver também 
 
-[ORDER BY FORMULA](order-by-formula.md)  
+[ORDER BY FORMULA](../commands/order-by-formula)  
 
 ## Propriedades
 

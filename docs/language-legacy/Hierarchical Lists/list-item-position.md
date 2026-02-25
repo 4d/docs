@@ -1,4 +1,4 @@
----
+﻿---
 id: list-item-position
 title: List item position
 slug: /commands/list-item-position
@@ -41,7 +41,7 @@ If you pass the first optional *\** parameter, you indicate that the *list* para
 
 The position is expressed relative to the top item of the main list, using the current expanded/collapsed state of the list and its sublist. 
 
-The result is therefore a number between 1 and the value returned by [Count list items](count-list-items.md). 
+The result is therefore a number between 1 and the value returned by [Count list items](../commands/count-list-items). 
 
 If the item is not visible because it is located in a collapsed list, **List item position** expands the appropriate list to make the item visible. 
 
@@ -49,8 +49,8 @@ If the item does not exist, **List item position** returns 0.
 
 ## See also 
 
-[Count list items](count-list-items.md)  
-[SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
+[Count list items](../commands/count-list-items)  
+[SELECT LIST ITEMS BY REFERENCE](../commands/select-list-items-by-reference)  
 
 ## Properties
 

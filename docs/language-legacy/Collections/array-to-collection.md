@@ -1,4 +1,4 @@
----
+﻿---
 id: array-to-collection
 title: ARRAY TO COLLECTION
 slug: /commands/array-to-collection
@@ -92,7 +92,7 @@ You want to copy a text array in a shared collection:
 
 ## See also 
 
-[COLLECTION TO ARRAY](collection-to-array.md)  
+[COLLECTION TO ARRAY](../commands/collection-to-array)  
 *Type conversions between collections and 4D arrays*  
 
 ## Properties

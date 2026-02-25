@@ -1,4 +1,4 @@
----
+﻿---
 id: longint-array-from-selection
 title: LONGINT ARRAY FROM SELECTION
 slug: /commands/longint-array-from-selection
@@ -47,7 +47,7 @@ Quiere recuperar los números de los registros de la selección actual:
 
 ## Ver también 
 
-[CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
+[CREATE SELECTION FROM ARRAY](../commands/create-selection-from-array)  
 
 ## Propiedades
 

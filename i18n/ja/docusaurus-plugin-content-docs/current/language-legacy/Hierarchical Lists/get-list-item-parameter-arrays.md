@@ -1,4 +1,4 @@
----
+﻿---
 id: get-list-item-parameter-arrays
 title: GET LIST ITEM PARAMETER ARRAYS
 slug: /commands/get-list-item-parameter-arrays
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Summary-->**GET LIST ITEM PARAMETER ARRAYS**コマンドは*list* 引数で指定した参照またはオブジェクト名を持つ階層リスト中で、*itemRef* で指定した項目に割り当てられたパラメーター (およびその値) を一回の呼び出しで取り出すことができます。<!-- END REF-->
 
-項目に関連付けられたパラメーターは各項目の追加の情報を格納しています。これらは[SET LIST ITEM PARAMETER](set-list-item-parameter.md)コマンドで設定できます。
+項目に関連付けられたパラメーターは各項目の追加の情報を格納しています。これらは[SET LIST ITEM PARAMETER](../commands/set-list-item-parameter)コマンドで設定できます。
 
 一番目のオプションの引数 *\** を渡すと、*list* はフォーム中でリストを表示するリストオブジェクトに対応するオブジェクト名 (文字列) です。この引数を渡さない場合、*list* は階層リスト参照 ([ListRef](# "階層リストへの参照")) です。ひとつのリストオブジェクトだけ、あるいは (二番目の *\** を使用しないで) 項目を構造的に選択する場合、どちらのシンタックスでも使用できます。しかし同じリストを複数のリストオブジェクトに表示し、かつ (二番目の *\** を使用して) 現在選択されている項目に対してコマンドを適用する場合、各リストオブジェクトは異なるカレント項目を持つことができるため、オブジェクト名に基づくシンタックスを使用しなければなりません。
 
@@ -85,7 +85,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+[SET LIST ITEM PARAMETER](../commands/set-list-item-parameter)  
 
 ## プロパティ
 

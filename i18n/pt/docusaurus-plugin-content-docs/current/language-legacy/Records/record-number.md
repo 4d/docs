@@ -1,4 +1,4 @@
----
+﻿---
 id: record-number
 title: Record number
 slug: /commands/record-number
@@ -24,7 +24,7 @@ Os números de registro podem variar. Os números de registros apagados são reu
   
 **4D Server**: este comando devolve um resultado diferente no contexto do evento de formulário On Validate dependendo se for executado em 4D em modo local ou 4D em modo remoto. Em versão monoposto, o comando devolve um número de registro (o registro é considerado como tendo sido criado). Em versão cliente/servidor, o comando devolve -3 porque nesse caso, o registro já foi criado no servidor mas a informação não foi enviada ao cliente.  
   
-**Nota:** É recomendado utilizar o comando [Is new record](is-new-record.md) para verificar se o registro está em processo de criação. 
+**Nota:** É recomendado utilizar o comando [Is new record](../commands/is-new-record) para verificar se o registro está em processo de criação. 
 
 ## Exemplo 
 
@@ -40,10 +40,10 @@ O exemplo a seguir salva o número do registro atual e depois procura na tabela 
 
 ## Ver também 
 
-[GOTO RECORD](goto-record.md)  
-[Is new record](is-new-record.md)  
-[Selected record number](selected-record-number.md)  
-[Sequence number](sequence-number.md)  
+[GOTO RECORD](../commands/goto-record)  
+[Is new record](../commands/is-new-record)  
+[Selected record number](../commands/selected-record-number)  
+[Sequence number](../commands/sequence-number)  
 *Sobre Números de Registros*  
 
 ## Propriedades

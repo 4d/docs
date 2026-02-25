@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-row-color
 title: LISTBOX Get row color
 slug: /commands/listbox-get-row-color
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 **LISTBOX Get row color** コマンドは*object* 引数および *\** 引数で指定されたリストボックス内の行またはセルのカラーを、CSS 文字列で返します。
 
-**注:** カラーを4-バイト倍長整数フォーマットで取得したい場合、[OBJECT SET RGB COLORS](object-set-rgb-colors.md) コマンドを使用する必要があります。カラーのフォーマットについての詳細な情報については、[OBJECT SET RGB COLORS](object-set-rgb-colors.md) コマンドの詳細を参照してください。
+**注:** カラーを4-バイト倍長整数フォーマットで取得したい場合、[OBJECT SET RGB COLORS](../commands/object-set-rgb-colors) コマンドを使用する必要があります。カラーのフォーマットについての詳細な情報については、[OBJECT SET RGB COLORS](../commands/object-set-rgb-colors) コマンドの詳細を参照してください。
 
 任意の *\** 引数を指定した場合、*object* 引数がオブジェクト名(文字列)であることを意味します。この引数を省略した場合、*object* 引数が変数であることを意味します。この場合、文字列ではなくて変数の参照を渡します。*object* 引数を使用して、リストボックスまたはリストボックスカラムを指定することができます:
 
@@ -68,7 +68,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[LISTBOX SET ROW COLOR](listbox-set-row-color.md)  
+[LISTBOX SET ROW COLOR](../commands/listbox-set-row-color)  
 
 ## プロパティ
 

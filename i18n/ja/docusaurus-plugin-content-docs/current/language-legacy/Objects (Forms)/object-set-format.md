@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-format
 title: OBJECT SET FORMAT
 slug: /commands/object-set-format
@@ -344,9 +344,9 @@ This example formats a date variable and a time variable using [customized forma
 ## 参照 
 
   
-[GET SYSTEM FORMAT](get-system-format.md)  
-[OBJECT Get format](object-get-format.md)  
-[OBJECT SET FILTER](object-set-filter.md)  
+[GET SYSTEM FORMAT](../commands/get-system-format)  
+[OBJECT Get format](../commands/object-get-format)  
+[OBJECT SET FILTER](../commands/object-set-filter)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: throw
 title: throw
 slug: /commands/throw
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 4Dコード内で例外が発生した場合、**throw** コマンドで明示的にエラーをスローし、独自のエラーメッセージまたはエラー番号を提示することができます。これは、例外的な状態や無効な入力を知らせるのに便利です。
 
-**throw** コマンドを使用してスローされたエラーは、通常のエラーと同様に 4Dランタイムによって管理されます。つまり、[ON ERR CALL](on-err-call.md)コマンドによって割り込みメソッドが実装されていない場合には、標準のエラーダイアログが表示されます。
+**throw** コマンドを使用してスローされたエラーは、通常のエラーと同様に 4Dランタイムによって管理されます。つまり、[ON ERR CALL](../commands/on-err-call)コマンドによって割り込みメソッドが実装されていない場合には、標準のエラーダイアログが表示されます。
 
 このコマンドは 3つのシンタックスをサポートしています:
 
@@ -64,10 +64,10 @@ description 引数を渡さなかった場合には、次の情報が提示さ�
 
 ### **throw** 
 
-このシンタックスは、カレントエラーをすべて**遅延モード**でスローします。つまり、これらのエラーはエラースタックに追加され、カレントメソッド終了時に処理されます。これは通常、[ON ERR CALL](on-err-call.md) コールバック内でおこなわれます。
+このシンタックスは、カレントエラーをすべて**遅延モード**でスローします。つまり、これらのエラーはエラースタックに追加され、カレントメソッド終了時に処理されます。これは通常、[ON ERR CALL](../commands/on-err-call) コールバック内でおこなわれます。
 
-* **アプリケーションにおいて:** 発生したエラーはエラースタックに追加され、カレントメソッド終了時にアプリケーションの [ON ERR CALL](on-err-call.md) メソッドが呼び出されます。[Last errors](../commands/last-errors) 関数はエラースタックを返します。
-* **コンポーネントにおいて:** エラースタックはホストアプリケーションに送信され、ホストアプリケーションの [ON ERR CALL](on-err-call.md) メソッドが呼び出されます。
+* **アプリケーションにおいて:** 発生したエラーはエラースタックに追加され、カレントメソッド終了時にアプリケーションの [ON ERR CALL](../commands/on-err-call) メソッドが呼び出されます。[Last errors](../commands/last-errors) 関数はエラースタックを返します。
+* **コンポーネントにおいて:** エラースタックはホストアプリケーションに送信され、ホストアプリケーションの [ON ERR CALL](../commands/on-err-call) メソッドが呼び出されます。
 
 ## 例題 1 
 
@@ -111,9 +111,9 @@ throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFi
 
 ## 参照 
 
-[ASSERT](assert.md)  
+[ASSERT](../commands/assert)  
 [Last errors](../commands/last-errors)  
-[ON ERR CALL](on-err-call.md)  
+[ON ERR CALL](../commands/on-err-call)  
 
 ## プロパティ
 

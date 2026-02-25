@@ -1,4 +1,4 @@
----
+﻿---
 id: boolean-array-from-set
 title: BOOLEAN ARRAY FROM SET
 slug: /commands/boolean-array-from-set
@@ -37,13 +37,13 @@ Each element of the array is:
 * [True](true.md "True") if the corresponding record belongs to the set.
 * [False](false.md "False") if the corresponding record does not belong to the set.
 
-**Warning:** The total number of elements in the *booleanArr* array is not significant. For structural reasons, this number can be different from the number of records actually present in the table. Possible extra elements are set to [False](false.md).
+**Warning:** The total number of elements in the *booleanArr* array is not significant. For structural reasons, this number can be different from the number of records actually present in the table. Possible extra elements are set to [False](../commands/false).
 
 If you don’t pass the *set* parameter, the command will use UserSet in the current process.
 
 ## See also 
 
-[CREATE SET FROM ARRAY](create-set-from-array.md)  
+[CREATE SET FROM ARRAY](../commands/create-set-from-array)  
 
 ## Properties
 

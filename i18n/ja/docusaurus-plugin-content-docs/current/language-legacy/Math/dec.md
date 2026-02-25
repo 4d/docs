@@ -1,4 +1,4 @@
----
+﻿---
 id: dec
 title: Dec
 slug: /commands/dec
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Int](int.md)  
+[Int](../commands/int)  
 
 ## プロパティ
 

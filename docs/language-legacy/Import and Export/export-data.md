@@ -1,4 +1,4 @@
----
+﻿---
 id: export-data
 title: EXPORT DATA
 slug: /commands/export-data
@@ -40,7 +40,7 @@ The optional *project* parameter lets you use a project to export data. When you
 An export project contains all the export parameters such as the tables and fields to export, delimiters, etc. In the *project* parameter, you can pass either a Text variable containing XML or a Text variable containing a reference to a pre-existing DOM element, or a BLOB. Projects may have been created by programming (XML format projects only) or by loading parameters that were previously defined in the export dialog box.In the latter case, you have two solutions available:
 
 * Use the **EXPORT DATA** command with an empty *project* parameter and the optional *\** parameter, then store the resulting *project* parameter in a Text or BLOB type field (see below). This solution allows you to save the project with the data file.
-* Save the project to disk, then load it for example by using the [DOM Parse XML source](dom-parse-xml-source.md) command, and pass its reference in the *project* parameter
+* Save the project to disk, then load it for example by using the [DOM Parse XML source](../commands/dom-parse-xml-source) command, and pass its reference in the *project* parameter
 
 **Compatibility note:** Beginning with version 12 of 4D, export projects are encoded in XML. 4D can open export projects generated with previous 4D versions (BLOB format) but any projects created starting with v12 can no longer be opened with v11 or earlier versions. We now recommend that you use Text variables for handling export files. 
 
@@ -104,10 +104,10 @@ If the user clicks **Cancel** in the standard open file dialog box or in the exp
 
 ## See also 
 
-[EXPORT DIF](export-dif.md)  
-[EXPORT SYLK](export-sylk.md)  
-[EXPORT TEXT](export-text.md)  
-[IMPORT DATA](import-data.md)  
+[EXPORT DIF](../commands/export-dif)  
+[EXPORT SYLK](../commands/export-sylk)  
+[EXPORT TEXT](../commands/export-text)  
+[IMPORT DATA](../commands/import-data)  
 
 ## Properties
 

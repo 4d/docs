@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-coordinates
 title: OBJECT SET COORDINATES
 slug: /commands/object-set-coordinates
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT SET COORDINATES.Summary-->La commande **OBJECT SET COORDINATES** permet de modifier l’emplacement et, optionnellement, la taille de l’objet ou des objets désigné(s) par les paramètres *objet* et *\** pour le process courant.<!-- END REF-->
 
-**Note :** Cette commande équivaut à utiliser la commande [OBJECT MOVE](object-move.md) en passant le 2e paramètre *\**. 
+**Note :** Cette commande équivaut à utiliser la commande [OBJECT MOVE](../commands/object-move) en passant le 2e paramètre *\**. 
 
 Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas le paramètre, vous indiquez que le paramètre *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (champ ou variable objet uniquement).
 
@@ -42,13 +42,13 @@ Passez dans les paramètres *gauche* et *haut* les nouvelles coordonnées absolu
 
 Vous pouvez également passer des valeurs de coordonnées absolues dans les paramètres *droite* et *bas*, indiquant l’angle inférieur droit de l’objet. Si cet angle ne correspond pas à celui de l’objet après application des paramètres *gauche* et *haut*, l’objet est redimensionné en conséquence. 
 
-**Note :** Si vous souhaitez déplacer un objet relativement à sa position initiale, il est préférable d’utiliser la commande existante [OBJECT MOVE](object-move.md). 
+**Note :** Si vous souhaitez déplacer un objet relativement à sa position initiale, il est préférable d’utiliser la commande existante [OBJECT MOVE](../commands/object-move). 
 
 Cette commande fonctionne uniquement dans les contextes suivants :
 
 * Formulaires entrée en mode saisie,
 * Formulaires affichés via la commande [DIALOG](../commands/dialog),
-* En-têtes et pieds de page des formulaires sortie affichés par la commande [MODIFY SELECTION](modify-selection.md) ou [DISPLAY SELECTION](display-selection.md),
+* En-têtes et pieds de page des formulaires sortie affichés par la commande [MODIFY SELECTION](../commands/modify-selection) ou [DISPLAY SELECTION](../commands/display-selection),
 * Formulaires en cours d'impression.
 
 ## Exemple 
@@ -63,9 +63,9 @@ L’instruction suivante place l’objet "bouton\_1" aux coordonnées (10,20) (3
 
 ## Voir aussi 
 
-[CONVERT COORDINATES](convert-coordinates.md)  
-[OBJECT GET COORDINATES](object-get-coordinates.md)  
-[OBJECT MOVE](object-move.md)  
+[CONVERT COORDINATES](../commands/convert-coordinates)  
+[OBJECT GET COORDINATES](../commands/object-get-coordinates)  
+[OBJECT MOVE](../commands/object-move)  
 
 ## Propriétés
 

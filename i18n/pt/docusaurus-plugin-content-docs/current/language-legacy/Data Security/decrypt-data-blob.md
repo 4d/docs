@@ -1,4 +1,4 @@
----
+﻿---
 id: decrypt-data-blob
 title: Decrypt data BLOB
 slug: /commands/decrypt-data-blob
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 Pode usar *objetoChave* ou uma *passefrase* para decriptografar o BLOB: 
 
-* *objetoChave*: um objeto JSON contendo uma chave de criptografia, com a mesma estrutura que o objeto retornado pelo comando [New data key](new-data-key.md)
+* *objetoChave*: um objeto JSON contendo uma chave de criptografia, com a mesma estrutura que o objeto retornado pelo comando [New data key](../commands/new-data-key)
 * *passefrase*: uma string usada para gerar a chave de criptografia
 
 O número passado no parâmetro *salt* **Decrypt data BLOB** deve corresponder com o usado para a criptografia.
@@ -63,14 +63,14 @@ O exemplo abaixo mostra como decriptogrofar um arquivo criptografado localizado 
  $decryptedFile.setContent($decryptedBlob)
 ```
 
-*passefrase* e *salt* usados para a descriptografia são idênticos a *passefrase* e *salt* usados para criptografar (ver o exemplo [Encrypt data BLOB](encrypt-data-blob.md)).
+*passefrase* e *salt* usados para a descriptografia são idênticos a *passefrase* e *salt* usados para criptografar (ver o exemplo [Encrypt data BLOB](../commands/encrypt-data-blob)).
 
 ## Ver também 
 
   
-[Encrypt data BLOB](encrypt-data-blob.md)  
-[Encrypt data file](encrypt-data-file.md)  
-[New data key](new-data-key.md)  
+[Encrypt data BLOB](../commands/encrypt-data-blob)  
+[Encrypt data file](../commands/encrypt-data-file)  
+[New data key](../commands/new-data-key)  
 
 ## Propriedades
 

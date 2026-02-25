@@ -1,4 +1,4 @@
----
+﻿---
 id: st-get-options
 title: ST GET OPTIONS
 slug: /commands/st-get-options
@@ -45,7 +45,7 @@ Pass the code of the option to get in the *option* parameter. The command return
 
 ## See also 
 
-[ST SET OPTIONS](st-set-options.md)  
+[ST SET OPTIONS](../commands/st-set-options)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: ds
 title: ds
 slug: /commands/ds
@@ -22,7 +22,7 @@ El comando `ds` <!-- REF #_command_.ds.Summary -->devuelve una referencia al alm
 
 Si se omite el parámetro *localID* (o se pasa una cadena vacía ""), el comando devuelve una referencia al almacén de datos que coincide con la base de datos local de 4D (o la base de datos de 4D Server en caso de abrir una base de datos remota en 4D Server). El almacén de datos se abre automáticamente y está disponible directamente a través de `ds`.
 
-También puede obtener una referencia en un datastore remoto abierto pasando su id local en el parámetro *localID*. El datastore debe haber sido previamente abierto con el comando [`Open datastore`](open-datastore.md) por la base de datos actual (host o componente). La identificación local se define cuando se utiliza este comando.
+También puede obtener una referencia en un datastore remoto abierto pasando su id local en el parámetro *localID*. El datastore debe haber sido previamente abierto con el comando [`Open datastore`](../commands/open-datastore) por la base de datos actual (host o componente). La identificación local se define cuando se utiliza este comando.
 
 > El alcance del id local es la base de datos en la que se ha abierto el almacén de datos.
 
@@ -67,7 +67,7 @@ $result:=ds.Employee.query("firstName = :1";"S@")
 
 ## Ver también
 
-[Open datastore](open-datastore.md)
+[Open datastore](../commands/open-datastore)
 
 ## Propiedades
 

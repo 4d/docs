@@ -1,4 +1,4 @@
----
+﻿---
 id: get-4d-folder
 title: Get 4D folder
 slug: /commands/get-4d-folder
@@ -125,7 +125,7 @@ Con la aplicación 4D Client, esta constante es estrictamente equivalente a la c
 
 ### Carpeta base sintaxis Unix (Database Folder Unix Syntax) 
 
-Carpeta que contiene el archivo de estructura de la base. Esta constante designa la misma carpeta que la anterior pero la ruta de acceso que devuelve se expresa utilizando sintaxis Unix (Posix), de tipo/Usuarios/... Esta sintaxis se usa principalmente cuando utiliza el comando [LAUNCH EXTERNAL PROCESS](launch-external-process.md) bajo macOS.
+Carpeta que contiene el archivo de estructura de la base. Esta constante designa la misma carpeta que la anterior pero la ruta de acceso que devuelve se expresa utilizando sintaxis Unix (Posix), de tipo/Usuarios/... Esta sintaxis se usa principalmente cuando utiliza el comando [LAUNCH EXTERNAL PROCESS](../commands/launch-external-process) bajo macOS.
 
 ### Carpeta Resources actual 
 
@@ -150,12 +150,12 @@ La carpeta Logs de la base, ubicada al mismo nivel del archivo de datos, central
 
 **Notas**: 
 
-* Una carpeta Logs adicional, ubicada en la carpeta de preferencias del usuario del sistema (Active 4D Folder), se utiliza para los archivos de registro de mantenimiento (compactar, verificar, reparar). Se recomienda llamar a [Get 4D file](get-4d-file.md)(archivo de registro de compactación), por ejemplo, cuando desee acceder a dichos archivos de registro. Esta carpeta de registros también se utiliza en los casos en que la carpeta de registros normales no se puede escribir.
+* Una carpeta Logs adicional, ubicada en la carpeta de preferencias del usuario del sistema (Active 4D Folder), se utiliza para los archivos de registro de mantenimiento (compactar, verificar, reparar). Se recomienda llamar a [Get 4D file](../commands/get-4d-file)(archivo de registro de compactación), por ejemplo, cuando desee acceder a dichos archivos de registro. Esta carpeta de registros también se utiliza en los casos en que la carpeta de registros normales no se puede escribir.
 * si la carpeta Logs no existe para la base, ejecutando el comando **Get 4D folder** con la constante Logs folder se provoca su creación.
 
 ### Carpeta raíz HTML 
 
-Carpeta raíz HTML actual de la base. La ruta de acceso devuelta se expresa con la sintaxis estándar de la plataforma actual. La carpeta raíz HTML es la carpeta en la cual el servidor web de 4D busca las páginas y archivos web solicitados. Por defecto, se llama **WebFolder** y se encuentra junto al archivo de estructura. Su ubicación puede definirse en la página Web/Configuración de las Preferencias o dinámicamente vía el comando [WEB SET ROOT FOLDER](web-set-root-folder.md).
+Carpeta raíz HTML actual de la base. La ruta de acceso devuelta se expresa con la sintaxis estándar de la plataforma actual. La carpeta raíz HTML es la carpeta en la cual el servidor web de 4D busca las páginas y archivos web solicitados. Por defecto, se llama **WebFolder** y se encuentra junto al archivo de estructura. Su ubicación puede definirse en la página Web/Configuración de las Preferencias o dinámicamente vía el comando [WEB SET ROOT FOLDER](../commands/web-set-root-folder).
 
 **Nota:** en Windows, en los proyectos cliente fusionados, la ubicación de esta carpeta se modifica si se utiliza la llave BuildApp *ShareLocalResourcesOnWindowsClient* .
 
@@ -181,7 +181,7 @@ La carpeta de la base de datos (Database folder y Database folder UNIX syntax) d
 
 ## Ejemplo 1 
 
-Durante el inicio de una base monousuario, usted quiere cargar (o crear) sus propios parámetros en un archivo ubicado en la carpeta 4D. Para hacer esto, en el [Método base On Startup](metodo-base-on-startup.md), puede escribir código similar a este:
+Durante el inicio de una base monousuario, usted quiere cargar (o crear) sus propios parámetros en un archivo ubicado en la carpeta 4D. Para hacer esto, en el [Método base On Startup](../commands/metodo-base-on-startup), puede escribir código similar a este:
 
 ```4d
  $vsPrefDocName:=Get 4D folder+"MyPrefs.prf" //Construir la ruta de acceso al archivo Preferencias
@@ -220,11 +220,11 @@ Si el parámetro *carpeta* no es válido o si la ruta de acceso devuelta está v
 
 ## Ver también 
 
-[COMPONENT LIST](component-list.md)  
-[System folder](system-folder.md)  
-[Temporary folder](temporary-folder.md)  
-[Test path name](test-path-name.md)  
-[WEB SET ROOT FOLDER](web-set-root-folder.md)  
+[COMPONENT LIST](../commands/component-list)  
+[System folder](../commands/system-folder)  
+[Temporary folder](../commands/temporary-folder)  
+[Test path name](../commands/test-path-name)  
+[WEB SET ROOT FOLDER](../commands/web-set-root-folder)  
 
 ## Propiedades
 

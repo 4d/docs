@@ -1,4 +1,4 @@
----
+﻿---
 id: pause-indexes
 title: PAUSE INDEXES
 slug: /commands/pause-indexes
@@ -33,14 +33,14 @@ Les index ne sont pas physiquement supprimés des données (fichier .4DIndx) et 
 
 Cette commande est principalement utile dans le contexte de l’importation ou la modification massive de données dans des tables comportant plusieurs index. 4D devant mettre à jour les index à chaque validation d’enregistrement, l’opération peut prendre beaucoup de temps. Désactiver les index au préalable permet d’accélérer significativement l’opération. 
 
-Pour réactiver les index à l’issue de l’opération, il suffit d’appeler la commande [RESUME INDEXES](resume-indexes.md) sur *laTable*. 
+Pour réactiver les index à l’issue de l’opération, il suffit d’appeler la commande [RESUME INDEXES](../commands/resume-indexes) sur *laTable*. 
 
-**Note :** Il est possible d’obtenir un résultat similaire en utilisant les commandes [DELETE INDEX](delete-index.md) et [CREATE INDEX](create-index.md), avec toutefois des différences notables :
+**Note :** Il est possible d’obtenir un résultat similaire en utilisant les commandes [DELETE INDEX](../commands/delete-index) et [CREATE INDEX](../commands/create-index), avec toutefois des différences notables :
 
-* il est nécessaire d’appeler [DELETE INDEX](delete-index.md) / [CREATE INDEX](create-index.md) pour chaque index de *laTable*.
-* l'appel des commandes [DELETE INDEX](delete-index.md) / [CREATE INDEX](create-index.md) modifie le numéro interne de l'index, ce qui n'est pas le cas avec **PAUSE INDEXES** / [RESUME INDEXES](resume-indexes.md). La modification du numéro d'index entraînera la réindexation automatique des données en cas de changement du jeu de données.
+* il est nécessaire d’appeler [DELETE INDEX](../commands/delete-index) / [CREATE INDEX](../commands/create-index) pour chaque index de *laTable*.
+* l'appel des commandes [DELETE INDEX](../commands/delete-index) / [CREATE INDEX](../commands/create-index) modifie le numéro interne de l'index, ce qui n'est pas le cas avec **PAUSE INDEXES** / [RESUME INDEXES](../commands/resume-indexes). La modification du numéro d'index entraînera la réindexation automatique des données en cas de changement du jeu de données.
 
-Si vous appelez la commande **PAUSE INDEXES** sur une table puis quittez la base sans que la commande [RESUME INDEXES](resume-indexes.md) ait été exécutée sur cette table, tous les index de la table seront automatiquement reconstruits au prochain démarrage de la base. 
+Si vous appelez la commande **PAUSE INDEXES** sur une table puis quittez la base sans que la commande [RESUME INDEXES](../commands/resume-indexes) ait été exécutée sur cette table, tous les index de la table seront automatiquement reconstruits au prochain démarrage de la base. 
 
 **Note :** Cette commande ne peut pas être exécutée depuis un 4D distant.
 
@@ -56,8 +56,8 @@ Exemple de méthode d’import massif de données :
 
 ## Voir aussi 
 
-[DELETE INDEX](delete-index.md)  
-[RESUME INDEXES](resume-indexes.md)  
+[DELETE INDEX](../commands/delete-index)  
+[RESUME INDEXES](../commands/resume-indexes)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: integer-to-blob
 title: INTEGER TO BLOB
 slug: /commands/integer-to-blob
@@ -121,13 +121,13 @@ MacintoshとPCプラットフォーム間でBLOBを交換する場合、この�
 
 ## 参照 
 
-[BLOB to integer](blob-to-integer.md)  
-[BLOB to longint](blob-to-longint.md)  
-[BLOB to real](blob-to-real.md)  
-[BLOB to text](blob-to-text.md)  
-[LONGINT TO BLOB](longint-to-blob.md)  
-[REAL TO BLOB](real-to-blob.md)  
-[TEXT TO BLOB](text-to-blob.md)  
+[BLOB to integer](../commands/blob-to-integer)  
+[BLOB to longint](../commands/blob-to-longint)  
+[BLOB to real](../commands/blob-to-real)  
+[BLOB to text](../commands/blob-to-text)  
+[LONGINT TO BLOB](../commands/longint-to-blob)  
+[REAL TO BLOB](../commands/real-to-blob)  
+[TEXT TO BLOB](../commands/text-to-blob)  
 
 ## プロパティ
 

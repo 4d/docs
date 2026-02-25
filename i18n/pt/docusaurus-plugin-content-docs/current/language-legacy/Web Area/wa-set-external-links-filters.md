@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-set-external-links-filters
 title: WA SET EXTERNAL LINKS FILTERS
 slug: /commands/wa-set-external-links-filters
@@ -42,7 +42,7 @@ Se houver uma contradição a nível da configuração (a mesma URL é ao mesmo 
   
 Para desativar o filtro das URL, chame o comando e passe os arrays vazio ou passe, respectivamente os valores "\*" e *True* nos últimos elementos dos arrays *arrFiltro* e *permitirArrRecusar*.  
   
-**Importante**: o filtro estabelecido pelo comando [WA SET URL FILTERS](wa-set-url-filters.md) é levado em consideração antes do comando WA SET EXTERNAL LINKS FILTERS. Isto significa que se um URL é recusado por um filtro do comando [WA SET URL FILTERS](wa-set-url-filters.md), não poderá ser aberto no navegador mesmo se for definido explicitamente pelo comando WA SET EXTERNAL LINKS FILTERS (ver exemplo 2).
+**Importante**: o filtro estabelecido pelo comando [WA SET URL FILTERS](../commands/wa-set-url-filters) é levado em consideração antes do comando WA SET EXTERNAL LINKS FILTERS. Isto significa que se um URL é recusado por um filtro do comando [WA SET URL FILTERS](../commands/wa-set-url-filters), não poderá ser aberto no navegador mesmo se for definido explicitamente pelo comando WA SET EXTERNAL LINKS FILTERS (ver exemplo 2).
 
 ## Exemplo 1 
 
@@ -83,8 +83,8 @@ Este exemplo combina os filtros de sites e de links externos:
 
 ## Ver também 
 
-[WA GET EXTERNAL LINKS FILTERS](wa-get-external-links-filters.md)  
-[WA SET URL FILTERS](wa-set-url-filters.md)  
+[WA GET EXTERNAL LINKS FILTERS](../commands/wa-get-external-links-filters)  
+[WA SET URL FILTERS](../commands/wa-set-url-filters)  
 
 ## Propriedades
 

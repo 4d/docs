@@ -1,4 +1,4 @@
----
+﻿---
 id: read-only
 title: READ ONLY
 slug: /commands/read-only
@@ -25,8 +25,8 @@ Vous pouvez utiliser **READ ONLY** lorsqu'il n'est pas utile de modifier les enr
 
 ## Voir aussi 
 
-[Read only state](read-only-state.md)  
-[READ WRITE](read-write.md)  
+[Read only state](../commands/read-only-state)  
+[READ WRITE](../commands/read-write)  
 *Verrouillage d'enregistrements*  
 
 ## Propriétés

@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-row-color
 title: LISTBOX SET ROW COLOR
 slug: /commands/listbox-set-row-color
@@ -47,11 +47,11 @@ En *fila*, pase el número de la fila en la que desea aplicar el nuevo color.
 
 **Nota:** El comando no tiene en cuenta ningún estado oculto/visible de las filas del listbox.
 
-En *color*, pase un valor de color RGB. Para obtener más información acerca de los colores RGB, consulte la descripción del comando [OBJECT SET RGB COLORS](object-set-rgb-colors.md). Si desea que la fila herede el conjunto de colores para el nivel más alto, usted puede pasar la constante`lk inherited` en el parámetro *color*.
+En *color*, pase un valor de color RGB. Para obtener más información acerca de los colores RGB, consulte la descripción del comando [OBJECT SET RGB COLORS](../commands/object-set-rgb-colors). Si desea que la fila herede el conjunto de colores para el nivel más alto, usted puede pasar la constante`lk inherited` en el parámetro *color*.
 
 En el parámetro *tipoColor*, pase las constantes `lk background color`  o `lk font color`  para indicar si desea aplicar el color para el fondo o para el color de fuente de la fila. Si omite este parámetro, el color se aplica para el color de fuente.
 
-Este comando modifica los valores que se encuentran en el array de colores que pueden haberse definido para la columna del listbox. Si estos arreglos no están ya definidos, el comando crea dinámicamente arrays que puede acceder mediante el comando [LISTBOX Get array](listbox-get-array.md).  
+Este comando modifica los valores que se encuentran en el array de colores que pueden haberse definido para la columna del listbox. Si estos arreglos no están ya definidos, el comando crea dinámicamente arrays que puede acceder mediante el comando [LISTBOX Get array](../commands/listbox-get-array).  
   
 Si los valores de color en conflicto se definen usando las propiedades para los listboxes o columnas del listbox, se aplica un orden de prioridad. Para obtener más información, consulte el manual de *Diseño*.
 
@@ -73,9 +73,9 @@ En un array de tipo list box, queremos establecer los colores de una fila y para
 ## Ver también 
 
 *Listbox*  
-[LISTBOX Get row color](listbox-get-row-color.md)  
-[LISTBOX Get row color as number](listbox-get-row-color-as-number.md)  
-[LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md)  
+[LISTBOX Get row color](../commands/listbox-get-row-color)  
+[LISTBOX Get row color as number](../commands/listbox-get-row-color-as-number)  
+[LISTBOX SET ROW FONT STYLE](../commands/listbox-set-row-font-style)  
 
 ## Propiedades
 

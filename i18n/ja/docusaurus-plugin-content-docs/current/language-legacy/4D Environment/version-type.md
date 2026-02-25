@@ -1,4 +1,4 @@
----
+﻿---
 id: version-type
 title: Version type
 slug: /commands/version-type
@@ -56,8 +56,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Application type](application-type.md)  
-[Application version](application-version.md)  
+[Application type](../commands/application-type)  
+[Application version](../commands/application-version)  
 
 ## プロパティ
 

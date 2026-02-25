@@ -1,4 +1,4 @@
----
+﻿---
 id: validate-password
 title: Validate password
 slug: /commands/validate-password
@@ -39,7 +39,7 @@ displayed_sidebar: docs
 * **True** を渡した場合、 *password* にはハッシュドパスワードが格納されていること(ダイジェストモード)を意味します。
 * **False** を渡すかこの引数を省略した場合、 *password* には標準テキストのパスワードが格納されていることを意味します。
 
-この引数はデータベース認証メソッド、特に [On REST Authentication データベースメソッド](on-rest-authentication-database-method.md) を使用しているときに有用です。
+この引数はデータベース認証メソッド、特に [On REST Authentication データベースメソッド](../commands/on-rest-authentication-database-method) を使用しているときに有用です。
 
 フラッディング ( ブルートフォース攻撃 ) 、言い換えれば複数のユーザ名とパスワードの組み合わせによる試みを防ぐために、コマンドは遅れて実行されます。その結果、このコマンドを4回呼び出す と、10秒間の遅延が発生します。この遅れは、ワークステーション全体を通して発生します。
 
@@ -63,7 +63,7 @@ displayed_sidebar: docs
 
 ## 例題 2 
 
-[On REST Authentication データベースメソッド](on-rest-authentication-database-method.md) において、接続リクエストを(データベースの4Dユーザーを使用して)テストしたい場合:
+[On REST Authentication データベースメソッド](../commands/on-rest-authentication-database-method) において、接続リクエストを(データベースの4Dユーザーを使用して)テストしたい場合:
 
 ```4d
  $0:=Validate password($1;$2;$3)
@@ -71,9 +71,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[GET USER PROPERTIES](get-user-properties.md)  
-[Set user properties](set-user-properties.md)  
-[WEB Validate digest](web-validate-digest.md)  
+[GET USER PROPERTIES](../commands/get-user-properties)  
+[Set user properties](../commands/set-user-properties)  
+[WEB Validate digest](../commands/web-validate-digest)  
 
 ## プロパティ
 

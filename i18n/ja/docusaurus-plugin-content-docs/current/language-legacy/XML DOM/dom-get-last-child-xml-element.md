@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-get-last-child-xml-element
 title: DOM Get last child XML element
 slug: /commands/dom-get-last-child-xml-element
@@ -54,7 +54,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[DOM Get first child XML element](dom-get-first-child-xml-element.md)  
+[DOM Get first child XML element](../commands/dom-get-first-child-xml-element)  
 
 ## プロパティ
 

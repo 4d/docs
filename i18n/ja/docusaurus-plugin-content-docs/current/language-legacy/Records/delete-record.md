@@ -1,4 +1,4 @@
----
+﻿---
 id: delete-record
 title: DELETE RECORD
 slug: /commands/delete-record
@@ -32,8 +32,8 @@ displayed_sidebar: docs
 
 **Note:**
 
-* DELETE RECORDコマンドの実行前に、カレントレコードがメモリ上からアンロードにされている場合 (例えば[UNLOAD RECORD](unload-record.md)コマンドの実行等)、削除実行後カレントセレクションは空になります。
-* DELETE RECORDコマンドは、テーブルが [READ ONLY](read-only.md) モードである場合には、削除しようとしているレコードがロックされているかどうかに関わらず、何もしません。
+* DELETE RECORDコマンドの実行前に、カレントレコードがメモリ上からアンロードにされている場合 (例えば[UNLOAD RECORD](../commands/unload-record)コマンドの実行等)、削除実行後カレントセレクションは空になります。
+* DELETE RECORDコマンドは、テーブルが [READ ONLY](../commands/read-only) モードである場合には、削除しようとしているレコードがロックされているかどうかに関わらず、何もしません。
 
 レコードの削除は、一度実行すると元に戻すことはできません(ただしトランザクション中に実行された場合を除きます。詳細は*トランザクションを使用する*を参照してください)。
 
@@ -53,7 +53,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Locked](locked.md)  
+[Locked](../commands/locked)  
 *トリガ*  
 
 ## プロパティ

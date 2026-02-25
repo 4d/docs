@@ -1,4 +1,4 @@
----
+﻿---
 id: soap-get-info
 title: SOAP Get info
 slug: /commands/soap-get-info
@@ -41,12 +41,12 @@ SOAPリクエストを処理する際、RPC引数のほかに、リクエスト�
 | SOAP method name  | 倍長整数 | 1 | 実行されようとしているWebサービスメソッド名 |
 | SOAP service name | 倍長整数 | 2 | メソッドが属しているWebサービスの名前    |
 
-**Note:** またセキュリティのため、4Dに送信されるWebサービスリクエストの最大サイズを設定できます。この設定は[SET DATABASE PARAMETER](set-database-parameter.md)コマンドで行います。
+**Note:** またセキュリティのため、4Dに送信されるWebサービスリクエストの最大サイズを設定できます。この設定は[SET DATABASE PARAMETER](../commands/set-database-parameter)コマンドで行います。
 
 ## 参照 
 
-[SET DATABASE PARAMETER](set-database-parameter.md)  
-[SOAP SEND FAULT](soap-send-fault.md)  
+[SET DATABASE PARAMETER](../commands/set-database-parameter)  
+[SOAP SEND FAULT](../commands/soap-send-fault)  
 
 ## プロパティ
 

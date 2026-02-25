@@ -1,4 +1,4 @@
----
+﻿---
 id: pasteboard-data-size
 title: Pasteboard data size
 slug: /commands/pasteboard-data-size
@@ -39,10 +39,10 @@ Passez dans *typeDonnées* une valeur définissant le type de données à tester
 
 Après avoir vérifié que le conteneur contient bien des données du type que vous voulez, vous pouvez les récupérer à l'aide d'une des commandes suivantes :
 
-* Si le conteneur contient du texte, vous pouvez l'extraire à l'aide de la commande [Get text from pasteboard](get-text-from-pasteboard.md), qui retourne une valeur texte. Sinon, vous pouvez utiliser la commande [GET PASTEBOARD DATA](get-pasteboard-data.md), qui retourne le texte dans un BLOB.
-* Si le conteneur contient une image, vous pouvez l'extraire à l'aide de la commande [GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md), qui retourne l'image dans un champ ou une variable. Sinon, vous pouvez utiliser la commande [GET PASTEBOARD DATA](get-pasteboard-data.md), qui retourne l'image dans un BLOB.
-* Si le conteneur contient un chemin d'accès de fichier, vous pouvez l'extraire à l'aide de la commande [Get file from pasteboard](get-file-from-pasteboard.md), qui retourne le chemin d'accès du fichier.
-* Pour tout type de données, vous pouvez utiliser la commande [GET PASTEBOARD DATA](get-pasteboard-data.md), qui retourne les données dans un BLOB.
+* Si le conteneur contient du texte, vous pouvez l'extraire à l'aide de la commande [Get text from pasteboard](../commands/get-text-from-pasteboard), qui retourne une valeur texte. Sinon, vous pouvez utiliser la commande [GET PASTEBOARD DATA](../commands/get-pasteboard-data), qui retourne le texte dans un BLOB.
+* Si le conteneur contient une image, vous pouvez l'extraire à l'aide de la commande [GET PICTURE FROM PASTEBOARD](../commands/get-picture-from-pasteboard), qui retourne l'image dans un champ ou une variable. Sinon, vous pouvez utiliser la commande [GET PASTEBOARD DATA](../commands/get-pasteboard-data), qui retourne l'image dans un BLOB.
+* Si le conteneur contient un chemin d'accès de fichier, vous pouvez l'extraire à l'aide de la commande [Get file from pasteboard](../commands/get-file-from-pasteboard), qui retourne le chemin d'accès du fichier.
+* Pour tout type de données, vous pouvez utiliser la commande [GET PASTEBOARD DATA](../commands/get-pasteboard-data), qui retourne les données dans un BLOB.
 
 ## Exemple 1 
 
@@ -99,14 +99,14 @@ Vous voulez déplacer des données en format privé entre divers objets de votre
 
 ## Exemple 4 
 
-Référez-vous à l'exemple de la commande [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md).
+Référez-vous à l'exemple de la commande [APPEND DATA TO PASTEBOARD](../commands/append-data-to-pasteboard).
 
 ## Voir aussi 
 
 *Conteneur de données*  
-[GET PASTEBOARD DATA](get-pasteboard-data.md)  
-[GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
-[Get text from pasteboard](get-text-from-pasteboard.md)  
+[GET PASTEBOARD DATA](../commands/get-pasteboard-data)  
+[GET PICTURE FROM PASTEBOARD](../commands/get-picture-from-pasteboard)  
+[Get text from pasteboard](../commands/get-text-from-pasteboard)  
 
 ## Propriétés
 

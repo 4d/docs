@@ -1,4 +1,4 @@
----
+﻿---
 id: save-related-one
 title: SAVE RELATED ONE
 slug: /commands/save-related-one
@@ -17,16 +17,16 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.SAVE RELATED ONE.Summary-->**SAVE RELATED ONE** sauvegarde l'enregistrement lié à *leChamp*.<!-- END REF--> Vous pouvez exécuter une commande **SAVE RELATED ONE** pour mettre à jour un enregistrement créé par [CREATE RELATED ONE](create-related-one.md), ou bien lorsque vous voulez sauvegarder des modifications apportées à un enregistrement chargé par [RELATE ONE](relate-one.md). 
+<!--REF #_command_.SAVE RELATED ONE.Summary-->**SAVE RELATED ONE** sauvegarde l'enregistrement lié à *leChamp*.<!-- END REF--> Vous pouvez exécuter une commande **SAVE RELATED ONE** pour mettre à jour un enregistrement créé par [CREATE RELATED ONE](../commands/create-related-one), ou bien lorsque vous voulez sauvegarder des modifications apportées à un enregistrement chargé par [RELATE ONE](../commands/relate-one). 
 
 **SAVE RELATED ONE** ne sauvegardera pas un enregistrement verrouillé. Lorsque vous appelez cette commande, vous devez tout d'abord vous assurer que l'enregistrement n'est pas verrouillé. S'il est verrouillé, la commande est ignorée, l'enregistrement n'est pas sauvegardé et aucune erreur ne vous est retournée. 
 
 ## Voir aussi 
 
-[CREATE RELATED ONE](create-related-one.md)  
-[Locked](locked.md)  
+[CREATE RELATED ONE](../commands/create-related-one)  
+[Locked](../commands/locked)  
 *Présentation des triggers*  
-[RELATE ONE](relate-one.md)  
+[RELATE ONE](../commands/relate-one)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: time-string
 title: Time string
 slug: /commands/time-string
@@ -37,7 +37,7 @@ L'exemple suivant affiche une boîte de dialogue d'alerte avec le message “468
 ## Voir aussi 
 
 [String](../commands/string)  
-[Time](time.md)  
+[Time](../commands/time)  
 
 ## Propriétés
 

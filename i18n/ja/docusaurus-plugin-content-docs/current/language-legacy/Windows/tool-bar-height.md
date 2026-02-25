@@ -1,4 +1,4 @@
----
+﻿---
 id: tool-bar-height
 title: Tool bar height
 slug: /commands/tool-bar-height
@@ -34,9 +34,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[HIDE TOOL BAR](hide-tool-bar.md)  
-[Menu bar height](menu-bar-height.md)  
-[SHOW TOOL BAR](show-tool-bar.md)  
+[HIDE TOOL BAR](../commands/hide-tool-bar)  
+[Menu bar height](../commands/menu-bar-height)  
+[SHOW TOOL BAR](../commands/show-tool-bar)  
 
 ## プロパティ
 

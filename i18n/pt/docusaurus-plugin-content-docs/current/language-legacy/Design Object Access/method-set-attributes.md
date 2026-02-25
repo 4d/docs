@@ -1,4 +1,4 @@
----
+﻿---
 id: method-set-attributes
 title: METHOD SET ATTRIBUTES
 slug: /commands/method-set-attributes
@@ -36,7 +36,7 @@ Em *caminho*, você pode passar por exemplo um texto que contém um caminho de m
   
 Em *atributos*, se passa um objeto ou um array de objetos (dependendo do tipo de parâmetro passado em *caminho*) que contém todos os atributos que você deseja definir para os métodos.  
   
-Os atributos de métodos devem ser definidos com os comandos [OB SET](ob-set.md) ou [OB SET ARRAY](ob-set-array.md), com valores True ou False para atributos booleano, ou valores específicos para atributos estendidos. Somente os atributos que estão presentes no parâmetro *atributos* são atualizados nos atributos dos métodos.  
+Os atributos de métodos devem ser definidos com os comandos [OB SET](../commands/ob-set) ou [OB SET ARRAY](../commands/ob-set-array), com valores True ou False para atributos booleano, ou valores específicos para atributos estendidos. Somente os atributos que estão presentes no parâmetro *atributos* são atualizados nos atributos dos métodos.  
   
 Se o comando for executado a partir de um componente, o padrão é aplicado aos métodos do componente. Se você passar o parâmetro *\**, ele acessa aos métodos do banco de dados local.  
   
@@ -71,8 +71,8 @@ Se você desejar modificar apenas um atributo:
 
 ## Ver também 
 
-[METHOD GET ATTRIBUTES](method-get-attributes.md)  
-[METHOD SET ATTRIBUTE](method-set-attribute.md)  
+[METHOD GET ATTRIBUTES](../commands/method-get-attributes)  
+[METHOD SET ATTRIBUTE](../commands/method-set-attribute)  
 
 ## Propriedades
 

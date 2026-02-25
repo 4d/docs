@@ -1,4 +1,4 @@
----
+﻿---
 id: backup-info
 title: BACKUP INFO
 slug: /commands/backup-info
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[RESTORE](restore.md)  
+[RESTORE](../commands/restore)  
 
 ## プロパティ
 

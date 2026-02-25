@@ -1,4 +1,4 @@
----
+﻿---
 id: volume-list
 title: VOLUME LIST
 slug: /commands/volume-list
@@ -48,9 +48,9 @@ A l'aide de la zone de défilement *ttVolumes*, vous voulez afficher la liste de
 
 ## Voir aussi 
 
-[DOCUMENT LIST](document-list.md)  
-[FOLDER LIST](folder-list.md)  
-[VOLUME ATTRIBUTES](volume-attributes.md)  
+[DOCUMENT LIST](../commands/document-list)  
+[FOLDER LIST](../commands/folder-list)  
+[VOLUME ATTRIBUTES](../commands/volume-attributes)  
 
 ## Propriétés
 

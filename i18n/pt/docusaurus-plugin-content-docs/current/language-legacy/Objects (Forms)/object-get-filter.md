@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-filter
 title: OBJECT Get filter
 slug: /commands/object-get-filter
@@ -35,7 +35,7 @@ Se passa o parâmetro opcional *\**, indica que o parâmetro objeto é um nome d
 
 ## Ver também 
 
-[OBJECT SET FILTER](object-set-filter.md)  
+[OBJECT SET FILTER](../commands/object-set-filter)  
 
 ## Propriedades
 

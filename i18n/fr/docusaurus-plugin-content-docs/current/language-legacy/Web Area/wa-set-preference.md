@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-set-preference
 title: WA SET PREFERENCE
 slug: /commands/wa-set-preference
@@ -64,7 +64,7 @@ Vous souhaitez autoriser le déposer d'URLs dans la zone Web 'myarea' :
 
 ## Voir aussi 
 
-[WA GET PREFERENCE](wa-get-preference.md)  
+[WA GET PREFERENCE](../commands/wa-get-preference)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: unload-record
 title: UNLOAD RECORD
 slug: /commands/unload-record
@@ -29,7 +29,7 @@ UNLOAD RECORDはメモリからレコードをアンロードしますが、そ�
 
 ## 参照 
 
-[LOAD RECORD](load-record.md)  
+[LOAD RECORD](../commands/load-record)  
 *レコードのロック*  
 
 ## プロパティ

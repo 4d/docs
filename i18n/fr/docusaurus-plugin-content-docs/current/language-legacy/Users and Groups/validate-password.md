@@ -1,4 +1,4 @@
----
+﻿---
 id: validate-password
 title: Validate password
 slug: /commands/validate-password
@@ -39,7 +39,7 @@ Le paramètre optionnel *digest* vous permet d’indiquer si le paramètre *motD
 * si vous passez **Vrai**, vous indiquez que le paramètre *motDePasse* contient un mot de passe sous forme hachée (mode digest),
 * si vous passez **Faux** ou omettez ce paramètre, vous indiquez que le paramètre *motDePasse* contient un mot de passe en clair.
 
-Ce paramètre est particulièrement utile dans le contexte de l’utilisation des méthodes base d'authentification, notamment [On REST Authentication database method](on-rest-authentication-database-method.md). 
+Ce paramètre est particulièrement utile dans le contexte de l’utilisation des méthodes base d'authentification, notamment [On REST Authentication database method](../commands/on-rest-authentication-database-method). 
 
 La commande est temporisée afin d’éviter des attaques par “force brute” (essais automatiques de multiples combinaisons de noms d’utilisateurs/mots de passe). Ainsi, au bout du quatrième appel à la commande, elle n’est exécutée qu’après 10 secondes d’attente. Cette temporisation est globale au poste de travail. 
 
@@ -63,7 +63,7 @@ L’exemple suivant vérifie que “Laurel” est le mot de passe de l’utilisa
 
 ## Exemple 2 
 
-Dans la [On REST Authentication database method](on-rest-authentication-database-method.md), vous souhaitez tester une requête de connexion (vous utilisez les utilisateurs 4D de la base). Il vous suffit d’écrire :
+Dans la [On REST Authentication database method](../commands/on-rest-authentication-database-method), vous souhaitez tester une requête de connexion (vous utilisez les utilisateurs 4D de la base). Il vous suffit d’écrire :
 
 ```4d
  $0:=Validate password($1;$2;$3)
@@ -71,9 +71,9 @@ Dans la [On REST Authentication database method](on-rest-authentication-database
 
 ## Voir aussi 
 
-[GET USER PROPERTIES](get-user-properties.md)  
-[Set user properties](set-user-properties.md)  
-[WEB Validate digest](web-validate-digest.md)  
+[GET USER PROPERTIES](../commands/get-user-properties)  
+[Set user properties](../commands/set-user-properties)  
+[WEB Validate digest](../commands/web-validate-digest)  
 
 ## Propriétés
 

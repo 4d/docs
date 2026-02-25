@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-report
 title: QR REPORT
 slug: /commands/qr-report
@@ -37,19 +37,19 @@ displayed_sidebar: docs
 **Notes:**
 
 * The editor does not appear if the *table* has been declared “Invisible.”
-* When the editor is called using the **QR REPORT** command, relations between tables keep their manual status, where applicable. This allows the developer to manage this status himself using the [SET AUTOMATIC RELATIONS](set-automatic-relations.md) and [SET FIELD RELATION](set-field-relation.md) command. However, keep in mind that automatic features are disabled when related tables are being viewed in a list form displayed using [DISPLAY SELECTION](display-selection.md), [MODIFY SELECTION](modify-selection.md), or a subform. See *Automatic and manual relations*.
-* The editor is called in an external window and it is not possible to use the [QR ON COMMAND](qr-on-command.md) command in this context. However, you can use the *methodName* parameter to execute custom code when an interface command is activated (see below).
+* When the editor is called using the **QR REPORT** command, relations between tables keep their manual status, where applicable. This allows the developer to manage this status himself using the [SET AUTOMATIC RELATIONS](../commands/set-automatic-relations) and [SET FIELD RELATION](../commands/set-field-relation) command. However, keep in mind that automatic features are disabled when related tables are being viewed in a list form displayed using [DISPLAY SELECTION](../commands/display-selection), [MODIFY SELECTION](../commands/modify-selection), or a subform. See *Automatic and manual relations*.
+* The editor is called in an external window and it is not possible to use the [QR ON COMMAND](../commands/qr-on-command) command in this context. However, you can use the *methodName* parameter to execute custom code when an interface command is activated (see below).
 
 The *document* parameter is a report document that was created with the Quick Report editor and saved on disk. The document stores the specifications of the report, not the records to be printed.   
 If an empty string ("") is specified for *document*, **QR REPORT** displays an Open File dialog box and the user can select the report to print.  
-If the *document* parameter specifies a document that does not exist (for example, pass [Char](char.md)**(1)** in *document*), the Quick Report editor is displayed.
+If the *document* parameter specifies a document that does not exist (for example, pass [Char](../commands/char)**(1)** in *document*), the Quick Report editor is displayed.
 
-The *methodName* parameter designates a 4D project method that will be executed each time a document management command of the Quick Report editor is called by a user click on a button. Using this parameter is equivalent to using [QR ON COMMAND](qr-on-command.md) in the context of the Quick Report editor window ([QR ON COMMAND](qr-on-command.md) only works within the context of an included area). For example, you can use this parameter to change the character set used by the quick report. The *methodName* method receives two parameters:  
+The *methodName* parameter designates a 4D project method that will be executed each time a document management command of the Quick Report editor is called by a user click on a button. Using this parameter is equivalent to using [QR ON COMMAND](../commands/qr-on-command) in the context of the Quick Report editor window ([QR ON COMMAND](../commands/qr-on-command) only works within the context of an included area). For example, you can use this parameter to change the character set used by the quick report. The *methodName* method receives two parameters:  
 
 | **Parameter** | **Type** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | ------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | $area            | Integer  | Area reference                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| $command            | Integer  | Number of the command selected. To compare with the following constants of the *QR Commands* theme (only listed events are supported): <table> <thead> <tr> <td>Constant</td> <td>Value</td> <td>Comment</td> </tr> </thead> <tbody> <tr> <td>qr cmd generate</td> <td>2008</td> <td>Use of command [QR RUN](qr-run.md) recommended</td> </tr><tr> <td>qr cmd open</td> <td>2001</td> <td></td> </tr><tr> <td>qr cmd page setup</td> <td>2006</td> <td></td> </tr><tr> <td>qr cmd print preview</td> <td>2007</td> <td></td> </tr><tr> <td>qr cmd save</td> <td>2002</td> <td></td> </tr><tr> <td>qr cmd save as</td> <td>2003</td> <td></td> </tr> </tbody> </table> |
+| $command            | Integer  | Number of the command selected. To compare with the following constants of the *QR Commands* theme (only listed events are supported): <table> <thead> <tr> <td>Constant</td> <td>Value</td> <td>Comment</td> </tr> </thead> <tbody> <tr> <td>qr cmd generate</td> <td>2008</td> <td>Use of command [QR RUN](../commands/qr-run) recommended</td> </tr><tr> <td>qr cmd open</td> <td>2001</td> <td></td> </tr><tr> <td>qr cmd page setup</td> <td>2006</td> <td></td> </tr><tr> <td>qr cmd print preview</td> <td>2007</td> <td></td> </tr><tr> <td>qr cmd save</td> <td>2002</td> <td></td> </tr><tr> <td>qr cmd save as</td> <td>2003</td> <td></td> </tr> </tbody> </table> |
 
 **Note:** If you want to compile your database, you must declare the $area et $command parameters explicitly as longints, even if you do not use them.
 
@@ -106,7 +106,7 @@ The following example lets the user query the \[People\] table, and then display
 
 ## Example 4 
 
-Refer to the example of the [SET FIELD RELATION](set-field-relation.md) command. 
+Refer to the example of the [SET FIELD RELATION](../commands/set-field-relation) command. 
 
 ## Example 5 
 
@@ -142,8 +142,8 @@ The myCallbackMeth method converts the report when it is generated:
 
 ## See also 
 
-[PRINT LABEL](print-label.md)  
-[PRINT SELECTION](print-selection.md)  
+[PRINT LABEL](../commands/print-label)  
+[PRINT SELECTION](../commands/print-selection)  
 [SET ALLOWED METHODS](../commands/set-allowed-methods)  
 
 ## Properties

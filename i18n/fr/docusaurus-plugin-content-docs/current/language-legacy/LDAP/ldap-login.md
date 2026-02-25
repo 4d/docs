@@ -1,4 +1,4 @@
----
+﻿---
 id: ldap-login
 title: LDAP LOGIN
 slug: /commands/ldap-login
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.LDAP LOGIN.Summary-->La commande **LDAP LOGIN** ouvre une connexion en lecture seule sur le serveur LDAP désigné par le paramètre *url* avec les identifiants *login* et *motDePasse* fournis.<!-- END REF--> Si elle est acceptée par le serveur, cette connexion sera utilisée pour toutes les recherches LDAP effectuées par la suite dans le process courant, jusqu'à ce que la commande [LDAP LOGOUT](ldap-logout.md) soit exécutée (ou que le process soit terminé). 
+<!--REF #_command_.LDAP LOGIN.Summary-->La commande **LDAP LOGIN** ouvre une connexion en lecture seule sur le serveur LDAP désigné par le paramètre *url* avec les identifiants *login* et *motDePasse* fournis.<!-- END REF--> Si elle est acceptée par le serveur, cette connexion sera utilisée pour toutes les recherches LDAP effectuées par la suite dans le process courant, jusqu'à ce que la commande [LDAP LOGOUT](../commands/ldap-logout) soit exécutée (ou que le process soit terminé). 
 
 Dans *url*, passez l'URL complet du serveur LDAP auquel se connecter, incluant le *scheme* et le port (389 by default). Ce paramètre doit être conforme à la [rfc2255](https://www.ietf.org/rfc/rfc2255.txt).   
 Vous pouvez ouvrir une connexion sécurisée via TLS en passant un *url* qui débute par "ldaps" et qui utilise un numéro de port spécifique (par exemple "ldaps://svr.ldap.acme.com:1389"). Le serveur LDAP doit généralement disposer d'un certificat SSL (c'est le cas pour MS Active Directory). Il est fortement recommandé d'utiliser une connexion TLS lorsque le mot de passe est transmis en texte brut (voir ci-dessous).
@@ -62,7 +62,7 @@ Par défaut, le *motDePasse* est transmis en digest MD5\. Passez LDAP password p
 
 Si les paramètres de connexion sont valides, une connexion au serveur LDAP est ouverte dans le process 4D. Vous pouvez alors rechercher et récupérer des informations à l'aide des commandes LDAP.
 
-N'oubliez pas d'appeler la commande [LDAP LOGOUT](ldap-logout.md) lorsque la connexion au serveur LDAP n'est plus nécessaire. 
+N'oubliez pas d'appeler la commande [LDAP LOGOUT](../commands/ldap-logout) lorsque la connexion au serveur LDAP n'est plus nécessaire. 
 
 ## Exemple 1 
 
@@ -106,7 +106,7 @@ Cet exemple tente de se connecter à une application :
 ## Voir aussi 
 
 *LDAP*  
-[LDAP LOGOUT](ldap-logout.md)  
+[LDAP LOGOUT](../commands/ldap-logout)  
 
 ## Propriétés
 

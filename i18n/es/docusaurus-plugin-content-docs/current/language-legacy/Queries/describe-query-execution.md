@@ -1,4 +1,4 @@
----
+﻿---
 id: describe-query-execution
 title: DESCRIBE QUERY EXECUTION
 slug: /commands/describe-query-execution
@@ -27,14 +27,14 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.DESCRIBE QUERY EXECUTION.Summary-->El comando DESCRIBE QUERY EXECUTION permite activar o desactivar el modo de análisis de la ejecución de búsquedas para el proceso actual.<!-- END REF--> El comando funciona únicamente en el contexto de los comandos de búsqueda del lenguaje 4D tal como [QUERY](query.md). 
+<!--REF #_command_.DESCRIBE QUERY EXECUTION.Summary-->El comando DESCRIBE QUERY EXECUTION permite activar o desactivar el modo de análisis de la ejecución de búsquedas para el proceso actual.<!-- END REF--> El comando funciona únicamente en el contexto de los comandos de búsqueda del lenguaje 4D tal como [QUERY](../commands/query). 
 
 La llamada del comando con el parámetro *estado* en [True](true.md "True") activa el modo del análisis de búsquedas. En este modo, el motor de 4D registra internamente dos series de informaciones específicas para cada búsqueda posterior efectuada sobre los datos:
 
 * Una descripción interna detallada de la búsqueda justo antes de su ejecución, en otras palabras, la búsqueda previa (el plan de búsqueda),
 * Una descripción interna detallada de la búsqueda que se ejecutó realmente (la ruta de búsqueda).
 
-La información registrada incluye el tipo de búsqueda (indexada, secuencial), el número de registro encontrados y el tiempo necesario para cada criterio de búsqueda a ejecutar. Puede leer esta información utilizando los comandos [Last query plan](last-query-plan.md) y [Last query path](last-query-path.md).
+La información registrada incluye el tipo de búsqueda (indexada, secuencial), el número de registro encontrados y el tiempo necesario para cada criterio de búsqueda a ejecutar. Puede leer esta información utilizando los comandos [Last query plan](../commands/last-query-plan) y [Last query path](../commands/last-query-path).
 
 Por lo general, la descripción del plan de una búsqueda y su ruta son idénticos, pero podrían eventualmente ser diferentes porque 4D podría implementar optimizaciones dinámicas durante la ejecución de la búsqueda para mejorar el rendimiento. Por ejemplo, una búsqueda índexada puede convertirse dinámicamente en una búsqueda secuencial si el motor 4D estima que sería más rápida, este es el caso, cuando el número de registros en los cuales se efectúa la búsqueda es bajo.
 
@@ -77,8 +77,8 @@ $vResultPath :
 
 ## Ver también 
 
-[Last query path](last-query-path.md)  
-[Last query plan](last-query-plan.md)  
+[Last query path](../commands/last-query-path)  
+[Last query plan](../commands/last-query-plan)  
 
 ## Propiedades
 

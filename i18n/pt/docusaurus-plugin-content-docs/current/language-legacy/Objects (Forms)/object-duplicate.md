@@ -1,4 +1,4 @@
----
+﻿---
 id: object-duplicate
 title: OBJECT DUPLICATE
 slug: /commands/object-duplicate
@@ -66,12 +66,12 @@ Se o tipo da variável não é compatível com o objeto, o comando não faz nada
 
 Utilize o parâmetro *relacionadoA* em dois casos:
 
-* atualizar a ordem de entrada: neste caso, em *relacionadoA*, passe o nome do objeto editável localizado logo antes do objeto duplicado. Se quer que o novo objeto se converta no primeiro objeto na ordem de entrada da página, passe a constante Object First in entry order (ver o comando [OBJECT Get pointer](object-get-pointer.md)).
+* atualizar a ordem de entrada: neste caso, em *relacionadoA*, passe o nome do objeto editável localizado logo antes do objeto duplicado. Se quer que o novo objeto se converta no primeiro objeto na ordem de entrada da página, passe a constante Object First in entry order (ver o comando [OBJECT Get pointer](../commands/object-get-pointer)).
 * associação com um grupo de botões opção: os botões opção funcionam de maneira coordenada quando estão agrupados. Se o objeto duplicado for um botão de opção, em *relacionadoA* passe o nome de um botão opção do grupo ao qual associar o novo objeto.
 
 Se omite este parâmetro ou passa uma string vazia, o novo objeto é convertido no último objeto editável da página do formulário. No caso de um botão de opção, o objeto se associa ao grupo do botão fonte. 
 
-O novo objeto pode ser movido e redimensionado através dos parâmetros *moveH*, *moveV*, *redimH* e *redimV*. Como para o comando [OBJECT MOVE](object-move.md), o sentido de deslocamento ou redimensionamento é definido pelo signo dos valores passados nos parâmetros *moveH* e *moveV*:
+O novo objeto pode ser movido e redimensionado através dos parâmetros *moveH*, *moveV*, *redimH* e *redimV*. Como para o comando [OBJECT MOVE](../commands/object-move), o sentido de deslocamento ou redimensionamento é definido pelo signo dos valores passados nos parâmetros *moveH* e *moveV*:
 * Se o valor é positivo, o deslocamento ou redimensionamento é efetuado respectivamente para a direita ou para baixo.
 * Se o valor é negativo, el movimento ou redimensionamento é efetuado respectivamente para a esquerda ou para cima.
 
@@ -109,8 +109,8 @@ Criação de um novo botão opção "bRadio6" baseado no botão opção existent
 
 ## Ver também 
 
-[OBJECT Get pointer](object-get-pointer.md)  
-[OBJECT MOVE](object-move.md)  
+[OBJECT Get pointer](../commands/object-get-pointer)  
+[OBJECT MOVE](../commands/object-move)  
 *Objetos de formulário (Acesso)*  
 
 ## Propriedades

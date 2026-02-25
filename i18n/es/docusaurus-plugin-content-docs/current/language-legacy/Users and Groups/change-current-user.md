@@ -1,4 +1,4 @@
----
+﻿---
 id: change-current-user
 title: CHANGE CURRENT USER
 slug: /commands/change-current-user
@@ -34,15 +34,15 @@ displayed_sidebar: docs
 **Notas:** 
 
 * este comando no tiene efecto en bases proyecto abiertas en modo mono usuario.
-* si se definió un alias para el usuario actual con el comando [SET USER ALIAS](set-user-alias.md), se restablece mediante la llamada del comando **CHANGE CURRENT USER**.
+* si se definió un alias para el usuario actual con el comando [SET USER ALIAS](../commands/set-user-alias), se restablece mediante la llamada del comando **CHANGE CURRENT USER**.
 
 Si el comando **CHANGE CURRENT USER** se ejecuta sin parámetros, se muestra la caja de diálogo de identificación del usuario de la base. El usuario debe entonces introducir o seleccionar un nombre y contraseña válidos para entrar a la base. El contenido de la caja de diálogo de conexión depende de las opciones definidas en la página **Seguridad** de las Preferencias de la base.
 
 Igualmente puede pasar los parámetros opcionales *usuario* y *contraseña* para especificar por programación la nueva cuenta a utilizar.
 
-Pase en el parámetro *usuario* el nombre o el número de referencia única (*refUsuario*) de la cuenta a utilizar. Los nombres y los números de usuario se pueden obtener utilizando el comando [GET USER LIST](get-user-list.md).
+Pase en el parámetro *usuario* el nombre o el número de referencia única (*refUsuario*) de la cuenta a utilizar. Los nombres y los números de usuario se pueden obtener utilizando el comando [GET USER LIST](../commands/get-user-list).
 
-Si la cuenta de usuario designada no existe o fue borrada, se genera el error -9979\. Puede interceptar este error con el método de gestión de errores instalado por el comando [ON ERR CALL](on-err-call.md). De lo contrario, puede llamar la función [Is user deleted](is-user-deleted.md) para probar la cuenta de usuario antes de llamar este comando.
+Si la cuenta de usuario designada no existe o fue borrada, se genera el error -9979\. Puede interceptar este error con el método de gestión de errores instalado por el comando [ON ERR CALL](../commands/on-err-call). De lo contrario, puede llamar la función [Is user deleted](../commands/is-user-deleted) para probar la cuenta de usuario antes de llamar este comando.
 
 Pase en el parámetro *contraseña* la contraseña no encriptada de la cuenta de usuario. Si la contraseña no corresponde con el usuario, el comando devolverá el mensaje de error -9978 y no hará nada.
 
@@ -82,8 +82,8 @@ El siguiente ejemplo muestra la caja de diálogo de conexión:
 
 ## Ver también 
 
-[CHANGE PASSWORD](change-password.md)  
-[SET USER ALIAS](set-user-alias.md)  
+[CHANGE PASSWORD](../commands/change-password)  
+[SET USER ALIAS](../commands/set-user-alias)  
 
 ## Propiedades
 

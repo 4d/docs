@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-info-row
 title: QR SET INFO ROW
 slug: /commands/qr-set-info-row
@@ -60,9 +60,9 @@ The following statement hides the detail row:
 
 ## See also 
 
-[QR GET INFO COLUMN](qr-get-info-column.md)  
-[QR Get info row](qr-get-info-row.md)  
-[QR SET INFO COLUMN](qr-set-info-column.md)  
+[QR GET INFO COLUMN](../commands/qr-get-info-column)  
+[QR Get info row](../commands/qr-get-info-row)  
+[QR SET INFO COLUMN](../commands/qr-set-info-column)  
 
 ## Properties
 

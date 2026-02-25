@@ -1,4 +1,4 @@
----
+﻿---
 id: picture-codec-list
 title: PICTURE CODEC LIST
 slug: /commands/picture-codec-list
@@ -40,12 +40,12 @@ Codec IDは以下の異なるフォーマットで*codecArray* 配列に返さ�
 
 コマンドから返されるフォーマットは、CodecがOSレベルに記録された方法に基づきます。オプションの*namesArray* 配列を使用してそれぞれのCodecの名称を取得できます。この名称はIDよりも明確です。この配列は例えば利用可能なCodecのメニューリストを作成するために使用できます。
 
-*\** 引数を渡さないとデフォルトでコマンドはピクチャをエンコード (書き込み) するために使用できるCODECのみを返します。これらのIDはピクチャ書き出しコマンド [WRITE PICTURE FILE](write-picture-file.md) や [PICTURE TO BLOB](picture-to-blob.md) の*format* 引数で使用できます。  
+*\** 引数を渡さないとデフォルトでコマンドはピクチャをエンコード (書き込み) するために使用できるCODECのみを返します。これらのIDはピクチャ書き出しコマンド [WRITE PICTURE FILE](../commands/write-picture-file) や [PICTURE TO BLOB](../commands/picture-to-blob) の*format* 引数で使用できます。  
 *\** 引数を渡すと、コマンドはピクチャのデコード (読み込み) に使用するCODECも返します。2つのリストは排他的ではありません。特定の読み込みおよび書き込みCODECは同じです。ピクチャのエンコードを意図 するCODECは通常デコードに使用されます。他方デコード用のCODECは必ずしもエンコードに使用できるとは限りません。例えば".jpg" CODECは両方のリストにありますが、".xbmp"CODECは読み込み (デコード) CODECにしかありません。
 
 ## 参照 
 
-[Is picture file](is-picture-file.md)  
+[Is picture file](../commands/is-picture-file)  
 *ピクチャ*  
 
 ## プロパティ

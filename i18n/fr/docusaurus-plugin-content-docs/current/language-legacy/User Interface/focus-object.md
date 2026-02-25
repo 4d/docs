@@ -1,4 +1,4 @@
----
+﻿---
 id: focus-object
 title: Focus object
 slug: /commands/focus-object
@@ -28,11 +28,11 @@ displayed_sidebar: docs
 
 ## Note de compatibilité 
 
-<!--REF #_command_.Focus object.Summary-->Cette commande est conservée pour des raisons de compatibilité uniquement.<!-- END REF--> A compter de la version 12 de 4D, il est conseillé d'utiliser la commande [OBJECT Get pointer](object-get-pointer.md).
+<!--REF #_command_.Focus object.Summary-->Cette commande est conservée pour des raisons de compatibilité uniquement.<!-- END REF--> A compter de la version 12 de 4D, il est conseillé d'utiliser la commande [OBJECT Get pointer](../commands/object-get-pointer).
 
 ## Description 
 
-**Focus object** retourne un pointeur vers l’objet ayant le focus dans le formulaire courant. Si aucun objet n’a le focus, la commande retourne [Is nil pointer](is-nil-pointer.md). Vous pouvez utiliser **Focus object** pour effectuer une action dans un formulaire sans savoir quel objet est actuellement sélectionné. N'oubliez pas auparavant de tester si l'objet est du type voulu, à l'aide de la fonction [Type](type.md). 
+**Focus object** retourne un pointeur vers l’objet ayant le focus dans le formulaire courant. Si aucun objet n’a le focus, la commande retourne [Is nil pointer](../commands/is-nil-pointer). Vous pouvez utiliser **Focus object** pour effectuer une action dans un formulaire sans savoir quel objet est actuellement sélectionné. N'oubliez pas auparavant de tester si l'objet est du type voulu, à l'aide de la fonction [Type](../commands/type). 
 
 **Note :** Lorsqu’elle est utilisée avec une list box, la fonction **Focus object** retourne un pointeur vers la list box ou la colonne de la list box en fonction du contexte. Pour plus d'informations, reportez-vous à la section *Gestion programmée des objets de type List box*. 
 
@@ -57,7 +57,7 @@ L'exemple suivant est une méthode objet pour un bouton. Cette méthode passe le
 
 ## Voir aussi 
 
-[OBJECT Get pointer](object-get-pointer.md)  
+[OBJECT Get pointer](../commands/object-get-pointer)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: show-tool-bar
 title: SHOW TOOL BAR
 slug: /commands/show-tool-bar
@@ -34,11 +34,11 @@ If a toolbar window has been created by the [Open form window](../commands/open-
 
 ## Example 
 
-Refer to the example of the [HIDE TOOL BAR](hide-tool-bar.md) command.
+Refer to the example of the [HIDE TOOL BAR](../commands/hide-tool-bar) command.
 
 ## See also 
 
-[HIDE TOOL BAR](hide-tool-bar.md)  
+[HIDE TOOL BAR](../commands/hide-tool-bar)  
 
 ## Properties
 

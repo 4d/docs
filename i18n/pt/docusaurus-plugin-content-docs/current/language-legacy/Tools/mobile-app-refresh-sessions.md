@@ -1,4 +1,4 @@
----
+﻿---
 id: mobile-app-refresh-sessions
 title: MOBILE APP REFRESH SESSIONS
 slug: /commands/mobile-app-refresh-sessions
@@ -34,7 +34,7 @@ O comando verifica o cumprimento de cada arquivo de sessão na pasta MobileApps 
 
 Se um arquivo de sessão não for válido ou tiver sido eliminado, a sessão correspondente é eliminada da memória.
 
-O comando pode devolver um dos erros abaixo, que pode ser manejado através dos comandos [ON ERR CALL](on-err-call.md) e [Last errors](../commands/last-errors) :
+O comando pode devolver um dos erros abaixo, que pode ser manejado através dos comandos [ON ERR CALL](../commands/on-err-call) e [Last errors](../commands/last-errors) :
 
 | **Nome do componente** | **Código de erro** | **Descrição**                                               |
 | ---------------------- | ------------------ | ----------------------------------------------------------- |
@@ -56,7 +56,7 @@ Se quiser resetar todas as sessões atuais para todas as aplicações móveis:
 
 ## Ver também 
 
-[On Mobile App Authentication database method](on-mobile-app-authentication-database-method.md)  
+[On Mobile App Authentication database method](../commands/on-mobile-app-authentication-database-method)  
 
 ## Propriedades
 

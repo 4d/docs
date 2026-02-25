@@ -1,4 +1,4 @@
----
+﻿---
 id: last-table-number
 title: Last table number
 slug: /commands/last-table-number
@@ -18,7 +18,7 @@ displayed_sidebar: docs
 #### Description 
 
 <!--REF #_command_.Last table number.Summary-->**Last table number** retourne le numéro de table le plus élevé parmi les tables de la base.<!-- END REF-->   
-Les tables sont numérotées dans l’ordre dans lequel elles ont été créées. Si aucune table n’a été supprimée dans la base, cette commande retourne donc le nombre de tables présentes dans la base. Dans le cadre de boucles itératives sur les numéros de tables de la base, vous devez utiliser la commande [Is table number valid](is-table-number-valid.md) afin de vérifier que la table n’a pas été supprimée.
+Les tables sont numérotées dans l’ordre dans lequel elles ont été créées. Si aucune table n’a été supprimée dans la base, cette commande retourne donc le nombre de tables présentes dans la base. Dans le cadre de boucles itératives sur les numéros de tables de la base, vous devez utiliser la commande [Is table number valid](../commands/is-table-number-valid) afin de vérifier que la table n’a pas été supprimée.
 
 #### Exemple 
 
@@ -39,9 +39,9 @@ L’exemple suivant initialise les éléments du tableau tabTables. Ce tableau p
 
 #### Voir aussi 
 
-[Last field number](last-field-number.md)  
-[Is table number valid](is-table-number-valid.md)  
-[Table name](table-name.md)  
+[Last field number](../commands/last-field-number)  
+[Is table number valid](../commands/is-table-number-valid)  
+[Table name](../commands/table-name)  
 
 #### Propriétés
 

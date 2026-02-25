@@ -1,4 +1,4 @@
----
+﻿---
 id: blob-to-picture
 title: BLOB TO PICTURE
 slug: /commands/blob-to-picture
@@ -32,9 +32,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.BLOB TO PICTURE.Summary-->BLOB TO PICTURE コマンドは、元のフォーマットに関わらず、BLOBに格納されたピクチャを4Dのピクチャ変数やフィールドに挿入します。<!-- END REF-->
 
-このコマンドは [READ PICTURE FILE](read-picture-file.md)コマンドと同様ですが、ファイルではなくBLOBに対して適用されます。このコマンドを使用すると、ネイティブのフォーマットでBLOBに保存されているピクチャを表示することができます。ピクチャのBLOBへのロードは、例えば [DOCUMENT TO BLOB](document-to-blob.md) あるいは [PICTURE TO BLOB](picture-to-blob.md) コマンドを使用して行うことができます。
+このコマンドは [READ PICTURE FILE](../commands/read-picture-file)コマンドと同様ですが、ファイルではなくBLOBに対して適用されます。このコマンドを使用すると、ネイティブのフォーマットでBLOBに保存されているピクチャを表示することができます。ピクチャのBLOBへのロードは、例えば [DOCUMENT TO BLOB](../commands/document-to-blob) あるいは [PICTURE TO BLOB](../commands/picture-to-blob) コマンドを使用して行うことができます。
 
-*pictureBlob*引数には、ピクチャを納めたBLOBタイプの変数やフィールドを渡します。このピクチャのフォーマットは4Dがネイティブにサポートされるものであればいずれの形式でも構いません。 [PICTURE CODEC LIST](picture-codec-list.md) コマンドを使用すると、使用可能なフォーマットのリストを取得できます。任意の*codec* 引数を渡すと、4Dはこの引数で指定された値を使用してBLOBをデコードします (この3番目の引数を使用した特別な機能については後述の説明を参照)。
+*pictureBlob*引数には、ピクチャを納めたBLOBタイプの変数やフィールドを渡します。このピクチャのフォーマットは4Dがネイティブにサポートされるものであればいずれの形式でも構いません。 [PICTURE CODEC LIST](../commands/picture-codec-list) コマンドを使用すると、使用可能なフォーマットのリストを取得できます。任意の*codec* 引数を渡すと、4Dはこの引数で指定された値を使用してBLOBをデコードします (この3番目の引数を使用した特別な機能については後述の説明を参照)。
 
 *picture* 引数にはピクチャを表示する4Dピクチャフィールドまたは変数を渡します。
 
@@ -53,7 +53,7 @@ displayed_sidebar: docs
 
 こ れらのメカニズムの実装は特に、ピクチャ配列を使用したBLOB配列の作成を可能にします。配列は全体がメモリにロードされるため、このメカニズムは注意 して使用されなければなりません。大きなサイズのBLOBで作業を行うと、アプリケーションの動作に影響を与えることがあります。
 
-**Note:** [VARIABLE TO BLOB](variable-to-blob.md) コマンドで作成されたBLOBは自動で管理されます。BLOBは署名されるため、カプセル化するためにcodecを渡す必要はありません。この場合、反対の操作にはcodec IDとして".4DVarBlob"を [PICTURE TO BLOB](picture-to-blob.md) コマンドに渡します。  
+**Note:** [VARIABLE TO BLOB](../commands/variable-to-blob) コマンドで作成されたBLOBは自動で管理されます。BLOBは署名されるため、カプセル化するためにcodecを渡す必要はありません。この場合、反対の操作にはcodec IDとして".4DVarBlob"を [PICTURE TO BLOB](../commands/picture-to-blob) コマンドに渡します。  
 
 ## システム変数およびセット 
 
@@ -61,9 +61,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[PICTURE CODEC LIST](picture-codec-list.md)  
-[PICTURE TO BLOB](picture-to-blob.md)  
-[READ PICTURE FILE](read-picture-file.md)  
+[PICTURE CODEC LIST](../commands/picture-codec-list)  
+[PICTURE TO BLOB](../commands/picture-to-blob)  
+[READ PICTURE FILE](../commands/read-picture-file)  
 
 ## プロパティ
 

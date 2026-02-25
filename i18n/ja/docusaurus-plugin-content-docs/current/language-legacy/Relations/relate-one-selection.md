@@ -1,4 +1,4 @@
----
+﻿---
 id: relate-one-selection
 title: RELATE ONE SELECTION
 slug: /commands/relate-one-selection
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 このコマンドは*manyTable*から*oneTable*へのリレートがある場合にのみ使用できます。**RELATE ONE SELECTION**はリレートの複数レベルを対象に動作できます。*manyTable*と*oneTable*の間には複数のリレートテーブルがある場合があります。これらのリレートは、マニュアルリレートまたは自動リレートのどちらでも動作します。
 
-**RELATE ONE SELECTION**は開始テーブルからリレート先テーブルまで設定されているリレーションパスのうち、最も短いものを使用します。同じサイズのパスが存在し、使用されたパスをコントロールする必要がある場合には、[SET FIELD RELATION](set-field-relation.md) コマンドの使用も検討してください。
+**RELATE ONE SELECTION**は開始テーブルからリレート先テーブルまで設定されているリレーションパスのうち、最も短いものを使用します。同じサイズのパスが存在し、使用されたパスをコントロールする必要がある場合には、[SET FIELD RELATION](../commands/set-field-relation) コマンドの使用も検討してください。
 
 ## 例題 
 
@@ -66,9 +66,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[QUERY](query.md)  
-[RELATE MANY SELECTION](relate-many-selection.md)  
-[RELATE ONE](relate-one.md)  
+[QUERY](../commands/query)  
+[RELATE MANY SELECTION](../commands/relate-many-selection)  
+[RELATE ONE](../commands/relate-one)  
 *セット*  
 
 ## プロパティ

@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-get-data-source-list
 title: SQL GET DATA SOURCE LIST
 slug: /commands/sql-get-data-source-list
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL GET DATA SOURCE LIST.Summary-->O comando SQL GET DATA SOURCE LIST retorna nos arrays *arrayNomesFontes* e *arrayDrivers*, os nomes e drivers das fontes de dados de tipo *tipoFonte* definidas no administrador ODBC do Sistema operativo.<!-- END REF-->  
   
-4D permite que se conecte diretamente através da linguagem a uma fonte de dados ODBC externa e executar pesquisas SQL dentro de uma estrutura **Begin SQL/End SQ**L. Este princípio funciona desta forma: o comando SQL GET DATA SOURCE LIST permite obter a lista de fontes de dados presentes na máquina. O comando [SQL LOGIN](sql-login.md) permite determinar a fonte a utilizar. Depois pode executar as pesquisas SQL utilizando uma estrutura **Begin SQL/End SQL** na fonte “atual”. Para realizar novas pesquisas utilizando novamente o motor interno de 4D, simplesmente passe o comando [SQL LOGOUT](sql-logout.md). Para maior informação sobre os comandos SQL no editor de métodos, consulte *Manual de SQL* no manual 4D SQL.  
+4D permite que se conecte diretamente através da linguagem a uma fonte de dados ODBC externa e executar pesquisas SQL dentro de uma estrutura **Begin SQL/End SQ**L. Este princípio funciona desta forma: o comando SQL GET DATA SOURCE LIST permite obter a lista de fontes de dados presentes na máquina. O comando [SQL LOGIN](../commands/sql-login) permite determinar a fonte a utilizar. Depois pode executar as pesquisas SQL utilizando uma estrutura **Begin SQL/End SQL** na fonte “atual”. Para realizar novas pesquisas utilizando novamente o motor interno de 4D, simplesmente passe o comando [SQL LOGOUT](../commands/sql-logout). Para maior informação sobre os comandos SQL no editor de métodos, consulte *Manual de SQL* no manual 4D SQL.  
   
 Em *tipoFonte*, passe o tipo de fonte de dados que deseja obter. Pode utilizar uma das seguintes constantes do tema “SQL”, encontradas no tema “*SQL*”:  
   
@@ -64,9 +64,9 @@ Se o comando for executado corretamente, a variável Sistema OK assume o valor 1
 
 ## Ver também 
 
-[SQL Get current data source](sql-get-current-data-source.md)  
-[SQL LOGIN](sql-login.md)  
-[SQL LOGOUT](sql-logout.md)  
+[SQL Get current data source](../commands/sql-get-current-data-source)  
+[SQL LOGIN](../commands/sql-login)  
+[SQL LOGOUT](../commands/sql-logout)  
 
 ## Propriedades
 

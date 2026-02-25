@@ -1,4 +1,4 @@
----
+﻿---
 id: all-records
 title: ALL RECORDS
 slug: /commands/all-records
@@ -30,12 +30,12 @@ O exemplo a seguir mostra todos os registros da tabela \[Pessoas\]:
 
 ## Ver também 
 
-[DISPLAY SELECTION](display-selection.md)  
-[MODIFY SELECTION](modify-selection.md)  
-[ORDER BY](order-by.md)  
-[QUERY](query.md)  
-[Records in selection](records-in-selection.md)  
-[Records in table](records-in-table.md)  
+[DISPLAY SELECTION](../commands/display-selection)  
+[MODIFY SELECTION](../commands/modify-selection)  
+[ORDER BY](../commands/order-by)  
+[QUERY](../commands/query)  
+[Records in selection](../commands/records-in-selection)  
+[Records in table](../commands/records-in-table)  
 
 ## Propriedades
 

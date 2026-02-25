@@ -1,4 +1,4 @@
----
+﻿---
 id: get-table-titles
 title: GET TABLE TITLES
 slug: /commands/get-table-titles
@@ -35,8 +35,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[GET FIELD TITLES](get-field-titles.md)  
-[SET TABLE TITLES](set-table-titles.md)  
+[GET FIELD TITLES](../commands/get-field-titles)  
+[SET TABLE TITLES](../commands/set-table-titles)  
 
 ## プロパティ
 

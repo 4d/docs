@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-delete-column
 title: LISTBOX DELETE COLUMN
 slug: /commands/listbox-delete-column
@@ -45,8 +45,8 @@ If the *colPosition* parameter is greater than the number of columns in the list
 
 ## See also 
 
-[LISTBOX Get number of columns](listbox-get-number-of-columns.md)  
-[LISTBOX INSERT COLUMN](listbox-insert-column.md)  
+[LISTBOX Get number of columns](../commands/listbox-get-number-of-columns)  
+[LISTBOX INSERT COLUMN](../commands/listbox-insert-column)  
 
 ## Properties
 

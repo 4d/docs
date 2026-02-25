@@ -1,4 +1,4 @@
----
+﻿---
 id: window-kind
 title: Window kind
 slug: /commands/window-kind
@@ -48,9 +48,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[GET WINDOW RECT](get-window-rect.md)  
-[Get window title](get-window-title.md)  
-[Window process](window-process.md)  
+[GET WINDOW RECT](../commands/get-window-rect)  
+[Get window title](../commands/get-window-title)  
+[Window process](../commands/window-process)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: window-list
 title: WINDOW LIST
 slug: /commands/window-list
@@ -60,8 +60,8 @@ O método de projeto abaixo coloca em mosaico todas as janelas abertas atualment
 
 ## Ver também 
 
-[Window kind](window-kind.md)  
-[Window process](window-process.md)  
+[Window kind](../commands/window-kind)  
+[Window process](../commands/window-process)  
 
 ## Propriedades
 

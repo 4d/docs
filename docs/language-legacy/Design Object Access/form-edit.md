@@ -1,4 +1,4 @@
----
+﻿---
 id: form-edit
 title: FORM EDIT
 slug: /commands/form-edit
@@ -35,7 +35,7 @@ If you pass the optional *aTable* parameter, you indicate the table associated w
 
 In the *form* parameter, pass the name of the form to open in the 4D Form editor. If you pass a name that does not exist, the error 81 is generated ("Form not found"). 
 
-Optionnally, you can pass in *object* the name of a form object or of a group to select automatically in the 4D Form editor. This feature allows you, for example, to save time when debugging a form based upon expression errors returned by [`Compile project`](compile-project.md). 
+Optionnally, you can pass in *object* the name of a form object or of a group to select automatically in the 4D Form editor. This feature allows you, for example, to save time when debugging a form based upon expression errors returned by [`Compile project`](../commands/compile-project). 
 
 If *object* is not found in *form*, the form is opened and no error is returned.
 

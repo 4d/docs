@@ -1,4 +1,4 @@
----
+﻿---
 id: form-edit
 slug: /commands/form-edit
 title: FORM EDIT
@@ -35,7 +35,7 @@ Si vous passez le paramètre optionnel *aTable*, vous indiquez la table associé
 
 Dans le paramètre *form*, passez le nom du formulaire à ouvrir dans l'éditeur de formulaires de 4D. Si vous passez un nom qui n'existe pas, l'erreur 81 est générée ("Formulaire introuvable").
 
-Optionnellement, vous pouvez passer dans *objet* le nom d'un objet de formulaire ou d'un groupe à sélectionner automatiquement dans l'éditeur de formulaires de 4D. Cette fonctionnalité vous permet, par exemple, de gagner du temps lors du débogage d'un formulaire sur la base des erreurs d'expressions renvoyées par [`Compile project`](compile-project.md).
+Optionnellement, vous pouvez passer dans *objet* le nom d'un objet de formulaire ou d'un groupe à sélectionner automatiquement dans l'éditeur de formulaires de 4D. Cette fonctionnalité vous permet, par exemple, de gagner du temps lors du débogage d'un formulaire sur la base des erreurs d'expressions renvoyées par [`Compile project`](../commands/compile-project).
 
 Si *objet* n'est pas trouvé dans *form*, le formulaire est ouvert et aucune erreur n'est renvoyée.
 

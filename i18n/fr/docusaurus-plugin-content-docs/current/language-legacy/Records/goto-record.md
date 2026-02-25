@@ -1,4 +1,4 @@
----
+﻿---
 id: goto-record
 title: GOTO RECORD
 slug: /commands/goto-record
@@ -29,18 +29,18 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.GOTO RECORD.Summary-->**GOTO RECORD** sélectionne l'enregistrement courant de *table*.<!-- END REF--> Le paramètre *enregistrement* est le numéro renvoyé par la fonction [Record number](record-number.md). Après l'exécution de cette commande, l'enregistrement est le seul de la sélection courante.
+<!--REF #_command_.GOTO RECORD.Summary-->**GOTO RECORD** sélectionne l'enregistrement courant de *table*.<!-- END REF--> Le paramètre *enregistrement* est le numéro renvoyé par la fonction [Record number](../commands/record-number). Après l'exécution de cette commande, l'enregistrement est le seul de la sélection courante.
 
 Si *enregistrement* est inférieur au plus petit numéro d'enregistrement ou supérieur au plus grand numéro d'enregistrement de la base, 4D génère un message d'erreur indiquant que le numéro est hors intervalle. Si *enregistrement* est égal au numéro d'un enregistrement supprimé, 4D retourne l'erreur -10503 et la sélection courante devient vide. 
 
 ## Exemple 
 
-Référez-vous à l'exemple de la commande [Record number](record-number.md).
+Référez-vous à l'exemple de la commande [Record number](../commands/record-number).
 
 ## Voir aussi 
 
 *A propos des numéros d'enregistrements*  
-[Record number](record-number.md)  
+[Record number](../commands/record-number)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: display-notification
 title: DISPLAY NOTIFICATION
 slug: /commands/display-notification
@@ -52,7 +52,7 @@ Windows 環境下では、メッセージウィンドウは何らかの動作が
 
 ## 参照 
 
-[ALERT](alert.md)  
+[ALERT](../commands/alert)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-scrollbar
 title: OBJECT GET SCROLLBAR
 slug: /commands/object-get-scrollbar
@@ -53,11 +53,11 @@ This command can be used with the following form objects:
 * Hierarchical lists,
 * Subforms.
 
-For more information, refer to the description of the [OBJECT SET SCROLLBAR](object-set-scrollbar.md) command.
+For more information, refer to the description of the [OBJECT SET SCROLLBAR](../commands/object-set-scrollbar) command.
 
 ## See also 
 
-[OBJECT SET SCROLLBAR](object-set-scrollbar.md)  
+[OBJECT SET SCROLLBAR](../commands/object-set-scrollbar)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-drag-and-drop-options
 title: OBJECT GET DRAG AND DROP OPTIONS
 slug: /commands/object-get-drag-and-drop-options
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de variable. 
 
-La commande retourne les options de glisser-déposer courantes, qu’elles aient été définies en mode Développement ou pour le process à l’aide de la commande [OBJECT SET DRAG AND DROP OPTIONS](object-set-drag-and-drop-options.md). 
+La commande retourne les options de glisser-déposer courantes, qu’elles aient été définies en mode Développement ou pour le process à l’aide de la commande [OBJECT SET DRAG AND DROP OPTIONS](../commands/object-set-drag-and-drop-options). 
 
 Chaque paramètre retourne Vrai ou Faux suivant que l’option correspondante est active ou inactive :
 
@@ -47,7 +47,7 @@ Chaque paramètre retourne Vrai ou Faux suivant que l’option correspondante es
 
 ## Voir aussi 
 
-[OBJECT SET DRAG AND DROP OPTIONS](object-set-drag-and-drop-options.md)  
+[OBJECT SET DRAG AND DROP OPTIONS](../commands/object-set-drag-and-drop-options)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: svg-get-attribute
 title: SVG GET ATTRIBUTE
 slug: /commands/svg-get-attribute
@@ -51,7 +51,7 @@ Para obtener más información acerca de los atributos SVG, consulte la descripc
 
 #### Ver también 
 
-[SVG SET ATTRIBUTE](svg-set-attribute.md)  
+[SVG SET ATTRIBUTE](../commands/svg-set-attribute)  
 
 #### Propiedades
 

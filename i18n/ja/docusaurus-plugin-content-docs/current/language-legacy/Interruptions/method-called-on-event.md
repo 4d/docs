@@ -1,4 +1,4 @@
----
+﻿---
 id: method-called-on-event
 title: Method called on event
 slug: /commands/method-called-on-event
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ON EVENT CALL](on-event-call.md)  
+[ON EVENT CALL](../commands/on-event-call)  
 
 ## プロパティ
 

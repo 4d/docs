@@ -1,4 +1,4 @@
----
+﻿---
 id: trunc
 title: Trunc
 slug: /commands/trunc
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Round](round.md)  
+[Round](../commands/round)  
 
 ## プロパティ
 

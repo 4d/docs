@@ -1,4 +1,4 @@
----
+﻿---
 id: insert-menu-item
 title: INSERT MENU ITEM
 slug: /commands/insert-menu-item
@@ -42,15 +42,15 @@ If you omit the *process* parameter, **INSERT MENU ITEM** applies to the menu ba
 
 If you do not pass the *\** parameter, **INSERT MENU ITEM** allows to you insert one or several menu items in one call.
 
-**INSERT MENU ITEM** works like [APPEND MENU ITEM](append-menu-item.md), except that it enables you to insert items anywhere in the menu, while [APPEND MENU ITEM](append-menu-item.md) always adds them at the end of the menu.
+**INSERT MENU ITEM** works like [APPEND MENU ITEM](../commands/append-menu-item), except that it enables you to insert items anywhere in the menu, while [APPEND MENU ITEM](../commands/append-menu-item) always adds them at the end of the menu.
 
-See the description of the [APPEND MENU ITEM](append-menu-item.md) command for details about the item definition passed in *itemText* and about the action of the *\** parameter.
+See the description of the [APPEND MENU ITEM](../commands/append-menu-item) command for details about the item definition passed in *itemText* and about the action of the *\** parameter.
 
 **Note:** The ak standard action title constant is supported in the *itemText* parameter (4D v16 R3 and higher).
 
-The optional *subMenu* parameter can be used to indicate a menu as the added item and thus position a hierarchical submenu. You must pass a menu reference (MenuRef type string) specifying a menu created, for example, using the [Create menu](create-menu.md) command. If the command adds more than one menu item, the submenu is associated with the first item.
+The optional *subMenu* parameter can be used to indicate a menu as the added item and thus position a hierarchical submenu. You must pass a menu reference (MenuRef type string) specifying a menu created, for example, using the [Create menu](../commands/create-menu) command. If the command adds more than one menu item, the submenu is associated with the first item.
 
-**Important:** The new items do not have any associated methods or actions. These must be associated with the items using the [SET MENU ITEM PROPERTY](set-menu-item-property.md) or [SET MENU ITEM METHOD](set-menu-item-method.md) commands, or the items can also be managed from within a form method using the [Menu selected](menu-selected.md) command.
+**Important:** The new items do not have any associated methods or actions. These must be associated with the items using the [SET MENU ITEM PROPERTY](../commands/set-menu-item-property) or [SET MENU ITEM METHOD](../commands/set-menu-item-method) commands, or the items can also be managed from within a form method using the [Menu selected](../commands/menu-selected) command.
 
 ## Example 
 
@@ -66,8 +66,8 @@ The following example creates a menu consisting of two commands to which it assi
 
 ## See also 
 
-[APPEND MENU ITEM](append-menu-item.md)  
-[SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
+[APPEND MENU ITEM](../commands/append-menu-item)  
+[SET MENU ITEM PARAMETER](../commands/set-menu-item-parameter)  
 
 ## Properties
 

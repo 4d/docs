@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-best-size
 title: OBJECT GET BEST SIZE
 slug: /commands/object-get-best-size
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.OBJECT GET BEST SIZE.Summary-->La commande **OBJECT GET BEST SIZE** retourne dans les paramètres *largeurOpti* et *hauteurOpti* la largeur et la hauteur “optimales” de l’objet de formulaire désigné par les paramètres *\** et *objet*.<!-- END REF--> Ces valeurs sont exprimées en pixels. Cette commande est particulièrement utile dans le cadre de l’affichage ou de l’impression d’états complexes, associée à la commande [OBJECT MOVE](object-move.md). 
+<!--REF #_command_.OBJECT GET BEST SIZE.Summary-->La commande **OBJECT GET BEST SIZE** retourne dans les paramètres *largeurOpti* et *hauteurOpti* la largeur et la hauteur “optimales” de l’objet de formulaire désigné par les paramètres *\** et *objet*.<!-- END REF--> Ces valeurs sont exprimées en pixels. Cette commande est particulièrement utile dans le cadre de l’affichage ou de l’impression d’états complexes, associée à la commande [OBJECT MOVE](../commands/object-move). 
 
 Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne de caractères). Si vous ne passez pas le paramètre \*, vous indiquez que *objet* est un champ ou une variable. Dans ce cas, vous ne passez pas une chaîne mais une référence de champ ou de variable (de type objet uniquement).
 
@@ -51,16 +51,16 @@ Les objets pris en charge par cette commande sont les suivants :
 * Boutons
 * Colonnes de list box en contexte d'affichage (seules les lignes visibles sont prises en compte)
 
-Pour tous les autres types d’objets de formulaires (zones de groupes, onglets, rectangles, droites, cercles/ellipses, zones externes, etc.), la commande **OBJECT GET BEST SIZE** retourne la taille courante de l’objet (définie dans l’éditeur de formulaires et éventuellement à l’aide de la commande [OBJECT MOVE](object-move.md)).
+Pour tous les autres types d’objets de formulaires (zones de groupes, onglets, rectangles, droites, cercles/ellipses, zones externes, etc.), la commande **OBJECT GET BEST SIZE** retourne la taille courante de l’objet (définie dans l’éditeur de formulaires et éventuellement à l’aide de la commande [OBJECT MOVE](../commands/object-move)).
 
 ## Exemple 
 
-Reportez-vous à l’exemple de la routine [SET PRINT MARKER](set-print-marker.md). 
+Reportez-vous à l’exemple de la routine [SET PRINT MARKER](../commands/set-print-marker). 
 
 ## Voir aussi 
 
-[OBJECT MOVE](object-move.md)  
-[SET PRINT MARKER](set-print-marker.md)  
+[OBJECT MOVE](../commands/object-move)  
+[SET PRINT MARKER](../commands/set-print-marker)  
 
 ## Propriétés
 

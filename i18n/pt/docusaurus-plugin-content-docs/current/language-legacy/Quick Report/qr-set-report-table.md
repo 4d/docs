@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-report-table
 title: QR SET REPORT TABLE
 slug: /commands/qr-set-report-table
@@ -38,7 +38,7 @@ Se o parâmetro *tabela* for incorreto, se gera o erro -9852.
 
 ## Ver também 
 
-[QR Get report table](qr-get-report-table.md)  
+[QR Get report table](../commands/qr-get-report-table)  
 
 ## Propriedades
 

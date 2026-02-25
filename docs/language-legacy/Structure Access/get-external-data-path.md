@@ -1,4 +1,4 @@
----
+﻿---
 id: get-external-data-path
 title: Get external data path
 slug: /commands/get-external-data-path
@@ -42,7 +42,7 @@ More particularly, this command lets you recopy the external file.
 
 ## See also 
 
-[SET EXTERNAL DATA PATH](set-external-data-path.md)  
+[SET EXTERNAL DATA PATH](../commands/set-external-data-path)  
 
 ## Properties
 

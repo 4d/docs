@@ -1,4 +1,4 @@
----
+﻿---
 id: data-file
 title: Data file
 slug: /commands/data-file
@@ -43,8 +43,8 @@ Se você está trabalhando, por exemplo, com o banco na pasta Documentos:MeusCDs
 
 ## Ver também 
 
-[Application file](application-file.md)  
-[Structure file](structure-file.md)  
+[Application file](../commands/application-file)  
+[Structure file](../commands/structure-file)  
 
 ## Propriedades
 

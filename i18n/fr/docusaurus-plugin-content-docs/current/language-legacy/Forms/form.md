@@ -1,4 +1,4 @@
----
+﻿---
 id: form
 slug: /commands/form
 title: Formulaire
@@ -27,13 +27,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Form.Summary-->La commande **Form** renvoie l'objet associé au formulaire courant (instancié à partir du paramètre *formData* ou de la classe utilisateur attribuée dans l'éditeur de formulaire).<!-- END REF--> 4D associe automatiquement un objet au formulaire courant dans les cas suivants :
 
-- le formulaire courant a été chargé par l'une des commandes [`DIALOG`](dialog.md), [`Print form`](print-form.md), ou [`FORM LOAD`](form-load.md),
+- le formulaire courant a été chargé par l'une des commandes [`DIALOG`](../commands/dialog), [`Print form`](../commands/print-form), ou [`FORM LOAD`](../commands/form-load),
 - le formulaire courant est un sous-formulaire,
 - un formulaire table est actuellement affiché à l'écran.
 
 ### Commandes (DIALOG...)
 
-Si le formulaire courant est affiché ou chargé par un appel aux commandes [DIALOG](dialog.md), [`Print form`](print-form.md) ou [`FORM LOAD`](form-load.md), **Form** renvoie soit :
+Si le formulaire courant est affiché ou chargé par un appel aux commandes [DIALOG](../commands/dialog), [`Print form`](../commands/print-form) ou [`FORM LOAD`](../commands/form-load), **Form** renvoie soit :
 
 - l'objet *formData* passé en paramètre à cette commande, le cas échéant,
 - ou un objet instancié de la [classe utilisateur associée au formulaire](../../FormEditor/properties_FormProperties.md#form-class), le cas échéant,
@@ -110,7 +110,7 @@ Si des valeurs sont modifiées et que l'utilisateur clique sur le bouton OK, le 
 
 ## Voir également
 
-[DIALOG](dialog.md)
+[DIALOG](../commands/dialog)
 
 ## Propriétés
 

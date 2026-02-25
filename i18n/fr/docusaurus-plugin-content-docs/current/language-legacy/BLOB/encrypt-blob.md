@@ -1,4 +1,4 @@
----
+﻿---
 id: encrypt-blob
 title: ENCRYPT BLOB
 slug: /commands/encrypt-blob
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.ENCRYPT BLOB.Summary-->La commande **ENCRYPT BLOB** permet de crypter le contenu du BLOB *aCrypter* à l’aide de la clé privée de l’émetteur *cléPrivEmetteur* ainsi que, optionnellement, de la clé publique du récepteur *cléPubRécepteur*.<!-- END REF--> Pour obtenir une paire de clés de cryptage (clé publique et clé privée), utilisez la routine [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md), placée dans le thème “Protocole sécurisé”.
+<!--REF #_command_.ENCRYPT BLOB.Summary-->La commande **ENCRYPT BLOB** permet de crypter le contenu du BLOB *aCrypter* à l’aide de la clé privée de l’émetteur *cléPrivEmetteur* ainsi que, optionnellement, de la clé publique du récepteur *cléPubRécepteur*.<!-- END REF--> Pour obtenir une paire de clés de cryptage (clé publique et clé privée), utilisez la routine [GENERATE ENCRYPTION KEYPAIR](../commands/generate-encryption-keypair), placée dans le thème “Protocole sécurisé”.
 
 **Note :** La commande **ENCRYPT BLOB** exploite l’algorithme et les fonctions de cryptage du protocole TLS. Par conséquent, pour pouvoir utiliser cette commande, vous devez veiller à ce que les composants nécessaires au fonctionnement du protocole TLS soient installés sur la machine — même si vous ne souhaitez pas utiliser TLS dans le cadre de connexions à un serveur 4D. Pour plus d'informations, reportez-vous à *developer.4d.com*
 
@@ -39,7 +39,7 @@ displayed_sidebar: docs
 
 Le format interne des BLOBs contenant des clés est le PKCS. Ce format standard, multi-plate-forme, permet l’échange ou la manipulation des clés par simple copier-coller dans un Email ou un fichier texte.
 
-Après l’exécution de la commande, le BLOB *aCrypter* contient les données cryptées. Ces données ne pourront être décryptées qu’avec la commande [DECRYPT BLOB](decrypt-blob.md), à laquelle la clé publique de l’émetteur sera passée en paramètre. En outre, si la clé publique (optionnelle) du récepteur avait été utilisée pour le cryptage, la clé privée du récepteur sera également nécessaire pour le décryptage.
+Après l’exécution de la commande, le BLOB *aCrypter* contient les données cryptées. Ces données ne pourront être décryptées qu’avec la commande [DECRYPT BLOB](../commands/decrypt-blob), à laquelle la clé publique de l’émetteur sera passée en paramètre. En outre, si la clé publique (optionnelle) du récepteur avait été utilisée pour le cryptage, la clé privée du récepteur sera également nécessaire pour le décryptage.
 
 **Principe du cryptage à clés publiques/privées pour l’échange de messages entre deux individus, “Alice” et “Bob”** 
 
@@ -62,7 +62,7 @@ Dans le cas contraire, pour des raisons de sécurité, le mode synchrone est uti
 
  Une société veut garantir la confidentialité d’informations stockées dans une base 4D. Elle doit régulièrement envoyer ces données à ses filiales, par exemple sous la forme de fichiers via Internet. 
 
-1\. La société commence par générer une paire de clés à l’aide de la commande [GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md). 
+1\. La société commence par générer une paire de clés à l’aide de la commande [GENERATE ENCRYPTION KEYPAIR](../commands/generate-encryption-keypair). 
 
 ```4d
   //Méthode GENERE_CLES_TXT
@@ -198,9 +198,9 @@ Dans le cas contraire, pour des raisons de sécurité, le mode synchrone est uti
 ## Voir aussi 
 
   
-[DECRYPT BLOB](decrypt-blob.md)  
-[Encrypt data BLOB](encrypt-data-blob.md)  
-[GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
+[DECRYPT BLOB](../commands/decrypt-blob)  
+[Encrypt data BLOB](../commands/encrypt-data-blob)  
+[GENERATE ENCRYPTION KEYPAIR](../commands/generate-encryption-keypair)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: query-by-sql
 title: QUERY BY SQL
 slug: /commands/query-by-sql
@@ -48,18 +48,18 @@ Par exemple, l’instruction suivante :
 SELECT * FROM Employees WHERE "name=’smith’"
 ```
 
-La commande **QUERY BY SQL** est semblable à la commande [QUERY BY FORMULA](query-by-formula.md). Elle effectue une recherche parmi les enregistrements de la table définie. Elle modifie la sélection courante de *table* pour le process courant et fait du premier enregistrement de la nouvelle sélection le nouvel enregistrement courant.
+La commande **QUERY BY SQL** est semblable à la commande [QUERY BY FORMULA](../commands/query-by-formula). Elle effectue une recherche parmi les enregistrements de la table définie. Elle modifie la sélection courante de *table* pour le process courant et fait du premier enregistrement de la nouvelle sélection le nouvel enregistrement courant.
 
 **Note :** La commande **QUERY BY SQL** ne peut pas être utilisée dans le contexte d'une connexion SQL externe, elle s'adresse directement au moteur SQL intégré de 4D.
 
 **QUERY BY SQL** applique *formuleSQL* à chaque enregistrement de la sélection de la table. *formuleSQL* est une expression booléenne qui doit retourner VRAI ou FAUX. Comme vous le savez peut-être, dans la norme SQL, une condition de recherche peut avoir un résultat VRAI, FAUX ou NULL. Tous les enregistrements (rows) pour lesquels la condition de recherche retourne VRAI sont inclus dans la nouvelle sélection courante.
 
-L’expression *formuleSQL* peut être simple, comme par exemple la comparaison d’un champ (colonne) à une valeur ; elle peut également être complexe, comme la réalisation d’un calcul. Comme [QUERY BY FORMULA](query-by-formula.md), **QUERY BY SQL** peut évaluer des valeurs dans les tables liées (cf. exemple 4). *formuleSQL* doit être une instruction SQL valide, conforme à la norme SQL-2 et tenant compte de l’implémentation actuelle du SQL dans 4D. Pour plus d’information la prise en charge du SQL dans 4D, reportez-vous au manuel Guide de référence 4D SQL.
+L’expression *formuleSQL* peut être simple, comme par exemple la comparaison d’un champ (colonne) à une valeur ; elle peut également être complexe, comme la réalisation d’un calcul. Comme [QUERY BY FORMULA](../commands/query-by-formula), **QUERY BY SQL** peut évaluer des valeurs dans les tables liées (cf. exemple 4). *formuleSQL* doit être une instruction SQL valide, conforme à la norme SQL-2 et tenant compte de l’implémentation actuelle du SQL dans 4D. Pour plus d’information la prise en charge du SQL dans 4D, reportez-vous au manuel Guide de référence 4D SQL.
 
-Le paramètre *formuleSQL* peut contenir des références à des expressions 4D. La syntaxe à utiliser est la même que pour les commandes SQL intégrées ou le code inclus dans les balises [Begin SQL](begin-sql.md)/[End SQL](end-sql.md), c’est-à-dire : *<<MaVar>>* ou *:MaVar*  
+Le paramètre *formuleSQL* peut contenir des références à des expressions 4D. La syntaxe à utiliser est la même que pour les commandes SQL intégrées ou le code inclus dans les balises [Begin SQL](../commands/begin-sql)/[End SQL](../commands/end-sql), c’est-à-dire : *<<MaVar>>* ou *:MaVar*  
 Pour plus d’informations sur ce point, reportez-vous à la section *Présentation des commandes du thème SQL*.
 
-**Note :** Cette commande est compatible avec les commandes [SET QUERY LIMIT](set-query-limit.md) et [SET QUERY DESTINATION](set-query-destination.md).
+**Note :** Cette commande est compatible avec les commandes [SET QUERY LIMIT](../commands/set-query-limit) et [SET QUERY DESTINATION](../commands/set-query-destination).
 
 **Rappel :** Les références aux variables locales ne sont pas possibles en mode compilé. Pour plus d'informations sur la programmation SQL dans 4D, reportez-vous à la section *Présentation des commandes du thème SQL*.   
 
@@ -71,7 +71,7 @@ Pour plus d’informations sur ce point, reportez-vous à la section *Présentat
 [Personnes]   Nom   Ville[Villes]   Nom   Population
 ```
 
-Avec la commande [QUERY BY FORMULA](query-by-formula.md), vous pourriez écrire :
+Avec la commande [QUERY BY FORMULA](../commands/query-by-formula), vous pourriez écrire :
 
 ```4d
  QUERY BY FORMULA([Personnes];[Villes]Population>1000)
@@ -83,7 +83,7 @@ Avec **QUERY BY SQL**, vous devez écrire l’instruction suivante, que le lien 
  QUERY BY SQL([Personnes];"personnes.ville=villes.nom AND villes.population>1000")
 ```
 
-**Note :** Les liens 1 vers N et N vers N sont également traités par **QUERY BY SQL** d’une manière différente de [QUERY BY FORMULA](query-by-formula.md).
+**Note :** Les liens 1 vers N et N vers N sont également traités par **QUERY BY SQL** d’une manière différente de [QUERY BY FORMULA](../commands/query-by-formula).
 
 ## Exemple 1 
 
@@ -142,7 +142,7 @@ Cet exemple montre une requête utilisant des tables liées dans 4D. Via le SQL 
 ```
 
 Un lien de N vers 1 relie le champ \[Lignes\_Factures\]ID\_Fact au champ \[Factures\]ID\_Fact.  
-Avec la commande [QUERY BY FORMULA](query-by-formula.md), vous pourriez écrire :
+Avec la commande [QUERY BY FORMULA](../commands/query-by-formula), vous pourriez écrire :
 
 ```4d
  QUERY BY FORMULA([Lignes_Factures];([Lignes_Factures]Code="FX-200") & (Month of([Factures]Date_Fact)=4))
@@ -164,11 +164,11 @@ En utilisant la commande **QUERY BY SQL** :
 
 ## Variables et ensembles système 
 
-Si le format de la condition de recherche est correct, la variable système OK prend la valeur 1\. Sinon, elle prend la valeur 0, le résultat de la commande est une sélection vide et une erreur est retournée. Cette erreur peut être interceptée par une méthode installée à l’aide de la commande [ON ERR CALL](on-err-call.md).
+Si le format de la condition de recherche est correct, la variable système OK prend la valeur 1\. Sinon, elle prend la valeur 0, le résultat de la commande est une sélection vide et une erreur est retournée. Cette erreur peut être interceptée par une méthode installée à l’aide de la commande [ON ERR CALL](../commands/on-err-call).
 
 ## Voir aussi 
 
-[QUERY BY FORMULA](query-by-formula.md)  
+[QUERY BY FORMULA](../commands/query-by-formula)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-number-of-columns
 title: LISTBOX Get number of columns
 slug: /commands/listbox-get-number-of-columns
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[LISTBOX DELETE COLUMN](listbox-delete-column.md)  
+[LISTBOX DELETE COLUMN](../commands/listbox-delete-column)  
 
 ## プロパティ
 

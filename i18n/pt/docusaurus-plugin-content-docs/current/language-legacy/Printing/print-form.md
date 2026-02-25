@@ -1,4 +1,4 @@
----
+﻿---
 id: print-form
 title: Print form
 slug: /commands/print-form
@@ -92,9 +92,9 @@ Nesse caso, o comando imprimirá a seção incluída entre os parâmetros *areaS
 
 **formData**
 
-Opcionalmente, é possível passar parâmetros para o *form* usando o objeto *formData* ou o objeto de classe de formulário instanciado automaticamente pelo 4D se você tiver [associado uma classe de usuário ao formulário](../../FormEditor/properties_FormProperties.md#form-class). Todas as propriedades do objeto de dados do formulário estarão disponíveis no contexto do formulário por meio do comando [Form](form.md). O objeto de dados do formulário está disponível no [evento de Detalhes de Impressão](../../Events/onPrintingDetail.md).
+Opcionalmente, é possível passar parâmetros para o *form* usando o objeto *formData* ou o objeto de classe de formulário instanciado automaticamente pelo 4D se você tiver [associado uma classe de usuário ao formulário](../../FormEditor/properties_FormProperties.md#form-class). Todas as propriedades do objeto de dados do formulário estarão disponíveis no contexto do formulário por meio do comando [Form](../commands/form). O objeto de dados do formulário está disponível no [evento de Detalhes de Impressão](../../Events/onPrintingDetail.md).
 
-Para obter informações detalhadas sobre o objeto de dados do formulário, consulte o comando [`DIALOG`](dialog.md).
+Para obter informações detalhadas sobre o objeto de dados do formulário, consulte o comando [`DIALOG`](../commands/dialog).
 
 **Valor retornado**
 

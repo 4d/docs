@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-get-page-title
 title: WA Get page title
 slug: /commands/wa-get-page-title
@@ -35,7 +35,7 @@ Cette commande retourne une chaîne vide s’il n’y a pas de titre disponible 
 
 ## Voir aussi 
 
-[WA Get page content](wa-get-page-content.md)  
+[WA Get page content](../commands/wa-get-page-content)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-row-color
 title: LISTBOX Get row color
 slug: /commands/listbox-get-row-color
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 La commande **LISTBOX Get row color** retourne la couleur d'une ligne ou d'une cellule dans la list box désignée par les paramètres *objet* et *\** en tant que chaîne CSS.
 
-**Note :** Si vous souhaitez lire la couleur au format entier long de 4 octets, vous devez utiliser la commande [OBJECT SET RGB COLORS](object-set-rgb-colors.md). Pour plus d'informations sur les formats de couleur, veuillez consulter la description de la commande [OBJECT SET RGB COLORS](object-set-rgb-colors.md). 
+**Note :** Si vous souhaitez lire la couleur au format entier long de 4 octets, vous devez utiliser la commande [OBJECT SET RGB COLORS](../commands/object-set-rgb-colors). Pour plus d'informations sur les formats de couleur, veuillez consulter la description de la commande [OBJECT SET RGB COLORS](../commands/object-set-rgb-colors). 
 
 Le paramètre optionnel *\** indique que le paramètre *objet* est un nom d'objet (chaîne). Si vous ne passez pas ce paramètre, il indique que le paramètre *objet* est une variable. Dans ce cas, vous passez une référence de variable au lieu d'une chaine. Vous pouvez désigner une list box ou une colonne de list box dans le paramètre *objet* :
 
@@ -68,7 +68,7 @@ Considérons la list box suivante :
 
 ## Voir aussi 
 
-[LISTBOX SET ROW COLOR](listbox-set-row-color.md)  
+[LISTBOX SET ROW COLOR](../commands/listbox-set-row-color)  
 
 ## Propriétés
 

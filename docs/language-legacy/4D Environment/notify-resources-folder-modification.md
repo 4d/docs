@@ -1,4 +1,4 @@
----
+﻿---
 id: notify-resources-folder-modification
 title: NOTIFY RESOURCES FOLDER MODIFICATION
 slug: /commands/notify-resources-folder-modification
@@ -41,11 +41,11 @@ Only the information that modification has occurred is sent. Remote machines rea
 Current settings are set either:
 
 * at the overall database level using the parameter of the Database settings. In this case, it applies to all the remote machines;
-* locally, using the [SET DATABASE PARAMETER](set-database-parameter.md) command executed on the remote machine (Auto synchro resources folder selector). In this case, it "overrides" the database setting and applies only to the remote machine for the duration of the session.
+* locally, using the [SET DATABASE PARAMETER](../commands/set-database-parameter) command executed on the remote machine (Auto synchro resources folder selector). In this case, it "overrides" the database setting and applies only to the remote machine for the duration of the session.
 
 ## See also 
 
-[Get 4D folder](get-4d-folder.md)  
+[Get 4D folder](../commands/get-4d-folder)  
 
 ## Properties
 

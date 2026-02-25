@@ -1,4 +1,4 @@
----
+﻿---
 id: exp
 title: Exp
 slug: /commands/exp
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Log](log.md)  
+[Log](../commands/log)  
 
 ## プロパティ
 

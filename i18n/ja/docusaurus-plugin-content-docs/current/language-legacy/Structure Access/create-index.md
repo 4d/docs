@@ -1,4 +1,4 @@
----
+﻿---
 id: create-index
 title: CREATE INDEX
 slug: /commands/create-index
@@ -49,7 +49,7 @@ displayed_sidebar: docs
 
 **注:** テキスト型のフィールドに設定されたBツリーインデックスは最大で最初の1024文字をインデックス化します。この場合、1024文字以上を含む文字列の検索結果は正しくなりません。
 
-作成するインデックスの名前を*indexName*引数に渡すことができます。インデックスの命名は、複数の異なるタイプのインデックスを同じフィールドに割り当て、それを個々に[DELETE INDEX](delete-index.md)コマンドで削除する場合に必要となります。*indexName*インデックスが既に存在する場合、コマンドは何もしません。
+作成するインデックスの名前を*indexName*引数に渡すことができます。インデックスの命名は、複数の異なるタイプのインデックスを同じフィールドに割り当て、それを個々に[DELETE INDEX](../commands/delete-index)コマンドで削除する場合に必要となります。*indexName*インデックスが既に存在する場合、コマンドは何もしません。
 
 任意の*\** 引数が渡されると、非同期モードでインデックスを実行します。このモードでは、コマンドからの呼び出し後、インデックスが完了しているか、完了していないかに関わらず元のメソッドがその実行を継続します。
 
@@ -96,9 +96,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[DELETE INDEX](delete-index.md)  
-[RESUME INDEXES](resume-indexes.md)  
-[SET INDEX](set-index.md)  
+[DELETE INDEX](../commands/delete-index)  
+[RESUME INDEXES](../commands/resume-indexes)  
+[SET INDEX](../commands/set-index)  
 
 ## プロパティ
 

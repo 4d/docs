@@ -1,4 +1,4 @@
----
+﻿---
 id: get-serial-port-mapping
 title: GET SERIAL PORT MAPPING
 slug: /commands/get-serial-port-mapping
@@ -60,7 +60,7 @@ Este método de projeto pode ser usado para tratar a mesma porta serial (sem pro
 
 ## Ver também 
 
-[SET CHANNEL](set-channel.md)  
+[SET CHANNEL](../commands/set-channel)  
 
 ## Propriedades
 

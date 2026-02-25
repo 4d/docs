@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-list-name
 title: OBJECT Get list name
 slug: /commands/object-get-list-name
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.OBJECT Get list name.Summary-->The OBJECT Get list name command returns the name of the choice list associated with the object or group of objects designated by *object*.<!-- END REF--> 4D lets you associate a choice list (created with the choice list editor in Design mode) with form objects using the form editor or the [OBJECT SET LIST BY NAME](object-set-list-by-name.md) command. 
+<!--REF #_command_.OBJECT Get list name.Summary-->The OBJECT Get list name command returns the name of the choice list associated with the object or group of objects designated by *object*.<!-- END REF--> 4D lets you associate a choice list (created with the choice list editor in Design mode) with form objects using the form editor or the [OBJECT SET LIST BY NAME](../commands/object-set-list-by-name) command. 
 
 If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass this parameter, you indicate that the *object* parameter is a field or a variable. In this case, you pass a field or variable reference (object field or variable only) instead of a string.
 
@@ -48,8 +48,8 @@ If there is no list of the type defined associated with the *object*, the comman
 
 ## See also 
 
-[OBJECT Get list reference](object-get-list-reference.md)  
-[OBJECT SET LIST BY NAME](object-set-list-by-name.md)  
+[OBJECT Get list reference](../commands/object-get-list-reference)  
+[OBJECT SET LIST BY NAME](../commands/object-set-list-by-name)  
 
 ## Properties
 

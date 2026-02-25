@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-help-tip
 title: OBJECT SET HELP TIP
 slug: /commands/object-set-help-tip
@@ -37,23 +37,23 @@ Si pasa el parámetro opcional *\**, indica que el parámetro *objeto* es un nom
 
 En el parámetro *mensajeAyuda*, pase una cadena de caracteres para el contenido del mensaje. Si pasa una cadena vacía "", la sugerencia de ayuda se eliminará. 
 
-Cuando se ejecuta el formulario, los mensajes aparecen como mensajes de ayuda cuando el cursor se mueve sobre el campo u objeto. El retardo de visualización y la duración máxima de los mensajes de ayuda se pueden controlar utilizando los selectores Tips delay y Tips duration del comando [SET DATABASE PARAMETER](set-database-parameter.md).
+Cuando se ejecuta el formulario, los mensajes aparecen como mensajes de ayuda cuando el cursor se mueve sobre el campo u objeto. El retardo de visualización y la duración máxima de los mensajes de ayuda se pueden controlar utilizando los selectores Tips delay y Tips duration del comando [SET DATABASE PARAMETER](../commands/set-database-parameter).
 
 Pase el contenido del mensaje en el parámetro *mensajeAyuda*. Puede pasar:
 
 * una cadena de caracteres, por ejemplo "Utilice el / como separador",
 * una cadena vacía "" para eliminar el mensaje de ayuda,
 
-Cuando el formulario se ejecuta, los mensajes de ayuda aparecen como mensajes de ayuda cuando el cursor pasa sobre el campo u objeto. El retraso de visualización y la duración máxima de los mensajes de ayuda pueden controlarse utilizando Tips delay y los selectores del comando [SET DATABASE PARAMETER](set-database-parameter.md). 
+Cuando el formulario se ejecuta, los mensajes de ayuda aparecen como mensajes de ayuda cuando el cursor pasa sobre el campo u objeto. El retraso de visualización y la duración máxima de los mensajes de ayuda pueden controlarse utilizando Tips delay y los selectores del comando [SET DATABASE PARAMETER](../commands/set-database-parameter). 
 
-Puede utilizar este comando con un objeto list box para agregar mensajes de ayuda a las filas y celdas del list box. Por ejemplo, un objeto list box puede tener un mensaje de ayuda diferente por fila. En este caso, primero debe determinar la posición del cursor con el comando [LISTBOX GET CELL POSITION](listbox-get-cell-position.md). Esto se muestra en un ejemplo a continuación.
+Puede utilizar este comando con un objeto list box para agregar mensajes de ayuda a las filas y celdas del list box. Por ejemplo, un objeto list box puede tener un mensaje de ayuda diferente por fila. En este caso, primero debe determinar la posición del cursor con el comando [LISTBOX GET CELL POSITION](../commands/listbox-get-cell-position). Esto se muestra en un ejemplo a continuación.
 
 Cuando aparece un mensaje de ayuda, llamando al comando **OBJECT SET HELP TIP** se cierra, abre un nuevo mensaje en la ubicación del ratón y reinicia el contador Tips duration, permitiendo el manejo dinámico de las sugerencias. 
 
 **Notas:** 
 
 * El contenido del mensaje de ayuda también se puede definir utilizando el editor de formularios (ver *Controles y ayuda a la entrada*) y el editor de estructura (ver *Propiedades de los campos*) en modo Diseño.
-* Los consejos de ayuda pueden desactivarse globalmente para la aplicación utilizando el selector Tips enabled del comando [SET DATABASE PARAMETER](set-database-parameter.md).
+* Los consejos de ayuda pueden desactivarse globalmente para la aplicación utilizando el selector Tips enabled del comando [SET DATABASE PARAMETER](../commands/set-database-parameter).
 
 ## Ejemplo 1 
 
@@ -147,8 +147,8 @@ El resultado es...
 
 ## Ver también 
 
-[OBJECT Get help tip](object-get-help-tip.md)  
-[SET DATABASE PARAMETER](set-database-parameter.md)  
+[OBJECT Get help tip](../commands/object-get-help-tip)  
+[SET DATABASE PARAMETER](../commands/set-database-parameter)  
 
 ## Propiedades
 

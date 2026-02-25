@@ -1,4 +1,4 @@
----
+﻿---
 id: delete-from-list
 title: DELETE FROM LIST
 slug: /commands/delete-from-list
@@ -53,8 +53,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[CLEAR LIST](clear-list.md)  
-[GET LIST ITEM](get-list-item.md)  
+[CLEAR LIST](../commands/clear-list)  
+[GET LIST ITEM](../commands/get-list-item)  
 
 ## プロパティ
 

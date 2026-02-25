@@ -1,4 +1,4 @@
----
+﻿---
 id: order-by-attribute
 title: ORDER BY ATTRIBUTE
 slug: /commands/order-by-attribute
@@ -56,11 +56,11 @@ Si la valeur d'un attribut de champ est **null** pour des enregistrements (c'est
 Vous pouvez trier la sélection sur un ou plusieurs niveaux. Pour chaque niveau de tri, vous précisez un *champObjet*, un *cheminAttribut* et un ordre de tri *\> ou <*. Si vous passez le symbole "plus grand que" (>), le tri sera ascendant. Si vous passez le symble "plus petit que" (<), le tri sera descendant. Si vous ne spécifiez pas d'ordre de tri, le tri sera ascendant par défaut.  
 Si un seul champ est précisé (un niveau de tri) et que celui-ci est indexé, l'index est utilisé pour le tri. Si le champ n'est pas indexé ou que vous utilisez plus d'un champ, le tri est exécuté séquentiellement.
 
-Pour les tris multiples (tris sur plusieurs champs), vous pouvez appeler la commande **ORDER BY ATTRIBUTE** autant de fois que nécessaire et utiliser le paramètre optionnel *\**, excepté pour le dernier appel de **ORDER BY ATTRIBUTE**, qui lance l'opération de tri. Cette fonctionnalité est utile pour la gestion du multi-tri dans des interfaces utilisateurs personnalisées. Notez que vous pouvez combiner les appels à la commande **ORDER BY ATTRIBUTE** avec les appels à la commande [ORDER BY](order-by.md).
+Pour les tris multiples (tris sur plusieurs champs), vous pouvez appeler la commande **ORDER BY ATTRIBUTE** autant de fois que nécessaire et utiliser le paramètre optionnel *\**, excepté pour le dernier appel de **ORDER BY ATTRIBUTE**, qui lance l'opération de tri. Cette fonctionnalité est utile pour la gestion du multi-tri dans des interfaces utilisateurs personnalisées. Notez que vous pouvez combiner les appels à la commande **ORDER BY ATTRIBUTE** avec les appels à la commande [ORDER BY](../commands/order-by).
 
 **Note :** Avec cette syntaxe, vous ne pouvez passer qu'un seul niveau de tri (champ) pour l'appel à **ORDER BY ATTRIBUTE**.
 
-Quelle que soit la façon dont le tri a été défini, si l'opération de tri doit prendre du temps, 4D affiche automatiquement un message avec thermomètre de progression. L'affichage de ce message peut être contrôlé grâce aux commandes [MESSAGES ON](messages-on.md) et [MESSAGES OFF](messages-off.md). Si le thermomètre de progression est affiché, l'utilisateur peut cliquer sur le bouton **Stop** pour interrompre le tri. Si le tri n'est pas interrompu, la variable OK passe à 1\. Sinon, si le tri est interrompu, la variable OK passe à 0 (zéro). 
+Quelle que soit la façon dont le tri a été défini, si l'opération de tri doit prendre du temps, 4D affiche automatiquement un message avec thermomètre de progression. L'affichage de ce message peut être contrôlé grâce aux commandes [MESSAGES ON](../commands/messages-on) et [MESSAGES OFF](../commands/messages-off). Si le thermomètre de progression est affiché, l'utilisateur peut cliquer sur le bouton **Stop** pour interrompre le tri. Si le tri n'est pas interrompu, la variable OK passe à 1\. Sinon, si le tri est interrompu, la variable OK passe à 0 (zéro). 
 
 ## Exemple 
 

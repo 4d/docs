@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-header-and-footer
 title: QR GET HEADER AND FOOTER
 slug: /commands/qr-get-header-and-footer
@@ -77,7 +77,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[QR SET HEADER AND FOOTER](qr-set-header-and-footer.md)  
+[QR SET HEADER AND FOOTER](../commands/qr-set-header-and-footer)  
 
 ## プロパティ
 

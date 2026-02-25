@@ -1,4 +1,4 @@
----
+﻿---
 id: select-document
 title: Select document
 slug: /commands/select-document
@@ -46,7 +46,7 @@ Com este princípio, pode armazenar em memória a rota de acesso da pasta aberta
   
 Este mecanismo lhe permite memorizar até 32.000 rotas de acesso. Em Windows, cada rota se conserva apenas durante a sessão. Em Mac OS, as rotas são conservadas pelo sistema e permanecem armazenadas de uma sessão a outra.  
   
-Nota: este mecanismo é o mesmo que o utilizado pelo comando [Select folder](select-folder.md).. Os números das rotas de acesso memorizadas são compartidos por ambos comandos.  
+Nota: este mecanismo é o mesmo que o utilizado pelo comando [Select folder](../commands/select-folder).. Os números das rotas de acesso memorizadas são compartidos por ambos comandos.  
   
 Passe no parâmetro tiposArquivos os tipo(s) de arquivo(s) que podem ser selecionados na caixa de diálogo de abertura. Pode passar uma lista de vários tipos separados por um ";" (ponto e vírgula). Para cada tipo definido, uma fila será adicionada no menú de seleção do tipo da caixa de diálogo.  
 Em Mac OS, pode passar um tipo Mac OS clássico (TEXT, APPL, etc.), ou um tipo UTI (Uniform Tipo Identifier). Os tipos UTIs são definidos por Apple para cumprir com as necessidades de padronização de tipos de arquivos. Por exemplo, "public.text" é o tipo UTI dos arquivos de tipo texto. Para maior informação sobre UTIs, consulte o seguinte endereço: *https://developer.apple.com/library/ios/documentation/FileManagement/Conceptual/understanding\_utis/understand\_utis\_conc/understand\_utis\_conc.html*.
@@ -109,8 +109,8 @@ Se não for selecionado nenhum arquivo (por exemplo, se o usuário clicar no bot
 
 ## Ver também 
 
-[Open document](open-document.md)  
-[Select folder](select-folder.md)  
+[Open document](../commands/open-document)  
+[Select folder](../commands/select-folder)  
 
 ## Propriedades
 

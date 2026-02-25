@@ -1,4 +1,4 @@
----
+﻿---
 id: web-send-raw-data
 title: WEB SEND RAW DATA
 slug: /commands/web-send-raw-data
@@ -69,7 +69,7 @@ Location: http://...
  End if
 ```
 
-新しい[WEB GET HTTP BODY](web-get-http-body.md)コマンド や "Webサーバ" テーマの他のコマンドと組み合わせると、このコマンドは4Dデベロッパが利用できるツールの範囲を完成させます。これは、新旧のHTTP接続の処理を全体的にカスタマイズするためのものです。これら異なるツールを以下の図に表します。
+新しい[WEB GET HTTP BODY](../commands/web-get-http-body)コマンド や "Webサーバ" テーマの他のコマンドと組み合わせると、このコマンドは4Dデベロッパが利用できるツールの範囲を完成させます。これは、新旧のHTTP接続の処理を全体的にカスタマイズするためのものです。これら異なるツールを以下の図に表します。
 
 ![](../../assets/en/commands/pict856016.en.png)
 
@@ -91,8 +91,8 @@ Location: http://...
 
 ## 参照 
 
-[WEB GET HTTP BODY](web-get-http-body.md)  
-[WEB GET HTTP HEADER](web-get-http-header.md)  
+[WEB GET HTTP BODY](../commands/web-get-http-body)  
+[WEB GET HTTP HEADER](../commands/web-get-http-header)  
 
 ## プロパティ
 

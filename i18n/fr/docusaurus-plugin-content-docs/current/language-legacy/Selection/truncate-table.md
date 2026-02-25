@@ -1,4 +1,4 @@
----
+﻿---
 id: truncate-table
 title: TRUNCATE TABLE
 slug: /commands/truncate-table
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.TRUNCATE TABLE.Summary-->La commande **TRUNCATE TABLE** supprime tous les enregistrements de *laTable* de façon très rapide.<!-- END REF--> Après l’appel de la commande, il n’y a plus de sélection courante ni d’enregistrement courant.
 
-L’effet de cette commande est semblable à celui d’une séquence [ALL RECORDS](all-records.md) / [DELETE SELECTION](delete-selection.md), toutefois son fonctionnement diffère sur les points suivants :
+L’effet de cette commande est semblable à celui d’une séquence [ALL RECORDS](../commands/all-records) / [DELETE SELECTION](../commands/delete-selection), toutefois son fonctionnement diffère sur les points suivants :
 
 * Le trigger éventuel n'est pas appelé.
 * L’intégrité référentielle des données n’est pas contrôlée.
@@ -50,7 +50,7 @@ Si la commande a été correctement exécutée, la variable système OK prend la
 
 ## Voir aussi 
 
-[DELETE SELECTION](delete-selection.md)  
+[DELETE SELECTION](../commands/delete-selection)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: mobile-app-refresh-sessions
 title: MOBILE APP REFRESH SESSIONS
 slug: /commands/mobile-app-refresh-sessions
@@ -34,7 +34,7 @@ The command checks the compliance of each session file in the MobileApps folder 
 
 If a session file is not valid or has been deleted, the corresponding session is removed from memory.
 
-The command can return one of the following errors, that can be handled through [ON ERR CALL](on-err-call.md) and [Last errors](../commands/last-errors)  commands:
+The command can return one of the following errors, that can be handled through [ON ERR CALL](../commands/on-err-call) and [Last errors](../commands/last-errors)  commands:
 
 | **Component name** | **Error code** | **Description**                                                |
 | ------------------ | -------------- | -------------------------------------------------------------- |
@@ -56,7 +56,7 @@ You want to reset all current sessions for all mobile applications:
 
 ## See also 
 
-[On Mobile App Authentication database method](on-mobile-app-authentication-database-method.md)  
+[On Mobile App Authentication database method](../commands/on-mobile-app-authentication-database-method)  
 
 ## Properties
 

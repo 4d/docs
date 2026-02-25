@@ -1,4 +1,4 @@
----
+﻿---
 id: new-process
 title: New process
 slug: /commands/new-process
@@ -45,7 +45,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New process.Summary-->The **New process** command starts a new process (on the same machine) and returns the process number for that process.<!-- END REF-->
 
-If the process could not be created (for example, if there is not enough memory), **New process** returns zero (0) and an error is generated. You can catch this error using an error-handling method installed using [ON ERR CALL](on-err-call.md).
+If the process could not be created (for example, if there is not enough memory), **New process** returns zero (0) and an error is generated. You can catch this error using an error-handling method installed using [ON ERR CALL](../commands/on-err-call).
 
 ### Process Method 
 
@@ -92,7 +92,7 @@ Given the following project method:
  Until(OK=0)
 ```
 
-If you attach this project method to a custom menu item **Menu Bar Editor** window whose **Start a New Process** property is set, 4D will automatically start a new process running that method. The call [SET MENU BAR](set-menu-bar.md)(1) adds a menu bar to the new process. In the absence of any window (that you could open with [Open window](../commands/open-window)), the call to [ADD RECORD](add-record.md) will automatically open one.
+If you attach this project method to a custom menu item **Menu Bar Editor** window whose **Start a New Process** property is set, 4D will automatically start a new process running that method. The call [SET MENU BAR](../commands/set-menu-bar)(1) adds a menu bar to the new process. In the absence of any window (that you could open with [Open window](../commands/open-window)), the call to [ADD RECORD](../commands/add-record) will automatically open one.
 
 To be able to start this Add Customers process when you click on a button in a custom control panel, you can write:
 
@@ -124,7 +124,7 @@ In the Menu Bar editor, you replace the method ADD CUSTOMERS with the method STA
 
 ## See also 
 
-[Execute on server](execute-on-server.md)  
+[Execute on server](../commands/execute-on-server)  
 [Preemptive processes](../../Develop/preemptive.md)  
 [Processes](../../Develop/processes.md)  
 

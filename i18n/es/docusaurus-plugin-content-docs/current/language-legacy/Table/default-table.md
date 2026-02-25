@@ -1,4 +1,4 @@
----
+﻿---
 id: default-table
 title: DEFAULT TABLE
 slug: /commands/default-table
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.DEFAULT TABLE.Summary-->**Tip:** aunque utilizar **DEFAULT TABLE** y omitir el nombre de la tabla pueden hacer el código más fácil de leer, muchos programadores consideran que la utilización de este comando en realidad trae más inconvenientes que ventajas.<!-- END REF--> En particular, note que [DEFAULT TABLE](default-table.md) es prioritario cuando utiliza por ejemplo el comando [DIALOG](../commands/dialog) con un formulario proyecto y hay un formulario de la tabla por defecto con el mismo nombre.
+<!--REF #_command_.DEFAULT TABLE.Summary-->**Tip:** aunque utilizar **DEFAULT TABLE** y omitir el nombre de la tabla pueden hacer el código más fácil de leer, muchos programadores consideran que la utilización de este comando en realidad trae más inconvenientes que ventajas.<!-- END REF--> En particular, note que [DEFAULT TABLE](../commands/default-table) es prioritario cuando utiliza por ejemplo el comando [DIALOG](../commands/dialog) con un formulario proyecto y hay un formulario de la tabla por defecto con el mismo nombre.
 
 **DEFAULT TABLE** define *tabla* como la tabla por defecto para el proceso actual. 
 
@@ -34,7 +34,7 @@ Si \[Tabla\] fue definida previamente como la tabla por defecto el mismo comando
 ```
 
   
-Una de las razones para definir la tabla por defecto es crear código que no sea específico para una tabla. Esto permite operar el mismo código para diferentes tablas. También puede utilizar punteros hacia tablas para escribir código que no se específico de tablas. Para mayor información sobre esta técnica, vea la descripción del comando [Table name](table-name.md).
+Una de las razones para definir la tabla por defecto es crear código que no sea específico para una tabla. Esto permite operar el mismo código para diferentes tablas. También puede utilizar punteros hacia tablas para escribir código que no se específico de tablas. Para mayor información sobre esta técnica, vea la descripción del comando [Table name](../commands/table-name).
 
 **DEFAULT TABLE** no permite la omisión de nombres de tablas cuando se refiere a los campos. Por ejemplo:
 
@@ -76,8 +76,8 @@ En este código se especifica el resultado de la tabla por defecto:
 
 ## Ver también 
 
-[Current default table](current-default-table.md)  
-[NO DEFAULT TABLE](no-default-table.md)  
+[Current default table](../commands/current-default-table)  
+[NO DEFAULT TABLE](../commands/no-default-table)  
 
 ## Propiedades
 

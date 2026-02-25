@@ -1,4 +1,4 @@
----
+﻿---
 id: load-set
 title: LOAD SET
 slug: /commands/load-set
@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.LOAD SET.Summary-->**LOAD SET** loads a set from *document* that was saved with the [SAVE SET](save-set.md) command.<!-- END REF-->
+<!--REF #_command_.LOAD SET.Summary-->**LOAD SET** loads a set from *document* that was saved with the [SAVE SET](../commands/save-set) command.<!-- END REF-->
 
 The set that is stored in *document* must be from *aTable*. The set created in memory is overwritten if it already exists.
 
@@ -43,7 +43,7 @@ If the user clicks Cancel in the Open File dialog box, or there is an error duri
 
 ## See also 
 
-[SAVE SET](save-set.md)  
+[SAVE SET](../commands/save-set)  
 
 ## Properties
 

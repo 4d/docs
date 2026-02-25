@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-rgb-colors
 title: OBJECT GET RGB COLORS
 slug: /commands/object-get-rgb-colors
@@ -43,11 +43,11 @@ Los valores de colores RGB devueltos en los parámetros a *colorPrimerPlano*, *c
 * si se pasa un parámetro de tipo texto, el color se devuelve en formato CSS con la sintaxis "#rrggbb" (por ejemplo: "# 0000FF")
 * Si se pasa un parámetro de tipo [entero largo](# "Entre -2 millardos y +2 millardos"), el color puede ser un entero largo de 4 bytes del formato (0x00RRGGBB) o valores negativos correspondientes a los colores del "sistema".
 
-Para obtener más información acerca del formato de los parámetros *colorPrimerPlano*, *colorFondo* y *colorFondoAlt*, consulte la descripción del comando [OBJECT SET RGB COLORS](object-set-rgb-colors.md).
+Para obtener más información acerca del formato de los parámetros *colorPrimerPlano*, *colorFondo* y *colorFondoAlt*, consulte la descripción del comando [OBJECT SET RGB COLORS](../commands/object-set-rgb-colors).
 
 ## Ver también 
 
-[OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
+[OBJECT SET RGB COLORS](../commands/object-set-rgb-colors)  
 
 ## Propiedades
 

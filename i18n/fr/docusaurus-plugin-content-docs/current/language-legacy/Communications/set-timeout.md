@@ -1,4 +1,4 @@
----
+﻿---
 id: set-timeout
 title: SET TIMEOUT
 slug: /commands/set-timeout
@@ -17,19 +17,19 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.SET TIMEOUT.Summary-->La commande **SET TIMEOUT** vous permet de définir le temps d'attente maximum pour l'exécution d'une commande de communication série.<!-- END REF--> Si la commande ne se termine pas dans le temps *secondes* qui lui est imparti, la communication série est annulée, l'erreur –9990 est générée, et la variable système OK prend la valeur 0\. Vous pouvez intercepter cette erreur à l'aide d'une méthode installée par la commande [ON ERR CALL](on-err-call.md).
+<!--REF #_command_.SET TIMEOUT.Summary-->La commande **SET TIMEOUT** vous permet de définir le temps d'attente maximum pour l'exécution d'une commande de communication série.<!-- END REF--> Si la commande ne se termine pas dans le temps *secondes* qui lui est imparti, la communication série est annulée, l'erreur –9990 est générée, et la variable système OK prend la valeur 0\. Vous pouvez intercepter cette erreur à l'aide d'une méthode installée par la commande [ON ERR CALL](../commands/on-err-call).
 
 Notez que le délai défini représente la durée totale permise pour que la commande s'exécute, et non le délai d'attente entre chaque caractère reçu. Pour annuler un paramétrage précédent et ne pas spécifier de temps d'attente maximum, passez 0 dans le paramètre *secondes*.
 
 Les commandes de communication série affectées par ce paramétrage sont les suivantes :
 
-* [RECEIVE PACKET](receive-packet.md)
-* [RECEIVE RECORD](receive-record.md)
-* [RECEIVE VARIABLE](receive-variable.md)
+* [RECEIVE PACKET](../commands/receive-packet)
+* [RECEIVE RECORD](../commands/receive-record)
+* [RECEIVE VARIABLE](../commands/receive-variable)
 
 ## Exemple 
 
-L'exemple suivant fixe le port série devant recevoir des données et le timeout. Les données sont lues à l'aide de [RECEIVE PACKET](receive-packet.md). Si les données ne sont pas bien reçues dans le temps défini, une erreur survient :
+L'exemple suivant fixe le port série devant recevoir des données et le timeout. Les données sont lues à l'aide de [RECEIVE PACKET](../commands/receive-packet). Si les données ne sont pas bien reçues dans le temps défini, une erreur survient :
 
 ```4d
   // Ouverture du port série
@@ -46,11 +46,11 @@ L'exemple suivant fixe le port série devant recevoir des données et le timeout
 
 ## Voir aussi 
 
-[ON ERR CALL](on-err-call.md)  
-[RECEIVE BUFFER](receive-buffer.md)  
-[RECEIVE PACKET](receive-packet.md)  
-[RECEIVE RECORD](receive-record.md)  
-[RECEIVE VARIABLE](receive-variable.md)  
+[ON ERR CALL](../commands/on-err-call)  
+[RECEIVE BUFFER](../commands/receive-buffer)  
+[RECEIVE PACKET](../commands/receive-packet)  
+[RECEIVE RECORD](../commands/receive-record)  
+[RECEIVE VARIABLE](../commands/receive-variable)  
 
 ## Propriétés
 

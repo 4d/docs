@@ -1,4 +1,4 @@
----
+﻿---
 id: modify-record
 title: MODIFY RECORD
 slug: /commands/modify-record
@@ -25,19 +25,19 @@ The form is displayed in the frontmost window of the process. The window has scr
 To use **MODIFY RECORD**, the current record must have read-write access and should not be locked.  
 If the form contains buttons for moving within the selection of records, **MODIFY RECORD** lets the user click the buttons to modify records and move to other records.
 
-The record is saved (accepted) if the user clicks an Accept button or presses the Enter key (numeric key pad), or if the [ACCEPT](accept.md) command is executed. 
+The record is saved (accepted) if the user clicks an Accept button or presses the Enter key (numeric key pad), or if the [ACCEPT](../commands/accept) command is executed. 
 
-The record is not saved (canceled) if the user clicks a Cancel button or presses the cancel key combination (Ctrl-Period on Windows, Command-Period on Macintosh), or if the [CANCEL](cancel.md) command is executed. Even when canceled, the record remains in memory and can be saved if [SAVE RECORD](save-record.md) is executed before the current record pointer is changed. 
+The record is not saved (canceled) if the user clicks a Cancel button or presses the cancel key combination (Ctrl-Period on Windows, Command-Period on Macintosh), or if the [CANCEL](../commands/cancel) command is executed. Even when canceled, the record remains in memory and can be saved if [SAVE RECORD](../commands/save-record) is executed before the current record pointer is changed. 
 
 After a call to **MODIFY RECORD**, OK is set to 1 if the record is accepted, to 0 if canceled.
 
-**Note:** Even when canceled, the record remains in memory and can be saved if [SAVE RECORD](save-record.md) is executed before the current record pointer is changed. 
+**Note:** Even when canceled, the record remains in memory and can be saved if [SAVE RECORD](../commands/save-record) is executed before the current record pointer is changed. 
 
 If you are using **MODIFY RECORD** and the user does not change any of the data in the record, the record is not considered to be modified, and accepting the record does not cause it to be saved again. Actions such as changing variables, checking check boxes, and selecting radio buttons do not qualify as modifications. Only changing data in a field, either through data entry or through a method, causes the record to be saved.
 
 ## Example 
 
-See example for the [ADD RECORD](add-record.md) command.
+See example for the [ADD RECORD](../commands/add-record) command.
 
 ## System variables and sets 
 
@@ -45,11 +45,11 @@ Accepting the record sets the OK system variable to 1; canceling it sets the OK 
 
 ## See also 
 
-[ADD RECORD](add-record.md)  
-[Locked](locked.md)  
-[Modified record](modified-record.md)  
-[READ WRITE](read-write.md)  
-[UNLOAD RECORD](unload-record.md)  
+[ADD RECORD](../commands/add-record)  
+[Locked](../commands/locked)  
+[Modified record](../commands/modified-record)  
+[READ WRITE](../commands/read-write)  
+[UNLOAD RECORD](../commands/unload-record)  
 
 ## Properties
 

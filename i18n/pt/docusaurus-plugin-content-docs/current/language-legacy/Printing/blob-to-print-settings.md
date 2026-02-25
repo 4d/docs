@@ -1,4 +1,4 @@
----
+﻿---
 id: blob-to-print-settings
 title: BLOB to print settings
 slug: /commands/blob-to-print-settings
@@ -29,16 +29,16 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.BLOB to print settings.Summary-->O comando **BLOB to print settings** substitui a configuração de impressão 4D atual pelos parâmetros armazenados no BLOB *confImpr*.<!-- END REF--> Este BLOB deve ter sido gerado pelo comando [Print settings to BLOB](print-settings-to-blob.md) ou pelo comando 4D Pack  4D Pack (ver abaixo).
+<!--REF #_command_.BLOB to print settings.Summary-->O comando **BLOB to print settings** substitui a configuração de impressão 4D atual pelos parâmetros armazenados no BLOB *confImpr*.<!-- END REF--> Este BLOB deve ter sido gerado pelo comando [Print settings to BLOB](../commands/print-settings-to-blob) ou pelo comando 4D Pack  4D Pack (ver abaixo).
 
 O parâmetro *params* lhe permite definir como manejar o "número de cópias" e os ajustes básicos de "intervalo de páginas":
 
 * Se passa 0 ou omite este parâmetro, os valores armazenados no BLOB são restaurados,
 * Se passa 1, os valores se restabelecem aos valores predeterminados: o número de cópias se estabelecem em 1 e o intervalo de páginas se estabelece em "todas as páginas".
 
-Os ajustes de impressão são aplicadas [ às configurações de impressão 4D](../../settings/compatibility.md), sempre e cuando nenhum comando como *\_o\_PAGE SETUP*, [SET PRINT OPTION](set-print-option.md) ou [PRINT SELECTION](print-selection.md) sem o parâmetro > os modifique. O conjunto de parâmetros se utiliza particularmente para os comandos [PRINT SELECTION](print-selection.md), [PRINT LABEL](print-label.md), [PRINT RECORD](print-record.md), [Print form](../commands/print-form) e [QR REPORT](qr-report.md), assim como para os comandos de menu de 4D, incluindo as do ambiente Desenho.
+Os ajustes de impressão são aplicadas [ às configurações de impressão 4D](../../settings/compatibility.md), sempre e cuando nenhum comando como *\_o\_PAGE SETUP*, [SET PRINT OPTION](../commands/set-print-option) ou [PRINT SELECTION](../commands/print-selection) sem o parâmetro > os modifique. O conjunto de parâmetros se utiliza particularmente para os comandos [PRINT SELECTION](../commands/print-selection), [PRINT LABEL](../commands/print-label), [PRINT RECORD](../commands/print-record), [Print form](../commands/print-form) e [QR REPORT](../commands/qr-report), assim como para os comandos de menu de 4D, incluindo as do ambiente Desenho.
 
-Os comandos [PRINT SELECTION](print-selection.md), [PRINT LABEL](print-label.md) e [PRINT RECORD](print-record.md) devem ser chamados com o parâmetro *\>* (se aplicado) para que os parâmetros definidos por **BLOB to print settings** se mantenham.
+Os comandos [PRINT SELECTION](../commands/print-selection), [PRINT LABEL](../commands/print-label) e [PRINT RECORD](../commands/print-record) devem ser chamados com o parâmetro *\>* (se aplicado) para que os parâmetros definidos por **BLOB to print settings** se mantenham.
 
 O comando devolve um dos seguintes códigos de estado:
 
@@ -57,7 +57,7 @@ Quando for utilizada em um ambiente heterogêneo, com o fim de restaurar a máxi
 
 ### Compatibilidade com comandos 4D Pack 
 
-Os ajustes de impressão BLOB gerados pelo comando  legacy 4D podem ser carregados e utilizados pelo comando **BLOB to print settings**. Lembre que se são salvos por [Print settings to BLOB](print-settings-to-blob.md), são convertidos e não serão abertos mais por . O comando**BLOB to print settings** armazena mais informação sobre a impressão que . 
+Os ajustes de impressão BLOB gerados pelo comando  legacy 4D podem ser carregados e utilizados pelo comando **BLOB to print settings**. Lembre que se são salvos por [Print settings to BLOB](../commands/print-settings-to-blob), são convertidos e não serão abertos mais por . O comando**BLOB to print settings** armazena mais informação sobre a impressão que . 
 
 ## Exemplo 
 
@@ -85,7 +85,7 @@ Se quiser aplicar a configuração de impressão salva no disco para o contexto 
 
 ## Ver também 
 
-[Print settings to BLOB](print-settings-to-blob.md)  
+[Print settings to BLOB](../commands/print-settings-to-blob)  
 
 ## Propriedades
 

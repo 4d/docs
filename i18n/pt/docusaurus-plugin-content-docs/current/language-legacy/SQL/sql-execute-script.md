@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-execute-script
 title: SQL EXECUTE SCRIPT
 slug: /commands/sql-execute-script
@@ -37,7 +37,7 @@ Este comando apenas pode ser executado em uma máquina local (4D local ou proced
   
 Passe no parâmetro *rotaScript* a rota de acesso completa do arquivo texto que contém as instruções SQL a executar. A rota de acesso deve ser expressa utilizando a sintaxe do Sistema atual. Se passa uma string vazia ("") em *rotaScript*, uma caixa de diálogo é mostrada de abertura padrão de maneira que o usuário possa selecionar o arquivo de script a executar.  
   
-**Nota:** os comandos [SQL EXPORT DATABASE](sql-export-database.md) e [SQL EXPORT SELECTION](sql-export-selection.md) geram automaticamente este arquivo de script.  
+**Nota:** os comandos [SQL EXPORT DATABASE](../commands/sql-export-database) e [SQL EXPORT SELECTION](../commands/sql-export-selection) geram automaticamente este arquivo de script.  
   
 O parâmetro *açãoErro* é utilizado para configurar o funcionamento do comando quando ocurre um erro durante a execução do script. Pode passar uma das seguintes três constantes, localizadas no tema*SQL*:  
 
@@ -55,7 +55,7 @@ Os parâmetros *nomAtrib* e *valAtrib* devem ser passados em pares. Estes parâm
 | SQL use access rights | Cadeia | SQL\_Use\_Access\_Rights | Permite restringir os direitos de acesso a aplicar durante a execução dos comandos SQL do script. Quando utilizar este atributo, deve passar 0 ou 1 em *attribValue*: *attribValue* \= 1: 4D utiliza os direitos de acesso de usuário 4D atual. *attribValue* \= 0 (ou atributo não definido): 4D não restringe o acesso, são utilizados os direitos do Designer. |
   
   
-Se o arquivo de registro de pedidos de 4D estiver ativo (através dos seletores 28 ou 45 do comando [SET DATABASE PARAMETER](set-database-parameter.md)), cada comando SQL executado gerará uma entrada com a seguinte informação:  
+Se o arquivo de registro de pedidos de 4D estiver ativo (através dos seletores 28 ou 45 do comando [SET DATABASE PARAMETER](../commands/set-database-parameter)), cada comando SQL executado gerará uma entrada com a seguinte informação:  
   
 Tipo de comando SQL  
 * Número de registros afetados pelo comando

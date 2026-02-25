@@ -1,4 +1,4 @@
----
+﻿---
 id: insert-in-array
 title: INSERT IN ARRAY
 slug: /commands/insert-in-array
@@ -56,8 +56,8 @@ El siguiente ejemplo añade un elemento a un array:
 
 ## Ver también 
 
-[DELETE FROM ARRAY](delete-from-array.md)  
-[Size of array](size-of-array.md)  
+[DELETE FROM ARRAY](../commands/delete-from-array)  
+[Size of array](../commands/size-of-array)  
 
 ## Propiedades
 

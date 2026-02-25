@@ -1,4 +1,4 @@
----
+﻿---
 id: web-is-secured-connection
 title: WEB Is secured connection
 slug: /commands/web-is-secured-connection
@@ -33,13 +33,13 @@ displayed_sidebar: docs
 * Si la conexión se realiza en TLS o SSL, la función devuelve True.
 * Si la conexión se realiza en modo no seguro, la función devuelve False.
 
-**Nota:** para mayor información sobre el protocolo SSL, consulte la sección [WEB SERVICE SET PARAMETER](web-service-set-parameter.md). 
+**Nota:** para mayor información sobre el protocolo SSL, consulte la sección [WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter). 
 
 Este comando permite, por ejemplo, rechazar los intentos de conexión en modo no seguro. 
 
 ## Ver también 
 
-[GENERATE CERTIFICATE REQUEST](generate-certificate-request.md)  
+[GENERATE CERTIFICATE REQUEST](../commands/generate-certificate-request)  
 
 ## Propiedades
 

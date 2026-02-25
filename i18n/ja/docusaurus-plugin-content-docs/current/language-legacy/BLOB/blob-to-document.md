@@ -1,4 +1,4 @@
----
+﻿---
 id: blob-to-document
 title: BLOB TO DOCUMENT
 slug: /commands/blob-to-document
@@ -59,9 +59,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Create document](create-document.md)  
-[DOCUMENT TO BLOB](document-to-blob.md)  
-[Open document](open-document.md)  
+[Create document](../commands/create-document)  
+[DOCUMENT TO BLOB](../commands/document-to-blob)  
+[Open document](../commands/open-document)  
 
 ## プロパティ
 

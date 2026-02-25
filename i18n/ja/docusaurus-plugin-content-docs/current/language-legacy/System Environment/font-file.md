@@ -1,4 +1,4 @@
----
+﻿---
 id: font-file
 title: Font file
 slug: /commands/font-file
@@ -59,7 +59,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT SET FONT](object-set-font.md)  
+[OBJECT SET FONT](../commands/object-set-font)  
 
 ## プロパティ
 

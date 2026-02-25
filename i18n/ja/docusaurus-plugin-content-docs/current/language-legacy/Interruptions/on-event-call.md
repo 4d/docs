@@ -1,4 +1,4 @@
----
+﻿---
 id: on-event-call
 title: ON EVENT CALL
 slug: /commands/on-event-call
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 **Tip:** このコマンドの使用には、上級のプログラミング知識が必要です。通常、イベントを用いて作業を実行する際に、**ON EVENT CALL** コマンドを使用する必要はありません。フォームの使用において、イベントは4Dによって管理され、適切なフォームやオブジェクトにイベントが送信されます。
 
-**Tip:** [MOUSE POSITION](mouse-position.md)や[Shift down](shift-down.md)等のコマンドを使用して、イベントに関する情報を取得できます。これらのコマンドをオブジェクトメソッドでコールし、オブジェクトに関連するイベントについての必要な情報を取得することができます。これらのコマンドにより、**ON EVENT CALL** コマンドをもとにしたアルゴリズムを作成する必要がなくなります。
+**Tip:** [MOUSE POSITION](../commands/mouse-position)や[Shift down](../commands/shift-down)等のコマンドを使用して、イベントに関する情報を取得できます。これらのコマンドをオブジェクトメソッドでコールし、オブジェクトに関連するイベントについての必要な情報を取得することができます。これらのコマンドにより、**ON EVENT CALL** コマンドをもとにしたアルゴリズムを作成する必要がなくなります。
 
 このコマンドのスコープは、現在の作業セッションです。デフォルトで、別々のローカルプロセス内でメソッドが実行されます。いちどに1つのイベント処理メソッドだけを使用できます。メソッドを用いたイベントの検知を中止するには、*eventMethod*に空の文字列を指定して再度**ON EVENT CALL** コマンドをコールします。
 
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 イベント処理メソッドでは以下のシステム変数を読み取ることができます: MouseDown, KeyCode, Modifiers, MouseX, MouseY, そして MouseProc。これらの変数がプロセス変数であるという点に注意してください。したがって、変数のスコープはイベント処理プロセス内です。別のプロセスでこれらの値が必要な場合、インタープロセス変数へコピーしてください。
 
 * システム変数MouseDownには、イベントがマウスクリックである場合には1が、それ以外の場合には0が代入されます。
-* システム変数KeyCodeには、押されたキーのコードが代入されます。この変数は文字コードまたはファンクションキーコードを返します。これらのコードは*Unicodeコード*、[EXPORT TEXT](export-text.md)(さらにそのサブセクション)、および*ファンクションキーコード*の節にリストがあります。4Dは主要な文字コードとファンクションキーコードにたいして定義済みの定数があります。エクスプローラウィンドウでこれらの定数のテーマを参照してください。
+* システム変数KeyCodeには、押されたキーのコードが代入されます。この変数は文字コードまたはファンクションキーコードを返します。これらのコードは*Unicodeコード*、[EXPORT TEXT](../commands/export-text)(さらにそのサブセクション)、および*ファンクションキーコード*の節にリストがあります。4Dは主要な文字コードとファンクションキーコードにたいして定義済みの定数があります。エクスプローラウィンドウでこれらの定数のテーマを参照してください。
 * システム変数Modifiersには、モデファイアキーの値が入ります。システム変数Modifiersはイベントが発生した時点でモディファイアキーが押されていたかどうかを示します。検知できるのは以下のキーです:  
 
 | **プラットフォーム** | モディファイア                                                        |  
@@ -112,10 +112,10 @@ Ctrl+ピリオドが押されると、イベント処理メソッド内で*<>vbW
 
 ## 参照 
 
-[FILTER EVENT](filter-event.md)  
-[MOUSE POSITION](mouse-position.md)  
-[Method called on event](method-called-on-event.md)  
-[Shift down](shift-down.md)  
+[FILTER EVENT](../commands/filter-event)  
+[MOUSE POSITION](../commands/mouse-position)  
+[Method called on event](../commands/method-called-on-event)  
+[Shift down](../commands/shift-down)  
 
 ## プロパティ
 

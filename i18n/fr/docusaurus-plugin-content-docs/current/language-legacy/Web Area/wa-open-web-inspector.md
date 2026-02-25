@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-open-web-inspector
 title: WA OPEN WEB INSPECTOR
 slug: /commands/wa-open-web-inspector
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 ## Voir aussi 
 
 *Gestion programmée des zones Web*  
-[WA Run offscreen area](wa-run-offscreen-area.md)  
+[WA Run offscreen area](../commands/wa-run-offscreen-area)  
 
 ## Propriétés
 

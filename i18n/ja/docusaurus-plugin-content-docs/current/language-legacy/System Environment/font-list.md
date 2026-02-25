@@ -1,4 +1,4 @@
----
+﻿---
 id: font-list
 title: FONT LIST
 slug: /commands/font-list
@@ -42,7 +42,7 @@ displayed_sidebar: docs
 OS X環境下では、任意の *\** 引数を渡す事によって *fonts* 配列を作成し、フォントファミリーの名前ではなくフォント自身の名前を入れます。デフォルトの操作ではリッチテキストエリアのプログラムの管理を簡略化し、フォントファミリーを使用します。つまり *\** 引数を渡すと、"Arial"、 "Arial black" や "Arial narrow" といったフォントファミリー名ではなく、 "Arial bold"、 "Arial italic"、 "Arial narrow italic" といったフォント名が返されるようになります。  
 Windows 環境下では、 *\** 引数は何の効力も持ちません。渡したとしてもコマンドはフォントファミリー名を返します。
 
-**注:** Mac OS上で、このコマンドから返される結果をマルチスタイルテキストエリア内にて[ST SET ATTRIBUTES](st-set-attributes.md)コマンドで使用する場合、 *\** 引数を渡してはなりません(フォントファミリーはAttribute font name としてのみサポートされています)。この制約は4D Write Proエリア内では適用されません。4D Write Proエリアではフォントもフォントファミリー名も受け付けるからです。
+**注:** Mac OS上で、このコマンドから返される結果をマルチスタイルテキストエリア内にて[ST SET ATTRIBUTES](../commands/st-set-attributes)コマンドで使用する場合、 *\** 引数を渡してはなりません(フォントファミリーはAttribute font name としてのみサポートされています)。この制約は4D Write Proエリア内では適用されません。4D Write Proエリアではフォントもフォントファミリー名も受け付けるからです。
 
 ### スケーラブルフォントについて 
 
@@ -81,11 +81,11 @@ Windows環境下では、この原理は4D v15 R4から採用されています�
 
 ## 参照 
 
-[FONT STYLE LIST](font-style-list.md)  
+[FONT STYLE LIST](../commands/font-style-list)  
 *Font Type List*  
-[OBJECT SET FONT](object-set-font.md)  
-[SET RECENT FONTS](set-recent-fonts.md)  
-[ST SET ATTRIBUTES](st-set-attributes.md)  
+[OBJECT SET FONT](../commands/object-set-font)  
+[SET RECENT FONTS](../commands/set-recent-fonts)  
+[ST SET ATTRIBUTES](../commands/st-set-attributes)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: sax-open-xml-element-arrays
 title: SAX OPEN XML ELEMENT ARRAYS
 slug: /commands/sax-open-xml-element-arrays
@@ -33,9 +33,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAX OPEN XML ELEMENT ARRAYS.Summary-->O comando SAX OPEN XML ELEMENT ARRAYS permite adicionar um novo elemento no documento XML cuja referência se passa em document como também, opcionalmente, atributos e seus valores em forma de arrays.<!-- END REF-->  
 
-Exceto pela compatibilidade com arrays (ver a continuação), este comando es idêntico a [SAX OPEN XML ELEMENT](sax-open-xml-element.md). Por favor consulte a descrição deste comando para maior informação sobre seu funcionamento.  
+Exceto pela compatibilidade com arrays (ver a continuação), este comando es idêntico a [SAX OPEN XML ELEMENT](../commands/sax-open-xml-element). Por favor consulte a descrição deste comando para maior informação sobre seu funcionamento.  
   
-SAX OPEN XML ELEMENT ARRAYS aceita arrays de tipo data, numéricos, booleanos e imagem como parâmetros arrayValoresAtrib. 4D automaticamente realiza todas as conversões necessárias; pode configurar estas conversões utilizando o comando [XML SET OPTIONS](xml-set-options.md).  
+SAX OPEN XML ELEMENT ARRAYS aceita arrays de tipo data, numéricos, booleanos e imagem como parâmetros arrayValoresAtrib. 4D automaticamente realiza todas as conversões necessárias; pode configurar estas conversões utilizando o comando [XML SET OPTIONS](../commands/xml-set-options).  
   
 Opcionalmente, o comando SAX OPEN XML ELEMENT ARRAYS permite passar pares de atributos e de valores de atributos em forma de arrays nos parâmetros *arrayNomsAtrib e arrayValoresAtrib*.  
   
@@ -64,9 +64,9 @@ O método abaixo:
 
 ## Ver também 
 
-[SAX CLOSE XML ELEMENT](sax-close-xml-element.md)  
-[SAX OPEN XML ELEMENT](sax-open-xml-element.md)  
-[XML SET OPTIONS](xml-set-options.md)  
+[SAX CLOSE XML ELEMENT](../commands/sax-close-xml-element)  
+[SAX OPEN XML ELEMENT](../commands/sax-open-xml-element)  
+[XML SET OPTIONS](../commands/xml-set-options)  
 
 ## Propriedades
 

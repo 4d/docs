@@ -1,4 +1,4 @@
----
+﻿---
 id: get-menu-item
 title: Get menu item
 slug: /commands/get-menu-item
@@ -39,8 +39,8 @@ Si omite el parámetro *proceso*, Get menu item se aplica a la barra de menús d
 
 ## Ver también 
 
-[Get menu item key](get-menu-item-key.md)  
-[SET MENU ITEM](set-menu-item.md)  
+[Get menu item key](../commands/get-menu-item-key)  
+[SET MENU ITEM](../commands/set-menu-item)  
 
 ## Propiedades
 

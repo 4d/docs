@@ -1,4 +1,4 @@
----
+﻿---
 id: release-menu
 title: RELEASE MENU
 slug: /commands/release-menu
@@ -27,13 +27,13 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.RELEASE MENU.Summary-->El comando RELEASE MENU borra de la memoria el menú cuya referencia se pasa en *menu*.<!-- END REF-->. La regla es la siguiente: a cada [Create menu](create-menu.md) debe corresponder un [RELEASE MENU](release-menu.md). 
+<!--REF #_command_.RELEASE MENU.Summary-->El comando RELEASE MENU borra de la memoria el menú cuya referencia se pasa en *menu*.<!-- END REF-->. La regla es la siguiente: a cada [Create menu](../commands/create-menu) debe corresponder un [RELEASE MENU](../commands/release-menu). 
 
 El comando elimina todas las instancias de *menu* en todas las barras de menú y todos los procesos. Si el menú pertenece a una barra de menú en uso, continuará funcionando pero no podrá ser modificada. Sólo se borrará realmente de la memoria cuando la última barra de menús en la que aparezca no esté más en uso.
 
 Este comando puede utilizarse con menús usados como barras de menús.
 
-Los submenús utilizados por *menu* no se borran si fueron creados utilizando el comando [Create menu](create-menu.md). En este caso, debe eliminarlos individualmente (ver la regla mencionada anteriormente). Sin embargo, si los submenús vienen de la duplicación de un menú existente, no llame [RELEASE MENU](release-menu.md) con sus instancias porque 4D las borrará automáticamente.
+Los submenús utilizados por *menu* no se borran si fueron creados utilizando el comando [Create menu](../commands/create-menu). En este caso, debe eliminarlos individualmente (ver la regla mencionada anteriormente). Sin embargo, si los submenús vienen de la duplicación de un menú existente, no llame [RELEASE MENU](../commands/release-menu) con sus instancias porque 4D las borrará automáticamente.
 
 ## Ejemplo 
 
@@ -65,7 +65,7 @@ Este ejemplo muestra las diferentes formas de utilizar este comando:
 
 ## Ver también 
 
-[Create menu](create-menu.md)  
+[Create menu](../commands/create-menu)  
 
 ## Propiedades
 

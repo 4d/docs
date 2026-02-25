@@ -1,4 +1,4 @@
----
+﻿---
 id: blob-to-users
 title: BLOB TO USERS
 slug: /commands/blob-to-users
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.BLOB TO USERS.Summary-->El comando BLOB TO USERS remplaza las cuentas usuarios y los grupos presentes en el BLOB *usuarios* en la base actual.<!-- END REF--> El BLOB *usuarios* está encriptado y debe haber sido creado utilizando el comando [USERS TO BLOB](users-to-blob.md).
+<!--REF #_command_.BLOB TO USERS.Summary-->El comando BLOB TO USERS remplaza las cuentas usuarios y los grupos presentes en el BLOB *usuarios* en la base actual.<!-- END REF--> El BLOB *usuarios* está encriptado y debe haber sido creado utilizando el comando [USERS TO BLOB](../commands/users-to-blob).
 
 Sólo el Administrador o el Diseñador de la base pueden ejecutar este comando. Si otro usuario intenta ejecutarlo, el comando no hace nada y se genera un error de privilegio (-9949).
 
@@ -58,7 +58,7 @@ Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\.
 
 ## Ver también 
 
-[USERS TO BLOB](users-to-blob.md)  
+[USERS TO BLOB](../commands/users-to-blob)  
 
 ## Propiedades
 

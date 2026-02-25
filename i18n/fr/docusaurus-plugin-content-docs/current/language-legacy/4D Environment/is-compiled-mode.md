@@ -1,4 +1,4 @@
----
+﻿---
 id: is-compiled-mode
 title: Is compiled mode
 slug: /commands/is-compiled-mode
@@ -34,9 +34,9 @@ displayed_sidebar: docs
 Le paramètre facultatif *\** est utile dans le cadre d'une architecture utilisant des composants : il permet de déterminer la base (hôte ou composant) dont vous souhaitez connaître le mode d'exécution. 
 
 * Lorsque la commande est appelée depuis un composant :  
-   * si le paramètre *\** est passé, la commande retourne [True](true.md) ou [False](false.md) en fonction du mode d’exécution de la base hôte,  
-   * si le paramètre *\** n’est pas passé, la commande retourne [True](true.md) ou [False](false.md) en fonction du mode d’exécution du composant.
-* Lorsque la commande est appelée depuis une méthode d’une base hôte, elle retourne toujours [True](true.md) ou [False](false.md) en fonction du mode d’exécution de la base hôte.
+   * si le paramètre *\** est passé, la commande retourne [True](../commands/true) ou [False](../commands/false) en fonction du mode d’exécution de la base hôte,  
+   * si le paramètre *\** n’est pas passé, la commande retourne [True](../commands/true) ou [False](../commands/false) en fonction du mode d’exécution du composant.
+* Lorsque la commande est appelée depuis une méthode d’une base hôte, elle retourne toujours [True](../commands/true) ou [False](../commands/false) en fonction du mode d’exécution de la base hôte.
 
 ## Exemple 
 
@@ -52,8 +52,8 @@ Dans une de vos méthodes, vous avez placé du code pour déboguer la base lorsq
 
 ## Voir aussi 
 
-[IDLE](idle.md)  
-[Undefined](undefined.md)  
+[IDLE](../commands/idle)  
+[Undefined](../commands/undefined)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: get-process-variable
 title: GET PROCESS VARIABLE
 slug: /commands/get-process-variable
@@ -38,10 +38,10 @@ Pour chaque association *varSource;varDestination* les types des deux variables 
 Le process courant "pille" les variables du process de destination : ce dernier n'est averti en aucune manière de la lecture de l'instance de ses variables par un autre process.
 
 **4D Server :** A partir d'un 4D Client, vous pouvez lire des variables dans un process de destination exécuté sur le poste serveur (procédure stockée). Pour cela, passez dans *process* le numéro du process serveur en négatif, c'est-à-dire précédé du signe - (moins).   
-Attention, la communication process “intermachine” permise par les commandes **GET PROCESS VARIABLE**, [SET PROCESS VARIABLE](set-process-variable.md) et [VARIABLE TO VARIABLE](variable-to-variable.md) n’est possible que du client vers le serveur. C’est toujours un process client qui lit ou écrit les variables d’une procédure stockée.
+Attention, la communication process “intermachine” permise par les commandes **GET PROCESS VARIABLE**, [SET PROCESS VARIABLE](../commands/set-process-variable) et [VARIABLE TO VARIABLE](../commands/variable-to-variable) n’est possible que du client vers le serveur. C’est toujours un process client qui lit ou écrit les variables d’une procédure stockée.
 
 **Astuce :** Si vous ne connaissez pas le numéro du process serveur source, vous pouvez tout de même lire les variables interprocess du serveur. Pour cela, il vous suffit de passer toute valeur négative dans *process*. En d'autres termes, il n'est pas nécessaire de connaître précisément le numéro d'un process exécuté sur le serveur pour utiliser **GET PROCESS VARIABLE** avec les variables interprocess du serveur.   
-Cette possibilité s'avère particulièrement utile dans le cas d'une procédure stockée lancée sur le serveur par l'intermédiaire de la [On Server Startup database method](on-server-startup-database-method.md). Comme, par défaut, les postes clients ne connaissent pas le numéro de ce process serveur, il vous suffit de passer une valeur négative (n'importe laquelle) dans le paramètre *process*.
+Cette possibilité s'avère particulièrement utile dans le cas d'une procédure stockée lancée sur le serveur par l'intermédiaire de la [On Server Startup database method](../commands/on-server-startup-database-method). Comme, par défaut, les postes clients ne connaissent pas le numéro de ce process serveur, il vous suffit de passer une valeur négative (n'importe laquelle) dans le paramètre *process*.
 
 ### Restrictions 
 
@@ -56,7 +56,7 @@ En revanche, les variables de destination peuvent être interprocess, process ou
 
 Le process source doit être un process utilisateur, ce ne peut être un des process du moteur de 4D. Si le process source n'existe pas, la commande ne fait rien.
 
-**Note :** En mode interprété, si une variable source n'existe pas, la valeur indéfinie est retournée. Vous pouvez le détecter en testant la variable de destination correspondante à l'aide de la fonction [Type](type.md). 
+**Note :** En mode interprété, si une variable source n'existe pas, la valeur indéfinie est retournée. Vous pouvez le détecter en testant la variable de destination correspondante à l'aide de la fonction [Type](../commands/type). 
 
 ## Exemple 1 
 
@@ -124,10 +124,10 @@ Reportez-vous à l'exemple de la commande *\_o\_DRAG AND DROP PROPERTIES*.
 ## Voir aussi 
 
 *Introduction aux process*  
-[POST OUTSIDE CALL](post-outside-call.md)  
+[POST OUTSIDE CALL](../commands/post-outside-call)  
 *Présentation du Glisser-Déposer*  
-[SET PROCESS VARIABLE](set-process-variable.md)  
-[VARIABLE TO VARIABLE](variable-to-variable.md)  
+[SET PROCESS VARIABLE](../commands/set-process-variable)  
+[VARIABLE TO VARIABLE](../commands/variable-to-variable)  
 
 ## Propriétés
 

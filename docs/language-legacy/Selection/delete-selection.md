@@ -1,4 +1,4 @@
----
+﻿---
 id: delete-selection
 title: DELETE SELECTION
 slug: /commands/delete-selection
@@ -60,11 +60,11 @@ If a locked record is encountered during the execution of **DELETE SELECTION**, 
 
 ## See also 
 
-[DISPLAY SELECTION](display-selection.md)  
-[MODIFY SELECTION](modify-selection.md)  
+[DISPLAY SELECTION](../commands/display-selection)  
+[MODIFY SELECTION](../commands/modify-selection)  
 *Record Locking*  
 *Sets*  
-[TRUNCATE TABLE](truncate-table.md)  
+[TRUNCATE TABLE](../commands/truncate-table)  
 
 ## Properties
 

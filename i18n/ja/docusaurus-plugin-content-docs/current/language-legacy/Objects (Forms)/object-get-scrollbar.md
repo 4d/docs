@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-scrollbar
 title: OBJECT GET SCROLLBAR
 slug: /commands/object-get-scrollbar
@@ -52,11 +52,11 @@ displayed_sidebar: docs
 * リストボックス
 * 階層リスト
 * サブフォーム
-より詳細な情報に関しては、[OBJECT SET SCROLLBAR](object-set-scrollbar.md)コマンドの説明を参照して下さい。
+より詳細な情報に関しては、[OBJECT SET SCROLLBAR](../commands/object-set-scrollbar)コマンドの説明を参照して下さい。
 
 ## 参照 
 
-[OBJECT SET SCROLLBAR](object-set-scrollbar.md)  
+[OBJECT SET SCROLLBAR](../commands/object-set-scrollbar)  
 
 ## プロパティ
 

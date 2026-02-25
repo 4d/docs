@@ -1,4 +1,4 @@
----
+﻿---
 id: cache-info
 title: Cache info
 slug: /commands/cache-info
@@ -64,7 +64,7 @@ Se quiser obter informação da cache do banco de dados e todos os componentes a
 
 ## Ver também 
 
-[MEMORY STATISTICS](memory-statistics.md)  
+[MEMORY STATISTICS](../commands/memory-statistics)  
 
 ## Propriedades
 

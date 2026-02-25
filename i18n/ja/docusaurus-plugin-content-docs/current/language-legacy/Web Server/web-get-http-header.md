@@ -1,4 +1,4 @@
----
+﻿---
 id: web-get-http-header
 title: WEB GET HTTP HEADER
 slug: /commands/web-get-http-header
@@ -126,8 +126,8 @@ HTTP標準に準拠するには、フィールド名を常に英語で記述し�
 
 ## 参照 
 
-[WEB GET HTTP BODY](web-get-http-body.md)  
-[WEB SET HTTP HEADER](web-set-http-header.md)  
+[WEB GET HTTP BODY](../commands/web-get-http-body)  
+[WEB SET HTTP HEADER](../commands/web-set-http-header)  
 
 ## プロパティ
 

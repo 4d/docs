@@ -1,4 +1,4 @@
----
+﻿---
 id: form-first-page
 title: FORM FIRST PAGE
 slug: /commands/form-first-page
@@ -39,11 +39,11 @@ Cet exemple est une méthode appelée par une commande de menu. Elle affiche la 
 
 ## Voir aussi 
 
-[FORM Get current page](form-get-current-page.md)  
-[FORM GOTO PAGE](form-goto-page.md)  
-[FORM LAST PAGE](form-last-page.md)  
-[FORM NEXT PAGE](form-next-page.md)  
-[FORM PREVIOUS PAGE](form-previous-page.md)  
+[FORM Get current page](../commands/form-get-current-page)  
+[FORM GOTO PAGE](../commands/form-goto-page)  
+[FORM LAST PAGE](../commands/form-last-page)  
+[FORM NEXT PAGE](../commands/form-next-page)  
+[FORM PREVIOUS PAGE](../commands/form-previous-page)  
 
 ## Propriétés
 

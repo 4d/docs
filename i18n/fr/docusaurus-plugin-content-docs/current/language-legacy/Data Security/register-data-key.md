@@ -1,4 +1,4 @@
----
+﻿---
 id: register-data-key
 title: Register data key
 slug: /commands/register-data-key
@@ -35,7 +35,7 @@ Le trousseau 4D est un ensemble d'une ou plusieurs clés de chiffrement des donn
 Passez le paramètre *phraseSecrèteCour* ou *cléDonnéesCour*, qui définit la clé de chiffrement, pour ajouter :
 
 * phraseSecrèteCour : Chaîne utilisée pour générer la clé de chiffrement des données. Lorsque vous utilisez ce paramètre, une clé de chiffrement est générée.
-* cléDonnéesCour : Objet (avec la propriété *encodedKey*) contenant la clé de chiffrement des données. Cette clé peut avoir été générée à l'aide de la commande [New data key](new-data-key.md).
+* cléDonnéesCour : Objet (avec la propriété *encodedKey*) contenant la clé de chiffrement des données. Cette clé peut avoir été générée à l'aide de la commande [New data key](../commands/new-data-key).
 
 **Valeur retournée**
 
@@ -59,7 +59,7 @@ Passez le paramètre *phraseSecrèteCour* ou *cléDonnéesCour*, qui définit la
 ## Voir aussi 
 
   
-[New data key](new-data-key.md)  
+[New data key](../commands/new-data-key)  
 
 ## Propriétés
 

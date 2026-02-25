@@ -1,4 +1,4 @@
----
+﻿---
 id: query-by-attribute
 title: QUERY BY ATTRIBUTE
 slug: /commands/query-by-attribute
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.QUERY BY ATTRIBUTE.Summary-->**QUERY BY ATTRIBUTE** localiza os registros que correspondam com a string de consulta definida utilizando os parâmetros *campoObjeto*, *caminhoAtributo*, *opPesq* e *valor* e retorna uma seleção de registros para a *tabela*.<!-- END REF-->altera a seleção atual de *tabela* para o processo atual e faz o primeiro registro da nova seleção do registro atual. Se o parâmetro *tabela* for omitido, o comando aplica-se a tabela como padrão. Se você não tiver definido qualquer tabela padrão, ocorre um erro.
 
-O parâmetro opcional *opConj* é usado para combinar várias chamadas a **QUERY BY ATTRIBUTE** no caso de várias pesquisas. Os operadores de conjunção disponíveis são o mesmo que o comando [QUERY](query.md):  
+O parâmetro opcional *opConj* é usado para combinar várias chamadas a **QUERY BY ATTRIBUTE** no caso de várias pesquisas. Os operadores de conjunção disponíveis são o mesmo que o comando [QUERY](../commands/query):  
   
   
 | **Conjunção** | **Símbolo a utilizar com QUERY BY ATTRIBUTE** |
@@ -71,7 +71,7 @@ O parâmetro *opBusq* é o operador de comparação que se aplica entre *campoOb
 | Maior ou igual a | \>=                                               |
   
   
-(\*) Quando usado com elementos array, o operador # significa "não contém qualquer um". **Nota**: Você pode especificar o operador de comparação como uma expressão de texto em vez de um símbolo. Consulte a descrição do comando [QUERY](query.md) para mais informações.  
+(\*) Quando usado com elementos array, o operador # significa "não contém qualquer um". **Nota**: Você pode especificar o operador de comparação como uma expressão de texto em vez de um símbolo. Consulte a descrição do comando [QUERY](../commands/query) para mais informações.  
 
   
 *valor* é o dado contra o qual irá comparar *caminhoAtributo*. O valor pode ser qualquer expressão do mesmo tipo que *caminhoAtributo*. O valor é avaliado uma vez, no início da busca. O valor não é avaliado para cada registro. Para procurar uma string dentro de uma string (uma procura "contém"), use o sinal de arroba (@) em *valor* para isolar a string a pesquisar, como mostrado neste exemplo: "@ Smith @". Note-se que, neste caso, a busca apenas parcialmente se benefícia do índice (compacidade de armazenamento de dados).  
@@ -121,19 +121,19 @@ Aqui estão as regras a serem seguidas para a construção de várias pesquisas 
 * A primeira linha não deve conter uma conjunção.
 * Cada argumento de consulta sucessivo pode começar com uma conjunção. Se você omiti-lo, o operador AND (&) é usado por padrão.
 * Todas as linhas, exceto a última, deve usar o parâmetro *\**.
-* **QUERY BY ATTRIBUTE** pode ser combinado com os comandos [QUERY](query.md) (ver exemplo).
-* Para realizar a pesquisar, não especifique o parâmetro \* no último comando **QUERY BY ATTRIBUTE**. Alternativamente, você pode executar o comando [QUERY](query.md) sem parâmetros diferentes à da tabela.
+* **QUERY BY ATTRIBUTE** pode ser combinado com os comandos [QUERY](../commands/query) (ver exemplo).
+* Para realizar a pesquisar, não especifique o parâmetro \* no último comando **QUERY BY ATTRIBUTE**. Alternativamente, você pode executar o comando [QUERY](../commands/query) sem parâmetros diferentes à da tabela.
 
 **Nota:** Cada tabela mantém sua própria construção de pesquisa atual. Isto significa que você pode criar várias consultas simultaneamente, um para cada tabela.
 
 Não importa a forma em que a pesquisa foi definida:  
 
-* Se a operação de busca vai levar algum tempo para ser executada, 4D mostra automaticamente uma mensagem contendo um termômetro de progresso. Estas mensagens podem ser ligados e desligadas usando os comandos [MESSAGES ON](messages-on.md) y [MESSAGES OFF](messages-off.md). Se um termômetro de progresso for exibido, o usuário pode clicar no botão Parar para parar a pesquisa. Se a consulta for concluída, OK é definido como 1\. Caso contrário, se a consulta for interrompida, OK é definido como 0 (zero).
+* Se a operação de busca vai levar algum tempo para ser executada, 4D mostra automaticamente uma mensagem contendo um termômetro de progresso. Estas mensagens podem ser ligados e desligadas usando os comandos [MESSAGES ON](../commands/messages-on) y [MESSAGES OFF](../commands/messages-off). Se um termômetro de progresso for exibido, o usuário pode clicar no botão Parar para parar a pesquisa. Se a consulta for concluída, OK é definido como 1\. Caso contrário, se a consulta for interrompida, OK é definido como 0 (zero).
 * Se nenhum campo objeto indexado não for indicado, a pesquisa é otimizada sempre que for possível (campos indexados são procurados primeiro), resultando em uma busca que leva o mínimo de tempo possível.
 
 ### Valores de Datas nos objetos 
 
-As datas são armazenadas nos objectos com base nos parâmetros do banco de dados e; por padrão, se considera o fuso horário (veja selector JSON use local time no comando [SET DATABASE PARAMETER](set-database-parameter.md)). 
+As datas são armazenadas nos objectos com base nos parâmetros do banco de dados e; por padrão, se considera o fuso horário (veja selector JSON use local time no comando [SET DATABASE PARAMETER](../commands/set-database-parameter)). 
 
 !1973-05-22!"></span></span><span id="result\_box" lang="pt"><span title="\[#codeJS\]!1973-05-22!">\[#codeJS\]!1973-05-22! -> "1973-05-21T23:00:00.000Z"  
   
@@ -412,13 +412,13 @@ Se a pesquisa é realizada corretamente, a variável sistema OK toma o valor 1.
 A variável Ok toma o valor 0 se:
 
 * o usuário clicar em **Cancelar** na caixa de diálogo de pesquisa,
-* em modo "pesquisa e bloqueio"! (ver o comando [SET QUERY AND LOCK](set-query-and-lock.md)), a pesquisa encontra, no mínimo, um registro bloqueado. Nese caso, igualmente, o conjunto sistema LockedSet é atualizado.
+* em modo "pesquisa e bloqueio"! (ver o comando [SET QUERY AND LOCK](../commands/set-query-and-lock)), a pesquisa encontra, no mínimo, um registro bloqueado. Nese caso, igualmente, o conjunto sistema LockedSet é atualizado.
 
 ## Ver também 
 
   
 *Estrutura dos objetos de linguagem 4D*  
-[QUERY SELECTION BY ATTRIBUTE](query-selection-by-attribute.md)  
+[QUERY SELECTION BY ATTRIBUTE](../commands/query-selection-by-attribute)  
 
 ## Propriedades
 

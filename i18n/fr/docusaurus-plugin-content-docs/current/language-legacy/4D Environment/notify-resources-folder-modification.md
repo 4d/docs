@@ -1,4 +1,4 @@
----
+﻿---
 id: notify-resources-folder-modification
 title: NOTIFY RESOURCES FOLDER MODIFICATION
 slug: /commands/notify-resources-folder-modification
@@ -38,11 +38,11 @@ Seule l’information de modification est envoyée par cette commande. Les poste
 Le paramétrage courant peut être défini soit :
 
 * au niveau global de la base via le paramètre des Propriétés de la base. Dans ce cas, il s'applique à tous les postes distants ;
-* localement, à l'aide de la commande [SET DATABASE PARAMETER](set-database-parameter.md) exécutée sur le poste distant (sélecteur Auto synchro resources folder). Dans ce cas, il "surcharge" celui de la base et s'applique uniquement au poste distant pour la session.
+* localement, à l'aide de la commande [SET DATABASE PARAMETER](../commands/set-database-parameter) exécutée sur le poste distant (sélecteur Auto synchro resources folder). Dans ce cas, il "surcharge" celui de la base et s'applique uniquement au poste distant pour la session.
 
 ## Voir aussi 
 
-[Get 4D folder](get-4d-folder.md)  
+[Get 4D folder](../commands/get-4d-folder)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: spell-checking
 title: SPELL CHECKING
 slug: /commands/spell-checking
@@ -30,9 +30,9 @@ displayed_sidebar: docs
 
 **Note :** Si vous souhaitez déclencher la correction orthographique à partir d’un bouton dans le formulaire, assurez-vous qu’il ne dispose pas de la propriété “Focusable”.
 
-La vérification débute par le premier mot du champ ou de la variable. Si un mot inconnu est détecté, la boîte de dialogue de correction apparaît (pour plus d’informations, reportez-vous au manuel Mode Développement de 4D). 4D utilise le dictionnaire courant (correspondant à la langue de l’application) sauf si vous avez utilisé la commande [SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md).
+La vérification débute par le premier mot du champ ou de la variable. Si un mot inconnu est détecté, la boîte de dialogue de correction apparaît (pour plus d’informations, reportez-vous au manuel Mode Développement de 4D). 4D utilise le dictionnaire courant (correspondant à la langue de l’application) sauf si vous avez utilisé la commande [SPELL SET CURRENT DICTIONARY](../commands/spell-set-current-dictionary).
 
-**Attention :** La commande **SPELL CHECKING** agit sur le texte en cours de saisie dans le formulaire, et non sur sa source de données associée (variable ou champ). Ce principe implique que si la commande est appelée depuis les événements formulaire On Data Change ou On Losing Focus (non recommandé), elle n'aura pas d'effet sur le texte stocké car à ce moment, 4D a déjà assigné le texte saisi à la source de données. Dans ce cas, vous devez alors assigner vous-même le résultat modifié à la source de données, via la commande [Get edited text](get-edited-text.md). Par exemple :  
+**Attention :** La commande **SPELL CHECKING** agit sur le texte en cours de saisie dans le formulaire, et non sur sa source de données associée (variable ou champ). Ce principe implique que si la commande est appelée depuis les événements formulaire On Data Change ou On Losing Focus (non recommandé), elle n'aura pas d'effet sur le texte stocké car à ce moment, 4D a déjà assigné le texte saisi à la source de données. Dans ce cas, vous devez alors assigner vous-même le résultat modifié à la source de données, via la commande [Get edited text](../commands/get-edited-text). Par exemple :  
 
 ```4d
  If(Form event code=Sur données modifiées)
@@ -43,8 +43,8 @@ La vérification débute par le premier mot du champ ou de la variable. Si un mo
 
 ## Voir aussi 
 
-[SPELL CHECK TEXT](spell-check-text.md)  
-[SPELL SET CURRENT DICTIONARY](spell-set-current-dictionary.md)  
+[SPELL CHECK TEXT](../commands/spell-check-text)  
+[SPELL SET CURRENT DICTIONARY](../commands/spell-set-current-dictionary)  
 
 ## Propriétés
 

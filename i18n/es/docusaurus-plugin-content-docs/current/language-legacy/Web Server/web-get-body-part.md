@@ -1,4 +1,4 @@
----
+﻿---
 id: web-get-body-part
 title: WEB GET BODY PART
 slug: /commands/web-get-body-part
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB GET BODY PART.Summary-->El comando **WEB GET BODY PART** llamado en el contexto de un proceso web, permite analizar la parte "body" de una petición multi-part.<!-- END REF-->  
   
-En el parámetro *parte*, pase el número de la parte a analizar. Puede obtener el número total de partes con el comando [WEB Get body part count](web-get-body-part-count.md).  
+En el parámetro *parte*, pase el número de la parte a analizar. Puede obtener el número total de partes con el comando [WEB Get body part count](../commands/web-get-body-part-count).  
   
 El parámetro *contenido* recibe el contenido de la parte. Cuando las partes a recuperar son archivos, debe pasar un parámetro de tipo BLOB. En el caso de variables TEXTO enviadas en un formulario web, puede pasar un parámetro de tipo texto.   
   
@@ -42,7 +42,7 @@ El parámetro *nombre* recupera el nombre de la variable del campo input HTTP.
 Los parámetros *tipoMime* y *nomArchivo* reciben el tipo Mime y el nombre del archivo original, si lo hay. nomArchivo solo se recibe cuando el archivo se envio como **<input type="file">**.  
 *tipoMime* y *nomArchivo* son opcionales pero deben pasarse juntos.  
   
-**Nota**: en el contexto de una petición multi-part, el primer de array del comando [WEB GET VARIABLES](web-get-variables.md) devuelve todas las partes del formulario, en el mismo orden que el comando **WEB GET BODY PART**. Puede utilizarlo para obtener directamente la posición de una parte de un formulario. 
+**Nota**: en el contexto de una petición multi-part, el primer de array del comando [WEB GET VARIABLES](../commands/web-get-variables) devuelve todas las partes del formulario, en el mismo orden que el comando **WEB GET BODY PART**. Puede utilizarlo para obtener directamente la posición de una parte de un formulario. 
 
 ## Ejemplo 
 
@@ -101,9 +101,9 @@ Este es el código del método GetFile:
 
 ## Ver también 
 
-[WEB Get body part count](web-get-body-part-count.md)  
-[WEB GET HTTP BODY](web-get-http-body.md)  
-[WEB GET VARIABLES](web-get-variables.md)  
+[WEB Get body part count](../commands/web-get-body-part-count)  
+[WEB GET HTTP BODY](../commands/web-get-http-body)  
+[WEB GET VARIABLES](../commands/web-get-variables)  
 
 ## Propiedades
 

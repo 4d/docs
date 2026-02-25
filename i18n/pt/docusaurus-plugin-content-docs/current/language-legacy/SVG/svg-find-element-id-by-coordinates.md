@@ -1,4 +1,4 @@
----
+﻿---
 id: svg-find-element-id-by-coordinates
 title: SVG Find element ID by coordinates
 slug: /commands/svg-find-element-id-by-coordinates
@@ -62,7 +62,7 @@ Se *objetoImagem* não contiver uma imagem SVG válida, o comando retorna uma ca
 
 ## Ver também 
 
-[SVG Find element IDs by rect](svg-find-element-ids-by-rect.md)  
+[SVG Find element IDs by rect](../commands/svg-find-element-ids-by-rect)  
 
 ## Propriedades
 

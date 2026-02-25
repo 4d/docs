@@ -1,4 +1,4 @@
----
+﻿---
 id: reject
 title: REJECT
 slug: /commands/reject
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 **Note :** Nous vous conseillons d'utiliser en priorité les outils intégrés de validation de saisie de 4D, avant de faire appel à cette commande.
 
-La première syntaxe de **REJECT** est utilisée pour empêcher l'utilisateur de valider un enregistrement incomplet. Vous pouvez parvenir au même résultat sans utiliser **REJECT** : associez la touche **Entrée** à un bouton n'effectuant "Pas d'action" et utilisez les commandes [ACCEPT](accept.md) et [CANCEL](cancel.md) pour valider ou annuler l'enregistrement, une fois que les champs ont été correctement remplis. Il est recommandé d'employer cette seconde technique plutôt que d'utiliser la première syntaxe de **REJECT**.
+La première syntaxe de **REJECT** est utilisée pour empêcher l'utilisateur de valider un enregistrement incomplet. Vous pouvez parvenir au même résultat sans utiliser **REJECT** : associez la touche **Entrée** à un bouton n'effectuant "Pas d'action" et utilisez les commandes [ACCEPT](../commands/accept) et [CANCEL](../commands/cancel) pour valider ou annuler l'enregistrement, une fois que les champs ont été correctement remplis. Il est recommandé d'employer cette seconde technique plutôt que d'utiliser la première syntaxe de **REJECT**.
 
 En général, vous employez la première syntaxe de **REJECT** pour empêcher l'utilisateur de valider un enregistrement incomplet ou comportant des valeurs incorrectes. Si l'utilisateur tente de valider l'enregistrement, l'exécution de **REJECT** provoque l'annulation de cette commande et l'enregistrement reste affiché dans le formulaire. L'utilisateur doit alors recommencer la saisie jusqu'à ce que les valeurs soient considérées comme correctes ou annuler l'enregistrement.
 
@@ -30,7 +30,7 @@ Le meilleur emplacement pour la commande **REJECT**, lorsque vous utilisez cette
 La seconde syntaxe de **REJECT** utilise le paramètre *leChamp*. Dans ce cas, le curseur reste dans la zone de saisie du champ, ce qui oblige l'utilisateur à saisir une valeur correcte.   
 Avec cette syntaxe, la commande **REJECT** doit impérativement être appelée dans l'événement formulaire On Data Change.Vous devez placer cette syntaxe de **REJECT** soit dans la méthode formulaire, soit dans la méthode objet de la zone de saisie. Si vous utilisez **REJECT** avec le formulaire "pleine page" d'un sous-formulaire, placez-la dans la méthode formulaire ou une méthode objet du formulaire "pleine page". Lorsqu'elle est utilisée avec des champs de sous-formulaires, cette commande ne fait rien.
 
-Vous pouvez utiliser la commande [HIGHLIGHT TEXT](highlight-text.md) pour sélectionner, à l'intérieur du champ, les valeurs qui ont été refusées.
+Vous pouvez utiliser la commande [HIGHLIGHT TEXT](../commands/highlight-text) pour sélectionner, à l'intérieur du champ, les valeurs qui ont été refusées.
 
 ## Exemple 1 
 
@@ -61,9 +61,9 @@ L'exemple suivant est une partie de la méthode objet d'un champ *\[Employés\]S
 
 ## Voir aussi 
 
-[ACCEPT](accept.md)  
-[CANCEL](cancel.md)  
-[GOTO OBJECT](goto-object.md)  
+[ACCEPT](../commands/accept)  
+[CANCEL](../commands/cancel)  
+[GOTO OBJECT](../commands/goto-object)  
 
 ## Propriétés
 

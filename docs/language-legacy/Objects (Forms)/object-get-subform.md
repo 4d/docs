@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-subform
 title: OBJECT GET SUBFORM
 slug: /commands/object-get-subform
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable. In this case, you pass a variable reference instead of a string. 
 
-In the *tablePtr* parameter, the command returns a pointer to the table of the form(s) used. If the subform uses a project form, this parameter contains [Is nil pointer](is-nil-pointer.md). 
+In the *tablePtr* parameter, the command returns a pointer to the table of the form(s) used. If the subform uses a project form, this parameter contains [Is nil pointer](../commands/is-nil-pointer). 
 
 In the *detailSubform* and (optionally) *listSubform* parameters, the command returns:
 
@@ -50,8 +50,8 @@ If there is no list form, an empty string is returned in the *listSubform* param
 
 ## See also 
 
-[OBJECT GET SUBFORM CONTAINER SIZE](object-get-subform-container-size.md)  
-[OBJECT SET SUBFORM](object-set-subform.md)  
+[OBJECT GET SUBFORM CONTAINER SIZE](../commands/object-get-subform-container-size)  
+[OBJECT SET SUBFORM](../commands/object-set-subform)  
 
 ## Properties
 

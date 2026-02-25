@@ -1,4 +1,4 @@
----
+﻿---
 id: resource-type-list
 title: RESOURCE TYPE LIST
 slug: /commands/resource-type-list
@@ -34,7 +34,7 @@ If you pass a valid resource file reference number in the optional parameter *re
 
 You can predeclare the array *resTypes* as a String or Text array before calling RESOURCE TYPE LIST. If you do not predeclare the array, the command creates *resTypes* as a Text array. 
 
-After the call, you can test the number of resource types found by applying the command [Size of array](size-of-array.md) to the array *resTypes*.
+After the call, you can test the number of resource types found by applying the command [Size of array](../commands/size-of-array) to the array *resTypes*.
 
 ## Example 1 
 
@@ -89,7 +89,7 @@ Once this project method is implemented in a database, you can write:
 
 ## See also 
 
-[RESOURCE LIST](resource-list.md)  
+[RESOURCE LIST](../commands/resource-list)  
 
 ## Properties
 

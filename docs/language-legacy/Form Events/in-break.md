@@ -1,4 +1,4 @@
----
+﻿---
 id: in-break
 title: In break
 slug: /commands/in-break
@@ -25,8 +25,8 @@ In order for the **In break** execution cycle to be generated, make sure that th
 
 ## See also 
 
-[In footer](in-footer.md)  
-[In header](in-header.md)  
+[In footer](../commands/in-footer)  
+[In header](../commands/in-header)  
 
 ## Properties
 

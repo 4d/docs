@@ -1,4 +1,4 @@
----
+﻿---
 id: encrypt-blob
 title: ENCRYPT BLOB
 slug: /commands/encrypt-blob
@@ -30,16 +30,16 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.ENCRYPT BLOB.Summary-->ENCRYPT BLOB コマンドは、*toEncrypt* BLOBの内容を送信者の秘密鍵*sendPrivKey*を使用して暗号化します。<!-- END REF-->オプションとして、同時に受信者の公開鍵*recipPubKey*も使用できます。これらの鍵は、[GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md) （セキュアプロトコルテーマ）を使用して生成します。 
+<!--REF #_command_.ENCRYPT BLOB.Summary-->ENCRYPT BLOB コマンドは、*toEncrypt* BLOBの内容を送信者の秘密鍵*sendPrivKey*を使用して暗号化します。<!-- END REF-->オプションとして、同時に受信者の公開鍵*recipPubKey*も使用できます。これらの鍵は、[GENERATE ENCRYPTION KEYPAIR](../commands/generate-encryption-keypair) （セキュアプロトコルテーマ）を使用して生成します。 
 
-**Note:** このコマンドは、TLSプロトコルアルゴリズムおよび暗号化機能を利用します。したがって、このコマンドを使用するためには、4D Webサーバ通信にTLSを使用しない場合でも、TLSプロトコルに必要となる各コンポーネントがマシン上に正しくインストールされているか確認してください。このプロトコルについての詳細は、[WEB SERVICE SET PARAMETER](web-service-set-parameter.md) の節を参照してください。
+**Note:** このコマンドは、TLSプロトコルアルゴリズムおよび暗号化機能を利用します。したがって、このコマンドを使用するためには、4D Webサーバ通信にTLSを使用しない場合でも、TLSプロトコルに必要となる各コンポーネントがマシン上に正しくインストールされているか確認してください。このプロトコルについての詳細は、[WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter) の節を参照してください。
 
 * 送信者の秘密鍵のみを暗号化に使用されると、公開鍵の所有者だけがこの情報を読み取れます。このシステムにより、送信者自身が情報の暗号化を行ったということが保証されます。
 * 送信者の秘密鍵と受信者の公開鍵を同時に使用することにより、情報の読み取りを行えるのは1人の受信者だけであることが保証されます。
 
 鍵を納めるBLOBは、PKCS内部フォーマットです。クロスプラットフォームであるこの形式では、電子メールやテキストファイルにコピー＆ペーストすることにより簡単に鍵のやり取りや処理を行うことができます。
 
-コマンドを実行すると、BLOB *toEncrypt*には暗号化されたデータが納められます。このデータの解読は、引数として渡された送信者の公開鍵を使用した上で[DECRYPT BLOB](decrypt-blob.md) コマンドによってのみ行えます。さらに、情報の暗号化の際にオプションである受信者の公開鍵を使用すると、解読には受信者の秘密鍵も必要になります。
+コマンドを実行すると、BLOB *toEncrypt*には暗号化されたデータが納められます。このデータの解読は、引数として渡された送信者の公開鍵を使用した上で[DECRYPT BLOB](../commands/decrypt-blob) コマンドによってのみ行えます。さらに、情報の暗号化の際にオプションである受信者の公開鍵を使用すると、解読には受信者の秘密鍵も必要になります。
 
 **“Alice”と“Bob”の間で行われるメッセージ交換のための、公開及び秘密鍵を使用した暗号化の原則**
 
@@ -189,9 +189,9 @@ displayed_sidebar: docs
 ## 参照 
 
   
-[DECRYPT BLOB](decrypt-blob.md)  
-[Encrypt data BLOB](encrypt-data-blob.md)  
-[GENERATE ENCRYPTION KEYPAIR](generate-encryption-keypair.md)  
+[DECRYPT BLOB](../commands/decrypt-blob)  
+[Encrypt data BLOB](../commands/encrypt-data-blob)  
+[GENERATE ENCRYPTION KEYPAIR](../commands/generate-encryption-keypair)  
 
 ## プロパティ
 

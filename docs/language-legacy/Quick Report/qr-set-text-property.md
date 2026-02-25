@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-text-property
 title: QR SET TEXT PROPERTY
 slug: /commands/qr-set-text-property
@@ -63,7 +63,7 @@ displayed_sidebar: docs
 | qr alternate background color | Integer | 9     | Alternate background color number                                                |
 | qr background color           | Integer | 8     | Background color number                                                          |
 | qr bold                       | Integer | 3     | Bold style attribute (0 or 1)                                                    |
-| qr font name                  | Integer | 10    | Name of font as returned for example by the [FONT LIST](font-list.md) command    |
+| qr font name                  | Integer | 10    | Name of font as returned for example by the [FONT LIST](../commands/font-list) command    |
 | qr font size                  | Integer | 2     | Font size expressed in points (9 to 255)                                         |
 | qr italic                     | Integer | 4     | Italic style attribute (0 or 1)                                                  |
 | qr justification              | Integer | 7     | Justification attribute (0 for default, 1 for left, 2 for center or 3 for right) |
@@ -96,7 +96,7 @@ This method defines several attributes of the first column’s title:
 
 ## See also 
 
-[QR Get text property](qr-get-text-property.md)  
+[QR Get text property](../commands/qr-get-text-property)  
 
 ## Properties
 

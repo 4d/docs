@@ -1,4 +1,4 @@
----
+﻿---
 id: import-structure
 title: IMPORT STRUCTURE
 slug: /commands/import-structure
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 Le paramètre *structureXML* doit contenir une définition valide de structure 4D au format XML. Pour obtenir ce type de définition, vous pouvez utiliser l'un des moyens suivants :
 
-* exécuter la commande [EXPORT STRUCTURE](export-structure.md),
+* exécuter la commande [EXPORT STRUCTURE](../commands/export-structure),
 * sélectionner la commande de menu **Exporter > Définition de structure vers le fichier XML...** disponible dans l'interface du mode Développement de 4D (voir *Exporter et importer des définitions de structure*),
 * créer ou modifier un fichier XML personnalisé basé sur les DTD publiques présentes dans le dossier "DTD" de l'application 4D.
 
@@ -58,7 +58,7 @@ Vous souhaitez importer une définiton de structure stockée sur disque dans la 
 
 ## Voir aussi 
 
-[EXPORT STRUCTURE](export-structure.md)  
+[EXPORT STRUCTURE](../commands/export-structure)  
 
 ## Propriétés
 

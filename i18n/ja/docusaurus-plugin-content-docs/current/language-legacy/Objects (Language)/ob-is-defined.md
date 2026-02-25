@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-is-defined
 title: OB Is defined
 slug: /commands/ob-is-defined
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 *property* 引数を省略した場合、コマンドは *object* が定義済みかどうかを調べます。オブジェクトの中身が初期化されていれば定義済みであるとみなされます。
 
-**注:** 定義済みのオブジェクトでも空である場合もあります。オブジェクトが空もしくは未定義であるかどうかを調べる場合には、 [OB Is empty](ob-is-empty.md) コマンドを使用して下さい。
+**注:** 定義済みのオブジェクトでも空である場合もあります。オブジェクトが空もしくは未定義であるかどうかを調べる場合には、 [OB Is empty](../commands/ob-is-empty) コマンドを使用して下さい。
 
 *property* 引数を渡した場合、コマンドは指定されたプロパティが *object* 内に存在するかどうかをチェックします。*property* 引数では、大文字と小文字は区別されることに注意して下さい。
 
@@ -72,7 +72,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OB Is empty](ob-is-empty.md)  
+[OB Is empty](../commands/ob-is-empty)  
 
 ## プロパティ
 

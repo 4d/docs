@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-objects
 title: LISTBOX GET OBJECTS
 slug: /commands/listbox-get-objects
@@ -46,7 +46,7 @@ Passez dans *tabNomsObj* un tableau texte qui sera automatiquement rempli par la
 
 Le tableau retourne les noms des objets de toutes les colonnes (y compris les pieds de colonnes), quel que soit leur statut visible/invisible. 
 
-Cette commande est utile dans le contexte de l’analyse d’un formulaire via les commandes [FORM LOAD](../commands/form-load), [FORM GET OBJECTS](form-get-objects.md) et [OBJECT Get type](object-get-type.md). Elle permet, si nécessaire, d’obtenir les noms des sous-objets des list box.
+Cette commande est utile dans le contexte de l’analyse d’un formulaire via les commandes [FORM LOAD](../commands/form-load), [FORM GET OBJECTS](../commands/form-get-objects) et [OBJECT Get type](../commands/object-get-type). Elle permet, si nécessaire, d’obtenir les noms des sous-objets des list box.
 
 #### Exemple 
 
@@ -70,7 +70,7 @@ Vous souhaitez charger un formulaire et obtenir la liste de tous les objets des 
 #### Voir aussi 
 
 [FORM LOAD](../commands/form-load)  
-[OBJECT Get type](object-get-type.md)  
+[OBJECT Get type](../commands/object-get-type)  
 
 #### Propriétés
 

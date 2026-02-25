@@ -1,4 +1,4 @@
----
+﻿---
 id: get-resource-properties
 title: Get resource properties
 slug: /commands/get-resource-properties
@@ -40,7 +40,7 @@ The numeric value returned by **Get resource properties** must be seen as a bit 
 
 ## Example 
 
-See example for the [Get resource name](get-resource-name.md) command.
+See example for the [Get resource name](../commands/get-resource-name) command.
 
 ## System variables and sets 
 

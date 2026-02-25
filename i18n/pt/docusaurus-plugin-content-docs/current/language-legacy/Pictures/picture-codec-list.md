@@ -1,4 +1,4 @@
----
+﻿---
 id: picture-codec-list
 title: PICTURE CODEC LIST
 slug: /commands/picture-codec-list
@@ -40,13 +40,13 @@ Os identificadores dos codecs podem ser devolvidos no array *arrayCodec* de duas
 
 A forma retornada pelo comando depende do modo de declaração do codec ao nível do sistema operativo. O array opcional *arrayNoms* permite recuperar o nome de cada codec. Estes nomes são mais explícitos que os identificadores. Este array pode ser utilizado, por exemplo, para criar e mostrar um menu que liste os codecs disponíveis.
 
-Por padrão, se não passa o parâmetro *\**, o comando devolve unicamente os codecs que podem ser utilizados para codificar (escrever) as imagens. Estes identificadores podem ser utilizados no parâmetro *formato* dos comandos de exportação de imagens [WRITE PICTURE FILE](write-picture-file.md) e [PICTURE TO BLOB](picture-to-blob.md).  
+Por padrão, se não passa o parâmetro *\**, o comando devolve unicamente os codecs que podem ser utilizados para codificar (escrever) as imagens. Estes identificadores podem ser utilizados no parâmetro *formato* dos comandos de exportação de imagens [WRITE PICTURE FILE](../commands/write-picture-file) e [PICTURE TO BLOB](../commands/picture-to-blob).  
  Se passa o parâmetro *\**, o comando também devolve a lista de codecs utilizados para decodificar (ler) as imagens. As duas listas não são exclusivas, certos codecs de leitura e de escrita são idênticos. Os codecs destinados a codificação das imagens podem ser utilizadas para a decodificação. Por outro lado, os codecs de decodificação não necessariamente podem ser utilizados para a codificação. Por exemplo, o codec ".jpg" se encontrará em ambas listas, enquanto o ".xbmp" estará presente na lista de codecs de leitura mas não na de escritura.
 
 ## Ver também 
 
 *Imagens*  
-[Is picture file](is-picture-file.md)  
+[Is picture file](../commands/is-picture-file)  
 
 ## Propriedades
 

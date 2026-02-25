@@ -1,4 +1,4 @@
----
+﻿---
 id: set-group-properties
 title: Set group properties
 slug: /commands/set-group-properties
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Set group properties.Summary-->Set group properties permite modificar y actualizar las propiedades de un grupo existente cuyo número de referencia único se pasa en *refGrupo*, o para añadir un nuevo grupo.<!-- END REF--> 
 
-Para cambiar las propiedades de un grupo existente, debe pasar un número de referencia válido devuelto por el comando [GET GROUP LIST](get-group-list.md).
+Para cambiar las propiedades de un grupo existente, debe pasar un número de referencia válido devuelto por el comando [GET GROUP LIST](../commands/get-group-list).
 
 Para añadir un nuevo grupo, pase -1 en *refGrupo* (see also notes below for binary databases). 
 
@@ -45,7 +45,7 @@ Pase el nuevo nombre del grupo en el parámetro *nombre*.
 
 (*Solo bases binarias*) Pase el número de identificación del nuevo propietario del grupo en el parámetro *propietario*. Este parámetro se ignora en las bases proyecto.
 
-Si no desea cambiar todas las propiedades del grupo (además de los miembros, ver abajo), primero llame a [GET GROUP PROPERTIES](get-group-properties.md) y pase los valores devueltos para las propiedades que desea dejar sin cambios.
+Si no desea cambiar todas las propiedades del grupo (además de los miembros, ver abajo), primero llame a [GET GROUP PROPERTIES](../commands/get-group-properties) y pase los valores devueltos para las propiedades que desea dejar sin cambios.
 
 Si no pasa el parámetro opcional *miembros*, la lista actual de miembros del grupo permanece sin cambios. Si no pasa *miembros* mientras añade un grupo, el grupo no tendrá miembros.
 
@@ -64,9 +64,9 @@ Si no tiene privilegios de acceso para llamar al comando Set group properties o 
 
 ## Ver también 
 
-[GET GROUP LIST](get-group-list.md)  
-[GET GROUP PROPERTIES](get-group-properties.md)  
-[GET USER LIST](get-user-list.md)  
+[GET GROUP LIST](../commands/get-group-list)  
+[GET GROUP PROPERTIES](../commands/get-group-properties)  
+[GET USER LIST](../commands/get-user-list)  
 
 ## Propiedades
 

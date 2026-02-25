@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-action
 title: OBJECT Get action
 slug: /commands/object-get-action
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 任意の *\** 引数を指定した場合、*object* はオブジェクト名です(文字列) 。オプションの \* 引数を省略すると、*object* はフィールドまたは変数です。この場合、文字列ではなくフィールドまたは変数参照(フィールドまたは変数のみ)を指定します。  
 
-フォームエディターのプロパティリスト、あるいは[OBJECT SET ACTION](object-set-action.md) コマンドを使用して、オブジェクトに対して標準アクションを設定することができます。**OBJECT Get action** コマンドはオブジェクトに割り当てられた標準アクションの名前を含む文字列(に加えて、あれば引数も)を返します。
+フォームエディターのプロパティリスト、あるいは[OBJECT SET ACTION](../commands/object-set-action) コマンドを使用して、オブジェクトに対して標準アクションを設定することができます。**OBJECT Get action** コマンドはオブジェクトに割り当てられた標準アクションの名前を含む文字列(に加えて、あれば引数も)を返します。
 
 標準アクションの全体的な一覧については、*デザインリファレンス*マニュアルの*標準アクション*の章を参照してください。
 
@@ -55,7 +55,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT SET ACTION](object-set-action.md)  
+[OBJECT SET ACTION](../commands/object-set-action)  
 
 ## プロパティ
 

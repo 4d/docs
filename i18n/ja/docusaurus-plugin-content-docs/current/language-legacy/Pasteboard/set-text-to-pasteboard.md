@@ -1,4 +1,4 @@
----
+﻿---
 id: set-text-to-pasteboard
 title: SET TEXT TO PASTEBOARD
 slug: /commands/set-text-to-pasteboard
@@ -49,8 +49,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md)  
-[Get text from pasteboard](get-text-from-pasteboard.md)  
+[APPEND DATA TO PASTEBOARD](../commands/append-data-to-pasteboard)  
+[Get text from pasteboard](../commands/get-text-from-pasteboard)  
 
 ## プロパティ
 

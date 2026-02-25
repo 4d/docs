@@ -1,4 +1,4 @@
----
+﻿---
 id: get-database-localization
 title: Get database localization
 slug: /commands/get-database-localization
@@ -37,7 +37,7 @@ Plusieurs paramétrages de langues différents peuvent être utilisés simultan�
 
 | Constante                | Type        | Valeur | Comment                                                                                                                                           |
 | ------------------------ | ----------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Current localization     | Entier long | 1      | Langue courante de l’application : langue par défaut ou langue définie via la commande [SET DATABASE LOCALIZATION](set-database-localization.md). |
+| Current localization     | Entier long | 1      | Langue courante de l’application : langue par défaut ou langue définie via la commande [SET DATABASE LOCALIZATION](../commands/set-database-localization). |
 | Default localization     | Entier long | 0      | Langue définie automatiquement par 4D au démarrage en fonction du dossier Resources et de l’environnement système (non modifiable).               |
 | Internal 4D localization | Entier long | 3      | Langue utilisée par 4D pour les tris et les comparaisons de textes (définie dans les Préférences de l’application).                               |
 | User system localization | Entier long | 2      | Langue définie par l’utilisateur courant du système.                                                                                              |
@@ -62,8 +62,8 @@ La langue courante de la base définit le dossier .lproj dans lequel le programm
 
 ## Voir aussi 
 
-[Localized document path](localized-document-path.md)  
-[SET DATABASE LOCALIZATION](set-database-localization.md)  
+[Localized document path](../commands/localized-document-path)  
+[SET DATABASE LOCALIZATION](../commands/set-database-localization)  
 
 ## Propriétés
 

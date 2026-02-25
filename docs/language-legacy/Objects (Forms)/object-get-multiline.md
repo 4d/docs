@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-multiline
 title: OBJECT Get multiline
 slug: /commands/object-get-multiline
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get multiline.Summary-->The **OBJECT Get multiline** command returns the current state of the "Multiline" option for the object(s) designated by the *object* and *\** parameters.<!-- END REF-->
 
-You can set the "Multiline" option for an object using the Property List, or using the [OBJECT SET MULTILINE](object-set-multiline.md) command option. 
+You can set the "Multiline" option for an object using the Property List, or using the [OBJECT SET MULTILINE](../commands/object-set-multiline) command option. 
 
 Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
 
@@ -47,7 +47,7 @@ The value returned corresponds to one of the following constants, found in the "
 
 ## See also 
 
-[OBJECT SET MULTILINE](object-set-multiline.md)  
+[OBJECT SET MULTILINE](../commands/object-set-multiline)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-set-option
 title: SQL SET OPTION
 slug: /commands/sql-set-option
@@ -57,7 +57,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[SQL GET OPTION](sql-get-option.md)  
+[SQL GET OPTION](../commands/sql-get-option)  
 
 ## プロパティ
 

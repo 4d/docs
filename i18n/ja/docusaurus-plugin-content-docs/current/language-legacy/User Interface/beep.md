@@ -1,4 +1,4 @@
----
+﻿---
 id: beep
 title: BEEP
 slug: /commands/beep
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[PLAY](play.md)  
+[PLAY](../commands/play)  
 
 ## プロパティ
 

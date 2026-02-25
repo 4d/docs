@@ -1,4 +1,4 @@
----
+﻿---
 id: average
 title: Average
 slug: /commands/average
@@ -61,7 +61,7 @@ displayed_sidebar: docs
  PRINT SELECTION([Employees])
 ```
 
-**Note:** [BREAK LEVEL](break-level.md)コマンドの引数は、印刷するレポートのブレーク数と同じ数でなければなりません。ブレーク処理に関する詳細は*印刷*コマンドを参照してください。
+**Note:** [BREAK LEVEL](../commands/break-level)コマンドの引数は、印刷するレポートのブレーク数と同じ数でなければなりません。ブレーク処理に関する詳細は*印刷*コマンドを参照してください。
 
 ## 例題 2 
 
@@ -97,14 +97,14 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ACCUMULATE](accumulate.md)  
-[BREAK LEVEL](break-level.md)  
-[Max](max.md)  
-[Min](min.md)  
-[ORDER BY](order-by.md)  
-[PRINT SELECTION](print-selection.md)  
-[Subtotal](subtotal.md)  
-[Sum](sum.md)  
+[ACCUMULATE](../commands/accumulate)  
+[BREAK LEVEL](../commands/break-level)  
+[Max](../commands/max)  
+[Min](../commands/min)  
+[ORDER BY](../commands/order-by)  
+[PRINT SELECTION](../commands/print-selection)  
+[Subtotal](../commands/subtotal)  
+[Sum](../commands/sum)  
 
 ## プロパティ
 

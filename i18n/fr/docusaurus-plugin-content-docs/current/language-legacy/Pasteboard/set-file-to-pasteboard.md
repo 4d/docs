@@ -1,4 +1,4 @@
----
+﻿---
 id: set-file-to-pasteboard
 title: SET FILE TO PASTEBOARD
 slug: /commands/set-file-to-pasteboard
@@ -39,7 +39,7 @@ La commande admet l’étoile *\** en paramètre optionnel. Par défaut, lorsque
 
 ## Voir aussi 
 
-[Get file from pasteboard](get-file-from-pasteboard.md)  
+[Get file from pasteboard](../commands/get-file-from-pasteboard)  
 
 ## Propriétés
 

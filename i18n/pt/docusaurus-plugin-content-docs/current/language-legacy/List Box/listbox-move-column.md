@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-move-column
 title: LISTBOX MOVE COLUMN
 slug: /commands/listbox-move-column
@@ -51,7 +51,7 @@ Você quer inverter a segunda e terceira coluna do list box:
 
 ## Ver também 
 
-[LISTBOX DUPLICATE COLUMN](listbox-duplicate-column.md)  
+[LISTBOX DUPLICATE COLUMN](../commands/listbox-duplicate-column)  
 
 ## Propriedades
 

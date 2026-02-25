@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-action
 title: OBJECT Get action
 slug: /commands/object-get-action
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
 
-You can set a standard action for an object in the Form editor using the Property List, or using the [OBJECT SET ACTION](object-set-action.md) command. **OBJECT Get action** returns a string containing the name of the standard action associated with the object (as well as its parameter, if any). 
+You can set a standard action for an object in the Form editor using the Property List, or using the [OBJECT SET ACTION](../commands/object-set-action) command. **OBJECT Get action** returns a string containing the name of the standard action associated with the object (as well as its parameter, if any). 
 
 For a comprehensive list of standard actions, please refer to the *Standard actions* section in the *Design Reference* manual. 
 
@@ -55,7 +55,7 @@ You want to associate the "Cancel" action with all the objects in the form that 
 
 ## See also 
 
-[OBJECT SET ACTION](object-set-action.md)  
+[OBJECT SET ACTION](../commands/object-set-action)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: export-dif
 title: EXPORT DIF
 slug: /commands/export-dif
@@ -26,9 +26,9 @@ L'événement On Load est envoyé à la méthode du formulaire pour chaque enreg
 
 Le paramètre *document* peut créer un nouveau document ou désigner un document existant. Si le document a le même nom qu'un document existant, ce dernier est remplacé. Le document peut contenir un chemin d'accès de volume et/ou de dossiers. Si vous passez une chaîne vide, la boîte de dialogue standard de sauvegarde de fichiers est affichée. Si l'utilisateur annule ce dialogue, l'opération d'export est annulée et la variable système OK est mise à 0\. 
 
-Un thermomètre de progression est affiché pendant l'export. L'utilisateur peut annuler l'opération en cliquant sur le bouton **Stop**. Si l'export s'est correctement déroulé, la variable système OK est mise à 1\. En cas d'erreur ou d'interruption de l'opération, la variable système OK est mise à 0\. Vous pouvez cacher le thermomètre au moyen de la commande [MESSAGES OFF](messages-off.md).
+Un thermomètre de progression est affiché pendant l'export. L'utilisateur peut annuler l'opération en cliquant sur le bouton **Stop**. Si l'export s'est correctement déroulé, la variable système OK est mise à 1\. En cas d'erreur ou d'interruption de l'opération, la variable système OK est mise à 0\. Vous pouvez cacher le thermomètre au moyen de la commande [MESSAGES OFF](../commands/messages-off).
 
-La commande utilise par défaut le jeu de caractères UTF-8\. Les documents au format DIF utilisant généralement le jeu de caractères IBM437, il peut être nécessaire d'utiliser la commande [USE CHARACTER SET](use-character-set.md) pour définir le jeu de caractères approprié. 
+La commande utilise par défaut le jeu de caractères UTF-8\. Les documents au format DIF utilisant généralement le jeu de caractères IBM437, il peut être nécessaire d'utiliser la commande [USE CHARACTER SET](../commands/use-character-set) pour définir le jeu de caractères approprié. 
 
 Lors de l'utilisation de **EXPORT DIF**, le délimiteur de champs par défaut est le caractère de tabulation (code 9). Le délimiteur d'enregistrement est par défaut le retour chariot (code 13). Vous pouvez modifier ces valeurs en assignant de nouvelles valeurs aux deux *Variables système* *FldDelimit* et *RecDelimit*. L'utilisateur peut modifier ces valeurs par défaut dans le dialogue d'export du mode Développement. Comme les champs Texte peuvent contenir des retours chariot, soyez prudent si vous utilisez le retour chariot comme délimiteur entre les champs à exporter.
 
@@ -47,10 +47,10 @@ OK prend la valeur 1 si l'export s'est correctement déroulé, sinon elle prend 
 
 ## Voir aussi 
 
-[EXPORT SYLK](export-sylk.md)  
-[EXPORT TEXT](export-text.md)  
-[IMPORT DIF](import-dif.md)  
-[USE CHARACTER SET](use-character-set.md)  
+[EXPORT SYLK](../commands/export-sylk)  
+[EXPORT TEXT](../commands/export-text)  
+[IMPORT DIF](../commands/import-dif)  
+[USE CHARACTER SET](../commands/use-character-set)  
 
 ## Propriétés
 

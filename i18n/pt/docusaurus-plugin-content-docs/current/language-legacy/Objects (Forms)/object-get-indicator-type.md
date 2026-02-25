@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-indicator-type
 title: OBJECT Get indicator type
 slug: /commands/object-get-indicator-type
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get indicator type.Summary-->O comando **OBJECT Get indicator type** devolve o tipo do indicador atual atribuído ao termômetro(s) designado pelos parâmetros *objeto* e *\**.<!-- END REF-->
 
-Pode definir o tipo de indicador utilizando a lista de propriedades em modo de desenho ou utilizando o comando [OBJECT SET INDICATOR TYPE](object-set-indicator-type.md).
+Pode definir o tipo de indicador utilizando a lista de propriedades em modo de desenho ou utilizando o comando [OBJECT SET INDICATOR TYPE](../commands/object-set-indicator-type).
 
 Se passar o parâmetro opcional *\** indica que o parâmetro *objeto* é um nome de objeto (cadeia). Se não passar este parâmetro, indica que o parâmetro *objeto* é um campo ou uma variável. Neste caso, se passar uma referência de campo ou variável no lugar de uma cadeia (campo ou variável do objeto unicamente).
 
@@ -45,7 +45,7 @@ Pode comparar o valor devolvido pelo comando com as seguintes constantes, que se
 
 ## Ver também 
 
-[OBJECT SET INDICATOR TYPE](object-set-indicator-type.md)  
+[OBJECT SET INDICATOR TYPE](../commands/object-set-indicator-type)  
 
 ## Propriedades
 

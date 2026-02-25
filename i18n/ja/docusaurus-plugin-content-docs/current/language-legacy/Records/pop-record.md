@@ -1,4 +1,4 @@
----
+﻿---
 id: pop-record
 title: POP RECORD
 slug: /commands/pop-record
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[PUSH RECORD](push-record.md)  
+[PUSH RECORD](../commands/push-record)  
 *レコードスタックの使用*  
 
 ## プロパティ

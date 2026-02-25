@@ -1,4 +1,4 @@
----
+﻿---
 id: web-service-authenticate
 title: WEB SERVICE AUTHENTICATE
 slug: /commands/web-service-authenticate
@@ -36,9 +36,9 @@ displayed_sidebar: docs
 
 **注:** BASICとDIGEST認証のメソッドに関する詳細は*接続セキュリティ*を参照してください。
 
-引数 *name* と *password* には、必須となるID情報 (ユーザ名とパスワード) を渡します。[WEB SERVICE CALL](web-service-call.md)コマンドによってこの情報はコード化され、Webサービスへ送られるHTTPリクエストに追加されます。従って[WEB SERVICE CALL](web-service-call.md)コマンドを呼び出す前に**WEB SERVICE AUTHENTICATE**コマンド を呼び出す必要があります。  
+引数 *name* と *password* には、必須となるID情報 (ユーザ名とパスワード) を渡します。[WEB SERVICE CALL](../commands/web-service-call)コマンドによってこの情報はコード化され、Webサービスへ送られるHTTPリクエストに追加されます。従って[WEB SERVICE CALL](../commands/web-service-call)コマンドを呼び出す前に**WEB SERVICE AUTHENTICATE**コマンド を呼び出す必要があります。  
   
-オプション引数 *authMethod* を用いて、次の[WEB SERVICE CALL](web-service-call.md)コマンド を呼び出すために使用する認証メソッドを指定します。そのためには、以下の値の1つを渡します。
+オプション引数 *authMethod* を用いて、次の[WEB SERVICE CALL](../commands/web-service-call)コマンド を呼び出すために使用する認証メソッドを指定します。そのためには、以下の値の1つを渡します。
 
 * 2 = DIGEST認証メソッドを使用する。
 * 1 = BASIC認証メソッドを使用する。
@@ -46,9 +46,9 @@ displayed_sidebar: docs
 
 引数 *\** を渡すと、認証情報をHTTPプロキシへ送ることを指定します。Webサービスクライアントと Webサービスの間で認証を必要とするプロキシが存在する際、必ずこの設定を実行しなければなりません。Webサービス自体が認証されている場合、ダブル認証が必要となります (例題を参照) 。
 
-認証情報は各リクエスト後にデフォルトで0にリセットされます。そのため**WEB SERVICE AUTHENTICATE**コマンドを使用してから各[WEB SERVICE CALL](web-service-call.md)コマンドを使用します。しかし[WEB SERVICE SET OPTION](web-service-set-option.md)コマンドのオプションを使用すれば、この情報を一時的に保持するのは可能です。この場合、**WEB SERVICE AUTHENTICATE**コマンドをつど実行せずに、各[WEB SERVICE CALL](web-service-call.md)コマンドを実行します。
+認証情報は各リクエスト後にデフォルトで0にリセットされます。そのため**WEB SERVICE AUTHENTICATE**コマンドを使用してから各[WEB SERVICE CALL](../commands/web-service-call)コマンドを使用します。しかし[WEB SERVICE SET OPTION](../commands/web-service-set-option)コマンドのオプションを使用すれば、この情報を一時的に保持するのは可能です。この場合、**WEB SERVICE AUTHENTICATE**コマンドをつど実行せずに、各[WEB SERVICE CALL](../commands/web-service-call)コマンドを実行します。
 
-認証が失敗すると、SOAPサーバはエラーを返します。このエラーは[WEB SERVICE Get info](web-service-get-info.md)コマンドを使用して確認できます。
+認証が失敗すると、SOAPサーバはエラーを返します。このエラーは[WEB SERVICE Get info](../commands/web-service-get-info)コマンドを使用して確認できます。
 
 ## 例題 
 
@@ -64,8 +64,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WEB SERVICE CALL](web-service-call.md)  
-[WEB SERVICE Get info](web-service-get-info.md)  
+[WEB SERVICE CALL](../commands/web-service-call)  
+[WEB SERVICE Get info](../commands/web-service-get-info)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: build-application
 title: BUILD APPLICATION
 slug: /commands/build-application
@@ -35,7 +35,7 @@ Un fichier de configuration d'application est un fichier XML contenant tous les 
 Par défaut, 4D crée pour chaque base de données un fichier de configuration d’application par défaut “buildApp.4DSettings”, placé dans le dossier Settings de la base.
 
 Si la base n’a pas été compilée ou si le code compilé n’est pas à jour, la commande lance au préalable le processus de compilation. Dans ce cas, la fenêtre du compilateur n’apparaît pas (sauf en cas d’erreur), seule une barre de progression est affichée.   
-Vous pouvez éviter l'affichage de cette barre de progression à l'aide de la commande [MESSAGES OFF](messages-off.md).
+Vous pouvez éviter l'affichage de cette barre de progression à l'aide de la commande [MESSAGES OFF](../commands/messages-off).
 
 Si vous ne passez pas le paramètre facultatif buildAppSettings, la commande affiche une boîte de dialogue standard d'ouverture de document, vous permettant de désigner un fichier de configuration d'application. La variable système Document contiendra le chemin d'accès complet du fichier sélectionné. Si vous passez le chemin d’accès et le nom d’un fichier XML de projet d’application valide (encodage UTF-8), la commande utilisera les paramètres définis dans le fichier. Pour plus d’informations sur la structure et les clés utilisables dans un fichier de configuration d’application, reportez-vous au manuel *4D Clés XML BuildApplication*.
 
@@ -56,7 +56,7 @@ La variable système OK prend la valeur 1 si la commande a été correctement ex
 
 ## Gestion des erreurs 
 
-Si la commande échoue, une erreur est générée, que vous pouvez intercepter à l’aide de la commande [ON ERR CALL](on-err-call.md).
+Si la commande échoue, une erreur est générée, que vous pouvez intercepter à l’aide de la commande [ON ERR CALL](../commands/on-err-call).
 
 ## Voir aussi 
 

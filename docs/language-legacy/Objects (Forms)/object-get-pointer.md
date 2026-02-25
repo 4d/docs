@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-pointer
 title: OBJECT Get pointer
 slug: /commands/object-get-pointer
@@ -35,9 +35,9 @@ displayed_sidebar: docs
 This command can be used to designate different objects according to the value of the *selector* parameter. You can pass one of the following constants (found in the "*Form Objects (Access)*" theme) in this parameter:
 
 * Object current or *selector* omitted: If you omit the *selector* parameter or pass this selector, the command returns a pointer to the variable associated with the current object (object whose method is executing).  
-**Note:** This is strictly equivalent to the previous functioning of the [Self](self.md) command. This command is only kept for compatibility reasons.
+**Note:** This is strictly equivalent to the previous functioning of the [Self](../commands/self) command. This command is only kept for compatibility reasons.
 * Object with focus: If you pass this selector, the command returns a pointer to the variable associated with the object that has the focus in the form. The last two optional parameters are ignored if they are passed.  
-**Note:** This is strictly equivalent to the functioning of the [Focus object](focus-object.md) command. This command is now obsolete beginning with 4D v12\.
+**Note:** This is strictly equivalent to the functioning of the [Focus object](../commands/focus-object) command. This command is now obsolete beginning with 4D v12\.
 * Object subform container: If you pass this selector, the command returns a pointer to the variable bound with the subform container. The last two optional parameters are ignored if they are passed. This selector can therefore only be used in the context of a form used as a subform, so as to access the variable bound with the container object.
 * Object named: If you pass this selector, you must also pass the second parameter, *objectName*. In this case, the command returns a pointer to the variable associated with the object whose name was passed in this parameter.  
 **Note:** If *objectName* corresponds to a subform and the "Output subform" option is checked, the command returns a pointer to the table of the subform if a source table is specified; otherwise it returns Nil.
@@ -61,12 +61,12 @@ Given a form "SF" used twice as a subform in the same parent form. The subform o
 
 ## See also 
 
-[Focus object](focus-object.md)  
+[Focus object](../commands/focus-object)  
 *Form Objects (Access)*  
-[OBJECT Get name](object-get-name.md)  
-[OBJECT Get subform container value](object-get-subform-container-value.md)  
+[OBJECT Get name](../commands/object-get-name)  
+[OBJECT Get subform container value](../commands/object-get-subform-container-value)  
 *Objects (Forms)*  
-[Self](self.md)  
+[Self](../commands/self)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: idle
 title: IDLE
 slug: /commands/idle
@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.IDLE.Summary-->O comando IDLE está desenhado para ser utilizado unicamente com o compilador.<!-- END REF--> Este comando é utilizado apenas em bancos compilados nas quais os métodos definidos pelo usuário são escritos de maneira que não são chamados ao motor de 4D. Por exemplo, se um método tem um loop For na qual não se executam comandos 4D, o loop não pode ser interrompido por um processo instalado por [ON EVENT CALL](on-event-call.md), e o usuário também não pode mudar a outra aplicação. Neste caso, deve inserir IDLE para permitir que 4D intercepte os eventos. Se não deseja interrupções, omita IDLE.
+<!--REF #_command_.IDLE.Summary-->O comando IDLE está desenhado para ser utilizado unicamente com o compilador.<!-- END REF--> Este comando é utilizado apenas em bancos compilados nas quais os métodos definidos pelo usuário são escritos de maneira que não são chamados ao motor de 4D. Por exemplo, se um método tem um loop For na qual não se executam comandos 4D, o loop não pode ser interrompido por um processo instalado por [ON EVENT CALL](../commands/on-event-call), e o usuário também não pode mudar a outra aplicação. Neste caso, deve inserir IDLE para permitir que 4D intercepte os eventos. Se não deseja interrupções, omita IDLE.
 
 ## Exemplo 
 
@@ -52,7 +52,7 @@ com:
 ## Ver também 
 
 *Comandos de Compilação*  
-[ON EVENT CALL](on-event-call.md)  
+[ON EVENT CALL](../commands/on-event-call)  
 
 ## Propriedades
 

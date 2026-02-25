@@ -1,4 +1,4 @@
----
+﻿---
 id: get-registered-clients
 title: GET REGISTERED CLIENTS
 slug: /commands/get-registered-clients
@@ -30,8 +30,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET REGISTERED CLIENTS.Summary-->La commande **GET REGISTERED CLIENTS** remplit deux tableaux <!-- END REF-->:
 
-* *listeClients*, qui contient la liste des clients “inscrits” à l’aide de la commande [REGISTER CLIENT](register-client.md).
-* *nbMéthodes*, qui fournit liste des “charges de travail” de chaque client. La charge de travail est le nombre de méthodes qu’un 4D Client doit encore exécuter, à la demande de la commande [EXECUTE ON CLIENT](execute-on-client.md).
+* *listeClients*, qui contient la liste des clients “inscrits” à l’aide de la commande [REGISTER CLIENT](../commands/register-client).
+* *nbMéthodes*, qui fournit liste des “charges de travail” de chaque client. La charge de travail est le nombre de méthodes qu’un 4D Client doit encore exécuter, à la demande de la commande [EXECUTE ON CLIENT](../commands/execute-on-client).
 
 ## Exemple 1 
 
@@ -45,7 +45,7 @@ Vous souhaitez obtenir la liste des clients inscrits et des méthodes restant à
 
 ## Exemple 2 
 
-Reportez-vous à l’exemple de la commande [REGISTER CLIENT](register-client.md). 
+Reportez-vous à l’exemple de la commande [REGISTER CLIENT](../commands/register-client). 
 
 ## Variables et ensembles système 
 
@@ -53,9 +53,9 @@ Si l’opération se déroule correctement, la variable système OK prend la val
 
 ## Voir aussi 
 
-[EXECUTE ON CLIENT](execute-on-client.md)  
-[REGISTER CLIENT](register-client.md)  
-[UNREGISTER CLIENT](unregister-client.md)  
+[EXECUTE ON CLIENT](../commands/execute-on-client)  
+[REGISTER CLIENT](../commands/register-client)  
+[UNREGISTER CLIENT](../commands/unregister-client)  
 
 ## Propriétés
 

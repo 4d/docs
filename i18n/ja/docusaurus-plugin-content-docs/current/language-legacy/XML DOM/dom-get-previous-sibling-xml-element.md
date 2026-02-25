@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-get-previous-sibling-xml-element
 title: DOM Get previous sibling XML element
 slug: /commands/dom-get-previous-sibling-xml-element
@@ -45,7 +45,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[DOM Get next sibling XML element](dom-get-next-sibling-xml-element.md)  
+[DOM Get next sibling XML element](../commands/dom-get-next-sibling-xml-element)  
 
 ## プロパティ
 

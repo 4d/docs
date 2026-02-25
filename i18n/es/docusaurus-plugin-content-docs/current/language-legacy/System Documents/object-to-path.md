@@ -1,4 +1,4 @@
----
+﻿---
 id: object-to-path
 title: Object to path
 slug: /commands/object-to-path
@@ -42,7 +42,7 @@ En *objRuta*, pase un objeto que define la ruta que desea generar. Debe contener
 | extension     | Texto    | Extensión del nombre final de archivo o carpeta. Comienza con "." (puede ser omitido). Cadena vacía "" si no hay extensión.                                                                                                                                                                    |
 | isFolder      | Booleano | True si el nombre es un nombre de carpeta, de lo contrario, false (el valor predeterminado es false)                                                                                                                                                                                           |
 
-Por lo general, *objRuta* se generará con el comando [Path to object ](path-to-object.md), sin embargo, el objeto se puede generar con cualquier medio. Tenga en cuenta que **Object to path** solo maneja cadenas. Tampoco comprueba si la ruta es válida con respecto al tipo de ruta, ni la existencia real de ningún archivo o carpeta.
+Por lo general, *objRuta* se generará con el comando [Path to object ](../commands/path-to-object), sin embargo, el objeto se puede generar con cualquier medio. Tenga en cuenta que **Object to path** solo maneja cadenas. Tampoco comprueba si la ruta es válida con respecto al tipo de ruta, ni la existencia real de ningún archivo o carpeta.
 
 ## Ejemplo 
 
@@ -61,12 +61,12 @@ Queremos duplicar y cambiar el nombre de un archivo en su propia carpeta
 
 ## Ver también 
 
-[Convert path POSIX to system](convert-path-posix-to-system.md)  
-[Convert path system to POSIX](convert-path-system-to-posix.md)  
+[Convert path POSIX to system](../commands/convert-path-posix-to-system)  
+[Convert path system to POSIX](../commands/convert-path-system-to-posix)  
 [File](../commands/file)    
-[Folder ](folder.md)  
-[Path to object ](path-to-object.md)  
-[Test path name](test-path-name.md)  
+[Folder ](../commands/folder)  
+[Path to object ](../commands/path-to-object)  
+[Test path name](../commands/test-path-name)  
 
 ## Propiedades
 

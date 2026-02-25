@@ -1,4 +1,4 @@
----
+﻿---
 id: delete-menu-item
 title: DELETE MENU ITEM
 slug: /commands/delete-menu-item
@@ -43,8 +43,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[APPEND MENU ITEM](append-menu-item.md)  
-[INSERT MENU ITEM](insert-menu-item.md)  
+[APPEND MENU ITEM](../commands/append-menu-item)  
+[INSERT MENU ITEM](../commands/insert-menu-item)  
 
 ## プロパティ
 

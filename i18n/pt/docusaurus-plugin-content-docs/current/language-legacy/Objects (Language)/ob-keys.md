@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-keys
 title: OB Keys
 slug: /commands/ob-keys
@@ -56,8 +56,8 @@ Se quiser uma coleção com todos os nomes de propriedade de primeiro-nível de 
 
 ## Ver também 
 
-[OB Entries](ob-entries.md)  
-[OB Values](ob-values.md)  
+[OB Entries](../commands/ob-entries)  
+[OB Values](../commands/ob-values)  
 
 ## Propriedades
 

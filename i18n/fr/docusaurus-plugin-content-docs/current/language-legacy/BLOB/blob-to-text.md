@@ -1,4 +1,4 @@
----
+﻿---
 id: blob-to-text
 title: BLOB to text
 slug: /commands/blob-to-text
@@ -52,7 +52,7 @@ Le paramètre *formatTexte* définit le format interne et le jeu de caractères 
 
 * Les constantes “UTF8” sont utilisables uniquement lorsque l’application fonctionne en mode Unicode.
 * Les constantes “Mac” ne permettent pas de traiter des textes de plus de 32 ko.
-* Si vous souhaitez manipuler des jeux de caractères autres que UTF8, utilisez la commande [Convert to text](convert-to-text.md). Pour plus d'informations sur ces constantes et les formats qu'elles représentent, reportez-vous à la description de la commande [TEXT TO BLOB](text-to-blob.md).
+* Si vous souhaitez manipuler des jeux de caractères autres que UTF8, utilisez la commande [Convert to text](../commands/convert-to-text). Pour plus d'informations sur ces constantes et les formats qu'elles représentent, reportez-vous à la description de la commande [TEXT TO BLOB](../commands/text-to-blob).
 
 **ATTENTION :** Le nombre de caractères à lire est déterminé par le paramètre *formatTexte*, SAUF dans le cas des formats Mac Text without length et UTF8 Text without length pour lesquels vous devez spécifier le nombre de caractères à lire dans le paramètre *longueurTexte*. Pour les autres formats, *longueurTexte* est ignoré et vous pouvez l'omettre.
 
@@ -66,14 +66,14 @@ Après l'exécution de la commande, la variable *offset* est incrémentée du no
 
 ## Voir aussi 
 
-[BLOB to integer](blob-to-integer.md)  
-[BLOB to longint](blob-to-longint.md)  
-[BLOB to real](blob-to-real.md)  
-[Convert to text](convert-to-text.md)  
-[INTEGER TO BLOB](integer-to-blob.md)  
-[LONGINT TO BLOB](longint-to-blob.md)  
-[REAL TO BLOB](real-to-blob.md)  
-[TEXT TO BLOB](text-to-blob.md)  
+[BLOB to integer](../commands/blob-to-integer)  
+[BLOB to longint](../commands/blob-to-longint)  
+[BLOB to real](../commands/blob-to-real)  
+[Convert to text](../commands/convert-to-text)  
+[INTEGER TO BLOB](../commands/integer-to-blob)  
+[LONGINT TO BLOB](../commands/longint-to-blob)  
+[REAL TO BLOB](../commands/real-to-blob)  
+[TEXT TO BLOB](../commands/text-to-blob)  
 
 ## Propriétés
 

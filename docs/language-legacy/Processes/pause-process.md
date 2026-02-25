@@ -1,4 +1,4 @@
----
+﻿---
 id: pause-process
 title: PAUSE PROCESS
 slug: /commands/pause-process
@@ -17,9 +17,9 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.PAUSE PROCESS.Summary-->**PAUSE PROCESS** suspends the execution of *process* until it is reactivated by the [RESUME PROCESS](resume-process.md) command.<!-- END REF--> During this period, *process* does not take any time on your machine. Even though a process may be paused, the process is still in memory.
+<!--REF #_command_.PAUSE PROCESS.Summary-->**PAUSE PROCESS** suspends the execution of *process* until it is reactivated by the [RESUME PROCESS](../commands/resume-process) command.<!-- END REF--> During this period, *process* does not take any time on your machine. Even though a process may be paused, the process is still in memory.
 
-If *process* is already paused, **PAUSE PROCESS** does nothing. If the process has been delayed using the [DELAY PROCESS](delay-process.md) command, the process is paused. [RESUME PROCESS](resume-process.md) resumes the process immediately.
+If *process* is already paused, **PAUSE PROCESS** does nothing. If the process has been delayed using the [DELAY PROCESS](../commands/delay-process) command, the process is paused. [RESUME PROCESS](../commands/resume-process) resumes the process immediately.
 
 While process execution is suspended, the windows belonging to this process are not enterable. In this case, to avoid confusing the user, consider hiding the process. If *process* does not exist, the command does nothing.
 
@@ -29,10 +29,10 @@ While process execution is suspended, the windows belonging to this process are 
 
 ## See also 
 
-[ABORT PROCESS BY ID](abort-process-by-id.md)  
-[DELAY PROCESS](delay-process.md)  
-[HIDE PROCESS](hide-process.md)  
-[RESUME PROCESS](resume-process.md)  
+[ABORT PROCESS BY ID](../commands/abort-process-by-id)  
+[DELAY PROCESS](../commands/delay-process)  
+[HIDE PROCESS](../commands/hide-process)  
+[RESUME PROCESS](../commands/resume-process)  
 
 ## Properties
 

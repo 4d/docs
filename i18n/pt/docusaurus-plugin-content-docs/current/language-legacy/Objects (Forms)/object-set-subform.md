@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-subform
 title: OBJECT SET SUBFORM
 slug: /commands/object-set-subform
@@ -53,8 +53,8 @@ Quando modifica um sub-formulário página, o comando pode executar-se em qualqu
 
 ## Ver também 
 
-[OBJECT GET SUBFORM](object-get-subform.md)  
-[OBJECT GET SUBFORM CONTAINER SIZE](object-get-subform-container-size.md)  
+[OBJECT GET SUBFORM](../commands/object-get-subform)  
+[OBJECT GET SUBFORM CONTAINER SIZE](../commands/object-get-subform-container-size)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: select-list-items-by-position
 title: SELECT LIST ITEMS BY POSITION
 slug: /commands/select-list-items-by-position
@@ -82,9 +82,9 @@ São selecionados os elementos segundo, terceiro e quinto da lista hierárquica
 
 ## Ver também 
 
-[EDIT ITEM](edit-item.md)  
-[SELECT LIST ITEMS BY REFERENCE](select-list-items-by-reference.md)  
-[Selected list items](selected-list-items.md)  
+[EDIT ITEM](../commands/edit-item)  
+[SELECT LIST ITEMS BY REFERENCE](../commands/select-list-items-by-reference)  
+[Selected list items](../commands/selected-list-items)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: message
 title: MESSAGE
 slug: /commands/message
@@ -36,8 +36,8 @@ displayed_sidebar: docs
 * メッセージがウィンドウの幅よりも長い場合、4Dは自動的に改行を行います。
 * メッセージの行がウィンドウの高さより高い場合、4Dは自動的にメッセージウィンドウをスクロールします。
 * 行の制御を行うには、メッセージ中にキャリッジリターン (Char(13) または "\\r") を挿入します。
-* ウィンドウの特定の位置にメッセージを表示するには、[GOTO XY](goto-xy.md)コマンドを使用します。
-* ウィンドウの内容を消去するには、[ERASE WINDOW](erase-window.md)コマンドを使用します。
+* ウィンドウの特定の位置にメッセージを表示するには、[GOTO XY](../commands/goto-xy)コマンドを使用します。
+* ウィンドウの内容を消去するには、[ERASE WINDOW](../commands/erase-window)コマンドを使用します。
 * このウィンドウは単なる出力用ウィンドウであり、別のウィンドウがオーバーラップしても再描画されません。
 * ウィンドウに表示される文字のフォントとサイズは、データベース設定"インターフェース"ページ内にて変更することができます。
 
@@ -97,7 +97,7 @@ MESSAGEをコールするたびに、以下のウィンドウが表示されて�
 
 ## 例題 4 
 
-[GOTO XY](goto-xy.md) コマンドを使用し、何行か追加します:  
+[GOTO XY](../commands/goto-xy) コマンドを使用し、何行か追加します:  
 
 ```4d
  Open window(50;50;500;250;5;"Operation in Progress")
@@ -121,9 +121,9 @@ MESSAGEをコールするたびに、以下のウィンドウが表示されて�
 
 ## 参照 
 
-[CLOSE WINDOW](close-window.md)  
-[ERASE WINDOW](erase-window.md)  
-[GOTO XY](goto-xy.md)  
+[CLOSE WINDOW](../commands/close-window)  
+[ERASE WINDOW](../commands/erase-window)  
+[GOTO XY](../commands/goto-xy)  
 [Open window](../commands/open-window)  
 
 ## プロパティ

@@ -1,4 +1,4 @@
----
+﻿---
 id: substring
 title: Substring
 slug: /commands/substring
@@ -64,7 +64,7 @@ La méthode projet suivante ajoute au tableau de type texte ou alpha, dont le po
 
 ## Voir aussi 
 
-[Position](position.md)  
+[Position](../commands/position)  
 
 ## Propriétés
 

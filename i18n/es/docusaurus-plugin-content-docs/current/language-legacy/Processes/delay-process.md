@@ -1,4 +1,4 @@
----
+﻿---
 id: delay-process
 title: DELAY PROCESS
 slug: /commands/delay-process
@@ -49,8 +49,8 @@ Ver el ejemplo del comando [Process Number](process-number.md "Process Number").
 
 ## Ver también 
 
-[HIDE PROCESS](hide-process.md)  
-[PAUSE PROCESS](pause-process.md)  
+[HIDE PROCESS](../commands/hide-process)  
+[PAUSE PROCESS](../commands/pause-process)  
 
 ## Propiedades
 

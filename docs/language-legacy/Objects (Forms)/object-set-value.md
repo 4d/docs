@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-value
 title: OBJECT SET VALUE
 slug: /commands/object-set-value
@@ -50,7 +50,7 @@ You want to get the data source value for a form object, get its name, and set a
 
 ## See also 
 
-[OBJECT Get value](object-get-value.md)  
+[OBJECT Get value](../commands/object-get-value)  
 
 ## Properties
 

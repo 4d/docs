@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-set-xml-declaration
 title: DOM SET XML DECLARATION
 slug: /commands/dom-set-xml-declaration
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 **Note :** Si vous passez un jeu de caractères non pris en charge par les commandes XML de 4D, l'UTF-8 sera utilisé. Reportez-vous au paragraphe *Jeux de caractères* pour connaître la liste des jeux de caractères pris en charge (l'UTF-8 est toutefois recommandé dans la plupart des cas).
 * *autonome* : indique si l’arbre est autonome (Vrai) ou s’il dépend, pour son fonctionnement, de ressources externes (Faux). Par défaut (si la commande n’est pas appelée ou si le paramètre est omis), l’arbre n’est pas autonome.
 
-**Note de compatibilité :** Le paramètre *indentation* est conservé pour des raisons de compatibilité avec les versions précédentes de 4D mais son usage est déconseillé à compter de 4D v12\. Désormais, pour définir l’indentation du document, il est recommandé d’utiliser la commande [XML SET OPTIONS](xml-set-options.md). 
+**Note de compatibilité :** Le paramètre *indentation* est conservé pour des raisons de compatibilité avec les versions précédentes de 4D mais son usage est déconseillé à compter de 4D v12\. Désormais, pour définir l’indentation du document, il est recommandé d’utiliser la commande [XML SET OPTIONS](../commands/xml-set-options). 
 
 ## Exemple 
 
@@ -50,8 +50,8 @@ Cet exemple définit l’encodage et l’option standalone de l’élément *ref
 
 ## Voir aussi 
 
-[DOM Create XML Ref](dom-create-xml-ref.md)  
-[XML SET OPTIONS](xml-set-options.md)  
+[DOM Create XML Ref](../commands/dom-create-xml-ref)  
+[XML SET OPTIONS](../commands/xml-set-options)  
 
 ## Propriétés
 

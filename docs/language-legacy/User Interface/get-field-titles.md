@@ -1,4 +1,4 @@
----
+﻿---
 id: get-field-titles
 title: GET FIELD TITLES
 slug: /commands/get-field-titles
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET FIELD TITLES.Summary-->The **GET FIELD TITLES** command fills the *fieldTitles* and *fieldNums* arrays with the names and numbers of database fields for the desired *aTable*.<!-- END REF--> The contents of these two arrays are synchronized.
 
-If the [SET FIELD TITLES](set-field-titles.md) command is called during the session, **GET FIELD TITLES** only returns the “modified” names and field numbers defined using this command.
+If the [SET FIELD TITLES](../commands/set-field-titles) command is called during the session, **GET FIELD TITLES** only returns the “modified” names and field numbers defined using this command.
 
 Otherwise, **GET FIELD TITLES** returns the names of all database fields as defined in the Structure window. 
 
@@ -39,8 +39,8 @@ In both cases, the command does not return invisible fields.
 
 ## See also 
 
-[GET TABLE TITLES](get-table-titles.md)  
-[SET FIELD TITLES](set-field-titles.md)  
+[GET TABLE TITLES](../commands/get-table-titles)  
+[SET FIELD TITLES](../commands/set-field-titles)  
 
 ## Properties
 

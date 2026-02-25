@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-arrays
 title: LISTBOX GET ARRAYS
 slug: /commands/listbox-get-arrays
@@ -62,9 +62,9 @@ Para seleção de registro, list boxes do tipo coleção ou seleção de entidad
 
 ## Ver também 
 
-[LISTBOX Get array](listbox-get-array.md)  
+[LISTBOX Get array](../commands/listbox-get-array)  
 [LISTBOX Get property](../commands/listbox-get-property)  
-[LISTBOX SET ARRAY](listbox-set-array.md)  
+[LISTBOX SET ARRAY](../commands/listbox-set-array)  
 
 ## Propriedades
 

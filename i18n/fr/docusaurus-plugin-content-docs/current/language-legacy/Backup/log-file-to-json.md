@@ -1,4 +1,4 @@
----
+﻿---
 id: log-file-to-json
 title: LOG FILE TO JSON
 slug: /commands/log-file-to-json
@@ -38,7 +38,7 @@ Dans *cheminDossierDest*, passez le chemin du dossier dans lequel vous souhaitez
 
 Par défaut, la taille maximale du fichier JSON exporté est de 10 Mo. Lorsque cette taille est atteinte, le fichier est refermé et un nouveau fichier est créé. Limiter la taille de chaque fichier JSON réduit la quantité de mémoire requise pour analyser les fichiers. Vous pouvez modifier la taille maximale du fichier exporté en passant une valeur (en octets) dans le paramètre *tailleMax*. Passer 0 rétablit la valeur par défaut (10 Mo). Passer une valeur négative indique une taille illimitée.
 
-Par défaut, si le paramètre *cheminHistorique* est omis, la commande sauvegarde le fichier d'historique courant. Si vous voulez exporter en JSON un fichier d'historique spécifique, passez son chemin d'accès dans le paramètre *cheminHistorique*. Ce fichier d'historique doit avoir l'extension ".journal". Si vous souhaitez exporter un fichier d'historique archivé (extension ".4bl"), vous devez au préalable le convertir à l'aide de la commande [RESTORE](restore.md). Vous pouvez passer une chaîne vide ("") afin d'afficher la boîte de dialogue standard d'ouverture de fichier, permettant à l'utilisateur de sélectionner le fichier d'historique à traiter. Le chemin du fichier sélectionné est retourné dans la variable système **Document**.
+Par défaut, si le paramètre *cheminHistorique* est omis, la commande sauvegarde le fichier d'historique courant. Si vous voulez exporter en JSON un fichier d'historique spécifique, passez son chemin d'accès dans le paramètre *cheminHistorique*. Ce fichier d'historique doit avoir l'extension ".journal". Si vous souhaitez exporter un fichier d'historique archivé (extension ".4bl"), vous devez au préalable le convertir à l'aide de la commande [RESTORE](../commands/restore). Vous pouvez passer une chaîne vide ("") afin d'afficher la boîte de dialogue standard d'ouverture de fichier, permettant à l'utilisateur de sélectionner le fichier d'historique à traiter. Le chemin du fichier sélectionné est retourné dans la variable système **Document**.
 
 **Note :** Lorsque la commande sauvegarde le fichier d'historique courant, la base n'est pas verrouillée. De nouvelles opérations peuvent être exécutées tandis que le fichier est écrit sur le disque -- ces opérations ne seront pas incluses dans le fichier sauvegardé.
 
@@ -106,7 +106,7 @@ La commande **LOG FILE TO JSON** modifie la valeur des variables système OK et 
 ## Voir aussi 
 
   
-[INTEGRATE MIRROR LOG FILE](integrate-mirror-log-file.md)  
+[INTEGRATE MIRROR LOG FILE](../commands/integrate-mirror-log-file)  
 
 ## Propriétés
 

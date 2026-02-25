@@ -1,4 +1,4 @@
----
+﻿---
 id: distinct-attribute-paths
 title: DISTINCT ATTRIBUTE PATHS
 slug: /commands/distinct-attribute-paths
@@ -76,7 +76,7 @@ displayed_sidebar: docs
 ## 参照 
 
   
-[DISTINCT ATTRIBUTE VALUES](distinct-attribute-values.md)  
+[DISTINCT ATTRIBUTE VALUES](../commands/distinct-attribute-values)  
 
 ## プロパティ
 

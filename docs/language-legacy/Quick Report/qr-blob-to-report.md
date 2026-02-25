@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-blob-to-report
 title: QR BLOB TO REPORT
 slug: /commands/qr-blob-to-report
@@ -54,7 +54,7 @@ The following statement retrieves the Quick Report stored in Field4 and displays
 
 ## See also 
 
-[QR REPORT TO BLOB](qr-report-to-blob.md)  
+[QR REPORT TO BLOB](../commands/qr-report-to-blob)  
 
 ## Properties
 

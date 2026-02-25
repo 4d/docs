@@ -1,4 +1,4 @@
----
+﻿---
 id: export-data
 title: EXPORT DATA
 slug: /commands/export-data
@@ -41,7 +41,7 @@ Le paramètre optionnel *projet* vous permet d'utiliser un projet pour l'export 
 Un projet d’export contient tous les paramètres de l’export, tels que les tables et champs exportés, les délimiteurs, etc. Vous pouvez passer dans *projet* soit une variable texte contenant du XML, soit une variable texte contenant la référence à un élément DOM préexistant, soit un BLOB. Les projets peuvent avoir été créés par programmation (projets au format XML uniquement) ou être issus du chargement de paramètres préalablement définis dans la boîte de dialogue d’export. Dans ce dernier cas, vous disposez de deux solutions :
 
 * utiliser la commande **EXPORT DATA** avec un paramètre *projet* vide et le paramètre optionnel *\** (cf. ci-dessous), puis stocker le paramètre *projet* résultant dans un champ Texte ou BLOB. Cette solution permet notamment de conserver le projet avec le fichier de données.
-* sauvegarder le projet sur disque, puis le charger par exemple à l’aide de la commande [DOM Parse XML source](dom-parse-xml-source.md) et passer sa référence dans le paramètre *projet*.
+* sauvegarder le projet sur disque, puis le charger par exemple à l’aide de la commande [DOM Parse XML source](../commands/dom-parse-xml-source) et passer sa référence dans le paramètre *projet*.
 
 **Note de compatibilité :** A compter de la version 12 de 4D, les projets d'export sont encodés en XML. 4D peut ouvrir les projets d'export générés avec des versions précédentes de 4D (format BLOB), mais les projets créés à compter de la v12 ne peuvent plus être rouverts avec une v11 ou antérieure. Il est désormais conseillé d'utiliser des variables Texte pour manipuler les fichiers d'export. 
 
@@ -107,10 +107,10 @@ Si l'utilisateur clique sur **Annuler** dans une des boîtes de dialogue (d'enre
 
 ## Voir aussi 
 
-[EXPORT DIF](export-dif.md)  
-[EXPORT SYLK](export-sylk.md)  
-[EXPORT TEXT](export-text.md)  
-[IMPORT DATA](import-data.md)  
+[EXPORT DIF](../commands/export-dif)  
+[EXPORT SYLK](../commands/export-sylk)  
+[EXPORT TEXT](../commands/export-text)  
+[IMPORT DATA](../commands/import-data)  
 
 ## Propriétés
 

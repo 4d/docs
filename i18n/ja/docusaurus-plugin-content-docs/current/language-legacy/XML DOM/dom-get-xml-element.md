@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-get-xml-element
 title: DOM Get XML element
 slug: /commands/dom-get-xml-element
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 要素の値が*elementValue* 引数に返されます。
 
-**注:** デフォルトでは、**DOM Get XML element** は*elementName* 引数については大文字と小文字を区別します(xml準拠のため)。コマンドの大文字と小文字の区別については、[XML SET OPTIONS](xml-set-options.md) コマンドのXML DOM case sensitivity セレクターを使用することで管理可能です。
+**注:** デフォルトでは、**DOM Get XML element** は*elementName* 引数については大文字と小文字を区別します(xml準拠のため)。コマンドの大文字と小文字の区別については、[XML SET OPTIONS](../commands/xml-set-options) コマンドのXML DOM case sensitivity セレクターを使用することで管理可能です。
 
 ## システム変数およびセット 
 
@@ -45,8 +45,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[DOM GET XML ELEMENT VALUE](dom-get-xml-element-value.md)  
-[XML SET OPTIONS](xml-set-options.md)  
+[DOM GET XML ELEMENT VALUE](../commands/dom-get-xml-element-value)  
+[XML SET OPTIONS](../commands/xml-set-options)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: get-print-preview
 title: Get print preview
 slug: /commands/get-print-preview
@@ -27,14 +27,14 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Get print preview.Summary-->La commande **Get print preview** retourne Vrai si l’instruction [SET PRINT PREVIEW](set-print-preview.md) a été appelée avec la valeur **Vrai** dans le process courant.<!-- END REF-->
+<!--REF #_command_.Get print preview.Summary-->La commande **Get print preview** retourne Vrai si l’instruction [SET PRINT PREVIEW](../commands/set-print-preview) a été appelée avec la valeur **Vrai** dans le process courant.<!-- END REF-->
 
-A noter que l’utilisateur peut modifier cette option avant de valider la boîte de dialogue. Pour obtenir le mode final d’impression, vous devez utiliser la commande [Is in print preview](is-in-print-preview.md). 
+A noter que l’utilisateur peut modifier cette option avant de valider la boîte de dialogue. Pour obtenir le mode final d’impression, vous devez utiliser la commande [Is in print preview](../commands/is-in-print-preview). 
 
 ## Voir aussi 
 
-[Is in print preview](is-in-print-preview.md)  
-[SET PRINT PREVIEW](set-print-preview.md)  
+[Is in print preview](../commands/is-in-print-preview)  
+[SET PRINT PREVIEW](../commands/set-print-preview)  
 
 ## Propriétés
 

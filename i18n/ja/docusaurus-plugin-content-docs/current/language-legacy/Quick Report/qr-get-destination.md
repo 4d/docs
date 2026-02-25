@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-get-destination
 title: QR GET DESTINATION
 slug: /commands/qr-get-destination
@@ -47,7 +47,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[QR SET DESTINATION](qr-set-destination.md)  
+[QR SET DESTINATION](../commands/qr-set-destination)  
 
 ## プロパティ
 

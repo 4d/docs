@@ -1,4 +1,4 @@
----
+﻿---
 id: call-worker
 title: CALL WORKER
 slug: /commands/call-worker
@@ -56,7 +56,7 @@ Vous pouvez aussi passer des paramètres à la formule en utilisant un ou plusie
 * Les pointeurs vers les variables, notamment les variables locales ou les variables process, ne sont pas recommandés car ils peuvent être indéfinis au moment de leur accès par la méthode du process.
 * Les paramètres standard de type objet ou collection sont passés **par copie**, c'est-à-dire que 4D créera une copie de l'objet ou de la collection dans le process de destination si le worker est dans un process autre que celui qui appelle la commande **CALL WORKER**. Dans ce contexte, si vous souhaitez passer un paramètre objet ou collection **par référence**, vous devez utiliser un objet ou une collection partagé(e) (voir *Objets partagés et collections partagées*).
 
-Un process worker reste actif jusqu’à la fermeture de l'application ou jusqu'à ce que la commande [KILL WORKER](kill-worker.md) soit appelée explicitement pour ce process. Pensez à appeler cette commande une fois que le process worker n'est plus utile afin de libérer l'espace mémoire. 
+Un process worker reste actif jusqu’à la fermeture de l'application ou jusqu'à ce que la commande [KILL WORKER](../commands/kill-worker) soit appelée explicitement pour ce process. Pensez à appeler cette commande une fois que le process worker n'est plus utile afin de libérer l'espace mémoire. 
 
 ## Exemple 
 
@@ -87,9 +87,9 @@ Voici le code de *méthodeWorker* :
 ## Voir aussi 
 
 *A propos des workers*  
-[CALL FORM](call-form.md)  
-[Current process name](current-process-name.md)  
-[KILL WORKER](kill-worker.md)  
+[CALL FORM](../commands/call-form)  
+[Current process name](../commands/current-process-name)  
+[KILL WORKER](../commands/kill-worker)  
 
 ## Propriétés
 

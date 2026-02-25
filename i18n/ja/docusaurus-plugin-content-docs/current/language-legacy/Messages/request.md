@@ -1,4 +1,4 @@
----
+﻿---
 id: request
 title: Request
 slug: /commands/request
@@ -91,8 +91,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ALERT](alert.md)  
-[CONFIRM](confirm.md)  
+[ALERT](../commands/alert)  
+[CONFIRM](../commands/confirm)  
 
 ## プロパティ
 

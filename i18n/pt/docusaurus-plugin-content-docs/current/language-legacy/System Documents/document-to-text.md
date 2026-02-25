@@ -1,4 +1,4 @@
----
+﻿---
 id: document-to-text
 title: Document to text
 slug: /commands/document-to-text
@@ -38,7 +38,7 @@ Em *nomeArquivo*, passe o nome ou caminho de acesso do arquivo a ler. O arquivo 
 * Um caminho de acesso relativo ao arquivo de estrutura da aplicação, por exemplo, "\\\\docs\\\\meuArquivo.txt" em Windows ou ": docs: meuArquivo.txt" em macOS.
 * Um caminho de acesso absoluto, por exemplo, "c:\\\\app\\\\docs\\\\meuArquivo.txt" em Windows ou "MacHD:docs:meuArquivo.txt" em macOS.
 
-Em *conjCaracteres*, se passa o conjunto de caracteres a utilizar para a leitura dos conteúdos. Pode passar uma cadeia com o nome estandarte do conjunto (por exemplo, "ISO-8859-1" ou "UTF-8") ou seu ID MIBEnum (inteiro longo). Para mais informação sobre a lista de conjuntos de caracteres suportados por 4D, consulte a descrição do comando [CONVERT FROM TEXT](convert-from-text.md).  
+Em *conjCaracteres*, se passa o conjunto de caracteres a utilizar para a leitura dos conteúdos. Pode passar uma cadeia com o nome estandarte do conjunto (por exemplo, "ISO-8859-1" ou "UTF-8") ou seu ID MIBEnum (inteiro longo). Para mais informação sobre a lista de conjuntos de caracteres suportados por 4D, consulte a descrição do comando [CONVERT FROM TEXT](../commands/convert-from-text).  
   
 Se o documento contém um Byte Order Mark (BOM), 4D utiliza o conjunto de caracteres que foi definido em *conjCaracteres* (este parâmetro então se ignora).  
   
@@ -61,7 +61,7 @@ Por padrão, quando se omite o parâmetro *modoRetorno*, os saltos de linha se p
 
 Nota de Compatibidade: opções de compatibilidade estão disponíveis para gerenciamento EOL e BOM. Ver *Página Compatibilidade*.  
   
-**Nota**: Este comando não modifica a variável OK. Em caso de falha, é gerado um erro que pode interceptar utilizando um método instalado pelo comando [ON ERR CALL](on-err-call.md).
+**Nota**: Este comando não modifica a variável OK. Em caso de falha, é gerado um erro que pode interceptar utilizando um método instalado pelo comando [ON ERR CALL](../commands/on-err-call).
 
 ## Exemplo 
 
@@ -88,7 +88,7 @@ Quando executa este código:
 ## Ver também 
 
 *Documentos Sistema*  
-[TEXT TO DOCUMENT](text-to-document.md)  
+[TEXT TO DOCUMENT](../commands/text-to-document)  
 
 ## Propriedades
 

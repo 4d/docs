@@ -1,4 +1,4 @@
----
+﻿---
 id: real-to-blob
 title: REAL TO BLOB
 slug: /commands/real-to-blob
@@ -137,13 +137,13 @@ Después de la ejecución de este código:
 
 ## Ver también 
 
-[BLOB to integer](blob-to-integer.md)  
-[BLOB to longint](blob-to-longint.md)  
-[BLOB to real](blob-to-real.md)  
-[BLOB to text](blob-to-text.md)  
-[INTEGER TO BLOB](integer-to-blob.md)  
-[LONGINT TO BLOB](longint-to-blob.md)  
-[TEXT TO BLOB](text-to-blob.md)  
+[BLOB to integer](../commands/blob-to-integer)  
+[BLOB to longint](../commands/blob-to-longint)  
+[BLOB to real](../commands/blob-to-real)  
+[BLOB to text](../commands/blob-to-text)  
+[INTEGER TO BLOB](../commands/integer-to-blob)  
+[LONGINT TO BLOB](../commands/longint-to-blob)  
+[TEXT TO BLOB](../commands/text-to-blob)  
 
 ## Propiedades
 

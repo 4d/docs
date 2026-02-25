@@ -1,4 +1,4 @@
----
+﻿---
 id: web-validate-digest
 title: WEB Validate digest
 slug: /commands/web-validate-digest
@@ -65,8 +65,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Generate digest](generate-digest.md)  
-[Validate password](validate-password.md)  
+[Generate digest](../commands/generate-digest)  
+[Validate password](../commands/validate-password)  
 
 ## プロパティ
 

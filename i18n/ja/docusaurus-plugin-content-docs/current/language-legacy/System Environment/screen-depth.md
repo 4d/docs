@@ -1,4 +1,4 @@
----
+﻿---
 id: screen-depth
 title: SCREEN DEPTH
 slug: /commands/screen-depth
@@ -71,7 +71,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Count screens](count-screens.md)  
+[Count screens](../commands/count-screens)  
 
 ## プロパティ
 

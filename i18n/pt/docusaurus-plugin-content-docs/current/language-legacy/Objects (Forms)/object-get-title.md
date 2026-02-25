@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-title
 title: OBJECT Get title
 slug: /commands/object-get-title
@@ -41,7 +41,7 @@ Se passar o parâmetro opcional *\**, indica que o parâmetro *objeto é* um nom
 
 ## Ver também 
 
-[OBJECT SET TITLE](object-set-title.md)  
+[OBJECT SET TITLE](../commands/object-set-title)  
 
 ## Propriedades
 

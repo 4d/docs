@@ -1,4 +1,4 @@
----
+﻿---
 id: st-set-text
 title: ST SET TEXT
 slug: /commands/st-set-text
@@ -42,7 +42,7 @@ Si vous omettez le paramètre *\**, vous indiquez que le paramètre *objet* est 
 
 ### 
 
-Passez dans *nouvTexte* le texte à insérer. La commande **ST SET TEXT** est destinée aux manipulations de texte stylé (multistyle), contenant des balises de type <span>. Dans tous les autres cas (notamment en cas de manipulation de texte non stylé mais contenant les caractères <, > ou &), vous devez utiliser la commande [ST SET PLAIN TEXT](st-set-plain-text.md). Si vous passez à la commande **ST SET TEXT** un texte brut contenant des caractères <, > ou &, la commande ne fait rien. Ce principe de fonctionnement est nécessaire car l'insertion directe d'une chaîne telle que "a<b" au sein d'un texte stylé va fausser l'analyse interne des balises <span>. Dans ce cas, le caractère "<" doit être préalablement encodé "&lt;", ce qui est effectué par la commande [ST SET PLAIN TEXT](st-set-plain-text.md) (voir également l'exemple de cette commande). 
+Passez dans *nouvTexte* le texte à insérer. La commande **ST SET TEXT** est destinée aux manipulations de texte stylé (multistyle), contenant des balises de type <span>. Dans tous les autres cas (notamment en cas de manipulation de texte non stylé mais contenant les caractères <, > ou &), vous devez utiliser la commande [ST SET PLAIN TEXT](../commands/st-set-plain-text). Si vous passez à la commande **ST SET TEXT** un texte brut contenant des caractères <, > ou &, la commande ne fait rien. Ce principe de fonctionnement est nécessaire car l'insertion directe d'une chaîne telle que "a<b" au sein d'un texte stylé va fausser l'analyse interne des balises <span>. Dans ce cas, le caractère "<" doit être préalablement encodé "&lt;", ce qui est effectué par la commande [ST SET PLAIN TEXT](../commands/st-set-plain-text) (voir également l'exemple de cette commande). 
 
 Les paramètres optionnels *débutSel* et *finSel* vous permettent de désigner une sélection de texte dans *objet*. Les valeurs *débutSél* et *finSél* expriment une sélection de texte brut, sans tenir compte des balises de style éventuellement présentes dans le texte. L’action de la commande diffère en fonction des paramètres facultatifs *débutSél* et *finSél* :
 
@@ -96,13 +96,13 @@ Le champ et son contenu sont les suivants :
 
 ## Exemple 2 
 
-Reportez-vous à l'exemple de la commande [ST SET PLAIN TEXT](st-set-plain-text.md). 
+Reportez-vous à l'exemple de la commande [ST SET PLAIN TEXT](../commands/st-set-plain-text). 
 
 ## Voir aussi 
 
-[ST Get plain text](st-get-plain-text.md)  
-[ST Get text](st-get-text.md)  
-[ST SET PLAIN TEXT](st-set-plain-text.md)  
+[ST Get plain text](../commands/st-get-plain-text)  
+[ST Get text](../commands/st-get-text)  
+[ST SET PLAIN TEXT](../commands/st-set-plain-text)  
 
 ## Propriétés
 

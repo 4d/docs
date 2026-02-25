@@ -1,4 +1,4 @@
----
+﻿---
 id: font-style-list
 title: FONT STYLE LIST
 slug: /commands/font-style-list
@@ -37,7 +37,7 @@ In *fontStyleList*, you pass a text array to be filled with the list of font sty
 
 In *fontNameList*, you pass a text array to be filled with the complete list of font names supported by the *fontFamily*. Unlike the *fontStyleList* array, the *fontNameList* array returns non-localized values, i.e. font names based upon the system identification. Thus, font names will be independent from the system language. Elements of this array are strings intended to be used with the wk font 4D Write Pro attribute of the *WP SET ATTRIBUTES* command. Using this feature, 4D Write Pro documents can store font names and then be opened on machines using any system language without font issues. 
 
- If the *fontFamily* is not found on the machine, arrays are returned empty. To get the list of font families available on the machine, use the [FONT LIST](font-list.md) command.
+ If the *fontFamily* is not found on the machine, arrays are returned empty. To get the list of font families available on the machine, use the [FONT LIST](../commands/font-list) command.
 
 ## Example 
 
@@ -69,7 +69,7 @@ You want to select styles of the "Verdana" font family (if available):
 
 ## See also 
 
-[FONT LIST](font-list.md)  
+[FONT LIST](../commands/font-list)  
 
 ## Properties
 

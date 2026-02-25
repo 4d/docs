@@ -1,4 +1,4 @@
----
+﻿---
 id: import-sylk
 title: IMPORT SYLK
 slug: /commands/import-sylk
@@ -28,9 +28,9 @@ Um evento On Validate é enviado ao método de formulário para cada registro qu
 
 O parâmetro *documento* pode incluir uma rota de acesso que contenha os nomes de volumes e pastas. Se passa uma string vazia, aparece a caixa de diálogo padrão de abertura de arquivos. Se usuário cancela este diálogo, se cancela a operação de importação, e a variável sistema OK toma o valor 0.
 
-Um termômetro de progresso aparece durante a importação. O usuário pode cancelar a operação clicando no botão Parar. Os registros que tenham sido importados não serão removidos se usuário pressiona o botão Parar. Se a importação termina com sucesso, a variável sistema OK toma o valor 1\. Se ocorre um erro ou se a operação é interrompida, a variável sistema toma o valor 0\. O termômetro pode ser ocultado com o comando [MESSAGES OFF](messages-off.md).
+Um termômetro de progresso aparece durante a importação. O usuário pode cancelar a operação clicando no botão Parar. Os registros que tenham sido importados não serão removidos se usuário pressiona o botão Parar. Se a importação termina com sucesso, a variável sistema OK toma o valor 1\. Se ocorre um erro ou se a operação é interrompida, a variável sistema toma o valor 0\. O termômetro pode ser ocultado com o comando [MESSAGES OFF](../commands/messages-off).
 
-O comando utiliza por padrão o conjunto de caracteres UTF-8\. Os documentos com formato SYLK utilizam geralmente o conjunto de caracteres ISO-8859-1, pode ser necessário utilizar o comando [USE CHARACTER SET](use-character-set.md) para definir o conjunto de caracteres apropriado.  
+O comando utiliza por padrão o conjunto de caracteres UTF-8\. Os documentos com formato SYLK utilizam geralmente o conjunto de caracteres ISO-8859-1, pode ser necessário utilizar o comando [USE CHARACTER SET](../commands/use-character-set) para definir o conjunto de caracteres apropriado.  
 
 Durante a utilização de IMPORT SYLK, o delimitador de campos automaticamente é o caractere de tabulação (código 9). O delimitador do registro por padrão é o retorno de carro (código 13). Pode modificar estes valores atribuindo novos valores às duas *Variáveis sistema* *FldDelimit* e *RecDelimit*. O usuário pode mudar estes valores na caixa de diálogo de exportação do ambiente Desenho. Como os campos Texto podem conter retornos de carro, seja cuidadoso se utilizar o retorno de carro como delimitador entre os campos a exportar.
 
@@ -49,10 +49,10 @@ OK toma o valor 1 se a importação termina com sucesso; do contrário, toma o v
 
 ## Ver também 
 
-[EXPORT SYLK](export-sylk.md)  
-[IMPORT DIF](import-dif.md)  
-[IMPORT TEXT](import-text.md)  
-[USE CHARACTER SET](use-character-set.md)  
+[EXPORT SYLK](../commands/export-sylk)  
+[IMPORT DIF](../commands/import-dif)  
+[IMPORT TEXT](../commands/import-text)  
+[USE CHARACTER SET](../commands/use-character-set)  
 
 ## Propriedades
 

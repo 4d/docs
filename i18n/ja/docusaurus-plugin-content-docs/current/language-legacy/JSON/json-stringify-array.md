@@ -1,4 +1,4 @@
----
+﻿---
 id: json-stringify-array
 title: JSON Stringify array
 slug: /commands/json-stringify-array
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.JSON Stringify array.Summary-->**JSON Stringify array**コマンドは、4D配列 *array* をシリアライズされたJSON配列へと変換します。<!-- END REF-->このコマンドは [JSON PARSE ARRAY](json-parse-array.md)コマンドと逆の挙動をします。
+<!--REF #_command_.JSON Stringify array.Summary-->**JSON Stringify array**コマンドは、4D配列 *array* をシリアライズされたJSON配列へと変換します。<!-- END REF-->このコマンドは [JSON PARSE ARRAY](../commands/json-parse-array)コマンドと逆の挙動をします。
 
 *array* 引数にはシリアライズしたいデータを含む4D配列を渡して下さい。この配列はテキスト、実数、ブール、ポインターまたはオブジェクト型である必要があります。 
 
@@ -118,8 +118,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[JSON PARSE ARRAY](json-parse-array.md)  
-[JSON Stringify](json-stringify.md)  
+[JSON PARSE ARRAY](../commands/json-parse-array)  
+[JSON Stringify](../commands/json-stringify)  
 
 ## プロパティ
 

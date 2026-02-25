@@ -1,4 +1,4 @@
----
+﻿---
 id: move-document
 title: MOVE DOCUMENT
 slug: /commands/move-document
@@ -62,7 +62,7 @@ El siguiente ejemplo mueve el documento DocName:
 
 ## Ver también 
 
-[COPY DOCUMENT](copy-document.md)  
+[COPY DOCUMENT](../commands/copy-document)  
 
 ## Propiedades
 

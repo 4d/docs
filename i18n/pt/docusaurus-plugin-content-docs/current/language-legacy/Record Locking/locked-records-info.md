@@ -1,4 +1,4 @@
----
+﻿---
 id: locked-records-info
 title: Locked records info
 slug: /commands/locked-records-info
@@ -35,7 +35,7 @@ Cada elemento da coleção "description object" identifica um registro bloqueado
 | **Propriedade**   | **Tipo**      | **Descrição**                                                                                                                                                                                                                                                              |
 | ----------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | contextID         | UUID (Cadeia) | UUID do contexto da base responsável do bloqueio                                                                                                                                                                                                                           |
-| contextAttributes | Objeto        | Objeto que contém a mesma informação que o comando [LOCKED BY](locked-by.md) aplicado ao registro, a diferença é que **Locked records info** devolve o nome do usuário definido no sistema e não o do usuário 4D, assim como informação adicional (ver mais a frente). |
+| contextAttributes | Objeto        | Objeto que contém a mesma informação que o comando [LOCKED BY](../commands/locked-by) aplicado ao registro, a diferença é que **Locked records info** devolve o nome do usuário definido no sistema e não o do usuário 4D, assim como informação adicional (ver mais a frente). |
 | recordNumber      | Inteiro longo | Número de registro do registro bloqueado                                                                                                                                                                                                                                   |
 
 O objeto *contextAttributes* tem as propriedades abaixo:
@@ -44,7 +44,7 @@ O objeto *contextAttributes* tem as propriedades abaixo:
 | --------------------------------------------------------------------------------------------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | task\_id                                                                                                  | Número        | Número de referência do processo                                                                                          |
 | user\_name                                                                                                | Cadeia        | Nome do usuário definido no sistema operativo                                                                             |
-| user4d\_alias                                                                                             | Text        | Apelido/alias definido com [SET USER ALIAS](set-user-alias.md), senão o nome do usuário no diretório de banco de dados 4D |
+| user4d\_alias                                                                                             | Text        | Apelido/alias definido com [SET USER ALIAS](../commands/set-user-alias), senão o nome do usuário no diretório de banco de dados 4D |
 | user4d\_id                                                                                                | Número        | Número do usuário 4D(\*)                                                                                                  |
 | host\_name                                                                                                | Cadeia        | Nome da máquina local                                                                                                     |
 | task\_name                                                                                                | Cadeia        | Nome do processo                                                                                                          |
@@ -91,7 +91,7 @@ Se o código é executado em um 4D Server e o bloqueio é causado por uma máqui
 
 ## Ver também 
 
-[Locked](locked.md)  
+[Locked](../commands/locked)  
 
 ## Propriedades
 

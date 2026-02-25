@@ -1,4 +1,4 @@
----
+﻿---
 id: soap-request
 title: SOAP Request
 slug: /commands/soap-request
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[SOAP DECLARATION](soap-declaration.md)  
+[SOAP DECLARATION](../commands/soap-declaration)  
 
 ## プロパティ
 

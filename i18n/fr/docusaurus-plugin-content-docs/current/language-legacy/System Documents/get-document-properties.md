@@ -1,4 +1,4 @@
----
+﻿---
 id: get-document-properties
 title: GET DOCUMENT PROPERTIES
 slug: /commands/get-document-properties
@@ -105,7 +105,7 @@ Pour vous assurer que les marqueurs des enregistrements sont correctement mis à
  End case
 ```
 
-Une fois que cela est implémenté dans votre base, il suffit d'écrire la méthode projet CREER DOCUMENTATION listée ci-dessous. Nous utilisons **GET DOCUMENT PROPERTIES** et [SET DOCUMENT PROPERTIES](set-document-properties.md) pour gérer la date et l'heure de création et de modification des documents.
+Une fois que cela est implémenté dans votre base, il suffit d'écrire la méthode projet CREER DOCUMENTATION listée ci-dessous. Nous utilisons **GET DOCUMENT PROPERTIES** et [SET DOCUMENT PROPERTIES](../commands/set-document-properties) pour gérer la date et l'heure de création et de modification des documents.
 
 ```4d
   //Méthode projet CREER DOCUMENTATION
@@ -213,7 +213,7 @@ Une fois que cela est implémenté dans votre base, il suffit d'écrire la méth
 
 ## Voir aussi 
 
-[SET DOCUMENT PROPERTIES](set-document-properties.md)  
+[SET DOCUMENT PROPERTIES](../commands/set-document-properties)  
 
 ## Propriétés
 

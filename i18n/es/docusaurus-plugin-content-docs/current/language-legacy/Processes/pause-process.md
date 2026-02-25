@@ -1,4 +1,4 @@
----
+﻿---
 id: pause-process
 title: PAUSE PROCESS
 slug: /commands/pause-process
@@ -29,10 +29,10 @@ Cuando se suspende la ejecución de un proceso, las ventanas que pertenecen a es
 
 ## Ver también 
 
-[ABORT PROCESS BY ID](abort-process-by-id.md)  
-[DELAY PROCESS](delay-process.md)  
-[HIDE PROCESS](hide-process.md)  
-[RESUME PROCESS](resume-process.md)  
+[ABORT PROCESS BY ID](../commands/abort-process-by-id)  
+[DELAY PROCESS](../commands/delay-process)  
+[HIDE PROCESS](../commands/hide-process)  
+[RESUME PROCESS](../commands/resume-process)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: open-datastore
 title: Open datastore
 slug: /commands/open-datastore
@@ -130,7 +130,7 @@ In case of error, the command returns **Null**. If the remote datastore cannot b
 
 ## See also 
 
-[ds](ds.md)  
+[ds](../commands/ds)  
 
 ## Properties
 

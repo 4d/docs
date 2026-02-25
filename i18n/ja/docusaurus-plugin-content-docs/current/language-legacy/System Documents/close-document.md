@@ -1,4 +1,4 @@
----
+﻿---
 id: close-document
 title: CLOSE DOCUMENT
 slug: /commands/close-document
@@ -36,9 +36,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Append document](append-document.md)  
-[Create document](create-document.md)  
-[Open document](open-document.md)  
+[Append document](../commands/append-document)  
+[Create document](../commands/create-document)  
+[Open document](../commands/open-document)  
 
 ## プロパティ
 

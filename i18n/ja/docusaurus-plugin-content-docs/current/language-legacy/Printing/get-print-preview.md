@@ -1,4 +1,4 @@
----
+﻿---
 id: get-print-preview
 title: Get print preview
 slug: /commands/get-print-preview
@@ -27,14 +27,14 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.Get print preview.Summary-->**Get print preview**コマンドはカレントプロセスで[SET PRINT PREVIEW](set-print-preview.md)が**True**で呼ばれている場合、Trueを返します。<!-- END REF-->
+<!--REF #_command_.Get print preview.Summary-->**Get print preview**コマンドはカレントプロセスで[SET PRINT PREVIEW](../commands/set-print-preview)が**True**で呼ばれている場合、Trueを返します。<!-- END REF-->
 
-ユーザーは印刷ダイアログでこのオプションを変更できる点に留意してください。最終的な印刷モードを判定するには[Is in print preview](is-in-print-preview.md)コマンドを使用します。
+ユーザーは印刷ダイアログでこのオプションを変更できる点に留意してください。最終的な印刷モードを判定するには[Is in print preview](../commands/is-in-print-preview)コマンドを使用します。
 
 ## 参照 
 
-[Is in print preview](is-in-print-preview.md)  
-[SET PRINT PREVIEW](set-print-preview.md)  
+[Is in print preview](../commands/is-in-print-preview)  
+[SET PRINT PREVIEW](../commands/set-print-preview)  
 
 ## プロパティ
 

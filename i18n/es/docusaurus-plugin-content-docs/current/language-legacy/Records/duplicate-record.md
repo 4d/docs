@@ -1,4 +1,4 @@
----
+﻿---
 id: duplicate-record
 title: DUPLICATE RECORD
 slug: /commands/duplicate-record
@@ -36,7 +36,7 @@ DUPLICATE RECORD puede ejecutarse durante la entrada de datos. Esto permite dupl
 
 ## Ver también 
 
-[SAVE RECORD](save-record.md)  
+[SAVE RECORD](../commands/save-record)  
 
 ## Propiedades
 

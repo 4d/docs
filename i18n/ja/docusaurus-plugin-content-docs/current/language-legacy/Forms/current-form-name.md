@@ -1,4 +1,4 @@
----
+﻿---
 id: current-form-name
 title: Current form name
 slug: /commands/current-form-name
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Current form name.Summary-->**Current form name**コマンドは、プロセスのために定義されたカレントのフォームの名前を返します。<!-- END REF-->カレントフォームはプロジェクトフォームでもテーブルフォームでも可能です。
 
-[FORM LOAD](../commands/form-load) コマンドをカレントプロセス中に使用していなければ、デフォルトでのカレントフォームは表示または印刷されているフォームです。[FORM LOAD](../commands/form-load) コマンドをカレントプロセス中に呼び出していた場合、カレントフォームはこのコマンドによって設定されたフォームとなり、[FORM UNLOAD](form-unload.md) (または [CLOSE PRINTING JOB](close-printing-job.md))コマンドを呼ぶまでそれが維持されます。
+[FORM LOAD](../commands/form-load) コマンドをカレントプロセス中に使用していなければ、デフォルトでのカレントフォームは表示または印刷されているフォームです。[FORM LOAD](../commands/form-load) コマンドをカレントプロセス中に呼び出していた場合、カレントフォームはこのコマンドによって設定されたフォームとなり、[FORM UNLOAD](../commands/form-unload) (または [CLOSE PRINTING JOB](../commands/close-printing-job))コマンドを呼ぶまでそれが維持されます。
 
 コマンドは、以下のいづれかを返します:
 

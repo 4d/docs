@@ -1,4 +1,4 @@
----
+﻿---
 id: delete-from-array
 title: DELETE FROM ARRAY
 slug: /commands/delete-from-array
@@ -55,8 +55,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[INSERT IN ARRAY](insert-in-array.md)  
-[Size of array](size-of-array.md)  
+[INSERT IN ARRAY](../commands/insert-in-array)  
+[Size of array](../commands/size-of-array)  
 
 ## プロパティ
 

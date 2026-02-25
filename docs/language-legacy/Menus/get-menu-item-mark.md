@@ -1,4 +1,4 @@
----
+﻿---
 id: get-menu-item-mark
 title: Get menu item mark
 slug: /commands/get-menu-item-mark
@@ -39,7 +39,7 @@ If you omit the *process* parameter, **Get menu item mark** applies to the menu 
 
 If the menu item has no mark or if the *menuItem* parameter specifies a hierarchical submenu, **Get menu item mark** returns an empty string.
 
-**Note:** See discussion of check marks on Macintosh and Windows in the description of the [SET MENU ITEM MARK](set-menu-item-mark.md) command.
+**Note:** See discussion of check marks on Macintosh and Windows in the description of the [SET MENU ITEM MARK](../commands/set-menu-item-mark) command.
 
 ## Example 
 
@@ -51,7 +51,7 @@ The following example toggles the check mark of a menu item:
 
 ## See also 
 
-[SET MENU ITEM MARK](set-menu-item-mark.md)  
+[SET MENU ITEM MARK](../commands/set-menu-item-mark)  
 
 ## Properties
 

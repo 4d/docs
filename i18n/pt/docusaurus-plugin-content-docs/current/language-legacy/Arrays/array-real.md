@@ -1,4 +1,4 @@
----
+﻿---
 id: array-real
 title: ARRAY REAL
 slug: /commands/array-real
@@ -57,8 +57,8 @@ Este exemplo cria um array de interprocesso de 50 elementos do tipo Real e deter
 
 ## Ver também 
 
-[ARRAY INTEGER](array-integer.md)  
-[ARRAY LONGINT](array-longint.md)  
+[ARRAY INTEGER](../commands/array-integer)  
+[ARRAY LONGINT](../commands/array-longint)  
 
 ## Propriedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: distinct-values
 title: DISTINCT VALUES
 slug: /commands/distinct-values
@@ -42,7 +42,7 @@ Sin embargo, la ejecución de este comando con campos no indexados será más le
 
 El array utilizado por **DISTINCT VALUES** debe ser del mismo tipo que el campo pasado como primer parámetro, de lo contrario el array se vuelve a digitar. Hay una excepción a esta regla:si el campo es de tipo Imagen (y está asociado a un índice de palabras claves), el array correspondiente debe ser de tipo Texto.
 
-Después del llamado, el tamaño del array es igual al número de valores distintos encontrados en la selección. El comando no cambia la selección actual ni el registro actual. El comando **DISTINCT VALUES** utiliza el índice del campo, de manera que los elementos en *array* se devuelven ordenados en orden ascendente. Si este es el orden que usted necesita, no es necesario llamar a [SORT ARRAY](sort-array.md) después de utilizar **DISTINCT VALUES**.
+Después del llamado, el tamaño del array es igual al número de valores distintos encontrados en la selección. El comando no cambia la selección actual ni el registro actual. El comando **DISTINCT VALUES** utiliza el índice del campo, de manera que los elementos en *array* se devuelven ordenados en orden ascendente. Si este es el orden que usted necesita, no es necesario llamar a [SORT ARRAY](../commands/sort-array) después de utilizar **DISTINCT VALUES**.
 
 **Nota:** cuando se ejecuta **DISTINCT VALUES** se ejecuta con un campo de texto o imagen asociado a un índice de palabras claves, el comando llena el array con las palabras claves del índice. A diferencia de otros tipos de datos, los valores devueltos difieren de acuerdo a la existencia del índice. El índice de palabras claves siempre se tiene en cuenta, incluso cuando el campo está asociado a un índice estándar. Si el campo texto o imagen no está asociado a un índice de palabras claves, el array se devuelve vacío. 
 
@@ -50,7 +50,7 @@ El comando acepta un array *contArray* como un parámetro opcional. Cuando se pa
 
 **Nota:** el parámetro *contArray* no es soportado para los campos texto o imagen asociados a los índices de palabras claves (en este contexto, se devuelve vacío).
 
-**Advertencia:** **DISTINCT VALUES** puede crear array grandes, dependiendo del tamaño de la selección y del número de valores diferentes en los registros. Los arrays residen en memoria, por lo tanto es buena idea probar el resultado después de la ejecución del comando. Para hacer esto, pruebe el tamaño del array resultante o cubra la llamada al comando, utilizando un método de proyecto [ON ERR CALL](on-err-call.md). 
+**Advertencia:** **DISTINCT VALUES** puede crear array grandes, dependiendo del tamaño de la selección y del número de valores diferentes en los registros. Los arrays residen en memoria, por lo tanto es buena idea probar el resultado después de la ejecución del comando. Para hacer esto, pruebe el tamaño del array resultante o cubra la llamada al comando, utilizando un método de proyecto [ON ERR CALL](../commands/on-err-call). 
 
 **4D Server:** este comando es optimizado por 4D Server. El array se crea y los valores son calculados en el servidor; luego el array se envía, en su totalidad, al cliente.
 
@@ -92,10 +92,10 @@ Para calcular las estadísticas, usted desea ordenar el número de valores disti
 ## Ver también 
 
   
-[GET TEXT KEYWORDS](get-text-keywords.md)  
-[ON ERR CALL](on-err-call.md)  
-[SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
-[SELECTION TO ARRAY](selection-to-array.md)  
+[GET TEXT KEYWORDS](../commands/get-text-keywords)  
+[ON ERR CALL](../commands/on-err-call)  
+[SELECTION RANGE TO ARRAY](../commands/selection-range-to-array)  
+[SELECTION TO ARRAY](../commands/selection-to-array)  
 
 ## Propiedades
 

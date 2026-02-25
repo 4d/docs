@@ -1,4 +1,4 @@
----
+﻿---
 id: create-entity-selection
 slug: /commands/create-entity-selection
 title: Create entity selection
@@ -23,7 +23,7 @@ La commande `Create entity selection` <!--REF #_command_.Create entity selection
 
 Si la sélection actuelle est triée, une entity selection [triée](../../ORDA/dsMapping.md#ordered-or-unordered-entity-selection) est créée (l'ordre de la sélection actuelle est conservé). Si la sélection courante n'est pas triée, une entity selection non-triée est créée.
 
-Si la *dsTable* n'est pas exposée dans [`ds`](ds.md), une erreur est retournée. Cette commande ne peut pas être utilisée avec un datastore distant.
+Si la *dsTable* n'est pas exposée dans [`ds`](../commands/ds), une erreur est retournée. Cette commande ne peut pas être utilisée avec un datastore distant.
 
 Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant la propriété suivante :
 
@@ -43,7 +43,7 @@ $employees:=Create entity selection([Employee])
 
 ## Voir également
 
-[USE ENTITY SELECTION](use-entity-selection.md)<br/>[`dataClass.newSelection()`](../../API/DataClassClass.md#newselection)
+[USE ENTITY SELECTION](../commands/use-entity-selection)<br/>[`dataClass.newSelection()`](../../API/DataClassClass.md#newselection)
 
 ## Propriétés
 

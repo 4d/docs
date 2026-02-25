@@ -1,4 +1,4 @@
----
+﻿---
 id: count-users
 title: Count users
 slug: /commands/count-users
@@ -23,8 +23,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Count tasks](count-tasks.md)  
-[Count user processes](count-user-processes.md)  
+[Count tasks](../commands/count-tasks)  
+[Count user processes](../commands/count-user-processes)  
 
 ## プロパティ
 

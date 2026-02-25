@@ -1,4 +1,4 @@
----
+﻿---
 id: milliseconds
 title: Milliseconds
 slug: /commands/milliseconds
@@ -56,8 +56,8 @@ El siguiente código espera hasta 5 segundos para que un registro bloqueado se d
 
 ## Ver también 
 
-[Current time](current-time.md)  
-[Tickcount](tickcount.md)  
+[Current time](../commands/current-time)  
+[Tickcount](../commands/tickcount)  
 [Timestamp](../commands/timestamp)  
 
 ## Propiedades

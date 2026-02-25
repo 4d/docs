@@ -1,4 +1,4 @@
----
+﻿---
 id: new-shared-object
 title: New shared object
 slug: /commands/new-shared-object
@@ -76,7 +76,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[New object](new-object.md)  
+[New object](../commands/new-object)  
 [New shared collection](../commands/new-shared-collection)  
 *共有オブジェクトと共有コレクション*  
 

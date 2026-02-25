@@ -1,4 +1,4 @@
----
+﻿---
 id: print-settings-to-blob
 title: Print settings to BLOB
 slug: /commands/print-settings-to-blob
@@ -33,9 +33,9 @@ displayed_sidebar: docs
 * 用紙、方向、倍率などのレイアウト設定
 * 部数、用紙トレーなどのプリント設定
 
-このコマンドは [BLOB to print settings](blob-to-print-settings.md) と対で使用します。これらのコマンドを利用すれば、ユーザー指定の印刷設定を保存し、必要に応じてこれを呼び出せるため、出力のたびに印刷設定をやりなおす必要がなくなります。さらに、一般的ではない、プリンタードライバーに固有のプリント設定も保存することができます。
+このコマンドは [BLOB to print settings](../commands/blob-to-print-settings) と対で使用します。これらのコマンドを利用すれば、ユーザー指定の印刷設定を保存し、必要に応じてこれを呼び出せるため、出力のたびに印刷設定をやりなおす必要がなくなります。さらに、一般的ではない、プリンタードライバーに固有のプリント設定も保存することができます。
 
-生成された BLOB をプログラムで変更してはいけません。この BLOB は [BLOB to print settings](blob-to-print-settings.md) コマンドでのみ使用できます。
+生成された BLOB をプログラムで変更してはいけません。この BLOB は [BLOB to print settings](../commands/blob-to-print-settings) コマンドでのみ使用できます。
 
 BLOB が正しく生成されるとコマンドは 1を返します。カレントプリンターが選択されていないと 0を返します。
 
@@ -63,7 +63,7 @@ BLOB が正しく生成されるとコマンドは 1を返します。カレン�
 ## 参照 
 
   
-[BLOB to print settings](blob-to-print-settings.md)  
+[BLOB to print settings](../commands/blob-to-print-settings)  
 
 ## プロパティ
 

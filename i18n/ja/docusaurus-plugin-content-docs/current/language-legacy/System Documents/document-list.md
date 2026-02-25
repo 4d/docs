@@ -1,4 +1,4 @@
----
+﻿---
 id: document-list
 title: DOCUMENT LIST
 slug: /commands/document-list
@@ -47,7 +47,7 @@ displayed_sidebar: docs
 * 相対モードにおけるPosix pathオプション (option 4のみ) では、パスは"/"で始まりません。
 * 絶対モードにおけるPosix pathオプション (option 4 + 2) では、パスは常に"/"で始まります。
 
-指定した場所にドキュメントがない場合、コマンドは空の配列を返します。*pathname*に渡したパス名が無効だと、**DOCUMENT LIST**はファイルマネジャエラーを生成します。このエラーは[ON ERR CALL](on-err-call.md)でインストールされるエラー処理メソッドを使用して、検知することができます。
+指定した場所にドキュメントがない場合、コマンドは空の配列を返します。*pathname*に渡したパス名が無効だと、**DOCUMENT LIST**はファイルマネジャエラーを生成します。このエラーは[ON ERR CALL](../commands/on-err-call)でインストールされるエラー処理メソッドを使用して、検知することができます。
 
 ## 例題 1 
 
@@ -124,8 +124,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[FOLDER LIST](folder-list.md)  
-[VOLUME LIST](volume-list.md)  
+[FOLDER LIST](../commands/folder-list)  
+[VOLUME LIST](../commands/volume-list)  
 
 ## プロパティ
 

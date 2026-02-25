@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-set-static-columns
 title: LISTBOX SET STATIC COLUMNS
 slug: /commands/listbox-set-static-columns
@@ -37,8 +37,8 @@ Static columns cannot be moved within the list box.
 
 ## See also 
 
-[LISTBOX Get static columns](listbox-get-static-columns.md)  
-[LISTBOX SET LOCKED COLUMNS](listbox-set-locked-columns.md)  
+[LISTBOX Get static columns](../commands/listbox-get-static-columns)  
+[LISTBOX SET LOCKED COLUMNS](../commands/listbox-set-locked-columns)  
 
 ## Properties
 

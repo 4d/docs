@@ -1,4 +1,4 @@
----
+﻿---
 id: st-get-attributes
 title: ST GET ATTRIBUTES
 slug: /commands/st-get-attributes
@@ -112,7 +112,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ST SET ATTRIBUTES](st-set-attributes.md)  
+[ST SET ATTRIBUTES](../commands/st-set-attributes)  
 
 ## プロパティ
 

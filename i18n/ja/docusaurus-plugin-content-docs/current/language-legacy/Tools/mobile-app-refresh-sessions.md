@@ -1,4 +1,4 @@
----
+﻿---
 id: mobile-app-refresh-sessions
 title: MOBILE APP REFRESH SESSIONS
 slug: /commands/mobile-app-refresh-sessions
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 セッションファイルが有効でない、あるいは削除されていた場合には、対応するセッションはメモリから削除されます。
 
-コマンドは以下のいずれかのエラーを返します。これらは[ON ERR CALL](on-err-call.md) および [Last errors](../commands/last-errors)  コマンドを通して管理可能です:
+コマンドは以下のいずれかのエラーを返します。これらは[ON ERR CALL](../commands/on-err-call) および [Last errors](../commands/last-errors)  コマンドを通して管理可能です:
 
 | **コンポーネント名** | **エラーコード** | **詳細**                      |
 | ------------ | ---------- | --------------------------- |
@@ -56,7 +56,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[On Mobile App Authentication データベースメソッド](on-mobile-app-authentication-database-method.md)  
+[On Mobile App Authentication データベースメソッド](../commands/on-mobile-app-authentication-database-method)  
 
 ## プロパティ
 

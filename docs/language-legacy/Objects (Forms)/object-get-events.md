@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-events
 title: OBJECT GET EVENTS
 slug: /commands/object-get-events
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET EVENTS.Summary-->The **OBJECT GET EVENTS** command gets the current configuration of the form events for the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 
 
-Form events can be enabled/disabled either using the Property List, or using the [OBJECT SET EVENTS](object-set-events.md) command if it is called in the current process.
+Form events can be enabled/disabled either using the Property List, or using the [OBJECT SET EVENTS](../commands/object-set-events) command if it is called in the current process.
 
 Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).  
 To get the configuration of events for the form itself, pass the optional *\** parameter and an empty string "" in object: in this case, you designate the current form. 
@@ -57,7 +57,7 @@ You want to enable two events and get the list of events for an object:
 
 ## See also 
 
-[OBJECT SET EVENTS](object-set-events.md)  
+[OBJECT SET EVENTS](../commands/object-set-events)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: import-structure
 title: IMPORT STRUCTURE
 slug: /commands/import-structure
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 *xmlStructure* 引数にはXMLフォーマットでの有効な4Dストラクチャー定義を渡す必要があります。以下の機能うちのどれか一つを使用して、有効なストラクチャー定義を得ることができます:
 
-* 新しい [EXPORT STRUCTURE](export-structure.md) コマンドを実行します。
+* 新しい [EXPORT STRUCTURE](../commands/export-structure) コマンドを実行します。
 * 4D デザインモードのインターフェースでのメニューから、**書き出し -> ストラクチャー定義をXMLファイルに書き出し...** を選択します(*ストラクチャー定義の書き出しと読み込み*を参照して下さい)
 * 4D アプリケーションの"**DTD**"フォルダ内のPublic文書型宣言に基づいてカスタムのXMLファイルを作成、または編集します。
 
@@ -58,7 +58,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[EXPORT STRUCTURE](export-structure.md)  
+[EXPORT STRUCTURE](../commands/export-structure)  
 
 ## プロパティ
 

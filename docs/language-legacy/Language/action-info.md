@@ -1,4 +1,4 @@
----
+﻿---
 id: action-info
 title: Action info
 slug: /commands/action-info
@@ -65,8 +65,8 @@ You want to know if the copy action is available (i.e. if some data is selected)
 
 ## See also 
 
-[INVOKE ACTION](invoke-action.md)  
-[SET LIST ITEM PARAMETER](set-list-item-parameter.md)  
+[INVOKE ACTION](../commands/invoke-action)  
+[SET LIST ITEM PARAMETER](../commands/set-list-item-parameter)  
 
 ## Properties
 

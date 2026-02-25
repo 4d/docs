@@ -1,4 +1,4 @@
----
+﻿---
 id: call-worker
 title: CALL WORKER
 slug: /commands/call-worker
@@ -53,7 +53,7 @@ displayed_sidebar: docs
 * 変数へのポインター、具体的にはローカル変数またはプロセス変数へのポインターは推奨されていません。これらの値はプロセスメソッドによってアクセスされた瞬間には未定義である可能性があるからです。
 * 標準のオブジェクトまたはコレクションについては、その**コピー**が渡されます。つまり4D は、ワーカーのプロセスが**CALL WORKER** コマンドを呼び出したプロセスとは別のプロセスである場合には、指定先のプロセス内においてそのオブジェクトまたはコレクションのコピーを作成します。このコンテキストにおいては、オブジェクトまたはコレクション引数を**参照**として渡したい場合には、共有オブジェクトまたはコレクションを使用する必要があります(*共有オブジェクトと共有コレクション* 参照)。
 
-ワーカープロセスは、アプリケーションが終了するか、あるいは [KILL WORKER](kill-worker.md) をコールされるまで存続します。必要ないワーカーにはこのコマンドを使い、メモリを解放するのがよいでしょう。
+ワーカープロセスは、アプリケーションが終了するか、あるいは [KILL WORKER](../commands/kill-worker) をコールされるまで存続します。必要ないワーカーにはこのコマンドを使い、メモリを解放するのがよいでしょう。
 
 ## 例題 
 
@@ -84,9 +84,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[CALL FORM](call-form.md)  
-[Current process name](current-process-name.md)  
-[KILL WORKER](kill-worker.md)  
+[CALL FORM](../commands/call-form)  
+[Current process name](../commands/current-process-name)  
+[KILL WORKER](../commands/kill-worker)  
 *ワーカーについて*  
 
 ## プロパティ

@@ -1,4 +1,4 @@
----
+﻿---
 id: is-picture-file
 title: Is picture file
 slug: /commands/is-picture-file
@@ -39,7 +39,7 @@ If you do not pass the *\** parameter, the command tests the file by looking for
 
 ## See also 
 
-[PICTURE CODEC LIST](picture-codec-list.md)  
+[PICTURE CODEC LIST](../commands/picture-codec-list)  
 
 ## Properties
 

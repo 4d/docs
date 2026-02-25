@@ -1,4 +1,4 @@
----
+﻿---
 id: encrypt-data-blob
 title: Encrypt data BLOB
 slug: /commands/encrypt-data-blob
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 You can use either a *keyObject* or a *passPhrase* to encrypt the BLOB: 
 
-* *keyObject*: a JSON object containing the encryption key, with the same structure as the object returned by the [New data key](new-data-key.md) command
+* *keyObject*: a JSON object containing the encryption key, with the same structure as the object returned by the [New data key](../commands/new-data-key) command
 * *passPhrase*: a string used to generate the encryption key
 
 Pass in *salt* a number that will be used to make the encryption more robust.
@@ -45,7 +45,7 @@ If the encryption is successful, the encrypted data is returned in the *encrypte
 
 In case of error, the BLOB is returned empty and the command returns False.
 
-**Note:** When you encrypt a blob using **Encrypt data BLOB**, the resulting *encryptedBlob* is a multiple of 16 bytes because of the encryption algorithm. As a consequence, if *blobToEncrypt* is not a multiple of 16 bytes, the command automatically turns it into a multiple of 16 bytes by adding null bytes at the end. To avoid errors when decrypting the blob with [Decrypt data BLOB](decrypt-data-blob.md), you need to handle the size of *blobToEncrypt* when working with files other than text files. For a detailed example on how to do this, see [this blog article](https://blog.4d.com/encrypt-your-own-data-with-the-4d-algorithm/ "test").
+**Note:** When you encrypt a blob using **Encrypt data BLOB**, the resulting *encryptedBlob* is a multiple of 16 bytes because of the encryption algorithm. As a consequence, if *blobToEncrypt* is not a multiple of 16 bytes, the command automatically turns it into a multiple of 16 bytes by adding null bytes at the end. To avoid errors when decrypting the blob with [Decrypt data BLOB](../commands/decrypt-data-blob), you need to handle the size of *blobToEncrypt* when working with files other than text files. For a detailed example on how to do this, see [this blog article](https://blog.4d.com/encrypt-your-own-data-with-the-4d-algorithm/ "test").
 
 ## Example 
 
@@ -67,11 +67,11 @@ Encrypt a text file located in the RESOURCES folder of the database:
 
 ## See also 
 
-[Decrypt data BLOB](decrypt-data-blob.md)  
-[ENCRYPT BLOB](encrypt-blob.md)  
-[Encrypt data file](encrypt-data-file.md)  
+[Decrypt data BLOB](../commands/decrypt-data-blob)  
+[ENCRYPT BLOB](../commands/encrypt-blob)  
+[Encrypt data file](../commands/encrypt-data-file)  
 [Encrypt your own data with the 4D algorithm (blog post)](https://blog.4d.com/encrypt-your-own-data-with-the-4d-algorithm)  
-[New data key](new-data-key.md)  
+[New data key](../commands/new-data-key)  
 
 ## Properties
 

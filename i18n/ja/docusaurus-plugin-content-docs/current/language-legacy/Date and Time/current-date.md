@@ -1,4 +1,4 @@
----
+﻿---
 id: current-date
 title: Current date
 slug: /commands/current-date
@@ -96,9 +96,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Day of](day-of.md)  
-[Month of](month-of.md)  
-[Year of](year-of.md)  
+[Day of](../commands/day-of)  
+[Month of](../commands/month-of)  
+[Year of](../commands/year-of)  
 
 ## プロパティ
 

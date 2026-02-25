@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-on-command
 title: QR ON COMMAND
 slug: /commands/qr-on-command
@@ -38,21 +38,21 @@ displayed_sidebar: docs
 * *$2*は選択されたコマンドのコマンド番号(倍長整数)です。この値は *QR Commands* テーマ内にある以下の定数と比較可能です。  
 | 定数                   | 型    | 値    | コメント                               |  
 | -------------------- | ---- | ---- | ---------------------------------- |  
-| qr cmd generate      | 倍長整数 | 2008 | [QR RUN](qr-run.md) コマンドの使用が推奨されます |  
+| qr cmd generate      | 倍長整数 | 2008 | [QR RUN](../commands/qr-run) コマンドの使用が推奨されます |  
 | qr cmd page setup    | 倍長整数 | 2006 |                                    |  
 | qr cmd print preview | 倍長整数 | 2007 |                                    |
 
 **注:** データベースをコンパイルする予定がある場合、*$1*と*$2*を使用しない場合でも、それぞれを倍長整数として定義する必要があります。
 
-最初のコマンドを実行させたい場合には、呼び出されるメソッドに次の命令を記述する必要があります: [QR EXECUTE COMMAND](qr-execute-command.md)($1;$2)
+最初のコマンドを実行させたい場合には、呼び出されるメソッドに次の命令を記述する必要があります: [QR EXECUTE COMMAND](../commands/qr-execute-command)($1;$2)
 
 無効な*area*番号を渡した場合、エラー番号-9850が生成されます。
 
 ## 参照 
 
 *QR Commands*  
-[QR EXECUTE COMMAND](qr-execute-command.md)  
-[QR Get command status](qr-get-command-status.md)  
+[QR EXECUTE COMMAND](../commands/qr-execute-command)  
+[QR Get command status](../commands/qr-get-command-status)  
 
 ## プロパティ
 

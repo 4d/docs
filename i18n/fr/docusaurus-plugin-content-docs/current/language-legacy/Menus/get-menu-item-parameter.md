@@ -1,4 +1,4 @@
----
+﻿---
 id: get-menu-item-parameter
 title: Get menu item parameter
 slug: /commands/get-menu-item-parameter
@@ -30,13 +30,13 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Get menu item parameter.Summary-->La commande **Get menu item parameter** retourne la chaîne de caractères personnalisée associée à la ligne de menu désignée par les paramètres *menu* et *ligneMenu*.<!-- END REF--> Cette chaîne doit avoir été préalablement définie à l’aide de la commande [SET MENU ITEM PARAMETER](set-menu-item-parameter.md).
+<!--REF #_command_.Get menu item parameter.Summary-->La commande **Get menu item parameter** retourne la chaîne de caractères personnalisée associée à la ligne de menu désignée par les paramètres *menu* et *ligneMenu*.<!-- END REF--> Cette chaîne doit avoir été préalablement définie à l’aide de la commande [SET MENU ITEM PARAMETER](../commands/set-menu-item-parameter).
 
 ## Voir aussi 
 
-[Dynamic pop up menu](dynamic-pop-up-menu.md)  
-[Get selected menu item parameter](get-selected-menu-item-parameter.md)  
-[SET MENU ITEM PARAMETER](set-menu-item-parameter.md)  
+[Dynamic pop up menu](../commands/dynamic-pop-up-menu)  
+[Get selected menu item parameter](../commands/get-selected-menu-item-parameter)  
+[SET MENU ITEM PARAMETER](../commands/set-menu-item-parameter)  
 
 ## Propriétés
 

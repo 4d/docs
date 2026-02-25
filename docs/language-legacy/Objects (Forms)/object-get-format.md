@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-format
 title: OBJECT Get format
 slug: /commands/object-get-format
@@ -38,11 +38,11 @@ displayed_sidebar: docs
 
 If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (in this case, pass a string in *object*). If you do not pass this parameter, you indicate that the *object* parameter is a field or variable. In this case, you do not pass a string, but a field or variable reference.
 
-This command returns the current display format of the object; in other words, the format as defined in the Design environment or using the [OBJECT SET FORMAT](object-set-format.md) command. **OBJECT Get format** works with all types of form objects (fields or variables) that accept a display format: Boolean, date, time, picture, string, number, as well as button grids, dials, thermometers, rulers, picture pop-up menus, picture buttons, 3D buttons, and list box headers. For more information on the display formats of these objects, refer to the documentation for the [OBJECT SET FORMAT](object-set-format.md) command.
+This command returns the current display format of the object; in other words, the format as defined in the Design environment or using the [OBJECT SET FORMAT](../commands/object-set-format) command. **OBJECT Get format** works with all types of form objects (fields or variables) that accept a display format: Boolean, date, time, picture, string, number, as well as button grids, dials, thermometers, rulers, picture pop-up menus, picture buttons, 3D buttons, and list box headers. For more information on the display formats of these objects, refer to the documentation for the [OBJECT SET FORMAT](../commands/object-set-format) command.
 
 **Note:** If you apply the command to a set of objects, the form of the last object selected is returned.
 
-When the **OBJECT Get format** command is applied to objects whose format has been set using a longint constant (date, time or picture objects), the string returned corresponds to the character code of the constant. To obtain the value of the constant, simply apply the [Character code](character-code.md) function to the result (see below).
+When the **OBJECT Get format** command is applied to objects whose format has been set using a longint constant (date, time or picture objects), the string returned corresponds to the character code of the constant. To obtain the value of the constant, simply apply the [Character code](../commands/character-code) function to the result (see below).
 
 ## Example 1 
 
@@ -79,7 +79,7 @@ Customized formats are returned untouched:
 
 ## See also 
 
-[OBJECT SET FORMAT](object-set-format.md)  
+[OBJECT SET FORMAT](../commands/object-set-format)  
 
 ## Properties
 

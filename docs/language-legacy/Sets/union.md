@@ -1,4 +1,4 @@
----
+﻿---
 id: union
 title: UNION
 slug: /commands/union
@@ -50,8 +50,8 @@ This example adds records to a set of best customers. The records are displayed 
 
 ## See also 
 
-[DIFFERENCE](difference.md)  
-[INTERSECTION](intersection.md)  
+[DIFFERENCE](../commands/difference)  
+[INTERSECTION](../commands/intersection)  
 
 ## Properties
 

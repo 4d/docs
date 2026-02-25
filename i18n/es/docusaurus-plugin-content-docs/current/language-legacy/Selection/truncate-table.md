@@ -1,4 +1,4 @@
----
+﻿---
 id: truncate-table
 title: TRUNCATE TABLE
 slug: /commands/truncate-table
@@ -51,7 +51,7 @@ Si el comando se ha ejecutado correctamente, la variable sistema OK toma el valo
 
 #### Ver también 
 
-[DELETE SELECTION](delete-selection.md)  
+[DELETE SELECTION](../commands/delete-selection)  
 
 #### Propiedades
 

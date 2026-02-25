@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-static-columns
 title: LISTBOX Get static columns
 slug: /commands/listbox-get-static-columns
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable. In this case, you pass a variable reference instead of a string.
 
-Static columns can be set through the Property List or using the [LISTBOX SET STATIC COLUMNS](listbox-set-static-columns.md) command.
+Static columns can be set through the Property List or using the [LISTBOX SET STATIC COLUMNS](../commands/listbox-set-static-columns) command.
 
 If a column is inserted or deleted by programming within a set of static columns, the number of columns returned by this command takes this change into account.   
 However, the command does not take into account the visible/invisible status of columns.
@@ -42,7 +42,7 @@ However, the command does not take into account the visible/invisible status of 
 
 ## See also 
 
-[LISTBOX SET STATIC COLUMNS](listbox-set-static-columns.md)  
+[LISTBOX SET STATIC COLUMNS](../commands/listbox-set-static-columns)  
 
 ## Properties
 

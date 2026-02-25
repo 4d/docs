@@ -1,4 +1,4 @@
----
+﻿---
 id: web-send-blob
 title: WEB SEND BLOB
 slug: /commands/web-send-blob
@@ -45,11 +45,11 @@ The references to 4D variables and *4DSCRIPT* type tags in the page are always p
 
 ## Example 
 
-Refer to the example of the [PICTURE TO BLOB](picture-to-blob.md) routine.
+Refer to the example of the [PICTURE TO BLOB](../commands/picture-to-blob) routine.
 
 ## See also 
 
-[WEB SEND FILE](web-send-file.md)  
+[WEB SEND FILE](../commands/web-send-file)  
 
 ## Properties
 

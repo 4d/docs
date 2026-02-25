@@ -1,4 +1,4 @@
----
+﻿---
 id: compress-blob
 title: COMPRESS BLOB
 slug: /commands/compress-blob
@@ -48,13 +48,13 @@ Si vous passez une autre valeur ou si vous omettez le paramètre *compression*, 
 
 Après que cette commande ait été appelée, la variable système OK prend la valeur 1 si le BLOB a été correctement compressé.   
 Si la compression n'a pu être effectuée, OK prend la valeur 0\. Dans ce cas, si l'erreur provient du fait que la taille du BLOB est inférieure à 255 octets ou que la mémoire disponible est insuffisante pour effectuer l'opération, aucune erreur n'est générée, la méthode poursuit son exécution.   
-En revanche, si l'erreur est causée par un problème plus important (le BLOB est endommagé), l'erreur -10600 est générée. Cette erreur, relativement rare, peut être interceptée à l'aide d'une méthode installée par la commande [ON ERR CALL](on-err-call.md).
+En revanche, si l'erreur est causée par un problème plus important (le BLOB est endommagé), l'erreur -10600 est générée. Cette erreur, relativement rare, peut être interceptée à l'aide d'une méthode installée par la commande [ON ERR CALL](../commands/on-err-call).
 
-Lorsqu'un BLOB a été compressé, vous pouvez le décompresser à l'aide de la commande [EXPAND BLOB](expand-blob.md).
+Lorsqu'un BLOB a été compressé, vous pouvez le décompresser à l'aide de la commande [EXPAND BLOB](../commands/expand-blob).
 
-Pour savoir si un BLOB a été compressé, utilisez la commande [BLOB PROPERTIES](blob-properties.md).
+Pour savoir si un BLOB a été compressé, utilisez la commande [BLOB PROPERTIES](../commands/blob-properties).
 
-**ATTENTION :** Un BLOB compressé est toujours un BLOB, rien ne vous empêche donc de modifier son contenu. Cependant, si vous le modifiez, la commande [EXPAND BLOB](expand-blob.md) ne pourra plus décompresser correctement le BLOB.
+**ATTENTION :** Un BLOB compressé est toujours un BLOB, rien ne vous empêche donc de modifier son contenu. Cependant, si vous le modifiez, la commande [EXPAND BLOB](../commands/expand-blob) ne pourra plus décompresser correctement le BLOB.
 
 ## Exemple 1 
 
@@ -105,8 +105,8 @@ La variable OK prend la valeur 1 si le BLOB a été correctement compressé, sin
 
 ## Voir aussi 
 
-[BLOB PROPERTIES](blob-properties.md)  
-[EXPAND BLOB](expand-blob.md)  
+[BLOB PROPERTIES](../commands/blob-properties)  
+[EXPAND BLOB](../commands/expand-blob)  
 
 ## Propriétés
 

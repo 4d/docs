@@ -1,4 +1,4 @@
----
+﻿---
 id: get-process-variable
 title: GET PROCESS VARIABLE
 slug: /commands/get-process-variable
@@ -38,9 +38,9 @@ In each couple of *srcVar;dstVar* variables, the two variables must be of compat
 The current process “peeks” the variables from the source process—the source process is not warned in any way that another process is reading the instance of its variables.
 
 **4D Server:** Using 4D Client, you can read variables in a destination process executed on the server machine (stored procedure). To do so, put a minus sign before the process ID number in the *process* parameter.  
-“Intermachine” process communication, provided by the commands **GET PROCESS VARIABLE**, [SET PROCESS VARIABLE](set-process-variable.md) and [VARIABLE TO VARIABLE](variable-to-variable.md), is possible from client to server only. It is always a client process that reads or write the variables of a stored procedure. 
+“Intermachine” process communication, provided by the commands **GET PROCESS VARIABLE**, [SET PROCESS VARIABLE](../commands/set-process-variable) and [VARIABLE TO VARIABLE](../commands/variable-to-variable), is possible from client to server only. It is always a client process that reads or write the variables of a stored procedure. 
 
-**Tip:** If you do not know the ID number of the server process, you can still use the interprocess variables of the server. To do so, you can use any negative value in *process*. In other words, it is not necessary to know the ID number of the process to be able to use the **GET PROCESS VARIABLE** command with the interprocess variables of the server. This is useful when a stored procedure is launched using the [On Server Startup database method](on-server-startup-database-method.md). As clients machines do not automatically know the ID number of that process, any negative value can be passed in the *process* parameter.
+**Tip:** If you do not know the ID number of the server process, you can still use the interprocess variables of the server. To do so, you can use any negative value in *process*. In other words, it is not necessary to know the ID number of the process to be able to use the **GET PROCESS VARIABLE** command with the interprocess variables of the server. This is useful when a stored procedure is launched using the [On Server Startup database method](../commands/on-server-startup-database-method). As clients machines do not automatically know the ID number of that process, any negative value can be passed in the *process* parameter.
 
 ### Restrictions 
 
@@ -56,7 +56,7 @@ On the other hand, the destination variables can be interprocess, process or loc
 
 The source process must be a user process; it cannot be a kernel process. If the source process does not exist, this command has no effect.
 
-**Note:** In interpreted mode, if a source variable does not exist, the undefined value is returned. You can detect this by using the [Type](type.md) function to test the corresponding destination variable.
+**Note:** In interpreted mode, if a source variable does not exist, the undefined value is returned. You can detect this by using the [Type](../commands/type) function to test the corresponding destination variable.
 
 ## Example 1 
 
@@ -124,10 +124,10 @@ See the example for the *\_o\_DRAG AND DROP PROPERTIES* command.
 ## See also 
 
 *Drag and Drop*  
-[POST OUTSIDE CALL](post-outside-call.md)  
+[POST OUTSIDE CALL](../commands/post-outside-call)  
 [Processes](../../Develop/processes.md)  
-[SET PROCESS VARIABLE](set-process-variable.md)  
-[VARIABLE TO VARIABLE](variable-to-variable.md)  
+[SET PROCESS VARIABLE](../commands/set-process-variable)  
+[VARIABLE TO VARIABLE](../commands/variable-to-variable)  
 
 ## Properties
 

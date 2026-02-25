@@ -1,4 +1,4 @@
----
+﻿---
 id: object-get-print-variable-frame
 title: OBJECT GET PRINT VARIABLE FRAME
 slug: /commands/object-get-print-variable-frame
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT GET PRINT VARIABLE FRAME.Summary-->O comando **OBJECT GET PRINT VARIABLE FRAME** obtém a configuração atual das opções de impressão em tamanho variável do objeto ou dos objetos designado(s) pelos parâmetros *objeto* e *\** .<!-- END REF-->  
   
-As propriedades de impressão de tamanho variável podem ser definidas utilizando a lista de propriedades ou o comando [OBJECT SET PRINT VARIABLE FRAME](object-set-print-variable-frame.md).  
+As propriedades de impressão de tamanho variável podem ser definidas utilizando a lista de propriedades ou o comando [OBJECT SET PRINT VARIABLE FRAME](../commands/object-set-print-variable-frame).  
 Se passar o parâmetro opcional *\** indica que o parâmetro *objeto* é um nome de objeto (cadeia). Se não passar este parâmetro, indica que o parâmetro *objeto* é um campo ou uma variável. Neste caso, se passar uma referência de campo ou variável no lugar de uma cadeia (campo ou variável objeto unicamente).  
   
 No parâmetro *tamVariavel*, o comando devolve uma variável booleana cujo valor indica o estado ativo (**True**) ou inativo (**False**) da impressão em tamanho variável.  
@@ -46,7 +46,7 @@ Se o *objeto* é um sub formulário e se a impressão em tamanho variável está
 
 ## Ver também 
 
-[OBJECT SET PRINT VARIABLE FRAME](object-set-print-variable-frame.md)  
+[OBJECT SET PRINT VARIABLE FRAME](../commands/object-set-print-variable-frame)  
 
 ## Propriedades
 

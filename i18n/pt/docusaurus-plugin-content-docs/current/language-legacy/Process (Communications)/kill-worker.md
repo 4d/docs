@@ -1,4 +1,4 @@
----
+﻿---
 id: kill-worker
 title: KILL WORKER
 slug: /commands/kill-worker
@@ -35,9 +35,9 @@ Em *processo*, se passa o nome ou o número do processo worker cuja execução d
 
 Se não passar nenhum parâmetro, **KILL WORKER** aplica aos processos worker atualmente em execução e portanto é equivalente a **KILL WORKER* (Current process)*.
 
-Se **KILL WORKER** for aplicado a um worker que não foi criado explícitamente utilizando o comando [CALL WORKER](call-worker.md) (por exemplo, o proceso worker principal da aplicação), só pede a este trabalhador esvaziar sua caixa de mensagens. Em consequência, **KILL WORKER* (1)* não faz nada.
+Se **KILL WORKER** for aplicado a um worker que não foi criado explícitamente utilizando o comando [CALL WORKER](../commands/call-worker) (por exemplo, o proceso worker principal da aplicação), só pede a este trabalhador esvaziar sua caixa de mensagens. Em consequência, **KILL WORKER* (1)* não faz nada.
 
-Se chamar ao comando [CALL WORKER](call-worker.md) para enviar uma mensagem a um worker que acaba de ser finalizado por **KILL WORKER**, um novo processo é iniciado. Para ter certeza de que só há um processo que se executa por vez para um trabalhador, o novo processo se iniciará assim que o anterior tenha finalizado. Entrentato, lembre que se [CALL WORKER](call-worker.md) for chamado por um worker para ser enviada uma mensagem, enquanto acaba de ser eliminado por **KILL WORKER**, o comando não faz nada.
+Se chamar ao comando [CALL WORKER](../commands/call-worker) para enviar uma mensagem a um worker que acaba de ser finalizado por **KILL WORKER**, um novo processo é iniciado. Para ter certeza de que só há um processo que se executa por vez para um trabalhador, o novo processo se iniciará assim que o anterior tenha finalizado. Entrentato, lembre que se [CALL WORKER](../commands/call-worker) for chamado por um worker para ser enviada uma mensagem, enquanto acaba de ser eliminado por **KILL WORKER**, o comando não faz nada.
 
 ## Exemplo 
 
@@ -63,8 +63,8 @@ No método (*theWorker*), adicionou código para manejar esta situaçao:
 
 ## Ver também 
 
-[CALL WORKER](call-worker.md)  
-[Current process name](current-process-name.md)  
+[CALL WORKER](../commands/call-worker)  
+[Current process name](../commands/current-process-name)  
 *Sobre Workers*  
 
 ## Propriedades

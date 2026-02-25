@@ -1,4 +1,4 @@
----
+﻿---
 id: get-text-from-pasteboard
 title: Get text from pasteboard
 slug: /commands/get-text-from-pasteboard
@@ -42,9 +42,9 @@ Si el texto se extrae correctamente, OK toma el valor 1; de lo contrario OK toma
 
 ## Ver también 
 
-[GET PASTEBOARD DATA](get-pasteboard-data.md)  
-[GET PICTURE FROM PASTEBOARD](get-picture-from-pasteboard.md)  
-[Pasteboard data size](pasteboard-data-size.md)  
+[GET PASTEBOARD DATA](../commands/get-pasteboard-data)  
+[GET PICTURE FROM PASTEBOARD](../commands/get-picture-from-pasteboard)  
+[Pasteboard data size](../commands/pasteboard-data-size)  
 
 ## Propiedades
 

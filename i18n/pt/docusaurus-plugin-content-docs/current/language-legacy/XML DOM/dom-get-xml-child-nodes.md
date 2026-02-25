@@ -1,4 +1,4 @@
----
+﻿---
 id: dom-get-xml-child-nodes
 title: DOM GET XML CHILD NODES
 slug: /commands/dom-get-xml-child-nodes
@@ -43,7 +43,7 @@ Os tipos dos nodos filhos são retornados no array *arrTiposFilhos*. Pode compar
 | XML ELEMENT                | Inteiro longo | 11    |
   
   
-Para maior informação, consulte a descrição do comando [DOM Append XML child node](dom-append-xml-child-node.md).  
+Para maior informação, consulte a descrição do comando [DOM Append XML child node](../commands/dom-append-xml-child-node).  
   
 O array *arrRefsNodos* recebe os valores ou as referências dos elementos em função de sua natureza (conteúdos ou instruções).
 
@@ -73,8 +73,8 @@ Depois da execução destas instruções:
 
 ## Ver também 
 
-[DOM Append XML child node](dom-append-xml-child-node.md)  
-[DOM Get XML document ref](dom-get-xml-document-ref.md)  
+[DOM Append XML child node](../commands/dom-append-xml-child-node)  
+[DOM Get XML document ref](../commands/dom-get-xml-document-ref)  
 
 ## Propriedades
 

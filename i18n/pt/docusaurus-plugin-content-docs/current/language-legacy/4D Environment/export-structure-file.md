@@ -1,4 +1,4 @@
----
+﻿---
 id: export-structure-file
 title: Export structure file
 slug: /commands/export-structure-file
@@ -126,7 +126,7 @@ Se quiser exportar apenas os métodos projeto e banco de dados, e um arquivo de 
 
 ## Ver também 
 
-[FORM Convert to dynamic](form-convert-to-dynamic.md)  
+[FORM Convert to dynamic](../commands/form-convert-to-dynamic)  
 
 ## Propriedades
 

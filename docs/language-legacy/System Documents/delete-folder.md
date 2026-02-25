@@ -1,4 +1,4 @@
----
+﻿---
 id: delete-folder
 title: DELETE FOLDER
 slug: /commands/delete-folder
@@ -49,12 +49,12 @@ By default, for security reasons, if you omit the *deleteOption* parameter, **DE
    (\*) under Windows: -54 (Attempt to open locked file for writing)  
    under macOS: -45 (The file is locked or the pathname is not correct)
 
-You can intercept these errors using a method installed by the [ON ERR CALL](on-err-call.md) command.
+You can intercept these errors using a method installed by the [ON ERR CALL](../commands/on-err-call) command.
 
 ## See also 
 
   
-[DELETE DOCUMENT](delete-document.md)  
+[DELETE DOCUMENT](../commands/delete-document)  
 
 ## Properties
 

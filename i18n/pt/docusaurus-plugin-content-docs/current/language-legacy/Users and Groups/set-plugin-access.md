@@ -1,4 +1,4 @@
----
+﻿---
 id: set-plugin-access
 title: SET PLUGIN ACCESS
 slug: /commands/set-plugin-access
@@ -52,9 +52,9 @@ Passe no parâmetro *grupo* o nome do grupo cujos usuários estão autorizados a
 
 ## Ver também 
 
-[Get plugin access](get-plugin-access.md)  
-[PLUGIN LIST](plugin-list.md)  
-[SET GROUP ACCESS](set-group-access.md)  
+[Get plugin access](../commands/get-plugin-access)  
+[PLUGIN LIST](../commands/plugin-list)  
+[SET GROUP ACCESS](../commands/set-group-access)  
 
 ## Propriedades
 

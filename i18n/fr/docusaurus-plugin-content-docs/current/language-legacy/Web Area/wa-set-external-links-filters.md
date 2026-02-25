@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-set-external-links-filters
 title: WA SET EXTERNAL LINKS FILTERS
 slug: /commands/wa-set-external-links-filters
@@ -43,7 +43,7 @@ En cas de contradiction au niveau des paramétrages (autorisation et refus d’u
 
 Pour désactiver le filtrage des URLs, appelez la commande en lui passant des tableaux vides ou en passant respectivement les valeurs "*\**" et Vrai dans la dernière ligne des tableaux *tabFiltres* et *tabAutorisRefus*. 
 
-**Important :** Le filtrage établi par la commande [WA SET URL FILTERS](wa-set-url-filters.md) est pris en compte avant celui de **WA SET EXTERNAL LINKS FILTERS**. Cela signifie que si un URL est refusé à cause d’un filtre de la commande [WA SET URL FILTERS](wa-set-url-filters.md), il ne pourra pas être ouvert dans un navigateur même s’il est explicitement défini par la commande **WA SET EXTERNAL LINKS FILTERS** (cf. exemple 2).
+**Important :** Le filtrage établi par la commande [WA SET URL FILTERS](../commands/wa-set-url-filters) est pris en compte avant celui de **WA SET EXTERNAL LINKS FILTERS**. Cela signifie que si un URL est refusé à cause d’un filtre de la commande [WA SET URL FILTERS](../commands/wa-set-url-filters), il ne pourra pas être ouvert dans un navigateur même s’il est explicitement défini par la commande **WA SET EXTERNAL LINKS FILTERS** (cf. exemple 2).
 
 ## Exemple 1 
 
@@ -82,8 +82,8 @@ Cet exemple combine des filtrages de sites et de liens externes :
 
 ## Voir aussi 
 
-[WA GET EXTERNAL LINKS FILTERS](wa-get-external-links-filters.md)  
-[WA SET URL FILTERS](wa-set-url-filters.md)  
+[WA GET EXTERNAL LINKS FILTERS](../commands/wa-get-external-links-filters)  
+[WA SET URL FILTERS](../commands/wa-set-url-filters)  
 
 ## Propriétés
 

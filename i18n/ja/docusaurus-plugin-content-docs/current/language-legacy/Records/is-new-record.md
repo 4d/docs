@@ -1,4 +1,4 @@
----
+﻿---
 id: is-new-record
 title: Is new record
 slug: /commands/is-new-record
@@ -52,8 +52,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[Modified record](modified-record.md)  
-[Record number](record-number.md)  
+[Modified record](../commands/modified-record)  
+[Record number](../commands/record-number)  
 
 ## プロパティ
 

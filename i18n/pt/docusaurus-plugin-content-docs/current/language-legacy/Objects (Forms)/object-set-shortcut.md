@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-shortcut
 title: OBJECT SET SHORTCUT
 slug: /commands/object-set-shortcut
@@ -99,7 +99,7 @@ Você quer associar um atalho de teclado diferente em função da linguagem atua
 
 ## Ver também 
 
-[OBJECT GET SHORTCUT](object-get-shortcut.md)  
+[OBJECT GET SHORTCUT](../commands/object-get-shortcut)  
 
 ## Propriedades
 

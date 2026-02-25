@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-sorts
 title: QR SET SORTS
 slug: /commands/qr-set-sorts
@@ -58,7 +58,7 @@ Se passa um número de área *inválido*, se gera o erro -9850.
 
 ## Ver também 
 
-[QR GET SORTS](qr-get-sorts.md)  
+[QR GET SORTS](../commands/qr-get-sorts)  
 
 ## Propriedades
 

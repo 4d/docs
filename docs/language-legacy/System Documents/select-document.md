@@ -1,4 +1,4 @@
----
+﻿---
 id: select-document
 title: Select document
 slug: /commands/select-document
@@ -44,7 +44,7 @@ The *directory* parameter indicates the folder whose contents are initially disp
 As such, you can store in memory the access path of the folder opened when the user clicked the selection button, in other words, the folder selected by the user. During the first call of an arbitrary number (for example, 5) the command displays the default user folder of the operating system (equivalent of passing an empty string). The user could also browse folders on the hard disk. When the user clicks on the selection button, the access path is memorized and associated with number 5\. During future calls to number 5, the memorized access path will be used by default. If a new location is selected, path number 5 is updated.  
 This mechanism lets you memorize up to 32,000 access paths. Under Windows, each path is kept for the session only. Under Mac OS, the paths are kept by the system and remain stored from one session to the next.
 
-**Note:** This mechanism is the same as the one used by the [Select folder](select-folder.md) command. The numbers of the memorized pathnames are shared by both commands.
+**Note:** This mechanism is the same as the one used by the [Select folder](../commands/select-folder) command. The numbers of the memorized pathnames are shared by both commands.
 
 Pass the type(s) of file(s) that can be selected in the open file dialog box in the *fileTypes* parameter. You can pass a list of several types separated by a ; (semi-colon). For each type defined, a row will be added in the type choice menu of the dialog box.
 
@@ -108,8 +108,8 @@ If no file was selected (for example, if the user clicked on the **Cancel** butt
 
 ## See also 
 
-[Open document](open-document.md)  
-[Select folder](select-folder.md)  
+[Open document](../commands/open-document)  
+[Select folder](../commands/select-folder)  
 
 ## Properties
 

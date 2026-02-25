@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-list-by-reference
 title: OBJECT SET LIST BY REFERENCE
 slug: /commands/object-set-list-by-reference
@@ -42,9 +42,9 @@ Por defecto, si se omite el parámetro *tipoLista*, el comando define una lista 
 | Excluded list | Entero largo | 2     | Lista de valores no aceptados para la entrada (Opción "Exclusiones" en la lista de propiedades)    |
 | Required list | Entero largo | 1     | Lista sólo los valores aceptados para la entrada (Opción "Obligatoria" en la Lista de Propiedades) |
 
-En *lista*, pase el número de referencia de la lista jerárquica que desea asociar al objeto. Esta lista debe haber sido generada utilizando el comando [Copy list](copy-list.md), [Load list](load-list.md) o [New list](new-list.md).
+En *lista*, pase el número de referencia de la lista jerárquica que desea asociar al objeto. Esta lista debe haber sido generada utilizando el comando [Copy list](../commands/copy-list), [Load list](../commands/load-list) o [New list](../commands/new-list).
 
-Para finalizar la asociación de una *lista* con un *objeto*, sólo pase 0 en el parámetro *lista* para el tipo de lista concerniente. Eliminar una asociación de lista, no elimina la referencia de lista en memoria. Recuerde llamar el comando [CLEAR LIST](clear-list.md) cuando ya no necesite la lista.
+Para finalizar la asociación de una *lista* con un *objeto*, sólo pase 0 en el parámetro *lista* para el tipo de lista concerniente. Eliminar una asociación de lista, no elimina la referencia de lista en memoria. Recuerde llamar el comando [CLEAR LIST](../commands/clear-list) cuando ya no necesite la lista.
 
 La lista de valores existente se sustituye en función de cómo se asocie la lista al objeto formulario:
 
@@ -137,8 +137,8 @@ Con el fin de actualizar la lista asociada al pop-up gestionado por array, es ne
 
 ## Ver también 
 
-[OBJECT Get list reference](object-get-list-reference.md)  
-[OBJECT SET LIST BY NAME](object-set-list-by-name.md)  
+[OBJECT Get list reference](../commands/object-get-list-reference)  
+[OBJECT SET LIST BY NAME](../commands/object-set-list-by-name)  
 
 ## Propiedades
 

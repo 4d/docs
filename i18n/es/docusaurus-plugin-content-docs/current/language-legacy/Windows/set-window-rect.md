@@ -1,4 +1,4 @@
----
+﻿---
 id: set-window-rect
 title: SET WINDOW RECT
 slug: /commands/set-window-rect
@@ -42,11 +42,11 @@ Este comando puede redimensionar y mover la ventana, dependiendo de las nuevas c
 
 Las coordenadas deben ser expresadas con relación a la esquina superior izquierda del área de contenido de la ventana de la aplicación (modo Windows MDI) o de la pantalla principal (mac OS y modo Windows MDI). Las coordenadas indican el rectángulo correspondiente al área de contenido de la ventana (excluyendo las barras de títulos y los bordes).
 
-**Advertencia:** utilice este comando con precaución, podría mover una ventana más allá de los límites de la ventana principal (en Windows) o de la pantalla (en Macintosh). Para evitar esto, utilice comandos como [Screen width](screen-width.md) y [Screen height](screen-height.md) para verificar las nuevas coordenadas de la ventana.
+**Advertencia:** utilice este comando con precaución, podría mover una ventana más allá de los límites de la ventana principal (en Windows) o de la pantalla (en Macintosh). Para evitar esto, utilice comandos como [Screen width](../commands/screen-width) y [Screen height](../commands/screen-height) para verificar las nuevas coordenadas de la ventana.
 
 Por defecto, la ejecución de este comando pasa al primer plano la ventana designada por el parámetro *ventana* (si se utiliza este parámetro). Puede desactivar este funcionamiento pasando *\** como último parámetro. En este caso, el comando no modifica el nivel original de la ventana (coordenada "z"). 
 
-Este comando no afecta los objetos de formulario. Si la ventana contiene un formulario, los objetos del formulario no se mueven o redimensionan por el comando (sin importar sus propiedades). Sólo se modifica la ventana. Para modificar una ventana de formulario teniendo en cuenta sus propiedades de redimensionamiento y los objetos que contiene, debe utilizar el comando [RESIZE FORM WINDOW](resize-form-window.md).
+Este comando no afecta los objetos de formulario. Si la ventana contiene un formulario, los objetos del formulario no se mueven o redimensionan por el comando (sin importar sus propiedades). Sólo se modifica la ventana. Para modificar una ventana de formulario teniendo en cuenta sus propiedades de redimensionamiento y los objetos que contiene, debe utilizar el comando [RESIZE FORM WINDOW](../commands/resize-form-window).
 
 ## Ejemplo 1 
 
@@ -71,10 +71,10 @@ La ventana aparece de esta forma:
 
 ## Ver también 
 
-[CONVERT COORDINATES](convert-coordinates.md)  
-[DRAG WINDOW](drag-window.md)  
-[GET WINDOW RECT](get-window-rect.md)  
-[RESIZE FORM WINDOW](resize-form-window.md)  
+[CONVERT COORDINATES](../commands/convert-coordinates)  
+[DRAG WINDOW](../commands/drag-window)  
+[GET WINDOW RECT](../commands/get-window-rect)  
+[RESIZE FORM WINDOW](../commands/resize-form-window)  
 
 ## Propiedades
 

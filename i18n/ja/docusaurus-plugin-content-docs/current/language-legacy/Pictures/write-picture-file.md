@@ -1,4 +1,4 @@
----
+﻿---
 id: write-picture-file
 title: WRITE PICTURE FILE
 slug: /commands/write-picture-file
@@ -33,11 +33,11 @@ displayed_sidebar: docs
 <!--REF #_command_.WRITE PICTURE FILE.Summary-->**WRITE PICTURE FILE**コマンドを使用し、 引数*picture*に渡されたピクチャを、指定した*codec*でディスクに保存することができます。<!-- END REF--> 
 
 *fileName*には、作成するファイルのフルパス名、あるいはファイル名のみを渡すことができます。ファイル名だけを渡した場合、書き出したファイルはデータベースのストラクチャファイルと同階層に置かれます。ファイルの拡張子を指定しなければなりません。  
-*fileName*に空の文字列 ("") を渡すと、標準のファイル保存ダイアログボックスが表示され、作成するファイルの名前、場所、フォーマットをユーザが指定できます。デフォルト名がピクチャーフィールドに割り当てられている場合、ダイアログにはその名前が表示されます ([SET PICTURE FILE NAME](set-picture-file-name.md)コマンド参照)。
+*fileName*に空の文字列 ("") を渡すと、標準のファイル保存ダイアログボックスが表示され、作成するファイルの名前、場所、フォーマットをユーザが指定できます。デフォルト名がピクチャーフィールドに割り当てられている場合、ダイアログにはその名前が表示されます ([SET PICTURE FILE NAME](../commands/set-picture-file-name)コマンド参照)。
 
 *picture*には、ディスクに保存するピクチャを格納したピクチャ変数またはフィールドを渡します。
 
-オプションの*codec*引数を使用して、保存されるピクチャのフォーマットを指定できます。Codecは拡張子 (例 “.gif”), またはMimeタイプ (例 “image/jpeg”) です。[PICTURE CODEC LIST](picture-codec-list.md)コマンドを使用して、利用可能なCodecのリストを取得できます。
+オプションの*codec*引数を使用して、保存されるピクチャのフォーマットを指定できます。Codecは拡張子 (例 “.gif”), またはMimeタイプ (例 “image/jpeg”) です。[PICTURE CODEC LIST](../commands/picture-codec-list)コマンドを使用して、利用可能なCodecのリストを取得できます。
 
 *codec* 引数を省略すると、コマンドは*fileName* 引数に渡されたファイル名の拡張子に基づき、codecの決定を試みます。例えば以下のコードにおいて:  
 
@@ -55,9 +55,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[PICTURE TO BLOB](picture-to-blob.md)  
-[READ PICTURE FILE](read-picture-file.md)  
-[SET PICTURE FILE NAME](set-picture-file-name.md)  
+[PICTURE TO BLOB](../commands/picture-to-blob)  
+[READ PICTURE FILE](../commands/read-picture-file)  
+[SET PICTURE FILE NAME](../commands/set-picture-file-name)  
 *ピクチャ*  
 
 ## プロパティ

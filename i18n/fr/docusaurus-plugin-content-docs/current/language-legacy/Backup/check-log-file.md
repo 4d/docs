@@ -1,4 +1,4 @@
----
+﻿---
 id: check-log-file
 title: CHECK LOG FILE
 slug: /commands/check-log-file
@@ -40,12 +40,12 @@ Cette commande est utilisable dans le contexte d’une application monoposte uni
 
 * Si cette commande est exécutée dans une base de données fonctionnant sans fichier d’historique, elle ne fait rien et l’erreur 1403 est retournée.
 * Si cette commande est exécutée sur une base client/serveur, elle ne fait rien et l’erreur 1421 est retournée.  
-Vous pouvez intercepter ces erreurs à l’aide d’une méthode de gestion d’erreurs installée par la commande [ON ERR CALL](on-err-call.md).
+Vous pouvez intercepter ces erreurs à l’aide d’une méthode de gestion d’erreurs installée par la commande [ON ERR CALL](../commands/on-err-call).
 
 ## Voir aussi 
 
 *Erreurs du gestionnaire de sauvegarde (1401 -> 1421)*  
-[RESTORE](restore.md)  
+[RESTORE](../commands/restore)  
 
 ## Propriétés
 

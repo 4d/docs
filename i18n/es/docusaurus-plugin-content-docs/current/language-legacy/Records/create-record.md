@@ -1,4 +1,4 @@
----
+﻿---
 id: create-record
 title: CREATE RECORD
 slug: /commands/create-record
@@ -17,11 +17,11 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.CREATE RECORD.Summary-->**CREATE RECORD** crea un nuevo registro vacío para *tabla,* pero no muestra el nuevo registro.<!-- END REF--> Utilice el comando [ADD RECORD](add-record.md) para crear un nuevo registro y mostrarlo en un formulario de entrada. 
+<!--REF #_command_.CREATE RECORD.Summary-->**CREATE RECORD** crea un nuevo registro vacío para *tabla,* pero no muestra el nuevo registro.<!-- END REF--> Utilice el comando [ADD RECORD](../commands/add-record) para crear un nuevo registro y mostrarlo en un formulario de entrada. 
 
-**CREATE RECORD** se utiliza en lugar de [ADD RECORD](add-record.md) cuando los valores de los registros se introducen por programación. El nuevo registro se convierte en el registro actual para la selección actual pero la selección actual no se modifica. 
+**CREATE RECORD** se utiliza en lugar de [ADD RECORD](../commands/add-record) cuando los valores de los registros se introducen por programación. El nuevo registro se convierte en el registro actual para la selección actual pero la selección actual no se modifica. 
 
-El registro existe en memoria únicamente hasta que un comando [SAVE RECORD](save-record.md) se ejecute para la tabla. Si cambia el registro actual (por ejemplo, por una búsqueda) antes de guardar el registro, el nuevo registro se pierde.
+El registro existe en memoria únicamente hasta que un comando [SAVE RECORD](../commands/save-record) se ejecute para la tabla. Si cambia el registro actual (por ejemplo, por una búsqueda) antes de guardar el registro, el nuevo registro se pierde.
 
 **Nota:** este comando no requiere *tabla* para estar en modo lectura/escritura. Se puede utilizar incluso cuando la tabla está en modo de sólo lectura (ver *Record Locking*). 
 
@@ -45,9 +45,9 @@ El siguiente ejemplo archiva los registros que tienen más de 30 días. Esta ope
 
 ## Ver también 
 
-[ADD RECORD](add-record.md)  
-[MODIFY RECORD](modify-record.md)  
-[SAVE RECORD](save-record.md)  
+[ADD RECORD](../commands/add-record)  
+[MODIFY RECORD](../commands/modify-record)  
+[SAVE RECORD](../commands/save-record)  
 
 ## Propiedades
 

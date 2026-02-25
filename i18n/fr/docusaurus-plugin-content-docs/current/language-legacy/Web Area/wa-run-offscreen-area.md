@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-run-offscreen-area
 title: WA Run offscreen area
 slug: /commands/wa-run-offscreen-area
@@ -40,7 +40,7 @@ Dans l'objet *paramètres*, passez l'un des propriétés optionnelles suivantes 
 | url              | objet texte \| fichier | L'URL ou le fichier à charger dans la zone web. S'il est omis, une page blanche est chargée.                                                                                                                                                                                                                                                                                                  |
 | area             | texte                  | Le nom de la zone web. S'il est omis ou null, un nom générique est attribué (ex : OffscreenArea1).                                                                                                                                                                                                                                                                                            |
 | onEvent          | objet (formule)        | Une méthode callback qui est lancée lorsque la zone web est prête. Elle peut être soit :<br/> une fonction *onEvent* d'une classe, ou un objet [Formula](../commands/formula)  <br/>Par défaut, la méthode callback est appelée sur les événements On Load, On Unload, On End URL Loading, On URL Loading Error, ou On Timer.                                                          |
-| autoQuit         | booléen                | Vrai (valeur par défaut) si la commande doit stopper l'exécution de la formule lorsque les événement On End URL Loading ou On URL Loading Error se produisent.<br/><br/><br/>Si faux, vous devez utiliser les commandes [CANCEL](cancel.md) ou [ACCEPT](accept.md) dans la méthode callback ou les méthodes projet appelées avec l'objet $4d pour fermer la zone web. |
+| autoQuit         | booléen                | Vrai (valeur par défaut) si la commande doit stopper l'exécution de la formule lorsque les événement On End URL Loading ou On URL Loading Error se produisent.<br/><br/><br/>Si faux, vous devez utiliser les commandes [CANCEL](../commands/cancel) ou [ACCEPT](../commands/accept) dans la méthode callback ou les méthodes projet appelées avec l'objet $4d pour fermer la zone web. |
 | timeout          | réel                   | Durée maximale (en secondes) avant la fermeture automatique de la zone, si aucun événément n'est généré. Si elle est définie sur 0, aucune limitation n'est appliquée. Valeur par défaut : 60                                                                                                                                                                                                 |
 | result           | mixte                  | Résultat du traitement à retourner (le cas échéant)                                                                                                                                                                                                                                                                                                                                           |
 | <customProperty> | mixte                  | Un attribut personnalisé disponible dans la méthode callback ou $4d.                                                                                                                                                                                                                                                                                                                          |
@@ -60,18 +60,18 @@ Si une valeur null est passée dans *paramètres*, une zone web vide sera créé
 
 Les commandes suivantes peuvent être utilisées dans la méthode callback :
 
-* [ACCEPT](accept.md)
-* [CANCEL](cancel.md)
-* [SET TIMER](set-timer.md)
-* [WA Evaluate JavaScript](wa-evaluate-javascript.md)
-* [WA EXECUTE JAVASCRIPT FUNCTION](wa-execute-javascript-function.md)
-* [WA Get current URL](wa-get-current-url.md)
-* [WA GET LAST URL ERROR](wa-get-last-url-error.md)
-* [WA Get page content](wa-get-page-content.md)
-* [WA Get page title](wa-get-page-title.md)
-* [WA OPEN URL](wa-open-url.md)
-* [WA REFRESH CURRENT URL](wa-refresh-current-url.md)
-* [WA STOP LOADING URL](wa-stop-loading-url.md)
+* [ACCEPT](../commands/accept)
+* [CANCEL](../commands/cancel)
+* [SET TIMER](../commands/set-timer)
+* [WA Evaluate JavaScript](../commands/wa-evaluate-javascript)
+* [WA EXECUTE JAVASCRIPT FUNCTION](../commands/wa-execute-javascript-function)
+* [WA Get current URL](../commands/wa-get-current-url)
+* [WA GET LAST URL ERROR](../commands/wa-get-last-url-error)
+* [WA Get page content](../commands/wa-get-page-content)
+* [WA Get page title](../commands/wa-get-page-title)
+* [WA OPEN URL](../commands/wa-open-url)
+* [WA REFRESH CURRENT URL](../commands/wa-refresh-current-url)
+* [WA STOP LOADING URL](../commands/wa-stop-loading-url)
 
 ## Exemple 
 
@@ -101,13 +101,13 @@ dans la **classe OffscreenArea** :
 
 ## Variables et ensembles système 
 
-La variable système OK est définie sur 0 si le timeout a été atteint ou si la commande [CANCEL](cancel.md) a été appelée dans onEvent, sinon elle est définie sur 1.
+La variable système OK est définie sur 0 si le timeout a été atteint ou si la commande [CANCEL](../commands/cancel) a été appelée dans onEvent, sinon elle est définie sur 1.
 
 ## Voir aussi 
 
 [FORM Event](../commands/form-event)  
 *Gestion programmée des zones Web*  
-[WA OPEN WEB INSPECTOR](wa-open-web-inspector.md)  
+[WA OPEN WEB INSPECTOR](../commands/wa-open-web-inspector)  
 
 ## Propriétés
 

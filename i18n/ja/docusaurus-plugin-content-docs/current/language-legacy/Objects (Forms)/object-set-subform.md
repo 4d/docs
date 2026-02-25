@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-subform
 title: OBJECT SET SUBFORM
 slug: /commands/object-set-subform
@@ -52,8 +52,8 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT GET SUBFORM](object-get-subform.md)  
-[OBJECT GET SUBFORM CONTAINER SIZE](object-get-subform-container-size.md)  
+[OBJECT GET SUBFORM](../commands/object-get-subform)  
+[OBJECT GET SUBFORM CONTAINER SIZE](../commands/object-get-subform-container-size)  
 
 ## プロパティ
 

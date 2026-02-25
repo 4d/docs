@@ -1,4 +1,4 @@
----
+﻿---
 id: multi-sort-array
 title: MULTI SORT ARRAY
 slug: /commands/multi-sort-array
@@ -49,7 +49,7 @@ displayed_sidebar: docs
 
 * **・第二の構文： MULTI SORT ARRAY (ptrArrayName; sortArrayName)**
 
-この構文はより複雑であり、汎用的な開発では非常に有効です（例えば、あらゆるタイプの配列を並び替える汎用メソッドを作成したり、汎用的な [SORT ARRAY](sort-array.md) コマンドに相当するものを作成する場合）。
+この構文はより複雑であり、汎用的な開発では非常に有効です（例えば、あらゆるタイプの配列を並び替える汎用メソッドを作成したり、汎用的な [SORT ARRAY](../commands/sort-array) コマンドに相当するものを作成する場合）。
 
 *ptrArrayName* 引数には、配列ポインタの配列名を指定します。この配列の各要素は、並び替える配列を示すポインタです。*ptrArrayName*に指定した配列ポインタの順に、並び替えが実行されます。
 
@@ -119,9 +119,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ORDER BY](order-by.md)  
-[SELECTION TO ARRAY](selection-to-array.md)  
-[SORT ARRAY](sort-array.md)  
+[ORDER BY](../commands/order-by)  
+[SELECTION TO ARRAY](../commands/selection-to-array)  
+[SORT ARRAY](../commands/sort-array)  
 
 ## プロパティ
 

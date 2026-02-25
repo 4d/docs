@@ -1,4 +1,4 @@
----
+﻿---
 id: select-rgb-color
 title: Select RGB color
 slug: /commands/select-rgb-color
@@ -37,7 +37,7 @@ displayed_sidebar: docs
 | -------------------------------------------- | ------------------------------------------- |
 | ![](../../assets/en/commands/pict942577.fr.png) | ![](../../assets/en/commands/pict43385.en.png) |
 
-オプションの引数*defaultColor* を使用して、色を事前に選択できます。例えばこの引数を使用して、ユーザーが最後に設定した色をデフォルトで復元することができます。RGBのフォーマットカラーの値をこの引数に渡します ([OBJECT SET RGB COLORS](object-set-rgb-colors.md)コマンドの説明参照)。*SET RGB COLORS*テーマにある定数の一つを使用できます。  
+オプションの引数*defaultColor* を使用して、色を事前に選択できます。例えばこの引数を使用して、ユーザーが最後に設定した色をデフォルトで復元することができます。RGBのフォーマットカラーの値をこの引数に渡します ([OBJECT SET RGB COLORS](../commands/object-set-rgb-colors)コマンドの説明参照)。*SET RGB COLORS*テーマにある定数の一つを使用できます。  
 引数*defaultColor*を省略したり0を渡すと、ダイアログボックスが開いたときに黒色が選択されます。
 
 オプションの引数*message*を使用して、システムウィンドウのタイトルをカスタマイズできます。この引数が省略されると、タイトル"カラー" がデフォルトで表示されます。
@@ -51,7 +51,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OBJECT SET RGB COLORS](object-set-rgb-colors.md)  
+[OBJECT SET RGB COLORS](../commands/object-set-rgb-colors)  
 
 ## プロパティ
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: mouse-position
 title: MOUSE POSITION
 slug: /commands/mouse-position
@@ -30,18 +30,18 @@ Le paramètre *boutonSouris* retourne l'état du ou des bouton(s) de la souris, 
 
 ## Exemple 
 
-Reportez-vous à l'exemple de la commande [Pop up menu](pop-up-menu.md).
+Reportez-vous à l'exemple de la commande [Pop up menu](../commands/pop-up-menu).
 
 ## Voir aussi 
 
-[Caps lock down](caps-lock-down.md)  
-[Macintosh command down](macintosh-command-down.md)  
-[Macintosh control down](macintosh-control-down.md)  
-[Macintosh option down](macintosh-option-down.md)  
-[ON EVENT CALL](on-event-call.md)  
-[Shift down](shift-down.md)  
-[Windows Alt down](windows-alt-down.md)  
-[Windows Ctrl down](windows-ctrl-down.md)  
+[Caps lock down](../commands/caps-lock-down)  
+[Macintosh command down](../commands/macintosh-command-down)  
+[Macintosh control down](../commands/macintosh-control-down)  
+[Macintosh option down](../commands/macintosh-option-down)  
+[ON EVENT CALL](../commands/on-event-call)  
+[Shift down](../commands/shift-down)  
+[Windows Alt down](../commands/windows-alt-down)  
+[Windows Ctrl down](../commands/windows-ctrl-down)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: begin-sql
 title: Begin SQL
 slug: /commands/begin-sql
@@ -26,9 +26,9 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Begin SQL.Summary-->Begin SQL is a keyword used in the Method editor to indicate the beginning of a sequence of SQL commands that must be interpreted by the current data source of the process (the integrated SQL engine of 4D or any source specified via the [SQL LOGIN](sql-login.md) command).<!-- END REF--> 
+<!--REF #_command_.Begin SQL.Summary-->Begin SQL is a keyword used in the Method editor to indicate the beginning of a sequence of SQL commands that must be interpreted by the current data source of the process (the integrated SQL engine of 4D or any source specified via the [SQL LOGIN](../commands/sql-login) command).<!-- END REF--> 
 
-A sequence of SQL commands started with Begin SQL must be closed with the [Begin SQL](begin-sql.md) keyword.
+A sequence of SQL commands started with Begin SQL must be closed with the [Begin SQL](../commands/begin-sql) keyword.
 
 These keywords work as follows:
 
@@ -54,9 +54,9 @@ Note that the 4D *Debugger* will evaluate the SQL code line by line. In certain 
 
 ## See also 
 
-[End SQL](end-sql.md)  
-[SQL Get current data source](sql-get-current-data-source.md)  
-[SQL LOGIN](sql-login.md)  
+[End SQL](../commands/end-sql)  
+[SQL Get current data source](../commands/sql-get-current-data-source)  
+[SQL LOGIN](../commands/sql-login)  
 
 ## Properties
 

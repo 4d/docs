@@ -1,4 +1,4 @@
----
+﻿---
 id: blob-size
 title: BLOB size
 slug: /commands/blob-size
@@ -40,7 +40,7 @@ The line of code adds 100 bytes to the BLOB *myBlob*:
 
 ## See also 
 
-[SET BLOB SIZE](set-blob-size.md)  
+[SET BLOB SIZE](../commands/set-blob-size)  
 
 ## Properties
 

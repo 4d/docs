@@ -1,4 +1,4 @@
----
+﻿---
 id: get-menu-item
 title: Get menu item
 slug: /commands/get-menu-item
@@ -39,8 +39,8 @@ Si vous ne passez pas le paramètre *process*, **Get menu item** est appliquée 
 
 ## Voir aussi 
 
-[Get menu item key](get-menu-item-key.md)  
-[SET MENU ITEM](set-menu-item.md)  
+[Get menu item key](../commands/get-menu-item-key)  
+[SET MENU ITEM](../commands/set-menu-item)  
 
 ## Propriétés
 

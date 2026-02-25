@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-refresh-current-url
 title: WA REFRESH CURRENT URL
 slug: /commands/wa-refresh-current-url
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 ## Ver também 
 
-[WA STOP LOADING URL](wa-stop-loading-url.md)  
+[WA STOP LOADING URL](../commands/wa-stop-loading-url)  
 
 ## Propriedades
 

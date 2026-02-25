@@ -1,4 +1,4 @@
----
+﻿---
 id: reduce-selection
 title: REDUCE SELECTION
 slug: /commands/reduce-selection
@@ -56,9 +56,9 @@ El siguiente ejemplo busca las estadísticas correctas para una competencia mund
 ## Ver también 
 
 *Conjuntos*  
-[ORDER BY](order-by.md)  
-[QUERY](query.md)  
-[SCAN INDEX](scan-index.md)  
+[ORDER BY](../commands/order-by)  
+[QUERY](../commands/query)  
+[SCAN INDEX](../commands/scan-index)  
 
 ## Propiedades
 

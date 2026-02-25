@@ -1,4 +1,4 @@
----
+﻿---
 id: suspend-transaction
 title: SUSPEND TRANSACTION
 slug: /commands/suspend-transaction
@@ -32,8 +32,8 @@ Para saber mais, consulte *Suspender as transações*.
 
 ## Ver também 
 
-[Active transaction](active-transaction.md)  
-[RESUME TRANSACTION](resume-transaction.md)  
+[Active transaction](../commands/active-transaction)  
+[RESUME TRANSACTION](../commands/resume-transaction)  
 *Suspender as transações*  
 
 ## Propriedades

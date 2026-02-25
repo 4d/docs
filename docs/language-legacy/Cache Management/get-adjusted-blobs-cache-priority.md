@@ -1,4 +1,4 @@
----
+﻿---
 id: get-adjusted-blobs-cache-priority
 title: Get adjusted blobs cache priority
 slug: /commands/get-adjusted-blobs-cache-priority
@@ -34,9 +34,9 @@ displayed_sidebar: docs
 
 ## See also 
 
-[ADJUST BLOBS CACHE PRIORITY](adjust-blobs-cache-priority.md)  
+[ADJUST BLOBS CACHE PRIORITY](../commands/adjust-blobs-cache-priority)  
 *Managing priorities in database cache*  
-[SET BLOBS CACHE PRIORITY](set-blobs-cache-priority.md)  
+[SET BLOBS CACHE PRIORITY](../commands/set-blobs-cache-priority)  
 
 ## Properties
 

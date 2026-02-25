@@ -1,4 +1,4 @@
----
+﻿---
 id: pop-record
 title: POP RECORD
 slug: /commands/pop-record
@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.POP RECORD.Summary-->**POP RECORD** charge le premier enregistrement de la pile d'enregistrements de *laTable*, et en fait l'enregistrement courant.<!-- END REF-->
 
-Si vous empilez un enregistrement puis créez une nouvelle sélection courante ne contenant plus l'enregistrement empilé, et enfin dépilez l'enregistrement, vous obtenez la situation dans laquelle l'enregistrement courant ne se trouve pas dans la sélection courante. Si vous souhaitez faire de l'enregistrement empilé la sélection courante, utilisez la commande [ONE RECORD SELECT](one-record-select.md).   
+Si vous empilez un enregistrement puis créez une nouvelle sélection courante ne contenant plus l'enregistrement empilé, et enfin dépilez l'enregistrement, vous obtenez la situation dans laquelle l'enregistrement courant ne se trouve pas dans la sélection courante. Si vous souhaitez faire de l'enregistrement empilé la sélection courante, utilisez la commande [ONE RECORD SELECT](../commands/one-record-select).   
 Si vous utilisez une routine qui déplace le pointeur d'enregistrement courant avant de sauvegarder l'enregistrement, vous perdrez la copie empilée en mémoire.
 
 ## Exemple 
@@ -32,7 +32,7 @@ L'exemple suivant récupère l'enregistrement d'un client dans la pile :
 
 ## Voir aussi 
 
-[PUSH RECORD](push-record.md)  
+[PUSH RECORD](../commands/push-record)  
 *Utiliser la pile d'enregistrements*  
 
 ## Propriétés

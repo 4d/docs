@@ -1,4 +1,4 @@
----
+﻿---
 id: resolve-pointer
 title: RESOLVE POINTER
 slug: /commands/resolve-pointer
@@ -116,11 +116,11 @@ Here is an example of a 2D array pointer:
 
 ## See also 
 
-[Field](field.md)  
-[Get pointer](get-pointer.md)  
-[Is a variable](is-a-variable.md)  
-[Is nil pointer](is-nil-pointer.md)  
-[Table](table.md)  
+[Field](../commands/field)  
+[Get pointer](../commands/get-pointer)  
+[Is a variable](../commands/is-a-variable)  
+[Is nil pointer](../commands/is-nil-pointer)  
+[Table](../commands/table)  
 
 ## Properties
 

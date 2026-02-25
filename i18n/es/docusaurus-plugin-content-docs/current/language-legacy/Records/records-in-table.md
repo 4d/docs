@@ -1,4 +1,4 @@
----
+﻿---
 id: records-in-table
 title: Records in table
 slug: /commands/records-in-table
@@ -30,7 +30,7 @@ El siguiente ejemplo muestra una alerta que indica el número de registros en la
 
 ## Ver también 
 
-[Records in selection](records-in-selection.md)  
+[Records in selection](../commands/records-in-selection)  
 
 ## Propiedades
 

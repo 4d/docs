@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-is-defined
 title: OB Is defined
 slug: /commands/ob-is-defined
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 Par défaut, si vous omettez le paramètre *propriété*, la commande vérifie que *objet* est défini. Un objet est défini si son contenu a été initialisé. 
 
-**Note :** Un objet peut être défini mais vide. Pour savoir si un objet est indéfini ou vide, utilisez la commande [OB Is empty](ob-is-empty.md). 
+**Note :** Un objet peut être défini mais vide. Pour savoir si un objet est indéfini ou vide, utilisez la commande [OB Is empty](../commands/ob-is-empty). 
 
 Si vous passez le paramètre *propriété*, la commande vérifie si cette propriété existe dans *objet*. Attention, le paramètre *propriété* tient compte des majuscules/minuscules. 
 
@@ -72,7 +72,7 @@ Ce test équivaut à :
 
 ## Voir aussi 
 
-[OB Is empty](ob-is-empty.md)  
+[OB Is empty](../commands/ob-is-empty)  
 
 ## Propriétés
 

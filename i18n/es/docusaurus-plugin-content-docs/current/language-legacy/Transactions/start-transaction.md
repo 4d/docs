@@ -1,4 +1,4 @@
----
+﻿---
 id: start-transaction
 title: START TRANSACTION
 slug: /commands/start-transaction
@@ -33,11 +33,11 @@ A partir de la versión 11 de 4D, puede anidar varias transacciones (subtransacc
 
 ## Ver también 
 
-[CANCEL TRANSACTION](cancel-transaction.md)  
-[In transaction](in-transaction.md)  
-[Transaction level](transaction-level.md)  
+[CANCEL TRANSACTION](../commands/cancel-transaction)  
+[In transaction](../commands/in-transaction)  
+[Transaction level](../commands/transaction-level)  
 *Utilización de transacciones*  
-[VALIDATE TRANSACTION](validate-transaction.md)  
+[VALIDATE TRANSACTION](../commands/validate-transaction)  
 
 ## Propiedades
 

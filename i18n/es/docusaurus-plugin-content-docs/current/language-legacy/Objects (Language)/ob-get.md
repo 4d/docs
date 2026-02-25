@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-get
 title: OB Get
 slug: /commands/ob-get
@@ -58,14 +58,14 @@ Por defecto, 4D devuelve el valor de la propiedad en su tipo original. Puede "fo
 
 El comando devuelve el valor de la *propiedad*. Varios tipos de datos están soportados. Tenga en cuenta que:
 
-* un puntero se devuelve tal cual, puede ser evaluado utilizando el comando [JSON Stringify](json-stringify.md),
+* un puntero se devuelve tal cual, puede ser evaluado utilizando el comando [JSON Stringify](../commands/json-stringify),
 * dependiendo de la configuración de la fecha de la base, las fechas en los atributos objeto se almacenan con el tipo de fecha o el tipo de texto (a partir de 4D v16 R6). Para más información, consulte la opción "Utilizar tipo de fecha en lugar del formato de fecha ISO en objetos" en *Página Compatibilidad*. Para que **OB Get** interprete correctamente una fecha almacenada como un texto, debe usar la constante Is date (ver ejemplo 5).
 * en valores reales, el separador decimal es siempre un punto "."
-* las horas se devuelven como un número. Las horas se almacenan en segundos por defecto en los objetos (ver nota de compatibilidad abajo). Note que [OB SET](ob-set.md) almacena las horas en forma de milisegundos, conforme al estándar JavaScript, mientras 4D espera un número de segundos. Para una interpretación correcta por **OB Get** de una hora almacenada, utilice la constante Is null.
+* las horas se devuelven como un número. Las horas se almacenan en segundos por defecto en los objetos (ver nota de compatibilidad abajo). Note que [OB SET](../commands/ob-set) almacena las horas en forma de milisegundos, conforme al estándar JavaScript, mientras 4D espera un número de segundos. Para una interpretación correcta por **OB Get** de una hora almacenada, utilice la constante Is null.
 
 **Notas de compatibilidad:**
 
-* (4D Write Pro) En versiones anteriores a la v17, las horas eran almacenadas en milisegundos en los objetos. Por razones de compatibilidad, este comportamiento anterior puede restablecerse con ayuda del selector Times inside objects del comando [SET DATABASE PARAMETER](set-database-parameter.md). Cualquiera que sea el parámetro, el resultado será correcto cuando se utilice la constante Is time.
+* (4D Write Pro) En versiones anteriores a la v17, las horas eran almacenadas en milisegundos en los objetos. Por razones de compatibilidad, este comportamiento anterior puede restablecerse con ayuda del selector Times inside objects del comando [SET DATABASE PARAMETER](../commands/set-database-parameter). Cualquiera que sea el parámetro, el resultado será correcto cuando se utilice la constante Is time.
 * (*4D Write Pro*) En versiones anteriores a v16 R6, cuando *propiedad* definía un atributo de imagen 4D Write Pro (como wk image), siempre se devolvía un valor de texto que contenía un URI de datos. A partir de 4D v16 R6, los atributos imagen 4D Write Pro siempre se devuelven como valores imagen. Debe usar una *propiedad* específica como wk image url ara obtener un URI de datos.
 * En versiones anteriores a v16 R4, cuando *propiedad* contiene un valor nulo y si no se utiliza el parámetro *tipo*, 4D devuelve una cadena vacía. En 4D v16 R4 y superiores, la constante Is null se devuelve en este caso. Para conservar la compatibilidad, este cambio solo surte efecto si la opción "Utilizar la notación objetos para acceder a las propiedades de objetos (se requiere Unicode) " está habilitada en la base (ver el párrafo *Página Compatibilidad*).
 
@@ -233,8 +233,8 @@ Desea conocer el tamaño de una imagen almacenada en un atributo objeto:
 
 ## Ver también 
 
-[OB Copy](ob-copy.md)  
-[OB SET](ob-set.md)  
+[OB Copy](../commands/ob-copy)  
+[OB SET](../commands/ob-set)  
 *Tipos de campos y variables*  
 
 ## Propiedades

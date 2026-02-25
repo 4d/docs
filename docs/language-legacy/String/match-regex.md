@@ -1,4 +1,4 @@
----
+﻿---
 id: match-regex
 title: Match regex
 slug: /commands/match-regex
@@ -112,7 +112,7 @@ Add a star to the end of one of the two previous syntaxes.
 
 ## Error management 
 
-In the event of an error, the command generates an error that you can intercept via a method installed by the [ON ERR CALL](on-err-call.md) command.
+In the event of an error, the command generates an error that you can intercept via a method installed by the [ON ERR CALL](../commands/on-err-call) command.
 
 
 ## Properties

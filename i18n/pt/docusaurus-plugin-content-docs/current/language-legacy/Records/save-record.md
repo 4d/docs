@@ -1,4 +1,4 @@
----
+﻿---
 id: save-record
 title: SAVE RECORD
 slug: /commands/save-record
@@ -23,8 +23,8 @@ Pode utilizar SAVE RECORD para guardar um registro criado ou modificado por prog
 
 Estes são alguns casos onde é necessário SAVE RECORD:
 
-Para guardar um novo registro criado com [CREATE RECORD](create-record.md) ou [DUPLICATE RECORD](duplicate-record.md)
-* Para guardar dados desde [RECEIVE RECORD](receive-record.md)
+Para guardar um novo registro criado com [CREATE RECORD](../commands/create-record) ou [DUPLICATE RECORD](../commands/duplicate-record)
+* Para guardar dados desde [RECEIVE RECORD](../commands/receive-record)
 * Para guardar um registro modificado por um método
 * Para guardar um registro que contenha um subregistro criado ou modificado por um desses comandos *\_o\_ADD SUBRECORD*, *\_o\_CREATE SUBRECORD*, ou *\_o\_MODIFY SUBRECORD*
 * Durante a entrada de dados, para guardar o registro mostrado antes de chamar um comando que muda o registro atual
@@ -47,8 +47,8 @@ O exemplo a seguir é parte de um método que lê registros de um documento. Nes
 
 ## Ver também 
 
-[CREATE RECORD](create-record.md)  
-[Locked](locked.md)  
+[CREATE RECORD](../commands/create-record)  
+[Locked](../commands/locked)  
 *Triggers*  
 
 ## Propriedades

@@ -1,4 +1,4 @@
----
+﻿---
 id: convert-picture
 title: CONVERT PICTURE
 slug: /commands/convert-picture
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CONVERT PICTURE.Summary-->El comando CONVERT PICTURE convierte *imagen* en un nuevo tipo.<!-- END REF--> 
 
 El parámetro *codec* indica el tipo de imagen a generar. Un codec puede ser una extensión (por ejemplo, “.gif”) o un tipo Mime (por ejemplo, “image/jpg”).  
- Puede obtener una lista de codecs disponibles utilizando el comando [PICTURE CODEC LIST](picture-codec-list.md).
+ Puede obtener una lista de codecs disponibles utilizando el comando [PICTURE CODEC LIST](../commands/picture-codec-list).
 
 Si el campo o variable *imagen* es de tipo compuesto (si por ejemplo es el resultado de la acción copiar -pegar), sólo la información correspondiente al tipo codec se conserva en la imagen resultante.
 
@@ -62,7 +62,7 @@ Conversión de una imagen con calidad del 60%:
 
 ## Ver también 
 
-[PICTURE CODEC LIST](picture-codec-list.md)  
+[PICTURE CODEC LIST](../commands/picture-codec-list)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-three-states-checkbox
 title: OBJECT SET THREE STATES CHECKBOX
 slug: /commands/object-set-three-states-checkbox
@@ -41,7 +41,7 @@ Passez **Vrai** dans le paramètre *troisEtat* pour activer le mode "trois état
 
 ## Voir aussi 
 
-[OBJECT Get three states checkbox](object-get-three-states-checkbox.md)  
+[OBJECT Get three states checkbox](../commands/object-get-three-states-checkbox)  
 
 ## Propriétés
 

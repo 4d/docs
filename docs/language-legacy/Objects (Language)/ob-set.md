@@ -1,4 +1,4 @@
----
+﻿---
 id: ob-set
 title: OB SET
 slug: /commands/ob-set
@@ -41,7 +41,7 @@ Note that the *property* parameter is case sensitive.
 
 In the *value* parameter, pass the value you want to set for the property. Several data types are supported. Note that:
 
-* if you pass a pointer, it is kept as is; it is evaluated using the [JSON Stringify](json-stringify.md) command.
+* if you pass a pointer, it is kept as is; it is evaluated using the [JSON Stringify](../commands/json-stringify) command.
 * if you pass a date, it will be stored with date type or as text in ISO format depending on your current [database date settings](./set-database-parameter.md#dates-inside-objects-85). 
 * if you pass a time, it is stored as a number of seconds (Real) in *object*.
 * if you pass a language object or a collection, the command uses a reference and not a copy. Any modification applied to the object or collection will be reported to all references.
@@ -153,7 +153,7 @@ If you have defined the \[Rect\]Desc field as an object field, you can write:
 
 ## Example 9 
 
-You want to export data in JSON that contains a 4D date that you want to be converted into a string without time zone information. Note that conversion occurs when the date is saved in the object, so you must call the [SET DATABASE PARAMETER](set-database-parameter.md) command before calling [OB SET](ob-set.md): 
+You want to export data in JSON that contains a 4D date that you want to be converted into a string without time zone information. Note that conversion occurs when the date is saved in the object, so you must call the [SET DATABASE PARAMETER](../commands/set-database-parameter) command before calling [OB SET](../commands/ob-set): 
 
 ```4d
  var $o : Object
@@ -208,10 +208,10 @@ You want to store a picture in an object field. You can write:
 
 ## See also 
 
-[OB Get](ob-get.md)  
-[OB REMOVE](ob-remove.md)  
-[OB SET ARRAY](ob-set-array.md)  
-[OB SET NULL](ob-set-null.md)  
+[OB Get](../commands/ob-get)  
+[OB REMOVE](../commands/ob-remove)  
+[OB SET ARRAY](../commands/ob-set-array)  
+[OB SET NULL](../commands/ob-set-null)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: wa-get-url-history
 title: WA GET URL HISTORY
 slug: /commands/wa-get-url-history
@@ -55,7 +55,7 @@ S’il est passé, le paramètre *tabTitres* contient la liste des noms de fenê
 
 ## Voir aussi 
 
-[WA Create URL history menu](wa-create-url-history-menu.md)  
+[WA Create URL history menu](../commands/wa-create-url-history-menu)  
 
 ## Propriétés
 

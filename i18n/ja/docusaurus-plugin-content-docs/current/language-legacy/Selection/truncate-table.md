@@ -1,4 +1,4 @@
----
+﻿---
 id: truncate-table
 title: TRUNCATE TABLE
 slug: /commands/truncate-table
@@ -50,7 +50,7 @@ TRUNCATE TABLEコマンドは注意して使用しなければなりませんが
 
 ## 参照 
 
-[DELETE SELECTION](delete-selection.md)  
+[DELETE SELECTION](../commands/delete-selection)  
 
 ## プロパティ
 

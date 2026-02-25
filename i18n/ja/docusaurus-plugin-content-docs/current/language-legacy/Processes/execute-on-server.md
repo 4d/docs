@@ -1,4 +1,4 @@
----
+﻿---
 id: execute-on-server
 title: Execute on server
 slug: /commands/execute-on-server
@@ -199,8 +199,8 @@ WriteLog メソッドはサーバー側で実行されます。メソッドの�
 
 ## 参照 
 
-[EXECUTE ON CLIENT](execute-on-client.md)  
-[New process](new-process.md)  
+[EXECUTE ON CLIENT](../commands/execute-on-client)  
+[New process](../commands/new-process)  
 
 ## プロパティ
 

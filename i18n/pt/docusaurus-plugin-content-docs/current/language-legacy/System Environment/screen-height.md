@@ -1,4 +1,4 @@
----
+﻿---
 id: screen-height
 title: Screen height
 slug: /commands/screen-height
@@ -24,8 +24,8 @@ Em Mac OS, Screen height devolve a altura da tela principal, ou seja a tela onde
 
 ## Ver também 
 
-[SCREEN COORDINATES](screen-coordinates.md)  
-[Screen width](screen-width.md)  
+[SCREEN COORDINATES](../commands/screen-coordinates)  
+[Screen width](../commands/screen-width)  
 
 ## Propriedades
 

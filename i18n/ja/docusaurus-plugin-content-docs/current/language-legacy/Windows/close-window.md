@@ -1,4 +1,4 @@
----
+﻿---
 id: close-window
 title: CLOSE WINDOW
 slug: /commands/close-window
@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 ## 例題 
 
-以下の例題はフォームウィンドウを開き、[ADD RECORD](add-record.md) コマンドでレコードを追加します。処理が終了したら**CLOSE WINDOW** でウィンドウを閉じます:
+以下の例題はフォームウィンドウを開き、[ADD RECORD](../commands/add-record) コマンドでレコードを追加します。処理が終了したら**CLOSE WINDOW** でウィンドウを閉じます:
 
 ```4d
  FORM SET INPUT([Employees];"Entry")

@@ -1,4 +1,4 @@
----
+﻿---
 id: application-type
 title: Application type
 slug: /commands/application-type
@@ -53,8 +53,8 @@ En alguna parte de su código, diferente del *Método base On Server Startup*, d
 
 ## Ver también 
 
-[Application version](application-version.md)  
-[Version type](version-type.md)  
+[Application version](../commands/application-version)  
+[Version type](../commands/version-type)  
 
 ## Propiedades
 

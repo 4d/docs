@@ -1,4 +1,4 @@
----
+﻿---
 id: document-to-text
 title: Document to text
 slug: /commands/document-to-text
@@ -36,7 +36,7 @@ displayed_sidebar: docs
 * アプリケーションのストラクチャファイルからの相対パス。例えばWindowsでは "\\\\docs\\\\myFile.txt" またはmacOS では ":docs:myFile.txt"
 * 絶対パス。例えばWindowsでは "c:\\\\app\\\\docs\\\\myFile.txt" またはmacOS では "MacHD:docs:myFile.txt"
 
-*charSet* 引数には、ファイルの中身を読みだす際の文字コードを渡します。標準の文字コード名(例えば“ISO-8859-1” や “UTF-8”)を渡す事もできますし、文字コードの MIBEnum ID (倍長整数)を渡す事もできます。4Dによってサポートされている文字コードの一覧の詳細な情報に関しては、[CONVERT FROM TEXT](convert-from-text.md) コマンドの詳細を参照して下さい。
+*charSet* 引数には、ファイルの中身を読みだす際の文字コードを渡します。標準の文字コード名(例えば“ISO-8859-1” や “UTF-8”)を渡す事もできますし、文字コードの MIBEnum ID (倍長整数)を渡す事もできます。4Dによってサポートされている文字コードの一覧の詳細な情報に関しては、[CONVERT FROM TEXT](../commands/convert-from-text) コマンドの詳細を参照して下さい。
 
 ドキュメントがバイトオーダーマーク(BOM)を含んでいる場合、4Dは*charSet* 引数で指定された文字コードのかわりにバイトオーダーマークが指定した文字コードを使用します(つまり、この引数は無視されます)。
 
@@ -59,7 +59,7 @@ displayed_sidebar: docs
 
 **互換性に関する注意**: EOL とBOM 管理に関する互換性オプションが利用可能です。*互換性ページ* を参照して下さい。
 
-**注:** このコマンドはOK変数を変更しません。失敗した場合には [ON ERR CALL](on-err-call.md) コマンドによって実装されたメソッドを使用することによって割り込み可能なエラーが生成されます。
+**注:** このコマンドはOK変数を変更しません。失敗した場合には [ON ERR CALL](../commands/on-err-call) コマンドによって実装されたメソッドを使用することによって割り込み可能なエラーが生成されます。
 
 ## 例題 
 
@@ -86,7 +86,7 @@ id    name    price    vat3    4D Tags    99    19.6
 ## 参照 
 
 *System Documents*  
-[TEXT TO DOCUMENT](text-to-document.md)  
+[TEXT TO DOCUMENT](../commands/text-to-document)  
 
 ## プロパティ
 

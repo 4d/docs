@@ -1,4 +1,4 @@
----
+﻿---
 id: one-record-select
 title: ONE RECORD SELECT
 slug: /commands/one-record-select
@@ -21,16 +21,16 @@ displayed_sidebar: docs
 
 ## Nota 
 
-Este comando fue útil para “reponer” un registro que había sido apilado y desapilado de la pila de registro mientras la selección de la tabla era modificada. [SET QUERY DESTINATION](set-query-destination.md) permite efectuar una búsqueda sin tener que cambiar la selección ni el registro actual de una tabla; por lo tanto, no necesita más apilar y desapilar un registro actual para efectuar una búsqueda en su tabla. Por consiguiente, **ONE RECORD SELECT** es menos útil, a menos que quiera expresamente reducir la selección de una tabla al registro actual.
+Este comando fue útil para “reponer” un registro que había sido apilado y desapilado de la pila de registro mientras la selección de la tabla era modificada. [SET QUERY DESTINATION](../commands/set-query-destination) permite efectuar una búsqueda sin tener que cambiar la selección ni el registro actual de una tabla; por lo tanto, no necesita más apilar y desapilar un registro actual para efectuar una búsqueda en su tabla. Por consiguiente, **ONE RECORD SELECT** es menos útil, a menos que quiera expresamente reducir la selección de una tabla al registro actual.
 
 **Atención:** tenga en cuenta que un número de registro puede reutilizarse si se elimina el registro y se crea otro (ver *Acerca de números de registros*).
 
 ## Ver también 
 
-[CREATE SELECTION FROM ARRAY](create-selection-from-array.md)  
+[CREATE SELECTION FROM ARRAY](../commands/create-selection-from-array)  
 *Selecciones temporales*  
-[SELECTION RANGE TO ARRAY](selection-range-to-array.md)  
-[SELECTION TO ARRAY](selection-to-array.md)  
+[SELECTION RANGE TO ARRAY](../commands/selection-range-to-array)  
+[SELECTION TO ARRAY](../commands/selection-to-array)  
 
 ## Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: open-font-picker
 title: OPEN FONT PICKER
 slug: /commands/open-font-picker
@@ -53,7 +53,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[OPEN COLOR PICKER](open-color-picker.md)  
+[OPEN COLOR PICKER](../commands/open-color-picker)  
 
 ## プロパティ
 

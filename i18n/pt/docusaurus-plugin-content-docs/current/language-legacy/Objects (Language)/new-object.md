@@ -1,4 +1,4 @@
----
+﻿---
 id: new-object
 title: New object
 slug: /commands/new-object
@@ -53,9 +53,9 @@ Opcionalmente, pode prefixar o novo objeto passando um ou vários pares *proprie
 
 Note que:
 
-Se passar um ponteiro, é mantido como tal e avaliado quando usar comandos como [JSON Stringify](json-stringify.md),
+Se passar um ponteiro, é mantido como tal e avaliado quando usar comandos como [JSON Stringify](../commands/json-stringify),
 
-datas são armazenadas como "yyyy-mm-dd" ou strings com o formato "YYYY-MM-DDTHH:mm:ss.SSSZ", de acordo com as configurações de banco de dados "dates inside objects" (veja *Página Compatibilidade*). Quando converter datas em texto antes do armazenamento no objeto, por padrão o programa usa a hora local. Pode modificar esse comportamento usando o seletor Dates inside objects ou o comando [SET DATABASE PARAMETER](set-database-parameter.md).
+datas são armazenadas como "yyyy-mm-dd" ou strings com o formato "YYYY-MM-DDTHH:mm:ss.SSSZ", de acordo com as configurações de banco de dados "dates inside objects" (veja *Página Compatibilidade*). Quando converter datas em texto antes do armazenamento no objeto, por padrão o programa usa a hora local. Pode modificar esse comportamento usando o seletor Dates inside objects ou o comando [SET DATABASE PARAMETER](../commands/set-database-parameter).
 
 Se passar uma hora, é armazenada como o número de milissegundos (Real).
 
@@ -119,7 +119,7 @@ Com este comando, pode fácilmente manejar objetos em loops:
 ## Ver também 
 
   
-[New shared object](new-shared-object.md)  
+[New shared object](../commands/new-shared-object)  
 
 ## Propriedades
 

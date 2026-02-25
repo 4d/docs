@@ -1,4 +1,4 @@
----
+﻿---
 id: date
 title: Date
 slug: /commands/date
@@ -46,13 +46,13 @@ Si expression ne correspond pas au format ISO, les paramètres régionaux défin
 * si la valeur saisie est supérieure ou égale à 30, 4D considère que la date appartient au XXe siècle et ajoute 19 devant la valeur.
 * si la valeur saisie est inférieure à 30, 4D considère que la date appartient au XXIe siècle et ajoute 20 devant la valeur.
 
-Ce mécanisme peut être modifié à l'aide de la commande [SET DEFAULT CENTURY](set-default-century.md).  
+Ce mécanisme peut être modifié à l'aide de la commande [SET DEFAULT CENTURY](../commands/set-default-century).  
 Les caractères de séparation de date autorisés sont les suivants : barre oblique (/), espace, point (.), virgule (,) et tiret (-).
 
 * Si une date invalide (telle que "13/35/94" ou "aa/12/94") est passée dans expression, **Date** retourne une date vide (00/00/00). Il est de votre ressort de tester la validité de expression.
 * Si l'évaluation de l'expression expression donne une valeur indéfinie, **Date** retourne une date vide (00/00/00). Ce principe est utile lorsque le code attend toujours une date et que l'évaluation de expression peut parfois aboutir au type **indéfini** (par exemple dans le cas des attributs d'objets).
 
-**Note :** A compter de 4D v16 R6, les dates peuvent être stockées dans les attributs d'objets en tant que valeurs de type date. Dans les versions précédentes, elles pouvaient uniquement être stockées sous forme de textes (pour plus d'informations sur cette option, reportez-vous à la section *Page Compatibilité*, "Utiliser le type date au lieu du format date ISO dans les objets"). Pour savoir si un attribut contient une date stockée sous forme de date ou de texte, vous devez utiliser la commande [Value type](value-type.md) (voir dernier exemple).
+**Note :** A compter de 4D v16 R6, les dates peuvent être stockées dans les attributs d'objets en tant que valeurs de type date. Dans les versions précédentes, elles pouvaient uniquement être stockées sous forme de textes (pour plus d'informations sur cette option, reportez-vous à la section *Page Compatibilité*, "Utiliser le type date au lieu du format date ISO dans les objets"). Pour savoir si un attribut contient une date stockée sous forme de date ou de texte, vous devez utiliser la commande [Value type](../commands/value-type) (voir dernier exemple).
 
 **Expression de type date** 
 Si expression est de type date, **Date** retourne la date passée dans le paramètre, telle quelle. Ce principe est utile en programmation générique, lors de l'utilisation de pointeurs ou d'attributs d'objets.

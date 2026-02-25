@@ -1,4 +1,4 @@
----
+﻿---
 id: hide-window
 title: HIDE WINDOW
 slug: /commands/hide-window
@@ -33,10 +33,10 @@ The window disappears from the screen but remains open. You can still apply any 
 
 To display a window that was previously hidden by the **HIDE WINDOW** command:
 
-* Use the [SHOW WINDOW](show-window.md) command and pass the window reference ID.
+* Use the [SHOW WINDOW](../commands/show-window) command and pass the window reference ID.
 * Use the **Process** page of the Runtime Explorer. Select the process in which the window is handled, then click on the **Show** button.
 
-To hide all the windows of a process, use the [HIDE PROCESS](hide-process.md) command.
+To hide all the windows of a process, use the [HIDE PROCESS](../commands/hide-process) command.
 
 ## Example 
 
@@ -56,7 +56,7 @@ This example corresponds to a method of a button located in an input form. This 
 
 ## See also 
 
-[SHOW WINDOW](show-window.md)  
+[SHOW WINDOW](../commands/show-window)  
 
 ## Properties
 

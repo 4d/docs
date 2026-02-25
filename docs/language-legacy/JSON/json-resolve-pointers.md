@@ -1,4 +1,4 @@
----
+﻿---
 id: json-resolve-pointers
 title: JSON Resolve pointers
 slug: /commands/json-resolve-pointers
@@ -39,7 +39,7 @@ JSON pointers are particularily useful to:
 
 Pass in the *object* parameter an object containing JSON pointers to be resolved (for information on JSON pointer syntax, please refer to the *Defining JSON Pointers* paragraph below). 
 
-**Note:** The source *object* will be updated with the result of pointer resolution after the command is executed (except if the result is not an object, see below). If you want to keep an original version of *object*, you may consider using the [OB Copy](ob-copy.md) beforehand. 
+**Note:** The source *object* will be updated with the result of pointer resolution after the command is executed (except if the result is not an object, see below). If you want to keep an original version of *object*, you may consider using the [OB Copy](../commands/ob-copy) beforehand. 
 
 Optionally, you can pass in *options* an object containing specific properties to be used when resolving pointers. The following properties are supported:
 

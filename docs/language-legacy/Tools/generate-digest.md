@@ -1,4 +1,4 @@
----
+﻿---
 id: generate-digest
 title: Generate digest
 slug: /commands/generate-digest
@@ -47,7 +47,7 @@ In the *algorithm* parameter, pass a value designating which hash function to us
 | SHA256 digest       | 3     | (SHA-2 family) SHA-256 is a series of 256 bits returned as a string of 64 hexadecimal characters.     |
 | SHA512 digest       | 4     | (SHA-2 family) SHA-512 is a series of 512 bits returned as a string of 128 hexadecimal characters.    |
 
-**Note:** It is not recommended to use MD5 and SHA algorithms to handle passwords; if you need to check passwords, you are advised to use [Generate password hash](generate-password-hash.md) and [Verify password hash](verify-password-hash.md) commands.
+**Note:** It is not recommended to use MD5 and SHA algorithms to handle passwords; if you need to check passwords, you are advised to use [Generate password hash](../commands/generate-password-hash) and [Verify password hash](../commands/verify-password-hash) commands.
 
 By default if the *\** parameter is omitted, the returned digest is encoded in hexadecimal. Pass the *\** parameter if you want it to be encoded in Base64URL. 
 
@@ -94,11 +94,11 @@ These examples illustrate how to retrieve the digest key of a text:
 
 ## See also 
 
-[BASE64 DECODE](base64-decode.md)  
-[BASE64 ENCODE](base64-encode.md)  
-[Generate password hash](generate-password-hash.md)  
+[BASE64 DECODE](../commands/base64-decode)  
+[BASE64 ENCODE](../commands/base64-encode)  
+[Generate password hash](../commands/generate-password-hash)  
 *Secured Protocol*  
-[WEB Validate digest](web-validate-digest.md)  
+[WEB Validate digest](../commands/web-validate-digest)  
 
 ## Properties
 

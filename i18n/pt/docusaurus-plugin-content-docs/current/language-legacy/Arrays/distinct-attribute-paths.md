@@ -1,4 +1,4 @@
----
+﻿---
 id: distinct-attribute-paths
 title: DISTINCT ATTRIBUTE PATHS
 slug: /commands/distinct-attribute-paths
@@ -78,7 +78,7 @@ O array *aTPaths* obtém os elementos abaixo:
 ## Ver também 
 
   
-[DISTINCT ATTRIBUTE VALUES](distinct-attribute-values.md)  
+[DISTINCT ATTRIBUTE VALUES](../commands/distinct-attribute-values)  
 
 ## Propriedades
 

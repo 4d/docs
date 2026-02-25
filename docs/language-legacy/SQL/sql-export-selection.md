@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-export-selection
 title: SQL EXPORT SELECTION
 slug: /commands/sql-export-selection
@@ -34,9 +34,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL EXPORT SELECTION.Summary-->The **SQL EXPORT SELECTION** command exports in SQL format the records of the current selection of the 4D table designated by the *aTable* parameter.<!-- END REF--> 
 
-This command is nearly identical to the [SQL EXPORT DATABASE](sql-export-database.md) command. The file generated can be used directly by the [SQL EXECUTE SCRIPT](sql-execute-script.md) command in order to import data into another 4D database. The main difference between these two commands is that **SQL EXPORT SELECTION** only exports the current selection of *aTable* whereas [SQL EXPORT DATABASE](sql-export-database.md) exports the entire database. Also, unlike the [SQL EXPORT DATABASE](sql-export-database.md) command, this command does not work with external SQL databases. It can only be used with the main database.
+This command is nearly identical to the [SQL EXPORT DATABASE](../commands/sql-export-database) command. The file generated can be used directly by the [SQL EXECUTE SCRIPT](../commands/sql-execute-script) command in order to import data into another 4D database. The main difference between these two commands is that **SQL EXPORT SELECTION** only exports the current selection of *aTable* whereas [SQL EXPORT DATABASE](../commands/sql-export-database) exports the entire database. Also, unlike the [SQL EXPORT DATABASE](../commands/sql-export-database) command, this command does not work with external SQL databases. It can only be used with the main database.
 
-Refer to the description of the [SQL EXPORT DATABASE](sql-export-database.md) command for a detailed description of the functioning and parameters of these commands.
+Refer to the description of the [SQL EXPORT DATABASE](../commands/sql-export-database) command for a detailed description of the functioning and parameters of these commands.
 
 If the current selection is empty, the command does nothing. Note that in this case, the destination folder is not emptied. 
 
@@ -48,7 +48,7 @@ If the export is carried out correctly, the *OK* variable is set to 1\. Otherwis
 
 ## See also 
 
-[SQL EXPORT DATABASE](sql-export-database.md)  
+[SQL EXPORT DATABASE](../commands/sql-export-database)  
 
 ## Properties
 

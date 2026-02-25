@@ -1,4 +1,4 @@
----
+﻿---
 id: on-err-call
 title: ON ERR CALL
 slug: /commands/on-err-call
@@ -64,7 +64,7 @@ La méthode de gestion des erreurs doit généralement traiter les erreurs de ma
 * L'environnement de 4D ; par exemple, lorsque vous n'avez pas assez de mémoire pour remplir un tableau.
 * Le système d'exploitation sur lequel la base est lancée ; par exemple, disque plein ou erreurs d'entrée/sortie.
 
-La commande [ABORT](abort.md) peut être utilisée pour stopper le traitement. Si vous n'appelez pas [ABORT](abort.md) dans la méthode installée, 4D retourne à la méthode interrompue et reprend son exécution. Utilisez la commande [ABORT](abort.md) lorsque l'exécution ne peut se poursuivre.
+La commande [ABORT](../commands/abort) peut être utilisée pour stopper le traitement. Si vous n'appelez pas [ABORT](../commands/abort) dans la méthode installée, 4D retourne à la méthode interrompue et reprend son exécution. Utilisez la commande [ABORT](../commands/abort) lorsque l'exécution ne peut se poursuivre.
 
 Si une erreur se produit dans la méthode de gestion d'erreurs elle-même, 4D reprend le contrôle de la gestion des erreurs. En conséquence, assurez-vous que la méthode de gestion des erreurs installée ne puisse pas elle-même générer d'erreur. Aussi, vous ne pouvez pas utiliser la commande **ON ERR CALL** dans une méthode de gestion des erreurs.
 
@@ -188,11 +188,11 @@ La méthode de gestion d'erreurs suivante ignore les interruptions de l'utilisat
 
 ## Voir aussi 
 
-[ABORT](abort.md)  
+[ABORT](../commands/abort)  
 *Gestionnaire d'erreur*  
 [Last errors](../commands/last-errors)   
 [Last errors](../commands/last-errors)  
-[Method called on error](method-called-on-error.md)  
+[Method called on error](../commands/method-called-on-error)  
 *Variables système*  
 
 ## Propriétés

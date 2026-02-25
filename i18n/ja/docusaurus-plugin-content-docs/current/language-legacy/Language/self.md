@@ -1,4 +1,4 @@
----
+﻿---
 id: self
 title: Self
 slug: /commands/self
@@ -48,8 +48,8 @@ Self が上記のコンテキスト以外で呼ばれた場合、Nilポインタ
 
 ## 参照 
 
-[OBJECT Get pointer](object-get-pointer.md)  
-[RESOLVE POINTER](resolve-pointer.md)  
+[OBJECT Get pointer](../commands/object-get-pointer)  
+[RESOLVE POINTER](../commands/resolve-pointer)  
 [This](../commands/this)  
 
 ## プロパティ

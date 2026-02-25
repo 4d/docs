@@ -1,4 +1,4 @@
----
+﻿---
 id: reduce-selection
 title: REDUCE SELECTION
 slug: /commands/reduce-selection
@@ -55,9 +55,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[ORDER BY](order-by.md)  
-[QUERY](query.md)  
-[SCAN INDEX](scan-index.md)  
+[ORDER BY](../commands/order-by)  
+[QUERY](../commands/query)  
+[SCAN INDEX](../commands/scan-index)  
 *セット*  
 
 ## プロパティ

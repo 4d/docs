@@ -1,4 +1,4 @@
----
+﻿---
 id: current-process
 title: Current process
 slug: /commands/current-process
@@ -21,13 +21,13 @@ displayed_sidebar: docs
 
 ## Exemples 
 
-Référez-vous aux exemples de [DELAY PROCESS](delay-process.md) et [Process info](../commands/process-info).
+Référez-vous aux exemples de [DELAY PROCESS](../commands/delay-process) et [Process info](../commands/process-info).
 
 ## Voir aussi 
 
 [Process number](../commands/process-number)  
 [Process info](../commands/process-info)  
-[Process state](process-state.md)  
+[Process state](../commands/process-state)  
 
 ## Propriétés
 

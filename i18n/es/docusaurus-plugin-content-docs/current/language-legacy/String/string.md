@@ -1,4 +1,4 @@
----
+﻿---
 id: string
 title: String
 slug: /commands/string
@@ -257,7 +257,7 @@ Si *expression* se evalúa como Null, el comando devuelve la cadena "null". Esto
 
 [Bool](../commands/bool)  
 [Date](../commands/date)  
-[Num](num.md)  
+[Num](../commands/num)  
 [Time string](../commands/time-string)  
 [Timestamp](../commands/timestamp)
 

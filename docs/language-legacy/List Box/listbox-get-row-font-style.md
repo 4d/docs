@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-get-row-font-style
 title: LISTBOX Get row font style
 slug: /commands/listbox-get-row-font-style
@@ -61,7 +61,7 @@ Given the following list box:
 
 ## See also 
 
-[LISTBOX SET ROW FONT STYLE](listbox-set-row-font-style.md)  
+[LISTBOX SET ROW FONT STYLE](../commands/listbox-set-row-font-style)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: max
 title: Max
 slug: /commands/max
@@ -64,7 +64,7 @@ El siguiente método se llama para imprimir los registros de la selección y act
  PRINT SELECTION([Employees])
 ```
 
-**Nota:** el parámetro del comando [BREAK LEVEL](break-level.md) debe ser igual al número de rupturas en su informe. Para mayor información sobre rupturas, consulte el capítulo *Impresión*.
+**Nota:** el parámetro del comando [BREAK LEVEL](../commands/break-level) debe ser igual al número de rupturas en su informe. Para mayor información sobre rupturas, consulte el capítulo *Impresión*.
 
 ## Ejemplo 2 
 
@@ -79,11 +79,11 @@ Este ejemplo permite obtener el valor más elevado de un array:
 
 ## Ejemplo 3 
 
-Para un ejemplo de cálculo de un atributo campo de objeto, consulte el ejemplo 3 del comando [Average](average.md).
+Para un ejemplo de cálculo de un atributo campo de objeto, consulte el ejemplo 3 del comando [Average](../commands/average).
 
 ## Ver también 
 
-[Min](min.md)  
+[Min](../commands/min)  
 
 ## Propiedades
 

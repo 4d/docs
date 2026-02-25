@@ -1,4 +1,4 @@
----
+﻿---
 id: spell-add-to-user-dictionary
 title: SPELL ADD TO USER DICTIONARY
 slug: /commands/spell-add-to-user-dictionary
@@ -47,7 +47,7 @@ Adición de nombres propios al diccionario de usuario:
 
 #### Ver también 
 
-[SPELL CHECK TEXT](spell-check-text.md)  
+[SPELL CHECK TEXT](../commands/spell-check-text)  
 
 #### Propiedades
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: convert-coordinates
 title: CONVERT COORDINATES
 slug: /commands/convert-coordinates
@@ -41,11 +41,11 @@ displayed_sidebar: docs
 | XY Current form   | 倍長整数 | 1 | 原点はカレントフォームの左上端                                                     |
 | XY Current window | 倍長整数 | 2 | 原点はカレントウィンドウの左上端                                                    |
 | XY Main window    | 倍長整数 | 4 | Windows:原点はメインウィンドウの左上端 macOS:XY Screenと同じ                           |
-| XY Screen         | 倍長整数 | 3 | 原点はメインスクリーンの左上端([SCREEN COORDINATES](screen-coordinates.md)コマンドと同じ) |
+| XY Screen         | 倍長整数 | 3 | 原点はメインスクリーンの左上端([SCREEN COORDINATES](../commands/screen-coordinates)コマンドと同じ) |
 
 このコマンドがサブフォームまたはサブフォームのオブジェクトから呼び出され、セレクターのどれか一つがXY Current formであった場合、座標系はサブフォーム自身に対して相対的であり、親フォームに対して相対的ではありません。
 
-フォームウィンドウの位置を変換、または位置へ変換する場合(例えば[GET WINDOW RECT](get-window-rect.md)の結果を変換する場合、または[Open form window](../commands/open-form-window)に渡された値へ変換する場合)、この座標系はWindowsマシンのウィンドウコマンドで使用されているものであるため、XY Main windowを使用する必要があります。これはOS Xにおいてもこの目的で使用する事ができ、その場合はXY Screenと同等になります。
+フォームウィンドウの位置を変換、または位置へ変換する場合(例えば[GET WINDOW RECT](../commands/get-window-rect)の結果を変換する場合、または[Open form window](../commands/open-form-window)に渡された値へ変換する場合)、この座標系はWindowsマシンのウィンドウコマンドで使用されているものであるため、XY Main windowを使用する必要があります。これはOS Xにおいてもこの目的で使用する事ができ、その場合はXY Screenと同等になります。
 
 *from* 引数がXY Current formであり、点がリストフォームのボディセクション内にある場合、コマンドの実行コンテキストによって結果が変化します:
 
@@ -76,7 +76,7 @@ displayed_sidebar: docs
 
 ## 例題 2 
 
-マウスカーソルの位置にポップアップウィンドウを開きたい場合を考えます。Windowsにおいては、[MOUSE POSITION](mouse-position.md)コマンド(\* 引数を使用)はMDIウィンドウの位置に基づいた値を返すため、座標系を変換する必要があります:
+マウスカーソルの位置にポップアップウィンドウを開きたい場合を考えます。Windowsにおいては、[MOUSE POSITION](../commands/mouse-position)コマンド(\* 引数を使用)はMDIウィンドウの位置に基づいた値を返すため、座標系を変換する必要があります:
 
 ```4d
  var $mouseX;$mouseY;$mouseButtons : Integer
@@ -90,10 +90,10 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[GET WINDOW RECT](get-window-rect.md)  
-[OBJECT GET COORDINATES](object-get-coordinates.md)  
-[OBJECT SET COORDINATES](object-set-coordinates.md)  
-[SET WINDOW RECT](set-window-rect.md)  
+[GET WINDOW RECT](../commands/get-window-rect)  
+[OBJECT GET COORDINATES](../commands/object-get-coordinates)  
+[OBJECT SET COORDINATES](../commands/object-set-coordinates)  
+[SET WINDOW RECT](../commands/set-window-rect)  
 
 ## プロパティ
 

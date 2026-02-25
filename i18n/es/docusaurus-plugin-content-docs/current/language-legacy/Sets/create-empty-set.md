@@ -1,4 +1,4 @@
----
+﻿---
 id: create-empty-set
 title: CREATE EMPTY SET
 slug: /commands/create-empty-set
@@ -28,8 +28,8 @@ Consulte el ejemplo de la sección *Conjuntos*.
 
 ## Ver también 
 
-[CLEAR SET](clear-set.md)  
-[CREATE SET](create-set.md)  
+[CLEAR SET](../commands/clear-set)  
+[CREATE SET](../commands/create-set)  
 
 ## Propiedades
 

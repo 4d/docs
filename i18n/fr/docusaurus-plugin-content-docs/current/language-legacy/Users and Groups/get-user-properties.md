@@ -1,4 +1,4 @@
----
+﻿---
 id: get-user-properties
 title: GET USER PROPERTIES
 slug: /commands/get-user-properties
@@ -35,16 +35,16 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.GET USER PROPERTIES.Summary-->**GET USER PROPERTIES** retourne les informations concernant l'utilisateur dont le numéro de référence est passé dans le paramètre *réfUtilisateur*.<!-- END REF--> Vous devez passer le numéro de référence retourné par la commande [GET USER LIST](get-user-list.md).
+<!--REF #_command_.GET USER PROPERTIES.Summary-->**GET USER PROPERTIES** retourne les informations concernant l'utilisateur dont le numéro de référence est passé dans le paramètre *réfUtilisateur*.<!-- END REF--> Vous devez passer le numéro de référence retourné par la commande [GET USER LIST](../commands/get-user-list).
 
-Si le compte d'utilisateur n'existe pas ou a été supprimé, l'erreur -9979 est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs installée par [ON ERR CALL](on-err-call.md). Sinon, vous pouvez appeler la fonction [Is user deleted](is-user-deleted.md) pour tester le compte de l'utilisateur avant d'appeler **GET USER PROPERTIES**.
+Si le compte d'utilisateur n'existe pas ou a été supprimé, l'erreur -9979 est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs installée par [ON ERR CALL](../commands/on-err-call). Sinon, vous pouvez appeler la fonction [Is user deleted](../commands/is-user-deleted) pour tester le compte de l'utilisateur avant d'appeler **GET USER PROPERTIES**.
 
 Après l'appel, vous récupérez le nom, la méthode de démarrage, le nombre d'utilisations et la date de la dernière utilisation de la base dans les paramètres *nom*, *démarrage*, *nbUtilisation* et *dernièreUtilisation*.
 
 **Notes :** 
 
 * Les paramètres *nbUtilisation* et dernièreUtilisation sont utilisés uniquement dans les bases binaires. Ils retournent toujours, respectivement, 0 et 00/00/00 dans les bases projets.
-* Le paramètre *motDePasse* est obsolète (il retourne toujours une chaîne vide). Si vous souhaitez contrôler le mot de passe d'un utilisateur, utilisez la fonction [Validate password](validate-password.md)
+* Le paramètre *motDePasse* est obsolète (il retourne toujours une chaîne vide). Si vous souhaitez contrôler le mot de passe d'un utilisateur, utilisez la fonction [Validate password](../commands/validate-password)
 
 Si vous passez le paramètre optionnel *adhésion*, vous récupérez le numéro de référence unique du groupe auquel l'utilisateur appartient.
 
@@ -56,15 +56,15 @@ Si vous passez le paramètre optionnel *adhésion*, vous récupérez le numéro 
 
 ## Gestion des erreurs 
 
-Si vous n'avez pas les privilèges d'accès pour appeler la commande **GET USER PROPERTIES** ou si le système de Mots de passe est déjà ouvert par un autre process, une erreur de privilège d'accès est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs installée par [ON ERR CALL](on-err-call.md).
+Si vous n'avez pas les privilèges d'accès pour appeler la commande **GET USER PROPERTIES** ou si le système de Mots de passe est déjà ouvert par un autre process, une erreur de privilège d'accès est générée. Vous pouvez intercepter cette erreur avec une méthode de gestion d'erreurs installée par [ON ERR CALL](../commands/on-err-call).
 
 ## Voir aussi 
 
-[GET GROUP LIST](get-group-list.md)  
-[GET USER LIST](get-user-list.md)  
-[Is user deleted](is-user-deleted.md)  
-[Set user properties](set-user-properties.md)  
-[Validate password](validate-password.md)  
+[GET GROUP LIST](../commands/get-group-list)  
+[GET USER LIST](../commands/get-user-list)  
+[Is user deleted](../commands/is-user-deleted)  
+[Set user properties](../commands/set-user-properties)  
+[Validate password](../commands/validate-password)  
 
 ## Propriétés
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: get-list-item-icon
 title: GET LIST ITEM ICON
 slug: /commands/get-list-item-icon
@@ -36,19 +36,19 @@ Si vous passez le premier paramètre optionnel *\**, vous indiquez que le param�
 
 **Note :** Si vous utilisez le caractère @ dans le nom d'objet de la liste et que le formulaire contient plusieurs listes répondant à ce nom, la commande **GET LIST ITEM ICON** s'appliquera au premier objet dont le nom correspond.
 
-Vous pouvez passer un numéro de référence dans *réfElément*. Si ce numéro ne correspond à aucun élément de la liste, la commande ne fait rien. Vous pouvez également passer 0 dans *réfElément* afin de désigner le dernier élément ajouté à la liste (à l’aide de [APPEND TO LIST](append-to-list.md)).   
+Vous pouvez passer un numéro de référence dans *réfElément*. Si ce numéro ne correspond à aucun élément de la liste, la commande ne fait rien. Vous pouvez également passer 0 dans *réfElément* afin de désigner le dernier élément ajouté à la liste (à l’aide de [APPEND TO LIST](../commands/append-to-list)).   
 Vous pouvez enfin passer *\** dans *réfElément* : dans ce cas, la commande s’appliquera à l’élément courant de la liste. Si plusieurs éléments sont sélectionnés manuellement, l’élément courant est celui qui a été sélectionné en dernier. Si aucun élément n’est sélectionné, la commande ne fait rien.
 
 Passez dans *icône* une variable image. A l’issue de l’exécution de la commande, elle contiendra l’icône associée à l’élément, quelle que soit la source de l’icône (image statique, ressource ou expression image). 
 
 Si aucune icône n’est associée à l’élément, la variable icône est retournée vide.
 
-**Note :** Lorsque l'icône associée à un élément a été définie via une référence statique (références de ressources ou images de la bibliothèque), il est possible de connaître son numéro à l’aide de la commande [GET LIST ITEM PROPERTIES](get-list-item-properties.md).
+**Note :** Lorsque l'icône associée à un élément a été définie via une référence statique (références de ressources ou images de la bibliothèque), il est possible de connaître son numéro à l’aide de la commande [GET LIST ITEM PROPERTIES](../commands/get-list-item-properties).
 
 ## Voir aussi 
 
-[GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
-[SET LIST ITEM ICON](set-list-item-icon.md)  
+[GET LIST ITEM PROPERTIES](../commands/get-list-item-properties)  
+[SET LIST ITEM ICON](../commands/set-list-item-icon)  
 
 ## Propriétés
 

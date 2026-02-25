@@ -1,4 +1,4 @@
----
+﻿---
 id: st-set-text
 title: ST SET TEXT
 slug: /commands/st-set-text
@@ -42,7 +42,7 @@ displayed_sidebar: docs
 
 ### 
 
-*newText*には挿入するテキストを渡します。**ST SET TEXT**コ マンドは<SPAN>型のタグを含むリッチ (マルチスタイル) テキスト挿入するために使用します。他のすべてのケース、特に<や>、&を含むプレーンテキストの場合、 [ST SET PLAIN TEXT](st-set-plain-text.md) コマンドを使用しなければなりません。**ST SET TEXT**コマンドに < や >、& を含むプレーンテキストを渡すと、コマンドは何も行いません。これは"a>b"のようなテキストをエンコードしないでリッチテキストに挿入すると、 内部的な<SPAN>タグの解析が妨げられるからです。この場合">"文字は"&gt;"にエンコードされなければな りません。これは[ST SET PLAIN TEXT](st-set-plain-text.md)により自動で行われます (このコマンドの例題参照)。
+*newText*には挿入するテキストを渡します。**ST SET TEXT**コ マンドは<SPAN>型のタグを含むリッチ (マルチスタイル) テキスト挿入するために使用します。他のすべてのケース、特に<や>、&を含むプレーンテキストの場合、 [ST SET PLAIN TEXT](../commands/st-set-plain-text) コマンドを使用しなければなりません。**ST SET TEXT**コマンドに < や >、& を含むプレーンテキストを渡すと、コマンドは何も行いません。これは"a>b"のようなテキストをエンコードしないでリッチテキストに挿入すると、 内部的な<SPAN>タグの解析が妨げられるからです。この場合">"文字は"&gt;"にエンコードされなければな りません。これは[ST SET PLAIN TEXT](../commands/st-set-plain-text)により自動で行われます (このコマンドの例題参照)。
 
 オプションの*startSel*と*endSel*引数を使用して、*object*中のテキストを選択できます。*startSel*と*endSel*の値はプレーンテキストの選択に使用され、テキスト中のスタイルタグは無視されます。このコマンドの動作はオプションの*startSel*と*endSel*引数に基づき変わります:
 
@@ -98,13 +98,13 @@ displayed_sidebar: docs
 
 ## 例題 2 
 
-[ST SET PLAIN TEXT](st-set-plain-text.md)コマンドの例題を参照してください
+[ST SET PLAIN TEXT](../commands/st-set-plain-text)コマンドの例題を参照してください
 
 ## 参照 
 
-[ST Get plain text](st-get-plain-text.md)  
-[ST Get text](st-get-text.md)  
-[ST SET PLAIN TEXT](st-set-plain-text.md)  
+[ST Get plain text](../commands/st-get-plain-text)  
+[ST Get text](../commands/st-get-text)  
+[ST SET PLAIN TEXT](../commands/st-set-plain-text)  
 
 ## プロパティ
 

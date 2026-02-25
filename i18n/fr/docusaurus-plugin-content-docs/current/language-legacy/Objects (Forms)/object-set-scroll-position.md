@@ -1,4 +1,4 @@
----
+﻿---
 id: object-set-scroll-position
 title: OBJECT SET SCROLL POSITION
 slug: /commands/object-set-scroll-position
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.OBJECT SET SCROLL POSITION.Summary-->La commande **OBJECT SET SCROLL POSITION** permet de faire défiler le contenu de plusieurs types d'objets : lignes d’un sous-formulaire, d’un formulaire liste affiché via la commande [MODIFY SELECTION](modify-selection.md) ou [DISPLAY SELECTION](display-selection.md), ou d'une liste hiérarchique, lignes et colonnes d'une List box ou encore pixels d'une image.<!-- END REF--> 
+<!--REF #_command_.OBJECT SET SCROLL POSITION.Summary-->La commande **OBJECT SET SCROLL POSITION** permet de faire défiler le contenu de plusieurs types d'objets : lignes d’un sous-formulaire, d’un formulaire liste affiché via la commande [MODIFY SELECTION](../commands/modify-selection) ou [DISPLAY SELECTION](../commands/display-selection), ou d'une liste hiérarchique, lignes et colonnes d'une List box ou encore pixels d'une image.<!-- END REF--> 
 
 **Note :** Le défilement par programmation d’un objet reste possible même si les barres de défilement ont été masquées dans le formulaire.
 
@@ -60,7 +60,7 @@ Si vous passez le second paramètre optionnel *\** :
 * la ligne rendue visible par la commande (si la liste a effectivement défilé) sera placée en première position de la liste. Si la ligne est située en fin de liste, cette option n'a pas d'effet.
 * dans le contexte d'une image, les coordonnées demandées seront positionnées à l'origine de la variable image (0,0), même si ces coordonnées étaient déjà visibles dans l'objet.
 
-**Note :** La commande [HIGHLIGHT RECORDS](highlight-records.md) comporte un paramètre *\** facultatif permettant de déléguer la gestion du défilement dans les formulaires à la commande **OBJECT SET SCROLL POSITION**.
+**Note :** La commande [HIGHLIGHT RECORDS](../commands/highlight-records) comporte un paramètre *\** facultatif permettant de déléguer la gestion du défilement dans les formulaires à la commande **OBJECT SET SCROLL POSITION**.
 
 ## Exemple 1 
 
@@ -102,9 +102,9 @@ Attention dans ce cas, si vous omettez le second paramètre \*, l'image ne défi
 
 ## Voir aussi 
 
-[HIGHLIGHT RECORDS](highlight-records.md)  
-[LISTBOX SELECT ROW](listbox-select-row.md)  
-[OBJECT GET SCROLL POSITION](object-get-scroll-position.md)  
+[HIGHLIGHT RECORDS](../commands/highlight-records)  
+[LISTBOX SELECT ROW](../commands/listbox-select-row)  
+[OBJECT GET SCROLL POSITION](../commands/object-get-scroll-position)  
 
 ## Propriétés
 

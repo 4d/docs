@@ -1,4 +1,4 @@
----
+﻿---
 id: break-level
 title: BREAK LEVEL
 slug: /commands/break-level
@@ -29,9 +29,9 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.BREAK LEVEL.Summary-->BREAK LEVEL especifica o número de níveis de quebra em um relatório realizado utilizando [PRINT SELECTION](print-selection.md).<!-- END REF-->
+<!--REF #_command_.BREAK LEVEL.Summary-->BREAK LEVEL especifica o número de níveis de quebra em um relatório realizado utilizando [PRINT SELECTION](../commands/print-selection).<!-- END REF-->
 
-**Deve** executar BREAK LEVEL e [ACCUMULATE](accumulate.md) antes de cada relatório no qual queira utilizar quebras. Estes comandos ativam o processo de quebras para um relatório. Ver a explicação para o comando [Subtotal](subtotal.md).
+**Deve** executar BREAK LEVEL e [ACCUMULATE](../commands/accumulate) antes de cada relatório no qual queira utilizar quebras. Estes comandos ativam o processo de quebras para um relatório. Ver a explicação para o comando [Subtotal](../commands/subtotal).
 
 O parâmetro *nivel* indica o último nível de quebra para o qual queira realizar processos de quebras. Deve ter ordenado os registros com ao menos esse número de níveis. Se tiver ordenado mais níveis, estes níveis serão impressos como estão ordenados, mas não serão processados para quebras.
 
@@ -41,7 +41,7 @@ O segundo parâmetro, opcional, *saltoPagina*, se utiliza para provocar saltos d
 
 ## Exemplo 
 
-O exemplo a seguir imprime um relatório com dois níveis de quebra. A seleção é ordenada em quatro níveis, mas o comando **BREAK LEVEL** especifica apenas dois níveis de quebra. Um campo se acumula com o comando [ACCUMULATE](accumulate.md) :
+O exemplo a seguir imprime um relatório com dois níveis de quebra. A seleção é ordenada em quatro níveis, mas o comando **BREAK LEVEL** especifica apenas dois níveis de quebra. Um campo se acumula com o comando [ACCUMULATE](../commands/accumulate) :
 
 ```4d
  ORDER BY([Emp]Departamento;>;[Emp]Titulo;>;[Emp]Sobrenome;>;[Emp]Nome;>) // Ordenar em quatro campos
@@ -53,10 +53,10 @@ O exemplo a seguir imprime um relatório com dois níveis de quebra. A seleção
 
 ## Ver também 
 
-[ACCUMULATE](accumulate.md)  
-[ORDER BY](order-by.md)  
-[PRINT SELECTION](print-selection.md)  
-[Subtotal](subtotal.md)  
+[ACCUMULATE](../commands/accumulate)  
+[ORDER BY](../commands/order-by)  
+[PRINT SELECTION](../commands/print-selection)  
+[Subtotal](../commands/subtotal)  
 
 ## Propriedades
 

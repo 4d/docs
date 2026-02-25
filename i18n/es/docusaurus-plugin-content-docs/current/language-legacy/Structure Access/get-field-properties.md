@@ -1,4 +1,4 @@
----
+﻿---
 id: get-field-properties
 title: GET FIELD PROPERTIES
 slug: /commands/get-field-properties
@@ -86,9 +86,9 @@ Este ejemplo recupera en las variables *vTipo*, *vLong*, *vIndex*, *vUnico* y *v
 
 ## Ver también 
 
-[Field](field.md)  
-[Field name](field-name.md)  
-[SET INDEX](set-index.md)  
+[Field](../commands/field)  
+[Field name](../commands/field-name)  
+[SET INDEX](../commands/set-index)  
 
 ## Propiedades
 

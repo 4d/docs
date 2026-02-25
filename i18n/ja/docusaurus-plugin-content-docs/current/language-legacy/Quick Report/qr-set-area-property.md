@@ -1,4 +1,4 @@
----
+﻿---
 id: qr-set-area-property
 title: QR SET AREA PROPERTY
 slug: /commands/qr-set-area-property
@@ -45,7 +45,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[QR Get area property](qr-get-area-property.md)  
+[QR Get area property](../commands/qr-get-area-property)  
 
 ## プロパティ
 

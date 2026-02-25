@@ -1,4 +1,4 @@
----
+﻿---
 id: soap-send-fault
 title: SOAP SEND FAULT
 slug: /commands/soap-send-fault
@@ -54,8 +54,8 @@ Pour reprendre l’exemple du Web Service “Racine\_carree” fourni dans la de
 
 ## Voir aussi 
 
-[SOAP DECLARATION](soap-declaration.md)  
-[SOAP Get info](soap-get-info.md)  
+[SOAP DECLARATION](../commands/soap-declaration)  
+[SOAP Get info](../commands/soap-get-info)  
 
 ## Propriétés
 

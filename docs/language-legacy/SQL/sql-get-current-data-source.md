@@ -1,4 +1,4 @@
----
+﻿---
 id: sql-get-current-data-source
 title: SQL Get current data source
 slug: /commands/sql-get-current-data-source
@@ -36,11 +36,11 @@ This command lets you check the current data source, generally before executing 
 
 ## See also 
 
-[Begin SQL](begin-sql.md)  
-[End SQL](end-sql.md)  
-[SQL GET DATA SOURCE LIST](sql-get-data-source-list.md)  
-[SQL LOGIN](sql-login.md)  
-[SQL LOGOUT](sql-logout.md)  
+[Begin SQL](../commands/begin-sql)  
+[End SQL](../commands/end-sql)  
+[SQL GET DATA SOURCE LIST](../commands/sql-get-data-source-list)  
+[SQL LOGIN](../commands/sql-login)  
+[SQL LOGOUT](../commands/sql-logout)  
 
 ## Properties
 

@@ -1,4 +1,4 @@
----
+﻿---
 id: array-real
 title: ARRAY REAL
 slug: /commands/array-real
@@ -57,8 +57,8 @@ Cet exemple crée un tableau interprocess de 50 éléments de type [Réel](# "Nu
 
 ## Voir aussi 
 
-[ARRAY INTEGER](array-integer.md)  
-[ARRAY LONGINT](array-longint.md)  
+[ARRAY INTEGER](../commands/array-integer)  
+[ARRAY LONGINT](../commands/array-longint)  
 
 ## Propriétés
 

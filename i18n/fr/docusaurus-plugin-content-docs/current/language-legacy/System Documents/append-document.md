@@ -1,4 +1,4 @@
----
+﻿---
 id: append-document
 title: Append document
 slug: /commands/append-document
@@ -30,11 +30,11 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Append document.Summary-->La commande **Append document** "fait la même chose" que la commande [Open document](open-document.md) : elle vous permet d'ouvrir un document sur disque et de se placer à la fin du document.<!-- END REF--> 
+<!--REF #_command_.Append document.Summary-->La commande **Append document** "fait la même chose" que la commande [Open document](../commands/open-document) : elle vous permet d'ouvrir un document sur disque et de se placer à la fin du document.<!-- END REF--> 
 
-La seule différence est que **Append document** se place initialement à la fin du document, alors que [Open document](open-document.md) se place au début. 
+La seule différence est que **Append document** se place initialement à la fin du document, alors que [Open document](../commands/open-document) se place au début. 
 
-Pour plus d'informations, reportez-vous à la description de la commande [Open document](open-document.md).
+Pour plus d'informations, reportez-vous à la description de la commande [Open document](../commands/open-document).
 
 ## Exemple 
 
@@ -49,8 +49,8 @@ L'exemple suivant ouvre un document existant qui s'appelle “Note”, ajoute à
 
 ## Voir aussi 
 
-[Create document](create-document.md)  
-[Open document](open-document.md)  
+[Create document](../commands/create-document)  
+[Open document](../commands/open-document)  
 
 ## Propriétés
 

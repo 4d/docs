@@ -1,4 +1,4 @@
----
+﻿---
 id: listbox-select-row
 title: LISTBOX SELECT ROW
 slug: /commands/listbox-select-row
@@ -49,25 +49,25 @@ displayed_sidebar: docs
 
 * *position* が０より小さい場合、*action* の値に関係なく、何もしません。
 * *position* が０かつ、*action* の値がlk replace selection または省略された場合、リストボックスのすべての行が選択されます。*action* の値がlk remove from selection の場合、リストボックスのすべての行の選択が解除されます。
-* *position* がリストボックスに含まれるすべての行数より大きい場合 (配列タイプのリストボックスの場合のみ)、リストボックスと関連づけられているブール配列が自動的にリサイズされ、選択アクションが行われます。このメカニズムは、**LISTBOX SELECT ROW** を、リストボックスで即座の同期を起こさない"標準"の配列管理コマンド ([APPEND TO ARRAY](append-to-array.md) など) とともに使用できることを意味します。
+* *position* がリストボックスに含まれるすべての行数より大きい場合 (配列タイプのリストボックスの場合のみ)、リストボックスと関連づけられているブール配列が自動的にリサイズされ、選択アクションが行われます。このメカニズムは、**LISTBOX SELECT ROW** を、リストボックスで即座の同期を起こさない"標準"の配列管理コマンド ([APPEND TO ARRAY](../commands/append-to-array) など) とともに使用できることを意味します。
 
 メソッドの実行後、配列は同期されます。リストボックスのソース配列が実際にリサイズされたならば、選択アクションは実行されます。そうでなければリストボックスと関連づけられたブールの配列はその初期のサイズに戻り、コマンドは何もしません。
 
 **Notes:**
 
-* 選択した列をリストボックスに表示するために、自動でスクロールしたい場合、[OBJECT SET SCROLL POSITION](object-set-scroll-position.md) コマンドを使います。
-* 列を編集モードに切り換えるには、[EDIT ITEM](edit-item.md)コマンドを使います。
+* 選択した列をリストボックスに表示するために、自動でスクロールしたい場合、[OBJECT SET SCROLL POSITION](../commands/object-set-scroll-position) コマンドを使います。
+* 列を編集モードに切り換えるには、[EDIT ITEM](../commands/edit-item)コマンドを使います。
 * *position* に渡された数値が、リストボックス中で非表示の行に該当する場合、行は選択されますが表示されません。
 * リストボックスに対して**セレクションハイライトを非表示にする**オプションをチェックしていた場合、利用可能なインターフェースオプションを使用してリストボックスセレクションを可視化していおく必要があります。これのやり方についての詳細な情報については、*選択行の見た目をカスタマイズ* を参照してください。
 
 ## 参照 
 
-[EDIT ITEM](edit-item.md)  
-[LISTBOX DELETE ROWS](listbox-delete-rows.md)  
-[LISTBOX INSERT ROWS](listbox-insert-rows.md)  
-[LISTBOX SELECT BREAK](listbox-select-break.md)  
-[LISTBOX SELECT ROWS](listbox-select-rows.md)  
-[OBJECT SET SCROLL POSITION](object-set-scroll-position.md)  
+[EDIT ITEM](../commands/edit-item)  
+[LISTBOX DELETE ROWS](../commands/listbox-delete-rows)  
+[LISTBOX INSERT ROWS](../commands/listbox-insert-rows)  
+[LISTBOX SELECT BREAK](../commands/listbox-select-break)  
+[LISTBOX SELECT ROWS](../commands/listbox-select-rows)  
+[OBJECT SET SCROLL POSITION](../commands/object-set-scroll-position)  
 
 ## プロパティ
 
