@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Test semaphore.Summary-->Test semaphore コマンドは、セマフォの存在をテストします。<!-- END REF-->
 
-[Semaphore](semaphore.md "Semaphore")関数とTest semaphore関数の違いは、Test semaphoreはセマフォが存在しない場合には*semaphore*を作成しないということです。*semaphore*が存在している場合、関数は[True](true.md "True")を返します。そうでない場合は[False](false.md "False")を返します。
+[Semaphore](semaphore.md "Semaphore")関数とTest semaphore関数の違いは、Test semaphoreはセマフォが存在しない場合には*semaphore*を作成しないということです。*semaphore*が存在している場合、関数は[True](../commands/true)を返します。そうでない場合は[False](../commands/false)を返します。
 
 ## 例題 
 

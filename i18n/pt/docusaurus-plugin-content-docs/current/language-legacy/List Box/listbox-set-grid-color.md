@@ -40,8 +40,8 @@ Passe no parâmetro *cor* um valor de cor RGB. Para maior informação sobre as 
 
 Os parâmetros *horizontal* e *vertical* lhe permitem especificar as linhas as quais deseja dar cor:
 
-* Se passar [True](true.md "True") em *horizontal*, a cor será aplicada às linhas horizontais da matriz. Se passa [False](false.md "False"), a cor das linhas horizontais não mudará.
-* Se passar [True](true.md "True") em *vertical*, a cor se aplicará às linhas verticais da matriz. Se passar [False](false.md "False"), a cor das linhas verticais não mudará
+* Se passar [True](../commands/true) em *horizontal*, a cor será aplicada às linhas horizontais da matriz. Se passa [False](../commands/false), a cor das linhas horizontais não mudará.
+* Se passar [True](../commands/true) em *vertical*, a cor se aplicará às linhas verticais da matriz. Se passar [False](../commands/false), a cor das linhas verticais não mudará
 
 ## Ver também 
 

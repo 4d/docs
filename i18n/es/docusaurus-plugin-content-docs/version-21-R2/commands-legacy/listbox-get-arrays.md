@@ -53,7 +53,7 @@ Una vez se ejecuta el comando:
    * Para una columna asociada a una variable, un puntero a la variable,  
    * Para una columna asociada a una expresión, un puntero Nil.
 * El array *arrVarEncabezados* contiene punteros hacia las variables asociadas a cada título de columna del list box.
-* El array *arrColsVisibles* contiene un valor Booleano para cada columna, indicando si la columna es visible ([True](true.md "True")) o oculta ([False](false.md "False")) en el list box.
+* El array *arrColsVisibles* contiene un valor Booleano para cada columna, indicando si la columna es visible ([True](../commands/true)) o oculta ([False](../commands/false)) en el list box.
 * El array *arrEstilos* contiene, para un list box de tipo array, cuatro hacia cuatro arrays que permiten aplicar individualmente un estilo, un color de fuente, un color de fondo y un control de visualización personalizado a cada fila del list box. Estos arrays son asociados al list box en la Lista de propiedades del modo Diseño o vía el comando [LISTBOX SET ARRAY](listbox-set-array.md). Si un array no es especificado para el list box, el elemento correspondiente en *arrEstilos* contendrá un puntero Nil.  
 El cuarto del puntero corresponde ya sea a un array booleano (array de líneas ocultas), o a un array entero largo (array utilizado para definir las líneas ocultas, desactivadas y no seleccionables), en función de la implementación utilizada para el array de control de líneas (ver *Propiedades específicas de los list box*).  
 Para un list box de tipo selección, colección o selección de entidades, *arrEstilos* contiene:

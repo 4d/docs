@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.Is a list.Summary-->Is a list コマンドは、*list* 引数で指定された値が階層リストの有効な参照の場合[True](true.md "True")を返します。<!-- END REF-->それ以外の場合[False](false.md "False")を返します。
+<!--REF #_command_.Is a list.Summary-->Is a list コマンドは、*list* 引数で指定された値が階層リストの有効な参照の場合[True](../commands/true)を返します。<!-- END REF-->それ以外の場合[False](../commands/false)を返します。
 
 ## 例題
 

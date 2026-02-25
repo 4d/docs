@@ -46,7 +46,7 @@ Si *pos\_encont.*y *long\_encont* son variables, el comando devuelve la posició
 
 El parámetro opcional *\** indica, cuando se pasa, que la búsqueda debe llevarse a cabo en la posición especificada por *inicio* sin buscar más allá en caso de falla.
 
-El comando devuelve [True](true.md "True") si la búsqueda encuentra una ocurrencia.
+El comando devuelve [True](../commands/true) si la búsqueda encuentra una ocurrencia.
 
 Para mayor información sobre regex, consulte la siguiente dirección:  
 *http://en.wikipedia.org/wiki/Regular\_expression*

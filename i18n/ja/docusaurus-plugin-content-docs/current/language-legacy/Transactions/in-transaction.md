@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.In transaction.Summary-->In transactionコマンドはカレントプロセスがトランザクション内にある場合に[True](true.md "True")を返します。<!-- END REF-->その他の場合は[False](false.md "False")を返します。
+<!--REF #_command_.In transaction.Summary-->In transactionコマンドはカレントプロセスがトランザクション内にある場合に[True](../commands/true)を返します。<!-- END REF-->その他の場合は[False](../commands/false)を返します。
 
 ## 例題 
 

@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 オプションの *\** 引数を指定した場合、*object*はオブジェクト名です (文字列) 。オプションの \* 引数を省略すると、*object*はフィールドまたは変数です。この場合、文字列ではなくフィールドまたは変数参照 (フィールドまたは変数のみ) を指定します。オブジェクト名に関する詳細はを参照してください。
 
-引数*visible*に[True](true.md "True")渡すとオブジェクトが表示されます。引数*visible*に[FALSE](false.md "FALSE")を渡すとオブジェクトが非表示になります。
+引数*visible*に[True](../commands/true)渡すとオブジェクトが表示されます。引数*visible*に[False](../commands/false)を渡すとオブジェクトが非表示になります。
 
 ## 例題 
 

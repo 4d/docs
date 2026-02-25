@@ -30,13 +30,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET AUTOMATIC RELATIONS.Summary-->El comando GET AUTOMATIC RELATIONS le permite saber si el estado automático/manual de todas las relaciones manuales Muchos a Uno y Uno a Muchos de la base han sido modificadas en el proceso actual.<!-- END REF-->
 
-* *uno*: este parámetro devuelve [True](true.md "True") si una llamada anterior al comando [SET AUTOMATIC RELATIONS](set-automatic-relations.md "SET AUTOMATIC RELATIONS") vuelve automáticas todas las relaciones manuales Muchos a Uno, por ejemplo SET AUTOMATIC RELATIONS(True;False).
+* *uno*: este parámetro devuelve [True](../commands/true) si una llamada anterior al comando [SET AUTOMATIC RELATIONS](set-automatic-relations.md "SET AUTOMATIC RELATIONS") vuelve automáticas todas las relaciones manuales Muchos a Uno, por ejemplo SET AUTOMATIC RELATIONS(True;False).
 
-Este parámetro devuelve [False](false.md "False") si el comando [SET AUTOMATIC RELATIONS](set-automatic-relations.md "SET AUTOMATIC RELATIONS") no ha sido llamado o si su ejecución previa no modificó las relaciones manuales Muchos a Uno, por ejemplo SET AUTOMATIC RELATIONS(False;False). 
+Este parámetro devuelve [False](../commands/false) si el comando [SET AUTOMATIC RELATIONS](set-automatic-relations.md "SET AUTOMATIC RELATIONS") no ha sido llamado o si su ejecución previa no modificó las relaciones manuales Muchos a Uno, por ejemplo SET AUTOMATIC RELATIONS(False;False). 
 
-* *muchos*: este parámetro devuelve [True](true.md "True") si la llamada previa al comando [SET AUTOMATIC RELATIONS](set-automatic-relations.md "SET AUTOMATIC RELATIONS") vuelve automáticas todas las relaciones manuales Uno a Muchos, por ejemplo SET AUTOMATIC RELATIONS(True;True).
+* *muchos*: este parámetro devuelve [True](../commands/true) si la llamada previa al comando [SET AUTOMATIC RELATIONS](set-automatic-relations.md "SET AUTOMATIC RELATIONS") vuelve automáticas todas las relaciones manuales Uno a Muchos, por ejemplo SET AUTOMATIC RELATIONS(True;True).
 
-Este parámetro devuelve [False](false.md "False") si el comando [SET AUTOMATIC RELATIONS](set-automatic-relations.md "SET AUTOMATIC RELATIONS") no ha sido llamado o si si ejecución previa no modificó la relaciones manuales Uno a Muchos, por ejemplo SET AUTOMATIC RELATIONS(True;False).
+Este parámetro devuelve [False](../commands/false) si el comando [SET AUTOMATIC RELATIONS](set-automatic-relations.md "SET AUTOMATIC RELATIONS") no ha sido llamado o si si ejecución previa no modificó la relaciones manuales Uno a Muchos, por ejemplo SET AUTOMATIC RELATIONS(True;False).
 
 ## Ejemplo 
 

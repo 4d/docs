@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.Macintosh command down.Summary-->Macintosh command downはMacintoshのcommandキーが押されていると[True](true.md "True")を返します。<!-- END REF-->Windowsのプラットフォーム上で呼び出された場合は、WindowsのCtrlキーが押されていると、Macintosh command down はTRUEを返します。
+<!--REF #_command_.Macintosh command down.Summary-->Macintosh command downはMacintoshのcommandキーが押されていると[True](../commands/true)を返します。<!-- END REF-->Windowsのプラットフォーム上で呼び出された場合は、WindowsのCtrlキーが押されていると、Macintosh command down はTRUEを返します。
 
 ## 例題 
 

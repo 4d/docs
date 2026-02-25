@@ -88,8 +88,8 @@ Los parámetros $user y $pw reciben el nombre de usuario y contraseña introduci
   
  El Método base On Web Authentication devuelve un booleano en $result:
 
-   * Si $result es [True](true.md "True"), la conexión es aceptada.
-   * Si $result es [False](false.md "False"), la conexión es rechazada.
+   * Si $result es [True](../commands/true), la conexión es aceptada.
+   * Si $result es [False](../commands/false), la conexión es rechazada.
 
 El [Método base On Web Connection](metodo-base-on-web-connection.md) sólo se ejecuta si la conexión ha sido aceptada por **On Web Authentication**.
 

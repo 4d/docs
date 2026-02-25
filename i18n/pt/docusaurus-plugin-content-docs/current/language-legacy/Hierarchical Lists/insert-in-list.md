@@ -49,7 +49,7 @@ Pode passar o texto do novo item em itemText. A partir de 4D v16 R4, se o item f
   
 Pode passar o item de número de referência do novo item em itemRef. Apesar de que se qualifica esse número de referência de item como único, na verdade é possível passar o valor que quiser. Veja a seção *Gerenciar Listas Hierárquicas* para saber mais sobre o parâmetro itemRef.  
   
-Se deseja que o elemento inclua sub elementos, passe um número de referência de lista válido no parâmetro *sublista*. Neste caso, também deve passar o parâmetro *expandida*. Passe [True](true.md "True") ou [False](false.md "False") neste parâmetro de maneira que esta sub-lista é mostrada expandida ou contraída respectivamente.
+Se deseja que o elemento inclua sub elementos, passe um número de referência de lista válido no parâmetro *sublista*. Neste caso, também deve passar o parâmetro *expandida*. Passe [True](../commands/true) ou [False](../commands/false) neste parâmetro de maneira que esta sub-lista é mostrada expandida ou contraída respectivamente.
 
 ## Exemplo 
 

@@ -45,7 +45,7 @@ displayed_sidebar: docs
 
 *numPages* 引数0ページを除いたフォーム内のページ数を返します。
 
-*fixedWidth* と *fixedHeight*には、フォームの幅と高さがサイズ変更可であるか ([False](false.md "False")) 、固定に設定されているか ([True](true.md "True")) を返します。
+*fixedWidth* と *fixedHeight*には、フォームの幅と高さがサイズ変更可であるか ([False](../commands/false)) 、固定に設定されているか ([True](../commands/true)) を返します。
 
 *title* 引数には、フォームエディターのプロパティリスト内で定義されているフォームのウインドウタイトルを返します。名前が定義されていないと*title*引数に空文字を返します。
 

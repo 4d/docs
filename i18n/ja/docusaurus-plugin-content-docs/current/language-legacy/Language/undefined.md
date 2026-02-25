@@ -30,11 +30,11 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.Undefined.Summary-->Undefined コマンドは、*expression* の評価の結果が未定義の値である場合には[True](true.md "True")を返し、それ以外の場合には[False](false.md "False")を返します。<!-- END REF-->
+<!--REF #_command_.Undefined.Summary-->Undefined コマンドは、*expression* の評価の結果が未定義の値である場合には[True](../commands/true)を返し、それ以外の場合には[False](../commands/false)を返します。<!-- END REF-->
 
-* 変数が定義されるのは、コンパイラ命令で変数が作成された場合や値が変数に代入された場合です。その他の場合は定義されません。データベースがコンパイルされている場合、Undefined コマンドはすべての変数に対して[False](false.md "False") を返します。
+* 変数が定義されるのは、コンパイラ命令で変数が作成された場合や値が変数に代入された場合です。その他の場合は定義されません。データベースがコンパイルされている場合、Undefined コマンドはすべての変数に対して[False](../commands/false) を返します。
 * オブジェクト内に存在しないオブジェクトプロパティは未定義です。
-* Undefined はフィールド参照に対しては常に[False](false.md "False") を返します。
+* Undefined はフィールド参照に対しては常に[False](../commands/false) を返します。
 
 **注:** **Undefined** は*expression* 引数を評価するという点に注意して下さい。以下の宣言は同等の意味を持ちます:  
 

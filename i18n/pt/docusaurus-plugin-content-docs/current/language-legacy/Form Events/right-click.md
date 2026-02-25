@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.Right click.Summary-->O comando Right click retorna [True](true.md "True") se fizer clique no botão direito do mouse.<!-- END REF-->
+<!--REF #_command_.Right click.Summary-->O comando Right click retorna [True](../commands/true) se fizer clique no botão direito do mouse.<!-- END REF-->
 
 Este comando deve ser utilizado unicamente no contexto do evento de formulário On Clicked. Portanto é necessário verificar em modo Desenho que o evento tenha sido selecionado corretamente nas propriedades do formulário ou do objeto específico.
 

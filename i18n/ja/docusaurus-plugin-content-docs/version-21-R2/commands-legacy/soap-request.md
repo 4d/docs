@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.SOAP Request.Summary-->**SOAP request**コマンドは実行されているコードがSOAPリクエストの一部であれば[True](true.md "True")を返します。<!-- END REF--> 
+<!--REF #_command_.SOAP Request.Summary-->**SOAP request**コマンドは実行されているコードがSOAPリクエストの一部であれば[True](../commands/true)を返します。<!-- END REF--> 
 
 このコマンドは、セキュリティの目的で*On Web Authenticationデータベースメソッド*で使用し、受信したリクエストがSOAPであるか知ることができます。
 

@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.Macintosh control down.Summary-->Macintosh control down コマンドはMacintoshのControlキーが押されていると[True](true.md "True")を返します。<!-- END REF-->Windowsのプラットフォーム上で呼び出された場合は、Macintosh control down コマンドは常に[False](false.md "False")を返します。このMacintosh用の同等のキーは、Windows上にありません。
+<!--REF #_command_.Macintosh control down.Summary-->Macintosh control down コマンドはMacintoshのControlキーが押されていると[True](../commands/true)を返します。<!-- END REF-->Windowsのプラットフォーム上で呼び出された場合は、Macintosh control down コマンドは常に[False](../commands/false)を返します。このMacintosh用の同等のキーは、Windows上にありません。
 
 ## 例題 
 

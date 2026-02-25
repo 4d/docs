@@ -52,7 +52,7 @@ Quando se executa o comando:
  \- Para uma coluna associada a uma variável, um ponteiro a variável,   
  \- Para uma coluna associada a uma expressão, um ponteiro Nil.  
 • o array *arrVarTitulos* contém ponteiros até as variáveis associadas a cada título de coluna do list box.   
-• o array *arrColVisiveis* contém um valor Booleano para cada coluna, indicando se a coluna é visível ([True](true.md "True")) ou oculta ([False](false.md "False")) no list box.   
+• o array *arrColVisiveis* contém um valor Booleano para cada coluna, indicando se a coluna é visível ([True](../commands/true)) ou oculta ([False](../commands/false)) no list box.   
 • o array *arrEstilos* contém os três ponteiros até os três arrays que permitem aplicar um estilo específico, uma cor de fonte e uma cor de fundo a cada fila da list box. Estes arrays são associados no list box na Lista de propriedades do ambiente Desenho. Se um array não for especificado para a list box, o elemento correspondente em *arrEstilos* conterá um ponteiro Nil.  
 O quarto ponteiro corresponde seja a um array booleano (array de linhas ocultas), ou a um array inteiro longo (array utilizado para definir as linhas ocultas, desativadas e não selecionáveis), em função da implementação utilizada para o array de controle de linhas (ver *Propriedades específicas dos list Box*).
 

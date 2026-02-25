@@ -33,11 +33,11 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE SET FROM ARRAY.Summary-->CREATE SET FROM ARRAY コマンドは、セット*setName*<!-- END REF-->を下記の情報から作成します:
 
 * *aTable*テーブルの絶対レコード番号の配列*recordsArray*
-* ブール配列*recordsArray*。この場合、配列の値はそれぞれのレコードが*setName*に属する ([True](true.md "True")) か属さないか ([False](false.md "False")) を表します。
+* ブール配列*recordsArray*。この場合、配列の値はそれぞれのレコードが*setName*に属する ([True](../commands/true)) か属さないか ([False](../commands/false)) を表します。
 
 このコマンドを使用する際、*recordsArray*に倍長整数配列を渡すと、配列中のすべての数値は*setName*に格納されるレコードのレコード番号を表します。番号が無効の場合 (例えばレコードが作成されていない場合)、エラー-10503が生成されます。
 
-このコマンドを使用する際、*recordsArray*にブール配列を渡すと、配列のN番目の要素は、*setName*にN番目のレコードが含まれるか ([True](true.md "True")) 含まれないか ([False](false.md "False")) を表します。通常配列の要素数はテーブルのレコード数と一致しなくてはなりません。配列要素数がレコード数より少ない場合、配列により定義されたレコードのみがセットに格納されます。
+このコマンドを使用する際、*recordsArray*にブール配列を渡すと、配列のN番目の要素は、*setName*にN番目のレコードが含まれるか ([True](../commands/true)) 含まれないか ([False](../commands/false)) を表します。通常配列の要素数はテーブルのレコード数と一致しなくてはなりません。配列要素数がレコード数より少ない場合、配列により定義されたレコードのみがセットに格納されます。
 
 **Note:** ブール配列では0からN-1までの要素がこのコマンドにより使用されます。
 

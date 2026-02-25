@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 Se passa o parâmetro opcional *\**, indica que o parâmetro *objeto* é um nome de objeto (string). Se não passa este parâmetro, indica que o parâmetro *objeto* é um campo ou uma variável. Neste caso, é passada uma referência de campo ou variável (campo ou variável objeto unicamente) ao invés de um string.Para mais informações sobre nomes de objetos, consulte a seção 
 
-Se passa *visível* igual a [TRUE](true.md "TRUE"), os objetos são mostrados. Se passa *visível* igual a [FALSE](false.md "FALSE"), os objetos são ocultados. 
+Se passa *visível* igual a [True](../commands/true), os objetos são mostrados. Se passa *visível* igual a [False](../commands/false), os objetos são ocultados. 
 
 ## Exemplo 
 

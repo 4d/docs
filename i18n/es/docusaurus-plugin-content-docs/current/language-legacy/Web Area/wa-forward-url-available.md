@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA Forward URL available.Summary-->El comando WA Forward URL available permite conocer si existe un URL siguiente disponible en la secuencia de URLs abiertos en el área web designada por los parámetros *\** y *objeto*.<!-- END REF-->
 
-El comando devuelve [True](true.md "True") si existe un URL y de lo contrario [False](false.md "False"). Particularmente, este comando puede utilizarse, en un interfaz personalizada, activar o desactivar los botones de navegación.
+El comando devuelve [True](../commands/true) si existe un URL y de lo contrario [False](../commands/false). Particularmente, este comando puede utilizarse, en un interfaz personalizada, activar o desactivar los botones de navegación.
 
 ## Ver también 
 

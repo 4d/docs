@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.Modified record.Summary-->**Modified record** は、*aTable*のレコードが更新されたが保存されていない場合に[True](true.md "True")を返します。<!-- END REF-->それ以外は[False](false.md "False")を 返します。この関数は、保存する必要があるレコードかどうかを判定する場合に使用します。これは、入力フォーム上で次のレコードに移動する前にカレントレコードを保存するかどうかチェックする際に特に有効です。このコマンドは新規レコードについては、常に[True](true.md "True")を返します。
+<!--REF #_command_.Modified record.Summary-->**Modified record** は、*aTable*のレコードが更新されたが保存されていない場合に[True](../commands/true)を返します。<!-- END REF-->それ以外は[False](../commands/false)を 返します。この関数は、保存する必要があるレコードかどうかを判定する場合に使用します。これは、入力フォーム上で次のレコードに移動する前にカレントレコードを保存するかどうかチェックする際に特に有効です。このコマンドは新規レコードについては、常に[True](../commands/true)を返します。
 
 このファンクションは以下の場合に置いては常にTrueを返す点に注意して下さい:
 

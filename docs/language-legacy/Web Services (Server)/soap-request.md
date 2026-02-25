@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.SOAP Request.Summary-->The **SOAP Request** command returns **[True](true.md "True")** if the code being executed is part of a SOAP request.<!-- END REF--> 
+<!--REF #_command_.SOAP Request.Summary-->The **SOAP Request** command returns **[True](../commands/true)** if the code being executed is part of a SOAP request.<!-- END REF--> 
 
 This command can be used for security reasons in the *On Web Authentication Database Method* in order to determine the nature of the received requests.
 

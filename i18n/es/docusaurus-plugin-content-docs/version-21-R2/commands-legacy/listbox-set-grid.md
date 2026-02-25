@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 Si pasa el parámetro opcional \*, indica que el parámetro *objeto* es un nombre de objeto (cadena). Si omite este parámetro, indica que el parámetro *objeto* es una variable. En ese caso, no pasa una cadena, sino una referencia de variable. Para mayor información sobre nombres de objetos, consulte la sección indica que el parámetro *objeto* es un nombre de objeto (cadena). Si omite este parámetro, indica que el parámetro *objeto* es una variable. En ese caso, no pasa una cadena, sino una referencia de variable. Para mayor información sobre nombres de objetos, consulte la sección *Propiedades de los objetos*. 
 
-Pase en los parámetros *horizontal* y *vertical* los valores booleanos que indican si la líneas de la matriz deben mostrarse ([True](true.md "True")) u ocultarse ([False](false.md "False")). La matriz se muestra por defecto. 
+Pase en los parámetros *horizontal* y *vertical* los valores booleanos que indican si la líneas de la matriz deben mostrarse ([True](../commands/true)) u ocultarse ([False](../commands/false)). La matriz se muestra por defecto. 
 
 ## Ver también 
 

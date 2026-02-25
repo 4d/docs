@@ -34,7 +34,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SAX SET XML DECLARATION.Summary-->El comando SAX SET XML DECLARATION inicializa el documento XML referenciado en *documento* utilizando la *codificación* especificada.<!-- END REF--> Opcionalmente, puede definir el atributo autónomo.
 
 * *codificacion*: indica el conjunto de caracteres utilizado en el documento. Por defecto (si no se llama al comando), se utiliza el conjunto de caracteres UTF-8 (Unicode comprimido).**Nota:** si pasa un conjunto de caracteres que no soporta los comandos XML de 4D, se utilizará UTF\-8\. Consulte *Conjuntos de caracteres* para ver la lista de conjuntos de caracteres soportados (sin embargo se recomienda UTF\-8 en la mayoría de los casos).
-* *autonomo*: indica si el documento es autonomo ([True](true.md "True")) o si depende, para su funcionamiento, de otros archivos o de recursos externos ([False](false.md "False")). Por defecto (si no se llama el comando o si el parámetro se omite), el documento no es autónomo.
+* *autonomo*: indica si el documento es autonomo ([True](../commands/true)) o si depende, para su funcionamiento, de otros archivos o de recursos externos ([False](../commands/false)). Por defecto (si no se llama el comando o si el parámetro se omite), el documento no es autónomo.
 
 Este comando debe llamarse una sola vez por documento y antes del primer comando de escritura XML en el documento; de lo contrario, se generará un mensaje de error.  
   

@@ -49,7 +49,7 @@ Consulte os exemplos do comando [FILTER KEYSTROKE](filter-keystroke.md "FILTER K
 
 ## Exemplo 2 
 
-Quando processa um evento On Before Keystroke, você está administrando a edição da área de texto atual (onde se encontra o cursor), não o “valor futuro” da fonte de dados (campo ou variável) de esta área. O método de projeto Handle keystroke permite colocar em uma segunda variável os dados introduzidos em uma área de texto, de mode que você possa utilizar esta variável para realizar diferentes ações enquanto introduz caracteres na área. Você passa como primeiro parâmetro um ponteiro até a fonte de dados da área, e como segundo parâmetro um ponteiro até a segunda variável. O método retorna o novo valor da área de texto na segunda variável, e retorna [True](true.md "True") se este valor é diferente do valor antes da entrada do último caractere. 
+Quando processa um evento On Before Keystroke, você está administrando a edição da área de texto atual (onde se encontra o cursor), não o “valor futuro” da fonte de dados (campo ou variável) de esta área. O método de projeto Handle keystroke permite colocar em uma segunda variável os dados introduzidos em uma área de texto, de mode que você possa utilizar esta variável para realizar diferentes ações enquanto introduz caracteres na área. Você passa como primeiro parâmetro um ponteiro até a fonte de dados da área, e como segundo parâmetro um ponteiro até a segunda variável. O método retorna o novo valor da área de texto na segunda variável, e retorna [True](../commands/true) se este valor é diferente do valor antes da entrada do último caractere. 
 
 ```4d
   // Método de projeto Manejar teclagem Handle Keystroke

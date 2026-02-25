@@ -34,10 +34,10 @@ Os elementos no array são ordenados em função da ordem de criação dos regis
 
 Cada elemento do array é:
 
-* [True](true.md "True") se o registro correspondente pertence ao conjunto.
-* [False](false.md "False") se o registro correspondente não pertence ao conjunto.
+* [True](../commands/true) se o registro correspondente pertence ao conjunto.
+* [False](../commands/false) se o registro correspondente não pertence ao conjunto.
 
-**Advertência:** o número total de elementos no array *arrBool* não é significativo. Por razões estruturais, este número pode ser diferente do número de registros realmente presentes na tabela. Os possíveis elementos extras são definidos como [False](false.md "False").
+**Advertência:** o número total de elementos no array *arrBool* não é significativo. Por razões estruturais, este número pode ser diferente do número de registros realmente presentes na tabela. Os possíveis elementos extras são definidos como [False](../commands/false).
 
 Se você não passar o parâmetro *conjunto*, o comando utilizará UserSet no processo atual.
 

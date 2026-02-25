@@ -20,9 +20,9 @@ displayed_sidebar: docs
 <!--REF #_command_.LOAD RECORD.Summary-->LOAD RECORDは、*aTable*のカレントレコードをロードします。<!-- END REF-->カレントレコードが存在しない場合、LOAD RECORDは何も行いません。  
 レコードがロードされたら、[Locked](locked.md "Locked")コマンドを使用してレコードが更新可能か調べることができます:
 
-* *aTable*が読み込みのみ状態ならば、[Locked](locked.md "Locked")コマンドは[True](true.md "True")を返し、レコードを修正することはできません。
+* *aTable*が読み込みのみ状態ならば、[Locked](locked.md "Locked")コマンドは[True](../commands/true)を返し、レコードを修正することはできません。
 * *aTable*が読み書き状態でも、レコ－ドが既にロックされている場合は、レコードは読み込みのみ状態になり、そのレコードを修正することはできません。
-* *aTable*が読み書き状態でかつレコ－ドがロックされていない場合、カレントプロセス内でレコードを修正することができます。その際[Locked](locked.md "Locked")コマンドはその他のすべてのユーザとプロセスに対して[True](true.md "True")を返します。
+* *aTable*が読み書き状態でかつレコ－ドがロックされていない場合、カレントプロセス内でレコードを修正することができます。その際[Locked](locked.md "Locked")コマンドはその他のすべてのユーザとプロセスに対して[True](../commands/true)を返します。
 
 **Note:** [READ ONLY](read-only.md "READ ONLY")コマンドの後にLOAD RECORDを実行すると、[UNLOAD RECORD](unload-record.md "UNLOAD RECORD")コマンドを使用しなくても、レコードは自動的にアンロードされた後ロードされます。
 

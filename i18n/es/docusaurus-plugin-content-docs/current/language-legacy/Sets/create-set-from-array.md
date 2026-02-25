@@ -33,11 +33,11 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE SET FROM ARRAY.Summary-->El comando CREATE SET FROM ARRAY crea *nomCon*<!-- END REF--> a partir de: 
 
 * Un array de número de registros absolutos *arrayReg* de la tabla *tabla*,
-* o un array de booleanos *arrayReg*. En este caso, los valores del array indican si cada registro en la tabla pertenece ([True](true.md "True")) o no ([False](false.md "False")) a *nomCon*.
+* o un array de booleanos *arrayReg*. En este caso, los valores del array indican si cada registro en la tabla pertenece ([True](../commands/true)) o no ([False](../commands/false)) a *nomCon*.
 
 Cuando utilice este comando y pasa un array entero largo en *arrayReg*, todos los números en el array representan la lista de números de registros que está en *nomCon*. Si un número es inválido (por ejemplo, si un registro no ha sido creado), se genera el error -10503.
 
-Cuando utilice este comando y pase un array booleano en *arrayReg*, el elemento N del array indica si el registro "N" está ([True](true.md "True")) o no ([False](false.md "False")) en *nomCon*. En principio, el número de elementos del array debe ser igual al número de registros en la tabla. Si el array es más pequeño que el número de registros, sólo los registros definidos por el array estarán en el conjunto.
+Cuando utilice este comando y pase un array booleano en *arrayReg*, el elemento N del array indica si el registro "N" está ([True](../commands/true)) o no ([False](../commands/false)) en *nomCon*. En principio, el número de elementos del array debe ser igual al número de registros en la tabla. Si el array es más pequeño que el número de registros, sólo los registros definidos por el array estarán en el conjunto.
 
 **Nota:** con un array de booleanos, el comando utiliza los elementos 0 a N-1.
 

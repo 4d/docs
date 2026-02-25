@@ -38,11 +38,11 @@ Si el URL solicitado no está autorizado, no se carga y se genera el evento de f
 
 Los arrays *arrFiltros* y *arrAutorizRechazar* deben estar sincronizados.   
 • Cada elemento del array *arrFiltros* debe contener un URL a filtrar. Puede utilizar *\** como comodín para reemplazar uno o más caracteres.  
-• Cada elemento correspondiente en el array *arrAutorizRechazar* debe contener un booleano indicando si el URL debe ser autorizado ([True](true.md "True")) o rechazado ([False](false.md "False")). 
+• Cada elemento correspondiente en el array *arrAutorizRechazar* debe contener un booleano indicando si el URL debe ser autorizado ([True](../commands/true)) o rechazado ([False](../commands/false)). 
 
 En caso de contradicción a nivel de los parámetros (autorización y rechazo de un mismo URL), se tendrá en cuenta la última configuración. 
 
-Para desactivar el filtro de los URLs, llame el comando y pase arrays vacíos o pase, respectivamente, los valores "*\**" y [True](true.md "True") en los últimos elementos de los arrays *arrFiltros* y *arrAutorizRechazar*.
+Para desactivar el filtro de los URLs, llame el comando y pase arrays vacíos o pase, respectivamente, los valores "*\**" y [True](../commands/true) en los últimos elementos de los arrays *arrFiltros* y *arrAutorizRechazar*.
 
 Una vez ejecutado el comando, los filtros se vuelven propiedad del área Web. Si los arrays *arrFiltros* y *arrAutorizRechazar* son borrados o reinicializados, los filtros permanecen activos siempre que el comando no haya sido ejecutado nuevamente. Para conocer los filtros activos para un área, debe utilizar el comando [WA GET URL FILTERS](wa-get-url-filters.md). 
 

@@ -53,7 +53,7 @@ Once the command is executed:
    * For a column associated with a variable, a pointer to the variable,  
    * For a column associated with an expression, a Nil pointer.
 * The *arrHeaderVars* array contains pointers toward variables associated with each column header of the list box.
-* The *arrColsVisible* array contains a Boolean value for each column, indicating whether the column is visible ([True](true.md "True")) or hidden ([False](false.md "False")) in the list box.
+* The *arrColsVisible* array contains a Boolean value for each column, indicating whether the column is visible ([True](../commands/true)) or hidden ([False](../commands/false)) in the list box.
 * The *arrStyles* array contains, for an array type list box, four pointers to four arrays that allow the applying of a specific style, font color, background color and custom display control to each row of the list box. These arrays are associated with the list box in the Property List of the Design environment or using the [LISTBOX SET ARRAY](listbox-set-array.md) command. If an array is not specified for the list box, the corresponding item in *arrStyles* will contain a Nil pointer.  
 The fourth pointer corresponds either to a Boolean array (Hidden Rows Array), or to a longint array (array used to set hidden, disabled and non-selectable rows) based on the implementation used for the row control array (see *List box specific properties*).  
 For record selection, collection or entity selection type list boxes, *arrStyles* contains:  

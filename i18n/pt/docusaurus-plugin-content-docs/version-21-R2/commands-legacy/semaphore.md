@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 Lembre que os nomes dos semáforos são sensíveis as maiúsculas e minúsculas em 4D (por exemplo, o programa considera que "MySemaphore" é diferente de "mysemaphore" 
 
-O parâmetro opcional *tickCount* lhe permite especificar um tempo de espera (em ticks) se *semaforo* já está definido. Neste caso, a função esperará o que o semáforo seja liberado ou o tempo de espera para terminar antes de devolver [True](true.md "True").  
+O parâmetro opcional *tickCount* lhe permite especificar um tempo de espera (em ticks) se *semaforo* já está definido. Neste caso, a função esperará o que o semáforo seja liberado ou o tempo de espera para terminar antes de devolver [True](../commands/true).  
   
  Há dois tipos de semáforos em 4D: semáforos locais e semáforos globais.
 

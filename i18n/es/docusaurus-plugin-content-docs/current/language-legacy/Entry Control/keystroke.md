@@ -49,7 +49,7 @@ Consulte los ejemplos del comando [FILTER KEYSTROKE](filter-keystroke.md "FILTER
 
 ## Ejemplo 2 
 
-Cuando procesa un evento On Before Keystroke, usted está administrando la edición del área de texto actual (donde se encuentra el cursor), no el “valor futuro” de la fuente de datos (campo o variable) de esta área. El método de proyecto Manejo tecleo permite colocar en una segunda variable los datos introducidos en un área de texto, de manera que usted puede utilizar esta variable para efectuar diferentes acciones mientras introduce caracteres en el área. Usted pasa como primer parámetro un puntero hacia la fuente de datos del área, y como segundo parámetro un puntero hacia la segunda variable. El método devuelve el nuevo valor del área de texto en la segunda variable, y devuelve [True](true.md "True") si este valor es diferente del valor antes de la entrada del último carácter. 
+Cuando procesa un evento On Before Keystroke, usted está administrando la edición del área de texto actual (donde se encuentra el cursor), no el “valor futuro” de la fuente de datos (campo o variable) de esta área. El método de proyecto Manejo tecleo permite colocar en una segunda variable los datos introducidos en un área de texto, de manera que usted puede utilizar esta variable para efectuar diferentes acciones mientras introduce caracteres en el área. Usted pasa como primer parámetro un puntero hacia la fuente de datos del área, y como segundo parámetro un puntero hacia la segunda variable. El método devuelve el nuevo valor del área de texto en la segunda variable, y devuelve [True](../commands/true) si este valor es diferente del valor antes de la entrada del último carácter. 
 
 ```4d
   // Método de proyecto Manejo tecleo
