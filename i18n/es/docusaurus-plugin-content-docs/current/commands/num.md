@@ -101,12 +101,12 @@ Si la evaluación de *expression* da un valor indefinido, el comando devuelve 0 
 El siguiente ejemplo ilustra cómo funciona **Num** cuando se le pasa un único argumento de cadena:
 
 ```4d
-$result:=Num("ABCD") // 0
-$result:=Num("A1B2C3") // 123
-$result:=Num("123") // 123
-$result:=Num("123.4") // 123.4
-$result:=Num("–123") // –123
-$result:=Num("–123e2") // –12300
+$result:=Num("ABCD") // 0
+$result:=Num("A1B2C3") // 123
+$result:=Num("123") // 123
+$result:=Num("123.4") // 123.4
+$result:=Num("–123") // –123
+$result:=Num("–123e2") // –12300
 ```
 
 ## Ejemplo 2
@@ -114,8 +114,8 @@ $result:=Num("–123e2") // –12300
 Aquí, *\[Client\]Debt* se compara con *1000$*. El comando Num aplicado a estas comparaciones devuelve 1 ó 0\. Multiplicar 1 o 0 por una cadena repite la cadena una vez o devuelve la cadena vacía. Como resultado, el campo *[Client]Risk* obtiene el valor “Good” or “Bad”:
 
 ```4d
-  // Si el cliente debe menos de 1000, un buen riesgo.
-  // Si el cliente debe más de 1000, un riesgo malo.
+  // If client owes less than 1000, a good risk.
+  // If client owes more than 1000, a bad risk.
  [Client]Risk:=("Good"*Num([Client]Debt<1000))+("Bad"*Num([Client]Debt>=1000))
 ```
 
@@ -124,10 +124,10 @@ Aquí, *\[Client\]Debt* se compara con *1000$*. El comando Num aplicado a estas 
 Este ejemplo compara los resultados obtenidos dependiendo del separador “actual”:
 
 ```4d
- $thestring:="33,333.33"
- $thenum:=Num($thestring)
+ $thestring:="33,333.33"
+ $thenum:=Num($thestring)
   // by default, $thenum equals 33,33333 on a French system
- $thenum:=Num($thestring;".")
+ $thenum:=Num($thestring;".")
   // $thenum will be correctly evaluated regardless of the system;
   // for example, 33 333,33 on a French system
 ```

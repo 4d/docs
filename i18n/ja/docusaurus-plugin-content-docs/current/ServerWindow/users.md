@@ -18,18 +18,18 @@ title: ユーザーページ
 サーバーに接続したユーザーごとに、以下の情報がリストに表示されます:
 
 - システム: クライアントマシンのシステム (macOS/Windows)。
-- **4D User**: Name of the 4D user, or alias if set with the [`SET USER ALIAS`](../commands-legacy/set-user-alias.md) command on the user machine. パスワードシステムが有効になっていない場合、かつエイリアスも設定されていなければ、すべてのユーザーは "Designer" となります。
+- **4Dユーザー**: 4Dユーザー名、またはユーザーマシン上で [`SET USER ALIAS`](../commands-legacy/set-user-alias.md) コマンドで設定されていればエイリアス。 パスワードシステムが有効になっていない場合、かつエイリアスも設定されていなければ、すべてのユーザーは "Designer" となります。
 - **マシン名**: リモートマシンの名前。
 - **セッション名**: リモートマシン上で開かれたセッション名。
 - **IP アドレス**: リモートマシンの IPアドレス。
 - **ログイン日**: リモートマシンが接続した日付と時刻。
 - **CPU時間**: 接続してからこのユーザーが消費した CPU の時間
 - **Activity**: 4D Server がこのユーザーのために使用する時間の割合 (動的表示)。
-- **Status**: "Online" or "Sleeping" if the remote machine has switched to sleep mode (see below).
+- **ステータス**: "オンライン"、またはリモートマシンがスリープモードに切り替わっている場合には "スリープ中" と表示 (以下参照)。
 
 ### スリープ中ユーザーの管理
 
-4D Server は、サーバーマシンへのアクセスがアクティブである間にスリープモードへと切り替わってしまった 4Dリモートアプリケーションを実行しているマシンについて、特別な管理をします。 この場合、接続されている 4Dリモートアプリケーションはこの急な切断を 4D Server へと自動的に知らせます。 On the server, the connected user changes to a **Sleeping** status:
+4D Server は、サーバーマシンへのアクセスがアクティブである間にスリープモードへと切り替わってしまった 4Dリモートアプリケーションを実行しているマシンについて、特別な管理をします。 この場合、接続されている 4Dリモートアプリケーションはこの急な切断を 4D Server へと自動的に知らせます。 サーバー側では、接続されたユーザーは**スリープ中** ステータスへと変化します:
 
 ![](../assets/en/Admin/server-sleep.png)
 
@@ -37,7 +37,7 @@ title: ユーザーページ
 
 サポートされるシナリオは、以下の様なものです: たとえばお昼休みなどでリモートユーザーが作業を中断するも、サーバーとの接続は開いたままにしたとします。 マシンはスリープモードへと切り替わります。 ユーザーが戻ってきてマシンをスリープから復帰させると、4Dリモートアプリケーションは自動的にサーバーへの接続を復元するとともにセッションコンテキストも復元します。
 
-> スリープ状態のリモートセッションは、48時間活動しないとサーバーから自動的に切断されます。 You can modify this default timeout using the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) command with the `Remote connection sleep timeout` selector.
+> スリープ状態のリモートセッションは、48時間活動しないとサーバーから自動的に切断されます。 このデフォルトのタイムアウトを変更するには、[`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) コマンドの `Remote connection sleep timeout` セレクターを使用します。
 
 ## 検索/フィルターエリア
 
@@ -57,7 +57,7 @@ title: ユーザーページ
 
 クライアントマシン上でこのメッセージは警告メッセージとして表示されます。
 
-> You can perfom the same action for remote users with the [`SEND MESSAGE TO REMOTE USER`](../commands-legacy/send-message-to-remote-user.md) command.
+> リモートユーザーからも、[`SEND MESSAGE TO REMOTE USER`](../commands-legacy/send-message-to-remote-user.md) コマンドを使用することで同じアクションを実行できます。
 
 ### プロセス監視
 
@@ -67,5 +67,5 @@ title: ユーザーページ
 
 このボタンは、選択したユーザーの接続を強制的に解除するために使用します。 このボタンをクリックすると警告ダイアログが表示され、接続解除を実行するかキャンセルするか選択できます。確認ダイアログなしに選択ユーザーの接続を解除するには、**Alt**キーを押しながら、**ユーザーをドロップ** ボタンをクリックします。
 
-> You can perfom the same action for remote users with the [`DROP REMOTE USER`](../commands-legacy/drop-remote-user.md) command.
+> リモートユーザーからも、[`DROP REMOTE USER`](../commands-legacy/drop-remote-user.md) コマンドを使用することで同じアクションを実行できます。
 

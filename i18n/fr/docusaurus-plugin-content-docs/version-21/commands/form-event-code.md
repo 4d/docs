@@ -11,9 +11,9 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres | Type    |                             | Description       |
-| ---------- | ------- | --------------------------- | ----------------- |
-| Résultat   | Integer | &#8592; | Form event number |
+| Paramètres | Type    |                             | Description                      |
+| ---------- | ------- | --------------------------- | -------------------------------- |
+| Résultat   | Integer | &#8592; | Numéro d'événement du formulaire |
 
 </div>
 <!-- END REF-->
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 | Release                     | Modifications                           |
 | --------------------------- | --------------------------------------- |
-| 18                          | Renamed (Form event) |
+| 18                          | Renommé (Form event) |
 | <6 | Created                                 |
 
 </details>

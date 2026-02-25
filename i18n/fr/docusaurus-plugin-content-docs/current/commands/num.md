@@ -55,7 +55,7 @@ Il existe trois caractères réservés que **Num** traite de manière particuli�
 - Le tiret définit un nombre ou un exposant négatif (signe moins). Le tiret doit être placé devant tout caractère numérique négatif ou derrière le "e" pour un exposant. Hormis le cas du caractère "e", si le tiret est inclus dans une chaîne numérique, la partie de la chaîne se trouvant après le tiret est ignorée. Par exemple, `Num("123-456")` renvoie 123, mais `Num("-9")` renvoie -9.
 - Le e ou E désigne tout caractère numérique se trouvant à sa droite comme étant la puissance d'un exposant. Le "e" doit être inclus dans une chaîne numérique. Ainsi, `Num("123e-2")` renvoie 1.23.  
   A noter que dans le cas où la chaîne comporte plus d'un caractère "e", la conversion pourra donner des résultats différents sous macOS et sous Windows.
-- The algorithm for converting text into [real values](../Concepts/dt_number.md) is based on 13 significant digits.
+- L'algorithme de conversion du texte en [valeurs réelles] (../Concepts/dt_number.md) est basé sur 13 chiffres significatifs.
 
 #### Paramètre *séparator*
 
@@ -101,12 +101,12 @@ Si l'évaluation de *expression* donne une valeur indéfinie, la commande retour
 L'exemple suivant illustre le fonctionnement de **Num** lorsqu'une seule chaîne de caractères lui est passée en argument :
 
 ```4d
-$result:=Num("ABCD") // 0
-$result:=Num("A1B2C3") // 123
-$result:=Num("123") // 123
-$result:=Num("123.4") // 123.4
-$result:=Num("–123") // –123
-$result:=Num("–123e2") // –12300
+$result:=Num("ABCD") // 0
+$result:=Num("A1B2C3") // 123
+$result:=Num("123") // 123
+$result:=Num("123.4") // 123.4
+$result:=Num("–123") // –123
+$result:=Num("–123e2") // –12300
 ```
 
 ## Exemple 2
@@ -114,9 +114,9 @@ $result:=Num("–123e2") // –12300
 Ici, *\[Client\]Debt* est comparé à *1000$*. La commande Num appliquée à ces comparaisons renvoie 1 ou 0. La multiplication d'une chaîne par 0 ou 1 retourne soit la chaîne, soit une chaîne vide.  En définitive, le champ *\[Client\]Risk* reçoit la valeur “Good” ou “Bad” :
 
 ```4d
-  // Si le client a des dettes inférieures à 1000, le risque est acceptable.
-  // Si le client a des dettes supérieures à 1000, le risque est inacceptable.
- [Client]Risk:=("Good"*Num([Client]Debt<1000))+("Bad"*Num([Client]Debt>=1000))
+  // Si le client doit moins de 1000, le risque est acceptable.
+  // Si le client doit plus de 1000, le risque est inacceptable.
+ [Client]Risk:=("Good"*Num([Client]Debt<1000))+("Bad"*Num([Client]Debt>=1000))
 ```
 
 ## Exemple 3
@@ -124,12 +124,12 @@ Ici, *\[Client\]Debt* est comparé à *1000$*. La commande Num appliquée à ces
 Cet exemple compare les résultats obtenus en fonction du séparateur “courant” :
 
 ```4d
- $thestring:="33,333.33"
- $thenum:=Num($thestring)
-  // par défaut, $thestring vaut 33,33333 sur un système français
- $thenum:=Num($thestring;".")
-  // $thenum sera correctement évalué quel que soit le système
-  // par exemple, 33 333,33 sur un système français
+ $thestring:="33,333.33"
+ $thenum:=Num($thestring)
+  // par défaut, $thenum est égal à 33,33333 sur un système français
+$thenum:=Num($thestring;".")
+ // $thenum sera correctement évalué quel que soit le système ;
+ // par exemple, 33 333,33 sur un système français
 ```
 
 ## Exemple 4
