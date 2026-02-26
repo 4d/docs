@@ -53,14 +53,14 @@ displayed_sidebar: docs
 
 ## フォームレポートにおけるブレーク処理の起動 
 
-ブレークを使用したレポートを生成するには、[BREAK LEVEL](break-level.md "BREAK LEVEL")と[ACCUMULATE](accumulate.md "ACCUMULATE")コマンドを呼び出して、レポート中のブレーク処理を有効にしなければなりません。
+ブレークを使用したレポートを生成するには、[BREAK LEVEL](../commands/break-level)と[ACCUMULATE](accumulate.md "ACCUMULATE")コマンドを呼び出して、レポート中のブレーク処理を有効にしなければなりません。
 
 フォームレポートを印刷する前にこれらのコマンド両方を実行しなければなりません。フォームに値を表示するためにSubtotal関数は必要です。最低でも必要なブレークの数のレベルでソートしなければなりません。
 
-[BREAK LEVEL](break-level.md "BREAK LEVEL")と[ACCUMULATE](accumulate.md "ACCUMULATE")を使用する際、レポートを印刷する処理は以下のようになります:   
+[BREAK LEVEL](../commands/break-level)と[ACCUMULATE](accumulate.md "ACCUMULATE")を使用する際、レポートを印刷する処理は以下のようになります:   
 1\. 印刷するレコードを選択する  
 2\. [ORDER BY](order-by.md "ORDER BY")でレコードをソートする。最低でもブレークレベル数でソートします。  
-3\. [BREAK LEVEL](break-level.md "BREAK LEVEL")と[ACCUMULATE](accumulate.md "ACCUMULATE")を実行します。  
+3\. [BREAK LEVEL](../commands/break-level)と[ACCUMULATE](accumulate.md "ACCUMULATE")を実行します。  
 4\. [PRINT SELECTION](print-selection.md "PRINT SELECTION")でレポートを印刷します。
 
 Subtotal関数はフォームに値を表示するために必要です。

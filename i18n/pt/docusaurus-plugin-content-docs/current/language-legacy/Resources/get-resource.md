@@ -51,7 +51,7 @@ A variável sistema OK assume o valor 1 se o recurso for encontrado, do contrár
 
 ## Gestão de erros 
 
-Se não houver memória suficiente para carregar a imagem, um erro é gerado. Pode interceptar esse erro com a ajuda de um método de gestão de erros instalado pelo comando [ON ERR CALL](on-err-call.md "ON ERR CALL").
+Se não houver memória suficiente para carregar a imagem, um erro é gerado. Pode interceptar esse erro com a ajuda de um método de gestão de erros instalado pelo comando [ON ERR CALL](../commands/on-err-call).
 
 ## Ver também 
 

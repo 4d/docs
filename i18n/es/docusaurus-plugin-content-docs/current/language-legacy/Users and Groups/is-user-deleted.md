@@ -34,7 +34,7 @@ Si la cuenta de usuario no existe o ha sido borrada, Is user deleted devuelve TR
 
 ## Gestión de errores 
 
-Si no tiene privilegios de acceso para llamar al comando Is user deleted o si otro proceso abrió en el sistema de contraseñas, se genera un error de privilegios de acceso. Puede interceptar este error con un método de gestión de errores instalado por [ON ERR CALL](on-err-call.md "ON ERR CALL").
+Si no tiene privilegios de acceso para llamar al comando Is user deleted o si otro proceso abrió en el sistema de contraseñas, se genera un error de privilegios de acceso. Puede interceptar este error con un método de gestión de errores instalado por [ON ERR CALL](../commands/on-err-call).
 
 ## Ver también 
 

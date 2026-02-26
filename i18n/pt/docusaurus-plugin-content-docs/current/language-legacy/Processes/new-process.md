@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New process.Summary-->O comando New process inicia um novo processo ( na mesma máquina) e devolve o número deste processo.<!-- END REF-->
 
-Caso não foi possível criar o processo (por exemplo, se não têm suficiente memória), New process devolve zero (0) e é gerado um erro. Pode interceptar este erro utilizando um método de gestão de erros instalado pelo comando [ON ERR CALL](on-err-call.md "ON ERR CALL").
+Caso não foi possível criar o processo (por exemplo, se não têm suficiente memória), New process devolve zero (0) e é gerado um erro. Pode interceptar este erro utilizando um método de gestão de erros instalado pelo comando [ON ERR CALL](../commands/on-err-call).
 
 ### Método de processo 
 

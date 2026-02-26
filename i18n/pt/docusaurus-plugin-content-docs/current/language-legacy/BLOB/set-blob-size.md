@@ -39,7 +39,7 @@ Se você deseja alocar novos bytes para um BLOB e deseja que os bytes sejam inic
 
 ## Tratamento de erro 
 
-Se você não pode redimensionar um BLOB devido a memória insuficiente, o erro -108 é gerado. Você pode interceptar esse erro usando um método de interrupção [ON ERR CALL](on-err-call.md "ON ERR CALL").
+Se você não pode redimensionar um BLOB devido a memória insuficiente, o erro -108 é gerado. Você pode interceptar esse erro usando um método de interrupção [ON ERR CALL](../commands/on-err-call).
 
 ## Exemplo 1 
 

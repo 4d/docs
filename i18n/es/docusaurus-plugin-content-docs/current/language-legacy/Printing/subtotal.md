@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Subtotal.Summary-->Subtotal devuelve el subtotal de *valores* para el nivel de ruptura actual o anterior.<!-- END REF--> Subtotal sólo funciona cuando una selección ordenada se imprime con [PRINT SELECTION](print-selection.md "PRINT SELECTION") o utilizando Imprimir en el entorno Diseño. El parámetro *valores* debe ser de tipo real, entero, o entero largo. Usted debe asignar el resultado de la función Subtotal a una variable ubicada en el área de ruptura del formulario.
 
-**Advertencia:** **debe** ejecutar los comandos [BREAK LEVEL](break-level.md "BREAK LEVEL") y [ACCUMULATE](accumulate.md "ACCUMULATE") antes de cada informe de formulario para el cual quiera hacer proceso de ruptura y calcular subtotales. Ver la discusión al final de la descripción de este comando.
+**Advertencia:** **debe** ejecutar los comandos [BREAK LEVEL](../commands/break-level) y [ACCUMULATE](accumulate.md "ACCUMULATE") antes de cada informe de formulario para el cual quiera hacer proceso de ruptura y calcular subtotales. Ver la discusión al final de la descripción de este comando.
 
 El segundo parámetro (opcional) de la función Subtotal se utiliza para provocar saltos de página durante la impresión. Si *saltoPag* es 0, Subtotal no genera ningún salto de página. Si *saltoPag* es igual a 1, Subtotal genera un salto de página para cada nivel de ruptura 1\. Si *saltoPag* es igual a 2, Subtotal genera un salto de página para cada nivel de ruptura 1 y 2, etc.
 
@@ -40,7 +40,7 @@ El segundo parámetro (opcional) de la función Subtotal se utiliza para provoca
 
 ## Ejemplo 
 
-El siguiente ejemplo es un método de objeto en un área de ruptura de un formulario (B0, el área situada sobre el marcador B0). La variable vSalario está ubicada en el área de ruptura. La variable toma el valor del subtotal del campo Salario para este nivel de ruptura. El tratamiento de ruptura debe haber sido activado de antemano utilizando los comandos [ACCUMULATE](accumulate.md "ACCUMULATE") y [BREAK LEVEL](break-level.md "BREAK LEVEL").
+El siguiente ejemplo es un método de objeto en un área de ruptura de un formulario (B0, el área situada sobre el marcador B0). La variable vSalario está ubicada en el área de ruptura. La variable toma el valor del subtotal del campo Salario para este nivel de ruptura. El tratamiento de ruptura debe haber sido activado de antemano utilizando los comandos [ACCUMULATE](accumulate.md "ACCUMULATE") y [BREAK LEVEL](../commands/break-level).
 
 ```4d
  Case of

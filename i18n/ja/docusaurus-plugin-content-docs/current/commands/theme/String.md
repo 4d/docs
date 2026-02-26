@@ -21,13 +21,13 @@ slug: /commands/theme/String
 |[<!-- INCLUDE #_command_.Localized string.Syntax -->](../../commands/localized-string)<br/>|
 |[<!-- INCLUDE #_command_.Lowercase.Syntax -->](../../commands/lowercase)<br/>|
 |[<!-- INCLUDE #_command_.Match regex.Syntax -->](../../commands/match-regex)<br/>|
-|[<!-- INCLUDE #_command_.Num.Syntax -->](../num.md)<br/>|
+|[<!-- INCLUDE #_command_.Num.Syntax -->](../../commands/num)<br/>|
 |[<!-- INCLUDE #_command_.Position.Syntax -->](../../commands/position)<br/>|
 |[<!-- INCLUDE #_command_.Replace string.Syntax -->](../../commands/replace-string)<br/>|
 |[<!-- INCLUDE #_command_.Split string.Syntax -->](../../commands/split-string)<br/>|
-|[<!-- INCLUDE #_command_.String.Syntax -->](../string.md)<br/>|
+|[<!-- INCLUDE #_command_.String.Syntax -->](../../commands/string)<br/>|
 |[<!-- INCLUDE #_command_.Substring.Syntax -->](../../commands/substring)<br/>|
-|[<!-- INCLUDE #_command_.Trim.Syntax -->](../trim.md)<br/>|
-|[<!-- INCLUDE #_command_.Trim end.Syntax -->](../trim-end.md)<br/>|
-|[<!-- INCLUDE #_command_.Trim start.Syntax -->](../trim-start.md)<br/>|
+|[<!-- INCLUDE #_command_.Trim.Syntax -->](../../commands/trim)<br/>|
+|[<!-- INCLUDE #_command_.Trim end.Syntax -->](../../commands/trim-end)<br/>|
+|[<!-- INCLUDE #_command_.Trim start.Syntax -->](../../commands/trim-start)<br/>|
 |[<!-- INCLUDE #_command_.Uppercase.Syntax -->](../../commands/uppercase)<br/>|

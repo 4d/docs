@@ -56,7 +56,7 @@ Si pasa el parámetro opcional *membresias*, recupera los números de referencia
 
 ## Gestión de errores 
 
-Si no tiene privilegios de acceso para llamar al comando GET USER PROPERTIES o si otro proceso abrió en el sistema de contraseñas, se genera un error de privilegios de acceso. Puede interceptar este error con un método de gestión de errores instalado por [ON ERR CALL](on-err-call.md "ON ERR CALL").
+Si no tiene privilegios de acceso para llamar al comando GET USER PROPERTIES o si otro proceso abrió en el sistema de contraseñas, se genera un error de privilegios de acceso. Puede interceptar este error con un método de gestión de errores instalado por [ON ERR CALL](../commands/on-err-call).
 
 ## Ver también 
 

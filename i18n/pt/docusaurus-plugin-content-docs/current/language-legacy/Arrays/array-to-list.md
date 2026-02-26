@@ -65,7 +65,7 @@ Você quer colocar os diferentes valores de um campo em uma lista, por exemplo p
 
 ## Gestão de erros 
 
-O comando ARRAY TO LIST gera o erro *\-9957* quando é aplicado a uma lista que está atualmente sendo editada no Editor de Lista de Ambiente de Desenho.Você pode interceptar este erro usando um método de projeto [ON ERR CALL](on-err-call.md "ON ERR CALL").
+O comando ARRAY TO LIST gera o erro *\-9957* quando é aplicado a uma lista que está atualmente sendo editada no Editor de Lista de Ambiente de Desenho.Você pode interceptar este erro usando um método de projeto [ON ERR CALL](../commands/on-err-call).
 
 ## Ver também 
 

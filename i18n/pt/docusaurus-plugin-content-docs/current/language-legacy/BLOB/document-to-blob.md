@@ -56,7 +56,7 @@ OK é definido como 1 se o documento foi carregado corretamente, caso contrário
 * Um erro de E / S pode ocorrer se o documento está bloqueado, localizado em um volume fechado, ou se houver problema na leitura do documento.
 * Se não houver memória suficiente para carregar o documento, um erro -108 é gerado.
 
-Em cada caso, você pode interceptar o erro usando um método de interrupção [ON ERR CALL](on-err-call.md "ON ERR CALL").
+Em cada caso, você pode interceptar o erro usando um método de interrupção [ON ERR CALL](../commands/on-err-call).
 
 ## Ver também 
 

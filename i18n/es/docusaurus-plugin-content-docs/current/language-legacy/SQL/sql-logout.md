@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 #### Variables y conjuntos del sistema 
 
-Si la conexión se cierra correctamente, la variable sistema OK toma el valor 1; de lo contrario, toma el valor 0\. Puede interceptar este error con la ayuda de un método instalado por el comando [ON ERR CALL](on-err-call.md "ON ERR CALL").
+Si la conexión se cierra correctamente, la variable sistema OK toma el valor 1; de lo contrario, toma el valor 0\. Puede interceptar este error con la ayuda de un método instalado por el comando [ON ERR CALL](../commands/on-err-call).
 
 #### Ver también 
 

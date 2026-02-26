@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ACCUMULATE.Summary-->ACCUMULATE especifica os campos ou variáveis a acumular em um relatório realizado utilizando [PRINT SELECTION](../commands/print-selection).<!-- END REF-->.
 
-Deve executar [BREAK LEVEL](break-level.md "BREAK LEVEL") e ACCUMULATE antes de cada relatório para o qual queira utilizar quebras. Estes comandos ativam o processo de quebras para um relatório. Ver a explicação do comando [Subtotal](subtotal.md "Subtotal").
+Deve executar [BREAK LEVEL](../commands/break-level) e ACCUMULATE antes de cada relatório para o qual queira utilizar quebras. Estes comandos ativam o processo de quebras para um relatório. Ver a explicação do comando [Subtotal](subtotal.md "Subtotal").
 
 Utilize ACCUMULATE quando queira incluir sub-totais para tal os campos ou variáveis numéricas em um relatório. ACCUMULATE lhe indica a 4D que armazena os sub-totais para cada elemento especificado em objeto. Os sub-totais se acumulam para cada nível de quebra especificado pelo comando [Subtotal](../commands/subtotal).
 

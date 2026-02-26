@@ -119,7 +119,7 @@ Añadir una estrella al final de una de las dos sintaxis anteriores.
 
 ## Gestión de errores 
 
-En caso de error, el comando genera un error que puede interceptar vía un método instalado por el comando [ON ERR CALL](on-err-call.md "ON ERR CALL").
+En caso de error, el comando genera un error que puede interceptar vía un método instalado por el comando [ON ERR CALL](../commands/on-err-call).
 
 
 ## Propiedades

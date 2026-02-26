@@ -40,7 +40,7 @@ Este comando sólo puede utilizarse en el contexto de aplicaciones monousuario. 
 
 * Si este comando se ejecuta en una base de datos que funciona sin archivo de historial, el comando no hace nada y devuelve el error 1403\.
 * Si este comando se ejecuta en una base cliente/servidor, el comando no hace nada y devuelve el error 1421\.  
-Puede interceptar estos errores utilizando un método de manejo de errores instalado por el comando [ON ERR CALL](on-err-call.md "ON ERR CALL").
+Puede interceptar estos errores utilizando un método de manejo de errores instalado por el comando [ON ERR CALL](../commands/on-err-call).
 
 ## Ver también 
 

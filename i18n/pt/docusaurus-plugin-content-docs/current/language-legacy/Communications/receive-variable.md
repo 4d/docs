@@ -27,7 +27,7 @@ No modo interpretado, se a variável não existe antes da chamada a RECEIVE VARI
   
 2\. Este comando não suporta variáveis de array. Se você quiser enviar e receber arrays de um documento ou através de uma porta serial, use os *Comandos BLOB*.
 
-3\. Durante a execução das RECEIVE VARIABLE, o usuário pode interromper a recepção pressionando Ctrl-Alt-Shift (Windows) ou Command + Option + Shift (Macintosh). Esta interrupção gera um erro -9994, que você pode pegar com um método de tratamento de erros instalado usando [ON ERR CALL](on-err-call.md "ON ERR CALL"). Normalmente, você só precisa manipular a interrupção de uma recepção ao comunicar-se através de uma porta serial.
+3\. Durante a execução das RECEIVE VARIABLE, o usuário pode interromper a recepção pressionando Ctrl-Alt-Shift (Windows) ou Command + Option + Shift (Macintosh). Esta interrupção gera um erro -9994, que você pode pegar com um método de tratamento de erros instalado usando [ON ERR CALL](../commands/on-err-call). Normalmente, você só precisa manipular a interrupção de uma recepção ao comunicar-se através de uma porta serial.
 
 ## Exemplo 
 

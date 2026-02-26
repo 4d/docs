@@ -88,7 +88,7 @@ La variable sistema OK toma el valor 1 si el comando ha sido ejecutado correctam
 
 ## Gestión de errores 
 
-Si el valor pasado por una *opción* es incorrecto o si no está disponible en la impresora, el comando devuelve un error (que puede interceptar utilizando un método de gestión de errores instalado por el comando [ON ERR CALL](on-err-call.md "ON ERR CALL")) y el valor actual de la opción permanece sin cambios. 
+Si el valor pasado por una *opción* es incorrecto o si no está disponible en la impresora, el comando devuelve un error (que puede interceptar utilizando un método de gestión de errores instalado por el comando [ON ERR CALL](../commands/on-err-call)) y el valor actual de la opción permanece sin cambios. 
 
 ## Ver también 
 

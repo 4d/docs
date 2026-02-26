@@ -550,7 +550,7 @@ An internet connection is required on the user machine at the first launch of th
 
 Select this option to build a ready-to-use application (stand-alone or client-server), embedding automatically available [deployment licenses](../Admin/licenses.md#deployment-licenses). 
 
-When building the application, 4D will automatically integrate necessary license(s) found in the [Licenses folder](../commands/get-4d-folder.md#licenses-folder) of the machine. If several valid licenses are available, 4D will use the most appropriate, in the following order:
+When building the application, 4D will automatically integrate necessary license(s) found in the [Licenses folder](../commands/get-4d-folder#licenses-folder) of the machine. If several valid licenses are available, 4D will use the most appropriate, in the following order:
 
 1. OEM licenses, or
 2. 4D Desktop Business licenses, or

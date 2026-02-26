@@ -72,7 +72,7 @@ Creating a web session for a REST request may require that a license is availabl
 
 :::
 
-カレントセッションの `Session` オブジェクトは、あらゆる Webプロセスのコードにおいて [`Session`](commands/session.md) コマンドを介してアクセスできます。
+カレントセッションの `Session` オブジェクトは、あらゆる Webプロセスのコードにおいて [`Session`](../commands/session) コマンドを介してアクセスできます。
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
 
@@ -91,7 +91,7 @@ Creating a web session for a REST request may require that a license is availabl
 
 このタイムアウトは、`Session` オブジェクトの [`.idleTimeout`](API/SessionClass.md#idletimeout) プロパティで設定できます (タイムアウトは 60分未満にはできません)。また、[`Open datastore`](../commands/open-datastore)コマンドの *connectionInfo* パラメーターを使っても設定できます。
 
-Webセッションが閉じられた後に [`Session`](commands/session.md) コマンドが呼び出されると:
+Webセッションが閉じられた後に [`Session`](../commands/session) コマンドが呼び出されると:
 
 - `Session` オブジェクトには権限が含まれていません (ゲストセッション)。
 - [`.storage`](API/SessionClass.md#storage) プロパティは空です。

@@ -59,7 +59,7 @@ By default, 4D returns the value of the property in its original type. You can "
 The command returns the value of the *property*. Several types of data are supported. Note that:
 
 * a pointer is returned as such; it can be evaluated using the [JSON Stringify](../commands/json-stringify) command.
-* depending on your [database date settings](./set-database-parameter.md#dates-inside-objects-85), dates in object attributes are stored either with date type or text type. In order for **OB Get** to correctly interpret a date stored as a text, you need to use the `Is date` constant (see example 5).
+* depending on your [database date settings](../commands/set-database-parameter#dates-inside-objects-85), dates in object attributes are stored either with date type or text type. In order for **OB Get** to correctly interpret a date stored as a text, you need to use the `Is date` constant (see example 5).
 * in real values, the decimal separator is always a period "."
 * times are returned as a number. Times are stored in seconds by default in objects (see compatibility note below). Use the Is time constant to get a 4D formatted time value.
 
@@ -125,7 +125,7 @@ Modifying the age of an employee twice:
 
 ## Example 5 
 
-When retrieving a date, the resulting value depends on the [current database date settings](./set-database-parameter.md#dates-inside-objects-85).
+When retrieving a date, the resulting value depends on the [current database date settings](../commands/set-database-parameter#dates-inside-objects-85).
 
 * By default (or `Date type` selected):
 

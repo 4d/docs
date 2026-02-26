@@ -358,12 +358,12 @@ Paper size attributes are used to specify the dimensions or model of paper to us
 ||width|longint|Width of the paper, in hundredths of an inch.|
 ||kind|text|Name of standard paper size (e.g., A2, A4, legal, etc.) returned by `Get Print Option`. Default value = "letter"|
 
-* If the paper size is specified using the `height` and `width` properties,  [`VP Get print info`](../commands/vp-get-print-info.md) returns a paper size with `custom` as value for `kind`.
+* If the paper size is specified using the `height` and `width` properties,  [`VP Get print info`](./commands/vp-get-print-info.md) returns a paper size with `custom` as value for `kind`.
 
 * If you set the paper size using the `kind` property, you can use either:
   * one of the formats in the [SpreadJS format list](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
   * one of the formats returned by the [`PRINT OPTION VALUES`](../commands/print-option-values) command.
-    In that case, [`VP Get print info`](../commands/vp-get-print-info.md) returns the corresponding format with the height and width.
+    In that case, [`VP Get print info`](./commands/vp-get-print-info.md) returns the corresponding format with the height and width.
 
 ### Scale
   

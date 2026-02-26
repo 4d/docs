@@ -52,7 +52,7 @@ SET PROCESS VARIABLE acepta todo tipo de proceso de variable proceso o interproc
 * Arrays de todo tipo. Para escribir un array como un todo de un proceso a otro, utilice el comando [VARIABLE TO VARIABLE](variable-to-variable.md "VARIABLE TO VARIABLE"). Nota, sin embargo, SET PROCESS VARIABLE le permite escribir el elemento de un array.
 * No es posible escribir el elemento de un array de punteros o el elemento de un array de dos dimensiones.
 
-El proceso de destino debe ser un proceso usuario; no puede ser un proceso kernel. Si el proceso de destino no existe, se genera un error. Puede encontrar este error utilizando un método de gestión de errores instalado con [ON ERR CALL](on-err-call.md "ON ERR CALL").
+El proceso de destino debe ser un proceso usuario; no puede ser un proceso kernel. Si el proceso de destino no existe, se genera un error. Puede encontrar este error utilizando un método de gestión de errores instalado con [ON ERR CALL](../commands/on-err-call).
 
 ## Ejemplo 1 
 

@@ -212,7 +212,7 @@ Cada botão chama ao método de projeto MULTINIVEL passando um ponteiro ao campo
 ```
 
   
-Sem importar como se defina a ordenação, se a operação de ordenação vai a tomar algum tempo, 4D mostra automaticamente uma mensagem que contenha um termômetro de progressão. Estas mensagens podem ser ativadas e desativadas utilizando os comandos [MESSAGES ON](messages-on.md "MESSAGES ON") e [MESSAGES OFF](messages-off.md "MESSAGES OFF"). Se for mostrado o termômetro de progresso, o usuário pode clicar no botão Deter para interromper a ordenação. Se a ordenação é terminada corretamente, OK toma o valor 1\. Do contrário, se a ordenação for interrompida, OK toma o valor 0 (zero).
+Sem importar como se defina a ordenação, se a operação de ordenação vai a tomar algum tempo, 4D mostra automaticamente uma mensagem que contenha um termômetro de progressão. Estas mensagens podem ser ativadas e desativadas utilizando os comandos [MESSAGES ON](messages-on.md "MESSAGES ON") e [MESSAGES OFF](../commands/messages-off). Se for mostrado o termômetro de progresso, o usuário pode clicar no botão Deter para interromper a ordenação. Se a ordenação é terminada corretamente, OK toma o valor 1\. Do contrário, se a ordenação for interrompida, OK toma o valor 0 (zero).
 
 ## Ver também 
 

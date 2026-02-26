@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.ABORT.Summary-->ABORT コマンドは、 [ON ERR CALL](on-err-call.md "ON ERR CALL")コマンドでインストールされたエラー処理プロジェクトメソッド内で使用します。<!-- END REF-->
+<!--REF #_command_.ABORT.Summary-->ABORT コマンドは、 [ON ERR CALL](../commands/on-err-call)コマンドでインストールされたエラー処理プロジェクトメソッド内で使用します。<!-- END REF-->
 
 エラー処理プロジェクトメソッドが存在しない場合、エラーが発生すると（例えばデータベースエンジンエラー）、4Dは標準のエラーダイアログボックスを表示し、コードの実行が中断されます。実行しているコードにより、次のようになります:
 

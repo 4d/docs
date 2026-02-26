@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SQL GET LAST ERROR.Summary-->El comando SQL GET LAST ERROR devuelve la información relacionada con el último error encontrado durante la ejecución de un comando ODBC.<!-- END REF--> El error puede venir de la aplicación 4D, la red, la fuente ODBC, etc. 
 
-Este comando generalmente debe llamarse en el contexto de un método de gestión de errores instalado utilizando el comando [ON ERR CALL](on-err-call.md "ON ERR CALL").
+Este comando generalmente debe llamarse en el contexto de un método de gestión de errores instalado utilizando el comando [ON ERR CALL](../commands/on-err-call).
 
 * El parámetro *errCode* devuelve el código del error.
 * El parámetro *errText* devuelve el texto del error.

@@ -73,7 +73,7 @@ Creating a web session for a REST request may require that a license is availabl
 
 :::
 
-The `Session` object of the current session can then be accessed through the [`Session`](commands/session.md) command in the code of any web processes.
+The `Session` object of the current session can then be accessed through the [`Session`](../commands/session) command in the code of any web processes.
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
 
@@ -92,7 +92,7 @@ O tempo de vida de um cookie inativo é 60 minutos por padrão, o que significa 
 
 This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the *connectionInfo* parameter of the [`Open datastore`](../commands/open-datastore) command.
 
-Quando uma sessão Web é fechada, se o comando [`Session`](commands/session.md) for chamado posteriormente:
+Quando uma sessão Web é fechada, se o comando [`Session`](../commands/session) for chamado posteriormente:
 
 - el objeto `Session` no contiene privilegios (es una sesión de invitado)
 - a propriedade [`storage`](API/SessionClass.md#storage) está vazia

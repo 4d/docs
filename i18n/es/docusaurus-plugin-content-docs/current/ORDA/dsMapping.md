@@ -7,7 +7,7 @@ La tecnología ORDA se basa en un mapeo automático de una [estructura de base d
 
 ## Mapeo de la estructura
 
-Cuando llama a un datastore usando los comandos [`ds`](commands/ds.md) u [`Open datastore`](commands/open-datastore.md), 4D hace referencia automáticamente a tablas y campos de la estructura 4D correspondiente como propiedades del objeto devuelto [datastore](#datastore):
+Cuando llama a un datastore usando los comandos [`ds`](../commands/ds) u [`Open datastore`](../commands/open-datastore), 4D hace referencia automáticamente a tablas y campos de la estructura 4D correspondiente como propiedades del objeto devuelto [datastore](#datastore):
 
 - Las tablas se asignan a [dataclasses](#dataclass).
 - Los campos se asignan a [atributos de almacenamiento](#storage-and-relation-attributes).

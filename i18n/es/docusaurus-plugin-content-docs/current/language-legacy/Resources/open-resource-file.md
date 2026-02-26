@@ -104,7 +104,7 @@ Si el archivo de recursos se abre correctamente utilizando la caja de diálogo e
 
 ## Gestión de errores 
 
-Si el archivo de recursos no se pudo abrir por un problema del recurso o de E/S, se genera un error. Puede interceptar este error con un método de gestión de errores instalado por el comando [ON ERR CALL](on-err-call.md "ON ERR CALL").
+Si el archivo de recursos no se pudo abrir por un problema del recurso o de E/S, se genera un error. Puede interceptar este error con un método de gestión de errores instalado por el comando [ON ERR CALL](../commands/on-err-call).
 
 ## Ver también 
 

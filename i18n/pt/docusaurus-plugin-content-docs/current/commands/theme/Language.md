@@ -10,7 +10,7 @@ slug: /commands/theme/Language
 |---|
 |[<!-- INCLUDE #_command_.4D.Syntax -->](../../commands/4d)<br/>|
 |[<!-- INCLUDE #_command_.Action info.Syntax -->](../../commands/action-info)<br/>|
-|[<!-- INCLUDE #_command_.Call chain.Syntax -->](../call-chain.md)<br/>|
+|[<!-- INCLUDE #_command_.Call chain.Syntax -->](../../commands/call-chain)<br/>|
 |[<!-- INCLUDE #_command_.cs.Syntax -->](../../commands/cs)<br/>|
 |[<!-- INCLUDE #_command_.Command name.Syntax -->](../../commands/command-name)<br/>|
 |[<!-- INCLUDE #_command_.Copy parameters.Syntax -->](../../commands/copy-parameters)<br/>|

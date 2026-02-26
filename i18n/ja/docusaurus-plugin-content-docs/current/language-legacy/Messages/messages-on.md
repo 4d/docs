@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.MESSAGES ON.Summary-->[MESSAGES OFF](messages-off.md "MESSAGES OFF") コマンドの説明を参照してください。<!-- END REF-->
+<!--REF #_command_.MESSAGES ON.Summary-->[MESSAGES OFF](../commands/messages-off) コマンドの説明を参照してください。<!-- END REF-->
 
 ## 参照 
 

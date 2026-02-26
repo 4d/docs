@@ -33,7 +33,7 @@ displayed_sidebar: docs
 呼び出し後、BLOBが解凍された場合は、システム変数OKは1に設定されます。BLOBが解凍できなかった場合は、システム変数OKは0に設定されます。
 
 メモリ不足で解凍できない場合は、エラーが表示されず、メソッド実行をレジュームします。  
-(BLOBが圧縮されていなかったり壊れていたりするなど) その他の場合、-10600のエラーを生成します。このエラーは、[ON ERR CALL](on-err-call.md "ON ERR CALL")コマンドでとらえることができます。
+(BLOBが圧縮されていなかったり壊れていたりするなど) その他の場合、-10600のエラーを生成します。このエラーは、[ON ERR CALL](../commands/on-err-call)コマンドでとらえることができます。
 
 BLOBが圧縮されているかを検証するには、[BLOB PROPERTIES](blob-properties.md "BLOB PROPERTIES") コマンドを使用します。
 

@@ -51,7 +51,7 @@ Cuando utiliza un array booleano con este comando, el elemento X del array indic
 
 ## Gestión de errores 
 
-Si un número de registro no es válido (registro no creado), se genera el error -10503\. Puede interceptar este error con la ayuda de un método instalado por el comando [ON ERR CALL](on-err-call.md "ON ERR CALL").
+Si un número de registro no es válido (registro no creado), se genera el error -10503\. Puede interceptar este error con la ayuda de un método instalado por el comando [ON ERR CALL](../commands/on-err-call).
 
 ## Ver también 
 

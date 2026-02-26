@@ -28,7 +28,7 @@ El **Método base On Web Legacy Close Session** es llamado por el servidor web d
 * cuando se alcanza el periodo máximo de inactividad del proceso de la sesión (480 minutos por defecto, modificable vía el comando [WEB SET OPTION](../commands/web-set-option)),
 * cuando se llama al comando [WEB LEGACY CLOSE SESSION](../commands/web-legacy-close-session).
 
-Cuando se llama a este método base, el contexto de la sesión (variables y selecciones generadas por el usuario) es aún valido. Esto significa que puede guardar los datos relativos a la sesión para poder usarlos posteriormente, más específicamente utilizando [On Web Connection](./on-web-connection-database-method.md).
+Cuando se llama a este método base, el contexto de la sesión (variables y selecciones generadas por el usuario) es aún valido. Esto significa que puede guardar los datos relativos a la sesión para poder usarlos posteriormente, más específicamente utilizando [On Web Connection](../commands/on-web-connection-database-method).
 
 **Nota:** en el contexto de una sesión 4D Mobile (que puede generar varios procesos), el **Método base On Web Legacy Close Session** se llama para cada proceso web cerrado, lo que permite guardar todo tipo de datos (variables, selección, etc.) generados por el proceso de sesión 4D Mobile.  
   

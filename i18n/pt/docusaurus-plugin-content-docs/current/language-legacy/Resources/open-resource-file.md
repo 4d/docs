@@ -106,7 +106,7 @@ Se o arquivo de recursos for aberto corretamente usando a caixa de diálogo padr
 
 ## Gestão de erros 
 
-Se o arquivo de recursos não puder ser aberto por um problema do recurso ou de E/S, um erro é gerado. Pode interceptar esse erro com um método de gestão de erros instalado pelo comando [ON ERR CALL](on-err-call.md "ON ERR CALL").
+Se o arquivo de recursos não puder ser aberto por um problema do recurso ou de E/S, um erro é gerado. Pode interceptar esse erro com um método de gestão de erros instalado pelo comando [ON ERR CALL](../commands/on-err-call).
 
 ## Ver também 
 

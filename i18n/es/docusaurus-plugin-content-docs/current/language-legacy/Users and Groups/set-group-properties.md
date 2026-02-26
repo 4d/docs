@@ -60,7 +60,7 @@ Para eliminar todos los miembros de un grupo, pase un array vacío en el paráme
 
 ## Gestión de errores 
 
-Si no tiene privilegios de acceso para llamar al comando Set group properties o si otro proceso abrió en el sistema de contraseñas, se genera un error de privilegios de acceso. Puede interceptar este error con un método de gestión de errores instalado por [ON ERR CALL](on-err-call.md "ON ERR CALL").
+Si no tiene privilegios de acceso para llamar al comando Set group properties o si otro proceso abrió en el sistema de contraseñas, se genera un error de privilegios de acceso. Puede interceptar este error con un método de gestión de errores instalado por [ON ERR CALL](../commands/on-err-call).
 
 ## Ver también 
 

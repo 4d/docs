@@ -46,7 +46,7 @@ La ubicación de la carpeta raíz puede expresarse en sintaxis HTML (tipo URL), 
 * Será necesario reiniciar el servidor web para que la nueva carpeta de raíz sea tenida en cuenta.
 * Puede saber en cualquier momento la ubicación de la carpeta raíz utilizando el comando Get 4D folder.
 
-Si especifica una ruta de acceso invalida, se generará un error del administrador archivos del sistema operativo. Puede interceptar el error con un método [ON ERR CALL](on-err-call.md "ON ERR CALL"). Si el método muestra una caja de diálogo de alerta o un mensaje, aparecerá del lado del navegador.
+Si especifica una ruta de acceso invalida, se generará un error del administrador archivos del sistema operativo. Puede interceptar el error con un método [ON ERR CALL](../commands/on-err-call). Si el método muestra una caja de diálogo de alerta o un mensaje, aparecerá del lado del navegador.
 
 ## Ver también 
 

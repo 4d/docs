@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.SET TIMEOUT.Summary-->O comando SET TIMEOUT especifica quanto tempo um comando de porta serial tem para terminar.<!-- END REF--> Se o comando da porta serial não for concluído dentro do tempo especificado, em *segundos*, o comando da porta serial é cancelado, um erro -9990 é gerado, e a variável de sistema OK é definida como 0\. Você pode pegar o erro com um método de tratamento de erros instalado usando [ON ERR CALL](on-err-call.md "ON ERR CALL").
+<!--REF #_command_.SET TIMEOUT.Summary-->O comando SET TIMEOUT especifica quanto tempo um comando de porta serial tem para terminar.<!-- END REF--> Se o comando da porta serial não for concluído dentro do tempo especificado, em *segundos*, o comando da porta serial é cancelado, um erro -9990 é gerado, e a variável de sistema OK é definida como 0\. Você pode pegar o erro com um método de tratamento de erros instalado usando [ON ERR CALL](../commands/on-err-call).
 
 Note que o tempo é o tempo total permitido para o comando ser executado, e não o tempo entre caracteres recebidos. Para cancelar uma configuração anterior e parar de monitorar a comunicação da porta serial, utilize uma configuração de 0 para os *segundos*.
 

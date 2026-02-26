@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.ABORT.Summary-->El comando ABORT se utiliza en un método de proyecto de gestión de errores instalado por el comando [ON ERR CALL](on-err-call.md "ON ERR CALL").<!-- END REF-->
+<!--REF #_command_.ABORT.Summary-->El comando ABORT se utiliza en un método de proyecto de gestión de errores instalado por el comando [ON ERR CALL](../commands/on-err-call).<!-- END REF-->
 
 Si no instala un método de proyecto de gestión de errores, cuando ocurra un error (por ejemplo, un error de la base de datos) 4D mostrará su caja de diálogo de error estándar y luego interrumpirá la ejecución de su código. Si el código en ejecución es:
 

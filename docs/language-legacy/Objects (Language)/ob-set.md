@@ -42,7 +42,7 @@ Note that the *property* parameter is case sensitive.
 In the *value* parameter, pass the value you want to set for the property. Several data types are supported. Note that:
 
 * if you pass a pointer, it is kept as is; it is evaluated using the [JSON Stringify](../commands/json-stringify) command.
-* if you pass a date, it will be stored with date type or as text in ISO format depending on your current [database date settings](./set-database-parameter.md#dates-inside-objects-85). 
+* if you pass a date, it will be stored with date type or as text in ISO format depending on your current [database date settings](../commands/set-database-parameter#dates-inside-objects-85). 
 * if you pass a time, it is stored as a number of seconds (Real) in *object*.
 * if you pass a language object or a collection, the command uses a reference and not a copy. Any modification applied to the object or collection will be reported to all references.
 * starting with 4D v16 R4, you can pass a picture of any supported type (see *Native Formats Supported* ).

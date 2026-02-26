@@ -56,7 +56,7 @@ La variable sistema OK toma el valor 1 si el documento se carga correctamente, d
 * Un error de E/S puede ocurrir si el documento está bloqueado, si está ubicado en un volumen bloqueado, o si hay un problema en la lectura del documento.
 * Si no hay suficiente memoria para cargar el documento, se genera un error -108.
 
-En todos los casos, puede interceptar el error utilizando un método de interrupción [ON ERR CALL](on-err-call.md "ON ERR CALL").
+En todos los casos, puede interceptar el error utilizando un método de interrupción [ON ERR CALL](../commands/on-err-call).
 
 ## Ver también 
 

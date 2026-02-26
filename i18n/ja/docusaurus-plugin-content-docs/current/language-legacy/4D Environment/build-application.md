@@ -58,7 +58,7 @@ displayed_sidebar: docs
 
 ## エラー処理 
 
-コマンドの実行に失敗すると、[ON ERR CALL](on-err-call.md "ON ERR CALL") コマンドで割り込み可能なエラーが生成されます。
+コマンドの実行に失敗すると、[ON ERR CALL](../commands/on-err-call) コマンドで割り込み可能なエラーが生成されます。
 
 ## 参照 
 

@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DELETE USER.Summary-->DELETE USER コマンドは、引数 *userID* に渡したユニークなユーザID番号を持つユーザを削除します。<!-- END REF--> この場合、必ず[GET USER LIST](get-user-list.md "GET USER LIST") コマンドによって返された有効なユーザID番号を渡さなければなりません。 
 
-ユーザアカウントが存在しない場合や既に削除されている場合は、エラーコード -9979が生成されます。[ON ERR CALL](on-err-call.md "ON ERR CALL")コマンドを用いてインストールされたエラー処理メソッドでこのエラーを受け取ることができます。
+ユーザアカウントが存在しない場合や既に削除されている場合は、エラーコード -9979が生成されます。[ON ERR CALL](../commands/on-err-call)コマンドを用いてインストールされたエラー処理メソッドでこのエラーを受け取ることができます。
 
 DesignerとAdministratorのみがユーザを削除できます。AdministratorはDesignerによって作成されたユーザを削除するこはできません。
 

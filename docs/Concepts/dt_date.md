@@ -71,10 +71,10 @@ Using the [`Date`](../commands/date) command:
  $date4D:=Date($dateIso)
  ```
 
-Note the difference between these two solutions: [`JSON Parse`](../commands/json-parse) respects the [conversion mode set using the `SET DATABASE PARAMETER`](../commands/set-database-parameter.md#dates-inside-objects-85) (if any), while [`Date`](../commands/date) is not subject to this. Conversion using the [`Date`](../commands/date) command always takes the local time zone into account.
+Note the difference between these two solutions: [`JSON Parse`](../commands/json-parse) respects the [conversion mode set using the `SET DATABASE PARAMETER`](../commands/set-database-parameter#dates-inside-objects-85) (if any), while [`Date`](../commands/date) is not subject to this. Conversion using the [`Date`](../commands/date) command always takes the local time zone into account.
 
 :::note
 
- When the current date storage setting is [`date type`](../commands/set-database-parameter.md#dates-inside-objects-85) (default), JSON date strings in "YYYY-MM-DD" format are automatically handled as date values by the [`JSON Parse`](../commands/json-parse) and [`Date`](../commands/date) commands. 
+ When the current date storage setting is [`date type`](../commands/set-database-parameter#dates-inside-objects-85) (default), JSON date strings in "YYYY-MM-DD" format are automatically handled as date values by the [`JSON Parse`](../commands/json-parse) and [`Date`](../commands/date) commands. 
 
  :::

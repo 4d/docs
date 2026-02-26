@@ -89,7 +89,7 @@ A variável sistema OK toma o valor 1 se o comando for executado corretamente; d
 
 ## Gestão de erros 
 
-Se o valor passado por uma *opção* é incorreto ou se não estiver disponível na impressora, o comando devolve um erro (que pode interceptar utilizando um método de gestão de erros instalado pelo comando [ON ERR CALL](on-err-call.md "ON ERR CALL")) e o valor atual da opção permanece sem mudanças. 
+Se o valor passado por uma *opção* é incorreto ou se não estiver disponível na impressora, o comando devolve um erro (que pode interceptar utilizando um método de gestão de erros instalado pelo comando [ON ERR CALL](../commands/on-err-call)) e o valor atual da opção permanece sem mudanças. 
 
 ## Ver também 
 

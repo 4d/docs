@@ -24,8 +24,8 @@ slug: /commands/theme/Windows
 |[<!-- INCLUDE #_command_.MAXIMIZE WINDOW.Syntax -->](../../commands/maximize-window)<br/>|
 |[<!-- INCLUDE #_command_.MINIMIZE WINDOW.Syntax -->](../../commands/minimize-window)<br/>|
 |[<!-- INCLUDE #_command_.Next window.Syntax -->](../../commands/next-window)<br/>|
-|[<!-- INCLUDE #_command_.Open form window.Syntax -->](../open-form-window.md)<br/>|
-|[<!-- INCLUDE #_command_.Open window.Syntax -->](../open-window.md)<br/>|
+|[<!-- INCLUDE #_command_.Open form window.Syntax -->](../../commands/open-form-window)<br/>|
+|[<!-- INCLUDE #_command_.Open window.Syntax -->](../../commands/open-window)<br/>|
 |[<!-- INCLUDE #_command_.REDRAW WINDOW.Syntax -->](../../commands/redraw-window)<br/>|
 |[<!-- INCLUDE #_command_.REDUCE RESTORE WINDOW.Syntax -->](../../commands/reduce-restore-window)<br/>|
 |[<!-- INCLUDE #_command_.RESIZE FORM WINDOW.Syntax -->](../../commands/resize-form-window)<br/>|

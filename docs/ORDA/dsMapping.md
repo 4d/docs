@@ -8,7 +8,7 @@ The ORDA technology is based upon an automatic mapping of an underlying [databas
 
 ## Structure mapping 
 
-When you call a datastore using the [`ds`](commands/ds.md) or the [`Open datastore`](commands/open-datastore.md) command, 4D automatically references tables and fields of the corresponding 4D structure as properties of the returned [datastore](#datastore) object:
+When you call a datastore using the [`ds`](../commands/ds) or the [`Open datastore`](../commands/open-datastore) command, 4D automatically references tables and fields of the corresponding 4D structure as properties of the returned [datastore](#datastore) object:
 
 *	Tables are mapped to [dataclasses](#dataclass).
 *	Fields are mapped to [storage attributes](#storage-and-relation-attributes).

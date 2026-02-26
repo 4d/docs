@@ -30,9 +30,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ACCUMULATE.Summary-->ACCUMULATEは、[PRINT SELECTION](print-selection.md "PRINT SELECTION")コマンドを使ってプリントするフォームレポート中で累計するフィールドまたは変数を指定します。<!-- END REF-->
 
-ブレーク処理を行うレポートを印刷する前に、[BREAK LEVEL](break-level.md "BREAK LEVEL")コマンドとACCUMULATEコマンドを実行しなければなりません。これらのコマンドはレポートに対するブレーク処理を有効にします。[Subtotal](subtotal.md "Subtotal")コマンドの説明を参照してください。
+ブレーク処理を行うレポートを印刷する前に、[BREAK LEVEL](../commands/break-level)コマンドとACCUMULATEコマンドを実行しなければなりません。これらのコマンドはレポートに対するブレーク処理を有効にします。[Subtotal](subtotal.md "Subtotal")コマンドの説明を参照してください。
 
-フォームレポートに数値フィールドまたは変数の小計を求める場合に、ACCUMULATEコマンドを使用します。ACCUMULATEは、4Dに対して、*data*毎の小計を記憶するように指示します。小計は[BREAK LEVEL](break-level.md "BREAK LEVEL")コマンドで指定された各ブレークレベルに対して累計されます。
+フォームレポートに数値フィールドまたは変数の小計を求める場合に、ACCUMULATEコマンドを使用します。ACCUMULATEは、4Dに対して、*data*毎の小計を記憶するように指示します。小計は[BREAK LEVEL](../commands/break-level)コマンドで指定された各ブレークレベルに対して累計されます。
 
 [PRINT SELECTION](print-selection.md "PRINT SELECTION")コマンドを使ってレポートを印刷する前に、ACCUMULATEコマンドを実行します。
 
@@ -40,7 +40,7 @@ displayed_sidebar: docs
 
 ## 例題 
 
-[BREAK LEVEL](break-level.md "BREAK LEVEL") コマンドの例題参照
+[BREAK LEVEL](../commands/break-level) コマンドの例題参照
 
 ## 参照 
 

@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB GET HTTP HEADER.Summary-->The **WEB GET HTTP HEADER** command returns either a string or two arrays, containing the HTTP header used for the currently processed request.<!-- END REF-->
 
-This command can be called from within any method ([On Web Authentication](./on-web-authentication-database-method.md), [On Web Connection](./on-web-connection-database-method.md)), method called by "*/4DACTION*") executed in a Web process... 
+This command can be called from within any method ([On Web Authentication](../commands/on-web-authentication-database-method), [On Web Connection](../commands/on-web-connection-database-method)), method called by "*/4DACTION*") executed in a Web process... 
 
 * **First syntax:** **WEB GET HTTP HEADER** **(header)**
 When this syntax is used, the result returned in the *header* variable is as follows: 
@@ -97,7 +97,7 @@ The following method allows getting any HTTP request header field content:
  $cookie:=GetHTTPField("Cookie")
 ```
 
-* You can send different pages according to the language set in the browser (for example in the [On Web Connection](./on-web-connection-database-method.md) database method)):
+* You can send different pages according to the language set in the browser (for example in the [On Web Connection](../commands/on-web-connection-database-method) database method)):
 
 ```4d
  $language:=GetHTTPField("Accept-Language")

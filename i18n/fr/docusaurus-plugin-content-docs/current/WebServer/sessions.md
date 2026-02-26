@@ -73,7 +73,7 @@ Creating a web session for a REST request may require that a license is availabl
 
 :::
 
-L'objet `Session` de la session en cours peut ensuite être manipulé via la commande [`Session`](commands/session.md) dans le code de n'importe quel process web.
+L'objet `Session` de la session en cours peut ensuite être manipulé via la commande [`Session`](../commands/session) dans le code de n'importe quel process web.
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
 
@@ -92,7 +92,7 @@ La durée de vie d'un cookie inactif est de 60 minutes par défaut, ce qui signi
 
 Ce délai peut être défini en utilisant la propriété [`.idleTimeout`](API/SessionClass.md#idletimeout) de l'objet `Session` (le délai ne peut être inférieur à 60 minutes) ou le paramètre *connectionInfo* de la commande [`Open datastore`](../commands/open-datastore).
 
-Lorsqu'une session web est fermée, si la commande [`Session`](commands/session.md) est appelée par la suite :
+Lorsqu'une session web est fermée, si la commande [`Session`](../commands/session) est appelée par la suite :
 
 - l'objet `Session` ne contient pas de privilèges (c'est une session Guest)
 - la propriété [`storage`](API/SessionClass.md#storage) est vide

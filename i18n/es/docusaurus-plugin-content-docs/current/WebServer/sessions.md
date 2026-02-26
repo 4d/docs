@@ -73,7 +73,7 @@ La creación de una sesión web para una petición REST puede requerir que una l
 
 :::
 
-Se puede acceder al objeto `Session` de la sesión actual a través del comando [`Session`](commands/session.md) en el código de todo proceso web.
+Se puede acceder al objeto `Session` de la sesión actual a través del comando [`Session`](../commands/session) en el código de todo proceso web.
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
 
@@ -92,7 +92,7 @@ La vida útil de una cookie inactiva es de 60 minutos por defecto, lo que signif
 
 Este tiempo de espera puede establecerse utilizando la propiedad [`.idleTimeout`](API/SessionClass.md#idletimeout) del objeto `Session` (el tiempo de espera no puede ser inferior a 60 minutos) o el parámetro *connectionInfo* del comando [`Open datastore`](../commands/open-datastore).
 
-Cuando se cierra una sesión web, si después se llama al comando [`Session`](commands/session.md):
+Cuando se cierra una sesión web, si después se llama al comando [`Session`](../commands/session):
 
 - el objeto `Session` no contiene privilegios (es una sesión de invitado)
 - la propiedad [`.storage`](API/SessionClass.md#storage) está vacía

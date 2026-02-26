@@ -107,8 +107,8 @@ If you create a collection literal containing a single element, make sure you do
 
 You can create two types of collections:
 
-- regular (non-shared) collections, using the [`New collection`](commands/new-collection.md) command or collection literal syntax (`[]`). These collections can be edited without any specific access control but cannot be shared between processes. 
-- shared collections, using the [`New shared collection`](commands/new-shared-collection.md) command. These collections can be shared between processes, including preemptive threads. Access to these collections is controlled by [`Use...End use`](Concepts/shared.md#useend-use) structures. 
+- regular (non-shared) collections, using the [`New collection`](../commands/new-collection) command or collection literal syntax (`[]`). These collections can be edited without any specific access control but cannot be shared between processes. 
+- shared collections, using the [`New shared collection`](../commands/new-shared-collection) command. These collections can be shared between processes, including preemptive threads. Access to these collections is controlled by [`Use...End use`](Concepts/shared.md#useend-use) structures. 
 
 For more information, refer to the [Shared objects and collections](shared.md) section.
 

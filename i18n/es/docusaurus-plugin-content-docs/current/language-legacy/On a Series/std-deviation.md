@@ -54,7 +54,7 @@ El siguiente método se llama para imprimir los registros en la selección y act
  PRINT SELECTION([Tabla1])
 ```
 
-**Nota:** el parámetro del comando [BREAK LEVEL](break-level.md "BREAK LEVEL") debe ser igual al número de rupturas de su informe. Para mayor información sobre rupturas, consulte los comandos de impresión. 
+**Nota:** el parámetro del comando [BREAK LEVEL](../commands/break-level) debe ser igual al número de rupturas de su informe. Para mayor información sobre rupturas, consulte los comandos de impresión. 
 
 ## Ejemplo 2 
 

@@ -33,7 +33,7 @@ displayed_sidebar: docs
 Após a chamada, a variável OK é definida como 1 se o BLOB foi expandido. Se a expansão não pode ser realizada, a variável OK é definido como 0.
 
 Se a expansão não pôde ser realizada devido à falta de memória, nenhum erro é gerado e o método continua a sua execução.   
-Em qualquer outro caso (ou seja, o BLOB não tenha sido comprimido ou está danificado), o erro -10600 é gerado. Esse erro pode ser tratado usando o comando [ON ERR CALL](on-err-call.md "ON ERR CALL"). 
+Em qualquer outro caso (ou seja, o BLOB não tenha sido comprimido ou está danificado), o erro -10600 é gerado. Esse erro pode ser tratado usando o comando [ON ERR CALL](../commands/on-err-call). 
 
 Para verificar se o BLOB foi compactado, use o comando [BLOB PROPERTIES](blob-properties.md "BLOB PROPERTIES").
 

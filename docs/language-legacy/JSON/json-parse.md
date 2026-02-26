@@ -55,7 +55,7 @@ By default, if you omit the *type* parameter, 4D attempts to convert the value o
 
 * Real type values must be included in the range ±10.421e±10
 * In text type values, all special characters must be escaped, including quotes (see examples)
-* By default when you use the `Is date` constant, the command considers that a date string contains a local time and not GMT. You can modify this setting using the [`Dates inside objects` date setting of the `SET DATABASE PARAMETER`(./set-database-parameter.md#dates-inside-objects-85) command.
+* By default when you use the `Is date` constant, the command considers that a date string contains a local time and not GMT. You can modify this setting using the [`Dates inside objects` date setting of the `SET DATABASE PARAMETER`(../commands/set-database-parameter#dates-inside-objects-85) command.
 * If the current date setting is `Date type` (deafult), JSON date strings in "YYYY-MM-DD" format are automatically returned as date values by the **JSON Parse** command. 
 * Time type values can be returned from numbers in strings. By default, the parsed value is considered a number of seconds.
 

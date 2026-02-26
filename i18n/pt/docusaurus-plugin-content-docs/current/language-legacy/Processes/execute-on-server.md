@@ -40,7 +40,7 @@ Utilize Execute on server para iniciar um procedimento armazenado. Para maior in
 
 Se chamado Execute on server em uma máquina cliente, o comando devolve um número de processo negativo. Se chamada Execute on server na máquina servidor, Execute on server devolve um número de processo positivo. Note que chamar [New process](new-process.md "New process") na máquina servidor faz o mesmo que chamar Execute on server.
 
-Se o processo não foi possível criar (por exemplo, se não há suficiente memória), Execute on server devolve (0) e é gerado um erro. Pode interceptar este erro utilizando um método de gestão de erros instalado pelo comando [ON ERR CALL](on-err-call.md "ON ERR CALL").
+Se o processo não foi possível criar (por exemplo, se não há suficiente memória), Execute on server devolve (0) e é gerado um erro. Pode interceptar este erro utilizando um método de gestão de erros instalado pelo comando [ON ERR CALL](../commands/on-err-call).
 
 ### Método de processo 
 

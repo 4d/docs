@@ -123,7 +123,7 @@ Estas são as regras a considerar para a construção de pesquisas múltiplas:
   
  Sem importar de que maneira tenha sido definida uma pesquisa:  
   
-* Se a operação de pesquisa vai tomar algum tempo, 4D mostra automaticamente uma mensagem que contenha um termômetro de progresso. Estas mensagens podem ser ativadas ou desativadas utilizando os comandos [MESSAGES ON](messages-on.md "MESSAGES ON") e [MESSAGES OFF](messages-off.md "MESSAGES OFF"). Se for mostrado o termômetro de progresso, o usuário pode clicar no botao Parar para interromper a pesquisa. Se a pesquisa é completada, OK toma o valor 1\. Do contrário, se a pesquisa for interrompida, OK toma o valor 0 (zero).
+* Se a operação de pesquisa vai tomar algum tempo, 4D mostra automaticamente uma mensagem que contenha um termômetro de progresso. Estas mensagens podem ser ativadas ou desativadas utilizando os comandos [MESSAGES ON](messages-on.md "MESSAGES ON") e [MESSAGES OFF](../commands/messages-off). Se for mostrado o termômetro de progresso, o usuário pode clicar no botao Parar para interromper a pesquisa. Se a pesquisa é completada, OK toma o valor 1\. Do contrário, se a pesquisa for interrompida, OK toma o valor 0 (zero).
 * Se os campos indexados são especificados, a pesquisa é otimizada cada vez que seja possível (se busca primeiro nos campo indexados) reduzindo ao máximo a duração da operação. O comando usa os índices compostos para as pesquisas utilizando *AND* (&
 
 ## Exemplo 5 

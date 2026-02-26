@@ -40,7 +40,7 @@ Execute on serverコマンドを使用してストアドプロシージャを開
 
 クライアントマシンでExecute on serverを実行した場合、負のプロセス番号が返されます。サーバマシンでExecute on serverを実行すると、正のプロセス参照番号が返されます。サーバマシン上で[New process](new-process.md "New process")コマンドを実行することは、Execute on serverを実行することと同じです。
 
-プロセスが作成できない場合 (例えばメモリ不足) 、Execute on serverは0を返し、エラーが発生します。このエラーは[ON ERR CALL](on-err-call.md "ON ERR CALL")でインストールしたエラー処理メソッドを使用してとらえることができます。
+プロセスが作成できない場合 (例えばメモリ不足) 、Execute on serverは0を返し、エラーが発生します。このエラーは[ON ERR CALL](../commands/on-err-call)でインストールしたエラー処理メソッドを使用してとらえることができます。
 
 ### プロセスメソッド 
 

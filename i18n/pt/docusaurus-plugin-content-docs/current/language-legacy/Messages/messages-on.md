@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.MESSAGES ON.Summary-->Ver a descrição do comando [MESSAGES OFF](messages-off.md "MESSAGES OFF").<!-- END REF-->
+<!--REF #_command_.MESSAGES ON.Summary-->Ver a descrição do comando [MESSAGES OFF](../commands/messages-off).<!-- END REF-->
 
 ## Ver também 
 

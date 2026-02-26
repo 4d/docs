@@ -58,7 +58,7 @@ OK é definido como 1 se o documento está escrito corretamente, caso contrário
 * O espaço em disco pode ser insuficiente para escrever o novo conteúdo do documento.
 * Erros de E / S pode ocorrer durante a redação do documento.
 
-Em todos os casos, você pode interceptar o erro usando um método [ON ERR CALL](on-err-call.md "ON ERR CALL").
+Em todos os casos, você pode interceptar o erro usando um método [ON ERR CALL](../commands/on-err-call).
 
 ## Ver também 
 

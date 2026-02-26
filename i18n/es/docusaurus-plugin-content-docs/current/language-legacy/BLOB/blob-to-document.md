@@ -55,7 +55,7 @@ La variable sistema OK toma el valor 1 si el documento está escrito correctamen
 * El espacio del disco puede ser insuficiente para escribir los nuevos contenidos del documento.
 * Los errores E/S pueden ocurrir mientras escribe el documento.
 
-En todos los casos, puede interceptar el error utilizando un método de interrupción [ON ERR CALL](on-err-call.md "ON ERR CALL").
+En todos los casos, puede interceptar el error utilizando un método de interrupción [ON ERR CALL](../commands/on-err-call).
 
 ## Ver también 
 

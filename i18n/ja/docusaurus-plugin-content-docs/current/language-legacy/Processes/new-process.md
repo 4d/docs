@@ -45,7 +45,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New process.Summary-->New process コマンドは、(同じマシン上で) 新しいプロセスを開始し、そのプロセス参照番号を返します。<!-- END REF-->
 
-プロセスが作成できない場合 (例えば、メモリ不足) 、New processは0を返し、エラーが発生します。このエラーは[ON ERR CALL](on-err-call.md "ON ERR CALL")でインストールされたエラー処理メソッドを使用してとらえることができます。
+プロセスが作成できない場合 (例えば、メモリ不足) 、New processは0を返し、エラーが発生します。このエラーは[ON ERR CALL](../commands/on-err-call)でインストールされたエラー処理メソッドを使用してとらえることができます。
 
 ### プロセスメソッド 
 

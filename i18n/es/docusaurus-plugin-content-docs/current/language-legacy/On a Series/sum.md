@@ -60,7 +60,7 @@ El siguiente método se llama para imprimir los registros en la selección y par
  PRINT SELECTION([Empleados])
 ```
 
-**Nota:** el parámetro para el comando [BREAK LEVEL](break-level.md "BREAK LEVEL") debe ser igual al número de rupturas en su informe. Para mayor información sobre el proceso de rupturas consulte los comandos de impresión. 
+**Nota:** el parámetro para el comando [BREAK LEVEL](../commands/break-level) debe ser igual al número de rupturas en su informe. Para mayor información sobre el proceso de rupturas consulte los comandos de impresión. 
 
 #### Ejemplo 2 
 

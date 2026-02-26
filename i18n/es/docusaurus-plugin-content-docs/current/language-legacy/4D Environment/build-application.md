@@ -58,7 +58,7 @@ La variable sistema OK toma el valor 1 si el comando se ha ejecutado correctamen
 
 ## Gestión de errores 
 
-Si el comando falla, se genera un error que puede interceptar con la ayuda del comando [ON ERR CALL](on-err-call.md "ON ERR CALL").
+Si el comando falla, se genera un error que puede interceptar con la ayuda del comando [ON ERR CALL](../commands/on-err-call).
 
 ## Ver también 
 

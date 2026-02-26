@@ -33,7 +33,7 @@ displayed_sidebar: docs
 Después de llamar el comando, la variable OK toma el valor 1 si el BLOB ha sido descomprimido. Si no pudo realizar la expansión, la variable OK toma el valor 0.
 
 Si la expansión no se pudo realizar por falta de memoria, no se genera un error y el método reasume su ejecución.   
-En otros casos, (el BLOB no ha sido comprimido o está dañado), se genera el error -10600\. Este error puede interceptarse utilizando el comando [ON ERR CALL](on-err-call.md "ON ERR CALL"). 
+En otros casos, (el BLOB no ha sido comprimido o está dañado), se genera el error -10600\. Este error puede interceptarse utilizando el comando [ON ERR CALL](../commands/on-err-call). 
 
 Para verificar si un BLOB ha sido comprimido, utilice el comando [BLOB PROPERTIES](blob-properties.md "BLOB PROPERTIES").
 

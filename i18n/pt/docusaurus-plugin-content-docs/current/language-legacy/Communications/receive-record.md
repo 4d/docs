@@ -26,7 +26,7 @@ O registro completo é recebido. Isso significa que imagens e armazenados em BLO
 **Notas:**
 
 1. Se você receber um registro de um documento utilizando este comando, o documento deve ter sido aberto usando o comando [SET CHANNEL](set-channel.md "SET CHANNEL"). Você não pode usar RECEIVE RECORD com um documento aberto com [Open document](open-document.md "Open document"), [Append document](append-document.md "Append document") ou [Create document](create-document.md "Create document").
-2. Durante a execução de RECEIVE RECORD, o usuário pode interromper a recepção pressionando Ctrl-Alt-Shift (Windows) ou Command + Option + Shift (Macintosh). Esta interrupção gera um erro -9994, que você pode pegar com um método de tratamento de erros instalado usando [ON ERR CALL](on-err-call.md "ON ERR CALL"). Normalmente, você só precisa manipular a interrupção de uma recepção ao comunicar-se através de uma porta serial.
+2. Durante a execução de RECEIVE RECORD, o usuário pode interromper a recepção pressionando Ctrl-Alt-Shift (Windows) ou Command + Option + Shift (Macintosh). Esta interrupção gera um erro -9994, que você pode pegar com um método de tratamento de erros instalado usando [ON ERR CALL](../commands/on-err-call). Normalmente, você só precisa manipular a interrupção de uma recepção ao comunicar-se através de uma porta serial.
 
 ## Exemplo 
 

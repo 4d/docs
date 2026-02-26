@@ -65,7 +65,7 @@ You want to put the distinct values of a field into a list, for example to creat
 
 ## Error management 
 
-An error *\-9957* is generated when ARRAY TO LIST is applied to a list that is currently being edited in the Design environment List Editor. You can catch this error using an [ON ERR CALL](on-err-call.md "ON ERR CALL") project method.
+An error *\-9957* is generated when ARRAY TO LIST is applied to a list that is currently being edited in the Design environment List Editor. You can catch this error using an [ON ERR CALL](../commands/on-err-call) project method.
 
 ## See also 
 

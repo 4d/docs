@@ -114,7 +114,7 @@ vfound:=Match regex( pattern;mytext; start; pos\_found\_array; length\_found\_ar
 
 ## エラー管理 
 
-エラーのイベントでは、コマンドはエラーを生成しますが、[ON ERR CALL](on-err-call.md "ON ERR CALL")コマンドを用いてインストールされたメソッドで、これを検知することができます。
+エラーのイベントでは、コマンドはエラーを生成しますが、[ON ERR CALL](../commands/on-err-call)コマンドを用いてインストールされたメソッドで、これを検知することができます。
 
 
 ## プロパティ

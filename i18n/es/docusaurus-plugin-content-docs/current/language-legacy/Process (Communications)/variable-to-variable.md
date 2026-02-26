@@ -51,7 +51,7 @@ VARIABLE TO VARIABLE acepta todo tipo de variable proceso o interproceso de dest
 * Arrays de punteros
 * Arrays de dos dimensiones
 
-El proceso de destino debe ser un proceso usuario; no puede ser un proceso kernel. Si el proceso de destino no existe, se genera un error. Usted puede encontrar este error utilizando un método de gestión de errores instalado con [ON ERR CALL](on-err-call.md "ON ERR CALL").
+El proceso de destino debe ser un proceso usuario; no puede ser un proceso kernel. Si el proceso de destino no existe, se genera un error. Usted puede encontrar este error utilizando un método de gestión de errores instalado con [ON ERR CALL](../commands/on-err-call).
 
 ## Ejemplo 
 

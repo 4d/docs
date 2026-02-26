@@ -26,7 +26,7 @@ Se recibe el registro completo. Esto significa que también se reciben todos los
 **Notas:**
 
 1. Si recibe un registro de un documento utilizando este comando, el documento debe haber sido abierto utilizando el comando [SET CHANNEL](set-channel.md "SET CHANNEL"). No puede utilizar RECEIVE RECORD con un documento abierto con [Open document](open-document.md "Open document"), [Append document](append-document.md "Append document") o [Create document](create-document.md "Create document").
-2. Durante la ejecución de RECEIVE RECORD, el usuario puede interrumpir la recepción presionando Ctrl-Alt-Mayús (Windows) o Comando-Opción-Mayús (Macintosh). Esta interrupción genera un error -9994 que puede interceptar con el método instalado por el comando [ON ERR CALL](on-err-call.md "ON ERR CALL"). Generalmente, sólo debe manejar la interrupción de una recepción durante una comunicación sobre puerto serial.
+2. Durante la ejecución de RECEIVE RECORD, el usuario puede interrumpir la recepción presionando Ctrl-Alt-Mayús (Windows) o Comando-Opción-Mayús (Macintosh). Esta interrupción genera un error -9994 que puede interceptar con el método instalado por el comando [ON ERR CALL](../commands/on-err-call). Generalmente, sólo debe manejar la interrupción de una recepción durante una comunicación sobre puerto serial.
 
 ## Ejemplo 
 

@@ -14,7 +14,7 @@ slug: /commands/theme/Tools
 |[<!-- INCLUDE #_command_.Choose.Syntax -->](../../commands/choose)<br/>|
 |[<!-- INCLUDE #_command_.Generate digest.Syntax -->](../../commands/generate-digest)<br/>|
 |[<!-- INCLUDE #_command_.Generate password hash.Syntax -->](../../commands/generate-password-hash)<br/>|
-|[<!-- INCLUDE #_command_.Generate UUID.Syntax -->](../generate-uuid.md)<br/>|
+|[<!-- INCLUDE #_command_.Generate UUID.Syntax -->](../../commands/generate-uuid)<br/>|
 |[<!-- INCLUDE #_command_.GET MACRO PARAMETER.Syntax -->](../../commands/get-macro-parameter)<br/>|
 |[<!-- INCLUDE #_command_.LAUNCH EXTERNAL PROCESS.Syntax -->](../../commands/launch-external-process)<br/>|
 |[<!-- INCLUDE #_command_.Load 4D View document.Syntax -->](../../commands/load-4d-view-document)<br/>|

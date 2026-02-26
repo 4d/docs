@@ -90,7 +90,7 @@ title: Commands by name
 <a id="C"><b>C</b></a>
 
 [`Cache info`](../commands/cache-info)<br/>
-[`Call chain`](call-chain.md)<br/>
+[`Call chain`](../commands/call-chain)<br/>
 [`CALL FORM`](../commands/call-form)<br/>
 [`CALL SUBFORM CONTAINER`](../commands/call-subform-container)<br/>
 [`CALL WORKER`](../commands/call-worker)<br/>
@@ -118,10 +118,10 @@ title: Commands by name
 [`CLOSE WINDOW`](../commands/close-window)<br/>
 [`COLLECTION TO ARRAY`](../commands/collection-to-array)<br/>
 [`COMBINE PICTURES`](../commands/combine-pictures)<br/>
-[`Command name`](command-name.md)<br/>
+[`Command name`](../commands/command-name)<br/>
 [`Compact data file`](../commands/compact-data-file)<br/>
 [`Compare strings`](../commands/compare-strings)<br/>
-[`Compile project`](compile-project.md)<br/>
+[`Compile project`](../commands/compile-project)<br/>
 [`COMPONENT LIST`](../commands/component-list)<br/>
 [`COMPRESS BLOB`](../commands/compress-blob)<br/>
 [`CONFIRM`](../commands/confirm)<br/>
@@ -151,10 +151,10 @@ title: Commands by name
 [`Count users`](../commands/count-users)<br/>
 [`CREATE ALIAS`](../commands/create-alias)<br/>
 [`CREATE DATA FILE`](../commands/create-data-file)<br/>
-[`Create deployment license`](create-deployment-license.md)<br/>
+[`Create deployment license`](../commands/create-deployment-license)<br/>
 [`Create document`](../commands/create-document)<br/>
 [`CREATE EMPTY SET`](../commands/create-empty-set)<br/>
-[`Create entity selection`](create-entity-selection.md)<br/>
+[`Create entity selection`](../commands/create-entity-selection)<br/>
 [`CREATE FOLDER`](../commands/create-folder)<br/>
 [`CREATE INDEX`](../commands/create-index)<br/>
 [`Create menu`](../commands/create-menu)<br/>
@@ -164,7 +164,7 @@ title: Commands by name
 [`CREATE SET`](../commands/create-set)<br/>
 [`CREATE SET FROM ARRAY`](../commands/create-set-from-array)<br/>
 [`CREATE THUMBNAIL`](../commands/create-thumbnail)<br/>
-[`cs`](cs.md)<br/>
+[`cs`](../commands/cs)<br/>
 [`Current client authentication`](../commands/current-client-authentication)<br/>
 [`Current date`](../commands/current-date)<br/>
 [`Current default table`](../commands/current-default-table)<br/>
@@ -207,7 +207,7 @@ title: Commands by name
 [`Delete string`](../commands/delete-string)<br/>
 [`DELETE USER`](../commands/delete-user)<br/>
 [`DESCRIBE QUERY EXECUTION`](../commands/describe-query-execution)<br/>
-[`DIALOG`](dialog.md)<br/>
+[`DIALOG`]((../commands/dialog))<br/>
 [`DIFFERENCE`](../commands/difference)<br/>
 [`DISABLE MENU ITEM`](../commands/disable-menu-item)<br/>
 [`Discover data key`](../commands/discover-data-key)<br/>
@@ -259,7 +259,7 @@ title: Commands by name
 [`DRAG WINDOW`](../commands/drag-window)<br/>
 [`Drop position`](../commands/drop-position)<br/>
 [`DROP REMOTE USER`](../commands/drop-remote-user)<br/>
-[`ds`](ds.md)<br/>
+[`ds`](../commands/ds)<br/>
 [`DUPLICATE RECORD`](../commands/duplicate-record)<br/>
 [`Dynamic pop up menu`](../commands/dynamic-pop-up-menu)<br/>
 
@@ -296,7 +296,7 @@ title: Commands by name
 [`False`](../commands/false)<br/>
 [`Field`](../commands/field)<br/>
 [`Field name`](../commands/field-name)<br/>
-[`File`](file.md)<br/>
+[`File`](../commands/file)<br/>
 [`FILTER EVENT`](../commands/filter-event)<br/>
 [`FILTER KEYSTROKE`](../commands/filter-keystroke)<br/>
 [`Find in array`](../commands/find-in-array)<br/>
@@ -307,16 +307,16 @@ title: Commands by name
 [`FIRST RECORD`](../commands/first-record)<br/>
 [`FLUSH CACHE`](../commands/flush-cache)<br/>
 [`Focus object`](../commands/focus-object)<br/>
-[`Folder`](folder.md)<br/>
+[`Folder`](../commands/folder)<br/>
 [`FOLDER LIST`](../commands/folder-list)<br/>
 [`Font file`](../commands/font-file)<br/>
 [`FONT LIST`](../commands/font-list)<br/>
 [`FONT STYLE LIST`](../commands/font-style-list)<br/>
-[`Form`](form.md)<br/>
+[`Form`](../commands/form)<br/>
 [`FORM Convert to dynamic`](../commands/form-convert-to-dynamic)<br/>
-[`FORM EDIT`](form-edit.md)<br/>
-[`FORM Event`](form-event.md)<br/>
-[`Form event code`](form-event-code.md)<br/>
+[`FORM EDIT`](../commands/form-edit)<br/>
+[`FORM Event`](../commands/form-event)<br/>
+[`Form event code`](../commands/form-event-code)<br/>
 [`FORM FIRST PAGE`](../commands/form-first-page)<br/>
 [`FORM Get color scheme`](../commands/form-get-color-scheme)<br/>
 [`FORM Get current page`](../commands/form-get-current-page)<br/>
@@ -328,7 +328,7 @@ title: Commands by name
 [`FORM GET VERTICAL RESIZING`](../commands/form-get-vertical-resizing)<br/>
 [`FORM GOTO PAGE`](../commands/form-goto-page)<br/>
 [`FORM LAST PAGE`](../commands/form-last-page)<br/>
-[`FORM LOAD`](form-load.md)<br/>
+[`FORM LOAD`](../commands/form-load)<br/>
 [`FORM NEXT PAGE`](../commands/form-next-page)<br/>
 [`FORM PREVIOUS PAGE`](../commands/form-previous-page)<br/>
 [`FORM SCREENSHOT`](../commands/form-screenshot)<br/>
@@ -338,10 +338,10 @@ title: Commands by name
 [`FORM SET OUTPUT`](../commands/form-set-output)<br/>
 [`FORM SET SIZE`](../commands/form-set-size)<br/>
 [`FORM SET VERTICAL RESIZING`](../commands/form-set-vertical-resizing)<br/>
-[`FORM theme`](form-theme.md) **new 4D 21 R2**<br/>
+[`FORM theme`](../commands/form-theme) **new 4D 21 R2**<br/>
 [`FORM UNLOAD`](../commands/form-unload)<br/>
-[`Formula`](formula.md)<br/>
-[`Formula from string`](formula-from-string.md)<br/>
+[`Formula`](../commands/formula)<br/>
+[`Formula from string`](../commands/formula-from-string)<br/>
 [`Frontmost process`](../commands/frontmost-process)<br/>
 [`Frontmost window`](../commands/frontmost-window)<br/>
 
@@ -351,7 +351,7 @@ title: Commands by name
 [`Generate digest`](../commands/generate-digest)<br/>
 [`GENERATE ENCRYPTION KEYPAIR`](../commands/generate-encryption-keypair)<br/>
 [`Generate password hash`](../commands/generate-password-hash)<br/>
-[`Generate UUID`](generate-uuid.md) **modified 4D 20 R10**<br/>
+[`Generate UUID`](../commands/generate-uuid) **modified 4D 20 R10**<br/>
 [`Get 4D file`](../commands/get-4d-file)<br/>
 [`Get 4D folder`](../commands/get-4d-folder)<br/>
 [`Get adjusted blobs cache priority`](../commands/get-adjusted-blobs-cache-priority)<br/>
@@ -464,7 +464,7 @@ title: Commands by name
 [`HTTP Get`](../commands/http-get)<br/>
 [`HTTP Get certificates folder`](../commands/http-get-certificates-folder)<br/>
 [`HTTP GET OPTION`](../commands/http-get-option)<br/>
-[`HTTP Parse message`](http-parse-message.md)<br/>
+[`HTTP Parse message`](../commands/http-parse-message)<br/>
 [`HTTP Request`](../commands/http-request)<br/>
 [`HTTP SET CERTIFICATES FOLDER`](../commands/http-set-certificates-folder)<br/>
 [`HTTP SET OPTION`](../commands/http-set-option)<br/>
@@ -472,7 +472,7 @@ title: Commands by name
 <a id="I"><b>I</b></a>
 
 [`IDLE`](../commands/idle)<br/>
-[`IMAP New transporter`](imap-new-transporter.md)<br/>
+[`IMAP New transporter`](../commands/imap-new-transporter)<br/>
 [`IMPORT DATA`](../commands/import-data)<br/>
 [`IMPORT DIF`](../commands/import-dif)<br/>
 [`IMPORT STRUCTURE`](../commands/import-structure)<br/>
@@ -522,7 +522,7 @@ title: Commands by name
 [`JSON Stringify`](../commands/json-stringify)<br/>
 [`JSON Stringify array`](../commands/json-stringify-array)<br/>
 [`JSON TO SELECTION`](../commands/json-to-selection)<br/>
-[`JSON Validate`](json-validate.md)<br/>
+[`JSON Validate`](../commands/json-validate)<br/>
 
 <a id="K"><b>K</b></a>
 
@@ -531,7 +531,7 @@ title: Commands by name
 
 <a id="L"><b>L</b></a>
 
-[`Last errors`](last-errors.md)<br/>
+[`Last errors`](../commands/last-errors)<br/>
 [`Last field number`](../commands/last-field-number)<br/>
 [`Last query path`](../commands/last-query-path)<br/>
 [`Last query plan`](../commands/last-query-plan)<br/>
@@ -544,7 +544,7 @@ title: Commands by name
 [`LDAP SEARCH ALL`](../commands/ldap-search-all)<br/>
 [`Length`](../commands/length)<br/>
 [`Level`](../commands/level)<br/>
-[`License info`](license-info.md)<br/>
+[`License info`](../commands/license-info)<br/>
 [`License usage`](../commands/license-usage)<br/>
 [`List item parent`](../commands/list-item-parent)<br/>
 [`List item position`](../commands/list-item-position)<br/>
@@ -575,7 +575,7 @@ title: Commands by name
 [`LISTBOX Get number of rows`](../commands/listbox-get-number-of-rows)<br/>
 [`LISTBOX GET OBJECTS`](../commands/listbox-get-objects)<br/>
 [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information)<br/>
-[`LISTBOX Get property`](listbox-get-property.md) **modified 4D 20 R10**<br/>
+[`LISTBOX Get property`](../commands/listbox-get-property) **modified 4D 20 R10**<br/>
 [`LISTBOX Get row color`](../commands/listbox-get-row-color)<br/>
 [`LISTBOX Get row color as number`](../commands/listbox-get-row-color-as-number)<br/>
 [`LISTBOX Get row font style`](../commands/listbox-get-row-font-style)<br/>
@@ -603,7 +603,7 @@ title: Commands by name
 [`LISTBOX SET HEADERS HEIGHT`](../commands/listbox-set-headers-height)<br/>
 [`LISTBOX SET HIERARCHY`](../commands/listbox-set-hierarchy)<br/>
 [`LISTBOX SET LOCKED COLUMNS`](../commands/listbox-set-locked-columns)<br/>
-[`LISTBOX SET PROPERTY`](listbox-set-property.md) **modified 4D 20 R10**<br/>
+[`LISTBOX SET PROPERTY`](../commands/listbox-set-property) **modified 4D 20 R10**<br/>
 [`LISTBOX SET ROW COLOR`](../commands/listbox-set-row-color)<br/>
 [`LISTBOX SET ROW FONT STYLE`](../commands/listbox-set-row-font-style)<br/>
 [`LISTBOX SET ROW HEIGHT`](../commands/listbox-set-row-height)<br/>
@@ -634,9 +634,9 @@ title: Commands by name
 [`Macintosh command down`](../commands/macintosh-command-down)<br/>
 [`Macintosh control down`](../commands/macintosh-control-down)<br/>
 [`Macintosh option down`](../commands/macintosh-option-down)<br/>
-[`MAIL Convert from MIME`](mail-convert-from-mime.md)<br/>
-[`MAIL Convert to MIME`](mail-convert-to-mime.md)<br/>
-[`MAIL New attachment`](mail-new-attachment.md)<br/>
+[`MAIL Convert from MIME`](../commands/mail-convert-from-mime)<br/>
+[`MAIL Convert to MIME`](../commands/mail-convert-to-mime)<br/>
+[`MAIL New attachment`](../commands/mail-new-attachment)<br/>
 [`Match regex`](../commands/match-regex)<br/>
 [`Max`](../commands/max)<br/>
 [`MAXIMIZE WINDOW`](../commands/maximize-window)<br/>
@@ -683,22 +683,22 @@ title: Commands by name
 
 <a id="N"><b>N</b></a>
 
-[`New collection`](new-collection.md)<br/>
+[`New collection`](../commands/new-collection)<br/>
 [`New data key`](../commands/new-data-key)<br/>
 [`New list`](../commands/new-list)<br/>
-[`New log file`](new-log-file.md)<br/>
+[`New log file`](../commands/new-log-file)<br/>
 [`New object`](../commands/new-object)<br/>
 [`New process`](../commands/new-process)<br/>
-[`New shared collection`](new-shared-collection.md)<br/>
+[`New shared collection`](../commands/new-shared-collection)<br/>
 [`New shared object`](../commands/new-shared-object)<br/>
-[`New signal`](new-signal.md)<br/>
+[`New signal`](../commands/new-signal)<br/>
 [`NEXT RECORD`](../commands/next-record)<br/>
 [`Next window`](../commands/next-window)<br/>
 [`NO DEFAULT TABLE`](../commands/no-default-table)<br/>
 [`Not`](../commands/not)<br/>
 [`NOTIFY RESOURCES FOLDER MODIFICATION`](../commands/notify-resources-folder-modification)<br/>
 [`Null`](../commands/null)<br/>
-[`Num`](num.md)<br/>
+[`Num`](../commands/num)<br/>
 
 <a id="O"><b>O</b></a>
 
@@ -729,7 +729,7 @@ title: Commands by name
 [`OBJECT GET COORDINATES`](../commands/object-get-coordinates)<br/>
 [`OBJECT Get corner radius`](../commands/object-get-corner-radius)<br/>
 [`OBJECT Get data source`](../commands/object-get-data-source)<br/>
-[`OBJECT Get data source formula`](object-get-data-source-formula.md) **new 4D 20 R10**<br/> 
+[`OBJECT Get data source formula`](../commands/object-get-data-source-formula) **new 4D 20 R10**<br/> 
 [`OBJECT GET DRAG AND DROP OPTIONS`](../commands/object-get-drag-and-drop-options)<br/>
 [`OBJECT Get enabled`](../commands/object-get-enabled)<br/>
 [`OBJECT Get enterable`](../commands/object-get-enterable)<br/>
@@ -778,7 +778,7 @@ title: Commands by name
 [`OBJECT SET COORDINATES`](../commands/object-set-coordinates)<br/>
 [`OBJECT SET CORNER RADIUS`](../commands/object-set-corner-radius)<br/>
 [`OBJECT SET DATA SOURCE`](../commands/object-set-data-source)<br/>
-[`OBJECT SET DATA SOURCE FORMULA`](object-set-data-source-formula.md) **new 4D 20 R10**<br/> 
+[`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula) **new 4D 20 R10**<br/> 
 [`OBJECT SET DRAG AND DROP OPTIONS`](../commands/object-set-drag-and-drop-options)<br/>
 [`OBJECT SET ENABLED`](../commands/object-set-enabled)<br/>
 [`OBJECT SET ENTERABLE`](../commands/object-set-enterable)<br/>
@@ -825,17 +825,17 @@ title: Commands by name
 [`OPEN COLOR PICKER`](../commands/open-color-picker)<br/>
 [`OPEN DATA FILE`](../commands/open-data-file)<br/>
 [`OPEN DATABASE`](../commands/open-database)<br/>
-[`Open datastore`](open-datastore.md)<br/>
+[`Open datastore`](../commands/open-datastore)<br/>
 [`Open document`](../commands/open-document)<br/>
 [`OPEN FONT PICKER`](../commands/open-font-picker)<br/>
-[`Open form window`](open-form-window.md)<br/>
+[`Open form window`](../commands/open-form-window)<br/>
 [`OPEN PRINTING JOB`](../commands/open-printing-job)<br/>
 [`Open resource file`](../commands/open-resource-file)<br/>
 [`OPEN RUNTIME EXPLORER`](../commands/open-runtime-explorer)<br/>
 [`OPEN SECURITY CENTER`](../commands/open-security-center)<br/>
 [`OPEN SETTINGS WINDOW`](../commands/open-settings-window)<br/>
 [`OPEN URL`](../commands/open-url)<br/>
-[`Open window`](open-window.md)<br/>
+[`Open window`](../commands/open-window)<br/>
 [`ORDER BY`](../commands/order-by)<br/>
 [`ORDER BY ATTRIBUTE`](../commands/order-by-attribute)<br/>
 [`ORDER BY FORMULA`](../commands/order-by-formula)<br/>
@@ -858,14 +858,14 @@ title: Commands by name
 [`PLUGIN LIST`](../commands/plugin-list)<br/>
 [`POP RECORD`](../commands/pop-record)<br/>
 [`Pop up menu`](../commands/pop-up-menu)<br/>
-[`POP3 New transporter`](pop3-new-transporter.md)<br/>
+[`POP3 New transporter`](../commands/pop3-new-transporter)<br/>
 [`Position`](../commands/position)<br/>
 [`POST CLICK`](../commands/post-click)<br/>
 [`POST EVENT`](../commands/post-event)<br/>
 [`POST KEY`](../commands/post-key)<br/>
 [`POST OUTSIDE CALL`](../commands/post-outside-call)<br/>
 [`PREVIOUS RECORD`](../commands/previous-record)<br/>
-[`Print form`](print-form.md)<br/>
+[`Print form`](../commands/print-form)<br/>
 [`PRINT LABEL`](../commands/print-label)<br/>
 [`Print object`](../commands/print-object)<br/>
 [`PRINT OPTION VALUES`](../commands/print-option-values)<br/>
@@ -877,9 +877,9 @@ title: Commands by name
 [`Printing page`](../commands/printing-page)<br/>
 [`PROCESS 4D TAGS`](../commands/process-4d-tags)<br/>
 [`Process aborted`](../commands/process-aborted)<br/>
-[`Process activity`](process-activity.md) - **modified 4D 20 R7**<br/>
-[`Process info`](process-info.md) - **new 4D 20 R7**<br/>
-[`Process number`](process-number.md) - **modified 4D 20 R7**<br/>
+[`Process activity`](../commands/process-activity) - **modified 4D 20 R7**<br/>
+[`Process info`](../commands/process-info) - **new 4D 20 R7**<br/>
+[`Process number`](../commands/process-number) - **modified 4D 20 R7**<br/>
 [`Process state`](../commands/process-state)<br/>
 [`PUSH RECORD`](../commands/push-record)<br/>
 
@@ -1027,7 +1027,7 @@ title: Commands by name
 [`Select folder`](../commands/select-folder)<br/>
 [`SELECT LIST ITEMS BY POSITION`](../commands/select-list-items-by-position)<br/>
 [`SELECT LIST ITEMS BY REFERENCE`](../commands/select-list-items-by-reference)<br/>
-[`SELECT LOG FILE`](select-log-file.md)<br/>
+[`SELECT LOG FILE`](../commands/select-log-file)<br/>
 [`Select RGB Color`](../commands/select-rgb-color)<br/>
 [`Selected list items`](../commands/selected-list-items)<br/>
 [`Selected record number`](../commands/selected-record-number)<br/>
@@ -1041,9 +1041,9 @@ title: Commands by name
 [`SEND RECORD`](../commands/send-record)<br/>
 [`SEND VARIABLE`](../commands/send-variable)<br/>
 [`Sequence number`](../commands/sequence-number)<br/>
-[`Session`](session.md)<br/>
-[`Session info`](session-info.md) - **new 4D 20 R7**<br/> 
-[`Session storage`](session-storage.md)<br/>
+[`Session`](../commands/session)<br/>
+[`Session info`](../commands/session-info) - **new 4D 20 R7**<br/> 
+[`Session storage`](../commands/session-storage)<br/>
 [`SET ABOUT`](../commands/set-about)<br/>
 [`SET ALLOWED METHODS`](../commands/set-allowed-methods)<br/>
 [`SET APPLICATION COLOR SCHEME`](../commands/set-application-color-scheme)<br/>
@@ -1112,7 +1112,7 @@ title: Commands by name
 [`SET UPDATE FOLDER`](../commands/set-update-folder)<br/>
 [`SET USER ALIAS`](../commands/set-user-alias)<br/>
 [`Set user properties`](../commands/set-user-properties)<br/>
-[`SET WINDOW DOCUMENT ICON`](set-window-document-icon.md) - **new 4D 20 R7**<br/>
+[`SET WINDOW DOCUMENT ICON`](../commands/set-window-document-icon) - **new 4D 20 R7**<br/>
 [`SET WINDOW RECT`](../commands/set-window-rect)<br/>
 [`SET WINDOW TITLE`](../commands/set-window-title)<br/>
 [`Shift down`](../commands/shift-down)<br/>
@@ -1123,7 +1123,7 @@ title: Commands by name
 [`SHOW WINDOW`](../commands/show-window)<br/>
 [`Sin`](../commands/sin)<br/>
 [`Size of array`](../commands/size-of-array)<br/>
-[`SMTP New transporter`](smtp-new-transporter.md)<br/>
+[`SMTP New transporter`](../commands/smtp-new-transporter)<br/>
 [`SOAP DECLARATION`](../commands/soap-declaration)<br/>
 [`SOAP Get info`](../commands/soap-get-info)<br/>
 [`SOAP REJECT NEW REQUESTS`](../commands/soap-reject-new-requests)<br/>
@@ -1176,14 +1176,14 @@ title: Commands by name
 [`STOP MONITORING ACTIVITY`](../commands/stop-monitoring-activity)<br/>
 [`STOP SQL SERVER`](../commands/stop-sql-server)<br/>
 [`Storage`](../commands/storage)<br/>
-[`String`](string.md)<br/>
+[`String`](../commands/string)<br/>
 [`STRING LIST TO ARRAY`](../commands/string-list-to-array)<br/>
 [`Structure file`](../commands/structure-file)<br/>
 [`Substring`](../commands/substring)<br/>
 [`Subtotal`](../commands/subtotal)<br/>
 [`Sum`](../commands/sum)<br/>
 [`Sum squares`](../commands/sum-squares)<br/>
-[`Super`](super.md)<br/>
+[`Super`](../commands/super)<br/>
 [`SUSPEND TRANSACTION`](../commands/suspend-transaction)<br/>
 [`SVG EXPORT TO PICTURE`](../commands/svg-export-to-picture)<br/>
 [`SVG Find element ID by coordinates`](../commands/svg-find-element-id-by-coordinates)<br/>
@@ -1206,7 +1206,7 @@ title: Commands by name
 [`TEXT TO ARRAY`](../commands/text-to-array)<br/>
 [`TEXT TO BLOB`](../commands/text-to-blob)<br/>
 [`TEXT TO DOCUMENT`](../commands/text-to-document)<br/>
-[`This`](this.md)<br/>
+[`This`](../commands/this)<br/>
 [`throw`](../commands/throw)<br/>
 [`Tickcount`](../commands/tickcount)<br/>
 [`Time`](../commands/time)<br/>
@@ -1219,9 +1219,9 @@ title: Commands by name
 [`Trigger event`](../commands/trigger-event)<br/>
 [`Trigger level`](../commands/trigger-level)<br/>
 [`TRIGGER PROPERTIES`](../commands/trigger-properties)<br/>
-[`Trim`](trim.md) **new 4D 21**<br/>
-[`Trim end`](trim-end.md) **new 4D 21**<br/>
-[`Trim start`](trim-start.md) **new 4D 21**<br/>
+[`Trim`](../commands/trim) **new 4D 21**<br/>
+[`Trim end`](../commands/trim-end) **new 4D 21**<br/>
+[`Trim start`](../commands/trim-start) **new 4D 21**<br/>
 [`True`](../commands/true)<br/>
 [`Trunc`](../commands/trunc)<br/>
 [`TRUNCATE TABLE`](../commands/truncate-table)<br/>
@@ -1235,7 +1235,7 @@ title: Commands by name
 [`UNREGISTER CLIENT`](../commands/unregister-client)<br/>
 [`Uppercase`](../commands/uppercase)<br/>
 [`USE CHARACTER SET`](../commands/use-character-set)<br/>
-[`USE ENTITY SELECTION`](use-entity-selection.md)<br/>
+[`USE ENTITY SELECTION`](../commands/use-entity-selection)<br/>
 [`USE NAMED SELECTION`](../commands/use-named-selection)<br/>
 [`USE SET`](../commands/use-set)<br/>
 [`User in group`](../commands/user-in-group)<br/>
@@ -1287,8 +1287,8 @@ title: Commands by name
 [`WA STOP LOADING URL`](../commands/wa-stop-loading-url)<br/>
 [`WA ZOOM IN`](../commands/wa-zoom-in)<br/>
 [`WA ZOOM OUT`](../commands/wa-zoom-out)<br/>
-[`Web Event`](web-event.md)<br/>
-[`Web Form`](web-form.md)<br/>
+[`Web Event`](../commands/web-event)<br/>
+[`Web Form`](../commands/web-form)<br/>
 [`WEB GET BODY PART`](../commands/web-get-body-part)<br/>
 [`WEB Get body part count`](../commands/web-get-body-part-count)<br/>
 [`WEB Get current session ID`](../commands/web-get-current-session-id)<br/>
@@ -1307,8 +1307,8 @@ title: Commands by name
 [`WEB SEND HTTP REDIRECT`](../commands/web-send-http-redirect)<br/>
 [`WEB SEND RAW DATA`](../commands/web-send-raw-data)<br/>
 [`WEB SEND TEXT`](../commands/web-send-text)<br/>
-[`WEB Server`](web-server.md)<br/>
-[`WEB Server list`](web-server-list.md)<br/>
+[`WEB Server`](../commands/web-server)<br/>
+[`WEB Server list`](../commands/web-server-list)<br/>
 [`WEB SERVICE AUTHENTICATE`](../commands/web-service-authenticate)<br/>
 [`WEB SERVICE CALL`](../commands/web-service-call)<br/>
 [`WEB SERVICE Get info`](../commands/web-service-get-info)<br/>
@@ -1342,6 +1342,6 @@ title: Commands by name
 
 <a id="Z"><b>Z</b></a>
 
-[`ZIP Create archive`](zip-create-archive.md)<br/>
-[`ZIP Read archive`](zip-read-archive.md)<br/>
+[`ZIP Create archive`](../commands/zip-create-archive)<br/>
+[`ZIP Read archive`](../commands/zip-read-archive)<br/>
 

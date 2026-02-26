@@ -166,7 +166,7 @@ Cuando utiliza el comando QUERY BY SQL:
 
 ## Variables y conjuntos del sistema 
 
-Si el formato de la condición de búsqueda es correcto, la variable sistema OK toma el valor 1\. De lo contrario, toma el valor 0, el resultado del comando es una selección vacía y se devuelve un error. Este error puede ser interceptado por un método instalado utilizando el comando [ON ERR CALL](on-err-call.md "ON ERR CALL").
+Si el formato de la condición de búsqueda es correcto, la variable sistema OK toma el valor 1\. De lo contrario, toma el valor 0, el resultado del comando es una selección vacía y se devuelve un error. Este error puede ser interceptado por un método instalado utilizando el comando [ON ERR CALL](../commands/on-err-call).
 
 ## Ver también 
 
