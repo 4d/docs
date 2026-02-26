@@ -4,7 +4,7 @@ title: LISTBOX SET PROPERTY
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET PROPERTY.Syntax-->**LISTBOX SET PROPERTY** ( * ; *object* : Text ; *property* : Integer ; *value* : Integer, Text )<br/>**LISTBOX SET PROPERTY** ( *object* : Variable ; *property* : Integer ; *value* : Integer, Text )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET PROPERTY.Syntax-->**LISTBOX SET PROPERTY** ( * ; *object* : Text ; *property* : Integer ; *value* : any )<br/>**LISTBOX SET PROPERTY** ( *object* : Variable ; *property* : Integer ; *value* : any )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET PROPERTY.Params-->
 <div class="no-index">
 
@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | * | Operator | &#8594;  | If specified, object is an object name (string). If omitted, object is a variable. |
 | object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
 | property | Integer | &#8594;  | List box or column property |
-| value | Integer, Text | &#8594;  | Value of property |
+| value | any | &#8594;  | Value of property |
 </div>
 <!-- END REF-->
 
