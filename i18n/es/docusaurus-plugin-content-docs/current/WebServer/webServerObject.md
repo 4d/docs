@@ -34,7 +34,7 @@ $nbSrv:=WEB Server list.length
 //el valor de $nbSrv es 1
 ```
 
-Para instanciar un objeto servidor web, llame al comando [`WEB Server`](commands/web-server.md):
+Para instanciar un objeto servidor web, llame al comando [`WEB Server`](../commands/web-server):
 
 ```4d
 //crear una variable objeto de la clase 4D.WebServer
