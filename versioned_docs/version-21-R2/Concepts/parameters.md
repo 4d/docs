@@ -299,9 +299,9 @@ Here we have a method called `SumNumbers` that returns the calculated total for 
 
 var $number; $total : Real
 
-For each ($number; 1; Count parameters)
+For ($number; 1; Count parameters)
 	$total+=${$number}
-End for each
+End for
 
 return $total
 
