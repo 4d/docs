@@ -31,7 +31,7 @@ slug: /commands/theme/List-Box
 |[<!-- INCLUDE #_command_.LISTBOX Get number of rows.Syntax -->](../../commands/listbox-get-number-of-rows)<br/>|
 |[<!-- INCLUDE #_command_.LISTBOX GET OBJECTS.Syntax -->](../../commands/listbox-get-objects)<br/>|
 |[<!-- INCLUDE #_command_.LISTBOX GET PRINT INFORMATION.Syntax -->](../../commands/listbox-get-print-information)<br/>|
-|[<!-- INCLUDE #_command_.LISTBOX Get property.Syntax -->](../listbox-get-property.md)<br/>|
+|[<!-- INCLUDE #_command_.LISTBOX Get property.Syntax -->](../../commands/listbox-get-property)<br/>|
 |[<!-- INCLUDE #_command_.LISTBOX Get row color.Syntax -->](../../commands/listbox-get-row-color)<br/>|
 |[<!-- INCLUDE #_command_.LISTBOX Get row color as number.Syntax -->](../../commands/listbox-get-row-color-as-number)<br/>|
 |[<!-- INCLUDE #_command_.LISTBOX Get row font style.Syntax -->](../../commands/listbox-get-row-font-style)<br/>|
@@ -59,7 +59,7 @@ slug: /commands/theme/List-Box
 |[<!-- INCLUDE #_command_.LISTBOX SET HEADERS HEIGHT.Syntax -->](../../commands/listbox-set-headers-height)<br/>|
 |[<!-- INCLUDE #_command_.LISTBOX SET HIERARCHY.Syntax -->](../../commands/listbox-set-hierarchy)<br/>|
 |[<!-- INCLUDE #_command_.LISTBOX SET LOCKED COLUMNS.Syntax -->](../../commands/listbox-set-locked-columns)<br/>|
-|[<!-- INCLUDE #_command_.LISTBOX SET PROPERTY.Syntax -->](../listbox-set-property.md)<br/>|
+|[<!-- INCLUDE #_command_.LISTBOX SET PROPERTY.Syntax -->](../../commands/listbox-set-property)<br/>|
 |[<!-- INCLUDE #_command_.LISTBOX SET ROW COLOR.Syntax -->](../../commands/listbox-set-row-color)<br/>|
 |[<!-- INCLUDE #_command_.LISTBOX SET ROW FONT STYLE.Syntax -->](../../commands/listbox-set-row-font-style)<br/>|
 |[<!-- INCLUDE #_command_.LISTBOX SET ROW HEIGHT.Syntax -->](../../commands/listbox-set-row-height)<br/>|
