@@ -31,8 +31,8 @@ La **On Exit database method** est exécutée automatiquement par 4D ; à la dif
 On sort de la base lorsque l'un des événements suivants se produit :
 
 * L'utilisateur sélectionne la commande **Quitter** dans le menu **Fichier** en mode Développement ou Application (action standard Quitter).
-* Un appel à la commande [QUIT 4D](quit-4d.md) a eu lieu.
-* Un plug-in 4D a fait appel au point d'entrée [QUIT 4D](quit-4d.md).
+* Un appel à la commande [QUIT 4D](../commands/quit-4d) a eu lieu.
+* Un plug-in 4D a fait appel au point d'entrée [QUIT 4D](../commands/quit-4d).
 
 Quel que soit le moyen par lequel la base a été quittée, 4D accomplit les actions qui suivent :
 
@@ -43,7 +43,7 @@ Lorsque 4D est sur le point de quitter, le programme :
 
 * demande aux process en cours d'exécution d'interrompre leur exécution dès que possible (uniquement dans les process exécutant du code 4D)
 * active leur marqueur "process interrompu".
-* déclenche les process qui ont été retardés par [DELAY PROCESS](delay-process.md) ou par d'autres moyens.
+* déclenche les process qui ont été retardés par [DELAY PROCESS](../commands/delay-process) ou par d'autres moyens.
 
 4D poursuit l'itération des process tant qu'un process est encore en vie, pour une durée maximale de 13 secondes. Pour répondre à une action de sortie, nous recommandons de définir un marqueur (comme une entrée dans l'objet Storage) dans la méthode base Sur arrêt serveur ou dans votre méthode de sortie personnalisée. Il peut être judicieux d'effectuer une boucle dans cette méthode (10 secondes maximum) pour laisser le temps à vos process en cours de répondre et de quitter correctement. Il n'est pas recommandé d'attendre plus de 10 secondes, pour éviter que 4D ne stoppe le process ou que le système d'exploitation ne stoppe l'application entière.
 
@@ -52,12 +52,12 @@ La **On Exit database method** est l'emplacement idéal pour :
 * Sauvegarder (localement, sur disque) les préferences ou paramétrages devant être réutilisés lors de la prochaine session dans la .
 * Accomplir toute autre action que vous souhaitez exécuter automatiquement à chaque fermeture de la base.
 
-**Note:** Rappelez-vous que le process créé pour la **On Exit database method** est un process client (local), qui n'existe donc pas sur le poste serveur. Par conséquent, si vous effectuez dans cette méthode base une recherche ou un tri, tout poste client qui tentera de quitter l'application restera "bloqué". Si vous avez besoin d'accéder aux données lorsque le client quitte, vous devez créer depuis cette méthode base un process global qui, lui, pourra accéder aux données. Dans ce cas toutefois, veillez à ce que ce process puisse terminer son exécution (par l'intermédaire de variables interprocess, par exemple) avant d’être stoppé par la **On Exit database method** (à l'aide de [Storage](storage.md) ou d'un objet partagé, par exemple).
+**Note:** Rappelez-vous que le process créé pour la **On Exit database method** est un process client (local), qui n'existe donc pas sur le poste serveur. Par conséquent, si vous effectuez dans cette méthode base une recherche ou un tri, tout poste client qui tentera de quitter l'application restera "bloqué". Si vous avez besoin d'accéder aux données lorsque le client quitte, vous devez créer depuis cette méthode base un process global qui, lui, pourra accéder aux données. Dans ce cas toutefois, veillez à ce que ce process puisse terminer son exécution (par l'intermédaire de variables interprocess, par exemple) avant d’être stoppé par la **On Exit database method** (à l'aide de [Storage](../commands/storage) ou d'un objet partagé, par exemple).
 
-**Note :** En environnement client/serveur, la **On Exit database method** s'exécute différemment selon que l'utilisateur quitte manuellement (via la commande de menu **Quitter** ou l'appel de la commande [QUIT 4D](quit-4d.md)) ou que 4D Server est éteint, ce qui force tous les clients à quitter.   
+**Note :** En environnement client/serveur, la **On Exit database method** s'exécute différemment selon que l'utilisateur quitte manuellement (via la commande de menu **Quitter** ou l'appel de la commande [QUIT 4D](../commands/quit-4d)) ou que 4D Server est éteint, ce qui force tous les clients à quitter.   
 Lorsqu'on quitte 4D Server et que l'on accorde un délai aux utilisateurs (par exemple 10 minutes), chaque poste client connecté affiche un message d'avertissement et si l'utilisateur quitte durant le délai imparti, la **On Exit database method** s'exécute normalement. Cependant, dans les autres cas (i.e. l'utilisateur ne répond pas à temps, ou le serveur quitte sans délai, ou encore le client est déconnecté manuellement par l'Administrateur), la **On Exit database method** est exécutée en même que la connexion au serveur est refermée. Par conséquent, le code de la **On Exit database method** ne peut pas lancer d'autre process local ou serveur, et ne peut pas attendre que les autres process soient annulés (et ces process ne peuvent plus continuer d'accéder au serveur). S'il tente de le faire, une erreur réseau est générée (erreur 10001 ou 10002) puisque la connexion au serveur est déjà refermée.
 
-Pour stopper proprement les process en cours dans le cas où l'application est forcée de quitter, vous devez tester la commande [Process aborted](process-aborted.md) dans chaque boucle (Boucle, Tant que, Repeter) qui peut potentiellement durer plus d'une seconde. [Process aborted](process-aborted.md) retourne **vrai** si 4D (mode local, distant ou 4D Server) est sur le point de quitter, signifiant que les traitements vont stopper immédiatement. Dans ce cas, annulez tous les traitements ([CANCEL TRANSACTION](cancel-transaction.md), etc.) et quittez le plus vite possible. Alors que vous avez du temps si l'utilisateur quitte manuellement, vous n'en avez pas lorsque l'application est forcée de quitter.
+Pour stopper proprement les process en cours dans le cas où l'application est forcée de quitter, vous devez tester la commande [Process aborted](../commands/process-aborted) dans chaque boucle (Boucle, Tant que, Repeter) qui peut potentiellement durer plus d'une seconde. [Process aborted](../commands/process-aborted) retourne **vrai** si 4D (mode local, distant ou 4D Server) est sur le point de quitter, signifiant que les traitements vont stopper immédiatement. Dans ce cas, annulez tous les traitements ([CANCEL TRANSACTION](../commands/cancel-transaction), etc.) et quittez le plus vite possible. Alors que vous avez du temps si l'utilisateur quitte manuellement, vous n'en avez pas lorsque l'application est forcée de quitter.
 
 ## Exemple 
 
@@ -108,8 +108,8 @@ L'exemple suivant illustre un cas typique où vous lancez un ou plusieurs proces
 
 ## Voir aussi 
 
-[On Startup database method](on-startup-database-method.md)  
-[QUIT 4D](quit-4d.md)  
+[On Startup database method](../commands/on-startup-database-method)  
+[QUIT 4D](../commands/quit-4d)  
 
 ## Propriétés
 
@@ -117,5 +117,6 @@ L'exemple suivant illustre un cas typique où vous lancez un ou plusieurs proces
 | --- | --- |
 | Numéro de commande | 905252 |
 | Thread safe | no |
+
 
 

@@ -24,15 +24,15 @@ Este método se utiliza en los siguientes entornos 4D:
 * 4D en modo remoto (del lado del cliente)
 * Aplicación 4D compilada y fusionada con 4D Volume Desktop
 
-**Nota**: **Método base On Exit** NO es invocado por 4D Server. Debe utilizar [Método base On Server Shutdown](metodo-base-on-server-shutdown.md) en este contexto.
+**Nota**: **Método base On Exit** NO es invocado por 4D Server. Debe utilizar [Método base On Server Shutdown](../commands/metodo-base-on-server-shutdown) en este contexto.
 
 El Método base On Exit es invocado automáticamente por 4D; a diferencia de los métodos proyecto, no puede llamar este método base por programación. Sin embargo, puede ejecutarlo desde el editor de métodos. Igualmente puede utilizar subrutinas.
 
 Se sale de una base si:
 
 * El usuario selecciona el comando **Salir** del menú **Archivo** en el entorno Diseño o desde el entorno Aplicación (Quit standard action).
-* Se efectúa una llamada al comando [QUIT 4D](quit-4d.md).
-* Un plug-in 4D hace una llamada al punto de entrada [QUIT 4D](quit-4d.md).
+* Se efectúa una llamada al comando [QUIT 4D](../commands/quit-4d).
+* Un plug-in 4D hace una llamada al punto de entrada [QUIT 4D](../commands/quit-4d).
 
 Sin importar cómo se inicie la salida de la base, 4D realiza las siguientes acciones:
 
@@ -43,26 +43,26 @@ Cuando 4D está a punto de salir, el programa:
 
 * pide a los procesos en ejecución que aborten su ejecución lo antes posible (sólo se tiene en cuenta en los procesos que ejecutan código 4D)
 * establece su bandera ‘proceso abortado’
-* despierta los procesos que han sido retrasados por [DELAY PROCESS](delay-process.md) u otros medios.
+* despierta los procesos que han sido retrasados por [DELAY PROCESS](../commands/delay-process) u otros medios.
 
   
-4D continúa iterando procesos mientras cualquier proceso siga vivo, durante una duración máxima de 13 segundos. Para responder a una acción de abandono, recomendamos establecer una bandera (como una entrada en el objeto [Storage](storage.md)) en el Método base On Exit o en su método de abandono personalizado. Podría tener sentido hacer un bucle en ese método (máximo 10 segundos) para dar tiempo a que sus procesos en ejecución respondan y se abandonen a sí mismos correctamente. No es recomendable esperar más de 10 segundos, para evitar que 4D mate el proceso o el sistema operativo mate toda la aplicación.
+4D continúa iterando procesos mientras cualquier proceso siga vivo, durante una duración máxima de 13 segundos. Para responder a una acción de abandono, recomendamos establecer una bandera (como una entrada en el objeto [Storage](../commands/storage)) en el Método base On Exit o en su método de abandono personalizado. Podría tener sentido hacer un bucle en ese método (máximo 10 segundos) para dar tiempo a que sus procesos en ejecución respondan y se abandonen a sí mismos correctamente. No es recomendable esperar más de 10 segundos, para evitar que 4D mate el proceso o el sistema operativo mate toda la aplicación.
 
 El Método base On Exit es perfecto para:
 
 * Guardar (localmente, en el disco) preferencias o parámetros a reutilizar al comienzo de la siguiente sesión en el .
 * Realizar otras acciones automáticamente cada vez que se salga de la base.
 
-**Nota:** no olvide que el proceso creado por el Método base On Exit es un proceso local/cliente, por lo tanto no puede acceder al archivo de datos. Si el Método base On Exit realiza una consulta o una ordenación, un cliente 4D que está a punto de salir quedará "congelado" y en realidad no saldrá de la aplicación. Si necesita acceder a datos cuando un cliente sale de la aplicación, cree un nuevo proceso global desde el cual el Método base On Exit pueda acceder al archivo de datos. En este caso, asegúrese de que el nuevo proceso termine correctamente antes del final de la ejecución del Método base On Exit (utilizando por ejemplo [Storage](storage.md) o un objeto compartido).
+**Nota:** no olvide que el proceso creado por el Método base On Exit es un proceso local/cliente, por lo tanto no puede acceder al archivo de datos. Si el Método base On Exit realiza una consulta o una ordenación, un cliente 4D que está a punto de salir quedará "congelado" y en realidad no saldrá de la aplicación. Si necesita acceder a datos cuando un cliente sale de la aplicación, cree un nuevo proceso global desde el cual el Método base On Exit pueda acceder al archivo de datos. En este caso, asegúrese de que el nuevo proceso termine correctamente antes del final de la ejecución del Método base On Exit (utilizando por ejemplo [Storage](../commands/storage) o un objeto compartido).
 
-**Nota**: en un entorno cliente/servidor, **Método base On Exit** se comporta de manera diferente dependiendo de si el usuario sale manualmente (vía el comando de menú **Salir** o una llamada al comando [QUIT 4D](quit-4d.md)) o que 4D Server se cierre, lo que obliga a todos los clientes a salir.  
+**Nota**: en un entorno cliente/servidor, **Método base On Exit** se comporta de manera diferente dependiendo de si el usuario sale manualmente (vía el comando de menú **Salir** o una llamada al comando [QUIT 4D](../commands/quit-4d)) o que 4D Server se cierre, lo que obliga a todos los clientes a salir.  
 Cuando se sale de 4D Server y se da un tiempo de corte (por ejemplo, 10 minutos), cada cliente conectado muestra un mensaje de advertencia y si el usuario sale durante el período de tiempo determinado, el **Método base On Exit** se ejecuta normalmente. Sin embargo, en otros casos (por ejemplo, el usuario no responde a tiempo, el servidor solicita salir inmediatamente o el administrador desconecta manualmente al cliente), el **Método base On Exit** se ejecuta al mismo tiempo que la conexión al servidor se cierra. Como resultado, el código en **Método base On Exit** no puede iniciar otro proceso local o de servidor y no puede esperar a que se cancelen otros procesos (ni estos procesos pueden seguir accediendo al servidor). Si intenta hacerlo, se genera un error de red (como 10001 o 10002) ya que la conexión al servidor ya está cerrada.
 
 ## Nota 
 
-El siguiente ejemplo muestra un caso típico en el que se lanzan uno o más procesos en segundo plano que realizan trabajos regulares, que se ejecutan sin fin, en el [Método base On Startup](metodo-base-on-startup.md) (o en el [Método base On Server Startup](metodo-base-on-server-startup.md)). Una bandera en el objeto [Storage](storage.md) de la aplicación se utiliza para decirles que terminen y para comprobar si han terminado.
+El siguiente ejemplo muestra un caso típico en el que se lanzan uno o más procesos en segundo plano que realizan trabajos regulares, que se ejecutan sin fin, en el [Método base On Startup](../commands/metodo-base-on-startup) (o en el [Método base On Server Startup](../commands/metodo-base-on-server-startup)). Una bandera en el objeto [Storage](../commands/storage) de la aplicación se utiliza para decirles que terminen y para comprobar si han terminado.
 
-* En el [Método base On Startup](metodo-base-on-startup.md)
+* En el [Método base On Startup](../commands/metodo-base-on-startup)
 
 ```4d
  Use(Storage)
@@ -106,5 +106,5 @@ El siguiente ejemplo muestra un caso típico en el que se lanzan uno o más proc
 
 ## Ver también 
 
-[Método base On Startup](metodo-base-on-startup.md)  
-[QUIT 4D](quit-4d.md)  
+[Método base On Startup](../commands/metodo-base-on-startup)  
+[QUIT 4D](../commands/quit-4d)  

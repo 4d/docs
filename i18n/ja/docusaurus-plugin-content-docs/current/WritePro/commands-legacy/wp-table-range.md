@@ -47,5 +47,6 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP Get elements](wp-get-elements.md)  
-[WP Text range](wp-text-range.md)  
+[WP Get elements](../commands/wp-get-elements)  
+[WP Text range](../commands/wp-text-range)  
+

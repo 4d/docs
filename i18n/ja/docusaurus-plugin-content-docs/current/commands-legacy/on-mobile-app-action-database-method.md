@@ -34,4 +34,4 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[On Mobile App Authentication データベースメソッド](on-mobile-app-authentication-database-method.md)  
+[On Mobile App Authentication データベースメソッド](../commands/on-mobile-app-authentication-database-method)  

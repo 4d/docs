@@ -116,4 +116,4 @@ Vous souhaitez fixer un lien dans une méthode 4D dans chaque chaîne "4D" d'un 
 ## Voir aussi 
 
   
-[WP Get links](wp-get-links.md)  
+[WP Get links](../commands/wp-get-links)  

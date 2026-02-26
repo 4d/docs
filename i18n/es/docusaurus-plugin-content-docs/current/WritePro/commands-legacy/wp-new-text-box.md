@@ -97,4 +97,4 @@ Resultado:
 
 ## Ver también 
 
-[WP DELETE TEXT BOX](wp-delete-text-box.md)  
+[WP DELETE TEXT BOX](../commands/wp-delete-text-box)  

@@ -64,4 +64,4 @@ O código abaixo:
 
 ## Ver também 
 
-[WP Text range](wp-text-range.md)  
+[WP Text range](../commands/wp-text-range)  

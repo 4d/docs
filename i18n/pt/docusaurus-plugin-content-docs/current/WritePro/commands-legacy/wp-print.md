@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.WP PRINT.Summary-->O comando **WP PRINT** lança uma tarefa de impressão para o documento 4D Write Pro especificado em *wpDoc* (ou agrega o documento ao trabalho de impressão atual se for chamado entre [OPEN PRINTING JOB](../../commands/open-printing-job) e [CLOSE PRINTING JOB](../../commands/close-printing-job)).<!-- END REF--> **WP PRINT** utiliza a configuração de impressão definida pelos comandos 4D [PRINT SETTINGS](../../commands/print-settings) ou [SET PRINT OPTION](../../commands/set-print-option), exceto para as margens das páginas que sempre se baseiam na configuração da página do documento 4D Write Pro. **WP PRINT** utiliza as opções atuais de configuração de página (como o tamanho e orientação de página), ou os do documento se [WP USE PAGE SETUP](wp-use-page-setup.md) for chamado anteriormente.
+<!--REF #_command_.WP PRINT.Summary-->O comando **WP PRINT** lança uma tarefa de impressão para o documento 4D Write Pro especificado em *wpDoc* (ou agrega o documento ao trabalho de impressão atual se for chamado entre [OPEN PRINTING JOB](../../commands/open-printing-job) e [CLOSE PRINTING JOB](../../commands/close-printing-job)).<!-- END REF--> **WP PRINT** utiliza a configuração de impressão definida pelos comandos 4D [PRINT SETTINGS](../../commands/print-settings) ou [SET PRINT OPTION](../../commands/set-print-option), exceto para as margens das páginas que sempre se baseiam na configuração da página do documento 4D Write Pro. **WP PRINT** utiliza as opções atuais de configuração de página (como o tamanho e orientação de página), ou os do documento se [WP USE PAGE SETUP](../commands/wp-use-page-setup) for chamado anteriormente.
 
 O parâmetro opcional *modoImp* pode ser utilizado para estabelecer a vista WYSIWYG HTML para as saídas de impressão. Pode passar uma das seguintes constantes do tema "4D Write Pro":
 
@@ -53,5 +53,5 @@ Se quiser imprimir uma área 4D Write Pro em formato padrão ou wysiwyg HTML em 
 
 ## Ver também 
 
-[WP Get position](wp-get-position.md)  
-[WP USE PAGE SETUP](wp-use-page-setup.md)  
+[WP Get position](../commands/wp-get-position)  
+[WP USE PAGE SETUP](../commands/wp-use-page-setup)  

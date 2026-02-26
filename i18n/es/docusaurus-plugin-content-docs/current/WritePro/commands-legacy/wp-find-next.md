@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Find next.Summary-->El comando **WP Find next** busca en *objTarget*, después del rango *buscarDespues*, el *buscarValor* basado en la *condicionBusq*.<!-- END REF--> Se puede utilizar un parámetro opcional para reemplazar los resultados encontrados.
 
-**Nota**: **WP Find next** no busca ni reemplaza texto en fórmulas. Utilice el comando [WP Get formulas](wp-get-formulas.md) en este caso. 
+**Nota**: **WP Find next** no busca ni reemplaza texto en fórmulas. Utilice el comando [WP Get formulas](../commands/wp-get-formulas) en este caso. 
 
 En el parámetro *objTarget*, pase un objeto que contenga:
 
@@ -101,5 +101,5 @@ Se devuelve un rango vacío si no se encuentran resultados.
 
 ## Ver también 
 
-[WP Find all](wp-find-all.md)  
-[WP Find previous ](wp-find-previous.md)  
+[WP Find all](../commands/wp-find-all)  
+[WP Find previous ](../commands/wp-find-previous)  

@@ -29,7 +29,7 @@ displayed_sidebar: docs
 * wk type character: スタイル属性を文字に対して適用
 * wk type paragraph: スタイル属性を段落に対して適用
 
-*styleSheetName* 引数にはスタイルシートの名前を渡します。このスタイルシート名はドキュメントとともに保存され、再利用や編集が容易にできます。またスタイルシート名は[WP Get style sheet](wp-get-style-sheet.md) および [WP DELETE STYLE SHEET](wp-delete-style-sheet.md) コマンドで使用することもできます。スタイルシートの名前は以下のルールに準拠している必要があります:
+*styleSheetName* 引数にはスタイルシートの名前を渡します。このスタイルシート名はドキュメントとともに保存され、再利用や編集が容易にできます。またスタイルシート名は[WP Get style sheet](../commands/wp-get-style-sheet) および [WP DELETE STYLE SHEET](../commands/wp-delete-style-sheet) コマンドで使用することもできます。スタイルシートの名前は以下のルールに準拠している必要があります:
 
 * 名前の最初は文字であること
 * その後は最大で128文字までの英数字、スペース文字、"-"(ダッシュ) 文字またはUnicode文字を含めることができます
@@ -68,8 +68,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP DELETE STYLE SHEET](wp-delete-style-sheet.md)  
-[WP Get style sheet](wp-get-style-sheet.md)  
-[WP Get style sheets](wp-get-style-sheets.md)  
-[WP IMPORT STYLE SHEETS](wp-import-style-sheets.md)  
+[WP DELETE STYLE SHEET](../commands/wp-delete-style-sheet)  
+[WP Get style sheet](../commands/wp-get-style-sheet)  
+[WP Get style sheets](../commands/wp-get-style-sheets)  
+[WP IMPORT STYLE SHEETS](../commands/wp-import-style-sheets)  
 *ドキュメントのコンテンツにプログラムでアクセスする*  
+

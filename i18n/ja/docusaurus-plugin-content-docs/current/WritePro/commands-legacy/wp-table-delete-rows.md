@@ -54,4 +54,4 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP TABLE DELETE COLUMNS](wp-table-delete-columns.md)  
+[WP TABLE DELETE COLUMNS](../commands/wp-table-delete-columns)  

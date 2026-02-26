@@ -72,8 +72,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP COMPUTE FORMULAS](wp-compute-formulas.md)  
-[WP FREEZE FORMULAS](wp-freeze-formulas.md)  
-[WP Get links](wp-get-links.md)  
+[WP COMPUTE FORMULAS](../commands/wp-compute-formulas)  
+[WP FREEZE FORMULAS](../commands/wp-freeze-formulas)  
+[WP Get links](../commands/wp-get-links)  
 [WP INSERT FORMULA](../commands/wp-insert-formula)  
 *フォーミュラの管理*  
+

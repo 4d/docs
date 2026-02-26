@@ -40,4 +40,4 @@ IDを使用してテキストボックスを削除したい場合を考えます
 
 ## 参照 
 
-[WP New text box](wp-new-text-box.md)  
+[WP New text box](../commands/wp-new-text-box)  

@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.WP PRINT.Summary-->La commande **WP PRINT** lance une tâche d'impression pour le document 4D Write Pro désigné par *docWP*, ou ajoute le document dans la tâche d'impression courante si elle est appelée entre les commandes [OPEN PRINTING JOB](../../commands/open-printing-job) et [CLOSE PRINTING JOB](../../commands/close-printing-job).<!-- END REF--> **WP PRINT** utilise les paramètres d'impression définis par les commandes 4D [PRINT SETTINGS](../../commands/print-settings) ou [SET PRINT OPTION](../../commands/set-print-option), excepté pour les marges des pages qui sont toujours définies avec les options d'impression du document 4D Write Pro. **WP PRINT** utilise les options courantes de mise en page (comme la taille de la page et l'orientation), ou celles du document si [WP USE PAGE SETUP](wp-use-page-setup.md) a été appelée au préalable.
+<!--REF #_command_.WP PRINT.Summary-->La commande **WP PRINT** lance une tâche d'impression pour le document 4D Write Pro désigné par *docWP*, ou ajoute le document dans la tâche d'impression courante si elle est appelée entre les commandes [OPEN PRINTING JOB](../../commands/open-printing-job) et [CLOSE PRINTING JOB](../../commands/close-printing-job).<!-- END REF--> **WP PRINT** utilise les paramètres d'impression définis par les commandes 4D [PRINT SETTINGS](../../commands/print-settings) ou [SET PRINT OPTION](../../commands/set-print-option), excepté pour les marges des pages qui sont toujours définies avec les options d'impression du document 4D Write Pro. **WP PRINT** utilise les options courantes de mise en page (comme la taille de la page et l'orientation), ou celles du document si [WP USE PAGE SETUP](../commands/wp-use-page-setup) a été appelée au préalable.
 
 Le paramètre optionnel *optionsImpr* permet l'utilisation de la vue WYSIWYG HTML pour les sorties impression et le calcul de la formule. Vous pouvez utiliser une combinaison des constantes suivantes ou l'une des constantes suivantes, placées dans le thème "4D Write Pro" :
 
@@ -53,5 +53,5 @@ Vous souhaitez imprimer un document 4D Write Pro en format standard ou wysiwyg H
 
 ## Voir aussi 
 
-[WP Get position](wp-get-position.md)  
-[WP USE PAGE SETUP](wp-use-page-setup.md)  
+[WP Get position](../commands/wp-get-position)  
+[WP USE PAGE SETUP](../commands/wp-use-page-setup)  

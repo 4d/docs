@@ -67,11 +67,12 @@ Quiere crear un rango de una sección:
 
 ## Ver también 
 
-[WP Bookmark range](wp-bookmark-range.md)  
-[WP Get body](wp-get-body.md)  
-[WP Get header](wp-get-header.md)  
-[WP Paragraph range](wp-paragraph-range.md)  
-[WP Picture range](wp-picture-range.md)  
-[WP SELECT](wp-select.md)  
-[WP Selection range](wp-selection-range.md)  
-[WP Table range](wp-table-range.md)  
+[WP Bookmark range](../commands/wp-bookmark-range)  
+[WP Get body](../commands/wp-get-body)  
+[WP Get header](../commands/wp-get-header)  
+[WP Paragraph range](../commands/wp-paragraph-range)  
+[WP Picture range](../commands/wp-picture-range)  
+[WP SELECT](../commands/wp-select)  
+[WP Selection range](../commands/wp-selection-range)  
+[WP Table range](../commands/wp-table-range)  
+

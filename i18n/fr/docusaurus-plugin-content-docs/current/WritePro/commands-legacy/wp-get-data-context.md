@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.WP Get data context.Summary-->La commande **WP Get data context** returne le contexte de données du document wpDoc\[#/descv\].<!-- END REF--> Les contextes de données sont définis à l'aide de la commande [WP SET DATA CONTEXT](wp-set-data-context.md).
+<!--REF #_command_.WP Get data context.Summary-->La commande **WP Get data context** returne le contexte de données du document wpDoc\[#/descv\].<!-- END REF--> Les contextes de données sont définis à l'aide de la commande [WP SET DATA CONTEXT](../commands/wp-set-data-context).
 
 Dans wpDoc, passez le document 4D Write Pro dont vous souhaitez obtenir le contexte de données.
 
@@ -63,4 +63,4 @@ méthode2 pourrait avoir le contenu suivant :
 ## Voir aussi 
 
   
-[WP SET DATA CONTEXT](wp-set-data-context.md)  
+[WP SET DATA CONTEXT](../commands/wp-set-data-context)  

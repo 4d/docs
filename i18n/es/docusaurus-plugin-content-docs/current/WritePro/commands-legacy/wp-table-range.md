@@ -47,5 +47,6 @@ Usted desea modificar el aspecto de las tablas en el rango de tabla:
 
 ## Ver también 
 
-[WP Get elements](wp-get-elements.md)  
-[WP Text range](wp-text-range.md)  
+[WP Get elements](../commands/wp-get-elements)  
+[WP Text range](../commands/wp-text-range)  
+

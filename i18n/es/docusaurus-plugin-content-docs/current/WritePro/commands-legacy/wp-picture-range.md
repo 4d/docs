@@ -40,6 +40,7 @@ Usted desea cambiar el color del borde de las imágenes únicamente:
 *Utilizar los comandos del tema Texto con estilo*  
 [WP Add picture](../commands/wp-add-picture)  
 [WP INSERT PICTURE](../commands/wp-insert-picture)  
-[WP Paragraph range](wp-paragraph-range.md)  
-[WP Selection range](wp-selection-range.md)  
-[WP Text range](wp-text-range.md)  
+[WP Paragraph range](../commands/wp-paragraph-range)  
+[WP Selection range](../commands/wp-selection-range)  
+[WP Text range](../commands/wp-text-range)  
+

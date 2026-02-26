@@ -48,4 +48,4 @@ Vous souhaitez modifier un attribut de la dernière section de la zone 4D Write 
 
 ## Voir aussi 
 
-[WP Get section](wp-get-section.md)  
+[WP Get section](../commands/wp-get-section)  

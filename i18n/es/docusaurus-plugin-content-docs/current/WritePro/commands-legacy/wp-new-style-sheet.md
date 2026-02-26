@@ -29,7 +29,7 @@ El parámetro *tipoHojaEstilo* le permite designar el tipo de hoja de estilo, es
 * wk type character: aplica atributos de estilo a los caracteres.
 * wk type paragraph: aplica atributos de estilo a los párrafos.
 
-Pase un nombre para la hoja de estilo en el parámetro *nomHojaEstilo*. El nombre de la hoja de estilo se almacena con el documento y facilita reutilizar o modificar el estilo. También se puede utilizar con los comandos [WP Get style sheet](wp-get-style-sheet.md) y [WP DELETE STYLE SHEET](wp-delete-style-sheet.md). El nombre de la hoja de estilo debe cumplir las siguientes reglas:
+Pase un nombre para la hoja de estilo en el parámetro *nomHojaEstilo*. El nombre de la hoja de estilo se almacena con el documento y facilita reutilizar o modificar el estilo. También se puede utilizar con los comandos [WP Get style sheet](../commands/wp-get-style-sheet) y [WP DELETE STYLE SHEET](../commands/wp-delete-style-sheet). El nombre de la hoja de estilo debe cumplir las siguientes reglas:
 
 * debe empezar por una letra
 * a continuación, puede contener caracteres alfanuméricos, espacios en blanco, caracteres "-" o caracteres unicode >= 128
@@ -69,8 +69,9 @@ El siguiente código crea y define una hoja de estilo de párrafo:
 ## Ver también 
 
 *Acceder a contenidos de documentos por programación*  
-[WP DELETE STYLE SHEET](wp-delete-style-sheet.md)  
-[WP Get style sheet](wp-get-style-sheet.md)  
-[WP Get style sheets](wp-get-style-sheets.md)  
-[WP IMPORT STYLE SHEETS](wp-import-style-sheets.md)  
+[WP DELETE STYLE SHEET](../commands/wp-delete-style-sheet)  
+[WP Get style sheet](../commands/wp-get-style-sheet)  
+[WP Get style sheets](../commands/wp-get-style-sheets)  
+[WP IMPORT STYLE SHEETS](../commands/wp-import-style-sheets)  
+
 

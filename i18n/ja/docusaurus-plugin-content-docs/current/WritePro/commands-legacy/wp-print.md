@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.WP PRINT.Summary-->**WP PRINT** コマンドは、*wpDoc* で指定した 4D Write Proドキュメントの印刷ジョブをローンチするか、あるいは[OPEN PRINTING JOB](../../commands/open-printing-job) と [CLOSE PRINTING JOB](../../commands/close-printing-job) の間に呼び出された場合には、ドキュメントをカレントの印刷ジョブに追加します。<!-- END REF-->**WP PRINT** は通常の [PRINT SETTINGS](../../commands/print-settings) あるいは [SET PRINT OPTION](../../commands/set-print-option) コマンドで定義された印刷設定を使用しますが、ページの余白に関しては常に 4D Write Pro ドキュメントの設定を使用します。また、**WP PRINT** はカレントのページ設定オプション (ページサイズやページの向きなど) を使用しますが、[WP USE PAGE SETUP](wp-use-page-setup.md) が先に呼び出されていた場合には、指定ドキュメントにおけるこれらの設定を使用します。
+<!--REF #_command_.WP PRINT.Summary-->**WP PRINT** コマンドは、*wpDoc* で指定した 4D Write Proドキュメントの印刷ジョブをローンチするか、あるいは[OPEN PRINTING JOB](../../commands/open-printing-job) と [CLOSE PRINTING JOB](../../commands/close-printing-job) の間に呼び出された場合には、ドキュメントをカレントの印刷ジョブに追加します。<!-- END REF-->**WP PRINT** は通常の [PRINT SETTINGS](../../commands/print-settings) あるいは [SET PRINT OPTION](../../commands/set-print-option) コマンドで定義された印刷設定を使用しますが、ページの余白に関しては常に 4D Write Pro ドキュメントの設定を使用します。また、**WP PRINT** はカレントのページ設定オプション (ページサイズやページの向きなど) を使用しますが、[WP USE PAGE SETUP](../commands/wp-use-page-setup) が先に呼び出されていた場合には、指定ドキュメントにおけるこれらの設定を使用します。
 
 任意の*printOptions* 引数を使用して、印刷出力に HTML WYSIWYG ビューを設定したりフォーミュラの計算を設定したりすることができます。"4D Write Pro" テーマの次の定数を一つまたは複数組み合わせて受け渡すことができます:
 
@@ -53,5 +53,5 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP Get position](wp-get-position.md)  
-[WP USE PAGE SETUP](wp-use-page-setup.md)  
+[WP Get position](../commands/wp-get-position)  
+[WP USE PAGE SETUP](../commands/wp-use-page-setup)  

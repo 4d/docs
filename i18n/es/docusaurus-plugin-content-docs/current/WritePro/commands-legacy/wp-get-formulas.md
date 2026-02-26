@@ -74,7 +74,8 @@ Para obtener las fórmulas de todas las imágenes ancladas en un documento:
 ## Ver también 
 
 *Gestión de fórmulas*  
-[WP COMPUTE FORMULAS](wp-compute-formulas.md)  
-[WP FREEZE FORMULAS](wp-freeze-formulas.md)  
-[WP Get links](wp-get-links.md)  
+[WP COMPUTE FORMULAS](../commands/wp-compute-formulas)  
+[WP FREEZE FORMULAS](../commands/wp-freeze-formulas)  
+[WP Get links](../commands/wp-get-links)  
 [WP INSERT FORMULA](../commands/wp-insert-formula)  
+

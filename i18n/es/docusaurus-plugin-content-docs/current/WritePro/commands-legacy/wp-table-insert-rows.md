@@ -62,4 +62,4 @@ Insertará las dos filas nuevas en la ubicación correcta:
 
 ## Ver también 
 
-[WP Table insert columns](wp-table-insert-columns.md)  
+[WP Table insert columns](../commands/wp-table-insert-columns)  

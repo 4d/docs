@@ -116,4 +116,4 @@ displayed_sidebar: docs
 ## 参照 
 
   
-[WP Get links](wp-get-links.md)  
+[WP Get links](../commands/wp-get-links)  

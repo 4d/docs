@@ -59,7 +59,7 @@ displayed_sidebar: docs
 
 **パフォーマンスに関する注意**
 
-* **WP Get position** では、[WP PRINT](wp-print.md) コマンドと同じビュー設定が使用されます:  
+* **WP Get position** では、[WP PRINT](../commands/wp-print) コマンドと同じビュー設定が使用されます:  
    * ヘッダー: 表示  
    * フッター: 表示  
    * 式: 計算されて表示  
@@ -157,4 +157,4 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP PRINT](wp-print.md)  
+[WP PRINT](../commands/wp-print)  

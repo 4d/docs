@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Find previous.Summary-->O comando **WP Find previous**  pesquisa *objAlvo*, antes da range *pesquisarAntes*, para o *valorPesquisa* baseado em *condiçõesPesquisa*.<!-- END REF--> Um parâmetro opcional pode ser usado para substituir qualquer resultado encontrado. 
 
-**Nota**: **WP Find previous** não pesquisa ou substitui o texto em fórmulas. Use o comando [WP Get formulas](wp-get-formulas.md) nesse caso. 
+**Nota**: **WP Find previous** não pesquisa ou substitui o texto em fórmulas. Use o comando [WP Get formulas](../commands/wp-get-formulas) nesse caso. 
 
 No parâmetro *objAlvo*, passe um objeto contendo:
 
@@ -98,5 +98,5 @@ Uma range ou seleção vazia é retornada se nenhum resultado for encontrado.
 
 ## Ver também 
 
-[WP Find all](wp-find-all.md)  
-[WP Find next](wp-find-next.md)  
+[WP Find all](../commands/wp-find-all)  
+[WP Find next](../commands/wp-find-next)  

@@ -71,7 +71,8 @@ Pour obtenir les formules de toutes les images ancrées d'un document :
 ## Voir aussi 
 
 *Gérer des formules*  
-[WP COMPUTE FORMULAS](wp-compute-formulas.md)  
-[WP FREEZE FORMULAS](wp-freeze-formulas.md)  
-[WP Get links](wp-get-links.md)  
+[WP COMPUTE FORMULAS](../commands/wp-compute-formulas)  
+[WP FREEZE FORMULAS](../commands/wp-freeze-formulas)  
+[WP Get links](../commands/wp-get-links)  
 [WP INSERT FORMULA](../commands/wp-insert-formula)  
+

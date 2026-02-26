@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Find next.Summary-->La commande **WP Find next** recherche le paramètre *objCible,* après la plage rechercherAprès, pour le paramètre rechercherValeur fondé sur conditionRecherche.<!-- END REF--> Un paramètre optionnel peut être utilisé pour remplacer les résultats trouvés.
 
-**Note** : **WP Find next** ne recherche pas ou ne remplace pas le texte dans les formules. Utilisez la commande [WP Get formulas](wp-get-formulas.md) dans ce cas. 
+**Note** : **WP Find next** ne recherche pas ou ne remplace pas le texte dans les formules. Utilisez la commande [WP Get formulas](../commands/wp-get-formulas) dans ce cas. 
 
 Dans le paramètre *objCible*, passez un objet contenant :
 
@@ -102,5 +102,5 @@ Une plage vide est retournée si aucun résultat est trouvé.
 
 ## Voir aussi 
 
-[WP Find all](wp-find-all.md)  
-[WP Find previous](wp-find-previous.md)  
+[WP Find all](../commands/wp-find-all)  
+[WP Find previous](../commands/wp-find-previous)  

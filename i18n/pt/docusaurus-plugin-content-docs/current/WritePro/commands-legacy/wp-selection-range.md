@@ -41,6 +41,7 @@ Se quiser obter o texto selecionado de uma área 4D Write Pro:
 
 ## Ver também 
 
-[WP Paragraph range](wp-paragraph-range.md)  
-[WP Picture range](wp-picture-range.md)  
-[WP Text range](wp-text-range.md)  
+[WP Paragraph range](../commands/wp-paragraph-range)  
+[WP Picture range](../commands/wp-picture-range)  
+[WP Text range](../commands/wp-text-range)  
+

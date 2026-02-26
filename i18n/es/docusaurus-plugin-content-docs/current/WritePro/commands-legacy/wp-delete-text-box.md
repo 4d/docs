@@ -40,4 +40,4 @@ Quiere borrar una caja de texto utilizando su ID:
 
 ## Ver también 
 
-[WP New text box](wp-new-text-box.md)  
+[WP New text box](../commands/wp-new-text-box)  

@@ -37,6 +37,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP Picture range](wp-picture-range.md)  
-[WP Selection range](wp-selection-range.md)  
-[WP Text range](wp-text-range.md)  
+[WP Picture range](../commands/wp-picture-range)  
+[WP Selection range](../commands/wp-selection-range)  
+[WP Text range](../commands/wp-text-range)  
+

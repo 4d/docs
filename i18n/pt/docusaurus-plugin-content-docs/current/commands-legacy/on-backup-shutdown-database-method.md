@@ -27,7 +27,7 @@ O On Backup Shutdown database method permite verificar que o backup foi executad
 * Se o backup foi interrompido pelo usuário ou ocorreu um erro, $1 é diferente de 0\.
 * * Se o backup foi parado pelo *Método de Banco de Dados On Backup Startup* (*$result* \# 0), *$status* obtém o valor devolvido no parâmetro $0\. Isto lhe permite implementar um sistema de gerenciamento de erros personalizados  
    * Se o backup foi parado por um erro, o código do erro é devolvido em *$1.*
- Em todos os casos, pode obter informação sobre o erro utilizando o comando [BACKUP INFO](backup-info.md).  
+ Em todos os casos, pode obter informação sobre o erro utilizando o comando [BACKUP INFO](../commands/backup-info).  
 
 **Nota**: Você deve declarar o parâmetro *$status* (inteiro longo) no método do banco de dados:
 
@@ -37,3 +37,4 @@ O On Backup Shutdown database method permite verificar que o backup foi executad
 
   
 É importante notar que no caso de erro durante o backup (disco cheio, suporte inacessível, etc.), a informação relativa ao erro é mostrada unicamente no monitor de 4D Server ou no CSM, e é copiado no histórico de backups. Não é mostrada uma caixa de diálogo de alerta e a variável *erro* não se modifica. Se deseja notificar ao administrador que se produziu um erro, particularmente no contexto de uma aplicação em modo cliente/servidor, é necessário utilizar o **On Backup Shutdown database method**.
+

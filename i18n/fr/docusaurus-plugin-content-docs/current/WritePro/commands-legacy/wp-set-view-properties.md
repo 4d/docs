@@ -73,4 +73,4 @@ Vous souhaitez fixer certaines propriétés de vue pour une zone 4D Write Pro :
 
 ## Voir aussi 
 
-[WP Get view properties](wp-get-view-properties.md)  
+[WP Get view properties](../commands/wp-get-view-properties)  

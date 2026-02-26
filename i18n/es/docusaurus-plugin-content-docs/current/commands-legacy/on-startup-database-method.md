@@ -33,17 +33,17 @@ El Método base On Startup es perfecto para:
 * Inicializar variables interproceso que utilizará durante toda la sesión de trabajo.
 * Iniciar procesos automáticamente cuando abre una base.
 * Cargar preferencias o parámetros guardados durante la sesión de trabajo anterior.
-* Evitar la apertura de la base si no se cumple una condición (por ejemplo, si falta un recurso del sistema) llamando explícitamente [QUIT 4D](quit-4d.md).
+* Evitar la apertura de la base si no se cumple una condición (por ejemplo, si falta un recurso del sistema) llamando explícitamente [QUIT 4D](../commands/quit-4d).
 * Realizar otras acciones que quiera ejecutar automáticamente cada vez que abra una base.
 
 Sin embargo, le recomendamos NO lanzar trabajos de impresión desde el **Método base On Startup**. 
 
 ## Ejemplo 
 
-Vea el ejemplo en la sección [Método base On Exit](metodo-base-on-exit.md).
+Vea el ejemplo en la sección [Método base On Exit](../commands/metodo-base-on-exit).
 
 ## Ver también 
 
-[Método base On Exit](metodo-base-on-exit.md)  
+[Método base On Exit](../commands/metodo-base-on-exit)  
 *Métodos de base de datos*  
-[QUIT 4D](quit-4d.md)  
+[QUIT 4D](../commands/quit-4d)  

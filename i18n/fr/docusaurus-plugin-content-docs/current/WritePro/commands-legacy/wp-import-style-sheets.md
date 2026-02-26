@@ -43,7 +43,7 @@ Vous souhaitez importer une feuille de style nommée template et recevoir une no
 
 ## Voir aussi 
 
-[WP DELETE STYLE SHEET](wp-delete-style-sheet.md)  
-[WP Get style sheet](wp-get-style-sheet.md)  
-[WP Get style sheets](wp-get-style-sheets.md)  
-[WP New style sheet](wp-new-style-sheet.md)  
+[WP DELETE STYLE SHEET](../commands/wp-delete-style-sheet)  
+[WP Get style sheet](../commands/wp-get-style-sheet)  
+[WP Get style sheets](../commands/wp-get-style-sheets)  
+[WP New style sheet](../commands/wp-new-style-sheet)  

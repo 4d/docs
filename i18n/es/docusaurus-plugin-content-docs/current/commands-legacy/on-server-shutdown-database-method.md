@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Server Shutdown database method.Summary-->El Método base On Server Shutdown se llama una vez en el equipo servidor cuando la base actual se cierra en 4D Server.<!-- END REF--> El Método base On Server Shutdown NO es llamado por otro entorno 4D diferente de 4D Server.
 
-Para cerrar la base actual en el servidor, puede seleccionar el comando de menú **Cerrar la base...** en el servidor. También puede elegir el comando **Salir** o llamar al comando [QUIT 4D](quit-4d.md) dentro de un procedimiento almacenado ejecutado en el servidor.
+Para cerrar la base actual en el servidor, puede seleccionar el comando de menú **Cerrar la base...** en el servidor. También puede elegir el comando **Salir** o llamar al comando [QUIT 4D](../commands/quit-4d) dentro de un procedimiento almacenado ejecutado en el servidor.
 
 Cuando se inicia el proceso de cierre de la base, 4D efectúa las siguientes acciones:
 
@@ -33,4 +33,5 @@ El Método base On Server Shutdown es el lugar ideal para:
 
 **Importante:** si utiliza el Método base On Server Shutdown para cerrar los procedimientos almacenados, recuerde que el servidor sale una vez se ejecuta el Método base On Server Shutdown (y no los procedimientos almacenados). Si los procedimientos almacenados aún están corriendo en este momento, se abortarán. Por lo tanto, si quiere asegurarse de que los procedimientos almacenados se ejecuten completamente antes de ser abortados por el servidor, el Método base On Server Shutdown debe indicar a los procedimientos almacenados que deben terminar su ejecución (por ejemplo, utilizando una variable interproceso) y debe permitirles cerrar (por medio de un bucle de x segundos u otra variable interproceso).
 
-Si quiere que el código se ejecute automáticamente en un equipo cliente cuando un 4D remoto deja de conectarse al servidor, utilice el [Semaphore](semaphore.md).
+Si quiere que el código se ejecute automáticamente en un equipo cliente cuando un 4D remoto deja de conectarse al servidor, utilice el [Semaphore](../commands/semaphore).
+

@@ -24,9 +24,9 @@ displayed_sidebar: docs
 
 O comando **On Web Legacy Close Session database method** é chamado pelo servidor web de 4D cada vez que uma sessão web vai ser fechada. Uma sessão pode ser fechada nos seguintes casos:
 
-* quando se alcança o número máximo de sessões simultâneas (100 por defeito, modificá utilizando o comando [WEB SET OPTION](web-set-option.md)), e 4D necessita criar novas (4D automaticamente destruí o processo da sessão inativa mais antiga),
-* quando se alcança o período máximo de inatividade do processo da sessão (480 minutos por defeito, modificá via o comando [WEB SET OPTION](web-set-option.md)),
-* quando é chamado o comando [WEB LEGACY CLOSE SESSION](web-legacy-close-session.md).
+* quando se alcança o número máximo de sessões simultâneas (100 por defeito, modificá utilizando o comando [WEB SET OPTION](../commands/web-set-option)), e 4D necessita criar novas (4D automaticamente destruí o processo da sessão inativa mais antiga),
+* quando se alcança o período máximo de inatividade do processo da sessão (480 minutos por defeito, modificá via o comando [WEB SET OPTION](../commands/web-set-option)),
+* quando é chamado o comando [WEB LEGACY CLOSE SESSION](../commands/web-legacy-close-session).
 
 Quando é chamado este método base, o contexto da sessão (variáveis e seleções geradas pelo usuário) ainda é valido. Isto significa que pode guardar os dados relativos à sessão para poder usar-los posteriormente, mais especificamente utilizando [On Web Connection](./on-web-connection-database-method.md).
 
@@ -36,5 +36,5 @@ Um exemplo de uso do **On Web Legacy Close Session database method** é apresent
 
 ## Ver também 
 
-[WEB LEGACY CLOSE SESSION](web-legacy-close-session.md)  
+[WEB LEGACY CLOSE SESSION](../commands/web-legacy-close-session)  
 *Web Sessions Management (Legacy)*  

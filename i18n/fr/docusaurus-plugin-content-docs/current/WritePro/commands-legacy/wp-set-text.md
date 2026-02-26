@@ -89,4 +89,4 @@ Remplace le texte existant :
 
 ## Voir aussi 
 
-[WP Get text](wp-get-text.md)  
+[WP Get text](../commands/wp-get-text)  

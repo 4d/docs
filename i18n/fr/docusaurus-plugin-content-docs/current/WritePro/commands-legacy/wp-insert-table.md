@@ -71,4 +71,5 @@ Résultat :
 ## Voir aussi 
 
 [WP Table append row](../commands/wp-table-append-row)  
-[WP Table get rows](wp-table-get-rows.md)  
+[WP Table get rows](../commands/wp-table-get-rows)  
+

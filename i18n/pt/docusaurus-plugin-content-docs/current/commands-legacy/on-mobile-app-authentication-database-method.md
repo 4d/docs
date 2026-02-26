@@ -35,5 +35,5 @@ A documentação desse método foi atualizada e movida para [developer.<!-- END 
 ## Ver também 
 
   
-[MOBILE APP REFRESH SESSIONS](mobile-app-refresh-sessions.md)  
-[On Mobile App Action database method](on-mobile-app-action-database-method.md)  
+[MOBILE APP REFRESH SESSIONS](../commands/mobile-app-refresh-sessions)  
+[On Mobile App Action database method](../commands/on-mobile-app-action-database-method)  

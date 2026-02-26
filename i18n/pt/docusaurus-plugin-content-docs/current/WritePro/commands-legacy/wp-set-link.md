@@ -119,4 +119,4 @@ Se quiser definir um link a um método 4D em cada string "4D" no documento:
 ## Ver também 
 
   
-[WP Get links](wp-get-links.md)  
+[WP Get links](../commands/wp-get-links)  
