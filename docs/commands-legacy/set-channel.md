@@ -5,7 +5,7 @@ slug: /commands/set-channel
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET CHANNEL.Syntax-->**SET CHANNEL** ( *port* : Integer ; *settings* : Integer )<br/>**SET CHANNEL** ( *operation* : Integer ; *document* : Text )<!-- END REF-->
+<!--REF #_command_.SET CHANNEL.Syntax-->**SET CHANNEL** ( *port* : Integer {; *settings* : Integer} )<br/>**SET CHANNEL** ( *operation* : Integer {; *document* : Text } )<!-- END REF-->
 <!--REF #_command_.SET CHANNEL.Params-->
 <div class="no-index">
 
