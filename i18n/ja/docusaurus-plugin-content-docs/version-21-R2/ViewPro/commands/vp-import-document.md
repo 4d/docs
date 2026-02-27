@@ -5,10 +5,10 @@ title: VP IMPORT DOCUMENT
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                                                            |
-| ----- | ------------------------------------------------------------- |
-| 20 R9 | Trigger of callback function after custom functions completed |
-| 20 R2 | .sjsドキュメントをサポート                               |
+| リリース  | 内容                              |
+| ----- | ------------------------------- |
+| 20 R9 | カスタムの関数が完了した後のコールバック関数のトリガー     |
+| 20 R2 | .sjsドキュメントをサポート |
 
 </details>
 
@@ -60,24 +60,24 @@ title: VP IMPORT DOCUMENT
 |              | includeUnusedStyles       | boolean                     | excel xml を json に変換する際、使用されていないカスタム名を含めるかどうか。デフォルトは true。                                                                                                                                                                                                                             |
 |              | openMode                  | integer                     | <li>0 (normal): 通常のオープンモード、レイジーなし、インクリメンタルなし。 ファイルを開くと、特定の時点で UI と UIイベントが更新され、応答します。</li><li>1 (lazy): レイジー (遅延) オープンモード。 ファイルを開くと、アクティブなシートだけが直接読み込まれます。 他のシートは使用された場合にのみ読み込まれます。</li><li>2 (incremental): インクリメンタル (増分) オープンモード。 ファイルを開くと、データ読み込み中に UI と UIイベントが更新され、即座に応答します。</li> |
 | excelOptions |                           | object                      | Excel のみ (任意) - Excel 書き出しのオプション                                                                                                                                                                                                                                    |
-|              | includeStyles             | boolean                     | Whether to include the style when importing, default true.                                                                                                                                                                                                             |
-|              | includeFormulas           | boolean                     | Whether to include the formula when importing, default true.                                                                                                                                                                                                           |
-|              | frozenColumnsAsRowHeaders | boolean                     | Whether to treat the frozen columns as row headers when importing, default false.                                                                                                                                                                                      |
-|              | frozenRowsAsColumnHeaders | boolean                     | Whether to treat the frozen rows as column headers when importing, default false.                                                                                                                                                                                      |
+|              | includeStyles             | boolean                     | 読み込み時にスタイルを含めるかどうか。デフォルトは true。                                                                                                                                                                                                                                                        |
+|              | includeFormulas           | boolean                     | 読み込み時にフォーミュラを含めるかどうか。デフォルトは true。                                                                                                                                                                                                                                                      |
+|              | frozenColumnsAsRowHeaders | boolean                     | 読み込み時に固定された列を行ヘッダーとして扱うかどうか。デフォルトはfalse。                                                                                                                                                                                                                                               |
+|              | frozenRowsAsColumnHeaders | boolean                     | 読み込み時に固定された行を列ヘッダーとして扱うかどうか。デフォルトはfalse。                                                                                                                                                                                                                                               |
 |              | fullRecalc                | boolean                     | jsonデータを読み込んだ後に計算するかどうか。デフォルトは false。                                                                                                                                                                                                                                                  |
-|              | dynamicReferences         | boolean                     | Whether to calculate functions with dynamic reference, default true.                                                                                                                                                                                                   |
-|              | calcOnDemand              | boolean                     | Whether to calculate formulas only when they are demanded, default false.                                                                                                                                                                                              |
-|              | includeUnusedStyles       | boolean                     | Whether to include the unused name style when converting excel xml to the json, default true.                                                                                                                                                                          |
-|              | password                  | text                        | The password to open the workbook.                                                                                                                                                                                                                                     |
-|              | openMode                  | text                        | The open mode of normal, lazy and incremental. By default is normal.                                                                                                                                                                                   |
+|              | dynamicReferences         | boolean                     | 動的参照を含む関数を計算するかどうか。デフォルトは true。                                                                                                                                                                                                                                                        |
+|              | calcOnDemand              | boolean                     | 要求されたときにだけフォーミュラを計算するかどうか。デフォルトは false。                                                                                                                                                                                                                                                |
+|              | includeUnusedStyles       | boolean                     | excel xml を json に変換する際、使用されていないカスタム名を含めるかどうか。デフォルトは true。                                                                                                                                                                                                                             |
+|              | password                  | text                        | ワークブックを開くためのパスワード。                                                                                                                                                                                                                                                                     |
+|              | openMode                  | text                        | 開くモード(ノーマル、レイジー、インクリメンタル)。 デフォルトはノーマル。                                                                                                                                                                                                                              |
 
 :::note 注記
 
 - .xslx、.csv、.sjs 形式のファイルの読み込みは、**非同期** でおこなわれます。 これらの形式で、ドキュメント処理の最後にアクションを実行したい場合には、`formula` プロパティを使用する必要があります。
 - Microsoft Excel 形式のファイルを 4D View Pro ドキュメントに読み込む場合、一部の設定が失われる可能性があります。 [SpreadJS にある一覧](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport) にて、設定を確認することができます。
 - CSV形式およびユーザー定義区切りの値 (DSV) に関する詳細については、こちらの [Wikipedia の記事](https://en.wikipedia.org/wiki/Delimiter-separated_values) (英文) を参照ください。
-- Using *excelOptions* object is recommended when importing ".xlsx" format. Make sure to not mix this object with legacy first level property *password* to avoid potiental issues.
-- The callback function specified in the `formula` attribute is triggered after all [4D custom functions](../formulas.md#4d-functions) within the imported content have completed their calculations. This ensures that any dependent processes, such as document modifications or exports, are performed only after all formula-based computations are fully resolved.
+- ".xlsx" フォーマットを読み込む際には*excelOptions* オブジェクトの使用が推奨されています。 潜在的な問題を避けるため、このオブジェクトを旧式の第一レベルプロパティの *password* と混在させないように注意して下さい。
+- 属性で指定されたコールバック関数は、読み込まれたコンテンツ内の全ての[4D カスタムファンクション](../formulas.md#4dファンクション) がその計算を終えた後にトリガーされます。 これにより、ドキュメントの変更や書き出しなどの依存処理は、全てのフォーミュラベースの計算が完全に解決した後に初めて実行されることが保証されます。
 
 :::
 
@@ -87,7 +87,7 @@ title: VP IMPORT DOCUMENT
 
 ```4d
 var $docPath : text
-If(Form event code=On VP Ready) //4D View Pro area loaded and ready
+If(Form event code=On VP Ready) //4D View Pro エリアがロードされ準備ができた
     $docPath:="C:\\Bases\\ViewProDocs\\MyExport.4VP"
     VP IMPORT DOCUMENT("VPArea";$docPath)
 End if
@@ -98,7 +98,7 @@ End if
 パスワードで保護されている Microsoft Excel ドキュメントを 4D View Pro エリアに読み込みます:
 
 ```4d
-	//Import code
+	//読み込みコード
 var $o:={}
 $o.formula:=Formula(myImport)
 $excelOptions:={includeStyles:false;includeFormulas:true;password:"excel123"}

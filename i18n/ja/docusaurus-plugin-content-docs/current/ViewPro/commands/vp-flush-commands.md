@@ -5,9 +5,9 @@ title: VP FLUSH COMMANDS
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                              |
-| ----- | ------------------------------- |
-| 20 R9 | Support of *callback* parameter |
+| リリース  | 内容                 |
+| ----- | ------------------ |
+| 20 R9 | *callback* 引数のサポート |
 
 </details>
 
@@ -19,10 +19,10 @@ title: VP FLUSH COMMANDS
 
 <div class="no-index">
 
-| 引数         | 型                           |    | 説明                                                                                                                          |
-| ---------- | --------------------------- | -- | --------------------------------------------------------------------------------------------------------------------------- |
-| vpAreaName | Text                        | -> | 4D View Pro フォームオブジェクト名                                                                                                     |
-| callback   | 4D.Function | -> | (Optional) A callback function executed after all VP commands and 4D custom functions have been executed |
+| 引数         | 型                           |    | 説明                                                                |
+| ---------- | --------------------------- | -- | ----------------------------------------------------------------- |
+| vpAreaName | Text                        | -> | 4D View Pro フォームオブジェクト名                                           |
+| callback   | 4D.Function | -> | (オプション) VP コマンドと4D カスタム関数が実行された後に実行されるコールバック関数 |
 
 </div>
 <!-- END REF -->
@@ -35,50 +35,50 @@ title: VP FLUSH COMMANDS
 
 パフォーマンス向上と、送信リクエスト数を抑えるため、デベロッパーが呼び出した 4D View Pro コマンドはコマンドバッファに保存されます。 `VP FLUSH COMMANDS` は呼び出されると、メソッド終了時にコマンドをバッチとして実行し、コマンドバッファのコンテンツを空にします。
 
-If a *callback* function is provided, it is only executed after all stored commands and 4D custom functions have finished processing. This ensures that any follow-up actions, such as saving or printing the document, are only performed after all calculations have completed.
+*callback* 関数が提供された場合、その関数は全ての保存されたコマンドと4D カスタム関数が処理を終えた後にのみ実行されます。 これにより、ドキュメントの保存や印刷などのフォローアップアクションは、全ての計算が完了した後に実行されることが保証されます。
 
-The following parameters can be used in the callback function:
+コールバック関数では、以下のパラメーターを使用することができます:
 
-| 引数     |                               | 型       | 説明                                                 |
-| ------ | ----------------------------- | ------- | -------------------------------------------------- |
-| param1 |                               | Text    | 4D View Pro エリアのオブジェクト名                            |
-| param2 |                               | Object  | メソッドから返されるステータスメッセージを格納したオブジェクト                    |
-|        | .success      | Boolean | `True` if import was successful, `False` otherwise |
-|        | .errorCode    | Integer | エラーコード                                             |
-|        | .errorMessage | Text    | エラーメッセージ                                           |
+| 引数     |                               | 型       | 説明                                   |
+| ------ | ----------------------------- | ------- | ------------------------------------ |
+| param1 |                               | Text    | 4D View Pro エリアのオブジェクト名              |
+| param2 |                               | Object  | メソッドから返されるステータスメッセージを格納したオブジェクト      |
+|        | .success      | Boolean | 読み込みが成功した場合には`True`、それ以外の場合には`False` |
+|        | .errorCode    | Integer | エラーコード                               |
+|        | .errorMessage | Text    | エラーメッセージ                             |
 
 ---
 
 ## 例題 1
 
-You want to execute commands and empty the command buffer:
+コマンドを実行し、コマンドバッファを空にしたい場合を考えます:
 
 ```4d
-// Set text values in specific cells
+// 特定のセルにテキスト値を設定
 VP SET TEXT VALUE(VP Cell("ViewProArea1";10;1);"INVOICE")
 VP SET TEXT VALUE(VP Cell("ViewProArea1";10;2);"Invoice date: ")
 VP SET TEXT VALUE(VP Cell("ViewProArea1";10;3);"Due date: ")
 
-// Execute stored commands, clear the buffer, and trigger the callback
+// 保存されたコマンドを実行し、バッファを消去する
 VP FLUSH COMMANDS("ViewProArea1")
 ```
 
 ## 例題 2
 
-You want to execute commands, empty the command buffer and trigger a callback function:
+コマンドを実行し、コマンドバッファを消去し、コールバック関数をトリガーしたい場合を考えます:
 
 ```4d
-// Set text values in specific cells
+// 特定のセルにテキスト値を設定
 VP SET FORMULA(VP Cell("ViewProArea1";10;1);"MyCustomFunction()")
 VP SET FORMULA(VP Cell("ViewProArea1";10;2);"MyCustomFunction2()")
 VP SET FORMULA(VP Cell("ViewProArea1";10;3);"MyCustomFunction3()")
 
-// Execute stored commands, clear the buffer, and trigger the callback
+// 保存されたコマンドを実行し、バッファを消去し、コールバック関数をトリガーする
 VP FLUSH COMMANDS("ViewProArea1"; Formula(onFlushComplete))
 ```
 
 ```4d
-// Method 'onFlushComplete'
+// 'onFlushComplete' メソッド
 #DECLARE($name : Text; $status : Object)
    ALERT("All commands and custom functions have finished executing. You can now print or save the document.")
 ```

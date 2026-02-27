@@ -805,7 +805,7 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 データコンテキストを使用した表組みを作成します:
 
 ```4d
-// Set a data context
+// データコンテキストを設定
 var $data : Object
 
 $data:=New object()
@@ -816,7 +816,7 @@ $data.people.push(New object("firstName"; "Mary"; "lastName"; "Poppins"; "email"
 
 VP SET DATA CONTEXT("ViewProArea"; $data)
 
-// Define the columns for the table
+// 表に対してカラムを定義
 var $options : cs.ViewPro.TableOptions
 
 $options:=cs.ViewPro.TableOptions.new()
@@ -825,7 +825,7 @@ $options.tableColumns.push(cs.ViewPro.TableColumn.new("name"; "First name"; "dat
 $options.tableColumns.push(cs.ViewPro.TableColumn.new("name"; "Last name"; "dataField"; "lastName"))
 $options.tableColumns.push(cs.ViewPro.TableColumn.new("name"; "Email"; "dataField"; "email"))
 
-// Create a table from the "people" collection
+// "people" コレクションから表を作成
 VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; $options.tableColumns.length; 1); "ContextTable"; "people"; $options)
 ```
 

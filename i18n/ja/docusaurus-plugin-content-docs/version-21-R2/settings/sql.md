@@ -3,16 +3,16 @@ id: sql
 title: SQL ページ
 ---
 
-This page is used to configure the publishing parameters, access rights, and engine options of the [4D SQL Server](https://doc.4d.com/4Dv20/4D/20/Using-SQL-in-4D.200-6342004.en.html).
+このページでは [4D SQLサーバー](https://doc.4d.com/4Dv20/4D/20/Using-SQL-in-4D.200-6342004.ja.html) の公開パラメーターやアクセス権、および 4D SQLエンジンの動作に関する設定をおこないます。
 
 ## SQLサーバー公開
 
-See the [**Configuration of 4D SQL Server**](https://doc.4d.com/4Dv20/4D/20/Configuration-of-4D-SQL-Server.300-6342093.en.html) page on doc.4d.com.
+doc.4d.com の [**4D SQLサーバの設定**](https://doc.4d.com/4Dv20/4D/20/Configuration-of-4D-SQL-Server.300-6342093.ja.html) を参照ください。
 
 ## デフォルトスキーマ用のSQLサーバーアクセス権
 
-See the [**Configuration of 4D SQL Server**](https://doc.4d.com/4Dv20/4D/20/Configuration-of-4D-SQL-Server.300-6342093.en.html#311590) page on doc.4d.com.
+doc.4d.com の [**4D SQLサーバの設定**](https://doc.4d.com/4Dv20/4D/20/Configuration-of-4D-SQL-Server.300-6342093.ja.html#311590) を参照ください。
 
 ## SQLエンジンオプション
 
-See the [**SQL Engine Options**](https://doc.4d.com/4Dv20/4D/20/4D-SQL-engine-implementation.300-6342089.en.html) paragraph on doc.4d.com.
+doc.4d.com の [**SQLエンジンオプション**](https://doc.4d.com/4Dv20/4D/20/4D-SQL-engine-implementation.300-6342089.ja.html) を参照ください。
