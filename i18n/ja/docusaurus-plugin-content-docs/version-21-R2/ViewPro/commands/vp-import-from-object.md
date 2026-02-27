@@ -5,9 +5,9 @@ title: VP IMPORT FROM OBJECT
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                              |
-| ----- | ------------------------------- |
-| 20 R9 | Support of *paramObj* parameter |
+| リリース  | 内容                 |
+| ----- | ------------------ |
+| 20 R9 | *paramObj* 引数のサポート |
 
 </details>
 
@@ -17,11 +17,11 @@ title: VP IMPORT FROM OBJECT
 
 <!-- REF #_method_.VP IMPORT FROM OBJECT.Params -->
 
-| 引数         | 型      |    | 説明                                           |
-| ---------- | ------ | -- | -------------------------------------------- |
-| vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名                      |
-| viewPro    | Object | -> | 4D View Pro オブジェクト                           |
-| paramObj   | Object | -> | (Optional) import options |
+| 引数         | 型      |    | 説明                                   |
+| ---------- | ------ | -- | ------------------------------------ |
+| vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名              |
+| viewPro    | Object | -> | 4D View Pro オブジェクト                   |
+| paramObj   | Object | -> | (オプション) 読み込みオプション |
 
 <!-- END REF -->
 
@@ -35,33 +35,33 @@ title: VP IMPORT FROM OBJECT
 
 *viewPro* オブジェクトが無効な場合には、エラーが返されます。
 
-In *paramObj*, you can pass the following property:
+*paramObj* 引数には、以下のプロパティを渡すことができます:
 
-| プロパティ   | 型                           | 説明                                                                                                                                                                                                                                                        |
-| ------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| formula | 4D.Function | (Optional) Callback function to be executed when the object is loaded and all 4D custom functions have responded. [コールバックメソッド (フォーミュラ) の渡し方](vp-export-document.md#コールバックメソッド-フォーミュラ-の渡し方) を参照ください。 |
+| プロパティ   | 型                           | 説明                                                                                                                                                                                    |
+| ------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| formula | 4D.Function | (任意) オブジェクトがロードされ、全ての4Dカスタムファンクションが応答したときに実行されるコールバックファンクション。 [コールバックメソッド (フォーミュラ) の渡し方](vp-export-document.md#コールバックメソッド-フォーミュラ-の渡し方) を参照ください。 |
 
 コールバックメソッドでは、以下のパラメーターを使用することができます:
 
-| 引数     |                               | 型       | 説明                                                         |
-| ------ | ----------------------------- | ------- | ---------------------------------------------------------- |
-| param1 |                               | Text    | 4D View Pro エリアのオブジェクト名                                    |
-| param2 |                               | Text    | Reserved for compatibility, this parameter is always empty |
-| param3 |                               | Object  | コマンドの *paramObj* 引数への参照                                    |
-| param4 |                               | Object  | メソッドから返されるステータスメッセージを格納したオブジェクト                            |
-|        | .success      | Boolean | `True` if import was successful, `False` otherwise         |
-|        | .errorCode    | Integer | エラーコード                                                     |
-|        | .errorMessage | Text    | エラーメッセージ                                                   |
+| 引数     |                               | 型       | 説明                                   |
+| ------ | ----------------------------- | ------- | ------------------------------------ |
+| param1 |                               | Text    | 4D View Pro エリアのオブジェクト名              |
+| param2 |                               | Text    | 互換性のために予約済みで、この引数は常に空です              |
+| param3 |                               | Object  | コマンドの *paramObj* 引数への参照              |
+| param4 |                               | Object  | メソッドから返されるステータスメッセージを格納したオブジェクト      |
+|        | .success      | Boolean | 読み込みが成功した場合には`True`、それ以外の場合には`False` |
+|        | .errorCode    | Integer | エラーコード                               |
+|        | .errorMessage | Text    | エラーメッセージ                             |
 
 :::note
 
-The callback function specified in the `formula` attribute is triggered after all [4D custom functions](../formulas.md#4d-functions) within the imported content have completed their calculations. This ensures that any dependent processes, such as document modifications or exports, are performed only after all formula-based computations are fully resolved.
+属性で指定されたコールバック関数は、読み込まれたコンテンツ内の全ての[4D カスタムファンクション](../formulas.md#4dファンクション) がその計算を終えた後にトリガーされます。 これにより、ドキュメントの変更や書き出しなどの依存処理は、全てのフォーミュラベースの計算が完全に解決した後に初めて実行されることが保証されます。
 
 :::
 
 ## 例題
 
-You want to import a spreadsheet that was previously saved in an object field, and trigger a callback function after all 4D custom functions have responded:
+以前はオブジェクトフィールドに保存されていたスプレッドシートを読み込み、全ての4D カスタムファンクションが応答し終わったあとにコールバック関数をトリガーしたい場合を考えます:
 
 ```4d
 QUERY([VPWorkBooks];[VPWorkBooks]ID=10)
@@ -70,7 +70,7 @@ VP IMPORT FROM OBJECT("ViewProArea1"; [VPWorkBooks]SPBook; {formula: Formula(onI
 ```
 
 ```4d
-// Method 'onImportComplete'
+// 'onImportComplete' メソッド
 #DECLARE($name : Text; $path : Text; $paramObj : Object; $status : Object)
    ALERT("The document has been imported, and all custom functions have finished processing.")
 ```

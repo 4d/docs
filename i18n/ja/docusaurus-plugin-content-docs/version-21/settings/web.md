@@ -3,7 +3,7 @@ id: web
 title: Web ページ
 ---
 
-**Web** ページのタブを使用して、4D に統合された Webサーバーの様々な設定 (セキュリティ、開始オプション、接続、Webサービス等) にアクセスできます。 4D Webサーバーの動作に関する詳細は [Web サーバー](../WebServer/webServer.md) を参照ください。 For more information about 4D Web services, refer to the [Publication and use of Web Services](https://doc.4d.com/4Dv20/4D/20.2/Publication-and-use-of-Web-Services.200-6750103.en.html) chapter.
+**Web** ページのタブを使用して、4D に統合された Webサーバーの様々な設定 (セキュリティ、開始オプション、接続、Webサービス等) にアクセスできます。 4D Webサーバーの動作に関する詳細は [Web サーバー](../WebServer/webServer.md) を参照ください。 また、Webサービスに関する詳細は [Web サービスの公開と使用](https://doc.4d.com/4Dv20/4D/20.2/Publication-and-use-of-Web-Services.200-6750103.ja.html) を参照ください。
 
 ## 設定
 
@@ -70,7 +70,7 @@ Webページキャッシュを有効化します。 [キャッシュ](../WebServ
 
 #### スケーラブルセッション (マルチプロセスセッション)
 
-このオプションを選択すると (推奨)、ユーザーセッションは **Session** オブジェクトを介して管理されます。 See the [User sessions page](../WebServer/sessions.md#enabling-web-sessions).
+このオプションを選択すると (推奨)、ユーザーセッションは **Session** オブジェクトを介して管理されます。 [ユーザーセッション](../WebServer/sessions.md#enabling-web-sessions) のページを参照ください。
 
 #### セッションなし
 
@@ -80,13 +80,13 @@ Webページキャッシュを有効化します。 [キャッシュ](../WebServ
 
 - [最大同時Webプロセス](#最大同時webプロセス)
 - [一時的なコンテキストを再利用する (リモートモード)](#一時的なコンテキストを再利用する)
-- [Use preemptive processes](#use-preemptive-processes)
+- [プリエンプティブプロセスを使用](#プリエンプティブプロセスを使用)
 
 #### 旧式セッション (シングルプロセスセッション)
 
 *互換性に関する注記*: このオプションは 4D v18 R6 以前のバージョンで作成されたデータベース/プロジェクトでのみ利用可能です。
 
-このオプションは 4D HTTP サーバーの旧式ユーザーセッションの管理を有効化します。 This mechanism is described in the [Web Sessions Management (Legacy)](https://doc.4d.com/4Dv20/4D/20.6/Web-Sessions-Management-Legacy.300-7487177.en.html) section. [旧式セッション (自動セッション管理)](../WebServer/webServerConfig.md#旧式セッション-自動セッション管理) 参照。
+このオプションは 4D HTTP サーバーの旧式ユーザーセッションの管理を有効化します。 この機構は [Webセッション管理(旧式)](https://doc.4d.com/4Dv20/4D/20.6/Web-Sessions-Management-Legacy.300-7487177.ja.html) にて詳細に説明されています。 [旧式セッション (自動セッション管理)](../WebServer/webServerConfig.md#旧式セッション-自動セッション管理) 参照。
 
 このオプションが選択されていると、[一時的なコンテキストを再利用する (リモートモード)](#一時的なコンテキストを再利用する) オプションも自動で選択され、ロックされます。
 
@@ -108,7 +108,7 @@ Webプロセスの最大同時接続数の厳格な上限です。 [最大同時
 
 コンパイル済みアプリケーションにおいてプリエンプティブWebプロセスを有効化します。 **プリエンプティブプロセスを使用** が選択されているとき、Web関連のコード (4D グと Webデータベースメソッドを含む) は、コンパイル時にプリエンティブな実行が可能かどうかが評価されます。 詳細な情報については、[プリエンプティブWebプロセスの使用](../WebServer/preemptiveWeb.md) を参照ください。
 
-> このオプションは スケーラブルセッション、RESTプロセス (コンパイル済みモード)、および Webサービスプロセス (サーバーあるいはクライアント) には適用されません。 See [Enabling the preemptive mode for the web server](../WebServer/webServerConfig.md#use-preemptive-processes).
+> このオプションは スケーラブルセッション、RESTプロセス (コンパイル済みモード)、および Webサービスプロセス (サーバーあるいはクライアント) には適用されません。 [Web サーバーにおいてプリエンプティブモードを有効化する](../WebServer/webServerConfig.md#プリエンプティブプロセスを使用) を参照してください。
 
 #### 非動作プロセスのタイムアウト
 
@@ -121,10 +121,10 @@ Webプロセスの最大同時接続数の厳格な上限です。 [最大同時
 Webサーバーに対して適用する認証システムを設定します。 3つのオプションから選択できます:
 
 - カスタムの認証 (デフォルト)
-- Passwords with BASIC protocol
-- Passwords with DIGEST protocol
+- BASIC プロトコルのパスワード
+- DIGEST プロトコルのパスワード
 
-**カスタムの認証** を使用することが推奨されています。 See [**Authentication**](../WebServer/authentication.md) section.
+**カスタムの認証** を使用することが推奨されています。 [**認証**](../WebServer/authentication.md) の章を参照してください。
 
 #### Generic Web User
 
@@ -162,7 +162,7 @@ CORSサービスで許可されたホストとメソッドの一覧。 [CORS設�
 
 4D Web サーバーが受け取るリクエストのログを開始/停止します。ログは、*logweb.txt* ファイルに記録され、そのフォーマットを指定することができます。 [ログの記録](../WebServer/webServerConfig.md#ログの記録) 参照。
 
-> The activation and deactivation of the log file of requests can also be carried out by programming using the [WEB SET OPTION](../commands-legacy/web-set-option.md) command.
+> リクエストのログファイルの有効/無効は [WEB SET OPTION](../commands-legacy/web-set-option.md) コマンドを使用することでプログラミングでも切り替えられます。
 
 ログフォーマットメニューでは、次のオプションを提供します。
 
@@ -248,7 +248,7 @@ ELF (Extended Log Format) または WLF (WebStar Log Format) を選択すると�
 
 このページのオプションを使用して 4Dプロジェクトの Webサービスを有効にし、(サーバーおよびクライアントの) 設定をすることができます。
 
-For more information about the support of Web Services in 4D, refer to the [Publication and use of Web Services](https://doc.4d.com/4Dv20/4D/20.2/Publication-and-use-of-Web-Services.200-6750103.en.html) chapter.
+また、Webサービスに関する詳細は [Web サービスの公開と使用](https://doc.4d.com/4Dv20/4D/20.2/Publication-and-use-of-Web-Services.200-6750103.ja.html) を参照ください。
 
 ### サーバー側設定
 
@@ -280,11 +280,11 @@ RESTサーバーを開始/停止します。 [RESTサーバー設定](../REST/co
 
 :::info 非推奨
 
-4D 20 R6 以降、**このセクションは非推奨** となっています。 現在のプロジェクト設定が古く、アップグレードが必要な場合は、このセクションに **ds.authentify() 関数を通しての REST認証を有効化** ボタン (後述参照) が表示されます。 If your project is already compatible with the [Force login](../REST/authUsers.md#force-login-mode) mode, the section is missing and you can ignore this paragraph.
+4D 20 R6 以降、**このセクションは非推奨** となっています。 現在のプロジェクト設定が古く、アップグレードが必要な場合は、このセクションに **ds.authentify() 関数を通しての REST認証を有効化** ボタン (後述参照) が表示されます。 プロジェクトがすでに [強制ログイン](../REST/authUsers.md#強制ログインモード) モードに対応している場合にはこのセクションは存在しないため、この段落は無視してください。
 
 :::
 
-See [Users and sessions](../REST/authUsers.md) to know the recommended way to control and manage REST access in your 4D projects.
+4D プロジェクト内におけるRES アクセスの推奨される管理方法について知りたい場合には、[ユーザーとセッション](../REST/authUsers.md) の章を参照してください。
 
 #### ds.authentify() 関数を通しての REST認証を有効化
 
