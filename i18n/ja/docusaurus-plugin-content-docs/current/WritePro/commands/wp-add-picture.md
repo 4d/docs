@@ -15,7 +15,7 @@ displayed_sidebar: docs
 | wpDoc          | Object                  | &#8594; | 4D Write Pro ドキュメント                        |
 | picture        | Picture                 | &#8594; | ピクチャー                                      |
 | picturePath    | Text                    | &#8594; | ピクチャーパス                                    |
-| pictureFileObj | 4D.File | &#8594; | ピクチャーファイルを表す4D.File オブジェクト |
+| pictureFileObj | [4D.File](../API/FileClass.md)  | &#8594; | ピクチャーファイルを表す4D.File オブジェクト |
 | 戻り値            | Object                  | &#8592; | ピクチャーを参照しているオブジェクト                         |
 
 </div>

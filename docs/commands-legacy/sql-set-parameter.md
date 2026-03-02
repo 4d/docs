@@ -5,13 +5,13 @@ slug: /commands/sql-set-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL SET PARAMETER.Syntax-->**SQL SET PARAMETER** ( *object* : Object ; *paramType* : Integer )<!-- END REF-->
+<!--REF #_command_.SQL SET PARAMETER.Syntax-->**SQL SET PARAMETER** ( *object* : Variable ; *paramType* : Integer )<!-- END REF-->
 <!--REF #_command_.SQL SET PARAMETER.Params-->
 <div class="no-index">
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| object | Object | &#8594;  | 4D object to be used (variable, array or field) |
+| object | Variable | &#8594;  | 4D object to be used (variable, array or field) |
 | paramType | Integer | &#8594;  | Type of parameter |
 </div>
 <!-- END REF-->

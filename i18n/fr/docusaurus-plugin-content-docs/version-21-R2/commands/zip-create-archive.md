@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | Paramètres      | Type                      |                             | Description                                                               |
 | --------------- | ------------------------- | :-------------------------: | ------------------------------------------------------------------------- |
 | fileToZip       | 4D.File   | &#8594; | Objet fichier ou dossier à compresser                                     |
-| folderToZip     | 4D.Folder | &#8594; | Objet fichier ou dossier à compresser                                     |
+| folderToZip     | [4D.Folder](../API/FolderClass.md)  | &#8594; | Objet fichier ou dossier à compresser                                     |
 | zipStructure    | Object                    | &#8594; | Objet fichier ou dossier à compresser                                     |
 | destinationFile | 4D.File   | &#8594; | Fichier de destination de l'archive                                       |
 | options         | Integer                   | &#8594; | Si *folderToZip* utilisé : `ZIP Without enclosing folder` |

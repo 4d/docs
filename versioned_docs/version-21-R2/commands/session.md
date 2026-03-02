@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | 4D.Session | &#8592; | Session object |
+| Function result | [4D.Session](../API/SessionClass.md)  | &#8592; | Session object |
 </div>
 <!-- END REF-->
 

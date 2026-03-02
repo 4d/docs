@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 | Paramètres  | Type                    |                             | Description                                                   |
 | ----------- | ----------------------- | --------------------------- | ------------------------------------------------------------- |
-| projectFile | 4D.File | &#8594; | Fichier .4DProject à compiler                 |
+| projectFile | [4D.File](../API/FileClass.md)  | &#8594; | Fichier .4DProject à compiler                 |
 | options     | Object                  | &#8594; | Objet qui spécifie les options de compilation                 |
 | Résultat    | Object                  | &#8592; | Objet contenant des informations sur le statut de compilation |
 

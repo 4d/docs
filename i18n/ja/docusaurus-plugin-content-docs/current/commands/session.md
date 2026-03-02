@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 | 引数  | 型                          |                             | 説明             |
 | --- | -------------------------- | --------------------------- | -------------- |
-| 戻り値 | 4D.Session | &#8592; | Session オブジェクト |
+| 戻り値 | [4D.Session](../API/SessionClass.md)  | &#8592; | Session オブジェクト |
 
 </div>
 <!-- END REF-->

@@ -12,7 +12,7 @@ displayed_sidebar: docs
 
 | Paramètres | Type                       |                             | Description   |
 | ---------- | -------------------------- | --------------------------- | ------------- |
-| Résultat   | 4D.Session | &#8592; | Objet session |
+| Résultat   | [4D.Session](../API/SessionClass.md)  | &#8592; | Objet session |
 
 </div>
 <!-- END REF-->
