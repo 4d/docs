@@ -71,6 +71,8 @@ Se você deseja guardar o conteúdo de um arquivo existente no campo imagem, arm
 
 [Get external data path](get-external-data-path.md)  
 [RELOAD EXTERNAL DATA](reload-external-data.md)  
+[ORDA: Assigning files to picture or blob attributes](../ORDA/entities.md#assigning-files-to-picture-or-blob-attributes)
+
 
 ## Propriedades
 

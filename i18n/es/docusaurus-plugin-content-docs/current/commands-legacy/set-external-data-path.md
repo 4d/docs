@@ -70,6 +70,8 @@ Usted desea guardar el contenido de un archivo existente en el campo imagen, alm
 
 [Get external data path](get-external-data-path.md)  
 [RELOAD EXTERNAL DATA](reload-external-data.md)  
+[ORDA: Assigning files to picture or blob attributes](../ORDA/entities.md#assigning-files-to-picture-or-blob-attributes)
+
 
 ## Propiedades
 
