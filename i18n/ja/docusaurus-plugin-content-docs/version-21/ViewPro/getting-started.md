@@ -20,7 +20,7 @@ Go to the [Library table](../Notes/updates.md#library-table-4d-21-lts) to know t
 
 ## インストールとアクティベーション
 
-4D View Pro must be installed in your projects. The 4D View Pro component is available from the [**4D-ViewPro github repository**](https://github.com/4d/4D-ViewPro).
+4D View Pro は、プロジェクト内にインストールされている必要があります。 4D View Pro コンポーネントは[**4D-ViewPro github レポジトリ**](https://github.com/4d/4D-ViewPro) から入手できます。
 
 The easiest way to install 4D View Pro in an opened project is to use the Dependency Manager:
 

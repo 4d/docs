@@ -149,7 +149,7 @@ title: クラス
 
 **.backColor** : Text<!-- END REF -->
 
-The `.backColor` property is the <!-- REF #TableStyle.backColor.Summary -->[background color](configuring.md#background--foreground) of the table<!-- END REF -->.
+`.backColor` プロパティは、 <!-- REF #TableStyle.backColor.Summary -->[表の背景色](configuring.md/背景色と文字色) を指定します<!-- END REF -->。
 
 ### .foreColor
 
@@ -157,7 +157,7 @@ The `.backColor` property is the <!-- REF #TableStyle.backColor.Summary -->[back
 
 **.foreColor** : Text<!-- END REF -->
 
-The `.foreColor` property is the <!-- REF #TableStyle.foreColor.Summary -->[foreground color](configuring.md#background--foreground) of the table<!-- END REF -->.
+`.forecolor` プロパティは、 <!-- REF #TableStyle.foreColor.Summary -->[表の文字色](configuring.md/背景色と文字色) を指定します<!-- END REF -->。
 
 ### .font
 
@@ -165,7 +165,7 @@ The `.foreColor` property is the <!-- REF #TableStyle.foreColor.Summary -->[fore
 
 **.font** : Text<!-- END REF -->
 
-The `.font` property is the <!-- REF #TableStyle.font.Summary -->font name (see [**Fonts and text**](configuring.md#fonts-and-text)) of the table<!-- END REF -->.
+`.font` プロパティは、 <!-- REF #TableStyle.font.Summary -->表のフォント名 ([**フォントとテキスト**](configuring.md#フォントとテキスト) 参照) を指定します<!-- END REF -->。
 
 ### .textDecoration
 
@@ -205,7 +205,7 @@ The `.font` property is the <!-- REF #TableStyle.font.Summary -->font name (see 
 
 **.borderTop** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-The `.borderTop` property is the <!-- REF #TableStyle.borderTop.Summary -->top border line of the table <!-- END REF -->.
+`.borderTop` プロパティは、 <!-- REF #TableStyle.borderTop.Summary -->表の上の外枠線を定義します <!-- END REF -->。
 
 ### .borderHorizontal
 
