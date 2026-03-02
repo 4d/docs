@@ -12,15 +12,15 @@ toc_max_heading_level: 3
 
 <div class="no-index">
 
-| Paramètres | Type         |                             | Description                                                                                                                                                                                 |
-| ---------- | ------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| aTable     | Table        | &#8594; | Table of the form or Default table, if omitted                                                                                                                                              |
-| formName   | Text, Object | &#8594; | Name (string) of table or project form, or a POSIX path (string) to a .json file describing the form, oran object describing the form |
-| type       | Integer      | &#8594; | Window type                                                                                                                                                                                 |
-| hPos       | Integer      | &#8594; | Horizontal position of the window                                                                                                                                                           |
-| vPos       | Integer      | &#8594; | Vertical position of the window                                                                                                                                                             |
-| \*         | Opérateur    | &#8594; | Save current position and size of the window                                                                                                                                                |
-| Résultat   | Integer      | &#8592; | Numéro de référence de la fenêtre                                                                                                                                                           |
+| Paramètres | Type         |                             | Description                                                                                                                                                                                                      |
+| ---------- | ------------ | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| aTable     | Table        | &#8594; | Table du formulaire ou table par défaut, si omis                                                                                                                                                                 |
+| formName   | Text, Object | &#8594; | Nom (chaîne) du formulaire de table ou de projet, ou chemin POSIX (chaîne) vers un fichier .json décrivant le formulaire, ou objet décrivant le formulaire |
+| type       | Integer      | &#8594; | Type de la fenêtre                                                                                                                                                                                               |
+| hPos       | Integer      | &#8594; | Position horizontale de la fenêtre                                                                                                                                                                               |
+| vPos       | Integer      | &#8594; | Position verticale de la fenêtre                                                                                                                                                                                 |
+| \*         | Opérateur    | &#8594; | Conserver la position et la taille actuelles de la fenêtre                                                                                                                                                       |
+| Résultat   | Integer      | &#8592; | Numéro de référence de la fenêtre                                                                                                                                                                                |
 
 </div>
 <!-- END REF-->
@@ -41,19 +41,19 @@ toc_max_heading_level: 3
 
 ## Description
 
-<!--REF #_command_.Open form window.Summary-->The Open form window command opens a new window using the size and resizing properties of the form *formName*.<!-- END REF-->
+<!--REF #_command_.Open form window.Summary-->La commande Open form window ouvre une nouvelle fenêtre en utilisant les propriétés de taille et de redimensionnement du formulaire *formName*.<!-- END REF-->
 
-**Note:** To know the main properties of a form, use the [FORM GET PROPERTIES\`](../commands-legacy/form-get-properties.md) command.
+**Note :** Pour connaître les propriétés principales d'un formulaire, utilisez la commande [FORM GET PROPERTIES\`](../commands-legacy/form-get-properties.md).
 
-In the *formName* parameter, you can pass:
+Dans le paramètre *formName*, vous pouvez passer :
 
 - le nom du formulaire (formulaire projet ou formulaire table) à utiliser.
-- the path (in POSIX syntax) to a valid .json file containing a description of the form to use. See *Form file path*;
+- le chemin (en syntaxe POSIX) d'un fichier .json valide contenant la description du formulaire à utiliser. Voir *Chemin d'accès du formulaire* ;
 - un objet contenant la description du formulaire à utiliser.
 
-The *formName* is not displayed in the window. If you want to display the form, you have to call a command which loads a form ([`ADD RECORD`](../commands-legacy/add-record.md) for example).
+Le *formName* n'est pas affiché dans la fenêtre. Si vous souhaitez afficher le formulaire, vous devez appeler une commande qui charge un formulaire ([`ADD RECORD`](../commands-legacy/add-record.md) par exemple).
 
-The optional *type* parameter allows you to specify a type for the window. You must pass one of the following predefined constants (integer, placed in the *Open Form Window* theme):
+Le paramètre optionnel *type* vous permet de spécifier un type pour la fenêtre. Vous devez passer l'une des constantes prédéfinies suivantes (integer, placées dans le thème *Open Form Window*) :
 
 | Constante                        | Valeur |
 | -------------------------------- | ------ |
@@ -70,15 +70,15 @@ The optional *type* parameter allows you to specify a type for the window. You m
 | Sheet form window                | 33     |
 | Toolbar form window              | 35     |
 
-For a description of window types, see [**Window types**](#window-types) below.
+Pour une description des types de fenêtres, voir [**Types de fenêtres**](#window-types) ci-dessous.
 
 :::note
 
-The `Form has full screen mode Mac` and `Form has no menu bar` constants must be added to one of the other type constants.
+Les constantes `Form has full screen mode Mac` et `Form has no menu bar` doivent être ajoutées à l'une des autres constantes de type.
 
 :::
 
-By default, if the *type* parameter is not passed, a window of the [Plain form window](#plain-form-window-plain-form-window-no-title) type is opened.
+Par défaut, si le paramètre *type* n'est pas passé, une fenêtre du type [Plain form window](#plain-form-window-plain-form-window-no-title) est ouverte.
 
 The optional parameter *hPos* allows you to define the horizontal position of the window. You can pass a defined position in pixels or one of the following constants:
 

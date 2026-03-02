@@ -83,7 +83,7 @@ Le format est spécifié de la même manière que pour un [nombre saisi dans un 
 | String(1/0)                                                      | "INF"                             | Nombre infini positif                                 |
 | String(-1/0)                                                     | "-INF"                            | Nombre infini négatif                                 |
 
-(\*) The algorithm for converting [real values](../Concepts/dt_number.md) into text is based on 13 significant digits.
+(\*) L'algorithme de conversion des [valeurs réelles](../Concepts/dt_number.md) en texte est basé sur 13 chiffres significatifs.
 
 #### String(number;base)
 
@@ -174,33 +174,33 @@ Ce paramètre peut être utilisé avec des formats de date prédéfinis ou basé
 - Le format ISO Date GMT correspond à la norme ISO8601, contenant une date et une heure exprimées par rapport au fuseau horaire (GMT).
 
 ```4d
- $mydate:=String(Current date;ISO Date GMT;Current time) // returns, for instance, 2010-09-13T16:11:53Z  
+ $mydate:=String(Current date;ISO Date GMT;Current time) // retourne par exemple, 2010-09-13T16:11:53Z  
 ```
 
 A noter le caractère "Z" final qui indique le format GMT.  
 Si vous ne passez pas le paramètre *addTime*, la commande renvoie la date à minuit (heure locale) exprimée en heure GMT, ce qui peut entraîner un décalage en fonction du fuseau horaire local :
 
 ```4d
- $mydate:=String(!13/09/2010!;ISO Date GMT) // returns 2010-09-12T22:00:00Z in France  
+ $mydate:=String(!13/09/2010!;ISO Date GMT) // retourne 2010-09-12T22:00:00Z en France  
 ```
 
 - Le format ISO Date est semblable au format ISO Date GMT, à la différence près qu'il exprime la date et l'heure sans tenir compte de la zone de fuseau horaire. A noter que ce format n'étant pas conforme à la norme ISO8601, son utilisation est à réserver à des usages très spécifiques.
 
 ```4d
- $mydate:=String(!13/09/2010!;ISO Date) // returns 2010-09-13T00:00:00 regardless of the time zone  
- $mydate:=String(Current date;ISO Date;Current time) // returns 2010-09-13T18:11:53  
+ $mydate:=String(!13/09/2010!;ISO Date) // retourne 2010-09-13T00:00:00  quel que soit le fuseau horaire
+ $mydate:=String(Current date;ISO Date;Current time) // retourne 2010-09-13T18:11:53  
 ```
 
 - Le format Date RFC 1123 formate une combinaison date/heure selon la norme définie par les RFC 822 et 1123\. Ce format est nécessaire par exemple pour fixer la date d'expiration des cookies dans un en-tête HTTP.
 
 ```4d
- $mydate:=String(Current date;Date RFC 1123;Current time) // returns, for example Fri, 10 Sep 2010 13:07:20 GMT  
+ $mydate:=String(Current date;Date RFC 1123;Current time) //retourne par exemple, Fri, 10 Sep 2010 13:07:20 GMT  
 ```
 
 L'heure est exprimée en tenant compte de la zone de fuseau horaire (heure GMT). Si vous passez uniquement une date, la commande retourne la date à minuit heure locale exprimée en heure GMT, ce qui peut entraîner un décalage :
 
 ```4d
- $mydate:=String(!2010-09-09!;Date RFC 1123) // returns Wed, 08 Sep 2010 22:00:00 GMT  
+ $mydate:=String(!2010-09-09!;Date RFC 1123) // retourne Wed, 08 Sep 2010 22:00:00 GMT  
 ```
 
 ### Expressions de type Heure
@@ -230,7 +230,7 @@ Exemples :
 
 ```4d
  $vsResult:=String(?17:30:45?;HH MM AM PM) //"5:30 PM"  
- $vsResult:=String(?17:30:45?;Hour Min Sec) //"17 hours 30 minutes 45 seconds"  
+ $vsResult:=String(?17:30:45?;Hour Min Sec) //"17 heures 30 minutes 45 secondes"  
 ```
 
 - soit un [format personnalisé construit à partir d'un modèle](../Project/date-time-formats.md) (valeur chaîne)  
@@ -238,7 +238,7 @@ Exemples :
 
 ```4d
  $vsResult:=String(?17:30:45?;"hh:mm aa O") //"05:30 PM GMT+1"  
- $vsResult:=String(?17:30:45?;"'It is' K a") //"It is 5 PM"  
+ $vsResult:=String(?17:30:45?;"'It is' K a") //"C'est 5 PM"  
 ```
 
 ### Expressions de type Chaîne
