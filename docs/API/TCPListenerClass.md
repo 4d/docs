@@ -5,10 +5,6 @@ title: TCPListener
 
 The `TCPListener` class allows you to create and configure a TCP server in 4D. Once the TCP listener is instantiated, you can receive client TCP connections and communicate using any protocol supporting TCP.
 
-The `TCPListener` class is available from the `4D` class store. You can create a TCP server using the [4D.TCPListener.new()](#4dtcplistenernew) function, which returns a [TCPListener object](#tcplistener-object).
-
-All `TCPListener` class functions are thread-safe.
-
 
 <details><summary>History</summary>
 
@@ -17,6 +13,16 @@ All `TCPListener` class functions are thread-safe.
 |20 R9|Class added|
 
 </details>
+
+The `TCPListener` class is available from the `4D` class store. You can create a TCP server using the [4D.TCPListener.new()](#4dtcplistenernew) function, which returns a [TCPListener object](#tcplistener-object).
+
+All `TCPListener` class functions are thread-safe.
+
+
+### Aynchronous programming
+
+This class supports asynchronous programming in 4D as described in the [Asynchronous Execution](../Develop/async.md) page.
+
 
 ### Example
 

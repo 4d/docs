@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | ---------- | ----------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | wpDoc      | Object                  | &#8594; | Variable 4D Write Pro                                                                                                                    |
 | filePath   | Text                    | &#8594; | Chemin du fichier d'export                                                                                                               |
-| fileObj    | 4D.File | &#8594; | Objet du fichier à exporter                                                                                                              |
+| fileObj    | [4D.File](../API/FileClass.md)  | &#8594; | Objet du fichier à exporter                                                                                                              |
 | format     | Integer                 | &#8594; | Format de sortie du document (ex : .docx, .pdf, etc.) |
 | option     | Object, Integer         | &#8594; | Options d'export, qui peuvent varier en fonction du format choisi.                                                       |
 

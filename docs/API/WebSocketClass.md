@@ -19,6 +19,11 @@ WebSocket client connections are useful, for example, to receive financial data 
 
 </details>
 
+### Aynchronous programming
+
+This class supports asynchronous programming in 4D as described in the [Asynchronous Execution](../Develop/async.md) page.
+
+
 
 ### Example
 

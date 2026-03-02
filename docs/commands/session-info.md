@@ -5,7 +5,7 @@ displayed_sidebar: docs
 ---
 
 
-<!-- REF #_command_.Session info.Syntax -->**Session info** ( *sessionId* : Integer ) : Object<!-- END REF -->
+<!-- REF #_command_.Session info.Syntax -->**Session info** ( *sessionId* : Text ) : Object<!-- END REF -->
 
 
 <!-- REF #_command_.Session info.Params -->
@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|sessionID |Integer|&#8594; |Session ID|
+|sessionID |Text|&#8594; |Session ID|
 |Result|Object|&#8592;|Information about the session|
 </div>
 <!-- END REF -->
