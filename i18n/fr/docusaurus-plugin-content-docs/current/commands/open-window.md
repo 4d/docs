@@ -17,7 +17,7 @@ displayed_sidebar: docs
 | top            | Integer | &#8594; | Global top coordinate of window contents area                                          |
 | right          | Integer | &#8594; | Global right coordinate of window contents area, or -1 for using form default size     |
 | bottom         | Integer | &#8594; | Global bottom coordinate of window contents area, or -1 for using form default size    |
-| type           | Integer | &#8594; | Window type                                                                            |
+| type           | Integer | &#8594; | Type de la fenêtre                                                                     |
 | title          | Text    | &#8594; | Title of window or "" for using default form title                                     |
 | controlMenuBox | Text    | &#8594; | Method to call when the Control-menu box is double-clicked or the Close box is clicked |
 | Résultat       | Integer | &#8592; | Numéro de référence de la fenêtre                                                      |
@@ -73,7 +73,7 @@ The *type* parameter is optional. It represents the type of window you want to d
 | Sheet window             |                                                                                                                                                                                                                        |
 | Texture appearance       | Option to be added to a window type on macOS only. Supported types: `Plain window`, `Plain no zoom box window`, `Plain fixed size window`, `Movable dialog box`, `Round corner window` |
 
-For a description of window types, see [**Window types**](#window-types) below.
+Pour une description des types de fenêtres, voir [**Types de fenêtres**](#window-types) ci-dessous.
 
 - The *title* parameter is the optional title for the window
 
