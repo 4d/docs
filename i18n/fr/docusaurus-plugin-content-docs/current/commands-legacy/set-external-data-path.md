@@ -71,6 +71,8 @@ Vous souhaitez enregistrer dans le champ image un fichier existant, stocké à l
 
 [Get external data path](get-external-data-path.md)  
 [RELOAD EXTERNAL DATA](reload-external-data.md)  
+[ORDA: Assigning files to picture or blob attributes](../ORDA/entities.md#assigning-files-to-picture-or-blob-attributes)
+
 
 ## Propriétés
 
