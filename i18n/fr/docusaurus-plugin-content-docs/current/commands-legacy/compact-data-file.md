@@ -20,6 +20,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|15 R3|Modifié|
+|13|Modifié|
+|11 SQL|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Compact data file.Summary-->La commande **Compact data file** effectue un compactage du fichier de données désigné par le paramètre *cheminDonnées* associé au fichier de structure *cheminStructure*.<!-- END REF--> Pour plus d’informations sur le compactage, reportez-vous au manuel Mode Développement.

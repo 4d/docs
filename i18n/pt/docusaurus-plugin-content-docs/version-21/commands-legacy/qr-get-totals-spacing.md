@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2003|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.QR GET TOTALS SPACING.Summary-->O comando QR GET TOTALS SPACING permite recuperar o valor do espaço adicionado sobre uma linha de subtotal.<!-- END REF--> Aplica unicamente em modo listado.  

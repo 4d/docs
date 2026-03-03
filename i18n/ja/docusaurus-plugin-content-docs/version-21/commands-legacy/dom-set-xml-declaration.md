@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|名称変更|
+|12|変更|
+|2004|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DOM SET XML DECLARATION.Summary-->**DOM SET XML DECLARATION** コマンドを使用して、*elementRef*により設定されるXMLツリーの作成に利用されるさまざまなオプションを設定できます。<!-- END REF-->これらのオプションはツリーのエンコーディングやスタンドアロンプロパティに関連します:

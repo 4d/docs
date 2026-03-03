@@ -21,6 +21,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.On Web Authentication database method.Summary-->**On Web Authenticationデータベースメソッド**はWebサーバーエンジンへのアクセス管理を担当します。<!-- END REF-->このデータベースメソッドは、Webブラウザーからのリクエストがサーバー上の4Dメソッド (**4DACTION** URLや**4DSCRIPT** などを使用して呼び出されるメソッド) の実行を必要とするとき、4Dから呼ばれます。

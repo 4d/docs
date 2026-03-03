@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|15|初出|
+|15 R5|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.METHOD GET ATTRIBUTES.Summary-->**METHOD GET ATTRIBUTES** コマンドは、*path* で指定されたメソッドのすべての属性のカレント値を *attributes* に返します。<!-- END REF-->

@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6.5|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.BOOLEAN ARRAY FROM SET.Summary-->The BOOLEAN ARRAY FROM SET command fills an array of Booleans indicating if each record in the table is or is not in *set*.<!-- END REF--> 

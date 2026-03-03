@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.DELETE MENU ITEM.Summary-->O comando DELETE MENU ITEM elimina a linha de menu cujo número ou referência de menu e número de elemento você passou em *menu* e *menuItem*.<!-- END REF--> Pode passar -1 em *menuItem* para indicar o último elemento adicionado a *menu.*

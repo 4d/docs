@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2004|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SQL End selection.Summary-->La commande **SQL End selection** indique si les limites de l’ensemble résultat ont été atteintes.<!-- END REF--> 

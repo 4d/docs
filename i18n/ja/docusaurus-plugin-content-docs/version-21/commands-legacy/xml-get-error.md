@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|名称変更|
+|2003|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.XML GET ERROR.Summary-->XML GET ERROR コマンドは*errorText* 引数に、*elementRef* 引数で指定されたXML要素の処理中に検知したエラーの説明を返します。<!-- END REF-->返される情報はXerces.DLLライブラリから提供されるものです。 

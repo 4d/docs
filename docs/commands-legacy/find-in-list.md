@@ -5,7 +5,7 @@ slug: /commands/find-in-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Find in list.Syntax-->**Find in list** ( * ; *list* : Text ; *value* : Text ; *scope* : Integer {; *itemsArray* : Integer array {; *}} ) : Integer<br/>**Find in list** ( *list* : Integer ; *value* : Text ; *scope* : Integer {; *itemsArray* : Integer array {; *}} ) : Integer<!-- END REF-->
+<!--REF #_command_.Find in list.Syntax-->**Find in list** ( * ; *list* : Text ; *value* : Text ; *scope* : Integer {; *itemsArray* : Integer array} {; *} ) : Integer<br/>**Find in list** ( *list* : Integer ; *value* : Text ; *scope* : Integer {; *itemsArray* : Integer array} {; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.Find in list.Params-->
 <div class="no-index">
 
@@ -20,6 +20,16 @@ displayed_sidebar: docs
 | Function result | Integer | &#8592; | - If 2nd * omitted: position of item found - If 2nd * passed: reference number of item found |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+
+</details>
+</div>
 
 ## Description 
 

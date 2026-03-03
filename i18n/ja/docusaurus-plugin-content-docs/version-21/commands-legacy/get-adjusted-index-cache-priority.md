@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R2|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Get adjusted index cache priority.Summary-->**Get adjusted index cache priority** コマンドは、*aField* 引数で指定されたフィールドのインデックスに対しキャッシュマネージャーによって適用されたキャッシュ優先度値を返します。<!-- END REF-->このコマンドはローカルモード(4D Serverおよび4D)においてのみ動作します。リモートモードでは使用できません。

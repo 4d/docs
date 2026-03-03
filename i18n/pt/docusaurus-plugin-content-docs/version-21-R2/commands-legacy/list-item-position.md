@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.List item position.Summary-->O comando List item position retorna a posição do elemento cujo número de referencia ou nome de objeto se passa em *refElem*,na lista cujo número de referência se passa na lista.<!-- END REF-->

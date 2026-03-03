@@ -5,7 +5,7 @@ slug: /commands/get-window-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get window title.Syntax-->**Get window title** ( *window* : Integer ) : Text<!-- END REF-->
+<!--REF #_command_.Get window title.Syntax-->**Get window title** ({ *window* : Integer }) : Text<!-- END REF-->
 <!--REF #_command_.Get window title.Params-->
 <div class="no-index">
 
@@ -15,6 +15,16 @@ displayed_sidebar: docs
 | Function result | Text | &#8592; | Window title |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
 
 ## Description 
 

@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|15 R3|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR MOVE COLUMN.Summary-->La commande **QR MOVE COLUMN** déplace la colonne *numColonne* de sa position courante à la position *nouvPosition*.<!-- END REF-->

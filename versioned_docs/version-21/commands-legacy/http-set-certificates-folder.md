@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 :::info Compatibility
 
 This command is maintained for compatibility reasons only. It is now recommended to use the [`4D.HTTPRequest class`](../API/HTTPRequestClass.md).
@@ -47,11 +57,11 @@ As described in [this page](../Admin/tls.md), SSL certificates managed by 4D mus
 You want to change certificates folder temporarily:
 
 ```4d
- var $certifFolder : Text
- $certifFolder :=HTTP Get certificates folder //save current folder
- HTTP SET CERTIFICATES FOLDER("C:/temp/certifTempo/")
- ... // execution of specific requests
- HTTP SET CERTIFICATES FOLDER($certifFolder) //restore previous folder
+ var $certifFolder : Text
+ $certifFolder :=HTTP Get certificates folder //save current folder
+ HTTP SET CERTIFICATES FOLDER("C:/temp/certifTempo/")
+ ... // execution of specific requests
+ HTTP SET CERTIFICATES FOLDER($certifFolder) //restore previous folder
 ```
 
 ## See also 

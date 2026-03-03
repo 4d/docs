@@ -9,22 +9,28 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Num.Params-->
 
+<div class="no-index">
+
 | Parámetros | Tipo                   |                             | Descripción                                                                         |
 | ---------- | ---------------------- | --------------------------- | ----------------------------------------------------------------------------------- |
-| expresión  | Text, Boolean, Integer | &#8594; | Cadena a convertir en numérica o Booleano para devolver 0 o 1, o Expresión numérica |
+| expression | Text, Boolean, Integer | &#8594; | Cadena a convertir en numérica o Booleano para devolver 0 o 1, o Expresión numérica |
 | separador  | Text                   | &#8594; | Separador decimal                                                                   |
 | base       | Integer                | &#8594; | Valor entre 2 y 36 que representa la base                                           |
 | Resultado  | Real                   | &#8592; | Forma numérica del parámetro de expresión                                           |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones               |
-| ----------- | ---------------------------- |
-| 21          | Soporte del parámetro *base* |
+| Lanzamiento                 | Modificaciones               |
+| --------------------------- | ---------------------------- |
+| 21                          | Soporte del parámetro *base* |
+| <6 | Created                      |
 
 </details>
+</div>
 
 ## Descripción
 
@@ -49,6 +55,7 @@ Hay tres caracteres reservados que **Num** trata de forma especial: el separador
 - El guión hace que el número o exponente sea negativo. El guión debe aparecer antes de todo carácter numérico negativo o después de la "e" para un exponente. Excepto en el caso del carácter "e", si se introduce un guión en una cadena numérica, se ignora la parte de la cadena que va después del guión. Por ejemplo, `Num("123-456")` devuelve 123, pero `Num("-9")` devuelve -9.
 - La e o E hace que todo caracter numérico a su derecha se interprete como la potencia de un exponente. La "e" debe estar incluida en una cadena numérica. Entonces, `Num("123e-2")` devuelve 1.23.  
   Tenga en cuenta que cuando la cadena incluye más de una "e", la conversión puede dar resultados diferentes en macOS y en Windows.
+- The algorithm for converting text into [real values](../Concepts/dt_number.md) is based on 13 significant digits.
 
 #### Parámetro *separador*
 
@@ -94,12 +101,12 @@ Si la evaluación de *expression* da un valor indefinido, el comando devuelve 0 
 El siguiente ejemplo ilustra cómo funciona **Num** cuando se le pasa un único argumento de cadena:
 
 ```4d
-$result:=Num("ABCD") // 0
-$result:=Num("A1B2C3") // 123
-$result:=Num("123") // 123
-$result:=Num("123.4") // 123.4
-$result:=Num("–123") // –123
-$result:=Num("–123e2") // –12300
+$result:=Num("ABCD") // 0
+$result:=Num("A1B2C3") // 123
+$result:=Num("123") // 123
+$result:=Num("123.4") // 123.4
+$result:=Num("–123") // –123
+$result:=Num("–123e2") // –12300
 ```
 
 ## Ejemplo 2
@@ -107,8 +114,8 @@ $result:=Num("–123e2") // –12300
 Aquí, *\[Client\]Debt* se compara con *1000$*. El comando Num aplicado a estas comparaciones devuelve 1 ó 0\. Multiplicar 1 o 0 por una cadena repite la cadena una vez o devuelve la cadena vacía. Como resultado, el campo *[Client]Risk* obtiene el valor “Good” or “Bad”:
 
 ```4d
-  // Si el cliente debe menos de 1000, un buen riesgo.
-  // Si el cliente debe más de 1000, un riesgo malo.
+  // If client owes less than 1000, a good risk.
+  // If client owes more than 1000, a bad risk.
  [Client]Risk:=("Good"*Num([Client]Debt<1000))+("Bad"*Num([Client]Debt>=1000))
 ```
 
@@ -117,10 +124,10 @@ Aquí, *\[Client\]Debt* se compara con *1000$*. El comando Num aplicado a estas 
 Este ejemplo compara los resultados obtenidos dependiendo del separador “actual”:
 
 ```4d
- $thestring:="33,333.33"
- $thenum:=Num($thestring)
+ $thestring:="33,333.33"
+ $thenum:=Num($thestring)
   // by default, $thenum equals 33,33333 on a French system
- $thenum:=Num($thestring;".")
+ $thenum:=Num($thestring;".")
   // $thenum will be correctly evaluated regardless of the system;
   // for example, 33 333,33 on a French system
 ```

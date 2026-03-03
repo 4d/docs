@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R3|変更|
+|11 SQL|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Dynamic pop up menu.Summary-->**Dynamic pop up menu**はマウスの現在位置またはオプションの*xCoord* と *yCoord*引数で指定した位置に階層ポップアップメニューを表示します。<!-- END REF-->

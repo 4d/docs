@@ -21,6 +21,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|17 R5|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Encrypt data file.Summary-->La commande **Encrypt data file** est utilisée pour chiffrer ou déchiffrer le fichier de données indiqué par le paramètre *cheminDonnées* associé au paramètre *cheminStructure*.<!-- END REF--> Elle peut également être utilisée pour enlever le chiffrement de la base. La commande ne modifie pas les fichiers originaux, elle retourne le nom du chemin d'accès complet au dossier qui a été créé pour la sauvegarde du fichier de données original.

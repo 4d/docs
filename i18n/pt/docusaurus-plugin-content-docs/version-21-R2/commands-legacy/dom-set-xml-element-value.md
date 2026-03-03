@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|2004.4|Modificado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.DOM SET XML ELEMENT VALUE.Summary-->O comando DOM SET XML ELEMENT VALUE lhe permite modificar o valor do elemento definido por *refElement*.<!-- END REF-->  
@@ -84,7 +96,7 @@ Na fonte XML abaixo:
 </Maths>
 ```
 
-Queremos escrever o texto “12<18” no elemento *<Postulate>*. Esta cadeia não pode ser escrita em XML porque o caractere “<” não é aceito. Este caractere deve ser transformado então em “<” ou deve ser utilizado a forma CDATA. Se *vElemRef* indica o nodo XML *<Postulate>*:
+Queremos escrever o texto “12<18” no elemento *<Postulate>*. Esta cadeia não pode ser escrita em XML porque o caractere “<” não é aceito. Este caractere deve ser transformado então em “&lt;” ou deve ser utilizado a forma CDATA. Se *vElemRef* indica o nodo XML *<Postulate>*:
 
 ```4d
   // Forma normal
@@ -95,7 +107,7 @@ Obtemos:
 
 ```XML
 <Maths>
-   <Postulate>12 < 18</Postulate>
+   <Postulate>12 "&lt;" 18</Postulate>
 </Maths>
 ```
   

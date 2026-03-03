@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|6.7|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.CREATE SELECTION FROM ARRAY.Summary-->O comando **CREATE SELECTION FROM ARRAY** cria a seleção selectionName<!-- END REF--> a partir de:

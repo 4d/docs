@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|名称変更|
+|2004|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WEB GET VARIABLES.Summary-->**WEB GET VARIABLES**コマンドは、サブミットされたWebフォームにある変数の名前と値をテキスト配列 *nameArray*と*valueArray* に代入します。<!-- END REF-->

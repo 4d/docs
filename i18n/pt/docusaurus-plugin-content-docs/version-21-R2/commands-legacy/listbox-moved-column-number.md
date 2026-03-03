@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Criado por|
+|12|Renomear|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.LISTBOX MOVED COLUMN NUMBER.Summary-->O comando LISTBOX MOVED COLUMN NUMBER devolve dois números em *antPosição* e *novPosição* indicando respectivamente a posição anterior e a nova posição da coluna movida no list box designado pelos parâmetros *objeto* e *\**.<!-- END REF-->

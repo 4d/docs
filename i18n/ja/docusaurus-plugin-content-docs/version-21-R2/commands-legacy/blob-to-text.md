@@ -20,6 +20,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.BLOB to text.Summary-->BLOB to text コマンドはBLOB *blob*からテキストを読みだして、返します。<!-- END REF-->引数は、読み込むテキスト値の内部フォーマットと文字セットを指定します。4Dバージョン11以降で作成されたデータベースでは、4Dはテキストの処理にデフォルトでUnicode (UTF-8) を使用します。互換性を保つため、このコマンドに、以前のバージョンの4Dで使用されていたMac Roman文字セットへの変換を強制することもできます。文字セットは*textFormat* 引数で指定します。これを行うには、*BLOB* テーマの以下の定数のうちいずれかを*textFormat* 引数に渡します:

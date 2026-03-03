@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.VALIDATE TRANSACTION.Summary-->VALIDATE TRANSACTIONは、カレントプロセス中、[START TRANSACTION](start-transaction.md "START TRANSACTION")で開始した対応するレベルのトランザクションを受け入れます。<!-- END REF-->VALIDATE TRANSACTIONは、トランザクション中に行われたデータベースへの更新を保存します。

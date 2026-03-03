@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Modified|
+|2004|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DISPLAY NOTIFICATION.Summary-->The DISPLAY NOTIFICATION command displays a notification message to the user.<!-- END REF-->
@@ -36,7 +47,7 @@ Under Windows, the message window remains displayed as long as no activity has b
 ## Example 
 
 ```4d
- DISPLAY NOTIFICATION("4D Export";"The data is ready to export.")
+ DISPLAY NOTIFICATION("4D Export";"The data is ready to export.")
 ```
 
 ## See also 

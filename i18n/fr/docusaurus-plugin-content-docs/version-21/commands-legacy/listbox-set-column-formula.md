@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX SET COLUMN FORMULA.Summary-->La commande **LISTBOX SET COLUMN FORMULA** permet de modifier la *formule* associée à la colonne de list box désignée par les paramètres *objet* et *\**.<!-- END REF--> Les formules ne peuvent être utilisées que lorsque la propriété “Source de données” de la list box est **Sélection courante**, **Sélection temporaire** ou **Collection ou entity selection**.

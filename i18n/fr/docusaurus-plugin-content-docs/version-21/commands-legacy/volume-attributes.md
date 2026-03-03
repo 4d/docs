@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.VOLUME ATTRIBUTES.Summary-->La commande **VOLUME ATTRIBUTES** retourne la taille, la place utilisée et la place libre sur le volume dont le nom est passé dans *volume*.<!-- END REF--> Ces valeurs sont exprimées en octets.

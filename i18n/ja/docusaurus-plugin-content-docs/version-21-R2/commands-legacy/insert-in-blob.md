@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.INSERT IN BLOB.Summary-->INSERT IN BLOB コマンドは、*blob*の*offset*で指定した位置に、*len*で指定した数のバイトを挿入します。<!-- END REF-->BLOBは*len*バイトだけ大きくなります。

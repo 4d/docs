@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6.8|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DRAG WINDOW.Summary-->The DRAG WINDOW command lets users drag the window on which they clicked following the movements of the mouse.<!-- END REF--> Usually you call this command from within an object method of an object that can respond instantaneously to mouse clicks (i.e., invisible buttons).
@@ -27,15 +38,15 @@ The following form, shown here in the Form editor, contains a colored frame, abo
 Each button has the following method:
 
 ```4d
- DRAG WINDOW //Start dragging window when clicked
+ DRAG WINDOW //Start dragging window when clicked
 ```
 
 After executing the following project method:
 
 ```4d
- $winRef:=Open form window("custom_drag";Modal form dialog box)
- DIALOG("custom_drag")
- CLOSE WINDOW
+ $winRef:=Open form window("custom_drag";Modal form dialog box)
+ DIALOG("custom_drag")
+ CLOSE WINDOW
 ```
 
 You obtain a window similar to this:

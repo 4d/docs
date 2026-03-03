@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|2004|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SAX CLOSE XML ELEMENT.Summary-->El comando SAX CLOSE XML ELEMENT escribe en el documento XML referenciado por *documento* las instrucciones necesarias para cerrar el último elemento abierto utilizando el comando SAX OPEN XML.<!-- END REF--> 

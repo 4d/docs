@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Selected list items.Summary-->**Selected list items** コマンドは、*list*引数に渡された参照番号またはオブジェクト名のリストにおいて、選択された項目の位置または参照番号を返します。<!-- END REF--> 

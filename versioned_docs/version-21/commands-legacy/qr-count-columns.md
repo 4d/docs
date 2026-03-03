@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2003|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR Count columns.Summary-->The QR Count columns command returns the number of columns present in the Quick Report *area*.<!-- END REF-->

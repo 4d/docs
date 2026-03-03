@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Created|
+|14|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT GET SCROLLBAR.Summary-->The OBJECT GET SCROLLBAR command is used to find out the displayed/hidden status of the horizontal and vertical scrollbars of the object or group of objects designated by *object*.<!-- END REF--> 

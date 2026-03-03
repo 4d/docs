@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Modificado|
+|12|Renomear|
+|2004|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.LISTBOX SET ROWS HEIGHT.Summary-->O comando LISTBOX SET ROWS HEIGHT lhe permite modificar por programação a altura das filas do objeto list box designado pelos parâmetros *objeto* e *\**.<!-- END REF--> 

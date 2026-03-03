@@ -21,6 +21,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|6.7|Modificado|
+|12|Renombrar|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OBJECT MOVE.Summary-->El comando OBJECT MOVE permite mover los objetos en el formulario actual, definido por los parámetros *\** y *objeto, moveH* píxeles horizontalmente y *moveV* píxeles verticalmente.<!-- END REF-->   

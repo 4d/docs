@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Window kind.Summary-->La commande **Window kind** retourne le type de fenêtre 4D dont vous avez passé la référence dans *fenêtre*.<!-- END REF--> Si la fenêtre n'existe pas, **Window kind** retourne 0 (zéro).  

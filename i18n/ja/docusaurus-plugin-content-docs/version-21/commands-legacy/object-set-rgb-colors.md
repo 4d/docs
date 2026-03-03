@@ -19,6 +19,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|17 R6|変更|
+|14|変更|
+|12|名称変更|
+|2004|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT SET RGB COLORS.Summary-->**OBJECT SET RGB COLORS** コマンドは、引数*object*とオプション引数の *\** によって指定されるオブジェクトの前景色と背景色を変更します。<!-- END REF-->コマンドがリストボックスに対して適用される場合、引数を更に使用して奇数行の背景色を変更することができます。

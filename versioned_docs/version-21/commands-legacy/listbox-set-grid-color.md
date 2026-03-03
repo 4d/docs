@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Renamed|
+|2004|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX SET GRID COLOR.Summary-->The **LISTBOX SET GRID COLOR** command allows you to modify the color of the grid in the list box object set using the *object* and *\** parameters.<!-- END REF-->

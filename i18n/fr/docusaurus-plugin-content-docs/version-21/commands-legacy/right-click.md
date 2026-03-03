@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6.8.1|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Right click.Summary-->La commande **Right click** retourne Vrai si un clic effectué avec le bouton droit de la souris a été effectué.<!-- END REF--> 

@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.BREAK LEVEL.Summary-->**BREAK LEVEL** specifies the number of break levels in a report performed using [PRINT SELECTION](print-selection.md).<!-- END REF-->
@@ -33,11 +44,11 @@ The second, optional, argument, *pageBreak*, is used to cause page breaks during
 The following example prints a report with two break levels. The selection is sorted on four levels, but the **BREAK LEVEL** command specifies to break on only two levels. One field is accumulated with the [ACCUMULATE](accumulate.md) command:
 
 ```4d
- ORDER BY([Emp]Dept;>;[Emp]Title;>;[Emp]Last;>;[Emp]First;>) // Sort on four levels
- BREAK LEVEL(2) // Turn on break processing to 2 levels (Dept and Title)
- ACCUMULATE([Emp]Salary) // Accumulate the salaries
- FORM SET OUTPUT([Emp];"Dept salary") // Select the report form
- PRINT SELECTION([Emp]) // Print the report
+ ORDER BY([Emp]Dept;>;[Emp]Title;>;[Emp]Last;>;[Emp]First;>) // Sort on four levels
+ BREAK LEVEL(2) // Turn on break processing to 2 levels (Dept and Title)
+ ACCUMULATE([Emp]Salary) // Accumulate the salaries
+ FORM SET OUTPUT([Emp];"Dept salary") // Select the report form
+ PRINT SELECTION([Emp]) // Print the report
 ```
 
 ## See also 

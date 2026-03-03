@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET QUERY DESTINATION.Summary-->The **GET QUERY DESTINATION** command returns the current destination of query results for the process underway.<!-- END REF--> By default, query results modify the current selection, but you can change this using the [SET QUERY DESTINATION](set-query-destination.md) command.
@@ -46,13 +56,13 @@ The value returned in the *destinationObject* parameter depends on the value of 
 We want to modify the query destination temporarily and then restore the previous parameters:
 
 ```4d
- GET QUERY DESTINATION($vType;$vName;$ptr)
-  //retrieval of current parameters
- SET QUERY DESTINATION(Into set;"$temp")
-  //temporary modification of destination
- QUERY(...) //query
- SET QUERY DESTINATION($vType;$vName;$ptr)
-  //restoring parameters
+ GET QUERY DESTINATION($vType;$vName;$ptr)
+  //retrieval of current parameters
+ SET QUERY DESTINATION(Into set;"$temp")
+  //temporary modification of destination
+ QUERY(...) //query
+ SET QUERY DESTINATION($vType;$vName;$ptr)
+  //restoring parameters
 ```
 
 ## See also 

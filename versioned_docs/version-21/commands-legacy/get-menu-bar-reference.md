@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get menu bar reference.Summary-->The **Get menu bar reference** command returns the ID of the current menu bar or the menu bar of a specific process.<!-- END REF-->
@@ -25,11 +35,11 @@ If the menu bar was created by the [Create menu](create-menu.md) command, this I
 (\*)This specific ID is temporary and becomes invalid as soon as another menu bar is called with [SET MENU BAR](set-menu-bar.md). If you want to keep the reference of a menu created in the menu editor, you need to copy it in memory using [Create menu](create-menu.md). For example:  
 
 ```4d
- $vEditorRef:=Get menu bar reference(Frontmost process) //menu from the menu bar editor
- $vMenuRef:=Create menu($vEditorRef) //copy the menu in memory
- SET MENU BAR(2) //install another menu bar
- ... // execute code
- SET MENU BAR($vMenuRef) //back to the initial menu bar
+ $vEditorRef:=Get menu bar reference(Frontmost process) //menu from the menu bar editor
+ $vMenuRef:=Create menu($vEditorRef) //copy the menu in memory
+ SET MENU BAR(2) //install another menu bar
+ ... // execute code
+ SET MENU BAR($vMenuRef) //back to the initial menu bar
 ```
 
 The *process* parameter can be used to designate the process where you want to get the current menu bar ID. If you omit this parameter, the command returns the menu bar ID of the current process.

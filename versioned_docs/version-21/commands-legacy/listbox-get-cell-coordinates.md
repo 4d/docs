@@ -22,6 +22,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14 R5|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX GET CELL COORDINATES.Summary-->The **LISTBOX GET CELL COORDINATES** command returns in variables or fields the *left*, *top*, *right* and *bottom* coordinates (in points) of the cell designated by the *column* and *row* parameters, in the list box defined by *\** and *object*.<!-- END REF-->
@@ -41,12 +51,12 @@ For more information, please refer to the [OBJECT GET COORDINATES](object-get-co
 You want to draw a red rectangle around the selected cell of a list box:
 
 ```4d
- OBJECT SET VISIBLE(*;"RedRect";False) //initialize a red rectangle
-  //the rectangle is already defined somewhere in the form
- LISTBOX GET CELL POSITION(*;"LB1";$col;$row)
- LISTBOX GET CELL COORDINATES(*;"LB1";$col;$row;$x1;$y1;$x2;$y2)
- OBJECT SET VISIBLE(*;"RedRect";True)
- OBJECT SET COORDINATES(*;"RedRect";$x1;$y1;$x2;$y2)
+ OBJECT SET VISIBLE(*;"RedRect";False) //initialize a red rectangle
+  //the rectangle is already defined somewhere in the form
+ LISTBOX GET CELL POSITION(*;"LB1";$col;$row)
+ LISTBOX GET CELL COORDINATES(*;"LB1";$col;$row;$x1;$y1;$x2;$y2)
+ OBJECT SET VISIBLE(*;"RedRect";True)
+ OBJECT SET COORDINATES(*;"RedRect";$x1;$y1;$x2;$y2)
 ```
 
 ![](../assets/en/commands/pict1741070.en.png)

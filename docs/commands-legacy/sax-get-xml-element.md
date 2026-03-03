@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SAX GET XML ELEMENT.Summary-->The **SAX GET XML ELEMENT** command returns various information about the element *name* that is present in the XML document reference in the *document* parameter.<!-- END REF--> This command must be called with the XML Start Element or XML End Element SAX events. In the specific case of XML End Element, the attribute parameters are not handled. For more information about SAX events, refer to the description of the [SAX Get XML node](sax-get-xml-node.md) command. 
@@ -35,10 +45,10 @@ The command also fills the *attrValues* array with the values of attributes of t
 
 Let's look at the following piece of XML code:
 
-```4d
- 
- MyText
- 
+```xml
+<RootElement>
+   <Child Att1="111" Att2="222" Att3="333">MyText</Child>
+</RootElement>
 ```
 
 Once the following statement has been executed: 

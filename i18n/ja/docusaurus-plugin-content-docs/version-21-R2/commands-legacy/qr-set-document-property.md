@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2003|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.QR SET DOCUMENT PROPERTY.Summary-->QR SET DOCUMENT PROPERTY コマンドを使用し、印刷ダイアログの表示の有無、またはドキュメントで使用する単位の指定を行うことができます。<!-- END REF-->

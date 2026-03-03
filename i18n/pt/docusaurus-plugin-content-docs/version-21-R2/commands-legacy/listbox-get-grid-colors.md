@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Criado por|
+|17 R6|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.LISTBOX GET GRID COLORS.Summary-->O comando **LISTBOX GET GRID COLORS** devolve a cor das linhas horizontais e verticais que eles compõem a grade do objeto list box designado pelo objeto de parâmetros *objeto* e *\**.<!-- END REF-->

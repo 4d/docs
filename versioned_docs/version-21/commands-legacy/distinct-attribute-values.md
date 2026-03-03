@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Summary-->The **DISTINCT ATTRIBUTE VALUES** command creates and populates the *valuesArray* with non-repeated (unique) values coming from the *path* attribute in the *objectField* field for the current selection of the table to which this field belongs.<!-- END REF--> Note that *objectField* must be of the Object type, otherwise an error is returned. The command can be used with indexed or non-indexed fields. 
@@ -42,16 +52,16 @@ Your database contains a \[Customer\]full\_Data object field with 15 records:
 If you execute this code:
 
 ```4d
- ARRAY LONGINT(aLAges;0)
- ARRAY LONGINT(aLAgesChild;0)
- ARRAY LONGINT(aLChildNum;0)
- ALL RECORDS([Customer])
-  //get the distinct values for the "age" attribute
- DISTINCT ATTRIBUTE VALUES([Customer]full_Data;"age";aLAges)
-  //get the distinct values for the "age" attribute within the "Children" array
- DISTINCT ATTRIBUTE VALUES([Customer]full_Data;"Children[].age";aLAgesChild)
-  //get the distinct numbers of children by using the length virtual property
- DISTINCT ATTRIBUTE VALUES([Customer]full_Data;"Children.length";aLChildNum)
+ ARRAY LONGINT(aLAges;0)
+ ARRAY LONGINT(aLAgesChild;0)
+ ARRAY LONGINT(aLChildNum;0)
+ ALL RECORDS([Customer])
+  //get the distinct values for the "age" attribute
+ DISTINCT ATTRIBUTE VALUES([Customer]full_Data;"age";aLAges)
+  //get the distinct values for the "age" attribute within the "Children" array
+ DISTINCT ATTRIBUTE VALUES([Customer]full_Data;"Children[].age";aLAgesChild)
+  //get the distinct numbers of children by using the length virtual property
+ DISTINCT ATTRIBUTE VALUES([Customer]full_Data;"Children.length";aLChildNum)
 ```
 
 The *aLAges* array receives the following elements:

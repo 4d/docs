@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|17|名称変更|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Current system user.Summary-->**Current system user**コマンドは、マシンのカレントユーザアカウントで設定されたマシンのオーナー名を返します。<!-- END REF-->

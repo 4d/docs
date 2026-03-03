@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM Find XML element.Summary-->The DOM Find XML element command looks for specific XML elements in an XML structure.<!-- END REF--> The search starts at the element designated by the *elementRef* parameter. 
@@ -57,43 +68,60 @@ The command returns the XML reference of the element(s) found. When the *arrElem
 
 Give the following XML structure:
 
-```json
-  Harry Potter  29.99  Learning XML  39.95
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<bookstore>
+<book>
+  <title lang="en">Harry Potter</title>
+  <price>29.99</price>
+</book>
+<book>
+  <title lang="en">Learning XML</title>
+  <price>39.95</price>
+</book>
+</bookstore>
 ```
 
 This example lets you quickly look for an XML element and display its value:
 
 ```4d
- vElemRef:=DOM Parse XML source("books.xml")
- vFound:=DOM Find XML element(vElemRef;"book[2]/title") //relative path from current node
- DOM GET XML ELEMENT VALUE(vFound;value)
- ALERT("The value of the element is: \""+value+"\"") //Learning XML
+ vElemRef:=DOM Parse XML source("books.xml")
+ vFound:=DOM Find XML element(vElemRef;"book[2]/title") //relative path from current node
+ DOM GET XML ELEMENT VALUE(vFound;value)
+ ALERT("The value of the element is: \""+value+"\"") //Learning XML
 ```
 
 The same search can also be done as follows:
 
 ```4d
- vElemRef:=DOM Parse XML source("books.xml")
- vFound:=DOM Find XML element(vElemRef;"/bookstore/book[2]") //absolute path from root
- vFound:=DOM Find XML element(vFound;"title")
- DOM GET XML ELEMENT VALUE(vFound;value)
- ALERT("The value of the element is: \""+value+"\"") //Learning XML
+ vElemRef:=DOM Parse XML source("books.xml")
+ vFound:=DOM Find XML element(vElemRef;"/bookstore/book[2]") //absolute path from root
+ vFound:=DOM Find XML element(vFound;"title")
+ DOM GET XML ELEMENT VALUE(vFound;value)
+ ALERT("The value of the element is: \""+value+"\"") //Learning XML
 ```
 
 ## Example 2 
 
 Given the following XML structure: 
 
-```json
-         aaa      bbb      ccc   
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Root>
+   <Elem1>
+      <Elem2>aaa</Elem2>
+      <Elem2>bbb</Elem2>
+      <Elem2>ccc</Elem2>
+   </Elem1>
+</Root>
 ```
 
 The following code can be used to retrieve the reference of each Elem2 element in the arrAfound array:
 
 ```4d
- vElemRef:=DOM Parse XML source("example.xml")
- ARRAY TEXT(arrAfound;0)
- vFound:=DOM Find XML element(vElemRef;"/Root/Elem1/Elem2";arrAfound)
+ vElemRef:=DOM Parse XML source("example.xml")
+ ARRAY TEXT(arrAfound;0)
+ vFound:=DOM Find XML element(vElemRef;"/Root/Elem1/Elem2";arrAfound)
 ```
 
 ## Example 3 
@@ -101,7 +129,7 @@ The following code can be used to retrieve the reference of each Elem2 element i
 You want to select all "rect" elements with a "class" attributes that contains the "bgcontainer" string:
 
 ```4d
- $node:=DOM Find XML element($root;" //rect[contains(@class,'bgcontainer')")
+ $node:=DOM Find XML element($root;" //rect[contains(@class,'bgcontainer')")
 ```
 
 ## System variables and sets 

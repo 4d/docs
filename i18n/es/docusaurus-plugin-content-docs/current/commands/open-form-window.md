@@ -6,27 +6,44 @@ displayed_sidebar: docs
 toc_max_heading_level: 3
 ---
 
-<!--REF #_command_.Open form window.Syntax-->**Open form window** ( {*aTable* : Table ;} *formName* : Text, Object {; *type* : Integer {; *hPos* : Integer {; *vPos* : Integer {; *}}}} ) : Integer<!-- END REF-->
+<!--REF #_command_.Open form window.Syntax-->**Open form window** ( {*aTable* : Table ;} *formName* : Text, Object {; *type* : Integer {; *hPos* : Integer {; *vPos* : Integer}}}{; *} ) : Integer<!-- END REF-->
 
 <!--REF #_command_.Open form window.Params-->
+
+<div class="no-index">
 
 | Parámetros | Tipo         |                             | Descripción                                                                                                                                                                                 |
 | ---------- | ------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | aTable     | Tabla        | &#8594; | Tabla del formulario o Tabla por defecto, si se omite                                                                                                                                       |
 | formName   | Text, Object | &#8594; | Name (string) of table or project form, or a POSIX path (string) to a .json file describing the form, oran object describing the form |
-| type       | Integer      | &#8594; | Window type                                                                                                                                                                                 |
+| type       | Integer      | &#8594; | Tipo de ventana                                                                                                                                                                             |
 | hPos       | Integer      | &#8594; | Horizontal position of the window                                                                                                                                                           |
 | vPos       | Integer      | &#8594; | Posición vertical de la ventana                                                                                                                                                             |
 | \*         | Operador     | &#8594; | Guardar la posición y el tamaño actuales de la ventana                                                                                                                                      |
 | Resultado  | Integer      | &#8592; | Número de referencia de la ventana                                                                                                                                                          |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historia</summary>
+
+| Lanzamiento                 | Modificaciones |
+| --------------------------- | -------------- |
+| 16 R6                       | Modificado     |
+| 16 R4                       | Modificado     |
+| 14 R5                       | Modificado     |
+| 11 SQL                      | Modificado     |
+| <6 | Añadidos       |
+
+</details>
+</div>
 
 ## Descripción
 
 <!--REF #_command_.Open form window.Summary-->The Open form window command opens a new window using the size and resizing properties of the form *formName*.<!-- END REF-->
 
-**Nota:** para conocer las principales propiedades de un formulario, utilice el comando [FORM GET PROPERTIES\`](form-get-properties.md).
+**Nota:** para conocer las principales propiedades de un formulario, utilice el comando [FORM GET PROPERTIES\`](../commands-legacy/form-get-properties.md).
 
 In the *formName* parameter, you can pass:
 
@@ -34,7 +51,7 @@ In the *formName* parameter, you can pass:
 - la ruta (en sintaxis POSIX) a un archivo .json válido que contenga una descripción del formulario a utilizar. See *Form file path*;
 - un objeto que contiene la descripción del formulario a utilizar.
 
-*formName* no se muestra en la ventana. If you want to display the form, you have to call a command which loads a form ([`ADD RECORD`](add-record.md) for example).
+*formName* no se muestra en la ventana. If you want to display the form, you have to call a command which loads a form ([`ADD RECORD`](../commands-legacy/add-record.md) for example).
 
 The optional *type* parameter allows you to specify a type for the window. You must pass one of the following predefined constants (integer, placed in the *Open Form Window* theme):
 
@@ -83,7 +100,7 @@ These parameters are expressed relative to the top left corner of the contents a
 
 If you pass the optional parameter *\**, the current position and size of the window are memorized when closed. Cuando se vuelve a abrir la ventana, se respetan su posición y tamaño anteriores. In this case, the *vPos* and *hPos* parameters are only used the first time the window is opened.
 
-### Window types {#window-types}
+### Tipos de ventanas {#window-types}
 
 #### Controller form window {#controller-form-window}
 
@@ -273,7 +290,7 @@ que muestra:
 
 ## Ver también
 
-[FORM GET PROPERTIES](form-get-properties.md)  
+[FORM GET PROPERTIES](../commands-legacy/form-get-properties.md)  
 [Open window](open-window.md)
 
 ## Propiedades

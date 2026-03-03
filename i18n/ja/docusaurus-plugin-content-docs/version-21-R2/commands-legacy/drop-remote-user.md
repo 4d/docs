@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|17 R4|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DROP REMOTE USER.Summary-->**DROP REMOTE USER** コマンドは4D Server にリモートで接続している特定のユーザーの接続を解除します。<!-- END REF-->引数には、サーバーから接続を解除したいユーザーのセッションID を渡します。セッションID は、[Process activity](../commands/process-activity.md) コマンドを使用することで取得できます。  

@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Renommé|
+|13|Renommé|
+|2003|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SOAP Get info.Summary-->La commande **SOAP Get info** permet de récupérer sous forme de chaîne de caractères différents types d’informations concernant une requête SOAP.<!-- END REF--> 

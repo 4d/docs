@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Convert path system to POSIX.Summary-->The Convert path system to POSIX command converts a pathname expressed with the system syntax as a pathname expressed with the POSIX (Unix) syntax.<!-- END REF-->

@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Modificado|
+|13|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SPELL GET DICTIONARY LIST.Summary-->O comando **SPELL GET DICTIONARY LIST** devolve nos arrays *lingID*, *lingArquivos* e *lingNoms*, os IDs, os nomes de arquivos e os nomes dos linguagens correspondentes aos arquivos de dicionário Hunspell instalados no equipo.<!-- END REF-->  

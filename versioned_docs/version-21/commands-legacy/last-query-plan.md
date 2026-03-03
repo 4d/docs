@@ -11,7 +11,6 @@ displayed_sidebar: docs
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| descFormat | Integer | &#8594;  | Description format (Text or XML) |
 | Function result | Text | &#8592; | Description of last executed query plan |
 </div>
 <!-- END REF-->
@@ -20,13 +19,6 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Last query plan.Summary-->The **Last query plan** command returns the detailed internal description of the query plan for the last query carried out on the data.<!-- END REF--> For more information about query descriptions, please refer to the documentation of the [DESCRIBE QUERY EXECUTION](describe-query-execution.md) command. 
 
-This description is returned in Text or XML format depending on the value passed in the *descFormat* parameter. You can pass one of the following constants, found in the “*Queries*” theme: 
-
-| Constant                   | Type    | Value |
-| -------------------------- | ------- | ----- |
-| Description in text format | Integer | 0     |
-| Description in XML format  | Integer | 1     |
-  
   
 This command returns a significant value if the [DESCRIBE QUERY EXECUTION](describe-query-execution.md) command has been executed during the session. 
 

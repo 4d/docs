@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Storage.Summary-->The **Storage** method returns the catalog of shared objects or shared collections that you have registered in the *Storage* object on the current machine or component.<!-- END REF--> 

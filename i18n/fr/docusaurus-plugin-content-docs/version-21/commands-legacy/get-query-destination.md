@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET QUERY DESTINATION.Summary-->La commande **GET QUERY DESTINATION** retourne la destination courante des résultats des recherches pour le process en cours.<!-- END REF--> Par défaut, les résultats des recherches modifient la sélection courante, mais vous pouvez modifier ce fonctionnement l’aide de la commande [SET QUERY DESTINATION](set-query-destination.md).

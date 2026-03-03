@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 End SQL é uma palavra chave que indica o fim de uma sequência de comandos SQL no editor de métodos que deve ser interpretada pelo motor SQL integrado de 4D.  

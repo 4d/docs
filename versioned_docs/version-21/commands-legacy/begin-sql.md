@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Begin SQL.Summary-->Begin SQL is a keyword used in the Method editor to indicate the beginning of a sequence of SQL commands that must be interpreted by the current data source of the process (the integrated SQL engine of 4D or any source specified via the [SQL LOGIN](sql-login.md) command).<!-- END REF--> 
@@ -26,18 +36,18 @@ These keywords work as follows:
 * You can write several SQL statements on the same line or on different lines by separating them with a semi-colon “;”. For example, you can write:
 
 ```4d
- Begin SQL
-    INSERT INTO SALESREPS (NAME, AGE) VALUES (‘Henry’,40);
-    INSERT INTO SALESREPS (NAME, AGE) VALUES (‘Bill’,35)
- End SQL
+ Begin SQL
+    INSERT INTO SALESREPS (NAME, AGE) VALUES (‘Henry’,40);
+    INSERT INTO SALESREPS (NAME, AGE) VALUES (‘Bill’,35)
+ End SQL
 ```
 
 or:
 
 ```4d
- Begin SQL
-    INSERT INTO SALESREPS (NAME, AGE) VALUES (‘Henry’,40);INSERT INTO SALESREPS (NAME, AGE) VALUES (‘Bill’,35)
- End SQL
+ Begin SQL
+    INSERT INTO SALESREPS (NAME, AGE) VALUES (‘Henry’,40);INSERT INTO SALESREPS (NAME, AGE) VALUES (‘Bill’,35)
+ End SQL
 ```
 
 Note that the 4D *Debugger* will evaluate the SQL code line by line. In certain cases, it may be preferable to use more than one line.

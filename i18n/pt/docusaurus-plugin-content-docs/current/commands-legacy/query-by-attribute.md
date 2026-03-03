@@ -21,6 +21,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|16 R2|Modificado|
+|15|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.QUERY BY ATTRIBUTE.Summary-->**QUERY BY ATTRIBUTE** localiza os registros que correspondam com a string de consulta definida utilizando os parâmetros *campoObjeto*, *caminhoAtributo*, *opPesq* e *valor* e retorna uma seleção de registros para a *tabela*.<!-- END REF-->altera a seleção atual de *tabela* para o processo atual e faz o primeiro registro da nova seleção do registro atual. Se o parâmetro *tabela* for omitido, o comando aplica-se a tabela como padrão. Se você não tiver definido qualquer tabela padrão, ocorre um erro.

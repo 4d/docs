@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Split string.Summary-->The **Split string** command returns a collection of strings, created by splitting *stringToSplit* into substrings at the boundaries specified by the *separator* parameter.<!-- END REF--> The substrings in the returned collection do not include *separator* itself.

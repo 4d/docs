@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|2004|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Get default user.Summary-->El comando Get default user devuelve el número de referencia único del usuario designado como “Usuario por defecto” en la caja de diálogo de Preferencias de la base<!-- END REF-->:

@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|12.1|Créé|
+|14|Renommé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ST SET PLAIN TEXT.Summary-->La commande **ST SET PLAIN TEXT** insère le texte passé dans le paramètre *nouvTexte* dans le champ ou la variable de texte multistyle désigné(e) par le paramètre *objet*.<!-- END REF--> Cette commande s’applique uniquement au texte brut du paramètre *objet*, sans modifier les éventuelles balises de style qu’il contient. 

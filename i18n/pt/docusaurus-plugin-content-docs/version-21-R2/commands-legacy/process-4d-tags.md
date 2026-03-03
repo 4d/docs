@@ -17,6 +17,21 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Criado por|
+|11 SQL|Modificado|
+|12|Modificado|
+|13|Renomear|
+|14 R4|Modificado|
+|16 R4|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.PROCESS 4D TAGS.Summary-->O comando PROCESS 4D TAGS provoca o processamento das etiquetas de transformação 4D contidas em *dadosEntrada* (campo ou variável de tipo Texto ou BLOB) enquanto opcionalmente insere valores utilizando os valores via os parâmetros *param* e retorna os dados resultantes em *dadosSaida*.<!-- END REF--> Para uma descrição completa das etiquetas, veja *Etiquetas HTML 4D*

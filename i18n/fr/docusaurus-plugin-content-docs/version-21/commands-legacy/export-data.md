@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|12|Modifié|
+|2003|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.EXPORT DATA.Summary-->La commande **EXPORT DATA** permet d’exporter des données dans le fichier *nomFichier*.<!-- END REF--> 4D peut exporter des données au format Texte, Texte de longueur fixe, XML, SYLK, DIF, DBF (dBase), et 4D. 

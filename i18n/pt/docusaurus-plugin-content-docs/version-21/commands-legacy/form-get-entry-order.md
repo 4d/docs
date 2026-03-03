@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|16 R4|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.FORM GET ENTRY ORDER.Summary-->O comando **FORM GET ENTRY ORDER** devolve em *nomObjetos* os nomes ordenados dos objetos que definem a ordem de entrada do formulario.<!-- END REF--> 

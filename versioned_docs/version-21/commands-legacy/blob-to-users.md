@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.BLOB TO USERS.Summary-->The BLOB TO USERS command replaces the user accounts and groups found in the BLOB *users* in the current database.<!-- END REF--> The BLOB *users* is encrypted and must have been created using the [USERS TO BLOB](users-to-blob.md) command.
@@ -37,8 +47,8 @@ This command causes the replacement of any existing accounts and groups created 
 **Compatibility note:** User and group files (.4UG extension) created by the **Save Groups...** menu command in previous 4D versions can be loaded in 4D using the following sequence (very old 4D versions may require to use intermediary versions):
 
 ```4d
- DOCUMENT TO BLOB(mydoc;blob)
- BLOB TO USERS(blob)
+ DOCUMENT TO BLOB(mydoc;blob)
+ BLOB TO USERS(blob)
 ```
 
 ## System variables and sets 

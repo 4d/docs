@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GET PASTEBOARD DATA.Summary-->O comando GET PASTEBOARD DATA devolve no campo ou variável de tipo BLOB ou na variável *dados*, os dados que se encontram na área de transferência e cujo tipo se passa em *tipoDados*.<!-- END REF-->(Se a cópia contiver texto copiado dentro de 4D, então o conjunto de caracteres do BLOB é provavelmente UTF-16)

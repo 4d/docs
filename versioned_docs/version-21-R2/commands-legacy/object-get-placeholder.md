@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT Get placeholder.Summary-->The **OBJECT Get placeholder** command returns the placeholder text associated with the object(s) designated by the *object* and *\** parameters.<!-- END REF--> If there is no placeholder text associated with the object, the command returns an empty string.

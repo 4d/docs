@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Set group properties.Summary-->Set group properties enables you to change and update the properties of an existing group whose unique group ID number you pass in *groupID*, or to add a new group.<!-- END REF--> 

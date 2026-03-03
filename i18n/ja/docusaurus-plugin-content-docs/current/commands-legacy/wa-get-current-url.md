@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL Release 2|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WA Get current URL.Summary-->WA Get current URL コマンドは、*\** と *object* 引数で指定したWebエリアに現在表示されているページのURLアドレスを返します。<!-- END REF-->

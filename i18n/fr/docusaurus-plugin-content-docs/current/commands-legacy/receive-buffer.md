@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6.8.3|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.RECEIVE BUFFER.Summary-->La commande **RECEIVE BUFFER** lit les données du port série préalablement ouvert par la commande [SET CHANNEL](set-channel.md).<!-- END REF--> Le port série comporte un buffer qui se remplit de caractères jusqu'à ce qu'une commande les charge. **RECEIVE BUFFER** récupère les caractères présents dans le buffer, les place dans la variable *varRéception* puis vide le buffer. S'il n'y a pas de caractères dans le buffer, la variable *varRéception* est vide. 

@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|15|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.LDAP LOGOUT.Summary-->El comando **LDAP LOGOUT** cierra la conexión con un servidor LDAP en el proceso actual (si aplica).<!-- END REF--> Si no hay conexión, se devuelve el error 1003 indicando que no está conectado.

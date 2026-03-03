@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14 R3|Modifié|
+|2003|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR Get text property.Summary-->La commande **QR Get text property** retourne la valeur courante de la *propriété* de texte dans la cellule de *zone* désignée par *numColonne* et *numLigne*.<!-- END REF-->

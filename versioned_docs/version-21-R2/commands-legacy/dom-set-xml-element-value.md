@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|2004.4|Modified|
+|11 SQL|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM SET XML ELEMENT VALUE.Summary-->The **DOM SET XML ELEMENT VALUE** command modifies the value of the element set by *elementRef*.<!-- END REF--> 
@@ -81,7 +93,7 @@ In the following XML source:
 </Maths>
 ```
 
-We want to write the text “12<18” in the *<Postulate>* element. This string cannot be written as is in XML because the “<” character is not accepted. This character must therefore be changed into “<” or the CDATA form must be used. If *vElemRef* indicates the XML *<Postulate>* node:
+We want to write the text “12<18” in the *<Postulate>* element. This string cannot be written as is in XML because the “<” character is not accepted. This character must therefore be changed into “&lt;” or the CDATA form must be used. If *vElemRef* indicates the XML *<Postulate>* node:
 
 ```4d
   // Normal form
@@ -92,7 +104,7 @@ We get:
 
 ```XML
 <Maths>
-   <Postulate>12 < 18</Postulate>
+   <Postulate>12 "&lt;" 18</Postulate>
 </Maths>
 ```
   

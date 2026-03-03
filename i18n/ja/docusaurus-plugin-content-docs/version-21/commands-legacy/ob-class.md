@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|18 R3|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OB Class.Summary-->**OB Class** コマンドは*object* 引数のクラスを返します。<!-- END REF-->4D では、全てのオブジェクトはオブジェクトはオブジェクトクラスから継承しています。引数のオブジェクトが既存のオブジェクトでなかった場合、**OB Class** はnull を返します。

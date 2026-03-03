@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|15 R5|Modified|
+|15|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.METHOD SET ATTRIBUTES.Summary-->The **METHOD SET ATTRIBUTES** command allows you to set the *attributes* values for the method(s) specified in the *path* parameter.<!-- END REF-->

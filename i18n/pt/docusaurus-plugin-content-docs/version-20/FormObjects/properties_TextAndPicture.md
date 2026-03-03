@@ -74,7 +74,7 @@ Designa a colocação de um ícone em relação ao objeto formulário.
 
 #### Objectos suportados
 
-[Cabeçalho do List Box](listbox_overview.md#list-box-headers)
+[Cabeçalho do List Box](listbox-header-footer.md#headers)
 
 ---
 
@@ -149,7 +149,7 @@ O nome do caminho a introduzir é semelhante ao [da propriedade Caminho para ima
 
 #### Objectos suportados
 
-[Botão](button_overview.md) (todos os estilos exceto [Ajuda](button_overview.md#help)) - [Caixa de verificação](checkbox_overview.md) - [Cabeçalho da caixa de listagem](listbox_overview.md#list-box-headers) - [Botão rádio](radio_overview.md)
+[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [List Box Header](listbox-header-footer.md#headers) - [Radio Button](radio_overview.md)
 
 ---
 
@@ -256,10 +256,10 @@ Consulte a [descrição do evento`On Alternative Click`](../Events/onAlternative
 
 #### Gramática JSON
 
-| Nome           | Tipo de dados | Valores possíveis                                                           |
-|:-------------- | ------------- | --------------------------------------------------------------------------- |
-| popupPlacement | string        | <li>"none"</li><li>"linked"</li><li>"separated"</li> |
+| Nome           | Tipo de dados | Valores possíveis         |
+|:-------------- | ------------- | ------------------------- |
+| popupPlacement | string        | <ul><li>"none"</li><li>"linked"</li><li>"separated"</li></ul> |
 
 #### Objectos suportados
 
-[Botão da barra de ferramentas](button_overview.md#toolbar) - [Botão](button_overview.md#bevel) [chanfrado - Botão chanfrado arredondado](button_overview.md#rounded-bevel) - [Botão de gradiente do OS X](button_overview.md#os-x-gradient) - [Botão texturizado do OS X](button_overview.md#os-x-textured) - [Botão do Office XP](button_overview.md#office-xp) - [Botão de círculo](button_overview.md#circle) - [Personalizado](button_overview.md#custom)
+[Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-xp) - [Custom](button_overview.md#custom)

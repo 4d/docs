@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|17 R4|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.MESSAGES ON.Summary-->See the description of the [MESSAGES OFF](messages-off.md) command.<!-- END REF-->

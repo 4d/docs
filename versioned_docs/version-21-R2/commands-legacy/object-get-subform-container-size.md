@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+|18|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Summary-->The **OBJECT GET SUBFORM CONTAINER SIZE** command returns the *width* and *height* (in pixels) of a "current" subform object, displayed in the parent form.<!-- END REF-->

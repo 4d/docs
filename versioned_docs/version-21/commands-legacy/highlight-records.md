@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.HIGHLIGHT RECORDS.Summary-->The **HIGHLIGHT RECORDS** command highlights records in a list form.<!-- END REF--> This operation is identical to manually selecting records in list mode by using the mouse or the **Shift+Click** or **Ctrl+Click** (Windows) or **Command+Click** (macOS) key combinations. The current selection is not modified. 
@@ -37,10 +48,10 @@ The *\** parameter, when passed, disables the automatic scroll function of the l
 In an output form displayed by the [MODIFY SELECTION](modify-selection.md) command, you want the user to be able to perform searches without the current selection being modified. To do this, place a **Search** button in the form and associate it with the following method: 
 
 ```4d
- SET QUERY DESTINATION(Into set;"UserSet")
- QUERY
- SET QUERY DESTINATION(Into current selection)
- HIGHLIGHT RECORDS
+ SET QUERY DESTINATION(Into set;"UserSet")
+ QUERY
+ SET QUERY DESTINATION(Into current selection)
+ HIGHLIGHT RECORDS
 ```
 
 When the user clicks the button, the standard query dialog box appears. Once the search has been validated, the records found will be highlighted without the current selection being modified.

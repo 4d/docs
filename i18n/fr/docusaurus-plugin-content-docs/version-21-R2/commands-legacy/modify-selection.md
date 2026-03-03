@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|2004|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.MODIFY SELECTION.Summary-->La commande **MODIFY SELECTION** est quasiment identique à la commande [DISPLAY SELECTION](display-selection.md).<!-- END REF--> Reportez-vous à la commande [DISPLAY SELECTION](display-selection.md) pour une description détaillée.  

@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|2004|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Modified.Summary-->**Modified** retourne **Vrai** si une valeur a été assignée par programmation au champ *leChamp* ou s'il a été modifié lors de la saisie de données.<!-- END REF--> La commande **Modified** ne fonctionne que lorsqu'elle est appelée dans le cadre d'une méthode formulaire (ou d'une sous-méthode appelée par la méthode formulaire).

@@ -50,22 +50,22 @@ In the *targetObj* parameter, you can pass:
 To get all formulas in a document:
 
 ```4d
- var $formulas : Collection
- $formulas:=WP Get formulas(WriteProArea)
+ var $formulas : Collection
+ $formulas:=WP Get formulas(WriteProArea)
 ```
 
 To get all formulas in the first section of a document:
 
 ```4d
- var $formulas : Collection
- $formulas:=WP Get formulas(WP Get section(WriteProArea;1))
+ var $formulas : Collection
+ $formulas:=WP Get formulas(WP Get section(WriteProArea;1))
 ```
 
 To get the formulas of all anchored pictures in a document:
 
 ```4d
- var $formulas : Collection
- $formulas:=WP Get formulas(WriteProArea).query("anchoredID # null")
+ var $formulas : Collection
+ $formulas:=WP Get formulas(WriteProArea).query("anchoredID # null")
 ```
 
 ## See also 

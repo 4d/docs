@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET PLUGIN ACCESS.Summary-->The SET PLUGIN ACCESS command sets, by programming, the user group allowed to use each “serialized” plug-in that is installed in the database.<!-- END REF--> This way you can manage how plug-in licenses are used.

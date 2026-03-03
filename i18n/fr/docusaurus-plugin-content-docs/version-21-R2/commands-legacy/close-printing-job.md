@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.CLOSE PRINTING JOB.Summary-->La commande **CLOSE PRINTING JOB** permet de refermer la tâche d’impression préalablement ouverte par la commande [OPEN PRINTING JOB](open-printing-job.md) et d’envoyer à l’imprimante courante le document d’impression éventuellement construit.<!-- END REF-->

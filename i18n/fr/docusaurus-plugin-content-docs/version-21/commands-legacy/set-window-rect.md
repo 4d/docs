@@ -20,6 +20,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Modifié|
+|2004|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET WINDOW RECT.Summary-->La commande **SET WINDOW RECT** modifie les coordonnées globales de la fenêtre dont vous avez passé le numéro de référence [RefFen](# "Expression de type Entier long identifiant de façon unique une fenêtre ouverte") dans le paramètre *fenêtre*.<!-- END REF--> Si la fenêtre n'existe pas, la commande ne fait rien.

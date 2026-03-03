@@ -21,6 +21,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|17 R6|変更|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GET LIST ITEM PROPERTIES.Summary-->**GET LIST ITEM PROPERTIES** コマンドは、引数*list*に渡されたリスト参照番号またはオブジェクト名のリスト内で、引数*itemRef*によって指定された項目のプロパティを返します。<!-- END REF-->

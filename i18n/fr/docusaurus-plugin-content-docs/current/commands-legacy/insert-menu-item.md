@@ -20,6 +20,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16 R3|Modifié|
+|11 SQL Release 4|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.INSERT MENU ITEM.Summary-->La commande **INSERT MENU ITEM** insère de nouvelles lignes dans le menu dont vous avez passé le numéro ou la référence dans *menu* et les place après la ligne de menu dont le numéro est passé dans *aprèsLigne*.<!-- END REF-->

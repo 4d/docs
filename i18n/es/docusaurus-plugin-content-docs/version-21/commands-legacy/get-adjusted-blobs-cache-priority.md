@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|16 R2|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Get adjusted blobs cache priority.Summary-->El comando **Get adjusted blobs cache priority** devuelve el valor de prioridad de la caché ajustada actual aplicado en la caché para los datos "blobs" *tabla*.<!-- END REF--> Este comando sólo es necesario para propósitos de depuración. 

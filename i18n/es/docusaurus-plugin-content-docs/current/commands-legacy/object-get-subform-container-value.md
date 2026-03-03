@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|19 R5|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OBJECT Get subform container value.Summary-->The **OBJECT Get subform container value** command returns the current value of the data source bound with the subform container displayed in the parent form.<!-- END REF-->

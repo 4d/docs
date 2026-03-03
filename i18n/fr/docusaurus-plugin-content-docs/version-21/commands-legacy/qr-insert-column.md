@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2003|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR INSERT COLUMN.Summary-->La commande **QR INSERT COLUMN** insère ou crée dans *zone* une colonne à un emplacement spécifique.<!-- END REF--> Les colonnes situées à droite de la colonne ajoutée seront décalées en conséquence.

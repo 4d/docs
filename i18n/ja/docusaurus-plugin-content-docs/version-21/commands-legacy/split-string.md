@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Split string.Summary-->**Split string** コマンドは、*stringToSplit* 引数の文字列を、*separator* 引数で指定した区切り文字によって分割した文字列のコレクションを返します。<!-- END REF-->返されたコレクション内の文字列には、*separator* 引数の区切り文字自身は含まれません。

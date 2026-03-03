@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|18 R3|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OB Values.Summary-->**OB Values** コマンドは、*object* 引数で指定したオブジェクトの内の列挙可能なプロパティの値を格納したバリアントのコレクションを返します。<!-- END REF-->

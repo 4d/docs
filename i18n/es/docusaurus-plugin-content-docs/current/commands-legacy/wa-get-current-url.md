@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL Release 2|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.WA Get current URL.Summary-->El comando WA Get current URL devuelve la dirección URL de la página mostrada en el área web designada por los parámetros *\** y *objeto*.<!-- END REF--> 

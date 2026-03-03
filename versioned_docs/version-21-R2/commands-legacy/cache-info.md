@@ -5,7 +5,7 @@ slug: /commands/cache-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Cache info.Syntax-->**Cache info** ( *dbFilter* : Object ) : Object<!-- END REF-->
+<!--REF #_command_.Cache info.Syntax-->**Cache info** ( {*dbFilter* : Object} ) : Object<!-- END REF-->
 <!--REF #_command_.Cache info.Params-->
 <div class="no-index">
 
@@ -15,6 +15,16 @@ displayed_sidebar: docs
 | Function result | Object | &#8592; | Information about cache |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16|Created|
+
+</details>
+</div>
 
 ## Description 
 

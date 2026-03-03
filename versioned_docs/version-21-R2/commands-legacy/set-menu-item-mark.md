@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET MENU ITEM MARK.Summary-->The **SET MENU ITEM MARK** command changes the check mark of the menu item whose menu number or reference is passed in *menu* and whose item number is passed in *menuItem* to the first character of the string passed in *mark*.<!-- END REF--> You can pass -1 in *menuItem* in order to designate the last item added to the *menu*.

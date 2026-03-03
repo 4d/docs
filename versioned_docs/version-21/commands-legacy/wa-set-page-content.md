@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL Release 2|Created|
+
+</details>
+</div>
+
 ## Compatibility Note 
 
 <!--REF #_command_.WA SET PAGE CONTENT.Summary-->This historical command is no longer really useful.<!-- END REF--> As security is tightened in modern browsers, there are more and more restrictions on modifying page content "on the fly". A more reliable approach is to create a local file (e.g. in the temporary folder) and use [WA OPEN URL](wa-open-url.md) to load it. To clear the content, just call **WA OPEN URL**(myArea;”about:blank”).

@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|19|Criado por|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Encrypt data BLOB.Summary-->O comando **Encrypt data BLOB** encripta o parâmetro *blobCriptografar* com o mesmo algoritmo que 4D usas para criptografia de dados (AES-256) e retorna o resultao em *blobCriptografado*.<!-- END REF-->

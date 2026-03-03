@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2003|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR SET AREA PROPERTY.Summary-->La commande **QR SET AREA PROPERTY** vous permet d'afficher ou de masquer l'élément d'interface dont la référence est passée dans le paramètre *propriété*.<!-- END REF-->

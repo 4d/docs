@@ -20,6 +20,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.CREATE THUMBNAIL.Summary-->La commande **CREATE THUMBNAIL** retourne une imagette à partir d’une image source.<!-- END REF--> Les imagettes sont généralement utilisées pour la prévisualisation d’images dans le cadre d’applications multimédia ou de sites Web. 

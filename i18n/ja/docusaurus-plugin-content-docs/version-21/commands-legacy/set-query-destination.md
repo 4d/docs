@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|変更|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET QUERY DESTINATION.Summary-->**SET QUERY DESTINATION**を使い、カレントプロセスのクエリの結果を配置する場所を4Dに指示することができます。<!-- END REF-->

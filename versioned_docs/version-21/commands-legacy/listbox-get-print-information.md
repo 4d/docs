@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX GET PRINT INFORMATION.Summary-->The **LISTBOX GET PRINT INFORMATION** command returns the current information relative to the printing of the list box object designated by the *object* and *\** parameters.<!-- END REF--> This command can be used to control the printing of the list box contents.
@@ -42,17 +52,17 @@ For more information about the principles of printing list boxes, please refer t
 Printing until all the rows have been printed:
 
 ```4d
- OPEN PRINTING JOB
- FORM LOAD("SalesForm")
- 
- $Over:=False
- Repeat
-    $Total:=Print object(*;"mylistbox")
-    LISTBOX GET PRINT INFORMATION(*;"mylistbox";lk printing is over;$Over)
-    PAGE BREAK
- Until($Over)
- 
- CLOSE PRINTING JOB
+ OPEN PRINTING JOB
+ FORM LOAD("SalesForm")
+ 
+ $Over:=False
+ Repeat
+    $Total:=Print object(*;"mylistbox")
+    LISTBOX GET PRINT INFORMATION(*;"mylistbox";lk printing is over;$Over)
+    PAGE BREAK
+ Until($Over)
+ 
+ CLOSE PRINTING JOB
 ```
 
 ## Example 2 
@@ -60,13 +70,13 @@ Printing until all the rows have been printed:
 Printing at least 500 rows of the list box, knowing that certain rows are hidden:
 
 ```4d
- $GlobalPrinted:=0
- Repeat
-    $Total:=Print object(*;"mylistbox")
-    LISTBOX GET PRINT INFORMATION(*;"mylistbox";lk printed rows;$Printed)
-    $GlobalPrinted:=$GlobalPrinted+$Printed
-    PAGE BREAK
- Until($GlobalPrinted>=500)
+ $GlobalPrinted:=0
+ Repeat
+    $Total:=Print object(*;"mylistbox")
+    LISTBOX GET PRINT INFORMATION(*;"mylistbox";lk printed rows;$Printed)
+    $GlobalPrinted:=$GlobalPrinted+$Printed
+    PAGE BREAK
+ Until($GlobalPrinted>=500)
 ```
 
 

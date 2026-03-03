@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|6.7|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Euro converter.Summary-->コマンドは"ユーロ"に所属するユーロ通貨の元と先の異なった通貨の値を変換します。<!-- END REF-->

@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET PASTEBOARD DATA.Summary-->**GET PASTEBOARD DATA** retourne dans le champ ou la variable de type BLOB *données* les données qui se trouvent dans le conteneur de données et dont le type est passé dans *typeDonnées*.<!-- END REF--> (Si le conteneur de données contient du texte copié depuis 4D, le jeu de caractères du BLOB sera probablement UTF-16.)

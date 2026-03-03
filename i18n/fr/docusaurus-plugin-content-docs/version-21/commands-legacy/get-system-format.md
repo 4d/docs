@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET SYSTEM FORMAT.Summary-->La commande **GET SYSTEM FORMAT** retourne la valeur courante de plusieurs paramètres régionaux définis dans le système d’exploitation.<!-- END REF--> Cette commande permet de construire des formats personnalisés “automatiques” basés sur les préférences système. 

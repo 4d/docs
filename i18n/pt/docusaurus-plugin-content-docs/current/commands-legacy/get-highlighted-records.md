@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GET HIGHLIGHTED RECORDS.Summary-->O comando GET HIGHLIGHTED RECORDS guarda, no conjunto designado pelo parâmetro *nomConjunto,* os registros selecionados (ou seja, os registros selecionados pelo usuário no formulário listado) da *tabela* passada como parâmetro.<!-- END REF--> Se o parâmetro *tabela* for omitido, é utilizada a tabela do formulário ou do subformulário atual.  

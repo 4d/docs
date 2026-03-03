@@ -16,6 +16,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|19 R8|Modificado|
+|13|Modificado|
+|11 SQL Release 4|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.System folder.Summary-->O comando **System folder** devolve a rota de acesso a uma pasta particular do sistema operativo ou à pasta ativa do sistema Windows ou Mac OS.<!-- END REF-->

@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.REMOVE FROM SET.Summary-->REMOVE FROM SETコマンドは、*set*から*aTable*のカレントレコードを取り除きます。<!-- END REF-->セットは存在していなければならず、存在していない場合には、エラーが発生します。テーブルに対するカレントレコードがない場合、REMOVE FROM SETコマンドは何も行いません。

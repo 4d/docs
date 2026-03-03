@@ -18,6 +18,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL|Modifié|
+|12|Renommé|
+|16 R6|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM SET INPUT.Summary-->**FORM SET INPUT** désigne *formulaire* ou *formUtilisateur* comme formulaire entrée courant de *laTable* pour le process courant.<!-- END REF--> *formulaire* doit appartenir à *laTable*.

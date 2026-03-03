@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2003|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.PRINT OPTION VALUES.Summary-->The **PRINT OPTION VALUES** command returns in *namesArray* a list of names available for the print *option* defined.<!-- END REF--> Optionally, you can retrieve additional information for each name in *info1Array* and *info2Array*. 

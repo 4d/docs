@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2003|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.QR INSERT COLUMN.Summary-->QR INSERT COLUMN コマンドは指定された位置にカラムの作成または挿入を行います。<!-- END REF-->挿入された場所の右にあるカラムはすべて右側へ移動します。

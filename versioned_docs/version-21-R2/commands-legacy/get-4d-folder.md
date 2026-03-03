@@ -5,7 +5,7 @@ slug: /commands/get-4d-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get 4D folder.Syntax-->**Get 4D folder** ( *folder* : Integer {; *options* : Object} {; *}) : Text<!-- END REF-->
+<!--REF #_command_.Get 4D folder.Syntax-->**Get 4D folder** ({*folder* : Integer {; *options* : Object}} {; *}) : Text<!-- END REF-->
 <!--REF #_command_.Get 4D folder.Params-->
 <div class="no-index">
 
@@ -17,6 +17,21 @@ displayed_sidebar: docs
 | Function result | Text | &#8592; | Pathname to 4D Folder |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL Release 2|Modified|
+|13|Modified|
+|16|Modified|
+|17 R2|Modified|
+|20|Modified|
+
+</details>
+</div>
 
 ## Description 
 

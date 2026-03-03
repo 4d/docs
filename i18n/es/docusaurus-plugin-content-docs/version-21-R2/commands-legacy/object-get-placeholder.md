@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OBJECT Get placeholder.Summary-->El comando **OBJECT Get placeholder** devuelve el texto de ejemplo asociado al objeto o a los objetos designado(s) por los parámetros *objeto* y *\**.<!-- END REF--> Si no hay ningún texto del marcador asociado con el objeto, el comando devuelve una cadena vacía.

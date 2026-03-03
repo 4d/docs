@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|16 R2|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Get adjusted index cache priority.Summary-->El comando **Get adjusted index cache priority** devuelve el valor de prioridad de caché ajustado actual aplicado por el gestor de caché para los índices de campo.<!-- END REF--> Este comando sólo es necesario para propósitos de depuración.

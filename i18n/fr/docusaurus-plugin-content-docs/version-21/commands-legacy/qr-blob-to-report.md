@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2003|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR BLOB TO REPORT.Summary-->La commande **QR BLOB TO REPORT** place l’état contenu dans le paramètre *blob* dans la zone d'état rapide désignée par le paramètre *zone*.<!-- END REF--> 

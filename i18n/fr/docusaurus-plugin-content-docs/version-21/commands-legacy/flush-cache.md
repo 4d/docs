@@ -15,6 +15,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16|Renommé|
+|16|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FLUSH CACHE.Summary-->La commande **FLUSH CACHE** sauvegarde immédiatement le cache de données sur le disque.<!-- END REF--> Toutes les modifications apportées à la base sont alors stockées sur disque.

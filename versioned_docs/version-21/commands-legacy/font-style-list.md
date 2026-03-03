@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|15 R4|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FONT STYLE LIST.Summary-->The **FONT STYLE LIST** command returns the list of font styles and the list of complete font names supported by the font family defined in the *fontFamily* parameter.<!-- END REF--> This command allows you to design interfaces handling fonts and font styles, particularly in the context of 4D Write Pro areas (see *4D Write Pro Reference*).
@@ -34,27 +44,27 @@ In *fontNameList*, you pass a text array to be filled with the complete list of 
 You want to select styles of the "Verdana" font family (if available):
 
 ```4d
- ARRAY TEXT($aTfonts;0)
- ARRAY TEXT($aTStyles;0)
- ARRAY TEXT($aTnames;0)
- var $numStyle : Integer
- 
- FONT LIST($aTfonts)
- $numStyle:=Find in array($aTfonts;"Verdana")
- If($numStyle#0)
-    FONT STYLE LIST($aTfonts{$numStyle};$aTStyles;$aTnames)
- End if
- 
-  //For example, resulting arrays are:
-  //$aTStyles{1}="Normal"
-  //$aTStyles{1}="Italic"
-  //$aTStyles{1}="Bold"
-  //$aTStyles{1}="Bold Italic"
- 
-  // $aTnames{1}="Verdana"
-  // $aTnames{1}="Verdana Italic"
-  // $aTnames{1}="Verdana Bold"
-  // $aTnames{1}="Verdana Bold Italic"
+ ARRAY TEXT($aTfonts;0)
+ ARRAY TEXT($aTStyles;0)
+ ARRAY TEXT($aTnames;0)
+ var $numStyle : Integer
+ 
+ FONT LIST($aTfonts)
+ $numStyle:=Find in array($aTfonts;"Verdana")
+ If($numStyle#0)
+    FONT STYLE LIST($aTfonts{$numStyle};$aTStyles;$aTnames)
+ End if
+ 
+  //For example, resulting arrays are:
+  //$aTStyles{1}="Normal"
+  //$aTStyles{1}="Italic"
+  //$aTStyles{1}="Bold"
+  //$aTStyles{1}="Bold Italic"
+ 
+  // $aTnames{1}="Verdana"
+  // $aTnames{1}="Verdana Italic"
+  // $aTnames{1}="Verdana Bold"
+  // $aTnames{1}="Verdana Bold Italic"
 ```
 
 ## See also 

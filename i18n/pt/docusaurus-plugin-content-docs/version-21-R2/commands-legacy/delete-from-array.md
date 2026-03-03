@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.DELETE FROM ARRAY.Summary-->O comando DELETE FROM ARRAY apaga um ou mais elementos de um *array*.<!-- END REF--> Elementos se apagam iniciando no elemento especificado por *posição*.

@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET QUERY AND LOCK.Summary-->**SET QUERY AND LOCK** コマンドを使用して、カレントのトランザクション中でこのコマンドに引き続き呼び出されるすべてのクエリで見つかったレコードを自動的にロックできます。<!-- END REF-->つまりクエリを行ってから結果を処理するまで、他のプロセスはレコードを変更できなくなることを意味します。

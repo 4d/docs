@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|16|Modificado|
+|13|Modificado|
+|11 SQL Release 3|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Max.Summary-->**Max** retorna o valor máximo em *series*.<!-- END REF--> Se *series* é um campo indexado, o índice é utiliizado para buscar o máximo valor.  

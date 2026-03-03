@@ -4,7 +4,7 @@ title: WA Get context
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Get context.Syntax-->**WA Get context** ( {* ;} *object* ) -> *contextObj*<!-- END REF-->
+<!--REF #_command_.WA Get context.Syntax-->**WA Get context** ( * ; *object* : Text ) -> Object<br/>**WA Get context** ( *object* : Variable ) -> Object<!-- END REF-->
 <!--REF #_command_.WA Get context.Params-->
 <div class="no-index">
 
@@ -15,6 +15,18 @@ displayed_sidebar: docs
 | Function result | Object | &#8592;  | Context object if previously defined, otherwise `null`. |
 </div>
 <!-- END REF-->
+
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|20 R9|Added|
+
+</details>
+</div>
+
 
 ### Description 
 

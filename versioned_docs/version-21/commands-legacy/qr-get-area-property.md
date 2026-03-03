@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2003|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR Get area property.Summary-->The **QR Get area property** command returns 0 if the interface element passed in *property* is not displayed; otherwise, it returns 1.<!-- END REF-->

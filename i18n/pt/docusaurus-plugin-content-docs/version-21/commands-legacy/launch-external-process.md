@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|15 R4|Modificado|
+|2004|Criado por|
+
+</details>
+</div>
+
 :::info Compatibilidade
 
 <!--REF #_command_.LAUNCH EXTERNAL PROCESS.Summary-->A partir de 4D v19 R4, recomendamos o uso de [`4D.SystemWorker class`](../API/SystemWorkerClass.md) para rodar e controlar processos externos.<!-- END REF--> Entretanto, esse comando ainda é compatível 

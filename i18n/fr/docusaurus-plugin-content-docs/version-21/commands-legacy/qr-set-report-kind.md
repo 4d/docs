@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2003|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR SET REPORT KIND.Summary-->La commande **QR SET REPORT KIND** permet de définir le *type* de l'état rapide présent dans la *zone*.<!-- END REF-->

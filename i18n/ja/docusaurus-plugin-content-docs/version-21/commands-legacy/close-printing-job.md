@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.CLOSE PRINTING JOB.Summary-->**CLOSE PRINTING JOB** コマンドは、[OPEN PRINTING JOB](open-printing-job.md) コマンドで開かれたプリントジョブを閉じ、組み立てたプリントドキュメントをカレントプリンタに送信するために使用できます。<!-- END REF-->

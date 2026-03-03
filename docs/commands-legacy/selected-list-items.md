@@ -5,7 +5,7 @@ slug: /commands/selected-list-items
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Selected list items.Syntax-->**Selected list items** ( * ; *list* : Text {; *itemsArray* : Integer array {; *}} ) : Integer<br/>**Selected list items** ( *list* : Integer {; *itemsArray* : Integer array {; *}} ) : Integer<!-- END REF-->
+<!--REF #_command_.Selected list items.Syntax-->**Selected list items** ( * ; *list* : Text {; *itemsArray* : Integer array} {; *} ) : Integer<br/>**Selected list items** ( *list* : Integer {; *itemsArray* : Integer array} {; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.Selected list items.Params-->
 <div class="no-index">
 
@@ -18,6 +18,17 @@ displayed_sidebar: docs
 | Function result | Integer | &#8592; | If 2nd * omitted: Position of current selected list item in expanded/collapsed list(s) If 2nd * passed: Reference of the selected item |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
 
 ## Description 
 

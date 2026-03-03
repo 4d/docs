@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|12|Renommé|
+|2004|Créé|
+
+</details>
+</div>
+
 #### Description 
 
 <!--REF #_command_.LISTBOX Get number of columns.Summary-->La commande **LISTBOX Get number of columns** retourne le nombre total de colonnes (visibles ou non) présentes dans la list box désignée par les paramètres *objet* et *\**.<!-- END REF-->

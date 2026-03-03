@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.ARRAY BLOB.Summary-->El comando **ARRAY BLOB** crea y/o cambia el tamaño de un array de elementos de tipo Blob en memoria .<!-- END REF-->  

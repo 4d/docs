@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|15 R3|Modified|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET STYLE SHEET INFO.Summary-->The **GET STYLE SHEET INFO** command returns the current configuration of the style sheet designated in the *styleSheetName* parameter.<!-- END REF--> 
@@ -57,9 +68,9 @@ In **project architecture**, only the three automatic style sheets are supported
 You want to find out the current configuration of the "Automatic" style sheet:
 
 ```4d
- var $size;$style : Integer
- var $font : Text
- GET STYLE SHEET INFO(Automatic style sheet;$font;$size;$style)
+ var $size;$style : Integer
+ var $font : Text
+ GET STYLE SHEET INFO(Automatic style sheet;$font;$size;$style)
 ```
 
 ## See also 

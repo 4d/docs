@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Equal pictures.Summary-->The **Equal pictures** command precisely compares both the dimensions and the contents of two pictures.<!-- END REF-->
@@ -41,7 +51,7 @@ In the following example, we compare two pictures (pict1 and pict2) and display 
 Here is the code for the **Compare** button:
 
 ```4d
- $equal :=Equal pictures($pict1;$pict2;$mask)
+ $equal :=Equal pictures($pict1;$pict2;$mask)
 ```
 
 

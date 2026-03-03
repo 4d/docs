@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14 R2|Modifié|
+|11 SQL Release 5|Modifié|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Application version.Summary-->**Application version** retourne une chaîne encodée qui exprime le numéro de version de l'environnement 4D que vous utilisez.<!-- END REF-->

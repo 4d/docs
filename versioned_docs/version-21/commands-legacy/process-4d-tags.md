@@ -11,11 +11,26 @@ displayed_sidebar: docs
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| inputTemplate | Text | &#8594;  | Data containing tags to process |
+| inputTemplate | Text, Blob | &#8594;  | Data containing tags to process |
 | outputResult | Text | &#8592; | Result from template execution |
 | param | Expression | &#8594;  | Parameter(s) passed to template being executed |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R4|Modified|
+|14 R4|Modified|
+|13|Renamed|
+|12|Modified|
+|11 SQL|Modified|
+|2004|Created|
+
+</details>
+</div>
 
 ## Description 
 

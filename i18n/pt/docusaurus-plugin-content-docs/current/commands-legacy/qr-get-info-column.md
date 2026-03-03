@@ -23,6 +23,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|15 R3|Modificado|
+|2003|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.QR GET INFO COLUMN.Summary-->### Relatórios em lista 

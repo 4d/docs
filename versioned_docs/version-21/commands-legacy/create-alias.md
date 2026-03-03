@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6.7|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.CREATE ALIAS.Summary-->The CREATE ALIAS command creates an alias (named “shortcut” under Windows) for the target file or folder passed in *targetPath*.<!-- END REF--> The name and location are defined by the *targetPath* parameter.
@@ -33,33 +43,33 @@ If an empty string is passed in the *targetPath*, the command does nothing.
 Your database generates text files called “Report Number” sorted in the database folder. The user would like to create shortcuts to these reports and to store them at a convenient location:
 
 ```4d
-  //Method CREATE_REPORT
- var $vtRport : Text
- C_STRING(250;$vtpath)
- C_STRING(80;$vaname)
- var vDoc : Time
- C_INTEGER($ReportNber)
- 
- $vTReport:=... //Create report
- $ReportNber:=... //Compute the report number
- $vaName:="Report"+String($ReportNber)+".txt" //File name
- vDoc:=Create document($vaName)
- If(OK=1)
-    SEND PACKET(vDoc;$vTReport)
-    CLOSE DOCUMENT(vDoc)
-  //Add the alias
-    CONFIRM("Create an alias for this report?")
-    If(OK=1)
-       $vtPath:=Select folder("Where do you want the alias to be created?")
-       If(OK=1)
-          CREATE ALIAS($vaName;$vtPath+$vaName)
-          If(OK=1)
-             SHOW ON DISK($vtPath+$vaName)
-  //Show the alias location
-          End if
-       End if
-    End if
- End if
+  //Method CREATE_REPORT
+ var $vtRport : Text
+ C_STRING(250;$vtpath)
+ C_STRING(80;$vaname)
+ var vDoc : Time
+ C_INTEGER($ReportNber)
+ 
+ $vTReport:=... //Create report
+ $ReportNber:=... //Compute the report number
+ $vaName:="Report"+String($ReportNber)+".txt" //File name
+ vDoc:=Create document($vaName)
+ If(OK=1)
+    SEND PACKET(vDoc;$vTReport)
+    CLOSE DOCUMENT(vDoc)
+  //Add the alias
+    CONFIRM("Create an alias for this report?")
+    If(OK=1)
+       $vtPath:=Select folder("Where do you want the alias to be created?")
+       If(OK=1)
+          CREATE ALIAS($vaName;$vtPath+$vaName)
+          If(OK=1)
+             SHOW ON DISK($vtPath+$vaName)
+  //Show the alias location
+          End if
+       End if
+    End if
+ End if
 ```
 
 ## System variables and sets 

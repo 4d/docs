@@ -20,6 +20,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|13|Modificado|
+|2004|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SET WINDOW RECT.Summary-->El comando **SET WINDOW RECT** cambia las coordenadas globales de la ventana cuyo número de referencia se pasa en *ventana*.<!-- END REF--> Si la ventana no existe, el comando no hace nada. 

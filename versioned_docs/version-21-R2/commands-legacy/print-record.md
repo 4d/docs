@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|2004|Modified|
+|15 R5|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.PRINT RECORD.Summary-->**PRINT RECORD** prints the current record of *aTable*, without modifying the current selection.<!-- END REF--> The current output form is used for printing. If there is no current record for *aTable*, **PRINT RECORD** does nothing.

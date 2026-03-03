@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|18 R3|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.STOP MONITORING ACTIVITY.Summary-->El comando **STOP MONITORING ACTIVITY** detiene el seguimiento de las actividades iniciadas con el comando [START MONITORING ACTIVITY](start-monitoring-activity.md).<!-- END REF--> Después de la ejecución de este comando, se vacía cualquier registro de actividad en la memoria.

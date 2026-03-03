@@ -580,7 +580,7 @@ Dans ce cas, la balise `4DLOOP` fonctionne comme avec un tableau : elle fait une
 
 Cette syntaxe est utile lorsque vous passez un pointeur de tableau comme paramètre à la commande `PROCESS 4D TAGS`.
 
-Voici un exemple :
+Exemple :
 
 ```4d
  ARRAY TEXT($array;2)

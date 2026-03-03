@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET FIELD TITLES.Summary-->**SET FIELD TITLES** コマンドを使用すれば、アプリケーションモードにおいて、クエリエディターのような標準の4 Dダイアログボックスを表示する際に、*aTable* に渡されるそのテーブルのフィールドのマスクや名前の変更、並べ替えが行えます (スタートアップモードが**アプリケーション**である場合、または**実行**メニューから**アプリケーションをテスト**を選択した場合) 。<!-- END REF-->

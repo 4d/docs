@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|2004|Modificado|
+|16 R4|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.DOM Count XML elements.Summary-->El comando DOM Count XML elements devuelve el número de elementos “hijo” dependientes del elemento padre *refElement* y llamado *nomElement*.<!-- END REF-->por defecto, **DOM Count XML elements** es sensible a las mayúsculas y minúsculas con respecto el parámetro *nomElement* (de acuerdo a los estándares XML). Puede controlar la sensibilidad de mayúsculas y minúsculas del comando utilizando el selector XML DOM case sensitivity del comando [XML SET OPTIONS](xml-set-options.md). 

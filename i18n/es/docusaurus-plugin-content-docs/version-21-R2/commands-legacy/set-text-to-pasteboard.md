@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SET TEXT TO PASTEBOARD.Summary-->SET TEXT TO PASTEBOARD limpia el portapapeles y luego coloca una copia del texto en *texto* en el portapapeles.<!-- END REF--> 

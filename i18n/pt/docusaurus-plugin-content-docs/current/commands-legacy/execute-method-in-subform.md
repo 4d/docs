@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|19 R6|Modificado|
+|12|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.EXECUTE METHOD IN SUBFORM.Summary-->O comando EXECUTE METHOD IN SUBFORM pode ser utilizado para executar o método de projeto *nomeMetodo no* contexto do sub formulário *objetoSubform*.<!-- END REF-->

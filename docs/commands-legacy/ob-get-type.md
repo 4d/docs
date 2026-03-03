@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R6|Modified|
+|16 R4|Modified|
+|15|Modified|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OB Get type.Summary-->The **OB Get type** command returns the type of value associated with the *property* of the language *object*.<!-- END REF-->can be an object varialble or a 4D object field.. 

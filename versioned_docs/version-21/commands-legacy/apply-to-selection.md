@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.APPLY TO SELECTION.Summary-->**APPLY TO SELECTION** applies *statement* to each record in the current selection of *aTable*.<!-- END REF--> The *statement* can be a statement or a method. If *statement* modifies a record of *aTable*, the modified record is saved. If *statement* does not modify a record, the record is not saved. If the current selection is empty, **APPLY TO SELECTION** has no effect. If the relation is automatic, the *statement* can contain a field from a related table.
@@ -33,7 +44,7 @@ The progress thermometer is displayed while **APPLY TO SELECTION** is executing.
 The following example changes all the names in the table \[Employees\] to uppercase:
 
 ```4d
- APPLY TO SELECTION([Employees];[Employees]Last Name:=Uppercase([Employees]Last Name))
+ APPLY TO SELECTION([Employees];[Employees]Last Name:=Uppercase([Employees]Last Name))
 ```
 
 ## Example 2 
@@ -41,10 +52,10 @@ The following example changes all the names in the table \[Employees\] to upperc
 If a record is locked during execution of **APPLY TO SELECTION** and that record is modified, the record will not be saved. Any locked records that are encountered are put in a set called LockedSet. After **APPLY TO SELECTION** has executed, test LockedSet to see if any records were locked. The following loop will execute until all records have been modified:
 
 ```4d
- Repeat
-    APPLY TO SELECTION([Employees];[Employees]Last Name:=Uppercase([Employees]Last Name))
-    USE SET("LockedSet") // Select only locked records
- Until(Records in set("LockedSet")=0) // Done when there are no locked records
+ Repeat
+    APPLY TO SELECTION([Employees];[Employees]Last Name:=Uppercase([Employees]Last Name))
+    USE SET("LockedSet") // Select only locked records
+ Until(Records in set("LockedSet")=0) // Done when there are no locked records
 ```
 
 ## Example 3 
@@ -52,8 +63,8 @@ If a record is locked during execution of **APPLY TO SELECTION** and that record
 This example uses a method:
 
 ```4d
- ALL RECORDS([Employees])
- APPLY TO SELECTION([Employees];M_Cap)
+ ALL RECORDS([Employees])
+ APPLY TO SELECTION([Employees];M_Cap)
 ```
 
 ## System variables and sets 

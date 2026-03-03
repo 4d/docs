@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.DOM EXPORT TO FILE.Summary-->O comando DOM EXPORT TO FILE permite guardar uma árvore XML em um arquivo no disco.<!-- END REF-->  

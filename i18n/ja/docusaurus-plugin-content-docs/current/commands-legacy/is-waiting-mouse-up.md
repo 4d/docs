@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Is waiting mouse up.Summary-->The **Is waiting mouse up** コマンドはカレントオブジェクトがクリックされて、かつマウスボタンがリリースされておらず、親ウィンドウにフォーカスが入っている場合に**True**を返します。<!-- END REF-->そうでない場合、例えばマウスボタンがリリースされる前に親ウィンドウのフォーカスが外れてしまった場合などには**False**を返します。

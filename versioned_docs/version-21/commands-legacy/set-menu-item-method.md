@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET MENU ITEM METHOD.Summary-->The **SET MENU ITEM METHOD** command modifies the 4D project method associated with the menu item designated by the *menu* and *menuItem* parameters.<!-- END REF-->

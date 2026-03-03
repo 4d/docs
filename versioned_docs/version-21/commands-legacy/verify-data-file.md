@@ -5,7 +5,7 @@ slug: /commands/verify-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.VERIFY DATA FILE.Syntax-->**VERIFY DATA FILE** ( *structurePath* ; *dataPath* ; *objects* ; *options* ; *method* {; *tablesArray* {; *fieldsArray*}} )<!-- END REF-->
+<!--REF #_command_.VERIFY DATA FILE.Syntax-->**VERIFY DATA FILE** ( *structurePath* : Text ; *dataPath* : Text ; *objects* : Integer ; *options* : Integer ; *method* : Text {; *tablesArray* : Integer array {; *fieldsArray* : Integer array}} )<!-- END REF-->
 <!--REF #_command_.VERIFY DATA FILE.Params-->
 <div class="no-index">
 
@@ -17,9 +17,21 @@ displayed_sidebar: docs
 | options | Integer | &#8594;  | Checking options |
 | method | Text | &#8594;  | Name of 4D callback method |
 | tablesArray | Integer array | &#8594;  | Numbers of tables to be checked |
-| fieldsArray | 2D Integer array, 2D Integer array, 2D Real array | &#8594;  | Numbers of indexes to be checked |
+| fieldsArray | Integer array | &#8594;  | Numbers of indexes to be checked |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|15 R3|Modified|
+|11 SQL Release 3|Modified|
+|<6|Created|
+
+</details>
+</div>
 
 ## Description 
 
@@ -46,7 +58,7 @@ The *options* parameter is used to set verification options. The following optio
 
 | Constant                | Type    | Value  | Comment                                                                                                                                                                                                                                                                                                                        |
 | ----------------------- | ------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Do not create log file  | Integer | 16384  | Generally, this command creates a log file in XML format (refer to the end of the command description). With this option, no log file will be created.                                                                                                                                                                         |
+| Do not create log file  | Integer | 16384  | Generally, this command creates a log file in XML format (refer to the end of the command description). With this option, no log file will be created.    |
 | Timestamp log file name | Integer | 262144 | When this option is passed, the name of the log file generated will contain the date and time of its creation; as a result, it will not replace any log file already generated previously. By default, if this option is not passed, log file names are not timestamped and each new file generated replaces the previous one. |
   
   
@@ -74,23 +86,22 @@ The following table describes the contents of the parameters depending on the ev
 |||| message                   | number      |
 
 (\*) The *Verification finished* ($messageType=2) event is never returned when the mode is Verify All. It is only used in Verify Records or Verify Indexes mode.  
-(\*\*) *Object type*: When an object is verified, a "finished" message ($messageType=2), error ($messageType=3) or warning ($messageType=5) can be sent. The object type returned in $objectType can be one of the following:
+(\*\*) *Object type*: When an object is verified, a "finished" message ($messageType=2), error ($messageType=3) or warning ($messageType=5) can be sent. The object type returned in *$objectType* can be one of the following:
 
 * 0 = undetermined
 * 4 = record
 * 8 = index
 * 16 = structure object (preliminary check of data file).
 
-*Special case*: When $table = 0 for $messageType=2, 3 or 5, the message does not concern a table or an index but rather the data file as a whole.
+*Special case*: When *$table* = 0 for *$messageType*=2, 3 or 5, the message does not concern a table or an index but rather the data file as a whole.
 
-The callback method must also return a *$result* integer value, which is used to check the execution of the operation:
+The callback method must also return an integer value, which is used to check the execution of the operation:
 
 * If $result = 0, the operation continues normally
 * If $result = -128, the operation is stopped without any error generated
 * If $result = another value, the operation is stopped and the value passed in $result is returned as the error number. This error can be intercepted by an error-handling method.
 
-**Note:** You cannot interrupt execution via $result after the *End of execution* event ($1=4) has been generated.
-
+**Note:** You cannot interrupt execution via $result after the *End of execution* event ($messageType=4) has been generated.
 
 Two optional arrays can also be used by this command:
 

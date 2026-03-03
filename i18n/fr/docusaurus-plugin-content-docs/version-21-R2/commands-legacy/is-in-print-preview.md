@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Is in print preview.Summary-->La commande **Is in print preview** retourne Vrai si l’option **Aperçu avant impression** est cochée dans la boîte de dialogue d’impression, et Faux sinon.<!-- END REF--> Ce paramétrage est local au process. 

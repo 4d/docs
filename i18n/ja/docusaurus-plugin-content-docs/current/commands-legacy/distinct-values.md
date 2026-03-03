@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|15 R4|変更|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DISTINCT VALUES.Summary-->**DISTINCT VALUES**コマンドは、*aField*が属するテーブルのカレントセレクションの*aField*フィールドからの重複しない(ユニークな)値で構成される*array*配列を作成します。<!-- END REF-->また任意の引数*countArray*にそれぞれの値のオカレンス数を返す事もできます。

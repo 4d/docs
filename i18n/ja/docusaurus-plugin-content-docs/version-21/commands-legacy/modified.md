@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Modified.Summary-->**Modified** はデータ入力中、プログラムを使用して*field* に値が代入されていたり、データ入力中に値が編集された場合に、[True](true.md "True")を返します。<!-- END REF-->**Modified** コマンドはフォームメソッド（またはフォームメソッドから呼ばれたサブルーチン）で使用されなければなりません。 

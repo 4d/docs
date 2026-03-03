@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.New list.Summary-->La commande **New list** crée une nouvelle liste hiérarchique vide en mémoire et retourne son numéro de référence unique.<!-- END REF-->

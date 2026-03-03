@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT GET DRAG AND DROP OPTIONS.Summary-->O comando **OBJECT GET DRAG AND DROP OPTIONS** devolve as opções de arrastar e soltar para o objeto o os objetos designados pelos parâmetros *objeto* e *\** para o processo atual.<!-- END REF-->  

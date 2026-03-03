@@ -8,6 +8,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DIALOG.Params-->
 
+<div class="no-index">
+
 | Parâmetro | Tipo         |                             | Descrição                                                                                                                                                                                                                  |
 | --------- | ------------ | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | aTable    | Tabela       | &#8594; | Tabela possuindo o formulário ou se omitido: tabela padrão ou uso do formulário projeto                                                                                                                    |
@@ -15,7 +17,20 @@ displayed_sidebar: docs
 | formData  | Object       | &#8594; | Dados para associar ao formulário                                                                                                                                                                                          |
 | \*        | Operador     | &#8594; | Usar o mesmo processo                                                                                                                                                                                                      |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>História</summary>
+
+| Release                     | Mudanças   |
+| --------------------------- | ---------- |
+| 17                          | Modificado |
+| 11 SQL                      | Modificado |
+| <6 | Created    |
+
+</details>
+</div>
 
 ## Descrição
 
@@ -23,7 +38,7 @@ displayed_sidebar: docs
 
 This command is designed to work with customized and advanced user interfaces based on forms. Você pode usá-lo para exibir informações provenientes do banco de dados ou de outros locais, ou para fornecer recursos de entrada de dados. Ao contrário de [ADD RECORD](../commands-legacy/add-record.md) ou [MODIFY RECORD](../commands-legacy/modify-record.md), **DIALOG** dá a você controle total sobre o formulário, seus conteúdos e botões de navegação e validação.
 
-Normalmente, esse comando é chamado junto com [Open form window](../commands-legacy/open-form-window.md) para exibir formulários sofisticados, conforme mostrado no exemplo a seguir:
+Normalmente, esse comando é chamado junto com [Open form window](open-form-window.md) para exibir formulários sofisticados, conforme mostrado no exemplo a seguir:
 
 ![](../assets/en/commands/pict3541609.en.png)
 
@@ -175,7 +190,7 @@ Depois de uma chamada para **DIALOG**, se a caixa de diálogo for aceita, OK est
 [CALL FORM](../commands-legacy/call-form.md)\
 [CANCEL](../commands-legacy/cancel.md)\
 [Form](form.md)\
-[Open window](../commands-legacy/open-window.md)
+[Open window](open-window.md)
 
 ## Propriedades
 

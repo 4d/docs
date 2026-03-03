@@ -58,10 +58,10 @@ To retrieve the text in this document:
 you can write:
 
 ```4d
- $range:=WP Text range(myDoc2;wk start text;wk end text)
- vText:=WP Get text($range;wk expressions as value) //returns "Hello world! Today is: 06/03/18."
- vText2:=WP Get text($range;wk expressions as source) //returns "Hello world! Today is: Current date."
- vText3:=WP Get text($range;wk expressions as space) //returns "Hello world! Today is:  ."
+ $range:=WP Text range(myDoc2;wk start text;wk end text)
+ vText:=WP Get text($range;wk expressions as value) //returns "Hello world! Today is: 06/03/18."
+ vText2:=WP Get text($range;wk expressions as source) //returns "Hello world! Today is: Current date."
+ vText3:=WP Get text($range;wk expressions as space) //returns "Hello world! Today is:  ."
 ```
 
 ## See also 

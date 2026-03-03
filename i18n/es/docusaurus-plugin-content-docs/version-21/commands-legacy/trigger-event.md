@@ -15,6 +15,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|13|Renombrar|
+|11 SQL Release 2|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 #### Descripción 
 
 <!--REF #_command_.Trigger event.Summary-->El comando **[Trigger event](trigger-event.md)** se llama en un trigger y devuelve un valor numérico que indica el tipo del evento de la base, en otras palabras, la razón por la cual se invoca el trigger.<!-- END REF--> 

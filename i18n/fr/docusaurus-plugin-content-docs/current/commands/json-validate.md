@@ -5,25 +5,31 @@ slug: /commands/json-validate
 displayed_sidebar: docs
 ---
 
+<!--REF #_command_.JSON Validate.Syntax-->**JSON Validate** ( *vJson* : Object ; *vSchema* : Object ) : Object<!-- END REF-->
+
+<!--REF #_command_.JSON Validate.Params-->
+
+<div class="no-index">
+
+| Paramètres | Type   |                             | Description                                                         |
+| ---------- | ------ | --------------------------- | ------------------------------------------------------------------- |
+| vJson      | Object | &#8594; | Objet JSON à valider                                                |
+| vSchema    | Object | &#8594; | Schéma JSON utilisé pour valider les objets JSON                    |
+| Résultat   | Object | &#8592; | Statut de validation et erreurs (le cas échéant) |
+
+</div>
+<!-- END REF-->
+
+<div class="no-index">
 <details><summary>Historique</summary>
 
 | Release | Modifications                        |
 | ------- | ------------------------------------ |
 | 21 R2   | Support of JSON Schema draft 2020-12 |
+| 16 R4   | Created                              |
 
 </details>
-
-<!--REF #_command_.JSON Validate.Syntax-->**JSON Validate** ( *vJson* : Object ; *vSchema* : Object ) : Object<!-- END REF-->
-
-<!--REF #_command_.JSON Validate.Params-->
-
-| Paramètres | Type   |                             | Description                                              |
-| ---------- | ------ | --------------------------- | -------------------------------------------------------- |
-| vJson      | Object | &#8594; | JSON object to validate                                  |
-| vSchema    | Object | &#8594; | JSON schema used to validate JSON objects                |
-| Résultat   | Object | &#8592; | Validation status and errors (if any) |
-
-<!-- END REF-->
+</div>
 
 ## Description
 
@@ -51,13 +57,13 @@ To validate a JSON object, 4D uses the norm described in a **JSON Schema Validat
 
 The version to use should be inserted in the schema using the *$schema* key:
 
-- version 2020-12:
+- version 2020-12 :
 
 ```json
 "$schema": "https://json-schema.org/draft/2020-12/schema",
 ```
 
-- version 4:
+- version 4 :
 
 ```json
 "$schema": "http://json-schema.org/draft-04/schema#",
@@ -97,7 +103,7 @@ Each error object of the *errors* collection contains the following properties:
 
 <details>The following errors may be returned:
 
-| **Code** | **JSON Keyword**     | **Message**                                                                                                                                                   |
+| **Code** | **Mot-clé JSON**     | **Message**                                                                                                                                                   |
 | -------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 2        | multipleOf           | Error while validating against 'multipleOf' key.                                                                                              |
 | 3        | maximum              | The value provided should not be greater than specified in the schema ("{s1}").                                            |

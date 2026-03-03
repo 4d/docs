@@ -26,14 +26,14 @@ If no header element exists for the section or subsection, the command does noth
 You want to delete the header of the right pages of a section:
 
 ```4d
- var $section;$subsection;$header : Object
-  //Retrieve the reference on the first section
- $section:=WP Get section(wpDoc;1)
-  //Retrieve the reference on right subsection of the first section
- $subsection:=WP Get subsection($section;wk right page)
- 
-  //Remove the header
- WP DELETE HEADER($subsection)
+ var $section;$subsection;$header : Object
+  //Retrieve the reference on the first section
+ $section:=WP Get section(wpDoc;1)
+  //Retrieve the reference on right subsection of the first section
+ $subsection:=WP Get subsection($section;wk right page)
+ 
+  //Remove the header
+ WP DELETE HEADER($subsection)
 ```
 
 ## See also 

@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.QUERY WITH ARRAY.Summary-->El comando **QUERY WITH ARRAY** busca en la tabla del campo pasado en el primer parámetro todos los registros para los cuales el valor de *campoObjetivo*, es igual al menos a uno de los valores de los elementos en [Array](# "Un array de valores").<!-- END REF--> Los registros encontrados constituyen la nueva selección actual. 

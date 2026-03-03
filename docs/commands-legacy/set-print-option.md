@@ -5,17 +5,33 @@ slug: /commands/set-print-option
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PRINT OPTION.Syntax-->**SET PRINT OPTION** ( *option* : Integer ; *value1* : Integer, Text {; *value2* : Integer, Text} )<!-- END REF-->
+<!--REF #_command_.SET PRINT OPTION.Syntax-->**SET PRINT OPTION** ( *option* : Integer, Text ; *value1* : Integer, Text {; *value2* : Integer, Text} )<!-- END REF-->
 <!--REF #_command_.SET PRINT OPTION.Params-->
 <div class="no-index">
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| option | Integer | &#8594;  | Option number |
+| option | Integer, Text | &#8594;  | Option number |
 | value1 | Integer, Text | &#8594;  | Value 1 of the option |
 | value2 | Integer, Text | &#8594;  | Value 2 of the option |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|20|Modified|
+|16|Modified|
+|15 R5|Modified|
+|12.2|Modified|
+|12|Modified|
+|2004.3|Modified|
+|<6|Created|
+
+</details>
+</div>
 
 ## Description 
 

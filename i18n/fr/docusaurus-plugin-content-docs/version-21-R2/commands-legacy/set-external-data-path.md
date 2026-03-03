@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+|15|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET EXTERNAL DATA PATH.Summary-->La commande **SET EXTERNAL DATA PATH** permet de définir ou de modifier, pour l’enregistrement courant, l’emplacement de stockage externe du champ *leChamp* passé en paramètre.<!-- END REF-->
@@ -60,6 +71,8 @@ Vous souhaitez enregistrer dans le champ image un fichier existant, stocké à l
 
 [Get external data path](get-external-data-path.md)  
 [RELOAD EXTERNAL DATA](reload-external-data.md)  
+[ORDA: Assigning files to picture or blob attributes](../ORDA/entities.md#assigning-files-to-picture-or-blob-attributes)
+
 
 ## Propriétés
 

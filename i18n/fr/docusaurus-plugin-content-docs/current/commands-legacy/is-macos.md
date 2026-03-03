@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|17|Créé|
+
+</details>
+</div>
+
 #### Description 
 
 <!--REF #_command_.Is macOS.Summary-->La commande **Is macOS** retourne Vrai si le système d'exploitation courant est macOS.<!-- END REF--> 

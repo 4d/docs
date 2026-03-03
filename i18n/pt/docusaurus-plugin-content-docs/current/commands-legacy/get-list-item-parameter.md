@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|16 R4|Modificado|
+|11 SQL|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GET LIST ITEM PARAMETER.Summary-->O comandoGET LIST ITEM PARAMETER retorna o nome da fonte do caractere atual do elemento especificado pelo parâmetro *refElem* da lista cujo número de referência o nome de objeto se passa em *lista*.<!-- END REF--> 

@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|15 R4|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Active transaction.Summary-->The **Active transaction** command returns **True** if the current process is in transaction, and this transaction is not suspended.<!-- END REF--> It returns **False** if there is no current transaction, or if the current transaction is suspended. A transaction can be suspended using the [SUSPEND TRANSACTION](suspend-transaction.md) command. 
@@ -28,15 +38,15 @@ For more information, please refer to the [Suspending transactions](../Develop-l
 You want to know the current transaction status:
 
 ```4d
- If(In transaction)
-    If(Not(Active transaction))
-       ALERT("The current transaction is suspended")
-    Else
-       ALERT("The current transaction is active")
-    End if
- Else
-    ALERT("We are not in transaction")
- End if
+ If(In transaction)
+    If(Not(Active transaction))
+       ALERT("The current transaction is suspended")
+    Else
+       ALERT("The current transaction is active")
+    End if
+ Else
+    ALERT("We are not in transaction")
+ End if
 ```
 
 ## See also 

@@ -9,22 +9,28 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Num.Params-->
 
-| 引数        | 型                      |                             | 説明                                    |
-| --------- | ---------------------- | --------------------------- | ------------------------------------- |
-| 式         | Text, Boolean, Integer | &#8594; | 数値形式を返したい文字列、あるいは0か1を返したいブール値、あるいは数値式 |
-| separator | Text                   | &#8594; | 小数点記号                                 |
-| base      | Integer                | &#8594; | 基数を表す2から36までの値                        |
-| 戻り値       | Real                   | &#8592; | expression 引数の数値形式                    |
+<div class="no-index">
 
+| 引数         | 型                      |                             | 説明                                    |
+| ---------- | ---------------------- | --------------------------- | ------------------------------------- |
+| expression | Text, Boolean, Integer | &#8594; | 数値形式を返したい文字列、あるいは0か1を返したいブール値、あるいは数値式 |
+| separator  | Text                   | &#8594; | 小数点記号                                 |
+| base       | Integer                | &#8594; | 基数を表す2から36までの値                        |
+| 戻り値        | Real                   | &#8592; | expression 引数の数値形式                    |
+
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>履歴</summary>
 
-| リリース | 内容             |
-| ---- | -------------- |
-| 21   | *base* 引数のサポート |
+| リリース                        | 内容             |
+| --------------------------- | -------------- |
+| 21                          | *base* 引数のサポート |
+| <6 | Created        |
 
 </details>
+</div>
 
 ## 説明
 
@@ -49,6 +55,7 @@ displayed_sidebar: docs
 - ハイフンは、数値や指数が負であることを意味します。 ハイフンは負の数字文字列の前、または指数の場合“e”の後ろになければなりません。 “e”をのぞきハイフンが数字の間にあると、それ以降の文字列は無視されます。 例えば、 `Num("123-456")` は123に、しかし `Num("-9")` は-9になります。
 - eまたはEがあると、その右側の数字をすべて指数として解釈します。 eは数字の文字列の間に置かなければなりません。 `Num("123e–2")` は 1.23 になります。  
   文字列に複数の“e”を含んでいる場合、 macOS とWindows で異なる結果になる可能性があるので注意してください。
+- The algorithm for converting text into [real values](../Concepts/dt_number.md) is based on 13 significant digits.
 
 #### *separator* 引数
 
@@ -94,12 +101,12 @@ displayed_sidebar: docs
 以下は単一の文字引数を渡した場合の**Num** の振る舞いについて示したものです:
 
 ```4d
-$result:=Num("ABCD") // 0
-$result:=Num("A1B2C3") // 123
-$result:=Num("123") // 123
-$result:=Num("123.4") // 123.4
-$result:=Num("–123") // –123
-$result:=Num("–123e2") // –12300
+$result:=Num("ABCD") // 0
+$result:=Num("A1B2C3") // 123
+$result:=Num("123") // 123
+$result:=Num("123.4") // 123.4
+$result:=Num("–123") // –123
+$result:=Num("–123e2") // –12300
 ```
 
 ## 例題 2
@@ -107,9 +114,9 @@ $result:=Num("–123e2") // –12300
 以下の例は、 *\[Client\]Debt* と *$1000* とを比較します。 この比較に適用されるNum コマンドからは1 または0 が返されます。 文字列に1 や0 を乗算するとその文字または空の文字が返されます。 結果として、 *\[Client\]Risk* には"Good"または"Bad"が返されます:
 
 ```4d
-  // 顧客の負債額が、1000より小さいは「Good」
-  // 顧客の負債額が、1000以上は「Bad」
- [Client]Risk:=("Good"*Num([Client]Debt<1000))+("Bad"*Num([Client]Debt>=1000))
+  // If client owes less than 1000, a good risk.
+  // If client owes more than 1000, a bad risk.
+ [Client]Risk:=("Good"*Num([Client]Debt<1000))+("Bad"*Num([Client]Debt>=1000))
 ```
 
 ## 例題 3
@@ -117,12 +124,12 @@ $result:=Num("–123e2") // –12300
 この例は"現在の"小数区切りにより取得される結果を比較します:
 
 ```4d
- $thestring:="33,333.33"
- $thenum:=Num($thestring)
-  //  フランスのシステムでは、$thenum は、デフォルトで33,33333と等しい。
- $thenum:=Num($thestring;".")
-  // システムに関係なく、$thenum は正確に評価されます。
-  // 例えば、フランスのシステムでも 33 333.33となります。
+ $thestring:="33,333.33"
+ $thenum:=Num($thestring)
+  // by default, $thenum equals 33,33333 on a French system
+ $thenum:=Num($thestring;".")
+  // $thenum will be correctly evaluated regardless of the system;
+  // for example, 33 333,33 on a French system
 ```
 
 ## 例題 4

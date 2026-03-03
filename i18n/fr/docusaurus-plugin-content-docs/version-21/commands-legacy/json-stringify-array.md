@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.JSON Stringify array.Summary-->La commande **JSON Stringify array** convertit le tableau 4D *tab* en un tableau JSON sérialisé.<!-- END REF--> Cette commande effectue l’action inverse de la commande [JSON PARSE ARRAY](json-parse-array.md).

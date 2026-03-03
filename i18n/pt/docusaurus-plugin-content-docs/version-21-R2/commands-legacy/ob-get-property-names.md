@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Criado por|
+|15|Modificado|
+|16 R4|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OB GET PROPERTY NAMES.Summary-->O comando **OB GET PROPERTY NAMES** devolve, em *arrProp*, os nomes das propriedades contidas no objeto de linguagem designados pelo parâmetro *objeto* .<!-- END REF-->deve ter sido definido utilizando o comando *C\_OBJECT* ou designar um campo objeto 4D.  

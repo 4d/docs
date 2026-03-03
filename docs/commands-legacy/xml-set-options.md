@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|19 R3|Modified|
+|16 R4|Modified|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.XML SET OPTIONS.Summary-->The **XML SET OPTIONS** command is used to modify the value of one or more XML options for the structure passed in the first parameter.<!-- END REF--> 

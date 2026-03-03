@@ -19,6 +19,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Renamed|
+|12|Modified|
+|2004|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX Get column width.Summary-->The **LISTBOX Get column width** command returns the width (in pixels) of the column set in the *object* and *\** parameters.<!-- END REF--> You can pass either a list box column or a column header in the *object* parameter. 

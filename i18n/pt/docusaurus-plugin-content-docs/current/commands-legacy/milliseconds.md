@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Milliseconds.Summary-->Milliseconds  retorna o número de milissegundos ( 1milisegundo = 1 milésimo de segundo) passados desde que o equipamento foi iniciado.<!-- END REF-->

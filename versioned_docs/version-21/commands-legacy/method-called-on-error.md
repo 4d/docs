@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|19 R8|Modified|
+|6.8.1|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Method called on error.Summary-->The **Method called on error** command returns the name of the method installed by the [ON ERR CALL](on-err-call.md) command for the current process or the defined *scope*.<!-- END REF-->
@@ -35,12 +46,12 @@ If no method has been installed for the *scope*, an empty string ("") is returne
 This command is particularly useful in the context of components because it enables you to temporarily change and then restore the error-catching methods:
 
 ```4d
- $methCurrent:=Method called on error
- ON ERR CALL("NewMethod")
-  // If the document cannot be opened, an error is generated
- $ref:=Open document("MyDocument")
-  // Reinstallation of previous method
- ON ERR CALL($methCurrent)
+ $methCurrent:=Method called on error
+ ON ERR CALL("NewMethod")
+  // If the document cannot be opened, an error is generated
+ $ref:=Open document("MyDocument")
+  // Reinstallation of previous method
+ ON ERR CALL($methCurrent)
 ```
 
 ## See also 

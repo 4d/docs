@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|19 R6|変更|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.EXECUTE METHOD IN SUBFORM.Summary-->**EXECUTE METHOD IN SUBFORM** コマンドを使用して サブフォームオブジェクト*subformObject* のコンテキストにおいて*formula* 引数で指定したコードを実行できます。<!-- END REF-->

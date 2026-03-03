@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Créé|
+|15 R3|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET STYLE SHEET.Summary-->La commande **OBJECT SET STYLE SHEET** vous permet de modifier, pour le process courant, la feuille de style associée à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> Une feuille de style modifie la police, la taille de police et (hormis pour les feuilles de style automatique) le style de police.

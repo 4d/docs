@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL Release 3|Modified|
+|13|Modified|
+|16|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Average.Summary-->**Average** returns the arithmetic mean (average) of *series*.<!-- END REF--> If *series* is an indexed field, the index is used to find the average.

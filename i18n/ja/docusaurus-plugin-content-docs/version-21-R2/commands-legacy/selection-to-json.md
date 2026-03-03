@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14|初出|
+|16 R4|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Selection to JSON.Summary-->**Selection to JSON**コマンドは、 *aTable* のカレントセレクション内のレコードと同数の要素を持つJSON配列を含んだ文字列を返します。<!-- END REF-->配列のそれぞれの要素はセレクションのフィールドのラベルと値を含んだJSONオブジェクトです。

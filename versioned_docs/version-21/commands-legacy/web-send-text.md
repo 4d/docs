@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Modified|
+|13|Renamed|
+|6.7|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WEB SEND TEXT.Summary-->The **WEB SEND TEXT** command directly sends HTML formatted text data.<!-- END REF-->

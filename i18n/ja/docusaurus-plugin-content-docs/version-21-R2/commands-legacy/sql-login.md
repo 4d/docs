@@ -18,6 +18,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL Release 3|変更|
+|12|変更|
+|16 R4|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SQL LOGIN.Summary-->**SQL LOGIN**コマンドを使用すると、*dataEntry*引数で指定されたSQLデータソースへ接続することができます。<!-- END REF-->このコマンドは、カレントプロセスでこのコマンドの後に実行される以下のSQLクエリの対象を指定します:

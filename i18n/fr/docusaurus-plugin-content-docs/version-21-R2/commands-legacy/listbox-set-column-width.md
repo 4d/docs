@@ -19,6 +19,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2004|Créé|
+|12|Renommé|
+|12|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX SET COLUMN WIDTH.Summary-->La commande **LISTBOX SET COLUMN WIDTH** permet de modifier par programmation la largeur d’une ou de toutes les colonne(s) de l’objet (list box, colonne ou en-tête) désigné par les paramètres *objet* et *\**.<!-- END REF-->

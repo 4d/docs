@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SET CURSOR.Summary-->O comando SET CURSOR muda o cursor do mouse para o cursos do sistema cujo número de ID você passar em *cursor*.<!-- END REF-->

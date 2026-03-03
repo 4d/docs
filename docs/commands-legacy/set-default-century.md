@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6.7|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET DEFAULT CENTURY.Summary-->The SET DEFAULT CENTURY command specifies the default century and the pivot year used by 4D when you enter a date with only two digits for the year.<!-- END REF-->

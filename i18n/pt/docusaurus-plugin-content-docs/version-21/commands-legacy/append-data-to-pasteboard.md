@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.APPEND DATA TO PASTEBOARD.Summary-->O comando APPEND DATA TO PASTEBOARD adiciona na área de transferência os dados do tipo especificado em *tipoDados* no BLOB *dados*.<!-- END REF-->

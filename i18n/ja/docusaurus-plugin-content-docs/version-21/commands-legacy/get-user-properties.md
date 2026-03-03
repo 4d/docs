@@ -22,6 +22,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GET USER PROPERTIES.Summary-->GET USER PROPERTIES コマンドは、引数 *userID* に渡したユニークなユーザーID番号を持つユーザーに関する情報を返します。<!-- END REF-->必ず [GET USER LIST](get-user-list.md) コマンドによって返される有効なユーザーID番号を渡さなければなりません。

@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6.7|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GENERATE CERTIFICATE REQUEST.Summary-->La commande **GENERATE CERTIFICATE REQUEST** permet de générer une demande de certificat au format PKCS, directement exploitable par des autorités de certification telles que Verisign® ou Thawthe®.<!-- END REF--> Le certificat est une pièce essentielle du fonctionnement du protocole SSL dans le cadre d’un serveur Web. Il est envoyé à chaque browser se connectant en mode SSL. Il contient la “carte d’identité” du site Web (reprenant les informations que vous saisissez dans la commande), ainsi que sa clé publique — permettant aux browsers de décrypter les informations reçues. En outre, le certificat contient diverses informations ajoutées par l’autorité de certification.

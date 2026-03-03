@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Compatibility Note 
 
 <!--REF #_command_.Focus object.Summary-->This command is kept only for compatibility reasons.<!-- END REF--> Starting with version 12 of 4D, it is recommended to use the [OBJECT Get pointer](object-get-pointer.md) command.
@@ -34,13 +45,13 @@ This command cannot be used with fields in subforms.
 The following example is an object method for a button. The object method changes the data in the current object to uppercase. The object must be a text or string data type (type 0 or 24):
 
 ```4d
- $vp :=Focus object //Save the pointer to the last area
- Case of
-    :(Nil($vp)) //No object has the focus
-       ...
-    :((Type($vp->)=Is alpha field)|(Type($vp->)=Is string var)) //If it is a string or text area
-       $vp->:=Uppercase($vp->) //Change the area to uppercase
- End case
+ $vp :=Focus object //Save the pointer to the last area
+ Case of
+    :(Nil($vp)) //No object has the focus
+       ...
+    :((Type($vp->)=Is alpha field)|(Type($vp->)=Is string var)) //If it is a string or text area
+       $vp->:=Uppercase($vp->) //Change the area to uppercase
+ End case
 ```
 
 ## See also 

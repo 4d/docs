@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2003|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.QR SET INFO ROW.Summary-->QR SET INFO ROW コマンドは、*row*に渡した行を表示/非表示に設定します。<!-- END REF-->

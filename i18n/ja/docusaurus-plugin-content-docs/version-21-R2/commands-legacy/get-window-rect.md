@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|2003|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GET WINDOW RECT.Summary-->**GET WINDOW RECT** コマンドは*window*に渡された参照番号を持つウィンドウの座標を返します。<!-- END REF-->ウィンドウが存在しない場合、変数引数は変更されません。

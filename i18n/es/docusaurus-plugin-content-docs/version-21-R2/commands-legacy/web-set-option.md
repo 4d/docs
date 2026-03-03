@@ -16,6 +16,22 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|13|Creado por|
+|13.2|Modificado|
+|14 R3|Modificado|
+|15|Modificado|
+|15 R2|Modificado|
+|17|Modificado|
+|18 R4|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.WEB SET OPTION.Summary-->El comando **WEB SET OPTION** modifica el valor actual de las diferentes opciones de funcionamiento del servidor web de 4D.<!-- END REF-->

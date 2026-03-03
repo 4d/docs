@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Renomear|
+|12|Modificado|
+|2004|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.DOM SET XML DECLARATION.Summary-->O comando DOM SET XML DECLARATION permite definir diferentes opções que são úteis na criação da árvore XML designado por *elementRef*.<!-- END REF--> Estas opções fazem referência à codificação e à propriedade autônoma da árvore:  

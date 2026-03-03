@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|6.8|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.DRAG WINDOW.Summary-->O comando DRAG WINDOW permite arrastar a janela na qual o usuário clica para seguindo os movimentos do mouse.<!-- END REF--> Geralmente este comando se chama desde um método de objeto de um objeto que possa responder instantaneamente aos cliques do mouse (por exemplo um botão invisível).

@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|16 R6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Path to object.Summary-->El comando **Path to object**  devuelve un objeto que contiene las propiedades específicas de la *ruta* que pasó en el parámetro.<!-- END REF--> 

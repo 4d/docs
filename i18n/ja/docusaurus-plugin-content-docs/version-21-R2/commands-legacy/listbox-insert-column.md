@@ -23,6 +23,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL|変更|
+|12|名称変更|
+|13|変更|
+|14 R3|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LISTBOX INSERT COLUMN.Summary-->**LISTBOX INSERT COLUMN**コマンドは、*object*引数および *\** で指定されたリストボックスに列を挿入します。<!-- END REF-->

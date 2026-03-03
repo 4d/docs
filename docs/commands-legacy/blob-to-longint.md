@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.BLOB to longint.Summary-->The BLOB to longint command returns a 4-byte Long Integer value read from the BLOB *blob*.<!-- END REF-->

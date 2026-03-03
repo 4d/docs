@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Character code.Summary-->The **Character code** command returns the Unicode UTF-16 code (included between 1 and 65535) of *character*.<!-- END REF-->
@@ -29,13 +40,13 @@ The [Char](char.md) function is the counterpart of **Character code**. It return
 Uppercase and lowercase characters are considered equal within a comparison. You can use Character code to differentiate between uppercase and lowercase characters. Thus, this line returns True:
 
 ```4d
- ("A"="a")
+ ("A"="a")
 ```
 
 On the other hand, this line returns False:
 
 ```4d
- (Character code("A")=Character code("a"))
+ (Character code("A")=Character code("a"))
 ```
 
 ## Example 2 
@@ -43,7 +54,7 @@ On the other hand, this line returns False:
 This example returns the code of the first character of the string *"ABC"*:
 
 ```4d
- GetCode:=Character code("ABC") // GetCode gets 65, the character code of A
+ GetCode:=Character code("ABC") // GetCode gets 65, the character code of A
 ```
 
 ## Example 3 
@@ -51,32 +62,32 @@ This example returns the code of the first character of the string *"ABC"*:
 The following example tests for carriage returns and tabs:
 
 ```4d
- For($vlChar;1;Length(vtText))
-    Case of
-       :(vtText[[$vlChar]]=Char(Carriage return))
-  // Do something
-       :(vtText[[$vlChar]]=Char(Tab))
-  // Do something else
-       :(...)
-  // ...
-    End case
- End for
+ For($vlChar;1;Length(vtText))
+    Case of
+       :(vtText[[$vlChar]]=Char(Carriage return))
+  // Do something
+       :(vtText[[$vlChar]]=Char(Tab))
+  // Do something else
+       :(...)
+  // ...
+    End case
+ End for
 ```
 
 When executed multiple times on large texts, this test will run faster when compiled if it is written this way:
 
 ```4d
- For($vlChar;1;Length(vtText))
-    $vlCode:=Character code(vtText[[$vlChar]])
-    Case of
-       :($vlCode=Carriage return)
-  // Do something
-       :($vlCode=Tab)
-  // Do something else
-       :(...)
-  // ...
-    End case
- End for
+ For($vlChar;1;Length(vtText))
+    $vlCode:=Character code(vtText[[$vlChar]])
+    Case of
+       :($vlCode=Carriage return)
+  // Do something
+       :($vlCode=Tab)
+  // Do something else
+       :(...)
+  // ...
+    End case
+ End for
 ```
 
 The second piece of code runs faster for two reasons: it does only one character reference by iteration and uses LongInt comparisons instead of string comparisons to test for carriage returns and tabs. Use this technique when working with common codes such as CR and TAB.

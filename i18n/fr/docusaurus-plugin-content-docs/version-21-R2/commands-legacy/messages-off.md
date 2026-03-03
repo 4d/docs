@@ -14,6 +14,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL Release 3|Modifié|
+|17 R4|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.MESSAGES OFF.Summary-->Les commandes **MESSAGES OFF** et [MESSAGES ON](messages-on.md) suppriment ou font apparaître les thermomètres de progression affichés par 4D lorsque le programme exécute des opérations de longue durée.<!-- END REF--> Par défaut, les messages sont affichés. 

@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|6.8.3|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.RECEIVE BUFFER.Summary-->RECEIVE BUFFER lê a porta serial que foi aberta anteriormente com [SET CHANNEL](set-channel.md).<!-- END REF--> A porta serial tem um buffer que preenche com caracteres até que um comando lê a partir do buffer. RECEIVE BUFFER recebe os caracteres do buffer serial, colocá-os em *receiveVar* e limpa o buffer. Se não houver caracteres no buffer, então *receiveVar* não conterá nada.

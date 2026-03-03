@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.INSERT IN ARRAY.Summary-->The INSERT IN ARRAY command inserts one or more elements into the array *array*.<!-- END REF--> The new elements are inserted before the element specified by *where*, and are initialized to the empty value for the array type. All elements beyond *where* are consequently moved within the array by an offset of one or the value you pass in *howMany*.
@@ -30,7 +41,7 @@ The *howMany* parameter is the number of elements to insert. If *howMany* is not
 The following example inserts five new elements, starting at element 10:
 
 ```4d
- INSERT IN ARRAY(anArray;10;5)
+ INSERT IN ARRAY(anArray;10;5)
 ```
 
 ## Example 2 
@@ -38,9 +49,9 @@ The following example inserts five new elements, starting at element 10:
 The following example appends an element to an array:
 
 ```4d
- $vlElem:=Size of array(anArray)+1
- INSERT IN ARRAY(anArray;$vlElem)
- anArray{$vlElem}:=...
+ $vlElem:=Size of array(anArray)+1
+ INSERT IN ARRAY(anArray;$vlElem)
+ anArray{$vlElem}:=...
 ```
 
 ## See also 

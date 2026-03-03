@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|16 R2|Creado por|
+
+</details>
+</div>
+
 #### Descripción 
 
 <!--REF #_command_.Timestamp.Summary-->**Timestamp** devuelve la hora UTC actual en formato ISO con milisegundos, es decir, aaaa-MM-ddTHH:mm:ss.<!-- END REF-->SSSZ. Tenga en cuenta que el carácter "Z" indica la zona horaria GMT.

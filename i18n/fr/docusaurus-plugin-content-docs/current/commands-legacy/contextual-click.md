@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6.8.1|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Contextual click.Summary-->La commande **Contextual click** retourne Vrai si un clic de type contextuel a été effectué<!-- END REF--> :

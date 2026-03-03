@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.START TRANSACTION.Summary-->START TRANSACTION は、カレントプロセスでトランザクションを開始します。<!-- END REF-->トランザクションが受け入れられるまたはキャンセルされるまでは、トランザクション内にデータベース上で変更されたすべてのデータは一時的に保存されます。

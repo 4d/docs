@@ -4,7 +4,7 @@ title: New signal
 displayed_sidebar: docs
 ---
 
-<!-- REF #_command_.New signal.Syntax -->**New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
+<!-- REF #_command_.New signal.Syntax -->**New signal** ({  *description* : Text }) : 4D.Signal<!-- END REF -->
 
 <!--REF #_command_.New signal.Params-->
 <div class="no-index">
@@ -16,6 +16,7 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>History</summary>
 
 |Release|Changes|
@@ -23,6 +24,7 @@ displayed_sidebar: docs
 |17 R4|Added|
 
 </details>
+</div>
 
 
 ## Description 

@@ -15,6 +15,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|15 R5|Modificado|
+|11 SQL|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.PRINT SETTINGS.Summary-->O comando PRINT SETTINGS mostra una o dos caixas de diálogo de parâmetros de impressão.<!-- END REF--> Este comando deve ser chamado antes de uma série de comandos [Print form](../commands/print-form.md) ou o comando [OPEN PRINTING JOB](open-printing-job.md).

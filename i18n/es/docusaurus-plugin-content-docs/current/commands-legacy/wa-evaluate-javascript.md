@@ -19,6 +19,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|16 R4|Modificado|
+|14|Renombrar|
+|14|Modificado|
+|11 SQL Release 2|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.WA Evaluate JavaScript.Summary-->El comando WA Evaluate JavaScript ejecuta en el área web designada por los parámetros *\** y *objeto* el código JavaScript pasado en *codeJS* y devuelve el resultado.<!-- END REF--> Este comando debe ser llamado después de cargar la página (el evento de formulario On End URL Loading debe haber sido generado).

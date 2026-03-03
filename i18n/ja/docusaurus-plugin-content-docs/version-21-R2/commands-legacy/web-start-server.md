@@ -14,6 +14,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|2003|変更|
+|13|名称変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WEB START SERVER.Summary-->**WEB START SERVER**コマンドは、実行中の4Dアプリケーション上でWebサーバを起動します。<!-- END REF-->結果、データベースはイントラネットやインターネット上で公開されます。

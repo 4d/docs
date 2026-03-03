@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|12|名称変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.FORM NEXT PAGE.Summary-->FORM NEXT PAGE コマンドは、現在表示されているフォームページから次のフォームページに移動します。<!-- END REF-->フォームが表示されていない、または[FORM LOAD](../commands/form-load.md) コマンドによってロードされてない場合や、すでに最終のフォームページが表示されている場合、FORM NEXT PAGE コマンドは何も行いません。

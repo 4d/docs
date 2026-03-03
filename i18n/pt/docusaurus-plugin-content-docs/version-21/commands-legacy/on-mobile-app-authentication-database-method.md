@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|17 R2|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.On Mobile App Authentication database method.Summary-->**Documentação movida**

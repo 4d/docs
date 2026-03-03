@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|15 R5|変更|
+|2004|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.PRINT SELECTION.Summary-->**PRINT SELECTION** は、*aTable*のカレントセレクションを印刷します。<!-- END REF-->レコードは、カレントプロセスのテーブルのカレント出力フォームを使用して印刷されます。**PRINT SELECTION**は、デザインモードの**プリント...**メニューと同じ動作を実行します。セレクションが空の場合、**PRINT SELECTION** は何も行いません。

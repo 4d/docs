@@ -20,6 +20,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL|Modificado|
+|13|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Select document.Summary-->O comando Select document mostra uma caixa de diálogo padrão de abertura de documentos, permitindo ao usuário definir um ou mais arquivos e devolver o nome e/ou rota de acesso completa dos arquivos selecionados.<!-- END REF-->  

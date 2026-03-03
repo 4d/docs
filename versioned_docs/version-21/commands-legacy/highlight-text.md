@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 <details><summary>History</summary>
 |Release|Changes|
 |---|---|
@@ -44,7 +55,7 @@ If *lastSel* is greater than the number of characters in *object*, then all char
 The following example selects all the characters of the enterable field *\[Products\]Comments*:
 
 ```4d
- HIGHLIGHT TEXT([Products]Comments;1;Length([Products]Comments)+1)
+ HIGHLIGHT TEXT([Products]Comments;1;Length([Products]Comments)+1)
 ```
 
 ## Example 2 
@@ -52,7 +63,7 @@ The following example selects all the characters of the enterable field *\[Produ
 The following example moves the insertion point to the beginning of the enterable field *\[Products\]Comments*:
 
 ```4d
- HIGHLIGHT TEXT([Products]Comments;1;1)
+ HIGHLIGHT TEXT([Products]Comments;1;1)
 ```
 
 ## Example 3 
@@ -60,8 +71,8 @@ The following example moves the insertion point to the beginning of the enterabl
 The following example moves the insertion point to the end of the enterable field *\[Products\]Comments*:
 
 ```4d
- $vLen:=Length([Products]Comments)+1
- HIGHLIGHT TEXT([Products]Comments;$vLen;$vLen)
+ $vLen:=Length([Products]Comments)+1
+ HIGHLIGHT TEXT([Products]Comments;$vLen;$vLen)
 ```
 
 ## Example 4 

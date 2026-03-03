@@ -5,7 +5,7 @@ title: ユーザーとセッション
 
 ## セッション
 
-When [scalable sessions are enabled](WebServer/sessions.md#enabling-web-sessions) (recommended), REST requests can create and use [web user sessions](WebServer/sessions.md), providing extra features such as multiple requests handling, data sharing between web client processes, and control of user privileges.
+[スケーラブルセッションが有効](WebServer/sessions.md#セッションの有効化) になっている場合 (推奨)、RESTリクエストは [Webユーザーセッション](WebServer/sessions.md#enabling-web-sessions) を作成・使用することができます。これにより、複数リクエストの処理や、Webクライアントプロセス間のデータ共有、ユーザー権限の制御などの追加機能を利用することができます。
 
 開かれた Webユーザーセッションは、`Session`オブジェクトと [Session API](API/SessionClass.md) を介して操作することができます。 後続の RESTリクエストは同じセッションcookie を再使用します。
 
@@ -61,7 +61,7 @@ exposed Function authentify({params : type}) {-> result : type}
 
 `authentify()` 関数は、プロジェクトの [DataStore クラス](../ORDA/ordaClasses.md#datastore-クラス) に実装されている必要があり、RESTリクエストを介して呼び出される必要があります。
 
-This function is the only available entry point from REST guest sessions when the "force login" mode is enabled: any other function call or data access is rejected until the [`.setPrivileges()`](../API/SessionClass.md#setprivileges) function is called and the session acquires appropriate privileges.
+"強制ログイン" モードが有効な場合、この関数は、RESTゲストセッションから唯一の利用可能なエントリーポイントです。[`.setPrivileges()`](../API/SessionClass.md#setprivileges) 関数が呼び出され、セッションが適切な権限を取得するまで、他の関数の呼び出しやデータアクセスは拒否されます。
 
 :::note
 

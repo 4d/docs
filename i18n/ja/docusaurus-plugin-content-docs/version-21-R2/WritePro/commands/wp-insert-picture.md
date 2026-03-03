@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | -------------- | ----------------------- | --------------------------- | ------------------------------------------ |
 | targetObj      | Object                  | &#8594; | レンジまたは要素または4D Write Pro ドキュメント             |
 | picture        | Picture                 | &#8594; | ピクチャーフィールドまたは変数、あるいはディスク上のピクチャーファイルへのパス    |
-| pictureFileObj | 4D.File | &#8594; | ピクチャーファイルを表す4D.File オブジェクト |
+| pictureFileObj | [4D.File](../API/FileClass.md)  | &#8594; | ピクチャーファイルを表す4D.File オブジェクト |
 | mode           | Integer                 | &#8594; | 挿入モード                                      |
 | rangeUpdate    | Integer                 | &#8594; | レンジ更新モード                                   |
 | 戻り値            | Object                  | &#8592; | ピクチャーを参照しているオブジェクト                         |

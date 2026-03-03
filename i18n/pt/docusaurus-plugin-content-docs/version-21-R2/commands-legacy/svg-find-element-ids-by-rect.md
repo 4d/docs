@@ -22,6 +22,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SVG Find element IDs by rect.Summary-->O comando SVG Find element IDs by rect preenche o array texto arrIDs com os IDs (atributo "id" ou "xml:id") dos elementos XML cujo retângulo circundante está em intersecção com o retângulo de seleção na localização definida pelos parâmetros *x* e *y*.<!-- END REF-->  

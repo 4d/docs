@@ -20,6 +20,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14|名称変更|
+|12.1|変更|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.ST GET ATTRIBUTES.Summary-->**ST GET ATTRIBUTES** コマンドは、*object*で指定したフォームオブジェクト中で選択されたテキストのスタイル属性を取得するために使用します。<!-- END REF--> 

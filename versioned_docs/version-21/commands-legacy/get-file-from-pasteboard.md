@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get file from pasteboard.Summary-->The Get file from pasteboard command returns the absolute pathname of a file included in a drag and drop operation.<!-- END REF--> Several files can be selected and moved simultaneously. The *xIndex* parameter is used to designate a file from among the set of files selected.
@@ -27,17 +37,17 @@ If there is no Xth file in the pasteboard, the command returns an empty string.
 The following example can be used to retrieve in an array all the pathnames of the files included in a drag and drop operation:
 
 ```4d
- ARRAY TEXT($filesArray;0)
- var $vfileArray : Text
- var $n : Integer
- $n:=1
- Repeat
-    $vfileArray:=Get file from pasteboard($n)
-    If($vfileArray#"")
-       APPEND TO ARRAY($filesArray;$vfileArray)
-       $n:=$n+1
-    End if
- Until($vfileArray="")
+ ARRAY TEXT($filesArray;0)
+ var $vfileArray : Text
+ var $n : Integer
+ $n:=1
+ Repeat
+    $vfileArray:=Get file from pasteboard($n)
+    If($vfileArray#"")
+       APPEND TO ARRAY($filesArray;$vfileArray)
+       $n:=$n+1
+    End if
+ Until($vfileArray="")
 ```
 
 ## See also 

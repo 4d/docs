@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Créé|
+|16 R4|Modifié|
+|16 R6|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.JSON Parse.Summary-->La commande **JSON Parse** analyse (parse) le contenu d’une chaîne formatée en JSON et en extrait des valeurs que vous pouvez stocker dans un champ ou une variable 4D.<!-- END REF--> Cette commande désérialise des données JSON ; elle effectue l’action inverse de la commande [JSON Stringify](json-stringify.md).

@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|13|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SELECTION RANGE TO ARRAY.Summary-->**SELECTION RANGE TO ARRAY**コマンドは1つまたは複数の配列を作成し、その配列にカレントセレクションのフィールド値またはレコード番号を代入します。<!-- END REF--> 

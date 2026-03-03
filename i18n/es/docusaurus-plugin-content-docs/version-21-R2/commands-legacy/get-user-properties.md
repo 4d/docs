@@ -22,6 +22,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|2004|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.GET USER PROPERTIES.Summary-->**GET USER PROPERTIES** devuelve la información sobre el usuario cuyo número de referencia se pasa en el parámetro *refUsuario*.<!-- END REF--> Debe pasar un número de referencia de usuario devuelto por el comando [GET USER LIST](get-user-list.md).

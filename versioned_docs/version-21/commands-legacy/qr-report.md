@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Modified|
+|2004|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR REPORT.Summary-->**QR REPORT** prints a report for *aTable*, created with the Quick Report editor.<!-- END REF--> This editor allows users to create their own reports. For more information about creating reports with the Quick Report editor, refer to the *Quick reports* section of the 4D *Design Reference* manual.

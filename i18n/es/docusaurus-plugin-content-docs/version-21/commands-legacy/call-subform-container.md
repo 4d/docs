@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|12|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.CALL SUBFORM CONTAINER.Summary-->El comando **CALL SUBFORM CONTAINER** permite a una instancia de subformulario enviar el *evento* al objeto subformulario que lo contiene.<!-- END REF--> El objeto subformulario puede entonces procesar el *evento* en el contexto del formulario padre. 

@@ -23,6 +23,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+|14 R3|Modified|
+|17|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX DUPLICATE COLUMN.Summary-->The **LISTBOX DUPLICATE COLUMN** command duplicates the column designated by the *object* and *\** parameters by programming in the context of the form being executed (Application mode).<!-- END REF--> The original form, generated in the Design mode, is not modified. 

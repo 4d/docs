@@ -16,6 +16,22 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+|13.2|Modified|
+|14 R3|Modified|
+|15|Modified|
+|15 R2|Modified|
+|17|Modified|
+|18 R4|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WEB GET OPTION.Summary-->The **WEB GET OPTION** command gets the current value of an option for the 4D Web server operation.<!-- END REF-->

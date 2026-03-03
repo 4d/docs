@@ -5,8 +5,6 @@ title: HTTPRequest
 
 The `HTTPRequest` class allows you to handle [`HTTPRequest objects`](#httprequest-object) that can be used to configure and send requests to an HTTP server, as well as to process the HTTP server responses.
 
-The `HTTPRequest` class is available from the `4D` class store. You create and send HTTP requests using the [4D.HTTPRequest.new()](#4dhttprequestnew) function, that returns a [`HTTPRequest object`](#httprequest-object).
-
 <details><summary>History</summary>
 
 |Release|Changes|
@@ -15,6 +13,11 @@ The `HTTPRequest` class is available from the `4D` class store. You create and s
 
 </details>
 
+The `HTTPRequest` class is available from the `4D` class store. You create and send HTTP requests using the [4D.HTTPRequest.new()](#4dhttprequestnew) function, that returns a [`HTTPRequest object`](#httprequest-object).
+
+### Aynchronous programming
+
+This class supports asynchronous programming in 4D as described in the [Asynchronous Execution](../Develop/async.md) page.
 
 ### Example
 
@@ -77,16 +80,6 @@ HTTPRequest objects provide the following properties and functions:
 ## 4D.HTTPRequest.new()
 
 
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|21|Support of *storeCertificateName* property|
-|20|TLS validation by default |
-|19 R7|Support of *automaticRedirections* and *decodeData* properties |
-
-</details>
-
 <!-- REF #4D.HTTPRequest.new().Syntax -->**4D.HTTPRequest.new**( *url* : Text { ; *options* : Object } ) : 4D.HTTPRequest<!-- END REF -->
 
 
@@ -100,6 +93,18 @@ HTTPRequest objects provide the following properties and functions:
 |Result|4D.HTTPRequest|<-|New HTTPRequest object|
 </div>
 <!-- END REF -->
+
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|21 R3|Support of *storeCertificateName* property on macOS|
+|21|Support of *storeCertificateName* property on Windows|
+|20|TLS validation by default |
+|19 R7|Support of *automaticRedirections* and *decodeData* properties |
+
+</details>
+
 
 #### Description
 
@@ -154,7 +159,7 @@ In the *options* parameter, pass an object that can contain the following proper
 |proxyAuthentication|[authentication object](#authentication-object)|Object handling proxy authentication|undefined|
 |returnResponseBody|Boolean|If false, the response body is not returned in the [`response` object](#response). Returns an error if false and `onData` is undefined|True|
 |serverAuthentication|[authentication object](#authentication-object)|Object handling server authentication|undefined|
-|storeCertificateName|Text|(Windows only) Name of the OS certificate store (e.g. "LocalMachine") from where to use certificates instead of those in the certificates folder. If the certificate store is not found, an error is returned. For more information, see [this blog post](https://blog.4d.com/https-requests-now-support-windows-certificate-store).|undefined|
+|storeCertificateName|Text| Name of a certificate stored in the Certificate Store (Windows) or in the *keychain* (macOS) to use instead of one saved in the certificates folder. If the certificate is not found in the store, an error is returned. For more information, see [this blog post for Windows](https://blog.4d.com/https-requests-now-support-windows-certificate-store) and [this blog post for macOS](https://blog.4d.com/https-requests-macos-keychain-support-is-here).|undefined|
 |timeout|Real|Timeout in seconds. undefined = no timeout|undefined|
 |validateTLSCertificate|Boolean|If false, 4D does not validate the TLS certificate and does not return an error if it is invalid (i.e. expired, self-signed...). Important: In the current implementation, the Certification Authority itself is not verified.|True|
 

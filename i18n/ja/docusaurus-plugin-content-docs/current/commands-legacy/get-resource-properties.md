@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Get resource properties.Summary-->**Get resource properties**コマンドは、*resType*に渡されるタイプかつ*resID*に渡されるIDを持つリソースの属性を返します。<!-- END REF-->

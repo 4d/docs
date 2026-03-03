@@ -19,6 +19,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL Release 2|変更|
+|14 R3|名称変更|
+|19 R4|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LOCKED BY.Summary-->LOCKED BY は、レコードをロックしたユーザやプロセスに関する情報を返します。<!-- END REF-->変数にはそれぞれプロセス番号(\*)、4Dアプリケーションのユーザ名、システムユーザ名、そしてプロセス名が返されます。レコードがロックされている場合、これらの情報を使用してカスタムダイアログ内でユーザに警告できます。

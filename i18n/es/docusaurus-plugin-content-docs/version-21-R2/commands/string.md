@@ -9,23 +9,29 @@ displayed_sidebar: docs
 
 <!--REF #_command_.String.Params-->
 
+<div class="no-index">
+
 | Parámetros | Tipo          |                             | Descripción                                                                                                                              |
 | ---------- | ------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| expresión  | Expression    | &#8594; | Expresión a convertir en cadena (puede ser Real, Integer, Long Integer, Date, Time, Text, Boolean, Undefined, o Null) |
+| expression | Expression    | &#8594; | Expresión a convertir en cadena (puede ser Real, Integer, Long Integer, Date, Time, Text, Boolean, Undefined, o Null) |
 | format     | Integer, Text | &#8594; | Formato de visualización                                                                                                                 |
 | addTime    | Time          | &#8594; | Hora a combinar si *expression* es una fecha                                                                                             |
 | base       | Integer       | &#8594; | Valor entre 2 y 36 que representa la base si *expression* es un número                                                                   |
 | Resultado  | Text          | &#8592; | expresión convertida en cadena alfanumérica                                                                                              |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones               |
-| ----------- | ---------------------------- |
-| 21          | Soporte del parámetro *base* |
+| Lanzamiento                 | Modificaciones               |
+| --------------------------- | ---------------------------- |
+| 21                          | Soporte del parámetro *base* |
+| <6 | Created                      |
 
 </details>
+</div>
 
 ## Descripción
 
@@ -77,7 +83,7 @@ El formato se especifica del mismo modo que se haría para una [entrada numéric
 | String(1/0)                                                      | "INF"                             | Número infinito positivo                           |
 | String(-1/0)                                                     | "-INF"                            | Número infinito negativo                           |
 
-(\*) El algoritmo para convertir valores reales en texto se basa en 13 dígitos significativos, ver [`SET REAL COMPARISON LEVEL`](../commands-legacy/set-real-comparison-level.md).
+(\*) The algorithm for converting [real values](../Concepts/dt_number.md) into text is based on 13 significant digits.
 
 #### String(number;base)
 

@@ -8,12 +8,16 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB Server list.Params-->
 
+<div class="no-index">
+
 | 引数  | 型          |                             | 説明                         |
 | --- | ---------- | --------------------------- | -------------------------- |
 | 戻り値 | Collection | &#8592; | 利用可能なWeb サーバーオブジェクトのコレクション |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>履歴</summary>
 
 | リリース  | 内容 |
@@ -21,6 +25,7 @@ displayed_sidebar: docs
 | 18 R3 | 追加 |
 
 </details>
+</div>
 
 ## 説明
 

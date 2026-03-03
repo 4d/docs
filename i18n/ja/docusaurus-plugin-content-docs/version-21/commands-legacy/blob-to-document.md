@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.BLOB TO DOCUMENT.Summary-->BLOB TO DOCUMENT は、*blob*に格納されているデータを使用して*document*の内容全体を上書きします。<!-- END REF-->を使用します(例題を参照)。

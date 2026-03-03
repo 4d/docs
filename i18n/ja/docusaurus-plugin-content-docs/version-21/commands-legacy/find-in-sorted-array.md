@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14 R4|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Find in sorted array.Summary-->**Find in sorted array** コマンドは *array* 引数で指定した配列内に、*value* 引数で指定した値と合致する要素が少なくとも一つある場合には**true**を返します。<!-- END REF-->また、合致した要素の位置を返す事もできます(任意)。[Find in array](find-in-array.md) コマンドとは異なり、*array* 引数で指定した配列が既にソート済みで、値の順番(位置)についての情報がある場合にのみ有効です(これにより、必要であればその個所に値を挿入することも可能です)。

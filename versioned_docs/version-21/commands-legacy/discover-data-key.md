@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|17 R5|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Discover data key.Summary-->The **Discover data key** command searches for a valid encryption key corresponding to the currently opened data file at the root level of all connected devices and returns **True** if successful.<!-- END REF--> 
@@ -33,18 +43,18 @@ Key files (".4DKeyChain" extension files) must be stored at the top level of con
 ## Example 
 
 ```4d
- var $status : Object
- var $keyFound : Boolean
- 
- $status:=ds.encryptionStatus()
- 
- If(($status.isEncrypted)&(Not($status.keyProvided))) //no key is available
-  // thus access to encrypted data is not allowed
-    $keyFound:=Discover data key
-    If($keyFound=True)
-       ALERT("A valid encryption key has been found.")
-    End if
- End if
+ var $status : Object
+ var $keyFound : Boolean
+ 
+ $status:=ds.encryptionStatus()
+ 
+ If(($status.isEncrypted)&(Not($status.keyProvided))) //no key is available
+  // thus access to encrypted data is not allowed
+    $keyFound:=Discover data key
+    If($keyFound=True)
+       ALERT("A valid encryption key has been found.")
+    End if
+ End if
 ```
 
 ## See also 

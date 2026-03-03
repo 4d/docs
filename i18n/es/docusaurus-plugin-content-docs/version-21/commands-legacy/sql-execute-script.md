@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|12|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SQL EXECUTE SCRIPT.Summary-->El comando SQL EXECUTE SCRIPT permite ejecutar una serie de instrucciones SQL ubicadas en el archivo de script designado por *rutaScript*.<!-- END REF-->  

@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|19 R5|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT Get subform container value.Summary-->**OBJECT Get subform container value** コマンドは親フォームに表示されたサブフォームコンテナにバインドされたデータソースのカレントの値を返します。<!-- END REF-->

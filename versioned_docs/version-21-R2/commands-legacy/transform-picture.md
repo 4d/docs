@@ -20,6 +20,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+|14 R2|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.TRANSFORM PICTURE.Summary-->The TRANSFORM PICTURE command applies a transformation of the *operator* type to the picture passed in the *picture* parameter.<!-- END REF-->This command extends the functionalities offered by conventional picture transformation operators. These operators remain entirely usable in 4D.

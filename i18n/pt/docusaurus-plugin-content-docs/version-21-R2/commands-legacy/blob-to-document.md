@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.BLOB TO DOCUMENT.Summary-->**BLOB TO DOCUMENT** reescreve todo o conteúdo do documento utilizando os dados armazenados no blob.<!-- END REF-->.  

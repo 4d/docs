@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|13|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Std deviation.Summary-->**Std deviation** returns the standard deviation of *series*.<!-- END REF--> If *series* is an indexed field, the index is used to find the standard deviation.

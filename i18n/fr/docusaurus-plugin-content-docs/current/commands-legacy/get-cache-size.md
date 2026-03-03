@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get cache size.Summary-->La commande **Get cache size** retourne, en octets, la taille courante du cache de la base de données.<!-- END REF-->Cette commande fonctionne uniquement en mode local (4D Server et 4D) ; elle ne doit pas être utilisée avec 4D en mode accès distant.

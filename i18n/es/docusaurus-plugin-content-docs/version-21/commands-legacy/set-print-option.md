@@ -17,6 +17,22 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|20|Modificado|
+|16|Modificado|
+|15 R5|Modificado|
+|12.2|Modificado|
+|12|Modificado|
+|2004.3|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SET PRINT OPTION.Summary-->El comando **SET PRINT OPTION** se utiliza para modificar por programación el valor de una opción de impresión.<!-- END REF--> Cada opción definida utilizando este comando se aplica a los [parámetros de impresión actuales 4D](../settings/compatibility.md) siempre que no se llame otro comando que modifique los parámetros de impresión ([PRINT SETTINGS](print-settings.md), [PRINT SELECTION](print-selection.md) sin el parámetro *\>* parámetro, etc.). Si se ha abierto un trabajo de impresión (por ejemplo con [OPEN PRINTING JOB](open-printing-job.md)), la opción se define para el trabajo y no puede modificarse mientras el trabajo no haya finalizado (excepto para Orientation option, ver más adelante).

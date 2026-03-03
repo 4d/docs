@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.APPLY TO SELECTION.Summary-->**APPLY TO SELECTION** applies *statement* to each record in the current selection of *aTable*.<!-- END REF--> The *statement* can be a statement or a method. If *statement* modifies a record of *aTable*, the modified record is saved. If *statement* does not modify a record, the record is not saved. If the current selection is empty, **APPLY TO SELECTION** has no effect. If the relation is automatic, the *statement* can contain a field from a related table.

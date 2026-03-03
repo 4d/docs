@@ -5,7 +5,7 @@ slug: /commands/execute-method-in-subform
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXECUTE METHOD IN SUBFORM.Syntax-->**EXECUTE METHOD IN SUBFORM** ( *subformObject* : Text ; *formula* : Object, Text ; *return* : Variable {; *...param* : Expression} )<br/>**EXECUTE METHOD IN SUBFORM** ( *subformObject* : Text ; *formula* : Object, Text ; * {; *...param* : Expression} )<!-- END REF-->
+<!--REF #_command_.EXECUTE METHOD IN SUBFORM.Syntax-->**EXECUTE METHOD IN SUBFORM** ( *subformObject* : Text ; *formula* : Object, Text {; *return* : Variable {; *...param* : Expression}} )<br/>**EXECUTE METHOD IN SUBFORM** ( *subformObject* : Text ; *formula* : Object, Text {; * {; *...param* : Expression}} )<!-- END REF-->
 <!--REF #_command_.EXECUTE METHOD IN SUBFORM.Params-->
 <div class="no-index">
 
@@ -18,6 +18,17 @@ displayed_sidebar: docs
 | param | Expression | &#8594;  | Parameter(s) passed to formula |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|19 R6|Modified|
+|12|Created|
+
+</details>
+</div>
 
 ## Description 
 

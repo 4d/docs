@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2003|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.QR SET REPORT TABLE.Summary-->O comando QR SET REPORT TABLE define a tabela atual para a área do relatório referenciada pelo parâmetro *area* a tabela número *tabela*.<!-- END REF-->  

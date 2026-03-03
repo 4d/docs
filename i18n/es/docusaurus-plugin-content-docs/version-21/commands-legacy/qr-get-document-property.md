@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|2003|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.QR Get document property.Summary-->El comando QR Get document property permite recuperar el estado mostrado para la caja de diálogo de impresión o la unidad utilizada para el documento presente en *area*.<!-- END REF-->

@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14 R4|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.IMPORT STRUCTURE.Summary-->La commande **IMPORT STRUCTURE** vous permet d'importer, dans la base courante, la définition XML de la structure de la base 4D passée dans le paramètre *structureXML*.<!-- END REF--> 

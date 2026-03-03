@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL Release 2|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WA OPEN BACK URL.Summary-->La commande **WA OPEN BACK URL** charge dans la zone Web désignée par les paramètres *\** et *objet* l’URL précédent dans la séquence d’URLs ouverts.<!-- END REF--> 

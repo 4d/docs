@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|2004|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.DELETE RECORD.Summary-->DELETE RECORD borra el registro actual de *tabla* en el proceso.<!-- END REF--> Si no hay registro actual para *tabla* en el proceso, DELETE RECORD no tiene efecto. En un formulario, puede crear un botón Borrar registro y asignarle la acción automática correspondiente, en lugar de utilizar este comando.

@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Document to text.Summary-->The **Document to text** command lets you retrieve the contents of a file directly on disk in a 4D text variable or text field.<!-- END REF-->
@@ -58,21 +68,21 @@ By default, when you omit the *breakMode* parameter, line breaks are processed i
 Given the following text document (fields are separated by tabs):
 
 ```RAW
-id    name    price    vat3    4D Tags    99    19.6
+id    name    price    vat3    4D Tags    99    19.6
 ```
 
 When you execute this code:
 
 ```4d
- $Text:=Document to text("products.txt")
+ $Text:=Document to text("products.txt")
 ```
 
 ... you get:
 
 ```4d
-  // $Text = "id\tname\tprice\tvat\r\n3\t4D Tags\t99 \t19.6"
-  // \t = tab
-  // \r = CR
+  // $Text = "id\tname\tprice\tvat\r\n3\t4D Tags\t99 \t19.6"
+  // \t = tab
+  // \r = CR
 ```
 
 ## See also 

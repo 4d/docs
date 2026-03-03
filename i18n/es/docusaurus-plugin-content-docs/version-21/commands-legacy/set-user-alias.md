@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|17 R5|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SET USER ALIAS.Summary-->El comando **SET USER ALIAS** define un nombre personalizado alternativo para usar en lugar del nombre de la cuenta de usuario 4D actual para la sesión actual.<!-- END REF--> El nombre alternativo se conserva en la memoria y se aplica solo al usuario actual.

@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|2004|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.HIGHLIGHT RECORDS.Summary-->La commande **HIGHLIGHT RECORDS** permet de “surligner” des enregistrements dans un formulaire en liste.<!-- END REF--> Cette opération est identique à la sélection en mode liste, par l’utilisateur, d’enregistrement(s) à l’aide des combinaisons **Maj+clic** ou **Ctrl+clic** (Windows) ou **Commande+clic** (macOS). La sélection courante n’est pas modifiée. 

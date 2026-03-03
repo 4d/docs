@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2003|Criado por|
+|14 R3|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.QR Get text property.Summary-->O comando QR Get text property devolve o valor da propriedade dos atributos de texto na célula determinada por *numColuna* e *numLinha*.<!-- END REF-->  

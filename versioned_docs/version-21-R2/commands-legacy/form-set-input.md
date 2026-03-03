@@ -5,7 +5,7 @@ slug: /commands/form-set-input
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SET INPUT.Syntax-->**FORM SET INPUT** ( {*aTable* : Table ;} *form* : Text, Object {; *userForm* : Text {; *}} )<!-- END REF-->
+ <!--REF #_command_.FORM SET INPUT.Syntax-->**FORM SET INPUT** ( {*aTable* : Table ;} *form* : Text, Object {; *userForm* : Text} {; *} )<!-- END REF-->
 <!--REF #_command_.FORM SET INPUT.Params-->
 <div class="no-index">
 
@@ -17,6 +17,19 @@ displayed_sidebar: docs
 | * | Operator |  &#8594;  | Automatic window size |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+|12|Renamed|
+|16 R6|Modified|
+
+</details>
+</div>
 
 ## Description 
 

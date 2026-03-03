@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|15|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LDAP LOGIN.Summary-->La commande **LDAP LOGIN** ouvre une connexion en lecture seule sur le serveur LDAP désigné par le paramètre *url* avec les identifiants *login* et *motDePasse* fournis.<!-- END REF--> Si elle est acceptée par le serveur, cette connexion sera utilisée pour toutes les recherches LDAP effectuées par la suite dans le process courant, jusqu'à ce que la commande [LDAP LOGOUT](ldap-logout.md) soit exécutée (ou que le process soit terminé). 

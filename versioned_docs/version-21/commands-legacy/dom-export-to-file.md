@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM EXPORT TO FILE.Summary-->The DOM EXPORT TO FILE command stores an XML tree in a file on disk.<!-- END REF--> 
@@ -45,7 +55,7 @@ You can control the XML line ending and BOM management using the [XML SET OPTION
 This example stores the tree *vElemRef* in the file MyDoc.xml:
 
 ```4d
- DOM EXPORT TO FILE(vElemRef;"C:\\folder\MyDoc.xml")
+ DOM EXPORT TO FILE(vElemRef;"C:\\folder\MyDoc.xml")
 ```
 
 ## System variables and sets 

@@ -5,7 +5,7 @@ slug: /commands/dom-set-xml-element-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM SET XML ELEMENT VALUE.Syntax-->**DOM SET XML ELEMENT VALUE** ( *elementRef* : Text {; *xPath* : Text}; *elementValue* : Text, Variable {; *} )<!-- END REF-->
+<!--REF #_command_.DOM SET XML ELEMENT VALUE.Syntax-->**DOM SET XML ELEMENT VALUE** ( *elementRef* : Text {; *xPath* : Text}; *elementValue* : any {; *} )<!-- END REF-->
 <!--REF #_command_.DOM SET XML ELEMENT VALUE.Params-->
 <div class="no-index">
 
@@ -13,10 +13,22 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | XML element reference |
 | xPath | Text | &#8594;  | XPath path of the XML element |
-| elementValue | Text, Variable | &#8594;  | New value of element |
+| elementValue | any | &#8594;  | New value of element |
 | * | Operator | &#8594;  | If passed: set the value in CDATA |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|2004.4|Modified|
+|<6|Created|
+
+</details>
+</div>
 
 ## Description 
 
@@ -81,7 +93,7 @@ In the following XML source:
 </Maths>
 ```
 
-We want to write the text “12<18” in the *<Postulate>* element. This string cannot be written as is in XML because the “<” character is not accepted. This character must therefore be changed into “<” or the CDATA form must be used. If *vElemRef* indicates the XML *<Postulate>* node:
+We want to write the text “12<18” in the *<Postulate>* element. This string cannot be written as is in XML because the “<” character is not accepted. This character must therefore be changed into “&lt;” or the CDATA form must be used. If *vElemRef* indicates the XML *<Postulate>* node:
 
 ```4d
   // Normal form
@@ -92,7 +104,7 @@ We get:
 
 ```XML
 <Maths>
-   <Postulate>12 < 18</Postulate>
+   <Postulate>12 "&lt;" 18</Postulate>
 </Maths>
 ```
   

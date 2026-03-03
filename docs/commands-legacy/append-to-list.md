@@ -19,13 +19,25 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R4|Modified|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.APPEND TO LIST.Summary-->The **APPEND TO LIST** command appends a new item to the hierarchical list whose list reference number you pass in *list*.<!-- END REF-->
 
 You pass the text of the item in *itemText*. You can pass a string or text expression of up to 2 billion characters. Starting with 4D v16 R4, if the item is associated with a standard action, you can pass the ak standard action title constant in *itemText* to automatically use the localized action name. For more information, please refer to the *Standard actions* section.
 
-You pass the unique reference number of the item (of the Longint type) in *itemRef*. Although we qualify this item reference number as unique, you can actually pass the value you want. Refer to the *Managing Hierarchical Lists* section for more information about the *itemRef* parameter.
+You pass the unique reference number of the item (of the Longint type) in *itemRef*. Although we qualify this item reference number as unique, you can actually pass the value you want. Refer to the [*Hierarchical List form object*](../FormObjects/list_overview.md) section for more information about the *itemRef* parameter.
 
 If you also want an item to have child items, pass a valid list reference to the child hierarchical list in *sublist*. In this case, you must also pass the *expanded* parameter. Pass **True** or **False** in this parameter so that the sublist is displayed expanded or collapsed respectively.
 

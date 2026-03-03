@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|2004.1|変更|
+|16|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.PRINTERS LIST.Summary-->**PRINTERS LIST** コマンドは、引数として渡された各配列にそのマシンで使用できるプリンタの名前、およびオプションとしてプリンタの場所とモデルを返します。<!-- END REF-->

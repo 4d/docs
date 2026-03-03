@@ -14,6 +14,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|17 R4|Modificado|
+|11 SQL Release 3|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.MESSAGES OFF.Summary-->Los comandos MESSAGES OFF y [MESSAGES ON](messages-on.md) encienden y apagan los termómetros de progresión mostrados por 4D mientras se ejecutan operaciones de larga duración.<!-- END REF--> Por defecto, se muestran los mensajes. 

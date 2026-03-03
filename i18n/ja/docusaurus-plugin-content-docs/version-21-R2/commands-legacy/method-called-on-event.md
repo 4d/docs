@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6.8.1|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Method called on event.Summary-->Method called on event コマンドは、[ON EVENT CALL](on-event-call.md "ON EVENT CALL")コマンドでインストールされたメソッド名を返します。<!-- END REF-->

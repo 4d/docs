@@ -3,9 +3,9 @@ id: onAlternativeClick
 title: On Alternative Click
 ---
 
-| コード | 呼び出し元                                                                                                                                     | 定義                                                                                                               |
-| --- | ----------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| 38  | [ボタン](FormObjects/button_overview.md) - [リストボックス](FormObjects/listbox_overview.md) - [リストボックス列](FormObjects/listbox_overview.md#リストボックス列) | <li>ボタン: ボタンの "矢印" のエリアがクリックされた</li><li>リストボックス: オブジェクト配列のカラム内において、エリプシスボタン ("alternateButton" 属性) がクリックされた</li> |
+| コード | 呼び出し元                                                                                                                                   | 定義                                                                                                               |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| 38  | [Button](FormObjects/button_overview.md) - [List Box](FormObjects/listbox-object.md) - [List Box Column](FormObjects/listbox-column.md) | <li>ボタン: ボタンの "矢印" のエリアがクリックされた</li><li>リストボックス: オブジェクト配列のカラム内において、エリプシスボタン ("alternateButton" 属性) がクリックされた</li> |
 
 ## 説明
 
@@ -22,8 +22,8 @@ title: On Alternative Click
 
 ### リストボックス
 
-このイベントは [オブジェクト配列型のリストボックス](FormObjects/listbox_overview.md#オブジェクト配列カラムの設定) のカラムにおいて、ユーザーがウィジェットのエリプシスボタン ("alternateButton" 属性) をクリックしたときに生成されます。
+This event is generated in columns of [object array type list boxes](../FormObjects/listbox-column.md#object-arrays-in-columns), when the user clicks on a widget ellipsis button ("alternateButton" attribute).
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)
 
-["alternateButton" 属性の説明](FormObjects/listbox_overview.md#alternatebutton) を参照ください。
+["alternateButton" 属性の説明](../FormObjects/listbox-column.md#alternatebutton) を参照ください。

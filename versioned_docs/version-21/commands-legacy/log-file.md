@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004.3|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Log file.Summary-->The Log file command returns the long name (i.e. the complete pathname of the file, including its name) of the current log file of the open database.<!-- END REF--> 

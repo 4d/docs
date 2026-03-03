@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|16 R6|Modificado|
+|13|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT SET SUBFORM.Summary-->O comando **OBJECT SET SUBFORM** permite modificar dinamicamente o formulário detalhado assim também, opcionalmente, o formulário listado associado ao objeto sub-formulário designado pelos parâmetros *objeto* e *\**.<!-- END REF-->  

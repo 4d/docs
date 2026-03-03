@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|2004|Creado por|
+|12|Renombrar|
+|13|Renombrar|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.LISTBOX SET GRID.Summary-->El comando LISTBOX SET GRID permite mostrar u ocultar las líneas horizontales y/o verticales que componen la matriz del objeto list box designado por los parámetros *objeto* y *\**.<!-- END REF-->

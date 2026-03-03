@@ -33,7 +33,7 @@ When applying ARRAY LONGINT to an existing array:
 This example creates a process array of 100 4-byte Long Integer elements: 
 
 ```4d
- ARRAY LONGINT(alValues;100)
+ ARRAY LONGINT(alValues;100)
 ```
 
 ## Example 2 
@@ -41,7 +41,7 @@ This example creates a process array of 100 4-byte Long Integer elements:
 This example creates a local array of 100 rows of 50 4-byte Long Integer elements: 
 
 ```4d
- ARRAY LONGINT($alValues;100;50)
+ ARRAY LONGINT($alValues;100;50)
 ```
 
 ## Example 3 
@@ -49,10 +49,10 @@ This example creates a local array of 100 rows of 50 4-byte Long Integer element
 This example creates an interprocess array of 50 4-byte Long Integer elements and sets each element to its element number: 
 
 ```4d
- ARRAY LONGINT(◊alValues;50)
- For($vlElem;1;50)
-    ◊alValues{$vlElem}:=$vlElem
- End for
+ ARRAY LONGINT(◊alValues;50)
+ For($vlElem;1;50)
+    ◊alValues{$vlElem}:=$vlElem
+ End for
 ```
 
 ## See also 

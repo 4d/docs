@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|13|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OBJECT SET AUTO SPELLCHECK.Summary-->El comando **OBJECT SET AUTO SPELLCHECK** permite definir o modificar dinámicamente el estado de la opción **Corrección ortográfica** de los objetos designados por los parámetros *objeto* y *\** para el proceso actual.<!-- END REF--> Esta opción activa o desactiva la corrección ortográfica automática durante la entrada para el objeto.

@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.CLOSE PRINTING JOB.Summary-->The **CLOSE PRINTING JOB** command closes the print job previously opened by the [OPEN PRINTING JOB](open-printing-job.md) command and sends any printing document that has been assembled to the current printer.<!-- END REF-->  

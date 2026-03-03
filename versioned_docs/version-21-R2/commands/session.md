@@ -10,10 +10,11 @@ displayed_sidebar: docs
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | 4D.Session | &#8592; | Session object |
+| Function result | [4D.Session](../API/SessionClass.md)  | &#8592; | Session object |
 </div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>History</summary>
 
 |Release|Changes|
@@ -23,6 +24,7 @@ displayed_sidebar: docs
 |18 R6|Added|
 
 </details>
+</div>
 
 ## Description
 

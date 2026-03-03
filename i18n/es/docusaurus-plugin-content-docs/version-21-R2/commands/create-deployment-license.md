@@ -5,6 +5,24 @@ slug: /commands/create-deployment-license
 displayed_sidebar: docs
 ---
 
+<!--REF #_command_.Create deployment license.Syntax-->**Create deployment license** ( *mergedApp* : 4D.Folder ; *autoLicenseTarget* : Integer ) : Object<br/>**Create deployment license** ( *mergedApp* : 4D.Folder ; *buildLicense* : 4D.File {; *oemLicense* : 4D.File} ) : Object<!-- END REF-->
+
+<!--REF #_command_.Create deployment license.Params-->
+
+<div class="no-index">
+
+| Parámetros        | Tipo                      |                             | Descripción                                                   |
+| ----------------- | ------------------------- | --------------------------- | ------------------------------------------------------------- |
+| mergedApp         | [4D.Folder](../API/FolderClass.md)  | &#8594; | Carpeta que contiene la aplicación fusionada                  |
+| autoLicenseTarget | Integer                   | &#8594; | Licencia objetivo para la integración automática de licencias |
+| buildLicense      | 4D.File   | &#8594; | Licencia necesaria para generar la licencia integrada         |
+| oemLicense        | 4D.File   | &#8594; | Licencia 4D OEM XML Key si se trata de una licencia servidor  |
+| Resultado         | Object                    | &#8592; | Estado                                                        |
+
+</div>
+<!-- END REF-->
+
+<div class="no-index">
 <details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones                      |
@@ -13,20 +31,7 @@ displayed_sidebar: docs
 | 20          | Añadidos                            |
 
 </details>
-
-<!--REF #_command_.Create deployment license.Syntax-->**Create deployment license** ( *mergedApp* : 4D.Folder ; *autoLicenseTarget* : Integer ) : Object<br/>**Create deployment license** ( *mergedApp* : 4D.Folder ; *buildLicense* : 4D.File {; *oemLicense* : 4D.File} ) : Object<!-- END REF-->
-
-<!--REF #_command_.Create deployment license.Params-->
-
-| Parámetros        | Tipo                      |                             | Descripción                                                   |
-| ----------------- | ------------------------- | --------------------------- | ------------------------------------------------------------- |
-| mergedApp         | 4D.Folder | &#8594; | Carpeta que contiene la aplicación fusionada                  |
-| autoLicenseTarget | Integer                   | &#8594; | Licencia objetivo para la integración automática de licencias |
-| buildLicense      | 4D.File   | &#8594; | Licencia necesaria para generar la licencia integrada         |
-| oemLicense        | 4D.File   | &#8594; | Licencia 4D OEM XML Key si se trata de una licencia servidor  |
-| Resultado         | Object                    | &#8592; | Estado                                                        |
-
-<!-- END REF-->
+</div>
 
 ## Descripción
 

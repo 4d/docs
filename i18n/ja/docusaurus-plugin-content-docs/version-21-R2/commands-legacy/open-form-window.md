@@ -21,6 +21,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R6|変更|
+|16 R4|変更|
+|14 R5|変更|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Open form window.Summary-->Open form window コマンドはフォーム*formName*のサイズとリサイズプロパティを使用して、新しいウィンドウを開きます。<!-- END REF-->

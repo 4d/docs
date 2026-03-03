@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|18 R5|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OB Is shared.Summary-->El comando **OB Is shared** devuelve **True** si el objeto o colección *aVerificar* es compartido, y **False** en caso contrario (ver *Objetos y colecciones compartidos*).<!-- END REF-->

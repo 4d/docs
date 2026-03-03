@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.BLOB to longint.Summary-->The BLOB to longint command returns a 4-byte Long Integer value read from the BLOB *blob*.<!-- END REF-->
@@ -44,11 +54,11 @@ After the call, the variable is incremented by the number of bytes read. Therefo
 The following example reads 20 Long Integer values from a BLOB, starting at the offset 0x200:
 
 ```4d
- $vlOffset:=0x200
- For($viLoop;0;19)
-    $vlValue:=BLOB to longint(vxSomeBlob;PC byte ordering;$vlOffset)
-  // Do something with $vlValue
- End for
+ $vlOffset:=0x200
+ For($viLoop;0;19)
+    $vlValue:=BLOB to longint(vxSomeBlob;PC byte ordering;$vlOffset)
+  // Do something with $vlValue
+ End for
 ```
 
 ## See also 

@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Modified|
+|2004|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.RESTORE.Summary-->The RESTORE command can be used to restore the file(s) included in a 4D archive.<!-- END REF--> This command is useful as part of custom interfaces for managing backups. 

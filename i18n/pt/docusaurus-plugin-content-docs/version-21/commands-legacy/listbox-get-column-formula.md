@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.LISTBOX Get column formula.Summary-->O comando **LISTBOX Get column formula** devolve a fórmula associada à coluna de list box designada pelos parâmetros *objeto* e *\**.<!-- END REF--> As fórmulas só podem ser utilizadas quando a propriedade “Fonte de dados” do list box for **Seleção atual**, **Seleção temporal**.ou **Coleção ou Seleção de Entidades**. Se nenhuma fórmula estiver associada à coluna, o comando devolve uma cadeia vazia. 

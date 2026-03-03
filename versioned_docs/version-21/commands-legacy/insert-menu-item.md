@@ -20,6 +20,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R3|Modified|
+|11 SQL Release 4|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.INSERT MENU ITEM.Summary-->The **INSERT MENU ITEM** command inserts new menu items into the menu whose number or reference is passed in *menu* after the existing menu item whose number is passed in *afterItem*.<!-- END REF-->
@@ -45,11 +57,11 @@ The optional *subMenu* parameter can be used to indicate a menu as the added ite
 The following example creates a menu consisting of two commands to which it assigns a method:
 
 ```4d
- menuRef:=Create menu
- APPEND MENU ITEM(menuRef;"Characters")
- SET MENU ITEM METHOD(menuRef;1;"CharMgmtDial")
- INSERT MENU ITEM(menuRef;1;"Paragraphs")
- SET MENU ITEM METHOD(menuRef;2;"ParaMgmtDial")
+ menuRef:=Create menu
+ APPEND MENU ITEM(menuRef;"Characters")
+ SET MENU ITEM METHOD(menuRef;1;"CharMgmtDial")
+ INSERT MENU ITEM(menuRef;1;"Paragraphs")
+ SET MENU ITEM METHOD(menuRef;2;"ParaMgmtDial")
 ```
 
 ## See also 

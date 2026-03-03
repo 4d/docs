@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Is in print preview.Summary-->The **Is in print preview** command returns True if the **Preview on Screen** option is checked in the printing dialog box and False otherwise.<!-- END REF--> This setting is local to the process. 

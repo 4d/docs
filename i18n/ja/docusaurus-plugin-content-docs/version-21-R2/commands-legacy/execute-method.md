@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.EXECUTE METHOD.Summary-->EXECUTE METHOD コマンドは、*param1.<!-- END REF-->..paramN*を引数に渡して、*methodName*プロジェクトメソッドを実行します。データベースまたはコマンドを実行するコンポーネントから呼び出し可能なメソッド名を渡すことができます。

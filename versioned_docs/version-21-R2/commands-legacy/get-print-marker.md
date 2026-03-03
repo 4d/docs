@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|2003|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get print marker.Summary-->The **Get print marker** command enables you to get the current position of a marker during printing.<!-- END REF--> 

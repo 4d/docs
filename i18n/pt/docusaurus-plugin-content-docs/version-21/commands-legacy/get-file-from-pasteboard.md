@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Get file from pasteboard.Summary-->O comando Get file from pasteboard devolve a rota de acesso absoluto de um arquivo incluído em uma operação de arrastar e soltar.<!-- END REF--> Vários arquivos podem ser selecionados e movidos simultâneamente. O parâmetro *indiceN* são utilizados para designar um arquivo entre um conjunto de arquivos selecionados. 

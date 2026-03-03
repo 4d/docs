@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.PLAY.Summary-->O comando PLAY permite reproduzir arquivos de som ou multimídia.<!-- END REF--> Passe a rota de acesso completa do arquivo que deseja reproduzir em *nomeObjeto*. Em Mac OS, o comando também pode ser utilizado para reproduzir uma fonte de som ou um som sistema. 

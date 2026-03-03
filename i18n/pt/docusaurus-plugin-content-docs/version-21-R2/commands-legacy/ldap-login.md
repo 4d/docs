@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|15|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.LDAP LOGIN.Summary-->O comando**LDAP LOGIN** abre uma conexão somente leitura no servidor LDAP especificado pelo parâmetro *url* com os identificadores de *login* e *senha*.<!-- END REF--> Se for aceito pelo servidor, esta ligação é utilizada para todas as pesquisas de LDAP posteriormente introduzidas no processo atual até que o comando *RuntimeVLWinFolder* sejaé executado (ou até que o processo seja fechado).

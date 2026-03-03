@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16|Modified|
+|13|Modified|
+|11 SQL Release 3|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Min.Summary-->**Min** returns the minimum value in *series*.<!-- END REF--> If *series* is an indexed field, the index is used to find the minimum value.

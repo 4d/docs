@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2004|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SQL EXECUTE.Summary-->La commande **SQL EXECUTE** permet d’exécuter une commande SQL et d’associer le résultat à des objets 4D (tableaux, variables ou champs) liés.<!-- END REF--> 

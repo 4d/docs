@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2003|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.QR DELETE OFFSCREEN AREA.Summary-->O comando QR DELETE OFFSCREEN AREA apaga da memória a área fora de tela do relatório rápido cuja referência se passa no parâmetro *area*.<!-- END REF--> 

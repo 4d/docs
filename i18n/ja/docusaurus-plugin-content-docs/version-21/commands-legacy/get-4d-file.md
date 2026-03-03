@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|17 R5|変更|
+|16 R6|変更|
+|16|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Get 4D file.Summary-->**Get 4D file**コマンドは、*file* パラメーターで指定された4D環境ファイルへのパス名を返します。<!-- END REF-->パスはシステムシンタックスで返されます。

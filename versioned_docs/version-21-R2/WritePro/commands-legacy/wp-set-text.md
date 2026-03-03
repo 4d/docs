@@ -57,8 +57,8 @@ You want to to add text to this document:
 *targetObj* is a 4D Write Pro document:
 
 ```4d
- WP SET TEXT(myDoc;"Hello world";wk append)
-  //writes "The quick brown fox jumps over the lazy dog. Hello world!"
+ WP SET TEXT(myDoc;"Hello world";wk append)
+  //writes "The quick brown fox jumps over the lazy dog. Hello world!"
 ```
 
 *targetObj* is a range:
@@ -66,25 +66,25 @@ You want to to add text to this document:
 Before the existing text:  
 
 ```4d
- $range:=WP Text range(myDoc;wk start text;wk end text)
- WP SET TEXT($range;" Hello world!";wk prepend)
-  //writes " Hello world! The quick brown fox jumps over the lazy dog."
+ $range:=WP Text range(myDoc;wk start text;wk end text)
+ WP SET TEXT($range;" Hello world!";wk prepend)
+  //writes " Hello world! The quick brown fox jumps over the lazy dog."
 ```
 
 After the existing text:  
 
 ```4d
- $range:=WP Text range(myDoc;wk start text;wk end text)
- WP SET TEXT($range;" Hello world!";wk append)
-  //writes "The quick brown fox jumps over the lazy dog. Hello world!"
+ $range:=WP Text range(myDoc;wk start text;wk end text)
+ WP SET TEXT($range;" Hello world!";wk append)
+  //writes "The quick brown fox jumps over the lazy dog. Hello world!"
 ```
 
 Replace the existing text:  
 
 ```4d
- $range:=WP Text range(myDoc;wk start text;wk end text)
- WP SET TEXT($range;" Hello world!";wk replace)
-  //writes " Hello world!"
+ $range:=WP Text range(myDoc;wk start text;wk end text)
+ WP SET TEXT($range;" Hello world!";wk replace)
+  //writes " Hello world!"
 ```
 
 ## See also 

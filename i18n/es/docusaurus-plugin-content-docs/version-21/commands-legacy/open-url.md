@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14 R3|Renombrar|
+|14 R3|Modificado|
+|11 SQL Release 2|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OPEN URL.Summary-->El comando OPEN URL abre el archivo o URL pasado en el parámetro *ruta* con la aplicación indicada en *nomAp* (si hay).<!-- END REF-->   

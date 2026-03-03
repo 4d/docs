@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|17 R6|変更|
+|11 SQL|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GET MENU ITEM ICON.Summary-->GET MENU ITEM ICON コマンドは*iconRef*変数に、*menu* と *menuItem*引数で指定されたメニュー項目に関連付けられたアイコンの参照を返します。<!-- END REF-->この参照はピクチャーのパス名または番号です。

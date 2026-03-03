@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get picture file name.Summary-->La commande **Get picture file name** retourne le nom par défaut courant de l’image passée en paramètre.<!-- END REF--> 

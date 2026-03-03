@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Count list items.Summary-->The Count list items command returns either the number of items currently “visible” or the total number of items in the list whose reference number or object name you pass in *list*.<!-- END REF-->
@@ -39,22 +50,22 @@ Here a list named *hList* shown in the Application environment:
 ![](../assets/en/commands/pict22362.en.png)
 
 ```4d
- $vlNbItems:=Count list items(hList) // at this point $vlNbItems gets 8
- $vlNbTItems:=Count list items(hList;*) //$vlNbTItems also gets 8
+ $vlNbItems:=Count list items(hList) // at this point $vlNbItems gets 8
+ $vlNbTItems:=Count list items(hList;*) //$vlNbTItems also gets 8
 ```
 
 ![](../assets/en/commands/pict22363.en.png)
 
 ```4d
- $vlNbItems:=Count list items(hList) // at this point $vlNbItems gets 2
- $vlNbTItems:=Count list items(hList;*) //$vlNbTItems still gets 8
+ $vlNbItems:=Count list items(hList) // at this point $vlNbItems gets 2
+ $vlNbTItems:=Count list items(hList;*) //$vlNbTItems still gets 8
 ```
 
 ![](../assets/en/commands/pict22364.en.png)
 
 ```4d
- $vlNbItems:=Count list items(hList) // at this point $vlNbItems gets 5
- $vlNbTItems:=Count list items(hList;*) //$vlNbTItems still gets 8
+ $vlNbItems:=Count list items(hList) // at this point $vlNbItems gets 5
+ $vlNbTItems:=Count list items(hList;*) //$vlNbTItems still gets 8
 ```
 
 ## See also 

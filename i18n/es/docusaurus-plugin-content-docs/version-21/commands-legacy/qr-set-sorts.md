@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|2003|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.QR SET SORTS.Summary-->El comando QR SET SORTS permite definir el sentido de ordenación de cada columna del informe rápido cuya referencia se pasa en *area*.<!-- END REF-->

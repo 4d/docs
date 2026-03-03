@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R5|初出|
+|17|変更|
+|18 R4|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WEB Get server info.Summary-->**WEB Get server info** コマンドは、4D Web サーバーのカレントのセッションの詳細なランタイム情報を格納したオブジェクトを返します。<!-- END REF-->返された情報にはSOPA サーバーのものも含まれます。

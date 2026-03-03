@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT GET SHORTCUT.Summary-->La commande **OBJECT GET SHORTCUT** retourne l’équivalent clavier associé à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 

@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6.5|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Is new record.Summary-->El comando Is new record devuelve [True](true.md "True") cuando el registro actual de *tabla* está siendo creado y aún no ha sido guardado en el proceso actual.<!-- END REF-->es posible obtener la misma información utilizando el comando existente [Record Number](record-number.md "Record Number"), y probando si devuelve -3\. Sin embargo, recomendamos utilizar Is new record en lugar de [Record Number](record-number.md "Record Number") en este caso. De hecho, el comando Is new record asegura una mejor compatibilidad con las futuras versiones de 4D.

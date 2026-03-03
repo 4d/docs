@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6.7|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.GET DOCUMENT ICON.Summary-->El comando GET DOCUMENT ICON devuelve en el campo o la variable imagen 4D *icono*, el icono del documento cuyo nombre o ruta de acceso se pasa en *rutaDoc*.<!-- END REF-->puede especificar un archivo de todo tipo (ejecutable, documento, atajo o alias, etc.) o una carpeta. 

@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|18 R3|Modificado|
+|15|Modificado|
+|14|Modificado|
+|13|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.METHOD SET CODE.Summary-->O comando **METHOD SET CODE** modifica o código dos métodos designados pelo parâmetro *rota* com o conteúdo passado no parâmetro *codigo*.<!-- END REF--> Este comando pode acessar ao código de todos os tipos de métodos: métodos de banco, triggers, métodos projeto, métodos formulário e métodos objeto. Se um método não existir, é criado com os conteúdos *codigo*.

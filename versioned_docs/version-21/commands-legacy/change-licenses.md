@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.CHANGE LICENSES.Summary-->The CHANGE LICENSES command displays the 4D License Manager dialog box.<!-- END REF--> 
@@ -31,8 +42,8 @@ For more information about this dialog box, refer to the *Installation and activ
 In a custom configuration or preferences dialog box, you include a button whose associated method is:
 
 ```4d
-  // Object method for bLicense button
- CHANGE LICENSES
+  // Object method for bLicense button
+ CHANGE LICENSES
 ```
 
 This way a user can activate licenses without having to modify the database.

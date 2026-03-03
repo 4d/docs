@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.RELATE ONE SELECTION.Summary-->**RELATE ONE SELECTION**コマンドは、*manyTable*のレコードセレクションをもとにして、*oneTable*テーブルの新しいセレクションを作成し、その新しいセレクションの最初のレコードをカレントレコードとしてロードします。<!-- END REF--> 

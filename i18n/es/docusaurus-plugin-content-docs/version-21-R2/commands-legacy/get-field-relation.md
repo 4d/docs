@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|2004|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.GET FIELD RELATION.Summary-->El comando GET FIELD RELATION permite conocer el estado automático/manual de la relación comenzando desde el *campoN* para el proceso actual.<!-- END REF--> Todas las relaciones pueden ser consultadas, incluyendo las relaciones automáticas en la ventana de Estructura.

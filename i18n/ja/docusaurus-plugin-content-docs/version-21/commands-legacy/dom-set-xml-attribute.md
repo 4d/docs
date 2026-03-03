@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DOM SET XML ATTRIBUTE.Summary-->DOM SET XML ATTRIBUTE コマンドを使用して、*elementRef* に渡したXML要素に1つ以上の属性を追加できます。<!-- END REF-->また定義されたそれぞれの属性に値を設定することもできます。

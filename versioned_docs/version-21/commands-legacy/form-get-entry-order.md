@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R4|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM GET ENTRY ORDER.Summary-->The **FORM GET ENTRY ORDER** command returns in *objectNames* the sorted names of objects that define the form entry order.<!-- END REF--> 
@@ -38,17 +48,17 @@ The actual entry order always includes objects from page 0 and from inherited fo
 You want to exclude some objects from the current entry order:
 
 ```4d
- ARRAY TEXT($arrTabOrderObject;0)
- var $vElem : Integer
- 
- FORM GET ENTRY ORDER($arrTabOrderObject;*) //get the actual entry order
- Repeat
-    $vElem:=Find in array($arrTabOrderObject;"vTax@")
-    If($vElem>0) //exclude objects whose name starts with "vTax" from data entry order
-       DELETE FROM ARRAY($arrTabOrderObject;$vElem)
-    End if
- Until($vElem<0)
- FORM SET ENTRY ORDER($arrTabOrderObject) //apply the new entry order
+ ARRAY TEXT($arrTabOrderObject;0)
+ var $vElem : Integer
+ 
+ FORM GET ENTRY ORDER($arrTabOrderObject;*) //get the actual entry order
+ Repeat
+    $vElem:=Find in array($arrTabOrderObject;"vTax@")
+    If($vElem>0) //exclude objects whose name starts with "vTax" from data entry order
+       DELETE FROM ARRAY($arrTabOrderObject;$vElem)
+    End if
+ Until($vElem<0)
+ FORM SET ENTRY ORDER($arrTabOrderObject) //apply the new entry order
 ```
 
 ## See also 

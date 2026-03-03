@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|19 R7|Modifié|
+|14 R4|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET CORNER RADIUS.Summary-->La commande **OBJECT SET CORNER RADIUS** vous permet de modifier le rayon des angles du ou des objet(s) que vous avez passés dans le paramètre *objet*.<!-- END REF--> Le nouveau rayon est défini pour le process uniquement, il n'est pas stocké dans le formulaire. 

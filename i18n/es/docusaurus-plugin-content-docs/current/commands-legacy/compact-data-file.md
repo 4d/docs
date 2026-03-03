@@ -20,6 +20,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|15 R3|Modificado|
+|13|Modificado|
+|11 SQL|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Compact data file.Summary-->El comando **Compact data file** compacta el archivo de datos designado por el parámetro *rutaDatos* asociado al archivo de estructura *rutaEstructura*.<!-- END REF--> Para mayor información sobre la compactación, consulte el Manual de Diseño.

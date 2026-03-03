@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Print settings to BLOB.Summary-->**Print settings to BLOB** コマンドは4Dのカレントのプリント設定を *printSettings* BLOBに格納します。<!-- END REF-->*printSettings* は、印刷で使用されるすべての設定を格納します:

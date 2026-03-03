@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM SET XML ELEMENT NAME.Summary-->The DOM SET XML ELEMENT NAME command modifies the name of the element set by *elementRef*.<!-- END REF--> 
@@ -28,21 +38,21 @@ In the following XML source:
 
 ```XML
 <Book>
-   <Title>The Best Seller</Title>
+   <Title>The Best Seller</Title>
 </Book>
 ```
 
 If the following code is executed, with *vElemRef* containing the reference to the ‘Book’ element:
 
 ```4d
- DOM SET XML ELEMENT NAME(vElemRef;"BestSeller")
+ DOM SET XML ELEMENT NAME(vElemRef;"BestSeller")
 ```
 
 We get:
 
 ```XML
 <BestSeller>
-   <Title>The Best Seller</Title>
+   <Title>The Best Seller</Title>
 </BestSeller>
 ```
 

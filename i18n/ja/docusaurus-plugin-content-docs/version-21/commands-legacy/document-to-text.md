@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Document to text.Summary-->**Document to text**コマンドは、ディスク上のファイルの中身を、4Dのテキスト変数またはテキストフィールドへと直接取り出すことができます。<!-- END REF-->引数には、読みだしたいファイル名またはパス名を渡します。ファイルはディスク上に存在している必要があり、そうでない場合にはエラーが生成されます。渡せるものは以下の通りです:

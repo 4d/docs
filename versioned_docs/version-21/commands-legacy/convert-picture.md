@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Modified|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.CONVERT PICTURE.Summary-->The **CONVERT PICTURE** command converts *picture* into a new type.<!-- END REF-->
@@ -37,7 +48,7 @@ The optional *compression* parameter, if passed, can be used to specify the comp
 Conversion of the vpPhoto picture to the jpeg format: 
 
 ```4d
- CONVERT PICTURE(vpPhoto;".jpg")
+ CONVERT PICTURE(vpPhoto;".jpg")
 ```
 
 ## Example 2 
@@ -45,7 +56,7 @@ Conversion of the vpPhoto picture to the jpeg format:
 Conversion of a picture with 60% quality:
 
 ```4d
- CONVERT PICTURE(vPicture;".JPG";0.6)
+ CONVERT PICTURE(vPicture;".JPG";0.6)
 ```
 
 ## See also 

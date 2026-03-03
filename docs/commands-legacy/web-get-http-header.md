@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Renamed|
+|6.7|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WEB GET HTTP HEADER.Summary-->The **WEB GET HTTP HEADER** command returns either a string or two arrays, containing the HTTP header used for the currently processed request.<!-- END REF-->

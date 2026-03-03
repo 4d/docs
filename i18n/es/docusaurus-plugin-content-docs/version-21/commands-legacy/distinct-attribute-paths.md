@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|16|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Summary-->El comando **DISTINCT ATTRIBUTE PATHS** devuelve la lista de rutas distintas que se encuentran en el campo objeto indexado pasado en *campoObjeto* para la selección actual de la tabla a la que pertenece el campo.<!-- END REF-->

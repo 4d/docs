@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6.5|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GET REGISTERED CLIENTS.Summary-->GET REGISTERED CLIENTS コマンドは2つの配列を作成します<!-- END REF-->:

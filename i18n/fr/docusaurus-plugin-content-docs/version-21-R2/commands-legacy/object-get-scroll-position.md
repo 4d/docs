@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|12|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT GET SCROLL POSITION.Summary-->La commande **OBJECT GET SCROLL POSITION** retourne dans les paramètres *positionLigne* et *positionH* des informations relatives à la position des barres de défilement de l’objet de formulaire désigné par les paramètres *\** et *objet*.<!-- END REF-->

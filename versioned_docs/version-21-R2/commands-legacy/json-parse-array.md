@@ -5,7 +5,7 @@ slug: /commands/json-parse-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON PARSE ARRAY.Syntax-->**JSON PARSE ARRAY** ( *jsonString* ; *array* : Array )<!-- END REF-->
+<!--REF #_command_.JSON PARSE ARRAY.Syntax-->**JSON PARSE ARRAY** ( *jsonString* : Text ; *array* : Array )<!-- END REF-->
 <!--REF #_command_.JSON PARSE ARRAY.Params-->
 <div class="no-index">
 
@@ -15,6 +15,17 @@ displayed_sidebar: docs
 | array | Array | &#8592; | Array containing result from parsing of JSON string |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+|16 R4|Modified|
+
+</details>
+</div>
 
 ## Description 
 

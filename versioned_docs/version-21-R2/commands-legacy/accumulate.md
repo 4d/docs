@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ACCUMULATE.Summary-->**ACCUMULATE** specifies the fields or variables to be accumulated during a form report performed using [PRINT SELECTION](print-selection.md).<!-- END REF-->

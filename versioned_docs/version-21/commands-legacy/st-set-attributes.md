@@ -20,6 +20,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Renamed|
+|12.1|Modified|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ST SET ATTRIBUTES.Summary-->The ST SET ATTRIBUTES command can be used to modify one or more style attributes in the form object(s) designated by *object*.<!-- END REF--> 

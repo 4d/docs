@@ -14,7 +14,17 @@ displayed_sidebar: docs
 | aCampo | Text, Blob, Picture | &#8594; | Campo para definir o local de armazenamento |
 | rota | Text, Integer | &#8594; | Caminho e nome do arquivo d armazenamento externo ou0=usar definição da estrutura1=usar pasta padrão |
 </div>
-<!-- END REF-->
+<!-- END REF-->\n
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|15|Modificado|
+|13|Criado por|
+
+</details>
+</div>
 
 ## Descrição 
 
@@ -27,7 +37,7 @@ A configuração definida por este comando somente é aplicada quando o registro
 Em *rota*, pode passar um nome de rota padrão ou uma constante designando uma localização automática:
 
 * **Rota padrão ao arquivo**  
-Neste caso, você utiliza armazenamento externo no "modo padrão." Algumas funções do banco de dados 4D não estão disponíveis automaticamente neste modo (veja o Manual de Desenho 4D), em especial você deve gerenciar a criação ou modificação dos arquivos você mesmo.  
+Neste caso, você utiliza armazenamento externo no "modo padrão." Algumas funções do banco de dados 4D não estão disponíveis automaticamente neste modo (veja o Manual de Desenho 4D), em especial você deve gerenciar a criação ou modificação dos arquivos você mesmo.   
 Você pode passar uma rota relativa ao arquivo de dados ou uma rota absoluta, incluindo o nome e a extensão do arquivo de armazenamento. Deverá usar a sintaxe do sistema. Para definir uma rota relativa, passar "../" (no Windows) ou "..:" (macOS) no início da string. Poderá designar qualquer pasta, incluindo a pasta padrão dos arquivos externos do banco de dados (nomeBanco.DadosExternos) - Neste caso, os arquivos de backup do banco de dados são incluídos quando o banco de dados é salvo.  
 O arquivo designado pelo parâmetro *rota* deve existir ser acessível quando o comando for executado. Se a rota for inválida (uma pasta ou um arquivo não existirem), um erro é retornado só nos casos onde rota foi definido como um absoluto. Quando uma rota relativa foi especificada, deve ter certeza de sua validez, já que não é retornado um erro se o arquivo não for encontrado.  
 Se você salvar os dados externos na mesma pasta que o arquivo de dados ou uma das suas pastas internas, 4D considera que o caminho especificado é relativo ao arquivo de dados e mantêm o link mesmo quando a pasta do arquivo de dados for movida ou renomeada.  
@@ -49,17 +59,19 @@ Quando esse comando for executado, 4D automaticamente mantém o link entre o cam
 Se você deseja guardar o conteúdo de um arquivo existente no campo imagem, armazenado fora dos dados, na pasta do banco de dados:
 
 ```4d
- CREATE RECORD([Photos])
- [Photos]Name:="Paris.png"
- SET EXTERNAL DATA PATH([Photos]Thumbnail;Get 4D folder(Database folder)+"custom"+Folder separator+[Photos]Name)
-  //"/custom/Paris.png" deve existir ao lado do arquivo de estrutura
- SAVE RECORD([Photos])
+ CREATE RECORD([Photos])
+ [Photos]Name:="Paris.png"
+ SET EXTERNAL DATA PATH([Photos]Thumbnail;Get 4D folder(Database folder)+"custom"+Folder separator+[Photos]Name)
+  //"/custom/Paris.png" deve existir ao lado do arquivo de estrutura
+ SAVE RECORD([Photos])
 ```
 
 ## Ver também 
 
 [Get external data path](get-external-data-path.md)  
 [RELOAD EXTERNAL DATA](reload-external-data.md)  
+[ORDA: Assigning files to picture or blob attributes](../ORDA/entities.md#assigning-files-to-picture-or-blob-attributes)
+
 
 ## Propriedades
 
@@ -67,5 +79,3 @@ Se você deseja guardar o conteúdo de um arquivo existente no campo imagem, arm
 | --- | --- |
 | Número do comando | 1134 |
 | Thread-seguro | yes |
-
-

@@ -8,6 +8,8 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.ZIP Create archive.Params -->
 
+<div class="no-index">
+
 | Parâmetro       | Tipo                       |                             | Descrição                                                           |
 | --------------- | -------------------------- | :-------------------------: | ------------------------------------------------------------------- |
 | fileToZip       | 4D. File   | &#8594; | Objeto File ou Folder a comprimir                                   |
@@ -17,8 +19,10 @@ displayed_sidebar: docs
 | options         | Integer                    | &#8594; | Opção *folderToZip*: `ZIP Without enclosing folder` |
 | Resultados      | Object                     | &#8592; | Objeto de estado                                                    |
 
+</div>
 <!-- END REF -->
 
+<div class="no-index">
 <details><summary>História</summary>
 
 | Release | Mudanças                                                                       |
@@ -27,6 +31,7 @@ displayed_sidebar: docs
 | 18      | Adicionado                                                                     |
 
 </details>
+</div>
 
 ## Descrição
 
@@ -51,7 +56,7 @@ You can pass a 4D. File, a 4D. Folder, or a zip structure object as first parame
 
 No parâmetro *destinationFile*, passe um objeto `4D.File` que descreva o arquivo ZIP a ser criado (nome, local, etc.). É recomendado usar a extensão ".zip" se quiser que o arquivo ZIP seja processado automaticamente por um software.
 
-Depois que um arquivo é criado, você pode usar o comando [ZIP Read archive](zip-read-archive.md) para acessá-lo.
+Once an archive is created, you can use the [ZIP Read archive](zip-read-archive.md) command to access it.
 
 **Status object**
 

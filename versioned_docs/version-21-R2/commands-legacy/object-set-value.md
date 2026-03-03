@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|18 R4|Created|
+
+</details>
+</div>
+
 ## Description
 
 <!--REF #_command_.OBJECT SET VALUE.Summary-->**OBJECT SET VALUE** sets the *value* of the current data source for the form object(s) designated by the *objectName* parameter.<!-- END REF-->

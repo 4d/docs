@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2004|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.APPEND TO ARRAY.Summary-->La commande **APPEND TO ARRAY** ajoute une nouvelle ligne à la fin du *tableau* et lui affecte la valeur passée dans le paramètre *valeur*.<!-- END REF--> En mode interprété, si le *tableau* n’a pas été défini au préalable, la commande le crée et lui attribue un type en fonction de celui de *valeur*. 

@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.BUILD APPLICATION.Summary-->The BUILD APPLICATION command launches the application generation process.<!-- END REF--> It takes into account parameters set in the current build application settings file or the settings file set in the *buildAppSettings* parameter. 
@@ -36,10 +46,10 @@ If you pass the access path and name of an XML file for a valid application proj
 This example builds two applications in a single method:
 
 ```4d
- BUILD APPLICATION("c:\\folder\\buildApp\\myclientApp.xml")
- If(OK=1)
-    BUILD APPLICATION(File(Build application settings file).platformPath) //default settings
- End if
+ BUILD APPLICATION("c:\\folder\\buildApp\\myclientApp.xml")
+ If(OK=1)
+    BUILD APPLICATION(File(Build application settings file).platformPath) //default settings
+ End if
 ```
 
 ## System Variables or Sets 

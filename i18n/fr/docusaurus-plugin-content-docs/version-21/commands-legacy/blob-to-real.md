@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.BLOB to real.Summary-->La fonction **BLOB to real** retourne une valeur de type Réel lue dans le BLOB *blob*.<!-- END REF-->

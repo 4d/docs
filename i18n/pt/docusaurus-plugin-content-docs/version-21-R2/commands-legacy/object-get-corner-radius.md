@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14 R4|Criado por|
+|19 R7|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT Get corner radius.Summary-->O comando **OBJECT Get corner radius** devolve o valor atual do rádio da esquina para o objeto retângulo arredondado cujo nome se passar no parâmetro *objeto*.<!-- END REF--> Este valor pode ter sido definido a nível do formulário utilizando a lista de propriedades (ver *Rádio da esquina (retângulos)*), ou para o processo atual com o comando [OBJECT SET CORNER RADIUS](object-set-corner-radius.md).

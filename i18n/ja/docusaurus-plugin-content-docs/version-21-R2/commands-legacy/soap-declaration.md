@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL Release 2|変更|
+|19 R2|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SOAP DECLARATION.Summary-->SOAP DECLARATION コマンドを使用して、Webサービスとして公開された4Dメソッドで使用される引数の型を明示的に宣言できます。<!-- END REF-->

@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Renamed|
+|14|Modified|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT Get list name.Summary-->The OBJECT Get list name command returns the name of the choice list associated with the object or group of objects designated by *object*.<!-- END REF--> 4D lets you associate a choice list (created with the choice list editor in Design mode) with form objects using the form editor or the [OBJECT SET LIST BY NAME](object-set-list-by-name.md) command. 

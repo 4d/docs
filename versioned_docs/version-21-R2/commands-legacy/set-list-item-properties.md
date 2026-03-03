@@ -21,6 +21,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+|17 R6|Modified|
+|18 R6|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET LIST ITEM PROPERTIES.Summary-->The **SET LIST ITEM PROPERTIES** command modifies the item designated by the *itemRef* parameter within the list whose reference number or object name is passed in *list*.<!-- END REF--> 
@@ -31,7 +44,7 @@ You can pass a reference number in *itemRef*. If there is no item with the item 
 
 Lastly, you can pass *\** in *itemRef*: in this case, the command will apply to the current item of the list. If several items are selected manually, the current item is the one that was selected last. If no item is selected, the command does nothing.
 
-If you work with item reference numbers, build a list in which items have unique reference numbers, otherwise you will not be able to distinguish the items. For more information, refer to the *Managing Hierarchical Lists* section.
+If you work with item reference numbers, build a list in which items have unique reference numbers, otherwise you will not be able to distinguish the items. For more information, refer to the [*Hierarchical List form object*](../FormObjects/list_overview.md) section.
 
 **Note:** To change the text of the item or its sublist, use the command [SET LIST ITEM](set-list-item.md).
 
@@ -76,7 +89,7 @@ The following example changes the text of the current item of *list* to bold and
 ## See also 
 
 [GET LIST ITEM PROPERTIES](get-list-item-properties.md)  
-[Hierarchical Lists](../FormObjects/list_overview.md)
+[Hierarchical Lists](../FormObjects/list_overview.md)  
 [SET LIST ITEM](set-list-item.md)  
 [SET LIST ITEM ICON](set-list-item-icon.md)  
 

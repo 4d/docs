@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14 R3|Renomear|
+|14 R3|Modificado|
+|11 SQL Release 2|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OPEN URL.Summary-->O comando **OPEN URL** lança seu navegador web por padrão e o abre com a URL passada no parâmetro *url*.<!-- END REF-->  

@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.METHOD GET COMMENTS.Summary-->The **METHOD GET COMMENTS** command returns, in the *comments* parameter, the documentation of the method(s) designated by the *path* parameter.<!-- END REF-->
@@ -37,15 +47,15 @@ This documentation can be generated for methods ot type triggers, project method
 You can use two types of syntaxes, based either on text arrays, or text variables:  
 
 ```4d
- var tVpath : Text // text variables
- var tVcomments : Text
- METHOD GET COMMENTS(tVpath;tVcomments) // documentation of a single method
+ var tVpath : Text // text variables
+ var tVcomments : Text
+ METHOD GET COMMENTS(tVpath;tVcomments) // documentation of a single method
 ```
 
 ```4d
- ARRAY TEXT(arrPaths;0) // text arrays
- ARRAY TEXT(arrComments;0)
- METHOD GET COMMENTS(arrPaths;arrComments) // documentation of several methods
+ ARRAY TEXT(arrPaths;0) // text arrays
+ ARRAY TEXT(arrComments;0)
+ METHOD GET COMMENTS(arrPaths;arrComments) // documentation of several methods
 ```
 
 You cannot mix the two syntaxes.

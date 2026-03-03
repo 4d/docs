@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|15 R4|変更|
+|14|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.INTEGRATE MIRROR LOG FILE.Summary-->**注意事項:**このコマンドは4D Serverでのみ作動します。<!-- END REF-->[Execute on server](execute-on-server.md)コマンド経由あるいはストアドプロシージャー内でのみ実行可能です。

@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14 R2|変更|
+|12|名称変更|
+|2004|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.FORM GET OBJECTS.Summary-->FORM GET OBJECTS コマンドは、カレントフォーム に存在する全オブジェクトのリストを配列形式で返します。<!-- END REF-->このリストは、カレントフォームページのオブジェクトに限定することができ、また継承されたフォームのオブジェクトを除外することができます。このコマンドは、入力フォームおよび出力フォームの双方で使用することができます。

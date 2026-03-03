@@ -18,6 +18,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Renomear|
+|13|Modificado|
+|12|Renomear|
+|2004|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.LISTBOX DELETE ROWS.Summary-->O comando LISTBOX DELETE ROWS apaga a fila número *posição* (visível ou não) do list box definido pelos parâmetros *objeto* e \*.<!-- END REF-->

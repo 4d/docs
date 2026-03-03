@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|17 R4|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.REJECT NEW REMOTE CONNECTIONS.Summary-->O comando **REJECT NEW REMOTE CONNECTIONS** especifica se o servidor de aplicações aceita ou não as novas conexões de usuários remotos.<!-- END REF--> 

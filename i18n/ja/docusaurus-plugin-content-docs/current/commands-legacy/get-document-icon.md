@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6.7|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GET DOCUMENT ICON.Summary-->GET DOCUMENT ICONコマンドは、*filePath*に渡した名前または完全なパス名を持つドキュメントのアイコンを4Dのピクチャ変数またはフィールド*icon*に返します。<!-- END REF-->はあらゆるタイプのファイル (実行ファイル、ドキュメント、ショートカットまたは別名など) またはフォルダを指定します。 

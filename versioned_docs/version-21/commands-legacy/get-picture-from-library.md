@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6.7|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 :::warning
@@ -36,7 +47,7 @@ If there is no picture with that reference number or name, **GET PICTURE FROM LI
 The following example returns in *vgMyPicture* the picture whose reference number is stored in the local variable *$vlPicRef*:
 
 ```4d
- GET PICTURE FROM LIBRARY($vlPicRef;vgMyPicture)
+ GET PICTURE FROM LIBRARY($vlPicRef;vgMyPicture)
 ```
 
 ## Example 2 
@@ -44,7 +55,7 @@ The following example returns in *vgMyPicture* the picture whose reference numbe
 The following example returns in *$DDcom\_Prot\_MyPicture* the picture with the name "DDcom\_Prot\_Button1" stored in the Picture Library:
 
 ```4d
- GET PICTURE FROM LIBRARY("DDcom_Prot_Button1";$DDcom_Prot_MyPicture)
+ GET PICTURE FROM LIBRARY("DDcom_Prot_Button1";$DDcom_Prot_MyPicture)
 ```
 
 ## Example 3 

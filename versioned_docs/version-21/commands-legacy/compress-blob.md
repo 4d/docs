@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Modified|
+|6.5.3|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.COMPRESS BLOB.Summary-->The **COMPRESS BLOB** command compresses the BLOB *blob* using a compression algorithm.<!-- END REF--> This command only compresses BLOB whose size is over 255 bytes.
@@ -48,10 +60,10 @@ To detect if a BLOB has been compressed, use the [BLOB PROPERTIES](blob-properti
 This example tests if the BLOB *vxMyBlob* is compressed, and, if it is not, compresses it:
 
 ```4d
- BLOB PROPERTIES(vxMyBlob;$vlCompressed;$vlExpandedSize;$vlCurrentSize)
- If($vlCompressed=Is not compressed)
-    COMPRESS BLOB(vxMyBlob)
- End if
+ BLOB PROPERTIES(vxMyBlob;$vlCompressed;$vlExpandedSize;$vlCurrentSize)
+ If($vlCompressed=Is not compressed)
+    COMPRESS BLOB(vxMyBlob)
+ End if
 ```
 
 Note however, that if you apply COMPRESS BLOB to an already compressed BLOB, the command detects it and does nothing.
@@ -61,17 +73,17 @@ Note however, that if you apply COMPRESS BLOB to an already compressed BLOB, the
 This example allows you to select a document and then compress it:
 
 ```4d
- $vhDocRef :=Open document("")
- If(OK=1)
-    CLOSE DOCUMENT($vhDocRef)
-    DOCUMENT TO BLOB(Document;vxBlob)
-    If(OK=1)
-       COMPRESS BLOB(vxBlob)
-       If(OK=1)
-          BLOB TO DOCUMENT(Document;vxBlob)
-       End if
-    End if
- End if
+ $vhDocRef :=Open document("")
+ If(OK=1)
+    CLOSE DOCUMENT($vhDocRef)
+    DOCUMENT TO BLOB(Document;vxBlob)
+    If(OK=1)
+       COMPRESS BLOB(vxBlob)
+       If(OK=1)
+          BLOB TO DOCUMENT(Document;vxBlob)
+       End if
+    End if
+ End if
 ```
 
 ## Example 3 
@@ -79,11 +91,11 @@ This example allows you to select a document and then compress it:
 Sending of raw HTTP data compressed with GZIP:
 
 ```4d
- COMPRESS BLOB($blob;GZIP Best compression mode)
- var $vEncoding : Text
- $vEncoding:="Content-encoding: gzip"
- WEB SET HTTP HEADER($vEncoding)
- WEB SEND RAW DATA($blob ;*)
+ COMPRESS BLOB($blob;GZIP Best compression mode)
+ var $vEncoding : Text
+ $vEncoding:="Content-encoding: gzip"
+ WEB SET HTTP HEADER($vEncoding)
+ WEB SEND RAW DATA($blob ;*)
 ```
 
 ## System variables and sets 

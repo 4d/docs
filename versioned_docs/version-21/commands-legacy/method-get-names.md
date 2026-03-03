@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.METHOD GET NAMES.Summary-->The **METHOD GET NAMES** command fills the *arrNames* array with the names of project methods created in the application.<!-- END REF-->
@@ -32,14 +42,14 @@ If this command is executed from a component, it returns by default the names of
 Here are a few typical examples of use:
 
 ```4d
-  // List of all project methods of the database
- METHOD GET NAMES(t_Names)
- 
-  //  List of project methods beginning with a specific string
- METHOD GET NAMES(t_Names;"web_@")
- 
-  // List of project methods in the host database beginning with a specific string
- METHOD GET NAMES(t_Names;"web_@";*)
+  // List of all project methods of the database
+ METHOD GET NAMES(t_Names)
+ 
+  //  List of project methods beginning with a specific string
+ METHOD GET NAMES(t_Names;"web_@")
+ 
+  // List of project methods in the host database beginning with a specific string
+ METHOD GET NAMES(t_Names;"web_@";*)
 ```
 
 

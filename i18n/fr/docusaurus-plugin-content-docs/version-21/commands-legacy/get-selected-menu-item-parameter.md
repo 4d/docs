@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL Release 4|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get selected menu item parameter.Summary-->La commande **Get selected menu item parameter** retourne la chaîne de caractères personnalisée associée à la ligne de menu sélectionnée.<!-- END REF--> Ce paramètre doit avoir été préalablement défini à l’aide de la commande [SET MENU ITEM PARAMETER](set-menu-item-parameter.md).  

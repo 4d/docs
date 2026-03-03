@@ -5,7 +5,7 @@ slug: /commands/object-duplicate
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT DUPLICATE.Syntax-->**OBJECT DUPLICATE** ( * ; *object* : Text {; *newName* : Text {; *newVar* : Pointer {; *boundTo* : Text {; *moveH* : Integer {; *moveV* : Integer {; *resizeH* : Integer {; *resizeV* : Integer}}}}}}} {; *} )<br/>**OBJECT DUPLICATE** ( *object* : Variable, Field {; *newName* : Text {; *newVar* : Pointer {; *boundTo* : Text {; *moveH* : Integer {; *moveV* : Integer {; *resizeH* : Integer {; *resizeV* : Integer}}}}}}} {; *} )<!-- END REF-->
+<!--REF #_command_.OBJECT DUPLICATE.Syntax-->**OBJECT DUPLICATE** ( * ; *object* : Text {; *newName* : Text}{; *newVar* : Pointer}{; *boundTo* : Text}{; *moveH* : Integer} {; *moveV* : Integer} {; *resizeH* : Integer} {; *resizeV* : Integer} )<br/>**OBJECT DUPLICATE** ( *object* : Variable, Field {; newName : Text} {; newVar : Pointer} {; boundTo : Text} {; moveH : Integer} {; moveV : Integer} {; resizeH : Integer} {; resizeV : Integer} )<br/>**OBJECT DUPLICATE** ( * ; *object* : Text {; *newName* : Text}{; *newVar* : Pointer}{; *boundTo* : Text}; *moveH* : Integer; *moveV* : Integer; *resizeH* : Integer; *resizeV* : Integer ; * )<br/>**OBJECT DUPLICATE** ( *object* : Variable, Field {; newName : Text} {; newVar : Pointer} {; boundTo : Text}; moveH : Integer; moveV : Integer; resizeH : Integer; resizeV : Integer; * )<!-- END REF-->
 <!--REF #_command_.OBJECT DUPLICATE.Params-->
 <div class="no-index">
 
@@ -23,6 +23,16 @@ displayed_sidebar: docs
 | * | Operator | &#8594;  | If specified= absolute coordinates<br/>If omitted= relative coordinates |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Created|
+
+</details>
+</div>
 
 ## Description 
 

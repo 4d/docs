@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14 R3|Modified|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.MAXIMIZE WINDOW.Summary-->The MAXIMIZE WINDOW command triggers the expansion of the window whose reference number was passed in *window*.<!-- END REF--> If this parameter is omitted, the effect is the same but is applied to all the frontmost windows of the current process (Windows) or to the frontmost window of the current process (macOS). 
@@ -54,9 +65,9 @@ Zoom box on Mac OS
 This example sets the window size of your form to full screen when it is opened. To achieve this, the following code is placed in the form method:
 
 ```4d
-  // In the Form method
- 
- MAXIMIZE WINDOW
+  // In the Form method
+ 
+ MAXIMIZE WINDOW
 ```
 
 ## Example 2 
@@ -68,7 +79,7 @@ This example illustrates how size constraints are handled on Windows (MDI mode).
 The method of the button contains simply:
 
 ```4d
- MAXIMIZE WINDOW(Current form window)
+ MAXIMIZE WINDOW(Current form window)
 ```
 
 In this context, when the user clicks on the button:

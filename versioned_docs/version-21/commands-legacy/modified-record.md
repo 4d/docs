@@ -26,7 +26,7 @@ Note that this function always returns True in the following contexts:
 * after the execution of the [PUSH RECORD](push-record.md) and [POP RECORD](pop-record.md) commands,
 * as soon as a value has been assigned to a field of the record, even if it is the same value as the former one. For example, **Modified record** returns True after the following statement is executed:  
 ```4d  
- [Table_1]Field_1:=[Table_1]Field_1  
+ [Table_1]Field_1:=[Table_1]Field_1  
 ```
 
 ## Example 
@@ -34,9 +34,9 @@ Note that this function always returns True in the following contexts:
 The following example shows a typical use for **Modified record**:
 
 ```4d
- If(Modified record([Customers]))
-    SAVE RECORD([Customers])
- End if
+ If(Modified record([Customers]))
+    SAVE RECORD([Customers])
+ End if
 ```
 
 ## See also 

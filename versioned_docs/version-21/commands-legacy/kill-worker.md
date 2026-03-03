@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|15 R5|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.KILL WORKER.Summary-->The **KILL WORKER** command posts a message to the worker process whose name or number you passed in *process*, asking it to ignore any pending messages and to terminate its execution as soon as the current task ends.<!-- END REF-->
@@ -33,21 +43,21 @@ If the [CALL WORKER](call-worker.md) command is called to send a message to a wo
 The following code (executed from a form, for example) triggers the termination of a worker:
 
 ```4d
- CALL WORKER(vWorkerName;"theWorker";"end")
+ CALL WORKER(vWorkerName;"theWorker";"end")
 ```
 
 In the worker method (*theWorker*), you add some code to handle this situation:
 
 ```4d
-  //theWorker method
- #DECLARE ($action : Text) //param
- 
- Case of
-    :($action="call") //the worker is called
-       ... //do something
-    :($action="end") //the worker is asked to kill itself
-       KILL WORKER
- End case
+  //theWorker method
+ #DECLARE ($action : Text) //param
+ 
+ Case of
+    :($action="call") //the worker is called
+       ... //do something
+    :($action="end") //the worker is asked to kill itself
+       KILL WORKER
+ End case
 ```
 
 ## See also 

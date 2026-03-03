@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.CLOSE RESOURCE FILE.Summary-->**CLOSE RESOURCE FILE**コマンドは、引数*resFile*に渡された参照番号を持つリソースファイルを閉じます。<!-- END REF-->

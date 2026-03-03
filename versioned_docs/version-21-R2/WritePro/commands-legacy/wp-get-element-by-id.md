@@ -32,8 +32,8 @@ Pass the ID attribute of the element to retrieve in the *ID* parameter. The elem
 To get the picture with the ID "img1":
 
 ```4d
- var obImage : Object
- obImage:=WP Get element by ID(myDoc;"img1")
+ var obImage : Object
+ obImage:=WP Get element by ID(myDoc;"img1")
 ```
 
 ## Example 2 
@@ -41,11 +41,11 @@ To get the picture with the ID "img1":
 You want to find a table element and modify it to have a large purple border:
 
 ```4d
- var $element : Object
- $element:=WP Get element by ID(myDoc;"Table1")
- WP SET ATTRIBUTES($element;wk border style;wk solid)
- WP SET ATTRIBUTES($element;wk border width;"4px")
- WP SET ATTRIBUTES($element;wk border color;"purple")
+ var $element : Object
+ $element:=WP Get element by ID(myDoc;"Table1")
+ WP SET ATTRIBUTES($element;wk border style;wk solid)
+ WP SET ATTRIBUTES($element;wk border width;"4px")
+ WP SET ATTRIBUTES($element;wk border color;"purple")
 ```
 
 ## Example 3 
@@ -53,12 +53,12 @@ You want to find a table element and modify it to have a large purple border:
 You want to retrieve an element and modify its ID:
 
 ```4d
- $colTable:=WP Create table range([INFO]Sample)
- $elements:=WP Get elements($colTable)
- $elem:=WP Get element by ID([INFO]Sample;"Paris")
- If($elem#Null)
-    $elem.ID:="Lyon"
- End if
+ $colTable:=WP Create table range([INFO]Sample)
+ $elements:=WP Get elements($colTable)
+ $elem:=WP Get element by ID([INFO]Sample;"Paris")
+ If($elem#Null)
+    $elem.ID:="Lyon"
+ End if
 ```
 
 ## See also 

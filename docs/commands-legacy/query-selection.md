@@ -5,7 +5,7 @@ slug: /commands/query-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY SELECTION.Syntax-->**QUERY SELECTION** ( {*aTable* : Table }{;}{ *queryArgument* : Expression {; *}} )<!-- END REF-->
+<!--REF #_command_.QUERY SELECTION.Syntax-->**QUERY SELECTION** ( *aTable* : Table {; *queryArgument* : Expression {; *} )<br/>**QUERY SELECTION** ( *queryArgument* : Expression {; *} )<!-- END REF-->
 <!--REF #_command_.QUERY SELECTION.Params-->
 <div class="no-index">
 
@@ -16,6 +16,17 @@ displayed_sidebar: docs
 | * | Operator | &#8594;  | Continue query flag |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6.5|Modified|
+|<6|Created|
+
+</details>
+</div>
 
 ## Description 
 

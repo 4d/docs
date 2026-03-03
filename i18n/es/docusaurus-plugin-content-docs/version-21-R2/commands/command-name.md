@@ -9,6 +9,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Command name.Params-->
 
+<div class="no-index">
+
 | Parámetros | Tipo    |                             | Descripción                     |
 | ---------- | ------- | --------------------------- | ------------------------------- |
 | comando    | Integer | &#8594; | Número de comando               |
@@ -16,8 +18,10 @@ displayed_sidebar: docs
 | theme      | Text    | &#8592; | Tema del lenguaje del comando   |
 | Resultado  | Text    | &#8592; | Nombre del comando              |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones                   |
@@ -25,6 +29,7 @@ displayed_sidebar: docs
 | 20 R9       | Soporte de la propiedad obsoleta |
 
 </details>
+</div>
 
 ## Descripción
 

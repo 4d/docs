@@ -5,7 +5,7 @@ slug: /commands/application-version
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Application version.Syntax-->**Application version** ( *buildNum* : Integer {; *} ) : Text<!-- END REF-->
+<!--REF #_command_.Application version.Syntax-->**Application version** ( {*buildNum* : Integer} {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Application version.Params-->
 <div class="no-index">
 
@@ -17,11 +17,23 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14 R2|Modified|
+|11 SQL Release 5|Modified|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
-<!--REF #_command_.Application version.Summary-->The Application version command returns an encoded string value that expresses the version number of the 4D environment you are running.<!-- END REF-->
+<!--REF #_command_.Application version.Summary-->The **Application version** command returns an encoded string value that expresses the version number of the 4D environment you are running.<!-- END REF-->
 
- \- If you do not pass the optional \* parameter, a 4-character string is returned, formatted as follows:
+- If you do not pass the optional \* parameter, a 4-character string is returned, formatted as follows:
 
 | **Characters** | **Description** |
 | -------------- | --------------- |
@@ -29,19 +41,17 @@ displayed_sidebar: docs
 | 3              | "R" number      |
 | 4              | Revision number |
 
-\- If you pass the optional *\** parameter, an 8-character string is returned, formatted as follows:
+- If you pass the optional *\** parameter, an 8-character string is returned, formatted as follows:
 
-| **Characters**                                 | **Description**                |
-| ---------------------------------------------- | ------------------------------ |
-| 1                                              | "F" denotes a final version    |
-| "B" denotes a beta version                     |                                |
-| Other characters denote an 4D internal version |                                |
+| **Characters**    | **Description**    |
+| ----------------- | ------------------------------ |
+| 1         | <ul><li> "F" denotes a final version</li><li>"B" denotes a beta version</li><li>Other characters denote an 4D internal</li></ul>  |
 | 2-3-4                                          | Internal 4D compilation number |
 | 5-6                                            | Version number                 |
 | 7                                              | "R" number                     |
 | 8                                              | Revision number                |
 
-**Compatibility note (4D v14)**
+**Compatibility note**
 
 Version numbering has been changed beginning with version 14 of 4D:
 
@@ -54,22 +64,22 @@ Examples for a short version number:
 
 | **Versions** | **Value returned** |                                  |
 | ------------ | ------------------ | -------------------------------- |
-| 4D v13.1     | "1310"             | *Previous numbering system*      |
-| 4D v14 R2    | "1420"             | Release R2                       |
-| 4D v14 R3    | "1430"             | Release R3                       |
-| 4D v14.1     | "1401"             | First bug fix version of 4D v14  |
-| 4D v14.2     | "1402"             | Second bug fix version of 4D v14 |
+| 4D 13.1     | "1310"             | *Previous numbering system*      |
+| 4D 14 R2    | "1420"             | Release R2                       |
+| 4D 14 R3    | "1430"             | Release R3                       |
+| 4D 14.1     | "1401"             | First bug fix version of 4D 14  |
+| 4D 14.2     | "1402"             | Second bug fix version of 4D 14 |
 
 Examples for a long version number:
 
 | **Versions**    | **Value returned** |
 | --------------- | ------------------ |
-| 4D v12.5 beta   | "B0011250"         |
-| 4D v14 R2 beta  | "B0011420"         |
-| 4D v14 R3 final | "F0011430"         |
-| 4D v14.1 beta   | "B0011401"         |
+| 4D 12.5 beta   | "B0011250"         |
+| 4D 14 R2 beta  | "B0011420"         |
+| 4D 14 R3 final | "F0011430"         |
+| 4D 14.1 beta   | "B0011401"         |
 
-The Application version command can return additional information in the optional *buildNum* parameter: the build number of the current version of the 4D application. This is an internal compilation number that can be used for versioning or when contacting the 4D Technical Services department.
+The `Application version` command can return additional information in the optional *buildNum* parameter: the build number of the current version of the 4D application. This is an internal compilation number that can be used for versioning or when contacting the 4D Technical Services department.
 
 **Note:** In the case of applications that are compiled and merged with 4D Volume Desktop, the build number returned is not significant. In this context, version information is managed by the developer. 
 

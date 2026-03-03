@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SQL LOAD RECORD.Summary-->The SQL LOAD RECORD command retrieves one or more record(s) in 4D coming from the data source open in the current connection.<!-- END REF-->

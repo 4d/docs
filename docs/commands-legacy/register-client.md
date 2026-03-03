@@ -15,7 +15,7 @@ displayed_sidebar: docs
 </details>
 
 
-<!--REF #_command_.REGISTER CLIENT.Syntax-->**REGISTER CLIENT** ( *clientName* : Text )<!-- END REF-->
+<!--REF #_command_.REGISTER CLIENT.Syntax-->**REGISTER CLIENT** ( {*clientName* : Text} )<!-- END REF-->
 <!--REF #_command_.REGISTER CLIENT.Params-->
 <div class="no-index">
 
@@ -24,6 +24,17 @@ displayed_sidebar: docs
 | clientName | Text | &#8594;  | Name of the 4D client session |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL Release 3|Modified|
+|<6|Created|
+
+</details>
+</div>
 
 ## Description 
 

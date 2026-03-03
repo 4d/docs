@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|19|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Get Application color scheme.Summary-->**Get Application color scheme** コマンドは、アプリケーションレベルで使用されている実際のカラースキームの名前を返します。<!-- END REF-->

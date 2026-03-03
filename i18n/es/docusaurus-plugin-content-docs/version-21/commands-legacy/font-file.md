@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|18|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Font file.Summary-->El comando **Font file** devuelve un objeto que describe el archivo de fuente de su sistema operativo correspondiente a *familiaFuente* y, opcionalmente, a *estilofuente* pasado en el parámetro.<!-- END REF--> 

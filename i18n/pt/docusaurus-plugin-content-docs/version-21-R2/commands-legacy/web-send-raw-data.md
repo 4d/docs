@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Criado por|
+|13|Renomear|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.WEB SEND RAW DATA.Summary-->O comando \[**#current\_title\]** permite ao servidor web 4D enviar dados HTTP "brutos", os quais podem estar em pedaços.<!-- END REF-->  

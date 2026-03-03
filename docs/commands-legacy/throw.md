@@ -5,7 +5,7 @@ slug: /commands/throw
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.throw.Syntax-->**throw** ( *errorCode* : Integer {; *description* : Text} )<br/>**throw** ( *errorObj* : Object )<!-- END REF-->
+<!--REF #_command_.throw.Syntax-->**throw** ( *errorCode* : Integer {; *description* : Text} )<br/>**throw** ({ *errorObj* : Object })<!-- END REF-->
 <!--REF #_command_.throw.Params-->
 <div class="no-index">
 
@@ -16,6 +16,17 @@ displayed_sidebar: docs
 | errorObj | Object | &#8594;  | An object containing properties to build the error |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|20 R5|Modified|
+|20 R2|Created|
+
+</details>
+</div>
 
 ## Description 
 

@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Application type.Summary-->The Application type command returns a numeric value that denotes the type of 4D environment that you are running.<!-- END REF--> 4D provides the following predefined constants:  
@@ -35,9 +46,9 @@ displayed_sidebar: docs
 Somewhere in your code, other than in the *On Server Startup Database Method*, you need to check if you are running 4D Server. You can write:
 
 ```4d
- If(Application type=4D Server)
-  //Perform appropriate actions
- End if
+ If(Application type=4D Server)
+  //Perform appropriate actions
+ End if
 ```
 
 ## See also 

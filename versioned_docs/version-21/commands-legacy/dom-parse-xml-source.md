@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM Parse XML source.Summary-->The DOM Parse XML source command parses a document containing an XML structure and returns a reference for this document.<!-- END REF--> The command can validate (or not) the document via a DTD or an XML schema (XML Schema Definition (XSD) document).   
@@ -63,7 +74,7 @@ The command returns a 16-character string (ElementRef) making up the reference i
 Opening an XML document located on disk, without validation:
 
 ```4d
- $xml_Struct_Ref:=DOM Parse XML source("C:\\import.xml")
+ $xml_Struct_Ref:=DOM Parse XML source("C:\\import.xml")
 ```
 
 ## Example 2 
@@ -71,7 +82,7 @@ Opening an XML document located on disk, without validation:
 Opening an XML document located next to the database structure file, without validation:
 
 ```4d
- $xml_Struct_Ref:=DOM Parse XML source("import.xml")
+ $xml_Struct_Ref:=DOM Parse XML source("import.xml")
 ```
 
 ## Example 3 
@@ -79,7 +90,7 @@ Opening an XML document located next to the database structure file, without val
 Opening an XML document located on disk and validation using a DTD on the disk:
 
 ```4d
- $xml_Struct_Ref:=DOM Parse XML source("C:\\import.xml";True;"C:\\import_dtd.xml")
+ $xml_Struct_Ref:=DOM Parse XML source("C:\\import.xml";True;"C:\\import_dtd.xml")
 ```
 
 ## Example 4 
@@ -87,7 +98,7 @@ Opening an XML document located on disk and validation using a DTD on the disk:
 Opening an XML document located at a specific URL, without validation:
 
 ```4d
- $xml_Struct_Ref:=DOM Parse XML source("http://www.4D.com/xml/import.xml")
+ $xml_Struct_Ref:=DOM Parse XML source("http://www.4D.com/xml/import.xml")
 ```
 
 ## System variables and sets 

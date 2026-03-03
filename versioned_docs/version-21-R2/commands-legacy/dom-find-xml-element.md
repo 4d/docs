@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM Find XML element.Summary-->The DOM Find XML element command looks for specific XML elements in an XML structure.<!-- END REF--> The search starts at the element designated by the *elementRef* parameter. 
@@ -57,8 +68,18 @@ The command returns the XML reference of the element(s) found. When the *arrElem
 
 Give the following XML structure:
 
-```json
-  Harry Potter  29.99  Learning XML  39.95
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<bookstore>
+<book>
+  <title lang="en">Harry Potter</title>
+  <price>29.99</price>
+</book>
+<book>
+  <title lang="en">Learning XML</title>
+  <price>39.95</price>
+</book>
+</bookstore>
 ```
 
 This example lets you quickly look for an XML element and display its value:
@@ -84,8 +105,15 @@ The same search can also be done as follows:
 
 Given the following XML structure: 
 
-```json
-         aaa      bbb      ccc   
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Root>
+   <Elem1>
+      <Elem2>aaa</Elem2>
+      <Elem2>bbb</Elem2>
+      <Elem2>ccc</Elem2>
+   </Elem1>
+</Root>
 ```
 
 The following code can be used to retrieve the reference of each Elem2 element in the arrAfound array:

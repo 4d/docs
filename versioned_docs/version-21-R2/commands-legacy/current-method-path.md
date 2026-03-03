@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Current method path.Summary-->The **Current method path** command returns the internal pathname of the database method, trigger, project method, form method or object method being executed.<!-- END REF-->In the context of 4D macro-commands, the *<method\_path>* tag is replaced in the code by the full pathname of the method being executed. 

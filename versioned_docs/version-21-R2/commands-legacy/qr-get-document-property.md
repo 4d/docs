@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2003|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR Get document property.Summary-->The **QR Get document property** command retrieves the display status for the print dialog box or the unit used for the document that are present in *area*.<!-- END REF-->

@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R2|Created|
+
+</details>
+</div>
+
 ## Expert mode 
 
 <!--REF #_command_.ADJUST INDEX CACHE PRIORITY.Summary-->This command is reserved for specific needs.<!-- END REF--> It must be used with care since it can affect database performance.
@@ -43,11 +53,11 @@ Pass one of the following constants from the "*Cache Management*" theme in the *
 You want to temporarily change the cache priority for the \[Docs\]Comments field index(es):
 
 ```4d
- ADJUST INDEX CACHE PRIORITY([Docs]Comments;Cache priority very high)
- QUERY([Docs];[Docs]Comments%"Extra") // search on an indexed field
-  //... run several other queries or sorts on the same table
-  // when finished, set back to normal cache priority
- ADJUST INDEX CACHE PRIORITY([Docs]Comments;Cache priority normal)
+ ADJUST INDEX CACHE PRIORITY([Docs]Comments;Cache priority very high)
+ QUERY([Docs];[Docs]Comments%"Extra") // search on an indexed field
+  //... run several other queries or sorts on the same table
+  // when finished, set back to normal cache priority
+ ADJUST INDEX CACHE PRIORITY([Docs]Comments;Cache priority normal)
 ```
 
 ## See also 

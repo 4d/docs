@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.MOVE DOCUMENT.Summary-->The **MOVE DOCUMENT** command moves or renames a document.<!-- END REF-->
@@ -29,7 +39,7 @@ You specify the full pathname to the document in *srcPathname* and the new name 
 The following example renames the document DocName:
 
 ```4d
- MOVE DOCUMENT("C:\\FOLDER\\DocName";"C:\\FOLDER\\NewDocName")
+ MOVE DOCUMENT("C:\\FOLDER\\DocName";"C:\\FOLDER\\NewDocName")
 ```
 
 ## Example 2 
@@ -37,7 +47,7 @@ The following example renames the document DocName:
 The following example moves and renames the document DocName:
 
 ```4d
- MOVE DOCUMENT("C:\\FOLDER1\\DocName";"C:\\FOLDER2\\NewDocName")
+ MOVE DOCUMENT("C:\\FOLDER1\\DocName";"C:\\FOLDER2\\NewDocName")
 ```
 
 ## Example 3 
@@ -45,7 +55,7 @@ The following example moves and renames the document DocName:
 The following example moves the document DocName:
 
 ```4d
- MOVE DOCUMENT("C:\\FOLDER1\\DocName";"C:\\FOLDER2\\DocName")
+ MOVE DOCUMENT("C:\\FOLDER1\\DocName";"C:\\FOLDER2\\DocName")
 ```
 
 **Note:** In the last two examples, the destination folder *"C:\\\\FOLDER2"* must exist. The MOVE DOCUMENT command only moves a document; it does not create folders.

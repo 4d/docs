@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6|Creado por|
+|14|Modificado|
+|16 R4|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.VARIABLE TO BLOB.Summary-->El comando VARIABLE TO BLOB almacena la variable *variable* en el BLOB *blob*.<!-- END REF-->

@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|2004|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.DOM Get XML information.Summary-->O comando DOM Get XML information permite recuperar diversas informações sobre o elemento XML designado por *refElemento*.<!-- END REF-->  

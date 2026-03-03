@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.QUERY WITH ARRAY.Summary-->コマンドは、*targetField*の値が少なくとも*array*要素のうち1つに等しいレコードを、 *targetField*が属するテーブルの全レコードの中から検索します。<!-- END REF-->検索されたレコードはカレントセレクションとなります。

@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ORDER BY.Summary-->**ORDER BY** trie (réordonne) les enregistrements de la sélection courante de *laTable* pour le process courant.<!-- END REF--> Une fois le tri effectué, le premier enregistrement de la sélection courante devient le nouvel enregistrement courant. 

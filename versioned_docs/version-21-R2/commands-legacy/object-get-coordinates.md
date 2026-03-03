@@ -20,6 +20,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|6.7|Modified|
+|12|Renamed|
+|14 R5|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT GET COORDINATES.Summary-->The OBJECT GET COORDINATES command returns the coordinates *left*, *top*, *right* and *bottom* (in points) in variables or fields of the object(s) of the current form defined by the parameters *\** and *object*.<!-- END REF-->

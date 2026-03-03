@@ -5,7 +5,7 @@ slug: /commands/web-get-server-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB Get server info.Syntax-->**WEB Get server info** ( *withCache* : Boolean ) : Object<!-- END REF-->
+<!--REF #_command_.WEB Get server info.Syntax-->**WEB Get server info** ({ *withCache* : Boolean }) : Object<!-- END REF-->
 <!--REF #_command_.WEB Get server info.Params-->
 <div class="no-index">
 
@@ -15,6 +15,18 @@ displayed_sidebar: docs
 | Function result | Object | &#8592; | Information on the running Web server and SOAP server |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|18 R4|Modified|
+|17|Modified|
+|16 R5|Created|
+
+</details>
+</div>
 
 ## Description 
 

@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16|Modifié|
+|14|Modifié|
+|2003|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR ON COMMAND.Summary-->La commande **QR ON COMMAND** exécute la méthode projet 4D dont le nom est passé dans le paramètre *nomMéthode* lorsqu'une commande de l'éditeur d'états rapides est appelée via la sélection d'un menu ou le clic sur un bouton.<!-- END REF-->

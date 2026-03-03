@@ -5,7 +5,7 @@ slug: /commands/sql-export-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL EXPORT SELECTION.Syntax-->**SQL EXPORT SELECTION** ( *aTable* : Table ; *folderPath* : Text {; *numFiles* : Integer {; *fileLimitSize* : Integer {; *fieldLimitSize* : Integer}}} )<!-- END REF-->
+<!--REF #_command_.SQL EXPORT SELECTION.Syntax-->**SQL EXPORT SELECTION** ( {*aTable* : Table ;} *folderPath* : Text {; *numFiles* : Integer {; *fileLimitSize* : Integer {; *fieldLimitSize* : Integer}}} )<!-- END REF-->
 <!--REF #_command_.SQL EXPORT SELECTION.Params-->
 <div class="no-index">
 
@@ -18,6 +18,17 @@ displayed_sidebar: docs
 | fieldLimitSize | Integer | &#8594;  | Size limit (in bytes) below which the contents of a Text, BLOB or Picture field are embedded into the main file |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12.1|Modified|
+|12|Created|
+
+</details>
+</div>
 
 ## Description 
 

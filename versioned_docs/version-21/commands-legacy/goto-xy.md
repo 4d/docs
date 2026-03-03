@@ -39,18 +39,18 @@ See example for the [Milliseconds](milliseconds.md) command.
 The following example: 
 
 ```4d
- Open window(50;50;300;300;5;"This is only a test")
- For($vlRow;0;9)
-    GOTO XY($vlRow;0)
-    MESSAGE(String($vlRow))
- End for
- For($vlLine;0;9)
-    GOTO XY(0;$vlLine)
-    MESSAGE(String($vlLine))
- End for
- $vhStartTime:=Current time
- Repeat
- Until((Current time-$vhStartTime)>†00:00:30†)
+ Open window(50;50;300;300;5;"This is only a test")
+ For($vlRow;0;9)
+    GOTO XY($vlRow;0)
+    MESSAGE(String($vlRow))
+ End for
+ For($vlLine;0;9)
+    GOTO XY(0;$vlLine)
+    MESSAGE(String($vlLine))
+ End for
+ $vhStartTime:=Current time
+ Repeat
+ Until((Current time-$vhStartTime)>†00:00:30†)
 ```
 
 displays the following window (on Macintosh) for 30 seconds:

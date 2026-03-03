@@ -18,6 +18,21 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|20|Modified|
+|17 R2|Modified|
+|16|Modified|
+|13|Modified|
+|11 SQL Release 2|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get 4D folder.Summary-->The **Get 4D folder** command returns the pathname to the active 4D folder of the current application, or to the 4D environment folder specified by the *folder* and *options* parameters, if passed.<!-- END REF--> This command allows you to get the actual pathname of the folders used by the 4D application. By using this command, you ensure that your code will work on any platform running any localized system.
@@ -168,19 +183,19 @@ The database folder (Database folder and Database folder UNIX syntax) returned d
 During the startup of a single-user database, you want to load (or create) your own settings in a file located in the 4D folder. To do so, in the [On Startup database method](on-startup-database-method.md), you can write code similar to this:
 
 ```4d
- $vsPrefDocName:=Get 4D folder+"MyPrefs.prf" //Build pathname to the Preferences file
-  // Check if the file exists
- If(Test path name($vsPrefDocName)#Is a document)
-    $vtPrefDocRef:=Create document($vsPrefDocName.prf) //If not, create it
- Else
-    $vtPrefDocRef:=Open document($vsPrefDocName.prf) //If so, open it
- End if
- If(OK=1)
-  //Process document contents
-    CLOSE DOCUMENT($vtPrefDocRef)
- Else
-  //Handle error
- End if
+ $vsPrefDocName:=Get 4D folder+"MyPrefs.prf" //Build pathname to the Preferences file
+  // Check if the file exists
+ If(Test path name($vsPrefDocName)#Is a document)
+    $vtPrefDocRef:=Create document($vsPrefDocName.prf) //If not, create it
+ Else
+    $vtPrefDocRef:=Open document($vsPrefDocName.prf) //If so, open it
+ End if
+ If(OK=1)
+  //Process document contents
+    CLOSE DOCUMENT($vtPrefDocRef)
+ Else
+  //Handle error
+ End if
 ```
 
 ## Example 2 
@@ -188,12 +203,12 @@ During the startup of a single-user database, you want to load (or create) your 
 This example illustrates the use of the Database folder UNIX syntax constant under Mac OS to list the contents of the database folder:
 
 ```4d
- $posixpath:="\""+Get 4D folder(Database folder Unix syntax)+"\""
- $myfolder:="ls -l "+$posixpath
- $in:=""
- $out:=""
- $err:=""
- LAUNCH EXTERNAL PROCESS($myfolder;$in;$out;$err)
+ $posixpath:="\""+Get 4D folder(Database folder Unix syntax)+"\""
+ $myfolder:="ls -l "+$posixpath
+ $in:=""
+ $out:=""
+ $err:=""
+ LAUNCH EXTERNAL PROCESS($myfolder;$in;$out;$err)
 ```
 
 **Note:** Under Mac OS, it is necessary to put pathnames in quotes when they contain the names of files or folders with spaces in them. The escape sequence "\\" can be used to insert the quotation mark character into the string. You can also use the statement Char(Double quote). 

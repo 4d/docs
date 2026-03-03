@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|2004.2|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.DOM Get first child XML element.Summary-->El comando DOM Get first child XML element devuelve una referencia XML al primer “hijo” del elemento XML pasado en *refElement*.<!-- END REF--> Esta referencia puede utilizarse con otros comandos de análisis XML. 

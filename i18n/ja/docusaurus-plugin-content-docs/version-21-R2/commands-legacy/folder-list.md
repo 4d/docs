@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.FOLDER LIST.Summary-->FOLDER LIST コマンド は、*pathname*に渡すパス名にあるフォルダの名前を要素とするテキストまたは文字列配列*directories*を生成します。<!-- END REF-->引数*pathname* は完全なパス名だけを受け入れます。 

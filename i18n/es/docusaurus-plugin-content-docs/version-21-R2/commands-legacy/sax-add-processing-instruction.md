@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|2004|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SAX ADD PROCESSING INSTRUCTION.Summary-->El comando SAX ADD PROCESSING INSTRUCTION añade en el documento XML referenciado por *documento*, una *instruccion* de procesamiento XML.<!-- END REF--> 

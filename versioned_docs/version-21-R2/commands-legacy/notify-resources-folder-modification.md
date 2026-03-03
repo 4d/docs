@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL Release 2|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.NOTIFY RESOURCES FOLDER MODIFICATION.Summary-->The NOTIFY RESOURCES FOLDER MODIFICATION command "forces" 4D Server to send a notification to all the connected 4D machines indicating that the Resources folder of the database has been modified so that they can synchronize their local Resources folder.<!-- END REF--> 

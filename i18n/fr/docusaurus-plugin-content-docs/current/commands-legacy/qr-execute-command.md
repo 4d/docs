@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|17 R6|Modifié|
+|16|Modifié|
+|2003|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR EXECUTE COMMAND.Summary-->La commande **QR EXECUTE COMMAND** exécute la commande de bouton de la barre d'outils dont la référence est passée dans le paramètre *numCommande*.<!-- END REF--> En général, cette commande est utilisée pour exécuter une commande de menu sélectionnée par l'utilisateur et interceptée dans votre code via la commande [QR ON COMMAND](qr-on-command.md).

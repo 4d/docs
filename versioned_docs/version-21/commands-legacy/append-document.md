@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Append document.Summary-->The **Append document** command does the same as thing as [Open document](open-document.md): it opens a document on disk.<!-- END REF-->
@@ -30,10 +41,10 @@ Refer to [Open document](open-document.md) for more details about using **Append
 The following example opens an existing document called Note, appends the string "and so long" and a carriage return onto the end of the document, and closes the document. If the document already contained the string "Good-bye", the document would now contain the string “Good-bye and so long”, followed by a carriage return:
 
 ```4d
- var vhDocRef : Time
- vhDocRef:=Append document("Note.txt") //Open Note document
- SEND PACKET(vhDocRef;" and so long"+Char(13)) //Append a string
- CLOSE DOCUMENT(vhDocRef) //Close the document
+ var vhDocRef : Time
+ vhDocRef:=Append document("Note.txt") //Open Note document
+ SEND PACKET(vhDocRef;" and so long"+Char(13)) //Append a string
+ CLOSE DOCUMENT(vhDocRef) //Close the document
 ```
 
 ## See also 

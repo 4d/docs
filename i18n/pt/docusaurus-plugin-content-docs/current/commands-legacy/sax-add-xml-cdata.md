@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SAX ADD XML CDATA.Summary-->O comando SAX ADD XML CDATA adiciona no documento XML referenciado por *documento*, os dados de tipo texto ou BLOB.<!-- END REF--> Estes dados serão emoldurados automaticamente com as etiquetas <!\[CDATA\[ e \]\]>  

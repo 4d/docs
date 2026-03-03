@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004.4|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.CHECK LOG FILE.Summary-->**CHECK LOG FILE** コマンドは、データベースのカレントログファイルの内容をブラウズできるダイアログを表示します。<!-- END REF-->このダイアログにはMaintenance & Security Centerからもアクセスできます:

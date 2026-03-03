@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Is compiled mode.Summary-->Is compiled mode tests whether you are running in compiled mode (True) or interpreted mode (False).<!-- END REF-->  
@@ -32,11 +43,11 @@ The optional *\** parameter is useful in the case of an architecture using compo
 In one of your routines, you include debugging code useful only when you are running in interpreted mode, so surround this debugging code with a test that calls **Is compiled mode**:
 
 ```4d
-  // ...
- If(Not(Is compiled mode))
-  // Include debugging code here
- End if
-  // ...
+  // ...
+ If(Not(Is compiled mode))
+  // Include debugging code here
+ End if
+  // ...
 ```
 
 ## See also 

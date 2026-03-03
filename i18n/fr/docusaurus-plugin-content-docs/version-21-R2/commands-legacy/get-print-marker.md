@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|2003|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get print marker.Summary-->La commande **Get print marker** permet de récupérer la position courante d’un taquet lors d’une impression.<!-- END REF--> Les coordonnées sont retournées en pixels (1 pixel = 1/72 pouce). 

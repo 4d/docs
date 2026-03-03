@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX COLLAPSE.Summary-->The LISTBOX COLLAPSE command is used to collapse the break rows of the list box object designated by the *object* and *\** parameters.<!-- END REF-->
@@ -46,7 +56,7 @@ If the selection or list box does not contain a break row or if all the break ro
 This example collapses the first level of the break rows of the selection in the list box:
 
 ```4d
- LISTBOX COLLAPSE(*;"MyListbox";False;lk selection)
+ LISTBOX COLLAPSE(*;"MyListbox";False;lk selection)
 ```
 
 ## See also 

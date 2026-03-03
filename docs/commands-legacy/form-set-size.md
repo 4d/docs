@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Renamed|
+|2004|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM SET SIZE.Summary-->The **FORM SET SIZE** command allows you to change the size of the current form by programming.<!-- END REF--> The new size is defined for the current process; it is not saved with the form.  

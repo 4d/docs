@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OBJECT Get multiline.Summary-->El comando **OBJECT Get multiline** devuelve el estado actual de la opción "Multilínea" del objeto o de los objetos designado(s) por los parámetros *objeto* y *\** .<!-- END REF-->  

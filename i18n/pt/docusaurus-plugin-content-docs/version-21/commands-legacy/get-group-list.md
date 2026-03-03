@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GET GROUP LIST.Summary-->GET GROUP LIST preenche os arrays *nomGrupos e numGrupos* com os nomes e os números de referência únicos dos grupos tais como aparecem no editor de senhas.<!-- END REF-->  

@@ -17,6 +17,22 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+|12|Renamed|
+|12|Modified|
+|15 R5|Modified|
+|20|Modified|
+|20 R4|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET FORMAT.Summary-->**OBJECT SET FORMAT** sets the display format for the objects specified by *object* to the format you pass in *displayFormat*.<!-- END REF--> The new format is only used for the current display; it is not stored with the form.

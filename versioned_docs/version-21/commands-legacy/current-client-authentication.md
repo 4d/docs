@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|15 R5|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Current client authentication.Summary-->The **Current client authentication** command asks the Windows Active Directory server to authenticate the current client and, if successful, returns the Windows login name for this client (session identifier).<!-- END REF--> If the authentication failed, an empty string is returned. 
@@ -57,16 +67,16 @@ With this setting, no password dialog will be displayed for a remote 4D that con
 2. In the On Server Open Connection database method, add the following code to check user authentication from the Active Directory:
 
 ```4d
-  //On Server Open Connection database method
- var $0;$1;$2;$3 : Integer
- $login:=Current client authentication($domain;$protocol)
- If($login #"") //a login was returned
-  //call your custom authentication method
-    $0:=CheckCredentials($login)
-  //should return 0 in case of success or -1 for error
- Else
-    $0:=-1 //reject the connection
- End if
+  //On Server Open Connection database method
+ var $0;$1;$2;$3 : Integer
+ $login:=Current client authentication($domain;$protocol)
+ If($login #"") //a login was returned
+  //call your custom authentication method
+    $0:=CheckCredentials($login)
+  //should return 0 in case of success or -1 for error
+ Else
+    $0:=-1 //reject the connection
+ End if
 ```
 
 **Note:** This example shows a basic scenario that must be adapted to your solutions. The 4D user custom authentication method (CheckCredentials in the above example) could be based on one of the following implementations:

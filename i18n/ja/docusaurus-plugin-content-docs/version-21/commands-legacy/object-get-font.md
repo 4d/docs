@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT Get font.Summary-->**OBJECT Get font**コマンドは *object*指定されたフォームオブジェクトで使用されている文字フォントの名前を返します。<!-- END REF-->

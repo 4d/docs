@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|18 R4|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.RELOAD PROJECT.Summary-->**RELOAD PROJECT** コマンドは、カレントの4D 環境で実行中のプロジェクトに対して、ソースファイル定義(メソッド、ファイル、等)をディスクから再読み込みします。<!-- END REF-->このコマンドは**インタープリタモード**で実行中の4D プロジェクトに対してのみ使用可能です。コマンドの実行は非同期となります。

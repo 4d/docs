@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|15 R5|Creado por|
+|16 R4|Modificado|
+|19 R6|Modificado|
+
+</details>
+</div>
+
 ## Descripción
 
 <!--REF #_command_.CALL FORM.Summary-->El comando **CALL FORM** ejecuta el código designado en *formula* con el(los) *param*(s) opcional(es) en el contexto de un formulario que se muestra en una *ventana*, independientemente del proceso al que pertenece la ventana.<!-- END REF-->

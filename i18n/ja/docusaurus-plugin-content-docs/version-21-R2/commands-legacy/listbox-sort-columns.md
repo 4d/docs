@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004|初出|
+|12|名称変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LISTBOX SORT COLUMNS.Summary-->LISTBOX SORT COLUMNS コマンドは、1つ以上の列の値に基づいて、*object* 引数および*\**で指定されたリストボックスの行に対して、標準の並べ替えを適用します。<!-- END REF-->

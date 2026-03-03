@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.PLUGIN LIST.Summary-->O comandoPLUGIN LISTpreenche os arrays *numerosArray* e *arraynomes* com os números e os nomes dos plug-ins carregados e utilizáveis pela aplicação 4D.<!-- END REF--> Estes dois arrays são dimensionados automaticamente e sincronizados pelo comando. 

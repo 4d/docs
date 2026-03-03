@@ -8,6 +8,7 @@ title: Notas del lanzamiento
 #### Lo más destacado
 
 - El comando [`JSON Validate`](../commands/json-validate.md) ahora es compatible con el borrador 2020-12 del esquema JSON.
+- Ability to use a custom certificate from the macOS keychain instead of a local certificates folder in [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) and [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) classes.
 
 #### Cambios de comportamiento
 

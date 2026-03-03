@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SPELL ADD TO USER DICTIONARY.Summary-->La commande **SPELL ADD TO USER DICTIONARY** permet d’ajouter un ou plusieurs mot(s) au dictionnaire utilisateur courant.<!-- END REF--> 

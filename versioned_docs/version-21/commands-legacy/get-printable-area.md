@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6.8.1|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET PRINTABLE AREA.Summary-->The **GET PRINTABLE AREA** command returns the size, in pixels, of the *height* and *width* parameters of the printable area.<!-- END REF--> This size depends on the current printing parameters, the paper orientation, etc. 
@@ -32,8 +42,8 @@ To know the total size of the page, you can:
 * or use the following syntax:
 
 ```4d
- SET PRINTABLE MARGIN(0;0;0;0) // Set the paper margin
- GET PRINTABLE AREA(hPaper;wPaper) // Paper size
+ SET PRINTABLE MARGIN(0;0;0;0) // Set the paper margin
+ GET PRINTABLE AREA(hPaper;wPaper) // Paper size
 ```
 
 ## See also 

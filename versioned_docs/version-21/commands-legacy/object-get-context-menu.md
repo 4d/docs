@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT Get context menu.Summary-->The **OBJECT Get context menu** command returns the current state of the "Context Menu" option for the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 

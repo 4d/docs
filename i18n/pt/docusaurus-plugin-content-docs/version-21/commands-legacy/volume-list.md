@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.VOLUME LIST.Summary-->O comando VOLUME LIST preenche o array *volumes*, tipo de texto, com os nomes dos volumes definidos (Windows) ou montados (macOS) em sua máquina.<!-- END REF-->  

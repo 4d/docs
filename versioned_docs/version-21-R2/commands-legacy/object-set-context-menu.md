@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET CONTEXT MENU.Summary-->The **OBJECT SET CONTEXT MENU** command enables or disables, for the current process, the association of a context menu by default with the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 

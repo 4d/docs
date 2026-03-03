@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|15|変更|
+|13|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET EXTERNAL DATA PATH.Summary-->**SET EXTERNAL DATA PATH**コマンドは*aField*引数に渡したフィールドの、カレントレコードの、外部ストレージの場所を設定あるいは変更します。<!-- END REF-->
@@ -61,6 +72,8 @@ displayed_sidebar: docs
 
 [Get external data path](get-external-data-path.md)  
 [RELOAD EXTERNAL DATA](reload-external-data.md)  
+[ORDA: Assigning files to picture or blob attributes](../ORDA/entities.md#assigning-files-to-picture-or-blob-attributes)
+
 
 ## プロパティ
 

@@ -17,6 +17,21 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R4|変更|
+|14 R4|変更|
+|13|名称変更|
+|12|変更|
+|11 SQL|変更|
+|2004|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.PROCESS 4D TAGS.Summary-->**PROCESS 4D TAGS**コマンドを使用すると、*inputTemplate* 引数に格納されている4D変換タグの処理が開始されます。<!-- END REF-->引数を使用して値を挿入し(任意)、その結果が*outputResult* に返されます。 これらのタグの完全な詳細については、*4D 変換タグ* の章を参照して下さい。

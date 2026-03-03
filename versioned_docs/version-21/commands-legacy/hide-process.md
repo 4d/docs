@@ -30,7 +30,7 @@ Even though a process may be hidden, the process is still executing.
 The following example hides all the windows belonging to the current process:
 
 ```4d
- HIDE PROCESS(Current process)
+ HIDE PROCESS(Current process)
 ```
 
 ## See also 

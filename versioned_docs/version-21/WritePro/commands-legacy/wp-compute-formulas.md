@@ -34,13 +34,13 @@ In the *targetObj* parameter, you can pass:
 To update the formulas in a document:
 
 ```4d
- WP COMPUTE FORMULAS(WriteProArea)
+ WP COMPUTE FORMULAS(WriteProArea)
 ```
 
 To update all formulas in the first section of a document:
 
 ```4d
- WP COMPUTE FORMULAS(WP Get section(WriteProArea;1))
+ WP COMPUTE FORMULAS(WP Get section(WriteProArea;1))
 ```
 
 ## See also 

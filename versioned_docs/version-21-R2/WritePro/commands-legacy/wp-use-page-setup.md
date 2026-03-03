@@ -29,7 +29,7 @@ Other settings are defined by the 4D [PRINT SETTINGS](../../commands-legacy/prin
 Before printing a document, you want to reset its size and orientation to values stored in the document:
 
 ```4d
- WP USE PAGE SETUP(writeProDoc)
+ WP USE PAGE SETUP(writeProDoc)
 ```
 
 ## See also 

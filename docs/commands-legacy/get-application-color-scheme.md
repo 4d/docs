@@ -5,7 +5,7 @@ slug: /commands/get-application-color-scheme
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get Application color scheme.Syntax-->**Get Application color scheme** ( * ) : Text<!-- END REF-->
+<!--REF #_command_.Get Application color scheme.Syntax-->**Get Application color scheme** ({ * }) : Text<!-- END REF-->
 <!--REF #_command_.Get Application color scheme.Params-->
 <div class="no-index">
 
@@ -15,6 +15,16 @@ displayed_sidebar: docs
 | Function result | Text | &#8592; | Current application color scheme |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|19|Created|
+
+</details>
+</div>
 
 ## Description 
 

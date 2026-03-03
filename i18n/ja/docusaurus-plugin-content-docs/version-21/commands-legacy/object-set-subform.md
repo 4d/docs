@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R6|変更|
+|13|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT SET SUBFORM.Summary-->**OBJECT SET SUBFORM**コマンドは*\** 引数および*object* 引数で指定したサブフォームオブジェクトに割り当てられる詳細フォームおよびオプションでリストフォームを動的に変更します。<!-- END REF-->

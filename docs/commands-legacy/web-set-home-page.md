@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Renamed|
+|6.5|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WEB SET HOME PAGE.Summary-->The **WEB SET HOME PAGE** command allows you to modify the custom home page for the current Web process.<!-- END REF-->

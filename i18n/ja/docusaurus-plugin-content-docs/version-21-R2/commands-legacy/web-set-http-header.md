@@ -16,6 +16,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|6.8|変更|
+|13|名称変更|
+|14 R3|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WEB SET HTTP HEADER.Summary-->**WEB SET HTTP HEADER**コマンドを使用して、4DからWebブラウザーへ送信されるHTTPヘッダーにフィールドを設定します。<!-- END REF-->このコマンドはWebプロセスでのみ機能します。  

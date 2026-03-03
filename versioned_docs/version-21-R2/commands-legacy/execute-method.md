@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.EXECUTE METHOD.Summary-->The EXECUTE METHOD command executes the *methodName* project method while passing any parameters in *param1...paramN*<!-- END REF-->. You can pass the name of any method that can be called from the database or the component executing the command.

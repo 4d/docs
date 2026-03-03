@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6.7|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GENERATE CERTIFICATE REQUEST.Summary-->The **GENERATE CERTIFICATE REQUEST** command generates a certificate request at the PKCS format which can be directly used by certificate authorities such as Verisign(R) .<!-- END REF--> The certificate plays an important part in the SSL secured protocol. It is sent to each browser connecting in SSL mode. It contains the “ID card” of the Web site (made from the information entered in the command), as well as its public key allowing the browsers to decrypt the received information. Furthermore, the certificate contains various information added by the certificate authority which guarantees its integrity.
@@ -56,32 +66,32 @@ A “Certificate request” form contains the six fields necessary for a standar
 Here is the **Generate** button method:
 
 ```4d
-  // bGenerate Object Method
- 
- var $vbprivateKey;$vbcertifRequest : Blob
- var $tableNum : Integer
- ARRAY LONGINT($tLCodes;6)
- ARRAY STRING(80;$tSInfos;6)
- 
- $tableNum:=Table(Current form table)
- For($i;1;6)
-    $tSInfos{$i}:=Field($tableNum;$i)->
-    $tLCodes{$i}:=$i+12
- End for
- If(Find in array($tSInfos;"")#-1)
-    ALERT("All fields should be filled.")
- Else
-    ALERT("Select your private key.")
-    $vhDocRef:=Open document("")
-    If(OK=1)
-       CLOSE DOCUMENT($vhDocRef)
-       DOCUMENT TO BLOB(Document;$vbprivateKey)
-       GENERATE CERTIFICATE REQUEST($vbPrivateKey;$vbcertifRequest;$tLCodes;$tSInfos)
-       BLOB TO DOCUMENT("Request.txt";$vbcertifRequest)
-    Else
-       ALERT("Invalid private key.")
-    End if
- End if
+  // bGenerate Object Method
+ 
+ var $vbprivateKey;$vbcertifRequest : Blob
+ var $tableNum : Integer
+ ARRAY LONGINT($tLCodes;6)
+ ARRAY STRING(80;$tSInfos;6)
+ 
+ $tableNum:=Table(Current form table)
+ For($i;1;6)
+    $tSInfos{$i}:=Field($tableNum;$i)->
+    $tLCodes{$i}:=$i+12
+ End for
+ If(Find in array($tSInfos;"")#-1)
+    ALERT("All fields should be filled.")
+ Else
+    ALERT("Select your private key.")
+    $vhDocRef:=Open document("")
+    If(OK=1)
+       CLOSE DOCUMENT($vhDocRef)
+       DOCUMENT TO BLOB(Document;$vbprivateKey)
+       GENERATE CERTIFICATE REQUEST($vbPrivateKey;$vbcertifRequest;$tLCodes;$tSInfos)
+       BLOB TO DOCUMENT("Request.txt";$vbcertifRequest)
+    Else
+       ALERT("Invalid private key.")
+    End if
+ End if
 ```
 
 ## See also 

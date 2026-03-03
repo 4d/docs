@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|名称変更|
+|11 SQL Release 2|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LISTBOX MOVED ROW NUMBER.Summary-->LISTBOX MOVED ROW NUMBER コマンドは、引数*object*および *\** で指定されたリストボックス内で移動された行の以前の位置*oldPosition*と新しい位置*newPosition*を返します。<!-- END REF-->

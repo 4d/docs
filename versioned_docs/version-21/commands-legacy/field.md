@@ -5,7 +5,7 @@ slug: /commands/field
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Field.Syntax-->**Field** ( *tableNum* ; *fieldNum* ) -> fieldPtr  <br/>
+<!--REF #_command_.Field.Syntax-->**Field** ( *tableNum* ; *fieldNum* ) -> fieldPtr  <br/>
 **Field** ( *fieldPtr* ) -> fieldNum<!-- END REF-->
 <!--REF #_command_.Field.Params-->
 <div class="no-index">
@@ -34,7 +34,7 @@ The **Field** command has two forms:
 The following example sets the *fieldPtr* variable to a pointer to the second field in the third table:
 
 ```4d
- FieldPtr:=Field(3;2)
+ FieldPtr:=Field(3;2)
 ```
 
 ## Example 2 
@@ -42,7 +42,7 @@ The following example sets the *fieldPtr* variable to a pointer to the second fi
 Passing *fieldPtr* (a pointer to the second field of a table) to **Field** returns the number 2\. The following line sets *FieldNum* to 2:
 
 ```4d
- FieldNum:=Field(FieldPtr)
+ FieldNum:=Field(FieldPtr)
 ```
 
 ## Example 3 
@@ -50,7 +50,7 @@ Passing *fieldPtr* (a pointer to the second field of a table) to **Field** retur
 The following example sets the *FieldNum* variable to the field number of \[Table3\]Field2:
 
 ```4d
- FieldNum:=Field(->[Table3]Field2)
+ FieldNum:=Field(->[Table3]Field2)
 ```
 
 ## See also 

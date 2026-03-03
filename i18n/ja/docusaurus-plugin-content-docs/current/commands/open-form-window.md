@@ -6,9 +6,11 @@ displayed_sidebar: docs
 toc_max_heading_level: 3
 ---
 
-<!--REF #_command_.Open form window.Syntax-->**Open form window** ( {*aTable* : Table ;} *formName* : Text, Object {; *type* : Integer {; *hPos* : Integer {; *vPos* : Integer {; *}}}} ) : Integer<!-- END REF-->
+<!--REF #_command_.Open form window.Syntax-->**Open form window** ( {*aTable* : Table ;} *formName* : Text, Object {; *type* : Integer {; *hPos* : Integer {; *vPos* : Integer}}}{; *} ) : Integer<!-- END REF-->
 
 <!--REF #_command_.Open form window.Params-->
+
+<div class="no-index">
 
 | 引数       | 型            |                             | 説明                                                                                                                                                                                          |
 | -------- | ------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -20,13 +22,28 @@ toc_max_heading_level: 3
 | \*       | 演算子          | &#8594; | Save current position and size of the window                                                                                                                                                |
 | 戻り値      | Integer      | &#8592; | ウィンドウ参照番号                                                                                                                                                                                   |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>履歴</summary>
+
+| リリース                        | 内容 |
+| --------------------------- | -- |
+| 16 R6                       | 変更 |
+| 16 R4                       | 変更 |
+| 14 R5                       | 変更 |
+| 11 SQL                      | 変更 |
+| <6 | 追加 |
+
+</details>
+</div>
 
 ## 説明
 
 <!--REF #_command_.Open form window.Summary-->The Open form window command opens a new window using the size and resizing properties of the form *formName*.<!-- END REF-->
 
-**Note:** To know the main properties of a form, use the [FORM GET PROPERTIES\`](form-get-properties.md) command.
+**Note:** To know the main properties of a form, use the [FORM GET PROPERTIES\`](../commands-legacy/form-get-properties.md) command.
 
 In the *formName* parameter, you can pass:
 
@@ -34,7 +51,7 @@ In the *formName* parameter, you can pass:
 - the path (in POSIX syntax) to a valid .json file containing a description of the form to use. See *Form file path*;
 - 使用するフォームの詳細を格納しているオブジェクト
 
-The *formName* is not displayed in the window. If you want to display the form, you have to call a command which loads a form ([`ADD RECORD`](add-record.md) for example).
+The *formName* is not displayed in the window. If you want to display the form, you have to call a command which loads a form ([`ADD RECORD`](../commands-legacy/add-record.md) for example).
 
 The optional *type* parameter allows you to specify a type for the window. You must pass one of the following predefined constants (integer, placed in the *Open Form Window* theme):
 
@@ -273,7 +290,7 @@ DIALOG("/RESOURCES/OutputPersonnel.json";*)
 
 ## 参照
 
-[FORM GET PROPERTIES](form-get-properties.md)  
+[FORM GET PROPERTIES](../commands-legacy/form-get-properties.md)  
 [Open window](open-window.md)
 
 ## プロパティ

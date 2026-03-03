@@ -15,6 +15,8 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+
+
 ## Descrição 
 
 <!--REF #_command_.On System Event database method.Summary-->O método **Método base de dados On System Event** é chamado toda vez que ocorre um evento sistema.<!-- END REF--> Isto é para todos os ambientes 4D: 4D (todos os modos) e 4D Server, assim como as aplicações 4D compiladas e fusionadas com 4D Volume Desktop.

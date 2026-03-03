@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2003|Criado por|
+|13|Renomear|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SOAP SEND FAULT.Summary-->O comando SOAP SEND FAULT permite devolver um erro a um cliente SOAP indicando a origem do erro: cliente ou servidor.<!-- END REF--> Este comando permite indicar um erro a um cliente sem ter que devolver um resultado.  

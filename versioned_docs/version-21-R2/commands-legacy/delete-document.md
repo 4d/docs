@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|6.7.1|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DELETE DOCUMENT.Summary-->The **DELETE DOCUMENT** command deletes the document whose name you pass in *document*.<!-- END REF-->

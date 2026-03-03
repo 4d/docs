@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL|変更|
+
+</details>
+</div>
+
 ## 互換性に関する注意 
 
 <!--REF #_command_.SET INDEX.Summary-->**SET INDEX** は旧式のコマンドではありますが、これは完全にサポートされており、既存のコードを書き換えることなくアプリケーション内で維持してよいコマンドです。<!-- END REF-->しかしながら、インデックスを管理するためには[CREATE INDEX](create-index.md) および [DELETE INDEX](delete-index.md) コマンドを使用した方が、より多くの機能が提供されるため、推奨されています。

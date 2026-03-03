@@ -14,6 +14,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|17 R4|Modified|
+|11 SQL Release 3|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.MESSAGES OFF.Summary-->The MESSAGES OFF and [MESSAGES ON](messages-on.md) commands turn on and off the progress meters displayed by 4D while executing time-consuming operations.<!-- END REF--> By default, messages are on. 

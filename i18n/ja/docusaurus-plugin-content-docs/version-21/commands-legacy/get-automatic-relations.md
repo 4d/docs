@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GET AUTOMATIC RELATIONS.Summary-->GET AUTOMATIC RELATIONS コマンドにより、データベースのすべてのマニュアルn対1リレートおよび1対nリレートに関する自動/マニュアルのステータスがカレントプロセスにおいて変更されたかどうかを知ることができます。<!-- END REF-->

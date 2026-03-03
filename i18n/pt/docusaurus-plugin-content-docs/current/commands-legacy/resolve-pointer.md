@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|15|Modificado|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.RESOLVE POINTER.Summary-->O comando RESOLVE POINTER recupera a informação do objeto referenciado pela expressão de ponteiro *ponteiro* e a devolve nos parâmetros *nomVar*, *numTabela,* e *numCamp*.<!-- END REF-->

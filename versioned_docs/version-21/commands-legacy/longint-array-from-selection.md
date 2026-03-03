@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6.7|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LONGINT ARRAY FROM SELECTION.Summary-->The LONGINT ARRAY FROM SELECTION command fills the *recordArray* array with the (absolute) record numbers that are in *selection*.<!-- END REF-->
@@ -30,8 +41,8 @@ If you do not pass the *selection* parameter, the command will use the current s
 You want to retrieve the numbers of the records in the current selection:
 
 ```4d
- ARRAY LONGINT($_arrRecNum;0) //mandatory for compiled mode
- LONGINT ARRAY FROM SELECTION([Clients];$_arrRecNum)
+ ARRAY LONGINT($_arrRecNum;0) //mandatory for compiled mode
+ LONGINT ARRAY FROM SELECTION([Clients];$_arrRecNum)
 ```
 
 ## See also 

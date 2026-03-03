@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WINDOW LIST.Summary-->The WINDOW LIST command populates the array *windows* with the window reference numbers of the windows currently open in all running processes (kernel or user processes).<!-- END REF--> Only "visible" windows (i.e. windows that are not hidden) are returned. 

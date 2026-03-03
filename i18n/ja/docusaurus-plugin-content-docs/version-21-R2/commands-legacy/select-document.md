@@ -20,6 +20,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL|変更|
+|13|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Select document.Summary-->**Select document**コマンドは、標準のドキュメントを開くことのできるダイアログボックスを表示します。<!-- END REF-->このダイアログボックスでは、1つ以上のファイルを選択できます。そしてこのコマンドは選択されたファイルの名前または完全なアクセスパスを返します。

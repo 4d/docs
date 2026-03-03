@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|12|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SQL EXECUTE SCRIPT.Summary-->La commande **SQL EXECUTE SCRIPT** vous permet d’exécuter une suite d’instructions SQL placées dans le fichier de script désigné par *cheminScript*.<!-- END REF--> Cette commande ne peut être exécutée que sur un poste local (4D local ou procédure stockée sur 4D Server). Elle fonctionne avec la base courante (base interne ou base externe). 

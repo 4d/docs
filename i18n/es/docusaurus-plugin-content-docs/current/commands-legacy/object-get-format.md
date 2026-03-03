@@ -17,6 +17,21 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|20 R4|Modificado|
+|20 R4|Modificado|
+|20|Modificado|
+|15 R5|Modificado|
+|12|Renombrar|
+|2004|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OBJECT Get format.Summary-->El comando OBJECT Get format devuelve el formato de salida actual aplicado al objeto especificado en el parámetro *objeto*.<!-- END REF-->

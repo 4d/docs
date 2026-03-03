@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|19|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET APPLICATION COLOR SCHEME.Summary-->**SET APPLICATION COLOR SCHEME** コマンドは、カレントセッションにおいて、アプリケーションレベルで使用されるカラースキームを定義します。<!-- END REF-->このスキームは特定のスキームをまだ宣言していないフォームに対して適用されます(フォームレベルで定義されるカラースキームはアプリケーションレベルでの設定を上書きします)。

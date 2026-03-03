@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2004.1|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SHOW ON DISK.Summary-->La commande **SHOW ON DISK** affiche dans une fenêtre standard du système d’exploitation le fichier ou le dossier dont le chemin d’accès est passé dans le paramètre *cheminAccès*.<!-- END REF-->   

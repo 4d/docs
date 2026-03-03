@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R4|Renamed|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Is nil pointer.Summary-->The **Is nil pointer** command returns True if the pointer you pass in *aPointer* is Nil (*\->\[\]*).<!-- END REF--> It returns False in all other cases (pointer to field, table or variable).
@@ -25,13 +36,13 @@ If you want to find out the name of the variable or the number of the field that
 ## Example 
 
 ```4d
- var $ptr : Pointer
- ...
- If(Is nil pointer($ptr))
- End if
-  // is equivalent to
- If($ptr=Null)
- End if
+ var $ptr : Pointer
+ ...
+ If(Is nil pointer($ptr))
+ End if
+  // is equivalent to
+ If($ptr=Null)
+ End if
 ```
 
 ## See also 

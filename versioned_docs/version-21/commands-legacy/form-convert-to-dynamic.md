@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|17 R3|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM Convert to dynamic.Summary-->The **FORM Convert to dynamic** command converts the *formName* (classic form) to a dynamic form and returns it in an object.<!-- END REF-->
@@ -46,11 +56,11 @@ The original form:
 
   
 ```4d
- var $dynForm : Object
- $dynForm:=FORM Convert to dynamic("FormToConvert")
- $dynForm.pages[1].objects.TitleArea.stroke:="red"
- $dynForm.pages[1].objects.bOK.method:="myMethod" //associate a project method
- DIALOG($dynForm)
+ var $dynForm : Object
+ $dynForm:=FORM Convert to dynamic("FormToConvert")
+ $dynForm.pages[1].objects.TitleArea.stroke:="red"
+ $dynForm.pages[1].objects.bOK.method:="myMethod" //associate a project method
+ DIALOG($dynForm)
 ```
 
   

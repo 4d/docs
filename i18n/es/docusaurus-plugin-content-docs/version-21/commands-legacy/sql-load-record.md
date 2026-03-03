@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|2004|Creado por|
+
+</details>
+</div>
+
 #### Descripción 
 
 <!--REF #_command_.SQL LOAD RECORD.Summary-->El comando SQL LOAD RECORD recupera en 4D uno o más registros de la fuente de datos abierta en la conexión actual.<!-- END REF-->

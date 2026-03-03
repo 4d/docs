@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET PICTURE FROM PASTEBOARD.Summary-->GET PICTURE FROM PASTEBOARD returns the picture present in the pasteboard in the *picture* field or variable.<!-- END REF-->
@@ -26,11 +37,11 @@ displayed_sidebar: docs
 The following button’s object method assigns the picture (jpeg or gif format) present in the pasteboard (if any) to the field \[Employees\]Photo:
 
 ```4d
- If((Pasteboard data size("com.4d.private.picture.jpeg")>0)|(Pasteboard data size("com.4d.private.picture.gif")>0))
-    GET PICTURE FROM PASTEBOARD([Employees]Photo)
- Else
-    ALERT("The pasteboard does not contain any pictures.")
- End if
+ If((Pasteboard data size("com.4d.private.picture.jpeg")>0)|(Pasteboard data size("com.4d.private.picture.gif")>0))
+    GET PICTURE FROM PASTEBOARD([Employees]Photo)
+ Else
+    ALERT("The pasteboard does not contain any pictures.")
+ End if
 ```
 
 ## System variables and sets 

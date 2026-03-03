@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|15 R5|Modified|
+|15|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.METHOD SET ATTRIBUTES.Summary-->The **METHOD SET ATTRIBUTES** command allows you to set the *attributes* values for the method(s) specified in the *path* parameter.<!-- END REF-->
@@ -34,7 +45,7 @@ If the command is executed from a component, by default it applies to the compon
 The supported attributes are:
 
 ```RAW
-{    "invisible" : false, // true if visible    "preemptive" : "capable" // or "incapable" or "indifferent"    "publishedWeb" : false,  // true if available through 4D tags and URLs    "publishedSoap": false,  // true if offered as Web Service    "publishedWsdl": false,  // true if published in WSDL    "shared" : false,  // true if shared by components and host database    "publishedSql" : false,  // true if available through SQL    "executedOnServer" : false, // true if executed on server}
+{    "invisible" : false, // true if visible    "preemptive" : "capable" // or "incapable" or "indifferent"    "publishedWeb" : false,  // true if available through 4D tags and URLs    "publishedSoap": false,  // true if offered as Web Service    "publishedWsdl": false,  // true if published in WSDL    "shared" : false,  // true if shared by components and host database    "publishedSql" : false,  // true if available through SQL    "executedOnServer" : false, // true if executed on server}
 ```
 
 **Note:** "published4DMobile" attributes are deprecated as for 4D v18.
@@ -44,9 +55,9 @@ The supported attributes are:
 You want to set a single attribute:
 
 ```4d
- var $attributes : Object
- OB SET($attributes;"executedOnServer";True)
- METHOD SET ATTRIBUTES("aMethod";$attributes) //Only the "executedOnServer" attribute is modified
+ var $attributes : Object
+ OB SET($attributes;"executedOnServer";True)
+ METHOD SET ATTRIBUTES("aMethod";$attributes) //Only the "executedOnServer" attribute is modified
 ```
 
 ## See also 

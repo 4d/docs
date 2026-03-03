@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|6.7|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LONGINT ARRAY FROM SELECTION.Summary-->LONGINT ARRAY FROM SELECTION コマンドは、*selection*の（絶対）レコード番号を*recordArray*に返します。<!-- END REF-->

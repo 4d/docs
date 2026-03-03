@@ -20,6 +20,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|2004.3|Modificado|
+|16 R4|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Execute on server.Summary-->El comando Execute on server inicia un nuevo proceso en el equipo servidor (cuando se llama en Cliente/Servidor) o en el mismo equipo (si se llama en monousuario) y devuelve el número de este proceso.<!-- END REF-->

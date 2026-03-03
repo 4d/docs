@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET PICTURE FORMATS.Summary-->The **GET PICTURE FORMATS** command returns an array of all the codec IDs (picture formats) contained in the *picture* passed as parameter.<!-- END REF--> A 4D picture (field or variable) can contain the same picture encoded in different formats, such as PNG, BMP, GIF, etc.
@@ -40,9 +50,9 @@ For more information about picture codec IDs, refer to the *Pictures* section.
 You want to know the picture formats stored in a field for the current record:
 
 ```4d
- ARRAY TEXT($aTPictureFormats;0)
-  //Get all the formats saved
- GET PICTURE FORMATS([Employees]Photo;$aTPictureFormats)
+ ARRAY TEXT($aTPictureFormats;0)
+  //Get all the formats saved
+ GET PICTURE FORMATS([Employees]Photo;$aTPictureFormats)
 ```
 
 ## See also 

@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14 R4|初出|
+|19 R7|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT Get corner radius.Summary-->**OBJECT Get corner radius** コマンドは*object* 引数で指定されたオブジェクトの角の半径のカレントの値を返します。<!-- END REF-->この値は、*角の半径プロパティ* を使用してフォームレベルで設定されているか、あるいは[OBJECT SET CORNER RADIUS](object-set-corner-radius.md) コマンドを使用してカレントプロセスに対して設定することが可能です。

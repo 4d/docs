@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.WRITE PICTURE FILE.Summary-->O comando WRITE PICTURE FILE permite guardar em um arquivo no disco a imagem passada no parâmetro *imagem,* no formato definido por *codec*.<!-- END REF--> 

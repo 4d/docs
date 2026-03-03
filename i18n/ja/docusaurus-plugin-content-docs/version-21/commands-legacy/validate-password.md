@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14|変更|
+|2004|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Validate password.Summary-->Validate password コマンドは引数 *password* に渡された文字列が、引数 *userID* に渡されたID番号または名前を持つユーザアカウントのパスワードである場合、Trueを返します。<!-- END REF--> 

@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16|Modifié|
+|2004.1|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.PRINTERS LIST.Summary-->La commande **PRINTERS LIST** remplit le ou les tableau(x) passé(s) en paramètre(s) avec les noms ainsi que, facultativement, les emplacements ou les noms personnalisés et les modèles des imprimantes disponibles pour le poste.<!-- END REF-->

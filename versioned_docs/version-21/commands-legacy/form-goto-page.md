@@ -16,6 +16,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Modified|
+|12|Renamed|
+|2004.3|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM GOTO PAGE.Summary-->**FORM GOTO PAGE** changes the currently displayed form page to the form page specified by *pageNumber*.<!-- END REF-->
@@ -40,7 +53,7 @@ Page commands can be used with input forms or with forms displayed in dialogs. O
 The following example is an object method for a button. It displays a specific page, page 3: 
 
 ```4d
- FORM GOTO PAGE(3)
+ FORM GOTO PAGE(3)
 ```
 
 ## See also 

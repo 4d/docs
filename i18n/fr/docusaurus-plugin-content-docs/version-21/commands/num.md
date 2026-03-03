@@ -5,9 +5,11 @@ slug: /commands/num
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Num.Syntax-->**Num** ( *expression* {; *separator*} ) : Real<br/>**Num** ( *expression* ; *base* ) : Real<!-- END REF-->
+<!--REF #_command_.Num.Syntax-->**Num** ( *expression* : Text, Boolean, Integer {; *separator* : Text} ) : Real<br/>**Num** ( *expression* : Text, Boolean, Integer ; *base* : Integer ) : Real<!-- END REF-->
 
 <!--REF #_command_.Num.Params-->
+
+<div class="no-index">
 
 | Paramètres | Type                   |                             | Description                                                                              |
 | ---------- | ---------------------- | --------------------------- | ---------------------------------------------------------------------------------------- |
@@ -16,15 +18,19 @@ displayed_sidebar: docs
 | base       | Integer                | &#8594; | Valeur comprise entre 2 et 36 qui représente le radix                                    |
 | Résultat   | Real                   | &#8592; | Forme numérique du paramètre expression                                                  |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>Historique</summary>
 
-| Release | Modifications                       |
-| ------- | ----------------------------------- |
-| 21      | Prise en charge du paramètre *base* |
+| Release                     | Modifications                       |
+| --------------------------- | ----------------------------------- |
+| 21                          | Prise en charge du paramètre *base* |
+| <6 | Created                             |
 
 </details>
+</div>
 
 ## Description
 
@@ -49,6 +55,7 @@ Il existe trois caractères réservés que **Num** traite de manière particuli�
 - Le tiret définit un nombre ou un exposant négatif (signe moins). Le tiret doit être placé devant tout caractère numérique négatif ou derrière le "e" pour un exposant. Hormis le cas du caractère "e", si le tiret est inclus dans une chaîne numérique, la partie de la chaîne se trouvant après le tiret est ignorée. Par exemple, `Num("123-456")` renvoie 123, mais `Num("-9")` renvoie -9.
 - Le e ou E désigne tout caractère numérique se trouvant à sa droite comme étant la puissance d'un exposant. Le "e" doit être inclus dans une chaîne numérique. Ainsi, `Num("123e-2")` renvoie 1.23.  
   A noter que dans le cas où la chaîne comporte plus d'un caractère "e", la conversion pourra donner des résultats différents sous macOS et sous Windows.
+- L'algorithme de conversion du texte en [valeurs réelles] (../Concepts/dt_number.md) est basé sur 13 chiffres significatifs.
 
 #### Paramètre *séparator*
 

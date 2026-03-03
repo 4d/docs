@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6.8.1|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Contextual click.Summary-->The Contextual click command returns True if a contextual click has been made<!-- END REF-->:
@@ -29,13 +39,13 @@ This command should be used only in the context of the On Clicked form event. It
 This method, combined with a scrollable area, enables you to change the value of an array element using a context menu: 
 
 ```4d
- If(Contextual click)
-    If(Pop up menu("True;False")=1)
-       myArray{myArray}:="True"
-    Else
-       myArray{myArray}:="False"
-    End if
- End if
+ If(Contextual click)
+    If(Pop up menu("True;False")=1)
+       myArray{myArray}:="True"
+    Else
+       myArray{myArray}:="False"
+    End if
+ End if
 ```
 
 ## See also 

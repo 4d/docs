@@ -16,6 +16,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|2004.3|Modificado|
+|12|Renombrar|
+|13|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.FORM GOTO PAGE.Summary-->**FORM GOTO PAGE** cambia la página actual de un formulario para mostrar la página especificada por *numPag*.<!-- END REF-->

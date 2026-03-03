@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2004|Créé|
+|13|Renommé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WEB SEND RAW DATA.Summary-->La commande **WEB SEND RAW DATA** permet au serveur Web 4D d’envoyer des données HTTP “brutes”, pouvant être morcelées.<!-- END REF-->

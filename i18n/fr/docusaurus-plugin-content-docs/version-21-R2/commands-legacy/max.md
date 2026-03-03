@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL Release 3|Modifié|
+|13|Modifié|
+|16|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Max.Summary-->**Max** retourne la valeur la plus élevée contenue dans *séries*.<!-- END REF--> 

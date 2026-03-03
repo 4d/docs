@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16|Modifié|
+|13|Modifié|
+|11 SQL Release 3|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Min.Summary-->**Min** retourne la valeur la plus faible de *séries*.<!-- END REF--> Si *séries* est un champ indexé, l'index est utilisé pour la recherche de cette valeur.

@@ -20,6 +20,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|15 R3|Modifié|
+|11 SQL Release 1|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Replace string.Summary-->**Replace string** retourne une chaîne de caractères résultant du remplacement dans *source* de *obsolète* par *nouveau*.<!-- END REF-->

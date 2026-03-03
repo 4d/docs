@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Summary-->La commande **OBJECT SET VERTICAL ALIGNMENT** vous permet de modifier par programmation le type d’alignement vertical appliqué à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF-->

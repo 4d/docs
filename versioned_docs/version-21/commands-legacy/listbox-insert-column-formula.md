@@ -24,6 +24,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|17|Modified|
+|14 R3|Modified|
+|13|Modified|
+|12|Renamed|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Summary-->The **LISTBOX INSERT COLUMN FORMULA** command inserts a column into the list box designated by the *object* and *\** parameters.<!-- END REF--> 
@@ -83,9 +97,9 @@ Note that header and footer variables are always created with a specific type (l
 We want to add a new column to the right of the list box that will contain a formula which calculates an empolyee's age:
 
 ```4d
- vAge:="Current Date-[Employees]BirthDate)\365"
- $last:=LISTBOX Get number of columns(*;"ListBox1")+1
- LISTBOX INSERT COLUMN FORMULA(*;"ListBox1";$last;"ColFormula";vAge;Is real;"Age";HeaderVar)
+ vAge:="Current Date-[Employees]BirthDate)\365"
+ $last:=LISTBOX Get number of columns(*;"ListBox1")+1
+ LISTBOX INSERT COLUMN FORMULA(*;"ListBox1";$last;"ColFormula";vAge;Is real;"Age";HeaderVar)
 ```
 
 ## Example 2 
@@ -93,9 +107,9 @@ We want to add a new column to the right of the list box that will contain a for
 You want to add column to a list box of collection type:
 
 ```4d
-  //create collection
- var emps : Collection
- emps:=New collection(New object("Employee";"John Doe";"JobTitle";"CEO");New object("Employee";"Mary Smith";"JobTitle";"CTO");New object("Employee";"Jane Turner";"JobTitle";"CFO"))
+  //create collection
+ var emps : Collection
+ emps:=New collection(New object("Employee";"John Doe";"JobTitle";"CEO");New object("Employee";"Mary Smith";"JobTitle";"CTO");New object("Employee";"Jane Turner";"JobTitle";"CFO"))
 ```
 
 The column contents are evaluated for each element of the collection and referenced with the data source expression, *This.Employee*, as shown below:
@@ -109,8 +123,8 @@ At execution:
 To add a column showing the job titles:
 
 ```4d
- LISTBOX INSERT COLUMN FORMULA(*;"EmpLB";2;"2nd Column";"This.JobTitle";Is text;"JTHeader";header2)
- OBJECT SET TITLE(header2;"Title")
+ LISTBOX INSERT COLUMN FORMULA(*;"EmpLB";2;"2nd Column";"This.JobTitle";Is text;"JTHeader";header2)
+ OBJECT SET TITLE(header2;"Title")
 ```
 
 The column is added to the list box:

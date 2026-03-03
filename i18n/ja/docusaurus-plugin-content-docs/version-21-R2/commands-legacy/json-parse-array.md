@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14|初出|
+|16 R4|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.JSON PARSE ARRAY.Summary-->**JSON PARSE ARRAY**コマンドは、JSONフォーマットの文字列の中身を解析し、取り出したデータを *array* 引数の配列の中へと入れます。<!-- END REF-->このコマンドはJSONデータをデシリアライズします。 [JSON Stringify array](json-stringify-array.md)コマンドと逆の挙動をします。

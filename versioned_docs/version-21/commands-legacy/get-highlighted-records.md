@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET HIGHLIGHTED RECORDS.Summary-->The **GET HIGHLIGHTED RECORDS** command stores in the set designated by the *setName* parameter the highlighted records (i.e., the records highlighted by the user in the list form) in the *aTable* passed as parameter.<!-- END REF--> If the *aTable* parameter is omitted, the table of the current form or subform is used.
@@ -32,9 +42,9 @@ The set designated by *setName* can be local/client, process or interprocess.
 This method indicates how many records are selected in the subform displaying the records of the \[CDs\] table:
 
 ```4d
- GET HIGHLIGHTED RECORDS([CDs];"$highlight")
- ALERT(String(Records in set("$highlight"))"+"selected records.")
- CLEAR SET("$highlight")
+ GET HIGHLIGHTED RECORDS([CDs];"$highlight")
+ ALERT(String(Records in set("$highlight"))"+"selected records.")
+ CLEAR SET("$highlight")
 ```
 
 ## System variables and sets 

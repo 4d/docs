@@ -14,6 +14,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6|Creado por|
+|14|Modificado|
+|14 R5|Modificado|
+
+</details>
+</div>
+
 #### Descripción 
 
 <!--REF #_command_.SHOW TOOL BAR.Summary-->El comando **SHOW TOOL BAR** maneja la visualización de las barras de herramientas personalizadas creadas por el comando [Open form window](open-form-window.md) para el proceso actual.<!-- END REF-->

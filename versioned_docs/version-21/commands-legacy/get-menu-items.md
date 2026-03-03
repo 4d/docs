@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET MENU ITEMS.Summary-->The **GET MENU ITEMS** command returns, in the *menuTitlesArray* and *menuRefsArray* arrays, the titles and IDs of all the items of the menu or menu bar designated by the *menu* parameter.<!-- END REF-->
@@ -30,10 +40,10 @@ If no menu reference is associated with an item, an empty string is returned in 
 You want to find out the contents of the menu bar of the current process: 
 
 ```4d
- ARRAY TEXT(menuTitlesArray;0)
- ARRAY TEXT(menuRefsArray;0)
- MenuBarRef:=Get menu bar reference(Frontmost process)
- GET MENU ITEMS(MenuBarRef;menuTitlesArray;menuRefsArray)
+ ARRAY TEXT(menuTitlesArray;0)
+ ARRAY TEXT(menuRefsArray;0)
+ MenuBarRef:=Get menu bar reference(Frontmost process)
+ GET MENU ITEMS(MenuBarRef;menuTitlesArray;menuRefsArray)
 ```
 
 

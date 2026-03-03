@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|15|Creado por|
+|15 R5|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.METHOD GET ATTRIBUTES.Summary-->El comando **METHOD GET ATTRIBUTES** devuelve, en *atributos*, el valor actual de todos los atributos para los métodos especificados en el parámetro *ruta*.<!-- END REF-->

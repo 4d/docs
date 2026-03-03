@@ -41,16 +41,16 @@ The *resultSet* is created by **DIFFERENCE**. The *resultSet* replaces any exist
 This example excludes the records that a user selects from a displayed selection. The records are displayed on screen with the following line:
 
 ```4d
- DISPLAY SELECTION([Customers]) //Display the customers in a list
+ DISPLAY SELECTION([Customers]) //Display the customers in a list
 ```
 
 At the bottom of the list of records is a button with an object method. The object method excludes the records that the user has selected (the set named “UserSet”), and displays the reduced selection:
 
 ```4d
- CREATE SET([Customers];"$Current") //Create a set of current selection
- DIFFERENCE("$Current";"UserSet";"$Current") //Exclude selected records
- USE SET("$Current") //Use the new set
- CLEAR SET("$Current") //Clear the set
+ CREATE SET([Customers];"$Current") //Create a set of current selection
+ DIFFERENCE("$Current";"UserSet";"$Current") //Exclude selected records
+ USE SET("$Current") //Use the new set
+ CLEAR SET("$Current") //Clear the set
 ```
 
 ## See also 

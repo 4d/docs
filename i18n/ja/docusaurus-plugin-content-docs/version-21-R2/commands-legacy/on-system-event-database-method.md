@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.On System Event database method.Summary-->**On System Event データベースメソッド** はシステムイベントが発生するたびに呼び出されます。<!-- END REF-->すべてのモードの4D、4D Server、4D Volume Desktopが統合されたコンパイル済みアプリケーションなど、すべての4D環境で有効です。

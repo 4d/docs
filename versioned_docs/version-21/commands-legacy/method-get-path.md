@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.METHOD Get path.Summary-->The **METHOD Get path** command returns the full internal pathname of a method.<!-- END REF-->
@@ -51,14 +61,14 @@ If the command is executed from a component, it returns by default the paths of 
 ## Example 
 
 ```4d
-  //Retrieval of the pathname of the "On Startup" database method:
- $path:=METHOD Get path(Path database method;"onStartup")
- 
-  //Retrieval of the pathname of the trigger for the [Employees] table:
- $path:=METHOD Get path(Path trigger;[Employees])
- 
-  //Retrieval of the pathname of the "OK" object method of the "input" form for the [Employees] table:
- $path:=METHOD Get path(Path table form;[Employees];"input";"OK")
+  //Retrieval of the pathname of the "On Startup" database method:
+ $path:=METHOD Get path(Path database method;"onStartup")
+ 
+  //Retrieval of the pathname of the trigger for the [Employees] table:
+ $path:=METHOD Get path(Path trigger;[Employees])
+ 
+  //Retrieval of the pathname of the "OK" object method of the "input" form for the [Employees] table:
+ $path:=METHOD Get path(Path table form;[Employees];"input";"OK")
 ```
 
 ## See also 

@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL Release 1|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Old.Summary-->La commande **Old** retourne la valeur qui était stockée dans *leChamp* avant qu'il n'ait été modifié par programmation ou pendant la saisie de données.<!-- END REF--> 

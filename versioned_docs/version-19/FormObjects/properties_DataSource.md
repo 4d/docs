@@ -11,7 +11,7 @@ When the **automatic insertion** option is not set (default), the value entered 
 
 This property is supported by:
 
-- [Combo box](comboBox_overview.md) and [list box column](listbox_overview.md#list-box-columns) form objects associated to a choice list.
+- [Combo box](comboBox_overview.md) and [list box column](listbox-column.md) form objects associated to a choice list.
 - [Combo box](comboBox_overview.md) form objects whose associated list is filled by their array or object datasource.
 
 For example, given a choice list containing "France, Germany, Italy" that is associated with a "Countries" combo box: if the **automatic insertion** property is set and a user enters "Spain", then the value "Spain" is automatically added to the list in memory:
@@ -28,7 +28,7 @@ For example, given a choice list containing "France, Germany, Italy" that is ass
 
 #### Objects Supported
 
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[Combo Box](comboBox_overview.md) - [List Box Column](listbox-column.md)
 
 ---
 
@@ -48,7 +48,7 @@ You can also associate choice lists to objects using the [OBJECT SET LIST BY NAM
 #### Objects Supported
 
 [Drop-down List](dropdownList_Overview.md) -
-[Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [List Box Column](listbox-column.md)
 
 ---
 
@@ -116,7 +116,7 @@ Specifies a variable or expression that will be assigned a longint indicating th
 
 Defines the data type for the displayed expression. This property is used with:
 
-- [List box columns](listbox_overview.md#list-box-columns) of the selection and collection types.
+- [List box columns](listbox-column.md) of the selection and collection types.
 - [Drop-down lists](dropdownList_Overview.md) associated to objects or arrays.
 
 See also [**Expression Type**](properties_Object.md#expression-type) section.
@@ -129,7 +129,7 @@ See also [**Expression Type**](properties_Object.md#expression-type) section.
 
 #### Objects Supported
 
-[Drop-down Lists](dropdownList_Overview.md) associated to objects or arrays - [List Box column](listbox_overview.md#list-box-columns)
+[Drop-down Lists](dropdownList_Overview.md) associated to objects or arrays - [List Box column](listbox-column.md)
 
 ---
 
@@ -186,14 +186,14 @@ You must enter a list of values. In the Form editor, a specific dialog box allow
 
 #### Objects Supported
 
-[List Box Column (array type only)](listbox_overview.md#list-box-columns)
+[List Box Column (array type only)](listbox-column.md)
 
 ---
 
 ## Expression
 
-This description is specific to [selection](listbox_overview.md#selection-list-boxes)
- and [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) type list box columns. See also **[Variable or Expression](properties_Object.md#variable-or-expression)** section.
+This description is specific to [selection](FormObjects/listbox-object.md#selection-list-boxes)
+ and [collection](FormObjects/listbox-object.md#collection-or-entity-selection-list-boxes) type list box columns. See also **[Variable or Expression](properties_Object.md#variable-or-expression)** section.
 
 A 4D expression to be associated with a column. You can enter:
 
@@ -233,7 +233,7 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 
 #### Objects Supported
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[List Box Column](listbox-column.md)
 
 ---
 
@@ -262,7 +262,7 @@ All database tables can be used, regardless of whether the form is related to a 
 This property is available in the following conditions:
 
 - a [choice list](#choice-list) is associated with the object
-- for [inputs](input_overview.md) and [list box columns](listbox_overview.md#list-box-columns), a [required list](properties_RangeOfValues.md#required-list) is also defined for the object (both options should use usually the same list), so that only values from the list can be entered by the user.
+- for [inputs](input_overview.md) and [list box columns](listbox-column.md), a [required list](properties_RangeOfValues.md#required-list) is also defined for the object (both options should use usually the same list), so that only values from the list can be entered by the user.
 
 This property specifies, in the context of a field or variable associated with a list of values, the type of contents to save:
 
@@ -284,7 +284,7 @@ Using this property requires compliance with the following principles:
 
 #### Objects Supported
 
-[Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[Input](input_overview.md) - [List Box Column](listbox-column.md)
 
 ---
 

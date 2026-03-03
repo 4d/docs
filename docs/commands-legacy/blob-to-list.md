@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.BLOB to list.Summary-->The BLOB to list command creates a new hierarchical list with the data stored within the BLOB *blob* at the byte offset (starting at zero) specified by *offset* and returns a List Reference number for that new list.<!-- END REF-->

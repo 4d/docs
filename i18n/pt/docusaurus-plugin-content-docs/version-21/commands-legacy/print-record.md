@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|15 R5|Modificado|
+|2004|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.PRINT RECORD.Summary-->PRINT RECORD imprime o registro atual de *tabela*, sem modificar a seleção atual.<!-- END REF--> O formulário de saída atual se utiliza para a impressão. Se não houver registro atual para *tabela*, PRINT RECORD não faz nada.

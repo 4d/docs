@@ -19,6 +19,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Renomear|
+|12.1|Modificado|
+|12|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.ST SET TEXT.Summary-->O comando OBJECT SET STYLED TEXT insere o texto passado no parâmetro *novoTexto* no campo ou variável de texto com estilo designado pelo parâmetro *objeto*.<!-- END REF--> Este comando só é aplicado ao texto sem formato do parâmetro de *objeto*, sem modificar as etiquetas de estilo que contenha. Se pode utilizar para modificar por programação, texto com estilo na tela. 

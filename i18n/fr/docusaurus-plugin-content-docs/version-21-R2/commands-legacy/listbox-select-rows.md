@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|18 R3|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX SELECT ROWS.Summary-->La commande **LISTBOX SELECT ROWS**  provoque la sélection des lignes d'une list box entity selection ou une list box collection correspondant aux entités ou objets contenus dans le paramètre *sélection*.<!-- END REF--> 

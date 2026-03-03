@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL Release 2|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.WA OPEN BACK URL.Summary-->El comando WA OPEN BACK URL carga en el área web designada por los parámetros *\** y *objeto* el URL precedente en la secuencia de los URLs abiertos.<!-- END REF-->

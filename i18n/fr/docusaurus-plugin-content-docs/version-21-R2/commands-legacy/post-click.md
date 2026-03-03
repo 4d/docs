@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.POST CLICK.Summary-->La commande **POST CLICK** simule un clic souris.<!-- END REF--> Elle produit les mêmes effets que lorsque l'utilisateur clique réellement avec le bouton de la souris.

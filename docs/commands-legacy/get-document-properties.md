@@ -5,7 +5,7 @@ slug: /commands/get-document-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET DOCUMENT PROPERTIES.Syntax-->**GET DOCUMENT PROPERTIES** ( *document* : Text ; *locked* : Boolean ; *invisible* : Boolean ; created on ; created at ; modified on ; modified at )<!-- END REF-->
+<!--REF #_command_.GET DOCUMENT PROPERTIES.Syntax-->**GET DOCUMENT PROPERTIES** ( *document* : Text ; *locked* : Boolean ; *invisible* : Boolean ; *createdOn* : Date ; *createdAt* : Time ; *modifiedOn* : Date ; *modifiedAt* : Time )<!-- END REF-->
 <!--REF #_command_.GET DOCUMENT PROPERTIES.Params-->
 <div class="no-index">
 
@@ -14,12 +14,22 @@ displayed_sidebar: docs
 | document | Text | &#8594;  | Document name |
 | locked | Boolean | &#8592; | Locked (True) or unlocked (False) |
 | invisible | Boolean | &#8592; | Invisible (True) or visible (False) |
-| created on | Date | &#8592; | Creation date |
-| created at | Time | &#8592; | Creation time |
-| modified on | Date | &#8592; | Last modification date |
-| modified at | Time | &#8592; | Last modification time |
+| createdOn | Date | &#8592; | Creation date |
+| createdAt | Time | &#8592; | Creation time |
+| modifiedOn | Date | &#8592; | Last modification date |
+| modifiedAt | Time | &#8592; | Last modification time |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
 
 ## Description 
 
@@ -29,8 +39,8 @@ After the call:
 
 * *locked* returns True if the document is locked. A locked document cannot be modified.
 * *invisible* returns True if the document is hidden.
-* *created on* and *created at* return the date and time when the document was created.
-* *modified on* and *modified at* return the date and time when the document modified for the last time.
+* *createdOn* and *createdAt* return the date and time when the document was created.
+* *modifiedOn* and *modifiedAt* return the date and time when the document modified for the last time.
 
 ## Example 
 
@@ -101,7 +111,7 @@ Once this is implemented in the database, we have all we need to write the proje
 ```4d
   // CREATE DOCUMENTATION Project Method
  
- C_TEXT($vsPath;$vsDocPathName;$vsDocName)
+ var $vsPath;$vsDocPathName;$vsDocName : TExt
  var $vlDoc : Integer
  var $vbOnWindows;$vbDoIt;$vbLocked;$vbInvisible : Boolean
  var $vhDocRef;$vhCreatedAt;$vhModifiedAt : Time

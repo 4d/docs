@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|6.5.3|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.EXPAND BLOB.Summary-->EXPAND BLOB コマンドは、[COMPRESS BLOB](compress-blob.md "COMPRESS BLOB")コマンドを使用して既に圧縮されている*blob*を解凍します。<!-- END REF-->  

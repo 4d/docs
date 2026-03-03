@@ -16,6 +16,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|19 R8|変更|
+|15 R5|変更|
+|12|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.ON ERR CALL.Summary-->**ON ERR CALL** コマンドは、カレントプロジェクト内の指定された実行コンテキストにおけるエラー検知用のメソッドとして errorMethod で渡した名前のプロジェクトメソッドをインストールします。<!-- END REF-->このプロジェクトメソッドは**エラー処理メソッド**または**エラーキャッチメソッド**と呼ばれます。

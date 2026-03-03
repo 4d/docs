@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get string resource.Summary-->The **Get string resource** command returns the string stored in the string (“STR ”) resource whose ID is passed in *resID*.<!-- END REF-->

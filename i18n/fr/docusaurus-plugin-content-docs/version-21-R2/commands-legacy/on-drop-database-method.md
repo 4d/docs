@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|16 R4|Modifié|
+
+</details>
+</div>
+
 ## 
 
 <!--REF #_command_.On Drop database method.Summary-->La **On Drop database method** est disponible dans les applications 4D en mode local ou distant.<!-- END REF-->

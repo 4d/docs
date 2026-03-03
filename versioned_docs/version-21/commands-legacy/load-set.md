@@ -32,9 +32,9 @@ Remember that a set is a representation of a selection of records at the moment 
 The following example uses LOAD SET to load a set of the Acme locations in New York:
 
 ```4d
- LOAD SET([Companies];"NY Acme";"NYAcmeSt") // Load the set into memory
- USE SET("NY Acme") // Change current selection to NY Acme
- CLEAR SET("NY Acme") // Clear the set from memory
+ LOAD SET([Companies];"NY Acme";"NYAcmeSt") // Load the set into memory
+ USE SET("NY Acme") // Change current selection to NY Acme
+ CLEAR SET("NY Acme") // Clear the set from memory
 ```
 
 ## System variables and sets 

@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|6.7.1|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.DELETE DOCUMENT.Summary-->El comando **DELETE DOCUMENT** borra el documento cuyo nombre se pasa en *documento*.<!-- END REF-->  

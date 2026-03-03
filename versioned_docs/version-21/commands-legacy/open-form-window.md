@@ -21,6 +21,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+|14 R5|Modified|
+|16 R4|Modified|
+|16 R6|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Open form window.Summary-->The Open form window command opens a new window using the size and resizing properties of the form *formName*.<!-- END REF-->

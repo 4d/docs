@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Is table number valid.Summary-->Is table number validコマンドは、引数*tableNum*に渡したテーブル番号のテーブルがデータベースに存在する場合、Trueを返します。<!-- END REF-->その他の場合は、Falseを返します。また、テーブルがエクスプローラーのごみ箱にある場合、コマンドはFalseを返しますので注意してください。

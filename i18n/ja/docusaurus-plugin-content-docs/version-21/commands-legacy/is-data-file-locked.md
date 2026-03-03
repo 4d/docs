@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2003|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Is data file locked.Summary-->Is data file locked コマンドは、現在開いているデータベースのデータファイル、または少なくとも1つのセグメントがロックされている（つまり、書き込み禁止）場合にTrue（真）を返します。<!-- END REF-->

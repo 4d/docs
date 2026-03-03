@@ -5,9 +5,11 @@ slug: /commands/num
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Num.Syntax-->**Num** ( *expression* {; *separator*} ) : Real<br/>**Num** ( *expression* ; *base* ) : Real<!-- END REF-->
+<!--REF #_command_.Num.Syntax-->**Num** ( *expression* : Text, Boolean, Integer {; *separator* : Text} ) : Real<br/>**Num** ( *expression* : Text, Boolean, Integer ; *base* : Integer ) : Real<!-- END REF-->
 
 <!--REF #_command_.Num.Params-->
+
+<div class="no-index">
 
 | Parâmetro | Tipo                   |                             | Descrição                                                                                       |
 | --------- | ---------------------- | --------------------------- | ----------------------------------------------------------------------------------------------- |
@@ -16,15 +18,19 @@ displayed_sidebar: docs
 | base      | Integer                | &#8594; | Value between 2 and 36 that represents the radix                                                |
 | Resultado | Real                   | &#8592; | Numeric form of the expression parameter                                                        |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>História</summary>
 
-| Release | Mudanças                    |
-| ------- | --------------------------- |
-| 21      | Support of *base* parameter |
+| Release                     | Mudanças                    |
+| --------------------------- | --------------------------- |
+| 21                          | Support of *base* parameter |
+| <6 | Created                     |
 
 </details>
+</div>
 
 ## Descrição
 
@@ -49,6 +55,7 @@ There are three reserved characters that **Num** treats specially: the decimal s
 - The hyphen causes the number or exponent to be negative. The hyphen must appear before any negative numeric characters or after the “e” for an exponent. Except for the “e” character, if a hyphen is embedded in a numeric string, the portion of the string after the hyphen is ignored. For example, `Num("123-456")` returns 123, but `Num("-9")` returns -9.
 - The e or E causes any numeric characters to its right to be interpreted as the power of an exponent. The “e” must be embedded in a numeric string. Thus, `Num("123e–2")` returns 1.23.  
   Note that when the string includes more than one "e", conversion might give different results under macOS and under Windows.
+- The algorithm for converting text into [real values](../Concepts/dt_number.md) is based on 13 significant digits.
 
 #### *separator* parameter
 

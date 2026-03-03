@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6.8.3|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.RECEIVE BUFFER.Summary-->RECEIVE BUFFER lee los datos del puerto serial abierto previamente por el comando [SET CHANNEL](set-channel.md).<!-- END REF--> El puerto serial tiene un buffer que se llena con caracteres hasta que un comando los lee. RECEIVE BUFFER obtiene los caracteres del buffer serial, los coloca en la variable *varRecep* y luego limpia el buffer. Si no hay caracteres en el buffer, la variable *varRecep* estará vacía.

@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Variance.Summary-->**Variance** retourne la variance de *séries*.<!-- END REF--> Si *séries* est un champ indexé, l'index est utilisé pour le calcul.

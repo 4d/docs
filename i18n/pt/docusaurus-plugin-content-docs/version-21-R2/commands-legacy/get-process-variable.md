@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GET PROCESS VARIABLE.Summary-->O comando GET PROCESS VARIABLE lê o valor de as variáveis processo *srcVar* (*srvVar2*, etc.) desde o processo fonte cujo número se passa em *processo* e devolve seus valores atuais nas variáveis *dstVar* (*dstVar2*, etc.) do processo atual.<!-- END REF-->  

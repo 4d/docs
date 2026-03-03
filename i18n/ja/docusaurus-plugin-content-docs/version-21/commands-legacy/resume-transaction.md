@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|15 R4|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.RESUME TRANSACTION.Summary-->**RESUME TRANSACTION**コマンドは、カレントプロセスの同レベルにおいて [SUSPEND TRANSACTION](suspend-transaction.md) によって停止していたトランザクションを再開させます。<!-- END REF-->このコマンド後に実行されたオペレーションはトランザクションコントロール下で実行されます (ただし複数の停止されていたトランザクションがネストされていた場合を除きます)。

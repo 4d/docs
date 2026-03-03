@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|18 R6|変更|
+|18 R3|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WA Run offscreen area.Summary-->**WA Run offscreen area** コマンドは、メモリ内にWeb エリアを作成します。<!-- END REF-->このWeb エリアはWeb ページを自動的に読み込んで解析することなどに使用できます。

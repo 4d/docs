@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.IMPORT TEXT.Summary-->The **IMPORT TEXT** command reads data from *document*, a Windows or Macintosh text document, into the table *aTable* by creating new records for that table.<!-- END REF-->
@@ -39,10 +50,10 @@ Using **IMPORT TEXT**, the default field delimiter is the tab character (code 9)
 The following example imports data from a text document. The method first sets the input form so that the data will be imported through the correct form, changes the 4D delimiter variables, then performs the import:
 
 ```4d
- FORM SET INPUT([People];"Import")
- FldDelimit:=27 // Set field delimiter to Escape character
- RecDelimit:=10 // Set record delimiter to Line Feed character
- IMPORT TEXT([People];"NewPeople.txt") // Import from “NewPeople.txt” document
+ FORM SET INPUT([People];"Import")
+ FldDelimit:=27 // Set field delimiter to Escape character
+ RecDelimit:=10 // Set record delimiter to Line Feed character
+ IMPORT TEXT([People];"NewPeople.txt") // Import from “NewPeople.txt” document
 ```
 
 ## System variables and sets 

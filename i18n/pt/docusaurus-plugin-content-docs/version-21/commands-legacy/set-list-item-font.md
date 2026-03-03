@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SET LIST ITEM FONT.Summary-->O comando SET LIST ITEM FONT modifica a fonte de caracteres do elemento especificado pelo parâmetro *refElem* da lista cujo número de referência ou nome de objeto se passa em *lista*.<!-- END REF--> 

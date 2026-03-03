@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|16 R6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Storage.Summary-->El método **Storage** devuelve el catálogo de objetos compartidos o colecciones compartidas registrados registradas en el objeto *Storage* en la máquina o componente actual.<!-- END REF--> 

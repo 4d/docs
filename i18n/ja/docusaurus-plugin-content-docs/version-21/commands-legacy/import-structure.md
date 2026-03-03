@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14 R4|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.IMPORT STRUCTURE.Summary-->**IMPORT STRUCTURE** コマンドは、カレントデータベース内に、 *xmlStructure* に渡した4D XMLストラクチャー定義を読み込みます。<!-- END REF-->

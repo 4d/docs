@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|17 R3|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM Convert to dynamic.Summary-->La commande **FORM Convert to dynamic** convertit le formulaire classique *nomFormulaire* en formulaire dynamique et le retourne sous forme d'objet.<!-- END REF-->

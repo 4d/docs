@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R5|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Bool.Summary-->**Bool** コマンドは、*expression* 引数に渡した式のブール形式を返します。<!-- END REF-->

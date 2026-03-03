@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|19|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET APPLICATION COLOR SCHEME.Summary-->The **SET APPLICATION COLOR SCHEME** command defines the color scheme to use at the application level for the current session.<!-- END REF--> This scheme will be applied to forms that do not already declare a specific scheme (a color scheme defined at the form level takes priority over the application level).

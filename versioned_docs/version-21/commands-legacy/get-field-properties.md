@@ -22,6 +22,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|15|Modified|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET FIELD PROPERTIES.Summary-->The **GET FIELD PROPERTIES** command returns information about the field specified by *fieldPtr* or by *tableNum* and *fieldNum*.<!-- END REF-->
@@ -61,7 +73,7 @@ After the call:
 This example sets the variables *vType*, *vLength*, *vIndex*, *vUnique* and *vInvisible* to the properties for the third field of the first table:
 
 ```4d
- GET FIELD PROPERTIES(1;3;vType;vLength;vIndex;vUnique;vInvisible)
+ GET FIELD PROPERTIES(1;3;vType;vLength;vIndex;vUnique;vInvisible)
 ```
 
 ## Example 2 
@@ -69,7 +81,7 @@ This example sets the variables *vType*, *vLength*, *vIndex*, *vUnique* and *vIn
 This example sets the variables *vType*, *vLength*, *vIndex*, *vUnique* and *vInvisible* to the properties for the field named \[Table3\]Field2:
 
 ```4d
- GET FIELD PROPERTIES(->[Table3]Field2;vType;vLength;vIndex;vUnique;vInvisible)
+ GET FIELD PROPERTIES(->[Table3]Field2;vType;vLength;vIndex;vUnique;vInvisible)
 ```
 
 ## See also 

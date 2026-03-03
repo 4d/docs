@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Selected list items.Summary-->O comando Selected list items retorna a posição ou referência do elemento selecionado na lista cujo número de referência ou nome de objeto é passada em *lista*.<!-- END REF-->

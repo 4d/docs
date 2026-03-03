@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Windows Alt down.Summary-->Windows Alt down devuelve TRUE si la tecla Alt Windows está presionada.<!-- END REF-->cuando se llama en una plataforma Macintosh, Windows Alt down devuelve TRUE si la tecla Macintosh Opción está presionada.

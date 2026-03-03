@@ -9,20 +9,26 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Generate UUID.Params-->
 
+<div class="no-index">
+
 | 引数      | 型       |                             | 説明                                                               |
 | ------- | ------- | --------------------------- | ---------------------------------------------------------------- |
 | version | Integer | &#8594; | UUID version: 4 (デフォルト) または 7 |
 | 戻り値     | Text    | &#8592; | 非正規テキストとしての新しいUUID (32文字)                     |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>履歴</summary>
 
 | リリース   | 内容                |
 | ------ | ----------------- |
 | 20 R10 | *version* 引数のサポート |
+| 12     | Created           |
 
 </details>
+</div>
 
 ## 説明
 

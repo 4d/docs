@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|16 R5|Modified|
+|16 R6|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Date.Summary-->The Date command evaluates *expression* and returns a date.<!-- END REF-->

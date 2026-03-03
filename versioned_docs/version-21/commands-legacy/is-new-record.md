@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6.5|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Is new record.Summary-->The **Is new record** command returns True when *aTable*’s current record is being created and has not yet been saved in the current process.<!-- END REF-->You can obtain the same information by using the existing [Record number](record-number.md) command, and by testing if it returns -3\.   
@@ -28,13 +38,13 @@ However, we strongly advise you to use **Is new record** instead of [Record numb
 The following two statements are identical. The second one is strongly advised so that the code will be compatible with future versions of 4D:
 
 ```4d
- If(Record number([Table])=-3) //Not advised
-  // ...
- End if
- 
- If(Is new record([Table])) //Strongly advised
-  // ...
- End if
+ If(Record number([Table])=-3) //Not advised
+  // ...
+ End if
+ 
+ If(Is new record([Table])) //Strongly advised
+  // ...
+ End if
 ```
 
 ## See also 

@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|2004|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.HIGHLIGHT RECORDS.Summary-->El comando HIGHLIGHT RECORDS permite seleccionar registros en un formulario listado.<!-- END REF--> Esta operación es idéntica a la selección de registros manual en modo listado utilizando el ratón o las combinaciones de teclado **Mayús+Clic** o **Ctrl+Clic** (Windows) o **comando+Clic** (macOS). La selección actual no se modifica. 

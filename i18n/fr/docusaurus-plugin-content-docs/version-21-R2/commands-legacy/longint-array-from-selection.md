@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|6.7|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LONGINT ARRAY FROM SELECTION.Summary-->La commande **LONGINT ARRAY FROM SELECTION** remplit le tableau *tabEnrg* avec les numéros (absolus) des enregistrements faisant partie de la sélection temporaire *tempo*.<!-- END REF-->

@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Tickcount.Summary-->Tickcount retorna o número de tics (1 tic = 1 / 60 avos de um segundo) passados desde que se iniciou a máquina.<!-- END REF-->Tickcount retorna um valor de tipo Inteiro longo.

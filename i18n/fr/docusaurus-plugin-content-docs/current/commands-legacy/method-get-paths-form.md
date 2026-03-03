@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.METHOD GET PATHS FORM.Summary-->La commande **METHOD GET PATHS FORM** remplit le tableau *tabChemins* avec les chemins d’accès internes et les noms des méthodes de tous les objets des formulaires, ainsi que des méthodes formulaire.<!-- END REF--> Les méthodes formulaire sont libellées {formMethod}. 

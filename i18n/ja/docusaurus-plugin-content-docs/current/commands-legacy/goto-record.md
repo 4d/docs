@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GOTO RECORD.Summary-->GOTO RECORDは、*aTable*中の指定したレコードをカレントレコードとして選択します。<!-- END REF-->*record*引数は、[Record number](record-number.md "Record number")コマンドで求めることのできるレコード番号です。このコマンドを実行するとセレクションは選択されたレコード1件だけになります。

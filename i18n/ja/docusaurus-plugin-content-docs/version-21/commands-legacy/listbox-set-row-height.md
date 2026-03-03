@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LISTBOX SET ROW HEIGHT.Summary-->**LISTBOX SET ROW HEIGHT** コマンドは、*object* および *\** パラメーターで指定されたリストボックスの、*row* で指定された行の高さを変更します。<!-- END REF-->

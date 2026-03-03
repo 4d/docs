@@ -24,6 +24,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Criado por|
+|12|Renomear|
+|13|Modificado|
+|14 R3|Modificado|
+|17|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Summary-->O comando **LISTBOX INSERT COLUMN FORMULA** insere uma coluna no listbox designado pelos parâmetros *objeto* e *\**.<!-- END REF--> 

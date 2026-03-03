@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.BLOB to print settings.Summary-->**BLOB to print settings** コマンドは、4Dの現プリンタ設定を *printSettings* BLOBに格納された内容で置き換えます。<!-- END REF-->このBLOBは [Print settings to BLOB](print-settings-to-blob.md) または  4D Pack コマンドで生成されていなければなりません (後述参照)。

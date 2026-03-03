@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|19 R2|Modifié|
+|11 SQL Release 2|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SOAP DECLARATION.Summary-->La commande **SOAP DECLARATION** permet de déclarer explicitement le type des paramètres utilisés dans une méthode 4D publiée comme Web Service.<!-- END REF-->

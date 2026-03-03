@@ -20,6 +20,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|18 R3|Modifié|
+|13|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.METHOD GET PATHS.Summary-->La commande **METHOD GET PATHS** remplit le tableau *tabChemins* avec les chemins d’accès internes et les noms des méthodes de l’application du type défini par le paramètre *typeMéthode*.<!-- END REF-->

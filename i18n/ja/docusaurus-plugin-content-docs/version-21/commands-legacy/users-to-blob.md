@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.USERS TO BLOB.Summary-->**互換性に関する注記:* このコマンドはバイナリデータベースでのみ機能します。<!-- END REF-->プロジェクトデータベースにおいては空のBLOBが返されます。* 

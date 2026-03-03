@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|19 R5|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Copy parameters.Summary-->Copy parameters コマンドは、メソッドまたは関数に実際に渡された全ての引数を格納したコレクションを返します。<!-- END REF-->このコマンドはある関数またはメソッドから、また別の関数またはメソッドへと、不定数の引数を転送したい場合に有用です。

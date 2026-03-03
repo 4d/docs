@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R4|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.FORM SET ENTRY ORDER.Summary-->**FORM SET ENTRY ORDER** コマンドは カレントプロセスのカレントフォームにおいて、*objectNames* に渡した配列に基づき入力順を動的に指定します。<!-- END REF--> 

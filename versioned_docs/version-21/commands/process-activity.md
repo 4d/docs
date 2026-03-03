@@ -4,7 +4,7 @@ title: Process activity
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Process activity.Syntax-->**Process activity** () : Object<br/>**Process activity** ( *options* ) : Object<br/>**Process activity** ( *sessionID* ) : Object<br/>**Process activity** ( *sessionID* ; *options* ) : Object<!-- END REF-->
+<!--REF #_command_.Process activity.Syntax-->**Process activity** () : Object<br/>**Process activity** ( *options* : Integer ) : Object<br/>**Process activity** ( *sessionID* : Text ) : Object<br/>**Process activity** ( *sessionID* : Text ; *options* : Integer ) : Object<!-- END REF-->
 <!--REF #_command_.Process activity.Params-->
 <div class="no-index">
 
@@ -16,14 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>History</summary>
 
 |Release|Changes|
 |---|---|
-|20 R7|Support of *sessionID* parameter|
 |21|Support of web user sessions|
+|20 R7|<ul><li>Support of *sessionID* parameter</li><li>Renamed (Get process activity)</li></ul>|
 
 </details>
+</div>
 
 
 ## Description 
@@ -79,13 +81,13 @@ On the server, the `Process activity` command returns an additional "session" pr
 You want to get the collection of all user sessions:
 
 ```4d
-  //To be executed on the server
- 
- var $o : Object
- var $i : Integer
+  //To be executed on the server
+ 
+ var $o : Object
+ var $i : Integer
  var $processName;$userName : Text
 
- 
+ 
  $o:=Process activity //Get process & session info
  For($i;0;($o.processes.length)-1) //Iterate over the "processes" collection
     $processName:=$o.processes[$i].name

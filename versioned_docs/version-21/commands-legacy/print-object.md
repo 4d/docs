@@ -21,6 +21,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Print object.Summary-->The **Print object** command lets you print the form object(s) designated by the *object* and *\** parameters, at the location set by the *posX* and *posY* parameters.<!-- END REF-->

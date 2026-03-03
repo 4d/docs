@@ -20,6 +20,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.CREATE THUMBNAIL.Summary-->O comando CREATE THUMBNAIL devolve uma miniatura a partir de uma imagem fonte.<!-- END REF--> As miniaturas são utilizadas geralmente para a pré-visualização de imagens em software multimídia ou páginas web.

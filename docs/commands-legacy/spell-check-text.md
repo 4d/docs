@@ -5,7 +5,7 @@ slug: /commands/spell-check-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SPELL CHECK TEXT.Syntax-->**SPELL CHECK TEXT** ( *text* : Text ; *errPos* : Integer ; *errLength* : Integer ; *checkPos* : Integer ; *arrSuggest* : Text array )<!-- END REF-->
+<!--REF #_command_.SPELL CHECK TEXT.Syntax-->**SPELL CHECK TEXT** ( *text* : Text ; *errPos* : Integer ; *errLength* : Integer ; *checkPos* : Integer ; {*arrSuggest* : Text array} )<!-- END REF-->
 <!--REF #_command_.SPELL CHECK TEXT.Params-->
 <div class="no-index">
 
@@ -18,6 +18,17 @@ displayed_sidebar: docs
 | arrSuggest | Text array | &#8592; | List of suggestions |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Modified|
+|13|Created|
+
+</details>
+</div>
 
 ## Description 
 

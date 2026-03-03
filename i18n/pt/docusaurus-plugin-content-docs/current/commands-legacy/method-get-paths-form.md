@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.METHOD GET PATHS FORM.Summary-->O comando **METHOD GET PATHS FORM** enche o array *arrRotas* com as rotas de acesso internas e os nomes dos métodos de todos os objetos dos formulários assim como também dos métodos formulário.<!-- END REF--> Os métodos formulário se etiquetam {formMethod}.

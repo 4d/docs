@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6.5|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Is record loaded.Summary-->El comando Is record loaded devuelve True si si el registro actual de *tabla* se carga en el proceso actual.<!-- END REF-->devolverá False en modo remoto (devuelve True en modo local).

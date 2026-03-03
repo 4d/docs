@@ -22,6 +22,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6.5|Created|
+|12|Renamed|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM GET PROPERTIES.Summary-->The FORM GET PROPERTIES command returns the properties of the form *formName*.<!-- END REF-->

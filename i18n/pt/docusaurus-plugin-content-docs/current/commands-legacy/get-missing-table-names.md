@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GET MISSING TABLE NAMES.Summary-->O comando GET MISSING TABLE NAMES retorna os nomes de todas as tabelas faltantes do banco no array *tabelaNaoEncontrada*.<!-- END REF-->

@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|14 R3|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DELAY PROCESS.Summary-->DELAY PROCESS delays the execution of a *process* for a number of ticks (1 tick = 1/60th of a second).<!-- END REF--> During this period, *process* does not take any processing time. Even though the execution of a process may be delayed, it is still in memory.

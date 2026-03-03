@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get external data path.Summary-->La commande **Get external data path** retourne le chemin d’accès complet du fichier de stockage externe des données du champ passé dans le paramètre *leChamp*, pour l’enregistrement courant.<!-- END REF--> Le champ passé en paramètre doit être de type Texte, Blob ou Image. La commande retourne le chemin d'accès du fichier de stockage même si le fichier n'existe pas ou n'est pas accessible.

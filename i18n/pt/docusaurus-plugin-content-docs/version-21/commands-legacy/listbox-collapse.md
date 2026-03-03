@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.LISTBOX COLLAPSE.Summary-->O comando LISTBOX COLLAPSE é utilizado para contrair linhas de quebra do objeto list box designado pelos parâmetros *objeto* e *\** .<!-- END REF--> 

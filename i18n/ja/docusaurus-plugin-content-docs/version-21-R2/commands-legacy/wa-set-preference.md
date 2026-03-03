@@ -18,6 +18,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL Release 2|初出|
+|14|変更|
+|14 R2|変更|
+|19|変更|
+|19 R5|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WA SET PREFERENCE.Summary-->WA SET PREFERENCE コマンドを使用して、引数 *\** と *object* によって指定されたWebエリアに対して、さまざまな環境設定を行います。<!-- END REF-->

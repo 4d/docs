@@ -20,6 +20,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|18|Modificado|
+|6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.PICTURE PROPERTIES.Summary-->El comando PICTURE PROPERTIES devuelve la información sobre la imagen que pasa en el parámetro *imagen*.<!-- END REF-->

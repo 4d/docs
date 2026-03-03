@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT GET DRAG AND DROP OPTIONS.Summary-->La commande **OBJECT GET DRAG AND DROP OPTIONS** retourne les options de glisser-déposer pour l’objet ou les objets désigné(s) par les paramètres *objet* et *\** pour le process courant.<!-- END REF--> 

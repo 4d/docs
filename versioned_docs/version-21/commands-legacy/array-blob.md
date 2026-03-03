@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ARRAY BLOB.Summary-->The **ARRAY BLOB** command creates and/or resizes an array of Blob type elements in memory.<!-- END REF-->
@@ -37,7 +47,7 @@ When you apply the **ARRAY BLOB** command to an existing array:
 This example creates a process array containing 100 BLOB-type elements:
 
 ```4d
- ARRAY BLOB(arrBlob;100)
+ ARRAY BLOB(arrBlob;100)
 ```
 
 ## Example 2 
@@ -45,7 +55,7 @@ This example creates a process array containing 100 BLOB-type elements:
 This example creates a local array of 100 rows each containing 50 BLOB-type elements:
 
 ```4d
- ARRAY BLOB($arrBlob;100;50)
+ ARRAY BLOB($arrBlob;100;50)
 ```
 
 ## Example 3 
@@ -53,10 +63,10 @@ This example creates a local array of 100 rows each containing 50 BLOB-type elem
 This example creates a local array of 100 rows each containing 50 BLOB-type elements. The *$vByteValue* variable receives the 10th byte of the BLOB placed in the 7th column and the 5th row of the BLOB array:
 
 ```4d
- C_INTEGER($vByteValue)
- ARRAY BLOB($arrValues;100;50)
- ...
- $vByteValue:=$arrValues{5}{7}{9}
+ C_INTEGER($vByteValue)
+ ARRAY BLOB($arrValues;100;50)
+ ...
+ $vByteValue:=$arrValues{5}{7}{9}
 ```
 
 ## See also 

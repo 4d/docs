@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Renamed|
+|2004|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WEB GET HTTP BODY.Summary-->The **WEB GET HTTP BODY** command returns the body of the HTTP request being processed.<!-- END REF--> The HTTP body is returned as is, without processing or parsing. 

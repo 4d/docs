@@ -25,6 +25,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL Release 3|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.REGISTER CLIENT.Summary-->The **REGISTER CLIENT** command “registers” a 4D client station with the name specified in *clientName* on 4D Server, so as to allow other clients or possibly 4D Server (by using stored methods) to execute methods on it by using the [`EXECUTE ON CLIENT`](execute-on-client.md) command.<!-- END REF--> Once it is registered, a 4D client can then execute one or more methods for other clients.

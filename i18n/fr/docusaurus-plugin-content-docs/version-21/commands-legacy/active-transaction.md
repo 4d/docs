@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|15 R4|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Active transaction.Summary-->La commande **Active transaction** retourne **Vrai** si le process courant est en transaction et si cette transaction n'est pas suspendue.<!-- END REF--> Elle retourne **Faux** s'il n'y a pas de transaction en cours, ou si la transaction en cours est suspendue. Une transaction peut être suspendue à l'aide de la commande [SUSPEND TRANSACTION](suspend-transaction.md). 

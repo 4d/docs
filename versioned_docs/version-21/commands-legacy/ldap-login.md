@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|15|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LDAP LOGIN.Summary-->The **LDAP LOGIN** command opens a read-only connection to the LDAP server specified in the *url* parameter with the *login* and *password* identifiers provided.<!-- END REF--> If accepted by the server, this connection will be used for any LDAP searches executed subsequently in the current process until the [LDAP LOGOUT](ldap-logout.md) command is executed (or until the process is closed). 
@@ -59,12 +69,12 @@ Do not forget to call the [LDAP LOGOUT](ldap-logout.md) command when the connect
 You want to log in to an LDAP server and do a search:
 
 ```4d
- ARRAY TEXT($_tabAttributes;0)
- APPEND TO ARRAY($_tabAttributes;"cn")
- APPEND TO ARRAY($_tabAttributes;"phoneNumber")
- LDAP LOGIN("ldap://srv.dc.acme.com:389";"John Smith";"qrnSurBret2elburg")
- $vfound:=LDAP Search("OU=UO_Users,DC=ACME,DC=com";”cn=John Doe";LDAP all levels;$_tabAttributes)
- LDAP LOGOUT //do not forget to log out
+ ARRAY TEXT($_tabAttributes;0)
+ APPEND TO ARRAY($_tabAttributes;"cn")
+ APPEND TO ARRAY($_tabAttributes;"phoneNumber")
+ LDAP LOGIN("ldap://srv.dc.acme.com:389";"John Smith";"qrnSurBret2elburg")
+ $vfound:=LDAP Search("OU=UO_Users,DC=ACME,DC=com";”cn=John Doe";LDAP all levels;$_tabAttributes)
+ LDAP LOGOUT //do not forget to log out
 ```
 
 ## Example 2 
@@ -72,25 +82,25 @@ You want to log in to an LDAP server and do a search:
 This example tries to connect to an application:
 
 ```4d
- ON ERR CALL("ErrHdlr") //handle errors
- errOccurred:=False
- errMsg:=""
- If(ppBindMode=1) //if password mode is default
-    LDAP LOGIN(vUrlLdap;vUserCN;vPwd;LDAP password MD5)
- Else
-    LDAP LOGIN(vUrlLdap;vUserCN;vPwd;LDAP password plain text)
- End if
- 
- Case of
-    :(Not(errOccurred))
-       ALERT(" You are now connected to your LDAP server.  ")
- 
-    :(errOccurred)
-       ALERT("Error in your parameters")
- End case
- 
- LDAP LOGOUT
- ON ERR CALL("")
+ ON ERR CALL("ErrHdlr") //handle errors
+ errOccurred:=False
+ errMsg:=""
+ If(ppBindMode=1) //if password mode is default
+    LDAP LOGIN(vUrlLdap;vUserCN;vPwd;LDAP password MD5)
+ Else
+    LDAP LOGIN(vUrlLdap;vUserCN;vPwd;LDAP password plain text)
+ End if
+ 
+ Case of
+    :(Not(errOccurred))
+       ALERT(" You are now connected to your LDAP server.  ")
+ 
+    :(errOccurred)
+       ALERT("Error in your parameters")
+ End case
+ 
+ LDAP LOGOUT
+ ON ERR CALL("")
 ```
 
 ## See also 

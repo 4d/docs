@@ -19,6 +19,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|16 R4|Modificado|
+|11 SQL|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.APPEND TO LIST.Summary-->El comando APPEND TO LIST añade un nuevo elemento a la lista jerárquica cuyo número de referencia se pasa en *lista*.<!-- END REF-->

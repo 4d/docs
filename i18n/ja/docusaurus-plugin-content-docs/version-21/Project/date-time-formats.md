@@ -9,7 +9,7 @@ title: 日付と時間のフォーマット
 
 - [`String`](../commands/string.md) コマンド
 - [`OBJECT SET FORMAT`](../commands-legacy/object-set-format.md) および [`OBJECT Get format`](../commands-legacy/object-get-format.md) コマンド
-- the date and time format form object properties, available from the Property list or the [`dateFormat`](../FormObjects/properties_Display.md#date-format) and [`timeFormat`](../FormObjects/properties_Display.md#time-format) JSON properties.
+- プロパティリストまたは [`dateFormat`](../FormObjects/properties_Display.md#日付フォーマット) および [`timeFormat`](../FormObjects/properties_Display.md#時間フォーマット) のJSONプロパティから利用可能な、フォームオブジェクトの "日付/時間フォーマット" プロパティ
 
 ## パターンリスト
 

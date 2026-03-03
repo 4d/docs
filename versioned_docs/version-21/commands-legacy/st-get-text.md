@@ -19,6 +19,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Renamed|
+|12.1|Modified|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ST Get text.Summary-->The ST Get text command returns the styled text found in the text field or variable designated by the *object* parameter.<!-- END REF--> 

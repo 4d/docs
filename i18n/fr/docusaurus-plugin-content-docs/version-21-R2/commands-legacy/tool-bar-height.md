@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Créé|
+|14 R5|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Tool bar height.Summary-->La commande **Tool bar height** retourne la hauteur de la barre d'outils visible courante, exprimée en pixels.<!-- END REF--> Suivant le contexte, il peut s'agir soit de la barre d'outils du mode Développement de 4D, soit d'une barre d'outils personnalisée créée avec [Open form window](open-form-window.md) (la barre d'outils du mode Développement est automatiquement masquée lorsqu'une barre d'outils personnalisée est affichée).

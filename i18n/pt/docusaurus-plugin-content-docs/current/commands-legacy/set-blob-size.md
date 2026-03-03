@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SET BLOB SIZE.Summary-->SET BLOB SIZE redimensiona o BLOB *blob* de acordo com o valor passado no *tamanho*.<!-- END REF-->

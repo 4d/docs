@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX SET FOOTERS HEIGHT.Summary-->La commande **LISTBOX SET FOOTERS HEIGHT** permet de modifier par programmation la hauteur de la ligne de pied de la list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 

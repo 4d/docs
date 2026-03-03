@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Summary-->El comando **SET MENU ITEM SHORTCUT** asigna un nuevo acceso directo a un elemento del menú.<!-- END REF--> 

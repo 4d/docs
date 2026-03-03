@@ -19,6 +19,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+|12|Modified|
+|12|Renamed|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET SCROLL POSITION.Summary-->The **OBJECT SET SCROLL POSITION** command allows scrolling the contents of several types of objects: the lines of a subform, of a list form (displayed using the [MODIFY SELECTION](modify-selection.md) or [DISPLAY SELECTION](display-selection.md) commands), or of a hierarchical list, the rows and columns of a list box or even the pixels of a picture.<!-- END REF-->

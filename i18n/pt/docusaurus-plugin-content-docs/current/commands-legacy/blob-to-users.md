@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.BLOB TO USERS.Summary-->O comando BLOB TO USERS adiciona as contas de usuários presentes no BLOB *usuarios* ao banco de dados.<!-- END REF--> O BLOB *usuarios* está criptografado e deve ter sido criado usando o comando [USERS TO BLOB](users-to-blob.md).

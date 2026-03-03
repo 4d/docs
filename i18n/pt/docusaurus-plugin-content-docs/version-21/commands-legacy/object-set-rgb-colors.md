@@ -19,6 +19,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|17 R6|Modificado|
+|14|Modificado|
+|12|Renomear|
+|2004|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT SET RGB COLORS.Summary-->O comando OBJECT SET RGB COLORS modifica as cores de fundo e primeiro plano dos objetos especificados por objeto e o parâmetro opcional \*.<!-- END REF--> Quando o comando é aplicado a um objeto list box, um parâmetro adicional lhe permite modificar a cor alternativa das filas.

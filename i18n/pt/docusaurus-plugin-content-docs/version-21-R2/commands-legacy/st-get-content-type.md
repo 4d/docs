@@ -21,6 +21,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Criado por|
+|14 R5|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.ST Get content type.Summary-->O comando **ST Get content type** devolve o tipo de conteúdo encontrado no campo ou a variável de texto multi estilo designada pelo parâmetro *objeto* .<!-- END REF--> 

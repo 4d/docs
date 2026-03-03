@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|2004|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.MULTI SORT ARRAY.Summary-->**MULTI SORT ARRAY** コマンドにより、一連の配列に対してマルチレベルソートを実行することができます。<!-- END REF-->

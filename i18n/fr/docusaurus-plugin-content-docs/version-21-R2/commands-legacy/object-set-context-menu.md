@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET CONTEXT MENU.Summary-->La commande **OBJECT SET CONTEXT MENU** vous permet d’activer ou de désactiver, pour le process courant, l’association d’un menu contextuel par défaut à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 

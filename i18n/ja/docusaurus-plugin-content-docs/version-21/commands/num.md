@@ -5,26 +5,32 @@ slug: /commands/num
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Num.Syntax-->**Num** ( *expression* {; *separator*} ) : Real<br/>**Num** ( *expression* ; *base* ) : Real<!-- END REF-->
+<!--REF #_command_.Num.Syntax-->**Num** ( *expression* : Text, Boolean, Integer {; *separator* : Text} ) : Real<br/>**Num** ( *expression* : Text, Boolean, Integer ; *base* : Integer ) : Real<!-- END REF-->
 
 <!--REF #_command_.Num.Params-->
 
-| 引数        | 型                      |                             | 説明                                    |
-| --------- | ---------------------- | --------------------------- | ------------------------------------- |
-| 式         | Text, Boolean, Integer | &#8594; | 数値形式を返したい文字列、あるいは0か1を返したいブール値、あるいは数値式 |
-| separator | Text                   | &#8594; | 小数点記号                                 |
-| base      | Integer                | &#8594; | 基数を表す2から36までの値                        |
-| 戻り値       | Real                   | &#8592; | expression 引数の数値形式                    |
+<div class="no-index">
 
+| 引数         | 型                      |                             | 説明                                    |
+| ---------- | ---------------------- | --------------------------- | ------------------------------------- |
+| expression | Text, Boolean, Integer | &#8594; | 数値形式を返したい文字列、あるいは0か1を返したいブール値、あるいは数値式 |
+| separator  | Text                   | &#8594; | 小数点記号                                 |
+| base       | Integer                | &#8594; | 基数を表す2から36までの値                        |
+| 戻り値        | Real                   | &#8592; | expression 引数の数値形式                    |
+
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>履歴</summary>
 
-| リリース | 内容             |
-| ---- | -------------- |
-| 21   | *base* 引数のサポート |
+| リリース                        | 内容             |
+| --------------------------- | -------------- |
+| 21                          | *base* 引数のサポート |
+| <6 | Created        |
 
 </details>
+</div>
 
 ## 説明
 
@@ -49,6 +55,7 @@ displayed_sidebar: docs
 - ハイフンは、数値や指数が負であることを意味します。 ハイフンは負の数字文字列の前、または指数の場合“e”の後ろになければなりません。 “e”をのぞきハイフンが数字の間にあると、それ以降の文字列は無視されます。 例えば、 `Num("123-456")` は123に、しかし `Num("-9")` は-9になります。
 - eまたはEがあると、その右側の数字をすべて指数として解釈します。 eは数字の文字列の間に置かなければなりません。 `Num("123e–2")` は 1.23 になります。  
   文字列に複数の“e”を含んでいる場合、 macOS とWindows で異なる結果になる可能性があるので注意してください。
+- The algorithm for converting text into [real values](../Concepts/dt_number.md) is based on 13 significant digits.
 
 #### *separator* 引数
 

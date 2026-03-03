@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|2004.2|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.DOM Get previous sibling XML element.Summary-->El comando DOM Get previous sibling XML element devuelve una referencia al anterior “hermano” del elemento XML pasado en referencia.<!-- END REF--> Esta referencia puede utilizarse con los otros comandos de análisis XML. 

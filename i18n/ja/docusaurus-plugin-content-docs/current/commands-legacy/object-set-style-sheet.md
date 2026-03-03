@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|15 R3|変更|
+|14|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT SET STYLE SHEET.Summary-->**OBJECT SET STYLE SHEET**コマンドは、引数 *object* と *\** で指定したオブジェクトと関連付けられたスタイルシートを、カレントのプロセスにおいて変更します。<!-- END REF-->スタイルシートを変更すると、フォント、フォントサイズ、そしてフォントスタイルが変更されます(ただし自動スタイルシートではフォントスタイルは除く)。

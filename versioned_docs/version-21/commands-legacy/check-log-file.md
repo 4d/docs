@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004.4|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.CHECK LOG FILE.Summary-->The **CHECK LOG FILE** command displays the dialog box for viewing the current log file of the database (which can also be accessed via the Maintenance Security Center window)<!-- END REF-->:

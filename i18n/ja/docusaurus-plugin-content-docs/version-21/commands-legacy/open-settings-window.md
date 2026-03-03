@@ -17,6 +17,21 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16|変更|
+|13|名称変更|
+|13|変更|
+|12|変更|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OPEN SETTINGS WINDOW.Summary-->**OPEN SETTINGS WINDOW**コマンドは、カレントの4Dアプリケーションの環境設定ダイアログボックスまたはカレント4Dアプリケーションのデータベース設定を表示し、*selector*キーで指定されたパラメーターやページを表示します。<!-- END REF-->

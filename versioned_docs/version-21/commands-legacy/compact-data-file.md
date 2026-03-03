@@ -20,6 +20,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|15 R3|Modified|
+|13|Modified|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Compact data file.Summary-->The **Compact data file** command compacts the data file designated by the *dataPath* parameter associated with the *structurePath* structure file.<!-- END REF--> For more information about compacting, refer to the Design Reference manual.
@@ -56,10 +68,10 @@ Regardless of the option selected, as soon as a log file is generated, its path 
 The following example (Windows) carries out the compacting of a data file:
 
 ```4d
- $structFile:=Structure file
- $dataFile:="C:\\Databases\\Invoices\\January\\Invoices.4dd"
- $origFile:="C:\\Databases\\Invoices\\Archives\\January\\"
- $archFolder:=Compact data file($structFile;$dataFile;$origFile)
+ $structFile:=Structure file
+ $dataFile:="C:\\Databases\\Invoices\\January\\Invoices.4dd"
+ $origFile:="C:\\Databases\\Invoices\\Archives\\January\\"
+ $archFolder:=Compact data file($structFile;$dataFile;$origFile)
 ```
 
 ## System variables and sets 

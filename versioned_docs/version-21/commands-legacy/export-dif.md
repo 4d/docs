@@ -37,8 +37,8 @@ When using EXPORT DIF, the default field delimiter is the tab character (code 9)
 The following example exports data to a DIF document. The method first sets the output form so that the data will be exported through the correct form, then performs the export:
 
 ```4d
- FORM SET OUTPUT([People];"Export")
- EXPORT DIF([People];"NewPeople.dif"")  // Export to the "NewPeople.dif" document
+ FORM SET OUTPUT([People];"Export")
+ EXPORT DIF([People];"NewPeople.dif"")  // Export to the "NewPeople.dif" document
 ```
 
 ## System variables and sets 

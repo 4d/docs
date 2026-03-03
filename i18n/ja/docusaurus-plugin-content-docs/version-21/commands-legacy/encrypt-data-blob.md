@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|19|初出|
+
+</details>
+</div>
+
 ## 詳細 
 
 <!--REF #_command_.Encrypt data BLOB.Summary-->**Encrypt data BLOB** コマンドは、*blobToEncrypt* 引数のBLOB を、4D がデータの暗号化に使用するのと同じアルゴリズム(AES-256) を使用して暗号化し、その結果を*encryptedBlob* 引数に返します。<!-- END REF-->

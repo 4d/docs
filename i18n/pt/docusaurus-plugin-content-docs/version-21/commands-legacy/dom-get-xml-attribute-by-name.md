@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.DOM GET XML ATTRIBUTE BY NAME.Summary-->O comando DOM GET XML ATTRIBUTE BY NAME permite conhecer o valor de um atributo especificado por seu nome.<!-- END REF-->

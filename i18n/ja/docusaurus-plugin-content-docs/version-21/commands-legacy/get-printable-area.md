@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6.8.1|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GET PRINTABLE AREA.Summary-->GET PRINTABLE AREA コマンドは、印刷可能領域のサイズを引数*height*および*width*へピクセル単位で返します。<!-- END REF-->このサイズは、現在の印刷設定、用紙方向等によって異なります。

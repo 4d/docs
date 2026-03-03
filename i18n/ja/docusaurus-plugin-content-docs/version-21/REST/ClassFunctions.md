@@ -50,7 +50,7 @@ POST リクエストのボディに関数に渡す引数を含めます: `["Agua
 
 :::note
 
-The `getCity()` function must have been declared with the `onHTTPGet` keyword (see [Function configuration](#function-configuration) below).
+`getCity()` 関数は、 `onHTTPGet` キーワードを使用して宣言されている必要があります(以下の[関数の設定](#関数の設定) を参照して下さい)。
 
 :::
 
@@ -74,10 +74,10 @@ exposed Function getSomeInfo() : 4D.OutgoingMessage
 
 ### `onHTTPGet`
 
-Functions allowed to be called from HTTP `GET` requests must also be specifically declared with the [`onHTTPGet` keyword](../ORDA/ordaClasses.md#onhttpget-keyword). 例:
+HTTP `GET` リクエストから呼び出すことのできる関数は、[`onHTTPGet` キーワード](../ORDA/ordaClasses.md#onHttpGet-キーワード) も使用して明確に宣言されていなければなりません。 例:
 
 ```4d
-//allowing GET requests
+// GET リクエストを許可する
 exposed onHTTPGet Function getSomeInfo() : 4D.OutgoingMessage
 ```
 
@@ -499,14 +499,14 @@ __KEY 属性を使って、上の例題と同じことをおこなうと、エ�
 既存の Schools エンティティを既存の Studentsエンティティに紐付けます。 `StudentsEntity` クラスは次の API を提供しています:
 
 ```
-// StudentsEntity class
+// StudentsEntity クラス
 
 Class extends Entity
 
 exposed Function putToSchool($school : Object) -> $status : Object
 
-		//$school is a Schools entity
-		//Associate the related entity school to the current Students entity
+		//$school は Schools エンティティ
+		//カレントの Students エンティティに学生が在籍中の学校エンティティを紐付け
 	This.school:=$school
 
 	$status:=This.save()
@@ -537,7 +537,7 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 `Students` DataClassクラスは、受け取ったエンティティセレクション ($1) を更新する `setFinalExam()` 関数を持ちます。 実際には、エンティティセレクション内の各エンティティの *finalExam* 属性値を、2つ目に渡した引数 ($2) に更新します。 最後に、更新されたエンティティのプライマリーキーを返します。
 
 ```
-// Students class
+// Students クラス
 
 Class extends DataClass
 
@@ -546,11 +546,11 @@ exposed Function setFinalExam($es : Object ; $examResult : Text) -> $keys : Coll
 
     var $student, $status : Object
 
-      //$es is an Entity selection
+      //$es はエンティティセレクション
 
     $keys:=New collection()
 
-      //Loop on the entity selection
+      //エンティティセレクションをループする
     For each ($student;$es)
         $student.finalExam:=$examResult
         $status:=$student.save()

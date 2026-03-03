@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OPEN COLOR PICKER.Summary-->O comando **OPEN COLOR PICKER** mostra a caixa de diálogo de seleção de cor do sistema.<!-- END REF-->  

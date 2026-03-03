@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|2004|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Modified.Summary-->**Modified** returns [True](true.md "True") if *field* has been programmatically assigned a value or has been edited during data entry.<!-- END REF--> The **Modified** command must only be used in a form method (or a subroutine called by a form method).

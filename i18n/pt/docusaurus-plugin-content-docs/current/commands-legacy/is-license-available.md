@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14 R3|Modificado|
+|2004|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Is license available.Summary-->O comando Is license available permite conhecer a disponibilidade de um plug-in.<!-- END REF--> É útil, por exemplo, para mostrar ou ocultar funções que necessitam da presença de um plug-in.  

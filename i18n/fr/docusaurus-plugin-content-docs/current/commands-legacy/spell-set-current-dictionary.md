@@ -15,6 +15,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Modifié|
+|13|Renommé|
+|13|Modifié|
+|2004.5|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SPELL SET CURRENT DICTIONARY.Summary-->La commande **SPELL SET CURRENT DICTIONARY** provoque le remplacement du dictionnaire courant par celui spécifié par le paramètre *dictionnaire*.<!-- END REF--> Le dictionnaire courant est utilisé pour la correction orthographique intégrée de 4D (pour plus d’informations, reportez-vous au manuel *Mode Développement*) ainsi qu'à celle de 4D Write Pro. La modification du dictionnaire courant est immédiatement répercutée dans tous les process de la base pour la session, ainsi que dans les zones 4D Write Pro. 

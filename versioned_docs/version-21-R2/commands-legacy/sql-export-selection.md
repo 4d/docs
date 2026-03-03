@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Created|
+|12.1|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SQL EXPORT SELECTION.Summary-->The **SQL EXPORT SELECTION** command exports in SQL format the records of the current selection of the 4D table designated by the *aTable* parameter.<!-- END REF--> 

@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|16 R4|Modificado|
+|15|Modificado|
+|14|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OB SET ARRAY.Summary-->El comando **OB SET ARRAY** define el *array* a asociarse a la *propiedad* en el objeto definido por el parámetro *objeto*.<!-- END REF-->debe haber sido definido con el comando *C\_OBJECT* o designar un campo objeto 4D.  

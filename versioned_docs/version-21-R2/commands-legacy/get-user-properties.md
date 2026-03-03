@@ -22,6 +22,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|2004|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET USER PROPERTIES.Summary-->**GET USER PROPERTIES** returns the information about the user whose unique user ID number you pass in *userID*.<!-- END REF--> You must pass a valid user ID number returned by the [GET USER LIST](get-user-list.md) command.

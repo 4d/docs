@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET PLUGIN ACCESS.Summary-->SET PLUGIN ACCESS コマンドを使用すれば、データベース上にインストールされた各 "シリアルされた" プラグインをプログラムで設定する環境をユーザグループに提供することができます。<!-- END REF-->

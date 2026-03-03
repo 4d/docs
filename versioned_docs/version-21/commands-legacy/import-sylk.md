@@ -39,8 +39,8 @@ When using **IMPORT SYLK**, the default field delimiter is the tab character (co
 The following example imports data from a SYLK document. The method first sets the input form so the data will be imported through the correct form, then performs the import:
 
 ```4d
- FORM SET INPUT([People];"Import")
- IMPORT SYLK([People];"NewPeople.slk") // Import from “NewPeople.slk” document
+ FORM SET INPUT([People];"Import")
+ IMPORT SYLK([People];"NewPeople.slk") // Import from “NewPeople.slk” document
 ```
 
 ## System variables and sets 

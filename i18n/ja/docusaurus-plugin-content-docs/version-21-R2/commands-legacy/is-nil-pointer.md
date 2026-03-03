@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|16 R4|名称変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Is nil pointer.Summary-->**Is nil pointer**コマンドは、*aPointer*がNilポインタ (->\[\]) の場合に**True**を返します。<!-- END REF-->その他の場合（フィールドやテーブル、変数へのポインタ）、この関数はFalseを返します。

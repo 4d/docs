@@ -16,6 +16,7 @@ displayed_sidebar: docs
 <!-- END REF-->
 
 
+<div class="no-index">
 <details><summary>History</summary>
 
 |Release|Changes|
@@ -24,6 +25,7 @@ displayed_sidebar: docs
 |19|support for .sessionCookieSameSite|
 
 </details>
+</div>
 
 
 ## Description 

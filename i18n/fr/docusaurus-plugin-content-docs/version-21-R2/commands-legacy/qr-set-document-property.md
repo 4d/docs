@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2003|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR SET DOCUMENT PROPERTY.Summary-->La commande **QR SET DOCUMENT PROPERTY** permet d'afficher la boîte de dialogue d'impression ou de définir l'unité du document présent dans la *zone*.<!-- END REF-->  

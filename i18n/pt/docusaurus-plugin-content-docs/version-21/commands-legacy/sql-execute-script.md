@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SQL EXECUTE SCRIPT.Summary-->O comando SQL EXECUTE SCRIPT permite executar uma série de instruções SQL localizadas no arquivo de script designado por *rotaScript*.<!-- END REF-->  

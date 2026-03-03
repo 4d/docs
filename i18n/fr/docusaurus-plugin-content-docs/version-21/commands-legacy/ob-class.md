@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|18 R3|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OB Class.Summary-->La commande **OB Class** retourne la classe de l'*objet* passé en paramètre.<!-- END REF--> Dans 4D, tous les objets sont hérités de l'objet classe. Si *objet* est un objet inexistant, **OB Class** retourne null. 

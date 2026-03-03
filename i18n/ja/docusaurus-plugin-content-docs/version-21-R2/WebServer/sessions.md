@@ -31,7 +31,7 @@ Webセッションは次のものに使用されます:
 - [Web applications](gettingStarted.md) sending http requests (including [SOAP Web services](../commands/theme/Web_Services_Server.md) and [/4DACTION](../WebServer/httpRequests.md#4daction) requests),
 - calls to the [REST API](../REST/authUsers.md), which are used by [remote datastores](../ORDA/remoteDatastores.md) and [Qodly pages](https://developer.4d.com/qodly/).
 
-## Enabling web sessions {#enabling-web-sessions}
+## Webセッションの有効化 {#enabling-web-sessions}
 
 セッション管理機能は、4D Webサーバー上で有効または無効にすることができます。 セッション管理を有効化する方法は複数あります:
 

@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Is in print preview.Summary-->**Is in print preview**コマンドは印刷ダイアログボックスで印刷プレビューオプションが選択されている場合Trueを返し、そうでなければFalseを返します。<!-- END REF-->この設定はカレントプロセスに対し有効です。 

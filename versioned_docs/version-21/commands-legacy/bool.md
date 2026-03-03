@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R5|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Bool.Summary-->The **Bool** command returns the boolean form of the expression you passed in *expression*.<!-- END REF--> 
@@ -37,10 +47,10 @@ This command is useful when the code expects a boolean value, and when the evalu
 You select a value depending on the contents of an object field attribute, anticipating the case where the attribute is missing:
 
 ```4d
- var $married : Text
- $married:=Choose(Bool([Person]data.married);"Married";"Single")
-  //"Single" if the "married" attribute is not found in the field
- ALERT("This person is "+$married)
+ var $married : Text
+ $married:=Choose(Bool([Person]data.married);"Married";"Single")
+  //"Single" if the "married" attribute is not found in the field
+ ALERT("This person is "+$married)
 ```
 
 ## See also 

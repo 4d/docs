@@ -8,12 +8,25 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New collection.Params-->
 
+<div class="no-index">
+
 | Paramètres | Type       |                             | Description                                |
 | ---------- | ---------- | --------------------------- | ------------------------------------------ |
 | value      | any        | &#8594; | Valeur(s) de collection |
 | Résultat   | Collection | &#8592; | New collection                             |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historique</summary>
+
+| Release | Modifications |
+| ------- | ------------- |
+| 16 R4   | Created       |
+
+</details>
+</div>
 
 ## Description
 

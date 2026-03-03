@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.DOM Parse XML source.Summary-->El comando DOM Parse XML source analiza un documento que contiene una estructura XML y devuelve una referencia para este documento.<!-- END REF--> El comando puede validar o no el documento vía una DTD o un esquema XML (documento XSD, XML Schema Definition). 

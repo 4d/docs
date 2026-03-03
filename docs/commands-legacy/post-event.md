@@ -21,6 +21,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.POST EVENT.Summary-->The **POST EVENT** command simulates a keyboard or mouse event.<!-- END REF--> Its effect is as if the user actually acted on the keyboard or the mouse.

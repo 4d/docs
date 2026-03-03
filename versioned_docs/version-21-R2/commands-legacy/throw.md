@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|20 R2|Created|
+|20 R5|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.throw.Summary-->The **throw** command creates an error that will be thrown either immediately or when the calling method returns to its caller (deferred mode).<!-- END REF--> 

@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DELETE FROM LIST.Summary-->DELETE FROM LIST コマンドは、*list*に指定した参照番号またはオブジェクト名を持つリストから、*itemRef*引数で指定した項目を削除します。<!-- END REF-->

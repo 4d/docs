@@ -21,6 +21,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|2004|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SET LIST PROPERTIES.Summary-->O comando SET LIST PROPERTIES define a aparência da lista hierárquica cuja referência é passada no parâmetro *lista*.<!-- END REF-->  

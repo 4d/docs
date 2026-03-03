@@ -22,6 +22,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Open window.Summary-->**Open window** opens a new window with the dimensions given by the first four parameters<!-- END REF-->:
@@ -36,9 +47,9 @@ displayed_sidebar: docs
 If you pass -1 in both *right* and *bottom,* you instruct 4D to automatically size the window under the following conditions:
 
 * You have designed a form and set its Sizing Options in the Design environment Form properties window
-* Before calling **Open window**, you selected the form using the [FORM SET INPUT](form-set-input.md) command, to which you passed the optional *\** parameter.
+* Before calling **Open window**, you selected the form using the [FORM SET INPUT](./commands/form-set-input) command, to which you passed the optional *\** parameter.
 
-**Important:** This automatic sizing of the window will occur only if you made a prior call to [FORM SET INPUT](form-set-input.md) for the form to be displayed, and if you passed the \* optional parameter to [FORM SET INPUT](form-set-input.md).
+**Important:** This automatic sizing of the window will occur only if you made a prior call to [FORM SET INPUT](./commands/form-set-input) for the form to be displayed, and if you passed the \* optional parameter to [FORM SET INPUT](./commands/form-set-input).
 
 
 The *type* parameter is optional. It represents the type of window you want to display. If the window type is negative, the window created is a floating window (if supported). If the type is not specified, type 1 is used by default. The following constants of the *Open Window* theme are supported:
@@ -67,7 +78,7 @@ For a description of window types, see [**Window types**](#window-types) below.
 
 If you pass an empty string ("") in *title,* you instruct 4D to use the Window Title set in the Design environment Form Properties window for the form to be displayed.
 
-**Important:** The default form title will be set to the window only if you made a prior call to [FORM SET INPUT](form-set-input.md) for the form to be displayed, and if you passed the \* optional parameter to [FORM SET INPUT](form-set-input.md).
+**Important:** The default form title will be set to the window only if you made a prior call to [FORM SET INPUT](./commands/form-set-input) for the form to be displayed, and if you passed the \* optional parameter to [FORM SET INPUT](./commands/form-set-input).
 
 * The *controlMenuBox* parameter is the optional Control-menu box method for the window. If this parameter is specified, a Control-menu box (Windows) or a Close Box (Macintosh) is added to the window. When the user double-clicks the Control-menu box (Windows) or clicks on the Close Box (Macintosh), the method passed in *controlMenuBox* is called.
 
@@ -75,7 +86,7 @@ If you pass an empty string ("") in *title,* you instruct 4D to use the Window T
 
 If more than one window is open for a process, the last window opened is the active (frontmost) window for that process. Only information within the active window can be modified. Any other windows can be viewed. When the user types, the active window will always come to the front, if it is not already there.
 
-Forms are displayed inside an open window. Text from the [MESSAGE](message.md) command also appears in the window.
+Forms are displayed inside an open window. Text from the [MESSAGE](../commands-legacy/message.md) command also appears in the window.
 
 
 ### Window types {#window-types} 
@@ -296,7 +307,7 @@ The following example opens a floating window that has a Control-menu box (Windo
  DIALOG([Dialogs];"Color Palette")
 ```
 
-The CloseColorPalette method calls the [CANCEL](cancel.md) command:
+The CloseColorPalette method calls the [`CANCEL`](../commands-legacy/cancel.md) command:
 
 ```4d
  CANCEL
@@ -315,7 +326,7 @@ The following example opens a window whose size and title come from the properti
  Until(OK=0)
 ```
 
-**Reminder:** In order to have **Open window** automatically use the properties of the form, you must call [FORM SET INPUT](form-set-input.md) with the optional *\** parameter, and the properties of the form must have been set accordingly in the Design environment.
+**Reminder:** In order to have **Open window** automatically use the properties of the form, you must call [FORM SET INPUT](./commands/form-set-input) with the optional *\** parameter, and the properties of the form must have been set accordingly in the Design environment.
 
 ## Example 4 
 
@@ -332,7 +343,7 @@ This example illustrates the “delay” mechanism for displaying sheet windows 
 
 ## See also 
 
-[CLOSE WINDOW](close-window.md)  
+[CLOSE WINDOW](../commands-legacy/close-window.md)  
 [Open form window](../commands/open-form-window.md)  
 
 

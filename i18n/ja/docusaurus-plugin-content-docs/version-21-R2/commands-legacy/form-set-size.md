@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004|初出|
+|12|名称変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.FORM SET SIZE.Summary-->**FORM SET SIZE** コマンドを使用すると、プログラムからカレントフォームのサイズを変更することができます。<!-- END REF-->新しいサイズは、カレントプロセスに対して定義され、フォームには保存されません。

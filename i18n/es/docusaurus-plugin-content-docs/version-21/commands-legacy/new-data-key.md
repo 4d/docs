@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|17 R5|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.New data key.Summary-->El comando **New data key** genera una llave de cifrado de datos binarios a partir del texto pasado en el parámetro *passPhrase*.<!-- END REF-->

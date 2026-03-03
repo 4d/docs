@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET DRAG ICON.Summary-->The **SET DRAG ICON** command associates the icon picture with the cursor during drag and drop operations that are managed by programming.<!-- END REF-->

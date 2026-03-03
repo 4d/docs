@@ -16,6 +16,8 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+
+
 ## Descripción 
 
 <!--REF #_command_.On Mobile App Action database method.Summary-->**Documentación trasladada**.<!-- END REF-->

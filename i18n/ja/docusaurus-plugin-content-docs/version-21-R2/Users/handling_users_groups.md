@@ -43,7 +43,7 @@ title: 4Dユーザー＆グループの管理
 - デザイナーユーザーを編集する。
 - アプリケーションの保護された領域にアクセスする。 とくにデザインモードが制限されている場合には、管理者はアクセスすることができません。 管理者がアプリケーション内でアクセス権を得るには、1つ以上のグループに属さなければなりません。 管理者はすべての新規グループに含まれますが、任意のグループから管理者の名前を取り除くことができます。
 
-デザイナーと管理者は、すべてのアプリケーションにおいてデフォルトで利用可能です。 In the user management dialog box, the icons of the Designer and Administrator are displayed in red and green respectively:
+デザイナーと管理者は、すべてのアプリケーションにおいてデフォルトで利用可能です。 ユーザー管理のダイアログボックスにおいて、デザイナーと管理者のアイコンは、それぞれ赤色と緑色で表示されます:
 
 - デザイナーアイコン: ![](../assets/en/Users/iconDesigner.png)
 - 管理者アイコン: ![](../assets/en/Users/iconAdmin.png)
@@ -58,7 +58,7 @@ title: 4Dユーザー＆グループの管理
 
 ![](../assets/en/Users/editor.png)
 
-> Users and groups editor can be displayed at runtime using the [EDIT ACCESS](../commands-legacy/edit-access.md) command.
+> ユーザーとグループのエディターは、[EDIT ACCESS](../commands-legacy/edit-access.md) コマンドを使用することでランタイムで表示することもできます。
 > ユーザーとグループの設定は、アプリケーション実行中でも `Users and Groups` テーマの 4Dランゲージコマンドを使って編集することができます。
 
 ### ユーザーの追加と変更
@@ -91,7 +91,7 @@ title: 4Dユーザー＆グループの管理
 5. グループメンバー表を用いて、そのユーザーが所属するグループを設定します。
    メンバーカラムの該当するオプションをチェックして、選択したユーザーをグループに対して追加・削除することができます。
 
-The membership of users to different groups can also be set by group on the [Groups page](#configuring-groups).
+[グループページ](#グループの設定) を使用して、各グループの所属ユーザーを設定することもできます。
 
 ### ユーザーの削除
 

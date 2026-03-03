@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6.8|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DRAG WINDOW.Summary-->The DRAG WINDOW command lets users drag the window on which they clicked following the movements of the mouse.<!-- END REF--> Usually you call this command from within an object method of an object that can respond instantaneously to mouse clicks (i.e., invisible buttons).

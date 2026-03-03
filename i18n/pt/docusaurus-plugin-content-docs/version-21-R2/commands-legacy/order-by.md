@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.ORDER BY.Summary-->**ORDER BY** ordena (reordena) os registros da seleção atual de *tabela* para o processo atual.<!-- END REF--> Quando tiver realizada a ordenação, o primeiro registro da nova seleção atual se converte no registro atual.  

@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|17 R2|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.MOBILE APP REFRESH SESSIONS.Summary-->The **MOBILE APP REFRESH SESSIONS** command checks all mobile application session files located in the MobileApps folder of the server, and updates existing session contents in memory for any edited files.<!-- END REF-->
@@ -38,10 +48,10 @@ The command can return one of the following errors, that can be handled through 
 You want to reset all current sessions for all mobile applications:
 
 ```4d
- var $sessionsPath : Text
- $sessionsPath:=Get 4D folder(MobileApps folder)
- DELETE FOLDER($sessionsPath;Delete with contents)
- MOBILE APP REFRESH SESSIONS
+ var $sessionsPath : Text
+ $sessionsPath:=Get 4D folder(MobileApps folder)
+ DELETE FOLDER($sessionsPath;Delete with contents)
+ MOBILE APP REFRESH SESSIONS
 ```
 
 ## See also 

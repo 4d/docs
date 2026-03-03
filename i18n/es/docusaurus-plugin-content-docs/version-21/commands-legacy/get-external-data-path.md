@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|13|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Get external data path.Summary-->El comando **Get external data path** devuelve la ruta de acceso completa del archivo de almacenamiento externo de datos del campo pasado en el parámetro *elCampo*, para el registro actual.<!-- END REF--> Debe pasar en el parámetro *elCampo* campos de tipo Texto, BLOB o Imagen. El comando devuelve la ruta de acceso del archivo de almacenamiento si el archivo no existe más o no es accesible.  

@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6.5|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SET TIMER.Summary-->El comando SET TIMER permite activar el evento de formulario On Timer y fijar, para el proceso y formulario actual, el número de tics (1 tic = 1/60 de segundo) entre cada evento de formulario On Timer.<!-- END REF--> 

@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|19 R6|Modificado|
+|16 R4|Modificado|
+|15 R5|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.CALL WORKER.Summary-->O comando **CALL WORKER** cria ou chama o processo worker cujo nome ou ID se passa em *processo* e pede a execução do *metodo* em seu contexto com o parâmetro opcional *param*.<!-- END REF-->

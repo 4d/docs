@@ -15,6 +15,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+|15 R5|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.PRINT SETTINGS.Summary-->**PRINT SETTINGS** displays a printing dialog box.<!-- END REF--> This command must be called before a series of [Print form](../commands/print-form.md) commands or the [OPEN PRINTING JOB](open-printing-job.md) command.

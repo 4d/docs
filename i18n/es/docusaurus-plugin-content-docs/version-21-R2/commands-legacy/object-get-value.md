@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|18 R4|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OBJECT Get value.Summary-->El comando **OBJECT Get value** devuelve el valor actual de la fuente de datos para los objetos de formulario designados por el parámetro *nomObjeto*.<!-- END REF-->

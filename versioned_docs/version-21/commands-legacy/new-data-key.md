@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|17 R5|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.New data key.Summary-->The **New data key** command generates a binary data encryption key from the text passed in the *passPhrase* parameter.<!-- END REF-->

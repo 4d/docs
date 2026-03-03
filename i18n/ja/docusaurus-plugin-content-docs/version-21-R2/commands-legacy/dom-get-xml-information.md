@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|2004|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DOM Get XML information.Summary-->DOM Get XML information コマンドを使用して、*elementRef*で指定したXML要素に関する様々な情報を取得できます。<!-- END REF-->

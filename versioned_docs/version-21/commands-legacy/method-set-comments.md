@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.METHOD SET COMMENTS.Summary-->The **METHOD SET COMMENTS** command replaces the documentation of the method(s) designated by the *path* parameter by those specified in the *comments* parameter.<!-- END REF-->
@@ -33,15 +43,15 @@ This documentation can be generated for methods ot type triggers, project method
 You can use two types of syntaxes, based either on text arrays, or text variables:  
 
 ```4d
- var tVpath : Text // text variables
- var tVcomments : Text
- METHOD SET COMMENTS(tVpath;tVcomments) // documentation for a single method
+ var tVpath : Text // text variables
+ var tVcomments : Text
+ METHOD SET COMMENTS(tVpath;tVcomments) // documentation for a single method
 ```
 
 ```4d
- ARRAY TEXT(arrPaths;0) // text arrays
- ARRAY TEXT(arrComments;0)
- METHOD SET COMMENTS(arrPaths;arrComments) // documentation for several methods
+ ARRAY TEXT(arrPaths;0) // text arrays
+ ARRAY TEXT(arrComments;0)
+ METHOD SET COMMENTS(arrPaths;arrComments) // documentation for several methods
 ```
 
 You cannot mix the two syntaxes.
@@ -55,9 +65,9 @@ You can execute this command from a component, but in this case, you must pass t
 Add a modification date to an existing trigger documentation:
 
 ```4d
- METHOD GET COMMENTS("[trigger]/Table1";$comments)
- $comments:="Modif:"+String(Current date)+"\r"+$comments
- METHOD SET COMMENTS("[trigger]/Table1";$comments)
+ METHOD GET COMMENTS("[trigger]/Table1";$comments)
+ $comments:="Modif:"+String(Current date)+"\r"+$comments
+ METHOD SET COMMENTS("[trigger]/Table1";$comments)
 ```
 
 ## See also 

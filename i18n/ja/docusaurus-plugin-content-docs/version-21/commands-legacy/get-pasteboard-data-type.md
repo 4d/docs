@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GET PASTEBOARD DATA TYPE.Summary-->GET PASTEBOARD DATA TYPE コマンドは、ペーストボードに含まれるデータタイプリストを取得するために使用します。<!-- END REF-->このコマンドは一般的にドラッグ＆ドロップのコンテキストで、ドロップ先オブジェクトのOn Drop または On Drag Over フォームイベント内で使用されます。特に、ペーストボードに特定のデータタイプが存在するかどうかをチェックするために使用します。

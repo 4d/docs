@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Criado por|
+|16 R2|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.LISTBOX SELECT BREAK.Summary-->O comando LISTBOX SELECT BREAK  se utiliza para selecionar linhas de quebra no objeto list box designado pelos parâmetros *objeto* e *\**.<!-- END REF--> O list box deve ser mostrado em modo hierárquico.   

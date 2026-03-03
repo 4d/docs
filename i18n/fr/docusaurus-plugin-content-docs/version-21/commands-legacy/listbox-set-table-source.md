@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Modifié|
+|12|Renommé|
+|11 SQL|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX SET TABLE SOURCE.Summary-->La commande **LISTBOX SET TABLE SOURCE** vous permet de modifier la source des données affichées dans la list box désignée par les paramètres *\** et *objet*.<!-- END REF-->

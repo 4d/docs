@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL Release 2|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WA Get page content.Summary-->The WA Get page content command returns the HTML code of the current page or the page being displayed in the Web area designated by the *\** and *object* parameters.<!-- END REF--> 

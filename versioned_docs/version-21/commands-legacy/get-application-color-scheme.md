@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|19|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get Application color scheme.Summary-->The **Get Application color scheme** command returns the name of the actual color scheme in use at the application level.<!-- END REF--> 
@@ -35,10 +45,10 @@ Please refer to the [SET APPLICATION COLOR SCHEME](set-application-color-scheme.
 ## Example 
 
 ```4d
- var $colorScheme : Text
- 
-  // Retrieve the colorScheme of the host database
- $colorScheme:=Get Application color scheme(*)
+ var $colorScheme : Text
+ 
+  // Retrieve the colorScheme of the host database
+ $colorScheme:=Get Application color scheme(*)
 ```
 
 ## See also 

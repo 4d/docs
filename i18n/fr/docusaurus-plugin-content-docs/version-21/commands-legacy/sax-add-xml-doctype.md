@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2004|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SAX ADD XML DOCTYPE.Summary-->La commande **SAX ADD XML DOCTYPE** ajoute l'instruction DocType définie par le paramètre *docType* dans le document XML référencé par *document*.<!-- END REF--> 

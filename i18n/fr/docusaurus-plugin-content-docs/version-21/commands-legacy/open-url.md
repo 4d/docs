@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14 R3|Renommé|
+|14 R3|Modifié|
+|11 SQL Release 2|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OPEN URL.Summary-->La commande **OPEN URL** ouvre le fichier ou l'URL passé dans le paramètre *chemin* avec l'application éventuellement désignée par *nomApp*.<!-- END REF-->

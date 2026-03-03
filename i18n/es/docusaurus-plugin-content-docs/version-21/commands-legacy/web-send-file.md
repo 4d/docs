@@ -15,6 +15,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|13|Renombrar|
+|12|Modificado|
+|6.5|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.WEB SEND FILE.Summary-->El comando **WEB SEND FILE** envía al navegador web la página HTML o el archivo web almacenado en el documento cuya ruta se pasa en *archivohtml*.<!-- END REF--> 

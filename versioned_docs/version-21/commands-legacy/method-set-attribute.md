@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Modified|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.METHOD SET ATTRIBUTE.Summary-->The **METHOD SET ATTRIBUTE** command sets the value(s) of the *attribType* attribute(s) for the project method designated by the *path* parameter.<!-- END REF--> This command only works with project methods. If you pass an invalid *path*, an error is generated. 
@@ -53,7 +64,7 @@ This command cannot be executed in compiled mode. When it is called in this mode
 Selection of the "Shared by components and host database" property for the "Choose dialog" project method:
 
 ```4d
- METHOD SET ATTRIBUTE("Choose dialog";Attribute shared;True)
+ METHOD SET ATTRIBUTE("Choose dialog";Attribute shared;True)
 ```
 
 ## Example 2 
@@ -61,7 +72,7 @@ Selection of the "Shared by components and host database" property for the "Choo
 Setting several attribute/value pairs:
 
 ```4d
- METHOD SET ATTRIBUTE(vPath;Attribute invisible;vInvisible;Attribute published Web;v4DAction;Attribute published SOAP;vSoap;Attribute published WSDL;vWSDL;Attribute shared;vExported;Attribute published SQL;vSQL;Attribute executed on server;vRemote;Attribute folder name;vFolder;*)
+ METHOD SET ATTRIBUTE(vPath;Attribute invisible;vInvisible;Attribute published Web;v4DAction;Attribute published SOAP;vSoap;Attribute published WSDL;vWSDL;Attribute shared;vExported;Attribute published SQL;vSQL;Attribute executed on server;vRemote;Attribute folder name;vFolder;*)
 ```
 
 ## See also 

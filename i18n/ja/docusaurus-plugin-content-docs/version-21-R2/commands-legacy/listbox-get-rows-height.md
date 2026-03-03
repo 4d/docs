@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004|初出|
+|12|名称変更|
+|13|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LISTBOX Get rows height.Summary-->**LISTBOX Get rows height**コマンドは、*object*引数および *\** で指定されたリストボックスの現在の行の高さを返します。<!-- END REF-->

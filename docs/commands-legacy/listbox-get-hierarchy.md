@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX GET HIERARCHY.Summary-->The LISTBOX GET HIERARCHY command lets you find out the hierarchical properties of the list box object designated by the *object* and *\** parameters.<!-- END REF-->

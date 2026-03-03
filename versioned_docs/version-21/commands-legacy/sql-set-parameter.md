@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SQL SET PARAMETER.Summary-->The SQL SET PARAMETER command allows the use of a 4D variable, array or field value in SQL requests.<!-- END REF-->

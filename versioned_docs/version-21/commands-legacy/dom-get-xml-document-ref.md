@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM Get XML document ref.Summary-->The **DOM Get XML document ref** command is used to recover the reference of the "document" element of the DOM tree whose reference you have passed in *elementRef*.<!-- END REF--> The document element is the first element of a DOM tree; it is the parent of the root element. 
@@ -29,27 +39,27 @@ At this level, you can only append processing instructions and comments or repla
 In this example, we want to find the DTD declaration of the XML document:
 
 ```4d
- var $rootRef : Text
- $rootRef:=DOM Parse XML source("")
- If(OK=1)
-    var $documentRef : Text
-  // we are looking for the document node, since it is the node to which
-  // the DOCTYPE node is attached before the root node
-    $documentRef:=DOM Get XML document ref($rootRef)
-    ARRAY TEXT($typeArr;0)
-    ARRAY TEXT($valueArr;0)
-  // on this node we look for the DOCTYPE type node among the
-  // child nodes
-    DOM GET XML CHILD NODES($refDocument;$typeArr;$valueArr)
-    var $text : Text
-    $text:=""
-    $pos:=Find in array($typeArr;XML DOCTYPE)
-    If($pos>-1)
-  // We retrieve the DTD declaration in $text
-       $text:=$text+"Doctype: "+$valueArr{$pos}+Char(Carriage return)
-    End if
-    DOM CLOSE XML($rootRef)
- End if
+ var $rootRef : Text
+ $rootRef:=DOM Parse XML source("")
+ If(OK=1)
+    var $documentRef : Text
+  // we are looking for the document node, since it is the node to which
+  // the DOCTYPE node is attached before the root node
+    $documentRef:=DOM Get XML document ref($rootRef)
+    ARRAY TEXT($typeArr;0)
+    ARRAY TEXT($valueArr;0)
+  // on this node we look for the DOCTYPE type node among the
+  // child nodes
+    DOM GET XML CHILD NODES($refDocument;$typeArr;$valueArr)
+    var $text : Text
+    $text:=""
+    $pos:=Find in array($typeArr;XML DOCTYPE)
+    If($pos>-1)
+  // We retrieve the DTD declaration in $text
+       $text:=$text+"Doctype: "+$valueArr{$pos}+Char(Carriage return)
+    End if
+    DOM CLOSE XML($rootRef)
+ End if
 ```
 
 ## See also 

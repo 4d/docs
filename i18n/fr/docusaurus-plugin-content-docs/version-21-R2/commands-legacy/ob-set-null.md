@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Créé|
+|15|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OB SET NULL.Summary-->La commande **OB SET NULL** permet de stocker la valeur **null** dans l’objet de langage désigné par le paramètre *objet*.<!-- END REF-->doit avoir été défini via la commande *C\_OBJECT* ou désigner un champ objet 4D.

@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6.5|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.EXECUTE ON CLIENT.Summary-->O comando **EXECUTE ON CLIENT** é usado para forçar a execução do método *nomeMetodo*, com lo parâmetros *param1.<!-- END REF-->.. paramN*, se necessário, no cliente 4D registrado de nome *nomeCliente*.. O nome registrado do cliente 4D é definido pelo comando [REGISTER CLIENT](register-client.md). 

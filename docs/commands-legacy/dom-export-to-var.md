@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM EXPORT TO VAR.Summary-->The **DOM EXPORT TO VAR** command saves an XML tree in a text or BLOB variable.<!-- END REF--> 
@@ -38,7 +48,7 @@ By default, XML files are written without BOM (Byte order mask).
 
 You can control the XML line ending and BOM management using the [XML SET OPTIONS](xml-set-options.md) command. 
 
-**Compatibility Note:** In databases/projects created with 4D versions up to v19.x, by default 4D uses CR as end-of-line characters on macOS and a BOM. To enable the new default settings, check compatibility settings (see *Compatibility page*) or use the [XML SET OPTIONS](xml-set-options.md) command. 
+**Compatibility Note:** In databases/projects created with 4D versions up to 19.x, by default 4D uses CR as end-of-line characters on macOS and a BOM. To enable the new default settings, check compatibility settings (see *Compatibility page*) or use the [XML SET OPTIONS](xml-set-options.md) command. 
 
 ## Example 
 

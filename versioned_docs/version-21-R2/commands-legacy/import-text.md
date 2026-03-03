@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.IMPORT TEXT.Summary-->The **IMPORT TEXT** command reads data from *document*, a Windows or Macintosh text document, into the table *aTable* by creating new records for that table.<!-- END REF-->

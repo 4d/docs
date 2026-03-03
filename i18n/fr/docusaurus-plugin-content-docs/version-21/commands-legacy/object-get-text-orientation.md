@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT Get text orientation.Summary-->La commande **OBJECT Get text orientation** retourne la valeur d’orientation courante appliquée au texte de l’objet ou des objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 

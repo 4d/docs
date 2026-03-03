@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|18|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Font file.Summary-->The **Font file** command returns an object describing the font file in your OS corresponding to the *fontFamily* and, optionally, *fontStyle* you passed in parameter.<!-- END REF--> 
@@ -36,15 +46,15 @@ The optional *fontStyle* parameter allows to define a style variation to get. Yo
 You want to make sure the font used in a text area is available on the user system for a correct display:
 
 ```4d
- var $fontName : Text
- var $fontStyle : Integer
- var $fontFile : Object
- $fontName:=OBJECT Get font(*;"vText")
- $fontStyle:=OBJECT Get font style(*;"vText")
- $fontFile:=Font file($fontName;$fontStyle)
- If($fontFile=Null)
-    ALERT("Defined font is not available, please install: "+$fontName)
- End if
+ var $fontName : Text
+ var $fontStyle : Integer
+ var $fontFile : Object
+ $fontName:=OBJECT Get font(*;"vText")
+ $fontStyle:=OBJECT Get font style(*;"vText")
+ $fontFile:=Font file($fontName;$fontStyle)
+ If($fontFile=Null)
+    ALERT("Defined font is not available, please install: "+$fontName)
+ End if
 ```
 
 ## See also 

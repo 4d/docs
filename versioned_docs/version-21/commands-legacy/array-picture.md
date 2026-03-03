@@ -32,7 +32,7 @@ While applying to an existing array:
 This example creates a process array of 100 [Picture](# "Can be any Windows or Macintosh picture") elements:
 
 ```4d
- ARRAY PICTURE(agValues;100)
+ ARRAY PICTURE(agValues;100)
 ```
 
 ## Example 2 
@@ -40,7 +40,7 @@ This example creates a process array of 100 [Picture](# "Can be any Windows or M
 This example creates a local array of 100 rows of 50 [Picture](# "Can be any Windows or Macintosh picture") elements:
 
 ```4d
- ARRAY PICTURE($agValues;100;50)
+ ARRAY PICTURE($agValues;100;50)
 ```
 
 ## Example 3 
@@ -48,17 +48,17 @@ This example creates a local array of 100 rows of 50 [Picture](# "Can be any Win
 This example creates an interprocess array of [Picture](# "Can be any Windows or Macintosh picture") elements and loads each picture into one of the elements of the array. The array’s size is equal to the number of *'PICT'* resources available to the database. The array’s resource name starts with *"User Intf/"*:
 
 ```4d
- RESOURCE LIST("PICT";$aiResIDs;$asResNames)
- ARRAY PICTURE(◊agValues;Size of array($aiResIDs))
- $vlPictElem:=0
- For($vlElem;1;Size of array(◊agValues))
-    If($asResNames{$vlElem}="User Intf/@")
-       $vlPictElem:=$vlPictElem+1
-       GET PICTURE RESOURCE("PICT";$aiResIDs{$vlElem};$vgPicture)
-       ◊agValues{$vlPictElem}:=$vgPicture
-    End if
- End for
- ARRAY PICTURE(◊agValues;$vlPictElem)
+ RESOURCE LIST("PICT";$aiResIDs;$asResNames)
+ ARRAY PICTURE(◊agValues;Size of array($aiResIDs))
+ $vlPictElem:=0
+ For($vlElem;1;Size of array(◊agValues))
+    If($asResNames{$vlElem}="User Intf/@")
+       $vlPictElem:=$vlPictElem+1
+       GET PICTURE RESOURCE("PICT";$aiResIDs{$vlElem};$vgPicture)
+       ◊agValues{$vlPictElem}:=$vgPicture
+    End if
+ End for
+ ARRAY PICTURE(◊agValues;$vlPictElem)
 ```
 
 

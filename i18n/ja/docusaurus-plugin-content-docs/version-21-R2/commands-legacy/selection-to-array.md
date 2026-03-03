@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|13|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SELECTION TO ARRAY.Summary-->**SELECTION TO ARRAY**コマンドは、1つ以上の配列を作成し、カレントセレクションのフィールドデータやレコード番号を配列にコピーします。<!-- END REF-->

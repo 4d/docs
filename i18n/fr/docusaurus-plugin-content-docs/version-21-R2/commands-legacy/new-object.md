@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16 R3|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.New object.Summary-->La commande **New object** crée un objet vide ou pré-rempli et retourne sa référence.<!-- END REF-->

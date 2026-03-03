@@ -7,11 +7,11 @@ title: アクセスコントロールの概要
 
 運用環境によって、4D アクセスコントロールの方法は異なります:
 
-- in multi-user Web and REST applications, access control is based upon [ORDA's Roles and privileges](../ORDA/privileges.md) features.
-- in multi-user desktop applications, you can rely on 4D users and groups,
-- in single-user applications, user access is controlled through the system session, using commands such as [`Current system user`](../commands-legacy/current-system-user.md).
+- マルチユーザーのWeb およびREST アプリケーションでは、アクセス管理は[ORDA のロールと権限](../ORDA/privileges.md) 機能に基づいています。
+- マルチユーザーのデスクトップアプリケーションでは、4D のユーザー&グループ機能を利用することができます。
+- シングルユーザーアプリケーションでは、[`Current system user`](../commands-legacy/current-system-user.md) などのコマンドを使用して、システムセッションを通じてユーザーアクセスを制御します。
 
-:::tip Related Blog post
+:::tip 関連したBlog 記事
 
 4Dのセキュリティ機能の概要については、[4D Security guide](https://blog.4d.com/4d-security-guide/) をご覧ください。
 
@@ -19,7 +19,7 @@ title: アクセスコントロールの概要
 
 ## マルチユーザーアプリケーションのアクセスコントロール
 
-Multi-user desktop applications are deployed with 4D Server. マルチユーザーアプリケーションでは、[4D ユーザー＆グループ](handling_users_groups.md) によってアクセスコントロールがおこなわれます。 ユーザーを作成してパスワードを割り当て、アプリケーションにおいて異なるレベルの権限を持つアクセスグループを作成します。
+マルチユーザーアプリケーションは、4D Server を使って運用します。 マルチユーザーアプリケーションでは、[4D ユーザー＆グループ](handling_users_groups.md) によってアクセスコントロールがおこなわれます。 ユーザーを作成してパスワードを割り当て、アプリケーションにおいて異なるレベルの権限を持つアクセスグループを作成します。
 
 4D Server のパスワードアクセスシステムを起動するには、[デザイナー (Designer) ユーザーにパスワードを割り当て](handling_users_groups.md#designer-and-administrator) ます。 [ユーザーとグループを作成](handling_users_groups.md) しても、デザイナーにパスワードが指定されるまでは、すべてのアプリケーションアクセスがデザイナーアクセス権でおこなわれます (アプリケーション開始時に ID を求められません)。 つまり、アプリケーションのあらゆる部分を開くことができます。
 
@@ -29,11 +29,11 @@ Multi-user desktop applications are deployed with 4D Server. マルチユーザ�
 
 ## シングルユーザーアプリケーションのアクセスコントロール
 
-Single-user applications are desktop applications, deployed with 4D or merged with 4D Volume Desktop. シングルユーザーアプリケーションでは、アプリケーションを開くユーザーはすべて [デザイナー](handling_users_groups.md#デザイナーと管理者) です。つまり、ユーザー名は "Designer" で、すべての権限を持ちます。 アクセスコントロールは、4D のユーザー＆グループではなく、**ユーザーセッション** に基づいておこなわれます。
+シングルユーザーアプリケーションとは、4D で運用する、または 4D Volume Desktop が組み込まれたデスクトップアプリケーションのことです。 シングルユーザーアプリケーションでは、アプリケーションを開くユーザーはすべて [デザイナー](handling_users_groups.md#デザイナーと管理者) です。つまり、ユーザー名は "Designer" で、すべての権限を持ちます。 アクセスコントロールは、4D のユーザー＆グループではなく、**ユーザーセッション** に基づいておこなわれます。
 
 ### ユーザー認証
 
-To identify the current user in a 4D single-user application, you can rely on the [`Current system user`](../commands-legacy/current-system-user.md) command, which returns the user who opened the system session. つまり、ユーザー認証は OSレベルに委ねられています。
+4D のシングルユーザーアプリケーションでカレントユーザーを特定するには、そのシステムセッションを開いたユーザーを返す [`Current system user`](../commands-legacy/current-system-user.md) コマンドが利用できます。 つまり、ユーザー認証は OSレベルに委ねられています。
 
 この場合、次のようなコードを使用して、アプリケーション内でアクセスを許可または拒否することができます:
 
@@ -44,7 +44,7 @@ End if
 
 ```
 
-If you want to use the system user name in 4D instead of "Designer" (e.g. in log files), you can call the [`SET USER ALIAS`](../commands-legacy/set-user-alias.md) command, for example:
+"Designer" ではなく、システムユーザー名を 4D で使用したい場合 (ログファイルなど) は、[`SET USER ALIAS`](../commands-legacy/set-user-alias.md) コマンドを使います。例:
 
 ```4d
 SET USER ALIAS(Current system user)

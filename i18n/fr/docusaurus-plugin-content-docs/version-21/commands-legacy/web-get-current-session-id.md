@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WEB Get current session ID.Summary-->La commande **WEB Get current session ID** retourne l’ID de la session ouverte pour la requête Web.<!-- END REF--> Cet ID a été généré automatiquement par 4D sous la forme d’un UUID. 

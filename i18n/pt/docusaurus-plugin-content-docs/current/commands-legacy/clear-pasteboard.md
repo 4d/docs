@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.CLEAR PASTEBOARD.Summary-->O comando CLEAR PASTEBOARD apaga o conteúdo da área de transferência.<!-- END REF--> Se a área de transferência contiver múltiplas instâncias dos mesmos dados, todas as instâncias são apagadas. Depois de chamar a CLEAR PASTEBOARD, a área de transferência fica vazio. 

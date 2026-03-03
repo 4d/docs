@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|17 R4|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Refresh license.Summary-->**Refresh license** コマンドはカレントの4D Server ライセンスを更新します。<!-- END REF-->このコマンドは4D カスタマーデータベースへと接続し、カレントのライセンスに関連した新規あるいは更新されたライセンス(*例:* 追加購入したクライアントライセンスなど)を自動的にアクティベートします。

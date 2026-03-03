@@ -15,6 +15,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+|12|Modified|
+|13.2|Modified|
+|14|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Version type.Summary-->The Version type command returns a numeric value that denotes the type of 4D or 4D Server version that you are running.<!-- END REF--> 4D provides the following predefined constants, found in the *4D Environment* theme:

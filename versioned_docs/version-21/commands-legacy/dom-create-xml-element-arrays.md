@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM Create XML element arrays.Summary-->The **DOM Create XML element arrays** command is used to add a new element in the *elementRef* XML element, as well as, optionally, attributes and their values in the form of arrays.<!-- END REF-->
@@ -36,28 +46,28 @@ We want to create the following element:
 ```XML
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <RootElement>
-   <Elem1>
-      <Elem2>
-         <Elem3 Font="Verdana" Size="10" Style="Bold"></Elem3>
-      </Elem2>
-   </Elem1>
+   <Elem1>
+      <Elem2>
+         <Elem3 Font="Verdana" Size="10" Style="Bold"></Elem3>
+      </Elem2>
+   </Elem1>
 </RootElement>
 ```
 
 For this, you can simply write:
 
 ```4d
- ARRAY TEXT(arrAttNames;3)
- ARRAY TEXT(arrAttValues;3)
- arrAttNames{1}:="Font"
- arrAttValues{1}:="Verdana"
- arrAttNames{2}:="Size"
- arrAttValues{2}:="10"
- arrAttNames{3}:="Style"
- arrAttValues{3}:="Bold"
- vRootRef:=DOM Create XML Ref("RootElement")
- vxPath:="/RootElement/Elem1/Elem2/Elem3"
- vElementRef:=DOM Create XML element arrays(vRootRef;vxPath;arrAttNames;arrAttValues)
+ ARRAY TEXT(arrAttNames;3)
+ ARRAY TEXT(arrAttValues;3)
+ arrAttNames{1}:="Font"
+ arrAttValues{1}:="Verdana"
+ arrAttNames{2}:="Size"
+ arrAttValues{2}:="10"
+ arrAttNames{3}:="Style"
+ arrAttValues{3}:="Bold"
+ vRootRef:=DOM Create XML Ref("RootElement")
+ vxPath:="/RootElement/Elem1/Elem2/Elem3"
+ vElementRef:=DOM Create XML element arrays(vRootRef;vxPath;arrAttNames;arrAttValues)
 ```
 
 ## See also 

@@ -20,17 +20,17 @@ displayed_sidebar: docs
 
 ## Description
 
-The **WP Insert document body** command<!--REF #_command_.WP Insert document body.Summary--> inserts the body of the *wpDoc* document into the specified *targetObj* according to the passed insertion *mode* and *rangeUpdate* parameters, and it returns the range of the inserted document body.<!-- END REF-->
+La commande **WP Insert document body** <!--REF #_command_.WP Insert document body.Summary--> insère le corps du document *wpDoc* dans l'objet *targetObj* spécifié, conformément aux paramètres *mode* et *rangeUpdate* transmis, et retourne la plage du corps du document inséré.<!-- END REF-->
 
 Dans *targetObj*, passez :
 
-- A range, or
-- An element (table / row / paragraph / body / header / footer / inline picture / section / subsection / text box), or
+- Une plage, ou
+- Un élément (tableau / ligne / paragraphe / corps / en-tête / pied de page / image en ligne / section / sous-section / zone de texte), ou
 - un document 4D Write Pro.
 
-The inserted *wpDoc* document can be any 4D Write Pro document object created using the [WP New](../commands-legacy/wp-new.md) or [WP Import document](wp-import-document.md) command. Only the body children elements are inserted (i.e. headers, footers, text boxes and anchored pictures are not inserted). Sections and bookmarks in the destination range are preserved. In addition, the elements are copied, so *wpDoc* can be re-used several times.
+Le document *wpDoc* inséré peut être n'importe quel document 4D Write Pro créé à l'aide de la commande [WP New](../commands-legacy/wp-new.md) ou [WP Import document](wp-import-document.md). Seuls les éléments enfants du corps sont insérés (c'est-à-dire que les en-têtes, les pieds de page, les zones de texte et les images ancrées ne sont pas insérés). Les sections et les signets de la plage de destination sont préservés. De plus, les éléments sont copiés, donc *wpDoc* peut être réutilisé plusieurs fois.
 
-In the *mode* parameter, pass one or a combination of the following constants from the *4D Write Pro Constants* theme to indicate the insertion mode to be used for the document in the destination *targetObj*:
+Dans le paramètre *mode*, passer une ou une combinaison des constantes suivantes du thème *4D Write Pro Constants* pour indiquer le mode d'insertion à utiliser pour le document dans la destination *targetObj* :
 
 | Constante  | Type    | Valeur | Commentaire                             |
 | ---------- | ------- | ------ | --------------------------------------- |
@@ -38,14 +38,14 @@ In the *mode* parameter, pass one or a combination of the following constants fr
 | wk prepend | Integer | 1      | Insérer le contenu au début de la cible |
 | wk replace | Integer | 0      | Remplacer le contenu de la cible        |
 
-You can combine one of the previous constants with the following insertion options:
+Vous pouvez combiner une des constantes précédentes avec les options d'insertion suivantes :
 
-| Constante                | Type    | Valeur | Commentaire                                                                                                                                          |
-| ------------------------ | ------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| wk freeze expressions    | Integer | 64     | Freeze expressions at the moment of the insertion                                                                                                    |
-| wk keep paragraph styles | Integer | 128    | Apply destination paragraph styles. In case of wk append operation, insert contents without initial paragraph break. |
+| Constante                | Type    | Valeur | Commentaire                                                                                                                                                                          |
+| ------------------------ | ------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| wk freeze expressions    | Integer | 64     | Figer les expressions au moment de l'insertion                                                                                                                                       |
+| wk keep paragraph styles | Integer | 128    | Appliquer les styles de paragraphe de destination. Dans le cas d'une opération d'ajout de wk, le contenu est inséré sans saut de paragraphe initial. |
 
-In the *rangeUpdate* parameter (Optional); if *targetObj* is a range, you can pass one of the following constants to specify whether or not the inserted contents are included in the resulting range:
+Dans le paramètre *rangeUpdate* (Optionnel); si *targetObj* est une plage, vous pouvez passer une des constantes suivantes pour spécifier si le contenu inséré est inclus dans la plage résultante :
 
 | Constante             | Type    | Valeur | Commentaire                                                                     |
 | --------------------- | ------- | ------ | ------------------------------------------------------------------------------- |
@@ -58,28 +58,28 @@ Si vous ne passez pas un paramètre *rangeUpdate*, par défaut, le contenu insé
 
 ## Exemple 1
 
-You want to replace the contents of a document by the text selected in another one:
+Vous souhaitez remplacer le contenu d'un document par le texte sélectionné d'un autre documentt :
 
 ```4d
- $tempRange:=WP Get selection(WPTemplate) //we retrieve the user selection in the WPTemplate document
- $doctoCopy:=WP New($tempRange) //create a new document based on WPTemplate
- WP Insert document body(WPDoc;$doctoCopy;wk replace) //replace contents of WPDoc by the contents of the new document
+ $tempRange:=WP Get selection(WPTemplate) //on lit la sélection utilisateur dans le document WPTemplate
+ $doctoCopy:=WP New($tempRange) //on crée un nouveau document à partir de WPTemplate
+ WP Insert document body(WPDoc;$doctoCopy;wk replace) //on remplace le contenu de WPDoc par le contenu du nouveau document
 ```
 
 ## Exemple 2
 
-You have defined a template document with different preformatted parts, each of them being stored as a bookmark. When producing a final document from the template, you can extract any bookmark as a new document and insert it in the final document.
+Vous avez défini un document modèle (template) avec différentes parties préformatées, chacune d'entre elles étant stockée en tant que signet. Lorsque vous produisez un document final à partir du modèle, vous pouvez extraire n'importe quel signet en tant que nouveau document et l'insérer dans le document final.
 
 ```4d
  ARRAY TEXT($_BookmarkNames;0)
- WP GET BOOKMARKS([TEMPLATES]WP;$_BookmarkNames) //get the bookmarks from the template
- $targetRange:=WP New //create an empty document (will be the final document)
+ WP GET BOOKMARKS([TEMPLATES]WP;$_BookmarkNames) //lire les signets du modèle (template)
+ $targetRange:=WP New //créer un nouveau document vide (sera le document final)
  
- $p:=Find in array($_BookmarkNames;"Main_Header") //handle the main header part
+ $p:=Find in array($_BookmarkNames;"Main_Header") //traiter l'entête principal nommé "Main_Header"
  If($p>0)
-    $Range:=WP Get bookmark range(WParea;$_BookmarkNames{$p}) //select the range
-    $RangeDoc:=WP New($Range) //create a new document from the range
-    WP Insert document body($targetRange;$RangeDoc;wk append+wk freeze expressions) //wk append=after replacement, $targetRange is equal to end of replaced text
+    $Range:=WP Get bookmark range(WParea;$_BookmarkNames{$p}) //sélectionner la plage
+    $RangeDoc:=WP New($Range) //créer un nouveau document depuis la plage
+    WP Insert document body($targetRange;$RangeDoc;wk append+wk freeze expressions) //wk append=après remplacement, $targetRange est égal à la fin du texte remplacé
  End if
 ```
 

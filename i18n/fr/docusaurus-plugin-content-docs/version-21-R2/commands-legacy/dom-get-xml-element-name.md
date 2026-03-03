@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|2004|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM GET XML ELEMENT NAME.Summary-->La commande DOM LIRE NOM ELEMENT XML retourne dans le paramètre *nomElément* le nom de l’élément XML désigné par *refElément*.<!-- END REF--> Si le type de la variable *nomElément* n'est pas défini, le type texte est utilisé par défaut.

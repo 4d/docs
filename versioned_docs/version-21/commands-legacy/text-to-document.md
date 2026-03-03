@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.TEXT TO DOCUMENT.Summary-->The **TEXT TO DOCUMENT** command lets you write the *text* directly to a disk file.<!-- END REF-->

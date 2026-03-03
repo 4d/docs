@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6.7|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.CREATE ALIAS.Summary-->El comando CREATE ALIAS crea un alias (llamado “atajo” en Windows) del archivo o carpeta objetivo pasado en *rutaObjetivo*.<!-- END REF--> El nombre y la ubicación son definidos por el parámetro *rutaAlias*. 

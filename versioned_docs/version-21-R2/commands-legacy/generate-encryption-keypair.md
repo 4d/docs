@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6.7|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Summary-->The **GENERATE ENCRYPTION KEYPAIR** command generates a new pair of RSA keys.<!-- END REF--> These keys allow asymmetric encryption features in 4D, usually required when you need to secure data exchanges over a network (e.g. using the 4D Web server and the TLS protocol). 

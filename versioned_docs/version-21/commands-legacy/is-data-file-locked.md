@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2003|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Is data file locked.Summary-->The Is data file locked command returns True if the data file of the open database or at least one of its segments is locked — i.<!-- END REF-->e. write protected. 
@@ -26,10 +36,10 @@ Placed, for instance, in the , this command enables the prevention of any risk o
 This method will prevent the opening of the database if the data file is locked: 
 
 ```4d
- If(Is data file locked)
-    ALERT("The data file is locked. Impossible to open database.")
-    QUIT 4D
- End if
+ If(Is data file locked)
+    ALERT("The data file is locked. Impossible to open database.")
+    QUIT 4D
+ End if
 ```
 
 

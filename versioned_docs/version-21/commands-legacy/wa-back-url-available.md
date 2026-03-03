@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL Release 2|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WA Back URL available.Summary-->The WA Back URL available command finds out whether there is a previous URL available in the sequence of URLs opened in the Web area designated by the *\** and *object* parameters.<!-- END REF--> 

@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.NO DEFAULT TABLE.Summary-->**NO DEFAULT TABLE** コマンドを使用して、[DEFAULT TABLE](default-table.md) コマンドの動作を無効にします。<!-- END REF-->このコマンドを実行した後、プロセスに対して定義されているデフォルトテーブルはありません。

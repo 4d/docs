@@ -21,6 +21,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL Release 3|Modifié|
+|15 R3|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.VERIFY DATA FILE.Summary-->La commande **VERIFY DATA FILE** effectue une vérification structurelle des objets contenus dans le fichier de données 4D désigné par *cheminStructure* et *cheminDonnées*.<!-- END REF-->Pour plus d’informations sur le processus de vérification des données, reportez-vous au manuel Mode Développement.

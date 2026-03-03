@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Windows Alt down.Summary-->**Windows Alt down** returns TRUE if the Windows Alt key is pressed.<!-- END REF-->When called on a Macintosh platform, **Windows Alt down** returns TRUE if the Macintosh Option key is pressed.

@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|12|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.ASSERT.Summary-->El comando **ASSERT**evalúa la aserción *expresionBool* pasada en parámetro y, si se vuelve falsa, interrumpe la ejecución del código y muestra un error.<!-- END REF-->

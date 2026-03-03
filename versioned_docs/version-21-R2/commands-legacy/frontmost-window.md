@@ -5,7 +5,7 @@ slug: /commands/frontmost-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Frontmost window.Syntax-->**Frontmost window** ( * ) : Integer<!-- END REF-->
+<!--REF #_command_.Frontmost window.Syntax-->**Frontmost window** ({ * }) : Integer<!-- END REF-->
 <!--REF #_command_.Frontmost window.Params-->
 <div class="no-index">
 
@@ -15,6 +15,16 @@ displayed_sidebar: docs
 | Function result | Integer | &#8592; | Window reference number |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
 
 ## Description 
 

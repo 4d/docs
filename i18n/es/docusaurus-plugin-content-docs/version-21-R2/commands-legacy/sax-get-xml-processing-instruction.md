@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|2004|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SAX GET XML PROCESSING INSTRUCTION.Summary-->El comando SAX GET XML PROCESSING INSTRUCTION devuelve el *nombre* y el *valor* de la instrucción de proceso XML analizada en el documento XML referenciada por *documento*.<!-- END REF--> Este comando debe llamarse con el evento XML Processing Instruction. Para mayor información sobre eventos SAX, consulte la descripción del comando [SAX Get XML node](sax-get-xml-node.md "SAX Get XML node").

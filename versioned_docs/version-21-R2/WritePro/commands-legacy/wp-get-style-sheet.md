@@ -30,12 +30,12 @@ The *styleSheetName* parameter allows you to specify the name of the style sheet
 To retrieve the "Main title" style sheet:
 
 ```4d
- var $styleSheet : Object
- 
- $styleSheet:=WP Get style sheet(wpArea;"Main title")
- If($styleSheet=Null) // check if the style sheet exists//if not create it
-    $styleSheet:=WP New style sheet(wpArea;wk type paragraph;"Main title")
- End if
+ var $styleSheet : Object
+ 
+ $styleSheet:=WP Get style sheet(wpArea;"Main title")
+ If($styleSheet=Null) // check if the style sheet exists//if not create it
+    $styleSheet:=WP New style sheet(wpArea;wk type paragraph;"Main title")
+ End if
 ```
 
 ## See also 

@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.BLOB size.Summary-->BLOB sizereturns the size of *blob* expressed in bytes.<!-- END REF-->
@@ -25,7 +35,7 @@ displayed_sidebar: docs
 The line of code adds 100 bytes to the BLOB *myBlob*:
 
 ```4d
- SET BLOB SIZE(myBlob;BLOB size(myBlob)+100)
+ SET BLOB SIZE(myBlob;BLOB size(myBlob)+100)
 ```
 
 ## See also 

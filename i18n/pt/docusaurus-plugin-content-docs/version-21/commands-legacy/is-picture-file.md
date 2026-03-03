@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Is picture file.Summary-->O comando Is picture file prova o arquivo designado pelo parâmetro *rotaArquivo* e devolve True se for um arquivo de imagem válido.<!-- END REF--> O comando devolve False se o arquivo não for de tipo imagem ou se não for encontrado.   

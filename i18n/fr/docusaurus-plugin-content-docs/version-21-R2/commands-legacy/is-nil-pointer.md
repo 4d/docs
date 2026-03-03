@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|16 R4|Renommé|
+
+</details>
+</div>
+
 #### Description 
 
 <!--REF #_command_.Is nil pointer.Summary-->**Is nil pointer** retourne Vrai si le pointeur que vous passez dans *pointeur* est **Nil** (*\->\[\]*).<!-- END REF--> Elle retourne Faux dans tous les autres cas (pointeur vers un champ, une table ou une variable).

@@ -18,6 +18,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Renommé|
+|13|Modifié|
+|12|Renommé|
+|2004|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX DELETE ROWS.Summary-->La commande **LISTBOX DELETE ROWS** supprime une ou plusieurs ligne(s) à partir de la ligne numéro *positionLigne* (visible ou non) de la list box désignée par les paramètres *objet* et *\**.<!-- END REF-->

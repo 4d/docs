@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.DOM Append XML element.Summary-->O comando DOM Append XML element se utiliza para adicionar um novo elemento XML ao filho do elemento XML cuja referência se passa no parâmetro *refElementFonte* .<!-- END REF-->   

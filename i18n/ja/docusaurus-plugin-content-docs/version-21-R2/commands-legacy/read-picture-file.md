@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL Release 2|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.READ PICTURE FILE.Summary-->READ PICTURE FILE コマンドを使用してディスクファイル*fileName* に保存されたピクチャを開き、これを*picture* 引数に指定した4Dフィールドまたは変数へロードすることができます。<!-- END REF-->には読み込むファイルのフルパス名またはファイル名のみを渡すことができます。ファイル名のみを渡した場合、そのファイルはデータベースストラクチャと同階層になければなりません。Windowsではファイル拡張子が必要です。  

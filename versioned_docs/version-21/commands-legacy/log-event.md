@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|17 R6|Modified|
+|13|Modified|
+|11 SQL Release 2|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LOG EVENT.Summary-->The **LOG EVENT** command sets up a customized system for recording internal events that occur during the use of your application.<!-- END REF-->
@@ -58,7 +71,7 @@ The *importance* parameter is only used with *outputType* `Into Windows log even
 If you want to have keep track of when your database is opened under Windows, you could write the following line of code in the [On Startup database method](on-startup-database-method.md):
 
 ```4d
- LOG EVENT(Into Windows log events;"The Invoice database was opened.")
+ LOG EVENT(Into Windows log events;"The Invoice database was opened.")
 ```
 
 Each time the database is opened, this information will be written in Windows’ log events and its level of importance will be 0.

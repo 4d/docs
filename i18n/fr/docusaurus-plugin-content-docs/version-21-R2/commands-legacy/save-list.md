@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SAVE LIST.Summary-->La commande **SAVE LIST** sauvegarde la liste dont vous avez passé le numéro de référence dans *liste*, sous le nom que vous avez passé dans *nomListe*.<!-- END REF--> La liste est stockée en tant qu'énumération dans l'éditeur d'énumérations du mode Développement.

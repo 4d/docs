@@ -16,6 +16,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|19 R8|Modified|
+|15 R5|Modified|
+|12|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ON ERR CALL.Summary-->The **ON ERR CALL** command installs the project method, whose name you pass in *errorMethod*, as the method for catching (trapping) errors for the defined execution context in the current project.<!-- END REF--> This method is called the **error-handling method** or **error-catching method**. 

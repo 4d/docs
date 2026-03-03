@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET QUERY AND LOCK.Summary-->The **SET QUERY AND LOCK** command can be used to request the automatic locking of records found by all queries that follow the calling of this command in the current transaction.<!-- END REF--> This means that the records cannot be modified by a process other than the current process between a query and the handling of results.

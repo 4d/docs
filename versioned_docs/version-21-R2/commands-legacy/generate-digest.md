@@ -18,6 +18,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+|14|Modified|
+|16 R5|Modified|
+|18 R4|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Generate digest.Summary-->The **Generate digest** command returns the digest key of a BLOB or text after application of an encryption algorithm.<!-- END REF-->

@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Character code.Summary-->El comando **Character code** devuelve el código Unicode UTF-16 (incluído entre 1 y 65535) de *unCaracter*.<!-- END REF-->   

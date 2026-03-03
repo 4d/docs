@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DOM Create XML element arrays.Summary-->DOM Create XML element arrays コマンドを使用して*elementRef*要素に新しい要素を追加したり、さらに配列形式で渡された属性とその値も追加できます。<!-- END REF-->

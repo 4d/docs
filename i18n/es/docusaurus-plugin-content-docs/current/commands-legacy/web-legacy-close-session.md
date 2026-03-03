@@ -15,6 +15,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|18 R6|Renombrar|
+|15 R4|Modificado|
+|13|Creado por|
+
+</details>
+</div>
+
 ## Nota de compatibilidad 
 
 <!--REF #_command_.WEB LEGACY CLOSE SESSION.Summary-->Este comando sólo puede utilizarse con **sesiones web heredadas**, disponibles en bases convertidas a partir de versiones anteriores a la 4D v18 R6\.<!-- END REF--> Se ignora cuando se habilita el modo **sesiones web escalables** (recomendado en 4D v18 R6 y superiores). Para más información, consulte la sección *Gestión de las sesiones web (heredado)*.

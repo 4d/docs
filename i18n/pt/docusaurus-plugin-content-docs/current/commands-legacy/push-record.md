@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.PUSH RECORD.Summary-->PUSH RECORD empilha uma cópia do registro atual de *tabela* na pilha de registros da tabela.<!-- END REF--> PUSH RECORD pode ser executada antes de que seja guardado um registro.  

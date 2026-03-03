@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM GET XML ATTRIBUTE BY NAME.Summary-->The DOM GET XML ATTRIBUTE BY NAME command gets the value of an attribute specified by name.<!-- END REF--> 
@@ -30,13 +41,13 @@ If no *attribName* attribute exists in the XML element, an error is returned. If
 This method is used to retrieve the value of an XML attribute using its name:
 
 ```4d
- var myBlobVar : Blob
- var $xml_Parent_Ref;$xml_Child_Ref : Text
- var $LineNum : Integer
- 
- $xml_Parent_Ref:=DOM Parse XML variable(myBlobVar)
- $xml_Child_Ref:=DOM Get first child XML element($xml_Parent_Ref)
- DOM GET XML ATTRIBUTE BY NAME($xml_Child_Ref;"N";$LineNum)
+ var myBlobVar : Blob
+ var $xml_Parent_Ref;$xml_Child_Ref : Text
+ var $LineNum : Integer
+ 
+ $xml_Parent_Ref:=DOM Parse XML variable(myBlobVar)
+ $xml_Child_Ref:=DOM Get first child XML element($xml_Parent_Ref)
+ DOM GET XML ATTRIBUTE BY NAME($xml_Child_Ref;"N";$LineNum)
 ```
 
 If this method is applied to the example below, $LineNum contains the value 1:

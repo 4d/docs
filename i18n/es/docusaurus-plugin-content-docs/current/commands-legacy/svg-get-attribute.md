@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|12|Creado por|
+
+</details>
+</div>
+
 #### Descripción 
 
 <!--REF #_command_.SVG GET ATTRIBUTE.Summary-->El comando SVG GET ATTRIBUTE se utiliza para obtener el valor actual del atributo *nomAtrib* en un objeto o una imagen SVG.<!-- END REF-->   

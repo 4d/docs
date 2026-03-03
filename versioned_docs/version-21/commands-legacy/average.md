@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16|Modified|
+|13|Modified|
+|11 SQL Release 3|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Average.Summary-->**Average** returns the arithmetic mean (average) of *series*.<!-- END REF--> If *series* is an indexed field, the index is used to find the average.
@@ -33,18 +46,18 @@ If the command is correctly executed, the OK system variable is set to 1\. If it
 The following example sets the variable *vAverage* that is in the B0 Break area of an output form. The line of code is the object method for *vAverage*. The object method is not executed until the level 0 break:
 
 ```4d
- vAverage:=Average([Employees] Salary)
+ vAverage:=Average([Employees] Salary)
 ```
 
 The following method is called to print the records in the selection and to activate break processing:
 
 ```4d
- ALL RECORDS([Employees])
- ORDER BY([Employees];[Employees]LastNm;>)
- BREAK LEVEL(1)
- ACCUMULATE([Employees]Salary)
- FORM SET OUTPUT([Employees];"PrintForm")
- PRINT SELECTION([Employees])
+ ALL RECORDS([Employees])
+ ORDER BY([Employees];[Employees]LastNm;>)
+ BREAK LEVEL(1)
+ ACCUMULATE([Employees]Salary)
+ FORM SET OUTPUT([Employees];"PrintForm")
+ PRINT SELECTION([Employees])
 ```
 
 **Note:** The parameter to the [BREAK LEVEL](break-level.md) command should be equal to the number of breaks in your report. For more information about break processing, refer to the chapter *Printing*.
@@ -54,12 +67,12 @@ The following method is called to print the records in the selection and to acti
 This example gets the average of the first 15 grades in the selection:
 
 ```4d
- ARRAY REAL($ArrGrades;0)
- QUERY([Exams];[Exams]Exam_Date=!01/07/11!)
- ORDER BY([Exams];[Exams]Exam_Grade;<)
- SELECTION TO ARRAY([Exams]Exam_Grade;$ArrGrades)
- ARRAY REAL($ArrGrades;15)
- vAverage:=Average($ArrGrades)
+ ARRAY REAL($ArrGrades;0)
+ QUERY([Exams];[Exams]Exam_Date=!01/07/11!)
+ ORDER BY([Exams];[Exams]Exam_Grade;<)
+ SELECTION TO ARRAY([Exams]Exam_Grade;$ArrGrades)
+ ARRAY REAL($ArrGrades;15)
+ vAverage:=Average($ArrGrades)
 ```
 
 ## Example 3 
@@ -71,14 +84,14 @@ Your \[Customer\] table contains a "full\_Data" object field with the following 
 You can perform the following computations:
 
 ```4d
- var $vAvg : Real
- ALL RECORDS([Customer])
- $vAvg:=Average([Customer]full_Data;"age")
-  //$vAvg is 44,46
- 
- var $vTot : Integer
- $vTot:=Sum([Customer]full_Data;"Children[].age")
-  //$vTot is 105
+ var $vAvg : Real
+ ALL RECORDS([Customer])
+ $vAvg:=Average([Customer]full_Data;"age")
+  //$vAvg is 44,46
+ 
+ var $vTot : Integer
+ $vTot:=Sum([Customer]full_Data;"Children[].age")
+  //$vTot is 105
 ```
 
 ## See also 

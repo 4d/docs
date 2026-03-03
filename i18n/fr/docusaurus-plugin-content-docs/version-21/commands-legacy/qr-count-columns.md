@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2003|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR Count columns.Summary-->La commande **QR Count columns** retourne le nombre de colonnes présentes dans l'état rapide désigné par le paramètre *zone*.<!-- END REF-->

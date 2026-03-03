@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.APPEND TO ARRAY.Summary-->The APPEND TO ARRAY command adds a new element at the end of *array* and assigns *value* to the element.<!-- END REF--> In interpreted mode, if *array* does not exist, the command creates it with regard to the type of *value*. 
@@ -32,14 +42,14 @@ The type of *value* must match the array type, otherwise the syntax error 54 “
 The following code:
 
 ```4d
- INSERT IN ARRAY($myarray;Size of array($myarray)+1)
- $myarray{Size of array($myarray)}:=$myvalue
+ INSERT IN ARRAY($myarray;Size of array($myarray)+1)
+ $myarray{Size of array($myarray)}:=$myvalue
 ```
 
 ... can be replaced with:
 
 ```4d
- APPEND TO ARRAY($myarray;$myvalue)
+ APPEND TO ARRAY($myarray;$myvalue)
 ```
 
 ## See also 

@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ST Get expression.Summary-->The **ST Get expression** command returns the first expression found in the current selection of the styled text field or variable designated by the *object* parameter.<!-- END REF--> 

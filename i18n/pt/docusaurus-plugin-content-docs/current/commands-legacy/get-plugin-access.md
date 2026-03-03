@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Get plugin access.Summary-->O comando Get plugin access retorna o nome do grupo de usuários autorizados a utilizar o *plug-in* cujo número se passa no parâmetro *plugIn*.<!-- END REF--> Se nenhum grupo estiver associado ao plug-in, o comando retorna uma cadeia vazia ("").  

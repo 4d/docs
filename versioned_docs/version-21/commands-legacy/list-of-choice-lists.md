@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LIST OF CHOICE LISTS.Summary-->The LIST OF CHOICE LISTS command returns, in the synchronized *numsArr* and *namesArr* arrays, the numbers and names of the choice lists defined by the list editor in Design mode.<!-- END REF-->

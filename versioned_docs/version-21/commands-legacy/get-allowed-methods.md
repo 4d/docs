@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET ALLOWED METHODS.Summary-->The **GET ALLOWED METHODS** command returns, in *methodsArray*, the names of methods that can be used to write formulas.<!-- END REF--> These methods are listed at the end of the list of commands in the editor. 
@@ -30,16 +40,16 @@ This command is useful for storing the settings of the current set of authorized
 This example authorizes a set of specific methods to create a report: 
 
 ```4d
-  //Store current parameters
- GET ALLOWED METHODS(methodsArray)
- 
-  //Define methods for quick report
- methodsarr_Reports{1}:="Reports_@"
- SET ALLOWED METHODS(methodsarr_Reports)
- QR REPORT([People];"MyReport")
- 
-  //Re-establish current parameters
- SET ALLOWED METHODS(methodsArray)
+  //Store current parameters
+ GET ALLOWED METHODS(methodsArray)
+ 
+  //Define methods for quick report
+ methodsarr_Reports{1}:="Reports_@"
+ SET ALLOWED METHODS(methodsarr_Reports)
+ QR REPORT([People];"MyReport")
+ 
+  //Re-establish current parameters
+ SET ALLOWED METHODS(methodsArray)
 ```
 
 ## See also 

@@ -21,6 +21,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R4|Modified|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.INSERT IN LIST.Summary-->The INSERT IN LIST command inserts the item designated by the *itemRef* parameter in the list whose reference number or object name you pass in *list*.<!-- END REF-->
@@ -44,8 +56,8 @@ If you want for the item to include subitems, pass a valid list reference number
 The following code inserts an item (with no attached sublist) just before the currently selected item in the *hList* list:
 
 ```4d
- vlUniqueRef:=vlUniqueRef+1
- INSERT IN LIST(hList;*;"New Item";vlUniqueRef)
+ vlUniqueRef:=vlUniqueRef+1
+ INSERT IN LIST(hList;*;"New Item";vlUniqueRef)
 ```
 
 ## See also 

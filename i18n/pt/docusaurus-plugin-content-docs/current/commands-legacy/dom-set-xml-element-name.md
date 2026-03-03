@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.DOM SET XML ELEMENT NAME.Summary-->O comando DOM SET XML ELEMENT NAME permite modificar o nome do elemento designado por *refElemento*.<!-- END REF-->  

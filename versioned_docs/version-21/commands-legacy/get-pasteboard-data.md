@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET PASTEBOARD DATA.Summary-->The **GET PASTEBOARD DATA** command returns, in the BLOB field or in the *data* variable, the data present in the pasteboard and whose type you pass in *dataType*.<!-- END REF--> (If the pasteboard contains text copied within 4D, then the BLOB’s character set is likely to be UTF-16.)
@@ -31,19 +42,19 @@ In *dataType*, pass a value specifying the type of data to be retrieved. You can
 The following object methods for two buttons copy from and paste data to the array *asOptions* (pop-up menu, drop-down list,...) located in a form:
 
 ```4d
-  // bCopyasOptions object method
- If(Size of array(asOptions)>0) // Is there something to copy?
-    VARIABLE TO BLOB(asOptions;$vxClipData) // Accumulate the array elements in a BLOB
-    CLEAR PASTEBOARD // Empty the pasteboard
-    APPEND DATA TO PASTEBOARD("artx";$vxClipData) // Note the data type arbitrarily chosen
- End if
- 
-  // bPasteasOptions object method
- If(Pasteboard data size("artx")>0) // Is there some "artx" data in the pasteboard?
-    GET PASTEBOARD DATA("artx";$vxClipData) // Extract the data from the pasteboard
-    BLOB TO VARIABLE($vxClipData;asOptions) // Populate the array with the BLOB data
-    asOptions:=0 // Reset the selected element for the array
- End if
+  // bCopyasOptions object method
+ If(Size of array(asOptions)>0) // Is there something to copy?
+    VARIABLE TO BLOB(asOptions;$vxClipData) // Accumulate the array elements in a BLOB
+    CLEAR PASTEBOARD // Empty the pasteboard
+    APPEND DATA TO PASTEBOARD("artx";$vxClipData) // Note the data type arbitrarily chosen
+ End if
+ 
+  // bPasteasOptions object method
+ If(Pasteboard data size("artx")>0) // Is there some "artx" data in the pasteboard?
+    GET PASTEBOARD DATA("artx";$vxClipData) // Extract the data from the pasteboard
+    BLOB TO VARIABLE($vxClipData;asOptions) // Populate the array with the BLOB data
+    asOptions:=0 // Reset the selected element for the array
+ End if
 ```
 
 ## System variables and sets 

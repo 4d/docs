@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Renommé|
+|6.5|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WEB SEND HTTP REDIRECT.Summary-->La commande **WEB SEND HTTP REDIRECT** permet de transformer un URL en un autre.<!-- END REF--> 

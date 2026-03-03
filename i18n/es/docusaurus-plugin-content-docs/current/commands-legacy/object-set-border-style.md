@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OBJECT SET BORDER STYLE.Summary-->El comando **OBJECT SET BORDER STYLE** modifica el estilo de línea del borde del objeto(s) designada por los parámetros   *objeto* y *\** .<!-- END REF-->  

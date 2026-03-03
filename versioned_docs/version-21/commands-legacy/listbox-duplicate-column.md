@@ -23,6 +23,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|17|Modified|
+|14 R3|Modified|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX DUPLICATE COLUMN.Summary-->The **LISTBOX DUPLICATE COLUMN** command duplicates the column designated by the *object* and *\** parameters by programming in the context of the form being executed (Application mode).<!-- END REF--> The original form, generated in the Design mode, is not modified. 
@@ -69,10 +81,10 @@ In an array type list box, we want to duplicate the "First Name" column, ready f
 Here is the code of the button:
 
 ```4d
- ARRAY TEXT(arrFirstNames2;Records in table([Members]))
- LISTBOX DUPLICATE COLUMN(*;"column2";3;"col2bis";arrFirstNames2;"FirstNameA";vHead2A)
- OBJECT SET TITLE(*;"FirstNameA";"Middle Name")
- EDIT ITEM(*;"col2A";0)
+ ARRAY TEXT(arrFirstNames2;Records in table([Members]))
+ LISTBOX DUPLICATE COLUMN(*;"column2";3;"col2bis";arrFirstNames2;"FirstNameA";vHead2A)
+ OBJECT SET TITLE(*;"FirstNameA";"Middle Name")
+ EDIT ITEM(*;"col2A";0)
 ```
 
 When you click on the button, the list box appears as follows:
@@ -84,12 +96,12 @@ When you click on the button, the list box appears as follows:
 You want to duplicate a Boolean column and change its title:
 
 ```4d
- var $ptr : Pointer
- LISTBOX DUPLICATE COLUMN(*;"boolCol";3;"duplBoolCol";$ptr;"duplBoolHeader";$ptr;"duplBoolFooter";$ptr)
- colprt:=OBJECT Get pointer(Object named;"duplBoolCol")
- ARRAY BOOLEAN(colprt->;10)
- headprt:=OBJECT Get pointer(Object named;"duplBoolHeader")
- OBJECT SET TITLE(headprt->;"New duplicated column")
+ var $ptr : Pointer
+ LISTBOX DUPLICATE COLUMN(*;"boolCol";3;"duplBoolCol";$ptr;"duplBoolHeader";$ptr;"duplBoolFooter";$ptr)
+ colprt:=OBJECT Get pointer(Object named;"duplBoolCol")
+ ARRAY BOOLEAN(colprt->;10)
+ headprt:=OBJECT Get pointer(Object named;"duplBoolHeader")
+ OBJECT SET TITLE(headprt->;"New duplicated column")
 ```
 
 ## See also 

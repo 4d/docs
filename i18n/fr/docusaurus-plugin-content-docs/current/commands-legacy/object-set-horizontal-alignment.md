@@ -17,6 +17,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|20|Modifié|
+|15 R4|Modifié|
+|13|Renommé|
+|12|Renommé|
+|6.8.1|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET HORIZONTAL ALIGNMENT.Summary-->La commande **OBJECT SET HORIZONTAL ALIGNMENT** vous permet de fixer le type d’alignement horizontal appliqué à l’objet ou aux objets désigné(s) par les paramètres *objet* et *\**.<!-- END REF--> 

@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Is field number valid.Summary-->El comando Is field number valid devuelve True si el campo cuyo número se pasa en el parámetro *numCamp* existe en la tabla cuyo número o puntero se pasa en el parámetro *numTabla* o *ptrTabla*.<!-- END REF--> Si el campo no existe, el comando devuelve False. Recuerde que el comando devuelve False si la tabla que contiene el campo se encuentra en la Papelera del Explorador. 

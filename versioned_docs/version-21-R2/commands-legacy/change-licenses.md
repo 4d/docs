@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|2004|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.CHANGE LICENSES.Summary-->The CHANGE LICENSES command displays the 4D License Manager dialog box.<!-- END REF--> 

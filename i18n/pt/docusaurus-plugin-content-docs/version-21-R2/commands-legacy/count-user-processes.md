@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL Release 3|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Count user processes.Summary-->Count user processes devolve o número dos processos abertos direto ou indiretamente pelo usuário (processos para os quais o parâmetro *origem* devolvido pelo comando Count user processes é maior ou igual a 0).<!-- END REF-->

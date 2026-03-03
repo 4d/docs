@@ -5,7 +5,7 @@ title: 数値(実数、整数)
 
 数値とは、以下を示す総称です:
 
-- 実数のフィールド、変数、または式。 実数データタイプの範囲は、±1.7e±308 (有効数字13桁) です。
+- 実数のフィールド、変数、または式。 The range for the Real data type is ±1.7e±308 (following the [IEEE 754 standard for double-precision binary floating-point format](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)).
 - 整数の変数または式。 整数データタイプの範囲は -2^31..(2^31)-1 です(4-バイト整数、別名*Long* または *Longint*)。
 
 :::info 互換性

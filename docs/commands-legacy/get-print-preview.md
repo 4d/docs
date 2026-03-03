@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get print preview.Summary-->The **Get print preview** command returns True if the [SET PRINT PREVIEW](set-print-preview.md) command was called with the **True** value in the current process.<!-- END REF-->

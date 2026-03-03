@@ -5,7 +5,7 @@ slug: /commands/qr-insert-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR INSERT COLUMN.Syntax-->**QR INSERT COLUMN** ( *area* : Integer ; *colNumber* : Integer ; *object* : Variable, Field, Pointer )<!-- END REF-->
+<!--REF #_command_.QR INSERT COLUMN.Syntax-->**QR INSERT COLUMN** ( *area* : Integer ; *colNumber* : Integer ; *object* : Text, Pointer )<!-- END REF-->
 <!--REF #_command_.QR INSERT COLUMN.Params-->
 <div class="no-index">
 
@@ -13,9 +13,19 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Reference of the area |
 | colNumber | Integer | &#8594;  | Column number |
-| object | Field, Variable, Pointer | &#8594;  | Object to be inserted in the column |
+| object | Text, Pointer | &#8594;  | Object to be inserted in the column |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2003|Created|
+
+</details>
+</div>
 
 ## Description 
 

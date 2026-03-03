@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6.5|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Is record loaded.Summary-->**Is record loaded** コマンドは、*aTable*のカレントレコードがカレントプロセス内にロードされていれば[True](true.md "True")を返します。<!-- END REF-->参照)。しかし 4D Server は最適化のため、リレートレコードのフィールドの読み込みや編集などの必要なときにだけ、これらのレコードをロードします。そのため、ローカルモードでは **Is record loaded** コマンドが True を返すような場合でも、リモートモードでは同コマンドは False を返します。

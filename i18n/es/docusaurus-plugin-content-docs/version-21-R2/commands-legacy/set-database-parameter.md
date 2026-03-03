@@ -17,6 +17,29 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL Release 4|Modificado|
+|11 SQL Release 5|Modificado|
+|12|Modificado|
+|13|Modificado|
+|14|Modificado|
+|15 R4|Modificado|
+|16 R4|Modificado|
+|16 R5|Modificado|
+|17|Modificado|
+|17 R5|Modificado|
+|19 R5|Modificado|
+|20 R3|Modificado|
+|20 R6|Modificado|
+
+</details>
+</div>
+
 #### Descripción 
 
 <!--REF #_command_.SET DATABASE PARAMETER.Summary-->El comando **SET DATABASE PARAMETER** permite modificar varios parámetros internos de la base de datos 4D.<!-- END REF-->  

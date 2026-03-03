@@ -21,6 +21,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16|初出|
+|16 R2|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Summary-->**QUERY SELECTION BY ATTRIBUTE** は [QUERY BY ATTRIBUTE](query-by-attribute.md) と同じように動作します。<!-- END REF-->相違点は検索する範囲が異なるだけです:

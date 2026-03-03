@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ARRAY OBJECT.Summary-->The **ARRAY OBJECT** command creates and/or resizes an array of language Object type elements in memory.<!-- END REF-->
@@ -37,7 +47,7 @@ When you apply the **ARRAY OBJECT** command to an existing array:
 Creation of a process array of 100 Object-type elements:
 
 ```4d
- ARRAY OBJECT(arrObjects;100)
+ ARRAY OBJECT(arrObjects;100)
 ```
 
 ## Example 2 
@@ -45,7 +55,7 @@ Creation of a process array of 100 Object-type elements:
 Creation of a local array of 100 rows each containing 50 Object-type elements:
 
 ```4d
- ARRAY OBJECT($arrObjects;100;50)
+ ARRAY OBJECT($arrObjects;100;50)
 ```
 
 ## Example 3 
@@ -53,17 +63,17 @@ Creation of a local array of 100 rows each containing 50 Object-type elements:
 Creation and filling of a local object array:
 
 ```4d
- var $Children;$ref_richard;$ref_susan;$ref_james : Object
- ARRAY OBJECT($arrayChildren;0)
- OB SET($ref_richard;"name";"Richard";"age";7)
- APPEND TO ARRAY($arrayChildren;$ref_richard)
- OB SET($ref_susan;"name";"Susan";"age";4)
- APPEND TO ARRAY($arrayChildren;$ref_susan)
- OB SET($ref_james;"name";"James";"age";3)
- APPEND TO ARRAY($arrayChildren;$ref_james)
-  // $arrayChildren{1} -> {"name":"Richard","age":7}
-  // $arrayChildren{2} -> {"name":"Susan","age":4}
-  // $arrayChildren{3} -> {"name":"James","age":3}
+ var $Children;$ref_richard;$ref_susan;$ref_james : Object
+ ARRAY OBJECT($arrayChildren;0)
+ OB SET($ref_richard;"name";"Richard";"age";7)
+ APPEND TO ARRAY($arrayChildren;$ref_richard)
+ OB SET($ref_susan;"name";"Susan";"age";4)
+ APPEND TO ARRAY($arrayChildren;$ref_susan)
+ OB SET($ref_james;"name";"James";"age";3)
+ APPEND TO ARRAY($arrayChildren;$ref_james)
+  // $arrayChildren{1} -> {"name":"Richard","age":7}
+  // $arrayChildren{2} -> {"name":"Susan","age":4}
+  // $arrayChildren{3} -> {"name":"James","age":3}
 ```
 
 ## See also 

@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6.7|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DECRYPT BLOB.Summary-->The DECRYPT BLOB command decrypts the content of the BLOB *toDecrypt* using the sender’s public key *sendPubKey* and, optionally, the recipient’s private key *recipPrivKey*.<!-- END REF-->

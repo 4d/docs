@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6.5|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.EXECUTE ON CLIENT.Summary-->The **EXECUTE ON CLIENT** command forces the execution of the *methodName* method, with the parameters *param1.<!-- END REF-->.. paramN*, if necessary, on the registered 4D Client whose name is *clientName*. 4D Client’s registered name is defined by the [REGISTER CLIENT](register-client.md) command. 
@@ -37,7 +47,7 @@ You can simultaneously execute the same method on many or all of the registered 
 Let’s assume that you want to execute the “GenerateNums” method on the “Client1” client station:
 
 ```4d
- EXECUTE ON CLIENT("Client1";"GenerateNums";12;$a;"Text")
+ EXECUTE ON CLIENT("Client1";"GenerateNums";12;$a;"Text")
 ```
 
 ## Example 2 
@@ -45,7 +55,7 @@ Let’s assume that you want to execute the “GenerateNums” method on the “
 If you want all the clients to execute the “EmptyTemp” method:
 
 ```4d
- EXECUTE ON CLIENT("@";"EmptyTemp")
+ EXECUTE ON CLIENT("@";"EmptyTemp")
 ```
 
 ## Example 3 

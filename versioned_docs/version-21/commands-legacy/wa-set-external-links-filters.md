@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL Release 2|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WA SET EXTERNAL LINKS FILTERS.Summary-->The **WA SET EXTERNAL LINKS FILTERS** command sets up one or more external link filters for the Web area designated by the *\** and *object* parameters.<!-- END REF--> External link filters determine whether a URL associated with the current page via a link must be opened in the Web area or in the default Web browser of the machine.

@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GET USER LIST.Summary-->GET USER LIST preenche os arrays *nomUsuario* e *numUsuario* com os nomes e os números de referência únicos dos usuários tais como aparecem na janela de senhas.<!-- END REF-->

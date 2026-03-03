@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SAX GET XML COMMENT.Summary-->O comando SAX GET XML COMMENT devolve um *comentario* se um evento SAX de tipo XML Comment se gera no documento XML referenciado no parâmetro *documento*.<!-- END REF--> Para maior informação sobre os eventos SAX, consulte a descrição do comando [SAX Get XML node](sax-get-xml-node.md).

@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SVG GET ATTRIBUTE.Summary-->**SVG GET ATTRIBUTE**コマンドを使用して、オブジェクトまたはSVGピクチャの*attribName*属性の現在値を取得できます。<!-- END REF--> 

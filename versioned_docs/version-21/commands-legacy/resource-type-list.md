@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.RESOURCE TYPE LIST.Summary-->The RESOURCE TYPE LIST command populates the array *resTypes* with the resource types of the resources present in the resource files currently open.<!-- END REF-->

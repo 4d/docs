@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.On Host Database Event database method.Summary-->La **On Host Database Event database method** permet aux composants 4D d’exécuter du code lors de l’ouverture et de la fermeture de la base hôte.<!-- END REF-->

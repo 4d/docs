@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|13|Modificado|
+|6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.CREATE FOLDER.Summary-->El comando **CREATE FOLDER** crea una carpeta en función de la ruta de acceso que se pasa en *rutaCarpeta*.<!-- END REF-->

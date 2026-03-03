@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16 R5|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Generate password hash.Summary-->La commande **Generate password hash** retourne un *hash* de *motDePasse*, généré par un algorithme de hachage cryptographique.<!-- END REF-->

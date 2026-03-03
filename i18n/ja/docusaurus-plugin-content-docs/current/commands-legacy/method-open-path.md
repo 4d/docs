@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|19|変更|
+|13|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.METHOD OPEN PATH.Summary-->**METHOD OPEN PATH**コマンドは内部パス名が*path* 引数であるメソッドを4Dメソッドエディターで開きます。<!-- END REF-->

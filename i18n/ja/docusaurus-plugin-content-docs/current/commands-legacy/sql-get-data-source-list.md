@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|19 R5|名称変更|
+|11 SQL|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SQL GET DATA SOURCE LIST.Summary-->*GET DATA SOURCE LIST*コマンドは、オペレーションシステムのODBCマネージャで定義されている*sourceType* データソースのドライバと名前を*sourceNamesArr*と*driversArr*の配列に返します。<!-- END REF-->

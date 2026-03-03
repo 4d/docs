@@ -16,6 +16,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|15 R4|Modifié|
+|14|Modifié|
+|12.1|Modifié|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FONT LIST.Summary-->La commande   **FONT LIST** remplit le tableau Texte *polices* avec les noms des polices vectorielles disponibles dans votre système.<!-- END REF-->

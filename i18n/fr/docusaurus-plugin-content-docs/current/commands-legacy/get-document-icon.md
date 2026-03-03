@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6.7|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET DOCUMENT ICON.Summary-->La commande **GET DOCUMENT ICON** retourne dans le champ ou la variable image 4D *icône*, l’icône du document dont vous avez passé le nom ou le chemin d’accès complet dans *cheminDoc*.<!-- END REF-->peut désigner un fichier de tout type (document, exécutable, raccourci ou alias...) ou un dossier.

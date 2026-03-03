@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R5|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.JSON Resolve pointers.Summary-->**JSON Resolve pointers** コマンドは、*object* 引数内にある全てのJSON ポインターを、*options* 引数で指定した設定(あれば)に基づいて、解決します。<!-- END REF-->

@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.BLOB TO DOCUMENT.Summary-->BLOB TO DOCUMENT escribe los datos de *documento* utilizando los datos almacenados en *blob*.<!-- END REF--> Puede pasar el nombre de un documento existente en *documento*. Si el documento no existe, el comando lo crea. Si pasa el nombre de un documento existente, asegúrese de que el documento no esté abierto, de lo contrario se generará un error. Si quiere permitir que el usuario elija el documento, utilice los comandos [Open document](open-document.md) o [Create document](create-document.md) y utilice la variable sistema *documento* (ver ejemplo).

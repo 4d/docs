@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6.8|初出|
+|13|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OPEN DATA FILE.Summary-->**OPEN DATA FILE**コマンドは、4Dアプリケーションによって開かれたデータファイルをオンザフライで変更することを可能にします。<!-- END REF-->引数には、開こうとするデータファイル (".4DD"拡張子を持つファイル) の名前または完全なアクセスパスを渡します。ファイル名だけを渡す場合、データファイルはデータベースのストラクチャファイルと同じ階層に配置されていなければなりません。

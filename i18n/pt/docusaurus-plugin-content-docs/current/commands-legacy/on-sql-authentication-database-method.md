@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL Release 2|Criado por|
+
+</details>
+</div>
+
 ## 
 
 <!--REF #_command_.On SQL Authentication database method.Summary-->O On SQL Authentication database method pode ser utilizado para filtrar os pedidos enviados ao servidor SQL integrado de 4D.<!-- END REF--> Este filtro pode estar baseado no nome e senha, assim como 7(opcional) no endereço IP do usuário. O desenvolvedor pode utilizar sua própria tabela de usuários ou a dos usuários 4D para avaliar os identificadores de conexão. Quando tiver validada a conexão, o comando [CHANGE CURRENT USER](change-current-user.md) pode ser utilizado para controlar o acesso das pedidos dentro do banco 4D.

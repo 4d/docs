@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Structure file.Summary-->La fonction **Structure file** retourne le chemin d'accès du fichier de structure de la base en cours d'utilisation.<!-- END REF-->* Avec les bases projets, la commande retourne le chemin d'accès du fichier **.4dproject.**

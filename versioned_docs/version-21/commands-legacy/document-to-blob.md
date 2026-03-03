@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOCUMENT TO BLOB.Summary-->DOCUMENT TO BLOB loads the whole contents of *document* into *blob*.<!-- END REF--> You must pass the name of an existing document that is not already open, otherwise an error will be generated. To let the user choose the document to be loaded into the BLOB, use the command [Open document](open-document.md) and the process variable *document* (see Example).
@@ -26,14 +36,14 @@ displayed_sidebar: docs
 You write an Information System that enables you to quickly store and retrieve documents. In a data entry form, you create a button that allows you to load a document into a BLOB field. The method for this button could be:
 
 ```4d
- $vhDocRef:=Open document("") // Select the document of your choice
- If(OK=1) // If a document has been chosen
-    CLOSE DOCUMENT($vhDocRef) // We don't need to keep it open
-    DOCUMENT TO BLOB(Document;[YourTable]YourBLOBField) // Load the document
-    If(OK=0)
-  // Handle error
-    End if
- End if
+ $vhDocRef:=Open document("") // Select the document of your choice
+ If(OK=1) // If a document has been chosen
+    CLOSE DOCUMENT($vhDocRef) // We don't need to keep it open
+    DOCUMENT TO BLOB(Document;[YourTable]YourBLOBField) // Load the document
+    If(OK=0)
+  // Handle error
+    End if
+ End if
 ```
 
 ## System variables and sets 

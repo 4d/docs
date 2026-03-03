@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6.7|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Summary-->O comando GET FIELD ENTRY PROPERTIES retorna as propriedades de entrada de dados para o campo especificado por *numTabela* e *numCampo* ou por *pontCampo*.<!-- END REF-->  

@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX GET OBJECTS.Summary-->The **LISTBOX GET OBJECTS** command returns an array containing the names of each object making up the list box designated by the *object* and *\** parameters.<!-- END REF--> 

@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|2004|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM GET XML ELEMENT NAME.Summary-->The DOM GET XML ELEMENT NAME command returns, in the *elementName* parameter, the name of the XML element designated by *elementRef*.<!-- END REF--> If the *elementName* variable type is not defined, the text type is used by default. 

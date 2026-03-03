@@ -48,21 +48,21 @@ If *startCol* plus *numCols* or *startRow* plus *numRows* exceeds the number of 
 You want to modifiy the attributes of a range of cells:
 
 ```4d
- var $wpTable;$wpRange;$wpRow1;$wpRow2;$wpRow3;$wpRow4;$wpRow5;$cells : Object
- $wpRange:=WP Create range(WParea;wk start text;wk end text)
- 
- $wpTable:=WP Insert table($wpRange;wk append)
- $wpRow1:=WP Table append row($wpTable;"Paul";"Smith";25)
- $wpRow2:=WP Table append row($wpTable;"John";"Richmond";40)
- $wpRow3:=WP Table append row($wpTable;"Mary";"Trenton";18)
- $wpRow4:=WP Table append row($wpTable;"Christopher";"Lee";53)
- $wpRow5:=WP Table append row($wpTable;"Henry";"Cartier";42)
- 
- $cells:=WP Table get cells($wpTable;2;2;2;2)
- WP SET ATTRIBUTES($cells;wk background color;0x00E0E0E0)
- WP SET ATTRIBUTES($cells;wk text color;"blue")
- WP SET ATTRIBUTES($cells;wk border color;0x00E000E0)
- WP SET ATTRIBUTES($cells;wk text align;wk center)
+ var $wpTable;$wpRange;$wpRow1;$wpRow2;$wpRow3;$wpRow4;$wpRow5;$cells : Object
+ $wpRange:=WP Create range(WParea;wk start text;wk end text)
+ 
+ $wpTable:=WP Insert table($wpRange;wk append)
+ $wpRow1:=WP Table append row($wpTable;"Paul";"Smith";25)
+ $wpRow2:=WP Table append row($wpTable;"John";"Richmond";40)
+ $wpRow3:=WP Table append row($wpTable;"Mary";"Trenton";18)
+ $wpRow4:=WP Table append row($wpTable;"Christopher";"Lee";53)
+ $wpRow5:=WP Table append row($wpTable;"Henry";"Cartier";42)
+ 
+ $cells:=WP Table get cells($wpTable;2;2;2;2)
+ WP SET ATTRIBUTES($cells;wk background color;0x00E0E0E0)
+ WP SET ATTRIBUTES($cells;wk text color;"blue")
+ WP SET ATTRIBUTES($cells;wk border color;0x00E000E0)
+ WP SET ATTRIBUTES($cells;wk text align;wk center)
 ```
 
   
@@ -75,19 +75,19 @@ Result:
 To get a range of cells starting from the cell "5x7" to the end of the row:
 
 ```4d
- $cellRange:=WP Table get cells(tableRef;5;7;MAXLONG;1)
+ $cellRange:=WP Table get cells(tableRef;5;7;MAXLONG;1)
 ```
 
 To get a range of cells starting from the cell "5x7" to the end of the column:
 
 ```4d
- $cellRange:=WP Table get cells(tableRef;5;7;1;MAXLONG)
+ $cellRange:=WP Table get cells(tableRef;5;7;1;MAXLONG)
 ```
 
 To get a range of cells starting from the cell "5x7" to the end of the table:
 
 ```4d
- $cellRange:=WP Table get cells(tableRef;5;7;MAXLONG;MAXLONG)
+ $cellRange:=WP Table get cells(tableRef;5;7;MAXLONG;MAXLONG)
 ```
 
 ## Example 3 
@@ -95,11 +95,11 @@ To get a range of cells starting from the cell "5x7" to the end of the table:
 You want to retrieve the cells a user has selected:
 
 ```4d
- var $userSelection;$cells : Object
- 
- $userSelection:=WP Selection range(myWPArea)
- 
- $cells:=WP Table get cells($userSelection)
+ var $userSelection;$cells : Object
+ 
+ $userSelection:=WP Selection range(myWPArea)
+ 
+ $cells:=WP Table get cells($userSelection)
 ```
 
 ## See also 

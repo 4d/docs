@@ -25,11 +25,11 @@ displayed_sidebar: docs
 In the following example, if no records are found by the query, a beep is emitted and an alert is displayed:
 
 ```4d
- QUERY([Customers];[Customers]Name=$vsNameToLookFor)
- If(Records in selection([Customers])=0)
-    BEEP
-    ALERT("There is no Customer with such a name.")
- End if
+ QUERY([Customers];[Customers]Name=$vsNameToLookFor)
+ If(Records in selection([Customers])=0)
+    BEEP
+    ALERT("There is no Customer with such a name.")
+ End if
 ```
 
 ## See also 

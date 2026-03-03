@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SEND RECORD.Summary-->SEND RECORD envía el registro actual de *tabla* al puerto serial o a un documento abierto por el comando [SET CHANNEL](set-channel.md "SET CHANNEL").<!-- END REF--> El registro se envía con un formato interno especial que sólo puede ser leído por [RECEIVE RECORD](receive-record.md "RECEIVE RECORD"). Si no existe un registro actual, SEND RECORD no tiene efecto.

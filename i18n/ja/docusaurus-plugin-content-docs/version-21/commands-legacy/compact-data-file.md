@@ -20,6 +20,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|15 R3|変更|
+|13|変更|
+|11 SQL|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Compact data file.Summary-->**Compact data file**コマンドは、ストラクチャー*structurePath*に関連付けられている、*dataPath* 引数で指定されたデータファイルを圧縮します。<!-- END REF-->圧縮に関する詳細は4D Design Referenceマニュアルを参照してください。

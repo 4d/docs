@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Document to text.Summary-->O comando **Document to text** le permite recuperar o conteúdo de um arquivo diretamente no disco em uma variável texto 4D ou campo texto.<!-- END REF-->

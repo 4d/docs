@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|2004|変更|
+|12|名称変更|
+|16 R6|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.FORM SET OUTPUT.Summary-->**FORM SET OUTPUT** コマンドは、*form*または*userForm*を*aTable*のカレント出力フォームとして設定します。<!-- END REF-->このフォームは*aTable*に属するものでなければなりません。   

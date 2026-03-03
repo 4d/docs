@@ -9,13 +9,17 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HTTP Parse message.Params-->
 
+<div class="no-index">
+
 | Parâmetro | Tipo       |                             | Descrição                                                       |
 | --------- | ---------- | --------------------------- | --------------------------------------------------------------- |
 | data      | Text, Blob | &#8594; | Dados a serem analisados                                        |
 | Resultado | Object     | &#8592; | Objeto, cada propriedade é uma parte dos dados de várias partes |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>História</summary>
 
 | Release | Mudanças   |
@@ -23,6 +27,7 @@ displayed_sidebar: docs
 | 20 R4   | Adicionado |
 
 </details>
+</div>
 
 ## Descrição
 

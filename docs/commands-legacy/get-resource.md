@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET RESOURCE.Summary-->The **GET RESOURCE** command returns in the BLOB field or variable *resData* the contents of the resource whose type and ID is passed in *resType* and *resID*.<!-- END REF-->

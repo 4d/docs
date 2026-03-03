@@ -5,7 +5,7 @@ slug: /commands/query
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY.Syntax-->**QUERY** ( {*aTable* : Table }{;}{ *queryArgument* : Expression {; *}} )<!-- END REF-->
+<!--REF #_command_.QUERY.Syntax-->**QUERY** ( *aTable* : Table {; *queryArgument* : Expression {; *}} )<br/>**QUERY** ( *queryArgument* : Expression {; *} )<!-- END REF-->
 <!--REF #_command_.QUERY.Params-->
 <div class="no-index">
 
@@ -16,6 +16,17 @@ displayed_sidebar: docs
 | * | Operator | &#8594;  | Continue query flag |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
 
 ## Description 
 

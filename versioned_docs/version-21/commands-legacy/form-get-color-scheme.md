@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|19|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM Get color scheme.Summary-->The **FORM Get color scheme** command returns the name of the actual color scheme of the currently displayed form.<!-- END REF--> If there is no current form, the command returns an empty string.
@@ -35,8 +45,8 @@ Please refer to the [SET APPLICATION COLOR SCHEME](set-application-color-scheme.
 You want to load a picture depending on the form current scheme:
 
 ```4d
- $txt_suffix:=Choose((FORM Get color scheme="dark");"_dark";"")
- READ PICTURE FILE(Get 4D folder(Current resources folder)+"myPict"+$txt_suffix+".png";$Pic_icon)
+ $txt_suffix:=Choose((FORM Get color scheme="dark");"_dark";"")
+ READ PICTURE FILE(Get 4D folder(Current resources folder)+"myPict"+$txt_suffix+".png";$Pic_icon)
 ```
 
 **Note:** It is recommended to use *css* to adapt form objects design to the current scheme. 

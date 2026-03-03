@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2003|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Is data file locked.Summary-->O comando Is data file locked retorna True se o arquivo de dados do banco de dados aberto, ou pelo menos um dos seus segmentos está fechado - ou seja, protegido contra gravação.<!-- END REF--> 

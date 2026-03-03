@@ -44,12 +44,12 @@ The command returns a column range representing inserted column(s), or Null if n
 You want to insert three columns after first column in the *Invoice* table. This code:
 
 ```4d
- var $column : Object
- var $table : Object
- 
- $table:=WP Get element by ID(WParea;"Invoice") //retrieve "Invoice" table
- 
- $column:=WP Table insert columns($table;2;3) //position 2, add 3 columns
+ var $column : Object
+ var $table : Object
+ 
+ $table:=WP Get element by ID(WParea;"Invoice") //retrieve "Invoice" table
+ 
+ $column:=WP Table insert columns($table;2;3) //position 2, add 3 columns
 ```
 
 Will insert the new columns at the correct location:

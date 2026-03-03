@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|17 R5|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Data file encryption status.Summary-->El comando **Data file encryption status** devuelve un objeto que suministra el estado de cifrado para el archivo de datos designado por los parámetros *rutaEstruct* y *rutaDatos*.<!-- END REF--> También se proporciona el estado de cada tabla.

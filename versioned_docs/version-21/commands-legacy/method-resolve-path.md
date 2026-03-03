@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.METHOD RESOLVE PATH.Summary-->The **METHOD RESOLVE PATH** command parses the internal path name passed in the *path* parameter and returns its different components in the *methodType*, *ptrTable*, *objectName*, and *formObjectName* parameters.<!-- END REF-->
@@ -53,16 +63,16 @@ If the command is executed from a component, it considers by default that *path*
 Resolution of a database method path:
 
 ```4d
- var $methodType : Integer
- var $tablePtr : Pointer
- var $objectName : Text
- var $formObjectName : Text
- 
- METHOD RESOLVE PATH("[databaseMethod]/onStartup";$methodType;$tablePtr;$objectName;$formObjectName)
-  // $methodType: 2
-  // $tablePtr: Nil pointer
-  // $objectName: "onStartup"
-  // $formObjectName: ""
+ var $methodType : Integer
+ var $tablePtr : Pointer
+ var $objectName : Text
+ var $formObjectName : Text
+ 
+ METHOD RESOLVE PATH("[databaseMethod]/onStartup";$methodType;$tablePtr;$objectName;$formObjectName)
+  // $methodType: 2
+  // $tablePtr: Nil pointer
+  // $objectName: "onStartup"
+  // $formObjectName: ""
 ```
 
 ## Example 2 
@@ -70,16 +80,16 @@ Resolution of a database method path:
 Resolution of a path for an object of a table form method:
 
 ```4d
- var $methodType : Integer
- var $tablePtr : Pointer
- var $objectName : Text
- var $formObjectName : Text
- 
- METHOD RESOLVE PATH("[tableForm]/Table1/output1/myVar1";$methodType;$tablePtr;$objectName;$formObjectName)
-  // $methodType: 16
-  // $tablePtr: -> [Table1]
-  // $objectName: "output1"
-  // $formObjectName: "Btn1"
+ var $methodType : Integer
+ var $tablePtr : Pointer
+ var $objectName : Text
+ var $formObjectName : Text
+ 
+ METHOD RESOLVE PATH("[tableForm]/Table1/output1/myVar1";$methodType;$tablePtr;$objectName;$formObjectName)
+  // $methodType: 16
+  // $tablePtr: -> [Table1]
+  // $objectName: "output1"
+  // $formObjectName: "Btn1"
 ```
 
 ## See also 

@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET TEXT TO PASTEBOARD.Summary-->**SET TEXT TO PASTEBOARD** clears the pasteboard and then puts a copy of the text you passed in *text* into the pasteboard.<!-- END REF--> 

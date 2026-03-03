@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.BREAK LEVEL.Summary-->BREAK LEVEL especifica el número de niveles de ruptura en un informe realizado utilizando [PRINT SELECTION](print-selection.md "PRINT SELECTION").<!-- END REF-->

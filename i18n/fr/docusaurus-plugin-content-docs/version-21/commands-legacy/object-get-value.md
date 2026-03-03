@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|18 R4|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT Get value.Summary-->La commande **OBJECT Get value** retourne la valeur courante des sources de données des objets formulaire désignés par le paramètre nomObjet.<!-- END REF-->

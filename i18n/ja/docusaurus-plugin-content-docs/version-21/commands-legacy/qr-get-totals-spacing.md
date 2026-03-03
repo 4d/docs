@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2003|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.QR GET TOTALS SPACING.Summary-->QR GET TOTALS SPACING コマンドを使用し、小計行の下部の行間を取得することができます。<!-- END REF-->このコマンドはリストモードにのみ適用されます。 

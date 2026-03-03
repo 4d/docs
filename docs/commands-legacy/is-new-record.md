@@ -5,7 +5,7 @@ slug: /commands/is-new-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is new record.Syntax-->**Is new record** ( *aTable* : Table ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is new record.Syntax-->**Is new record** ( {*aTable* : Table} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is new record.Params-->
 <div class="no-index">
 
@@ -15,6 +15,16 @@ displayed_sidebar: docs
 | Function result | Boolean | &#8592; | True if the record is being created, False otherwise |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6.5|Created|
+
+</details>
+</div>
 
 ## Description 
 

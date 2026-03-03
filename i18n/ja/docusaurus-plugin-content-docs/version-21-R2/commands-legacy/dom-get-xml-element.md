@@ -19,6 +19,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|2004|変更|
+|16 R4|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DOM Get XML element.Summary-->DOM Get XML element コマンドは、*elementName* と *index* 引数に基づき、子要素の参照を返します。<!-- END REF--> 

@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.JSON Stringify array.Summary-->**JSON Stringify array**コマンドは、4D配列 *array* をシリアライズされたJSON配列へと変換します。<!-- END REF-->このコマンドは [JSON PARSE ARRAY](json-parse-array.md)コマンドと逆の挙動をします。

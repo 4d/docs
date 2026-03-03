@@ -16,7 +16,7 @@ Permite definir un color de fondo diferente para las líneas o columnas impares 
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [List Box Column](listbox-column.md)
 
 ---
 
@@ -34,7 +34,7 @@ En el caso de un list box, por defecto se selecciona *Automático*: la columna u
 
 #### Objetos soportados
 
-[Lista jerárquica](list_overview.md) - [List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie de List Box](listbox_overview.md#list-box-footers) - [Óvalo](shapes_overview.md#oval) - [Rectángulo](shapes_overview.md#rectangle) - [Área de texto](text.md)
+[Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
 
 #### Ver también
 
@@ -59,7 +59,7 @@ También puede definir esta propiedad utilizando el comando [`LISTBOX SET PROPER
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [List Box Column](listbox-column.md)
 
 ---
 
@@ -123,7 +123,7 @@ Designa el color de las líneas del objeto. El color puede ser especificado por:
 
 * un nombre de color - como "red"
 * un valor HEX - como "# ff0000"
-* un valor RVB - como "rgb (255,0,0)"
+* un valor RVA - como "rgb (255,0,0)"
 
 También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html).
 
@@ -195,7 +195,7 @@ Puede obtener el mismo resultado utilizando los comandos [`LISTBOX SET ROW FONT 
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [List Box Column](listbox-column.md)
 
 ---
 

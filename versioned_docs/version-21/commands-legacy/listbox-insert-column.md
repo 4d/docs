@@ -23,6 +23,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14 R3|Modified|
+|13|Modified|
+|12|Renamed|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX INSERT COLUMN.Summary-->The **LISTBOX INSERT COLUMN** command inserts a column in the list box set by the *object* and *\** parameters.<!-- END REF--> 
@@ -62,13 +76,13 @@ Note that header and footer variables are always created with a specific type (l
 We would like to add a column at the end of the list box: 
 
 ```4d
- var HeaderVarName;$Last;RecNum : Integer
- ALL RECORDS([Table 1])
- $RecNum:=Records in table([Table 1])
- ARRAY PICTURE(Picture;$RecNum)
- 
- $Last:=LISTBOX Get number of columns(*;"ListBox1")+1
- LISTBOX INSERT COLUMN(*;"ListBox1";$Last;"ColumnPicture";Picture;"HeaderPicture";HeaderVarName)
+ var HeaderVarName;$Last;RecNum : Integer
+ ALL RECORDS([Table 1])
+ $RecNum:=Records in table([Table 1])
+ ARRAY PICTURE(Picture;$RecNum)
+ 
+ $Last:=LISTBOX Get number of columns(*;"ListBox1")+1
+ LISTBOX INSERT COLUMN(*;"ListBox1";$Last;"ColumnPicture";Picture;"HeaderPicture";HeaderVarName)
 ```
 
 ## Example 2 
@@ -76,8 +90,8 @@ We would like to add a column at the end of the list box:
 We would like to add a column to the right of the list box and associate the values of the \[Transport\]Fees field with it: 
 
 ```4d
- $last:=LISTBOX Get number of columns(*;"ListBox1")+1
- LISTBOX INSERT COLUMN(*;"ListBox1";$last;"FieldCol";[Transport]Fees;"HeaderName";HeaderVar)
+ $last:=LISTBOX Get number of columns(*;"ListBox1")+1
+ LISTBOX INSERT COLUMN(*;"ListBox1";$last;"FieldCol";[Transport]Fees;"HeaderName";HeaderVar)
 ```
 
 ## Example 3 
@@ -85,13 +99,13 @@ We would like to add a column to the right of the list box and associate the val
 You want to insert a column dynamically into an array type list box and define its header:
 
 ```4d
- var $NilPtr : Pointer
- LISTBOX INSERT COLUMN(*;"MyListBox";1;"MyNewColumn";$NilPtr;"MyNewHeader";$NilPtr)
- ColPtr:=OBJECT Get pointer(Object named;"MyNewColumn")
- ARRAY TEXT(ColPtr->;10)
-  //Definition of header
- headprt:=OBJECT Get pointer(Object named;"MyNewHeader")
- OBJECT SET TITLE(headprt->;"Inserted header")
+ var $NilPtr : Pointer
+ LISTBOX INSERT COLUMN(*;"MyListBox";1;"MyNewColumn";$NilPtr;"MyNewHeader";$NilPtr)
+ ColPtr:=OBJECT Get pointer(Object named;"MyNewColumn")
+ ARRAY TEXT(ColPtr->;10)
+  //Definition of header
+ headprt:=OBJECT Get pointer(Object named;"MyNewHeader")
+ OBJECT SET TITLE(headprt->;"Inserted header")
 ```
 
 ## See also 

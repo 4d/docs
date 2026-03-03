@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|15 R3|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.QR NEW AREA.Summary-->O comando **QR NEW AREA** cria uma nova área de relatório rápido e armazena seu número de referência na variável de tipo Inteiro longo referenciada pelo ponteiro *ptr*.<!-- END REF-->

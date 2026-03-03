@@ -59,9 +59,9 @@ The command returns the new table as a table object, that you can pass thereafte
 In a blank document, you want to add a new table with 3 columns and 2 rows:
 
 ```4d
- var $WPRange;$WPTable : Object
- $WPRange:=WP Text range(WParea;wk start text;wk end text)
- $WPTable:=WP Insert table($WPRange;wk append;wk exclude from range;3;2)
+ var $WPRange;$WPTable : Object
+ $WPRange:=WP Text range(WParea;wk start text;wk end text)
+ $WPTable:=WP Insert table($WPRange;wk append;wk exclude from range;3;2)
 ```
 
 Result:

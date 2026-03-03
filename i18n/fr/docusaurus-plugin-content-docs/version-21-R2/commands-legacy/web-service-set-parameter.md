@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2003|Créé|
+|13|Renommé|
+|19 R2|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WEB SERVICE SET PARAMETER.Summary-->La commande **WEB SERVICE SET PARAMETER** permet de définir un paramètre utilisé pour une requête SOAP cliente.<!-- END REF--> Appelez autant de fois cette commande qu’il y a de paramètres dans la requête.

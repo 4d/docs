@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16|Modified|
+|13|Modified|
+|11 SQL Release 3|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Max.Summary-->**Max** returns the maximum value in *series*.<!-- END REF--> If *series* is an indexed field, the index is used to find the maximum value.
@@ -35,7 +48,7 @@ If the command is correctly executed, the OK system variable is set to 1\. If it
 The following example is an object method for the variable *vMax* placed in the break 0 portion of the form. The variable is printed at the end of the report. The object method assigns the maximum value of the field to the variable, which is then printed in the last break of the report.
 
 ```4d
- vMax:=Max([Employees] Salary)
+ vMax:=Max([Employees] Salary)
 ```
 
 **Note:** Make sure the "On printing break" form event is selected for the variable.
@@ -43,12 +56,12 @@ The following example is an object method for the variable *vMax* placed in the 
 The following method is called to print the records in the selection and to activate break processing:
 
 ```4d
- ALL RECORDS([Employees])
- ORDER BY([Employees];[Employees]Company;>)
- BREAK LEVEL(1)
- ACCUMULATE([Employees]Salary)
- FORM SET OUTPUT([Employees];"PrintForm")
- PRINT SELECTION([Employees])
+ ALL RECORDS([Employees])
+ ORDER BY([Employees];[Employees]Company;>)
+ BREAK LEVEL(1)
+ ACCUMULATE([Employees]Salary)
+ FORM SET OUTPUT([Employees];"PrintForm")
+ PRINT SELECTION([Employees])
 ```
 
 **Note:** The parameter to the [BREAK LEVEL](break-level.md) command should be equal to the number of breaks in your report. For more information about break processing, refer to the chapter *Printing*.
@@ -58,10 +71,10 @@ The following method is called to print the records in the selection and to acti
 This example gets the highest value in the array:
 
 ```4d
- ARRAY REAL($ArrGrades;0)
- QUERY([Exams];[Exams]Exam_Date=!01/07/11!)
- SELECTION TO ARRAY([Exams]Exam_Grade;$ArrGrades)
- vMax:=Max($ArrGrades)
+ ARRAY REAL($ArrGrades;0)
+ QUERY([Exams];[Exams]Exam_Date=!01/07/11!)
+ SELECTION TO ARRAY([Exams]Exam_Grade;$ArrGrades)
+ vMax:=Max($ArrGrades)
 ```
 
 ## Example 3 

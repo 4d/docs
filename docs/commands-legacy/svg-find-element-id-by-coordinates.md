@@ -5,19 +5,29 @@ slug: /commands/svg-find-element-id-by-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG Find element ID by coordinates.Syntax-->**SVG Find element ID by coordinates** ( {* ;} *pictureObject* : Picture ; *x* : Integer ; *y* : Integer ) : Text<!-- END REF-->
+<!--REF #_command_.SVG Find element ID by coordinates.Syntax-->**SVG Find element ID by coordinates** ( * ; *pictureObject* : Text ; *x* : Integer ; *y* : Integer ) : Text<br/>**SVG Find element ID by coordinates** ( *pictureObject* : Picture ; *x* : Integer ; *y* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.SVG Find element ID by coordinates.Params-->
 <div class="no-index">
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, pictureObject is an object name (string) If omitted, pictureObject is a field or variable |
-| pictureObject | Picture | &#8594;  | Object name (if * specified) or Field or Variable (if * omitted) |
+| pictureObject | Text, Picture | &#8594;  | Object name (if * specified) or Field or Variable (if * omitted) |
 | x | Integer | &#8594;  | X coordinate in pixels |
 | y | Integer | &#8594;  | Y coordinate in pixels |
 | Function result | Text | &#8592; | ID of element found at the location X, Y |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL Release 3|Created|
+
+</details>
+</div>
 
 ## Description 
 

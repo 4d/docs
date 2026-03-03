@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14|初出|
+|16 R5|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.ST COMPUTE EXPRESSIONS.Summary-->**ST COMPUTE EXPRESSIONS**コマンドは、*object* 引数で指定したマルチスタイルあるいは4D Write Proのフィールドあるいは変数内にあるダイナミック 4D 式を更新します。<!-- END REF-->

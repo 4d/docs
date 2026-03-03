@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LIST OF STYLE SHEETS.Summary-->The **LIST OF STYLE SHEETS** command returns the list of application style sheets in the *arrStyleSheets* array.<!-- END REF-->
@@ -38,13 +48,13 @@ In your application, the following style sheets are defined:
 If you execute the following code:
 
 ```4d
- LIST OF STYLE SHEETS($arrStyles)
-  // $arrStyles{1} contains "__automatic__"
-  // $arrStyles{2} contains "Buttons"
-  // $arrStyles{3} contains "default"
-  // $arrStyles{4} contains "Input_fields"
-  // $arrStyles{5} contains "Labels"
-  // $arrStyles{6} contains "Variables"
+ LIST OF STYLE SHEETS($arrStyles)
+  // $arrStyles{1} contains "__automatic__"
+  // $arrStyles{2} contains "Buttons"
+  // $arrStyles{3} contains "default"
+  // $arrStyles{4} contains "Input_fields"
+  // $arrStyles{5} contains "Labels"
+  // $arrStyles{6} contains "Variables"
 ```
 
 ## See also 

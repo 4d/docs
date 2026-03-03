@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WEB GET BODY PART.Summary-->La commande **WEB GET BODY PART**, appelée dans le contexte d’un process Web, permet d’analyser la partie "corps" d’une requête multi-part.<!-- END REF--> 

@@ -9,6 +9,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.String.Params-->
 
+<div class="no-index">
+
 | 引数         | 型             |                             | 説明                                                                            |
 | ---------- | ------------- | --------------------------- | ----------------------------------------------------------------------------- |
 | expression | 式             | &#8594; | 文字列式を返したい式 (実数、整数、倍長整数、日付、時間、文字列、 テキスト、ブール、未定義、Null を指定可能) |
@@ -17,15 +19,19 @@ displayed_sidebar: docs
 | base       | Integer       | &#8594; | 式が数値の場合に、基数を表す2 から36 までの値                                                     |
 | 戻り値        | Text          | &#8592; | 式の文字列の形式                                                                      |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>履歴</summary>
 
-| リリース | 内容             |
-| ---- | -------------- |
-| 21   | *base* 引数のサポート |
+| リリース                        | 内容             |
+| --------------------------- | -------------- |
+| 21                          | *base* 引数のサポート |
+| <6 | Created        |
 
 </details>
+</div>
 
 ## 説明
 
@@ -77,7 +83,7 @@ displayed_sidebar: docs
 | String(1/0)                                                      | "INF"                             | 正の無限の数値                             |
 | String(-1/0)                                                     | "-INF"                            | 負の無限の数値                             |
 
-(\*) 実数をテキストへと変換するアルゴリズムは、有効数字13 桁に基づいて計算されています。詳細は[`SET REAL COMPARISON LEVEL`](../commands-legacy/set-real-comparison-level.md) を参照してください。
+(\*) The algorithm for converting [real values](../Concepts/dt_number.md) into text is based on 13 significant digits.
 
 #### String(number;base)
 
@@ -133,17 +139,17 @@ displayed_sidebar: docs
 例:
 
 ```4d
- $vsResult:=String(!2023-11-27!) //"11/27/2023"  
- $vsResult:=String(!2023-11-27!;Internal date long) // "November 27, 2023"  
- $vsResult:=String(!2023-11-27!;ISO Date GMT) // フランス時間では "2023-11-26T23:00:00Z"
+ $vsResult:=String(!2023-11-27!) //"11/27/2023"  
+ $vsResult:=String(!2023-11-27!;Internal date long) // "November 27, 2023"  
+ $vsResult:=String(!2023-11-27!;ISO Date GMT) // "2023-11-26T23:00:00Z" in French timezone  
 ```
 
 - あるいは[パターンに基づいてビルドされたカスタマイズされたフォーマット](../Project/date-time-formats.md) (文字列値)  
   例:
 
 ```4d
- $vsResult:=String(!2023-11-27!;"EEEE d MMMM y GGGG") //"Monday 27 November 2023 Anno Domini"  
- $vsResult:=String(!2023-11-27!;"E dd/MM/yyyy zzzz") // フランス時間では "Mon 27/11/2023 GMT+01:00" 
+ $vsResult:=String(!2023-11-27!;"EEEE d MMMM y GGGG") //"Monday 27 November 2023 Anno Domini"  
+ $vsResult:=String(!2023-11-27!;"E dd/MM/yyyy zzzz") //"Mon 27/11/2023 GMT+01:00" in French timezone  
 ```
 
 :::note
@@ -159,8 +165,8 @@ displayed_sidebar: docs
 この引数は定義済みフォーマットとパターンに基づいた日付フォーマットの両方に対して使用できます。 例:
 
 ```4d
- $dateTime:=String(!2010-09-09!;ISO date GMT;Current time) //"2010-09-09T08:30:41Z"
- $dateTime2:=String(!2023-11-27!;"E dd/MM/yyyy 'at' hh:mm aa O";?11:15:00?) //"Mon 27/11/2023 at 11:15 AM GMT+1"
+ $dateTime:=String(!2010-09-09!;ISO date GMT;Current time) //"2010-09-09T08:30:41Z"
+ $dateTime2:=String(!2023-11-27!;"E dd/MM/yyyy 'at' hh:mm aa O";?11:15:00?) //"Mon 27/11/2023 at 11:15 AM GMT+1"
 ```
 
 #### 日付/時間複合フォーマットに関する注記:
@@ -168,33 +174,33 @@ displayed_sidebar: docs
 - ISO Date GMTフォーマットはISO8601標準に対応します。日付と時間を含みタイムゾーン (GMT) を考慮します。
 
 ```4d
- $mydate:=String(Current date;ISO Date GMT;Current time) // 例えば、2010-09-13T16:11:53Z を返します
+ $mydate:=String(Current date;ISO Date GMT;Current time) // returns, for instance, 2010-09-13T16:11:53Z  
 ```
 
 上記の例の最後の"Z"はGMTフォーマットを表します。  
 *addTime* 引数を渡さなかった場合、このコマンドはローカルタイムの午前0時をGMT 標準時で表現したものを返します。そのためローカルの時間帯に応じて日付が前後することがあります:
 
 ```4d
- $mydate:=String(!13/09/2010!;ISO Date GMT) // フランスでは 2010-09-12T22:00:00Z を返す
+ $mydate:=String(!13/09/2010!;ISO Date GMT) // returns 2010-09-12T22:00:00Z in France  
 ```
 
 - ISO DateフォーマットはISO Date GMTフォーマットと同様に日付と時間を含みますが、タイムゾーンを考慮しません。 当初よりこのフォーマットはISO8601標準に準拠しておらず、非常に特殊な目的のために予約されたものです。
 
 ```4d
- $mydate:=String(!13/09/2010!;ISO Date) // タイムゾーンに関係なく 2010-09-13T00:00:00 を返す
- $mydate:=String(Current date;ISO Date;Current time) // 2010-09-13T18:11:53 を返す
+ $mydate:=String(!13/09/2010!;ISO Date) // returns 2010-09-13T00:00:00 regardless of the time zone  
+ $mydate:=String(Current date;ISO Date;Current time) // returns 2010-09-13T18:11:53  
 ```
 
 - Date RFC 1123フォーマットは日付と時間の組み合わせをRFC 822 と1123 で定義された標準に基づきフォーマットします。 このフォーマットはたとえばHTTPヘッダーでcookieの有効期限を設定する際に必要となります。
 
 ```4d
- $mydate:=String(Current date;Date RFC 1123;Current time) // 例えば Fri, 10 Sep 2010 13:07:20 GMT を返します
+ $mydate:=String(Current date;Date RFC 1123;Current time) // returns, for example Fri, 10 Sep 2010 13:07:20 GMT  
 ```
 
 表現される日時は、タイムゾーンが考慮されるためローカルのタイムゾーンにより日付が前後にずれることになります。 日付のみを渡すと、コマンドはローカルタイムの00:00をGMT時間で表現して返します:
 
 ```4d
- $mydate:=String(!2010-09-09!;Date RFC 1123) // Wed, 08 Sep 2010 22:00:00 GMT を返します
+ $mydate:=String(!2010-09-09!;Date RFC 1123) // returns Wed, 08 Sep 2010 22:00:00 GMT  
 ```
 
 ### 時間式
@@ -223,16 +229,16 @@ displayed_sidebar: docs
 例:
 
 ```4d
- $vsResult:=String(?17:30:45?;HH MM AM PM) //"5:30 PM"
- $vsResult:=String(?17:30:45?;Hour Min Sec) //"17 時 30 分 45 秒 "
+ $vsResult:=String(?17:30:45?;HH MM AM PM) //"5:30 PM"  
+ $vsResult:=String(?17:30:45?;Hour Min Sec) //"17 hours 30 minutes 45 seconds"  
 ```
 
 - あるいは[パターンに基づいてビルドされたカスタマイズされたフォーマット](../Project/date-time-formats.md) (文字列値)  
   例:
 
 ```4d
- $vsResult:=String(?17:30:45?;"hh:mm aa O") //"05:30 PM GMT+1"  
- $vsResult:=String(?17:30:45?;"'It is' K a") //"It is 5 PM"  
+ $vsResult:=String(?17:30:45?;"hh:mm aa O") //"05:30 PM GMT+1"  
+ $vsResult:=String(?17:30:45?;"'It is' K a") //"It is 5 PM"  
 ```
 
 ### 文字列式

@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SET PICTURE TO LIBRARY.Summary-->O comando SET PICTURE TO LIBRARY cria uma nova imagem ou substitui uma imagem existente na biblioteca de imagens.<!-- END REF-->

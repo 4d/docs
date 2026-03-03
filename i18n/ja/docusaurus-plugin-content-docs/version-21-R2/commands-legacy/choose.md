@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Choose.Summary-->**Choose** コマンドは、引数*criterion* の値に応じて、引数*value1*、*value2* などに渡された値の1つを返します。<!-- END REF-->

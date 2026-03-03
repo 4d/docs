@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2003|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR INSERT COLUMN.Summary-->The QR INSERT COLUMN command inserts or creates a column at the specified position.<!-- END REF--> Columns located to the right of that position will be shifted accordingly.

@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Windows Ctrl down.Summary-->Windows Ctrl down devuelve TRUE si la tecla Ctrl Windows está presionada.<!-- END REF-->cuando se llama en una plataforma Macintosh, Windows Ctrl down devuelve TRUE si la tecla Macintosh Comando está presionada.

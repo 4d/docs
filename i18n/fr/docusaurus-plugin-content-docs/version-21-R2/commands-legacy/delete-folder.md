@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6.7|Créé|
+|15 R5|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DELETE FOLDER.Summary-->La commande **DELETE FOLDER** supprime le dossier dont vous avez passé le nom ou le chemin d’accès complet dans *dossier*.<!-- END REF--> 

@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2003|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.QR Get area property.Summary-->**QR Get area property** コマンドは、*property*に渡されたインタフェース要素（ツールバーまたはメニューバー）が表示されていなければ0を、表示されていれば1を返します。<!-- END REF-->

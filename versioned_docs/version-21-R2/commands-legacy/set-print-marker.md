@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|2003|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET PRINT MARKER.Summary-->The **SET PRINT MARKER** command enables the definition of the marker position during printing.<!-- END REF--> Combined with the [Get print marker](get-print-marker.md), [OBJECT MOVE](object-move.md) or [Print form](../commands/print-form.md) commands, this command allows you to adjust the size of the print areas. 

@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+|12|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.RECEIVE PACKET.Summary-->**RECEIVE PACKET** reads characters from a serial port or from a document.<!-- END REF-->

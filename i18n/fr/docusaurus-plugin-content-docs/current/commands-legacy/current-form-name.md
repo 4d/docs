@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Current form name.Summary-->La commande **Current form name** retourne le nom du formulaire courant défini pour le process.<!-- END REF--> Le formulaire courant peut être un formulaire projet ou un formulaire table. 

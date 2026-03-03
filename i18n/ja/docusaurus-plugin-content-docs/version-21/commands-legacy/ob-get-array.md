@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|15|変更|
+|14|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OB GET ARRAY.Summary-->**OB GET ARRAY**コマンドは、 *object* 引数で指定したランゲージオブジェクトの、*property* 引数で指定したプロパティの中に保存されている値の配列を *array* という配列に返します。<!-- END REF-->で指定するオブジェクトは、 *C\_OBJECT* コマンドを使用して作成されている、あるいはオブジェクトフィールドが選択されている必要があります。

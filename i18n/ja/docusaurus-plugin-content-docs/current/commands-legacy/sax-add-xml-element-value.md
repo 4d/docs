@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|変更|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SAX ADD XML ELEMENT VALUE.Summary-->**SAX ADD XML ELEMENT VALUE** コマンドは、*document* で参照されるXMLドキュメントに*data* を変換せずに直接追加します。<!-- END REF-->このコマンドは例えば電子メールのボディに添付ファイルを挿入するのと同等です。

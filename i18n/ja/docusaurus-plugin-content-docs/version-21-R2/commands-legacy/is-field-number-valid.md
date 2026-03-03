@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Is field number valid.Summary-->Is field number validコマンドは、引数*fieldNum*に渡したフィールド番号のフィールドが、引数*tableNum*または*tablePtr*に渡したテーブル番号またはポインタのテーブルに存在する場合、Trueを返します。<!-- END REF-->フィールドが存在しない場合、コマンドはFalesを返します。また、フィールドを持つテーブルがエクスプローラーのごみ箱にある場合も、コマンドはFalesを返しますので注意してください。

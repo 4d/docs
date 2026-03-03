@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|6.8|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QUIT 4D.Summary-->The QUIT 4D command exits the current 4D application and returns to the Desktop.<!-- END REF--> 

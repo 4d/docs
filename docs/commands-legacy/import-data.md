@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Modified|
+|2003|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.IMPORT DATA.Summary-->The **IMPORT DATA** command imports the data located in the *fileName* file.<!-- END REF--> 4D can import the data in the following formats: Text, Fixed length text, XML, SYLK, DIF, DBF (dBase), and 4D. 

@@ -14,6 +14,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|2003|Modifié|
+|13|Renommé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WEB START SERVER.Summary-->La commande **WEB START SERVER** démarre le serveur Web de l'application 4D sur laquelle elle a été exécutée (4D ou 4D Server).<!-- END REF--> La base est alors publiée sur votre réseau Intranet ou sur Internet.

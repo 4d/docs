@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ARRAY TO LIST.Summary-->The ARRAY TO LIST command creates or replaces the hierarchical list or the choice list (created in the List editor) that is specified in *list* using the elements of the array *array.<!-- END REF-->*
@@ -38,7 +49,7 @@ You can use ARRAY TO LIST to build a list based on the elements of an array. How
 The following example copies the array *atRegions* to the list called “Regions:”
 
 ```4d
- ARRAY TO LIST(atRegions;"Regions")
+ ARRAY TO LIST(atRegions;"Regions")
 ```
 
 ## Example 
@@ -46,10 +57,10 @@ The following example copies the array *atRegions* to the list called “Regions
 You want to put the distinct values of a field into a list, for example to create a hierarchical pop-up menu. You can write:
 
 ```4d
- ALL RECORDS([Company])
- DISTINCT VALUES([Company]country;$arrCountries)
- CountryList:=New list
- ARRAY TO LIST($arrCountries;CountryList)
+ ALL RECORDS([Company])
+ DISTINCT VALUES([Company]country;$arrCountries)
+ CountryList:=New list
+ ARRAY TO LIST($arrCountries;CountryList)
 ```
 
 ## Error management 

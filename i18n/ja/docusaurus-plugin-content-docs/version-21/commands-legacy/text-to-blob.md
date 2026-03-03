@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.TEXT TO BLOB.Summary-->**TEXT TO BLOB**コマンドはテキスト値 *text*をBLOB *blob*に書き込みます。<!-- END REF-->引数を使用して、書き込むテキスト値の内部フォーマットと文字セットを指定できます。これを行うには、*BLOB*テーマの以下の定数のうちいずれかを*textFormat* 引数に渡します: 

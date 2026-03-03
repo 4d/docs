@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT SET PRINT VARIABLE FRAME.Summary-->**OBJECT SET PRINT VARIABLE FRAME**コマンドは、引数 *object* と *\** で指定したオブジェクトの印刷時可変のプロパティを、変更します。<!-- END REF-->

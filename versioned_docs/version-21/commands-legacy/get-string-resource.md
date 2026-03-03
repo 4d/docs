@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get string resource.Summary-->The **Get string resource** command returns the string stored in the string (“STR ”) resource whose ID is passed in *resID*.<!-- END REF-->
@@ -32,7 +42,7 @@ If you pass a valid resource file reference number in *resFile*, the resource is
 The following example displays the contents of the string resource ID=20911, which must be located in at least one of the currently open resource files:
 
 ```4d
- ALERT(Get string resource(20911))
+ ALERT(Get string resource(20911))
 ```
 
 ## System variables and sets 

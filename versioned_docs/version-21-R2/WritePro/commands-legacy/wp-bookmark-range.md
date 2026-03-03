@@ -28,9 +28,9 @@ If the *bkName* bookmark does not exist in *wpDoc*, an empty rangeObj object is 
 You want to show the range of the "MyBookmark" bookmark in your document:
 
 ```4d
- var $wpRange : Object
- $wpRange:=WP Bookmark range(WParea;"MyBookmark")
- WP SELECT(WParea;$wpRange)
+ var $wpRange : Object
+ $wpRange:=WP Bookmark range(WParea;"MyBookmark")
+ WP SELECT(WParea;$wpRange)
 ```
 
 ## See also 

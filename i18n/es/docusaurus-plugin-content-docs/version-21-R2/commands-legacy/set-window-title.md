@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|6|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SET WINDOW TITLE.Summary-->El comando SET WINDOW TITLE cambia el título de la ventana cuyo número de referencia se pasa en *ventana* para el texto pasado en *titulo* (longitud máxima 80 caracteres).<!-- END REF--> 

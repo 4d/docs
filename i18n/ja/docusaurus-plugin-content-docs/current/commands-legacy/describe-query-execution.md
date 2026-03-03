@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL Release 1|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DESCRIBE QUERY EXECUTION.Summary-->DESCRIBE QUERY EXECUTION コマンドはカレントプロセスにおいて、クエリの分析を有効にしたり無効にしたりします。<!-- END REF-->このコマンドは、4Dランゲージの[QUERY](query.md)コマンドのようなクエリの文脈でのみ機能します。

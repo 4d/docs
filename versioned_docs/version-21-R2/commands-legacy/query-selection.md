@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|6.5|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QUERY SELECTION.Summary-->**QUERY SELECTION** looks for records in *aTable*.<!-- END REF--> The **QUERY SELECTION** command changes the current selection of *table* for the current process and makes the first record of the new selection the current record.

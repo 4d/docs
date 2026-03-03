@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|2004|変更|
+|11 SQL|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DOM Parse XML variable.Summary-->**DOM Parse XML variable**コマンドはXML構造を格納するBLOBまたはテキスト型変数を解析し、XML構造への参照を返します。<!-- END REF-->コマンドはDTDやXMLスキーマ (XML Schema Definition (XSD) ドキュメント) を使用してドキュメントの検証を行うこともできます。

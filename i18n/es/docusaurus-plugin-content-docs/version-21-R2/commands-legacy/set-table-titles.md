@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SET TABLE TITLES.Summary-->SET TABLE TITLES permite ocultar, renombrar y reordenar las tablas de su base cuando aparecen en las cajas de diálogo estándar de 4D en el entorno Aplicación(es decir, cuando el modo de inicio es **Aplicación**, o después de seleccionar **Probar aplicación** en el menú **Ejecutar**).<!-- END REF--> Por ejemplo, este comando puede modificar la visualización de tablas en el editor búsquedas en modo Aplicación.

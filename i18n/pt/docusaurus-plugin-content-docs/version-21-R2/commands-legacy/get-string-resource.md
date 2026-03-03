@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Get string resource.Summary-->o comando Get string resource retorna a string armazenada no recurso string (“STR ”) cujo número de referência se passa em *resNum*.<!-- END REF-->  

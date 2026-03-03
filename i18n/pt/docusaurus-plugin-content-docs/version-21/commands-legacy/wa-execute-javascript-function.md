@@ -20,6 +20,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|16 R4|Modificado|
+|14|Modificado|
+|11 SQL Release 2|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Summary-->O comando WA EXECUTE JAVASCRIPT FUNCTION executa, na área Web designada pelos parâmetros *\** e *objeto*, a função JavaScript *funcaoJS* retorna opcionalmente seu resultado no parâmetro *resultado*.<!-- END REF--> 

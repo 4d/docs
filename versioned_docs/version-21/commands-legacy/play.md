@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.PLAY.Summary-->The **PLAY** command plays sound or multimedia files.<!-- END REF--> You pass the full pathname of the file you want to play in *objectName*. On macOS, the command can also be used to play a system sound. 

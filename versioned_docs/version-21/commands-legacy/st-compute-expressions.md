@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R5|Modified|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ST COMPUTE EXPRESSIONS.Summary-->The **ST COMPUTE EXPRESSIONS** command updates the dynamic 4D expressions found in the multi-style or 4D Write Pro field or variable designated by the *object* parameter.<!-- END REF--> 

@@ -5,7 +5,7 @@ slug: /commands/ob-is-empty
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Is empty.Syntax-->**OB Is empty** ( *object* : Object, Object ) : Boolean<!-- END REF-->
+<!--REF #_command_.OB Is empty.Syntax-->**OB Is empty** ( *object* : Object ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Is empty.Params-->
 <div class="no-index">
 
@@ -15,6 +15,17 @@ displayed_sidebar: docs
 | Function result | Boolean | &#8592; | True if object is empty or undefined, otherwise False |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|15|Modified|
+|14|Created|
+
+</details>
+</div>
 
 ## Description 
 

@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.XML DECODE.Summary-->The XML DECODE command converts a value stored as an XML string into a 4D typed value.<!-- END REF--> The conversion is carried out automatically according to the following rules: 

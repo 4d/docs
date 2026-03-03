@@ -5,7 +5,7 @@ slug: /commands/ob-set-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB SET ARRAY.Syntax-->**OB SET ARRAY** ( *object* : Object, Object ; *property* : Text ; *array* : Array, Variable )<!-- END REF-->
+<!--REF #_command_.OB SET ARRAY.Syntax-->**OB SET ARRAY** ( *object* : Object ; *property* : Text ; *array* : Array, Variable )<!-- END REF-->
 <!--REF #_command_.OB SET ARRAY.Params-->
 <div class="no-index">
 
@@ -16,6 +16,18 @@ displayed_sidebar: docs
 | array | Array, Variable | &#8594;  | Array to store in property |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+|15|Modified|
+|16 R4|Modified|
+
+</details>
+</div>
 
 ## Description 
 

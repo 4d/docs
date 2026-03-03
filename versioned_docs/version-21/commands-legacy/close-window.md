@@ -28,12 +28,12 @@ If you pass an external window reference number in the *Window* parameter, **CLO
 The following example opens a form window and adds new records with the [ADD RECORD](add-record.md) command. When the records have been added, the window is closed with **CLOSE WINDOW**:
 
 ```4d
- FORM SET INPUT([Employees];"Entry")
- $winRef:=Open form window([Employees];"Entry")
- Repeat
-    ADD RECORD([Employees]) //Add a new employee record
- Until(OK=0) //Loop until the user cancels
- CLOSE WINDOW //Close the window
+ FORM SET INPUT([Employees];"Entry")
+ $winRef:=Open form window([Employees];"Entry")
+ Repeat
+    ADD RECORD([Employees]) //Add a new employee record
+ Until(OK=0) //Loop until the user cancels
+ CLOSE WINDOW //Close the window
 ```
 
 ## See also 

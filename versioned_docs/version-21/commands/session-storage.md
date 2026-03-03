@@ -5,7 +5,7 @@ displayed_sidebar: docs
 ---
 
 
-<!--REF #_command_.Session storage.Syntax-->**Session storage** ( *id* ) : Object<!-- END REF-->
+<!--REF #_command_.Session storage.Syntax-->**Session storage** ( *id* : Text ) : Object<!-- END REF-->
 <!--REF #_command_.Session storage.Params-->
 <div class="no-index">
 
@@ -16,6 +16,7 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>History</summary>
 
 |Release|Changes|
@@ -24,6 +25,7 @@ displayed_sidebar: docs
 |20 R6|Added|
 
 </details>
+</div>
 
 
 ## Description 
@@ -41,23 +43,23 @@ The returned object is the [**.storage**](../API/SessionClass.md#storage) proper
 This method modifies the value of a "settings" property stored in the storage object of a specific session:
 
 ```4d
-  //Set storage for a session
-  //The "Execute On Server" method property is set
- 
- #DECLARE($id : Text; $text : Text)
- var $obj : Object
- 
- $obj:=Session storage($id)
- 
- If($obj.settings=Null)
-    Use($obj)
-       $obj.settings:=New shared object("text";$text)
-    End use
- Else
-    Use($obj.settings)
-       $obj.settings.text:=$text
-    End use
- End if
+  //Set storage for a session
+  //The "Execute On Server" method property is set
+ 
+ #DECLARE($id : Text; $text : Text)
+ var $obj : Object
+ 
+ $obj:=Session storage($id)
+ 
+ If($obj.settings=Null)
+    Use($obj)
+       $obj.settings:=New shared object("text";$text)
+    End use
+ Else
+    Use($obj.settings)
+       $obj.settings.text:=$text
+    End use
+ End if
 ```
 
 ## See also 

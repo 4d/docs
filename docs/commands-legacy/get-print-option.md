@@ -5,17 +5,31 @@ slug: /commands/get-print-option
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PRINT OPTION.Syntax-->**GET PRINT OPTION** ( *option* : Integer ; *value1* : Integer, Text {; *value2* : Integer, Text} )<!-- END REF-->
+<!--REF #_command_.GET PRINT OPTION.Syntax-->**GET PRINT OPTION** ( *option* : Integer, Text ; *value1* : Integer, Text {; *value2* : Integer, Text} )<!-- END REF-->
 <!--REF #_command_.GET PRINT OPTION.Params-->
 <div class="no-index">
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| option | Integer | &#8594;  | Option number or PDF option code |
+| option | Integer, Text | &#8594;  | Option number or PDF option code |
 | value1 | Integer, Text | &#8592; | Value 1 of the option |
 | value2 | Integer, Text | &#8592; | Value 2 of the option |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|20|Modified|
+|16|Modified|
+|15 R5|Modified|
+|2004.3|Modified|
+|<6|Created|
+
+</details>
+</div>
 
 ## Description 
 

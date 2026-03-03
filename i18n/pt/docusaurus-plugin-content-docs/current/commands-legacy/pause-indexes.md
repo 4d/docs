@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.PAUSE INDEXES.Summary-->O comando **PAUSE INDEXES**  desativa temporariamente todos os índices de *aTabela*, exceto o índice da chave primária .<!-- END REF-->  

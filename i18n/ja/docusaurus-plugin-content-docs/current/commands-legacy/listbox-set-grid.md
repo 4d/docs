@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|名称変更|
+|12|名称変更|
+|2004|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LISTBOX SET GRID.Summary-->**LISTBOX SET GRID**コマンドを使用し、*object*引数および *\** で指定されたリストボックスのグリッドを構成する、横および縦グリッドラインを表示、または非表示に設定することができます。<!-- END REF-->

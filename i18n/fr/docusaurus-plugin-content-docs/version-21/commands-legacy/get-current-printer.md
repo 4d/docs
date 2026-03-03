@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|15 R5|Modifié|
+|2003|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get current printer.Summary-->La commande **Get current printer** retourne le nom de l’imprimante courante définie dans l’application 4D.<!-- END REF--> Par défaut au lancement de 4D, l’imprimante courante est l’imprimante définie dans le système.

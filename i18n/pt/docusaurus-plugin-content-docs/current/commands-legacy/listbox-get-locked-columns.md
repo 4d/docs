@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.LISTBOX Get locked columns.Summary-->O comando **LISTBOX Get locked columns** devolve o número de colunas bloquedas no list box designado pelos parâmetros objeto e *\**.<!-- END REF-->

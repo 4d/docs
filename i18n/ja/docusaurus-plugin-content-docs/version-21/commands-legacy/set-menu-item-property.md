@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R3|変更|
+|11 SQL|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET MENU ITEM PROPERTY.Summary-->**SET MENU ITEM PROPERTY**コマンドは、*menu* と *menuItem*引数で指定されたメニュー項目に、*property*の*value*を設定するために使用します。<!-- END REF-->

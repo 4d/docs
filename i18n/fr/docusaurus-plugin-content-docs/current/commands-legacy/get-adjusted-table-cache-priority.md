@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16 R2|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get adjusted table cache priority.Summary-->La commande **Get adjusted table cache priority** retourrne la valeur ajustée de priorité de cache appliquée par le gestionnaire de cache aux données scalaires de laTable.<!-- END REF--> Cette commande est destinée uniquement à la phase de débogage et de mise au point de l'application. 

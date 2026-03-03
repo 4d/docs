@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX SET ROW FONT STYLE.Summary-->**Note:** This command only works with array type list boxes.<!-- END REF-->
@@ -60,15 +70,15 @@ Given an array type list box with the following characteristics:
 * the other columns do not have any style arrays.
 
 ```4d
- LISTBOX SET ROW FONT STYLE(*;"Col5";3;Bold)
-  // equivalent to ArrCol5Style{3}:=Bold
+ LISTBOX SET ROW FONT STYLE(*;"Col5";3;Bold)
+  // equivalent to ArrCol5Style{3}:=Bold
 ```
 
 ![](../assets/en/commands/pict1205512.fr.png)
 
 ```4d
- LISTBOX SET ROW FONT STYLE(*;"List Box";3;Italic+Underline)
-  // equivalent toArrGlobalStyle{3}:=Italic+Underline
+ LISTBOX SET ROW FONT STYLE(*;"List Box";3;Italic+Underline)
+  // equivalent toArrGlobalStyle{3}:=Italic+Underline
 ```
 
 ![](../assets/en/commands/pict1205514.fr.png)

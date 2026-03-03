@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2003|Created|
+|16|Modified|
+|17 R6|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR EXECUTE COMMAND.Summary-->The **QR EXECUTE COMMAND** command executes the toolbar button command whose reference was passed in *command*.<!-- END REF--> The most common use for this command is to execute a command selected by the user and intercepted in your code via the [QR ON COMMAND](qr-on-command.md) command.

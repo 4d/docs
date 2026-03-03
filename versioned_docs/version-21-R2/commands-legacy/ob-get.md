@@ -5,7 +5,7 @@ slug: /commands/ob-get
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Get.Syntax-->**OB Get** ( *object* : Object, Object ; *property* : Text {; *type* : Integer} ) : any<!-- END REF-->
+<!--REF #_command_.OB Get.Syntax-->**OB Get** ( *object* : Object ; *property* : Text {; *type* : Integer} ) : any<!-- END REF-->
 <!--REF #_command_.OB Get.Params-->
 <div class="no-index">
 
@@ -17,6 +17,20 @@ displayed_sidebar: docs
 | Function result | any | &#8592; | Current value of property |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+|15|Modified|
+|15 R4|Modified|
+|16 R4|Modified|
+|16 R6|Modified|
+
+</details>
+</div>
 
 ## Description 
 

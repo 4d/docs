@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL Release 2|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OPEN ADMINISTRATION WINDOW.Summary-->La commande **OPEN ADMINISTRATION WINDOW** affiche la fenêtre d’administration du serveur sur le poste qui l’exécute.<!-- END REF--> La fenêtre d’administration de 4D Server permet de visualiser les paramètres courants et d’effectuer diverses opérations de maintenance (cf. Guide de référence de 4D Server). A compter de la version 11 de 4D Server, cette fenêtre peut être affichée depuis un poste client : 

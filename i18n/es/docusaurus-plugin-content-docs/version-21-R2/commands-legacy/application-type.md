@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Application type.Summary-->El comando Application type devuelve un valor numérico que representa el tipo de entorno 4D que está utilizando.<!-- END REF--> 4D ofrece las siguientes constantes predefinidas:

@@ -16,6 +16,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|変更|
+|12|名称変更|
+|2004.3|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.FORM GOTO PAGE.Summary-->**FORM GOTO PAGE**コマンドは、現在表示されているフォームページを*pageNumber*で指定したフォームページに変更します。<!-- END REF--> 

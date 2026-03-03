@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Renamed|
+|2004|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WEB GET VARIABLES.Summary-->The **WEB GET VARIABLES** command fills the text arrays *nameArray* and *valueArray* with the variable names and values contained in the Web form “submitted” (i.e. sent to the Web server).<!-- END REF-->

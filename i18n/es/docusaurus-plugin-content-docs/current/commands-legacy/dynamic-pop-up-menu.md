@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|16 R3|Modificado|
+|11 SQL|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Dynamic pop up menu.Summary-->El comando **Dynamic pop up menu** hace aparecer un menú desplegable jerárquico en la ubicación actual del ratón o en la ubicación definida por los parámetros opcionales *Coordx* y *Coordy*.<!-- END REF-->

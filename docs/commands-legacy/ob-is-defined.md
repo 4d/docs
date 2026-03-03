@@ -5,7 +5,7 @@ slug: /commands/ob-is-defined
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Is defined.Syntax-->**OB Is defined** ( *object* : Object, Object {; *property* : Text} ) : Boolean<!-- END REF-->
+<!--REF #_command_.OB Is defined.Syntax-->**OB Is defined** ( *object* : Object {; *property* : Text} ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Is defined.Params-->
 <div class="no-index">
 
@@ -16,6 +16,17 @@ displayed_sidebar: docs
 | Function result | Boolean | &#8592; | If property omitted: True if object is defined, otherwise False.<br/>If property passed: True if property is defined, otherwise False |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|15|Modified|
+|14|Created|
+
+</details>
+</div>
 
 ## Description 
 

@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT Get list reference.Summary-->The **OBJECT Get list reference** command returns the reference number (ListRef) of the hierarchical list associated with the object or group of objects designated by *object* and *\**.<!-- END REF--> 

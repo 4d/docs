@@ -19,6 +19,8 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+
+
 ## Description 
 
 <!--REF #_command_.On REST Authentication database method.Summary-->The **On REST Authentication database method** is deprecated in projects as of 4D 20 R6.<!-- END REF-->

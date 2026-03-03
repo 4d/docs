@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.CONVERT FROM TEXT.Summary-->El comando CONVERT FROM TEXT permite convertir un texto expresado en el juego de caracteres actual de 4D en un texto expresado en otro juego de caracteres.<!-- END REF--> 

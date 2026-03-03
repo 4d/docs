@@ -9,23 +9,29 @@ displayed_sidebar: docs
 
 <!--REF #_command_.String.Params-->
 
-| 引数      | 型             |                             | 説明                                                                            |
-| ------- | ------------- | --------------------------- | ----------------------------------------------------------------------------- |
-| 式       | 式             | &#8594; | 文字列式を返したい式 (実数、整数、倍長整数、日付、時間、文字列、 テキスト、ブール、未定義、Null を指定可能) |
-| format  | Integer, Text | &#8594; | 表示フォーマット                                                                      |
-| addTime | Time          | &#8594; | expressionが日付の時、追加する時間                                                        |
-| base    | Integer       | &#8594; | 式が数値の場合に、基数を表す2 から36 までの値                                                     |
-| 戻り値     | Text          | &#8592; | 式の文字列の形式                                                                      |
+<div class="no-index">
 
+| 引数         | 型             |                             | 説明                                                                            |
+| ---------- | ------------- | --------------------------- | ----------------------------------------------------------------------------- |
+| expression | 式             | &#8594; | 文字列式を返したい式 (実数、整数、倍長整数、日付、時間、文字列、 テキスト、ブール、未定義、Null を指定可能) |
+| format     | Integer, Text | &#8594; | 表示フォーマット                                                                      |
+| addTime    | Time          | &#8594; | expressionが日付の時、追加する時間                                                        |
+| base       | Integer       | &#8594; | 式が数値の場合に、基数を表す2 から36 までの値                                                     |
+| 戻り値        | Text          | &#8592; | 式の文字列の形式                                                                      |
+
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>履歴</summary>
 
-| リリース | 内容             |
-| ---- | -------------- |
-| 21   | *base* 引数のサポート |
+| リリース                        | 内容             |
+| --------------------------- | -------------- |
+| 21                          | *base* 引数のサポート |
+| <6 | Created        |
 
 </details>
+</div>
 
 ## 説明
 
@@ -77,7 +83,7 @@ displayed_sidebar: docs
 | String(1/0)                                                      | "INF"                             | 正の無限の数値                             |
 | String(-1/0)                                                     | "-INF"                            | 負の無限の数値                             |
 
-(\*) 実数をテキストへと変換するアルゴリズムは、有効数字13 桁に基づいて計算されています。詳細は[`SET REAL COMPARISON LEVEL`](../commands-legacy/set-real-comparison-level.md) を参照してください。
+(\*) The algorithm for converting [real values](../Concepts/dt_number.md) into text is based on 13 significant digits.
 
 #### String(number;base)
 

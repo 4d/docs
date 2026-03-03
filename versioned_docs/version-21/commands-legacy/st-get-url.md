@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ST GET URL.Summary-->The **ST GET URL** command returns the text label and address of the first URL detected in the styled text field or variable designated by the *object* parameter.<!-- END REF--> 

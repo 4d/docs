@@ -5,7 +5,7 @@ slug: /commands/num
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Num.Syntax-->**Num** ( *expression* {; *separator*} ) : Real<br/>**Num** ( *expression* ; *base* ) : Real<!-- END REF-->
+<!--REF #_command_.Num.Syntax-->**Num** ( *expression* : Text, Boolean, Integer {; *separator* : Text} ) : Real<br/>**Num** ( *expression* : Text, Boolean, Integer ; *base* : Integer ) : Real<!-- END REF-->
 <!--REF #_command_.Num.Params-->
 <div class="no-index">
 
@@ -18,14 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-
+<div class="no-index">
 <details><summary>History</summary>
 
 |Release|Changes|
 |---|---|
 |21|Support of *base* parameter|
+|<6|Created|
 
 </details>
+</div>
 
 
 ## Description 
@@ -52,6 +54,7 @@ There are three reserved characters that **Num** treats specially: the decimal s
 * The hyphen causes the number or exponent to be negative. The hyphen must appear before any negative numeric characters or after the “e” for an exponent. Except for the “e” character, if a hyphen is embedded in a numeric string, the portion of the string after the hyphen is ignored. For example, `Num("123-456")` returns 123, but `Num("-9")` returns -9.
 * The e or E causes any numeric characters to its right to be interpreted as the power of an exponent. The “e” must be embedded in a numeric string. Thus, `Num("123e–2")` returns 1.23.  
 Note that when the string includes more than one "e", conversion might give different results under macOS and under Windows.
+* The algorithm for converting text into [real values](../Concepts/dt_number.md) is based on 13 significant digits.
 
 #### *separator* parameter
 
@@ -103,12 +106,12 @@ If *expression* evaluates to undefined, the command returns 0 (zero). This is us
 The following example illustrates how **Num** works when passed a single string argument:
 
 ```4d
-$result:=Num("ABCD") // 0
-$result:=Num("A1B2C3") // 123
-$result:=Num("123") // 123
-$result:=Num("123.4") // 123.4
-$result:=Num("–123") // –123
-$result:=Num("–123e2") // –12300
+$result:=Num("ABCD") // 0
+$result:=Num("A1B2C3") // 123
+$result:=Num("123") // 123
+$result:=Num("123.4") // 123.4
+$result:=Num("–123") // –123
+$result:=Num("–123e2") // –12300
 ```
 
 ## Example 2 
@@ -116,9 +119,9 @@ $result:=Num("–123e2") // –12300
 Here, *\[Client\]Debt* is compared with *$1000*. The Num command applied to these comparisons returns 1 or 0\. Multiplying 1 or 0 with a string repeats the string once or returns the empty string. As a result, *\[Client\]Risk* gets either “Good” or “Bad”:
 
 ```4d
-  // If client owes less than 1000, a good risk.
-  // If client owes more than 1000, a bad risk.
- [Client]Risk:=("Good"*Num([Client]Debt<1000))+("Bad"*Num([Client]Debt>=1000))
+  // If client owes less than 1000, a good risk.
+  // If client owes more than 1000, a bad risk.
+ [Client]Risk:=("Good"*Num([Client]Debt<1000))+("Bad"*Num([Client]Debt>=1000))
 ```
 
 ## Example 3 
@@ -126,12 +129,12 @@ Here, *\[Client\]Debt* is compared with *$1000*. The Num command applied to thes
 This example compares the results obtained depending on the “current” separator:
 
 ```4d
- $thestring:="33,333.33"
- $thenum:=Num($thestring)
-  // by default, $thenum equals 33,33333 on a French system
- $thenum:=Num($thestring;".")
-  // $thenum will be correctly evaluated regardless of the system;
-  // for example, 33 333,33 on a French system
+ $thestring:="33,333.33"
+ $thenum:=Num($thestring)
+  // by default, $thenum equals 33,33333 on a French system
+ $thenum:=Num($thestring;".")
+  // $thenum will be correctly evaluated regardless of the system;
+  // for example, 33 333,33 on a French system
 ```
 
 ## Example 4 

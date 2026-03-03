@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|17 R5|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.New data key.Summary-->La commande **New data key** génère une clé de chiffrement des données binaires à partir du texte passé dans le paramètre *phraseSecrète*.<!-- END REF-->

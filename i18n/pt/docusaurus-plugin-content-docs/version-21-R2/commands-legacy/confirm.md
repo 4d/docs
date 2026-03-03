@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|6|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.CONFIRM.Summary-->O comando CONFIRM  mostra uma caixa de diálogo de confirmação composta de um ícone, uma mensagem, um botão OK, e um botão Cancelar.<!-- END REF-->

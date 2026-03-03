@@ -16,6 +16,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL|Modifié|
+|12|Renommé|
+|12|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GOTO OBJECT.Summary-->La commande **GOTO OBJECT** permet de sélectionner l'objet saisissable *objet* (variable ou champ) en tant que zone active du formulaire.<!-- END REF--> C'est l'équivalent d'un clic de l'utilisateur dans la zone ou de l'utilisation de la touche **Tabulation** pour sélectionner le champ ou la variable.

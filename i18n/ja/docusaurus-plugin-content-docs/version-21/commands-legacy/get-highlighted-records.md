@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GET HIGHLIGHTED RECORDS.Summary-->GET HIGHLIGHTED RECORDS コマンドは、*aTable*中で (例: リストフォームでユーザにより選択されて) ハイライトされたレコードを*setName*で指定したセットに格納します。<!-- END REF-->*aTable*を省略すると、カレントフォームまたはサブフォームのテーブルが使用されます。

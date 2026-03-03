@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004.2|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM Get first child XML element.Summary-->The DOM Get first child XML element command returns a reference to the first “child” of the XML element passed in *elementRef*.<!-- END REF--> This reference can be used with other XML parsing commands.
@@ -31,12 +42,12 @@ The *childElemName* and *childElemValue* parameters, if they are passed, receive
 Retrieval of the reference of the first XML element of the parent root. The XML structure (C:\\\\import.xml) is first loaded into a BLOB: 
 
 ```4d
- var myBlobVar : Blob
- var $xml_Parent_Ref;$xml_Child_Ref : Text
- 
- DOCUMENT TO BLOB("c:\\import.xml";myBlobVar)
- $xml_Parent_Ref:=DOM Parse XML variable(myBlobVar)
- $xml_Child_Ref:=DOM Get first child XML element($xml_Parent_Ref)
+ var myBlobVar : Blob
+ var $xml_Parent_Ref;$xml_Child_Ref : Text
+ 
+ DOCUMENT TO BLOB("c:\\import.xml";myBlobVar)
+ $xml_Parent_Ref:=DOM Parse XML variable(myBlobVar)
+ $xml_Child_Ref:=DOM Get first child XML element($xml_Parent_Ref)
 ```
 
 ## Example 2 
@@ -44,13 +55,13 @@ Retrieval of the reference of the first XML element of the parent root. The XML 
 Retrieval of the reference, name and value of the first XML element of the parent root. The XML structure (C:\\\\import.xml) is first loaded into a BLOB: 
 
 ```4d
- var myBlobVar : Blob
- var $xml_Parent_Ref;$xml_Child_Ref : Text
- var $childName;$childValue : Text
- 
- DOCUMENT TO BLOB("c:\\import.xml";myBlobVar)
- $xml_Parent_Ref:=DOM Parse XML variable(myBlobVar)
- $xml_Child_Ref:=DOM Get first child XML element($xml_Parent_Ref;$childName;$childValue)
+ var myBlobVar : Blob
+ var $xml_Parent_Ref;$xml_Child_Ref : Text
+ var $childName;$childValue : Text
+ 
+ DOCUMENT TO BLOB("c:\\import.xml";myBlobVar)
+ $xml_Parent_Ref:=DOM Parse XML variable(myBlobVar)
+ $xml_Child_Ref:=DOM Get first child XML element($xml_Parent_Ref;$childName;$childValue)
 ```
 
 ## System variables and sets 

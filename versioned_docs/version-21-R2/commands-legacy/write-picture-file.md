@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WRITE PICTURE FILE.Summary-->The **WRITE PICTURE FILE** command saves the picture passed in the *picture* parameter in the defined *codec* to disk.<!-- END REF--> 

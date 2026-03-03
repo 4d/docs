@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|13|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OBJECT GET SHORTCUT.Summary-->El comando **OBJECT GET SHORTCUT** devuelve el atajo de teclado asociado al objeto o a los objetos designados por los parámetros *objeto* y *\** en el proceso actual.<!-- END REF-->  

@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|2003|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.QR DELETE COLUMN.Summary-->El comando QR DELETE COLUMN borra del *area* la columna cuyo número se pasó en *numColumna*.<!-- END REF--> Este comando no aplica a los informes de tablas cruzadas.

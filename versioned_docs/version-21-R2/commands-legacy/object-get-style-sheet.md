@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+|15 R3|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT Get style sheet.Summary-->The **OBJECT Get style sheet** command returns the name of the style sheet associated with the object(s) designated by the *object* and *\** parameters.<!-- END REF-->

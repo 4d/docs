@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.LONGINT TO BLOB.Summary-->El comando LONGINT TO BLOB escribe el valor de tipo Entero largo (4 bytes) *enteroLargo* en el BLOB *blob*.<!-- END REF-->

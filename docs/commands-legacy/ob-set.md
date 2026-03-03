@@ -17,6 +17,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R6|Modified|
+|16 R4|Modified|
+|15 R4|Modified|
+|15|Modified|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OB SET.Summary-->The **OB SET** command creates or modifies one or more *property*/*value* pairs in the language object designated by the *object* parameter.<!-- END REF-->must be an object variable or designate a 4D object field.

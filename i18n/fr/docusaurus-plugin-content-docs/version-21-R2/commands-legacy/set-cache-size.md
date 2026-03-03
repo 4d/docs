@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET CACHE SIZE.Summary-->La commande **SET CACHE SIZE** fixe dynamiquement la taille du cache de la base de données et, optionnellement, permet de fixer la taille minimum en octets à partir de laquelle on commence à libérer la mémoire.<!-- END REF-->.

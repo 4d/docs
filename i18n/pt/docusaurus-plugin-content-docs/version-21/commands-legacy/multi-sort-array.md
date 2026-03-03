@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.MULTI SORT ARRAY.Summary-->O comando MULTI SORT ARRAY lhe permite realizar um tipo de ordenação multi-nível em um conjunto de arrays.<!-- END REF-->

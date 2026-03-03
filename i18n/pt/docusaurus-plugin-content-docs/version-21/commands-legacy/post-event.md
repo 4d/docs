@@ -21,6 +21,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.POST EVENT.Summary-->O comando POST EVENT simula um evento de teclado ou de mouse.<!-- END REF--> Tem o mesmo efeito que quando o usuário atua através do teclado ou do mouse.  

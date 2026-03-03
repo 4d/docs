@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|2004|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.DOM CLOSE XML.Summary-->O comando DOM CLOSE XML libera o espaço em memória ocupado pelo objeto XML determinado por *refElemento*.<!-- END REF--> 

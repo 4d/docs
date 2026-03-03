@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GET GROUP PROPERTIES.Summary-->GET GROUP PROPERTIES retorna as propriedades do grupo cujo número de referência único de ID de grupo pode passar em *GrupoID*.<!-- END REF--> Deve passar o número de referência do grupo retornado pelo comando [GET GROUP LIST](get-group-list.md). 

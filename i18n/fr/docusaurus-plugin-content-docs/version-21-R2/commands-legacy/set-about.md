@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|2004.4|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET ABOUT.Summary-->La commande **SET ABOUT** remplace la ligne de menu **A propos de 4D.<!-- END REF-->..** du menu **Aide** (sous Windows) ou du menu **application** (macOS) par *libelléLigne*.

@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Transaction level.Summary-->The Transaction level command returns the current transaction level for the process.<!-- END REF--> This command takes all the transactions of the current process into account, regardless of whether they were started via the 4D language or via SQL.

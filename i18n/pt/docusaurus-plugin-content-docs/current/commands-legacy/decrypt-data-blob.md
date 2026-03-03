@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|19|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Decrypt data BLOB.Summary-->O comando **Decrypt data BLOB** realiza a descriptografia do parâmetro *blobDecriptografia* com o mesmo algoritmo que 4D usa para a criptografia de dados (AES-256) e retorna o resultado em *blobDecriptografado*.<!-- END REF-->

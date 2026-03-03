@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|17 R6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX Get row color.Summary-->**Note:** This command only works with array type list boxes.<!-- END REF-->
@@ -47,13 +57,13 @@ Given the following list box:
 ![](../assets/en/commands/pict1205393.fr.png)
 
 ```4d
- var $vtColor;$vtColor2;$vtColor3 : Text
- $vtColor:=LISTBOX Get row color(*;"Col5";3)
- $vtColor2:=LISTBOX Get row color(*;"List Box";3)
- $vtColor3:=LISTBOX Get row color(*;"List Box";3;lk background color)
-  // $vtColor contains "#FFFF00" (yellow)
-  // $vtColor2 contains "#0000FF" (blue)
-  // $vtColor3 contains "#FF0000" (red)
+ var $vtColor;$vtColor2;$vtColor3 : Text
+ $vtColor:=LISTBOX Get row color(*;"Col5";3)
+ $vtColor2:=LISTBOX Get row color(*;"List Box";3)
+ $vtColor3:=LISTBOX Get row color(*;"List Box";3;lk background color)
+  // $vtColor contains "#FFFF00" (yellow)
+  // $vtColor2 contains "#0000FF" (blue)
+  // $vtColor3 contains "#FF0000" (red)
 ```
 
 ## See also 

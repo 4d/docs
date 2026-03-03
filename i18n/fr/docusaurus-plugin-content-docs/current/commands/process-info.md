@@ -8,13 +8,17 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Process info.Params -->
 
+<div class="no-index">
+
 | Paramètres    | Type    |                             | Description                 |
 | ------------- | ------- | :-------------------------: | --------------------------- |
-| processNumber | Integer | &#8594; | Numéro du process           |
+| processNumber | Integer | &#8594; | Process number              |
 | Résultat      | Object  | &#8592; | Informations sur le process |
 
+</div>
 <!-- END REF -->
 
+<div class="no-index">
 <details><summary>Historique</summary>
 
 | Release | Modifications |
@@ -22,6 +26,7 @@ displayed_sidebar: docs
 | 20 R7   | Ajout         |
 
 </details>
+</div>
 
 ## Description
 
@@ -36,8 +41,8 @@ L'objet retourné contient les propriétés suivantes :
 | creationDateTime | Text (Date ISO 8601) | Date et heure de création du process                                                                      |
 | ID               | Integer                                 | ID unique du process                                                                                      |
 | name             | Text                                    | Nom du process                                                                                            |
-| number           | Integer                                 | Numéro du process                                                                                         |
-| preemptive       | Boolean                                 | Vrai si l'exécution est préemptive, faux sinon                                                            |
+| number           | Integer                                 | Process number                                                                                            |
+| préemptif        | Boolean                                 | Vrai si l'exécution est préemptive, faux sinon                                                            |
 | sessionID        | Text                                    | UUID de la session                                                                                        |
 | state            | Integer                                 | Statut courant. Valeurs possibles : voir ci-dessous                       |
 | systemID         | Text                                    | ID du process utilisateur, 4D ou de réserve                                                               |

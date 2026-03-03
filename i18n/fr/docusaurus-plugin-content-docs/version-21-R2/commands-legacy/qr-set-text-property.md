@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2003|Créé|
+|14 R3|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR SET TEXT PROPERTY.Summary-->La commande **QR SET TEXT PROPERTY** permet de définir les propriétés de texte de la cellule désignée par les paramètres *numColonne* et *numLigne*.<!-- END REF--> 

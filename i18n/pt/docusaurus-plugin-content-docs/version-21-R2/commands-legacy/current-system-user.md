@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+|17|Renomear|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Current system user.Summary-->O comando **Current system user** devolve o nome do dono de seu equipo, tal como está definido nos parâmetros de rede do sistema operativo.<!-- END REF-->

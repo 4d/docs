@@ -17,6 +17,22 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL|Modifié|
+|12|Renommé|
+|12|Modifié|
+|15 R5|Modifié|
+|20|Modifié|
+|20 R4|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET FORMAT.Summary-->**OBJECT SET FORMAT** remplace le format d'affichage du ou des objet(s) spécifié(s) par *objet* avec le format que vous avez passé dans *formatAffich*.<!-- END REF--> Le nouveau format est utilisé uniquement pour l'affichage courant, il n'est pas stocké avec le formulaire.

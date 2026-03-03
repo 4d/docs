@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6.8.1|Créé|
+|19 R8|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Method called on error.Summary-->La commande **Method called on error** retourne le nom de la méthode installée par la commande [ON ERR CALL](on-err-call.md) pour le process courant ou la *portée* définie.<!-- END REF-->

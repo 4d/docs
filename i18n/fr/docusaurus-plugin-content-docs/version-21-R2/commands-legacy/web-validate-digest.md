@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|11 SQL|Créé|
+|13|Renommé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WEB Validate digest.Summary-->La commande **WEB Validate digest** permet de vérifier la validité des identifiants (nom et mot de passe) fournis par un utilisateur se connectant au serveur Web.<!-- END REF--> Cette commande doit être utilisée dans la *Méthode base Sur authentification Web* dans le cadre d’une authentification Web en mode Digest (cf. section *Sécurité des connexions*). 

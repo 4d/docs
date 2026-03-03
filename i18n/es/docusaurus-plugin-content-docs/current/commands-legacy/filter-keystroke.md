@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.FILTER KEYSTROKE.Summary-->FILTER KEYSTROKE permite reemplazar el carácter introducido por el usuario en un campo o en un área editable por el primer carácter de la cadena *carFiltro*.<!-- END REF-->

@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.PLAY.Summary-->El comando **PLAY** permite reproducir archivos de sonido o multimedia.<!-- END REF--> Pase la ruta de acceso completa del archivo que quiere reproducir en *nombreObjeto*. En macOS, el comando también puede utilizarse para reproducir un sonido sistema.   

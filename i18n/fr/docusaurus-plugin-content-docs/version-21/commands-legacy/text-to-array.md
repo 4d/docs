@@ -21,6 +21,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.TEXT TO ARRAY.Summary-->La commande **TEXT TO ARRAY** permet de transformer une variable texte en tableau texte.<!-- END REF--> Le texte d’origine (stylé ou non) est découpé et chaque morceau devient un élément du tableau *tabTexte* qui est retourné par la commande. Cette commande peut être utilisée par exemple pour remplir des pages ou des colonnes de texte de taille fixe.

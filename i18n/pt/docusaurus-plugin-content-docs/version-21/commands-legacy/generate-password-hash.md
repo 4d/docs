@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|16 R5|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Generate password hash.Summary-->A função **Generate password hash** devolve um hash de *senha* seguro gerado por um algoritmo de hash criptográfico.<!-- END REF-->

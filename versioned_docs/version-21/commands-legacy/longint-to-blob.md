@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LONGINT TO BLOB.Summary-->The LONGINT TO BLOB command writes the 4-byte Long Integer value *integer* into the BLOB *blob*.<!-- END REF-->
@@ -50,7 +60,7 @@ After the call, the *offset* variable parameter is returned, incremented by the 
 After executing this code:
 
 ```4d
- LONGINT TO BLOB(0x01020304;vxBlob;Native byte ordering)
+ LONGINT TO BLOB(0x01020304;vxBlob;Native byte ordering)
 ```
 
 * The size of *vxBlob* is 4 bytes
@@ -62,7 +72,7 @@ After executing this code:
 After executing this code:
 
 ```4d
- LONGINT TO BLOB(0x01020304;vxBlob;Macintosh byte ordering)
+ LONGINT TO BLOB(0x01020304;vxBlob;Macintosh byte ordering)
 ```
 
 * The size of *vxBlob* is 4 bytes
@@ -73,7 +83,7 @@ After executing this code:
 After executing this code:
 
 ```4d
- LONGINT TO BLOB(0x01020304;vxBlob;PC byte ordering)
+ LONGINT TO BLOB(0x01020304;vxBlob;PC byte ordering)
 ```
 
 * The size of *vxBlob* is 4 bytes
@@ -84,8 +94,8 @@ After executing this code:
 After executing this code:
 
 ```4d
- SET BLOB SIZE(vxBlob;100)
- LONGINT TO BLOB(0x01020304;vxBlob;PC byte ordering;*)
+ SET BLOB SIZE(vxBlob;100)
+ LONGINT TO BLOB(0x01020304;vxBlob;PC byte ordering;*)
 ```
 
 * The size of *vxBlob* is 104 bytes
@@ -97,9 +107,9 @@ After executing this code:
 After executing this code:
 
 ```4d
- SET BLOB SIZE(vxBlob;100)
- vlOffset:=50
- LONGINT TO BLOB(0x01020304;vxBlob;Macintosh byte ordering;vlOffset)
+ SET BLOB SIZE(vxBlob;100)
+ vlOffset:=50
+ LONGINT TO BLOB(0x01020304;vxBlob;Macintosh byte ordering;vlOffset)
 ```
 
 * The size of *vxBlob* is 100 bytes

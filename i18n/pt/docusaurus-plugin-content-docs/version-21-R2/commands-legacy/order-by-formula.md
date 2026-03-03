@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL Release 2|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.ORDER BY FORMULA.Summary-->**ORDER BY FORMULA** ordena (reordena) os registros da seleção atual de *tabela* para o processo atual.<!-- END REF--> Una vez efetuada a ordenação, o primeiro registro da nova seleção atual é convertido no novo registro atual. **Nota**: deve especificar a *tabela*. Não pode utilizar uma tabela por padrão.

@@ -22,6 +22,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2003|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.QR GET HEADER AND FOOTER.Summary-->O comando QR GET HEADER AND FOOTER permite recuperar o conteúdo e o tamanho do cabeçalho ou rodapé de página.<!-- END REF-->  

@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Get resource name.Summary-->O comando Get resource name retorna o nome do recurso cujo tipo se passa em *resTipo* e cujo número de referência (ID) em *resNum*.<!-- END REF-->  

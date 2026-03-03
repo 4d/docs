@@ -18,6 +18,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|18 R3|変更|
+|15 R4|変更|
+|15|変更|
+|14|変更|
+|13|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.METHOD GET CODE.Summary-->**METHOD GET CODE**コマンドは*path*引数で指定したメソッドの内容を*code*に返します。<!-- END REF-->このコマンドはデータベースメソッド、クラス定義、トリガー、プロジェクトメソッド、フォームメソッド、そしてオブジェクトメソッド等すべてのタイプのメソッドコードを返すことができます。

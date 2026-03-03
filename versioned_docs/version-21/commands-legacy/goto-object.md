@@ -16,6 +16,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Modified|
+|12|Renamed|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GOTO OBJECT.Summary-->The **GOTO OBJECT** command is used to select the data entry object *object* as the active area of the form.<!-- END REF--> It is equivalent to the user’s clicking on or tabbing into the field or variable.
@@ -31,8 +44,8 @@ The **GOTO OBJECT** command can be used in the context of a subform. When it is 
 The **GOTO OBJECT** command can be used in both ways: 
 
 ```4d
- GOTO OBJECT([People]Name) // Field Reference
- GOTO OBJECT(*;"AgeArea") // Object Name
+ GOTO OBJECT([People]Name) // Field Reference
+ GOTO OBJECT(*;"AgeArea") // Object Name
 ```
 
 ## Example 2 
@@ -40,7 +53,7 @@ The **GOTO OBJECT** command can be used in both ways:
 You don't want any object of the form to have the focus: 
 
 ```4d
- GOTO OBJECT(*;"")
+ GOTO OBJECT(*;"")
 ```
 
 ## Example 3 

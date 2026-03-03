@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2003|Créé|
+|14|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR SET DESTINATION.Summary-->La commande **QR SET DESTINATION** permet de définir le *type* de destination de sortie de l'état rapide contenu dans la *zone*.<!-- END REF-->

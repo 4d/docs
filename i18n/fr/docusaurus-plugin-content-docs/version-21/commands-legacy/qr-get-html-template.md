@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2003|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR Get HTML template.Summary-->La commande **QR Get HTML template** retourne le modèle HTML utilisé pour la zone d'état rapide référencée par *zone*.<!-- END REF--> La valeur retournée, de type texte, contient la totalité du code HTML utilisé comme modèle. 

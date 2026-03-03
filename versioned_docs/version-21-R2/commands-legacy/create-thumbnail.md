@@ -20,6 +20,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.CREATE THUMBNAIL.Summary-->The **CREATE THUMBNAIL** command returns a thumbnail from a given source picture.<!-- END REF--> Thumbnails are usually used for picture preview within multimedia software or Web sites.

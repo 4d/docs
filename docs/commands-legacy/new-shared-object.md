@@ -5,7 +5,7 @@ slug: /commands/new-shared-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.New shared object.Syntax-->**New shared object** ( *property* : Text ; *value* : any {; ...(*property* : Text ; *value* : any)} ) : Object<!-- END REF-->
+<!--REF #_command_.New shared object.Syntax-->**New shared object** ( { ...(*property* : Text ; *value* : any)} ) : Object<!-- END REF-->
 <!--REF #_command_.New shared object.Params-->
 <div class="no-index">
 
@@ -16,6 +16,16 @@ displayed_sidebar: docs
 | Function result | Object | &#8592; | New shared object |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R6|Created|
+
+</details>
+</div>
 
 ## Description 
 

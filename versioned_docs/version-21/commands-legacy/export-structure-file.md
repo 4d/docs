@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|18|Modified|
+|17 R5|Modified|
+|17 R3|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Export structure file.Summary-->The **Export structure file** command breaks down the current 4D database structure into a set of text-based files or native picture files and stores them in the specified *folderPath*.<!-- END REF--> By default, the entirety of the database structure (methods, forms, catalog, etc.) is exported. You can filter the contents to export using the *options* parameter (see below).
@@ -91,13 +103,13 @@ Possible errors include:
 You want to export the database structure file in an "Export" folder with the default settings:
 
 ```4d
- var $result : Object
- $result:=Export structure file("Export")
- If($result.success=True)
-    ALERT("Export successful")
- Else
-    ALERT("Error during export")
- End if
+ var $result : Object
+ $result:=Export structure file("Export")
+ If($result.success=True)
+    ALERT("Export successful")
+ Else
+    ALERT("Error during export")
+ End if
 ```
 
 ## Example 2 
@@ -105,12 +117,12 @@ You want to export the database structure file in an "Export" folder with the de
 You want to export only project and database methods, and a log file:
 
 ```4d
- var $option;$result : Object
- $option:=New object("filter";New object)
- $option.filter.projectMethods:=True
- $option.filter.databaseMethods:=True
- $option.withLog:="always"
- $result:=Export structure file("exportWithLog";$option)
+ var $option;$result : Object
+ $option:=New object("filter";New object)
+ $option.filter.projectMethods:=True
+ $option.filter.databaseMethods:=True
+ $option.withLog:="always"
+ $result:=Export structure file("exportWithLog";$option)
 ```
 
 ## See also 

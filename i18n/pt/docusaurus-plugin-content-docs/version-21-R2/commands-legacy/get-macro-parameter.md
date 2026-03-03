@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GET MACRO PARAMETER.Summary-->O comando GET MACRO PARAMETER retorna, no parâmetro *paramText*, uma parte ou a totalidade do texto do método desde o qual é chamado.<!-- END REF-->  

@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2003|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.QR DELETE COLUMN.Summary-->QR DELETE COLUMNは、*area*にある*colNumber*に渡された番号のカラムを削除します。<!-- END REF-->このコマンドはクロステーブルレポートに対しては適用されません。

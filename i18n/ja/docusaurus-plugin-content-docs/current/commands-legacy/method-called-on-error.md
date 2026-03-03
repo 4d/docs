@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|19 R8|変更|
+|6.8.1|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Method called on error.Summary-->**Method called on error** コマンドはカレントプロセス、または*scope* 引数で指定したスコープにおいて[ON ERR CALL](on-err-call.md) コマンドでインストールされたメソッドの名前を返します。<!-- END REF-->引数には、エラー処理メソッドの名前を取得したい実行コンテキストを渡します。以下の定数のいずれか1つを使用することができます:

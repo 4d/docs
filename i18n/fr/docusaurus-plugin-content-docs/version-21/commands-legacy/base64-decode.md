@@ -18,6 +18,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|18 R4|Modifié|
+|12|Modifié|
+|12|Renommé|
+|2004|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.BASE64 DECODE.Summary-->La commande **BASE64 DECODE**décode la valeur encodée de type BLOB ou texte au format base64 ou Base64URL passé dans le paramètre àDécoder .<!-- END REF--> Pour plus d'informations sur les formats Base64 et Base64URL, veuillez vous reporter à la description de la commande [BASE64 ENCODE](base64-encode.md).

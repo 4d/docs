@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.GET PASTEBOARD DATA.Summary-->El comando GET PASTEBOARD DATA devuelve en el campo o variable de tipo BLOB *datos* que se encuentran en el portapapeles y cuyo tipo se pasa en *tipoDatos*.<!-- END REF--> (Si el portapapeles contiene texto copiado en 4D, entonces el conjunto de caracteres del BLOB será probablemente UTF-16.)

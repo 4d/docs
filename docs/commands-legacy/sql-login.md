@@ -5,7 +5,7 @@ slug: /commands/sql-login
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL LOGIN.Syntax-->**SQL LOGIN** ({ *dataEntry* : Text ; *userName* : Text ; *password* : Text ; * })<!-- END REF-->
+<!--REF #_command_.SQL LOGIN.Syntax-->**SQL LOGIN** ({ *dataEntry* : Text ;} {*userName* : Text ; *password* : Text {; * }})<!-- END REF-->
 <!--REF #_command_.SQL LOGIN.Params-->
 <div class="no-index">
 
@@ -17,6 +17,19 @@ displayed_sidebar: docs
 | * | Operator | &#8594;  | Applied to Begin SQL/End SQL If omitted: do not apply (local database); if passed: apply |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R4|Modified|
+|12|Modified|
+|11 SQL Release 3|Modified|
+|<6|Created|
+
+</details>
+</div>
 
 ## Description 
 

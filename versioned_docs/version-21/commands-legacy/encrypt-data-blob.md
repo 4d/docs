@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|19|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Encrypt data BLOB.Summary-->The **Encrypt data BLOB** command encrypts the *blobToEncrypt* parameter with the same algorithm as 4D uses to encrypt data (AES-256) and returns the result in *encryptedBlob*.<!-- END REF-->

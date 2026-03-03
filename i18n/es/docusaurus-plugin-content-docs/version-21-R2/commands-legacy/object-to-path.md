@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|16 R6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Object to path.Summary-->El comando **Object to path** devuelve un nombre de ruta (cadena) en función de la información de ruta que pasó en el parámetro *objRuta*.<!-- END REF--> Las siguientes rutas son soportadas:

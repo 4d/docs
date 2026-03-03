@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Choose.Summary-->O comando **Choose** retorna um dos valores passados nos parâmetros *valor1, valor2*, etc.<!-- END REF--> em função do valor do parâmetro *criterio*.

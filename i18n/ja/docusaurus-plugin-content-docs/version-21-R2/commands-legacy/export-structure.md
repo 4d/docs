@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14 R4|初出|
+|20 R4|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.EXPORT STRUCTURE.Summary-->**EXPORT STRUCTURE** コマンドは、カレントの4Dデータベースのストラクチャー定義を*exportedStructure* へと書き出します。<!-- END REF-->

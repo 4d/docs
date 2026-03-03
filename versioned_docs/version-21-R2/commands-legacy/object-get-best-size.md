@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2003|Created|
+|12|Renamed|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT GET BEST SIZE.Summary-->The **OBJECT GET BEST SIZE** command returns the *bestWidth* and *bestHeight* parameters, the “optimal” width and height of the form object designated by the *\** and *object* parameters.<!-- END REF--> These values are expressed in pixels. This command is particularly useful for displaying or printing complex reports, associated with the [OBJECT MOVE](object-move.md) command.

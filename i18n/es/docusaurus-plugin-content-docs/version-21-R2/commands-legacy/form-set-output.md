@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|2004|Modificado|
+|12|Renombrar|
+|16 R6|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.FORM SET OUTPUT.Summary-->El comando **FORM SET OUTPUT** define el formulario de salida actual de *formulario* o *formUsuario*.<!-- END REF--> El formulario debe pertenecer a *tabla*.

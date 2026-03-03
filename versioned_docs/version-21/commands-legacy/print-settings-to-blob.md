@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Print settings to BLOB.Summary-->The **Print settings to BLOB** command saves the current 4D print settings in the *printSettings* BLOB.<!-- END REF--> The *printSettings* parameter stores all the settings used for printing:

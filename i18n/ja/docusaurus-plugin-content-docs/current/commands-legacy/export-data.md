@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|変更|
+|2003|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.EXPORT DATA.Summary-->**EXPORT DATA**コマンドは、データを*fileName*ファイルに書き出します。<!-- END REF-->4Dからは以下のフォーマットでデータの書き出しを行えます: テキスト、固定長テキスト、XML、SYLK、DIF、DBF（dBase）および4Dフォーマット

@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|2004|Modificado|
+|14|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 Validate password retorna True se a cadeia passada em *senha* for a senha para a conta de usuário cujo número de referência é passado em *refUsuario*.  

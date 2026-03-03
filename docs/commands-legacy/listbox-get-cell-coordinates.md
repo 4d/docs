@@ -22,6 +22,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14 R5|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX GET CELL COORDINATES.Summary-->The **LISTBOX GET CELL COORDINATES** command returns in variables or fields the *left*, *top*, *right* and *bottom* coordinates (in points) of the cell designated by the *column* and *row* parameters, in the list box defined by *\** and *object*.<!-- END REF-->

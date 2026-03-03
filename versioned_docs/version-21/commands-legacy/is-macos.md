@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|17|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Is macOS.Summary-->The **Is macOS** command returns True if the current operating system is macOS.<!-- END REF--> 
@@ -24,11 +34,11 @@ displayed_sidebar: docs
 You want to determine if the current operating system is macOS:
 
 ```4d
- If(Is macOS)
-    ALERT("It's macOS")
- Else
-    ALERT("It's not macOS")
- End if
+ If(Is macOS)
+    ALERT("It's macOS")
+ Else
+    ALERT("It's not macOS")
+ End if
 ```
 
 ## See also 

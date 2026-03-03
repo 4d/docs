@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET PICTURE METADATA.Summary-->The SET PICTURE METADATA command lets you set or modify the contents of the metadata (or meta-tags) found in the *picture* (4D picture field or variable), when they are modifiable.<!-- END REF--> 

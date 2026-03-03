@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.PICTURE TO BLOB.Summary-->The **PICTURE TO BLOB** command converts a picture stored in a 4D variable or field to another format and places the resulting picture in a BLOB.<!-- END REF-->

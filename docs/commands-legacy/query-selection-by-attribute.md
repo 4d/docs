@@ -5,7 +5,7 @@ slug: /commands/query-selection-by-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Syntax-->**QUERY SELECTION BY ATTRIBUTE** ( {*aTable* : Table}{;}{*conjOp* : Operator ;} *objectField* : Field ; *attributePath* : Text ; *queryOp* : Text, Operator ; *value* : Text, Real, Date, Time {; *} )<!-- END REF-->
+<!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Syntax-->**QUERY SELECTION BY ATTRIBUTE** ( {*aTable* : Table}{;}{*conjOp* : Operator ;} *objectField* : Field ; *attributePath* : Text ; *queryOp* :  Text, >, <, >=, <=, #, =, |, % ; *value* : Text, Real, Date, Time {; *} )<!-- END REF-->
 <!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Params-->
 <div class="no-index">
 
@@ -15,11 +15,22 @@ displayed_sidebar: docs
 | conjOp | Operator | &#8594;  | Conjunction operator to use to join multiple queries (if any) |
 | objectField | Field | &#8594;  | Object field to query attributes |
 | attributePath | Text | &#8594;  | Name or path of attribute |
-| queryOp | Text, Operator  | &#8594;  | Query operator (comparator) |
+| queryOp | Text, >, <, >=, <=, #, =, \|, %  | &#8594;  | Query operator (comparator) |
 | value | Text, Real, Date, Time | &#8594;  | Value to compare |
 | * | Operator | &#8594;  | Continue query flag |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R2|Modified|
+|16|Created|
+
+</details>
+</div>
 
 ## Description 
 

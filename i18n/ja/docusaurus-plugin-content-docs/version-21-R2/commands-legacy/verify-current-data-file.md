@@ -19,6 +19,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|11 SQL Release 4|変更|
+|15 R3|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.VERIFY CURRENT DATA FILE.Summary-->VERIFY CURRENT DATA FILEコマンドは、4Dが現在開いているデータファイル中にあるオブジェクトの、構造的な検証を行います。<!-- END REF-->

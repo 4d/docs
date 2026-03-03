@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|16 R6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.New shared object.Summary-->El comando **New shared object** crea un nuevo objeto compartido vacío o prellenado y devuelve su referencia.<!-- END REF--> Para agregar o editar una propiedad a este objeto debe estar rodeado por la estructura *Use...End use*, de lo contrario, se devuelve un error. Sin embargo, es posible leer una propiedad fuera de una estructura *Use...End use*. 

@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SET PICTURE FILE NAME.Summary-->O comando **SET PICTURE FILE NAME** define ou modifica o nome do arquivo por defeito da imagem passada como parâmetro.<!-- END REF-->  

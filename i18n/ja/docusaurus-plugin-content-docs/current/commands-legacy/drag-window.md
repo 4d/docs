@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6.8|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DRAG WINDOW.Summary-->DRAG WINDOW コマンドは、ユーザがマウスのクリックと移動を行うと、ウィンドウをドラッグします。<!-- END REF-->通常このコマンドは (非表示ボタンなど) マウスクリックに瞬時に反応するオブジェクトのオブジェクトメソッドから呼び出します。

@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.METHOD GET MODIFICATION DATE.Summary-->O comando **METHOD GET MODIFICATION DATE** retorna nos parâmetros *dataMod* e *horaMod* as datas e horários da última modificação dos métodos designados pelo parâmetro rota.<!-- END REF-->

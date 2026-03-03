@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16|変更|
+|14|変更|
+|2003|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.QR ON COMMAND.Summary-->QR ON COMMAND コマンドは、ユーザによるメニューコマンドの選択やボタンのクリックなどで、クイックレポートコマンドが起動されると、 *methodName* に渡された4Dメソッドを実行します。<!-- END REF-->*area*が0の場合、データベースが閉じられるか、QR ON COMMAND (0;"")という構文で QR ON COMMAND コマンドが呼び出されるまで、*methodName*が各クイックレポートエリアに適用されます。

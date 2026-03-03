@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET EVENTS.Summary-->The **OBJECT SET EVENTS** command modifies, for the current process, the configuration of the form events of the form or object(s) designated by the *object* and *\** parameters.<!-- END REF-->

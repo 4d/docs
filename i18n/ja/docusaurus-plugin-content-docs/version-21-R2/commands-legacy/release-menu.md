@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.RELEASE MENU.Summary-->RELEASE MENU コマンドは*menu* に渡したIDを持つメニューをメモリから解放します。<!-- END REF-->このメニューは[Create menu](create-menu.md "Create menu") コマンドで作成されたものでなければなりません。以下のルールが適用されます: 各[Create menu](create-menu.md)に対応する[RELEASE MENU](release-menu.md)コマンドが呼び出されなければなりません。

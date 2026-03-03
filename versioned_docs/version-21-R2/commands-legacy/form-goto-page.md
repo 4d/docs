@@ -16,6 +16,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|2004.3|Modified|
+|12|Renamed|
+|13|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM GOTO PAGE.Summary-->**FORM GOTO PAGE** changes the currently displayed form page to the form page specified by *pageNumber*.<!-- END REF-->

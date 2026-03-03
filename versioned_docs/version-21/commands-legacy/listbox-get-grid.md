@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX GET GRID.Summary-->The **LISTBOX GET GRID** command returns the shown/hidden status of the horizontal and/or vertical lines making up the grid of the list box object designated by the *object* and *\** parameters.<!-- END REF-->

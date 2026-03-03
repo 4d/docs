@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|19|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SET APPLICATION COLOR SCHEME.Summary-->El comando **SET APPLICATION COLOR SCHEME** define el esquema de color a utilizar a nivel de la aplicación para la sesión actual.<!-- END REF--> Este esquema se aplicará a los formularios que no declaren ya un esquema específico (un esquema de color definido a nivel de formulario tiene prioridad sobre el nivel de aplicación).

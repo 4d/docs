@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL Release 3|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM Get root XML element.Summary-->The DOM Get root XML element command returns a reference to the root element of the document to which the XML element that is passed in the *elementRef* parameter belongs.<!-- END REF--> This reference can be used with the other XML parsing commands.

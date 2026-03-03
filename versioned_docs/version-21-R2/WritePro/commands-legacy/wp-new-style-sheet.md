@@ -49,21 +49,21 @@ You can specify the attributes of the style sheet using the [WP SET ATTRIBUTES](
 The following code creates and defines a paragraph style sheet:
 
 ```4d
- var $styleSheet : Object
- $styleSheet:=WP New style sheet(wpArea;wk type paragraph;"Main title")
- 
-  //define style sheet settings
- WP SET ATTRIBUTES($styleSheet;wk font family;"Papyrus")
- WP SET ATTRIBUTES($styleSheet;wk font size;"48pt")
- WP SET ATTRIBUTES($styleSheet;wk text color;"red")
- WP SET ATTRIBUTES($styleSheet;wk text align;wk left)
- 
-  //Apply the style sheet to the first paragraph
- var $Paragraphs : Collection
- $Paragraphs:=WP Get elements(wpArea;wk type paragraph)
- If($Paragraphs.length>0)
-    WP SET ATTRIBUTES($Paragraphs[0];wk style sheet;$styleSheet)
- End if
+ var $styleSheet : Object
+ $styleSheet:=WP New style sheet(wpArea;wk type paragraph;"Main title")
+ 
+  //define style sheet settings
+ WP SET ATTRIBUTES($styleSheet;wk font family;"Papyrus")
+ WP SET ATTRIBUTES($styleSheet;wk font size;"48pt")
+ WP SET ATTRIBUTES($styleSheet;wk text color;"red")
+ WP SET ATTRIBUTES($styleSheet;wk text align;wk left)
+ 
+  //Apply the style sheet to the first paragraph
+ var $Paragraphs : Collection
+ $Paragraphs:=WP Get elements(wpArea;wk type paragraph)
+ If($Paragraphs.length>0)
+    WP SET ATTRIBUTES($Paragraphs[0];wk style sheet;$styleSheet)
+ End if
 ```
 
 ## See also 

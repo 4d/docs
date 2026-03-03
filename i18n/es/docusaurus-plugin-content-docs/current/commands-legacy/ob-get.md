@@ -18,6 +18,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|16 R6|Modificado|
+|16 R4|Modificado|
+|15 R4|Modificado|
+|15|Modificado|
+|14|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OB Get.Summary-->El comando **OB Get** devuelve el valor actual de la *propiedad* del *objeto*, convertido opcionalmente en el *tipo* definido.<!-- END REF-->debe haber sido definido con el comando *C\_OBJECT* o designar un campo objeto 4D.

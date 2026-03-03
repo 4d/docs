@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|20 R6|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Find in array.Summary-->**Find in array** retourne le numéro du premier élément de *tableau* qui correspond à *valeur*.<!-- END REF-->peut être utilisé avec des tableaux de type Texte, Numérique, Date, Pointeur, Objet et Booléen. Les paramètres *tableau* et *valeur* doivent être du même type.

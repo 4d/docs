@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|14 R5|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Clickcount.Summary-->El comando **Clickcount** devuelve, en el contexto de un evento clic, el número de veces que el usuario ha hecho clic de manera repetida con el mismo botón del ratón.<!-- END REF--> Normalmente, este comando devuelve 2 para un doble clic. 

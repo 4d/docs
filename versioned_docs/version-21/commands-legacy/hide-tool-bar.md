@@ -14,6 +14,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14 R5|Modified|
+|14|Modified|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.HIDE TOOL BAR.Summary-->The **HIDE TOOL BAR** command handles the display of custom toolbars created by the [Open form window](open-form-window.md) command for the current process.<!-- END REF-->
@@ -27,15 +39,15 @@ On macOS, you have defined a custom toolbar and a standard window that has the H
 To prevent this, in the On Resize form event of the standard window, you need to detect when the window has entered full screen mode and then call **HIDE TOOL BAR**:
 
 ```4d
- Case of
-    :(FORM Event.code=On Resize)
-       GET WINDOW RECT($left;$top;$right;$bottom)
-       If(Screen height=($bottom-$top))
-          HIDE TOOL BAR
-       Else
-          SHOW TOOL BAR
-       End if
- End case
+ Case of
+    :(FORM Event.code=On Resize)
+       GET WINDOW RECT($left;$top;$right;$bottom)
+       If(Screen height=($bottom-$top))
+          HIDE TOOL BAR
+       Else
+          SHOW TOOL BAR
+       End if
+ End case
 ```
 
 ## See also 

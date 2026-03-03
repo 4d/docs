@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+|17 R6|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT GET RGB COLORS.Summary-->OBJECT GET RGB COLORS コマンドは*object*で指定されたオブジェクトまたはオブジェクトグループの描画色や背景色を返します。<!-- END REF-->.

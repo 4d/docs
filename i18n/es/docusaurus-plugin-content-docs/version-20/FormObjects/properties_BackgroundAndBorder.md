@@ -18,7 +18,7 @@ También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COL
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [List Box Column](listbox-column.md)
 
 ---
 
@@ -38,7 +38,7 @@ También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COL
 
 #### Objetos soportados
 
-[Lista Jerárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Columna de List Box](listbox_overview.md#list-box-columns) - [Pie de List Box](listbox_overview.md#list-box-footers) - [Óvalo](shapes_overview.md#oval) - [Rectángulo](shapes_overview.md#rectangle) - [Área de Texto](text.md)
+[Lista Jerárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Columna de List Box](listbox-column.md) - [Pie de List Box](listbox-header-footer.md#footers) - [Óvalo](shapes_overview.md#oval) - [Rectángulo](shapes_overview.md#rectangle) - [Área de Texto](text.md)
 
 #### Ver también
 
@@ -63,7 +63,7 @@ También puede definir esta propiedad utilizando el comando [`LISTBOX SET PROPER
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [List Box Column](listbox-column.md)
 
 ---
 
@@ -127,7 +127,7 @@ Designa el color de las líneas del objeto. El color puede ser especificado por:
 
 * un nombre de color - como "red"
 * un valor HEX - como "# ff0000"
-* un valor RVB - como "rgb (255,0,0)"
+* un valor RVA - como "rgb (255,0,0)"
 
 También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COLORS`](https://doc.4d.com/4dv20/help/command/en/page628.html).
 
@@ -199,7 +199,7 @@ Puede obtener el mismo resultado utilizando los comandos [`LISTBOX SET ROW FONT 
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [List Box Column](listbox-column.md)
 
 ---
 

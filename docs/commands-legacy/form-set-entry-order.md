@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R4|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM SET ENTRY ORDER.Summary-->The **FORM SET ENTRY ORDER** command allows to set dynamically the entry order of the current form for the current process based upon the *objectNames* array.<!-- END REF--> 

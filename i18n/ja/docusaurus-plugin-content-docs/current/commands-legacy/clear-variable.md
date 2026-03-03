@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.CLEAR VARIABLE.Summary-->CLEAR VARIABLE コマンドを使用して、 *variable* をそのデフォルト値へ再設定します (テキスト変数は空の文字列に、数値変数には *0* に、配列はエレメントを空にします) 。<!-- END REF-->しかし、変数はメモリに存在しています。

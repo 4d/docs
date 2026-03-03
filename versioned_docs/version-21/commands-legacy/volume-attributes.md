@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.VOLUME ATTRIBUTES.Summary-->The VOLUME ATTRIBUTES command returns, expressed in bytes, the size, the used space and the free space for the volume whose name you pass in *volume*.<!-- END REF-->If *volume* indicates a non-mounted remote volume, the OK variable is set to 0 and the three parameters return -1\. 

@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|17 R6|Modificado|
+|11 SQL|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SET MENU ITEM ICON.Summary-->O comando **SET MENU ITEM ICON** permite modificar o ícone associado à linha de menu designada pelos parâmetros *menu* e *menuItem*.<!-- END REF-->  

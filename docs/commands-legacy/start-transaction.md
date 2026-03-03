@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.START TRANSACTION.Summary-->START TRANSACTION starts a [transaction](../Develop-legacy/transactions.md) in the current process.<!-- END REF--> All changes to the data (records) of the database within the transaction are stored temporarily until the transaction is accepted (validated) or canceled.

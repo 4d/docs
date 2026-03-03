@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET UPDATE FOLDER.Summary-->La commande **SET UPDATE FOLDER** permet de définir le dossier contenant la mise à jour de l’application 4D fusionnée courante.<!-- END REF--> Cette information est mémorisée durant la session 4D jusqu’à l’appel de la commande [RESTART 4D](restart-4d.md). Si l’application est quittée manuellement, cette information n'est pas conservée.

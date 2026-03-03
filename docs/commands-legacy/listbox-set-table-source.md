@@ -19,6 +19,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Modified|
+|12|Renamed|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX SET TABLE SOURCE.Summary-->The **LISTBOX SET TABLE SOURCE** command can be used to modify the source of the data displayed in the listbox that is designated by the *\** and *object* parameters.<!-- END REF-->

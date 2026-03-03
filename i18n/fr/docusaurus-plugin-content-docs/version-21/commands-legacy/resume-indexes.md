@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.RESUME INDEXES.Summary-->La commande **RESUME INDEXES** réactive tous les index de *laTable* s’ils ont été préabalement suspendus via la commande [PAUSE INDEXES](pause-indexes.md).<!-- END REF--> Si les index de *laTable* n’étaient pas suspendus, la commande ne fait rien. 

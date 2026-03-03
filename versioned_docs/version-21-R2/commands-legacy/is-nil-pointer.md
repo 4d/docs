@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|16 R4|Renamed|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Is nil pointer.Summary-->The **Is nil pointer** command returns True if the pointer you pass in *aPointer* is Nil (*\->\[\]*).<!-- END REF--> It returns False in all other cases (pointer to field, table or variable).

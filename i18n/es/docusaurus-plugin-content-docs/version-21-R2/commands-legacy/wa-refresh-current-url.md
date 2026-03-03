@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL Release 2|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.WA REFRESH CURRENT URL.Summary-->El comando WA REFRESH CURRENT URL recarga el URL actual mostrado en el área web designada por los parámetros *\** y *objeto*.<!-- END REF-->

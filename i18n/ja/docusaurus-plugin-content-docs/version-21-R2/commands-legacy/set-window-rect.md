@@ -20,6 +20,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|2004|変更|
+|13|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET WINDOW RECT.Summary-->**SET WINDOW RECT**コマンドは*window*に渡した参照番号のウィンドウのグローバル座標を変更します。<!-- END REF-->ウィンドウが存在しない場合、コマンドはなにも行いません。

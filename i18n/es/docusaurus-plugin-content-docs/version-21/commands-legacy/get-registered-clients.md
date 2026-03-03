@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6.5|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.GET REGISTERED CLIENTS.Summary-->El comando GET REGISTERED CLIENTS llena dos array<!-- END REF-->s:

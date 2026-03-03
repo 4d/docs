@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET FIELD VALUE NULL.Summary-->SET FIELD VALUE NULL コマンドは、*aField* 引数によって指定されたフィールドにNULL値を割り当てます。<!-- END REF--> 

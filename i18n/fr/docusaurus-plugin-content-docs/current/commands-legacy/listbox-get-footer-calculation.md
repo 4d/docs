@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX Get footer calculation.Summary-->La commande **LISTBOX Get footer calculation** retourne le type de calcul associé à la zone de pied de list box désignée par les paramètres *objet* et *\**.<!-- END REF--> 

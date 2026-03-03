@@ -20,6 +20,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14 R5|変更|
+|12|名称変更|
+|6.7|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT GET COORDINATES.Summary-->OBJECT GET COORDINATES コマンドは、引数 *\** および*object*によって指定された、現在のフォームのオブジェクトの*left*, *top*, *right* および *bottom*の座標 (ポイント) を返します。<!-- END REF-->

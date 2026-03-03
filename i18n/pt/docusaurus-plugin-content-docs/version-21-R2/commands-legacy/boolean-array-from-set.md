@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6.5|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.BOOLEAN ARRAY FROM SET.Summary-->O comando BOOLEAN ARRAY FROM SET  preenche um array de booleanos indicando se cada registro na tablea está ou não no *conjunto*.<!-- END REF--> 

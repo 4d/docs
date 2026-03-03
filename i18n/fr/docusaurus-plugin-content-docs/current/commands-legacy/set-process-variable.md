@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET PROCESS VARIABLE.Summary-->La commande **SET PROCESS VARIABLE** écrit la ou les valeur(s) de *exprSource* (*exprSource2*, etc.) dans la ou les variable(s) process *varDestination* (*varDestination2*, etc.) du process de destination dont le numéro est passé dans *process*.<!-- END REF-->

@@ -21,6 +21,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.On Web Authentication database method.Summary-->The **On Web Authentication database method** is in charge of managing Web server engine access.<!-- END REF--> It is called by 4D or 4D Server when a Web browser request requires the execution of a 4D method on the server (method called using a *4DACTION* URL, a *4DSCRIPT* tag, etc.). 

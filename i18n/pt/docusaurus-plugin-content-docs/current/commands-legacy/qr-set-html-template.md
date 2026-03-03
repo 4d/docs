@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2003|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.QR SET HTML TEMPLATE.Summary-->O comando QR SET HTML TEMPLATE define o *modelo* HTML a utilizar para a área de relatório rápido referenciada por *area*.<!-- END REF--> Este modelo se utilizará durante a criação do relatório em formato HTML. 

@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6.5|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Get edited text.Summary-->**Get edited text**コマンドは、主にOn After Edit フォームイベントで入力中のテキストを取得するために使用します。<!-- END REF-->またOn Before Keystroke および On After Keystroke フォームイベントで使用することもできます。これらのフォームイベントについてのより詳細な情報は[Form event code](../commands/form-event-code.md)の説明を参照してください。

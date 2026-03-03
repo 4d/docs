@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.REGENERATE MISSING TABLE.Summary-->The **REGENERATE MISSING TABLE** command rebuilds the missing table whose name is passed in the *tableName* parameter.<!-- END REF--> When a missing table is rebuilt, it becomes visible in the Structure editor and its data can once again be accessed.

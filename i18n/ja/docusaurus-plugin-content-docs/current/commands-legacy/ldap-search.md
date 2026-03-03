@@ -20,6 +20,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|15|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LDAP Search.Summary-->**LDAP Search** コマンドはターゲットとなるLDAPサーバー内にて、定義された条件に合致する最初のオカレンスを検索します。<!-- END REF-->このコマンドは*RuntimeVLIncludeIt* によって開かれたLDAPサーバーへの接続の中で実行される必要があります(それ以外の場合にはエラー1003が返されます)。

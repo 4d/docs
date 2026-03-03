@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16 R6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Object to path.Summary-->La commande **Object to path** retourne un chemin (chaîne) basé sur les informations passées dans le paramètre *objetChemin*.<!-- END REF--> Les chemins suivants sont pris en charge :

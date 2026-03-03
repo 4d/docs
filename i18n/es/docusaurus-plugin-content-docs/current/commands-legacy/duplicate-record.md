@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.DUPLICATE RECORD.Summary-->DUPLICATE RECORD crea un nuevo registro para *tabla* que es un duplicado del registro actual.<!-- END REF--> El nuevo registro se convierte en el registro actual. Si no hay registro actual, DUPLICATE RECORD no hace nada. Debe utilizar [SAVE RECORD](save-record.md "SAVE RECORD") para guardar el nuevo registro.

@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|6.7|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SET DEFAULT CENTURY.Summary-->O comando SET DEFAULT CENTURY permite especificar o século por padrão e o ano pivô utilizado por 4D quando introduz uma data com só dois dígitos para o ano.<!-- END REF-->

@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|2004|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.MODIFY SELECTION.Summary-->**MODIFY SELECTION** does almost the same thing as [DISPLAY SELECTION](display-selection.md).<!-- END REF--> Refer to the description of [DISPLAY SELECTION](display-selection.md) for details. The differences between the two commands are:

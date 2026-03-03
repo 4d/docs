@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|2004|Modified|
+|12|Renamed|
+|16 R6|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM SET OUTPUT.Summary-->The **FORM SET OUTPUT**  command sets the current output form for *table* to *form*, or *userForm*.<!-- END REF--> The form must belong to *aTable*.

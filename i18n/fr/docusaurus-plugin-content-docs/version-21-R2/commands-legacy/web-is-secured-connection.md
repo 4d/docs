@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6.7|Créé|
+|13|Renommé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WEB Is secured connection.Summary-->La commande **WEB Is secured connection** retourne un booléen indiquant si la connexion au serveur Web 4D s’effectue en mode sécurisé via TLS/SSL (la requête débute par “https:” au lieu de “http:”).<!-- END REF--> 

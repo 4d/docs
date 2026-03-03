@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.RESOURCE LIST.Summary-->El comando RESOURCE LIST llena los arrays *resNums* y *resNoms* con los números y los nombres de los recursos cuyo tipo se pasa en *resTipo*.<!-- END REF--> 

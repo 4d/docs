@@ -5,26 +5,32 @@ slug: /commands/num
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Num.Syntax-->**Num** ( *expression* {; *separator*} ) : Real<br/>**Num** ( *expression* ; *base* ) : Real<!-- END REF-->
+<!--REF #_command_.Num.Syntax-->**Num** ( *expression* : Text, Boolean, Integer {; *separator* : Text} ) : Real<br/>**Num** ( *expression* : Text, Boolean, Integer ; *base* : Integer ) : Real<!-- END REF-->
 
 <!--REF #_command_.Num.Params-->
 
+<div class="no-index">
+
 | Parámetros | Tipo                   |                             | Descripción                                                                         |
 | ---------- | ---------------------- | --------------------------- | ----------------------------------------------------------------------------------- |
-| expresión  | Text, Boolean, Integer | &#8594; | Cadena a convertir en numérica o Booleano para devolver 0 o 1, o Expresión numérica |
+| expression | Text, Boolean, Integer | &#8594; | Cadena a convertir en numérica o Booleano para devolver 0 o 1, o Expresión numérica |
 | separador  | Text                   | &#8594; | Separador decimal                                                                   |
 | base       | Integer                | &#8594; | Valor entre 2 y 36 que representa la base                                           |
 | Resultado  | Real                   | &#8592; | Forma numérica del parámetro de expresión                                           |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones               |
-| ----------- | ---------------------------- |
-| 21          | Soporte del parámetro *base* |
+| Lanzamiento                 | Modificaciones               |
+| --------------------------- | ---------------------------- |
+| 21                          | Soporte del parámetro *base* |
+| <6 | Created                      |
 
 </details>
+</div>
 
 ## Descripción
 
@@ -49,6 +55,7 @@ Hay tres caracteres reservados que **Num** trata de forma especial: el separador
 - El guión hace que el número o exponente sea negativo. El guión debe aparecer antes de todo carácter numérico negativo o después de la "e" para un exponente. Excepto en el caso del carácter "e", si se introduce un guión en una cadena numérica, se ignora la parte de la cadena que va después del guión. Por ejemplo, `Num("123-456")` devuelve 123, pero `Num("-9")` devuelve -9.
 - La e o E hace que todo caracter numérico a su derecha se interprete como la potencia de un exponente. La "e" debe estar incluida en una cadena numérica. Entonces, `Num("123e-2")` devuelve 1.23.  
   Tenga en cuenta que cuando la cadena incluye más de una "e", la conversión puede dar resultados diferentes en macOS y en Windows.
+- The algorithm for converting text into [real values](../Concepts/dt_number.md) is based on 13 significant digits.
 
 #### Parámetro *separador*
 

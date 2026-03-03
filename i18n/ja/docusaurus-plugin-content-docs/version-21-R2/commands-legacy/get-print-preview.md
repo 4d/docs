@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Get print preview.Summary-->**Get print preview**コマンドはカレントプロセスで[SET PRINT PREVIEW](set-print-preview.md)が**True**で呼ばれている場合、Trueを返します。<!-- END REF-->

@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Add to date.Summary-->O comando Add to date adiciona *anos*, *meses,* e *dias* a data passada em *data*, depois retorna a data resultante.<!-- END REF-->

@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ALERT.Summary-->The **ALERT** command displays an alert dialog box composed of a note icon, a message, and an OK button.<!-- END REF--> 
@@ -31,9 +42,9 @@ By default, the title of the OK button is “OK.” To change the title of the O
 This example displays an alert showing information about a company. Note that the displayed string contains carriage returns, which cause the string to wrap to the next line:
 
 ```4d
- ALERT("Company: "+[Companies]Name+Char(13)+"People in company: "+\
- String(Records in selection([People]))+Char(13)+"Number of parts they supply: "+\
- String(Records in selection([Parts])))
+ ALERT("Company: "+[Companies]Name+Char(13)+"People in company: "+\
+ String(Records in selection([People]))+Char(13)+"Number of parts they supply: "+\
+ String(Records in selection([Parts])))
 ```
 
 This line of code displays the following alert box (on Windows):
@@ -45,7 +56,7 @@ This line of code displays the following alert box (on Windows):
 The line:
 
 ```4d
- ALERT("I'm sorry Dave, I can't do that.";"Alas!")
+ ALERT("I'm sorry Dave, I can't do that.";"Alas!")
 ```
 
 displays the alert dialog box (on Windows) shown:
@@ -57,7 +68,7 @@ displays the alert dialog box (on Windows) shown:
 The line:
 
 ```4d
- ALERT("You no longer have the access privileges for deleting these records.";"Well, I swear I did not know that")
+ ALERT("You no longer have the access privileges for deleting these records.";"Well, I swear I did not know that")
 ```
 
 displays the alert dialog box (on Windows) shown:

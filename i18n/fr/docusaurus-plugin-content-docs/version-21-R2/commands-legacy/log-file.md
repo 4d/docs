@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|2004.3|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Log file.Summary-->La commande **Log file** retourne le nom long (c’est-à-dire le chemin d’accès complet au fichier, y compris son nom) du fichier d’historique courant de la base ouverte.<!-- END REF--> 

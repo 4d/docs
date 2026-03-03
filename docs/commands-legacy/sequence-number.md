@@ -5,7 +5,7 @@ slug: /commands/sequence-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Sequence number.Syntax-->**Sequence number** ( *aTable* : Table ) : Integer<!-- END REF-->
+<!--REF #_command_.Sequence number.Syntax-->**Sequence number** ( {*aTable* : Table} ) : Integer<!-- END REF-->
 <!--REF #_command_.Sequence number.Params-->
 <div class="no-index">
 
@@ -15,6 +15,17 @@ displayed_sidebar: docs
 | Function result | Integer | &#8592; | Sequence number |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004.1|Modified|
+|<6|Created|
+
+</details>
+</div>
 
 ## Description 
 

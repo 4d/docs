@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SET FIELD TITLES.Summary-->SET FIELD TITLES permite ocultar, renomear e reorganizar os campos de uma tabela ou de uma subtabela passada em *tabela* ou *subtabela* quando aparecem nos editores padrão de 4D, tal como o editor de pesquisas, em modo Aplicação (mais especificamente, quando os editores são chamados através dos comandos do linguagem de 4D).<!-- END REF-->

@@ -80,7 +80,7 @@ Vous pouvez attribuer des privilèges à l'aide de la fonction [`.setPrivileges(
 
 > Dans l'implémentation actuelle, seul le privilège "WebAdmin" est disponible.
 
-Voici un exemple :
+Exemple :
 
 ```4d
 If (Session.hasPrivilege("WebAdmin"))

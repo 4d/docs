@@ -21,6 +21,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6.7|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Summary-->The GET FIELD ENTRY PROPERTIES command returns the data entry properties for the field specified by *tableNum* and *fieldNum* or by *fieldPtr*.<!-- END REF-->  

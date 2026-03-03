@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM GET XML ELEMENT NAME.Summary-->The DOM GET XML ELEMENT NAME command returns, in the *elementName* parameter, the name of the XML element designated by *elementRef*.<!-- END REF--> If the *elementName* variable type is not defined, the text type is used by default. 
@@ -27,10 +38,10 @@ For more information on XML element names, refer to the *Overview of XML DOM Com
 This method returns the name of the $xml\_Element\_Ref element:
 
 ```4d
- var $xml_Element_Ref : Text
- var $name : Text
- 
- DOM GET XML ELEMENT NAME($xml_Element_Ref;$name)
+ var $xml_Element_Ref : Text
+ var $name : Text
+ 
+ DOM GET XML ELEMENT NAME($xml_Element_Ref;$name)
 ```
 
 ## System variables and sets 

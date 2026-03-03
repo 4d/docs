@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.List item position.Summary-->List item position コマンドは、*list*に渡された項目参照番号またはオブジェクト名リスト中で、*itemRef*で指定した項目の位置を返します。<!-- END REF-->

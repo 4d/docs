@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WEB GET BODY PART.Summary-->**WEB GET BODY PART**コマンドはWebプロセスのコンテキストで使用され、マルチパートリクエストのボディ部を解析します。<!-- END REF-->引数には解析対象のパート番号を渡します。総パート数は[WEB Get body part count](web-get-body-part-count.md)コマンドで取得できます。

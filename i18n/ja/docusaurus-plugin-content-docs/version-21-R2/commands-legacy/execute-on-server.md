@@ -20,6 +20,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|2004.3|変更|
+|16 R4|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Execute on server.Summary-->Execute on server コマンドはサーバマシン上 (クライアント/サーバで実行された場合) 、または同じマシン上 (シングルユーザで実行された場合) で新しいプロセスを開始し、そのプロセスのプロセス番号を返します。<!-- END REF-->

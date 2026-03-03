@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SEND PACKET.Summary-->La commande **SEND PACKET** envoie *paquet* vers un port série ou un document.<!-- END REF--> Si *docRef* est spécifié, le paquet est écrit dans le document référencé par *docRef*. Si *docRef* n'est pas spécifié, le paquet est envoyé vers le port série ou un document préalablement ouvert par la commande [SET CHANNEL](set-channel.md). 

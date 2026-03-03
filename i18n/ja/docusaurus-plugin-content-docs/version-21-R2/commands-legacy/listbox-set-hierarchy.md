@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LISTBOX SET HIERARCHY.Summary-->LISTBOX SET HIERARCHY コマンドを使用して*object*と*\**で指定されたリストボックスを階層モードにするか非階層モードにするか設定できます。<!-- END REF-->. 

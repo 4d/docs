@@ -5,17 +5,32 @@ slug: /commands/process-4d-tags
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PROCESS 4D TAGS.Syntax-->**PROCESS 4D TAGS** ( *inputTemplate* : Text ; *outputResult* : Text {; *...param* : Expression} )<!-- END REF-->
+<!--REF #_command_.PROCESS 4D TAGS.Syntax-->**PROCESS 4D TAGS** ( *inputTemplate* : Text, Blob ; *outputResult* : Text {; *...param* : Expression} )<!-- END REF-->
 <!--REF #_command_.PROCESS 4D TAGS.Params-->
 <div class="no-index">
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| inputTemplate | Text | &#8594;  | Data containing tags to process |
+| inputTemplate | Text, Blob | &#8594;  | Data containing tags to process |
 | outputResult | Text | &#8592; | Result from template execution |
 | param | Expression | &#8594;  | Parameter(s) passed to template being executed |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Created|
+|11 SQL|Modified|
+|12|Modified|
+|13|Renamed|
+|14 R4|Modified|
+|16 R4|Modified|
+
+</details>
+</div>
 
 ## Description 
 

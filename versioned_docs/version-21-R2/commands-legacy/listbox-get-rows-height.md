@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Created|
+|12|Renamed|
+|13|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX Get rows height.Summary-->The **LISTBOX Get rows height** command returns the current row height for the list box object set using the *object* and *\** parameters.<!-- END REF--> 

@@ -55,7 +55,7 @@ However, the text box still exists and is owned by the document even if not rend
 You want to create a default, empty text box:
 
 ```4d
- $textBox:=WP New text box(WParea;1)
+ $textBox:=WP New text box(WParea;1)
 ```
 
 Result:
@@ -67,28 +67,28 @@ Result:
 In a template of a letter, you want to add a text box to display the address of the recipient (which is stored in the context):
 
 ```4d
-  // #1 create the text box
- $textBox:=WP New text box(WParea;1)
- 
-  // #2 define some text box attributes
- WP SET ATTRIBUTES($textBox;wk id;"AddressArea")
- WP SET ATTRIBUTES($textBox;wk anchor origin;wk paper box)
- WP SET ATTRIBUTES($textBox;wk anchor horizontal align;wk left;wk vertical align;wk top)
- WP SET ATTRIBUTES($textBox;wk anchor horizontal offset;$form.offsetX.values[$form.offsetX.index])
- WP SET ATTRIBUTES($textBox;wk anchor vertical offset;$form.offsetY.values[$form.offsetY.index])
- WP SET ATTRIBUTES($textBox;wk width;$form.width.values[$form.width.index])
- WP SET ATTRIBUTES($textBox;wk height;$form.height.values[$form.height.index])
- WP SET ATTRIBUTES($textBox;wk padding;$form.padding.values[$form.padding.index]) // inside margins
- WP SET ATTRIBUTES($textBox;wk border style;wk dashed;wk border color;"Blue";wk border width;"1pt";wk border radius;"10pt")
- WP SET ATTRIBUTES($textBox;wk vertical align;wk center)
- 
-  // #3: define the formulas inside the text box
- WP INSERT FORMULA($textBox;Formula(This.data.fullName);wk append)
- WP INSERT BREAK($textBox;wk paragraph break;wk append)
- WP INSERT FORMULA($textBox;Formula(This.data.fullAddress);wk append)
- 
-  // #4: Style the content of the text box
- WP SET ATTRIBUTES($textBox;wk font;"Arial";wk font bold;wk true;wk font size;"18pt")
+  // #1 create the text box
+ $textBox:=WP New text box(WParea;1)
+ 
+  // #2 define some text box attributes
+ WP SET ATTRIBUTES($textBox;wk id;"AddressArea")
+ WP SET ATTRIBUTES($textBox;wk anchor origin;wk paper box)
+ WP SET ATTRIBUTES($textBox;wk anchor horizontal align;wk left;wk vertical align;wk top)
+ WP SET ATTRIBUTES($textBox;wk anchor horizontal offset;$form.offsetX.values[$form.offsetX.index])
+ WP SET ATTRIBUTES($textBox;wk anchor vertical offset;$form.offsetY.values[$form.offsetY.index])
+ WP SET ATTRIBUTES($textBox;wk width;$form.width.values[$form.width.index])
+ WP SET ATTRIBUTES($textBox;wk height;$form.height.values[$form.height.index])
+ WP SET ATTRIBUTES($textBox;wk padding;$form.padding.values[$form.padding.index]) // inside margins
+ WP SET ATTRIBUTES($textBox;wk border style;wk dashed;wk border color;"Blue";wk border width;"1pt";wk border radius;"10pt")
+ WP SET ATTRIBUTES($textBox;wk vertical align;wk center)
+ 
+  // #3: define the formulas inside the text box
+ WP INSERT FORMULA($textBox;Formula(This.data.fullName);wk append)
+ WP INSERT BREAK($textBox;wk paragraph break;wk append)
+ WP INSERT FORMULA($textBox;Formula(This.data.fullAddress);wk append)
+ 
+  // #4: Style the content of the text box
+ WP SET ATTRIBUTES($textBox;wk font;"Arial";wk font bold;wk true;wk font size;"18pt")
 ```
 
 Result:

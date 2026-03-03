@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.BLOB to list.Summary-->O comando BLOB to list cria uma lista hierárquica com os dados armazenados no BLOB blob no o offset de bytes (a partir de zero) especificado pelo *offset* e retorna um número de referência de lista hierárquica para essa nova lista.<!-- END REF-->

@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.GET PICTURE FORMATS.Summary-->**GET PICTURE FORMATS**コマンドは、引数として渡された*picture*引数内に含まれている全てのコーデックIDの配列を返します。<!-- END REF--> 4D ピクチャー (フィールドまたは変数) は、PNG、BMP、GIF など、複数の異なるフォーマットでエンコードされた同一の画像を格納することができます。  

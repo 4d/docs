@@ -18,6 +18,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Modified|
+|12|Renamed|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET SCROLLBAR.Summary-->The OBJECT SET SCROLLBAR command allows you to display or hide the horizontal and/or vertical scrollbars in the object set using the *object* and *\** parameters.<!-- END REF-->

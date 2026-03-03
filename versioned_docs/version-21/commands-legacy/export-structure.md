@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|20 R4|Modified|
+|14 R4|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.EXPORT STRUCTURE.Summary-->The **EXPORT STRUCTURE** command exports the structure definition of the current 4D database in *exportedStructure*.<!-- END REF-->
@@ -40,9 +51,9 @@ A structure definition exported in XML format can be imported in another databas
 You want to export the current database structure in a text file:
 
 ```4d
- var $vTStruc : Text
- EXPORT STRUCTURE($vTStruc)
- TEXT TO DOCUMENT("myStructure.xml";$vTStruc)
+ var $vTStruc : Text
+ EXPORT STRUCTURE($vTStruc)
+ TEXT TO DOCUMENT("myStructure.xml";$vTStruc)
 ```
 
 ## Example 2 
@@ -50,9 +61,9 @@ You want to export the current database structure in a text file:
 You want to export the current database structure in html format:
 
 ```4d
- var $vHtml : Text
- EXPORT STRUCTURE($vHtml;html format)
- File("/PACKAGE/myProject Structure Export/myProject.html").setText($vHtml)
+ var $vHtml : Text
+ EXPORT STRUCTURE($vHtml;html format)
+ File("/PACKAGE/myProject Structure Export/myProject.html").setText($vHtml)
 ```
 
 ## See also 

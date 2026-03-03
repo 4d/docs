@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL Release 1|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.DESCRIBE QUERY EXECUTION.Summary-->O comando DESCRIBE QUERY EXECUTION permite ativar ou desativar o modo de análise da execução de pesquisas para o processo atual.<!-- END REF--> O comando funciona unicamente no contexto dos comandos de pesquisa da linguagem 4D tal como [QUERY](query.md).   

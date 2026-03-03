@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+|19 R5|Renamed|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SQL Get current data source.Summary-->The SQL Get current data source command returns the name of the current data source of the application.<!-- END REF--> The current data source receives the SQL queries executed within **Begin SQL/End SQL** structures.

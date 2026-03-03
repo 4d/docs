@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Created|
+|12|Renamed|
+|13|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX SET ROWS HEIGHT.Summary-->The **LISTBOX SET ROWS HEIGHT** command allows you to modify by programming the row height in the list box object set using the *object* and *\** parameters.<!-- END REF--> 

@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Is user deleted.Summary-->La commande **Is user deleted** teste le compte de l'utilisateur dont le numéro d'identification unique est passé dans *réfUtilisateur*.<!-- END REF-->

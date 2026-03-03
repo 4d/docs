@@ -19,6 +19,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|18 R5|変更|
+|18 R3|変更|
+|15|変更|
+|14|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OB Copy.Summary-->**OB Copy**コマンドは、 *object*のプロパティ、オブジェクト内オブジェクト、値を内包した完全なコピー(ディープコピー)のオブジェクトを返します。<!-- END REF-->

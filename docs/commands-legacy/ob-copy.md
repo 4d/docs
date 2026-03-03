@@ -5,7 +5,7 @@ slug: /commands/ob-copy
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Copy.Syntax-->**OB Copy** ( *object* : Object, Object {; resolvePtrs } )  : Object<br/>**OB Copy** ( *object* : Object, Object {; *option* : Integer {; *groupWith* : Collection, Object}} )  : Object<!-- END REF-->
+<!--REF #_command_.OB Copy.Syntax-->**OB Copy** ( *object* : Object {; resolvePtrs : Boolean} )  : Object<br/>**OB Copy** ( *object* : Object {; *option* : Integer {; *groupWith* : Collection, Object}} )  : Object<!-- END REF-->
 <!--REF #_command_.OB Copy.Params-->
 <div class="no-index">
 
@@ -18,6 +18,19 @@ displayed_sidebar: docs
 | Function result | Object | &#8592; | Deep copy of object |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|18 R5|Modified|
+|18 R3|Modified|
+|15|Modified|
+|14|Created|
+
+</details>
+</div>
 
 ## Description 
 

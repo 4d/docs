@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.BLOB TO DOCUMENT.Summary-->BLOB TO DOCUMENT rewrites the whole contents of *document* using the data stored in *blob*.<!-- END REF--> You can pass the name of a document in *document*. If the *document* does not exist, the command creates it. If you pass the name of an existing document, make sure that it is not already open, otherwise an error is generated. If you want to let the user choose the document, use the commands [Open document](open-document.md) or [Create document](create-document.md) and use the process variable *document* (see example).
@@ -25,14 +35,14 @@ displayed_sidebar: docs
 You write an Information System that enables you to quickly store and retrieve documents. In a data entry form, you create a button which allows you to save a document that will contain the data previously loaded into a BLOB field. The method for this button could be:
 
 ```4d
- $vhDocRef:=Create document("") // Save the document of your choice
- If(OK=1) // If a document has been created
-    CLOSE DOCUMENT($vhDocRef) // We don't need to keep it open
-    BLOB TO DOCUMENT(Document;[YourTable]YourBLOBField) // Write the document contents
-    If(OK=0)
-  // Handle error
-    End if
- End if
+ $vhDocRef:=Create document("") // Save the document of your choice
+ If(OK=1) // If a document has been created
+    CLOSE DOCUMENT($vhDocRef) // We don't need to keep it open
+    BLOB TO DOCUMENT(Document;[YourTable]YourBLOBField) // Write the document contents
+    If(OK=0)
+  // Handle error
+    End if
+ End if
 ```
 
 ## System variables and sets 

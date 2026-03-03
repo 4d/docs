@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R3|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.INVOKE ACTION.Summary-->The **INVOKE ACTION** command triggers the standard action defined by the *action* parameter, optionally in the *target* context.<!-- END REF-->
@@ -51,7 +61,7 @@ The **INVOKE ACTION** command does not generate an error, for example, if the re
 You want to execute the **Copy** standard action in the current form:
 
 ```4d
- INVOKE ACTION(ak copy;ak current form)
+ INVOKE ACTION(ak copy;ak current form)
 ```
 
 ## Example 2 
@@ -59,7 +69,7 @@ You want to execute the **Copy** standard action in the current form:
 You want to execute a **Goto page** standard action (page 3) in the main form:
 
 ```4d
- INVOKE ACTION(ak goto page+"?value=3";ak main form)
+ INVOKE ACTION(ak goto page+"?value=3";ak main form)
 ```
 
 ## See also 

@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|13|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Summary-->El comando **LISTBOX SET LOCKED COLUMNS** bloquea las primeras *numColumnas* columnas izquierdas del list box designado por los parámetros *objeto* y *\**.<!-- END REF-->  

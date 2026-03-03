@@ -21,6 +21,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET LIST ITEM.Summary-->The **SET LIST ITEM** command modifies the item designated by the *itemRef* parameter within the list whose reference number or object name is passed in *list*.<!-- END REF--> 
@@ -31,7 +42,7 @@ You can pass a reference number in *itemRef*. If there is no item with the item 
 
 Lastly, you can pass *\** in *itemRef*: in this case, the command will apply to the current item of the list. If several items are selected manually, the current item is the one that was selected last. If no item is selected, the command does nothing.
 
-If you work with item reference numbers, build a list in which the items have unique reference numbers, otherwise you will not be able to distinguish the items. For more information, refer to the *Managing Hierarchical Lists* section.
+If you work with item reference numbers, build a list in which the items have unique reference numbers, otherwise you will not be able to distinguish the items. For more information, refer to the [*Hierarchical List form object*](../FormObjects/list_overview.md) section.
 
 You pass the new text for the item in *newItemText*. To change the item reference number, pass the new value in *newItemRef*; otherwise, pass the same value as *itemRef*.
 

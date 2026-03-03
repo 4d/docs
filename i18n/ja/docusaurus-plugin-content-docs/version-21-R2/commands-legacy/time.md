@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|14|変更|
+|16 R5|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Time.Summary-->Time コマンドは、*timeValue* 引数で指定した時間に相当する時間表示を返します。<!-- END REF-->引数には以下のものを渡す事ができます。

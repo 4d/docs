@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DOM Append XML child node.Summary-->DOM Append XML child node コマンドを使用して、*elementRef*で指定したXMLノードに*childValue*の値を追加できます。<!-- END REF-->

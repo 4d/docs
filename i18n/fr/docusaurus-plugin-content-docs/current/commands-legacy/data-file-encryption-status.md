@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|17 R5|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Data file encryption status.Summary-->La commande **Data file encryption status** retourne un objet qui fournit le statut de chiffrement du fichier de données indiqué par les paramètres *cheminStructure* et *cheminDonnées*.<!-- END REF--> Le statut de chiffrement de chaque table est également fourni.

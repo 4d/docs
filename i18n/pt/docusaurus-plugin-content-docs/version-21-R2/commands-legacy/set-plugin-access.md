@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.SET PLUGIN ACCESS.Summary-->O comando SET PLUGIN ACCESS permite especificar por programação o grupo de usuários autorizado a utilizar cada plug-in com “número de série” instalado na base.<!-- END REF--> Ao fazer isto, pode administrar a repartição das licenças dos plug-ins.

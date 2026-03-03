@@ -107,7 +107,7 @@ title: ドキュメンテーション
 
 :::note
 
-Otherwise, the code editor displays [the block comment at the top of the method code](../code-editor/write-class-method.md#help-tips).
+それ以外の場合には、[メソッドコードの先頭のコメントブロック](../code-editor/write-class-method.md#ヘルプtips) がコードエディターに表示されます。
 
 :::
 
@@ -159,10 +159,10 @@ _イタリック_
 - テーブルタグ:
 
 ```md
-| Parameter | Type   | Description  |
+| 引数 | 型   | 説明  |
 | --------- | ------ | ------------ |
-| wpArea    | Text |Write pro area|
-| toolbar   | Text |Toolbar name  |
+| wpArea    | テキスト |Write pro エリア|
+| toolbar   | テキスト |ツールバー名  |
 ```
 
 - リンクタグ:
@@ -196,22 +196,21 @@ The [documentation](https://doc.4d.com) of the command ....
 `WP SwitchToolbar.md` ファイルに、次のように書くことができます:
 
 ````md
-<!-- This method returns a different logo depending on the size parameter -->
+<!-- このメソッドはsize 引数に応じて異なるロゴを返します -->
 
 
 GetLogo (size) -> logo
 
 
-| Parameter | Type   | in/out | Description |
+| 引数 | 型   | 入/出 | 詳細 |
 | --------- | ------ | ------ | ----------- |
-| size      | Integer | in | Logo style selector (1 to 5)  |
-| logo      | Picture | out | Selected logo |
+| size      | Integer | in | ロゴスタイルセレクター (1 〜 5)  |
+| logo      | Picture | out | 選択されたロゴ |
 
 
 ## Description
 
-This method returns a logo of a specific size, depending on the value of the *size* parameter.
-1 = smallest size, 5 = largest size.
+このメソッドは *size* 引数の値に応じて、特定のサイズのロゴを返します。1 = 最小のサイズ、 5 = 最大のサイズ。
 
 ## Example
 
@@ -219,7 +218,7 @@ This method returns a logo of a specific size, depending on the value of the *si
 C_PICTURE($logo)
 C_LONGINT($size)
 
-//Get the largest logo
+// 最大のロゴを取得
 $logo:=GetLogo(5)
 ```
 ````

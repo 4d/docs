@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SHOW WINDOW.Summary-->The **SHOW WINDOW** command displays the window whose number was passed in *window*.<!-- END REF--> If this parameter is omitted, the frontmost window of the current process will be displayed.

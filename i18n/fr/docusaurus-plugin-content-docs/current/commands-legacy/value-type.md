@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|16 R4|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Value type.Summary-->La commande **Value type** retourne le type de la valeur résultant de l'évaluation de l'*expression* passée en paramètre.<!-- END REF--> 

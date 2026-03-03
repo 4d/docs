@@ -14,6 +14,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|12|Renamed|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM FIRST PAGE.Summary-->FORM FIRST PAGE changes the currently displayed form page to the first form page.<!-- END REF--> If no form is being displayed or loaded by the [FORM LOAD](../commands/form-load.md) command, or if the first form page is already displayed, FORM FIRST PAGE does nothing.

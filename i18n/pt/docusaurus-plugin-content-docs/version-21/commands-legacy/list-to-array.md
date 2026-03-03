@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.LIST TO ARRAY.Summary-->O comando LIST TO ARRAY cria ou substitui o array *array* com os elementos de primeiro nível da lista ou da lista de seleção designada por *lista*.<!-- END REF--> 

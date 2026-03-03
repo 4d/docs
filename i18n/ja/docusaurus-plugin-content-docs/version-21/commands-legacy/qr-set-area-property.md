@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2003|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.QR SET AREA PROPERTY.Summary-->**QR SET AREA PROPERTY** コマンドを使用し、*property* に渡したインタフェース要素 (ツールバーやメニューバー) を表示、または非表示に設定できます。<!-- END REF-->

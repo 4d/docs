@@ -5,7 +5,7 @@ slug: /commands/ob-set-null
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB SET NULL.Syntax-->**OB SET NULL** ( *object* : Object, Object ; *property* : Text )<!-- END REF-->
+<!--REF #_command_.OB SET NULL.Syntax-->**OB SET NULL** ( *object* : Object ; *property* : Text )<!-- END REF-->
 <!--REF #_command_.OB SET NULL.Params-->
 <div class="no-index">
 
@@ -15,6 +15,17 @@ displayed_sidebar: docs
 | property | Text | &#8594;  | Name of property where null value is to be applied |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+|15|Modified|
+
+</details>
+</div>
 
 ## Description 
 

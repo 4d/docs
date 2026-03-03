@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.List item parent.Summary-->The **List item parent** command returns the item reference number of a parent item.<!-- END REF-->
@@ -58,9 +69,9 @@ The item reference numbers are set as follows:
 * In the following code, if the item “b - 3” is selected, the variable *$vlParentItemRef* gets 200, the item reference number of the item “b”:
 
 ```4d
- $vlItemPos:=Selected list items(hList)
- GET LIST ITEM(hList;$vlItemPos;$vlItemRef;$vsItemText)
- $vlParentItemRef:=List item parent(hList;$vlItemRef) // $vlParentItemRef gets 200
+ $vlItemPos:=Selected list items(hList)
+ GET LIST ITEM(hList;$vlItemPos;$vlItemRef;$vsItemText)
+ $vlParentItemRef:=List item parent(hList;$vlItemRef) // $vlParentItemRef gets 200
 ```
 
 * If the item “a - 1” is selected, the variable *$vlParentItemRef* gets 100, the item reference number of the item “a”.

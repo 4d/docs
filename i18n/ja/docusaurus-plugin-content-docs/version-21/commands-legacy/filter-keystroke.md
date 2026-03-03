@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.FILTER KEYSTROKE.Summary-->FILTER KEYSTROKE は、ユーザがフィールドや入力可エリアに入力した文字を、*filteredChar* に渡した文字列の最初の文字で置き換えます。<!-- END REF-->

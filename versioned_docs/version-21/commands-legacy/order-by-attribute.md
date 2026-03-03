@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R2|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ORDER BY ATTRIBUTE.Summary-->The **ORDER BY ATTRIBUTE** command sorts (reorders) the records of the current selection of *aTable* for the current process based on the contents of the *objectField*'s *attributePath*.<!-- END REF--> After the sort has been completed, the new first record of the selection becomes the current record.

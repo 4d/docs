@@ -37,8 +37,8 @@ When using **EXPORT SYLK**, the default field delimiter is the tab character (co
 The following example exports data to a SYLK document. The method first sets the output form so that the data will be exported through the correct form, then performs the export:
 
 ```4d
- FORM SET OUTPUT([People];"Export")
- EXPORT SYLK([People];"NewPeople.slk") // Export to the "NewPeople.slk" document
+ FORM SET OUTPUT([People];"Export")
+ EXPORT SYLK([People];"NewPeople.slk") // Export to the "NewPeople.slk" document
 ```
 
 ## System variables and sets 

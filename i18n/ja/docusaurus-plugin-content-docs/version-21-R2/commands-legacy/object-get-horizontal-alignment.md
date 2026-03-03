@@ -17,6 +17,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6.8.1|初出|
+|12|名称変更|
+|13|名称変更|
+|15 R4|変更|
+|20|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OBJECT Get horizontal alignment.Summary-->**OBJECT Get horizontal alignment**コマンドは、引数*object*および *\** で指定されたオブジェクトに適用された整列タイプを示すコードを返します。<!-- END REF-->

@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004|初出|
+|12|名称変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LISTBOX SET GRID COLOR.Summary-->**LISTBOX SET GRID COLOR** コマンドを使用し、 *object* 引数および *\** で指定されたリストボックスオブジェクト上のグリッドの色を変更することができます。<!-- END REF-->

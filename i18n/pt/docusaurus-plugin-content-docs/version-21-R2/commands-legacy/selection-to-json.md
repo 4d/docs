@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Criado por|
+|16 R4|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Selection to JSON.Summary-->O comando **Selection to JSON** devolve uma cadeia JSON que contém os valores dos campos da seleção atual de *aTabela*.<!-- END REF--> Cada elemento do array é um objeto JSON contendo as etiquetas e valores dos campos da seleção.

@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.DOM Append XML child node.Summary-->O comando DOM Append XML child node se utiliza para anexar o valor *valorFilho* ao nodo XML designado por *refElement*.<!-- END REF-->  

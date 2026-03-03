@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2003|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QR DELETE COLUMN.Summary-->The QR DELETE COLUMN command deletes the column in *area* whose number was passed in *colNumber*.<!-- END REF--> This command does not apply to cross-table reports.

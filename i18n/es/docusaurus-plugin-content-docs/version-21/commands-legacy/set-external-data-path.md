@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|15|Modificado|
+|13|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.SET EXTERNAL DATA PATH.Summary-->El comando **SET EXTERNAL DATA PATH** define o modifica, para el registro actual, la ubicación de almacenamiento externo del campo *aCampo* pasado como parámetro.<!-- END REF-->
@@ -59,6 +70,8 @@ Usted desea guardar el contenido de un archivo existente en el campo imagen, alm
 
 [Get external data path](get-external-data-path.md)  
 [RELOAD EXTERNAL DATA](reload-external-data.md)  
+[ORDA: Assigning files to picture or blob attributes](../ORDA/entities.md#assigning-files-to-picture-or-blob-attributes)
+
 
 ## Propiedades
 

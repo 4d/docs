@@ -44,6 +44,12 @@ You must [create the WebSocket server](#4dwebsocketservernew) within a [worker](
 The [4D Web Server](WebServerClass.md) must be started.
 
 
+### Aynchronous programming
+
+This class supports asynchronous programming in 4D as described in the [Asynchronous Execution](../Develop/async.md) page.
+
+
+
 ### Example
 
 In this basic example, our WebSocket server will return messages in uppercase.

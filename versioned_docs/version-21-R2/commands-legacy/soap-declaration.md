@@ -5,7 +5,7 @@ slug: /commands/soap-declaration
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SOAP DECLARATION.Syntax-->**SOAP DECLARATION** ( *variable* : Variable ; *type* : Integer ; input_output {; *alias* : Text} )<!-- END REF-->
+<!--REF #_command_.SOAP DECLARATION.Syntax-->**SOAP DECLARATION** ( *variable* : Variable ; *type* : Integer ; input_output : Integer {; *alias* : Text} )<!-- END REF-->
 <!--REF #_command_.SOAP DECLARATION.Params-->
 <div class="no-index">
 
@@ -17,6 +17,18 @@ displayed_sidebar: docs
 | alias | Text | &#8594;  | Name published for this argument during SOAP exchanges |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL Release 2|Modified|
+|19 R2|Modified|
+
+</details>
+</div>
 
 ## Description 
 

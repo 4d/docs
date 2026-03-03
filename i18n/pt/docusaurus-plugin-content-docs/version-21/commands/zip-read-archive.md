@@ -8,14 +8,18 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.ZIP Read archive.Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo                     |                             | Descrição                       |
 | ---------- | ------------------------ | :-------------------------: | ------------------------------- |
 | zipFile    | 4D. File | &#8594; | Arquivos Zip                    |
 | senha      | Text                     | &#8594; | Senha do arquivo ZIP, se houver |
 | Resultados | Parâmetros               | &#8592; | Objeto arquivo                  |
 
+</div>
 <!-- END REF -->
 
+<div class="no-index">
 <details><summary>História</summary>
 
 | Release | Mudanças   |
@@ -23,6 +27,7 @@ displayed_sidebar: docs
 | 18      | Adicionado |
 
 </details>
+</div>
 
 ## Descrição
 
@@ -71,10 +76,10 @@ Para extrair da pasta root:
 Para ler todos os conteúdos de um arquivo sem extraí-lo da pasta root:
 
 ```4d
-  //extract a file
+  //extrair um arquivo
  $folderResult:=$files[$i].copyTo(Folder(fk desktop folder).folder("MyDocs"))
 
-  //extract all files
+  //extrair todos os arquivos
  $folderResult:=$archive.root.copyTo(Folder(fk desktop folder).folder("MyDocs"))
 ```
 

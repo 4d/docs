@@ -4,18 +4,21 @@ title: WP Get attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Get attributes.Syntax-->**WP Get attributes** ( *targetObj* : Object ; *...attribName* : Text ; *...attribValue* : any ) : Object<br/>**WP Get attributes** ( *targetObj* : Object ; *attribColl* : Collection ) : Object<!-- END REF-->
+<!--REF #_command_.WP Get attributes.Syntax-->**WP Get attributes** ( *targetObj* : Object ; *...(attribName* : Text ; *attribValue* : Variable)) : Object<br/>**WP Get attributes** ( *targetObj* : Object ; *attribColl* : Collection ) : Object<!-- END REF-->
 
 <!--REF #_command_.WP Get attributes.Params-->
+
+<div class="no-index">
 
 | Parámetros  | Tipo       |                             | Descripción                                 |
 | ----------- | ---------- | --------------------------- | ------------------------------------------- |
 | targetObj   | Object     | &#8594; | Rango o elemento o documento 4D Write Pro   |
 | attribName  | Text       | &#8594; | Nombre del atributo a obtener               |
-| attribValue | any        | &#8592; | Valor actual del atributo para el objetivo  |
+| attribValue | Variable   | &#8592; | Valor actual del atributo para el objetivo  |
 | attribColl  | Collection | &#8594; | Colección de nombres de atributos a obtener |
 | Resultado   | Object     | &#8592; | Nombres y valores de los atributos          |
 
+</div>
 <!-- END REF-->
 
 ## Descripción

@@ -21,6 +21,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6.7|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET RELATION PROPERTIES.Summary-->La commande **GET RELATION PROPERTIES** retourne les propriétés du lien, s’il y en a un, qui part du champ source, désigné par *numTable* et *numChamp* ou par *ptrChp*.<!-- END REF-->  

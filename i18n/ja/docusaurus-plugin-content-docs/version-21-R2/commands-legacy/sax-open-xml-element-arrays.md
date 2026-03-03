@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004|初出|
+|12|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SAX OPEN XML ELEMENT ARRAYS.Summary-->SAX OPEN XML ELEMENT ARRAYS コマンドコマンドを使用して、*document* で参照されるXMLドキュメント中に新しい要素およびオプションで属性とその値を配列で指定して追加できます。<!-- END REF--> 

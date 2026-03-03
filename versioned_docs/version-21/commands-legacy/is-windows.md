@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|17|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Is Windows.Summary-->The **Is Windows** command returns True if the current operating system is Windows.<!-- END REF-->
@@ -24,11 +34,11 @@ displayed_sidebar: docs
 You want to determine if the current operating system is Windows:
 
 ```4d
- If(Is Windows)
-    ALERT("It's Windows")
- Else
-    ALERT("It's not Windows")
- End if
+ If(Is Windows)
+    ALERT("It's Windows")
+ Else
+    ALERT("It's not Windows")
+ End if
 ```
 
 ## See also 

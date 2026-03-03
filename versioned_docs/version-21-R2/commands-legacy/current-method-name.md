@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6.7|Created|
+|18 R3|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Current method name.Summary-->The Current method name command returns the method name where it has been invoked.<!-- END REF--> This command is useful for debugging generic methods.

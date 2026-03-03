@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.IMPORT TEXT.Summary-->O comando IMPORT TEXT lê dados de *documento*, um documento texto Windows ou Macintosh e os escreve em *tabela* criando novos registros para essa tabela.<!-- END REF--> 

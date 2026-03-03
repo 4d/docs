@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|18 R6|Renomear|
+|13|Criado por|
+
+</details>
+</div>
+
 ## Nota de compatibilidade 
 
 <!--REF #_command_.WEB LEGACY GET SESSION EXPIRATION.Summary-->Este comando só pode ser utilizao com **sessões web herdadas**, disponíveis em bancos convertidos a partir de versões anteriores a 4D v18 R6\.<!-- END REF--> Devolve valores nulos de data e hora quando se habilitar o modo **sessões web escalonáveis** (recomendado em 4D v18 R6 e superiores). Para saber mais, consulte *Web Sessions Management (Legacy)*.

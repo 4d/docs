@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Renamed|
+|2004|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM SET SIZE.Summary-->The **FORM SET SIZE** command allows you to change the size of the current form by programming.<!-- END REF--> The new size is defined for the current process; it is not saved with the form.  
@@ -33,7 +44,7 @@ For more information on resizing forms, refer to the 4D *Design Reference* manua
 If you want the size of the form to be set automatically, you must use the following syntax: 
 
 ```4d
- FORM SET SIZE(horizontal;vertical;*)
+ FORM SET SIZE(horizontal;vertical;*)
 ```
 
 In this case, you must pass the margins (in pixels) that you want to add to the right and bottom of the form in *horizontal* and *vertical*. 
@@ -43,7 +54,7 @@ In this case, you must pass the margins (in pixels) that you want to add to the 
 If you want the form size to be based on an object, you must use the following syntax: 
 
 ```4d
- FORM SET SIZE(object;horizontal;vertical)
+ FORM SET SIZE(object;horizontal;vertical)
 ```
 
 In this case, you must pass the margins (in pixels) that you want to add to the right and bottom of the object in *horizontal* and *vertical*. You cannot pass the *\** parameter.
@@ -53,7 +64,7 @@ In this case, you must pass the margins (in pixels) that you want to add to the 
 In you want to have a fixed form size, you must use the following syntax: 
 
 ```4d
- FORM SET SIZE(horizontal;vertical)
+ FORM SET SIZE(horizontal;vertical)
 ```
 
 In this case, you must pass the width and height (in pixels) of the form in *horizontal* and *vertical*. 
@@ -72,9 +83,9 @@ The size of the form is “automatic”.
 The window is displayed using the following code:
 
 ```4d
- $ref:=Open form window([Table 1];"Form1";Plain form window;Horizontally centered;Vertically centered;*)
- DIALOG([Table 1];"Form1")
- CLOSE WINDOW
+ $ref:=Open form window([Table 1];"Form1";Plain form window;Horizontally centered;Vertically centered;*)
+ DIALOG([Table 1];"Form1")
+ CLOSE WINDOW
 ```
 
 The right part of the window can be displayed or hidden by clicking on the increase/decrease option:
@@ -84,40 +95,40 @@ The right part of the window can be displayed or hidden by clicking on the incre
 The object method associated with this button is as follows:
 
 ```4d
- Case of
-    :(FORM Event.code=On Load)
-       var b1;<>collapsed : Boolean
-       var margin : Integer
-       margin:=15
-       b1:=<>collapsed
-       If(<>collapsed)
-          FORM SET HORIZONTAL RESIZING(False)
-          FORM SET SIZE("b1";margin;margin)
-       Else
-          FORM SET HORIZONTAL RESIZING(True)
-          FORM SET SIZE("tab";margin;margin)
-       End if
- 
-    :(FORM Event.code=On click)
-       <>collapsed:=b1
-       If(b1)
-  //collapsed
-          OBJECT GET COORDINATES(*;"b1";$l;$t;$r;$b)
-          GET WINDOW RECT($lf;$tf;$rf;$bf;Current form window)
-          SET WINDOW RECT($lf;$tf;$lf+$r+margin;$tf+$b+margin;Current form window)
-          SET FORM HORIZONTAL RESIZING(False)
-          SET FORM SIZE("b1";margin;margin)
- 
-       Else
-  //expanded
-          OBJECT GET COORDINATES(*;"tab";$l;$t;$r;$b)
-          GET WINDOW RECT($lf;$tf;$rf;$bf;Current form window)
-          SET WINDOW RECT($lf;$tf;$lf+$r+margin;$tf+$b+margin;Current form window)
-          FORM SET HORIZONTAL RESIZING(True)
-          FORM SET SIZE("tab";margin;margin)
-       End if
- 
- End case
+ Case of
+    :(FORM Event.code=On Load)
+       var b1;<>collapsed : Boolean
+       var margin : Integer
+       margin:=15
+       b1:=<>collapsed
+       If(<>collapsed)
+          FORM SET HORIZONTAL RESIZING(False)
+          FORM SET SIZE("b1";margin;margin)
+       Else
+          FORM SET HORIZONTAL RESIZING(True)
+          FORM SET SIZE("tab";margin;margin)
+       End if
+ 
+    :(FORM Event.code=On click)
+       <>collapsed:=b1
+       If(b1)
+  //collapsed
+          OBJECT GET COORDINATES(*;"b1";$l;$t;$r;$b)
+          GET WINDOW RECT($lf;$tf;$rf;$bf;Current form window)
+          SET WINDOW RECT($lf;$tf;$lf+$r+margin;$tf+$b+margin;Current form window)
+          SET FORM HORIZONTAL RESIZING(False)
+          SET FORM SIZE("b1";margin;margin)
+ 
+       Else
+  //expanded
+          OBJECT GET COORDINATES(*;"tab";$l;$t;$r;$b)
+          GET WINDOW RECT($lf;$tf;$rf;$bf;Current form window)
+          SET WINDOW RECT($lf;$tf;$lf+$r+margin;$tf+$b+margin;Current form window)
+          FORM SET HORIZONTAL RESIZING(True)
+          FORM SET SIZE("tab";margin;margin)
+       End if
+ 
+ End case
 ```
 
 ## See also 

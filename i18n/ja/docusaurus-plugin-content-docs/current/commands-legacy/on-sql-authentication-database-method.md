@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL Release 2|初出|
+
+</details>
+</div>
+
 ## 
 
 <!--REF #_command_.On SQL Authentication database method.Summary-->**On SQL Authenticationデータベースメソッド**は4Dに統合されたSQLサーバへ送られたリクエストを選別します。<!-- END REF-->この選別は、名前とパスワー ド、そしてユーザのIPアドレス (オプション) に基づいて実行されます。開発者は独自のユーザーテーブルや、4Dのユーザーテーブルを使用して、接続を識別できます。接続を認証したら、[CHANGE CURRENT USER](change-current-user.md "CHANGE CURRENT USER") コマンドを呼び出して、4Dのデータベース内のリクエストへのアクセスをコントロールしなければなりません。

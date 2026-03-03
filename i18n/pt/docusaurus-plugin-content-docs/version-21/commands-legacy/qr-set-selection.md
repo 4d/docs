@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2003|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.QR SET SELECTION.Summary-->O comando QR SET SELECTION permite selecionar uma célula, uma fila, uma coluna ou toda uma *area* como seria feito com um mouse.<!-- END REF--> Este comando também lhe permite desmarcar a seleção atual.  

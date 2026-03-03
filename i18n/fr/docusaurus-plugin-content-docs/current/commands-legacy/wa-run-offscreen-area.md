@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|18 R6|Modifié|
+|18 R3|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WA Run offscreen area.Summary-->La commande **WA Run offscreen area** crée une zone web dans la mémoire qui peut être utilisée pour charger et parser automatiquement des pages web.<!-- END REF-->

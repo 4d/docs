@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.LIST OF CHOICE LISTS.Summary-->El comando LIST OF CHOICE LISTS devuelve, en los arrays sincronizados *arraysNums* y *arrayNoms*, los números y los nombres de las listas definidas en el editor de listas en el entorno Diseño.<!-- END REF-->

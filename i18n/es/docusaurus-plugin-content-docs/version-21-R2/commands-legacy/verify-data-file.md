@@ -21,6 +21,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL Release 3|Modificado|
+|15 R3|Modificado|
+
+</details>
+</div>
+
 ## Descripción
 
 <!--REF #_command_.VERIFY DATA FILE.Summary-->El comando VERIFY DATA FILE efectúa una verificación estructural de los objetos contenidos en el archivo de datos 4D designado por *rutaEstructura* y *rutaDatos*.<!-- END REF-->para mayor información sobre el proceso de verificación de datos, consulte el Manual de Diseño. *rutaEstructura* designa el archivo de estructura (compilado o no) asociado con el archivo de datos a verificar. Puede tratarse del archivo de estructura abierto o de cualquier otro archivo de estructura. Usted debe pasar un nombre de ruta completo, expresado con la sintaxis del sistema operativo. También puede pasar una cadena vacía, en este caso aparece una caja de diálogo estándar de apertura de archivos que permite al usuario designar el archivo de estructura a utilizar.

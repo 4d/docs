@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6.5|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Process aborted.Summary-->El comando **Process aborted** devuelve **True** si el proceso en el cual se llama está a punto de ser interrumpido inesperadamente, es decir que la ejecución del comando no pudo terminar se ejecución “normal”.<!-- END REF-->

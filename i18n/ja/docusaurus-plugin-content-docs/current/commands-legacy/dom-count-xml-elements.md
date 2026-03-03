@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|16 R4|変更|
+|2004|変更|
+|<6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DOM Count XML elements.Summary-->DOM Count XML elements コマンドは*elementRef* で参照されるXML要素中、要素名が*elementName*である子要素の数を返します。<!-- END REF-->デフォルトでは、**DOM Count XML elements** は*elementName* 引数については大文字と小文字を区別します(xml準拠のため)。コマンドの大文字と小文字の区別については、[XML SET OPTIONS](xml-set-options.md) コマンドのXML DOM case sensitivity セレクターを使用することで管理可能です。

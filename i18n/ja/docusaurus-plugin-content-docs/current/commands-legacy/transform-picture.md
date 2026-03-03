@@ -20,6 +20,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14 R2|変更|
+|11 SQL|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.TRANSFORM PICTURE.Summary-->TRANSFORM PICTURE コマンドは、*picture*引数に渡したピクチャに、*operator*タイプの変換を適用するために使用します。<!-- END REF-->このコマンドはピクチャ変換演算子 (+/ 等, [Picture](../Concepts/dt_picture.md) の節参照) で提供される機能を拡張します。これらの演算子は4D でも利用可能です。

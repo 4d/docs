@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+|13|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.CREATE FOLDER.Summary-->**CREATE FOLDER**コマンドを使用して、*folderPath*に渡すパス名に応じてフォルダーを作成します。<!-- END REF-->

@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET TEXT KEYWORDS.Summary-->The **GET TEXT KEYWORDS** command splits all the *text* into individual words and creates an item in the *arrKeywords* text array for each word.<!-- END REF-->
@@ -40,17 +50,17 @@ This command gives you a simple way to search records containing large amounts o
 In a form with a search area, users can enter one or more word(s). When a user validates this form, we look for records where the *MyField* field contains at least one of the words entered by the user. 
 
 ```4d
-  // vSearch is the variable of the search area in the form
- GET TEXT KEYWORDS(vSearch;arrSearch;*)
-  //* in case a user enters the same word more than once
- CREATE SET([MyTable];"Totalfound")
- $n:=Size of array(arrSearch)
- For($i;1;$n)
-    QUERY([MyTable];[MyTable]MyField % arrSearch{$i})
-    CREATE SET(([MyTable];"found")
-    UNION("Totalfound";"found";"Totalfound")
- End for
- USE SET("Totalfound")
+  // vSearch is the variable of the search area in the form
+ GET TEXT KEYWORDS(vSearch;arrSearch;*)
+  //* in case a user enters the same word more than once
+ CREATE SET([MyTable];"Totalfound")
+ $n:=Size of array(arrSearch)
+ For($i;1;$n)
+    QUERY([MyTable];[MyTable]MyField % arrSearch{$i})
+    CREATE SET(([MyTable];"found")
+    UNION("Totalfound";"found";"Totalfound")
+ End for
+ USE SET("Totalfound")
 ```
 
 ## Example 2 
@@ -58,16 +68,16 @@ In a form with a search area, users can enter one or more word(s). When a user v
 In the same form as before, we look for records where the *MyField* field contains all the words entered by the user.
 
 ```4d
-  // vSearch is the variable of the search area in the form
- GET TEXT KEYWORDS(vSearch;arrSearch;*)
- $n:=Size of array(arrSearch)
- QUERY([MyTable];[MyTable]MyField >=0;*)
-  // initializing search = all records
- For($i;1;$n)
-    QUERY([MyTable];&;[MyTable]MyField % arrSearch{$i};*)
-  // add criterion
- End for
- QUERY([MyTable]) //search
+  // vSearch is the variable of the search area in the form
+ GET TEXT KEYWORDS(vSearch;arrSearch;*)
+ $n:=Size of array(arrSearch)
+ QUERY([MyTable];[MyTable]MyField >=0;*)
+  // initializing search = all records
+ For($i;1;$n)
+    QUERY([MyTable];&;[MyTable]MyField % arrSearch{$i};*)
+  // add criterion
+ End for
+ QUERY([MyTable]) //search
 ```
 
 ## Example 3 
@@ -75,11 +85,11 @@ In the same form as before, we look for records where the *MyField* field contai
 To count words in a text:
 
 ```4d
- GET TEXT KEYWORDS(vText;arrWords) // all words
- $n:=Size of array(arrWords)
- GET TEXT KEYWORDS(vText;arrWords;*) // different words
- $m:=Size of array(arrWords)
- ALERT("This text contains "+String($n)+" separate words among "+String($m))
+ GET TEXT KEYWORDS(vText;arrWords) // all words
+ $n:=Size of array(arrWords)
+ GET TEXT KEYWORDS(vText;arrWords;*) // different words
+ $m:=Size of array(arrWords)
+ ALERT("This text contains "+String($n)+" separate words among "+String($m))
 ```
 
 ## See also 

@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|6.8|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.QUIT 4D.Summary-->La commande **QUIT 4D**  vous permet de quitter l'application 4D courante et de retourner sur le Bureau du système d'exploitation.<!-- END REF--> 

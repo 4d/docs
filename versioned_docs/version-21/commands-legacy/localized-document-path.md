@@ -57,7 +57,7 @@ Here are the contents of the Resources folder:
 To use a .xsl file adapted to the current language, you simply need to pass:
 
 ```4d
- $myxsl:=Localized document path("xsl/log.xsl")
+ $myxsl:=Localized document path("xsl/log.xsl")
 ```
 
 If the current language is, for example, French Canadian (fr-ca), the command returns:

@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.DOM Create XML element.Summary-->El comando **DOM Create XML element** permite crear un nuevo elemento en el elemento XML *refElement* en la ubicación definida por el parámetro *xRuta* y añadirle atributos si es necesario.<!-- END REF-->

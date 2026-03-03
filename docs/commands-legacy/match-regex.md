@@ -21,6 +21,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Match regex.Summary-->The **Match regex** command checks the conformity of a character string with respect to a set of synthesized rules by means of a meta-language called regular expression" or "rational expression".<!-- END REF--> The **regex** abbreviation is commonly used to indicate these types of notations.

@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Summary-->La commande **SET MENU ITEM SHORTCUT** remplace la touche du raccourci clavier associé à la ligne de menu désignée par *menu* et *ligneMenu*, par le caractère dont vous avez passé le code de caractère ou le texte dans *touche*.<!-- END REF--> Vous pouvez passer -1 dans *ligneMenu* afin de désigner la dernière ligne ajoutée au *menu*. La touche définie sera combinée à la touche **Ctrl** (Windows) ou **Commande** (Macintosh) pour définir le nouveau raccourci clavier.

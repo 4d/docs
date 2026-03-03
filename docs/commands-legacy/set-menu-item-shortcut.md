@@ -5,7 +5,7 @@ slug: /commands/set-menu-item-shortcut
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM SHORTCUT.Syntax-->**SET MENU ITEM SHORTCUT** ( *menu* : Integer, Text ; *menuItem* : Integer ; *itemKey* : Text, Integer ; *modifiers* : Integer {; *process* : Integer} )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM SHORTCUT.Syntax-->**SET MENU ITEM SHORTCUT** ( *menu* : Integer, Text ; *menuItem* : Integer ; *itemKey* : Text ; *modifiers* : Integer {; *process* : Integer} )<br/>**SET MENU ITEM SHORTCUT** ( *menu* : Integer, Text ; *menuItem* : Integer ; *itemKey* : Integer {; *process* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Params-->
 <div class="no-index">
 
@@ -18,6 +18,17 @@ displayed_sidebar: docs
 | process | Integer | &#8594;  | Process reference number |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
 
 ## Description 
 

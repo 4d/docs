@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|12|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Get assert enabled.Summary-->El comando Get assert enabled devuelve True o False de acuerdo a si las aserciones están activas o no en el proceso actual.<!-- END REF--> Para mayor información sobre aserciones, consulte la descripción del comando [ASSERT](assert.md "ASSERT"). 

@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|<6|Criado|
+|11 SQL|Modificado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Displayed line number.Summary-->O comando Displayed line number funciona unicamente no contexto do evento de formulário On Display Detail.<!-- END REF--> Retorna o número da linha que estiver sendo processada enquanto uma lista de registros é mostrada em tela. Se Displayed line number for chamada quando não se mostra uma lista, retorna 0.  

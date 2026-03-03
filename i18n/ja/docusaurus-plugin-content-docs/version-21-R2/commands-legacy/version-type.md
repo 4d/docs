@@ -15,6 +15,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|初出|
+|12|変更|
+|13.2|変更|
+|14|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Version type.Summary-->**Version type** コマンドは、現在実行している4Dや4D Server環境のバージョンタイプを示す数値を返します。<!-- END REF-->4Dでは *4D Environment*テーマ内にある以下の定義済み定数が用意されています。

@@ -19,6 +19,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|11 SQL|Modifié|
+|12|Modifié|
+|12|Renommé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET SCROLL POSITION.Summary-->La commande **OBJECT SET SCROLL POSITION** permet de faire défiler le contenu de plusieurs types d'objets : lignes d’un sous-formulaire, d’un formulaire liste affiché via la commande [MODIFY SELECTION](modify-selection.md) ou [DISPLAY SELECTION](display-selection.md), ou d'une liste hiérarchique, lignes et colonnes d'une List box ou encore pixels d'une image.<!-- END REF--> 

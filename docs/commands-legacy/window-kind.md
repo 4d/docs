@@ -5,7 +5,7 @@ slug: /commands/window-kind
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Window kind.Syntax-->**Window kind** ( *window* : Integer ) : Integer<!-- END REF-->
+<!--REF #_command_.Window kind.Syntax-->**Window kind** ( {*window* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.Window kind.Params-->
 <div class="no-index">
 
@@ -15,6 +15,16 @@ displayed_sidebar: docs
 | Function result | Integer | &#8592; | Type of window |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
 
 ## Description 
 

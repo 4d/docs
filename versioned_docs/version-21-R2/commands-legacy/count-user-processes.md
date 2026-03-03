@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|<6|Created|
+|11 SQL Release 3|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Count user processes.Summary-->Count user processes returns the current number of "live" processes in the 4D application whose type is different from -25 (Internal Timer Process), -31 (Client Manager Process) and -15 (Server Interface Process).<!-- END REF--> For more information about process types, please refer to the [Process info](../commands/process-info.md) command and to the *Process Type* constants theme. 

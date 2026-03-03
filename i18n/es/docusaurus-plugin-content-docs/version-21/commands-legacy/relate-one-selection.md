@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.RELATE ONE SELECTION.Summary-->El comando **RELATE ONE SELECTION** crea una nueva selección de registros en *tabla1* a partir de la selección de registros de la *tablaN* relacionada y carga el primer registro de la nueva selección como el registro actual.<!-- END REF--> 

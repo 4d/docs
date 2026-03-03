@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|12|Modifié|
+|11 SQL|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SET FILE TO PASTEBOARD.Summary-->La commande **SET FILE TO PASTEBOARD** ajoute dans le conteneur de données le chemin d’accès complet du fichier passé dans le paramètre *fichier*.<!-- END REF--> Cette commande permet de mettre en place des interfaces autorisant le glisser-déposer d’objets 4D vers des fichiers sur le bureau par exemple.

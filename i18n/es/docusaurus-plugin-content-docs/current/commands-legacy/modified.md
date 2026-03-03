@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|2004|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Modified.Summary-->**Modified** devuelve **True** si un valor ha sido asignado por programación a *campo* o si ha sido modificado durante la entrada de datos.<!-- END REF--> El comando **Modified**debe utilizarse únicamente en un método de formulario (o una subrutina llamada por un método de formulario).

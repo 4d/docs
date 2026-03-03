@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|12|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Asserted.Summary-->**Asserted** コマンドは[ASSERT](assert.md)コマンドと同様の処理を行います。<!-- END REF-->1つの違いは、このコマンドは*boolExpression*引数の評価結果を戻り値として返すことです。このため、条件の評価としてアサーションを使用できます (例題参照)。アサーションの処理とこのコマンドの引数に関する詳細情報は[ASSERT](assert.md)コマンドの説明を参照してください。

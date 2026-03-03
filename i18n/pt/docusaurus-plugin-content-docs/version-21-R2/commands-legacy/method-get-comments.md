@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.METHOD GET COMMENTS.Summary-->O comando **METHOD GET COMMENTS** devolve no parâmetro *comentários*, os comentários dos métodos designados pelo parâmetro *rota*.<!-- END REF-->  

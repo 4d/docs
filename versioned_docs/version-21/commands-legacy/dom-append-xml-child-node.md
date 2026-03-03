@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.DOM Append XML child node.Summary-->The DOM Append XML child node command is used to append the *childValue* value to the XML node designated by *elementRef*.<!-- END REF--> 
@@ -42,12 +52,12 @@ In *childValue*, pass the data to be inserted. You can pass a string or a 4D var
 Adding a text type node:
 
 ```4d
- Reference:=DOM Create XML element(elementRef;"myElement")
- DOM SET XML ELEMENT VALUE(Reference;"Hello")
- temp:=DOM Create XML element(Reference;"br")
- temp:=DOM Append XML child node(Reference;XML DATA;"New")
- temp:=DOM Create XML element(Reference;"br")
- temp:=DOM Append XML child node(Reference;XML DATA;"York")
+ Reference:=DOM Create XML element(elementRef;"myElement")
+ DOM SET XML ELEMENT VALUE(Reference;"Hello")
+ temp:=DOM Create XML element(Reference;"br")
+ temp:=DOM Append XML child node(Reference;XML DATA;"New")
+ temp:=DOM Create XML element(Reference;"br")
+ temp:=DOM Append XML child node(Reference;XML DATA;"York")
 ```
 
 Result:  
@@ -61,8 +71,8 @@ Result:
 Adding a processing instruction type node:
 
 ```4d
- $Txt_instruction:="xml-stylesheet type = \"text/xsl\" href=\"style.xsl\""
- Reference:=DOM Append XML child node(elementRef;XML Processing Instruction;$Txt_instruction)
+ $Txt_instruction:="xml-stylesheet type = \"text/xsl\" href=\"style.xsl\""
+ Reference:=DOM Append XML child node(elementRef;XML Processing Instruction;$Txt_instruction)
 ```
 
 Result (inserted before first element):  
@@ -76,7 +86,7 @@ Result (inserted before first element):
 Adding a comment type node:
 
 ```4d
- Reference:=DOM Append XML child node(elementRef;XML Comment;"Hello world")
+ Reference:=DOM Append XML child node(elementRef;XML Comment;"Hello world")
 ```
 
 Result:  
@@ -90,7 +100,7 @@ Result:
 Adding a CDATA type node:
 
 ```4d
- Reference:=DOM Append XML child node(elementRef;XML CDATA;"12 < 18")
+ Reference:=DOM Append XML child node(elementRef;XML CDATA;"12 < 18")
 ```
 
 Result:  
@@ -104,7 +114,7 @@ Result:
 Adding or replacing a Doctype declaration type node:
 
 ```4d
- Reference:=DOM Append XML child node(elementRef;XML DOCTYPE;"Books SYSTEM \"Book.DTD\"")
+ Reference:=DOM Append XML child node(elementRef;XML DOCTYPE;"Books SYSTEM \"Book.DTD\"")
 ```
 
 Result (inserted before first element):  
@@ -119,25 +129,25 @@ Adding or replacing an Element type node.
 
 * if the *childValue* parameter is an XML fragment, it is inserted as child nodes:  
 ```4d  
- Reference:=DOM Append XML child node(elementRef;XML ELEMENT;"simoneva")  
+ Reference:=DOM Append XML child node(elementRef;XML ELEMENT;"simoneva")  
 ```  
     
 Result:  
 ```XML  
 <parent>  
-    <child>simon</child>  
-    <child>eva</child>  
+    <child>simon</child>  
+    <child>eva</child>  
 </parent>  
 ```
 * otherwise, a new blank child element is appended:  
 ```4d  
- Reference:=DOM Append XML child node(elementRef;XML ELEMENT;"tbreak")  
+ Reference:=DOM Append XML child node(elementRef;XML ELEMENT;"tbreak")  
 ```  
     
 Result:  
 ```XML  
 <parent>  
-     <tbreak/>  
+     <tbreak/>  
  </parent>  
 ```
 

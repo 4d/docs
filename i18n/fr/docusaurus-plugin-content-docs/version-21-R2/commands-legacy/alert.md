@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|6|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ALERT.Summary-->La commande **ALERT** affiche une boîte de dialogue d'alerte composée d'une icône, d'un message et d'un bouton OK.<!-- END REF-->

@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|18 R6|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.Compare strings.Summary-->**Compare strings** コマンドは、*aString* 引数の文字列が*bString* 引数の文字列比較して低い/等しい/高いと評価されるかによって負の値/ゼロ/正の値を返します。<!-- END REF-->引数にはtext 型の値を渡します。

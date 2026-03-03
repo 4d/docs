@@ -70,7 +70,7 @@ Puede añadir o modificar formularios 4D utilizando los siguientes elementos:
 
 Hay dos categorías de formularios:
 
-- **Los formularios de proyecto** - Formularios independientes que no están unidos a ninguna tabla. Están pensados, sobre todo, para crear cajas de diálogo de interfaz, al igual que componentes. Los formularios proyecto pueden utilizarse para crear interfaces que cumplan fácilmente con los estándares del sistema operativo.
+- **Los formularios proyecto** - Formularios independientes que no están unidos a ninguna tabla. Están pensados, sobre todo, para crear cajas de diálogo de interfaz, al igual que componentes. Los formularios proyecto pueden utilizarse para crear interfaces que cumplan fácilmente con los estándares del sistema operativo.
 
 - **Los formularios tablas** - Se adjuntan a tablas específicas y, por tanto, se benefician de funciones automáticas útiles para el desarrollo de aplicaciones basadas en bases de datos. Normalmente, una tabla tiene formularios de entrada y salida separados.
 
@@ -120,18 +120,18 @@ Esta funcionalidad puede utilizarse **en proyectos 4D en Windows**. No está dis
 
 :::tip Entradas de blog relacionadas
 
-[Modernize your 4D interfaces with Fluent UI](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)<br/>
-[Deploy Fluent UI effortlessly in your 4D applications](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications)
+[Modernice sus interfaces 4D con Fluent UI](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)<br/>
+[Despliegue Fluent UI sin esfuerzo en sus aplicaciones 4D](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications)
 
 :::
 
 ### Requisitos
 
-The Fluent UI rendering requires that the **Windows App SDK** be installed on your machine. You need to make sure this SDK is installed on any Windows machine displaying your forms.
+El renderizado Fluent UI requiere que **Windows App SDK** esté instalado en su máquina. Debe asegurarse de que este SDK está instalado en cualquier máquina Windows que muestre sus formularios.
 
-[If necessary](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications), you can install the Windows App SDK. Para mayor comodidad, el instalador 4D [ofrece un enlace](../GettingStarted/Installation.md#installation-on-disk) para descargar el instalador de Windows AppSDK. También puede visitar la [página de descargas de Microsoft](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads). Recomendamos utilizar la versión referenciada por el programa de instalación de 4D, que ofrece una compatibilidad óptima.
+[Si es necesario](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications), puede instalar el Windows App SDK. Para mayor comodidad, el instalador 4D [ofrece un enlace](../GettingStarted/Installation.md#installation-on-disk) para descargar el instalador de Windows AppSDK. También puede visitar la [página de descargas de Microsoft](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads). Recomendamos utilizar la versión referenciada por el programa de instalación de 4D, que ofrece una compatibilidad óptima.
 
-If the Windows App SDK is not properly installed, 4D will render all your forms in classic mode with no error and the following warning will be recorded in the [diagnostic log](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt): "Fluent UI is required but not available. La aplicación se ejecuta con el aspecto clásico de Windows."
+Si Windows App SDK no está correctamente instalado, 4D renderizará todos sus formularios en modo clásico sin ningún error y se registrará la siguiente advertencia en el [log de diagnóstico](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt): "Fluent UI es necesario pero no está disponible. La aplicación se ejecuta con el aspecto clásico de Windows."
 
 ### Activar el renderizado Fluent UI
 
@@ -164,14 +164,14 @@ La [propiedad de formulario JSON](./properties_JSONref.md) correspondiente es `f
 
 #### CSS
 
-The [**form-theme** CSS media query](./createStylesheet.md#media-queries) allows you to configure several styles depending on the used theme.
+El [media query CSS **form-theme**](./createStylesheet.md#media-queries) permite configurar varios estilos en función del tema utilizado.
 
 ### Comportamientos específicos
 
 Cuando utilice los formularios 4D con el renderizado Fluent UI, debe prestar atención a los siguientes puntos:
 
-- El comando [`FORM theme`](../commands/form-theme.md) devuelve el tema actual del formulario. Valores posibles: "Classic" o "FluentUI". If there is no current form or if the command is called on macOS, and empty string is returned.
-- The [`Application info`](../commands/application-info.md) command allows you to know if Fluent UI can be used (`canUseFluentUI` property) or is being used (`useFluentUI` property).
+- El comando [`FORM theme`](../commands/form-theme.md) devuelve el tema actual del formulario. Valores posibles: "Classic" o "FluentUI". Si no existe un formulario actual o si el comando se ejecuta en macOS, se devuelve una cadena vacía.
+- El comando [`Application info`](../commands/application-info.md) le permite saber si Fluent UI puede ser utilizado (propiedad `canUseFluentUI`) o está siendo utilizado (propiedad `useFluentUI`).
 - Si [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) es llamado en el contexto de un formulario, la información devuelta se refiere a la apariencia actual del formulario (Classic o FluentUI). Si se llama al comando fuera del contexto de un formulario, la información devuelta se refiere a las [propiedades globales del proyecto](#application-setting).
 - [`SET MENU ITEM STYLE`](../commands-legacy/set-menu-item-style.md) con el parámetro *itemStyle* `Underline` no es soportado (ignorado) para los menús emergentes.
 - El objeto de formulario [Stepper](../FormObjects/stepper.md) no admite el [evento doble clic](../Events/onDoubleClicked.md).

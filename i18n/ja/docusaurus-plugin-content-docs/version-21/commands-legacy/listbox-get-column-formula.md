@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|13|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LISTBOX Get column formula.Summary-->**LISTBOX Get column formula**コマンドは*object*と*\** 引数で指定したリストボックス列に割り当てられたフォーミュラを返します。<!-- END REF-->フォーミュラはリストボックスプロパティのデータソースが**カレントセレクション**、**命名セレクション**、あるいは**コレクションまたはエンティティセレクション**の場合のみ使用できます。列にフォーミュラが割り当てられていない場合、コマンドは空の文字列を返します。 

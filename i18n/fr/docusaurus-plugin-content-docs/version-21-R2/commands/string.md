@@ -9,6 +9,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.String.Params-->
 
+<div class="no-index">
+
 | Paramètres | Type          |                             | Description                                                                                                                                  |
 | ---------- | ------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | expression | Expression    | &#8594; | Expression à convertir en chaîne (peut être de type Réel, Integer, Date, Heure, Alpha, Texte, Booléen, Undefined ou Null) |
@@ -17,15 +19,19 @@ displayed_sidebar: docs
 | base       | Integer       | &#8594; | Valeur comprise entre 2 et 36 qui représente la base si *expression* est un nombre                                                           |
 | Résultat   | Text          | &#8592; | expression convertie en chaîne alphanumérique                                                                                                |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>Historique</summary>
 
-| Release | Modifications                       |
-| ------- | ----------------------------------- |
-| 21      | Prise en charge du paramètre *base* |
+| Release                     | Modifications                       |
+| --------------------------- | ----------------------------------- |
+| 21                          | Prise en charge du paramètre *base* |
+| <6 | Created                             |
 
 </details>
+</div>
 
 ## Description
 
@@ -77,7 +83,7 @@ Le format est spécifié de la même manière que pour un [nombre saisi dans un 
 | String(1/0)                                                      | "INF"                             | Nombre infini positif                                 |
 | String(-1/0)                                                     | "-INF"                            | Nombre infini négatif                                 |
 
-(\*) L'algorithme de conversion des valeurs réelles en texte est basé sur 13 chiffres significatifs, voir [`SET REAL COMPARISON LEVEL`](../commands-legacy/set-real-comparison-level.md).
+(\*) L'algorithme de conversion des [valeurs réelles](../Concepts/dt_number.md) en texte est basé sur 13 chiffres significatifs.
 
 #### String(number;base)
 

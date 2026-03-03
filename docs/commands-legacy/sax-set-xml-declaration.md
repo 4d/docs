@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|12|Modified|
+|12|Renamed|
+|2004|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SAX SET XML DECLARATION.Summary-->The **SAX SET XML DECLARATION** command initializes the XML document referenced in *document* using the specified *encoding*.<!-- END REF--> Optionnally, you can set the *standalone* attribute.

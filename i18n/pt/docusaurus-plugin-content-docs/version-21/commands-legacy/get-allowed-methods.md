@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|2004|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.GET ALLOWED METHODS.Summary-->O comando GET ALLOWED METHODS retorna, em *arrMetodos*, os nomes dos métodos que possam ser utilizados para escrever fórmulas.<!-- END REF--> Estes métodos estão listados ao final da lista de comandos no editor.

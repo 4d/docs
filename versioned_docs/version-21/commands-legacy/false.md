@@ -24,7 +24,7 @@ displayed_sidebar: docs
 The following example sets the variable *vbOptions* to False:
 
 ```4d
- vbOptions:=False
+ vbOptions:=False
 ```
 
 ## See also 

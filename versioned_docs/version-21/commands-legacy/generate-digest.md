@@ -18,6 +18,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|18 R4|Modified|
+|16 R5|Modified|
+|14|Modified|
+|13|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Generate digest.Summary-->The **Generate digest** command returns the digest key of a BLOB or text after application of an encryption algorithm.<!-- END REF-->
@@ -47,25 +60,25 @@ The value returned for the same object is the same on all the platforms (macOS/W
 This example compares two images using the MD5 algorithm: 
 
 ```4d
- var $vPict1;$vPict2 : Picture
- var $FirstBlob;$SecondBlob : Blob
- READ PICTURE FILE("c:\\myPhotos\\photo1.png")
- If(OK=1)
-    READ PICTURE FILE("c:\\myPhotos\\photo2.png")
-    If(OK=1)
-       PICTURE TO BLOB($vPict1;$FirstBlob;".png")
-       PICTURE TO BLOB($vPict2;$SecondBlob;".png")
- 
-       $MD5_1:=Generate digest($FirstBlob;MD5 digest)
-       $MD5_2:=Generate digest($SecondBlob;MD5 digest)
- 
-       If($MD5_1#$MD5_2)
-          ALERT("These two images are different.")
-       Else
-          ALERT("These two images are identical.")
-       End if
-    End if
- End if
+ var $vPict1;$vPict2 : Picture
+ var $FirstBlob;$SecondBlob : Blob
+ READ PICTURE FILE("c:\\myPhotos\\photo1.png")
+ If(OK=1)
+    READ PICTURE FILE("c:\\myPhotos\\photo2.png")
+    If(OK=1)
+       PICTURE TO BLOB($vPict1;$FirstBlob;".png")
+       PICTURE TO BLOB($vPict2;$SecondBlob;".png")
+ 
+       $MD5_1:=Generate digest($FirstBlob;MD5 digest)
+       $MD5_2:=Generate digest($SecondBlob;MD5 digest)
+ 
+       If($MD5_1#$MD5_2)
+          ALERT("These two images are different.")
+       Else
+          ALERT("These two images are identical.")
+       End if
+    End if
+ End if
 ```
 
 ## Example 2 
@@ -73,10 +86,10 @@ This example compares two images using the MD5 algorithm:
 These examples illustrate how to retrieve the digest key of a text:
 
 ```4d
- $key1:=Generate digest("The quick brown fox jumps over the lazy dog.";MD5 digest)
-  // $key1 is "e4d909c290d0fb1ca068ffaddf22cbd0"
- $key2:=Generate digest("The quick brown fox jumps over the lazy dog.";SHA1 digest)
-  // $key2 is "408d94384216f890ff7a0c3528e8bed1e0b01621"
+ $key1:=Generate digest("The quick brown fox jumps over the lazy dog.";MD5 digest)
+  // $key1 is "e4d909c290d0fb1ca068ffaddf22cbd0"
+ $key2:=Generate digest("The quick brown fox jumps over the lazy dog.";SHA1 digest)
+  // $key2 is "408d94384216f890ff7a0c3528e8bed1e0b01621"
 ```
 
 ## See also 

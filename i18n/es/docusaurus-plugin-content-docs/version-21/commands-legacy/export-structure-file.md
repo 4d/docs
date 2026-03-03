@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|18|Modificado|
+|17 R5|Modificado|
+|17 R3|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Export structure file.Summary-->El comando **Export structure file** divide la estructura actual de la base 4D en un conjunto de archivos de texto o archivos de imagen nativos y los almacena en la *rutaCarpeta* especificada.<!-- END REF--> Por defecto, se exporta la totalidad de la estructura de la base (métodos, formularios, catálogo, etc.). Puede filtrar los contenidos a exportar utilizando el parámetro *opciones* (ver abajo).

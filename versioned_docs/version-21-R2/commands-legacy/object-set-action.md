@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+|16 R3|Modified|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET ACTION.Summary-->The **OBJECT SET ACTION** command modifies the standard action associated with the object(s) designated by the *object* and *\** parameters.<!-- END REF--> 

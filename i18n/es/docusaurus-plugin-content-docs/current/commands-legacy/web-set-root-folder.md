@@ -15,6 +15,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|13|Renombrar|
+|11 SQL|Modificado|
+|<6|Creado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.WEB SET ROOT FOLDER.Summary-->El comando **WEB SET ROOT FOLDER** se utiliza para modificar la carpeta raíz por defecto en la cual 4D busca los archivos HTML pedidos al servidor web.<!-- END REF--> 

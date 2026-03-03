@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get menu item style.Summary-->The **Get menu item style** command returns the font style of the menu item whose number or reference is passed in *menu* and whose item number is passed in *menuItem*.<!-- END REF--> You can pass -1 in *menuItem* in order to indicate the last item added to *menu*.
@@ -41,9 +52,9 @@ If you omit the *process* parameter, **Get menu item style** applies to the menu
 To test if a menu item is displayed in bold, you write:
 
 ```4d
- If((Get menu item style($vlMenu;$vlItem)&Bold)#0)
-  //...
- End if
+ If((Get menu item style($vlMenu;$vlItem)&Bold)#0)
+  //...
+ End if
 ```
 
 ## See also 

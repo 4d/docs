@@ -22,6 +22,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14 R5|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LISTBOX GET CELL COORDINATES.Summary-->LISTBOX GET CELL COORDINATES コマンドは引数 *\** および*object*によって指定されたリストボックス内の、*column* と *row* 引数で指定したセルの*left*、*top*、*right* および *bottom*にそれぞれ左端、上端、右端、下端の座標を(ポイント単位で)返します。<!-- END REF-->

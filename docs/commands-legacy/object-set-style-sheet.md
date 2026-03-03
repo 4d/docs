@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|15 R3|Modified|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET STYLE SHEET.Summary-->The **OBJECT SET STYLE SHEET** command modifies, for the current process, the style sheet associated with the object(s) designated by the *object* and *\** parameters.<!-- END REF--> A style sheet modifies the font, font size and (except for automatic style sheets) font style.

@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Get menu item method.Summary-->El comando Get menu item method devuelve el nombre del método de proyecto 4D asociado a la línea de menú designada por los parámetros *menu* y *lineaMenu*.<!-- END REF--> 

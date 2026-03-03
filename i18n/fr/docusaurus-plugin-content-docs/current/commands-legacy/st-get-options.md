@@ -18,6 +18,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.ST GET OPTIONS.Summary-->La commande **ST GET OPTIONS** permet d’obtenir la valeur courante d’une ou plusieurs options de fonctionnement du champ ou de la variable de texte multistyle désigné(e) par le paramètre *objet*.<!-- END REF--> 

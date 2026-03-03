@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|15|変更|
+|14|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OB Is defined.Summary-->**OB Is defined**コマンドは、*object* または *property* が定義済みである場合にはTrueを返し、それ以外の場合にはFalseを返します。<!-- END REF-->引数で指定するオブジェクトは、 *C\_OBJECT* コマンドを使用して作成されている、あるいはオブジェクトフィールドが選択されている必要があります。

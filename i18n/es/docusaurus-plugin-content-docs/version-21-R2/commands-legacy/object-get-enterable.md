@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|12|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OBJECT Get enterable.Summary-->El comando OBJECT Get enterable devuelve True si el objeto o grupo de objetos designado por *objeto* tiene el atributo **editable**; de lo contrario, devuelve False.<!-- END REF--> 

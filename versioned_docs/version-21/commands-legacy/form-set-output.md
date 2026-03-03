@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R6|Modified|
+|12|Renamed|
+|2004|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM SET OUTPUT.Summary-->The **FORM SET OUTPUT**  command sets the current output form for *table* to *form*, or *userForm*.<!-- END REF--> The form must belong to *aTable*.
@@ -46,9 +59,9 @@ Output forms are used by three groups of commands. One group displays a list of 
 The following example shows a typical use of **FORM SET OUTPUT**. Note that although the **FORM SET OUTPUT** command appears immediately before the output form is used, this is not required. In fact, the command may be executed in a completely different method, as long as it is executed prior to this method:
 
 ```4d
- FORM SET INPUT([Parts];"Parts In") //Select the input form
- FORM SET OUTPUT([Parts];"Parts List") //Select the output form
- MODIFY SELECTION([Parts]) //This command uses both forms
+ FORM SET INPUT([Parts];"Parts In") //Select the input form
+ FORM SET OUTPUT([Parts];"Parts List") //Select the output form
+ MODIFY SELECTION([Parts]) //This command uses both forms
 ```
 
 ## Example 2 
@@ -56,9 +69,9 @@ The following example shows a typical use of **FORM SET OUTPUT**. Note that alth
 The following example uses the path to a .json form to print the records in an employee list: 
 
 ```4d
- FORM SET OUTPUT([Personnel];"/RESOURCES/PersonnelPrintForm.json")
- ALL RECORDS([Personnel])
- PRINT SELECTION([Personnel])
+ FORM SET OUTPUT([Personnel];"/RESOURCES/PersonnelPrintForm.json")
+ ALL RECORDS([Personnel])
+ PRINT SELECTION([Personnel])
 ```
 
 ## See also 

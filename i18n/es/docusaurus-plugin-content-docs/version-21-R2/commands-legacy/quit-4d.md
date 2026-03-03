@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|6.8|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.QUIT 4D.Summary-->El comando QUIT 4D sale de la aplicación 4D y regresa al escritorio.<!-- END REF-->

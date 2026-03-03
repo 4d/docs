@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL Release 2|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WA Get page title.Summary-->The WA Get page title command returns the title of the current page or the page being displayed in the Web area designated by the *\** and *object* parameters.<!-- END REF--> The title corresponds to the HTML "Title" tag.

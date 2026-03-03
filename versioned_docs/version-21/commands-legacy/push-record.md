@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.PUSH RECORD.Summary-->**PUSH RECORD** pushes the current record of *aTable* (and its subrecords, if any) onto the table’s record stack.<!-- END REF-->may be executed before a record is saved.

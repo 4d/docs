@@ -18,6 +18,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|13|Créé|
+|14|Modifié|
+|15|Modifié|
+|15 R4|Modifié|
+|18 R3|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.METHOD GET CODE.Summary-->La commande **METHOD GET CODE** retourne dans le paramètre *code* le contenu de la ou des méthode(s) désignée(s) par le paramètre *chemin*.<!-- END REF--> La commande peut retourner le code de tous les types de méthodes : méthodes base, définitions de classes, triggers, méthodes projet, méthodes formulaire et méthodes objet.

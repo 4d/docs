@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2003|初出|
+|13|名称変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WEB SERVICE Get info.Summary-->**WEB SERVICE Get info**コマンドは、リモートのWebサービスに送信された最新のSOAPリクエストの 実行中に生成されたエラーについての情報を返します。<!-- END REF-->このコマンドは一般的に[ON ERR CALL](on-err-call.md)コマンドでインストールされたエラー処理メソッド内から呼び出します。

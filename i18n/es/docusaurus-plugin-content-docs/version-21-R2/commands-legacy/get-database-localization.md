@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|11 SQL|Creado por|
+|12|Renombrar|
+|12|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.Get database localization.Summary-->El comando Get database localization devuelve el lenguaje por defecto o el lenguaje de la base, especificado por *tipoLeng*, expresado en el estándar definido por la RFC 3066.<!-- END REF-->Generalmente, el comando devuelve “en” para inglés, “es” para español, etc. Para mayor información sobre este estándar y los valores devueltos por este comando, por favor consulte el *Apéndice B: Arquitectura XLIFF* en el manual de *Diseño*. 

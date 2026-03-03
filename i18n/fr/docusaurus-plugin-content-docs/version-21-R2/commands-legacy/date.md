@@ -16,6 +16,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|16 R5|Modifié|
+|16 R6|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Date.Summary-->La fonction **Date** extrait et retourne la date de la chaîne *expression*.<!-- END REF-->

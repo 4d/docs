@@ -29,22 +29,22 @@ Use the [CLEAR NAMED SELECTION](clear-named-selection.md) command to free the me
 The following example allows you to check if there are other overdue invoices in the *\[People*\] table. The selection is sorted and then saved. We search for all records where invoices are due. Then we reuse the selection and clear the named selection in memory. Clearing the named selection in memory is optional, in case the database designer wants to keep the sorted selection for future use:
 
 ```4d
- ALL RECORDS([People])
-  //Allow the user to sort the selection
- ORDER BY([People])
-  // Save the sorted selection as a named selection
- COPY NAMED SELECTION([People];"UserSort")
-  // Search for records where invoices are due
- QUERY([People];[People]InvoiceDue=True)
-  // If records are found
- If(Records in selection([People])>0)
-  // Alert the user
-    ALERT("Yes, there are overdue invoices on table.")
- End if
-  // Reuse the sorted named selection
- USE NAMED SELECTION("UserSort")
-  // Remove the selection from memory
- CLEAR NAMED SELECTION("UserSort")
+ ALL RECORDS([People])
+  //Allow the user to sort the selection
+ ORDER BY([People])
+  // Save the sorted selection as a named selection
+ COPY NAMED SELECTION([People];"UserSort")
+  // Search for records where invoices are due
+ QUERY([People];[People]InvoiceDue=True)
+  // If records are found
+ If(Records in selection([People])>0)
+  // Alert the user
+    ALERT("Yes, there are overdue invoices on table.")
+ End if
+  // Reuse the sorted named selection
+ USE NAMED SELECTION("UserSort")
+  // Remove the selection from memory
+ CLEAR NAMED SELECTION("UserSort")
 ```
 
 ## See also 

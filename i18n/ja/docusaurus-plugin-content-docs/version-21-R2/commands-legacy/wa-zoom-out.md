@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL Release 2|初出|
+|19 R5|名称変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.WA ZOOM OUT.Summary-->WA ZOOM OUT コマンドは、*\** と *object* 引数で指定したWebエリアに表示されているテキストのサイズを小さくします。<!-- END REF-->

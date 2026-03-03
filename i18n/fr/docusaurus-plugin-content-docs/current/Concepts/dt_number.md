@@ -5,7 +5,7 @@ title: Numérique (Real, Integer)
 
 Numérique est un terme générique utilisé pour :
 
-- Les champs, variables ou expression de type Réel. Les nombres de type Réel sont compris dans l'intervalle ±1.7e±308 (13 chiffres significatifs).
+- Les champs, variables ou expression de type Réel. The range for the Real data type is ±1.7e±308 (following the [IEEE 754 standard for double-precision binary floating-point format](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)).
 - Les champs, variables ou expression de type Entier (Integer). La plage pour le type de données Integer est -2^31..(2^31)-1 (Integer de 4 octets, alias *Long* ou *Longint*).
 
 :::info Compatibilité

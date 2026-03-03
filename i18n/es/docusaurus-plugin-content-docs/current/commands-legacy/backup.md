@@ -14,6 +14,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|2004|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.BACKUP.Summary-->El comando BACKUP inicia el backup de la base de datos utilizando los parámetros de copia de seguridad actuales.<!-- END REF--> No aparece una caja de diálogo de confirmación; sin embargo, aparece una barra de progreso en la pantalla.

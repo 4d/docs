@@ -16,6 +16,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14 R3|Modified|
+|13|Renamed|
+|6.8|Modified|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.WEB SET HTTP HEADER.Summary-->The **WEB SET HTTP HEADER** command allows you to set the fields in the HTTP header of the reply sent to the Web browser by 4D.<!-- END REF--> It only has an effect in a Web process.   

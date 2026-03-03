@@ -21,6 +21,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|13|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.On Web Authentication database method.Summary-->O On Web Authentication database method administra o acesso ao motor do servidor web.<!-- END REF--> É chamado automaticamente por 4D ou 4D Server quando uma petição de um navegador web pedir a execução de um método 4D no servidor (chamada de um método através um URL *4DACTION* ou uma etiqueta *4DSCRIPT*, etc.).  

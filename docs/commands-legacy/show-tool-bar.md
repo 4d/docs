@@ -14,6 +14,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14 R5|Modified|
+|14|Modified|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.SHOW TOOL BAR.Summary-->The **SHOW TOOL BAR** command handles the display of custom toolbars created by the [Open form window](../commands/open-form-window.md) command for the current process.<!-- END REF-->

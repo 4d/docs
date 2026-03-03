@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14|初出|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.SET RECENT FONTS.Summary-->**SET RECENT FONTS**コマンドは、コンテキストメニュー内の"最近使用したフォント"の中に表示されるフォントの一覧を変更します。<!-- END REF--> 

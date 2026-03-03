@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.HIDE WINDOW.Summary-->The **HIDE WINDOW** command hides the window whose number was passed in *window* or, if this parameter is omitted, the current process frontmost window.<!-- END REF--> For example, this command lets you display only the active window in a process that consists of several processes. 

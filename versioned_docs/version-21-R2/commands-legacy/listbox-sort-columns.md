@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|2004|Created|
+|12|Renamed|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX SORT COLUMNS.Summary-->The LISTBOX SORT COLUMNS command applies a standard sort to the rows of the list box defined by the *object* and *\** parameters on the basis of one or more column value(s).<!-- END REF-->

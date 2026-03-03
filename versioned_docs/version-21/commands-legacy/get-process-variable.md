@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.GET PROCESS VARIABLE.Summary-->The **GET PROCESS VARIABLE** command reads the *srcVar* process variables (*srvVar2*, etc.) from the source process whose number is passed in *process*, and returns their current values in the *dstVar* variables ( *dstVar2*, etc.) of the current process.<!-- END REF-->
@@ -53,7 +63,7 @@ The source process must be a user process; it cannot be a kernel process. If the
 This line of code reads the value of the text variable *vtCurStatus* from the process whose number is *$vlProcess*. It returns the value in the process variable *vtInfo* of the current process:
 
 ```4d
- GET PROCESS VARIABLE($vlProcess;vtCurStatus;vtInfo)
+ GET PROCESS VARIABLE($vlProcess;vtCurStatus;vtInfo)
 ```
 
 ## Example 2 
@@ -61,7 +71,7 @@ This line of code reads the value of the text variable *vtCurStatus* from the pr
 This line of code does the same thing, but returns the value in the local variable *$vtInfo* for the method executing in the current process:
 
 ```4d
- GET PROCESS VARIABLE($vlProcess;vtCurStatus;$vtInfo)
+ GET PROCESS VARIABLE($vlProcess;vtCurStatus;$vtInfo)
 ```
 
 ## Example 3 
@@ -69,7 +79,7 @@ This line of code does the same thing, but returns the value in the local variab
 This line of code does the same thing, but returns the value in the variable *vtCurStatus* of the current process:
 
 ```4d
- GET PROCESS VARIABLE($vlProcess;vtCurStatus;vtCurStatus)
+ GET PROCESS VARIABLE($vlProcess;vtCurStatus;vtCurStatus)
 ```
 
 **Note:** The first *vtCurStatus* designates the instance of the variable in the source process The second *vtCurStatus* designates the instance of the variable in the current process.
@@ -79,11 +89,11 @@ This line of code does the same thing, but returns the value in the variable *vt
 This example sequentially reads the elements of a process array from the process indicated by *$vlProcess*:
 
 ```4d
- GET PROCESS VARIABLE($vlProcess;vl_IPCom_Array;$vlSize)
- For($vlElem;1;$vlSize)
-    GET PROCESS VARIABLE($vlProcess;at_IPCom_Array{$vlElem};$vtElem)
-  // Do something with $vtElem
- End for
+ GET PROCESS VARIABLE($vlProcess;vl_IPCom_Array;$vlSize)
+ For($vlElem;1;$vlSize)
+    GET PROCESS VARIABLE($vlProcess;at_IPCom_Array{$vlElem};$vtElem)
+  // Do something with $vtElem
+ End for
 ```
 
 **Note:** In this example, the process variable *vl\_IPCom\_Array* contains the size of the array *at\_IPCom\_Array*, and must be maintained by the source process.
@@ -93,10 +103,10 @@ This example sequentially reads the elements of a process array from the process
 This example does the same thing as the previous one, but reads the array as a whole, instead of reading the elements sequentially:
 
 ```4d
- GET PROCESS VARIABLE($vlProcess;at_IPCom_Array;$anArray)
- For($vlElem;1;Size of array($anArray))
-  // Do something with $anArray{$vlElem}
- End for
+ GET PROCESS VARIABLE($vlProcess;at_IPCom_Array;$anArray)
+ For($vlElem;1;Size of array($anArray))
+  // Do something with $anArray{$vlElem}
+ End for
 ```
 
 ## Example 6 
@@ -104,7 +114,7 @@ This example does the same thing as the previous one, but reads the array as a w
 This example reads the source process instances of the variables *v1*,*v2*,*v3* and returns their values in the instance of the same variables for the current process:
 
 ```4d
- GET PROCESS VARIABLE($vlProcess;v1;v1;v2;v2;v3;v3)
+ GET PROCESS VARIABLE($vlProcess;v1;v1;v2;v2;v3;v3)
 ```
 
 ## Example 7 

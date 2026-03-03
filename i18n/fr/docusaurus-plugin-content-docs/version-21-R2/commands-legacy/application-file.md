@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Application file.Summary-->La fonction **Application file** retourne le nom long (c'est-à-dire le chemin d'accès complet au fichier, y compris son nom) du fichier exécutable ou de l'application 4D que vous utilisez.<!-- END REF--> 

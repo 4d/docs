@@ -5,7 +5,7 @@ slug: /commands/wa-execute-javascript-function
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Syntax-->**WA EXECUTE JAVASCRIPT FUNCTION** ( * ; *object* : Text ; *jsFunction* : Text ; *result* : Variable {; *...param* : any} )<br/>**WA EXECUTE JAVASCRIPT FUNCTION** ( *object* : Variable, Field ; *jsFunction* : Text ; *result* : Variable {; *...param* : any} )<br/>**WA EXECUTE JAVASCRIPT FUNCTION** ( * ; *object* : Text ; *jsFunction* : Text ; * {; *...param* : any} )<br/>**WA EXECUTE JAVASCRIPT FUNCTION** ( *object* : Variable, Field ; *jsFunction* : Text ; * {; *...param* : any} )<!-- END REF-->
+<!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Syntax-->**WA EXECUTE JAVASCRIPT FUNCTION** ( * ; *object* : Text ; *jsFunction* : Text {; *result* : Variable} {; *...param* : any} )<br/>**WA EXECUTE JAVASCRIPT FUNCTION** ( *object* : Variable, Field ; *jsFunction* : Text {; *result* : Variable } {; *...param* : any} )<br/>**WA EXECUTE JAVASCRIPT FUNCTION** ( * ; *object* : Text ; *jsFunction* : Text ; * {; *...param* : any} )<br/>**WA EXECUTE JAVASCRIPT FUNCTION** ( *object* : Variable, Field ; *jsFunction* : Text ; * {; *...param* : any} )<!-- END REF-->
 <!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Params-->
 <div class="no-index">
 
@@ -19,6 +19,18 @@ displayed_sidebar: docs
 | param | any | &#8594;  | Parameter(s) to pass to function |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R4|Modified|
+|14|Modified|
+|11 SQL Release 2|Created|
+
+</details>
+</div>
 
 ## Description 
 

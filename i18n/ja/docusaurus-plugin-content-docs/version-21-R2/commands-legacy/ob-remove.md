@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14|初出|
+|15|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.OB REMOVE.Summary-->**OB REMOVE**コマンドは、*object* 引数で指定したランゲージオブジェクトの、 *property* 引数で指定したプロパティを削除します。<!-- END REF-->で指定するオブジェクトは、 *C\_OBJECT* コマンドを使用して定義されているか、4Dオブジェクトフィールドが指定されている必要があります。

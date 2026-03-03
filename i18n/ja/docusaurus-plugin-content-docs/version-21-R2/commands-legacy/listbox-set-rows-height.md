@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2004|初出|
+|12|名称変更|
+|13|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.LISTBOX SET ROWS HEIGHT.Summary-->**LISTBOX SET ROWS HEIGHT**コマンドを使用すると、*object*引数および *\** で指定されたリストボックス内の行の高さをプログラムで変更することができます。<!-- END REF--> 

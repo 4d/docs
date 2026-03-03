@@ -15,6 +15,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|<6|Créé|
+|6|Modifié|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.RELATE MANY SELECTION.Summary-->La commande **RELATE MANY SELECTION** crée une sélection d'enregistrements dans la table N basée sur la sélection courante de la table 1, et charge le premier enregistrement de la table N comme enregistrement courant.<!-- END REF-->**RELATE MANY SELECTION** modifie l'enregistrement courant de la table 1.

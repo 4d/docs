@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Modificado|
+|2003|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.IMPORT DATA.Summary-->O comando IMPORT DATA importa os dados localizados no arquivo *nomeArquivo* 4D pode importar os dados nos seguintes formatos: Texto, Texto de longitude fixa, XML, SYLK, DIF, DBF (dBase) e 4D.<!-- END REF--> 

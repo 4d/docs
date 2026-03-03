@@ -17,6 +17,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|16 R6|Modificado|
+|16 R4|Modificado|
+|15 R4|Modificado|
+|15|Modificado|
+|14|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OB SET.Summary-->O comando **OB SET** cria ou modifica um ou mais pares de *propriedade*/*valor* no objeto de linguagem designado pelo parâmetro *objeto*.<!-- END REF-->deve ter sido definido usando o comando *C\_OBJECT* ou designar um campo objeto 4D.

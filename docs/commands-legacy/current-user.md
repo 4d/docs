@@ -5,7 +5,7 @@ slug: /commands/current-user
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current user.Syntax-->**Current user** ( *user* : Integer ) : Text<!-- END REF-->
+<!--REF #_command_.Current user.Syntax-->**Current user** ({ *user* : Integer }) : Text<!-- END REF-->
 <!--REF #_command_.Current user.Params-->
 <div class="no-index">
 
@@ -15,6 +15,17 @@ displayed_sidebar: docs
 | Function result | Text | &#8592; | User name of the current user |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|17 R5|Modified|
+|<6|Created|
+
+</details>
+</div>
 
 ## Description 
 

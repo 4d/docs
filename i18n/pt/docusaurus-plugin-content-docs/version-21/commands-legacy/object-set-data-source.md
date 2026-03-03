@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|14|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.OBJECT SET DATA SOURCE.Summary-->O comando **OBJECT SET DATA SOURCE** modifica a fonte de dados dos objetos designados pelos parâmetros *objeto* e *\** .<!-- END REF-->  

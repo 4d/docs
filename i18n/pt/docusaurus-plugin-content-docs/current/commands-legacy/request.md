@@ -19,6 +19,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.Request.Summary-->O comando **Request** mostra uma caixa de diálogo composta de uma mensagem, uma área de entrada de texto, um botão **OK** e um botão **Cancelar**.<!-- END REF-->

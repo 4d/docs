@@ -18,6 +18,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|<6|初出|
+|2004.4|変更|
+|11 SQL|変更|
+
+</details>
+</div>
+
 ## 説明 
 
 <!--REF #_command_.DOM SET XML ELEMENT VALUE.Summary-->**DOM SET XML ELEMENT VALUE** コマンドを使用して、*elementRef* で指定した要素の値を更新できます。<!-- END REF-->
@@ -81,7 +93,7 @@ XML処理のルールに準拠するため、行末文字シークエンス(CR�
 </Maths>
 ```
 
-*<Postulate>* 要素にテキスト “12<18” を書き込みたいとします。 “<” 文字は受け入れられないため、この文字列をそのままXMLに書き込むことはできません。この文字を “<” に変更するか、CDATAの形式を使用しなければなりません。*vElemRef*がXML *<Postulate>* ノードを指すとき:
+*<Postulate>* 要素にテキスト “12<18” を書き込みたいとします。 “<” 文字は受け入れられないため、この文字列をそのままXMLに書き込むことはできません。この文字を “&lt;” に変更するか、CDATAの形式を使用しなければなりません。*vElemRef*がXML *<Postulate>* ノードを指すとき:
 
 ```4d
   // Normal form
@@ -92,7 +104,7 @@ XML処理のルールに準拠するため、行末文字シークエンス(CR�
 
 ```XML
  <Maths>
-   <Postulate>12 < 18</Postulate>
+   <Postulate>12 "&lt;" 18</Postulate>
 </Maths>
 ```
   

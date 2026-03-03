@@ -17,6 +17,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|19 R4|Modifié|
+|12|Renommé|
+|2004|Modifié|
+|<6|Créé|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OBJECT SET ENTERABLE.Summary-->**OBJECT SET ENTERABLE** rend saisissable ou non saisissable le ou les objet(s) de formulaire désigné(s) par *objet* et peut fixer l'attribut saisissable.<!-- END REF-->

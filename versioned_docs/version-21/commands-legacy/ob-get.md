@@ -18,6 +18,20 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R6|Modified|
+|16 R4|Modified|
+|15 R4|Modified|
+|15|Modified|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.OB Get.Summary-->The **OB Get** command returns the current value of the *property* of the *object*, optionally converted into the *type* specified.<!-- END REF-->can be an object varialble or a 4D object field.

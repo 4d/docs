@@ -21,6 +21,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|11 SQL|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Find in list.Summary-->The **Find in list** command returns the position or reference of the first item of the *list* that is equivalent to the string passed in *value*.<!-- END REF--> If several items are found, the function can also fill an *itemsArray* array with the position or reference of each item.
@@ -48,20 +58,20 @@ Given the following hierarchical list:
 ![](../assets/en/commands/pict22420.en.png)
 
 ```4d
- $vlItemPos:=Find in list(hList;"P@";1;$arrPos)
-  //$vlItemPos equals 6
-  //$arrPos{1} equals 6 and $arrPos{2} equals 11
- $vlItemRef:=Find in list(hList;"P@";1;$arrRefs;*)
-  //$vlItemRef equals 7
-  //$arrRefs{1} equals 7 and $arrRefs{2} equals 18
- $vlItemPos:=Find in list(hList;"Date";1;$arrPos)
-  //$vlItemPos equals 9
-  //$arrPos{1} equals 9 and $arrPos{2} equals 16
- $vlItemRefFind in list(hList;"Date";1;$arrRefs;*)
-  //$vlItemRef equals 11
-  //$arrRefs{1} equals 11 and $arrRefs{2} equals 23
- $vlItemPos:=(hList;"Date";0;*)
-  //$vlItemPos equals 0
+ $vlItemPos:=Find in list(hList;"P@";1;$arrPos)
+  //$vlItemPos equals 6
+  //$arrPos{1} equals 6 and $arrPos{2} equals 11
+ $vlItemRef:=Find in list(hList;"P@";1;$arrRefs;*)
+  //$vlItemRef equals 7
+  //$arrRefs{1} equals 7 and $arrRefs{2} equals 18
+ $vlItemPos:=Find in list(hList;"Date";1;$arrPos)
+  //$vlItemPos equals 9
+  //$arrPos{1} equals 9 and $arrPos{2} equals 16
+ $vlItemRefFind in list(hList;"Date";1;$arrRefs;*)
+  //$vlItemRef equals 11
+  //$arrRefs{1} equals 11 and $arrRefs{2} equals 23
+ $vlItemPos:=(hList;"Date";0;*)
+  //$vlItemPos equals 0
 ```
 
 

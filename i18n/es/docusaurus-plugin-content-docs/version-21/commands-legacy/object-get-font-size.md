@@ -17,6 +17,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|12|Creado por|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.OBJECT Get font size.Summary-->El comando OBJECT Get font size devuelve el tamaño (en puntos) de la fuente utilizada por el objeto de formulario designado por *objeto*.<!-- END REF--> 

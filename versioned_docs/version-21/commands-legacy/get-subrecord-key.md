@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14 R3|Modified|
+|12.1|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Get subrecord key.Summary-->The Get subrecord key command facilitates the migration of 4D code using converted subtables to standard code for working with tables.<!-- END REF-->Beginning with version 11 of 4D, subtables are not supported. When a older database is converted, any existing subtables are transformed into standard tables that are linked with the original tables by an automatic relation. The former subtable becomes the Many table and the original table is the One table. In the One table, the former subtable field is transformed into a special field of the "Subtable Relation" type and in the Many field, a special "Subtable Relation" type field is added named “id\_added\_by\_converter”. 
@@ -31,25 +42,25 @@ Let's look for example at the following converted structure:
 In 4D, the following code still works but it must be updated:
 
 ```4d
- ALL SUBRECORDS([Employees]Children)
- $total:=Records in subselection([Employees]Children)
- vFirstnames:=""
- For($i;1;$total)
-    vFirstnames:=vFirstnames+[Employees]Children'FirstName+" "
-    NEXT SUBRECORD([Employees]Children)
- End for
+ ALL SUBRECORDS([Employees]Children)
+ $total:=Records in subselection([Employees]Children)
+ vFirstnames:=""
+ For($i;1;$total)
+    vFirstnames:=vFirstnames+[Employees]Children'FirstName+" "
+    NEXT SUBRECORD([Employees]Children)
+ End for
 ```
 
 You can now replace this code with:
 
 ```4d
- QUERY([Employees_Children];[Employees_Children]id_added_by_converter=Get subrecord key([Employees]Children))
- $total:=Records in selection([Employees_Children])
- vFirstnames:=""
- For($i;1;$total)
-    vFirstnames:=vFirstnames+[Employees_Children]FirstName+" "
-    NEXT RECORD(Employees_Children)
- End for
+ QUERY([Employees_Children];[Employees_Children]id_added_by_converter=Get subrecord key([Employees]Children))
+ $total:=Records in selection([Employees_Children])
+ vFirstnames:=""
+ For($i;1;$total)
+    vFirstnames:=vFirstnames+[Employees_Children]FirstName+" "
+    NEXT RECORD(Employees_Children)
+ End for
 ```
 
 **Note:** Get subrecord key returns 0 if there is no current recorded loaded when it is executed.
@@ -69,14 +80,14 @@ Thanks to this possibility, you can convert former databases containing subtable
 For example, with the structure above you can write:
 
 ```4d
- CREATE RECORD([Employees])
- [Employees]LastName:="Jones"
- CREATE RECORD([Employees_Children])
- [Employees_Children]FirstName:="Natacha"
- [Employees_Children]BirthDate:=!12/24/2013!
- [Employees_Children]id_added_by_converter:=Get subrecord key([Employees]Children)
- SAVE RECORD([Employees_Children])
- SAVE RECORD([Employees]
+ CREATE RECORD([Employees])
+ [Employees]LastName:="Jones"
+ CREATE RECORD([Employees_Children])
+ [Employees_Children]FirstName:="Natacha"
+ [Employees_Children]BirthDate:=!12/24/2013!
+ [Employees_Children]id_added_by_converter:=Get subrecord key([Employees]Children)
+ SAVE RECORD([Employees_Children])
+ SAVE RECORD([Employees]
 ```
 
 This code will work with either a special relation or a standard one.

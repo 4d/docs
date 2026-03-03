@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|14|初出|
+
+</details>
+</div>
+
 ## 詳細 
 
 <!--REF #_command_.On Host Database Event database method.Summary-->**On Host Database Event データベースメソッド** はデータベースが開いた時と閉じられた時に 4D コンポーネントにコードを実行させることが出来るようになりました。<!-- END REF-->

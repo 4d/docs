@@ -5,7 +5,7 @@ slug: /commands/system-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.System folder.Syntax-->**System folder** ( *type* : Integer ) : Text<!-- END REF-->
+<!--REF #_command_.System folder.Syntax-->**System folder** ({*type* : Integer }) : Text<!-- END REF-->
 <!--REF #_command_.System folder.Params-->
 <div class="no-index">
 
@@ -15,6 +15,19 @@ displayed_sidebar: docs
 | Function result | Text | &#8592; | Pathname to a system folder |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|19 R8|Modified|
+|13|Modified|
+|11 SQL Release 4|Modified|
+|<6|Created|
+
+</details>
+</div>
 
 ## Description 
 

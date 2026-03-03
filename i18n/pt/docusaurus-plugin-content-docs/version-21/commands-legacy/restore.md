@@ -16,6 +16,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Modificado|
+|2004|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.RESTORE.Summary-->O comando RESTORE permite restaurar o ou os arquivos incluidos em um arquivo de 4D.<!-- END REF--> Este comando é útil com interfaces personalizadas para a gestão de backups. 

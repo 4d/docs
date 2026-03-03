@@ -17,6 +17,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|<6|Creado|
+|6.7|Modificado|
+
+</details>
+</div>
+
 ## Descripción 
 
 <!--REF #_command_.CREATE SELECTION FROM ARRAY.Summary-->El comando **CREATE SELECTION FROM ARRAY** crea la selección temporal *temp*<!-- END REF-->  a partir de:

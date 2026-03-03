@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.PAUSE INDEXES.Summary-->The **PAUSE INDEXES** command temporarily disables all the indexes of *aTable*, except for the index of the primary key.<!-- END REF-->

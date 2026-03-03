@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|12|Criado por|
+
+</details>
+</div>
+
 ## Descrição 
 
 <!--REF #_command_.DOM Get XML document ref.Summary-->O comando DOM Get XML document ref se utiliza para recuperar a referência do elemento "documento" da árvore DOM cuya referência se passa em *refElement*.<!-- END REF--> O elemento document é o primeiro elemento de uma árvore DOM; é o pai do elemento raiz.   
