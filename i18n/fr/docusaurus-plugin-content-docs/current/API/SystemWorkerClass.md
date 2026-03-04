@@ -7,6 +7,10 @@ Les System workers permettent au code 4D d'appeler n'importe quel process extern
 
 La classe `SystemWorker` est disponible dans le class store `4D` .
 
+### Aynchronous programming
+
+This class supports asynchronous programming in 4D as described in the [Asynchronous Execution](../Develop/async.md) page.
+
 ### Exemple
 
 ```4d
