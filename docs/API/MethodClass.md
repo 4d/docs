@@ -157,7 +157,7 @@ var $res:=$m.call(Null; "hello world")  //HELLO WORLD
 ```
 
 
-[<!-- INCLUDE #FunctionClass.apply().Desc -->]
+<!-- INCLUDE #FunctionClass.apply().Desc -->
 
 
 #### Example

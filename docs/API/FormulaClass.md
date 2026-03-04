@@ -4,7 +4,7 @@ title: Formula
 ---
 
 
-`4D.Formula` objects are created by the [Formula](../commands/formula.md) or [Formula from string](../commands/formula-from-string.md) commands and allow you execute any 4D expression or code expressed as single-line text.
+`4D.Formula` objects are created by the [Formula](../commands/formula) or [Formula from string](../commands/formula-from-string) commands and allow you execute any 4D expression or code expressed as single-line text.
 
 `4D.Formula` class objects inherit from the [`4D.Function`](./FunctionClass.md) class. Thus, to execute the formula, you can:
 
@@ -19,16 +19,14 @@ See examples in the [Executing code in Function objects](../API/FunctionClass.md
 You can pass parameters to your formulas using a sequential parameter syntax based upon `$1, $2,...,$n`. The numbering of the $ parameters represents the order in which they will be passed to the formula. For example, you can write:
 
 ```4d
- var $f : Object
- $f:=New object
- $f.message:=Formula(ALERT("Hello "+$2+", "+$1))
+ $f:={message: Formula(ALERT("Hello "+$2+", "+$1))}
  $f.message("John";"Smith") //displays "Hello Smith, John"
 ```
 
 Or using the [.call()](#call) function:
 
 ```4d
- var $f : Object
+ var $f : 4D.Formula
  $f:=Formula($1+" "+$2)
  $text:=$f.call(Null;"Hello";"World") //returns "Hello World"
  $text:=$f.call(Null;"Welcome to";String(Year of(Current date))) //returns "Welcome to 2026" (for example)
@@ -76,7 +74,7 @@ Parameters are received within the method, in the order they are specified in th
 #### Example 1
 
 ```4d
- var $f : 4D.Function
+ var $f : 4D.Formula
  $f:=Formula($1+$2+$3)
 
  $c:=New collection(10;20;30)
@@ -87,7 +85,7 @@ Parameters are received within the method, in the order they are specified in th
 #### Example 2
 
 ```4d
- var $calc : 4D.Function
+ var $calc : 4D.Formula
  var $feta; $robot : Object
  $robot:=New object("name";"Robot";"price";543;"quantity";2)
  $feta:=New object("name";"Feta";"price";12.5;"quantity";5)
@@ -103,7 +101,7 @@ Parameters are received within the method, in the order they are specified in th
 #### Example 1
 
 ```4d
- var $f : 4D.Function
+ var $f : 4D.Formula
  $f:=Formula(Uppercase($1))
  $result:=$f.call(Null;"hello") // returns "HELLO"
 ```
@@ -122,7 +120,7 @@ Parameters are received within the method, in the order they are specified in th
 #### Example
 
 ```4d
- var $of : 4D.Function
+ var $of : 4D.Formula
  var $tf : Text
  $of:=Formula(String(Current time;HH MM AM PM))
  $tf:=$of.source //"String(Current time;HH MM AM PM)"

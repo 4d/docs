@@ -22,7 +22,7 @@ A **`4D.Function`** object contains a piece of code that can be executed from an
 Function objects can be encapsulated in object properties:
 
 ```4d
-var $message : 4D.Function
+var $message : 4D.Formula
 $message:=Formula(ALERT("Hello world"))
 $f:={message: $message}
 ```
@@ -50,48 +50,6 @@ You can also execute a function using the [`apply()`](#apply) and [`call()`](#ca
 ```4d
  $message.apply() //displays "Hello world"
 ```
-
-#### Passing parameters
-
-You can pass parameters to your formulas using a sequential parameter syntax based upon `$1, $2,...,$n`. The numbering of the $ parameters represents the order in which they will be passed to the formula. For example, you can write:
-
-```4d
- $f:={message:Formula(ALERT("Hello "+$2+", "+$1))}
- $f.message("John";"Smith") //displays "Hello Smith, John"
-```
-
-Or using the [.call()](#call) function:
-
-```4d
- var $f : 4D.Function
- $f:=Formula($1+" "+$2)
- $text:=$f.call(Null;"Hello";"World") //returns "Hello World"
- $text:=$f.call(Null;"Welcome to";String(Year of(Current date))) //returns "Welcome to 2026" (for example)
-```
-
-#### Parameters to a single method
-
-For more convenience, when the formula is made of a single project method, parameters can be omitted in the formula object initialization. They can just be passed when the formula is called. For example:
-
-```4d
- var $f : 4D.Function
-
- $f:=Formula(myMethod)
-  //Writing Formula(myMethod($1;$2)) is not necessary
- $text:=$f.call(Null;"Hello";"World") //returns "Hello World"
- $text:=$f.call() //returns "How are you?"
-
-  //myMethod
- #DECLARE ($param1 : Text; $param2 : Text)->$return : Text
- If(Count parameters=2)
-    $return:=$param1+" "+$param2
- Else
-    $return:="How are you?"
- End if
-```
-
-Parameters are received within the method, in the order they are specified in the call.
-
 
 
 ### Summary
