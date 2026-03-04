@@ -26,8 +26,8 @@ displayed_sidebar: docs
 
 |Version|Changements|
 |---|---|
-|13|Modifié|
 |<6|Créé|
+|13|Modifié|
 
 </details>
 </div>
@@ -78,7 +78,7 @@ Le deuxième paramètre (*$http*) est l'en-tête et le corps de la requête *HTT
 **Notes :** 
 
 * Pour des raisons de performances, la taille des données transitant via le paramètre $http ne peut dépasser 32 Ko. Au-delà, elles sont tronquées par le serveur HTTP de 4D.
-* Pour plus d'informations sur ce paramètre, reportez-vous à la description de la [On Web Connection database method](on-web-connection-database-method.md).
+* Pour plus d'informations sur ce paramètre, reportez-vous à la description de la [On Web Connection database method](../commands/on-web-connection-database-method).
 * **Adresse IP du navigateur**  
 Le troisième paramètre (*$ipBrowser*) reçoit l’adresse IP de la machine du navigateur. Cette information peut vous permettre, en particulier, de distinguer les connexions Intranet des connexions Internet.  
 **Note :** 4D retourne les adresses IPv4 dans un format hybride IPv6 comprenant un préfixe de 96 bits, par exemple ::ffff:192.168.2.34 pour l'adresse IPv4 192.168.2.34\. Pour plus d'informations, reportez-vous à la section *Prise en charge d’IP v6*.
@@ -95,13 +95,13 @@ La **On Web Authentication database method** retourne un booléen dans $result :
    * Si $result est **Vrai**, la connexion est acceptée.  
    * Si $result est **Faux**, la connexion est refusée.
 
-La [On Web Connection database method](on-web-connection-database-method.md) n’est exécutée que si la connexion est acceptée par **Sur authentification Web**. 
+La [On Web Connection database method](../commands/on-web-connection-database-method) n’est exécutée que si la connexion est acceptée par **Sur authentification Web**. 
 
-**ATTENTION :** Si aucune valeur n’est passée dans *$result*, ou si *$result* n’est pas définie dans la **On Web Authentication database method**, la connexion sera considérée comme acceptée, et la [On Web Connection database method](on-web-connection-database-method.md) sera exécutée. 
+**ATTENTION :** Si aucune valeur n’est passée dans *$result*, ou si *$result* n’est pas définie dans la **On Web Authentication database method**, la connexion sera considérée comme acceptée, et la [On Web Connection database method](../commands/on-web-connection-database-method) sera exécutée. 
 
 **Notes :**
 
-* N’appelez aucun élément d’interface dans la **On Web Authentication database method** (([ALERT](alert.md), [DIALOG](../commands/dialog.md), etc.), sinon son exécution sera interrompue et la connexion refusée. Il en est de même si une erreur se produit durant son traitement.
+* N’appelez aucun élément d’interface dans la **On Web Authentication database method** (([ALERT](../commands/alert), [DIALOG](../commands/dialog), etc.), sinon son exécution sera interrompue et la connexion refusée. Il en est de même si une erreur se produit durant son traitement.
 * Il est possible d'interdire l'exécution par *4DACTION* ou *4DSCRIPT* de chaque méthode projet à l'aide de l'option “Disponible via les balises HTML et URLs 4D (4DACTION...)” dans la boîte de dialogue des Propriétés des méthodes. Pour plus d'informations sur ce point, reportez-vous à la section *Sécurité des connexions*.
 
 ## Appels de la Méthode base Sur authentification Web 
@@ -114,7 +114,7 @@ La **On Web Authentication database method** est donc appelée dans les cas suiv
 * lorsque 4D reçoit un URL débutant par *4DCGI/*
 * lorsque 4D reçoit un URL débutant par *4DSYNC/*
 * lorsque 4D reçoit un URL demandant une page statique inexistante
-* lorsque 4D reçoit un URL d'accès à la racine et qu'aucune page d'accueil n'est définie dans les propriétés de la base ou via la commande [WEB SET HOME PAGE](web-set-home-page.md)
+* lorsque 4D reçoit un URL d'accès à la racine et qu'aucune page d'accueil n'est définie dans les propriétés de la base ou via la commande [WEB SET HOME PAGE](../commands/web-set-home-page)
 * lorsque 4D traite une balise *4DSCRIPT* dans une page semi-dynamique
 * lorsque 4D traite une balise *4DLOOP* basée sur une méthode dans une page semi-dynamique
 **Note de compatibilité :** La méthode base est également appelée lorsque 4D reçoit un URL débutant par *4DMETHOD/.* Cet URL obsolète est conservé par compatibilité uniquement.
@@ -210,3 +210,4 @@ var $i : Integer
     End if
  End for
 ```
+

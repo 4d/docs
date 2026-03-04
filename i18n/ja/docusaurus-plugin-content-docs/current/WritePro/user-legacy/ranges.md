@@ -40,7 +40,7 @@ slug: /WritePro/ranges
 
 ドキュメントのレンジは次のように定義できます：
 
-- [WP Text range](../commands-legacy/wp-text-range.md) `(wpArea ; startRange ; endRange) -> rangeObj`: 範囲として渡した境界値に基づく新しいレンジを返します。
+- [WP Text range](../commands-legacy/wp-text-range) `(wpArea ; startRange ; endRange) -> rangeObj`: 範囲として渡した境界値に基づく新しいレンジを返します。
 - [WP Selection range](../commands-legacy/wp-selection-range) `({*} wpArea) -> rangeObj`: 現在のユーザーセレクションに対応した新しいレンジを返します。
 - [WP Picture range](../commands-legacy/wp-picture-range) `(rangeObj) -> rangeObj`: 新しい画像のみのレンジを返します。
 - [WP Paragraph range](../commands-legacy/wp-paragraph-range) `(rangeObj) -> rangeObj`: 新しい段落のみのレンジを返します。

@@ -51,7 +51,7 @@ O parâmetro *modoSelecao* é utilizado para definir as possibilidades de seleç
   
 Se não passa o parâmetro *modoSelecao*, por padrão é utilizado o modo “Seleção múltipla”.  
   
-O parâmetro *entradaLista* lhe permite autorizar o modo “Entrada em lista” na lista mostrada. Este modo permite ao usuário selecionar e modificar diretamente os valores dos registros no formulário de saída. Passe [True](true.md "True") para ativar este modo ou [False](false.md "False") para desativá-lo. Por padrão, se não passar o parâmetro *entradaLista*, o modo “Entrada em lista” é desativado.  
+O parâmetro *entradaLista* lhe permite autorizar o modo “Entrada em lista” na lista mostrada. Este modo permite ao usuário selecionar e modificar diretamente os valores dos registros no formulário de saída. Passe [True](../commands/true) para ativar este modo ou [False](../commands/false) para desativá-lo. Por padrão, se não passar o parâmetro *entradaLista*, o modo “Entrada em lista” é desativado.  
   
 Lembre que com o comando DISPLAY SELECTION, este parâmetro apenas permite a seleção dos valores na lista e não sua modificação. De fato, o comando DISPLAY SELECTION carrega os registros da seleção atual em modo apenas leitura. Só o comando [MODIFY SELECTION](modify-selection.md) permite efetivamente a entrada de valores.   
   

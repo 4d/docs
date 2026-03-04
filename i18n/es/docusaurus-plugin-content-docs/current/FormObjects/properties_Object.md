@@ -29,7 +29,7 @@ Cada objeto de formulario activo está asociado a un nombre de objeto. Cada nomb
 
 > Los nombres de objetos están limitados a un tamaño de 255 bytes.
 
-Al utilizar el lenguaje de 4D, puede referirse a un objeto formulario activo por su nombre de objeto (ver los comandos [Object (Forms)](../commands/theme/Objects_Forms.md))).
+Al utilizar el lenguaje de 4D, puede referirse a un objeto formulario activo por su nombre de objeto (ver los comandos [Object (Forms)](../commands/theme/Objects_Forms))).
 
 Para más información sobre las reglas de denominación de los objetos de formulario, consulte la sección [Identificadores](Concepts/identifiers.md).
 
@@ -45,7 +45,7 @@ Para más información sobre las reglas de denominación de los objetos de formu
 
 #### Comandos
 
-[FORM GET OBJECTS](../commands-legacy/form-get-objects.md) - [OBJECT Get name](../commands-legacy/object-get-name.md)
+[FORM GET OBJECTS](../commands-legacy/form-get-objects) - [OBJECT Get name](../commands-legacy/object-get-name)
 
 ---
 
@@ -106,7 +106,7 @@ Puede dejarle a 4D crear variables asociadas con los objetos de su formulario (b
 
 Cuando una variable no tiene nombre, al cargar el formulario, 4D crea una nueva variable para el objeto, con un nombre calculado que es único en el espacio de las variables de proceso del intérprete (lo que significa que este mecanismo puede utilizarse incluso en modo compilado). Esta variable temporal se destruirá cuando se cierre el formulario.
 
-Obtener o definir el valor de los objetos del formulario que utilizan variables dinámicas, solo necesita llamar a los comandos [`OBJECT Get value`](../commands-legacy/object-get-value.md) y [`OBJECT SET VALUE`](../commands-legacy/object-set-value.md). Por ejemplo:
+Obtener o definir el valor de los objetos del formulario que utilizan variables dinámicas, solo necesita llamar a los comandos [`OBJECT Get value`](../commands-legacy/object-get-value) y [`OBJECT SET VALUE`](../commands-legacy/object-set-value). Por ejemplo:
 
 ```4d
  var $value : Variant
@@ -124,7 +124,7 @@ Para un list box array, la propiedad **Variable o Expresión** normalmente conti
 
 #### Comandos
 
-[`LISTBOX Get column formula`](../commands-legacy/listbox-get-column-formula.md) - [`LISTBOX SET COLUMN FORMULA`](../commands-legacy/listbox-set-column-formula.md) - [`OBJECT Get data source`](../commands-legacy/object-get-data-source.md) - [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) - [`OBJECT Get value`](../commands-legacy/object-get-value.md) - [`OBJECT Get pointer`](../commands-legacy/object-get-pointer.md) - [`OBJECT SET VALUE`](../commands-legacy/object-set-value.md) - [`OBJECT SET DATA SOURCE`](../commands-legacy/object-set-data-source.md) - [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md)
+[`LISTBOX Get column formula`](../commands-legacy/listbox-get-column-formula) - [`LISTBOX SET COLUMN FORMULA`](../commands-legacy/listbox-set-column-formula) - [`OBJECT Get data source`](../commands-legacy/object-get-data-source) - [`OBJECT Get data source formula`](../commands/object-get-data-source-formula) - [`OBJECT Get value`](../commands-legacy/object-get-value) - [`OBJECT Get pointer`](../commands-legacy/object-get-pointer) - [`OBJECT SET VALUE`](../commands-legacy/object-set-value) - [`OBJECT SET DATA SOURCE`](../commands-legacy/object-set-data-source) - [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula)
 
 ---
 
@@ -194,7 +194,7 @@ La colección o la selección de entidades debe estar disponible para el formula
 
 #### Comandos
 
-[`OBJECT Get data source`](../commands-legacy/object-get-data-source.md) - [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) - [`OBJECT Get value`](../commands-legacy/object-get-value.md) - [`OBJECT Get pointer`](../commands-legacy/object-get-pointer.md) - [`OBJECT SET VALUE`](../commands-legacy/object-set-value.md) - [`OBJECT SET DATA SOURCE`](../commands-legacy/object-set-data-source.md) - [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md)
+[`OBJECT Get data source`](../commands-legacy/object-get-data-source) - [`OBJECT Get data source formula`](../commands/object-get-data-source-formula) - [`OBJECT Get value`](../commands-legacy/object-get-value) - [`OBJECT Get pointer`](../commands-legacy/object-get-pointer) - [`OBJECT SET VALUE`](../commands-legacy/object-set-value) - [`OBJECT SET DATA SOURCE`](../commands-legacy/object-set-data-source) - [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula)
 
 ---
 
@@ -279,7 +279,7 @@ Para la traducción de la aplicación, puede introducir una referencia XLIFF en 
 
 #### Comandos
 
-[`OBJECT Get title`](../commands-legacy/object-get-title.md) - [`OBJECT SET TITLE`](../commands-legacy/object-set-title.md)
+[`OBJECT Get title`](../commands-legacy/object-get-title) - [`OBJECT SET TITLE`](../commands-legacy/object-set-title)
 
 ---
 
@@ -287,7 +287,7 @@ Para la traducción de la aplicación, puede introducir una referencia XLIFF en 
 
 This property sets the type of calculation to be done in a [column footer](listbox-header-footer.md#footers) area.
 
-> El cálculo de los pies de página también puede establecerse utilizando el comando 4D [`LISTBOX SET FOOTER CALCULATION`](../commands-legacy/listbox-set-footer-calculation.md).
+> El cálculo de los pies de página también puede establecerse utilizando el comando 4D [`LISTBOX SET FOOTER CALCULATION`](../commands-legacy/listbox-set-footer-calculation).
 
 Hay varios tipos de cálculos disponibles. La tabla siguiente muestra los cálculos que se pueden utilizar según el tipo de datos que se encuentran en cada columna e indica el tipo afectado automáticamente por 4D a la variable de pie de página (si no está escrita por el código):
 
@@ -336,4 +336,4 @@ Cuando está configurado **Personalizado** ("none" en JSON), 4D no realiza cálc
 
 #### Comandos
 
-[`LISTBOX Get footer calculation`](../commands-legacy/listbox-get-footer-calculation.md) - [`LISTBOX SET FOOTER CALCULATION`](../commands-legacy/listbox-set-footer-calculation.md)
+[`LISTBOX Get footer calculation`](../commands-legacy/listbox-get-footer-calculation) - [`LISTBOX SET FOOTER CALCULATION`](../commands-legacy/listbox-set-footer-calculation)

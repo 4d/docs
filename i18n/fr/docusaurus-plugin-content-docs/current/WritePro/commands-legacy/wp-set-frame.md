@@ -64,4 +64,4 @@ Vous souhaitez placer le curseur dans le pied de page gauche de la section coura
 
 ## Voir aussi 
 
-[WP Get frame](wp-get-frame.md)  
+[WP Get frame](../commands/wp-get-frame)  

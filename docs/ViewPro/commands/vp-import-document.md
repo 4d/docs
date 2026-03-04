@@ -47,7 +47,7 @@ The optional *paramObj* parameter allows you to define properties for the import
 
 |Parameter||Type|Description|
 |---|---|---|---|
-|formula|| 4D.Function | A callback method to be launched when the import has completed. You must use a formula returned by the [`Formula`](../../commands/formula.md) command. See [Passing a callback method (formula)](vp-export-document.md#passing-a-callback-method-formula). |
+|formula|| 4D.Function | A callback method to be launched when the import has completed. You must use a formula returned by the [`Formula`](../../commands/formula) command. See [Passing a callback method (formula)](vp-export-document.md#passing-a-callback-method-formula). |
 |password|| text| Microsoft Excel only (optional) - The password used to protect a MS Excel document. |
 |csvOptions||object|options for csv import |
 ||range|object|Cell range that contains the first cell where the data will be written. If the specified range is not a cell range, only the first cell of the range is used. |

@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.Is field value Null.Summary-->Is field value Null コマンドは*aField*引数 によって指定されたフィールドがNULL値を含む場合[True](true.md "True")を返します。<!-- END REF-->その他の場合[False](false.md "False")を返します。 
+<!--REF #_command_.Is field value Null.Summary-->Is field value Null コマンドは*aField*引数 によって指定されたフィールドがNULL値を含む場合[True](../commands/true)を返します。<!-- END REF-->その他の場合[False](../commands/false)を返します。 
 
 4DのSQLカーネルはNULL値を使用します。詳細については、4Dの*SQLリファレンス* マニュアルを参照して下さい。
 

@@ -37,8 +37,8 @@ title: データタイプの概要
 
 以下のコマンドを使用することで、フィールドや変数の型を調べることができます:
 
-- フィールドやスカラー変数に対しては、[`Type`](../commands-legacy/type.md) コマンド
-- 式対しては、[`Value type`](../commands-legacy/value-type.md) コマンド
+- フィールドやスカラー変数に対しては、[`Type`](../commands-legacy/type) コマンド
+- 式対しては、[`Value type`](../commands-legacy/value-type) コマンド
 
 ## デフォルト値
 

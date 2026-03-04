@@ -97,4 +97,4 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP DELETE TEXT BOX](wp-delete-text-box.md)  
+[WP DELETE TEXT BOX](../commands/wp-delete-text-box)  

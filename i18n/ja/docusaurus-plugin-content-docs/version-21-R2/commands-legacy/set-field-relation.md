@@ -48,7 +48,7 @@ displayed_sidebar: docs
 
 **Note:** このコマンドを使用して行った変更は、カレントプロセスに対してのみ適用されます。リレートプロパティウィンドウのオプションを用いて指定されたリレート設定は変更されません。
 
-**Note:** [SET AUTOMATIC RELATIONS](set-automatic-relations.md)コマンドに対して[True](true.md "True") を同じセッション中に渡したとき、**SET FIELD RELATION**への呼び出しは、それが[SET AUTOMATIC RELATIONS](set-automatic-relations.md)の前にあろうと後ろにあろうと無視されます。自動モードをロックして**SET FIELD RELATION**への呼び出しを有効化するためには、[SET AUTOMATIC RELATIONS](set-automatic-relations.md)に[False](false.md "False") を渡します。
+**Note:** [SET AUTOMATIC RELATIONS](set-automatic-relations.md)コマンドに対して[True](../commands/true) を同じセッション中に渡したとき、**SET FIELD RELATION**への呼び出しは、それが[SET AUTOMATIC RELATIONS](set-automatic-relations.md)の前にあろうと後ろにあろうと無視されます。自動モードをロックして**SET FIELD RELATION**への呼び出しを有効化するためには、[SET AUTOMATIC RELATIONS](set-automatic-relations.md)に[False](../commands/false) を渡します。
 
 ## 例題 
 

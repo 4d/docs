@@ -51,7 +51,7 @@ displayed_sidebar: docs
 
 任意の*\** 引数 が渡されると、検索は*start*で指定した位置から実行され、パターンにマッチしない場合でもそれ以降を検索しません。
 
-検索がオカレンスを発見した場合、コマンドは[True](true.md "True")を返します。
+検索がオカレンスを発見した場合、コマンドは[True](../commands/true)を返します。
 
 正規表現に関する詳細は、以下の情報を参照してください:  
 [http://ja.wikipedia.org/wiki/正規表現](http://ja.wikipedia.org/wiki/%E6%AD%A3%E8%A6%8F%E8%A1%A8%E7%8F%BE)

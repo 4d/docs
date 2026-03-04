@@ -38,4 +38,4 @@ Desea eliminar una imagen utilizando su ID:
 ## Ver también 
 
 *Gestión de imágenes*  
-[WP Add picture](../commands/wp-add-picture.md)  
+[WP Add picture](../commands/wp-add-picture)  

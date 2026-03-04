@@ -1,10 +1,11 @@
 ---
 id: Subrecords_theme
-title: Sub-registros
-sidebar_label: Sub-registros
+title: Subrecords
+sidebar_label: Subrecords
 slug: /commands/theme/Subrecords
 ---
 
-|                                                                                                         |
-| ------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #_command_.Get subrecord key.Syntax -->](../../commands-legacy/get-subrecord-key.md)<br/> |
+
+||
+|---|
+|[<!-- INCLUDE #_command_.Get subrecord key.Syntax -->](../../commands/get-subrecord-key)<br/>|

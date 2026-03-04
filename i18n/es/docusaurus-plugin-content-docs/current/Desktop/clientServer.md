@@ -61,7 +61,7 @@ Una vez establecida la conexión con el servidor, el proyecto remoto aparecerá 
 
 - Una versión .4dz actualizada del proyecto se produce automáticamente cuando es necesario, \*es decir, \*cuando el proyecto ha sido modificado y recargado por 4D Server. El proyecto se recarga:
   - automáticamente, cuando la ventana de la aplicación 4D Server pasa al frente del sistema operativo o cuando la aplicación 4D en la misma máquina guarda una modificación (ver abajo).
-  - cuando el comando [`RELOAD PROJECT`](../commands-legacy/reload-project.md) es ejecutado. Llamar a este comando es necesario cuando, por ejemplo, se ha sacado una nueva versión del proyecto desde la plataforma de control de fuentes.
+  - cuando el comando [`RELOAD PROJECT`](../commands-legacy/reload-project) es ejecutado. Llamar a este comando es necesario cuando, por ejemplo, se ha sacado una nueva versión del proyecto desde la plataforma de control de fuentes.
 
 ### Actualización de los archivos de proyecto en las máquinas remotas
 

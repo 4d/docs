@@ -25,7 +25,7 @@ As seguintes localizações podem ser utilizadas para imagens estáticas:
 
 #### Comandos
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
 
 ---
 
@@ -73,4 +73,4 @@ O formato **Truncado (não centrado)** faz com que 4D coloque o canto superior e
 
 #### Comandos
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)

@@ -21,7 +21,7 @@ title: 入力
 
 #### コマンド
 
-[`OBJECT Get auto spellcheck`](../commands-legacy/object-get-auto-spellcheck.md) - [`OBJECT SET AUTO SPELLCHECK`](../commands-legacy/object-set-auto-spellcheck.md) - [`WP Get view properties`](../WritePro/commands-legacy/wp-get-view-properties.md) - [`WP SET VIEW PROPERTIES`](../WritePro/commands-legacy/wp-set-view-properties.md)
+[`OBJECT Get auto spellcheck`](../commands-legacy/object-get-auto-spellcheck) - [`OBJECT SET AUTO SPELLCHECK`](../commands-legacy/object-set-auto-spellcheck) - [`WP Get view properties`](../WritePro/commands-legacy/wp-get-view-properties.md) - [`WP SET VIEW PROPERTIES`](../WritePro/commands-legacy/wp-set-view-properties.md)
 
 ---
 
@@ -39,7 +39,7 @@ title: 入力
   スタイルの変更をおこなうためのコマンド: スタイル、サイズ、カラー、背景色。
   このポップアップメニューを使用してユーザーがスタイル属性を編集する と、4D は `On After Edit` フォームイベントを生成します。
 
-[Webエリア](webArea_overview.md) の場合、メニューの内容はプラットフォームの描画エンジンにより設定されます。 コンテキストメニューは[`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) コマンドを使用することでアクセスを管理することが可能です。
+[Webエリア](webArea_overview.md) の場合、メニューの内容はプラットフォームの描画エンジンにより設定されます。 コンテキストメニューは[`WA SET PREFERENCE`](../commands-legacy/wa-set-preference) コマンドを使用することでアクセスを管理することが可能です。
 
 #### JSON 文法
 
@@ -53,7 +53,7 @@ title: 入力
 
 #### コマンド
 
-[`OBJECT Get context menu`](../commands-legacy/object-get-context-menu.md) - [`OBJECT SET CONTEXT MENU`](../commands-legacy/object-set-context-menu.md) - [`WA GET PREFERENCE`](../commands-legacy/wa-get-preference.md) - [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md)
+[`OBJECT Get context menu`](../commands-legacy/object-get-context-menu) - [`OBJECT SET CONTEXT MENU`](../commands-legacy/object-set-context-menu) - [`WA GET PREFERENCE`](../commands-legacy/wa-get-preference) - [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference)
 
 ---
 
@@ -77,11 +77,11 @@ title: 入力
 
 #### コマンド
 
-[`OBJECT Get enterable`](../commands-legacy/object-get-enterable.md) - [`OBJECT SET ENTERABLE`](../commands-legacy/object-set-enterable.md)
+[`OBJECT Get enterable`](../commands-legacy/object-get-enterable) - [`OBJECT SET ENTERABLE`](../commands-legacy/object-set-enterable)
 
 #### 参照
 
-[`FORM GET ENTRY ORDER`](../commands-legacy/form-get-entry-order.md) - [`FORM SET ENTRY ORDER`](../commands-legacy/form-set-entry-order.md)
+[`FORM GET ENTRY ORDER`](../commands-legacy/form-get-entry-order) - [`FORM SET ENTRY ORDER`](../commands-legacy/form-set-entry-order)
 
 ---
 
@@ -141,7 +141,7 @@ title: 入力
 
 #### コマンド
 
-[`OBJECT Get filter`](../commands-legacy/object-get-filter.md) - [`OBJECT SET FILTER`](../commands-legacy/object-set-filter.md)
+[`OBJECT Get filter`](../commands-legacy/object-get-filter) - [`OBJECT SET FILTER`](../commands-legacy/object-set-filter)
 
 ## フォーカス可
 
@@ -176,7 +176,7 @@ title: 入力
 
 #### コマンド
 
-[`OBJECT Get enterable`](../commands-legacy/object-get-enterable.md) - [`OBJECT SET ENTERABLE`](../commands-legacy/object-set-enterable.md)
+[`OBJECT Get enterable`](../commands-legacy/object-get-enterable) - [`OBJECT SET ENTERABLE`](../commands-legacy/object-set-enterable)
 
 ---
 
@@ -200,7 +200,7 @@ title: 入力
 
 #### コマンド
 
-[`OBJECT Get keyboard layout`](../commands-legacy/object-get-keyboard-layout.md) - [`OBJECT SET KEYBOARD LAYOUT`](../commands-legacy/object-set-keyboard-layout.md)
+[`OBJECT Get keyboard layout`](../commands-legacy/object-get-keyboard-layout) - [`OBJECT SET KEYBOARD LAYOUT`](../commands-legacy/object-set-keyboard-layout)
 
 ---
 
@@ -236,7 +236,7 @@ title: 入力
 
 #### コマンド
 
-[`OBJECT Get multiline`](../commands-legacy/object-get-multiline.md) - [`OBJECT SET MULTILINE`](../commands-legacy/object-set-multiline.md)
+[`OBJECT Get multiline`](../commands-legacy/object-get-multiline) - [`OBJECT SET MULTILINE`](../commands-legacy/object-set-multiline)
 
 ---
 
@@ -261,7 +261,7 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
 
 この場合、"プレースホルダー" のフィールドには参照のみを渡します。 参照と静的なテキストを組み合わせることはできません。
 
-> [`OBJECT SET PLACEHOLDER`](../commands-legacy/object-set-placeholder.md) および [`OBJECT Get placeholder`](../commands-legacy/object-get-placeholder.md) コマンドを使用することで、プレースホルダーのテキストをプログラミングによって設定あるいは取得することができます。
+> [`OBJECT SET PLACEHOLDER`](../commands-legacy/object-set-placeholder) および [`OBJECT Get placeholder`](../commands-legacy/object-get-placeholder) コマンドを使用することで、プレースホルダーのテキストをプログラミングによって設定あるいは取得することができます。
 
 #### JSON 文法
 
@@ -279,7 +279,7 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
 
 #### コマンド
 
-[`OBJECT Get placeholder`](../commands-legacy/object-get-placeholder.md) - [`OBJECT SET PLACEHOLDER`](../commands-legacy/object-set-placeholder.md)
+[`OBJECT Get placeholder`](../commands-legacy/object-get-placeholder) - [`OBJECT SET PLACEHOLDER`](../commands-legacy/object-set-placeholder)
 
 ---
 
@@ -328,7 +328,7 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
 
 #### コマンド
 
-[`OBJECT GET SHORTCUT`](../commands-legacy/object-get-shortcut.md) - [`OBJECT SET SHORTCUT`](../commands-legacy/object-set-shortcut.md)
+[`OBJECT GET SHORTCUT`](../commands-legacy/object-get-shortcut) - [`OBJECT SET SHORTCUT`](../commands-legacy/object-set-shortcut)
 
 ---
 
@@ -352,5 +352,5 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
 
 #### コマンド
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
 

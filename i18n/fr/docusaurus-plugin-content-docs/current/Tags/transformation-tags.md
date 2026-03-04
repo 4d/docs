@@ -39,7 +39,7 @@ Il est possible de combiner plusieurs types de balises. Par exemple, la structur
 
 L'analyse ou le parsing du contenu d'une source de *template* se fait dans deux contextes :
 
-- En utilisant la commande [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md) ; cette commande accepte un *template* en entrée, ainsi que des paramètres optionnels et renvoie un texte résultant du traitement.
+- En utilisant la commande [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags) ; cette commande accepte un *template* en entrée, ainsi que des paramètres optionnels et renvoie un texte résultant du traitement.
 
 - En utilisant le serveur HTTP intégré de 4D : [pages de templates](WebServer/templates.md) envoyées au moyen des commandes `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (text/html type BLOB), `WEB SEND TEXT` , ou appelées en utilisant des URL. Dans ce dernier cas, à des fins d'optimisation, les pages suffixées par ".htm" et ".html" ne sont PAS parsées. Dans ce dernier cas, à des fins d'optimisation, les pages suffixées par ".htm" et ".html" ne sont PAS parsées.
 
@@ -157,10 +157,10 @@ End if
 
 Voici les caractéristiques de la balise 4DCODE :
 
-- La commande [`TRACE`](../commands-legacy/trace.md) est prise en charge et active le [débogueur 4D](../Debugging/debugger.md), ce qui vous permet de déboguer le code de votre template.
+- La commande [`TRACE`](../commands-legacy/trace) est prise en charge et active le [débogueur 4D](../Debugging/debugger.md), ce qui vous permet de déboguer le code de votre template.
 - Toute erreur affichera le dialogue d'erreur standard qui permet à l'utilisateur d'arrêter l'exécution du code ou d'entrer en mode débogage.
 - Le texte compris entre `<!--#4DCODE` and `-->` est divisé en lignes acceptant n'importe quelle convention de fin de ligne (cr, lf, ou crlf).
-- Le texte est "tokenisé" dans le contexte de la base de données qui a appelé [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md). C'est important pour la reconnaissance des méthodes projet par exemple. La propriété de méthode [Disponible via les balises et les URL 4D (4DACTION...)](WebServer/allowProject.md) n'est pas prise en compte.
+- Le texte est "tokenisé" dans le contexte de la base de données qui a appelé [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags). C'est important pour la reconnaissance des méthodes projet par exemple. La propriété de méthode [Disponible via les balises et les URL 4D (4DACTION...)](WebServer/allowProject.md) n'est pas prise en compte.
 - Même si le texte utilise toujours l'anglais-US, il est recommandé d'utiliser la syntaxe token (:Cxxx) pour les noms de commandes et de constantes afin de se prémunir contre d'éventuels problèmes dus à des commandes ou des constantes renommées d'une version de 4D à une autre.
 
 > Le fait que les balises 4DCODE puissent appeler n'importe quelle commande du langage 4D ou méthode du projet pourrait être considéré comme un problème de sécurité, en particulier lorsque la base de données est disponible via HTTP. Toutefois, étant donné qu'elle exécute du code côté serveur appelé à partir de vos propres fichiers de modèle, la balise elle-même ne représente pas un problème de sécurité. Dans ce contexte, comme pour tout serveur Web, la sécurité est principalement gérée au niveau des accès distants aux fichiers du serveur.
@@ -256,7 +256,7 @@ Le nombre de boucles est basé sur le nombre d'entities présentes dans l'entity
     </table>
 ```
 
-#### Exemple avec [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md)
+#### Exemple avec [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags)
 
 ```4d
 var customers : cs.CustomersSelection
@@ -429,7 +429,7 @@ Lors de l'inclusion, quelle que soit l'extension du nom de fichier, 4D analyse l
 
 Une page incluse avec le commentaire `<!--#4DINCLUDE -->` est chargée dans le cache du serveur Web de la même manière que les pages appelées via un URL ou envoyées avec la commande `WEB SEND FILE`.
 
-Dans *path*, passez le chemin du document à inclure. Attention : Dans le cas d'un appel `4DINCLUDE`, le chemin est relatif au document analysé, c'est-à-dire le document "parent". Utilisez la barre oblique (/) comme séparateur de dossier et les deux points (..) pour remonter d'un niveau (syntaxe HTML). Lorsque vous utilisez la balise `4DINCLUDE` avec la commande [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md), le dossier par défaut est le dossier du projet.
+Dans *path*, passez le chemin du document à inclure. Attention : Dans le cas d'un appel `4DINCLUDE`, le chemin est relatif au document analysé, c'est-à-dire le document "parent". Utilisez la barre oblique (/) comme séparateur de dossier et les deux points (..) pour remonter d'un niveau (syntaxe HTML). Lorsque vous utilisez la balise `4DINCLUDE` avec la commande [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags), le dossier par défaut est le dossier du projet.
 
 > Vous pouvez modifier le dossier par défaut utilisé par la balise `4DINCLUDE` dans la page courante, en utilisant la balise `<!--#4DBASE -->` (voir ci-dessous).
 
@@ -506,7 +506,7 @@ L'exemple de code suivant :
 
 Cette syntaxe crée une boucle tant que la méthode renvoie `True`. La méthode prend un paramètre de type entier long. Elle est d'abord appelée avec la valeur 0 pour permettre une étape d'initialisation (si nécessaire) ; elle est ensuite appelée avec les valeurs 1, puis 2, puis 3 et ainsi de suite, tant qu'elle renvoie `True`.
 
-Pour des raisons de sécurité, dans un process Web, la méthode base [`On Web Authentication`](../commands-legacy/on-web-authentication-database-method.md) peut être appelée une fois juste avant l'étape d'initialisation (exécution de la méthode avec 0 comme paramètre). Si l'authentification est correcte, l'étape d'initialisation se poursuit.
+Pour des raisons de sécurité, dans un process Web, la méthode base [`On Web Authentication`](../commands-legacy/on-web-authentication-database-method) peut être appelée une fois juste avant l'étape d'initialisation (exécution de la méthode avec 0 comme paramètre). Si l'authentification est correcte, l'étape d'initialisation se poursuit.
 
 L'exemple de code suivant :
 
@@ -575,7 +575,7 @@ Par exemple, le code suivant :
 
 Dans ce cas, la balise `4DLOOP` fonctionne comme avec un tableau : elle fait une boucle pour chaque élément du tableau référencé par le pointeur. L'indice de l'élément courant du tableau est augmenté à chaque fois que la portion de code est répétée.
 
-Cette syntaxe est utile lorsque vous passez un pointeur de tableau en tant que paramètre à la commande [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md).
+Cette syntaxe est utile lorsque vous passez un pointeur de tableau en tant que paramètre à la commande [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags).
 
 Exemple :
 
@@ -609,7 +609,7 @@ Les messages suivants peuvent être affichés :
 
 La balise `4DSCRIPT` vous permet d'exécuter des méthodes 4D lors du traitement du template. La présence de la balise `<!--#4DSCRIPT/MyMethod/MyParam-->` en tant que commentaire HTML lance l'exécution de la méthode `MyMethod` avec le paramètre `Param` en tant que chaîne de caractères.
 
-> Si la balise est appelée dans le contexte d'un process Web, lorsque la page est chargée, 4D appelle la méthode base [`On Web Authentication`](../commands-legacy/on-web-authentication-database-method.md) (si elle existe). Si elle retourne True, 4D exécute la méthode.
+> Si la balise est appelée dans le contexte d'un process Web, lorsque la page est chargée, 4D appelle la méthode base [`On Web Authentication`](../commands-legacy/on-web-authentication-database-method) (si elle existe). Si elle retourne True, 4D exécute la méthode.
 
 La méthode doit renvoyer un texte. Si la chaîne commence par le caractère de code 1, elle est considérée comme du HTML (le même principe s'applique à la balise `4DHTML`).
 

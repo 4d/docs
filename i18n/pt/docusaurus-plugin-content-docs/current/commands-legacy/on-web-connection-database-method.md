@@ -31,7 +31,7 @@ Para maior informação, consulte a continuação o parágrafo “Chamadas ao M�
   
 **Nota de compatibilidade**: o método banco também se chama em caso de criação de um contexto em modo contextual (modo obsoleto pode ser utilizado em bancos 4D convertidos.  
   
-A petição deve ter sido aceita previamente pelo [On Web Authentication database method](on-web-authentication-database-method.md) (se existir) e o servidor web deve ser lançado.  
+A petição deve ter sido aceita previamente pelo [On Web Authentication database method](../commands/on-web-authentication-database-method) (se existir) e o servidor web deve ser lançado.  
   
 O método de banco On Web Connection database method recebe seis parâmetros de tipo texto, passados por 4D ($url, $http, $ipBrowser, $ipServer, $user e $pw). Os conteúdos desses parâmetros são os seguintes:
 
@@ -98,10 +98,11 @@ Os parâmetros *$user* e *$pw* recebem o nome de usuário e senha inseridos pelo
 
 O On Web Connection database method pode ser utilizado como ponto de entrada para o servidor web 4D, seja para usar a URL especial *4DCGI*, ou utilizando as URLs de comando personalizados.
 
-**Advertência**: a chamada de um comando 4D que mostra um elemento de interface ([DIALOG](../commands/dialog.md), [ALERT](alert.md)...) termina o processamento do método.  
+**Advertência**: a chamada de um comando 4D que mostra um elemento de interface ([DIALOG](../commands/dialog), [ALERT](../commands/alert)...) termina o processamento do método.  
   
 O On Web Connection database method é chamado nos seguintes casos:
 
 * Quando 4D recebe a *URL /4DCGI*. O método banco se chama com a URL */4DCGI/* em *$url*.
 * Quando uma página web chamada com uma URL de tipo *<rota>/<arquivo>* não for encontrada. O método de banco se chama com a URL (\*).
 * Quando uma página web for chama com uma URL do tipo <file>/ e nenhuma página tiver sido definida como padrão. O método de banco se chama com a URL
+

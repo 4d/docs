@@ -64,4 +64,4 @@ Se quiser colocar o cursor no rodapé esquerdo da seção atual:
 
 ## Ver também 
 
-[WP Get frame](wp-get-frame.md)  
+[WP Get frame](../commands/wp-get-frame)  

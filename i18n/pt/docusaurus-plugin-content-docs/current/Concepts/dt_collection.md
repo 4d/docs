@@ -46,18 +46,18 @@ As coleções devem ter sido inicializadas, por exemplo utilizando o comando <co
 
 A instanciação da colecção pode ser feita de uma das seguintes formas:
 
-- usando o comando [`New collection`](../commands/new-collection.md),
+- usando o comando [`New collection`](../commands/new-collection),
 - utilizando o operador [].
 
 :::info
 
-Vários comandos 4D e coleções de retorno de funções, por exemplo [`Monitored activity`](../commands-legacy/monitored-activity.md) ou [`collection.copy`](../API/CollectionClass.md#copy). Neste caso, não é necessário instanciar explicitamente a coleção, a linguagem 4D fá-lo por si.
+Vários comandos 4D e coleções de retorno de funções, por exemplo [`Monitored activity`](../commands-legacy/monitored-activity) ou [`collection.copy`](../API/CollectionClass.md#copy). Neste caso, não é necessário instanciar explicitamente a coleção, a linguagem 4D fá-lo por si.
 
 :::
 
 ### Comando `New object`
 
-O comando [`Nova coleção`](../commands/new-collection.md) cria uma nova coleção vazia ou pré-preenchida e retorna sua referência.
+O comando [`Nova coleção`](../commands/new-collection) cria uma nova coleção vazia ou pré-preenchida e retorna sua referência.
 
 Exemplos:
 
@@ -105,8 +105,8 @@ Se você criar um literal de coleção contendo um único elemento, certifique-s
 
 Pode criar dois tipos de coleções:
 
-- coleções regulares (não compartilhadas), usando o comando [`New collection`](commands/new-collection.md) ou a sintaxe literal da coleção (`[]`). Essas coleções podem ser editadas sem qualquer controle de acesso específico mas não podem ser compartilhadas entre processos.
-- coleções compartilhadas, usando o comando [`New shared collection`](commands/new-shared-collection.md). Essas coleções podem ser partilhadas entre processos, incluindo threads preemptivos. O acesso a essas coleções é controlado pelas estruturas [`Use...End use`](Concepts/shared.md#useend-use).
+- coleções regulares (não compartilhadas), usando o comando [`New collection`](../commands/new-collection) ou a sintaxe literal da coleção (`[]`). Essas coleções podem ser editadas sem qualquer controle de acesso específico mas não podem ser compartilhadas entre processos.
+- coleções compartilhadas, usando o comando [`New shared collection`](../commands/new-shared-collection). Essas coleções podem ser partilhadas entre processos, incluindo threads preemptivos. O acesso a essas coleções é controlado pelas estruturas [`Use...End use`](Concepts/shared.md#useend-use).
 
 Para obter mais informações, consulte a seção [Objetos e coleções compartilhados](shared.md).
 

@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-La commande **WP Table range** retourne un objet plage qui n'adresse que les tableaux qui intersectent l'*objCible* que vous avez passé en paramètre. Elle retournera une plage de wk type table, même si *objCible* passé en paramètre ne contient pas de tableau. L'objet plage tableaux retourné peut être utilisé par [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) et [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) pour gérer les attributs à appliquer aux tableaux et à leur contenu.
+La commande **WP Table range** retourne un objet plage qui n'adresse que les tableaux qui intersectent l'*objCible* que vous avez passé en paramètre. Elle retournera une plage de wk type table, même si *objCible* passé en paramètre ne contient pas de tableau. L'objet plage tableaux retourné peut être utilisé par [WP GET ATTRIBUTES](../commands/wp-get-attributes) et [WP SET ATTRIBUTES](../commands/wp-set-attributes) pour gérer les attributs à appliquer aux tableaux et à leur contenu.
 
 Dans le paramètre *objCible*, vous pouvez passer :
 
@@ -47,5 +47,6 @@ Vous souhaitez modifier l'apparence des tableaux contenus dans la plage tableau 
 
 ## Voir aussi 
 
-[WP Get elements](wp-get-elements.md)  
-[WP Text range](wp-text-range.md)  
+[WP Get elements](../commands/wp-get-elements)  
+[WP Text range](../commands/wp-text-range)  
+

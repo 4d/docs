@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Find previous.Summary-->**WP Find previous** コマンドは、コマンドは*targetObj* 引数のオブジェクト内の*searchBefore* 引数で指定したレンジの前の部分内を、*searchValue* 引数の値を、*searchCondition* 引数の検索条件に基づいて検索を行います。<!-- END REF--> また任意の引数を使用することで見つかった結果を置き換えることができます。
 
-**注**: **WP Find previous** はフォーミュラ内のテキストを検索または置換はしません。この場合には、[WP Get formulas](wp-get-formulas.md) コマンドを使用して下さい。
+**注**: **WP Find previous** はフォーミュラ内のテキストを検索または置換はしません。この場合には、[WP Get formulas](../commands/wp-get-formulas) コマンドを使用して下さい。
 
 *targetObj* 引数には、以下のいずれかを格納したオブジェクトを渡します:
 
@@ -100,5 +100,5 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP Find all](wp-find-all.md)  
-[WP Find next](wp-find-next.md)  
+[WP Find all](../commands/wp-find-all)  
+[WP Find next](../commands/wp-find-next)  

@@ -153,7 +153,7 @@ When returning a 4D.OutgoingMessage object instance, 4D automatically sets some 
 
 :::note
 
-*value* 引数の値を、*key* 引数で"Content-Type" ヘッダーを指定して設定しようとする場合、この関数を、[`setBody()`](#setbody) の後に呼び出すようにして下さい。`setBody()` は自動的にヘッダーに値を入れるからです。 "Content-Type" ヘッダーの値の一覧については、の[`WEB SEND BLOB`](../commands-legacy/web-send-blob.md) ドキュメンテーションを参照して下さい。
+*value* 引数の値を、*key* 引数で"Content-Type" ヘッダーを指定して設定しようとする場合、この関数を、[`setBody()`](#setbody) の後に呼び出すようにして下さい。`setBody()` は自動的にヘッダーに値を入れるからです。 "Content-Type" ヘッダーの値の一覧については、の[`WEB SEND BLOB`](../commands-legacy/web-send-blob) ドキュメンテーションを参照して下さい。
 
 :::
 

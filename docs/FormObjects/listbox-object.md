@@ -7,12 +7,12 @@ title: List Box Object
 
 In an array list box, each column must be associated with a one-dimensional 4D array; all array types can be used, with the exception of pointer arrays. The number of rows is based on the number of array elements.
 
-By default, 4D assigns the name "ColumnX" to each column. You can change it, as well as other column properties, in the [column properties](./listbox-column.md). The display format for each column can also be defined using the [`OBJECT SET FORMAT`](../commands-legacy/object-set-format.md) command.
+By default, 4D assigns the name "ColumnX" to each column. You can change it, as well as other column properties, in the [column properties](./listbox-column.md). The display format for each column can also be defined using the [`OBJECT SET FORMAT`](../commands/object-set-format) command.
 
 >Array type list boxes can be displayed in [hierarchical mode](listbox_overview.md#hierarchical-list-boxes), with specific mechanisms.
 
 With array type list box, the values entered or displayed are managed using the 4D language. You can also associate a [choice list](properties_DataSource.md#choice-list) with a column in order to control data entry.
-The values of columns are managed using high-level List box commands (such as [`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows) or [`LISTBOX DELETE ROWS`](../commands-legacy/listbox-delete-rows.md)) as well as array manipulation commands. For example, to initialize the contents of a column, you can use the following instruction:
+The values of columns are managed using high-level List box commands (such as [`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows) or [`LISTBOX DELETE ROWS`](../commands/listbox-delete-rows)) as well as array manipulation commands. For example, to initialize the contents of a column, you can use the following instruction:
 
 ```4d
 ARRAY TEXT(varCol;size)
@@ -31,7 +31,7 @@ LIST TO ARRAY("ListName";varCol)
 
 ## Selection list boxes
 
-In this type of list box, each column can be associated with a field (for example `[Employees]LastName)` or an expression. The expression can be based on one or more fields (for example, `[Employees]FirstName+" "[Employees]LastName`) or it may simply be a formula (for example `String(Milliseconds)`). The expression can also be a project method, a variable or an array item. You can use the [`LISTBOX SET COLUMN FORMULA`](../commands-legacy/listbox-set-column-formula.md) and [`LISTBOX INSERT COLUMN FORMULA`](../commands-legacy/listbox-insert-column-formula.md) commands to modify columns programmatically.
+In this type of list box, each column can be associated with a field (for example `[Employees]LastName)` or an expression. The expression can be based on one or more fields (for example, `[Employees]FirstName+" "[Employees]LastName`) or it may simply be a formula (for example `String(Milliseconds)`). The expression can also be a project method, a variable or an array item. You can use the [`LISTBOX SET COLUMN FORMULA`](../commands/listbox-set-column-formula) and [`LISTBOX INSERT COLUMN FORMULA`](../commands/listbox-insert-column-formula) commands to modify columns programmatically.
 
 The contents of each row is then evaluated according to a selection of records: the **current selection** of a table or a **named selection**.
 
@@ -147,7 +147,7 @@ Supported properties depend on the list box type.
 ## Supported Form Events {#supported-form-events}
 
 
-|Form event|Additional Properties Returned (see [Form event](../commands/form-event.md) for main properties)| Comments|
+|Form event|Additional Properties Returned (see [Form event](../commands/form-event) for main properties)| Comments|
 |---|---|---|
 |On After Edit|<ul><li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li></ul>||
 |On After Keystroke|<ul><li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li></ul>||
@@ -205,5 +205,6 @@ Form events on list box or list box column objects may return the following addi
 |verticalScroll|longint|Positive if scroll is towards the bottom, negative if towards the top|
 
 >If an event occurs on a "fake" column or row that doesn't exist, an empty string is typically returned.
+
 
 

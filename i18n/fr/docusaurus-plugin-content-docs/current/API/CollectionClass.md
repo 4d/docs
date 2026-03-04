@@ -5,7 +5,7 @@ title: Collection
 
 La classe Collection gère les expressions de type [Collection](Concepts/dt_collection.md).
 
-Une collection est initialisée avec les commandes [`New collection`](../commands/new-collection.md) ou [`New shared collection`](../commands/new-shared-collection.md).
+Une collection est initialisée avec les commandes [`New collection`](../commands/new-collection) ou [`New shared collection`](../commands/new-shared-collection).
 
 ### Exemple
 
@@ -2048,7 +2048,7 @@ Toutes les collections *colsToSort* doivent avoir le même nombre d'éléments, 
 
 :::
 
-Si vous souhaitez trier les collections dans un ordre autre que croissant, vous devez fournir *formula* ([objet Formula](../commands/formula.md)) qui définit l'ordre de tri. La valeur de retour doit être un booléen qui indique l'ordre relatif des deux éléments : **True** si *$1.value* est inférieur à *$1.value2*, **False** si *$1.value* est supérieur à *$1.value2*. Vous pouvez passer des paramètres supplémentaires à la formule si nécessaire.
+Si vous souhaitez trier les collections dans un ordre autre que croissant, vous devez fournir *formula* ([objet Formula](../commands/formula)) qui définit l'ordre de tri. La valeur de retour doit être un booléen qui indique l'ordre relatif des deux éléments : **True** si *$1.value* est inférieur à *$1.value2*, **False** si *$1.value* est supérieur à *$1.value2*. Vous pouvez passer des paramètres supplémentaires à la formule si nécessaire.
 
 La formule reçoit les paramètres suivants :
 

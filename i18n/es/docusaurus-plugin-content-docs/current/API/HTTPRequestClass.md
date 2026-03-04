@@ -177,7 +177,7 @@ Esta es la secuencia de llamadas de retorno:
 
 :::info
 
-Para que las funciones de retrollamada se llamen cuando no utilice [`wait()`](#wait) (llamada asíncrona), el proceso debe ser un [worker](../Develop/processes.md#worker-processes) creado con [`CALL WORKER`](../commands-legacy/call-worker.md), NO [`New process`](../commands-legacy/new-process.md).
+Para que las funciones de retrollamada se llamen cuando no utilice [`wait()`](#wait) (llamada asíncrona), el proceso debe ser un [worker](../Develop/processes.md#worker-processes) creado con [`CALL WORKER`](../commands-legacy/call-worker), NO [`New process`](../commands-legacy/new-process).
 
 :::
 
@@ -428,7 +428,7 @@ Si la respuesta del servidor ya ha llegado, la función regresa inmediatamente.
 
 :::note
 
-Durante la ejecución de .wait(), se ejecutan las funciones de retrollamada de los workers, tanto si proceden de otras instancias `HTTPRequest` o [`SystemWorker`](SystemWorkerClass.md), como de otras llamadas [`CALL WORKER`](../commands-legacy/call-worker.md).  Puede salir de un .wait() llamando a [`terminate()`](#terminate) desde una retrollamada.
+Durante la ejecución de .wait(), se ejecutan las funciones de retrollamada de los workers, tanto si proceden de otras instancias `HTTPRequest` o [`SystemWorker`](SystemWorkerClass.md), como de otras llamadas [`CALL WORKER`](../commands-legacy/call-worker).  Puede salir de un .wait() llamando a [`terminate()`](#terminate) desde una retrollamada.
 
 :::
 

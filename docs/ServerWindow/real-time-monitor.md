@@ -24,7 +24,7 @@ The following information is provided for each line:
 	+ **Sub-operations** (if any): Dependent operations of the selected operation (e.g. deleting related records before a parent record).
 	+ **Process Details**: Additional information concerning the table, field, process or client, depending on the type of operation
 
-> Real-time monitoring page uses the [`ACTIVITY SNAPSHOT`](../commands-legacy/activity-snapshot.md) command internally. More information can be found in this command description.
+> Real-time monitoring page uses the [`ACTIVITY SNAPSHOT`](../commands/activity-snapshot) command internally. More information can be found in this command description.
 
 The page is active and updated permanently as soon as it is displayed. It should be noted that its operation can significantly slow the execution of the application. It is possible to suspend the updating of this page in one of the following ways:
 
@@ -60,3 +60,4 @@ The **Snapshot** button allows you to copy to the clipboard all the operations d
 ## Display operations at least 5 seconds
 
 If you check the **Display operations at least 5 seconds** option, any listed operation will be displayed on the page for at least five seconds, even after its execution is finished. Retained operations appear dimmed in the operation list. This feature is useful for getting information about operations that execute very quickly.
+

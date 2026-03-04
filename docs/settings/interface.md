@@ -66,7 +66,7 @@ The following schemes are available:
 
 The main application scheme will be applied to forms by default. However, it can be overriden:
 
--   by the [SET APPLICATION COLOR SCHEME](../commands-legacy/set-application-color-scheme.md) command at the working session level;
+-   by the [SET APPLICATION COLOR SCHEME](../commands/set-application-color-scheme) command at the working session level;
 -   using by the [Color Scheme](../FormEditor/propertiesForm.html#color-scheme) form property at each form level (highest priority level). **Note:** When printed, forms always use the "Light" scheme.
 
 
@@ -97,5 +97,6 @@ To change the shortcut of an operation, click the corresponding **Edit** button.
 ![](../assets/en/settings/shortcut.png)
 
 To change the shortcut, type the new key combination on your keyboard and click **OK**. If you prefer not to have a shortcut for an operation, click **Clear**.
+
 
 

@@ -45,8 +45,9 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP FREEZE FORMULAS](wp-freeze-formulas.md)  
-[WP Get formulas](wp-get-formulas.md)  
-[WP INSERT FORMULA](../commands/wp-insert-formula.md)  
-[WP SET DATA CONTEXT](wp-set-data-context.md)  
+[WP FREEZE FORMULAS](../commands/wp-freeze-formulas)  
+[WP Get formulas](../commands/wp-get-formulas)  
+[WP INSERT FORMULA](../commands/wp-insert-formula)  
+[WP SET DATA CONTEXT](../commands/wp-set-data-context)  
 *フォーミュラの管理*  
+

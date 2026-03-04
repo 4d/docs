@@ -8,7 +8,7 @@ title: Background and Border
 
 Allows setting a different background color for odd-numbered rows/columns in a list box. By default, *Automatic* is selected: the column uses the alternate background color set at the list box level.
 
-You can also set this property using the [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) command.
+You can also set this property using the [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) command.
 
 #### JSON Grammar
 
@@ -22,7 +22,7 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](../commands-l
 
 #### Commands
 
-[`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors.md) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md)
+[`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
 
 ---
 
@@ -32,7 +32,7 @@ Defines the background color of an object.
 
 In the case of a list box, by default *Automatic* is selected: the column uses the background color set at the list box level.
 
-You can also set this property using the [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) command.
+You can also set this property using the [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) command.
 
 #### JSON Grammar
 
@@ -46,7 +46,7 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](../commands-l
 
 #### Commands
 
-[`LISTBOX Get row color`](../commands-legacy/listbox-get-row-color.md) - [`LISTBOX SET ROW COLOR`](../commands-legacy/listbox-set-row-color.md) - [`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors.md) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md)
+[`LISTBOX Get row color`](../commands/listbox-get-row-color) - [`LISTBOX SET ROW COLOR`](../commands/listbox-set-row-color) - [`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
 
 
 
@@ -60,9 +60,9 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](../commands-l
 
 `Selection and collection type list boxes`
 
-An expression or a variable (array variables cannot be used) to apply a custom background color to each row of the list box. The expression or variable will be evaluated for each row displayed and must return a RGB color value. For more information, refer to the description of the [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) command in the *4D Language Reference manual*.
+An expression or a variable (array variables cannot be used) to apply a custom background color to each row of the list box. The expression or variable will be evaluated for each row displayed and must return a RGB color value. For more information, refer to the description of the [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) command in the *4D Language Reference manual*.
 
-You can also set this property using the [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md) command with `lk background color expression` constant.
+You can also set this property using the [`LISTBOX SET PROPERTY`](../commands/listbox-set-property) command with `lk background color expression` constant.
 
 >With collection or entity selection type list boxes, this property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
 
@@ -78,7 +78,7 @@ You can also set this property using the [`LISTBOX SET PROPERTY`](../commands/li
 
 #### Commands
 
-[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md) 
+[`LISTBOX Get property`](../commands/listbox-get-property) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property) 
 
 
 ---
@@ -100,7 +100,7 @@ Allows setting a standard style for the object border.
 
 #### Commands
 
-[`OBJECT Get border style`](../commands-legacy/object-get-border-style.md) - [`OBJECT SET BORDER STYLE`](../commands-legacy/object-set-border-style.md) 
+[`OBJECT Get border style`](../commands/object-get-border-style) - [`OBJECT SET BORDER STYLE`](../commands/object-set-border-style) 
 
 
 
@@ -144,7 +144,7 @@ You can remove these empty rows by selecting this option. The bottom of the list
 
 #### Commands
 
-[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md) 
+[`LISTBOX Get property`](../commands/listbox-get-property) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property) 
 
 ---
 
@@ -157,7 +157,7 @@ The color can be specified by:
 * a HEX value - like "#ff0000"
 * an RGB value - like "rgb(255,0,0)"
 
-You can also set this property using the [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) command.
+You can also set this property using the [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) command.
 
 #### JSON Grammar
 
@@ -173,7 +173,7 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](../commands-l
 
 #### Commands
 
-[`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors.md) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md)
+[`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
 
 
 ---
@@ -200,7 +200,7 @@ Designates the thickness of a line.
 
 The name of an array to apply a custom background color to each row of the list box or column.
 
-The name of a Longint array must be entered. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. You can use the constants described in the [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) command. If you want the cell to inherit the background color defined at the higher level, pass the value -255 to the corresponding array element.
+The name of a Longint array must be entered. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. You can use the constants described in the [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) command. If you want the cell to inherit the background color defined at the higher level, pass the value -255 to the corresponding array element.
 
 For example, given a list box where the rows have an alternating gray/light gray color, defined in the properties of the list box. A background color array has also been set for the list box in order to switch the color of rows where at least one value is negative to light orange:
 
@@ -222,7 +222,7 @@ Next you want to color the cells with negative values in dark orange. To do this
 
 ![](../assets/en/FormObjects/listbox_styles2.png)
 
-You can get the same result using the [`LISTBOX SET ROW FONT STYLE`](../commands-legacy/listbox-set-row-font-style.md) and [`LISTBOX SET ROW COLOR`](../commands-legacy/listbox-set-row-color.md) commands. They have the advantage of letting you skip having to predefine style/color arrays for the columns: instead they are created dynamically by the commands.
+You can get the same result using the [`LISTBOX SET ROW FONT STYLE`](../commands/listbox-set-row-font-style) and [`LISTBOX SET ROW COLOR`](../commands/listbox-set-row-color) commands. They have the advantage of letting you skip having to predefine style/color arrays for the columns: instead they are created dynamically by the commands.
 
 #### JSON Grammar
 
@@ -236,7 +236,7 @@ You can get the same result using the [`LISTBOX SET ROW FONT STYLE`](../commands
 
 #### Commands
 
-[`LISTBOX Get array`](../commands-legacy/listbox-get-array.md) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays.md) 
+[`LISTBOX Get array`](../commands/listbox-get-array) - [`LISTBOX GET ARRAYS`](../commands/listbox-get-arrays) 
 
 
 ---
@@ -257,9 +257,10 @@ Sets the list box background to "Transparent". When set, any [alternate backgrou
 
 #### Commands
 
-[`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors.md) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md)
+[`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
 
 
 #### See also
 
 [Background Color / Fill Color](#background-color--fill-color)
+

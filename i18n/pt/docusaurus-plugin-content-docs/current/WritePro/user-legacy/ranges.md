@@ -40,7 +40,7 @@ As faixas de filas, colunas e células possuem atributos privados específicos q
 
 Vários comandos lhe permitem definir faixas:
 
-- [WP Text range](../commands-legacy/wp-text-range.md): devolve uma nova faixa correspondente aos limites que passam como parâmetros.
+- [WP Text range](../commands-legacy/wp-text-range): devolve uma nova faixa correspondente aos limites que passam como parâmetros.
 - [WP Selection range](../commands-legacy/wp-selection-range): devolve uma nova faixa que corresponde à seleção usuário atual.
 - [WP Picture range](../commands-legacy/wp-picture-range): devolve uma nova faixa que contém só as imagens.
 - [WP Paragraph range](../commands-legacy/wp-paragraph-range): devolve uma nova faixa que contém só os parágrafos.

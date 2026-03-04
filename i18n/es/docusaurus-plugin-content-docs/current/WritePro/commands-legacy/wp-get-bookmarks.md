@@ -35,6 +35,6 @@ Usted quieres saber el número de marcadores definidos en su documento:
 
 ## Ver también 
 
-[WP Bookmark range](wp-bookmark-range.md)  
-[WP DELETE BOOKMARK](wp-delete-bookmark.md)  
-[WP NEW BOOKMARK](wp-new-bookmark.md)  
+[WP Bookmark range](../commands/wp-bookmark-range)  
+[WP DELETE BOOKMARK](../commands/wp-delete-bookmark)  
+[WP NEW BOOKMARK](../commands/wp-new-bookmark)  

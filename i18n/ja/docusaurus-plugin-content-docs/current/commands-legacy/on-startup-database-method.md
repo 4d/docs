@@ -33,18 +33,18 @@ displayed_sidebar: docs
 * 作業セッション全体で使用するインタープロセス変数を初期化する。
 * データベースを開いた時にプロセスを自動的に開始する。
 * 以前の作業セッション中に保存された環境設定や初期設定をロードする。
-* (システムリソースがない等) 条件が一致しない場合、[QUIT 4D](quit-4d.md)を明示的に呼び出してデータベースの開始を拒否する。
+* (システムリソースがない等) 条件が一致しない場合、[QUIT 4D](../commands/quit-4d)を明示的に呼び出してデータベースの開始を拒否する。
 * データベースを開く度に自動的に実行したい他の動作を実行する。
 しかしながら**On Startupデータベースメソッド**から印刷ジョブを起動することは推奨しません。
 
 ## 例題 
 
-[Semaphore](semaphore.md)の例題を参照
+[Semaphore](../commands/semaphore)の例題を参照
 
 ## 参照 
 
-[On Exitデータベースメソッド](on-exit-database-method.md)  
-[QUIT 4D](quit-4d.md)  
+[On Exitデータベースメソッド](../commands/on-exit-database-method)  
+[QUIT 4D](../commands/quit-4d)  
 *データベースメソッド*  
 
 ## プロパティ
@@ -53,5 +53,6 @@ displayed_sidebar: docs
 | --- | --- |
 | コマンド番号 | 905263 |
 | スレッドセーフである | no |
+
 
 

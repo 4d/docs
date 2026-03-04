@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Find next.Summary-->O comando **WP Find next** pesquisa *objAlvo*, depois da range/faixa de seleção *pesquisarDepois*, pesquisando por *valorPesquisa* baseado na *condiçãoPesquisa*.<!-- END REF--> Um parâmetro opcional pode ser usado para substituir os resultados encontrados. 
 
-**Nota**: **WP Find next** não pesquisa ou substitui texto em fórmulas. Use o comando [WP Get formulas](wp-get-formulas.md) neste caso. 
+**Nota**: **WP Find next** não pesquisa ou substitui texto em fórmulas. Use o comando [WP Get formulas](../commands/wp-get-formulas) neste caso. 
 
 No parâmetro *objAlvo*, passe um objeto contendo:
 
@@ -98,5 +98,5 @@ Uma range/intervalo vazia é retornada se nenhum resultado for encontrado.
 
 ## Ver também 
 
-[WP Find all](wp-find-all.md)  
-[WP Find previous ](wp-find-previous.md)  
+[WP Find all](../commands/wp-find-all)  
+[WP Find previous ](../commands/wp-find-previous)  

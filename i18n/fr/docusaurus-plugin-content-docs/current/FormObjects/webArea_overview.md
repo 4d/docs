@@ -13,7 +13,7 @@ Plusieurs [actions standard](#standard-actions), de nombreuses [commandes du lan
 
 Les zones Web peuvent être utilisées pour afficher des [pages Qodly](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) et fournir aux utilisateurs d'applications desktop 4D une interface Web moderne basée sur les CSS.
 
-Vous pouvez intégrer une page Qodly dans une zone Web et mettre à jour les [sources Qodly](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/qodlySources) à partir de 4D en appelant [`WA EXECUTE JAVASCRIPT FUNCTION`](../commands-legacy/wa-execute-javascript-function.md).
+Vous pouvez intégrer une page Qodly dans une zone Web et mettre à jour les [sources Qodly](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/qodlySources) à partir de 4D en appelant [`WA EXECUTE JAVASCRIPT FUNCTION`](../commands-legacy/wa-execute-javascript-function).
 
 In 4D client/server applications, Qodly pages inside Web areas can [share their session with the remote user](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) for a high level of security.
 
@@ -65,11 +65,11 @@ $4d.HelloWorld();
 
 ### Contrôle de l'accès au $4d
 
-Avec [`WA SET CONTEXT`](../commands/wa-set-context.md), les développeurs peuvent contrôler ce qui peut être disponible via `$4d` à partir d'une zone Web. Cette commande permet de définir un **objet contexte** qui déclare, par exemple, les méthodes 4D via des formules et des instances de classe.
+Avec [`WA SET CONTEXT`](../commands/wa-set-context), les développeurs peuvent contrôler ce qui peut être disponible via `$4d` à partir d'une zone Web. Cette commande permet de définir un **objet contexte** qui déclare, par exemple, les méthodes 4D via des formules et des instances de classe.
 
-Pour connaître le contexte défini courant, utilisez [`WA Get context`](../commands/wa-get-context.md).
+Pour connaître le contexte défini courant, utilisez [`WA Get context`](../commands/wa-get-context).
 
-Pour plus d'informations, veuillez consulter la commande [`WA SET CONTEXT`](../commands/wa-set-context.md).
+Pour plus d'informations, veuillez consulter la commande [`WA SET CONTEXT`](../commands/wa-set-context).
 
 ### Appel des méthodes 4D depuis JavaScript
 
@@ -193,9 +193,9 @@ En outre, les zones web prennent en charge les événements formulaire génériq
 Lors de l’exécution du formulaire, l’utilisateur dispose des fonctions d’interface standard des navigateurs dans la zone web, ce qui lui permet d’interagir avec les autres zones du formulaire :
 
 - **Commandes du menu Edition**: lorsque la zone web a le focus, les commandes du menu **Edition** peuvent être utilisées pour effectuer des actions telles que copier, coller, tout sélectionner, etc. selon la sélection.
-- **Menu contextuel** : Il est possible d'utiliser le [menu contextuel](properties_Entry.md#context-menu) standard du système avec la zone web. L'affichage du menu contextuel peut être contrôlé à l'aide de la commande [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md).
+- **Menu contextuel** : Il est possible d'utiliser le [menu contextuel](properties_Entry.md#context-menu) standard du système avec la zone web. L'affichage du menu contextuel peut être contrôlé à l'aide de la commande [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference).
 - **Glisser-déposer** : L'utilisateur peut glisser et déposer du texte, des images et des documents dans la zone web ou entre une zone web et les objets du formulaire 4D, en fonction des propriétés des objets 4D.
-  Pour des raisons de sécurité, le changement du contenu d'une zone web via le glisser-déposer d'un fichier ou d'un URL n'est pas autorisé par défaut. Dans ce cas, le curseur affiche une icône "interdit" ![](../assets/en/FormObjects/forbidden.png). Vous devez utiliser l'instruction `WA SET PREFERENCE(* ; "warea";WA enable URL drop;True)` pour afficher une icône "drop" et générer l'événement [`On Window Opening Denied`](Events/onWindowOpeningDenied.md). Dans cet événement, vous pouvez appeler la commande [`WA OPEN URL`](../commands-legacy/wa-open-url.md) ou définir la [variable URL](properties_WebArea.md#url) en réponse à un dépôt de l'utilisateur.
+  Pour des raisons de sécurité, le changement du contenu d'une zone web via le glisser-déposer d'un fichier ou d'un URL n'est pas autorisé par défaut. Dans ce cas, le curseur affiche une icône "interdit" ![](../assets/en/FormObjects/forbidden.png). Vous devez utiliser l'instruction `WA SET PREFERENCE(* ; "warea";WA enable URL drop;True)` pour afficher une icône "drop" et générer l'événement [`On Window Opening Denied`](Events/onWindowOpeningDenied.md). Dans cet événement, vous pouvez appeler la commande [`WA OPEN URL`](../commands-legacy/wa-open-url) ou définir la [variable URL](properties_WebArea.md#url) en réponse à un dépôt de l'utilisateur.
 
 > Les fonctions de glisser-déposer décrites ci-dessus ne sont pas prises en charge dans les zones web utilisant le [moteur de rendu du système macOS](properties_WebArea.md#use-embedded-web-rendering-engine).
 
@@ -235,7 +235,7 @@ Pour afficher l'inspecteur Web, vous pouvez soit exécuter la commande `WA OPEN 
 
 > Avec le [moteur de rendu système de Windows](properties_WebArea.md#use-embedded-web-rendering-engine), une modification de cette préférence nécessite la prise en compte d'une action de navigation dans la zone (par exemple, un rafraîchissement de la page).
 
-Pour plus d'informations, reportez-vous à la description de la commande [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md).
+Pour plus d'informations, reportez-vous à la description de la commande [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference).
 
 Lorsque vous avez effectué les réglages décrits ci-dessus, vous disposez de nouvelles options telles que **Inspecter l'élément** dans le menu contextuel de la zone. Lorsque vous sélectionnez cette option, le débogueur de la zone web est alors affiché.
 

@@ -29,7 +29,7 @@ Each active form object is associated with an object name. Each object name must
 
 >Object names are limited to a size of 255 bytes.
 
-When using 4D’s language, you can refer to an active form object by its object name (see [Object (Forms) commands](../commands/theme/Objects_Forms.md))).
+When using 4D’s language, you can refer to an active form object by its object name (see [Object (Forms) commands](../commands/theme/Objects_Forms))).
 
 For more information about naming rules for form objects, refer to [Identifiers](Concepts/identifiers.md) section.
 
@@ -46,7 +46,7 @@ For more information about naming rules for form objects, refer to [Identifiers]
 
 #### Commands
 
-[FORM GET OBJECTS](../commands-legacy/form-get-objects.md) - [OBJECT Get name](../commands-legacy/object-get-name.md)
+[FORM GET OBJECTS](../commands/form-get-objects) - [OBJECT Get name](../commands/object-get-name)
 
 ---
 
@@ -107,7 +107,7 @@ You can leave it up to 4D to create variables associated with your form objects 
 
 When a variable is not named, when the form is loaded, 4D creates a new variable for the object, with a calculated name that is unique in the space of the process variables of the interpreter (which means that this mechanism can be used even in compiled mode). This temporary variable will be destroyed when the form is closed.
 
-To get or set the value of form objects that use dynamic variables, you just need to call [`OBJECT Get value`](../commands-legacy/object-get-value.md) and [`OBJECT SET VALUE`](../commands-legacy/object-set-value.md) commands. For example:
+To get or set the value of form objects that use dynamic variables, you just need to call [`OBJECT Get value`](../commands/object-get-value) and [`OBJECT SET VALUE`](../commands/object-set-value) commands. For example:
 
 ```4d
  var $value : Variant
@@ -127,7 +127,7 @@ For an array list box, the **Variable or Expression** property usually holds the
 
 #### Commands
 
-[`LISTBOX Get column formula`](../commands-legacy/listbox-get-column-formula.md) - [`LISTBOX SET COLUMN FORMULA`](../commands-legacy/listbox-set-column-formula.md) - [`OBJECT Get data source`](../commands-legacy/object-get-data-source.md) - [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) - [`OBJECT Get value`](../commands-legacy/object-get-value.md) - [`OBJECT Get pointer`](../commands-legacy/object-get-pointer.md) - [`OBJECT SET VALUE`](../commands-legacy/object-set-value.md) - [`OBJECT SET DATA SOURCE`](../commands-legacy/object-set-data-source.md) - [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md)
+[`LISTBOX Get column formula`](../commands/listbox-get-column-formula) - [`LISTBOX SET COLUMN FORMULA`](../commands/listbox-set-column-formula) - [`OBJECT Get data source`](../commands/object-get-data-source) - [`OBJECT Get data source formula`](../commands/object-get-data-source-formula) - [`OBJECT Get value`](../commands/object-get-value) - [`OBJECT Get pointer`](../commands/object-get-pointer) - [`OBJECT SET VALUE`](../commands/object-set-value) - [`OBJECT SET DATA SOURCE`](../commands/object-set-data-source) - [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula)
 
 
 ---
@@ -198,7 +198,7 @@ The collection or the entity selection must be available to the form when it is 
 
 #### Commands
 
-[`OBJECT Get data source`](../commands-legacy/object-get-data-source.md) - [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) - [`OBJECT Get value`](../commands-legacy/object-get-value.md) - [`OBJECT Get pointer`](../commands-legacy/object-get-pointer.md) - [`OBJECT SET VALUE`](../commands-legacy/object-set-value.md) - [`OBJECT SET DATA SOURCE`](../commands-legacy/object-set-data-source.md) - [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md)
+[`OBJECT Get data source`](../commands/object-get-data-source) - [`OBJECT Get data source formula`](../commands/object-get-data-source-formula) - [`OBJECT Get value`](../commands/object-get-value) - [`OBJECT Get pointer`](../commands/object-get-pointer) - [`OBJECT SET VALUE`](../commands/object-set-value) - [`OBJECT SET DATA SOURCE`](../commands/object-set-data-source) - [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula)
 
 ---
 
@@ -283,7 +283,7 @@ For application translation purposes, you can enter an XLIFF reference in the ti
 
 #### Commands
 
-[`OBJECT Get title`](../commands-legacy/object-get-title.md) - [`OBJECT SET TITLE`](../commands-legacy/object-set-title.md) 
+[`OBJECT Get title`](../commands/object-get-title) - [`OBJECT SET TITLE`](../commands/object-set-title) 
 
 ---
 
@@ -291,7 +291,7 @@ For application translation purposes, you can enter an XLIFF reference in the ti
 
 This property sets the type of calculation to be done in a [column footer](listbox-header-footer.md#footers) area.
 
->The calculation for footers can also be set using the [`LISTBOX SET FOOTER CALCULATION`](../commands-legacy/listbox-set-footer-calculation.md) 4D command.
+>The calculation for footers can also be set using the [`LISTBOX SET FOOTER CALCULATION`](../commands/listbox-set-footer-calculation) 4D command.
 
 There are several types of calculations available. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
 
@@ -340,4 +340,4 @@ When **Custom** ("none" in JSON) is set, no automatic calculations are performed
 
 #### Commands
 
-[`LISTBOX Get footer calculation`](../commands-legacy/listbox-get-footer-calculation.md) - [`LISTBOX SET FOOTER CALCULATION`](../commands-legacy/listbox-set-footer-calculation.md)
+[`LISTBOX Get footer calculation`](../commands/listbox-get-footer-calculation) - [`LISTBOX SET FOOTER CALCULATION`](../commands/listbox-set-footer-calculation)

@@ -25,6 +25,6 @@ title: 階層
 
 #### コマンド
 
-[LISTBOX GET HIERARCHY](../commands-legacy/listbox-get-hierarchy.md) - [LISTBOX SET HIERARCHY](../commands-legacy/listbox-set-headers-height.md)
+[LISTBOX GET HIERARCHY](../commands-legacy/listbox-get-hierarchy) - [LISTBOX SET HIERARCHY](../commands-legacy/listbox-set-headers-height)
 
 

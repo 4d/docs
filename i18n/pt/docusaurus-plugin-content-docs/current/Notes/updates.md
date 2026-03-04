@@ -7,12 +7,12 @@ title: Notas de lançamento
 
 #### Destaques
 
-- The [`JSON Validate`](../commands/json-validate.md) command now supports of JSON Schema draft 2020-12.
+- The [`JSON Validate`](../commands/json-validate) command now supports of JSON Schema draft 2020-12.
 - Ability to use a custom certificate from the macOS keychain instead of a local certificates folder in [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) and [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) classes.
 
 #### Mudanças de comportamento
 
-- The [`JSON Validate`](../commands/json-validate.md) command now takes the *$schema* key into account and generates an error if a non-supported version is declared in the schema.
+- The [`JSON Validate`](../commands/json-validate) command now takes the *$schema* key into account and generates an error if a non-supported version is declared in the schema.
 
 ## 4D 21 R2
 
@@ -32,13 +32,13 @@ Leia [**O que há de novo no 4D v21 R2**](https://blog.4d.com/whats-new-in-4d-21
 #### Prévia do desenvolvedor
 
 - Support of [**fluent UI** rendering](../FormEditor/forms.md#fluent-ui-rendering) on Windows:
-  - new [`FORM theme`](../commands/form-theme.md) command,
+  - new [`FORM theme`](../commands/form-theme) command,
   - new [`form-theme` css media query](../FormEditor/createStylesheet.md#media-queries),
   - new [**Use Fluent UI on Windows**](../settings/interface.md#use-fluent-ui-on-windows) option in the Settings dialog box.
 
 #### Mudanças de comportamento
 
-- On Windows, if [**fluent UI** rendering](../FormEditor/forms.md#fluent-ui-rendering) is enabled, [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) command can return different information whether it is called from a form or not.
+- On Windows, if [**fluent UI** rendering](../FormEditor/forms.md#fluent-ui-rendering) is enabled, [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info) command can return different information whether it is called from a form or not.
 
 ## Tabela da biblioteca
 

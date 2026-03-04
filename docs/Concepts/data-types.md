@@ -37,8 +37,8 @@ Although they are usually equivalent, some data types available at the database 
 
 You can always know the type of a field or variable using the following commands:
 
-- [`Type`](../commands-legacy/type.md) for fields and scalar variables
-- [`Value type`](../commands-legacy/value-type.md) for expressions
+- [`Type`](../commands/type) for fields and scalar variables
+- [`Value type`](../commands/value-type) for expressions
 
 
 ## Default values
@@ -88,3 +88,4 @@ The following table lists the basic data types, the data types to which they can
 (2) Time values can be treated as numbers.
 
 **Note:** In addition to the data conversions listed in this table, more sophisticated data conversions can be obtained by combining operators and other commands.
+

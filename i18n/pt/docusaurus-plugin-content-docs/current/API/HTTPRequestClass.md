@@ -171,7 +171,7 @@ Aqui está a sequência de chamadas de retorno:
 
 :::info
 
-Para as funções de callback serem chamadas quando você não usa [`wait()`](#wait) (chamada assíncrona), o processo deve ser um [worker](../Develop/processes.md#worker-processes) criado com [`CALL WORKER`](../commands-legacy/call-worker.md), NÃO [`New process`](../commands-legacy/new-process.md).
+Para as funções de callback serem chamadas quando você não usa [`wait()`](#wait) (chamada assíncrona), o processo deve ser um [worker](../Develop/processes.md#worker-processes) criado com [`CALL WORKER`](../commands-legacy/call-worker), NÃO [`New process`](../commands-legacy/new-process).
 
 :::
 
@@ -422,7 +422,7 @@ Se a resposta do servidor já tiver chegado, a função regressa imediatamente.
 
 :::note
 
-Durante a execução de .wait(), as funções de callback dos workers são executadas, sejam elas originadas de outras instâncias de `HTTPRequest` ou [`SystemWorker`](SystemWorkerClass.md), ou de outras chamadas [`CALL WORKER`](../commands-legacy/call-worker.md).  Você pode sair de uma .wait() chamando [`terminate()`](#terminate) de um retorno de chamada.
+Durante a execução de .wait(), as funções de callback dos workers são executadas, sejam elas originadas de outras instâncias de `HTTPRequest` ou [`SystemWorker`](SystemWorkerClass.md), ou de outras chamadas [`CALL WORKER`](../commands-legacy/call-worker).  Você pode sair de uma .wait() chamando [`terminate()`](#terminate) de um retorno de chamada.
 
 :::
 

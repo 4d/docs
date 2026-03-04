@@ -1,0 +1,51 @@
+﻿---
+id: table-name
+title: Table name
+slug: /commands/table-name
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.Table name.Syntax-->**Table name** ( *numTabla* : Entero largo, Puntero ) : Text<br/>**Table name** ( *ptrTabla* : Entero largo, Puntero ) : Text<!-- END REF-->
+<!--REF #_command_.Table name.Params-->
+<div class="no-index">
+
+| Parámetro | Tipo |  | Descripción |
+| --- | --- | --- | --- |
+| numTabla &#124; ptrTabla | Entero largo, Puntero | &#8594; | Número de tabla o puntero de tabla |
+| Resultado | Text | &#8592; | Nombre de la tabla |
+</div>
+<!-- END REF-->
+
+## Descripción 
+
+<!--REF #_command_.Table name.Summary-->El comando Table name devuelve el nombre de la tabla cuyo número o puntero se pasa en *numTabla* o *ptrTabla*.<!-- END REF-->
+
+## Ejemplo 
+
+El siguiente es un ejemplo de un método genérico que muestra los registros de una tabla. La referencia a la tabla se pasa como un puntero para la tabla. El comando Table name se utiliza para incluir el nombre de la tabla en la barra de títulos de la ventana:
+
+```4d
+  // Método de proyecto SHOW CURRENT SELECTION
+  // SHOW CURRENT SELECTION ( Puntero )
+  // SHOW CURRENT SELECTION (->[Tabla])
+ 
+ SET WINDOW TITLE("Registros para "+Table name($1)) // Fijar el título de la ventana
+ DISPLAY SELECTION($1->) // Mostrar la selección
+```
+
+## Ver también 
+
+[Field name](../commands/field-name)  
+[Last table number](../commands/last-table-number)  
+[SET FIELD TITLES](../commands/set-field-titles)  
+[SET TABLE TITLES](../commands/set-table-titles)  
+[Table](../commands/table)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 256 |
+| Hilo seguro | yes |
+
+

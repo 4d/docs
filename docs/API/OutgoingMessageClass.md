@@ -159,7 +159,7 @@ When returning a 4D.OutgoingMessage object instance, 4D automatically sets some 
 
 :::note
 
-If you set a *value* for the "Content-Type" header *key*, make sure you call this function after the call to [`setBody()`](#setbody), because `setBody()` automatically fills this header. For a list of "Content-Type" header values, please refer to the [`WEB SEND BLOB`](../commands-legacy/web-send-blob.md) documentation. 
+If you set a *value* for the "Content-Type" header *key*, make sure you call this function after the call to [`setBody()`](#setbody), because `setBody()` automatically fills this header. For a list of "Content-Type" header values, please refer to the [`WEB SEND BLOB`](../commands/web-send-blob) documentation. 
 
 :::
 
@@ -204,3 +204,4 @@ For a list of HTTP status codes, please refer the [HTTP status code list on Wiki
 The `.status` property contains <!-- REF #OutgoingMessageClass.status.Summary -->the current status of the outgoing message<!-- END REF -->. This property can be set using the [`setStatus()`](setstatus) function.
 
 <!-- END REF -->
+

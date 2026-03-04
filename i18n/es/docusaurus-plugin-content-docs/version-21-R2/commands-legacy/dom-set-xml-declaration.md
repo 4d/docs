@@ -36,7 +36,7 @@ displayed_sidebar: docs
 
 * *codificacion*: indica el conjunto de caracteres utilizado en el documento. Por defecto (si no se llama al comando), se utiliza el conjunto de caracteres UTF-8 (Unicode comprimido).  
 **Nota:** si pasa un conjunto de caracteres que no soporta los comandos XML de 4D, se utilizará UTF-8\. Consulte *Conjuntos de caracteres* para ver la lista de conjuntos de caracteres soportados (sin embargo se recomienda UTF-8 en la mayoría de los casos).
-* *autonomo*: indica si el árbol es autónomo ([True](true.md "True")) o si necesita otros archivos o recursos externos para su funcionamiento ([False](false.md "False")). Por defecto (si el comando no se llama o si se omite el parámetro), el árbol no es autónomo.
+* *autonomo*: indica si el árbol es autónomo ([True](../commands/true)) o si necesita otros archivos o recursos externos para su funcionamiento ([False](../commands/false)). Por defecto (si el comando no se llama o si se omite el parámetro), el árbol no es autónomo.
 **Nota de compatibilidad:** El parámetro *indentacion* se conserva por razones de compatibilidad con las versiones anteriores de 4D pero su uso no se recomienda en 4D v12\. De ahora en adelante, para especificar la indentación del documento, se recomienda utilizar el comando [XML SET OPTIONS](xml-set-options.md).
 
 ## Ejemplo 

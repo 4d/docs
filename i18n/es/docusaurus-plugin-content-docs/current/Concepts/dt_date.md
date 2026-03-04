@@ -50,11 +50,11 @@ Una fecha null es especificada por *!00-00-00!*.
 
 ## Conversion of dates from JavaScript
 
-Como las fechas en JavaScript son objetos, se envían a 4D como texto que contiene su forma JSON como cualquier otro objeto. Este principio se aplica en particular cuando se utilizan [comandos JSON](../commands/theme/JSON.md) o [Áreas Web](../FormObjects/webArea_overview.md).
+Como las fechas en JavaScript son objetos, se envían a 4D como texto que contiene su forma JSON como cualquier otro objeto. Este principio se aplica en particular cuando se utilizan [comandos JSON](../commands/theme/JSON) o [Áreas Web](../FormObjects/webArea_overview.md).
 
 The JSON form of JavaScript Date objects follows the ISO 8601 standard, for example "2013-08-23T00:00:00Z". It is your responsibility to convert this text into a 4D date. Hay dos soluciones disponibles:
 
-Using the [`JSON Parse`](../commands-legacy/json-parse.md) command:
+Using the [`JSON Parse`](../commands-legacy/json-parse) command:
 
 ```4d
  var $dateIso : Texto // recepción de una fecha en formato ISO
@@ -62,7 +62,7 @@ Using the [`JSON Parse`](../commands-legacy/json-parse.md) command:
  $date4D:=JSON Parse("\""+$dateIso+"\"";Is date))
 ```
 
-Utilizando el comando [`Date`](../commands-legacy/date.md):
+Utilizando el comando [`Date`](../commands-legacy/date):
 
 ```4d
  var $dateIso : Text // recepción de una fecha en formato ISO
@@ -70,10 +70,10 @@ Utilizando el comando [`Date`](../commands-legacy/date.md):
  $date4D:=Date($dateIso)
 ```
 
-Note the difference between these two solutions: [`JSON Parse`](../commands-legacy/json-parse.md) respects the [conversion mode set using the `SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md#dates-inside-objects-85) (if any), while [`Date`](../commands-legacy/date.md) is not subject to this. Conversion using the [`Date`](../commands-legacy/date.md) command always takes the local time zone into account.
+Note the difference between these two solutions: [`JSON Parse`](../commands-legacy/json-parse) respects the [conversion mode set using the `SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md#dates-inside-objects-85) (if any), while [`Date`](../commands-legacy/date) is not subject to this. Conversion using the [`Date`](../commands-legacy/date) command always takes the local time zone into account.
 
 :::note
 
-When the current date storage setting is [`date type`](../commands-legacy/set-database-parameter.md#dates-inside-objects-85) (default), JSON date strings in "YYYY-MM-DD" format are automatically handled as date values by the [`JSON Parse`](../commands-legacy/json-parse.md) and [`Date`](../commands-legacy/date.md) commands.
+When the current date storage setting is [`date type`](../commands-legacy/set-database-parameter.md#dates-inside-objects-85) (default), JSON date strings in "YYYY-MM-DD" format are automatically handled as date values by the [`JSON Parse`](../commands-legacy/json-parse) and [`Date`](../commands-legacy/date) commands.
 
 :::

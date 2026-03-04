@@ -25,7 +25,7 @@ A field cannot be undefined (the `Undefined` command always returns False for a 
 
 Typically when trying to read or assign undefined expressions, 4D will generate errors, except in the following cases:
 
-- Assigning an undefined value to variables (except arrays) has the same effect as calling [`CLEAR VARIABLE`](../commands-legacy/clear-variable.md) with them:
+- Assigning an undefined value to variables (except arrays) has the same effect as calling [`CLEAR VARIABLE`](../commands/clear-variable) with them:
 
 ```4d
      var $o : Object
@@ -187,4 +187,5 @@ $result:=($vObj.undefined>$vObj.null)  //Error
 $result:=($vVar < 42) //False
 
 ```
+
 

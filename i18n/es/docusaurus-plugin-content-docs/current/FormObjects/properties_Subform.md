@@ -44,7 +44,7 @@ Esta propiedad se utiliza para declarar el formulario detallado que se utilizar√
 
 #### Comandos
 
-[OBJECT GET SUBFORM](../commands-legacy/object-get-subform.md) - [OBJECT SET SUBFORM](../commands-legacy/object-set-subform.md)
+[OBJECT GET SUBFORM](../commands-legacy/object-get-subform) - [OBJECT SET SUBFORM](../commands-legacy/object-set-subform)
 
 ---
 
@@ -137,7 +137,7 @@ Los subformularios de lista pueden utilizarse para la entrada de datos de dos ma
 
 #### Comandos
 
-[OBJECT GET SUBFORM](../commands-legacy/object-get-subform.md) - [OBJECT SET SUBFORM](../commands-legacy/object-set-subform.md)
+[OBJECT GET SUBFORM](../commands-legacy/object-get-subform) - [OBJECT SET SUBFORM](../commands-legacy/object-set-subform)
 
 ---
 

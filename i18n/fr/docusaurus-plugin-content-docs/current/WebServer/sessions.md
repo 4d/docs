@@ -28,7 +28,7 @@ Les applications Destkop (client/serveur et mono-utilisateur) fournissent égale
 
 Les sessions Web sont utilisées par :
 
-- les [applications Web](gettingStarted.md) envoyant des requêtes http (y compris les [Web services SOAP](../commands/theme/Web_Services_Server.md) et les requêtes [/4DACTION](../WebServer/httpRequests.md#4daction)),
+- les [applications Web](gettingStarted.md) envoyant des requêtes http (y compris les [Web services SOAP](../commands/theme/Web_Services_Server) et les requêtes [/4DACTION](../WebServer/httpRequests.md#4daction)),
 - calls to the [REST API](../REST/authUsers.md), which are used by [remote datastores](../ORDA/remoteDatastores.md) and [Qodly pages](https://developer.4d.com/qodly/).
 
 ## Activation des sessions web {#enabling-web-sessions}
@@ -42,7 +42,7 @@ Cette option est sélectionnée par défaut dans les nouveaux projets. Elle peut
 
 - En utilisant la propriété [`.scalableSession`](API/WebServerClass.md#scalablession) de l'objet Web Server (à passer dans le paramètre *settings* de la fonction [`.start()`](API/WebServerClass.md#start) ). Dans ce cas, ce paramètre remplace l'option définie dans la boîte de dialogue Propriétés pour l'objet Web Server (il n'est pas stocké sur disque).
 
-> La commande [`WEB SET OPTION`](../commands-legacy/web-set-option.md) peut également définir le mode de session du serveur Web principal.
+> La commande [`WEB SET OPTION`](../commands-legacy/web-set-option) peut également définir le mode de session du serveur Web principal.
 
 Dans tous les cas, ce paramètre est local à la machine ; il peut donc être différent sur le serveur Web 4D Server et les serveurs Web des machines 4D distantes.
 
@@ -73,7 +73,7 @@ Creating a web session for a REST request may require that a license is availabl
 
 :::
 
-L'objet `Session` de la session en cours peut ensuite être manipulé via la commande [`Session`](commands/session.md) dans le code de n'importe quel process web.
+L'objet `Session` de la session en cours peut ensuite être manipulé via la commande [`Session`](../commands/session) dans le code de n'importe quel process web.
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
 
@@ -90,9 +90,9 @@ Une session web évolutive est fermée lorsque:
 
 La durée de vie d'un cookie inactif est de 60 minutes par défaut, ce qui signifie que le serveur Web fermera automatiquement les sessions inactives après 60 minutes.
 
-Ce délai peut être défini en utilisant la propriété [`.idleTimeout`](API/SessionClass.md#idletimeout) de l'objet `Session` (le délai ne peut être inférieur à 60 minutes) ou le paramètre *connectionInfo* de la commande [`Open datastore`](../commands/open-datastore.md).
+Ce délai peut être défini en utilisant la propriété [`.idleTimeout`](API/SessionClass.md#idletimeout) de l'objet `Session` (le délai ne peut être inférieur à 60 minutes) ou le paramètre *connectionInfo* de la commande [`Open datastore`](../commands/open-datastore).
 
-Lorsqu'une session web est fermée, si la commande [`Session`](commands/session.md) est appelée par la suite :
+Lorsqu'une session web est fermée, si la commande [`Session`](../commands/session) est appelée par la suite :
 
 - l'objet `Session` ne contient pas de privilèges (c'est une session Guest)
 - la propriété [`storage`](API/SessionClass.md#storage) est vide

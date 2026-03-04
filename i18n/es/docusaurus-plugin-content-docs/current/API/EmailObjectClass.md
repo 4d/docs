@@ -14,7 +14,7 @@ Los objetos `Email` se crean cuando se reciben correos a través de una función
 
 Los objetos `Email` se envían utilizando la función SMTP [`.send()`](SMTPTransporterClass.md#send).
 
-Los comandos [`MAIL Convert from MIME`](../commands/mail-convert-from-mime.md) y [`MAIL Convert to MIME`](../commands/mail-convert-to-mime.md) se pueden utilizar para convertir los objetos `Email` a y desde contenidos MIME.
+Los comandos [`MAIL Convert from MIME`](../commands/mail-convert-from-mime) y [`MAIL Convert to MIME`](../commands/mail-convert-to-mime) se pueden utilizar para convertir los objetos `Email` a y desde contenidos MIME.
 
 ### Objeto Email
 
@@ -110,7 +110,7 @@ Las propiedades [`textBody`](#textbody) y [`htmlBody`](#htmlbody) sólo se utili
 
 La propiedad `.attachments` contiene una <!-- REF #EmailObjectClass.attachments.Summary -->colección de objetos `4D.MailAttachment`<!-- END REF -->.
 
-Los objetos adjuntos son definidos por el comando [`MAIL New attachment`](../commands/mail-new-attachment.md). Los objetos adjuntos tienen [propiedades y funciones](MailAttachmentClass.md) específicas.
+Los objetos adjuntos son definidos por el comando [`MAIL New attachment`](../commands/mail-new-attachment). Los objetos adjuntos tienen [propiedades y funciones](MailAttachmentClass.md) específicas.
 
 ## .bcc
 

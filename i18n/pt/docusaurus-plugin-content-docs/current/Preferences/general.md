@@ -100,7 +100,7 @@ Se você pretende usar VCS ou editores de código externos em seus novos projeto
 
 > Essa opção só pode ser aplicada a projetos (os bancos de dados binários sempre incluem tokens).
 
-> You can always get the code with tokens by calling [`METHOD GET CODE`](../commands-legacy/method-get-code.md) with 1 in the *option* parameter.
+> You can always get the code with tokens by calling [`METHOD GET CODE`](../commands-legacy/method-get-code) with 1 in the *option* parameter.
 
 #### Excluir tokens em projetos existentes
 

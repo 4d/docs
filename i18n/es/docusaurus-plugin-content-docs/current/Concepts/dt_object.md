@@ -42,18 +42,18 @@ Los objetos deben haber sido instanciados, de lo contrario intentar leer o modif
 
 La instanciación de objetos puede realizarse de una de las siguientes maneras:
 
-- utilizando el comando [`New object`](../commands-legacy/new-object.md),
+- utilizando el comando [`New object`](../commands-legacy/new-object),
 - utilizando el operador `{}`.
 
 :::info
 
-Varios comandos y funciones 4D devuelven objetos, por ejemplo [`Database measures`](../commands-legacy/database-measures.md) o [`File`](../commands/file.md). En este caso, no es necesario instanciar explícitamente el objeto, el lenguaje 4D lo hace por usted.
+Varios comandos y funciones 4D devuelven objetos, por ejemplo [`Database measures`](../commands-legacy/database-measures) o [`File`](../commands/file). En este caso, no es necesario instanciar explícitamente el objeto, el lenguaje 4D lo hace por usted.
 
 :::
 
 ### Comando `New object`
 
-El comando [`New object`](../commands-legacy/new-object.md) crea un nuevo objeto vacío o prellenado y devuelve su referencia.
+El comando [`New object`](../commands-legacy/new-object) crea un nuevo objeto vacío o prellenado y devuelve su referencia.
 
 Ejemplos:
 
@@ -110,8 +110,8 @@ $col:=$o.col[5] //6
 
 Puede crear dos tipos de objetos:
 
-- objetos regulares (no compartidos), utilizando el comando [`New object`](../commands-legacy/new-object.md) o la sintaxis literal de objeto (`{}`). Estos objetos pueden ser editados sin ningún control de acceso específico, pero no pueden ser compartidos entre procesos.
-- objetos compartidos, utilizando el comando [`New shared object`](../commands-legacy/new-shared-object.md). Estos objetos pueden ser compartidos entre procesos, incluidos los hilos apropiativos. Estos objetos pueden ser compartidos entre procesos, incluidos los hilos apropiativos.
+- objetos regulares (no compartidos), utilizando el comando [`New object`](../commands-legacy/new-object) o la sintaxis literal de objeto (`{}`). Estos objetos pueden ser editados sin ningún control de acceso específico, pero no pueden ser compartidos entre procesos.
+- objetos compartidos, utilizando el comando [`New shared object`](../commands-legacy/new-shared-object). Estos objetos pueden ser compartidos entre procesos, incluidos los hilos apropiativos. Estos objetos pueden ser compartidos entre procesos, incluidos los hilos apropiativos.
   Para más información, consulte la sección [Objetos y colecciones compartidos](shared.md).
 
 ## Propiedades {#properties}

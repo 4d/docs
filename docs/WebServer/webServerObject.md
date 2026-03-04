@@ -16,7 +16,7 @@ Other than memory, there is no limit to the number of components and thus, of we
 
 Each 4D web server, including the main application's web server, is exposed as a specific **object** of the `4D.WebServer` class. Once instantiated, a web server object can be handled from the current application or from any component using a [large number of properties and functions](API/WebServerClass.md).
 
-> The legacy [WEB commands](../commands/theme/Web_Server.md) of the 4D language are supported but cannot select the web server to which they apply (see below). 
+> The legacy [WEB commands](../commands/theme/Web_Server) of the 4D language are supported but cannot select the web server to which they apply (see below). 
 
 Each web server (host application or component) can be used in its own separate context, including:
 - `On Web Authentication` and `On Web Connection` database method calls
@@ -35,7 +35,7 @@ $nbSrv:=WEB Server list.length
 //$nbSrv value is 1
 ```
 
-To instantiate a web server object, call the [`WEB Server`](commands/web-server.md) command:
+To instantiate a web server object, call the [`WEB Server`](../commands/web-server) command:
 
 ```4d
 	//create an object variable of the 4D.WebServer class
@@ -104,7 +104,7 @@ These properties are defined:
 
 ## Scope of the 4D Web commands
 
-The 4D Language contains [several commands](../commands/theme/Web_Server.md) that can be used to control the web server. However, these commands are designed to work with a single (default) web server. When using these commands in the context of web server objects, make sure their scope is appropriate. 
+The 4D Language contains [several commands](../commands/theme/Web_Server) that can be used to control the web server. However, these commands are designed to work with a single (default) web server. When using these commands in the context of web server objects, make sure their scope is appropriate. 
 
 |Command|Scope|
 |---|---|
@@ -135,3 +135,4 @@ The 4D Language contains [several commands](../commands/theme/Web_Server.md) tha
 |`WEB START SERVER`|Host application web server|
 |`WEB STOP SERVER`|Host application web server|
 |`WEB Validate digest`|Web server that received the request|
+

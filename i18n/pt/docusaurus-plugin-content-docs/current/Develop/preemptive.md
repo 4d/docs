@@ -41,7 +41,7 @@ Dado que um thread se maneja de forma independente a partir do método processo 
 
 A propriedade "segurança de fio" de cada elemento depende do elemento em si:
 
-- Comandos 4D: thread seguro é uma propriedade interna. In the 4D documentation, thread-safe commands are identified by the ![](../assets/en/Develop/thread-safe.png) icon. Você também pode usar o comando [`Command name`](../commands/command-name.md) para saber se um comando é thread-safe. Grande parte dos comandos 4D podem ser executados em modo apropriativo.
+- Comandos 4D: thread seguro é uma propriedade interna. In the 4D documentation, thread-safe commands are identified by the ![](../assets/en/Develop/thread-safe.png) icon. Você também pode usar o comando [`Command name`](../commands/command-name) para saber se um comando é thread-safe. Grande parte dos comandos 4D podem ser executados em modo apropriativo.
 - Métodos de projeto: as condições para segurança de thread se listam no [este parágrafo](#writing-a-thread-safe-method).
 
 Basicamente, o código que se executa em thread apropriativos não podem ser chamados as partes com as interações externas, tal como o código plug-in ou as variáveis interprocesso. Os acessos aos dados, entretanto, são permitidos desde o servidor de dados 4D que suporta a execução apropriativa.
@@ -141,7 +141,7 @@ A execução de un método no modo preemptivo dependerá de que a propriedade "e
 
 4D permite que você identifique o modo de execução dos processos no modo compilado:
 
-- O comando [`Process info`](../commands/process-info.md) permite que você descubra se um processo é executado em modo apropriativo ou cooperativo.
+- O comando [`Process info`](../commands/process-info) permite que você descubra se um processo é executado em modo apropriativo ou cooperativo.
 - O Explorador de execução e a [janela de administração de 4D Server](../ServerWindow/processes.md#process-type)
   mostram ícones específicos para os processos preemptivos.
 
@@ -156,10 +156,10 @@ Para ser thread seguro, um método deve respeitar as seguintes regras:
 - não deve usar nenhuma variável de interprocesso(1)
 - não deve chamar objetos de interface (2) (existem, no entanto, exceções, veja abaixo).
 
-(1) Para intercambiar dados entre processos preemptivos (e entre todos os processos), pode passar [coleções compartilhadas ou objetos compartidos](../Concepts/shared.md) como parâmetros a processos, ou usar o catálogo [`Storage`](../commands-legacy/storage.md).
+(1) Para intercambiar dados entre processos preemptivos (e entre todos os processos), pode passar [coleções compartilhadas ou objetos compartidos](../Concepts/shared.md) como parâmetros a processos, ou usar o catálogo [`Storage`](../commands-legacy/storage).
 [Os processos worker](processes.md#worker-processes) também permitem que você troque mensagens entre quaisquer processos, inclusive processos preemptivos.
 
-(2) O comando [`CALL FORM`](../commands-legacy/call-form.md) oferece uma solução elegante para chamar objetos de interface a partir de um processo preemptivo.
+(2) O comando [`CALL FORM`](../commands-legacy/call-form) oferece uma solução elegante para chamar objetos de interface a partir de um processo preemptivo.
 
 :::note Notas
 

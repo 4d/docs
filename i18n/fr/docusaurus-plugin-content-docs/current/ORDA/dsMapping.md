@@ -7,7 +7,7 @@ La technologie ORDA est basée sur une correspondance automatique d'une [structu
 
 ## Correspondance de la structure
 
-Lorsque vous appelez un datastore à l'aide de la commande [`ds`](commands/ds.md) ou [`Open datastore`](commands/open-datastore.md), 4D référence automatiquement les tables et les champs de la structure 4D correspondante en tant que propriétés de l'objet [datastore](#datastore) renvoyé :
+Lorsque vous appelez un datastore à l'aide de la commande [`ds`](../commands/ds) ou [`Open datastore`](../commands/open-datastore), 4D référence automatiquement les tables et les champs de la structure 4D correspondante en tant que propriétés de l'objet [datastore](#datastore) renvoyé :
 
 - Les tables correspondent à des [dataclasses](#dataclass).
 - Les champs correspondent à des [attributs de stockage](#storage-and-relation-attributes).
@@ -28,7 +28,7 @@ Les règles suivantes s'appliquent à toutes les conversions :
 > La correspondance ORDA ne prend pas en compte :
 >
 > - l'option "Invisible" pour les tables ou les champs,
-> - la structure virtuelle définie par [`SET TABLE TITLES`](../commands-legacy/set-table-titles.md) et [`SET FIELD TITLES`](../commands-legacy/set-field-titles.md),
+> - la structure virtuelle définie par [`SET TABLE TITLES`](../commands-legacy/set-table-titles) et [`SET FIELD TITLES`](../commands-legacy/set-field-titles),
 > - la propriété "manuelle" ou "automatique" des relations.
 
 ### Règles de contrôle d'accès à distance

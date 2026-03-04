@@ -62,6 +62,7 @@ Desea aplicar un fondo azul en las páginas de la izquierda:
 
 ## Ver también 
 
-[WP DELETE SUBSECTION](../commands/wp-delete-subsection.md)  
-[WP Get section](wp-get-section.md)  
-[WP New subsection](wp-new-subsection.md)  
+[WP DELETE SUBSECTION](../commands/wp-delete-subsection)  
+[WP Get section](../commands/wp-get-section)  
+[WP New subsection](../commands/wp-new-subsection)  
+

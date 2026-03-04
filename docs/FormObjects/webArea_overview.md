@@ -14,7 +14,7 @@ Several dedicated [standard actions](#standard-actions), numerous [language comm
 
 Web areas can be used to display [Qodly pages](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) and provide 4D desktop application users with modern, CSS-based web interface. 
 
- You can embed a Qodly page inside a Web Area and then update [Qodly sources](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/qodlySources) from 4D by calling [`WA EXECUTE JAVASCRIPT FUNCTION`](../commands-legacy/wa-execute-javascript-function.md).
+ You can embed a Qodly page inside a Web Area and then update [Qodly sources](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/qodlySources) from 4D by calling [`WA EXECUTE JAVASCRIPT FUNCTION`](../commands/wa-execute-javascript-function).
 
 In 4D client/server applications, Qodly pages inside Web areas can [share their session with the remote user](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) for a high level of security. 
 
@@ -67,11 +67,11 @@ $4d.HelloWorld();
 
 ### Controlling $4d Access
 
-With [`WA SET CONTEXT`](../commands/wa-set-context.md), developers can control what can be available through `$4d` from a Web Area. Using this command you define a **context object** that declares for example 4D methods through formulas and class instances.
+With [`WA SET CONTEXT`](../commands/wa-set-context), developers can control what can be available through `$4d` from a Web Area. Using this command you define a **context object** that declares for example 4D methods through formulas and class instances.
 
-To check the currently defined context, use [`WA Get context`](../commands/wa-get-context.md).
+To check the currently defined context, use [`WA Get context`](../commands/wa-get-context).
 
-For more information, please refer to [`WA SET CONTEXT`](../commands/wa-set-context.md).
+For more information, please refer to [`WA SET CONTEXT`](../commands/wa-set-context).
 
 
 ### Calling 4D Methods from JavaScript
@@ -197,9 +197,9 @@ In addition, web areas support the following generic form events:
 When the form is executed, standard browser interface functions are available to the user in the web area, which permit interaction with other form areas:
 
 - **Edit menu commands**: When the web area has the focus, the **Edit** menu commands can be used to carry out actions such as copy, paste, select all, etc., according to the selection.
-- **Context menu**: It is possible to use the standard [context menu](properties_Entry.md#context-menu) of the system with the web area. Display of the context menu can be controlled using the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
+- **Context menu**: It is possible to use the standard [context menu](properties_Entry.md#context-menu) of the system with the web area. Display of the context menu can be controlled using the [`WA SET PREFERENCE`](../commands/wa-set-preference) command.
 - **Drag and drop**: The user can drag and drop text, pictures and documents within the web area or between a web area and the 4D form objects, according to the 4D object properties.
-For security reasons, changing the contents of a web area by means of dragging and dropping a file or URL is not allowed by default. In this case, the cursor displays a "forbidden" icon ![](../assets/en/FormObjects/forbidden.png). You have to use the `WA SET PREFERENCE(*;"warea";WA enable URL drop;True)` statement to display a "drop" icon and generate the [`On Window Opening Denied`](Events/onWindowOpeningDenied.md) event. In this event, you can call the [`WA OPEN URL`](../commands-legacy/wa-open-url.md) command or set the [URL variable](properties_WebArea.md#url) in response to a user drop.
+For security reasons, changing the contents of a web area by means of dragging and dropping a file or URL is not allowed by default. In this case, the cursor displays a "forbidden" icon ![](../assets/en/FormObjects/forbidden.png). You have to use the `WA SET PREFERENCE(*;"warea";WA enable URL drop;True)` statement to display a "drop" icon and generate the [`On Window Opening Denied`](Events/onWindowOpeningDenied.md) event. In this event, you can call the [`WA OPEN URL`](../commands/wa-open-url) command or set the [URL variable](properties_WebArea.md#url) in response to a user drop.
 
 > Drag and drop features described above are not supported in web areas using the [macOS system rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine).
 
@@ -242,7 +242,7 @@ To display the Web inspector, you can either execute the `WA OPEN WEB INSPECTOR`
 
 > With [Windows system rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine), a change in this preference requires a navigation action in the area (for example, a page refresh) to be taken into account. 
 
-For more information, refer to the description of the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
+For more information, refer to the description of the [`WA SET PREFERENCE`](../commands/wa-set-preference) command.
 
 When you have done the settings as described above, you then have new options such as **Inspect Element** in the context menu of the area. When you select this option, the web inspector window is displayed.   
 
@@ -361,6 +361,7 @@ The default 4DCEFParameters.json file contains the following switches:
 [Custom Parameters for Initializing Embedded Web Area](https://blog.4d.com/custom-parameters-for-initializing-embedded-web-area/) 
 
 :::
+
 
 
 

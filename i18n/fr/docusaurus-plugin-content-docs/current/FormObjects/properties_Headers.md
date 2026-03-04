@@ -19,7 +19,7 @@ Cette propriété est utilisée pour afficher ou masquer [les en-têtes de colon
 
 #### Commandes
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
 
 ---
 
@@ -34,7 +34,7 @@ Cette propriété sert à définir la hauteur de ligne d'un en-tête de list box
   - Ce calcul ne prend pas en compte la taille des images ni les styles appliqués aux polices.
   - Sous macOS, la hauteur de ligne peut être incorrecte si l'utilisateur saisit des caractères qui ne sont pas disponibles dans la police sélectionnée. Lorsque cela se produit, une police de remplacement est utilisée, ce qui peut entraîner des variations de taille.
 
-> Cette propriété peut être également définie dynamiquement à l'aide de la commande [LISTBOX SET HEADERS HEIGHT](../commands-legacy/listbox-set-headers-height.md).
+> Cette propriété peut être également définie dynamiquement à l'aide de la commande [LISTBOX SET HEADERS HEIGHT](../commands-legacy/listbox-set-headers-height).
 
 Conversion d'unités : lorsque vous passez d'une unité à l'autre, 4D les convertit automatiquement et affiche le résultat dans la liste des propriétés. Par exemple, si la police utilisée est "Lucida grande 24", une hauteur de "1 ligne" est convertie en "30 pixels" et une hauteur de "60 pixels" est convertie en "2 lignes".
 
@@ -66,7 +66,7 @@ A noter que la conversion en va-et-vient peut conduire à un résultat final dif
 
 #### Commandes
 
-[`LISTBOX Get headers height`](../commands-legacy/listbox-get-headers-height.md) - [`LISTBOX SET HEADERS HEIGHT`](../commands-legacy/listbox-set-headers-height.md)
+[`LISTBOX Get headers height`](../commands-legacy/listbox-get-headers-height) - [`LISTBOX SET HEADERS HEIGHT`](../commands-legacy/listbox-set-headers-height)
 
 #### Voir également
 

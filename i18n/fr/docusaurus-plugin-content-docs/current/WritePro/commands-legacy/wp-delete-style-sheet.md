@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 Cette commande offre deux manières de retirer une feuille de style. Vous pouvez indiquer :
 
-* l'objet feuille de style (créé à l'aide de [WP New style sheet](wp-new-style-sheet.md) ou retourné par la commande [WP Get style sheet](wp-get-style-sheet.md)) à retirer dans le paramètre *typeFeuilleStyle*, ou
+* l'objet feuille de style (créé à l'aide de [WP New style sheet](../commands/wp-new-style-sheet) ou retourné par la commande [WP Get style sheet](../commands/wp-get-style-sheet)) à retirer dans le paramètre *typeFeuilleStyle*, ou
 * le document 4D Write Pro avec le nom de la feuille de style à retirer dans les paramètres *docWP* et nomFeuilleStyle.
 
 **Note** : La feuille de style par défaut ("Normal") ne peut pas être supprimée.
@@ -31,7 +31,7 @@ Cette commande offre deux manières de retirer une feuille de style. Vous pouvez
 ## Voir aussi 
 
 *Accéder au contenu des documents par programmation*  
-[WP Get style sheet](wp-get-style-sheet.md)  
-[WP Get style sheets](wp-get-style-sheets.md)  
-[WP IMPORT STYLE SHEETS](wp-import-style-sheets.md)  
-[WP New style sheet](wp-new-style-sheet.md)  
+[WP Get style sheet](../commands/wp-get-style-sheet)  
+[WP Get style sheets](../commands/wp-get-style-sheets)  
+[WP IMPORT STYLE SHEETS](../commands/wp-import-style-sheets)  
+[WP New style sheet](../commands/wp-new-style-sheet)  

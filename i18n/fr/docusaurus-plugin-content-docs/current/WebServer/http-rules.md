@@ -25,7 +25,7 @@ Vous pouvez déclarer des règles de réponse HTTP :
 WEB Server.start($settings.rules) //règles au démarrage du serveur
 ```
 
-Si un fichier **HTTPRules.json** et un appel à la commande [`WEB Server`](../commands/web-server.md) avec un `$settings.rules` valide sont utilisés simultanément, la commande `WEB Server` est prioritaire.
+Si un fichier **HTTPRules.json** et un appel à la commande [`WEB Server`](../commands/web-server) avec un `$settings.rules` valide sont utilisés simultanément, la commande `WEB Server` est prioritaire.
 
 Si l'URI de la requête ne correspond à aucun des *patterns* RegEx, le serveur web renvoie une réponse par défaut.
 

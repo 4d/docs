@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 詳細な情報は、後述の“” の段落を参照してください。  
   
-データベースがWebサーバとして公開され、リクエストは事前に[On Web Authenticationデータベースメソッド](on-web-authentication-database-method.md)で受け入れられていなければなりません(存在する場合)。
+データベースがWebサーバとして公開され、リクエストは事前に[On Web Authenticationデータベースメソッド](../commands/on-web-authentication-database-method)で受け入れられていなければなりません(存在する場合)。
 
 **On Web Connectionデータベースメソッド**は6つのテキスト引数($url、$http、$ipBrowser、$ipServer、$user、および$pw)を4Dから受け取ります。これらの引数の内容は以下のとおりです:
 
@@ -104,10 +104,11 @@ $user と $pw 引数は、ブラウザが表示する標準の認証ダイアロ
 
 **On Web Connectionデータベースメソッド** は*4DCGI* URLまたはカスタマイズされたコマンドURLを使用したWebサーバーへのアクセスのエントリポイントとして使用できます。
 
-**警告:** インタフェース要素を表示する4D コマンド ([DIALOG](../commands/dialog.md)、[ALERT](alert.md)...) を呼び出すと、メソッド処理が終了します。
+**警告:** インタフェース要素を表示する4D コマンド ([DIALOG](../commands/dialog)、[ALERT](../commands/alert)...) を呼び出すと、メソッド処理が終了します。
 
 **On Web Connectionデータベースメソッド** は以下のケースで呼び出されます:
 
 * 4Dが */4DCGI/* URLを受け取ったとき。*$url*に */4DCGI/<action>* が渡されて、データベースメソッドが呼び出されます。
 * *<path>/<file>*タイプのURLで存在しないWebページが呼び出されたとき。データベースメソッドにそのURLが渡されて呼び出されます。
 * *<file>/* タイプのURLでWebページが呼び出され、デフォルトのホームページが設定されていないとき。データベースメソッドにそのURLが渡されて呼び出されます。
+

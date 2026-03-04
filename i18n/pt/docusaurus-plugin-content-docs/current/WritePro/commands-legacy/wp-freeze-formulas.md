@@ -61,6 +61,7 @@ WP FREEZE FORMULAS(WP Get section(WriteProArea;1);wk do not recompute expression
 
 ## Ver também 
 
-[WP COMPUTE FORMULAS](wp-compute-formulas.md)  
-[WP Get formulas](wp-get-formulas.md)  
-[WP INSERT FORMULA](../commands/wp-insert-formula.md)  
+[WP COMPUTE FORMULAS](../commands/wp-compute-formulas)  
+[WP Get formulas](../commands/wp-get-formulas)  
+[WP INSERT FORMULA](../commands/wp-insert-formula)  
+

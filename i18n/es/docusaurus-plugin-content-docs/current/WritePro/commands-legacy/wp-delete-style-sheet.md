@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 Este comando ofrece dos formas de eliminar una hoja de estilo. Puede especificar:
 
-* el objeto hoja de estilo (creado con [WP New style sheet](wp-new-style-sheet.md) o devuelto por el comando [WP Get style sheet](wp-get-style-sheet.md)) para eliminar en el parámetro *tipoHojaEstilo*, o
+* el objeto hoja de estilo (creado con [WP New style sheet](../commands/wp-new-style-sheet) o devuelto por el comando [WP Get style sheet](../commands/wp-get-style-sheet)) para eliminar en el parámetro *tipoHojaEstilo*, o
 * el documento 4D Write Pro junto con el nombre de la hoja de estilo para eliminar en los parámetros *wpDoc* y *nombreHojaEstilo*.
 
 **Nota**: la hoja de estilo predeterminada ("Normal") no se puede eliminar.
@@ -31,7 +31,7 @@ Este comando ofrece dos formas de eliminar una hoja de estilo. Puede especificar
 ## Ver también 
 
 *Acceder a contenidos de documentos por programación*  
-[WP Get style sheet](wp-get-style-sheet.md)  
-[WP Get style sheets](wp-get-style-sheets.md)  
-[WP IMPORT STYLE SHEETS](wp-import-style-sheets.md)  
-[WP New style sheet](wp-new-style-sheet.md)  
+[WP Get style sheet](../commands/wp-get-style-sheet)  
+[WP Get style sheets](../commands/wp-get-style-sheets)  
+[WP IMPORT STYLE SHEETS](../commands/wp-import-style-sheets)  
+[WP New style sheet](../commands/wp-new-style-sheet)  

@@ -740,7 +740,7 @@ Macros are stored in one or more XML format (text) file(s). They can be placed i
 The "Macros v2" folder can be located:
 
 - In the active 4D folder of the machine. Macros are then shared for all the databases.
-    **Note:** The location of the active 4D folder varies according to the operating system used. For more information, refer to the description of the [Get 4D folder](../commands-legacy/get-4d-folder.md) command in the 4D *Language Reference* manual.
+    **Note:** The location of the active 4D folder varies according to the operating system used. For more information, refer to the description of the [Get 4D folder](../commands/get-4d-folder) command in the 4D *Language Reference* manual.
 - Next to the database structure file. Macros are only loaded for this structure.
 - For components: in the **Components** folder of the database. Macros are then only loaded if the component is installed.
 
@@ -808,7 +808,7 @@ Here is the list of tags and their mode of use:
 | `<user_4D/>` | Tag replaced by the name of the current 4D user. |
 | `<user_os/>` | Tag replaced by the current system user name. |
 | `<method_name/>` | Tag replaced by the current method name. |
-| `<method_path/>` | Tag replaced by path syntax (as returned by [`METHOD Get path`](../commands-legacy/method-get-path.md) of the current method. |
+| `<method_path/>` | Tag replaced by path syntax (as returned by [`METHOD Get path`](../commands/method-get-path) of the current method. |
 | `<date/>` | Tag replaced by the current date. |
 |  |*Attribute*: |
 |  | - format: 4D format used to display the date. If no format is set, the default format is used. Values = number of 4D format (0 to 8). |
@@ -880,7 +880,7 @@ Macro support can change from one version of 4D to another. In order to keep the
 
 #### Text selection variables for methods  
 
-It is recommended to manage text selections using the [GET MACRO PARAMETER](../commands-legacy/get-macro-parameter.md) and [SET MACRO PARAMETER](../commands-legacy/set-macro-parameter.md) commands. These commands can be used to overcome the partitioning of the host project/component execution spaces and thus allow the creation of components dedicated to the management of macros. In order to activate this mode for a macro, you must declare the Version attribute with the value 2 in the Macro element. In this case, 4D no longer manages the predefined variables _textSel,_textReplace, etc. and the [GET MACRO PARAMETER](../commands-legacy/get-macro-parameter.md) and [SET MACRO PARAMETER](../commands-legacy/set-macro-parameter.md) commands are used. This attribute must be declared as follows:
+It is recommended to manage text selections using the [GET MACRO PARAMETER](../commands/get-macro-parameter) and [SET MACRO PARAMETER](../commands/set-macro-parameter) commands. These commands can be used to overcome the partitioning of the host project/component execution spaces and thus allow the creation of components dedicated to the management of macros. In order to activate this mode for a macro, you must declare the Version attribute with the value 2 in the Macro element. In this case, 4D no longer manages the predefined variables _textSel,_textReplace, etc. and the [GET MACRO PARAMETER](../commands/get-macro-parameter) and [SET MACRO PARAMETER](../commands/set-macro-parameter) commands are used. This attribute must be declared as follows:
 
 `<macro name="MyMacro" version="2">`<br/>
 `--- Text of the macro ---`<br/>
@@ -910,3 +910,4 @@ The import/export function is multi-platform: a method exported under Mac OS can
 
 - 4D method (extension *.c4d*): In this format, methods are exported in encoded form. The names of objects are tokenized. This format is used in particular for exchanging methods between 4D applications and plug-ins in different languages. Conversely, it is not possible to display them in a text editor.
 - Text (extension *.txt*): In this format, methods are exported in text-only form. In this case, the methods are readable using a standard text editor or a source control tool.
+

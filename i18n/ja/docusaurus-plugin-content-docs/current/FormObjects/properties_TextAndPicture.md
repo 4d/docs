@@ -21,7 +21,7 @@ title: テキスト、ピクチャー
 
 #### コマンド
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
 
 ---
 
@@ -41,7 +41,7 @@ title: テキスト、ピクチャー
 
 #### コマンド
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
 
 ---
 
@@ -70,7 +70,7 @@ title: テキスト、ピクチャー
 
 #### コマンド
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
 
 ---
 
@@ -90,7 +90,7 @@ title: テキスト、ピクチャー
 
 #### コマンド
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
 
 ---
 
@@ -112,7 +112,7 @@ title: テキスト、ピクチャー
 
 #### コマンド
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
 
 ---
 
@@ -151,7 +151,7 @@ title: テキスト、ピクチャー
 
 #### コマンド
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
 
 ---
 
@@ -175,7 +175,7 @@ title: テキスト、ピクチャー
 
 #### コマンド
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
 
 ---
 
@@ -205,7 +205,7 @@ title: テキスト、ピクチャー
 
 #### コマンド
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
 
 ---
 
@@ -231,7 +231,7 @@ title: テキスト、ピクチャー
 
 #### コマンド
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
 
 ---
 
@@ -255,7 +255,7 @@ title: テキスト、ピクチャー
 
 #### コマンド
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
 
 ---
 
@@ -290,7 +290,7 @@ title: テキスト、ピクチャー
 
 ### ポップアップメニューの管理
 
-"ポップアップメニューあり" プロパティは、ボタンのグラフィック面だけを管理するという点に注意が必要です。 ポップアップメニューの表示とその値は管理者が管理すべきものです。具体的には、[`form events`](../Events/overview.md) および [`Dynamic pop up menu`](../commands-legacy/dynamic-pop-up-menu.md) コマンドおよび [`Pop up menu`](../commands-legacy/pop-up-menu.md) コマンドなどを使用して管理しなければなりません。
+"ポップアップメニューあり" プロパティは、ボタンのグラフィック面だけを管理するという点に注意が必要です。 ポップアップメニューの表示とその値は管理者が管理すべきものです。具体的には、[`form events`](../Events/overview.md) および [`Dynamic pop up menu`](../commands-legacy/dynamic-pop-up-menu) コマンドおよび [`Pop up menu`](../commands-legacy/pop-up-menu) コマンドなどを使用して管理しなければなりません。
 
 #### JSON 文法
 
@@ -304,5 +304,5 @@ title: テキスト、ピクチャー
 
 #### コマンド
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
 

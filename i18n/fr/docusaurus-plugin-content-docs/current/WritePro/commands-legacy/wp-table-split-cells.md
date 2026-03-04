@@ -69,4 +69,4 @@ Pour plus de détails, veuillez consulter *Fusionner et fractionner des cellules
 ## Voir aussi 
 
 *Manipuler des tableaux*  
-[WP TABLE MERGE CELLS](wp-table-merge-cells.md)  
+[WP TABLE MERGE CELLS](../commands/wp-table-merge-cells)  

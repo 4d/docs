@@ -357,12 +357,12 @@ Les attributs de taille de papier sont utilisés pour spécifier les dimensions 
 |           | width  | entier long | Largeur du papier, en centièmes de pouce.                                                                                                                            |
 |           | kind   | text        | Nom du format de papier standard (par exemple, A2, A4, legal, etc.) retourné par `Get Print Option`. Valeur par défaut = "letter" |
 
-- Si le format du papier est spécifié en utilisant les propriétés `height` et `width`, [`VP Get print info`](./commands/vp-get-print-info.md) retourne un format de papier avec `custom` comme valeur pour `kind`.
+- Si le format du papier est spécifié en utilisant les propriétés `height` et `width`, [`VP Get print info`](../commands/vp-get-print-info) retourne un format de papier avec `custom` comme valeur pour `kind`.
 
 - Si vous définissez le format du papier à l'aide de la propriété `kind`, vous pouvez utiliser l'une ou l'autre :
   - un des formats dans la [liste des formats SpreadJS](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
-  - Dans ce cas, [`VP Get print info`](./commands/vp-get-print-info.md) retourne le format correspondant avec la hauteur et la largeur.
-    un des formats retournés par la commande [`PRINT OPTION VALUES`](../commands-legacy/print-option-values.md).
+  - Dans ce cas, [`VP Get print info`](../commands/vp-get-print-info) retourne le format correspondant avec la hauteur et la largeur.
+    un des formats retournés par la commande [`PRINT OPTION VALUES`](../commands-legacy/print-option-values).
 
 ### Graduation
 

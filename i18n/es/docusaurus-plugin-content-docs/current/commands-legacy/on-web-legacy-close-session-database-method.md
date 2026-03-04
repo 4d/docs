@@ -24,11 +24,11 @@ displayed_sidebar: docs
 
 El **Método base On Web Legacy Close Session** es llamado por el servidor web de 4D cada vez que una sesión web se va a cerrar. Una sesión puede ser cerrarse en los siguientes casos:
 
-* cuando se alcanza el número máximo de sesiones simultáneas (100 por defecto, modificable utilizando el comando [WEB SET OPTION](web-set-option.md)), y 4D necesita crear nuevas (4D automáticamente destruye el proceso de la sesión inactiva más antigua),
-* cuando se alcanza el periodo máximo de inactividad del proceso de la sesión (480 minutos por defecto, modificable vía el comando [WEB SET OPTION](web-set-option.md)),
-* cuando se llama al comando [WEB LEGACY CLOSE SESSION](web-legacy-close-session.md).
+* cuando se alcanza el número máximo de sesiones simultáneas (100 por defecto, modificable utilizando el comando [WEB SET OPTION](../commands/web-set-option)), y 4D necesita crear nuevas (4D automáticamente destruye el proceso de la sesión inactiva más antigua),
+* cuando se alcanza el periodo máximo de inactividad del proceso de la sesión (480 minutos por defecto, modificable vía el comando [WEB SET OPTION](../commands/web-set-option)),
+* cuando se llama al comando [WEB LEGACY CLOSE SESSION](../commands/web-legacy-close-session).
 
-Cuando se llama a este método base, el contexto de la sesión (variables y selecciones generadas por el usuario) es aún valido. Esto significa que puede guardar los datos relativos a la sesión para poder usarlos posteriormente, más específicamente utilizando [On Web Connection](./on-web-connection-database-method.md).
+Cuando se llama a este método base, el contexto de la sesión (variables y selecciones generadas por el usuario) es aún valido. Esto significa que puede guardar los datos relativos a la sesión para poder usarlos posteriormente, más específicamente utilizando [On Web Connection](../commands/on-web-connection-database-method).
 
 **Nota:** en el contexto de una sesión 4D Mobile (que puede generar varios procesos), el **Método base On Web Legacy Close Session** se llama para cada proceso web cerrado, lo que permite guardar todo tipo de datos (variables, selección, etc.) generados por el proceso de sesión 4D Mobile.  
   
@@ -37,4 +37,4 @@ Un ejemplo de uso del **Método base On Web Legacy Close Session** se presenta e
 ## Ver también 
 
 *Gestión de las sesiones web (heredado)*  
-[WEB LEGACY CLOSE SESSION](web-legacy-close-session.md)  
+[WEB LEGACY CLOSE SESSION](../commands/web-legacy-close-session)  

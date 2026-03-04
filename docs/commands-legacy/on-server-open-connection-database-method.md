@@ -23,8 +23,8 @@ displayed_sidebar: docs
 
 |Release|Changes|
 |---|---|
-|13|Modified|
 |<6|Created|
+|13|Modified|
 
 </details>
 </div>
@@ -37,7 +37,7 @@ The **On Server Open Connection database method** is called each time:
 
 * a remote 4D connects (because the Application process starts)
 * a remote 4D opens the Design environment (because the Design process starts)
-* a remote 4D starts a global process (whose name does not begin with "$") which requires the creation of a cooperative process on the server **(\*)**. This process can be created using the [New process](new-process.md) command, a menu command or using the Execute Method dialog box.
+* a remote 4D starts a global process (whose name does not begin with "$") which requires the creation of a cooperative process on the server **(\*)**. This process can be created using the [New process](../commands/new-process) command, a menu command or using the Execute Method dialog box.
 
 In each case with a remote 4D, several processes are started—One on the client machine and one or two others (as needed) on the server machine. On the client machine, the process executes code and send requests to 4D Server. On the server machine, the **4D Client Process** (preemptive process) maintains the database environment for the client process (i.e., current selections and locking of records for user processes) and replies to requests sent by the process running on the client machine. The **4D Client Database process** (cooperative process) is in charge of monitoring the corresponding 4D Client process.
 
@@ -52,7 +52,7 @@ In each case with a remote 4D, several processes are started—One on the client
   // call to On Server Open Connection
 ```
 
-**Important**: Web connections and SQL connections do not invoke the **On Server Open Connection database method**. When a Web browser connects to 4D Server, the *On Web Authentication Database Method* (if any) and/or the [On Web Connection database method](on-web-connection-database-method.md) are invoked. When 4D Server receives an SQL query, the [On SQL Authentication database method](on-sql-authentication-database-method.md) (if one exists) is called. For more information, see the description of this database method in the 4D Language Reference manual.
+**Important**: Web connections and SQL connections do not invoke the **On Server Open Connection database method**. When a Web browser connects to 4D Server, the *On Web Authentication Database Method* (if any) and/or the [On Web Connection database method](../commands/on-web-connection-database-method) are invoked. When 4D Server receives an SQL query, the [On SQL Authentication database method](../commands/on-sql-authentication-database-method) (if one exists) is called. For more information, see the description of this database method in the 4D Language Reference manual.
 
 **Important**: When a Stored Procedure is started, the **On Server Open Connection database method** is NOT invoked. *Stored Procedures* are server processes, not 4D Client processes. They execute code on the Server machine, but do not reply to requests exchanged by a 4D client (or other clients) and 4D Server. 
 
@@ -60,9 +60,9 @@ In each case with a remote 4D, several processes are started—One on the client
 
 The **On Server Open Connection database method** is executed on the 4D Server machine within the 4D Client process that provoked the call to the method.
 
-For example, if a remote 4D connects to a 4D Server interpreted database, the user process, the Design process and the client registration process (by default) for that client are started. The On Server Open Connection database method is therefore executed three times in a row—the first time within the Application process, the second time within the client registration process, and the third time within the Design process. If the three process are respectively the sixth, seventh and eighth process to be started on the Server machine, and if you call [Current process](current-process.md) from within the **On Server Open Connection database method**, the first time [Current process](current-process.md) returns 6, the second time 7 and the third time 8.
+For example, if a remote 4D connects to a 4D Server interpreted database, the user process, the Design process and the client registration process (by default) for that client are started. The On Server Open Connection database method is therefore executed three times in a row—the first time within the Application process, the second time within the client registration process, and the third time within the Design process. If the three process are respectively the sixth, seventh and eighth process to be started on the Server machine, and if you call [Current process](../commands/current-process) from within the **On Server Open Connection database method**, the first time [Current process](../commands/current-process) returns 6, the second time 7 and the third time 8.
 
-Note that **On Server Open Connection database method** executes on the Server machine. It executes within the 4D Client process running on the Server machine, independent of the process running on the client side. In addition, at the moment when the method is invoked, the 4D Client process has not yet been named ([Process info](../commands/process-info.md) will not at this point return the name of the 4D Client process).
+Note that **On Server Open Connection database method** executes on the Server machine. It executes within the 4D Client process running on the Server machine, independent of the process running on the client side. In addition, at the moment when the method is invoked, the 4D Client process has not yet been named ([Process info](../commands/process-info) will not at this point return the name of the 4D Client process).
 
 The **On Server Open Connection database method** has no access to the process variable table of the process running on the Client side. This table resides on the Client machine, not on the Server machine. 
 
@@ -84,7 +84,7 @@ This table details the information provided by the three parameters passed to th
 | $id            | Connection ID number used internally by 4D Server to identify a connection |
 | $toIgnore            | Obsolete: Always returns 0 but must be declared                            |
 
-These ID numbers are not directly usable as sources of information to be passed as, for example, parameters to a 4D command. However, they provide a way to uniquely identify a 4D Client process between the **On Server Open Connection database method** and the [On Server Close Connection database method](on-server-close-connection-database-method.md). At any moment of a 4D Server session, the combination of these values is unique. By storing this information in an interprocess array or a table, the two database methods can exchange information. In the example at the end of this section, the two database methods use this information to store the date and time of the beginning and end of a connection in the same record of a table.
+These ID numbers are not directly usable as sources of information to be passed as, for example, parameters to a 4D command. However, they provide a way to uniquely identify a 4D Client process between the **On Server Open Connection database method** and the [On Server Close Connection database method](../commands/on-server-close-connection-database-method). At any moment of a 4D Server session, the combination of these values is unique. By storing this information in an interprocess array or a table, the two database methods can exchange information. In the example at the end of this section, the two database methods use this information to store the date and time of the beginning and end of a connection in the same record of a table.
 
 ## Example 1 
 
@@ -152,5 +152,6 @@ The following example prevents any new connection from 2 to 4 A.M.
 | --- | --- |
 | Command number | 16001 |
 | Thread safe | no |
+
 
 

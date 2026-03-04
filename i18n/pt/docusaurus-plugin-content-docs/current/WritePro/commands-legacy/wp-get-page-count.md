@@ -27,7 +27,7 @@ Em *objAlvo*, é possível passar:
 
 O comando retorna o número de páginas de *objAlvo*. Se passar uma subseção, o número de páginas da seção pai é retornada.
 
-As mesmas configurações de visão, como para o comando [WP PRINT](wp-print.md), são usadas com **WP Get page count**:
+As mesmas configurações de visão, como para o comando [WP PRINT](../commands/wp-print), são usadas com **WP Get page count**:
 
 * cabeçalhos: visíveis
 * rodapés: visíveis
@@ -51,3 +51,4 @@ Se quiser saber o número total de páginas de documentos 4D Write Pro armazenad
  End while
  ALERT("Número total de páginas de manual: "+String($totalCount))
 ```
+

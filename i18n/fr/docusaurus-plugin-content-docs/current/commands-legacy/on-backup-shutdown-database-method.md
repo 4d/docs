@@ -26,7 +26,7 @@ La **On Backup Shutdown database method** permet de vérifier que la sauvegarde 
 * Si la sauvegarde a été interrompue à la suite d'une erreur ou par l'utilisateur, *$status* est différent de 0.  
    * Si la sauvegarde a été stoppée par la *Méthode base Sur démarrage sauvegarde* (*$result* \# 0), *$status* retourne le code effectivement retourné dans le paramètre *$result*. Ce principe vous permet de mettre en place un système de gestion d’erreurs personnalisé.  
    * Si la sauvegarde a été stoppée à la suite d'une erreur, le code de l'erreur est retourné dans *$status*.  
-Dans tous les cas, vous pouvez obtenir des informations sur l'erreur à l’aide de la commande [BACKUP INFO](backup-info.md).
+Dans tous les cas, vous pouvez obtenir des informations sur l'erreur à l’aide de la commande [BACKUP INFO](../commands/backup-info).
 
 **Note** : Vous devez impérativement déclarer le paramètre *$status* (entier long) dans la méthode base :
 
@@ -35,3 +35,4 @@ Dans tous les cas, vous pouvez obtenir des informations sur l'erreur à l’aide
 ```
 
 Il est important de noter qu'en cas d'erreur durant la sauvegarde (disque plein, support inaccessible...), les informations relatives à l'erreur sont uniquement affichées dans le moniteur de 4D Server ou dans le CSM, et reportées dans le journal des sauvegardes. Aucune boîte de dialogue d'alerte n'est affichée et la variable *error* n'est pas modifiée. Si vous souhaitez pouvoir notifier l'administrateur qu'une erreur s'est produite, en particulier dans le contexte d'une application en mode client/serveur, il est nécessaire d'utiliser la **On Backup Shutdown database method**.
+

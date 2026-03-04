@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.Windows Alt down.Summary-->Windows Alt down はWindowsのAlt キーが押されていると[True](true.md "True")を返します。<!-- END REF-->Macintoshのプラットフォーム上で呼び出された場合は、Macintoshのoptionキーが押されていると、 Windows Alt down は[True](true.md "True")を返します。
+<!--REF #_command_.Windows Alt down.Summary-->Windows Alt down はWindowsのAlt キーが押されていると[True](../commands/true)を返します。<!-- END REF-->Macintoshのプラットフォーム上で呼び出された場合は、Macintoshのoptionキーが押されていると、 Windows Alt down は[True](../commands/true)を返します。
 
 ## 例題 
 

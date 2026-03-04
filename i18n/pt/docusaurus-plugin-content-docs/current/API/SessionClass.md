@@ -3,7 +3,7 @@ id: SessionClass
 title: Session
 ---
 
-Os objetos de sessão são retornados pelo comando [`Session`](../commands/session.md). These objects provide the developer with an interface allowing to manage the current user session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web context only) manage [privileges](../ORDA/privileges.md).
+Os objetos de sessão são retornados pelo comando [`Session`](../commands/session). These objects provide the developer with an interface allowing to manage the current user session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web context only) manage [privileges](../ORDA/privileges.md).
 
 :::tip Related blog posts
 
@@ -438,7 +438,7 @@ A propriedade `.id` contém <!-- REF #SessionClass.id.Summary --> o identificado
 
 :::tip
 
-Você pode usar essa propriedade para obter o objeto [`.storage`](#storage) de uma sessão graças ao comando [`storage`](../commands/session-storage.md).
+Você pode usar essa propriedade para obter o objeto [`.storage`](#storage) de uma sessão graças ao comando [`storage`](../commands/session-storage).
 
 :::
 
@@ -509,8 +509,8 @@ End if
 
 The `.info` property <!-- REF #SessionClass.info.Summary -->describes the desktop or web session<!-- END REF -->.
 
-- **Remote sessions** and **Stored procedure sessions**: The `.info` object is the same object as the one returned in the "session" property by the [`Process activity`](../commands/process-activity.md) command.
-- **Standalone sessions**: The `.info` object is the same object as the one returned by the [`Session info`](../commands/session-info.md) command.
+- **Remote sessions** and **Stored procedure sessions**: The `.info` object is the same object as the one returned in the "session" property by the [`Process activity`](../commands/process-activity) command.
+- **Standalone sessions**: The `.info` object is the same object as the one returned by the [`Session info`](../commands/session-info) command.
 - **Web user sessions**: The `.info` object contains properties available for web user sessions.
 
 O objeto `.info` contém as seguintes propriedades:
@@ -846,7 +846,7 @@ Essa propriedade é **apenas de leitura**, mas retorna um objeto de leitura e gr
 
 :::tip
 
-Você pode obter a propriedade `.storage` de uma sessão usando o comando [`Session storage`](../commands/session-storage.md).
+Você pode obter a propriedade `.storage` de uma sessão usando o comando [`Session storage`](../commands/session-storage).
 
 :::
 
@@ -895,8 +895,8 @@ End use
 A propriedade `.userName` contém <!-- REF #SessionClass.userName.Summary -->o nome de usuário associado à sessão<!-- END REF -->. Pode usá-la para identificar o usuário dentro de seu código.
 
 - **Web sessions**: This property is an empty string by default. Ele pode ser definido usando a propriedade `privileges` da função [`setPrivileges()`](#setprivileges).
-- **Remote/Stored procedure sessions**: This property returns the same user name as the [`Current user`](../commands-legacy/current-user.md) command.
-- **Standalone sessions**: This property contains "designer" or the name set with the [`SET USER ALIAS`](../commands-legacy/set-user-alias.md) command.
+- **Remote/Stored procedure sessions**: This property returns the same user name as the [`Current user`](../commands-legacy/current-user) command.
+- **Standalone sessions**: This property contains "designer" or the name set with the [`SET USER ALIAS`](../commands-legacy/set-user-alias) command.
 
 This property is **read only** for desktop sessions.
 

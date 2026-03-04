@@ -58,5 +58,5 @@ Vous souhaitez modifier la couleur de tous les libellés des liens URL dans un d
 ## Voir aussi 
 
   
-[WP Get formulas](wp-get-formulas.md)  
-[WP SET LINK](wp-set-link.md)  
+[WP Get formulas](../commands/wp-get-formulas)  
+[WP SET LINK](../commands/wp-set-link)  

@@ -34,8 +34,8 @@ You cannot use operators on blobs.
 
 ## Checking if a variable holds a scalar blob or a `4D.Blob`
 
-Use the [Value type](../commands-legacy/value-type.md) command to determine if a value is of type Blob or Object.
-To check that an object is a blob object (`4D.Blob`), use [OB instance of](../commands-legacy/ob-instance-of.md):
+Use the [Value type](../commands/value-type) command to determine if a value is of type Blob or Object.
+To check that an object is a blob object (`4D.Blob`), use [OB instance of](../commands/ob-instance-of):
 
 ```4d
 var $myBlob: Blob
@@ -62,17 +62,17 @@ $myText:= BLOB to text( $myBlob ; UTF8 text without length )
 
 Some 4D commands alter the original blob, and thus do not support the `4D.Blob` type:
 
-- [DELETE FROM BLOB](../commands-legacy/delete-from-blob.md)
-- [INSERT IN BLOB](../commands-legacy/insert-in-blob.md)
-- [INTEGER TO BLOB](../commands-legacy/integer-to-blob.md)
-- [LONGINT TO BLOB](../commands-legacy/longint-to-blob.md)
-- [REAL TO BLOB](../commands-legacy/real-to-blob.md)
-- [SET BLOB SIZE](../commands-legacy/set-blob-size.md)
-- [TEXT TO BLOB](../commands-legacy/text-to-blob.md)
-- [VARIABLE TO BLOB](../commands-legacy/variable-to-blob.md)
-- [LIST TO BLOB](../commands-legacy/list-to-blob.md)
-- [SOAP DECLARATION](../commands-legacy/soap-declaration.md)
-- [WEB SERVICE SET PARAMETER](../commands-legacy/web-service-set-parameter.md)
+- [DELETE FROM BLOB](../commands/delete-from-blob)
+- [INSERT IN BLOB](../commands/insert-in-blob)
+- [INTEGER TO BLOB](../commands/integer-to-blob)
+- [LONGINT TO BLOB](../commands/longint-to-blob)
+- [REAL TO BLOB](../commands/real-to-blob)
+- [SET BLOB SIZE](../commands/set-blob-size)
+- [TEXT TO BLOB](../commands/text-to-blob)
+- [VARIABLE TO BLOB](../commands/variable-to-blob)
+- [LIST TO BLOB](../commands/list-to-blob)
+- [SOAP DECLARATION](../commands/soap-declaration)
+- [WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter)
 
 ### Passing blobs and blob objects to methods
 
@@ -187,3 +187,4 @@ $byte:=$myBlob[5]
 ```
 
 Since a `4D.Blob` cannot be altered, you can read the bytes of a `4D.Blob` using this syntax, but not modify them.
+

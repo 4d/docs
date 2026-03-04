@@ -153,7 +153,7 @@ Lorsqu'il renvoie une instance d'objet 4D.OutgoingMessage, 4D définit automatiq
 
 :::note
 
-Si vous définissez une *value* pour la *key* du header "Content-Type", assurez-vous d'appeler cette fonction après l'appel à [`setBody()`](#setbody), car `setBody()` remplit automatiquement ce header. Pour une liste des valeurs du header "Content-Type", veuillez vous référer à la documentation de [`WEB SEND BLOB`](../commands-legacy/web-send-blob.md).
+Si vous définissez une *value* pour la *key* du header "Content-Type", assurez-vous d'appeler cette fonction après l'appel à [`setBody()`](#setbody), car `setBody()` remplit automatiquement ce header. Pour une liste des valeurs du header "Content-Type", veuillez vous référer à la documentation de [`WEB SEND BLOB`](../commands-legacy/web-send-blob).
 
 :::
 

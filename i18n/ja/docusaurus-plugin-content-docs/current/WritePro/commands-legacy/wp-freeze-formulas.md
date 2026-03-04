@@ -60,6 +60,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP COMPUTE FORMULAS](wp-compute-formulas.md)  
-[WP Get formulas](wp-get-formulas.md)  
-[WP INSERT FORMULA](../commands/wp-insert-formula.md)  
+[WP COMPUTE FORMULAS](../commands/wp-compute-formulas)  
+[WP Get formulas](../commands/wp-get-formulas)  
+[WP INSERT FORMULA](../commands/wp-insert-formula)  
+

@@ -19,7 +19,7 @@ Cette propriété est utilisée pour afficher ou masquer [les pieds de de colonn
 
 #### Commandes
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
 
 ---
 
@@ -34,7 +34,7 @@ Cette propriété sert à définir la hauteur de ligne d'un pied de list box en 
   - Ce calcul ne prend pas en compte la taille des images ni les styles appliqués aux polices.
   - Sous macOS, la hauteur de ligne peut être incorrecte si l'utilisateur saisit des caractères qui ne sont pas disponibles dans la police sélectionnée. Lorsque cela se produit, une police de remplacement est utilisée, ce qui peut entraîner des variations de taille.
 
-> Cette propriété peut être également définie dynamiquement à l'aide de la commande [LISTBOX SET FOOTERS HEIGHT](../commands-legacy/listbox-set-footers-height.md).
+> Cette propriété peut être également définie dynamiquement à l'aide de la commande [LISTBOX SET FOOTERS HEIGHT](../commands-legacy/listbox-set-footers-height).
 
 Conversion d'unités : lorsque vous passez d'une unité à l'autre, 4D les convertit automatiquement et affiche le résultat dans la liste des propriétés. Par exemple, si la police utilisée est "Lucida grande 24", une hauteur de "1 ligne" est convertie en "30 pixels" et une hauteur de "60 pixels" est convertie en "2 lignes".
 
@@ -65,7 +65,7 @@ A noter que la conversion en va-et-vient peut conduire à un résultat final dif
 
 #### Commandes
 
-[LISTBOX Get footers height](../commands-legacy/listbox-get-footers-height.md) - [LISTBOX SET FOOTERS HEIGHT](../commands-legacy/listbox-set-footers-height.md)
+[LISTBOX Get footers height](../commands-legacy/listbox-get-footers-height) - [LISTBOX SET FOOTERS HEIGHT](../commands-legacy/listbox-set-footers-height)
 
 #### Voir également
 

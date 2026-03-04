@@ -58,4 +58,4 @@ Insèrera la nouvelle colonne à l'emplacement souhaité :
 
 ## Voir aussi 
 
-[WP Table insert rows](wp-table-insert-rows.md)  
+[WP Table insert rows](../commands/wp-table-insert-rows)  

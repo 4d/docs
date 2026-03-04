@@ -70,6 +70,6 @@ Vous souhaitez renommer un signet existant. Pour cela, vous devez créer un nouv
 ## Voir aussi 
 
   
-[WP Bookmark range](wp-bookmark-range.md)  
-[WP DELETE BOOKMARK](wp-delete-bookmark.md)  
-[WP GET BOOKMARKS](wp-get-bookmarks.md)  
+[WP Bookmark range](../commands/wp-bookmark-range)  
+[WP DELETE BOOKMARK](../commands/wp-delete-bookmark)  
+[WP GET BOOKMARKS](../commands/wp-get-bookmarks)  

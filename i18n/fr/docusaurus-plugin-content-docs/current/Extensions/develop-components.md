@@ -27,7 +27,7 @@ La création et l’installation des composants 4D s’effectuent directement de
 
 - Pour utiliser un composant, il suffit de [l'installer dans votre application](../Project/components.md). Vous pouvez également créer un nouveau composant directement à partir de l'hôte, auquel cas il est immédiatement utilisable.
 - Un projet peut être à la fois "matrice" et "hôte", c'est-à-dire qu'un projet utilisé comme matrice peut lui-même utiliser un ou plusieurs composants. En revanche, un composant ne peut pas lui-même utiliser de "sous-composants".
-- Un composant peut faire appel à la plupart des éléments 4D : datastore ([`ds`](../commands/ds.md)), classes, fonctions, méthodes projet, formulaires projet, barres de menu, énumérations, etc. Les méthodes base de données suivantes peuvent être utilisées : [On Web Connection](../commands-legacy/on-web-connection-database-method.md), [On Web Authentication](../commands-legacy/on-web-authentication-database-method.md), [On Host Database Event](../commands-legacy/on-host-database-event-database-method.md).
+- Un composant peut faire appel à la plupart des éléments 4D : datastore ([`ds`](../commands/ds)), classes, fonctions, méthodes projet, formulaires projet, barres de menu, énumérations, etc. Les méthodes base de données suivantes peuvent être utilisées : [On Web Connection](../commands-legacy/on-web-connection-database-method), [On Web Authentication](../commands-legacy/on-web-authentication-database-method), [On Host Database Event](../commands-legacy/on-host-database-event-database-method).
 - Un composant peut créer et/ou utiliser des tables, des champs et des fichiers de données en utilisant des mécanismes de bases de données externes. Les bases externes sont des bases 4D indépendantes manipulées via les commandes SQL.
 - Un projet hôte fonctionnant en mode interprété peut utiliser des composants interprétés ou compilés. Un projet hôte fonctionnant en mode compilé ne peut pas utiliser de composants interprétés. Dans ce cas, seuls les composants compilés peuvent être utilisés.
 
@@ -98,7 +98,7 @@ Lorsque vous la sélectionnez, un onglet dédié est ajouté (ou activé s'il es
 
 - Démarrage, y compris les dossiers, les méthodes, les classes et (en prévisualisation uniquement) les formulaires
 - Méthodes projet
-- Méthodes base ([On Web Connection](../commands-legacy/on-web-connection-database-method.md), [On Web Authentication](../commands-legacy/on-web-authentication-database-method.md), [On Host Database Event](../commands-legacy/on-host-database-event-database-method.md))
+- Méthodes base ([On Web Connection](../commands-legacy/on-web-connection-database-method), [On Web Authentication](../commands-legacy/on-web-authentication-database-method), [On Host Database Event](../commands-legacy/on-host-database-event-database-method))
 - Classes
 - Méthodes formulaire projet
 - Commandes et constantes
@@ -124,13 +124,13 @@ Vous pouvez utiliser les [**fonctions de recherche et de remplacement**](../Proj
 
 Hormis les [commandes non utilisables](#unusable-commands), un composant peut utiliser toute commande du langage 4D.
 
-Lorsque des commandes sont appelées à partir d'un composant, elles sont exécutées dans le contexte du composant, à l'exception de la commande [`EXECUTE FORMULA`](../commands-legacy/execute-formula.md) ou [`EXECUTE METHOD`](../commands-legacy/execute-method.md) qui utilisent le contexte de la méthode spécifiée par la commande. A noter également que les commandes de lecture du thème “Utilisateurs et groupes” sont utilisables depuis un composant mais lisent les utilisateurs et les groupes du projet hôte (un composant n’a pas d’utilisateurs et groupes propres).
+Lorsque des commandes sont appelées à partir d'un composant, elles sont exécutées dans le contexte du composant, à l'exception de la commande [`EXECUTE FORMULA`](../commands-legacy/execute-formula) ou [`EXECUTE METHOD`](../commands-legacy/execute-method) qui utilisent le contexte de la méthode spécifiée par la commande. A noter également que les commandes de lecture du thème “Utilisateurs et groupes” sont utilisables depuis un composant mais lisent les utilisateurs et les groupes du projet hôte (un composant n’a pas d’utilisateurs et groupes propres).
 
-Les commandes [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) et [`Get database parameter`](../commands-legacy/get-database-parameter.md) sont une exception : leur portée est globale à l'application. Lorsque ces commandes sont appelées depuis un composant, elles s’appliquent au projet d'application hôte.
+Les commandes [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter) et [`Get database parameter`](../commands-legacy/get-database-parameter) sont une exception : leur portée est globale à l'application. Lorsque ces commandes sont appelées depuis un composant, elles s’appliquent au projet d'application hôte.
 
 Par ailleurs, des dispositions spécifiques sont définies pour les commandes `Structure file` et `Get 4D folder` lorsqu’elles sont utilisées dans le cadre des composants.
 
-La commande [`COMPONENT LIST`](../commands-legacy/component-list.md) permet d'obtenir la liste des composants chargés par le projet hôte.
+La commande [`COMPONENT LIST`](../commands-legacy/component-list) permet d'obtenir la liste des composants chargés par le projet hôte.
 
 ### Commandes non utilisables
 
@@ -173,7 +173,7 @@ A l’inverse, pour des raisons de sécurité, par défaut un composant ne peut 
 
 ![](../assets/en/Concepts/pict516563.en.png)
 
-Une fois que les méthodes projet des projets hôtes sont disponibles pour les composants, vous pouvez exécuter une méthode du projet hôte à partir d'un composant en utilisant la commande [`EXECUTE FORMULA`](../commands-legacy/execute-formula.md) ou la commande [`EXECUTE METHOD`](../commands-legacy/execute-method.md). Par exemple :
+Une fois que les méthodes projet des projets hôtes sont disponibles pour les composants, vous pouvez exécuter une méthode du projet hôte à partir d'un composant en utilisant la commande [`EXECUTE FORMULA`](../commands-legacy/execute-formula) ou la commande [`EXECUTE METHOD`](../commands-legacy/execute-method). Par exemple :
 
 ```4d
 // Méthode hôte
@@ -315,7 +315,7 @@ Dans ce cas, il est nécessaire d’utiliser la comparaison de pointeurs :
 
 ## Gestion des erreurs
 
-Une [méthode de gestion d'erreurs](Concepts/error-handling.md) installée par la commande [`ON ERR CALL`](../commands-legacy/on-err-call.md) ne s'applique qu'à l'application en cours d'exécution. En cas d'erreur générée par un composant, la méthode d'appel sur erreur `ON ERR CALL` du projet hôte n'est pas appelée, et inversement.
+Une [méthode de gestion d'erreurs](Concepts/error-handling.md) installée par la commande [`ON ERR CALL`](../commands-legacy/on-err-call) ne s'applique qu'à l'application en cours d'exécution. En cas d'erreur générée par un composant, la méthode d'appel sur erreur `ON ERR CALL` du projet hôte n'est pas appelée, et inversement.
 
 Cependant, vous pouvez installer un [gestionnaire d'erreurs de composants dans l'application hôte](../Concepts/error-handling.md#scope-and-components) pour gérer les erreurs non capturées des composants.
 

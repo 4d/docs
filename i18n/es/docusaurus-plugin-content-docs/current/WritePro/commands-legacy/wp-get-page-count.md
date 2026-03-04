@@ -27,7 +27,7 @@ En *objRango*, puede pasar:
 
 El comando devuelve el número de páginas de *objRango*. Si pasa una subsección, se devuelve el número de páginas de la sección padre.
 
-La misma configuración de visualización que para el comando [WP PRINT](wp-print.md) se usa con **WP Get page count**:
+La misma configuración de visualización que para el comando [WP PRINT](../commands/wp-print) se usa con **WP Get page count**:
 
 * encabezados: visible
 * pies de página: visible
@@ -51,3 +51,4 @@ Usted quiere saber el número total de páginas de documentos 4D Write Pro almac
  End while
  ALERT("Número total de páginas del manual: "+String($totalCount))
 ```
+

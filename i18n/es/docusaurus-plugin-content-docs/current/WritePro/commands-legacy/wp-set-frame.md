@@ -64,4 +64,4 @@ Usted desea colocar el cursor en el pie izquierdo de la sección actual:
 
 ## Ver también 
 
-[WP Get frame](wp-get-frame.md)  
+[WP Get frame](../commands/wp-get-frame)  

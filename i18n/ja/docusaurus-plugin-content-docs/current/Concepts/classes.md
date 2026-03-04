@@ -98,8 +98,8 @@ Project フォルダー Project Sources Classes Polygon.4dm
 
 定義されたクラスには、クラスストアよりアクセスすることができます。 クラスストアには次の二つが存在します:
 
-- [`cs`](../commands/cs.md) - ユーザークラスストア
-- [`4D`](../commands/4d.md) - ビルトインクラスストア
+- [`cs`](../commands/cs) - ユーザークラスストア
+- [`4D`](../commands/4d) - ビルトインクラスストア
 
 ### `cs`
 
@@ -351,7 +351,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 
 クラスコンストラクターが定義されていると、[`new()`](API/ClassClass.md#new) 関数を呼び出したときに、当該コンストラクターが呼び出されます (コンストラクターで引数を指定している場合は `new()` 関数に渡します)。
 
-コンストラクター関数は、1つのクラスに 1つしか存在できません (そうでない場合はエラーが返されます)。 [`Super`](../commands/super.md) コマンドを使用すると、[`スーパークラス`](../API/ClassClass#superclass)、つまり関数の親クラスを呼ぶことができます。
+コンストラクター関数は、1つのクラスに 1つしか存在できません (そうでない場合はエラーが返されます)。 [`Super`](../commands/super) コマンドを使用すると、[`スーパークラス`](../API/ClassClass#superclass)、つまり関数の親クラスを呼ぶことができます。
 
 コンストラクター内でインスタンスのプロパティを作成し、型宣言することができます (例題参照)。 また、インスタンスプロパティの値が、コンストラクターに渡される引数に依存しない場合は、 [`property`](#property) キーワードを使用して定義することができます。
 
@@ -641,13 +641,13 @@ Class constructor ($side : Integer)
 
 ### `Super`
 
-[`Super`](../commands/super.md) コマンドを使用すると、[`スーパークラス`](../API/ClassClass#superclass)、つまり関数の親クラスを呼び出すことができます。  これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。
+[`Super`](../commands/super) コマンドを使用すると、[`スーパークラス`](../API/ClassClass#superclass)、つまり関数の親クラスを呼び出すことができます。  これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。
 
-詳細な情報については、[`Super`](../commands/super.md) コマンドの説明を参照してください。
+詳細な情報については、[`Super`](../commands/super) コマンドの説明を参照してください。
 
 ### `This`
 
-[`This`](../commands/this.md) コマンドは現在処理されているオブジェクトへの参照を返します。  多くの場合、`This` の値はクラス関数がどのように呼ばれたかによって決まります。 通常、`This` は、まるでその関数がオブジェクト上にあるかのように、関数が呼ばれたオブジェクトを参照します。
+[`This`](../commands/this) コマンドは現在処理されているオブジェクトへの参照を返します。  多くの場合、`This` の値はクラス関数がどのように呼ばれたかによって決まります。 通常、`This` は、まるでその関数がオブジェクト上にあるかのように、関数が呼ばれたオブジェクトを参照します。
 
 例:
 
@@ -667,7 +667,7 @@ $o.b:=3
 $val:=$o.f() //8
 ```
 
-詳細な情報については、[`This`](../commands/this.md) コマンドの説明を参照してください。
+詳細な情報については、[`This`](../commands/this) コマンドの説明を参照してください。
 
 ## クラスコマンド
 

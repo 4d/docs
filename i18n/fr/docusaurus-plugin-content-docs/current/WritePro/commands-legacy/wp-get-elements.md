@@ -107,6 +107,6 @@ Vous voulez récupérer une collection de tous les paragraphes dans un document 
 
 ## Voir aussi 
 
-[WP Get breaks](wp-get-breaks.md)  
-[WP Get element by ID](wp-get-element-by-id.md)  
-[WP Table range](wp-table-range.md)  
+[WP Get breaks](../commands/wp-get-breaks)  
+[WP Get element by ID](../commands/wp-get-element-by-id)  
+[WP Table range](../commands/wp-table-range)  

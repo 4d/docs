@@ -29,7 +29,7 @@ Si la plage ou l'élément est associé(e) à un en-tête ou à un pied de page,
 * Avec la deuxième syntaxe (utilisant le paramètre *docWP*), la commande retourne la section correspondant à la section *indexSection* spécifiée (la valeur d'*indexSection* doit être >=1).  
 Si aucune section n'est définie pour l'*indexSection* spécifié, la commande retourne un objet indéfini (aucune erreur n'est retournée).
 
-**Note :** Utilisez la commande [WP Get subsection](wp-get-subsection.md) pour lire une sous-section depuis une section ou depuis une plage.
+**Note :** Utilisez la commande [WP Get subsection](../commands/wp-get-subsection) pour lire une sous-section depuis une section ou depuis une plage.
 
 ## Exemple 
 
@@ -43,5 +43,5 @@ Vous souhaitez lire la première section :
 
 ## Voir aussi 
 
-[WP Get sections](wp-get-sections.md)  
-[WP Get subsection](wp-get-subsection.md)  
+[WP Get sections](../commands/wp-get-sections)  
+[WP Get subsection](../commands/wp-get-subsection)  

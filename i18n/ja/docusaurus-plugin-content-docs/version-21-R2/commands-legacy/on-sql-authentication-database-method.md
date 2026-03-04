@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On SQL Authentication database method.Summary-->**On SQL Authenticationデータベースメソッド**は4Dに統合されたSQLサーバへ送られたリクエストを選別します。<!-- END REF-->この選別は、名前とパスワー ド、そしてユーザのIPアドレス (オプション) に基づいて実行されます。開発者は独自のユーザーテーブルや、4Dのユーザーテーブルを使用して、接続を識別できます。接続を認証したら、[CHANGE CURRENT USER](change-current-user.md "CHANGE CURRENT USER") コマンドを呼び出して、4Dのデータベース内のリクエストへのアクセスをコントロールしなければなりません。
 
-**On SQL Authenticationデータベースメソッド**が存在する場合、4Dまたは4D ServerのSQLサーバに外部からSQL接続が行われると、自動的にこのメソッドが呼び出されます。4Dユーザを管理する内部システムは起動しません。データベースメソッドが$resultに[True](true.md "True")を返しかつ、[CHANGE CURRENT USER](change-current-user.md "CHANGE CURRENT USER")コマンドの実行が成功した場合のみ、接続が受け入れられます。これらの条件を満たさない場合リクエストは拒否されます。
+**On SQL Authenticationデータベースメソッド**が存在する場合、4Dまたは4D ServerのSQLサーバに外部からSQL接続が行われると、自動的にこのメソッドが呼び出されます。4Dユーザを管理する内部システムは起動しません。データベースメソッドが$resultに[True](../commands/true)を返しかつ、[CHANGE CURRENT USER](change-current-user.md "CHANGE CURRENT USER")コマンドの実行が成功した場合のみ、接続が受け入れられます。これらの条件を満たさない場合リクエストは拒否されます。
 
 **Note**: [SQL LOGIN](sql-login.md "SQL LOGIN")(SQL\_INTERNAL;$user;$password)ステートメントは内部接続となるため、*On SQL Authenticationデータベースメソッド*を呼び出しません。
 
@@ -58,11 +58,11 @@ displayed_sidebar: docs
 
 標準テキストとして、パスワード($pw)を受け取ります。
 
-**On SQL Authenticationデータベースメソッド**でSQL接続の識別子を確認します。例えば、ユーザのカスタムテーブルを使用して名前とパスワードをチェックします。識別子が有効な場合は、$resultに[True](true.md "True")を返して接続を受け入れます。その他の場合は$resultに、[False](false.md "False")を返して接続が拒否されます。 
+**On SQL Authenticationデータベースメソッド**でSQL接続の識別子を確認します。例えば、ユーザのカスタムテーブルを使用して名前とパスワードをチェックします。識別子が有効な場合は、$resultに[True](../commands/true)を返して接続を受け入れます。その他の場合は$resultに、[False](../commands/false)を返して接続が拒否されます。 
 
 **Note:** **On SQL Authenticationデータベースメソッド**が存在しない場合、4Dの統合されたユーザ管理システムを使用 して、接続を決定します (有効になっている場合、つまりDesignerにパスワードが割り当てられている場合)。このシステムが起動していない場合、ユーザはDesigner アクセス権 (フリーアクセス) で接続されます。
 
-$resultに[True](true.md "True")を渡す場合、リクエストを受け入れ、ユーザのためにSQLのセッションを開くためには、**On SQL Authenticationデータベースメソッド**で[CHANGE CURRENT USER](change-current-user.md "CHANGE CURRENT USER") コマンドを呼び出し、その実行が成功しなければなりません。  
+$resultに[True](../commands/true)を渡す場合、リクエストを受け入れ、ユーザのためにSQLのセッションを開くためには、**On SQL Authenticationデータベースメソッド**で[CHANGE CURRENT USER](change-current-user.md "CHANGE CURRENT USER") コマンドを呼び出し、その実行が成功しなければなりません。  
   
 [CHANGE CURRENT USER](change-current-user.md "CHANGE CURRENT USER") コマンドは、仮想の認証システムを実行するために使用されます。この認証システムには、2つの利点があります。1つは接続動作をコントロールできること。もう1つは4DのSQLセッションで接続の識別子を外部から見えないようにします。
 

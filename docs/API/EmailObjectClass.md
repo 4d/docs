@@ -14,7 +14,7 @@ Creating, sending or receiving emails in 4D is done by handling an `Email` objec
 
 You send `Email` objects using the SMTP [`.send()`](SMTPTransporterClass.md#send) function.
 
-[`MAIL Convert from MIME`](../commands/mail-convert-from-mime.md) and [`MAIL Convert to MIME`](../commands/mail-convert-to-mime.md) commands can be used to convert `Email` objects to and from MIME contents.
+[`MAIL Convert from MIME`](../commands/mail-convert-from-mime) and [`MAIL Convert to MIME`](../commands/mail-convert-to-mime) commands can be used to convert `Email` objects to and from MIME contents.
 
 ### Email Object
 
@@ -110,7 +110,7 @@ The [`textBody`](#textbody) and [`htmlBody`](#htmlbody) properties are only used
 
 The `.attachments` property contains a <!-- REF #EmailObjectClass.attachments.Summary -->collection of `4D.MailAttachment` object(s)<!-- END REF -->.
 
-Attachment objects are defined through the [`MAIL New attachment`](../commands/mail-new-attachment.md) command. Attachment objects have specific [properties and functions](MailAttachmentClass.md).
+Attachment objects are defined through the [`MAIL New attachment`](../commands/mail-new-attachment) command. Attachment objects have specific [properties and functions](MailAttachmentClass.md).
 
 ## .bcc
 
@@ -359,5 +359,6 @@ The `.textBody` property contains the <!-- REF #EmailObjectClass.textBody.Summar
 #### Description
 
 The `.to` property contains the <!-- REF #EmailObjectClass.to.Summary -->primary recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->.
+
 
 

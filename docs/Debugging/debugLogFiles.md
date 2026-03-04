@@ -3,7 +3,7 @@ id: debugLogFiles
 title: Log files
 ---
 
-4D applications can generate several log files that are useful for debugging or optimizing their execution. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md), [WEB SET OPTION](../commands-legacy/web-set-option.md), or [HTTP SET OPTION](../commands-legacy/http-set-option.md) commands and are stored in the [Logs folder](../Project/architecture.md#logs) of the project.
+4D applications can generate several log files that are useful for debugging or optimizing their execution. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](../commands/set-database-parameter), [WEB SET OPTION](../commands/web-set-option), or [HTTP SET OPTION](../commands/http-set-option) commands and are stored in the [Logs folder](../Project/architecture.md#logs) of the project.
 
 Information logged needs to be analyzed to detect and fix issues. This section provides a comprehensive description of the following log files:
 
@@ -233,7 +233,7 @@ The following fields are logged for each event:
 |3| ProcessID|Process ID|
 |4| unique_processID|Unique process ID|
 |5| stack_level|Stack level
-|6| operation_type| Log operation type. This value may be an absolute value:<p><ol><li>Command</li><li>Method (project method, database method, etc.)</li><li>Message (sent by [LOG EVENT](../commands-legacy/log-event.md) command only)</li><li>PluginMessage</li><li>PluginEvent</li><li>PluginCommand</li><li>PluginCallback</li><li>Task</li><li>Member method (method attached to a collection or an object)</li></ol></p>When closing a stack level, the `operation_type`, `operation` and `operation_parameters` columns have the same value as the opening stack level logged in the `stack_opening_sequence_number` column. For example:<p><ol><li>121  15:16:50:777  5  8  1  2 CallMethod Parameters 0</li><li>122  15:16:50:777  5  8  2  1 283  0</li><li>123  15:16:50:777  5  8  2  1 283  0 122 3</li><li>124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</li></ol></p>The 1st and 2nd lines open a stack level, the 3rd and 4th lines close a stack level. Values in the columns 6, 7 and 8 are repeated in the closing stack level line. The column 10 contains the stack level opening sequence numbers, i.e. 122 for the 3rd line and 121 for the 4th.|
+|6| operation_type| Log operation type. This value may be an absolute value:<p><ol><li>Command</li><li>Method (project method, database method, etc.)</li><li>Message (sent by [LOG EVENT](../commands/log-event) command only)</li><li>PluginMessage</li><li>PluginEvent</li><li>PluginCommand</li><li>PluginCallback</li><li>Task</li><li>Member method (method attached to a collection or an object)</li></ol></p>When closing a stack level, the `operation_type`, `operation` and `operation_parameters` columns have the same value as the opening stack level logged in the `stack_opening_sequence_number` column. For example:<p><ol><li>121  15:16:50:777  5  8  1  2 CallMethod Parameters 0</li><li>122  15:16:50:777  5  8  2  1 283  0</li><li>123  15:16:50:777  5  8  2  1 283  0 122 3</li><li>124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</li></ol></p>The 1st and 2nd lines open a stack level, the 3rd and 4th lines close a stack level. Values in the columns 6, 7 and 8 are repeated in the closing stack level line. The column 10 contains the stack level opening sequence numbers, i.e. 122 for the 3rd line and 121 for the 4th.|
 |7|operation|May represent (depending on operation type):<li>a Language Command ID (when type=1)</li><li>a Method Name (when type=2)</li><li>a combination of pluginIndex;pluginCommand (when type=4, 5, 6 or 7). May contain something like '3;2'</li><li>a Task Connection UUID (when type=8)</li>
 |8|operation_parameters|Parameters passed to commands, methods, or plugins|
 |9|form_event|Form event if any; empty in other cases (suppose that column is used when code is executed in a form method or object method)|
@@ -242,7 +242,7 @@ The following fields are logged for each event:
 
 ## 4DDiagnosticLog.txt
 
-This log file records many events related to the internal application operation and is human-readable. You can include custom information in this file using the [LOG EVENT](../commands-legacy/log-event.md) command.
+This log file records many events related to the internal application operation and is human-readable. You can include custom information in this file using the [LOG EVENT](../commands/log-event) command.
 
 How to start this log:
 
@@ -267,7 +267,7 @@ Depending on the event, various other fields can also be logged, such as task, s
 
 The *4DDiagnosticLog.txt* file can log different levels of messages, from `ERROR` (most important) to `TRACE` (less important). By default, the `INFO` level is set, which means that the file will log only important events, including errors and unexpected results (see below).  
 
-You can select the level of messages using the `Diagnostic log level` selector of the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md) command, depending on your needs. When you select a level, levels above (which are more important) are implicitely selected also. The following levels are available:
+You can select the level of messages using the `Diagnostic log level` selector of the [SET DATABASE PARAMETER](../commands/set-database-parameter) command, depending on your needs. When you select a level, levels above (which are more important) are implicitely selected also. The following levels are available:
 
 |Constant|Description|When selected, includes|
 |---|---|---|
@@ -289,9 +289,9 @@ SET DATABASE PARAMETER (Diagnostic log level; Log trace)
 
 These log files record each exchange between the 4D application and the mail server (SMTP, POP3, IMAP) that has been initiated by the following commands:
 
-* SMTP - [SMTP New transporter](../commands/smtp-new-transporter.md)
-* POP3 - [POP3 New transporter](../commands/pop3-new-transporter.md)
-* IMAP  - [IMAP New transporter](../commands/imap-new-transporter.md)
+* SMTP - [SMTP New transporter](../commands/smtp-new-transporter)
+* POP3 - [POP3 New transporter](../commands/pop3-new-transporter)
+* IMAP  - [IMAP New transporter](../commands/imap-new-transporter)
 
 The log files can be produced in two versions:
 
@@ -677,9 +677,9 @@ The log configuration file is a `.json` file that must comply with the following
 
 :::note
 
-- The "state" property values are described in the corresponding commands: `[`WEB SET OPTION`](../commands-legacy/web-set-option.md) (`Web log recording`), [`HTTP SET OPTION`](../commands-legacy/http-set-option.md) (`HTTP client log`), [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) (`Client Web log recording`, `IMAP Log`,...).
-- For httpDebugLogs, the "level" property corresponds to the `wdl` constant options described in the [`WEB SET OPTION`](../commands-legacy/web-set-option.md) command. 
-- For diagnosticLogs, the "level" property corresponds to the `Diagnostic log level` constant values described in the [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) command.
+- The "state" property values are described in the corresponding commands: `[`WEB SET OPTION`](../commands/web-set-option) (`Web log recording`), [`HTTP SET OPTION`](../commands/http-set-option) (`HTTP client log`), [`SET DATABASE PARAMETER`](../commands/set-database-parameter) (`Client Web log recording`, `IMAP Log`,...).
+- For httpDebugLogs, the "level" property corresponds to the `wdl` constant options described in the [`WEB SET OPTION`](../commands/web-set-option) command. 
+- For diagnosticLogs, the "level" property corresponds to the `Diagnostic log level` constant values described in the [`SET DATABASE PARAMETER`](../commands/set-database-parameter) command.
 
 :::
 
@@ -721,3 +721,4 @@ Here is an example of log configuration file:
  }
 }
 ```
+

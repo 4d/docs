@@ -13,7 +13,7 @@ Várias [ações padrão](#standard-actions) dedicadas, vários [comandos de lin
 
 Web areas can be used to display [Qodly pages](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) and provide 4D desktop application users with modern, CSS-based web interface.
 
-You can embed a Qodly page inside a Web Area and then update [Qodly sources](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/qodlySources) from 4D by calling [`WA EXECUTE JAVASCRIPT FUNCTION`](../commands-legacy/wa-execute-javascript-function.md).
+You can embed a Qodly page inside a Web Area and then update [Qodly sources](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/qodlySources) from 4D by calling [`WA EXECUTE JAVASCRIPT FUNCTION`](../commands-legacy/wa-execute-javascript-function).
 
 In 4D client/server applications, Qodly pages inside Web areas can [share their session with the remote user](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) for a high level of security.
 
@@ -65,11 +65,11 @@ $4d. HelloWorld();
 
 ### Controlando o acesso $4d
 
-Com [`WA SET CONTEXT`](../commands/wa-set-context.md), os desenvolvedores podem controlar o que pode estar disponível por `$4d` em uma area Web. Using this command you define a **context object** that declares for example 4D methods through formulas and class instances.
+Com [`WA SET CONTEXT`](../commands/wa-set-context), os desenvolvedores podem controlar o que pode estar disponível por `$4d` em uma area Web. Using this command you define a **context object** that declares for example 4D methods through formulas and class instances.
 
-Para verificar o contexto atualmente definido, use [`WA Get context`](../commands/wa-get-context.md).
+Para verificar o contexto atualmente definido, use [`WA Get context`](../commands/wa-get-context).
 
-Para obter mais informações, consulte [`WA SET CONTEXT`](../commands/wa-set-context.md).
+Para obter mais informações, consulte [`WA SET CONTEXT`](../commands/wa-set-context).
 
 ### Calling 4D Methods from JavaScript
 
@@ -193,9 +193,9 @@ Além disso, áreas web são compatíveis com os eventos de formulário genéric
 Quando o formulário for executado, as funções da interface de navegador padrão estão disponíveis para o usuário na área web, o que permite a interação com outras áreas do formulário:
 
 - Comandos do menu **Editar**: Quando a área da Web está em foco, os comandos do menu **Edit** podem ser usados para executar ações como copiar, colar, selecionar tudo etc., de acordo com a seleção.
-- **Menu contextual**: é possível usar o [menu contextual](properties_Entry.md#context-menu) padrão do sistema com a área web. A exibição do menu de contexto pode ser controlada com o comando [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md).
+- **Menu contextual**: é possível usar o [menu contextual](properties_Entry.md#context-menu) padrão do sistema com a área web. A exibição do menu de contexto pode ser controlada com o comando [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference).
 - **Arrastar e soltar**: O usuário pode arrastar e soltar texto, imagens e documentos dentro da área da Web ou entre uma área da Web e os objetos do formulário 4D, de acordo com as propriedades do objeto 4D.
-  Por razões de segurança, não é permitido mudar os conteúdos da área Web arrastando e soltando seja um arquivo ou URL. Neste caso, o cursor exibe um ícone "proibido" ![](../assets/en/FormObjects/forbidden.png). Você precisa usar a instrução `WA SET PREFERENCE(*; "warea";WA enable URL drop;True)` para exibir um ícone "drop" e gerar o evento [`On Window Opening Denied`](Events/onWindowOpeningDenied.md). Nesse caso, você pode chamar o comando [`WA OPEN URL`](../commands-legacy/wa-open-url.md) ou definir a [variável URL](properties_WebArea.md#url) em resposta a um drop do usuário.
+  Por razões de segurança, não é permitido mudar os conteúdos da área Web arrastando e soltando seja um arquivo ou URL. Neste caso, o cursor exibe um ícone "proibido" ![](../assets/en/FormObjects/forbidden.png). Você precisa usar a instrução `WA SET PREFERENCE(*; "warea";WA enable URL drop;True)` para exibir um ícone "drop" e gerar o evento [`On Window Opening Denied`](Events/onWindowOpeningDenied.md). Nesse caso, você pode chamar o comando [`WA OPEN URL`](../commands-legacy/wa-open-url) ou definir a [variável URL](properties_WebArea.md#url) em resposta a um drop do usuário.
 
 > Os recursos de arrastar e soltar descritos acima não são compatíveis com as áreas da Web que usam o [mecanismo de renderização do sistema macOS](properties_WebArea.md#use-embedded-web-rendering-engine).
 
@@ -235,7 +235,7 @@ Para exibir o inspetor da Web, você pode executar o comando `WA OPEN WEB INSPEC
 
 > Com [engenharia de renderização de sistema Windows](properties_WebArea.md#use-embedded-web-rendering-engine), uma mudança nesta preferência requer que uma ação de navegação na área (por exemplo, uma atualização de página) seja levada em conta.
 
-Para obter mais informações, consulte a descrição do comando [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md).
+Para obter mais informações, consulte a descrição do comando [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference).
 
 Quando você fez as configurações conforme descrito acima, você tem novas opções como **Inspecionar Elemento** no menu de contexto da área. Quando selecionar essa opção, a janela do inspetor Web é exibida.
 

@@ -92,7 +92,7 @@ For security reasons, this option is unchecked by default. Each method that can 
 
 When it is checked, this option allows the project method to be executed by the SQL engine of 4D. By default, it is not selected, which means that, unless explicitly authorized, 4D project methods are protected and cannot be called by the SQL engine of 4D. 
 
-This property applies to all internal and external SQL queries --- executed via the ODBC driver, SQL code inserted between the [Begin SQL](../commands-legacy/begin-sql.md)/[End SQL](../commands-legacy/end-sql.md)  tags or the [QUERY BY SQL](../commands-legacy/query-by-sql.md) command.
+This property applies to all internal and external SQL queries --- executed via the ODBC driver, SQL code inserted between the [Begin SQL](../commands/begin-sql)/[End SQL](../commands/end-sql)  tags or the [QUERY BY SQL](../commands/query-by-sql) command.
 
 **Notes:**
 
@@ -132,4 +132,5 @@ Use the wildcard character @ to help define groups of methods:
 **Note:** If the "Published in WSDL" attribute is set to True, it will only be applied to project methods already containing the "Offered as a Web Service" attribute.
 
 4.  Click on **Apply**. The modification is applied instantly to all the project methods designated by the character string entered.
+
 

@@ -18,7 +18,7 @@ The contents of a hierarchical list form object can be initialized in one of the
 - Associate an existing [choice list](properties_DataSource.md#choice-list) to the object. The choice list must have been defined in the List editor in Design mode. 
 - Directly assign a hierarchical list  reference to the [variable or expression](properties_Object.md#variable-or-expression) associated with the form object. 
 
-In both cases, you manage a hierarchical list at runtime through its *ListRef* reference, using the [Hierarchical list](../commands/theme/Hierarchical_Lists.md) commands in the 4D language. 
+In both cases, you manage a hierarchical list at runtime through its *ListRef* reference, using the [Hierarchical list](../commands/theme/Hierarchical_Lists) commands in the 4D language. 
 
 
 ## ListRef and object name

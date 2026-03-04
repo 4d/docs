@@ -98,8 +98,8 @@ Dans les différentes fenêtres 4D (éditeur de code, compilateur, débogueur, e
 
 Les classes disponibles sont accessibles depuis leurs class stores. Il existe deux class stores dans 4D :
 
-- [`cs`](../commands/cs.md) pour le class store utilisateur
-- [`4D`](../commands/4d.md) pour le class store intégré
+- [`cs`](../commands/cs) pour le class store utilisateur
+- [`4D`](../commands/4d) pour le class store intégré
 
 ### `cs`
 
@@ -351,7 +351,7 @@ Une fonction class constructor accepte des [paramètres](#parameters) facultatif
 
 Lorsque vous appelez la fonction [`new()`](API/ClassClass.md#new), le constructeur de classe est appelé avec les paramètres éventuellement passés à la fonction `new()`.
 
-Il ne peut y avoir qu'une seule fonction constructor dans une classe (sinon une erreur est renvoyée). La commande [`Super`](../commands/super.md) permet d'appeler la [`superclass`](../API/ClassClass#superclass), c'est-à-dire la classe mère de la fonction.
+Il ne peut y avoir qu'une seule fonction constructor dans une classe (sinon une erreur est renvoyée). La commande [`Super`](../commands/super) permet d'appeler la [`superclass`](../API/ClassClass#superclass), c'est-à-dire la classe mère de la fonction.
 
 Vous pouvez créer et saisir des propriétés d'instance dans le constructeur (voir exemple). Alternativement, si les valeurs de vos propriétés d'instance ne dépendent pas des paramètres passés au constructeur, vous pouvez les définir en utilisant le mot-clé [`property`](#property).
 
@@ -640,13 +640,13 @@ Les commandes suivantes ont des caractéristiques spécifiques lorsqu'elles sont
 
 ### `Super`
 
-La commande [`Super`](../commands/super.md) permet d'appeler la [`superclass`](../API/ClassClass#superclass), c'est-à-dire la classe mère de la fonction. Il ne peut y avoir qu'une seule fonction constructor dans une classe (sinon une erreur est renvoyée).
+La commande [`Super`](../commands/super) permet d'appeler la [`superclass`](../API/ClassClass#superclass), c'est-à-dire la classe mère de la fonction. Il ne peut y avoir qu'une seule fonction constructor dans une classe (sinon une erreur est renvoyée).
 
-Pour plus de détails, voir la description de la commande [`Super`](../commands/super.md).
+Pour plus de détails, voir la description de la commande [`Super`](../commands/super).
 
 ### `This`
 
-La commande [`This`](../commands/this.md) renvoie une référence à l'objet en cours de traitement. Dans la plupart des cas, la valeur de `This` est déterminée par la manière dont une fonction de classe est appelée. Habituellement, `This` fait référence à l'objet sur lequel la fonction a été appelée, comme si la fonction était sur l'objet.
+La commande [`This`](../commands/this) renvoie une référence à l'objet en cours de traitement. Dans la plupart des cas, la valeur de `This` est déterminée par la manière dont une fonction de classe est appelée. Habituellement, `This` fait référence à l'objet sur lequel la fonction a été appelée, comme si la fonction était sur l'objet.
 
 Exemple :
 
@@ -666,7 +666,7 @@ $o.b:=3
 $val:=$o.f() //8
 ```
 
-Pour plus de détails, voir la description de la commande [`This`](../commands/this.md).
+Pour plus de détails, voir la description de la commande [`This`](../commands/this).
 
 ## Commandes de classes
 

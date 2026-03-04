@@ -45,7 +45,7 @@ Os parâmetros *largura* e *altura* retornam a largura e a altura do formulário
 
 O parâmetro *numPags* retorna o número de páginas em um formulário, excluindo a página 0 (zero).
 
-Os parâmetros *larguraFixo* e *alturaFixo* indicam se a largura e a altura do formulário são redimensionáveis (o parâmetro retorna [False](false.md "False")) ou fixos (o parâmetro retorna [True](true.md "True")).
+Os parâmetros *larguraFixo* e *alturaFixo* indicam se a largura e a altura do formulário são redimensionáveis (o parâmetro retorna [False](../commands/false)) ou fixos (o parâmetro retorna [True](../commands/true)).
 
 O parâmetro *título* retorna o título da janela do formulário, tal como foi definido na Lista de propriedades do editor de formulários.. Se não foi definido nenhum nome, o parâmetro *título* retorna uma string vazia.
 

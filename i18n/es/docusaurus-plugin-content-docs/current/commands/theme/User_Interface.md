@@ -1,35 +1,36 @@
 ---
 id: User_Interface_theme
-title: Interfaz de usuario
-sidebar_label: Interfaz de usuario
+title: User Interface
+sidebar_label: User Interface
 slug: /commands/theme/User-Interface
 ---
 
-|                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #_command_.BEEP.Syntax -->](../../commands-legacy/beep.md)<br/>                                                 |
-| [<!-- INCLUDE #_command_.Caps lock down.Syntax -->](../../commands-legacy/caps-lock-down.md)<br/>                             |
-| [<!-- INCLUDE #_command_.Focus object.Syntax -->](../../commands-legacy/focus-object.md)<br/>                                 |
-| [<!-- INCLUDE #_command_.Get Application color scheme.Syntax -->](../../commands-legacy/get-application-color-scheme.md)<br/> |
-| [<!-- INCLUDE #_command_.GET FIELD TITLES.Syntax -->](../../commands-legacy/get-field-titles.md)<br/>                         |
-| [<!-- INCLUDE #_command_.GET TABLE TITLES.Syntax -->](../../commands-legacy/get-table-titles.md)<br/>                         |
-| [<!-- INCLUDE #_command_.HIDE MENU BAR.Syntax -->](../../commands-legacy/hide-menu-bar.md)<br/>                               |
-| [<!-- INCLUDE #_command_.Macintosh command down.Syntax -->](../../commands-legacy/macintosh-command-down.md)<br/>             |
-| [<!-- INCLUDE #_command_.Macintosh control down.Syntax -->](../../commands-legacy/macintosh-control-down.md)<br/>             |
-| [<!-- INCLUDE #_command_.Macintosh option down.Syntax -->](../../commands-legacy/macintosh-option-down.md)<br/>               |
-| [<!-- INCLUDE #_command_.MOUSE POSITION.Syntax -->](../../commands-legacy/mouse-position.md)<br/>                             |
-| [<!-- INCLUDE #_command_.PLAY.Syntax -->](../../commands-legacy/play.md)<br/>                                                 |
-| [<!-- INCLUDE #_command_.Pop up menu.Syntax -->](../../commands-legacy/pop-up-menu.md)<br/>                                   |
-| [<!-- INCLUDE #_command_.POST CLICK.Syntax -->](../../commands-legacy/post-click.md)<br/>                                     |
-| [<!-- INCLUDE #_command_.POST EVENT.Syntax -->](../../commands-legacy/post-event.md)<br/>                                     |
-| [<!-- INCLUDE #_command_.POST KEY.Syntax -->](../../commands-legacy/post-key.md)<br/>                                         |
-| [<!-- INCLUDE #_command_.REDRAW.Syntax -->](../../commands-legacy/redraw.md)<br/>                                             |
-| [<!-- INCLUDE #_command_.SET ABOUT.Syntax -->](../../commands-legacy/set-about.md)<br/>                                       |
-| [<!-- INCLUDE #_command_.SET APPLICATION COLOR SCHEME.Syntax -->](../../commands-legacy/set-application-color-scheme.md)<br/> |
-| [<!-- INCLUDE #_command_.SET CURSOR.Syntax -->](../../commands-legacy/set-cursor.md)<br/>                                     |
-| [<!-- INCLUDE #_command_.SET FIELD TITLES.Syntax -->](../../commands-legacy/set-field-titles.md)<br/>                         |
-| [<!-- INCLUDE #_command_.SET TABLE TITLES.Syntax -->](../../commands-legacy/set-table-titles.md)<br/>                         |
-| [<!-- INCLUDE #_command_.Shift down.Syntax -->](../../commands-legacy/shift-down.md)<br/>                                     |
-| [<!-- INCLUDE #_command_.SHOW MENU BAR.Syntax -->](../../commands-legacy/show-menu-bar.md)<br/>                               |
-| [<!-- INCLUDE #_command_.Windows Alt down.Syntax -->](../../commands-legacy/windows-alt-down.md)<br/>                         |
-| [<!-- INCLUDE #_command_.Windows Ctrl down.Syntax -->](../../commands-legacy/windows-ctrl-down.md)<br/>                       |
+
+||
+|---|
+|[<!-- INCLUDE #_command_.BEEP.Syntax -->](../../commands/beep)<br/>|
+|[<!-- INCLUDE #_command_.Caps lock down.Syntax -->](../../commands/caps-lock-down)<br/>|
+|[<!-- INCLUDE #_command_.Focus object.Syntax -->](../../commands/focus-object)<br/>|
+|[<!-- INCLUDE #_command_.Get Application color scheme.Syntax -->](../../commands/get-application-color-scheme)<br/>|
+|[<!-- INCLUDE #_command_.GET FIELD TITLES.Syntax -->](../../commands/get-field-titles)<br/>|
+|[<!-- INCLUDE #_command_.GET TABLE TITLES.Syntax -->](../../commands/get-table-titles)<br/>|
+|[<!-- INCLUDE #_command_.HIDE MENU BAR.Syntax -->](../../commands/hide-menu-bar)<br/>|
+|[<!-- INCLUDE #_command_.Macintosh command down.Syntax -->](../../commands/macintosh-command-down)<br/>|
+|[<!-- INCLUDE #_command_.Macintosh control down.Syntax -->](../../commands/macintosh-control-down)<br/>|
+|[<!-- INCLUDE #_command_.Macintosh option down.Syntax -->](../../commands/macintosh-option-down)<br/>|
+|[<!-- INCLUDE #_command_.MOUSE POSITION.Syntax -->](../../commands/mouse-position)<br/>|
+|[<!-- INCLUDE #_command_.PLAY.Syntax -->](../../commands/play)<br/>|
+|[<!-- INCLUDE #_command_.Pop up menu.Syntax -->](../../commands/pop-up-menu)<br/>|
+|[<!-- INCLUDE #_command_.POST CLICK.Syntax -->](../../commands/post-click)<br/>|
+|[<!-- INCLUDE #_command_.POST EVENT.Syntax -->](../../commands/post-event)<br/>|
+|[<!-- INCLUDE #_command_.POST KEY.Syntax -->](../../commands/post-key)<br/>|
+|[<!-- INCLUDE #_command_.REDRAW.Syntax -->](../../commands/redraw)<br/>|
+|[<!-- INCLUDE #_command_.SET ABOUT.Syntax -->](../../commands/set-about)<br/>|
+|[<!-- INCLUDE #_command_.SET APPLICATION COLOR SCHEME.Syntax -->](../../commands/set-application-color-scheme)<br/>|
+|[<!-- INCLUDE #_command_.SET CURSOR.Syntax -->](../../commands/set-cursor)<br/>|
+|[<!-- INCLUDE #_command_.SET FIELD TITLES.Syntax -->](../../commands/set-field-titles)<br/>|
+|[<!-- INCLUDE #_command_.SET TABLE TITLES.Syntax -->](../../commands/set-table-titles)<br/>|
+|[<!-- INCLUDE #_command_.Shift down.Syntax -->](../../commands/shift-down)<br/>|
+|[<!-- INCLUDE #_command_.SHOW MENU BAR.Syntax -->](../../commands/show-menu-bar)<br/>|
+|[<!-- INCLUDE #_command_.Windows Alt down.Syntax -->](../../commands/windows-alt-down)<br/>|
+|[<!-- INCLUDE #_command_.Windows Ctrl down.Syntax -->](../../commands/windows-ctrl-down)<br/>|

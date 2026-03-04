@@ -41,6 +41,6 @@ Vous souhaitez créer un pied pour les pages de gauche d'une section :
 
 ## Voir aussi 
 
-[WP DELETE FOOTER](wp-delete-footer.md)  
-[WP Get footer](wp-get-footer.md)  
-[WP New header](wp-new-header.md)  
+[WP DELETE FOOTER](../commands/wp-delete-footer)  
+[WP Get footer](../commands/wp-get-footer)  
+[WP New header](../commands/wp-new-header)  

@@ -50,7 +50,7 @@ The field actually contains "proportion". 4D accepts and stores the entire entry
 
 #### Commands
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 ---
 
@@ -81,11 +81,11 @@ The table below shows choices available:
 
 *(1)* To avoid ambiguity and in accordance with current practice, the abbreviated date formats display "jun" for June and "jul" for July. This particularity only applies to French versions of 4D.
 
-*(2)* The year is displayed using two digits when it belongs to the interval (1930;2029) otherwise it will be displayed using four digits. This is by default but it can be modified using the [SET DEFAULT CENTURY](../commands-legacy/set-default-century.md) command.
+*(2)* The year is displayed using two digits when it belongs to the interval (1930;2029) otherwise it will be displayed using four digits. This is by default but it can be modified using the [SET DEFAULT CENTURY](../commands/set-default-century) command.
 
 *(3)* The `ISO Date Time` format corresponds to the XML date and time representation standard (ISO8601). It is mainly intended to be used when importing/exporting data in XML format and in Web Services.
 
->Regardless of the display format, if the year is entered with two digits then 4D assumes the century to be the 21st if the year belongs to the interval (00;29) and the 20th if it belongs to the interval (30;99). This is the default setting but it can be modified using the [SET DEFAULT CENTURY](../commands-legacy/set-default-century.md) command.
+>Regardless of the display format, if the year is entered with two digits then 4D assumes the century to be the 21st if the year belongs to the interval (00;29) and the 20th if it belongs to the interval (30;99). This is the default setting but it can be modified using the [SET DEFAULT CENTURY](../commands/set-default-century) command.
 
 
 
@@ -119,7 +119,7 @@ Customized date formats can be built using several patterns described in the [**
 
 #### Commands
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 
 ---
@@ -285,7 +285,7 @@ The following table shows how different formats affect the display of numbers. T
 
 #### Commands
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md) - [String](./commands/string)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT SET FORMAT](../commands/object-set-format) - [String](../commands/string)
 
 ---
 
@@ -350,7 +350,7 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 #### Commands
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 ---
 
@@ -412,7 +412,7 @@ By default, a null time is displayed with zeros, e.g. "00:00:00". With the "blan
 
 #### Commands
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 
 ---
@@ -441,7 +441,7 @@ When a [boolean expression](properties_Object.md#expression-type) is displayed a
 
 #### Commands
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 
 ---
@@ -466,7 +466,7 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
 
 #### Commands
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 
 ---
@@ -519,7 +519,7 @@ In this case as well, the [Title](#title) property is also available so that the
 
 #### Commands
 
-[OBJECT Get three states checkbox](../commands-legacy/object-get-three-states-checkbox.md) - [OBJECT SET THREE STATES CHECKBOX](../commands-legacy/object-set-three-states-checkbox.md)
+[OBJECT Get three states checkbox](../commands/object-get-three-states-checkbox) - [OBJECT SET THREE STATES CHECKBOX](../commands/object-set-three-states-checkbox)
 
 
 
@@ -584,7 +584,7 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 
 #### Commands
 
-[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md) 
+[`LISTBOX Get property`](../commands/listbox-get-property) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property) 
 
 
 ---
@@ -593,7 +593,7 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 
 This property allows hiding the object in the Application environment.
 
-You can handle the Visibility property for most form objects. This property is mainly used to simplify dynamic interface development. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. The Visibility property allows inverting this logic by making certain objects invisible by default. The developer can then program their display using the [`OBJECT SET VISIBLE`](../commands-legacy/object-set-visible.md) command when needed.
+You can handle the Visibility property for most form objects. This property is mainly used to simplify dynamic interface development. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. The Visibility property allows inverting this logic by making certain objects invisible by default. The developer can then program their display using the [`OBJECT SET VISIBLE`](../commands/object-set-visible) command when needed.
 
 #### Automatic visibility in list forms
 
@@ -606,7 +606,7 @@ This property is only used when drawing objects located in the body of a list fo
 
 ![](../assets/en/FormObjects/select-row.png)
 
-4D does not take this property into account if the object was hidden using the [`OBJECT SET VISIBLE`](../commands-legacy/object-set-visible.md) command; in this case, the object remains invisible regardless of whether or not the record is selected.
+4D does not take this property into account if the object was hidden using the [`OBJECT SET VISIBLE`](../commands/object-set-visible) command; in this case, the object remains invisible regardless of whether or not the record is selected.
 
 #### JSON Grammar
 
@@ -620,7 +620,7 @@ This property is only used when drawing objects located in the body of a list fo
 
 #### Commands
 
-[OBJECT Get visible](../commands-legacy/object-get-visible.md) - [OBJECT SET VISIBLE](../commands-legacy/object-set-visible.md)
+[OBJECT Get visible](../commands/object-get-visible) - [OBJECT SET VISIBLE](../commands/object-set-visible)
 
 ---
 
@@ -680,4 +680,4 @@ Note that regardless of the Wordwrap option’s value, the row height is not cha
 
 #### Commands
 
-[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md)
+[`LISTBOX Get property`](../commands/listbox-get-property) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property)

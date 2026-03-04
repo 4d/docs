@@ -29,7 +29,7 @@ Le paramètre *typeFeuilleStyle* vous permet d'indiquer le type de feuille de st
 * wk type character : Applique les attributs de style aux caractères.
 * wk type paragraph : Applique les attributs de style aux paragraphes.
 
-Passez un nom à la feuille de style dans le paramètre *nomFeuilleStyle*. Le nom de la feuille de style est stocké avec le document et facilite la réutilisation ou la modification du style. Il peut également être utilisé avec les commandes [WP Get style sheet](wp-get-style-sheet.md) et [WP DELETE STYLE SHEET](wp-delete-style-sheet.md). Le nom de la feuille de style doit être conforme aux règles suivantes :
+Passez un nom à la feuille de style dans le paramètre *nomFeuilleStyle*. Le nom de la feuille de style est stocké avec le document et facilite la réutilisation ou la modification du style. Il peut également être utilisé avec les commandes [WP Get style sheet](../commands/wp-get-style-sheet) et [WP DELETE STYLE SHEET](../commands/wp-delete-style-sheet). Le nom de la feuille de style doit être conforme aux règles suivantes :
 
 * il doit commencer par une lettre
 * il peut ensuite contenir des caractères alphanumériques, des espaces, des caractères "-" ou des caractères unicode >= 128
@@ -37,7 +37,7 @@ Passez un nom à la feuille de style dans le paramètre *nomFeuilleStyle*. Le no
 * il ne doit pas commencer par "section", qui est réservé
 * le "\_" est remplacé par un espace et les espaces de fin de ligne sont supprimés.
 
-Vous pouvez indiquer les attributs de la feuille de style à l'aide de la commande [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) ou de la notation objet (voir *Attributs 4D Write Pro*). Pour consulter la liste des attributs disponibles, référez-vous à la section *Style sheet attributes*.
+Vous pouvez indiquer les attributs de la feuille de style à l'aide de la commande [WP SET ATTRIBUTES](../commands/wp-set-attributes) ou de la notation objet (voir *Attributs 4D Write Pro*). Pour consulter la liste des attributs disponibles, référez-vous à la section *Style sheet attributes*.
 
 **Notes** : 
 
@@ -70,7 +70,8 @@ Le code suivant crée et définit une feuille de style de paragraphe :
 ## Voir aussi 
 
 *Accéder au contenu des documents par programmation*  
-[WP DELETE STYLE SHEET](wp-delete-style-sheet.md)  
-[WP Get style sheet](wp-get-style-sheet.md)  
-[WP Get style sheets](wp-get-style-sheets.md)  
-[WP IMPORT STYLE SHEETS](wp-import-style-sheets.md)  
+[WP DELETE STYLE SHEET](../commands/wp-delete-style-sheet)  
+[WP Get style sheet](../commands/wp-get-style-sheet)  
+[WP Get style sheets](../commands/wp-get-style-sheets)  
+[WP IMPORT STYLE SHEETS](../commands/wp-import-style-sheets)  
+

@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Text range.Summary-->The **WP Text range** command returns a new range object containing the selection between *startRange* and *endRange* in the *targetObj*.<!-- END REF-->
 
-A **4D Write Pro range object** can be used to handle attributes on a text selection (in particular with the [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) and [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) commands). For more information, refer to the *Range handling commands* paragraph.
+A **4D Write Pro range object** can be used to handle attributes on a text selection (in particular with the [WP GET ATTRIBUTES](../commands/wp-get-attributes) and [WP SET ATTRIBUTES](../commands/wp-set-attributes) commands). For more information, refer to the *Range handling commands* paragraph.
 
 You can pass in *targetObj*:
 

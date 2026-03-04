@@ -45,7 +45,7 @@ L’emplacement courant de ce dossier est affiché dans la zone “Actuel :”. 
 
 Trois options d’emplacement sont proposées :
 
-- \*\*Système \*\*: Lorsque cette option est sélectionnée, les fichiers temporaires 4D sont créés dans un dossier situé à l’emplacement spécifié par Windows ou macOS. Vous pouvez connaître l'emplacement courant défini par votre système en utilisant la commande 4D [`Temporary folder`](../commands-legacy/temporary-folder.md). Les fichiers sont placés dans un sous-dossier dont le nom est construit à partir du nom de la base et d’un identifiant unique.
+- \*\*Système \*\*: Lorsque cette option est sélectionnée, les fichiers temporaires 4D sont créés dans un dossier situé à l’emplacement spécifié par Windows ou macOS. Vous pouvez connaître l'emplacement courant défini par votre système en utilisant la commande 4D [`Temporary folder`](../commands-legacy/temporary-folder). Les fichiers sont placés dans un sous-dossier dont le nom est construit à partir du nom de la base et d’un identifiant unique.
 - **Dossier du fichier de données** (option par défaut) : Lorsque cette option est sélectionnée, les fichiers temporaires 4D sont créés dans un dossier nommé “temporary files” situé au même niveau que le fichier de données de la base.
 - **Défini par l’utilisateur** : Cette option permet de définir un emplacement personnalisé. En cas de modification de cette option, sa prise en compte nécessitera le redémarrage de la base. 4D vérifie que le dossier sélectionné est accessible en écriture. Si ce n’est pas le cas, l’application essaiera les autres options jusqu’à ce qu’un dossier valide soit trouvé.
 
@@ -63,7 +63,7 @@ Trois options d’emplacement sont proposées :
   **Notes :**
 
   - En ce qui concerne les recherches, il est important de noter que si le critère de recherche commence ou se termine par @, le caractère @ est toujours considéré comme un joker. Seul le fait que ce caractère soit placé à l’intérieur d’un mot (exemple : bill@cgi.com) entraîne un traitement différent de la part de 4D.
-  - Cette option peut également avoir une influence sur le comportement des commandes du thème [Objets (Formulaires)](../commands/theme/Objects_Forms.md) qui acceptent le caractère générique ("@") dans le paramètre objet.
+  - Cette option peut également avoir une influence sur le comportement des commandes du thème [Objets (Formulaires)](../commands/theme/Objects_Forms) qui acceptent le caractère générique ("@") dans le paramètre objet.
   - Pour des raisons de sécurité, seuls l’Administrateur et le Super_Utilisateur de la base peuvent modifier ce paramètre.
 
 - **Langue du fichier de données courant :** cette option permet de paramétrer la langue utilisée pour le traitement et la comparaison des chaînes de caractères pour la base de données ouverte. Le choix d’une langue de comparaison influe sur le tri et la recherche des textes ainsi que le passage en minuscules/majuscules mais n’a pas d’incidence sur la traduction des libellés ou sur les formats de dates, d’heure ou monétaires qui restent, eux, dans la langue du système. Par défaut, 4D utilise la langue du système.
@@ -117,7 +117,7 @@ Utilisez les paramètres de cet onglet pour configurer la mémoire cache de la b
   La taille de mémoire cache que vous saisissez sera réservée pour la base 4D, quel que soit l’état des ressources de la machine. Ce paramétrage peut être utilisé dans certaines configurations spécifiques, ou lorsque la base est destinée à fonctionner sur des systèmes disparates en termes de mémoire. Dans la plupart des cas, le cache adaptatif est plus performant.
 
 - **Ecriture cache toutes les… Minutes/secondes** : spécifie la fréquence de sauvegarde automatique du cache de données, c’est-à-dire son écriture sur le disque.
-  4D écrit les données placées dans le cache à intervalles fixes. Vous pouvez définir tout intervalle compris entre 1 seconde et 500 minutes. Par défaut, 4D stocke vos données toutes les 20 secondes. L’application écrit aussi vos données sur disque lorsque vous changez de mode ou quittez l’application. Vous pouvez également appeler la commande [FLUSH CACHE](../commands-legacy/flush-cache.md) pour déclencher l'écriture à tout moment.
+  4D écrit les données placées dans le cache à intervalles fixes. Vous pouvez définir tout intervalle compris entre 1 seconde et 500 minutes. Par défaut, 4D stocke vos données toutes les 20 secondes. L’application écrit aussi vos données sur disque lorsque vous changez de mode ou quittez l’application. Vous pouvez également appeler la commande [FLUSH CACHE](../commands-legacy/flush-cache) pour déclencher l'écriture à tout moment.
 
   Quand vous prévoyez de saisir beaucoup de données, il est souhaitable de fixer un intervalle court. En effet, en cas de coupure de courant, vous ne perdriez que les données saisies depuis la dernière écriture (si la base fonctionne sans fichier d’historique).
 

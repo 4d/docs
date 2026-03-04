@@ -26,7 +26,7 @@ displayed_sidebar: docs
 4D Write Pro エリアのビュープロパティは、以下の方法で定義することが可能です:
 
 * フォームレベルではプロパティリストで定義
-* [WP SET VIEW PROPERTIES](wp-set-view-properties.md) コマンドを使用することでセッション中に動的に定義
+* [WP SET VIEW PROPERTIES](../commands/wp-set-view-properties) コマンドを使用することでセッション中に動的に定義
 
 **返されるオブジェクト**
 
@@ -70,4 +70,4 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP SET VIEW PROPERTIES](wp-set-view-properties.md)  
+[WP SET VIEW PROPERTIES](../commands/wp-set-view-properties)  

@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Asserted.Summary-->**Asserted** コマンドは[ASSERT](assert.md)コマンドと同様の処理を行います。<!-- END REF-->1つの違いは、このコマンドは*boolExpression*引数の評価結果を戻り値として返すことです。このため、条件の評価としてアサーションを使用できます (例題参照)。アサーションの処理とこのコマンドの引数に関する詳細情報は[ASSERT](assert.md)コマンドの説明を参照してください。
 
-**Asserted**はブール式を引数として受け入れ、この式の評価結果を返します。アサーションが有効で式が[False](false.md "False")の場合 ([SET ASSERT ENABLED](set-assert-enabled.md)コマンド参照)、[ASSERT](assert.md)と同様エラー-10518が生成されます。アサーションが無効にされていると、**Asserted**はエラー生成することなしに、渡された式の結果を返します。
+**Asserted**はブール式を引数として受け入れ、この式の評価結果を返します。アサーションが有効で式が[False](../commands/false)の場合 ([SET ASSERT ENABLED](set-assert-enabled.md)コマンド参照)、[ASSERT](assert.md)と同様エラー-10518が生成されます。アサーションが無効にされていると、**Asserted**はエラー生成することなしに、渡された式の結果を返します。
 
 **注:** [ASSERT](assert.md)コマンド同様 、**Asserted**もインタープリタモードでもコンパイル済みモードでも動作します。
 

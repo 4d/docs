@@ -1,0 +1,79 @@
+﻿---
+id: sql-get-data-source-list
+title: SQL GET DATA SOURCE LIST
+slug: /commands/sql-get-data-source-list
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.SQL GET DATA SOURCE LIST.Syntax-->**SQL GET DATA SOURCE LIST** ( *tipoFonte* : Integer ; *arrayNomesFontes* : Text array ; *arrayDrivers* : Text array )<!-- END REF-->
+<!--REF #_command_.SQL GET DATA SOURCE LIST.Params-->
+<div class="no-index">
+
+| Parâmetro | Tipo |  | Descrição |
+| --- | --- | --- | --- |
+| tipoFonte | Integer | &#8594; | Tipo da fonte: usuário ou sistema |
+| arrayNomesFontes | Text array | &#8592; | Array dos nomes das fontes dos dados |
+| arrayDrivers | Text array | &#8592; | Array dos drives das fontes |
+</div>
+<!-- END REF-->
+
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|19 R5|Renomear|
+|11 SQL|Criado por|
+
+</details>
+</div>
+
+## Descrição 
+
+<!--REF #_command_.SQL GET DATA SOURCE LIST.Summary-->O comando SQL GET DATA SOURCE LIST retorna nos arrays *arrayNomesFontes* e *arrayDrivers*, os nomes e drivers das fontes de dados de tipo *tipoFonte* definidas no administrador ODBC do Sistema operativo.<!-- END REF-->  
+  
+4D permite que se conecte diretamente através da linguagem a uma fonte de dados ODBC externa e executar pesquisas SQL dentro de uma estrutura **Begin SQL/End SQ**L. Este princípio funciona desta forma: o comando SQL GET DATA SOURCE LIST permite obter a lista de fontes de dados presentes na máquina. O comando [SQL LOGIN](../commands/sql-login) permite determinar a fonte a utilizar. Depois pode executar as pesquisas SQL utilizando uma estrutura **Begin SQL/End SQL** na fonte “atual”. Para realizar novas pesquisas utilizando novamente o motor interno de 4D, simplesmente passe o comando [SQL LOGOUT](../commands/sql-logout). Para maior informação sobre os comandos SQL no editor de métodos, consulte *Manual de SQL* no manual 4D SQL.  
+  
+Em *tipoFonte*, passe o tipo de fonte de dados que deseja obter. Pode utilizar uma das seguintes constantes do tema “SQL”, encontradas no tema “*SQL*”:  
+  
+| Constante          | Tipo          | Valor |
+| ------------------ | ------------- | ----- |
+| User data source   | Inteiro longo | 1     |
+| System data source | Inteiro longo | 2     |
+  
+  
+**Nota**: este comando não leva em consideração as fontes de dados de tipo arquivo.  
+  
+O comando preenche e dimensiona os arrays *arrayNomesFontes e arrayDrivers* com os valores correspondentes.  
+  
+**Nota**: Se desejar conectar-se a uma fonte de dados 4D externa através ODBC, necessitará ter instalado 4D ODBC Driver em seu equipo. Para maior informação, consulte o manual de instalação do driver 4D ODBC.
+
+## Exemplo 
+
+Este exemplo utiliza uma fonte de dados usuário:  
+  
+```4d
+ ARRAY TEXT(arrDSN;0)
+ ARRAY TEXT(arrDSNDrivers;0)
+ GET DATA SOURCE LIST(User data source;arrDSN;arrDSNDrivers)
+```
+
+## Variáveis e conjuntos do sistema 
+
+Se o comando for executado corretamente, a variável Sistema OK assume o valor 1\. Do contrário, assume o valor 0 e um erro é gerado.  
+
+## Ver também 
+
+[SQL Get current data source](../commands/sql-get-current-data-source)  
+[SQL LOGIN](../commands/sql-login)  
+[SQL LOGOUT](../commands/sql-logout)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 989 |
+| Thread-seguro | no |
+| Modificar variáveis | OK |
+
+

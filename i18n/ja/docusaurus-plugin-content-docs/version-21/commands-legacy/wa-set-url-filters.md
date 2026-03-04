@@ -39,11 +39,11 @@ displayed_sidebar: docs
 *filtersArr* と *allowDenyArr* 配列は同期されていなければなりません。
 
 * *filtersArr* 配列のそれぞれの要素には、フィルタするURL が含まれます。1 つ以上の文字を表すワイルドカードとして *\** を使用できます。
-* *allowDenyArr* 配列のそれぞれ対応する要素には、URL を許可 ([True](true.md "True")) するか拒否 ([False](false.md "False")) するかを示すブール値が含まれます。
+* *allowDenyArr* 配列のそれぞれ対応する要素には、URL を許可 ([True](../commands/true)) するか拒否 ([False](../commands/false)) するかを示すブール値が含まれます。
 
 同じURL が許可および拒否されているなど、設定レベルで矛盾がある場合、最後の設定が考慮されます。
 
-フィルタを無効にするには、コマンドを呼び出す際に空の配列を渡すか、配列の最後の要素で、*filtersArr* 配列に"*\**" を、*allowDenyArr* 配列に[True](true.md "True")を渡します。
+フィルタを無効にするには、コマンドを呼び出す際に空の配列を渡すか、配列の最後の要素で、*filtersArr* 配列に"*\**" を、*allowDenyArr* 配列に[True](../commands/true)を渡します。
 
 コマンドが実行されると、フィルタはWeb エリアのプロパティとなります。*filtersArr* と*allowDenyArr* が削除されたり初期化されたりしても、コマンドが再実行されるまでフィルタは有効です。エリアで有効になっているフィルタを取得するには、[WA GET URL FILTERS](wa-get-url-filters.md) コマンドを使用しなければなりません。
 

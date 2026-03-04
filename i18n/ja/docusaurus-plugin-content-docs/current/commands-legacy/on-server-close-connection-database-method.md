@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Server Close Connection database method.Summary-->**On Server Close Connectionデータベースメソッド**は、4Dクライアントプロセスが終了するたびに、サーバマシン上で一度呼び出されます。<!-- END REF-->
 
-[On Server Open Connectionデータベースメソッド](on-server-open-connection-database-method.md)の場合と同様に、4D Server は**On Server Close Connectionデータベースメソッド**に3つの倍長整数タイプの引数を渡しますが、結果は求めません。
+[On Server Open Connectionデータベースメソッド](../commands/on-server-open-connection-database-method)の場合と同様に、4D Server は**On Server Close Connectionデータベースメソッド**に3つの倍長整数タイプの引数を渡しますが、結果は求めません。
 
 したがって、このメソッドでは3つの引数を倍長整数として明示的に宣言しなくてはなりません:
 
@@ -37,8 +37,9 @@ displayed_sidebar: docs
 | $2     | 4D Serverが接続を識別するために内部的に使用する接続ID番号   |
 | $3     | 廃止: 常に0が渡されますが、宣言は必要                 |
 
-**On Server Close Connectionデータベースメソッド**は、[On Server Open Connectionデータベースメソッド](on-server-open-connection-database-method.md)と対をなすメソッドです。4Dクライアントプロセスについての詳細は、このデータベースメソッドの説明を参照してください。
+**On Server Close Connectionデータベースメソッド**は、[On Server Open Connectionデータベースメソッド](../commands/on-server-open-connection-database-method)と対をなすメソッドです。4Dクライアントプロセスについての詳細は、このデータベースメソッドの説明を参照してください。
 
 ## 例題 
 
-[On Server Open Connectionデータベースメソッド](on-server-open-connection-database-method.md)の例題参照
+[On Server Open Connectionデータベースメソッド](../commands/on-server-open-connection-database-method)の例題参照
+

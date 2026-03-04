@@ -74,7 +74,7 @@ Pour les deux dernières actions, l'événement formulaire `On Open Detail` est 
 
 #### Commandes
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
 
 ---
 
@@ -101,7 +101,7 @@ Cette propriété permet de spécifier l'ensemble à utiliser pour gérer les en
 
 #### Commandes
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
 
 ---
 
@@ -158,7 +158,7 @@ Nombre de colonnes qui ne peuvent pas être déplacées pendant l'exécution.
 
 #### Commandes
 
-[LISTBOX Get locked columns](../commands-legacy/listbox-get-locked-columns.md) - [LISTBOX Get static columns](../commands-legacy/listbox-get-static-columns.md) - [LISTBOX SET LOCKED COLUMNS](../commands-legacy/listbox-set-locked-columns.md) - [LISTBOX SET STATIC COLUMNS](../commands-legacy/listbox-set-static-columns.md)
+[LISTBOX Get locked columns](../commands-legacy/listbox-get-locked-columns) - [LISTBOX Get static columns](../commands-legacy/listbox-get-static-columns) - [LISTBOX SET LOCKED COLUMNS](../commands-legacy/listbox-set-locked-columns) - [LISTBOX SET STATIC COLUMNS](../commands-legacy/listbox-set-static-columns)
 
 ---
 
@@ -166,7 +166,7 @@ Nombre de colonnes qui ne peuvent pas être déplacées pendant l'exécution.
 
 Définit le nombre de colonnes de la list box.
 
-> Vous pouvez ajouter ou supprimer des colonnes dynamiquement par programmation, en utilisant des commandes telles que [`LISTBOX INSERT COLUMN`](../commands-legacy/listbox-insert-column.md) ou [`LISTBOX DELETE COLUMN`](../commands-legacy/listbox-delete-column.md).
+> Vous pouvez ajouter ou supprimer des colonnes dynamiquement par programmation, en utilisant des commandes telles que [`LISTBOX INSERT COLUMN`](../commands-legacy/listbox-insert-column) ou [`LISTBOX DELETE COLUMN`](../commands-legacy/listbox-delete-column).
 
 #### Grammaire JSON
 
@@ -180,7 +180,7 @@ Définit le nombre de colonnes de la list box.
 
 #### Commandes
 
-[`LISTBOX DELETE COLUMN`](../commands-legacy/listbox-delete-column.md) - [LISTBOX Get number of columns](../commands-legacy/listbox-get-number-of-columns.md) - [`LISTBOX INSERT COLUMN`](../commands-legacy/listbox-insert-column.md) - [`LISTBOX INSERT COLUMN FORMULA`](../commands-legacy/listbox-insert-column-formula.md)
+[`LISTBOX DELETE COLUMN`](../commands-legacy/listbox-delete-column) - [LISTBOX Get number of columns](../commands-legacy/listbox-get-number-of-columns) - [`LISTBOX INSERT COLUMN`](../commands-legacy/listbox-insert-column) - [`LISTBOX INSERT COLUMN FORMULA`](../commands-legacy/listbox-insert-column-formula)
 
 ---
 
@@ -237,7 +237,7 @@ Notez que le paramétrage des propriétés d'un élément remplace toutes les au
 
 #### Commandes
 
-[`LISTBOX Get array`](../commands-legacy/listbox-get-array.md) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays.md) - [`LISTBOX SET ARRAY`](../commands-legacy/listbox-set-array.md)
+[`LISTBOX Get array`](../commands-legacy/listbox-get-array) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays) - [`LISTBOX SET ARRAY`](../commands-legacy/listbox-set-array)
 
 ---
 
@@ -262,5 +262,5 @@ Désigne l'option permettant aux utilisateurs de sélectionner des lignes :
 
 #### Commandes
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
 

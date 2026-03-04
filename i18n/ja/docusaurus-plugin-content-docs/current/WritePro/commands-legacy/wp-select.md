@@ -66,4 +66,4 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP Text range](wp-text-range.md)  
+[WP Text range](../commands/wp-text-range)  

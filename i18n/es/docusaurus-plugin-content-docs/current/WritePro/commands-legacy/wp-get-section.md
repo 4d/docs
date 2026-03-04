@@ -31,7 +31,7 @@ Si el rango o elemento pertenece a un encabezado o a un pie de página, **WP Get
 * Con la segunda sintaxis (utilizando el parámetro *wpDoc*), el comando devuelve la sección correspondiente a la sección *indiceSeccion* (el valor de *indiceSeccion* debe ser >=1).  
 Si no se define ninguna sección para el *indiceSeccion* especificado, el comando devuelve un objeto indefinido (no se devuelve ningún error).
 
-**Nota:** utilice el comando [WP Get subsection](wp-get-subsection.md) para obtener una subsección de una sección o de un rango.
+**Nota:** utilice el comando [WP Get subsection](../commands/wp-get-subsection) para obtener una subsección de una sección o de un rango.
 
 ## Ejemplo 
 
@@ -45,5 +45,5 @@ Desea obtener la referencia de la primera sección:
 
 ## Ver también 
 
-[WP Get sections](wp-get-sections.md)  
-[WP Get subsection](wp-get-subsection.md)  
+[WP Get sections](../commands/wp-get-sections)  
+[WP Get subsection](../commands/wp-get-subsection)  

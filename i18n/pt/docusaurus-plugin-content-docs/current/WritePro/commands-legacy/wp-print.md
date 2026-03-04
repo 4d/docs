@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.WP PRINT.Summary-->O comando **WP PRINT** lança uma tarefa de impressão para o documento 4D Write Pro especificado em *wpDoc* (ou agrega o documento ao trabalho de impressão atual se for chamado entre [OPEN PRINTING JOB](../../commands-legacy/open-printing-job.md) e [CLOSE PRINTING JOB](../../commands-legacy/close-printing-job.md)).<!-- END REF--> **WP PRINT** utiliza a configuração de impressão definida pelos comandos 4D [PRINT SETTINGS](../../commands-legacy/print-settings.md) ou [SET PRINT OPTION](../../commands-legacy/set-print-option.md), exceto para as margens das páginas que sempre se baseiam na configuração da página do documento 4D Write Pro. **WP PRINT** utiliza as opções atuais de configuração de página (como o tamanho e orientação de página), ou os do documento se [WP USE PAGE SETUP](wp-use-page-setup.md) for chamado anteriormente.
+<!--REF #_command_.WP PRINT.Summary-->O comando **WP PRINT** lança uma tarefa de impressão para o documento 4D Write Pro especificado em *wpDoc* (ou agrega o documento ao trabalho de impressão atual se for chamado entre [OPEN PRINTING JOB](../../commands/open-printing-job) e [CLOSE PRINTING JOB](../../commands/close-printing-job)).<!-- END REF--> **WP PRINT** utiliza a configuração de impressão definida pelos comandos 4D [PRINT SETTINGS](../../commands/print-settings) ou [SET PRINT OPTION](../../commands/set-print-option), exceto para as margens das páginas que sempre se baseiam na configuração da página do documento 4D Write Pro. **WP PRINT** utiliza as opções atuais de configuração de página (como o tamanho e orientação de página), ou os do documento se [WP USE PAGE SETUP](../commands/wp-use-page-setup) for chamado anteriormente.
 
 O parâmetro opcional *modoImp* pode ser utilizado para estabelecer a vista WYSIWYG HTML para as saídas de impressão. Pode passar uma das seguintes constantes do tema "4D Write Pro":
 
@@ -36,7 +36,7 @@ Se for omitido *modoImp*, o formato normal 4D Write Pro (0) é utilizado de form
 
 **Nota:** Quando imprimir com **WP PRINT**, os documentos 4D Write Pro são sempre impressos em modo de vista Página, qualquer que seja a propriedade de Vista estabelecida para a área (ver *Configurar propriedades de Vista*).
 
-Nota de compatibilidade: a capa de impressão herdada baseada em GDI (que pode ser definida utilizando o comando [SET PRINT OPTION](../../commands-legacy/set-print-option.md)) é obsoleta e não deve ser utilizada com WP PRINT, já que pode provocar artefatos de renderização. É recomendado utilizar unicamente a capa de impressão padrão com este comando.
+Nota de compatibilidade: a capa de impressão herdada baseada em GDI (que pode ser definida utilizando o comando [SET PRINT OPTION](../../commands/set-print-option)) é obsoleta e não deve ser utilizada com WP PRINT, já que pode provocar artefatos de renderização. É recomendado utilizar unicamente a capa de impressão padrão com este comando.
 
 ## Exemplo 
 
@@ -53,5 +53,5 @@ Se quiser imprimir uma área 4D Write Pro em formato padrão ou wysiwyg HTML em 
 
 ## Ver também 
 
-[WP Get position](wp-get-position.md)  
-[WP USE PAGE SETUP](wp-use-page-setup.md)  
+[WP Get position](../commands/wp-get-position)  
+[WP USE PAGE SETUP](../commands/wp-use-page-setup)  

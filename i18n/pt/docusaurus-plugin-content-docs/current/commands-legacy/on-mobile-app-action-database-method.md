@@ -34,4 +34,4 @@ A documentação deste método base foi atualizada e trasladada a [developer.4d.
 
 ## Ver também 
 
-[On Mobile App Authentication database method](on-mobile-app-authentication-database-method.md)  
+[On Mobile App Authentication database method](../commands/on-mobile-app-authentication-database-method)  

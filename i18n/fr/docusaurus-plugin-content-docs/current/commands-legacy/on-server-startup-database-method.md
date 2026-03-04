@@ -23,9 +23,10 @@ La méthode base Sur démarrage serveur est l'emplacement idéal pour :
 * Initialiser les variables interprocess utilisées pendant toute la session 4D Server.
 * Démarrer automatiquement des *Procédures stockées* à l'ouverture de la base.
 * Charger des préférences ou des paramétrages sauvegardé(e)s dans ce but lors de la précédente session 4D Server.
-* Empêcher l'ouverture de la base si une condition n'est pas remplie (par exemple, absence de ressources système) par un appel explicite à [QUIT 4D](quit-4d.md).
+* Empêcher l'ouverture de la base si une condition n'est pas remplie (par exemple, absence de ressources système) par un appel explicite à [QUIT 4D](../commands/quit-4d).
 * Placer toute action devant être automatiquement effectuée à chaque ouverture de la base.
 
-Si vous souhaitez exécuter du code automatiquement sur un poste client lorsqu'un 4D distant se connecte au serveur, utilisez la [On Startup database method](on-startup-database-method.md).
+Si vous souhaitez exécuter du code automatiquement sur un poste client lorsqu'un 4D distant se connecte au serveur, utilisez la [On Startup database method](../commands/on-startup-database-method).
 
 **Note :** La méthode base Sur démarrage serveur est exécutée de façon atomique, ce qui signifie qu'aucun 4D distant ne peut se connecter tant que l'exécution de la méthode n'est pas terminée.
+

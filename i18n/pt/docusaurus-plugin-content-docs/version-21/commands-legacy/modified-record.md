@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.Modified record.Summary-->Modified record devolve True se o registro atual de *tabela* for modificado mas não guardou; do contrário devolve False.<!-- END REF--> Esta função permite determinar rapidamente se o registro necessita ser guardado. É especialmente de valor em formulários de input para checar se o registro atual foi salvo antes de continuar ao próximo registro. Esta função sempre devolve [TRUE](true.md "TRUE") para um novo registro.  
+<!--REF #_command_.Modified record.Summary-->Modified record devolve True se o registro atual de *tabela* for modificado mas não guardou; do contrário devolve False.<!-- END REF--> Esta função permite determinar rapidamente se o registro necessita ser guardado. É especialmente de valor em formulários de input para checar se o registro atual foi salvo antes de continuar ao próximo registro. Esta função sempre devolve [True](../commands/true) para um novo registro.  
 
 Note que essa função sempre retorna True nos seguintes contextos:
 

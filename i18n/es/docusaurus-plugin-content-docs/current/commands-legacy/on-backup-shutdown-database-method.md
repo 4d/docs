@@ -26,7 +26,7 @@ El Método base On Backup Shutdown permite verificar que el backup fue ejecutado
 * Si el backup fue interrumpido por el usuario o por un error, *$status* es diferente de 0\.
    * Si el backup fue detenido por el *Método de base de datos On Backup Startup* (*$result* \# 0), *$status* obtiene el valor devuelto en el parámetro *$result*. Esto le permite implementar un sistema de gestión de errores personalizado.
    * Si el backup fue detenido por un error, el código del error se devuelve en *$status*.
- En todos los casos, puede obtener información sobre el error utilizando el comando [BACKUP INFO](backup-info.md).
+ En todos los casos, puede obtener información sobre el error utilizando el comando [BACKUP INFO](../commands/backup-info).
 
 **Nota**: debe declarar el parámetro *$status* (entero largo) en el método de la base:
 
@@ -35,3 +35,4 @@ El Método base On Backup Shutdown permite verificar que el backup fue ejecutado
 ```
 
 Es importante notar que en caso de error durante el backup (disco lleno, soporte inaccesible, etc.), la información relativa al error se muestra únicamente en el monitor de 4D Server o en el CSM, y se copia en el historial de backups. No se muestra una caja de diálogo de alerta y la variable *error* no se modifica. Si quiere notificar al administrador que se produjo un error, particularmente en el contexto de una aplicación en modo cliente/servidor, es necesario utilizar el **Método base On Backup Shutdown**.
+

@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DESCRIBE QUERY EXECUTION.Summary-->El comando DESCRIBE QUERY EXECUTION permite activar o desactivar el modo de análisis de la ejecución de búsquedas para el proceso actual.<!-- END REF--> El comando funciona únicamente en el contexto de los comandos de búsqueda del lenguaje 4D tal como [QUERY](query.md). 
 
-La llamada del comando con el parámetro *estado* en [True](true.md "True") activa el modo del análisis de búsquedas. En este modo, el motor de 4D registra internamente dos series de informaciones específicas para cada búsqueda posterior efectuada sobre los datos:
+La llamada del comando con el parámetro *estado* en [True](../commands/true) activa el modo del análisis de búsquedas. En este modo, el motor de 4D registra internamente dos series de informaciones específicas para cada búsqueda posterior efectuada sobre los datos:
 
 * Una descripción interna detallada de la búsqueda justo antes de su ejecución, en otras palabras, la búsqueda previa (el plan de búsqueda),
 * Una descripción interna detallada de la búsqueda que se ejecutó realmente (la ruta de búsqueda).
@@ -38,7 +38,7 @@ La información registrada incluye el tipo de búsqueda (indexada, secuencial), 
 
 Por lo general, la descripción del plan de una búsqueda y su ruta son idénticos, pero podrían eventualmente ser diferentes porque 4D podría implementar optimizaciones dinámicas durante la ejecución de la búsqueda para mejorar el rendimiento. Por ejemplo, una búsqueda índexada puede convertirse dinámicamente en una búsqueda secuencial si el motor 4D estima que sería más rápida, este es el caso, cuando el número de registros en los cuales se efectúa la búsqueda es bajo.
 
-Pase [False](false.md "False") en el parámetro *estado* cuando no necesite analizar las búsquedas. El modo de análisis de la ejecución de las búsquedas puede volver lenta la aplicación.
+Pase [False](../commands/false) en el parámetro *estado* cuando no necesite analizar las búsquedas. El modo de análisis de la ejecución de las búsquedas puede volver lenta la aplicación.
 
 ## Ejemplo 
 

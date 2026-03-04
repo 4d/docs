@@ -23,15 +23,15 @@ displayed_sidebar: docs
 
 コマンドはスタイルシートを削除するために二つの方法を提供します。以下の方法で指定することができます:
 
-* 削除するスタイルシートオブジェクト([WP New style sheet](wp-new-style-sheet.md) コマンドで作成、または[WP Get style sheet](wp-get-style-sheet.md) 返されるオブジェクト)を*styleSheetType* 引数で指定
+* 削除するスタイルシートオブジェクト([WP New style sheet](../commands/wp-new-style-sheet) コマンドで作成、または[WP Get style sheet](../commands/wp-get-style-sheet) 返されるオブジェクト)を*styleSheetType* 引数で指定
 * 対象の4D Write Pro ドキュメントと削除するスタイルシート名を*wpDoc* および *styleSheetName* 引数で指定
 
 **注**: デフォルト("通常"の)スタイルシートは削除することができません。
 
 ## 参照 
 
-[WP Get style sheet](wp-get-style-sheet.md)  
-[WP Get style sheets](wp-get-style-sheets.md)  
-[WP IMPORT STYLE SHEETS](wp-import-style-sheets.md)  
-[WP New style sheet](wp-new-style-sheet.md)  
+[WP Get style sheet](../commands/wp-get-style-sheet)  
+[WP Get style sheets](../commands/wp-get-style-sheets)  
+[WP IMPORT STYLE SHEETS](../commands/wp-import-style-sheets)  
+[WP New style sheet](../commands/wp-new-style-sheet)  
 *ドキュメントのコンテンツにプログラムでアクセスする*  

@@ -90,7 +90,7 @@ The following contents are sent depending on the *message* type:
 |---|---|
 |Text|Text in UTF-8|
 |Blob|Binary data|
-|Object|Text in JSON UTF-8 (same result as with [`JSON Stringify`](../commands-legacy/json-stringify.md))|
+|Object|Text in JSON UTF-8 (same result as with [`JSON Stringify`](../commands/json-stringify))|
 
 <!-- END REF -->
 
@@ -147,4 +147,5 @@ The `.wss` property contains <!-- REF #WebSocketConnectionClass.wss.Summary -->t
 
 This property is read-only.
 <!-- END REF -->
+
 

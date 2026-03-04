@@ -27,7 +27,7 @@ title: リサイズオプション
 
 余白カラムのヘッダー/フッターはクリック可能ですが、他のカラムには何の影響も及ぼしません (つまり並び替えなどはおこなわれません)。しかしながら、`On Clicked`、`On Header Click` そして `On Footer Click` イベントはそれぞれ生成されます。
 
-余白カラム内のセルがクリックされた場合、[LISTBOX GET CELL POSITION](../commands-legacy/listbox-get-cell-position.md) コマンドは列番号として "X+1" を返します (X は既存の列数です)。
+余白カラム内のセルがクリックされた場合、[LISTBOX GET CELL POSITION](../commands-legacy/listbox-get-cell-position) コマンドは列番号として "X+1" を返します (X は既存の列数です)。
 
 #### JSON 文法
 
@@ -41,13 +41,13 @@ title: リサイズオプション
 
 #### コマンド
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
 
 ---
 
 ## 横方向サイズ変更
 
-このプロパティは、ユーザーがフォームの高さをサイズ変更したときに、当該オブジェクトの縦方向に移動するかリサイズするかを指定します。 また、[`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options.md) ランゲージコマンドをによって動的に設定することもできます。
+このプロパティは、ユーザーがフォームの高さをサイズ変更したときに、当該オブジェクトの縦方向に移動するかリサイズするかを指定します。 また、[`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options) ランゲージコマンドをによって動的に設定することもできます。
 
 次の値が提供されています:
 
@@ -71,13 +71,13 @@ title: リサイズオプション
 
 #### コマンド
 
-[`OBJECT GET RESIZING OPTIONS`](../commands-legacy/object-get-resizing-options.md) - [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options.md)
+[`OBJECT GET RESIZING OPTIONS`](../commands-legacy/object-get-resizing-options) - [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options)
 
 ---
 
 ## 縦方向サイズ変更
 
-このプロパティは、ユーザーがフォームの高さをサイズ変更したときに、当該オブジェクトが縦方向に移動するかリサイズするかを指定します。 また、[`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options.md) コマンドによって動的に設定することもできます。
+このプロパティは、ユーザーがフォームの高さをサイズ変更したときに、当該オブジェクトが縦方向に移動するかリサイズするかを指定します。 また、[`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options) コマンドによって動的に設定することもできます。
 
 次の値が提供されています:
 
@@ -101,7 +101,7 @@ title: リサイズオプション
 
 #### コマンド
 
-[`OBJECT GET RESIZING OPTIONS`](../commands-legacy/object-get-resizing-options.md) - [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options.md)
+[`OBJECT GET RESIZING OPTIONS`](../commands-legacy/object-get-resizing-options) - [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options)
 
 ---
 
@@ -146,5 +146,5 @@ title: リサイズオプション
 
 #### コマンド
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
 

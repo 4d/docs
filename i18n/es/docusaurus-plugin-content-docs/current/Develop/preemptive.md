@@ -41,7 +41,7 @@ Dado que un hilo se maneja de forma independiente a partir del método del proce
 
 La propiedad "seguridad de hilo" de cada elemento depende del elemento en sí:
 
-- Comandos 4D: hilo seguro es una propiedad interna. En la documentación de 4D, los comandos hilo seguro se identifican con el icono ![](../assets/en/Develop/thread-safe.png). También puede utilizar el comando [`Nombre del comando`](../commands/command-name.md) para saber si un comando es hilo seguro. Gran parte de los comandos 4D pueden ejecutarse en modo apropiativo.
+- Comandos 4D: hilo seguro es una propiedad interna. En la documentación de 4D, los comandos hilo seguro se identifican con el icono ![](../assets/en/Develop/thread-safe.png). También puede utilizar el comando [`Nombre del comando`](../commands/command-name) para saber si un comando es hilo seguro. Gran parte de los comandos 4D pueden ejecutarse en modo apropiativo.
 - Métodos de proyecto: las condiciones para seguridad de hilo se listan en [este párrafo](#writing-a-thread-safe-method).
 
 Básicamente, el código que se ejecuta en hilos apropiativos no puede llamar a las partes con las interacciones externas, tal como el código plug-in o las variables interproceso. Los accesos a los datos, sin embargo, son permitidos desde el servidor de datos 4D que soporta la ejecución apropiativa.
@@ -141,7 +141,7 @@ La ejecución de un método en modo apropiativo dependerá de su propiedad "ejec
 
 4D permite identificar el modo de ejecución de los procesos en modo compilado:
 
-- El comando [`Process info`](../commands/process-info.md) permite averiguar si un proceso se ejecuta en modo apropiativo o cooperativo.
+- El comando [`Process info`](../commands/process-info) permite averiguar si un proceso se ejecuta en modo apropiativo o cooperativo.
 - El Explorador de ejecución y la [ventana de administración de 4D Server](../ServerWindow/processes.md#process-type) muestran iconos específicos para los procesos apropiativos.
 
 ## Escribir un método hilo seguro
@@ -155,10 +155,10 @@ Para ser hilo seguro, un método debe respetar las siguientes reglas:
 - No debe utilizar ninguna variable interproceso(1)
 - No debe llamar a objetos de interfaz(2) (sin embargo, hay excepciones, ver más abajo).
 
-(1) Para intercambiar datos entre procesos apropiativos (y entre todos los procesos), puede pasar [colecciones compartidas u objetos compartidos](../Concepts/shared.md) como parámetros a los procesos, y/o utilizar el catálogo [`Storage`](../commands-legacy/storage.md).
+(1) Para intercambiar datos entre procesos apropiativos (y entre todos los procesos), puede pasar [colecciones compartidas u objetos compartidos](../Concepts/shared.md) como parámetros a los procesos, y/o utilizar el catálogo [`Storage`](../commands-legacy/storage).
 Los [procesos Worker](processes.md#worker-processes) también permiten intercambiar mensajes entre cualquier proceso, incluidos los procesos apropiativos.
 
-(2) El comando [`CALL FORM`](../commands-legacy/call-form.md) ofrece una solución elegante para llamar a objetos de interfaz desde un proceso en espera.
+(2) El comando [`CALL FORM`](../commands-legacy/call-form) ofrece una solución elegante para llamar a objetos de interfaz desde un proceso en espera.
 
 :::note Notas
 

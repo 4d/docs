@@ -35,7 +35,7 @@ Vous souhaitez faire apparaître la plage associée au signet "MyBookmark" dans 
 
 ## Voir aussi 
 
-[WP DELETE BOOKMARK](wp-delete-bookmark.md)  
-[WP GET BOOKMARKS](wp-get-bookmarks.md)  
-[WP NEW BOOKMARK](wp-new-bookmark.md)  
-[WP Text range](wp-text-range.md)  
+[WP DELETE BOOKMARK](../commands/wp-delete-bookmark)  
+[WP GET BOOKMARKS](../commands/wp-get-bookmarks)  
+[WP NEW BOOKMARK](../commands/wp-new-bookmark)  
+[WP Text range](../commands/wp-text-range)  

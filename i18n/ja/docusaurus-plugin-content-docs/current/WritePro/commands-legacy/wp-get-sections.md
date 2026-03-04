@@ -46,4 +46,4 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP Get section](wp-get-section.md)  
+[WP Get section](../commands/wp-get-section)  

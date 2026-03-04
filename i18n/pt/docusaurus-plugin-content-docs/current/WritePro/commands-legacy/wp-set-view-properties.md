@@ -73,4 +73,4 @@ Se quiser definir algumas propriedades de vista para uma área 4D Write Pro:
 
 ## Ver também 
 
-[WP Get view properties](wp-get-view-properties.md)  
+[WP Get view properties](../commands/wp-get-view-properties)  

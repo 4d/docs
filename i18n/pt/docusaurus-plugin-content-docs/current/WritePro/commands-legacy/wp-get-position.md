@@ -57,7 +57,7 @@ O parâmetro opcional *layout* pode ser usada para definir a vista HTML wysiwyg 
 
 Se omitir *layout*, o design de 4D Write Pro se usa de forma pré-determinada.
 
-A mesma configuração de visualização que para o comando [WP PRINT](wp-print.md) se usa com **WP Get position**:
+A mesma configuração de visualização que para o comando [WP PRINT](../commands/wp-print) se usa com **WP Get position**:
 
 * cabeçalhos: visíveis
 * rodapés: visíveis
@@ -159,4 +159,4 @@ Os exemplos abaixo ilustram as coordenadas do retângulo delimitador devolvidas,
 
 ## Ver também 
 
-[WP PRINT](wp-print.md)  
+[WP PRINT](../commands/wp-print)  

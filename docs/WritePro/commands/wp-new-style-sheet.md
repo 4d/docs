@@ -50,7 +50,7 @@ Pass a name for the style sheet in the *styleSheetName* parameter. The style she
 * it must not start with "section", which is reserved
 * the "\_" is replaced by a space and trailing spaces are removed.
 
-You can specify the attributes of the style sheet using the [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) command or the object notation (see [4D Write Pro Attributes](../4d-write-pro-attributes)). For the list of available attributes, see the [Style sheet attributes](../commands/4d-write-pro-attributes.md#style-sheets) section.
+You can specify the attributes of the style sheet using the [WP SET ATTRIBUTES](../commands/wp-set-attributes) command or the object notation (see [4D Write Pro Attributes](../4d-write-pro-attributes)). For the list of available attributes, see the [Style sheet attributes](../commands/4d-write-pro-attributes.md#style-sheets) section.
 
 **Notes**: 
 
@@ -126,5 +126,5 @@ Result:
 [Style sheets](../user-legacy/stylesheets.md)   
 [WP DELETE STYLE SHEET](wp-delete-style-sheet.md)  
 [WP Get style sheet](wp-get-style-sheet.md)  
-[WP Get style sheets](../commands-legacy/wp-get-style-sheets.md)  
-[WP IMPORT STYLE SHEETS](wp-import-style-sheets.md)  
+[WP Get style sheets](../commands/wp-get-style-sheets)  
+[WP IMPORT STYLE SHEETS](../commands/wp-import-style-sheets.md)  

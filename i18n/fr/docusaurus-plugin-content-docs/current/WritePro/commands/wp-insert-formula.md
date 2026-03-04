@@ -33,13 +33,13 @@ Dans le paramètre *targetObj*, vous pouvez passer :
 
 Dans le paramètre *formule*, passez la formule 4D à évaluer. Vous pouvez passer :
 
-- soit un [objet formule](../../commands/formula.md-objects) créé par la commande [**Formula**](../../commands/formula.md) ou [**Formula from string**](../../commands/formula.md-from-string) command,
+- soit un [objet formule](../../commands/formula.md-objects) créé par la commande [**Formula**](../../commands/formula) ou [**Formula from string**](../../commands/formula.md-from-string) command,
 - ou un objet contenant deux propriétés :
 
 | **Propriété** | **Type** | **Description**                                                                                                                                                                                |
 | ------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | name          | Text     | Nom à afficher pour la formule dans le document                                                                                                                                                |
-| formula       | Object   | L'[objet formule](../../commandes/formula.md-objets) créé par la commande [**Formula**](../../commands/formula.md) ou [**Formula from string**](../../commands/formula.md-from-string) command |
+| formula       | Object   | L'[objet formule](../../commandes/formula.md-objets) créé par la commande [**Formula**](../../commands/formula) ou [**Formula from string**](../../commands/formula.md-from-string) command |
 
 Lorsque vous utilisez un objet avec une formule *name*, ce nom est affiché dans le document au lieu de la référence de formule lorsque les formules sont affichées comme référence, et dans l'info-bulle de la formule lorsqu'elle est affichée en tant que valeur ou symboles. Si la propriété *name* contient une chaîne vide ou est omise, elle est supprimée de l'objet et la formule est affichée par défaut. Pour plus d'informations, voir la page [Gérer les formules](../managing-formulas.md) .
 
@@ -138,6 +138,6 @@ Résultat:
 ## Voir également
 
 *Managing formulas*\
-[WP COMPUTE FORMULAS](../commands-legacy/wp-compute-formulas.md)</br>
-[WP FREEZE FORMULAS](../commands-legacy/wp-freeze-formulas.md)</br>
-[WP Get formulas](../commands-legacy/wp-get-formulas.md)
+[WP COMPUTE FORMULAS](../commands-legacy/wp-compute-formulas)</br>
+[WP FREEZE FORMULAS](../commands-legacy/wp-freeze-formulas)</br>
+[WP Get formulas](../commands-legacy/wp-get-formulas)

@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.WP Picture range.Summary-->The **WP Picture range** command returns a specific range object that addresses only the pictures contained in the *targetObj* you passed as parameter.<!-- END REF--> The image range object returned can be used by [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) and [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) to handle picture attributes. 
+<!--REF #_command_.WP Picture range.Summary-->The **WP Picture range** command returns a specific range object that addresses only the pictures contained in the *targetObj* you passed as parameter.<!-- END REF--> The image range object returned can be used by [WP GET ATTRIBUTES](../commands/wp-get-attributes) and [WP SET ATTRIBUTES](../commands/wp-set-attributes) to handle picture attributes. 
 
 In *targetObj*, you can pass:
 
@@ -38,8 +38,8 @@ You want to change the border color of pictures only:
 
 *Handling pictures*  
 *Using commands from the Styled Text theme*  
-[WP Add picture](../commands/wp-add-picture.md)  
-[WP INSERT PICTURE](../commands/wp-insert-picture.md)  
+[WP Add picture](../commands/wp-add-picture)  
+[WP INSERT PICTURE](../commands/wp-insert-picture)  
 [WP Paragraph range](wp-paragraph-range.md)  
 [WP Selection range](wp-selection-range.md)  
 [WP Text range](wp-text-range.md)  

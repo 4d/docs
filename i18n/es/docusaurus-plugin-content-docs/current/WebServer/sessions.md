@@ -28,7 +28,7 @@ Las aplicaciones Destkop (cliente/servidor y monousuario) también ofrecen a los
 
 Las sesiones web se utilizan para:
 
-- [Aplicaciones web](gettingStarted.md) enviando peticiones http (incluyendo peticiones [SOAP Web services](../commands/theme/Web_Services_Server.md) y [/4DACTION](../WebServer/httpRequests.md#4daction)),
+- [Aplicaciones web](gettingStarted.md) enviando peticiones http (incluyendo peticiones [SOAP Web services](../commands/theme/Web_Services_Server) y [/4DACTION](../WebServer/httpRequests.md#4daction)),
 - llamadas a la [REST API](../REST/authUsers.md), que utilizan [datastores remotos](../ORDA/remoteDatastores.md) y [páginas Qodly](https://developer.4d.com/qodly/).
 
 ## Activación de sesiones web {#enabling-web-sessions}
@@ -42,7 +42,7 @@ Esta opción está seleccionada por defecto en los nuevos proyectos. Sin embargo
 
 - Usando la propiedad [`.scalableSession`](API/WebServerClass.md#scalablesession) del objeto Servidor Web (para pasar el parámetro *settings* de la función [`.start()`](API/WebServerClass.md#start)). En este caso, esta configuración anula la opción definida en la caja de diálogo Configuración del objeto Servidor Web (no se almacena en el disco).
 
-> El comando [`WEB SET OPTION`](../commands-legacy/web-set-option.md) también puede definir el modo de sesión para el servidor Web principal.
+> El comando [`WEB SET OPTION`](../commands-legacy/web-set-option) también puede definir el modo de sesión para el servidor Web principal.
 
 En cualquier caso, la configuración es local para la máquina; por lo que puede ser diferente en el servidor web de 4D Server y en los servidores web de las máquinas 4D remotas.
 
@@ -73,7 +73,7 @@ La creación de una sesión web para una petición REST puede requerir que una l
 
 :::
 
-Se puede acceder al objeto `Session` de la sesión actual a través del comando [`Session`](commands/session.md) en el código de todo proceso web.
+Se puede acceder al objeto `Session` de la sesión actual a través del comando [`Session`](../commands/session) en el código de todo proceso web.
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
 
@@ -90,9 +90,9 @@ Una sesión web escalable se cierra cuando:
 
 La vida útil de una cookie inactiva es de 60 minutos por defecto, lo que significa que el servidor web cerrará automáticamente las sesiones inactivas después de 60 minutos.
 
-Este tiempo de espera puede establecerse utilizando la propiedad [`.idleTimeout`](API/SessionClass.md#idletimeout) del objeto `Session` (el tiempo de espera no puede ser inferior a 60 minutos) o el parámetro *connectionInfo* del comando [`Open datastore`](../commands/open-datastore.md).
+Este tiempo de espera puede establecerse utilizando la propiedad [`.idleTimeout`](API/SessionClass.md#idletimeout) del objeto `Session` (el tiempo de espera no puede ser inferior a 60 minutos) o el parámetro *connectionInfo* del comando [`Open datastore`](../commands/open-datastore).
 
-Cuando se cierra una sesión web, si después se llama al comando [`Session`](commands/session.md):
+Cuando se cierra una sesión web, si después se llama al comando [`Session`](../commands/session):
 
 - el objeto `Session` no contiene privilegios (es una sesión de invitado)
 - la propiedad [`.storage`](API/SessionClass.md#storage) está vacía

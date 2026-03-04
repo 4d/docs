@@ -20,7 +20,7 @@ Sets the number of columns in a thumbnail table.
 
 #### Commands
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 ---
 
@@ -40,4 +40,5 @@ Sets the number of rows in a thumbnail table.
 
 #### Commands
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT SET FORMAT](../commands/object-set-format)
+

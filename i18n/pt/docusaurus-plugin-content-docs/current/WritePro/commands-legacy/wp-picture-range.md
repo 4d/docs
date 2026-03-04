@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.WP Picture range.Summary-->O comando **WP Picture range** devolve uma faixa de objeto específica que se refere unicamente as imagens contidas em *faixaObj* que foi passada como parâmetro.<!-- END REF--> A gama de objetos imagem devolvida deve ser utilizado por [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) e [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) para manejar os atributos imagem unicamente.
+<!--REF #_command_.WP Picture range.Summary-->O comando **WP Picture range** devolve uma faixa de objeto específica que se refere unicamente as imagens contidas em *faixaObj* que foi passada como parâmetro.<!-- END REF--> A gama de objetos imagem devolvida deve ser utilizado por [WP GET ATTRIBUTES](../commands/wp-get-attributes) e [WP SET ATTRIBUTES](../commands/wp-set-attributes) para manejar os atributos imagem unicamente.
 
 Em *faixaObj*, pode passar:
 
@@ -38,8 +38,9 @@ Se quiser mudar apenas a cor da borda das imagens:
 
 *Gerenciar Imagens*  
 *Utilizar os comandos do tema Texto com estilo*  
-[WP Add picture](../commands/wp-add-picture.md)  
-[WP INSERT PICTURE](../commands/wp-insert-picture.md)  
-[WP Paragraph range](wp-paragraph-range.md)  
-[WP Selection range](wp-selection-range.md)  
-[WP Text range](wp-text-range.md)  
+[WP Add picture](../commands/wp-add-picture)  
+[WP INSERT PICTURE](../commands/wp-insert-picture)  
+[WP Paragraph range](../commands/wp-paragraph-range)  
+[WP Selection range](../commands/wp-selection-range)  
+[WP Text range](../commands/wp-text-range)  
+

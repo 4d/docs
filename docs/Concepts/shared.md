@@ -3,12 +3,12 @@ id: shared
 title: Shared objects and collections
 ---
 
-**Shared objects** and **shared collections** are specific [objects](./dt_object.md) and [collections](./dt_collection.md) whose contents are shared between processes. In contrast to [interprocess variables](./variables.md#interprocess-variables) (now deprecated), shared objects and shared collections have the advantage of being compatible with *[Preemptive processes](../Develop/preemptive.md)*: they can be passed by reference as parameters to commands such as [`New process`](../commands-legacy/new-process.md) or [`CALL WORKER`](../commands-legacy/call-worker.md).
+**Shared objects** and **shared collections** are specific [objects](./dt_object.md) and [collections](./dt_collection.md) whose contents are shared between processes. In contrast to [interprocess variables](./variables.md#interprocess-variables) (now deprecated), shared objects and shared collections have the advantage of being compatible with *[Preemptive processes](../Develop/preemptive.md)*: they can be passed by reference as parameters to commands such as [`New process`](../commands/new-process) or [`CALL WORKER`](../commands/call-worker).
 
 Shared objects and shared collections are stored in standard [`Object`](./dt_object.md) and [`Collection`](./dt_collection.md) type variables, but must be instantiated using specific commands:
 
-- to create a shared object, use the [`New shared object`](../commands-legacy/new-shared-object.md) command or call the [`new()`](../API/ClassClass.md#new) function of a [shared class](./classes.md#shared-classes),
-- to create a shared collection, use the [`New shared collection`](../commands/new-shared-collection.md) command.
+- to create a shared object, use the [`New shared object`](../commands/new-shared-object) command or call the [`new()`](../API/ClassClass.md#new) function of a [shared class](./classes.md#shared-classes),
+- to create a shared collection, use the [`New shared collection`](../commands/new-shared-collection) command.
 
 
 Shared objects and collections can only contain scalar values or other shared objects and collections. However, shared objects and collections can be set as properties of standard (not shared) objects or collections.
@@ -16,7 +16,7 @@ Shared objects and collections can only contain scalar values or other shared ob
 
 In order to modify a shared object/collection, the **Use...End use** structure must be called. Reading a shared object/collection value does not require **Use...End use**.
 
-A unique, global catalog returned by the [`Storage`](../commands-legacy/storage.md) command is always available throughout the application and its components, and can be used to store all shared objects and collections.
+A unique, global catalog returned by the [`Storage`](../commands/storage) command is always available throughout the application and its components, and can be used to store all shared objects and collections.
 
 ## Using shared objects or collections
 
@@ -85,11 +85,11 @@ Calling `OB Copy` with a shared object (or with an object containing shared obje
 
 ### Storage
 
-**Storage** is a unique shared object, automatically available on each application and machine. This shared object is returned by the [`Storage`](../commands-legacy/storage.md) command. You can use this object to reference all shared objects/collections defined during the session that you want to be available from any preemptive or standard processes.
+**Storage** is a unique shared object, automatically available on each application and machine. This shared object is returned by the [`Storage`](../commands/storage) command. You can use this object to reference all shared objects/collections defined during the session that you want to be available from any preemptive or standard processes.
 
 Note that, unlike standard shared objects, the `storage` object does not create a shared group when shared objects/collections are added as its properties. This exception allows the **Storage** object to be used without locking all connected shared objects or collections.
 
-For more information, refer to the [`Storage`](../commands-legacy/storage.md) command description.
+For more information, refer to the [`Storage`](../commands/storage) command description.
 
 ## Use...End use
 
@@ -117,8 +117,8 @@ Shared objects and shared collections are designed to allow communication betwee
 The following features automatically trigger an internal **Use/End use**, making an explicit call to the structure unnecessary when it is executed:
 
 - [collection functions](../API/CollectionClass.md) that modify shared collections,
-- [`ARRAY TO COLLECTION`](../commands-legacy/array-to-collection.md) command,
-- [`OB REMOVE`](../commands-legacy/ob-remove.md) command,
+- [`ARRAY TO COLLECTION`](../commands/array-to-collection) command,
+- [`OB REMOVE`](../commands/ob-remove) command,
 - [shared functions](classes.md#shared-functions) (defined in [shared classes](classes.md#shared-classes)).
 
 
@@ -189,3 +189,4 @@ The following examples highlight specific rules when handling shared groups:
   //assignment is not allowed
  End use
 ```
+

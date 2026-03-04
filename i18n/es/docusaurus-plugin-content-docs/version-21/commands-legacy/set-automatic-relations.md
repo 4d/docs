@@ -38,7 +38,7 @@ Este comando cambia relaciones definidas como manuales en modo Diseño a automá
 
 **Notas:** 
 
-* Cuando pase [True](true.md "True") al comando **SET AUTOMATIC RELATIONS**, el modo automático se "bloquea" para todas las relaciones manuales durante la sesión. En este caso, todas las llamadas al comando [SET FIELD RELATION](set-field-relation.md) durante la misma sesión se ignoran, sin importar si estaban antes o después de **SET AUTOMATIC RELATIONS**. Para "desbloquear" el modo automático y tener en cuenta las llamadas a [SET FIELD RELATION](set-field-relation.md), pase [False](false.md "False") a **SET AUTOMATIC RELATIONS**.
+* Cuando pase [True](../commands/true) al comando **SET AUTOMATIC RELATIONS**, el modo automático se "bloquea" para todas las relaciones manuales durante la sesión. En este caso, todas las llamadas al comando [SET FIELD RELATION](set-field-relation.md) durante la misma sesión se ignoran, sin importar si estaban antes o después de **SET AUTOMATIC RELATIONS**. Para "desbloquear" el modo automático y tener en cuenta las llamadas a [SET FIELD RELATION](set-field-relation.md), pase [False](../commands/false) a **SET AUTOMATIC RELATIONS**.
 * Las funcionalidades automáticas se desactivan cuando las tablas relacionadas se visualizan en un formulario listado mostrado utilizando [DISPLAY SELECTION](display-selection.md), [MODIFY SELECTION](modify-selection.md), o un subformulario. Ver *Relaciones manuales y automáticas*.
 
 ## Ejemplo 

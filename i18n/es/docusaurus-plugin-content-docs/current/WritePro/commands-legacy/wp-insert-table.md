@@ -50,9 +50,9 @@ En el parámetro *modo*, pase una de las siguientes constantes para indicar el m
 Si no pasa un parámetro *actRango*, de forma predeterminada, la tabla insertada se incluye en el rango resultante.
 * If *targetObj* is not a range, *rangeUpdate* is ignored.
 
-Puede pasar en *numCol* y *numFilas* el número de columnas y filas a definir en la tabla. Por defecto, si se omiten *numCol* y *numFilas*, se crea una nueva tabla con columna 0 y fila 0\. A continuación, podrá agregar estos elementos utilizando el comando [WP Table append row](../commands/wp-table-append-row.md).
+Puede pasar en *numCol* y *numFilas* el número de columnas y filas a definir en la tabla. Por defecto, si se omiten *numCol* y *numFilas*, se crea una nueva tabla con columna 0 y fila 0\. A continuación, podrá agregar estos elementos utilizando el comando [WP Table append row](../commands/wp-table-append-row).
 
-El comando devuelve la nueva tabla como un objeto de tabla, que puede pasar a continuación a los demás comandos de tabla WP. La tabla se crea con los atributos predeterminados de fuente, borde y color que puede personalizar utilizando el comando [WP SET ATTRIBUTES](../commands/wp-set-attributes.md).
+El comando devuelve la nueva tabla como un objeto de tabla, que puede pasar a continuación a los demás comandos de tabla WP. La tabla se crea con los atributos predeterminados de fuente, borde y color que puede personalizar utilizando el comando [WP SET ATTRIBUTES](../commands/wp-set-attributes).
 
 ## Ejemplo 
 
@@ -70,5 +70,6 @@ Resultado:
 
 ## Ver también 
 
-[WP Table append row](../commands/wp-table-append-row.md)  
-[WP Table get rows](wp-table-get-rows.md)  
+[WP Table append row](../commands/wp-table-append-row)  
+[WP Table get rows](../commands/wp-table-get-rows)  
+

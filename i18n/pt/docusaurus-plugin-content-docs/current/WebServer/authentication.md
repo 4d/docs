@@ -81,7 +81,7 @@ Por tanto, se llama al método base `On Web Authentication`:
 
 - quando o servidor da Web recebe um URL solicitando um recurso que não existe
 - when the web server receives a URL beginning with `4DACTION/`
-- when the web server receives a root access URL and no home page has been set in the Settings or by means of the [`WEB SET HOME PAGE`](../commands-legacy/web-set-home-page.md) command
+- when the web server receives a root access URL and no home page has been set in the Settings or by means of the [`WEB SET HOME PAGE`](../commands-legacy/web-set-home-page) command
 - cuando el servidor web procesa una etiqueta que ejecuta código (por ejemplo, `4DSCRIPT`) en una página semidinámica.
 
 Por tanto, NO se llama al método base `On Web Authentication`:

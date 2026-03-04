@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 Is license available コマンドは次のような3通りの使用が可能です。
 
-* 引数 *license* を省略する場合：4Dアプリケーションがデモモードの場合に、コマンドは [False](false.md "False") を返します。
+* 引数 *license* を省略する場合：4Dアプリケーションがデモモードの場合に、コマンドは [False](../commands/false) を返します。
 * 以下の “*Is License Available*” テーマの定数のうちの1つを引数 *license* に渡す場合。  
 | 定数                     | 型    | 値         |  
 | ---------------------- | ---- | --------- |  
@@ -48,8 +48,8 @@ Is license available コマンドは次のような3通りの使用が可能で�
 | 4D Web license         | 倍長整数 | 808464945 |  
 | 4D Write license       | 倍長整数 | 808464697 |  
     
-この方法では、対応するプラグインのライセンスが有効な場合、コマンドは [True](true.md "True") を返します。コマンドはデザインモード、[SET PLUGIN ACCESS](set-plugin-access.md) コマンドの結果等を考慮に入れて結果を返します。  
-プラグインがデモモードで動作している場合、Is license available は[False](false.md "False") を返します。
+この方法では、対応するプラグインのライセンスが有効な場合、コマンドは [True](../commands/true) を返します。コマンドはデザインモード、[SET PLUGIN ACCESS](set-plugin-access.md) コマンドの結果等を考慮に入れて結果を返します。  
+プラグインがデモモードで動作している場合、Is license available は[False](../commands/false) を返します。
 * プラグイン “4BNX” リソースのID番号を引数licenseに直接渡す場合、コマンドは、前述の通りに動作します。
 
 ## 参照 

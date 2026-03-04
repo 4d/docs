@@ -13,7 +13,7 @@ Webエリアは、静的および動的な HTMLページ、ファイル、ピク
 
 Web エリアを使用して、[Qodly ページ](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) を表示することもでき、これによって4D デスクトップアプリケーションユーザーにモダンで、CSS ベースなWeb インターフェースを提供することができます。
 
-Web エリア内にQodly ページを埋め込み、[`WA EXECUTE JAVASCRIPT FUNCTION`](../commands-legacy/wa-execute-javascript-function.md) を呼び出すことで4D から[Qodly ソース](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/qodlySources) を更新することができます。
+Web エリア内にQodly ページを埋め込み、[`WA EXECUTE JAVASCRIPT FUNCTION`](../commands-legacy/wa-execute-javascript-function) を呼び出すことで4D から[Qodly ソース](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/qodlySources) を更新することができます。
 
 4D クライアント/サーバーアプリケーションにおいては、Web エリア内のQodly ページは[リモートユーザーとセッションを共有すること](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) ができ、これによって高レベルなセキュリティを実現できます。
 
@@ -65,11 +65,11 @@ $4d.HelloWorld();
 
 ### $4d へのアクセスの管理
 
-[`WA SET CONTEXT`](../commands/wa-set-context.md) を使用すると、デベロッパーはWeb エリアから `$4d` を通して何が利用可能かをコントロールすることができます。 このコマンドを使用することで、フォーミュラとクラスインスタンスを通して例えば4D メソッドを宣言する**コンテキストオブジェクト**を定義することができます。
+[`WA SET CONTEXT`](../commands/wa-set-context) を使用すると、デベロッパーはWeb エリアから `$4d` を通して何が利用可能かをコントロールすることができます。 このコマンドを使用することで、フォーミュラとクラスインスタンスを通して例えば4D メソッドを宣言する**コンテキストオブジェクト**を定義することができます。
 
-現在定義されているコンテキストをチェックするためには、[`WA Get context`](../commands/wa-get-context.md) を使用します。
+現在定義されているコンテキストをチェックするためには、[`WA Get context`](../commands/wa-get-context) を使用します。
 
-詳細な情報については、[`WA SET CONTEXT`](../commands/wa-set-context.md) を参照してください。
+詳細な情報については、[`WA SET CONTEXT`](../commands/wa-set-context) を参照してください。
 
 ### JavaScript から4D メソッドを呼び出す
 
@@ -193,9 +193,9 @@ Webエリアを自動で管理するために、4つの特別な自動アクシ�
 フォームが実行されると、他のフォームエリアとの対話を可能にする、標準のブラウザーインタフェース機能が Web エリア内で利用可能になります。
 
 - **編集メニューコマンド**: Webエリアにフォーカスがあるとき、**編集** メニューコマンドを使用してコピーやペースト、すべてを選択などのアクションを選択に応じて実行できます。
-- **コンテキストメニュー**: Web エリアでは、システムの標準の[コンテキストメニュー](properties_Entry.md#コンテキストメニュー) を使用することができます。  コンテキストメニューの表示は[`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) コマンドを使用することによってコントロール可能です。
+- **コンテキストメニュー**: Web エリアでは、システムの標準の[コンテキストメニュー](properties_Entry.md#コンテキストメニュー) を使用することができます。  コンテキストメニューの表示は[`WA SET PREFERENCE`](../commands-legacy/wa-set-preference) コマンドを使用することによってコントロール可能です。
 - **ドラッグ＆ドロップ**: 4D のオブジェクトプロパティに基づき、ユーザーは Webエリア内で、または Webエリアと 4Dフォームオブジェクト間で、テキストやピクチャー、ドキュメントをドラッグ＆ドロップできます。
-  セキュリティ上の理由から、ファイルまたは URL のドラッグ＆ドロップによって Webエリアのコンテンツを変更することは、デフォルトで禁止されています。 この場合、カーソルは"禁止"アイコン![](../assets/en/FormObjects/forbidden.png) を表示します。 "ドロップ" アイコンを表示し、[`On Window Opening Denied`](Events/onWindowOpeningDenied.md) イベントを発生させるには、`WA SET PREFERENCE(*;"warea";WA enable URL drop;True)` 文を使う必要があります。 このイベントにおいては、[`WA OPEN URL`](../commands-legacy/wa-open-url.md) コマンドを呼び出すか、または[URL 変数](properties_WebArea.md#url) を設定することでユーザードロップに対応することができます。
+  セキュリティ上の理由から、ファイルまたは URL のドラッグ＆ドロップによって Webエリアのコンテンツを変更することは、デフォルトで禁止されています。 この場合、カーソルは"禁止"アイコン![](../assets/en/FormObjects/forbidden.png) を表示します。 "ドロップ" アイコンを表示し、[`On Window Opening Denied`](Events/onWindowOpeningDenied.md) イベントを発生させるには、`WA SET PREFERENCE(*;"warea";WA enable URL drop;True)` 文を使う必要があります。 このイベントにおいては、[`WA OPEN URL`](../commands-legacy/wa-open-url) コマンドを呼び出すか、または[URL 変数](properties_WebArea.md#url) を設定することでユーザードロップに対応することができます。
 
 > 上記のドラッグ&ドロップ機能は[macOS のシステムレンダリングエンジン](properties_WebArea.md#use-embedded-web-rendering-engine) を使用したWeb エリアではサポートされていません。
 
@@ -235,7 +235,7 @@ Webインスペクターを表示させるには、`WA OPEN WEB INSPECTOR` コ�
 
 > [Windows のシステムレンダリングエンジン](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) の場合にこの環境設定を変更すると、変更を反映するのにエリア内でのナビゲーション操作 (たとえば、ページの更新など) が必要です。
 
-より詳細な情報については、[`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) コマンドの説明を参照して下さい。
+より詳細な情報については、[`WA SET PREFERENCE`](../commands-legacy/wa-set-preference) コマンドの説明を参照して下さい。
 
 上記のとおり設定を完了すると、エリア内のコンテキストメニュー内に **要素を調査** という新しいオプションが追加されているはずです: この項目を選択すると、Webインスペクターウィンドウが表示されます。
 

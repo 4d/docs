@@ -30,38 +30,39 @@ displayed_sidebar: docs
 </details>
 </div>
 
-## 説明
+## 説明 
 
-<!--REF #_command_.Old.Summary-->The **Old** command returns the value held in *aField* before the field was programmatically assigned a value or modified in data entry.<!-- END REF-->
+<!--REF #_command_.Old.Summary-->Old コマンドは、プログラムにより値が代入されたり、データ登録で修正される前に*aField*に納められていた値を返します。<!-- END REF-->
 
-Each time you change the current record for a table, 4D creates and maintains in memory a duplicated “image” of the new current record when it is loaded in memory. When modifying a record, you work with the actual image of the record, not this duplicated image. This image is then discarded when you change the current record again.
+テーブルのカレントレコードを移動するたびに、4Dは新しいカレントレコードがメモリーにロードされた時点での複製された“イメージ”をメモリ上に作成し、管理します。レコードを修正する際には、レコードの実際のイメージを使います。複製イメージではありません。カレントレコードを移動すると、このイメージは破棄されます。
 
-**Old** returns the value from the duplicated image. In other words, for an existing record, it returns the value of the field as it is stored on disk. If a record is new, **Old** returns the default empty value for *field* according to its type. For example, if *field* is an Alpha field, **Old** returns an empty string. If *field* is a numeric field, **Old** returns zero (0), and so on.
+Oldはこの複製イメージの値を返します。すなわち、既存のレコードに対しては、ディスク上に保存されているフィールドの値を返すということです。新しく作成されたレコードの場合、Oldはそのフィールドタイプに応じた空の値を返します。例えば、*aField*が文字フィールドの場合、Oldは空の文字列を、数値フィールドならOldは0を返します。
 
-**Old** works on *aField* whether the field has been modified by a method or by the user during data entry. It can be applied to all field types.
+Oldは、*aField*がメソッドまたはデータ入力時にユーザによって修正された場合にも機能します。
 
-To restore the original value of a field, assign it the value returned by **Old**.
+Oldは、すべてのフィールドタイプに適用できます。
 
-**Note:** For technical reasons, in the case of Picture and BLOB type fields, the expression returned by **Old** cannot be used directly as a parameter for another command. It is necessary to pass the value via an intermediate variable. 例:
+フィールドの元の値を復元するには、Oldから返された値を割り当てます。
+
+**Note:** 技術的な理由により、ピクチャやBLOBタイプのフィールドの場合、Oldから返される式を直接他のコマンドの引数としては利用できません。他の引数を経由する必要があります。例えば:
 
 ```4d
   //Do NOT write (causes a syntax error):
- $size :=BLOB size(Old([theTable]theBlob)) //INCORRECT
- 
+ $size :=BLOB size(Old([theTable]theBlob)) //INCORRECT
   //Write:
- $oldBLOB:=Old([theTable]theBlob)
- $size :=BLOB size($oldBLOB) //CORRECT
+ $oldBLOB:=Old([theTable]theBlob)
+ $size :=BLOB size($oldBLOB) //CORRECT
 ```
 
-## 参照
+## 参照 
 
-[Modified](modified.md)
+[Modified](../commands/modified)  
 
 ## プロパティ
 
-|         |    |
-| ------- | -- |
-| コマンド番号  | 35 |
-| スレッドセーフ | ◯  |
+|  |  |
+| --- | --- |
+| コマンド番号 | 35 |
+| スレッドセーフである | yes |
 
 

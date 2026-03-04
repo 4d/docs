@@ -42,7 +42,7 @@ Los rangos de filas, columnas y celdas de [tables](./handling-tables.md) tienen 
 
 Varios comandos le permiten definir rangos:
 
-- [WP Text range](../commands-legacy/wp-text-range.md): devuelve un nuevo rango correspondiente a los límites que pasa como parámetros.
+- [WP Text range](../commands-legacy/wp-text-range): devuelve un nuevo rango correspondiente a los límites que pasa como parámetros.
 - [WP Selection range](../commands-legacy/wp-selection-range): devuelve un nuevo rango que corresponde a la selección usuario actual.
 - [WP Picture range](../commands-legacy/wp-picture-range): devuelve un nuevo rango que contiene solo las imágenes.
 - [WP Paragraph range](../commands-legacy/wp-paragraph-range): devuelve un nuevo rango que contiene solo los párrafos.

@@ -1,0 +1,63 @@
+﻿---
+id: append-document
+title: Append document
+slug: /commands/append-document
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.Append document.Syntax-->**Append document** ( *documento* : Text {; *tipoArquivo* : Text} ) : Time<!-- END REF-->
+<!--REF #_command_.Append document.Params-->
+<div class="no-index">
+
+| Parâmetro | Tipo |  | Descrição |
+| --- | --- | --- | --- |
+| documento | Text | &#8594; | Nome de documento ou rota de acesso completa ou string vazia para caixa de diálogo de arquivo |
+| tipoArquivo | Text | &#8594; | Lista de tipos de documentos a serem pesquisados, ou "*" para não pesquisar os documentos |
+| Resultado | Time | &#8592; | Número de referência de documento |
+</div>
+<!-- END REF-->
+
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|11 SQL|Modificado|
+|<6|Criado|
+
+</details>
+</div>
+
+## Descrição 
+
+<!--REF #_command_.Append document.Summary-->O comando Append document faz a mesma coisa que [Open document](../commands/open-document): permite abrir um documento em disco.<!-- END REF-->  
+  
+A única diferença é que Append document define a localização do arquivo ao final do documento enquanto que [Open document](open-document.md "Open document") o faz ao princípio.  
+  
+Para maior informação consulte [Open document](../commands/open-document) .
+
+## Exemplo 
+
+O exemplo abaixo abre um documento existente chamado Nota, adiciona a string “e até logo” seguida por um retorno de carro ao final do documento, e fecha o documento. Se o documento já contiver a string “Adeus”, o documento conterá agora a string “Adeus e até logo”, seguido por um retorno de carro: 
+
+```4d
+ var vhDocRef : Time
+ vhDocRef:=Append document("Nota.txt") // Abrir o documento Nota
+ SEND PACKET(vhDocRef;" e até logo"+Char(13)) // Adicionar a string
+ CLOSE DOCUMENT(vhDocRef) // Fechar o documento
+```
+
+## Ver também 
+
+[Create document](../commands/create-document)  
+[Open document](../commands/open-document)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 265 |
+| Thread-seguro | yes |
+| Modificar variáveis | OK, Document, error |
+
+

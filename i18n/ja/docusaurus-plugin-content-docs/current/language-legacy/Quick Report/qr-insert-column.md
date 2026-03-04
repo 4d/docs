@@ -1,0 +1,62 @@
+﻿---
+id: qr-insert-column
+title: QR INSERT COLUMN
+slug: /commands/qr-insert-column
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.QR INSERT COLUMN.Syntax-->**QR INSERT COLUMN** ( *area* : Integer ; *colNumber* : Integer ; *object* : Variable, Field, Pointer )<!-- END REF-->
+<!--REF #_command_.QR INSERT COLUMN.Params-->
+<div class="no-index">
+
+| 引数 | 型 |  | 説明 |
+| --- | --- | --- | --- |
+| area | Integer | &#8594; | エリア参照 |
+| colNumber | Integer | &#8594; | カラム番号 |
+| object | Field, Variable, Pointer | &#8594; | カラムに挿入するオブジェクト |
+</div>
+<!-- END REF-->
+
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|2003|初出|
+
+</details>
+</div>
+
+## 説明 
+
+<!--REF #_command_.QR INSERT COLUMN.Summary-->QR INSERT COLUMN コマンドは指定された位置にカラムの作成または挿入を行います。<!-- END REF-->挿入された場所の右にあるカラムはすべて右側へ移動します。
+
+*colNum*には、左から右へ順に付けられたカラム番号を渡します。
+
+カラムのデフォルトのタイトルは*object*に渡された値です。
+
+無効な*area*番号を渡した場合、エラー番号-9850が生成されます。
+
+**注:** このコマンドはクロステーブルレポートには使用できません。
+
+## 例題 
+
+次のコードはクイックレポートエリアの一番目にカラムを挿入（または作成）し、カラムタイトルに“Field1”を設定し（デフォルト動作）、Field1の値をカラムの内容として代入します。
+
+```4d
+ QR INSERT COLUMN(MyArea;1;->[Table1]Field1)
+```
+
+## 参照 
+
+[QR DELETE COLUMN](../commands/qr-delete-column)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 748 |
+| スレッドセーフである | no |
+| システム変数を更新する | error |
+
+

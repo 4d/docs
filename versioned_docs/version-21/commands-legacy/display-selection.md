@@ -49,7 +49,7 @@ The *selectMode* parameter is used to set the possibilities for selecting record
 
  If you do not pass the *selectMode* parameter, the “Multiple Selection” mode is used by default.   
 
-The *enterList* parameter lets you authorize the “Enter in List” mode for the displayed list. This lets the user select and modify the record values directly in the output form. Pass [True](true.md "True") to enable this mode or [False](false.md "False") to disable it. By default, if you do not pass the *enterList* parameter, the “Enter in List” mode is disabled.   
+The *enterList* parameter lets you authorize the “Enter in List” mode for the displayed list. This lets the user select and modify the record values directly in the output form. Pass [True](../commands/true) to enable this mode or [False](../commands/false) to disable it. By default, if you do not pass the *enterList* parameter, the “Enter in List” mode is disabled.   
 Keep in mind that with the **DISPLAY SELECTION** command, this parameter only allows the selection of the values in the list and not their modification. In fact, the **DISPLAY SELECTION** command loads the records of the current selection in Read only in the current process. Only the [MODIFY SELECTION](modify-selection.md) command allows the actual entry of values. 
 
 **Note:** The [OBJECT SET ENTERABLE](object-set-enterable.md) command can be used to enable or disable the Enter in list mode on the fly. 

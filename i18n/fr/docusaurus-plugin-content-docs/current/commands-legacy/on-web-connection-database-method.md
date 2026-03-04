@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 Pour plus d'informations, reportez-vous ci-dessous au paragraphe “Appels de la Méthode base Sur connexion Web”.
 
-Le serveur Web doit avoir démarré et la requête doit avoir été "acceptée" par la [On Web Authentication database method](on-web-authentication-database-method.md) (si elle existe).
+Le serveur Web doit avoir démarré et la requête doit avoir été "acceptée" par la [On Web Authentication database method](../commands/on-web-authentication-database-method) (si elle existe).
 
 La **On Web Connection database method** reçoit six paramètres de type Texte, passés par 4D ($url, $http, $ipBrowser, $ipServer, $user et $pw). Voici leur description :
 
@@ -101,10 +101,11 @@ Cette boîte de dialogue apparaît pour chaque connexion dès que l’option **U
 
 La **On Web Connection database method** peut être utilisée comme point d'entrée dans le serveur Web 4D, soit à l'aide de l'URL spécial *4DCGI*, soit à l'aide d'URLs de commande personnalisés.
 
-**Attention :** L’appel d’une commande 4D affichant un élément d’interface ([DIALOG](../commands/dialog.md), [ALERT](alert.md)...) entraîne l’arrêt du traitement de la méthode.
+**Attention :** L’appel d’une commande 4D affichant un élément d’interface ([DIALOG](../commands/dialog), [ALERT](../commands/alert)...) entraîne l’arrêt du traitement de la méthode.
 
 La **On Web Connection database method** est donc appelée dans les cas suivants :
 
 * lorsque 4D reçoit l’URL */4DCGI*. La méthode base est appelée avec l’URL */4DCGI/<action>* dans *$url*.
 * lorsqu’une page Web appelée avec un URL du type *<chemin>/<fichier>* n’est pas trouvée. La méthode base est appelée avec l’URL.
 * lorsqu’une page Web est appelée avec un URL du type *<chemin>/* et qu’aucune page d’accueil par défaut n’est définie. La méthode base est appelée avec l’URL.
+

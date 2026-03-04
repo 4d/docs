@@ -7,7 +7,7 @@ ORDA テクノロジーは、その下地となる[データベースストラ�
 
 ## ストラクチャーマッピング
 
-[`ds`](commands/ds.md) および [`Open datastore`](commands/open-datastore.md) コマンドを使ってデータストアを呼び出すと、戻り値の [データストア](#データストア) オブジェクトには、対応する 4D ストラクチャーのテーブルとフィールドへの参照が属性として格納されています:
+[`ds`](../commands/ds) および [`Open datastore`](../commands/open-datastore) コマンドを使ってデータストアを呼び出すと、戻り値の [データストア](#データストア) オブジェクトには、対応する 4D ストラクチャーのテーブルとフィールドへの参照が属性として格納されています:
 
 - テーブルは [データクラス](#データクラス) へとマッピングされます。
 - フィールドは [ストレージ属性](#ストレージ属性とリレーション属性) へとマッピングされます。
@@ -28,7 +28,7 @@ ORDA テクノロジーは、その下地となる[データベースストラ�
 > ORDA のデータストアマッピングでは、次のものは考慮されません:
 >
 > - テーブルあるいはフィールドの "非表示" オプション
-> - [`SET TABLE TITLES`](../commands-legacy/set-table-titles.md) あるいは [`SET FIELD TITLES`](../commands-legacy/set-field-titles.md) を通して定義されたバーチャルストラクチャー
+> - [`SET TABLE TITLES`](../commands-legacy/set-table-titles) あるいは [`SET FIELD TITLES`](../commands-legacy/set-field-titles) を通して定義されたバーチャルストラクチャー
 > - リレーションの "手動" あるいは "自動" プロパティ
 
 ### リモートデータストアの利用

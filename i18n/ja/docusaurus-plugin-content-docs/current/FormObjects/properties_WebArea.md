@@ -54,12 +54,12 @@ Webエリアで実行される JavaScript コードから 4Dメソッドおよ�
 
 ### URL変数と WA OPEN URL コマンド
 
-URL 変数は[`WA OPEN URL`](../commands-legacy/wa-open-url.md) と同じ効果を生み出します。 しかしながら、以下の違いに注意してください。
+URL 変数は[`WA OPEN URL`](../commands-legacy/wa-open-url) と同じ効果を生み出します。 しかしながら、以下の違いに注意してください。
 
-- ドキュメントにアクセスする場合、この変数は RFC準拠 ("file://c:/My%20Doc") な URL のみを受け付け、システムパス名 ("c:\MyDoc") は受け付けません。 [`WA OPEN URL`](../commands-legacy/wa-open-url.md) コマンドは両方の記法を受け入れます。
-- URL変数が空の文字列の場合、Webエリアは URL をロードしません。 [`WA OPEN URL`](../commands-legacy/wa-open-url.md) コマンドは、この場合にはエラーを生成します。
-- URL変数がプロトコル (http, mailto, file など) を含まない場合、Webエリアは "http://" を付加しますが、[`WA OPEN URL`](../commands-legacy/wa-open-url.md) コマンドはこれを付加しません。
-- Webエリアがフォーム上で表示されていない場合 (フォームの別ページに Webエリアがある場合等)、[`WA OPEN URL`](../commands-legacy/wa-open-url.md) コマンドを実行しても効果はありません。 一方、URL変数に値を代入すると、カレントURL が更新されます。
+- ドキュメントにアクセスする場合、この変数は RFC準拠 ("file://c:/My%20Doc") な URL のみを受け付け、システムパス名 ("c:\MyDoc") は受け付けません。 [`WA OPEN URL`](../commands-legacy/wa-open-url) コマンドは両方の記法を受け入れます。
+- URL変数が空の文字列の場合、Webエリアは URL をロードしません。 [`WA OPEN URL`](../commands-legacy/wa-open-url) コマンドは、この場合にはエラーを生成します。
+- URL変数がプロトコル (http, mailto, file など) を含まない場合、Webエリアは "http://" を付加しますが、[`WA OPEN URL`](../commands-legacy/wa-open-url) コマンドはこれを付加しません。
+- Webエリアがフォーム上で表示されていない場合 (フォームの別ページに Webエリアがある場合等)、[`WA OPEN URL`](../commands-legacy/wa-open-url) コマンドを実行しても効果はありません。 一方、URL変数に値を代入すると、カレントURL が更新されます。
 
 #### JSON 文法
 
@@ -73,7 +73,7 @@ URL 変数は[`WA OPEN URL`](../commands-legacy/wa-open-url.md) と同じ効果�
 
 #### コマンド
 
-[`WA GET PREFERENCE`](../commands-legacy/wa-get-preference.md) - [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md)
+[`WA GET PREFERENCE`](../commands-legacy/wa-get-preference) - [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference)
 
 ---
 
@@ -89,8 +89,8 @@ URL 変数は[`WA OPEN URL`](../commands-legacy/wa-open-url.md) と同じ効果�
 
 CEFエンジンには以下のような制約があります:
 
-- [`WA SET PAGE CONTENT`](../commands-legacy/wa-set-page-content.md): このコマンドを使用する場合、([`WA OPEN URL`](../commands-legacy/wa-open-url.md) コマンドを呼び出すかあるいはエリアに割り当てられた URL変数への代入を通して) 少なくとも既に 1ページがエリア内に読み込まれている必要があります。
-- [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) コマンドの `WA enable URL drop` セレクターによって URLドロップが許可されている場合、最初のドロップをする前に少なくとも 1度は [`WA OPEN URL`](../commands-legacy/wa-open-url.md) コマンドを呼び出すか、またはエリアに割り当てられている URL 変数に URL が渡されている必要があります。
+- [`WA SET PAGE CONTENT`](../commands-legacy/wa-set-page-content): このコマンドを使用する場合、([`WA OPEN URL`](../commands-legacy/wa-open-url) コマンドを呼び出すかあるいはエリアに割り当てられた URL変数への代入を通して) 少なくとも既に 1ページがエリア内に読み込まれている必要があります。
+- [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference) コマンドの `WA enable URL drop` セレクターによって URLドロップが許可されている場合、最初のドロップをする前に少なくとも 1度は [`WA OPEN URL`](../commands-legacy/wa-open-url) コマンドを呼び出すか、またはエリアに割り当てられている URL 変数に URL が渡されている必要があります。
 
 :::note
 
@@ -110,4 +110,4 @@ CEFエンジンには以下のような制約があります:
 
 #### コマンド
 
-[`WA GET PREFERENCE`](../commands-legacy/wa-get-preference.md) - [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md)
+[`WA GET PREFERENCE`](../commands-legacy/wa-get-preference) - [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference)

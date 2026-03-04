@@ -59,6 +59,6 @@ You want to apply a blue background on left pages:
 
 ## See also 
 
-[WP DELETE SUBSECTION](../commands/wp-delete-subsection.md)  
+[WP DELETE SUBSECTION](../commands/wp-delete-subsection)  
 [WP Get section](wp-get-section.md)  
 [WP New subsection](wp-new-subsection.md)  

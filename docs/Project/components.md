@@ -655,7 +655,7 @@ You can then enter your personal access token:
 
 You can only enter one personal access token. Once a token has been entered, you can edit it.  
 
-The provided token is stored in a **github.json** file in the [active 4D folder](../commands-legacy/get-4d-folder.md#active-4d-folder). 
+The provided token is stored in a **github.json** file in the [active 4D folder](../commands/get-4d-folder#active-4d-folder). 
 
 
 ### Removing a dependency
@@ -677,4 +677,5 @@ If you confirm the dialog box, the removed dependency [status](#dependency-statu
 #### Dependency usage warnings
 
 When you attempt to remove a primary dependency that is required by other dependencies in your project, you will be warned that the dependency is still in use. The system will display which other dependencies require it and prompt you to confirm the removal, as removing it may cause those dependent components to stop working properly.
+
 

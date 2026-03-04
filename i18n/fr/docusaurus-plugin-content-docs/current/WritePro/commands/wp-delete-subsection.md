@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 La commande **WP DELETE SUBSECTION** <!--REF #_command_.WP DELETE SUBSECTION.Summary--> supprime les éléments de sous-section *subSectionType* de la section *wpSection* 4D Write Pro, ou supprime directement la *subSection*<!-- END REF--> passée. Les éléments de sous-section comprennent les en-têtes, les pieds de page, les colonnes, les images ancrées, etc. Notez que le corps du document n'est pas modifié.
 
-Dans *wpSection*, passez la section à partir de laquelle vous voulez supprimer les éléments de la sous-section. La section peut être obtenue en utilisant les commandes [WP Get sections](../commands-legacy/wp-get-sections.md) ou [WP Get section](../commands-legacy/wp-get-section.md).
+Dans *wpSection*, passez la section à partir de laquelle vous voulez supprimer les éléments de la sous-section. La section peut être obtenue en utilisant les commandes [WP Get sections](../commands-legacy/wp-get-sections) ou [WP Get section](../commands-legacy/wp-get-section).
 
 Le paramètre subSectionType spécifie la sous-section à supprimer. Vous pouvez passer l'une des constantes suivantes :
 
@@ -73,5 +73,5 @@ $subSection:=WP Get subsection(WP Get section($document;3);wk right page)
 
 ## Voir également
 
-[WP Get subsection](../commands-legacy/wp-get-subsection.md)\
-[WP New subsection](../commands-legacy/wp-new-subsection.md)
+[WP Get subsection](../commands-legacy/wp-get-subsection)\
+[WP New subsection](../commands-legacy/wp-new-subsection)

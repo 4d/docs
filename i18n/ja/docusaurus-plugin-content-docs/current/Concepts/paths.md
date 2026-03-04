@@ -41,7 +41,7 @@ POSIX シンタックスはすべてのプラットフォームでサポート�
 - 絶対パス名は "/" で始まります。
 - 相対パスにおいて 1階層上に移動するには、パス名の前に "../" を使用します (セキュリティ上の理由から、filesystem から上へは移動できません)。
 
-POSIX シンタックスでは一般的に、[`File`](../commands/file.md) および [`Folder`](../commands/folder.md) コマンドに `filesystem` パス名を使用します。例:
+POSIX シンタックスでは一般的に、[`File`](../commands/file) および [`Folder`](../commands/folder) コマンドに `filesystem` パス名を使用します。例:
 
 ```4d
 var $pathFile : 4D.File
@@ -62,7 +62,7 @@ $pathFolder:=Folder("/RESOURCES/Pictures")
 - パスは 2番目と 3番目の文字にそれぞれ ":" と "\" を含みます。
 - パスは "\\" で始まります。
 
-[`Folder`](../commands/folder.md) を使用した例:
+[`Folder`](../commands/folder) を使用した例:
 
 ```4d
 $ok:=Folder("C:\\Monday";fk platform path).create()
@@ -82,7 +82,7 @@ Windows では、`\` 文字をパスの区切り文字としても使用する�
 - フォルダーは ":" で区切られます。
 - パスは ":" で始まってはいけません。
 
-[`Folder`](../commands/folder.md) を使用した例:
+[`Folder`](../commands/folder) を使用した例:
 
 ```4d
 $ok:=Folder("macintosh hd:";fk platform path).create()
@@ -93,7 +93,7 @@ $ok:=Folder("Monday:Tuesday";fk platform path).create() // ボリュームの名
 
 ### `File` および `Folder` コンストラクター
 
-[`File`](../commands/file.md) および [`Folder`](../commands/folder.md) コマンドは **絶対パス名** のみを受け付けます。 相対パス名はサポートされておらず、エラーが返されます。 たとえば、以下のコードは使用できません:
+[`File`](../commands/file) および [`Folder`](../commands/folder) コマンドは **絶対パス名** のみを受け付けます。 相対パス名はサポートされておらず、エラーが返されます。 たとえば、以下のコードは使用できません:
 
 ```4d
 //ERROR

@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-El comando **WP Table range** devuelve un objeto rango que trata solo las tablas contenidas en *objRango* pasado como parámetro. Devolverá un rango de wk type table, incluso si *objRango* pasado como parámetro no contiene una tabla. El objeto de rango de tabla devuelto puede ser utilizado por [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) y [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) para manejar los atributos que se aplican a las tablas y a los contenidos de la tabla.
+El comando **WP Table range** devuelve un objeto rango que trata solo las tablas contenidas en *objRango* pasado como parámetro. Devolverá un rango de wk type table, incluso si *objRango* pasado como parámetro no contiene una tabla. El objeto de rango de tabla devuelto puede ser utilizado por [WP GET ATTRIBUTES](../commands/wp-get-attributes) y [WP SET ATTRIBUTES](../commands/wp-set-attributes) para manejar los atributos que se aplican a las tablas y a los contenidos de la tabla.
 
 En el parámetro *objRango*, puede pasar:
 
@@ -47,5 +47,6 @@ Usted desea modificar el aspecto de las tablas en el rango de tabla:
 
 ## Ver también 
 
-[WP Get elements](wp-get-elements.md)  
-[WP Text range](wp-text-range.md)  
+[WP Get elements](../commands/wp-get-elements)  
+[WP Text range](../commands/wp-text-range)  
+

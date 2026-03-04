@@ -230,9 +230,9 @@ End if
 
 4D's Web server lets you recover data sent through POST or GET requests, using Web forms or URLs.
 
-When the Web server receives a request with data in the header or in the URL, 4D can retrieve the values of any HTML objects it contains. This principle can be implemented in the case of a Web form, sent for example using [`WEB SEND FILE`](../commands-legacy/web-send-file.md) or [`WEB SEND BLOB`](../commands-legacy/web-send-blob.md), where the user enters or modifies values, then clicks on the validation button.
+When the Web server receives a request with data in the header or in the URL, 4D can retrieve the values of any HTML objects it contains. This principle can be implemented in the case of a Web form, sent for example using [`WEB SEND FILE`](../commands/web-send-file) or [`WEB SEND BLOB`](../commands/web-send-blob), where the user enters or modifies values, then clicks on the validation button.
 
-In this case, 4D can retrieve the values of the HTML objects found in the request using the [`WEB GET VARIABLES`](../commands-legacy/web-get-variables.md) command. The `WEB GET VARIABLES` command retrieves the values as text.
+In this case, 4D can retrieve the values of the HTML objects found in the request using the [`WEB GET VARIABLES`](../commands/web-get-variables) command. The `WEB GET VARIABLES` command retrieves the values as text.
 
 Consider the following HTML page source code:
 
@@ -337,18 +337,19 @@ Keep in main that with HTML, all objects are text objects. If you use a SELECT o
 
 The 4D web server provides several low-level web commands allowing you to develop custom processing of requests:
 
-- the [`WEB GET HTTP BODY`](../commands-legacy/web-get-http-body.md) command returns the body as raw text, allowing any parsing you may need
-- the [`WEB GET HTTP HEADER`](../commands-legacy/web-get-http-header.md) command return the headers of the request. It is useful to handle custom cookies, for example (along with the `WEB SET HTTP HEADER` command).
-- the [`WEB GET BODY PART`](../commands-legacy/web-get-body-part.md) and [`WEB Get body part count`](../commands-legacy/web-get-body-part-count.md) commands to parse the body part of a multi-part request and retrieve text values, but also files posted, using BLOBs.
+- the [`WEB GET HTTP BODY`](../commands/web-get-http-body) command returns the body as raw text, allowing any parsing you may need
+- the [`WEB GET HTTP HEADER`](../commands/web-get-http-header) command return the headers of the request. It is useful to handle custom cookies, for example (along with the `WEB SET HTTP HEADER` command).
+- the [`WEB GET BODY PART`](../commands/web-get-body-part) and [`WEB Get body part count`](../commands/web-get-body-part-count) commands to parse the body part of a multi-part request and retrieve text values, but also files posted, using BLOBs.
 
 These commands are summarized in the following graphic:
 
 ![](../assets/en/WebServer/httpCommands.png)
 
-The 4D web server supports files uploaded in chunked transfer encoding from any Web client. Chunked transfer encoding is a data transfer mechanism specified in HTTP/1.1. It allows data to be transferred in a series of "chunks" (parts) without knowing the final data size. The 4D Web Server also supports chunked transfer encoding from the server to Web clients (using [`WEB SEND RAW DATA`](../commands-legacy/web-send-raw-data.md)).
+The 4D web server supports files uploaded in chunked transfer encoding from any Web client. Chunked transfer encoding is a data transfer mechanism specified in HTTP/1.1. It allows data to be transferred in a series of "chunks" (parts) without knowing the final data size. The 4D Web Server also supports chunked transfer encoding from the server to Web clients (using [`WEB SEND RAW DATA`](../commands/web-send-raw-data)).
 
 ## COMPILER_WEB Project Method  
 
 The COMPILER\_WEB method, if it exists, is systematically called when the HTTP server receives a dynamic request and calls the 4D engine. This is the case, for example, when the 4D Web server receives a posted form or a URL to process in [`On Web Connection`](#on-web-connection). This method is intended to contain typing and/or variable initialization directives used during Web exchanges. It is used by the compiler when the application is compiled. The COMPILER\_WEB method is common to all the Web forms. By default, the COMPILER_WEB method does not exist. You must explicitly create it.
 
 > The COMPILER_WEB project method is also called, if it exists, for each SOAP request accepted.
+

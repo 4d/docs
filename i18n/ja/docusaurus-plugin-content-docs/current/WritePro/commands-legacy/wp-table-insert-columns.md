@@ -58,4 +58,4 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP Table insert rows](wp-table-insert-rows.md)  
+[WP Table insert rows](../commands/wp-table-insert-rows)  

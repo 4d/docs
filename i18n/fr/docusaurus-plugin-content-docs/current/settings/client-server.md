@@ -67,14 +67,14 @@ Lorsque l'authentification unique (SSO) est activée (voir ci-dessus), vous deve
 
 Cette liste déroulante contient 3 options de couche réseau : **Historique**, **ServerNet** et **QUIC** (uniquement en mode projet), qui sont utilisées pour gérer les communications entre le serveur 4D et les machines 4D distantes (clients).
 
-- **Historique** : Cette ancienne couche réseau "historique" est toujours prise en charge afin d'assurer la compatibilité avec les bases de données créées avant la version 15. Cette couche réseau peut également être activée par programmation à l'aide de la commande [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md).
+- **Historique** : Cette ancienne couche réseau "historique" est toujours prise en charge afin d'assurer la compatibilité avec les bases de données créées avant la version 15. Cette couche réseau peut également être activée par programmation à l'aide de la commande [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter).
 - **ServerNet** (par défaut) : Active la couche réseau ServerNet sur le serveur (disponible depuis 4D v15).
 - **QUIC** (disponible uniquement en mode projet) : Active la couche réseau QUIC sur le serveur.
 
   **Notes** :
 
-  - La sélection de cette option remplace l'option Utiliser l'ancienne couche réseau si elle a été définie à l'aide de la commande [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md).
-  - Vous pouvez savoir si une application 4D fonctionne avec une couche réseau QUIC en utilisant la commande [Application info](../commands/application-info.md).
+  - La sélection de cette option remplace l'option Utiliser l'ancienne couche réseau si elle a été définie à l'aide de la commande [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter).
+  - Vous pouvez savoir si une application 4D fonctionne avec une couche réseau QUIC en utilisant la commande [Application info](../commands/application-info).
   - Étant donné que QUIC utilise le protocole UDP, assurez-vous que l'UDP est autorisé dans les paramètres de sécurité de votre réseau.
   - QUIC se connecte automatiquement au port 19813 à la fois pour le serveur d'application et le serveur DB4D.
   - Lorsque l'option de couche QUIC est sélectionnée :

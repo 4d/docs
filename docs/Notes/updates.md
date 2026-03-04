@@ -8,14 +8,14 @@ title: Release Notes
 
 #### Highlights
 
-- The [`JSON Validate`](../commands/json-validate.md) command now supports of JSON Schema draft 2020-12. 
+- The [`JSON Validate`](../commands/json-validate) command now supports of JSON Schema draft 2020-12. 
 - 4D Write Pro now supports [hierarchical list style sheets](../user-legacy/stylesheets.md#hierarchical-list-style-sheets), enabling the creation and management of structured [multi-level lists](../WritePro/user-legacy/using-a-4d-write-pro-area.md#multi-level-lists) with automatic numbering.
 - Ability to use a custom certificate from the macOS keychain instead of a local certificates folder in [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) and [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) classes. 
 - New [`4D.Method` class](../API/MethodClass.md) to create and execute a 4D method code from text source. [`METHOD Get path`](../commands/method-get-path) and [`METHOD RESOLVE PATH`](../commands/method-resolve-path) commands support a new `path volatile method` constant (128).
 
 #### Behavior changes
 
-- The [`JSON Validate`](../commands/json-validate.md) command now takes the *$schema* key into account and generates an error if a non-supported version is declared in the schema. 
+- The [`JSON Validate`](../commands/json-validate) command now takes the *$schema* key into account and generates an error if a non-supported version is declared in the schema. 
 - For clarity, formula objects are now instances of a new [`4D.Formula`](../API/FormulaClass.md) class that inherits from the generic [`4D.Function`](../API/FunctionClass.md) class.
 
 
@@ -37,13 +37,13 @@ Read [**What’s new in 4D 21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/),
 #### Developer Preview
 
 - Support of [**fluent UI** rendering](../FormEditor/forms.md#fluent-ui-rendering) on Windows: 
-    - new [`FORM theme`](../commands/form-theme.md) command, 
+    - new [`FORM theme`](../commands/form-theme) command, 
     - new [`form-theme` css media query](../FormEditor/createStylesheet.md#media-queries), 
     - new [**Use Fluent UI on Windows**](../settings/interface.md#use-fluent-ui-on-windows) option in the Settings dialog box.
 
 #### Behavior changes
 
-- On Windows, if [**fluent UI** rendering](../FormEditor/forms.md#fluent-ui-rendering) is enabled, [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) command can return different information whether it is called from a form or not. 
+- On Windows, if [**fluent UI** rendering](../FormEditor/forms.md#fluent-ui-rendering) is enabled, [`GET STYLE SHEET INFO`](../commands/get-style-sheet-info) command can return different information whether it is called from a form or not. 
 
 
 
@@ -70,3 +70,4 @@ Read [**What’s new in 4D 21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/),
 |webKit|WKWebView|19||
 |Xerces|3.3.0|21|Used for XML commands|
 |Zlib|1.3.1|21||
+

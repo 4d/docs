@@ -46,7 +46,7 @@ Puede controlar los saltos automáticos en los párrafos mediante las siguientes
 * **Evitar el salto de página en el interior**: cuando se define esta opción para un párrafo, 4D Write Pro impide que este párrafo se divida en partes en dos o más páginas.
 * **Mantener con el siguiente**: cuando se establece esta opción para un párrafo, ese párrafo no puede separarse del que le sigue por un salto automático. Ver wk keep with next y la [acción estándar](./defining-a-4d-write-pro-area.md#standard-actions) correspondiente.
 
-Estas opciones pueden definirse mediante el menú contextual, o los [atributos](../commands-legacy/4d-write-pro-attributes.md) (`wk avoid widows and orphans`, `wk page break inside paragraph`, o las [acciones estándar](./defining-a-4d-write-pro-area.md#standard-actions) *widowAndOrphanControlEnabled*, *avoidPageBreakInside*).
+Estas opciones pueden definirse mediante el menú contextual, o los [atributos](../commands-legacy/4d-write-pro-attributes) (`wk avoid widows and orphans`, `wk page break inside paragraph`, o las [acciones estándar](./defining-a-4d-write-pro-area.md#standard-actions) *widowAndOrphanControlEnabled*, *avoidPageBreakInside*).
 
 <!-- INCLUDE lists-WP.Desc -->
 
@@ -61,7 +61,7 @@ El fondo de los documentos 4D Write Pro y los elementos del documento (tablas, p
 * área de dibujo
 * repetir
 
-Estos [atributos](../commands-legacy/4d-write-pro-attributes.md) se pueden definir por programación para elementos individuales en una página y/ o fondos de documento completos con el comando [WP SET ATTRIBUTES](../commands/wp-set-attributes) o por las [acciones estándar](./defining-a-4d-write-pro-area.md#standard-actions). 
+Estos [atributos](../commands-legacy/4d-write-pro-attributes) se pueden definir por programación para elementos individuales en una página y/ o fondos de documento completos con el comando [WP SET ATTRIBUTES](../commands/wp-set-attributes) o por las [acciones estándar](./defining-a-4d-write-pro-area.md#standard-actions). 
 
 Los usuarios pueden modificar atributos de fondo a través del menú contextual como se muestra a continuación:
 
@@ -278,7 +278,7 @@ Las columnas se pueden definir a nivel de documento (se muestran en el documento
 Las columnas se pueden configurar utilizando:
 
 * el submenú **Columnas** del menú contextual del área 4D Write Pro,
-* [Atributos](../commands-legacy/4d-write-pro-attributes.md) 4D Write Pro,
+* [Atributos](../commands-legacy/4d-write-pro-attributes) 4D Write Pro,
 * [Acciones estándar](./defining-a-4d-write-pro-area.md#standard-actions) 4D Write Pro.
 
 Puede definir u obtener las siguientes propiedades y acciones para las columnas:
@@ -320,10 +320,10 @@ Una vez creado, un marcador se almacena dentro del documento. Se guarda con el d
 
 Varios comandos permiten crear, eliminar y utilizar marcadores:
 
-- [WP NEW BOOKMARK](../commands-legacy/wp-new-bookmark.md) para crear un nuevo marcador en un rango,
-- [WP GET BOOKMARKS](../commands-legacy/wp-get-bookmarks.md) para obtener todos los marcadores definidos en un documento,
-- [WP Bookmark range](../commands-legacy/wp-bookmark-range.md) para recuperar un rango de un marcador existente,
-- [WP DELETE BOOKMARK](../commands-legacy/wp-delete-bookmark.md) para eliminar un marcador.
+- [WP NEW BOOKMARK](../commands-legacy/wp-new-bookmark) para crear un nuevo marcador en un rango,
+- [WP GET BOOKMARKS](../commands-legacy/wp-get-bookmarks) para obtener todos los marcadores definidos en un documento,
+- [WP Bookmark range](../commands-legacy/wp-bookmark-range) para recuperar un rango de un marcador existente,
+- [WP DELETE BOOKMARK](../commands-legacy/wp-delete-bookmark) para eliminar un marcador.
 
 ## Enlaces
 
@@ -335,18 +335,18 @@ Los hipervínculos se pueden activar desde documentos 4D Write Pro utilizando el
 
 | Tipo de enlace | Descripción |
 |----------------|-------------|
-| `url` | Enlaces a páginas web o a cualquier documento, abre la aplicación asociada cuando se activa (\*). La activación de un enlace URL al documento 4D Write Pro (`.4wp`, `.4w7`) reemplaza al documento actual en el área de 4D Write Pro. <br>(\*) Igual que el comando [OPEN URL](../../commands-legacy/open-url.md). |
+| `url` | Enlaces a páginas web o a cualquier documento, abre la aplicación asociada cuando se activa (\*). La activación de un enlace URL al documento 4D Write Pro (`.4wp`, `.4w7`) reemplaza al documento actual en el área de 4D Write Pro. <br>(\*) Igual que el comando [OPEN URL](../../commands/open-url). |
 | `bookmark` | Enlaces a marcadores en el documento |
-| `method` | Activando un enlace a un método 4D ejecuta el método (siempre que esté registrado por el método [SET ALLOWED METHODS](../../commands/set-allowed-methods.md)). |
+| `method` | Activando un enlace a un método 4D ejecuta el método (siempre que esté registrado por el método [SET ALLOWED METHODS](../../commands/set-allowed-methods)). |
 
 Los hipervínculos se manejan por medio de los siguientes comandos:
 
-- [WP SET LINK](../commands-legacy/wp-set-link.md) para insertar un enlace utilizando un objeto de destino.
-- [WP Get links](../commands-legacy/wp-get-links.md) para obtener la colección de todos los enlaces en un objeto de destino.
+- [WP SET LINK](../commands-legacy/wp-set-link) para insertar un enlace utilizando un objeto de destino.
+- [WP Get links](../commands-legacy/wp-get-links) para obtener la colección de todos los enlaces en un objeto de destino.
 
 :::note
 
-Nota: los enlaces se manejan como atributos, por lo tanto se pueden definir u obtener utilizando los comandos [WP SET ATTRIBUTES](../commands/wp-set-attributes) y [WP GET ATTRIBUTES](../commands/wp-get-attributes) junto con la constante `wk link url`. Sin embargo, recomendamos utilizar [WP SET LINK](../commands-legacy/wp-set-link.md) y [WP Get links](../commands-legacy/wp-get-links.md) porque automáticamente codifican/decodifican enlaces como URLs. Cuando se leen enlaces utilizando el comando [WP GET ATTRIBUTES](../commands/wp-get-attributes), si el rango contiene varios hipervínculos, el comando devuelve la primera cadena de url.
+Nota: los enlaces se manejan como atributos, por lo tanto se pueden definir u obtener utilizando los comandos [WP SET ATTRIBUTES](../commands/wp-set-attributes) y [WP GET ATTRIBUTES](../commands/wp-get-attributes) junto con la constante `wk link url`. Sin embargo, recomendamos utilizar [WP SET LINK](../commands-legacy/wp-set-link) y [WP Get links](../commands-legacy/wp-get-links) porque automáticamente codifican/decodifican enlaces como URLs. Cuando se leen enlaces utilizando el comando [WP GET ATTRIBUTES](../commands/wp-get-attributes), si el rango contiene varios hipervínculos, el comando devuelve la primera cadena de url.
 
 :::
 
@@ -379,7 +379,7 @@ WP SET ATTRIBUTES($range;wk link url;"")
 
 ## Utilizar los comandos del tema Objeto (Formularios) 
 
-Los siguientes comandos 4D del tema [Objetos (Formularios)](../../commands/theme/Objects_Forms.md) son compatibles con los objetos de formulario de 4D Write Pro:
+Los siguientes comandos 4D del tema [Objetos (Formularios)](../../commands/theme/Objects_Forms) son compatibles con los objetos de formulario de 4D Write Pro:
 
 | Comando | Comentarios |
 |--------|-------------|

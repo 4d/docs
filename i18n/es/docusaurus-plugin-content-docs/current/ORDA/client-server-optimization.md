@@ -12,15 +12,15 @@ title: Optimización cliente/servidor
 
 Las arquitecturas de cliente/servidor ORDA que soportan la optimización son:
 
-- Les datastores servidor a los que acceden las aplicaciones 4D de escritorio remoto a través de [**`ds`**](../commands/ds.md),
-- Los [datastores remotos](remoteDatastores.md), abiertos por el comando [**`Open datastore`**](../commands/open-datastore.md) (peticiones clientes REST).
+- Les datastores servidor a los que acceden las aplicaciones 4D de escritorio remoto a través de [**`ds`**](../commands/ds),
+- Los [datastores remotos](remoteDatastores.md), abiertos por el comando [**`Open datastore`**](../commands/open-datastore) (peticiones clientes REST).
 
 ## Contexto de optimización
 
 El contexto de optimización se basa en las siguientes implementaciones:
 
 - Cuando un cliente solicita una selección de entidades al servidor, 4D "aprende" automáticamente qué atributos de la selección de entidades se utilizan realmente del lado del cliente durante la ejecución del código, y genera un "contexto de optimización" correspondiente. Este contexto se adjunta a la selección de la entidad y almacena los atributos utilizados. Se actualizará dinámicamente si se utilizan posteriormente otros atributos. Los siguientes métodos y funciones activan la fase de aprendizaje:
-  - [`Create entity selection`](../commands/create-entity-selection.md)
+  - [`Create entity selection`](../commands/create-entity-selection)
   - [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
   - [`dataClass.all()`](../API/DataClassClass.md#all)
   - [`dataClass.get()`](../API/DataClassClass.md#get)
@@ -43,7 +43,7 @@ El contexto de optimización se basa en las siguientes implementaciones:
 
 :::note Nota de compatibilidad
 
-Los contextos manejados en conexiones establecidas a través de [`Open datastore`](../commands/open-datastore.md) sólo pueden ser utilizados entre las versiones principales similares de 4D. Por ejemplo, una aplicación remota 4D 20.x sólo puede utilizar contextos de un almacen de datos 4D Server 20.x.
+Los contextos manejados en conexiones establecidas a través de [`Open datastore`](../commands/open-datastore) sólo pueden ser utilizados entre las versiones principales similares de 4D. Por ejemplo, una aplicación remota 4D 20.x sólo puede utilizar contextos de un almacen de datos 4D Server 20.x.
 
 :::
 

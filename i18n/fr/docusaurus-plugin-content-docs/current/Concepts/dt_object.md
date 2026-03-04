@@ -42,18 +42,18 @@ Les objets doivent avoir été instanciés, sinon toute tentative de lecture ou 
 
 L'instanciation d'un objet peut se faire de l'une des manières suivantes :
 
-- en utilisant la commande [`New object`](../commands-legacy/new-object.md),
+- en utilisant la commande [`New object`](../commands-legacy/new-object),
 - en utilisant l'opérateur `{}`.
 
 :::info
 
-Plusieurs commandes et fonctions 4D renvoient des objets, par exemple [`Database measures`](../commands-legacy/database-measures.md) ou [`File`](../commands/file.md). Dans ce cas, il n'est pas nécessaire d'instancier explicitement l'objet, le langage 4D le fait pour vous.
+Plusieurs commandes et fonctions 4D renvoient des objets, par exemple [`Database measures`](../commands-legacy/database-measures) ou [`File`](../commands/file). Dans ce cas, il n'est pas nécessaire d'instancier explicitement l'objet, le langage 4D le fait pour vous.
 
 :::
 
 ### Commande `New object`
 
-La commande [`New object`](../commands-legacy/new-object.md) crée un nouvel objet vide ou pré-rempli et renvoie sa référence.
+La commande [`New object`](../commands-legacy/new-object) crée un nouvel objet vide ou pré-rempli et renvoie sa référence.
 
 Exemples :
 
@@ -110,8 +110,8 @@ $col:=$o.col[5] //6
 
 Vous pouvez créer deux types d'objets :
 
-- des objets ordinaires (non partagés), en utilisant la commande [`New object`](../commands-legacy/new-object.md) ou la syntaxe littérale des objets (`{}`). Ces objets peuvent être modifiés sans contrôle d'accès spécifique mais ne peuvent pas être partagés entre les process.
-- des objets partagés, en utilisant la commande [`New shared object`](../commands-legacy/new-shared-object.md). Le contenu de ces objets peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces objets doit être contrôlé via des structures `Use...End use`.
+- des objets ordinaires (non partagés), en utilisant la commande [`New object`](../commands-legacy/new-object) ou la syntaxe littérale des objets (`{}`). Ces objets peuvent être modifiés sans contrôle d'accès spécifique mais ne peuvent pas être partagés entre les process.
+- des objets partagés, en utilisant la commande [`New shared object`](../commands-legacy/new-shared-object). Le contenu de ces objets peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces objets doit être contrôlé via des structures `Use...End use`.
   Pour plus d'informations, consultez la section [Objets et collections partagés](shared.md).
 
 ## Propriétés {#properties}

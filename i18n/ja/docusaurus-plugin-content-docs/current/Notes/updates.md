@@ -7,12 +7,12 @@ title: リリースノート
 
 #### ハイライト
 
-- [`JSON Validate`](../commands/json-validate.md) コマンドは、JSON スキーマドラフト 2020-12 をサポートするようになりました。
+- [`JSON Validate`](../commands/json-validate) コマンドは、JSON スキーマドラフト 2020-12 をサポートするようになりました。
 - [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) および [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) クラスにおいて、ローカル証明書フォルダの代わりにmacOS キーチェーンからのカスタムの証明書を使用できるようになりました。
 
 #### 動作の変更
 
-- [`JSON Validate`](../commands/json-validate.md) コマンドは *$schema* キーを考慮するようになり、スキーマ内でサポートされていないバージョンが宣言されたときにはエラーを生成するようになりました。
+- [`JSON Validate`](../commands/json-validate) コマンドは *$schema* キーを考慮するようになり、スキーマ内でサポートされていないバージョンが宣言されたときにはエラーを生成するようになりました。
 
 ## 4D 21 R2
 
@@ -32,13 +32,13 @@ title: リリースノート
 #### デベロッパー・プレビュー
 
 - Windows 上での [**fluent UI** レンダリング](../FormEditor/forms.md#fluent-ui-レンダリング) のサポート:
-  - 新しい [`FORM theme`](../commands/form-theme.md) コマンド
+  - 新しい [`FORM theme`](../commands/form-theme) コマンド
   - 新しい [`form-theme` CSS メディアクエリ](../FormEditor/createStylesheet.md#メディアクエリ)
   - 設定ダイアログボック内での新しい [**Windows 上でFluent UI を使用**](../settings/interface.md#windows-上でfluent-ui-を使用) オプション。
 
 #### 動作の変更
 
-- Windows 上で、[**fluent UI** レンダリング](../FormEditor/forms.md#fluent-ui-レンダリング) が有効化されている場合、 [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) コマンドは、フォームから呼ばれているかどうかに関わらず、異なる情報を返すことがあります。
+- Windows 上で、[**fluent UI** レンダリング](../FormEditor/forms.md#fluent-ui-レンダリング) が有効化されている場合、 [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info) コマンドは、フォームから呼ばれているかどうかに関わらず、異なる情報を返すことがあります。
 
 ## ライブラリの一覧
 

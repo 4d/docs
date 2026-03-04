@@ -29,7 +29,7 @@ title: オブジェクト
 
 > オブジェクト名のサイズ上限は 255バイトです。
 
-4D ランゲージを使用する場合、オブジェクト名を使用してアクティブなフォームオブジェクトを参照することができます([オブジェクト(フォーム)コマンド](../commands/theme/Objects_Forms.md) を参照して下さい)。
+4D ランゲージを使用する場合、オブジェクト名を使用してアクティブなフォームオブジェクトを参照することができます([オブジェクト(フォーム)コマンド](../commands/theme/Objects_Forms) を参照して下さい)。
 
 フォームオブジェクトの命名規則については [識別子](Concepts/identifiers.md) の章を参照してください。
 
@@ -45,7 +45,7 @@ title: オブジェクト
 
 #### コマンド
 
-[FORM GET OBJECTS](../commands-legacy/form-get-objects.md) - [OBJECT Get name](../commands-legacy/object-get-name.md)
+[FORM GET OBJECTS](../commands-legacy/form-get-objects) - [OBJECT Get name](../commands-legacy/object-get-name)
 
 ---
 
@@ -106,7 +106,7 @@ title: オブジェクト
 
 変数名が与えられていない場合、4D はフォームがロードされたときにインタープリターのプロセス変数の空間内でユニークな名前を計算し、その名前でオブジェクト用の変数を新規作成します (このメカニズムはコンパイルモードでも使用することができます)。 この一時的な変数はフォームが閉じられるときに破棄されます。
 
-ダイナミック変数を使用するフォームオブジェクトの値を取得あるいは設定するためには、[`OBJECT Get value`](../commands-legacy/object-get-value.md) および [`OBJECT SET VALUE`](../commands-legacy/object-set-value.md) コマンドを使用するだけです。 例:
+ダイナミック変数を使用するフォームオブジェクトの値を取得あるいは設定するためには、[`OBJECT Get value`](../commands-legacy/object-get-value) および [`OBJECT SET VALUE`](../commands-legacy/object-set-value) コマンドを使用するだけです。 例:
 
 ```4d
  var $value : Variant
@@ -124,7 +124,7 @@ title: オブジェクト
 
 #### コマンド
 
-[`LISTBOX Get column formula`](../commands-legacy/listbox-get-column-formula.md) - [`LISTBOX SET COLUMN FORMULA`](../commands-legacy/listbox-set-column-formula.md) - [`OBJECT Get data source`](../commands-legacy/object-get-data-source.md) - [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) - [`OBJECT Get value`](../commands-legacy/object-get-value.md) - [`OBJECT Get pointer`](../commands-legacy/object-get-pointer.md) - [`OBJECT SET VALUE`](../commands-legacy/object-set-value.md) - [`OBJECT SET DATA SOURCE`](../commands-legacy/object-set-data-source.md) - [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md)
+[`LISTBOX Get column formula`](../commands-legacy/listbox-get-column-formula) - [`LISTBOX SET COLUMN FORMULA`](../commands-legacy/listbox-set-column-formula) - [`OBJECT Get data source`](../commands-legacy/object-get-data-source) - [`OBJECT Get data source formula`](../commands/object-get-data-source-formula) - [`OBJECT Get value`](../commands-legacy/object-get-value) - [`OBJECT Get pointer`](../commands-legacy/object-get-pointer) - [`OBJECT SET VALUE`](../commands-legacy/object-set-value) - [`OBJECT SET DATA SOURCE`](../commands-legacy/object-set-data-source) - [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula)
 
 ---
 
@@ -211,7 +211,7 @@ title: オブジェクト
 
 #### コマンド
 
-[`OBJECT Get data source`](../commands-legacy/object-get-data-source.md) - [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) - [`OBJECT Get value`](../commands-legacy/object-get-value.md) - [`OBJECT Get pointer`](../commands-legacy/object-get-pointer.md) - [`OBJECT SET VALUE`](../commands-legacy/object-set-value.md) - [`OBJECT SET DATA SOURCE`](../commands-legacy/object-set-data-source.md) - [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md)
+[`OBJECT Get data source`](../commands-legacy/object-get-data-source) - [`OBJECT Get data source formula`](../commands/object-get-data-source-formula) - [`OBJECT Get value`](../commands-legacy/object-get-value) - [`OBJECT Get pointer`](../commands-legacy/object-get-pointer) - [`OBJECT SET VALUE`](../commands-legacy/object-set-value) - [`OBJECT SET DATA SOURCE`](../commands-legacy/object-set-data-source) - [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula)
 
 ---
 
@@ -296,7 +296,7 @@ title: オブジェクト
 
 #### コマンド
 
-[`OBJECT Get title`](../commands-legacy/object-get-title.md) - [`OBJECT SET TITLE`](../commands-legacy/object-set-title.md)
+[`OBJECT Get title`](../commands-legacy/object-get-title) - [`OBJECT SET TITLE`](../commands-legacy/object-set-title)
 
 ---
 
@@ -304,7 +304,7 @@ title: オブジェクト
 
 This property sets the type of calculation to be done in a [column footer](listbox-header-footer.md#footers) area.
 
-> フッターでの計算は、[`LISTBOX SET FOOTER CALCULATION`](../commands-legacy/listbox-set-footer-calculation.md) 4D コマンドを使用することでも設定することができます。
+> フッターでの計算は、[`LISTBOX SET FOOTER CALCULATION`](../commands-legacy/listbox-set-footer-calculation) 4D コマンドを使用することでも設定することができます。
 
 様々な自動計算が利用可能です。 以下の表は、列のデータ型に応じて使用することのできる計算と、(コードで明示的に宣言されていないとき) 4D によってフッター変数に自動で割り当てられる型を示しています:
 
@@ -353,4 +353,4 @@ This property sets the type of calculation to be done in a [column footer](listb
 
 #### コマンド
 
-[`LISTBOX Get footer calculation`](../commands-legacy/listbox-get-footer-calculation.md) - [`LISTBOX SET FOOTER CALCULATION`](../commands-legacy/listbox-set-footer-calculation.md)
+[`LISTBOX Get footer calculation`](../commands-legacy/listbox-get-footer-calculation) - [`LISTBOX SET FOOTER CALCULATION`](../commands-legacy/listbox-set-footer-calculation)

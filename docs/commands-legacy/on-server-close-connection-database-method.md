@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Server Close Connection database method.Summary-->The **On Server Close Connection database method** is called once on the Server machine each time a 4D Client process ends.<!-- END REF-->
 
-As for the [On Server Open Connection database method](on-server-open-connection-database-method.md), 4D Server passes three Long Integer parameters to the **On Server Close Connection database method**. On the other hand, no result is expected by 4D Server.
+As for the [On Server Open Connection database method](../commands/on-server-open-connection-database-method), 4D Server passes three Long Integer parameters to the **On Server Close Connection database method**. On the other hand, no result is expected by 4D Server.
 
 The method must therefore be explicitly declared with three Long Integer parameters:
 
@@ -37,8 +37,9 @@ This table details the information provided by the three parameters passed to th
 | $id            | Connection ID number used internally by 4D Server to identify a connection |
 | $toIgnore            | Obsolete: Always returns 0 but must be declared                            |
 
-The **On Server Close Connection database method** is the exact counterpoint to the [On Server Open Connection database method](on-server-open-connection-database-method.md). For more information and a description of the **4D Client processes**, see the description of this database method.
+The **On Server Close Connection database method** is the exact counterpoint to the [On Server Open Connection database method](../commands/on-server-open-connection-database-method). For more information and a description of the **4D Client processes**, see the description of this database method.
 
 ## Example 
 
-See the first example for [On Server Open Connection database method](on-server-open-connection-database-method.md).
+See the first example for [On Server Open Connection database method](../commands/on-server-open-connection-database-method).
+

@@ -41,7 +41,7 @@ Le code 4D ne peut être exécuté dans un process préemptif que lorsque certai
 
 La propriété "thread safety" de chaque élément dépend de l'élément lui-même :
 
-- Commandes 4D : la propriété thread-safe est une propriété interne. Dans la documentation 4D, les commandes thread-safe sont identifiées par l'icône ![](../assets/en/Develop/thread-safe.png). Vous pouvez également utiliser la commande [`Command name`](../commands/command-name.md) pour savoir si une commande est thread-safe. Une grande partie des commandes 4D peut s'exécuter en mode préemptif.
+- Commandes 4D : la propriété thread-safe est une propriété interne. Dans la documentation 4D, les commandes thread-safe sont identifiées par l'icône ![](../assets/en/Develop/thread-safe.png). Vous pouvez également utiliser la commande [`Command name`](../commands/command-name) pour savoir si une commande est thread-safe. Une grande partie des commandes 4D peut s'exécuter en mode préemptif.
 - Méthodes projet : les conditions pour être thread-safe sont répertoriées dans [ce paragraphe](#writing-a-thread-safe-method).
 
 Fondamentalement, le code à exécuter dans des threads préemptifs ne peut pas appeler des parties avec des interactions externes, telles que du code de plug-in ou des variables interprocess. Cependant, l'accès aux données est autorisé car le serveur de données 4D et ORDA prennent en charge l'exécution préemptive.
@@ -141,7 +141,7 @@ Exécuter une méthode en mode préemptif dépendra de sa propriété "execution
 
 4D vous permet d'identifier le mode d'exécution des process en mode compilé :
 
-- La commande [`Process info`](../commands/process-info.md) vous permet de savoir si un process est exécuté en mode préemptif ou coopératif.
+- La commande [`Process info`](../commands/process-info) vous permet de savoir si un process est exécuté en mode préemptif ou coopératif.
 - L'Explorateur d'exécution et la [fenêtre d'administration de 4D Server](../ServerWindow/processes.md#process-type) affichent des icônes spécifiques pour les process préemptifs.
 
 ## Ecrire une méthode thread-safe
@@ -156,9 +156,9 @@ Pour être thread-safe, une méthode doit respecter les règles suivantes :
 - Elle ne doit pas appeler d'objets d'interface (2) (il y a cependant des exceptions, voir ci-dessous).
 
 Les [process Worker](processes.md#worker-processes) vous permettent également d'échanger des messages entre tous les process, y compris les process préemptifs.
-(1) Pour échanger des données entre process préemptifs (et entre tous les process), vous pouvez passer des [collections partagées ou objets partagés](../Concepts/shared.md) comme paramètres aux process, et/ou utiliser le catalogue [`Storage`](../commands-legacy/storage.md).
+(1) Pour échanger des données entre process préemptifs (et entre tous les process), vous pouvez passer des [collections partagées ou objets partagés](../Concepts/shared.md) comme paramètres aux process, et/ou utiliser le catalogue [`Storage`](../commands-legacy/storage).
 
-(2) La commande [`CALL FORM`](../commands-legacy/call-form.md) fournit une solution élégante pour appeler des objets d'interface à partir d'un process préemptif.
+(2) La commande [`CALL FORM`](../commands-legacy/call-form) fournit une solution élégante pour appeler des objets d'interface à partir d'un process préemptif.
 
 :::note Notes
 

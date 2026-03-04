@@ -98,8 +98,8 @@ Nas várias janelas 4D (editor de código, compilador, depurador, explorador de 
 
 As classes disponíveis são acessíveis a partir das suas class stores. Estão disponíveis duas class stores:
 
-- [`cs`](../commands/cs.md) para o class store de usuário
-- [`4D`](../commands/4d.md) para o class store integrado
+- [`cs`](../commands/cs) para o class store de usuário
+- [`4D`](../commands/4d) para o class store integrado
 
 ### `cs`
 
@@ -349,7 +349,7 @@ Uma função construtora de classe aceita [parâmetros](#parameters) opcionais e
 
 Quando você chama a função [`new()`](API/ClassClass.md#new), o construtor da classe é chamado com os parâmetros opcionalmente passados para a função `new()`.
 
-Só pode haver uma função de construtor em uma classe (caso contrário um erro é retornado). The [`Super`](../commands/super.md) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function.
+Só pode haver uma função de construtor em uma classe (caso contrário um erro é retornado). The [`Super`](../commands/super) command allows calls to the [`superclass`](../API/ClassClass#superclass), i.e. the parent class of the function.
 
 É possível criar e digitar propriedades de instância dentro do construtor (ver exemplo). Em alternativa, se os valores das propriedades de instância não dependem dos parâmetros passados ao construtor, você pode defini-los usando a palavra-chave [`property`](#property).
 
@@ -638,13 +638,13 @@ Os comandos a seguir têm recursos específicos quando são usados em funções 
 
 ### `Super`
 
-O comando [`Super`](../commands/super.md) permite chamadas para a [`superclass`](../API/ClassClass#superclass), ou seja, a classe principal da função. Só pode haver uma função de construtor em uma classe (caso contrário um erro é retornado).
+O comando [`Super`](../commands/super) permite chamadas para a [`superclass`](../API/ClassClass#superclass), ou seja, a classe principal da função. Só pode haver uma função de construtor em uma classe (caso contrário um erro é retornado).
 
-Para obter mais detalhes, consulte a descrição do comando [`Super`](../commands/super.md).
+Para obter mais detalhes, consulte a descrição do comando [`Super`](../commands/super).
 
 ### `This`
 
-O comando [`This`](../commands/this.md) retorna uma referência ao objeto processado no momento. Geralmente, o valor de `Isso` é determinado pela forma como uma função de classe é chamada. Normalmente, `This` refere-se ao objeto em que a função foi chamada, como se a função estivesse no objeto.
+O comando [`This`](../commands/this) retorna uma referência ao objeto processado no momento. Geralmente, o valor de `Isso` é determinado pela forma como uma função de classe é chamada. Normalmente, `This` refere-se ao objeto em que a função foi chamada, como se a função estivesse no objeto.
 
 Exemplo:
 
@@ -664,7 +664,7 @@ $o.b:=3
 $val:=$o.f() //8
 ```
 
-Para obter mais detalhes, consulte a descrição do comando [`This`](../commands/this.md).
+Para obter mais detalhes, consulte a descrição do comando [`This`](../commands/this).
 
 ## Comandos de classe
 

@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-**WP Table range** コマンドは、*targetObj* 引数内のオブジェクトと交差する表のみを指定するレンジオブジェクトを返します。渡した*targetObj* 引数に表が含まれていなかったとしても、wk type tableのレンジが返されます。返されたレンジオブジェクトは[WP GET ATTRIBUTES](../commands/wp-get-attributes.md) および [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) で使用することで、表及び表の中身に適用される属性を管理することができます。
+**WP Table range** コマンドは、*targetObj* 引数内のオブジェクトと交差する表のみを指定するレンジオブジェクトを返します。渡した*targetObj* 引数に表が含まれていなかったとしても、wk type tableのレンジが返されます。返されたレンジオブジェクトは[WP GET ATTRIBUTES](../commands/wp-get-attributes) および [WP SET ATTRIBUTES](../commands/wp-set-attributes) で使用することで、表及び表の中身に適用される属性を管理することができます。
 
 *targetObj* 引数には、以下のものを渡すことができます:
 
@@ -47,5 +47,6 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP Get elements](wp-get-elements.md)  
-[WP Text range](wp-text-range.md)  
+[WP Get elements](../commands/wp-get-elements)  
+[WP Text range](../commands/wp-text-range)  
+

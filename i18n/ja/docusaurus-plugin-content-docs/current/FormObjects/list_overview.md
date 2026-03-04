@@ -16,7 +16,7 @@ title: 階層リスト
 - 既存の [選択リスト](properties_DataSource.md#選択リスト) を関連づけます。 選択リストはあらかじめデザインモードにてリストエディターを使って定義します。
 - 階層リスト参照を直接 [変数あるいは式](properties_Object.md#変数あるいは式) に設定します。
 
-どちらの場合においても、階層リストはランタイムでは *ListRef* の参照を通して、4D ランゲージの[階層リスト](../commands/theme/Hierarchical_Lists.md) のコマンドを使用して管理します。
+どちらの場合においても、階層リストはランタイムでは *ListRef* の参照を通して、4D ランゲージの[階層リスト](../commands/theme/Hierarchical_Lists) のコマンドを使用して管理します。
 
 ## ListRef とオブジェクト名
 

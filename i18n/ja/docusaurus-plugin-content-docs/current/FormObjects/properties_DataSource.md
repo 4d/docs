@@ -50,7 +50,7 @@ title: データソース
 
 #### コマンド
 
-[OBJECT Get list name](../commands-legacy/object-get-list-name.md) - [OBJECT Get list reference](../commands-legacy/object-get-list-reference.md) - [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name.md) - [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference.md)
+[OBJECT Get list name](../commands-legacy/object-get-list-name) - [OBJECT Get list reference](../commands-legacy/object-get-list-reference) - [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name) - [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference)
 
 ---
 
@@ -90,7 +90,7 @@ title: データソース
 
 #### コマンド
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
 
 ---
 
@@ -118,7 +118,7 @@ title: データソース
 
 #### コマンド
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
 
 ---
 
@@ -154,7 +154,7 @@ title: データソース
 
 - **リスト参照**: ドロップダウンリストが階層型であることを宣言します。 このドロップダウンリストは最大で 2つの階層レベルを表示することができ、その内容は **Hierarchical Lists** テーマの4Dランゲージコマンドで管理することができます。
 - **選択された項目値** (デフォルト): ドロップダウンリストは階層型でなく、ユーザーによって選択された項目の値が直接保存されます。 たとえば、ユーザーが "Blue" という値を選択した場合、この値がフィールドに保存されます。
-- **選択された項目参照**: ドロップダウンリストは階層型でなく、選択リスト項目の参照がオブジェクトに保存されます。 この参照番号とは [`APPEND TO LIST`](../commands-legacy/append-to-list.md) または [`SET LIST ITEM`](../commands-legacy/set-list-item.md) コマンドの *itemRef* パラメーター、またはリストエディターを通してそれぞれの項目と関連付けされた数値です。 このオプションにより、メモリーを節約することができます。 フィールドに数値を保存するのは文字列を保存するより容量が軽いからです。 また、これによりアプリケーションの翻訳が簡単になります。 同じ項目の参照値を持つ、異なる言語で書かれた複数のリストを用意しておいて、アプリケーションの言語に応じたリストをロードするだけで多言語に対応できるからです。
+- **選択された項目参照**: ドロップダウンリストは階層型でなく、選択リスト項目の参照がオブジェクトに保存されます。 この参照番号とは [`APPEND TO LIST`](../commands-legacy/append-to-list) または [`SET LIST ITEM`](../commands-legacy/set-list-item) コマンドの *itemRef* パラメーター、またはリストエディターを通してそれぞれの項目と関連付けされた数値です。 このオプションにより、メモリーを節約することができます。 フィールドに数値を保存するのは文字列を保存するより容量が軽いからです。 また、これによりアプリケーションの翻訳が簡単になります。 同じ項目の参照値を持つ、異なる言語で書かれた複数のリストを用意しておいて、アプリケーションの言語に応じたリストをロードするだけで多言語に対応できるからです。
 
 **選択された項目参照** オプションの使用の際には、以下の点に注意する必要があります:
 
@@ -227,7 +227,7 @@ and [collection](../FormObjects/listbox-object.md#collection-or-entity-selection
   - Boolean
 
 コレクション/エンティティセレクション型リストボックスにおいては、Null あるいはサポートされない型は空の文字列として表示されます。  
-コレクションあるいはエンティティセレクションを使用する場合、カラムに割り当てられた要素プロパティ/エンティティ属性は、通常 [This](../commands/this.md) を含む式を用いて宣言します。 この `This` は現在処理中の要素への参照を返す、専用の 4Dコマンドです。 たとえば、`This.\<propertyPath>` (ここでの `\<propertyPath>` はコレクションのプロパティパス、あるいはエンティティ属性パス) を使用することで、各要素/エンティティのカレントの値にアクセスすることができます。
+コレクションあるいはエンティティセレクションを使用する場合、カラムに割り当てられた要素プロパティ/エンティティ属性は、通常 [This](../commands/this) を含む式を用いて宣言します。 この `This` は現在処理中の要素への参照を返す、専用の 4Dコマンドです。 たとえば、`This.\<propertyPath>` (ここでの `\<propertyPath>` はコレクションのプロパティパス、あるいはエンティティ属性パス) を使用することで、各要素/エンティティのカレントの値にアクセスすることができます。
 スカラー値のコレクションを使用した場合、4D は各コレクション要素に対して、単一のプロパティ (名前は "value") を持つオブジェクトを作成し、それに要素の値を格納します。 この場合、`This.value` を式として使用します。
 
 [代入不可な式](Concepts/quick-tour.md#式) (例: `[Person]FirstName+" "+[Person]LastName` など) を使用した場合、[入力可](properties_Entry.md#入力か) オプションが選択されていても、その列に値を入力することはできません。
@@ -266,7 +266,7 @@ and [collection](../FormObjects/listbox-object.md#collection-or-entity-selection
 
 #### コマンド
 
-[LISTBOX GET TABLE SOURCE](../commands-legacy/listbox-get-table-source.md) - [LISTBOX SET TABLE SOURCE](../commands-legacy/listbox-set-table-source.md)
+[LISTBOX GET TABLE SOURCE](../commands-legacy/listbox-get-table-source) - [LISTBOX SET TABLE SOURCE](../commands-legacy/listbox-set-table-source)
 
 ---
 
@@ -280,7 +280,7 @@ and [collection](../FormObjects/listbox-object.md#collection-or-entity-selection
 このプロパティは、選択リストに関連付けされたフィールドまたは変数において、フィールドに保存する内容の型を指定します:
 
 - **リスト項目の値** (デフォルトのオプション): ユーザーによって選択された項目の値が直接保存されます。 たとえば、ユーザーが "Blue" という値を選択した場合、この値がフィールドに保存されます。
-- **リスト項目の参照番号**: 選択リスト項目の参照がオブジェクトに保存されます。 この参照番号とは [`APPEND TO LIST`](../commands-legacy/append-to-list.md) または [`SET LIST ITEM`](../commands-legacy/set-list-item.md) コマンドの *itemRef* パラメーター、またはリストエディターを通してそれぞれの項目と関連付けされた数値です。
+- **リスト項目の参照番号**: 選択リスト項目の参照がオブジェクトに保存されます。 この参照番号とは [`APPEND TO LIST`](../commands-legacy/append-to-list) または [`SET LIST ITEM`](../commands-legacy/set-list-item) コマンドの *itemRef* パラメーター、またはリストエディターを通してそれぞれの項目と関連付けされた数値です。
 
 このオプションにより、メモリーを節約することができます。 フィールドに数値を保存するのは文字列を保存するより容量が軽いからです。 また、これによりアプリケーションの翻訳が簡単になります。 同じ項目の参照値を持つ、異なる言語で書かれた複数のリストを用意しておいて、アプリケーションの言語に応じたリストをロードするだけで多言語に対応できるからです。
 
@@ -324,7 +324,7 @@ and [collection](../FormObjects/listbox-object.md#collection-or-entity-selection
 
 #### コマンド
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
 
 ---
 
@@ -348,6 +348,6 @@ and [collection](../FormObjects/listbox-object.md#collection-or-entity-selection
 
 #### コマンド
 
-[LISTBOX GET TABLE SOURCE](../commands-legacy/listbox-get-table-source.md) - [LISTBOX SET TABLE SOURCE](../commands-legacy/listbox-set-table-source.md)
+[LISTBOX GET TABLE SOURCE](../commands-legacy/listbox-get-table-source) - [LISTBOX SET TABLE SOURCE](../commands-legacy/listbox-set-table-source)
 
 
