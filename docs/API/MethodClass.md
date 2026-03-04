@@ -157,7 +157,7 @@ var $res:=$m.call(Null; "hello world")  //HELLO WORLD
 ```
 
 
-<!-- INCLUDE #FunctionClass.apply().Desc -->
+<!-- INCLUDE FunctionClass.apply().Desc -->
 
 
 #### Example
@@ -173,7 +173,7 @@ var $result:=$m.apply(Null; $coll) //20
 ```
 
 
-<!-- INCLUDE #FunctionClass.call().Desc -->
+<!-- INCLUDE FunctionClass.call().Desc -->
 
 
 #### Example
@@ -262,7 +262,9 @@ The `.name` property <!-- REF #MethodClass.name.Summary -->contains the name of 
 This property is **read-only**.
 
 
-<!-- INCLUDE #FunctionClass.source.Desc -->
+
+<!-- INCLUDE FunctionClass.source.Desc -->
+
 
 #### Example
 

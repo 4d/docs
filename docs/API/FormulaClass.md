@@ -68,7 +68,7 @@ Parameters are received within the method, in the order they are specified in th
 
 
 
-<!-- INCLUDE #FunctionClass.apply().Desc -->
+<!-- INCLUDE FunctionClass.apply().Desc -->
 
 
 #### Example 1
@@ -96,7 +96,7 @@ Parameters are received within the method, in the order they are specified in th
  $calc.apply($robot) // $robot={name:Robot,price:543,quantity:2,total:1086}
 ```
 
-<!-- INCLUDE #FunctionClass.call().Desc -->
+<!-- INCLUDE FunctionClass.call().Desc -->
 
 #### Example 1
 
@@ -115,7 +115,7 @@ Parameters are received within the method, in the order they are specified in th
 ```
 
 
-<!-- INCLUDE #FunctionClass.source.Desc -->
+<!-- INCLUDE FunctionClass.source.Desc -->
 
 #### Example
 
