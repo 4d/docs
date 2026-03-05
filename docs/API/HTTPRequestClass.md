@@ -163,6 +163,11 @@ In the *options* parameter, pass an object that can contain the following proper
 |timeout|Real|Timeout in seconds. undefined = no timeout|undefined|
 |validateTLSCertificate|Boolean|If false, 4D does not validate the TLS certificate and does not return an error if it is invalid (i.e. expired, self-signed...). Important: In the current implementation, the Certification Authority itself is not verified.|True|
 
+:::note Keychain access on macOS
+
+On macOS, depending on your local configuration, a password can be required when your 4D application accesses the certificate in the *keychain* for the first time.
+
+:::
 
 #### Callback functions
 

@@ -5,7 +5,7 @@ slug: /commands/dom-append-xml-child-node
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Append XML child node.Syntax-->**DOM Append XML child node** ( *elementRef* : Text ; *childType* : Integer ; *childValue* : Text, Blob ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Append XML child node.Syntax-->**DOM Append XML child node** ( *elementRef* : Text ; *childType* : Integer ; *childValue* : any ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Append XML child node.Params-->
 <div class="no-index">
 
@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | XML element reference |
 | childType | Integer | &#8594;  | Type of child to append |
-| childValue | Text, Blob | &#8594;  | Text or variable (Text or BLOB) whose value must be inserted as child node |
+| childValue | any | &#8594;  | Text or variable (Text or BLOB) whose value must be inserted as child node |
 | Function result | Text | &#8592; | Reference of child XML element |
 </div>
 <!-- END REF-->

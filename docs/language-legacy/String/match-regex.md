@@ -5,7 +5,7 @@ slug: /commands/match-regex
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Match regex.Syntax-->**Match regex** ( *pattern* : Text ; *aString* : Text ) : Boolean<br/>**Match regex** ( *pattern* : Text ; *aString* : Text ; *start* : Integer {; *pos_found* : Integer ; *length_found* : Integer }{; *} ) : Boolean<br/>**Match regex** ( *pattern* : Text ; *aString* : Text ; *start* : Integer {; *pos_found* : Integer array ; *length_found* : Integer array }{; *} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Match regex.Syntax-->**Match regex** ( *pattern* : Text ; *aString* : Text ) : Boolean<br/>**Match regex** ( *pattern* : Text ; *aString* : Text ; *start* : Integer {; *pos_found* : Integer } {; *length_found* : Integer }{; *} ) : Boolean<br/>**Match regex** ( *pattern* : Text ; *aString* : Text ; *start* : Integer {; *pos_found* : Integer array } {; *length_found* : Integer array }{; *} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Match regex.Params-->
 <div class="no-index">
 

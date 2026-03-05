@@ -64,7 +64,7 @@ The *options* parameter is used to set verification options. The following optio
   
 Generally, the VERIFY DATA FILE command creates a log file in XML format (please refer to the end of the description of this command). You can cancel this operation by passing this option. To create the log file, pass 0 in *options*.  
   
-The *method* parameter is used to set a callback method that will be called regularly during the verification. If you pass an empty string or an invalid method name, this parameter is ignored (no method is called). When called, the method receives up to 5 parameters depending on the objects being verified and on the event type originating the call (see calls table). It is imperative to declare these parameters in the method: 
+The *method* parameter is used to set a callback method that will be called regularly during the verification. If you pass an empty string, this parameter is ignored (no method is called). When called, the method receives up to 5 parameters depending on the objects being verified and on the event type originating the call (see calls table). It is imperative to declare these parameters in the method: 
 
 | Parameter | Type | Description |
 | ----- | ------- | ------------------------ |

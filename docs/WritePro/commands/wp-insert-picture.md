@@ -4,15 +4,15 @@ title: WP Insert picture
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Insert picture.Syntax-->**WP Insert picture** ( *targetObj* : Object ; *picture* : Picture ; *mode* : Integer {; *rangeUpdate* : Integer} ): Object<br/>**WP Insert picture** ( *targetObj* : Object ; *pictureFileObj* : 4D.File; *mode* : Integer {; *rangeUpdate* : Integer}): Object<!-- END REF-->
+<!--REF #_command_.WP Insert picture.Syntax-->**WP Insert picture** ( *targetObj* : Object ; *picture* : Picture ; *mode* : Integer {; *rangeUpdate* : Integer} ): Object<br/>**WP Insert picture** ( *targetObj* : Object ; *pictureFileObj* : 4D.File, Text ; *mode* : Integer {; *rangeUpdate* : Integer}): Object<!-- END REF-->
 <!--REF #_command_.WP Insert picture.Params-->
 <div class="no-index">
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
-| picture | Picture | &#8594;  | Picture field or variable, or path to picture file on disk |
-| pictureFileObj | [4D.File](../API/FileClass.md)  | &#8594; | A File object representing a picture file.|
+| picture | Picture | &#8594;  | Picture field or variable |
+| pictureFileObj | [4D.File](../API/FileClass.md), Text  | &#8594; | A File object representing a picture file or path to picture file on disk|
 | mode | Integer | &#8594;  | Insertion mode |
 | rangeUpdate | Integer | &#8594;  | Range update mode |
 | Function result | Object | &#8592; | Object referencing the picture |

@@ -5,7 +5,7 @@ slug: /commands/sax-set-xml-declaration
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX SET XML DECLARATION.Syntax-->**SAX SET XML DECLARATION** ( *document* : Time ; *encoding* : Text {; *standalone* : Boolean} )<!-- END REF-->
+<!--REF #_command_.SAX SET XML DECLARATION.Syntax-->**SAX SET XML DECLARATION** ( *document* : Time ; *encoding* : Text {; *standalone* : Boolean} {; *indentation* : Boolean} )<!-- END REF-->
 <!--REF #_command_.SAX SET XML DECLARATION.Params-->
 <div class="no-index">
 
@@ -14,6 +14,7 @@ displayed_sidebar: docs
 | document | Time | &#8594;  | Reference of open document |
 | encoding | Text | &#8594;  | XML document character set |
 | standalone | Boolean | &#8594;  | True = the document is standalone False (default) = document is not standalone |
+| indentation | Boolean | &#8594;  | True = the document is indented, False (default) = document is not indented |
 </div>
 <!-- END REF-->
 
