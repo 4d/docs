@@ -5,6 +5,7 @@ files:
       - /docs/commands-legacy/*.*
       - /docs/*-legacy/*.*
       - /docs/WritePro/*-legacy/*.*
+      - /docs/language-legacy/**/*.*
     translation: /i18n/%two_letters_code%/docusaurus-plugin-content-docs/current/**/%original_file_name%
   - source: /i18n/en/docusaurus-plugin-content-docs/*.json
     ignore:
