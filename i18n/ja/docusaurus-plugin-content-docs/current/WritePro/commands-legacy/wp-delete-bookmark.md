@@ -48,6 +48,6 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP Bookmark range](wp-bookmark-range.md)  
-[WP GET BOOKMARKS](wp-get-bookmarks.md)  
-[WP NEW BOOKMARK](wp-new-bookmark.md)  
+[WP Bookmark range](../commands/wp-bookmark-range)  
+[WP GET BOOKMARKS](../commands/wp-get-bookmarks)  
+[WP NEW BOOKMARK](../commands/wp-new-bookmark)  

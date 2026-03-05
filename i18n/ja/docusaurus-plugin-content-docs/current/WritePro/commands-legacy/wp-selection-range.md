@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 **注**: このコマンドを使用するには、*wpArea* がフォームに関連付けられている(つまりカレントのフォーム/ページ上に表示されている)必要があります。
 
-アンカーされた画像(位置が固定されたピクチャー)が*wpArea* 引数内で選択されている場合、**WP Selection range** コマンドはレンジオブジェクトではなく、ピクチャー参照オブエジェクトを返します(詳細な情報については、[WP Add picture](../commands/wp-add-picture.md) コマンドの詳細を参照してください)。それ以外の場合には、コマンドは新しいレンジオブジェクトを返します。レンジオブジェクトの詳細については、*セレクションレンジコマンド* を参照してください。
+アンカーされた画像(位置が固定されたピクチャー)が*wpArea* 引数内で選択されている場合、**WP Selection range** コマンドはレンジオブジェクトではなく、ピクチャー参照オブエジェクトを返します(詳細な情報については、[WP Add picture](../commands/wp-add-picture) コマンドの詳細を参照してください)。それ以外の場合には、コマンドは新しいレンジオブジェクトを返します。レンジオブジェクトの詳細については、*セレクションレンジコマンド* を参照してください。
 
 ## 例題 
 
@@ -39,6 +39,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP Paragraph range](wp-paragraph-range.md)  
-[WP Picture range](wp-picture-range.md)  
-[WP Text range](wp-text-range.md)  
+[WP Paragraph range](../commands/wp-paragraph-range)  
+[WP Picture range](../commands/wp-picture-range)  
+[WP Text range](../commands/wp-text-range)  
+

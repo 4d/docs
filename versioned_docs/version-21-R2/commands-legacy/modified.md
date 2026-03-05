@@ -29,15 +29,15 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Modified.Summary-->**Modified** returns [True](true.md "True") if *field* has been programmatically assigned a value or has been edited during data entry.<!-- END REF--> The **Modified** command must only be used in a form method (or a subroutine called by a form method).
+<!--REF #_command_.Modified.Summary-->**Modified** returns [True](../commands/true) if *field* has been programmatically assigned a value or has been edited during data entry.<!-- END REF--> The **Modified** command must only be used in a form method (or a subroutine called by a form method).
 
-Be careful, this command only returns a significant value within the same execution cycle. It is more particularly set to [False](false.md "False") for all the form events that correspond to the former *\_o\_During* execution cycle (On Clicked, On After Keystroke, etc.).
+Be careful, this command only returns a significant value within the same execution cycle. It is more particularly set to [False](../commands/false) for all the form events that correspond to the former *\_o\_During* execution cycle (On Clicked, On After Keystroke, etc.).
 
 During data entry, a field is considered modified if the user has edited the field (whether or not the original value is changed) and then left it by going to another field or by clicking on a control. Note that just tabbing out of a field does not set **Modified** to True. The field must have been edited in order for **Modified** to be True.
 
 When executing a method, a field is considered to be modified if it has been assigned a value (different or not). 
 
-**Note:** **Modified** always returns [True](true.md "True") after the execution of the [PUSH RECORD](push-record.md) and [POP RECORD](pop-record.md) commands.
+**Note:** **Modified** always returns [True](../commands/true) after the execution of the [PUSH RECORD](push-record.md) and [POP RECORD](pop-record.md) commands.
 
 In all cases, use the [Old](old.md) command to detect whether the field value has actually been changed.
 

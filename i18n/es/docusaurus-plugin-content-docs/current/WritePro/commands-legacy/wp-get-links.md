@@ -58,5 +58,5 @@ Usted desea cambiar el color de todas las etiquetas de enlace url en un document
 ## Ver también 
 
   
-[WP Get formulas](wp-get-formulas.md)  
-[WP SET LINK](wp-set-link.md)  
+[WP Get formulas](../commands/wp-get-formulas)  
+[WP SET LINK](../commands/wp-set-link)  

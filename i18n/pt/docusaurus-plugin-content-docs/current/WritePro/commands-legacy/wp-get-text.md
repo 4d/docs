@@ -67,4 +67,4 @@ pode escrever:
 ## Ver também 
 
 *Gestão de fórmulas*  
-[WP SET TEXT](wp-set-text.md)  
+[WP SET TEXT](../commands/wp-set-text)  

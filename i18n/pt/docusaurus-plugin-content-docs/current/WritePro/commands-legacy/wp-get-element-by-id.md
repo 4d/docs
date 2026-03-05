@@ -63,4 +63,4 @@ Se quiser recuperar um elemento e modificar seu ID:
 
 ## Ver também 
 
-[WP Get elements](wp-get-elements.md)  
+[WP Get elements](../commands/wp-get-elements)  

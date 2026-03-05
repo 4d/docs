@@ -45,7 +45,7 @@ displayed_sidebar: docs
 
 *newItemText*に項目の新しいテキストを渡します。項目参照番号を変更する場合、*newItemRef*に新しい値を渡します。変更しない場合は同じ値を渡します。
 
-項目にサブリストを添付する場合、サブリストの参照番号を*subList*に渡します。この時、新たなサブリスを展開するには*expanded*に[True](true.md "True")を、そうでない場合は[False](false.md "False")を渡します。
+項目にサブリストを添付する場合、サブリストの参照番号を*subList*に渡します。この時、新たなサブリスを展開するには*expanded*に[True](../commands/true)を、そうでない場合は[False](../commands/false)を渡します。
 
 項目にすでに添付されているサブリストを切り離す場合は、*sublist*に0を渡します。この場合、[GET LIST ITEM](get-list-item.md "GET LIST ITEM")コマンドを使用して、そのリストの参照番号をあらかじめ取得しておくとよいでしょう。そうすれば、リストが必要なくなったときに[CLEAR LIST](clear-list.md "CLEAR LIST")コマンドを使用して削除することができます。
 

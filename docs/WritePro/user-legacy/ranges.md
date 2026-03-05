@@ -14,7 +14,7 @@ A range is an object that represents a portion of a 4D Write Pro document:
 - a range of characters, paragraphs, pictures, or tables is defined through character positions within the parent document,
 - a range of cells, columns and rows is defined through cell positions and are anchored to the parent table.
 
-A range is used to designate elements to be selected or manipulate attributes on a part of the document (using [`WP GET ATTRIBUTES`](./commands/wp-get-attributes) and [`WP SET ATTRIBUTES`](./commands/wp-set-attributes)).
+A range is used to designate elements to be selected or manipulate attributes on a part of the document (using [`WP GET ATTRIBUTES`](../commands/wp-get-attributes) and [`WP SET ATTRIBUTES`](../commands/wp-set-attributes)).
 
 There are different types of ranges. You can determine the type of a range using the `wk type` attribute (read-only). Each range contains several private attributes that define it:
 
@@ -42,12 +42,13 @@ The ranges of rows, columns and cells of [tables](./handling-tables.md) have spe
 
 
 Several commands allow you to define document ranges:
-- [WP Text range](../commands-legacy/wp-text-range.md) returns a new range corresponding to boundaries you passed as parameters.
-- [WP Selection range](../commands-legacy/wp-selection-range) returns a new range corresponding to the current user selection.
-- [WP Picture range](../commands-legacy/wp-picture-range) returns a new range containing only the pictures.
-- [WP Paragraph range](../commands-legacy/wp-paragraph-range) returns a new range containing only the paragraphs.
-- [WP Table range](../commands-legacy/wp-table-range) returns a new range containing only the tables.
+- [WP Text range](../commands/wp-text-range) returns a new range corresponding to boundaries you passed as parameters.
+- [WP Selection range](../commands/wp-selection-range) returns a new range corresponding to the current user selection.
+- [WP Picture range](../commands/wp-picture-range) returns a new range containing only the pictures.
+- [WP Paragraph range](../commands/wp-paragraph-range) returns a new range containing only the paragraphs.
+- [WP Table range](../commands/wp-table-range) returns a new range containing only the tables.
 
-You can get information about the position of a range in a document (page number, column number...) using the [`WP Get position`](../commands-legacy/wp-get-position) command.
+You can get information about the position of a range in a document (page number, column number...) using the [`WP Get position`](../commands/wp-get-position) command.
+
 
 

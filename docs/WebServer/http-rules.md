@@ -27,7 +27,7 @@ You can declare HTTP response rules:
 WEB Server.start($settings.rules) //set rules at web server startup
 ```
 
-If both a **HTTPRules.json** file and a call to the [`WEB Server`](../commands/web-server.md) command with a valid `$settings.rules` are used, the `WEB Server` command has priority. 
+If both a **HTTPRules.json** file and a call to the [`WEB Server`](../commands/web-server) command with a valid `$settings.rules` are used, the `WEB Server` command has priority. 
 
 If the URI of the request does not match any of the RegEx patterns, the web server returns a default response.
 
@@ -236,3 +236,4 @@ $return:=WEB Server.start($settings)
 [New Way to Control Your HTTP Responses](https://blog.4d.com/new-way-to-control-your-http-responses/)
 
 :::
+

@@ -73,4 +73,4 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP Get view properties](wp-get-view-properties.md)  
+[WP Get view properties](../commands/wp-get-view-properties)  

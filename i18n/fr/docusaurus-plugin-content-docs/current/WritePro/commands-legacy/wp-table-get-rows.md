@@ -114,7 +114,8 @@ L'exemple suivant permet :
 
 ## Voir aussi 
 
-[WP Insert table](wp-insert-table.md)  
-[WP Table append row](../commands/wp-table-append-row.md)  
-[WP Table get cells](wp-table-get-cells.md)  
-[WP Table get columns](wp-table-get-columns.md)  
+[WP Insert table](../commands/wp-insert-table)  
+[WP Table append row](../commands/wp-table-append-row)  
+[WP Table get cells](../commands/wp-table-get-cells)  
+[WP Table get columns](../commands/wp-table-get-columns)  
+

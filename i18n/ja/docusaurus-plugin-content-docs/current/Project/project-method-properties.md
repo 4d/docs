@@ -90,7 +90,7 @@ title: プロジェクトメソッドプロパティ
 
 この属性が選択されていると、当該プロジェクトメソッドは 4D の SQLエンジンから実行可能となります。 デフォルトでは選択されておらず、明示的に許可されない限り 4Dメソッドは保護されており、4D SQLエンジンから呼び出すことはできません。
 
-このプロパティは、全ての内部あるいは外部SQL クエリに対して適用されます。この外部SQL クエリにはODBC ドライバ、 [Begin SQL](../commands-legacy/begin-sql.md)/[End SQL](../commands-legacy/end-sql.md)  タグ内に挿入されたSQL コード、あるいは [QUERY BY SQL](../commands-legacy/query-by-sql.md) コマンドから実行されたものを含みます。
+このプロパティは、全ての内部あるいは外部SQL クエリに対して適用されます。この外部SQL クエリにはODBC ドライバ、 [Begin SQL](../commands-legacy/begin-sql)/[End SQL](../commands-legacy/end-sql)  タグ内に挿入されたSQL コード、あるいは [QUERY BY SQL](../commands-legacy/query-by-sql) コマンドから実行されたものを含みます。
 
 **注:**
 

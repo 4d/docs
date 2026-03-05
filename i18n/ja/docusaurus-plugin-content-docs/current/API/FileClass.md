@@ -3,7 +3,7 @@ id: FileClass
 title: File
 ---
 
-`File` オブジェクトは [`File`](../commands/file.md) コマンドによって作成されます。 これらのオブジェクトには、(実在しているか否かに関わらず) ディスクファイルへの参照が格納されます。 たとえば、新規ファイルを作成するために `File` コマンドを実行した場合、有効な `File` オブジェクトが作成されますが、[`file.create()`](#create) 関数を呼び出すまで、ディスク上にはなにも保存されていません。
+`File` オブジェクトは [`File`](../commands/file) コマンドによって作成されます。 これらのオブジェクトには、(実在しているか否かに関わらず) ディスクファイルへの参照が格納されます。 たとえば、新規ファイルを作成するために `File` コマンドを実行した場合、有効な `File` オブジェクトが作成されますが、[`file.create()`](#create) 関数を呼び出すまで、ディスク上にはなにも保存されていません。
 
 ### 例題
 
@@ -71,9 +71,9 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 #### 説明
 
-`4D.File.new()` 関数は、<!-- REF #4D.File.new().Summary -->`4D.File` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`File`](../commands/file.md) コマンドと同一です。
+`4D.File.new()` 関数は、<!-- REF #4D.File.new().Summary -->`4D.File` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`File`](../commands/file) コマンドと同一です。
 
-> `4D.File.new()` よりも、短い [`File`](../commands/file.md) コマンドの使用が推奨されます。
+> `4D.File.new()` よりも、短い [`File`](../commands/file) コマンドの使用が推奨されます。
 
 <!-- INCLUDE document.copyTo().Desc -->
 

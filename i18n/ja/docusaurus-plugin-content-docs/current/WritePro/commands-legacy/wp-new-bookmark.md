@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 :::警告
 
-ブックマークは、ドキュメントの**本文**に属するレンジからのみ作成することができます。つまり、ドキュメントのヘッダー、フッター、あるいはテキストボックスのレンジから作成することはできないということです。あるレンジが本文に属していることを確認するためには、[`wk container` 属性](../commands-legacy/4d-write-pro-attributes.md#ranges)を確認してください: 本文のレンジに対しては`null` または `undefined` になっています。
+ブックマークは、ドキュメントの**本文**に属するレンジからのみ作成することができます。つまり、ドキュメントのヘッダー、フッター、あるいはテキストボックスのレンジから作成することはできないということです。あるレンジが本文に属していることを確認するためには、[`wk container` 属性](./4d-write-pro-attributes.md#ranges)を確認してください: 本文のレンジに対しては`null` または `undefined` になっています。
 
 :::
 
@@ -76,6 +76,8 @@ displayed_sidebar: docs
 ## 参照 
 
   
-[WP Bookmark range](wp-bookmark-range.md)  
-[WP DELETE BOOKMARK](wp-delete-bookmark.md)  
-[WP GET BOOKMARKS](wp-get-bookmarks.md)  
+[WP Bookmark range](../commands/wp-bookmark-range)  
+[WP DELETE BOOKMARK](../commands/wp-delete-bookmark)  
+[WP GET BOOKMARKS](../commands/wp-get-bookmarks)  
+
+

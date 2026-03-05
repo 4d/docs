@@ -43,7 +43,7 @@ slug: /WritePro/stylesheets
 スタイルシートはオブジェクトとして保存されるので、他の 4D Write Pro ドキュメントへ簡単に読み込んだり、書き出しても容易に維持できます。
 
 - 書き込み – [WP IMPORT STYLE SHEETS](../commands-legacy/wp-import-style-sheets) コマンドを使用すれば、指定4Dドキュメントのスタイルシートオブジェクトを取得し、新規ドキュメントで使用することが可能です。
-- 書き出し – [WP EXPORT DOCUMENT](../commands/wp-export-document) または [WP EXPORT VARIABLE](../commands/wp-export-variable.md) コマンドでスタイル付きの文書をエクスポートすることができます。
+- 書き出し – [WP EXPORT DOCUMENT](../commands/wp-export-document) または [WP EXPORT VARIABLE](../commands/wp-export-variable) コマンドでスタイル付きの文書をエクスポートすることができます。
 
 ## スタイルシート属性
 

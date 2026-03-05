@@ -55,7 +55,7 @@ displayed_sidebar: docs
 ## 参照 
 
 *4D Write Pro エリアを使用する*  
-[WP DELETE FOOTER](wp-delete-footer.md)  
-[WP Get frame](wp-get-frame.md)  
-[WP Get header](wp-get-header.md)  
-[WP New footer](wp-new-footer.md)  
+[WP DELETE FOOTER](../commands/wp-delete-footer)  
+[WP Get frame](../commands/wp-get-frame)  
+[WP Get header](../commands/wp-get-header)  
+[WP New footer](../commands/wp-new-footer)  

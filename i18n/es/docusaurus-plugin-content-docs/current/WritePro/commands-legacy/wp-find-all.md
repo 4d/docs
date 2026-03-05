@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Find all.Summary-->El comando **WP Find all** busca en *objTarget* después del rango *buscarValor* basado en la *condicionBusq*.<!-- END REF--> Se puede utilizar un parámetro opcional para reemplazar los resultados encontrados.
 
-**Nota**: **WP Find all** no busca ni reemplaza texto en fórmulas. Utilice el comando [WP Get formulas](wp-get-formulas.md) en este caso.
+**Nota**: **WP Find all** no busca ni reemplaza texto en fórmulas. Utilice el comando [WP Get formulas](../commands/wp-get-formulas) en este caso.
 
 En el parámetro *objTarget*, pase un objeto que contenga:
 
@@ -98,5 +98,5 @@ Se devuelve una colección vacía si no se encuentran resultados.
 
 ## Ver también 
 
-[WP Find next](wp-find-next.md)  
-[WP Find previous ](wp-find-previous.md)  
+[WP Find next](../commands/wp-find-next)  
+[WP Find previous ](../commands/wp-find-previous)  

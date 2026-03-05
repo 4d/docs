@@ -33,7 +33,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE SELECTION FROM ARRAY.Summary-->**CREATE SELECTION FROM ARRAY** コマンドは、以下の方法で*selectionName*<!-- END REF--> 命名セレクションを作成します:
 
 * *aTable*のレコード番号値を納めた配列、または
-* *aTable*のレコードごとに、レコードを含める ([True](true.md "True"))/含めない ([False](false.md "False"))の値を納めたブール配列。
+* *aTable*のレコードごとに、レコードを含める ([True](../commands/true))/含めない ([False](../commands/false))の値を納めたブール配列。
 
 **警告:** 命名セレクションはメモリ内に作成、ロードされます。したがって、このコマンドを実行する前に十分なメモリがあることを確認してください。
 
@@ -43,7 +43,7 @@ displayed_sidebar: docs
 
 **注意:** 配列の中には、同じレコード番号が含まれないよう注意してください。そうでなければ、結果としてセレクションは不正確なものになります。
 
-このコマンドでブール配列を使用する場合、配列のN番目の要素はレコード番号Nが*selectionName*に含まれる ([True](true.md "True")) か含まれないか ([False](false.md "False")) を示します。*recordArray*の要素数は*aTable*のレコード数と等しくなければなりません。配列要素数がレコード数よりも少ない場合、配列によって定義されたレコードのみがセレクションとなります。
+このコマンドでブール配列を使用する場合、配列のN番目の要素はレコード番号Nが*selectionName*に含まれる ([True](../commands/true)) か含まれないか ([False](../commands/false)) を示します。*recordArray*の要素数は*aTable*のレコード数と等しくなければなりません。配列要素数がレコード数よりも少ない場合、配列によって定義されたレコードのみがセレクションとなります。
 
 **注意:** ブール配列では、コマンドは配列要素0から (テーブルのレコード数) -1を使用します。
 

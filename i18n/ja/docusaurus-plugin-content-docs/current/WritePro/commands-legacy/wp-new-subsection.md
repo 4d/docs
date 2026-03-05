@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP New subsection.Summary-->**WP New subsection** コマンドは、*wpSection* 引数で指定した4D Write Pro セクション内に*subSectionType* 引数で指定した型の新しいサブセクションを作成し、それを返します。<!-- END REF-->
 
-*wpSection* 引数には、新しいサブセクションを作成したいセクションを渡します。このセクションは[WP Get sections](wp-get-sections.md) あるいは [WP Get section](wp-get-section.md) コマンドを使用することで取得できます。
+*wpSection* 引数には、新しいサブセクションを作成したいセクションを渡します。このセクションは[WP Get sections](../commands/wp-get-sections) あるいは [WP Get section](../commands/wp-get-section) コマンドを使用することで取得できます。
 
 *subSectionType* 引数は作成するサブセクションを指定します。以下の定数のいずれかを渡すことができます:
 
@@ -49,5 +49,6 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP DELETE SUBSECTION](../commands/wp-delete-subsection.md)  
-[WP Get subsection](wp-get-subsection.md)  
+[WP DELETE SUBSECTION](../commands/wp-delete-subsection)  
+[WP Get subsection](../commands/wp-get-subsection)  
+

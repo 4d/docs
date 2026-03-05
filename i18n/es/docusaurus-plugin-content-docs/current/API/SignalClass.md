@@ -22,11 +22,11 @@ Lanzamiento Mientras espera una señal, el proceso que llama no utiliza ninguna 
 
 Tenga en cuenta que para evitar situaciones de bloqueo, el método `.wait()` también puede regresar después de que se haya alcanzado un tiempo de espera definido.
 
-Los objetos Signal se crean con el comando [`New signal`](../commands/new-signal.md).
+Los objetos Signal se crean con el comando [`New signal`](../commands/new-signal).
 
 ### Trabajar con señales
 
-En 4D, se crea un nuevo objeto señal llamando al comando [`New signal`](../commands/new-signal.md). Una vez creada, esta señal debe pasarse como parámetro a los comandos `New process` o `CALL WORKER` para que puedan modificarla cuando hayan terminado la tarea que se quiere esperar.
+En 4D, se crea un nuevo objeto señal llamando al comando [`New signal`](../commands/new-signal). Una vez creada, esta señal debe pasarse como parámetro a los comandos `New process` o `CALL WORKER` para que puedan modificarla cuando hayan terminado la tarea que se quiere esperar.
 
 - `signal.wait()` debe ser llamado desde el worker/proceso que necesita que otro worker/proceso termine una tarea para poder continuar.
 - `signal.trigger()` debe llamarse desde el worker/proceso que terminó su ejecución para liberar a todos los demás.

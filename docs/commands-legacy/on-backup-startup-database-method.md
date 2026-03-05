@@ -17,13 +17,13 @@ displayed_sidebar: docs
 
 ## 
 
-<!--REF #_command_.On Backup Startup database method.Summary-->The **On Backup Startup database method** is called every time a database backup is about to start (manual backup, scheduled automatic backup, or using the [BACKUP](backup.md) command).<!-- END REF-->   
+<!--REF #_command_.On Backup Startup database method.Summary-->The **On Backup Startup database method** is called every time a database backup is about to start (manual backup, scheduled automatic backup, or using the [BACKUP](../commands/backup) command).<!-- END REF-->   
 This concerns all 4D environments: 4D (all modes), 4D Server and databases merged with 4D Volume Desktop.
 
 The **On Backup Startup database method**  allows verifying that the backup started. In this method, you should return a value that authorizes or refuses the backup in the $0 parameter:
 
 * If $0 = 0, the backup can be launched.
-* If $0 # 0, the backup is not authorized. The operation is cancelled and an error is returned. You can get the error using the [BACKUP INFO](backup-info.md) command.
+* If $0 # 0, the backup is not authorized. The operation is cancelled and an error is returned. You can get the error using the [BACKUP INFO](../commands/backup-info) command.
 
 You can use this database method to verify backup execution conditions (user, date of the last backup, etc.).
 
@@ -32,3 +32,4 @@ You can use this database method to verify backup execution conditions (user, da
 ```4d
  var $0 : Integer.
 ```
+

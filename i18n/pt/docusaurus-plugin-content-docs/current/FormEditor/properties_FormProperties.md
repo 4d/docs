@@ -10,7 +10,7 @@ title: Propriedades do formulário
 > Color scheme property is only applied on macOS and [Windows with Fluent UI theme](../settings/interface.md#use-fluent-ui-on-windows).
 > ).
 
-Esta propriedade define o esquema de cores para o formulário. Por padrão, quando a propriedade não está definida, o valor de um esquema de cores é **herdado** (o formulário usa o esquema definido no [nível do aplicativo] (../commands-legacy/get-application-color-scheme.md)). Isto pode ser alterado para o formulário para uma das duas opções seguintes:
+Esta propriedade define o esquema de cores para o formulário. Por padrão, quando a propriedade não está definida, o valor de um esquema de cores é **herdado** (o formulário usa o esquema definido no [nível do aplicativo] (../commands-legacy/get-application-color-scheme)). Isto pode ser alterado para o formulário para uma das duas opções seguintes:
 
 - dark - texto claro sobre um fundo escuro
 - light - texto escuro sobre um fundo claro
@@ -53,7 +53,7 @@ A associação de uma classe ao formulário oferece os seguintes benefícios:
 
 - Você também pode se beneficiar de [recursos de preenchimento automático](../code-editor/write-class-method.md#autocomplete-functions) no editor de código.
 
-- Quando o formulário for executado, 4D instancia automaticamente um objeto de classe de usuário para o formulário, que é retornado pelo objeto [`Form`](../commands/form.md). Seu código pode acessar diretamente as funções de classe definidas na classe do usuário por meio do comando `Form` (por exemplo, `Form.message()`) sem precisar passar um objeto *formData* como parâmetro para os comandos [`DIALOG`](../commands/dialog.md), [`Print form`](../commands/print-form.md), [`FORM LOAD`](../commands/form-load.md) e [`PRINT SELECTION`](../commands-legacy/print-selection.md).
+- Quando o formulário for executado, 4D instancia automaticamente um objeto de classe de usuário para o formulário, que é retornado pelo objeto [`Form`](../commands/form). Seu código pode acessar diretamente as funções de classe definidas na classe do usuário por meio do comando `Form` (por exemplo, `Form.message()`) sem precisar passar um objeto *formData* como parâmetro para os comandos [`DIALOG`](../commands/dialog), [`Print form`](../commands/print-form), [`FORM LOAD`](../commands/form-load) e [`PRINT SELECTION`](../commands-legacy/print-selection).
 
 :::note
 

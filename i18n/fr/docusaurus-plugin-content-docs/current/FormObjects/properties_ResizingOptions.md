@@ -27,7 +27,7 @@ L'apparence de la fausse colonne correspond à celle des colonnes existantes ; e
 
 Il est possible de cliquer sur le faux en-tête et/ou le faux pied de page, mais cela n'a aucun effet sur les autres colonnes (par exemple : aucun tri n'est effectué) ; néanmoins, les événements `On Clicked`, `On Header Click` et `On Footer Click` sont générés en conséquence.
 
-Si un clic se produit dans une cellule de la fausse colonne, la commande [LISTBOX GET CELL POSITION](../commands-legacy/listbox-get-cell-position.md) renvoie "X+1" pour son numéro de colonne (où X est le nombre de colonnes existantes).
+Si un clic se produit dans une cellule de la fausse colonne, la commande [LISTBOX GET CELL POSITION](../commands-legacy/listbox-get-cell-position) renvoie "X+1" pour son numéro de colonne (où X est le nombre de colonnes existantes).
 
 #### Grammaire JSON
 
@@ -41,13 +41,13 @@ Si un clic se produit dans une cellule de la fausse colonne, la commande [LISTBO
 
 #### Commandes
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
 
 ---
 
 ## Dimensionnement horizontal
 
-Cette propriété indique si un objet doit être déplacé ou redimensionné horizontalement lorsque l'utilisateur redimensionne le formulaire. Elle peut également être définie dynamiquement par la commande [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options.md).
+Cette propriété indique si un objet doit être déplacé ou redimensionné horizontalement lorsque l'utilisateur redimensionne le formulaire. Elle peut également être définie dynamiquement par la commande [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options).
 
 Trois options sont disponibles :
 
@@ -71,13 +71,13 @@ Trois options sont disponibles :
 
 #### Commandes
 
-[`OBJECT GET RESIZING OPTIONS`](../commands-legacy/object-get-resizing-options.md) - [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options.md)
+[`OBJECT GET RESIZING OPTIONS`](../commands-legacy/object-get-resizing-options) - [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options)
 
 ---
 
 ## Dimensionnement vertical
 
-Cette propriété indique si un objet doit être déplacé ou redimensionné verticalement lorsque l'utilisateur redimensionne le formulaire. Elle peut également être définie dynamiquement par la commande [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options.md).
+Cette propriété indique si un objet doit être déplacé ou redimensionné verticalement lorsque l'utilisateur redimensionne le formulaire. Elle peut également être définie dynamiquement par la commande [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options).
 
 Trois options sont disponibles :
 
@@ -101,7 +101,7 @@ Trois options sont disponibles :
 
 #### Commandes
 
-[`OBJECT GET RESIZING OPTIONS`](../commands-legacy/object-get-resizing-options.md) - [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options.md)
+[`OBJECT GET RESIZING OPTIONS`](../commands-legacy/object-get-resizing-options) - [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options)
 
 ---
 
@@ -146,5 +146,5 @@ Indique si la taille de la colonne peut être modifiée par l'utilisateur.
 
 #### Commandes
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
 

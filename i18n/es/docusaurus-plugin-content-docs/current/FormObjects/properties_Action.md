@@ -32,7 +32,7 @@ Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv20/4
 
 #### Comandos
 
-[OBJECT GET DRAG AND DROP OPTIONS](../commands-legacy/object-get-drag-and-drop-options.md) - [OBJECT SET DRAG AND DROP OPTIONS](../commands-legacy/object-set-drag-and-drop-options.md)
+[OBJECT GET DRAG AND DROP OPTIONS](../commands-legacy/object-get-drag-and-drop-options) - [OBJECT SET DRAG AND DROP OPTIONS](../commands-legacy/object-set-drag-and-drop-options)
 
 #### Ver también
 
@@ -64,7 +64,7 @@ Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv20/4
 
 #### Comandos
 
-[OBJECT GET DRAG AND DROP OPTIONS](../commands-legacy/object-get-drag-and-drop-options.md) - [OBJECT SET DRAG AND DROP OPTIONS](../commands-legacy/object-set-drag-and-drop-options.md)
+[OBJECT GET DRAG AND DROP OPTIONS](../commands-legacy/object-get-drag-and-drop-options) - [OBJECT SET DRAG AND DROP OPTIONS](../commands-legacy/object-set-drag-and-drop-options)
 
 #### Ver también
 
@@ -136,7 +136,7 @@ Autoriza el desplazamiento de líneas durante la ejecución. Esta opción está 
 
 #### Comandos
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
 
 ---
 
@@ -156,7 +156,7 @@ Permite la selección de múltiples registros/opciones en una [lista jerárquica
 
 #### Comandos
 
-[GET LIST PROPERTIES](../commands-legacy/get-list-properties.md) - [SET LIST PROPERTIES](../commands-legacy/set-list-properties.md)
+[GET LIST PROPERTIES](../commands-legacy/get-list-properties) - [SET LIST PROPERTIES](../commands-legacy/set-list-properties)
 
 ---
 
@@ -183,7 +183,7 @@ En otros casos (list box basados en selecciones temporales, columnas asociadas a
 
 #### Comandos
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
 
 ---
 
@@ -205,5 +205,5 @@ Puede asignar al mismo tiempo una acción estándar y un método proyecto de un 
 
 #### Comandos
 
-[`OBJECT Get action`](../commands-legacy/object-get-action.md) - [`OBJECT SET ACTION`](../commands-legacy/object-set-action.md)
+[`OBJECT Get action`](../commands-legacy/object-get-action) - [`OBJECT SET ACTION`](../commands-legacy/object-set-action)
 

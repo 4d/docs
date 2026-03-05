@@ -25,7 +25,7 @@ Um campo não pode ser indefinido (o comando `Undefined` sempre retorna False pa
 
 Normalmente, ao tentar ler ou atribuir expressões indefinidas, 4D gerará erros, exceto nos seguintes casos:
 
-- Atribuindo um valor indefinido para variáveis (exceto arrays) tem o mesmo efeito que chamar [`CLEAR VARIABLE`](../commands-legacy/clear-variable.md) com eles:
+- Atribuindo um valor indefinido para variáveis (exceto arrays) tem o mesmo efeito que chamar [`CLEAR VARIABLE`](../commands-legacy/clear-variable) com eles:
 
 ```4d
      C_OBJECT($o)

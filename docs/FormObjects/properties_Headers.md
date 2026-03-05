@@ -19,7 +19,7 @@ This property is used to display or hide [list box column headers](listbox-heade
 
 #### Commands
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
 
 
 ---
@@ -35,7 +35,7 @@ This property is used to set the row height for a list box header in **pixels** 
   * This calculation does not take into account the size of pictures nor any styles applied to the fonts.
   * In macOS, the row height may be incorrect if the user enters characters that are not available in the selected font. When this occurs, a substitute font is used, which may cause variations in size.
  
->This property can also be set dynamically using the [LISTBOX SET HEADERS HEIGHT](../commands-legacy/listbox-set-headers-height.md) command.
+>This property can also be set dynamically using the [LISTBOX SET HEADERS HEIGHT](../commands/listbox-set-headers-height) command.
 
 Conversion of units: When you switch from one unit to the other, 4D converts them automatically and displays the result in the Property List. For example, if the font used is "Lucida grande 24", a height of "1 line" is converted to "30 pixels" and a height of "60 pixels" is converted to "2 lines".
 
@@ -67,7 +67,7 @@ Note that converting back and forth may lead to an end result that is different 
 
 #### Commands
 
-[`LISTBOX Get headers height`](../commands-legacy/listbox-get-headers-height.md) - [`LISTBOX SET HEADERS HEIGHT`](../commands-legacy/listbox-set-headers-height.md)
+[`LISTBOX Get headers height`](../commands/listbox-get-headers-height) - [`LISTBOX SET HEADERS HEIGHT`](../commands/listbox-set-headers-height)
 
 
 
@@ -75,3 +75,4 @@ Note that converting back and forth may lead to an end result that is different 
 #### See also
 
 [Footers](properties_Footers.md) - [List box headers](listbox-header-footer.md#headers)
+

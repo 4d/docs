@@ -37,11 +37,11 @@ When the user clicks on a link in the current page, 4D consults the list of exte
 The *filtersArr* and *allowDenyArr* arrays must be synchronized. 
 
 * Each element of the *filtersArr* array must contain a URL to be filtered. You can use the *\** as a wildcard to replace one or more characters.
-* Each corresponding element in the *allowDenyArr* array must contain a Boolean indicating whether the URL must be opened in the Web area ([True](true.md "True")) or in the Web browser ([False](false.md "False")).
+* Each corresponding element in the *allowDenyArr* array must contain a Boolean indicating whether the URL must be opened in the Web area ([True](../commands/true)) or in the Web browser ([False](../commands/false)).
 
 If there is a contradiction at the configuration level (the same URL is both allowed and denied), the last setting is the one taken into account. 
 
-To disable URL filtering, call the command and pass empty arrays or pass, respectively, the values "*\**" and [True](true.md "True") in the last elements of the *filtersArr* and *allowDenyArr* arrays.
+To disable URL filtering, call the command and pass empty arrays or pass, respectively, the values "*\**" and [True](../commands/true) in the last elements of the *filtersArr* and *allowDenyArr* arrays.
 
 **Important:** The filtering established by the [WA SET URL FILTERS](wa-set-url-filters.md) command is taken into account before that of the **WA SET EXTERNAL LINKS FILTERS** command. This means that if a URL is denied because of a [WA SET URL FILTERS](wa-set-url-filters.md) command filter, it cannot be opened in the browser even if it is explicitly specified by the **WA SET EXTERNAL LINKS FILTERS** command (see example 2).
 

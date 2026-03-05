@@ -40,7 +40,7 @@ displayed_sidebar: docs
     文字列を使用する場合には、フルパス名またはデータベースのストラクチャーファイルを起点とした相対パス名を指定することができます。 またファイル名を渡すこともでき、その場合、ファイルはデータベースのストラクチャーファイル と同じ階層に置かれている必要があります。 ファイル名を渡す場合には、ファイルの拡張子も指定する必要があります。
 - *pictureFileObj* 引数の場合: ピクチャーファイルを表す`File` オブジェクト
 
-[4D でサポートされているフォーマット](../../FormEditor/pictures.md#native-formats-supported) であれば、どんなピクチャーフォーマットでも使用することができます。  [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md) コマンドを使用することで、利用可能なピクチャーフォーマットの一覧を取得することができます。 ピクチャーに複数のフォーマット(コーデック)が格納されている場合、4D Write Pro はドキュメント内に表示用に1種類、印刷用に1種類(異なる場合)のフォーマットのみを保管します。その際、「最適」なフォーマットが自動的に選択されます。
+[4D でサポートされているフォーマット](../../FormEditor/pictures.md#native-formats-supported) であれば、どんなピクチャーフォーマットでも使用することができます。  [PICTURE CODEC LIST](../../commands/picture-codec-list) コマンドを使用することで、利用可能なピクチャーフォーマットの一覧を取得することができます。 ピクチャーに複数のフォーマット(コーデック)が格納されている場合、4D Write Pro はドキュメント内に表示用に1種類、印刷用に1種類(異なる場合)のフォーマットのみを保管します。その際、「最適」なフォーマットが自動的に選択されます。
 
 *mode* 引数には、ドキュメント内のピクチャーに対して使用する挿入モードを指定する、以下の定数のいずれか一つを渡します:
 
@@ -110,4 +110,4 @@ $pictRef:=WP Insert picture(WParea; $file; wk replace)
 ## 参照
 
 [WP Insert document body](wp-insert-document-body.md)</br>
-[WP Picture range](../commands-legacy/wp-picture-range.md)
+[WP Picture range](../commands-legacy/wp-picture-range)

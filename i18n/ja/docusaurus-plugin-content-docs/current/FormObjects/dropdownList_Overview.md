@@ -89,7 +89,7 @@ Form.myDrop.index //3
 
 この場合にも 、フォームのオブジェクトに紐付けた [変数](properties_Object.md#変数あるいは式) は `aCities` でなければなりません。 このコードは、前述した代入命令文の代わりに実行できます。 このコードをフォームメソッド内に置き、`On Load` フォームイベント発生時に実行されるようにします。
 
-- オブジェクトが表示される前に、[`LIST TO ARRAY`](../commands-legacy/list-to-array.md) コマンドを使ってリストの値を配列にロードします。 例:
+- オブジェクトが表示される前に、[`LIST TO ARRAY`](../commands-legacy/list-to-array) コマンドを使ってリストの値を配列にロードします。 例:
 
 ```4d
    LIST TO ARRAY("Cities";aCities)
@@ -149,7 +149,7 @@ Form.myDrop.index //3
 
 階層型選択リストをドロップダウンリストオブジェクトに割り当てるには、プロパティリストの [選択リスト](properties_DataSource.md#choice-list) 欄を使います。
 
-階層型ドロップダウンリストの管理には、4Dランゲージの **階層リスト** コマンドを使用します。 `(*; "name")` シンタックスをサポートするコマンドであれば全て、階層型ドロップダウンリストに使用できます (例: [`List item parent`](../commands-legacy/list-item-parent.md))。
+階層型ドロップダウンリストの管理には、4Dランゲージの **階層リスト** コマンドを使用します。 `(*; "name")` シンタックスをサポートするコマンドであれば全て、階層型ドロップダウンリストに使用できます (例: [`List item parent`](../commands-legacy/list-item-parent))。
 
 ### 標準アクションの使用
 

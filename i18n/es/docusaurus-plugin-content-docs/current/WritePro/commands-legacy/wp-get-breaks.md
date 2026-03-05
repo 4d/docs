@@ -79,5 +79,6 @@ Quiere reemplazar todos los saltos de línea por saltos de párrafo en el docume
 
 ## Ver también 
 
-[WP Get elements](wp-get-elements.md)  
-[WP INSERT BREAK](../commands/wp-insert-break.md)  
+[WP Get elements](../commands/wp-get-elements)  
+[WP INSERT BREAK](../commands/wp-insert-break)  
+

@@ -40,8 +40,8 @@ displayed_sidebar: docs
 
 *horizontal* と*vertical* を使用し、カラーを適用するグリッドラインを指定することができます:
 
-* *horizontal* に[True](true.md "True") を渡した場合、水平グリッドラインにカラーが適用されます。False を渡すと、カラーは変更されません。
-* *vertical* に[True](true.md "True") を渡した場合、垂直グリッドラインにカラーが適用されます。[False](false.md "False") を渡すと、カラーは変更されません。
+* *horizontal* に[True](../commands/true) を渡した場合、水平グリッドラインにカラーが適用されます。False を渡すと、カラーは変更されません。
+* *vertical* に[True](../commands/true) を渡した場合、垂直グリッドラインにカラーが適用されます。[False](../commands/false) を渡すと、カラーは変更されません。
 
 ## 参照 
 

@@ -1,0 +1,70 @@
+﻿---
+id: get-registered-clients
+title: GET REGISTERED CLIENTS
+slug: /commands/get-registered-clients
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.GET REGISTERED CLIENTS.Syntax-->**GET REGISTERED CLIENTS** ( *listaClientes* : Text array ; *metodos* : Integer array )<!-- END REF-->
+<!--REF #_command_.GET REGISTERED CLIENTS.Params-->
+<div class="no-index">
+
+| Parámetro | Tipo |  | Descripción |
+| --- | --- | --- | --- |
+| listaClientes | Text array | &#8592; | Lista de 4D Clients registrados |
+| metodos | Integer array | &#8592; | Lista de los métodos a ejecutar |
+</div>
+<!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|6.5|Creado por|
+
+</details>
+</div>
+
+## Descripción 
+
+<!--REF #_command_.GET REGISTERED CLIENTS.Summary-->El comando GET REGISTERED CLIENTS llena dos array<!-- END REF-->s:
+
+* *listaClients* contiene la lista de los clientes “registrados” utilizando el comando [REGISTER CLIENT](register-client.md "REGISTER CLIENT").
+* *metodos* proporciona la lista de “cargas de trabajo” de cada cliente. La carga de trabajo es el número de métodos que un cliente 4D debe ejecutar llamando el comando [EXECUTE ON CLIENT](execute-on-client.md "EXECUTE ON CLIENT") (para mayor información, por favor consulte la descripción del comando [EXECUTE ON CLIENT](execute-on-client.md "EXECUTE ON CLIENT")).
+
+**Nota:** si la operación fue exitosa, la variable sistema OK es igual a 1.
+
+## Ejemplo 1 
+
+Asumamos que quiere obtener una lista de todos los clientes registrados y los métodos que falta ejecutar: 
+
+```4d
+ ARRAY TEXT($clientes;0)
+ ARRAY LONGINT($metodos;0)
+ GET REGISTERED CLIENTS($clientes;$metodos)
+```
+
+## Ejemplo 2 
+
+Consulte el ejemplo del comando [REGISTER CLIENT](register-client.md "REGISTER CLIENT").
+
+## Variables y conjuntos del sistema 
+
+Si la operación se realiza correctemente, la variable sistema OK toma el valor 1.
+
+## Ver también 
+
+[EXECUTE ON CLIENT](../commands/execute-on-client)  
+[REGISTER CLIENT](../commands/register-client)  
+[UNREGISTER CLIENT](../commands/unregister-client)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 650 |
+| Hilo seguro | no |
+| Modifica variables | OK |
+
+

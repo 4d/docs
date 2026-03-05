@@ -1,0 +1,52 @@
+﻿---
+id: find-window
+title: Find window
+slug: /commands/find-window
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.Find window.Syntax-->**Find window** ( *left* : Integer ; *top* : Integer {; *windowPart* : Integer} ) : Integer<!-- END REF-->
+<!--REF #_command_.Find window.Params-->
+<div class="no-index">
+
+| Parameter | Type |  | Description |
+| --- | --- | --- | --- |
+| left | Integer | &#8594;  | Global left coordinate |
+| top | Integer | &#8594;  | Global top coordinate |
+| windowPart | Integer | &#8592; | 3 if window is "touched", 0 otherwise |
+| Function result | Integer | &#8592; | Window reference number |
+</div>
+<!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|14|Modified|
+|6|Created|
+
+</details>
+</div>
+
+## Description 
+
+<!--REF #_command_.Find window.Summary-->The **Find window** command returns (if any) the reference number of the first window “touched” by the point whose coordinates passed in *left* and *top*.<!-- END REF-->
+
+The coordinates must be expressed relative to the top left corner of the contents area of the application window (Windows) or to the main screen (Macintosh).
+
+The *windowPart* parameter returns 3 if the window is touched, and 0 otherwise. (**Compatibility note:** Starting with 4D v14, the constants of the *Find Window* theme are obsolete). 
+
+## See also 
+
+[Frontmost window](../commands/frontmost-window)  
+[Next window](../commands/next-window)  
+
+## Properties
+
+|  |  |
+| --- | --- |
+| Command number | 449 |
+| Thread safe | no |
+
+

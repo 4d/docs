@@ -7,7 +7,7 @@ title: PHP ページ
 
 :::note
 
-これらの設定は、接続されているすべてのマシンとすべてのセッションに対して適用されます。 [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) および [`Get database parameter`](../commands-legacy/get-database-parameter.md) コマンドを使用することで、各マシンおよび各セッションに対して個別にこれらを書き込みあるいは読み出しすることができます。 `SET DATABASE PARAMETER` コマンドで変更された値はカレントセッションにおいて優先されます。
+これらの設定は、接続されているすべてのマシンとすべてのセッションに対して適用されます。 [`SET DATABASE PARAMETER`](../commands/set-database-parameter) および [`Get database parameter`](../commands/get-database-parameter) コマンドを使用することで、各マシンおよび各セッションに対して個別にこれらを書き込みあるいは読み出しすることができます。 `SET DATABASE PARAMETER` コマンドで変更された値はカレントセッションにおいて優先されます。
 
 :::
 

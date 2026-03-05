@@ -38,4 +38,4 @@ Para apagar uma imagem usando sua ID:
 ## Ver também 
 
 *Gerenciar Imagens*  
-[WP Add picture](../commands/wp-add-picture.md)  
+[WP Add picture](../commands/wp-add-picture)  

@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP New subsection.Summary-->O comando **WP New subsection** cria e retorna uma nova subseção do tipo *subSeçãoTipo* na seção 4D Write Pro *wpSeção*.<!-- END REF-->
 
-Em *wpSection*, passe a seção onde quier criar uma nova subseção. Esta referência pode ser obtida utilizando os comandos [WP Get sections](wp-get-sections.md) ou [WP Get section](wp-get-section.md).
+Em *wpSection*, passe a seção onde quier criar uma nova subseção. Esta referência pode ser obtida utilizando os comandos [WP Get sections](../commands/wp-get-sections) ou [WP Get section](../commands/wp-get-section).
 
 O parâmetro *subSectionType* especifica a subseção a ser criada. Pode passar uma das constantes abaixo:  
   
@@ -49,5 +49,6 @@ Se quiser criar as subseções esquerda e direita:
 
 ## Ver também 
 
-[WP DELETE SUBSECTION](../commands/wp-delete-subsection.md)  
-[WP Get subsection](wp-get-subsection.md)  
+[WP DELETE SUBSECTION](../commands/wp-delete-subsection)  
+[WP Get subsection](../commands/wp-get-subsection)  
+

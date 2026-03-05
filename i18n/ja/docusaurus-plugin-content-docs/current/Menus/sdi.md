@@ -92,6 +92,6 @@ MDIモードで実行時、ユーザーによってアプリケーションウ�
 
 :::info
 
-[**Application info**](../commands/application-info.md) コマンドを使用することで、Windows 上で現在実行中のモードを調べることができます。
+[**Application info**](../commands/application-info) コマンドを使用することで、Windows 上で現在実行中のモードを調べることができます。
 
 :::

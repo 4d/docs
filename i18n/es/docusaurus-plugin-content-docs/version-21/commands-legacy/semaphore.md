@@ -38,7 +38,7 @@ Semaphore devuelve FALSE si el semáforo no fue definido. También devuelve FALS
 
 Recuerde que los nombres de los semáforos son sensibles a las mayúsculas y minúsculas en 4D (por ejemplo, el programa considera que "MySemaphore" es diferente de "mysemaphore"
 
-El parámetro opcional *ticCont* le permite especificar un tiempo de espera (en tics) si *semaforo* ya está definido. En este caso, la función esperará o que el semáforo sea liberado o el tiempo de espera para terminar antes de devolver [True](true.md "True").
+El parámetro opcional *ticCont* le permite especificar un tiempo de espera (en tics) si *semaforo* ya está definido. En este caso, la función esperará o que el semáforo sea liberado o el tiempo de espera para terminar antes de devolver [True](../commands/true).
 
 Hay dos tipos de semáforos en 4D: semáforos locales y semáforos globales.  
   

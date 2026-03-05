@@ -7,12 +7,12 @@ title: Release Notes
 
 #### Points forts
 
-- The [`JSON Validate`](../commands/json-validate.md) command now supports of JSON Schema draft 2020-12.
+- The [`JSON Validate`](../commands/json-validate) command now supports of JSON Schema draft 2020-12.
 - Ability to use a custom certificate from the macOS keychain instead of a local certificates folder in [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) and [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) classes.
 
 #### Changements de comportement
 
-- The [`JSON Validate`](../commands/json-validate.md) command now takes the *$schema* key into account and generates an error if a non-supported version is declared in the schema.
+- The [`JSON Validate`](../commands/json-validate) command now takes the *$schema* key into account and generates an error if a non-supported version is declared in the schema.
 
 ## 4D 21 R2
 
@@ -32,13 +32,13 @@ Read [**What’s new in 4D 21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/),
 #### Developer Preview
 
 - Prise en charge du [**rendu d'interface Fluent UI**](../FormEditor/forms.md#fluent-ui-rendering) sous Windows :
-  - nouvelle commande [`FORM theme`](../commands/form-theme.md),
+  - nouvelle commande [`FORM theme`](../commands/form-theme),
   - nouveau [media query css`form-theme`](../FormEditor/createStylesheet.md#media-queries),
   - nouvelle option [**Utiliser Fluent UI sous Windows**](../settings/interface.md#use-fluent-ui-on-windows) dans la boîte de dialogue des Propriétés du projet.
 
 #### Changements de comportement
 
-- Sous Windows, si le [rendu **Fluent UI**](../FormEditor/forms.md#fluent-ui-rendering) est activé, la commande [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) peut renvoyer des informations différentes selon qu'elle est appelée depuis un formulaire ou non.
+- Sous Windows, si le [rendu **Fluent UI**](../FormEditor/forms.md#fluent-ui-rendering) est activé, la commande [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info) peut renvoyer des informations différentes selon qu'elle est appelée depuis un formulaire ou non.
 
 ## Tableau des bibliothèques
 

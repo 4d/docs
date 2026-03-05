@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Text range.Summary-->La commande **WP Text range** retourne une nouvelle plage contenant les caractères situés entre *débutPlage* et *finPlage* dans l'objet *objCible*.<!-- END REF-->
 
-Un **objet plage 4D Write Pro** peut être utilisé pour manipuler des attributs sur une partie du document (notamment à l'aide des commandes [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) et [WP SET ATTRIBUTES](../commands/wp-set-attributes.md)). Pour plus d'informations, veuillez vous reporter au paragraphe *Gestion des plages*.
+Un **objet plage 4D Write Pro** peut être utilisé pour manipuler des attributs sur une partie du document (notamment à l'aide des commandes [WP GET ATTRIBUTES](../commands/wp-get-attributes) et [WP SET ATTRIBUTES](../commands/wp-set-attributes)). Pour plus d'informations, veuillez vous reporter au paragraphe *Gestion des plages*.
 
 Dans *objCible*, vous pouvez passer :
 
@@ -67,11 +67,12 @@ Vous voulez créer une plage à partir d'une section :
 
 ## Voir aussi 
 
-[WP Bookmark range](wp-bookmark-range.md)  
-[WP Get body](wp-get-body.md)  
-[WP Get header](wp-get-header.md)  
-[WP Paragraph range](wp-paragraph-range.md)  
-[WP Picture range](wp-picture-range.md)  
-[WP SELECT](wp-select.md)  
-[WP Selection range](wp-selection-range.md)  
-[WP Table range](wp-table-range.md)  
+[WP Bookmark range](../commands/wp-bookmark-range)  
+[WP Get body](../commands/wp-get-body)  
+[WP Get header](../commands/wp-get-header)  
+[WP Paragraph range](../commands/wp-paragraph-range)  
+[WP Picture range](../commands/wp-picture-range)  
+[WP SELECT](../commands/wp-select)  
+[WP Selection range](../commands/wp-selection-range)  
+[WP Table range](../commands/wp-table-range)  
+

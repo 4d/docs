@@ -26,8 +26,8 @@ displayed_sidebar: docs
 
 |リリース|内容|
 |---|---|
-|13|変更|
 |<6|初出|
+|13|変更|
 
 </details>
 </div>
@@ -81,14 +81,14 @@ displayed_sidebar: docs
     
 **注:**  
    * パフォーマンスの理由から、このデータのサイズは32KBで切り取られます。  
-   * この引数に関する詳細は[On Web Connection](./on-web-connection-database-method.md)の説明を参照してください。
+   * この引数に関する詳細は[On Web Connection](../commands/on-web-connection-database-method)の説明を参照してください。
 * **WebクライアントのIPアドレス**  
     
 $ipBrowser 引数はブラウザマシンのIPアドレスを受け取ります。この情報を使用して、イントラネットアクセスとインターネットアクセスを区別できます。  
 **注:** 4DはIPv4アドレスを、96-bitの接頭辞付きのハイブリッド型のIPv6/IPv4フォーマットで返します。例えば、 ffff:192.168.2.34は、192.168.2.34というIPv4アドレスを意味します。詳細な情報については、*IPv6のサポート*の章を参照して下さい。
 * **サーバーIPアドレス**  
     
-$ipServer 引数はWebサーバを呼び出すために使用されたIPアドレスを受け取ります。4Dバージョン6.5以降マルチホーミングがサポートされ、複数のIPアドレスを持つマシンで使用できるようになりました。詳細は[QR DELETE COLUMN](qr-delete-column.md)を参照してください。
+$ipServer 引数はWebサーバを呼び出すために使用されたIPアドレスを受け取ります。4Dバージョン6.5以降マルチホーミングがサポートされ、複数のIPアドレスを持つマシンで使用できるようになりました。詳細は[QR DELETE COLUMN](../commands/qr-delete-column)を参照してください。
 * **ユーザー名とパスワード**  
     
 $user と $pw 引数は、ブラウザーが表示する標準の認証ダイアログにユーザーが入力したユーザー名とパスワードを受け取ります。このダイアログはデータベース設定でパスワード管理オプションが指定されていると、接続のたびに表示されます (*接続セキュリティ*参照)。
@@ -99,13 +99,13 @@ $user と $pw 引数は、ブラウザーが表示する標準の認証ダイア
    * $result=**True**: 接続を受け入れる  
    * $result=**False**: 接続を受け入れない
 
-[On Web Connection](./on-web-connection-database-method.md)は、接続が**On Web Authenticationデータベースメソッド**により受け入れられた時にのみ実行されます。
+[On Web Connection](../commands/on-web-connection-database-method)は、接続が**On Web Authenticationデータベースメソッド**により受け入れられた時にのみ実行されます。
 
-**警告:** *$result*に値が設定されないか、*$result*が**On Web Authenticationデータベースメソッド**内で定義されていない場合、接続は受け入れるものとされ、[On Web Connection](./on-web-connection-database-method.md)が実行されます。
+**警告:** *$result*に値が設定されないか、*$result*が**On Web Authenticationデータベースメソッド**内で定義されていない場合、接続は受け入れるものとされ、[On Web Connection](../commands/on-web-connection-database-method)が実行されます。
 
 **注:**
 
-* **On Web Authenticationデータベースメソッド**内でインターフェース要素を呼び出さないでください ([ALERT](alert.md), [DIALOG](../commands/dialog.md)等)。そうでなければメソッドの実行が中断され、接続は拒否されます。処理中にエラーが発生した場合も同じことが言えます。
+* **On Web Authenticationデータベースメソッド**内でインターフェース要素を呼び出さないでください ([ALERT](../commands/alert), [DIALOG](../commands/dialog)等)。そうでなければメソッドの実行が中断され、接続は拒否されます。処理中にエラーが発生した場合も同じことが言えます。
 * メソッドプロパティダイアログオックスのオプション"4DタグとURL (4DACTION...) で利用可"を使用して、プロジェクトメソッドごとに、**4DACTION** や **4DSCRIPT**にからメソッドを実行させないようにできます。この点に関する詳細は*接続セキュリティ*を参照してください。
 
 ## On Web Authentication データベースメソッドの呼び出し 
@@ -118,7 +118,7 @@ $user と $pw 引数は、ブラウザーが表示する標準の認証ダイア
 * 4Dが /4DCGI/ で始まるURLを受信したとき。
 * 4Dが /4DSYNC/ で始まるURLを受信したとき。
 * 4Dが、存在しないスタティックページをリクエストするURLを受信したとき。
-* 4Dが、データベース設定もしくは[WEB SET HOME PAGE](web-set-home-page.md) コマンドを利用してホームページが設定されていない状態でルートアクセスURLを受信したとき。
+* 4Dが、データベース設定もしくは[WEB SET HOME PAGE](../commands/web-set-home-page) コマンドを利用してホームページが設定されていない状態でルートアクセスURLを受信したとき。
 * 4Dがセミダイナミックページで 4DSCRIPT タグを処理するとき。
 * 4D がセミダイナミックページでメソッドに基づく 4DLOOP タグを処理するとき。
 
@@ -212,3 +212,4 @@ var $i : Integer
     End if
  End for
 ```
+

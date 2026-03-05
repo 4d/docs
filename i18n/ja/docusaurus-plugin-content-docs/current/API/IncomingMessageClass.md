@@ -323,7 +323,7 @@ $value := $request.getHeader("content-type")
 
 引数はJSON フォーマットで渡されかつコレクションとして括られています。
 
-この場合、引数は`urlQuery` プロパティ内にJSON テキストとして受け取られ、[`JSON Parse`](../commands-legacy/json-parse.md) を使用することでパースすることができます。
+この場合、引数は`urlQuery` プロパティ内にJSON テキストとして受け取られ、[`JSON Parse`](../commands-legacy/json-parse) を使用することでパースすることができます。
 
 ```4d
 //urlQuery.myparams: "[{"firstname": "Marie","isWoman": true,"id": 3}]"

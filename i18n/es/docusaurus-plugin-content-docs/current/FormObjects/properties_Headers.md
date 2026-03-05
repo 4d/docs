@@ -19,7 +19,7 @@ Esta propiedad se utiliza para mostrar u ocultar [los encabezados de columna lis
 
 #### Comandos
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
 
 ---
 
@@ -34,7 +34,7 @@ Esta propiedad se utiliza para definir la altura de línea de un encabezado de l
   - Este cálculo no tiene en cuenta el tamaño de las imágenes ni los estilos aplicados a las fuentes.
   - En macOS, la altura de línea puede ser incorrecta si el usuario introduce caracteres que no están disponibles en la fuente seleccionada. Cuando esto ocurre, se utiliza un tipo de letra sustituto, lo que puede provocar variaciones en el tamaño.
 
-> > This property can also be set dynamically using the [LISTBOX SET HEADERS HEIGHT](../commands-legacy/listbox-set-headers-height.md) command.
+> > This property can also be set dynamically using the [LISTBOX SET HEADERS HEIGHT](../commands-legacy/listbox-set-headers-height) command.
 
 Conversión de unidades: cuando se pasa de una unidad a otra, 4D las convierte automáticamente y muestra el resultado en la Lista de propiedades. Por ejemplo, si la fuente utilizada es "Lucida grande 24", una altura de "1 línea" se convierte en "30 píxeles" y una altura de "60 píxeles" se convierte en "2 líneas".
 
@@ -66,7 +66,7 @@ Tenga en cuenta que la conversión de ida y vuelta puede conducir a un resultado
 
 #### Comandos
 
-[`LISTBOX Get headers height`](../commands-legacy/listbox-get-headers-height.md) - [`LISTBOX SET HEADERS HEIGHT`](../commands-legacy/listbox-set-headers-height.md)
+[`LISTBOX Get headers height`](../commands-legacy/listbox-get-headers-height) - [`LISTBOX SET HEADERS HEIGHT`](../commands-legacy/listbox-set-headers-height)
 
 #### Ver también
 

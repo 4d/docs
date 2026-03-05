@@ -51,7 +51,7 @@ Tanto la interfaz de la cinta de opciones como la de la barra de herramientas ag
 
 Los siguientes eventos formulario están disponibles en la Lista de propiedades de las áreas 4D View Pro.
 
-Algunos de los eventos son eventos formulario estándar (disponibles para todos los objetos activos) y otros son eventos formulario específicos de 4D View Pro. Algunos eventos de formulario estándar ofrecen información ampliada en el objeto devuelto por el comando [`FORM Event`](../commands/form-event.md) cuando se generan para áreas 4D View Pro. La siguiente tabla indica los eventos estándar y los eventos específicos o los que ofrecen información adicional a las áreas 4D View Pro:
+Algunos de los eventos son eventos formulario estándar (disponibles para todos los objetos activos) y otros son eventos formulario específicos de 4D View Pro. Algunos eventos de formulario estándar ofrecen información ampliada en el objeto devuelto por el comando [`FORM Event`](../commands/form-event) cuando se generan para áreas 4D View Pro. La siguiente tabla indica los eventos estándar y los eventos específicos o los que ofrecen información adicional a las áreas 4D View Pro:
 
 | Evento 4D estándar                              | Eventos 4D View Pro específicos y extendidos          |
 | ----------------------------------------------- | ----------------------------------------------------- |
@@ -357,12 +357,12 @@ Los atributos de tamaño de papel se utilizan para especificar las dimensiones o
 |           | ancho  | entero largo | Ancho del papel, en centésimas de pulgada.                                                                                                                                              |
 |           | kind   | text         | Nombre del tamaño de papel estándar (por ejemplo, A2, A4, oficio, etc.) devuelto por `Get Print Option`. Valor por defecto: "letter" |
 
-- Si el tamaño del papel se especifica utilizando las propiedades `height` y `width`, [`VP Get print info`](./commands/vp-get-print-info.md) devuelve un tamaño de papel con `custom` como valor para `kind`.
+- Si el tamaño del papel se especifica utilizando las propiedades `height` y `width`, [`VP Get print info`](../commands/vp-get-print-info) devuelve un tamaño de papel con `custom` como valor para `kind`.
 
 - Si establece el tamaño del papel mediante la propiedad `kind`, puede utilizar cualquiera de los dos:
   - uno de los formatos de la [lista de formatos SpreadJS](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
-  - uno de los formatos devueltos por el comando [`PRINT OPTION VALUES`](../commands-legacy/print-option-values.md).
-    En ese caso, [`VP Get print info`](./commands/vp-get-print-info.md) devuelve el formato correspondiente con la altura y el ancho.
+  - uno de los formatos devueltos por el comando [`PRINT OPTION VALUES`](../commands-legacy/print-option-values).
+    En ese caso, [`VP Get print info`](../commands/vp-get-print-info) devuelve el formato correspondiente con la altura y el ancho.
 
 ### Escala
 

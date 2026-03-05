@@ -33,7 +33,7 @@ Si vous cliquez sur le bouton **Refuser nouvelles connexions** :
 - Le nom du projet n’apparaît plus dans la boîte de dialogue de connexion.
 - Les clients déjà connectés ne sont pas déconnectés et peuvent continuer à travailler normalement.
 
-> Vous pouvez effectuer la même action avec la commande [`REJECT NEW REMOTE CONNECTIONS`](../commands-legacy/reject-new-remote-connections.md).
+> Vous pouvez effectuer la même action avec la commande [`REJECT NEW REMOTE CONNECTIONS`](../commands-legacy/reject-new-remote-connections).
 
 - Si vous cliquez sur le bouton **Accepter nouvelles connexions**, la base retourne dans l’état "par défaut".
 

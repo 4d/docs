@@ -117,5 +117,5 @@ Dans une application de facturation, vous souhaitez créer un tableau automatiqu
 
 ## Voir également
 
-[WP Insert table](../commands-legacy/wp-insert-table.md)</br>
-[WP Table get rows](../commands-legacy/wp-table-get-rows.md)
+[WP Insert table](../commands-legacy/wp-insert-table)</br>
+[WP Table get rows](../commands-legacy/wp-table-get-rows)

@@ -29,7 +29,7 @@ Se passar o parâmetro opcional *\**, indica que *wpArea* é um nome de objeto d
 
 **Nota**: este comando só pode ser utilizada se *wpArea* estiver associada com um objeto de formulário (ou seja, é mostrada no formulário).
 
-Se for selecionada uma imagem ancorada (imagem em uma localização fixa) em *wpArea*, **WP Selection range** devolve um objeto de referência de imagem e não um objeto de faixa (para saber mais, consulte a descrição do comando [WP Add picture](../commands/wp-add-picture.md). Do contrário, **WP Selection range** devolve um novo objRange. Para saber mais, consulte *Comandos de seleção de faixa*.
+Se for selecionada uma imagem ancorada (imagem em uma localização fixa) em *wpArea*, **WP Selection range** devolve um objeto de referência de imagem e não um objeto de faixa (para saber mais, consulte a descrição do comando [WP Add picture](../commands/wp-add-picture). Do contrário, **WP Selection range** devolve um novo objRange. Para saber mais, consulte *Comandos de seleção de faixa*.
 
 ## Exemplo 
 
@@ -41,6 +41,7 @@ Se quiser obter o texto selecionado de uma área 4D Write Pro:
 
 ## Ver também 
 
-[WP Paragraph range](wp-paragraph-range.md)  
-[WP Picture range](wp-picture-range.md)  
-[WP Text range](wp-text-range.md)  
+[WP Paragraph range](../commands/wp-paragraph-range)  
+[WP Picture range](../commands/wp-picture-range)  
+[WP Text range](../commands/wp-text-range)  
+

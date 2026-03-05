@@ -37,8 +37,8 @@ Bien qu'ils soient généralement équivalents, certains types de données de la
 
 Vous pouvez à tout moment connaître le type d'un champ ou d'une variable en utilisant les commandes suivantes :
 
-- [`Type`](../commands-legacy/type.md) pour les champs et les variables scalaires
-- [`Value type`](../commands-legacy/value-type.md) pour les expressions
+- [`Type`](../commands-legacy/type) pour les champs et les variables scalaires
+- [`Value type`](../commands-legacy/value-type) pour les expressions
 
 ## Valeurs par défaut
 

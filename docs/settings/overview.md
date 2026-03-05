@@ -95,7 +95,7 @@ You can access these dialog boxes using the **Design > Settings...** menu or the
 
 ![](../assets/en/settings/user-settings-dialog.png)
 
-You can also access these dialog boxes using the [OPEN SETTINGS WINDOW](../commands-legacy/open-settings-window.md) command with the appropriate *settingsType* selector.
+You can also access these dialog boxes using the [OPEN SETTINGS WINDOW](../commands/open-settings-window) command with the appropriate *settingsType* selector.
 
 The Structure Settings dialog box is identical to the standard Settings, and provides access to all its properties (which can be overriden by user settings). 
 
@@ -134,9 +134,9 @@ When you edit settings in this dialog box, they are automatically stored in the 
 
 ### `SET DATABASE PARAMETER` and user settings  
 
-Some of the user settings are also available through the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md) command. User settings are parameters with the **Kept between two sessions** property set to **Yes**.
+Some of the user settings are also available through the [SET DATABASE PARAMETER](../commands/set-database-parameter) command. User settings are parameters with the **Kept between two sessions** property set to **Yes**.
 
-When the **User Settings** feature is enabled, user settings edited by the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md) command are automatically saved in the user settings for the data file.
+When the **User Settings** feature is enabled, user settings edited by the [SET DATABASE PARAMETER](../commands/set-database-parameter) command are automatically saved in the user settings for the data file.
 
 > `Table sequence number` is an exception; this setting value is always saved in the data file itself.
 
@@ -185,3 +185,4 @@ Settings can be stored at three levels. Each setting defined at one level overri
 | 1 (highest) | User settings (current data file) | ***settings.4DSettings*** file in the Settings folder at the same level as the data file | Overrides Structure settings and User settings. Applied only when the linked data file is used with the application. |
 
 Keep in mind that user settings files only contain a subset of relevant settings, while the structure file contains all custom settings, including core settings.
+

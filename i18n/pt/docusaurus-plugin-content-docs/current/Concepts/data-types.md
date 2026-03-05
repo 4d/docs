@@ -37,8 +37,8 @@ Apesar de geralmente serem equivalentes, alguns tipos de dados disponíveis no n
 
 Você sempre pode saber o tipo de um campo ou variável usando os seguintes comandos:
 
-- [`Type`](../commands-legacy/type.md) para campos e variáveis escalares
-- [`Value type`](../commands-legacy/value-type.md) para expressões
+- [`Type`](../commands-legacy/type) para campos e variáveis escalares
+- [`Value type`](../commands-legacy/value-type) para expressões
 
 ## Valor padrão
 

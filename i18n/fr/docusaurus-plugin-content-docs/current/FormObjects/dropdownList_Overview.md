@@ -89,7 +89,7 @@ Pour initialiser le tableau associé à la liste déroulante, vous pouvez :
 
 Dans ce cas, le nom de la [variable](properties_Object.md#variable-or-expression) associée à l'objet dans le formulaire doit être `aCities`. Ce code peut être placé dans la méthode formulaire et être exécuté lorsque l’événement formulaire `Sur chargement` se produit.
 
-- Avant d'afficher l'objet, chargez les valeurs d'une liste dans le tableau à l'aide de la commande [`LIST TO ARRAY`](../commands-legacy/list-to-array.md). Par exemple :
+- Avant d'afficher l'objet, chargez les valeurs d'une liste dans le tableau à l'aide de la commande [`LIST TO ARRAY`](../commands-legacy/list-to-array). Par exemple :
 
 ```4d
    LIST TO ARRAY("Cities";aCities)
@@ -149,7 +149,7 @@ Une liste déroulante hiérarchique a une sous-liste associée à chaque éléme
 
 Vous pouvez affecter la liste hiérarchique à l'objet liste déroulante en utilisant le champ [Enumération](properties_DataSource.md#choice-list) de la liste des propriétés.
 
-Les listes déroulantes hiérarchiques sont gérées à l'aide des commandes **Listes hiérarchiques** du langage 4D. Toutes les commandes qui prennent en charge la syntaxe `(* ; "name")` peuvent être utilisées avec des listes déroulantes hiérarchiques, par exemple [`List item parent`](../commands-legacy/list-item-parent.md).
+Les listes déroulantes hiérarchiques sont gérées à l'aide des commandes **Listes hiérarchiques** du langage 4D. Toutes les commandes qui prennent en charge la syntaxe `(* ; "name")` peuvent être utilisées avec des listes déroulantes hiérarchiques, par exemple [`List item parent`](../commands-legacy/list-item-parent).
 
 ### Utiliser une action standard
 

@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Find all.Summary-->La commande **WP Find all** recherche *valeurRecherche* dans *objCible* en utilisant les options de *conditionRecherche*.<!-- END REF--> Un paramètre optionnel peut être utilisé pour remplacer les résultats trouvés.
 
-**Note** : **WP Find all** ne recherche pas ou ne remplace pas le texte dans les formules. Utilisez la commande [WP Get formulas](wp-get-formulas.md) dans ce cas. 
+**Note** : **WP Find all** ne recherche pas ou ne remplace pas le texte dans les formules. Utilisez la commande [WP Get formulas](../commands/wp-get-formulas) dans ce cas. 
 
 Dans le paramètre *objCible*, passez un objet contenant :
 
@@ -100,5 +100,5 @@ Une collection vide est retournée si aucun résultat est tourné.
 
 ## Voir aussi 
 
-[WP Find next](wp-find-next.md)  
-[WP Find previous](wp-find-previous.md)  
+[WP Find next](../commands/wp-find-next)  
+[WP Find previous](../commands/wp-find-previous)  

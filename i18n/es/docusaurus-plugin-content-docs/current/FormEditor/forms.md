@@ -170,13 +170,13 @@ El [media query CSS **form-theme**](./createStylesheet.md#media-queries) permite
 
 Cuando utilice los formularios 4D con el renderizado Fluent UI, debe prestar atención a los siguientes puntos:
 
-- El comando [`FORM theme`](../commands/form-theme.md) devuelve el tema actual del formulario. Valores posibles: "Classic" o "FluentUI". Si no existe un formulario actual o si el comando se ejecuta en macOS, se devuelve una cadena vacía.
-- El comando [`Application info`](../commands/application-info.md) le permite saber si Fluent UI puede ser utilizado (propiedad `canUseFluentUI`) o está siendo utilizado (propiedad `useFluentUI`).
-- Si [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) es llamado en el contexto de un formulario, la información devuelta se refiere a la apariencia actual del formulario (Classic o FluentUI). Si se llama al comando fuera del contexto de un formulario, la información devuelta se refiere a las [propiedades globales del proyecto](#application-setting).
-- [`SET MENU ITEM STYLE`](../commands-legacy/set-menu-item-style.md) con el parámetro *itemStyle* `Underline` no es soportado (ignorado) para los menús emergentes.
+- El comando [`FORM theme`](../commands/form-theme) devuelve el tema actual del formulario. Valores posibles: "Classic" o "FluentUI". Si no existe un formulario actual o si el comando se ejecuta en macOS, se devuelve una cadena vacía.
+- El comando [`Application info`](../commands/application-info) le permite saber si Fluent UI puede ser utilizado (propiedad `canUseFluentUI`) o está siendo utilizado (propiedad `useFluentUI`).
+- Si [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info) es llamado en el contexto de un formulario, la información devuelta se refiere a la apariencia actual del formulario (Classic o FluentUI). Si se llama al comando fuera del contexto de un formulario, la información devuelta se refiere a las [propiedades globales del proyecto](#application-setting).
+- [`SET MENU ITEM STYLE`](../commands-legacy/set-menu-item-style) con el parámetro *itemStyle* `Underline` no es soportado (ignorado) para los menús emergentes.
 - El objeto de formulario [Stepper](../FormObjects/stepper.md) no admite el [evento doble clic](../Events/onDoubleClicked.md).
 - Los [botones circulares](../FormObjects/button_overview.md#circle) son soportados (como en macOS).
-- Los comandos [`WA ZOOM IN`](../commands-legacy/wa-zoom-in.md) / [`WA ZOOM OUT`](../commands-legacy/wa-zoom-out.md) no son compatibles en áreas Web con motor de renderizado sistema.
+- Los comandos [`WA ZOOM IN`](../commands-legacy/wa-zoom-in) / [`WA ZOOM OUT`](../commands-legacy/wa-zoom-out) no son compatibles en áreas Web con motor de renderizado sistema.
 - Se puede añadir rectángulo de foco a las [entradas](../FormObjects/input_overview.md) imagen y texto.
 
 ## Formularios heredados

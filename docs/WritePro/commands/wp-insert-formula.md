@@ -30,14 +30,14 @@ In the *targetObj* parameter, you can pass:
 
 In the *formula* parameter, pass the 4D formula to evaluate. You can pass:
 
-* either a [formula object](../../commands/formula.md-objects) created by the [**Formula**](../../commands/formula.md) or [**Formula from string**](../../commands/formula.md-from-string) command,
+* either a [formula object](../../commands/formula.md-objects) created by the [**Formula**](../../commands/formula) or [**Formula from string**](../../commands/formula.md-from-string) command,
 * or an object containing two properties: 
 
 
 | **Property** | **Type** | **Description**|
 | ------------ | ------------ | ------------ |                                                                                                                                                                                                                                                                       
 | name | Text   | Name to display for the formula in the document|                                                                                                                                                                                                                                       
-| formula| Object| The [formula object](../../commands/formula.md-objects) created by the [**Formula**](../../commands/formula.md) or [**Formula from string**](../../commands/formula.md-from-string) command| 
+| formula| Object| The [formula object](../../commands/formula.md-objects) created by the [**Formula**](../../commands/formula) or [**Formula from string**](../../commands/formula.md-from-string) command| 
 
 When you use an object with a formula *name*, this name is displayed in the document instead of the formula reference when formulas are displayed as reference, and in the formula tip when displayed as value or symbols. If the *name* property contains an empty string or is omitted, it is removed from the object and the formula is displayed by default. For more information, see the [Managing formulas](../managing-formulas.md) page.
 
@@ -135,6 +135,6 @@ Result:
 ## See also 
 
 *Managing formulas*  
-[WP COMPUTE FORMULAS](../commands-legacy/wp-compute-formulas.md)</br>
-[WP FREEZE FORMULAS](../commands-legacy/wp-freeze-formulas.md)</br>
-[WP Get formulas](../commands-legacy/wp-get-formulas.md)  
+[WP COMPUTE FORMULAS](../commands/wp-compute-formulas)</br>
+[WP FREEZE FORMULAS](../commands/wp-freeze-formulas)</br>
+[WP Get formulas](../commands/wp-get-formulas)  

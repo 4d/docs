@@ -38,5 +38,5 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP Get header](wp-get-header.md)  
-[WP New header](wp-new-header.md)  
+[WP Get header](../commands/wp-get-header)  
+[WP New header](../commands/wp-new-header)  

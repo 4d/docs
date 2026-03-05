@@ -26,7 +26,7 @@ Si pasa el parámetro opcional *\**, indica que *wpArea* es un nombre de objeto 
 Las propiedades vista del área 4D Write Pro se pueden definir:
 
 * a nivel del formulario en la Lista de propiedades,
-* dinámicamente durante la sesión utilizando el comando [WP SET VIEW PROPERTIES](wp-set-view-properties.md).
+* dinámicamente durante la sesión utilizando el comando [WP SET VIEW PROPERTIES](../commands/wp-set-view-properties).
 
 **Objeto devuelto**
 
@@ -70,4 +70,4 @@ En el área de 4D Write Pro, desea mostrar las reglas solo en el modo página:
 
 ## Ver también 
 
-[WP SET VIEW PROPERTIES](wp-set-view-properties.md)  
+[WP SET VIEW PROPERTIES](../commands/wp-set-view-properties)  

@@ -177,7 +177,7 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 
 :::info
 
-[`wait()`](#wait) を使用しない場合 (非同期呼び出し) にコールバック関数が呼び出されるためには、そのプロセスは [`CALL WORKER`](../commands-legacy/call-worker.md) で作成された [ワーカー](../Develop/processes.md#ワーカープロセス) である必要があります ([`New process`](../commands-legacy/new-process.md) は使えません)。
+[`wait()`](#wait) を使用しない場合 (非同期呼び出し) にコールバック関数が呼び出されるためには、そのプロセスは [`CALL WORKER`](../commands-legacy/call-worker) で作成された [ワーカー](../Develop/processes.md#ワーカープロセス) である必要があります ([`New process`](../commands-legacy/new-process) は使えません)。
 
 :::
 
@@ -428,7 +428,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 :::note
 
-.wait() の実行中、それが `HTTPRequest` あるいは  [`SystemWorker`](SystemWorkerClass.md) インスタンス、あるいは他の [`CALL WORKER`](../commands-legacy/call-worker.md) 呼び出しから発生したかにかかわらず、ワーカーからのコールバックは実行されます。  コールバックから [`terminate()`](#terminate) を呼び出すことで、`.wait()` を終了することができます。
+.wait() の実行中、それが `HTTPRequest` あるいは  [`SystemWorker`](SystemWorkerClass.md) インスタンス、あるいは他の [`CALL WORKER`](../commands-legacy/call-worker) 呼び出しから発生したかにかかわらず、ワーカーからのコールバックは実行されます。  コールバックから [`terminate()`](#terminate) を呼び出すことで、`.wait()` を終了することができます。
 
 :::
 

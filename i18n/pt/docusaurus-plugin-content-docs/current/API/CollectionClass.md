@@ -5,7 +5,7 @@ title: Collection
 
 The Collection class manages [Collection](Concepts/dt_collection.md) type expressions.
 
-Uma coleção é inicializada com os comandos [`New collection`](../commands/new-collection.md) ou [`New shared collection`](../commands/new-shared-collection.md).
+Uma coleção é inicializada com os comandos [`New collection`](../commands/new-collection) ou [`New shared collection`](../commands/new-shared-collection).
 
 ### Exemplo
 
@@ -2030,7 +2030,7 @@ Todas as coleções colsToSort devem ter o mesmo número de elementos, caso cont
 
 :::
 
-Se quiser classificar as coleções em outra ordem que não seja a ascendente, você deverá fornecer uma *fórmula* ([Formula object](../commands/formula.md) que defina a ordem de classificação. O valor de retorno deve ser um booleano que indica a ordem relativa dos dois elementos: **True** se *$1.value* for menor que *$1.value2*, **False** se *$1.value* for maior que *$1.value2*. Você pode fornecer parâmetros adicionais à fórmula, se necessário.
+Se quiser classificar as coleções em outra ordem que não seja a ascendente, você deverá fornecer uma *fórmula* ([Formula object](../commands/formula) que defina a ordem de classificação. O valor de retorno deve ser um booleano que indica a ordem relativa dos dois elementos: **True** se *$1.value* for menor que *$1.value2*, **False** se *$1.value* for maior que *$1.value2*. Você pode fornecer parâmetros adicionais à fórmula, se necessário.
 
 A fórmula recebe os seguintes parâmetros:
 

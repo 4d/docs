@@ -59,7 +59,7 @@ Si se omite *layout*, el diseño de 4D Write Pro se usa de forma predeterminada.
 
 **Notas sobre rendimiento**
 
-* La misma configuración de visualización que para el comando [WP PRINT](wp-print.md) se usa con **WP Get position**:  
+* La misma configuración de visualización que para el comando [WP PRINT](../commands/wp-print) se usa con **WP Get position**:  
    * encabezados: visibles  
    * pies de página: visibles  
    * expresiones: computadas y mostradas  
@@ -158,4 +158,4 @@ Los siguientes ejemplos ilustran las coordenadas del rectángulo delimitador dev
 
 ## Ver también 
 
-[WP PRINT](wp-print.md)  
+[WP PRINT](../commands/wp-print)  

@@ -59,9 +59,9 @@ displayed_sidebar: docs
 
 *rangeUpdate* 引数を渡さなかった場合、挿入されたテーブルはデフォルトではレンジに含まれます。
 
-*nbCols* および *nbRows* 引数を渡して、テーブル内に定義したいカラムの数と行の数を指定することができます。デフォルトでは、引数が省略された場合、0列のカラムと0行を持った新しいテーブルが作成されます。すると[WP Table append row](../commands/wp-table-append-row.md) コマンドを使用してこれらの要素を追加することができるようになります。
+*nbCols* および *nbRows* 引数を渡して、テーブル内に定義したいカラムの数と行の数を指定することができます。デフォルトでは、引数が省略された場合、0列のカラムと0行を持った新しいテーブルが作成されます。すると[WP Table append row](../commands/wp-table-append-row) コマンドを使用してこれらの要素を追加することができるようになります。
 
-このコマンドは新しいテーブルをテーブルオブジェクトとして返し、これはその後他のWP tableコマンドへと渡すことができます。テーブルはデフォルトのフォント、境界線、カラーで作成されますが、これらは[WP SET ATTRIBUTES](../commands/wp-set-attributes.md) コマンドを使用してカスタマイズすることが可能です。
+このコマンドは新しいテーブルをテーブルオブジェクトとして返し、これはその後他のWP tableコマンドへと渡すことができます。テーブルはデフォルトのフォント、境界線、カラーで作成されますが、これらは[WP SET ATTRIBUTES](../commands/wp-set-attributes) コマンドを使用してカスタマイズすることが可能です。
 
 ## 例題 
 
@@ -79,5 +79,6 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP Table append row](../commands/wp-table-append-row.md)  
-[WP Table get rows](wp-table-get-rows.md)  
+[WP Table append row](../commands/wp-table-append-row)  
+[WP Table get rows](../commands/wp-table-get-rows)  
+

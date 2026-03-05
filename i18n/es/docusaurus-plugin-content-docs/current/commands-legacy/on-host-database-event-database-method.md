@@ -29,10 +29,10 @@ Para procesar un evento, debe probar el valor del parámetro $1 en el método, y
   
 | Constante                       | Tipo         | Valor | Comentario                                                                                                                                                                                                                                                                                          |
 | ------------------------------- | ------------ | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| On after host database exit     | Entero largo | 4     | El [Semaphore](semaphore.md) de la base local acaba de terminar su ejecución                                                                                                                                                                                                                        |
+| On after host database exit     | Entero largo | 4     | El [Semaphore](../commands/semaphore) de la base local acaba de terminar su ejecución                                                                                                                                                                                                                        |
 | On after host database startup  | Entero largo | 2     | El de la base local acaba de terminar su ejecución                                                                                                                                                                                                                                                  |
-| On before host database exit    | Entero largo | 3     | La base local se está cerrando. El [Semaphore](semaphore.md) de la base local aún no se ha llamado. <br/>El [Semaphore](semaphore.md) de la base loal no se llama mientras el [Método base On Host Database Event](metodo-base-on-host-database-event.md) del componente se esté ejecutando |
-| On before host database startup | Entero largo | 1     | La base local se ha iniciado. El de la base local aún no se ha llamado. <br/>El método base On Startup de la base local no se llama mientras el [Método base On Host Database Event](metodo-base-on-host-database-event.md) del componente se esté ejecutando                               |
+| On before host database exit    | Entero largo | 3     | La base local se está cerrando. El [Semaphore](../commands/semaphore) de la base local aún no se ha llamado. <br/>El [Semaphore](../commands/semaphore) de la base loal no se llama mientras el [Método base On Host Database Event](../commands/metodo-base-on-host-database-event) del componente se esté ejecutando |
+| On before host database startup | Entero largo | 1     | La base local se ha iniciado. El de la base local aún no se ha llamado. <br/>El método base On Startup de la base local no se llama mientras el [Método base On Host Database Event](../commands/metodo-base-on-host-database-event) del componente se esté ejecutando                               |
 
 Esto permite a los componentes 4D cargar y guardar preferencias o estados de usuario relacionados con el funcionamiento de la base local.
 
@@ -58,3 +58,4 @@ Ejemplo de estructura tipo de un método base On Host Database Event:
   // de la base local
  End case
 ```
+

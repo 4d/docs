@@ -3,7 +3,7 @@ id: WebFormClass
 title: WebForm
 ---
 
-The `WebForm` class contains functions and properties allowing to handle your Qodly web page components. `4D.WebForm` objects are instantiated with the [`webForm`](../commands/web-form.md) command.
+The `WebForm` class contains functions and properties allowing to handle your Qodly web page components. `4D.WebForm` objects are instantiated with the [`webForm`](../commands/web-form) command.
 
 <details><summary>História</summary>
 
@@ -237,6 +237,6 @@ If the [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoad
 
 ## Veja também
 
-[Web Form](../commands/web-form.md)</br>
-[Web Event](../commands/web-event.md)</br>
+[Web Form](../commands/web-form)</br>
+[Web Event](../commands/web-event)</br>
 [WebFormItem class](../API/WebFormItemClass.md)

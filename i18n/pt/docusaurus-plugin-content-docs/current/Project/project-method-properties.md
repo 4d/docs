@@ -90,7 +90,7 @@ Por razões de segurança, esta opção está desmarcada por padrão. Cada méto
 
 Quando está marcada, esta opção permite que o método do projeto seja executado pelo motor SQL de 4D. Por padrão, não está selecionado, o que significa que, a menos que explicitamente autorizado, os métodos do projeto 4D são protegidos e não podem ser chamados pelo motor SQL de 4D.
 
-Esta propriedade se aplica a todas as consultas SQL internas e externas --- executadas através do driver ODBC, Código SQL inserido entre o [Begin SQL](../commands-legacy/begin-sql.md)/[End SQL](../commands-legacy/end-sql.md) tags ou o comando [QUERY BY SQL](../commands-legacy/query-by-sql.md).
+Esta propriedade se aplica a todas as consultas SQL internas e externas --- executadas através do driver ODBC, Código SQL inserido entre o [Begin SQL](../commands-legacy/begin-sql)/[End SQL](../commands-legacy/end-sql) tags ou o comando [QUERY BY SQL](../commands-legacy/query-by-sql).
 
 **Notas:**
 

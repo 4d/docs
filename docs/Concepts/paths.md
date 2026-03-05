@@ -42,7 +42,7 @@ With this syntax:
 - absolute pathnames start with a "/"
 - to move up one folder in a relative path, use "../" in front of the pathname (for security, you cannot move up the filesystem).
 
-In POSIX syntax, you will generally use `filesystem` pathnames with [`File`](../commands/file.md) and [`Folder`](../commands/folder.md) commands, for example:
+In POSIX syntax, you will generally use `filesystem` pathnames with [`File`](../commands/file) and [`Folder`](../commands/folder) commands, for example:
 
 ```4d
 var $pathFile : 4D.File
@@ -66,7 +66,7 @@ The following patterns are supported:
 - the text contains ":" and "\" as the second and third character,
 - the text starts with "\\".
 
-Examples with [`Folder`](../commands/folder.md):
+Examples with [`Folder`](../commands/folder):
 
 ```4d
 $ok:=Folder("C:\\Monday";fk platform path).create()
@@ -86,7 +86,7 @@ The following patterns are supported (HFS+ syntax):
 - folder separators are ":"
 - the path must not start with a ":"
 
-Examples with [`Folder`](../commands/folder.md):
+Examples with [`Folder`](../commands/folder):
 
 ```4d
 $ok:=Folder("macintosh hd:";fk platform path).create()
@@ -97,7 +97,7 @@ $ok:=Folder("Monday:Tuesday";fk platform path).create() //a volume must be calle
 
 ### `File` and `Folder` constructors
 
-[`File`](../commands/file.md) and [`Folder`](../commands/folder.md) commands only accept **absolute pathnames**. Relative pathnames are not supported and will return errors. For example, the following code is not allowed:
+[`File`](../commands/file) and [`Folder`](../commands/folder) commands only accept **absolute pathnames**. Relative pathnames are not supported and will return errors. For example, the following code is not allowed:
 
 ```4d
 	//ERROR
@@ -142,3 +142,4 @@ $file:=File("/DATA/info.txt")
 $file:=File("c:\\archives\\local\\jan2019.txt";fk platform path)
 $file:=File(fk backup log file)
 ```
+

@@ -63,4 +63,4 @@ rowNumber 引数の番号がの表内にある行数より大きい場合、行�
 
 ## 参照 
 
-[WP Table insert columns](wp-table-insert-columns.md)  
+[WP Table insert columns](../commands/wp-table-insert-columns)  

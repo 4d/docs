@@ -19,8 +19,8 @@ displayed_sidebar: docs
 
 |Version|Changements|
 |---|---|
-|16 R4|Modifié|
 |<6|Créé|
+|16 R4|Modifié|
 
 </details>
 </div>

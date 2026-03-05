@@ -46,7 +46,7 @@ Pode controlar quebras automáticas em parágrafos usando as funcionalidades aba
 * **Avoid page break inside**: Quando essa opção for estabelecida para um parágrafo, 4D Write Pro previne que esse parágrafo seja quebrada em partes ou em duas ou mais páginas.
 * **Manter com o próximo**: quando se estabelece esta opção para um parágrafo, esse parágrafo não pode separar-se do que lhe segue por uma quebra automática. Ver `wk keep with next` e a [ação padrão](./defining-a-4d-write-pro-area.md#standard-actions) correspondente *keepWithNext*.
 
-Essas opções podem ser estabelecidas usando o menu contextual, ou [atributos](../commands-legacy/4d-write-pro-attributes.md) (`wk avoid widows and orphans`, `wk page break inside paragraph`, ou [ações padrão](./defining-a-4d-write-pro-area.md#standard-actions) *widowAndOrphanControlEnabled*, *avoidPageBreakInside*. 
+Essas opções podem ser estabelecidas usando o menu contextual, ou [atributos](../commands-legacy/4d-write-pro-attributes) (`wk avoid widows and orphans`, `wk page break inside paragraph`, ou [ações padrão](./defining-a-4d-write-pro-area.md#standard-actions) *widowAndOrphanControlEnabled*, *avoidPageBreakInside*. 
 
 <!-- INCLUDE lists-WP.Desc -->
 
@@ -61,7 +61,7 @@ O fundo de documentos 4D Write e elementos de documentos (tabelas, parágrafos, 
 * área de pintura
 * repetir
 
-Esses [atributos](../commands-legacy/4d-write-pro-attributes.md) podem ser definidos programaticamente para os elementos indivíduos ou uma página ou fundos de documentos inteiros com o comando [WP SET ATTRIBUTES](../commands/wp-set-attributes) ou por [ações padrão](./defining-a-4d-write-pro-area.md#standard-actions).
+Esses [atributos](../commands-legacy/4d-write-pro-attributes) podem ser definidos programaticamente para os elementos indivíduos ou uma página ou fundos de documentos inteiros com o comando [WP SET ATTRIBUTES](../commands/wp-set-attributes) ou por [ações padrão](./defining-a-4d-write-pro-area.md#standard-actions).
 
 Usuários podem modificar atributos de fundo via o menu contextual como mostrado abaixo:
 
@@ -287,7 +287,7 @@ Colunas podem ser definidas ao nível de documento (são exibidos no documento i
 Colunas podem ser estabelecidas usando:
 
 * o submenu **Colunas** do menu contextual de área 4D Write Pro,
-* [atributos](../commands-legacy/4d-write-pro-attributes.md) 4D Write Pro,
+* [atributos](../commands-legacy/4d-write-pro-attributes) 4D Write Pro,
 * [ações padrão](./using-4d-write-pro-standard-actions.md) 4D Write Pro.
 
 Pode estabelecer ou obter as propriedades abaixo e ações para colunas:
@@ -329,10 +329,10 @@ Ao ser criada, uma bookmark é armazenada dentro do documento. A bookmark é sal
 
 Diversos comandos permitem que se crie, remova ou use bookmarks:
 
-- [WP NEW BOOKMARK](../commands-legacy/wp-new-bookmark.md) para criar uma nova bookmark de uma faixa,
-- [WP GET BOOKMARKS](../commands-legacy/wp-get-bookmarks.md) para obter todas as bookmarks definidas em um documento,
-- [WP Bookmark range](../commands-legacy/wp-bookmark-range.md) para recuperar uma faixa de uma bookmark existente,
-- [WP DELETE BOOKMARK](../commands-legacy/wp-delete-bookmark.md) para apagar uma bookmark.
+- [WP NEW BOOKMARK](../commands-legacy/wp-new-bookmark) para criar uma nova bookmark de uma faixa,
+- [WP GET BOOKMARKS](../commands-legacy/wp-get-bookmarks) para obter todas as bookmarks definidas em um documento,
+- [WP Bookmark range](../commands-legacy/wp-bookmark-range) para recuperar uma faixa de uma bookmark existente,
+- [WP DELETE BOOKMARK](../commands-legacy/wp-delete-bookmark) para apagar uma bookmark.
 
 
 ## Links
@@ -347,18 +347,18 @@ Em um documento 4D Write Pro, um link pode ser ativado utilizando um simples cli
 
 | Tipo de link | Descrição |
 |--------------|-----------|
-| `url` | Links a páginas web ou a qualquer documento, abre a aplicação associada quando se ativar (\*). A ativação de um link URL ao documento 4D Write Pro (`.4wp`, `.4w7`) substitui ao documento atual na área de 4D Write Pro.<br>(\*) Igual que o comando [OPEN URL](../../commands-legacy/open-url.md). |
+| `url` | Links a páginas web ou a qualquer documento, abre a aplicação associada quando se ativar (\*). A ativação de um link URL ao documento 4D Write Pro (`.4wp`, `.4w7`) substitui ao documento atual na área de 4D Write Pro.<br>(\*) Igual que o comando [OPEN URL](../../commands/open-url). |
 | `bookmark` | Links a bookmarks no documento |
-| `method` | Ativando um link a um método 4D executa o método (sempre que esteja registrado pelo método [SET ALLOWED METHODS](../../commands/set-allowed-methods.md)). |
+| `method` | Ativando um link a um método 4D executa o método (sempre que esteja registrado pelo método [SET ALLOWED METHODS](../../commands/set-allowed-methods)). |
 
 Os hyperlinks são manejados através dos comandos abaixo:
 
-- [WP SET LINK](../commands-legacy/wp-set-link.md) para inserir um link utilizando um objeto de destino.
-- [WP Get links](../commands-legacy/wp-get-links.md) para obter a coleção de todos os links em um objeto de destino.
+- [WP SET LINK](../commands-legacy/wp-set-link) para inserir um link utilizando um objeto de destino.
+- [WP Get links](../commands-legacy/wp-get-links) para obter a coleção de todos os links em um objeto de destino.
 
 :::note
 
-Nota: os links são manejados como atributos, portanto podem ser definidos ou obtidos utilizando os comandos [WP SET ATTRIBUTES](../commands/wp-set-attributes) e [WP RESET ATTRIBUTES](../commands/wp-reset-attributes) assim como a constante `wk link url`. Entretanto, recomendamos utilizar [WP SET LINK](../commands-legacy/wp-set-link.md) e [WP Get links](../commands-legacy/wp-get-links.md) porque automaticamente codificam/decodificam links como URLs. Quando são lidos links utilizando o comando [WP GET ATTRIBUTES](../commands/wp-get-attributes), se a range conter vários hyperlinks, o comando devolve a primeira string de url.
+Nota: os links são manejados como atributos, portanto podem ser definidos ou obtidos utilizando os comandos [WP SET ATTRIBUTES](../commands/wp-set-attributes) e [WP RESET ATTRIBUTES](../commands/wp-reset-attributes) assim como a constante `wk link url`. Entretanto, recomendamos utilizar [WP SET LINK](../commands-legacy/wp-set-link) e [WP Get links](../commands-legacy/wp-get-links) porque automaticamente codificam/decodificam links como URLs. Quando são lidos links utilizando o comando [WP GET ATTRIBUTES](../commands/wp-get-attributes), se a range conter vários hyperlinks, o comando devolve a primeira string de url.
 
 :::
 
@@ -390,7 +390,7 @@ ou
 
 ## Utilizar os comandos do tema Objeto (Formulários)
 
-Os seguintes comandos 4D do tema [Objetos (Formulários)](../../commands/theme/Objects_Forms.md) suportam objetos de formulário do 4D Write Pro:
+Os seguintes comandos 4D do tema [Objetos (Formulários)](../../commands/theme/Objects_Forms) suportam objetos de formulário do 4D Write Pro:
 
 | Comando | Comentários |
 |--------|-------------|

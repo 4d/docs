@@ -67,4 +67,4 @@ Para mais detalles, consulte *Fundir e separar células*.
 ## Ver também 
 
 *Gerenciar tabelas*  
-[WP TABLE MERGE CELLS](wp-table-merge-cells.md)  
+[WP TABLE MERGE CELLS](../commands/wp-table-merge-cells)  

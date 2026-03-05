@@ -22,9 +22,9 @@ displayed_sidebar: docs
 
 この要素は以下のコマンドに対して渡すことができます:
 
-* [WP SELECT](wp-select.md) コマンドに渡してドキュメントのボディを選択
-* [WP Text range](wp-text-range.md) コマンドに渡してボディをレンジとして定義
-* [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) と [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) コマンドに渡してボディの属性を管理
+* [WP SELECT](../commands/wp-select) コマンドに渡してドキュメントのボディを選択
+* [WP Text range](../commands/wp-text-range) コマンドに渡してボディをレンジとして定義
+* [WP SET ATTRIBUTES](../commands/wp-set-attributes) と [WP GET ATTRIBUTES](../commands/wp-get-attributes) コマンドに渡してボディの属性を管理
 
 ## 例題 
 
@@ -45,4 +45,5 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP Text range](wp-text-range.md)  
+[WP Text range](../commands/wp-text-range)  
+

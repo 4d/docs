@@ -20,48 +20,47 @@ displayed_sidebar: docs
 <!-- END REF-->
 
 <div class="no-index">
-<details><summary>História</summary>
+<details><summary>Histórico</summary>
 
-| Release                     | Mudanças   |
-| --------------------------- | ---------- |
-| 11 SQL Release 1            | Modificado |
-| <6 | Created    |
+|Versão|Alterações|
+|---|---|
+|11 SQL Release 1|Modificado|
+|<6|Criado|
 
 </details>
 </div>
 
-## Descrição
+## Descrição 
 
-<!--REF #_command_.Old.Summary-->The **Old** command returns the value held in *aField* before the field was programmatically assigned a value or modified in data entry.<!-- END REF-->
+<!--REF #_command_.Old.Summary-->O comando Old devolve o valor armazenado em *campo* antes de que se tenha atribuído um valor por programação ou modificado durante a entrada de dados.<!-- END REF--> 
 
-Each time you change the current record for a table, 4D creates and maintains in memory a duplicated “image” of the new current record when it is loaded in memory. When modifying a record, you work with the actual image of the record, not this duplicated image. This image is then discarded when you change the current record again.
+Cada vez que mudar o registro atual para uma tabela, 4D cria e mantém em memória um duplicado da “imagem” do novo registro atual no momento em que é carregado na memória (por razões de otimização, 4D faz caso omisso de campo de tipo Texto, Imagem e BLOB.) Quando modificar um registro, trabalha com a imagem atual do registro, não com seu duplicado. Esta imagem é apagada quando mudar novamente o registro atual.
 
-**Old** returns the value from the duplicated image. In other words, for an existing record, it returns the value of the field as it is stored on disk. If a record is new, **Old** returns the default empty value for *field* according to its type. For example, if *field* is an Alpha field, **Old** returns an empty string. If *field* is a numeric field, **Old** returns zero (0), and so on.
+Old devolve o valor da imagem duplicada. Em outras palavras, para um registro existente, devolve ol valor do campo tal como está guardado no disco. Se um registro é novo, Old devolve o valor vazio por padrão de acordo ao tipo de *campo*. Por exemplo, se *campo* é um campo Alfa, Old devolve uma string vazia. Se *campo* é de tipo numérico, Old retorna zero (0), etc.
 
-**Old** works on *aField* whether the field has been modified by a method or by the user during data entry. It can be applied to all field types.
+Old funciona com *campo* se o campo tiver sido modificado por um método ou pelo usuário durante a entrada de dados. Old pode ser aplicada a todos os tipos de campo.
 
-To restore the original value of a field, assign it the value returned by **Old**.
+Para restaurar o valor original de um campo, atribua-lhe o valor retornado por Old.
 
-**Note:** For technical reasons, in the case of Picture and BLOB type fields, the expression returned by **Old** cannot be used directly as a parameter for another command. It is necessary to pass the value via an intermediate variable. Por exemplo:
+**Nota**: por razões técnicas, Old não pode ser passada como parâmetro a outros comandos com campos tipo imagem e BLOB. É necessário passar o valor por uma variável intermediária. Por exemplo:
 
 ```4d
-  //Do NOT write (causes a syntax error):
- $size :=BLOB size(Old([theTable]theBlob)) //INCORRECT
- 
-  //Write:
- $oldBLOB:=Old([theTable]theBlob)
- $size :=BLOB size($oldBLOB) //CORRECT
+  //Não escreva (causa erro de sintaxe):
+ $tamano :=BLOB size(Old([Tabela]Blob)) //INCORRETO
+  //Escreva:
+ $antBLOB:=Old([Tabela]Blob)
+ $tamano :=BLOB size($antBLOB) //CORRETO
 ```
 
-## Veja também
+## Ver também 
 
-[Modified](modified.md)
+[Modified](../commands/modified)  
 
 ## Propriedades
 
-|                   |     |
-| ----------------- | --- |
-| Número de comando | 35  |
-| Thread safe       | sim |
+|  |  |
+| --- | --- |
+| Número do comando | 35 |
+| Thread-seguro | yes |
 
 

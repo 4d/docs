@@ -19,7 +19,7 @@ Las imágenes se muestran en un bucle continuo. Cuando el usuario llega a la úl
 
 #### Comandos
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
 
 ---
 
@@ -39,7 +39,7 @@ Muestra la primera imagen todo el tiempo, excepto cuando el usuario hace clic en
 
 #### Comandos
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
 
 ---
 
@@ -59,7 +59,7 @@ Permite al usuario mantener pulsado el botón del ratón para mostrar las imáge
 
 #### Comandos
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
 
 ---
 
@@ -79,7 +79,7 @@ Permite recorrer el contenido del botón de imagen a la velocidad especificada (
 
 #### Comandos
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
 
 ---
 
@@ -99,7 +99,7 @@ Modifica el contenido del botón de la imagen cuando el cursor del ratón pasa p
 
 #### Comandos
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
 
 ---
 
@@ -119,5 +119,5 @@ Permite definir la última miniatura como la que se mostrará cuando el botón e
 
 #### Comandos
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
 

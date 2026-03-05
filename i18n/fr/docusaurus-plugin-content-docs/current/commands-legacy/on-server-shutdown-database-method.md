@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Server Shutdown database method.Summary-->La **On Server Shutdown database method** est appelée une fois sur le poste serveur lorsque la base courante est refermée sur 4D Server.<!-- END REF--> La **On Server Shutdown database method** n'est appelée dans aucun environnement 4D autre que 4D Server.
 
-Pour refermer la base courante sur le serveur, vous pouvez sélectionner la commande de menu **Fermer la base...** sur le serveur. Vous pouvez également choisir la commande **Quitter** ou appeler la commande [QUIT 4D](quit-4d.md) au sein d'une procédure stockée exécutée sur le serveur.
+Pour refermer la base courante sur le serveur, vous pouvez sélectionner la commande de menu **Fermer la base...** sur le serveur. Vous pouvez également choisir la commande **Quitter** ou appeler la commande [QUIT 4D](../commands/quit-4d) au sein d'une procédure stockée exécutée sur le serveur.
 
 Lorsque le processus de fermeture de la base a été engagé, 4D effectue les actions suivantes :
 
@@ -34,4 +34,5 @@ La **On Server Shutdown database method** est l'emplacement idéal pour :
 **Important** : Si vous utilisez la **On Server Shutdown database method** pour refermer des procédures stockées, tenez compte du fait que le serveur quitte dès la fin de l'exécution de la **On Server Shutdown database method** (et non des procédures stockées). Si des procédures stockées tournent encore à cet instant, elles sont purement et simplement tuées.   
 Par conséquent, si vous voulez être certain que les procédures stockées se terminent avant que le serveur ne les tue, il faut que la **On Server Shutdown database method** leur signale qu'elles doivent mettre fin à leur exécution (par le test d'une variable interprocess, par exemple) mais aussi qu'elle leur laisse le temps de se refermer (boucle de n secondes ou test d'une autre variable interprocess).
 
-Si vous voulez que du code soit exécuté automatiquement sur un poste client lorsqu'un 4D distant met un terme à sa connexion au serveur, utilisez la [Semaphore](semaphore.md).
+Si vous voulez que du code soit exécuté automatiquement sur un poste client lorsqu'un 4D distant met un terme à sa connexion au serveur, utilisez la [Semaphore](../commands/semaphore).
+

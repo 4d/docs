@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 Para mayor información, consulte el párrafo “” abajo.
 
-La petición debe haber sido aceptada previamente por el [Método base On Web Authentication](metodo-base-on-web-authentication.md) (si existe) y el servidor web debe lanzarse.
+La petición debe haber sido aceptada previamente por el [Método base On Web Authentication](../commands/metodo-base-on-web-authentication) (si existe) y el servidor web debe lanzarse.
 
 El Método base On Web Connection recibe seis parámetros de tipo texto, pasados por 4D ($url, $http, $ipBrowser, $ipServer, $user y $pw). Los contenidos de estos parámetros son los siguientes: 
 
@@ -98,10 +98,11 @@ Los parámetros *$user* y *$pw* reciben el nombre de usuario y la contraseña in
 
 El Método base On Web Connection puede utilizarse como punto de entrada para el servidor web 4D, bien sea utilizando la URL especial *4DCGI*, o utilizando las URLs de comando personalizadas.
 
-**Advertencia:** la llamada de un comando 4D que muestra un elemento de interfaz ([DIALOG](../commands/dialog.md), [ALERT](alert.md)...) termina el procesamiento del método.
+**Advertencia:** la llamada de un comando 4D que muestra un elemento de interfaz ([DIALOG](../commands/dialog), [ALERT](../commands/alert)...) termina el procesamiento del método.
 
 El Método base On Web Connection se llama en los siguientes casos:
 
 * Cuando 4D recibe el URL */4DCGI*. El método base se llama con el URL */4DCGI/<action>* en *$url*.
 * Cuando una página web llamada con un URL de tipo *<ruta>/<archivo>* no se encuentra. El método base se llama con la URL.
 * Cuando una página web se llama con un URL del tipo *<file>/* y ninguna página ha sido definida por defecto. El método base se llama con la URL.
+

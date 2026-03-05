@@ -11,7 +11,7 @@ Le formulaire multi-pages suivant utilise un onglet :
 
 Pour passer d’un écran à l’autre, l’utilisateur clique simplement sur l’onglet correspondant.
 
-Un onglet peut être utilisé, entre autres, pour gérer la navigation entre les pages d’un formulaire multi-pages. Si l'onglet est utilisé comme outil de navigation de page, la commande [`FORM GOTO PAGE`](../commands-legacy/form-goto-page.md) ou l'action standard `gotoPage` est utilisée lorsque l'utilisateur clique sur un onglet.
+Un onglet peut être utilisé, entre autres, pour gérer la navigation entre les pages d’un formulaire multi-pages. Si l'onglet est utilisé comme outil de navigation de page, la commande [`FORM GOTO PAGE`](../commands-legacy/form-goto-page) ou l'action standard `gotoPage` est utilisée lorsque l'utilisateur clique sur un onglet.
 
 Un onglet peut aussi être utilisé pour contrôler les données qui sont affichées dans un sous-formulaire. On peut, par exemple, implémenter un rolodex à l’aide d’un onglet. Chaque onglet afficherait alors une des lettres de l’alphabet et l’action de l’onglet serait de charger les informations correspondantes à la lettre sur lequel l’utilisateur a cliqué.
 
@@ -81,13 +81,13 @@ Vous pouvez créer un tableau Texte qui contient les noms de chaque page du form
  arrPages{3}:="Notes"  
 ```
 
-> Vous pouvez également stocker les noms des pages dans une liste hiérarchique et utiliser la commande [LIST TO ARRAY](../commands-legacy/list-to-array.md) pour charger les valeurs dans le tableau.
+> Vous pouvez également stocker les noms des pages dans une liste hiérarchique et utiliser la commande [LIST TO ARRAY](../commands-legacy/list-to-array) pour charger les valeurs dans le tableau.
 
 ## Fonctionnalités de Goto page
 
 ### Commande FORM GOTO PAGE
 
-Vous pouvez utiliser la commande [`FORM GOTO PAGE`](../commands-legacy/form-goto-page.md) dans la méthode de l'onglet :
+Vous pouvez utiliser la commande [`FORM GOTO PAGE`](../commands-legacy/form-goto-page) dans la méthode de l'onglet :
 
 ```4d
 FORM GOTO PAGE(arrPages)

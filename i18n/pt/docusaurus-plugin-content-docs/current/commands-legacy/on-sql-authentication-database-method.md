@@ -30,9 +30,9 @@ displayed_sidebar: docs
 
 ## 
 
-<!--REF #_command_.On SQL Authentication database method.Summary-->O On SQL Authentication database method pode ser utilizado para filtrar os pedidos enviados ao servidor SQL integrado de 4D.<!-- END REF--> Este filtro pode estar baseado no nome e senha, assim como 7(opcional) no endereço IP do usuário. O desenvolvedor pode utilizar sua própria tabela de usuários ou a dos usuários 4D para avaliar os identificadores de conexão. Quando tiver validada a conexão, o comando [CHANGE CURRENT USER](change-current-user.md) pode ser utilizado para controlar o acesso das pedidos dentro do banco 4D.
+<!--REF #_command_.On SQL Authentication database method.Summary-->O On SQL Authentication database method pode ser utilizado para filtrar os pedidos enviados ao servidor SQL integrado de 4D.<!-- END REF--> Este filtro pode estar baseado no nome e senha, assim como 7(opcional) no endereço IP do usuário. O desenvolvedor pode utilizar sua própria tabela de usuários ou a dos usuários 4D para avaliar os identificadores de conexão. Quando tiver validada a conexão, o comando [CHANGE CURRENT USER](../commands/change-current-user) pode ser utilizado para controlar o acesso das pedidos dentro do banco 4D.
 
-Quando existir, o On SQL Authentication database method é chamado automaticamente por 4D ou 4D Server em cada conexão externa ao servidor SQL. Portanto o Sistema interno de gestão dos usuários de 4D não está ativado. A conexão é aceita apenas se o método de banco retorna *True* em $result e se o comando [CHANGE CURRENT USER](change-current-user.md) for executado com êxito. Se uma destas condições não for cumprida, o pedido é recusado.
+Quando existir, o On SQL Authentication database method é chamado automaticamente por 4D ou 4D Server em cada conexão externa ao servidor SQL. Portanto o Sistema interno de gestão dos usuários de 4D não está ativado. A conexão é aceita apenas se o método de banco retorna *True* em $result e se o comando [CHANGE CURRENT USER](../commands/change-current-user) for executado com êxito. Se uma destas condições não for cumprida, o pedido é recusado.
 
 **Nota**: A instrução **SQL LOGIN(SQL\_INTERNAL**;$usuário;$senha) não chama ao On SQL Authentication database method já que é uma conexão interna neste caso.
 
@@ -62,11 +62,11 @@ Deve controlar os identificadores da conexão SQL no On SQL Authentication datab
 
 **Nota:** Se On SQL Authentication database method não existir, a conexão é avaliada utilizando o Sistema integrado de gestão de usuários de 4D (Se estiver ativado, em outras palavras, se uma senha tiver sido atribuída ao Desenhista). Se este Sistema não estiver ativado, os usuários estão conectados com os direitos de acesso do Desenhista (acesso livre).
 
-Se passa *True* em $result, deve chamar com sucesso ao comando [CHANGE CURRENT USER](change-current-user.md) no On SQL Authentication database method para que a pedido seja aceito e para que 4D abra uma sessão SQL para o usuário.
+Se passa *True* em $result, deve chamar com sucesso ao comando [CHANGE CURRENT USER](../commands/change-current-user) no On SQL Authentication database method para que a pedido seja aceito e para que 4D abra uma sessão SQL para o usuário.
 
-O uso do comando [CHANGE CURRENT USER](change-current-user.md) pode ser usada para implementar um sistema de autenticação virtual que tem a dupla vantagem de permitir o controle das ações de conexão e de esconder os identificadores da conexão na sessão SQL 4D.
+O uso do comando [CHANGE CURRENT USER](../commands/change-current-user) pode ser usada para implementar um sistema de autenticação virtual que tem a dupla vantagem de permitir o controle das ações de conexão e de esconder os identificadores da conexão na sessão SQL 4D.
 
-Quando o sistema de senhas integrado de 4D não está ativo, a execução do comando [CHANGE CURRENT USER](change-current-user.md) não tem efeito; os usuários se conectam com os direitos de acesso do Desenhador. 
+Quando o sistema de senhas integrado de 4D não está ativo, a execução do comando [CHANGE CURRENT USER](../commands/change-current-user) não tem efeito; os usuários se conectam com os direitos de acesso do Desenhador. 
 
 Este exemplo do On SQL Authentication database method verifica que o pedido de conexão provenha da rede interna, confirma os identificadores e depois atribui os direitos de acessos "sql\_user" para a sessão SQL.
 
@@ -92,3 +92,4 @@ Este exemplo do On SQL Authentication database method verifica que o pedido de c
     $result:=False
  End if
 ```
+

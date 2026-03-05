@@ -113,5 +113,5 @@ Vous souhaitez insérer un saut de section continu pour avoir une section à une
 
 ## Voir également
 
-[WP Get breaks](../commands-legacy/wp-get-breaks.md)</br>
+[WP Get breaks](../commands-legacy/wp-get-breaks)</br>
 [WP Insert document body](wp-insert-document-body.md)

@@ -33,13 +33,13 @@ En el parámetro *targetObj*, puede pasar:
 
 En el parámetro *formula*, pase la fórmula 4D a evaluar. Puede pasar:
 
-- o un [objeto de la fórmula](../../commands/formula.md-objects) creado por el comando [**Formula**](../../commands/formula.md) o [**Formula from string**](../../commands/formula.md-from-string),
+- o un [objeto de la fórmula](../../commands/formula.md-objects) creado por el comando [**Formula**](../../commands/formula) o [**Formula from string**](../../commands/formula.md-from-string),
 - o un objeto que contiene dos propiedades:
 
 | **Propiedad** | **Tipo** | **Description**                                                                                                                                                                                 |
 | ------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | name          | Text     | Nombre que se mostrará para la fórmula en el documento                                                                                                                                          |
-| formula       | Object   | El [objeto de la fórmula](../../commands/formula.md-objects) creado por el comando [**Formula**](../../commands/formula.md) o [**Formula from string**](../../commands/formula.md-from-string), |
+| formula       | Object   | El [objeto de la fórmula](../../commands/formula.md-objects) creado por el comando [**Formula**](../../commands/formula) o [**Formula from string**](../../commands/formula.md-from-string), |
 
 Cuando se utiliza un objeto con una fórmula *name*, este nombre se muestra en el documento en lugar de la referencia de fórmula cuando las fórmulas se muestran como referencia, y en el consejo de fórmula cuando se muestran como valor o símbolos. Si la propiedad *name* contiene una cadena vacía o se omite, se elimina del objeto y la fórmula se muestra por defecto. Para más información, vea la página [Gestión de formulas](../managing-formulas.md).
 
@@ -138,6 +138,6 @@ Resultado:
 ## Ver también
 
 *Managing formulas*\
-[WP COMPUTE FORMULAS](../commands-legacy/wp-compute-formulas.md)</br>
-[WP FREEZE FORMULAS](../commands-legacy/wp-freeze-formulas.md)</br>
-[WP Get formulas](../commands-legacy/wp-get-formulas.md)
+[WP COMPUTE FORMULAS](../commands-legacy/wp-compute-formulas)</br>
+[WP FREEZE FORMULAS](../commands-legacy/wp-freeze-formulas)</br>
+[WP Get formulas](../commands-legacy/wp-get-formulas)

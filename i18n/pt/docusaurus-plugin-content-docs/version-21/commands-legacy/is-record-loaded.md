@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.Is record loaded.Summary-->O comando **Is record loaded** devolve [True](true.md "True") se o registro atual de *tabela* é carregado no processo atual.<!-- END REF-->  
+<!--REF #_command_.Is record loaded.Summary-->O comando **Is record loaded** devolve [True](../commands/true) se o registro atual de *tabela* é carregado no processo atual.<!-- END REF-->  
   
 **4D Server**: Em princípio, quando tabelas estiverem linkadas por relações automáticas, os registros atuais de tabelas relacionadas são carregados automaticamente (ver \[#title id="1"/\]). Entretanto, por razões de otimização, 4D Server só carrega os registros quando necessário, por exemplo quando lendo ou atribuindo um campo ao registro relacionado. Como resultado disso, no contexto do comando **Is record loaded**, será retornado False em modo remoto (retorna True em modo local).
 

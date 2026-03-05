@@ -50,7 +50,7 @@ DISPLAY SELECTIONを実行した直後、カレントレコードが存在しな
 
 *selectMode*を渡さない場合は、デフォルトとしてMultiple Selectionモードが使用されます。
 
-*enterList*引数を使用すると、表示されるリスト中でリスト更新を許可することができます。これにより、ユーザは直接出力フォーム上でレコードを選択し、値を変更できるようになります。このモードを有効にするには[True](true.md "True")を渡し、無効にするには[False](false.md "False")を渡します。引数*enterList*を渡さない場合、デフォルトとしてリスト更新可オプションが無効になります。  
+*enterList*引数を使用すると、表示されるリスト中でリスト更新を許可することができます。これにより、ユーザは直接出力フォーム上でレコードを選択し、値を変更できるようになります。このモードを有効にするには[True](../commands/true)を渡し、無効にするには[False](../commands/false)を渡します。引数*enterList*を渡さない場合、デフォルトとしてリスト更新可オプションが無効になります。  
 DISPLAY SELECTION コマンドでは、この引数によりリストの値の選択が許可されるだけであり、変更は許可されないということを覚えておいてください。実際 DISPLAY SELECTION により、カレントテーブルは読み込みのみ状態になります。[MODIFY SELECTION](modify-selection.md)を使用した場合にのみ、実際に値を入力することができます。
 
 **Note:** [OBJECT SET ENTERABLE](object-set-enterable.md)コマンドを使用し、オンザフライでリスト更新可オプションを有効、または無効に設定できます。 

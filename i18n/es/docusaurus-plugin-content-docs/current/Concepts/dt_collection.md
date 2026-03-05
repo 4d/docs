@@ -46,18 +46,18 @@ Las colecciones deben haber sido instanciadas, de lo contrario intentar leer o m
 
 La instanciación de la colección puede realizarse de una de las siguientes maneras:
 
-- usando el comando [`New collection`](../commands/new-collection.md)
+- usando el comando [`New collection`](../commands/new-collection)
 - utilizando el operador `[]`.
 
 :::info
 
-Varios comandos y funciones 4D devuelven colecciones, por ejemplo [`Monitored activity`](../commands-legacy/monitored-activity.md) o [`collection.copy`](../API/CollectionClass.md#copy). En este caso, no es necesario instanciar explícitamente la colección, el lenguaje 4D lo hace por usted.
+Varios comandos y funciones 4D devuelven colecciones, por ejemplo [`Monitored activity`](../commands-legacy/monitored-activity) o [`collection.copy`](../API/CollectionClass.md#copy). En este caso, no es necesario instanciar explícitamente la colección, el lenguaje 4D lo hace por usted.
 
 :::
 
 ### Comando `New collection`
 
-El comando [`New collection`](../commands/new-collection.md) crea una nueva colección vacía o prellenada y devuelve su referencia.
+El comando [`New collection`](../commands/new-collection) crea una nueva colección vacía o prellenada y devuelve su referencia.
 
 Ejemplos:
 
@@ -105,8 +105,8 @@ Si crea un literal de colección que contenga un único elemento, asegúrese de 
 
 Puede crear dos tipos de colecciones:
 
-- las colecciones estándar (no compartidas), utilizando el comando [`New collection`](commands/new-collection.md) o la sintaxis literal de la colección (`[]`). Estas colecciones pueden ser editadas sin ningún control de acceso específico, pero no pueden ser compartidas entre procesos.
-- las colecciones compartidas, utilizando el comando [`New shared collection`](commands/new-shared-collection.md). Estas colecciones pueden ser compartidas entre procesos, incluidos los hilos apropiativos. El acceso a estas colecciones se controla mediante estructuras [`Use...End use`](Concepts/shared.md#useend-use).
+- las colecciones estándar (no compartidas), utilizando el comando [`New collection`](../commands/new-collection) o la sintaxis literal de la colección (`[]`). Estas colecciones pueden ser editadas sin ningún control de acceso específico, pero no pueden ser compartidas entre procesos.
+- las colecciones compartidas, utilizando el comando [`New shared collection`](../commands/new-shared-collection). Estas colecciones pueden ser compartidas entre procesos, incluidos los hilos apropiativos. El acceso a estas colecciones se controla mediante estructuras [`Use...End use`](Concepts/shared.md#useend-use).
 
 Para más información, consulte la sección [Objetos y colecciones compartidos](shared.md).
 

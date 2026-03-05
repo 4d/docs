@@ -29,7 +29,7 @@ La commande retourne le nombre total de pages de *objCible*.
 
 Si vous passez une sous-section, le nombre de pages de la section parente est retourné.
 
-Les mêmes paramètres d'affichage que la commande [WP PRINT](wp-print.md) sont utilisés avec **WP Get page count** :
+Les mêmes paramètres d'affichage que la commande [WP PRINT](../commands/wp-print) sont utilisés avec **WP Get page count** :
 
 * en-têtes : visibles
 * pieds : visibles
@@ -53,3 +53,4 @@ Vous souhaitez connaître le nombre total de pages des documents 4D Write Pro st
  End while
  ALERT("Nombre total de pages des manuels de la sélection : "+String($totalCount))
 ```
+

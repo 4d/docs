@@ -41,6 +41,6 @@ Se quiser criar um cabeçalho para as páginas corretas de uma seção:
 
 ## Ver também 
 
-[WP DELETE HEADER ](wp-delete-header.md)  
-[WP Get header](wp-get-header.md)  
-[WP New footer](wp-new-footer.md)  
+[WP DELETE HEADER ](../commands/wp-delete-header)  
+[WP Get header](../commands/wp-get-header)  
+[WP New footer](../commands/wp-new-footer)  

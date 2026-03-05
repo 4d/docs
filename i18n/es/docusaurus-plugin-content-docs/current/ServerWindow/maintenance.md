@@ -82,4 +82,4 @@ Este botón suspende todas las operaciones de registro iniciadas en el servidor.
 
 Cuando los registros se han puesto en pausa, el título del botón cambia a **Reanudar registro**, para que pueda reanudar las operaciones de registro.
 
-> Puede pausar y reanudar el registro utilizando el comando [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md).
+> Puede pausar y reanudar el registro utilizando el comando [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter).

@@ -26,8 +26,8 @@ displayed_sidebar: docs
 
 |Release|Changes|
 |---|---|
-|13|Modified|
 |<6|Created|
+|13|Modified|
 
 </details>
 </div>
@@ -80,7 +80,7 @@ If your application deals with this information, it is up to you to parse the he
 **Notes:** 
 
 * For performance reasons, the size of data passing through the $http parameter must not exceed 32 KB. Beyond this size, they are truncated by the 4D HTTP server.
-* For more information about this parameter, please refer to the description of the [On Web Connection database method](on-web-connection-database-method.md).
+* For more information about this parameter, please refer to the description of the [On Web Connection database method](../commands/on-web-connection-database-method).
 * **Web client IP address**  
 The $ipBrowser parameter receives the IP address of the browser’s machine. This information can allow you to distinguish between Intranet and Internet connections.  
 **Note:** 4D returns IPv4 addresses in a hybrid IPv6/IPv4 format written with a 96-bit prefix, for example ::ffff:192.168.2.34 for the IPv4 address 192.168.2.34\. For more information, refer to the *Support of IPv6* section.
@@ -97,13 +97,13 @@ The **On Web Authentication database method** returns a boolean in $result:
    * If $result is **True**, the connection is accepted.  
    * If $result is **False**, the connection is refused.
 
-The [On Web Connection database method](on-web-connection-database-method.md) is only executed if the connection has been accepted by **On Web Authentication**.
+The [On Web Connection database method](../commands/on-web-connection-database-method) is only executed if the connection has been accepted by **On Web Authentication**.
 
-**WARNING:** If no value is set to *$result* or if *$result* is not defined in the On Web Authentication database method, the connection is considered as accepted and the [On Web Connection database method](on-web-connection-database-method.md) is executed.
+**WARNING:** If no value is set to *$result* or if *$result* is not defined in the On Web Authentication database method, the connection is considered as accepted and the [On Web Connection database method](../commands/on-web-connection-database-method) is executed.
 
 **Notes :**
 
-* Do not call any interface elements in the **On Web Authentication database method** ([ALERT](alert.md), [DIALOG](../commands/dialog.md), etc.) because otherwise its execution will be interrupted and the connection refused. The same thing will happen if an error occurs during its processing.
+* Do not call any interface elements in the **On Web Authentication database method** ([ALERT](../commands/alert), [DIALOG](../commands/dialog), etc.) because otherwise its execution will be interrupted and the connection refused. The same thing will happen if an error occurs during its processing.
 * It is possible to prevent execution by *4DACTION* or *4DSCRIPT* for each project method via the “Available through 4D HTML tags and URLs (4DACTION...)” option in the Method properties dialog box. For more information about this point, please refer to the *Connection Security* section.
 
 ## On Web Authentication Database Method calls 
@@ -114,7 +114,7 @@ The On Web Authentication database method is therefore called in the following c
 
 * when 4D receives a URL beginning with *4DACTION/*
 * when 4D receives a URL requesting a static page that does not exist
-* when 4D receives a root access URL and no home page has been set in the Database Settings or by means of the [WEB SET HOME PAGE](web-set-home-page.md) command
+* when 4D receives a root access URL and no home page has been set in the Database Settings or by means of the [WEB SET HOME PAGE](../commands/web-set-home-page) command
 * when 4D processes a *4DSCRIPT* tag in a semi-dynamic page
 * when 4D processes a *4DLOOP* tag based on a method in a semi-dynamic page.
 
@@ -205,3 +205,4 @@ var $i : Integer
     End if
  End for
 ```
+

@@ -23,8 +23,8 @@ displayed_sidebar: docs
 
 |Versão|Alterações|
 |---|---|
-|13|Modificado|
 |<6|Criado|
+|13|Modificado|
 
 </details>
 </div>
@@ -37,7 +37,7 @@ O **On Server Open Connection database method** é chamado cada vez que:
 
 * um 4D remoto se conecta (inicio do processo principal)
 * um 4D remoto abre o entorno Desenho (inicio do processo de Desenho)
-* um 4D remoto inicia um processo global, (cujo nome começa por "$") o qual necessita da criação de um processo cooperativo no servidor **(\*)**. Este processo pode ser criado utilizando o comando [New process](new-process.md), um comando de menu ou caixa de diálogo "Executar um método".
+* um 4D remoto inicia um processo global, (cujo nome começa por "$") o qual necessita da criação de um processo cooperativo no servidor **(\*)**. Este processo pode ser criado utilizando o comando [New process](../commands/new-process), um comando de menu ou caixa de diálogo "Executar um método".
 
 Em cada caso com um 4D remoto, três processos são iniciados. Um na máquina cliente e outros dois no equipo servidor. Na máquina cliente, o processo executa o código e envia as petições a 4D Server. No equipo servidor, o **processo 4D Client** mantém o entorno da base de dados do processo cliente (as seleções atuais e o bloqueio de registros para o processo usuário) e responde aos pedidos enviadas pelo processo executado na máquina cliente. O **processo base 4D Client** está a cargo de controlar o processo 4D Client correspondente.
 
@@ -54,9 +54,9 @@ Em cada caso com um 4D remoto, três processos são iniciados. Um na máquina cl
 
 O On Server Open Connection database method é executado no equipo servidor no processo 4D Client que provocou a chamada do método. 
 
-Por exemplo, se um 4D remoto se conecta a uma base 4D Server interpretada, é iniciado o processo usuário, o processo de desenho e o processo de registro do cliente (por defeito). O On Server Open Connection database method se executa três vezes seguidas. A primeira vez dentro do processo principal, a segunda vez no processo de inscrição do cliente e a terceira vez no processo de desenhoo. Se os três processos são respectivamente o sexto, sétimo e oitavo processo a iniciar-se no equipo servidor, e é chamado [Current process](current-process.md) desde o On Server Open Connection database method, a primeira vez [Current process](current-process.md) devolve 6, a segunda vez 7 e a terceira 8.
+Por exemplo, se um 4D remoto se conecta a uma base 4D Server interpretada, é iniciado o processo usuário, o processo de desenho e o processo de registro do cliente (por defeito). O On Server Open Connection database method se executa três vezes seguidas. A primeira vez dentro do processo principal, a segunda vez no processo de inscrição do cliente e a terceira vez no processo de desenhoo. Se os três processos são respectivamente o sexto, sétimo e oitavo processo a iniciar-se no equipo servidor, e é chamado [Current process](../commands/current-process) desde o On Server Open Connection database method, a primeira vez [Current process](../commands/current-process) devolve 6, a segunda vez 7 e a terceira 8.
 
-Observe que o On Server Open Connection database method se executa no equipo servidor, ao interior do processo 4D Client no servidor, independente do processo executado no cliente. Além disso, no momento em que se invoca o método, o processo 4D Client ainda não foi nomeado ([Process info](../commands/process-info.md) não devolverá neste momento o nome do processo 4D Client).
+Observe que o On Server Open Connection database method se executa no equipo servidor, ao interior do processo 4D Client no servidor, independente do processo executado no cliente. Além disso, no momento em que se invoca o método, o processo 4D Client ainda não foi nomeado ([Process info](../commands/process-info) não devolverá neste momento o nome do processo 4D Client).
 
 O On Server Open Connection database method não têm acesso à tabela das variáveis processo do processo executado no client. Esta tabela reside no equipo client, não no equipo servidor. 
 
@@ -78,15 +78,15 @@ Esta tabela detalha a informação oferecida pelos três parâmetros passados no
 | $id            | Número de conexão utilizado internamente por 4D Server para identificá-la  |
 | $toIgnore            | Obsoleto: sempre devolve 0 mas deve ser declarado                          |
 
-Estes números de referencia não são utilizados diretamente como fontes de informação a passar, por exemplo, como parâmetros a um comando 4D. No entanto, oferecem uma maneira particular de identificar um processo 4D Client entre o On Server Open Connection database method e o [On Server Close Connection database method](on-server-close-connection-database-method.md). A combinação destes valores é único no momento de uma seção 4D Server. Ao guardar esta informação em uma tabela ou em um array entre processos, os dois métodos base podem trocar informações. No exemplo ao final desta sessão, os dois métodos base utilizam esta informação para armazenar a data e hora de inicio e fim de uma conexão no mesmo registro de uma tabela.
+Estes números de referencia não são utilizados diretamente como fontes de informação a passar, por exemplo, como parâmetros a um comando 4D. No entanto, oferecem uma maneira particular de identificar um processo 4D Client entre o On Server Open Connection database method e o [On Server Close Connection database method](../commands/on-server-close-connection-database-method). A combinação destes valores é único no momento de uma seção 4D Server. Ao guardar esta informação em uma tabela ou em um array entre processos, os dois métodos base podem trocar informações. No exemplo ao final desta sessão, os dois métodos base utilizam esta informação para armazenar a data e hora de inicio e fim de uma conexão no mesmo registro de uma tabela.
 
 ## Exemplo 1 
 
-O seguinte exemplo mostra como manter um histórico das conexões a base de dados utilizando o On Server Open Connection database method e utilizando o [On Server Close Connection database method](on-server-close-connection-database-method.md). A tabela *\[Server Log\]* (mostrada a continuação) se utiliza para fazer seguimento aos processos de conexão: 
+O seguinte exemplo mostra como manter um histórico das conexões a base de dados utilizando o On Server Open Connection database method e utilizando o [On Server Close Connection database method](../commands/on-server-close-connection-database-method). A tabela *\[Server Log\]* (mostrada a continuação) se utiliza para fazer seguimento aos processos de conexão: 
 
 ![](../assets/en/commands/pict69173.en.png)
 
-A informação armazenada nesta tabela é administrada pelo On Server Open Connection database method e o [On Server Close Connection database method](on-server-close-connection-database-method.md) listado a continuação:
+A informação armazenada nesta tabela é administrada pelo On Server Open Connection database method e o [On Server Close Connection database method](../commands/on-server-close-connection-database-method) listado a continuação:
 
 ```4d
   // Método base On Server Open Connection
@@ -147,5 +147,6 @@ O seguinte exemplo evita uma nova conexão entre as 2 e 4 A.M.
 | --- | --- |
 | Número do comando | 16001 |
 | Thread-seguro | no |
+
 
 

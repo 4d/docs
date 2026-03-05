@@ -81,7 +81,7 @@ BASICモードと同様に、ユーザーは接続時に自分の名前とパス
 
 - Webサーバーが、存在しないリソースを要求する URL を受信した場合
 - when the web server receives a URL beginning with `4DACTION/`
-- Webサーバーがルートアクセス URL を受信したが、ストラクチャー設定または [`WEB SET HOME PAGE`](../commands-legacy/web-set-home-page.md) コマンドでホームページが設定されていないとき
+- Webサーバーがルートアクセス URL を受信したが、ストラクチャー設定または [`WEB SET HOME PAGE`](../commands-legacy/web-set-home-page) コマンドでホームページが設定されていないとき
 - Webサーバーが、セミダイナミックページ内でコードを実行するタグ (`4DSCRIPT`など) を処理した場合。
 
 次の場合には、`On Web Authentication` データベースメソッドは呼び出されません:

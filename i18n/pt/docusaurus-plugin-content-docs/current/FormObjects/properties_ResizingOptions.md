@@ -41,13 +41,13 @@ Si se hace clic en una celda de la columna falsa, el comando [LISTBOX GET CELL P
 
 #### Comandos
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
 
 ---
 
 ## Dimensionamento horizontal
 
-Esta propriedade específica se o tamanho horizontal de um objeto deve ser movido ou redimensionado quando um usuário redimensiona o formulário. It can also be set dynamically by the [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options.md) language command.
+Esta propriedade específica se o tamanho horizontal de um objeto deve ser movido ou redimensionado quando um usuário redimensiona o formulário. It can also be set dynamically by the [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options) language command.
 
 Estão disponíveis três opções:
 
@@ -71,13 +71,13 @@ Estão disponíveis três opções:
 
 #### Comandos
 
-[`OBJECT GET RESIZING OPTIONS`](../commands-legacy/object-get-resizing-options.md) - [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options.md)
+[`OBJECT GET RESIZING OPTIONS`](../commands-legacy/object-get-resizing-options) - [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options)
 
 ---
 
 ## Alinhamento vertical
 
-This property specifies if an object should be vertically moved or resized when a user resizes the form. It can also be set dynamically by the [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options.md) command.
+This property specifies if an object should be vertically moved or resized when a user resizes the form. It can also be set dynamically by the [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options) command.
 
 Estão disponíveis três opções:
 
@@ -101,7 +101,7 @@ Estão disponíveis três opções:
 
 #### Comandos
 
-[`OBJECT GET RESIZING OPTIONS`](../commands-legacy/object-get-resizing-options.md) - [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options.md)
+[`OBJECT GET RESIZING OPTIONS`](../commands-legacy/object-get-resizing-options) - [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options)
 
 ---
 
@@ -146,5 +146,5 @@ Designa se o tamanho da coluna pode ser modificado pelo usuário.
 
 #### Comandos
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
 

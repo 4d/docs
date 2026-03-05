@@ -35,11 +35,11 @@ El parámetro opcional *\** es útil en caso de una arquitectura que utilice com
   
 • Cuando el comando se llama desde un componente:
 
-\- si se pasa el parámetro *\**, el comando devuelve [True](true.md "True") o [False](false.md "False") dependiendo del modo de ejecución de la base host, 
+\- si se pasa el parámetro *\**, el comando devuelve [True](../commands/true) o [False](../commands/false) dependiendo del modo de ejecución de la base host, 
 
-\- si no se pasa el parámetro *\**, el comando devuelve [True](true.md "True") o [False](false.md "False") dependiendo del modo de ejecución del componente.  
+\- si no se pasa el parámetro *\**, el comando devuelve [True](../commands/true) o [False](../commands/false) dependiendo del modo de ejecución del componente.  
   
-• Cuando el comando se llama desde un método de una base local, devuelve [True](true.md "True") o [False](false.md "False") dependiendo del modo de ejecución de la base local.
+• Cuando el comando se llama desde un método de una base local, devuelve [True](../commands/true) o [False](../commands/false) dependiendo del modo de ejecución de la base local.
 
 ## Ejemplo 
 

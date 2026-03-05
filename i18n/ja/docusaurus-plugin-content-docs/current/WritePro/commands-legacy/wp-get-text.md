@@ -66,5 +66,5 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP SET TEXT](wp-set-text.md)  
+[WP SET TEXT](../commands/wp-set-text)  
 *フォーミュラの管理*  

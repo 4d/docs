@@ -35,5 +35,5 @@ displayed_sidebar: docs
 ## 参照 
 
   
-[MOBILE APP REFRESH SESSIONS](mobile-app-refresh-sessions.md)  
-[On Mobile App Action データベースメソッド](on-mobile-app-action-database-method.md)  
+[MOBILE APP REFRESH SESSIONS](../commands/mobile-app-refresh-sessions)  
+[On Mobile App Action データベースメソッド](../commands/on-mobile-app-action-database-method)  

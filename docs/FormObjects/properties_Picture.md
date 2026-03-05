@@ -25,7 +25,7 @@ The following locations can be used for static pictures:
 
 #### Commands
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 ---
 
@@ -73,4 +73,5 @@ The **Truncated (non-centered)** format causes 4D to place the upper-left corner
 
 #### Commands
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT SET FORMAT](../commands/object-set-format)
+

@@ -7,7 +7,7 @@ The ORDA technology is based upon an automatic mapping of an underlying [databas
 
 ## Mapeamento da estrutura
 
-Quando você chama um datastore usando os comandos [`ds`](commands/ds.md) ou [`Open datastore`](commands/open-datastore.md), 4D faz automaticamente referência a tabelas e campos da estrutura 4D correspondente como propriedades do objeto [datastore](#datastore) retornado:
+Quando você chama um datastore usando os comandos [`ds`](../commands/ds) ou [`Open datastore`](../commands/open-datastore), 4D faz automaticamente referência a tabelas e campos da estrutura 4D correspondente como propriedades do objeto [datastore](#datastore) retornado:
 
 - Tables are mapped to [dataclasses](#dataclass).
 - Fields are mapped to [storage attributes](#storage-and-relation-attributes).
@@ -28,7 +28,7 @@ As seguintes regras são aplicadas a quaisquer conversões:
 > O mapeamento ORDA não leva em consideração:
 >
 > - a opção "Invisível" para tabelas ou campos,
-> - the virtual structure defined through [`SET TABLE TITLES`](../commands-legacy/set-table-titles.md) or [`SET FIELD TITLES`](../commands-legacy/set-field-titles.md),
+> - the virtual structure defined through [`SET TABLE TITLES`](../commands-legacy/set-table-titles) or [`SET FIELD TITLES`](../commands-legacy/set-field-titles),
 > - a propriedade "Manual" ou "Automática" das relações.
 
 ### Regras para o controlo do acesso remoto

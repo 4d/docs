@@ -37,7 +37,7 @@ The following diagram shows the different session types and how they interact:
 
 ## Remote user sessions {#remote-user-sessions}
 
-On the server, in "user processes" (i.e. processes related to remote users), the [`Session`](../commands/session.md) command returns a `session` object describing the current user session. This object is handled through the functions and properties of the [`Session` class](../API/SessionClass.md).
+On the server, in "user processes" (i.e. processes related to remote users), the [`Session`](../commands/session) command returns a `session` object describing the current user session. This object is handled through the functions and properties of the [`Session` class](../API/SessionClass.md).
 
 :::note
 
@@ -83,7 +83,7 @@ You can share data between all processes of a stored procedure session using the
  
 The `session` object of stored procedures is available from:
 
-- Project methods that are called by the [`Execute on Server`](../commands-legacy/execute-on-server.md) command,
+- Project methods that are called by the [`Execute on Server`](../commands/execute-on-server) command,
 - ORDA [data model functions](../ORDA/ordaClasses.md) called from a stored procedure, 
 - Database methods such as [`On Server Startup`](../commands/on-server-startup-database-method) and [`On Server Shutdown`](../commands/on-server-shutdown-database-method).
 
@@ -117,7 +117,7 @@ Shared sessions are handled through [OTP tokens](../WebServer/sessions.md#sessio
 
 :::note
 
-When creating an OTP token in client/server environment, you need to execute the [OTP creation code](../API/SessionClass.md#createotp) **on the server** (the `Session` object is Null on a remote 4D). You can use for example the [`On Server Open Connection`](../commands-legacy/on-server-open-connection-database-method.md) database method. 
+When creating an OTP token in client/server environment, you need to execute the [OTP creation code](../API/SessionClass.md#createotp) **on the server** (the `Session` object is Null on a remote 4D). You can use for example the [`On Server Open Connection`](../commands/on-server-open-connection-database-method) database method. 
 
 :::
 
@@ -169,4 +169,5 @@ Here is the code used to put the "viewProducts" privilege in the session:
 Session.clearPrivileges() // Clean the session from its old privileges
 Session.setPrivileges("viewProducts")
 ```
+
 

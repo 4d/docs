@@ -29,7 +29,7 @@ Creating and installing 4D components is carried out directly from 4D:
 
 - To use a component, you simply need to [install it in your application](../Project/components.md). You can also create a new component directly from the host, in which case it is immediately usable. 
 - A project can be both a matrix and a host, in other words, a matrix project can itself use one or more components. However, a component cannot use "sub-components" itself.
-- A component can call on most of the 4D elements: datastore ([`ds`](../commands/ds.md)), classes, functions, project methods, project forms, menu bars, choice lists, and so on. The following database methods can be used: [On Web Connection](../commands-legacy/on-web-connection-database-method.md), [On Web Authentication](../commands-legacy/on-web-authentication-database-method.md), [On Host Database Event](../commands-legacy/on-host-database-event-database-method.md). 
+- A component can call on most of the 4D elements: datastore ([`ds`](../commands/ds)), classes, functions, project methods, project forms, menu bars, choice lists, and so on. The following database methods can be used: [On Web Connection](../commands/on-web-connection-database-method), [On Web Authentication](../commands/on-web-authentication-database-method), [On Host Database Event](../commands/on-host-database-event-database-method). 
 - A component can create and/or use tables, fields and data files using mechanisms of external databases. These are separate 4D databases that you work with using SQL commands.
 - A host project running in interpreted mode can use either interpreted or compiled components. A host project running in compiled mode cannot use interpreted components. In this case, only compiled components can be used.
 
@@ -100,7 +100,7 @@ When you select it, a dedicated tab is added (or highlighted if already added) i
 
 - Home, including folders, methods, classes and (preview only) forms 
 - Project Methods
-- Database Methods ([On Web Connection](../commands-legacy/on-web-connection-database-method.md), [On Web Authentication](../commands-legacy/on-web-authentication-database-method.md), [On Host Database Event](../commands-legacy/on-host-database-event-database-method.md))
+- Database Methods ([On Web Connection](../commands/on-web-connection-database-method), [On Web Authentication](../commands/on-web-authentication-database-method), [On Host Database Event](../commands/on-host-database-event-database-method))
 - Classes
 - Project Form Methods
 - Commands and Constants
@@ -130,13 +130,13 @@ You can use the [**Search and replace** features](../Project/search-replace.md) 
 
 Except for [Unusable commands](#unusable-commands), a component can use any command of the 4D language.
 
-When commands are called from a component, they are executed in the context of the component, except for the [`EXECUTE FORMULA`](../commands-legacy/execute-formula.md) or [`EXECUTE METHOD`](../commands-legacy/execute-method.md) command that use the context of the method specified by the command. Also note that the read commands of the “Users and Groups” theme can be used from a component but will read the users and groups of the host project (a component does not have its own users and groups).
+When commands are called from a component, they are executed in the context of the component, except for the [`EXECUTE FORMULA`](../commands/execute-formula) or [`EXECUTE METHOD`](../commands/execute-method) command that use the context of the method specified by the command. Also note that the read commands of the “Users and Groups” theme can be used from a component but will read the users and groups of the host project (a component does not have its own users and groups).
 
-The [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) and [`Get database parameter`](../commands-legacy/get-database-parameter.md) commands are an exception: their scope is global to the application. When these commands are called from a component, they are applied to the host application project.
+The [`SET DATABASE PARAMETER`](../commands/set-database-parameter) and [`Get database parameter`](../commands/get-database-parameter) commands are an exception: their scope is global to the application. When these commands are called from a component, they are applied to the host application project.
 
 Furthermore, specific measures have been specified for the `Structure file` and `Get 4D folder` commands when they are used in the framework of components.
 
-The [`COMPONENT LIST`](../commands-legacy/component-list.md) command can be used to obtain the list of components that are loaded by the host project.
+The [`COMPONENT LIST`](../commands/component-list) command can be used to obtain the list of components that are loaded by the host project.
 
 
 ### Unusable commands
@@ -182,7 +182,7 @@ Conversely, for security reasons, by default a component cannot execute project 
 
 ![](../assets/en/Concepts/pict516563.en.png)
 
-Once the project methods of the host projects are available to the components, you can execute a host method from inside a component using the [`EXECUTE FORMULA`](../commands-legacy/execute-formula.md) or [`EXECUTE METHOD`](../commands-legacy/execute-method.md) command. For example:
+Once the project methods of the host projects are available to the components, you can execute a host method from inside a component using the [`EXECUTE FORMULA`](../commands/execute-formula) or [`EXECUTE METHOD`](../commands/execute-method) command. For example:
 
 ```4d
 // Host Method
@@ -324,7 +324,7 @@ In this case, it is necessary to use the comparison of pointers:
 
 ## Error handling
 
-An [error-handling method](Concepts/error-handling.md) installed by the [`ON ERR CALL`](../commands-legacy/on-err-call.md) command only applies to the running application. In the case of an error generated by a component, the `ON ERR CALL` error-handling method of the host project is not called, and vice versa.
+An [error-handling method](Concepts/error-handling.md) installed by the [`ON ERR CALL`](../commands/on-err-call) command only applies to the running application. In the case of an error generated by a component, the `ON ERR CALL` error-handling method of the host project is not called, and vice versa.
 
 However, you can install a [component error handler in the host application](../Concepts/error-handling.md#scope-and-components) to manage uncaught errors from compponents. 
 
@@ -559,4 +559,5 @@ To protect the code of a component effectively, simply [compile and build](Deskt
 ## Sharing your components on GitHub
 
 We encourage you to support the 4D developer community by sharing your components, preferably on the [GitHub platform](https://github.com/topics/4d-component). We recommend that you use the **`4d-component`** topic to be correctly referenced.  
+
 

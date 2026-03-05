@@ -3,18 +3,18 @@ id: shared
 title: Objetos e coleções compartilhados
 ---
 
-**Objetos compartilhados** e **coleções compartilhadas** são específicos [objects](./dt_object.md) e [collections](./dt_collection.md) cujo conteúdo é compartilhado entre processos. In contrast to [interprocess variables](./variables.md#interprocess-variables) (now deprecated), shared objects and shared collections have the advantage of being compatible with *[Preemptive processes](../Develop/preemptive.md)*: they can be passed by reference as parameters to commands such as [`New process`](../commands-legacy/new-process.md) or [`CALL WORKER`](../commands-legacy/call-worker.md).
+**Objetos compartilhados** e **coleções compartilhadas** são específicos [objects](./dt_object.md) e [collections](./dt_collection.md) cujo conteúdo é compartilhado entre processos. In contrast to [interprocess variables](./variables.md#interprocess-variables) (now deprecated), shared objects and shared collections have the advantage of being compatible with *[Preemptive processes](../Develop/preemptive.md)*: they can be passed by reference as parameters to commands such as [`New process`](../commands-legacy/new-process) or [`CALL WORKER`](../commands-legacy/call-worker).
 
 Objetos compartilhados e coleções compartilhadas são armazenados em variáveis padrão [`Object`](./dt_object.md) e [`Collection`](./dt_collection.md) do tipo, mas devem ser instanciados usando comandos específicos:
 
-- para criar um objeto compartilhado, use o comando [`Novo objeto compartilhado`](../commands-legacy/new-shared-object.md) ou chame a função [`new()`](../API/ClassClass.md#new) de uma [classe compartilhada](./classes.md#shared-classes),
-- para criar uma coleção compartilhada, use o comando [`New shared collection`](../commands/new-shared-collection.md).
+- para criar um objeto compartilhado, use o comando [`Novo objeto compartilhado`](../commands-legacy/new-shared-object) ou chame a função [`new()`](../API/ClassClass.md#new) de uma [classe compartilhada](./classes.md#shared-classes),
+- para criar uma coleção compartilhada, use o comando [`New shared collection`](../commands/new-shared-collection).
 
 Shared objects and collections can only contain scalar values or other shared objects and collections. However, shared objects and collections can be set as properties of standard (not shared) objects or collections.
 
 Para modificar um objeto/coleção compartilhada, a estrutura **Usar... Uso final** deve ser chamada. A leitura de um valor de objeto/coleção compartilhado não requer **Uso...Uso final**.
 
-Um catálogo único e global retornado pelo comando [`Storage`](../commands-legacy/storage.md) está sempre disponível em toda a aplicação e seus componentes, e pode ser usado para armazenar todos os objetos e coleções compartilhadas.
+Um catálogo único e global retornado pelo comando [`Storage`](../commands-legacy/storage) está sempre disponível em toda a aplicação e seus componentes, e pode ser usado para armazenar todos os objetos e coleções compartilhadas.
 
 ## Utilização de objetos ou coleções compartidos
 
@@ -81,11 +81,11 @@ Chamar `OB Copy` com um objeto partilhado (ou com um objeto que contenha objeto(
 
 ### Armazenamento
 
-**Armazenamento** é um objeto partilhado único, automaticamente disponível em cada aplicação e máquina. Este objeto compartilhado é retornado pelo comando [`Storage`](../commands-legacy/storage.md). É possível utilizar este objeto para fazer referência a todos os objetos/coleções partilhados definidos durante a sessão que se pretende que estejam disponíveis a partir de quaisquer processos preemptivos ou padrão.
+**Armazenamento** é um objeto partilhado único, automaticamente disponível em cada aplicação e máquina. Este objeto compartilhado é retornado pelo comando [`Storage`](../commands-legacy/storage). É possível utilizar este objeto para fazer referência a todos os objetos/coleções partilhados definidos durante a sessão que se pretende que estejam disponíveis a partir de quaisquer processos preemptivos ou padrão.
 
 Observe que, diferentemente dos objetos compartilhados padrão, o objeto `storage` não cria um grupo compartilhado quando objetos/coleções compartilhados são adicionados como suas propriedades. Esta exceção permite que o objeto **Storage** seja usado sem bloquear todos os objetos compartilhados ou coleções conectadas.
 
-Para mais informações, consulte a descrição do comando [`Storage`](../commands-legacy/storage.md).
+Para mais informações, consulte a descrição do comando [`Storage`](../commands-legacy/storage).
 
 ## Use... End use
 
@@ -113,8 +113,8 @@ Shared objects and shared collections are designed to allow communication betwee
 As funcionalidades a seguir ativam automaticamente um uso interno de **Use/End use**, fazendo uma chamada explícita para a estrutura desnecessária quando a funcionalidade é executada:
 
 - [funções de coleção](../API/CollectionClass.md) que modificam as coleções compartilhadas,
-- comando [`ARRAY TO COLLECTION`](../commands-legacy/array-to-collection.md),
-- comando [`OB REMOVE`](../commands-legacy/ob-remove.md),
+- comando [`ARRAY TO COLLECTION`](../commands-legacy/array-to-collection),
+- comando [`OB REMOVE`](../commands-legacy/ob-remove),
 - [funções compartilhadas](classes.md#shared-functions) (definida em [classes compartilhadas](classes.md#shared-classes)).
 
 ## Exemplo 1

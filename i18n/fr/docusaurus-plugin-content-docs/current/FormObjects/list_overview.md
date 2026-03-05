@@ -16,7 +16,7 @@ Le contenu d'un objet formulaire liste hiérarchique peut être initialisé de l
 - Associer une [énumération](properties_DataSource.md#choice-list) à l'objet. L'énumération doit avoir été définie dans l'éditeur de listes en mode Développement.
 - Assignez directement une référence de liste hiérarchique à la [variable ou à l'expression](properties_Object.md#variable-or-expression) associée à l'objet formulaire.
 
-Dans les deux cas, vous gérez une liste hiérarchique lors de l'exécution via sa référence *ListRef*, à l'aide des commandes de [liste hiérarchique](../commands/theme/Hierarchical_Lists.md) du langage 4D.
+Dans les deux cas, vous gérez une liste hiérarchique lors de l'exécution via sa référence *ListRef*, à l'aide des commandes de [liste hiérarchique](../commands/theme/Hierarchical_Lists) du langage 4D.
 
 ## RefListe et nom d'objet
 

@@ -19,7 +19,7 @@ Essa propriedade é usada para exibir ou ocultar [os rodapés de coluna list box
 
 #### Comandos
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
 
 ---
 
@@ -34,7 +34,7 @@ Esta propriedade é usada para definir a altura da linha para um rodapé de list
   - Este cálculo não tem em conta o tamanho das imagens nem os estilos aplicados aos tipos de letra.
   - No macOS, a altura da linha pode estar incorreta se o usuário inserir caracteres que não estejam disponíveis na fonte selecionada. Quando isso ocorre, uma fonte substituta é usada, o que pode causar variações no tamanho.
 
-> Esta propriedade também pode ser configurada dinamicamente usando o comando [LISTBOX SET FOOTERS HEIGHT](../commands-legacy/listbox-set-footers-height.md).
+> Esta propriedade também pode ser configurada dinamicamente usando o comando [LISTBOX SET FOOTERS HEIGHT](../commands-legacy/listbox-set-footers-height).
 
 Conversão de unidades: quando você muda de uma unidade para a outra, 4D converte-os automaticamente e exibe o resultado na Lista de propriedades. Por exemplo, se a fonte usada for "Lucida grande 24", uma altura de "1 linha" será convertida em "30 píxeis" e uma altura de "60 píxeis" será convertida em "2 linhas".
 
@@ -65,7 +65,7 @@ Observe que a conversão para frente e para trás pode levar a um resultado dife
 
 #### Comandos
 
-[LISTBOX Get footers height](../commands-legacy/listbox-get-footers-height.md) - [LISTBOX SET FOOTERS HEIGHT](../commands-legacy/listbox-set-footers-height.md)
+[LISTBOX Get footers height](../commands-legacy/listbox-get-footers-height) - [LISTBOX SET FOOTERS HEIGHT](../commands-legacy/listbox-set-footers-height)
 
 #### Veja também
 

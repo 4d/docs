@@ -1,0 +1,5 @@
+{
+  "label": "Mail",
+  "link": {"type": "doc", "id": "commands/theme/Mail_theme"},
+  "key": "Mail-key"
+}

@@ -19,9 +19,9 @@ displayed_sidebar: docs
 
 |Version|Changements|
 |---|---|
-|18 R6|Renommé|
-|15 R4|Renommé|
 |13|Créé|
+|15 R4|Renommé|
+|18 R6|Renommé|
 
 </details>
 </div>
@@ -34,11 +34,11 @@ displayed_sidebar: docs
 
 La **On Web Legacy Close Session database method** est appelée par le serveur Web de 4D à chaque fois qu’une session Web est sur le point d’être refermée. Une session peut être refermée dans les cas suivants :
 
-* lorsque le nombre maximum de sessions simultanées est atteint (100 par défaut, modifiable via la commande [WEB SET OPTION](web-set-option.md)), et que 4D a besoin d’en créer de nouvelles (4D détruit automatiquement le process de la session inactive la plus ancienne),
-* lorsque la période maximale d’inactivité du process de la session est atteinte (480 minutes par défaut, modifiable via la commande [WEB SET OPTION](web-set-option.md)),
-* lorsque la commande [WEB LEGACY CLOSE SESSION](web-legacy-close-session.md) est appelée.
+* lorsque le nombre maximum de sessions simultanées est atteint (100 par défaut, modifiable via la commande [WEB SET OPTION](../commands/web-set-option)), et que 4D a besoin d’en créer de nouvelles (4D détruit automatiquement le process de la session inactive la plus ancienne),
+* lorsque la période maximale d’inactivité du process de la session est atteinte (480 minutes par défaut, modifiable via la commande [WEB SET OPTION](../commands/web-set-option)),
+* lorsque la commande [WEB LEGACY CLOSE SESSION](../commands/web-legacy-close-session) est appelée.
 
-Au moment de l’appel de la méthode base, le contexte de la session (variables et sélections générées par l’utilisateur) est toujours valide. Ce principe vous permet donc de stocker les données relatives à la session afin de pouvoir les réutiliser par la suite, en particulier via la [On Web Connection](./on-web-connection-database-method.md).
+Au moment de l’appel de la méthode base, le contexte de la session (variables et sélections générées par l’utilisateur) est toujours valide. Ce principe vous permet donc de stocker les données relatives à la session afin de pouvoir les réutiliser par la suite, en particulier via la [On Web Connection](../commands/on-web-connection-database-method).
 
 **Note :** Dans le contexte d'une session 4D Mobile (pouvant générer plusieurs process), la **On Web Legacy Close Session database method** est appelée pour chaque process Web refermé, vous permettant de sauvegarder tout type de donnée (variable, sélection, etc.) générée par le process de session 4D Mobile. 
 
@@ -47,4 +47,4 @@ Un exemple d’utilisation de la **On Web Legacy Close Session database method**
 ## Voir aussi 
 
 *Gestion des sessions Web*  
-[WEB LEGACY CLOSE SESSION](web-legacy-close-session.md)  
+[WEB LEGACY CLOSE SESSION](../commands/web-legacy-close-session)  

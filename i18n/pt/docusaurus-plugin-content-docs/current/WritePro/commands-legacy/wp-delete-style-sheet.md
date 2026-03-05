@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 Este comando oferece duas formas de eliminar uma folha de estilo. Pode especificar:
 
-* o objeto folha de estilo (criado com [WP New style sheet](wp-new-style-sheet.md) ou devolvido pelo comando [WP Get style sheet](wp-get-style-sheet.md)) para eliminar no parâmetro *tipoFolhaEstilo*, ou
+* o objeto folha de estilo (criado com [WP New style sheet](../commands/wp-new-style-sheet) ou devolvido pelo comando [WP Get style sheet](../commands/wp-get-style-sheet)) para eliminar no parâmetro *tipoFolhaEstilo*, ou
 * o documento 4D Write Pro junto com o nome da folha de estilo para eliminar nos parâmetros *wpDoc* e *nomeFolhaEstilo*.
 
 **Nota**: a folha de estilo predeterminada ("Normal") não pode ser eliminada.
@@ -31,7 +31,7 @@ Este comando oferece duas formas de eliminar uma folha de estilo. Pode especific
 ## Ver também 
 
 *Accessar texto e atributos de imagem por programação*  
-[WP Get style sheet](wp-get-style-sheet.md)  
-[WP Get style sheets](wp-get-style-sheets.md)  
-[WP IMPORT STYLE SHEETS](wp-import-style-sheets.md)  
-[WP New style sheet](wp-new-style-sheet.md)  
+[WP Get style sheet](../commands/wp-get-style-sheet)  
+[WP Get style sheets](../commands/wp-get-style-sheets)  
+[WP IMPORT STYLE SHEETS](../commands/wp-import-style-sheets)  
+[WP New style sheet](../commands/wp-new-style-sheet)  

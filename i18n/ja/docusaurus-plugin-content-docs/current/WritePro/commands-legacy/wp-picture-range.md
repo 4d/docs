@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.WP Picture range.Summary-->**WP Picture range**コマンドは、*targetObj* 引数に渡したオブジェクト内に含まれるピクチャーのみを格納したレンジオブジェクトを返します。<!-- END REF-->返された画像レンジオブジェクトは、[WP GET ATTRIBUTES](../commands/wp-get-attributes.md) と[WP SET ATTRIBUTES](../commands/wp-set-attributes.md) によってピクチャーの属性のみを管理するのに使用することができます。
+<!--REF #_command_.WP Picture range.Summary-->**WP Picture range**コマンドは、*targetObj* 引数に渡したオブジェクト内に含まれるピクチャーのみを格納したレンジオブジェクトを返します。<!-- END REF-->返された画像レンジオブジェクトは、[WP GET ATTRIBUTES](../commands/wp-get-attributes) と[WP SET ATTRIBUTES](../commands/wp-set-attributes) によってピクチャーの属性のみを管理するのに使用することができます。
 
 *targetObj* 引数には、以下のいずれかを渡すことができます:
 
@@ -36,10 +36,11 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP Add picture](../commands/wp-add-picture.md)  
-[WP INSERT PICTURE](../commands/wp-insert-picture.md)  
-[WP Paragraph range](wp-paragraph-range.md)  
-[WP Selection range](wp-selection-range.md)  
-[WP Text range](wp-text-range.md)  
+[WP Add picture](../commands/wp-add-picture)  
+[WP INSERT PICTURE](../commands/wp-insert-picture)  
+[WP Paragraph range](../commands/wp-paragraph-range)  
+[WP Selection range](../commands/wp-selection-range)  
+[WP Text range](../commands/wp-text-range)  
 *スタイル付テキストテーマのコマンドの使用*  
 *ピクチャーを管理する*  
+

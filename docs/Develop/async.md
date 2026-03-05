@@ -43,7 +43,7 @@ Choosing Between Synchronous and Asynchronous Execution:
 
 The general concept of asynchronous event management in 4D is based on an asynchronous messaging model using **workers** (processes that listen to events) and **callbacks** (functions or formulas automatically invoked when an event occurs). Instead of waiting for a result (synchronous mode), you provide a function that will be automatically called when the desired event occurs. Callbacks can be passed as class functions (recommended) or Formula objects.
 
-This model is common to [`CALL WORKER`](../commands-legacy/call-worker.md), [`CALL FORM`](../commands-legacy/call-form.md), and [classes that support aynchronous execution](#asynchronous-programming-with-4d-classes). All these commands/classes start an operation that runs in the background. The statement that launches the operation returns immediately, without waiting for the operation to finish. 
+This model is common to [`CALL WORKER`](../commands/call-worker), [`CALL FORM`](../commands/call-form), and [classes that support aynchronous execution](#asynchronous-programming-with-4d-classes). All these commands/classes start an operation that runs in the background. The statement that launches the operation returns immediately, without waiting for the operation to finish. 
 
 ### Workers
 
@@ -53,11 +53,11 @@ Using worker processes in asynchronous programming **is mandatory** since "class
 
 ### Event queue (mailbox)
 
-Each worker (or form window for [`CALL FORM`](../commands-legacy/call-form.md)) has its own message queue. [`CALL WORKER`](../commands-legacy/call-worker.md) or [`CALL FORM`](../commands-legacy/call-form.md) simply posts a message to this queue. The worker handles messages one by one, in the order they arrive, within its own context. Process variables, current selections, etc. are preserved.
+Each worker (or form window for [`CALL FORM`](../commands/call-form)) has its own message queue. [`CALL WORKER`](../commands/call-worker) or [`CALL FORM`](../commands/call-form) simply posts a message to this queue. The worker handles messages one by one, in the order they arrive, within its own context. Process variables, current selections, etc. are preserved.
 
 ### Bidirectional communication via messages
 
-The calling process posts a message then the worker executes it. The worker can in turn post a message (via [`CALL WORKER`](../commands-legacy/call-worker.md) or [`CALL FORM`](../commands-legacy/call-form.md)) back to the caller or another worker to notify an event (task completion, data received, error, progress, etc.). This mechanism replaces the classic return of synchronous calls.
+The calling process posts a message then the worker executes it. The worker can in turn post a message (via [`CALL WORKER`](../commands/call-worker) or [`CALL FORM`](../commands/call-form)) back to the caller or another worker to notify an event (task completion, data received, error, progress, etc.). This mechanism replaces the classic return of synchronous calls.
 
 ### Event listening
 
@@ -65,8 +65,8 @@ In event-driven development, it is obvious that some code must be able to listen
 
 In the context of asynchronous execution, the following features place your code in listening mode:
 
-- [`CALL WORKER`](../commands-legacy/call-worker.md) executes the code for which it has been called, then returns to a listening status from where it can be called afterwards.
-- [`CALL FORM`](../commands-legacy/call-form.md) opens a form and makes it listen for incoming messages from the event queue.
+- [`CALL WORKER`](../commands/call-worker) executes the code for which it has been called, then returns to a listening status from where it can be called afterwards.
+- [`CALL FORM`](../commands/call-form) opens a form and makes it listen for incoming messages from the event queue.
 - a call for a `wait()` listens for `terminate()` or `shutdown()` in a callback from any other instance. 
 
 ### Event triggering
@@ -191,3 +191,4 @@ $systemworker.wait(0.5) // Waits for up to 0.5 seconds for get file info
 
 [Blog post: Launch an external process asynchronously](https://blog.4d.com/launch-an-external-process-asynchronously/)<br/>
 [Asynchronous Call](../aikit/asynchronous-call.md)
+

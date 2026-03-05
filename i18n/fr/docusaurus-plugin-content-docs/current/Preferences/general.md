@@ -100,7 +100,7 @@ Si vous avez l'intention d'utiliser des VCS ou des éditeurs de code externes av
 
 > Cette option ne peut être appliquée qu'aux projets (les bases de données binaires incluent toujours les tokens).
 
-> Vous pouvez toujours obtenir le code avec des tokens en appelant [`METHOD GET CODE`](../commands-legacy/method-get-code.md) avec 1 dans le paramètre *option*.
+> Vous pouvez toujours obtenir le code avec des tokens en appelant [`METHOD GET CODE`](../commands-legacy/method-get-code) avec 1 dans le paramètre *option*.
 
 #### Exclusion des tokens dans les projets existants
 

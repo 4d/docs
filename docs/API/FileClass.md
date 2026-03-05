@@ -3,7 +3,7 @@ id: FileClass
 title: File
 ---
 
-`File` objects are created with the [`File`](../commands/file.md) command. They contain references to disk files that may or may not actually exist on disk. For example, when you execute the `File` command to create a new file, a valid `File` object is created but nothing is actually stored on disk until you call the [`file.create( )`](#create) function.
+`File` objects are created with the [`File`](../commands/file) command. They contain references to disk files that may or may not actually exist on disk. For example, when you execute the `File` command to create a new file, a valid `File` object is created but nothing is actually stored on disk until you call the [`file.create( )`](#create) function.
 
 ### Example
 
@@ -72,9 +72,9 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 #### Description
 
-The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. It is identical to the [`File`](../commands/file.md) command (shortcut).
+The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. It is identical to the [`File`](../commands/file) command (shortcut).
 
-> It is recommended to use the [`File`](../commands/file.md) shortcut command instead of `4D.File.new()`.
+> It is recommended to use the [`File`](../commands/file) shortcut command instead of `4D.File.new()`.
 
 <!-- INCLUDE document.copyTo().Desc -->
 
@@ -808,3 +808,4 @@ $myFile.setText("Hello world")
 <!-- END REF -->
 
 <!-- INCLUDE document.size.Desc -->
+

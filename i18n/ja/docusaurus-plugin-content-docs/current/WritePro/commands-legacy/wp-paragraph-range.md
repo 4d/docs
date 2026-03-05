@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.WP Paragraph range.Summary-->新しい**WP Paragraph range**コマンドは、*targetObj* 引数内のオブジェクトと交差する段落のみだけを内包したレンジオブジェクトを返します。<!-- END REF-->返されたレンジオブジェクトの段落は[WP GET ATTRIBUTES](../commands/wp-get-attributes.md) や[WP SET ATTRIBUTES](../commands/wp-set-attributes.md) コマンドなどで使用でき、それによって段落属性のみを管理することができます。
+<!--REF #_command_.WP Paragraph range.Summary-->新しい**WP Paragraph range**コマンドは、*targetObj* 引数内のオブジェクトと交差する段落のみだけを内包したレンジオブジェクトを返します。<!-- END REF-->返されたレンジオブジェクトの段落は[WP GET ATTRIBUTES](../commands/wp-get-attributes) や[WP SET ATTRIBUTES](../commands/wp-set-attributes) コマンドなどで使用でき、それによって段落属性のみを管理することができます。
 
 *targetObj* 引数には、以下のいずれかを渡すことができます:
 
@@ -37,6 +37,7 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP Picture range](wp-picture-range.md)  
-[WP Selection range](wp-selection-range.md)  
-[WP Text range](wp-text-range.md)  
+[WP Picture range](../commands/wp-picture-range)  
+[WP Selection range](../commands/wp-selection-range)  
+[WP Text range](../commands/wp-text-range)  
+

@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.In transaction.Summary-->El comando In transaction devuelve [True](true.md "True") si el proceso actual está en transacción, de lo contrario devuelve [False](false.md "False").<!-- END REF-->
+<!--REF #_command_.In transaction.Summary-->El comando In transaction devuelve [True](../commands/true) si el proceso actual está en transacción, de lo contrario devuelve [False](../commands/false).<!-- END REF-->
 
 ## Ejemplo 
 

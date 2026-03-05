@@ -39,7 +39,7 @@ Pode passar o texto do item em itemText. Pode passar uma string ou expressões d
 
 O número de referência único do elemento (do tipo Inteiro longo) se passa em *refElem*. Ainda que classificamos este número de referência como único, na verdade pode passar o valor que desejar. Consulte a seção *Gerenciar Listas Hierárquicas* para maior informação sobre o parâmetro *refElem.*
 
-Igualmente se deseja que um elemento tenha elementos filhos, passe um número de referência de lista válido no parâmetro *sublista*. Neste caso, também deve passar o parâmetro *expandido*. Passe [True](true.md "True") ou [False](false.md "False") neste parâmetro de maneira que a sub-lista se mostre exibida ou contraída respectivamente.
+Igualmente se deseja que um elemento tenha elementos filhos, passe um número de referência de lista válido no parâmetro *sublista*. Neste caso, também deve passar o parâmetro *expandido*. Passe [True](../commands/true) ou [False](../commands/false) neste parâmetro de maneira que a sub-lista se mostre exibida ou contraída respectivamente.
 
 A referência da lista que passa em *sublista* deve fazer referência a uma lista existente. A lista existente poderia ter apenas um nível ou ter sub-listas. Se não deseja adicionar uma lista filha ao novo elemento, omita o parâmetro ou passe 0\. Mesmo que ambos são opcionais, os parâmetros *sublista* e *desplegada* devem ser passadas de forma conjunta.
 

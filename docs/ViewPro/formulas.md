@@ -297,13 +297,13 @@ Alternate solutions are available to declare fields or methods as functions in y
 ### Referencing fields using the virtual structure 
   
 
-4D View Pro allows you to reference 4D fields using the virtual structure of the database, i.e. declared through the [`SET TABLE TITLES`](../commands-legacy/set-table-titles.md) and/or [`SET FIELD TITLES`](../commands-legacy/set-field-titles.md) commands with the \* parameter. This alternate solution could be useful if your application already relies on a virtual structure (otherwise, [using `VP SET CUSTOM FUNCTIONS`](#4d-functions) is recommended).
+4D View Pro allows you to reference 4D fields using the virtual structure of the database, i.e. declared through the [`SET TABLE TITLES`](../commands/set-table-titles) and/or [`SET FIELD TITLES`](../commands/set-field-titles) commands with the \* parameter. This alternate solution could be useful if your application already relies on a virtual structure (otherwise, [using `VP SET CUSTOM FUNCTIONS`](#4d-functions) is recommended).
 
 > **WARNING:** You cannot use the virtual structure and `VP SET CUSTOM FUNCTIONS` simultaneously. As soon as `VP SET CUSTOM FUNCTIONS` is called, the functions based upon `SET TABLE TITLES` and `SET FIELD TITLES` commands are ignored in the 4D View Pro area.
 
 #### Requirements  
 
-*	The field must belong to the virtual structure of the database, i.e. it must be declared through the [`SET TABLE TITLES`](../commands-legacy/set-table-titles.md) and/or [`SET FIELD TITLES`](../commands-legacy/set-field-titles.md) commands with the \* parameter (see example),
+*	The field must belong to the virtual structure of the database, i.e. it must be declared through the [`SET TABLE TITLES`](../commands/set-table-titles) and/or [`SET FIELD TITLES`](../commands/set-field-titles) commands with the \* parameter (see example),
 *	Table and field names must be ECMA compliant (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)),
 *	The field type must be supported by 4D View Pro (see above).
 
@@ -383,4 +383,5 @@ To be called in a 4D View Pro formula, a project method must be:
 *	**Not in conflict** with an existing 4D View Pro spreadsheet function: if you call a project method with the same name as a 4D View Pro built-in function, the function is called.
 
 >If neither the [VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md) nor the [VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) command has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. In this case, the project method names must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). The global filtering option in the Settings dialog box (see *Data Access*) is ignored in all cases.
+
 

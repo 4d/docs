@@ -24,9 +24,9 @@ The On Backup Shutdown database method allows verifying that the backup was exec
 
 * If the backup was executed correctly, *$status* equals 0.
 * If the backup was interrupted by the user or following an error, *$status* is different from 0\.  
-   * If the backup was stopped by the [On Backup Startup Database Method](on-backup-startup-database-method.md), *$status* gets the value actually returned in the *$result* parameter. This allows you to implement a customized error management system.  
+   * If the backup was stopped by the [On Backup Startup Database Method](../commands/on-backup-startup-database-method), *$status* gets the value actually returned in the *$result* parameter. This allows you to implement a customized error management system.  
    * If the backup was stopped due to an error, the error code is returned in *$status*.  
-In any case, you can get information about the error using the [BACKUP INFO](backup-info.md) command.
+In any case, you can get information about the error using the [BACKUP INFO](../commands/backup-info) command.
 
 **Note**: You must declare the *$status* parameter (longint) in the database method:
 
@@ -35,3 +35,4 @@ In any case, you can get information about the error using the [BACKUP INFO](bac
 ```
 
 It is important to note that in the case of an error during backup (disk full, support unavailable, etc.), the information related to the error is only displayed in the 4D Server monitor or in the MSC, and copied into the backup log. No alert dialog box appears and the *error* variable is not modified. If you want to be able to notify the administrator that an error has occurred, particularly in the context of an application running in client/server mode, you will need to use the **On Backup Shutdown database method**.
+

@@ -218,9 +218,9 @@ End if
 
 El servidor web de 4D le permite recuperar datos enviados a través de peticiones POST o GET, utilizando formularios web o URLs.
 
-Cuando el servidor web recibe una petición con datos en el encabezado o en la URL, 4D puede recuperar los valores de cualquier objeto HTML que contenga. Este principio puede ser implementado en el caso de un formulario Web, enviado por ejemplo usando [`WEB SEND FILE`](../commands-legacy/web-send-file.md) o [`WEB SEND BLOB`](../commands-legacy/web-send-blob.md), donde el usuario introduce o modifica valores, luego hace clic en el botón de validación.
+Cuando el servidor web recibe una petición con datos en el encabezado o en la URL, 4D puede recuperar los valores de cualquier objeto HTML que contenga. Este principio puede ser implementado en el caso de un formulario Web, enviado por ejemplo usando [`WEB SEND FILE`](../commands-legacy/web-send-file) o [`WEB SEND BLOB`](../commands-legacy/web-send-blob), donde el usuario introduce o modifica valores, luego hace clic en el botón de validación.
 
-En este caso, 4D puede recuperar los valores de los objetos HTML encontrados en la solicitud usando el comando [`WEB GET VARIABLES`](../commands-legacy/web-get-variables.md). El comando `WEB GET VARIABLES` recupera los valores como texto.
+En este caso, 4D puede recuperar los valores de los objetos HTML encontrados en la solicitud usando el comando [`WEB GET VARIABLES`](../commands-legacy/web-get-variables). El comando `WEB GET VARIABLES` recupera los valores como texto.
 
 Considere el siguiente código fuente de la página HTML:
 
@@ -324,15 +324,15 @@ Tenga en cuenta que con HTML, todos los objetos son objetos de texto. Si se util
 
 El servidor web de 4D ofrece varios comandos web de bajo nivel que le permiten desarrollar un procesamiento personalizado de las solicitudes:
 
-- el comando [`WEB GET HTTP BODY`](../commands-legacy/web-get-http-body.md) devuelve el cuerpo como texto crudo, permitiendo cualquier análisis que pueda necesitar
-- el comando [`WEB GET HTTP HEADER`](../commands-legacy/web-get-http-header.md) devuelve los encabezados de la solicitud. Es útil para manejar cookies personalizadas, por ejemplo (junto con el comando `WEB SET HTTP HEADER`).
-- los comandos [`WEB GET BODY PART`](../commands-legacy/web-get-body-part.md) y [`WEB Get body part count`](../commands-legacy/web-get-body-part-count.md) para analizar la parte del cuerpo de una petición de varias partes y recuperar los valores de texto, pero también los archivos publicados, usando BLOBs.
+- el comando [`WEB GET HTTP BODY`](../commands-legacy/web-get-http-body) devuelve el cuerpo como texto crudo, permitiendo cualquier análisis que pueda necesitar
+- el comando [`WEB GET HTTP HEADER`](../commands-legacy/web-get-http-header) devuelve los encabezados de la solicitud. Es útil para manejar cookies personalizadas, por ejemplo (junto con el comando `WEB SET HTTP HEADER`).
+- los comandos [`WEB GET BODY PART`](../commands-legacy/web-get-body-part) y [`WEB Get body part count`](../commands-legacy/web-get-body-part-count) para analizar la parte del cuerpo de una petición de varias partes y recuperar los valores de texto, pero también los archivos publicados, usando BLOBs.
 
 Estos comandos se resumen en el siguiente gráfico:
 
 ![](../assets/en/WebServer/httpCommands.png)
 
-El servidor web de 4D ahora soporta archivos cargados con codificación chunked desde cualquier cliente web. La codificación de transferencia en trozos es un mecanismo de transferencia de datos especificado en HTTP/1.1. Permite transferir datos en una serie de "trozos" (partes) sin conocer el tamaño final de los datos. El servidor Web 4D también soporta la codificación de transferencia en trozos desde el servidor a los clientes Web (usando [`WEB SEND RAW DATA`](../commands-legacy/web-send-raw-data.md)).
+El servidor web de 4D ahora soporta archivos cargados con codificación chunked desde cualquier cliente web. La codificación de transferencia en trozos es un mecanismo de transferencia de datos especificado en HTTP/1.1. Permite transferir datos en una serie de "trozos" (partes) sin conocer el tamaño final de los datos. El servidor Web 4D también soporta la codificación de transferencia en trozos desde el servidor a los clientes Web (usando [`WEB SEND RAW DATA`](../commands-legacy/web-send-raw-data)).
 
 ## Método proyecto COMPILER_WEB
 

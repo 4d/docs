@@ -19,7 +19,7 @@ title: スケール
 
 #### コマンド
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT Get indicator type](../commands-legacy/object-get-indicator-type.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md) - [OBJECT SET INDICATOR TYPE](../commands-legacy/object-set-indicator-type.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT Get indicator type](../commands-legacy/object-get-indicator-type) - [OBJECT SET FORMAT](../commands-legacy/object-set-format) - [OBJECT SET INDICATOR TYPE](../commands-legacy/object-set-indicator-type)
 
 ---
 
@@ -39,7 +39,7 @@ title: スケール
 
 #### コマンド
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
 
 ---
 
@@ -59,7 +59,7 @@ title: スケール
 
 #### コマンド
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
 
 ---
 
@@ -83,7 +83,7 @@ title: スケール
 
 #### コマンド
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
 
 ---
 
@@ -106,7 +106,7 @@ title: スケール
 
 #### コマンド
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) [OBJECT Get maximum-value](../commands-legacy/object-get-maximum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md) - [OBJECT SET MAXIMUM VALUE](../commands-legacy/object-set-maximum-value.md)
+[OBJECT Get format](../commands-legacy/object-get-format) [OBJECT Get maximum-value](../commands-legacy/object-get-maximum-value) - [OBJECT SET FORMAT](../commands-legacy/object-set-format) - [OBJECT SET MAXIMUM VALUE](../commands-legacy/object-set-maximum-value)
 
 ---
 
@@ -126,7 +126,7 @@ title: スケール
 
 #### コマンド
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md) - [OBJECT SET MINIMUM VALUE](../commands-legacy/object-set-minimum-value.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value) - [OBJECT SET FORMAT](../commands-legacy/object-set-format) - [OBJECT SET MINIMUM VALUE](../commands-legacy/object-set-minimum-value)
 
 ---
 
@@ -146,4 +146,4 @@ title: スケール
 
 #### コマンド
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)

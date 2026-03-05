@@ -212,7 +212,7 @@ The Logs folder contains all log files used by the project. Log files include, i
 - command debugging,
 - 4D Server requests (generated on client machines and on the server).
 
-> An additional Logs folder is available in the system user preferences folder (active 4D folder, see [Get 4D folder](../commands-legacy/get-4d-folder.md) command) for maintenance log files and in cases where data folder is read-only.
+> An additional Logs folder is available in the system user preferences folder (active 4D folder, see [Get 4D folder](../commands/get-4d-folder) command) for maintenance log files and in cases where data folder is read-only.
 
 ## `Settings` (user)
 
@@ -275,3 +275,4 @@ Defaut root folder of the 4D Web server for pages, pictures, etc. It is automati
 ## `.gitignore` file (optional)
 
 File that specifies which files will be ignored by git. You can include a gitignore file in your projects using the **Create .gitignore file** option on the **General** page of the preferences. To configure the contents of that file, see [Create `.gitignore` file](Preferences/general.md#create-gitignore-file).
+

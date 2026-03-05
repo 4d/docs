@@ -29,7 +29,7 @@ Se a range ou a referência do elemento pertencer a uma caixa de texto, **WP Get
 * Com a segunda sintaxe (utilizando o parâmetro *wpDoc*), o comando devolve a seção correspondente à seção *indiceSeção* (o valor de *indiceSeção* deve ser >=1).  
 Se não for definida nenhuma seção para o *indiceSeção* especificado, o comando devolve um objeto indefinido (não se devolve nenhum erro).
 
-**Nota:** utilize o comando [WP Get subsection](wp-get-subsection.md) para obter uma subseção de uma seção ou de uma range.
+**Nota:** utilize o comando [WP Get subsection](../commands/wp-get-subsection) para obter uma subseção de uma seção ou de uma range.
 
 ## Exemplo 
 
@@ -43,5 +43,5 @@ Se quiser obtera primeira seção:
 
 ## Ver também 
 
-[WP Get sections](wp-get-sections.md)  
-[WP Get subsection](wp-get-subsection.md)  
+[WP Get sections](../commands/wp-get-sections)  
+[WP Get subsection](../commands/wp-get-subsection)  

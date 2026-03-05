@@ -41,7 +41,7 @@ Para recuperar la hoja de estilo "Main title":
 ## Ver también 
 
 *Acceder a contenidos de documentos por programación*  
-[WP DELETE STYLE SHEET](wp-delete-style-sheet.md)  
-[WP Get style sheets](wp-get-style-sheets.md)  
-[WP IMPORT STYLE SHEETS](wp-import-style-sheets.md)  
-[WP New style sheet](wp-new-style-sheet.md)  
+[WP DELETE STYLE SHEET](../commands/wp-delete-style-sheet)  
+[WP Get style sheets](../commands/wp-get-style-sheets)  
+[WP IMPORT STYLE SHEETS](../commands/wp-import-style-sheets)  
+[WP New style sheet](../commands/wp-new-style-sheet)  

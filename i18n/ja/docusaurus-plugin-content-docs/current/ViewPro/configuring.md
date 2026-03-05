@@ -51,7 +51,7 @@ title: 4D View Pro エリアの設定
 
 4D View Pro エリアのプロパティリスト内では、以下のフォームイベントが利用可能です。
 
-一部のイベントは (すべてのアクティブオブジェクトで利用可能な) 標準のフォームイベントであり、一部は 4D View Pro 専用のフォームイベントです。 また一部の標準フォームイベントは、4D View Pro エリアにおいて生成された場合、[`FORM Event`](../commands/form-event.md) コマンドが返すオブジェクトに追加の情報を提供します。 以下の表は標準イベントと、4D View Pro 専用または追加情報を提供するイベントの一覧です:
+一部のイベントは (すべてのアクティブオブジェクトで利用可能な) 標準のフォームイベントであり、一部は 4D View Pro 専用のフォームイベントです。 また一部の標準フォームイベントは、4D View Pro エリアにおいて生成された場合、[`FORM Event`](../commands/form-event) コマンドが返すオブジェクトに追加の情報を提供します。 以下の表は標準イベントと、4D View Pro 専用または追加情報を提供するイベントの一覧です:
 
 | 標準の 4Dイベント                                      | 4D View Pro 専用、または追加情報を返すイベント                         |
 | ----------------------------------------------- | ----------------------------------------------------- |
@@ -357,13 +357,13 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 |           | width  | longint | 用紙の幅、100分の1インチ単位                                                                                                                                                    |
 |           | kind   | text    | 用紙の規格サイズの名前 (例: A2、A4、legal、など)。 `GET PRINT OPTION` によって返されます。 デフォルト値 = "letter" `GET PRINT OPTION` によって返されます。 デフォルト値 = "letter" |
 
-- `height` と `width` プロパティで用紙サイズを指定した場合、[`VP Get print info`](./commands/vp-get-print-info.md) が返す用紙サイズ属性の `kind` プロパティ値は `custom` です。
+- `height` と `width` プロパティで用紙サイズを指定した場合、[`VP Get print info`](../commands/vp-get-print-info) が返す用紙サイズ属性の `kind` プロパティ値は `custom` です。
 
 - `kind` プロパティで用紙サイズを設定する場合、以下のいずれかを使用することができます:
   - [ SpreadJS のフォーマットリスト](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind) のフォーマット
-  - [`PRINT OPTION VALUES`](../commands-legacy/print-option-values.md) コマンドによって返されるフォーマットのひとつ。
+  - [`PRINT OPTION VALUES`](../commands-legacy/print-option-values) コマンドによって返されるフォーマットのひとつ。
     [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/ja/page785.html) コマンドで返されるフォーマット。
-    この場合、[`VP Get print info`](./commands/vp-get-print-info.md) は対応するフォーマットを高さと幅とともに返します。
+    この場合、[`VP Get print info`](../commands/vp-get-print-info) は対応するフォーマットを高さと幅とともに返します。
 
 ### スケール
 

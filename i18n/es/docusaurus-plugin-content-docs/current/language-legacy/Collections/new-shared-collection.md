@@ -1,0 +1,94 @@
+﻿---
+id: new-shared-collection
+title: New shared collection
+slug: /commands/new-shared-collection
+displayed_sidebar: docs
+---
+
+<!-- REF #_command_.New shared collection.Syntax -->**New shared collection** {( *...value* : any )} : Collection<!-- END REF -->
+
+<!--REF #_command_.New shared collection.Params-->
+
+<div class="no-index">
+
+| Parámetros | Tipo       |                             | Descripción                                              |
+| ---------- | ---------- | --------------------------- | -------------------------------------------------------- |
+| value      | any        | &#8594; | Valor(es) de la collection compartida |
+| Resultado  | Collection | &#8592; | New shared collection                                    |
+
+</div>
+<!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historia</summary>
+
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 16 R6       | Created        |
+
+</details>
+</div>
+
+## Descripción
+
+El comando `New shared collection` <!-- REF #_command_.New shared collection.Summary --> crea una nueva colección compartida vacía o precargada<!-- END REF --> y devuelve su referencia. Las colecciones se pueden manejar usando propiedades y funciones de la [API Collection class](../../API/CollectionClass.md).
+
+La adición de un elemento a esta colección utilizando el operador de asignación debe estar rodeada por la estructura [`Use...End use`](../../Concepts/shared.md#useend-use), de lo contrario se genera un error (esto no es necesario cuando se añaden elementos utilizando funciones como [`push()`](../../API/CollectionClass.md#push) o [`map()`](../../API/CollectionClass.md#map) porque activan automáticamente una estructura interna *Use...End use*). Sin embargo, es posible leer un elemento sin una estructura *Use...End use*.
+
+:::info
+
+Para más información sobre las colecciones compartidas, por favor consulte la página [Objetos y colecciones compartidas](../../Concepts/shared.md).
+
+:::
+
+Si no se pasa ningún parámetro, `New shared collection` crea una colección compartida vacía y devuelve su referencia.
+
+Debe asignar la referencia devuelta a una variable 4D del tipo Collection.
+
+> Tenga en cuenta que la instrucción `var : Collection` declara una variable de tipo `Collection` pero no crea ninguna colección.
+
+Opcionalmente, puedes precargar la nueva colección compartida pasando uno o varios *valor(es)* como parámetro(s). De lo contrario, puede añadir o modificar elementos posteriormente por asignación notación objeto (ver ejemplo).
+
+Si el nuevo índice del elemento está más allá del último elemento existente de la colección compartida, la colección se redimensiona automáticamente y a todos los nuevos elementos intermedios se les asigna un valor **null**.
+
+Puede pasar cualquier número de valores de los siguientes tipos soportados:
+
+- number (real, longint...). Los valores numéricos se almacenan siempre como reales.
+- text
+- boolean
+- date
+- time (almacenado como número de milisegundos - real)
+- null
+- objeto compartido
+- colección compartida
+
+:::note
+
+Esta función modifica la colección original.
+
+:::
+
+## Ejemplo
+
+```4d
+ $mySharedCol:=New shared collection("alpha";"omega")
+ Use($mySharedCol)
+    $mySharedCol[1]:="beta"
+ End use
+```
+
+## Ver también
+
+[New collection](../commands/new-collection)\
+[New shared object](../commands/new-shared-object)\
+*Shared objects and shared collections*
+
+## Propiedades
+
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1527 |
+| Hilo seguro       | sí   |
+
+
+

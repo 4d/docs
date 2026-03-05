@@ -19,8 +19,8 @@ displayed_sidebar: docs
 
 |リリース|内容|
 |---|---|
-|16 R4|変更|
 |<6|初出|
+|16 R4|変更|
 
 </details>
 </div>

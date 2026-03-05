@@ -53,7 +53,7 @@ Les requêtes REST sont détaillées dans la section [serveur REST](../REST/gett
 
 ## Extension des paramètres
 
-La configuration du serveur web 4D est définie par un ensemble complet de paramètres au niveau application qui peuvent également être personnalisés pour la session en utilisant les propriétés de l'objet `webServer` ou la commande [`WEB SET OPTION`](../commands-legacy/web-set-option.md).
+La configuration du serveur web 4D est définie par un ensemble complet de paramètres au niveau application qui peuvent également être personnalisés pour la session en utilisant les propriétés de l'objet `webServer` ou la commande [`WEB SET OPTION`](../commands-legacy/web-set-option).
 
 ## Templates et URLs
 

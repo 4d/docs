@@ -18,7 +18,7 @@ Si vous avez l'habitude de coder avec **VS Code**, vous pouvez également utilis
 Il existe plusieurs façons d'afficher le débogueur :
 
 - En cliquant sur le bouton **Trace** dans [la fenêtre des erreurs de syntaxe](basics.md#syntax-error-window)
-- En utilisant la commande [`TRACE`](../commands-legacy/trace.md),
+- En utilisant la commande [`TRACE`](../commands-legacy/trace),
 - En cliquant sur le bouton **Debug** dans la fenêtre d'exécution de méthode ou en sélectionnant le bouton **Run and debug...** dans l'éditeur de code
 - En utilisant **Alt+Shift+Clic** droit (Windows) ou **Ctrl+Option+Cmd+Clic (macOS)** pendant l'exécution d'une méthode, puis en sélectionnant le processus à suivre dans le menu contextuel :
 
@@ -294,7 +294,7 @@ Pour afficher le type de paramètre, cochez l'option **Afficher les types** dans
 
 Après avoir déployé la liste des paramètres, vous pouvez faire glisser et déposer les paramètres et les résultats de la fonction dans la [fenêtre d'évaluation](#fenetre-devaluation).
 
-Vous pouvez également utiliser la commande [Call chain](../commands/call-chain.md) pour récupérer la chaîne d'appels par programmation.
+Vous pouvez également utiliser la commande [Call chain](../commands/call-chain) pour récupérer la chaîne d'appels par programmation.
 
 ## Fenêtre d'évaluation
 
@@ -311,7 +311,7 @@ Le fenêtre d'évaluation sert à évaluer les expressions. Elle est similaire �
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
 
-Vous pouvez évaluer toute expression qui peut être affichée sous forme de texte. Ceci n'inclut pas les champs et les variables image et BLOB. Pour afficher le contenu d'un BLOB, vous pouvez utiliser les commandes BLOB, telles que [BLOB to text](../commands-legacy/blob-to-text.md).
+Vous pouvez évaluer toute expression qui peut être affichée sous forme de texte. Ceci n'inclut pas les champs et les variables image et BLOB. Pour afficher le contenu d'un BLOB, vous pouvez utiliser les commandes BLOB, telles que [BLOB to text](../commands-legacy/blob-to-text).
 
 ### Mode d'affichage
 

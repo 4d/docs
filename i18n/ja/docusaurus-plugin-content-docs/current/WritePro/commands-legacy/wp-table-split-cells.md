@@ -68,5 +68,5 @@ If startColumn 引数と ColumnCount 引数の和、または *startRow* 引数�
 
 ## 参照 
 
-[WP TABLE MERGE CELLS](wp-table-merge-cells.md)  
+[WP TABLE MERGE CELLS](../commands/wp-table-merge-cells)  
 *表の管理*  

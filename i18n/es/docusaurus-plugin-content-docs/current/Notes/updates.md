@@ -7,12 +7,12 @@ title: Notas del lanzamiento
 
 #### Lo más destacado
 
-- El comando [`JSON Validate`](../commands/json-validate.md) ahora es compatible con el borrador 2020-12 del esquema JSON.
+- El comando [`JSON Validate`](../commands/json-validate) ahora es compatible con el borrador 2020-12 del esquema JSON.
 - Ability to use a custom certificate from the macOS keychain instead of a local certificates folder in [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) and [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) classes.
 
 #### Cambios de comportamiento
 
-- El comando [`JSON Validate`](../commands/json-validate.md) ahora tiene en cuenta la llave *$schema* y genera un error si se declara una versión no soportada en el esquema.
+- El comando [`JSON Validate`](../commands/json-validate) ahora tiene en cuenta la llave *$schema* y genera un error si se declara una versión no soportada en el esquema.
 
 ## 4D 21 R2
 
@@ -32,13 +32,13 @@ Lea [**Novedades en 4D 21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/), la 
 #### Vista previa para desarrolladores
 
 - Soporte de [**renderización de interfaz Fluent UI**](../FormEditor/forms.md#fluent-ui-rendering) en Windows:
-  - nuevo comando [`FORM theme`](../commands/form-theme.md)
+  - nuevo comando [`FORM theme`](../commands/form-theme)
   - nuevo [media query css `form-theme`](../FormEditor/createStylesheet.md#media-queries),
   - nueva opción [**Utilizar Fluent UI en Windows**](../settings/interface.md#use-fluent-ui-on-windows) en el cuadro de diálogo de Propiedades del proyecto.
 
 #### Cambios de comportamiento
 
-- En Windows, si la [renderización **fluent UI**](../FormEditor/forms.md#fluent-ui-rendering) está activada, el comando [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) puede devolver información diferente si se llama desde un formulario o no.
+- En Windows, si la [renderización **fluent UI**](../FormEditor/forms.md#fluent-ui-rendering) está activada, el comando [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info) puede devolver información diferente si se llama desde un formulario o no.
 
 ## Tabla de la librería
 

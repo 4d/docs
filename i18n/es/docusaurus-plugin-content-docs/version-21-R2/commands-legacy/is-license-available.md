@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 El comando Is license available puede utilizarse de tres maneras diferentes:
 
-* El parámetro *licencia* se omite: en este caso, el comando devuelve [False](false.md "False") si la aplicación 4D está en modo demostración.
+* El parámetro *licencia* se omite: en este caso, el comando devuelve [False](../commands/false) si la aplicación 4D está en modo demostración.
 * Pase en el parámetro *licencia* una de la constantes del tema “*Licencia disponible*”:  
 
 | Constante              | Tipo         | Valor     |  
@@ -49,8 +49,8 @@ El comando Is license available puede utilizarse de tres maneras diferentes:
 | 4D Web license         | Entero largo | 808464945 |  
 | 4D Write license       | Entero largo | 808464697 |  
     
-En este caso, el comando devuelve [True](true.md "True") si el plug-in correspondiente tiene una licencia disponible. El comando tiene en cuenta las licencias efectuadas en modo Diseño o vía el comando [SET PLUGIN ACCESS](set-plugin-access.md).  
-Is license available devuelve [False](false.md "False") si el plug-in está funcionando en modo demostración.
+En este caso, el comando devuelve [True](../commands/true) si el plug-in correspondiente tiene una licencia disponible. El comando tiene en cuenta las licencias efectuadas en modo Diseño o vía el comando [SET PLUGIN ACCESS](set-plugin-access.md).  
+Is license available devuelve [False](../commands/false) si el plug-in está funcionando en modo demostración.
 * Pase en el parámetro *licencia* el número de identificación del recurso “4BNX” del plug-in. En este caso, el comando se comporta como se indicó anteriormente.
 
 ## Ver también 

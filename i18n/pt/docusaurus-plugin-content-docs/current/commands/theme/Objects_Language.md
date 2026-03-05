@@ -5,25 +5,26 @@ sidebar_label: Objects (Language)
 slug: /commands/theme/Objects-Language
 ---
 
-|                                                                                                                 |
-| --------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #_command_.New object.Syntax -->](../../commands-legacy/new-object.md)<br/>                       |
-| [<!-- INCLUDE #_command_.New shared object.Syntax -->](../../commands-legacy/new-shared-object.md)<br/>         |
-| [<!-- INCLUDE #_command_.OB Class.Syntax -->](../../commands-legacy/ob-class.md)<br/>                           |
-| [<!-- INCLUDE #_command_.OB Copy.Syntax -->](../../commands-legacy/ob-copy.md)<br/>                             |
-| [<!-- INCLUDE #_command_.OB Entries.Syntax -->](../../commands-legacy/ob-entries.md)<br/>                       |
-| [<!-- INCLUDE #_command_.OB Get.Syntax -->](../../commands-legacy/ob-get.md)<br/>                               |
-| [<!-- INCLUDE #_command_.OB GET ARRAY.Syntax -->](../../commands-legacy/ob-get-array.md)<br/>                   |
-| [<!-- INCLUDE #_command_.OB GET PROPERTY NAMES.Syntax -->](../../commands-legacy/ob-get-property-names.md)<br/> |
-| [<!-- INCLUDE #_command_.OB Get type.Syntax -->](../../commands-legacy/ob-get-type.md)<br/>                     |
-| [<!-- INCLUDE #_command_.OB Instance of.Syntax -->](../../commands-legacy/ob-instance-of.md)<br/>               |
-| [<!-- INCLUDE #_command_.OB Is defined.Syntax -->](../../commands-legacy/ob-is-defined.md)<br/>                 |
-| [<!-- INCLUDE #_command_.OB Is empty.Syntax -->](../../commands-legacy/ob-is-empty.md)<br/>                     |
-| [<!-- INCLUDE #_command_.OB Is shared.Syntax -->](../../commands-legacy/ob-is-shared.md)<br/>                   |
-| [<!-- INCLUDE #_command_.OB Keys.Syntax -->](../../commands-legacy/ob-keys.md)<br/>                             |
-| [<!-- INCLUDE #_command_.OB REMOVE.Syntax -->](../../commands-legacy/ob-remove.md)<br/>                         |
-| [<!-- INCLUDE #_command_.OB SET.Syntax -->](../../commands-legacy/ob-set.md)<br/>                               |
-| [<!-- INCLUDE #_command_.OB SET ARRAY.Syntax -->](../../commands-legacy/ob-set-array.md)<br/>                   |
-| [<!-- INCLUDE #_command_.OB SET NULL.Syntax -->](../../commands-legacy/ob-set-null.md)<br/>                     |
-| [<!-- INCLUDE #_command_.OB Values.Syntax -->](../../commands-legacy/ob-values.md)<br/>                         |
-| [<!-- INCLUDE #_command_.Storage.Syntax -->](../../commands-legacy/storage.md)<br/>                             |
+
+||
+|---|
+|[<!-- INCLUDE #_command_.New object.Syntax -->](../../commands/new-object)<br/>|
+|[<!-- INCLUDE #_command_.New shared object.Syntax -->](../../commands/new-shared-object)<br/>|
+|[<!-- INCLUDE #_command_.OB Class.Syntax -->](../../commands/ob-class)<br/>|
+|[<!-- INCLUDE #_command_.OB Copy.Syntax -->](../../commands/ob-copy)<br/>|
+|[<!-- INCLUDE #_command_.OB Entries.Syntax -->](../../commands/ob-entries)<br/>|
+|[<!-- INCLUDE #_command_.OB Get.Syntax -->](../../commands/ob-get)<br/>|
+|[<!-- INCLUDE #_command_.OB GET ARRAY.Syntax -->](../../commands/ob-get-array)<br/>|
+|[<!-- INCLUDE #_command_.OB GET PROPERTY NAMES.Syntax -->](../../commands/ob-get-property-names)<br/>|
+|[<!-- INCLUDE #_command_.OB Get type.Syntax -->](../../commands/ob-get-type)<br/>|
+|[<!-- INCLUDE #_command_.OB Instance of.Syntax -->](../../commands/ob-instance-of)<br/>|
+|[<!-- INCLUDE #_command_.OB Is defined.Syntax -->](../../commands/ob-is-defined)<br/>|
+|[<!-- INCLUDE #_command_.OB Is empty.Syntax -->](../../commands/ob-is-empty)<br/>|
+|[<!-- INCLUDE #_command_.OB Is shared.Syntax -->](../../commands/ob-is-shared)<br/>|
+|[<!-- INCLUDE #_command_.OB Keys.Syntax -->](../../commands/ob-keys)<br/>|
+|[<!-- INCLUDE #_command_.OB REMOVE.Syntax -->](../../commands/ob-remove)<br/>|
+|[<!-- INCLUDE #_command_.OB SET.Syntax -->](../../commands/ob-set)<br/>|
+|[<!-- INCLUDE #_command_.OB SET ARRAY.Syntax -->](../../commands/ob-set-array)<br/>|
+|[<!-- INCLUDE #_command_.OB SET NULL.Syntax -->](../../commands/ob-set-null)<br/>|
+|[<!-- INCLUDE #_command_.OB Values.Syntax -->](../../commands/ob-values)<br/>|
+|[<!-- INCLUDE #_command_.Storage.Syntax -->](../../commands/storage)<br/>|

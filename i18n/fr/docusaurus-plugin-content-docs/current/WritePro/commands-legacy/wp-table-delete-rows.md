@@ -54,4 +54,4 @@ Supprimera les deux lignes de leur emplacement initial :
 
 ## Voir aussi 
 
-[WP TABLE DELETE COLUMNS](wp-table-delete-columns.md)  
+[WP TABLE DELETE COLUMNS](../commands/wp-table-delete-columns)  

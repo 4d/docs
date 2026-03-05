@@ -58,5 +58,5 @@ displayed_sidebar: docs
 ## 参照 
 
   
-[WP Get formulas](wp-get-formulas.md)  
-[WP SET LINK](wp-set-link.md)  
+[WP Get formulas](../commands/wp-get-formulas)  
+[WP SET LINK](../commands/wp-set-link)  

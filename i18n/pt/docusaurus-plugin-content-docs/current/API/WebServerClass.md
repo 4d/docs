@@ -7,7 +7,7 @@ A API classe `WebServer` permite que você inicie e monitore um servidor web par
 
 ### Objeto Web Server
 
-Os objetos servidor Web são instanciados com o comando [`WEB Server`](../commands/web-server.md).
+Os objetos servidor Web são instanciados com o comando [`WEB Server`](../commands/web-server).
 
 Eles oferecem as propriedades abaixo e funções:
 
@@ -613,7 +613,7 @@ A função `.start()` <!-- REF #WebServerClass.start().Summary -->inicia o servi
 
 O servidor web começa com as definições padrão definidas no ficheiro de definições do projecto ou (apenas base de dados anfitriã) usando o comando `WEB SET OPTION`. No entanto, utilizando o parâmetro *settings*, pode definir propriedades personalizadas para a sessão do servidor web.
 
-Todas as configurações dos [objetos servidor web](../commands/web-server.md) podem ser personalizadas, exceto propriedades somente leitura ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy) e [.sessionCookieName](#sessioncookiename)).
+Todas as configurações dos [objetos servidor web](../commands/web-server) podem ser personalizadas, exceto propriedades somente leitura ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy) e [.sessionCookieName](#sessioncookiename)).
 
 As configurações de sessão personalizadas serão redefinidas quando a função [`.stop()`](#stop) for chamada.
 

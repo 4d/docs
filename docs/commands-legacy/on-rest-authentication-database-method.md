@@ -24,11 +24,11 @@ displayed_sidebar: docs
 
 |Release|Changes|
 |---|---|
-|20 R6|Modified|
-|18|Renamed|
-|18|Modified|
-|14 R3|Renamed|
 |14|Created|
+|14 R3|Renamed|
+|18|Modified|
+|18|Renamed|
+|20 R6|Modified|
 
 </details>
 </div>

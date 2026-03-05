@@ -92,6 +92,6 @@ Bien qu'il soit traité de manière transparente par 4D, le mode SDI introduit d
 
 :::info
 
-Vous pouvez utiliser la commande [**Application info**](../commands/application-info.md) pour connaître le mode d'exécution courant sous Windows.
+Vous pouvez utiliser la commande [**Application info**](../commands/application-info) pour connaître le mode d'exécution courant sous Windows.
 
 :::

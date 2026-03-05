@@ -84,5 +84,5 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP Table get cells](wp-table-get-cells.md)  
-[WP Table get rows](wp-table-get-rows.md)  
+[WP Table get cells](../commands/wp-table-get-cells)  
+[WP Table get rows](../commands/wp-table-get-rows)  

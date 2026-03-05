@@ -21,7 +21,7 @@ You can also display the Preferences dialog box in Application mode using the "P
 
 ## Storage 
  
-Settings made in the Preferences dialog box are saved in an XML format preferences file named **4D Preferences vXX.4DPreferences** that is stored in the active 4D folder of the current user, as returned by the [`Get 4D folder`](../commands-legacy/get-4d-folder.md) command:
+Settings made in the Preferences dialog box are saved in an XML format preferences file named **4D Preferences vXX.4DPreferences** that is stored in the active 4D folder of the current user, as returned by the [`Get 4D folder`](../commands/get-4d-folder) command:
 
 *	Windows: `{disk}\Users\\{username\}\AppData\Roaming\4D`
 *	macOS: `{disk}:Users:\{username\}:Library:Application Support:4D`
@@ -41,4 +41,5 @@ To reset the parameters to their default values and remove the bold style indica
 ![](../assets/en/Preferences/overviewSettings.png)
 
 This button resets all the parameters of the current page. It becomes active when at least one parameter has been modified on the current page.
+
 

@@ -267,11 +267,11 @@ Standard sort support depends on the list box type:
 
 ### Custom sort
 
-The developer can set up custom sorts, for example using the [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns.md) command and/or combining the [`On Header Click`](../Events/onHeaderClick) and [`On After Sort`](../Events/onAfterSort) form events and relevant 4D commands.
+The developer can set up custom sorts, for example using the [`LISTBOX SORT COLUMNS`](../commands/listbox-sort-columns) command and/or combining the [`On Header Click`](../Events/onHeaderClick) and [`On After Sort`](../Events/onAfterSort) form events and relevant 4D commands.
 
 Custom sorts allow you to:
 
-- carry out multi-level sorts on several columns, thanks to the [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns.md) command,
+- carry out multi-level sorts on several columns, thanks to the [`LISTBOX SORT COLUMNS`](../commands/listbox-sort-columns) command,
 - use functions such as [`collection.orderByMethod()`](../API/CollectionClass.md#orderbymethod) or [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) to sort columns on complex criteria.
 
 #### Example
@@ -313,7 +313,7 @@ The value of the [column header variable](properties_Object.md#variable-or-expre
 
 You can set the value of the variable (for example, Header2:=2) in order to "force" the sort arrow display. The column sort itself is not modified in this case; it is up to the developer to handle it.
 
-> The [`OBJECT SET FORMAT`](../commands-legacy/object-set-format.md) command offers specific support for icons in list box headers, which can be useful when you want to work with a customized sort icon.
+> The [`OBJECT SET FORMAT`](../commands/object-set-format) command offers specific support for icons in list box headers, which can be useful when you want to work with a customized sort icon.
 
 
 ## Managing row colors, styles, and display
@@ -419,7 +419,7 @@ To specify a hierarchical list box, there are several possibilities:
 
 *	Manually configure hierarchical elements using the Property list of the form editor (or edit the JSON form).
 *	Visually generate the hierarchy using the list box management pop-up menu, in the form editor.
-*	Use the [`LISTBOX SET HIERARCHY`](../commands-legacy/listbox-set-hierarchy.md) and [`LISTBOX GET HIERARCHY`](../commands-legacy/listbox-get-hierarchy.md) commands.
+*	Use the [`LISTBOX SET HIERARCHY`](../commands/listbox-set-hierarchy) and [`LISTBOX GET HIERARCHY`](../commands/listbox-get-hierarchy) commands.
 
 
 #### Hierarchical List Box property
@@ -604,6 +604,7 @@ In this case, you must fill and empty arrays through the code. The principles to
 ![](../assets/en/FormObjects/hierarch16.png)
 
 - When a user clicks on a collapse button, you can process the `On Collapse` event. The [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) command returns the cell concerned: you remove as many rows as needed from the list box using the [`LISTBOX DELETE ROWS`](../commands/listbox-delete-rows) command.
+
 
 
 

@@ -32,7 +32,7 @@ title: 動作
 
 #### コマンド
 
-[OBJECT GET DRAG AND DROP OPTIONS](../commands-legacy/object-get-drag-and-drop-options.md) - [OBJECT SET DRAG AND DROP OPTIONS](../commands-legacy/object-set-drag-and-drop-options.md)
+[OBJECT GET DRAG AND DROP OPTIONS](../commands-legacy/object-get-drag-and-drop-options) - [OBJECT SET DRAG AND DROP OPTIONS](../commands-legacy/object-set-drag-and-drop-options)
 
 #### 参照
 
@@ -64,7 +64,7 @@ title: 動作
 
 #### コマンド
 
-[OBJECT GET DRAG AND DROP OPTIONS](../commands-legacy/object-get-drag-and-drop-options.md) - [OBJECT SET DRAG AND DROP OPTIONS](../commands-legacy/object-set-drag-and-drop-options.md)
+[OBJECT GET DRAG AND DROP OPTIONS](../commands-legacy/object-get-drag-and-drop-options) - [OBJECT SET DRAG AND DROP OPTIONS](../commands-legacy/object-set-drag-and-drop-options)
 
 #### 参照
 
@@ -136,7 +136,7 @@ title: 動作
 
 #### コマンド
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
 
 ---
 
@@ -156,7 +156,7 @@ title: 動作
 
 #### コマンド
 
-[GET LIST PROPERTIES](../commands-legacy/get-list-properties.md) - [SET LIST PROPERTIES](../commands-legacy/set-list-properties.md)
+[GET LIST PROPERTIES](../commands-legacy/get-list-properties) - [SET LIST PROPERTIES](../commands-legacy/set-list-properties)
 
 ---
 
@@ -183,7 +183,7 @@ title: 動作
 
 #### コマンド
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
 
 ---
 
@@ -205,5 +205,5 @@ title: 動作
 
 #### コマンド
 
-[`OBJECT Get action`](../commands-legacy/object-get-action.md) - [`OBJECT SET ACTION`](../commands-legacy/object-set-action.md)
+[`OBJECT Get action`](../commands-legacy/object-get-action) - [`OBJECT SET ACTION`](../commands-legacy/object-set-action)
 

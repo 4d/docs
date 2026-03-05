@@ -73,12 +73,12 @@ Debe declarar estos parámetros de esta forma:
 **Notas:**
 
 * Por razones de rendimiento, el tamaño de los datos que transita vía el parámetro $http no debe superar los 32 KB. De lo contrario serán truncados por el servidor HTTP de 4D.
-* Para mayor información sobre este parámetro, consulte la descripción del [Método base On Web Connection](metodo-base-on-web-connection.md).
+* Para mayor información sobre este parámetro, consulte la descripción del [Método base On Web Connection](../commands/metodo-base-on-web-connection).
 * **Dirección IP del navegador**  
 El tercer parámetro $ipBrowser recibe la dirección IP del equipo navegador. Esta información permite distinguir entre las conexiones de Intranet e Internet.  
 **Nota:** 4D devuelve las direcciones IPv4 en un formato híbrido IPv6 escritos con un prefijo de 96 bits, por ejemplo ::ffff:192.168.2.34 para la dirección IPv4 192.168.2.34\. Para mayor información, consulte la sección *Soporte de IP v6*.
 * **Dirección IP para llamar al servidor**  
-El cuarto parámetro $ipServer recibe la dirección IP utilizada para llamar al servidor Web. 4D a partir de la versión 6.5 autoriza el multi-homing, permitiendo explotar equipos con más de una dirección IP. Para mayor información, consulte la sección [QR DELETE COLUMN](qr-delete-column.md).
+El cuarto parámetro $ipServer recibe la dirección IP utilizada para llamar al servidor Web. 4D a partir de la versión 6.5 autoriza el multi-homing, permitiendo explotar equipos con más de una dirección IP. Para mayor información, consulte la sección [QR DELETE COLUMN](../commands/qr-delete-column).
 * **Nombre del usuario y contraseña**  
 Los parámetros $user y $pw reciben el nombre de usuario y contraseña introducidos por el usuario en la caja de diálogo estándar de identificación mostrada por el navegador. Esta caja de diálogo aparece para cada conexión, si una opción de gestión de contraseñas ha sido seleccionada en las Propiedades de la base (ver la sección *Seguridad de las conexiones*).
 
@@ -88,16 +88,16 @@ Los parámetros $user y $pw reciben el nombre de usuario y contraseña introduci
   
  El Método base On Web Authentication devuelve un booleano en $result:
 
-   * Si $result es [True](true.md "True"), la conexión es aceptada.
-   * Si $result es [False](false.md "False"), la conexión es rechazada.
+   * Si $result es [True](../commands/true), la conexión es aceptada.
+   * Si $result es [False](../commands/false), la conexión es rechazada.
 
-El [Método base On Web Connection](metodo-base-on-web-connection.md) sólo se ejecuta si la conexión ha sido aceptada por **On Web Authentication**.
+El [Método base On Web Connection](../commands/metodo-base-on-web-connection) sólo se ejecuta si la conexión ha sido aceptada por **On Web Authentication**.
 
-**Advertencia:** si no se pasa ningún valor en *$result* o si *$result* no se define en el Método base On Web Authentication, la conexión se considerará como aceptada y se ejecuta el [Método base On Web Connection](metodo-base-on-web-connection.md)*Licenses*.
+**Advertencia:** si no se pasa ningún valor en *$result* o si *$result* no se define en el Método base On Web Authentication, la conexión se considerará como aceptada y se ejecuta el [Método base On Web Connection](../commands/metodo-base-on-web-connection)*Licenses*.
 
 **Notas:**
 
-* No llame elementos de interfaz en el Método base On Web Authentication ([ALERT](alert.md), [DIALOG](../commands/dialog.md), etc.) porque de lo contrario su ejecución se interrumpirá y la conexión será rechazada. Lo mismo sucede si se presenta un error durante su proceso.
+* No llame elementos de interfaz en el Método base On Web Authentication ([ALERT](../commands/alert), [DIALOG](../commands/dialog), etc.) porque de lo contrario su ejecución se interrumpirá y la conexión será rechazada. Lo mismo sucede si se presenta un error durante su proceso.
 * Es posible evitar la ejecución por *4DACTION* o *4DSCRIPT* de cada método de proyecto con la ayuda de la opción “Disponible vía las etiquetas HTML y URLs (4DACTION...) en la caja de diálogo de las Propiedades de los métodos. Para mayor información sobre este punto, consulte la sección *Seguridad de las conexiones*.
 
 ## Llamadas del método base On Web Authentication 
@@ -110,7 +110,7 @@ Por lo tanto el Método base On Web Authentication se llama en los siguientes ca
 * cuando 4D recibe un URL que comienza por *4DCGI/*
 * cuando 4D recibe un URL que comienza por *4DSYNC/*
 * cuando 4D recibe un URL solicitando una página estática que no existe
-* cuando 4D recibe un URL de acceso a la raíz y no se ha definido una página de inicio en las propiedades de la base o por medio del comando [WEB SET HOME PAGE](web-set-home-page.md)
+* cuando 4D recibe un URL de acceso a la raíz y no se ha definido una página de inicio en las propiedades de la base o por medio del comando [WEB SET HOME PAGE](../commands/web-set-home-page)
 * cuando 4D procesa una etiqueta *4DSCRIPT* en una página semidinámica
 * cuando 4D procesa una etiqueta *4DLOOP* basada en un método en una página semidinámica.
 **Nota de compatibilidad:** el método base también se llama cuando 4D recibe un URL que comienza por *4DMETHOD/*. Este URL es obsoleto y sólo se conserva por razones de compatibilidad.
@@ -207,3 +207,4 @@ var $i : Integer
     End if
  End for
 ```
+

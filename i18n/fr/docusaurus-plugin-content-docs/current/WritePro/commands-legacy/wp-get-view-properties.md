@@ -26,7 +26,7 @@ Si vous passez le paramètre optionnel *\** , vous indiquez que *wpArea* est le 
 Les attributs vue de la zone 4D Write Pro peuvent être définis : 
 
 * au niveau du formulaire dans la Liste des propriétés,
-* dynamiquement durant la session à l'aide de la commande [WP SET VIEW PROPERTIES](wp-set-view-properties.md).
+* dynamiquement durant la session à l'aide de la commande [WP SET VIEW PROPERTIES](../commands/wp-set-view-properties).
 
 **Objet retourné**
 
@@ -70,4 +70,4 @@ Dans la zone 4D Write Pro, vous souhaitez afficher les règles uniquement en mod
 
 ## Voir aussi 
 
-[WP SET VIEW PROPERTIES](wp-set-view-properties.md)  
+[WP SET VIEW PROPERTIES](../commands/wp-set-view-properties)  

@@ -52,7 +52,7 @@ ORDA [`constructor()`](./ordaClasses.md#class-constructor) 関数は必ずクラ
 
 :::
 
-他のリモート構成(例: [Qodly アプリケーション](https://developer.4d.com/qodly)、[REST API リクエスト](../REST/REST_requests.md)、あるいは[`Open datastore`](../commands/open-datastore.md) を通したリクエスト)においては、イベント関数は必ず**サーバー側**で実行されます。 これはつまりイベントをトリガーするためには、属性がタッチされたことがサーバーから"見える"ようにしておくようにしなければならいことを意味します(以下参照)。
+他のリモート構成(例: [Qodly アプリケーション](https://developer.4d.com/qodly)、[REST API リクエスト](../REST/REST_requests.md)、あるいは[`Open datastore`](../commands/open-datastore) を通したリクエスト)においては、イベント関数は必ず**サーバー側**で実行されます。 これはつまりイベントをトリガーするためには、属性がタッチされたことがサーバーから"見える"ようにしておくようにしなければならいことを意味します(以下参照)。
 
 ### 概要表
 
@@ -104,8 +104,8 @@ ORDA [`constructor()`](./ordaClasses.md#class-constructor) 関数は必ずクラ
 
 | プロパティ              | 型       | 説明                                                                                                                                                                                                                                                                                                                                                                                                                               | 開発者によって設定                          |
 | ------------------ | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
-| errCode            | Integer | [`Last errors`](../commands/last-errors.md) コマンドと同じ                                                                                                                                                                                                                                                                                                                                                                              | ◯                                  |
-| message            | Text    | [`Last errors`](../commands/last-errors.md) コマンドと同じ                                                                                                                                                                                                                                                                                                                                                                              | ◯                                  |
+| errCode            | Integer | [`Last errors`](../commands/last-errors) コマンドと同じ                                                                                                                                                                                                                                                                                                                                                                              | ◯                                  |
+| message            | Text    | [`Last errors`](../commands/last-errors) コマンドと同じ                                                                                                                                                                                                                                                                                                                                                                              | ◯                                  |
 | extraDescription   | Object  | 自由に設定可能な情報                                                                                                                                                                                                                                                                                                                                                                                                                       | ◯                                  |
 | seriousError       | Boolean | validate イベントでのみ使用されます(以下参照)。 <li>`True`: [深刻(予測不能)なエラー](../Concepts/error-handling.md#予測可能なエラーvs予測不能なエラー) を作成し、例外をトリガーします。 `dk status serious validation error` ステータスを追加します</li><li>`False`: creates only a [静か(予測可能) なエラー](../Concepts/error-handling.md#予測可能なエラーvs予測不可なエラー) のみを作成します。 `dk status validation failed` ステータスを追加します</li> | 可能(デフォルトはfalse) |
 | componentSignature | Text    | 常に "DBEV"                                                                                                                                                                                                                                                                                                                                                                                                                        | ×                                  |
@@ -113,7 +113,7 @@ ORDA [`constructor()`](./ordaClasses.md#class-constructor) 関数は必ずクラ
 - [深刻なエラー](../Concepts/error-handling.md#予測可能なエラーvs予測不可なエラー) は[`save()`](../API/EntityClass.md#save) または [`drop()`](../API/EntityClass.md#drop) 関数から返される **Result オブジェクト** の `errors` コレクションプロパティにスタックされます。
 - **validate** イベントによってトリガーされたエラーの場合、 `seriousError` プロパティを使用することで生成するエラーのレベルを選択することができます:
   - **true** の場合: 深刻なエラーが生成され、[try catch](../Concepts/error-handling.md#trycatchend-try)などの[エラー処理コード](../Concepts/error-handling.md#予測可能なエラーvs予測不可なエラー) によって管理される必要があります。 呼び出した関数のresult オブジェクトでは、`status` には `dk status serious validation error` が入り、 `statusText` には "Serious Validation Error" が入ります。 エラーはイベントの終わりに生成され、保存/ドロップアクションをリクエストしているクライアント(例えばREST クライアントなど)に届きます。
-  - **false** (デフォルト)の場合: [静か(予測可能) なエラーが生成されます](../Concepts/error-handling.md#予測可能なエラーvs予測不可なエラー)。 これは例外はトリガーせず、また[`Last errors`](../commands/last-errors.md) コマンドから返されるエラーの中にはスタックされません。 呼び出した関数のresult オブジェクトでは、`status` には `dk status validation failed` が入り、 `statusText` には "Mild Validation Error" が入ります。
+  - **false** (デフォルト)の場合: [静か(予測可能) なエラーが生成されます](../Concepts/error-handling.md#予測可能なエラーvs予測不可なエラー)。 これは例外はトリガーせず、また[`Last errors`](../commands/last-errors) コマンドから返されるエラーの中にはスタックされません。 呼び出した関数のresult オブジェクトでは、`status` には `dk status validation failed` が入り、 `statusText` には "Mild Validation Error" が入ります。
 - **保存時/ドロップ時** のイベントによってトリガーされたエラーの場合、エラーオブジェクトが返されると、 `seriousError` プロパティの値に関わらず、エラーは常に深刻なエラーとして生成されます。
 
 ## イベント関数の詳細
@@ -138,8 +138,8 @@ ORDA [`constructor()`](./ordaClasses.md#class-constructor) 関数は必ずクラ
 - **[`local` キーワード](../ORDA/ordaClasses.md#local関数) を使用したクライアント/サーバー** あるいは **シングルユーザーモードの4D**:
   - ユーザーが4D フォーム上で値を設定した
   - 4D コードが `:=` 演算子によって代入を行った。 このイベントは自己代入の場合にもトリガーされます(`$entity.attribute:=$entity.attribute`)。
-- **`local` キーワード を使用しないクライアント/サーバー**: `:=` 演算子によって代入を行う一部の4D コードは、[サーバー上で実行されます](../commands-legacy/execute-on-server.md)。
-- **`local` キーワードを使用しないクライアント/サーバー**、**[Qodly アプリケーション](https://developer.4d.com/qodly)** および **[リモートデータストア](../commands/open-datastore.md)**: ORDA 関数(エンティティ上の関数あるいはエンティティを引数として使用する関数)を呼び出した場合にはエンティティは4D Server 受信されます。 これはつまり、リモートアプリケーション側に*refresh* あるいは *preview* 関数を実装することでORDA リクエストをサーバーに送信し、イベントをトリガーするようにする必要があるかもしれない、ということです。
+- **`local` キーワード を使用しないクライアント/サーバー**: `:=` 演算子によって代入を行う一部の4D コードは、[サーバー上で実行されます](../commands-legacy/execute-on-server)。
+- **`local` キーワードを使用しないクライアント/サーバー**、**[Qodly アプリケーション](https://developer.4d.com/qodly)** および **[リモートデータストア](../commands/open-datastore)**: ORDA 関数(エンティティ上の関数あるいはエンティティを引数として使用する関数)を呼び出した場合にはエンティティは4D Server 受信されます。 これはつまり、リモートアプリケーション側に*refresh* あるいは *preview* 関数を実装することでORDA リクエストをサーバーに送信し、イベントをトリガーするようにする必要があるかもしれない、ということです。
 - REST サーバー: 値は REST サーバーに、[REST リクエスト](../REST/$method.md#methodupdate) (`$method=update`) とともに受信されます。
 
 関数は [*event* オブジェクト](#event-引数) を引数として受け取ります。

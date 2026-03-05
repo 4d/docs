@@ -29,7 +29,7 @@ displayed_sidebar: docs
 * 第2シンタックス(*wpDoc* 引数)を使用する場合、コマンドは*sectionIndex* 引数のセクションに対応するセクションを返します(*sectionIndex* は1以上の値でなければなりません)。  
 *sectionIndex* 指定した引数に対して定義されたセクションがなかった場合、コマンドは未定義のオブジェクトを返します(エラーは返されません)。
 
-**注:** セクションあるはレンジからサブセクションを取得したい場合には、[WP Get subsection](wp-get-subsection.md) コマンドを使用してください。
+**注:** セクションあるはレンジからサブセクションを取得したい場合には、[WP Get subsection](../commands/wp-get-subsection) コマンドを使用してください。
 
 ## 例題 
 
@@ -43,5 +43,5 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP Get sections](wp-get-sections.md)  
-[WP Get subsection](wp-get-subsection.md)  
+[WP Get sections](../commands/wp-get-sections)  
+[WP Get subsection](../commands/wp-get-subsection)  

@@ -6,7 +6,7 @@ The `SMTPTransporter` class allows you to configure SMTP connections and send em
 
 ### SMTP Transporter object
 
-SMTP Transporter objects are instantiated with the [`SMTP New transporter`](../commands/smtp-new-transporter.md) command. They provide the following properties and functions:
+SMTP Transporter objects are instantiated with the [`SMTP New transporter`](../commands/smtp-new-transporter) command. They provide the following properties and functions:
 
 ||
 |---|
@@ -42,7 +42,7 @@ SMTP Transporter objects are instantiated with the [`SMTP New transporter`](../c
 
 #### Description
 
-The `4D.SMTPTransporter.new()` function <!-- REF #4D.SMTPTransporter.new().Summary -->creates and returns a new object of the `4D.SMTPTransporter` type<!-- END REF -->. It is identical to the [`SMTP New transporter`](../commands/smtp-new-transporter.md) command (shortcut).
+The `4D.SMTPTransporter.new()` function <!-- REF #4D.SMTPTransporter.new().Summary -->creates and returns a new object of the `4D.SMTPTransporter` type<!-- END REF -->. It is identical to the [`SMTP New transporter`](../commands/smtp-new-transporter) command (shortcut).
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -138,7 +138,7 @@ The `.send()` function <!-- REF #SMTPTransporterClass.send().Summary -->sends th
 
 >The `transporter` object must have already been created using the `SMTP New transporter` command.
 
-The method creates the SMTP connection if it is not already alive. If the `.keepAlive` property of the `transporter` object is **false**, the SMTP connection is automatically closed after the execution of `.send()`, otherwise it stays alive until the `transporter` object is destroyed. For more information, please refer to the [`SMTP New transporter`](../commands/smtp-new-transporter.md) command description.
+The method creates the SMTP connection if it is not already alive. If the `.keepAlive` property of the `transporter` object is **false**, the SMTP connection is automatically closed after the execution of `.send()`, otherwise it stays alive until the `transporter` object is destroyed. For more information, please refer to the [`SMTP New transporter`](../commands/smtp-new-transporter) command description.
 
 In *mail*, pass a valid [`Email` object](EmailObjectClass.md#email-object) to send. The origination (where the email is coming from) and destination (one or more recipients) properties must be included, the remaining properties are optional.
 
@@ -165,3 +165,4 @@ In this case, the resulting status object contains the following values:
 <!-- INCLUDE transporter.sendTimeOut.Desc -->
 
 <!-- INCLUDE transporter.user.Desc -->
+

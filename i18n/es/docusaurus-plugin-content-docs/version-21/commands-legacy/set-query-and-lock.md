@@ -29,7 +29,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET QUERY AND LOCK.Summary-->El comando SET QUERY AND LOCK permite solicitar el bloqueo automático de los registros encontrados por todas las búsquedas que siguen el llamado de este comando en la transacción actual.<!-- END REF--> Esto significa que los registros no pueden ser modificados por un proceso diferente al proceso actual entre una búsqueda y la manipulación de resultados.
 
-Por defecto, los registros encontrados por las búsquedas no están bloqueados. Pase [True](true.md "True") en el parámetro *bloq* para activar el bloqueo.
+Por defecto, los registros encontrados por las búsquedas no están bloqueados. Pase [True](../commands/true) en el parámetro *bloq* para activar el bloqueo.
 
 Este comando debe imperativamente utilizarse al interior de una transacción. Si se llama fuera de este contexto, se genera un error. Esto permite un mejor control del bloqueo de registros. Los registros encontrados permanecerán bloqueados hasta que la transacción termine (validada o cancelada). Después de que la transacción se completa, todos los registros se desbloquean, excepto el registro actual.
 

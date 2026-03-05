@@ -5,13 +5,13 @@ title: リモートデータストア
 
 **リモートデータストア** とは、ローカルの 4Dアプリケーション (4D または4D Server) 上で使用される、別の 4Dアプリケーションの [データストア](dsMapping.md#データストア) への参照です。
 
-ローカルの 4Dアプリケーションは、[`Open datastore`](../commands/open-datastore.md) コマンドを呼び出すことで、リモートデータストアに接続し参照します。
+ローカルの 4Dアプリケーションは、[`Open datastore`](../commands/open-datastore) コマンドを呼び出すことで、リモートデータストアに接続し参照します。
 
 リモートマシン上で、4D は [セッション](../WebServer/sessions.md) を開いて、`Open datastore` を呼び出したアプリケーションからのリクエストを処理します。 リクエストは内部で [REST API](../REST/gettingStarted.md) を使用し、これには [利用可能なライセンス](../REST/authUsers.md) が必要な場合があります。
 
 ## Webセッションの使用
 
-[`Open datastore`](../commands/open-datastore.md) コマンドによって参照されるリモートデータストアの場合、リクエスト元プロセスとの接続はリモートマシン上では [Webセッション](../WebServer/sessions.md) により管理されます。
+[`Open datastore`](../commands/open-datastore) コマンドによって参照されるリモートデータストアの場合、リクエスト元プロセスとの接続はリモートマシン上では [Webセッション](../WebServer/sessions.md) により管理されます。
 
 リモートデータストア上で作成される Webセッションは内部的にセッションID によって識別され、4Dアプリケーション上では `localID` と紐づいています。 データ、エンティティセレクション、エンティティへのアクセスはこのセッションによって自動的に管理されます。
 
@@ -49,7 +49,7 @@ title: リモートデータストア
 
 - あるプロセスがリモートデータストアのエンティティをロックした場合、セッションの共有如何に関わらず、他のすべてのプロセスに対してそのエンティティはロックされた状態です ([エンティティロッキング](entities.md#エンティティロッキング) 参照)。 同一のレコードに対応する複数のエンティティが 1つのプロセスによってロックされている場合、同プロセス内でそれらがすべてアンロックされないと、ロックは解除されません。 なお、ロックされたエンティティに対する参照がメモリ上に存在しなくなった場合にも、ロックは解除されます。
 - トランザクションは `dataStore.startTransaction( )`、`dataStore.cancelTransaction( )`、`dataStore.validateTransaction( )` のメソッドを使って、リモートデータストアごとに個別に開始・認証・キャンセルすることができます。 これらの操作は他のデータストアには影響しません。
-- クラシックな4D ランゲージコマンド([`START TRANSACTION`](../commands-legacy/start-transaction.md)、 [`VALIDATE TRANSACTION`](../commands-legacy/validate-transaction.md)、 [`CANCEL TRANSACTION`](../commands-legacy/cancel-transaction.md)) は(`ds` から返される)メインのデータストアに対してのみ適用されます。
+- クラシックな4D ランゲージコマンド([`START TRANSACTION`](../commands-legacy/start-transaction)、 [`VALIDATE TRANSACTION`](../commands-legacy/validate-transaction)、 [`CANCEL TRANSACTION`](../commands-legacy/cancel-transaction)) は(`ds` から返される)メインのデータストアに対してのみ適用されます。
   リモートデータストアのエンティティがあるプロセスのトランザクションで使われている場合、セッションの共有如何に関わらず、他のすべてのプロセスはそのエンティティを更新できません。
 - 次の場合にエンティティのロックは解除され、トランザクションはキャンセルされます:
   - プロセスが強制終了された

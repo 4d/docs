@@ -13,8 +13,8 @@ displayed_sidebar: docs
 
 | Paramètres | Type  |                             | Description                         |
 | ---------- | ----- | --------------------------- | ----------------------------------- |
-| aField     | Champ | &#8594; | Field for which to return old value |
-| Résultat   | any   | &#8592; | Original field value                |
+| aField     | Field | &#8594; | Champ dont vous voulez obtenir l'ancienne valeur |
+| Résultat   | any   | &#8592; | Valeur originale du champ                |
 
 </div>
 <!-- END REF-->
@@ -22,46 +22,48 @@ displayed_sidebar: docs
 <div class="no-index">
 <details><summary>Historique</summary>
 
-| Release                     | Modifications |
-| --------------------------- | ------------- |
-| 11 SQL Release 1            | Modifié       |
-| <6 | Created       |
+|Version|Changements|
+|---|---|
+|11 SQL Release 1|Modifié|
+|<6|Créé|
 
 </details>
 </div>
 
-## Description
+## Description 
 
-<!--REF #_command_.Old.Summary-->The **Old** command returns the value held in *aField* before the field was programmatically assigned a value or modified in data entry.<!-- END REF-->
+<!--REF #_command_.Old.Summary-->La commande **Old** retourne la valeur qui était stockée dans *leChamp* avant qu'il n'ait été modifié par programmation ou pendant la saisie de données.<!-- END REF--> 
 
-Each time you change the current record for a table, 4D creates and maintains in memory a duplicated “image” of the new current record when it is loaded in memory. When modifying a record, you work with the actual image of the record, not this duplicated image. This image is then discarded when you change the current record again.
+A chaque fois que vous changez d'enregistrement courant pour une table, 4D crée et maintient en mémoire un double de l'"image" du nouvel enregistrement courant au moment où il est chargé. Lorsque vous modifiez un enregistrement, vous travaillez avec l'image réelle de l'enregistrement, et non son double. Ce double est effacé lorsque que vous changez à nouveau d'enregistrement courant.
 
-**Old** returns the value from the duplicated image. In other words, for an existing record, it returns the value of the field as it is stored on disk. If a record is new, **Old** returns the default empty value for *field* according to its type. For example, if *field* is an Alpha field, **Old** returns an empty string. If *field* is a numeric field, **Old** returns zero (0), and so on.
+**Old** retourne la valeur de *leChamp* telle qu'elle est stockée dans le double de l'enregistrement. Autrement dit, pour un enregistrement existant, **Old**  retourne la valeur du champ telle qu'elle avait été sauvegardée sur disque. Pour un enregistrement qui vient d'être créé, **Old** retourne la valeur vide par défaut correspondant au type de *leChamp*. Par exemple, si *leChamp* est de type Alpha, **Old** retourne une chaîne vide. Si champ est de type numérique, **Old** retourne zéro (0), etc. 
 
-**Old** works on *aField* whether the field has been modified by a method or by the user during data entry. It can be applied to all field types.
+**Old** fonctionne avec *leChamp* de la même manière, que le champ ait été modifié par programmation ou suite à des modifications effectuées par un utilisateur. 
 
-To restore the original value of a field, assign it the value returned by **Old**.
+La fonction accepte tous les types de champs.
 
-**Note:** For technical reasons, in the case of Picture and BLOB type fields, the expression returned by **Old** cannot be used directly as a parameter for another command. It is necessary to pass the value via an intermediate variable. Par exemple :
+Pour restaurer la valeur originale d'un champ, assignez-lui la valeur retournée par **Old**. 
+
+**Note :** Pour des raisons techniques, dans le cas des champs de type Image et BLOB, l’expression retournée par **Old** ne peut pas être directement utilisée comme paramètre d’une autre commande. Il est nécessaire de faire transiter la valeur par une variable intermédiaire. Par exemple : 
 
 ```4d
-  //Do NOT write (causes a syntax error):
- $size :=BLOB size(Old([theTable]theBlob)) //INCORRECT
- 
-  //Write:
- $oldBLOB:=Old([theTable]theBlob)
- $size :=BLOB size($oldBLOB) //CORRECT
+  //Ne PAS écrire (provoque une erreur de syntaxe) :
+ $taille :=BLOB size(Old([LaTable]LeBlob)) //INCORRECT
+ 
+  //Ecrire :
+ $ancienBlob :=Old([LaTable]LeBlob)
+ $taille :=BLOB size($ancienBlob) //CORRECT
 ```
 
-## Voir également
+## Voir aussi 
 
-[Modified](modified.md)
+[Modified](../commands/modified)  
 
 ## Propriétés
 
-|                    |     |
-| ------------------ | --- |
-| Numéro de commande | 35  |
-| Thread safe        | oui |
+|  |  |
+| --- | --- |
+| Numéro de commande | 35 |
+| Thread safe | yes |
 
 

@@ -70,6 +70,6 @@ Se quiser renomear uma bookmark existente, precisa criar uma nova bookmark com a
 ## Ver também 
 
   
-[WP Bookmark range](wp-bookmark-range.md)  
-[WP DELETE BOOKMARK](wp-delete-bookmark.md)  
-[WP GET BOOKMARKS](wp-get-bookmarks.md)  
+[WP Bookmark range](../commands/wp-bookmark-range)  
+[WP DELETE BOOKMARK](../commands/wp-delete-bookmark)  
+[WP GET BOOKMARKS](../commands/wp-get-bookmarks)  

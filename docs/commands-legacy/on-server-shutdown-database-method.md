@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Server Shutdown database method.Summary-->The On Server Shutdown database method is called once on the server machine when the current database is closed on 4D Server.<!-- END REF--> The On Server Shutdown database method is NOT invoked by any 4D environment other than 4D Server.
 
-To close the current database on the server, you can select the **Close Database...**  menu command on the server. You can also choose the **Quit** command or call the [QUIT 4D](quit-4d.md) command within a stored procedure executed on the server.
+To close the current database on the server, you can select the **Close Database...**  menu command on the server. You can also choose the **Quit** command or call the [QUIT 4D](../commands/quit-4d) command within a stored procedure executed on the server.
 
 When the exit from the database is initiated, 4D performs the following actions:
 
@@ -34,4 +34,5 @@ The On Server Shutdown database method is the perfect place to:
 **Warning:** If you use the On Server Shutdown database method to close stored procedures, keep in mind that the server quits once the On Server Shutdown database method (and not the stored procedures) is executed. If some stored procedures are still running at this point, they will be killed.  
 Consequently, if you want to make sure that the stored procedures are fully executed before being killed by the server, the On Server Shutdown database method should indicate to the stored procedures that they must end their execution (for example, using an interprocess variable) and should allow them to close (through a x seconds loop or another interprocess variable).
 
-If you want code to be executed automatically on a client machine when a remote 4D stops connecting to the server, use the [Semaphore](semaphore.md).
+If you want code to be executed automatically on a client machine when a remote 4D stops connecting to the server, use the [Semaphore](../commands/semaphore).
+

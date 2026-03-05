@@ -29,7 +29,7 @@ Destkop applications (client/server and single-user) also provide 4D developers 
 
 Web sessions are used for:
 
-- [Web applications](gettingStarted.md) sending http requests (including [SOAP Web services](../commands/theme/Web_Services_Server.md) and [/4DACTION](../WebServer/httpRequests.md#4daction) requests),
+- [Web applications](gettingStarted.md) sending http requests (including [SOAP Web services](../commands/theme/Web_Services_Server) and [/4DACTION](../WebServer/httpRequests.md#4daction) requests),
 - calls to the [REST API](../REST/authUsers.md), which are used by [remote datastores](../ORDA/remoteDatastores.md) and [Qodly pages](https://developer.4d.com/qodly/). 
 
 
@@ -44,7 +44,7 @@ This option is selected by default in new projects. It can however be disabled b
 
 - Using the [`.scalableSession`](API/WebServerClass.md#scalablesession) property of the Web Server object (to pass in the *settings* parameter of the [`.start()`](API/WebServerClass.md#start) function). In this case, this setting overrides the option defined in the Settings dialog box for the Web Server object (it is not stored on disk).
 
-> The [`WEB SET OPTION`](../commands-legacy/web-set-option.md) command can also set the session mode for the main Web server.
+> The [`WEB SET OPTION`](../commands/web-set-option) command can also set the session mode for the main Web server.
 
 In any cases, the setting is local to the machine; so it can be different on the 4D Server Web server and the Web servers of remote 4D machines.
 
@@ -76,7 +76,7 @@ Creating a web session for a REST request may require that a license is availabl
 
 :::
 
-The `Session` object of the current session can then be accessed through the [`Session`](commands/session.md) command in the code of any web processes.
+The `Session` object of the current session can then be accessed through the [`Session`](../commands/session) command in the code of any web processes.
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
 
@@ -95,9 +95,9 @@ A scalable web session is closed when:
 
 The lifespan of an inactive cookie is 60 minutes by default, which means that the web server will automatically close inactive sessions after 60 minutes. 
 
-This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the *connectionInfo* parameter of the [`Open datastore`](../commands/open-datastore.md) command. 
+This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the *connectionInfo* parameter of the [`Open datastore`](../commands/open-datastore) command. 
 
-When a web session is closed, if the [`Session`](commands/session.md) command is called afterwards:
+When a web session is closed, if the [`Session`](../commands/session) command is called afterwards:
 
 - the `Session` object does not contain privileges (it is a Guest session)
 - the [`.storage`](API/SessionClass.md#storage) property is empty
@@ -509,5 +509,6 @@ A new user is created, and some information is stored in the session, especially
 A session token has a lifespan, and the session itself has a lifespan. The session token lifespan can be set [at the token creation](../API/SessionClass.md#createotp). By default, the token lifespan is the same value as the [`.idleTimeout`](../API/SessionClass.md#idletimeout) value. 
 
 A session is only restored by a token if both the session token lifespan and the session lifespan have not expired. In other cases (the session token has expired and/or the session itself has expired), a guest session is created when a web request with a session token is received.
+
 
 

@@ -34,11 +34,11 @@ displayed_sidebar: docs
 
 El parámetro *redimension* le permite definir si el formulario puede redimensionarse horizontalmente; en otras palabras, si el ancho es modificable (manualmente por el usuario o por programación).  
   
-Si pasa [True](true.md "True"), el ancho del formulario puede ser modificado por el usuario; 4D utiliza como marcadores los valores pasados en *anchoMin* y *ancho*Max.
+Si pasa [True](../commands/true), el ancho del formulario puede ser modificado por el usuario; 4D utiliza como marcadores los valores pasados en *anchoMin* y *ancho*Max.
 
-Si pasa [False](false.md "False"), no se puede modificar el largo del formulario actual; en este caso, no hay necesidad de pasar valores en los parámetros *anchoMin* y *ancho*Max . 
+Si pasa [False](../commands/false), no se puede modificar el largo del formulario actual; en este caso, no hay necesidad de pasar valores en los parámetros *anchoMin* y *ancho*Max . 
 
-Si ha pasado [True](true.md "True") en el primer parámetro, puede pasar en los parámetros opcionales *anchoMin* y *ancho*Max los nuevos largos, mínimos y máximos, del formulario (en píxeles). Si omite estos parámetros se utilizan los valores definidos en el entorno Diseño (si los hay).
+Si ha pasado [True](../commands/true) en el primer parámetro, puede pasar en los parámetros opcionales *anchoMin* y *ancho*Max los nuevos largos, mínimos y máximos, del formulario (en píxeles). Si omite estos parámetros se utilizan los valores definidos en el entorno Diseño (si los hay).
 
 ## Ejemplo 
 

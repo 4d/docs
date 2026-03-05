@@ -50,7 +50,7 @@ O campo contém efetivamente "proportion". 4D aceita e armazena a entrada inteir
 
 #### Comandos
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
 
 ---
 
@@ -81,11 +81,11 @@ A tabela seguinte apresenta as opções disponíveis:
 
 *(1)* Para evitar ambigüedades y de acuerdo con la práctica actual, los formatos de fecha abreviados muestran "jun" para junio y "jul" para julio. Esta particularidade só se aplica às versões francesas de 4D.
 
-*(2)* El año se muestra con dos dígitos cuando pertenece al intervalo (1930;2029), de lo contrario se mostrará con cuatro dígitos. Esto es por defecto, pero puede modificarse utilizando el comando [SET DEFAULT CENTURY](../commands-legacy/set-default-century.md).
+*(2)* El año se muestra con dos dígitos cuando pertenece al intervalo (1930;2029), de lo contrario se mostrará con cuatro dígitos. Esto es por defecto, pero puede modificarse utilizando el comando [SET DEFAULT CENTURY](../commands-legacy/set-default-century).
 
 *(3)* El formato `ISO Date Time` corresponde a la norma XML de representación de fecha y hora (ISO8601). Seu principal objetivo é ser usado na importação/exportação de dados em formato XML e em serviços da Web.
 
-> Independentemente do formato de exibição, se o ano for inserido com dois dígitos, o 4D assume que o século é o 21º se o ano pertencer ao intervalo (00;29) e o 20º se pertencer ao intervalo (30;99). Esta es la configuración por defecto, pero puede modificarse utilizando el comando [SET DEFAULT CENTURY](../commands-legacy/set-default-century.md).
+> Independentemente do formato de exibição, se o ano for inserido com dois dígitos, o 4D assume que o século é o 21º se o ano pertencer ao intervalo (00;29) e o 20º se pertencer ao intervalo (30;99). Esta es la configuración por defecto, pero puede modificarse utilizando el comando [SET DEFAULT CENTURY](../commands-legacy/set-default-century).
 
 ### Formato personalizado
 
@@ -115,7 +115,7 @@ Customized date formats can be built using several patterns described in the [**
 
 #### Comandos
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
 
 ---
 
@@ -280,7 +280,7 @@ A tabela a seguir mostra como os diferentes formatos afetam a exibição dos nú
 
 #### Comandos
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md) - [String](./commands/string)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format) - [String](../commands/string)
 
 ---
 
@@ -344,7 +344,7 @@ Se o campo for reduzido para um tamanho inferior ao da imagem original, a imagem
 
 #### Comandos
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
 
 ---
 
@@ -402,7 +402,7 @@ Por padrão, uma hora nula é exibida com zeros, por exemplo, "00:00:00". Com a 
 
 #### Comandos
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
 
 ---
 
@@ -430,7 +430,7 @@ Cuando una [expresión booleana](properties_Object.md#expression-type) se muestr
 
 #### Comandos
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
 
 ---
 
@@ -454,7 +454,7 @@ As colunas booleanas também podem ser apresentadas como menus pop-up. Nesse cas
 
 #### Comandos
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
 
 ---
 
@@ -506,7 +506,7 @@ También en este caso, la propiedad [Título](#title) está disponible para que 
 
 #### Comandos
 
-[OBJECT Get three states checkbox](../commands-legacy/object-get-three-states-checkbox.md) - [OBJECT SET THREE STATES CHECKBOX](../commands-legacy/object-set-three-states-checkbox.md)
+[OBJECT Get three states checkbox](../commands-legacy/object-get-three-states-checkbox) - [OBJECT SET THREE STATES CHECKBOX](../commands-legacy/object-set-three-states-checkbox)
 
 ---
 
@@ -568,7 +568,7 @@ La propiedad Truncar con elipsis puede aplicarse a columnas de tipo booleano; si
 
 #### Comandos
 
-[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md)
+[`LISTBOX Get property`](../commands/listbox-get-property) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property)
 
 ---
 
@@ -576,7 +576,7 @@ La propiedad Truncar con elipsis puede aplicarse a columnas de tipo booleano; si
 
 Esta propriedade permite ocultar o objeto no ambiente Aplicação.
 
-É possível tratar a propriedade Visibilidade para a maioria dos objetos de formulário. Esta propriedade é principalmente usada para simplificar o desenvolvimento de interfaces dinâmicas. Nesse contexto, muitas vezes é necessário ocultar objetos programaticamente durante o evento `On load` do formulário e, depois, exibir determinados objetos. A propriedade Visibility permite inverter essa lógica, tornando determinados objetos invisíveis por padrão. O desenvolvedor pode então programar sua tela usando o comando [`OBJECT SET VISIBLE`](../commands-legacy/object-set-visible.md) quando necessário.
+É possível tratar a propriedade Visibilidade para a maioria dos objetos de formulário. Esta propriedade é principalmente usada para simplificar o desenvolvimento de interfaces dinâmicas. Nesse contexto, muitas vezes é necessário ocultar objetos programaticamente durante o evento `On load` do formulário e, depois, exibir determinados objetos. A propriedade Visibility permite inverter essa lógica, tornando determinados objetos invisíveis por padrão. O desenvolvedor pode então programar sua tela usando o comando [`OBJECT SET VISIBLE`](../commands-legacy/object-set-visible) quando necessário.
 
 #### Visibilidade automática em formulários lista
 
@@ -589,7 +589,7 @@ Essa propriedade é usada somente ao desenhar objetos localizados no corpo de um
 
 ![](../assets/en/FormObjects/select-row.png)
 
-4D does not take this property into account if the object was hidden using the [`OBJECT SET VISIBLE`](../commands-legacy/object-set-visible.md) command; in this case, the object remains invisible regardless of whether or not the record is selected.
+4D does not take this property into account if the object was hidden using the [`OBJECT SET VISIBLE`](../commands-legacy/object-set-visible) command; in this case, the object remains invisible regardless of whether or not the record is selected.
 
 #### Gramática JSON
 
@@ -603,7 +603,7 @@ Essa propriedade é usada somente ao desenhar objetos localizados no corpo de um
 
 #### Comandos
 
-[OBJECT Get visible](../commands-legacy/object-get-visible.md) - [OBJECT SET VISIBLE](../commands-legacy/object-set-visible.md)
+[OBJECT Get visible](../commands-legacy/object-get-visible) - [OBJECT SET VISIBLE](../commands-legacy/object-set-visible)
 
 ---
 
@@ -662,4 +662,4 @@ Observe que, independentemente do valor da opção Wordwrap, a altura da linha n
 
 #### Comandos
 
-[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md)
+[`LISTBOX Get property`](../commands/listbox-get-property) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property)

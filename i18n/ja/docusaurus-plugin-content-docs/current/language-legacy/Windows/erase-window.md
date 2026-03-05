@@ -1,0 +1,51 @@
+﻿---
+id: erase-window
+title: ERASE WINDOW
+slug: /commands/erase-window
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.ERASE WINDOW.Syntax-->**ERASE WINDOW** ({ *window* : Integer })<!-- END REF-->
+<!--REF #_command_.ERASE WINDOW.Params-->
+<div class="no-index">
+
+| 引数 | 型 |  | 説明 |
+| --- | --- | --- | --- |
+| window | Integer | &#8594; | ウィンドウ参照番号, または 省略時、カレントプロセスの最前面ウィンドウ |
+</div>
+<!-- END REF-->
+
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|6|変更|
+|<6|初出|
+
+</details>
+</div>
+
+## 説明 
+
+<!--REF #_command_.ERASE WINDOW.Summary-->ERASE WINDOW コマンドは*window*で指定されたウィンドウの内容をクリアします。<!-- END REF-->
+
+*window* 引数を省略すると、ERASE WINDOWはカレントプロセスの最前面ウィンドウの内容をクリアします。
+
+通常ERASE WINDOWは[MESSAGE](message.md "MESSAGE")と[GOTO XY](goto-xy.md "GOTO XY")と共に使用します。この場合、ERASE WINDOWはウィンドウの内容をクリアし、ウィンドウの左上 ( [GOTO XY](goto-xy.md "GOTO XY") (0; 0) ) にカーソルを移動します。 
+
+ERASE WINDOWはウィンドウの内容をクリアします。スクリーンからウィンドウを取り除く[CLOSE WINDOW](close-window.md "CLOSE WINDOW")と混同しないようにしてください。
+
+## 参照 
+
+[GOTO XY](../commands/goto-xy)  
+[MESSAGE](../commands/message)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 160 |
+| スレッドセーフである | no |
+
+

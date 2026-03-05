@@ -5,8 +5,8 @@ title: DataStore
 
 A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by ORDA to reference and access a database. `Datastore` objects are returned by the following commands:
 
-* [ds](../commands/ds.md): a shortcut to the main datastore
-* [Open datastore](../commands/open-datastore.md): to open any remote datastore
+* [ds](../commands/ds): a shortcut to the main datastore
+* [Open datastore](../commands/open-datastore): to open any remote datastore
 
 ### Summary
 
@@ -248,7 +248,7 @@ The `.flushAndLock()` function <!-- REF #DataStoreClass.flushAndLock().Summary -
 
 This function can only be called:
 
-- on the local datastore ([`ds`](../commands/ds.md)).
+- on the local datastore ([`ds`](../commands/ds)).
 - in client/server environment, on the server machine.
 
 :::
@@ -409,7 +409,7 @@ The `.getGlobalStamp()` function <!-- REF #DataStoreClass.getGlobalStamp().Summa
 
 This function can only be called:
 
-- on the local datastore ([`ds`](../commands/ds.md)).
+- on the local datastore ([`ds`](../commands/ds)).
 - in client/server environment, on the server machine.
 
 :::
@@ -872,7 +872,7 @@ The `.setGlobalStamp()` function <!-- REF #DataStoreClass.setGlobalStamp().Summa
 
 This function can only be called:
 
-- on the local datastore ([`ds`](../commands/ds.md)).
+- on the local datastore ([`ds`](../commands/ds)).
 - in client/server environment, on the server machine.
 
 :::
@@ -1327,3 +1327,4 @@ See example for [`.startTransaction()`](#starttransaction).
 
 
 <!-- END REF -->
+

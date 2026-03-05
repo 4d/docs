@@ -38,7 +38,7 @@ This command changes relations set as manual in the Design environment to automa
 
 **Notes:** 
 
-* When you pass [True](true.md "True") to the **SET AUTOMATIC RELATIONS** command, the automatic mode is "locked" for all the manual relations during the session. In this case, any calls to the [SET FIELD RELATION](set-field-relation.md) command during the same session are ignored, regardless of whether they are placed before or after **SET AUTOMATIC RELATIONS**. To "unlock" the automatic mode and take the calls to [SET FIELD RELATION](set-field-relation.md) into account, pass [False](false.md "False") to **SET AUTOMATIC RELATIONS**.
+* When you pass [True](../commands/true) to the **SET AUTOMATIC RELATIONS** command, the automatic mode is "locked" for all the manual relations during the session. In this case, any calls to the [SET FIELD RELATION](set-field-relation.md) command during the same session are ignored, regardless of whether they are placed before or after **SET AUTOMATIC RELATIONS**. To "unlock" the automatic mode and take the calls to [SET FIELD RELATION](set-field-relation.md) into account, pass [False](../commands/false) to **SET AUTOMATIC RELATIONS**.
 * Automatic features are disabled when related tables are being viewed in a list form displayed using [DISPLAY SELECTION](display-selection.md), [MODIFY SELECTION](modify-selection.md), or a subform. See *Automatic and manual relations*.
 
 ## Example 

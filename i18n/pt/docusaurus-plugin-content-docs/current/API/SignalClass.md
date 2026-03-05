@@ -22,11 +22,11 @@ Qualquer worker/processo que chamar o método `.wait()` suspenderá sua execuç�
 
 Observe que, para evitar situações de bloqueio, o `.wait()` também pode retornar depois que um tempo limite definido for atingido.
 
-Os objetos Signal são criados com o comando [`New signal`](../commands/new-signal.md).
+Os objetos Signal são criados com o comando [`New signal`](../commands/new-signal).
 
 ### Trabalhar com sinais
 
-Em 4D, você cria um objeto signal chamando o comando [`New signal`](../commands/new-signal.md). Após criado, esse sinal deve ser passado como parâmetro para os comandos `New process` ou `CALL WORKER` para eles poderem modificá-lo quando tiverem concluído a tarefa pela qual você deseja esperar.
+Em 4D, você cria um objeto signal chamando o comando [`New signal`](../commands/new-signal). Após criado, esse sinal deve ser passado como parâmetro para os comandos `New process` ou `CALL WORKER` para eles poderem modificá-lo quando tiverem concluído a tarefa pela qual você deseja esperar.
 
 - O `signal.wait()` deve ser chamado pelo worker/processo que precisa que outro worker/processo termine uma tarefa para poder continuar.
 - O `signal.trigger()` deve ser chamado pelo worker/processo que terminou sua execução para liberar todos os outros.

@@ -19,7 +19,7 @@ You can set standard properties (text, background color, etc.) for each column o
 
 ## Supported Form Events {#supported-form-events}
 
-|Form event|Additional Properties Returned (see [Form event](../commands/form-event.md) for main properties)| Comments|
+|Form event|Additional Properties Returned (see [Form event](../commands/form-event) for main properties)| Comments|
 |---|---|---|
 |On After Edit|<ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>||
 |On After Keystroke|<ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>||
@@ -56,7 +56,7 @@ The following list box was designed using an object array:
 
 ### Configuring an object array column  
 
-To assign an object array to a list box column, you just need to set the object array name in either the Property list ("Variable Name" field), or using the [LISTBOX INSERT COLUMN](../commands-legacy/listbox-insert-column.md) command, like with any array-based column. In the Property list, you can now select Object as a "Expression Type" for the column:
+To assign an object array to a list box column, you just need to set the object array name in either the Property list ("Variable Name" field), or using the [LISTBOX INSERT COLUMN](../commands/listbox-insert-column) command, like with any array-based column. In the Property list, you can now select Object as a "Expression Type" for the column:
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_config.png)
 
@@ -324,7 +324,7 @@ You want to display a combo box based on a "colors" list defined in the Tool box
 You can use specific attributes to add units associated with cell values (*e.g.*: "10 cm", "20 pixels", etc.). To define the unit list, you can use one of the following attributes:
 
 *	"unitsList": an array containing the x elements used to define the available units (e.g.: "cm", "inches", "km", "miles", etc.). Use this attribute to define units within the object.
-*	"unitsListReference": a reference to a 4D list containing available units. Use this attribute to define units with a 4D list created with the [`New list`](../commands-legacy/new-list.md) command.
+*	"unitsListReference": a reference to a 4D list containing available units. Use this attribute to define units with a 4D list created with the [`New list`](../commands/new-list) command.
 *	"unitsListName": a name of a design-based 4D list that contains available units. Use this attribute to define units with a 4D list created in the Tool box.
 
 Regardless of the way the unit list is defined, it can be associated with the following attribute:
@@ -415,3 +415,4 @@ Several events can be handled while using an object list box array:
 	*	in a check box (switch between checked/unchecked)
 *	**On Clicked**: When the user clicks on a button installed using the "event" *valueType* attribute, an `On Clicked` event will be generated. This event is managed by the programmer.
 *	**On Alternative Click**: When the user clicks on an ellipsis button ("alternateButton" attribute), an `On Alternative Click` event will be generated. This event is managed by the programmer.
+

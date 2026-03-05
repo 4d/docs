@@ -15,7 +15,7 @@ A 4D project can start and monitor a web server for the main (host) application 
 
 メインアプリケーションの Webサーバーを含む、各 4D Webサーバーは、`4D.WebServer` クラスの **オブジェクト** として公開されます。 インスタンス化された Webサーバーオブジェクトは、[多数のプロパティや関数](API/WebServerClass.md) を使用して、カレントのアプリケーションまたは任意のコンポーネントから操作することができます。
 
-> The legacy [WEB commands](../commands/theme/Web_Server.md) of the 4D language are supported but cannot select the web server to which they apply (see below).
+> The legacy [WEB commands](../commands/theme/Web_Server) of the 4D language are supported but cannot select the web server to which they apply (see below).
 
 各 Webサーバー (ホストアプリケーションまたはコンポーネント) は、個別のコンテキストで使用できます。これには、以下が含まれます:
 
@@ -34,7 +34,7 @@ $nbSrv:=WEB Server list.length
 //$nbSrv の値は 1
 ```
 
-Webサーバーオブジェクトをインスタンス化するには、[`WEB Server`](commands/web-server.md) コマンドを呼び出します。
+Webサーバーオブジェクトをインスタンス化するには、[`WEB Server`](../commands/web-server) コマンドを呼び出します。
 
 ```4d
 	// 4D.WebServer クラスのオブジェクト変数を作成します。
@@ -104,7 +104,7 @@ A web server object contains [various properties](API/WebServerClass.md../comman
 
 ## 4D Webコマンドのスコープ
 
-The 4D Language contains [several commands](../commands/theme/Web_Server.md) that can be used to control the web server. ただし、これらのコマンドは 1つの (デフォルト) Webサーバーで動作するように設計されています。 これらのコマンドを Webサーバーオブジェクトのコンテキストで使用する場合は、そのスコープが適切であることを確認してください。
+The 4D Language contains [several commands](../commands/theme/Web_Server) that can be used to control the web server. ただし、これらのコマンドは 1つの (デフォルト) Webサーバーで動作するように設計されています。 これらのコマンドを Webサーバーオブジェクトのコンテキストで使用する場合は、そのスコープが適切であることを確認してください。
 
 | コマンド                            | スコープ                |
 | ------------------------------- | ------------------- |

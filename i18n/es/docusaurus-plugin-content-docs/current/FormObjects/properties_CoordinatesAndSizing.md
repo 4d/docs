@@ -48,7 +48,7 @@ Cuando esta propiedad está activada, la altura de cada línea se calcula autom�
 
 #### Comandos
 
-[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md)
+[`LISTBOX Get property`](../commands/listbox-get-property) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property)
 
 ---
 
@@ -68,7 +68,7 @@ Coordenadas inferiores del objeto en el formulario.
 
 #### Comandos
 
-[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates) - [OBJECT MOVE](../commands-legacy/object-move) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates)
 
 ---
 
@@ -88,7 +88,7 @@ Coordenadas de izquierda del objeto en el formulario.
 
 #### Comandos
 
-[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates) - [OBJECT MOVE](../commands-legacy/object-move) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates)
 
 ---
 
@@ -108,7 +108,7 @@ Coordenadas de derecha del objeto en el formulario.
 
 #### Comandos
 
-[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates) - [OBJECT MOVE](../commands-legacy/object-move) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates)
 
 ---
 
@@ -128,7 +128,7 @@ Coordenadas superiores del objeto en el formulario.
 
 #### Comandos
 
-[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates) - [OBJECT MOVE](../commands-legacy/object-move) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates)
 
 ---
 
@@ -160,7 +160,7 @@ Con [áreas de texto](text.md) y [entradas](input_overview.md):
 
 :::
 
-You can also set this property using the [OBJECT Get corner radius](../commands-legacy/object-get-corner-radius.md) and [OBJECT SET CORNER RADIUS](../commands-legacy/object-set-corner-radius.md) commands.
+You can also set this property using the [OBJECT Get corner radius](../commands-legacy/object-get-corner-radius) and [OBJECT SET CORNER RADIUS](../commands-legacy/object-set-corner-radius) commands.
 
 #### Gramática JSON
 
@@ -174,7 +174,7 @@ You can also set this property using the [OBJECT Get corner radius](../commands-
 
 #### Comandos
 
-[OBJECT GET CORNER RADIUS](../commands-legacy/object-get-corner-radius.md) - [OBJECT SET CORNER RADIUS](../commands-legacy/object-set-corner-radius.md)
+[OBJECT GET CORNER RADIUS](../commands-legacy/object-get-corner-radius) - [OBJECT SET CORNER RADIUS](../commands-legacy/object-set-corner-radius)
 
 ---
 
@@ -196,7 +196,7 @@ Esta propiedad designa el tamaño vertical de un objeto.
 
 #### Comandos
 
-[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates) - [OBJECT MOVE](../commands-legacy/object-move) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates)
 
 ---
 
@@ -220,7 +220,7 @@ Esta propiedad designa el tamaño horizontal de un objeto.
 
 #### Comandos
 
-[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates) - [OBJECT MOVE](../commands-legacy/object-move) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates)
 
 ---
 
@@ -242,7 +242,7 @@ El ancho máximo de la columna (en píxeles). El ancho de la columna no puede au
 
 #### Comandos
 
-[LISTBOX Get column width](../commands-legacy/listbox-get-column-width.md) - [LISTBOX SET COLUMN WIDTH](../commands-legacy/listbox-set-column-width.md)
+[LISTBOX Get column width](../commands-legacy/listbox-get-column-width) - [LISTBOX SET COLUMN WIDTH](../commands-legacy/listbox-set-column-width)
 
 ---
 
@@ -264,7 +264,7 @@ El ancho mínimo de la columna (en píxeles). El ancho de la columna no puede re
 
 #### Comandos
 
-[LISTBOX Get column width](../commands-legacy/listbox-get-column-width.md) - [LISTBOX SET COLUMN WIDTH](../commands-legacy/listbox-set-column-width.md)
+[LISTBOX Get column width](../commands-legacy/listbox-get-column-width) - [LISTBOX SET COLUMN WIDTH](../commands-legacy/listbox-set-column-width)
 
 ---
 
@@ -284,7 +284,7 @@ Define la altura de las líneas del list box (excluyendo los encabezados y pies 
 
 #### Comandos
 
-[LISTBOX Get row height](../commands-legacy/listbox-get-row-height.md) - [LISTBOX Get rows height](../commands-legacy/listbox-get-rows-height.md) - [LISTBOX SET ROW HEIGHT](../commands-legacy/listbox-set-row-height.md) - [LISTBOX SET ROWS HEIGHT](../commands-legacy/listbox-set-rows-height.md)
+[LISTBOX Get row height](../commands-legacy/listbox-get-row-height) - [LISTBOX Get rows height](../commands-legacy/listbox-get-rows-height) - [LISTBOX SET ROW HEIGHT](../commands-legacy/listbox-set-row-height) - [LISTBOX SET ROWS HEIGHT](../commands-legacy/listbox-set-rows-height)
 
 #### Ver también
 
@@ -322,7 +322,7 @@ Asumiendo que la unidad de las líneas es "líneas", entonces la quinta línea d
 
 #### Comandos
 
-[`LISTBOX Get array`](../commands-legacy/listbox-get-array.md) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays.md)
+[`LISTBOX Get array`](../commands-legacy/listbox-get-array) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays)
 
 #### Ver también
 
@@ -348,7 +348,7 @@ Establece un relleno horizontal para las celdas. El valor se establece en píxel
 
 #### Comandos
 
-[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md)
+[`LISTBOX Get property`](../commands/listbox-get-property) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property)
 
 #### Ver también
 
@@ -372,7 +372,7 @@ Establece un relleno vertical para las celdas. El valor se establece en píxeles
 
 #### Comandos
 
-[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md)
+[`LISTBOX Get property`](../commands/listbox-get-property) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property)
 
 #### Ver también
 

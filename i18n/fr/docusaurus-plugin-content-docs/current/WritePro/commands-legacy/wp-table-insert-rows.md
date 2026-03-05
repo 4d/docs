@@ -62,4 +62,4 @@ Cela insèrera les deux nouvelles lignes à l'emplacement souhaité :
 
 ## Voir aussi 
 
-[WP Table insert columns](wp-table-insert-columns.md)  
+[WP Table insert columns](../commands/wp-table-insert-columns)  

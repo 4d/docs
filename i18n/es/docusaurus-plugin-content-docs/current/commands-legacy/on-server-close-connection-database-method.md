@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.On Server Close Connection database method.Summary-->El **Método base On Server Close Connection** se llama en el equipo servidor cada vez que termina un proceso 4D Client.<!-- END REF--> 
 
-Como para el [Método base On Server Open Connection](metodo-base-on-server-open-connection.md), 4D Server pasa tres parámetros de tipo entero largo al **Método base On Server Close Connection**. Por otra parte, 4D Server no espera un resultado en retorno.
+Como para el [Método base On Server Open Connection](../commands/metodo-base-on-server-open-connection), 4D Server pasa tres parámetros de tipo entero largo al **Método base On Server Close Connection**. Por otra parte, 4D Server no espera un resultado en retorno.
 
 El método debe contener la declaración explícita de tres parámetros Entero largo:
 
@@ -37,8 +37,9 @@ Esta tabla detalla la información ofrecida por los tres parámetros pasados al 
 | $id            | Número de conexión utilizado internamente por 4D Server para identificar una conexiónn |
 | $toIgnore            | Obsoleto: devuelve siempre 0 pero debe declararse                                      |
 
-El **Método base On Server Close Connection** es el inverso exacto del [Método base On Server Open Connection](metodo-base-on-server-open-connection.md). Para mayor información y una descripción de este método base, así como para la descripción de los **procesos 4D Client**, ver la descripción de este método base.
+El **Método base On Server Close Connection** es el inverso exacto del [Método base On Server Open Connection](../commands/metodo-base-on-server-open-connection). Para mayor información y una descripción de este método base, así como para la descripción de los **procesos 4D Client**, ver la descripción de este método base.
 
 ## Ejemplo 
 
-Ver el primer ejemplo para [Método base On Server Open Connection](metodo-base-on-server-open-connection.md).
+Ver el primer ejemplo para [Método base On Server Open Connection](../commands/metodo-base-on-server-open-connection).
+

@@ -19,9 +19,9 @@ displayed_sidebar: docs
 
 |リリース|内容|
 |---|---|
-|18 R6|名称変更|
-|15 R4|名称変更|
 |13|初出|
+|15 R4|名称変更|
+|18 R6|名称変更|
 
 </details>
 </div>
@@ -34,9 +34,9 @@ displayed_sidebar: docs
 
 **On Web Legacy Close Session database method** はWebセッションが閉じられる直前に、4D Webサーバーから呼び出されます。4Dは以下のような場合にWebセッション (セッションを管理するWebプロセス) を閉じます:
 
-* セッ ションを管理するWebプロセス数の最大値 (デフォルトで100、[WEB SET OPTION](web-set-option.md)コマンドで変更可能) に達している状態で、さらに新しいWebセッションを作成する必要があるとき (4Dは一番古いWebセッションプロセスを自動で破棄します)
-* セッションプロセスのタイムアウトに達したとき (デフォルトで480分 = 8時間、[WEB SET OPTION](web-set-option.md)コマンドで変更可能)
-* [WEB LEGACY CLOSE SESSION](web-legacy-close-session.md)コマンドが呼び出された場合
+* セッ ションを管理するWebプロセス数の最大値 (デフォルトで100、[WEB SET OPTION](../commands/web-set-option)コマンドで変更可能) に達している状態で、さらに新しいWebセッションを作成する必要があるとき (4Dは一番古いWebセッションプロセスを自動で破棄します)
+* セッションプロセスのタイムアウトに達したとき (デフォルトで480分 = 8時間、[WEB SET OPTION](../commands/web-set-option)コマンドで変更可能)
+* [WEB LEGACY CLOSE SESSION](../commands/web-legacy-close-session)コマンドが呼び出された場合
 
 こ のデータベースメソッドが呼び出された時点で、セッションのコンテキスト (プロセス変数の値やカレントセレクション) は有効です。そのセッションに関連するデータ (変数の値やセレクション) を退避し、後で同じcookie値でリクエストを受信したときにそれらを再利用することができます。
 
@@ -46,5 +46,5 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WEB LEGACY CLOSE SESSION](web-legacy-close-session.md)  
+[WEB LEGACY CLOSE SESSION](../commands/web-legacy-close-session)  
 *Webセッション管理(旧式)*  

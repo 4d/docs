@@ -70,4 +70,4 @@ Para mais detalhes, consulte *Fundir e separar células*.
 ## Ver também 
 
 *Gerenciar tabelas*  
-[WP TABLE SPLIT CELLS](wp-table-split-cells.md)  
+[WP TABLE SPLIT CELLS](../commands/wp-table-split-cells)  

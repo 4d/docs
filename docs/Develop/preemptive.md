@@ -43,7 +43,7 @@ Since a thread is handled independently starting from the parent process method,
 
 The "thread safety" property of each element depends on the element itself:
 
-- 4D commands: thread safety is an internal property. In the 4D documentation, thread-safe commands are identified by the ![](../assets/en/Develop/thread-safe.png) icon. You can also use the [`Command name`](../commands/command-name.md) command to know if a command is thread-safe. A large part of 4D commands can run in preemptive mode.
+- 4D commands: thread safety is an internal property. In the 4D documentation, thread-safe commands are identified by the ![](../assets/en/Develop/thread-safe.png) icon. You can also use the [`Command name`](../commands/command-name) command to know if a command is thread-safe. A large part of 4D commands can run in preemptive mode.
 - Project methods: conditions for being thread-safe are listed in [this paragraph](#writing-a-thread-safe-method).
 
 Basically, code to be run in preemptive threads cannot call parts with external interactions, such as plug-in code or interprocess variables. Accessing data, however, is allowed since the 4D data server and ORDA support preemptive execution.
@@ -146,7 +146,7 @@ Executing a method in preemptive mode will depend on its "execution" property an
 
 4D allows you to identify the execution mode of processes in compiled mode:
 
-- The [`Process info`](../commands/process-info.md) command allows you to find out whether a process is run in preemptive or cooperative mode.
+- The [`Process info`](../commands/process-info) command allows you to find out whether a process is run in preemptive or cooperative mode.
 - Both the Runtime Explorer and the [4D Server administration window](../ServerWindow/processes.md#process-type) display specific icons for preemptive processes.
 
 
@@ -161,10 +161,10 @@ To be thread-safe, a method must respect the following rules:
 - It must not use any interprocess variables(1)
 - It must not call interface objects(2) (there are exceptions however, see below).
 
-(1) To exchange data between preemptive processes (and between all processes), you can pass [shared collections or shared objects](../Concepts/shared.md) as parameters to processes, and/or use the [`Storage`](../commands-legacy/storage.md) catalog.
+(1) To exchange data between preemptive processes (and between all processes), you can pass [shared collections or shared objects](../Concepts/shared.md) as parameters to processes, and/or use the [`Storage`](../commands/storage) catalog.
 [Worker processes](processes.md#worker-processes) also allow you to exchange messages between any processes, including preemptive processes.
 
-(2) The [`CALL FORM`](../commands-legacy/call-form.md) command provides an elegant solution to call interface objects from a preemptive process.
+(2) The [`CALL FORM`](../commands/call-form) command provides an elegant solution to call interface objects from a preemptive process.
 
 :::note Notes
 
@@ -289,3 +289,4 @@ To do this, you must surround the code to be excluded from command thread safety
 ```
 
 Of course, the 4D developer is responsible for the preemptive mode compatibility of the code between the deactivation and reactivation directives. Runtime errors will be generated if thread-unsafe code is executed in a preemptive thread.
+

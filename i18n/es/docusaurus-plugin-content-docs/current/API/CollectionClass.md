@@ -5,7 +5,7 @@ title: Collection
 
 The Collection class manages [Collection](Concepts/dt_collection.md) type expressions.
 
-Una colección es inicializada con los comandos [`New collection`](../commands/new-collection.md) o [`New shared collection`](../commands/new-shared-collection.md).
+Una colección es inicializada con los comandos [`New collection`](../commands/new-collection) o [`New shared collection`](../commands/new-shared-collection).
 
 ### Ejemplo
 
@@ -2047,7 +2047,7 @@ Todas las colecciones *colsToSort* deben tener el mismo número de elementos, de
 
 :::
 
-Si desea ordenar las colecciones en algún otro orden que no sea ascendente, debe suministrar una *formula* ([objeto Formula](../commands/formula.md)) que defina el orden de clasificación. El valor de retorno debe ser un booleano que indica el orden relativo de los dos elementos: **True** si *$1.value* es menor que *$1.value2*, **False** si *$1.value* es mayor que *$1.value2*. Puede ofrecer parámetros adicionales a la fórmula si es necesario.
+Si desea ordenar las colecciones en algún otro orden que no sea ascendente, debe suministrar una *formula* ([objeto Formula](../commands/formula)) que defina el orden de clasificación. El valor de retorno debe ser un booleano que indica el orden relativo de los dos elementos: **True** si *$1.value* es menor que *$1.value2*, **False** si *$1.value* es mayor que *$1.value2*. Puede ofrecer parámetros adicionales a la fórmula si es necesario.
 
 En *index*, pase la posición donde quiere eliminar el elemento de la colección.
 

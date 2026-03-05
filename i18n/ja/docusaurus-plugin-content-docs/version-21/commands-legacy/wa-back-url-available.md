@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA Back URL available.Summary-->WA Back URL available コマンドは、*\** と *object* 引数で指定したWebエリアに開かれた一連のURLで、前のURLが利用できるかどうかを知るために使用します。<!-- END REF--> 
 
-コマンドはURLがあれば[True](true.md "True")を、なければ[False](false.md "False")を返します。このコマンドは特に、ナビゲーションボタンを有効/無効にするために使用します。
+コマンドはURLがあれば[True](../commands/true)を、なければ[False](../commands/false)を返します。このコマンドは特に、ナビゲーションボタンを有効/無効にするために使用します。
 
 ## 参照 
 

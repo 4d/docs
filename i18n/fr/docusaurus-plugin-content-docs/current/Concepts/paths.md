@@ -41,7 +41,7 @@ Avec cette syntaxe :
 - les chemins absolus commencent par un "/"
 - pour remonter d'un dossier dans un chemin relatif, utilisez "../" devant le nom du chemin (par sécurité, vous ne pouvez pas remonter au-dessus du filesystem).
 
-Dans la syntaxe POSIX, vous utiliserez généralement les chemins `filesystem` avec les commandes [`File`](../commands/file.md) et [`Folder`](../commands/folder.md), par exemple :
+Dans la syntaxe POSIX, vous utiliserez généralement les chemins `filesystem` avec les commandes [`File`](../commands/file) et [`Folder`](../commands/folder), par exemple :
 
 ```4d
 var $pathFile : 4D.File
@@ -62,7 +62,7 @@ Les règles suivantes sont pris en charge :
 - le texte contient " :" et "\" comme deuxième et troisième caractère,
 - le texte commence par "\".
 
-Exemples avec [`Folder`](../commands/folder.md) :
+Exemples avec [`Folder`](../commands/folder) :
 
 ```4d
 $ok:=Folder("C:\\Monday";fk platform path).create()
@@ -82,7 +82,7 @@ Les règles suivantes s'appliquent (syntaxe HFS+) :
 - les séparateurs de dossiers sont ":"
 - le chemin ne doit pas commencer par un ":"
 
-Exemples avec [`Folder`](../commands/folder.md) :
+Exemples avec [`Folder`](../commands/folder) :
 
 ```4d
 $ok:=Folder("macintosh hd:";fk platform path).create()
@@ -93,7 +93,7 @@ $ok:=Folder("Monday:Tuesday";fk platform path).create() //un volume doit s'appel
 
 ### Constructeurs `File` et `Folder`
 
-Les commandes [`File`](../commands/file.md) et [`Folder`](../commands/folder.md) n'acceptent que les **chemins d'accès absolus**. Les chemins relatifs ne sont pas pris en charge et provoqueront des erreurs. Par exemple, le code suivant n'est pas autorisé :
+Les commandes [`File`](../commands/file) et [`Folder`](../commands/folder) n'acceptent que les **chemins d'accès absolus**. Les chemins relatifs ne sont pas pris en charge et provoqueront des erreurs. Par exemple, le code suivant n'est pas autorisé :
 
 ```4d
 	//ERREUR
