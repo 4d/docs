@@ -9,11 +9,16 @@ title: VP SET DEFAULT STYLE
 
 <!-- REF #_method_.VP SET DEFAULT STYLE.Params -->
 
-| 引数         | 型       |    | 説明                                           |                  |
-| ---------- | ------- | -- | -------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                      |                  |
-| styleObj   | Object  | -> | スタイルオブジェクト                                   |                  |
-| sheet      | Integer | -> | シートインデックス (デフォルト=カレントシート) | <!-- END REF --> |
+<div class="no-index">
+
+| 引数         | 型       |    | 説明                                           |
+| ---------- | ------- | -- | -------------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                      |
+| styleObj   | Object  | -> | スタイルオブジェクト                                   |
+| sheet      | Integer | -> | シートインデックス (デフォルト=カレントシート) |
+
+</div>
+<!-- END REF -->
 
 ## 説明
 

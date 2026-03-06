@@ -42,12 +42,14 @@ SMTP Transporter オブジェクトは [SMTP New transporter](#smtp-new-transpor
 
 
 <!-- REF #_command_.SMTP New transporter.Params -->
-| 引数     | 型                  |    | 説明                                                                             |
-| ------ | ------------------ |:--:| ------------------------------------------------------------------------------ |
-| server | Object             | -> | メールサーバー情報                                                                      |
-| 戻り値    | 4D.SMTPTransporter | <- | [SMTP transporter オブジェクト](#smtp-transporter-オブジェクト)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|server|Object|->|Mail server information|
+|Result|4D.SMTPTransporter|<-|[SMTP transporter object](#smtp-transporter-object)|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -118,12 +120,14 @@ SMTP Transporter オブジェクトは [SMTP New transporter](#smtp-new-transpor
 
 
 <!-- REF #4D.SMTPTransporter.new().Params -->
-| 引数     | 型                  |    | 説明                                                                             |
-| ------ | ------------------ |:--:| ------------------------------------------------------------------------------ |
-| server | Object             | -> | メールサーバー情報                                                                      |
-| 戻り値    | 4D.SMTPTransporter | <- | [SMTP transporter オブジェクト](#smtp-transporter-オブジェクト)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|server|Object|->|Mail server information|
+|Result|4D.SMTPTransporter|<-|[SMTP transporter object](#smtp-transporter-object)|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -209,12 +213,14 @@ SMTP接続は、以下の場合に自動的に閉じられます:
 
 
 <!-- REF #SMTPTransporterClass.send().Params -->
-| 引数   | 型      |    | 説明                                           |
-| ---- | ------ |:--:| -------------------------------------------- |
-| mail | Object | -> | 送信する [メール](EmailObjectClass.md#email-オブジェクト) |
-| 戻り値  | Object | <- | SMTP ステータス|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|mail|Object|->|[Email](EmailObjectClass.md#email-object) to send|
+|Result|Object|<-|SMTP status|
+</div>
+<!-- END REF -->
 
 #### 説明
 

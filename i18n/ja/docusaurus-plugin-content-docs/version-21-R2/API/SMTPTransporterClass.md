@@ -31,11 +31,14 @@ SMTP Transporter オブジェクトは [SMTP New transporter](../commands/smtp-n
 
 <!-- REF #4D.SMTPTransporter.new().Params -->
 
+<div class="no-index">
+
 | 引数     | 型                                  |                             | 説明                                                  |
 | ------ | ---------------------------------- | :-------------------------: | --------------------------------------------------- |
 | server | Object                             |              ->             | メールサーバー情報                                           |
 | 戻り値    | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-オブジェクト) |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -122,11 +125,14 @@ SMTP接続は、以下の場合に自動的に閉じられます:
 
 <!-- REF #SMTPTransporterClass.send().Params -->
 
+<div class="no-index">
+
 | 引数   | 型      |                             | 説明                                           |
 | ---- | ------ | :-------------------------: | -------------------------------------------- |
 | mail | Object |              ->             | 送信する [メール](EmailObjectClass.md#email-オブジェクト) |
 | 戻り値  | Object | <- | SMTP ステータス                                   |
 
+</div>
 <!-- END REF -->
 
 #### 説明

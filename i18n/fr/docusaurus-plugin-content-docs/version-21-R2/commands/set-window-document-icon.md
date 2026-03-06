@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | ---------- | -------------------------------------------------- | --------------------------- | --------------------------------------- |
 | winRef     | Integer                                            | &#8594; | Numéro de référence de la fenêtre       |
 | image      | Picture                                            | &#8594; | Icône personnalisée                     |
-| file       | 4D.File, [4D.Folder](../API/FolderClass.md)  | &#8594; | Chemin d'accès du fichier ou du dossier |
+| file       | 4D.File, 4D.Folder | &#8594; | Chemin d'accès du fichier ou du dossier |
 
 </div>
 <!-- END REF-->

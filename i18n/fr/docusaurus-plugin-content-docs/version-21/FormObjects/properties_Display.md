@@ -280,7 +280,7 @@ Le tableau suivant montre comment les différents formats affectent l'affichage 
 
 #### Commandes
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md) - [String](../commands/string)
+[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md) - [String](./commands/string)
 
 ---
 

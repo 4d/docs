@@ -148,10 +148,13 @@ Signal オブジェクトは [共有オブジェクト](Concepts/shared.md) で�
 
 <!-- REF #SignalClass.trigger().Params -->
 
+<div class="no-index">
+
 | 引数 | 型 |     | 説明         |
 | -- | - | :-: | ---------- |
 |    |   |     | 引数を必要としません |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -178,11 +181,14 @@ Signal がすでにシグナルされている (つまり `signaled` プロパ�
 
 <!-- REF #SignalClass.wait().Params -->
 
+<div class="no-index">
+
 | 引数      | 型       |                             | 説明                           |
 | ------- | ------- | --------------------------- | ---------------------------- |
 | timeout | Real    | ->                          | 最大待機時間(秒) |
 | 戻り値     | Boolean | <- | `.signaled` プロパティの状態         |
 
+</div>
 <!-- END REF -->
 
 #### 説明

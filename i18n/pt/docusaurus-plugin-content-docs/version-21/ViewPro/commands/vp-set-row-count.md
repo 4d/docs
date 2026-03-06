@@ -9,11 +9,16 @@ title: VP SET ROW COUNT
 
 <!-- REF #_method_.VP SET ROW COUNT.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                                   |                  |
-| ---------- | ------- | -- | ----------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                  |                  |
-| rowCount   | Integer | -> | Número de linhas                                            |                  |
-| sheet      | Integer | -> | Índice da folha (folha atual se omitida) | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro  | Tipo    |    | Descrição                                                   |
+| ---------- | ------- | -- | ----------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                  |
+| rowCount   | Integer | -> | Número de linhas                                            |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida) |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

@@ -96,10 +96,13 @@ A propriedade `.headers` é somente leitura. Para definir um cabeçalho, use a f
 
 <!-- REF #OutgoingMessageClass.setBody().Params -->
 
+<div class="no-index">
+
 | Parâmetro | Tipo |    | Descrição                  |
 | --------- | ---- | -- | -------------------------- |
 | body      | any  | -> | Corpo da mensagem de saída |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -132,11 +135,14 @@ Se *body* não for de um tipo de valor suportado, um erro é retornado.
 
 <!-- REF #OutgoingMessageClass.setHeader().Params -->
 
+<div class="no-index">
+
 | Parâmetro | Tipo |    | Descrição                             |
 | --------- | ---- | -- | ------------------------------------- |
 | \|        | Text | -> | Propriedade de cabeçalho para definir |
 | value     | Text | -> | Valor da propriedade do cabeçalho     |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -161,10 +167,13 @@ Se você definir um *valor* para o cabeçalho "Content-Type" *chave*, certifique
 
 <!-- REF #OutgoingMessageClass.setStatus().Params -->
 
+<div class="no-index">
+
 | Parâmetro | Tipo    |    | Descrição           |
 | --------- | ------- | -- | ------------------- |
 | status    | Integer | -> | Status para definir |
 
+</div>
 <!-- END REF -->
 
 #### Descrição

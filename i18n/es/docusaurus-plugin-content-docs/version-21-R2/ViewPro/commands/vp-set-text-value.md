@@ -9,11 +9,16 @@ title: VP SET TEXT VALUE
 
 <!-- REF #_method_.VP SET TEXT VALUE.Params -->
 
-| Parámetros    | Tipo   |    | Descripción           |                  |
-| ------------- | ------ | -- | --------------------- | ---------------- |
-| rangeObj      | Object | -> | Objeto rango          |                  |
-| textValue     | Text   | -> | Valor texto a definir |                  |
-| formatPattern | Text   | -> | Formato del valor     | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros    | Tipo   |    | Descripción           |
+| ------------- | ------ | -- | --------------------- |
+| rangeObj      | Object | -> | Objeto rango          |
+| textValue     | Text   | -> | Valor texto a definir |
+| formatPattern | Text   | -> | Formato del valor     |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

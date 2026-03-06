@@ -18,7 +18,7 @@ title: リストボックス列
 
 ## サポートされるフォームイベント {#supported-form-events}
 
-| フォームイベント             | 返される追加のプロパティ(主なプロパティについては[Form event](../commands/form-event.md) を参照してください)                                                                                                                                                                                                                         | コメント                                                                                                                         |
+| フォームイベント             | 返される追加のプロパティ(主なプロパティについては[Form event](../commands/form-event) を参照してください)                                                                                                                                                                                                                            | コメント                                                                                                                         |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>                                                                                                                         |                                                                                                                              |
 | On After Keystroke   | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>                                                                                                                         |                                                                                                                              |
@@ -53,7 +53,7 @@ title: リストボックス列
 
 ### オブジェクト配列カラムの設定
 
-オブジェクト配列をリストボックスのカラムに割り当てるには、プロパティリスト (の "変数名" 欄) にオブジェクト配列名を設定するか、配列型のカラムのように [LISTBOX INSERT COLUMN](../commands-legacy/listbox-insert-column.md) コマンドを使用します。 プロパティリスト内では、カラムにおいて "式タイプ" にオブジェクトを選択できます:
+オブジェクト配列をリストボックスのカラムに割り当てるには、プロパティリスト (の "変数名" 欄) にオブジェクト配列名を設定するか、配列型のカラムのように [LISTBOX INSERT COLUMN](../commands/listbox-insert-column) コマンドを使用します。 プロパティリスト内では、カラムにおいて "式タイプ" にオブジェクトを選択できます:
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_config.png)
 
@@ -323,7 +323,7 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
 特定の値を使用することで、セルの値に関連した単位を追加することができます (*例*: "10 cm", "20 pixels" 等)。 単位リストを定義するためには、以下の属性のどれか一つを使用します: 単位リストを定義するためには、以下の属性のどれか一つを使用します:
 
 - "unitsList": 利用可能な単位 (例: "cm"、"inches"、"km"、"miles"、他) を定義するのに使用する x 要素を格納した配列。 オブジェクト内で単位を定義するためには、この属性を使用します。
-- "unitsListReference": 利用可能な単位を含んだ 4Dリストへの参照。 [`New list`](../commands-legacy/new-list.md) コマンドで作成された 4D リストで単位を定義するためには、この属性を使用します。
+- "unitsListReference": 利用可能な単位を含んだ 4Dリストへの参照。 [`New list`](../commands/new-list) コマンドで作成された 4D リストで単位を定義するためには、この属性を使用します。
 - "unitsListName": 利用可能な単位を含んだデザインモードで作成された 4Dリスト名。 ツールボックスで作成された 4Dリストで単位を定義するためには、この属性を使用します。
 
 単位リストが定義された方法に関わらず、以下の属性を関連付けることができます:
@@ -411,3 +411,4 @@ OB SET($ob;"label";"Edit...")
   - チェックボックス (チェック/チェックなしの状態がスイッチしたとき)
 - **On Clicked**: ユーザーが、"event" *valueType* 属性を使用して実装されたボタンをクリックした場合、`On Clicked` イベントが生成されます。 このイベントはプログラマーによって管理されます。 このイベントはプログラマーによって管理されます。
 - **On Alternative Click**: ユーザーが省略ボタン ("alternateButton" 属性) をクリックした場合、`On Alternative Click` イベントが生成されます。 このイベントはプログラマーによって管理されます。 このイベントはプログラマーによって管理されます。
+

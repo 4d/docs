@@ -49,7 +49,7 @@ Associa uma lista de opções a um objeto. Pode ser um nome da lista de opções
 
 #### Comandos
 
-[OBJECT Get list name](../commands-legacy/object-get-list-name) - [OBJECT Get list reference](../commands-legacy/object-get-list-reference) - [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name) - [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference)
+[OBJECT Get list name](../commands/object-get-list-name) - [OBJECT Get list reference](../commands/object-get-list-reference) - [OBJECT SET LIST BY NAME](../commands/object-set-list-by-name) - [OBJECT SET LIST BY REFERENCE](../commands/object-set-list-by-reference)
 
 ---
 
@@ -153,7 +153,7 @@ Estão disponíveis três opções:
 
 - **Referência de lista**: declara que a lista suspensa é hierárquica. Isso significa que a lista suspensa pode exibir até dois níveis hierárquicos e seu conteúdo pode ser gerenciado pelos comandos de linguagem 4D do tema **Listas hierárquicas**.
 - **Valor do item selecionado** (padrão): a lista suspensa não é hierárquica e o valor do item escolhido na lista pelo usuário é salvo diretamente. Por exemplo, se o usuário escolher o valor "Azul", esse valor será salvo no campo.
-- **Referência do item selecionado**: a lista suspensa não é hierárquica e a referência do item da lista de opções é salva no objeto. Essa referência é o valor numérico associado a cada item por meio do parâmetro *itemRef* dos comandos [`APPEND TO LIST`](../commands-legacy/append-to-list) ou [`SET LIST ITEM`](../commands-legacy/set-list-item), ou no editor de listas. Esta opção permite otimizar o uso de memória: armazenar valores numéricos em campos usa menos espaço do que armazenar frases. Também facilita traduzir aplicações: você apenas cria listas múltiplas em diferentes línguas, mas com referências do mesmo item, depois carregar a lista com base no idioma da aplicação.
+- **Referência do item selecionado**: a lista suspensa não é hierárquica e a referência do item da lista de opções é salva no objeto. Essa referência é o valor numérico associado a cada item por meio do parâmetro *itemRef* dos comandos [`APPEND TO LIST`](../commands/append-to-list) ou [`SET LIST ITEM`](../commands/set-list-item), ou no editor de listas. Esta opção permite otimizar o uso de memória: armazenar valores numéricos em campos usa menos espaço do que armazenar frases. Também facilita traduzir aplicações: você apenas cria listas múltiplas em diferentes línguas, mas com referências do mesmo item, depois carregar a lista com base no idioma da aplicação.
 
 O uso da opção **Referência de item selecionado** exige a conformidade com os seguintes princípios:
 
@@ -266,7 +266,7 @@ Todas as tabelas do banco de dados podem ser usadas, independentemente de o form
 
 #### Comandos
 
-[LISTBOX GET TABLE SOURCE](../commands-legacy/listbox-get-table-source) - [LISTBOX SET TABLE SOURCE](../commands-legacy/listbox-set-table-source)
+[LISTBOX GET TABLE SOURCE](../commands/listbox-get-table-source) - [LISTBOX SET TABLE SOURCE](../commands/listbox-set-table-source)
 
 ---
 
@@ -280,7 +280,7 @@ Esta propriedade está disponível nas seguintes condições:
 Essa propriedade específica, no contexto de um campo ou variável associado a uma lista de valores, o tipo de conteúdo a ser salvo:
 
 - **Guardar como valor** (opción por defecto): el valor del elemento elegido en la lista por el usuario se guarda directamente. Por exemplo, se o usuário escolher o valor "Azul", esse valor será salvo no campo.
-- **Guardar como referencia**: la referencia del elemento de la lista de opciones se guarda en el objeto. Essa referência é o valor numérico associado a cada item por meio do parâmetro *itemRef* dos comandos [`APPEND TO LIST`](../commands-legacy/append-to-list) ou [`SET LIST ITEM`](../commands-legacy/set-list-item), ou no editor de listas.
+- **Guardar como referencia**: la referencia del elemento de la lista de opciones se guarda en el objeto. Essa referência é o valor numérico associado a cada item por meio do parâmetro *itemRef* dos comandos [`APPEND TO LIST`](../commands/append-to-list) ou [`SET LIST ITEM`](../commands/set-list-item), ou no editor de listas.
 
 Esta opção permite otimizar o uso de memória: armazenar valores numéricos em campos usa menos espaço do que armazenar frases. Também facilita traduzir aplicações: você apenas cria listas múltiplas em diferentes línguas, mas com referências do mesmo item, depois carregar a lista com base no idioma da aplicação.
 
@@ -348,6 +348,7 @@ Especifica a seleção temporária a ser utilizada. Você deve inserir o nome de
 
 #### Comandos
 
-[LISTBOX GET TABLE SOURCE](../commands-legacy/listbox-get-table-source) - [LISTBOX SET TABLE SOURCE](../commands-legacy/listbox-set-table-source)
+[LISTBOX GET TABLE SOURCE](../commands/listbox-get-table-source) - [LISTBOX SET TABLE SOURCE](../commands/listbox-set-table-source)
+
 
 

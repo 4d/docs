@@ -42,7 +42,7 @@ Esta opción está seleccionada por defecto en los nuevos proyectos. Sin embargo
 
 - Usando la propiedad [`.scalableSession`](API/WebServerClass.md#scalablesession) del objeto Servidor Web (para pasar el parámetro *settings* de la función [`.start()`](API/WebServerClass.md#start)). En este caso, esta configuración anula la opción definida en la caja de diálogo Configuración del objeto Servidor Web (no se almacena en el disco).
 
-> El comando [`WEB SET OPTION`](../commands-legacy/web-set-option) también puede definir el modo de sesión para el servidor Web principal.
+> El comando [`WEB SET OPTION`](../commands/web-set-option) también puede definir el modo de sesión para el servidor Web principal.
 
 En cualquier caso, la configuración es local para la máquina; por lo que puede ser diferente en el servidor web de 4D Server y en los servidores web de las máquinas 4D remotas.
 
@@ -488,5 +488,6 @@ Se crea un nuevo usuario y se almacena cierta información en la sesión, especi
 Un testigo de sesión tiene una vida útil, y la propia sesión tiene una vida útil. El tiempo de vida útil del token de sesión puede definirse [en la creación de tokens](../API/SessionClass.md#createotp). Por defecto, el tiempo de vida del token es el mismo valor que el valor de [`.idleTimeout`](../API/SessionClass.md#idletimeout).
 
 Una sesión solo se restaura mediante un token si tanto la vida útil del token de sesión como la vida útil de la sesión no han expirado. En otros casos (el testigo de sesión ha caducado y/o la propia sesión ha caducado), se crea una sesión de invitado cuando se recibe una petición web con un testigo de sesión.
+
 
 

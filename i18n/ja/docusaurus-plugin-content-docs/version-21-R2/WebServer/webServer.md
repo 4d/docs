@@ -4,11 +4,11 @@ slug: overview
 title: Web サーバー
 ---
 
-4D in local mode and 4D Server include a web server engine (aka http server) that enables you to design and publish powerful web applications that can make the most of your 4D databases.
+4D のローカルモード、および 4D Server には Webサーバーエンジン (HTTPサーバー) があります。 この Webサーバーエンジンを使用して、4Dデータベースを最大限に活用できる強力な Webアプリケーションを設計・公開することができます。
 
-:::warning Deprecated feature
+:::warning 廃止予定の機能
 
-Using the web server on a remote 4D is **deprecated** as of 4D 21. It is no longer recommended to use this feature.
+リモート4D においてWeb サーバーを使用する機能は4D 21 においてと **廃止予定** なっています。 この機能を使用することは今後推奨されません。
 
 :::
 
@@ -16,7 +16,7 @@ Using the web server on a remote 4D is **deprecated** as of 4D 21. It is no long
 
 Webアプリケーションの公開は、いつでも開始または停止することができます。 メニューコマンドを選択、またはランゲージコマンドを実行するだけで、操作できます。
 
-Monitoring the 4D web server is easy and can be done using the [4D Server administration window](../ServerWindow/http-server.md) or through [special URLs](webServerAdmin.md#administration-urls).
+4D Webサーバーの監視も簡単で、[4D Server の管理ウィンドウ](../ServerWindow/http-server.md) や [専用URL](webServerAdmin.md#管理用-url) を使っておこなうことができます。
 
 ## すぐに使えます
 
@@ -28,10 +28,10 @@ Monitoring the 4D web server is easy and can be done using the [4D Server admini
 
 - [**TLSプロトコル (HTTPS)**](../Admin/tls.md) の拡張サポート。
 
-- **Authentication**: flexible and customizable [authentication features](authentication.md) based upon built-it settings as well as fallback database methods ([`On Web Authentication`](authentication.md#on-web-authentication) for the web server and `On REST Authentication` for the REST server),
+- **認証**: ビルトインの設定および、フォールバックデータベースメソッド (Webサーバー用の [`On Web Authentication`](authentication.md#on-web-authentication)、RESTサーバー用の `On REST Authentication`) に基づく柔軟でカスタマイズ可能な [認証機能](authentication.md)
 
 - **公開するコンテンツの管理**: 明示的に公開した要素のみが、Web や RESTリクエストで直接利用できます。 次のものについて、宣言する必要があります:
-  - [Project methods](templates.md#accessing-4d-methods-via-the-web) exposed through HTTP requests
+  - HTTPリクエストで公開する [プロジェクトメソッド](templates.md#webから-4dメソッドへのアクセス)
   - RESTリクエストで公開する [ORDAのデータモデルクラス関数](../ORDA/ordaClasses.md#公開vs非公開関数)
   - RESTリクエストに公開しない [テーブルやフィールド](REST/configuration.md#テーブルやフィールドの公開) テーブルやフィールド
 
@@ -47,13 +47,13 @@ Monitoring the 4D web server is easy and can be done using the [4D Server admini
 
 ## RESTリクエストへのゲートウェイ
 
-4D Webサーバーにより、4Dアプリケーションに保存されているデータに RESTリクエストを通じてアクセスすることが可能になります。 REST requests provide direct access to any [ORDA](../ORDA/overview.md) operation such as adding, reading, editing, ordering, or searching data.
+4D Webサーバーにより、4Dアプリケーションに保存されているデータに RESTリクエストを通じてアクセスすることが可能になります。 RESTリクエストによって、データの追加・読み取り・編集・並べ替え・検索など、あらゆる[ORDA](../ORDA/overview.md) 操作に直接アクセスできます。
 
 RESTリクエストの詳細については、[RESTサーバー](../REST/gettingStarted.md) のセクションを参照ください。
 
 ## 拡張設定
 
-The 4D web server configuration is defined through a comprehensive set of application-level settings that can also be customized for the session using the `webServer` object properties or the [`WEB SET OPTION`](../commands-legacy/web-set-option.md) command.
+4D Webサーバーの構成は、アプリケーションレベルの包括的な設定によって定義されます。この設定は、`webServer` オブジェクトのプロパティまたは [`WEB SET OPTION`](../commands-legacy/web-set-option.md) コマンドを使用して、セッション毎にカスタマイズすることもできます。
 
 ## テンプレートとURL
 

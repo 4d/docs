@@ -213,3 +213,4 @@ La fonction retourne la valeur de la propriété `.signaled`.
 > L'état d'un process qui attend un signal est `En attente d'un marqueur interne`.
 
 <!-- END REF -->
+

@@ -9,13 +9,18 @@ title: VP Row
 
 <!-- REF #_method_.VP Row.Params -->
 
-| Parâmetro  | Tipo    |                             | Descrição                                                   |                  |
-| ---------- | ------- | --------------------------- | ----------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | ->                          | Nome de objeto formulário área 4D View Pro                  |                  |
-| row        | Integer | ->                          | Índice de linha                                             |                  |
-| rowCount   | Integer | ->                          | Número de linhas                                            |                  |
-| sheet      | Integer | ->                          | Índice da folha (folha atual se omitida) |                  |
-| Resultados | Object  | <- | Objeto intervalo de linha(s)             | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro  | Tipo    |                             | Descrição                                                   |
+| ---------- | ------- | --------------------------- | ----------------------------------------------------------- |
+| vpAreaName | Text    | ->                          | Nome de objeto formulário área 4D View Pro                  |
+| row        | Integer | ->                          | Índice de linha                                             |
+| rowCount   | Integer | ->                          | Número de linhas                                            |
+| sheet      | Integer | ->                          | Índice da folha (folha atual se omitida) |
+| Resultados | Object  | <- | Objeto intervalo de linha(s)             |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

@@ -395,14 +395,16 @@ Esta propiedad es **de sólo lectura**.
 
 
 <!-- REF #document.copyTo().Params -->
-| Parámetros        | Tipo      |    | Descripción                                            |
-| ----------------- | --------- |:--:| ------------------------------------------------------ |
-| destinationFolder | 4D.Folder | -> | Carpeta de destino                                     |
-| newName           | Text      | -> | Nombre para la copia                                   |
-| overwrite         | Integer   | -> | `fk overwrite` para sustituir los elementos existentes |
-| Resultado         | 4D.File   | <- | Archivo copiado|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|destinationFolder | 4D.Folder |->|Destination folder|
+|newName|Text|->|Name for the copy|
+|overwrite|Integer|->|`fk overwrite` to replace existing elements|
+|Result|4D.File|<-|Copied file|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -449,11 +451,13 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 
 <!-- REF #document.getContent().Params -->
-| Parámetros | Tipo    |    | Descripción                                      |
-| ---------- | ------- | -- | ------------------------------------------------ |
-| Resultado  | 4D.Blob | <- | Contenido del archivo|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|----|---|---|
+|Result | 4D.Blob |<-|File content|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -491,12 +495,14 @@ Para guardar el contenido de un documento en un campo `BLOB`:
 
 
 <!-- REF #document.getIcon().Params -->
-| Parámetros | Tipo    |    | Descripción                                       |
-| ---------- | ------- | -- | ------------------------------------------------- |
-| size       | Integer | -> | Longitud del lado de la imagen devuelta (píxeles) |
-| Resultado  | Picture | <- | Icono|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|----|---|---|
+|size|Integer|->|Side length for the returned picture (pixels)|
+|Result|Picture|<-|Icon|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -526,14 +532,16 @@ Icono de archivo [picture](../Concepts/picture.html).
 
 
 <!-- REF #document.getText().Params -->
-| Parámetros  | Tipo    |    | Descripción                                    |
-| ----------- | ------- | -- | ---------------------------------------------- |
-| charSetName | Text    | -> | Nombre del juego de caracteres                 |
-| charSetNum  | Integer | -> | Número del conjunto de caracteres              |
-| breakMode   | Integer | -> | Modo de tratamiento de los saltos de línea     |
-| Resultado   | Text    | <- | Texto del documento|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|charSetName |Text |-> |Name of character set|
+|charSetNum |Integer |-> |Number of character set|
+|breakMode|Integer |-> |Processing mode for line breaks|
+|Result |Text  |<- |Text from the document|
+</div>
+<!-- END REF -->
 
 #### Descripción
 

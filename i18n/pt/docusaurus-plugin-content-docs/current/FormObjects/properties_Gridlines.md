@@ -19,7 +19,7 @@ Define a cor das linhas horizontais num list box (cinzento por predefinição).
 
 #### Comandos
 
-[LISTBOX GET GRID COLORS](../commands-legacy/listbox-get-grid-colors) - [LISTBOX SET GRID COLOR](../commands-legacy/listbox-set-grid-color)
+[LISTBOX GET GRID COLORS](../commands/listbox-get-grid-colors) - [LISTBOX SET GRID COLOR](../commands/listbox-set-grid-color)
 
 ---
 
@@ -39,4 +39,5 @@ Define a cor das linhas verticais num list box (cinzento por predefinição).
 
 #### Comandos
 
-[LISTBOX GET GRID COLORS](../commands-legacy/listbox-get-grid-colors) - [LISTBOX SET GRID COLOR](../commands-legacy/listbox-set-grid-color)
+[LISTBOX GET GRID COLORS](../commands/listbox-get-grid-colors) - [LISTBOX SET GRID COLOR](../commands/listbox-set-grid-color)
+

@@ -45,7 +45,7 @@ Pour plus d'informations sur les règles de nommage pour les objets de formulair
 
 #### Commandes
 
-[FORM GET OBJECTS](../commands-legacy/form-get-objects) - [OBJECT Get name](../commands-legacy/object-get-name)
+[FORM GET OBJECTS](../commands/form-get-objects) - [OBJECT Get name](../commands/object-get-name)
 
 ---
 
@@ -106,7 +106,7 @@ Vous pouvez laisser à 4D le soin de créer les variables associées à vos obje
 
 Lorsqu'une variable n'est pas nommée, au chargement du formulaire, 4D crée une nouvelle variable pour l'objet, avec un nom calculé qui est unique dans l'espace des variables de process de l'interpréteur (ce qui signifie que ce mécanisme peut être utilisé même en mode compilé). Cette variable temporaire sera détruite à la fermeture du formulaire.
 
-Pour récupérer ou définir la valeur des objets de formulaire qui utilisent des variables dynamiques, vous avez juste besoin d'appeler les commandes [`OBJECT Get value`](../commands-legacy/object-get-value) et [`OBJECT SET VALUE`](../commands-legacy/object-set-value). Par exemple :
+Pour récupérer ou définir la valeur des objets de formulaire qui utilisent des variables dynamiques, vous avez juste besoin d'appeler les commandes [`OBJECT Get value`](../commands/object-get-value) et [`OBJECT SET VALUE`](../commands/object-set-value). Par exemple :
 
 ```4d
  var $value : Variant
@@ -124,7 +124,7 @@ Pour une list box de type tableau, la propriété **Variable ou Expression** con
 
 #### Commandes
 
-[`LISTBOX Get column formula`](../commands-legacy/listbox-get-column-formula) - [`LISTBOX SET COLUMN FORMULA`](../commands-legacy/listbox-set-column-formula) - [`OBJECT Get data source`](../commands-legacy/object-get-data-source) - [`OBJECT Get data source formula`](../commands/object-get-data-source-formula) - [`OBJECT Get value`](../commands-legacy/object-get-value) - [`OBJECT Get pointer`](../commands-legacy/object-get-pointer) - [`OBJECT SET VALUE`](../commands-legacy/object-set-value) - [`OBJECT SET DATA SOURCE`](../commands-legacy/object-set-data-source) - [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula)
+[`LISTBOX Get column formula`](../commands/listbox-get-column-formula) - [`LISTBOX SET COLUMN FORMULA`](../commands/listbox-set-column-formula) - [`OBJECT Get data source`](../commands/object-get-data-source) - [`OBJECT Get data source formula`](../commands/object-get-data-source-formula) - [`OBJECT Get value`](../commands/object-get-value) - [`OBJECT Get pointer`](../commands/object-get-pointer) - [`OBJECT SET VALUE`](../commands/object-set-value) - [`OBJECT SET DATA SOURCE`](../commands/object-set-data-source) - [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula)
 
 ---
 
@@ -194,7 +194,7 @@ La collection ou l'entity selection doit être disponible pour le formulaire lor
 
 #### Commandes
 
-[`OBJECT Get data source`](../commands-legacy/object-get-data-source) - [`OBJECT Get data source formula`](../commands/object-get-data-source-formula) - [`OBJECT Get value`](../commands-legacy/object-get-value) - [`OBJECT Get pointer`](../commands-legacy/object-get-pointer) - [`OBJECT SET VALUE`](../commands-legacy/object-set-value) - [`OBJECT SET DATA SOURCE`](../commands-legacy/object-set-data-source) - [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula)
+[`OBJECT Get data source`](../commands/object-get-data-source) - [`OBJECT Get data source formula`](../commands/object-get-data-source-formula) - [`OBJECT Get value`](../commands/object-get-value) - [`OBJECT Get pointer`](../commands/object-get-pointer) - [`OBJECT SET VALUE`](../commands/object-set-value) - [`OBJECT SET DATA SOURCE`](../commands/object-set-data-source) - [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula)
 
 ---
 
@@ -279,7 +279,7 @@ Pour des raisons de traduction d'applications, vous pouvez entrer une référenc
 
 #### Commandes
 
-[`OBJECT Get title`](../commands-legacy/object-get-title) - [`OBJECT SET TITLE`](../commands-legacy/object-set-title)
+[`OBJECT Get title`](../commands/object-get-title) - [`OBJECT SET TITLE`](../commands/object-set-title)
 
 ---
 
@@ -287,7 +287,7 @@ Pour des raisons de traduction d'applications, vous pouvez entrer une référenc
 
 This property sets the type of calculation to be done in a [column footer](listbox-header-footer.md#footers) area.
 
-> Le calcul des pieds de page peut également être défini en utilisant la commande 4D [`LISTBOX SET FOOTER CALCULATION`](../commands-legacy/listbox-set-footer-calculation).
+> The calculation for footers can also be set using the [`LISTBOX SET FOOTER CALCULATION`](../commands/listbox-set-footer-calculation) 4D command.
 
 Il existe plusieurs types de calculs. Le tableau suivant montre quels calculs peuvent être utilisés en fonction du type de données présentes dans chaque colonne et indique le type automatiquement affecté par 4D à la variable de pied de colonne (si elle n'est pas typée par le code) :
 
@@ -336,4 +336,4 @@ Lorsque **Custom** ("none" en JSON) est défini, aucun calcul automatique n'est 
 
 #### Commandes
 
-[`LISTBOX Get footer calculation`](../commands-legacy/listbox-get-footer-calculation) - [`LISTBOX SET FOOTER CALCULATION`](../commands-legacy/listbox-set-footer-calculation)
+[`LISTBOX Get footer calculation`](../commands/listbox-get-footer-calculation) - [`LISTBOX SET FOOTER CALCULATION`](../commands/listbox-set-footer-calculation)

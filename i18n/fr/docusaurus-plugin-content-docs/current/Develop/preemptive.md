@@ -155,10 +155,10 @@ Pour être thread-safe, une méthode doit respecter les règles suivantes :
 - Elle ne doit pas utiliser de variables interprocess(1)
 - Elle ne doit pas appeler d'objets d'interface (2) (il y a cependant des exceptions, voir ci-dessous).
 
-Les [process Worker](processes.md#worker-processes) vous permettent également d'échanger des messages entre tous les process, y compris les process préemptifs.
-(1) Pour échanger des données entre process préemptifs (et entre tous les process), vous pouvez passer des [collections partagées ou objets partagés](../Concepts/shared.md) comme paramètres aux process, et/ou utiliser le catalogue [`Storage`](../commands-legacy/storage).
+(1) To exchange data between preemptive processes (and between all processes), you can pass [shared collections or shared objects](../Concepts/shared.md) as parameters to processes, and/or use the [`Storage`](../commands/storage) catalog.
+(1) Pour échanger des données entre process préemptifs (et entre tous les process), vous pouvez passer des [collections partagées ou objets partagés](../Concepts/shared.md) comme paramètres aux process, et/ou utiliser le catalogue [`Storage`](../commands-legacy/storage.md).
 
-(2) La commande [`CALL FORM`](../commands-legacy/call-form) fournit une solution élégante pour appeler des objets d'interface à partir d'un process préemptif.
+(2) La commande [`CALL FORM`](../commands/call-form) fournit une solution élégante pour appeler des objets d'interface à partir d'un process préemptif.
 
 :::note Notes
 
@@ -277,3 +277,4 @@ Pour faire cela, vous devez entourer le code à exclure de la vérification avec
 ```
 
 Bien entendu, le développeur 4D est responsable de la compatibilité du code entre les directives de désactivation et de réactivation avec le mode préemptif. Des erreurs d'exécution seront générées si du code thread-unsafe est exécuté dans un process préemptif.
+

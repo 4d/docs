@@ -9,11 +9,16 @@ title: VP Get names
 
 <!-- REF #_method_.VP Get names.Params -->
 
-| Parámetros | Tipo       |                             | Descripción                                                    |                  |
-| ---------- | ---------- | --------------------------- | -------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text       | ->                          | Nombre de objeto formulario área 4D View Pro                   |                  |
-| scope      | Integer    | ->                          | Alcance objetivo (por defecto= hoja actual) |                  |
-| Resultado  | Collection | <- | Nombres existentes en el alcance definido                      | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo       |                             | Descripción                                                    |
+| ---------- | ---------- | --------------------------- | -------------------------------------------------------------- |
+| vpAreaName | Text       | ->                          | Nombre de objeto formulario área 4D View Pro                   |
+| scope      | Integer    | ->                          | Alcance objetivo (por defecto= hoja actual) |
+| Resultado  | Collection | <- | Nombres existentes en el alcance definido                      |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

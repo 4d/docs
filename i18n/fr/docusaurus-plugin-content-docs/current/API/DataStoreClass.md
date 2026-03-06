@@ -1322,3 +1322,4 @@ Vous pouvez imbriquer plusieurs transactions (sous-transactions). Si la transact
 Voir l'exemple de la fonction [`.startTransaction()`](#starttransaction).
 
 <!-- END REF -->
+

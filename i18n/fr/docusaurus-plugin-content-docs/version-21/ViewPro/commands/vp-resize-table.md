@@ -17,10 +17,15 @@ title: VP RESIZE TABLE
 
 <!-- REF #_method_.VP RESIZE TABLE.Params -->
 
-| Paramètres | Type   |    | Description                |                  |
-| ---------- | ------ | -- | -------------------------- | ---------------- |
-| rangeObj   | Object | -> | Nouvelle plage de la table |                  |
-| tableName  | Text   | -> | Nom de la table            | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres | Type   |    | Description                                                                                                                              |
+| ---------- | ------ | -- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| rangeObj   | Object | -> | Une erreur est retournée si le paramètre <code>filePath</code> est invalide, ou si le fichier est manquant ou mal-formé. |
+| tableName  | Text   | -> | Nom de la table                                                                                                                          |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

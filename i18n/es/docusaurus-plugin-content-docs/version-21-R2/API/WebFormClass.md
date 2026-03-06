@@ -60,10 +60,13 @@ While `myForm` may not display typical object properties when examined in the de
 
 <!-- REF #WebFormClass.disableState().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo |     | Descripción                                         |
 | ---------- | ---- | :-: | --------------------------------------------------- |
 | state      | Text |  -> | Nombre del estado a desactivar en el formulario web |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -85,10 +88,13 @@ Para más información sobre los estados de las páginas web, consulte la secci�
 
 <!-- REF #WebFormClass.enableState().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo |     | Descripción                                      |
 | ---------- | ---- | :-: | ------------------------------------------------ |
 | state      | Text |  -> | Nombre del estado a activar en el formulario web |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -121,10 +127,13 @@ Function authenticationError()
 
 <!-- REF #WebFormClass.setError().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo |     | Descripción                                     |
 | ---------- | ---- | :-: | ----------------------------------------------- |
 | msg        | Text |  -> | Mensaje de error a mostrar en el formulario web |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -156,10 +165,13 @@ Si la funcionalidad [**Provide feedback**](https://developer.4d.com/qodly/4DQodl
 
 <!-- REF #WebFormClass.setMessage().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo |     | Descripción                                           |
 | ---------- | ---- | :-: | ----------------------------------------------------- |
 | msg        | Text |  -> | Mensaje de información a mostrar en el formulario web |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -191,10 +203,13 @@ Si la funcionalidad [**Provide feedback**](https://developer.4d.com/qodly/4DQodl
 
 <!-- REF #WebFormClass.setWarning().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo |     | Descripción                                              |
 | ---------- | ---- | :-: | -------------------------------------------------------- |
 | msg        | Text |  -> | Mensaje de advertencia para mostrar en el formulario web |
 
+</div>
 <!-- END REF -->
 
 #### Descripción

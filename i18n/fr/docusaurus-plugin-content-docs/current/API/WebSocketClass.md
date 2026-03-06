@@ -203,11 +203,11 @@ La fonction `.send()` <!-- REF #WebSocketClass.send().Summary -->envoie *message
 
 Les contenus suivants sont envoyés en fonction du type de *message* :
 
-| Type   | Contenu                                                                                                                 |
-| ------ | ----------------------------------------------------------------------------------------------------------------------- |
-| Text   | Texte en UTF-8                                                                                                          |
-| Blob   | Données binaires                                                                                                        |
-| Object | Texte en JSON UTF-8 (même résultat qu'avec [`JSON Stringify`](../commands-legacy/json-stringify)) |
+| Type   | Contenu                                                                                                       |
+| ------ | ------------------------------------------------------------------------------------------------------------- |
+| Text   | Texte en UTF-8                                                                                                |
+| Blob   | Données binaires                                                                                              |
+| Object | Texte en JSON UTF-8 (même résultat qu'avec [`JSON Stringify`](../commands/json-stringify)) |
 
 <!-- END REF -->
 
@@ -269,3 +269,4 @@ La propriété `.url` contient <!-- REF #WebSocketClass.url.Summary -->l'URL auq
 Cette propriété est en lecture seule.
 
 <!-- END REF -->
+

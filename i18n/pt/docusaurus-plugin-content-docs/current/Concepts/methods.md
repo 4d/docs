@@ -204,7 +204,7 @@ Se você marcar a caixa de seleção de **Novo Processo**, o método que você s
 **Notas Servidor 4D**:
 
 - Se quiser que o método seja executado na máquina do servidor e não na máquina do cliente, selecione a opção On 4D Server no menu To be executed. Neste caso, é criado um novo processo, chamado stored procedure, na máquina do servidor para executar o método. Essa opção pode ser usada para reduzir o tráfego de rede e otimizar o funcionamento do 4D Server, em particular para métodos que chamam dados armazenados no disco. Todos os tipos de métodos podem ser executados na máquina servidor ou noutra máquina cliente, excepto os que modificam a interface do utilizador. Neste caso, os procedimentos armazenados são ineficazes.
-- Também pode optar por executar o método noutra estação de trabalho cliente. Other client workstations will not appear in the menu, unless they have been previously "registered" (for more information, refer to the description of the [REGISTER CLIENT](../commands-legacy/register-client).
+- Também pode optar por executar o método noutra estação de trabalho cliente. Other client workstations will not appear in the menu, unless they have been previously "registered" (for more information, refer to the description of the [REGISTER CLIENT](../commands/register-client).
 
 Por padrão, a opção **local** está selecionada. Com a versão 4D para um único utilizador, esta é a única opção disponível.
 
@@ -284,3 +284,4 @@ Alguns usos típicos da recursividade em 4D são:
 - Navegação de documentos e pastas em seu disco, usando os comandos `FOLDER LIST` e `DOCUMENT LIST`. Uma pasta pode conter pastas e documentos, as próprias subpastas podem conter pastas e documentos, e assim por diante.
 
 **Importante:** Las llamadas recursivas deben terminar siempre en algún punto. No exemplo, o método `Genealogia de` deixa de chamar a si próprio quando a consulta não devolve registos. Sem este teste de condição, o método chamar-se-ia indefinidamente; eventualmente, 4D retornaria um erro "Stack Full" porque deixaria de ter espaço para "empilhar" as chamadas (bem como os parâmetros e variáveis locais utilizados no método).
+

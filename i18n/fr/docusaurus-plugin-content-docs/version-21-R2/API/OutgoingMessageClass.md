@@ -96,10 +96,13 @@ La propriété `.headers` est en lecture seule. Pour définir un header, utilise
 
 <!-- REF #OutgoingMessageClass.setBody().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type |    | Description             |
 | ---------- | ---- | -- | ----------------------- |
 | body       | any  | -> | Body du message sortant |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -132,11 +135,14 @@ Si *body* n'est pas un type de valeur pris en charge, une erreur est renvoyée.
 
 <!-- REF #OutgoingMessageClass.setHeader().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type |    | Description                      |
 | ---------- | ---- | -- | -------------------------------- |
 | key        | Text | -> | Propriété de header à définir    |
 | value      | Text | -> | Valeur de la propriété de header |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -161,10 +167,13 @@ Si vous définissez une *value* pour la *key* du header "Content-Type", assurez-
 
 <!-- REF #OutgoingMessageClass.setStatus().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type    |    | Description      |
 | ---------- | ------- | -- | ---------------- |
 | status     | Integer | -> | Statut à définir |
 
+</div>
 <!-- END REF -->
 
 #### Description

@@ -90,7 +90,7 @@ Por razões de segurança, esta opção está desmarcada por padrão. Cada méto
 
 Quando está marcada, esta opção permite que o método do projeto seja executado pelo motor SQL de 4D. Por padrão, não está selecionado, o que significa que, a menos que explicitamente autorizado, os métodos do projeto 4D são protegidos e não podem ser chamados pelo motor SQL de 4D.
 
-Esta propriedade se aplica a todas as consultas SQL internas e externas --- executadas através do driver ODBC, Código SQL inserido entre o [Begin SQL](../commands-legacy/begin-sql)/[End SQL](../commands-legacy/end-sql) tags ou o comando [QUERY BY SQL](../commands-legacy/query-by-sql).
+Esta propriedade se aplica a todas as consultas SQL internas e externas --- executadas através do driver ODBC, Código SQL inserido entre o [Begin SQL](../commands/begin-sql)/[End SQL](../commands/end-sql) tags ou o comando [QUERY BY SQL](../commands/query-by-sql).
 
 **Notas:**
 
@@ -131,4 +131,5 @@ Utilize o carácter curinga @ para ajudar a definir grupos de métodos:
 **Nota:** si el atributo "Publicado en WSDL" se establece como True, sólo se aplicará a los métodos proyecto que ya contengan el atributo "Ofrecido como servicio web".
 
 4. Haga clic en **Aplicar**. A modificação é aplicada instantaneamente a todos os métodos de projeto designados pela cadeia de caracteres introduzida.
+
 

@@ -18,7 +18,7 @@ Si vous avez l'habitude de coder avec **VS Code**, vous pouvez également utilis
 Il existe plusieurs façons d'afficher le débogueur :
 
 - En cliquant sur le bouton **Trace** dans [la fenêtre des erreurs de syntaxe](basics.md#syntax-error-window)
-- En utilisant la commande [`TRACE`](../commands-legacy/trace),
+- En utilisant la commande [`TRACE`](../commands/trace),
 - En cliquant sur le bouton **Debug** dans la fenêtre d'exécution de méthode ou en sélectionnant le bouton **Run and debug...** dans l'éditeur de code
 - En utilisant **Alt+Shift+Clic** droit (Windows) ou **Ctrl+Option+Cmd+Clic (macOS)** pendant l'exécution d'une méthode, puis en sélectionnant le processus à suivre dans le menu contextuel :
 
@@ -311,7 +311,7 @@ Le fenêtre d'évaluation sert à évaluer les expressions. Elle est similaire �
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
 
-Vous pouvez évaluer toute expression qui peut être affichée sous forme de texte. Ceci n'inclut pas les champs et les variables image et BLOB. Pour afficher le contenu d'un BLOB, vous pouvez utiliser les commandes BLOB, telles que [BLOB to text](../commands-legacy/blob-to-text).
+Vous pouvez évaluer toute expression qui peut être affichée sous forme de texte. Ceci n'inclut pas les champs et les variables image et BLOB. Pour afficher le contenu d'un BLOB, vous pouvez utiliser les commandes BLOB, telles que [BLOB to text](../commands/blob-to-text).
 
 ### Mode d'affichage
 
@@ -502,3 +502,4 @@ Cette section répertorie tous les raccourcis disponibles dans la fenêtre du d�
 - Lorsqu'aucun objet n’est sélectionné dans les fenêtres, en appuyant sur **Entrée**, vous avancez d’une ligne.
 - Lorsque la valeur d’un élément est sélectionnée, utilisez les touches directionnelles pour naviguer dans la liste.
 - Lorsque vous êtes en train d’éditer un élément, utilisez les touches directionnelles pour déplacer le curseur. Utilisez Ctrl+A/X/C/V (Windows) ou Commande+A/X/C/V (macOS) en raccourci des commandes du menu Edition : Tout Sélectionner/Couper/Copier/Coller.
+

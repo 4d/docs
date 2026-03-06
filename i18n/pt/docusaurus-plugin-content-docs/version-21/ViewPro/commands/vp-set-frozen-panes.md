@@ -9,12 +9,15 @@ title: VP SET FROZEN PANES
 
 <!-- REF #_method_.VP SET FROZEN PANES.Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo    |    | Descrição                                                             |
 | ---------- | ------- | -- | --------------------------------------------------------------------- |
 | vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                            |
 | paneObj    | Object  | -> | Objeto que contém as informações sobre as colunas e linhas congeladas |
 | sheet      | Integer | -> | Índice da folha (folha atual se omitida)           |
 
+</div>
 <!-- END REF -->
 
 ## Descrição

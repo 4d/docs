@@ -17,13 +17,18 @@ title: VP REMOVE TABLE COLUMNS
 
 <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                                      |                  |
-| ---------- | ------- | -- | -------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                     |                  |
-| tableName  | Text    | -> | Nome da tabela                                                 |                  |
-| column     | Integer | -> | Índice na tabela da coluna inicial a remover                   |                  |
-| count      | Integer | -> | Número de colunas a remover (tem de ser >0) |                  |
-| sheet      | Integer | -> | Índice da folha (folha atual se omitida)    | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro  | Tipo    |    | Descrição                                                      |
+| ---------- | ------- | -- | -------------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                     |
+| tableName  | Text    | -> | Nome da tabela                                                 |
+| column     | Integer | -> | Índice na tabela da coluna inicial a remover                   |
+| count      | Integer | -> | Número de colunas a remover (tem de ser >0) |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)    |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

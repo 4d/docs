@@ -9,11 +9,16 @@ title: VP ADD RANGE NAME
 
 <!-- REF #_method_.VP ADD RANGE NAME.Params -->
 
-| 引数       | 型      |    | 説明             |                  |
-| -------- | ------ | -- | -------------- | ---------------- |
-| rangeObj | Object | -> | レンジオブジェクト      |                  |
-| name     | Text   | -> | フォーミュラの名称      |                  |
-| options  | Object | -> | 命名フォーミュラのオプション | <!-- END REF --> |
+<div class="no-index">
+
+| 引数       | 型      |    | 説明             |
+| -------- | ------ | -- | -------------- |
+| rangeObj | Object | -> | レンジオブジェクト      |
+| name     | Text   | -> | フォーミュラの名称      |
+| options  | Object | -> | 命名フォーミュラのオプション |
+
+</div>
+<!-- END REF -->
 
 ## 説明
 

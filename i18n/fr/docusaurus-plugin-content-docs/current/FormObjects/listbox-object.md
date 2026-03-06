@@ -7,12 +7,12 @@ title: List Box Object
 
 Dans une list box de type tableau, chaque colonne est associée à un tableau 4D à une dimension ; tous les types de tableaux peuvent être utilisés, à l’exception des tableaux de pointeurs. Le nombre de lignes est basé sur le nombre d’éléments du tableau.
 
-Par défaut, 4D affecte le nom “ColonneN” à chaque variable de colonne. You can change it, as well as other column properties, in the [column properties](./listbox-column.md). The display format for each column can also be defined using the [`OBJECT SET FORMAT`](../commands-legacy/object-set-format.md) command.
+Par défaut, 4D affecte le nom “ColonneN” à chaque variable de colonne. You can change it, as well as other column properties, in the [column properties](./listbox-column.md). The display format for each column can also be defined using the [`OBJECT SET FORMAT`](../commands/object-set-format) command.
 
 > Les list box basées sur des tableaux peuvent être affichées sous forme de [list box hiérarchiques](listbox_overview.md#list-box-hierarchiques), disposant de mécanismes spécifiques.
 
 Avec les list box de type tableau, les valeurs des colonnes (saisie et affichage) sont gérées à l’aide des commandes du langage 4D. Vous pouvez également associer une [énumération](properties_DataSource.md#choice-list) à une colonne afin de contrôler la saisie.
-The values of columns are managed using high-level List box commands (such as [`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows) or [`LISTBOX DELETE ROWS`](../commands-legacy/listbox-delete-rows.md)) as well as array manipulation commands. Par exemple, pour initialiser le contenu d’une colonne, vous pouvez utiliser l’instruction suivante :
+The values of columns are managed using high-level List box commands (such as [`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows) or [`LISTBOX DELETE ROWS`](../commands/listbox-delete-rows)) as well as array manipulation commands. Par exemple, pour initialiser le contenu d’une colonne, vous pouvez utiliser l’instruction suivante :
 
 ```4d
 ARRAY TEXT(varCol;size)
@@ -28,7 +28,7 @@ LIST TO ARRAY("ListName";varCol)
 
 ## List box de type sélection
 
-Dans ce type de list box, chaque colonne peut être associée à un champ (par exemple `[Employees]LastName)` ou à une expression. L’expression peut être basée sur un ou plusieurs champs (par exemple `[Employés]Nom+“ ”+[Employés]Prénom`) ou être simplement une formule (par exemple`String(Milliseconds)`). L’expression peut également être une méthode projet, une variable ou un élément de tableau. You can use the [`LISTBOX SET COLUMN FORMULA`](../commands-legacy/listbox-set-column-formula.md) and [`LISTBOX INSERT COLUMN FORMULA`](../commands-legacy/listbox-insert-column-formula.md) commands to modify columns programmatically.
+Dans ce type de list box, chaque colonne peut être associée à un champ (par exemple `[Employees]LastName)` ou à une expression. L’expression peut être basée sur un ou plusieurs champs (par exemple `[Employés]Nom+“ ”+[Employés]Prénom`) ou être simplement une formule (par exemple`String(Milliseconds)`). L’expression peut également être une méthode projet, une variable ou un élément de tableau. You can use the [`LISTBOX SET COLUMN FORMULA`](../commands/listbox-set-column-formula) and [`LISTBOX INSERT COLUMN FORMULA`](../commands/listbox-insert-column-formula) commands to modify columns programmatically.
 
 Le contenu de chaque ligne est ensuite évalué en fonction d'une sélection d'enregistrements : la **sélection courante** d'une table ou une **sélection temporaire**.
 
@@ -137,7 +137,7 @@ Les propriétés prises en charge dépendent du type de list box.
 
 ## Événements de formulaire pris en charge {#supported-form-events}
 
-| Evénement formulaire | Propriétés supplémentaires renvoyées (voir [Form event](../commands/form-event.md) pour les propriétés principales)                                                                                  | Commentaires                                                                                                                                                                       |
+| Evénement formulaire | Propriétés supplémentaires renvoyées (voir [Form event](../commands/form-event) pour les propriétés principales)                                                                                     | Commentaires                                                                                                                                                                       |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <ul><li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li></ul>                                                                                   |                                                                                                                                                                                    |
 | On After Keystroke   | <ul><li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li></ul>                                                                                   |                                                                                                                                                                                    |
@@ -194,5 +194,6 @@ Les événements formulaire sur les list box ou colonnes de list box peuvent ret
 | verticalScroll   | entier long | Positif si le défilement est vers le bas, négatif s'il est vers le haut       |
 
 > Si un événement se produit sur une "fake" colonne ou ligne qui n'existe pas, une chaîne vide est généralement renvoyée.
+
 
 

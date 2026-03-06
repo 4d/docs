@@ -158,7 +158,7 @@ Número de colunas que não podem ser movidas durante a execução.
 
 #### Comandos
 
-[LISTBOX Get locked columns](../commands-legacy/listbox-get-locked-columns) - [LISTBOX Get static columns](../commands-legacy/listbox-get-static-columns) - [LISTBOX SET LOCKED COLUMNS](../commands-legacy/listbox-set-locked-columns) - [LISTBOX SET STATIC COLUMNS](../commands-legacy/listbox-set-static-columns)
+[LISTBOX Get locked columns](../commands/listbox-get-locked-columns) - [LISTBOX Get static columns](../commands/listbox-get-static-columns) - [LISTBOX SET LOCKED COLUMNS](../commands/listbox-set-locked-columns) - [LISTBOX SET STATIC COLUMNS](../commands/listbox-set-static-columns)
 
 ---
 
@@ -166,7 +166,7 @@ Número de colunas que não podem ser movidas durante a execução.
 
 Define o número de colunas do list box.
 
-> Você pode adicionar ou remover colunas dinamicamente por meio de programação, usando comandos como [`LISTBOX INSERT COLUMN`](../commands-legacy/listbox-insert-column) ou [`LISTBOX DELETE COLUMN`](../commands-legacy/listbox-delete-column).
+> Você pode adicionar ou remover colunas dinamicamente por meio de programação, usando comandos como [`LISTBOX INSERT COLUMN`](../commands/listbox-insert-column) ou [`LISTBOX DELETE COLUMN`](../commands/listbox-delete-column).
 
 #### Gramática JSON
 
@@ -180,7 +180,7 @@ Define o número de colunas do list box.
 
 #### Comandos
 
-[`LISTBOX DELETE COLUMN`](../commands-legacy/listbox-delete-column) - [LISTBOX Get number of columns](../commands-legacy/listbox-get-number-of-columns) - [`LISTBOX INSERT COLUMN`](../commands-legacy/listbox-insert-column) - [`LISTBOX INSERT COLUMN FORMULA`](../commands-legacy/listbox-insert-column-formula)
+[`LISTBOX DELETE COLUMN`](../commands/listbox-delete-column) - [LISTBOX Get number of columns](../commands/listbox-get-number-of-columns) - [`LISTBOX INSERT COLUMN`](../commands/listbox-insert-column) - [`LISTBOX INSERT COLUMN FORMULA`](../commands/listbox-insert-column-formula)
 
 ---
 
@@ -237,7 +237,7 @@ Observe que a definição das propriedades de um elemento substitui quaisquer ou
 
 #### Comandos
 
-[`LISTBOX Get array`](../commands-legacy/listbox-get-array) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays) - [`LISTBOX SET ARRAY`](../commands-legacy/listbox-set-array)
+[`LISTBOX Get array`](../commands/listbox-get-array) - [`LISTBOX GET ARRAYS`](../commands/listbox-get-arrays) - [`LISTBOX SET ARRAY`](../commands/listbox-set-array)
 
 ---
 
@@ -263,4 +263,5 @@ Designa a opção que permite aos utilizadores selecionar linhas:
 #### Comandos
 
 [LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
+
 

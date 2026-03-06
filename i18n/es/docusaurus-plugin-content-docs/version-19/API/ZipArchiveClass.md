@@ -49,16 +49,18 @@ End if
 
 
 <!-- REF #_command_.ZIP Create archive.Params -->
-| Parámetros      | Tipo      |    | Descripción                                          |
-| --------------- | --------- |:--:| ---------------------------------------------------- |
-| fileToZip       | 4D.File   | -> | Objeto archivo o carpeta a comprimir                 |
-| folderToZip     | 4D.Folder | -> | Objeto archivo o carpeta a comprimir                 |
-| zipStructure    | Object    | -> | Objeto archivo o carpeta a comprimir                 |
-| destinationFile | 4D.File   | -> | Archivo de destino del archivo                       |
-| options         | Integer   | -> | Opción *folderToZip*: `ZIP Without enclosing folder` |
-| Resultado       | Object    | <- | Objeto estado|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|fileToZip|4D.File|->|File or Folder object to compress|
+|folderToZip|4D.Folder|->|File or Folder object to compress|
+|zipStructure|Object|->|File or Folder object to compress|
+|destinationFile|4D.File|->|Destination file for the archive|
+|options|Integer|->|*folderToZip* option: `ZIP Without enclosing folder`|
+|Result|Object|<-|Status object|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -76,7 +78,7 @@ Puede pasar un objeto 4D.File, 4D.Folder, o una estructura zip como primer pará
 | ------------ | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | compression  | Integer     | <li>`ZIP Compression standard`: Reducir la compresión (por defecto)</li><li>`ZIP Compression LZMA`: compresión LZMA</li><li>`ZIP Compression XZ`: compresión XZ</li><li>`ZIP Compression none`: sin compresión</li>                                                                                                                                                                                                                                           |
 | level        | Integer     | Nivel de compresión. Valores posibles: 1 a 10. Un valor más bajo producirá un archivo más grande, mientras que un valor más alto producirá un archivo más pequeño. Sin embargo, el nivel de compresión influye en el rendimiento. Valores por defecto si se omiten: <li>`ZIP Compression standard`: 6</li><li>`ZIP Compression LZMA`: 4</li><li>`ZIP Compression XZ`: 4</li> |
-| encryption   | Integer     | La encriptación a utilizar si se define una contraseña:<li>`ZIP Encryption AES128`: encriptación AES con una llave de 128 bits.</li><li>`ZIP Encryption AES192`: encriptación AES con una llave de 192 bits.</li><li>`ZIP Encryption AES256`: encriptación AES con una llave de 256 bits (por defecto si se define la contraseña).</li><li>`ZIP Encryption none`: los datos no están encriptados (por defecto si no se define una contraseña)</li>                                                                                                                                                                                  |
+| encryption   | Integer     | La encriptación a utilizar si se define una contraseña:<li>`ZIP Encryption AES128`: encriptación AES con una llave de 128 bits.</li><li>`ZIP Encryption AES192`: encriptación AES con una llave de 192 bits.</li><li>`ZIP Encryption AES256`: encriptación AES con una llave de 256 bits (por defecto si se define la contraseña).</li><li>`ZIP Encryption none`: los datos no están encriptados (por defecto si no se define una contraseña)</li>                                                                                                                                                                                 |
 | contraseña   | Text        | Una contraseña a utilizar si se requiere encriptación.                                                                                                                                                                                                                                                                                         |
 | Histórico    | Collection  | <li>una colección de objetos `4D.File` o `4D.Folder` o</li><li>una colección de objetos con las siguientes propiedades:</li><table><tr><td>Propiedad</td><td>Tipo</td><td>Descripción</td></tr><tr><td>source</td><td>4D.File o 4D.Folder</td><td>File o Folder</td></tr><tr><td>destination</td><td>Text</td><td>(opcional) - Especifica una ruta de archivo relativa para cambiar la organización del contenido del archivo</td></tr><tr><td>option</td><td>number</td><td>(opcional) - `ZIP Ignore invisible files` o 0 para comprimir todo el archivo</td></tr></table>                                                                                                                                                                                                                                                                 |
 | retrollamada | 4D.Function | Una fórmula de retrollamada que recibirá la progresión de la compresión (0 - 100) en $1.                                                                                                                                                                                                                                                       |
@@ -186,13 +188,15 @@ Quiere pasar una colección de carpetas y archivos para comprimir al objeto *zip
 
 
 <!-- REF #_command_.ZIP Read archive.Params -->
-| Parámetros | Tipo          |    | Descripción                               |
-| ---------- | ------------- |:--:| ----------------------------------------- |
-| zIPFile    | 4D.File       | -> | Archivos Zip                              |
-| contraseña | Text          | -> | Contraseña del archivo ZIP, si la hay     |
-| Resultado  | 4D.ZipArchive | <- | Objeto archivo|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|zipFile|4D.File|->|Zip archive file|
+|password|Text|->|ZIP archive password if any|
+|Result|4D.ZipArchive|<-|Archive object|
+</div>
+<!-- END REF -->
 
 #### Descripción
 

@@ -1198,3 +1198,4 @@ Para as classes ORDA baseadas no armazenamento de dados local (`ds`), é possív
 No Editor de Código 4D, as variáveis digitadas como uma classe ORDA se beneficiam automaticamente das características de autocompletar. Exemplo com uma variável de classe Entity:
 
 ![](../assets/en/ORDA/AutoCompletionEntity.png)
+

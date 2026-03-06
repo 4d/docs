@@ -17,11 +17,16 @@ title: VP PASTE FROM OBJECT
 
 <!-- REF #_method_.PASTE FROM OBJECT.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                          |                  |
-| ---------- | ------- | -- | ---------------------------------- | ---------------- |
-| rangeObj   | Object  | -> | Objeto intervalo de células        |                  |
-| dataObject | Object  | -> | Objeto que contém os dados a colar |                  |
-| options    | Integer | -> | Especifica o que é colado          | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro  | Tipo    |    | Descrição                          |
+| ---------- | ------- | -- | ---------------------------------- |
+| rangeObj   | Object  | -> | Objeto intervalo de células        |
+| dataObject | Object  | -> | Objeto que contém os dados a colar |
+| options    | Integer | -> | Especifica o que é colado          |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

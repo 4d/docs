@@ -97,10 +97,13 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 <!--REF #FileClass.create().Params -->
 
+<div class="no-index">
+
 | 引数  | 型       |                             | 説明                                   |
 | --- | ------- | --------------------------- | ------------------------------------ |
 | 戻り値 | Boolean | <- | ファイルが正常に作成された場合に true、それ以外の場合は false |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -141,6 +144,8 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 <!--REF #FileClass.createAlias().Params -->
 
+<div class="no-index">
+
 | 引数                | 型                         |                             | 説明                       |
 | ----------------- | ------------------------- | --------------------------- | ------------------------ |
 | destinationFolder | 4D.Folder | ->                          | エイリアスまたはショートカットの作成先フォルダー |
@@ -148,6 +153,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | aliasType         | Integer                   | ->                          | エイリアスリンクのタイプ             |
 | 戻り値               | 4D.File   | <- | エイリアスまたはショートカットのファイル参照   |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -200,10 +206,13 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 
 <!-- REF #FileClass.delete().Params -->
 
+<div class="no-index">
+
 | 引数 | 型 |     | 説明         |
 | -- | - | :-: | ---------- |
 |    |   |     | 引数を必要としません |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -260,10 +269,13 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 
 <!--REF #FileClass.getAppInfo().Params -->
 
+<div class="no-index">
+
 | 引数  | 型      |                             | 説明             |
 | --- | ------ | --------------------------- | -------------- |
 | 戻り値 | Object | <- | アプリケーションファイル情報 |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -405,12 +417,15 @@ var $info:=$app.getAppInfo()
 
 <!--REF #FileClass.moveTo().Params -->
 
+<div class="no-index">
+
 | 引数                | 型                         |                             | 説明              |
 | ----------------- | ------------------------- | --------------------------- | --------------- |
 | destinationFolder | 4D.Folder | ->                          | 宛先フォルダー         |
 | newName           | Text                      | ->                          | 移動先でのファイルの完全な名称 |
 | 戻り値               | 4D.File   | <- | 移動したファイル        |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -453,12 +468,15 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 <!--REF #FileClass.open().Params -->
 
+<div class="no-index">
+
 | 引数      | 型                                                |                             | 説明                                               |
 | ------- | ------------------------------------------------ | --------------------------- | ------------------------------------------------ |
 | mode    | Text                                             | ->                          | 開くモード: "read", "write", "append" |
 | options | Object                                           | ->                          | 開くオプション                                          |
 | 戻り値     | [4D.FileHandle](FileHandleClass) | <- | 新規の FileHandle オブジェクト                            |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -534,11 +552,14 @@ $fhandle:=$f.open("read")
 
 <!--REF #FileClass.rename().Params -->
 
+<div class="no-index">
+
 | 引数      | 型                       |                             | 説明            |
 | ------- | ----------------------- | --------------------------- | ------------- |
 | newName | Text                    | ->                          | ファイルの新しい完全な名称 |
 | 戻り値     | 4D.File | <- | 名称変更されたファイル   |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -580,10 +601,13 @@ $fhandle:=$f.open("read")
 
 <!--REF #FileClass.setAppInfo().Params -->
 
+<div class="no-index">
+
 | 引数   | 型      |    | 説明                        |
 | ---- | ------ | -- | ------------------------- |
 | info | Object | -> | アプリケーションファイル情報内に書き込むプロパティ |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -711,10 +735,13 @@ $app.setAppInfo($info)
 
 <!--REF #FileClass.setContent().Params -->
 
+<div class="no-index">
+
 | 引数      | 型    |    | 説明            |
 | ------- | ---- | -- | ------------- |
 | content | BLOB | -> | ファイルの新しいコンテンツ |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -747,6 +774,8 @@ $app.setAppInfo($info)
 
 <!--REF #FileClass.setText().Params -->
 
+<div class="no-index">
+
 | 引数          | 型       |    | 説明            |
 | ----------- | ------- | -- | ------------- |
 | text        | Text    | -> | ファイルに保存するテキスト |
@@ -754,6 +783,7 @@ $app.setAppInfo($info)
 | charSetNum  | Integer | -> | 文字セットの番号      |
 | breakMode   | Integer | -> | 改行の処理モード      |
 
+</div>
 <!-- END REF -->
 
 #### 説明

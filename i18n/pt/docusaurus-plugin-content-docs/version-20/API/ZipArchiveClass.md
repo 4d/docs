@@ -48,16 +48,18 @@ End if
 
 
 <!-- REF #_command_.ZIP Create archive.Params -->
-| Parâmetro       | Tipo       |    | Descrição                                            |
-| --------------- | ---------- |:--:| ---------------------------------------------------- |
-| fileToZip       | 4D. File   | -> | Objeto File ou Folder a comprimir                    |
-| folderToZip     | 4D. Folder | -> | Objeto File ou Folder a comprimir                    |
-| zipStructure    | Object     | -> | Objeto File ou Folder a comprimir                    |
-| destinationFile | 4D. File   | -> | Arquivo destino para o arquivo                       |
-| options         | Integer    | -> | Option *folderToZip*: `ZIP Without enclosing folder` |
-| Resultados      | Object     | <- | Objeto de estado|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|fileToZip|4D.File|->|File or Folder object to compress|
+|folderToZip|4D.Folder|->|File or Folder object to compress|
+|zipStructure|Object|->|File or Folder object to compress|
+|destinationFile|4D.File|->|Destination file for the archive|
+|options|Integer|->|*folderToZip* option: `ZIP Without enclosing folder`|
+|Result|Object|<-|Status object|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -75,7 +77,7 @@ You can pass a 4D. File, a 4D. Folder, or a zip structure object as first parame
 | ----------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | compression | Integer      | <li>`ZIP Compression standard`: Reduz a compactação (padrão)</li><li>`ZIP Compression LZMA`: compactação LZMA</li><li>`ZIP Compression XZ`: compactação XZ</li><li>`ZIP Compression none`: Sem compactação</li>                                                                                                                                                                                                                              |
 | level       | Integer      | Nível de compressão. Valores possíveis: de 1 a 10. Um valor pequeno produz um arquivo de maior tamanho, enquanto um valor grande produz um arquivo de tamanho menor. O nível de compactação tem um impacto na performance. Valores padrão se omitidos: <li>`ZIP Compression standard`: 6</li><li>`ZIP Compression LZMA`: 4</li><li>`ZIP Compression XZ`: 4</li> |
-| encryption  | Integer      | A criptografia a usar se uma senha for estabelecida:<li>`ZIP Encryption AES128`: criptografia AES com uma chave de 128-bits.</li><li>`ZIP Encryption AES192`: criptografia AES com uma chave de 192-bits.</li><li>`ZIP Encryption AES256`: criptografia AES com chave de 256-bits (padrão se uma senha for estabelecida).</li><li>`ZIP Encryption none`: os dados não são criptografados (padrão se não estabelecer uma senha)</li>                                                                                                                                                                        |
+| encryption  | Integer      | A criptografia a usar se uma senha for estabelecida:<li>`ZIP Encryption AES128`: criptografia AES com uma chave de 128-bits.</li><li>`ZIP Encryption AES192`: criptografia AES com uma chave de 192-bits.</li><li>`ZIP Encryption AES256`: criptografia AES com chave de 256-bits (padrão se uma senha for estabelecida).</li><li>`ZIP Encryption none`: os dados não são criptografados (padrão se não estabelecer uma senha)</li>                                                                                                                                                                       |
 | senha       | Text         | Uma senha a usar se a criptografia for necessária.                                                                                                                                                                                                                                                                                |
 | files       | Collection   | <li>a collection of `4D. File` or `4D. Folder` objects or</li><li>uma coleção de objetos com as propriedades abaixo:</li><table><tr><td>Propriedade</td><td>Tipo</td><td>Descrição</td></tr><tr><td>source</td><td>4D. File or 4D. Folder</td><td>File ou Folder</td></tr><tr><td>destination</td><td>Text</td><td>(opcional) especifique uma rota de arquivo relativa para mudar a organização dos conteúdos do arquivo</td></tr><tr><td>option</td><td>number</td><td>(opcional) - 'ZIP ignore invisible files' ou 0 para compactar o arquivo inteiro</td></tr></table>                                                                                                                                                                                                                                                    |
 | callback    | 4D. Function | Uma fórmula de callback (retrochamada) que recebe o progresso da compactação (0-100) em $1.                                                                                                                                                                                                                                       |
@@ -203,13 +205,15 @@ $err:=ZIP Create archive($zip; $destination)
 
 
 <!-- REF #_command_.ZIP Read archive.Params -->
-| Parâmetro  | Tipo       |    | Descrição                                 |
-| ---------- | ---------- |:--:| ----------------------------------------- |
-| zipFile    | 4D. File   | -> | Arquivos Zip                              |
-| senha      | Text       | -> | Senha do arquivo ZIP, se houver           |
-| Resultados | Parâmetros | <- | Objeto arquivo|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|zipFile|4D.File|->|Zip archive file|
+|password|Text|->|ZIP archive password if any|
+|Result|4D.ZipArchive|<-|Archive object|
+</div>
+<!-- END REF -->
 
 #### Descrição
 

@@ -9,11 +9,16 @@ title: VP SET NUM VALUE
 
 <!-- REF #_method_.VP SET NUM VALUE.Params -->
 
-| Parámetros    | Tipo   |    | Descripción                |                  |
-| ------------- | ------ | -- | -------------------------- | ---------------- |
-| rangeObj      | Object | -> | Objeto rango               |                  |
-| numberValue   | Number | -> | Valor del número a definir |                  |
-| formatPattern | Text   | -> | Formato del valor          | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros    | Tipo   |    | Descripción                |
+| ------------- | ------ | -- | -------------------------- |
+| rangeObj      | Object | -> | Objeto rango               |
+| numberValue   | Number | -> | Valor del número a definir |
+| formatPattern | Text   | -> | Formato del valor          |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

@@ -9,11 +9,16 @@ title: VP Get sheet options
 
 <!-- REF #_method_.VP Get sheet options.Params -->
 
-| Paramètres | Type    |                             | Description                                                                 |                  |
-| ---------- | ------- | --------------------------- | --------------------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro                                     |                  |
-| sheet      | Integer | ->                          | Numéro d'indice de la feuille (feuille courante si omis) |                  |
-| Résultat   | Object  | <- | Objet options de la feuille                                                 | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres | Type    |                             | Description                                                                 |
+| ---------- | ------- | --------------------------- | --------------------------------------------------------------------------- |
+| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro                                     |
+| sheet      | Integer | ->                          | Numéro d'indice de la feuille (feuille courante si omis) |
+| Résultat   | Object  | <- | Objet options de la feuille                                                 |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

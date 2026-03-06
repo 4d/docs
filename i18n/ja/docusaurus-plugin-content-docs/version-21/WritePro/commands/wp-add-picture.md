@@ -8,6 +8,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Add picture.Params-->
 
+<div class="no-index">
+
 | 引数             | 型                       |                             | 説明                                         |
 | -------------- | ----------------------- | --------------------------- | ------------------------------------------ |
 | wpDoc          | Object                  | &#8594; | 4D Write Pro ドキュメント                        |
@@ -16,6 +18,7 @@ displayed_sidebar: docs
 | pictureFileObj | 4D.File | &#8594; | ピクチャーファイルを表す4D.File オブジェクト |
 | 戻り値            | Object                  | &#8592; | ピクチャーを参照しているオブジェクト                         |
 
+</div>
 <!-- END REF-->
 
 ## 説明

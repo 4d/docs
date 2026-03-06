@@ -9,11 +9,16 @@ title: VP SET PRINT INFO
 
 <!-- REF #_method_.VP SET PRINT INFO.Params -->
 
-| 引数         | 型       |    | 説明                                             |                  |
-| ---------- | ------- | -- | ---------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | 4D View Pro エリア名                               |                  |
-| printInfo  | Object  | -> | 印刷属性を格納するオブジェクト                                |                  |
-| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) | <!-- END REF --> |
+<div class="no-index">
+
+| 引数         | 型       |    | 説明                                             |
+| ---------- | ------- | -- | ---------------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro エリア名                               |
+| printInfo  | Object  | -> | 印刷属性を格納するオブジェクト                                |
+| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) |
+
+</div>
+<!-- END REF -->
 
 ## 説明
 

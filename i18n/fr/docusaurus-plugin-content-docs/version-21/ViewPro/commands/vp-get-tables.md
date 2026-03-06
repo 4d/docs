@@ -17,11 +17,16 @@ title: VP Get tables
 
 <!-- REF #_method_.VP Get tables.Params -->
 
-| Paramètres | Type       |                             | Description                                                                 |                  |
-| ---------- | ---------- | --------------------------- | --------------------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text       | ->                          | Nom d'objet formulaire zone 4D View Pro                                     |                  |
-| sheet      | Integer    | ->                          | Numéro d'indice de la feuille (feuille courante si omis) |                  |
-| Résultat   | Collection | <- | Collection de textes avec tous les noms des tables                          | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres | Type       |                             | Description                                                                 |
+| ---------- | ---------- | --------------------------- | --------------------------------------------------------------------------- |
+| vpAreaName | Text       | ->                          | Nom d'objet formulaire zone 4D View Pro                                     |
+| sheet      | Integer    | ->                          | Numéro d'indice de la feuille (feuille courante si omis) |
+| Résultat   | Collection | <- | Collection de textes avec tous les noms des tables                          |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

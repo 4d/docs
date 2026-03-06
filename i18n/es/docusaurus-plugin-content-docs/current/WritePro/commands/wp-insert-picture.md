@@ -4,20 +4,20 @@ title: WP Insert picture
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Insert picture.Syntax-->**WP Insert picture** ( *targetObj* : Object ; *picture* : Picture ; *mode* : Integer {; *rangeUpdate* : Integer} ): Object<br/>**WP Insert picture** ( *targetObj* : Object ; *pictureFileObj* : 4D.File; *mode* : Integer {; *rangeUpdate* : Integer}): Object<!-- END REF-->
+<!--REF #_command_.WP Insert picture.Syntax-->**WP Insert picture** ( *targetObj* : Object ; *picture* : Picture ; *mode* : Integer {; *rangeUpdate* : Integer} ): Object<br/>**WP Insert picture** ( *targetObj* : Object ; *pictureFileObj* : 4D.File, Text ; *mode* : Integer {; *rangeUpdate* : Integer}): Object<!-- END REF-->
 
 <!--REF #_command_.WP Insert picture.Params-->
 
 <div class="no-index">
 
-| Parámetros     | Tipo                    |                             | Descripción                                                      |
-| -------------- | ----------------------- | --------------------------- | ---------------------------------------------------------------- |
-| targetObj      | Object                  | &#8594; | Rango o elemento o documento 4D Write Pro                        |
-| picture        | Picture                 | &#8594; | Campo imagen o variable, o ruta al archivo imagen en el disco    |
-| pictureFileObj | [4D.File](../API/FileClass.md)  | &#8594; | Un objeto File que representa un archivo imagen. |
-| mode           | Integer                 | &#8594; | Modo de inserción                                                |
-| rangeUpdate    | Integer                 | &#8594; | Modo de actualización del rango                                  |
-| Resultado      | Object                  | &#8592; | Objeto que hace referencia a la imagen                           |
+| Parámetros     | Tipo                                                 |                             | Descripción                                                               |
+| -------------- | ---------------------------------------------------- | --------------------------- | ------------------------------------------------------------------------- |
+| targetObj      | Object                                               | &#8594; | Rango o elemento o documento 4D Write Pro                                 |
+| picture        | Picture                                              | &#8594; | Picture field or variable                                                 |
+| pictureFileObj | [4D.File](../API/FileClass.md), Text | &#8594; | A File object representing a picture file or path to picture file on disk |
+| mode           | Integer                                              | &#8594; | Modo de inserción                                                         |
+| rangeUpdate    | Integer                                              | &#8594; | Modo de actualización del rango                                           |
+| Resultado      | Object                                               | &#8592; | Objeto que hace referencia a la imagen                                    |
 
 </div>
 <!-- END REF-->
@@ -110,4 +110,4 @@ $pictRef:=WP Insert picture(WParea; $file; wk replace)
 ## Ver también
 
 [WP Insert document body](wp-insert-document-body.md)</br>
-[WP Picture range](../commands-legacy/wp-picture-range)
+[WP Picture range](../commands/wp-picture-range)

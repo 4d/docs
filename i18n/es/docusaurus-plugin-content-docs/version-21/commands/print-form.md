@@ -53,7 +53,7 @@ Se pueden utilizar tres sintaxis diferentes:
 Sintaxis:
 
 ```4d
- height:=Print form(myTable;myForm)
+ height:=Print form(myTable;myForm)
 ```
 
 En este caso, **Print form** sólo imprime el área de detalle del formulario (el área entre la línea de encabezado y la línea de detalle).
@@ -63,7 +63,7 @@ En este caso, **Print form** sólo imprime el área de detalle del formulario (e
 Sintaxis:
 
 ```4d
- height:=Print form(myTable;myForm;marker)
+ height:=Print form(myTable;myForm;marker)
 ```
 
 En este caso, el comando imprimirá la sección designada por el *marker*. Pase una de las constantes del tema *Form Area* en el parámetro marcador:
@@ -99,7 +99,7 @@ En este caso, el comando imprimirá la sección designada por el *marker*. Pase 
 Sintaxis:
 
 ```4d
- height:=Print form(myTable;myForm;areaStart;areaEnd)
+ height:=Print form(myTable;myForm;areaStart;areaEnd)
 ```
 
 En este caso, el comando imprimirá la sección incluida entre los parámetros *areaStart* y *areaEnd*. Los valores introducidos deben expresarse en píxeles.
@@ -139,24 +139,24 @@ Este comando imprime áreas y objetos externos (por ejemplo, áreas 4D Write o 4
 El siguiente ejemplo funciona como lo haría un comando [PRINT SELECTION](../commands-legacy/print-selection.md). Sin embargo, el informe utiliza una de dos formas diferentes, dependiendo de si el registro corresponde a un cheque o a un ingreso:
 
 ```4d
- QUERY([Register]) // Seleccionar los registros
- If(OK=1)
-    ORDER BY([Register]) // Ordenar los registros
-    If(OK=1)
-       PRINT SETTINGS // Mostrar cuadros de diálogo de impresión
-       If(OK=1)
-          For($vlRecord;1;Records in selection([Register]))
-             If([Register]Type ="Check")
-                Print form([Register];"Check Out") // Utilice un formulario para cheques
-             Else
-                Print form([Register];"Deposit Out") // Utilice otro formulario para depósitos
-             End if
-             NEXT RECORD([Register])
-          End for
-          PAGE BREAK // Asegúrese de que se imprime la última página
-       End if
-    End if
- End if
+ QUERY([Register]) // Select the records
+ If(OK=1)
+    ORDER BY([Register]) // Sort the records
+    If(OK=1)
+       PRINT SETTINGS // Display Printing dialog boxes
+       If(OK=1)
+          For($vlRecord;1;Records in selection([Register]))
+             If([Register]Type ="Check")
+                Print form([Register];"Check Out") // Use one form for checks
+             Else
+                Print form([Register];"Deposit Out") // Use another form for deposits
+             End if
+             NEXT RECORD([Register])
+          End for
+          PAGE BREAK // Make sure the last page is printed
+       End if
+    End if
+ End if
 ```
 
 ## Ejemplo 2
@@ -172,23 +172,23 @@ Este formulario se utiliza como diálogo y luego se imprime con modificaciones:
 El método del formulario:
 
 ```4d
- If(Form event code=On Printing Detail)
-    Form.lastname:=Uppercase(Form.lastname)
-    Form.firstname:=Uppercase(Substring(Form.firstname;1;1))+Lowercase(Substring(Form.firstname;2))
-    Form.request:=Lowercase(Form.request)
- End if
+ If(Form event code=On Printing Detail)
+    Form.lastname:=Uppercase(Form.lastname)
+    Form.firstname:=Uppercase(Substring(Form.firstname;1;1))+Lowercase(Substring(Form.firstname;2))
+    Form.request:=Lowercase(Form.request)
+ End if
 ```
 
 El código que llama al diálogo imprime su cuerpo:
 
 ```4d
- $formData:=New object
- $formData.lastname:="Smith"
- $formData.firstname:="john"
- $formData.request:="I need more COFFEE"
- $win:=Open form window("Request_obj";Plain form window;Horizontally centered;Vertically centered)
- DIALOG("Request_obj";$formData)
- $h:=Print form("Request_var";$formData;Form detail)
+ $formData:=New object
+ $formData.lastname:="Smith"
+ $formData.firstname:="john"
+ $formData.request:="I need more COFFEE"
+ $win:=Open form window("Request_obj";Plain form window;Horizontally centered;Vertically centered)
+ DIALOG("Request_obj";$formData)
+ $h:=Print form("Request_var";$formData;Form detail)
 ```
 
 ## Ver también

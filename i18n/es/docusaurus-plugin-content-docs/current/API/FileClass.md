@@ -71,7 +71,7 @@ Los objetos `File` soportan varios nombres de ruta, incluyendo la sintaxis `file
 
 #### Descripción
 
-Lanzamiento Es idéntico al comando [`File`](../commands/file) (atajo).
+Lanzamiento Lanzamiento Es idéntico al comando [`File`](../commands/file) (atajo).
 
 > Se recomienda utilizar el comando de acceso directo [`File`](../commands/file) en lugar de `4D.File.new()`.
 
@@ -829,3 +829,4 @@ $myFile.setText("Hello world")
 <!-- END REF -->
 
 <!-- INCLUDE document.size.Desc -->
+

@@ -44,7 +44,7 @@ title: サブフォーム
 
 #### コマンド
 
-[OBJECT GET SUBFORM](../commands-legacy/object-get-subform) - [OBJECT SET SUBFORM](../commands-legacy/object-set-subform)
+[OBJECT GET SUBFORM](../commands/object-get-subform) - [OBJECT SET SUBFORM](../commands/object-set-subform)
 
 ---
 
@@ -137,7 +137,7 @@ title: サブフォーム
 
 #### コマンド
 
-[OBJECT GET SUBFORM](../commands-legacy/object-get-subform) - [OBJECT SET SUBFORM](../commands-legacy/object-set-subform)
+[OBJECT GET SUBFORM](../commands/object-get-subform) - [OBJECT SET SUBFORM](../commands/object-set-subform)
 
 ---
 
@@ -178,3 +178,4 @@ title: サブフォーム
 #### 対象オブジェクト
 
 [サブフォーム](subform_overview.md)
+

@@ -22,7 +22,7 @@ La siguiente información se ofrece para cada línea:
   - **Suboperaciones** (si las hay): operaciones dependientes de la operación seleccionada (por ejemplo, eliminar registros relacionados antes que un registro padre).
   - **Detalles del proceso**: información adicional relativa a la tabla, campo, proceso o cliente, en función del tipo de operación
 
-> La página de monitoreo en tiempo real utiliza el comando [`ACTIVITY SNAPSHOT`](../commands-legacy/activity-snapshot) internamente. Puede encontrar más información en la descripción de este comando.
+> La página de monitoreo en tiempo real utiliza el comando [`ACTIVITY SNAPSHOT`](../commands/activity-snapshot) internamente. Puede encontrar más información en la descripción de este comando.
 
 La página está activa y se actualiza permanentemente en cuanto se muestra. Cabe señalar que su funcionamiento puede ralentizar considerablemente la ejecución de la aplicación. Es posible suspender la actualización de esta página de una de las siguientes maneras:
 
@@ -56,3 +56,4 @@ El botón **Instantánea** permite copiar en el portapapeles todas las operacion
 ## Mostrar operaciones al menos 5 segundos
 
 Si marca la opción **Mostrar operaciones al menos 5 segundos**, todas las operaciones listadas se mostrarán en la página durante al menos cinco segundos, incluso después de que finalice su ejecución. Las operaciones retenidas aparecen atenuadas en la lista de operaciones. Esta función es útil para obtener información sobre las operaciones que se ejecutan muy rápidamente.
+

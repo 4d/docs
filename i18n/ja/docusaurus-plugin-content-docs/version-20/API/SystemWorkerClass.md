@@ -61,11 +61,14 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 
 
 <!-- REF #4D.SystemWorker.new().Params -->
-| 引数          | 型               |    | 説明                                     |
-| ----------- | --------------- |:--:| -------------------------------------- |
-| commandLine | Text            | -> | 実行するコマンドライン                            |
-| options     | Object          | -> | ワーカーパラメーター                             |
-| 戻り値         | 4D.SystemWorker | <- | 非同期の新規システムワーカー (プロセスが開始されなかった場合は null) |  
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|commandLine|Text|->|Command line to execute|
+|options|Object|->|Worker parameters|
+|result|4D.SystemWorker|<-|New asynchronous System worker or null if process not started|
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -265,11 +268,13 @@ Function _createFile($title : Text; $textBody : Text)
 
 
 <!-- REF #SystemWorkerClass.closeInput().Params -->
-| 引数 | 型 |  | 説明                                           |
-| -- | - |::| -------------------------------------------- |
-|    |   |  | このコマンドは引数を必要としません|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+||||Does not require any parameters|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -428,12 +433,14 @@ $output:=$worker.response
 
 
 <!-- REF #SystemWorkerClass.postMessage().Params -->
-| 引数          | 型    |    | 説明                                          |
-| ----------- | ---- |:--:| ------------------------------------------- |
-| message     | Text | -> | 外部プロセスの入力ストリーム (stdin) に書き込むテキスト            |
-| messageBLOB | BLOB | -> | 入力ストリームに書き込むバイト数|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|message|Text|->|Text to write on the input stream (stdin) of the external process|
+|messageBLOB|Blob|->|Bytes write on the input stream|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -481,11 +488,13 @@ $output:=$worker.response
 
 
 <!-- REF #SystemWorkerClass.terminate().Params -->
-| 引数 | 型 |  | 説明                                           |
-| -- | - |::| -------------------------------------------- |
-|    |   |  | このコマンドは引数を必要としません|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+||||Does not require any parameters|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -541,12 +550,14 @@ $output:=$worker.response
 
 
 <!-- REF #SystemWorkerClass.wait().Params -->
-| 引数      | 型               |    | 説明                                             |
-| ------- | --------------- |:--:| ---------------------------------------------- |
-| timeout | Real            | -> | 待機時間 (秒単位)                                     |
-| 戻り値     | 4D.SystemWorker | <- | SystemWorker オブジェクト|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|timeout|Real|->|Waiting time (in seconds)|
+|Result|4D.SystemWorker|<-|SystemWorker object|
+</div>
+<!-- END REF -->
 
 #### 説明
 

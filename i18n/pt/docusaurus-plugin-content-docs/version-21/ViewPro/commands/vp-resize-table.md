@@ -17,10 +17,15 @@ title: VP RESIZE TABLE
 
 <!-- REF #_method_.VP RESIZE TABLE.Params -->
 
-| Parâmetro | Tipo   |    | Descrição               |                  |
-| --------- | ------ | -- | ----------------------- | ---------------- |
-| rangeObj  | Object | -> | Nova gama para a tabela |                  |
-| tableName | Text   | -> | Nombre da tabela        | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro | Tipo   |    | Descrição               |
+| --------- | ------ | -- | ----------------------- |
+| rangeObj  | Object | -> | Nova gama para a tabela |
+| tableName | Text   | -> | Nombre da tabela        |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

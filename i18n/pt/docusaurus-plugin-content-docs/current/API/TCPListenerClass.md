@@ -5,10 +5,6 @@ title: TCPListener
 
 A classe `TCPListener` permite que você crie e configure um servidor TCP em 4D. Depois que o listener TCP for instanciado, você poderá receber conexões TCP clientes e se comunicar usando qualquer protocolo compatível com TCP.
 
-A classe `TCPListener` está disponível no repositório de classes `4D`. Você pode criar um servidor TCP usando a função [4D.TCPListener.new()](#4dtcplistenernew), que retorna um objeto [TCPListener](#tcplistener-object).
-
-Todas as funções da classe `TCPListener` são thread-safe.
-
 <details><summary>História</summary>
 
 | Release | Mudanças          |
@@ -16,6 +12,14 @@ Todas as funções da classe `TCPListener` são thread-safe.
 | 20 R9   | Classe adicionada |
 
 </details>
+
+A classe `TCPListener` está disponível no repositório de classes `4D`. Você pode criar um servidor TCP usando a função [4D.TCPListener.new()](#4dtcplistenernew), que retorna um objeto [TCPListener](#tcplistener-object).
+
+Todas as funções da classe `TCPListener` são thread-safe.
+
+### Aynchronous programming
+
+This class supports asynchronous programming in 4D as described in the [Asynchronous Execution](../Develop/async.md) page.
 
 ### Exemplo
 
@@ -90,7 +94,7 @@ No parâmetro *options*, passe um objeto para configurar o listener e todas as `
 | Propriedade  | Tipo    | Descrição                                                                                                                                                                                                                                                                                                                                       | Por padrão |
 | ------------ | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
 | onConnection | Formula | Callback quando uma nova conexão é estabelecida. The Formula receives two parameters (*$listener* and *$event*, see below) and must return either null/undefined to prevent the connection or an *option* object that will be used to create the [`TCPConnection`](./TCPConnectionClass.md). | Indefinido |
-| onError      | Formula | Callback triggered in case of an error. A fórmula recebe o objeto `TCPListener` em *$listener*                                                                                                                                                                                                                                  | Indefinido |
+| onError      | Formula | Callback acionado no caso de um erro. A fórmula recebe o objeto `TCPListener` em *$listener*                                                                                                                                                                                                                                    | Indefinido |
 | onTerminate  | Formula | Callback triggered just before the TCPListener is closed. A fórmula recebe o objeto `TCPListener` em *$listener*                                                                                                                                                                                                                | Indefinido |
 
 #### Funções Callback

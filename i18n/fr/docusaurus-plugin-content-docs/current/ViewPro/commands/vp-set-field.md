@@ -11,11 +11,11 @@ title: VP SET FIELD
 
 <div class="no-index">
 
-| Paramètres    | Type    |    | Description                                    |
-| ------------- | ------- | -- | ---------------------------------------------- |
-| rangeObj      | Object  | -> | Objet plage                                    |
-| champ         | Pointer | -> | Référence au champ dans la structure virtuelle |
-| formatPattern | Text    | -> | Format du champ                                |
+| Paramètres    | Type    |    | Description     |
+| ------------- | ------- | -- | --------------- |
+| rangeObj      | Object  | -> | Objet plage     |
+| champ         | Pointer | -> | \|              |
+| formatPattern | Text    | -> | Format du champ |
 
 </div>
 <!-- END REF -->

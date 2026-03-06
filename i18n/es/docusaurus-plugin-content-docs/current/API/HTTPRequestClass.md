@@ -5,8 +5,6 @@ title: HTTPRequest
 
 La clase `HTTPRequest` permite manejar [objetos `HTTPRequest`](#httprequest-object) que se pueden utilizar para configurar y enviar solicitudes a un servidor HTTP, así como para procesar las respuestas del servidor HTTP.
 
-La clase `HTTPRequest` está disponible en el class store `4D`. Para crear y enviar peticiones HTTP se utiliza la función [4D.HTTPRequest.new()](#4dhttprequestnew), que devuelve un [objeto `HTTPRequest`](#httprequest-object).
-
 <details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
@@ -14,6 +12,12 @@ La clase `HTTPRequest` está disponible en el class store `4D`. Para crear y env
 | 19 R6       | Clase añadida  |
 
 </details>
+
+La clase `HTTPRequest` está disponible en el class store `4D`. Para crear y enviar peticiones HTTP se utiliza la función [4D.HTTPRequest.new()](#4dhttprequestnew), que devuelve un [objeto `HTTPRequest`](#httprequest-object).
+
+### Aynchronous programming
+
+This class supports asynchronous programming in 4D as described in the [Asynchronous Execution](../Develop/async.md) page.
 
 ### Ejemplo
 
@@ -158,6 +162,12 @@ En el parámetro *options*, pase un objeto que puede contener las siguientes pro
 | timeout                | Real                                              | Tiempo de espera en segundos. indefinido = sin tiempo de espera                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | indefinido           |
 | validateTLSCertificate | Boolean                                           | Si false, 4D no valida el certificado TLS y no devuelve un error si no es válido (es decir, caducado, autofirmado...). Importante: en la implementación actual, la propia Autoridad de Certificación no se verifica.                                                                                                                                                                                                            | True                 |
 
+:::note Keychain access on macOS
+
+On macOS, depending on your local configuration, a password can be required when your 4D application accesses the certificate in the *keychain* for the first time.
+
+:::
+
 #### Función callback (retrollamada)
 
 Todas las funciones de retrollamada reciben dos parámetros objeto:
@@ -177,7 +187,7 @@ Esta es la secuencia de llamadas de retorno:
 
 :::info
 
-Para que las funciones de retrollamada se llamen cuando no utilice [`wait()`](#wait) (llamada asíncrona), el proceso debe ser un [worker](../Develop/processes.md#worker-processes) creado con [`CALL WORKER`](../commands-legacy/call-worker), NO [`New process`](../commands-legacy/new-process).
+Para que las funciones de retrollamada se llamen cuando no utilice [`wait()`](#wait) (llamada asíncrona), el proceso debe ser un [worker](../Develop/processes.md#worker-processes) creado con [`CALL WORKER`](../commands/call-worker), NO [`New process`](../commands/new-process).
 
 :::
 
@@ -428,8 +438,9 @@ Si la respuesta del servidor ya ha llegado, la función regresa inmediatamente.
 
 :::note
 
-Durante la ejecución de .wait(), se ejecutan las funciones de retrollamada de los workers, tanto si proceden de otras instancias `HTTPRequest` o [`SystemWorker`](SystemWorkerClass.md), como de otras llamadas [`CALL WORKER`](../commands-legacy/call-worker).  Puede salir de un .wait() llamando a [`terminate()`](#terminate) desde una retrollamada.
+Durante la ejecución de .wait(), se ejecutan las funciones de retrollamada de los workers, tanto si proceden de otras instancias `HTTPRequest` o [`SystemWorker`](SystemWorkerClass.md), como de otras llamadas [`CALL WORKER`](../commands/call-worker).  Puede salir de un .wait() llamando a [`terminate()`](#terminate) desde una retrollamada.
 
 :::
 
 <!-- END REF -->
+

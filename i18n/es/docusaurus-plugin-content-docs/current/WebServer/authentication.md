@@ -81,7 +81,7 @@ Por tanto, se llama al método base `On Web Authentication`:
 
 - cuando el servidor web recibe una URL que solicita un recurso que no existe
 - cuando el servidor web recibe una URL que empieza por `4DACTION/`
-- cuando el servidor web recibe una URL de acceso raíz y no se ha definido ninguna página de inicio en los Parámetros o mediante el comando [`WEB SET HOME PAGE`](../commands-legacy/web-set-home-page)
+- cuando el servidor web recibe una URL de acceso raíz y no se ha definido ninguna página de inicio en los Parámetros o mediante el comando [`WEB SET HOME PAGE`](../commands/web-set-home-page)
 - cuando el servidor web procesa una etiqueta que ejecuta código (por ejemplo, `4DSCRIPT`) en una página semidinámica.
 
 Por tanto, NO se llama al método base `On Web Authentication`:
@@ -197,3 +197,4 @@ Ejemplo del método base `On Web Authentication` en [Modo DIGEST](#digest-protoc
     $valid:=False // El usuario no existe
  End if
 ```
+

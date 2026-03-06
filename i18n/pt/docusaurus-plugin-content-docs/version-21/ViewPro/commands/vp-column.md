@@ -9,13 +9,18 @@ title: VP Column
 
 <!-- REF #_method_.VP Column.Params -->
 
-| Parâmetro   | Tipo    |                             | Descrição                                                   |                  |
-| ----------- | ------- | --------------------------- | ----------------------------------------------------------- | ---------------- |
-| vpAreaName  | Text    | ->                          | Nome de objeto formulário área 4D View Pro                  |                  |
-| column      | Integer | ->                          | Índice de coluna                                            |                  |
-| columnCount | Integer | ->                          | Número de colunas                                           |                  |
-| sheet       | Integer | ->                          | Índice da folha (folha atual se omitida) |                  |
-| Resultados  | Object  | <- | Objeto intervalo de células                                 | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro   | Tipo    |                             | Descrição                                                   |
+| ----------- | ------- | --------------------------- | ----------------------------------------------------------- |
+| vpAreaName  | Text    | ->                          | Nome de objeto formulário área 4D View Pro                  |
+| column      | Integer | ->                          | Índice de coluna                                            |
+| columnCount | Integer | ->                          | Número de colunas                                           |
+| sheet       | Integer | ->                          | Índice da folha (folha atual se omitida) |
+| Resultados  | Object  | <- | Objeto intervalo de células                                 |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

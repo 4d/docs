@@ -51,7 +51,7 @@ Les interfaces de Ruban et de Barre d'outils regroupent les fonctionnalités qui
 
 Les événements formulaire suivants sont disponibles dans la Liste de propriétés des zones 4D View Pro.
 
-Certains de ces événements sont des événements formulaire standard (disponibles pour tous les objets actifs) et d'autres sont des événements formulaire spécifiques à 4D View Pro. Certains de ces événements sont des événements formulaire standard (disponibles pour tous les objets actifs) et d'autres sont des événements formulaire spécifiques à 4D View Pro. Le tableau suivant indique les événements standard et les événements spécifiques ou ceux qui fournissent des informations supplémentaires aux zones 4D View Pro :
+Certains de ces événements sont des événements formulaire standard (disponibles pour tous les objets actifs) et d'autres sont des événements formulaire spécifiques à 4D View Pro. Certains événements formulaire standard fournissent des informations étendues dans l'objet retourné par la commande [`FORM Event`](../commands/form-event) lorsqu'ils sont générés pour les zones 4D View Pro. Le tableau suivant indique les événements standard et les événements spécifiques ou ceux qui fournissent des informations supplémentaires aux zones 4D View Pro :
 
 | Événements 4D standard                          | Événements 4D View Pro spécifiques et étendus         |
 | ----------------------------------------------- | ----------------------------------------------------- |
@@ -357,12 +357,12 @@ Les attributs de taille de papier sont utilisés pour spécifier les dimensions 
 |           | width  | entier long | Largeur du papier, en centièmes de pouce.                                                                                                                            |
 |           | kind   | text        | Nom du format de papier standard (par exemple, A2, A4, legal, etc.) retourné par `Get Print Option`. Valeur par défaut = "letter" |
 
-- Si le format du papier est spécifié en utilisant les propriétés `height` et `width`, [`VP Get print info`](../commands/vp-get-print-info) retourne un format de papier avec `custom` comme valeur pour `kind`.
+- Si le format du papier est spécifié en utilisant les propriétés `height` et `width`, [`VP Get print info`](./commands/vp-get-print-info.md) retourne un format de papier avec `custom` comme valeur pour `kind`.
 
 - Si vous définissez le format du papier à l'aide de la propriété `kind`, vous pouvez utiliser l'une ou l'autre :
   - un des formats dans la [liste des formats SpreadJS](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
-  - Dans ce cas, [`VP Get print info`](../commands/vp-get-print-info) retourne le format correspondant avec la hauteur et la largeur.
-    un des formats retournés par la commande [`PRINT OPTION VALUES`](../commands-legacy/print-option-values).
+  - one of the formats returned by the [`PRINT OPTION VALUES`](../commands/print-option-values) command.
+    un des formats retournés par la commande [`PRINT OPTION VALUES`](../commands-legacy/print-option-values.md).
 
 ### Graduation
 
@@ -513,3 +513,4 @@ Il contient les propriétés suivantes :
 | ViewPro.formulaBar     | Boolean    | Indique si la barre de formule est affichée ou non. Disponible uniquement pour l'interface "toolbar".                                                                                                                                                                                                                                                                                     |
 | ViewPro.inited         | Boolean    | Indique si la zone 4D View Pro a été initialisée ou non (voir l'événement [On VP Ready](Events/onVpReady.md)).                                                                                                                                                                                                                                                                         |
 | ViewPro.interface      | Text       | Spécifie le type de l'interface utilisateur : "ribbon", "toolbar", "none".                                                                                                                                                                                                                                                                                                                |
+

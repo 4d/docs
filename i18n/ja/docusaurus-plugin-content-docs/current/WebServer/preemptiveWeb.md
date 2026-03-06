@@ -26,11 +26,11 @@ title: プリエンプティブWebプロセスの使用
 - REST サーバー: REST で呼び出された [ORDA データモデルクラス関数](../REST/ClassFunctions.md) を処理します
 - Web サーバー: [Web テンプレート](templates.md)、[4DACTION とデータベースメソッド](httpRequests.md) を処理します
 - Web サービスサーバー: SOAPリクエストを処理します
-- ***web setting*** means that the preemptive mode depends on the [**scalable sessions**](sessions.md#enabling-web-sessions) status:
-  - if scalable sessions are enabled, the preemptive mode is automatically used for web and web service processes.
-  - if scalable sessions are not enabled:
-    - for web processes, the [**Use preemptive processes**](webServerConfig.md#use-preemptive-processes) option is taken into account.
-    - for web service processes (server or client), preemptive mode is supported at method level.
+- ***Web 設定*** とは、プリエンプティブモードは[**スケーラブルセッション**](sessions.md#enabling-web-sessions) の状態に依存するということを意味します:
+  - スケーラブルセッションが有効化されている場合、Web プロセスおよびWeb サービスプロセスに対してはプリエンプティブモードが自動的に使用されます。
+  - スケーラブルセッションが有効化されていない場合:
+    - Web プロセスについては、[**プリエンプティブプロセスを使用**](webServerConfig.md#プリエンプティブプロセスを使用) オプションが考慮されます。
+    - Web サービスプロセス(サーバーまたはクライアント)については、プリエンプティブモードはメソッドレベルでサポートされています。
 
 ## スレッドセーフなWebサーバーコードの書き方
 
@@ -44,7 +44,7 @@ Webプロセスをプリエンプティモードで実行するには、Webサ�
 
 - `compiler_web` プロジェクトメソッド (実際の "実行モード" プロパティに関わらず評価されます)
 
-- Webコンテキストにおいて [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags) コマンドによって処理される基本的にすべてのコード (.shtmlページを通して実行されるものなど)
+- Webコンテキストにおいて [`PROCESS 4D TAGS`](../commands/process-4d-tags) コマンドによって処理される基本的にすべてのコード (.shtmlページを通して実行されるものなど)
 
 - "公開オプション: 4DタグとURL (`4DACTION`)..." 属性が有効なプロジェクトメソッド。
 
@@ -52,7 +52,7 @@ Webプロセスをプリエンプティモードで実行するには、Webサ�
 
 - REST で呼び出された [ORDA データモデルクラス関数](../REST/ClassFunctions.md)
 
-For each of these methods and code parts, the compiler will check if the [thread-safety rules are respected](../Develop/preemptive.md#writing-a-thread-safe-method), and will return errors in case of issues.
+これらそれぞれのメソッドとコードの部分について、[スレッドセーフのルールが遵守されている](../Develop/preemptive.md#スレッドセーフなメソッドの書き方) かをコンパイラーがチェックし、問題があった場合にはエラーを返します。
 
 ## 4D Webコードのスレッドセーフティ
 
@@ -90,3 +90,4 @@ Web関連のデータベースメソッドもスレッドセーフであり、�
 | プロセスタイプ         | アイコン                                        |
 | --------------- | ------------------------------------------- |
 | プリエンプティブWebメソッド | ![](../assets/en/WebServer/processIcon.png) |
+

@@ -778,12 +778,12 @@ A função `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescrev
 
 <div class="no-index">
 
-| Parâmetro   | Tipo    |    | Descrição                                   |
-| ----------- | ------- | -- | ------------------------------------------- |
-| text        | Text    | -> | Texto a armazenar no arquivo                |
-| charSetName | Text    | -> | Nome do conjunto de caracteres              |
-| charSetNum  | Integer | -> | Número de conjuntos de caracteres           |
-| breakMode   | Integer | -> | Modo de processamento para quebras de linha |
+| Parâmetro   | Tipo    |    | Descrição                                    |
+| ----------- | ------- | -- | -------------------------------------------- |
+| text        | Text    | -> | Texto a armazenar no arquivo                 |
+| charSetName | Text    | -> | Nome do conjunto de caracteres               |
+| charSetNum  | Integer | -> | Número de conjuntos de caracteres            |
+| breakMode   | Integer | -> | Modo de processamento para retornos de linha |
 
 </div>
 <!-- END REF -->
@@ -829,3 +829,4 @@ $myFile.setText("Hello world")
 <!-- END REF -->
 
 <!-- INCLUDE document.size.Desc -->
+

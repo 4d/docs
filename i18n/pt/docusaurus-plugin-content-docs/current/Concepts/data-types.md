@@ -37,8 +37,8 @@ Apesar de geralmente serem equivalentes, alguns tipos de dados disponíveis no n
 
 Você sempre pode saber o tipo de um campo ou variável usando os seguintes comandos:
 
-- [`Type`](../commands-legacy/type) para campos e variáveis escalares
-- [`Value type`](../commands-legacy/value-type) para expressões
+- [`Type`](../commands/type) para campos e variáveis escalares
+- [`Value type`](../commands/value-type) para expressões
 
 ## Valor padrão
 
@@ -84,3 +84,4 @@ O quadro seguinte lista os tipos de dados básicos, os tipos de dados para os qu
 (2) Os valores de tempo podem ser tratados como números.
 
 **Nota:** Além das conversões de dados listadas nesta tabela, as conversões de dados mais sofisticadas podem ser obtidas combinando operadores e outros comandos.
+

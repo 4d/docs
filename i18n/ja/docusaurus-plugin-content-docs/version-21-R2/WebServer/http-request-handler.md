@@ -17,37 +17,37 @@ title: HTTP Request handler
 
 ## 要件
 
-Custom HTTP Request handlers are supported in the following context:
+カスタムHTTPリクエストハンドラーは以下のコンテキストにおいてサポートされます:
 
-- [scalable sessions](./sessions.md#enabling-web-sessions) or [no sessions](../settings/web.md#no-sessions) are enabled,
-- a web server run locally by 4D or 4D Server, including those [run by components](./webServerObject.md).
+- [スケーラブルセッション](./sessions.md#enabling-web-sessions) あるいは [セッションなし](../settings/web.md#セッションなし) が有効化されている
+- 4D あるいは4D Server 上でローカルに実行中のWeb サーバー([コンポーネントで実行されてるもの](./webServerObject.md) も含めます)。
 
-### Authentication and Privileges
+### 認証と特権
 
-Since HTTP Request handler functions are called from standard web requests (they do not contain `/rest/xxx` pattern like REST requests), they are not subject to the [**Force login**](../REST/authUsers.md#force-login-mode) rules. It means that they can be executed without prior authentication, i.e. without a call to [`setPrivileges()`](../API/SessionClass.md#setprivileges) on the session, in which case they will be executed in a *guest* session.
+HTTP リクエストハンドラー関数は標準のWeb リクエストから呼び出される(これらはREST リクエストの様にのような`/rest/xxx` パターンを格納していない)ため、これらはの[**強制ログイン**](../REST/authUsers.md#強制ログインモード) ルールの対象にはなりません。 これはつまり事前の認証なく実行することができる、つまりセッションに対して[`setPrivileges()`](../API/SessionClass.md#setprivileges) を呼び出すことなく実行できることを意味します。この場合、これらは*ゲスト* セッション内で実行されます。
 
-However, these functions need to have appropriate **permissions**, like all requests executed from web processes. When the handler function is called, the **privileges** of its web session must allow the code to run properly. Any other resources accessed within the code (data, other functions...) also need to be allowed by permissions.
+しかしながら、これらの関数もWeb プロセスから実行される全てのリクエスト同様に、適切な**パーミッション** を持つ必要があります。 ハンドラー関数が呼び出されたとき、そのWeb セッションの**権限** は、コードが適切に実行されるようにしなければなりません。 コード内からアクセスされる他のリソース(データ、他の関数など) もまたパーミッションで許可されている必要があります。
 
-In [*restricted mode by default*](../ORDA/privileges.md#restriction-modes), if a HTTP Request handler can open a new, unauthenticated session (which is the case for example when your application provides **deep linking** feature), you need to make sure that the *guest* privilege is allowed to execute the handler function and access all subsequent resources.
+[*デフォルトの制限モード*](../ORDA/privileges.md#制限モード)では、HTTP リクエストハンドラーが、新しい、未承認のセッションを開いた場合(これは例えばアプリケーションが**ディープリンキング** 機能を提供しているような場合が該当)、権限でハンドラー関数の実行と、それに関連する全てのリソースへのアクセスが許可されていることを確認してください。
 
-If a HTTP Request handler function can be executed within an already authenticated session, you need to make sure the user session is allowed to execute the handler function and access all subsequent resources. Note that this can also happen with deep linking if you copy/paste the link into a browser where you are already authenticated for the application and the session is still active.
+HTTP リクエストハンドラー関数はすでに認証されているセッション内で実行することも可能です。その場合そのユーザーセッションがハンドラー関数の実行と関連する全てのリソースへのアクセスが許可されている様にする必要があります。 これは例えば、すでにアプリケーションに対して認証が完了していて、セッションがまだアクティブであるときに、リンクをブラウザにコピーペーストをした場合にもディープリンキングで起こる可能性があることに注意してください。
 
-## How to set handlers
+## ハンドラーの設定方法
 
-You can declare HTTP Request handlers:
+以下の方法でHTTP リクエストハンドラーを宣言することができます:
 
-- in a configuration file named **HTTPHandlers.json** stored in the [`Project/Sources`](../Project/architecture.md#sources) folder of the project. HTTP Request handlers are loaded and applied in the main Web server once it is started.
-- using a [`.handlers`](../API/WebServerClass.md#handlers) property set in the *settings* parameter of the [start()](../API/WebServerClass.md#start) function, for any web server object:
+- プロジェクトの[`Project/Sources`](../Project/architecture.md#sources) フォルダ内に保存されている**HTTPHandlers.json** という名前の設定ファイルを使用する。 HTTP リクエストハンドラーは、Web サーバーが起動したときにロードされて適用されます。
+- 任意のWeb サーバーオブジェクトに対して、[start()](../API/WebServerClass.md#start) 関数の*settings* 引数内で設定された[`.handlers`](../API/WebServerClass.md#handlers) プロパティを使用する:
 
 ```4d
-WEB Server.start($settings.handlers) //set rules at web server startup
+WEB Server.start($settings.handlers) //Web サーバー開始時にルールを設定する
 ```
 
-If both a **HTTPHandlers.json** file and a call to the [`WEB Server`](../commands/web-server.md) command with a valid `$settings.handlers` are used, the `WEB Server` command has priority.
+**HTTPHandlers.json** ファイルと、有効な`$settings.handlers` を持った [`WEB Server`](../commands/web-server.md) コマンドの両方が呼び出された場合、`WEB Server` コマンドの方が優先されます。
 
-The json file (or the object in the *settings* parameter) contains all listened URL patterns, the handled verbs, and the code to be called.
+JSON ファイル(あるいは*settings* 引数内のオブジェクト)がリッスンされるURL パターン、管理されている動詞、呼び出されるコードの全てを格納しています。
 
-Handlers are provided as a collection.
+韓ドラーはコレクションとして提供されます。
 
 ランタイムでは、URLに合致する最初のパターンのみが実行され、他のパターンは無視されます。
 

@@ -33,7 +33,7 @@ Si vous cliquez sur le bouton **Refuser nouvelles connexions** :
 - Le nom du projet n’apparaît plus dans la boîte de dialogue de connexion.
 - Les clients déjà connectés ne sont pas déconnectés et peuvent continuer à travailler normalement.
 
-> Vous pouvez effectuer la même action avec la commande [`REJECT NEW REMOTE CONNECTIONS`](../commands-legacy/reject-new-remote-connections).
+> Vous pouvez effectuer la même action avec la commande [`REJECT NEW REMOTE CONNECTIONS`](../commands/reject-new-remote-connections).
 
 - Si vous cliquez sur le bouton **Accepter nouvelles connexions**, la base retourne dans l’état "par défaut".
 
@@ -57,4 +57,5 @@ Cette zone indique la **mémoire cache totale** (paramètre défini dans les pr�
 
 - **Maximum** : indique le nombre maximum de connexions clientes simultanées autorisées pour le serveur d'application. Cette valeur dépend de la licence installée sur le poste serveur.
 - **Utilisées** : indique le nombre de connexions actuellement consommées.
+
 

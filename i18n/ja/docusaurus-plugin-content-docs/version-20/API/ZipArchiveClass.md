@@ -50,16 +50,18 @@ End if
 
 
 <!-- REF #_command_.ZIP Create archive.Params -->
-| 引数              | 型         |    | 説明                                                                             |
-| --------------- | --------- |:--:| ------------------------------------------------------------------------------ |
-| fileToZip       | 4D.File   | -> | 圧縮する File または Folder オブジェクト                                                    |
-| folderToZip     | 4D.Folder | -> | 圧縮する File または Folder オブジェクト                                                    |
-| zipStructure    | Object    | -> | 圧縮する File または Folder オブジェクト                                                    |
-| destinationFile | 4D.File   | -> | アーカイブの保存先ファイル                                                                  |
-| options         | Integer   | -> | *folderToZip* オプション: `ZIP Without enclosing folder` (外側のフォルダーを除外して ZIP圧縮をおこなう) |
-| 戻り値             | Object    | <- | ステータスオブジェクト|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|fileToZip|4D.File|->|File or Folder object to compress|
+|folderToZip|4D.Folder|->|File or Folder object to compress|
+|zipStructure|Object|->|File or Folder object to compress|
+|destinationFile|4D.File|->|Destination file for the archive|
+|options|Integer|->|*folderToZip* option: `ZIP Without enclosing folder`|
+|Result|Object|<-|Status object|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -77,7 +79,7 @@ End if
 | ----------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | compression | Integer     | <li>`ZIP Compression standard`: Deflate圧縮 (デフォルト)</li><li>`ZIP Compression LZMA`: LZMA圧縮</li><li>`ZIP Compression XZ`: XZ圧縮</li><li>`ZIP Compression none`: 圧縮なし</li>                                                                       |
 | level       | Integer     | 圧縮レベル。 とりうる値: 1 - 10。 低い値ではファイルが大きくなり、高い値ではファイルが小さくなります。 ただし、圧縮レベルはパフォーマンスに影響します。 デフォルト値 (省略時): <li>`ZIP Compression standard`: 6</li><li>`ZIP Compression LZMA`: 4</li><li>`ZIP Compression XZ`: 4</li> |
-| encryption  | Integer     | パスワードが設定されていた場合に使用する暗号化方法:<li>`ZIP Encryption AES128`: 128-bit キーを使った AES による暗号化</li><li>`ZIP Encryption AES192`: 192-bit キーを使った AES による暗号化</li><li>`ZIP Encryption AES256`: 256-bit キーを使った AES による暗号化 (パスワードが設定されている場合のデフォルト)</li><li>`ZIP Encryption none`: 暗号化なし (パスワードが設定されてない場合のデフォルト)</li>                                           |
+| encryption  | Integer     | パスワードが設定されていた場合に使用する暗号化方法:<li>`ZIP Encryption AES128`: 128-bit キーを使った AES による暗号化</li><li>`ZIP Encryption AES192`: 192-bit キーを使った AES による暗号化</li><li>`ZIP Encryption AES256`: 256-bit キーを使った AES による暗号化 (パスワードが設定されている場合のデフォルト)</li><li>`ZIP Encryption none`: 暗号化なし (パスワードが設定されてない場合のデフォルト)</li>                                          |
 | password    | Text        | 暗号化が必要な場合に使用するパスワード                                                                                                                                                        |
 | files       | Collection  | <li>`4D.File` または `4D.Folder` オブジェクトのコレクション</li><li>以下のプロパティを持ったオブジェクトのコレクション:</li><table><tr><td>プロパティ</td><td>型</td><td>説明</td></tr><tr><td>source</td><td>4D.File または 4D.Folder</td><td>File または Folder</td></tr><tr><td>destination</td><td>Text</td><td>(任意) - アーカイブのコンテンツ構成を変更するための相対ファイルパス</td></tr><tr><td>option</td><td>number</td><td>(任意) - `ZIP Ignore invisible files` で非表示ファイルを無視、0 を渡すと全ファイルを圧縮</td></tr></table>                                                                                             |
 | callback    | 4D.Function | $1 に圧縮の進捗 (0 - 100) を受け取るコールバックフォーミュラ                                                                                                                                      |
@@ -204,13 +206,15 @@ $err:=ZIP Create archive($zip; $destination)
 
 
 <!-- REF #_command_.ZIP Read archive.Params -->
-| 引数       | 型             |    | 説明                                     |
-| -------- | ------------- |:--:| -------------------------------------- |
-| zipFile  | 4D.File       | -> | ZIPアーカイブファイル                           |
-| password | Text          | -> | ZIPアーカイブのパスワード (必要であれば)                |
-| 戻り値      | 4D.ZipArchive | <- | アーカイブオブジェクト|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|zipFile|4D.File|->|Zip archive file|
+|password|Text|->|ZIP archive password if any|
+|Result|4D.ZipArchive|<-|Archive object|
+</div>
+<!-- END REF -->
 
 #### 説明
 

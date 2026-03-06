@@ -124,6 +124,12 @@ Essa opção só aparece se a licença do Qodly Studio estiver ativada.
 
 Essa opção permite o acesso do usuário a [Qodly Studio](developer.4d.com/qodly/) no nível da aplicação 4D. Observe que você também precisa [habilitar o acesso em cada nível de projeto](../settings/web.md#enable-access-to-qodly-studio).
 
+:::note
+
+This option is automatically checked if you used the [One-click configuration dialog box](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#one-click-configuration).
+
+:::
+
 ## Configuração de WebAdmin sem interface
 
 Todos [os parâmetros de WebAdmin](#webadmin-settings) são armazenados no arquivo `WebAdmin.4DSettings`. Ha un arquivo `WebAdmin.4DSettings` por padrão para cada aplicação 4D e 4D Server, pelo qual é possível lançar várias aplicações na mesma máquina local.

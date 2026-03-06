@@ -9,11 +9,16 @@ title: VP ADD RANGE NAME
 
 <!-- REF #_method_.VP ADD RANGE NAME.Params -->
 
-| Paramètres | Type   |    | Description                  |                  |
-| ---------- | ------ | -- | ---------------------------- | ---------------- |
-| rangeObj   | Object | -> | Objet plage                  |                  |
-| name       | Text   | -> | Nom de la formule            |                  |
-| options    | Object | -> | Options de la formule nommée | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres | Type   |    | Description                  |
+| ---------- | ------ | -- | ---------------------------- |
+| rangeObj   | Object | -> | Objet plage                  |
+| name       | Text   | -> | Nom de la formule            |
+| options    | Object | -> | Options de la formule nommée |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

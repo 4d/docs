@@ -80,8 +80,8 @@ BASICモードと同様に、ユーザーは接続時に自分の名前とパス
 つまり、`On Web Authentication` データベースメソッドは次の場合に呼び出されます:
 
 - Webサーバーが、存在しないリソースを要求する URL を受信した場合
-- when the web server receives a URL beginning with `4DACTION/`
-- Webサーバーがルートアクセス URL を受信したが、ストラクチャー設定または [`WEB SET HOME PAGE`](../commands-legacy/web-set-home-page) コマンドでホームページが設定されていないとき
+- Webサーバーが `4DACTION/` で始まる URL を受信した場合
+- Webサーバーがルートアクセス URL を受信したが、ストラクチャー設定または [`WEB SET HOME PAGE`](../commands/web-set-home-page) コマンドでホームページが設定されていないとき
 - Webサーバーが、セミダイナミックページ内でコードを実行するタグ (`4DSCRIPT`など) を処理した場合。
 
 次の場合には、`On Web Authentication` データベースメソッドは呼び出されません:
@@ -119,7 +119,7 @@ BASICモードと同様に、ユーザーは接続時に自分の名前とパス
 
 :::note
 
-`On Web Authentication` データベースメソッドのすべての引数が必ず値を受け取るわけではありません。 The information received by the database method depends on the selected [authentication mode](#authentication-modes).
+`On Web Authentication` データベースメソッドのすべての引数が必ず値を受け取るわけではありません。 データベースメソッドが受け取る情報は、[認証モード](#認証モード)の設定により異なります。
 
 :::
 
@@ -198,3 +198,4 @@ BASICモードと同様に、ユーザーは接続時に自分の名前とパス
  End if
 
 ```
+

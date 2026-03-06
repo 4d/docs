@@ -15,6 +15,10 @@ As ligações cliente WebSocket são úteis, por exemplo, para receber dados fin
 
 </details>
 
+### Aynchronous programming
+
+This class supports asynchronous programming in 4D as described in the [Asynchronous Execution](../Develop/async.md) page.
+
 ### Exemplo
 
 Neste exemplo, criamos um cliente WebSocket muito básico.
@@ -199,11 +203,11 @@ A função `.send()` <!-- REF #WebSocketClass.send().Summary -->envia *mensagem*
 
 Os conteúdos seguintes são enviados em função do tipo de *message*:
 
-| Tipo   | Conteúdo                                                                                                                    |
-| ------ | --------------------------------------------------------------------------------------------------------------------------- |
-| Text   | Texto em UTF-8                                                                                                              |
-| Blob   | Dados binários                                                                                                              |
-| Object | Texto em JSON UTF-8 (o mesmo resultado que com [`JSON Stringify`](../commands-legacy/json-stringify)) |
+| Tipo   | Conteúdo                                                                                                          |
+| ------ | ----------------------------------------------------------------------------------------------------------------- |
+| Text   | Texto em UTF-8                                                                                                    |
+| Blob   | Dados binários                                                                                                    |
+| Object | Texto em JSON UTF-8 (o mesmo resultado que com [`JSON Stringify`](../commands/json-stringify)) |
 
 <!-- END REF -->
 
@@ -265,3 +269,4 @@ A propriedade `.url` contém <!-- REF #WebSocketClass.url.Summary --> a URL à q
 Esta propriedade é só de leitura.
 
 <!-- END REF -->
+

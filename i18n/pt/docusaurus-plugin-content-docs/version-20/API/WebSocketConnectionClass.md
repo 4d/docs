@@ -71,11 +71,13 @@ Esta propriedade é só de leitura.
 
 
 <!-- REF #WebSocketConnectionClass.send().Params -->
-| Parâmetro | Tipo                 |    | Descrição                                      |
-| --------- | -------------------- |:--:| ---------------------------------------------- |
-| message   | Text / Blob / Object | -> | A mensagem a enviar|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|message|Text / Blob / Object|->|The message to send|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -115,13 +117,14 @@ Esta propriedade é só de leitura.
 
 
 <!-- REF #WebSocketConnectionClass.terminate().Params -->
-| Parâmetro | Tipo    |    | Descrição                                                                                    |
-| --------- | ------- |:--:| -------------------------------------------------------------------------------------------- |
-| code      | Integer | -> | Código de erro enviado ao cliente (deve ser > 3000, caso contrário a mensagem não é enviada) |
-| message   | Text    | -> | Mensagem de erro enviada ao cliente|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|code|Integer|->|Error code sent to the client (must be > 3000, otherwise the message is not sent)|
+|message|Text|->|Error message sent to the client|
+</div>
+<!-- END REF -->
 
 
 #### Descrição

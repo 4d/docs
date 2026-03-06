@@ -9,12 +9,17 @@ title: VP SET DATE TIME VALUE
 
 <!-- REF #_method_.VP SET DATE TIME VALUE.Params -->
 
-| Parámetros    | Tipo   |    | Descripción          |                  |
-| ------------- | ------ | -- | -------------------- | ---------------- |
-| rangeObj      | Object | -> | Objeto rango         |                  |
-| dateValue     | Fecha  | -> | Valor date a definir |                  |
-| timeValue     | Time   | -> | Valor hora a definir |                  |
-| formatPattern | Text   | -> | Formato del valor    | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros    | Tipo   |    | Descripción          |
+| ------------- | ------ | -- | -------------------- |
+| rangeObj      | Object | -> | Objeto rango         |
+| dateValue     | Fecha  | -> | Valor date a definir |
+| timeValue     | Time   | -> | Valor hora a definir |
+| formatPattern | Text   | -> | Formato del valor    |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

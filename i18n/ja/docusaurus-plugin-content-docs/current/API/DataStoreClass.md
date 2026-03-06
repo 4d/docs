@@ -1322,3 +1322,4 @@ ORDAリクエストログがマシン上で開始されていない場合、こ�
 [`.startTransaction()`](#starttransaction) の例題を参照ください。
 
 <!-- END REF -->
+

@@ -162,7 +162,7 @@ Lista de hosts y métodos permitidos para el servicio CORS. Ver [Parámetros COR
 
 Inicia o detiene el registro de las peticiones recibidas por el servidor web 4D en el archivo *logweb.txt* y define su formato. Ver [Registro de logs](../WebServer/webServerConfig.md#log-recording).
 
-> La activación y desactivación del archivo de historial de peticiones también se puede efectuar por programación utilizando el comando [WEB SET OPTION](../commands-legacy/web-set-option).
+> La activación y desactivación del archivo de historial de peticiones también se puede efectuar por programación utilizando el comando [WEB SET OPTION](../commands/web-set-option).
 
 El menú de formato de registro ofrece las siguientes opciones:
 
@@ -327,3 +327,4 @@ Esta opción sólo aparece si la licencia de Qodly Studio está activa.
 :::
 
 Esta opción permite el acceso del usuario a [Qodly Studio](developer.4d.com/qodly/) para el proyecto actual. Tenga en cuenta que el acceso global debe permitirse al [nivel de la aplicación](../Admin/webAdmin.md).
+

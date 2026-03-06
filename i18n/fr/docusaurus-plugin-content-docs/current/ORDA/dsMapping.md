@@ -28,7 +28,7 @@ Les règles suivantes s'appliquent à toutes les conversions :
 > La correspondance ORDA ne prend pas en compte :
 >
 > - l'option "Invisible" pour les tables ou les champs,
-> - la structure virtuelle définie par [`SET TABLE TITLES`](../commands-legacy/set-table-titles) et [`SET FIELD TITLES`](../commands-legacy/set-field-titles),
+> - la structure virtuelle définie par [`SET TABLE TITLES`](../commands/set-table-titles) et [`SET FIELD TITLES`](../commands/set-field-titles),
 > - la propriété "manuelle" ou "automatique" des relations.
 
 ### Règles de contrôle d'accès à distance
@@ -252,3 +252,4 @@ Les entity selections non-triées sont créées dans les cas suivants :
 > - entity selections basées sur des datastores distants.
 
 Notez que lorsqu'une sélection d'entités ordonnée devient une sélection non-ordonnée, toute référence d'entité répétée est supprimée.
+

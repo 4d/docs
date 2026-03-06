@@ -35,7 +35,7 @@ title: コマンド(名前順)
 [`APPEND TO ARRAY`](../commands/append-to-array)<br/>
 [`APPEND TO LIST`](../commands/append-to-list)<br/>
 [`Application file`](../commands/application-file)<br/>
-[`Application info`](application-info.md)<br/>
+[`Application info`](../commands/application-info)<br/>
 [`Application type`](../commands/application-type)<br/>
 [`Application version`](../commands/application-version)<br/>
 [`APPLY TO SELECTION`](../commands/apply-to-selection)<br/>
@@ -206,7 +206,7 @@ title: コマンド(名前順)
 [`Delete string`](../commands/delete-string)<br/>
 [`DELETE USER`](../commands/delete-user)<br/>
 [`DESCRIBE QUERY EXECUTION`](../commands/describe-query-execution)<br/>
-[`DIALOG`]((../commands/dialog))<br/>
+[`DIALOG`](\(../commands/dialog\))<br/>
 [`DIFFERENCE`](../commands/difference)<br/>
 [`DISABLE MENU ITEM`](../commands/disable-menu-item)<br/>
 [`Discover data key`](../commands/discover-data-key)<br/>
@@ -350,7 +350,7 @@ title: コマンド(名前順)
 [`Generate digest`](../commands/generate-digest)<br/>
 [`GENERATE ENCRYPTION KEYPAIR`](../commands/generate-encryption-keypair)<br/>
 [`Generate password hash`](../commands/generate-password-hash)<br/>
-[`Generate UUID`](../commands/generate-uuid) **4D 20 R10 で変更**<br/>
+[`Generate UUID`](../commands/generate-uuid) **modified 4D 20 R10**<br/>
 [`Get 4D file`](../commands/get-4d-file)<br/>
 [`Get 4D folder`](../commands/get-4d-folder)<br/>
 [`Get adjusted blobs cache priority`](../commands/get-adjusted-blobs-cache-priority)<br/>
@@ -1342,3 +1342,4 @@ title: コマンド(名前順)
 
 [`ZIP Create archive`](../commands/zip-create-archive)<br/>
 [`ZIP Read archive`](../commands/zip-read-archive)<br/>
+

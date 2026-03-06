@@ -9,10 +9,15 @@ title: VP SET FORMULAS
 
 <!-- REF #_method_.VP SET FORMULAS.Params -->
 
-| Parâmetro   | Tipo       |    | Descrição                   |                  |
-| ----------- | ---------- | -- | --------------------------- | ---------------- |
-| rangeObj    | Object     | -> | Objeto intervalo de células |                  |
-| formulasCol | Collection | -> | Colecção de fórmulas        | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro   | Tipo       |    | Descrição                   |
+| ----------- | ---------- | -- | --------------------------- |
+| rangeObj    | Object     | -> | Objeto intervalo de células |
+| formulasCol | Collection | -> | Colecção de fórmulas        |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

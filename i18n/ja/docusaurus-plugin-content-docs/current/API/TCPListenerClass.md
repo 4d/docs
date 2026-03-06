@@ -5,10 +5,6 @@ title: TCPListener
 
 `TCPListener` クラスを使用すると、4D で TCP サーバーを作成および設定することができます。 TCP リスナーがインスタンス化されると、クライアントからのTCP 接続を受信し、TCP をサポートしているあらゆるプロトコルを使用して通信することができるようになります。
 
-`TCPListener` クラスは `4D` クラスストアにて提供されています。 TCP サーバーは、[TCPListener オブジェクト](#tcplistener-オブジェクト) を返す [4D.TCPListener.new()](#4dtcplistenernew) 関数を使用して作成できます。
-
-全ての`TCPListener` クラス関数はスレッドセーフです。
-
 <details><summary>履歴</summary>
 
 | リリース  | 内容     |
@@ -16,6 +12,14 @@ title: TCPListener
 | 20 R9 | クラスを追加 |
 
 </details>
+
+`TCPListener` クラスは `4D` クラスストアにて提供されています。 TCP サーバーは、[TCPListener オブジェクト](#tcplistener-オブジェクト) を返す [4D.TCPListener.new()](#4dtcplistenernew) 関数を使用して作成できます。
+
+全ての`TCPListener` クラス関数はスレッドセーフです。
+
+### Aynchronous programming
+
+This class supports asynchronous programming in 4D as described in the [Asynchronous Execution](../Develop/async.md) page.
 
 ### 例題
 

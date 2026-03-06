@@ -7,7 +7,7 @@ title: Text
 
 ## Autorizar selector fuente/color
 
-Cuando esta propiedad está activada, los comandos [OPEN FONT PICKER](../commands-legacy/open-font-picker) y [OPEN COLOR PICKER](../commands-legacy/open-color-picker) pueden ser invocados para mostrar las ventanas de selección de fuente y color del sistema. A través de estas ventanas, los usuarios pueden cambiar la fuente o el color de un objeto formulario que tenga el foco directamente haciendo clic. Cuando esta propiedad está desactivada (por defecto), los comandos del selector abierto no tienen efecto.
+Cuando esta propiedad está activada, los comandos [OPEN FONT PICKER](../commands/open-font-picker) y [OPEN COLOR PICKER](../commands/open-color-picker) pueden ser invocados para mostrar las ventanas de selección de fuente y color del sistema. A través de estas ventanas, los usuarios pueden cambiar la fuente o el color de un objeto formulario que tenga el foco directamente haciendo clic. Cuando esta propiedad está desactivada (por defecto), los comandos del selector abierto no tienen efecto.
 
 #### Gramática JSON
 
@@ -25,7 +25,7 @@ Cuando esta propiedad está activada, los comandos [OPEN FONT PICKER](../command
 
 Ajusta el texto seleccionado para que aparezca más oscuro y pesado.
 
-Puede definir esta propiedad utilizando el comando [**OBJECT SET FONT STYLE**](../commands-legacy/object-set-font-style).
+Puede definir esta propiedad utilizando el comando [**OBJECT SET FONT STYLE**](../commands/object-set-font-style).
 
 > Esto es texto normal.<br/>
 > **Esto es texto en negrita.**
@@ -42,7 +42,7 @@ Puede definir esta propiedad utilizando el comando [**OBJECT SET FONT STYLE**](.
 
 #### Comandos
 
-[OBJECT Get font style](../commands-legacy/object-get-font-style) - [OBJECT SET FONT STYLE](../commands-legacy/object-set-font-style)
+[OBJECT Get font style](../commands/object-get-font-style) - [OBJECT SET FONT STYLE](../commands/object-set-font-style)
 
 ---
 
@@ -50,7 +50,7 @@ Puede definir esta propiedad utilizando el comando [**OBJECT SET FONT STYLE**](.
 
 Hace que el texto seleccionado se incline ligeramente hacia la derecha.
 
-También puede definir esta propiedad por medio del comando [**OBJECT SET FONT STYLE**](../commands-legacy/object-set-font-style).
+También puede definir esta propiedad por medio del comando [**OBJECT SET FONT STYLE**](../commands/object-set-font-style).
 
 > Esto es texto normal.<br/>
 > *Este es texto en cursiva.*
@@ -67,7 +67,7 @@ También puede definir esta propiedad por medio del comando [**OBJECT SET FONT S
 
 #### Comandos
 
-[OBJECT Get font style](../commands-legacy/object-get-font-style) - [OBJECT SET FONT STYLE](../commands-legacy/object-set-font-style)
+[OBJECT Get font style](../commands/object-get-font-style) - [OBJECT SET FONT STYLE](../commands/object-set-font-style)
 
 ---
 
@@ -87,7 +87,7 @@ Hace que el texto tenga una línea por debajo.
 
 #### Comandos
 
-[OBJECT Get font style](../commands-legacy/object-get-font-style) - [OBJECT SET FONT STYLE](../commands-legacy/object-set-font-style)
+[OBJECT Get font style](../commands/object-get-font-style) - [OBJECT SET FONT STYLE](../commands/object-set-font-style)
 
 ---
 
@@ -128,7 +128,7 @@ Hay tres temas de fuentes disponibles:
 
 #### Comandos
 
-[OBJECT Get style sheet](../commands-legacy/object-get-style-sheet) - [OBJECT SET STYLE SHEET](../commands-legacy/object-set-style-sheet)
+[OBJECT Get style sheet](../commands/object-get-style-sheet) - [OBJECT SET STYLE SHEET](../commands/object-set-style-sheet)
 
 ### Familia de fuentes
 
@@ -137,7 +137,7 @@ Hay dos tipos de nombres de familias de fuentes:
 - *family-name:* El nombre de una familia de fuentes, como "times", "courier", "arial", etc.
 - *generic-family:* El nombre de una familia genérica, como "serif", "sans-serif", "cursive", "fantasy", "monospace".
 
-Puede configurarlo utilizando el comando [`OBJECT SET FONT`](../commands-legacy/object-set-font).
+Puede configurarlo utilizando el comando [`OBJECT SET FONT`](../commands/object-set-font).
 
 #### Gramática JSON
 
@@ -153,7 +153,7 @@ Puede configurarlo utilizando el comando [`OBJECT SET FONT`](../commands-legacy/
 
 #### Comandos
 
-[OBJECT Get font](../commands-legacy/object-get-font) - [OBJECT SET FONT](../commands-legacy/object-set-font)
+[OBJECT Get font](../commands/object-get-font) - [OBJECT SET FONT](../commands/object-set-font)
 
 ## Tamaño fuente
 
@@ -171,7 +171,7 @@ Permite definir el tamaño de la fuente del objeto en puntos.
 
 #### Comandos
 
-[OBJECT Get font size](../commands-legacy/object-get-font-size) - [OBJECT SET FONT SIZE](../commands-legacy/object-set-font-size)
+[OBJECT Get font size](../commands/object-get-font-size) - [OBJECT SET FONT SIZE](../commands/object-set-font-size)
 
 ---
 
@@ -187,7 +187,7 @@ El color puede ser especificado por:
 - un valor HEX - como "# ff0000"
 - un valor RVA - como "rgb (255,0,0)"
 
-También puede definir esta propiedad utilizando el comando [**OBJECT SET RGB COLORS**](../commands-legacy/object-set-rgb-colors).
+También puede definir esta propiedad utilizando el comando [**OBJECT SET RGB COLORS**](../commands/object-set-rgb-colors).
 
 #### Gramática JSON
 
@@ -201,7 +201,7 @@ También puede definir esta propiedad utilizando el comando [**OBJECT SET RGB CO
 
 #### Comandos
 
-[OBJECT GET RGB COLORS](../commands-legacy/object-get-rgb-colors) - [OBJECT SET RGB COLORS](../commands-legacy/object-set-rgb-colors)
+[OBJECT GET RGB COLORS](../commands/object-get-rgb-colors) - [OBJECT SET RGB COLORS](../commands/object-set-rgb-colors)
 
 ---
 
@@ -209,9 +209,9 @@ También puede definir esta propiedad utilizando el comando [**OBJECT SET RGB CO
 
 `List box de tipo colección/selección de entidades`
 
-Se utiliza para aplicar un color de fuente personalizado a cada línea del list box. Debe utilizar valores de color RGB. Para más información, consulte la descripción del comando [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors).
+Se utiliza para aplicar un color de fuente personalizado a cada línea del list box. Debe utilizar valores de color RGB. Para más información, consulte la descripción del comando [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors).
 
-Debe introducir una expresión o una variable (no se pueden utilizar variables de tipo array). La expresión o variable se evaluará para cada línea mostrada. Puede utilizar las constantes descritas en el comando [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors).
+Debe introducir una expresión o una variable (no se pueden utilizar variables de tipo array). La expresión o variable se evaluará para cada línea mostrada. Puede utilizar las constantes descritas en el comando [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors).
 
 También puede establecer esta propiedad utilizando el comando [`LISTBOX SET PROPERTY`](../commands/listbox-set-property) con la constante `lk font color expression`.
 
@@ -246,7 +246,7 @@ Foreground color;Dark shadow color)
 
 Utilizado para aplicar un estilo de fuente personalizado a cada línea de list box o de cada celda de la columna.
 
-Debe introducir una expresión o una variable (no se pueden utilizar variables de tipo array). La expresión o variable se evaluará para cada línea mostrada (si se aplica al list box) o cada celda mostrada (si se aplica a una columna). Puede usar las constantes listadas en el comando [`LISTBOX SET ROW FONT STYLE`](../commands-legacy/listbox-set-row-font-style).
+Debe introducir una expresión o una variable (no se pueden utilizar variables de tipo array). La expresión o variable se evaluará para cada línea mostrada (si se aplica al list box) o cada celda mostrada (si se aplica a una columna). Puede usar las constantes listadas en el comando [`LISTBOX SET ROW FONT STYLE`](../commands/listbox-set-row-font-style).
 
 Ejemplo:
 
@@ -297,7 +297,7 @@ Ubicación horizontal del texto dentro del área que lo contiene.
 
 #### Comandos
 
-[OBJECT Get horizontal alignment](../commands-legacy/object-get-horizontal-alignment) - [OBJECT SET HORIZONTAL ALIGNMENT](../commands-legacy/object-set-horizontal-alignment)
+[OBJECT Get horizontal alignment](../commands/object-get-horizontal-alignment) - [OBJECT SET HORIZONTAL ALIGNMENT](../commands/object-set-horizontal-alignment)
 
 ---
 
@@ -310,7 +310,7 @@ La opción **Predeterminado** (`automático` valor JSON) define la alineación s
 - `abajo` para todos los datos (excepto las imágenes) y
 - `arriba` para los datos del tipo imagen.
 
-Esta propiedad también puede ser manejada por los comandos [`OBJECT Get vertical alignment`](../commands-legacy/object-get-vertical-alignment) y [`OBJECT SET VERTICAL ALIGNMENT`](../commands-legacy/object-set-vertical-alignment).
+Esta propiedad también puede ser manejada por los comandos [`OBJECT Get vertical alignment`](../commands/object-get-vertical-alignment) y [`OBJECT SET VERTICAL ALIGNMENT`](../commands/object-set-vertical-alignment).
 
 #### Gramática JSON
 
@@ -324,7 +324,7 @@ Esta propiedad también puede ser manejada por los comandos [`OBJECT Get vertica
 
 #### Comandos
 
-[`OBJECT Get vertical alignment`](../commands-legacy/object-get-vertical-alignment) - [`OBJECT SET VERTICAL ALIGNMENT`](../commands-legacy/object-set-vertical-alignment)
+[`OBJECT Get vertical alignment`](../commands/object-get-vertical-alignment) - [`OBJECT SET VERTICAL ALIGNMENT`](../commands/object-set-vertical-alignment)
 
 ---
 
@@ -434,7 +434,7 @@ Por defecto, esta opción no está activa.
 
 #### Comandos
 
-[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property) - [OBJECT Is styled text](../commands-legacy/object-is-styled-text) -
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property) - [OBJECT Is styled text](../commands/object-is-styled-text) -
 
 ---
 
@@ -463,7 +463,7 @@ Además de [áreas de texto estáticas](text.md), los objetos de texto de las [�
 
 #### Comandos
 
-[OBJECT Get text orientation](../commands-legacy/object-get-text-orientation) - [OBJECT SET TEXT ORIENTATION](../commands-legacy/object-set-text-orientation)
+[OBJECT Get text orientation](../commands/object-get-text-orientation) - [OBJECT SET TEXT ORIENTATION](../commands/object-set-text-orientation)
 
 ---
 
@@ -473,7 +473,7 @@ Además de [áreas de texto estáticas](text.md), los objetos de texto de las [�
 
 Permite definir un color de fuente personalizado para cada línea del list box o celda de la columna.
 
-Se debe utilizar el nombre de un array Entero largo. Cada elemento de este array corresponde a una línea del list box (si se aplica al list box) o a una celda de la columna (si se aplica a una columna), por lo que el array debe tener el mismo tamaño que el array asociado a la columna. Puede utilizar las constantes descritas en el comando [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors). Si desea que la celda herede el color de fondo definido en el nivel superior, pase el valor -255 al elemento del array correspondiente.
+Se debe utilizar el nombre de un array Entero largo. Cada elemento de este array corresponde a una línea del list box (si se aplica al list box) o a una celda de la columna (si se aplica a una columna), por lo que el array debe tener el mismo tamaño que el array asociado a la columna. Puede utilizar las constantes descritas en el comando [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors). Si desea que la celda herede el color de fondo definido en el nivel superior, pase el valor -255 al elemento del array correspondiente.
 
 #### Gramática JSON
 
@@ -487,7 +487,7 @@ Se debe utilizar el nombre de un array Entero largo. Cada elemento de este array
 
 #### Comandos
 
-[`LISTBOX Get array`](../commands-legacy/listbox-get-array) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays) - [`LISTBOX SET ARRAY`](../commands-legacy/listbox-set-array)
+[`LISTBOX Get array`](../commands/listbox-get-array) - [`LISTBOX GET ARRAYS`](../commands/listbox-get-arrays) - [`LISTBOX SET ARRAY`](../commands/listbox-set-array)
 
 ---
 
@@ -497,7 +497,7 @@ Se debe utilizar el nombre de un array Entero largo. Cada elemento de este array
 
 Permite definir un estilo de fuente personalizado para cada línea del list box o cada celda de la columna.
 
-Se debe utilizar el nombre de un array Entero largo. Cada elemento de este array corresponde a una línea del list box (si se aplica al list box) o a una celda de la columna (si se aplica a una columna), por lo que el array debe tener el mismo tamaño que el array asociado a la columna. Para llenar la matriz (utilizando un método), utilice las constantes enumeradas en el comando [`LISTBOX SET ROW FONT STYLE`](../commands-legacy/listbox-set-row-font-style). Se pueden añadir constantes para combinar estilos. Si desea que la celda herede el estilo definido en el nivel superior, pase el valor -255 al elemento del array correspondiente.
+Se debe utilizar el nombre de un array Entero largo. Cada elemento de este array corresponde a una línea del list box (si se aplica al list box) o a una celda de la columna (si se aplica a una columna), por lo que el array debe tener el mismo tamaño que el array asociado a la columna. Para llenar la matriz (utilizando un método), utilice las constantes enumeradas en el comando [`LISTBOX SET ROW FONT STYLE`](../commands/listbox-set-row-font-style). Se pueden añadir constantes para combinar estilos. Si desea que la celda herede el estilo definido en el nivel superior, pase el valor -255 al elemento del array correspondiente.
 
 #### Gramática JSON
 
@@ -511,7 +511,7 @@ Se debe utilizar el nombre de un array Entero largo. Cada elemento de este array
 
 #### Comandos
 
-[`LISTBOX Get array`](../commands-legacy/listbox-get-array) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays) - [`LISTBOX SET ARRAY`](../commands-legacy/listbox-set-array)
+[`LISTBOX Get array`](../commands/listbox-get-array) - [`LISTBOX GET ARRAYS`](../commands/listbox-get-arrays) - [`LISTBOX SET ARRAY`](../commands/listbox-set-array)
 
 ---
 
@@ -545,3 +545,4 @@ Cuando la propiedad está activa, el área almacena toda la información de form
 #### Objetos soportados
 
 [Entrada](input_overview.md)
+

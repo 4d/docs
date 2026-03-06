@@ -140,3 +140,4 @@ La propiedad `.size` contiene <!-- REF #MailAttachmentClass.size.Summary -->el v
 #### Descripción
 
 La propiedad `.type` contiene <!-- REF #MailAttachmentClass.type.Summary -->el `content-type` del archivo adjunto<!-- END REF -->. Si este tipo no se pasa explícitamente al comando [`MAIL New attachment`](../commands/mail-new-attachment), el `content-type` se basa en su extensión de archivo.
+

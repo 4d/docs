@@ -55,14 +55,15 @@ title: EntitySelection
 
 
 <!-- REF #_command_.Create entity selection.Params -->
-| 引数       | 型                  |    | 説明                                                          |
-| -------- | ------------------ |:--:| ----------------------------------------------------------- |
-| dsTable  | Table              | -> | エンティティセレクションの元となるカレントセレクションが属する 4Dデータベースのテーブル               |
-| settings | Object             | -> | ビルドオプション: context                                           |
-| 戻り値      | 4D.EntitySelection | <- | 指定したテーブルに対応するデータクラスのエンティティセレクション|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|dsTable|Table|->|Table in the 4D database whose current selection will be used to build the entity selection|
+|settings|Object|->|Build option: context   |
+|Result|4D.EntitySelection|<-|Entity selection matching the dataclass related to the given table|
+</div>
+<!-- END REF -->
 
 
 #### 説明
@@ -101,11 +102,13 @@ $employees:=Create entity selection([Employee])
 
 
 <!-- REF #_command_.USE ENTITY SELECTION.Params -->
-| 引数              | 型               |    | 説明                                      |
-| --------------- | --------------- |:--:| --------------------------------------- |
-| entitySelection | EntitySelection | -> | エンティティセレクション|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|entitySelection|EntitySelection|->|An entity selection|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -293,14 +296,15 @@ $result:=$sel[0].lock() //動作しません
 
 
 <!-- REF #EntitySelectionClass.add().Params -->
-| 引数              | 型                  |    | 説明                                                                             |
-| --------------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
-| entity          | 4D.Entity          | -> | エンティティセレクションに追加するエンティティ                                                        |
-| entitySelection | 4D.EntitySelection | -> | エンティティセレクションに追加するエンティティセレクション                                                  |
-| 戻り値             | 4D.EntitySelection | <- | 追加した *entity* または *entitySelection* を含むエンティティセレクション|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|entity|4D.Entity|->|Entity to be added to the entity selection|
+|entitySelection|4D.EntitySelection|->|Entity selection to be added to the original entity selection|
+|Result|4D.EntitySelection|<-|Entity selection including the added *entity* or *entitySelection*|
+</div>
+<!-- END REF -->
 
 
 #### 説明
@@ -382,14 +386,15 @@ $sellist2:=$sellist2.add($sellist1)
 
 
 <!-- REF #EntitySelectionClass.and().Params -->
-| 引数              | 型                  |    | 説明                                                                |
-| --------------- | ------------------ |:--:| ----------------------------------------------------------------- |
-| entity          | 4D.Entity          | -> | 交差するエンティティ                                                        |
-| entitySelection | 4D.EntitySelection | -> | 交差するエンティティセレクション                                                  |
-| 戻り値             | 4D.EntitySelection | <- | AND論理演算子による共通部分の結果を格納する新しいエンティティセレクション|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|entity |4D.Entity|->|Entity to intersect with|
+|entitySelection |4D.EntitySelection|->|Entity selection to intersect with|
+|Result|4D.EntitySelection|<-|New entity selection with the result of intersection with logical AND operator|
+</div>
+<!-- END REF -->
 
 
 #### 説明
@@ -451,13 +456,14 @@ $sellist2:=$sellist2.add($sellist1)
 
 
 <!-- REF #EntitySelectionClass.at().Params -->
-| 引数    | 型         |    | 説明                                           |
-| ----- | --------- |:--:| -------------------------------------------- |
-| index | Integer   | -> | 取得するエンティティのインデックス                            |
-| 戻り値   | 4D.Entity | <- | そのインデックスにあるエンティティ|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|index|Integer|->|Index of entity to return|
+|Result|4D.Entity |<-|The entity at that index|
+</div>
+<!-- END REF -->
 
 
 #### 説明
@@ -499,12 +505,14 @@ $emp2:=$employees.at(-3) // $employees エンティティセレクションの
 
 
 <!-- REF #EntitySelectionClass.average().Params -->
-| 引数            | 型    |    | 説明                                                                                       |
-| ------------- | ---- |:--:| ---------------------------------------------------------------------------------------- |
-| attributePath | Text | -> | 計算に使用する属性パス                                                                              |
-| 戻り値           | Real | <- | エンティティの属性値の算術平均 (相加平均) (エンティティセレクションがからの場合には undefined を返します)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|attributePath |Text|->|Attribute path to be used for calculation|
+|Result|Real|<-|Arithmetic mean (average) of entity attribute values (Undefined if empty entity selection)|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -553,12 +561,14 @@ $emp2:=$employees.at(-3) // $employees エンティティセレクションの
 
 
 <!-- REF #EntitySelectionClass.contains().Params -->
-| 引数     | 型         |    | 説明                                                                           |
-| ------ | --------- |:--:| ---------------------------------------------------------------------------- |
-| entity | 4D.Entity | -> | 評価するエンティティ                                                                   |
-| 戻り値    | Boolean   | <- | エンティティがエンティティセレクションに属している場合には true、そうでない場合は false|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|entity|4D.Entity|->|Entity to evaluate|
+|Result|Boolean|<-|True if the entity belongs to the entity selection, else False|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -603,12 +613,14 @@ $emp2:=$employees.at(-3) // $employees エンティティセレクションの
 
 
 <!-- REF #EntitySelectionClass.count().Params -->
-| 引数            | 型    |    | 説明                                                                       |
-| ------------- | ---- |:--:| ------------------------------------------------------------------------ |
-| attributePath | Text | -> | 計算に使用する属性パス                                                              |
-| 戻り値           | Real | <- | エンティティセレクション内の *attributePath* が null でない値の個数|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|attributePath |Text|->|Path of the attribute to be used for calculation|
+|Result|Real|<-|Number of non null *attributePath* values in the entity selection|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -650,12 +662,14 @@ $emp2:=$employees.at(-3) // $employees エンティティセレクションの
 
 
 <!-- REF #EntitySelectionClass.copy().Params -->
-| 引数     | 型                  |    | 説明                                          |
-| ------ | ------------------ |:--:| ------------------------------------------- |
-| option | Integer            | -> | `ck shared`: 共有可能なエンティティセレクションを返します         |
-| 戻り値    | 4D.EntitySelection | <- | エンティティセレクションのコピー|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|option |Integer|->|`ck shared`: return a shareable entity selection|
+|Result|4D.EntitySelection|<-|Copy of the entity selection|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -716,13 +730,15 @@ $emp2:=$employees.at(-3) // $employees エンティティセレクションの
 
 
 <!-- REF #EntitySelectionClass.distinct().Params -->
-| 引数            | 型          |    | 説明                                             |
-| ------------- | ---------- |:--:| ---------------------------------------------- |
-| attributePath | Text       | -> | 重複しない値を取得する属性のパス                               |
-| options       | Integer    | -> | `dk diacritical`, `dk count values`            |
-| 戻り値           | Collection | <- | 重複しない値のみを格納したコレクション|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|attributePath|Text|->|Path of attribute whose distinct values you want to get|
+|options|Integer|->|`dk diacritical`, `dk count values`|
+|Result|Collection|<-|Collection with only distinct values|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -807,13 +823,14 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 
 
 <!-- REF #EntitySelectionClass.distinctPaths().Params -->
-| 引数  | 型          |    | 説明                                              |
-| --- | ---------- |:--:| ----------------------------------------------- |
-| 属性  | Text       | -> | 取得したいパスを持つオブジェクト属性名                             |
-| 戻り値 | Collection | <- | 重複しないパスを格納した新規コレクション|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|attribute|Text|->|Object attribute name whose paths you want to get|
+|Result|Collection|<-|New collection with distinct paths|
+</div>
+<!-- END REF -->
 
 
 #### 説明
@@ -867,12 +884,14 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 
 
 <!-- REF #EntitySelectionClass.drop().Params -->
-| 引数   | 型                  |    | 説明                                                                                       |
-| ---- | ------------------ |:--:| ---------------------------------------------------------------------------------------- |
-| mode | Integer            | -> | `dk stop dropping on first error`: 最初のドロップ不可エンティティで実行を止めます                               |
-| 戻り値  | 4D.EntitySelection | <- | 成功した場合には空のエンティティセレクション、そうでない場合にはドロップ不可エンティティを格納したエンティティセレクション|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|mode|Integer|->|`dk stop dropping on first error`: stops method execution on first non-droppable entity|
+|Result|4D.EntitySelection|<-|Empty entity selection if successful, else entity selection containing non-droppable entity(ies)|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -937,14 +956,16 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 
 
 <!-- REF #EntitySelectionClass.extract().Params -->
-| 引数            | 型          |    | 説明                                                        |
-| ------------- | ---------- |:--:| --------------------------------------------------------- |
-| attributePath | Text       | -> | 新しいコレクションに抽出する値の属性パス                                      |
-| targetPath    | Text       | -> | 抽出先の属性パスあるいは属性名                                           |
-| option        | Integer    | -> | `ck keep null`: 返されるコレクションに null 属性を含めます (デフォルトでは無視されます)。 |
-| 戻り値           | Collection | <- | 抽出した値を格納したコレクション|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|attributePath |Text|->|Attribute path whose values must be extracted to the new collection |
+|targetPath|Text|->|Target attribute path or attribute name|
+|option|Integer|->|`ck keep null`: include null attributes in the returned collection (ignored by default)|
+|Result|Collection|<-|Collection containing extracted values|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -1041,11 +1062,13 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 
 
 <!-- REF #EntitySelectionClass.first().Params -->
-| 引数  | 型         |    | 説明                                                                   |
-| --- | --------- |:--:| -------------------------------------------------------------------- |
-| 戻り値 | 4D.Entity | <- | エンティティセレクションの先頭エンティティへの参照 (見つからなければ null)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|4D.Entity|<-|Reference to the first entity of the entity selection (Null if selection is empty)|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -1100,11 +1123,13 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 
 
 <!-- REF #EntitySelectionClass.getDataClass().Params -->
-| 引数  | 型            |    | 説明                                                   |
-| --- | ------------ |:--:| ---------------------------------------------------- |
-| 戻り値 | 4D.DataClass | <- | エンティティセレクションが所属しているデータクラス|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|4D.DataClass|<-|Dataclass object to which the entity selection belongs|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -1150,11 +1175,13 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 
 
 <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Params -->
-| 引数  | 型    |    | 説明                                                             |
-| --- | ---- | -- | -------------------------------------------------------------- |
-| 戻り値 | Text | <- | エンティティセレクションにリンクされたコンテキスト属性 (カンマ区切り)<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|result|Text|<-|Context attributes linked to the entity selection, separated by a comma|
+</div>
+<!-- END REF -->
 
 > **上級者向け:** この機能は、特定の構成のため、ORDAのデフォルト機能をカスタマイズする必要がある開発者向けです。 ほとんどの場合、使用する必要はないでしょう。
 
@@ -1206,11 +1233,13 @@ $info:=$persons.getRemoteContextAttributes()
 
 
 <!-- REF #EntitySelectionClass.isAlterable().Params -->
-| 引数  | 型       |    | 説明                                                                    |
-| --- | ------- |:--:| --------------------------------------------------------------------- |
-| 戻り値 | Boolean | <- | エンティティセレクションが追加可能であれば true、それ以外の場合には false|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Boolean|<-|True if the entity selection is alterable, False otherwise|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -1249,11 +1278,13 @@ Form.products.add(Form.product)
 
 
 <!-- REF #EntitySelectionClass.isOrdered().Params -->
-| 引数  | 型       |    | 説明                                                                   |
-| --- | ------- |:--:| -------------------------------------------------------------------- |
-| 戻り値 | Boolean | <- | 順列ありエンティティセレクションの場合には true、そうでない場合は false|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Boolean|<-|True if the entity selection is ordered, False otherwise|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -1304,11 +1335,13 @@ Form.products.add(Form.product)
 
 
 <!-- REF #EntitySelectionClass.last().Params -->
-| 引数  | 型         |    | 説明                                                                   |
-| --- | --------- |:--:| -------------------------------------------------------------------- |
-| 戻り値 | 4D.Entity | <- | エンティティセレクションの最終エンティティへの参照 (見つからなければ null)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|4D.Entity |<-|Reference to the last entity of the entity selection (Null if empty entity selection)|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -1390,12 +1423,14 @@ Form.products.add(Form.product)
 
 
 <!-- REF #EntitySelectionClass.max().Params -->
-| 引数            | 型    |    | 説明                                |
-| ------------- | ---- | -- | --------------------------------- |
-| attributePath | Text | -> | 計算に使用する属性パス                       |
-| 戻り値           | any  | <- | 属性の最大値|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |---|------|
+|attributePath |Text|->|Path of the attribute to be used for calculation|
+|Result|any|<-|Highest value of attribute|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -1444,12 +1479,14 @@ Form.products.add(Form.product)
 
 
 <!-- REF #EntitySelectionClass.min().Params -->
-| 引数            | 型    |    | 説明                                |
-| ------------- | ---- |:--:| --------------------------------- |
-| attributePath | Text | -> | 計算に使用する属性パス                       |
-| 戻り値           | any  | <- | 属性の最小値|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|attributePath |Text|->|Path of the attribute to be used for calculation|
+|Result|any|<-|Lowest value of attribute|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -1495,14 +1532,16 @@ Form.products.add(Form.product)
 
 
 <!-- REF #EntitySelectionClass.minus().Params -->
-| 引数              | 型                  |    | 説明                                                                    |
-| --------------- | ------------------ |:--:| --------------------------------------------------------------------- |
-| entity          | 4D.Entity          | -> | 除外するエンティティ                                                            |
-| entitySelection | 4D.EntitySelection | -> | 除外するエンティティセレクション                                                      |
-| keepOrder       | Integer            | -> | 結果のエンティティセレクションにおいて元の順列を維持するには `dk keep ordered` (整数) を渡します           |
-| 戻り値             | 4D.EntitySelection | <- | 新しいエンティティセレクション、あるいは既存のエンティティセレクションへの新しい参照|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|entity |4D.Entity|->|Entity to substract|
+|entitySelection|4D.EntitySelection|->|Entity selection to substract|
+|keepOrder|Integer|->|`dk keep ordered` (integer) to keep the initial order in the resulting entity selection|
+|Result|4D.EntitySelection|<-|New entity selection or a new reference on the existing entity selection|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -1579,13 +1618,15 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 
 
 <!-- REF #EntitySelectionClass.or().Params -->
-| 引数              | 型                  |    | 説明                                                                   |
-| --------------- | ------------------ |:--:| -------------------------------------------------------------------- |
-| entity          | 4D.Entity          | -> | 交差するエンティティ                                                           |
-| entitySelection | 4D.EntitySelection | -> | 交差するエンティティセレクション                                                     |
-| 戻り値             | 4D.EntitySelection | <- | 新しいエンティティセレクション、あるいは元のエンティティセレクションへの新しい参照|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|entity|4D.Entity|->|Entity to intersect with|
+|entitySelection|4D.EntitySelection|->|Entity selection to intersect with|
+|Result|4D.EntitySelection|<-|New entity selection or new reference to the original entity selection|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -1641,13 +1682,15 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 
 
 <!-- REF #EntitySelectionClass.orderBy().Params -->
-| 引数          | 型                  |    | 説明                                                       |
-| ----------- | ------------------ |:--:| -------------------------------------------------------- |
-| pathString  | Text               | -> | エンティティセレクションの属性パスと並べ替えの指定                                |
-| pathObjects | Collection         | -> | 条件オブジェクトのコレクション                                          |
-| 戻り値         | 4D.EntitySelection | <- | 指定された順番に並べ替えられた新規エンティティセレクション|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|pathString |Text   |->|Attribute path(s) and sorting instruction(s) for the entity selection|
+|pathObjects |Collection    |->|Collection of criteria objects|
+|Result|4D.EntitySelection|<-|New entity selection in the specified order|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -1721,15 +1764,17 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 
 
 <!-- REF #EntitySelectionClass.orderByFormula().Params -->
-| 引数            | 型                  |    | 説明                                             |
-| ------------- | ------------------ |:--:| ---------------------------------------------- |
-| formulaString | Text               | -> | フォーミュラ文字列                                      |
-| formulaObj    | Object             | -> | フォーミュラオブジェクト                                   |
-| sortOrder     | Integer            | -> | `dk ascending` (デフォルト) または `dk descending`     |
-| settings      | Object             | -> | フォーミュラに渡す引数                                    |
-| 戻り値           | 4D.EntitySelection | <- | 順列ありの新規エンティティセレクション|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|formulaString|Text|->|Formula string|
+|formulaObj|Object|->|Formula object|
+|sortOrder |Integer|->|`dk ascending` (default) or `dk descending`|
+|settings|Object|->|Parameter(s) for the formula|
+|Result|4D.EntitySelection|<-|New ordered entity selection|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -1846,15 +1891,17 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 
 
 <!-- REF #EntitySelectionClass.query().Params -->
-| 引数            | 型                  |    | 説明                                                                                                              |
-| ------------- | ------------------ |:--:| --------------------------------------------------------------------------------------------------------------- |
-| queryString   | Text               | -> | 検索条件 (文字列)                                                                                                      |
-| formula       | Object             | -> | 検索条件 (フォーミュラオブジェクト)                                                                                             |
-| value         | any                | -> | プレースホルダー用の値                                                                                                     |
-| querySettings | Object             | -> | クエリオプション: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                            |
-| 戻り値           | 4D.EntitySelection | <- | *queryString* または *formula* に渡した検索条件に合致する、エンティティセレクション内のエンティティから構成された新しいエンティティセレクション|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|queryString |Text |-> |Search criteria as string|
+|formula |Object |-> |Search criteria as formula object|
+|value|any|->|Value(s) to use for indexed placeholder(s)|
+|querySettings|Object|->|Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan|
+|Result|4D.EntitySelection|<-|New entity selection made up of entities from entity selection meeting the search criteria specified in *queryString* or *formula*|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -1952,11 +1999,13 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 
 
 <!-- REF #EntitySelectionClass.refresh().Params -->
-| 引数 | 型 |  | 説明                                           |
-| -- | - |::| -------------------------------------------- |
-|    |   |  | このコマンドは引数を必要としません|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+||||Does not require any parameters|
+</div>
+<!-- END REF -->
 
 #### 説明
 > このメソッドはリモートデータストア (クライアント/サーバーモード、または`Open datastore` 接続) においてのみ動作します。
@@ -2033,14 +2082,14 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 
 
 <!-- REF #EntitySelectionClass.selected().Params -->
-| 引数               | 型                  |    | 説明                                                                           |
-| ---------------- | ------------------ |:--:| ---------------------------------------------------------------------------- |
-| selectedEntities | 4D.EntitySelection | -> | 呼び出し対象のエンティティセレクションにおける、選別したエンティティの位置範囲                                      |
-| 戻り値              | Object             | <- | 呼び出し対象のエンティティセレクション内での位置を取得したい、選別されたエンティティのセレクション|<!-- END REF -->
+<div class="no-index">
 
-
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|selectedEntities |4D.EntitySelection|->|Entity selection with entities for which to know the rank in the entity selection|
+|Result|Object|<-|Range(s) of selected entities in entity selection|
+</div>
+<!-- END REF -->
 
 
 
@@ -2107,13 +2156,15 @@ $result2:=$invoices.selected($creditSel)
 
 
 <!-- REF #EntitySelectionClass.slice().Params -->
-| 引数        | 型                  |    | 説明                                                                 |
-| --------- | ------------------ |:--:| ------------------------------------------------------------------ |
-| startFrom | Integer            | -> | 処理を開始するインデックス)                                                     |
-| end       | Integer            | -> | 終了インデックス (含まれない)                                                   |
-| 戻り値       | 4D.EntitySelection | <- | 抜粋エンティティを格納した新しいエンティティセレクション (シャロウ・コピー)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|startFrom |Integer |->|Index to start the operation at (included)  |
+|end    |Integer|->|End index (not included)|
+|Result|4D.EntitySelection|<-|New entity selection containing sliced entities (shallow copy)|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -2174,12 +2225,14 @@ $slice:=ds.Employee.all().slice(-1;-2) // インデックス 9 から 8番まで
 
 
 <!-- REF #EntitySelectionClass.sum().Params -->
-| 引数            | 型    |    | 説明                                           |
-| ------------- | ---- |:--:| -------------------------------------------- |
-| attributePath | Text | -> | 計算に使用する属性パス                                  |
-| 戻り値           | Real | <- | エンティティセレクションの値の合計|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|attributePath |Text|->|Path of the attribute to be used for calculation|
+|Result|Real|<-|Sum of entity selection values|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -2226,16 +2279,18 @@ $sum:=$sel.sum("salary")
 
 
 <!-- REF #EntitySelectionClass.toCollection().Params -->
-| 引数           | 型          |    | 説明                                                                    |
-| ------------ | ---------- |:--:| --------------------------------------------------------------------- |
-| filterString | Text       | -> | 抽出するエンティティの属性パスの文字列                                                   |
-| filterCol    | Collection | -> | 抽出するエンティティの属性パスのコレクション                                                |
-| options      | Integer    | -> | `dk with primary key`: プライマリーキーを追加<br/>`dk with stamp`: スタンプを追加 |
-| begin        | Integer    | -> | 開始インデックス                                                              |
-| howMany      | Integer    | -> | 抽出するエンティティ数                                                           |
-| 戻り値          | Collection | <- | エンティティセレクションの属性と値を格納したオブジェクトのコレクション|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|filterString |Text|->|String with entity attribute path(s) to extract|
+|filterCol |Collection|->|Collection of entity attribute path(s) to extract|
+|options|Integer|->|`dk with primary key`: adds the primary key<br/>`dk with stamp`: adds the stamp|
+|begin|Integer| ->|Designates the starting index|
+|howMany|Integer|->|Number of entities to extract|
+|Result|Collection|<-|Collection of objects containing attributes and values of entity selection|
+</div>
+<!-- END REF -->
 
 #### 説明
 

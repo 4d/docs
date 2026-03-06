@@ -130,3 +130,4 @@ circle*|0.25 //La altura del círculo pasa a ser un cuarto de lo que era
 ```
 
 ![](../assets/en/Concepts/vertscaling.en.png)![](../assets/en/Concepts/veticalscaling2.en.png)
+

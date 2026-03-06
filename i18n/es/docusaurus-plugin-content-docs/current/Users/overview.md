@@ -9,7 +9,7 @@ La estrategia de control de acceso 4D depende de la configuración de su desplie
 
 - en las aplicaciones Web y REST multiusuarios, el control de acceso se basa en los [roles y privilegios de ORDA](../ORDA/privileges.md).
 - en aplicaciones de escritorio multiusuario, puede confiar en los usuarios y grupos de 4D,
-- en aplicaciones monousuario, el acceso de los usuarios se controla a través de la sesión del sistema, utilizando comandos como [`Current system user`](../commands-legacy/current-system-user).
+- en aplicaciones monousuario, el acceso de los usuarios se controla a través de la sesión del sistema, utilizando comandos como [`Current system user`](../commands/current-system-user).
 
 :::tip Entradas de blog relacionadas
 
@@ -33,7 +33,7 @@ Las aplicaciones monopuesto son aplicaciones de escritorio, desplegadas con 4D o
 
 ### Identificación del usuario
 
-Para identificar el usuario actual en una aplicación 4D monousuario, puede confiar en el comando [`Current system user`](../commands-legacy/current-system-user), que devuelve el usuario que abrió la sesión del sistema. Por lo tanto, la autenticación de los usuarios se delega al sistema operativo.
+Para identificar el usuario actual en una aplicación 4D monousuario, puede confiar en el comando [`Current system user`](../commands/current-system-user), que devuelve el usuario que abrió la sesión del sistema. Por lo tanto, la autenticación de los usuarios se delega al sistema operativo.
 
 A continuación, puede permitir o denegar el acceso dentro de su aplicación utilizando un código como:
 
@@ -43,7 +43,7 @@ If(Current system user = $user) //puede almacenar los usuarios en una tabla base
 End if
 ```
 
-Si desea utilizar el nombre de usuario del sistema en 4D en lugar de "Designer" (por ejemplo, en los archivos de registro), puede llamar al comando [`SET USER ALIAS`](../commands-legacy/set-user-alias), por ejemplo:
+Si desea utilizar el nombre de usuario del sistema en 4D en lugar de "Designer" (por ejemplo, en los archivos de registro), puede llamar al comando [`SET USER ALIAS`](../commands/set-user-alias), por ejemplo:
 
 ```4d
 SET USER ALIAS(Current system user)

@@ -19,11 +19,11 @@ title: VP PASTE FROM OBJECT
 
 <div class="no-index">
 
-| Paramètres | Type    |    | Description                          |
-| ---------- | ------- | -- | ------------------------------------ |
-| rangeObj   | Object  | -> | Objet plage de cellules              |
-| dataObject | Object  | -> | Objet contenant les données à coller |
-| options    | Integer | -> | Spécifie ce qui est collé            |
+| Paramètres | Type    |    | Description                                                                |
+| ---------- | ------- | -- | -------------------------------------------------------------------------- |
+| rangeObj   | Object  | -> | Pour lire les détails du style par défaut de ce document : |
+| dataObject | Object  | -> | Objet contenant les données à coller                                       |
+| options    | Integer | -> | Spécifie ce qui est collé                                                  |
 
 </div>
 <!-- END REF -->

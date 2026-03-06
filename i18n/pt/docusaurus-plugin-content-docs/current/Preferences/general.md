@@ -100,7 +100,7 @@ Se você pretende usar VCS ou editores de código externos em seus novos projeto
 
 > Essa opção só pode ser aplicada a projetos (os bancos de dados binários sempre incluem tokens).
 
-> You can always get the code with tokens by calling [`METHOD GET CODE`](../commands-legacy/method-get-code) with 1 in the *option* parameter.
+> You can always get the code with tokens by calling [`METHOD GET CODE`](../commands/method-get-code) with 1 in the *option* parameter.
 
 #### Excluir tokens em projetos existentes
 
@@ -161,3 +161,4 @@ Define onde 4D irá procurar por páginas de documentação.
 Indica a localização da documentação HTML estática. Por padrão, esta é a subpasta \Help\Command\language. Pode ver a localização clicando no menu associado à zona. Se esta subpasta não estiver presente, a localização é apresentada a vermelho.
 
 Você pode modificar esse local conforme desejar, por exemplo, se quiser exibir a documentação em um idioma diferente do idioma do aplicativo. A documentação HTML estática pode estar localizada em outro volume, em um servidor da Web, etc. A documentação HTML estática pode estar localizada em outro volume, em um servidor da Web, etc. Para designar um local diferente, clique no botão [...] ao lado da área de entrada e escolha uma pasta raiz da documentação (pasta correspondente ao idioma: fr, en, de ou em ja). Para designar una ubicación diferente, haga clic en el botón **[...]** junto al área de entrada y elija una carpeta raíz de documentación (carpeta correspondiente al idioma: `fr`, `en`, `es`, `de` o `ja`).
+

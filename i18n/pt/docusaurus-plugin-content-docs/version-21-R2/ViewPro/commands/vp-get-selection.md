@@ -9,11 +9,16 @@ title: VP Get selection
 
 <!-- REF #_method_.VP Get selection.Params -->
 
-| Parâmetro  | Tipo    |                             | Descrição                                                   |                  |
-| ---------- | ------- | --------------------------- | ----------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | ->                          | Nome da área 4D View Pro no formulário                      |                  |
-| sheet      | Integer | ->                          | Índice da folha (folha atual se omitida) |                  |
-| Resultados | Object  | <- | Objeto intervalo de células                                 | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro  | Tipo    |                             | Descrição                                                   |
+| ---------- | ------- | --------------------------- | ----------------------------------------------------------- |
+| vpAreaName | Text    | ->                          | Nome da área 4D View Pro no formulário                      |
+| sheet      | Integer | ->                          | Índice da folha (folha atual se omitida) |
+| Resultados | Object  | <- | Objeto intervalo de células                                 |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

@@ -89,7 +89,7 @@ Pour initialiser le tableau associé à la liste déroulante, vous pouvez :
 
 Dans ce cas, le nom de la [variable](properties_Object.md#variable-or-expression) associée à l'objet dans le formulaire doit être `aCities`. Ce code peut être placé dans la méthode formulaire et être exécuté lorsque l’événement formulaire `Sur chargement` se produit.
 
-- Avant d'afficher l'objet, chargez les valeurs d'une liste dans le tableau à l'aide de la commande [`LIST TO ARRAY`](../commands-legacy/list-to-array). Par exemple :
+- Avant d'afficher l'objet, chargez les valeurs d'une liste dans le tableau à l'aide de la commande [`LIST TO ARRAY`](../commands/list-to-array). Par exemple :
 
 ```4d
    LIST TO ARRAY("Cities";aCities)
@@ -149,7 +149,7 @@ Une liste déroulante hiérarchique a une sous-liste associée à chaque éléme
 
 Vous pouvez affecter la liste hiérarchique à l'objet liste déroulante en utilisant le champ [Enumération](properties_DataSource.md#choice-list) de la liste des propriétés.
 
-Les listes déroulantes hiérarchiques sont gérées à l'aide des commandes **Listes hiérarchiques** du langage 4D. Toutes les commandes qui prennent en charge la syntaxe `(* ; "name")` peuvent être utilisées avec des listes déroulantes hiérarchiques, par exemple [`List item parent`](../commands-legacy/list-item-parent).
+Les listes déroulantes hiérarchiques sont gérées à l'aide des commandes **Listes hiérarchiques** du langage 4D. Toutes les commandes qui prennent en charge la syntaxe `(* ; "name")` peuvent être utilisées avec des listes déroulantes hiérarchiques, par exemple [`List item parent`](../commands/list-item-parent).
 
 ### Utiliser une action standard
 
@@ -167,3 +167,4 @@ Vous pouvez construire automatiquement une liste déroulante en utilisant une [a
 ## Propriétés prises en charge
 
 [Alpha Format](properties_Display.md#alpha-format) - [Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Data Type (expression type)](properties_DataSource.md#data-type-expression-type) - [Data Type (list)](properties_DataSource.md#data-type-list) - [Date Format](properties_Display.md#date-format) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Standard action](properties_Action.md#standard-action) - [Save value](properties_Object.md#save-value) - [Time Format](properties_Display.md#time-format) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+

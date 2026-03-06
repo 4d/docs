@@ -35,7 +35,7 @@ title: Commandes par nom
 [`APPEND TO ARRAY`](../commands/append-to-array)<br/>
 [`APPEND TO LIST`](../commands/append-to-list)<br/>
 [`Application file`](../commands/application-file)<br/>
-[`Application info`](application-info.md)<br/>
+[`Application info`](../commands/application-info)<br/>
 [`Application type`](../commands/application-type)<br/>
 [`Application version`](../commands/application-version)<br/>
 [`APPLY TO SELECTION`](../commands/apply-to-selection)<br/>
@@ -206,7 +206,7 @@ title: Commandes par nom
 [`Delete string`](../commands/delete-string)<br/>
 [`DELETE USER`](../commands/delete-user)<br/>
 [`DESCRIBE QUERY EXECUTION`](../commands/describe-query-execution)<br/>
-[`DIALOG`]((../commands/dialog))<br/>
+[`DIALOG`](\(../commands/dialog\))<br/>
 [`DIFFERENCE`](../commands/difference)<br/>
 [`DISABLE MENU ITEM`](../commands/disable-menu-item)<br/>
 [`Discover data key`](../commands/discover-data-key)<br/>
@@ -337,7 +337,7 @@ title: Commandes par nom
 [`FORM SET OUTPUT`](../commands/form-set-output)<br/>
 [`FORM SET SIZE`](../commands/form-set-size)<br/>
 [`FORM SET VERTICAL RESIZING`](../commands/form-set-vertical-resizing)<br/>
-[`FORM theme`](../commands/form-theme) **nouveau 4D 21 R2**<br/>
+[`FORM theme`](../commands/form-theme) **new 4D 21 R2**<br/>
 [`FORM UNLOAD`](../commands/form-unload)<br/>
 [`Formula`](../commands/formula)<br/>
 [`Formula from string`](../commands/formula-from-string)<br/>
@@ -350,7 +350,7 @@ title: Commandes par nom
 [`Generate digest`](../commands/generate-digest)<br/>
 [`GENERATE ENCRYPTION KEYPAIR`](../commands/generate-encryption-keypair)<br/>
 [`Generate password hash`](../commands/generate-password-hash)<br/>
-[`Generate UUID`](../commands/generate-uuid) **modifié 4D 20 R10**<br/>
+[`Generate UUID`](../commands/generate-uuid) **modified 4D 20 R10**<br/>
 [`Get 4D file`](../commands/get-4d-file)<br/>
 [`Get 4D folder`](../commands/get-4d-folder)<br/>
 [`Get adjusted blobs cache priority`](../commands/get-adjusted-blobs-cache-priority)<br/>
@@ -574,7 +574,7 @@ title: Commandes par nom
 [`LISTBOX Get number of rows`](../commands/listbox-get-number-of-rows)<br/>
 [`LISTBOX GET OBJECTS`](../commands/listbox-get-objects)<br/>
 [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information)<br/>
-[`LISTBOX Get property`](../commands/listbox-get-property) **modifié 4D 20 R10**<br/>
+[`LISTBOX Get property`](../commands/listbox-get-property) **modified 4D 20 R10**<br/>
 [`LISTBOX Get row color`](../commands/listbox-get-row-color)<br/>
 [`LISTBOX Get row color as number`](../commands/listbox-get-row-color-as-number)<br/>
 [`LISTBOX Get row font style`](../commands/listbox-get-row-font-style)<br/>
@@ -602,7 +602,7 @@ title: Commandes par nom
 [`LISTBOX SET HEADERS HEIGHT`](../commands/listbox-set-headers-height)<br/>
 [`LISTBOX SET HIERARCHY`](../commands/listbox-set-hierarchy)<br/>
 [`LISTBOX SET LOCKED COLUMNS`](../commands/listbox-set-locked-columns)<br/>
-[`LISTBOX SET PROPERTY`](../commands/listbox-set-property) **modifié 4D 20 R10**<br/>
+[`LISTBOX SET PROPERTY`](../commands/listbox-set-property) **modified 4D 20 R10**<br/>
 [`LISTBOX SET ROW COLOR`](../commands/listbox-set-row-color)<br/>
 [`LISTBOX SET ROW FONT STYLE`](../commands/listbox-set-row-font-style)<br/>
 [`LISTBOX SET ROW HEIGHT`](../commands/listbox-set-row-height)<br/>
@@ -875,9 +875,9 @@ title: Commandes par nom
 [`Printing page`](../commands/printing-page)<br/>
 [`PROCESS 4D TAGS`](../commands/process-4d-tags)<br/>
 [`Process aborted`](../commands/process-aborted)<br/>
-[`Process activity`](../commands/process-activity) - **modifié en 4D 20 R7**<br/>
-[`Process info`](../commands/process-info) - **nouveau en 4D 20 R7**<br/>
-[`Process number`](../commands/process-number) - **modifié en 4D 20 R7**<br/>
+[`Process activity`](../commands/process-activity) - **modified 4D 20 R7**<br/>
+[`Process info`](../commands/process-info) - **new 4D 20 R7**<br/>
+[`Process number`](../commands/process-number) - **modified 4D 20 R7**<br/>
 [`Process state`](../commands/process-state)<br/>
 [`PUSH RECORD`](../commands/push-record)<br/>
 
@@ -1040,7 +1040,7 @@ title: Commandes par nom
 [`SEND VARIABLE`](../commands/send-variable)<br/>
 [`Sequence number`](../commands/sequence-number)<br/>
 [`Session`](../commands/session)<br/>
-[`Session info`](../commands/session-info) - **nouveau en 4D 20 R7**<br/>
+[`Session info`](../commands/session-info) - **new 4D 20 R7**<br/>
 [`Session storage`](../commands/session-storage)<br/>
 [`SET ABOUT`](../commands/set-about)<br/>
 [`SET ALLOWED METHODS`](../commands/set-allowed-methods)<br/>
@@ -1110,7 +1110,7 @@ title: Commandes par nom
 [`SET UPDATE FOLDER`](../commands/set-update-folder)<br/>
 [`SET USER ALIAS`](../commands/set-user-alias)<br/>
 [`Set user properties`](../commands/set-user-properties)<br/>
-[`SET WINDOW DOCUMENT ICON`](../commands/set-window-document-icon) - **nouveau en 4D 20 R7**<br/>
+[`SET WINDOW DOCUMENT ICON`](../commands/set-window-document-icon) - **new 4D 20 R7**<br/>
 [`SET WINDOW RECT`](../commands/set-window-rect)<br/>
 [`SET WINDOW TITLE`](../commands/set-window-title)<br/>
 [`Shift down`](../commands/shift-down)<br/>
@@ -1217,9 +1217,9 @@ title: Commandes par nom
 [`Trigger event`](../commands/trigger-event)<br/>
 [`Trigger level`](../commands/trigger-level)<br/>
 [`TRIGGER PROPERTIES`](../commands/trigger-properties)<br/>
-[`Trim`](../commands/trim) **nouveau 4D 21**<br/>
-[`Trim end`](../commands/trim-end) **nouveau 4D 21**<br/>
-[`Trim start`](../commands/trim-start) **nouveau 4D 21**<br/>
+[`Trim`](../commands/trim) **new 4D 21**<br/>
+[`Trim end`](../commands/trim-end) **new 4D 21**<br/>
+[`Trim start`](../commands/trim-start) **new 4D 21**<br/>
 [`True`](../commands/true)<br/>
 [`Trunc`](../commands/trunc)<br/>
 [`TRUNCATE TABLE`](../commands/truncate-table)<br/>
@@ -1261,7 +1261,7 @@ title: Commandes par nom
 [`WA Evaluate JavaScript`](../commands/wa-evaluate-javascript)<br/>
 [`WA EXECUTE JAVASCRIPT FUNCTION`](../commands/wa-execute-javascript-function)<br/>
 [`WA Forward URL available`](../commands/wa-forward-url-available)<br/>
-[`WA Get context`](../commands/wa-get-context) **nouveau en 4D 20 R9**<br/>
+[`WA Get context`](../commands/wa-get-context) **new 4D 20 R9**<br/>
 [`WA Get current URL`](../commands/wa-get-current-url)<br/>
 [`WA GET EXTERNAL LINKS FILTERS`](../commands/wa-get-external-links-filters)<br/>
 [`WA Get last filtered URL`](../commands/wa-get-last-filtered-url)<br/>
@@ -1277,7 +1277,7 @@ title: Commandes par nom
 [`WA OPEN WEB INSPECTOR`](../commands/wa-open-web-inspector)<br/>
 [`WA REFRESH CURRENT URL`](../commands/wa-refresh-current-url)<br/>
 [`WA Run offscreen area`](../commands/wa-run-offscreen-area)<br/>
-[`WA SET CONTEXT`](../commands/wa-set-context)  **nouveau en 4D 20 R9**<br/>
+[`WA SET CONTEXT`](../commands/wa-set-context)  **new 4D 20 R9**<br/>
 [`WA SET EXTERNAL LINKS FILTERS`](../commands/wa-set-external-links-filters)<br/>
 [`WA SET PAGE CONTENT`](../commands/wa-set-page-content)<br/>
 [`WA SET PREFERENCE`](../commands/wa-set-preference)<br/>
@@ -1342,3 +1342,4 @@ title: Commandes par nom
 
 [`ZIP Create archive`](../commands/zip-create-archive)<br/>
 [`ZIP Read archive`](../commands/zip-read-archive)<br/>
+

@@ -9,11 +9,16 @@ title: VP Get column count
 
 <!-- REF #_method_.VP Get column count.Params -->
 
-| Paramètres | Type    |                             | Description                                                                 |                  |
-| ---------- | ------- | --------------------------- | --------------------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro                                     |                  |
-| sheet      | Integer | ->                          | Numéro d'indice de la feuille (feuille courante si omis) |                  |
-| Résultat   | Integer | <- | Nombre total de colonnes                                                    | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres | Type    |                             | Description                                                                 |
+| ---------- | ------- | --------------------------- | --------------------------------------------------------------------------- |
+| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro                                     |
+| sheet      | Integer | ->                          | Numéro d'indice de la feuille (feuille courante si omis) |
+| Résultat   | Integer | <- | Nombre total de colonnes                                                    |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

@@ -294,7 +294,7 @@ $sellist2:=$sellist2.add($sellist1)
 | Parâmetro       | Tipo                                |                             | Descrição                                                            |
 | --------------- | ----------------------------------- | :-------------------------: | -------------------------------------------------------------------- |
 | entity          | 4D. Entity          |              ->             | Entidade a intersectar                                               |
-| entitySelection | 4D. EntitySelection |              ->             | Entity selection a intersectar                                       |
+| entitySelection | 4D. EntitySelection |              ->             | Seleção de entidade para interseção com                              |
 | Resultados      | 4D. EntitySelection | <- | Entity selection resultante da intersecção com o operador lógico AND |
 
 </div>
@@ -1549,7 +1549,7 @@ Employee.newSelection(dk keep ordered)
 | Parâmetro       | Tipo                                |                             | Descrição                                                                  |
 | --------------- | ----------------------------------- | :-------------------------: | -------------------------------------------------------------------------- |
 | entity          | 4D. Entity          |              ->             | Entidade a intersectar                                                     |
-| entitySelection | 4D. EntitySelection |              ->             | Entity selection a intersectar                                             |
+| entitySelection | 4D. EntitySelection |              ->             | Seleção de entidade para interseção com                                    |
 | Resultados      | 4D. EntitySelection | <- | Nova seleção de entidade ou nova referência à seleção de entidade original |
 
 </div>
@@ -2680,3 +2680,4 @@ $employeesCollection:=$employees.toCollection("firstName, lastName, directReport
 ```
 
 <!-- END REF -->
+

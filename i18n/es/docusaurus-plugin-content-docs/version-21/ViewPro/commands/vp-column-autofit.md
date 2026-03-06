@@ -9,9 +9,14 @@ title: VP COLUMN AUTOFIT
 
 <!-- REF #_method_.VP COLUMN AUTOFIT.Params -->
 
-| Parámetros | Tipo   |    | Descripción  |                  |
-| ---------- | ------ | -- | ------------ | ---------------- |
-| rangeObj   | Object | -> | Objeto rango | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo   |    | Descripción  |
+| ---------- | ------ | -- | ------------ |
+| rangeObj   | Object | -> | Objeto rango |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

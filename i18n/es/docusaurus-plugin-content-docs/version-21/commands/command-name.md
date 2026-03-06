@@ -52,21 +52,21 @@ El comando **Command name** define la variable *OK* en 1 si *command* correspond
 El siguiente código permite cargar todos los comandos 4D válidos en un array:
 
 ```4d
- var $Lon_id : Integer
- var $Txt_command : Text
- ARRAY LONGINT($tLon_Command_IDs;0)
- ARRAY TEXT($tTxt_commands;0)
- 
- Repeat
-    $Lon_id:=$Lon_id+1
-    $Txt_command:=Command name($Lon_id)
-    If(OK=1) //command number exists
-       If(Length($Txt_command)>0) //el comando no está desactivado
-          APPEND TO ARRAY($tTxt_commands;$Txt_command)
-          APPEND TO ARRAY($tLon_Command_IDs;$Lon_id)
-       End if
-    End if
- Until(OK=0) //fin de los comandos existentes
+ var $Lon_id : Integer
+ var $Txt_command : Text
+ ARRAY LONGINT($tLon_Command_IDs;0)
+ ARRAY TEXT($tTxt_commands;0)
+ 
+ Repeat
+    $Lon_id:=$Lon_id+1
+    $Txt_command:=Command name($Lon_id)
+    If(OK=1) //command number exists
+       If(Length($Txt_command)>0) //command is not disabled
+          APPEND TO ARRAY($tTxt_commands;$Txt_command)
+          APPEND TO ARRAY($tLon_Command_IDs;$Lon_id)
+       End if
+    End if
+ Until(OK=0) //end of existing commands
 ```
 
 ## Ejemplo 2
@@ -74,15 +74,15 @@ El siguiente código permite cargar todos los comandos 4D válidos en un array:
 En un formulario, quiere una lista desplegable con los comandos básicos de informe resumido. En el método objeto para esa lista desplegable, escribe:
 
 ```4d
- Case of
-    :(Form event code=On Before)
-       ARRAY TEXT(asCommand;4)
-       asCommand{1}:=Command name(1)
-       asCommand{2}:=Command name(2)
-       asCommand{3}:=Command name(4)
-       asCommand{4}:=Command name(3)
-  // ...
- End case
+ Case of
+    :(Form event code=On Before)
+       ARRAY TEXT(asCommand;4)
+       asCommand{1}:=Command name(1)
+       asCommand{2}:=Command name(2)
+       asCommand{3}:=Command name(4)
+       asCommand{4}:=Command name(3)
+  // ...
+ End case
 ```
 
 En la versión inglesa de 4D, la lista desplegable leerá: Sum, Average, Min y Max. En la versión francésa \*, la lista desplegable dirá: Somme, Moyenne, Min, y Max.
@@ -94,23 +94,23 @@ En la versión inglesa de 4D, la lista desplegable leerá: Sum, Average, Min y M
 Quiere crear un método que devuelva **True** si el comando, cuyo número se pasa como parámetro, es hilo seguro, y **False** en caso contrario.
 
 ```4d
-  //Is_Thread_Safe project method
- #declare($command : Integer) : Boolean
- var $threadsafe : Integer
- var $name; $theme : Text
- $name:=Command name($command;$threadsafe;$theme)
- If($threadsafe ?? 0) //if the first bit is set to 1
-    return True
- Else
-    return False
- End if
+  //Is_Thread_Safe project method
+ #declare($command : Integer) : Boolean
+ var $threadsafe : Integer
+ var $name; $theme : Text
+ $name:=Command name($command;$threadsafe;$theme)
+ If($threadsafe ?? 0) //if the first bit is set to 1
+    return True
+ Else
+    return False
+ End if
 ```
 
 Luego, para el comando "SAVE RECORD" (53) por ejemplo, puede escribir:
 
 ```4d
- $isSafe:=Is_Thread_Safe(53)
-  // devuelve True
+ $isSafe:=Is_Thread_Safe(53)
+  // returns True
 ```
 
 ## Ejemplo 4
@@ -125,11 +125,11 @@ var $deprecated : Collection
 Repeat
     $Lon_id:=$Lon_id+1
     $Txt_command:=Command name($Lon_id;$info)
-    If($info ?? 1) //el segundo bit está a 1
-            //entonces el comando es obsoleto
+    If($info ?? 1) //the second bit is set to 1
+            //then the command is deprecated
         $deprecated.push($Txt_command)
     End if
-Until(OK=0) //fin de los comandos existentes
+Until(OK=0) //end of existing commands
 
 ```
 

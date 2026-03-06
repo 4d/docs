@@ -8,6 +8,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert formula.Params-->
 
+<div class="no-index">
+
 | Parâmetro   | Tipo   |                             | Descrição                                                          |
 | ----------- | ------ | --------------------------- | ------------------------------------------------------------------ |
 | targetObj   | Object | &#8594; | Intervalo ou elemento ou documento 4D Write Pro                    |
@@ -16,6 +18,7 @@ displayed_sidebar: docs
 | rangeUpdate | Real   | &#8594; | Inclui ou exclui o conteúdo inserido dentro do intervalo           |
 | Resultado   | Object | &#8592; | Objeto de intervalo de texto que representa o resultado da fórmula |
 
+</div>
 <!-- END REF-->
 
 ## Descrição

@@ -43,10 +43,13 @@ title: CryptoKey
 
 
 <!-- REF #4D.CryptoKey.new().Params -->
-| 引数       | 型            |    | 説明                    |
-| -------- | ------------ | -- | --------------------- |
-| settings | Object       | -> | キーペアを生成またはロードするための設定  |
-| 戻り値      | 4D.CryptoKey | <- | 暗号化キーペアをカプセル化したオブジェクト |
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---|---|----|---|
+|settings|Object|->|Settings to generate or load a key pair|
+|Result|4D.CryptoKey|<-|Object encapsulating an encryption key pair|
+</div>
 <!-- END REF -->
 
 `4D.CryptoKey.new()` 関数は、 <!-- REF #4D.CryptoKey.new().Summary -->暗号化キーペアをカプセル化する `4D.CryptoKey` オブジェクトを新規作成します<!-- END REF -->。この暗号化キーペアは *settings* オブジェクト引数に基づきます。 これを使用することで新規のRSA またはECDSA キーを生成できるほか、PEM 定義から既存のキーペアをロードすることができます。
@@ -159,11 +162,14 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 
 <!-- REF #CryptoKey.decrypt().Params -->
-| 引数      | 型      |    | 説明                                                |
-| ------- | ------ | -- | ------------------------------------------------- |
-| message | Text   | -> | `options.encodingEncrypted` を使ってデコードし復号するメッセージ文字列 |
-| options | Object | -> | デコーディングオプション                                      |
-| 戻り値     | Object | <- | ステータス                                             |
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---|---|----|---|
+|message|Text|->|Message string to be decoded using `options.encodingEncrypted` and decrypted.|  
+|options|Object|->|Decoding options|
+|Result|Object|<-|Status|
+</div>
 <!-- END REF -->
 
 `.decrypt()` 関数は、 <!-- REF #CryptoKey.decrypt().Summary -->**秘密** 鍵を使って *message* を復号します<!-- END REF -->。 使用されるアルゴリズムはキーの種類に依存します。
@@ -205,11 +211,14 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 
 <!-- REF #CryptoKey.encrypt().Params -->
-| 引数      | 型      |    | 説明                                                  |
-| ------- | ------ | -- | --------------------------------------------------- |
-| message | Text   | -> | `options.encodingDecrypted` を使ってエンコードし暗号化するメッセージ文字列 |
-| options | Object | -> | エンコーディングオプション                                       |
-| 戻り値     | Text   | <- | `options.encodingEncrypted` を使って暗号化およびエンコードされたメッセージ |
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---|---|----|---|
+|message|Text|->|Message string to be encoded using `options.encodingDecrypted` and encrypted.|  
+|options|Object|->|Encoding options|
+|Result|Text|<-|Message encrypted and encoded using the `options.encodingEncrypted`|
+</div>
 <!-- END REF -->
 
 `.encrypt()` 関数は、 <!-- REF #CryptoKey.encrypt().Summary -->**公開** 鍵を使って *message* を暗号化します<!-- END REF -->。 使用されるアルゴリズムはキーの種類に依存します。
@@ -243,9 +252,12 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 
 <!-- REF #CryptoKey.getPrivateKey().Params -->
-| 引数  | 型    |    | 説明         |
-| --- | ---- | -- | ---------- |
-| 戻り値 | Text | <- | PEM 形式の秘密鍵 |
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---|---|----|---|
+|Result|Text|<-|Private key in PEM format|
+</div>
 <!-- END REF -->
 
 `.getPrivateKey()` 関数は、  <!-- REF #CryptoKey.getPrivateKey().Summary -->`CryptoKey` オブジェクトの秘密鍵を返します (PEM形式)<!-- END REF --> 。無い場合は空の文字列を返します。
@@ -269,9 +281,12 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 
 <!-- REF #CryptoKey.getPublicKey().Params -->
-| 引数  | 型    |    | 説明         |
-| --- | ---- | -- | ---------- |
-| 戻り値 | Text | <- | PEM 形式の公開鍵 |
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---|----|---|---|
+|Result|Text|<-|Public key in PEM format|
+</div>
 <!-- END REF -->
 
 `.getPublicKey()` 関数は、 <!-- REF #CryptoKey.getPublicKey().Summary -->`CryptoKey` オブジェクトの公開鍵を返します (PEM形式)<!-- END REF --> 。無い場合は空の文字列を返します。
@@ -314,14 +329,17 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 
 <!-- REF #CryptoKey.sign().Params -->
-| 引数      | 型             |    | 説明                                              |
-| ------- | ------------- | -- | ----------------------------------------------- |
-| message | Text または Blob | -> | 署名するメッセージ                                       |
-| options | Object        | -> | 署名オプション                                         |
-| 戻り値     | Text          | <- | "encoding" オプションに応じて Base64 または Base64URL 形式の署名 |
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---|----|---|---|
+|message|Text OR Blob|->|Message to sign|  
+|options|Object|->|Signing options|
+|Result|Text|<-|Signature in Base64 or Base64URL representation, depending on "encoding" option|
+</div>
 <!-- END REF -->
 
-`.sign()` 関数は、 <!-- REF #CryptoKey.sign().Summary -->utf8 形式の *message* 文字列またはBlobを署名します。<!-- END REF --> 。この際、`CryptoKey` オブジェクトキーおよび指定された *options* が使われます。 `options.encoding` 属性に指定した値に応じて、base64 または base64URL 形式の署名を返します。
+`.sign()` 関数は、 <!-- REF #CryptoKey.sign().Summary -->utf8 形式の *message* 文字列またはBlobを署名します。<!-- END REF --> この際、`CryptoKey` オブジェクトキーおよび指定された *options* が使われます。 `options.encoding` 属性に指定した値に応じて、base64 または base64URL 形式の署名を返します。
 
 `CryptoKey` は有効な **秘密** 鍵を格納していなくてはなりません。
 
@@ -393,12 +411,15 @@ RSA キーのみ: <!-- REF #CryptoKey.size.Summary -->キーのサイズ (ビッ
 
 
 <!-- REF #CryptoKey.verify().Params -->
-| 引数        | 型             |    | 説明                                                          |
-| --------- | ------------- | -- | ----------------------------------------------------------- |
-| message   | Text または Blob | -> | 署名の生成に使用されたメッセージ                                            |
-| signature | Text          | -> | 検証の対象である、`options.encoding` に応じて Base64 または Base64URL 形式の署名 |
-| options   | Object        | -> | 署名オプション                                                     |
-| 戻り値       | Object        | <- | 検証ステータス                                                     |
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---|---|---|---|
+|message|Text OR Blob|->|Message that was used to produce the signature|  
+|signature|Text|->|Signature to verify, in Base64 or Base64URL representation, depending on `options.encoding` value|
+|options|Object|->|Signing options|
+|Result|Object|<-|Status of the verification|
+</div>
 <!-- END REF -->
 
 

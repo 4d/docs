@@ -202,7 +202,7 @@ OS Xテクスチャースタイルは [ベベル](#ベベル) スタイルとほ
 
 デフォルトで、OS Xテクスチャーボタンの外観は次の通りです:
 
-- *Windows* - 明るいブルーの背景に中央配置のラベルが付いた標準のシステムボタンです。 Vistaにおいては透明になる特別機能を持っています。
+- *Windows* - 明るいブルーの背景に中央配置のラベルが付いた標準のシステムボタンです。
 
 ![](../assets/en/FormObjects/button_osxtextured.png)
 
@@ -283,7 +283,7 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
 
 このボタンスタイルはmacOS および[Windows Fluent UI テーマ](../FormEditor/forms.md#fluent-ui-レンダリングを有効化する)でサポートされています。
 
-Windows Classic UI テーマ上では、これは"なし"スタイルと同一です(背景の円は考慮されません)。
+On Windows Classic UI theme, this style is not supported.
 
 #### JSON 例:
 

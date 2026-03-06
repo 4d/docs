@@ -101,12 +101,12 @@ Si l'évaluation de *expression* donne une valeur indéfinie, la commande retour
 L'exemple suivant illustre le fonctionnement de **Num** lorsqu'une seule chaîne de caractères lui est passée en argument :
 
 ```4d
-$result:=Num("ABCD") // 0
-$result:=Num("A1B2C3") // 123
-$result:=Num("123") // 123
-$result:=Num("123.4") // 123.4
-$result:=Num("–123") // –123
-$result:=Num("–123e2") // –12300
+$result:=Num("ABCD") // 0
+$result:=Num("A1B2C3") // 123
+$result:=Num("123") // 123
+$result:=Num("123.4") // 123.4
+$result:=Num("–123") // –123
+$result:=Num("–123e2") // –12300
 ```
 
 ## Exemple 2
@@ -114,9 +114,9 @@ $result:=Num("–123e2") // –12300
 Ici, *\[Client\]Debt* est comparé à *1000$*. La commande Num appliquée à ces comparaisons renvoie 1 ou 0. La multiplication d'une chaîne par 0 ou 1 retourne soit la chaîne, soit une chaîne vide.  En définitive, le champ *\[Client\]Risk* reçoit la valeur “Good” ou “Bad” :
 
 ```4d
-  // Si le client a des dettes inférieures à 1000, le risque est acceptable.
-  // Si le client a des dettes supérieures à 1000, le risque est inacceptable.
- [Client]Risk:=("Good"*Num([Client]Debt<1000))+("Bad"*Num([Client]Debt>=1000))
+  // If client owes less than 1000, a good risk.
+  // If client owes more than 1000, a bad risk.
+ [Client]Risk:=("Good"*Num([Client]Debt<1000))+("Bad"*Num([Client]Debt>=1000))
 ```
 
 ## Exemple 3
@@ -124,12 +124,12 @@ Ici, *\[Client\]Debt* est comparé à *1000$*. La commande Num appliquée à ces
 Cet exemple compare les résultats obtenus en fonction du séparateur “courant” :
 
 ```4d
- $thestring:="33,333.33"
- $thenum:=Num($thestring)
-  // par défaut, $thestring vaut 33,33333 sur un système français
- $thenum:=Num($thestring;".")
-  // $thenum sera correctement évalué quel que soit le système
-  // par exemple, 33 333,33 sur un système français
+ $thestring:="33,333.33"
+ $thenum:=Num($thestring)
+  // by default, $thenum equals 33,33333 on a French system
+ $thenum:=Num($thestring;".")
+  // $thenum will be correctly evaluated regardless of the system;
+  // for example, 33 333,33 on a French system
 ```
 
 ## Exemple 4

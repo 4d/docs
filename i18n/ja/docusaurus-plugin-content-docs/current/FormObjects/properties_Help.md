@@ -9,8 +9,8 @@ title: ヘルプ
 
 ![](../assets/en/FormObjects/property_helpTip.png)
 
-> - **[SET DATABASE PARAMETER](../commands-legacy/set-database-parameter)** コマンドの `Tips delay` および `Tips duration` セレクターを使用することで、Tips の表示遅延や最大表示時間を指定することができます。
-> - [**SET DATABASE PARAMETER**](../commands-legacy/set-database-parameter) コマンドのTips enabled セレクターを使用することで、アプリケーション全体に対してヘルプTipsを有効化あるいは無効化することができます。
+> - **[SET DATABASE PARAMETER](../commands/set-database-parameter)** コマンドの `Tips delay` および `Tips duration` セレクターを使用することで、Tips の表示遅延や最大表示時間を指定することができます。
+> - [**SET DATABASE PARAMETER**](../commands/set-database-parameter) コマンドのTips enabled セレクターを使用することで、アプリケーション全体に対してヘルプTipsを有効化あるいは無効化することができます。
 
 これには、次の二つの方法があります:
 
@@ -34,18 +34,19 @@ title: ヘルプ
 オブジェクトにヘルプTip を関連付ける方法は他にも 2通りあります:
 
 - データベースストラクチャーレベルにおいて設定することができます (フィールドのみ)。 この場合、当該フィールドが表示されるすべてのフォームにおいて、このヘルプTip が表示されます。 詳細については [フィールドプロパティ](https://doc.4d.com/4Dv20/4D/20.2/Field-properties.300-6750280.ja.html#3367486) のヘルプTip の章を参照してください。
-- **[OBJECT SET HELP TIP](../commands-legacy/object-set-help-tip)** コマンドを使用することで、カレントプロセスにおいて設定することが可能です。
+- **[OBJECT SET HELP TIP](../commands/object-set-help-tip)** コマンドを使用することで、カレントプロセスにおいて設定することが可能です。
 
 同じオブジェクトに対して複数の Tip が関連づけられている場合には、次の優先順位に従って表示されます:
 
 1. ストラクチャーレベル (最低優先度)
 2. フォームエディターレベル
-3. **[OBJECT SET HELP TIP](../commands-legacy/object-set-help-tip)** コマンド(最高優先度)
+3. **[OBJECT SET HELP TIP](../commands/object-set-help-tip)** コマンド(最高優先度)
 
 #### コマンド
 
-[`OBJECT Get help tip`](../commands-legacy/object-get-help-tip) - [`OBJECT SET HELP TIP`](../commands-legacy/object-set-help-tip)
+[`OBJECT Get help tip`](../commands/object-get-help-tip) - [`OBJECT SET HELP TIP`](../commands/object-set-help-tip)
 
 #### 参照
 
 [プレースホルダー](properties_Entry.md#プレースホルダー)
+

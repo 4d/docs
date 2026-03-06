@@ -1,7 +1,7 @@
 ---
 id: HTTP_theme
-title: HTTP
-sidebar_label: HTTP
+title: Client HTTP
+sidebar_label: Client HTTP
 slug: /commands/theme/HTTP
 ---
 

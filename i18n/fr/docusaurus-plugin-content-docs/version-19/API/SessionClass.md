@@ -34,9 +34,12 @@ Pour des informations détaillées sur l'implémentation de la session, veuillez
 
 
 <!-- REF #_command_.Session.Params -->
-| Paramètres | Type       |    | Description   |
-| ---------- | ---------- |:--:| ------------- |
-| Résultat   | 4D.Session | <- | Objet session |
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|4D.Session|<-|Session object|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -89,11 +92,13 @@ IP:port/4DACTION/action_Session
 
 
 <!-- REF #SessionClass.clearPrivileges().Params -->
-| Paramètres | Type |  | Description                                            |
-| ---------- | ---- |::| ------------------------------------------------------ |
-|            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+||||Does not require any parameters|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -154,10 +159,13 @@ $expiration:=Session.expirationDate //ex : "2021-11-05T17:10:42Z"
 
 
 <!-- REF #SessionClass.hasPrivilege().Params -->
-| Paramètres | Type    |    | Description                                           |
-| ---------- | ------- |:--:| ----------------------------------------------------- |
-| privilege  | Text    | <- | Nom du privilège à vérifier                           |
-| Résultat   | Boolean | <- | Vrai si la session dispose du *privilege*, sinon Faux |
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|privilege|Text|<-|Name of the privilege to verify|
+|Result|Boolean|<-|True if session has *privilege*, False otherwise|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -234,9 +242,12 @@ End if
 
 
 <!-- REF #SessionClass.isGuest().Params -->
-| Paramètres | Type    |    | Description                                      |
-| ---------- | ------- |:--:| ------------------------------------------------ |
-| Résultat   | Boolean | <- | Vrai s'il s'agit d'une session Guest, sinon Faux |
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Boolean|<-|True if session is a Guest one, False otherwise|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -270,11 +281,14 @@ End if
 
 
 <!-- REF #SessionClass.setPrivileges().Params -->
-| Paramètres | Type       |    | Description                                                      |
-| ---------- | ---------- |:--:| ---------------------------------------------------------------- |
-| privilege  | Text       | -> | Nom de privilège                                                 |
-| privileges | Collection | -> | Collection de noms de privilèges                                 |
-| settings   | Object     | -> | Objet contenant une propriété "privileges" (texte ou collection) |
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|privilege|Text|->|Privilege name|
+|privileges|Collection|->|Collection of privilege names|
+|settings|Object|->|Object with a "privileges" property (string or collection)|
+</div>
 <!-- END REF -->
 
 #### Description
@@ -289,7 +303,7 @@ La fonction `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary --
 
 | Propriété  | Type               | Description                                           |
 | ---------- | ------------------ | ----------------------------------------------------- |
-| privileges | Text ou Collection | <li>Chaîne contenant un nom de privilège, ou</li><li>Collection de chaînes contenant des noms de privilèges</li>    |
+| privileges | Text ou Collection | <li>Chaîne contenant un nom de privilège, ou</li><li>Collection de chaînes contenant des noms de privilèges</li>  |
 | userName   | Text               | Nom d'utilisateur à associer à la session (optionnel) |
 
 Si la propriété `privileges` contient un nom de privilège invalide, il est ignoré.

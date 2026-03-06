@@ -9,7 +9,7 @@ La stratégie de contrôle d'accès 4D dépend de la configuration de votre dép
 
 - dans les applications Web et REST multi-utilisateurs, le contrôle d'accès est basé sur les [rôles et privilèges d'ORDA](../ORDA/privileges.md).
 - dans les applications desktop multi-utilisateurs, vous pouvez vous appuyer sur les utilisateurs et les groupes 4D,
-- dans les applications desktop monoposte, l'accès des utilisateurs est contrôlé par la session du système, à l'aide de commandes telles que [`Current system user`](../commands-legacy/current-system-user).
+- dans les applications desktop monoposte, l'accès des utilisateurs est contrôlé par la session du système, à l'aide de commandes telles que [`Current system user`](../commands/current-system-user).
 
 :::tip Article de blog lié
 
@@ -33,7 +33,7 @@ Les applications monoposte sont des applications de bureau, déployées avec 4D 
 
 ### Identification de l'utilisateur
 
-Pour identifier l'utilisateur courant dans une application mono-utilisateur 4D, vous pouvez vous appuyer sur la commande [`Current system user`](../commands-legacy/current-system-user), qui renvoie l'utilisateur qui a ouvert la session système. Ainsi, l'authentification des utilisateurs est déléguée au système d'exploitation.
+Pour identifier l'utilisateur courant dans une application mono-utilisateur 4D, vous pouvez vous appuyer sur la commande [`Current system user`](../commands/current-system-user), qui renvoie l'utilisateur qui a ouvert la session système. Ainsi, l'authentification des utilisateurs est déléguée au système d'exploitation.
 
 Vous pouvez alors autoriser ou refuser les accès à votre application en utilisant un code suivant :
 
@@ -43,7 +43,7 @@ If(Current system user = $user) //vous pouvez stocker des utilisateurs dans une 
 End if
 ```
 
-Si vous souhaitez utiliser le nom d'utilisateur du système dans 4D au lieu du "Designer" (par exemple dans les fichiers journaux), vous pouvez appeler la commande [`SET USER ALIAS`](../commands-legacy/set-user-alias), par exemple:
+Si vous souhaitez utiliser le nom d'utilisateur du système dans 4D au lieu du "Designer" (par exemple dans les fichiers journaux), vous pouvez appeler la commande [`SET USER ALIAS`](../commands/set-user-alias), par exemple:
 
 ```4d
 SET USER ALIAS(Current system user)

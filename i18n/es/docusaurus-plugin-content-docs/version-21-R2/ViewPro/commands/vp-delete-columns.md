@@ -9,9 +9,14 @@ title: VP DELETE COLUMNS
 
 <!-- REF #_method_.VP DELETE COLUMNS.Params -->
 
-| Parámetros | Tipo   |    | Descripción  |                  |
-| ---------- | ------ | -- | ------------ | ---------------- |
-| rangeObj   | Object | -> | Objeto rango | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo   |    | Descripción  |
+| ---------- | ------ | -- | ------------ |
+| rangeObj   | Object | -> | Objeto rango |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

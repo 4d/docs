@@ -3529,3 +3529,4 @@ $col3:=$col.sort(Formula(String($1.value)<String($1.value2))) // アルファベ
 ```
 
 <!-- END REF -->
+

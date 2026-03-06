@@ -148,10 +148,13 @@ Cette propriété est en **lecture seule**.
 
 <!-- REF #SignalClass.trigger().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type |     | Description                 |
 | ---------- | ---- | :-: | --------------------------- |
 |            |      |     | Ne requiert aucun paramètre |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -178,11 +181,14 @@ Si le signal est déjà dans l'état signaled (i.e., la propriété `signaled` e
 
 <!-- REF #SignalClass.wait().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type    |                             | Description                                         |
 | ---------- | ------- | --------------------------- | --------------------------------------------------- |
 | timeout    | Real    | ->                          | Délai d'attente maximum en secondes pour la réponse |
 | Résultat   | Boolean | <- | Etat de la propriété `.signaled`                    |
 
+</div>
 <!-- END REF -->
 
 #### Description

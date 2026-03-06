@@ -33,7 +33,7 @@ title: エラー処理
 
 インストールされたエラーハンドラーは、4Dアプリケーションまたはそのコンポーネントでエラーが発生した場合、インタープリターモードまたはコンパイル済モードで自動的に呼び出されます。 実行コンテキストに応じて、異なるエラーハンドラーを呼び出すこともできます (後述参照)。
 
-エラー処理用のプロジェクトメソッドを *実装* するには、[`ON ERR CALL`](../commands-legacy/on-err-call) コマンドをコールし、当該プロジェクトメソッド名と (任意で) スコープを引数として渡します。 例:
+エラー処理用のプロジェクトメソッドを *実装* するには、[`ON ERR CALL`](../commands/on-err-call) コマンドをコールし、当該プロジェクトメソッド名と (任意で) スコープを引数として渡します。 例:
 
 ```4d
 ON ERR CALL("IO_Errors";ek local) // ローカルなエラー処理メソッドを実装します
@@ -45,7 +45,7 @@ ON ERR CALL("IO_Errors";ek local) // ローカルなエラー処理メソッド�
 ON ERR CALL("";ek local) // ローカルプロセスにおいてエラーの検知を中止します
 ```
 
-[`Method called on error`](../commands-legacy/method-called-on-error) コマンドを使用すると、カレントプロセスにおいて`ON ERR CALL` で実装されたメソッドの名前を知ることができます。 このコマンドは汎用的なコードでとくに有用です。エラー処理メソッドを一時的に変更し、後で復元することができます:
+[`Method called on error`](../commands/method-called-on-error) コマンドを使用すると、カレントプロセスにおいて`ON ERR CALL` で実装されたメソッドの名前を知ることができます。 このコマンドは汎用的なコードでとくに有用です。エラー処理メソッドを一時的に変更し、後で復元することができます:
 
 ```4d
  $methCurrent:=Method called on error(ek local)
@@ -97,7 +97,7 @@ ON ERR CALL("componentHandler";ek errors from components) // コンポーネン�
 4D は、いくつかの [**システム変数**](variables.md#システム変数) と呼ばれる専用の変数を自動的に管理しています。
 :::
 
-- [`Last errors`](../commands/last-errors) コマンドは、4Dアプリケーションで発生したカレントエラースタックに関する情報をコレクションとして返します。
+- [`Last errors`](../commands/last-errors) コマンドは4D アプリケーション内で発生したエラーのカレントのスタックのコレクションを返します。
 - `Call chain` コマンドは、カレントプロセス内におけるメソッド呼び出しチェーンの各ステップを説明するオブジェクトのコレクションを返します。
 
 #### 例題
@@ -240,7 +240,7 @@ End try
 
 :::info
 
-*遅延* エラーと *non-deferred* エラーの詳細については、[`throw`](../commands-legacy/throw) コマンドの説明を参照してください。
+For more information on *deferred* and *non-deferred* errors, please refer to the [`throw`](../commands/throw) command description.
 
 :::
 
@@ -287,7 +287,7 @@ Function createInvoice($customer : cs.customerEntity; $items : Collection; $invo
 
 ## エラーコード
 
-コード実行を妨げる例外は4D によって返されますが、その原因はOS、デバイス、4D カーネル、コード内の[`throw`](../commands-legacy/throw) など、様々な要因が考えられます。 そのため、3つの要素によって定義されます:
+コード実行を妨げる例外は4D によって返されますが、その原因はOS、デバイス、4D カーネル、コード内の[`throw`](../commands/throw) など、様々な要因が考えられます。 そのため、3つの要素によって定義されます:
 
 - **コンポーネント署名**。エラーの起きた場所を表します(署名の一覧については[`Last errors`](../commands/last-errors) を参照してください)
 - **メッセージ**。エラーがなぜ起きたかを説明します。
@@ -296,3 +296,4 @@ Function createInvoice($customer : cs.customerEntity; $items : Collection; $invo
 [4D エラーダイアログボックス](../Debugging/basics.md) はユーザーに対してコードとメッセージを表示します。
 
 エラーと特にその原因の完全な詳細を取得するには、[`Last errors`](../commands/last-errors) コマンドを呼び出す必要があります。 最終アプリケーションにおいて[エラー処理メソッド](#installing-an-error-handling-method) を使用してエラーへの割り込みと処理ををする場合、[`Last errors`](../commands/last-errors) を使用して必ず*error* オブジェクトの全てのプロパティを記録するようにしてください。エラーコードはコンポーネントによって異なるからです。
+

@@ -8,6 +8,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP EXPORT DOCUMENT.Params-->
 
+<div class="no-index">
+
 | Parâmetro | Tipo                     |                             | Descrição                                                                                                                                                 |
 | --------- | ------------------------ | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | wpDoc     | Object                   | &#8594; | Variável 4D Write Pro                                                                                                                                     |
@@ -16,6 +18,7 @@ displayed_sidebar: docs
 | format    | Integer                  | &#8594; | Formato de saída do documento (ex.: .docx, .pdf, etc.) |
 | option    | Object, Integer          | &#8594; | Opções de exportação, que pode variar dependendo do formato escolhido.                                                                    |
 
+</div>
 <!-- END REF-->
 
 ## Descrição

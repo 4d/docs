@@ -36,21 +36,21 @@ Los objetos Attachment ofrecen las siguientes propiedades y funciones de sólo l
 
 
 <!-- REF #_command_.MAIL New attachment.Params -->
+<div class="no-index">
 
-| Parámetros  | Tipo              |    | Descripción                                                                             |
-| ----------- | ----------------- |:--:| --------------------------------------------------------------------------------------- |
-| file        | 4D.File           | -> | Archivo adjunto                                                                         |
-| zIPFile     | 4D.ZipFile        | -> | Archivo zip adjunto                                                                     |
-| blob        | 4D.Blob           | -> | BLOB que contiene el adjunto                                                            |
-| path        | Text              | -> | Ruta del archivo adjunto                                                                |
-| name        | Text              | -> | Nombre + extensión utilizados por el cliente de correo para designar el archivo adjunto |
-| cid         | Text              | -> | ID del archivo adjunto (sólo en mensajes HTML), o " " si no se requiere cid             |
-| type        | Text              | -> | Valor del encabezado content-type                                                       |
-| disposition | Text              | -> | Valor del encabezado content-disposition: "inline" o "attachment".                      |
-| Resultado   | 4D.MailAttachment | <- | Objeto adjunto|<!-- END REF -->
-
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|file|4D.File|->|Attachment file|
+|zipFile|4D.ZipFile|->|Attachment Zipfile|
+|blob|4D.Blob|->|BLOB containing the attachment|
+|path|Text|->|Path of the attachment file|
+|name|Text|->|Name + extension used by the mail client to designate the attachment|
+|cid|Text|->|ID of attachment (HTML messages only), or " " if no cid is required|
+|type|Text|->|Value of the content-type header|
+|disposition|Text|->|Value of the content-disposition header: "inline" or "attachment".|
+|Result|4D.MailAttachment|<-|Attachment object|
+</div>
+<!-- END REF -->
 
 
 #### Descripción
@@ -184,21 +184,21 @@ $transporter.send($email)
 
 
 <!-- REF #4D.MailAttachment.new().Params -->
+<div class="no-index">
 
-| Parámetros  | Tipo              |    | Descripción                                                                             |
-| ----------- | ----------------- |:--:| --------------------------------------------------------------------------------------- |
-| file        | 4D.File           | -> | Archivo adjunto                                                                         |
-| zIPFile     | 4D.ZipFile        | -> | Archivo zip adjunto                                                                     |
-| blob        | 4D.Blob           | -> | BLOB que contiene el adjunto                                                            |
-| path        | Text              | -> | Ruta del archivo adjunto                                                                |
-| name        | Text              | -> | Nombre + extensión utilizados por el cliente de correo para designar el archivo adjunto |
-| cid         | Text              | -> | ID del archivo adjunto (sólo en mensajes HTML), o " " si no se requiere cid             |
-| type        | Text              | -> | Valor del encabezado content-type                                                       |
-| disposition | Text              | -> | Valor del encabezado content-disposition: "inline" o "attachment".                      |
-| Resultado   | 4D.MailAttachment | <- | Objeto adjunto|<!-- END REF -->
-
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|file|4D.File|->|Attachment file|
+|zipFile|4D.ZipFile|->|Attachment Zipfile|
+|blob|4D.Blob|->|BLOB containing the attachment|
+|path|Text|->|Path of the attachment file|
+|name|Text|->|Name + extension used by the mail client to designate the attachment|
+|cid|Text|->|ID of attachment (HTML messages only), or " " if no cid is required|
+|type|Text|->|Value of the content-type header|
+|disposition|Text|->|Value of the content-disposition header: "inline" or "attachment".|
+|Result|4D.MailAttachment|<-|Attachment object|
+</div>
+<!-- END REF -->
 
 
 #### Descripción
@@ -235,12 +235,13 @@ La propiedad `.disposition` contiene <!-- REF #MailAttachmentClass.disposition.S
 
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
-| Parámetros | Tipo    |    | Descripción                                    |
-| ---------- | ------- |:--:| ---------------------------------------------- |
-| Resultado  | 4D.Blob | <- | Contenido del anexo|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---|--- |:---:|------|
+|Result|4D.Blob|<-|Content of the attachment|
+</div>
+<!-- END REF -->
 
 
 #### Descripción

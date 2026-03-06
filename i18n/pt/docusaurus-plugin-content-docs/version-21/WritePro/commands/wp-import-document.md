@@ -8,6 +8,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Import document.Params-->
 
+<div class="no-index">
+
 | Parâmetro | Tipo                     |                             | Descrição                                                                                                                                                                                                                                                          |
 | --------- | ------------------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | filePath  | Text                     | &#8594; | Path to: a 4D Write document (.4w7 or .4wt) or a 4D Write Pro document (.4wp) or a .docx document (.docx) |
@@ -15,6 +17,7 @@ displayed_sidebar: docs
 | option    | Integer, Object          | &#8594; | (Integer) Import option for HTML expressions, (object) Import options for .docx document                                                                                                                     |
 | Resultado | Object                   | &#8592; | Objeto 4D Write Pro                                                                                                                                                                                                                                                |
 
+</div>
 <!-- END REF-->
 
 ## Descrição

@@ -3,7 +3,7 @@ id: advanced-programming
 title: Programmation avancée avec Javascript
 ---
 
-Une zone 4D View Pro est un [objet de formulaire de zone Web](../FormObjects/webArea_overview.md) qui utilise le [moteur de rendu Web intégré](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine). En tant que telle, elle se comporte comme n'importe quelle autre zone Web, et vous pouvez lui faire exécuter du code Javascript en appelant la commande 4D [`WA Evaluate Javascript`](../commands-legacy/wa-evaluate-javascript).
+Une zone 4D View Pro est un [objet de formulaire de zone Web](../FormObjects/webArea_overview.md) qui utilise le [moteur de rendu Web intégré](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine). En tant que telle, elle se comporte comme n'importe quelle autre zone Web, et vous pouvez lui faire exécuter du code Javascript en appelant la commande 4D [`WA Evaluate Javascript`](../commands/wa-evaluate-javascript).
 
 Étant donné que 4D View Pro est alimenté par la [solution de feuille de calcul SpreadJS](https://developer.mescius.com/spreadjs), vous pouvez également appeler les méthodes Javascript de SpreadJS dans les zones 4D View Pro.
 
@@ -40,3 +40,4 @@ WA Evaluate JavaScript(*; "ViewProArea"; "Utils.spread.undoManager().undo()")
 ## Dépôt 4D View Pro Tips
 
 [4D-View-Pro-Tips](https://github.com/4d-depot/4D-View-Pro-Tips) est un dépôt GitHub qui contient un projet rempli de fonctions utiles pour vous permettre de gérer les images flottantes, de trier les colonnes ou les lignes, de créer une culture personnali N'hésitez pas à le cloner et à l'expérimenter ! N'hésitez pas à le cloner et à l'expérimenter !
+

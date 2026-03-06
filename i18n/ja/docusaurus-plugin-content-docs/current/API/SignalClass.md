@@ -213,3 +213,4 @@ Signal がすでにシグナルされている (つまり `signaled` プロパ�
 > Signal オブジェクトを待機しているプロセスの状態は `Waiting for internal flag` です。
 
 <!-- END REF -->
+

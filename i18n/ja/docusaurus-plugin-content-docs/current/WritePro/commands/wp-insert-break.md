@@ -98,5 +98,5 @@ displayed_sidebar: docs
 
 ## 参照
 
-[WP Get breaks](../commands-legacy/wp-get-breaks)</br>
+[WP Get breaks](../commands/wp-get-breaks)</br>
 [WP Insert document body](wp-insert-document-body.md)

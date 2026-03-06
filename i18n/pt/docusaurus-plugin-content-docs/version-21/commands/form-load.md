@@ -79,9 +79,9 @@ Observe que, em todos os casos, o formulário na tela permanece carregado (não 
 Chamada de um formulário de projeto em um trabalho de impressão:
 
 ```4d
-OPEN PRINTING JOB
+ OPEN PRINTING JOB
  FORM LOAD("print_form")
- // execução de eventos e de métodos objeto
+  // execution of events and object methods
 ```
 
 ## Exemplo 2
@@ -89,9 +89,9 @@ OPEN PRINTING JOB
 Chamar um formulário da tabela em um trabalho de impressão:
 
 ```4d
-OPEN PRINTING JOB
-FORM LOAD([People]; "print_form")
-// execução de eventos e métodos de objeto
+ OPEN PRINTING JOB
+ FORM LOAD([People];"print_form")
+  // execution of events and object methods
 ```
 
 ## Exemplo 3
@@ -99,15 +99,15 @@ FORM LOAD([People]; "print_form")
 Analisar os conteúdos de formulário para executar o processamento nas áreas de entrada de texto:
 
 ```4d
-FORM LOAD([People];"my_form")
-// seleção de formulário sem execução de eventos ou métodos
-FORM GET OBJECTS(arrObjNames; rrObjPtrs;arrPages;*)
-For($i;1; tamanho da matriz (arrObjNames))
-If(OBJECT Obter tipo(*; rrObjNames{$i})=Entrada de texto do tipo objeto
-//… processamento
-Finaliza se
-End para
-FORM UNLOAD ///não se esqueça de descarregar o formulário
+ FORM LOAD([People];"my_form")
+  // selection of form without execution of events or methods
+ FORM GET OBJECTS(arrObjNames;arrObjPtrs;arrPages;*)
+ For($i;1;Size of array(arrObjNames))
+    If(OBJECT Get type(*;arrObjNames{$i})=Object type text input)
+  //… processing
+    End if
+ End for
+ FORM UNLOAD //do not forget to unload the form
 ```
 
 ## Exemplo
@@ -115,14 +115,14 @@ FORM UNLOAD ///não se esqueça de descarregar o formulário
 O exemplo a seguir retorna o número de objetos em um formato JSON:
 
 ```4d
-ARRAY TEXT(objectsArray;0) //classificar itens do formulário em arrays
-ARRAY POINTER(variablesArray;0)
-ARRAY INTEGER(pagesArray;0)
-
-FORM LOAD("/RESOURCES/OutputForm.json") //carrega o formulário
-FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form all pages+Form inherited)
-
-ALERT("The form contains "+String(size of array(objectsArray))+" objects") //retorna a contagem de objetos
+ ARRAY TEXT(objectsArray;0) //sort form items into arrays
+ ARRAY POINTER(variablesArray;0)
+ ARRAY INTEGER(pagesArray;0)
+ 
+ FORM LOAD("/RESOURCES/OutputForm.json") //load the form
+ FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form all pages+Form inherited)
+ 
+ ALERT("The form contains "+String(size of array(objectsArray))+" objects") //return the object count
 ```
 
 o resultado mostrado é:
@@ -136,38 +136,38 @@ Se quiser imprimir um formulário contendo uma caixa de lista. Durante o evento 
 1\. No método de impressão, você escreve:
 
 ```4d
-var $formData : Object
-var $over : Boolean
-var $full : Boolean
-
-OPEN PRINTING JOB
-$formData:=New object
-$formData.LBcollection:=New collection()
-... //preencher a coleção com dados
-
-FORM LOAD("GlobalForm";$formData) //armazenar a coleção em $formData
-$over:=False
-Repetir
-$full:=Print object(*; "LB") //a fonte de dados dessa caixa de listagem "LB" é Form.LBcollection
-LISTBOX GET PRINT INFORMATION(*; "LB";lk a impressão terminou;$over)
-If(Not($over))
-PAGE BREAK
-End if
-Until($over)
-FORM UNLOAD
-CLOSE PRINTING JOB
+ var $formData : Object
+ var $over : Boolean
+ var $full : Boolean
+ 
+ OPEN PRINTING JOB
+ $formData:=New object
+ $formData.LBcollection:=New collection()
+ ... //fill the collection with data
+ 
+ FORM LOAD("GlobalForm";$formData) //store the collection in $formData
+ $over:=False
+ Repeat
+    $full:=Print object(*;"LB") // the datasource of this "LB" listbox is Form.LBcollection
+    LISTBOX GET PRINT INFORMATION(*;"LB";lk printing is over;$over)
+    If(Not($over))
+       PAGE BREAK
+    End if
+ Until($over)
+ FORM UNLOAD
+ CLOSE PRINTING JOB
 ```
 
 2\. No método de formulário, você pode escrever:
 
 ```4d
-var $o : Object
-Case of
-:(Form event code=On Load)
-For each($o;Form.LBcollection) //LBcollection está disponível
-$o.reference:=Uppercase($o.reference)
-End for each
-End case
+ var $o : Object
+ Case of
+    :(Form event code=On Load)
+       For each($o;Form.LBcollection) //LBcollection is available
+          $o.reference:=Uppercase($o.reference)
+       End for each
+ End case
 ```
 
 ## Veja também

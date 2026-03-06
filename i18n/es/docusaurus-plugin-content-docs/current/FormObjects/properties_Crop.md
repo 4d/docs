@@ -19,7 +19,7 @@ Define el número de columnas de una tabla de miniaturas.
 
 #### Comandos
 
-[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 ---
 
@@ -39,4 +39,5 @@ Define el número de líneas de una tabla de miniaturas.
 
 #### Comandos
 
-[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT SET FORMAT](../commands/object-set-format)
+

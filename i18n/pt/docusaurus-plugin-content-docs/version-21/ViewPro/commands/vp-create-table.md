@@ -19,12 +19,17 @@ title: VP CREATE TABLE
 
 <!-- REF #_method_.VP CREATE TABLE.Params -->
 
-| Parâmetro | Tipo                                                                                  |    | Descrição                                                       |                  |
-| --------- | ------------------------------------------------------------------------------------- | -- | --------------------------------------------------------------- | ---------------- |
-| rangeObj  | Object                                                                                | -> | Objeto intervalo                                                |                  |
-| tableName | Text                                                                                  | -> | Nome da tabela                                                  |                  |
-| source    | Text                                                                                  | -> | Nome da propriedade de contexto de dados a apresentar na tabela |                  |
-| options   | [cs.ViewPro.TableOptions](../classes.md#tableoptions) | -> | Opções adicionais                                               | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro | Tipo                                                                                  |    | Descrição                                                       |
+| --------- | ------------------------------------------------------------------------------------- | -- | --------------------------------------------------------------- |
+| rangeObj  | Object                                                                                | -> | Objeto intervalo                                                |
+| tableName | Text                                                                                  | -> | Nome da tabela                                                  |
+| source    | Text                                                                                  | -> | Nome da propriedade de contexto de dados a apresentar na tabela |
+| options   | [cs.ViewPro.TableOptions](../classes.md#tableoptions) | -> | Opções adicionais                                               |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

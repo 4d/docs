@@ -1207,3 +1207,4 @@ Pour les classes ORDA basées sur le datastore local (`ds`), vous pouvez accéde
 Dans l'éditeur de code 4D, les variables typées en tant que classe ORDA bénéficient automatiquement des fonctions d'auto-complétion. Exemple avec une variable de classe Entity :
 
 ![](../assets/en/ORDA/AutoCompletionEntity.png)
+

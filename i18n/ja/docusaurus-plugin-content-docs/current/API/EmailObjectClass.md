@@ -364,3 +364,4 @@ MailAttachment オブジェクトは [`MAIL New attachment`](../commands/mail-ne
 `.to` プロパティは、<!-- REF #EmailObjectClass.to.Summary -->メールのメインの受信者 [アドレス](#メールアドレス)<!-- END REF --> を格納します。
 
 
+

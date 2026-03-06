@@ -50,12 +50,14 @@ Essa propriedade é **apenas leitura**.
 
 
 <!-- REF #ClassClass.new().Params -->
-| Parâmetro  | Tipo      |    | Descrição                                        |
-| ---------- | --------- |:--:| ------------------------------------------------ |
-| param      | any       | -> | Parâmetros a passar à função constructor         |
-| Resultados | 4D.Object | <- | Novo objeto da classe|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|param|any|->|Parameter(s) to pass to the constructor function|
+|Result|4D.Object|<-|New object of the class|
+</div>
+<!-- END REF -->
 
 #### Descrição
 

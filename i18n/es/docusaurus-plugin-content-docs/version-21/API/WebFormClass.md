@@ -60,10 +60,13 @@ Aunque `myForm` puede no mostrar las propiedades típicas de un objeto cuando se
 
 <!-- REF #WebFormClass.disableState().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo |     | Descripción                                         |
 | ---------- | ---- | :-: | --------------------------------------------------- |
 | state      | Text |  -> | Nombre del estado a desactivar en el formulario web |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -85,15 +88,18 @@ Para más información sobre los estados de las páginas web, consulte la secci�
 
 <!-- REF #WebFormClass.enableState().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo |     | Descripción                                      |
 | ---------- | ---- | :-: | ------------------------------------------------ |
 | state      | Text |  -> | Nombre del estado a activar en el formulario web |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
 
-La función `.enableState()` <!-- REF #WebFormClass.enableState().Summary -->activa la renderización del *estado* en la página web actual<!-- END REF -->.
+La función `.enableState()` <!-- REF #WebFormClass.enableState().Summary -->activa la renderización del *state* en la página web actual<!-- END REF -->.
 
 Esta función no hace nada si:
 
@@ -102,7 +108,7 @@ Esta función no hace nada si:
 
 Si activa o [desactiva](#disablestate) varios estados dentro de la misma función usuario, todas las modificaciones se envían al mismo tiempo al cliente una vez que la función termina.
 
-Para más información sobre los estados de las páginas web, consulte la sección [Estados en la documentación de Qodly](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/states/stateOverview).
+Para más información sobre los estados de las páginas web, consulte la [sección Estados en la documentación de Qodly](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/states/stateOverview).
 
 #### Ejemplo
 
@@ -121,10 +127,13 @@ Function authenticationError()
 
 <!-- REF #WebFormClass.setError().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo |     | Descripción                                     |
 | ---------- | ---- | :-: | ----------------------------------------------- |
 | msg        | Text |  -> | Mensaje de error a mostrar en el formulario web |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -156,10 +165,13 @@ Si la funcionalidad [**Provide feedback**](https://developer.4d.com/qodly/4DQodl
 
 <!-- REF #WebFormClass.setMessage().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo |     | Descripción                                           |
 | ---------- | ---- | :-: | ----------------------------------------------------- |
 | msg        | Text |  -> | Mensaje de información a mostrar en el formulario web |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -191,10 +203,13 @@ Si la funcionalidad [**Provide feedback**](https://developer.4d.com/qodly/4DQodl
 
 <!-- REF #WebFormClass.setWarning().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo |     | Descripción                                              |
 | ---------- | ---- | :-: | -------------------------------------------------------- |
 | msg        | Text |  -> | Mensaje de advertencia para mostrar en el formulario web |
 
+</div>
 <!-- END REF -->
 
 #### Descripción

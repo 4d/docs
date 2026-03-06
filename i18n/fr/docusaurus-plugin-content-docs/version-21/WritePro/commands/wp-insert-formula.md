@@ -8,6 +8,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert formula.Params-->
 
+<div class="no-index">
+
 | Paramètres  | Type   |                             | Description                                                        |
 | ----------- | ------ | --------------------------- | ------------------------------------------------------------------ |
 | targetObj   | Object | &#8594; | Plage ou élément ou document 4D Write Pro                          |
@@ -16,6 +18,7 @@ displayed_sidebar: docs
 | rangeUpdate | Number | &#8594; | Inclut ou exclut le contenu inséré dans la plage                   |
 | Résultat    | Object | &#8592; | Objet de plage de texte représentant le résultat de la formule     |
 
+</div>
 <!-- END REF-->
 
 ## Description

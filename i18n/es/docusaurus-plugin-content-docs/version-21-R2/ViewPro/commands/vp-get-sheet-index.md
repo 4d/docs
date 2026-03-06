@@ -9,11 +9,16 @@ title: VP Get sheet index
 
 <!-- REF #_method_.VP Get sheet index.Params -->
 
-| Parámetros | Tipo    |                             | Descripción                                  |                  |
-| ---------- | ------- | --------------------------- | -------------------------------------------- | ---------------- |
-| vpAreaName | Text    | ->                          | Nombre de objeto formulario área 4D View Pro |                  |
-| name       | Text    | ->                          | Nombre de la hoja                            |                  |
-| Resultado  | Integer | <- | Índice de la hoja                            | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo    |                             | Descripción                                  |
+| ---------- | ------- | --------------------------- | -------------------------------------------- |
+| vpAreaName | Text    | ->                          | Nombre de objeto formulario área 4D View Pro |
+| name       | Text    | ->                          | Nombre de la hoja                            |
+| Resultado  | Integer | <- | Índice de la hoja                            |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

@@ -9,11 +9,16 @@ title: VP SET TEXT VALUE
 
 <!-- REF #_method_.VP SET TEXT VALUE.Params -->
 
-| Paramètres    | Type   |    | Description          |                  |
-| ------------- | ------ | -- | -------------------- | ---------------- |
-| rangeObj      | Object | -> | Objet plage          |                  |
-| textValue     | Text   | -> | Valeur texte à fixer |                  |
-| formatPattern | Text   | -> | Format de la valeur  | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres    | Type   |    | Description                                     |
+| ------------- | ------ | -- | ----------------------------------------------- |
+| rangeObj      | Object | -> | Objet plage                                     |
+| textValue     | Text   | -> | Nom de la zone 4D View Pro dans le formulaire\| |
+| formatPattern | Text   | -> | Format de la valeur                             |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

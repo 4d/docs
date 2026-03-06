@@ -61,12 +61,15 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 
 <!-- REF #4D.SystemWorker.new().Params -->
 
+<div class="no-index">
+
 | 引数          | 型                               |                             | 説明                                                        |
 | ----------- | ------------------------------- | :-------------------------: | --------------------------------------------------------- |
 | commandLine | Text                            |              ->             | 実行するコマンドライン                                               |
 | options     | Object                          |              ->             | ワーカーパラメーター                                                |
 | 戻り値         | 4D.SystemWorker | <- | 非同期の新規システムワーカー (プロセスが開始されなかった場合は null) |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -272,10 +275,13 @@ Function _createFile($title : Text; $textBody : Text)
 
 <!-- REF #SystemWorkerClass.closeInput().Params -->
 
+<div class="no-index">
+
 | 引数 | 型 |     | 説明         |
 | -- | - | :-: | ---------- |
 |    |   |     | 引数を必要としません |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -436,11 +442,14 @@ The `.commandLine` property <!-- REF #SystemWorkerClass.commandLine.Summary -->c
 
 <!-- REF #SystemWorkerClass.postMessage().Params -->
 
+<div class="no-index">
+
 | 引数          | 型    |     | 説明                                                  |
 | ----------- | ---- | :-: | --------------------------------------------------- |
 | message     | Text |  -> | 外部プロセスの入力ストリーム (stdin) に書き込むテキスト |
 | messageBLOB | BLOB |  -> | 入力ストリームに書き込むバイト                                     |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -489,10 +498,13 @@ The `.commandLine` property <!-- REF #SystemWorkerClass.commandLine.Summary -->c
 
 <!-- REF #SystemWorkerClass.terminate().Params -->
 
+<div class="no-index">
+
 | 引数 | 型 |     | 説明         |
 | -- | - | :-: | ---------- |
 |    |   |     | 引数を必要としません |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -548,11 +560,14 @@ The `.commandLine` property <!-- REF #SystemWorkerClass.commandLine.Summary -->c
 
 <!-- REF #SystemWorkerClass.wait().Params -->
 
+<div class="no-index">
+
 | 引数      | 型                               |                             | 説明                           |
 | ------- | ------------------------------- | :-------------------------: | ---------------------------- |
 | timeout | Real                            |              ->             | 最大待機時間(秒) |
 | 戻り値     | 4D.SystemWorker | <- | SystemWorker オブジェクト          |
 
+</div>
 <!-- END REF -->
 
 #### 説明

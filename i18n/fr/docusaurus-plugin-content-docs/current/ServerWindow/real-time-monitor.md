@@ -22,7 +22,7 @@ Les informations suivantes sont fournies pour chaque ligne :
   - **Sous-opérations** (le cas échéant) : affiche les opérations dépendantes de l'opération sélectionnée (par exemple, suppression des enregistrements liés avant suppression de l'enregistrement parent).
   - **Détails du process** : fournit des informations supplémentaires concernant la table, le champ, le process ou le client, en fonction du type d'opération
 
-> Real-time monitoring page uses the [`ACTIVITY SNAPSHOT`](../commands-legacy/activity-snapshot) command internally. Vous trouverez des informations supplémentaires dans la description de cette commande.
+> Real-time monitoring page uses the [`ACTIVITY SNAPSHOT`](../commands/activity-snapshot) command internally. Vous trouverez des informations supplémentaires dans la description de cette commande.
 
 La page est active et mise à jour en permanence dès qu’elle est affichée. Il est à noter que son fonctionnement peut ralentir sensiblement l’exécution de l’application. Il est possible de suspendre la mise à jour de la page d’une des manières suivantes :
 
@@ -56,3 +56,4 @@ Le bouton **Instantané** vous permet de copier dans le presse-papiers toutes le
 ## Afficher opérations au moins 5 secondes
 
 Si vous cochez l'option **Afficher opérations au moins 5 secondes**, toutes les opérations listées seront affichées dans la page pendant au moins cinq secondes, même après que l'exécution de l'opération soit terminée. Les opérations terminées restant affichées sont grisées dans la liste. Cette fonction est utile lorsque vous voulez observer des opérations dont l'exécution est très rapide.
+

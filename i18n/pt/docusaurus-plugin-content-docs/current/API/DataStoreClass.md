@@ -1313,3 +1313,4 @@ Pode aninhar várias transações (subtransações). Se a transação principal 
 Consulte o exemplo de [`.startTransaction()`](#starttransaction).
 
 <!-- END REF -->
+

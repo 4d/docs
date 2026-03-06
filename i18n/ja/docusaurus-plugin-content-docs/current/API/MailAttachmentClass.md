@@ -140,3 +140,4 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 #### 説明
 
 `.type` プロパティは、<!-- REF #MailAttachmentClass.type.Summary -->添付ファイルの `content-type`<!-- END REF --> を格納します。 [`MAIL New attachment`](../commands/mail-new-attachment) コマンドにて、このタイプが明示的に渡されていない場合、`content-type` はファイルの拡張子に基づきます。
+

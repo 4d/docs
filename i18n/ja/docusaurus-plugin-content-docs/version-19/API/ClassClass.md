@@ -50,12 +50,14 @@ title: Class
 
 
 <!-- REF #ClassClass.new().Params -->
-| 引数    | 型         |    | 説明                                      |
-| ----- | --------- |:--:| --------------------------------------- |
-| param | any       | -> | コンストラクター関数に渡す引数                         |
-| 戻り値   | 4D.Object | <- | クラスの新規オブジェクト|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|param|any|->|Parameter(s) to pass to the constructor function|
+|Result|4D.Object|<-|New object of the class|
+</div>
+<!-- END REF -->
 
 #### 説明
 

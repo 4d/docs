@@ -56,13 +56,14 @@ Os objectos do IMAP Transporter são instanciados com o comando [IMAP New Transp
 
 
 <!-- REF #_command_.IMAP New transporter.Params -->
-| Parâmetro  | Tipo               |    | Descrição                                                                         |
-| ---------- | ------------------ |:--:| --------------------------------------------------------------------------------- |
-| server     | Object             | -> | Informação de servidor de correio                                                 |
-| Resultados | 4D.IMAPTransporter | <- | [Objecto de transporte IMAP](#imap-transporter-object)|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|server|Object|->|Mail server information|
+|Result|4D.IMAPTransporter|<-|[IMAP transporter object](#imap-transporter-object)|
+</div>
+<!-- END REF -->
 
 
 #### Descrição
@@ -115,12 +116,14 @@ End if
 
 
 <!-- REF #4D.IMAPTransporter.new().Params -->
-| Parâmetro  | Tipo               |    | Descrição                                                                         |
-| ---------- | ------------------ |:--:| --------------------------------------------------------------------------------- |
-| server     | Object             | -> | Informação de servidor de correio                                                 |
-| Resultados | 4D.IMAPTransporter | <- | [Objecto de transporte IMAP](#imap-transporter-object)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|server|Object|->|Mail server information|
+|Result|4D.IMAPTransporter|<-|[IMAP transporter object](#imap-transporter-object)|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -145,13 +148,15 @@ A função `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summary
 
 
 <!-- REF #IMAPTransporterClass.addFlags().Params -->
-| Parâmetro  | Tipo   |    | Descrição                                                                                                                                                                         |
-| ---------- | ------ |:--:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| msgIDs     | any    | -> | Coleção de strings: IDs únicos de mensagens (texto)<br/>Texto: ID único de uma mensagem<br/>Longint (todos IMAP): Todas as mensagens na caixa de correio seleccionada |
-| keywords   | Object | -> | Flags de palavras chaves a adicionar                                                                                                                                              |
-| Resultados | Object | <- | Estado da operação addFlags<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|msgIDs|any|->|Collection of strings: Message unique IDs (text)<br/>Text: Unique ID of a message<br/>Longint (IMAP all): All messages in the selected mailbox|
+|keywords|Object|->|Keyword flags to add|
+|Result|Object|<-|Status of the addFlags operation|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -235,14 +240,16 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 
 
 <!-- REF #IMAPTransporterClass.append().Params -->
-| Parâmetro      | Tipo   |    | Descrição                                             |
-| -------------- | ------ |:--:| ----------------------------------------------------- |
-| mailObj        | Object | -> | Objeto Email                                          |
-| destinationBox | Text   | -> | Caixa de email que vai receber o objeto Email         |
-| options        | Object | -> | Objeto que contém informações do charset              |
-| Resultados     | Object | <- | Estado da operação anexada|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|mailObj|Object|->|Email object|
+|destinationBox|Text|->|Mailbox to receive Email object|
+|options|Object|->|Object containing charset info |
+|Result|Object|<-|Status of the append operation|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -347,14 +354,16 @@ A propriedade `.checkConnectionDelay` contém <!-- REF #IMAPTransporterClass.che
 
 
 <!-- REF #IMAPTransporterClass.copy().Params -->
-| Parâmetro      | Tipo       |    | Descrição                                                       |
-| -------------- | ---------- |:--:| --------------------------------------------------------------- |
-| msgsIDs        | Collection | -> | Coleção de identificadores únicos de mensagens (strings)        |
-| allMsgs        | Integer    | -> | `IMAP all`: Todas as mensagens na caixa de correio seleccionada |
-| destinationBox | Text       | -> | Caixa de correio para receber mensagens copiadas                |
-| Resultados     | Object     | <- | Estado da operação anexada|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|msgsIDs|Collection|->|Collection of message unique IDs (strings)|
+|allMsgs|Integer|->|`IMAP all`: All messages in the selected mailbox|
+|destinationBox|Text|->|Mailbox to receive copied messages|
+|Result|Object|<-|Status of the copy operation|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -448,12 +457,14 @@ Para copiar todas as mensagens na caixa de correio actual:
 
 
 <!-- REF #IMAPTransporterClass.createBox().Params -->
-| Parâmetro  | Tipo   |    | Descrição                                                                    |
-| ---------- | ------ |:--:| ---------------------------------------------------------------------------- |
-| name       | Text   | -> | Nome da nova caixa de correio                                                |
-| Resultados | Object | <- | Estado da operação de criação da caixa de correio|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|name|Text|->|Name of the new mailbox|
+|Result|Object|<-|Status of the mailbox creation operation|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -525,13 +536,15 @@ End if
 
 
 <!-- REF #IMAPTransporterClass.delete().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                       |
-| ---------- | ---------- |:--:| --------------------------------------------------------------- |
-| msgsIDs    | Collection | -> | Coleção de identificadores únicos de mensagens (strings)        |
-| allMsgs    | Integer    | -> | `IMAP all`: Todas as mensagens na caixa de correio seleccionada |
-| Resultados | Object     | <- | Estado da operação apagada|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|msgsIDs|Collection|->|Collection of message unique IDs (strings)|
+|allMsgs|Integer|->|`IMAP all`: All messages in the selected mailbox|
+|Result|Object|<-|Status of the delete operation|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -624,13 +637,14 @@ Para apagar todas as mensagens na caixa de correio actual:
 
 
 <!-- REF #IMAPTransporterClass.deleteBox().Params -->
-| Parâmetro  | Tipo   |    | Descrição                                                                       |
-| ---------- | ------ |:--:| ------------------------------------------------------------------------------- |
-| name       | Text   | -> | Nome da caixa de correio a apagar                                               |
-| Resultados | Object | <- | Estado da operação de eliminação da caixa de correio|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|name|Text|->|Name of the mailbox to delete|
+|Result|Object|<-|Status of the mailbox deletion operation|
+</div>
+<!-- END REF -->
 
 
 #### Descrição
@@ -700,11 +714,13 @@ $status:=$transporter.subscribe($name) If ($status.success)
 
 
 <!-- REF IMAPTransporterClass.expunge().Params -->
-| Parâmetro  | Tipo   |    | Descrição                                                 |
-| ---------- | ------ |:--:| --------------------------------------------------------- |
-| Resultados | Object | <- | Estado da operação de expurgo |<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Object|<-|Status of the expunge operation |
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -769,12 +785,14 @@ $status:=$transporter.expunge()
 
 
 <!-- REF #IMAPTransporterClass.getBoxInfo().Params -->
-| Parâmetro  | Tipo   |    | Descrição                                  |
-| ---------- | ------ |:--:| ------------------------------------------ |
-| name       | Text   | -> | Nome da nova caixa de correio              |
-| Resultados | Object | <- | objecto boxInfo|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|name|Text|->|Name of the mailbox|
+|Result|Object|<-|boxInfo object|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -823,12 +841,14 @@ O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
 
 <!-- REF #IMAPTransporterClass.getBoxList().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                         |
-| ---------- | ---------- |:--:| ----------------------------------------------------------------- |
-| parameters | Object     | -> | Parâmetros                                                        |
-| Resultados | Collection | <- | Coleção de objetos da caixa de correio|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|parameters|Object|->|Parameter object|
+|Result|Collection|<-|Collection of mailbox objects|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -888,11 +908,13 @@ Se a conta não contiver quaisquer caixas de correio, é devolvida uma colecçã
 
 
 <!-- REF #IMAPTransporterClass.getDelimiter().Params -->
-| Parâmetro  | Tipo |    | Descrição                                                    |
-| ---------- | ---- |:--:| ------------------------------------------------------------ |
-| Resultados | Text | <- | Carácter delimitador da hierarquia<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|-----|--- |:---:|------|
+|Result|Text|<-|Hierarchy delimiter character|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -942,14 +964,16 @@ Carácter delimitador do nome da caixa de correio.
 
 
 <!-- REF #IMAPTransporterClass.getMail().Params -->
-| Parâmetro  | Tipo    |    | Descrição                                                                    |
-| ---------- | ------- |:--:| ---------------------------------------------------------------------------- |
-| msgNumber  | Integer | -> | Número sequencial da mensagem                                                |
-| msgID      | Text    | -> | ID única da mensagem                                                         |
-| options    | Object  | -> | Instruções de tratamento de mensagens                                        |
-| Resultados | Object  | <- | [Email objecto](EmailObjectClass.md#email-object)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|msgNumber|Integer|->|Sequence number of the message|
+|msgID|Text|->|Unique ID of the message|
+|options|Object|->|Message handling instructions|
+|Result|Object|<-|[Email object](EmailObjectClass.md#email-object)|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -1016,15 +1040,17 @@ Se quiser receber uma mensagem com ID = 1:
 
 
 <!-- REF #IMAPTransporterClass.getMails().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                         |
-| ---------- | ---------- |:--:| --------------------------------------------------------------------------------- |
-| ids        | Collection | -> | Colecção de identificação da mensagem                                             |
-| startMsg   | Integer    | -> | Número sequencial da primeira mensagem                                            |
-| endMsg     | Integer    | -> | Número sequencial da última mensagem                                              |
-| options    | Object     | -> | Instruções de tratamento de mensagens                                             |
-| Resultados | Object     | <- | Parâmetro objecto<br/><ul><li>uma colecção de [Email objects](EmailObjectClass.md#email-object) e</li><li>uma colecção de identificações ou números para mensagens em falta, se existirem</li></ul>|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|ids |Collection|->|Collection of message ID|
+|startMsg|Integer|->|Sequence number of the first message|
+|endMsg |Integer|->|Sequence number of the last message|
+|options|Object|->|Message handling instructions|
+|Result|Object|<-|Object containing:<br/><ul><li>uma colecção de [Email objects](EmailObjectClass.md#email-object) e</li><li>uma colecção de identificações ou números para mensagens em falta, se existirem</li></ul>|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -1117,14 +1143,16 @@ Se quiser recuperar os 20 e-mails mais recentes sem alterar o seu estatuto de "v
 
 
 <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                                                 |
-| ---------- | ---------- |:--:| --------------------------------------------------------------------------------------------------------- |
-| msgNumber  | Integer    | -> | Número sequencial da mensagem                                                                             |
-| msgID      | Text       | -> | ID única da mensagem                                                                                      |
-| updateSeen | Parâmetros | -> | Se Verdadeiro, a mensagem é marcada "visto" na caixa de correio. Se Falso, a mensagem é deixada intocada. |
-| Resultados | BLOB       | <- | Blob da string MIME retornado do servidor mail|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|msgNumber|Integer|-> |Sequence number of the message|
+|msgID|Text|-> |Unique ID of the message|
+|updateSeen|Boolean|->|If True, the message is marked "seen" in the mailbox. If False the message is left untouched.|
+|Result|BLOB|<-|Blob of the MIME string returned from the mail server|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -1192,14 +1220,16 @@ O parâmetro opcional *updateSeen* permite-lhe especificar se a mensagem está m
 
 
 <!-- REF #IMAPTransporterClass.move().Params -->
-| Parâmetro      | Tipo       |    | Descrição                                                       |
-| -------------- | ---------- |:--:| --------------------------------------------------------------- |
-| msgsIDs        | Collection | -> | Coleção de identificadores únicos de mensagens (strings)        |
-| allMsgs        | Integer    | -> | `IMAP all`: Todas as mensagens na caixa de correio seleccionada |
-| destinationBox | Text       | -> | Caixa de correio para receber mensagens movimentadas            |
-| Resultados     | Object     | <- | Estado da operação de mudança|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|msgsIDs|Collection|->|Collection of message unique IDs (strings)|
+|allMsgs|Integer|->|`IMAP all`: All messages in the selected mailbox|
+|destinationBox|Text|->|Mailbox to receive moved messages|
+|Result|Object|<-|Status of the move operation|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -1294,13 +1324,15 @@ Para mover todas as mensagens na mailbox atual:
 
 
 <!-- REF #IMAPTransporterClass.numToID().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                    |
-| ---------- | ---------- |:--:| ------------------------------------------------------------ |
-| startMsg   | Integer    | -> | Número sequencial da primeira mensagem                       |
-| endMsg     | Integer    | -> | Número sequencial da última mensagem                         |
-| Resultados | Collection | <- | Colecção de identificações únicas|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|-----|--- |:---:|------|
+|startMsg|Integer|-> |Sequence number of the first message|
+|endMsg|Integer|->|Sequence number of the last message|
+|Result|Collection|<-|Collection of unique IDs|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -1358,13 +1390,15 @@ A função devolve uma colecção de cordas (identificações únicas).
 
 
 <!-- REF #IMAPTransporterClass.removeFlags().Params -->
-| Parâmetro  | Tipo   |    | Descrição                                                                                                                                                                         |
-| ---------- | ------ |:--:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| msgIDs     | any    | -> | Coleção de strings: IDs únicos de mensagens (texto)<br/>Texto: ID único de uma mensagem<br/>Longint (todos IMAP): Todas as mensagens na caixa de correio seleccionada |
-| keywords   | Object | -> | Flags de palavras-chave a remover                                                                                                                                                 |
-| Resultados | Object | <- | Estado da operação removeFlags|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|msgIDs|any|->|Collection of strings: Message unique IDs (text)<br/>Text: Unique ID of a message<br/>Longint (IMAP all): All messages in the selected mailbox|
+|keywords|Object|->|Keyword flags to remove|
+|Result|Object|<-|Status of the removeFlags operation|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -1447,13 +1481,15 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 
 <!-- REF #IMAPTransporterClass.renameBox().Params -->
-| Parâmetro   | Tipo   |    | Descrição                                                     |
-| ----------- | ------ |:--:| ------------------------------------------------------------- |
-| currentName | Text   | -> | Nome da caixa de correio actual                               |
-| newName     | Text   | -> | Nome da nova caixa de correio                                 |
-| Resultados  | Object | <- | Estado da operação de renomeamento|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|currentName|Text|->|Name of the current mailbox|
+|newName|Text|->|New mailbox name|
+|Result|Object|<-|Status of the renaming operation|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -1524,12 +1560,14 @@ var $server,$boxInfo,$result : Object
 
 
 <!-- REF #IMAPTransporterClass.searchMails().Params -->
-| Parâmetro      | Tipo       |    | Descrição                                                  |
-| -------------- | ---------- |:--:| ---------------------------------------------------------- |
-| searchCriteria | Text       | -> | Critérios de pesquisa                                      |
-| Resultados     | Collection | <- | Coleção de números de mensagens|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|searchCriteria|Text|-> |Search criteria|
+|Result|Collection|<-|Collection of message numbers|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -1661,13 +1699,15 @@ As chaves de pesquisa podem solicitar o valor a pesquisar:
 
 
 <!-- REF #IMAPTransporterClass.selectBox().Params -->
-| Parâmetro  | Tipo    |    | Descrição                                  |
-| ---------- | ------- |:--:| ------------------------------------------ |
-| name       | Text    | -> | Nome da nova caixa de correio              |
-| state      | Integer | -> | Estado de acesso à caixa de correio        |
-| Resultados | Object  | <- | objecto boxInfo|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|name|Text|-> |Name of the mailbox|
+|state|Integer|->|Mailbox access status|
+|Result|Object|<-|boxInfo object|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -1736,12 +1776,14 @@ Se a string `permanentFlags`  incluir marcador especial \*, significa que o serv
 
 
 <!-- REF #IMAPTransporterClass.subscribe().Params -->
-| Parâmetro  | Tipo   |    | Descrição                                                   |
-| ---------- | ------ |:--:| ----------------------------------------------------------- |
-| name       | Text   | -> | Nome da nova caixa de correio                               |
-| Resultados | Object | <- | Estado da operação de subscrição|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|name|Text|-> |Name of the mailbox|
+|Result|Object|<-|Status of the subscribe operation|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -1808,12 +1850,14 @@ End if
 
 
 <!-- REF #IMAPTransporterClass.unsubscribe().Params -->
-| Parâmetro  | Tipo   |    | Descrição                                                 |
-| ---------- | ------ |:--:| --------------------------------------------------------- |
-| name       | Text   | -> | Nome da nova caixa de correio                             |
-| Resultados | Object | <- | Estado da operação unsubscribe|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|name|Text|-> |Name of the mailbox|
+|Result|Object|<-|Status of the unsubscribe operation|
+</div>
+<!-- END REF -->
 
 #### Descrição
 

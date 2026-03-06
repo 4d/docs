@@ -16,7 +16,7 @@ L'éditeur d'étiquettes de 4D offre un moyen pratique d'imprimer une grande var
 
 :::note
 
-Les étiquettes peuvent également être créées à l'aide de l'[Éditeur de formulaires](../FormEditor/formEditor.md). Utilisez l'éditeur de formulaires pour concevoir des étiquettes spécialisées qui incluent des variables ou profitez des outils de dessin disponibles dans l'éditeur de formulaires et imprimez-les en utilisant l'éditeur d'étiquettes ou la commande [`PRINT LABEL`](../commands-legacy/print-label).
+Les étiquettes peuvent également être créées à l'aide de l'[Éditeur de formulaires](../FormEditor/formEditor.md). Utilisez l'éditeur de formulaires pour concevoir des étiquettes spécialisées qui incluent des variables ou profitez des outils de dessin disponibles dans l'éditeur de formulaires et imprimez-les en utilisant l'éditeur d'étiquettes ou la commande [`PRINT LABEL`](../commands/print-label).
 
 :::
 
@@ -27,7 +27,7 @@ Pour ouvrir l’éditeur d’étiquettes :
 
 - En mode Développement, sélectionnez **Etiquettes...** dans le menu **Outils** ou dans le menu associé au bouton “Outils” dans la barre d’outils de 4D.
   OU
-- En mode Application, utilisez la commande [`PRINT LABEL`](../commands-legacy/print-label) .
+- En mode Application, utilisez la commande [`PRINT LABEL`](../commands/print-label) .
 
 ![](../assets/en/Desktop/label-wizard.png)
 
@@ -244,4 +244,5 @@ Les fichiers ".4lbp" standard ainsi que les fichiers générés par l'ancien éd
 A l'ouverture de l'éditeur d'étiquettes, si ce dossier est détecté et qu'il contient au moins un fichier d'étiquettes valide, une icône de pop up est ajoutée au bouton **Import**. Les modèles d'étiquettes peuvent ensuite être sélectionnés à l'aide d'une ligne de menu :
 
 ![](../assets/en/Desktop/label-resources2.png)
+
 

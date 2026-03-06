@@ -11,7 +11,7 @@ title: タブコントロール
 
 各画面を移動するには、目的のタブをクリックします。
 
-これらの画面は、マルチページフォームの各ページを表わしたり、またはユーザーがタブがクリックすると変化するオブジェクトを表わすこともできます。 タブコントロールをページ移動ツールとして使用する場合、ユーザーがタブをクリックすると [`FORM GOTO PAGE`](../commands-legacy/form-goto-page) コマンドまたは `gotoPage` 標準アクションを使用します。
+これらの画面は、マルチページフォームの各ページを表わしたり、またはユーザーがタブがクリックすると変化するオブジェクトを表わすこともできます。 タブコントロールをページ移動ツールとして使用する場合、ユーザーがタブをクリックすると [`FORM GOTO PAGE`](../commands/form-goto-page) コマンドまたは `gotoPage` 標準アクションを使用します。
 
 タブコントロールの他の利用法は、サブフォームやリストボックスに表示されるデータを制御することです。 たとえば、名刺帳はタブコントロールを用いて実現することができます。 タブにはひらがなの各文字を表示し、タブコントロールの動作としてはユーザーがクリックした文字と一致するデータをロードします。
 
@@ -81,13 +81,13 @@ Form.tabControl.index:=2 // ページ3 から開始します
  arrPages{3}:="Notes"  
 ```
 
-> ページの名前を階層リストに保存し、[LIST TO ARRAY](../commands-legacy/list-to-array) コマンドを使用して値をロードすることも可能です。
+> ページの名前を階層リストに保存し、[LIST TO ARRAY](../commands/list-to-array) コマンドを使用して値をロードすることも可能です。
 
 ## Goto page 機能
 
 ### FORM GOTO PAGE コマンド
 
-タブコントロールのオブジェクトメソッド内では[`FORM GOTO PAGE`](../commands-legacy/form-goto-page) コマンドを使用することができます:
+タブコントロールのオブジェクトメソッド内では[`FORM GOTO PAGE`](../commands/form-goto-page) コマンドを使用することができます:
 
 ```4d
 FORM GOTO PAGE(arrPages)
@@ -140,3 +140,4 @@ FORM GOTO PAGE(arrPages)
 [下線](properties_Text.md#下線) -
 [ヘルプTips](properties_Help.md#ヘルプtips) -
 [標準アクション](properties_Action.md#標準アクション)
+

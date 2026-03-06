@@ -33,11 +33,14 @@ Les objets POP3 Transporter sont instanciés avec la commande [`POP3 New transpo
 
 <!-- REF #4D.POP3Transporter.new().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type                               |                             | Description                                       |
 | ---------- | ---------------------------------- | :-------------------------: | ------------------------------------------------- |
 | server     | Object                             |              ->             | Informations sur le serveur de messagerie         |
 | Résultat   | 4D.POP3Transporter | <- | [Objet POP3 Transporter](#objet-pop3-transporter) |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -91,10 +94,13 @@ La fonction `4D.POP3Transporter.new()` <!-- REF #4D.POP3Transporter.new().Summar
 
 <!-- REF #POP3TransporterClass.delete().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type    |     | Description                   |
 | ---------- | ------- | :-: | ----------------------------- |
 | msgNumber  | Integer |  -> | Numéro du message à supprimer |
 
+</div>
 <!-- END REF -->
 
 ##### Description
@@ -138,10 +144,13 @@ L'exécution de cette méthode ne supprime pas réellement l'email. L'email marq
 
 <!-- REF #POP3TransporterClass.getBoxInfo().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type   |                             | Description   |
 | ---------- | ------ | :-------------------------: | ------------- |
 | Résultat   | Object | <- | Objet boxInfo |
 
+</div>
 <!-- END REF -->
 
 ##### Description
@@ -188,12 +197,15 @@ L'objet `boxInfo` contient les propriété suivantes :
 
 <!-- REF #POP3TransporterClass.getMail().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type    |                             | Description                                                                                     |
 | ---------- | ------- | :-------------------------: | ----------------------------------------------------------------------------------------------- |
 | msgNumber  | Integer |              ->             | Numéro du message dans la liste                                                                 |
 | headerOnly | Boolean |              ->             | True pour télécharger uniquement les en-têtes de l'email (par défaut, False) |
 | Résultat   | Object  | <- | [Objet Email](EmailObjectClass.md#objet-email)                                                  |
 
+</div>
 <!-- END REF -->
 
 ##### Description
@@ -255,11 +267,14 @@ Vous souhaitez connaitre l'expéditeur du premier mail de la boite de réception
 
 <!-- REF #POP3TransporterClass.getMailInfo().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type    |                             | Description                     |
 | ---------- | ------- | :-------------------------: | ------------------------------- |
 | msgNumber  | Integer |              ->             | Numéro du message dans la liste |
 | Résultat   | Object  | <- | Objet MailInfo                  |
 
+</div>
 <!-- END REF -->
 
 ##### Description
@@ -315,10 +330,13 @@ La fonction retourne **Null** si :
 
 <!-- REF #POP3TransporterClass.getMailInfoList().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type       |                             | Description                    |
 | ---------- | ---------- | :-------------------------: | ------------------------------ |
 | Résultat   | Collection | <- | Collection d'objets `mailInfo` |
 
+</div>
 <!-- END REF -->
 
 ##### Description
@@ -380,11 +398,14 @@ Vous souhaitez connaitre le nombre total d'emails de la boîte de réception ain
 
 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type    |                             | Description                                          |
 | ---------- | ------- | :-------------------------: | ---------------------------------------------------- |
 | msgNumber  | Integer |              ->             | Numéro du message dans la liste                      |
 | Résultat   | Blob    | <- | Blob de la chaine MIME retournée par le serveur mail |
 
+</div>
 <!-- END REF -->
 
 ##### Description
@@ -446,10 +467,13 @@ Vous souhaitez connaitre le nombre total d'emails de la boîte de réception ain
 
 <!-- REF #POP3TransporterClass.undeleteAll().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type |     | Description                 |
 | ---------- | ---- | :-: | --------------------------- |
 |            |      |     | Ne requiert aucun paramètre |
 
+</div>
 <!-- END REF -->
 
 ##### Description

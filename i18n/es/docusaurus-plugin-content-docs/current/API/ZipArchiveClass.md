@@ -45,3 +45,4 @@ La propiedad `.root` contiene <!-- REF #ZipArchiveClass.root.Summary -->una carp
 La carpeta `root` y su contenido se pueden manipular con las funciones y propiedades [ZipFile](ZipFileClass.md) y [ZipFolder](ZipFolderClass.md).
 
 Esta propiedad es de **solo lectura**.
+

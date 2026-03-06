@@ -172,11 +172,11 @@ When using 4D forms with Fluent UI rendering, you need to pay attention to the f
 
 - The [`FORM theme`](../commands/form-theme) command returns the actual display theme of the current form. Possible values: "Classic" or "FluentUI". If there is no current form or if the command is called on macOS, and empty string is returned.
 - The [`Application info`](../commands/application-info) command allows you to know if Fluent UI can be used (`canUseFluentUI` property) or is being used (`useFluentUI` property).
-- If [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info) is called in the context of a form, the information returned relates to the current appearance of the form (Classic or FluentUI). If the command is called outside the context of a form, the information returned relates to the [global project settings](#application-setting).
-- [`SET MENU ITEM STYLE`](../commands-legacy/set-menu-item-style) with `Underline` *itemStyle* parameter is not supported (ignored) for pop up menus.
+- If [`GET STYLE SHEET INFO`](../commands/get-style-sheet-info) is called in the context of a form, the information returned relates to the current appearance of the form (Classic or FluentUI). If the command is called outside the context of a form, the information returned relates to the [global project settings](#application-setting).
+- [`SET MENU ITEM STYLE`](../commands/set-menu-item-style) with `Underline` *itemStyle* parameter is not supported (ignored) for pop up menus.
 - [Stepper](../FormObjects/stepper.md) form object does not support [double-click event](../Events/onDoubleClicked.md).
 - [Circle buttons](../FormObjects/button_overview.md#circle) are supported (similar as macOS).
-- The [`WA ZOOM IN`](../commands-legacy/wa-zoom-in) / [`WA ZOOM OUT`](../commands-legacy/wa-zoom-out) commands are not supported in Web areas with system rendering engine.
+- The [`WA ZOOM IN`](../commands/wa-zoom-in) / [`WA ZOOM OUT`](../commands/wa-zoom-out) commands are not supported in Web areas with system rendering engine.
 - A focus ring can be added to picture and text [inputs](../FormObjects/input_overview.md).
 
 ## Formulários herdados
@@ -211,3 +211,4 @@ Para interromper a herança de um formulário, selecione `\<None>` na Property L
 ## Propriedades compatíveis
 
 [Barra de Menu Associado](properties_Menu.md#associated-menu-bar) - [Altura fixa](properties_WindowSize.md#fixed-height) - [Largura fixa](properties_Markers.md#fixed-width) - [Quebra de forma](properties_Markers.md#form-break) - [Formulário detalhado](properties_Markers.md#form-detail) - [Form Footer](properties_Markers.md#form-footer) - [Cabeçalho do formulário](properties_Markers.md#form-header) - [Nome do formulário](properties_FormProperties.md#form-name) - [Tipo de Formulário](properties_FormProperties.md#form-type) - [Nome do formulário herdado](properties_FormProperties.md#inherited-form-name) - [Tabela de formulário herdades](properties_FormProperties.md#hererited-form-table) - [Altura Máxima](properties_WindowSize.md#maximum-height-minimum-height) - [Largura Máxima](properties_WindowSize.md#maximum-width-minimum-width) - [Método](properties_Action.md#method) - [Altura mínima](properties_WindowSize.md#maximum-height-minimum-height) - [Widget mínimo](properties_WindowSize.md#maximum-width-minimum-width) - [Páginas](properties_FormProperties.md#pages) - [Configurações de impressão](properties_Print.md#settings) - [Publicado como subform](properties_FormProperties.md#published-as-subform) - [Salvar Geometry](properties_FormProperties.md#save-geometry) - [Título da Janela](properties_FormProperties.md#window-title)
+

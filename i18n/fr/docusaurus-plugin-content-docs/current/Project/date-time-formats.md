@@ -8,7 +8,7 @@ A tout moment dans vos projets 4D, vous pouvez être amené à formater des vale
 4D comprend une liste étendue de motifs (*patterns*) que vous pouvez utiliser pour créer et appliquer des formats de date et d'heure personnalisés dans vos applications, en plus des formats par défaut. Les modèles de format personnalisés sont pris en charge par les fonctions suivantes :
 
 - la commande [`String`](../commands/string),
-- les commandes [`OBJECT SET FORMAT`](../commands-legacy/object-set-format) et [`OBJECT Get format`](../commands-legacy/object-get-format),
+- les commandes [`OBJECT SET FORMAT`](../commands/object-set-format) et [`OBJECT Get format`](../commands/object-get-format),
 - les propriétés de format de date et d'heure pour les objets de formulaire, disponibles dans la liste des propriétés ou dans les propriétés JSON [`dateFormat`](../FormObjects/properties_Display.md#date-format) et [`timeFormat`](../FormObjects/properties_Display.md#time-format).
 
 ## Liste des motifs
@@ -164,3 +164,4 @@ Par exemple :
 ## Voir également
 
 Voir [ce billet de blog](https://blog.4d.com/tailored-customization-for-dates-and-times) pour plus d'informations sur les formats personnalisés de date et d'heure.
+

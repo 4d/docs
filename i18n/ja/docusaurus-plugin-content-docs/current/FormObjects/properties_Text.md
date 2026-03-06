@@ -7,7 +7,7 @@ title: Text
 
 ## ピッカーの使用を許可
 
-このプロパティが有効化されている場合、[OPEN FONT PICKER](../commands-legacy/open-font-picker) および [OPEN COLOR PICKER](../commands-legacy/open-color-picker) コマンドを呼び出すことでシステムフォントウィンドウとカラーピッカーウィンドウを表示することができます。 これらのピッカーウィンドウを使用して、ユーザーはフォームオブジェクトのフォントやカラーをクリックによって変更できます。 このプロパティが無効になっていると (デフォルト)、ピッカーを開くコマンドは使用できません。
+このプロパティが有効化されている場合、[OPEN FONT PICKER](../commands/open-font-picker) および [OPEN COLOR PICKER](../commands/open-color-picker) コマンドを呼び出すことでシステムフォントウィンドウとカラーピッカーウィンドウを表示することができます。 これらのピッカーウィンドウを使用して、ユーザーはフォームオブジェクトのフォントやカラーをクリックによって変更できます。 このプロパティが無効になっていると (デフォルト)、ピッカーを開くコマンドは使用できません。
 
 #### JSON 文法
 
@@ -25,7 +25,7 @@ title: Text
 
 選択テキストの線を太くし、濃く見えるようにします。
 
-このプロパティは[**OBJECT SET FONT STYLE**](../commands-legacy/object-set-font-style) コマンドを使用しても設定することができます。
+このプロパティは[**OBJECT SET FONT STYLE**](../commands/object-set-font-style) コマンドを使用しても設定することができます。
 
 > これは通常のテキストです。<br/>
 > **これは太字のテキストです。**
@@ -42,7 +42,7 @@ title: Text
 
 #### コマンド
 
-[OBJECT Get font style](../commands-legacy/object-get-font-style) - [OBJECT SET FONT STYLE](../commands-legacy/object-set-font-style)
+[OBJECT Get font style](../commands/object-get-font-style) - [OBJECT SET FONT STYLE](../commands/object-set-font-style)
 
 ---
 
@@ -50,7 +50,7 @@ title: Text
 
 選択テキストの線を右斜めに傾けます。
 
-このプロパティは[**OBJECT SET FONT STYLE**](../commands-legacy/object-set-font-style) コマンドを使用しても設定することができます。
+このプロパティは[**OBJECT SET FONT STYLE**](../commands/object-set-font-style) コマンドを使用しても設定することができます。
 
 > これは通常のテキストです。<br/>
 > *これはイタリックのテキストです。*
@@ -67,7 +67,7 @@ title: Text
 
 #### コマンド
 
-[OBJECT Get font style](../commands-legacy/object-get-font-style) - [OBJECT SET FONT STYLE](../commands-legacy/object-set-font-style)
+[OBJECT Get font style](../commands/object-get-font-style) - [OBJECT SET FONT STYLE](../commands/object-set-font-style)
 
 ---
 
@@ -87,7 +87,7 @@ title: Text
 
 #### コマンド
 
-[OBJECT Get font style](../commands-legacy/object-get-font-style) - [OBJECT SET FONT STYLE](../commands-legacy/object-set-font-style)
+[OBJECT Get font style](../commands/object-get-font-style) - [OBJECT SET FONT STYLE](../commands/object-set-font-style)
 
 ---
 
@@ -128,7 +128,7 @@ title: Text
 
 #### コマンド
 
-[OBJECT Get style sheet](../commands-legacy/object-get-style-sheet) - [OBJECT SET STYLE SHEET](../commands-legacy/object-set-style-sheet)
+[OBJECT Get style sheet](../commands/object-get-style-sheet) - [OBJECT SET STYLE SHEET](../commands/object-set-style-sheet)
 
 ### フォントファミリー
 
@@ -137,7 +137,7 @@ title: Text
 - *フォントファミリー:* "times", "courier", "arial" などのフォントファミリーの名称。
 - *総称ファミリー:* "serif", "sans-serif", "cursive", "fantasy", "monospace" などの汎用ファミリーの名称。
 
-これは、[`OBJECT SET FONT`](../commands-legacy/object-set-font) コマンドを使用しても設定することができます。
+これは、[`OBJECT SET FONT`](../commands/object-set-font) コマンドを使用しても設定することができます。
 
 #### JSON 文法
 
@@ -153,7 +153,7 @@ title: Text
 
 #### コマンド
 
-[OBJECT Get font](../commands-legacy/object-get-font) - [OBJECT SET FONT](../commands-legacy/object-set-font)
+[OBJECT Get font](../commands/object-get-font) - [OBJECT SET FONT](../commands/object-set-font)
 
 ## フォントサイズ
 
@@ -171,7 +171,7 @@ title: Text
 
 #### コマンド
 
-[OBJECT Get font size](../commands-legacy/object-get-font-size) - [OBJECT SET FONT SIZE](../commands-legacy/object-set-font-size)
+[OBJECT Get font size](../commands/object-get-font-size) - [OBJECT SET FONT SIZE](../commands/object-set-font-size)
 
 ---
 
@@ -187,7 +187,7 @@ title: Text
 - 16進数値 - 例: "#ff0000"
 - RGB値 - 例: "rgb(255,0,0)"
 
-このプロパティは[**OBJECT SET RGB COLORS**](../commands-legacy/object-set-rgb-colors) コマンドを使用しても設定することができます。
+このプロパティは[**OBJECT SET RGB COLORS**](../commands/object-set-rgb-colors) コマンドを使用しても設定することができます。
 
 #### JSON 文法
 
@@ -201,7 +201,7 @@ title: Text
 
 #### コマンド
 
-[OBJECT GET RGB COLORS](../commands-legacy/object-get-rgb-colors) - [OBJECT SET RGB COLORS](../commands-legacy/object-set-rgb-colors)
+[OBJECT GET RGB COLORS](../commands/object-get-rgb-colors) - [OBJECT SET RGB COLORS](../commands/object-set-rgb-colors)
 
 ---
 
@@ -209,9 +209,9 @@ title: Text
 
 `セレクションおよびコレクション/エンティティセレクション型のリストボックス`
 
-リストボックスの各行にカスタマイズしたフォントカラーを適用するために使用します。 RGBカラーを使用しなければなりません。 この点の詳細については、[`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors) コマンドの詳細を参照してください。
+リストボックスの各行にカスタマイズしたフォントカラーを適用するために使用します。 RGBカラーを使用しなければなりません。 この点の詳細については、[`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) コマンドの詳細を参照してください。
 
-式または変数 (配列を除く) を入力します。 表示される行ごとに式や変数は評価されます。 [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors) コマンドの章で説明されている定数を使用することができます。
+式または変数 (配列を除く) を入力します。 表示される行ごとに式や変数は評価されます。 [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) コマンドの章で説明されている定数を使用することができます。
 
 このプロパティは[`LISTBOX SET PROPERTY`](../commands/listbox-set-property) と `lk font color expression` 定数を組み合わせて使用しても設定することができます。
 
@@ -246,7 +246,7 @@ Foreground color;Dark shadow color)
 
 リストボックスの各行にカスタマイズされた文字スタイルを適用するために使用します。
 
-式または変数 (配列を除く) を入力します。 式や変数は、表示行ごと (リストボックスのプロパティの場合) または表示セルごと (リストボックス列のプロパティの場合) に評価されます。 [`LISTBOX SET ROW FONT STYLE`](../commands-legacy/listbox-set-row-font-style) コマンドのページ内で提示されている定数を使用することができます。
+式または変数 (配列を除く) を入力します。 式や変数は、表示行ごと (リストボックスのプロパティの場合) または表示セルごと (リストボックス列のプロパティの場合) に評価されます。 [`LISTBOX SET ROW FONT STYLE`](../commands/listbox-set-row-font-style) コマンドのページ内で提示されている定数を使用することができます。
 
 例:
 
@@ -297,7 +297,7 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 
 #### コマンド
 
-[OBJECT Get horizontal alignment](../commands-legacy/object-get-horizontal-alignment) - [OBJECT SET HORIZONTAL ALIGNMENT](../commands-legacy/object-set-horizontal-alignment)
+[OBJECT Get horizontal alignment](../commands/object-get-horizontal-alignment) - [OBJECT SET HORIZONTAL ALIGNMENT](../commands/object-set-horizontal-alignment)
 
 ---
 
@@ -310,7 +310,7 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 - ピクチャーを除き、すべて `下` です。
 - ピクチャーは `上` です。
 
-このプロパティは、[`OBJECT Get vertical alignment`](../commands-legacy/object-get-vertical-alignment) および [`OBJECT SET VERTICAL ALIGNMENT`](../commands-legacy/object-set-vertical-alignment) コマンドを使用しても管理することができます。
+このプロパティは、[`OBJECT Get vertical alignment`](../commands/object-get-vertical-alignment) および [`OBJECT SET VERTICAL ALIGNMENT`](../commands/object-set-vertical-alignment) コマンドを使用しても管理することができます。
 
 #### JSON 文法
 
@@ -324,7 +324,7 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 
 #### コマンド
 
-[`OBJECT Get vertical alignment`](../commands-legacy/object-get-vertical-alignment) - [`OBJECT SET VERTICAL ALIGNMENT`](../commands-legacy/object-set-vertical-alignment)
+[`OBJECT Get vertical alignment`](../commands/object-get-vertical-alignment) - [`OBJECT SET VERTICAL ALIGNMENT`](../commands/object-set-vertical-alignment)
 
 ---
 
@@ -433,7 +433,7 @@ End if
 
 #### コマンド
 
-[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property) - [OBJECT Is styled text](../commands-legacy/object-is-styled-text) -
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property) - [OBJECT Is styled text](../commands/object-is-styled-text) -
 
 ---
 
@@ -462,7 +462,7 @@ End if
 
 #### コマンド
 
-[OBJECT Get text orientation](../commands-legacy/object-get-text-orientation) - [OBJECT SET TEXT ORIENTATION](../commands-legacy/object-set-text-orientation)
+[OBJECT Get text orientation](../commands/object-get-text-orientation) - [OBJECT SET TEXT ORIENTATION](../commands/object-set-text-orientation)
 
 ---
 
@@ -472,7 +472,7 @@ End if
 
 リストボックスの各行/セルにカスタマイズしたフォントカラーを適用するために使用します。
 
-倍長整数型の配列の名前を入力しなければなりません。 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors) コマンドの章で説明されている定数を使用することができます。 もし上のレベルで定義されている背景色をそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
+倍長整数型の配列の名前を入力しなければなりません。 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) コマンドの章で説明されている定数を使用することができます。 もし上のレベルで定義されている背景色をそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
 
 #### JSON 文法
 
@@ -486,7 +486,7 @@ End if
 
 #### コマンド
 
-[`LISTBOX Get array`](../commands-legacy/listbox-get-array) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays) - [`LISTBOX SET ARRAY`](../commands-legacy/listbox-set-array)
+[`LISTBOX Get array`](../commands/listbox-get-array) - [`LISTBOX GET ARRAYS`](../commands/listbox-get-arrays) - [`LISTBOX SET ARRAY`](../commands/listbox-set-array)
 
 ---
 
@@ -496,7 +496,7 @@ End if
 
 リストボックスの各行/セルにカスタマイズされた文字スタイルを適用するために使用します。
 
-倍長整数型の配列の名前を入力しなければなりません。 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 メソッドを使用して配列を作成するためには、[`LISTBOX SET ROW FONT STYLE`](../commands-legacy/listbox-set-row-font-style) コマンドのページ内で提示されている定数を使用することができます。 定数同士を足し合わせてスタイルを組み合わせることもできます。 もし上のレベルで定義されているスタイルをそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
+倍長整数型の配列の名前を入力しなければなりません。 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 メソッドを使用して配列を作成するためには、[`LISTBOX SET ROW FONT STYLE`](../commands/listbox-set-row-font-style) コマンドのページ内で提示されている定数を使用することができます。 定数同士を足し合わせてスタイルを組み合わせることもできます。 もし上のレベルで定義されているスタイルをそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
 
 #### JSON 文法
 
@@ -510,7 +510,7 @@ End if
 
 #### コマンド
 
-[`LISTBOX Get array`](../commands-legacy/listbox-get-array) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays) - [`LISTBOX SET ARRAY`](../commands-legacy/listbox-set-array)
+[`LISTBOX Get array`](../commands/listbox-get-array) - [`LISTBOX GET ARRAYS`](../commands/listbox-get-arrays) - [`LISTBOX SET ARRAY`](../commands/listbox-set-array)
 
 ---
 
@@ -544,3 +544,4 @@ What a <SPAN STYLE="font-size:13.5pt">beautiful</SPAN> day!
 #### 対象オブジェクト
 
 [入力](input_overview.md)
+

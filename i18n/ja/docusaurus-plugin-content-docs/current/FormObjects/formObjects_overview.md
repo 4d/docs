@@ -18,7 +18,7 @@ title: フォームオブジェクト
 
 - **[フォームエディター](FormEditor/formEditor.md):** ツールバーからオブジェクトをフォーム上にドラッグ＆ドロップします。 次に、プロパティリストでオブジェクトのプロパティを指定します。
 
-- **4D ランゲージ**: [`OBJECT DUPLICATE`](../commands-legacy/object-duplicate) or [`OBJECT SET FONT STYLE`](../commands-legacy/object-set-font-style) などの、`Objects (Forms)` テーマのコマンドを使用することでフォームオブジェクトを作成し、定義することができます。
+- **4D ランゲージ**: [`OBJECT DUPLICATE`](../commands/object-duplicate) or [`OBJECT SET FONT STYLE`](../commands/object-set-font-style) などの、`Objects (Forms)` テーマのコマンドを使用することでフォームオブジェクトを作成し、定義することができます。
 
 - **ダイナミックフォーム内の JSON コード:** JSON を使ってプロパティを定義します。 [type](properties_Object.md#type) プロパティでオブジェクトタイプを定義し、提供されている他の [プロパティ](properties_Reference.md) のうち必要なものを設定します。
   次はボタンオブジェクトの例です:

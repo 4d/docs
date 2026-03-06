@@ -135,12 +135,14 @@ Considerando as propriedades de tabela abaixo:
 
 
 <!-- REF #DataClassClass.all().Params -->
-| Parâmetro  | Tipo                |    | Descrição                                                                                          |
-| ---------- | ------------------- |:--:| -------------------------------------------------------------------------------------------------- |
-| settings   | Object              | -> | Opção de construção: context                                                                       |
-| Resultados | 4D. EntitySelection | <- | Referencias sobre todas as entidades relacionadas com a classe de dados|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|settings|Object|->|Build option: context|
+|Result|4D.EntitySelection|<-|References on all entities related to the Dataclass|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -184,9 +186,12 @@ No  parâmetro *querySettings* é possível passar um objeto que conteha opçõe
 
 
 <!-- REF #DataClassClass.clearRemoteCache().Params -->
-| Parâmetro | Tipo |  | Descrição                  |
-| --------- | ---- |::| -------------------------- |
-|           |      |  | Não exige nenhum parâmetro |
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+||||Does not require any parameters|
+</div>
 <!-- END REF -->
 
 
@@ -236,13 +241,15 @@ $ds. Persons.clearRemoteCache()
 
 
 <!-- REF #DataClassClass.fromCollection().Params -->
-| Parâmetro  | Tipo                |    | Descrição                                                              |
-| ---------- | ------------------- |:--:| ---------------------------------------------------------------------- |
-| objectCol  | Collection          | -> | Coleção de objetos a mapear com entidades                              |
-| settings   | Object              | -> | Opção de construção: context                                           |
-| Resultados | 4D. EntitySelection | <- | Seleção de entidades preenchidas da coleção|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|objectCol |Collection|->|Collection of objects to be mapped with entities|
+|settings  |Object|->|Build option: context|
+|Result|4D.EntitySelection|<-|Entity selection filled from the collection|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -434,13 +441,15 @@ Neste exemplo, a primeira entidade se criará e salvará mas a segunda falhará 
 
 
 <!-- REF #DataClassClass.get().Params -->
-| Parâmetro  | Tipo            |    | Descrição                                                                       |
-| ---------- | --------------- |:--:| ------------------------------------------------------------------------------- |
-| primaryKey | Integer OR Text | -> | Valor da chave primária da entidade a recuperar                                 |
-| settings   | Object          | -> | Opção de construção: context                                                    |
-| Resultados | 4D. Entity      | <- | Entidade que coincide com a chave primária designada|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|primaryKey |Integer OR Text|->|Primary key value of the entity to retrieve|
+|settings  |Object|->|Build option: context|
+|Result|4D.Entity|<-|Entity matching the designated primary key|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -517,11 +526,13 @@ Este exemplo ilustra o uso da propriedade *context* :
 
 
 <!-- REF #DataClassClass.getCount().Params -->
-| Parâmetro | Tipo    |    | Descrição                                                   |
-| --------- | ------- | -- | ----------------------------------------------------------- |
-| resultado | Integer | <- | Número de entidades na dataclass|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|result|Integer|<-|Number of entities in the dataclass|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -557,11 +568,13 @@ $number:=$ds. Persons.getCount()
 
 
 <!-- REF #DataClassClass.getDataStore().Params -->
-| Parâmetro  | Tipo          |    | Descrição                                          |
-| ---------- | ------------- |:--:| -------------------------------------------------- |
-| Resultados | cs. DataStore | <- | Informação da dataclass|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|cs.DataStore|<-|Datastore of the dataclass|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -609,11 +622,13 @@ O método de projeto ***SearchDuplicate*** procura por valores duplicados em qua
 
 
 <!-- REF #DataClassClass.getInfo().Params -->
-| Parâmetro  | Tipo   |    | Descrição                                         |
-| ---------- | ------ | -- | ------------------------------------------------- |
-| Resultados | Object | <- | Datastore da dataclass|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|Result|Object|<-|Information on the dataclass|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -682,12 +697,13 @@ A função `.getInfo( )` <!-- REF #DataClassClass.getInfo().Summary -->devolve u
 
 
 <!-- REF #DataClassClass.getRemoteCache().Params -->
-| Parâmetro | Tipo   |    | Descrição                                                                                  |
-| --------- | ------ | -- | ------------------------------------------------------------------------------------------ |
-| resultado | Object | <- | Objecto que descreve o conteúdo da cache ORDA para o dataclass.|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|result|Object|<-|Object describing the contents of the ORDA cache for the dataclass.|
+</div>
+<!-- END REF -->
 
 
 > **Modo avançado:** Esta função destina-se a programadores que necessitem personalizar as características padrão ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
@@ -772,11 +788,13 @@ $cacheAddress:=$ds. Adress.getRemoteCache()
 
 
 <!-- REF #DataClassClass.new().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                   |
-| ---------- | ---------- | -- | --------------------------------------------------------------------------- |
-| Resultados | 4D. Entity | <- | Nova entidade que coincide com a classe de dados|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|Result|4D.Entity|<-|New entity matching the Dataclass|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -818,12 +836,14 @@ Este exemplo cria uma nova entidade na classe de dados "Log" e registra a inform
 
 
 <!-- REF #DataClassClass.newSelection().Params -->
-| Parâmetro  | Tipo                |    | Descrição                                                                                                                                            |
-| ---------- | ------------------- | -- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| keepOrder  | Integer             | -> | `dk keep ordered`: cria uma seleção de entidades ordenada,<br/>`dk non ordered`: cria uma seleção de entidade não ordenada (padrão se omitido) |
-| Resultados | 4D. EntitySelection | <- | Nova seleção de entidades em branco relacionadas com a classe de dados|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|keepOrder |Integer |-> |`dk keep ordered`: creates an ordered entity selection,<br/>`dk non ordered`: creates an unordered entity selection (default if omitted) |
+|Result|4D.EntitySelection|<-|New blank entity selection related to the dataclass|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -862,15 +882,17 @@ Quando for criada, a seleção de entidades não contém nenhuma entidade (`mySe
 
 
 <!-- REF #DataClassClass.query().Params -->
-| Parâmetro     | Tipo                |    | Descrição                                                                                                                                                      |
-| ------------- | ------------------- | -- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| queryString   | Text                | -> | Criterios de pesquisa como string                                                                                                                              |
-| formula       | Object              | -> | Criterios de pesquisa como objeto fórmula                                                                                                                      |
-| value         | any                 | -> | Valores a usar para placeholders indexados                                                                                                                     |
-| querySettings | Object              | -> | Opções de pesquisa: parâmetros, atributos, args, allowFormulas, contexto, queryPath,queryPlan                                                                  |
-| Resultados    | 4D. EntitySelection | <- | Nova seleção de entidade feita de entidades de dataclass realizano o critério de pesquia especificado em *queryString* or *formula*|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|queryString |Text |-> |Search criteria as string|
+|formula |Object |-> |Search criteria as formula object|
+|value|any|->|Value(s) to use for indexed placeholder(s)|
+|querySettings|Object|->|Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan|
+|Result|4D.EntitySelection|<-|New entity selection made up of entities from dataclass meeting the search criteria specified in *queryString* or *formula*|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -1540,11 +1562,13 @@ Queremos desautorizar as fórmulas, por exemplo, quando el usuário introduz sua
 
 
 <!-- REF #DataClassClass.setRemoteCacheSettings().Params -->
-| Parâmetro | Tipo   |    | Descrição                                                                                                       |
-| --------- | ------ | -- | --------------------------------------------------------------------------------------------------------------- |
-| settings  | Object | -> | Objecto que define o tempo limite e o tamanho máximo da cache ORDA para a dataclass.|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|settings|Object|->|Object that sets the timeout and maximum size of the ORDA cache for the dataclass.|
+</div>
+<!-- END REF -->
 
 > **Modo avançado:** Esta função destina-se a programadores que necessitem personalizar as características padrão ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
 

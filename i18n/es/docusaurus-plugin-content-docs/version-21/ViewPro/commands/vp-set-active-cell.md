@@ -9,9 +9,14 @@ title: VP SET ACTIVE CELL
 
 <!-- REF #_method_.VP SET ACTIVE CELL.Params -->
 
-| Parámetros | Tipo   |    | Descripción  |                  |
-| ---------- | ------ | -- | ------------ | ---------------- |
-| rangeObj   | Object | -> | Objeto rango | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo   |    | Descripción  |
+| ---------- | ------ | -- | ------------ |
+| rangeObj   | Object | -> | Objeto rango |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

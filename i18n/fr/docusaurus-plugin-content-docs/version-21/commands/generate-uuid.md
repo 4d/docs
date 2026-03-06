@@ -54,8 +54,8 @@ Dans 4D, les numéros UUID peuvent être stockés dans des champs (voir [UUID Fo
 Génération d'un UUID dans une variable :
 
 ```4d
- var MyUUID : Text
- MyUUID:=Generate UUID
+ var MyUUID : Text
+ MyUUID:=Generate UUID
 ```
 
 ## Propriétés

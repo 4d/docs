@@ -14,7 +14,7 @@ title: VP SHOW CELL
 | Paramètres | Type    |    | Description                                                 |
 | ---------- | ------- | -- | ----------------------------------------------------------- |
 | rangeObj   | Object  | -> | Objet plage                                                 |
-| vPos       | Integer | -> | Position verticale de la vue de la cellule ou de la ligne   |
+| vPos       | Integer | -> | \|                                                          |
 | hPos       | Integer | -> | Position horizontale de la vue de la cellule ou de la ligne |
 
 </div>

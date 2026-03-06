@@ -19,13 +19,13 @@ title: VP SET DATA CONTEXT
 
 <div class="no-index">
 
-| Paramètres | Type       |    | Description                                                 |
-| ---------- | ---------- | -- | ----------------------------------------------------------- |
-| vpAreaName | Text       | -> | Nom d'objet formulaire zone 4D View Pro                     |
-| dataObj    | Object     | -> | Objet de données à charger dans le contexte de données      |
-| dataColl   | Collection | -> | Collection de données à charger dans le contexte de données |
-| options    | Object     | -> | Options supplémentaires                                     |
-| sheet      | Integer    | -> | Numéro d'indice de la feuille                               |
+| Paramètres | Type       |    | Description                                                                                                                                                             |
+| ---------- | ---------- | -- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| vpAreaName | Text       | -> | Nom d'objet formulaire zone 4D View Pro                                                                                                                                 |
+| dataObj    | Object     | -> | Le même code ainsi que les sélecteurs verticaux et horizontaux ont été modifiés pour afficher la même cellule en haut à droite de la zone 4D View Pro : |
+| dataColl   | Collection | -> | \|                                                                                                                                                                      |
+| options    | Object     | -> | Options supplémentaires                                                                                                                                                 |
+| sheet      | Integer    | -> | Indice de la feuille                                                                                                                                                    |
 
 </div>
 <!-- END REF -->

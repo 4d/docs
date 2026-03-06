@@ -355,12 +355,12 @@ Atributos do tamanho do papel são usados para especificar as dimensões ou mode
 |             | width  | inteiro longo | Largura do papel, em centésimos de polegada.                                                                                                                                         |
 |             | kind   | text          | Name of standard paper size (e.g., A2, A4, legal, etc.) retornado por `Get Print Option`. Valor padrão = "letter" |
 
-- If the paper size is specified using the `height` and `width` properties,  [`VP Get print info`](../commands/vp-get-print-info) returns a paper size with `custom` as value for `kind`.
+- If the paper size is specified using the `height` and `width` properties,  [`VP Get print info`](./commands/vp-get-print-info.md) returns a paper size with `custom` as value for `kind`.
 
 - Si establece el tamaño del papel mediante la propiedad `kind`, puede utilizar cualquiera de los dos:
   - uno de los formatos de la [lista de formatos SpreadJS](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
-  - um dos formatos retornados pelo comando [`PRINT OPTION VALUES`](../commands-legacy/print-option-values).
-    Nesse caso, [`VP Get print info`](../commands/vp-get-print-info) retorna o formato correspondente com a altura e a largura.
+  - um dos formatos retornados pelo comando [`PRINT OPTION VALUES`](../commands/print-option-values).
+    Nesse caso, [`VP Get print info`](./commands/vp-get-print-info.md) retorna o formato correspondente com a altura e a largura.
 
 ### Escala
 
@@ -511,3 +511,4 @@ Contém as seguintes propriedades:
 | ViewPro.formulaBar     | Parâmetros    | Indica se a barra de fórmulas é ou não apresentada. Disponível apenas para a interface "barra de ferramentas".                                                                                                                                                                                                                                   |
 | ViewPro.inited         | Parâmetros    | Indica si el área 4D View Pro ha sido inicializada o no (ver evento[On VP Ready](Events/onVpReady.md)).                                                                                                                                                                                                                                       |
 | ViewPro.interface      | Text          | Especifica o tipo de interface do usuário: "ribbon", "toolbar", "none".                                                                                                                                                                                                                                                                          |
+

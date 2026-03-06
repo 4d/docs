@@ -90,10 +90,13 @@ O tipo de valor do atributo depende do atributo [kind](DataClassClass.md#attribu
 
 <!-- REF #EntityClass.clone().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo                       |                             | Descrição                              |
 | ---------- | -------------------------- | :-------------------------: | -------------------------------------- |
 | Resultados | 4D. Entity | <- | Nova entidade referenciando o registro |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -146,12 +149,15 @@ If you don't want the new entity to share object-type attribute references, you 
 
 <!-- REF #EntityClass.diff().Params -->
 
+<div class="no-index">
+
 | Parâmetro           | Tipo                       |                             | Descrição                                        |
 | ------------------- | -------------------------- | :-------------------------: | ------------------------------------------------ |
 | entityToCompare     | 4D. Entity |              ->             | Entidade a ser comparada com a entidade original |
 | attributesToCompare | Collection                 |              ->             | Nome dos atributos a serem comparados            |
 | Resultados          | Collection                 | <- | Diferenças entre as entidades                    |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -349,11 +355,14 @@ vCompareResultado1 (todas as diferenças são devolvidas):
 
 <!-- REF #EntityClass.drop().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo    |                             | Descrição                                                                                      |
 | ---------- | ------- | :-------------------------: | ---------------------------------------------------------------------------------------------- |
 | mode       | Integer |              ->             | `dk force drop if stamp changed`: força o drop mesmo se a estampa tenha mudado |
 | Resultados | Object  | <- | Resultado da operação de exclusão                                                              |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -459,10 +468,13 @@ Exemplo com a opção `dk force drop if stamp changed`:
 
 <!-- REF #EntityClass.first().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo                       |                             | Descrição                                                                                               |
 | ---------- | -------------------------- | :-------------------------: | ------------------------------------------------------------------------------------------------------- |
 | Resultados | 4D. Entity | <- | Referencia à primeira entidade da entity selection (Null se a seleção estiver vazia) |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -499,10 +511,13 @@ Se a entidade não pertencer a nenhuma seleção de entidade existente (ou seja,
 
 <!-- REF #EntityClass.fromObject().Params -->
 
+<div class="no-index">
+
 | Parâmetro | Tipo   |     | Descrição                                   |
 | --------- | ------ | :-: | ------------------------------------------- |
 | filler    | Object |  -> | Objeto para o qual vai preencher a entidade |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -586,10 +601,13 @@ Você também poderia usar uma entidade relacionada dada como um objeto:
 
 <!-- REF #EntityClass.getDataClass().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo                          |                             | Descrição                                    |
 | ---------- | ----------------------------- | :-------------------------: | -------------------------------------------- |
 | Resultados | 4D. DataClass | <- | Objeto DataClass ao qual a entidade pertence |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -632,11 +650,14 @@ O seguinte código genérico duplica qualquer entidade:
 
 <!-- REF #EntityClass.getKey().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo    |                             | Descrição                                                                                                                     |
 | ---------- | ------- | :-------------------------: | ----------------------------------------------------------------------------------------------------------------------------- |
 | mode       | Integer |              ->             | `dk key as string`: a chave primária é retornada como uma string, independentemente do tipo de chave primária |
 | Resultados | any     | <- | Valor da chave primária da entidade (Inteiro ou Texto)                                                     |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -671,10 +692,13 @@ As chaves primárias podem ser números (Inteiro) ou strings. Você pode "força
 
 <!-- REF #EntityClass.getRemoteContextAttributes().Params -->
 
+<div class="no-index">
+
 | Parâmetro | Tipo |                             | Descrição                                                            |
 | --------- | ---- | --------------------------- | -------------------------------------------------------------------- |
 | resultado | Text | <- | Atributos de contexto linkados à entidade, separados por uma vírgula |
 
+</div>
 <!-- END REF -->
 
 > **Modo avançado:** essa função é destinada a desenvolvedores que precisam personalizar os recursos padrão do ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
@@ -728,10 +752,13 @@ $info:=$address.getRemoteContextAttributes()
 
 <!-- REF #EntityClass.getSelection().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo                                |                             | Descrição                                                                                     |
 | ---------- | ----------------------------------- | :-------------------------: | --------------------------------------------------------------------------------------------- |
 | Resultados | 4D. EntitySelection | <- | Seleção de entidade a que pertence a entidade (null se não for encontrado) |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -772,10 +799,13 @@ Se a entidade não pertence à seleção de uma entidade, a função retorna Nul
 
 <!-- REF #EntityClass.getStamp().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo    |                             | Descrição                                                           |
 | ---------- | ------- | :-------------------------: | ------------------------------------------------------------------- |
 | Resultados | Integer | <- | Estampa da entidade (0 se a entidade foi criada) |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -820,11 +850,14 @@ O selo interno é automaticamente incrementado por 4D cada vez que a entidade é
 
 <!-- REF #EntityClass.indexOf().Params -->
 
+<div class="no-index">
+
 | Parâmetro       | Tipo                                |                             | Descrição                                                            |
 | --------------- | ----------------------------------- | :-------------------------: | -------------------------------------------------------------------- |
 | entitySelection | 4D. EntitySelection |              ->             | A posição da entidade é dada de acordo com a selecção desta entidade |
 | Resultados      | Integer                             | <- | Posição da entidade numa selecção de entidade                        |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -869,10 +902,13 @@ O valor resultante é incluído entre 0 e o comprimento da selecção da entidad
 
 <!-- REF #EntityClass.isNew().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo       |                             | Descrição                                                                                                               |
 | ---------- | ---------- | :-------------------------: | ----------------------------------------------------------------------------------------------------------------------- |
 | Resultados | Parâmetros | <- | É True se a entidade acabou de ser criada e ainda não foi salva. Caso contrário, Falso. |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -909,10 +945,13 @@ A função `.isNew()` <!-- REF #EntityClass.isNew().Summary --> retorna True se 
 
 <!-- REF #EntityClass.last().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo                       |                             | Descrição                                                                                                    |
 | ---------- | -------------------------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------ |
 | Resultados | 4D. Entity | <- | Referência para a última entidade de uma seleção de entidade (Null se não for encontrado) |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -949,11 +988,14 @@ Se a entidade não pertencer a nenhuma seleção de entidade existente (ou seja,
 
 <!-- REF #EntityClass.lock().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo    |                             | Descrição                                                                                         |
 | ---------- | ------- | :-------------------------: | ------------------------------------------------------------------------------------------------- |
 | mode       | Integer |              ->             | `dk reload if stamp changed`: Recarregar antes de bloquear se o selo for alterado |
 | Resultados | Object  | <- | Resultado da operação de bloqueio                                                                 |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -1072,10 +1114,13 @@ Exemplo com a opção `dk reload if stamp changed`:
 
 <!-- REF #EntityClass.next().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo                       |                             | Descrição                                                                                             |
 | ---------- | -------------------------- | :-------------------------: | ----------------------------------------------------------------------------------------------------- |
 | Resultados | 4D. Entity | <- | Referência a entidade anterior na seleção da entidade (Null se não for encontrado) |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -1115,10 +1160,13 @@ Se não houver entidade seguinte válida na selecção da entidade (ou seja, se 
 
 <!-- REF #EntityClass.previous().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo                       |                             | Descrição                                                                                                     |
 | ---------- | -------------------------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------- |
 | Resultados | 4D. Entity | <- | Referência para a próxima entidade de uma seleção de entidade (Null se não for encontrado) |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -1157,10 +1205,13 @@ Se não houver nenhuma entidade anterior válida na seleção da entidade (ou se
 
 <!-- REF #EntityClass.reload().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo   |                             | Descrição        |
 | ---------- | ------ | :-------------------------: | ---------------- |
 | Resultados | Object | <- | Objeto de estado |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -1222,11 +1273,14 @@ O objeto retornado por `.reload( )` contém as seguintes propriedades:
 
 <!-- REF #EntityClass.save().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo    |                             | Descrição                                                             |
 | ---------- | ------- | :-------------------------: | --------------------------------------------------------------------- |
 | mode       | Integer |              ->             | `dk auto merge`: ativa o modo de mesclagem automática |
 | Resultados | Object  | <- | Resultado da operação de salvamento                                   |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -1361,6 +1415,8 @@ Atualização de uma entidade com a opção `dk auto merge`:
 
 <!-- REF #EntityClass.toObject().Params -->
 
+<div class="no-index">
+
 | Parâmetro    | Tipo       |                             | Descrição                                                                                                                                                                                                    |
 | ------------ | ---------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | filterString | Text       |              ->             | Atributos a extrair (string separada por vírgulas)                                                                                                                                        |
@@ -1368,6 +1424,7 @@ Atualização de uma entidade com a opção `dk auto merge`:
 | options      | Integer    |              ->             | `dk with primary key`: adiciona a propriedade \_\_KEY;<br/>`dk with stamp`: adiciona a propriedade \_STAMP |
 | Resultados   | Object     | <- | Objeto criado a partir da entidade                                                                                                                                                                           |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -1650,10 +1707,13 @@ Retorna:
 
 <!-- REF #EntityClass.touched().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo       |                             | Descrição                                                                                      |
 | ---------- | ---------- | :-------------------------: | ---------------------------------------------------------------------------------------------- |
 | Resultados | Parâmetros | <- | True se tiver modificado ao menos um atributo da entidade e ainda não for salvo, se não, False |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -1696,10 +1756,13 @@ Neste exemplo, vemos se é necessário salvar a entidade:
 
 <!-- REF #EntityClass.touchedAttributes().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo       |                             | Descrição                                   |
 | ---------- | ---------- | :-------------------------: | ------------------------------------------- |
 | Resultados | Collection | <- | Nomes de atributos touched ou coleção vazia |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -1771,10 +1834,13 @@ Nesse modo:
 
 <!-- REF #EntityClass.unlock().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo   |                             | Descrição        |
 | ---------- | ------ | :-------------------------: | ---------------- |
 | Resultados | Object | <- | Objeto de estado |
 
+</div>
 <!-- END REF -->
 
 #### Descrição

@@ -22,18 +22,18 @@ title: はじめに
 
 4D View Pro は、プロジェクト内にインストールされている必要があります。 4D View Pro コンポーネントは[**4D-ViewPro github レポジトリ**](https://github.com/4d/4D-ViewPro) から入手できます。
 
-The easiest way to install 4D View Pro in an opened project is to use the Dependency Manager:
+開いているプロジェクトに4D View Pro をインストールするための最も簡単な方法は、依存関係マネージャーを使用することです:
 
-1. Open the [Dependency Manager](../Project/components.md) window.
-2. Click on the **+** button to add a component.
-3. Click on the **GitHub** tab.
-4. Select **4d/4D-ViewPro** in the [default list of components](../Extensions/overview.md) and (recommended) **Follow 4D version** as [Dependency rule](../Project/components.md#defining-a-github-dependency-version-range), then click **Add**.
+1. [依存関係マネージャー](../Project/components.md) ウィンドウを開きます。
+2. **+** ボタンをクリックしてコンポーネントを追加します。
+3. **GitHub** タブをクリックします。
+4. [コンポーネントのデフォルトのリスト](../Extensions/overview.md) から**4d/4D-ViewPro** を選択し、[依存関係ルール](../Project/components.md#github-依存関係のバージョン範囲を定義) として**Follow 4D version** を選択して、**追加** をクリックします。
 
 ![](../assets/en/ViewPro/install.png)
 
-Once you restart the project, the 4D View Pro component is installed as a [Github dependency](../Project/components.md#adding-a-github-dependency).
+プロジェクトを再起動すると、4D View Pro コンポーネントは[Github 依存関係](../Project/components.md#githubの依存関係の追加)としてインストールされます。
 
-4D View Pro requires a license. これらの機能を使用するには、アプリケーションにおいて当該ライセンスを有効化しておく必要があります。 4D View ライセンスがインストールされていない場合、4D View Pro 機能を必要とするオブジェクトのコンテンツはランタイムでは表示されず、エラーメッセージだけが表示されます:
+4D View Pro はライセンスを必要とします。 これらの機能を使用するには、アプリケーションにおいて当該ライセンスを有効化しておく必要があります。 4D View ライセンスがインストールされていない場合、4D View Pro 機能を必要とするオブジェクトのコンテンツはランタイムでは表示されず、エラーメッセージだけが表示されます:
 
 ![](../assets/en/ViewPro/licenseError.png)
 

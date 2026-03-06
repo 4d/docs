@@ -9,10 +9,15 @@ title: VP Get cell style
 
 <!-- REF #_method_.VP Get cell style.Params -->
 
-| Parámetros | Tipo   |                             | Descripción  |                  |
-| ---------- | ------ | --------------------------- | ------------ | ---------------- |
-| rangeObj   | Object | ->                          | Objeto rango |                  |
-| Resultado  | Object | <- | Objeto style | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo   |                             | Descripción  |
+| ---------- | ------ | --------------------------- | ------------ |
+| rangeObj   | Object | ->                          | Objeto rango |
+| Resultado  | Object | <- | Objeto style |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

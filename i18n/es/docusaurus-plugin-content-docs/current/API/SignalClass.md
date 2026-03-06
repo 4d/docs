@@ -213,3 +213,4 @@ La función devuelve el valor de la propiedad `.signaled`.
 > El estado de un proceso que espera un signal es `Waiting for internal flag`.
 
 <!-- END REF -->
+

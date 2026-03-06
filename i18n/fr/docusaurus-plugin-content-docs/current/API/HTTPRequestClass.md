@@ -162,6 +162,12 @@ Dans le paramètre *options*, passez un objet qui peut contenir les propriétés
 | timeout                | Real                                               | Timeout en secondes. undefined = pas de timeout                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | undefined          |
 | validateTLSCertificate | Boolean                                            | Si faux, 4D ne valide pas le certificat TLS et ne renvoie pas d'erreur s'il est invalide (c'est-à-dire expiré, auto-signé...). Important : dans l'implémentation actuelle, l'autorité de certification elle-même n'est pas vérifiée.                                                                                                                                                                                            | True               |
 
+:::note Keychain access on macOS
+
+On macOS, depending on your local configuration, a password can be required when your 4D application accesses the certificate in the *keychain* for the first time.
+
+:::
+
 #### Fonctions de callback
 
 Toutes les fonctions de callback reçoivent deux paramètres objet:
@@ -181,7 +187,7 @@ Voici la séquence des appels de callbacks :
 
 :::info
 
-Pour que les fonctions de rappel soient appelées lorsque vous n'utilisez pas [`wait()`](#wait) (appel asynchrone), le process doit être un [process worker](../Develop/processes.md#worker-processes) créé avec [`CALL WORKER`](../commands-legacy/call-worker), et NON [`New process`](../commands-legacy/new-process).
+Pour que les fonctions de rappel soient appelées lorsque vous n'utilisez pas [`wait()`](#wait) (appel asynchrone), le process doit être un [process worker](../Develop/processes.md#worker-processes) créé avec [`CALL WORKER`](../commands/call-worker), et NON [`New process`](../commands/new-process).
 
 :::
 
@@ -432,8 +438,9 @@ Si la réponse du serveur est déjà arrivée, la fonction rend la main immédia
 
 :::note
 
-Lors d'une exécution `.wait()`, les fonctions de rappel sont exécutées, que ce soit à partir d'autres instances `HTTPRequest` ou [`SystemWorker`](SystemWorkerClass.md), ou d'autres appels [`CALL WORKER`](../commands-legacy/call-worker) .  Vous pouvez sortir d'un `.wait()` en appelant [`terminate()`](#terminate) à partir d'une callback.
+Lors d'une exécution `.wait()`, les fonctions de rappel sont exécutées, que ce soit à partir d'autres instances `HTTPRequest` ou [`SystemWorker`](SystemWorkerClass.md), ou d'autres appels [`CALL WORKER`](../commands/call-worker) .  Vous pouvez sortir d'un `.wait()` en appelant [`terminate()`](#terminate) à partir d'une callback.
 
 :::
 
 <!-- END REF -->
+

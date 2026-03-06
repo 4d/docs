@@ -22,8 +22,9 @@ Webセッションでは、以下のことが可能です:
 
 Webセッションは次のものに使用されます:
 
-- [Web applications](gettingStarted.md) sending http requests (including [SOAP Web services](../commands/theme/Web_Services_Server.md) and [/4DACTION](../WebServer/httpRequests.md#4daction) requests),
-- calls to the [REST API](../REST/authUsers.md), which are used by [remote datastores](../ORDA/remoteDatastores.md) and [Qodly pages](https://developer.4d.com/qodly/).
+- HTTP リクエスト([SOAP Web サービス](../commands/theme/Web_Services_Server.md) および [/4DACTION](../WebServer/httpRequests.md#4daction) リクエストを含む)を送信する
+  [Web アプリケーション](gettingStarted.md)
+- [リモートデータストア](../ORDA/remoteDatastores.md) や [Qodly ページ](https://developer.4d.com/qodly/) が使用する [REST API](../REST/authUsers.md) への呼び出し。
 
 ## Webセッションの有効化 {#enabling-web-sessions}
 
@@ -35,7 +36,7 @@ Webセッションは次のものに使用されます:
 
 - Webサーバーオブジェクトの [`.scalableSession`](API/WebServerClass.md#scalablesession) プロパティを使用する ([`.start()`](API/WebServerClass.md#start) 関数に *settings* 引数として渡します）。  この場合、ストラクチャー設定ダイアログボックスで定義されたオプションよりも、Webサーバーオブジェクトの設定が優先されます (ディスクには保存されません)。
 
-> The [`WEB SET OPTION`](../commands-legacy/web-set-option.md) command can also set the session mode for the main Web server.
+> メインの Webサーバーのセッションモードは、[`WEB SET OPTION`](../commands-legacy/web-set-option.md) コマンドを使って設定することもできます。
 
 いずれの場合も、設定はマシンに対しローカルなものです。つまり、4D Server の Webサーバーと、リモートの 4Dマシンの Webサーバーで異なる設定が可能です。
 
@@ -62,7 +63,7 @@ Webセッションは次のものに使用されます:
 
 :::note
 
-Creating a web session for a REST request may require that a license is available, see [this page](../REST/authUsers.md).
+RESTリクエストのための Webセッションを作成するには、利用可能なライセンスが必要な場合があります。詳細は [こちらのページ](../REST/authUsers.md) を参照ください。
 
 :::
 
@@ -93,7 +94,7 @@ Webセッションが閉じられた後に [`Session`](commands/session.md) コ�
 
 :::info
 
-You can close a session from a Qodly form using the [**logout**](https://developer.4d.com/qodly/4DQodlyPro/force-login#logout) feature.
+[**logout**](https://developer.4d.com/qodly/4DQodlyPro/force-login#logout) 機能を使用することで、Qodly フォームからセッションを閉じることができます。
 
 :::
 

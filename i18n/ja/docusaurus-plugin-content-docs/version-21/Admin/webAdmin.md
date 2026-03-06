@@ -122,6 +122,12 @@ HTTPリクエストログファイル (アプリケーションの "Logs" フォ
 
 このオプションにより、4Dアプリケーションレベルでの [Qodly Studio](developer.4d.com/qodly/) へのユーザーアクセスができるようになります。 また、[各プロジェクトレベルでもアクセスを有効](../settings/web.md#qodly-studio-へのアクセスを有効化する) にする必要があることに注意してください。
 
+:::note
+
+このオプションは、[ワンクリック設定ダイアログボックス](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#one-click-configuration)を使用した場合には自動的にチェックされています。
+
+:::
+
 ## WebAdmin のヘッドレス設定
 
 すべての [WebAdmin 設定](#webadmin-設定) は、`WebAdmin.4DSettings` ファイルに保存されます。 4D および 4D Server アプリケーション毎にデフォルトの `WebAdmin.4DSettings` ファイルが 1つ存在し、同じホストマシン上で複数のアプリケーションを運用することができます。

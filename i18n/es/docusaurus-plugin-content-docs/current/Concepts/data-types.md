@@ -37,8 +37,8 @@ Aunque suelen ser equivalentes, algunos tipos de datos disponibles en la base no
 
 Siempre puede conocer el tipo de un campo o variable usando los siguientes comandos:
 
-- [`Type`](../commands-legacy/type) para campos y variables escalares
-- [`Tipo de valor`](../commands-legacy/value-type) para expresiones
+- [`Type`](../commands/type) para campos y variables escalares
+- [`Tipo de valor`](../commands/value-type) para expresiones
 
 ## Valores por defecto
 
@@ -84,3 +84,4 @@ La siguiente tabla lista los tipos de datos básicos, los tipos de datos a los q
 (2) Los valores de tipo Hora pueden tratarse como números.
 
 **Nota**: además de las conversiones de datos listadas en esta tabla, se pueden obtener conversiones de datos más sofisticadas combinando operadores y otros comandos.
+

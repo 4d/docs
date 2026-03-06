@@ -9,11 +9,16 @@ title: VP Get default style
 
 <!-- REF #_method_.VP Get default style.Params -->
 
-| Parâmetro  | Tipo    |                             | Descrição                                                   |                  |
-| ---------- | ------- | --------------------------- | ----------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | ->                          | Nome da área 4D View Pro no formulário                      |                  |
-| sheet      | Integer | ->                          | Índice da folha (folha atual se omitida) |                  |
-| Resultados | Object  | <- | Configurações de estilo padrão                              | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro  | Tipo    |                             | Descrição                                                   |
+| ---------- | ------- | --------------------------- | ----------------------------------------------------------- |
+| vpAreaName | Text    | ->                          | Nome da área 4D View Pro no formulário                      |
+| sheet      | Integer | ->                          | Índice da folha (folha atual se omitida) |
+| Resultados | Object  | <- | Configurações de estilo padrão                              |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

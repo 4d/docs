@@ -9,11 +9,16 @@ title: VP SET SHEET NAME
 
 <!-- REF #_method_.VP SET SHEET NAME.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                  |                  |
-| ---------- | ------- | -- | ------------------------------------------ | ---------------- |
-| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro |                  |
-| name       | Text    | -> | Novo nome para a folha                     |                  |
-| sheet      | Integer | -> | Índice da folha a ser renomeada            | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro  | Tipo    |    | Descrição                                  |
+| ---------- | ------- | -- | ------------------------------------------ |
+| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro |
+| name       | Text    | -> | Novo nome para a folha                     |
+| sheet      | Integer | -> | Índice da folha a ser renomeada            |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

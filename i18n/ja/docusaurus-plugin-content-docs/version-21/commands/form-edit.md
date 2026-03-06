@@ -51,19 +51,19 @@ displayed_sidebar: docs
 *Contacts* テーブルの*Address* フォームを開きたい場合を考えます:
 
 ```4d
- FORM EDIT([Contacts];"Address")
+ FORM EDIT([Contacts];"Address")
 ```
 
 *ContactList* プロジェクトフォームを開きたい場合を考えます:
 
 ```4d
- FORM EDIT("ContactList")
+ FORM EDIT("ContactList")
 ```
 
 *ContactPage* プロジェクトフォームを、"name-input" オブジェクトが選択された状態で開きたい場合を考えます:
 
 ```4d
- FORM EDIT("ContactList"; "name-input")
+ FORM EDIT("ContactList"; "name-input")
 ```
 
 ## 参照

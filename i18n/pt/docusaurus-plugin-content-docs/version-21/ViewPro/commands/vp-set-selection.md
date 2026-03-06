@@ -9,9 +9,14 @@ title: VP SET SELECTION
 
 <!-- REF #_method_.VP SET SELECTION.Params -->
 
-| Parâmetro | Tipo   |    | Descrição                   |                  |
-| --------- | ------ | -- | --------------------------- | ---------------- |
-| rangeObj  | Object | -> | Objeto intervalo de células | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro | Tipo   |    | Descrição                   |
+| --------- | ------ | -- | --------------------------- |
+| rangeObj  | Object | -> | Objeto intervalo de células |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

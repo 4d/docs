@@ -54,8 +54,8 @@ In 4D, UUID numbers can be stored in fields (see [UUID Format](https://doc.4d.co
 Generation of a UUID in a variable:
 
 ```4d
- var MyUUID : Text
- MyUUID:=Generate UUID
+ var MyUUID : Text
+ MyUUID:=Generate UUID
 ```
 
 ## Propriedades

@@ -33,7 +33,7 @@ Dans 4D, toutes les erreurs peuvent être détectées et traitées par des méth
 
 Une fois installés, les gestionnaires d'erreurs sont automatiquement appelés en mode interprété ou compilé en cas d'erreur dans l'application 4D ou l'un de ses composants. Un gestionnaire d'erreur différent peut être appelé en fonction du contexte d'exécution (voir ci-dessous).
 
-Pour *installer* une méthode de gestion des erreurs, il suffit d'appeler la commande [`ON ERR CALL`](../commands-legacy/on-err-call) avec le nom de la méthode projet et (optionnellement) le champ d'application en paramètres. Par exemple :
+Pour *installer* une méthode de gestion des erreurs, il suffit d'appeler la commande [`ON ERR CALL`](../commands/on-err-call) avec le nom de la méthode projet et (optionnellement) le champ d'application en paramètres. Par exemple :
 
 ```4d
 ON ERR CALL("IO_Errors";ek local) //Installe une méthode locale de gestion des erreurs
@@ -45,7 +45,7 @@ Pour arrêter d'intercepter les erreurs dans un contexte d'exécution et rendre 
 ON ERR CALL("";ek local) //rend le contrôle au process local
 ```
 
-La commande [`Method called on error`](../commands-legacy/method-called-on-error) vous permet de connaître le nom de la méthode installée par `ON ERR CALL` pour le process courant. Cela est particulièrement utile dans le contexte du code générique car il vous permet de modifier temporairement puis de restaurer la méthode de capture d'erreur :
+La commande [`Method called on error`](../commands/method-called-on-error) vous permet de connaître le nom de la méthode installée par `ON ERR CALL` pour le process courant. Cela est particulièrement utile dans le contexte du code générique car il vous permet de modifier temporairement puis de restaurer la méthode de capture d'erreur :
 
 ```4d
  $methCurrent:=Method called on error(ek local)
@@ -240,7 +240,7 @@ Si une erreur *différée* est générée en dehors du bloc `Try`, l'exécution 
 
 :::info
 
-Pour plus d'informations sur les erreurs *différées* et *non différées*, veuillez vous référer à la description de la commande [`throw`](../commands-legacy/throw).
+Pour plus d'informations sur les erreurs *différées* et *non différées*, veuillez vous référer à la description de la commande [`throw`](../commands/throw).
 
 :::
 
@@ -287,7 +287,7 @@ Function createInvoice($customer : cs.customerEntity; $items : Collection; $invo
 
 ## Codes d'erreur
 
-Les exceptions qui interrompent l'exécution du code sont renvoyées par 4D mais peuvent avoir différentes origines telles que le système d'exploitation, un périphérique, le noyau 4D, un [`throw`](../commands-legacy/throw) dans votre code, etc. Une erreur est donc définie par trois éléments :
+Les exceptions qui interrompent l'exécution du code sont renvoyées par 4D mais peuvent avoir différentes origines telles que le système d'exploitation, un périphérique, le noyau 4D, un [`throw`](../commands/throw) dans votre code, etc. Une erreur est donc définie par trois éléments :
 
 - une **signature du composant**, qui est l'origine de l'erreur (voir [`Last errors`](../commands/last-errors) pour avoir la liste des signatures)
 - un **message**, qui explique pourquoi l'erreur s'est produite
@@ -296,3 +296,4 @@ Les exceptions qui interrompent l'exécution du code sont renvoyées par 4D mais
 La [boîte de dialogue d'erreur 4D](../Debugging/basics.md) affiche le code et le message à l'utilisateur.
 
 Pour obtenir une description complète d'une erreur et surtout de son origine, vous devez appeler la commande [`Last errors`](../commands/last-errors). Lorsque vous interceptez et traitez des erreurs à l'aide d'une [méthode de traitement des erreurs](#installing-an-error-handling-method) dans vos applications finales, utilisez [`Last errors`](../commands/last-errors) et veillez à enregistrer toutes les propriétés de l'objet *error*, car les codes d'erreur dépendent des composants.
+

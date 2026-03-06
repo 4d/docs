@@ -8,6 +8,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert break.Params-->
 
+<div class="no-index">
+
 | Parámetros  | Tipo    |                             | Descripción                               |
 | ----------- | ------- | --------------------------- | ----------------------------------------- |
 | targetObj   | Object  | &#8594; | Rango o elemento o documento 4D Write Pro |
@@ -16,6 +18,7 @@ displayed_sidebar: docs
 | rangeUpdate | Integer | &#8594; | Modo de actualización del rango           |
 | Resultado   | Object  | &#8592; | Rango de texto del caracter de ruptura    |
 
+</div>
 <!-- END REF-->
 
 ## Descripción

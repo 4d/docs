@@ -9,12 +9,15 @@ title: VP SET FROZEN PANES
 
 <!-- REF #_method_.VP SET FROZEN PANES.Params -->
 
+<div class="no-index">
+
 | 引数         | 型       |    | 説明                                             |
 | ---------- | ------- | -- | ---------------------------------------------- |
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                        |
 | paneObj    | Object  | -> | 固定化されたカラムと行についての情報を格納したオブジェクト                  |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) |
 
+</div>
 <!-- END REF -->
 
 ## 説明

@@ -66,10 +66,13 @@ Session オブジェクトは [`Session`](../commands/session.md) コマンド�
 
 <!-- REF #SessionClass.clearPrivileges().Params -->
 
+<div class="no-index">
+
 | 引数  | 型       |                             | 説明                  |
 | --- | ------- | :-------------------------: | ------------------- |
 | 戻り値 | Boolean | <- | 実行が正常に終わった場合には true |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -116,11 +119,14 @@ $isOK:=Session.clearPrivileges()
 
 <!-- REF #SessionClass.createOTP().Params -->
 
+<div class="no-index">
+
 | 引数       | 型       |                             | 説明                                                 |
 | -------- | ------- | :-------------------------: | -------------------------------------------------- |
 | lifespan | Integer |              ->             | 秒単位のセッショントークンの有効期限(Web セッションのみ) |
 | 戻り値      | Text    | <- | トークンの UUID                                         |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -164,10 +170,13 @@ $token := Session.createOTP( 60 ) // トークンは1分間有効
 
 <!-- REF #SessionClass.demote().Params -->
 
+<div class="no-index">
+
 | 引数        | 型       |     | 説明                     |
 | --------- | ------- | :-: | ---------------------- |
 | promoteId | Integer |  -> | `promote()` 関数から返されたID |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -263,10 +272,13 @@ $expiration:=Session.expirationDate // 例: "2021-11-05T17:10:42Z"
 
 <!-- REF #SessionClass.getPrivileges().Params -->
 
+<div class="no-index">
+
 | 引数  | 型          |                             | 説明                                        |
 | --- | ---------- | :-------------------------: | ----------------------------------------- |
 | 戻り値 | Collection | <- | アクセス権の名称 (文字列) のコレクション |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -362,11 +374,14 @@ $privileges := Session.getPrivileges()
 
 <!-- REF #SessionClass.hasPrivilege().Params -->
 
+<div class="no-index">
+
 | 引数        | 型       |                             | 説明                                                |
 | --------- | ------- | :-------------------------: | ------------------------------------------------- |
 | privilege | Text    |              ->             | 確認するアクセス権の名称                                      |
 | 戻り値       | Boolean | <- | セッションが *privilege* のアクセス権を持っていれば true、それ以外は false |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -537,10 +552,13 @@ End if
 
 <!-- REF #SessionClass.isGuest().Params -->
 
+<div class="no-index">
+
 | 引数  | 型       |                             | 説明                                                                 |
 | --- | ------- | :-------------------------: | ------------------------------------------------------------------ |
 | 戻り値 | Boolean | <- | セッションがゲストセッションの場合はTrue、それ以外はFalse (Web セッションのみ) |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -587,11 +605,14 @@ End if
 
 <!-- REF #SessionClass.promote().Params -->
 
+<div class="no-index">
+
 | 引数        | 型       |                             | 説明                                             |
 | --------- | ------- | :-------------------------: | ---------------------------------------------- |
 | privilege | Text    |              ->             | アクセス権の名称                                       |
 | 戻り値       | Integer | <- | [`demote()`](#demote) function関数を呼び出す際に使用する ID |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -665,11 +686,14 @@ End if
 
 <!-- REF #SessionClass.restore().Params -->
 
+<div class="no-index">
+
 | 引数    | 型       |                             | 説明                                       |
 | ----- | ------- | :-------------------------: | ---------------------------------------- |
 | token | Text    |              ->             | セッショントークンUUID                            |
 | 戻り値   | Boolean | <- | カレントのセッションがトークンのセッションで正常に置き換えられた場合にはTrue |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -728,6 +752,8 @@ Function callback($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 <!-- REF #SessionClass.setPrivileges().Params -->
 
+<div class="no-index">
+
 | 引数         | 型          |                             | 説明                                                             |
 | ---------- | ---------- | :-------------------------: | -------------------------------------------------------------- |
 | privilege  | Text       |              ->             | アクセス権の名称                                                       |
@@ -735,6 +761,7 @@ Function callback($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 | settings   | Object     |              ->             | "privileges" プロパティ (文字列またはコレクション) を持つオブジェクト |
 | 戻り値        | Boolean    | <- | 実行が正常に終わった場合には true                                            |
 
+</div>
 <!-- END REF -->
 
 #### 説明

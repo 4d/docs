@@ -351,11 +351,13 @@ title: Transporter クラス
 
 
 <!-- REF #transporter.checkConnection().Params -->
-| 引数  | 型      |    | 説明                                                    |
-| --- | ------ |:--:| ----------------------------------------------------- |
-| 戻り値 | Object | <- | transporter オブジェクト接続のステータス|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Object|<-|Status of the transporter object connection|
+</div>
+<!-- END REF -->
 
 #### 説明
 

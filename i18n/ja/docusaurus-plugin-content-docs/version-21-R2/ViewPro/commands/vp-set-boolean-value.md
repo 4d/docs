@@ -9,10 +9,15 @@ title: VP SET BOOLEAN VALUE
 
 <!-- REF #_method_.VP SET BOOLEAN VALUE.Params -->
 
-| 引数        | 型       |    | 説明        |                  |
-| --------- | ------- | -- | --------- | ---------------- |
-| rangeObj  | Object  | -> | レンジオブジェクト |                  |
-| boolValue | Boolean | -> | 設定するブール値  | <!-- END REF --> |
+<div class="no-index">
+
+| 引数        | 型       |    | 説明        |
+| --------- | ------- | -- | --------- |
+| rangeObj  | Object  | -> | レンジオブジェクト |
+| boolValue | Boolean | -> | 設定するブール値  |
+
+</div>
+<!-- END REF -->
 
 ## 説明
 

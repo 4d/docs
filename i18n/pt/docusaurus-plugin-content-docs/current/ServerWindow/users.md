@@ -18,7 +18,7 @@ Também pode ordenar a lista de valores da coluna clicando no respetivo cabeçal
 Para cada usuário conectado ao servidor, a lista fornece as seguintes informações:
 
 - Sistema da máquina cliente (macOS ou Windows) como um ícone.
-- **Usuário 4D**: nome do usuário 4D, ou alias se definido com o comando [`SET USER ALIAS`](../commands-legacy/set-user-alias) na máquina usuário. Se as senhas não são ativadas e nenhum alias foi definido, todos os usuários são chamados "Designer".
+- **Usuário 4D**: nome do usuário 4D, ou alias se definido com o comando [`SET USER ALIAS`](../commands/set-user-alias) na máquina usuário. Se as senhas não são ativadas e nenhum alias foi definido, todos os usuários são chamados "Designer".
 - **Nombre de máquina**: Nombre de la máquina remota.
 - **Nombre de sesión**: nombre de la sesión abierta en la máquina remota.
 - **Dirección IP**: dirección IP de la máquina remota.
@@ -37,7 +37,7 @@ Este estado liberta recursos no servidor. Além disso, a aplicação remota 4D r
 
 O seguinte cenário é suportado: um usuário remoto parou de funcionar durante algum tempo, por exemplo, durante uma pausa no almoço, mas mantém a conexão com o servidor aberta. A máquina passa para o modo de suspensão. Quando o usuário retorna, acordaram a máquina e a aplicação remota 4D recupera automaticamente a sua conexão com o servidor, bem como o contexto da sessão.
 
-> Uma sessão remota de sono é automaticamente desligada pelo servidor após 48 horas de inatividade. Você pode modificar esse tempo limite padrão usando o comando [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter) com o seletor `Remote connection sleep timeout`.
+> Uma sessão remota de sono é automaticamente desligada pelo servidor após 48 horas de inatividade. Você pode modificar esse tempo limite padrão usando o comando [`SET DATABASE PARAMETER`](../commands/set-database-parameter) com o seletor `Remote connection sleep timeout`.
 
 ## Área de pesquisa/filtragem
 
@@ -57,7 +57,7 @@ Este botão pode ser usado para enviar uma mensagem para os usuários 4D selecio
 
 A mensagem será apresentada como um alerta nas máquinas remotas.
 
-> É possível executar a mesma ação para usuários remotos com o comando [`SEND MESSAGE TO REMOTE USER`](../commands-legacy/send-message-to-remote-user).
+> É possível executar a mesma ação para usuários remotos com o comando [`SEND MESSAGE TO REMOTE USER`](../commands/send-message-to-remote-user).
 
 ### Visualizar processos
 
@@ -67,5 +67,6 @@ Este botão pode ser usado diretamente para mostrar os processos do(s) usuário(
 
 Este botão pode ser utilizado para forçar a desconexão do(s) usuário(s) selecionado(s). When you click on this button, a warning dialog box appears so that you can confirm or cancel this operation (hold down **Alt** key while clicking on the **Drop user** button to disconnect the selected user(s) directly without displaying the confirmation dialog box).
 
-> É possível executar a mesma ação para usuários remotos com o comando [`DROP REMOTE USER`](../commands-legacy/drop-remote-user).
+> É possível executar a mesma ação para usuários remotos com o comando [`DROP REMOTE USER`](../commands/drop-remote-user).
+
 

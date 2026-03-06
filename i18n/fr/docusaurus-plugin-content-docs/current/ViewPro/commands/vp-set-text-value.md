@@ -11,11 +11,11 @@ title: VP SET TEXT VALUE
 
 <div class="no-index">
 
-| Paramètres    | Type   |    | Description          |
-| ------------- | ------ | -- | -------------------- |
-| rangeObj      | Object | -> | Objet plage          |
-| textValue     | Text   | -> | Valeur texte à fixer |
-| formatPattern | Text   | -> | Format de la valeur  |
+| Paramètres    | Type   |    | Description                                     |
+| ------------- | ------ | -- | ----------------------------------------------- |
+| rangeObj      | Object | -> | Objet plage                                     |
+| textValue     | Text   | -> | Nom de la zone 4D View Pro dans le formulaire\| |
+| formatPattern | Text   | -> | Format de la valeur                             |
 
 </div>
 <!-- END REF -->

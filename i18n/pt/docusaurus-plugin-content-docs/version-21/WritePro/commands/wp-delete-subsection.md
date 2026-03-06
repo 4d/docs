@@ -9,12 +9,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP DELETE SUBSECTION.Params-->
 
+<div class="no-index">
+
 | Parâmetro      | Tipo    |                             | Descrição                                                                          |
 | -------------- | ------- | --------------------------- | ---------------------------------------------------------------------------------- |
 | wpSection      | Object  | &#8594; | Seção 4D Write Pro                                                                 |
 | subSectionType | Integer | &#8594; | Tipo de subseção (wk first page, wk left page ou wk right page) |
 | subSection     | Object  | &#8594; | Subseção 4D Write Pro                                                              |
 
+</div>
 <!-- END REF-->
 
 ## Descrição

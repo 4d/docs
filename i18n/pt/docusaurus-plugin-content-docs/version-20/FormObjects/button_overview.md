@@ -217,7 +217,7 @@ O estilo do botão OS X Textured é quase igual ao estilo [Bevel](#bevel), mas p
 
 Como padrão, o estilo OS X Textured aparece como:
 
- - *Windows* - um botão padrão do sistema com um fundo cinza-claro e um rótulo no centro. Tem a particularidade de ser transparente no Vista.
+ - *Windows* - a standard system button with a light gray background with a label in the center.
 
  ![](../assets/en/FormObjects/button_osxtextured.png)
 

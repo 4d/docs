@@ -17,13 +17,18 @@ title: VP REMOVE TABLE ROWS
 
 <!-- REF #_method_.VP REMOVE TABLE ROWS.Params -->
 
-| Paramètres | Type    |    | Description                                                                 |                  |
-| ---------- | ------- | -- | --------------------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |                  |
-| tableName  | Text    | -> | Nom de table                                                                |                  |
-| row        | Integer | -> | Indice dans la table de la ligne de départ à supprimer                      |                  |
-| count      | Integer | -> | Nombre de lignes à supprimer (doit être >0)              |                  |
-| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres | Type    |    | Description                                                                 |
+| ---------- | ------- | -- | --------------------------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |
+| tableName  | Text    | -> | Nom de table                                                                |
+| row        | Integer | -> | Indice dans la table de la ligne de départ à supprimer                      |
+| count      | Integer | -> | Nombre de lignes à supprimer (doit être >0)              |
+| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

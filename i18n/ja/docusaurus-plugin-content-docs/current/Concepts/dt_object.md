@@ -42,18 +42,18 @@ title: Object
 
 オブジェクトのインスタンス化は、以下のいずれかの方法でおこなうことができます:
 
-- [`New object`](../commands-legacy/new-object) コマンドを使用する。
+- [`New object`](../commands/new-object) コマンドを使用する。
 - `{}` 演算子を使用する。
 
 :::info
 
-いくつかの 4Dコマンドや関数はオブジェクトを返します。たとえば、[`Database measures`](../commands-legacy/database-measures) や [`File`](../commands/file) などです。 この場合、オブジェクトを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。
+いくつかの 4Dコマンドや関数はオブジェクトを返します。たとえば、[`Database measures`](../commands/database-measures) や [`File`](../commands/file) などです。 この場合、オブジェクトを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。
 
 :::
 
 ### `New object` コマンド
 
-[`New object`](../commands-legacy/new-object) コマンドは、空の、あるいは値の入った新規コレクションを作成し、その参照を返します。
+[`New object`](../commands/new-object) コマンドは、空の、あるいは値の入った新規コレクションを作成し、その参照を返します。
 
 例:
 
@@ -110,8 +110,8 @@ $col:=$o.col[5] // 6
 
 二種類のオブジェクトを作成することができます:
 
-- [`New object`](../commands-legacy/new-object) コマンド、またはオブジェクトリテラルのシンタックス (`{}`) を使用して作成する通常 (非共有) コレクション。 通常のオブジェクトは特別なアクセスコントロールをせずに編集可能ですが、プロセス間で共有することはできません。
-- [`New shared object`](../commands-legacy/new-shared-object) コマンドを使用して作成する共有コレクション。 共有オブジェクトはプロセス間 (プリエンティブ・スレッド含む) で共有可能なオブジェクトです。 共有オブジェクトへのアクセスは `Use...End use` 構造によって管理されています。
+- [`New object`](../commands/new-object) コマンド、またはオブジェクトリテラルのシンタックス (`{}`) を使用して作成する通常 (非共有) コレクション。 通常のオブジェクトは特別なアクセスコントロールをせずに編集可能ですが、プロセス間で共有することはできません。
+- [`New shared object`](../commands/new-shared-object) コマンドを使用して作成する共有コレクション。 共有オブジェクトはプロセス間 (プリエンティブ・スレッド含む) で共有可能なオブジェクトです。 共有オブジェクトへのアクセスは `Use...End use` 構造によって管理されています。
   詳細な情報については、[共有オブジェクトと共有コレクション](shared.md) を参照ください。
 
 ## プロパティ{#properties}
@@ -319,3 +319,4 @@ $doc:=Null  //  $docが占有するリソースを解放します
  End for
   /// $Emp object には 4つの空のプロパティ "address1...address4" が作成されました
 ```
+

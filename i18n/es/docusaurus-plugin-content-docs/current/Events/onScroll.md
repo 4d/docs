@@ -22,3 +22,4 @@ El evento se genera en cuanto un usuario se desplaza por una imagen dentro de la
 ### List box
 
 El evento se genera en cuanto un usuario se desplaza por las líneas o columnas del list box.
+

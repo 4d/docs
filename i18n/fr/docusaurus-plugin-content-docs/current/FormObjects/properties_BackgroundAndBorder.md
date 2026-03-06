@@ -7,7 +7,7 @@ title: Fond et bordure
 
 Permet de définir une couleur d'arrière-plan différente pour les lignes / colonnes impaires dans une list box. Par défaut, *Automatique* est sélectionné : la colonne utilise la couleur de fond alternative définie au niveau de la list box.
 
-Vous pouvez également définir cette propriété à l'aide de la commande [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors).
+Vous pouvez également définir cette propriété à l'aide de la commande [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors).
 
 #### Grammaire JSON
 
@@ -21,7 +21,7 @@ Vous pouvez également définir cette propriété à l'aide de la commande [`OBJ
 
 #### Commandes
 
-[`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors)
+[`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
 
 ---
 
@@ -31,7 +31,7 @@ Définit la couleur de fond d'un objet.
 
 Dans le cas d'une list box, par défaut *Automatique* est sélectionné : la colonne utilise la couleur de fond définie au niveau de la list box.
 
-Vous pouvez également définir cette propriété à l'aide de la commande [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors).
+Vous pouvez également définir cette propriété à l'aide de la commande [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors).
 
 #### Grammaire JSON
 
@@ -45,7 +45,7 @@ Vous pouvez également définir cette propriété à l'aide de la commande [`OBJ
 
 #### Commandes
 
-[`LISTBOX Get row color`](../commands-legacy/listbox-get-row-color) - [`LISTBOX SET ROW COLOR`](../commands-legacy/listbox-set-row-color) - [`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors)
+[`LISTBOX Get row color`](../commands/listbox-get-row-color) - [`LISTBOX SET ROW COLOR`](../commands/listbox-set-row-color) - [`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
 
 #### Voir également
 
@@ -57,7 +57,7 @@ Vous pouvez également définir cette propriété à l'aide de la commande [`OBJ
 
 `List box de type collection et entity selection`
 
-Une expression ou une variable (les variables de tableau ne peuvent pas être utilisées) pour appliquer une couleur d'arrière-plan personnalisée à chaque ligne de la list box. L'expression ou la variable sera évaluée pour chaque ligne affichée et doit retourner une valeur de couleur RGB. Pour plus d'informations, reportez-vous à la description de la commande [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors) dans le *manuel de référence du langage 4D*.
+Une expression ou une variable (les variables de tableau ne peuvent pas être utilisées) pour appliquer une couleur d'arrière-plan personnalisée à chaque ligne de la list box. L'expression ou la variable sera évaluée pour chaque ligne affichée et doit retourner une valeur de couleur RGB. Pour plus d'informations, reportez-vous à la description de la commande [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors) dans le *manuel de référence du langage 4D*.
 
 Vous pouvez également définir cette propriété en utilisant la commande [`LISTBOX SET PROPERTY`](../commands/listbox-set-property) avec la constante `lk background color expression`.
 
@@ -95,7 +95,7 @@ Permet de définir un style standard pour la bordure de l'objet.
 
 #### Commandes
 
-[`OBJECT Get border style`](../commands-legacy/object-get-border-style) - [`OBJECT SET BORDER STYLE`](../commands-legacy/object-set-border-style)
+[`OBJECT Get border style`](../commands/object-get-border-style) - [`OBJECT SET BORDER STYLE`](../commands/object-set-border-style)
 
 ---
 
@@ -150,7 +150,7 @@ La couleur peut être spécifiée par :
 - une valeur HEX - comme "# ff0000"
 - une valeur RVB - comme "rgb (255,0,0)"
 
-Vous pouvez également définir cette propriété à l'aide de la commande [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors).
+Vous pouvez également définir cette propriété à l'aide de la commande [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors).
 
 #### Grammaire JSON
 
@@ -166,7 +166,7 @@ Vous pouvez également définir cette propriété à l'aide de la commande [`OBJ
 
 #### Commandes
 
-[`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors)
+[`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
 
 ---
 
@@ -192,7 +192,7 @@ Désigne l'épaisseur d'une ligne.
 
 Le nom d'un tableau pour appliquer une couleur d'arrière-plan personnalisée à chaque ligne ou colonne de la list box.
 
-Le nom d'un tableau Entier long doit être saisi. Chaque élément de ce tableau correspond à une ligne de la zone de list box (si elle est appliquée à la liste box) ou à une cellule de la colonne (si elle est appliquée à une colonne), le tableau doit donc avoir la même taille que le tableau associé à la colonne. Vous pouvez utiliser les constantes décrites dans la commande [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors). Si vous souhaitez que la cellule hérite de la couleur d'arrière-plan définie au niveau supérieur, passez la valeur -255 à l'élément de tableau correspondant.
+Le nom d'un tableau Entier long doit être saisi. Chaque élément de ce tableau correspond à une ligne de la zone de list box (si elle est appliquée à la liste box) ou à une cellule de la colonne (si elle est appliquée à une colonne), le tableau doit donc avoir la même taille que le tableau associé à la colonne. Vous pouvez utiliser les constantes décrites dans la commande [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors). Si vous souhaitez que la cellule hérite de la couleur d'arrière-plan définie au niveau supérieur, passez la valeur -255 à l'élément de tableau correspondant.
 
 Par exemple, considérons une list box où les lignes ont une couleur alternée gris/gris clair, définie dans les propriétés de la list box. Un tableau de couleurs d'arrière-plan a également été défini pour la list box afin de changer en orange clair la couleur des lignes où au moins une valeur est négative :
 
@@ -214,7 +214,7 @@ Vous souhaitez ensuite colorer les cellules avec des valeurs négatives en orang
 
 ![](../assets/en/FormObjects/listbox_styles2.png)
 
-Vous pouvez obtenir le même résultat en utilisant les commandes [`LISTBOX SET ROW FONT STYLE`](../commands-legacy/listbox-set-row-font-style) et [`LISTBOX SET ROW COLOR`](../commands-legacy/listbox-set-row-color). Elles ont l'avantage de vous permettre d'éviter d'avoir à prédéfinir des tableaux de style/couleur pour les colonnes : ils sont créés dynamiquement par les commandes.
+Vous pouvez obtenir le même résultat en utilisant les commandes [`LISTBOX SET ROW FONT STYLE`](../commands/listbox-set-row-font-style) et [`LISTBOX SET ROW COLOR`](../commands/listbox-set-row-color). Elles ont l'avantage de vous permettre d'éviter d'avoir à prédéfinir des tableaux de style/couleur pour les colonnes : ils sont créés dynamiquement par les commandes.
 
 #### Grammaire JSON
 
@@ -228,7 +228,7 @@ Vous pouvez obtenir le même résultat en utilisant les commandes [`LISTBOX SET 
 
 #### Commandes
 
-[`LISTBOX Get array`](../commands-legacy/listbox-get-array) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays)
+[`LISTBOX Get array`](../commands/listbox-get-array) - [`LISTBOX GET ARRAYS`](../commands/listbox-get-arrays)
 
 ---
 
@@ -248,8 +248,9 @@ Définit l'arrière-plan de la list box sur "Transparent". Lorsqu'elle est défi
 
 #### Commandes
 
-[`OBJECT GET RGB COLORS`](../commands-legacy/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors)
+[`OBJECT GET RGB COLORS`](../commands/object-get-rgb-colors) - [`OBJECT SET RGB COLORS`](../commands/object-set-rgb-colors)
 
 #### Voir également
 
 [Couleur de fond](#background-color--fill-color)
+

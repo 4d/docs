@@ -197,7 +197,7 @@ La carpeta Logs contiene todos los archivos de registro utilizados por el proyec
 - depuración de comandos,
 - Peticiones 4D Server (generadas en en los equipos cliente y en el servidor).
 
-> Una carpeta Logs adicional está disponible en la carpeta de preferencias del usuario del sistema (carpeta 4D activa, ver el comando [Get 4D folder](../commands-legacy/get-4d-folder)) para los archivos de registro de mantenimiento y e
+> Una carpeta Logs adicional está disponible en la carpeta de preferencias del usuario del sistema (carpeta 4D activa, ver el comando [Get 4D folder](../commands/get-4d-folder)) para los archivos de registro de mantenimiento y e
 
 ## `Settings` (usuario)
 
@@ -255,3 +255,4 @@ Define la carpeta raíz por defecto del servidor web 4D para las páginas, las i
 ## Archivo `.gitignore` (opcional)
 
 Archivo que especifica los archivos que serán ignorados por git. Archivo que especifica los archivos que serán ignorados por git. Puede incluir un archivo gitignore en sus proyectos utilizando la opción **Crear un archivo .gitignore** en la página **General** de las preferencias.
+

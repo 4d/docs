@@ -9,9 +9,14 @@ title: VP ROW AUTOFIT
 
 <!-- REF #_method_.VP ROW AUTOFIT.Params -->
 
-| Parámetros | Tipo   |    | Descripción  |                  |
-| ---------- | ------ | -- | ------------ | ---------------- |
-| rangeObj   | Object | -> | Objeto rango | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo   |    | Descripción  |
+| ---------- | ------ | -- | ------------ |
+| rangeObj   | Object | -> | Objeto rango |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

@@ -896,9 +896,10 @@ End use
 `.userName` プロパティは、<!-- REF #SessionClass.userName.Summary -->セッションと紐づいたユーザー名<!-- END REF -->を格納します。 このプロパティは、コード内でユーザーを確認するのに使用できます。
 
 - **Web セッション**: このプロパティはデフォルトで空の文字列です。 これは、[`setPrivileges()`](#setprivileges) 関数の `privileges` プロパティを使って設定することができます。
-- **リモート/ ストアドプロシージャーセッション**: このプロパティは [`Current user`](../commands-legacy/current-user) コマンドと同じユーザー名を返します。
-- **スタンドアロンセッション**: このプロパティは"designer" または[`SET USER ALIAS`](../commands-legacy/set-user-alias) コマンドで設定された名前が格納されています。
+- **リモート/ ストアドプロシージャーセッション**: このプロパティは [`Current user`](../commands/current-user) コマンドと同じユーザー名を返します。
+- **スタンドアロンセッション**: このプロパティは"designer" または[`SET USER ALIAS`](../commands/set-user-alias) コマンドで設定された名前が格納されています。
 
 このプロパティはデスクトップセッションにおいては**読み取り専用**です。
 
 <!-- END REF -->
+

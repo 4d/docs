@@ -43,11 +43,14 @@ title: CryptoKey
 
 <!-- REF #4D.CryptoKey.new().Params -->
 
+<div class="no-index">
+
 | 引数       | 型                            |                             | 説明                    |
 | -------- | ---------------------------- | --------------------------- | --------------------- |
 | settings | Object                       | ->                          | キーペアを生成またはロードするための設定  |
 | 戻り値      | 4D.CryptoKey | <- | 暗号化キーペアをカプセル化したオブジェクト |
 
+</div>
 <!-- END REF -->
 
 `4D.CryptoKey.new()` 関数は、*settings* オブジェクト引数に基づいて<!-- REF #4D.CryptoKey.new().Summary -->暗号化キーペアをカプセル化する `4D.CryptoKey` オブジェクトを新規作成します<!-- END REF -->。 これを使用することで新規のRSA またはECDSA キーを生成できるほか、PEM 定義から既存のキーペアをロードすることができます。
@@ -159,12 +162,15 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 <!-- REF #CryptoKey.decrypt().Params -->
 
+<div class="no-index">
+
 | 引数      | 型      |                             | 説明                                                |
 | ------- | ------ | --------------------------- | ------------------------------------------------- |
 | message | Text   | ->                          | `options.encodingEncrypted` を使ってデコードし復号するメッセージ文字列 |
 | options | Object | ->                          | デコーディングオプション                                      |
 | 戻り値     | Object | <- | ステータス                                             |
 
+</div>
 <!-- END REF -->
 
 `.decrypt()` 関数は、<!-- REF #CryptoKey.decrypt().Summary -->**秘密** 鍵を使って *message* を復号します<!-- END REF -->。 使用されるアルゴリズムはキーの種類に依存します。
@@ -209,12 +215,15 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 <!-- REF #CryptoKey.encrypt().Params -->
 
+<div class="no-index">
+
 | 引数      | 型      |                             | 説明                                                  |
 | ------- | ------ | --------------------------- | --------------------------------------------------- |
 | message | Text   | ->                          | `options.encodingDecrypted` を使ってエンコードし暗号化するメッセージ文字列 |
 | options | Object | ->                          | エンコーディングオプション                                       |
 | 戻り値     | Text   | <- | `options.encodingEncrypted` を使って暗号化およびエンコードされたメッセージ |
 
+</div>
 <!-- END REF -->
 
 `.encrypt()` 関数は、<!-- REF #CryptoKey.encrypt().Summary -->**公開** 鍵を使って *message* を暗号化します<!-- END REF -->。 使用されるアルゴリズムはキーの種類に依存します。
@@ -251,10 +260,13 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 <!-- REF #CryptoKey.getPrivateKey().Params -->
 
+<div class="no-index">
+
 | 引数  | 型    |                             | 説明         |
 | --- | ---- | --------------------------- | ---------- |
 | 戻り値 | Text | <- | PEM 形式の秘密鍵 |
 
+</div>
 <!-- END REF -->
 
 `.getPrivateKey()` 関数は、<!-- REF #CryptoKey.getPrivateKey().Summary -->`CryptoKey` オブジェクトの秘密鍵を返します<!-- END REF --> (PEM形式)。無い場合は空の文字列を返します。
@@ -281,10 +293,13 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 <!-- REF #CryptoKey.getPublicKey().Params -->
 
+<div class="no-index">
+
 | 引数  | 型    |                             | 説明         |
 | --- | ---- | --------------------------- | ---------- |
 | 戻り値 | Text | <- | PEM 形式の公開鍵 |
 
+</div>
 <!-- END REF -->
 
 `.getPublicKey()` 関数は、<!-- REF #CryptoKey.getPublicKey().Summary -->
@@ -333,12 +348,15 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 <!-- REF #CryptoKey.sign().Params -->
 
+<div class="no-index">
+
 | 引数      | 型             |                             | 説明                                              |
 | ------- | ------------- | --------------------------- | ----------------------------------------------- |
 | message | Text または Blob | ->                          | 署名するメッセージ                                       |
 | options | Object        | ->                          | 署名オプション                                         |
 | 戻り値     | Text          | <- | "encoding" オプションに応じて Base64 または Base64URL 形式の署名 |
 
+</div>
 <!-- END REF -->
 
 `.sign()` 関数は、`CryptoKey` オブジェクトキーおよび指定された *options* を使って、<!-- REF #CryptoKey.sign().Summary --> utf8 形式の *message* 文字列またはBlob を署名します<!-- END REF -->。 `options.encoding` 属性に指定した値に応じて、base64 または base64URL 形式の署名を返します。
@@ -417,6 +435,8 @@ RSA キーのみ: <!-- REF #CryptoKey.size.Summary -->キーのサイズ (ビッ
 
 <!-- REF #CryptoKey.verify().Params -->
 
+<div class="no-index">
+
 | 引数        | 型             |                             | 説明                                                          |
 | --------- | ------------- | --------------------------- | ----------------------------------------------------------- |
 | message   | Text または Blob | ->                          | 署名の生成に使用されたメッセージ                                            |
@@ -424,6 +444,7 @@ RSA キーのみ: <!-- REF #CryptoKey.size.Summary -->キーのサイズ (ビッ
 | options   | Object        | ->                          | 署名オプション                                                     |
 | 戻り値       | Object        | <- | 検証ステータス                                                     |
 
+</div>
 <!-- END REF -->
 
 `.verify()` 関数は、`CryptoKey` オブジェクトキーおよび指定された *options* を使って、<!-- REF #CryptoKey.verify().Summary -->utf8 形式の *message* 文字列の署名を検証します<!-- END REF -->。

@@ -140,3 +140,4 @@ Por defecto, la caché ORDA es manejada de forma transparente por 4D. Sin embarg
 - [dataClass.setRemoteCacheSettings()](../API/DataClassClass.md#setremotecachesettings)
 - [dataClass.getRemoteCache()](../API/DataClassClass.md#getremotecache)
 - [dataClass.clearRemoteCache()](../API/DataClassClass.md#clearremotecache)
+

@@ -25,7 +25,7 @@ Un champ ne peut pas être indéfini (la commande `Undefined` retourne toujours 
 
 En règle générale, lorsque le code tente de lire ou d'assigner des expressions indéfinies, 4D générera des erreurs, excepté dans les cas suivants :
 
-- Affecter une valeur indéfinie aux variables (à l'exception des tableaux) a le même effet que d'appeler [`CLEAR VARIABLE`](../commands-legacy/clear-variable) avec elles :
+- Affecter une valeur indéfinie aux variables (à l'exception des tableaux) a le même effet que d'appeler [`CLEAR VARIABLE`](../commands/clear-variable) avec elles :
 
 ```4d
      var $o : Object
@@ -183,4 +183,5 @@ $result:=($vObj.undefined>$vObj.null)  //Erreur
 $result:=($vVar < 42) //False
 
 ```
+
 

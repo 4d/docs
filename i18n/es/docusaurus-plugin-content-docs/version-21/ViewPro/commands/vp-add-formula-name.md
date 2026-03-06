@@ -9,12 +9,17 @@ title: VP ADD FORMULA NAME
 
 <!-- REF #_method_.VP ADD FORMULA NAME.Params -->
 
-| Parámetros | Tipo   |    | Descripción                                  |                  |
-| ---------- | ------ | -- | -------------------------------------------- | ---------------- |
-| vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro |                  |
-| vpFormula  | Text   | -> | Fórmula 4D View Pro                          |                  |
-| name       | Text   | -> | Nombre de la fórmula                         |                  |
-| options    | Object | -> | Opciones de la fórmula temporal              | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo   |    | Descripción                                  |
+| ---------- | ------ | -- | -------------------------------------------- |
+| vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro |
+| vpFormula  | Text   | -> | Fórmula 4D View Pro                          |
+| name       | Text   | -> | Nombre de la fórmula                         |
+| options    | Object | -> | Opciones de la fórmula temporal              |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

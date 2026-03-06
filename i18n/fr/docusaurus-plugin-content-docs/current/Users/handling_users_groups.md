@@ -58,7 +58,7 @@ L'éditeur des utilisateurs se trouve dans la boîte à outils de 4D.
 
 ![](../assets/en/Users/editor.png)
 
-> L'éditeur des utilisateurs et des groupes peut être affiché au moment de l'exécution à l'aide de la commande [EDIT ACCESS](../commands-legacy/edit-access).
+> Users and groups editor can be displayed at runtime using the [EDIT ACCESS](../commands/edit-access) command.
 > Toute la configuration des utilisateurs et des groupes peut également être modifiée pendant l'exécution de l'application à l'aide des commandes du langage 4D du thème `Utilisateurs et groupes`.
 
 ### Ajouter et modifier des utilisateurs
@@ -210,4 +210,5 @@ Ce fichier peut être stocké aux emplacements suivants, en fonction de vos beso
 - Si un fichier **directory.json** se trouve à cet emplacement, il est prioritaire par rapport au fichier du dossier Settings utilisateur. If you want to use a specific directory file per data file, store the **directory.json** file in the data settings folder, i.e. in the ["Settings" folder of the "Data" folder](../Project/architecture.md#settings-user-data). Cette configuration personnalisée/locale des utilisateurs et des groupes ne sera pas modifiée par une mise à niveau de l'application.
 
 > Pour permettre des changements sûrs de mots de passe et d'appartenance à des groupes dans un environnement déployé, vous pouvez inclure votre fichier **directory.json** dans l'application serveur pendant le build, en utilisant l'[option correspondante du build application](../Desktop/building.md#incorporer-les-utilisateurs-et-les-groupes-du-projet-dans-l'application-serveur-construite).
+
 

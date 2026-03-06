@@ -153,7 +153,7 @@ When returning a 4D.OutgoingMessage object instance, 4D automatically sets some 
 
 :::note
 
-Se você definir um *valor* para o cabeçalho "Content-Type" *chave*, certifique-se de chamar esta função depois da chamada para [`setBody()`](#setbody), porque `setBody()` preenche automaticamente este cabeçalho. Para obter uma lista de valores de cabeçalho "Content-Type", por favor, consulte a [documentação do `WEB SEND BLOB`](../commands-legacy/web-send-blob).
+Se você definir um *valor* para o cabeçalho "Content-Type" *chave*, certifique-se de chamar esta função depois da chamada para [`setBody()`](#setbody), porque `setBody()` preenche automaticamente este cabeçalho. Para obter uma lista de valores de cabeçalho "Content-Type", por favor, consulte a [documentação do `WEB SEND BLOB`](../commands/web-send-blob).
 
 :::
 
@@ -197,3 +197,4 @@ Para obter uma lista de códigos de status HTTP, por favor, consulte a [lista de
 A propriedade `.status` contém <!-- REF #OutgoingMessageClass.status.Summary --> o status atual da mensagem de saída <!-- END REF -->. Essa propriedade pode ser definida com a função [`setStatus()`](setstatus).
 
 <!-- END REF -->
+

@@ -19,6 +19,12 @@ A biblioteca é apresentada numa janela separada:
 
 ![](../assets/en/FormEditor/library2.png)
 
+:::info
+
+Some objects in this library are only available if a [specific component](../Extensions/overview.md#components-developed-by-4d) is loaded in the application. For example, 4D Write Pro areas need the [4D Write Pro Interface](https://github.com/4d/4D-WritePro-Interface) component to be loaded.
+
+:::
+
 A janela tem as seguintes características principais:
 
 - Área de visualização com dicas: a área central exibe uma visualização de cada objeto. Você pode passar o mouse sobre um objeto para obter informações sobre ele em uma dica.

@@ -3,22 +3,25 @@ id: FunctionClass
 title: Function
 ---
 
-Um objeto **`4D.Function`** contém um trecho de código que pode ser executado a partir de um objeto, usando o operador `()`, ou usando as funções [`apply()`](#apply) e [`call()`](#call). 4D propõe três tipos de objetos `Function`:
+Um objeto **`4D.Function`** contém um trecho de código que pode ser executado a partir de um objeto, usando o operador `()`, ou usando as funções [`apply()`](#apply) e [`call()`](#call).
 
-- **as funções nativas**, ou seja, funções incorporadas de várias classes 4D, como `collection.sort()` ou `file.copyTo()`.
-- **as funções usuário**, criadas nas [classes usuário](Concepts/classes.md) usando a palavra-chave [Function](Concepts/classes.md#function).
-- **funções de fórmula**, ou seja, funções que podem executar qualquer fórmula 4D.
+### Herança
 
-### Objetos de formulários
+4D handles several kinds of `Function` objects, inheriting from the **4D.Function** class:
 
-Os comandos [Formula](../commands/formula) e [Formula from string](../commands/formula-from-string) permitem que você crie [objetos`4D.Function`](#formula-objects) para executar qualquer expressão ou código 4D expresso como texto.
+- **native functions**, i.e. built-in functions from various 4D classes such as [`collection.sort()`](./CollectionClass.md#sort) or [`file.copyTo()`](./FileClass.md#copyto).
+- **user functions**, created in [user classes](Concepts/classes.md) using the [`Function` keyword](Concepts/classes.md#function).
+- **formula functions**, i.e. functions that can execute formula code stored in [4D.Formula](./FormulaClass.md) objects,
+- **method functions**, i.e. functions that can execute source code as text stored in [4D.Method](./MethodClass.md) objects.
 
-Objetos formulário podem ser encapsulados em propriedades objeto:
+### Executing code in Function objects
+
+Function objects can be encapsulated in object properties:
 
 ```4d
- var $f : 4D. Function
- $f:=New object
- $f.message:=Formula(ALERT("Hello world"))
+var $message : 4D.Formula
+$message:=Formula(ALERT("Hello world"))
+$f:={message: $message}
 ```
 
 Essa propriedade é uma "função objeto" ou seja uma função que é restrita a seu objeto pai. Para executar uma função armazenada em uma propriedade objeto, use o operador **()** depois do nome propriedade, tal como:
@@ -33,60 +36,17 @@ Também se admite a sintaxe com parênteses:
  $f["message"]() //exibe "Hello world"
 ```
 
-Note que mesmo se não tiver parênteses (ver abaixo), uma função objeto a ser executada deve ser chamda com () parênteses. Chamar só a propriedade de objeto devolverá uma nova referência à fórmula (e não a executará):
+Note that, even if it does not have parameters (see below), an object function to be executed must be called with `()` parenthesis. Chamar só a propriedade de objeto devolverá uma nova referência à fórmula (e não a executará):
 
 ```4d
- $o:=$f.message //devolve o objeto fórmula em $o
+ $o:=$f.message //returns the function object in $o
 ```
 
-Você também pode executar uma função usando as funções [`apply()`](#apply) e [`call()`](#call):
+You can also execute a function using the [`apply()`](#apply) and [`call()`](#call):
 
 ```4d
- $f.message.apply() //exibe "Hello world"
+ $message.apply() //displays "Hello world"
 ```
-
-#### Utilização de parâmetros
-
-You can pass parameters to your formulas using a sequential parameter syntax based upon `$1, $2,...,$n`. The numbering of the $ parameters represents the order in which they will be passed to the formula. Por exemplo, pode escrever:
-
-```4d
- var $f : Object
- $f:=New object
- $f.message:=Formula(ALERT("Hello "+$2+", "+$1))
- $f.message("John";"Smith") //displays "Hello Smith, John"
-```
-
-Ou usando a função [.call()](#call):
-
-```4d
- var $f : Object
- $f:=Formula($1+" "+$2)
- $text:=$f.call(Null;"Hello";"World") //retorna "Hello World"
- $text:=$f.call(Null;"Welcome to";String(Year of(Current date))) //retorna "Welcome to 2026" (por exemplo)
-```
-
-#### Parâmetros a um único método
-
-Para mais conveniência, quando a fórmula é feita de um único método de projeto, parâmetros podem ser omitidos na inicialização do objeto fórmula. Pode ser passado quando a fórmula for chamada. Por exemplo:
-
-```4d
- var $f : 4D.Function
-
- $f:=Formula(myMethod)
-  //Escrevendo Formula(myMethod($1;$2)) não é necessário
- $text:=$f.call(Null;"Hello";"World") //retorna "Hello World"
- $text:=$f.call() //retorna "How are you?"
-
-  //myMethod
- #DECLARE ($param1 : Text; $param2 : Text)->$return : Text
- If(Count parameters=2)
-    $return:=$param1+" "+$param2
- Else
-    $return:="How are you?"
- End if
-```
-
-Parâmetros são recebidos dentro do método, na ordem que são especificados na chamada.
 
 ### Resumo
 
@@ -102,60 +62,40 @@ Parâmetros são recebidos dentro do método, na ordem que são especificados na
 
 <details><summary>História</summary>
 
-| Release | Mudanças   |
-| ------- | ---------- |
-| 17 R3   | Adicionado |
+| Release | Mudanças                                      |
+| ------- | --------------------------------------------- |
+| 21 R3   | Support of 4D.Methods objects |
+| 17 R3   | Adicionado                                    |
 
 </details>
 
-<!-- REF #FunctionClass.apply().Syntax -->**.apply**() : any<br/>**.apply**( *thisObj* : Object { ; *formulaParams* : Collection } ) : any<!-- END REF -->
+<!-- REF #FunctionClass.apply().Syntax -->**.apply**() : any<br/>**.apply**( *thisObj* : Object { ; *params* : Collection } ) : any<!-- END REF -->
 
 <!-- REF #FunctionClass.apply().Params -->
 
 <div class="no-index">
 
-| Parâmetro     | Tipo       |                             | Descrição                                                                                                                       |
-| ------------- | ---------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------------- |
-| thisObj       | Object     |              ->             | Objeto a ser retornado pelo comando This na fórmula                                                                             |
-| formulaParams | Collection |              ->             | Coleção de valores a serem passados como $1...$n quando `formula` for executado |
-| Resultados    | any        | <- | Valores de execução de fórmula                                                                                                  |
+| Parâmetro  | Tipo       |                             | Descrição                                                       |
+| ---------- | ---------- | :-------------------------: | --------------------------------------------------------------- |
+| thisObj    | Object     |              ->             | Object to be returned by the `This` command in the function     |
+| params     | Collection |              ->             | Collection of values to be passed as parameters to the function |
+| Resultados | any        | <- | Value from function execution                                   |
 
 </div>
 <!-- END REF -->
 
 #### Descrição
 
-A função `.apply()` <!-- REF #FunctionClass.apply().Summary -->executa o objeto `formula` ao qual ele é aplicado e retorna o valor resultante<!-- END REF -->. O objeto fórmula pode ser criado usando os comandos `Formula` ou `Formula from string`.
+The `.apply()` function <!-- REF #FunctionClass.apply().Summary -->executes the function object to which it is applied, passing parameters as a collection, and returns the resulting value<!-- END REF -->.
 
-No parâmetro *thisObj* pode passar uma referência ao objeto a ser usada como `This` na fórmula.
+In the *thisObj* parameter, you can pass a reference to the object to be used as `This` within the function. Pass Null if you do not want to use `This` but you want to send parameters.
 
-Também pode passar uma coleção a ser usada como parâmetros $1...$n na fórmula usando o parâmetro opcional *formulaParams*.
+You can pass a collection to be used as parameters in the function using the optional *params* parameter:
+
+- in `4D.Formula` objects, parameters are passed in $1...$n in the formula.
+- in other `4D.Function` objects such as `4D.Method` objects, parameters are passed in [declared method parameters](../Concepts/parameters.md).
 
 Note que `.apply()` é similar a [`.call()`](#call) exceto que os parâmetros são passados como coleção. Isso pode ser útil para passar resultados calculados. Isso pode ser útil para passar resultados calculados.
-
-#### Exemplo 1
-
-```4d
- var $f : 4D. Function
- $f:=Formula($1+$2+$3)
-
- $c:=New collection(10;20;30)
- $result:=$f.apply(Null;$c) // retorna 60
-```
-
-#### Exemplo 2
-
-```4d
- var $calc : 4D. Function
- var $feta; $robot : Object
- $robot:=New object("name";"Robot";"price";543;"quantity";2)
- $feta:=New object("name";"Feta";"price";12.5;"quantity";5)
-
- $calc:=Formula(This.total:=This.price*This.quantity)
-
- $calc.apply($feta) // $feta={name:Feta,price:12.5,quantity:5,total:62.5}
- $calc.apply($robot) // $robot={name:Robot,price:543,quantity:2,total:1086}
-```
 
 <!-- END REF -->
 
@@ -165,9 +105,10 @@ Note que `.apply()` é similar a [`.call()`](#call) exceto que os parâmetros s�
 
 <details><summary>História</summary>
 
-| Release | Mudanças   |
-| ------- | ---------- |
-| 17 R3   | Adicionado |
+| Release | Mudanças                                      |
+| ------- | --------------------------------------------- |
+| 21 R3   | Support of 4D.Methods objects |
+| 17 R3   | Adicionado                                    |
 
 </details>
 
@@ -177,24 +118,29 @@ Note que `.apply()` é similar a [`.call()`](#call) exceto que os parâmetros s�
 
 <div class="no-index">
 
-| Parâmetro  | Tipo   |                             | Descrição                                                                                                            |
-| ---------- | ------ | --------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| thisObj    | Object | ->                          | Objeto a ser retornado pelo comando This na fórmula                                                                  |
-| params     | any    | ->                          | Valores a serem passados como $1...$n quando a fórmula for executada |
-| Resultados | any    | <- | Valores de execução de fórmula                                                                                       |
+| Parâmetro  | Tipo   |                             | Descrição                                                   |
+| ---------- | ------ | --------------------------- | ----------------------------------------------------------- |
+| thisObj    | Object | ->                          | Object to be returned by the `This` command in the function |
+| params     | any    | ->                          | Values to be passed as parameters to the function           |
+| Resultados | any    | <- | Value from function execution                               |
 
 </div>
 <!-- END REF -->
 
 #### Descrição
 
-A função `.call()` <!-- REF #FunctionClass.call().Summary -->executa o objeto `formula` ao qual ele está aplicado e retorna o valor resultante<!-- END REF -->. O objeto fórmula pode ser criado usando os comandos `Formula` ou `Formula from string`.
+The `.call()` function <!-- REF #FunctionClass.call().Summary -->executes the function object to which it is applied, with one or more parameter(s) passed directly, and returns the resulting value<!-- END REF -->.
 
-No parâmetro *thisObj* pode passar uma referência ao objeto a ser usada como `This` na fórmula.
+In the *thisObj* parameter, you can pass a reference to the object to be used as `This` within the function.
 
-Você também pode passar valores para serem usados como parâmetros *$1...$n* na fórmula usando os parâmetros *params* opcionais.
+You can pass values to be used as parameters in the function using the optional *params* parameter:
+
+- in `4D.Formula` objects, parameters are passed in $1...$n in the formula.
+- in `4D.Method` objects, parameters are passed in [declared method parameters](../Concepts/parameters.md).
 
 Observe que `.call()` é semelhante a [`.apply()`](#apply), exceto pelo fato de que os parâmetros são passados diretamente.
+
+<!-- END REF -->
 
 #### Exemplo 1
 
@@ -212,17 +158,16 @@ Observe que `.call()` é semelhante a [`.apply()`](#apply), exceto pelo fato de 
  $result:=$f.call($o) // devolve 100
 ```
 
-<!-- END REF -->
-
 <!-- REF FunctionClass.source.Desc -->
 
 ## .source
 
 <details><summary>História</summary>
 
-| Release | Mudanças   |
-| ------- | ---------- |
-| 18 R2   | Adicionado |
+| Release | Mudanças                                      |
+| ------- | --------------------------------------------- |
+| 21 R3   | Support of 4D.Methods objects |
+| 18 R2   | Adicionado                                    |
 
 </details>
 
@@ -230,9 +175,13 @@ Observe que `.call()` é semelhante a [`.apply()`](#apply), exceto pelo fato de 
 
 #### Descrição
 
-A propriedade `.source` <!-- REF #FunctionClass.source.Summary -->contém a expressão de origem da `fórmula` como texto<!-- END REF -->.
+The `.source` property <!-- REF #FunctionClass.source.Summary -->contains the source code of the function as text<!-- END REF -->.
+
+The returned value is the original text used to create the 4D.Formula or 4D.Method object but reformatted.
 
 Essa propriedade é **somente leitura**.
+
+<!-- END REF -->
 
 #### Exemplo
 
@@ -243,4 +192,5 @@ Essa propriedade é **somente leitura**.
  $tf:=$of.source //"String(Current time;HH MM AM PM)"
 ```
 
-<!-- END REF -->
+
+

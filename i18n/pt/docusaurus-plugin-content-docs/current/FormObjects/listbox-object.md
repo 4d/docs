@@ -7,12 +7,12 @@ title: List Box Object
 
 Em um list box de tipo array, cada coluna deve estar associada a um array unidimensional 4D; podem ser utilizados todos os tipos de array, com exceção dos arrays de ponteiros. O número de linhas é baseado no número de elementos array.
 
-Como padrão, 4D atribui o nome "ColumnX" para cada coluna. You can change it, as well as other column properties, in the [column properties](./listbox-column.md). The display format for each column can also be defined using the [`OBJECT SET FORMAT`](../commands-legacy/object-set-format.md) command.
+Como padrão, 4D atribui o nome "ColumnX" para cada coluna. You can change it, as well as other column properties, in the [column properties](./listbox-column.md). The display format for each column can also be defined using the [`OBJECT SET FORMAT`](../commands/object-set-format) command.
 
 > Os list boxes do tipo array podem ser exibidos em [modo hierárquico](listbox_overview.md#hierarchical-list-boxes), com mecanismos específicos.
 
 Com list box de tipo array, o valor ingressado ou exibido são gerenciados usando a linguagem 4D. Você também pode associar uma [lista de opções](properties_DataSource.md#choice-list) a uma coluna para controlar a entrada de dados.
-The values of columns are managed using high-level List box commands (such as [`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows) or [`LISTBOX DELETE ROWS`](../commands-legacy/listbox-delete-rows.md)) as well as array manipulation commands. Por exemplo, para iniciar os conteúdos da coluna, pode usar a instrução abaixo:
+The values of columns are managed using high-level List box commands (such as [`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows) or [`LISTBOX DELETE ROWS`](../commands/listbox-delete-rows)) as well as array manipulation commands. Por exemplo, para iniciar os conteúdos da coluna, pode usar a instrução abaixo:
 
 ```4d
 ARRAY TEXT(varCol;size)
@@ -28,7 +28,7 @@ LIST TO ARRAY("ListName";varCol)
 
 ## List box de tipo seleção
 
-Nesse tipo de list box, cada coluna pode ser associada com um campo (por exemplo, `[Employees]LastName)` ou uma expressão. A expressão pode ser baseada em um ou mais campos (por exemplo, `[Employees]FirstName+" "[Employees]LastName`) ou pode ser simplesmente uma fórmula (por exemplo, `String(Milliseconds)`). A expressão também pode ser um método de proejeto, uma variável ou um item array. You can use the [`LISTBOX SET COLUMN FORMULA`](../commands-legacy/listbox-set-column-formula.md) and [`LISTBOX INSERT COLUMN FORMULA`](../commands-legacy/listbox-insert-column-formula.md) commands to modify columns programmatically.
+Nesse tipo de list box, cada coluna pode ser associada com um campo (por exemplo, `[Employees]LastName)` ou uma expressão. A expressão pode ser baseada em um ou mais campos (por exemplo, `[Employees]FirstName+" "[Employees]LastName`) ou pode ser simplesmente uma fórmula (por exemplo, `String(Milliseconds)`). A expressão também pode ser um método de proejeto, uma variável ou um item array. You can use the [`LISTBOX SET COLUMN FORMULA`](../commands/listbox-set-column-formula) and [`LISTBOX INSERT COLUMN FORMULA`](../commands/listbox-insert-column-formula) commands to modify columns programmatically.
 
 O conteúdo de cada linha é então avaliado de acordo com uma seleção de registros: a **seleção atual** de uma tabela ou uma **seleção nomeada**.
 
@@ -137,7 +137,7 @@ Propriedades compatíveis dependem do tipo de list box.
 
 ## Supported Form Events {#supported-form-events}
 
-| Evento formulário    | Propriedades adicionais retornadas (consulte [Form event](../commands/form-event.md) para obter as propriedades principais)                                                                          | Comentários                                                                                                                                                                                                     |
+| Evento formulário    | Propriedades adicionais retornadas (consulte [Form event](../commands/form-event) para obter as propriedades principais)                                                                             | Comentários                                                                                                                                                                                                     |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <ul><li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li></ul>                                                                                   |                                                                                                                                                                                                                 |
 | On After Keystroke   | <ul><li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li></ul>                                                                                   |                                                                                                                                                                                                                 |
@@ -194,5 +194,6 @@ Os eventos formulário nos list box ou colunas de list box podem retornar as seg
 | Alinhamento vertical | inteiro longo | Positivo se a deslocação for para baixo, negativo se for para cima           |
 
 > Se um evento ocorrer em uma coluna ou linha "falsa" que não exista, é normalmente retornada uma cadeia de caracteres vazia.
+
 
 

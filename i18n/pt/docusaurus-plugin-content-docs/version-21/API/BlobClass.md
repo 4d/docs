@@ -27,11 +27,14 @@ A classe Blob permite que você crie e manipule [objetos blob](../Concepts/dt_bl
 
 <!-- REF #4D.Blob.new().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo                     |                             | Descrição                    |
 | ---------- | ------------------------ | :-------------------------: | ---------------------------- |
 | blob       | Blob                     |              ->             | Blob a copiar                |
 | Resultados | 4D. Blob | <- | Novo 4D.Blob |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -62,12 +65,15 @@ A propriedade `.size` <!-- REF #Blob.size.Summary -->retorna o tamanho de um `4D
 
 <!-- REF #Blob.slice().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo                     |                             | Descrição                                                                             |
 | ---------- | ------------------------ | :-------------------------: | ------------------------------------------------------------------------------------- |
 | start      | Real                     |              ->             | índice do primeiro byte a incluir no novo 4D. Blob\`. |
 | end        | Real                     |              ->             | índice do primeiro byte que não será incluído no novo 4D. Blob\`      |
 | Resultados | 4D. Blob | <- | Novo `4D.Blob`                                                                        |
 
+</div>
 <!-- END REF -->
 
 #### Descrição

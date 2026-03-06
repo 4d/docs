@@ -433,6 +433,8 @@ title: Document クラス
 
 <!-- REF #document.copyTo().Params -->
 
+<div class="no-index">
+
 | 引数                | 型                         |                             | 説明                                |
 | ----------------- | ------------------------- | :-------------------------: | --------------------------------- |
 | destinationFolder | 4D.Folder |              ->             | 宛先フォルダー                           |
@@ -440,6 +442,7 @@ title: Document クラス
 | overwrite         | Integer                   |              ->             | 既存要素を上書きするには `fk overwrite` を渡します |
 | 戻り値               | 4D.File   | <- | コピーされたファイル                        |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -489,10 +492,13 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 <!-- REF #document.getContent().Params -->
 
+<div class="no-index">
+
 | 引数  | 型                       |                             | 説明         |
 | --- | ----------------------- | --------------------------- | ---------- |
 | 戻り値 | 4D.Blob | <- | ファイルのコンテンツ |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -533,11 +539,14 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 <!-- REF #document.getIcon().Params -->
 
+<div class="no-index">
+
 | 引数   | 型       |                             | 説明                                          |
 | ---- | ------- | --------------------------- | ------------------------------------------- |
 | size | Integer | ->                          | 取得するピクチャーの一辺の長さ (ピクセル単位) |
 | 戻り値  | Picture | <- | アイコン                                        |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -570,6 +579,8 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 <!-- REF #document.getText().Params -->
 
+<div class="no-index">
+
 | 引数          | 型       |                             | 説明               |
 | ----------- | ------- | --------------------------- | ---------------- |
 | charSetName | Text    | ->                          | 文字セットの名前         |
@@ -577,6 +588,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 | breakMode   | Integer | ->                          | 改行の処理モード         |
 | 戻り値         | Text    | <- | ドキュメントから取得したテキスト |
 
+</div>
 <!-- END REF -->
 
 #### 説明

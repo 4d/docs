@@ -9,10 +9,15 @@ title: VP Get sheet count
 
 <!-- REF #_method_.VP Get sheet count.Params -->
 
-| Paramètres | Type    |                             | Description                             |                  |
-| ---------- | ------- | --------------------------- | --------------------------------------- | ---------------- |
-| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro |                  |
-| Résultat   | Integer | <- | Nombre de feuilles                      | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres | Type    |                             | Description                             |
+| ---------- | ------- | --------------------------- | --------------------------------------- |
+| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro |
+| Résultat   | Integer | <- | Nombre de feuilles                      |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

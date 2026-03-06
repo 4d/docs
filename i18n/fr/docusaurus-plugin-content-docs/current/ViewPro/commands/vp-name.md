@@ -11,12 +11,12 @@ title: VP Name
 
 <div class="no-index">
 
-| Paramètres | Type    |                             | Description                                                            |
-| ---------- | ------- | --------------------------- | ---------------------------------------------------------------------- |
-| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro                                |
-| rangeName  | Text    | ->                          | Nom de plage existante                                                 |
-| sheet      | Integer | ->                          | Emplacement de la plage (si omis, feuille courante) |
-| Résultat   | Object  | <- | Plage nommée                                                           |
+| Paramètres | Type    |                             | Description                                                                                                                                                |
+| ---------- | ------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro                                                                                                                    |
+| rangeName  | Text    | ->                          | Cet exemple de code copie d'abord le contenu, valeurs, formats et formules d'une plage dans un objet puis les colle dans une autre plage : |
+| sheet      | Integer | ->                          | Résultat:                                                                                                                                  |
+| Résultat   | Object  | <- | Plage nommée                                                                                                                                               |
 
 </div>
 <!-- END REF -->

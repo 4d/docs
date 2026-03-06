@@ -396,14 +396,16 @@ Essa propriedade é **apenas leitura**.
 
 
 <!-- REF #document.copyTo().Params -->
-| Parâmetro         | Tipo       |    | Descrição                                              |
-| ----------------- | ---------- |:--:| ------------------------------------------------------ |
-| destinationFolder | 4D. Folder | -> | Pasta de destino                                       |
-| newName           | Text       | -> | Nome para a copia                                      |
-| overwrite         | Integer    | -> | `fk overwrite` para substituir os elementos existentes |
-| Resultados        | 4D. File   | <- | Arquivo copiado|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|destinationFolder | 4D.Folder |->|Destination folder|
+|newName|Text|->|Name for the copy|
+|overwrite|Integer|->|`fk overwrite` to replace existing elements|
+|Result|4D.File|<-|Copied file|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -449,11 +451,13 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 
 <!-- REF #document.getContent().Params -->
-| Parâmetro  | Tipo |    | Descrição                                      |
-| ---------- | ---- | -- | ---------------------------------------------- |
-| Resultados | Blob | <- | Conteúdo do arquivo|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|----|---|---|
+|Result | Blob |<-|File content|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -491,12 +495,14 @@ Para salvar o conteúdo de um documento em um campo `BLOB`:
 
 
 <!-- REF #document.getIcon().Params -->
-| Parâmetro  | Tipo    |    | Descrição                                       |
-| ---------- | ------- | -- | ----------------------------------------------- |
-| size       | Integer | -> | Longitude de lado da imagem devolvida (píxeles) |
-| Resultados | Imagem  | <- | Ícone|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|----|---|---|
+|size|Integer|->|Side length for the returned picture (pixels)|
+|Result|Picture|<-|Icon|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -526,14 +532,16 @@ Se o arquivo não existir no disco, um ícone em branco padrão será retornado.
 
 
 <!-- REF #document.getText().Params -->
-| Parâmetro   | Tipo    |    | Descrição                                     |
-| ----------- | ------- | -- | --------------------------------------------- |
-| charSetName | Text    | -> | Nome do conjunto de caracteres                |
-| charSetNum  | Integer | -> | Número de conjuntos de caracteres             |
-| breakMode   | Integer | -> | Modo de processamento para quebras de linha   |
-| Resultados  | Text    | <- | Texto do documento|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|charSetName |Text |-> |Name of character set|
+|charSetNum |Integer |-> |Number of character set|
+|breakMode|Integer |-> |Processing mode for line breaks|
+|Result |Text  |<- |Text from the document|
+</div>
+<!-- END REF -->
 
 #### Descrição
 

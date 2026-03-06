@@ -18,7 +18,7 @@ Puede añadir o modificar objetos formulario 4D de las siguientes maneras:
 
 - **[Editor de formularios](FormEditor/formEditor.md):** arrastre un objeto de la barra de herramientas del editor de formularios al formulario. A continuación, utilice la Lista de propiedades para especificar las propiedades del objeto.
 
-- Lenguaje **4D**: los comandos del tema `Objects (Forms)` como [`OBJECT DUPLICATE`](../commands-legacy/object-duplicate) o [`OBJECT SET FONT STYLE`](../commands-legacy/object-set-font-style) permiten crear y definir objetos de formulario.
+- Lenguaje **4D**: los comandos del tema `Objects (Forms)` como [`OBJECT DUPLICATE`](../commands/object-duplicate) o [`OBJECT SET FONT STYLE`](../commands/object-set-font-style) permiten crear y definir objetos de formulario.
 
 - **Código JSON en formularios dinámicos:** define las propiedades utilizando JSON. Utilice la propiedad [type](properties_Object.md#type) para definir el tipo de objeto y, a continuación, defina sus [propiedades disponibles](properties_Reference.md).
   Ejemplo para un objeto botón:

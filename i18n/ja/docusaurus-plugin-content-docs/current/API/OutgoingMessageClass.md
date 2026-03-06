@@ -153,7 +153,7 @@ When returning a 4D.OutgoingMessage object instance, 4D automatically sets some 
 
 :::note
 
-*value* 引数の値を、*key* 引数で"Content-Type" ヘッダーを指定して設定しようとする場合、この関数を、[`setBody()`](#setbody) の後に呼び出すようにして下さい。`setBody()` は自動的にヘッダーに値を入れるからです。 "Content-Type" ヘッダーの値の一覧については、の[`WEB SEND BLOB`](../commands-legacy/web-send-blob) ドキュメンテーションを参照して下さい。
+*value* 引数の値を、*key* 引数で"Content-Type" ヘッダーを指定して設定しようとする場合、この関数を、[`setBody()`](#setbody) の後に呼び出すようにして下さい。`setBody()` は自動的にヘッダーに値を入れるからです。 "Content-Type" ヘッダーの値の一覧については、の[`WEB SEND BLOB`](../commands/web-send-blob) ドキュメンテーションを参照して下さい。
 
 :::
 
@@ -197,3 +197,4 @@ HTTP ステータスコードの一覧については、[Wikipedia のHTTP ス�
 `.status` プロパティには、<!-- REF #OutgoingMessageClass.status.Summary -->送信メッセージのカレントのステータス<!-- END REF -->が格納されています。 このプロパティは、[`setStatus()`](setstatus) 関数を使用して設定することができます。
 
 <!-- END REF -->
+

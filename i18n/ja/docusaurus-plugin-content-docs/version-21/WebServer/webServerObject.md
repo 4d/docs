@@ -1,9 +1,9 @@
 ---
 id: webServerObject
-title: Web Server instances
+title: Webサーバーインスタンス
 ---
 
-A 4D project can start and monitor a web server for the main (host) application as well as each [hosted component](../Concepts/components.md).
+4Dプロジェクトは、メイン (ホスト) アプリケーションおよび、[ホストされた各コンポーネント](../Concepts/components.md) の Webサーバーを起動して監視することができます。
 
 たとえば、メインアプリケーションに 2つのコンポーネントをインストールしている場合、アプリケーションから最大 3つの独立した Webサーバーを起動して監視することができます:
 

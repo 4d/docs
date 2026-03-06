@@ -32,7 +32,7 @@ Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv20/4
 
 #### Comandos
 
-[OBJECT GET DRAG AND DROP OPTIONS](../commands-legacy/object-get-drag-and-drop-options) - [OBJECT SET DRAG AND DROP OPTIONS](../commands-legacy/object-set-drag-and-drop-options)
+[OBJECT GET DRAG AND DROP OPTIONS](../commands/object-get-drag-and-drop-options) - [OBJECT SET DRAG AND DROP OPTIONS](../commands/object-set-drag-and-drop-options)
 
 #### Ver también
 
@@ -64,7 +64,7 @@ Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv20/4
 
 #### Comandos
 
-[OBJECT GET DRAG AND DROP OPTIONS](../commands-legacy/object-get-drag-and-drop-options) - [OBJECT SET DRAG AND DROP OPTIONS](../commands-legacy/object-set-drag-and-drop-options)
+[OBJECT GET DRAG AND DROP OPTIONS](../commands/object-get-drag-and-drop-options) - [OBJECT SET DRAG AND DROP OPTIONS](../commands/object-set-drag-and-drop-options)
 
 #### Ver también
 
@@ -156,7 +156,7 @@ Permite la selección de múltiples registros/opciones en una [lista jerárquica
 
 #### Comandos
 
-[GET LIST PROPERTIES](../commands-legacy/get-list-properties) - [SET LIST PROPERTIES](../commands-legacy/set-list-properties)
+[GET LIST PROPERTIES](../commands/get-list-properties) - [SET LIST PROPERTIES](../commands/set-list-properties)
 
 ---
 
@@ -205,5 +205,6 @@ Puede asignar al mismo tiempo una acción estándar y un método proyecto de un 
 
 #### Comandos
 
-[`OBJECT Get action`](../commands-legacy/object-get-action) - [`OBJECT SET ACTION`](../commands-legacy/object-set-action)
+[`OBJECT Get action`](../commands/object-get-action) - [`OBJECT SET ACTION`](../commands/object-set-action)
+
 

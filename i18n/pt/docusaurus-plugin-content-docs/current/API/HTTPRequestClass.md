@@ -5,8 +5,6 @@ title: HTTPRequest
 
 A classe `HTTPRequest` permite que você lide com [`objetos HTTPRequest`](#httprequest-object) que pode ser usado para configurar e enviar solicitações a um servidor HTTP, além de processar as respostas do servidor HTTP.
 
-A classe `HTTPRequest` está disponível no class store `4D`. Você cria e envia solicitações HTTP usando a função [4D.HTTPRequest.new()](#4dhttprequestnew) que retorna uma [`HTTPRequest object`](#httprequest-object).
-
 <details><summary>História</summary>
 
 | Release | Mudanças          |
@@ -14,6 +12,12 @@ A classe `HTTPRequest` está disponível no class store `4D`. Você cria e envia
 | 19 R6   | Classe adicionada |
 
 </details>
+
+A classe `HTTPRequest` está disponível no class store `4D`. Você cria e envia solicitações HTTP usando a função [4D.HTTPRequest.new()](#4dhttprequestnew) que retorna uma [`HTTPRequest object`](#httprequest-object).
+
+### Aynchronous programming
+
+This class supports asynchronous programming in 4D as described in the [Asynchronous Execution](../Develop/async.md) page.
 
 ### Exemplo
 
@@ -152,6 +156,12 @@ No parâmetro *options*, passe um objeto que possa conter as seguintes proprieda
 | timeout                | Real                                              | Tempo de espera em segundos. indefinido = sem timeout                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | indefinido           |
 | validateTLSCertificate | Parâmetros                                        | Se false, 4D não valida o certificado TLS e não retorna um erro se ele for inválido (i.e. expirado, auto-assinado...). Importante: Na implementação actual, a Autoridade de Certificação em si não é verificada.                                                                                                                                                                                | True                 |
 
+:::note Keychain access on macOS
+
+On macOS, depending on your local configuration, a password can be required when your 4D application accesses the certificate in the *keychain* for the first time.
+
+:::
+
 #### Funções Callback
 
 Todas as funções de chamada de retorno recebem dois parâmetros de objectos:
@@ -171,7 +181,7 @@ Aqui está a sequência de chamadas de retorno:
 
 :::info
 
-Para as funções de callback serem chamadas quando você não usa [`wait()`](#wait) (chamada assíncrona), o processo deve ser um [worker](../Develop/processes.md#worker-processes) criado com [`CALL WORKER`](../commands-legacy/call-worker), NÃO [`New process`](../commands-legacy/new-process).
+Para as funções de callback serem chamadas quando você não usa [`wait()`](#wait) (chamada assíncrona), o processo deve ser um [worker](../Develop/processes.md#worker-processes) criado com [`CALL WORKER`](../commands/call-worker), NÃO [`New process`](../commands/new-process).
 
 :::
 
@@ -422,8 +432,9 @@ Se a resposta do servidor já tiver chegado, a função regressa imediatamente.
 
 :::note
 
-Durante a execução de .wait(), as funções de callback dos workers são executadas, sejam elas originadas de outras instâncias de `HTTPRequest` ou [`SystemWorker`](SystemWorkerClass.md), ou de outras chamadas [`CALL WORKER`](../commands-legacy/call-worker).  Você pode sair de uma .wait() chamando [`terminate()`](#terminate) de um retorno de chamada.
+Durante a execução de .wait(), as funções de callback dos workers são executadas, sejam elas originadas de outras instâncias de `HTTPRequest` ou [`SystemWorker`](SystemWorkerClass.md), ou de outras chamadas [`CALL WORKER`](../commands/call-worker).  Você pode sair de uma .wait() chamando [`terminate()`](#terminate) de um retorno de chamada.
 
 :::
 
 <!-- END REF -->
+

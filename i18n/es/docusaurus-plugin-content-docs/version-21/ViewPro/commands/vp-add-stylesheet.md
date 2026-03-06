@@ -9,12 +9,17 @@ title: VP ADD STYLESHEET
 
 <!-- REF #_method_.VP ADD STYLESHEET.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                                    |                  |
-| ---------- | ------- | -- | -------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                   |                  |
-| styleName  | Text    | -> | Nombre del estilo                                              |                  |
-| styleObj   | Object  | -> | Objeto definiendo las propiedades del atributo                 |                  |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo    |    | Descripción                                                    |
+| ---------- | ------- | -- | -------------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                   |
+| styleName  | Text    | -> | Nombre del estilo                                              |
+| styleObj   | Object  | -> | Objeto definiendo las propiedades del atributo                 |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

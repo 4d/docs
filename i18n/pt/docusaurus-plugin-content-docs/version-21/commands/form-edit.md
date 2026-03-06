@@ -51,19 +51,19 @@ Passa uma seqüência de caracteres vazia em *objeto* para desmarcar todos os ob
 Para abrir o formulário *Contacts* da tabela *Address*:
 
 ```4d
-FORM EDIT([Contatos]; "Endereço")
+ FORM EDIT([Contacts];"Address")
 ```
 
 Para abrir o formulário do projeto *ContactList*:
 
 ```4d
- FORM EDIT("ContactList")
+ FORM EDIT("ContactList")
 ```
 
 Para abrir o formulário de projeto *ContatoPage* com o objeto "nome-entrada" selecionado:
 
 ```4d
- FORM EDIT("ContactList"; "name-input")
+ FORM EDIT("ContactList"; "name-input")
 ```
 
 ## Veja também

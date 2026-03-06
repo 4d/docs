@@ -9,9 +9,14 @@ title: VP RECOMPUTE FORMULAS
 
 <!-- REF #_method_.VP RECOMPUTE FORMULAS.Params -->
 
-| Parámetros | Tipo |    | Descripción                                  |                  |
-| ---------- | ---- | -- | -------------------------------------------- | ---------------- |
-| vpAreaName | Text | -> | Nombre de objeto formulario área 4D View Pro | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo |    | Descripción                                  |
+| ---------- | ---- | -- | -------------------------------------------- |
+| vpAreaName | Text | -> | Nombre de objeto formulario área 4D View Pro |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

@@ -10,9 +10,9 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Parámetros | Tipo                       |                             | Descripción    |
-| ---------- | -------------------------- | --------------------------- | -------------- |
-| Resultado  | [4D.Session](../API/SessionClass.md)  | &#8592; | Objeto Session |
+| Parámetros | Tipo                                                 |                             | Descripción    |
+| ---------- | ---------------------------------------------------- | --------------------------- | -------------- |
+| Resultado  | [4D.Session](../API/SessionClass.md) | &#8592; | Objeto Session |
 
 </div>
 <!-- END REF-->

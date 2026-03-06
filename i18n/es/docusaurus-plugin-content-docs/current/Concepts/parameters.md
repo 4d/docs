@@ -202,7 +202,7 @@ Function returnHello
 
 ## Indirección de parámetros (${N})
 
-Los métodos y funciones 4D aceptan un número variable de parámetros. Puede dirigirse a esos parámetros con un bucle `For...End for`, el comando [`Count parameters`](../commands-legacy/count-parameters) y la **sintaxis de indirección de parámetros**. Dentro del método, una dirección de indirección tiene el formato `${N}`, donde `N` es una expresión numérica.
+Los métodos y funciones 4D aceptan un número variable de parámetros. Puede dirigirse a esos parámetros con un bucle `For...End for`, el comando [`Count parameters`](../commands/count-parameters) y la **sintaxis de indirección de parámetros**. Dentro del método, una dirección de indirección tiene el formato `${N}`, donde `N` es una expresión numérica.
 
 ### Utilización de parámetros variables
 
@@ -226,7 +226,7 @@ Los parámetros del método deben pasarse en el orden correcto, primero el forma
  Result:=MySum("000";1;2;200) //"203"
 ```
 
-Tenga en cuenta que aunque haya declarado 0, 1 o más parámetros, siempre puede pasar el número de parámetros que desee. Los parámetros están todos disponibles dentro del código llamado a través de la sintaxis `${N}` y el tipo de parámetros extra es [Variant](dt_variant.md) por defecto (puede declararlos utilizando la [notación variadic](#declaring-variadic-parameters)). Solo necesita asegurarse de que los parámetros existan, gracias al comando [`Count parameters`](../commands-legacy/count-parameters). Por ejemplo:
+Tenga en cuenta que aunque haya declarado 0, 1 o más parámetros, siempre puede pasar el número de parámetros que desee. Los parámetros están todos disponibles dentro del código llamado a través de la sintaxis `${N}` y el tipo de parámetros extra es [Variant](dt_variant.md) por defecto (puede declararlos utilizando la [notación variadic](#declaring-variadic-parameters)). Solo necesita asegurarse de que los parámetros existan, gracias al comando [`Count parameters`](../commands/count-parameters). Por ejemplo:
 
 ```4d
 //método foo
@@ -542,3 +542,4 @@ El método `ChangeAge` añade 10 al atributo Age del objeto recibido
 Cuando se ejecuta el método `CreatePerson`, las dos cajas de alerta dirán "50" ya que la misma referencia de objeto es manejada por ambos métodos.
 
 **4D Server:** cuando se pasan parámetros entre métodos que no se ejecutan en la misma máquina (utilizando por ejemplo la opción "Ejecutar en el servidor"), las referencias no son utilizables. En estos casos, se envían copias de los parámetros de objetos y colecciones en lugar de referencias.
+

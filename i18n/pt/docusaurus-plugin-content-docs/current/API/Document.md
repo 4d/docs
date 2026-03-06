@@ -581,12 +581,12 @@ Se o arquivo não existir no disco, um ícone em branco padrão será retornado.
 
 <div class="no-index">
 
-| Parâmetro   | Tipo    |                             | Descrição                                   |
-| ----------- | ------- | --------------------------- | ------------------------------------------- |
-| charSetName | Text    | ->                          | Nome do conjunto de caracteres              |
-| charSetNum  | Integer | ->                          | Número de conjuntos de caracteres           |
-| breakMode   | Integer | ->                          | Modo de processamento para quebras de linha |
-| Resultados  | Text    | <- | Texto do documento                          |
+| Parâmetro   | Tipo    |                             | Descrição                                    |
+| ----------- | ------- | --------------------------- | -------------------------------------------- |
+| charSetName | Text    | ->                          | Nome do conjunto de caracteres               |
+| charSetNum  | Integer | ->                          | Número de conjuntos de caracteres            |
+| breakMode   | Integer | ->                          | Modo de processamento para retornos de linha |
+| Resultados  | Text    | <- | Texto do documento                           |
 
 </div>
 <!-- END REF -->

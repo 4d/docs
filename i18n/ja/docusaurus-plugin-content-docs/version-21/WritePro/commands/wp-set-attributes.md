@@ -8,6 +8,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP SET ATTRIBUTES.Params-->
 
+<div class="no-index">
+
 | 引数          | 型                                               |                             | 説明                                  |
 | ----------- | ----------------------------------------------- | --------------------------- | ----------------------------------- |
 | targetObj   | Object                                          | &#8594; | レンジまたは要素または4D Write Pro ドキュメント      |
@@ -15,6 +17,7 @@ displayed_sidebar: docs
 | attribValue | Text, Number, Object, Collection, Picture, Date | &#8594; | 新しい属性の値                             |
 | attribObj   | Object                                          | &#8594; | 設定したい属性の名前とそれに対応する設定したい値を格納したオブジェクト |
 
+</div>
 <!-- END REF-->
 
 ## 説明

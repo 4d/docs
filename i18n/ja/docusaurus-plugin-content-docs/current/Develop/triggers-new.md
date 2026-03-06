@@ -19,3 +19,4 @@ to import
 その一方で、[`SAVE RECORD`](../commands/save-record) あるいは [標準アクション](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.ja.html#4682827) などの4D のクラシック言語を使用した4D データベースレベルでトリガーされたアクションは、ORDA エンティティイベントは**呼び出しません**。
 
 <!-- END REF -->
+

@@ -84,11 +84,13 @@ El tipo de valor del atributo depende del tipo [kind](DataClassClass.md#attribut
 
 
 <!-- REF #EntityClass.clone().Params -->
-| Parámetros | Tipo      |    | Descripción                                                              |
-| ---------- | --------- |:--:| ------------------------------------------------------------------------ |
-| Resultado  | 4D.Entity | <- | Nueva entidad que hace referencia al registro|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|4D.Entity|<-|New entity referencing the record|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -138,13 +140,15 @@ Si no desea que la nueva entidad comparta referencias de atributos de tipo objet
 
 
 <!-- REF #EntityClass.diff().Params -->
-| Parámetros          | Tipo       |    | Descripción                                                |
-| ------------------- | ---------- |:--:| ---------------------------------------------------------- |
-| entityToCompare     | 4D.Entity  | -> | Entidad a comparar con la entidad original                 |
-| attributesToCompare | Collection | -> | Nombre de los atributos a comparar                         |
-| Resultado           | Collection | <- | Diferencias entre las entidades|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|entityToCompare|4D.Entity|->|Entity to be compared with the original entity|
+|attributesToCompare|Collection|-> |Name of attributes to be compared |
+|Result|Collection|<-|Differences between the entities|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -339,12 +343,14 @@ vCompareResult1 (se devuelven todas las diferencias):
 
 
 <!-- REF #EntityClass.drop().Params -->
-| Parámetros | Tipo    |    | Descripción                                                                        |
-| ---------- | ------- |:--:| ---------------------------------------------------------------------------------- |
-| mode       | Integer | -> | `dk force drop if stamp changed`: activa el soltar incluso si el sello ha cambiado |
-| Resultado  | Object  | <- | Resultado de la operación soltar|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|mode|Integer|->|`dk force drop if stamp changed`: Forces the drop even if the stamp has changed|
+|Result|Object|<-|Result of drop operation|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -383,13 +389,13 @@ El objeto devuelto por `.drop( )` contiene las siguientes propiedades:
 
 (\*) Los siguientes valores pueden ser devueltos en las propiedadese *status* y *statusText* del objeto *Result* en caso de error:
 
-| Constante                                 | Valor | Comentario                                                                                                                                                                                                                            |
-| ----------------------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `dk status entity does not exist anymore` | 5     | La entidad ya no existe en los datos. Este error puede ocurrir en los siguientes casos:<br/><li>la entidad ha sido abandonada (el sello ha cambiado y el espacio de memoria está ahora libre)</li><li>la entidad ha sido eliminada y sustituida por otra con otra llave primaria (el sello ha cambiado y una nueva entidad utiliza ahora el espacio de memoria). Cuando se utiliza entity.drop( ), este error puede ser devuelto cuando se utiliza la opción dk force drop if stamp changed. Cuando se utiliza entity.lock( ), este error puede ser devuelto cuando se utiliza la opción dk reload if stamp changed</li> **statusText asociado**: "La entidad ya no existe"                                |
-| `dk status locked`                        | 3     | La entidad está bloqueada por un bloqueo pesimista.<br/> **statusText asociado**: "Ya está bloqueado"                                                                                                                           |
-| `dk status serious error`                 | 4     | Un error grave es un error de base de datos de bajo nivel (por ejemplo, una llave duplicada), un error de hardware, etc.<br/>**statusText asociado**: "Otro error"                                                              |
+| Constante                                 | Valor | Comentario                                                                                                                                                                                                                               |
+| ----------------------------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `dk status entity does not exist anymore` | 5     | La entidad ya no existe en los datos. Este error puede ocurrir en los siguientes casos:<br/><li>la entidad ha sido abandonada (el sello ha cambiado y el espacio de memoria está ahora libre)</li><li>la entidad ha sido eliminada y sustituida por otra con otra llave primaria (el sello ha cambiado y una nueva entidad utiliza ahora el espacio de memoria). Cuando se utiliza entity.drop( ), este error puede ser devuelto cuando se utiliza la opción dk force drop if stamp changed. Cuando se utiliza entity.lock( ), este error puede ser devuelto cuando se utiliza la opción dk reload if stamp changed</li> **statusText asociado**: "La entidad ya no existe"                                   |
+| `dk status locked`                        | 3     | La entidad está bloqueada por un bloqueo pesimista.<br/> **statusText asociado**: "Ya está bloqueado"                                                                                                                              |
+| `dk status serious error`                 | 4     | Un error grave es un error de base de datos de bajo nivel (por ejemplo, una llave duplicada), un error de hardware, etc.<br/>**statusText asociado**: "Otro error"                                                                 |
 | `dk status stamp has changed`             | 2     | El valor del sello interno de la entidad no coincide con el de la entidad almacenada en los datos (bloqueo optimista).<br/><li>con `.save( )`: error sólo si no se utiliza la opción `dk auto merge`</li><li>con `.drop( )`: error sólo si no se utiliza la opción `dk force drop if stamp changed`</li><li>con `.lock( )`: error sólo si no se utiliza la opción `dk reload if stamp changed`</li><li>**statusText asociado **: "El sello ha cambiado"</li> |
-| `dk status wrong permission`              | 1     | Los privilegios actuales no permiten suprimir la entidad. **StatusText asociado**: "Permission Error"                                                                                                                                 |
+| `dk status wrong permission`              | 1     | Los privilegios actuales no permiten suprimir la entidad. **StatusText asociado**: "Permission Error"                                                                                                                                    |
 
 #### Ejemplo 1
 
@@ -446,11 +452,13 @@ Ejemplo con la opción `dk force drop if stamp changed`:
 
 
 <!-- REF #EntityClass.first().Params -->
-| Parámetros | Tipo      |    | Descripción                                                                                                        |
-| ---------- | --------- |:--:| ------------------------------------------------------------------------------------------------------------------ |
-| Resultado  | 4D.Entity | <- | Referencia a la primera entidad de una selección de entidades (Null si no se encuentra)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|4D.Entity|<-|Reference to first entity of an entity selection (Null if not found)|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -485,11 +493,13 @@ Si la entidad no pertenece a ninguna selección de entidades existente (es decir
 
 
 <!-- REF #EntityClass.fromObject().Params -->
-| Parámetros | Tipo   |    | Descripción                                                             |
-| ---------- | ------ |:--:| ----------------------------------------------------------------------- |
-| filler     | Object | -> | Objeto a partir del cual se llena la entidad|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|filler|Object|->|Object from which to fill the entity|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -570,11 +580,13 @@ También puede utilizar una entidad relacionada dada como objeto:
 
 
 <!-- REF #EntityClass.getDataClass().Params -->
-| Parámetros | Tipo         |    | Descripción                                                             |
-| ---------- | ------------ |:--:| ----------------------------------------------------------------------- |
-| Resultado  | 4D.DataClass | <- | Objeto DataClass al que pertenece la entidad|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|4D.DataClass|<-|DataClass object to which the entity belongs|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -615,11 +627,13 @@ El siguiente código genérico duplica cualquier entidad:
 
 
 <!-- REF #EntityClass.getKey().Params -->
-| Parámetros | Tipo    |    | Descripción                                                                                               |
-| ---------- | ------- |:--:| --------------------------------------------------------------------------------------------------------- |
-| mode       | Integer | -> | `dk key as string`: la llave primaria se devuelve como una cadena, sin importar el tipo de llave primaria |
-| Resultado  | any     | <- | Valor de la llave primaria de la entidad (Integer or Text)                                                |
+<div class="no-index">
 
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|mode|Integer|->|`dk key as string`: primary key is returned as a string, no matter the primary key type|
+|Result|any|<-|Value of the primary key of the entity (Integer or Text)|
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -655,11 +669,13 @@ Las llaves primarias pueden ser números (enteros) o cadenas. Puede "forzar" que
 
 
 <!-- REF #EntityClass.getRemoteContextAttributes().Params -->
-| Parámetros | Tipo |    | Descripción                                                                                      |
-| ---------- | ---- | -- | ------------------------------------------------------------------------------------------------ |
-| resultado  | Text | <- | Atributos de contexto vinculados a la entidad, separados por una coma|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|result|Text|<-|Context attributes linked to the entity, separated by a comma|
+</div>
+<!-- END REF -->
 
 > **Modo avanzado:** esta función está pensada para los desarrolladores que necesitan personalizar las funcionalidades por defecto de ORDA para configuraciones específicas. En la mayoría de los casos, no será necesario utilizarla.
 
@@ -713,11 +729,13 @@ $info:=$address.getRemoteContextAttributes()
 
 
 <!-- REF #EntityClass.getSelection().Params -->
-| Parámetros | Tipo               |    | Descripción                                                                                         |
-| ---------- | ------------------ |:--:| --------------------------------------------------------------------------------------------------- |
-| Resultado  | 4D.EntitySelection | <- | Entity selection a la que pertenece la entidad (nula si no se encuentra)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|4D.EntitySelection|<-|Entity selection to which the entity belongs (Null if not found)|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -756,11 +774,13 @@ Si la entidad no pertenece a una selección de entidades, la función devuelve N
 
 
 <!-- REF #EntityClass.getStamp().Params -->
-| Parámetros | Tipo    |    | Descripción                                                                          |
-| ---------- | ------- |:--:| ------------------------------------------------------------------------------------ |
-| Resultado  | Integer | <- | Sello de la entidad (0 si la entidad acaba de ser creada)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Integer|<-|Stamp of the entity (0 if entity has just been created)|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -802,12 +822,14 @@ El sello interno se incrementa automáticamente en 4D cada vez que se guarda la 
 
 
 <!-- REF #EntityClass.indexOf().Params -->
-| Parámetros      | Tipo               |    | Descripción                                                                     |
-| --------------- | ------------------ |:--:| ------------------------------------------------------------------------------- |
-| entitySelection | 4D.EntitySelection | -> | La posición de la entidad se da en función de esta selección de entidades       |
-| Resultado       | Integer            | <- | Posición de la entidad en una selección de entidades|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|entitySelection|4D.EntitySelection|->|Position of the entity is given according to this entity selection|
+|Result|Integer|<-|Position of the entity in an entity selection|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -850,11 +872,13 @@ El valor resultante se incluye entre 0 y la longitud de la selección de entidad
 
 
 <!-- REF #EntityClass.isNew().Params -->
-| Parámetros | Tipo    |    | Descripción                                                                                                          |
-| ---------- | ------- |:--:| -------------------------------------------------------------------------------------------------------------------- |
-| Resultado  | Boolean | <- | True si la entidad acaba de ser creada y aún no se ha guardado. En caso contrario, False.|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Boolean|<-|True if entity has just been created and not yet saved. Otherwise, False.|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -889,11 +913,13 @@ La función `.isNew()` <!-- REF #EntityClass.isNew().Summary --> devuelve True s
 
 
 <!-- REF #EntityClass.last().Params -->
-| Parámetros | Tipo      |    | Descripción                                                                                                       |
-| ---------- | --------- |:--:| ----------------------------------------------------------------------------------------------------------------- |
-| Resultado  | 4D.Entity | <- | Referencia a la última entidad de una selección de entidades (Null si no se encuentra)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|4D.Entity|<-|Reference to last entity of an entity selection (Null if not found)|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -928,12 +954,14 @@ Si la entidad no pertenece a ninguna selección de entidades existente (es decir
 
 
 <!-- REF #EntityClass.lock().Params -->
-| Parámetros | Tipo    |    | Descripción                                                                      |
-| ---------- | ------- |:--:| -------------------------------------------------------------------------------- |
-| mode       | Integer | -> | `dk reload if stamp changed`: recargar antes de bloquear si el sello ha cambiado |
-| Resultado  | Object  | <- | Resultado de la operación de bloqueo|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|mode|Integer|->|`dk reload if stamp changed`: Reload before locking if stamp changed|
+|Result|Object|<-|Result of lock operation|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -1051,11 +1079,13 @@ Ejemplo con la opción `dk reload if stamp changed`:
 
 
 <!-- REF #EntityClass.next().Params -->
-| Parámetros | Tipo      |    | Descripción                                                                                                         |
-| ---------- | --------- |:--:| ------------------------------------------------------------------------------------------------------------------- |
-| Resultado  | 4D.Entity | <- | Referencia a la siguiente entidad en la selección de entidades (Null si no se encuentra)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|4D.Entity|<-|Reference to next entity in the entity selection (Null if not found)|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -1093,11 +1123,13 @@ Si no hay una entidad siguiente válida en la selección de entidades (es decir,
 
 
 <!-- REF #EntityClass.previous().Params -->
-| Parámetros | Tipo      |    | Descripción                                                                                                        |
-| ---------- | --------- |:--:| ------------------------------------------------------------------------------------------------------------------ |
-| Resultado  | 4D.Entity | <- | Referencia a la entidad anterior en la selección de entidades (Null si no se encuentra)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|4D.Entity|<-|Reference to previous entity in the entity selection (Null if not found)|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -1134,11 +1166,13 @@ Si no hay una entidad anterior válida en la selección de entidades (es decir, 
 
 
 <!-- REF #EntityClass.reload().Params -->
-| Parámetros | Tipo   |    | Descripción                              |
-| ---------- | ------ |:--:| ---------------------------------------- |
-| Resultado  | Object | <- | Objeto estado|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Object|<-|Status object|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -1197,12 +1231,14 @@ El objeto devuelto por `.reload( )` contiene las siguientes propiedades:
 
 
 <!-- REF #EntityClass.save().Params -->
-| Parámetros | Tipo    |    | Descripción                                                  |
-| ---------- | ------- |:--:| ------------------------------------------------------------ |
-| mode       | Integer | -> | `dk auto merge`: activa el modo de fusión automática         |
-| Resultado  | Object  | <- | Resultado de la operación guardar|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|mode|Integer|->|`dk auto merge`: Enables the automatic merge mode|
+|Result|Object|<-|Result of save operation|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -1332,14 +1368,16 @@ Actualización de una entidad con la opción `dk auto merge`:
 
 
 <!-- REF #EntityClass.toObject().Params -->
-| Parámetros   | Tipo       |    | Descripción                                                                                                    |
-| ------------ | ---------- |:--:| -------------------------------------------------------------------------------------------------------------- |
-| filterString | Text       | -> | Atributo(s) a extraer (cadena separada por comas)                                                              |
-| filterCol    | Collection | -> | Colección de atributos a extraer                                                                               |
-| options      | Integer    | -> | `dk with primary key`: añade la propiedad \_\_KEY;<br/>`dk with stamp`: añade la propiedad \_STAMP |
-| Resultado    | Object     | <- | Objeto creado a partir de la entidad|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|filterString |Text |->|Attribute(s) to extract (comma-separated string)|
+|filterCol |Collection |->|Collection of attribute(s) to extract|
+|options|Integer|->|`dk with primary key`: adds the \_\_KEY property;<br/>`dk with stamp`: adds the \_STAMP property|
+|Result|Object|<-|Object built from the entity|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -1621,11 +1659,13 @@ Ejemplo con el tipo `relatedEntity` con una forma simple:
 
 
 <!-- REF #EntityClass.touched().Params -->
-| Parámetros | Tipo    |    | Descripción                                                                                                                  |
-| ---------- | ------- |:--:| ---------------------------------------------------------------------------------------------------------------------------- |
-| Resultado  | Boolean | <- | True si se ha modificado al menos un atributo de la entidad y aún no se ha guardado, si no, False|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Boolean|<-|True if at least one entity attribute has been modified and not yet saved, else False|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -1666,11 +1706,13 @@ En este ejemplo, comprobamos si es necesario guardar la entidad:
 
 
 <!-- REF #EntityClass.touchedAttributes().Params -->
-| Parámetros | Tipo       |    | Descripción                                                                |
-| ---------- | ---------- |:--:| -------------------------------------------------------------------------- |
-| Resultado  | Collection | <- | Nombres de atributos tocados, o colección vacía|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Collection|<-|Names of touched attributes, or empty collection|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -1740,11 +1782,13 @@ En este caso:
 
 
 <!-- REF #EntityClass.unlock().Params -->
-| Parámetros | Tipo   |    | Descripción                              |
-| ---------- | ------ |:--:| ---------------------------------------- |
-| Resultado  | Object | <- | Objeto estado|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Object|<-|Status object|
+</div>
+<!-- END REF -->
 
 #### Descripción
 

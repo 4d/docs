@@ -33,7 +33,7 @@ Si presiona el botón **Rechazar nuevas conexiones**:
 - El nombre del proyecto ya no aparece en el diálogo de conexión remota.
 - Los clientes de escritorio que ya están conectados no se desconectan y pueden seguir trabajando con normalidad.
 
-> Puede realizar la misma acción con el comando [`REJECT NEW REMOTE CONNECTIONS`](../commands-legacy/reject-new-remote-connections).
+> Puede realizar la misma acción con el comando [`REJECT NEW REMOTE CONNECTIONS`](../commands/reject-new-remote-connections).
 
 - Si presiona el botón **Aceptar nuevas conexiones**, el servidor de aplicaciones vuelve a su estado por defecto.
 
@@ -57,4 +57,5 @@ Esta área indica la **memoria caché total** (parámetro definido en las prefer
 
 - **Máximo**: número máximo de conexiones cliente simultáneas permitidas para el servidor de aplicaciones. Este valor depende de la licencia instalada en el equipo servidor.
 - **Utilizado**: número real de conexiones que se están utilizando actualmente.
+
 

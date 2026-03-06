@@ -38,7 +38,7 @@ Esta área ofrece información específica sobre el servidor SOAP de 4D Server e
 
 - **Peticiones SOAP**: aceptadas o rechazadas. Esta información indica si el servidor SOAP está activado. Para que las peticiones SOAP sean aceptadas, el servidor HTTP debe estar iniciado y el servidor SOAP debe aceptar explícitamente las peticiones (ver el botón Aceptar/Rechazar).
 - **Conexiones máximas**: número máximo de conexiones SOAP permitidas. Este valor depende de la licencia instalada en el equipo servidor.
-- Botón **Aceptar/rechazar las peticiones SOAP**: este botón se alterna y puede utilizarse para controlar la activación del servidor SOAP de 4D Server. Este botón modifica el valor de la opción **Autorizar peticiones de servicios web** en la página "Servicios web" de las Propiedades de la base (y viceversa). También puede utilizar el comando [`SOAP REJECT NEW REQUESTS`](../commands-legacy/soap-reject-new-requests) para rechazar nuevas peticiones SOAP, sin embargo esto no modifica el valor de la opción **Permitir solicitudes de servicios web**.
+- Botón **Aceptar/rechazar las peticiones SOAP**: este botón se alterna y puede utilizarse para controlar la activación del servidor SOAP de 4D Server. Este botón modifica el valor de la opción **Autorizar peticiones de servicios web** en la página "Servicios web" de las Propiedades de la base (y viceversa). También puede utilizar el comando [`SOAP REJECT NEW REQUESTS`](../commands/soap-reject-new-requests) para rechazar nuevas peticiones SOAP, sin embargo esto no modifica el valor de la opción **Permitir solicitudes de servicios web**.
 
 Si presiona el botón **Aceptar las peticiones SOAP** y el servidor HTTP está detenido, 4D lo inicia automáticamente.
 
@@ -51,4 +51,5 @@ Esta área ofrece información sobre los parámetros de configuración y el func
 - **Memoria caché**: tamaño de la memoria caché del servidor HTTP, cuando está activada (tamaño realmente utilizado por la caché / tamaño máximo teóricamente asignado a la caché en las Propiedades). Puede hacer clic en el botón **Borrar caché** para vaciar la caché actual.
 - **Escuchando IP**, **puerto HTTP** (80 por defecto), **TLS habilitado** para conexiones HTTP (no afecta a conexiones 4D ni SQL) y **puerto HTTP** utilizado: [parámetros de configuración](WebServer/webServerConfig. d) del servidor HTTP, especificado a través de la Configuración o por programación.
 - **Información del archivo de registro**: nombre, formato y fecha de la siguiente copia de seguridad automática del registro del servidor HTTP (archivo logweb.txt).
+
 

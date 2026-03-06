@@ -19,6 +19,12 @@ title: オブジェクトライブラリ
 
 ![](../assets/en/FormEditor/library2.png)
 
+:::info
+
+Some objects in this library are only available if a [specific component](../Extensions/overview.md#components-developed-by-4d) is loaded in the application. For example, 4D Write Pro areas need the [4D Write Pro Interface](https://github.com/4d/4D-WritePro-Interface) component to be loaded.
+
+:::
+
 このウィンドウには次の主な機能があります:
 
 - Tips 付きプレビューエリア: 中央のエリアには各オブジェクトのプレビューが表示されます。 オブジェクトにマウスオーバーすると、オブジェクトに関する情報が Tips として表示されます。

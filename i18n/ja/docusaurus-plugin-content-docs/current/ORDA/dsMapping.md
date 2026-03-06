@@ -28,7 +28,7 @@ ORDA テクノロジーは、その下地となる[データベースストラ�
 > ORDA のデータストアマッピングでは、次のものは考慮されません:
 >
 > - テーブルあるいはフィールドの "非表示" オプション
-> - [`SET TABLE TITLES`](../commands-legacy/set-table-titles) あるいは [`SET FIELD TITLES`](../commands-legacy/set-field-titles) を通して定義されたバーチャルストラクチャー
+> - [`SET TABLE TITLES`](../commands/set-table-titles) あるいは [`SET FIELD TITLES`](../commands/set-field-titles) を通して定義されたバーチャルストラクチャー
 > - リレーションの "手動" あるいは "自動" プロパティ
 
 ### リモートデータストアの利用
@@ -252,3 +252,4 @@ $e:=ds.Employee.all() // 結果のエンティティセレクションへの参�
 > - リモートデータストアにおいて作成されるエンティティセレクション
 
 順列ありのエンティティセレクションが順列なしのエンティティセレクションになった場合、重複したエンティティ参照はすべて削除されます。
+

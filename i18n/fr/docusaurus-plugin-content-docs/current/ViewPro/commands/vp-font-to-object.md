@@ -11,10 +11,10 @@ title: VP Font to object
 
 <div class="no-index">
 
-| Paramètres | Type   |                             | Description                                                     |
-| ---------- | ------ | --------------------------- | --------------------------------------------------------------- |
-| font       | Text   | ->                          | Chaîne raccourcie pour la police (shorthand) |
-| Résultat   | Object | <- | Objet police                                                    |
+| Paramètres | Type   |                             | Description                                                                        |
+| ---------- | ------ | --------------------------- | ---------------------------------------------------------------------------------- |
+| font       | Text   | ->                          | Chaîne raccourcie pour la police (shorthand)                    |
+| Résultat   | Object | <- | <strong x-id="1">Notes sur le format de fichier SpreadJS</strong>: |
 
 </div>
 <!-- END REF -->

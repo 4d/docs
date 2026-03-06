@@ -52,21 +52,21 @@ La commande **Command name** met la variable *OK* à 1 si *command* correspond �
 Le code suivant permet de charger toutes les commandes 4D valides dans un tableau :
 
 ```4d
- var $Lon_id : Integer
- var $Txt_command : Text
- ARRAY LONGINT($tLon_Command_IDs;0)
- ARRAY TEXT($tTxt_commands;0)
- 
- Repeat
-    $Lon_id:=$Lon_id+1
-    $Txt_command:=Command name($Lon_id)
-    If(OK=1) //le numéro de commande existe
-       If(Length($Txt_command)>0) //la commande n'est pas désactivée
-          APPEND TO ARRAY($tTxt_commands;$Txt_command)
-          APPEND TO ARRAY($tLon_Command_IDs;$Lon_id)
-       End if
-    End if
- Until(OK=0) //fin des commandes existantes
+ var $Lon_id : Integer
+ var $Txt_command : Text
+ ARRAY LONGINT($tLon_Command_IDs;0)
+ ARRAY TEXT($tTxt_commands;0)
+ 
+ Repeat
+    $Lon_id:=$Lon_id+1
+    $Txt_command:=Command name($Lon_id)
+    If(OK=1) //command number exists
+       If(Length($Txt_command)>0) //command is not disabled
+          APPEND TO ARRAY($tTxt_commands;$Txt_command)
+          APPEND TO ARRAY($tLon_Command_IDs;$Lon_id)
+       End if
+    End if
+ Until(OK=0) //end of existing commands
 ```
 
 ## Exemple 2
@@ -74,15 +74,15 @@ Le code suivant permet de charger toutes les commandes 4D valides dans un tablea
 Dans un formulaire, vous voulez afficher une liste déroulante contenant les commandes standard de génération d'états. Dans la méthode objet de cette liste déroulante, vous écrivez :
 
 ```4d
- Case of
-    :(Form event code=On Before)
-       ARRAY TEXT(asCommand;4)
-       asCommand{1}:=Command name(1)
-       asCommand{2}:=Command name(2)
-       asCommand{3}:=Command name(4)
-       asCommand{4}:=Command name(3)
-  // ...
- End case
+ Case of
+    :(Form event code=On Before)
+       ARRAY TEXT(asCommand;4)
+       asCommand{1}:=Command name(1)
+       asCommand{2}:=Command name(2)
+       asCommand{3}:=Command name(4)
+       asCommand{4}:=Command name(3)
+  // ...
+ End case
 ```
 
 Dans la version anglaise de 4D, la liste déroulante contiendra : Sum, Average, Min et Max. Dans la version française\*, la liste déroulante contiendra : Somme, Moyenne, Min et Max.
@@ -94,23 +94,23 @@ Dans la version anglaise de 4D, la liste déroulante contiendra : Sum, Average, 
 Vous souhaitez créer une méthode qui renvoie **True** si la commande, dont le numéro est passé en paramètre, est thread-safe, et **False** dans le cas contraire.
 
 ```4d
-  //Is_Thread_Safe project method
- #declare($command : Integer) : Boolean
- var $threadsafe : Integer
- var $name; $theme : Text
- $name:=Command name($command;$threadsafe;$theme)
- If($threadsafe ?? 0) //si le premier bit est à 1
-    return True
- Else
-    return False
- End if
+  //Is_Thread_Safe project method
+ #declare($command : Integer) : Boolean
+ var $threadsafe : Integer
+ var $name; $theme : Text
+ $name:=Command name($command;$threadsafe;$theme)
+ If($threadsafe ?? 0) //if the first bit is set to 1
+    return True
+ Else
+    return False
+ End if
 ```
 
 Ensuite, pour la commande "SAVE RECORD" (53) par exemple, vous pouvez écrire :
 
 ```4d
- $isSafe:=Is_Thread_Safe(53)
-  // renvoie True
+ $isSafe:=Is_Thread_Safe(53)
+  // returns True
 ```
 
 ## Exemple 4
@@ -125,11 +125,11 @@ var $deprecated : Collection
 Repeat
     $Lon_id:=$Lon_id+1
     $Txt_command:=Command name($Lon_id;$info)
-    If($info ?? 1) //le 2e bit est à 1
-            //alors la commande est dépréciée
+    If($info ?? 1) //the second bit is set to 1
+            //then the command is deprecated
         $deprecated.push($Txt_command)
     End if
-Until(OK=0) //fin des commandes existantes
+Until(OK=0) //end of existing commands
 
 ```
 

@@ -18,11 +18,16 @@ title: VP IMPORT DOCUMENT
 
 <!-- REF #_method_.VP IMPORT DOCUMENT.Params -->
 
-| Parâmetro  | Tipo   |    | Descrição                                  |                  |
-| ---------- | ------ | -- | ------------------------------------------ | ---------------- |
-| vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro |                  |
-| filePath   | Text   | -> | Caminho do documento                       |                  |
-| paramObj   | Object | -> | Opções de importação                       | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro  | Tipo   |    | Descrição                                  |
+| ---------- | ------ | -- | ------------------------------------------ |
+| vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro |
+| filePath   | Text   | -> | Caminho do documento                       |
+| paramObj   | Object | -> | Opções de importação                       |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

@@ -132,3 +132,4 @@ El lenguaje 4D contiene [varios comandos](../commands/theme/Web_Server) permitie
 | `WEB START SERVER`              | Aplicación local del servidor web        |
 | `WEB STOP SERVER`               | Aplicación local del servidor web        |
 | `WEB Validate digest`           | Servidor web que ha recibido la petición |
+

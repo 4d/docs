@@ -16,7 +16,7 @@ El editor de etiquetas de 4D ofrece una forma práctica de imprimir una amplia v
 
 :::note
 
-Las etiquetas también se pueden crear usando el [Editor de formularios](../FormEditor/formEditor.md). Utilice el editor de formularios para diseñar etiquetas especializadas que incluyan variables o aproveche las herramientas de dibujo disponibles en el editor de formularios e imprímalas utilizando el editor de etiquetas o el comando [`PRINT LABEL`](../commands-legacy/print-label).
+Las etiquetas también se pueden crear usando el [Editor de formularios](../FormEditor/formEditor.md). Utilice el editor de formularios para diseñar etiquetas especializadas que incluyan variables o aproveche las herramientas de dibujo disponibles en el editor de formularios e imprímalas utilizando el editor de etiquetas o el comando [`PRINT LABEL`](../commands/print-label).
 
 :::
 
@@ -27,7 +27,7 @@ Para abrir el editor de etiquetas:
 
 - En el entorno Diseño, elija **Etiquetas...** en el menú **Herramientas** o en el menú asociado al botón "Herramientas" en la barra de herramientas de 4D.
   O
-- En una aplicación, llame al comando [`PRINT LABEL`](../commands-legacy/print-label).
+- En una aplicación, llame al comando [`PRINT LABEL`](../commands/print-label).
 
 ![](../assets/en/Desktop/label-wizard.png)
 
@@ -244,4 +244,5 @@ Se admiten tanto los archivos ".4lbp" estándar como los generados por el asiste
 Cuando se inicia el Asistente de etiquetas, si se detecta esta carpeta y contiene archivos de etiquetas válidos, se añade un icono emergente al botón **Cargar**. Los modelos de etiquetas pueden seleccionarse a través de una línea de menú:
 
 ![](../assets/en/Desktop/label-resources2.png)
+
 

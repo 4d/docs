@@ -43,7 +43,7 @@ Os objetos SMTP Transporter são instanciados com o comando [`SMTP New transport
 
 #### Descrição
 
-A função `4D.SMTPTransporter.new()` <!-- REF #4D.SMTPTransporter.new().Summary --> cria e retorna um novo objeto do tipo `4D.SMTPTransporter`<!-- END REF -->. É idêntico ao comando [`SMTP New transporter`](../commands/smtp-new-transporter) (atalho).
+A função `4D.SMTPTransporter.new()` <!-- REF #4D.SMTPTransporter.new().Summary --> cria e retorna um novo objeto do tipo `4D.SMTPTransporter`<!-- END REF -->. É idêntico ao comando (atalho) [`SMTP New transporter`](../commands/smtp-new-transporter).
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -168,3 +168,4 @@ Neste caso, o objecto de estatuto resultante contém os seguintes valores:
 <!-- INCLUDE transporter.sendTimeOut.Desc -->
 
 <!-- INCLUDE transporter.user.Desc -->
+

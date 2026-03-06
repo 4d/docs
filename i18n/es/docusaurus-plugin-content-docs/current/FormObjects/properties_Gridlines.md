@@ -19,7 +19,7 @@ Define el color de las líneas horizontales de un list box (gris por defecto).
 
 #### Comandos
 
-[LISTBOX GET GRID COLORS](../commands-legacy/listbox-get-grid-colors) - [LISTBOX SET GRID COLOR](../commands-legacy/listbox-set-grid-color)
+[LISTBOX GET GRID COLORS](../commands/listbox-get-grid-colors) - [LISTBOX SET GRID COLOR](../commands/listbox-set-grid-color)
 
 ---
 
@@ -39,4 +39,5 @@ Define el color de las líneas verticales de un list box (gris por defecto).
 
 #### Comandos
 
-[LISTBOX GET GRID COLORS](../commands-legacy/listbox-get-grid-colors) - [LISTBOX SET GRID COLOR](../commands-legacy/listbox-set-grid-color)
+[LISTBOX GET GRID COLORS](../commands/listbox-get-grid-colors) - [LISTBOX SET GRID COLOR](../commands/listbox-set-grid-color)
+

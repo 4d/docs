@@ -20,7 +20,7 @@ title: On After Edit
 - ユーザーがおこなったキーボードからの入力。この場合、`On After Edit` イベントは [`On Before Keystroke`](onBeforeKeystroke.md) と [`On After Keystroke`](onAfterKeystroke.md) イベントの後に生成されます。
 - ユーザーアクションをシミュレートするランゲージコマンドによる変更 (例: `POST KEY`)。
 
-`On After Edit` イベント内において、入力テキストは [`Get edited text`](../commands-legacy/get-edited-text) コマンドによって返されます。
+`On After Edit` イベント内において、入力テキストは [`Get edited text`](../commands/get-edited-text) コマンドによって返されます。
 
 ### 4D View Pro
 
@@ -112,3 +112,4 @@ title: On After Edit
 "newValue":"jumped over the lazy dog";
 }
 ```
+

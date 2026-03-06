@@ -7,8 +7,8 @@ A lo largo de sus proyectos 4D, es posible que necesite dar formato a los valore
 
 4D incluye una lista completa de patrones que puede utilizar para crear y aplicar formatos personalizados de fecha y hora en sus aplicaciones, además de los formatos por defecto. Los patrones de formato personalizados son compatibles con las siguientes funciones:
 
-- el comando [`String`](../commands/string),
-- los comandos [`OBJECT SET FORMAT`](../commands-legacy/object-set-format) y [`OBJECT Get format`](../commands-legacy/object-get-format),
+- the [`String`](../commands/string) command,
+- los comandos [`OBJECT SET FORMAT`](../commands/object-set-format) y [`OBJECT Get format`](../commands/object-get-format),
 - el formato de fecha y hora de las propiedades del objeto de formulario, disponibles en la lista de propiedades o en las propiedades JSON [`dateFormat`](../FormObjects/properties_Display.md#date-format) y [`timeFormat`](../FormObjects/properties_Display.md#time-format).
 
 ## Lista de patrones
@@ -164,3 +164,4 @@ Por ejemplo:
 ## Ver también
 
 Ver [este blogpost](https://blog.4d.com/tailored-customization-for-dates-and-times) para más información sobre los formatos personalizados de fecha y hora.
+

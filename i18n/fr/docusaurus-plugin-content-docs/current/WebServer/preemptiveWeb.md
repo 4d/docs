@@ -44,7 +44,7 @@ Tout le code 4D exécuté par le serveur Web doit être thread-safe si vous souh
 
 - La méthode projet `compiler_web` (indépendamment de sa propriété "Mode d'exécution") ;
 
-- En principe, tout code traité par la commande [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags) dans le contexte du web, par exemple par le biais de pages .shtml
+- En principe, tout code traité par la commande [`PROCESS 4D TAGS`](../commands/process-4d-tags) dans le contexte du web, par exemple par le biais de pages .shtml
 
 - Toute méthode projet comportant l'attribut "Available through 4D tags and URLS (`4DACTION`, etc.)"
 
@@ -90,3 +90,4 @@ Dans l'Explorateur d'exécution et dans la fenêtre d'administration de 4D Serve
 | Type de process                                    | Icône                                       |
 | -------------------------------------------------- | ------------------------------------------- |
 | Méthode Web (process préemptif) | ![](../assets/en/WebServer/processIcon.png) |
+

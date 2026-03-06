@@ -58,7 +58,7 @@ title: 値の範囲
 
 #### コマンド
 
-[OBJECT Get list name](../commands-legacy/object-get-list-name) - [OBJECT Get list reference](../commands-legacy/object-get-list-reference) - [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name) - [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference)
+[OBJECT Get list name](../commands/object-get-list-name) - [OBJECT Get list reference](../commands/object-get-list-reference) - [OBJECT SET LIST BY NAME](../commands/object-set-list-by-name) - [OBJECT SET LIST BY REFERENCE](../commands/object-set-list-by-reference)
 
 ---
 
@@ -83,4 +83,5 @@ title: 値の範囲
 
 #### コマンド
 
-[OBJECT Get list name](../commands-legacy/object-get-list-name) - [OBJECT Get list reference](../commands-legacy/object-get-list-reference) - [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name) - [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference)
+[OBJECT Get list name](../commands/object-get-list-name) - [OBJECT Get list reference](../commands/object-get-list-reference) - [OBJECT SET LIST BY NAME](../commands/object-set-list-by-name) - [OBJECT SET LIST BY REFERENCE](../commands/object-set-list-by-reference)
+

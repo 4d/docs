@@ -9,6 +9,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP DELETE SECTION.Params-->
 
+<div class="no-index">
+
 | 引数          | 型       |                             | 説明                  |
 | ----------- | ------- | --------------------------- | ------------------- |
 | section     | Object  | &#8594; | 4D Write Pro セクション  |
@@ -16,6 +18,7 @@ displayed_sidebar: docs
 | indexNumber | Integer | &#8594; | 削除するセクションのインデックス    |
 | count       | Integer | &#8594; | 削除するセクションの数         |
 
+</div>
 <!-- END REF-->
 
 ## 説明

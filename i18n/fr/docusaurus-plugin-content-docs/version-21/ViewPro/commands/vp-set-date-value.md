@@ -9,11 +9,16 @@ title: VP SET DATE VALUE
 
 <!-- REF #_method_.VP SET DATE VALUE.Params -->
 
-| Paramètres    | Type   |    | Description         |                  |
-| ------------- | ------ | -- | ------------------- | ---------------- |
-| rangeObj      | Object | -> | Objet plage         |                  |
-| dateValue     | Date   | -> | Valeur date à fixer |                  |
-| formatPattern | Text   | -> | Format de la valeur | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres    | Type   |    | Description         |
+| ------------- | ------ | -- | ------------------- |
+| rangeObj      | Object | -> | Objet plage         |
+| dateValue     | Date   | -> | Valeur date à fixer |
+| formatPattern | Text   | -> | Format de la valeur |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

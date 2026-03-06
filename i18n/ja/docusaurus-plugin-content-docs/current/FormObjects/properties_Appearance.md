@@ -56,7 +56,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 #### コマンド
 
-[OBJECT Get focus rectangle invisible](../commands-legacy/object-get-focus-rectangle-invisible) - [OBJECT SET FOCUS RECTANGLE INVISIBLE](../commands-legacy/object-set-focus-rectangle-invisible)
+[OBJECT Get focus rectangle invisible](../commands/object-get-focus-rectangle-invisible) - [OBJECT SET FOCUS RECTANGLE INVISIBLE](../commands/object-set-focus-rectangle-invisible)
 
 ---
 
@@ -112,7 +112,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 #### コマンド
 
-[OBJECT GET SCROLLBAR](../commands-legacy/object-get-scrollbar) - [OBJECT SET SCROLLBAR](../commands-legacy/object-set-scrollbar)
+[OBJECT GET SCROLLBAR](../commands/object-get-scrollbar) - [OBJECT SET SCROLLBAR](../commands/object-set-scrollbar)
 
 #### 参照
 
@@ -414,7 +414,7 @@ HTML WYSIWYG ビューを有効/無効にします。 このビューでは、�
 
 #### コマンド
 
-[OBJECT GET SCROLLBAR](../commands-legacy/object-get-scrollbar) - [OBJECT SET SCROLLBAR](../commands-legacy/object-set-scrollbar)
+[OBJECT GET SCROLLBAR](../commands/object-get-scrollbar) - [OBJECT SET SCROLLBAR](../commands/object-set-scrollbar)
 
 #### 参照
 

@@ -158,7 +158,7 @@ For a list of properties supported by column objects, please refer to the [Colum
 
 #### コマンド
 
-[LISTBOX Get locked columns](../commands-legacy/listbox-get-locked-columns) - [LISTBOX Get static columns](../commands-legacy/listbox-get-static-columns) - [LISTBOX SET LOCKED COLUMNS](../commands-legacy/listbox-set-locked-columns) - [LISTBOX SET STATIC COLUMNS](../commands-legacy/listbox-set-static-columns)
+[LISTBOX Get locked columns](../commands/listbox-get-locked-columns) - [LISTBOX Get static columns](../commands/listbox-get-static-columns) - [LISTBOX SET LOCKED COLUMNS](../commands/listbox-set-locked-columns) - [LISTBOX SET STATIC COLUMNS](../commands/listbox-set-static-columns)
 
 ---
 
@@ -166,7 +166,7 @@ For a list of properties supported by column objects, please refer to the [Colum
 
 リストボックスに表示される列の数を指定します。
 
-> [`LISTBOX INSERT COLUMN`](../commands-legacy/listbox-insert-column) あるいは [`LISTBOX DELETE COLUMN`](../commands-legacy/listbox-delete-column) などのコマンドを使用することで、カラムをプログラミングによって動的に追加または削除することができます。
+> [`LISTBOX INSERT COLUMN`](../commands/listbox-insert-column) あるいは [`LISTBOX DELETE COLUMN`](../commands/listbox-delete-column) などのコマンドを使用することで、カラムをプログラミングによって動的に追加または削除することができます。
 
 #### JSON 文法
 
@@ -180,7 +180,7 @@ For a list of properties supported by column objects, please refer to the [Colum
 
 #### コマンド
 
-[`LISTBOX DELETE COLUMN`](../commands-legacy/listbox-delete-column) - [LISTBOX Get number of columns](../commands-legacy/listbox-get-number-of-columns) - [`LISTBOX INSERT COLUMN`](../commands-legacy/listbox-insert-column) - [`LISTBOX INSERT COLUMN FORMULA`](../commands-legacy/listbox-insert-column-formula)
+[`LISTBOX DELETE COLUMN`](../commands/listbox-delete-column) - [LISTBOX Get number of columns](../commands/listbox-get-number-of-columns) - [`LISTBOX INSERT COLUMN`](../commands/listbox-insert-column) - [`LISTBOX INSERT COLUMN FORMULA`](../commands/listbox-insert-column-formula)
 
 ---
 
@@ -237,7 +237,7 @@ For a list of properties supported by column objects, please refer to the [Colum
 
 #### コマンド
 
-[`LISTBOX Get array`](../commands-legacy/listbox-get-array) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays) - [`LISTBOX SET ARRAY`](../commands-legacy/listbox-set-array)
+[`LISTBOX Get array`](../commands/listbox-get-array) - [`LISTBOX GET ARRAYS`](../commands/listbox-get-arrays) - [`LISTBOX SET ARRAY`](../commands/listbox-set-array)
 
 ---
 
@@ -263,4 +263,5 @@ For a list of properties supported by column objects, please refer to the [Colum
 #### コマンド
 
 [LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
+
 

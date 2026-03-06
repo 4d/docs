@@ -372,8 +372,8 @@ ALERT($param1+" "+$param2)
 | OpenSSL   | 3.1.6     | **20.4 HF2**   |                                                       |
 | libZip    | 1.9.2     | 20             | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。 |
 | LZMA      | 5.4.1     | 20             |                                                       |
-| Zlib      | 1.2.13    | 20             |                                                       |
+| Zlib      | 1.3.1     | **20.8 HF2**   |                                                       |
 | webKit    | WKWebView | 19             |                                                       |
 | PHP       | 8.2.4     | 20             |                                                       |
-| libldap   | 2.6.4     | 20             |                                                       |
+| libldap   | 2.6.10    | **20.8 HF2**   |                                                       |
 | libsasl   | 2.1.28    | 20             |                                                       |

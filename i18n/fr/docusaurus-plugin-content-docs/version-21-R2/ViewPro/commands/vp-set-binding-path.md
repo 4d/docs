@@ -17,10 +17,15 @@ title: VP SET BINDING PATH
 
 <!-- REF #_method_.VP SET BINDING PATH.Params -->
 
-| Paramètres           | Type   |    | Description                           |                  |
-| -------------------- | ------ | -- | ------------------------------------- | ---------------- |
-| rangeObj             | Object | -> | Objet plage                           |                  |
-| dataContextAttribute | Text   | -> | Nom de l'attribut à lier à *rangeObj* | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres           | Type   |    | Description                           |
+| -------------------- | ------ | -- | ------------------------------------- |
+| rangeObj             | Object | -> | Objet plage                           |
+| dataContextAttribute | Text   | -> | Nom de l'attribut à lier à *rangeObj* |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

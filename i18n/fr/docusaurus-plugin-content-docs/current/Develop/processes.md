@@ -18,9 +18,9 @@ L'application 4D crée des process pour ses propres besoins, par exemple le proc
 Il existe plusieurs façons de créer un nouveau process :
 
 - Exécuter une méthode en mode Développement en sélectionnant la case à cocher **Nouveau process** dans la boîte de dialogue d'exécution de méthode. La méthode choisie dans ce dialogue est la méthode process.
-- Utiliser la commande [`New process`](../commands-legacy/new-process). La méthode passée en paramètre à la commande [`New process`](../commands/new-process) est la méthode process.
-- Utiliser la commande [`Execute on server`](../commands-legacy/execute-on-server) afin de créer une procédure stockée sur le serveur. La méthode passée en paramètre à la commande est la méthode process.
-- Utiliser la commande [`CALL WORKER`](../commands-legacy/call-worker). Si le process du worker n'existe pas déjà, il est créé.
+- Utiliser la commande [`New process`](../commands/new-process). La méthode passée en paramètre à la commande [`New process`](../commands/new-process) est la méthode process.
+- Utiliser la commande [`Execute on server`](../commands/execute-on-server) afin de créer une procédure stockée sur le serveur. La méthode passée en paramètre à la commande est la méthode process.
+- Utiliser la commande [`CALL WORKER`](../commands/call-worker). Si le process du worker n'existe pas déjà, il est créé.
 
 :::note
 
@@ -33,7 +33,7 @@ Un process peut être effacé dans les conditions suivantes (les deux premières
 - Lorsque l'exécution de la méthode du process est terminée
 - Lorsque l'utilisateur quitte l'application
 - Si vous arrêtez le process de manière procédurale ou si vous utilisez le bouton **Abort** dans le débogueur ou dans l'Explorateur d'exécution
-- Si vous appelez la commande [`KILL WORKER`](../commands-legacy/kill-worker) (pour supprimer un process worker uniquement).
+- If you call the [`KILL WORKER`](../commands/kill-worker) command (to delete a worker process only).
 
 Un process peut créer un autre process. Les process ne sont pas organisés de manière hiérarchique - tous les process sont égaux, quel que soit le process à partir duquel ils ont été créés. Une fois que le process "parent" a créé un process "enfant", le process enfant se poursuit, que le process parent soit toujours en cours d'exécution ou non.
 
@@ -80,11 +80,11 @@ Pour des raisons d'optimisation, si aucun accès au serveur n'est nécessaire, p
 
 L'utilisation d'un process Worker est un moyen simple et puissant d'échanger des informations entre les process. Cette fonctionnalité est basée sur un système de messagerie asynchrone qui permet d'appeler des process et des formulaires et de leur demander d'exécuter des méthodes avec des paramètres dans leur propre contexte.
 
-Un process worker peut être "engagé" par n'importe quel process (en utilisant la commande [`CALL WORKER`](../commands-legacy/call-worker)) pour exécuter des méthodes projet avec des paramètres dans leur propre contexte, permettant ainsi l'accès à des informations partagées.
+Un process worker peut être "engagé" par n'importe quel process (en utilisant la commande [`CALL WORKER`](../commands/call-worker)) pour exécuter des méthodes projet avec des paramètres dans leur propre contexte, permettant ainsi l'accès à des informations partagées.
 
 :::info
 
-Dans les applications Desktop, une méthode projet peut également être exécutée avec des paramètres dans le contexte de n'importe quel formulaire en utilisant la commande [`CALL FORM`](../commands-legacy/call-form).
+Dans les applications Desktop, une méthode projet peut également être exécutée avec des paramètres dans le contexte de n'importe quel formulaire en utilisant la commande [`CALL FORM`](../commands/call-form).
 
 :::
 
@@ -122,7 +122,7 @@ Il n'est pas possible d'utiliser [`CALL WORKER`](../commands/call-worker) pour e
 
 Les process worker peuvent être créés sur 4D Server par l'intermédiaire de procédures stockées : par exemple, vous pouvez utiliser la commande `Execute on server` pour exécuter une méthode qui appelle la commande [`CALL WORKER`](../commands/call-worker).
 
-Un process worker est fermé par un appel à la commande [`KILL WORKER`](../commands-legacy/kill-worker), qui vide la boîte aux lettres du worker et demande au process associé d'arrêter de traiter les messages et de terminer son exécution dès que la tâche en cours est terminée.
+Un process worker est fermé par un appel à la commande [`KILL WORKER`](../commands/kill-worker), qui vide la boîte aux lettres du worker et demande au process associé d'arrêter de traiter les messages et de terminer son exécution dès que la tâche en cours est terminée.
 
 La méthode de démarrage d'un worker est la méthode utilisée pour créer le worker (à la première utilisation). Si [`CALL WORKER`](../commands/call-worker) est appelé avec un paramètre *method* vide, la méthode de démarrage est automatiquement réutilisée comme méthode à exécuter.
 
@@ -137,3 +137,4 @@ Des [icônes spécifiques](../ServerWindow/processes#process-type) identifient l
 ### Voir également
 
 Pour plus d'informations, veuillez consulter [cet article de blog](https://blog.4d.com/4d-summit-2016-laurent-esnault-presents-workers-and-ui-in-preemptive-mode/) sur l'utilisation des workers.
+

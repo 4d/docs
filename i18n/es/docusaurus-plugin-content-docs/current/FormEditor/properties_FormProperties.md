@@ -10,7 +10,7 @@ title: Propiedades de los formularios
 > La propiedad de combinación de colores sólo se aplica en macOS y [Windows con el tema Fluent UI](../settings/interface.md#use-fluent-ui-on-windows).
 > ).
 
-Esta propiedad define el esquema de colores para el formulario. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](../commands-legacy/get-application-color-scheme)). Esto se puede cambiar para el formulario a una de las dos opciones siguientes:
+Esta propiedad define el esquema de colores para el formulario. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](../commands/get-application-color-scheme)). Esto se puede cambiar para el formulario a una de las dos opciones siguientes:
 
 - dark -- texto claro sobre fondo oscuro
 - light - dark text on a light background
@@ -54,7 +54,7 @@ Asociar una clase al formulario ofrece las siguientes ventajas:
 
 - También puede beneficiarse de las [funciones de autocompletado](../code-editor/write-class-method.md#autocomplete-functions) en el editor de código.
 
-- Cuando se ejecuta el formulario, 4D instancia automáticamente un objeto clase usuario para el formulario, que es devuelto por el objeto [`Form`](../commands/form). Su código puede acceder directamente a las funciones de clase definidas en la clase de usuario a través del comando `Form` (por ejemplo, `Form.message()`) sin tener que pasar un objeto *formData* como parámetro a los comandos [`DIALOG`](../commands/dialog), [`Print form`](../commands/print-form), [`FORM LOAD`](../commands/form-load), y [`PRINT SELECTION`](../commands-legacy/print-selection).
+- Cuando se ejecuta el formulario, 4D instancia automáticamente un objeto clase usuario para el formulario, que es devuelto por el objeto [`Form`](../commands/form). Su código puede acceder directamente a las funciones de clase definidas en la clase de usuario a través del comando `Form` (por ejemplo, `Form.message()`) sin tener que pasar un objeto *formData* como parámetro a los comandos [`DIALOG`](../commands/dialog), [`Print form`](../commands/print-form), [`FORM LOAD`](../commands/form-load), y [`PRINT SELECTION`](../commands/print-selection).
 
 :::note
 
@@ -237,4 +237,5 @@ Puede utilizar referencias dinámicas para definir los nombres de ventana de los
 | Nombre      | Tipos de datos | Valores posibles                                         |
 | ----------- | -------------- | -------------------------------------------------------- |
 | windowTitle | string         | El nombre de la ventana como texto plano o de referencia |
+
 

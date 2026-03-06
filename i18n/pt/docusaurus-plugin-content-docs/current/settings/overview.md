@@ -90,7 +90,7 @@ Você pode acessar essas caixas de diálogo usando o menu **Design > Configuraç
 
 ![](../assets/en/settings/user-settings-dialog.png)
 
-Você também pode acessar essas caixas de diálogo usando o comando [OPEN SETTINGS WINDOW](../commands-legacy/open-settings-window) com o seletor *settingsType* apropriado.
+Você também pode acessar essas caixas de diálogo usando o comando [OPEN SETTINGS WINDOW](../commands/open-settings-window) com o seletor *settingsType* apropriado.
 
 A caixa de diálogo Configurações da estrutura é idêntica às Configurações standard e dá acesso a todas as suas propriedades (que podem ser substituídas por configurações do utilizador).
 
@@ -129,9 +129,9 @@ Quando você editar as configurações nesta caixa de diálogo, elas são automa
 
 ### `SET DATABASE PARAMETER` e configurações de usuário
 
-Algumas das configurações do usuário também estão disponíveis através do comando [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter). As definições do utilizador são parâmetros com a propriedade **Kept between two sessions** definida para **Yes**.
+Algumas das configurações do usuário também estão disponíveis através do comando [SET DATABASE PARAMETER](../commands/set-database-parameter). As definições do utilizador são parâmetros com a propriedade **Kept between two sessions** definida para **Yes**.
 
-Quando a funcionalidade **Propriedades usuário** está ativada, as propriedades usuário editadas pelo comando [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter) são automaticamente salvas nas configurações do usuário para o arquivo de dados.
+Quando a funcionalidade **Propriedades usuário** está ativada, as propriedades usuário editadas pelo comando [SET DATABASE PARAMETER](../commands/set-database-parameter) são automaticamente salvas nas configurações do usuário para o arquivo de dados.
 
 > 'Número de seqüência de tabela' é uma exceção; esse valor de configuração é sempre salvo no próprio arquivo de dados.
 
@@ -179,3 +179,4 @@ As definições podem ser guardadas em três níveis. Cada configuração defini
 | 1 (mais alto)  | Propriedades usuário (ficheiro de dados atual)                                                         | ***settings.4DSettings*** arquivo na pasta Settings ao mesmo nível que o arquivo de dados                                                                                                                          | Substitui as propriedades de estrutura e as propriedades usuário. Aplicado apenas quando o arquivo de dados linkado for utilizado com a aplicação. |
 
 Lembre que os arquivo de definições do utilizador contêm apenas um subconjunto de definições relevantes, enquanto o arquivo de estrutura contém todas as definições personalizadas, incluindo as definições principais.
+

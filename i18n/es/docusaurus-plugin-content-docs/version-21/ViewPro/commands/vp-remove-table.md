@@ -17,12 +17,17 @@ title: VP REMOVE TABLE
 
 <!-- REF #_method_.VP REMOVE TABLE.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                                    |                  |
-| ---------- | ------- | -- | -------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nombre del área View Pro                                       |                  |
-| tableName  | Text    | -> | Nombre de la tabla a eliminar                                  |                  |
-| options    | Integer | -> | Opciones adicionales                                           |                  |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo    |    | Descripción                                                    |
+| ---------- | ------- | -- | -------------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nombre del área View Pro                                       |
+| tableName  | Text    | -> | Nombre de la tabla a eliminar                                  |
+| options    | Integer | -> | Opciones adicionales                                           |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

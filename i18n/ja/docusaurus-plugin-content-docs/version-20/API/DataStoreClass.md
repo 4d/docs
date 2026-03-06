@@ -47,12 +47,14 @@ title: DataStore
 
 
 <!-- REF #_command_.ds.Params -->
-| 引数      | 型            |    | 説明                                  |
-| ------- | ------------ | -- | ----------------------------------- |
-| localID | Text         | -> | 参照を取得したいリモートデータストアのローカルID           |
-| 戻り値     | cs.DataStore | <- | データストア参照|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|localID|Text|->|Local ID of the remote datastore to return|
+|Result |cs.DataStore|<-|Reference to the datastore|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -116,13 +118,15 @@ $foreignStudents:=Open datastore($connectTo;"foreign")
 
 
 <!-- REF #_command_.Open datastore.Params -->
-| 引数             | 型                          |    | 説明                                         |
-| -------------- | -------------------------- | -- | ------------------------------------------ |
-| connectionInfo | Object                     | -> | リモートデータストアへの接続に使用する接続プロパティ                 |
-| localID        | Text                       | -> | ローカルアプリケーション内で、開かれたデータストアに対して割り当てる ID (必須) |
-| 戻り値            | 4D.DataStoreImplementation | <- | データストアオブジェクト|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|connectionInfo|Object|->|Connection properties used to reach the remote datastore|
+|localID |Text|->|Id to assign to the opened datastore on the local application (mandatory)|
+|Result |4D.DataStoreImplementation|<-|Datastore object|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -257,11 +261,13 @@ ALERT("They are "+String($foreignStudents.Students.all().length)+" foreign stude
 
 
 <!-- REF #DataStoreClass.cancelTransaction().Params -->
-| 引数 | 型 |  | 説明                                           |
-| -- | - |::| -------------------------------------------- |
-|    |   |  | このコマンドは引数を必要としません|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+||||Does not require any parameters|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -291,11 +297,13 @@ ALERT("They are "+String($foreignStudents.Students.all().length)+" foreign stude
 
 
 <!-- REF #DataStoreClass.clearAllRemoteContexts().Params -->
-| 引数 | 型 |  | 説明                                           |
-| -- | - |::| -------------------------------------------- |
-|    |   |  | このコマンドは引数を必要としません|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+||||Does not require any parameters|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -324,11 +332,13 @@ ALERT("They are "+String($foreignStudents.Students.all().length)+" foreign stude
 
 
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
-| 引数  | 型      |    | 説明                                                      |
-| --- | ------ |:--:| ------------------------------------------------------- |
-| 戻り値 | Object | <- | カレントデータストアと、各テーブルの暗号化についての情報|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Object|<-|Information about the encryption of the current datastore and of each table|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -396,12 +406,13 @@ ALERT("They are "+String($foreignStudents.Students.all().length)+" foreign stude
 
 
 <!-- REF #DataStoreClass.flushAndLock().Params -->
-| 引数 | 型 |  | 説明                                           |
-| -- | - |  | -------------------------------------------- |
-|    |   |  | このコマンドは引数を必要としません|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+||||Does not require any parameters|
+</div>
+<!-- END REF -->
 
 
 #### 説明
@@ -477,11 +488,13 @@ ds.unlock() // コピー操作をおこなったので、データストアの�
 
 
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
-| 引数  | 型          |    | 説明                                                |
-| --- | ---------- | -- | ------------------------------------------------- |
-| 戻り値 | Collection | <- | 最適化コンテキストオブジェクトのコレクション|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|Result|Collection|<-|Collection of optimization context objects|
+</div>
+<!-- END REF -->
 
 > **上級者向け:** この機能は、特定の構成のため、ORDAのデフォルト機能をカスタマイズする必要がある開発者向けです。 ほとんどの場合、使用する必要はないでしょう。
 
@@ -554,11 +567,13 @@ $info:=$ds.getAllRemoteContexts()
 
 
 <!-- REF #DataStoreClass.getInfo().Params -->
-| 引数  | 型      |    | 説明                                      |
-| --- | ------ |:--:| --------------------------------------- |
-| 戻り値 | Object | <- | データストアのプロパティ|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Object|<-|Datastore properties|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -568,7 +583,7 @@ $info:=$ds.getAllRemoteContexts()
 
 | プロパティ      | 型       | 説明                                                                                        |
 | ---------- | ------- | ----------------------------------------------------------------------------------------- |
-| type       | string  | <li>"4D": ds で利用可能なメインデータストア </li><li>"4D Server": Open datastore で開かれたリモートデータストア</li>                                       |
+| type       | string  | <li>"4D": ds で利用可能なメインデータストア </li><li>"4D Server": Open datastore で開かれたリモートデータストア</li>                                      |
 | networked  | boolean | <li>true: ネットワーク接続を介してアクセスされたデータストア</li><li>false: ネットワーク接続を介さずにアクセスしているデータストア (ローカルデータベース)</li>                                      |
 | localID    | text    | マシン上のデータストアID。 これは、`Open datastore` コマンドで返される localId 文字列です。 メインデータストアの場合は空の文字列 ("") です。  |
 | connection | object  | リモートデータストア接続の情報を格納したオブジェクト (メインデータストアの場合は返されません)。 次のプロパティを含みます:<table><tr><th>プロパティ</th><th>型</th><th>説明</th></tr><tr><td>hostname</td><td>text</td><td>リモートデータストアの IPアドレスまたは名称 + ":" + ポート番号</td></tr><tr><td>tls</td><td>boolean</td><td>リモートデータストアとセキュア接続を利用している場合は true</td></tr><tr><td>idleTimeout</td><td>number</td><td>セッション非アクティブタイムアウト (分単位)。</td></tr><tr><td>user</td><td>text</td><td>リモートデータストアにて認証されたユーザー</td></tr></table> |
@@ -623,12 +638,14 @@ $info:=$remoteDS.getInfo()
 
 
 <!-- REF #DataStoreClass.getRemoteContextInfo().Params -->
-| 引数          | 型      |    | 説明                                      |
-| ----------- | ------ | -- | --------------------------------------- |
-| contextName | Text   | -> | コンテキストの名称                               |
-| 戻り値         | Object | <- | 最適化コンテキストの詳細|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|contextName|Text|->|Name of the context|
+|Result|Object|<-|Description of the optimization context|
+</div>
+<!-- END REF -->
 
 > **上級者向け:** この機能は、特定の構成のため、ORDAのデフォルト機能をカスタマイズする必要がある開発者向けです。 ほとんどの場合、使用する必要はないでしょう。
 
@@ -674,11 +691,13 @@ $info:=$remoteDS.getInfo()
 
 
 <!-- REF #DataStoreClass.getRequestLog().Params -->
-| 引数  | 型          |    | 説明                                                            |
-| --- | ---------- |:--:| ------------------------------------------------------------- |
-| 戻り値 | Collection | <- | オブジェクトのコレクション (要素毎に一つのリクエストを記述します)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Collection|<-|Collection of objects, where each object describes a request|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -713,11 +732,13 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
-| 引数  | 型       |    | 説明                                                                                   |
-| --- | ------- |:--:| ------------------------------------------------------------------------------------ |
-| 戻り値 | Boolean | <- | データエクスプローラーへのアクセスが無効に設定されている場合は true、有効の場合は false (デフォルト)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Boolean|<-|True if the Data Explorer access is disabled, False if it is enabled (default)|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -747,12 +768,13 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 
 <!-- REF #DataStoreClass.locked().Params -->
-| 引数  | 型       |    | 説明                                          |
-| --- | ------- | -- | ------------------------------------------- |
-| 戻り値 | Boolean | <- | ロックされている場合は true|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|Result|Boolean|<-|True if locked|
+</div>
+<!-- END REF -->
 
 
 #### 説明
@@ -788,11 +810,13 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 
 <!-- REF #DataStoreClass.makeSelectionsAlterable().Params -->
-| 引数 | 型 |  | 説明                                           |
-| -- | - |::| -------------------------------------------- |
-|    |   |  | このコマンドは引数を必要としません|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+||||Does not require any parameters|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -821,13 +845,15 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 
 <!-- REF #DataStoreClass.provideDataKey().Params -->
-| 引数            | 型      |    | 説明                                       |
-| ------------- | ------ | -- | ---------------------------------------- |
-| curPassPhrase | Text   | -> | カレントのパスフレーズ                              |
-| curDataKey    | Object | -> | カレントのデータ暗号化キー                            |
-| 戻り値           | Object | <- | 暗号化キーのチェックの結果|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|curPassPhrase |Text|->|Current encryption passphrase|
+|curDataKey |Object|->|Current data encryption key|
+|Result|Object|<-|Result of the encryption key matching|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -896,11 +922,13 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
-| 引数     | 型       |    | 説明                                                                                                       |
-| ------ | ------- | -- | -------------------------------------------------------------------------------------------------------- |
-| status | Boolean | -> | `webAdmin`ポート上で、データエクスプローラーによるデータアクセスを無効にするには true、アクセスを有効にするには false (デフォルト)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|status|Boolean|->|True to disable Data Explorer access to data on the `webAdmin` port, False (default) to grant access|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -939,17 +967,19 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 
 <!-- REF #DataStoreClass.setRemoteContextInfo().Params -->
-| 引数              | 型            |    | 説明                                                                    |
-| --------------- | ------------ | -- | --------------------------------------------------------------------- |
-| contextName     | Text         | -> | コンテキストの名称                                                             |
-| dataClassName   | Text         | -> | データクラスの名称                                                             |
-| dataClassObject | 4D.DataClass | -> | DataClass オブジェクト (例: datastore.Employee)                              |
-| attributes      | Text         | -> | カンマ区切りの属性リスト                                                          |
-| attributesColl  | Collection   | -> | 属性名 (テキスト) のコレクション                                                    |
-| contextType     | Text         | -> | 渡す場合、値は "main" または "currentItem" のいずれか                                |
-| pageLength      | Integer      | -> | コンテキストにリンクされたエンティティセレクションのページ長 (デフォルトは 80)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|contextName|Text|->|Name of the context|
+|dataClassName|Text|->|Name of the dataclass|
+|dataClassObject|4D.DataClass|->|dataclass object (e.g datastore.Employee)|
+|attributes|Text|->|Attribute list separated by a comma|
+|attributesColl|Collection|->|Collection of attribute names (text)|
+|contextType|Text|->|If provided, value must be "main" or "currentItem"|
+|pageLength|Integer|->|Page length of the entity selection linked to the context (default is 80)|
+</div>
+<!-- END REF -->
 
 > **上級者向け:** この機能は、特定の構成のため、ORDAのデフォルト機能をカスタマイズする必要がある開発者向けです。 ほとんどの場合、使用する必要はないでしょう。
 
@@ -1071,13 +1101,15 @@ Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes
 
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
-| 引数      | 型       |    | 説明                                                     |
-| ------- | ------- | -- | ------------------------------------------------------ |
-| file    | 4D.File | -> | File オブジェクト                                            |
-| options | Integer | -> | ログレスポンスオプション (サーバーのみ)                                  |
-| reqNum  | Integer | -> | メモリ内に保管するリクエストの数 (クライアントのみ)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|file |4D.File|->|File object |
+|options |Integer|->|Log response option (server only)|
+|reqNum |Integer|->|Number of requests to keep in memory (client only)|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -1184,13 +1216,13 @@ SET DATABASE PARAMETER(4D Server Log Recording;0)
 
 
 <!-- REF #DataStoreClass.startTransaction().Params -->
-| 引数 | 型 |  | 説明                                           |
-| -- | - |::| -------------------------------------------- |
-|    |   |  | このコマンドは引数を必要としません|<!-- END REF -->
+<div class="no-index">
 
-
-
-|
+|Parameter|Type||Description|
+|---|---|:---:|---|
+||||Does not require any parameters|
+</div>
+<!-- END REF -->
 
 
 
@@ -1252,11 +1284,13 @@ End if
 
 
 <!-- REF #DataStoreClass.stopRequestLog().Params -->
-| 引数 | 型 |  | 説明                                           |
-| -- | - |  | -------------------------------------------- |
-|    |   |  | このコマンドは引数を必要としません|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+||||Does not require any parameters|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -1288,12 +1322,13 @@ ORDAリクエストログがマシン上で開始されていない場合、こ�
 
 
 <!-- REF #DataStoreClass.unlock().Params -->
-| 引数 | 型 |  | 説明                                           |
-| -- | - |  | -------------------------------------------- |
-|    |   |  | このコマンドは引数を必要としません|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+||||Does not require any parameters|
+</div>
+<!-- END REF -->
 
 
 #### 説明
@@ -1327,11 +1362,13 @@ ORDAリクエストログがマシン上で開始されていない場合、こ�
 
 
 <!-- REF #DataStoreClass.validateTransaction().Params -->
-| 引数 | 型 |  | 説明                                           |
-| -- | - |  | -------------------------------------------- |
-|    |   |  | このコマンドは引数を必要としません|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+||||Does not require any parameters|
+</div>
+<!-- END REF -->
 
 #### 説明
 

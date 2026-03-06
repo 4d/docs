@@ -4,20 +4,20 @@ title: WP Insert picture
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Insert picture.Syntax-->**WP Insert picture** ( *targetObj* : Object ; *picture* : Picture ; *mode* : Integer {; *rangeUpdate* : Integer} ): Object<br/>**WP Insert picture** ( *targetObj* : Object ; *pictureFileObj* : 4D.File; *mode* : Integer {; *rangeUpdate* : Integer}): Object<!-- END REF-->
+<!--REF #_command_.WP Insert picture.Syntax-->**WP Insert picture** ( *targetObj* : Object ; *picture* : Picture ; *mode* : Integer {; *rangeUpdate* : Integer} ): Object<br/>**WP Insert picture** ( *targetObj* : Object ; *pictureFileObj* : 4D.File, Text ; *mode* : Integer {; *rangeUpdate* : Integer}): Object<!-- END REF-->
 
 <!--REF #_command_.WP Insert picture.Params-->
 
 <div class="no-index">
 
-| Parâmetro      | Tipo                     |                             | Descrição                                                                 |
-| -------------- | ------------------------ | --------------------------- | ------------------------------------------------------------------------- |
-| targetObj      | Object                   | &#8594; | Intervalo ou elemento ou documento 4D Write Pro                           |
-| picture        | Imagem                   | &#8594; | Campo de imagem ou variável, ou caminho para o arquivo de imagem no disco |
-| pictureFileObj | 4D. File | &#8594; | Um objeto de arquivo representando um arquivo de imagem.  |
-| mode           | Integer                  | &#8594; | Modo de inserção                                                          |
-| rangeUpdate    | Integer                  | &#8594; | Modo de atualização de intervalo                                          |
-| Resultado      | Object                   | &#8592; | Objeto referenciando a imagem                                             |
+| Parâmetro      | Tipo                                                 |                             | Descrição                                                                 |
+| -------------- | ---------------------------------------------------- | --------------------------- | ------------------------------------------------------------------------- |
+| targetObj      | Object                                               | &#8594; | Intervalo ou elemento ou documento 4D Write Pro                           |
+| picture        | Imagem                                               | &#8594; | Picture field or variable                                                 |
+| pictureFileObj | [4D.File](../API/FileClass.md), Text | &#8594; | A File object representing a picture file or path to picture file on disk |
+| mode           | Integer                                              | &#8594; | Modo de inserção                                                          |
+| rangeUpdate    | Integer                                              | &#8594; | Modo de atualização de intervalo                                          |
+| Resultado      | Object                                               | &#8592; | Objeto referenciando a imagem                                             |
 
 </div>
 <!-- END REF-->
@@ -110,4 +110,4 @@ $pictRef:=WP Insert picture(WParea; $file; wk replace)
 ## Veja também
 
 [WP Insert document body](wp-insert-document-body.md)</br>
-[WP Picture range](../commands-legacy/wp-picture-range)
+[WP Picture range](../commands/wp-picture-range)

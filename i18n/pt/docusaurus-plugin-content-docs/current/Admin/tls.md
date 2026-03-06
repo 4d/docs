@@ -90,7 +90,7 @@ Os arquivos de certificado incluem:
 Os arquivos **key.pem** e **cert.pem** devem estar localizados:
 
 - com 4D Server ou 4D no modo local, ao lado da [pasta do projeto](Project/architecture.md#project-folder)
-- com 4D em modo remoto, na pasta do banco de dados cliente na máquina remota (para obter mais informações sobre a localização dessa pasta, consulte o comando [`Get 4D folder`](../commands-legacy/get-4d-folder)). Deve copiar esses arquivos manualmente na máquina remota.
+- com 4D em modo remoto, na pasta do banco de dados cliente na máquina remota (para obter mais informações sobre a localização dessa pasta, consulte o comando [`Get 4D folder`](../commands/get-4d-folder)). Deve copiar esses arquivos manualmente na máquina remota.
 
 ### Ativar TLS
 
@@ -146,3 +146,4 @@ Para obter um certificado digital:
 5. Coloque o arquivo “cert.pem” no [local apropriado](#installing-certificate-files).
 
 O servidor 4D pode trabalhar em modo seguro. Um certificado é normalmente válido entre 3 meses e um ano.
+

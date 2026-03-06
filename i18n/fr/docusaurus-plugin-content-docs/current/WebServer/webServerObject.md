@@ -132,3 +132,4 @@ Le langage 4D contient [plusieurs commandes](../commands/theme/Web_Server) perme
 | `WEB START SERVER`              | Application hôte du serveur web   |
 | `WEB STOP SERVER`               | Application hôte du serveur web   |
 | `WEB Validate digest`           | Serveur Web ayant reçu la requête |
+

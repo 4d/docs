@@ -10,7 +10,7 @@ title: Propriétés des formulaires
 > Color scheme property is only applied on macOS and [Windows with Fluent UI theme](../settings/interface.md#use-fluent-ui-on-windows).
 > ).
 
-Cette propriété définit la palette de couleurs du formulaire. Par défaut, lorsque la propriété n'est pas définie, la valeur d'une palette de couleurs est **héritée** (le formulaire utilise la palette définie [au niveau de l'application](../commands-legacy/get-application-color-scheme)). Pour le formulaire, cette option peut être remplacée par l'une des deux options suivantes :
+Cette propriété définit la palette de couleurs du formulaire. Par défaut, lorsque la propriété n'est pas définie, la valeur d'une palette de couleurs est **héritée** (le formulaire utilise la palette définie [au niveau de l'application](../commands/get-application-color-scheme)). Pour le formulaire, cette option peut être remplacée par l'une des deux options suivantes :
 
 - dark - texte clair sur fond foncé
 - light - texte foncé sur fond clair
@@ -53,7 +53,7 @@ L'association d'une classe au formulaire offre les avantages suivants :
 
 - Vous pouvez également bénéficier des [fonctions d'autocomplétion](../code-editor/write-class-method.md#autocomplete-functions) dans l'éditeur de code.
 
-- Lorsque le formulaire est exécuté, 4D instancie automatiquement un objet de classe utilisateur pour le formulaire, qui est renvoyé par l'objet [`Form`](../commands/form). Votre code peut accéder directement aux fonctions définies dans la classe utilisateur par le biais de la commande `Form` (par exemple `Form.message()`) sans avoir à passer un objet *formData* comme paramètre aux commandes [`DIALOG`](../commands/dialog), [`Print form`](../commands/print-form), [`FORM LOAD`](../commands/form-load), et [`PRINT SELECTION`](../commands-legacy/print-selection).
+- Lorsque le formulaire est exécuté, 4D instancie automatiquement un objet de classe utilisateur pour le formulaire, qui est renvoyé par l'objet [`Form`](../commands/form). Votre code peut accéder directement aux fonctions définies dans la classe utilisateur par le biais de la commande `Form` (par exemple `Form.message()`) sans avoir à passer un objet *formData* comme paramètre aux commandes [`DIALOG`](../commands/dialog), [`Print form`](../commands/print-form), [`FORM LOAD`](../commands/form-load), et [`PRINT SELECTION`](../commands/print-selection).
 
 :::note
 
@@ -236,4 +236,5 @@ Vous pouvez utiliser des références dynamiques pour définir les noms de fenê
 | Nom         | Type de données | Valeurs possibles                                             |
 | ----------- | --------------- | ------------------------------------------------------------- |
 | windowTitle | string          | Le nom de la fenêtre sous forme de texte brut ou de référence |
+
 

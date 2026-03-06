@@ -130,3 +130,4 @@ cercle*|2 // Double la hauteur du cercle
 ```
 
 ![](../assets/en/Concepts/vertscaling.en.png)![](../assets/en/Concepts/veticalscaling2.en.png)
+

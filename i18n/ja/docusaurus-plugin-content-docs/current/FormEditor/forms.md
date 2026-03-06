@@ -172,11 +172,11 @@ Fluent UI で4D フォームを使用する場合、以下の点に注意を払�
 
 - 新しい [`FORM theme`](../commands/form-theme) コマンドはカレントのフォームの実際の表示テーマを返します。 取り得る値: "Classic" あるいは "FluentUI"。 カレントフォームがない場合、あるいはコマンドがmacOS 上で呼ばれた場合、空の文字列が返されます。
 - [`Application info`](../commands/application-info) コマンドを使用することで、Fluent UI が使用できるかどうか(`canUseFluentUI` プロパティ) あるいは使用されているかどうか(`useFluentUI` プロパティ) を知ることができます。
-- [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info) がフォームのコンテキストで呼び出された場合、返された情報はフォームのカレントのアピアランス(クラシックあるいはFluent UI)に関連したものです。 コマンドがフォームのコンテキスト外から呼ばれた場合、返された情報は[グローバルプロジェクト設定](#アプリケーション設定) に関連したものです。
-- [`SET MENU ITEM STYLE`](../commands-legacy/set-menu-item-style) の*itemStyle* 引数での `Underline` はポップアップメニューではサポートされていません(無視されます)。
+- [`GET STYLE SHEET INFO`](../commands/get-style-sheet-info) がフォームのコンテキストで呼び出された場合、返された情報はフォームのカレントのアピアランス(クラシックあるいはFluent UI)に関連したものです。 コマンドがフォームのコンテキスト外から呼ばれた場合、返された情報は[グローバルプロジェクト設定](#アプリケーション設定) に関連したものです。
+- [`SET MENU ITEM STYLE`](../commands/set-menu-item-style) の*itemStyle* 引数での `Underline` はポップアップメニューではサポートされていません(無視されます)。
 - [ステッパー](../FormObjects/stepper.md) フォームオブジェクトは[ダブルクリックイベント](../Events/onDoubleClicked.md) サポートしません。
 - [サークルボタン](../FormObjects/button_overview.md#サークル) はサポートされています(macOS と同様)。
-- [`WA ZOOM IN`](../commands-legacy/wa-zoom-in) / [`WA ZOOM OUT`](../commands-legacy/wa-zoom-out) コマンドは、システムレンダリングエンジンを使用したWeb エリアではサポートされません。
+- [`WA ZOOM IN`](../commands/wa-zoom-in) / [`WA ZOOM OUT`](../commands/wa-zoom-out) コマンドは、システムレンダリングエンジンを使用したWeb エリアではサポートされません。
 - フォーカスの四角はピクチャーおよびテキストの[入力](../FormObjects/input_overview.md) に追加することができます。
 
 ## 継承フォーム
@@ -231,3 +231,4 @@ Fluent UI で4D フォームを使用する場合、以下の点に注意を払�
 [フォームフッター](properties_Markers.md#フォームフッター) -
 [メソッド](properties_Action.md#メソッド) -
 [Pages](properties_FormProperties.md#pages)
+

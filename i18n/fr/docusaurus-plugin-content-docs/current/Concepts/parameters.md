@@ -202,7 +202,7 @@ Function returnHello
 
 ## Indirections sur les paramètres (${N})
 
-Les méthodes et fonctions 4D acceptent un nombre variable de paramètres. Vous pouvez traiter ces paramètres avec une boucle `For...End for`, la commande [`Count parameters`](../commands-legacy/count-parameters) et la **syntaxe d'indirection des paramètres**. Au sein de la méthode, une adresse d'indirection est formatée `${N}`, où `N` est une expression numérique.
+Les méthodes et fonctions 4D acceptent un nombre variable de paramètres. Vous pouvez traiter ces paramètres avec une boucle `For...End for`, la commande [`Count parameters`](../commands/count-parameters) et la **syntaxe d'indirection des paramètres**. Au sein de la méthode, une adresse d'indirection est formatée `${N}`, où `N` est une expression numérique.
 
 ### Utilisation des paramètres variadiques
 
@@ -226,7 +226,7 @@ Les paramètres de la méthode doivent être passés dans le bon ordre : le form
  Result:=MySum("000";1;2;200) //"203"
 ```
 
-Notez que même si vous avez déclaré 0, 1, ou plus paramètres, vous pouvez toujours passer le nombre de paramètres que vous voulez. Tous les paramètres sont accessibles dans le code appelé via la syntaxe `${N}` et le type des paramètres supplémentaires est [Variant](dt_variant.md) par défaut (vous pouvez les déclarer en utilisant la [notation variadique](#declaring-variadic-parameter)). Il suffit de s'assurer que les paramètres existent, grâce à la commande [`Count parameters`](../commands-legacy/count-parameters). Par exemple :
+Notez que même si vous avez déclaré 0, 1, ou plus paramètres, vous pouvez toujours passer le nombre de paramètres que vous voulez. Tous les paramètres sont accessibles dans le code appelé via la syntaxe `${N}` et le type des paramètres supplémentaires est [Variant](dt_variant.md) par défaut (vous pouvez les déclarer en utilisant la [notation variadique](#declaring-variadic-parameter)). Il suffit de s'assurer que les paramètres existent, grâce à la commande [`Count parameters`](../commands/count-parameters). Par exemple :
 
 ```4d
 //foo method
@@ -542,3 +542,4 @@ La méthode `ChangeAge` ajoute 10 à l'attribut Age de l'objet reçu
 Si vous exécutez la méthode `CreatePerson`, les deux messages d'alerte contiendront "50" car le même objet est traité par les deux méthodes.
 
 **4D Server :** Lorsque des paramètres sont passés entre des méthodes qui ne sont pas exécutées sur la même machine (lors de l'utilisation de l'option Exécuter sur serveur par exemple), il n'est pas possible d'utiliser des références. Dans ce cas, ce sont des copies des paramètres objet ou collection qui sont envoyées au lieu de références.
+

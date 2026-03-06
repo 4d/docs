@@ -211,11 +211,13 @@ Esta propiedad es **de sólo lectura**.
 
 
 <!--REF #FileHandleClass.getSize().Params -->
-| Parámetros | Tipo |    | Descripción                                              |
-| ---------- | ---- | -- | -------------------------------------------------------- |
-| Resultado  | Real | <- | Tamaño del documento en bytes|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|Result|Real|<-|Size of the document in bytes|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -316,14 +318,14 @@ $s:=$fh.readText()
 
 
 <!--REF #FileHandleClass.readBlob().Params -->
-| Parámetros | Tipo                 |    | Descripción                                         |
-| ---------- | -------------------- | -- | --------------------------------------------------- |
-| bytes      | Real                 | -> | Número de bytes a leer                              |
-| Resultado  | [4D.Blob](BlobClass) | <- | Bytes leídos del archivo|<!-- END REF -->
+<div class="no-index">
 
-
-
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|bytes|Real|->|Number of bytes to be read|
+|Result|[4D.Blob](BlobClass)|<-|Bytes read from the file|
+</div>
+<!-- END REF -->
 
 
 
@@ -356,13 +358,13 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 
 <!--REF #FileHandleClass.readLine().Params -->
-| Parámetros | Tipo |    | Descripción                               |
-| ---------- | ---- | -- | ----------------------------------------- |
-| Resultado  | Text | <- | Línea de texto|<!-- END REF -->
+<div class="no-index">
 
-
-
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|Result|Text|<-|Line of text|
+</div>
+<!-- END REF -->
 
 
 
@@ -402,13 +404,14 @@ Esta función asume que la propiedad [`.offset`](#offset) es un número de carac
 
 
 <!--REF #FileHandleClass.readText().Params -->
-| Parámetros | Tipo |    | Descripción                                  |
-| ---------- | ---- | -- | -------------------------------------------- |
-| stopChar   | Text | -> | Caracter(es) en los que dejar de leer        |
-| Resultado  | Text | <- | Texto del archivo|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|stopChar|Text|->|Character(s) at which to stop reading|
+|Result|Text|<-|Text from the file|
+</div>
+<!-- END REF -->
 
 
 #### Descripción
@@ -450,12 +453,13 @@ Si el parámetro *stopChar* se pasa y no se encuentra, `.readText()` devuelve un
 
 
 <!--REF #FileHandleClass.setSize().Params -->
-| Parámetros | Tipo |    | Descripción                                                    |
-| ---------- | ---- | -- | -------------------------------------------------------------- |
-| size       | Real | -> | Nuevo tamaño del documento en bytes|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|size|Real|->|New size of the document in bytes|
+</div>
+<!-- END REF -->
 
 
 #### Descripción
@@ -485,12 +489,13 @@ Si el valor del *size* es menor que el tamaño actual del documento, el contenid
 
 
 <!--REF #FileHandleClass.writeBlob().Params -->
-| Parámetros | Tipo                 |    | Descripción                                              |
-| ---------- | -------------------- | -- | -------------------------------------------------------- |
-| blob       | [4D.Blob](BlobClass) | -> | Blob a escribir en el archivo|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|blob|[4D.Blob](BlobClass)|->|Blob to write in the file|
+</div>
+<!-- END REF -->
 
 
 #### Descripción
@@ -522,12 +527,13 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 
 <!--REF #FileHandleClass.writeLine().Params -->
-| Parámetros | Tipo |    | Descripción                                 |
-| ---------- | ---- | -- | ------------------------------------------- |
-| lineOfText | Text | -> | Texto a escribir|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|lineOfText|Text|->|Text to write|
+</div>
+<!-- END REF -->
 
 
 #### Descripción
@@ -557,12 +563,13 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 
 <!--REF #FileHandleClass.writeText().Params -->
-| Parámetros  | Tipo |    | Descripción                                 |
-| ----------- | ---- | -- | ------------------------------------------- |
-| textToWrite | Text | -> | Texto a escribir|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|textToWrite|Text|->|Text to write|
+</div>
+<!-- END REF -->
 
 
 #### Descripción

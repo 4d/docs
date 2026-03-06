@@ -17,10 +17,15 @@ title: VP Find table
 
 <!-- REF #_method_.VP Find table.Params -->
 
-| Parámetros | Tipo   |                             | Descripción        |                  |
-| ---------- | ------ | --------------------------- | ------------------ | ---------------- |
-| rangeObj   | Object | ->                          | Rango de celdas    |                  |
-| Resultado  | Text   | <- | Nombre de la tabla | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo   |                             | Descripción        |
+| ---------- | ------ | --------------------------- | ------------------ |
+| rangeObj   | Object | ->                          | Rango de celdas    |
+| Resultado  | Text   | <- | Nombre de la tabla |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

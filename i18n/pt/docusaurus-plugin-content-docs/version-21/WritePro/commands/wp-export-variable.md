@@ -9,6 +9,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP EXPORT VARIABLE.Params-->
 
+<div class="no-index">
+
 | Parâmetro   | Tipo            |                             | Descrição                             |
 | ----------- | --------------- | --------------------------- | ------------------------------------- |
 | wpDoc       | Object          | &#8594; | Variável 4D Write Pro                 |
@@ -16,6 +18,7 @@ displayed_sidebar: docs
 | format      | Integer         | &#8594; | Formato de saída variável             |
 | option      | Object, Integer | &#8594; | Opções de exportação                  |
 
+</div>
 <!-- END REF-->
 
 ## Descrição
