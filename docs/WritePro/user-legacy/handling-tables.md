@@ -190,7 +190,7 @@ When a page break or a column break is inserted through a standard action or the
 * Tables cannot be broken in different sections. Inserting a section break in a table will move the whole table to the new section.
 * Breaks inside rows are not allowed when *Carry-over rows* are enabled.
 
-## Repeated headers 
+### Repeated headers 
 
 4D Write Pro allows you to define up to five header rows per table. Selected header rows will be repeated on every column or page when a column break or a page break occurs. 
 
@@ -205,18 +205,34 @@ If you designate more than five rows as header (or if it results from an inserti
 
 ## Table datasource 
 
-You can assign a formula object as a datasource for a table and access the resulting value(s) from within the table using *Expressions with This* (see below). The datasource formula is processed by 4D Write Pro when formulas are computed (e.g. when the document is opened, when the [WP COMPUTE FORMULAS](../commands/wp-compute-formulas) command is called, etc.). This feature takes advantage of data contexts (see [WP SET DATA CONTEXT](../commands/wp-set-data-context)). 
+You can assign a [formula object](../../API/FormulaClass.md) as a **datasource** for a table and access the resulting value(s) from within the table using specific [expressions with `This`](#table-formula-object). The datasource formula is processed by 4D Write Pro each time [formulas are evaluated](../managing-formulas.md#formula-evaluation) (e.g. when the document is opened, when the [WP COMPUTE FORMULAS](./commands/wp-compute-formulas) command is called, etc.). 
 
-To assign a datasource to a table, use the [WP SET ATTRIBUTES](../commands/wp-set-attributes) command with the wk datasource and a *4D formula* object as value. For example, to fill a table with a row for every person living in France:
+### Assigning a datasource
+
+To assign a datasource to a table, use the [WP SET ATTRIBUTES](./commands/wp-set-attributes) command with the `wk datasource` constant as attribute and the datasource object as value. The datasource object can be:
+
+- a [**4D formula**](../../API/FormulaClass.md). For example, to fill a table with a row for every person living in France:
 
 ```4d
- $formula:=Formula(ds.people.query("country = :1";"France"))
+ var $formula:=Formula(ds.people.query("country = :1";"France"))
  WP SET ATTRIBUTES($table;wk datasource;$formula)
 ```
 
-* If the datasource formula object returns a (non empty) collection or entity selection, the table is automatically filled when the formula is computed: it contains at least as many rows as there are elements in the collection or entities in the entity selection. The first table row, called the data row, is used as a template row (excluding header row(s) and the possible break row(s)).
-* In the data row (and break row(s)), you can insert expressions that use special keywords such as *This.item.lastname*. Expressions are replaced during processing by data from the collection or entity selection. The data row will be duplicated so that the number of item rows is equal to the number of items in the collection or entity selection after formulas are computed.
-* If the datasource formula does not return a collection or a an entity selection, or if it returns an empty collection/entity selection, the table rows are not created automatically and all rows are treated as regular rows. You can define a placeholder row to be displayed in case of empty datasource.
+- a **data context**, defined using the [WP SET DATA CONTEXT](./commands/wp-set-data-context) command for the whole document. A data context can be assigned to a table through the `This.data` object. For example, to fill a table with an [entity selection](../../API/EntitySelectionClass.md) from orders:
+
+```4d
+var $context:={}
+$context.orders:=ds.Order.query("customerID=:1"; $customer.ID)
+var $doc:=WP New($template)
+WP SET DATA CONTEXT($doc; $context)
+WP SET ATTRIBUTES($table;wk datasource;This.data.orders)
+```
+
+If the datasource formula object returns a (non empty) collection or entity selection, the table is automatically filled when the formula is computed: it contains at least as many rows as there are elements in the collection or entities in the entity selection. The first table row, called the data row, is used as a template row (excluding header row(s) and the possible break row(s)).
+
+In the data row (and break row(s)), you can insert expressions that use [special keywords](#table-formula-object) such as `This.item.lastname`. Expressions are replaced during processing by data from the collection or entity selection. The data row will be duplicated so that the number of item rows is equal to the number of items in the collection or entity selection after formulas are computed.
+
+If the datasource formula does not return a collection or a an entity selection, or if it returns an empty collection/entity selection, the table rows are not created automatically and all rows are treated as regular rows. You can define a placeholder row to be displayed in case of empty datasource.
 
 To remove a datasource from a table, use the [WP RESET ATTRIBUTES](../commands/wp-reset-attributes) command. It will set the datasource attribute value to *null*:
 
@@ -224,7 +240,7 @@ To remove a datasource from a table, use the [WP RESET ATTRIBUTES](../commands/w
  WP RESET ATTRIBUTES($table;wk datasource)
 ```
 
-### Building a table with datasource 
+### Row definition
 
 A table design based upon a datasource can contain the following rows:
 
@@ -276,13 +292,13 @@ To create carry-over rows:
 
 ### Break rows 
 
-Tables based on datasources support one or several **Sort Break Rows** that can be displayed either before or after the data row. S**ort Break Rows** help you to visually divide your already sorted datasource items in your table into different parts based on a computed formula value.
+Tables based on datasources support one or several **Sort Break Rows** that can be displayed either before or after the data row. **Sort Break Rows** help you to visually divide your already sorted datasource items in your table into different parts based on a computed formula value.
 
 ![](../../assets/en/WritePro/pict6236360.en.png)
 
-Each time the formula value changes, a new break row is inserted. Therefore, for tables to be rendered correctly, the entity selection (or collection) used as table datasource **must be sorted accordingly**. For example, if breaks by countries and cities are wanted, then the datasource must be sorted as follows: *ds.people.all().orderBy("country asc, city asc")*
+Each time the formula value changes, a new break row is inserted. Therefore, for tables to be rendered correctly, the entity selection (or collection) used as table datasource **must be sorted accordingly**. For example, if breaks by countries and cities are wanted, then the datasource must be sorted as follows: `ds.people.all().orderBy("country asc, city asc")`
 
-The break value is defined through the *wk break formula* attribute. Value is usually a formula based on an item property like "This.item.name'', otherwise the computed value may never change which makes the break formula useless. The *wk break formula* attribute is ignored if the table has no datasource or if the row is a header. A break row must be adjacent to the data row (either before or after), or to another break row, otherwise it is ignored.
+The break value is defined through the `wk break formula` attribute. Value is usually a formula based on an item property like "This.item.name'', otherwise the computed value may never change which makes the break formula useless. The *wk break formula* attribute is ignored if the table has no datasource or if the row is a header. A break row must be adjacent to the data row (either before or after), or to another break row, otherwise it is ignored.
 
 ```4d
  WP SET ATTRIBUTES($row_2;wk break formula;Formula(This.item.country))
@@ -292,7 +308,7 @@ Thanks to the **This.breakItems** expression you can use this feature, for examp
 
 To create break rows:
 
-1. Order the datasource with the levels corresponding to the breaks you want to display, for example, *ds.People.all().orderBy("continent asc, country asc, city asc")*
+1. Order the datasource with the levels corresponding to the breaks you want to display, for example, `ds.People.all().orderBy("continent asc, country asc, city asc")`
 2. Draw the break row(s) in the table template. If the breaks are located after the data row, they must match the **opposite sort order** as the datasource, and if they are located before the data row, they must match **the same sort order** as the datasource.
 3. Set the attribute *wk break formula* to the selected row(s):
 
@@ -301,21 +317,21 @@ To create break rows:
  WP SET ATTRIBUTES($row_2;wk break formula;Formula(This.item.country))
 ```
 
-### Expressions with This 
+### Table formula object
 
-When used in a formula within the table, the **This** keyword gives access to different data according to the context:
+When used in a formula within the table, the [`This`](../commands/this.md) keyword gives access to additional [expressions](../managing-formulas.md#formula-context-object), according to the context:
 
-| **Context**                                                                                         | **Expression**                           | **Type**                                                                         | **Returns**                                                                                                                                                                                                                                                                                                                                                                 |
-| --------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Anywhere                                                                                            | This.table                               | Object                                                                           | Current table                                                                                                                                                                                                                                                                                                                                                               |
-| |  This.row                                                                                         | Object                                   | Current table row element                                                        |                                                                                                                                                                                                                                                                                                                                                                             |
-| |  This.rowIndex                                                                                    | Number                                   | Index of the current row, starting from 1                                        |                                                                                                                                                                                                                                                                                                                                                                             |
-| When a datasource has been defined for the table                                                    | This.table.dataSource                    | Object (formula)                                                                 | Datasource as a formula                                                                                                                                                                                                                                                                                                                                                     |
-| |  This.tableData                                                                                   | Collection or Entity selection (usually) | Evaluated table.dataSource                                                       |                                                                                                                                                                                                                                                                                                                                                                             |
-| In each data row when a table datasource returns a collection or an entity selection                | This.item.xxx                            | Any                                                                              | Mapped to each item of the table datasource collection or entity selection, for example **This.item.firstName** if the associated entity has the *firstName* attribute                                                                                                                                                                                                      |
-| |  This.itemIndex                                                                                   | Number                                   | Index of the current item in the collection or entity selection, starting from 0 |                                                                                                                                                                                                                                                                                                                                                                             |
-| In any row (except header rows) when a table datasource returns a collection or an entity selection | This.previousItems                       | Collection or Entity selection                                                   | Items displayed on the pages before the bottom carry over row (if any) or before the row of the expression, including the page where is displayed the row containing the expression. <br/>This expression returns the same type of value as the **This.tableData** expression.                                                                                      |
-| In a break row                                                                                      | This.breakItems                          | Collection or Entity selection                                                   | Items of the collection or entity selection displayed in the rows between: the current break row and the previous break row of the same level (or the start of the table) if the break row(s) are displayed after the data row. the current break and the next break row of the same level (or the end of the table) if the break row(s) are displayed before the data row. |
+| **Context**     | **Expression**   | **Type** | **Returns**               | 
+|---------------- | ---------------- | -------- | ------------------------- |  
+|Anywhere         | This.table       | Object   | Current table             |               
+|                 | This.row         | Object   | Current table row element |
+|                 | This.rowIndex    | Number   | Index of the current row, starting from 1  |
+|When a datasource has been defined for the table | This.table.dataSource | Object (formula) | Datasource as a formula |
+|                 | This.tableData   | Collection or Entity selection (usually) | Evaluated table.dataSource |  
+|In each data row when a table datasource returns a collection or an entity selection | This.item.xxx | Any | Mapped to each item of the table datasource collection or entity selection, for example **This.item.firstName** if the associated entity has the *firstName* attribute   |
+|                 | This.itemIndex   | Number   | Index of the current item in the collection or entity selection, starting from 0 |  
+| In any row (except header rows) when a table datasource returns a collection or an entity selection | This.previousItems  | Collection or Entity selection | Items displayed on the pages before the bottom carry over row (if any) or before the row of the expression, including the page where is displayed the row containing the expression. <br/>This expression returns the same type of value as the **This.tableData** expression.  |
+| In a break row  | This.breakItems  | Collection or Entity selection  | Items of the collection or entity selection displayed in the rows between:<br/><ul><li>the current break row and the previous break row of the same level (or the start of the table) if the break row(s) are displayed after the data row.</li><li>the current break and the next break row of the same level (or the end of the table) if the break row(s) are displayed before the data row.</li></ul>|  
 
 In any other contexts, these expressions will return *undefined*.
 

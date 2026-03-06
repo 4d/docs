@@ -94,5 +94,6 @@ The following example loops through an entity selection and creates a print prev
 ## See also 
 
 [Blog post - ORDA and 4D Write Pro : The power couple!](https://blog.4d.com/orda-and-4d-write-pro-the-power-couple/)  
+[Blog post - 4D Write Pro: Dynamically Fill Tables with Entity Selections & Collections](https://blog.4d.com/4d-write-pro-dynamically-fill-tables-with-entity-selections-collections/)  
 [WP COMPUTE FORMULAS](wp-compute-formulas.md)  
 [WP Get data context](wp-get-data-context.md)  

@@ -95,6 +95,6 @@ displayed_sidebar: docs
 
 ## 参照 
 
-  
+[Blog post - 4D Write Pro: Dynamically Fill Tables with Entity Selections & Collections](https://blog.4d.com/4d-write-pro-dynamically-fill-tables-with-entity-selections-collections/)    
 [WP COMPUTE FORMULAS](../commands/wp-compute-formulas)  
 [WP Get data context](../commands/wp-get-data-context)  
