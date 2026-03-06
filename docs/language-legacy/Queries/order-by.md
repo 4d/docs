@@ -5,7 +5,7 @@ slug: /commands/order-by
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ORDER BY.Syntax-->**ORDER BY** ( {*aTable* : Table} {; ...(*aField* : Field {; *>_or_<* : >, <}) } {; *} )<!-- END REF-->
+<!--REF #_command_.ORDER BY.Syntax-->**ORDER BY** ( {*aTable* : Table} {; ...(*aField* : Field {; *order* : >, <}) } {; *} )<!-- END REF-->
 <!--REF #_command_.ORDER BY.Params-->
 <div class="no-index">
 
@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to order selected records, or Default table, if omitted |
 | aField | Field | &#8594;  | Field on which to set the order for each level |
-| >_or_< | >, < | &#8594;  | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
+| order | >, < | &#8594;  | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
 | * | Operator | &#8594;  | Continue order flag |
 </div>
 <!-- END REF-->
@@ -35,14 +35,14 @@ displayed_sidebar: docs
 
 If you omit the *aTable* parameter, the command applies to the default table, if it has been specified. Otherwise, 4D uses the table of the first field passed as a parameter. If you do not pass a parameter and if no default table has been specified, an error is returned.  
 
-If you do not specify the *aField*, the *\> or <* or the *\** parameters, **ORDER BY** displays the Order By editor for *aTable*. The Order By editor is shown here:
+If you do not specify the *aField*, the *order* or the *\** parameters, **ORDER BY** displays the Order By editor for *aTable*. The Order By editor is shown here:
 
 ![](../../assets/en/commands/pict2286854.en.png)
 
 For more information about using the Order By editor, refer to the 4D Design Reference manual. 
 
-If you specify the *aField* and *\> or <* parameters, the standard Order By editor is not presented and the sort is defined programmatically. You can sort the selection on one level or on several levels. For each sort level, you specify a field in *aField* and the sorting order in *\> or <*. If you pass the “greater than” symbol (>), the order is ascending. If you pass the “less than” symbol (<), the order is descending.   
-If you omit the sorting order parameter *\> or <*, ascending order is the default. 
+If you specify the *aField* and *order* parameters, the standard Order By editor is not presented and the sort is defined programmatically. You can sort the selection on one level or on several levels. For each sort level, you specify a field in *aField* and the sorting order in *order*. If you pass the “greater than” symbol (>), the order is ascending. If you pass the “less than” symbol (<), the order is descending.   
+If you omit the sorting order parameter *order*, ascending order is the default. 
 
 If only one field is specified (one level sort) and it is indexed, the index is used for the order. If the field is not indexed or if there is more than one field, the order is performed sequentially (except in the case of composite indexes). The field may belong to the (selection’s) table being reordered or to a One table related to *aTable* with an automatic relation. In this case, the sort is always sequential.  
 If the sorted fields are included in a composite index, **ORDER BY** uses the index for the order. 

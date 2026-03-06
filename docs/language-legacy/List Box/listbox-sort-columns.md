@@ -39,7 +39,7 @@ If you pass the optional *\** parameter, you indicate that the *object* paramete
 
 In *colNum*, pass the column number of the column whose values you want to use as the sort criteria. You can use any type of array data, except pictures and pointers.
 
-In *order*, pass the symbol >_or_< to indicate the sort order. If *order* contains the “greater than” symbol (>), the sort order is ascending. If *order* contains the “less than” symbol (<), the sort oder is descending.
+In *order*, pass the symbol `>` or `<` to indicate the sort order. If *order* contains the “greater than” symbol (>), the sort order is ascending. If *order* contains the “less than” symbol (<), the sort oder is descending.
 
 You can define multi-level sorts: to do so, pass as many pairs (*colNum;order*) as necessary. The sorting level is defined by the position of the parameter in the call.
 

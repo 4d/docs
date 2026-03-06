@@ -5,12 +5,13 @@ slug: /commands/last-query-plan
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Last query plan.Syntax-->**Last query plan** : Text<!-- END REF-->
+<!--REF #_command_.Last query plan.Syntax-->**Last query plan** ( *descFormat* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Last query plan.Params-->
 <div class="no-index">
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
+| descFormat | Integer | &#8594;  | Description format (Text or XML) |
 | Function result | Text | &#8592; | Description of last executed query plan |
 </div>
 <!-- END REF-->

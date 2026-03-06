@@ -15,13 +15,14 @@ displayed_sidebar: docs
 </details>
 
 
-<!--REF #_command_.REGISTER CLIENT.Syntax-->**REGISTER CLIENT** ( {*clientName* : Text} )<!-- END REF-->
+<!--REF #_command_.REGISTER CLIENT.Syntax-->**REGISTER CLIENT** ( {*clientName* : Text {; *}} )<!-- END REF-->
 <!--REF #_command_.REGISTER CLIENT.Params-->
 <div class="no-index">
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | clientName | Text | &#8594;  | Name of the 4D client session |
+| * | Operator | &#8594;  | Adds $ before *clientName* (compatibility) |
 </div>
 <!-- END REF-->
 
