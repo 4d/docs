@@ -1,6 +1,6 @@
 ---
 id: Sets_theme
-title: Ensembles
+title: Sets
 sidebar_label: Ensembles
 slug: /commands/theme/Sets
 ---
