@@ -45,11 +45,14 @@ Vector objects are shared, immutable, and streamable.
 
 <!--REF #4D.Vector.new().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo                      |                             | Descrição                                        |
 | ---------- | ------------------------- | --------------------------- | ------------------------------------------------ |
 | parâmetro  | Collection of reals       | ->                          | Collection of real numbers representing a vector |
 | Resultados | 4D.Vector | <- | New Vector object                                |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -79,11 +82,14 @@ var $collection := $vector.toCollection()
 
 <!--REF #VectorClass.cosineSimilarity().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo                      |                             | Descrição                |
 | ---------- | ------------------------- | --------------------------- | ------------------------ |
 | vector     | 4D.Vector | ->                          | Vector to compare with   |
 | Resultados | Real                      | <- | Distance between vectors |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -154,11 +160,14 @@ End if
 
 <!--REF #VectorClass.dotSimilarity().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo                      |                             | Descrição                |
 | ---------- | ------------------------- | --------------------------- | ------------------------ |
 | vector     | 4D.Vector | ->                          | Vector to compare with   |
 | Resultados | Real                      | <- | Distance between vectors |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -227,11 +236,14 @@ ALERT("Best answer: "+$documents[0].text)
 
 <!--REF #VectorClass.euclideanDistance().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo                      |                             | Descrição                |
 | ---------- | ------------------------- | --------------------------- | ------------------------ |
 | vector     | 4D.Vector | ->                          | Vector to compare with   |
 | Resultados | Real                      | <- | Distance between vectors |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -289,10 +301,13 @@ The `.length` property contains <!-- REF #VectorClass.length.Summary -->the numb
 
 <!--REF #VectorClass.toCollection().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo       |                             | Descrição                                                     |
 | ---------- | ---------- | --------------------------- | ------------------------------------------------------------- |
 | Resultados | Collection | <- | Collection of real numbers representing the vector components |
 
+</div>
 <!-- END REF -->
 
 The `.toCollection()` function <!-- REF #VectorClass.toCollection().Summary -->returns the vector components as a collection of reals<!-- END REF -->.

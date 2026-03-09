@@ -57,7 +57,7 @@ Permet de définir une liste dont les valeurs ne peuvent pas être saisies dans 
 
 #### Commandes
 
-[OBJECT Get list name](../commands-legacy/object-get-list-name) - [OBJECT Get list reference](../commands-legacy/object-get-list-reference) - [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name) - [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference)
+[OBJECT Get list name](../commands/object-get-list-name) - [OBJECT Get list reference](../commands/object-get-list-reference) - [OBJECT SET LIST BY NAME](../commands/object-set-list-by-name) - [OBJECT SET LIST BY REFERENCE](../commands/object-set-list-by-reference)
 
 ---
 
@@ -82,4 +82,5 @@ Cependant, contrairement à la propriété [Enumération](properties_DataSource.
 
 #### Commandes
 
-[OBJECT Get list name](../commands-legacy/object-get-list-name) - [OBJECT Get list reference](../commands-legacy/object-get-list-reference) - [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name) - [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference)
+[OBJECT Get list name](../commands/object-get-list-name) - [OBJECT Get list reference](../commands/object-get-list-reference) - [OBJECT SET LIST BY NAME](../commands/object-set-list-by-name) - [OBJECT SET LIST BY REFERENCE](../commands/object-set-list-by-reference)
+

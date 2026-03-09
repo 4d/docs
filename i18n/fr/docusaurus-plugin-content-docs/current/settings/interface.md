@@ -63,7 +63,7 @@ Les palettes suivants sont disponibles :
 
 La palette d'application principale sera appliquée aux formulaires par défaut. Toutefois, elle peut être remplacée :
 
-- par la commande [SET APPLICATION COLOR SCHEME](../commands-legacy/set-application-color-scheme) au niveau de la session de travail ;
+- par la commande [SET APPLICATION COLOR SCHEME](../commands/set-application-color-scheme) au niveau de la session de travail ;
 - en utilisant la propriété de formulaire [Color Scheme](../FormEditor/propertiesForm.html#color-scheme) à chaque niveau de formulaire (niveau de priorité le plus élevé). **Note** : à l'impression, les formulaires utilisent toujours la palette "Light".
 
 ### Use Fluent UI on Windows
@@ -91,5 +91,6 @@ Pour modifier le raccourci d'une opération, cliquez sur le bouton **Modifier** 
 ![](../assets/en/settings/shortcut.png)
 
 Pour modifier le raccourci clavier, tapez la nouvelle combinaison de touches sur votre clavier et cliquez sur **OK**. Si vous préférez ne pas avoir de raccourci pour une opération, cliquez sur **Effacer**.
+
 
 

@@ -21,7 +21,7 @@ Le chemin d'accès à saisir est identique à celui de [la propriété Chemin d'
 
 #### Commandes
 
-[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT Get minimum-value](../commands/object-get-minimum-value) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 ---
 
@@ -41,7 +41,7 @@ Aspect général du bouton. Le style du bouton joue également un rôle dans la 
 
 #### Commandes
 
-[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT Get minimum-value](../commands/object-get-minimum-value) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 ---
 
@@ -70,7 +70,7 @@ Ce paramètre est utile, par exemple, lorsque l'image de fond contient des bordu
 
 #### Commandes
 
-[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT Get minimum-value](../commands/object-get-minimum-value) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 ---
 
@@ -90,7 +90,7 @@ Désigne l'emplacement d'une icône par rapport à l'objet formulaire.
 
 #### Commandes
 
-[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT Get minimum-value](../commands/object-get-minimum-value) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 ---
 
@@ -112,7 +112,7 @@ Le titre du bouton sera décalé vers la droite et vers le bas pour le nombre de
 
 #### Commandes
 
-[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT Get minimum-value](../commands/object-get-minimum-value) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 ---
 
@@ -151,7 +151,7 @@ Chaque état est représenté par une image différente. Dans l'image source, le
 
 #### Commandes
 
-[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT Get minimum-value](../commands/object-get-minimum-value) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 ---
 
@@ -175,7 +175,7 @@ Le chemin d'accès à saisir est identique à celui de [la propriété Chemin d'
 
 #### Commandes
 
-[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT Get minimum-value](../commands/object-get-minimum-value) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 ---
 
@@ -205,7 +205,7 @@ Voici le résultat des différentes options de cette propriété :
 
 #### Commandes
 
-[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT Get minimum-value](../commands/object-get-minimum-value) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 ---
 
@@ -231,7 +231,7 @@ Par défaut, lorsqu'un bouton contient un titre et une image, les éléments son
 
 #### Commandes
 
-[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT Get minimum-value](../commands/object-get-minimum-value) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 ---
 
@@ -255,7 +255,7 @@ Ce paramètre est utile, par exemple, lorsque l'image de fond contient des bordu
 
 #### Commandes
 
-[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT Get minimum-value](../commands/object-get-minimum-value) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 ---
 
@@ -290,7 +290,7 @@ Reportez-vous à la [description de l'événement `On Alternative Click`](../Eve
 
 ### Gestion du pop up menu
 
-Il est important de noter que la propriété “Avec pop up menu” gère uniquement l’aspect graphique du bouton. L'affichage du menu contextuel et de ses valeurs doit être entièrement géré par le développeur, plus particulièrement en utilisant les [événements formulaires](../Events/overview.md) et les commandes [`Dynamic pop up menu`](../commands-legacy/dynamic-pop-up-menu) et [`Pop up menu`](../commands-legacy/pop-up-menu).
+Il est important de noter que la propriété “Avec pop up menu” gère uniquement l’aspect graphique du bouton. L'affichage du menu contextuel et de ses valeurs doit être entièrement géré par le développeur, plus particulièrement en utilisant les [événements formulaires](../Events/overview.md) et les commandes [`Dynamic pop up menu`](../commands/dynamic-pop-up-menu) et [`Pop up menu`](../commands/pop-up-menu).
 
 #### Grammaire JSON
 
@@ -304,5 +304,6 @@ Il est important de noter que la propriété “Avec pop up menu” gère unique
 
 #### Commandes
 
-[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT Get minimum-value](../commands/object-get-minimum-value) - [OBJECT SET FORMAT](../commands/object-set-format)
+
 

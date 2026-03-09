@@ -9,13 +9,18 @@ title: VP Find
 
 <!-- REF #_method_.VP Find.Params -->
 
-| Parámetros      | Tipo   |                             | Descripción                                                                               |                  |
-| --------------- | ------ | --------------------------- | ----------------------------------------------------------------------------------------- | ---------------- |
-| rangeObj        | Object | ->                          | Objeto rango                                                                              |                  |
-| searchValue     | Text   | ->                          | Valor de búsqueda                                                                         |                  |
-| searchCondition | Object | ->                          | Objeto que contiene la(s) condición(es) de búsqueda |                  |
-| replaceValue    | Text   | ->                          | Valor de reemplazo                                                                        |                  |
-| Resultado       | Object | <- | Objeto rango                                                                              | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros      | Tipo   |                             | Descripción                                                                               |
+| --------------- | ------ | --------------------------- | ----------------------------------------------------------------------------------------- |
+| rangeObj        | Object | ->                          | Objeto rango                                                                              |
+| searchValue     | Text   | ->                          | Valor de búsqueda                                                                         |
+| searchCondition | Object | ->                          | Objeto que contiene la(s) condición(es) de búsqueda |
+| replaceValue    | Text   | ->                          | Valor de reemplazo                                                                        |
+| Resultado       | Object | <- | Objeto rango                                                                              |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

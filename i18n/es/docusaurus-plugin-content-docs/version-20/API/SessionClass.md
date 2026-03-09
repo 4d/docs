@@ -38,12 +38,13 @@ Para obtener información detallada sobre la implementación de la sesión, cons
 
 
 <!-- REF #_command_.Session.Params -->
-| Parámetros | Tipo       |    | Descripción                               |
-| ---------- | ---------- |:--:| ----------------------------------------- |
-| Resultado  | 4D.Session | <- | Objeto Session|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|4D.Session|<-|Session object|
+</div>
+<!-- END REF -->
 
 
 #### Descripción
@@ -100,12 +101,13 @@ IP:port/4DACTION/action_Session
 
 
 <!-- REF #SessionClass.clearPrivileges().Params -->
-| Parámetros | Tipo |  | Descripción                                             |
-| ---------- | ---- |::| ------------------------------------------------------- |
-|            |      |  | No requiere ningún parámetro|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+||||Does not require any parameters|
+</div>
+<!-- END REF -->
 
 
 #### Descripción
@@ -173,13 +175,14 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 
 
 <!-- REF #SessionClass.hasPrivilege().Params -->
-| Parámetros | Tipo    |    | Descripción                                                                             |
-| ---------- | ------- |:--:| --------------------------------------------------------------------------------------- |
-| privilege  | Text    | <- | Nombre del privilegio a verificar                                                       |
-| Resultado  | Boolean | <- | True si la sesión tiene *privilege*, False en caso contrario|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|privilege|Text|<-|Name of the privilege to verify|
+|Result|Boolean|<-|True if session has *privilege*, False otherwise|
+</div>
+<!-- END REF -->
 
 
 #### Descripción
@@ -259,11 +262,13 @@ End if
 
 
 <!-- REF #SessionClass.isGuest().Params -->
-| Parámetros | Tipo    |    | Descripción                                                                               |
-| ---------- | ------- |:--:| ----------------------------------------------------------------------------------------- |
-| Resultado  | Boolean | <- | True si la sesión es una sesión Guest, False en caso contrario|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Boolean|<-|True if session is a Guest one, False otherwise|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -300,13 +305,15 @@ End if
 
 
 <!-- REF #SessionClass.setPrivileges().Params -->
-| Parámetros | Tipo       |    | Descripción                                                                            |
-| ---------- | ---------- |:--:| -------------------------------------------------------------------------------------- |
-| privilege  | Text       | -> | Nombre del privilegio                                                                  |
-| privileges | Collection | -> | Colección de nombres de privilegios                                                    |
-| settings   | Object     | -> | Objeto con una propiedad "privilegios" (cadena o colección)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|privilege|Text|->|Privilege name|
+|privileges|Collection|->|Collection of privilege names|
+|settings|Object|->|Object with a "privileges" property (string or collection)|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -320,8 +327,8 @@ La función `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary --
 
 | Propiedad  | Tipo              | Descripción                                           |
 | ---------- | ----------------- | ----------------------------------------------------- |
-| privileges | Text o Collection | <li>Cadena que contiene un nombre de privilegio, o</li><li>Colección de cadenas que contienen nombres de privilegios</li>    |
-| roles      | Text o Collection | <li>Cadena que contiene un nombre de rol, o</li><li>Colección de cadenas que contienen nombres de roles</li>   |
+| privileges | Text o Collection | <li>Cadena que contiene un nombre de privilegio, o</li><li>Colección de cadenas que contienen nombres de privilegios</li>  |
+| roles      | Text o Collection | <li>Cadena que contiene un nombre de rol, o</li><li>Colección de cadenas que contienen nombres de roles</li>  |
 | userName   | Text              | Nombre de usuario para asociar a la sesión (opcional) |
 
 :::info

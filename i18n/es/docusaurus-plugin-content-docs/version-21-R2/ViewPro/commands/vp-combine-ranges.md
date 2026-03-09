@@ -9,11 +9,16 @@ title: VP Combine ranges
 
 <!-- REF #_method_.VP Combine ranges.Params -->
 
-| Parámetros    | Tipo   |                             | Descripción                            |                  |
-| ------------- | ------ | --------------------------- | -------------------------------------- | ---------------- |
-| rangeObj      | Object | ->                          | Objeto rango                           |                  |
-| otherRangeObj | Object | ->                          | Objeto rango                           |                  |
-| Resultado     | Object | <- | Objeto que contiene un rango combinado | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros    | Tipo   |                             | Descripción                            |
+| ------------- | ------ | --------------------------- | -------------------------------------- |
+| rangeObj      | Object | ->                          | Objeto rango                           |
+| otherRangeObj | Object | ->                          | Objeto rango                           |
+| Resultado     | Object | <- | Objeto que contiene un rango combinado |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

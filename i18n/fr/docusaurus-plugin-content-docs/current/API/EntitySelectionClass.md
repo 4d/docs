@@ -198,7 +198,7 @@ L'objet résultant est une entity selection de la dataclass Employee sans doublo
 
 | Paramètres      | Type                               |                             | Description                                                      |
 | --------------- | ---------------------------------- | :-------------------------: | ---------------------------------------------------------------- |
-| entity          | 4D.Entity          |              ->             | Entité à ajouter à l'entity selection                            |
+| entité          | 4D.Entity          |              ->             | Entité à ajouter à l'entity selection                            |
 | entitySelection | 4D.EntitySelection |              ->             | Entity selection à ajouter à l'entity selection d'origine        |
 | Résultat        | 4D.EntitySelection | <- | Entity selection incluant l'*entity* ou *entitySelection*ajoutée |
 
@@ -290,7 +290,7 @@ $sellist2:=$sellist2.add($sellist1)
 
 | Paramètres      | Type                               |                             | Description                                                                      |
 | --------------- | ---------------------------------- | :-------------------------: | -------------------------------------------------------------------------------- |
-| entity          | 4D.Entity          |              ->             | Entité à intersecter                                                             |
+| entité          | 4D.Entity          |              ->             | Entité à intersecter                                                             |
 | entitySelection | 4D.EntitySelection |              ->             | Entity selection à intersecter                                                   |
 | Résultat        | 4D.EntitySelection | <- | Entity selection résultante de l'intersection à l'aide de l'opérateur logique ET |
 
@@ -517,7 +517,7 @@ $sel2:=$sel.clean()
 
 | Paramètres | Type                      |                             | Description                                                  |
 | ---------- | ------------------------- | :-------------------------: | ------------------------------------------------------------ |
-| entity     | 4D.Entity |              ->             | Entité à évaluer                                             |
+| entité     | 4D.Entity |              ->             | Entité à évaluer                                             |
 | Résultat   | Boolean                   | <- | Vrai si l'entité appartient à l'entity selection, sinon Faux |
 
 </div>
@@ -686,11 +686,11 @@ Cette entity selection est ensuite mise à jour avec les produits et vous souhai
 
 <div class="no-index">
 
-| Paramètres    | Type       |                             | Description                                                             |
-| ------------- | ---------- | :-------------------------: | ----------------------------------------------------------------------- |
-| attributePath | Text       |              ->             | Chemin de l'attribut dont vous souhaitez obtenir les valeurs distinctes |
-| options       | Integer    |              ->             | `dk diacritical`, `dk count values`                                     |
-| Résultat      | Collection | <- | Collection avec seulement les valeurs distinctes                        |
+| Paramètres    | Type       |                             | Description                                                     |
+| ------------- | ---------- | :-------------------------: | --------------------------------------------------------------- |
+| attributePath | Text       |              ->             | Chemin de propriété d'objet à utiliser pour évaluer les valeurs |
+| options       | Integer    |              ->             | `dk diacritical`, `dk count values`                             |
+| Résultat      | Collection | <- | Collection avec seulement les valeurs distinctes                |
 
 </div>
 <!-- END REF -->
@@ -1464,7 +1464,7 @@ Nous souhaitons connaître le salaire le plus bas parmi les employées :
 
 | Paramètres      | Type                               |                             | Description                                                                                                      |
 | --------------- | ---------------------------------- | :-------------------------: | ---------------------------------------------------------------------------------------------------------------- |
-| entity          | 4D.Entity          |              ->             | Entité à soustraire                                                                                              |
+| entité          | 4D.Entity          |              ->             | Entité à soustraire                                                                                              |
 | entitySelection | 4D.EntitySelection |              ->             | Entity selection à soustraire                                                                                    |
 | keepOrder       | Integer                            |              ->             | `dk keep ordered` (integer) pour conserver l'ordre initial dans l'entity selection résultante |
 | Résultat        | 4D.EntitySelection | <- | Nouvelle entity selection ou une nouvelle référence sur l'entity selection existante                             |
@@ -1549,7 +1549,7 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 
 | Paramètres      | Type                               |                             | Description                                                                    |
 | --------------- | ---------------------------------- | :-------------------------: | ------------------------------------------------------------------------------ |
-| entity          | 4D.Entity          |              ->             | Entité à intersecter                                                           |
+| entité          | 4D.Entity          |              ->             | Entité à intersecter                                                           |
 | entitySelection | 4D.EntitySelection |              ->             | Entity selection à intersecter                                                 |
 | Résultat        | 4D.EntitySelection | <- | Nouvelle entity selection ou nouvelle référence à l'entity selection d'origine |
 
@@ -2726,3 +2726,4 @@ $employeesCollection:=$employees.toCollection("firstName, lastName, directReport
 ```
 
 <!-- END REF -->
+

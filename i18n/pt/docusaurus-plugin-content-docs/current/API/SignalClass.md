@@ -213,3 +213,4 @@ Não é recomendável chamar `.wait()` sem um *timeout* no processo principal, p
 > O estado de um processo que espera um signal é `Waiting for internal flag`.
 
 <!-- END REF -->
+

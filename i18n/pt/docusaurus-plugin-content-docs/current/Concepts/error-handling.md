@@ -33,7 +33,7 @@ Em 4D, todos os erros podem ser capturados e tratados por métodos específicos 
 
 Uma vez instalados, os manipuladores de erros são automaticamente chamados em modo interpretado ou compilado em caso de erro na aplicação 4D ou num dos seus componentes. Um manipulador de erros diferente pode ser chamado em função do contexto de execução (ver abaixo).
 
-Para *instalar* um método de projeto de tratamento de erros, você só precisa chamar o comando [`ON ERR CALL`](../commands-legacy/on-err-call) com o nome do método do projeto e (opcionalmente) o escopo como parâmetros. Por exemplo:
+Para *instalar* um método de projeto de tratamento de erros, você só precisa chamar o comando [`ON ERR CALL`](../commands/on-err-call) com o nome do método do projeto e (opcionalmente) o escopo como parâmetros. Por exemplo:
 
 ```4d
 ON ERR CALL("IO_ERRORS") //Instala o método de gestão de erros
@@ -45,7 +45,7 @@ Para deixar de detectar erros para um contexto de execução e devolver o contro
 ON ERR CALL("";ek local) // dá o controle para o processo local
 ```
 
-O comando [`Método chamado erro`](../commands-legacy/method-called-on-error) permite que você saiba o nome do método instalado por `ON ERR CALL` para o processo atual. É particularmente útil no contexto dos componentes porque permite mudar temporariamente e depois restaurar o método de captura de erros do banco de dados local:
+O comando [`Método chamado erro`](../commands/method-called-on-error) permite que você saiba o nome do método instalado por `ON ERR CALL` para o processo atual. É particularmente útil no contexto dos componentes porque permite mudar temporariamente e depois restaurar o método de captura de erros do banco de dados local:
 
 ```4d
  $methCurrent:=Método chamado em caso de erro(ek local)
@@ -237,7 +237,7 @@ Se um erro *deferred* for lançado fora do bloco `Try`, a execução do código 
 
 :::info
 
-Para obter mais informações sobre erros *deferidos* e *não diferidos*, consulte a descrição do comando [`throw`](../commands-legacy/throw).
+Para obter mais informações sobre erros *deferidos* e *não diferidos*, consulte a descrição do comando [`throw`](../commands/throw).
 
 :::
 
@@ -284,7 +284,7 @@ Function createInvoice($customer : cs.customerEntity; $items : Collection; $invo
 
 ## Códigos de erro
 
-Exceções que interrompem a execução de código são retornadas pela 4D, mas podem ter origens diferentes como o SO, um dispositivo, o kernel 4D, um [`throw`](../commands-legacy/throw) no seu código, etc. An error is therefore defined by three elements:
+Exceções que interrompem a execução de código são retornadas pela 4D, mas podem ter origens diferentes como o SO, um dispositivo, o kernel 4D, um [`throw`](../commands/throw) no seu código, etc. An error is therefore defined by three elements:
 
 - um **assinatura do componente**, sendo a origem do erro (veja [`Last errors`](../commands/last-errors) para ter uma lista de assinaturas)
 - uma **mensagem**, que explica porque o erro ocorreu
@@ -293,3 +293,4 @@ Exceções que interrompem a execução de código são retornadas pela 4D, mas 
 A [caixa de diálogo de erro 4D](../Debugging/basics.md) mostra o código e a mensagem para o usuário.
 
 Para ter uma descrição completa de um erro e especialmente de sua origem, você precisa chamar o comando [`Last errors`](../commands/last-errors). Ao interceptar e tratar erros usando um [método de tratamento de erros](#installing-an-error-handling-method) em seus aplicativos finais, use [`Last errors`](../commands/last-errors) e certifique-se de registrar todas as propriedades do objeto *error*, pois os códigos de erro dependem dos componentes.
+

@@ -19,3 +19,4 @@ Actions on data executed through the datastore, such as [`.save()`](../API/Entit
 On the other hand, actions triggered at the 4D database level using the 4D classic language commands, such as [`SAVE RECORD`](../commands/save-record) or [standard actions](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html#3371159) will NOT trigger ORDA entity events.
 
 <!-- END REF -->
+

@@ -14,7 +14,7 @@ title: VP REMOVE NAME
 | Paramètres | Type    |    | Description                                                    |
 | ---------- | ------- | -- | -------------------------------------------------------------- |
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                        |
-| name       | Text    | -> | Nom de la plage nommée ou de la formule nommée à supprimer     |
+| name       | Text    | -> | Résultat:                                      |
 | scope      | Integer | -> | "Scope" cible (par défaut=feuille courante) |
 
 </div>

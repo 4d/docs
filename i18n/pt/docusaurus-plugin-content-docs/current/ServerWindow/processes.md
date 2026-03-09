@@ -39,7 +39,7 @@ A atividade do processo é a percentagem de tempo que 4D Server dedicou a este p
   - Processo usuário - nome do usuário 4D,
   - Processo web - caminho URL,
 - Nome do processo,
-- Número do processo (como retornado pelo comando [`New process`](../commands-legacy/new-process), por exemplo). O número do processo é o número atribuído no servidor. No caso de um processo global, este número pode ser diferente do atribuído na máquina cliente.
+- Número do processo (como retornado pelo comando [`New process`](../commands/new-process), por exemplo). O número do processo é o número atribuído no servidor. No caso de um processo global, este número pode ser diferente do atribuído na máquina cliente.
 - Estado atual do processo,
 - Tempo de execução (em segundos) do processo desde a sua criação,
 - Percentagem de tempo que 4D Server dedicou a este processo (rácio).
@@ -85,7 +85,7 @@ A página também tem cinco botões de controle que atuam nos processos selecion
 
 - **Abortar proceso**: permite abortar el proceso o los procesos seleccionados. Quando clicar neste botão, aparece uma caixa de diálogo de aviso para que se possa confirmar ou cancelar a operação.
 
-> You can also abort the selected process(es) directly without displaying the confirmation dialog box by holding down the **Alt** key while clicking on this button, or by using the [`ABORT PROCESS BY ID`](../commands-legacy/abort-process-by-id) command.
+> You can also abort the selected process(es) directly without displaying the confirmation dialog box by holding down the **Alt** key while clicking on this button, or by using the [`ABORT PROCESS BY ID`](../commands/abort-process-by-id) command.
 
 - **Pausar processo**: pode ser usado para pausar os processos selecionados.
 - **Activar proceso**: permite reactivar los procesos seleccionados. Os processos devem ter sido colocados em pausa anteriormente (utilizando o botão acima ou por programação); caso contrário, este botão não tem qualquer efeito.
@@ -94,4 +94,5 @@ A página também tem cinco botões de controle que atuam nos processos selecion
 > También puede depurar un proceso directamente sin mostrar la caja de diálogo de confirmación manteniendo presionada la tecla **Alt** mientras presiona este botón.
 
 - **Ver usuarios**: permite visualizar, en la [página Usuarios](users.md), todos los procesos del usuario o usuarios seleccionados. Este botão está ativo quando pelo menos um processo do utilizador for selecionado.
+
 

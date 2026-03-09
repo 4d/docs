@@ -13,7 +13,7 @@ Número é um termo genérico que significa:
 Normalmente, ao trabalhar com números inteiros, você lida com valores *Long* (números inteiros de 4 bytes). However, there are two cases where Integers are stored as *Shorts* values (2-byte Integer), i.e. in the range -32,768..32,767 (2^15..(2^15)-1):
 
 - Campos do banco de dados tipo 'Integer',
-- Elementos de arrays declarados com [`ARRAY INTEGER`](../commands-legacy/array-integer).
+- Elementos de arrays declarados com [`ARRAY INTEGER`](../commands/array-integer).
 
 Esses tipos de dados legados são automaticamente convertidos em *Longs* quando usados na linguagem 4D.
 
@@ -75,7 +75,7 @@ O operador do módulo % divide o primeiro número pelo segundo número e devolve
 
 :::warning
 
-O operador do módulo % devolve valores significativos com números que se encontram na gama do Long Integer (de menos 2^31 a 2^31 menos um). Para calcular o módulo com números fora desse intervalo, use o comando [`Mod`](../commands-legacy/mod).
+O operador do módulo % devolve valores significativos com números que se encontram na gama do Long Integer (de menos 2^31 a 2^31 menos um). Para calcular o módulo com números fora desse intervalo, use o comando [`Mod`](../commands/mod).
 
 :::
 
@@ -85,11 +85,11 @@ The integer division operator divides one number by another and returns the whol
 
 ### Comparação real
 
-Para comparar dois reais por igualdade, a linguagem 4D realmente compara o valor absoluto da diferença com *epsilon*. Consulte o comando [`SET REAL COMPARISON LEVEL`](../commands-legacy/set-real-comparison-level).
+Para comparar dois reais por igualdade, a linguagem 4D realmente compara o valor absoluto da diferença com *epsilon*. Veja o comando [`SET REAL COMPARISON LEVEL`](../commands/set-real-comparison-level).
 
 :::note
 
-For consistency, the 4D database engine always compares database fields of the real type using a 10^-6 value for *epsilon* and does not take the [`SET REAL COMPARISON LEVEL`](../commands-legacy/set-real-comparison-level) setting into account.
+For consistency, the 4D database engine always compares database fields of the real type using a 10^-6 value for *epsilon* and does not take the [`SET REAL COMPARISON LEVEL`](../commands/set-real-comparison-level) setting into account.
 
 :::
 
@@ -166,3 +166,4 @@ O quadro seguinte lista os operadores bitwise e os seus efeitos:
 | Bit Set                                   | 0x00000000 ?+ 16                                                            | 0x00010000 |
 | Bit Clear                                 | 0x00010000 ?- 16                                                            | 0x00000000 |
 | Bit Test                                  | 0x00010000 ?? 16                                                            | True       |
+

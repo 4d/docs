@@ -50,7 +50,7 @@ Le champ contient en fait "proportion". 4D accepte et stocke la saisie complète
 
 #### Commandes
 
-[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 ---
 
@@ -81,11 +81,11 @@ Le tableau ci-dessous montre les choix disponibles :
 
 *(1)* Pour éviter toute ambiguïté et conformément à la pratique actuelle, les formats de date abrégés affichent "jun" pour juin et "jul" pour juillet. Cette particularité ne s'applique qu'aux versions françaises de 4D.
 
-*(2)* L'année est affichée avec deux chiffres lorsqu'elle appartient à l'intervalle (1930;2029), sinon elle est affichée avec quatre chiffres. Il s'agit d'une valeur par défaut, mais elle peut être modifiée à l'aide de la commande [SET DEFAULT CENTURY](../commands-legacy/set-default-century).
+*(2)* L'année est affichée avec deux chiffres lorsqu'elle appartient à l'intervalle (1930;2029), sinon elle est affichée avec quatre chiffres. Il s'agit d'une valeur par défaut, mais elle peut être modifiée à l'aide de la commande [SET DEFAULT CENTURY](../commands/set-default-century).
 
 *(3)* Le format `ISO Date Time` correspond à la norme XML de représentation de la date et de l'heure (ISO8601). Il est principalement destiné à être utilisé lors de l'import/export de données au format XML et dans les services Web.
 
-> Quel que soit le format d'affichage, si l'année est saisie avec deux chiffres, 4D considère que le siècle est le 21ème si l'année appartient à l'intervalle (00;29) et le 20e si elle appartient à l'intervalle (30;99). Il s'agit du réglage par défaut, mais il peut être modifié à l'aide de la commande [SET DEFAULT CENTURY](../commands-legacy/set-default-century).
+> Quel que soit le format d'affichage, si l'année est saisie avec deux chiffres, 4D considère que le siècle est le 21ème si l'année appartient à l'intervalle (00;29) et le 20e si elle appartient à l'intervalle (30;99). Il s'agit du réglage par défaut, mais il peut être modifié à l'aide de la commande [SET DEFAULT CENTURY](../commands/set-default-century).
 
 ### Formats personnalisés
 
@@ -115,7 +115,7 @@ Des formats de date personnalisés peuvent être construits en utilisant plusieu
 
 #### Commandes
 
-[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 ---
 
@@ -280,7 +280,7 @@ Le tableau suivant montre comment les différents formats affectent l'affichage 
 
 #### Commandes
 
-[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format) - [String](../commands/string)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT SET FORMAT](../commands/object-set-format) - [String](../commands/string)
 
 ---
 
@@ -344,7 +344,7 @@ Si le champ est réduit à une taille plus petite que celle de l'image d'origine
 
 #### Commandes
 
-[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 ---
 
@@ -402,7 +402,7 @@ Par défaut, une heure nulle est affichée avec des zéros, par exemple "00:00:0
 
 #### Commandes
 
-[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 ---
 
@@ -430,7 +430,7 @@ Lorsqu'une [expression booléenne](properties_Object.md#expression-type) est aff
 
 #### Commandes
 
-[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 ---
 
@@ -454,7 +454,7 @@ Les colonnes booléennes peuvent également être affichées sous forme de pop u
 
 #### Commandes
 
-[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 ---
 
@@ -506,7 +506,7 @@ Dans ce cas également, la propriété [Titre](#titre) est également disponible
 
 #### Commandes
 
-[OBJECT Get three states checkbox](../commands-legacy/object-get-three-states-checkbox) - [OBJECT SET THREE STATES CHECKBOX](../commands-legacy/object-set-three-states-checkbox)
+[OBJECT Get three states checkbox](../commands/object-get-three-states-checkbox) - [OBJECT SET THREE STATES CHECKBOX](../commands/object-set-three-states-checkbox)
 
 ---
 
@@ -576,7 +576,7 @@ La propriété Tronquer avec ellipse peut être appliquée aux colonnes de type 
 
 Cette propriété permet de masquer l'objet dans l'environnement Application.
 
-Vous pouvez gérer la propriété Visibilité pour la plupart des objets de formulaire. Cette propriété est principalement utilisée pour simplifier le développement d'interface dynamique. Dans ce contexte, il est souvent nécessaire de masquer les objets de manière programmée lors de l'événement `On load` du formulaire, puis d'afficher certains objets par la suite. La propriété Visibilité permet d'inverser cette logique en rendant certains objets invisibles par défaut. Le développeur peut alors programmer leur affichage en utilisant la commande [`OBJECT SET VISIBLE`](../commands-legacy/object-set-visible) lorsque cela est nécessaire.
+Vous pouvez gérer la propriété Visibilité pour la plupart des objets de formulaire. Cette propriété est principalement utilisée pour simplifier le développement d'interface dynamique. Dans ce contexte, il est souvent nécessaire de masquer les objets de manière programmée lors de l'événement `On load` du formulaire, puis d'afficher certains objets par la suite. La propriété Visibilité permet d'inverser cette logique en rendant certains objets invisibles par défaut. Le développeur peut alors programmer leur affichage en utilisant la commande [`OBJECT SET VISIBLE`](../commands/object-set-visible) lorsque cela est nécessaire.
 
 #### Visibilité automatique dans les formulaires liste
 
@@ -589,7 +589,7 @@ Cette propriété est utilisée uniquement lors du dessin d'objets situés dans 
 
 ![](../assets/en/FormObjects/select-row.png)
 
-4D ne prend pas en compte cette propriété si l'objet a été caché à l'aide de la commande [`OBJECT SET VISIBLE`](../commands-legacy/object-set-visible) ; dans ce cas, l'objet reste invisible, que l'enregistrement soit sélectionné ou non.
+4D ne prend pas en compte cette propriété si l'objet a été caché à l'aide de la commande [`OBJECT SET VISIBLE`](../commands/object-set-visible) ; dans ce cas, l'objet reste invisible, que l'enregistrement soit sélectionné ou non.
 
 #### Grammaire JSON
 
@@ -603,7 +603,7 @@ Cette propriété est utilisée uniquement lors du dessin d'objets situés dans 
 
 #### Commandes
 
-[OBJECT Get visible](../commands-legacy/object-get-visible) - [OBJECT SET VISIBLE](../commands-legacy/object-set-visible)
+[OBJECT Get visible](../commands/object-get-visible) - [OBJECT SET VISIBLE](../commands/object-set-visible)
 
 ---
 

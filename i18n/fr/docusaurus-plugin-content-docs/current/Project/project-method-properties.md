@@ -90,7 +90,7 @@ Pour des raisons de sécurité, cette option est désélectionnée par défaut. 
 
 Lorsqu’elle est cochée, cette option autorise l’exécution de la méthode projet par le moteur SQL de 4D. Elle est désélectionnée par défaut, ce qui signifie que, sauf autorisation explicite, les méthodes projet de 4D sont protégées et ne peuvent pas être appelées par le moteur SQL de 4D.
 
-Cette propriété s'applique à toutes les requêtes SQL internes et externes --- exécutées via le driver ODBC, le code SQL inséré entre les balises [Begin SQL](../commands-legacy/begin-sql)/[End SQL](../commands-legacy/end-sql) ou la commande [`QUERY BY SQL`](../commands-legacy/query-by-sql).
+Cette propriété s'applique à toutes les requêtes SQL internes et externes --- exécutées via le driver ODBC, le code SQL inséré entre les balises [Begin SQL](../commands/begin-sql)/[End SQL](../commands/end-sql) ou la commande [`QUERY BY SQL`](../commands/query-by-sql).
 
 **Notes :**
 
@@ -131,4 +131,5 @@ Utilisez le caractère générique @ pour vous aider à définir des groupes de 
 **Note :** Si l'attribut "Publié dans WSDL" est défini à Vrai, il ne sera appliqué qu'aux méthodes projet qui contiennent déjà l'attribut "Web Service".
 
 4. Cliquez sur **Appliquer**. La modification est appliquée instantanément à toutes les méthodes projet désignées par la chaîne de caractères saisie.
+
 

@@ -9,11 +9,16 @@ title: VP SET BORDER
 
 <!-- REF #_method_.VP SET BORDER.Params -->
 
-| 引数             | 型      |    | 説明                 |                  |
-| -------------- | ------ | -- | ------------------ | ---------------- |
-| rangeObj       | Object | -> | レンジオブジェクト          |                  |
-| borderStyleObj | Object | -> | 境界線スタイルを格納したオブジェクト |                  |
-| borderPosObj   | Object | -> | 境界線の位置を格納したオブジェクト  | <!-- END REF --> |
+<div class="no-index">
+
+| 引数             | 型      |    | 説明                 |
+| -------------- | ------ | -- | ------------------ |
+| rangeObj       | Object | -> | レンジオブジェクト          |
+| borderStyleObj | Object | -> | 境界線スタイルを格納したオブジェクト |
+| borderPosObj   | Object | -> | 境界線の位置を格納したオブジェクト  |
+
+</div>
+<!-- END REF -->
 
 ## 説明
 

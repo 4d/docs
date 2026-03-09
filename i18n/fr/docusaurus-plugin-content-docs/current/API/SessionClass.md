@@ -438,7 +438,7 @@ La propriété `.id` contient <!-- REF #SessionClass.id.Summary -->l'identifiant
 
 :::tip
 
-Vous pouvez utiliser cette propriété pour obtenir l'objet [`.storage`](#storage) d'une session grâce à la commande [`Session storage`](../commands/session-storage) .
+Vous pouvez utiliser cette propriété pour obtenir l'objet [`.storage`](#storage) d'une session grâce à la commande [`Session storage`](../commands/session-storage).
 
 :::
 
@@ -896,9 +896,10 @@ End use
 La propriété `.userName` contient <!-- REF #SessionClass.userName.Summary -->le nom d'utilisateur associé à la session<!-- END REF -->. Vous pouvez vous en servir pour identifier l'utilisateur dans votre code.
 
 - **Sessions web** : Cette propriété est une chaîne vide par défaut. Elle peut être définie via la propriété `privileges` de la fonction [`setPrivileges()`](#setprivileges).
-- **Sessions de procédure stockée/distantes** : Cette propriété retourne le même nom d'utilisateur que la commande [`Current user`](../commands-legacy/current-user).
-- **Sessions autonomes** : Cette propriété contient "designer" ou le nom défini avec la commande [`SET USER ALIAS`](../commands-legacy/set-user-alias).
+- **Sessions de procédure stockée/distantes** : Cette propriété retourne le même nom d'utilisateur que la commande [`Current user`](../commands/current-user).
+- **Sessions autonomes** : Cette propriété contient "designer" ou le nom défini avec la commande [`SET USER ALIAS`](../commands/set-user-alias).
 
 Cette propriété est **en lecture seule** pour les sessions desktop.
 
 <!-- END REF -->
+

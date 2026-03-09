@@ -97,10 +97,13 @@ La fonction `4D.File.new()` <!-- REF #4D.File.new().Summary -->crée et retourne
 
 <!--REF #FileClass.create().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type    |                             | Description                                           |
 | ---------- | ------- | --------------------------- | ----------------------------------------------------- |
 | Résultat   | Boolean | <- | Vrai si le fichier a été créé avec succès, sinon Faux |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -141,6 +144,8 @@ Création d'un fichier de préférences dans le dossier principal :
 
 <!--REF #FileClass.createAlias().Params -->
 
+<div class="no-index">
+
 | Paramètres         | Type                      |                             | Description                                         |
 | ------------------ | ------------------------- | --------------------------- | --------------------------------------------------- |
 | dossierDestination | 4D.Folder | ->                          | Dossier de destination pour l'alias ou le raccourci |
@@ -148,6 +153,7 @@ Création d'un fichier de préférences dans le dossier principal :
 | aliasType          | Integer                   | ->                          | Type de lien de l'alias                             |
 | Résultat           | 4D.File   | <- | Référence du fichier de l'alias ou du raccourci     |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -200,10 +206,13 @@ Vous souhaitez créer un alias pour un fichier contenu dans votre dossier princi
 
 <!-- REF #FileClass.delete().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type |     | Description                 |
 | ---------- | ---- | :-: | --------------------------- |
 |            |      |     | Ne requiert aucun paramètre |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -260,10 +269,13 @@ Vous souhaitez supprimer un fichier spécifique dans le dossier de la base de do
 
 <!--REF #FileClass.getAppInfo().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type   |                             | Description                                  |
 | ---------- | ------ | --------------------------- | -------------------------------------------- |
 | Résultat   | Object | <- | Informations sur le fichier de l'application |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -405,12 +417,15 @@ Résultat dans *$info* :
 
 <!--REF #FileClass.moveTo().Params -->
 
+<div class="no-index">
+
 | Paramètres         | Type                      |                             | Description                    |
 | ------------------ | ------------------------- | --------------------------- | ------------------------------ |
 | dossierDestination | 4D.Folder | ->                          | Dossier de destination         |
 | nouveauNom         | Text                      | ->                          | Nom complet du fichier déplacé |
 | Résultat           | 4D.File   | <- | Fichier déplacé                |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -453,12 +468,15 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 <!--REF #FileClass.open().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type                                             |                             | Description                                                  |
 | ---------- | ------------------------------------------------ | --------------------------- | ------------------------------------------------------------ |
 | mode       | Text                                             | ->                          | Mode d'ouverture : "read", "write", "append" |
 | options    | Object                                           | ->                          | Options d'ouverture                                          |
 | Résultat   | [4D.FileHandle](FileHandleClass) | <- | Nouvel objet File handle                                     |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -534,11 +552,14 @@ $fhandle:=$f.open("read")
 
 <!--REF #FileClass.rename().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type                    |                             | Description                    |
 | ---------- | ----------------------- | --------------------------- | ------------------------------ |
 | nouveauNom | Text                    | ->                          | Nouveau nom complet du fichier |
 | Résultat   | 4D.File | <- | Fichier renommé                |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -580,10 +601,13 @@ Vous souhaitez que "ReadMe.txt" soit renommé "ReadMe_new.txt" :
 
 <!--REF #FileClass.setAppInfo().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type   |    | Description                                                          |
 | ---------- | ------ | -- | -------------------------------------------------------------------- |
 | info       | Object | -> | Propriétés à écrire dans les informations d'un fichier d'application |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -711,10 +735,13 @@ $app.setAppInfo($info)
 
 <!--REF #FileClass.setContent().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type |    | Description                |
 | ---------- | ---- | -- | -------------------------- |
 | content    | BLOB | -> | Nouveau contenu du fichier |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -747,6 +774,8 @@ La fonction `.setContent()` <!-- REF #FileClass.setContent().Summary -->réécri
 
 <!--REF #FileClass.setText().Params -->
 
+<div class="no-index">
+
 | Paramètres  | Type    |    | Description                               |
 | ----------- | ------- | -- | ----------------------------------------- |
 | text        | Text    | -> | Texte à stocker dans le fichier           |
@@ -754,6 +783,7 @@ La fonction `.setContent()` <!-- REF #FileClass.setContent().Summary -->réécri
 | charSetNum  | Integer | -> | Numéro du jeu de caractères               |
 | breakMode   | Integer | -> | Mode de traitement des retours à la ligne |
 
+</div>
 <!-- END REF -->
 
 #### Description

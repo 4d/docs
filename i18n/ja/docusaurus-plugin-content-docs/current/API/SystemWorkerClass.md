@@ -7,6 +7,10 @@ title: SystemWorker
 
 `SystemWorker` クラスは、`4D` クラスストアにて提供されています。
 
+### Aynchronous programming
+
+This class supports asynchronous programming in 4D as described in the [Asynchronous Execution](../Develop/async.md) page.
+
 ### 例題
 
 ```4d
@@ -97,7 +101,7 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 | onTerminate      | Formula | undefined | 外部プロセスが終了されたときのコールバック。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                                                  |
 | timeout          | Number  | undefined | プロセスが生きている場合、キルされるまでの秒数。                                                                                                                                                                        |
 | dataType         | Text    | "text"    | レスポンス本文のデータ型。 可能な値: "text" (デフォルト), "blob"。                                                                                                                  |
-| encoding         | Text    | "UTF-8"   | `dataType="text"` の場合のみ。 レスポンス本文のエンコーディング。 取りうる値の一覧については、[`CONVERT FROM TEXT`](../commands-legacy/convert-from-text) コマンドの詳細を参照して下さい。                                                        |
+| encoding         | Text    | "UTF-8"   | `dataType="text"` の場合のみ。 レスポンス本文のエンコーディング。 取りうる値の一覧については、[`CONVERT FROM TEXT`](../commands/convert-from-text) コマンドの詳細を参照して下さい。                                                                  |
 | variables        | Object  |           | システムワーカー用のカスタム環境変数を設定します。 シンタックス: `variables.key=value` (`key` は変数名、`value` はその値)。 値は、可能な限り文字列に変換されます。 値に '=' を含めることはできません。 定義されていない場合、システムワーカーは 4D環境を継承します。 |
 | currentDirectory | Folder  |           | プロセスが実行される作業ディレクトリ                                                                                                                                                                              |
 | hideWindow       | Boolean | true      | (Windows) アプリケーションウィンドウを隠す (可能な場合)、または Windowsコンソールを隠す                                                                                                    |
@@ -119,7 +123,7 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 
 :::info
 
-[`wait()`](#wait) を使用しない場合 (非同期呼び出し) にコールバック関数が呼び出されるためには、そのプロセスは [`CALL WORKER`](../commands-legacy/call-worker) で作成された [ワーカー](../Develop/processes.md#ワーカープロセス) である必要があります ([`New process`](../commands-legacy/new-process) は使えません)。
+[`wait()`](#wait) を使用しない場合 (非同期呼び出し) にコールバック関数が呼び出されるためには、そのプロセスは [`CALL WORKER`](../commands/call-worker) で作成された [ワーカー](../Develop/processes.md#ワーカープロセス) である必要があります ([`New process`](../commands/new-process) は使えません)。
 
 :::
 
@@ -587,3 +591,4 @@ The `.commandLine` property <!-- REF #SystemWorkerClass.commandLine.Summary -->c
 > `SystemWorker` を 4D のワーカープロセスから作成した場合、この関数は必要ありません。
 
 <!-- END REF -->
+

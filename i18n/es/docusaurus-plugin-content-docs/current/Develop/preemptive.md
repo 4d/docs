@@ -155,10 +155,10 @@ Para ser hilo seguro, un método debe respetar las siguientes reglas:
 - No debe utilizar ninguna variable interproceso(1)
 - No debe llamar a objetos de interfaz(2) (sin embargo, hay excepciones, ver más abajo).
 
-(1) Para intercambiar datos entre procesos apropiativos (y entre todos los procesos), puede pasar [colecciones compartidas u objetos compartidos](../Concepts/shared.md) como parámetros a los procesos, y/o utilizar el catálogo [`Storage`](../commands-legacy/storage).
+(1) Para intercambiar datos entre procesos apropiativos (y entre todos los procesos), puede pasar [colecciones compartidas u objetos compartidos](../Concepts/shared.md) como parámetros a los procesos, y/o utilizar el catálogo [`Storage`](../commands/storage).
 Los [procesos Worker](processes.md#worker-processes) también permiten intercambiar mensajes entre cualquier proceso, incluidos los procesos apropiativos.
 
-(2) El comando [`CALL FORM`](../commands-legacy/call-form) ofrece una solución elegante para llamar a objetos de interfaz desde un proceso en espera.
+(2) El comando [`CALL FORM`](../commands/call-form) ofrece una solución elegante para llamar a objetos de interfaz desde un proceso en espera.
 
 :::note Notas
 
@@ -277,3 +277,4 @@ Para hacer esto, debe rodear el código a excluir del comando hilo seguro utiliz
 ```
 
 Por supuesto, el desarrollador 4D es responsable de que el modo apropiativo del código sea compatible con las directivas de activación y de reactivación. Se generarán errores de tiempo de ejecución si se ejecuta código hilo no seguro en un hilo apropiativo.
+

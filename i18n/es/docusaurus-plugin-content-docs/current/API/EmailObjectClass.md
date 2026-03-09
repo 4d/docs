@@ -362,3 +362,4 @@ La propiedad `.textBody` contiene la <!-- REF #EmailObjectClass.textBody.Summary
 La propiedad `.to` contiene <!-- REF #EmailObjectClass.to.Summary -->las [direcciones de correo electrónico](#email-addresses) de los destinatarios principales del correo electrónico<!-- END REF -->.
 
 
+

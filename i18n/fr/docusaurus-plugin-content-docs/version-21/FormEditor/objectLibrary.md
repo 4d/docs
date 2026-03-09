@@ -19,6 +19,12 @@ La bibliothèque est affichée dans une fenêtre séparée :
 
 ![](../assets/en/FormEditor/library2.png)
 
+:::info
+
+Some objects in this library are only available if a [specific component](../Extensions/overview.md#components-developed-by-4d) is loaded in the application. For example, 4D Write Pro areas need the [4D Write Pro Interface](https://github.com/4d/4D-WritePro-Interface) component to be loaded.
+
+:::
+
 La fenêtre présente les caractéristiques principales suivantes :
 
 - Zone d'aperçu avec des messages d'aide : la zone centrale affiche un aperçu de chaque objet. Vous pouvez survoler un objet pour obtenir des informations sur celui-ci dans un message d'aide.

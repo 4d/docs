@@ -9,10 +9,15 @@ title: VP SET COLUMN ATTRIBUTES
 
 <!-- REF #_method_.VP SET COLUMN ATTRIBUTES.Params -->
 
-| Parámetros  | Tipo   |    | Descripción                                    |                  |
-| ----------- | ------ | -- | ---------------------------------------------- | ---------------- |
-| rangeObj    | Object | -> | Objeto rango                                   |                  |
-| propertyObj | Object | -> | Objeto que contiene las propiedades de columna | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros  | Tipo   |    | Descripción                                    |
+| ----------- | ------ | -- | ---------------------------------------------- |
+| rangeObj    | Object | -> | Objeto rango                                   |
+| propertyObj | Object | -> | Objeto que contiene las propiedades de columna |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

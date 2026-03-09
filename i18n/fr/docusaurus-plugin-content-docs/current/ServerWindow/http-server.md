@@ -38,7 +38,7 @@ Cette zone fournit des informations spécifiques sur le serveur SOAP de 4D Serve
 
 - **Requêtes SOAP**: Acceptées ou Refusées. Cette information indique si le serveur SOAP est actif. Pour que les requêtes SOAP soient acceptées, le serveur HTTP doit être démarré et le serveur SOAP doit explicitement accepter les requêtes (cf. bouton Accepter/Refuser).
 - **Connexions maximum** : Nombre maximum de connexions SOAP autorisées. Cette valeur dépend de la licence installée sur le poste serveur.
-- **Accepter/Refuser les requêtes SOAP** : Ce bouton fonctionne en bascule. Il permet de contrôler l’activation du serveur SOAP de 4D Server. Ce bouton modifie la valeur de l’option **Autoriser requêtes Web Services** dans la page "Web services" des Propriétés de la base (et inversement). You can also use the [`SOAP REJECT NEW REQUESTS`](../commands-legacy/soap-reject-new-requests) command to refuse new SOAP requests, however this does not modify the value of the **Allow Web Services Requests** option.
+- **Accepter/Refuser les requêtes SOAP** : Ce bouton fonctionne en bascule. Il permet de contrôler l’activation du serveur SOAP de 4D Server. Ce bouton modifie la valeur de l’option **Autoriser requêtes Web Services** dans la page "Web services" des Propriétés de la base (et inversement). You can also use the [`SOAP REJECT NEW REQUESTS`](../commands/soap-reject-new-requests) command to refuse new SOAP requests, however this does not modify the value of the **Allow Web Services Requests** option.
 
 Si vous cliquez sur le bouton **Accepter les requêtes SOAP** et que le serveur HTTP est arrêté, 4D le démarre automatiquement.
 
@@ -51,4 +51,5 @@ Cette zone fournit plusieurs informations sur les paramètres de configuration e
 - **Mémoire cache** : taille de la mémoire cache du serveur HTTP, lorsqu’elle est activée (taille réellement occupée par le cache / taille maximale théorique allouée au cache dans les Propriétés). You can click on the **Clear Cache** button to empty the current cache.
 - **Listening to IP**, **HTTP Port** (80 by default), **TLS enabled** for HTTP connections (does not concern 4D nor SQL connections) and **HTTPS Port** used: current [configuration parameters](WebServer/webServerConfig.md) of the HTTP server, specified through the Settings or by programming.
 - **Informations sur le fichier journal** : nom, format et date de la prochaine sauvegarde automatique du journal du serveur HTTP (fichier logweb.txt).
+
 

@@ -89,7 +89,7 @@ Form.myDrop.index //3
 
 この場合にも 、フォームのオブジェクトに紐付けた [変数](properties_Object.md#変数あるいは式) は `aCities` でなければなりません。 このコードは、前述した代入命令文の代わりに実行できます。 このコードをフォームメソッド内に置き、`On Load` フォームイベント発生時に実行されるようにします。
 
-- オブジェクトが表示される前に、[`LIST TO ARRAY`](../commands-legacy/list-to-array) コマンドを使ってリストの値を配列にロードします。 例:
+- オブジェクトが表示される前に、[`LIST TO ARRAY`](../commands/list-to-array) コマンドを使ってリストの値を配列にロードします。 例:
 
 ```4d
    LIST TO ARRAY("Cities";aCities)
@@ -149,7 +149,7 @@ Form.myDrop.index //3
 
 階層型選択リストをドロップダウンリストオブジェクトに割り当てるには、プロパティリストの [選択リスト](properties_DataSource.md#choice-list) 欄を使います。
 
-階層型ドロップダウンリストの管理には、4Dランゲージの **階層リスト** コマンドを使用します。 `(*; "name")` シンタックスをサポートするコマンドであれば全て、階層型ドロップダウンリストに使用できます (例: [`List item parent`](../commands-legacy/list-item-parent))。
+階層型ドロップダウンリストの管理には、4Dランゲージの **階層リスト** コマンドを使用します。 `(*; "name")` シンタックスをサポートするコマンドであれば全て、階層型ドロップダウンリストに使用できます (例: [`List item parent`](../commands/list-item-parent))。
 
 ### 標準アクションの使用
 
@@ -167,3 +167,4 @@ Form.myDrop.index //3
 ## プロパティ一覧
 
 [タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式の型](properties_Object.md#式の型式タイプ) - [値を記憶](properties_Object.md#値を記憶) - [CSSクラス](properties_Object.md#cssクラス) - [ボタンスタイル](properties_TextAndPicture.md#ボタンスタイル) - [データタイプ (セレクションおよびコレクションリストボックス列)](properties_DataSource.md#データタイプ-\(リスト\)) - [データタイプ](properties_DataSource.md#データタイプ-リスト) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [選択リスト](properties_DataSource.md#選択リスト) - [フォーカス可](properties_Entry.md#フォーカス可) - [文字フォ－マット](properties_Display.md#文字フォ－マット) - [日付フォーマット](properties_Display.md#日付フォーマット) - [時間フォーマット](properties_Display.md#時間フォーマット) - [表示状態](properties_Display.md#表示状態) - [レンダリングしない](properties_Display.md#レンダリングしない) - [フォント](properties_Text.md#フォント) - [フォントサイズ](properties_Text.md#フォントサイズ) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [フォントカラー](properties_Text.md#フォントカラー) - [横揃え](properties_Text.md#横揃え) - [ヘルプTips](properties_Help.md#ヘルプtips) - [標準アクション](properties_Action.md#標準アクション)
+

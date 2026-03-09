@@ -18,9 +18,9 @@ La aplicación 4D crea procesos para sus propias necesidades, por ejemplo el pro
 Hay varias formas de crear un nuevo proceso:
 
 - Ejecute un método en el entorno Diseño después de seleccionar la casilla \*\*Nuevo proceso \*\* en la caja de diálogo "Ejecutar Método". El método elegido en la caja de diálogo Ejecutar método es el método proceso.
-- Utilice el comando [`New process`](../commands-legacy/new-process). El método pasado como parámetro al comando [`New process`](../commands/new-process) es el método proceso.
-- Utilice el comando [`Execute on server`](../commands-legacy/execute-on-server) para crear un procedimiento almacenado en el servidor. El método pasado como parámetro del comando es el método proceso.
-- Utilice el comando [`CALL WORKER`](../commands-legacy/call-worker). Si el proceso del worker no existe, se crea.
+- Utilice el comando [`New process`](../commands/new-process). El método pasado como parámetro al comando [`New process`](../commands/new-process) es el método proceso.
+- Utilice el comando [`Execute on server`](../commands/execute-on-server) para crear un procedimiento almacenado en el servidor. El método pasado como parámetro del comando es el método proceso.
+- Utilice el comando [`CALL WORKER`](../commands/call-worker). Si el proceso del worker no existe, se crea.
 
 :::note
 
@@ -33,7 +33,7 @@ Un proceso puede borrarse en las siguientes condiciones (las dos primeras son au
 - Cuando el método proceso termina de ejecutarse
 - Cuando el usuario sale de la aplicación
 - Si detienes el proceso de forma formal o utiliza el botón **Abortar** en el depurador o en el Explorador de Ejecución
-- Si llama al comando [`KILL WORKER`](../commands-legacy/kill-worker) (sólo para borrar un proceso worker).
+- If you call the [`KILL WORKER`](../commands/kill-worker) command (to delete a worker process only).
 
 Un proceso puede crear otro proceso. Los procesos no están organizados jerárquicamente: todos los procesos son iguales, independientemente del proceso a partir del cual se hayan creado. Una vez que el proceso "padre" crea un proceso "hijo", el proceso hijo continuará independientemente de si el proceso padre sigue ejecutándose o no.
 
@@ -80,11 +80,11 @@ Por razones de optimización, mientras no se requiera acceso al servidor, por ej
 
 Un proceso Worker es una forma sencilla y poderosa de intercambiar información entre procesos. Esta funcionalidad se basa en un sistema de mensajería asíncrono que permite a los procesos y formularios ser llamados y se les pide ejecutar métodos con parámetros en su propio contexto.
 
-Un worker puede ser "contratado" por cualquier proceso (utilizando el comando [`CALL WORKER`](../commands-legacy/call-worker)) para ejecutar métodos de proyecto con parámetros en su propio contexto, permitiendo así el acceso a información compartida.
+Un worker puede ser "contratado" por cualquier proceso (utilizando el comando [`CALL WORKER`](../commands/call-worker)) para ejecutar métodos de proyecto con parámetros en su propio contexto, permitiendo así el acceso a información compartida.
 
 :::info
 
-En aplicaciones de escritorio, un método de proyecto también puede ser ejecutado con parámetros en el contexto de cualquier formulario utilizando el comando [`CALL FORM`](../commands-legacy/call-form).
+En aplicaciones de escritorio, un método de proyecto también puede ser ejecutado con parámetros en el contexto de cualquier formulario utilizando el comando [`CALL FORM`](../commands/call-form).
 
 :::
 
@@ -122,7 +122,7 @@ No es posible utilizar [`CALL WORKER`](../commands/call-worker) para ejecutar un
 
 Los procesos worker se pueden crear en 4D Server a través de procedimientos almacenados: por ejemplo, puede utilizar el comando `Execute on server` para ejecutar un método que llama al comando [`CALL WORKER`](../commands/call-worker).
 
-Un proceso worker se cierra mediante una llamada al comando [`KILL WORKER`](../commands-legacy/kill-worker), que vacía el buzón de mensajes del worker y pide al proceso asociado que deje de procesar mensajes y termine su ejecución actual en cuanto termine la tarea actual.
+Un proceso worker se cierra mediante una llamada al comando [`KILL WORKER`](../commands/kill-worker), que vacía el buzón de mensajes del worker y pide al proceso asociado que deje de procesar mensajes y termine su ejecución actual en cuanto termine la tarea actual.
 
 El método de inicio de un worker es el método utilizado para crear el worker (primer uso). Si [`CALL WORKER`](../commands/call-worker) es llamado con un parámetro *method* vacío, entonces el método de inicio es automáticamente reutilizado como método a ejecutar.
 
@@ -137,3 +137,4 @@ Todos los procesos worker, excepto el proceso principal, tienen el tipo de proce
 ### Ver también
 
 Para más información, consulte [este artículo de blog](https://blog.4d.com/4d-summit-2016-laurent-esnault-presents-workers-and-ui-in-preemptive-mode/) sobre cómo utilizar los workers.
+

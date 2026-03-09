@@ -140,3 +140,4 @@ title: クライアント/サーバーの最適化
 - [dataClass.setRemoteCacheSettings()](../API/DataClassClass.md#setremotecachesettings)
 - [dataClass.getRemoteCache()](../API/DataClassClass.md#getremotecache)
 - [dataClass.clearRemoteCache()](../API/DataClassClass.md#clearremotecache)
+

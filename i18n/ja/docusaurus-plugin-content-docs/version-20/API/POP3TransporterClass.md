@@ -44,13 +44,14 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 
 <!-- REF #_command_.POP3 New transporter.Params -->
-| 引数     | 型                  |    | 説明                                                                             |
-| ------ | ------------------ |:--:| ------------------------------------------------------------------------------ |
-| server | object             | -> | メールサーバー情報                                                                      |
-| 戻り値    | 4D.POP3Transporter | <- | [POP3 transporter オブジェクト](#pop3-transporter-オブジェクト)|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|server|object|->|Mail server information|
+|Result|4D.POP3Transporter|<-|[POP3 transporter object](#pop3-transporter-object)|
+</div>
+<!-- END REF -->
 
 
 #### 説明
@@ -104,12 +105,14 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 
 <!-- REF #4D.POP3Transporter.new().Params -->
-| 引数     | 型                  |    | 説明                                                                             |
-| ------ | ------------------ |:--:| ------------------------------------------------------------------------------ |
-| server | Object             | -> | メールサーバー情報                                                                      |
-| 戻り値    | 4D.POP3Transporter | <- | [POP3 transporter オブジェクト](#pop3-transporter-オブジェクト)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|server|Object|->|Mail server information|
+|Result|4D.POP3Transporter|<-|[POP3 transporter object](#pop3-transporter-object)|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -162,11 +165,13 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 
 <!-- REF #POP3TransporterClass.delete().Params -->
-| 引数        | 型       |    | 説明                                      |
-| --------- | ------- |:--:| --------------------------------------- |
-| msgNumber | Integer | -> | 削除するメッセージの番号|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|msgNumber|Integer|->|Number of the message to delete|
+</div>
+<!-- END REF -->
 
 ##### 説明
 
@@ -208,11 +213,13 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 
 <!-- REF #POP3TransporterClass.getBoxInfo().Params -->
-| 引数  | 型      |    | 説明                                        |
-| --- | ------ |:--:| ----------------------------------------- |
-| 戻り値 | Object | <- | boxInfo オブジェクト|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Object|<-|boxInfo object|
+</div>
+<!-- END REF -->
 
 ##### 説明
 
@@ -258,13 +265,15 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 
 <!-- REF #POP3TransporterClass.getMail().Params -->
-| 引数         | 型       |    | 説明                                                                          |
-| ---------- | ------- |:--:| --------------------------------------------------------------------------- |
-| msgNumber  | Integer | -> | リスト中のメッセージの番号                                                               |
-| headerOnly | Boolean | -> | メールヘッダーのみをダウンロードする場合は true (デフォルトは false）                                   |
-| 戻り値        | Object  | <- | [Email オブジェクト](EmailObjectClass.md#email-object)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|msgNumber|Integer|->|Number of the message in the list |
+|headerOnly|Boolean|->|True to download only the email headers (default is False) |
+|Result|Object|<-|[Email object](EmailObjectClass.md#email-object)|
+</div>
+<!-- END REF -->
 
 ##### 説明
 
@@ -326,12 +335,14 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 
 <!-- REF #POP3TransporterClass.getMailInfo().Params -->
-| 引数        | 型       |    | 説明                                         |
-| --------- | ------- |:--:| ------------------------------------------ |
-| msgNumber | Integer | -> | リスト中のメッセージの番号                              |
-| 戻り値       | Object  | <- | MailInfo オブジェクト|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|msgNumber|Integer|->|Number of the message in the list |
+|Result|Object|<-|mailInfo object|
+</div>
+<!-- END REF -->
 
 ##### 説明
 
@@ -386,11 +397,13 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 
 <!-- REF #POP3TransporterClass.getMailInfoList().Params -->
-| 引数  | 型          |    | 説明                                                  |
-| --- | ---------- |:--:| --------------------------------------------------- |
-| 戻り値 | Collection | <- | `mailInfo` オブジェクトのコレクション|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Collection|<-|Collection of `mailInfo` objects|
+</div>
+<!-- END REF -->
 
 ##### 説明
 
@@ -451,12 +464,14 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 
 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Params -->
-| 引数        | 型       |    | 説明                                                     |
-| --------- | ------- |:--:| ------------------------------------------------------ |
-| msgNumber | Integer | -> | リスト中のメッセージの番号                                          |
-| 戻り値       | BLOB    | <- | メールサーバーから返された MIME文字列の BLOB|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|msgNumber|Integer|-> |Number of the message in the list|
+|Result|Blob|<-|Blob of the MIME string returned from the mail server|
+</div>
+<!-- END REF -->
 
 ##### 説明
 
@@ -516,11 +531,13 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 
 <!-- REF #POP3TransporterClass.undeleteAll().Params -->
-| 引数 | 型 |  | 説明                                           |
-| -- | - |::| -------------------------------------------- |
-|    |   |  | このコマンドは引数を必要としません|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+||||Does not require any parameters|
+</div>
+<!-- END REF -->
 
 ##### 説明
 

@@ -115,3 +115,4 @@ Lembre-se sempre de que, para qualquer evento, o método de um formulário ou de
 
 > ATENCIÓN: los eventos [On Load](onLoad.md) y [On Unload](onUnload.md) se generan para los objetos si están activados a la vez para los objetos y para el formulario al que pertenecen los objetos. Se os eventos estiverem ativados somente para objetos, eles não ocorrerão; esses dois eventos também devem ser ativados no nível do formulário.
 
+

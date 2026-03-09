@@ -22,3 +22,4 @@ O evento é gerado assim que um usuário rola uma imagem na entrada de imagem (c
 ### List box
 
 O evento é gerado assim que um usuário rola as linhas ou colunas do list box.
+

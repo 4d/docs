@@ -9,9 +9,14 @@ title: VP NEW DOCUMENT
 
 <!-- REF #_method_.VP NEW DOCUMENT.Params -->
 
-| Parâmetro  | Tipo |    | Descrição                                  |                  |
-| ---------- | ---- | -- | ------------------------------------------ | ---------------- |
-| vpAreaName | Text | -> | Nome de objeto formulário área 4D View Pro | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro  | Tipo |    | Descrição                                  |
+| ---------- | ---- | -- | ------------------------------------------ |
+| vpAreaName | Text | -> | Nome de objeto formulário área 4D View Pro |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

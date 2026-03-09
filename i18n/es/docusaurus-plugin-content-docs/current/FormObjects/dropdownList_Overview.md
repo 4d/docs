@@ -89,7 +89,7 @@ Para inicializar el array asociado a la lista desplegable, puede:
 
 En este caso, el nombre de la [variable](properties_Object.md#variable-or-expression) asociada al objeto en el formulario debe ser `aCities`. Este código podría colocarse en el método formulario y ejecutarse cuando se ejecute el evento formulario `On Load`.
 
-- Antes de que se muestre el objeto, cargue los valores de una lista en el array utilizando el comando [`LIST TO ARRAY`](../commands-legacy/list-to-array). Por ejemplo:
+- Antes de que se muestre el objeto, cargue los valores de una lista en el array utilizando el comando [`LIST TO ARRAY`](../commands/list-to-array). Por ejemplo:
 
 ```4d
    LIST TO ARRAY("Cities";aCities)
@@ -149,7 +149,7 @@ Una lista desplegable jerárquica tiene una sublista asociada a cada elemento de
 
 Puede asignar la lista de selección jerárquica al objeto de lista desplegable utilizando el campo [Lista de selección](properties_DataSource.md#choice-list) de la Lista de propiedades.
 
-Las listas jerárquicas desplegables se gestionan utilizando los comandos **Listas jerárquicas** del Lenguaje 4D. Todos los comandos que soportan la sintaxis `(*; "name")` pueden utilizarse con listas desplegables jerárquicas, por ejemplo, [`List item parent`](../commands-legacy/list-item-parent).
+Las listas jerárquicas desplegables se gestionan utilizando los comandos **Listas jerárquicas** del Lenguaje 4D. Todos los comandos que soportan la sintaxis `(*; "name")` pueden utilizarse con listas desplegables jerárquicas, por ejemplo, [`List item parent`](../commands/list-item-parent).
 
 ### Utilizar una acción estándar
 
@@ -167,3 +167,4 @@ Puede crear automáticamente una lista desplegable utilizando una acción están
 ## Propiedades soportadas
 
 [Formato Alfa](properties_Display.md#alpha-format) - [Negrita](properties_Text.md#bold) - [Abajo](properties_CoordinatesAndSizing.md#bottom) - [Estilo de botón](properties_TextAndPicture.md#button-style) - [Lista de selección](properties_DataSource.md#choice-list) - [Clase](properties_Object.md#css-class) - [Tipos de datos (tipo expresión)](properties_DataSource.md#data-type-expression-type) - [Tipos de datos (lista)](properties_DataSource.md#data-type-list) - [Formato Fecha](properties_Display.md#date-format) - [Tiipo expresión](properties_Object.md#expression-type) - [Enfocable](properties_Entry.md#focusable) - [Fuente](properties_Text.md#font) - [Color de fuente](properties_Text.md#font-color) - [Tamaño de fuente](properties_Text.md#font-size) - [Altura](properties_CoordinatesAndSizing.md#height) - [Mensaje de ayuda](properties_Help.md#help-tip) - [Alineación horizontal](properties_Text.md#horizontal-alignment) - [Dimensionamiento Horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Itálica](properties_Text.md#italic) - [Izquierda](properties_CoordinatesAndSizing.md#left) - [No renderizado](properties_Display.md#not-rendered) - [Nombre de objeto](properties_Object.md#object-name) - [Derecha](properties_CoordinatesAndSizing.md#right) - [Acción estándar](properties_Action.md#standard-action) - [Guardar valor](properties_Object.md#save-value) - [Formato Hora](properties_Display.md#time-format) - [Arriba](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable o Expresión](properties_Object.md#variable-or-expression) - [Dimensionamiento Vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidad](properties_Display.md#visibility) - [Ancho](properties_CoordinatesAndSizing.md#width)
+

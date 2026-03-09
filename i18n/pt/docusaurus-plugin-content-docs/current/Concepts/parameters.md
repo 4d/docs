@@ -202,7 +202,7 @@ Function returnHello
 
 ## Indireção dos parâmetros
 
-Os métodos e funções 4D aceitam um número variável de parâmetros. Você pode abordar esses parâmetros com um loop `For...End for`, o comando [`Count parameters`](../commands-legacy/count-parameters) e a sintaxe de indireção de **parâmetro**. Dentro do método, um endereço de indireção é formatado `${N}`, onde `N` é uma expressão numérica.
+Os métodos e funções 4D aceitam um número variável de parâmetros. Você pode abordar esses parâmetros com um loop `For...End for`, o comando [`Count parameters`](../commands/count-parameters) e a sintaxe de indireção de **parâmetro**. Dentro do método, um endereço de indireção é formatado `${N}`, onde `N` é uma expressão numérica.
 
 ### Uso de parâmetros variáveis
 
@@ -226,7 +226,7 @@ Os parâmetros da função devem ser passados na ordem correta: primeiro o forma
  Result:=MySum("000";1;2;200) //"203"
 ```
 
-Observe que, mesmo que tenha declarado 0, 1 ou mais parâmetros, você sempre poderá passar o número de parâmetros que desejar. Os parâmetros estão todos disponíveis no código chamado por meio da sintaxe `${N}` e o tipo de parâmetros extras é [Variant](dt_variant.md) por padrão (você pode declará-los usando a [notação variadic](#declaring-variadic-parameters)). Você só precisa garantir que os parâmetros existam, graças ao comando [`Count parameters`](../commands-legacy/count-parameters). Por exemplo:
+Observe que, mesmo que tenha declarado 0, 1 ou mais parâmetros, você sempre poderá passar o número de parâmetros que desejar. Os parâmetros estão todos disponíveis no código chamado por meio da sintaxe `${N}` e o tipo de parâmetros extras é [Variant](dt_variant.md) por padrão (você pode declará-los usando a [notação variadic](#declaring-variadic-parameters)). Você só precisa garantir que os parâmetros existam, graças ao comando [`Count parameters`](../commands/count-parameters). Por exemplo:
 
 ```4d
 //método foo
@@ -539,3 +539,4 @@ O método `ChangeAge` adiciona 10 ao atributo Age do objeto recebido
 Quando você executar o método `CreatePerson`, ambas as caixas de alerta exibirão "50", pois a mesma referência de objeto é tratada por ambos os métodos.
 
 **4D Server:** Quando os parâmetros são passados entre métodos que não são executados na mesma máquina (usando, por exemplo, a opção "Execute on Server"), as referências não podem ser usadas. Nestes casos, são enviadas cópias dos parâmetros de objetos e coleções ao invés de referências.
+

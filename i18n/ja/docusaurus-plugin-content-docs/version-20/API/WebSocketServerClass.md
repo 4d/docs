@@ -111,11 +111,14 @@ WebSocketサーバーオブジェクトは、以下のプロパティと機能�
 
 
 <!-- REF #4D.WebSocketServer.new().Params -->
-| 引数                           | 型                  |    | 説明                                        |
-| ---------------------------- | ------------------ |:--:| ----------------------------------------- |
-| [WSSHandler](#wsshandler-引数) | Object             | -> | WebSocketサーバー用コールバックを宣言しているユーザークラスのオブジェクト |
-| [options](#options-引数)       | Object             | -> | WebSocket の設定パラメーター                       |
-| 戻り値                          | 4D.WebSocketServer | <- | 新しい WebSocketServer オブジェクト                |
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|[WSSHandler](#wsshandler-parameter)|Object|->|Object of the user class declaring the WebSocket Server callbacks|
+|[options](#options-parameter)|Object|->|WebSocket configuration parameters|
+|Result|4D.WebSocketServer|<-|New WebSocketServer object|
+</div>
 <!-- END REF -->
 
 
@@ -391,9 +394,12 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 
 <!-- REF #WebSocketServerClass.terminate().Params -->
-| 引数      | 型       |    | 説明                              |
-| ------- | ------- |:--:| ------------------------------- |
-| timeout | Integer | -> | WebSocketサーバーを終了するまでの待機時間 (秒単位) |
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|timeout|Integer|->|Waiting time in seconds before terminating the WebSocket server|
+</div>
 <!-- END REF -->
 
 

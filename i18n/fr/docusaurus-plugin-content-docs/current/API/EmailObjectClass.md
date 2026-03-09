@@ -110,7 +110,7 @@ Les propriétés [`textBody`](#textbody) et [`htmlBody`](#htmlbody) sont utilis�
 
 La propriété `.attachments` contient une <!-- REF #EmailObjectClass.attachments.Summary -->collection d'objet(s) `4D.MailAttachment`<!-- END REF -->.
 
-Les objets Attachment ont des [propriétés et fonctions](MailAttachmentClass.md) spécifiques. Les objets de type pièce jointe sont définis par la commande [`MAIL New attachment`](../commands/mail-new-attachment).
+Les objets de type pièce jointe sont définis par la commande [`MAIL New attachment`](../commands/mail-new-attachment). Les objets de type pièce jointe sont définis par la commande [`MAIL New attachment`](../commands/mail-new-attachment.md).
 
 ## .bcc
 
@@ -360,5 +360,6 @@ La propriété `.textBody` contient la <!-- REF #EmailObjectClass.textBody.Summa
 #### Description
 
 La propriété `.to` contient <!-- REF #EmailObjectClass.to.Summary -->la ou les [adresse(s)](#email-addresses) des destinataires principaux de l'email<!-- END REF -->.
+
 
 

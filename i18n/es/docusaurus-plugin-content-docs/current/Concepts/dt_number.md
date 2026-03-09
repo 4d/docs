@@ -13,7 +13,7 @@ Número es un término genérico que significa:
 Normalmente, cuando se trabaja con enteros, se manejan valores *Long* (enteros de 4 bytes). Sin embargo, hay dos casos en los que los enteros se almacenan como valores *Shorts* (enteros de 2 bytes), es decir, en el rango -32.768..32.767 (2^15..(2^15)-1):
 
 - Campos de la base de datos de tipo `Integer`,
-- Elementos de arrays declarados con [`ARRAY INTEGER`](../commands-legacy/array-integer).
+- Elementos de arrays declarados con [`ARRAY INTEGER`](../commands/array-integer).
 
 Estos tipos de datos heredados se convierten automáticamente en *Longs* cuando se utilizan en el Lenguaje 4D.
 
@@ -75,7 +75,7 @@ El operador modulo % divide el primer número entre el segundo y devuelve un res
 
 :::warning
 
-El operador modulo % devuelve valores significativos con números que están en el rango de los enteros largos (de –2^31 hasta 2^31 menos 1). Para calcular el módulo con números fuera de este rango, utilice el comando [`Mod`](../commands-legacy/mod).
+El operador modulo % devuelve valores significativos con números que están en el rango de los enteros largos (de –2^31 hasta 2^31 menos 1). Para calcular el módulo con números fuera de este rango, utilice el comando [`Mod`](../commands/mod).
 
 :::
 
@@ -85,11 +85,11 @@ The integer division operator divides one number by another and returns the whol
 
 ### Comparación real
 
-Para comparar dos reales por igualdad, el lenguaje 4D realmente compara el valor absoluto de la diferencia con el *épsilon*. Ver el comando [`SET REAL COMPARISON LEVEL`](../commands-legacy/set-real-comparison-level).
+Para comparar dos reales por igualdad, el lenguaje 4D realmente compara el valor absoluto de la diferencia con el *épsilon*. Ver el comando [`SET REAL COMPARISON LEVEL`](../commands/set-real-comparison-level).
 
 :::note
 
-Por coherencia, el motor de base de datos 4D siempre compara los campos de base de datos de tipo real utilizando un valor de 10^-6 para *epsilon* y no tiene en cuenta el ajuste [`SET REAL COMPARISON LEVEL`](../commands-legacy/set-real-comparison-level).
+Por coherencia, el motor de base de datos 4D siempre compara los campos de base de datos de tipo real utilizando un valor de 10^-6 para *epsilon* y no tiene en cuenta el ajuste [`SET REAL COMPARISON LEVEL`](../commands/set-real-comparison-level).
 
 :::
 
@@ -166,3 +166,4 @@ La siguiente tabla lista los operadores a nivel de bits y sus efectos:
 | Bit Set                          | 0x00000000 ?+ 16                                                            | 0x00010000 |
 | Poner el bit en 0                | 0x00010000 ?- 16                                                            | 0x00000000 |
 | Probar bit                       | 0x00010000 ?? 16 16                                                         | True       |
+

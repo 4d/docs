@@ -109,13 +109,14 @@ Signal オブジェクトは [共有オブジェクト](Concepts/shared.md) で�
 
 
 <!-- REF #_command_.New signal.Params -->
-| 引数          | 型         |    | 説明                                              |
-| ----------- | --------- |:--:| ----------------------------------------------- |
-| description | Text      | -> | シグナルの詳細                                         |
-| 戻り値         | 4D.Signal | <- | シグナルを格納するネイティブオブジェクト|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|description|Text|->|Description for the signal|
+|Result|4D.Signal|<-|Native object encapsulating the signal|
+</div>
+<!-- END REF -->
 
 
 #### 説明
@@ -233,12 +234,13 @@ Signal オブジェクトは共有オブジェクトのため、`Use...End use` 
 
 
 <!-- REF #SignalClass.trigger().Params -->
-| 引数 | 型 |  | 説明                                           |
-| -- | - |::| -------------------------------------------- |
-|    |   |  | このコマンドは引数を必要としません|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+||||Does not require any parameters|
+</div>
+<!-- END REF -->
 
 
 #### 説明
@@ -266,13 +268,14 @@ Signal がすでにシグナルされている (つまり `signaled` プロパ�
 
 
 <!-- REF #SignalClass.wait().Params -->
-| 引数      | 型       |    | 説明                                              |
-| ------- | ------- | -- | ----------------------------------------------- |
-| timeout | Real    | -> | シグナルの最大待機時間 (秒単位)                               |
-| 戻り値     | Boolean | <- | `.signaled` プロパティの状態|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|timeout|Real|->|Maximum waiting time for the signal in seconds|
+|Result|Boolean|<-|State of the `.signaled` property|
+</div>
+<!-- END REF -->
 
 
 #### 説明

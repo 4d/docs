@@ -105,10 +105,13 @@ Um objeto 4D.IncomingMessage é um objeto [não compartilhável](../Concepts/sha
 
 <!-- REF #IncomingMessageClass.getBlob().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo |                             | Descrição                     |
 | ---------- | ---- | --------------------------- | ----------------------------- |
 | Resultados | Blob | <- | Body of the request as a Blob |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -127,11 +130,14 @@ If the body has not been given as a binary content, the function tries to conver
 
 <!-- REF #IncomingMessageClass.getHeader().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo |                             | Descrição                         |
 | ---------- | ---- | --------------------------- | --------------------------------- |
 | \|         | Text | ->                          | Propriedade de cabeçalho a obter  |
 | Resultados | Text | <- | Valor da propriedade do cabeçalho |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -162,10 +168,13 @@ $value := $request.getHeader("content-type")
 
 <!-- REF #IncomingMessageClass.getJSON().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo         |                             | Descrição                                  |
 | ---------- | ------------ | --------------------------- | ------------------------------------------ |
 | Resultados | Diferente de | <- | JSON resolution of the body of the request |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -184,10 +193,13 @@ If the body has not been given as JSON valid content, an error is raised.
 
 <!-- REF #IncomingMessageClass.getPicture().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo   |                             | Descrição                      |
 | ---------- | ------ | --------------------------- | ------------------------------ |
 | Resultados | Imagem | <- | Body of the request as picture |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -214,10 +226,13 @@ If the body is not received as a valid picture, the function returns null.
 
 <!-- REF #IncomingMessageClass.getText().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo |                             | Descrição                       |
 | ---------- | ---- | --------------------------- | ------------------------------- |
 | Resultados | Text | <- | Corpo da solicitação como texto |
 
+</div>
 <!-- END REF -->
 
 #### Descrição

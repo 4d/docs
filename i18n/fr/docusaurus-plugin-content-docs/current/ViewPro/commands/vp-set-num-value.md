@@ -11,11 +11,11 @@ title: VP SET NUM VALUE
 
 <div class="no-index">
 
-| Paramètres    | Type   |    | Description              |
-| ------------- | ------ | -- | ------------------------ |
-| rangeObj      | Object | -> | Objet plage              |
-| numberValue   | Real   | -> | Valeur du nombre à fixer |
-| formatPattern | Text   | -> | Format de la valeur      |
+| Paramètres    | Type   |    | Description                                                                                                          |
+| ------------- | ------ | -- | -------------------------------------------------------------------------------------------------------------------- |
+| rangeObj      | Object | -> | Objet plage                                                                                                          |
+| numberValue   | Real   | -> | Les colonnes suivantes sont toutes de la même taille et n'affichent pas certaines parties du texte : |
+| formatPattern | Text   | -> | Format de la valeur                                                                                                  |
 
 </div>
 <!-- END REF -->

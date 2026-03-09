@@ -219,9 +219,9 @@ End if
 
 Le serveur Web de 4D vous permet de récupérer les données envoyées via des requêtes POST ou GET, en utilisant des formulaires Web ou des URL.
 
-Lorsque le serveur Web reçoit une requêtes avec des données dans l'en-tête ou dans l'URL, 4D peut récupérer les valeurs de tous les objets HTML qu'elle contient. Ce principe peut être mis en œuvre dans le cas d'un formulaire Web, envoyé par exemple à l'aide de [`WEB SEND FILE`](../commands-legacy/web-send-file) ou [`WEB SEND BLOB`](../commands-legacy/web-send-blob), où l'utilisateur saisit ou modifie des valeurs, puis clique sur le bouton de validation.
+Lorsque le serveur Web reçoit une requêtes avec des données dans l'en-tête ou dans l'URL, 4D peut récupérer les valeurs de tous les objets HTML qu'elle contient. Ce principe peut être mis en œuvre dans le cas d'un formulaire Web, envoyé par exemple à l'aide de [`WEB SEND FILE`](../commands/web-send-file) ou [`WEB SEND BLOB`](../commands/web-send-blob), où l'utilisateur saisit ou modifie des valeurs, puis clique sur le bouton de validation.
 
-Dans ce cas, 4D peut récupérer les valeurs des objets HTML trouvés dans la requête en utilisant la commande [`WEB GET VARIABLES`](../commands-legacy/web-get-variables). La commande `WEB GET VARIABLES` récupère les valeurs en tant que texte.
+Dans ce cas, 4D peut récupérer les valeurs des objets HTML trouvés dans la requête en utilisant la commande [`WEB GET VARIABLES`](../commands/web-get-variables). La commande `WEB GET VARIABLES` récupère les valeurs en tant que texte.
 
 Considérons le code source HTML suivant :
 
@@ -325,18 +325,19 @@ Gardez à l'esprit qu'en HTML, tous les objets sont des objets de texte. Si vous
 
 Le serveur web 4D fournit plusieurs commandes web de bas niveau vous permettant de développer un traitement personnalisé des requêtes :
 
-- la commande [`WEB GET HTTP BODY`](../commands-legacy/web-get-http-body) renvoie le corps du message sous forme de texte brut, ce qui permet de l'analyser si nécessaire
-- la commande [`WEB GET HTTP HEADER`](../commands-legacy/web-get-http-header) renvoie les en-têtes de la requête. Elle est utile pour gérer des cookies personnalisés, par exemple (en plus de la commande `WEB SET HTTP HEADER`).
-- les commandes [`WEB GET BODY PART`](../commands-legacy/web-get-body-part) et [`WEB Get body part count`](../commands-legacy/web-get-body-part-count) pour analyser la partie body d'une requête multi-part et récupérer des valeurs texte, mais aussi des fichiers postés, en utilisant des BLOB.
+- la commande [`WEB GET HTTP BODY`](../commands/web-get-http-body) renvoie le corps du message sous forme de texte brut, ce qui permet de l'analyser si nécessaire
+- la commande [`WEB GET HTTP HEADER`](../commands/web-get-http-header) renvoie les en-têtes de la requête. Elle est utile pour gérer des cookies personnalisés, par exemple (en plus de la commande `WEB SET HTTP HEADER`).
+- les commandes [`WEB GET BODY PART`](../commands/web-get-body-part) et [`WEB Get body part count`](../commands/web-get-body-part-count) pour analyser la partie body d'une requête multi-part et récupérer des valeurs texte, mais aussi des fichiers postés, en utilisant des BLOB.
 
 Ces commandes sont résumées dans le graphique suivant :
 
 ![](../assets/en/WebServer/httpCommands.png)
 
-Le serveur web 4D prend en charge les fichiers envoyés en encodage de transfert par morceaux (chunked transfer encoding) depuis n'importe quel client Web. L'encodage de transfert chunked est un mécanisme de transfert de données spécifié en HTTP/1.1. Il permet le transfert de données sous forme de séries de "chunks" ou "morceaux" (parts) sans connaître la taille finale des données. Le serveur Web 4D prend également en charge le codage de transfert par morceaux du serveur vers les clients Web (en utilisant [`WEB SEND RAW DATA`](../commands-legacy/web-send-raw-data)).
+Le serveur web 4D prend en charge les fichiers envoyés en encodage de transfert par morceaux (chunked transfer encoding) depuis n'importe quel client Web. L'encodage de transfert chunked est un mécanisme de transfert de données spécifié en HTTP/1.1. Il permet le transfert de données sous forme de séries de "chunks" ou "morceaux" (parts) sans connaître la taille finale des données. Le serveur Web 4D prend également en charge le codage de transfert par morceaux du serveur vers les clients Web (en utilisant [`WEB SEND RAW DATA`](../commands/web-send-raw-data)).
 
 ## Méthode projet COMPILER_WEB
 
 La méthode COMPILER\_WEB, si elle existe, est systématiquement appelée lorsque le serveur HTTP reçoit une requête dynamique et appelle le moteur 4D. La méthode COMPILER\_WEB, si elle existe, est systématiquement appelée lorsque le serveur HTTP reçoit une requête dynamique et appelle le moteur 4D. Cette méthode est destinée à contenir des directives de typage et/ou d'initialisation de variables utilisées lors des échanges Web. Elle est utilisée par le compilateur lorsque l'application est compilée. La méthode COMPILER\_WEB est commune à tous les formulaires Web. Par défaut, la méthode COMPILER_WEB n'existe pas. Vous devez la créer explicitement.
 
 > La méthode projet COMPILER_WEB est également appelée, si elle existe, pour chaque requête SOAP acceptée.
+

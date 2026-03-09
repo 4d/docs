@@ -9,6 +9,8 @@ title: VP Cell
 
 <!-- REF #_method_.VP Cell.Params -->
 
+<div class="no-index">
+
 | 引数         | 型       |                             | 説明                                             |
 | ---------- | ------- | --------------------------- | ---------------------------------------------- |
 | vpAreaName | Text    | ->                          | 4D View Pro フォームオブジェクト名                        |
@@ -17,6 +19,7 @@ title: VP Cell
 | sheet      | Integer | ->                          | シートのインデックス (省略した場合はカレントシート) |
 | 戻り値        | Object  | <- | 単一セルのレンジオブジェクト                                 |
 
+</div>
 <!-- END REF -->
 
 ## 説明

@@ -9,10 +9,15 @@ title: VP SET SHEET COUNT
 
 <!-- REF #_method_.VP SET SHEET COUNT.Params -->
 
-| 引数         | 型       |    | 説明                      |                  |
-| ---------- | ------- | -- | ----------------------- | ---------------- |
-| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名 |                  |
-| number     | Integer | -> | シートの数                   | <!-- END REF --> |
+<div class="no-index">
+
+| 引数         | 型       |    | 説明                      |
+| ---------- | ------- | -- | ----------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名 |
+| number     | Integer | -> | シートの数                   |
+
+</div>
+<!-- END REF -->
 
 ## 説明
 

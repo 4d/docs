@@ -8,15 +8,18 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert picture.Params-->
 
-| Parâmetro      | Tipo                     |                             | Descrição                                                                 |
-| -------------- | ------------------------ | --------------------------- | ------------------------------------------------------------------------- |
-| targetObj      | Object                   | &#8594; | Intervalo ou elemento ou documento 4D Write Pro                           |
-| picture        | Imagem                   | &#8594; | Campo de imagem ou variável, ou caminho para o arquivo de imagem no disco |
-| pictureFileObj | 4D. File | &#8594; | Um objeto de arquivo representando um arquivo de imagem.  |
-| mode           | Integer                  | &#8594; | Modo de inserção                                                          |
-| rangeUpdate    | Integer                  | &#8594; | Modo de atualização de intervalo                                          |
-| Resultado      | Object                   | &#8592; | Objeto referenciando a imagem                                             |
+<div class="no-index">
 
+| Parâmetro      | Tipo                                           |                             | Descrição                                                                 |
+| -------------- | ---------------------------------------------- | --------------------------- | ------------------------------------------------------------------------- |
+| targetObj      | Object                                         | &#8594; | Intervalo ou elemento ou documento 4D Write Pro                           |
+| picture        | Imagem                                         | &#8594; | Campo de imagem ou variável, ou caminho para o arquivo de imagem no disco |
+| pictureFileObj | [4D.File](../API/FileClass.md) | &#8594; | Um objeto de arquivo representando um arquivo de imagem.  |
+| mode           | Integer                                        | &#8594; | Modo de inserção                                                          |
+| rangeUpdate    | Integer                                        | &#8594; | Modo de atualização de intervalo                                          |
+| Resultado      | Object                                         | &#8592; | Objeto referenciando a imagem                                             |
+
+</div>
 <!-- END REF-->
 
 ## Descrição

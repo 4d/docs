@@ -37,8 +37,8 @@ Bien qu'ils soient généralement équivalents, certains types de données de la
 
 Vous pouvez à tout moment connaître le type d'un champ ou d'une variable en utilisant les commandes suivantes :
 
-- [`Type`](../commands-legacy/type) pour les champs et les variables scalaires
-- [`Value type`](../commands-legacy/value-type) pour les expressions
+- [`Type`](../commands/type) pour les champs et les variables scalaires
+- [`Value type`](../commands/value-type) pour les expressions
 
 ## Valeurs par défaut
 
@@ -84,3 +84,4 @@ Le tableau ci-dessous liste les types de données pouvant être convertis, le ty
 (2) Les valeurs de type Heure peuvent être utilisées en tant que numériques.
 
 **Note :** Ce tableau ne traite pas les conversions de données plus complexes obtenues à l'aide d'une combinaison d'opérateurs et d'autres commandes.
+

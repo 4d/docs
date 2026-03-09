@@ -19,3 +19,4 @@ Les actions sur les données exécutées via le datastore, telles que [`.save()`
 En revanche, les actions déclenchées au niveau de la base de données 4D à l'aide des commandes du langage 4D classique telles que [`SAVE RECORD`](../commands/save-record) ou les [actions standard](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html#3371159) ne déclencheront PAS d'événements d'entité ORDA.
 
 <!-- END REF -->
+

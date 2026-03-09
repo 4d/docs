@@ -8,11 +8,14 @@ title: Notas del lanzamiento
 #### Lo más destacado
 
 - El comando [`JSON Validate`](../commands/json-validate) ahora es compatible con el borrador 2020-12 del esquema JSON.
+- 4D Write Pro now supports [hierarchical list style sheets](../user-legacy/stylesheets.md#hierarchical-list-style-sheets), enabling the creation and management of structured [multi-level lists](../WritePro/user-legacy/using-a-4d-write-pro-area.md#multi-level-lists) with automatic numbering.
 - Ability to use a custom certificate from the macOS keychain instead of a local certificates folder in [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) and [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) classes.
+- New [`4D.Method` class](../API/MethodClass.md) to create and execute a 4D method code from text source. [`METHOD Get path`](../commands/method-get-path) and [`METHOD RESOLVE PATH`](../commands/method-resolve-path) commands support a new `path volatile method` constant (128).
 
 #### Cambios de comportamiento
 
 - El comando [`JSON Validate`](../commands/json-validate) ahora tiene en cuenta la llave *$schema* y genera un error si se declara una versión no soportada en el esquema.
+- For clarity, formula objects are now instances of a new [`4D.Formula`](../API/FormulaClass.md) class that inherits from the generic [`4D.Function`](../API/FunctionClass.md) class.
 
 ## 4D 21 R2
 
@@ -38,7 +41,7 @@ Lea [**Novedades en 4D 21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/), la 
 
 #### Cambios de comportamiento
 
-- En Windows, si la [renderización **fluent UI**](../FormEditor/forms.md#fluent-ui-rendering) está activada, el comando [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info) puede devolver información diferente si se llama desde un formulario o no.
+- En Windows, si la [renderización **fluent UI**](../FormEditor/forms.md#fluent-ui-rendering) está activada, el comando [`GET STYLE SHEET INFO`](../commands/get-style-sheet-info) puede devolver información diferente si se llama desde un formulario o no.
 
 ## Tabla de la librería
 
@@ -61,3 +64,4 @@ Lea [**Novedades en 4D 21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/), la 
 | webKit    | WKWebView                              | 19                |                                                                                                                                                        |
 | Xerces    | 3.3.0  | 21                | Utilizado para comandos XML                                                                                                                            |
 | Zlib      | 1.3.1  | 21                |                                                                                                                                                        |
+

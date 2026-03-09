@@ -117,5 +117,5 @@ $row:=WP Table append row($table; $colItems)
 
 ## 参照
 
-[WP Insert table](../commands-legacy/wp-insert-table)</br>
-[WP Table get rows](../commands-legacy/wp-table-get-rows)
+[WP Insert table](../commands/wp-insert-table)</br>
+[WP Table get rows](../commands/wp-table-get-rows)

@@ -1322,3 +1322,4 @@ Puede anidar varias transacciones (subtransacciones). Si se cancela la transacci
 Ver el ejemplo de la función [`.startTransaction()`](#starttransaction).
 
 <!-- END REF -->
+

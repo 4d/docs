@@ -156,10 +156,10 @@ Para ser thread seguro, um método deve respeitar as seguintes regras:
 - não deve usar nenhuma variável de interprocesso(1)
 - não deve chamar objetos de interface (2) (existem, no entanto, exceções, veja abaixo).
 
-(1) Para intercambiar dados entre processos preemptivos (e entre todos os processos), pode passar [coleções compartilhadas ou objetos compartidos](../Concepts/shared.md) como parâmetros a processos, ou usar o catálogo [`Storage`](../commands-legacy/storage).
+(1) Para intercambiar dados entre processos preemptivos (e entre todos os processos), pode passar [coleções compartilhadas ou objetos compartidos](../Concepts/shared.md) como parâmetros a processos, ou usar o catálogo [`Storage`](../commands/storage).
 [Os processos worker](processes.md#worker-processes) também permitem que você troque mensagens entre quaisquer processos, inclusive processos preemptivos.
 
-(2) O comando [`CALL FORM`](../commands-legacy/call-form) oferece uma solução elegante para chamar objetos de interface a partir de um processo preemptivo.
+(2) O comando [`CALL FORM`](../commands/call-form) oferece uma solução elegante para chamar objetos de interface a partir de um processo preemptivo.
 
 :::note Notas
 
@@ -278,3 +278,4 @@ Para fazer isso, você deve envolver o código a ser excluído da verificação 
 ```
 
 Obviamente, o desenvolvedor do 4D é responsável pela compatibilidade do modo preemptivo do código entre as diretivas de desativação e reativação. Erros de tempo de execução serão gerados se o código não seguro de thread for executado em um thread preemptivo.
+

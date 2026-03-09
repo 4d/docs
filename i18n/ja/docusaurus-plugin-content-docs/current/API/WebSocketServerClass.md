@@ -41,6 +41,10 @@ WebSocketプロトコルは、WebSocketサーバーとクライアント (Webブ
 
 [4D Webサーバー](WebServerClass.md) を起動しておく必要があります。
 
+### Aynchronous programming
+
+This class supports asynchronous programming in 4D as described in the [Asynchronous Execution](../Develop/async.md) page.
+
 ### 例題
 
 この基本的な例では、WebSocketサーバーはメッセージを大文字で返します。

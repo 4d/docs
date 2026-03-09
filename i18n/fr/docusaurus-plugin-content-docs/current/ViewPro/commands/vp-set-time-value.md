@@ -11,11 +11,11 @@ title: VP SET TIME VALUE
 
 <div class="no-index">
 
-| Paramètres    | Type   |    | Description          |
-| ------------- | ------ | -- | -------------------- |
-| rangeObj      | Object | -> | Objet plage          |
-| timeValue     | Time   | -> | Valeur heure à fixer |
-| formatPattern | Text   | -> | Format de la valeur  |
+| Paramètres    | Type   |    | Description                                                                                                           |
+| ------------- | ------ | -- | --------------------------------------------------------------------------------------------------------------------- |
+| rangeObj      | Object | -> | Objet plage                                                                                                           |
+| timeValue     | Time   | -> | Dans les formules de 4D View Pro, les noms des fonctions sont automatiquement affichés en majuscules. |
+| formatPattern | Text   | -> | Format de la valeur                                                                                                   |
 
 </div>
 <!-- END REF -->

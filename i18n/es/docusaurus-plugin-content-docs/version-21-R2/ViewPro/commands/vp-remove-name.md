@@ -9,11 +9,16 @@ title: VP REMOVE NAME
 
 <!-- REF #_method_.VP REMOVE NAME.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                                   |                  |
-| ---------- | ------- | -- | ------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                  |                  |
-| name       | Text    | -> | Nombre del rango nombrado o fórmula nombrada a eliminar       |                  |
-| scope      | Integer | -> | Alcance objetivo (por defecto=hoja actual) | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo    |    | Descripción                                                   |
+| ---------- | ------- | -- | ------------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                  |
+| name       | Text    | -> | Nombre del rango nombrado o fórmula nombrada a eliminar       |
+| scope      | Integer | -> | Alcance objetivo (por defecto=hoja actual) |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

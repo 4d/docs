@@ -130,3 +130,4 @@ circle*|0.25 // circle の高さを 25%に縮めます。
 ```
 
 ![](../assets/en/Concepts/vertscaling.en.png)![](../assets/en/Concepts/veticalscaling2.en.png)
+

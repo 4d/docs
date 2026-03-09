@@ -61,7 +61,7 @@ Une fois la connexion au serveur établie, le projet distant sera répertorié d
 
 - Une version .4dz mise à jour du projet est automatiquement produite lorsque cela est nécessaire, c'est-à-dire lorsque le projet a été modifié et rechargé par 4D Server. Le projet est rechargé :
   - automatiquement, lorsque la fenêtre de l'application 4D Server arrive à l'avant de l'OS ou lorsque l'application 4D sur la même machine enregistre une modification (voir ci-dessous).
-  - lorsque la commande [`RELOAD PROJECT`](../commands-legacy/reload-project) est exécutée. L'appel de cette commande est nécessaire lorsque, par exemple, vous avez extrait une nouvelle version du projet depuis la plateforme de contrôle de version.
+  - lorsque la commande [`RELOAD PROJECT`](../commands/reload-project) est exécutée. L'appel de cette commande est nécessaire lorsque, par exemple, vous avez extrait une nouvelle version du projet depuis la plateforme de contrôle de version.
 
 ### Mettre à jour des fichiers de projet sur les machines distantes
 

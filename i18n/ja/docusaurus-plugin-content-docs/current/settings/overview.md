@@ -90,7 +90,7 @@ title: Settings
 
 ![](../assets/en/settings/user-settings-dialog.png)
 
-これらのダイアログボックスは、[OPEN SETTINGS WINDOW](../commands-legacy/open-settings-window) コマンドに適切な *settingsType* セレクターを渡して使用することでもアクセスできます。
+これらのダイアログボックスは、[OPEN SETTINGS WINDOW](../commands/open-settings-window) コマンドに適切な *settingsType* セレクターを渡して使用することでもアクセスできます。
 
 ストラクチャー設定ダイアログボックスは、標準の設定ダイアログと同じで、そのすべてのプロパティにアクセスできます (これらの設定はユーザー設定によってオーバーライドできます)。
 
@@ -129,9 +129,9 @@ title: Settings
 
 ### `SET DATABASE PARAMETER` とユーザー設定
 
-一部の設定は、[SET DATABASE PARAMETER](../commands-legacy/set-database-parameter) コマンドを通しても利用できます。 ユーザー設定は、**2セッション間で設定を保持** プロパティが **Yes** になっているパラメーターです。
+一部の設定は、[SET DATABASE PARAMETER](../commands/set-database-parameter) コマンドを通しても利用できます。 ユーザー設定は、**2セッション間で設定を保持** プロパティが **Yes** になっているパラメーターです。
 
-**ユーザー設定** 機能が有効化されている場合、[SET DATABASE PARAMETER](../commands-legacy/set-database-parameter) コマンドで編集されたユーザー設定はデータファイル用のユーザー設定に自動的に保存されます。
+**ユーザー設定** 機能が有効化されている場合、[SET DATABASE PARAMETER](../commands/set-database-parameter) コマンドで編集されたユーザー設定はデータファイル用のユーザー設定に自動的に保存されます。
 
 > `Table sequence number` は例外です。この設定値は常にデータファイル自身に保存されます。
 
@@ -179,3 +179,4 @@ title: Settings
 | 1 (高) | ユーザー設定 (カレントデータファイル)               | データファイルと同階層にある Settingsフォルダー内の ***settings.4DSettings*** ファイル                                                                                                     | ストラクチャー設定とユーザー設定を上書きします。 その設定とリンクされたデータファイルがアプリケーションによって使用されたときにのみ適用。 |
 
 ユーザー設定ファイルには関連した設定の一部しか含まれない一方、ストラクチャーファイルには、コア設定を含めたカスタム設定がすべて格納されているという点に注意してください。
+

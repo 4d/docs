@@ -362,3 +362,4 @@ A propriedade `.textBody` contém a <!-- REF #EmailObjectClass.textBody.Summary 
 A propriedade `.to` contém <!-- REF #EmailObjectClass.to.Summary --> os [endereços](#email-addresses) dos destinatários primários de e-mail<!-- END REF -->.
 
 
+

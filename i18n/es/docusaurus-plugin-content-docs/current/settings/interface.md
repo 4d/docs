@@ -63,7 +63,7 @@ Los siguientes esquemas están disponibles:
 
 El esquema de aplicación principal se aplicará a los formularios por defecto. Sin embargo, se puede remplazar:
 
-- por el comando [SET APPLICATION COLOR SCHEME](../commands-legacy/set-application-color-scheme) a nivel de la sesión de trabajo;
+- por el comando [SET APPLICATION COLOR SCHEME](../commands/set-application-color-scheme) a nivel de la sesión de trabajo;
 - utilizando la propiedad de formulario [Color Scheme](../FormEditor/propertiesForm.html#color-scheme) en cada nivel de formulario (nivel de prioridad más alto). **Nota:** cuando se imprimen, los formularios utilizan siempre la paleta "Light".
 
 ### Utilizar Fluent UI en Windows
@@ -91,5 +91,6 @@ Para cambiar el acceso directo de una operación, haga clic en el botón **Edita
 ![](../assets/en/settings/shortcut.png)
 
 Para cambiar el acceso directo, escriba la nueva combinación de teclas en su teclado y haga clic en **OK**. Si prefiere no tener un acceso directo para una operación, haga clic en **Borrar**.
+
 
 

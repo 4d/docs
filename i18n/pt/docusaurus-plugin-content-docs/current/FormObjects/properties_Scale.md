@@ -19,7 +19,7 @@ Ativa a variante "barber shop" para o termómetro.
 
 #### Comandos
 
-[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT Get indicator type](../commands-legacy/object-get-indicator-type) - [OBJECT SET FORMAT](../commands-legacy/object-set-format) - [OBJECT SET INDICATOR TYPE](../commands-legacy/object-set-indicator-type)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT Get indicator type](../commands/object-get-indicator-type) - [OBJECT SET FORMAT](../commands/object-set-format) - [OBJECT SET INDICATOR TYPE](../commands/object-set-indicator-type)
 
 ---
 
@@ -39,7 +39,7 @@ Apresenta/oculta as graduações junto às etiquetas.
 
 #### Comandos
 
-[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 ---
 
@@ -59,7 +59,7 @@ Medição do visor da escala.
 
 #### Comandos
 
-[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 ---
 
@@ -83,7 +83,7 @@ Especifica a localização do texto de um objeto.
 
 #### Comandos
 
-[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 ---
 
@@ -106,7 +106,7 @@ Valor máximo de um indicador.
 
 #### Comandos
 
-[OBJECT Get format](../commands-legacy/object-get-format) [OBJECT Get maximum-value](../commands-legacy/object-get-maximum-value) - [OBJECT SET FORMAT](../commands-legacy/object-set-format) - [OBJECT SET MAXIMUM VALUE](../commands-legacy/object-set-maximum-value)
+[OBJECT Get format](../commands/object-get-format) [OBJECT Get maximum-value](../commands/object-get-maximum-value) - [OBJECT SET FORMAT](../commands/object-set-format) - [OBJECT SET MAXIMUM VALUE](../commands/object-set-maximum-value)
 
 ---
 
@@ -126,7 +126,7 @@ Valor mínimo de um indicador. Para steppers numéricos, essa propriedade repres
 
 #### Comandos
 
-[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT Get minimum-value](../commands-legacy/object-get-minimum-value) - [OBJECT SET FORMAT](../commands-legacy/object-set-format) - [OBJECT SET MINIMUM VALUE](../commands-legacy/object-set-minimum-value)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT Get minimum-value](../commands/object-get-minimum-value) - [OBJECT SET FORMAT](../commands/object-set-format) - [OBJECT SET MINIMUM VALUE](../commands/object-set-minimum-value)
 
 ---
 
@@ -146,4 +146,5 @@ Intervalo mínimo aceite entre valores durante a utilização. Para steppers num
 
 #### Comandos
 
-[OBJECT Get format](../commands-legacy/object-get-format) - [OBJECT SET FORMAT](../commands-legacy/object-set-format)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT SET FORMAT](../commands/object-set-format)
+

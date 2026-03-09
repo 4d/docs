@@ -36,9 +36,9 @@ displayed_sidebar: docs
 - [**Formula**](../../commands/formula) または [**Formula from string**](../../commands/formula.md-from-string) コマンドで作成された[フォーミュラオブジェクト](../../commands/formula.md-objects)
 - または以下の2つのプロパティを格納しているオブジェクト:
 
-| **プロパティ** | **型**  | **Description**                                                                                                                                                           |
-| --------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name      | Text   | ドキュメント内で表示するフォーミュラの名前                                                                                                                                                     |
+| **プロパティ** | **型**  | **Description**                                                                                                                                                        |
+| --------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name      | Text   | ドキュメント内で表示するフォーミュラの名前                                                                                                                                                  |
 | formula   | Object | [**Formula**](../../commands/formula) または [**Formula from string**](../../commands/formula.md-from-string) コマンドで作成された[フォーミュラオブジェクト](../../commands/formula.md-objects) |
 
 フォーミュラの*name* プロパティがあるオブジェクトを使用する場合、ドキュメント内で、フォーミュラが参照として表示される場合にはフォーミュラ参照ではなくそのname の名前が表示され、値または記号として表示される場合にはフォーミュラtip に名前が表示されます。 *name* プロパティが空の文字列を格納しているか省略されている場合、それはオブジェクトから削除され、デフォルトでフォーミュラが表示されます。 詳細な情報については、[フォーミュラの管理](../managing-formulas.md) のページを参照してください。
@@ -138,6 +138,6 @@ WP SET ATTRIBUTES($range1; wk background color; "yellow")
 ## 参照
 
 *Managing formulas*\
-[WP COMPUTE FORMULAS](../commands-legacy/wp-compute-formulas)</br>
-[WP FREEZE FORMULAS](../commands-legacy/wp-freeze-formulas)</br>
-[WP Get formulas](../commands-legacy/wp-get-formulas)
+[WP COMPUTE FORMULAS](../commands/wp-compute-formulas)</br>
+[WP FREEZE FORMULAS](../commands/wp-freeze-formulas)</br>
+[WP Get formulas](../commands/wp-get-formulas)

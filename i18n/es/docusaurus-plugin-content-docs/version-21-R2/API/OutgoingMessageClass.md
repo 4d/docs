@@ -96,10 +96,13 @@ La propiedad `.headers` es de sólo lectura. Para definir un encabezado, use la 
 
 <!-- REF #OutgoingMessageClass.setBody().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo |    | Descripción                 |
 | ---------- | ---- | -- | --------------------------- |
 | body       | any  | -> | Cuerpo del mensaje saliente |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -132,11 +135,14 @@ Si *body* no es de un tipo de valor soportado, se devuelve un error.
 
 <!-- REF #OutgoingMessageClass.setHeader().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo |    | Descripción                          |
 | ---------- | ---- | -- | ------------------------------------ |
 | key        | Text | -> | Propiedad de encabezado a definir    |
 | value      | Text | -> | Valor de la propiedad del encabezado |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -161,10 +167,13 @@ Si define un *value* para la *key* el encabezado "Content-Type", asegúrese de l
 
 <!-- REF #OutgoingMessageClass.setStatus().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo    |    | Descripción      |
 | ---------- | ------- | -- | ---------------- |
 | status     | Integer | -> | Estado a definir |
 
+</div>
 <!-- END REF -->
 
 #### Descripción

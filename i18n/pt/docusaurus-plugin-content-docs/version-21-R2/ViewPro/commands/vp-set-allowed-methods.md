@@ -9,9 +9,14 @@ title: VP SET ALLOWED METHODS
 
 <!-- REF #_method_.VP SET ALLOWED METHODS.Params -->
 
-| Parâmetro | Tipo   |    | Descrição                                |                  |
-| --------- | ------ | -- | ---------------------------------------- | ---------------- |
-| methodObj | Object | -> | Métodos permitidos nas áreas 4D View Pro | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro | Tipo   |    | Descrição                                |
+| --------- | ------ | -- | ---------------------------------------- |
+| methodObj | Object | -> | Métodos permitidos nas áreas 4D View Pro |
+
+</div>
+<!-- END REF -->
 
 > **Compatibidade**
 

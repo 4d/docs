@@ -17,12 +17,17 @@ title: VP REMOVE TABLE
 
 <!-- REF #_method_.VP REMOVE TABLE.Params -->
 
-| 引数         | 型       |    | 説明                                             |                  |
-| ---------- | ------- | -- | ---------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | 4D View Pro エリア名                               |                  |
-| tableName  | Text    | -> | 削除する表組みの名称                                     |                  |
-| options    | Integer | -> | 追加のオプション                                       |                  |
-| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) | <!-- END REF --> |
+<div class="no-index">
+
+| 引数         | 型       |    | 説明                                             |
+| ---------- | ------- | -- | ---------------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro エリア名                               |
+| tableName  | Text    | -> | 削除する表組みの名称                                     |
+| options    | Integer | -> | 追加のオプション                                       |
+| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) |
+
+</div>
+<!-- END REF -->
 
 ## 説明
 

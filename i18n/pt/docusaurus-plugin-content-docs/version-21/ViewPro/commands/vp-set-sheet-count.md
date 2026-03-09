@@ -9,10 +9,15 @@ title: VP SET SHEET COUNT
 
 <!-- REF #_method_.VP SET SHEET COUNT.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                  |                  |
-| ---------- | ------- | -- | ------------------------------------------ | ---------------- |
-| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro |                  |
-| number     | Integer | -> | Número de folhas                           | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro  | Tipo    |    | Descrição                                  |
+| ---------- | ------- | -- | ------------------------------------------ |
+| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro |
+| number     | Integer | -> | Número de folhas                           |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

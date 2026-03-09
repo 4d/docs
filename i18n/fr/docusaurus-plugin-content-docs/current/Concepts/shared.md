@@ -3,18 +3,18 @@ id: shared
 title: Objets et collections partagés
 ---
 
-**Les objets partagés** et **les collections partagées** sont des [objets](./dt_object.md) et des [collections](./dt_collection.md) spécifiques dont le contenu est partagé entre les process. Contrairement aux [variables interprocess](./variables.md#interprocess-variables) (désormais obsolètes), les objets partagés et les collections partagées ont l'avantage d'être compatibles avec les *[process préemptifs](../Develop/preemptive.md)* : ils peuvent être passés par référence en tant que paramètres à des commandes telles que [`New process`](../commands-legacy/new-process) ou [`CALL WORKER`](../commands-legacy/call-worker).
+**Les objets partagés** et **les collections partagées** sont des [objets](./dt_object.md) et des [collections](./dt_collection.md) spécifiques dont le contenu est partagé entre les process. Contrairement aux [variables interprocess](./variables.md#interprocess-variables) (désormais obsolètes), les objets partagés et les collections partagées ont l'avantage d'être compatibles avec les *[process préemptifs](../Develop/preemptive.md)* : ils peuvent être passés par référence en tant que paramètres à des commandes telles que [`New process`](../commands/new-process) ou [`CALL WORKER`](../commands/call-worker).
 
 Les objets partagés et les collections partagées sont stockés dans des variables standard de type [`Object`](./dt_object.md) et [`Collection`](./dt_collection.md), mais doivent être instanciés à l'aide de commandes spécifiques :
 
-- pour créer un objet partagé, utilisez la commande [`New shared object`](../commands-legacy/new-shared-object) ou appelez la fonction [`new()`](../API/ClassClass.md#new) d'une [classe partagée](./classes.md#shared-classes),
+- pour créer un objet partagé, utilisez la commande [`New shared object`](../commands/new-shared-object) ou appelez la fonction [`new()`](../API/ClassClass.md#new) d'une [classe partagée](./classes.md#shared-classes),
 - pour créer une collection partagée, utilisez la commande [`New shared collection`](../commands/new-shared-collection).
 
 Les objets et collections partagés ne peuvent contenir que des valeurs scalaires ou d'autres objets et collections partagés. Toutefois, les objets et collections partagés peuvent être définis comme des propriétés d'objets ou de collections standard (non partagés).
 
 Toute modification d'un objet/d'une collection partagé(e) doit s'effectuer à l'intérieur d'une structure **Use...End use**. La lecture d'une valeur d'objet/collection ne nécessite pas de structure **Use...End use**.
 
-Un catalogue unique et global, retourné par la commande [`Storage`](../commands-legacy/storage), est toujours disponible dans l'application et ses composants, et peut être utilisé pour stocker tous les objets partagés et collections.
+Un catalogue unique et global, retourné par la commande [`Storage`](../commands/storage), est toujours disponible dans l'application et ses composants, et peut être utilisé pour stocker tous les objets partagés et collections.
 
 ## Utilisation des objets et collections partagés
 
@@ -81,11 +81,11 @@ Appeler `OB Copy` avec un objet partagé (ou avec un objet dont des propriétés
 
 ### Storage
 
-**Storage** est un objet partagé unique, disponible automatiquement pour chaque application et machine. Cet objet partagé est renvoyé par la commande [`Storage`](../commands-legacy/storage). Il est destiné à référencer les objets ou collections partagé(e)s défini(e)s durant la session que vous souhaitez rendre accessibles à tous les process, préemptifs ou standard.
+**Storage** est un objet partagé unique, disponible automatiquement pour chaque application et machine. Cet objet partagé est renvoyé par la commande [`Storage`](../commands/storage). Il est destiné à référencer les objets ou collections partagé(e)s défini(e)s durant la session que vous souhaitez rendre accessibles à tous les process, préemptifs ou standard.
 
 A noter que, à la différence de objets partagés standard, l'objet `Storage` ne crée par de groupe partagé lorsque des objets/collection lui sont assigné(e)s en tant que propriétés. Cette exception permet à l'objet **Storage** d'être utilisé sans verrouiller les objets/collections partagé(e)s connecté(e)s.
 
-Pour plus d'informations, consultez la description de la commande [`Storage`](../commands-legacy/storage).
+Pour plus d'informations, consultez la description de la commande [`Storage`](../commands/storage).
 
 ## Use...End use
 
@@ -113,8 +113,8 @@ Les objets partagés et les collections partagées sont conçus pour permettre l
 Les fonctions suivantes déclenchent automatiquement un **Use/End use** interne, rendant un appel explicite à la structure inutile lors de l'exécution de la fonction :
 
 - [fonctions de collection](../API/CollectionClass.md) qui modifient les collections partagées,
-- commande [`ARRAY TO COLLECTION`](../commands-legacy/array-to-collection),
-- commande [`OB REMOVE`](../commands-legacy/ob-remove),
+- commande [`ARRAY TO COLLECTION`](../commands/array-to-collection),
+- commande [`OB REMOVE`](../commands/ob-remove),
 - [fonctions partagées](classes.md#fonctions-partagees) (définies dans les [classes partagées](classes.md#classes-partagees)).
 
 ## Exemple 1
@@ -183,3 +183,4 @@ End use
   //son assignation n'est pas permise
  End use
 ```
+

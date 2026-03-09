@@ -129,12 +129,14 @@ Considerando las propiedades de tabla siguientes:
 
 
 <!-- REF #DataClassClass.all().Params -->
-| Parámetros | Tipo               |    | Descripción                                                                                         |
-| ---------- | ------------------ |:--:| --------------------------------------------------------------------------------------------------- |
-| settings   | Object             | -> | Opciones de construcción: context                                                                   |
-| Resultado  | 4D.EntitySelection | <- | Referencias sobre todas las entidades relacionadas con la clase de datos|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|settings|Object|->|Build option: context|
+|Result|4D.EntitySelection|<-|References on all entities related to the Dataclass|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -179,13 +181,15 @@ En el parámetro opcional *settings* se puede pasar un objeto que contenga opcio
 
 
 <!-- REF #DataClassClass.fromCollection().Params -->
-| Parámetros | Tipo               |    | Descripción                                                                   |
-| ---------- | ------------------ |:--:| ----------------------------------------------------------------------------- |
-| objectCol  | Collection         | -> | Colección de objetos a mapear con entidades                                   |
-| settings   | Object             | -> | Opciones de construcción: context                                             |
-| Resultado  | 4D.EntitySelection | <- | Selección de entidades llenadas desde la colección|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|objectCol |Collection|->|Collection of objects to be mapped with entities|
+|settings  |Object|->|Build option: context|
+|Result|4D.EntitySelection|<-|Entity selection filled from the collection|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -375,13 +379,15 @@ En este ejemplo, la primera entidad se creará y guardará pero la segunda falla
 
 
 <!-- REF #DataClassClass.get().Params -->
-| Parámetros | Tipo            |    | Descripción                                                                     |
-| ---------- | --------------- |:--:| ------------------------------------------------------------------------------- |
-| primaryKey | Integer OR Text | -> | Valor de la llave primaria de la entidad a recuperar                            |
-| settings   | Object          | -> | Opciones de construcción: context                                               |
-| Resultado  | 4D.Entity       | <- | Entidad que coincide con la llave primaria designada|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|primaryKey |Integer OR Text|->|Primary key value of the entity to retrieve|
+|settings  |Object|->|Build option: context|
+|Result|4D.Entity|<-|Entity matching the designated primary key|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -451,11 +457,13 @@ Este ejemplo ilustra el uso de la propiedad *context*:
 
 
 <!-- REF #DataClassClass.getDataStore().Params -->
-| Parámetros | Tipo         |    | Descripción                                          |
-| ---------- | ------------ |:--:| ---------------------------------------------------- |
-| Resultado  | cs.DataStore | <- | Datastore de la dataclass|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|cs.DataStore|<-|Datastore of the dataclass|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -504,13 +512,13 @@ El método de proyecto ***SearchDuplicate*** busca valores duplicados en cualqui
 
 
 <!-- REF #DataClassClass.getInfo().Params -->
-| Parámetros | Tipo   |    | Descripción                                                    |
-| ---------- | ------ | -- | -------------------------------------------------------------- |
-| Resultado  | Object | <- | Información sobre la clase de datos|<!-- END REF -->
+<div class="no-index">
 
-
-
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|Result|Object|<-|Information on the dataclass|
+</div>
+<!-- END REF -->
 
 
 
@@ -579,11 +587,13 @@ La función `.getInfo( )` <!-- REF #DataClassClass.getInfo().Summary -->devuelve
 
 
 <!-- REF #DataClassClass.new().Params -->
-| Parámetros | Tipo      |    | Descripción                                                                 |
-| ---------- | --------- | -- | --------------------------------------------------------------------------- |
-| Resultado  | 4D.Entity | <- | Nueva entidad que coincide con la clase de datos|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|Result|4D.Entity|<-|New entity matching the Dataclass|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -621,12 +631,14 @@ Este ejemplo crea una nueva entidad en la clase de datos "Log" y registra la inf
 
 
 <!-- REF #DataClassClass.newSelection().Params -->
-| Parámetros | Tipo               |    | Descripción                                                                                                                                                    |
-| ---------- | ------------------ | -- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| keepOrder  | Integer            | -> | `dk keep ordered`: crea una selección de entidades ordenada,<br/>`dk no ordenada`: crea una selección de entidades no ordenada (por defecto si se omite) |
-| Resultado  | 4D.EntitySelection | <- | Nueva selección de entidades en blanco relacionadas con la clase de datos|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|keepOrder |Integer |-> |`dk keep ordered`: creates an ordered entity selection,<br/>`dk non ordered`: creates an unordered entity selection (default if omitted) |
+|Result|4D.EntitySelection|<-|New blank entity selection related to the dataclass|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -665,15 +677,17 @@ Cuando se crea, la selección de entidades no contiene ninguna entidad (`mySelec
 
 
 <!-- REF #DataClassClass.query().Params -->
-| Parámetros    | Tipo               |    | Descripción                                                                                                                                                                             |
-| ------------- | ------------------ | -- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| queryString   | Text               | -> | Criterios de búsqueda como cadena                                                                                                                                                       |
-| formula       | Object             | -> | Criterios de búsqueda como objeto fórmula                                                                                                                                               |
-| value         | any                | -> | Valor(es) a utilizar para los marcadores de posición indexados                                                                                                                          |
-| querySettings | Object             | -> | Opciones de búsqueda: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                                                                        |
-| Resultado     | 4D.EntitySelection | <- | Nueva selección de entidades formada por las entidades de la clase de datos que cumplen los criterios de búsqueda especificados en *queryString* o *formula*|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|queryString |Text |-> |Search criteria as string|
+|formula |Object |-> |Search criteria as formula object|
+|value|any|->|Value(s) to use for indexed placeholder(s)|
+|querySettings|Object|->|Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan|
+|Result|4D.EntitySelection|<-|New entity selection made up of entities from dataclass meeting the search criteria specified in *queryString* or *formula*|
+</div>
+<!-- END REF -->
 
 #### Descripción
 

@@ -1,9 +1,9 @@
 ---
 id: webServerObject
-title: Web Server instances
+title: Webサーバーインスタンス
 ---
 
-A 4D project can start and monitor a web server for the main (host) application as well as each [hosted component](../Concepts/components.md).
+4Dプロジェクトは、メイン (ホスト) アプリケーションおよび、[ホストされた各コンポーネント](../Concepts/components.md) の Webサーバーを起動して監視することができます。
 
 たとえば、メインアプリケーションに 2つのコンポーネントをインストールしている場合、アプリケーションから最大 3つの独立した Webサーバーを起動して監視することができます:
 
@@ -15,7 +15,7 @@ A 4D project can start and monitor a web server for the main (host) application 
 
 メインアプリケーションの Webサーバーを含む、各 4D Webサーバーは、`4D.WebServer` クラスの **オブジェクト** として公開されます。 インスタンス化された Webサーバーオブジェクトは、[多数のプロパティや関数](API/WebServerClass.md) を使用して、カレントのアプリケーションまたは任意のコンポーネントから操作することができます。
 
-> The legacy [WEB commands](../commands/theme/Web_Server) of the 4D language are supported but cannot select the web server to which they apply (see below).
+> 4Dランゲージの従来の [WEB コマンド](../commands/theme/Web_Server) はサポートされていますが、その対象となる Webサーバーを選択することはできません (後述参照)。
 
 各 Webサーバー (ホストアプリケーションまたはコンポーネント) は、個別のコンテキストで使用できます。これには、以下が含まれます:
 
@@ -65,7 +65,7 @@ webServer:=WEB Server(Web server receiving request)
 
 ## Webサーバー関数
 
-A [web server class object](API/WebServerClass.md../commands/web-server.md-object) contains the following functions:
+[Webサーバークラスのオブジェクト](API/WebServerClass.md#webサーバーオブジェクト) には、以下の関数があります:
 
 | 関数                                       | 引数                                   | 戻り値                                | 説明            |
 | ---------------------------------------- | ------------------------------------ | ---------------------------------- | ------------- |
@@ -89,7 +89,7 @@ $status:=webServer.stop()
 
 ## Webサーバープロパティ
 
-A web server object contains [various properties](API/WebServerClass.md../commands/web-server.md-object) which configure the web server.
+Webサーバーオブジェクトには、Webサーバーを構成する [さまざまなプロパティ](API/WebServerClass.md#webサーバーオブジェクト) が含まれています。
 
 これらのプロパティは以下のように定義します:
 
@@ -104,7 +104,7 @@ A web server object contains [various properties](API/WebServerClass.md../comman
 
 ## 4D Webコマンドのスコープ
 
-The 4D Language contains [several commands](../commands/theme/Web_Server) that can be used to control the web server. ただし、これらのコマンドは 1つの (デフォルト) Webサーバーで動作するように設計されています。 これらのコマンドを Webサーバーオブジェクトのコンテキストで使用する場合は、そのスコープが適切であることを確認してください。
+4Dランゲージには、Webサーバーの制御に使用できる [いくつかのコマンド](../commands/theme/Web_Server) があります。 ただし、これらのコマンドは 1つの (デフォルト) Webサーバーで動作するように設計されています。 これらのコマンドを Webサーバーオブジェクトのコンテキストで使用する場合は、そのスコープが適切であることを確認してください。
 
 | コマンド                            | スコープ                |
 | ------------------------------- | ------------------- |
@@ -135,3 +135,4 @@ The 4D Language contains [several commands](../commands/theme/Web_Server) that c
 | `WEB START SERVER`              | ホストアプリケーション Webサーバー |
 | `WEB STOP SERVER`               | ホストアプリケーション Webサーバー |
 | `WEB Validate digest`           | リクエストを受け取った Webサーバー |
+

@@ -895,9 +895,10 @@ End use
 A propriedade `.userName` contém <!-- REF #SessionClass.userName.Summary -->o nome de usuário associado à sessão<!-- END REF -->. Pode usá-la para identificar o usuário dentro de seu código.
 
 - **Web sessions**: This property is an empty string by default. Ele pode ser definido usando a propriedade `privileges` da função [`setPrivileges()`](#setprivileges).
-- **Remote/Stored procedure sessions**: This property returns the same user name as the [`Current user`](../commands-legacy/current-user) command.
-- **Standalone sessions**: This property contains "designer" or the name set with the [`SET USER ALIAS`](../commands-legacy/set-user-alias) command.
+- **Remote/Stored procedure sessions**: This property returns the same user name as the [`Current user`](../commands/current-user) command.
+- **Standalone sessions**: This property contains "designer" or the name set with the [`SET USER ALIAS`](../commands/set-user-alias) command.
 
 This property is **read only** for desktop sessions.
 
 <!-- END REF -->
+

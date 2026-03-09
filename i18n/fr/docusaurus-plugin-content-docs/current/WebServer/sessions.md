@@ -42,7 +42,7 @@ Cette option est sélectionnée par défaut dans les nouveaux projets. Elle peut
 
 - En utilisant la propriété [`.scalableSession`](API/WebServerClass.md#scalablession) de l'objet Web Server (à passer dans le paramètre *settings* de la fonction [`.start()`](API/WebServerClass.md#start) ). Dans ce cas, ce paramètre remplace l'option définie dans la boîte de dialogue Propriétés pour l'objet Web Server (il n'est pas stocké sur disque).
 
-> La commande [`WEB SET OPTION`](../commands-legacy/web-set-option) peut également définir le mode de session du serveur Web principal.
+> La commande [`WEB SET OPTION`](../commands/web-set-option) peut également définir le mode de session du serveur Web principal.
 
 Dans tous les cas, ce paramètre est local à la machine ; il peut donc être différent sur le serveur Web 4D Server et les serveurs Web des machines 4D distantes.
 
@@ -488,5 +488,6 @@ Un nouvel utilisateur est créé et des informations sont stockées dans la sess
 Un token de session a une durée de vie, et la session elle-même a une durée de vie. La durée de vie du token de session peut être définie [lors de sa création](../API/SessionClass.md#createotp). Par défaut, la durée de vie du token est la même que la valeur [`.idleTimeout`](../API/SessionClass.md#idletimeout).
 
 Une session n'est restaurée par un token que si ni la durée de vie du token de session ni celle de la session n'ont expiré. Dans les autres cas (le token de session a expiré et/ou la session elle-même a expiré), une session *guest* est créée lorsqu'une requête web avec un token de session est reçue.
+
 
 

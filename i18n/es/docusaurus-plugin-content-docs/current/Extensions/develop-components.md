@@ -27,7 +27,7 @@ La creación e instalación de los componentes 4D se realiza directamente desde 
 
 - Para utilizar un componente, sólo tiene que [instalarlo en su aplicación](../Project/components.md). También puede crear un nuevo componente directamente desde el host, en cuyo caso es inmediatamente utilizable.
 - Un proyecto puede ser a la vez matriz y local, es decir, que un proyecto matriz puede utilizar a su vez uno o varios componentes. Sin embargo, un componente no puede utilizar subcomponentes por sí mismo.
-- Un componente puede llamar a la mayoría de los elementos 4D: datastore ([`ds`](../commands/ds)), clases, funciones, métodos proyecto, formularios proyecto, barras de menú, listas de selección, etc. Pueden utilizarse los siguientes métodos base de datos: [On Web Connection](../commands-legacy/on-web-connection-database-method), [On Web Authentication](../commands-legacy/on-web-authentication-database-method), [On Host Database Event](../commands-legacy/on-host-database-event-database-method).
+- Un componente puede llamar a la mayoría de los elementos 4D: datastore ([`ds`](../commands/ds)), clases, funciones, métodos proyecto, formularios proyecto, barras de menú, listas de selección, etc. Pueden utilizarse los siguientes métodos base de datos: [On Web Connection](../commands/on-web-connection-database-method), [On Web Authentication](../commands/on-web-authentication-database-method), [On Host Database Event](../commands/on-host-database-event-database-method).
 - Un componente puede crear y/o utilizar tablas, campos y archivos de datos utilizando mecanismos de bases externas. Se trata de bases 4D independientes con las que se trabaja utilizando comandos SQL.
 - Un proyecto local que se ejecuta en modo interpretado puede utilizar componentes interpretados o compilados. Un proyecto local que se ejecuta en modo compilado no puede utilizar componentes interpretados. En este caso, sólo se pueden utilizar componentes compilados.
 
@@ -98,7 +98,7 @@ Cuando lo selecciona, se añade una pestaña dedicada (o resaltada si ya se ha a
 
 - Inicio, incluidas carpetas, métodos, clases y formularios (sólo vista previa)
 - Métodos proyecto
-- Pueden utilizarse los siguientes métodos base: ([On Web Connection](../commands-legacy/on-web-connection-database-method), [On Web Authentication](../commands-legacy/on-web-authentication-database-method), [On Host Database Event](../commands-legacy/on-host-database-event-database-method))
+- Pueden utilizarse los siguientes métodos base: ([On Web Connection](../commands/on-web-connection-database-method), [On Web Authentication](../commands/on-web-authentication-database-method), [On Host Database Event](../commands/on-host-database-event-database-method))
 - Clases
 - Métodos formulario proyecto
 - Comandos y constantes
@@ -124,13 +124,13 @@ Puede utilizar las [**funciones de buscar y reemplazar**](../Project/search-repl
 
 A excepción de los [comandos no utilizables](#unusable-commands), un componente puede utilizar cualquier comando del lenguaje 4D.
 
-Cuando los comandos son llamados desde un componente, se ejecutan en el contexto del componente, excepto por el comando [`EXECUTE FORMULA`](../commands-legacy/execute-formula) o el comando [`EXECUTE METHOD`](../commands-legacy/execute-method) que utilizan el contexto del método especificado por el comando. También hay que tener en cuenta que los comandos de lectura del tema "Usuarios y grupos" se pueden utilizar desde un componente, pero leerán los usuarios y grupos del proyecto local (un componente no tiene sus propios usuarios y grupos).
+Cuando los comandos son llamados desde un componente, se ejecutan en el contexto del componente, excepto por el comando [`EXECUTE FORMULA`](../commands/execute-formula) o el comando [`EXECUTE METHOD`](../commands/execute-method) que utilizan el contexto del método especificado por el comando. También hay que tener en cuenta que los comandos de lectura del tema "Usuarios y grupos" se pueden utilizar desde un componente, pero leerán los usuarios y grupos del proyecto local (un componente no tiene sus propios usuarios y grupos).
 
-Los comandos [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter) y [`Get database parameter`](../commands-legacy/get-database-parameter) son una excepción: su alcance es global para la aplicación. Cuando estos comandos se llaman desde un componente, se aplican al proyecto de la aplicación local.
+Los comandos [`SET DATABASE PARAMETER`](../commands/set-database-parameter) y [`Get database parameter`](../commands/get-database-parameter) son una excepción: su alcance es global para la aplicación. Cuando estos comandos se llaman desde un componente, se aplican al proyecto de la aplicación local.
 
 Además, se han especificado medidas específicas para los comandos `Structure file` y `Get 4D folder` cuando se utilizan en el marco de los componentes.
 
-El comando [`COMPONENT LIST`](../commands-legacy/component-list) puede utilizarse para obtener la lista de componentes que son cargados por el proyecto local.
+El comando [`COMPONENT LIST`](../commands/component-list) puede utilizarse para obtener la lista de componentes que son cargados por el proyecto local.
 
 ### Comandos no utilizables
 
@@ -173,7 +173,7 @@ Por el contrario, por razones de seguridad, por defecto un componente no puede e
 
 ![](../assets/en/Concepts/pict516563.en.png)
 
-Una vez que los métodos proyecto host estén disponibles para los componentes, puede ejecutar un método del proyecto host desde un componente utilizando el comando [`EXECUTE FORMULA`](../commands-legacy/execute-formula) o [`EXECUTE METHOD`](../commands-legacy/execute-method). Por ejemplo:
+Una vez que los métodos proyecto host estén disponibles para los componentes, puede ejecutar un método del proyecto host desde un componente utilizando el comando [`EXECUTE FORMULA`](../commands/execute-formula) o [`EXECUTE METHOD`](../commands/execute-method). Por ejemplo:
 
 ```4d
 // Método local
@@ -315,7 +315,7 @@ En este caso, es necesario utilizar la comparación de punteros:
 
 ## Gestión de errores
 
-Un [método de gestión de errores](Concepts/error-handling.md) instalado por el comando [`ON ERR CALL`](../commands-legacy/on-err-call) solo se aplica a la aplicación en ejecución. En el caso de un error generado por un componente, no se llama al método de gestión de errores `ON ERR CALL` del proyecto local, y viceversa.
+Un [método de gestión de errores](Concepts/error-handling.md) instalado por el comando [`ON ERR CALL`](../commands/on-err-call) solo se aplica a la aplicación en ejecución. En el caso de un error generado por un componente, no se llama al método de gestión de errores `ON ERR CALL` del proyecto local, y viceversa.
 
 Sin embargo, puede instalar un [gestor de errores de componentes en la aplicación host](../Concepts/error-handling.md#scope-and-components) para gestionar los errores no detectados de los componentes.
 
@@ -537,4 +537,5 @@ Para proteger eficazmente el código de un componente, basta con [compilar y gen
 ## Compartiendo sus componentes en GitHub
 
 Lo animamos a que apoye a la comunidad de desarrolladores 4D compartiendo sus componentes, preferiblemente en la plataforma [GitHub](https://github.com/topics/4d-component). Recomendamos que utilice el tema **`4d-component`** para ser referenciado correctamente.
+
 

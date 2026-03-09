@@ -1218,3 +1218,4 @@ Class extends Entity
 4Dコードエディターにおいて、ORDA クラス型として定義された変数は、自動補完機能の対象となります。 Entity クラス変数の例です:
 
 ![](../assets/en/ORDA/AutoCompletionEntity.png)
+

@@ -17,13 +17,18 @@ title: VP Get table column index
 
 <!-- REF #_method_.VP Get table column index.Params -->
 
-| Parámetros | Tipo    |                             | Descripción                                                    |                  |
-| ---------- | ------- | --------------------------- | -------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | ->                          | Nombre de objeto formulario área 4D View Pro                   |                  |
-| tableName  | Text    | ->                          | Nombre de la tabla                                             |                  |
-| columnName | Text    | ->                          | Nombre de la columna de la tabla                               |                  |
-| sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |                  |
-| Resultado  | Integer | <- | Índice de *columnName*                                         | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo    |                             | Descripción                                                    |
+| ---------- | ------- | --------------------------- | -------------------------------------------------------------- |
+| vpAreaName | Text    | ->                          | Nombre de objeto formulario área 4D View Pro                   |
+| tableName  | Text    | ->                          | Nombre de la tabla                                             |
+| columnName | Text    | ->                          | Nombre de la columna de la tabla                               |
+| sheet      | Integer | ->                          | Índice de la hoja (hoja actual si se omite) |
+| Resultado  | Integer | <- | Índice de *columnName*                                         |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

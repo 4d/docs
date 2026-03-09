@@ -45,3 +45,4 @@ La propriété `.root` contient <!-- REF #ZipArchiveClass.root.Summary -->un dos
 Le dossier `root` et son contenu sont manipulés à l'aide des fonctions et propriétés des classes [ZipFile](ZipFileClass.md) et [ZipFolder](ZipFolderClass.md).
 
 Cette propriété est en **lecture seule**.
+

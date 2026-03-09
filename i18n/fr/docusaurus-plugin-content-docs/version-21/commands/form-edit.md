@@ -51,19 +51,19 @@ Passez une chaîne vide dans *objet* pour désélectionner tous les objets dans 
 Pour ouvrir le formulaire *Address* de la table *Contacts* :
 
 ```4d
- FORM EDIT([Contacts];"Address")
+ FORM EDIT([Contacts];"Address")
 ```
 
 Pour ouvrir le formulaire projet *ContactList* :
 
 ```4d
- FORM EDIT("ContactList")
+ FORM EDIT("ContactList")
 ```
 
 Pour ouvrir le formulaire projet *ContactPage* avec l'objet "name-input" sélectionné :
 
 ```4d
- FORM EDIT("ContactList"; "name-input")
+ FORM EDIT("ContactList"; "name-input")
 ```
 
 ## Voir également

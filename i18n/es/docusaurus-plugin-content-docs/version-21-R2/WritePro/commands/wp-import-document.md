@@ -8,13 +8,16 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Import document.Params-->
 
-| Parámetros | Tipo                    |                             | Descripción                                                                                                                                                                                                                                                          |
-| ---------- | ----------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| filePath   | Text                    | &#8594; | Ruta a: un documento 4D Write (.4w7 o .4wt) o un documento 4D Write Pro (.4wp) o un documento .docx (.docx) |
-| fileObj    | [4D.File](../API/FileClass.md)  | &#8594; | Objeto del archivo a importar                                                                                                                                                                                                                                        |
-| option     | Integer, Object         | &#8594; | (Entero) Opción de importación para expresiones HTML, (objeto) Opciones de importación para documento .docx                                                                                                    |
-| Resultado  | Object                  | &#8592; | Objeto 4D Write Pro                                                                                                                                                                                                                                                  |
+<div class="no-index">
 
+| Parámetros | Tipo                                           |                             | Descripción                                                                                                                                                                                                                                                          |
+| ---------- | ---------------------------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| filePath   | Text                                           | &#8594; | Ruta a: un documento 4D Write (.4w7 o .4wt) o un documento 4D Write Pro (.4wp) o un documento .docx (.docx) |
+| fileObj    | [4D.File](../API/FileClass.md) | &#8594; | Objeto del archivo a importar                                                                                                                                                                                                                                        |
+| option     | Integer, Object                                | &#8594; | (Entero) Opción de importación para expresiones HTML, (objeto) Opciones de importación para documento .docx                                                                                                    |
+| Resultado  | Object                                         | &#8592; | Objeto 4D Write Pro                                                                                                                                                                                                                                                  |
+
+</div>
 <!-- END REF-->
 
 ## Descripción

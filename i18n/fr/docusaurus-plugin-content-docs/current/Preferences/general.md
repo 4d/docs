@@ -100,7 +100,7 @@ Si vous avez l'intention d'utiliser des VCS ou des éditeurs de code externes av
 
 > Cette option ne peut être appliquée qu'aux projets (les bases de données binaires incluent toujours les tokens).
 
-> Vous pouvez toujours obtenir le code avec des tokens en appelant [`METHOD GET CODE`](../commands-legacy/method-get-code) avec 1 dans le paramètre *option*.
+> Vous pouvez toujours obtenir le code avec des tokens en appelant [`METHOD GET CODE`](../commands/method-get-code) avec 1 dans le paramètre *option*.
 
 #### Exclusion des tokens dans les projets existants
 
@@ -161,3 +161,4 @@ Définit l'emplacement des pages de documentation recherchées par 4D.
 Indique l'emplacement de la version statique de la documentation HTML. Par défaut, cet emplacement correspond au sous-dossier \Help\Command\langue. Vous pouvez le visualiser en affichant le menu associé à la zone (clic sur la zone). Si le sous-dossier n'est pas présent, l'emplacement est affiché en rouge.
 
 Vous pouvez modifier cet emplacement si vous le souhaitez, par exemple pour afficher la documentation dans une langue différente de celle de l'application. La documentation HTML statique peut être située sur un autre volume, un serveur web, etc. Pour désigner un autre emplacement, cliquez sur le bouton **[...]** à côté de la zone de saisie et choisissez un dossier racine de documentation (dossier correspondant à la langue : `fr`, `en`, `es`, `de` ou `ja`).
+

@@ -11,7 +11,7 @@ O seguinte formulário de várias páginas utiliza um objeto de controlo de pest
 
 Para passar de uma tela para outra, o usuário simplesmente clica na guia correspondente.
 
-As telas podem representar páginas em um formulário de várias páginas ou um objeto que muda quando o usuário clica em uma guia. Se o controle de tabulação for usado como uma ferramenta de navegação de página, o comando [`FORM GOTO PAGE`](../commands-legacy/form-goto-page) ou a ação padrão `gotoPage` será usada quando um usuário clicar em uma tabulação.
+As telas podem representar páginas em um formulário de várias páginas ou um objeto que muda quando o usuário clica em uma guia. Se o controle de tabulação for usado como uma ferramenta de navegação de página, o comando [`FORM GOTO PAGE`](../commands/form-goto-page) ou a ação padrão `gotoPage` será usada quando um usuário clicar em uma tabulação.
 
 Outra utilização do controlo de separadores consiste em controlar os dados apresentados num subformulário. Por exemplo, um Rolodex pode ser implementado utilizando um controlo de pestanas. As guias mostrariam as letras do alfabeto e a ação do controle do guia seria carregar os dados correspondentes à letra que o usuário clicou.
 
@@ -80,13 +80,13 @@ Você pode criar um array Text que contenha os nomes de cada página do formulá
  arrPages{3}:="Notes"  
 ```
 
-> Você também pode armazenar os nomes das páginas em uma lista hierárquica e usar o comando [LIST TO ARRAY](../commands-legacy/list-to-array) para carregar os valores no array.
+> Você também pode armazenar os nomes das páginas em uma lista hierárquica e usar o comando [LIST TO ARRAY](../commands/list-to-array) para carregar os valores no array.
 
 ## Funcionalidades do Goto page
 
 ### Comando FORM GOTO PAGE
 
-Você pode usar o comando [`FORM GOTO PAGE`](../commands-legacy/form-goto-page) no método do controle de aba:
+Você pode usar o comando [`FORM GOTO PAGE`](../commands/form-goto-page) no método do controle de aba:
 
 ```4d
 FORM GOTO PAGE(arrPages)
@@ -116,3 +116,4 @@ Por exemplo, se o usuário selecionar a terceira aba, 4D exibirá a terceira pá
 ## Propriedades compatíveis
 
 [Negrita](properties_Text.md#bold) - [Inferior](properties_CoordinatesAndSizing.md#bottom) - [Lista de opções](properties_DataSource.md#choice-list-static-list) - [Clase](properties_Object.md#css-class) - [Tipo de expressão](properties_Object.md#expression-type) - [Fonte](properties_Text.md#font) -  - [Altura](properties_CoordinatesAndSizing.md#height) - [Mensagem de ajuda](properties_Help.md#help-tip) - [Dimensionamento horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Itálico](properties_Text.md#italic) - [Esquerda](properties_CoordinatesAndSizing.md#left) - [Nome do objeto](properties_Object.md#object-name) - [Direita](properties_CoordinatesAndSizing.md#right) - [Guardar valor](properties_Object.md#save-value) - [Ação padrão](properties_Action.md#standard-action) - [Direção do controle de tabulação](properties_Appearance.md#tab-control-direction) - [Superior](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Sublinhado](properties_Text.md#underline) - [Dimensionamiento vertical](properties_ResizingOptions.md#vertical-sizing) - [Variable ou expressão](properties_Object.md#variable-or-expression) - [Visibilidade](properties_Display.md#visibility) - [Largura](properties_CoordinatesAndSizing.md#width)
+

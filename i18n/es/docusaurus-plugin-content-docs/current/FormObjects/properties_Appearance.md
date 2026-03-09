@@ -53,7 +53,7 @@ The focus rectangle is only available on macOS and (for text and picture [inputs
 
 #### Comandos
 
-[OBJECT Get focus rectangle invisible](../commands-legacy/object-get-focus-rectangle-invisible) - [OBJECT SET FOCUS RECTANGLE INVISIBLE](../commands-legacy/object-set-focus-rectangle-invisible)
+[OBJECT Get focus rectangle invisible](../commands/object-get-focus-rectangle-invisible) - [OBJECT SET FOCUS RECTANGLE INVISIBLE](../commands/object-set-focus-rectangle-invisible)
 
 ---
 
@@ -109,7 +109,7 @@ Valores disponibles:
 
 #### Comandos
 
-[OBJECT GET SCROLLBAR](../commands-legacy/object-get-scrollbar) - [OBJECT SET SCROLLBAR](../commands-legacy/object-set-scrollbar)
+[OBJECT GET SCROLLBAR](../commands/object-get-scrollbar) - [OBJECT SET SCROLLBAR](../commands/object-set-scrollbar)
 
 #### Ver también
 
@@ -411,7 +411,7 @@ Valores disponibles:
 
 #### Comandos
 
-[OBJECT GET SCROLLBAR](../commands-legacy/object-get-scrollbar) - [OBJECT SET SCROLLBAR](../commands-legacy/object-set-scrollbar)
+[OBJECT GET SCROLLBAR](../commands/object-get-scrollbar) - [OBJECT SET SCROLLBAR](../commands/object-set-scrollbar)
 
 #### Ver también
 

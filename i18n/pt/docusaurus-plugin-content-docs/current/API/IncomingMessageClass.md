@@ -323,7 +323,7 @@ Example: `http://127.0.0.1:8044/myCall/?myparams='[{"firstname": "Marie","isWoma
 
 Parameters are passed in JSON format and enclosed within a collection.
 
-Nesse caso, os parâmetros são recebidos como texto JSON na propriedade `urlQuery` e podem ser analisados usando [`JSON Parse`](../commands-legacy/json-parse).
+Nesse caso, os parâmetros são recebidos como texto JSON na propriedade `urlQuery` e podem ser analisados usando [`JSON Parse`](../commands/json-parse).
 
 ```4d
 //urlQuery.myparams: "[{"firstname": "Marie","isWoman": true,"id": 3}]"
@@ -362,4 +362,5 @@ HTTP and HTTPS request verbs include for example "get", "post", "put", etc.
 A propriedade `.verb` é somente leitura.
 
 <!-- END REF -->
+
 

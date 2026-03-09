@@ -42,18 +42,18 @@ Os objetos devem ter sido inicializados, por exemplo utilizando o comando <code>
 
 Com a notação de objetos, pode acessar às propriedades dos objetos de duas maneiras:
 
-- usando o comando [`New object`](../commands-legacy/new-object),
+- usando o comando [`New object`](../commands/new-object),
 - usando o operador '{}'.
 
 :::info
 
-Vários comandos e funções 4D retornam objetos, por exemplo, [`Database measures`](../commands-legacy/database-measures) ou [`File`](../commands/file). Neste caso, não é necessário instanciar explicitamente o objecto, a linguagem 4D faz isso por você.
+Vários comandos e funções 4D retornam objetos, por exemplo, [`Database measures`](../commands/database-measures) ou [`File`](../commands/file). Neste caso, não é necessário instanciar explicitamente o objecto, a linguagem 4D faz isso por você.
 
 :::
 
 ### Comando `New object`
 
-O comando [`New object`](../commands-legacy/new-object) cria um objeto vazio ou pré-preenchido e retorna sua referência.
+O comando [`New object`](../commands/new-object) cria um objeto vazio ou pré-preenchido e retorna sua referência.
 
 Exemplos:
 
@@ -110,8 +110,8 @@ $col:=$o.col[5] //6
 
 Pode criar dois tipos de objetos:
 
-- objetos regulares (não compartilhados), usando o comando [`New object`](../commands-legacy/new-object) ou a sintaxe literal do objeto (`{}`). Estes objetos podem ser editados sem qualquer controle de acesso específico, mas não podem ser compartilhados entre processos.
-- objetos compartilhados, usando o comando [`New shared object`](../commands-legacy/new-shared-object). Estes objetos podem ser compartidos entre processos, incluidos os threads preemptivos. O acesso a esses objetos é controlado pelas estruturas `Use...End use`.
+- objetos regulares (não compartilhados), usando o comando [`New object`](../commands/new-object) ou a sintaxe literal do objeto (`{}`). Estes objetos podem ser editados sem qualquer controle de acesso específico, mas não podem ser compartilhados entre processos.
+- objetos compartilhados, usando o comando [`New shared object`](../commands/new-shared-object). Estes objetos podem ser compartidos entre processos, incluidos os threads preemptivos. O acesso a esses objetos é controlado pelas estruturas `Use...End use`.
   Para obter mais informações, consulte a seção [Objetos e coleções compartilhados](shared.md).
 
 ## Properties {#properties}
@@ -317,3 +317,4 @@ Usar notação de objeto simplifica o código 4D no manejo dos mesmos. Entretant
  End for
   // cria 4 propriedades vazias "address1...address4" no objeto $Emp
 ```
+

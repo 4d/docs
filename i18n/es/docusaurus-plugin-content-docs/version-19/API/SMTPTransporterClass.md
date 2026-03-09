@@ -42,12 +42,14 @@ Los objetos SMTP Transporter se instancian con el comando [SMTP New transporter]
 
 
 <!-- REF #_command_.SMTP New transporter.Params -->
-| Parámetros | Tipo               |    | Descripción                                                                    |
-| ---------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
-| server     | Object             | -> | Información del servidor de correo                                             |
-| Resultado  | 4D.SMTPTransporter | <- | [objeto SMTP transporter](#smtp-transporter-object)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|server|Object|->|Mail server information|
+|Result|4D.SMTPTransporter|<-|[SMTP transporter object](#smtp-transporter-object)|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -118,12 +120,14 @@ La función devuelve un [**SMTP transporter**](#smtp-transporter-object). Todas 
 
 
 <!-- REF #4D.SMTPTransporter.new().Params -->
-| Parámetros | Tipo               |    | Descripción                                                                    |
-| ---------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
-| server     | Object             | -> | Información del servidor de correo                                             |
-| Resultado  | 4D.SMTPTransporter | <- | [objeto SMTP transporter](#smtp-transporter-object)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|server|Object|->|Mail server information|
+|Result|4D.SMTPTransporter|<-|[SMTP transporter object](#smtp-transporter-object)|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -211,12 +215,14 @@ La conexión SMTP se cierra automáticamente:
 
 
 <!-- REF #SMTPTransporterClass.send().Params -->
-| Parámetros | Tipo   |    | Descripción                                        |
-| ---------- | ------ |:--:| -------------------------------------------------- |
-| mail       | Object | -> | [Email](EmailObjectClass.md#email-object) a enviar |
-| Resultado  | Object | <- | Estado SMTP|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|mail|Object|->|[Email](EmailObjectClass.md#email-object) to send|
+|Result|Object|<-|SMTP status|
+</div>
+<!-- END REF -->
 
 #### Descripción
 

@@ -89,10 +89,13 @@ A função `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->cria e retorna
 
 <!--REF #FolderClass.create().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo       |                             | Descrição                                                    |
 | ---------- | ---------- | --------------------------- | ------------------------------------------------------------ |
 | Resultados | Parâmetros | <- | True se a pasta foi criada com sucesso, false caso contrário |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -146,6 +149,8 @@ End if
 
 <!--REF #FolderClass.createAlias().Params -->
 
+<div class="no-index">
+
 | Parâmetro         | Tipo                       |                             | Descrição                                    |
 | ----------------- | -------------------------- | --------------------------- | -------------------------------------------- |
 | destinationFolder | 4D. Folder | ->                          | Pasta de destino para o pseudónimo ou atalho |
@@ -153,6 +158,7 @@ End if
 | aliasType         | Integer                    | ->                          | Tipo de ligação do pseudónimo                |
 | Resultados        | 4D. File   | <- | Alias ou referência de atalho                |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -205,10 +211,13 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 <!-- REF #FolderClass.delete().Params -->
 
+<div class="no-index">
+
 | Parâmetro | Tipo    |    | Descrição                    |
 | --------- | ------- | -- | ---------------------------- |
 | option    | Integer | -> | Opção de eliminação de pasta |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -283,12 +292,15 @@ Quando `Delete with contents` é passado:
 
 <!--REF #FolderClass.moveTo().Params -->
 
+<div class="no-index">
+
 | Parâmetro         | Tipo                       |                             | Descrição                         |
 | ----------------- | -------------------------- | --------------------------- | --------------------------------- |
 | destinationFolder | 4D. Folder | ->                          | Pasta de destino                  |
 | newName           | Text                       | ->                          | Nome completo para a pasta movida |
 | Resultados        | 4D. Folder | <- | Pasta movida                      |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -342,11 +354,14 @@ Quer mover-se e renomear uma pasta:
 
 <!--REF #FolderClass.rename().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo                       |                             | Descrição                       |
 | ---------- | -------------------------- | --------------------------- | ------------------------------- |
 | newName    | Text                       | ->                          | Novo nome completo para a pasta |
 | Resultados | 4D. Folder | <- | Renomeado arquivo               |
 
+</div>
 <!-- END REF -->
 
 #### Descrição

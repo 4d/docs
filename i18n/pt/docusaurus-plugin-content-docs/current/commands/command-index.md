@@ -35,7 +35,7 @@ title: Commands by name
 [`APPEND TO ARRAY`](../commands/append-to-array)<br/>
 [`APPEND TO LIST`](../commands/append-to-list)<br/>
 [`Application file`](../commands/application-file)<br/>
-[`Application info`](application-info.md)<br/>
+[`Application info`](../commands/application-info)<br/>
 [`Application type`](../commands/application-type)<br/>
 [`Application version`](../commands/application-version)<br/>
 [`APPLY TO SELECTION`](../commands/apply-to-selection)<br/>
@@ -206,7 +206,7 @@ title: Commands by name
 [`Delete string`](../commands/delete-string)<br/>
 [`DELETE USER`](../commands/delete-user)<br/>
 [`DESCRIBE QUERY EXECUTION`](../commands/describe-query-execution)<br/>
-[`DIALOG`]((../commands/dialog))<br/>
+[`DIALOG`](\(../commands/dialog\))<br/>
 [`DIFFERENCE`](../commands/difference)<br/>
 [`DISABLE MENU ITEM`](../commands/disable-menu-item)<br/>
 [`Discover data key`](../commands/discover-data-key)<br/>
@@ -1342,3 +1342,4 @@ title: Commands by name
 
 [`ZIP Create archive`](../commands/zip-create-archive)<br/>
 [`ZIP Read archive`](../commands/zip-read-archive)<br/>
+

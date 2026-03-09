@@ -140,3 +140,4 @@ Par défaut, le cache ORDA est géré de manière transparente par 4D. Cependant
 - [dataClass.setRemoteCacheSettings()](../API/DataClassClass.md#setremotecachesettings)
 - [dataClass.getRemoteCache()](../API/DataClassClass.md#getremotecache)
 - [dataClass.clearRemoteCache()](../API/DataClassClass.md#clearremotecache)
+

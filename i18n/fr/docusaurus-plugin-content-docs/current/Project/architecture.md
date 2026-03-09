@@ -197,7 +197,7 @@ Le dossier Logs contient tous les fichiers journaux utilisés par le projet. Les
 - débogage de commandes,
 - Requêtes 4D Server (générées sur les postes clients et sur le serveur).
 
-> Un dossier Logs supplémentaire est disponible dans le dossier des préférences système de l'utilisateur (dossier 4D actif, voir commande [Get 4D folder](../commands-legacy/get-4d-folder)) pour les fichiers journaux de maintenance et d
+> Un dossier Logs supplémentaire est disponible dans le dossier des préférences système de l'utilisateur (dossier 4D actif, voir commande [Get 4D folder](../commands/get-4d-folder)) pour les fichiers journaux de maintenance et d
 
 ## `Settings` (user)
 
@@ -255,3 +255,4 @@ Il s'agit du dossier racine par défaut du serveur Web 4D pour les pages, les im
 ## Fichier `.gitignore` (optionnel)
 
 Fichier qui spécifie les fichiers qui seront ignorés par git. Fichier qui spécifie les fichiers qui seront ignorés par git. Vous pouvez inclure un fichier gitignore dans vos projets en utilisant l'option **Créer un fichier .gitignore** sur la page **Général** des préférences.
+

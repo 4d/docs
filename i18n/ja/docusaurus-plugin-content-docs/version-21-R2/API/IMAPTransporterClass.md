@@ -48,11 +48,14 @@ IMAP Transporter オブジェクトは [IMP New transporter](../commands/imap-ne
 
 <!-- REF #4D.IMAPTransporter.new().Params -->
 
+<div class="no-index">
+
 | 引数     | 型                                  |                             | 説明                                                  |
 | ------ | ---------------------------------- | :-------------------------: | --------------------------------------------------- |
 | server | Object                             |              ->             | メールサーバー情報                                           |
 | 戻り値    | 4D.IMAPTransporter | <- | [IMAP transporter オブジェクト](#imap-transporter-オブジェクト) |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -78,12 +81,15 @@ IMAP Transporter オブジェクトは [IMP New transporter](../commands/imap-ne
 
 <!-- REF #IMAPTransporterClass.addFlags().Params -->
 
-| 引数       | 型      |                             | 説明                                                                                                                                                                                            |
-| -------- | ------ | :-------------------------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| msgIDs   | any    |              ->             | 文字列のコレクション: メッセージの固有ID (テキスト型)<br/>&#xA;テキスト: メッセージの固有ID<br/>&#xA;倍長整数 (IMAP all): 選択されたメールボックス内の全メッセージ |
-| keywords | Object |              ->             | 追加するキーワードフラグ                                                                                                                                                                                  |
-| 戻り値      | Object | <- | addFlags処理のステータス                                                                                                                                                                              |
+<div class="no-index">
 
+| 引数       | 型      |                             | 説明                                                                                                                                                                                    |
+| -------- | ------ | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| msgIDs   | any    |              ->             | 文字列のコレクション: メッセージの固有ID (テキスト型)<br/> テキスト: メッセージの固有ID<br/> 倍長整数 (IMAP all): 選択されたメールボックス内の全メッセージ |
+| keywords | Object |              ->             | 追加するキーワードフラグ                                                                                                                                                                          |
+| 戻り値      | Object | <- | addFlags処理のステータス                                                                                                                                                                      |
+
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -171,6 +177,8 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 
 <!-- REF #IMAPTransporterClass.append().Params -->
 
+<div class="no-index">
+
 | 引数             | 型      |                             | 説明                      |
 | -------------- | ------ | :-------------------------: | ----------------------- |
 | mailObj        | Object |              ->             | Email オブジェクト            |
@@ -178,6 +186,7 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 | options        | Object |              ->             | 文字セット情報を格納したオブジェクト      |
 | 戻り値            | Object | <- | append処理のステータス          |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -285,6 +294,8 @@ $status:=$imap.append($msg; "Drafts")
 
 <!-- REF #IMAPTransporterClass.copy().Params -->
 
+<div class="no-index">
+
 | 引数             | 型          |                             | 説明                                              |
 | -------------- | ---------- | :-------------------------: | ----------------------------------------------- |
 | msgsIDs        | Collection |              ->             | メッセージの固有ID のコレクション (テキスト)    |
@@ -292,6 +303,7 @@ $status:=$imap.append($msg; "Drafts")
 | destinationBox | Text       |              ->             | メッセージのコピー先のメールボックス                              |
 | 戻り値            | Object     | <- | copy処理のステータス                                    |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -386,11 +398,14 @@ $status:=$imap.append($msg; "Drafts")
 
 <!-- REF #IMAPTransporterClass.createBox().Params -->
 
+<div class="no-index">
+
 | 引数   | 型      |                             | 説明                |
 | ---- | ------ | :-------------------------: | ----------------- |
 | name | Text   |              ->             | 新規メールボックスの名称      |
 | 戻り値  | Object | <- | createBox処理のステータス |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -464,12 +479,15 @@ End if
 
 <!-- REF #IMAPTransporterClass.delete().Params -->
 
+<div class="no-index">
+
 | 引数      | 型          |                             | 説明                                              |
 | ------- | ---------- | :-------------------------: | ----------------------------------------------- |
 | msgsIDs | Collection |              ->             | メッセージの固有ID のコレクション (テキスト)    |
 | allMsgs | Integer    |              ->             | `IMAP all`: 選択されたメールボックスの全メッセージ |
 | 戻り値     | Object     | <- | delete処理のステータス                                  |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -482,7 +500,7 @@ End if
 - `msgsIDs` には、削除するメッセージの固有ID を格納したコレクション
 - `allMsgs` には、選択されているメールボックスの全メッセージを削除するための定数 (倍長整数型):
 
-この関数を実行しても、メールが実際に削除される訳ではありません。 "削除済み" フラグがつけられたメッセージも引き続き [.searchMails()](#searchmails) 関数によって検索可能です。 Flagged messages are deleted from the IMAP server with the [`.expunge()`](#expunge) function or by selecting another mailbox or when the [transporter object](#imap-transporter-object) (created with [IMAP New transporter](../commands/imap-new-transporter.md)) is destroyed.
+この関数を実行しても、メールが実際に削除される訳ではありません。 "削除済み" フラグがつけられたメッセージも引き続き [.searchMails()](#searchmails) 関数によって検索可能です。 フラグがつけられたメッセージは、[`.expunge()`](#expunge) を実行したときか、別のメールボックスを選択したとき、あるいは([IMAP New transporter](../commands/imap-new-transporter.md) で作成された) [transporter オブジェクト](#imap-transporter-オブジェクト) が消去されたときにのみ、IMAPサーバーから削除されます。
 
 **返されるオブジェクト**
 
@@ -565,11 +583,14 @@ End if
 
 <!-- REF #IMAPTransporterClass.deleteBox().Params -->
 
+<div class="no-index">
+
 | 引数   | 型      |                             | 説明                |
 | ---- | ------ | :-------------------------: | ----------------- |
 | name | Text   |              ->             | 削除するメールボックスの名称    |
 | 戻り値  | Object | <- | deleteBox処理のステータス |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -644,10 +665,13 @@ End if
 
 <!-- REF IMAPTransporterClass.expunge().Params -->
 
+<div class="no-index">
+
 | 引数  | 型      |                             | 説明              |
 | --- | ------ | :-------------------------: | --------------- |
 | 戻り値 | Object | <- | expunge処理のステータス |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -713,11 +737,14 @@ $status:=$transporter.expunge()
 
 <!-- REF #IMAPTransporterClass.getBoxInfo().Params -->
 
+<div class="no-index">
+
 | 引数   | 型      |                             | 説明             |
 | ---- | ------ | :-------------------------: | -------------- |
 | name | Text   |              ->             | メールボックスの名称     |
 | 戻り値  | Object | <- | boxInfo オブジェクト |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -769,11 +796,14 @@ $status:=$transporter.expunge()
 
 <!-- REF #IMAPTransporterClass.getBoxList().Params -->
 
+<div class="no-index">
+
 | 引数         | 型          |                             | 説明                    |
 | ---------- | ---------- | :-------------------------: | --------------------- |
 | parameters | Object     |              ->             | 引数のオブジェクト             |
 | 戻り値        | Collection | <- | mailbox オブジェクトのコレクション |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -843,10 +873,13 @@ $status:=$transporter.expunge()
 
 <!-- REF #IMAPTransporterClass.getDelimiter().Params -->
 
+<div class="no-index">
+
 | 引数  | 型    |                             | 説明      |
 | --- | ---- | :-------------------------: | ------- |
 | 戻り値 | Text | <- | 階層区切り文字 |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -899,6 +932,8 @@ $status:=$transporter.expunge()
 
 <!-- REF #IMAPTransporterClass.getMail().Params -->
 
+<div class="no-index">
+
 | 引数        | 型       |                             | 説明                                               |
 | --------- | ------- | :-------------------------: | ------------------------------------------------ |
 | msgNumber | Integer |              ->             | メッセージのシーケンス番号                                    |
@@ -906,6 +941,7 @@ $status:=$transporter.expunge()
 | options   | Object  |              ->             | メッセージ管理オプション                                     |
 | 戻り値       | Object  | <- | [Email オブジェクト](EmailObjectClass.md#email-オブジェクト) |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -976,6 +1012,8 @@ ID = 1のメッセージを取得します:
 
 <!-- REF #IMAPTransporterClass.getMails().Params -->
 
+<div class="no-index">
+
 | 引数       | 型          |                             | 説明                                                                                                                                                         |
 | -------- | ---------- | :-------------------------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ids      | Collection |              ->             | メッセージID のコレクション                                                                                                                                            |
@@ -984,6 +1022,7 @@ ID = 1のメッセージを取得します:
 | options  | Object     |              ->             | メッセージ管理オプション                                                                                                                                               |
 | 戻り値      | Object     | <- | 次のコレクションを格納したオブジェクト:<br/><ul><li>[Email オブジェクト](EmailObjectClass.md#email-オブジェクト) のコレクション</li><li>見つからなかったメッセージの ID または番号のコレクション</li></ul> |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -1079,6 +1118,8 @@ ID = 1のメッセージを取得します:
 
 <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Params -->
 
+<div class="no-index">
+
 | 引数         | 型       |                             | 説明                                                            |
 | ---------- | ------- | :-------------------------: | ------------------------------------------------------------- |
 | msgNumber  | Integer |              ->             | メッセージのシーケンス番号                                                 |
@@ -1086,6 +1127,7 @@ ID = 1のメッセージを取得します:
 | updateSeen | Boolean |              ->             | true 時には、メールボックス内でメッセージを "既読" にします。 false 時にはメッセージの状態は変化しません。 |
 | 戻り値        | BLOB    | <- | メールサーバーから返された MIME文字列の BLOB                                   |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -1157,6 +1199,8 @@ ID = 1のメッセージを取得します:
 
 <!-- REF #IMAPTransporterClass.move().Params -->
 
+<div class="no-index">
+
 | 引数             | 型          |                             | 説明                                              |
 | -------------- | ---------- | :-------------------------: | ----------------------------------------------- |
 | msgsIDs        | Collection |              ->             | メッセージの固有ID のコレクション (テキスト)    |
@@ -1164,6 +1208,7 @@ ID = 1のメッセージを取得します:
 | destinationBox | Text       |              ->             | メッセージの移動先のメールボックス                               |
 | 戻り値            | Object     | <- | move処理のステータス                                    |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -1260,12 +1305,15 @@ ID = 1のメッセージを取得します:
 
 <!-- REF #IMAPTransporterClass.numToID().Params -->
 
+<div class="no-index">
+
 | 引数       | 型          |                             | 説明               |
 | -------- | ---------- | :-------------------------: | ---------------- |
 | startMsg | Integer    |              ->             | 先頭メッセージのシーケンス番号  |
 | endMsg   | Integer    |              ->             | 最後のメッセージのシーケンス番号 |
 | 戻り値      | Collection | <- | 固有ID のコレクション     |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -1324,12 +1372,15 @@ ID = 1のメッセージを取得します:
 
 <!-- REF #IMAPTransporterClass.removeFlags().Params -->
 
-| 引数       | 型      |                             | 説明                                                                                                                                                                                            |
-| -------- | ------ | :-------------------------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| msgIDs   | any    |              ->             | 文字列のコレクション: メッセージの固有ID (テキスト型)<br/>&#xA;テキスト: メッセージの固有ID<br/>&#xA;倍長整数 (IMAP all): 選択されたメールボックス内の全メッセージ |
-| keywords | Object |              ->             | 削除するキーワードフラグ                                                                                                                                                                                  |
-| 戻り値      | Object | <- | removeFlags処理のステータス                                                                                                                                                                           |
+<div class="no-index">
 
+| 引数       | 型      |                             | 説明                                                                                                                                                                                    |
+| -------- | ------ | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| msgIDs   | any    |              ->             | 文字列のコレクション: メッセージの固有ID (テキスト型)<br/> テキスト: メッセージの固有ID<br/> 倍長整数 (IMAP all): 選択されたメールボックス内の全メッセージ |
+| keywords | Object |              ->             | 削除するキーワードフラグ                                                                                                                                                                          |
+| 戻り値      | Object | <- | removeFlags処理のステータス                                                                                                                                                                   |
+
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -1415,12 +1466,15 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 <!-- REF #IMAPTransporterClass.renameBox().Params -->
 
+<div class="no-index">
+
 | 引数          | 型      |                             | 説明                |
 | ----------- | ------ | :-------------------------: | ----------------- |
 | currentName | Text   |              ->             | カレントメールボックスの名称    |
 | newName     | Text   |              ->             | 新しいメールボックス名       |
 | 戻り値         | Object | <- | renameBox処理のステータス |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -1494,11 +1548,14 @@ End if
 
 <!-- REF #IMAPTransporterClass.searchMails().Params -->
 
+<div class="no-index">
+
 | 引数             | 型          |                             | 説明             |
 | -------------- | ---------- | :-------------------------: | -------------- |
 | searchCriteria | Text       |              ->             | 検索条件           |
 | 戻り値            | Collection | <- | メッセージ番号のコレクション |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -1644,12 +1701,15 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 
 <!-- REF #IMAPTransporterClass.selectBox().Params -->
 
+<div class="no-index">
+
 | 引数    | 型       |                             | 説明             |
 | ----- | ------- | :-------------------------: | -------------- |
 | name  | Text    |              ->             | メールボックスの名称     |
 | state | Integer |              ->             | メールボックスのアクセス状態 |
 | 戻り値   | Object  | <- | boxInfo オブジェクト |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -1722,11 +1782,14 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 
 <!-- REF #IMAPTransporterClass.subscribe().Params -->
 
+<div class="no-index">
+
 | 引数   | 型      |                             | 説明                |
 | ---- | ------ | :-------------------------: | ----------------- |
 | name | Text   |              ->             | メールボックスの名称        |
 | 戻り値  | Object | <- | subscribe処理のステータス |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -1795,11 +1858,14 @@ End if
 
 <!-- REF #IMAPTransporterClass.unsubscribe().Params -->
 
+<div class="no-index">
+
 | 引数   | 型      |                             | 説明                  |
 | ---- | ------ | :-------------------------: | ------------------- |
 | name | Text   |              ->             | メールボックスの名称          |
 | 戻り値  | Object | <- | unsubscribe処理のステータス |
 
+</div>
 <!-- END REF -->
 
 #### 説明

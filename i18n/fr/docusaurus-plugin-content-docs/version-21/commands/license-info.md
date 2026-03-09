@@ -109,44 +109,44 @@ Chaque objet de la collection `products` peut avoir les propriétés suivantes :
 Vous souhaitez obtenir des informations sur votre licence 4D Server courante :
 
 ```4d
- var $obj : Object
- $obj:=License info
+ var $obj : Object
+ $obj:=License info
 ```
 
 *$obj* peut contenir, par exemple :
 
 ```json
 {
-    "name": "4D Server v16 R3",
-    "key": 123456789,
-    "licenseNumber": "xxxx",
-    "version": "16R3",
-    "userName": "John DOE",
-    "userMail": "john.doe@alpha.com",
-    "companyName": "Alpha",
-    "platforms": ["macOS", "windows"],
-    "expirationDate": {"day":1, "month":1, "year":2018},
-    "products":[
-        {
-            "allowedCount": 15,
-            "id": 808464697,
-            "name": "4D Write - 4D Write Pro",
-            "rights": [
-                {
-                    "count": 5,
-                    "expirationDate": {"day":1, "month":2, "year":2018}
-                }, {
-                    "count": 10,
-                    "expirationDate": {"day":1, "month":11, "year":2017}
-                }, {
-                    "count": 10,
-                    "expirationDate": {"day":1, "month":11, "year":2015} //expirée, non comptabilisée
-                }
-            ],
-            "usedCount": 12
-        },
-        {...}
-    ]
+    "name": "4D Server v16 R3",
+    "key": 123456789,
+    "licenseNumber": "xxxx",
+    "version": "16R3",
+    "userName": "John DOE",
+    "userMail": "john.doe@alpha.com",
+    "companyName": "Alpha",
+    "platforms": ["macOS", "windows"],
+    "expirationDate": {"day":1, "month":1, "year":2018},
+    "products":[
+        {
+            "allowedCount": 15,
+            "id": 808464697,
+            "name": "4D Write - 4D Write Pro",
+            "rights": [
+                {
+                    "count": 5,
+                    "expirationDate": {"day":1, "month":2, "year":2018}
+                }, {
+                    "count": 10,
+                    "expirationDate": {"day":1, "month":11, "year":2017}
+                }, {
+                    "count": 10,
+                    "expirationDate": {"day":1, "month":11, "year":2015} //expired, not counted
+                }
+            ],
+            "usedCount": 12
+        },
+        {...}
+    ]
 }
 ```
 

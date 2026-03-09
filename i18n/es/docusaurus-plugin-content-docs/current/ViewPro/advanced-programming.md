@@ -3,7 +3,7 @@ id: advanced-programming
 title: Programación avanzada con Javascript
 ---
 
-Un Área 4D View Pro es un [objeto de formulario de Área Web](../FormObjects/webArea_overview.md) que utiliza el [motor de renderizado web integrado](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine). Como tal, se comporta como cualquier otra área web, y puede ejecutar código Javascript llamando al comando 4D [`WA Evaluate Javascript`](../commands-legacy/wa-evaluate-javascript).
+Un Área 4D View Pro es un [objeto de formulario de Área Web](../FormObjects/webArea_overview.md) que utiliza el [motor de renderizado web integrado](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine). Como tal, se comporta como cualquier otra área web, y puede ejecutar código Javascript llamando al comando 4D [`WA Evaluate Javascript`](../commands/wa-evaluate-javascript).
 
 Dado que 4D View Pro es alimentado por la [solución de hoja de cálculo SpreadJS](https://developer.mescius.com/spreadjs), también puede llamar a los métodos Javascript de SpreadJS en las áreas 4D View Pro.
 
@@ -40,3 +40,4 @@ WA Evaluate JavaScript(*; "ViewProArea"; "Utils.spread.undoManager().undo()")
 ## Repositorio 4D View Pro Tips
 
 [4D-View-Pro-Tips](https://github.com/4d-depot/4D-View-Pro-Tips) es un repositorio GitHub que contiene un proyecto lleno de funciones útiles, que permiten gestionar imágenes flotantes, ordenar columnas o líneas, crear una cultura personalizada, ¡y mucho m Siéntase libre de clonarlo y experimentar con el proyecto.
+

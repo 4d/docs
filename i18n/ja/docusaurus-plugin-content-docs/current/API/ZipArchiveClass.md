@@ -45,3 +45,4 @@ End if
 `root` フォルダーとそのコンテンツは、[ZipFile](ZipFileClass.md) および [ZipFolder](ZipFolderClass.md) の関数とプロパティを使用することで操作可能です。
 
 このプロパティは **読み取り専用** です。
+

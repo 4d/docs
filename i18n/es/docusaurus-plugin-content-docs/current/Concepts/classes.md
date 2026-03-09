@@ -351,7 +351,7 @@ Una función constructora de clase acepta [parámetros](#parameters) opcionales 
 
 Cuando llama a la función [`new()`](API/ClassClass.md#new), el constructor de clase es llamado con los parámetros opcionalmente pasados a la función `new()`.
 
-Sólo puede haber una función constructora en una clase (de lo contrario se devuelve un error). El comando [`Super`](../commands/super) permite realizar llamadas a [`superclass`](../API/ClassClass#superclass), es decir, a la clase padre de la función.
+Sólo puede haber una función constructora en una clase (de lo contrario se devuelve un error). El comando [`Super`](../commands/super.md) permite realizar llamadas a [`superclass`](../API/ClassClass#superclass), es decir, a la clase padre de la función.
 
 Puede crear y escribir propiedades de instancia dentro del constructor (ver ejemplo). Alternativamente, si los valores de las propiedades de instancia no dependen de los parámetros pasados al constructor, puede definirlos utilizando la palabra clave [`property`](#property).
 
@@ -889,3 +889,4 @@ $myList := cs.ItemInventory.me.itemList
 #### Ver también
 
 [Singletons en 4D](https://blog.4d.com/singletons-in-4d) (post del blog) <br/> [Singletons de sesión](https://blog.4d.com/introducing-session-singletons) (post del blog).
+

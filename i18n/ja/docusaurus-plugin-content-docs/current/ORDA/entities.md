@@ -540,7 +540,7 @@ Function event restrict() : cs.CustomersSelection
 | [entitySelection.query()](../API/EntitySelectionClass.md#query)       |                                                                                                                                                                    |
 | [entitySelection.attributeName](../API/EntitySelectionClass.md#attributename)            | *attributeName* が、制限されたデータクラスのリレートエンティティまたはリレートエンティティズの場合、フィルターが適用されます (エイリアスおよび計算属性も含む)                                                        |
 | [entity.attributeName](../API/EntityClass.md#attributename)                              | *attributeName* が、制限されたデータクラスのリレートエンティティズの場合、フィルターが適用されます (エイリアスおよび計算属性も含む)                                                                     |
-| [Create entity selection](../commands/create-entity-selection)                                        |                                                                                                                                                                    |
+| [Create entity selection](../commands/create-entity-selection)                                           |                                                                                                                                                                    |
 
 その他の ORDA関数によるデータアクセスはフィルターを直接的にトリガーしないものの、その恩恵を受けることがあります。 たとえば、[`entity.next()`](../API/EntityClass.md#next) 関数は、すでにフィルタリングされたエンティティセレクションにおける次のエンティティを返します。 一方、制限されていないエンティティセレクションの場合、[`entity.next()`](../API/EntityClass.md#next) はフィルタリングされていないエンティティ群に対して動作します。
 
@@ -624,3 +624,4 @@ $person1:=ds.Person.get(1) // エンティティを参照
 
 - クラシックコマンドを使用してロックした場合:<br/><br/>![](../assets/en/ORDA/concurrent2.png)
 - ORDA関数を使用してロックした場合:<br/><br/>![](../assets/en/ORDA/concurrent3.png)
+

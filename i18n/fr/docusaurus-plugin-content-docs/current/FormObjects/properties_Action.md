@@ -32,7 +32,7 @@ Pour plus d'informations, reportez-vous à [Glisser-déposer](https://doc.4d.com
 
 #### Commandes
 
-[OBJECT GET DRAG AND DROP OPTIONS](../commands-legacy/object-get-drag-and-drop-options) - [OBJECT SET DRAG AND DROP OPTIONS](../commands-legacy/object-set-drag-and-drop-options)
+[OBJECT GET DRAG AND DROP OPTIONS](../commands/object-get-drag-and-drop-options) - [OBJECT SET DRAG AND DROP OPTIONS](../commands/object-set-drag-and-drop-options)
 
 #### Voir également
 
@@ -64,7 +64,7 @@ Pour plus d'informations, reportez-vous à [Glisser-déposer](https://doc.4d.com
 
 #### Commandes
 
-[OBJECT GET DRAG AND DROP OPTIONS](../commands-legacy/object-get-drag-and-drop-options) - [OBJECT SET DRAG AND DROP OPTIONS](../commands-legacy/object-set-drag-and-drop-options)
+[OBJECT GET DRAG AND DROP OPTIONS](../commands/object-get-drag-and-drop-options) - [OBJECT SET DRAG AND DROP OPTIONS](../commands/object-set-drag-and-drop-options)
 
 #### Voir également
 
@@ -158,7 +158,7 @@ Permet la sélection de plusieurs enregistrements/options dans une [liste hiéra
 
 #### Commandes
 
-[GET LIST PROPERTIES](../commands-legacy/get-list-properties) - [SET LIST PROPERTIES](../commands-legacy/set-list-properties)
+[GET LIST PROPERTIES](../commands/get-list-properties) - [SET LIST PROPERTIES](../commands/set-list-properties)
 
 ---
 
@@ -207,5 +207,6 @@ Vous pouvez associer à la fois une action standard et une méthode projet à un
 
 #### Commandes
 
-[`OBJECT Get action`](../commands-legacy/object-get-action) - [`OBJECT SET ACTION`](../commands-legacy/object-set-action)
+[`OBJECT Get action`](../commands/object-get-action) - [`OBJECT SET ACTION`](../commands/object-set-action)
+
 

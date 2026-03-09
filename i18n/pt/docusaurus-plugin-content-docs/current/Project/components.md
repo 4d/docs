@@ -603,7 +603,7 @@ Em seguida, você pode inserir seu token de acesso pessoal:
 
 Você só pode inserir um token de acesso pessoal. Uma vez que um token foi inserido, você pode editá-lo.
 
-O token fornecido é armazenado em um arquivo **github.json** na [pasta 4D ativa](../commands-legacy/get-4d-folder.md#active-4d-folder).
+O token fornecido é armazenado em um arquivo **github.json** na [pasta 4D ativa](../commands/get-4d-folder#active-4d-folder).
 
 ### Removendo uma dependência
 
@@ -624,4 +624,5 @@ Se você confirmar a caixa de diálogo, a dependência [estado](#dependency-stat
 #### Dependency usage warnings
 
 When you attempt to remove a primary dependency that is required by other dependencies in your project, you will be warned that the dependency is still in use. The system will display which other dependencies require it and prompt you to confirm the removal, as removing it may cause those dependent components to stop working properly.
+
 

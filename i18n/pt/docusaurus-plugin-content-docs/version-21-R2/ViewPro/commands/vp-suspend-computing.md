@@ -9,9 +9,14 @@ title: VP SUSPEND COMPUTING
 
 <!-- REF #_method_.VP SUSPEND COMPUTING.Params -->
 
-| Parâmetro  | Tipo |    | Descrição                                  |                  |
-| ---------- | ---- | -- | ------------------------------------------ | ---------------- |
-| vpAreaName | Text | -> | Nome de objeto formulário área 4D View Pro | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro  | Tipo |    | Descrição                                  |
+| ---------- | ---- | -- | ------------------------------------------ |
+| vpAreaName | Text | -> | Nome de objeto formulário área 4D View Pro |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

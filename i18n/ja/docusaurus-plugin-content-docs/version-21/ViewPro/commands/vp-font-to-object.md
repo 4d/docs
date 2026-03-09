@@ -9,11 +9,14 @@ title: VP Font to object
 
 <!-- REF #_method_.VP Font to object.Params -->
 
+<div class="no-index">
+
 | 引数   | 型      |                             | 説明              |
 | ---- | ------ | --------------------------- | --------------- |
 | font | Text   | ->                          | フォントのショートハンド文字列 |
 | 戻り値  | Object | <- | フォントオブジェクト      |
 
+</div>
 <!-- END REF -->
 
 ## 説明

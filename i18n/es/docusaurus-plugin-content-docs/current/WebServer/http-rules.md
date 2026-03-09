@@ -225,3 +225,4 @@ $return:=WEB Server.start($settings)
 [Nueva forma de controlar sus respuestas HTTP](https://blog.4d.com/new-way-to-control-your-http-responses/)
 
 :::
+

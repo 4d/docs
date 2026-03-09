@@ -43,13 +43,14 @@ Los objetos POP3 Transporter se instancian con el comando [POP3 New transporter]
 
 
 <!-- REF #_command_.POP3 New transporter.Params -->
-| Parámetros | Tipo               |    | Descripción                                                                    |
-| ---------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
-| server     | object             | -> | Información del servidor de correo                                             |
-| Resultado  | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object)|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|server|object|->|Mail server information|
+|Result|4D.POP3Transporter|<-|[POP3 transporter object](#pop3-transporter-object)|
+</div>
+<!-- END REF -->
 
 
 #### Descripción
@@ -103,12 +104,14 @@ La función devuelve un [**objeto POP3 transporter**](#pop3-transporter-object).
 
 
 <!-- REF #4D.POP3Transporter.new().Params -->
-| Parámetros | Tipo               |    | Descripción                                                                    |
-| ---------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
-| server     | Object             | -> | Información del servidor de correo                                             |
-| Resultado  | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|server|Object|->|Mail server information|
+|Result|4D.POP3Transporter|<-|[POP3 transporter object](#pop3-transporter-object)|
+</div>
+<!-- END REF -->
 
 #### Descripción
 
@@ -165,11 +168,13 @@ La función `4D.POP3Transporter.new()` <!-- REF #4D.POP3Transporter.new().Summar
 
 
 <!-- REF #POP3TransporterClass.delete().Params -->
-| Parámetros | Tipo    |    | Descripción                                              |
-| ---------- | ------- |:--:| -------------------------------------------------------- |
-| msgNumber  | Integer | -> | Número del mensaje a eliminar|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|msgNumber|Integer|->|Number of the message to delete|
+</div>
+<!-- END REF -->
 
 ##### Descripción
 
@@ -211,11 +216,13 @@ La ejecución de este método no elimina realmente ningún correo electrónico. 
 
 
 <!-- REF #POP3TransporterClass.getBoxInfo().Params -->
-| Parámetros | Tipo   |    | Descripción                               |
-| ---------- | ------ |:--:| ----------------------------------------- |
-| Resultado  | Object | <- | objeto boxInfo|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Object|<-|boxInfo object|
+</div>
+<!-- END REF -->
 
 ##### Descripción
 
@@ -260,12 +267,14 @@ El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 
 
 <!-- REF #POP3TransporterClass.getMail().Params -->
-| Parámetros | Tipo    |    | Descripción                                                                 |
-| ---------- | ------- |:--:| --------------------------------------------------------------------------- |
-| msgNumber  | Integer | -> | Número del mensaje en la lista                                              |
-| Resultado  | Object  | <- | [Objeto Email](EmailObjectClass.md#email-object)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|msgNumber|Integer|->|Number of the message in the list |
+|Result|Object|<-|[Email object](EmailObjectClass.md#email-object)|
+</div>
+<!-- END REF -->
 
 ##### Descripción
 
@@ -317,12 +326,14 @@ Quiere saber el remitente del primer correo del buzón:
 
 
 <!-- REF #POP3TransporterClass.getMailInfo().Params -->
-| Parámetros | Tipo    |    | Descripción                                |
-| ---------- | ------- |:--:| ------------------------------------------ |
-| msgNumber  | Integer | -> | Número del mensaje en la lista             |
-| Resultado  | Object  | <- | objeto mailInfo|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|msgNumber|Integer|->|Number of the message in the list |
+|Result|Object|<-|mailInfo object|
+</div>
+<!-- END REF -->
 
 ##### Descripción
 
@@ -378,11 +389,13 @@ El método devuelve **Null** si:
 
 
 <!-- REF #POP3TransporterClass.getMailInfoList().Params -->
-| Parámetros | Tipo       |    | Descripción                                                |
-| ---------- | ---------- |:--:| ---------------------------------------------------------- |
-| Resultado  | Collection | <- | Colección de objetos `mailInfo`|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Collection|<-|Collection of `mailInfo` objects|
+</div>
+<!-- END REF -->
 
 ##### Descripción
 
@@ -443,12 +456,14 @@ Quiere saber el número total y el tamaño de los correos electrónicos en el bu
 
 
 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Params -->
-| Parámetros | Tipo    |    | Descripción                                                                          |
-| ---------- | ------- |:--:| ------------------------------------------------------------------------------------ |
-| msgNumber  | Integer | -> | Número del mensaje en la lista                                                       |
-| Resultado  | Blob    | <- | Blob de la cadena MIME devuelta por el servidor de correo|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|msgNumber|Integer|-> |Number of the message in the list|
+|Result|Blob|<-|Blob of the MIME string returned from the mail server|
+</div>
+<!-- END REF -->
 
 ##### Descripción
 
@@ -508,11 +523,13 @@ Quiere saber el número total y el tamaño de los correos electrónicos en el bu
 
 
 <!-- REF #POP3TransporterClass.undeleteAll().Params -->
-| Parámetros | Tipo |  | Descripción                                             |
-| ---------- | ---- |::| ------------------------------------------------------- |
-|            |      |  | No requiere ningún parámetro|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+||||Does not require any parameters|
+</div>
+<!-- END REF -->
 
 ##### Descripción
 

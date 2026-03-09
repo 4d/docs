@@ -34,6 +34,8 @@ Les objets Attachment fournissent les propriétés et fonctions suivantes en lec
 
 <!-- REF #4D.MailAttachment.new().Params -->
 
+<div class="no-index">
+
 | Paramètres  | Type                              |                             | Description                                                                                          |
 | ----------- | --------------------------------- | :-------------------------: | ---------------------------------------------------------------------------------------------------- |
 | file        | 4D.File           |              ->             | Fichier joint                                                                                        |
@@ -46,6 +48,7 @@ Les objets Attachment fournissent les propriétés et fonctions suivantes en lec
 | disposition | Text                              |              ->             | Valeur de l'en-tête content-disposition : "inline" ou "attachment"                   |
 | Résultat    | 4D.MailAttachment | <- | Objet pièce jointe                                                                                   |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -77,10 +80,13 @@ La propriété `.disposition` contient <!-- REF #MailAttachmentClass.disposition
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type                    |                             | Description                |
 | ---------- | ----------------------- | :-------------------------: | -------------------------- |
 | Résultat   | 4D.Blob | <- | Contenu de la pièce jointe |
 
+</div>
 <!-- END REF -->
 
 #### Description

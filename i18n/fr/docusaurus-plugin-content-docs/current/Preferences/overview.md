@@ -21,7 +21,7 @@ Vous pouvez également afficher la boîte de dialogue Préférences en mode Appl
 
 ## Storage
 
-Les réglages effectués dans la boîte de dialogue des Préférences sont enregistrés dans un fichier de préférences au format XML nommé **4D Preferences vXX.4DPreferences** qui est stocké dans le dossier 4D actif de l'utilisateur courant, tel qu'il est renvoyé par la commande [`Get 4D folder`](../commands-legacy/get-4d-folder) :
+Les réglages effectués dans la boîte de dialogue des Préférences sont enregistrés dans un fichier de préférences au format XML nommé **4D Preferences vXX.4DPreferences** qui est stocké dans le dossier 4D actif de l'utilisateur courant, tel qu'il est renvoyé par la commande [`Get 4D folder`](../commands/get-4d-folder) :
 
 - Windows: `{disk}\Users\\{username\}\AppData\Roaming\4D`
 - macOS: `{disk}:Users:\{username\}:Library:Application Support:4D`
@@ -41,4 +41,5 @@ Pour rétablir les valeurs par défaut des paramètres et supprimer le style gra
 ![](../assets/en/Preferences/overviewSettings.png)
 
 Ce bouton réinitialise tous les paramètres de la page courante. Il devient actif lorsqu'au moins un paramètre a été modifié sur la page courante.
+
 

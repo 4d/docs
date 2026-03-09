@@ -45,7 +45,7 @@ Para obter mais informações sobre regras de nomenclatura para objetos de formu
 
 #### Comandos
 
-[FORM GET OBJECTS](../commands-legacy/form-get-objects) - [OBJECT Get name](../commands-legacy/object-get-name)
+[FORM GET OBJECTS](../commands/form-get-objects) - [OBJECT Get name](../commands/object-get-name)
 
 ---
 
@@ -106,7 +106,7 @@ You can leave it up to 4D to create variables associated with your form objects 
 
 Quando uma variável não é nomeada, quando o formulário é carregado, 4D cria uma variável para o objeto, com um nome calculado único no espaço das variáveis de processo do intérprete (o que significa que esse mecanismo pode ser usado mesmo no modo compilado). Esta variável temporária será destruída quando o formulário for fechado.
 
-To get or set the value of form objects that use dynamic variables, you just need to call [`OBJECT Get value`](../commands-legacy/object-get-value) and [`OBJECT SET VALUE`](../commands-legacy/object-set-value) commands. Por exemplo:
+To get or set the value of form objects that use dynamic variables, you just need to call [`OBJECT Get value`](../commands/object-get-value) and [`OBJECT SET VALUE`](../commands/object-set-value) commands. Por exemplo:
 
 ```4d
  var $value : Variant
@@ -124,7 +124,7 @@ For an array list box, the **Variable or Expression** property usually holds the
 
 #### Comandos
 
-[`LISTBOX Get column formula`](../commands-legacy/listbox-get-column-formula) - [`LISTBOX SET COLUMN FORMULA`](../commands-legacy/listbox-set-column-formula) - [`OBJECT Get data source`](../commands-legacy/object-get-data-source) - [`OBJECT Get data source formula`](../commands/object-get-data-source-formula) - [`OBJECT Get value`](../commands-legacy/object-get-value) - [`OBJECT Get pointer`](../commands-legacy/object-get-pointer) - [`OBJECT SET VALUE`](../commands-legacy/object-set-value) - [`OBJECT SET DATA SOURCE`](../commands-legacy/object-set-data-source) - [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula)
+[`LISTBOX Get column formula`](../commands/listbox-get-column-formula) - [`LISTBOX SET COLUMN FORMULA`](../commands/listbox-set-column-formula) - [`OBJECT Get data source`](../commands/object-get-data-source) - [`OBJECT Get data source formula`](../commands/object-get-data-source-formula) - [`OBJECT Get value`](../commands/object-get-value) - [`OBJECT Get pointer`](../commands/object-get-pointer) - [`OBJECT SET VALUE`](../commands/object-set-value) - [`OBJECT SET DATA SOURCE`](../commands/object-set-data-source) - [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula)
 
 ---
 
@@ -194,7 +194,7 @@ A coleção ou a seleção da entidade deve estar disponível para o formulário
 
 #### Comandos
 
-[`OBJECT Get data source`](../commands-legacy/object-get-data-source) - [`OBJECT Get data source formula`](../commands/object-get-data-source-formula) - [`OBJECT Get value`](../commands-legacy/object-get-value) - [`OBJECT Get pointer`](../commands-legacy/object-get-pointer) - [`OBJECT SET VALUE`](../commands-legacy/object-set-value) - [`OBJECT SET DATA SOURCE`](../commands-legacy/object-set-data-source) - [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula)
+[`OBJECT Get data source`](../commands/object-get-data-source) - [`OBJECT Get data source formula`](../commands/object-get-data-source-formula) - [`OBJECT Get value`](../commands/object-get-value) - [`OBJECT Get pointer`](../commands/object-get-pointer) - [`OBJECT SET VALUE`](../commands/object-set-value) - [`OBJECT SET DATA SOURCE`](../commands/object-set-data-source) - [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula)
 
 ---
 
@@ -279,7 +279,7 @@ Para fins de tradução da aplicação, você pode inserir uma referência XLIFF
 
 #### Comandos
 
-[`OBJECT Get title`](../commands-legacy/object-get-title) - [`OBJECT SET TITLE`](../commands-legacy/object-set-title)
+[`OBJECT Get title`](../commands/object-get-title) - [`OBJECT SET TITLE`](../commands/object-set-title)
 
 ---
 
@@ -287,7 +287,7 @@ Para fins de tradução da aplicação, você pode inserir uma referência XLIFF
 
 This property sets the type of calculation to be done in a [column footer](listbox-header-footer.md#footers) area.
 
-> O cálculo de rodapés também pode ser definido usando o comando [`LISTBOX SET FOOTER CALCULATION`](../commands-legacy/listbox-set-footer-calculation) 4D.
+> The calculation for footers can also be set using the [`LISTBOX SET FOOTER CALCULATION`](../commands/listbox-set-footer-calculation) 4D command.
 
 Existem vários tipos de cálculos disponíveis. A tabela a seguir mostra quais cálculos podem ser usados conforme o tipo de dados encontrados em cada coluna e indica que o tipo é automaticamente afetado por 4D para a variável de rodapé (se não for digitado pelo código):
 
@@ -336,4 +336,4 @@ Cuando está configurado **Personalizado** ("none" en JSON), 4D no realiza cálc
 
 #### Comandos
 
-[`LISTBOX Get footer calculation`](../commands-legacy/listbox-get-footer-calculation) - [`LISTBOX SET FOOTER CALCULATION`](../commands-legacy/listbox-set-footer-calculation)
+[`LISTBOX Get footer calculation`](../commands/listbox-get-footer-calculation) - [`LISTBOX SET FOOTER CALCULATION`](../commands/listbox-set-footer-calculation)

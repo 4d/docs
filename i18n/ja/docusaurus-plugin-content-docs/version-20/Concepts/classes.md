@@ -105,11 +105,13 @@ Project フォルダー Project Sources Classes Polygon.4dm
 <!-- REF #_command_.cs.Syntax -->**cs** : Object <!-- END REF -->
 
 <!-- REF #_command_.cs.Params -->
-| 引数         | 型      |    | 説明                                                     |
-| ---------- | ------ | -- | ------------------------------------------------------ |
-| classStore | Object | <- | プロジェクトまたはコンポーネントのユーザークラスストア|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|classStore|Object|<-|User class store for the project or component|
+</div>
+<!-- END REF -->
 
 `cs` コマンドは、 <!-- REF #_command_.cs.Summary -->カレントプロジェクトまたはコンポーネントのユーザークラスストアを返します<!-- END REF -->。 これには、プロジェクトまたはコンポーネントにて [定義](#クラス定義) されている、すべてのユーザークラスが含まれます。 デフォルトでは、 [ORDAクラス](ORDA/ordaClasses.md) のみ利用可能です。
 
@@ -127,11 +129,13 @@ $instance:=cs.myClass.new()
 <!-- REF #_command_.4D.Syntax -->**4D** : Object <!-- END REF -->
 
 <!-- REF #_command_.4D.Params -->
-| 引数         | 型      |    | 説明                                  |
-| ---------- | ------ | -- | ----------------------------------- |
-| classStore | Object | <- | 4Dクラスストア|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|classStore|Object|<-|4D class store|
+</div>
+<!-- END REF -->
 
 `4D` コマンドは、 <!-- REF #_command_.4D.Summary -->ビルトイン 4Dクラスのクラスストアを返します<!-- END REF -->。 [CryptoKey](API/CryptoKeyClass.md) などの専用 API へのアクセスを提供します。
 
@@ -529,12 +533,14 @@ Class constructor ($side : Integer)
 <!-- REF #_command_.Super.Syntax -->**Super**( ...param : any )<br/>**Super** : Object<!-- END REF -->
 
 <!-- REF #_command_.Super.Params -->
-| 引数    | 型      |    | 説明                                 |
-| ----- | ------ | -- | ---------------------------------- |
-| param | any    | -> | 親コンストラクターに受け渡す引数                   |
-| 戻り値   | Object | <- | 親オブジェクト|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|  
+|---|---|---|---|
+|param|any|->|Parameter(s) to pass to the parent constructor|
+|Result|Object|<-|Object's parent|
+</div>
+<!-- END REF -->
 
 `Super` キーワードによって、 <!-- REF #_command_.Super.Summary -->スーパークラス (親クラス) を呼び出すことができます<!-- END REF -->。
 
@@ -643,11 +649,13 @@ $message:=$square.description() // "I have 4 sides which are all equal"
 <!-- REF #_command_.This.Syntax -->**This** : Object<!-- END REF -->
 
 <!-- REF #_command_.This.Params -->
-| 引数  | 型      |    | 説明                                    |
-| --- | ------ | -- | ------------------------------------- |
-| 戻り値 | Object | <- | カレントオブジェクト|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|  
+|---|---|---|---|
+|Result|Object|<-|Current object|
+</div>
+<!-- END REF -->
 
 `This` キーワードは、 <!-- REF #_command_.This.Summary -->現在処理中のオブジェクトへの参照を返します<!-- END REF -->。
 

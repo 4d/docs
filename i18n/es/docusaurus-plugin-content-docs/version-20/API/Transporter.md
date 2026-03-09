@@ -352,11 +352,13 @@ La propiedad `.user` contiene <!-- REF #transporter.user.Summary --> el nombre d
 
 
 <!-- REF #transporter.checkConnection().Params -->
-| Parámetros | Tipo   |    | Descripción                                                               |
-| ---------- | ------ |:--:| ------------------------------------------------------------------------- |
-| Resultado  | Object | <- | Estado de la conexión del objeto transportador|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Object|<-|Status of the transporter object connection|
+</div>
+<!-- END REF -->
 
 #### Descripción
 

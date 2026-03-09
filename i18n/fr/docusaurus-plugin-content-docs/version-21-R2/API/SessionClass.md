@@ -66,10 +66,13 @@ Tous les types de session peuvent gérer des privilèges, mais seul le code exé
 
 <!-- REF #SessionClass.clearPrivileges().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type    |                             | Description                     |
 | ---------- | ------- | :-------------------------: | ------------------------------- |
 | Résultat   | Boolean | <- | True si l'exécution est réussie |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -116,11 +119,14 @@ $isOK:=Session.clearPrivileges()
 
 <!-- REF #SessionClass.createOTP().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type    |                             | Description                                                                               |
 | ---------- | ------- | :-------------------------: | ----------------------------------------------------------------------------------------- |
 | lifespan   | Integer |              ->             | Durée de vie du token de session en secondes (sessions web uniquement) |
 | Résultat   | Text    | <- | UUID du token OTP                                                                         |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -164,10 +170,13 @@ $token := Session.createOTP( 60 ) //le token est valable pendant 1 mn
 
 <!-- REF #SessionClass.demote().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type    |     | Description                             |
 | ---------- | ------- | :-: | --------------------------------------- |
 | promoteId  | Integer |  -> | Id retourné par la fonction `promote()` |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -263,10 +272,13 @@ $expiration:=Session.expirationDate //ex : "2021-11-05T17:10:42Z"
 
 <!-- REF #SessionClass.getPrivileges().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type       |                             | Description                                                   |
 | ---------- | ---------- | :-------------------------: | ------------------------------------------------------------- |
 | Résultat   | Collection | <- | Collection de noms de privilèges (chaînes) |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -362,11 +374,14 @@ $privileges := Session.getPrivileges()
 
 <!-- REF #SessionClass.hasPrivilege().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type    |                             | Description                                           |
 | ---------- | ------- | :-------------------------: | ----------------------------------------------------- |
 | privilege  | Text    |              ->             | Nom du privilège à vérifier                           |
 | Résultat   | Boolean | <- | Vrai si la session dispose du *privilege*, sinon Faux |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -537,10 +552,13 @@ L'objet `.info` contient les propriétés suivantes:
 
 <!-- REF #SessionClass.isGuest().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type    |                             | Description                                                                                        |
 | ---------- | ------- | :-------------------------: | -------------------------------------------------------------------------------------------------- |
 | Résultat   | Boolean | <- | True si la session est une session Guest, False sinon (sessions web uniquement) |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -587,11 +605,14 @@ End if
 
 <!-- REF #SessionClass.promote().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type    |                             | Description                                                     |
 | ---------- | ------- | :-------------------------: | --------------------------------------------------------------- |
 | privilege  | Text    |              ->             | Nom de privilège                                                |
 | Résultat   | Integer | <- | id à utiliser pour l'appel de la fonction [`demote()`](#demote) |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -665,11 +686,14 @@ End if
 
 <!-- REF #SessionClass.restore().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type    |                             | Description                                                                     |
 | ---------- | ------- | :-------------------------: | ------------------------------------------------------------------------------- |
 | token      | Text    |              ->             | UUID du token de session                                                        |
 | Résultat   | Boolean | <- | True si la session courante a été remplacée avec succès par la session du token |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -728,6 +752,8 @@ Function callback($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 <!-- REF #SessionClass.setPrivileges().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type       |                             | Description                                                                         |
 | ---------- | ---------- | :-------------------------: | ----------------------------------------------------------------------------------- |
 | privilege  | Text       |              ->             | Nom de privilège                                                                    |
@@ -735,6 +761,7 @@ Function callback($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 | settings   | Object     |              ->             | Objet contenant une propriété "privileges" (texte ou collection) |
 | Résultat   | Boolean    | <- | True si l'exécution est réussie                                                     |
 
+</div>
 <!-- END REF -->
 
 #### Description

@@ -56,7 +56,7 @@ Chaque objet erreur contient les propriétés suivantes :
 | FCGI                      | fast cgi 4D bridge                                                  |
 | FiFo                      | 4D file objects                                                     |
 | HTCL                      | http client 4D apis                                                 |
-| HTTP                      | 4D http server                                                      |
+| Client HTTP               | 4D http server                                                      |
 | IMAP                      | IMAP 4D apis                                                        |
 | JFEM                      | Form Macro apis                                                     |
 | LD4D                      | LDAP 4D apis                                                        |

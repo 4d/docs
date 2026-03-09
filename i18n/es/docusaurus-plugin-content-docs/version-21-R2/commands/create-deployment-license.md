@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 | Parámetros        | Tipo                      |                             | Descripción                                                   |
 | ----------------- | ------------------------- | --------------------------- | ------------------------------------------------------------- |
-| mergedApp         | [4D.Folder](../API/FolderClass.md)  | &#8594; | Carpeta que contiene la aplicación fusionada                  |
+| mergedApp         | 4D.Folder | &#8594; | Carpeta que contiene la aplicación fusionada                  |
 | autoLicenseTarget | Integer                   | &#8594; | Licencia objetivo para la integración automática de licencias |
 | buildLicense      | 4D.File   | &#8594; | Licencia necesaria para generar la licencia integrada         |
 | oemLicense        | 4D.File   | &#8594; | Licencia 4D OEM XML Key si se trata de una licencia servidor  |

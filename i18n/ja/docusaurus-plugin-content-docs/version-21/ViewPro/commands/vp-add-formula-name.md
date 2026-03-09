@@ -9,12 +9,17 @@ title: VP ADD FORMULA NAME
 
 <!-- REF #_method_.VP ADD FORMULA NAME.Params -->
 
-| 引数         | 型      |    | 説明                      |                  |
-| ---------- | ------ | -- | ----------------------- | ---------------- |
-| vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名 |                  |
-| vpFormula  | Text   | -> | 4D View Pro フォーミュラ      |                  |
-| name       | Text   | -> | フォーミュラの名称               |                  |
-| options    | Object | -> | 命名フォーミュラのオプション          | <!-- END REF --> |
+<div class="no-index">
+
+| 引数         | 型      |    | 説明                      |
+| ---------- | ------ | -- | ----------------------- |
+| vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名 |
+| vpFormula  | Text   | -> | 4D View Pro フォーミュラ      |
+| name       | Text   | -> | フォーミュラの名称               |
+| options    | Object | -> | 命名フォーミュラのオプション          |
+
+</div>
+<!-- END REF -->
 
 ## 説明
 

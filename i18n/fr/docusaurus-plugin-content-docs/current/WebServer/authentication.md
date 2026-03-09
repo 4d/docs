@@ -81,7 +81,7 @@ La méthode base `On Web Authentication` est donc appelée :
 
 - lorsque le serveur web reçoit une URL demandant une ressource qui n'existe pas
 - lorsque le serveur web reçoit une URL commençant par `4DACTION/`
-- lorsque le serveur web reçoit une URL d'accès à la racine et qu'aucune page d'accueil n'a été définie dans les Propriétés ou au moyen de la commande [`WEB SET HOME PAGE`](../commands-legacy/web-set-home-page)
+- lorsque le serveur web reçoit une URL d'accès à la racine et qu'aucune page d'accueil n'a été définie dans les Propriétés ou au moyen de la commande [`WEB SET HOME PAGE`](../commands/web-set-home-page)
 - lorsque le serveur web traite une balise exécutant du code (par exemple `4DSCRIPT`) dans une page semi-dynamique.
 
 La méthode base `On Web Authentication` n'est PAS appelée :
@@ -197,3 +197,4 @@ Exemple de méthode base `On Web Authentication` en mode [DIGEST](#digest-protoc
     $valid:=False // User n'existe pas
  End if
 ```
+

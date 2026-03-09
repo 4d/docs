@@ -255,11 +255,11 @@ La prise en charge du tri standard dépend du type de list box :
 
 ### Tri personnalisé
 
-Le développeur peut mettre en place des tris personnalisés, par exemple en utilisant la commande [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns) et/ou en combinant les événements formulaire [`On Header Click`](../Events/onHeaderClick) et [`On After Sort`](../Events/onAfterSort) et les commandes 4D correspondantes.
+Le développeur peut mettre en place des tris personnalisés, par exemple en utilisant la commande [`LISTBOX SORT COLUMNS`](../commands/listbox-sort-columns) et/ou en combinant les événements formulaire [`On Header Click`](../Events/onHeaderClick) et [`On After Sort`](../Events/onAfterSort) et les commandes 4D correspondantes.
 
 Les tris personnalisés vous permettent de :
 
-- effectuer des tris multi-niveaux sur plusieurs colonnes, grâce à la commande [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns),
+- effectuer des tris multi-niveaux sur plusieurs colonnes, grâce à la commande [`LISTBOX SORT COLUMNS`](../commands/listbox-sort-columns),
 - utiliser des fonctions telles que [`collection.orderByMethod()`](../API/CollectionClass.md#orderbymethod) ou [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) pour trier les colonnes en fonction de critères complexes.
 
 #### Exemple
@@ -301,7 +301,7 @@ La valeur de la [variable associée à l’en-tête d’une colonne](properties_
 
 Vous pouvez définir la valeur de la variable (par exemple, Header2:=2) afin de "forcer" l'affichage de la flèche de tri. Le tri de la colonne lui-même n'est pas modifié dans ce cas ; c'est au développeur de s'en charger.
 
-> La commande [`OBJECT SET FORMAT`](../commands-legacy/object-set-format) offre un support spécifique pour les icônes dans les en-têtes de list box, ce qui peut être utile lorsque vous souhaitez travailler avec une icône de tri personnalisée.
+> La commande [`OBJECT SET FORMAT`](../commands/object-set-format) offre un support spécifique pour les icônes dans les en-têtes de list box, ce qui peut être utile lorsque vous souhaitez travailler avec une icône de tri personnalisée.
 
 ## Gestion des styles et des couleurs
 
@@ -395,7 +395,7 @@ Pour définir une list box hiérarchique, vous disposez de trois possibilités :
 
 - Configurer manuellement les éléments hiérarchiques via la liste des propriétés dans l’éditeur de formulaires (ou éditer le formulaire JSON).
 - Générer visuellement la hiérarchie à l’aide du pop up menu de gestion des list box, dans l’éditeur de formulaires.
-- Utilisez les commandes [`LISTBOX SET HIERARCHY`](../commands-legacy/listbox-set-hierarchy) et [`LISTBOX GET HIERARCHY`](../commands-legacy/listbox-get-hierarchy).
+- Utilisez les commandes [`LISTBOX SET HIERARCHY`](../commands/listbox-set-hierarchy) et [`LISTBOX GET HIERARCHY`](../commands/listbox-get-hierarchy).
 
 #### Propriété List box hiérarchique
 
@@ -577,6 +577,7 @@ Dans ce cas, le remplissage et le vidage des tableaux doivent être effectués p
   ![](../assets/en/FormObjects/hierarch16.png)
 
 - Lorsque l’utilisateur clique sur un bouton de contraction, vous pouvez traiter l’événement `On Collapse`. La commande [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) renvoie la cellule concernée : vous supprimez autant de lignes que nécessaire de la zone de liste à l'aide de la commande [`LISTBOX DELETE ROWS`](../commands/listbox-delete-rows).
+
 
 
 

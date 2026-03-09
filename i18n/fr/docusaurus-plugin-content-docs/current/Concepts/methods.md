@@ -206,7 +206,7 @@ Si vous cochez la case **Nouveau Process** , la méthode que vous avez sélectio
 **Notes 4D Server**:
 
 - Si vous souhaitez que la méthode soit exécutée sur la machine serveur plutôt que sur la machine cliente, sélectionnez l'option **Sur 4D Server** dans le menu Exécuter : Dans ce cas, un nouveau process, appelé *procédure stockée*, est créé sur la machine serveur afin d'exécuter la méthode. Dans ce cas, un nouveau process, appelé *procédure stockée*, est créé sur la machine serveur afin d'exécuter la méthode. Cette option peut être utilisée pour réduire le trafic réseau et optimiser le fonctionnement de 4D Server, en particulier pour les méthodes qui appellent des données stockées sur le disque. Tous les types de méthodes peuvent être exécutés sur la machine serveur ou sur une autre machine cliente, à l'exception de celles qui modifient l'interface utilisateur. Dans ce cas, les procédures stockées sont inefficaces.
-- Vous pouvez également choisir d'exécuter la méthode sur un autre poste client. Les autres postes clients n'apparaîtront pas dans le menu, sauf s'ils ont été préalablement "enregistrés" (pour plus d'informations, se référer à la description de [REGISTER CLIENT](../commands-legacy/register-client).
+- Vous pouvez également choisir d'exécuter la méthode sur un autre poste client. Les autres postes clients n'apparaîtront pas dans le menu, sauf s'ils ont été préalablement "enregistrés" (pour plus d'informations, se référer à la description de [REGISTER CLIENT](../commands/register-client).
 
 Par défaut, l'option **En local** est sélectionnée. Avec la version mono-utilisateur de 4D, c'est la seule option disponible.
 
@@ -286,3 +286,4 @@ Dans 4D, la récursivité est typiquement utilisée pour :
 - Naviguer parmi les documents et les dossiers de votre disque à l'aide des commandes `LISTE DES DOSSIERS` et `LISTE DES DOCUMENTS`. Un dossier peut contenir des dossiers et des documents, les sous-dossiers peuvent eux-mêmes contenir des dossiers et des documents, etc.
 
 **Important :** Les appels récursifs doivent toujours se terminer à un moment donné. Dans l'exemple ci-dessus, la méthode `Généalogie de` cesse de s'appeler elle-même lorsque la recherche ne trouve plus d'enregistrement. Sans ce test conditionnel, la méthode s'appellerait indéfiniment et 4D pourrait au bout d'un certain temps retourner l'erreur “La pile est pleine” car le programme n'aurait plus assez de place pour "empiler" les appels (ainsi que les paramètres et les variables locales utilisés dans la méthode).
+

@@ -105,12 +105,15 @@ Os objectos de servidor WebSocket fornecem as seguintes propriedades e funções
 
 <!-- REF #4D.WebSocketServer.new().Params -->
 
+<div class="no-index">
+
 | Parâmetro                           | Tipo                               |                             | Descrição                                                                                |
 | ----------------------------------- | ---------------------------------- | :-------------------------: | ---------------------------------------------------------------------------------------- |
 | [WSSHandler](#wsshandler-parameter) | Object                             |              ->             | Objecto da classe de utilizador que declara as chamadas de retorno do servidor WebSocket |
 | [options](#options-parameter)       | Object                             |              ->             | Parâmetros de configuração do WebSocket                                                  |
 | Resultados                          | 4D.WebSocketServer | <- | Novo objeto WebSocketServer                                                              |
 
+</div>
 <!-- END REF -->
 
 A função `4D.WebSocketServer.new()` <!-- REF #4D.WebSocketServer.new().Summary -->cria e inicia um servidor WebSocket que usará os retornos de chamada especificados *WSSHandler* e (opcionalmente) *opções*  e retorna um objeto `4D.WebSocketServer`<!-- END REF -->.
@@ -373,10 +376,13 @@ Esta propriedade é só de leitura.
 
 <!-- REF #WebSocketServerClass.terminate().Params -->
 
+<div class="no-index">
+
 | Parâmetro | Tipo    |     | Descrição                                                          |
 | --------- | ------- | :-: | ------------------------------------------------------------------ |
 | timeout   | Integer |  -> | Tempo de espera em segundos antes de terminar o servidor WebSocket |
 
+</div>
 <!-- END REF -->
 
 #### Descrição

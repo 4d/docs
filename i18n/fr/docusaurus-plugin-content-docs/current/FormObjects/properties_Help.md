@@ -9,8 +9,8 @@ Cette propriété permet d'associer les messages d'aide aux objets actifs de vos
 
 ![](../assets/en/FormObjects/property_helpTip.png)
 
-> - Le délai d'affichage et la durée maximale des messages d'aide peuvent être contrôlés à l'aide des sélecteurs `Tips delay` et `Tips duration` de la commande **[SET DATABASE PARAMETER](../commands-legacy/set-database-parameter)**.
-> - Les info-bulles peuvent être globalement désactivées ou activées pour l'application en utilisant le sélecteur Tips enabled de la commande [**SET DATABASE PARAMETER**](../commands-legacy/set-database-parameter).
+> - Le délai d'affichage et la durée maximale des messages d'aide peuvent être contrôlés à l'aide des sélecteurs `Tips delay` et `Tips duration` de la commande **[SET DATABASE PARAMETER](../commands/set-database-parameter)**.
+> - Les info-bulles peuvent être globalement désactivées ou activées pour l'application en utilisant le sélecteur Tips enabled de la commande [**SET DATABASE PARAMETER**](../commands/set-database-parameter).
 
 Vous pouvez soit :
 
@@ -34,18 +34,19 @@ Vous pouvez soit :
 Vous pouvez aussi associer des messages d'aides aux objets formulaire de deux autres façons :
 
 - au niveau de la structure de la base (champs uniquement). Dans ce cas, le message d'aide du champ apparaîtra sur les autres formulaires. Pour plus d'informations, référez-vous à la section [Propriétés des champs](https://doc.4d.com/4Dv20/4D/20.2/Field-properties.300-6750280.en.html#3367486).
-- en utilisant la commande **[OBJECT SET HELP TIP](../commands-legacy/object-set-help-tip)**, pour le process courant.
+- en utilisant la commande **[OBJECT SET HELP TIP](../commands/object-set-help-tip)**, pour le process courant.
 
 Lorsque différentes astuces sont associées au même objet à plusieurs emplacements, l'ordre de priorité suivant est appliqué :
 
 1. structure (priorité la plus faible)
 2. éditeur de formulaire
-3. Commande **[OBJECT SET HELP TIP](../commands-legacy/object-set-help-tip)** (haute priorité)
+3. Commande **[OBJECT SET HELP TIP](../commands/object-set-help-tip)** (haute priorité)
 
 #### Commandes
 
-[`OBJECT Get help tip`](../commands-legacy/object-get-help-tip) - [`OBJECT SET HELP TIP`](../commands-legacy/object-set-help-tip)
+[`OBJECT Get help tip`](../commands/object-get-help-tip) - [`OBJECT SET HELP TIP`](../commands/object-set-help-tip)
 
 #### Voir également
 
 [Texte exemple](properties_Entry.md#placeholder)
+

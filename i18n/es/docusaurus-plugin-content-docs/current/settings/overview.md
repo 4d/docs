@@ -90,7 +90,7 @@ Puede acceder a estas cajas de diálogo utilizando el menú **Diseño > Propieda
 
 ![](../assets/en/settings/user-settings-dialog.png)
 
-También puede acceder a estas cajas de diálogo utilizando el comando [OPEN SETTINGS WINDOW](../commands-legacy/open-settings-window) con el selector *settingsType* apropiado.
+También puede acceder a estas cajas de diálogo utilizando el comando [OPEN SETTINGS WINDOW](../commands/open-settings-window) con el selector *settingsType* apropiado.
 
 La caja de diálogo Propiedades de estructura es idéntica a la caja de diálogo Propiedades estándar, y permite acceder a todas sus propiedades (que pueden ser anuladas por las propiedades usuario).
 
@@ -129,9 +129,9 @@ Al editar los parámetros en esta caja de diálogo, se almacenan automáticament
 
 ### `SET DATABASE PARAMETER` y propiedades usuario
 
-Algunas propiedades de los usuarios también están disponibles a través del comando [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter). Las propiedades usuario son parámetros con la propiedad **Conservado entre dos sesiones** establecida en **Sí**.
+Algunas propiedades de los usuarios también están disponibles a través del comando [SET DATABASE PARAMETER](../commands/set-database-parameter). Las propiedades usuario son parámetros con la propiedad **Conservado entre dos sesiones** establecida en **Sí**.
 
-Cuando la funcionalidad **Propiedades usuario** está activada, las propiedades usuario editadas por el comando [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter) se guardan automáticamente en las Propiedades usuario para el a
+Cuando la funcionalidad **Propiedades usuario** está activada, las propiedades usuario editadas por el comando [SET DATABASE PARAMETER](../commands/set-database-parameter) se guardan automáticamente en las Propiedades usuario para el a
 
 > `Table sequence number` es una excepción; este valor de ajuste siempre se guarda en el propio archivo de datos.
 
@@ -179,3 +179,4 @@ Las propiedades pueden almacenarse en tres niveles. Cada parámetro definido en 
 | 1 (el mayor)    | Propiedades usuario (archivo de datos actual)                                                     | Archivo ***settings.4DSettings*** en la carpeta Settings al mismo nivel que el archivo de datos                                                                                              | Reemplaza las propiedades de estructura y las propiedades usuario. Se aplica únicamente cuando el archivo de datos asociado se utiliza con la aplicación. |
 
 Tenga en cuenta que los archivos de propiedades usuario sólo contienen un subconjunto de parámetros relevantes, mientras que el archivo de estructura contiene todos los parámetros personalizados, incluidos los parámetros de bajo nivel.
+

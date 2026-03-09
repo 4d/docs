@@ -202,7 +202,7 @@ El estilo de botón OS X Textured es casi idéntico al estilo [Bevel](#bevel) pe
 
 Por defecto, el estilo OS X Textured aparece como:
 
-- *Windows* - un botón sistema estándar con un fondo gris claro con una etiqueta en el centro. Tiene la particularidad de ser transparente en Vista.
+- *Windows* - un botón sistema estándar con un fondo gris claro con una etiqueta en el centro.
 
 ![](../assets/en/FormObjects/button_osxtextured.png)
 
@@ -283,7 +283,7 @@ El estilo de botón Círculo aparece como un botón sistema circular.
 
 Este estilo de botón es compatible con macOS y [el tema Fluent UI Windows](../FormEditor/forms.md#enabling-the-fluent-ui-rendering).
 
-On Windows Classic UI theme, it is identical to the “None” style (the circle in the background is not taken into account).
+On Windows Classic UI theme, this style is not supported.
 
 #### Ejemplo JSON:
 

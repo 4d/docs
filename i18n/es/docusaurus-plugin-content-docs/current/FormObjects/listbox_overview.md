@@ -255,11 +255,11 @@ El soporte de ordenación estándar depende del tipo de list box:
 
 ### Ordenación personalizada
 
-El desarrollador puede configurar ordenaciones personalizadas, por ejemplo utilizando el comando [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns) y/o combinando los eventos de formulario [`On Header Click`](../Events/onHeaderClick) y [`On After Sort`](../Events/onAfterSort) y los comandos 4D relevantes.
+El desarrollador puede configurar ordenaciones personalizadas, por ejemplo utilizando el comando [`LISTBOX SORT COLUMNS`](../commands/listbox-sort-columns) y/o combinando los eventos de formulario [`On Header Click`](../Events/onHeaderClick) y [`On After Sort`](../Events/onAfterSort) y los comandos 4D relevantes.
 
 Los ordenamientos personalizados le permiten:
 
-- realizar ordenaciones multinivel en varias columnas, gracias al comando [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns),
+- realizar ordenaciones multinivel en varias columnas, gracias al comando [`LISTBOX SORT COLUMNS`](../commands/listbox-sort-columns),
 - utilizar funciones como [`collection.orderByMethod()`](../API/CollectionClass.md#orderbymethod) o [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) para ordenar columnas según criterios complejos.
 
 #### Ejemplo
@@ -301,7 +301,7 @@ El valor de la [variable asociada al encabezado de una columna](properties_Objec
 
 Puede definir el valor de la variable (por ejemplo, Header2:=2) para "forzar" la visualización de la flecha de ordenación. En este caso no se modifica la ordenación por columnas en sí, sino que es el desarrollador quien debe encargarse de ello.
 
-> El comando [`OBJECT SET FORMAT`](../commands-legacy/object-set-format) ofrece soporte específico para iconos en los encabezados de los list box, lo que puede ser útil cuando se desea trabajar con un icono de ordenación personalizado.
+> El comando [`OBJECT SET FORMAT`](../commands/object-set-format) ofrece soporte específico para iconos en los encabezados de los list box, lo que puede ser útil cuando se desea trabajar con un icono de ordenación personalizado.
 
 ## Gestión de los colores, estilos y visualización de las líneas
 
@@ -395,7 +395,7 @@ Para definir un list box jerárquico, existen varias posibilidades:
 
 - Configurar manualmente los elementos jerárquicos utilizando la lista de propiedades del editor de formularios (o editar el formulario JSON).
 - Generar visualmente la jerarquía utilizando el menú emergente de gestión de list box, en el editor de formularios.
-- Utilice los comandos [`LISTBOX SET HIERARCHY`](../commands-legacy/listbox-set-hierarchy) y [`LISTBOX GET HIERARCHY`](../commands-legacy/listbox-get-hierarchy).
+- Utilice los comandos [`LISTBOX SET HIERARCHY`](../commands/listbox-set-hierarchy) y [`LISTBOX GET HIERARCHY`](../commands/listbox-get-hierarchy).
 
 #### Propiedades del List Box jerárquico
 
@@ -577,6 +577,7 @@ En este caso, debe llenar y vaciar los arrays por código. Los principios que de
   ![](../assets/en/FormObjects/hierarch16.png)
 
 - Cuando un usuario hace clic en un botón de contracción, puede procesar el evento `On Collapse`. El comando [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) devuelve la celda en cuestión: se eliminan tantas líneas como sean necesarias del list box mediante el comando [`LISTBOX DELETE ROWS`](../commands/listbox-delete-rows).
+
 
 
 

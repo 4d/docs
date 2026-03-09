@@ -206,10 +206,13 @@ FileHandle オブジェクトは共有できません。
 
 <!--REF #FileHandleClass.getSize().Params -->
 
+<div class="no-index">
+
 | 引数  | 型    |                             | 説明                                    |
 | --- | ---- | --------------------------- | ------------------------------------- |
 | 戻り値 | Real | <- | ドキュメントのサイズ (バイト単位) |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -310,11 +313,14 @@ $s:=$fh.readText()
 
 <!--REF #FileHandleClass.readBlob().Params -->
 
+<div class="no-index">
+
 | 引数    | 型                                    |                             | 説明             |
 | ----- | ------------------------------------ | --------------------------- | -------------- |
 | bytes | Real                                 | ->                          | 読み取るバイト数       |
 | 戻り値   | [4D.Blob](BlobClass) | <- | ファイルから読み取ったバイト |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -345,10 +351,13 @@ $s:=$fh.readText()
 
 <!--REF #FileHandleClass.readLine().Params -->
 
+<div class="no-index">
+
 | 引数  | 型    |                             | 説明           |
 | --- | ---- | --------------------------- | ------------ |
 | 戻り値 | Text | <- | Line of text |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -387,11 +396,14 @@ $s:=$fh.readText()
 
 <!--REF #FileHandleClass.readText().Params -->
 
+<div class="no-index">
+
 | 引数       | 型    |                             | 説明                 |
 | -------- | ---- | --------------------------- | ------------------ |
 | stopChar | Text | ->                          | 読み取りを停止する文字        |
 | 戻り値      | Text | <- | Text from the file |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -434,10 +446,13 @@ $s:=$fh.readText()
 
 <!--REF #FileHandleClass.setSize().Params -->
 
+<div class="no-index">
+
 | 引数   | 型    |    | 説明                                       |
 | ---- | ---- | -- | ---------------------------------------- |
 | size | Real | -> | ドキュメントの新しいサイズ (バイト単位) |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -468,10 +483,13 @@ $s:=$fh.readText()
 
 <!--REF #FileHandleClass.writeBlob().Params -->
 
+<div class="no-index">
+
 | 引数   | 型                                    |    | 説明                        |
 | ---- | ------------------------------------ | -- | ------------------------- |
 | blob | [4D.Blob](BlobClass) | -> | Blob to write in the file |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -502,10 +520,13 @@ $s:=$fh.readText()
 
 <!--REF #FileHandleClass.writeLine().Params -->
 
+<div class="no-index">
+
 | 引数         | 型    |    | 説明            |
 | ---------- | ---- | -- | ------------- |
 | lineOfText | Text | -> | Text to write |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -536,10 +557,13 @@ $s:=$fh.readText()
 
 <!--REF #FileHandleClass.writeText().Params -->
 
+<div class="no-index">
+
 | 引数          | 型    |    | 説明            |
 | ----------- | ---- | -- | ------------- |
 | textToWrite | Text | -> | Text to write |
 
+</div>
 <!-- END REF -->
 
 #### 説明

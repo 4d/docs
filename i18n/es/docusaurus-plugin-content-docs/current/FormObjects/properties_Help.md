@@ -9,8 +9,8 @@ Esta propiedad permite asociar los mensajes de ayuda a los objetos activos de su
 
 ![](../assets/en/FormObjects/property_helpTip.png)
 
-> - El retardo de la visualización y la duración máxima de los mensajes de ayuda pueden controlarse utilizando los selectores `Tips delay` y `Tips duration` del comando **[SET DATABASE PARAMETER](../commands-legacy/set-database-parameter)**.
-> - Los mensajes de ayuda se pueden deshabilitar o habilitar globalmente para la aplicación utilizando el selector del comando [**SET DATABASE PARAMETER**](../commands-legacy/set-database-parameter).
+> - El retardo de la visualización y la duración máxima de los mensajes de ayuda pueden controlarse utilizando los selectores `Tips delay` y `Tips duration` del comando **[SET DATABASE PARAMETER](../commands/set-database-parameter)**.
+> - Los mensajes de ayuda se pueden deshabilitar o habilitar globalmente para la aplicación utilizando el selector del comando [**SET DATABASE PARAMETER**](../commands/set-database-parameter).
 
 Puede:
 
@@ -34,18 +34,19 @@ Puede:
 También puede asociar los mensajes de ayuda a los objetos formulario de otras dos maneras:
 
 - a nivel de la estructura de la base de datos (sólo campos). En este caso, la ayuda del campo se muestra en todos los formularios en los que aparece. Para más información, consulte "Consejos de ayuda" en [Propiedades de los campos](https://doc.4d.com/4Dv20/4D/20.2/Field-properties.300-6750280.en.html#3367486).
-- utilizando el comando **[OBJECT SET HELP TIP](../commands-legacy/object-set-help-tip)**, para el proceso actual.
+- utilizando el comando **[OBJECT SET HELP TIP](../commands/object-set-help-tip)**, para el proceso actual.
 
 Cuando se asocian consejos diferentes a un mismo objeto en varias ubicaciones, se aplica el siguiente orden de prioridad:
 
 1. nivel de estructura (prioridad más baja)
 2. editor de formulario
-3. Comando **[OBJECT SET HELP TIP](../commands-legacy/object-set-help-tip)** (alta prioridad)
+3. Comando **[OBJECT SET HELP TIP](../commands/object-set-help-tip)** (alta prioridad)
 
 #### Comandos
 
-[`OBJECT Get help tip`](../commands-legacy/object-get-help-tip) - [`OBJECT SET HELP TIP`](../commands-legacy/object-set-help-tip)
+[`OBJECT Get help tip`](../commands/object-get-help-tip) - [`OBJECT SET HELP TIP`](../commands/object-set-help-tip)
 
 #### Ver también
 
 [Marcador de posición](properties_Entry.md#placeholder)
+

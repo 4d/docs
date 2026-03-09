@@ -5,8 +5,6 @@ title: HTTPRequest
 
 `HTTPRequest` クラスを使って、[`HTTPRequest オブジェクト`](#httprequest-オブジェクト) を扱うことができます。このオブジェクトは、HTTPサーバーへのリクエストの設定と送信、および HTTPサーバーのレスポンスを処理するのに使用します。
 
-`HTTPRequest` クラスは、`4D` クラスストアにて提供されています。   HTTPリクエストを作成・送信するには、[`HTTPRequest オブジェクト`](#httprequest-オブジェクト) を返す [4D.HTTPRequest.new()](#4dhttprequestnew) 関数を使用します。
-
 <details><summary>履歴</summary>
 
 | リリース  | 内容     |
@@ -14,6 +12,12 @@ title: HTTPRequest
 | 19 R6 | クラスを追加 |
 
 </details>
+
+`HTTPRequest` クラスは、`4D` クラスストアにて提供されています。   HTTPリクエストを作成・送信するには、[`HTTPRequest オブジェクト`](#httprequest-オブジェクト) を返す [4D.HTTPRequest.new()](#4dhttprequestnew) 関数を使用します。
+
+### Aynchronous programming
+
+This class supports asynchronous programming in 4D as described in the [Asynchronous Execution](../Develop/async.md) page.
 
 ### 例題
 
@@ -177,7 +181,7 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 
 :::info
 
-[`wait()`](#wait) を使用しない場合 (非同期呼び出し) にコールバック関数が呼び出されるためには、そのプロセスは [`CALL WORKER`](../commands-legacy/call-worker) で作成された [ワーカー](../Develop/processes.md#ワーカープロセス) である必要があります ([`New process`](../commands-legacy/new-process) は使えません)。
+[`wait()`](#wait) を使用しない場合 (非同期呼び出し) にコールバック関数が呼び出されるためには、そのプロセスは [`CALL WORKER`](../commands/call-worker) で作成された [ワーカー](../Develop/processes.md#ワーカープロセス) である必要があります ([`New process`](../commands/new-process) は使えません)。
 
 :::
 
@@ -428,8 +432,9 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 :::note
 
-.wait() の実行中、それが `HTTPRequest` あるいは  [`SystemWorker`](SystemWorkerClass.md) インスタンス、あるいは他の [`CALL WORKER`](../commands-legacy/call-worker) 呼び出しから発生したかにかかわらず、ワーカーからのコールバックは実行されます。  コールバックから [`terminate()`](#terminate) を呼び出すことで、`.wait()` を終了することができます。
+.wait() の実行中、それが `HTTPRequest` あるいは  [`SystemWorker`](SystemWorkerClass.md) インスタンス、あるいは他の [`CALL WORKER`](../commands/call-worker) 呼び出しから発生したかにかかわらず、ワーカーからのコールバックは実行されます。  コールバックから [`terminate()`](#terminate) を呼び出すことで、`.wait()` を終了することができます。
 
 :::
 
 <!-- END REF -->
+

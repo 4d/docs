@@ -52,21 +52,21 @@ displayed_sidebar: docs
 以下のコードを使用すると、全ての有効な4Dコマンドを配列内に読み込むことができます:
 
 ```4d
- var $Lon_id : Integer
- var $Txt_command : Text
- ARRAY LONGINT($tLon_Command_IDs;0)
- ARRAY TEXT($tTxt_commands;0)
- 
- Repeat
-    $Lon_id:=$Lon_id+1
-    $Txt_command:=Command name($Lon_id)
-    If(OK=1) // コマンド番号が存在する
-       If(Length($Txt_command)>0) // コマンドが無効化されていない
-          APPEND TO ARRAY($tTxt_commands;$Txt_command)
-          APPEND TO ARRAY($tLon_Command_IDs;$Lon_id)
-       End if
-    End if
- Until(OK=0) // 既存のコマンドの終了
+ var $Lon_id : Integer
+ var $Txt_command : Text
+ ARRAY LONGINT($tLon_Command_IDs;0)
+ ARRAY TEXT($tTxt_commands;0)
+ 
+ Repeat
+    $Lon_id:=$Lon_id+1
+    $Txt_command:=Command name($Lon_id)
+    If(OK=1) //command number exists
+       If(Length($Txt_command)>0) //command is not disabled
+          APPEND TO ARRAY($tTxt_commands;$Txt_command)
+          APPEND TO ARRAY($tLon_Command_IDs;$Lon_id)
+       End if
+    End if
+ Until(OK=0) //end of existing commands
 ```
 
 ## 例題 2
@@ -74,15 +74,15 @@ displayed_sidebar: docs
 フォームで、一般的なサマリーレポートコマンドのドロップダウンリストを作成します。 ドロップダウンリストのオブジェクトメソッドに、次のように記述します:
 
 ```4d
- Case of
-    :(Form event code=On Before)
-       ARRAY TEXT(asCommand;4)
-       asCommand{1}:=Command name(1)
-       asCommand{2}:=Command name(2)
-       asCommand{3}:=Command name(4)
-       asCommand{4}:=Command name(3)
-  // ...
- End case
+ Case of
+    :(Form event code=On Before)
+       ARRAY TEXT(asCommand;4)
+       asCommand{1}:=Command name(1)
+       asCommand{2}:=Command name(2)
+       asCommand{3}:=Command name(4)
+       asCommand{4}:=Command name(3)
+  // ...
+ End case
 ```
 
 4Dの日本語版ではドロップダウンリストに、Sum、Average、Min、Maxが表示されます。 フランス語版\*では、ドロップダウンリストには、Somme、Moyenne、Min、Maxが表示されます。
@@ -94,23 +94,23 @@ displayed_sidebar: docs
 番号を引数として渡したコマンドがスレッドセーフである場合には**True** を、そうでない場合には**False** を返す様なメソッドを作成したい場合を考えます。
 
 ```4d
-  //Is_Thread_Safe project method
- #declare($command : Integer) : Boolean
- var $threadsafe : Integer
- var $name; $theme : Text
- $name:=Command name($command;$threadsafe;$theme)
- If($threadsafe ?? 0) // 最初のビットが1に設定されている
-    return True
- Else
-    return False
- End if
+  //Is_Thread_Safe project method
+ #declare($command : Integer) : Boolean
+ var $threadsafe : Integer
+ var $name; $theme : Text
+ $name:=Command name($command;$threadsafe;$theme)
+ If($threadsafe ?? 0) //if the first bit is set to 1
+    return True
+ Else
+    return False
+ End if
 ```
 
 これを使い、例えば"SAVE RECORD"コマンド(53番)に対して、以下のように書く事ができます:
 
 ```4d
- $isSafe:=Is_Thread_Safe(53)
-  // True を返す
+ $isSafe:=Is_Thread_Safe(53)
+  // returns True
 ```
 
 ## 例題 4
@@ -125,11 +125,11 @@ var $deprecated : Collection
 Repeat
     $Lon_id:=$Lon_id+1
     $Txt_command:=Command name($Lon_id;$info)
-    If($info ?? 1) // 二つ目のビットが1である
-            // 1であればコマンドは廃止予定である
+    If($info ?? 1) //the second bit is set to 1
+            //then the command is deprecated
         $deprecated.push($Txt_command)
     End if
-Until(OK=0) // 既存のコマンドの終了
+Until(OK=0) //end of existing commands
 
 ```
 

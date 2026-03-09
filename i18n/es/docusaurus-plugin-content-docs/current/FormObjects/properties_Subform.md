@@ -44,7 +44,7 @@ Esta propiedad se utiliza para declarar el formulario detallado que se utilizar�
 
 #### Comandos
 
-[OBJECT GET SUBFORM](../commands-legacy/object-get-subform) - [OBJECT SET SUBFORM](../commands-legacy/object-set-subform)
+[OBJECT GET SUBFORM](../commands/object-get-subform) - [OBJECT SET SUBFORM](../commands/object-set-subform)
 
 ---
 
@@ -137,7 +137,7 @@ Los subformularios de lista pueden utilizarse para la entrada de datos de dos ma
 
 #### Comandos
 
-[OBJECT GET SUBFORM](../commands-legacy/object-get-subform) - [OBJECT SET SUBFORM](../commands-legacy/object-set-subform)
+[OBJECT GET SUBFORM](../commands/object-get-subform) - [OBJECT SET SUBFORM](../commands/object-set-subform)
 
 ---
 
@@ -178,3 +178,4 @@ Designa la opción para permitir a los usuarios seleccionar líneas:
 #### Objetos soportados
 
 [Subformulario](subform_overview.md)
+

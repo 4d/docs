@@ -11,10 +11,10 @@ title: VP SET FORMULAS
 
 <div class="no-index">
 
-| Paramètres  | Type       |    | Description             |
-| ----------- | ---------- | -- | ----------------------- |
-| rangeObj    | Object     | -> | Objet plage de cellules |
-| formulasCol | Collection | -> | Collection de formules  |
+| Paramètres  | Type       |    | Description                                                                |
+| ----------- | ---------- | -- | -------------------------------------------------------------------------- |
+| rangeObj    | Object     | -> | Pour lire les détails du style par défaut de ce document : |
+| formulasCol | Collection | -> | Collection de formules                                                     |
 
 </div>
 <!-- END REF -->

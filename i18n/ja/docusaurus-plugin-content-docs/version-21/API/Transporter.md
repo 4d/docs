@@ -368,10 +368,13 @@ title: Transporter クラス
 
 <!-- REF #transporter.checkConnection().Params -->
 
+<div class="no-index">
+
 | 引数  | 型      |                             | 説明                         |
 | --- | ------ | :-------------------------: | -------------------------- |
 | 戻り値 | Object | <- | transporter オブジェクト接続のステータス |
 
+</div>
 <!-- END REF -->
 
 #### 説明

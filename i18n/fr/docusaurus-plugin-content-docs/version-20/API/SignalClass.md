@@ -109,13 +109,14 @@ Méthode ***OpenForm*** :
 
 
 <!-- REF #_command_.New signal.Params -->
-| Paramètres  | Type      |    | Description                                             |
-| ----------- | --------- |:--:| ------------------------------------------------------- |
-| Description | Text      | -> | Description du signal                                   |
-| Résultat    | 4D.Signal | <- | Object encapsulant le signal|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|description|Text|->|Description for the signal|
+|Result|4D.Signal|<-|Native object encapsulating the signal|
+</div>
+<!-- END REF -->
 
 
 #### Description
@@ -232,12 +233,13 @@ Cette propriété est en **lecture seule**.
 
 
 <!-- REF #SignalClass.trigger().Params -->
-| Paramètres | Type |  | Description                                            |
-| ---------- | ---- |::| ------------------------------------------------------ |
-|            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+||||Does not require any parameters|
+</div>
+<!-- END REF -->
 
 
 #### Description
@@ -265,13 +267,14 @@ Si le signal est déjà dans l'état signaled (i.e., la propriété `signaled` e
 
 
 <!-- REF #SignalClass.wait().Params -->
-| Paramètres | Type    |    | Description                                                 |
-| ---------- | ------- | -- | ----------------------------------------------------------- |
-| timeout    | Real    | -> | Délai d'attente maximum du signal en secondes               |
-| Résultat   | Boolean | <- | Etat de la propriété `.signaled`|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|timeout|Real|->|Maximum waiting time for the signal in seconds|
+|Result|Boolean|<-|State of the `.signaled` property|
+</div>
+<!-- END REF -->
 
 
 #### Description

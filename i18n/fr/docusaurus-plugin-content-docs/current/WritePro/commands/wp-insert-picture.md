@@ -10,14 +10,14 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres     | Type                    |                             | Description                                                            |
-| -------------- | ----------------------- | --------------------------- | ---------------------------------------------------------------------- |
-| targetObj      | Object                  | &#8594; | Plage ou élément ou document 4D Write Pro                              |
-| picture        | Picture                 | &#8594; | Champ image ou variable, ou chemin vers le fichier image sur le disque |
-| pictureFileObj | [4D.File](../API/FileClass.md)  | &#8594; | Un objet Fichier représentant un fichier image.        |
-| mode           | Integer                 | &#8594; | Mode d'insertion                                                       |
-| rangeUpdate    | Integer                 | &#8594; | Mode de mise à jour de la plage                                        |
-| Résultat       | Object                  | &#8592; | Objet référençant l'image                                              |
+| Paramètres     | Type                                           |                             | Description                                                            |
+| -------------- | ---------------------------------------------- | --------------------------- | ---------------------------------------------------------------------- |
+| targetObj      | Object                                         | &#8594; | Plage ou élément ou document 4D Write Pro                              |
+| picture        | Picture                                        | &#8594; | Champ image ou variable, ou chemin vers le fichier image sur le disque |
+| pictureFileObj | [4D.File](../API/FileClass.md) | &#8594; | Un objet Fichier représentant un fichier image.        |
+| mode           | Integer                                        | &#8594; | Mode d'insertion                                                       |
+| rangeUpdate    | Integer                                        | &#8594; | Mode de mise à jour de la plage                                        |
+| Résultat       | Object                                         | &#8592; | Objet référençant l'image                                              |
 
 </div>
 <!-- END REF-->
@@ -110,4 +110,4 @@ $pictRef:=WP Insert picture(WParea; $file; wk replace)
 ## Voir également
 
 [WP Insert document body](wp-insert-document-body.md)</br>
-[WP Picture range](../commands-legacy/wp-picture-range)
+[WP Picture range](../commands/wp-picture-range)

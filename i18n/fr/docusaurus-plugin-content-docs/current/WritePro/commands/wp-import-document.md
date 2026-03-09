@@ -10,12 +10,12 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres | Type                    |                             | Description                                                                                                                                                                                                                                                                   |
-| ---------- | ----------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| filePath   | Text                    | &#8594; | Chemin d'accès : un document 4D Write (.4w7 ou .4wt) ou un document 4D Write Pro (.4wp) ou un document .docx (.docx) |
-| fileObj    | [4D.File](../API/FileClass.md)  | &#8594; | Objet du fichier à importer                                                                                                                                                                                                                                                   |
-| option     | Integer, Object         | &#8594; | (Integer) Option d'importation pour les expressions HTML, (object) Options d'importation pour les documents .docx                                                                                                       |
-| Résultat   | Object                  | &#8592; | Objet 4D Write Pro                                                                                                                                                                                                                                                            |
+| Paramètres | Type                                           |                             | Description                                                                                                                                                                                                                                                                   |
+| ---------- | ---------------------------------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| filePath   | Text                                           | &#8594; | Chemin d'accès : un document 4D Write (.4w7 ou .4wt) ou un document 4D Write Pro (.4wp) ou un document .docx (.docx) |
+| fileObj    | [4D.File](../API/FileClass.md) | &#8594; | Objet du fichier à importer                                                                                                                                                                                                                                                   |
+| option     | Integer, Object                                | &#8594; | (Integer) Option d'importation pour les expressions HTML, (object) Options d'importation pour les documents .docx                                                                                                       |
+| Résultat   | Object                                         | &#8592; | Objet 4D Write Pro                                                                                                                                                                                                                                                            |
 
 </div>
 <!-- END REF-->
@@ -36,7 +36,7 @@ Les types de documents suivants sont pris en charge :
 - 4D Write Pro (.4wp) format documents. For more information about the 4D Write Pro document format, refer to *.4wp document format*.
 - documents in .docx format. For more information about, refer to *Importing and Exporting in .docx format*.
 
-**Note:** If you want to import a document stored in a 4D BLOB field, you can also consider using the [WP New](../commands-legacy/wp-new) command.
+**Note:** If you want to import a document stored in a 4D BLOB field, you can also consider using the [WP New](../commands/wp-new) command.
 
 An error is returned if the *filePath* or *fileObj* parameter is invalid, if the file is missing, or if the file format is not supported.
 
@@ -120,4 +120,5 @@ WParea:=WP Import document($file)
 
 ## Voir également
 
-[WP New](../commands-legacy/wp-new)
+[WP New](../commands/wp-new)
+

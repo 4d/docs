@@ -45,7 +45,7 @@ Os objetos POP3 Transporter são instanciados com o comando [`POP3 New transport
 
 #### Descrição
 
-A função `4D.POP3Transporter.new()` <!-- REF #4D.POP3Transporter.new().Summary --> cria e retorna um novo objeto do tipo `4D.POP3Transporter`<!-- END REF -->. É idêntico ao comando [`POP3 New transporter`](../commands/pop3-new-transporter) (atalho).
+A função `4D.POP3Transporter.new()` <!-- REF #4D.POP3Transporter.new().Summary --> cria e retorna um novo objeto do tipo `4D.POP3Transporter`<!-- END REF -->. É idêntico ao comando (atalho) [`POP3 New transporter`](../commands/pop3-new-transporter).
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -482,3 +482,4 @@ A função `.undeleteAll()` <!-- REF #POP3TransporterClass.undeleteAll().Summary
 <!-- END REF -->
 
 <!-- INCLUDE transporter.user.Desc -->
+

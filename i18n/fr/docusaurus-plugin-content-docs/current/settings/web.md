@@ -162,7 +162,7 @@ Liste des hôtes et méthodes autorisé(e)s pour le service CORS. Voir [Paramèt
 
 Démarre ou arrête l'enregistrement des requêtes reçues par le serveur Web 4D dans le fichier *logweb.txt* et définit son format. Voir [Enregistrement des logs](../WebServer/webServerConfig.md#enregistrement-des-logs).
 
-> L’activation et la désactivation du fichier d’historique des requêtes peut également être effectuée par programmation, à l’aide de la commande [WEB SET OPTION](../commands-legacy/web-set-option).
+> L’activation et la désactivation du fichier d’historique des requêtes peut également être effectuée par programmation, à l’aide de la commande [WEB SET OPTION](../commands/web-set-option).
 
 Le menu de format du journal propose les options suivantes :
 
@@ -326,3 +326,4 @@ Cette option n'apparaît que si la licence Qodly Studio est activée.
 :::
 
 Cette option permet l'accès utilisateur à [Qodly Studio](developer.4d.com/qodly/) pour le projet en cours. Notez que l'accès global doit être autorisé au [niveau de l'application](../Admin/webAdmin.md).
+

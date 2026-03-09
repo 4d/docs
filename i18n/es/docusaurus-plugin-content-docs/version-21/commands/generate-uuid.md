@@ -54,8 +54,8 @@ En 4D, los números UUID pueden almacenarse en campos (ver [Formato UUID](https:
 Generación de un UUID en una variable:
 
 ```4d
- var MyUUID : Text
- MyUUID:=Generate UUID
+ var MyUUID : Text
+ MyUUID:=Generate UUID
 ```
 
 ## Propiedades

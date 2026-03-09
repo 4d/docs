@@ -34,8 +34,8 @@ Entretanto, nenhum operador pode ser aplicado aos BLOBs.
 
 ## Verificar si una variable contiene un blob escalar o un `4D.Blob`
 
-Utilice el comando [Value type](../commands-legacy/value-type) para determinar si un valor es de tipo Blob u Objeto.
-Para verificar que un objeto es un objeto blob (`4D.Blob`), utilice [instancia OB de](../commands-legacy/ob-instance-of):
+Use the [Value type](../commands/value-type) command to determine if a value is of type Blob or Object.
+Para verificar que un objeto es un objeto blob (`4D.Blob`), utilice [instancia OB de](../commands/ob-instance-of):
 
 ```4d
 ` Declare a variable of type BLOB
@@ -66,17 +66,17 @@ $myText:= BLOB to text( $myBlob ; UTF8 text without length )
 
 Algunos comandos 4D modifican el blob, y por lo tanto no soportan el tipo `4D.Blob`:
 
-- [DELETE FROM BLOB](../commands-legacy/delete-from-blob)
-- [INSERT IN BLOB](../commands-legacy/insert-in-blob)
-- [INTEGER TO BLOB](../commands-legacy/integer-to-blob)
-- [LONGINT TO BLOB](../commands-legacy/longint-to-blob)
-- [REAL TO BLOB](../commands-legacy/real-to-blob)
-- [SET BLOB SIZE](../commands-legacy/set-blob-size)
-- [TEXT TO BLOB](../commands-legacy/text-to-blob)
-- [VARIABLE TO BLOB](../commands-legacy/variable-to-blob)
-- [LIST TO BLOB](../commands-legacy/list-to-blob)
-- [SOAP DECLARATION](../commands-legacy/soap-declaration)
-- [WEB SERVICE SET PARAMETER](../commands-legacy/web-service-set-parameter)
+- [DELETE FROM BLOB](../commands/delete-from-blob)
+- [INSERT IN BLOB](../commands/insert-in-blob)
+- [INTEGER TO BLOB](../commands/integer-to-blob)
+- [LONGINT TO BLOB](../commands/longint-to-blob)
+- [REAL TO BLOB](../commands/real-to-blob)
+- [SET BLOB SIZE](../commands/set-blob-size)
+- [TEXT TO BLOB](../commands/text-to-blob)
+- [VARIABLE TO BLOB](../commands/variable-to-blob)
+- [LIST TO BLOB](../commands/list-to-blob)
+- [SOAP DECLARATION](../commands/soap-declaration)
+- [WEB SERVICE SET PARAMETER](../commands/web-service-set-parameter)
 
 ### Passagem de blobs e objectos blob para métodos
 
@@ -193,3 +193,4 @@ $byte:=$myBlob[5]
 ```
 
 Dado que un `4D.Blob` no puede ser modificado, puede leer los bytes de un `4D.Blob` utilizando esta sintaxis, pero no modificarlos.
+

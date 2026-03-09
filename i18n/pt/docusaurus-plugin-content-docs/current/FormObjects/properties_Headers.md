@@ -34,7 +34,7 @@ Esta propriedade é usada para definir a altura da linha para um cabeçalho de l
   - Este cálculo não tem em conta o tamanho das imagens nem os estilos aplicados aos tipos de letra.
   - No macOS, a altura da linha pode estar incorreta se o usuário inserir caracteres que não estejam disponíveis na fonte selecionada. Quando isso ocorre, uma fonte substituta é usada, o que pode causar variações no tamanho.
 
-> Esta propriedade também pode ser configurada dinamicamente usando o comando [LISTBOX SET HEADERS HEIGHT](../commands-legacy/listbox-set-headers-height).
+> Esta propriedade também pode ser configurada dinamicamente usando o comando [LISTBOX SET HEADERS HEIGHT](../commands/listbox-set-headers-height).
 
 Conversão de unidades: quando você muda de uma unidade para a outra, 4D converte-os automaticamente e exibe o resultado na Lista de propriedades. Por exemplo, se a fonte usada for "Lucida grande 24", uma altura de "1 linha" será convertida em "30 píxeis" e uma altura de "60 píxeis" será convertida em "2 linhas".
 
@@ -66,8 +66,9 @@ Observe que a conversão para frente e para trás pode levar a um resultado dife
 
 #### Comandos
 
-[`LISTBOX Get headers height`](../commands-legacy/listbox-get-headers-height) - [`LISTBOX SET HEADERS HEIGHT`](../commands-legacy/listbox-set-headers-height)
+[`LISTBOX Get headers height`](../commands/listbox-get-headers-height) - [`LISTBOX SET HEADERS HEIGHT`](../commands/listbox-set-headers-height)
 
 #### Veja também
 
 [Rodapies](properties_Footers.md) - [Cabeçalhos List box](listbox-header-footer.md#headers)
+

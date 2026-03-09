@@ -31,7 +31,7 @@ Dans *targetObj*, passez :
 - Un élément (tableau / ligne / paragraphe / corps / en-tête / pied de page / image en ligne / section / sous-section / zone de texte), ou
 - un document 4D Write Pro.
 
-Le document *wpDoc* inséré peut être n'importe quel document 4D Write Pro créé à l'aide de la commande [WP New](../commands-legacy/wp-new) ou [WP Import document](wp-import-document.md). Seuls les éléments enfants du corps sont insérés (c'est-à-dire que les en-têtes, les pieds de page, les zones de texte et les images ancrées ne sont pas insérés). Les sections et les signets de la plage de destination sont préservés. De plus, les éléments sont copiés, donc *wpDoc* peut être réutilisé plusieurs fois.
+Le document *wpDoc* inséré peut être n'importe quel document 4D Write Pro créé à l'aide de la commande [WP New](../commands/wp-new) ou [WP Import document](wp-import-document.md). Seuls les éléments enfants du corps sont insérés (c'est-à-dire que les en-têtes, les pieds de page, les zones de texte et les images ancrées ne sont pas insérés). Les sections et les signets de la plage de destination sont préservés. De plus, les éléments sont copiés, donc *wpDoc* peut être réutilisé plusieurs fois.
 
 Dans le paramètre *mode*, passer une ou une combinaison des constantes suivantes du thème *4D Write Pro Constants* pour indiquer le mode d'insertion à utiliser pour le document dans la destination *targetObj* :
 
@@ -103,4 +103,4 @@ WP SET ATTRIBUTES($range1; wk font italic; wk true)
 
 [WP INSERT BREAK](wp-insert-break.md)\
 [WP INSERT PICTURE](wp-insert-picture.md)\
-[WP New](../commands-legacy/wp-new)
+[WP New](../commands/wp-new)

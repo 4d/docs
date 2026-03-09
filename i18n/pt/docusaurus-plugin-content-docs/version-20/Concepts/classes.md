@@ -99,11 +99,13 @@ As classes disponíveis são acessíveis a partir das suas class stores. Estão 
 <!-- REF #_command_.cs.Syntax -->**cs** : Object <!-- END REF -->
 
 <!-- REF #_command_.cs.Params -->
-| Parâmetro  | Tipo   |    | Descrição                                                                      |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------ |
-| classStore | Object | <- | Class store de usuário para o projeto ou componente|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|classStore|Object|<-|User class store for the project or component|
+</div>
+<!-- END REF -->
 
 O comando `cs` <!-- REF #_command_.cs.Summary -->O comando cs devolve a loja de classes de utilizadores para o projecto ou componente actual<!-- END REF -->. Devolve todas as classes de usuários [definidas](#class-definition) no projecto ou componente aberto. Como padrão, apenas as classes ORDA do projecto [](ORDA/ordaClasses.md) estão disponíveis.
 
@@ -121,11 +123,13 @@ $instance:=cs.myClass.new()
 <!-- REF #_command_.4D.Syntax -->**4D** : Object <!-- END REF -->
 
 <!-- REF #_command_.4D.Params -->
-| Parâmetro  | Tipo   |    | Descrição                                 |
-| ---------- | ------ | -- | ----------------------------------------- |
-| classStore | Object | <- | Class store 4D|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|classStore|Object|<-|4D class store|
+</div>
+<!-- END REF -->
 
 O comando `4D` <!-- REF #_command_.4D.Summary -->retorna a loja de classe para classes embutidas<!-- END REF -->. Fornece acesso a APIs específicas, tais como [CryptoKey](API/CryptoKeyClass.md).
 
@@ -509,12 +513,14 @@ Construtor da classe ($side : Integer)
 <!-- REF #_command_.Super.Syntax -->**Super**( ...param : any )<br/>**Super** : Object<!-- END REF -->
 
 <!-- REF #_command_.Super.Params -->
-| Parâmetro  | Tipo   |    | Descrição                                   |
-| ---------- | ------ | -- | ------------------------------------------- |
-| param      | any    | -> | Parâmetro(s) a passar para o construtor pai |
-| Resultados | Object | <- | Pai do objecto|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|  
+|---|---|---|---|
+|param|any|->|Parameter(s) to pass to the parent constructor|
+|Result|Object|<-|Object's parent|
+</div>
+<!-- END REF -->
 
 A palavra-chave `Super` <!-- REF #_command_.Super.Summary -->permite chamadas para a superclasse ``, ou seja, a classe pai<!-- END REF -->.
 
@@ -616,11 +622,13 @@ Parâmetros
 <!-- REF #_command_.This.Syntax -->**This** : Object<!-- END REF -->
 
 <!-- REF #_command_.This.Params -->
-| Parâmetro  | Tipo   |    | Descrição                                 |
-| ---------- | ------ | -- | ----------------------------------------- |
-| Resultados | Object | <- | Objecto actual|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|  
+|---|---|---|---|
+|Result|Object|<-|Current object|
+</div>
+<!-- END REF -->
 
 A palavra-chave `This` <!-- REF #_command_.This.Summary -->devolve uma referência ao objeto atualmente processado<!-- END REF -->.
 

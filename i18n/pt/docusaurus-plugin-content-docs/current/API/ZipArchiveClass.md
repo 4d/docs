@@ -43,3 +43,4 @@ A propriedade `.root` contém <!-- REF #ZipArchiveClass.root.Summary --> uma pas
 A pasta `root` e seu conteúdo podem ser manipulados com as funções e propriedades [ZipFile](ZipFileClass.md) e [ZipFolder](ZipFolderClass.md).
 
 Essa propriedade é **somente leitura**.
+

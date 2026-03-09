@@ -27,13 +27,14 @@ La classe Blob vous permet de créer et de manipuler des [objets blob](../Concep
 
 
 <!-- REF #4D.Blob.new().Params -->
+<div class="no-index">
 
-| Paramètres | Type    |    | Description                                  |
-| ---------- | ------- |:--:| -------------------------------------------- |
-| blob       | Blob    | -> | Blob pour copie                              |
-| Résultat   | 4D.Blob | <- | Nouveau 4D.Blob  |<!-- END REF -->
-
-|
+| Parameter | Type            |     | Description  |
+| --------- | --------------- | :-: | ------------ |
+| blob      | Blob | ->  | Blob to copy |
+| Result    | 4D.Blob         | <-  | New 4D.Blob  |
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -62,13 +63,15 @@ La propriété `.size` <!-- REF #Blob.size.Summary -->retourne la taille d'un `4
 
 
 <!-- REF #Blob.slice().Params -->
-| Paramètres | Type    |    | Description                                                              |
-| ---------- | ------- |:--:| ------------------------------------------------------------------------ |
-| start      | Real    | -> | indice du premier octet à inclure dans le nouveau `4D.Blob`.             |
-| end        | Real    | -> | indice du premier octet qui ne sera pas inclus dans le nouveau `4D.Blob` |
-| Résultat   | 4D.Blob | <- | Nouveau `4D.Blob`|<!-- END REF -->
+<div class="no-index">
 
-|
+| Parameter | Type ||Description |
+| --------- | ------- | :-: | --- |
+| start| Real    | ->  | index of the first byte to include in the new `4D.Blob`.               |
+| end| Real    | ->  | index of the first byte that will not be included in the new `4D.Blob` |
+| Result| 4D.Blob | <-  | New `4D.Blob`|
+</div>
+<!-- END REF -->
 
 #### Description
 

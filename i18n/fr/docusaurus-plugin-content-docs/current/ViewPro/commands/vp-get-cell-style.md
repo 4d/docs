@@ -11,10 +11,10 @@ title: VP Get cell style
 
 <div class="no-index">
 
-| Paramètres | Type   |                             | Description |
-| ---------- | ------ | --------------------------- | ----------- |
-| rangeObj   | Object | ->                          | Objet plage |
-| Résultat   | Object | <- | Objet style |
+| Paramètres | Type   |                             | Description                                                                    |
+| ---------- | ------ | --------------------------- | ------------------------------------------------------------------------------ |
+| rangeObj   | Object | ->                          | Objet plage                                                                    |
+| Résultat   | Object | <- | Le nom de la troisième feuille est "Total premier trimestre" : |
 
 </div>
 <!-- END REF -->

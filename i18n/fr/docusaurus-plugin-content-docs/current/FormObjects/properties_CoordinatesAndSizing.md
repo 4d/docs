@@ -68,7 +68,7 @@ Coordonnées inférieures de l'objet dans le formulaire.
 
 #### Commandes
 
-[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates) - [OBJECT MOVE](../commands-legacy/object-move) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates)
+[OBJECT GET COORDINATES](../commands/object-get-coordinates) - [OBJECT MOVE](../commands/object-move) - [OBJECT SET COORDINATES](../commands/object-set-coordinates)
 
 ---
 
@@ -88,7 +88,7 @@ Coordonnées de gauche de l'objet dans le formulaire.
 
 #### Commandes
 
-[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates) - [OBJECT MOVE](../commands-legacy/object-move) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates)
+[OBJECT GET COORDINATES](../commands/object-get-coordinates) - [OBJECT MOVE](../commands/object-move) - [OBJECT SET COORDINATES](../commands/object-set-coordinates)
 
 ---
 
@@ -108,7 +108,7 @@ Coordonnées de droite de l'objet dans le formulaire.
 
 #### Commandes
 
-[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates) - [OBJECT MOVE](../commands-legacy/object-move) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates)
+[OBJECT GET COORDINATES](../commands/object-get-coordinates) - [OBJECT MOVE](../commands/object-move) - [OBJECT SET COORDINATES](../commands/object-set-coordinates)
 
 ---
 
@@ -128,7 +128,7 @@ Coordonnées supérieures de l'objet dans le formulaire.
 
 #### Commandes
 
-[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates) - [OBJECT MOVE](../commands-legacy/object-move) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates)
+[OBJECT GET COORDINATES](../commands/object-get-coordinates) - [OBJECT MOVE](../commands/object-move) - [OBJECT SET COORDINATES](../commands/object-set-coordinates)
 
 ---
 
@@ -160,7 +160,7 @@ Avec les [zones de texte](text.md) et les [zones de saisie](input_overview.md) :
 
 :::
 
-Vous pouvez également définir cette propriété à l'aide des commandes [OBJECT Get corner radius](../commands-legacy/object-get-corner-radius) et [OBJECT SET CORNER RADIUS](../commands-legacy/object-set-corner-radius).
+Vous pouvez également définir cette propriété à l'aide des commandes [OBJECT Get corner radius](../commands/object-get-corner-radius) et [OBJECT SET CORNER RADIUS](../commands/object-set-corner-radius).
 
 #### Grammaire JSON
 
@@ -174,7 +174,7 @@ Vous pouvez également définir cette propriété à l'aide des commandes [OBJEC
 
 #### Commandes
 
-[OBJECT GET CORNER RADIUS](../commands-legacy/object-get-corner-radius) - [OBJECT SET CORNER RADIUS](../commands-legacy/object-set-corner-radius)
+[OBJECT GET CORNER RADIUS](../commands/object-get-corner-radius) - [OBJECT SET CORNER RADIUS](../commands/object-set-corner-radius)
 
 ---
 
@@ -196,7 +196,7 @@ Cette propriété désigne la taille verticale d'un objet.
 
 #### Commandes
 
-[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates) - [OBJECT MOVE](../commands-legacy/object-move) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates)
+[OBJECT GET COORDINATES](../commands/object-get-coordinates) - [OBJECT MOVE](../commands/object-move) - [OBJECT SET COORDINATES](../commands/object-set-coordinates)
 
 ---
 
@@ -220,7 +220,7 @@ Cette propriété désigne la taille horizontale d'un objet.
 
 #### Commandes
 
-[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates) - [OBJECT MOVE](../commands-legacy/object-move) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates)
+[OBJECT GET COORDINATES](../commands/object-get-coordinates) - [OBJECT MOVE](../commands/object-move) - [OBJECT SET COORDINATES](../commands/object-set-coordinates)
 
 ---
 
@@ -242,7 +242,7 @@ La largeur maximale de la colonne (en pixels). La largeur de la colonne ne peut 
 
 #### Commandes
 
-[LISTBOX Get column width](../commands-legacy/listbox-get-column-width) - [LISTBOX SET COLUMN WIDTH](../commands-legacy/listbox-set-column-width)
+[LISTBOX Get column width](../commands/listbox-get-column-width) - [LISTBOX SET COLUMN WIDTH](../commands/listbox-set-column-width)
 
 ---
 
@@ -264,7 +264,7 @@ La largeur minimale de la colonne (en pixels). La largeur de la colonne ne peut 
 
 #### Commandes
 
-[LISTBOX Get column width](../commands-legacy/listbox-get-column-width) - [LISTBOX SET COLUMN WIDTH](../commands-legacy/listbox-set-column-width)
+[LISTBOX Get column width](../commands/listbox-get-column-width) - [LISTBOX SET COLUMN WIDTH](../commands/listbox-set-column-width)
 
 ---
 
@@ -284,7 +284,7 @@ Définit la hauteur des lignes de list box (hors en-têtes et pieds de page). Pa
 
 #### Commandes
 
-[LISTBOX Get row height](../commands-legacy/listbox-get-row-height) - [LISTBOX Get rows height](../commands-legacy/listbox-get-rows-height) - [LISTBOX SET ROW HEIGHT](../commands-legacy/listbox-set-row-height) - [LISTBOX SET ROWS HEIGHT](../commands-legacy/listbox-set-rows-height)
+[LISTBOX Get row height](../commands/listbox-get-row-height) - [LISTBOX Get rows height](../commands/listbox-get-rows-height) - [LISTBOX SET ROW HEIGHT](../commands/listbox-set-row-height) - [LISTBOX SET ROWS HEIGHT](../commands/listbox-set-rows-height)
 
 #### Voir également
 
@@ -322,7 +322,7 @@ En supposant que l'unité des lignes soit «lignes», alors la cinquième ligne 
 
 #### Commandes
 
-[`LISTBOX Get array`](../commands-legacy/listbox-get-array) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays)
+[`LISTBOX Get array`](../commands/listbox-get-array) - [`LISTBOX GET ARRAYS`](../commands/listbox-get-arrays)
 
 #### Voir également
 
@@ -377,3 +377,4 @@ Définit une marge verticale pour les cellules. La valeur est définie en pixels
 #### Voir également
 
 [Marge horizontale](#horizontal-padding)
+

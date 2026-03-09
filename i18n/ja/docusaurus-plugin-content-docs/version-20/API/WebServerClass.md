@@ -71,12 +71,13 @@ Webサーバーオブジェクトは [`WEB Server`](#web-server) コマンドに
 
 
 <!-- REF #_command_.WEB Server.Params -->
+<div class="no-index">
 
-| 引数     | 型            |    | 説明                                               |
-| ------ | ------------ | -- | ------------------------------------------------ |
-| option | Integer      | -> | 取得する Webサーバー (省略時のデフォルト = `Web server database`) |
-| 戻り値    | 4D.WebServer | <- | WebServer オブジェクト                                 |
-
+|Parameter|Type||Description|
+|---|---|----|---|
+|option|Integer|->|Web server to get (default if omitted = `Web server database`)|  
+|Result|4D.WebServer|<-|Web server object|
+</div>
 <!-- END REF -->
 
 `WEB Server` コマンドは、 <!-- REF #_command_.WEB Server.Summary -->デフォルトの Webサーバーオブジェクト、または *option* 引数で指定された Webサーバーオブジェクトを返します<!-- END REF -->。
@@ -117,11 +118,12 @@ Webサーバーオブジェクトは [`WEB Server`](#web-server) コマンドに
 
 
 <!-- REF #_command_.WEB Server list.Params -->
+<div class="no-index">
 
-| 引数  | 型          |    | 説明                         |
-| --- | ---------- | -- | -------------------------- |
-| 戻り値 | Collection | <- | 利用可能な Webサーバーオブジェクトのコレクション |
-
+|Parameter|Type||Description|
+|---|---|----|---|
+|Result|Collection|<-|Collection of the available Web server objects|
+</div>
 <!-- END REF -->
 
 `WEB Server list` コマンドは、 <!-- REF #_command_.WEB Server list.Summary -->4Dアプリケーション内で利用可能な Webサーバーオブジェクトのコレクションを返します<!-- END REF -->。
@@ -672,12 +674,13 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
 
 <!-- REF #WebServerClass.start().Params -->
+<div class="no-index">
 
-| 引数       | 型      |    | 説明              |
-| -------- | ------ | -- | --------------- |
-| settings | Object | -> | 開始時の Webサーバー設定  |
-| 戻り値      | Object | <- | Webサーバー開始のステータス |
-
+|Parameter|Type||Description|
+|---|---|----|---|
+|settings|Object|->|Web server settings to set at startup|  
+|Result|Object|<-|Status of the web server startup|
+</div>
 <!-- END REF -->
 
 `.start()` 関数は、 <!-- REF #WebServerClass.start().Summary -->対象の Webサーバーを開始させます<!-- END REF -->。この際、任意の *settings* オブジェクト引数に設定したプロパティを使用します。
@@ -733,11 +736,13 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
 
 <!-- REF #WebServerClass.stop().Params -->
-| 引数 | 型 |  | 説明                                           |
-| -- | - |  | -------------------------------------------- |
-|    |   |  | このコマンドは引数を必要としません|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|----|---|
+||||Does not require any parameters|
+</div>
+<!-- END REF -->
 
 `.stop()` 関数は、 <!-- REF #WebServerClass.stop().Summary -->対象の Webサーバーを停止します<!-- END REF -->。
 

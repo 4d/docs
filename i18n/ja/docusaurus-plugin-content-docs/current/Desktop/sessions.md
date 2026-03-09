@@ -74,7 +74,7 @@ title: デスクトップセッション
 
 ストアドプロシージャーの `session` オブジェクトは、次のいずれかから利用できます:
 
-- [`Execute on Server`](../commands-legacy/execute-on-server) コマンドで呼び出されたプロジェクトメソッド
+- [`Execute on Server`](../commands/execute-on-server) コマンドで呼び出されたプロジェクトメソッド
 - ストアドプロシージャーから呼び出されたORDA [データモデル関数](../ORDA/ordaClasses.md)
 - [`On Server Startup`](../commands/on-server-startup-database-method) と [`On Server Shutdown`](../commands/on-server-shutdown-database-method)などのデータベースメソッド。
 
@@ -104,7 +104,7 @@ title: デスクトップセッション
 
 :::note
 
-クライアント/サーバー環境においてOTP トークンを作成する場合、[OTP 作成コード](../API/SessionClass.md#createotp) を**サーバー上で** 実行する必要があります(`Session` オブジェクトはリモート4D ではNull となります)。 たとえば [`On Server Open Connection`](../commands-legacy/on-server-open-connection-database-method) データベースメソッドなどを使用することができます。
+クライアント/サーバー環境においてOTP トークンを作成する場合、[OTP 作成コード](../API/SessionClass.md#createotp) を**サーバー上で** 実行する必要があります(`Session` オブジェクトはリモート4D ではNull となります)。 たとえば [`On Server Open Connection`](../commands/on-server-open-connection-database-method) データベースメソッドなどを使用することができます。
 
 :::
 
@@ -153,4 +153,5 @@ return Session.createOTP()
 Session.clearPrivileges() // セッションから古い権限を消去する
 Session.setPrivileges("viewProducts")
 ```
+
 

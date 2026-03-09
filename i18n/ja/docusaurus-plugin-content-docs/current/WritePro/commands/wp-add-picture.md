@@ -15,7 +15,7 @@ displayed_sidebar: docs
 | wpDoc          | Object                  | &#8594; | 4D Write Pro ドキュメント                        |
 | picture        | Picture                 | &#8594; | ピクチャー                                      |
 | picturePath    | Text                    | &#8594; | ピクチャーパス                                    |
-| pictureFileObj | [4D.File](../API/FileClass.md)  | &#8594; | ピクチャーファイルを表す4D.File オブジェクト |
+| pictureFileObj | 4D.File | &#8594; | ピクチャーファイルを表す4D.File オブジェクト |
 | 戻り値            | Object                  | &#8592; | ピクチャーを参照しているオブジェクト                         |
 
 </div>
@@ -49,7 +49,7 @@ displayed_sidebar: docs
 
 位置、レイヤー(インライン、テキストの前/後)、表示状態、その他ピクチャーのあらゆるプロパティは[WP SET ATTRIBUTES](wp-set-attributes.md) コマンド、または標準アクションを使用して変更することができます(*4D Write Pro 標準アクションを使用*を参照してください)。
 
-**注意:** [WP Selection range](../commands-legacy/wp-selection-range) コマンドは、アンカーされたピクチャーが選択されていた場合には *ピクチャー参照* を、インラインピクチャーが選択されていた場合には *レンジオブジェクト* を返します。 選択されたオブジェクトがピクチャーオブジェクトであるかどうかは、`wk type` 属性をチェックすることで確認できます。
+**注意:** [WP Selection range](../commands/wp-selection-range) コマンドは、アンカーされたピクチャーが選択されていた場合には *ピクチャー参照* を、インラインピクチャーが選択されていた場合には *レンジオブジェクト* を返します。 選択されたオブジェクトがピクチャーオブジェクトであるかどうかは、`wk type` 属性をチェックすることで確認できます。
 
 - **Value = 2**: 選択されたオブジェクトはピクチャーオブジェクトです。
 - **Value = 0**: 選択されたオブジェクトはレンジオブジェクトです。
@@ -103,5 +103,5 @@ The result is:
 
 ## 参照
 
-[WP DELETE PICTURE](../commands-legacy/wp-delete-picture)</br>
-[WP Picture range](../commands-legacy/wp-picture-range)
+[WP DELETE PICTURE](../commands/wp-delete-picture)</br>
+[WP Picture range](../commands/wp-picture-range)

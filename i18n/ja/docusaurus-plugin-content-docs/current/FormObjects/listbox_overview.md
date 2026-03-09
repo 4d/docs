@@ -256,11 +256,11 @@ JSON フォームにおいて、リストボックスに次のハイライトセ
 
 ### カスタムソート
 
-デベロッパーは、例えば[`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns) コマンドを使用したり、あるいは[`On Header Click`](../Events/onHeaderClick) および [`On After Sort`](../Events/onAfterSort) フォームイベントと関連する4D コマンドを組み合わせることにより、カスタムのソートを設定することができます。
+デベロッパーは、例えば[`LISTBOX SORT COLUMNS`](../commands/listbox-sort-columns) コマンドを使用したり、あるいは[`On Header Click`](../Events/onHeaderClick) および [`On After Sort`](../Events/onAfterSort) フォームイベントと関連する4D コマンドを組み合わせることにより、カスタムのソートを設定することができます。
 
 カスタムソートは以下のことが可能です:
 
-- [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns) コマンドを使うことで、複数のカラムに対してマルチレベルソートを実行する。
+- [`LISTBOX SORT COLUMNS`](../commands/listbox-sort-columns) コマンドを使うことで、複数のカラムに対してマルチレベルソートを実行する。
 - [`collection.orderByMethod()`](../API/CollectionClass.md#orderbymethod) や [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) などの関数を使って、複雑な条件のソートをおこなう
 
 #### 例題
@@ -304,7 +304,7 @@ End if
 
 変数の値を設定して (たとえば Header2:=2)、ソートを表す矢印の表示を強制することができます。 しかし、列のソート順は変更されません、これを処理するのは開発者の役割です。
 
-> The [`OBJECT SET FORMAT`](../commands-legacy/object-set-format) コマンドは、カスタマイズされた並べ替えアイコンをサポートする機能をリストボックスヘッダー用に提供しています。
+> The [`OBJECT SET FORMAT`](../commands/object-set-format) コマンドは、カスタマイズされた並べ替えアイコンをサポートする機能をリストボックスヘッダー用に提供しています。
 
 ## スタイルとカラー、表示の管理
 
@@ -398,7 +398,7 @@ End if
 
 - フォームエディターのプロパティリストを使用して階層要素を手作業で設定する (または JSON フォームを編集する)。
 - フォームエディターのリストボックス管理メニューを使用して階層を生成する。
-- [`LISTBOX SET HIERARCHY`](../commands-legacy/listbox-set-hierarchy) と [`LISTBOX GET HIERARCHY`](../commands-legacy/listbox-get-hierarchy) コマンドを使用する。
+- [`LISTBOX SET HIERARCHY`](../commands/listbox-set-hierarchy) と [`LISTBOX GET HIERARCHY`](../commands/listbox-get-hierarchy) コマンドを使用する。
 
 #### "階層リストボックス" プロパティによる階層化
 
@@ -580,6 +580,7 @@ Variable 2 も常に表示され、入力できます。 これは二番目の�
   ![](../assets/en/FormObjects/hierarch16.png)
 
 - ユーザーが折りたたみアイコンをクリックすると `On Collapse` イベントが生成されます。 [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) コマンドは該当するセルを返します。そして[`LISTBOX DELETE ROWS`](../commands/listbox-delete-rows) コマンドを使用して必要なだけ行をリストボックスから削除することができます。
+
 
 
 

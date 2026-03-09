@@ -36,9 +36,9 @@ No parâmetro *formula*, passe a fórmula 4D a ser avaliada. Pode passar:
 - um [objeto fórmula](../../commands/formula.md-objects) criado pelo comando [**Formula**](../../commands/formula) ou [**Formula from string**](../../commands/formula.md-from-string),
 - ou um objeto que contém duas propriedades:
 
-| **Propriedade** | **Tipo** | **Description**                                                                                                                                                                           |
-| --------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name            | Text     | Nome a ser exibido para a fórmula no documento                                                                                                                                            |
+| **Propriedade** | **Tipo** | **Description**                                                                                                                                                                        |
+| --------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name            | Text     | Nome a ser exibido para a fórmula no documento                                                                                                                                         |
 | formula         | Object   | O [objeto de fórmula](../../commands/formula.md-objects) criado pelo comando [**Formula**](../../commands/formula) ou [**Formula from string**](../../commands/formula.md-from-string) |
 
 Quando você usa um objeto com uma fórmula *name*, esse nome é exibido no documento em vez da referência da fórmula quando as fórmulas são exibidas como referência e na dica da fórmula quando são exibidas como valor ou símbolos. Se a propriedade *name* contiver uma string vazia ou for omitida, ela será removida do objeto e a fórmula será exibida por padrão. Para obter mais informações, consulte a página [Gerenciar fórmulas](../managing-formulas.md).
@@ -138,6 +138,6 @@ Resultados:
 ## Veja também
 
 *Managing formulas*\
-[WP COMPUTE FORMULAS](../commands-legacy/wp-compute-formulas)</br>
-[WP FREEZE FORMULAS](../commands-legacy/wp-freeze-formulas)</br>
-[WP Get formulas](../commands-legacy/wp-get-formulas)
+[WP COMPUTE FORMULAS](../commands/wp-compute-formulas)</br>
+[WP FREEZE FORMULAS](../commands/wp-freeze-formulas)</br>
+[WP Get formulas](../commands/wp-get-formulas)

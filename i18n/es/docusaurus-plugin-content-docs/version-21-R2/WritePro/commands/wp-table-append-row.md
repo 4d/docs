@@ -8,6 +8,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Table append row.Params-->
 
+<div class="no-index">
+
 | Parámetros | Tipo       |                             | Descripción                                        |
 | ---------- | ---------- | --------------------------- | -------------------------------------------------- |
 | tableRef   | Object     | &#8594; | Referencia de tabla                                |
@@ -15,6 +17,7 @@ displayed_sidebar: docs
 | valueColl  | Collection | &#8594; | Colección de valores a definir en la línea         |
 | Resultado  | Object     | &#8592; | Objeto rango de línea                              |
 
+</div>
 <!-- END REF-->
 
 ## Descripción

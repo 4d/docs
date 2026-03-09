@@ -105,12 +105,15 @@ WebSocketサーバーオブジェクトは、以下のプロパティと機能�
 
 <!-- REF #4D.WebSocketServer.new().Params -->
 
+<div class="no-index">
+
 | 引数                           | 型                                  |                             | 説明                                        |
 | ---------------------------- | ---------------------------------- | :-------------------------: | ----------------------------------------- |
 | [WSSHandler](#wsshandler-引数) | Object                             |              ->             | WebSocketサーバー用コールバックを宣言しているユーザークラスのオブジェクト |
 | [options](#options-引数)       | Object                             |              ->             | WebSocket の設定パラメーター                       |
 | 戻り値                          | 4D.WebSocketServer | <- | 新しい WebSocketServer オブジェクト                |
 
+</div>
 <!-- END REF -->
 
 `4D.WebSocketServer.new()` 関数は、<!-- REF #4D.WebSocketServer.new().Summary -->指定した *WSSHandler* コールバックと、*options* の設定 (任意) を使用して WebSocketサーバーを作成および起動し、`4D.WebSocketServer` オブジェクトを返します<!-- END REF -->。
@@ -373,10 +376,13 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 <!-- REF #WebSocketServerClass.terminate().Params -->
 
+<div class="no-index">
+
 | 引数      | 型       |     | 説明                                                 |
 | ------- | ------- | :-: | -------------------------------------------------- |
 | timeout | Integer |  -> | WebSocketサーバーを終了するまでの待機時間 (秒単位) |
 
+</div>
 <!-- END REF -->
 
 #### 説明

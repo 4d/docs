@@ -8,6 +8,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert picture.Params-->
 
+<div class="no-index">
+
 | 引数             | 型                       |                             | 説明                                         |
 | -------------- | ----------------------- | --------------------------- | ------------------------------------------ |
 | targetObj      | Object                  | &#8594; | レンジまたは要素または4D Write Pro ドキュメント             |
@@ -17,6 +19,7 @@ displayed_sidebar: docs
 | rangeUpdate    | Integer                 | &#8594; | レンジ更新モード                                   |
 | 戻り値            | Object                  | &#8592; | ピクチャーを参照しているオブジェクト                         |
 
+</div>
 <!-- END REF-->
 
 ## 説明

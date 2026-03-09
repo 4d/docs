@@ -9,9 +9,14 @@ title: VP INSERT COLUMNS
 
 <!-- REF #_method_.VP INSERT COLUMNS.Params -->
 
-| Paramètres | Type   |    | Description |                  |
-| ---------- | ------ | -- | ----------- | ---------------- |
-| rangeObj   | Object | -> | Objet plage | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres | Type   |    | Description |
+| ---------- | ------ | -- | ----------- |
+| rangeObj   | Object | -> | Objet plage |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

@@ -9,10 +9,15 @@ title: VP SET VALUE
 
 <!-- REF #_method_.VP SET VALUE.Params -->
 
-| Parámetros | Tipo   |    | Descripción                               |                  |
-| ---------- | ------ | -- | ----------------------------------------- | ---------------- |
-| rangeObj   | Object | -> | Objeto rango                              |                  |
-| valueObj   | Object | -> | Valores de la celda y opciones de formato | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo   |    | Descripción                               |
+| ---------- | ------ | -- | ----------------------------------------- |
+| rangeObj   | Object | -> | Objeto rango                              |
+| valueObj   | Object | -> | Valores de la celda y opciones de formato |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

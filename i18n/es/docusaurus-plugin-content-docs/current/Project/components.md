@@ -603,7 +603,7 @@ Luego puede introducir su token de acceso personal:
 
 Solo puede introducir un token de acceso personal. Una vez se ha sido introducido un token, puede editarlo.
 
-El token proporcionado se almacena en un archivo **github.json** en la [carpeta activa de 4D](../commands-legacy/get-4d-folder.md#active-4d-folder).
+El token proporcionado se almacena en un archivo **github.json** en la [carpeta activa de 4D](../commands/get-4d-folder#active-4d-folder).
 
 ### Eliminando una dependencia
 
@@ -624,4 +624,5 @@ Si confirma la caja de diálogo, la dependencia eliminada [estado](#estado-depen
 #### Advertencias sobre el uso de dependencias
 
 Cuando intente eliminar una dependencia primaria que es requerida por otras dependencias en su proyecto, se le advertirá de que la dependencia todavía está en uso. El sistema mostrará qué otras dependencias lo requieren y le pedirá que confirme la eliminación, ya que eliminarlo puede hacer que esos componentes dependientes dejen de funcionar correctamente.
+
 

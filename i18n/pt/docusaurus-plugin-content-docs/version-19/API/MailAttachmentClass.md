@@ -25,18 +25,19 @@ Objetos anexos oferecem as propriedades e funções apenas leitura abaixo:
 
 
 <!-- REF #_command_.MAIL New attachment.Params -->
+<div class="no-index">
 
-| Parâmetro   | Tipo               |    | Descrição                                                             |
-| ----------- | ------------------ |:--:| --------------------------------------------------------------------- |
-| path        | Text               | -> | Pode passar uma rota ou um Blob para definir o anexo.                 |
-| blob        | Blob               | -> | Blob contendo o anexo                                                 |
-| name        | Text               | -> | Nome + extensão usado pelo cliente email para designar o anexo        |
-| cid         | Text               | -> | ID do anexo (apenas mensagens HTML), ou " " se nenhum cid for exigido |
-| type        | Text               | -> | Valor do cabeçalho content-type                                       |
-| disposition | Text               | -> | Valor do cabeçalho content-disposition: "inline" ou "attachment".     |
-| Resultados  | 4D. MailAttachment | <- | Objeto anexo<!-- END REF -->
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|path|Text|->|Path of the attachment file|
+|blob|Blob|->|BLOB containing the attachment|
+|name|Text|->|Name + extension used by the mail client to designate the attachment|
+|cid|Text|->|ID of attachment (HTML messages only), or " " if no cid is required|
+|type|Text|->|Value of the content-type header|
+|disposition|Text|->|Value of the content-disposition header: "inline" or "attachment".|
+|Result|4D.MailAttachment|<-|Attachment object|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -154,18 +155,19 @@ $transporter.send($email)
 
 
 <!-- REF #4D.MailAttachment.new().Params -->
+<div class="no-index">
 
-| Parâmetro   | Tipo               |    | Descrição                                                             |
-| ----------- | ------------------ |:--:| --------------------------------------------------------------------- |
-| path        | Text               | -> | Pode passar uma rota ou um Blob para definir o anexo.                 |
-| blob        | Blob               | -> | Blob contendo o anexo                                                 |
-| name        | Text               | -> | Nome + extensão usado pelo cliente email para designar o anexo        |
-| cid         | Text               | -> | ID do anexo (apenas mensagens HTML), ou " " se nenhum cid for exigido |
-| type        | Text               | -> | Valor do cabeçalho content-type                                       |
-| disposition | Text               | -> | Valor do cabeçalho content-disposition: "inline" ou "attachment".     |
-| Resultados  | 4D. MailAttachment | <- | Objeto anexo<!-- END REF -->
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|path|Text|->|Path of the attachment file|
+|blob|Blob|->|BLOB containing the attachment|
+|name|Text|->|Name + extension used by the mail client to designate the attachment|
+|cid|Text|->|ID of attachment (HTML messages only), or " " if no cid is required|
+|type|Text|->|Value of the content-type header|
+|disposition|Text|->|Value of the content-disposition header: "inline" or "attachment".|
+|Result|4D.MailAttachment|<-|Attachment object|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -196,11 +198,13 @@ A propriedade `.disposition` contém <!-- REF #MailAttachmentClass.disposition.S
 
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
-| Parâmetro  | Tipo |    | Descrição                                    |
-| ---------- | ---- |:--:| -------------------------------------------- |
-| Resultados | Blob | <- | Conteúdo do anexo|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|--- |:---:|------|
+|Result|Blob|<-|Content of the attachment|
+</div>
+<!-- END REF -->
 
 #### Descrição
 

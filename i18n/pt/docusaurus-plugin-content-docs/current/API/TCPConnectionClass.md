@@ -5,6 +5,15 @@ title: TCPConnection
 
 A classe `TCPConnection` permite gerenciar conexões de cliente TCP (Transmission Control Protocol) com um [servidor](./TCPListenerClass.md), possibilitando o envio e o recebimento de dados e a manipulação de eventos do ciclo de vida da conexão usando retornos de chamada.
 
+<details><summary>História</summary>
+
+| Release | Mudanças                                       |
+| ------- | ---------------------------------------------- |
+| 20 R9   | Novos atributos `listener`, `address` e `port` |
+| 20 R8   | Classe adicionada                              |
+
+</details>
+
 A classe `TCPConnection` está disponível no repositório de classes `4D`. Você pode criar uma conexão TCP usando a função [4D.TCPConnection.new()](#4dtcpconnectionnew), que retorna um objeto [TCPConnection](#tcpconnection-object).
 
 Todas as funções da classe `TCPConnection` são thread-seguras.
@@ -19,14 +28,9 @@ For debugging and monitoring, you can use the [4DTCPUDPLog.txt log file](../Debu
 
 :::
 
-<details><summary>História</summary>
+### Aynchronous programming
 
-| Release | Mudanças                                       |
-| ------- | ---------------------------------------------- |
-| 20 R9   | Novos atributos `listener`, `address` e `port` |
-| 20 R8   | Classe adicionada                              |
-
-</details>
+This class supports asynchronous programming in 4D as described in the [Asynchronous Execution](../Develop/async.md) page.
 
 ### Exemplos
 

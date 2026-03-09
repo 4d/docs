@@ -32,7 +32,7 @@ title: 動作
 
 #### コマンド
 
-[OBJECT GET DRAG AND DROP OPTIONS](../commands-legacy/object-get-drag-and-drop-options) - [OBJECT SET DRAG AND DROP OPTIONS](../commands-legacy/object-set-drag-and-drop-options)
+[OBJECT GET DRAG AND DROP OPTIONS](../commands/object-get-drag-and-drop-options) - [OBJECT SET DRAG AND DROP OPTIONS](../commands/object-set-drag-and-drop-options)
 
 #### 参照
 
@@ -64,7 +64,7 @@ title: 動作
 
 #### コマンド
 
-[OBJECT GET DRAG AND DROP OPTIONS](../commands-legacy/object-get-drag-and-drop-options) - [OBJECT SET DRAG AND DROP OPTIONS](../commands-legacy/object-set-drag-and-drop-options)
+[OBJECT GET DRAG AND DROP OPTIONS](../commands/object-get-drag-and-drop-options) - [OBJECT SET DRAG AND DROP OPTIONS](../commands/object-set-drag-and-drop-options)
 
 #### 参照
 
@@ -156,7 +156,7 @@ title: 動作
 
 #### コマンド
 
-[GET LIST PROPERTIES](../commands-legacy/get-list-properties) - [SET LIST PROPERTIES](../commands-legacy/set-list-properties)
+[GET LIST PROPERTIES](../commands/get-list-properties) - [SET LIST PROPERTIES](../commands/set-list-properties)
 
 ---
 
@@ -205,5 +205,6 @@ title: 動作
 
 #### コマンド
 
-[`OBJECT Get action`](../commands-legacy/object-get-action) - [`OBJECT SET ACTION`](../commands-legacy/object-set-action)
+[`OBJECT Get action`](../commands/object-get-action) - [`OBJECT SET ACTION`](../commands/object-set-action)
+
 

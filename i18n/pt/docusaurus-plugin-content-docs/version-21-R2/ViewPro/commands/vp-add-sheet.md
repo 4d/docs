@@ -9,11 +9,16 @@ title: VP ADD SHEET
 
 <!-- REF #_method_.VP ADD SHEET.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                  |                  |
-| ---------- | ------- | -- | ------------------------------------------ | ---------------- |
-| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro |                  |
-| index      | Integer | -> | Índice da nova folha                       |                  |
-| name       | Text    | -> | Nome da folha                              | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro  | Tipo    |    | Descrição                                  |
+| ---------- | ------- | -- | ------------------------------------------ |
+| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro |
+| index      | Integer | -> | Índice da nova folha                       |
+| name       | Text    | -> | Nome da folha                              |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

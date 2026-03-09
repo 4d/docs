@@ -202,7 +202,7 @@ El estilo de botón OS X Textured es casi idéntico al estilo [Bevel](#bevel) pe
 
 Por defecto, el estilo OS X Textured aparece como:
 
-- *Windows* - un botón sistema estándar con un fondo gris claro con una etiqueta en el centro. Tiene la particularidad de ser transparente en Vista.
+- *Windows* - un botón sistema estándar con un fondo gris claro con una etiqueta en el centro.
 
 ![](../assets/en/FormObjects/button_osxtextured.png)
 

@@ -44,7 +44,7 @@ Cette option permet de désigner un formulaire détaillé à utiliser dans un so
 
 #### Commandes
 
-[OBJECT GET SUBFORM](../commands-legacy/object-get-subform) - [OBJECT SET SUBFORM](../commands-legacy/object-set-subform)
+[OBJECT GET SUBFORM](../commands/object-get-subform) - [OBJECT SET SUBFORM](../commands/object-set-subform)
 
 ---
 
@@ -137,7 +137,7 @@ Les sous-formulaires de liste peuvent être utilisés pour la saisie de données
 
 #### Commandes
 
-[OBJECT GET SUBFORM](../commands-legacy/object-get-subform) - [OBJECT SET SUBFORM](../commands-legacy/object-set-subform)
+[OBJECT GET SUBFORM](../commands/object-get-subform) - [OBJECT SET SUBFORM](../commands/object-set-subform)
 
 ---
 
@@ -178,3 +178,4 @@ Désigne l'option permettant aux utilisateurs de sélectionner des lignes :
 #### Objets pris en charge
 
 [Sous-formulaire](subform_overview.md)
+

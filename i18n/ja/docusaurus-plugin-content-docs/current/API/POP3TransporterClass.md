@@ -485,3 +485,4 @@ POP3 Transporter オブジェクトは [POP3 New transporter](../commands/pop3-n
 <!-- END REF -->
 
 <!-- INCLUDE transporter.user.Desc -->
+

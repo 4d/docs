@@ -98,5 +98,5 @@ Desea insertar un salto de sección continuo para tener una sección de una colu
 
 ## Ver también
 
-[WP Get breaks](../commands-legacy/wp-get-breaks)</br>
+[WP Get breaks](../commands/wp-get-breaks)</br>
 [WP Insert document body](wp-insert-document-body.md)

@@ -9,11 +9,16 @@ title: VP SET PRINT INFO
 
 <!-- REF #_method_.VP SET PRINT INFO.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                                   |                  |
-| ---------- | ------- | -- | ----------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nome da área 4D View Pro                                    |                  |
-| printInfo  | Object  | -> | Objeto que contém atributos de impressão                    |                  |
-| sheet      | Integer | -> | Índice da folha (folha atual se omitida) | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro  | Tipo    |    | Descrição                                                   |
+| ---------- | ------- | -- | ----------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nome da área 4D View Pro                                    |
+| printInfo  | Object  | -> | Objeto que contém atributos de impressão                    |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida) |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

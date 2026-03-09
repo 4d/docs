@@ -5,6 +5,14 @@ title: UDPSocket
 
 La clase `UDPSocket` permite enviar y recibir paquetes UDP. UDP (User Datagram Protocol) es un protocolo de fácil implementación para el envío de datos. Es más rápido y sencillo que TCP (sólo 8 bytes de encabezado frente a los al menos 20 bytes en TCP), pero no ofrece el mismo nivel de fiabilidad. Es útil para aplicaciones en las que los datos deben llegar rápidamente a su destino. Sin embargo, no permite verificar la entrega, ni comprobar errores o recuperar datos que no se hayan entregado correctamente.
 
+<details><summary>Historia</summary>
+
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20 R10      | Clase añadida  |
+
+</details>
+
 La clase `UDPSocket` está disponible en el class store `4D`. Puede crear una conexión UDP utilizando la función [4D.UDPSocket.new()](#4dudpsocketnew), que devuelve un [objeto UDPSocket](#udpsocket-object).
 
 Gracias al *refcounting* de los objetos 4D estándar, un socket UDPSocket se libera automáticamente cuando deja de estar referenciado, es decir, cuando no existen más referencias a ellos en memoria. Esto ocurre típicamente, por ejemplo, al final de una ejecución de un método para variables locales. En consecuencia, los recursos asociados se limpian adecuadamente sin necesidad de un cierre explícito. Sin embargo, si quieres "forzar" el cierre de un socket en cualquier momento, [**nulifica** sus referencias poniéndolas **Null**](../Concepts/dt_object.md#resources).
@@ -15,15 +23,9 @@ Para depuración y monitorización, puede utilizar el fichero de registro [4DTCP
 
 :::
 
-<details><summary>Historia</summary>
+### Aynchronous programming
 
-| Lanzamiento | Modificaciones |
-| ----------- | -------------- |
-| 20 R10      | Clase añadida  |
-
-</details>
-
-### Ejemplo
+This class supports asynchronous programming in 4D as described in the [Asynchronous Execution](../Develop/async.md) page.
 
 ### Objeto UDPSocket
 

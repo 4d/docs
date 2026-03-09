@@ -83,12 +83,14 @@ title: Entity
 
 
 <!-- REF #EntityClass.clone().Params -->
-| 引数                         | 型         |    | 説明                  |
-| -------------------------- | --------- |:--:| ------------------- |
-| 戻り値                        | 4D.Entity | <- | 同レコードを参照する新しいエンティティ |
-|<!-- END REF -->
+<div class="no-index">
 
-|           |    |                     |
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|4D.Entity|<-|New entity referencing the record
+|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -138,13 +140,15 @@ title: Entity
 
 
 <!-- REF #EntityClass.diff().Params -->
-| 引数                  | 型          |    | 説明                                    |
-| ------------------- | ---------- |:--:| ------------------------------------- |
-| entityToCompare     | 4D.Entity  | -> | 対象エンティティと比較するエンティティ                   |
-| attributesToCompare | Collection | -> | 比較する属性の名称                             |
-| 戻り値                 | Collection | <- | エンティティ間の差異|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|entityToCompare|4D.Entity|->|Entity to be compared with the original entity|
+|attributesToCompare|Collection|-> |Name of attributes to be compared |
+|Result|Collection|<-|Differences between the entities|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -340,12 +344,14 @@ vCompareResult1 (すべての差異が返されています):
 
 
 <!-- REF #EntityClass.drop().Params -->
-| 引数   | 型       |    | 説明                                                           |
-| ---- | ------- |:--:| ------------------------------------------------------------ |
-| mode | Integer | -> | `dk force drop if stamp changed`: スタンプが変更されていた場合でも強制的にドロップする |
-| 戻り値  | Object  | <- | ドロップの結果|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|mode|Integer|->|`dk force drop if stamp changed`: Forces the drop even if the stamp has changed|
+|Result|Object|<-|Result of drop operation|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -389,7 +395,7 @@ vCompareResult1 (すべての差異が返されています):
 | `dk status entity does not exist anymore` | 5 | エンティティはもうデータ内に存在していません。 このエラーは以下のような場合に起きえます:<br/><li>エンティティがドロップされている (スタンプが変更されていて、メモリ空間は解放されている)</li><li>エンティティがドロップされていて、他のプライマリーキー値を持つエンティティで置き換えられている (スタンプは変更されていて、新しいエンティティがメモリ空間を使用している)。 entity.drop( ) を使用するとき、このエラーは dk force drop if stamp changed オプションを使用した場合に返されることがあります。 entity.lock( ) を使用するとき、このエラーは dk reload drop if stamp changed オプションを使用した場合に返されることがあります。</li>**割り当てられた statusText**: "Entity does not exist anymore" (エンティティはもう存在しません) |
 | `dk status locked`                        | 3 | エンティティはペシミスティック・ロックでロックされています。 <br/>**割り当てられた statusText**: "既にロックされています"                                                                                                     |
 | `dk status serious error`                 | 4 | 深刻なエラーとは、低レベルのデータベースエラー (例: 重複キー)、ハードウェアエラーなどです。 <br/>**割り当てられた statusText**: "その他のエラー"                                                                                       |
-| `dk status stamp has changed`             | 2 | エンティティの内部的なスタンプ値がデータ内に保存されているエンティティのものと合致しません (オプティミスティック・ロック)。<br/><li>entity.save( ) の場合: dk auto merge オプションが使用されていない場合に限りエラー</li><li>entity.drop( ) の場合: dk force drop if stamp changed オプションが使用されていない場合に限りエラー</li><li>entity.lock( ) の場合: dk reload if stamp changed オプションが使用されていない場合に限りエラー</li><li>**割り当てられた statusText**: "Stamp has changed"</li>      |
+| `dk status stamp has changed`             | 2 | エンティティの内部的なスタンプ値がデータ内に保存されているエンティティのものと合致しません (オプティミスティック・ロック)。<br/><li>entity.save( ) の場合: dk auto merge オプションが使用されていない場合に限りエラー</li><li>entity.drop( ) の場合: dk force drop if stamp changed オプションが使用されていない場合に限りエラー</li><li>entity.lock( ) の場合: dk reload if stamp changed オプションが使用されていない場合に限りエラー</li><li>**割り当てられた statusText**: "Stamp has changed"</li>   |
 
 #### 例題 1
 
@@ -446,11 +452,13 @@ vCompareResult1 (すべての差異が返されています):
 
 
 <!-- REF #EntityClass.first().Params -->
-| 引数  | 型         |    | 説明                                                                   |
-| --- | --------- |:--:| -------------------------------------------------------------------- |
-| 戻り値 | 4D.Entity | <- | エンティティセレクションの先頭エンティティへの参照 (見つからなければ null)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|4D.Entity|<-|Reference to first entity of an entity selection (Null if not found)|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -485,11 +493,13 @@ vCompareResult1 (すべての差異が返されています):
 
 
 <!-- REF #EntityClass.fromObject().Params -->
-| 引数     | 型      |    | 説明                                               |
-| ------ | ------ |:--:| ------------------------------------------------ |
-| filler | Object | -> | エンティティの属性値を設定するオブジェクト|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|filler|Object|->|Object from which to fill the entity|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -570,11 +580,13 @@ vCompareResult1 (すべての差異が返されています):
 
 
 <!-- REF #EntityClass.getDataClass().Params -->
-| 引数  | 型            |    | 説明                                                        |
-| --- | ------------ |:--:| --------------------------------------------------------- |
-| 戻り値 | 4D.DataClass | <- | エンティティが所属している DataClass オブジェクト|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|4D.DataClass|<-|DataClass object to which the entity belongs|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -615,11 +627,13 @@ vCompareResult1 (すべての差異が返されています):
 
 
 <!-- REF #EntityClass.getKey().Params -->
-| 引数   | 型       |    | 説明                                                       |
-| ---- | ------- |:--:| -------------------------------------------------------- |
-| mode | Integer | -> | `dk key as string`: プライマリーキーの型にかかわらず、プライマリーキーを文字列として返します |
-| 戻り値  | any     | <- | エンティティのプライマリーキーの値(整数またはテキスト)                             |
+<div class="no-index">
 
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|mode|Integer|->|`dk key as string`: primary key is returned as a string, no matter the primary key type|
+|Result|any|<-|Value of the primary key of the entity (Integer or Text)|
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -655,11 +669,13 @@ vCompareResult1 (すべての差異が返されています):
 
 
 <!-- REF #EntityClass.getSelection().Params -->
-| 引数  | 型                  |    | 説明                                                              |
-| --- | ------------------ |:--:| --------------------------------------------------------------- |
-| 戻り値 | 4D.EntitySelection | <- | エンティティのスタンプ (エンティティが作成されたばかりの場合には 0)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|4D.EntitySelection|<-|Entity selection to which the entity belongs (Null if not found)|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -698,11 +714,13 @@ vCompareResult1 (すべての差異が返されています):
 
 
 <!-- REF #EntityClass.getStamp().Params -->
-| 引数  | 型       |    | 説明                                                                 |
-| --- | ------- |:--:| ------------------------------------------------------------------ |
-| 戻り値 | Integer | <- | エンティティが所属するエンティティセレクション (見つからなければ null)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Integer|<-|Stamp of the entity (0 if entity has just been created)|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -744,12 +762,14 @@ vCompareResult1 (すべての差異が返されています):
 
 
 <!-- REF #EntityClass.indexOf().Params -->
-| 引数              | 型                  |    | 説明                                                  |
-| --------------- | ------------------ |:--:| --------------------------------------------------- |
-| entitySelection | 4D.EntitySelection | -> | エンティティの位置を取得する対象のエンティティセレクション                       |
-| 戻り値             | Integer            | <- | エンティティセレクション内でのエンティティの位置|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|entitySelection|4D.EntitySelection|->|Position of the entity is given according to this entity selection|
+|Result|Integer|<-|Position of the entity in an entity selection|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -792,11 +812,13 @@ vCompareResult1 (すべての差異が返されています):
 
 
 <!-- REF #EntityClass.isNew().Params -->
-| 引数  | 型       |    | 説明                                                                     |
-| --- | ------- |:--:| ---------------------------------------------------------------------- |
-| 戻り値 | Boolean | <- | エンティティが作成されたばかりで未保存の場合は true。 それ以外は false。 |<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Boolean|<-|True if entity has just been created and not yet saved. Otherwise, False.|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -831,11 +853,13 @@ vCompareResult1 (すべての差異が返されています):
 
 
 <!-- REF #EntityClass.last().Params -->
-| 引数  | 型         |    | 説明                                                                   |
-| --- | --------- |:--:| -------------------------------------------------------------------- |
-| 戻り値 | 4D.Entity | <- | エンティティセレクションの最終エンティティへの参照 (見つからなければ null)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|4D.Entity|<-|Reference to last entity of an entity selection (Null if not found)|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -870,12 +894,14 @@ vCompareResult1 (すべての差異が返されています):
 
 
 <!-- REF #EntityClass.lock().Params -->
-| 引数   | 型       |    | 説明                                                       |
-| ---- | ------- |:--:| -------------------------------------------------------- |
-| mode | Integer | -> | `dk reload if stamp changed`: スタンプが変更されてる場合はロック前にリロードします |
-| 戻り値  | Object  | <- | ロックの結果|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|mode|Integer|->|`dk reload if stamp changed`: Reload before locking if stamp changed|
+|Result|Object|<-|Result of lock operation|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -980,11 +1006,13 @@ vCompareResult1 (すべての差異が返されています):
 
 
 <!-- REF #EntityClass.next().Params -->
-| 引数  | 型         |    | 説明                                                                    |
-| --- | --------- |:--:| --------------------------------------------------------------------- |
-| 戻り値 | 4D.Entity | <- | エンティティセレクション内の次のエンティティへの参照 (見つからなければ null)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|4D.Entity|<-|Reference to next entity in the entity selection (Null if not found)|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -1022,11 +1050,13 @@ vCompareResult1 (すべての差異が返されています):
 
 
 <!-- REF #EntityClass.previous().Params -->
-| 引数  | 型         |    | 説明                                                                    |
-| --- | --------- |:--:| --------------------------------------------------------------------- |
-| 戻り値 | 4D.Entity | <- | エンティティセレクション内の前のエンティティへの参照 (見つからなければ null)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|4D.Entity|<-|Reference to previous entity in the entity selection (Null if not found)|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -1063,11 +1093,13 @@ vCompareResult1 (すべての差異が返されています):
 
 
 <!-- REF #EntityClass.reload().Params -->
-| 引数  | 型      |    | 説明                                     |
-| --- | ------ |:--:| -------------------------------------- |
-| 戻り値 | Object | <- | ステータスオブジェクト|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Object|<-|Status object|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -1126,12 +1158,14 @@ vCompareResult1 (すべての差異が返されています):
 
 
 <!-- REF #EntityClass.save().Params -->
-| 引数   | 型       |    | 説明                               |
-| ---- | ------- |:--:| -------------------------------- |
-| mode | Integer | -> | `dk auto merge`: 自動マージモードを有効化します |
-| 戻り値  | Object  | <- | 保存の結果|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|mode|Integer|->|`dk auto merge`: Enables the automatic merge mode|
+|Result|Object|<-|Result of save operation|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -1260,14 +1294,16 @@ vCompareResult1 (すべての差異が返されています):
 
 
 <!-- REF #EntityClass.toObject().Params -->
-| 引数           | 型          |    | 説明                                                                                             |
-| ------------ | ---------- |:--:| ---------------------------------------------------------------------------------------------- |
-| filterString | Text       | -> | 取得する属性 (カンマ区切り)                                                                                |
-| filterCol    | Collection | -> | 取得する属性のコレクション                                                                                  |
-| options      | Integer    | -> | `dk with primary key`: \_\_KEY プロパティを追加;<br/>`dk with stamp`: \_\_STAMP プロパティを追加 |
-| 戻り値          | Object     | <- | エンティティを元にビルドされたオブジェクト|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|filterString |Text |->|Attribute(s) to extract (comma-separated string)|
+|filterCol |Collection |->|Collection of attribute(s) to extract|
+|options|Integer|->|`dk with primary key`: adds the \_KEY property;<br/>`dk with stamp`: adds the \_STAMP property|
+|Result|Object|<-|Object built from the entity|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -1542,11 +1578,13 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 
 <!-- REF #EntityClass.touched().Params -->
-| 引数  | 型       |    | 説明                                                                              |
-| --- | ------- |:--:| ------------------------------------------------------------------------------- |
-| 戻り値 | Boolean | <- | 少なくとも一つのエンティティ属性が編集されていて未保存の場合に true、それ以外の場合には false|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Boolean|<-|True if at least one entity attribute has been modified and not yet saved, else False|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -1588,11 +1626,13 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 
 <!-- REF #EntityClass.touchedAttributes().Params -->
-| 引数  | 型          |    | 説明                                                 |
-| --- | ---------- |:--:| -------------------------------------------------- |
-| 戻り値 | Collection | <- | 変更された属性の名前、あるいは空のコレクション|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Collection|<-|Names of touched attributes, or empty collection|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -1662,11 +1702,13 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 
 <!-- REF #EntityClass.unlock().Params -->
-| 引数  | 型      |    | 説明                                     |
-| --- | ------ |:--:| -------------------------------------- |
-| 戻り値 | Object | <- | ステータスオブジェクト|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Object|<-|Status object|
+</div>
+<!-- END REF -->
 
 #### 説明
 

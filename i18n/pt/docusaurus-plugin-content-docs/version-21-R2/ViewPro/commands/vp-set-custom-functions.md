@@ -9,10 +9,15 @@ title: VP SET CUSTOM FUNCTIONS
 
 <!-- REF #_method_.VP SET CUSTOM FUNCTIONS.Params -->
 
-| Parâmetro  | Tipo   |    | Descrição                                  |                  |
-| ---------- | ------ | -- | ------------------------------------------ | ---------------- |
-| vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro |                  |
-| formulaObj | Object | -> | Objecto fórmula                            | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro  | Tipo   |    | Descrição                                  |
+| ---------- | ------ | -- | ------------------------------------------ |
+| vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro |
+| formulaObj | Object | -> | Objecto fórmula                            |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

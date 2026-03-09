@@ -10,14 +10,14 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| 引数             | 型                       |                             | 説明                                         |
-| -------------- | ----------------------- | --------------------------- | ------------------------------------------ |
-| targetObj      | Object                  | &#8594; | レンジまたは要素または4D Write Pro ドキュメント             |
-| picture        | Picture                 | &#8594; | ピクチャーフィールドまたは変数、あるいはディスク上のピクチャーファイルへのパス    |
-| pictureFileObj | [4D.File](../API/FileClass.md)  | &#8594; | ピクチャーファイルを表す4D.File オブジェクト |
-| mode           | Integer                 | &#8594; | 挿入モード                                      |
-| rangeUpdate    | Integer                 | &#8594; | レンジ更新モード                                   |
-| 戻り値            | Object                  | &#8592; | ピクチャーを参照しているオブジェクト                         |
+| 引数             | 型                                              |                             | 説明                                         |
+| -------------- | ---------------------------------------------- | --------------------------- | ------------------------------------------ |
+| targetObj      | Object                                         | &#8594; | レンジまたは要素または4D Write Pro ドキュメント             |
+| picture        | Picture                                        | &#8594; | ピクチャーフィールドまたは変数、あるいはディスク上のピクチャーファイルへのパス    |
+| pictureFileObj | [4D.File](../API/FileClass.md) | &#8594; | ピクチャーファイルを表す4D.File オブジェクト |
+| mode           | Integer                                        | &#8594; | 挿入モード                                      |
+| rangeUpdate    | Integer                                        | &#8594; | レンジ更新モード                                   |
+| 戻り値            | Object                                         | &#8592; | ピクチャーを参照しているオブジェクト                         |
 
 </div>
 <!-- END REF-->
@@ -110,4 +110,4 @@ $pictRef:=WP Insert picture(WParea; $file; wk replace)
 ## 参照
 
 [WP Insert document body](wp-insert-document-body.md)</br>
-[WP Picture range](../commands-legacy/wp-picture-range)
+[WP Picture range](../commands/wp-picture-range)

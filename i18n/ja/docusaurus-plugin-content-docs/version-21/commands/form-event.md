@@ -61,9 +61,9 @@ displayed_sidebar: docs
 ボタン上でOn Clicked イベントを管理したい場合を考えます:
 
 ```4d
- If(FORM Event.code=On Clicked)
-    ...
- End if
+ If(FORM Event.code=On Clicked)
+    ...
+ End if
 ```
 
 ## 例題 2
@@ -75,13 +75,13 @@ displayed_sidebar: docs
 On Header Click イベントを使用してカラムをソートすることができます:
 
 ```4d
- Form.event:=FORM Event
- Case of
-    :(Form event code=On Header Click)
-       if(Form.event.columnName="lastname")
-          Form.employees:=Form.employees.orderBy(Form.event.columnName+", firstname")
-       End if
- End case
+ Form.event:=FORM Event
+ Case of
+    :(Form event code=On Header Click)
+       if(Form.event.columnName="lastname")
+          Form.employees:=Form.employees.orderBy(Form.event.columnName+", firstname")
+       End if
+ End case
 ```
 
 ## 例題 3
@@ -93,17 +93,17 @@ On Header Click イベントを使用してカラムをソートすることが�
 *setColor* メソッドの中身です:
 
 ```4d
- var $event;$0;$meta : Object
- $event:=FORM Event
- $meta:=New object
- 
- Case of
-    :($event.code=On Display Detail)
-       If($event.isRowSelected)
-          $meta.fill:="lightblue"
-       End if
- End case
- $0:=$meta
+ var $event;$0;$meta : Object
+ $event:=FORM Event
+ $meta:=New object
+ 
+ Case of
+    :($event.code=On Display Detail)
+       If($event.isRowSelected)
+          $meta.fill:="lightblue"
+       End if
+ End case
+ $0:=$meta
 ```
 
 その結果、行が選択された際のリストボックスは以下のようになります:

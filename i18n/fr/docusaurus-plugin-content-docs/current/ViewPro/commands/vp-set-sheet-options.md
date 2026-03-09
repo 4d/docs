@@ -11,11 +11,11 @@ title: VP SET SHEET OPTIONS
 
 <div class="no-index">
 
-| Paramètres   | Type    |    | Description                                                                 |
-| ------------ | ------- | -- | --------------------------------------------------------------------------- |
-| vpAreaName   | Text    | -> | Nom de la zone 4D View Pro                                                  |
-| sheetOptions | Object  | -> | Option(s) de la feuille à définir                        |
-| sheet        | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
+| Paramètres   | Type    |    | Description                                                                                 |
+| ------------ | ------- | -- | ------------------------------------------------------------------------------------------- |
+| vpAreaName   | Text    | -> | Nom de la zone 4D View Pro                                                                  |
+| sheetOptions | Object  | -> | Une erreur est retournée si l'objet <em x-id="3">viewPro</em> est invalide. |
+| sheet        | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis)                 |
 
 </div>
 <!-- END REF -->

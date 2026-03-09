@@ -282,13 +282,13 @@ Existen soluciones alternativas para declarar campos o métodos como funciones e
 
 ### Referenciación de campos mediante la estructura virtual
 
-4D View Pro permite referenciar campos 4D utilizando la estructura virtual de la base de datos, es decir, declarada a través de los comandos [`SET TABLE TITLES`](../commands-legacy/set-table-titles) y/o [`SET FIELD TITLES`](../commands-legacy/set-field-titles) con el parámetro \*. Esta solución alternativa podría ser útil si su aplicación ya depende de una estructura virtual (de lo contrario, se recomienda [utilizar `VP SET CUSTOM FUNCTIONS`](#4d-functions)).
+4D View Pro permite referenciar campos 4D utilizando la estructura virtual de la base de datos, es decir, declarada a través de los comandos [`SET TABLE TITLES`](../commands/set-table-titles) y/o [`SET FIELD TITLES`](../commands/set-field-titles) con el parámetro \*. Esta solución alternativa podría ser útil si su aplicación ya depende de una estructura virtual (de lo contrario, se recomienda [utilizar `VP SET CUSTOM FUNCTIONS`](#4d-functions)).
 
 > **ATENCIÓN:** no puede utilizar la estructura virtual y `VP SET CUSTOM FUNCTIONS` simultáneamente. En cuanto se llama a `VP SET CUSTOM FUNCTIONS`, las funciones basadas en los comandos `SET TABLE TITLES` y `SET FIELD TITLES` son ignoradas en el área 4D View Pro.
 
 #### Requisitos
 
-- El campo debe pertenecer a la estructura virtual de la base de datos, es decir, debe declararse a través de los comandos [`SET TABLE TITLES`](../commands-legacy/set-table-titles) y/o [`SET FIELD TITLES`](../commands-legacy/set-field-titles) con el parámetro \* (ver el ejemplo),
+- El campo debe pertenecer a la estructura virtual de la base de datos, es decir, debe declararse a través de los comandos [`SET TABLE TITLES`](../commands/set-table-titles) y/o [`SET FIELD TITLES`](../commands/set-field-titles) con el parámetro \* (ver el ejemplo),
 - Los nombres de las tablas y los campos deben cumplir la norma ECMA (ver [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)),
 - El tipo de campo debe ser soportado por 4D View Pro (ver arriba).
 
@@ -362,4 +362,5 @@ Para ser llamado en una fórmula 4D View Pro, un método proyecto debe ser:
 - **No está en conflicto** con una función de hoja de cálculo 4D View Pro existente: si llama a un método proyecto con el mismo nombre que una función integrada 4D View Pro, se llama a la función.
 
 > Si ni el método [VP SET CUSTOM FUNCTIONS](comandos/vp-set-custom-functions.md) ni el comando [VP SET ALLOWED METHODS](comandos/vp-set-allowed-methods.md) han sido ejecutados durante la sesión, las funciones personalizadas de 4D View Pro se basan en los métodos permitidos definidos por el comando genérico de 4D `SET ALLOWED METHODS`. En este caso, los nombres de los métodos proyecto deben cumplir la gramática de identificadores de JavaScript (ver [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). La opción de filtrado global de la caja de diálogo Parámetros (ver *Acceso a los datos*) se ignora en todos los casos.
+
 

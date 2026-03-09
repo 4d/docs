@@ -220,9 +220,9 @@ End if
 
 4D Web サーバーでは、Webフォームや URL を介して POST や GET リクエストで送信されたデータを復元することができます。
 
-ヘッダーや URL にデータが含まれたリクエストを Webサーバーが受信すると、4D はそれに含まれる HTMLオブジェクトの値を受け取ることができます。 たとえば [`WEB SEND FILE`](../commands-legacy/web-send-file) コマンドまたは[`WEB SEND BLOB`](../commands-legacy/web-send-blob) コマンドで送信され、ユーザーが値を入力・修正して確定ボタンをクリックするような Webフォームにおいてもこの原理は使用可能です。
+ヘッダーや URL にデータが含まれたリクエストを Webサーバーが受信すると、4D はそれに含まれる HTMLオブジェクトの値を受け取ることができます。 たとえば [`WEB SEND FILE`](../commands/web-send-file) コマンドまたは[`WEB SEND BLOB`](../commands/web-send-blob) コマンドで送信され、ユーザーが値を入力・修正して確定ボタンをクリックするような Webフォームにおいてもこの原理は使用可能です。
 
-この場合 4D は[`WEB GET VARIABLES`](../commands-legacy/web-get-variables) コマンドを使って、リクエスト内の HTMLオブジェクトの値を取得することができます。 `WEB GET VARIABLES` コマンドは、値をテキストとして受け取ります。
+この場合 4D は[`WEB GET VARIABLES`](../commands/web-get-variables) コマンドを使って、リクエスト内の HTMLオブジェクトの値を取得することができます。 `WEB GET VARIABLES` コマンドは、値をテキストとして受け取ります。
 
 以下の HTMLページのソースコードがあるとき:
 
@@ -326,18 +326,19 @@ HTMLではすべてのオブジェクトがテキストオブジェクトであ�
 
 4D Webサーバーには、リクエストの処理をカスタマイズするための、低レベル Webコマンドがいくつか用意されています。
 
-- [`WEB GET HTTP BODY`](../commands-legacy/web-get-http-body) コマンドは本文を標準テキストとして返すため、必要な解析を行うことができます。
-- [`WEB GET HTTP HEADER`](../commands-legacy/web-get-http-header) コマンドはリクエストのヘッダーを返します。 カスタムcookie などを処理するのに便利です (`WEB SET HTTP HEADER` コマンドも使用できます)。
-- [`WEB GET BODY PART`](../commands-legacy/web-get-body-part) と[`WEB Get body part count`](../commands-legacy/web-get-body-part-count) コマンドは、マルチパートリクエストのボディパートを解析して、テキスト値を取得するだけでなく、ポストされたファイルもBLOBに取得します。
+- [`WEB GET HTTP BODY`](../commands/web-get-http-body) コマンドは本文を標準テキストとして返すため、必要な解析を行うことができます。
+- [`WEB GET HTTP HEADER`](../commands/web-get-http-header) コマンドはリクエストのヘッダーを返します。 カスタムcookie などを処理するのに便利です (`WEB SET HTTP HEADER` コマンドも使用できます)。
+- [`WEB GET BODY PART`](../commands/web-get-body-part) と[`WEB Get body part count`](../commands/web-get-body-part-count) コマンドは、マルチパートリクエストのボディパートを解析して、テキスト値を取得するだけでなく、ポストされたファイルもBLOBに取得します。
 
 これらのコマンドは次の図にまとめられています:
 
 ![](../assets/en/WebServer/httpCommands.png)
 
-4D Webサーバーは、どの Webクライアントからでもチャンクド・エンコーディングでアップロードされたファイルをサポートするようになりました。 チャンクド・エンコーディングは HTTP/1.1 にて定義されているデータ転送方式です。 これを使用することにより、最終的なデータサイズを知る事なく、データを複数の "チャンク" (部分) に分けて転送することができます。 4D Webサーバーでは、サーバーから Webクライアントへのチャンクド・エンコーディングもサポートしています ([`WEB SEND RAW DATA`](../commands-legacy/web-send-raw-data) を使用します)。
+4D Webサーバーは、どの Webクライアントからでもチャンクド・エンコーディングでアップロードされたファイルをサポートするようになりました。 チャンクド・エンコーディングは HTTP/1.1 にて定義されているデータ転送方式です。 これを使用することにより、最終的なデータサイズを知る事なく、データを複数の "チャンク" (部分) に分けて転送することができます。 4D Webサーバーでは、サーバーから Webクライアントへのチャンクド・エンコーディングもサポートしています ([`WEB SEND RAW DATA`](../commands/web-send-raw-data) を使用します)。
 
 ## COMPILER_WEB プロジェクトメソッド
 
 COMPILER_WEB メソッドが存在する場合、それは HTTPサーバーが動的なリクエストを受け取り、4Dエンジンを呼び出した場合に、システムを通して呼び出されます。 これはたとえば 4D Webサーバーが、ポストされたフォーム、または処理すべき URL を [`On Web Connection`](#on-web-connection) に受け取る場合が該当します。 このメソッドは Web通信時に使用される型指定または変数初期化指示子を含めることを目的としています。 これはデータベースのコンパイル時にコンパイラーによって使用されます。 COMPILER_WEB メソッドはすべての Webフォームで共通です。 デフォルトでは、COMPILER_WEB メソッドは存在しません。 明示的に作成する必要があります。
 
 > COMPILER_WEB プロジェクトメソッドは (存在すれば)、SOAPリクエストが受け入れられるごとに実行されます。
+

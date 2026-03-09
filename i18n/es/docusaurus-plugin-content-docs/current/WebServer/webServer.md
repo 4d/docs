@@ -53,7 +53,7 @@ Las peticiones REST se detallan en la sección [Servidor REST](../REST/gettingSt
 
 ## Extensión de los parámetros
 
-La configuración del servidor web de 4D se define a través de un amplio conjunto de parámetros a nivel de aplicación que también pueden personalizarse para la sesión utilizando las propiedades del objeto `webServer` o el comando [`WEB SET OPTION`](../commands-legacy/web-set-option).
+La configuración del servidor web de 4D se define a través de un amplio conjunto de parámetros a nivel de aplicación que también pueden personalizarse para la sesión utilizando las propiedades del objeto `webServer` o el comando [`WEB SET OPTION`](../commands/web-set-option).
 
 ## Plantillas y URLs
 
@@ -66,3 +66,4 @@ El servidor web 4D soporta el acceso a los datos almacenados en sus aplicaciones
 ## Métodos base dedicados
 
 `On Web Authentication`, `On Web Connection`, así como también los métodos base`On REST Authentication` son los puntos de entrada de las peticiones en el servidor web; se pueden utilizar para evaluar y enrutar todo tipo de petición.
+

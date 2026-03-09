@@ -7,8 +7,8 @@ Throughout your 4D projects, you might need to format date and/or time values ac
 
 4D includes a comprehensive list of patterns that you can use to create and apply customized date and time formats in your applications, in addition to default formats. Customized format patterns are supported by the following features:
 
-- o comando [`String`](../commands/string),
-- os comandos [`OBJECT SET FORMAT`](../commands-legacy/object-set-format) e [`OBJECT Get format`](../commands-legacy/object-get-format),
+- the [`String`](../commands/string) command,
+- os comandos [`OBJECT SET FORMAT`](../commands/object-set-format) e [`OBJECT Get format`](../commands/object-get-format),
 - the date and time format form object properties, available from the Property list or the [`dateFormat`](../FormObjects/properties_Display.md#date-format) and [`timeFormat`](../FormObjects/properties_Display.md#time-format) JSON properties.
 
 ## Lista de padrões
@@ -164,3 +164,4 @@ Por exemplo:
 ## Veja também
 
 Ver [este blogpost](https://blog.4d.com/tailored-customization-for-dates-and-times) para más información sobre los formatos personalizados de fecha y hora.
+

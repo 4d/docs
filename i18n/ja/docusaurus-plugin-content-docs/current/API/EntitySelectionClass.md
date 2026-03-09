@@ -1833,7 +1833,7 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 | ------------- | ---------------------------------- | :-------------------------: | ---------------------------------------------------------------------------------------------------- |
 | queryString   | Text                               |              ->             | 検索条件 (文字列)                                                                        |
 | formula       | Object                             |              ->             | 検索条件 (フォーミュラオブジェクト)                                                               |
-| value         | any                                |              ->             | プレースホルダー用の値                                                                                          |
+| value         | any                                |              ->             | 定数値 (プレースホルダーを使用しない)                                                              |
 | querySettings | Object                             |              ->             | クエリオプション: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan |
 | 戻り値           | 4D.EntitySelection | <- | *queryString* または *formula* に渡した検索条件に合致する、エンティティセレクション内のエンティティから構成された新しいエンティティセレクション\*               |
 
@@ -2729,3 +2729,4 @@ $employeesCollection:=$employees.toCollection("firstName, lastName, directReport
 ```
 
 <!-- END REF -->
+

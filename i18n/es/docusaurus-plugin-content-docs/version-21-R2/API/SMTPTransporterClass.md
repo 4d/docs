@@ -31,11 +31,14 @@ Los objetos SMTP Transporter son instanciados con el comando [`SMTP New transpor
 
 <!-- REF #4D.SMTPTransporter.new().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo                               |                             | Descripción                                        |
 | ---------- | ---------------------------------- | :-------------------------: | -------------------------------------------------- |
 | server     | Object                             |              ->             | Información del servidor de correo                 |
 | Resultado  | 4D.SMTPTransporter | <- | [Objeto SMTP Transporter](#objet-smtp-transporter) |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -122,11 +125,14 @@ La conexión SMTP se cierra automáticamente:
 
 <!-- REF #SMTPTransporterClass.send().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo   |                             | Descripción                                        |
 | ---------- | ------ | :-------------------------: | -------------------------------------------------- |
 | mail       | Object |              ->             | [Email](EmailObjectClass.md#email-object) a enviar |
 | Resultado  | Object | <- | Estado SMTP                                        |
 
+</div>
 <!-- END REF -->
 
 #### Descripción

@@ -11,10 +11,10 @@ title: VP SET ROW ATTRIBUTES
 
 <div class="no-index">
 
-| Paramètres  | Type   |    | Description                              |
-| ----------- | ------ | -- | ---------------------------------------- |
-| rangeObj    | Object | -> | Plage de lignes                          |
-| propertyObj | Object | -> | Objet contenant des propriétés de lignes |
+| Paramètres  | Type   |    | Description                                                                                                                                                                                                              |
+| ----------- | ------ | -- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| rangeObj    | Object | -> | Une fois que l'export est terminé, <code>VP EXPORT DOCUMENT</code> exécute automatiquement la méthode définie dans la propriété <em x-id="3">formula</em> de <em x-id="3">paramObj</em>, le cas échéant. |
+| propertyObj | Object | -> | Objet contenant des propriétés de lignes                                                                                                                                                                                 |
 
 </div>
 <!-- END REF -->

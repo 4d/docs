@@ -399,14 +399,16 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 
 
 <!-- REF #directory.copyTo().Params -->
-| 引数                | 型         |    | 説明                                     |
-| ----------------- | --------- |:--:| -------------------------------------- |
-| destinationFolder | 4D.Folder | -> | 宛先フォルダー                                |
-| newName           | Text      | -> | コピー先フォルダーの名前                           |
-| overwrite         | Integer   | -> | 既存要素を上書きするには `fk overwrite` を渡します      |
-| 戻り値               | 4D.Folder | <- | コピーされたフォルダー|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|destinationFolder |4D.Folder |->|Destination folder|
+|newName|Text|->|Name for the copy|
+|overwrite|Integer|->|`fk overwrite` to replace existing elements|
+|Result|4D.Folder|<-|Copied file or folder|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -454,12 +456,14 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 
 <!-- REF #directory.file().Params -->
-| 引数   | 型       |    | 説明                                                               |
-| ---- | ------- | -- | ---------------------------------------------------------------- |
-| path | Text    | -> | ファイルのPOSIX相対パス名                                                  |
-| 戻り値  | 4D.File | <- | `File` オブジェクト (無効な POSIXパスの場合には null)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|----|---|---|
+|path|Text|->|Relative POSIX file pathname|
+|Result|4D.File|<-|`File` object (null if invalid path)|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -496,12 +500,14 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 
 <!-- REF #directory.files().Params -->
-| 引数      | 型          |    | 説明                                            |
-| ------- | ---------- | -- | --------------------------------------------- |
-| options | Integer    | -> | ファイルリストのオプション                                 |
-| 戻り値     | Collection | <- | 子ファイルオブジェクトのコレクション|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|----|---|---|
+|options|Integer|->|File list options|
+|Result|Collection|<-|Collection of children file objects|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -559,12 +565,14 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 
 <!-- REF #directory.folder().Params -->
-| 引数   | 型         |    | 説明                                                                             |
-| ---- | --------- | -- | ------------------------------------------------------------------------------ |
-| path | Text      | -> | ファイルのPOSIX相対パス名                                                                |
-| 戻り値  | 4D.Folder | <- | 作成された `Folder` オブジェクト (無効な POSIX *path* の場合には null)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|----|---|---|
+|path|Text|->|Relative POSIX file pathname|
+|Result|4D.Folder|<-|Created folder object (null if invalid *path*)|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -601,12 +609,14 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 
 <!-- REF #directory.folders().Params -->
-| 引数      | 型          |    | 説明                                             |
-| ------- | ---------- | -- | ---------------------------------------------- |
-| options | Integer    | -> | フォルダーリストのオプション                                 |
-| 戻り値     | Collection | <- | 子フォルダーオブジェクトのコレクション|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|----|---|---|
+|options|Integer|->|Folder list options|
+|Result|Collection|<-|Collection of children folder objects|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -650,12 +660,14 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 
 <!-- REF #directory.getIcon().Params -->
-| 引数   | 型       |    | 説明                              |
-| ---- | ------- | -- | ------------------------------- |
-| size | Integer | -> | 取得するピクチャーの一辺の長さ (ピクセル単位)        |
-| 戻り値  | Picture | <- | アイコン|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|----|---|---|
+|size|Integer|->|Side length for the returned picture (pixels)|
+|Result|Picture|<-|Icon|
+</div>
+<!-- END REF -->
 
 #### 説明
 

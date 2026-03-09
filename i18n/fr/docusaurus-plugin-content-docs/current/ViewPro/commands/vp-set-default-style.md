@@ -11,11 +11,11 @@ title: VP SET DEFAULT STYLE
 
 <div class="no-index">
 
-| Paramètres | Type    |    | Description                                                             |
-| ---------- | ------- | -- | ----------------------------------------------------------------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                 |
-| styleObj   | Object  | -> | Objet style                                                             |
-| sheet      | Integer | -> | Indice de la feuille (par défaut = feuille courante) |
+| Paramètres | Type    |    | Description                                                                    |
+| ---------- | ------- | -- | ------------------------------------------------------------------------------ |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                        |
+| styleObj   | Object  | -> | Le nom de la troisième feuille est "Total premier trimestre" : |
+| sheet      | Integer | -> | Indice de la feuille (par défaut = feuille courante)        |
 
 </div>
 <!-- END REF -->

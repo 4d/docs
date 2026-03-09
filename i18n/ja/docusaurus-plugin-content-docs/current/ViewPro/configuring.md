@@ -357,13 +357,13 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 |           | width  | longint | 用紙の幅、100分の1インチ単位                                                                                                                                                    |
 |           | kind   | text    | 用紙の規格サイズの名前 (例: A2、A4、legal、など)。 `GET PRINT OPTION` によって返されます。 デフォルト値 = "letter" `GET PRINT OPTION` によって返されます。 デフォルト値 = "letter" |
 
-- `height` と `width` プロパティで用紙サイズを指定した場合、[`VP Get print info`](../commands/vp-get-print-info) が返す用紙サイズ属性の `kind` プロパティ値は `custom` です。
+- `height` と `width` プロパティで用紙サイズを指定した場合、[`VP Get print info`](./commands/vp-get-print-info.md) が返す用紙サイズ属性の `kind` プロパティ値は `custom` です。
 
 - `kind` プロパティで用紙サイズを設定する場合、以下のいずれかを使用することができます:
   - [ SpreadJS のフォーマットリスト](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind) のフォーマット
-  - [`PRINT OPTION VALUES`](../commands-legacy/print-option-values) コマンドによって返されるフォーマットのひとつ。
+  - [`PRINT OPTION VALUES`](../commands/print-option-values) コマンドによって返されるフォーマットのひとつ。
     [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/ja/page785.html) コマンドで返されるフォーマット。
-    この場合、[`VP Get print info`](../commands/vp-get-print-info) は対応するフォーマットを高さと幅とともに返します。
+    この場合、[`VP Get print info`](./commands/vp-get-print-info.md) は対応するフォーマットを高さと幅とともに返します。
 
 ### スケール
 
@@ -515,3 +515,4 @@ The 4D View Pro フォームオブジェクト変数は、4D View Pro フォー�
 | ViewPro.formulaBar     | Boolean    | フォーミュラバーが表示されているかどうかを示します。 "toolbar" インターフェースにおいてのみ利用可能です。                                                                                                                                                       |
 | ViewPro.inited         | Boolean    | 4D View Pro エリアが初期化されたかどうかを示します([On VP Ready](Events/onVpReady.md) 参照)。                                                                                                                       |
 | ViewPro.interface      | Text       | ユーザーインターフェースのタイプを指定します: "ribbon"、"toolbar"、"none"。                                                                                                                                               |
+

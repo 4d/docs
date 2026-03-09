@@ -596,11 +596,11 @@ Le paramètre optionnel *propertyPath* vous permet de compter des valeurs à l'i
 
 <div class="no-index">
 
-| Paramètres   | Type       |                             | Description                                                             |
-| ------------ | ---------- | :-------------------------: | ----------------------------------------------------------------------- |
-| propertyPath | Text       |              ->             | Chemin de l'attribut dont vous souhaitez obtenir les valeurs distinctes |
-| options      | Integer    |              ->             | `ck diacritical`, `ck count values`                                     |
-| Résultat     | Collection | <- | Nouvelle collection contenant uniquement les valeurs distinctes         |
+| Paramètres   | Type       |                             | Description                                                     |
+| ------------ | ---------- | :-------------------------: | --------------------------------------------------------------- |
+| propertyPath | Text       |              ->             | Chemin de propriété d'objet à utiliser pour évaluer les valeurs |
+| options      | Integer    |              ->             | `ck diacritical`, `ck count values`                             |
+| Résultat     | Collection | <- | Nouvelle collection contenant uniquement les valeurs distinctes |
 
 </div>
 <!-- END REF -->
@@ -3517,3 +3517,4 @@ Si plusieurs valeurs sont passées, elles sont insérées toutes en même temps,
 ```
 
 <!-- END REF -->
+

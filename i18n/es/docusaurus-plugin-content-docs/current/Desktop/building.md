@@ -20,7 +20,7 @@ El generador de aplicaciones le permite:
 
 Generar un paquete de proyecto puede realizarse utilizando:
 
-- ya sea con el comando [`BUILD APPLICATION`](../commands-legacy/build-application),
+- ya sea con el comando [`BUILD APPLICATION`](../commands/build-application),
 - o en la [caja de diálogo Crear aplicación](#build-application-dialog).
 
 :::tip
@@ -45,7 +45,7 @@ La generación sólo puede efectuarse una vez compilado el proyecto. Si seleccio
 
 Cada parámetro de generación de la aplicación se almacena como una llave XML en el archivo de proyecto de la aplicación llamado `buildApp.4DSettings`, ubicado en la carpeta [`Settings` del proyecto](../Project/architecture.md#settings-user).
 
-Los parámetros por defecto se utilizan la primera vez que se utiliza la caja de diálogo del Generador de aplicaciones. El contenido del archivo proyecto se actualiza, si es necesario, al hacer clic en **Construir** o **Guardar los parámetros**. Puede definir varios archivos de parámetros XML para el mismo proyecto y utilizarlos con el comando [`BUILD APPLICATION`](../commands-legacy/build-application).
+Los parámetros por defecto se utilizan la primera vez que se utiliza la caja de diálogo del Generador de aplicaciones. El contenido del archivo proyecto se actualiza, si es necesario, al hacer clic en **Construir** o **Guardar los parámetros**. Puede definir varios archivos de parámetros XML para el mismo proyecto y utilizarlos con el comando [`BUILD APPLICATION`](../commands/build-application).
 
 Las llaves XML ofrecen opciones adicionales a las que se muestran en la caja de diálogo del Generador de aplicaciones. La descripción de estas llaves se detalla en el manual [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html).
 
@@ -176,7 +176,7 @@ Si ha especificado "MyProject" como nombre de la aplicación, encontrará los si
 Todos estos elementos deben estar en la misma carpeta para que el ejecutable funcione.
 
 - *macOS*
-  - Un paquete de software llamado MyProject.app que contiene su aplicación y todos los elementos necesarios para su funcionamiento, incluyendo los plug-ins, componentes y licencias. Para más información sobre la integración de plug-ins y componentes, consulte la sección [Plugins y componentes](#plugins--components-page). Para obtener más información sobre la integración de licencias, consulte la sección [Licencias y certificados](#licenses--certificate-page). **Nota**: en macOS, el comando [Application file](../commands-legacy/application-file) del lenguaje 4D devuelve la ruta del archivo ApplicationName (ubicado en la carpeta Contents:macOS del paquete de software) y no la del archivo .comp (carpeta Contents:Resources del paquete de software).
+  - Un paquete de software llamado MyProject.app que contiene su aplicación y todos los elementos necesarios para su funcionamiento, incluyendo los plug-ins, componentes y licencias. Para más información sobre la integración de plug-ins y componentes, consulte la sección [Plugins y componentes](#plugins--components-page). Para obtener más información sobre la integración de licencias, consulte la sección [Licencias y certificados](#licenses--certificate-page). **Note**: In macOS, the [Application file](../commands/application-file) command of the 4D language returns the pathname of the ApplicationName file (located in the Contents:macOS folder of the software package) and not that of the .comp file (Contents:Resources folder of the software package).
 
 #### Personalizar la carpeta 4D Volume Desktop
 
@@ -224,7 +224,7 @@ Además, se personaliza la aplicación cliente/servidor y se simplifica su manej
 - Para lanzar la parte cliente, el usuario simplemente hace doble clic en la aplicación cliente, que se conecta directamente a la aplicación servidor. No es necesario elegir un servidor en una caja de diálogo de conexión. Si desea que la aplicación cliente se conecte al servidor utilizando una dirección específica (distinta del nombre del servidor publicado en la subred), debe utilizar la llave XML `IPAddress` en el archivo buildapp.4DSettings. Si la conexión falla, [se pueden implementar mecanismos alternativos específicos](#management-of-client-connections). Puede "forzar" la visualización de la caja de diálogo de conexión estándar presionando la tecla **Opción** (macOS) o **Alt** (Windows) mientras inicia la aplicación cliente.
   Sólo la parte cliente puede conectarse a la parte del servidor correspondiente. Si un usuario intenta conectarse a la parte servidor utilizando una aplicación estándar 4D, se devuelve un mensaje de error y la conexión es imposible.
 - Una aplicación cliente/servidor puede configurarse para que la parte cliente [se actualice automáticamente a través de la red](#copy-of-client-applications-inside-the-server-application). Sólo es necesario crear y distribuir una versión inicial de la aplicación cliente, las actualizaciones posteriores se gestionan mediante el mecanismo de actualización automática.
-- También es posible automatizar la actualización de la parte del servidor a través del uso de una secuencia de comandos de lenguaje ([SET UPDATE FOLDER](../commands-legacy/set-update-folder) y [RESTART 4D](../commands-legacy/restart-4d).
+- También es posible automatizar la actualización de la parte del servidor a través del uso de una secuencia de comandos de lenguaje ([SET UPDATE FOLDER](../commands/set-update-folder) y [RESTART 4D](../commands/restart-4d).
 
 :::note
 
@@ -306,7 +306,7 @@ Designa la ubicación en su disco de la aplicación 4D Volume Desktop que se uti
 
 El 4D Volume Desktop debe corresponder a la plataforma actual (que será también la plataforma de la aplicación cliente). Si desea generar una aplicación cliente para la plataforma "concurrente", debe realizar una operación adicional utilizando una aplicación 4D que se ejecute en dicha plataforma.
 
-Si desea que la aplicación cliente se conecte al servidor utilizando una dirección específica (distinta del nombre del servidor publicado en la subred), debe utilizar la llave XML `IPAddress` en el archivo buildapp.4DSettings. También puede implementar mecanismos específicos en caso de fallo de la conexión. También puede implementar mecanismos específicos en caso de fallo de la conexión. También puede implementar mecanismos específicos en caso de fallo de la conexión.
+Si desea que la aplicación cliente se conecte al servidor utilizando una dirección específica (distinta del nombre del servidor publicado en la subred), debe utilizar la llave XML `IPAddress` en el archivo buildapp.4DSettings. Para obtener más información sobre este archivo, consulte la descripción del comando [`BUILD APPLICATION`](../commands/build-application). También puede implementar mecanismos específicos en caso de fallo de la conexión. También puede implementar mecanismos específicos en caso de fallo de la conexión.
 
 #### Copia de las aplicaciones clientes en la aplicación servidor
 
@@ -426,7 +426,7 @@ El escenario básico es:
 - la llave `PublishName` no se copia en el *info.plist* del cliente fusionado
 - si la aplicación monopuesto no tiene una carpeta "Data" por defecto, el cliente fusionado se ejecutará sin datos.
 
-Actualización automática de funciones del servidor 4D número de ([versión actual](#current-version), comando [`SET UPDATE FOLDER`](../commands-legacy/set-update-folder)...) trabaja con una aplicación de un solo usuario como con una aplicación remota estándar. Al conectarse, la aplicación monopuesto compara su llave `CurrentVers` con el rango de versión 4D Server. Si está fuera del rango, la aplicación cliente actualizada se descarga del servidor y el Updater lanza el proceso de actualización local.
+Actualización automática de funciones del servidor 4D número de ([versión actual](#current-version), comando [`SET UPDATE FOLDER`](../commands/set-update-folder)...) trabaja con una aplicación de un solo usuario como con una aplicación remota estándar. Al conectarse, la aplicación monopuesto compara su llave `CurrentVers` con el rango de versión 4D Server. Si está fuera del rango, la aplicación cliente actualizada se descarga del servidor y el Updater lanza el proceso de actualización local.
 
 ### Personalizar nombres de carpeta de caché cliente y/o servidor
 
@@ -533,7 +533,7 @@ Se requiere una conexión a Internet en la máquina del usuario en el primer lan
 
 - El comando [`License info`](../commands/license-info) permite conocer el tipo de licencia de la aplicación (colección *.attributes*) y su fecha de caducidad (objeto *.expirationDate*).
 - La llave xml BuildApplication [`EvaluationMode`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationMode.300-7542468.en.html) permite gestionar las versiones de evaluación.
-- El comando [`CHANGE LICENSES`](../commands-legacy/change-licenses) no hace nada cuando se llama desde una versión de evaluación.
+- El comando [`CHANGE LICENSES`](../commands/change-licenses) no hace nada cuando se llama desde una versión de evaluación.
 
 :::
 
@@ -541,7 +541,7 @@ Se requiere una conexión a Internet en la máquina del usuario en el primer lan
 
 Seleccione esta opción para crear una aplicación lista para usar (autónoma o cliente-servidor), incrustando automáticamente las [licencias de despliegue](../Admin/licenses.md#deployment-licenses) disponibles.
 
-Al crear la aplicación, 4D integrará automáticamente la(s) licencia(s) necesaria(s) que se encuentra(n) en la [Carpeta de licencias](../commands-legacy/get-4d-folder.md#licenses-folder) de la máquina. Si hay varias licencias válidas disponibles, 4D utilizará la más apropiada, en el siguiente orden:
+Al crear la aplicación, 4D integrará automáticamente la(s) licencia(s) necesaria(s) que se encuentra(n) en la [Carpeta de licencias](../commands/get-4d-folder#licenses-folder) de la máquina. Si hay varias licencias válidas disponibles, 4D utilizará la más apropiada, en el siguiente orden:
 
 1. licencias OEM, o
 2. licencias 4D Desktop Business, o
@@ -559,7 +559,7 @@ Seleccione esta opción para crear una aplicación lista para usar (independient
 
 Al seleccionar esta opción, se muestra una lista de licencias en la pestaña. Debe designar los archivos que contienen sus licencias. Estos archivos se generaron o actualizaron al adquirir la licencia *4D Developer Professional* y las licencias de despliegue. Su licencia actual *4D Developer Professional* se asocia automáticamente a cada licencia de despliegue que se vaya a utilizar en la aplicación creada. Puede añadir otro número 4D Developer Professional y sus licencias asociadas.
 
-Para eliminar o añadir una licencia, utilice los botones **[+]** y **[-]** de la parte inferior de la ventana. Al hacer clic en el botón \N-[+], aparece una caja de diálogo para abrir archivos que muestra por defecto el contenido de la carpeta *Licencias* de su máquina. Para obtener más información sobre la ubicación de esta carpeta, consulte el comando [Get 4D folder](../commands-legacy/get-4d-folder).
+Para eliminar o añadir una licencia, utilice los botones **[+]** y **[-]** de la parte inferior de la ventana. Al hacer clic en el botón \N-[+], aparece una caja de diálogo para abrir archivos que muestra por defecto el contenido de la carpeta *Licencias* de su máquina. For more information about the location of this folder, refer to the [Get 4D folder](../commands/get-4d-folder) command.
 
 Una vez seleccionado un archivo, la lista indicará las características de la licencia que contiene.
 
@@ -774,7 +774,7 @@ Puede elegir si mostrar o no la caja de diálogo estándar de selección de serv
 
 En principio, la actualización de las aplicaciones servidor o de las aplicaciones monopuesto fusionadas requiere la intervención del usuario (o la programación de rutinas de sistema personalizadas): cada vez que esté disponible una nueva versión de la aplicación fusionada, hay que salir de la aplicación en producción y sustituir manualmente los archivos antiguos por los nuevos; a continuación, reiniciar la aplicación y seleccionar el archivo de datos actual.
 
-Puede automatizar este procedimiento en gran medida utilizando los siguientes comandos del lenguaje: [`SET UPDATE FOLDER`](../commands-legacy/set-update-folder), [`RESTART 4D`](../commands-legacy/restart-4d), y también [`Last update log path`](../commands-legacy/last-update-log-path) para operaciones de monitoreo. La idea es implementar una función en su aplicación 4D que active la secuencia de actualización automática descrita a continuación. Puede ser un comando de menú o un proceso que se ejecuta en segundo plano y comprueba a intervalos regulares la presencia de un archivo en un servidor.
+Puede automatizar este procedimiento en gran medida utilizando los siguientes comandos del lenguaje: [`SET UPDATE FOLDER`](../commands/set-update-folder), [`RESTART 4D`](../commands/restart-4d), y también [`Last update log path`](../commands/last-update-log-path) para operaciones de monitoreo. La idea es implementar una función en su aplicación 4D que active la secuencia de actualización automática descrita a continuación. Puede ser un comando de menú o un proceso que se ejecuta en segundo plano y comprueba a intervalos regulares la presencia de un archivo en un servidor.
 
 > También dispone de llaves XML para elevar los privilegios de instalación y poder utilizar archivos protegidos en Windows (consulte el manual [4D XML Keys BuildApplication](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html)).
 
@@ -792,4 +792,5 @@ El procedimiento de instalación genera un archivo de registro en el que se deta
 
 El historial de actualización se denomina `YYYY-MM-DD_HH-MM-SS_log_X.txt`, por ejemplo, `2021-08-25_14-23-00_log_1.txt` para un archivo creado el 25 de agosto de 2021 a las 14:23.
 
-Este archivo se crea en la carpeta de la aplicación "Updater", dentro de la carpeta de usuario del sistema. Puede encontrar la ubicación de este archivo en cualquier momento utilizando el comando [`Last update log path`](../commands-legacy/last-update-log-path).
+Este archivo se crea en la carpeta de la aplicación "Updater", dentro de la carpeta de usuario del sistema. Puede encontrar la ubicación de este archivo en cualquier momento utilizando el comando [`Last update log path`](../commands/last-update-log-path).
+

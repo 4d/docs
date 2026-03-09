@@ -145,11 +145,14 @@ Essa propriedade é **somente leitura**.
 
 <!-- REF #ClassClass.new().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo                      |                             | Descrição                                |
 | ---------- | ------------------------- | :-------------------------: | ---------------------------------------- |
 | param      | any                       |              ->             | Parâmetros a passar à função constructor |
 | Resultados | 4D.Object | <- | Novo objeto da classe                    |
 
+</div>
 <!-- END REF -->
 
 #### Descrição

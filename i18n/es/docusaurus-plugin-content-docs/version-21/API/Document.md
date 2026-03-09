@@ -433,6 +433,8 @@ Esta propiedad es de **solo lectura**.
 
 <!-- REF #document.copyTo().Params -->
 
+<div class="no-index">
+
 | Parámetros        | Tipo                      |                             | Descripción                                            |
 | ----------------- | ------------------------- | :-------------------------: | ------------------------------------------------------ |
 | destinationFolder | 4D.Folder |              ->             | Carpeta de destino                                     |
@@ -440,6 +442,7 @@ Esta propiedad es de **solo lectura**.
 | overwrite         | Integer                   |              ->             | `fk overwrite` para sustituir los elementos existentes |
 | Resultado         | 4D.File   | <- | Archivo copiado                                        |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -489,10 +492,13 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 <!-- REF #document.getContent().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo                    |                             | Descripción           |
 | ---------- | ----------------------- | --------------------------- | --------------------- |
 | Resultado  | 4D.Blob | <- | Contenido del archivo |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -533,11 +539,14 @@ Para guardar el contenido de un documento en un campo `BLOB`:
 
 <!-- REF #document.getIcon().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo    |                             | Descripción                                                          |
 | ---------- | ------- | --------------------------- | -------------------------------------------------------------------- |
 | size       | Integer | ->                          | Longitud del lado de la imagen devuelta (píxeles) |
 | Resultado  | Picture | <- | Icono                                                                |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -570,6 +579,8 @@ Si el archivo no existe en el disco, se devuelve un icono vacío por defecto.
 
 <!-- REF #document.getText().Params -->
 
+<div class="no-index">
+
 | Parámetros  | Tipo    |                             | Descripción                                |
 | ----------- | ------- | --------------------------- | ------------------------------------------ |
 | charSetName | Text    | ->                          | Nombre del juego de caracteres             |
@@ -577,6 +588,7 @@ Si el archivo no existe en el disco, se devuelve un icono vacío por defecto.
 | breakMode   | Integer | ->                          | Modo de tratamiento de los saltos de línea |
 | Resultado   | Text    | <- | Texto del documento                        |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
