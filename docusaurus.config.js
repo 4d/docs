@@ -140,8 +140,14 @@ function sortKey(item, helpers) {
 function sortRec(items, helpers) {
   const collator = getCollator(helpers.locale);
   const withChildrenSorted = items.map((it) => {
+    //if (it.type === 'category' && Array.isArray(it.items)) {
     if (it.type === 'category' && Array.isArray(it.items)) {
-      return { ...it, items: sortRec(it.items, helpers) };
+      const translated = getTranslatedCategoryLabel(
+        it.label,
+        helpers.sidebarName,
+        helpers.translations
+      );
+      return { ...it, label: translated, items: sortRec(it.items, helpers) };
     }
     return it;
   });
