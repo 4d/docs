@@ -52,7 +52,7 @@ If a log file has been generated, its complete pathname is returned in the *Docu
 
 ## System variables and sets 
 
-If the callback method does not exist, the verification is not carried out, an error is generated and the system variable OK is set to 0\. If a log file was generated, its complete pathname is returned in the Document system variable. 
+If the verification is not carried out, an error is generated and the system variable OK is set to 0. If a log file was generated, its complete pathname is returned in the Document system variable. 
 
 ## See also 
 

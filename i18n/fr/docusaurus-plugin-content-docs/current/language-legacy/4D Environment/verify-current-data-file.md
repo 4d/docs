@@ -51,7 +51,7 @@ Si un fichier d'historique a été généré, son chemin complet est retourné d
 
 ## Variables et ensembles système 
 
-Si la méthode de rétro-appel passée n’existe pas, la vérification n’est pas effectuée, une erreur est générée et la variable OK prend la valeur 0\. Si un fichier d'historique a été généré, son chemin complet est retourné dans la variable système Document. 
+Si la vérification n'est pas effectuée, une erreur est générée et la variable système OK est mise à 0. Si un fichier journal a été généré, son chemin d'accès complet est renvoyé dans la variable système Document.
 
 ## Voir aussi 
 

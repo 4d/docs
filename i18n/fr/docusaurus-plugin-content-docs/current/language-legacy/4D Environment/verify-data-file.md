@@ -39,7 +39,7 @@ displayed_sidebar: docs
 
 *cheminStructure* désigne le fichier de structure (compilé ou non) associé au fichier de données à vérifier. Il peut s’agir du fichier de structure ouvert ou de tout autre fichier de structure. Vous devez passer un chemin d’accès complet, exprimé avec la syntaxe du système d’exploitation. Vous pouvez également passer une chaîne vide, dans ce cas une boîte de dialogue standard d’ouverture de fichiers apparaît, permettant à l’utilisateur de désigner le fichier de structure à utiliser.   
   
-*cheminDonnées* désigne un fichier de données 4D (.4DD). Il doit correspondre au fichier de structure défini par le paramètre *cheminStructure*. Attention, vous pouvez désigner le fichier de structure courant mais le fichier de données ne doit pas être le fichier courant (ouvert). Pour vérifier le fichier de données ouvert, utilisez la commande [VERIFY CURRENT DATA FILE](../commands/verify-current-data-file). Si vous tentez de vérifier le fichier de données courant avec la commande **VERIFY DATA FILE**, une erreur est générée.  
+*dataPath* désigne un fichier de données 4D (.4DD). Il doit correspondre au fichier de structure défini par le paramètre *structurePath*. Pour vérifier le fichier de données actuellement ouvert, utilisez la commande [VERIFY CURRENT DATA FILE](../commands/verify-current-data-file).
 Le fichier de données désigné est ouvert en lecture seulement. Vous devez veiller à ce qu’aucune application n’accède à ce fichier en écriture, sinon les résultats de la vérification pourront être faussés.   
 Vous pouvez passer dans le paramètre *cheminDonnées* une chaîne vide, un nom de fichier ou un chemin d’accès complet, exprimé dans la syntaxe du système d’exploitation. Si vous passez une chaîne vide, la boîte de dialogue standard d’ouverture de fichier apparaît, permettant à l’utilisateur de désigner le fichier à vérifier (à noter dans ce cas qu’il n’est pas possible de sélectionner le fichier de données courant). Si vous passez uniquement un nom de fichier de données, 4D le recherchera au même niveau que le fichier de structure défini.  
   
@@ -177,7 +177,7 @@ Vérification du fichier de données, création et affichage du fichier d'histor
 
 ## Variables et ensembles système 
 
-Si la méthode de rétro-appel passée n’existe pas, la vérification n’est pas effectuée, une erreur est générée et la variable OK prend la valeur 0\. Si un fichier d'historique a été généré, son chemin complet est retourné dans la variable système Document. 
+Si la vérification n'est pas effectuée, une erreur est générée et la variable système OK est mise à 0. Si un fichier journal a été généré, son chemin d'accès complet est renvoyé dans la variable système Document.
 
 ## Voir aussi 
 

@@ -51,7 +51,7 @@ Si un archivo de historial se ha generado, su ruta completa se devuelve en la va
 
 ## Variables y conjuntos del sistema 
 
-Si el método de retrollamada no existe, la verificación no se efectúa, se genera un error y la variable sistema OK toma el valor 0\. Si un archivo de historial se ha generado, su ruta completa se devuelve en la variable sistema Document.  
+Si la verificación no se lleva a cabo, se genera un error y la variable de sistema OK se establece en 0. Si se generó un archivo de registro, su nombre de ruta completo se devuelve en la variable de sistema Document.
 
 ## Ver también 
 
