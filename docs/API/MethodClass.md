@@ -143,7 +143,7 @@ The resulting 4D.Method object can be checked using [`checkSyntax()`](#checksynt
 
 :::note
 
-Named volatile method objects are not project methods, they cannot be called by commands such as [`EXECUTE METHOD`](../commands-legacy/execute-method.md). On the other hand, since they inherit from the [`4D.Function`](./FunctionClass.md) class, they can be used anywhere a 4D.Funciton object is expected.  
+Named volatile method objects are not project methods, they are not stored in disk files and cannot be called by commands such as [`EXECUTE METHOD`](../commands-legacy/execute-method.md). On the other hand, since they inherit from the [`4D.Function`](./FunctionClass.md) class, they can be used wherever a `4D.Function` object is expected.  
 
 :::
 
