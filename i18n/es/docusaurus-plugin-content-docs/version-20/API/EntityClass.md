@@ -1708,9 +1708,9 @@ En este ejemplo, comprobamos si es necesario guardar la entidad:
 <!-- REF #EntityClass.touchedAttributes().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|Collection|<-|Names of touched attributes, or empty collection|
+|Resultado|Collection|<-|Names of touched attributes, or empty collection|
 </div>
 <!-- END REF -->
 

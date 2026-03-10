@@ -12,7 +12,7 @@
     "description": "The label for category 'Core Development' in sidebar 'docs'"
   },
   "sidebar.docs.category.Project Management": {
-    "message": "Gestión del proyecto",
+    "message": "Gestión de proyectos",
     "description": "The label for category Project Management in sidebar docs"
   },
   "sidebar.docs.category.Data Types": {
@@ -52,7 +52,7 @@
     "description": "The label for category 'Web Administration' in sidebar 'docs'"
   },
   "sidebar.docs.category.Command Line Interface": {
-    "message": "Interfaz de línea de\n          comando",
+    "message": "Interfaz de línea de comando",
     "description": "The label for category Command Line Interface in sidebar docs"
   },
   "sidebar.docs.category.TLS Protocol": {
@@ -152,7 +152,7 @@
     "description": "The label for category Mobile Applications in sidebar docs"
   },
   "sidebar.docs.link.4D Language Reference": {
-    "message": "Referencia del lenguaje 4D",
+    "message": "Manual del lenguaje 4D",
     "description": "The label for link 4D Language Reference in sidebar docs, linking to https://doc.4d.com/4Dv20R3/4D/20-R3/4D-Language-Reference.100-6398284.en.html"
   },
   "sidebar.docs.link.4D Mobile App Server": {
@@ -204,7 +204,7 @@
     "description": "The generated-index page title for category 4D Language Concepts in sidebar docs"
   },
   "sidebar.docs.category.4D Language Concepts.link.generated-index.description": {
-    "message": "Los principales conceptos del Lenguaje 4D",
+    "message": "Los principales conceptos del lenguaje 4D",
     "description": "The generated-index page description for category 4D Language Concepts in sidebar docs"
   },
   "sidebar.docs.category.Class Functions": {
@@ -216,7 +216,7 @@
     "description": "The generated-index page title for category Class Functions in sidebar docs"
   },
   "sidebar.docs.category.Class Functions.link.generated-index.description": {
-    "message": "Lista de clases 4D integradas",
+    "message": "Lista de clases 4D",
     "description": "The generated-index page description for category Class Functions in sidebar docs"
   },
   "sidebar.docs.category.Tags": {
@@ -228,7 +228,7 @@
     "description": "The generated-index page title for category 'Administration' in sidebar 'docs'"
   },
   "sidebar.docs.category.Administration.link.generated-index.description": {
-    "message": "Cómo supervisar sus aplicaciones 4D",
+    "message": "Cómo controlar sus aplicaciones 4D",
     "description": "The generated-index page description for category 'Administration' in sidebar 'docs'"
   },
   "sidebar.docs.category.Web Administration.link.generated-index.title": {
@@ -288,11 +288,11 @@
     "description": "The generated-index page title for category 'Access Rights' in sidebar 'docs'"
   },
   "sidebar.docs.category.Access Rights.link.generated-index.description": {
-    "message": "Control de acceso y privilegios de usuario para aplicaciones de escritorio.",
+    "message": "Control de acceso y privilegios de usuarios para aplicaciones de escritorio.",
     "description": "The generated-index page description for category 'Access Rights' in sidebar 'docs'"
   },
   "sidebar.docs.doc.Command Line Interface": {
-    "message": "Interfaz de línea de\n          comando",
+    "message": "Interfaz de línea de comando",
     "description": "The label for the doc item 'Command Line Interface' in sidebar 'docs', linking to the doc Admin/cli"
   },
   "sidebar.docs.doc.TLS Protocol": {
@@ -340,7 +340,7 @@
     "description": "The generated-index page title for category Concepts in sidebar docs"
   },
   "sidebar.docs.category.Concepts.link.generated-index.description": {
-    "message": "Los principales conceptos del Lenguaje 4D",
+    "message": "Los principales conceptos del lenguaje 4D",
     "description": "The generated-index page description for category Concepts in sidebar docs"
   },
   "sidebar.docs.category.Classes": {
@@ -352,7 +352,7 @@
     "description": "The generated-index page title for category Classes in sidebar docs"
   },
   "sidebar.docs.category.Classes.link.generated-index.description": {
-    "message": "Lista de clases 4D integradas",
+    "message": "Lista de clases 4D",
     "description": "The generated-index page description for category Classes in sidebar docs"
   },
   "sidebar.docs.category.Processes": {
@@ -480,31 +480,31 @@
     "description": "The generated-index page title for category Qodly Studio in sidebar docs"
   },
   "sidebar.docs.category.Qodly Studio.link.generated-index.description": {
-    "message": "Uso de Qodly Studio para crear poderosas interfaces web.",
+    "message": "Uso de Qodly Studio para crear interfaces web poderosas.",
     "description": "The generated-index page description for category Qodly Studio in sidebar docs"
   },
   "sidebar.docs.category.REST API": {
-    "message": "REST API",
+    "message": "API REST",
     "description": "The label for category 'REST API' in sidebar 'docs'"
   },
   "sidebar.docs.category.REST API.link.generated-index.title": {
-    "message": "REST API",
+    "message": "API REST",
     "description": "The generated-index page title for category 'REST API' in sidebar 'docs'"
   },
   "sidebar.docs.category.REST API.link.generated-index.description": {
-    "message": "Exponiendo su datastore a REST y utilizando la API REST.",
+    "message": "Exponer su datastore en REST y utilizar la API REST.",
     "description": "The generated-index page description for category 'REST API' in sidebar 'docs'"
   },
   "sidebar.docs.category.Exposing your datastore in REST": {
-    "message": "Exponiendo su almacén de datos en REST",
+    "message": "Exponer su almacén de datos en REST",
     "description": "The label for category 'Exposing your datastore in REST' in sidebar 'docs'"
   },
   "sidebar.docs.category.Exposing your datastore in REST.link.generated-index.title": {
-    "message": "Exponiendo su almacén de datos en REST",
+    "message": "Exponer su almacén de datos en REST",
     "description": "The generated-index page title for category 'Exposing your datastore in REST' in sidebar 'docs'"
   },
   "sidebar.docs.category.Exposing your datastore in REST.link.generated-index.description": {
-    "message": "Configura su almacén de datos para acceso REST",
+    "message": "Configure su almacén de datos para el acceso REST",
     "description": "The generated-index page description for category 'Exposing your datastore in REST' in sidebar 'docs'"
   },
   "sidebar.docs.category.Language.link.generated-index.title": {
@@ -1240,7 +1240,7 @@
     "description": "The generated-index page title for category 'Classes' in sidebar 'docs'"
   },
   "sidebar.docs.category.4D-classes.link.generated-index.description": {
-    "message": "Lista de clases 4D integradas",
+    "message": "Lista de clases 4D",
     "description": "The generated-index page description for category 'Classes' in sidebar 'docs'"
   },
   "sidebar.docs.category.processes": {

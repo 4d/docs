@@ -696,9 +696,9 @@ Ver el ejemplo de la sección [.setRemoteContextInfo()](#example-1-3).
 <!-- REF #DataStoreClass.getRequestLog().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|Collection|<-|Collection of objects, where each object describes a request|
+|Resultado|Collection|<-|Collection of objects, where each object describes a request|
 </div>
 <!-- END REF -->
 

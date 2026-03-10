@@ -32,7 +32,7 @@
     "description": "The generated-index page title for category '4D Language Concepts' in sidebar 'docs'"
   },
   "sidebar.docs.category.4D Language Concepts.link.generated-index.description": {
-    "message": "Los principales conceptos del Lenguaje 4D",
+    "message": "Los principales conceptos del lenguaje 4D",
     "description": "The generated-index page description for category '4D Language Concepts' in sidebar 'docs'"
   },
   "sidebar.docs.category.Data Types": {
@@ -52,7 +52,7 @@
     "description": "The generated-index page title for category 'Class Functions' in sidebar 'docs'"
   },
   "sidebar.docs.category.Class Functions.link.generated-index.description": {
-    "message": "Lista de clases 4D integradas",
+    "message": "Lista de clases 4D",
     "description": "The generated-index page description for category 'Class Functions' in sidebar 'docs'"
   },
   "sidebar.docs.category.Handling Code": {
@@ -84,7 +84,7 @@
     "description": "The generated-index page title for category 'Administration' in sidebar 'docs'"
   },
   "sidebar.docs.category.Administration.link.generated-index.description": {
-    "message": "Cómo supervisar sus aplicaciones 4D",
+    "message": "Cómo controlar sus aplicaciones 4D",
     "description": "The generated-index page description for category 'Administration' in sidebar 'docs'"
   },
   "sidebar.docs.category.4D Server Administration Window": {
@@ -204,7 +204,7 @@
     "description": "The generated-index page title for category 'Access Rights' in sidebar 'docs'"
   },
   "sidebar.docs.category.Access Rights.link.generated-index.description": {
-    "message": "Control de acceso y privilegios de usuario para aplicaciones de escritorio.",
+    "message": "Control de acceso y privilegios de usuarios para aplicaciones de escritorio.",
     "description": "The generated-index page description for category 'Access Rights' in sidebar 'docs'"
   },
   "sidebar.docs.category.Forms": {
@@ -240,7 +240,7 @@
     "description": "The label for category 'Mobile Applications' in sidebar 'docs'"
   },
   "sidebar.docs.link.4D Language Reference": {
-    "message": "Referencia del lenguaje 4D",
+    "message": "Manual del lenguaje 4D",
     "description": "The label for link '4D Language Reference' in sidebar 'docs', linking to 'https://doc.4d.com/4Dv20/4D/20/4D-Language-Reference.100-6237190.en.html'"
   },
   "sidebar.docs.link.4D Write Pro": {
@@ -280,7 +280,7 @@
     "description": "The label for link '4D for iOS (archive)' in sidebar 'docs', linking to 'https://developer.4d.com/4d-for-ios'"
   },
   "sidebar.docs.doc.Command Line Interface": {
-    "message": "Interfaz de línea de\n          comando",
+    "message": "Interfaz de línea de comando",
     "description": "The label for the doc item 'Command Line Interface' in sidebar 'docs', linking to the doc Admin/cli"
   },
   "sidebar.docs.doc.TLS Protocol": {

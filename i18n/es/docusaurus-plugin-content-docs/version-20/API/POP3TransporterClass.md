@@ -404,9 +404,9 @@ El método devuelve **Null** si:
 <!-- REF #POP3TransporterClass.getMailInfoList().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|Collection|<-|Collection of `mailInfo` objects|
+|Resultado|Collection|<-|Collection of `mailInfo` objects|
 </div>
 <!-- END REF -->
 
