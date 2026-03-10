@@ -164,6 +164,12 @@ In the *options* parameter, pass an object that can contain the following proper
 |validateTLSCertificate|Boolean|If false, 4D does not validate the TLS certificate and does not return an error if it is invalid (i.e. expired, self-signed...). Important: In the current implementation, the Certification Authority itself is not verified.|True|
 
 
+:::note
+
+On macOS, when a new application (new [UUID](./FileClass.md#setappinfo)) requests access to the keychain for the first time, a password can be requested to the user, depending on the local keychain configuration.  
+
+:::
+
 #### Callback functions
 
 All callback functions receive two object parameters:
