@@ -978,6 +978,8 @@ When using a constant value, the following rules must be respected:
 * **order by attributePath**: you can include an order by *attributePath* statement in the query so that the resulting data will be sorted according to that statement. You can use multiple order by statements, separated by commas (e.g., order by *attributePath1* desc, *attributePath2* asc). By default, the order is ascending. Pass 'desc' to define a descending order and 'asc' to define an ascending order.
  >If you use this statement, the returned entity selection is ordered (for more information, please refer to [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
 
+If the entity selection attributes contain values of different [types](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md).
+
 ### Using quotes
 
 When you use quotes within queries, you must use single quotes ' ' inside the query and double quotes " " to enclose the whole query, otherwise an error is returned. For example:
@@ -1253,6 +1255,7 @@ var $results := ds.MyClass.query("myVectorField > :1 and myVectorField > :2 orde
 ```
 
 See [more examples below](#example-4-2) (examples 4 and 5). 
+
 
 :::tip Related blog posts
 
