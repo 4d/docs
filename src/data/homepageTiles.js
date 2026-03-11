@@ -302,41 +302,44 @@ title: (
         <Link to="Extensions/overview">
           <Translate>Extending 4D applications</Translate>
         </Link>
-        <Link to="https://developer.4d.com/qodly/">
-          <Translate>4D Qodly Pro</Translate> <i class="fa-solid fa-up-right-from-square"></i>
-        </Link>
-        <Link to="ViewPro/getting-started">
-          <Translate>4D View Pro</Translate>
-        </Link>
-        <Link to="category/4d-write-pro">
-          <Translate>4D Write Pro</Translate>
-        </Link>
-        <Link to="https://developer.4d.com/4D-NetKit">
-          <Translate>4D NetKit</Translate> <i class="fa-solid fa-up-right-from-square"></i>
-        </Link>
         <Link to="aikit/overview">
           <Translate>4D AIKit</Translate>
         </Link>
-        <Link to={localizedLinks["homepage.sections.textensions.4D-Progress-url"]}>
-          <Translate>4D Progress</Translate> <i class="fa-solid fa-up-right-from-square"></i>
-        </Link>
-        <Link to="https://developer.4d.com/4D-SVG">
-          <Translate>4D SVG</Translate> <i class="fa-solid fa-up-right-from-square"></i>
-        </Link>
-        <Link to={localizedLinks["homepage.sections.textensions.4D-Widgets-url"]}>
-          <Translate>4D Widgets</Translate> <i class="fa-solid fa-up-right-from-square"></i>
-        </Link>
-       <Link to="https://github.com/4d/4D-QPDF?tab=readme-ov-file#readme">
-          <Translate>4D QPDF</Translate> <i class="fa-solid fa-up-right-from-square"></i>
-        </Link>
-        <Link to={localizedLinks["homepage.sections.mobile-applications.go-mobile-url"]}>
-          <Translate>Go Mobile with 4D</Translate> <i class="fa-solid fa-up-right-from-square"></i>
+        <Link to="https://marketplace.visualstudio.com/items?itemName=4D.4d-analyzer">
+          <Translate>4D Analyzer</Translate> <i class="fa-solid fa-up-right-from-square"></i>
         </Link>
         <Link to="https://github.com/4d/4D-Mobile-App-Server/blob/main/README.md">
           <Translate>4D Mobile App Server</Translate> <i class="fa-solid fa-up-right-from-square"></i>
         </Link>
+        <Link to="https://developer.4d.com/4D-NetKit">
+          <Translate>4D NetKit</Translate> <i class="fa-solid fa-up-right-from-square"></i>
+        </Link>
+        <Link to={localizedLinks["homepage.sections.textensions.4D-Progress-url"]}>
+          <Translate>4D Progress</Translate> <i class="fa-solid fa-up-right-from-square"></i>
+        </Link>
+        <Link to="https://developer.4d.com/qodly/">
+          <Translate>4D Qodly Pro</Translate> <i class="fa-solid fa-up-right-from-square"></i>
+        </Link>
+       <Link to="https://github.com/4d/4D-QPDF?tab=readme-ov-file#readme">
+          <Translate>4D QPDF</Translate> <i class="fa-solid fa-up-right-from-square"></i>
+        </Link>
+        <Link to="https://developer.4d.com/4D-SVG">
+          <Translate>4D SVG</Translate> <i class="fa-solid fa-up-right-from-square"></i>
+        </Link>
+        <Link to="ViewPro/getting-started">
+          <Translate>4D View Pro</Translate>
+        </Link>
+        <Link to={localizedLinks["homepage.sections.textensions.4D-Widgets-url"]}>
+          <Translate>4D Widgets</Translate> <i class="fa-solid fa-up-right-from-square"></i>
+        </Link>
+        <Link to="category/4d-write-pro">
+          <Translate>4D Write Pro</Translate>
+        </Link>
         <Link to="https://github.com/4d/Build4D">
           <Translate>Build4D</Translate> <i class="fa-solid fa-up-right-from-square"></i>
+        </Link>
+        <Link to={localizedLinks["homepage.sections.mobile-applications.go-mobile-url"]}>
+          <Translate>Go Mobile with 4D</Translate> <i class="fa-solid fa-up-right-from-square"></i>
         </Link>
       </div>
     ),

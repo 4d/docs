@@ -854,11 +854,109 @@ module.exports =
                   ]
         },
         {
+          type: "category",
+          label: "4D AIKit",
+          link: {
+            type: "generated-index",
+            title: "4D AIKit",
+            slug: "/category/4d-aikit",
+            keywords: [
+              "4D AIKit"
+            ],
+            image: "/img/docusaurus.png"
+          },
+          items: [
+            "aikit/overview",
+            "aikit/asynchronous-call",
+            "aikit/compatible-openai",
+            {
+              type: "category",
+              label: "Classes",
+              key: "aikit-classes",
+              items: [
+                "aikit/Classes/openai",
+                "aikit/Classes/openaiapiresource",
+                "aikit/Classes/openaichatapi",
+                "aikit/Classes/openaichatcompletionsapi",
+                "aikit/Classes/openaichatcompletionslistparameters",
+                "aikit/Classes/openaichatcompletionsmessagesapi",
+                "aikit/Classes/openaichatcompletionsmessagesparameters",
+                "aikit/Classes/openaichatcompletionsparameters",
+                "aikit/Classes/openaichatcompletionsresult",
+                "aikit/Classes/openaichatcompletionsstreamresult",
+                "aikit/Classes/openaichathelper",
+                "aikit/Classes/openaichoice",
+                "aikit/Classes/openaiembedding",
+                "aikit/Classes/openaiembeddingsapi",
+                "aikit/Classes/openaiembeddingsparameters",
+                "aikit/Classes/openaiembeddingsresult",
+                "aikit/Classes/openaierror",
+                "aikit/Classes/openaifile",
+                "aikit/Classes/openaifiledeleted",
+                "aikit/Classes/openaifiledeletedresult",
+                "aikit/Classes/openaifilelistparameters",
+                "aikit/Classes/openaifilelistresult",
+                "aikit/Classes/openaifileparameters",
+                "aikit/Classes/openaifileresult",
+                "aikit/Classes/openaifilesapi",
+                "aikit/Classes/openaiimage",
+                "aikit/Classes/openaiimageparameters",
+                "aikit/Classes/openaiimagesapi",
+                "aikit/Classes/openaiimagesresult",
+                "aikit/Classes/openaimessage",
+                "aikit/Classes/openaimodel",
+                "aikit/Classes/openaimodellistresult",
+                "aikit/Classes/openaimodelresult",
+                "aikit/Classes/openaimodelsapi",
+                "aikit/Classes/openaimoderation",
+                "aikit/Classes/openaimoderationitem",
+                "aikit/Classes/openaimoderationresult",
+                "aikit/Classes/openaimoderationsapi",
+                "aikit/Classes/openaiparameters",
+                "aikit/Classes/openairesult",
+                "aikit/Classes/openaitool",
+                "aikit/Classes/openaivision",
+                "aikit/Classes/openaivisionhelper"
+              ]
+            }
+          ]
+        },
+        {
+          type: "link",
+          label: "4D Analyzer",
+          href: "https://marketplace.visualstudio.com/items?itemName=4D.4d-analyzer"
+        },
+        {
+          type: "link",
+          label: "4D Mobile App Server",
+          href: "https://github.com/4d/4D-Mobile-App-Server/blob/main/README.md"
+        },
+       {
+          type: "link",
+          label: "4D NetKit",
+          href: "https://developer.4d.com/4D-NetKit"
+        },
+        {
+          type: "link",
+          label: "4D Progress",
+          href: "https://github.com/4d/4D-Progress/blob/main/README.md"
+        },
+        {
           type: "link",
           label: "4D Qodly Pro",
           key: "qodly-pro-link2",
           href: "https://developer.4d.com/qodly/"
         },        
+        {
+          type: "link",
+          label: "4D QPDF",
+          href: "https://github.com/4d/4D-QPDF?tab=readme-ov-file#readme"
+        },
+        {
+          type: "link",
+          label: "4D SVG",
+          href: "https://developer.4d.com/4D-SVG"
+        },
         {
           type: "category",
           label: "4D View Pro",
@@ -1156,6 +1254,11 @@ module.exports =
           ]
         },
         {
+          type: "link",
+          label: "4D Widgets",
+          href: "https://github.com/4d/4D-Widgets/blob/main/Readme.md"
+        },
+        {
           type: "category",
           label: "4D Write Pro",
           link: {
@@ -1299,112 +1402,14 @@ module.exports =
         },
        {
           type: "link",
-          label: "4D NetKit",
-          href: "https://developer.4d.com/4D-NetKit"
-        },
-        {
-          type: "category",
-          label: "4D AIKit",
-          link: {
-            type: "generated-index",
-            title: "4D AIKit",
-            slug: "/category/4d-aikit",
-            keywords: [
-              "4D AIKit"
-            ],
-            image: "/img/docusaurus.png"
-          },
-          items: [
-            "aikit/overview",
-            "aikit/asynchronous-call",
-            "aikit/compatible-openai",
-            {
-              type: "category",
-              label: "Classes",
-              key: "aikit-classes",
-              items: [
-                "aikit/Classes/openai",
-                "aikit/Classes/openaiapiresource",
-                "aikit/Classes/openaichatapi",
-                "aikit/Classes/openaichatcompletionsapi",
-                "aikit/Classes/openaichatcompletionslistparameters",
-                "aikit/Classes/openaichatcompletionsmessagesapi",
-                "aikit/Classes/openaichatcompletionsmessagesparameters",
-                "aikit/Classes/openaichatcompletionsparameters",
-                "aikit/Classes/openaichatcompletionsresult",
-                "aikit/Classes/openaichatcompletionsstreamresult",
-                "aikit/Classes/openaichathelper",
-                "aikit/Classes/openaichoice",
-                "aikit/Classes/openaiembedding",
-                "aikit/Classes/openaiembeddingsapi",
-                "aikit/Classes/openaiembeddingsparameters",
-                "aikit/Classes/openaiembeddingsresult",
-                "aikit/Classes/openaierror",
-                "aikit/Classes/openaifile",
-                "aikit/Classes/openaifiledeleted",
-                "aikit/Classes/openaifiledeletedresult",
-                "aikit/Classes/openaifilelistparameters",
-                "aikit/Classes/openaifilelistresult",
-                "aikit/Classes/openaifileparameters",
-                "aikit/Classes/openaifileresult",
-                "aikit/Classes/openaifilesapi",
-                "aikit/Classes/openaiimage",
-                "aikit/Classes/openaiimageparameters",
-                "aikit/Classes/openaiimagesapi",
-                "aikit/Classes/openaiimagesresult",
-                "aikit/Classes/openaimessage",
-                "aikit/Classes/openaimodel",
-                "aikit/Classes/openaimodellistresult",
-                "aikit/Classes/openaimodelresult",
-                "aikit/Classes/openaimodelsapi",
-                "aikit/Classes/openaimoderation",
-                "aikit/Classes/openaimoderationitem",
-                "aikit/Classes/openaimoderationresult",
-                "aikit/Classes/openaimoderationsapi",
-                "aikit/Classes/openaiparameters",
-                "aikit/Classes/openairesult",
-                "aikit/Classes/openaitool",
-                "aikit/Classes/openaivision",
-                "aikit/Classes/openaivisionhelper"
-              ]
-            }
-          ]
-        },
-        {
-          type: "link",
-          label: "4D Progress",
-          href: "https://github.com/4d/4D-Progress/blob/main/README.md"
-        },
-        {
-          type: "link",
-          label: "4D SVG",
-          href: "https://developer.4d.com/4D-SVG"
-        },
-        {
-          type: "link",
-          label: "4D Widgets",
-          href: "https://github.com/4d/4D-Widgets/blob/main/Readme.md"
-        },
-        {
-          type: "link",
-          label: "4D QPDF",
-          href: "https://github.com/4d/4D-QPDF?tab=readme-ov-file#readme"
-        },
+          label: "Build4D",
+          href: "https://github.com/4d/Build4D"
+       },
         {
           type: "link",
           label: "Go Mobile with 4D",
           href: "https://developer.4d.com/go-mobile/"
-        },
-        {
-          type: "link",
-          label: "4D Mobile App Server",
-          href: "https://github.com/4d/4D-Mobile-App-Server/blob/main/README.md"
-        },
-       {
-          type: "link",
-          label: "Build4D",
-          href: "https://github.com/4d/Build4D"
-       }
+        }
     ]
     }
   ]
