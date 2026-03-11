@@ -75,7 +75,7 @@ You want to save an existing file in the picture field, stored outside of the da
 
 [Get external data path](../commands/get-external-data-path)  
 [RELOAD EXTERNAL DATA](../commands/reload-external-data)  
-[ORDA: Assigning files to picture or blob attributes](../ORDA/entities.md#assigning-files-to-picture-or-blob-attributes)
+[ORDA: Assigning files to picture or blob attributes](../../ORDA/entities.md#assigning-files-to-picture-or-blob-attributes)
 
 
 ## Properties

@@ -319,7 +319,7 @@ To create break rows:
 
 ### Table formula object
 
-When used in a formula within the table, the [`This`](../commands/this.md) keyword gives access to additional [expressions](../managing-formulas.md#formula-context-object), according to the context:
+When used in a formula within the table, the [`This`](../../commands/this) keyword gives access to additional [expressions](../managing-formulas.md#formula-context-object), according to the context:
 
 | **Context**     | **Expression**   | **Type** | **Returns**               | 
 |---------------- | ---------------- | -------- | ------------------------- |  

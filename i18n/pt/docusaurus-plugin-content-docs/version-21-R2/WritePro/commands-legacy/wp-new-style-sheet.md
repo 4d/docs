@@ -29,7 +29,7 @@ O parâmetro *tipoFolhaEstilo* lhe permite designar o tipo de folha de estilo, o
 * wk type character: aplica atributos de estilo aos caracteres.
 * wk type paragraph: aplica atributos de estilo aos parágrafos.
 
-Passe um nome para a folha de estilo no parâmetro *nomeFolhaEstilo*. O nome da folha de estilo se armazena com o documento e facilitar o reuso e modificação de estilo. Também pode ser usado com os comandos [WP Get style sheet](wp-get-style-sheet.md) e [WP DELETE STYLE SHEET](wp-delete-style-sheet.md). O nome de folha de estilo deve seguir as regras abaixo:
+Passe um nome para a folha de estilo no parâmetro *nomeFolhaEstilo*. O nome da folha de estilo se armazena com o documento e facilitar o reuso e modificação de estilo. Também pode ser usado com os comandos [WP Get style sheet](../WritePro/commands/wp-get-style-sheet) e [WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet). O nome de folha de estilo deve seguir as regras abaixo:
 
 * deve começar com uma letra
 * pode conter caracteres alfanuméricos, espaços, e caracteres "-" ou unicode >= 128
@@ -69,7 +69,7 @@ O código abaixo cria e define uma folha de estilo de parágrafo:
 ## Ver também 
 
 *Accessar texto e atributos de imagem por programação*  
-[WP DELETE STYLE SHEET](wp-delete-style-sheet.md)  
-[WP Get style sheet](wp-get-style-sheet.md)  
+[WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet)  
+[WP Get style sheet](../WritePro/commands/wp-get-style-sheet)  
 [WP Get style sheets](wp-get-style-sheets.md)  
-[WP IMPORT STYLE SHEETS](wp-import-style-sheets.md)  
+[WP IMPORT STYLE SHEETS](../WritePro/commands/wp-import-style-sheet)  

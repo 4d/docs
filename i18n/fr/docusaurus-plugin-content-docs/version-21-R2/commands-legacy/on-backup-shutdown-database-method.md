@@ -5,7 +5,7 @@ slug: /commands/on-backup-shutdown-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.On Backup Shutdown database method.Syntax-->On Backup Shutdown ($status)<!-- END REF-->
+<!--REF #_command_.On Backup Shutdown database method.Syntax-->On Backup Shutdown ($status : Integer)<!-- END REF-->
 <!--REF #_command_.On Backup Shutdown database method.Params-->
 <div class="no-index">
 

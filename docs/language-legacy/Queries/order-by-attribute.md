@@ -41,7 +41,7 @@ In *attributePath*, pass the path of the attribute whose values you want to use 
 
 **Notes:** 
 
-* Only attributes containing scalar values (number, text, boolean, date) can be sorted by this command. For information about how heterogeneous values are sorted, refer to the [4D ordering principles](../Concepts/ordering.md) section.
+* Only attributes containing scalar values (number, text, boolean, date) can be sorted by this command. For information about how heterogeneous values are sorted, refer to the [4D ordering principles](../../Concepts/ordering.md) section.
 * You cannot pass an element of an array in *attributePath* (in this case, an error is returned).
 * Keep in mind that attribute names are case-sensitive: you can have different "MyAtt" and "myAtt" attribute names in the same record.
 * You cannot use attributes whose name contains special characters such as "." or "\[ \]", because they will be incorrectly evaluated as tokens in the order by string. For more information, please refer to the *Object property identifiers* paragraph.

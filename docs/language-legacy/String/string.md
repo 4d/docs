@@ -82,7 +82,7 @@ The format is specified in the same way as it would be for a [number input on a 
 | String(1/0)                        | "INF"                | Positive infinite number        |
 | String(-1/0)                       | "-INF"               | Negative infinite number        |
 
-(\*) The algorithm for converting [real values](../Concepts/dt_number.md) into text is based on 13 significant digits.
+(\*) The algorithm for converting [real values](../../Concepts/dt_number.md) into text is based on 13 significant digits.
 
 #### String(number;base)
 

@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | [4D.Session](../API/SessionClass.md)  | &#8592; | Session object |
+| Function result | [4D.Session](../../API/SessionClass.md)  | &#8592; | Session object |
 </div>
 <!-- END REF-->
 
@@ -33,7 +33,7 @@ The `Session` command <!-- REF #_command_.Session.Summary -->returns the `Sessio
 
 Depending on the process from which the command is called, the current session can be:
 
-- a web session (when [scalable sessions are enabled](WebServer/sessions.md#enabling-web-sessions)),
+- a web session (when [scalable sessions are enabled](../../WebServer/sessions.md#enabling-web-sessions)),
 - a remote user session (on the server),
 - a stored procedures session,
 - a standalone session.

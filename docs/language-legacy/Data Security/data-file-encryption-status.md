@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 *dataPath* designates a 4D data file (.4dd). It must correspond to the structure file defined by the *structurePath* parameter. You can designate the current structure file but the data file must not be the current (open) file.
 
-**Note:** Use the [`ds.encryptionStatus()`](../API/DataStoreClass.md#encryptionstatus) function to determine the encryption status of the current data file.
+**Note:** Use the [`ds.encryptionStatus()`](../../API/DataStoreClass.md#encryptionstatus) function to determine the encryption status of the current data file.
 
 **Returned value**
 

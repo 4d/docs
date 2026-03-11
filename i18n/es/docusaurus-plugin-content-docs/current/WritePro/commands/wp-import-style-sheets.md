@@ -46,7 +46,7 @@ You want to import a template style sheet and receive a notification with the nu
 
 ## Ver también
 
-[WP DELETE STYLE SHEET](wp-delete-style-sheet.md)  
+[WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet)  
 [WP Get style sheet](wp-get-style-sheet.md)  
 [WP Get style sheets](wp-get-style-sheets.md)  
 [WP New style sheet](wp-new-style-sheet.md)

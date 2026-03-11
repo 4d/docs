@@ -41,7 +41,7 @@ To retrieve the "Main title" style sheet:
 ## See also 
 
 *Accessing document contents by programming*  
-[WP DELETE STYLE SHEET](wp-delete-style-sheet.md)  
+[WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet)  
 [WP Get style sheets](wp-get-style-sheets.md)  
-[WP IMPORT STYLE SHEETS](wp-import-style-sheets.md)  
-[WP New style sheet](wp-new-style-sheet.md)  
+[WP IMPORT STYLE SHEETS](../WritePro/commands/wp-import-style-sheet)  
+[WP New style sheet](../WritePro/commands/wp-new-style-sheet)  

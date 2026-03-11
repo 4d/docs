@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 This command provides two ways to remove a style sheet. You can specify:
 
-* the style sheet object (created with the [WP New style sheet](wp-new-style-sheet.md) or returned by the [WP Get style sheet](wp-get-style-sheet.md) command) to remove in the *styleSheetType* parameter, or
+* the style sheet object (created with the [WP New style sheet](../WritePro/commands/wp-new-style-sheet) or returned by the [WP Get style sheet](../WritePro/commands/wp-get-style-sheet) command) to remove in the *styleSheetType* parameter, or
 * the 4D Write Pro document along with the name of the style sheet to remove in the *wpDoc* and *styleSheetName* parameters.
 
 **Note**: The default ("Normal") style sheet can not be deleted.
@@ -31,7 +31,7 @@ This command provides two ways to remove a style sheet. You can specify:
 ## See also 
 
 *Accessing document contents by programming*  
-[WP Get style sheet](wp-get-style-sheet.md)  
+[WP Get style sheet](../WritePro/commands/wp-get-style-sheet)  
 [WP Get style sheets](wp-get-style-sheets.md)  
-[WP IMPORT STYLE SHEETS](wp-import-style-sheets.md)  
-[WP New style sheet](wp-new-style-sheet.md)  
+[WP IMPORT STYLE SHEETS](../WritePro/commands/wp-import-style-sheet)  
+[WP New style sheet](../WritePro/commands/wp-new-style-sheet)  
