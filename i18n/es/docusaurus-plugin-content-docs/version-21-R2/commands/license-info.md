@@ -20,11 +20,11 @@ displayed_sidebar: docs
 <div class="no-index">
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                                |
-| ----------- | --------------------------------------------- |
-| 20 R7       | Renamed (Get License info) |
-| 16 R6       | Modificado                                    |
-| 16 R4       | Created                                       |
+| Lanzamiento | Modificaciones                                   |
+| ----------- | ------------------------------------------------ |
+| 20 R7       | Renombrado (Get License info) |
+| 16 R6       | Modificado                                       |
+| 16 R4       | Created                                          |
 
 </details>
 </div>

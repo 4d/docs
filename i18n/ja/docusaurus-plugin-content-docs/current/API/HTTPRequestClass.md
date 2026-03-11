@@ -162,6 +162,12 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 | timeout                | Real                                              | タイムアウト (秒単位) タイムアウト (秒単位) 未定義 = タイムアウトなし                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | undefined         |
 | validateTLSCertificate | Boolean                                           | false の場合、4D は TLS証明書の検証をおこなわず、無効 (期限切れ、自己署名など) であってもエラーを返しません。 重要: 現在の実装では、認証局そのものは検証されません。                                                                                                                                                                                                                                                                                                                                                                                                                    | true              |
 
+:::note
+
+On macOS, when a new application (new [UUID](./FileClass.md#setappinfo)) requests access to the keychain for the first time, a password can be requested to the user, depending on the local keychain configuration.
+
+:::
+
 #### コールバック関数
 
 すべてのコールバック関数は、2つのオブジェクト引数を受け取ります:

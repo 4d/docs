@@ -156,6 +156,12 @@ No parâmetro *options*, passe um objeto que possa conter as seguintes proprieda
 | timeout                | Real                                              | Tempo de espera em segundos. indefinido = sem timeout                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | indefinido           |
 | validateTLSCertificate | Parâmetros                                        | Se false, 4D não valida o certificado TLS e não retorna um erro se ele for inválido (i.e. expirado, auto-assinado...). Importante: Na implementação actual, a Autoridade de Certificação em si não é verificada.                                                                                                                                                                                | True                 |
 
+:::note
+
+On macOS, when a new application (new [UUID](./FileClass.md#setappinfo)) requests access to the keychain for the first time, a password can be requested to the user, depending on the local keychain configuration.
+
+:::
+
 #### Funções Callback
 
 Todas as funções de chamada de retorno recebem dois parâmetros de objectos:

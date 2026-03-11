@@ -66,7 +66,7 @@ Multi-level lists can be managed using:
 
 <!-- REF hierarchical-list.Desc -->
 
-## Hierarchical list style sheets
+## Hojas de estilo de listas jerárquicas
 
 Hierarchical list style sheets are used to create [multi-level lists](using-a-4d-write-pro-area.md#multi-level-lists).
 
@@ -104,7 +104,7 @@ WP SET ATTRIBUTES($paragraphs[1]; wk style sheet; $level2)
 WP SET ATTRIBUTES($paragraphs[2]; wk style sheet; $level3)
 ```
 
-result:
+resultado:
 
 ![](../../assets/en/WritePro/hierarchical-paragraph-stylesheets-1.png)
 
@@ -114,7 +114,7 @@ To delete the first sub-leve:
 WP DELETE STYLE SHEET(wpArea; "MyList"; 2)
 ```
 
-result:
+resultado:
 
 ![](../../assets/en/WritePro/hierarchical-paragraph-stylesheets-2.png)
 
@@ -131,7 +131,7 @@ When created, hierarchical list style sheets use predefined values:
 
     - Root level: `"MyList"`
     - First sub-level: `"MyList lvl 2"`
-    - Second sub-level: `"MyList lvl 3"`
+    - Segundo subnivel: `"MyList lvl 3"`
 
 <!-- END REF -->
 

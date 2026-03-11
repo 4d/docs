@@ -32,14 +32,14 @@ Choosing Between Synchronous and Asynchronous Execution:
 
 | Scenario                                   | Mejor enfoque    |
 | ------------------------------------------ | ---------------- |
-| Quick operations with minimal processing   | **Synchronous**  |
-| Tasks requiring strict execution order     | **Synchronous**  |
+| Quick operations with minimal processing   | **Síncrono**     |
+| Tasks requiring strict execution order     | **Síncrono**     |
 | Long-running background tasks              | **Asynchronous** |
 | Long-running UI interactions               | **Asynchronous** |
-| Short-running UI interactions              | **Synchronous**  |
+| Short-running UI interactions              | **Síncrono**     |
 | High-performance, multi-threaded workloads | **Asynchronous** |
 
-## Core principles
+## Principios básicos
 
 4D ofrece capacidades integradas de **ejecución asíncrona** a través de varias clases y comandos. These allow background task execution, network communication, and large data processing, while waiting other operations to complete without blocking the current process.
 
@@ -75,7 +75,7 @@ In the context of asynchronous execution, the following features place your code
 
 Events are automatically triggered during the execution flow and passed to your corresponding callbacks. Se puede forzar la activación de eventos llamando a `terminate()` o `shutdown()` durante una `wait()`.
 
-### Callback execution context
+### Contexto de ejecución de retrollamada
 
 When 4D execute one of your callbacks, it does so in the context of the current process (worker), i.e. if your object is instantiated inside a form, the callback function will be executed in the context of that same form.
 
@@ -171,7 +171,7 @@ var $options.onResponse:=Formula(myMethod)
 
 ## Synchronous execution in asynchronous code
 
-Incluso cuando se utiliza código moderno y asíncrono, puede ser necesario introducir cierto grado de ejecución síncrona. For example, you may want a function to wait for a certain amount of time to get a result. It could the case with guaranteed fast network connections or system workers. Then, you can enforce synchronous execution using the `wait()` function.
+Incluso cuando se utiliza código moderno y asíncrono, puede ser necesario introducir cierto grado de ejecución síncrona. For example, you may want a function to wait for a certain amount of time to get a result. It could be the case with guaranteed fast network connections or system workers. Then, you can enforce synchronous execution using the `wait()` function.
 
 The **`.wait()`** function pauses execution of the current process and puts 4D in [event listening](#event-listening) mode. Keep in mind that it will trigger events received from any sources, not only from the object on which the `wait()` function was called.
 

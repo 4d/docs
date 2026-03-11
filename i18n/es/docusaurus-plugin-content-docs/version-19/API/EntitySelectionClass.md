@@ -1186,11 +1186,11 @@ En este ejemplo, queremos encontrar el salario más bajo entre todas las emplead
 <!-- REF #EntitySelectionClass.minus().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|entity |4D.Entity|->|Entity to substract|
-|entitySelection|4D.EntitySelection|->|Entity selection to substract|
-|Result|4D.EntitySelection|<-|New entity selection or a new reference on the existing entity selection|
+|entity |4D.Entity|->|Entidad a substraer|
+|entitySelection|4D.EntitySelection|->|Selección de entidades a substraer|
+|Resultado|4D.EntitySelection|<-|New entity selection or a new reference on the existing entity selection|
 </div>
 <!-- END REF -->
 
@@ -1253,11 +1253,11 @@ Queremos tener una selección de empleadas llamadas "Jones" que vivan en Nueva Y
 <!-- REF #EntitySelectionClass.or().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|entity|4D.Entity|->|Entity to intersect with|
-|entitySelection|4D.EntitySelection|->|Entity selection to intersect with|
-|Result|4D.EntitySelection|<-|New entity selection or new reference to the original entity selection|
+|entity|4D.Entity|->|Entidad con la que interceptar |
+|entitySelection|4D.EntitySelection|->|Selección de entidad a interseptar|
+|Resultado|4D.EntitySelection|<-|New entity selection or new reference to the original entity selection|
 </div>
 <!-- END REF -->
 
@@ -1315,11 +1315,11 @@ Si la entity selection inicial y el parámetro no están relacionados con la mis
 <!-- REF #EntitySelectionClass.orderBy().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|pathString |Text |->|Attribute path(s) and sorting instruction(s) for the entity selection|
-|pathObjects |Collection |->|Collection of criteria objects|
-|Result|4D.EntitySelection|<-|New entity selection in the specified order|
+|pathString |Text |->|Ruta(s) de atributo(s) e instrucciones de ordenación(es) para la selección de entidades|
+|pathObjects |Collection |->|Colección de objetos de criterios |
+|Resultado|4D.EntitySelection|<-|New entity selection in the specified order|
 </div>
 <!-- END REF -->
 
@@ -1394,13 +1394,13 @@ Si pasa una ruta de atributo inválida en *pathString* o *pathObject*, la funci�
 <!-- REF #EntitySelectionClass.orderByFormula().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|formulaString|Text|->|Formula string|
-|formulaObj|Object|->|Formula object|
-|sortOrder |Integer|->|`dk ascending` (default) or `dk descending`|
-|settings|Object|->|Parameter(s) for the formula|
-|Result|4D.EntitySelection|<-|New ordered entity selection|
+|formulaString|Text|->|Cadena de fórmula|
+|formulaObj|Object|->|Objeto de fórmula|
+|sortOrder |Integer|->|`dk ascending` (por defecto) o `dk descending`|
+|settings|Object|->|Parámetros de la fórmula|
+|Resultado|4D.EntitySelection<-|New ordered entity selection|
 </div>
 <!-- END REF -->
 

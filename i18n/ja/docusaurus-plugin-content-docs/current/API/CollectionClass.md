@@ -1932,7 +1932,7 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 
 > このコマンドは、元のコレクションを変更しません。
 
-コレクションが異なる型の値を格納している場合、`.max()` 関数は型のリスト順の、最後の型の最大値を返します ([`.sort()`](#sort) 参照)。
+If the collection contains different [types of values](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md) and the `.max()` function will return the maximum value within the last element type in the type list order.
 
 コレクションがオブジェクトを格納している場合には、最大値を取得するオブジェクトプロパティのパスを *propertyPath* に渡します。
 
@@ -1985,7 +1985,7 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 
 > このコマンドは、元のコレクションを変更しません。
 
-コレクションが異なる型の値を格納している場合、`.min()` 関数は型のリスト順の、最初の型の最小値を返します ([`.sort()`](#sort) 参照)。
+If the collection contains different [types of values](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md) and the `.min()` function will return the minimum value within the first element type in the type list order.
 
 コレクションがオブジェクトを格納している場合には、最小値を取得するオブジェクトプロパティのパスを *propertyPath* に渡します。
 
@@ -2039,15 +2039,9 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 
 > この関数は、元のコレクションを変更します。また、*colsToSort* パラメーターに使用されたコレクションも変更されます。
 
-`.multiSort()` が引数なしで呼び出された場合、この関数は [`.sort()`](#sort) 関数と同じ効果を持ちます: コレクション要素は、スカラー値のみがデータ型に応じてデフォルトで昇順に並べ替えられます。 コレクションが異なる型の要素を格納している場合、それらはまず型ごとにグループ分けされ、そのあとで並べ替えられます。 型は以下の順番で返されます:
+`.multiSort()` が引数なしで呼び出された場合、この関数は [`.sort()`](#sort) 関数と同じ効果を持ちます: コレクション要素は、スカラー値のみがデータ型に応じてデフォルトで昇順に並べ替えられます。
 
-1. null
-2. ブール
-3. 文字列
-4. 数値
-5. オブジェクト
-6. コレクション
-7. 日付
+If the collection contains elements of different [types](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md).
 
 **単一レベルの同期ソート**
 
@@ -2209,15 +2203,7 @@ $name.multiSort(Formula($1.value.firstname<$1.value2.firstname); [$address])
 
   このシンタックスは、コレクション内のスカラー値のみを並べ替えます (オブジェクトやコレクションなどの他の型は並べ替えされないまま返されます)。
 
-コレクションが異なる型の要素を格納している場合、それらはまず型ごとにグループ分けされ、そのあとで並べ替えられます。 型は以下の順番で返されます:
-
-1. null
-2. ブール
-3. 文字列
-4. 数値
-5. オブジェクト
-6. コレクション
-7. 日付
+If the collection contains elements of different [types](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md).
 
 #### 例題 1
 
@@ -3369,15 +3355,7 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 このシンタックスは、コレクション内のスカラー値のみを並べ替えます (オブジェクトやコレクションなどの他の型は並べ替えされないまま返されます)。
 
-コレクションが異なる型の要素を格納している場合、それらはまず型ごとにグループ分けされ、そのあとで並べ替えられます。 型は以下の順番で返されます:
-
-1. null
-2. ブール
-3. 文字列
-4. 数値
-5. オブジェクト
-6. コレクション
-7. 日付
+If the collection contains elements of different [types](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md).
 
 カスタマイズされた順番や、型に関係なくコレクション要素を並べ替えたい場合には、並べ替え順を定義するコールバックを *formula* ([Formula オブジェクト](FunctionClass.md)) または *methodName* (テキスト) に渡します。戻り値は、二つの要素の相対的な順番を示すブール値です。*$1.value* が *$1.value2* より小さい場合に **true** を、*$1.value* が *$1.value2* より大きい場合に **false** を返します。必要に応じて、 追加の引数をコールバックに渡せます 戻り値は、二つの要素の相対的な順番を示すブール値です。*$1.value* が *$1.value2* より小さい場合に **true** を、*$1.value* が *$1.value2* より大きい場合に **false** を返します。 必要に応じて、 追加の引数をコールバックに渡せます。
 

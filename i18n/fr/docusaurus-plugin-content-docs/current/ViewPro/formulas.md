@@ -282,13 +282,13 @@ Des solutions alternatives sont disponibles pour déclarer des champs ou des mé
 
 ### Référencement de champs à l'aide de la structure virtuelle
 
-4D View Pro allows you to reference 4D fields using the virtual structure of the database, i.e. declared through the [`SET TABLE TITLES`](../commands/set-table-titles) and/or [`SET FIELD TITLES`](../commands/set-field-titles) commands with the \* parameter. **ATTENTION :** Vous ne pouvez pas utiliser la structure virtuelle et `VP SET CUSTOM FUNCTIONS` simultanément.
+4D View Pro vous permet de référencer les champs 4D en utilisant la structure virtuelle de la base de données, c'est-à-dire déclarée par les commandes [`SET TABLE TITLES`](../commands/set-table-titles) et/ou [`SET FIELD TITLES`](../commands/set-field-titles) avec le paramètre \*. **ATTENTION :** Vous ne pouvez pas utiliser la structure virtuelle et `VP SET CUSTOM FUNCTIONS` simultanément.
 
 > **ATTENTION :** Vous ne pouvez pas utiliser la structure virtuelle et `VP SET CUSTOM FUNCTIONS` simultanément. Dès que `VP SET CUSTOM FUNCTIONS` est appelé, les fonctions basées sur les commandes `SET TABLE TITLES` et `SET FIELD TITLES` sont ignorées dans la zone 4D View Pro.
 
 #### Conditions requises
 
-- The field must belong to the virtual structure of the database, i.e. it must be declared through the [`SET TABLE TITLES`](../commands/set-table-titles) and/or [`SET FIELD TITLES`](../commands/set-field-titles) commands with the \* parameter (see example),
+- Le champ doit appartenir à la structure virtuelle de la base de données, c'est-à-dire qu'il doit être déclaré par les commandes [`SET TABLE TITLES`](../commands/set-table-titles) et/ou [`SET FIELD TITLES`](../commands/set-field-titles) avec le paramètre \* (voir exemple),
 - Les noms de table et de champ doivent être conformes à ECMA (voir également [la norme ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)),
 - Le type de champ doit être pris en charge par 4D View Pro (voir ci-dessus).
 

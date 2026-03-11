@@ -1620,11 +1620,11 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 <!-- REF #EntitySelectionClass.or().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|entity|4D.Entity|->|Entity to intersect with|
-|entitySelection|4D.EntitySelection|->|Entity selection to intersect with|
-|Result|4D.EntitySelection|<-|New entity selection or new reference to the original entity selection|
+|entity|4D.Entity|->|Entidad con la que interceptar |
+|entitySelection|4D.EntitySelection|->|Selección de entidad a interseptar|
+|Resultado|4D.EntitySelection|<-|New entity selection or new reference to the original entity selection|
 </div>
 <!-- END REF -->
 
@@ -1767,13 +1767,13 @@ Si pasa una ruta de atributo inválida en *pathString* o *pathObject*, la funci�
 <!-- REF #EntitySelectionClass.orderByFormula().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|formulaString|Text|->|Formula string|
-|formulaObj|Object|->|Formula object|
-|sortOrder |Integer|->|`dk ascending` (default) or `dk descending`|
-|settings|Object|->|Parameter(s) for the formula|
-|Result|4D.EntitySelection|<-|New ordered entity selection|
+|formulaString|Text|->|Cadena de fórmula|
+|formulaObj|Object|->|Objeto de fórmula|
+|sortOrder |Integer|->|`dk ascending` (por defecto) o `dk descending`|
+|settings|Object|->|Parámetros de la fórmula|
+|Resultado|4D.EntitySelection<-|New ordered entity selection|
 </div>
 <!-- END REF -->
 

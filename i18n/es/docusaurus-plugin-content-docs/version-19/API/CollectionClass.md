@@ -2013,10 +2013,10 @@ Cuando se aplica a una colección vacía, `.pop()` devuelve ***undefined***.
 <!-- REF #collection.push().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|element|Mixed|->|Element(s) to add to the collection|
-|Result|Collection |<-|Original collection containing added elements|
+|element|Mixed|->|Elemento(s) a añadir a la colección|
+|Resultado|Collection |<-|Original collection containing added elements|
 </div>
 <!-- END REF -->
 
@@ -2069,12 +2069,12 @@ Quiere ordenar la colección resultante:
 <!-- REF #collection.query().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|queryString|Text|->|Search criteria|
-|value|Mixed|->|Value(s) to compare when using placeholder(s)|
-|querySettings|Object|->|Query options: parameters, attributes|
-|Result|Collection |<-|Element(s) matching queryString in the collection|
+|queryString|Text|->|Criterios de búsqueda|
+|value|Mixed|->|Valor(es) a comparar cuando se utiliza(n) marcador(es) de posición |
+|querySettings|Object|->|Opciones de consulta: parámetros, atributos|
+|Resultado|Collection |<-|Element(s) matching queryString in the collection|
 </div>
 <!-- END REF -->
 
@@ -2176,12 +2176,12 @@ Se pueden encontrar más ejemplos de búsquedas en la página `dataClass.query()
 <!-- REF #collection.reduce().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|methodName |Text|->|Name of the function to call to process collection elements|
-|initValue |Text, Number, Object, Collection, Date, Boolean|->|Value to use as the first argument to the first call of *methodName*|
-|param |expression|->|Parameter(s) to pass to *methodName*|
-|Result|Text, Number, Object, Collection, Date, Boolean |<-|Result of the accumulator value|
+|methodName |Text|->|Nombre de la función a llamar para procesar elementos de la colección|
+|initValue |Text, Number, Object, Collection, Date, Boolean|->|Valor a utilizar como primer argumento en la primera llamada a *methodName*|
+|param |expression|->|Parámetro(s) a pasar a *methodName*|
+|Resultado|Text, Number, Object, Collection, Date, Boolean |<-|Result of the accumulator value|
 </div>
 <!-- END REF -->
 
@@ -2263,11 +2263,11 @@ Con el siguiente método ***Flatten***:
 <!-- REF #collection.remove().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|index |Integer|->|Element at which to start removal|
-|howMany |Integer|->|Number of elements to remove, or 1 element if omitted|
-|Result|Collection|<-|Original collection without removed element(s)|
+|index |Integer|->|Elemento a partir del cual empezar la eliminación|
+|howMany |Integer|->|Número de elementos a eliminar, o 1 elemento si se omite|
+|Resultado|Collection|<-|Original collection without removed element(s)|
 </div>
 <!-- END REF -->
 
@@ -2317,11 +2317,11 @@ Si se intenta eliminar un elemento de una colección vacía, el método no hace 
 <!-- REF #collection.resize().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|size |Integer|->|New size of the collection|
-|defaultValue |Number, Text, Object, Collection, Date, Boolean|->|Default value to fill new elements|
-|Result|Collection|<-|Resized original collection|
+|size |Integer|->|Nuevo tamaño de la colección|
+|defaultValue |Number, Text, Object, Collection, Date, Boolean|->|Valor por defecto para rellenar nuevos elementos|
+|Resultado|Collection|<-|Resized original collection|
 </div>
 <!-- END REF -->
 
@@ -2412,9 +2412,9 @@ La función `.reverse()` <!-- REF #collection.reverse().Summary -->devuelve una 
 <!-- REF #collection.shift().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|any|<-|First element of collection|
+|Resultado|any|<-|First element of collection|
 </div>
 <!-- END REF -->
 
@@ -2455,11 +2455,11 @@ Si la colección está vacía, este método no hace nada.
 <!-- REF #collection.slice().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|startFrom |Integer |->|Start index (included)|
-|end |Integer |->|End index (not included)|
-|Result|Collection|<-|New collection containing sliced elements (shallow copy)|
+|startFrom |Integer |->|Índice inicial (incluido)|
+|end |Integer |->Índice final (no incluido)|
+|Resultado|Collection|<-|New collection containing sliced elements (shallow copy)|
 </div>
 <!-- END REF -->
 
@@ -2505,12 +2505,12 @@ La colección devuelta contiene el elemento especificado por *startFrom* y todos
 <!-- REF #collection.some().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|startFrom |Integer |->|Index to start the test at|
-|methodName |Text |->|Name of the method to call for the test|
-|param |Mixed |->|Parameter(s) to pass to *methodName*|
-|Result|Boolean|<-|True if at least one element successfully passed the test|
+|startFrom |Integer |->|Índice para iniciar la evaluación|
+|methodName |Text |->Nombre del método a llamar para la evaluación|
+|param |Mixed |->|Parámetro(s) a pasar a *methodName*|
+|Resultado|Boolean|<-|True if at least one element successfully passed the test|
 </div>
 <!-- END REF -->
 
@@ -2582,12 +2582,12 @@ Con el siguiente método *NumberGreaterThan0*:
 <!-- REF #collection.sort().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|ascOrDesc|Integer|->|`ck ascending` or `ck descending` (scalar values)|
-|methodName |Text |->|Name of method used to specify the sorting order|
-|extraParam |any |->|Parameter(s) for the method|
-|Result|Collection|<-|Original collection sorted|
+|ascOrDesc|Integer|->|`ck ascendente` o `ck descendente` (valores escalares)|
+|methodName |Text |->|Nombre del método utilizado para ordenar la colección|
+|extraParam |any |->|Parámetro(s) a pasar al método|
+|Resultado|Collection|<-|Original collection sorted|
 </div>
 <!-- END REF -->
 
@@ -2678,10 +2678,10 @@ Si desea ordenar los elementos de la colección en otro orden o clasificar cualq
 <!-- REF #collection.sum().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|propertyPath |Text |->|Object property path to be used for calculation|
-|Result|Real|<-|Sum of collection values|
+|propertyPath |Text |->|Ruta de propiedad del objeto a utilizar para el cálculo|
+|Resultado|Real|<-|Sum of collection values|
 </div>
 <!-- END REF -->
 
@@ -2740,10 +2740,10 @@ Si la colección contiene objetos, pasa el parámetro *propertyPath* para indica
 <!-- REF #collection.unshift().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|value |Text, Number, Object, Collection, Date |->|Value(s) to insert at the beginning of the collection|
-|Result|Collection|<-|Collection containing added element(s)
+|valor |Text, Number, Object, Collection, Date |->|Valor(es) a insertar al inicio de la colección|
+|Resultado|Collection|<-|Collection containing added element(s)
 |
 </div>
 <!-- END REF -->

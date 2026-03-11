@@ -90,6 +90,12 @@ HTTPAgent のオプションは [HTTPRequest のオプション](HTTPRequestClas
 
 :::note
 
+On macOS, when a new application (new [UUID](./FileClass.md#setappinfo)) requests access to the keychain for the first time, a password can be requested to the user, depending on the local keychain configuration.
+
+:::
+
+:::note
+
 同じエージェントを使って複数のサーバーにリクエストすることができます。 その場合各サーバーは、同じエージェントオプションを使用した独自の接続プールを持ちます。
 
 :::

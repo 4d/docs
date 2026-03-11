@@ -45,10 +45,10 @@ Para obtener una visión general de esta clase, consulte la página [**CryptoKey
 <!-- REF #4D.CryptoKey.new().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|----|---|
-|settings|Object|->|Settings to generate or load a key pair|
-|Result|4D.CryptoKey|<-|Object encapsulating an encryption key pair|
+|Parámetro|Tipo||Descripción|
+||---|---|----|---|
+|settings|Object|->|Configuración para generar o cargar un par de claves|
+|Resultado|4D.CryptoKey|<-|Object encapsulating an encryption key pair|
 </div>
 <!-- END REF -->
 
@@ -164,11 +164,11 @@ Definido sólo para llaves RSA: <!-- REF #CryptoKey.curve.Summary -->el tamaño 
 <!-- REF #CryptoKey.decrypt().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|----|---|
-|message|Text|->|Message string to be decoded using `options.encodingEncrypted` and decrypted.|  
-|options|Object|->|Decoding options|
-|Result|Object|<-|Status|
+|message|Text|->|Cadena de mensaje a decodificar usando `options.encodingEncrypted` y descifrado.|  
+|options|Object|->|Opciones de decodificación|
+|Resultado|Object|<-|Status|
 </div>
 <!-- END REF -->
 
@@ -213,11 +213,11 @@ En caso de que el *message* no haya podido ser descifrado por no haber sido encr
 <!-- REF #CryptoKey.encrypt().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|----|---|
-|message|Text|->|Message string to be encoded using `options.encodingDecrypted` and encrypted.|  
-|options|Object|->|Encoding options|
-|Result|Text|<-|Message encrypted and encoded using the `options.encodingEncrypted`|
+|message|Text|->|Cadena de mensaje a codificar usando `options.encodingDecrypted` y encriptado.|  
+|options|Object|->|Opciones de codificación|
+|Resultado|Text|<-|Message encrypted and encoded using the `options.encodingEncrypted`|
 </div>
 <!-- END REF -->
 
@@ -254,9 +254,9 @@ El valor devuelto es un mensaje encriptado.
 <!-- REF #CryptoKey.getPrivateKey().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|----|---|
-|Result|Text|<-|Private key in PEM format|
+|Resultado|Text|<-|Private key in PEM format|
 </div>
 <!-- END REF -->
 
@@ -283,9 +283,9 @@ El valor devuelto es la llave privada.
 <!-- REF #CryptoKey.getPublicKey().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|----|---|---|
-|Result|Text|<-|Public key in PEM format|
+|Resultado|Text|<-|Public key in PEM format|
 </div>
 <!-- END REF -->
 
@@ -328,11 +328,11 @@ El valor devuelto es la llave pública.
 <!-- REF #CryptoKey.sign().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|----|---|---|
-|message|Text|->|Message string to sign|  
-|options|Object|->|Signing options|
-|Result|Text|<-|Signature in Base64 or Base64URL representation, depending on "encoding" option|
+|Parámetro|Tipo||Descripción|
+|---|----|---|-|
+|message|Text|->|Cadena de mensaje a firmar|  
+|options|Object|->|Opciones de firma|
+|Resultado|Text|<-|Signature in Base64 or Base64URL representation, depending on "encoding" option|
 </div>
 <!-- END REF -->
 
@@ -409,12 +409,12 @@ Contiene el <!-- REF #CryptoKey.type.Summary -->nombre del tipo de llave - "RSA"
 <!-- REF #CryptoKey.verify().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|message|Text|->|Message string that was used to produce the signature|  
-|signature|Text|->|Signature to verify, in Base64 or Base64URL representation, depending on `options.encoding` value|
-|options|Object|->|Signing options|
-|Result|Object|<-|Status of the verification|
+|Parámetro|Tipo||Descripción|
+|---|---|-|---|-|
+|message|Text|->|Cadena de mensaje que se utilizó para producir la firma|  
+|signature|Text|->|Firma a verificar, en representación Base64 o Base64URL, dependiendo del valor de `options.encoding`|
+|options|Object|->|Opciones de firma|
+|Resultado|Object|<-|Status of the verification|
 </div>
 <!-- END REF -->
 

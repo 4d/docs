@@ -45,7 +45,7 @@ Note that, even if it does not have parameters (see below), an object function t
 You can also execute a function using the [`apply()`](#apply) and [`call()`](#call):
 
 ```4d
- $message.apply() //displays "Hello world"
+ $message.apply() //muestra "Hello world"
 ```
 
 ### Resumen
@@ -64,7 +64,7 @@ You can also execute a function using the [`apply()`](#apply) and [`call()`](#ca
 
 | Lanzamiento | Modificaciones                                |
 | ----------- | --------------------------------------------- |
-| 21 R3       | Support of 4D.Methods objects |
+| 21 R3       | Soporte de objetos 4D.Methods |
 | 17 R3       | Añadidos                                      |
 
 </details>
@@ -79,7 +79,7 @@ You can also execute a function using the [`apply()`](#apply) and [`call()`](#ca
 | ---------- | ---------- | :-------------------------: | --------------------------------------------------------------- |
 | thisObj    | Object     |              ->             | Object to be returned by the `This` command in the function     |
 | params     | Collection |              ->             | Collection of values to be passed as parameters to the function |
-| Resultado  | any        | <- | Value from function execution                                   |
+| Resultado  | any        | <- | Valor de la ejecución de la función                             |
 
 </div>
 <!-- END REF -->
@@ -107,7 +107,7 @@ Tenga en cuenta que `.apply()` es similar a [`.call()`](#call) excepto que los p
 
 | Lanzamiento | Modificaciones                                |
 | ----------- | --------------------------------------------- |
-| 21 R3       | Support of 4D.Methods objects |
+| 21 R3       | Soporte de objetos 4D.Methods |
 | 17 R3       | Añadidos                                      |
 
 </details>
@@ -122,7 +122,7 @@ Tenga en cuenta que `.apply()` es similar a [`.call()`](#call) excepto que los p
 | ---------- | ------ | --------------------------- | ----------------------------------------------------------- |
 | thisObj    | Object | ->                          | Object to be returned by the `This` command in the function |
 | params     | any    | ->                          | Values to be passed as parameters to the function           |
-| Resultado  | any    | <- | Value from function execution                               |
+| Resultado  | any    | <- | Valor de la ejecución de la función                         |
 
 </div>
 <!-- END REF -->
@@ -166,7 +166,7 @@ Tenga en cuenta que `.call()` es similar a [`.apply()`](#apply) excepto que los 
 
 | Lanzamiento | Modificaciones                                |
 | ----------- | --------------------------------------------- |
-| 21 R3       | Support of 4D.Methods objects |
+| 21 R3       | Soporte de objetos 4D.Methods |
 | 18 R2       | Añadidos                                      |
 
 </details>

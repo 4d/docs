@@ -171,7 +171,7 @@ var $options.onResponse:=Formula(myMethod)
 
 ## Synchronous execution in asynchronous code
 
-Even when using modern, asynchronous code, you may need to introduce a degree of synchronous execution. For example, you may want a function to wait for a certain amount of time to get a result. It could the case with guaranteed fast network connections or system workers. Then, you can enforce synchronous execution using the `wait()` function.
+Even when using modern, asynchronous code, you may need to introduce a degree of synchronous execution. For example, you may want a function to wait for a certain amount of time to get a result. It could be the case with guaranteed fast network connections or system workers. Then, you can enforce synchronous execution using the `wait()` function.
 
 The **`.wait()`** function pauses execution of the current process and puts 4D in [event listening](#event-listening) mode. Keep in mind that it will trigger events received from any sources, not only from the object on which the `wait()` function was called.
 

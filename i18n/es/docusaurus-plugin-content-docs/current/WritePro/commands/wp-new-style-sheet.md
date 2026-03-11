@@ -14,8 +14,8 @@ displayed_sidebar: docs
 | Parámetros     | Tipo    |                             | Descripción                             |
 | -------------- | ------- | --------------------------- | --------------------------------------- |
 | wpDoc          | Object  | &#8594; | Documento 4D Write Pro                  |
-| styleSheetType | Integer | &#8594; | Type of style sheet                     |
-| styleSheetName | Text    | &#8594; | Name of style sheet                     |
+| styleSheetType | Integer | &#8594; | Tipo de hoja de estilo                  |
+| styleSheetName | Text    | &#8594; | Nombre de la hoja de estilo             |
 | listLevelCount | Integer | &#8594; | Total number of levels in the hierarchy |
 | Resultado      | Object  | &#8592; | Objeto hoja de estilo                   |
 
@@ -46,7 +46,7 @@ The *styleSheetType* parameter lets you designate the type of the style sheet, *
 
 Pass a name for the style sheet in the *styleSheetName* parameter. The style sheet's name is stored with the document and facilitates reusing or modifying the style. It can also be used with the [WP Get style sheet](wp-get-style-sheet.md) and [WP DELETE STYLE SHEET](wp-delete-style-sheet.md) commands. The style sheet name must comply with the following rules:
 
-- it must start with a letter
+- debe empezar por una letra
 - it can then contain alphanumeric characters, space characters, "-" characters or unicode characters >= 128
 - it must be unique in the document regardless of the type
 - it must not start with "section", which is reserved
@@ -70,7 +70,7 @@ The following predefined values are applied:
 - `wk list style type` is set to `wk decimal`
 - `wk list level index` is automatically assigned (1 for the root level, incremented for sub-levels)
 - `wk list level count` is set to the specified value for all levels
-- `wk margin left` is automatically calculated (0.75 cm × level index)
+- El margen izquierdo se calcula automáticamente (0,75 cm × índice de nivel)
 
 If the parameter is omitted or set to 0, a standard (non-list) paragraph style sheet is created.
 
@@ -82,13 +82,13 @@ The following code creates and defines a paragraph style sheet:
  var $styleSheet : Object
  $styleSheet:=WP New style sheet(wpArea;wk type paragraph;"Main title")
  
-  //define style sheet settings
+  //definir la configuración de la hoja de estilo
  WP SET ATTRIBUTES($styleSheet;wk font family;"Papyrus")
  WP SET ATTRIBUTES($styleSheet;wk font size;"48pt")
  WP SET ATTRIBUTES($styleSheet;wk text color;"red")
  WP SET ATTRIBUTES($styleSheet;wk text align;wk left)
  
-  //Apply the style sheet to the first paragraph
+  //Aplicar la hoja de estilo al primer párrafo
  var $Paragraphs : Collection
  $Paragraphs:=WP Get elements(wpArea;wk type paragraph)
  If($Paragraphs.length>0)
@@ -118,9 +118,9 @@ Resultado:
   - `wk list level count` = 3
   - `wk list style type` = `wk decimal`
 
-- The sub-level style sheets:
+- Las hojas de estilo de los subniveles:
   - have incremented `wk list level index` values (2 and 3)
-  - share the same `wk list level count`
+  - comparte la misma `wk list level count`
   - are automatically indented (0.75 cm × level index)
   - reference the root style sheet through `wk root style`
 

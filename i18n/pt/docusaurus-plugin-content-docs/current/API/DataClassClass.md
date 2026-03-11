@@ -987,6 +987,8 @@ Fórmulas nas consultas podem receber parâmetros através de $1. Este ponto est
 
 > Se você usar essa declaração, a seleção de entidade retornada será ordenada (para mais informações, por favor consulte [Seleções de entidades ordenadas vs não ordenadas](ORDA/dsMapping.md#seleção-de-entidades-ordenadas-ou-não-ordenadas)).
 
+If the entity selection attributes contain values of different [types](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md).
+
 ### Usar aspas
 
 Ao usar aspas dentro das consultas, você deve usar aspas simples ' ' dentro da consulta e aspas duplas " " para envolver toda a consulta, caso contrário, será retornado um erro. Por exemplo:

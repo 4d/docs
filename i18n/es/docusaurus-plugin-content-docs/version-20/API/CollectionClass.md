@@ -1427,9 +1427,9 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 <!-- REF #collection.first().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|any|<-|First element of collection|
+|Resultado|any|<-|First element of collection|
 </div>
 <!-- END REF -->
 
@@ -2565,10 +2565,10 @@ Cuando se aplica a una colección vacía, `.pop()` devuelve ***undefined***.
 <!-- REF #collection.push().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|element|Mixed|->|Element(s) to add to the collection|
-|Result|Collection |<-|Original collection containing added elements|
+|element|Mixed|->|Elemento(s) a añadir a la colección|
+|Resultado|Collection |<-|Original collection containing added elements|
 </div>
 <!-- END REF -->
 
@@ -2629,12 +2629,12 @@ Desea ordenar la colección resultante:
 <!-- REF #collection.query().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|queryString|Text|->|Search criteria|
-|value|Mixed|->|Value(s) to compare when using placeholder(s)|
-|querySettings|Object|->|Query options: parameters, attributes|
-|Result|Collection |<-|Element(s) matching queryString in the collection|
+|queryString|Text|->|Criterios de búsqueda|
+|value|Mixed|->|Valor(es) a comparar cuando se utiliza(n) marcador(es) de posición |
+|querySettings|Object|->|Opciones de consulta: parámetros, atributos|
+|Resultado|Collection |<-|Element(s) matching queryString in the collection|
 </div>
 <!-- END REF -->
 
@@ -2935,11 +2935,11 @@ Con el siguiente método ***Flatten***:
 <!-- REF #collection.remove().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|index |Integer|->|Element at which to start removal|
-|howMany |Integer|->|Number of elements to remove, or 1 element if omitted|
-|Result|Collection|<-|Modified collection without removed element(s)|
+|index |Integer|->|Elemento a partir del cual empezar la eliminación|
+|howMany |Integer|->|Número de elementos a eliminar, o 1 elemento si se omite|
+|Resultado|Collection|<-|Modified collection without removed element(s)|
 </div>
 <!-- END REF -->
 
@@ -3002,11 +3002,11 @@ Si se intenta eliminar un elemento de una colección vacía, el método no hace 
 <!-- REF #collection.resize().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|size |Integer|->|New size of the collection|
-|defaultValue |Number, Text, Object, Collection, Date, Boolean|->|Default value to fill new elements|
-|Result|Collection|<-|Resized original collection|
+|size |Integer|->|Nuevo tamaño de la colección|
+|defaultValue |Number, Text, Object, Collection, Date, Boolean|->|Valor por defecto para rellenar nuevos elementos|
+|Resultado|Collection|<-|Resized original collection|
 </div>
 <!-- END REF -->
 
@@ -3108,9 +3108,9 @@ La función `.reverse()` <!-- REF #collection.reverse().Summary -->devuelve una 
 <!-- REF #collection.shift().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|any|<-|First element of collection|
+|Resultado|any|<-|First element of collection|
 </div>
 <!-- END REF -->
 
@@ -3159,11 +3159,11 @@ Si la colección está vacía, este método no hace nada.
 <!-- REF #collection.slice().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|startFrom |Integer |->|Start index (included)|
-|end |Integer |->|End index (not included)|
-|Result|Collection|<-|New collection containing sliced elements (shallow copy)|
+|startFrom |Integer |->|Índice inicial (incluido)|
+|end |Integer |->Índice final (no incluido)|
+|Resultado|Collection|<-|New collection containing sliced elements (shallow copy)|
 </div>
 <!-- END REF -->
 
@@ -3403,10 +3403,10 @@ $col3:=$col.sort(Formula(String($1.value)<String($1.value2))) //orden alfabétic
 <!-- REF #collection.sum().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|propertyPath |Text |->|Object property path to be used for calculation|
-|Result|Real|<-|Sum of collection values|
+|propertyPath |Text |->|Ruta de propiedad del objeto a utilizar para el cálculo|
+|Resultado|Real|<-|Sum of collection values|
 </div>
 <!-- END REF -->
 
@@ -3470,10 +3470,10 @@ Si la colección contiene objetos, pasa el parámetro *propertyPath* para indica
 <!-- REF #collection.unshift().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|value |Text, Number, Object, Collection, Date |->|Value(s) to insert at the beginning of the collection|
-|Result|Collection|<-|Collection containing added element(s)
+|valor |Text, Number, Object, Collection, Date |->|Valor(es) a insertar al inicio de la colección|
+|Resultado|Collection|<-|Collection containing added element(s)
 |
 </div>
 <!-- END REF -->

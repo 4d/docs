@@ -23,12 +23,12 @@ displayed_sidebar: docs
 <div class="no-index">
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                                  |
-| ----------- | ----------------------------------------------- |
-| 20          | Modificado                                      |
-| 16 R6       | Modificado                                      |
-| 14          | Renamed (OPEN PRINTING FORM) |
-| 12          | Created                                         |
+| Lanzamiento | Modificaciones                                     |
+| ----------- | -------------------------------------------------- |
+| 20          | Modificado                                         |
+| 16 R6       | Modificado                                         |
+| 14          | Renombrado (OPEN PRINTING FORM) |
+| 12          | Created                                            |
 
 </details>
 </div>

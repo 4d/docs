@@ -809,7 +809,7 @@
     "description": "The ARIA label for back to keyword search button"
   },
   "theme.SearchModal.startScreen.recentConversationsTitle": {
-    "message": "Recent conversations",
+    "message": "Conversaciones recientes",
     "description": "The title for recent conversations"
   },
   "theme.SearchModal.startScreen.removeRecentConversationButtonTitle": {
@@ -825,7 +825,7 @@
     "description": "The disclaimer text for AI answers"
   },
   "theme.SearchModal.askAiScreen.relatedSourcesText": {
-    "message": "Related sources",
+    "message": "Fuentes relacionadas",
     "description": "The text for related sources"
   },
   "theme.SearchModal.askAiScreen.thinkingText": {

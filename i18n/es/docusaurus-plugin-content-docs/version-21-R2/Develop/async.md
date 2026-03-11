@@ -30,22 +30,22 @@ Asynchronous execution is used when:
 
 Choosing Between Synchronous and Asynchronous Execution:
 
-| Scenario                                   | Best Approach    |
+| Scenario                                   | Mejor enfoque    |
 | ------------------------------------------ | ---------------- |
-| Quick operations with minimal processing   | **Synchronous**  |
-| Tasks requiring strict execution order     | **Synchronous**  |
+| Quick operations with minimal processing   | **Síncrono**     |
+| Tasks requiring strict execution order     | **Síncrono**     |
 | Long-running background tasks              | **Asynchronous** |
 | Long-running UI interactions               | **Asynchronous** |
-| Short-running UI interactions              | **Synchronous**  |
+| Short-running UI interactions              | **Síncrono**     |
 | High-performance, multi-threaded workloads | **Asynchronous** |
 
-## Core principles
+## Principios básicos
 
-4D provides built-in **asynchronous execution** capabilities through various classes and commands. These allow background task execution, network communication, and large data processing, while waiting other operations to complete without blocking the current process.
+4D ofrece capacidades integradas de **ejecución asíncrona** a través de varias clases y comandos. These allow background task execution, network communication, and large data processing, while waiting other operations to complete without blocking the current process.
 
 The general concept of asynchronous event management in 4D is based on an asynchronous messaging model using **workers** (processes that listen to events) and **callbacks** (functions or formulas automatically invoked when an event occurs). Instead of waiting for a result (synchronous mode), you provide a function that will be automatically called when the desired event occurs. Callbacks can be passed as class functions (recommended) or Formula objects.
 
-This model is common to [`CALL WORKER`](../commands/call-worker), [`CALL FORM`](../commands/call-form), and [classes that support aynchronous execution](#asynchronous-programming-with-4d-classes). All these commands/classes start an operation that runs in the background. The statement that launches the operation returns immediately, without waiting for the operation to finish.
+This model is common to [`CALL WORKER`](../commands-legacy/call-worker.md), [`CALL FORM`](../commands-legacy/call-form.md), and [classes that support aynchronous execution](#asynchronous-programming-with-4d-classes). All these commands/classes start an operation that runs in the background. The statement that launches the operation returns immediately, without waiting for the operation to finish.
 
 ### Workers
 
@@ -55,11 +55,11 @@ Using worker processes in asynchronous programming **is mandatory** since "class
 
 ### Event queue (mailbox)
 
-Each worker (or form window for [`CALL FORM`](../commands/call-form)) has its own message queue. [`CALL WORKER`](../commands/call-worker) or [`CALL FORM`](../commands/call-form) simply posts a message to this queue. The worker handles messages one by one, in the order they arrive, within its own context. Process variables, current selections, etc. are preserved.
+Each worker (or form window for [`CALL FORM`](../commands-legacy/call-form.md)) has its own message queue. [`CALL WORKER`](../commands-legacy/call-worker.md) or [`CALL FORM`](../commands-legacy/call-form.md) simply posts a message to this queue. The worker handles messages one by one, in the order they arrive, within its own context. Process variables, current selections, etc. are preserved.
 
 ### Bidirectional communication via messages
 
-The calling process posts a message then the worker executes it. The worker can in turn post a message (via [`CALL WORKER`](../commands/call-worker) or [`CALL FORM`](../commands/call-form)) back to the caller or another worker to notify an event (task completion, data received, error, progress, etc.). This mechanism replaces the classic return of synchronous calls.
+The calling process posts a message then the worker executes it. The worker can in turn post a message (via [`CALL WORKER`](../commands-legacy/call-worker.md) or [`CALL FORM`](../commands-legacy/call-form.md)) back to the caller or another worker to notify an event (task completion, data received, error, progress, etc.). This mechanism replaces the classic return of synchronous calls.
 
 ### Event listening
 
@@ -67,15 +67,15 @@ In event-driven development, it is obvious that some code must be able to listen
 
 In the context of asynchronous execution, the following features place your code in listening mode:
 
-- [`CALL WORKER`](../commands/call-worker) executes the code for which it has been called, then returns to a listening status from where it can be called afterwards.
-- [`CALL FORM`](../commands/call-form) opens a form and makes it listen for incoming messages from the event queue.
+- [`CALL WORKER`](../commands-legacy/call-worker.md) ejecuta el código para el que ha sido llamado, luego vuelve a un estado de escucha desde donde puede ser llamado posteriormente.
+- [`CALL FORM`](../commands-legacy/call-form.md) abre un formulario y lo hace escuchar los mensajes entrantes de la cola de eventos.
 - a call for a `wait()` listens for `terminate()` or `shutdown()` in a callback from any other instance.
 
 ### Event triggering
 
-Events are automatically triggered during the execution flow and passed to your corresponding callbacks. You can force the triggering of events by calling `terminate()` or `shutdown()` during  a `wait()`.
+Events are automatically triggered during the execution flow and passed to your corresponding callbacks. Se puede forzar la activación de eventos llamando a `terminate()` o `shutdown()` durante una `wait()`.
 
-### Callback execution context
+### Contexto de ejecución de retrollamada
 
 When 4D execute one of your callbacks, it does so in the context of the current process (worker), i.e. if your object is instantiated inside a form, the callback function will be executed in the context of that same form.
 
@@ -85,9 +85,9 @@ For callbacks to work properly in fully asynchronous mode, the operation should 
 
 In 4D, all objects are released [when no more references](../Concepts/dt_object.md#resources) to them exist in memory. This typically occurs at the end of a method execution for local variables.
 
-For asynchronous classes, an **extra reference** is always maintained by 4D in the process that instantiated the object. This reference is only released when the operation is finished, i.e. after the `onTerminate` event is triggered. This automatic referencing allows your object to survive even if you don't have referenced it specifically in a variable.
+Para las clases asíncronas, 4D mantiene siempre una **referencia adicional** en el proceso que instanciaba el objeto. This reference is only released when the operation is finished, i.e. after the `onTerminate` event is triggered. This automatic referencing allows your object to survive even if you don't have referenced it specifically in a variable.
 
-If you want to "force" the release of an object at any moment, use a `.shutdown()` or `terminate()` function; it triggers the onTerminate\` event ànd thus releases the object.
+Si desea "forzar" la liberación de un objeto en cualquier momento, utilice un `. hutdown()` o función `terminate()`; desencadena el evento 'onTerminate\` así libera el objeto.
 
 ### Examples illustrating the common concept
 
@@ -102,14 +102,14 @@ If you want to "force" the release of an object at any moment, use a `.shutdown(
 Several 4D classes support asynchronous processing:
 
 - [`HTTPRequest`](../API/HTTPRequestClass.md) – Handles asynchronous HTTP requests and responses.
-- [`SystemWorker`](../API/SystemWorkerClass.md) – Executes external processes asynchronously.
-- [`TCPConnection`](../API/TCPConnectionClass.md) – Manages TCP client connections with event-driven callbacks.
+- [`SystemWorker`](../API/SystemWorkerClass.md) - Ejecuta procesos externos de forma asíncrona.
+- [`TCPConnection`](../API/TCPConnectionClass.md) - Gestiona conexiones de cliente TCP con retrollamadas basadas en eventos.
 - [`TCPListener`](../API/TCPListenerClass.md) – Manages TCP server connections.
 - [`UDPSocket`](../API/UDPSocketClass.md) – Sends and receives UDP packets.
 - [`WebSocket`](../API/WebSocketClass.md) – Manages WebSocket client connections.
-- [`WebSocketServer`](../API/WebSocketServerClass.md) – Manages WebSocket server connections.
+- [`WebSocketServer`](../API/WebSocketServerClass.md) - Gestiona las conexiones del servidor WebSocket.
 
-All these classes follow the same rules regarding asynchronous execution. Their constructor accepts an *options* parameter that is used to configure your asynchronous object. It is recommended that the *options* object is a [user class](../Concepts/classes.md) instance which has callback functions. For example, you can create an `onResponse()` function in the class, it will be automatically called asychronously when a *reponse* event is fired.
+All these classes follow the same rules regarding asynchronous execution. Su constructor acepta un parámetro *options* que se usa para configurar su objeto asíncrono. It is recommended that the *options* object is a [user class](../Concepts/classes.md) instance which has callback functions. Por ejemplo, puede crear una función `onResponse()` en la clase, que será llamada automáticamente de forma asíncrona cuando se dispare un evento *reponse*.
 
 We recommend the following sequence:
 
@@ -155,7 +155,7 @@ Function _createFile($title : Text; $textBody : Text)
 
 ```
 
-Note that `onResponse`, `onData`, `onDataError`, and `onTerminate` are functions supported by [`4D.SystemWorker`](../API/SystemWorkerClass.md).
+Tenga en cuenta que `onResponse`, `onData`, `onDataError` y `onTerminate` son funciones soportadas por [`4D.SystemWorker`](../API/SystemWorkerClass.md).
 
 Once the user class is instantiated; 4D is put in [event listening](#event-listening) mode, in which case 4D can [trigger an event](#event-triggering) that calls the corresponding function in the user class.
 
@@ -171,22 +171,21 @@ var $options.onResponse:=Formula(myMethod)
 
 ## Synchronous execution in asynchronous code
 
-Even when using modern, asynchronous code, you may need to introduce a degree of synchronous execution. For example, you may want a function to wait for a certain amount of time to get a result. It could be the case with guaranteed fast network connections or system workers. Then, you can enforce synchronous execution using the `wait()` function.
+Incluso cuando se utiliza código moderno y asíncrono, puede ser necesario introducir cierto grado de ejecución síncrona. For example, you may want a function to wait for a certain amount of time to get a result. It could be the case with guaranteed fast network connections or system workers. Then, you can enforce synchronous execution using the `wait()` function.
 
 The **`.wait()`** function pauses execution of the current process and puts 4D in [event listening](#event-listening) mode. Keep in mind that it will trigger events received from any sources, not only from the object on which the `wait()` function was called.
 
-The `wait()` function returns when the `onTerminate` event has been triggered on the object, or when the provided timeout (if any) has expired. Consequently, you can explicitly exit from a `.wait()` by calling `shutdown()` or `terminate()` from within a callback. Otherwise, the `.wait()` is exited when the current operation ends.
+La función `wait()` retorna cuando el evento `onTerminate` ha sido disparado en el objeto, o cuando el tiempo de espera suministrado (si existe) ha expirado. Por consiguiente, puede salir explícitamente de un `.wait()` llamando a `shutdown()` o `terminate()` desde dentro de una retrollamda. Otherwise, the `.wait()` is exited when the current operation ends.
 
-Exemplo:
+Ejemplo:
 
 ```4d
 var $options:=cs.Params.new() 
 var $systemworker:=4D.SystemWorker.new("/bin/ls -l /Users ";$options) 
-$systemworker.wait(0.5) // Waits for up to 0.5 seconds for get file info
+$systemworker.wait(0.5) // Espera hasta 0.5 segundos para obtener información del archivo
 ```
 
-## Veja também
+## Ver también
 
-[Blog post: Launch an external process asynchronously](https://blog.4d.com/launch-an-external-process-asynchronously/)<br/>
-[Asynchronous Call](../aikit/asynchronous-call.md)
-
+[Blog: Lanzar un proceso externo de forma asíncrona](https://blog.4d.com/launch-an-external-process-asynchronously/)<br/>
+[Llamada asíncrona](../aikit/asynchronous-call.md)

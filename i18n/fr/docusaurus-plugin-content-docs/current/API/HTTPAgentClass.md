@@ -90,6 +90,12 @@ Les options HTTPAgent seront fusionnées avec les [options HTTPRequest](HTTPRequ
 
 :::note
 
+On macOS, when a new application (new [UUID](./FileClass.md#setappinfo)) requests access to the keychain for the first time, a password can be requested to the user, depending on the local keychain configuration.
+
+:::
+
+:::note
+
 Vous pouvez effectuer des requêtes vers plusieurs serveurs en utilisant le même agent. Dans ce cas, chaque serveur aura son propre pool de connexions utilisant les mêmes options d'agent.
 
 :::

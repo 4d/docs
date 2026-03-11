@@ -1903,7 +1903,7 @@ A função `.max()` <!-- REF #collection.max().Summary -->retorna o elemento com
 
 > Essa função não modifica a coleção original.
 
-Se a coleção contiver diferentes tipos de valores, a função `.max()` retornará o valor máximo dentro do último tipo de elemento na ordem da lista de tipos (consulte a descrição de [`.sort()`](#sort)).
+If the collection contains different [types of values](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md) and the `.max()` function will return the maximum value within the last element type in the type list order.
 
 Se a coleção contiver objetos, passe o parâmetro *propertyPath* para indicar a propriedade do objeto cujo valor máximo você deseja obter.
 
@@ -1956,7 +1956,7 @@ A função `.min()` <!-- REF #collection.min().Summary -->retorna o elemento com
 
 > Essa função não modifica a coleção original.
 
-Se a coleção contiver diferentes tipos de valores, a função `.min()` retornará o valor mínimo dentro do primeiro tipo de elemento na ordem da lista de tipos (consulte a descrição de [`.sort()`](#sort)).
+If the collection contains different [types of values](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md) and the `.min()` function will return the minimum value within the first element type in the type list order.
 
 Se a coleção contiver objetos, passe o parâmetro *propertyPath* para indicar a propriedade do objeto cujo valor mínimo você deseja obter.
 
@@ -2010,15 +2010,9 @@ A função `.multiSort()` <!-- REF #collection.multiSort().Summary -->permite qu
 
 > Esta função modifica a coleção original, bem como todas as coleções utilizadas no parâmetro colsToSort.
 
-Se `.multiSort()` for chamada sem parâmetros, a função terá o mesmo efeito que a função [`.sort()`](#sort): a coleção é classificada (somente valores escalares) em ordem crescente por padrão, de acordo com seu tipo. Se a coleção contiver valores de tipos diferentes, eles serão primeiro agrupados por tipo e, em seguida, classificados. Se <em x-id="3">attributePath</em> levar a uma propriedade de objeto que conter valores de diferentes tipos, primeiro se agrupam por tipo e se ordenam depois.
+Se `.multiSort()` for chamada sem parâmetros, a função terá o mesmo efeito que a função [`.sort()`](#sort): a coleção é classificada (somente valores escalares) em ordem crescente por padrão, de acordo com seu tipo.
 
-1. null
-2. booleans
-3. strings
-4. números
-5. objetos
-6. collections
-7. datas
+If the collection contains elements of different [types](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md).
 
 **Classificação sincronizada de nível único**
 
@@ -2179,15 +2173,7 @@ Também pode passar um parâmetro de critérios para definir como devem ordenar-
 
   Essa sintaxe ordena apenas os valores escalares da coleção (outros tipos de elementos como objetos ou coleções são retornados sem ordenar).
 
-Se a coleção conter elementos de tipos diferentes, são primeiro agrupados por tipo e ordenados depois. Se <em x-id="3">attributePath</em> levar a uma propriedade de objeto que conter valores de diferentes tipos, primeiro se agrupam por tipo e se ordenam depois.
-
-1. null
-2. booleans
-3. strings
-4. números
-5. objetos
-6. collections
-7. datas
+If the collection contains elements of different [types](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md).
 
 #### Exemplo 1
 
@@ -3340,15 +3326,7 @@ You can also pass one of the following constants in the *ascOrDesc* parameter:
 
 Essa sintaxe ordena apenas os valores escalares da coleção (outros tipos de elementos como objetos ou coleções são retornados sem ordenar).
 
-Se a coleção conter elementos de tipos diferentes, são primeiro agrupados por tipo e ordenados depois. Se <em x-id="3">attributePath</em> levar a uma propriedade de objeto que conter valores de diferentes tipos, primeiro se agrupam por tipo e se ordenam depois.
-
-1. null
-2. booleans
-3. strings
-4. números
-5. objetos
-6. collections
-7. datas
+If the collection contains elements of different [types](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md).
 
 Se pretender ordenar os elementos da coleção por outra ordem ou ordenar qualquer tipo de elemento, deve fornecer em *formula* ([objeto Formula](FunctionClass.md)) ou *methodName* (Text) uma chamada de retorno que defina a ordem de ordenação. O valor de retorno deve ser um booleano que indica a ordem relativa dos dois elementos: **True** se *$1.value* for menor que *$1.value2*, **False** se *$1.value* for maior que *$1.value2*. Pode fornecer parâmetros adicionais a <em x-id="3">methodName</em> se for necessário.
 

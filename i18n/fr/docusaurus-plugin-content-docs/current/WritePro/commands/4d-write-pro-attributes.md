@@ -4,7 +4,7 @@ title: Attributs
 slug: /WritePro/4d-write-pro-attributes
 ---
 
-4D Write Pro attributes allow you to control all the graphical aspects of text and images stored in your documents. Ces attributs sont gérés par les commandes suivantes :
+Les attributs 4D Write Pro vous permettent de contrôler tous les aspects graphiques du texte et des images contenus dans vos documents. Ces attributs sont gérés par les commandes suivantes :
 
 - [WP SET ATTRIBUTES](../commands/wp-set-attributes.md)
 - [WP GET ATTRIBUTES](../commands/wp-get-attributes.md)
@@ -12,16 +12,16 @@ slug: /WritePro/4d-write-pro-attributes
 
 :::note
 
-You can also handle 4D Write Pro area attributes through 4D object notation or generic commands:
+Vous pouvez également gérer les attributs de zone 4D Write Pro via la notation d'objet 4D ou des commandes génériques :
 
-- object notation - for example, the following statements are similar:
+- la notation d'objet - par exemple, vous pouvez utiliser l'une ou l'autre des instructions suivantes :
 
 ```4d
  $bcol:=$range[wk background color]  
- $bcol:=$range.backgroundColor //same results  
+ $bcol:=$range.backgroundColor //mêmes résultats  
 ```
 
-- [OB SET](../../commands-legacy/ob-set.md) and [OB Get](../../commands-legacy/ob-get.md) commands, for example:
+- les commandes [OB SET](../../commands-legacy/ob-set.md) et [OB Get](../../commands-legacy/ob-get.md), par exemple :
 
 ```4d
  $bcol:=OB Get($range;wk background color)  
@@ -29,13 +29,13 @@ You can also handle 4D Write Pro area attributes through 4D object notation or g
 
 :::
 
-### Background
+### Fond
 
 Background attributes are used to define background effects in your documents. They can be applied to the following 4D Write Pro targets:
 
-| Documents | Sections | Paragraphs | Images | Tables | Lignes | Column/Cells | Headers/Footers/Body | Text boxes |
-| --------- | -------- | ---------- | ------ | ------ | ------ | ------------ | -------------------- | ---------- |
-| X         | X        | X          | X      | X      | X      | X            | X                    | X          |
+| Documents | Sections | Paragraphes | Images | Tables | Lignes | Colonnes/Cellules | En-têtes/Pieds de page/Corps | Zones de texte |
+| --------- | -------- | ----------- | ------ | ------ | ------ | ----------------- | ---------------------------- | -------------- |
+| X         | X        | X           | X      | X      | X      | X                 | X                            | X              |
 
 | Constante                         | Commentaire                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -55,9 +55,9 @@ Background attributes are used to define background effects in your documents. T
 
 Border attributes are used to specify the style, width, and color of an element's border. They can be applied to the following 4D Write Pro targets:
 
-| Documents | Sections | Paragraphs | Images | Tables | Lignes | Column/Cells | Headers/Footers/Body | Text boxes |
-| --------- | -------- | ---------- | ------ | ------ | ------ | ------------ | -------------------- | ---------- |
-| X         | X        | X          | X      | X      | X      | X            | X                    | X          |
+| Documents | Sections | Paragraphes | Images | Tables | Lignes | Colonnes/Cellules | En-têtes/Pieds de page/Corps | Zones de texte |
+| --------- | -------- | ----------- | ------ | ------ | ------ | ----------------- | ---------------------------- | -------------- |
+| X         | X        | X           | X      | X      | X      | X                 | X                            | X              |
 
 | Constante              | Commentaire                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -84,9 +84,9 @@ Border attributes are used to specify the style, width, and color of an element'
 
 Document information attributes are used to set or get standard document information or document-level settings. They can be applied to the following 4D Write Pro targets:
 
-| Documents | Sections | Paragraphs | Images | Tables | Lignes | Column/Cells | Headers/Footers/Body | Text boxes |
-| --------- | -------- | ---------- | ------ | ------ | ------ | ------------ | -------------------- | ---------- |
-| X         |          |            |        |        |        |              |                      |            |
+| Documents | Sections | Paragraphes | Images | Tables | Lignes | Colonnes/Cellules | En-têtes/Pieds de page/Corps | Zones de texte |
+| --------- | -------- | ----------- | ------ | ------ | ------ | ----------------- | ---------------------------- | -------------- |
+| X         |          |             |        |        |        |                   |                              |                |
 
 **Document Information**
 
@@ -114,9 +114,9 @@ Document information attributes are used to set or get standard document informa
 
 These attributes define the font family, size, and style of the text. They can be applied to the following 4D Write Pro targets:
 
-| Documents | Sections | Paragraphs | Images | Tables | Lignes | Column/Cells | Headers/Footers/Body | Text boxes |
-| --------- | -------- | ---------- | ------ | ------ | ------ | ------------ | -------------------- | ---------- |
-| X\*       | X\*      | X\*        | X\*    | X\*    | X\*    | X\*          | X\*                  |            |
+| Documents | Sections | Paragraphes | Images | Tables | Lignes | Colonnes/Cellules | En-têtes/Pieds de page/Corps | Zones de texte |
+| --------- | -------- | ----------- | ------ | ------ | ------ | ----------------- | ---------------------------- | -------------- |
+| X\*       | X\*      | X\*         | X\*    | X\*    | X\*    | X\*               | X\*                          |                |
 
 \*Applied to paragraph characters within elements
 
@@ -142,9 +142,9 @@ These attributes define the font family, size, and style of the text. They can b
 
 Height/width attributes are used to set the height and width of elements. They can be applied to the following 4D Write Pro targets:
 
-| Documents | Sections | Paragraphs | Images | Tables | Lignes | Column/Cells | Headers/Footers/Body | Text boxes |
-| --------- | -------- | ---------- | ------ | ------ | ------ | ------------ | -------------------- | ---------- |
-| X         | X        | X          | X\*    | X      | X      |              |                      |            |
+| Documents | Sections | Paragraphes | Images | Tables | Lignes | Colonnes/Cellules | En-têtes/Pieds de page/Corps | Zones de texte |
+| --------- | -------- | ----------- | ------ | ------ | ------ | ----------------- | ---------------------------- | -------------- |
+| X         | X        | X           | X\*    | X      | X      |                   |                              |                |
 
 \*Applied to cells
 
@@ -159,9 +159,9 @@ Height/width attributes are used to set the height and width of elements. They c
 
 Image attributes are used to handle pictures inserted or or added in the area. They can be applied to the following 4D Write Pro targets:
 
-| Documents | Sections | Paragraphs | Images | Tables | Lignes | Column/Cells | Headers/Footers/Body | Text boxes |
-| --------- | -------- | ---------- | ------ | ------ | ------ | ------------ | -------------------- | ---------- |
-| X         | X\*      | X\*        | X\*    |        |        |              |                      |            |
+| Documents | Sections | Paragraphes | Images | Tables | Lignes | Colonnes/Cellules | En-têtes/Pieds de page/Corps | Zones de texte |
+| --------- | -------- | ----------- | ------ | ------ | ------ | ----------------- | ---------------------------- | -------------- |
+| X         | X\*      | X\*         | X\*    |        |        |                   |                              |                |
 
 \*Applied to pictures in cells (inline pictures only)
 
@@ -209,9 +209,9 @@ The following attributes are avalaible for anchored pictures only:
 
 Layout attributes define how columns, sections, subsections, or pages are formatted in the document. They can be applied to the following 4D Write Pro targets:
 
-| Documents | Sections | Paragraphs | Images | Tables | Lignes | Column/Cells | Headers/Footers/Body | Text boxes |
-| --------- | -------- | ---------- | ------ | ------ | ------ | ------------ | -------------------- | ---------- |
-| X         | X        |            |        |        |        |              |                      |            |
+| Documents | Sections | Paragraphes | Images | Tables | Lignes | Colonnes/Cellules | En-têtes/Pieds de page/Corps | Zones de texte |
+| --------- | -------- | ----------- | ------ | ------ | ------ | ----------------- | ---------------------------- | -------------- |
+| X         | X        |             |        |        |        |                   |                              |                |
 
 **Note:** Documents in embedded mode use wk margin attributes (see **Margin** below). In page mode, document, sections and subsections use wk page margin attributes.
 
@@ -241,9 +241,9 @@ Layout attributes define how columns, sections, subsections, or pages are format
 
 Link attributes are used to set or get URLs added to ranges. They can be applied to the following 4D Write Pro targets:
 
-| Documents | Sections | Paragraphs | Images | Tables | Lignes | Column/Cells | Headers/Footers/Body | Text boxes |
-| --------- | -------- | ---------- | ------ | ------ | ------ | ------------ | -------------------- | ---------- |
-| X         | X\*      | X          | X      | X      |        |              |                      |            |
+| Documents | Sections | Paragraphes | Images | Tables | Lignes | Colonnes/Cellules | En-têtes/Pieds de page/Corps | Zones de texte |
+| --------- | -------- | ----------- | ------ | ------ | ------ | ----------------- | ---------------------------- | -------------- |
+| X         | X\*      | X           | X      | X      |        |                   |                              |                |
 
 \*Inline pictures only
 
@@ -260,9 +260,9 @@ Link attributes are used to set or get URLs added to ranges. They can be applied
 
 List attributes are used to configure your lists and set different list item fonts or markers. They can be applied to the following 4D Write Pro targets:
 
-| Documents | Sections | Paragraphs | Images | Tables | Lignes | Column/Cells | Headers/Footers/Body | Text boxes |
-| --------- | -------- | ---------- | ------ | ------ | ------ | ------------ | -------------------- | ---------- |
-| X         | X\*      | X\*        | X\*    |        |        |              |                      |            |
+| Documents | Sections | Paragraphes | Images | Tables | Lignes | Colonnes/Cellules | En-têtes/Pieds de page/Corps | Zones de texte |
+| --------- | -------- | ----------- | ------ | ------ | ------ | ----------------- | ---------------------------- | -------------- |
+| X         | X\*      | X\*         | X\*    |        |        |                   |                              |                |
 
 \*Applied to paragraphs within cells
 
@@ -286,9 +286,9 @@ Margins are the area that is outside the border of an element. They are transpar
 
 Margin attributes can be applied to the following 4D Write Pro targets:
 
-| Documents | Sections | Paragraphs | Images | Tables | Lignes | Column/Cells | Headers/Footers/Body | Text boxes |
-| --------- | -------- | ---------- | ------ | ------ | ------ | ------------ | -------------------- | ---------- |
-| X         | X        | X          | X      | X      | X      |              |                      |            |
+| Documents | Sections | Paragraphes | Images | Tables | Lignes | Colonnes/Cellules | En-têtes/Pieds de page/Corps | Zones de texte |
+| --------- | -------- | ----------- | ------ | ------ | ------ | ----------------- | ---------------------------- | -------------- |
+| X         | X        | X           | X      | X      | X      |                   |                              |                |
 
 **Note:** Sections and subsections use wk page margin attributes; wk margin attributes are only used by documents in embedded mode (see **Layout** above).
 
@@ -312,9 +312,9 @@ The following picture illustrates the various elements that can be configured fo
 
 Padding attributes can be applied to the following 4D Write Pro targets:
 
-| Documents | Sections | Paragraphs | Images | Tables | Lignes | Column/Cells | Headers/Footers/Body | Text boxes |
-| --------- | -------- | ---------- | ------ | ------ | ------ | ------------ | -------------------- | ---------- |
-| X         | X        | X          | X      | X\*    | X\*    | X            | X                    | X          |
+| Documents | Sections | Paragraphes | Images | Tables | Lignes | Colonnes/Cellules | En-têtes/Pieds de page/Corps | Zones de texte |
+| --------- | -------- | ----------- | ------ | ------ | ------ | ----------------- | ---------------------------- | -------------- |
+| X         | X        | X           | X      | X\*    | X\*    | X                 | X                            | X              |
 
 \*Applied to cells
 
@@ -328,13 +328,13 @@ Padding attributes can be applied to the following 4D Write Pro targets:
 | wk padding right  | Specifies size of padding for right side of the element. Possible values:<br/><ul><li>Size expressed using a number or a string value:<br/>Number: size in wk layout unit.String: CSS string with value and unit concatenated. (*e.g.*: "12pt" for 12 points, or "1.5cm" for 1.5 centimeters)</li><li>wk none (default): no specific padding</li></ul> |
 | wk padding top    | Specifies size of padding for top of the element. Possible values:<br/><ul><li>Size expressed using a number or a string value:<br/>Number: size in wk layout unit.String: CSS string with value and unit concatenated. (*e.g.*: "12pt" for 12 points, or "1.5cm" for 1.5 centimeters)</li><li>wk none (default): no specific padding</li></ul>        |
 
-### Paragraphs
+### Paragraphes
 
 Paragraph attributes are used to define properties for the text organization within a paragraph. They can be applied to the following 4D Write Pro targets:
 
-| Documents | Sections | Paragraphs | Images | Tables | Lignes | Column/Cells | Headers/Footers/Body | Text boxes |
-| --------- | -------- | ---------- | ------ | ------ | ------ | ------------ | -------------------- | ---------- |
-| X         | X\*      | X\*        | X\*    | X\*    | X\*    |              |                      |            |
+| Documents | Sections | Paragraphes | Images | Tables | Lignes | Colonnes/Cellules | En-têtes/Pieds de page/Corps | Zones de texte |
+| --------- | -------- | ----------- | ------ | ------ | ------ | ----------------- | ---------------------------- | -------------- |
+| X         | X\*      | X\*         | X\*    | X\*    | X\*    |                   |                              |                |
 
 \*Applied to paragraphs within elements
 
@@ -361,9 +361,9 @@ The read/write status of a 4D Write Pro target can be defined using the wk prote
 
 The following attribute is used to control the global document protection. It can be applied to the following 4D Write Pro targets:
 
-| Documents | Sections | Paragraphs | Images | Tables | Lignes | Column/Cells | Headers/Footers/Body | Text boxes |
-| --------- | -------- | ---------- | ------ | ------ | ------ | ------------ | -------------------- | ---------- |
-| X         |          |            |        |        |        |              |                      |            |
+| Documents | Sections | Paragraphes | Images | Tables | Lignes | Colonnes/Cellules | En-têtes/Pieds de page/Corps | Zones de texte |
+| --------- | -------- | ----------- | ------ | ------ | ------ | ----------------- | ---------------------------- | -------------- |
+| X         |          |             |        |        |        |                   |                              |                |
 
 | Constante             | Commentaire                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -371,9 +371,9 @@ The following attribute is used to control the global document protection. It ca
 
 The following attribute is used to control the protection status of specific content. It can be applied to the following 4D Write Pro targets:
 
-| Documents | Sections | Paragraphs | Images | Tables | Lignes | Column/Cells | Headers/Footers/Body | Text boxes |
-| --------- | -------- | ---------- | ------ | ------ | ------ | ------------ | -------------------- | ---------- |
-| X         | X        | X          | X      | X      | X      | X            | X                    | X          |
+| Documents | Sections | Paragraphes | Images | Tables | Lignes | Colonnes/Cellules | En-têtes/Pieds de page/Corps | Zones de texte |
+| --------- | -------- | ----------- | ------ | ------ | ------ | ----------------- | ---------------------------- | -------------- |
+| X         | X        | X           | X      | X      | X      | X                 | X                            | X              |
 
 | Constante    | Commentaire                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -403,13 +403,13 @@ Range attributes are read-only and provide information about range properties. R
 | wk start      | (Read-only attribute)<br/><ul><li>Range start offset, or</li><li>Section or subsection text start index in the document body (for subsection, text start index of the parent section).</li></ul>Value type: Longint                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | wk type       | Type of 4D Write Pro object. Possible values: <ul> <li>wk type default: Range or section with not defined type</li> <li>wk type character: Character type</li> <li>wk type paragraph: Paragraph type range</li> <li>wk type image: Image (anchored and inline)</li> <li>wk type container: Header or footer, for instance</li> <li>wk type table: Table reference</li> <li>wk type text box: Text box</li> </ul> For ranges of cells, columns and rows only: <ul> <li>wk type table row: Table row reference</li> <li>wk type table cell: Table cell reference</li> <li>wk type table column: Table column reference</li> </ul> For subsections only: <ul> <li>wk first page: First page subsection</li> <li>wk right page: Right page subsection</li> <li>wk left page: Left page subsection</li> </ul> For tabs only, value used in the object for wk tab default or the objects of the collection for wk tabs: <ul> <li>wk left: Aligns tab to the left</li> <li>wk right: Aligns tab to the right</li> <li>wk center: Aligns tab to the center</li> <li>wk decimal: Aligns tab on the decimal</li> <li>wk bar: Inserts vertical bar at tab position</li> </ul> |
 
-### Rows and columns
+### Lignes et colonnes
 
 These attributes are specific to rows and/or columns. They can be applied to the following 4D Write Pro targets:
 
-| Documents | Sections | Paragraphs | Images | Tables | Lignes | Column/Cells | Headers/Footers/Body | Text boxes |
-| --------- | -------- | ---------- | ------ | ------ | ------ | ------------ | -------------------- | ---------- |
-| X         | X        |            |        |        |        |              |                      |            |
+| Documents | Sections | Paragraphes | Images | Tables | Lignes | Colonnes/Cellules | En-têtes/Pieds de page/Corps | Zones de texte |
+| --------- | -------- | ----------- | ------ | ------ | ------ | ----------------- | ---------------------------- | -------------- |
+| X         | X        |             |        |        |        |                   |                              |                |
 
 | Constante                | Commentaire                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -426,9 +426,9 @@ These attributes are specific to rows and/or columns. They can be applied to the
 
 Section and subsection attributes handle specific section parameters (generic layout parameters also apply to sections and subsections, see **Layout** above). They can be applied to the following 4D Write Pro targets:
 
-| Documents | Sections | Paragraphs | Images | Tables | Lignes | Column/Cells | Headers/Footers/Body | Text boxes |
-| --------- | -------- | ---------- | ------ | ------ | ------ | ------------ | -------------------- | ---------- |
-| X         |          |            |        |        |        |              |                      |            |
+| Documents | Sections | Paragraphes | Images | Tables | Lignes | Colonnes/Cellules | En-têtes/Pieds de page/Corps | Zones de texte |
+| --------- | -------- | ----------- | ------ | ------ | ------ | ----------------- | ---------------------------- | -------------- |
+| X         |          |             |        |        |        |                   |                              |                |
 
 **Note:** Default values for column, padding, border and background attributes are inherited from the parent object:
 
@@ -449,9 +449,9 @@ Section and subsection attributes handle specific section parameters (generic la
 
 Style sheet attributes are used to apply existing style sheet objects to the following 4D Write Pro targets:
 
-| Documents | Sections | Paragraphs | Images | Tables | Lignes | Column/Cells | Headers/Footers/Body | Text boxes |
-| --------- | -------- | ---------- | ------ | ------ | ------ | ------------ | -------------------- | ---------- |
-| X         | X        | X\*\*      | X\*    | X\*    |        |              |                      |            |
+| Documents | Sections | Paragraphes | Images | Tables | Lignes | Colonnes/Cellules | En-têtes/Pieds de page/Corps | Zones de texte |
+| --------- | -------- | ----------- | ------ | ------ | ------ | ----------------- | ---------------------------- | -------------- |
+| X         | X        | X\*\*       | X\*    | X\*    |        |                   |                              |                |
 
 \*Read-only for text boxes, headers and footers, they are managed by 4D Write Pro (there is one style sheet by section header or footer).  
 \*\*Inline pictures only.
@@ -471,9 +471,9 @@ For information about creating style sheet objects and defining the attributes w
 
 Table attributes are specific to tables. They can be applied to the following 4D Write Pro targets:
 
-| Documents | Sections | Paragraphs | Images | Tables | Lignes | Column/Cells | Headers/Footers/Body | Text boxes |
-| --------- | -------- | ---------- | ------ | ------ | ------ | ------------ | -------------------- | ---------- |
-| X         | X        |            |        |        |        |              |                      |            |
+| Documents | Sections | Paragraphes | Images | Tables | Lignes | Colonnes/Cellules | En-têtes/Pieds de page/Corps | Zones de texte |
+| --------- | -------- | ----------- | ------ | ------ | ------ | ----------------- | ---------------------------- | -------------- |
+| X         | X        |             |        |        |        |                   |                              |                |
 
 | Constante                  | Commentaire                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -497,13 +497,13 @@ When different attributes are applied to concurrent elements of a table, a prior
 2. Rows are rendered (overriding table attributes)
 3. Cells/Columns are rendered (overriding row attributes).
 
-### Text box
+### Zone de texte
 
 Text box attributes are used to handle text boxes inserted or added in the area. They can be applied to the following 4D Write Pro targets:
 
-| Documents | Sections | Paragraphs | Images | Tables | Lignes | Column/Cells | Headers/Footers/Body | Text boxes |
-| --------- | -------- | ---------- | ------ | ------ | ------ | ------------ | -------------------- | ---------- |
-| X         |          |            |        |        |        |              |                      |            |
+| Documents | Sections | Paragraphes | Images | Tables | Lignes | Colonnes/Cellules | En-têtes/Pieds de page/Corps | Zones de texte |
+| --------- | -------- | ----------- | ------ | ------ | ------ | ----------------- | ---------------------------- | -------------- |
+| X         |          |             |        |        |        |                   |                              |                |
 
 | Constante                   | Commentaire                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -162,6 +162,12 @@ En el parámetro *options*, pase un objeto que puede contener las siguientes pro
 | timeout                | Real                                              | Tiempo de espera en segundos. indefinido = sin tiempo de espera                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | indefinido           |
 | validateTLSCertificate | Boolean                                           | Si false, 4D no valida el certificado TLS y no devuelve un error si no es válido (es decir, caducado, autofirmado...). Importante: en la implementación actual, la propia Autoridad de Certificación no se verifica.                                                                                                                                                                                                            | True                 |
 
+:::note
+
+On macOS, when a new application (new [UUID](./FileClass.md#setappinfo)) requests access to the keychain for the first time, a password can be requested to the user, depending on the local keychain configuration.
+
+:::
+
 #### Función callback (retrollamada)
 
 Todas las funciones de retrollamada reciben dos parámetros objeto:

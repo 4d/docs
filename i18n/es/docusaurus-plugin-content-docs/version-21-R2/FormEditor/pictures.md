@@ -64,7 +64,7 @@ Aunque 4D prioriza automáticamente la resolución más alta, existen, sin embar
 
 *(\*) Generalmente, macOS = 72 dpi, Windows = 96 dpi*
 
-## Dark mode pictures
+## Imágenes en modo oscuro
 
 Puede definir imágenes e iconos específicos que se utilizarán en lugar de las imágenes estándar cuando [los formularios utilicen el esquema oscuro](properties_FormProperties.md#color-scheme).
 

@@ -990,6 +990,8 @@ attributePath|formula 比較演算子 値
 
 > このステートメントを使用した場合、順序ありエンティティセレクションが返されます (詳細については [エンティティセレクションの順列あり/順列なし](../ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を参照ください)。
 
+If the entity selection attributes contain values of different [types](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md).
+
 ### 引用符を使用する
 
 クエリ内で引用符を使用する場合、クエリ内においては単一引用符 ' ' を使用し、クエリ全体をくくるには二重引用符 " " を使用します。クオートを混同するとエラーが返されます。 例:

@@ -131,10 +131,10 @@ Considerando las propiedades de tabla siguientes:
 <!-- REF #DataClassClass.all().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
 |settings|Object|->|Build option: context|
-|Result|4D.EntitySelection|<-|References on all entities related to the Dataclass|
+|Resultado|4D.EntitySelection|<-|References on all entities related to the Dataclass|
 </div>
 <!-- END REF -->
 
@@ -183,11 +183,11 @@ En el parámetro opcional *settings* se puede pasar un objeto que contenga opcio
 <!-- REF #DataClassClass.fromCollection().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|objectCol |Collection|->|Collection of objects to be mapped with entities|
-|settings  |Object|->|Build option: context|
-|Result|4D.EntitySelection|<-|Entity selection filled from the collection|
+|objectCol |Collection|->|Colección de objetos a mapear con entidades|
+|settings |Object|->|Opción Build: contexto|
+|Resultado|4D.EntitySelection|<-|Entity selection filled from the collection|
 </div>
 <!-- END REF -->
 

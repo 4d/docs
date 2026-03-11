@@ -990,6 +990,8 @@ Las fórmulas en las consultas pueden recibir parámetros a través de $1. Este 
 
 > Si utiliza esta instrucción, la selección de entidades devuelta estará ordenada (para más información, consulte [Selecciones de entidades ordenadas o desordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
 
+If the entity selection attributes contain values of different [types](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md).
+
 ### Utilizar comillas
 
 Cuando utilice comillas dentro de las consultas, debe utilizar comillas simples ' ' dentro de la consulta y comillas dobles " " para encerrar toda la consulta, de lo contrario se devuelve un error. Por ejemplo:

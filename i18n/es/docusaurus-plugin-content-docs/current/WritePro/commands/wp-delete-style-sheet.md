@@ -16,7 +16,7 @@ displayed_sidebar: docs
 | styleSheetObj  | Object  | &#8594; | Objeto hoja de estilo                     |
 | wpDoc          | Object  | &#8594; | Documento 4D Write Pro                    |
 | listLevelIndex | Integer | &#8594; | Level of the style sheet in the hierarchy |
-| styleSheetName | Text    | &#8594; | Name of style sheet                       |
+| styleSheetName | Text    | &#8594; | Nombre de la hoja de estilo               |
 
 </div>
 <!-- END REF-->
@@ -70,7 +70,7 @@ WP DELETE STYLE SHEET(wpArea; "MainList"; 2)
 After execution:
 
 - The `wk list level index` values are updated (former level 3 becomes level 2).
-- The `wk list level count` is decremented.
+- Se decrementa el `wk list level count`.
 
 To delete the entire hierarchical style sheet (root and all associated sub-levels):
 
