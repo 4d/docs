@@ -5,14 +5,13 @@ slug: /commands/xml-get-options
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.XML GET OPTIONS.Syntax-->**XML GET OPTIONS** ( *elementRef* : Text ; *selector* : Integer ; *value* : Integer {; ...(*selector* : Integer ; *value* : Integer)} )<br/>**XML GET OPTIONS** ( *document* : Text  ; *selector* : Integer ; *value* : Integer {; ...(*selector* : Integer ; *value* : Integer)} )<!-- END REF-->
+<!--REF #_command_.XML GET OPTIONS.Syntax-->**XML GET OPTIONS** ( *ref* : Text, Time ; *selector* : Integer ; *value* : Integer {; ...(*selector* : Integer ; *value* : Integer)} )<!-- END REF-->
 <!--REF #_command_.XML GET OPTIONS.Params-->
 <div class="no-index">
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML root element reference  |
-| document | Text | &#8594;  | Reference of open document |
+| ref | Text, Time | &#8594;  | XML root element reference or Reference of open document |
 | selector | Integer | &#8594;  | Option to get |
 | value | Integer | &#8592; | Current value of option |
 </div>
@@ -32,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.XML GET OPTIONS.Summary-->The **XML GET OPTIONS** command is used to get the current value of one or more XML parameters for the current session and the current user.<!-- END REF--> 
 
-In selector, pass a constant of the "*XML*" theme indicating the option to get. The current value of the option is returned in the *value* parameter:
+In *selector*, pass a constant of the "*XML*" theme indicating the option to get. The current value of the option is returned in the *value* parameter:
 
 | Constant                       | Type    | Value | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ------------------------------ | ------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

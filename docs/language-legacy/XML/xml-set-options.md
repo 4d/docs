@@ -5,14 +5,13 @@ slug: /commands/xml-set-options
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.XML SET OPTIONS.Syntax-->**XML SET OPTIONS** ( *elementRef* : Text  ; *selector* : Integer ; *value* : Integer {; ...(*selector* : Integer ; *value* : Integer)} )<br/>**XML SET OPTIONS** ( *document* : Text  ; *selector* : Integer ; *value* : Integer {; ...(*selector* : Integer ; *value* : Integer)} )<!-- END REF-->
+<!--REF #_command_.XML SET OPTIONS.Syntax-->**XML SET OPTIONS** ( *ref* : Text, Time ; *selector* : Integer ; *value* : Integer {; ...(*selector* : Integer ; *value* : Integer)} )<!-- END REF-->
 <!--REF #_command_.XML SET OPTIONS.Params-->
 <div class="no-index">
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML root element reference |
-| document | Text | &#8594;  | Reference of open document |
+| ref | Text, Integer | &#8594;  | XML root element reference or Reference of open document |
 | selector | Integer | &#8594;  | Option to set |
 | value | Integer | &#8594;  | Value of option |
 </div>
@@ -34,7 +33,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.XML SET OPTIONS.Summary-->The **XML SET OPTIONS** command is used to modify the value of one or more XML options for the structure passed in the first parameter.<!-- END REF--> 
 
-This command applies the XML structures of the "tree" type (DOM) or of the "document" type (SAX). In the first parameter, you can pass either a root element reference (*elementRef*), or the reference of an open SAX document (*document*).
+This command applies the XML structures of the "tree" type (DOM) or of the "document" type (SAX). In the first parameter, you can pass either a root element reference or the reference of an open SAX document.
 
 Pass the option to be modified in *selector* and the new value of the option in *value*. You can pass as many *selector*/*value* pairs as you want. You must use the constants described below, placed in the "*XML*" theme.
 
