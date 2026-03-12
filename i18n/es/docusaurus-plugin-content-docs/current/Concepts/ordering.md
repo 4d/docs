@@ -1,5 +1,5 @@
 ---
-id: ordenamiento
+id: ordering
 title: Ordering collections and objects
 ---
 

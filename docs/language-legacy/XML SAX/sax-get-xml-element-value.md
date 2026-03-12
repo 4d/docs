@@ -5,14 +5,14 @@ slug: /commands/sax-get-xml-element-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX GET XML ELEMENT VALUE.Syntax-->**SAX GET XML ELEMENT VALUE** ( *document* : Time ; *value* : Text, Blob )<!-- END REF-->
+<!--REF #_command_.SAX GET XML ELEMENT VALUE.Syntax-->**SAX GET XML ELEMENT VALUE** ( *document* : Time ; *value* : Variable, Field )<!-- END REF-->
 <!--REF #_command_.SAX GET XML ELEMENT VALUE.Params-->
 <div class="no-index">
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | document | Time | &#8594;  | Reference of open document |
-| value | Text, Blob | &#8592; | Element value |
+| value | Variable, Field | &#8592; | Element value (Text or Blob) |
 </div>
 <!-- END REF-->
 
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAX GET XML ELEMENT VALUE.Summary-->The **SAX GET XML ELEMENT VALUE** command allows you to get the *value* of an XML element that exists in the XML document referenced in the *document* parameter.<!-- END REF--> This command must be called with the XML DATA SAX event. For more information about SAX events, refer to the description of the [SAX Get XML node](../commands/sax-get-xml-node) command. 
 
-Pass a Text or BLOB type variable in the *value* parameter. If you pass a BLOB, the command will automatically attempt to decode it into base64.
+Pass a Text or BLOB type variable or field in the *value* parameter. If you pass a BLOB, the command will automatically attempt to decode it into base64.
 
 ## Example 
 

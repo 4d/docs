@@ -4,7 +4,7 @@ title: WP Insert picture
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Insert picture.Syntax-->**WP Insert picture** ( *targetObj* : Object ; *picture* : Picture ; *mode* : Integer {; *rangeUpdate* : Integer} ): Object<br/>**WP Insert picture** ( *targetObj* : Object ; *pictureFileObj* : 4D.File; *mode* : Integer {; *rangeUpdate* : Integer}): Object<!-- END REF-->
+<!--REF #_command_.WP Insert picture.Syntax-->**WP Insert picture** ( *targetObj* : Object ; *picture* : Picture ; *mode* : Integer {; *rangeUpdate* : Integer} ): Object<br/>**WP Insert picture** ( *targetObj* : Object ; *pictureFile* : 4D.File, Text; *mode* : Integer {; *rangeUpdate* : Integer}): Object<!-- END REF-->
 <!--REF #_command_.WP Insert picture.Params-->
 <div class="no-index">
 
@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | picture | Picture | &#8594;  | Picture field or variable, or path to picture file on disk |
-| pictureFileObj | [4D.File](../../API/FileClass.md)  | &#8594; | A File object representing a picture file.|
+| pictureFile | [4D.File](../../API/FileClass.md), Text | &#8594; | A File object representing a picture file or a path|
 | mode | Integer | &#8594;  | Insertion mode |
 | rangeUpdate | Integer | &#8594;  | Range update mode |
 | Function result | Object | &#8592; | Object referencing the picture |
@@ -36,7 +36,7 @@ For the second parameter, you can pass either:
 	-  A string containing a path to a picture file stored on disk, in the system syntax. 
 	If you use a string, you can pass either a full pathname, or a pathname relative to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file. If you pass a file name, you must indicate the file extension.
 	
-- In *pictureFileObj* : a `File` object representing a picture file.
+- In *pictureFile* : a `File` object representing a picture file or a path. 
 
 Any picture format [supported by 4D](../../FormEditor/pictures.md#native-formats-supported) can be used. You can get the list of available picture formats using the [PICTURE CODEC LIST](../../commands/picture-codec-list) command. If the picture encapsulates several formats (codecs), 4D Write Pro only keeps one format for display and one format for printing (if different) in the document; the "best" formats are automatically selected.
 

@@ -159,6 +159,7 @@ module.exports =
             "Concepts/components",
             "Concepts/plug-ins",
             "Concepts/identifiers",
+            "Concepts/ordering",
             "Concepts/paths"
           ]
         },

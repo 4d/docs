@@ -5,7 +5,7 @@ slug: /commands/sax-set-xml-declaration
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX SET XML DECLARATION.Syntax-->**SAX SET XML DECLARATION** ( *document* : Time ; *encoding* : Text {; *standalone* : Boolean} )<!-- END REF-->
+<!--REF #_command_.SAX SET XML DECLARATION.Syntax-->**SAX SET XML DECLARATION** ( *document* : Time ; *encoding* : Text {; *standalone* : Boolean} {; *indentation* : Boolean} )<!-- END REF-->
 <!--REF #_command_.SAX SET XML DECLARATION.Params-->
 <div class="no-index">
 
@@ -14,6 +14,7 @@ displayed_sidebar: docs
 | document | Time | &#8594;  | Reference of open document |
 | encoding | Text | &#8594;  | XML document character set |
 | standalone | Boolean | &#8594;  | True = the document is standalone False (default) = document is not standalone |
+| indentation | Boolean | &#8594;  | *** obsolete, do not use *** |
 </div>
 <!-- END REF-->
 
@@ -37,7 +38,7 @@ displayed_sidebar: docs
 **Note:** If you pass a character set that is not supported by 4D XML commands, UTF-8 will be used. Refer to *Character Sets* to see the list of character sets supported (UTF-8 is however recommended in most cases).
 * *standalone*: Indicates whether the document is standalone (**True**) or if it needs other files or external resources to operate (**False**). By default (if the command is not called or if the parameter is omitted), the document is not standalone.
 
-**Note:** You can specify the indentation of the document thanks to the [XML SET OPTIONS](../commands/xml-set-options) command before writing anything.
+**Note:** You specify the indentation of the document thanks to the [XML SET OPTIONS](../commands/xml-set-options) command before writing anything.
 
 This command must be called one time per document and before the first XML set command in the document; otherwise, an error message will be generated.
 
