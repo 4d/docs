@@ -105,7 +105,7 @@ Several 4D classes support asynchronous processing:
 - [`SystemWorker`](../API/SystemWorkerClass.md) - Ejecuta procesos externos de forma asíncrona.
 - [`TCPConnection`](../API/TCPConnectionClass.md) - Gestiona conexiones de cliente TCP con retrollamadas basadas en eventos.
 - [`TCPListener`](../API/TCPListenerClass.md) – Manages TCP server connections.
-- [`UDPSocket`](../API/UDPSocketClass.md) – Sends and receives UDP packets.
+- [`UDPSocket`](../API/UDPSocketClass.md) - Envía y recibe paquetes UDP.
 - [`WebSocket`](../API/WebSocketClass.md) – Manages WebSocket client connections.
 - [`WebSocketServer`](../API/WebSocketServerClass.md) - Gestiona las conexiones del servidor WebSocket.
 

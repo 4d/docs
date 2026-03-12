@@ -218,9 +218,9 @@ La ejecución de este método no elimina realmente ningún correo electrónico. 
 <!-- REF #POP3TransporterClass.getBoxInfo().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|Object|<-|boxInfo object|
+|Resultado|Object|<-|boxInfo object|
 </div>
 <!-- END REF -->
 

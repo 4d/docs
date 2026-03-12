@@ -303,7 +303,7 @@ Puede definir el valor de la variable (por ejemplo, Header2:=2) para "forzar" la
 Hay varias formas de definir los colores de fondo, los colores de fuente y los estilos de fuente en los list box:
 
 * at the level of the [list box object properties](./listbox-object.md),
-* at the level of the [column properties](./listbox-column.md),
+* a nivel de las [propiedades de las columnas](./listbox-column.md),
 * utilizando los [arrays o expresiones](#using-arrays-and-expressions) para el list box y/o para cada columna,
 * a nivel del texto de cada celda (si [texto multi-estilo](properties_Text.md#multi-style)).
 

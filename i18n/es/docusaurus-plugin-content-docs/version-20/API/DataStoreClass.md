@@ -334,9 +334,9 @@ En estos casos, puede utilizar `.clearAllRemoteContexts()` para reinicializar su
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|Object|<-|Information about the encryption of the current datastore and of each table|
+|Resultado|Object|<-|Information about the encryption of the current datastore and of each table|
 </div>
 <!-- END REF -->
 
@@ -572,9 +572,9 @@ $info:=$ds.getAllRemoteContexts()
 <!-- REF #DataStoreClass.getInfo().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|Object|<-|Datastore properties|
+|Resultado|Object|<-|Datastore properties|
 </div>
 <!-- END REF -->
 

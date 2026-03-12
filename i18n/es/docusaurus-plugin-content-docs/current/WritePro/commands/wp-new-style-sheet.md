@@ -44,7 +44,7 @@ The *styleSheetType* parameter lets you designate the type of the style sheet, *
 - wk type character: Applies style attributes to characters.
 - wk type paragraph: Applies style attributes to paragraphs (required if you want to create [hierarchical list style sheets](#hierarchical-list-style-sheet)).
 
-Pass a name for the style sheet in the *styleSheetName* parameter. The style sheet's name is stored with the document and facilitates reusing or modifying the style. It can also be used with the [WP Get style sheet](wp-get-style-sheet.md) and [WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet) commands. The style sheet name must comply with the following rules:
+Pass a name for the style sheet in the *styleSheetName* parameter. The style sheet's name is stored with the document and facilitates reusing or modifying the style. It can also be used with the [WP Get style sheet](../WritePro/commands/wp-get-style-sheet) and [WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet) commands. The style sheet name must comply with the following rules:
 
 - debe empezar por una letra
 - it can then contain alphanumeric characters, space characters, "-" characters or unicode characters >= 128
@@ -52,11 +52,11 @@ Pass a name for the style sheet in the *styleSheetName* parameter. The style she
 - it must not start with "section", which is reserved
 - the "\_" is replaced by a space and trailing spaces are removed.
 
-You can specify the attributes of the style sheet using the [WP SET ATTRIBUTES](../commands/wp-set-attributes) command or the object notation (see [4D Write Pro Attributes](../4d-write-pro-attributes)). For the list of available attributes, see the [Style sheet attributes](../commands/4d-write-pro-attributes.md#style-sheets) section.
+You can specify the attributes of the style sheet using the [WP SET ATTRIBUTES](../commands/wp-set-attributes) command or the object notation (see [4D Write Pro Attributes](../commands-legacy/4d-write-pro-attributes.md)). For the list of available attributes, see the [Style sheet attributes](../commands-legacy/4d-write-pro-attributes.md#style-sheets) section.
 
 **Notas**:
 
-- A style sheet only modifies the display of a character or paragraph, not how it is stored in the document. If a style sheet is removed, the text will revert to the default style.
+- A style sheet only modifies the display of a character or paragraph, not how it is stored in the document. Si se elimina una hoja de estilo, el texto volverá al estilo por defecto.
 - Any style attributes not defined in the new style sheet will automatically use the Normal style. For more information, see the [*Style sheets* page](../user-legacy/stylesheets.md).
 
 ### Hierarchical list style sheet
@@ -128,6 +128,6 @@ Resultado:
 
 [Style sheets](../user-legacy/stylesheets.md)  
 [WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet)  
-[WP Get style sheet](wp-get-style-sheet.md)  
+[WP Get style sheet](../WritePro/commands/wp-get-style-sheet)  
 [WP Get style sheets](../commands/wp-get-style-sheets)  
 [WP IMPORT STYLE SHEETS](../commands/wp-import-style-sheets.md)

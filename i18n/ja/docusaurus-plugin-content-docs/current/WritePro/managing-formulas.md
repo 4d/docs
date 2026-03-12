@@ -75,7 +75,7 @@ For security reasons, when formulas are pasted from a different 4D application o
 
 :::note
 
-When you **work with tables**, [additional context expressions](/user-legacy/handling-tables.md#table-formula-object) such as `This.item` are available.
+When you **work with tables**, [additional context expressions](./user-legacy/handling-tables.md#table-formula-object) such as `This.item` are available.
 
 :::
 

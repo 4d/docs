@@ -724,9 +724,9 @@ End if
 <!-- REF IMAPTransporterClass.expunge().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|Object|<-|Status of the expunge operation |
+|Resultado|Object|<-|Status of the expunge operation |
 </div>
 <!-- END REF -->
 

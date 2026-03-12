@@ -292,9 +292,9 @@ Ver el ejemplo de la función [`.startTransaction()`](#starttransaction).
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|Object|<-|Information about the encryption of the current datastore and of each table|
+|Resultado|Object|<-|Information about the encryption of the current datastore and of each table|
 </div>
 <!-- END REF -->
 
@@ -369,9 +369,9 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
 <!-- REF #DataStoreClass.getInfo().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|Object|<-|Datastore properties|
+|Resultado|Object|<-|Datastore properties|
 </div>
 <!-- END REF -->
 

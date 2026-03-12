@@ -1094,9 +1094,9 @@ Si no hay una entidad anterior válida en la selección de entidades (es decir, 
 <!-- REF #EntityClass.reload().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|Object|<-|Status object|
+|Resultado|Object|<-|Status object|
 </div>
 <!-- END REF -->
 
@@ -1703,9 +1703,9 @@ En este caso:
 <!-- REF #EntityClass.unlock().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|Object|<-|Status object|
+|Resultado|Object|<-|Status object|
 </div>
 <!-- END REF -->
 

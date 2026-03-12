@@ -88,7 +88,7 @@ You can also execute a function using the [`apply()`](#apply) and [`call()`](#ca
 
 The `.apply()` function <!-- REF #FunctionClass.apply().Summary -->executes the function object to which it is applied, passing parameters as a collection, and returns the resulting value<!-- END REF -->.
 
-In the *thisObj* parameter, you can pass a reference to the object to be used as `This` within the function. Pass Null if you do not want to use `This` but you want to send parameters.
+In the *thisObj* parameter, you can pass a reference to the object to be used as `This` within the function. Pasa Null si no quiere utilizar `This` pero quiere enviar parámetros.
 
 You can pass a collection to be used as parameters in the function using the optional *params* parameter:
 

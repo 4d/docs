@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | Parámetros | Tipo                  |                             | Descripción                                                                                                                                           |
 | ---------- | --------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | \*         | Operador              | &#8594; | Si se especifica, *object* es un nombre de objeto (cadena). Si se omite, *object* es una variable. |
-| object     | Text, Variable, Field | &#8594; | Object name (if \* is specified) or <br/>Variable or field (if \* is omitted)                                   |
+| object     | Text, Variable, Field | &#8594; | Nombre del objeto (si se especifica \*) o <br/>Variable o campo (si se omite \*)                                |
 | contextObj | Object                | &#8594; | Objeto que contiene las funciones que se pueden llamar con `$4d`.                                                                     |
 
 </div>
