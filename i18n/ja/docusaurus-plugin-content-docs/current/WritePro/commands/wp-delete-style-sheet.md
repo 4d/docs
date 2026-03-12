@@ -11,12 +11,12 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| 引数             | 型       |                             | 説明                                        |
-| -------------- | ------- | --------------------------- | ----------------------------------------- |
-| styleSheetObj  | Object  | &#8594; | スタイルシートオブジェクト                             |
-| wpDoc          | Object  | &#8594; | 4D Write Pro ドキュメント                       |
-| listLevelIndex | Integer | &#8594; | Level of the style sheet in the hierarchy |
-| styleSheetName | Text    | &#8594; | Name of style sheet                       |
+| 引数             | 型       |                             | 説明                  |
+| -------------- | ------- | --------------------------- | ------------------- |
+| styleSheetObj  | Object  | &#8594; | スタイルシートオブジェクト       |
+| wpDoc          | Object  | &#8594; | 4D Write Pro ドキュメント |
+| listLevelIndex | Integer | &#8594; | 階層内でのスタイルシートのレベル    |
+| styleSheetName | Text    | &#8594; | Name of style sheet |
 
 </div>
 <!-- END REF-->
@@ -24,55 +24,55 @@ displayed_sidebar: docs
 <div class="no-index">
 <details><summary>履歴</summary>
 
-| リリース     | 内容                               |
-| -------- | -------------------------------- |
-| 4D 18    | Created                          |
-| 4D 21 R3 | *listLevelIndex* parameter added |
+| リリース     | 内容                    |
+| -------- | --------------------- |
+| 4D 18    | Created               |
+| 4D 21 R3 | *listLevelIndex* 引数追加 |
 
 </details>
 </div>
 
 ## 説明
 
-<!--REF #_command_.WP DELETE STYLE SHEET.Summary-->The **WP DELETE STYLE SHEET** command removes the designated paragraph or character style sheet from the current document.<!-- END REF--> When a style sheet is removed, every character or paragraph that it was applied to reverts to its original style (*i.e.* the default).
+<!--REF #_command_.WP DELETE STYLE SHEET.Summary-->**WP DELETE STYLE SHEET** コマンドは、カレントのドキュメントから指定された段落または文字スタイルシートを削除します。<!-- END REF-->スタイルシートが削除されると、それが適用されていた全ての文字または段落は、オリジナルのスタイル(つまりデフォルト)へと戻されます。
 
-This command provides two ways to remove a style sheet. You can specify:
+このコマンドはスタイルシートを削除する方法を2つ提供します。 以下のいずれかを指定することができます:
 
-- the style sheet object (created with the [WP New style sheet](../WritePro/commands/wp-new-style-sheet) or returned by the [WP Get style sheet](../WritePro/commands/wp-get-style-sheet) command) to remove in the *styleSheetType* parameter, or
-- the 4D Write Pro document along with the name of the style sheet to remove in the *wpDoc* and *styleSheetName* parameters.
+- *styleSheetType* 引数に、削除したいスタイルの([WP New style sheet](../WritePro/commands/wp-new-style-sheet) コマンドで作成された、あるいは[WP Get style sheet](../WritePro/commands/wp-get-style-sheet) コマンドから返された) スタイルシートオブジェクトを渡す
+- *wpDoc* および *styleSheetName* 引数に、4D Write Pro ドキュメントと削除したいスタイルシートの名前を渡す
 
-When the style sheet to delete belongs to a [hierarchical list style sheet](../user-legacy/stylesheets.md#hierarchical-list-style-sheets), the behavior depends on the level being removed. You can delete:
+削除したいスタイルシートが[階層リストスタイルシート](../user-legacy/stylesheets.md#hierarchical-list-style-sheets) に属している場合、その時の振る舞いは削除するレベルによって異なります。 以下のものを削除することができます:
 
-- the root-level style sheet, or
-- a specific sub-level style sheet by providing the optional *listLevelIndex* parameter.
+- ルートレベルのスタイルシート
+- オプションの *listLevelIndex* 引数を提供することで、特定のサブレベルのスタイルシートを削除できます。
 
-When you delete the root-level style sheet (by passing 1 in the *listLevelIndex* parameter or ommitting it), all associated sub-level style sheets are deleted automatically and the entire hierarchical structure is removed from the document.
+ルートレベルのスタイルシートを削除する場合(*listLevelIndex* 引数に1 を渡すか、省略します)、それに関連づけられた全てのサブレベルのスタイルも自動的に削除され、階層構造全体がドキュメントから削除されます。
 
-When you delete a sub-level style sheet:
+サブレベルのスタイルシートを削除した場合:
 
-- The `wk list level index` of all subsequent sub-level style sheets is decremented to maintain continuous level numbering.
-- The names of the affected sub-level style sheets are updated to reflect their new level index.
-- The `wk list level count` attribute of the root style sheet and all remaining sub-level style sheets is decremented to match the new total number of levels.
+- その後の全てのサブレベルスタイルシートの`wk list level index` は、一貫したレベルナンバリングを維持するために1つ番号が減らされます。
+- 影響のあるサブレベルスタイルシートの名前は、その新しいレベルのインデックスを反映するために更新されます。
+- ルートスタイルシートの `wk list level count` 属性および残った全てのサブレベルスタイルシートは、新しいレベルの総数に合致するためにデクリメントされます。
 
-The command performs no action if the specified level does not exist, or if the style sheet is not part of a hierarchical list and *listLevelIndex* is greater than 1.
+コマンドは、指定されたレベルのが存在しない場合、またはスタイルシートが階層りすとの一部ではなくかつ *listLevelIndex* が1 より大きい場合には、何のアクションも実行しません。
 
-**Note**: The default ("Normal") style sheet can not be deleted.
+**注意**: デフォルト("Normal") のスタイルシートは削除することができません。
 
 ## 例題
 
-The following example deletes the second level of a hierarchical list style sheet:
+以下の例では、階層リストスタイルシートの第2レベルを削除したい場合を考えます:
 
 ```4d
-// Delete level 2 of the "MainList" hierarchical style sheet
+// "MainList" 階層スタイルシートからレベル2を削除する
 WP DELETE STYLE SHEET(wpArea; "MainList"; 2)
 ```
 
-After execution:
+実行後:
 
-- The `wk list level index` values are updated (former level 3 becomes level 2).
-- The `wk list level count` is decremented.
+- `wk list level index` の値が更新されます(以前レベル3だったものはレベル2になります)。
+- `wk list level count` はデクリメントされます。
 
-To delete the entire hierarchical style sheet (root and all associated sub-levels):
+階層スタイルシート全体(ルートおよび関連した全てのサブレベル)を削除するには:
 
 ```4d
 WP DELETE STYLE SHEET(wpArea; "MainList")

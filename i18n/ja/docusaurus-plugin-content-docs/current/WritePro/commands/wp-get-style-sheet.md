@@ -11,12 +11,12 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| 引数             | 型       |                             | 説明                                        |
-| -------------- | ------- | --------------------------- | ----------------------------------------- |
-| wpDoc          | Object  | &#8594; | 4D Write Pro ドキュメント                       |
-| styleSheetName | Text    | &#8594; | Style sheet name                          |
-| listLevelIndex | Integer | &#8594; | Level of the style sheet in the hierarchy |
-| 戻り値            | Object  | &#8592; | スタイルシートオブジェクト                             |
+| 引数             | 型       |                             | 説明                  |
+| -------------- | ------- | --------------------------- | ------------------- |
+| wpDoc          | Object  | &#8594; | 4D Write Pro ドキュメント |
+| styleSheetName | Text    | &#8594; | Style sheet name    |
+| listLevelIndex | Integer | &#8594; | 階層内でのスタイルシートのレベル    |
+| 戻り値            | Object  | &#8592; | スタイルシートオブジェクト       |
 
 </div>
 <!-- END REF-->
@@ -24,10 +24,10 @@ displayed_sidebar: docs
 <div class="no-index">
 <details><summary>履歴</summary>
 
-| リリース     | 内容                               |
-| -------- | -------------------------------- |
-| 4D 18    | Created                          |
-| 4D 21 R3 | *listLevelIndex* parameter added |
+| リリース     | 内容                    |
+| -------- | --------------------- |
+| 4D 18    | Created               |
+| 4D 21 R3 | *listLevelIndex* 引数追加 |
 
 </details>
 </div>

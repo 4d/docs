@@ -7,7 +7,7 @@ title: 4D View Pro コマンド
 
 <a id="A"><b>A</b></a>
 
-[`WP Add picture`](wp-add-picture.md) ***Modified 4D 20 R8***
+[`WP Add picture`](wp-add-picture.md) ***4D 20 R8 で変更***
 
 <a id="B"><b>B</b></a>
 
@@ -30,8 +30,8 @@ title: 4D View Pro コマンド
 
 <a id="E"><b>E</b></a>
 
-[`WP EXPORT DOCUMENT`](wp-export-document.md) **Modified 4D 20 R9**<br/>
-[`WP EXPORT VARIABLE`](wp-export-variable.md) **Modified 4D 20 R9**
+[`WP EXPORT DOCUMENT`](wp-export-document.md) **4D 20 R9 で変更**<br/>
+[`WP EXPORT VARIABLE`](wp-export-variable.md) **4D 20 R9 で変更**
 
 <a id="F"><b>F</b></a>
 
@@ -93,7 +93,7 @@ title: 4D View Pro コマンド
 
 <a id="R"><b>R</b></a>
 
-[`WP RESET ATTRIBUTES`](wp-reset-attributes.md)  ***Modified 4D 20 R8***
+[`WP RESET ATTRIBUTES`](wp-reset-attributes.md)  ***4D 20 R8 で変更***
 
 <a id="S"><b>S</b></a>
 
