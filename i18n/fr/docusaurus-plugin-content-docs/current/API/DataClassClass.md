@@ -982,9 +982,9 @@ Les formules contenues dans les requêtes peuvent recevoir des paramètres via $
 
 - **order by attributePath** : vous pouvez inclure une déclaration order by *attributePath* dans la recherche afin que les données résultantes soient triées selon cette déclaration. Vous pouvez utiliser plusieurs tris par déclaration, en les séparant par des virgules (e.g., order by *attributePath1* desc, *attributePath2* asc). Par défaut, le tri est par ordre croissant. Passez 'desc' pour définir un tri par ordre décroissant et 'asc' pour définir un tri par ordre croissant.
 
-> Si vous utilisez cette instruction, l'entity selection renvoyée est ordonnée (pour plus d'informations, veuillez vous référer à [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
+> Si vous utilisez cette instruction, l'entity selection renvoyée est ordonnée (pour plus d'informations, veuillez vous référer à [Entity selections triées vs non triées](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
 
-If the entity selection attributes contain values of different [types](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md).
+Si les attributs de l'entity selection contiennent des valeurs de différents [types](../Concepts/data-types.md), ils seront triés selon les [principes de tri de 4D](../Concepts/ordering.md).
 
 ### Utilisation de guillemets
 

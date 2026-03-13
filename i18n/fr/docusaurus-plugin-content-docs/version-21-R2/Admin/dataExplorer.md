@@ -19,7 +19,7 @@ de configuration et d'authentification.
 
 ## Ouverture de l'Explorateur de données
 
-[The Web Administration Server](webAdmin.md#starting-the-web-administration-server) is started automatically if necessary when the Data Explorer is clicked on.
+Le [serveur d'administration Web](webAdmin.md#starting-the-web-administration-server) est démarré automatiquement si nécessaire lorsque l'on clique sur l'Explorateur de données.
 
 Pour se connecter à la page web de l'Explorateur de données :
 

@@ -1921,7 +1921,7 @@ La fonction `.max()` <!-- REF #collection.max().Summary -->renvoie l'élément a
 
 > Cette fonction ne modifie pas la collection d'origine.
 
-If the collection contains different [types of values](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md) and the `.max()` function will return the maximum value within the last element type in the type list order.
+Si la collection contient différents [types de valeurs](../Concepts/data-types.md), ils seront triés selon les [principes de tri de 4D](../Concepts/ordering.md) et la fonction `.max()` renverra la valeur maximale du dernier type d'élément dans l'ordre de la liste des types.
 
 Si la collection contient des objets, passez le paramètre *propertyPath* pour indiquer la propriété d'objet dont vous souhaitez obtenir la valeur maximale.
 
@@ -1974,7 +1974,7 @@ La fonction `.min()` <!-- REF #collection.min().Summary -->renvoie l'élément a
 
 > Cette fonction ne modifie pas la collection d'origine.
 
-If the collection contains different [types of values](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md) and the `.min()` function will return the minimum value within the first element type in the type list order.
+Si la collection contient différents [types de valeurs](../Concepts/data-types.md), ils seront triés selon les [principes de tri de 4D](../Concepts/ordering.md) et la fonction `.min()` renverra la valeur minimale du premier type d'élément dans l'ordre de la liste des types.
 
 Si la collection contient des objets, passez le paramètre *propertyPath* pour indiquer la propriété d'objet dont vous souhaitez obtenir la valeur minimum.
 
@@ -2030,7 +2030,7 @@ La fonction `.multiSort()` <!-- REF #collection.multiSort().Summary -->vous perm
 
 Si `.multiSort()` est appelé sans paramètres, la fonction a le même effet que la fonction [`.sort()`](#sort) : la collection est triée (uniquement les valeurs scalaires) par défaut dans l'ordre croissant, en fonction de leur type.
 
-If the collection contains elements of different [types](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md).
+Si la collection contient des éléments de différents [types](../Concepts/data-types.md), ils seront triés selon les [principes de tri de 4D](../Concepts/ordering.md).
 
 **Tri synchronisé à un niveau**
 
@@ -2191,7 +2191,7 @@ Vous pouvez également passer des critères afin de configurer le tri des élém
 
   Cette syntaxe trie uniquement les valeurs scalaires de la collection (les autres types d'éléments comme les objets ou les collections sont retournés non triés).
 
-If the collection contains elements of different [types](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md).
+Si la collection contient des éléments de différents [types](../Concepts/data-types.md), ils seront triés selon les [principes de tri de 4D](../Concepts/ordering.md).
 
 #### Exemple 1
 
@@ -2597,7 +2597,7 @@ $o.parameters:={name:"Chicago")
 $c:=$myCol.query(":att=:name";$o)
 ```
 
-Vous pouvez combiner tous les types d'arguments dans *queryString*. A *queryString* can contain, for *propertyPath* and *value* parameters:
+Vous pouvez combiner tous les types d'arguments dans *queryString*. Une *queryString* peut contenir, pour les paramètres *propertyPath* et *value* :
 
 - des valeurs directes (pas de placeholders)
 - des placeholders indexés et/ou nommés.
@@ -3343,7 +3343,7 @@ Vous pouvez également passer une des constantes suivantes dans le paramètre *a
 
 Cette syntaxe trie uniquement les valeurs scalaires de la collection (les autres types d'éléments comme les objets ou les collections sont retournés non triés).
 
-If the collection contains elements of different [types](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md).
+Si la collection contient des éléments de différents [types](../Concepts/data-types.md), ils seront triés selon les [principes de tri de 4D](../Concepts/ordering.md).
 
 Si vous souhaitez trier les éléments de la collection dans un autre ordre ou trier n'importe quel type d'élément, vous devez fournir dans \*formula \* ([objet Formula](FunctionClass.md)) ou *methodName* (Text) une callback qui définit l'ordre de tri. La valeur de retour doit être un booléen qui indique l'ordre relatif des deux éléments : **True** si *$1.value* est inférieur à *$1.value2*, **False** si *$1.value* est supérieur à *$1.value2*. Vous pouvez fournir des paramètres supplémentaires à la callback si nécessaire.
 

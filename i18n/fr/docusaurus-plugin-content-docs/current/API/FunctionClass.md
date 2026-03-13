@@ -7,16 +7,16 @@ Un objet **`4D.Function`** contient un morceau de code qui peut être exécuté 
 
 ### Héritage
 
-4D handles several kinds of `Function` objects, inheriting from the **4D.Function** class:
+4D gère plusieurs types d'objets `Function`, héritant de la classe **4D.Function** :
 
-- **native functions**, i.e. built-in functions from various 4D classes such as [`collection.sort()`](./CollectionClass.md#sort) or [`file.copyTo()`](./FileClass.md#copyto).
-- **user functions**, created in [user classes](Concepts/classes.md) using the [`Function` keyword](Concepts/classes.md#function).
-- **formula functions**, i.e. functions that can execute formula code stored in [4D.Formula](./FormulaClass.md) objects,
-- **method functions**, i.e. functions that can execute source code as text stored in [4D.Method](./MethodClass.md) objects.
+- les **fonctions natives**, c'est-à-dire des fonctions intégrées de diverses classes 4D telles que [`collection.sort()`](./CollectionClass.md#sort) ou [`file.copyTo()`](./FileClass.md#copyto).
+- **les fonctions utilisateur**, créées dans les [classes utilisateur](Concepts/classes.md) à l'aide du mot-clé [Function](Concepts/classes.md#function).
+- les **fonctions de formule**, c'est-à-dire des fonctions qui peuvent exécuter un code de formule stocké dans des objets [4D.Formula](./FormulaClass.md),
+- les **fonctions de méthode**, c'est-à-dire des fonctions qui peuvent exécuter du code source sous forme de texte stocké dans des objets [4D.Method](./MethodClass.md).
 
-### Executing code in Function objects
+### Exécution du code dans les objets Function
 
-Function objects can be encapsulated in object properties:
+Les objets Function peuvent être encapsulés dans des propriétés d'objet :
 
 ```4d
 var $message : 4D.Formula
@@ -24,7 +24,7 @@ $message:=Formula(ALERT("Hello world"))
 $f:={message: $message}
 ```
 
-Cette propriété est une "fonction objet", c'est-à-dire une fonction qui est liée à son objet parent. Cette propriété est une "fonction objet", c'est-à-dire une fonction qui est liée à son objet parent.
+Cette propriété est une "fonction objet", c'est-à-dire une fonction qui est liée à son objet parent. Pour exécuter une fonction stockée dans une propriété objet, utilisez l'opérateur **()** après le nom de la propriété, comme par exemple :
 
 ```4d
  $f.message() //affiche"Hello world"
@@ -36,16 +36,16 @@ La syntaxe avec des crochets est également prise en charge :
  $f["message"]() //affiche "Hello world"
 ```
 
-Note that, even if it does not have parameters (see below), an object function to be executed must be called with `()` parenthesis. Appeler uniquement la propriété retournera une nouvelle référence à la formule (elle ne sera pas exécutée) :
+A noter que, même si elle n'a pas de paramètres (voir ci-dessous), une fonction objet à exécuter doit être appelée avec des parenthèses `()`. Appeler uniquement la propriété retournera une nouvelle référence à la formule (elle ne sera pas exécutée) :
 
 ```4d
- $o:=$f.message //returns the function object in $o
+ $o:=$f.message //retourne l'objet fonction en $o
 ```
 
-You can also execute a function using the [`apply()`](#apply) and [`call()`](#call):
+Vous pouvez également exécuter une fonction en utilisant les fonctions [`apply()`](#apply) et [`call()`](#call) :
 
 ```4d
- $message.apply() //displays "Hello world"
+ $message.apply() //affiche "Hello world"
 ```
 
 ### Sommaire
@@ -62,10 +62,10 @@ You can also execute a function using the [`apply()`](#apply) and [`call()`](#ca
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                                 |
-| ------- | --------------------------------------------- |
-| 21 R3   | Support of 4D.Methods objects |
-| 17 R3   | Ajout                                         |
+| Release | Modifications                                        |
+| ------- | ---------------------------------------------------- |
+| 21 R3   | Prise en charge des objets 4D.Method |
+| 17 R3   | Ajout                                                |
 
 </details>
 
@@ -75,27 +75,27 @@ You can also execute a function using the [`apply()`](#apply) and [`call()`](#ca
 
 <div class="no-index">
 
-| Paramètres | Type       |                             | Description                                                     |
-| ---------- | ---------- | :-------------------------: | --------------------------------------------------------------- |
-| thisObj    | Object     |              ->             | Object to be returned by the `This` command in the function     |
-| params     | Collection |              ->             | Collection of values to be passed as parameters to the function |
-| Résultat   | any        | <- | Value from function execution                                   |
+| Paramètres | Type       |                             | Description                                                |
+| ---------- | ---------- | :-------------------------: | ---------------------------------------------------------- |
+| thisObj    | Object     |              ->             | Objet à retourner par la commande `This` dans la fonction  |
+| params     | Collection |              ->             | Collection de valeurs à passer en paramètres à la fonction |
+| Résultat   | any        | <- | Valeur retournée par l'exécution de la fonction            |
 
 </div>
 <!-- END REF -->
 
 #### Description
 
-The `.apply()` function <!-- REF #FunctionClass.apply().Summary -->executes the function object to which it is applied, passing parameters as a collection, and returns the resulting value<!-- END REF -->.
+La fonction `.apply()` <!-- REF #FunctionClass.apply().Summary -->exécute l'objet fonction auquel elle est appliquée, en passant les paramètres sous forme de collection, et renvoie la valeur résultante<!-- END REF -->.
 
-In the *thisObj* parameter, you can pass a reference to the object to be used as `This` within the function. Pass Null if you do not want to use `This` but you want to send parameters.
+Dans le paramètre *thisObj*, vous pouvez passer une référence à l'objet qui sera utilisé comme `This` dans la fonction. Passez Null si vous ne voulez pas utiliser `This` mais que vous voulez envoyer des paramètres.
 
-You can pass a collection to be used as parameters in the function using the optional *params* parameter:
+Vous pouvez passer une collection à utiliser comme paramètres dans la fonction en utilisant le paramètre facultatif *params* :
 
-- in `4D.Formula` objects, parameters are passed in $1...$n in the formula.
-- in other `4D.Function` objects such as `4D.Method` objects, parameters are passed in [declared method parameters](../Concepts/parameters.md).
+- dans les objets `4D.Formula`, les paramètres sont passés à $1...$n dans la formule.
+- dans les autres objets `4D.Function` tels que les objets `4D.Method`, les paramètres sont passés aux [paramètres déclarés](../Concepts/parameters.md).
 
-Notez que `.apply()` est similaire à [`.call()`](#call) sauf que les paramètres sont passés en tant que collection. Cela peut être utile pour passer des résultats calculés.
+Notez que `.apply()` est similaire à [`.call()`](#call) à la différence près que les paramètres sont passés en tant que collection. Cela peut être utile pour passer des résultats calculés.
 
 <!-- END REF -->
 
@@ -105,10 +105,10 @@ Notez que `.apply()` est similaire à [`.call()`](#call) sauf que les paramètre
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                                 |
-| ------- | --------------------------------------------- |
-| 21 R3   | Support of 4D.Methods objects |
-| 17 R3   | Ajout                                         |
+| Release | Modifications                                        |
+| ------- | ---------------------------------------------------- |
+| 21 R3   | Prise en charge des objets 4D.Method |
+| 17 R3   | Ajout                                                |
 
 </details>
 
@@ -118,27 +118,27 @@ Notez que `.apply()` est similaire à [`.call()`](#call) sauf que les paramètre
 
 <div class="no-index">
 
-| Paramètres | Type   |                             | Description                                                 |
-| ---------- | ------ | --------------------------- | ----------------------------------------------------------- |
-| thisObj    | Object | ->                          | Object to be returned by the `This` command in the function |
-| params     | any    | ->                          | Values to be passed as parameters to the function           |
-| Résultat   | any    | <- | Value from function execution                               |
+| Paramètres | Type   |                             | Description                                               |
+| ---------- | ------ | --------------------------- | --------------------------------------------------------- |
+| thisObj    | Object | ->                          | Objet à retourner par la commande `This` dans la fonction |
+| params     | any    | ->                          | Valeurs à passer en paramètres à la fonction              |
+| Résultat   | any    | <- | Valeur retournée par l'exécution de la fonction           |
 
 </div>
 <!-- END REF -->
 
 #### Description
 
-The `.call()` function <!-- REF #FunctionClass.call().Summary -->executes the function object to which it is applied, with one or more parameter(s) passed directly, and returns the resulting value<!-- END REF -->.
+La fonction `.call()` <!-- REF #FunctionClass.call().Summary -->exécute l'objet fonction auquel elle est appliquée, avec un ou plusieurs paramètre(s) passé(s) directement, et renvoie la valeur résultante<!-- END REF -->.
 
-In the *thisObj* parameter, you can pass a reference to the object to be used as `This` within the function.
+Dans le paramètre *thisObj*, vous pouvez passer une référence à l'objet qui sera utilisé comme `This` dans la fonction.
 
-You can pass values to be used as parameters in the function using the optional *params* parameter:
+Vous pouvez passer des valeurs à utiliser comme paramètres dans la fonction à l'aide du paramètre facultatif *params* :
 
-- in `4D.Formula` objects, parameters are passed in $1...$n in the formula.
-- in `4D.Method` objects, parameters are passed in [declared method parameters](../Concepts/parameters.md).
+- dans les objets `4D.Formula`, les paramètres sont passés à $1...$n dans la formule.
+- dans les autres objets `4D.Function` tels que les objets `4D.Method`, les paramètres sont passés aux [paramètres déclarés](../Concepts/parameters.md).
 
-Notez que `.call()` est similaire à [`.apply()`](#apply) sauf que les paramètres sont passés directement.
+Notez que `.call()` est similaire à [`.apply()`](#apply) à la différence près que les paramètres sont passés directement.
 
 <!-- END REF -->
 
@@ -164,10 +164,10 @@ Notez que `.call()` est similaire à [`.apply()`](#apply) sauf que les paramètr
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                                 |
-| ------- | --------------------------------------------- |
-| 21 R3   | Support of 4D.Methods objects |
-| 18 R2   | Ajout                                         |
+| Release | Modifications                                        |
+| ------- | ---------------------------------------------------- |
+| 21 R3   | Prise en charge des objets 4D.Method |
+| 18 R2   | Ajout                                                |
 
 </details>
 
@@ -175,9 +175,9 @@ Notez que `.call()` est similaire à [`.apply()`](#apply) sauf que les paramètr
 
 #### Description
 
-The `.source` property <!-- REF #FunctionClass.source.Summary -->contains the source code of the function as text<!-- END REF -->.
+La propriété `.source` <!-- REF #FunctionClass.source.Summary -->contient le code source de la fonction sous forme de texte<!-- END REF -->.
 
-The returned value is the original text used to create the 4D.Formula or 4D.Method object but reformatted.
+La valeur renvoyée est le texte original utilisé pour créer l'objet 4D.Formula ou 4D.Method, mais reformaté.
 
 Cette propriété est en **lecture seule**.
 

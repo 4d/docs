@@ -3,14 +3,14 @@ id: FormulaClass
 title: Formula
 ---
 
-`4D.Formula` objects are created by the [Formula](../commands/formula) or [Formula from string](../commands/formula-from-string) commands and allow you execute any 4D expression or code expressed as single-line text.
+Les objets `4D.Formula` sont créés par les commandes [Formula](../commands/formula) ou [Formula from string](../commands/formula-from-string) et vous permettent d'exécuter n'importe quelle expression ou code 4D exprimé sous forme de texte d'une seule ligne.
 
-`4D.Formula` class objects inherit from the [`4D.Function`](./FunctionClass.md) class. Thus, to execute the formula, you can:
+Les objets de la classe `4D.Formula` héritent de la classe [`4D.Function`](./FunctionClass.md). Ainsi, pour exécuter la formule, vous pouvez :
 
-- store a `4D.Formula` object in an object property and use the `()` operator after the property name,
-- or directly call the `4D.Formula` object using the [`call()`](#call) or [`apply()`](#apply) function on it.
+- placer un objet `4D.Formula` dans une propriété d'objet et utiliser l'opérateur `()` après le nom de la propriété,
+- ou appeler directement l'objet `4D.Formula` en utilisant la fonction [`call()`](#call) ou [`apply()`](#apply) sur lui.
 
-See examples in the [Executing code in Function objects](../API/FunctionClass.md#executing-code-in-function-objects) paragraph.
+Voir les exemples dans le paragraphe [Exécution du code dans les objets Function](../API/FunctionClass.md#executing-code-in-function-objects).
 
 ### Passer des paramètres aux formules
 
@@ -18,7 +18,7 @@ Vous pouvez passer des paramètres à vos formules en utilisant une syntaxe séq
 
 ```4d
  $f:={message: Formula(ALERT("Hello "+$2+", "+$1))}
- $f.message("John";"Smith") //displays "Hello Smith, John"
+ $f.message("John";"Smith") //affiche "Hello Smith, John"
 ```
 
 Ou en utilisant la fonction [.call()](#call) :
@@ -26,8 +26,8 @@ Ou en utilisant la fonction [.call()](#call) :
 ```4d
  var $f : 4D.Formula
  $f:=Formula($1+" "+$2)
- $text:=$f.call(Null;"Hello";"World") //returns "Hello World"
- $text:=$f.call(Null;"Welcome to";String(Year of(Current date))) //returns "Welcome to 2026" (for example)
+ $text:=$f.call(Null;"Hello";"World") //retourne "Hello World"
+ $text:=$f.call(Null;"Welcome to";String(Year of(Current date))) //retourne "Welcome to 2026" (par exemple)
 ```
 
 #### Paramètres d'une seule méthode
@@ -38,9 +38,9 @@ Pour plus de commodité, lorsque la formule est constituée d'une seule méthode
  var $f : 4D.Formula
 
  $f:=Formula(myMethod)
-  //Writing Formula(myMethod($1;$2)) is not necessary
- $text:=$f.call(Null;"Hello";"World") //returns "Hello World"
- $text:=$f.call() //returns "How are you?"
+  //Ecrire Formula(myMethod($1;$2)) n'est pas nécessaire
+ $text:=$f.call(Null;"Hello";"World") //retourne "Hello World"
+ $text:=$f.call() //retourne "How are you?"
 
   //myMethod
  #DECLARE ($param1 : Text; $param2 : Text)->$return : Text
@@ -70,7 +70,7 @@ Les paramètres sont reçus dans la méthode, dans l'ordre où ils sont spécifi
  $f:=Formula($1+$2+$3)
 
  $c:=New collection(10;20;30)
- $result:=$f.apply(Null;$c) // returns 60
+ $result:=$f.apply(Null;$c) // retourne 60
 ```
 
 #### Exemple 2
@@ -94,7 +94,7 @@ Les paramètres sont reçus dans la méthode, dans l'ordre où ils sont spécifi
 ```4d
  var $f : 4D.Formula
  $f:=Formula(Uppercase($1))
- $result:=$f.call(Null;"hello") // returns "HELLO"
+ $result:=$f.call(Null;"hello") // retourne "HELLO"
 ```
 
 #### Exemple 2

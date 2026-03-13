@@ -4,20 +4,20 @@ title: WP Insert picture
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Insert picture.Syntax-->**WP Insert picture** ( *targetObj* : Object ; *picture* : Picture ; *mode* : Integer {; *rangeUpdate* : Integer} ): Object<br/>**WP Insert picture** ( *targetObj* : Object ; *pictureFileObj* : 4D.File; *mode* : Integer {; *rangeUpdate* : Integer}): Object<!-- END REF-->
+<!--REF #_command_.WP Insert picture.Syntax-->**WP Insert picture** ( *targetObj* : Object ; *picture* : Picture ; *mode* : Integer {; *rangeUpdate* : Integer} ): Object<br/>**WP Insert picture** ( *targetObj* : Object ; *pictureFile* : 4D.File, Text; *mode* : Integer {; *rangeUpdate* : Integer}): Object<!-- END REF-->
 
 <!--REF #_command_.WP Insert picture.Params-->
 
 <div class="no-index">
 
-| 引数             | 型                                                 |                             | 説明                                         |
-| -------------- | ------------------------------------------------- | --------------------------- | ------------------------------------------ |
-| targetObj      | Object                                            | &#8594; | レンジまたは要素または4D Write Pro ドキュメント             |
-| picture        | Picture                                           | &#8594; | ピクチャーフィールドまたは変数、あるいはディスク上のピクチャーファイルへのパス    |
-| pictureFileObj | [4D.File](../../API/FileClass.md) | &#8594; | ピクチャーファイルを表す4D.File オブジェクト |
-| mode           | Integer                                           | &#8594; | 挿入モード                                      |
-| rangeUpdate    | Integer                                           | &#8594; | レンジ更新モード                                   |
-| 戻り値            | Object                                            | &#8592; | ピクチャーを参照しているオブジェクト                         |
+| 引数          | 型                                                       |                             | 説明                                                  |
+| ----------- | ------------------------------------------------------- | --------------------------- | --------------------------------------------------- |
+| targetObj   | Object                                                  | &#8594; | レンジまたは要素または4D Write Pro ドキュメント                      |
+| picture     | Picture                                                 | &#8594; | ピクチャーフィールドまたは変数、あるいはディスク上のピクチャーファイルへのパス             |
+| pictureFile | [4D.File](../../API/FileClass.md), Text | &#8594; | A File object representing a picture file or a path |
+| mode        | Integer                                                 | &#8594; | 挿入モード                                               |
+| rangeUpdate | Integer                                                 | &#8594; | レンジ更新モード                                            |
+| 戻り値         | Object                                                  | &#8592; | ピクチャーを参照しているオブジェクト                                  |
 
 </div>
 <!-- END REF-->
@@ -38,7 +38,7 @@ displayed_sidebar: docs
   - ピクチャーフィールドまたは変数
   - ディスク上のピクチャーファイルへのパスを格納した文字列(システムシンタックス)
     文字列を使用する場合には、フルパス名またはデータベースのストラクチャーファイルを起点とした相対パス名を指定することができます。 またファイル名を渡すこともでき、その場合、ファイルはデータベースのストラクチャーファイル と同じ階層に置かれている必要があります。 ファイル名を渡す場合には、ファイルの拡張子も指定する必要があります。
-- *pictureFileObj* 引数の場合: ピクチャーファイルを表す`File` オブジェクト
+- In *pictureFile* : a `File` object representing a picture file or a path.
 
 [4D でサポートされているフォーマット](../../FormEditor/pictures.md#native-formats-supported) であれば、どんなピクチャーフォーマットでも使用することができます。  [PICTURE CODEC LIST](../../commands/picture-codec-list) コマンドを使用することで、利用可能なピクチャーフォーマットの一覧を取得することができます。 ピクチャーに複数のフォーマット(コーデック)が格納されている場合、4D Write Pro はドキュメント内に表示用に1種類、印刷用に1種類(異なる場合)のフォーマットのみを保管します。その際、「最適」なフォーマットが自動的に選択されます。
 

@@ -1127,7 +1127,7 @@ Le code générique suivant duplique toutes les entités de l'entity selection :
 
 La fonction `.getRemoteContextAttributes()`<!-- REF #EntitySelectionClass.getRemoteContextAttributes().Summary -->retourne des informations sur le contexte d'optimisation utilisé par l'entity selection<!-- END REF -->.
 
-If there is no [optimization context](../ORDA/client-server-optimization.md) for the entity selection, the function returns an empty Text.
+S'il n'existe pas de [contexte d'optimisation](../ORDA/client-server-optimization.md) pour l'entity selection, la fonction retourne un texte vide.
 
 #### Exemple
 

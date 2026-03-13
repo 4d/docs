@@ -1127,7 +1127,7 @@ Le code générique suivant duplique toutes les entités de l'entity selection :
 
 La fonction `.getRemoteContextAttributes()`<!-- REF #EntitySelectionClass.getRemoteContextAttributes().Summary -->retourne des informations sur le contexte d'optimisation utilisé par l'entity selection<!-- END REF -->.
 
-If there is no [optimization context](../ORDA/client-server-optimization.md) for the entity selection, the function returns an empty Text.
+S'il n'existe pas de [contexte d'optimisation](../ORDA/client-server-optimization.md) pour l'entity selection, la fonction retourne un texte vide.
 
 #### Exemple
 
@@ -1368,7 +1368,7 @@ Les entity selections ont toujours une propriété `.length`.
 
 La fonction `.max()` <!-- REF #EntitySelectionClass.max().Summary -->retourne la valeur la plus élevée (ou maximale) parmi toutes les valeurs de *attributePath* dans l'entity selection<!-- END REF -->. En fait, elle retourne la valeur de la dernière entité de l'entity selection si elle était triée par ordre croissant en utilisant la fonction [`.orderBy()`](#orderby).
 
-If you pass in *attributePath* a path to an object property containing different [types of values](../Concepts/data-types.md), the `.max()` function will return the maximum value within the first scalar type according to the [4D ordering principles](../Concepts/ordering.md).
+Si vous passez dans *attributePath* un chemin vers une propriété d'objet contenant différents [types de valeurs](../Concepts/data-types.md), la fonction `.max()` renverra la valeur maximale du premier type de scalaire conformément aux [principes de tri de 4D](../Concepts/ordering.md).
 
 `.max()` retourne **undefined** si l'entity selection est vide ou si *attributePath* n'est pas trouvé dans l'attribut objet.
 
@@ -1421,7 +1421,7 @@ Nous souhaitons connaître le salaire le plus élevé parmi les employées :
 
 La fonction `.min()` <!-- REF #EntitySelectionClass.min().Summary --> retourne la plus faible valeur (ou valeur minimale) parmi toutes les valeurs de attributePath dans l'entity selection<!-- END REF -->.  En fait, elle retourne la première entité de l'entity selection si elle était triée par ordre croissant en utilisant la fonction [`.orderBy()`](#orderby) (en excluant les valeurs **null**).
 
-If you pass in *attributePath* a path to an object property containing different [types of values](../Concepts/data-types.md), the `.min()` function will return the minimum value within the first scalar type according to the [4D ordering principles](../Concepts/ordering.md).
+Si vous passez dans *attributePath* un chemin vers une propriété d'objet contenant différents [types de valeurs](../Concepts/data-types.md), la fonction `.min()` renverra la valeur minimale du premier type de scalaire conformément aux [principes de tri de 4D](../Concepts/ordering.md).
 
 `.min()` retourne **undefined** si l'entity selection est vide ou si *attributePath* n'est pas trouvé dans l'attribut objet.
 
@@ -1651,7 +1651,7 @@ Par défaut, les attributs sont triés par ordre croissant ("descending" est fal
 
 Vous pouvez ajouter autant d'objets que nécessaire dans la collection de critères.
 
-If the entity selection attributes contain values of different [types](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md).
+Si les attributs de l'entity selection contiennent des valeurs de différents [types](../Concepts/data-types.md), ils seront triés selon les [principes de tri de 4D](../Concepts/ordering.md).
 
 Si vous passez un chemin d'attribut non valide dans *pathString* ou *pathObject*, la fonction renvoie une entity selection vide.
 

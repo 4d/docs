@@ -12,7 +12,7 @@ A `4D.Method` object is created with the `4D.Method.new()` function.
 - store a `4D.Method` object in an object property and use the `()` operator after the property name,
 - or directly call the `4D.Method` object using the [`call()`](#call) or [`apply()`](#apply) function on it.
 
-See examples in the [Executing code in Function objects](../API/FunctionClass.md#executing-code-in-function-objects) paragraph.
+Voir les exemples dans le paragraphe [Exécution du code dans les objets Function](../API/FunctionClass.md#executing-code-in-function-objects).
 
 :::tip Article(s) de blog sur le sujet
 

@@ -21,7 +21,7 @@ Les objets Formula peuvent être encapsulés dans des propriétés d'objet :
  $f.message:=Formula(ALERT("Hello world"))
 ```
 
-Cette propriété est une "fonction objet", c'est-à-dire une fonction qui est liée à son objet parent. Cette propriété est une "fonction objet", c'est-à-dire une fonction qui est liée à son objet parent.
+Cette propriété est une "fonction objet", c'est-à-dire une fonction qui est liée à son objet parent. Pour exécuter une fonction stockée dans une propriété objet, utilisez l'opérateur **()** après le nom de la propriété, comme par exemple :
 
 ```4d
  $f.message() //affiche"Hello world"
@@ -131,7 +131,7 @@ Dans le paramètre *thisObj*, vous pouvez passer une référence à l'objet à u
 
 Vous pouvez également passer une collection à utiliser comme paramètres $1...$n dans la formule à l'aide du paramètre facultatif *formulaParams*.
 
-Notez que `.apply()` est similaire à [`.call()`](#call) sauf que les paramètres sont passés en tant que collection. Cela peut être utile pour passer des résultats calculés.
+Notez que `.apply()` est similaire à [`.call()`](#call) à la différence près que les paramètres sont passés en tant que collection. Cela peut être utile pour passer des résultats calculés.
 
 #### Exemple 1
 
@@ -194,7 +194,7 @@ Dans le paramètre *thisObj*, vous pouvez passer une référence à l'objet à u
 
 Vous pouvez également passer des valeurs à utiliser comme paramètres *$1...$n* dans la formule à l'aide du paramètre facultatif *params*.
 
-Notez que `.call()` est similaire à [`.apply()`](#apply) sauf que les paramètres sont passés directement.
+Notez que `.call()` est similaire à [`.apply()`](#apply) à la différence près que les paramètres sont passés directement.
 
 #### Exemple 1
 
