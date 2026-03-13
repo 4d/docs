@@ -5,7 +5,6 @@ title: Release Notes
 
 ## 4D 21 R3
 
-
 #### Highlights
 
 - The [`JSON Validate`](../commands/json-validate) command now supports of JSON Schema draft 2020-12. 
@@ -13,12 +12,19 @@ title: Release Notes
 - Ability to use a custom certificate from the macOS keychain instead of a local certificates folder in [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) and [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) classes. 
 - New [`4D.Method` class](../API/MethodClass.md) to create and execute a 4D method code from text source. [`METHOD Get path`](../commands/method-get-path) and [`METHOD RESOLVE PATH`](../commands/method-resolve-path) commands support a new `path volatile method` constant (128).
 
+
+#### Support of Liquid glass on macOS
+
+- Automatic support of [**Liquid glass** interface](https://www.apple.com/newsroom/2025/06/apple-introduces-a-delightful-and-elegant-new-software-design/) with 4D on macOS 26 Tahoe. See [this blog post](https://blog.4d.com/the-new-macos-tahoe-design-comes-to-your-4d-applications) for detailed information. 
+- New values returned by the [`FORM Theme`](../commands/form-theme) command and [CSS Media queries](../FormEditor/createStylesheet.md#media-queries). 
+- To help developers gradually adapt their interfaces, ability to **disable Liquid glass in 4D engine-based applications** via the "UIDesignRequiresCompatibility" key in the application's *Info.plist* file (see [Apple's documentation about this key](https://developer.apple.com/documentation/BundleResources/Information-Property-List/UIDesignRequiresCompatibility)).
+
+
 #### Behavior changes
 
 - The [`JSON Validate`](../commands/json-validate) command now takes the *$schema* key into account and generates an error if a non-supported version is declared in the schema. 
 - For clarity, formula objects are now instances of a new [`4D.Formula`](../API/FormulaClass.md) class that inherits from the generic [`4D.Function`](../API/FunctionClass.md) class.
 - The "PHP" page has been removed from the [Settings dialog box](../settings/overview.md). Use the [PHP selectors with the `SET DATABASE PARAMETER`](../commands/set-database-parameter#php-interpreter-ip-address-55) command to configure a PHP interpeter. 
-
 
 ## 4D 21 R2
 
