@@ -126,7 +126,6 @@ The following table lists the pages of settings found in the **User Settings** a
 | [Web/Log (backup) page](./web.md#log-backup) | Identical to standard settings | Identical to standard settings |
 | [Web/Web Services page](./web.md#web-services) | Method prefixing option not available | Method prefixing option not available |
 | [SQL page](./sql.md) | Identical to standard settings | Identical to standard settings |
-| [PHP page](./php.md) | Identical to standard settings | Identical to standard settings |
 | [Security page](./security.md) | N/a | N/a |
 | [Compatibility page](./compatibility.md) | N/a | N/a |
 

@@ -87,7 +87,6 @@ Here are the keys that can be used in the *selector* parameter in standard mode,
 */Database/Web/Log scheduler* 
 */Database/Web/Webservices* 
 */Database/SQL* 
-*/Database/php* 
 */Database/Compatibility* 
 */Database/Security* 
 
@@ -100,7 +99,7 @@ Here are the keys that can be used in the *selector* parameter in "User settings
 */Database* 
 */Database/Interface* 
 */Database/Database/Memory and cpu* 
-**/Database/Client-Server* 
+*/Database/Client-Server* 
 */Database/Client-Server/Network* 
 */Database/Client-Server/IP configuration* 
 */Database/Web* 
@@ -111,12 +110,12 @@ Here are the keys that can be used in the *selector* parameter in "User settings
 */Database/Web/Log scheduler* 
 */Database/Web/Webservices* 
 */Database/SQL* 
-*/Database/php* 
 
 Addtional keys in "User settings for data" mode:
 
 */Database/Backup* 
-*/Database/Backup/Scheduler* */Database/Backup/Configuration* 
+*/Database/Backup/Scheduler* 
+*/Database/Backup/Configuration* 
 */Database/Backup/Backup and restore*
 
 ## Example 1 

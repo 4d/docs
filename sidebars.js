@@ -72,7 +72,6 @@ module.exports =
                 "settings/client-server",
                 "settings/web",
                 "settings/sql",
-                "settings/php",
                 "settings/security",
                 "settings/compatibility"
               ]
