@@ -211,10 +211,10 @@ A media query is composed of a media feature and a value (e.g., `<media feature>
 
 Available media features and values:
 
-| Media features         | Valores                                        | Descrição                                                                                                                                                                |
-| ---------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `prefers-color-scheme` | <li>**light**</li><li>**dark**</li>            | Color scheme to use                                                                                                                                                      |
-| `form-theme`           | <li>**fluent-ui**</li><li>**win-classic**</li> | Platform theme to use (Windows). For more information on **fluent-ui** theme, refer to [this section](./forms.md#fluent-ui-rendering) |
+| Media features         | Valores                                                                                                  | Descrição                                                                                                                                                    |
+| ---------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `prefers-color-scheme` | <ul><li>**light**</li><li>**dark**</li></ul>                                                             | Color scheme to use                                                                                                                                          |
+| `form-theme`           | <ul><li>**fluent-ui**</li><li>**win-classic**</li><li>**liquid-glass**</li><li>**mac-classic**</li></ul> | Platform theme to use. For more information on **fluent-ui** theme, refer to [this section](./forms.md#fluent-ui-rendering). |
 
 :::note
 

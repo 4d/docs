@@ -35,7 +35,7 @@ var $result2:=$o.multiplication(2;3) // 6
 var $result3:=4D.Method.new($myCode).call(Null; 10; 5) // 50
 ```
 
-#### Using `This` inside method code
+#### Uso de `This` dentro del código del método
 
 ```4d
 var $myCode:="#DECLARE ($str1:text):text"+Char(13)+"return $str1+This.name"

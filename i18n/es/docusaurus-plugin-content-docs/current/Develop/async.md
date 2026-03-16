@@ -93,8 +93,8 @@ Si desea "forzar" la liberación de un objeto en cualquier momento, utilice un `
 
 | Feature                         | Async Launch                                                                          | Callback / Event Handling                                           |
 | ------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| CALL WORKER                     | CALL WORKER("wk"; "MyMethod"; $params)                             | MyMethod is called with $params                                     |
-| CALL FORM                       | CALL FORM($win; "MyMethod"; $params)                               | MyMethod is called with $params                                     |
+| CALL WORKER                     | CALL WORKER("wk"; "MyMethod"; $params)                             | MyMethod se llama con $params                                       |
+| CALL FORM                       | CALL FORM($win; "MyMethod"; $params)                               | MyMethod se llama con $params                                       |
 | 4D.SystemWorker | 4D.SystemWorker.new(cmd; $options) | Callbacks: onData, onResponse, onError, onTerminate |
 
 ## Asynchronous programming with 4D classes

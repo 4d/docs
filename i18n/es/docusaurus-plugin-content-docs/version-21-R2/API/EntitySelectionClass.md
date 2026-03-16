@@ -785,7 +785,7 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 | Parámetros | Tipo       |                             | Descripción                                              |
 | ---------- | ---------- | :-------------------------: | -------------------------------------------------------- |
 | atributo   | Text       |              ->             | Nombre del atributo del objeto cuyas rutas desea obtener |
-| Resultado  | Collection | <- | New collection with distinct paths                       |
+| Resultado  | Collection | <- | Nueva colección con rutas distintas                      |
 
 </div>
 <!-- END REF -->

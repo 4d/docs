@@ -212,10 +212,10 @@ Una consulta de medios está formada por características y valores de medios (p
 
 Available media features and values:
 
-| Media features         | Valores                                        | Descripción                                                                                                                                                                              |
-| ---------------------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `prefers-color-scheme` | <li>**light**</li><li>**dark**</li>            | Color scheme to use                                                                                                                                                                      |
-| `form-theme`           | <li>**fluent-ui**</li><li>**win-classic**</li> | Tema de la plataforma a utilizar (Windows). Para más información sobre el tema **fluent-ui**, consulte [esta sección](./forms.md#fluent-ui-rendering) |
+| Media features         | Valores                                                                                                  | Descripción                                                                                                                                                       |
+| ---------------------- | -------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `prefers-color-scheme` | <ul><li>**light**</li><li>**dark**</li></ul>                                                             | Color scheme to use                                                                                                                                               |
+| `form-theme`           | <ul><li>**fluent-ui**</li><li>**win-classic**</li><li>**liquid-glass**</li><li>**mac-classic**</li></ul> | Platform theme to use. Para más información sobre el tema **fluent-ui**, consulte [esta sección](./forms.md#fluent-ui-rendering). |
 
 :::note
 

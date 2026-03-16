@@ -24,10 +24,10 @@ displayed_sidebar: docs
 <div class="no-index">
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                   |
-| ----------- | -------------------------------- |
-| 4D 18       | Created                          |
-| 4D 21 R3    | *listLevelIndex* parameter added |
+| Lanzamiento | Modificaciones                                |
+| ----------- | --------------------------------------------- |
+| 4D 18       | Created                                       |
+| 4D 21 R3    | \*Se ha añadido el parámetro *listLevelIndex* |
 
 </details>
 </div>

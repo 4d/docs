@@ -121,7 +121,6 @@ A tabela seguinte lista as páginas das definições encontradas nas caixas de d
 | [Página Web/Log (backup)](./web.md#log-backup)                   | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                             |
 | Página [Serviços Web](./web.md#web-services)                                        | Opção de prefixação do método não disponível | Opção de prefixação do método não disponível                |
 | [Página SQL](./sql.md)                                                              | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                             |
-| [Página PHP](./php.md)                                                              | Idêntico às propriedades padrão              | Idêntico às propriedades padrão                             |
 | [Página Segurança](./security.md)                                                   | N/a                                          | N/a                                                         |
 | [Página Compatibilidade](./compatibility.md)                                        | N/a                                          | N/a                                                         |
 

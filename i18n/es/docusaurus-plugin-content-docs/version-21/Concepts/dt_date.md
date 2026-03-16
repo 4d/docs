@@ -48,7 +48,7 @@ Una fecha null es especificada por *!00-00-00!*.
 | Menor o igual que | Date <= Date | Boolean  | !2017-01-20! - !2017-01-01! <= !2017-01-20! | True         |
 |                   |                                       |          | !2017-01-20! <= !2017-01-01!                | False        |
 
-## Conversion of dates from JavaScript
+## Conversión de fechas desde JavaScript
 
 Como las fechas en JavaScript son objetos, se envían a 4D como texto que contiene su forma JSON como cualquier otro objeto. Este principio se aplica en particular cuando se utilizan [comandos JSON](../commands/theme/JSON.md) o [Áreas Web](../FormObjects/webArea_overview.md).
 

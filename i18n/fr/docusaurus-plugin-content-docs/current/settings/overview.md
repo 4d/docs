@@ -121,7 +121,6 @@ Le tableau suivant répertorie les pages de paramètres des boîtes de dialogue 
 | [Page Web/Journal (sauvegarde)](./web.md#log-backup)                                 | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
 | [Page Web/Services Web](./web.md#web-services)                                                          | Option de préfixage des méthodes non disponible | Option de préfixage des méthodes non disponible             |
 | [Page SQL](./sql.md)                                                                                    | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
-| [Page PHP](./php.md)                                                                                    | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
 | [Page Sécurité](./security.md)                                                                          | N/a                                             | N/a                                                         |
 | [Page Compatibilité](./compatibility.md)                                                                | N/a                                             | N/a                                                         |
 

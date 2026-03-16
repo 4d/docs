@@ -253,7 +253,7 @@ SET DATABASE PARAMETER(Current process debug log recording;2+4)
 | timestamp          | ISO 8601フォーマットの日付と時間 (YYYY-MM-DDTHH:MM:SS.mmm) |
 | loggerID           | 任意                                             |
 | componentSignature | 任意 - 内部コンポーネント署名                               |
-| messageLevel       | 情報、警告、エラーなど                                    |
+| messageLevel       | Trace, Debug, Info, Warning, Error, Fatal      |
 | message            | ログエントリーの詳細                                     |
 
 イベントによって、タスク、ソケットなど様々な他のフィールドを記録に含めることができます。

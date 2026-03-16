@@ -14,7 +14,7 @@ Un objeto **`4D.Function`** contiene un trozo de código que puede ser ejecutado
 - **formula functions**, i.e. functions that can execute formula code stored in [4D.Formula](./FormulaClass.md) objects,
 - **method functions**, i.e. functions that can execute source code as text stored in [4D.Method](./MethodClass.md) objects.
 
-### Executing code in Function objects
+### Ejecución del código en los objetos Function
 
 Function objects can be encapsulated in object properties:
 

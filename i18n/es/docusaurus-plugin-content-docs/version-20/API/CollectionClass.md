@@ -1478,8 +1478,8 @@ $first:=$emptyCol.first() // devuelve Undefined
 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|depth|Integer |->|How deep a nested collection structure should be flattened. Default=1|
-|Result|Collection |<-|Flattened collection|
+|depth|Integer |->|How deep a nested collection structure should be flattened. Por defecto=1|
+|Resultado|Colección |<-|Flattened collection|
 </div>
 <!-- END REF -->
 

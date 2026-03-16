@@ -130,7 +130,7 @@ When created, hierarchical list style sheets use predefined values:
   - Ejemplo:
 
     - Root level: `"MyList"`
-    - First sub-level: `"MyList lvl 2"`
+    - Primer subnivel: `"MyList nivel 2"`
     - Segundo subnivel: `"MyList lvl 3"`
 
 <!-- END REF -->

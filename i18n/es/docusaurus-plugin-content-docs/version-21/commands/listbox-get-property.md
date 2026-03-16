@@ -23,11 +23,11 @@ displayed_sidebar: docs
 <div class="no-index">
 <details><summary>Historia</summary>
 
-| Lanzamiento                 | Modificaciones                                       |
-| --------------------------- | ---------------------------------------------------- |
-| 19 R6                       | Modificado                                           |
-| 16 R2                       | Renamed (Get Listbox information) |
-| <6 | Created                                              |
+| Lanzamiento                 | Modificaciones                                          |
+| --------------------------- | ------------------------------------------------------- |
+| 19 R6                       | Modificado                                              |
+| 16 R2                       | Renombrado (Get Listbox information) |
+| <6 | Created                                                 |
 
 </details>
 </div>

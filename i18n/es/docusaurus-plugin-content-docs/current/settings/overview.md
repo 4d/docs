@@ -121,7 +121,6 @@ La siguiente tabla lista las páginas de parámetros que se encuentran en las ca
 | [Página Web/Historial (backup)](./web.md#log-backup)         | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
 | [Página Web/Servicios Web](./web.md#web-services)                               | Opción de prefijación de los métodos no disponible | Opción de prefijación de los métodos no disponible      |
 | [SQL page](./sql.md)                                                            | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
-| [PHP page](./php.md)                                                            | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
 | [Página Seguridad](./security.md)                                               | N/a                                                | N/a                                                     |
 | [Página Compatibilidad](./compatibility.md)                                     | N/a                                                | N/a                                                     |
 
