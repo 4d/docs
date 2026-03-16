@@ -40,7 +40,7 @@ Le paramètre *propertyObj* vous permet de renseigner les attributs à appliquer
 Pour modifier la taille de la deuxième colonne et définir un en-tête, le code suivant :
 
 ```4d
-C_OBJECT($column;$properties)
+var $column; $properties : Object
  
 $column:=VP Column("ViewProArea";1) //colonne B
 $properties:=New object("width";100;"header";"Hello World")

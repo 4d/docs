@@ -46,7 +46,7 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet wher
 You want to freeze the first three columns on the left, two columns on the right, and the first row:  
 
 ```4d
-C_OBJECT($panes)
+var $panes : Object
  
 $panes:=New object
 $panes.columnCount:=3

@@ -33,7 +33,7 @@ Vous pouvez définir où obtenir le nombre de colonnes dans le paramètre option
 Le code suivant retourne le nombre de colonnes dans la zone 4D View Pro :
 
 ```4d
-C_INTEGER($colCount)
+var $colCount : Integer
 $colCount:=VP Get column count("ViewProarea")
 ```
 

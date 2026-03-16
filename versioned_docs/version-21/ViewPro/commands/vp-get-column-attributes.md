@@ -30,8 +30,8 @@ The returned collection contains any properties for the columns, whether or not 
 The following code:
 
 ```4d
-C_OBJECT($range)
-C_COLLECTION($attr)
+var $range : Object
+var $attr: Collection
  
 $range:=VP Column("ViewProArea";1;2)
 $attr:=VP Get column attributes($range)

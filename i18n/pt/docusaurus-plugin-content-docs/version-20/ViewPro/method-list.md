@@ -611,7 +611,7 @@ No parâmetro *4DViewDocument* , passe uma variável ou campo BLOB que contenha 
 Se quiser obter um objeto 4D View Pro de uma área 4D View armazenada em um BLOB:
 
 ```4d
-C_OBJECT($vpObj)
+var $vpObj : Object
 $vpObj:=VP Convert from 4D View($pvblob)
 ```
 
@@ -666,8 +666,8 @@ O comando devolve uma imagem em formato SVG.
 Pretende converter uma área 4D View Pro em SVG, pré-visualizar o resultado e enviá-lo para uma variável imagem:
 
 ```4d
-C_OBJECT($vpAreaObj)
-C_PICTURE($vPict)
+var $vpAreaObj : Object
+var $vPict : Picture
 $vpAreaObj:=VP Export to object("ViewProArea")
 $vPict:=VP Convert to picture($vpAreaObj) //exportar toda a área
 ```
@@ -1551,8 +1551,8 @@ A coleção retornada contém todas as propriedades das colunas, independentemen
 O seguinte código:
 
 ```4d
-C_OBJECT($range)
-C_COLLECTION($attr)
+var $range : Object
+var $attr: Collection
 
 $range:=VP Column("ViewProArea";1;2)
 $attr:=VP Get column attributes($range)
@@ -1595,7 +1595,7 @@ Você pode definir onde obter a contagem de colunas no parâmetro opcional *shee
 O código seguinte retorna o número de colunas na área 4D View Pro:
 
 ```4d
-C_INTEGER($colCount)
+var $colCount : Integer
 $colCount:=VP Get column count("ViewProarea")
 ```
 
@@ -1606,7 +1606,7 @@ $colCount:=VP Get column count("ViewProarea")
 ### VP Get current sheet
 
 <!-- REF #_method_.VP Get current sheet.Syntax -->
-**VP Get current sheet** ( *vpAreaName* : Text )<!-- END REF -->
+**VP Get current sheet** ( *vpAreaName* : Text ) : Integer<!-- END REF -->
 
 <!-- REF #_method_.VP Get current sheet.Params -->
 <div class="no-index">
@@ -4487,7 +4487,7 @@ No parâmetro *methodObj* , passe um objeto no qual cada propriedade é o nome d
 Pretende permitir dois métodos nas suas áreas 4D View Pro:
 
 ```4d
-C_OBJECT($allowed)
+var $allowed : Object
 $allowed:=New object //parameter for the command
 
 $allowed. Hello:=New object //create a first simple function named "Hello"
@@ -4772,7 +4772,7 @@ O parâmetro *propertyObj* permite-lhe especificar os atributos a aplicar às co
 Para alterar o tamanho da segunda coluna e definir o cabeçalho, escreve-se:
 
 ```4d
-C_OBJECT($column;$properties)
+var $column; $properties : Object
 
 $column:=VP Column("ViewProArea";1) //column B
 $properties:=New object("width";100;"header";"Hello World") VP SET COLUMN ATTRIBUTES($column;$properties)
@@ -5427,7 +5427,7 @@ No parâmetro opcional *sheet*, pode designar uma folha específica onde o inter
 Você deseja congelar as três primeiras colunas à esquerda, duas colunas à direita e a primeira linha:
 
 ```4d
-C_OBJECT($panes)
+var $panes : Object
 
 $panes:=New object
 $panes.columnCount:=3

@@ -32,8 +32,8 @@ title: VP Get column attributes
 以下のコードは:
 
 ```4d
-C_OBJECT($range)
-C_COLLECTION($attr)
+var $range : Object
+var $attr: Collection
  
 $range:=VP Column("ViewProArea";1;2)
 $attr:=VP Get column attributes($range)

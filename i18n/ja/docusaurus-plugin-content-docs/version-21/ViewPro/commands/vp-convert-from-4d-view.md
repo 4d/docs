@@ -32,7 +32,7 @@ title: VP Convert from 4D View
 BLOB に保存されている 4D View エリアから 4D View Pro オブジェクトを取得します:
 
 ```4d
-C_OBJECT($vpObj)
+var $vpObj : Object
 $vpObj:=VP Convert from 4D View($pvblob)
 ```
 

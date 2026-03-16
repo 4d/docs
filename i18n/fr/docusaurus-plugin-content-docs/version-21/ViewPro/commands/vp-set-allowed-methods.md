@@ -46,7 +46,7 @@ Dans le paramètre *methodObj*, passez un objet dans lequel chaque propriété e
 Vous souhaitez autoriser deux méthodes dans vos zones 4D View Pro :
 
 ```4d
-C_OBJECT($allowed)
+var $allowed : Object
 $allowed:=New object //paramètre pour la commande
  
 $allowed.Hello:=New object //créer une première fonction simple nommée "Hello"

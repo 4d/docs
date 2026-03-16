@@ -33,7 +33,7 @@ You can define where to get the column count in the optional *sheet* parameter u
 O código seguinte retorna o número de colunas na área 4D View Pro:
 
 ```4d
-C_INTEGER($colCount)
+var $colCount : Integer
 $colCount:=VP Get column count("ViewProarea")
 ```
 

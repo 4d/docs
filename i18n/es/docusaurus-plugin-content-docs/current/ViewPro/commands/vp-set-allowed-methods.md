@@ -46,7 +46,7 @@ En el parámetro *methodObj*, pase un objeto en el que cada propiedad es el nomb
 Usted quiere autorizar dos métodos en sus áreas 4D View Pro:
 
 ```4d
-C_OBJECT($allowed)
+var $allowed : Object
 $allowed:=New object //parámetro para el comando
  
 $allowed.Hello:=New object //crea una primera función simple llamada "Hello"

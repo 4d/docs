@@ -633,7 +633,7 @@ In the *4DViewDocument* parameter, pass a BLOB variable or field containing the 
 You want to get a 4D View Pro object from a 4D View area stored in a BLOB:
 
 ```4d
-C_OBJECT($vpObj)
+var $vpObj : Object
 $vpObj:=VP Convert from 4D View($pvblob)
 ```
 
@@ -690,8 +690,8 @@ The command returns a picture in SVG format.
 You want to convert a 4D View Pro area in SVG, preview the result, and send it to a picture variable:
 
 ```4d
-C_OBJECT($vpAreaObj)
-C_PICTURE($vPict)
+var $vpAreaObj : Object
+var $vPict : Picture
 $vpAreaObj:=VP Export to object("ViewProArea")
 $vPict:=VP Convert to picture($vpAreaObj) //export the whole area
 ```
@@ -1582,8 +1582,8 @@ The returned collection contains any properties for the columns, whether or not 
 The following code:
 
 ```4d
-C_OBJECT($range)
-C_COLLECTION($attr)
+var $range : Object
+var $attr: Collection
 
 $range:=VP Column("ViewProArea";1;2)
 $attr:=VP Get column attributes($range)
@@ -1626,7 +1626,7 @@ You can define where to get the column count in the optional *sheet* parameter u
 The following code returns the number of columns in the 4D View Pro area:
 
 ```4d
-C_INTEGER($colCount)
+var $colCount : Integer
 $colCount:=VP Get column count("ViewProarea")
 ```
 
@@ -1637,7 +1637,7 @@ $colCount:=VP Get column count("ViewProarea")
 ### VP Get current sheet
 
 <!-- REF #_method_.VP Get current sheet.Syntax -->
-**VP Get current sheet** ( *vpAreaName* : Text )<!-- END REF -->
+**VP Get current sheet** ( *vpAreaName* : Text ) : Integer<!-- END REF -->
 
 <!-- REF #_method_.VP Get current sheet.Params -->
 <div class="no-index">
@@ -4550,7 +4550,7 @@ In the *methodObj* parameter, pass an object in which each property is the name 
 You want to allow two methods in your 4D View Pro areas:
 
 ```4d
-C_OBJECT($allowed)
+var $allowed : Object
 $allowed:=New object //parameter for the command
 
 $allowed.Hello:=New object //create a first simple function named "Hello"
@@ -4844,7 +4844,7 @@ The *propertyObj* parameter lets you specify the attributes to apply to the colu
 To change the size of the second column and set the header, you write:
 
 ```4d
-C_OBJECT($column;$properties)
+var $column; $properties : Object
 
 $column:=VP Column("ViewProArea";1) //column B
 $properties:=New object("width";100;"header";"Hello World")
@@ -5518,7 +5518,7 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet wher
 You want to freeze the first three columns on the left, two columns on the right, and the first row:  
 
 ```4d
-C_OBJECT($panes)
+var $panes : Object
 
 $panes:=New object
 $panes.columnCount:=3

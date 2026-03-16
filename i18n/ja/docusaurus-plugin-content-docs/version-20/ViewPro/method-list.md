@@ -614,7 +614,7 @@ $cells:=VP Cells("ViewProArea";2;4;2;3) // C5 から D7
 BLOB に保存されている 4D View エリアから 4D View Pro オブジェクトを取得します:
 
 ```4d
-C_OBJECT($vpObj)
+var $vpObj : Object
 $vpObj:=VP Convert from 4D View($pvblob)
 ```
 
@@ -669,8 +669,8 @@ $vpObj:=VP Convert from 4D View($pvblob)
 4D View Pro エリアを SVG に変換し、結果をプレビューするためピクチャー変数に戻り値を代入します:
 
 ```4d
-C_OBJECT($vpAreaObj)
-C_PICTURE($vPict)
+var $vpAreaObj : Object
+var $vPict : Picture
 $vpAreaObj:=VP Export to object("ViewProArea")
 $vPict:=VP Convert to picture($vpAreaObj) // エリア全体を書き出します
 ```
@@ -1559,8 +1559,8 @@ $cellStyle:=VP Get cell style(VP Get selection("myDoc"))
 以下のコードは:
 
 ```4d
-C_OBJECT($range)
-C_COLLECTION($attr)
+var $range : Object
+var $attr: Collection
 
 $range:=VP Column("ViewProArea";1;2)
 $attr:=VP Get column attributes($range)
@@ -1603,7 +1603,7 @@ $attr:=VP Get column attributes($range)
 以下のコードを実行すると、4D View Pro エリア内のカラムの数が返されます:
 
 ```4d
-C_INTEGER($colCount)
+var $colCount : Integer
 $colCount:=VP Get column count("ViewProarea")
 ```
 
@@ -1614,7 +1614,7 @@ $colCount:=VP Get column count("ViewProarea")
 ### VP Get current sheet
 
 <!-- REF #_method_.VP Get current sheet.Syntax -->
-**VP Get current sheet** ( *vpAreaName* : Text )<!-- END REF -->
+**VP Get current sheet** ( *vpAreaName* : Text ) : Integer<!-- END REF -->
 
 <!-- REF #_method_.VP Get current sheet.Params -->
 <div class="no-index">
@@ -4513,7 +4513,7 @@ VP SET ACTIVE CELL($activeCell)
 4D View Pro エリアにおいて、2つのメソッドを許可します:
 
 ```4d
-C_OBJECT($allowed)
+var $allowed : Object
 $allowed:=New object // コマンドに渡す引数
 
 $allowed.Hello:=New object // "Hello" という名前の 1つ目の簡単なファンクションを作成します
@@ -4806,7 +4806,7 @@ VP SET CELL STYLE(VP Cell("ViewProArea";1;1);$style)
 2列目のカラムの幅を変更して、ヘッダーを設定します:
 
 ```4d
-C_OBJECT($column;$properties)
+var $column; $properties : Object
 
 $column:=VP Column("ViewProArea";1) // カラムB を取得
 $properties:=New object("width";100;"header";"Hello World")
@@ -5475,7 +5475,7 @@ VP SET FORMULAS(VP Cell("ViewProArea";0;0);$formulas) // セルに割り当て�
 左側の最初の 3つのカラム、右側にある 2つのカラム、そして最初の行を固定化します:
 
 ```4d
-C_OBJECT($panes)
+var $panes : Object
 
 $panes:=New object
 $panes.columnCount:=3

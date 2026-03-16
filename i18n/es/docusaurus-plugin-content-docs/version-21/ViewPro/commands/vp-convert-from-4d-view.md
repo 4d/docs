@@ -32,7 +32,7 @@ En el parámetro *4DViewDocument*, pase una variable o un campo BLOB que conteng
 Quiere obtener un objeto 4D View Pro a partir de un área 4D View almacenada en un BLOB:
 
 ```4d
-C_OBJECT($vpObj)
+var $vpObj : Object
 $vpObj:=VP Convert from 4D View($pvblob)
 ```
 

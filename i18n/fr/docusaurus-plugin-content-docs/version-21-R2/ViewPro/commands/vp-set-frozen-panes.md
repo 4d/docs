@@ -47,7 +47,7 @@ Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifi
 Vous souhaitez figer les trois premières colonnes de gauche, deux colonnes de droite et la première ligne :
 
 ```4d
-C_OBJECT($panes)
+var $panes : Object
  
 $panes:=New object
 $panes.columnCount:=3

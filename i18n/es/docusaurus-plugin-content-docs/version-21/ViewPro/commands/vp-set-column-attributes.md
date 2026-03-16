@@ -40,7 +40,7 @@ The *propertyObj* parameter lets you specify the attributes to apply to the rows
 Para cambiar el tamaño de la segunda columna y definir el encabezado, se escribe:
 
 ```4d
-C_OBJECT($column;$properties)
+var $column; $properties : Object
  
 $column:=VP Column("ViewProArea";1) //column B
 $properties:=New object("width";100;"header";"Hello World")

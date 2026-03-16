@@ -47,7 +47,7 @@ En el parámetro opcional *sheet*, puede designar una hoja específica donde se 
 Quiere congelar las tres primeras columnas de la izquierda, dos columnas de la derecha y la primera línea:
 
 ```4d
-C_OBJECT($panes)
+var $panes : Object
  
 $panes:=New object
 $panes.columnCount:=3

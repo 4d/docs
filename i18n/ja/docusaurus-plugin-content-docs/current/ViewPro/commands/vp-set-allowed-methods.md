@@ -46,7 +46,7 @@ title: VP SET ALLOWED METHODS
 4D View Pro エリアにおいて、2つのメソッドを許可します:
 
 ```4d
-C_OBJECT($allowed)
+var $allowed : Object
 $allowed:=New object // コマンドに渡す引数
 
 $allowed.Hello:=New object // "Hello" という名前の 1つ目の簡単なファンクションを作成します
