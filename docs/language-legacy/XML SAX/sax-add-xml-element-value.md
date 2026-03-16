@@ -5,15 +5,15 @@ slug: /commands/sax-add-xml-element-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX ADD XML ELEMENT VALUE.Syntax-->**SAX ADD XML ELEMENT VALUE** ( *document* : Time ; *data* : Text, Variable {; *} )<!-- END REF-->
+<!--REF #_command_.SAX ADD XML ELEMENT VALUE.Syntax-->**SAX ADD XML ELEMENT VALUE** ( *document* : Time ; *data* : Text, Variable, Field {; *} )<!-- END REF-->
 <!--REF #_command_.SAX ADD XML ELEMENT VALUE.Params-->
 <div class="no-index">
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | document | Time | &#8594;  | Reference of open document |
-| data | Text, Variable | &#8594;  | Text or variable to insert in the document |
-| * | Operator | &#8594;  | If passed: encoding of special characters If omitted: no encoding |
+| data | Text, Variable, Field | &#8594;  | Text or variable/field to insert in the document |
+| * | Operator | &#8594;  | If passed: encoding of special characters. If omitted: no encoding |
 </div>
 <!-- END REF-->
 
@@ -33,9 +33,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SAX ADD XML ELEMENT VALUE.Summary-->In the XML document referenced by *document*, the **SAX ADD XML ELEMENT VALUE** command adds *data* directly without converting them.<!-- END REF--> This command is equivalent, for instance, to inserting an attachment in the body of an e-mail. 
 
-In *data*, you can either pass a character string directly, or a 4D variable. The variable contents will be converted into text before being included in the XML document. If *data* is evaluated to *undefined*, 4D uses an empty string. If you want to encode the contents of *data*, you must use the [BASE64 ENCODE](../commands/base64-encode) command. In this case, of course, you must passs a BLOB in *data*.
+In *data*, you can either pass a character string directly, or a 4D variable or field. The variable or field contents will be converted into text before being included in the XML document. If *data* is evaluated to *undefined*, 4D uses an empty string. If you want to encode the contents of *data*, you must use the [BASE64 ENCODE](../commands/base64-encode) command. In this case, of course, you must passs a BLOB in *data*.
 
-By default, the command encodes special characters (< > ” ’...) contained in the *data* parameter unless you have disabled this mechanism for the current process using the [XML SET OPTIONS](../commands/xml-set-options) command by passing the XML raw data value to the XML string encoding option. For example:  
+By default, the command encodes special characters (\< > ” ’...) contained in the *data* parameter unless you have disabled this mechanism for the current process using the [XML SET OPTIONS](../commands/xml-set-options) command by passing the XML raw data value to the XML string encoding option. For example:  
 
 ```4d
  XML SET OPTIONS($docRef;XML string encoding;XML raw data)
