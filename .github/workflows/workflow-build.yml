@@ -59,3 +59,4 @@ jobs:
         with:
           path: ./build
           name: build-locale-${{ matrix.language }}
+          retention-days: 5

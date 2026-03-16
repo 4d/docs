@@ -29,3 +29,4 @@ jobs:
         with:
           path: ./build
           name: static-doc-${{ matrix.language }}
+          retention-days: 5
