@@ -5,7 +5,7 @@ slug: /commands/array-to-collection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY TO COLLECTION.Syntax-->**ARRAY TO COLLECTION** ( *collection* : Collection ; *...array* : Array {; *...propertyName* : Text} )<!-- END REF-->
+<!--REF #_command_.ARRAY TO COLLECTION.Syntax-->**ARRAY TO COLLECTION** ( *collection* : Collection ; ...(*array* : Array {; *propertyName* : Text} )<!-- END REF-->
 <!--REF #_command_.ARRAY TO COLLECTION.Params-->
 <div class="no-index">
 
