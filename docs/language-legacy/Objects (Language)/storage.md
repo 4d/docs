@@ -93,7 +93,7 @@ This example shows a standard way to set **Storage** values:
 
 ## See also 
 
-*Shared objects and shared collections*  
+[Shared objects and shared collections](../../Concepts/shared.md)  
 
 ## Properties
 

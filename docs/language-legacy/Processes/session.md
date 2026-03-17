@@ -20,6 +20,7 @@ displayed_sidebar: docs
 
 |Release|Changes|
 |---|---|
+|21 R3|Support of remote sessions on the client machine|
 |20 R8|Support of standalone sessions|
 |20 R5|Support of remote client and stored procedure sessions|
 |18 R6|Added|
@@ -34,17 +35,13 @@ The `Session` command <!-- REF #_command_.Session.Summary -->returns the `Sessio
 Depending on the process from which the command is called, the current session can be:
 
 - a web session (when [scalable sessions are enabled](../../WebServer/sessions.md#enabling-web-sessions)),
-- a remote user session (on the server),
+- a remote user session (on the server or on the client),
 - a stored procedures session,
 - a standalone session.
 
 For more information, see the [Session types](../../API/SessionClass.md#session-types) paragraph.
 
-The command returns *Null* if:
-
-- it is called in a web process and scalable sessions are disabled on the web server,
-- it is called on a remote 4D client.
-
+The command returns *Null* if it is called in a web process and scalable sessions are disabled on the web server. 
 
 ### Web sessions
 
@@ -56,18 +53,18 @@ The `Session` object of web sessions is available from any web process:
 - [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) and [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action) database methods for mobile requests,
 - ORDA functions [called with REST requests](../../REST/ClassFunctions.md).
 
-For more information on web user sessions, please refer to the [Web Server Sessions](../../WebServer/sessions.md) section.
-
 ### Remote user sessions
 
-The `Session` object of remote user sessions is available from:
+The [remote user `session`](../../Desktop/sessions.md#remote-user-sessions) object is available on the server and on the client. Both objects are similar, except that they don't share the same [session.`storage`](../../API/SessionClass.md#storage) property and the client session cannot set privileges (see [this paragraph](../../Desktop/sessions.md#comparing-server-side-and-client-side-user-session-objects) for more information).
 
-- Project methods that have the [Execute on Server](../../Project/project-method-properties.md#execute-on-server) attribute (they are executed in the "twinned" process of the client process),
-- Triggers,
-- ORDA [data model functions](../../ORDA/ordaClasses.md) (except those declared with the [`local`](../../ORDA/ordaClasses.md#local-functions) keyword, 
-- `On Server Open Connection` and `On Server Shutdown Connection` database methods.
+The `Session` object of a remote user session is available:
 
-For more information on remote user sessions, please refer to the [**Remote user sessions**](../../Desktop/sessions.md#remote-user-sessions) paragraph.
+- On the server, from code running in the user context, such as project methods that have the [Execute on Server](../../Project/project-method-properties.md#execute-on-server) attribute (they are executed in the "twinned" process of the client process) or ORDA [data model functions](../../ORDA/ordaClasses.md).
+- On the client, from code running locally, such as in project methods or ORDA data model functions with the *local* property.
+
+For more information, see [the "Availability" paragraph](../../Desktop/sessions.md#availability). 
+
+
 
 ### Stored procedures session
 
@@ -143,7 +140,9 @@ IP:port/4DACTION/action_Session
 [Session API](../../API/SessionClass.md) 
 [Desktop sessions](../../Desktop/sessions.md) 
 [Web server user sessions](../../WebServer/sessions.md)  
-[*Scalable sessions for advanced web applications* (blog post)](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
+[*Scalable sessions for advanced web applications* (blog post)](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)  
+[*4D remote session object with Client/Server connection and Stored procedure*](https://blog.4d.com/new-4D-remote-session-object-with-client-server-connection-and-stored-procedure)  
+[*Client / server – Handle a session when working on a 4D client*](https://blog.4d.com/client-server-handle-a-session-when-working-on-a-4d-client)  
 
 
 
