@@ -48,12 +48,12 @@ title: VP SET FROZEN PANES
 
 ```4d
 var $panes : Object
-
+ 
 $panes:=New object
 $panes.columnCount:=3
 $panes.trailingColumnCount:=2
 $panes.rowCount:=1
-
+ 
 VP SET FROZEN PANES("ViewProArea";$panes)
 ```
 

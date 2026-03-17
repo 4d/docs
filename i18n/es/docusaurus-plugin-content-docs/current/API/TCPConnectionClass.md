@@ -28,7 +28,7 @@ Para la depuración y monitorización, puede utilizar el [archivo de registro 4D
 
 :::
 
-### Aynchronous programming
+### Programación asíncrona
 
 This class supports asynchronous programming in 4D as described in the [Asynchronous Execution](../Develop/async.md) page.
 

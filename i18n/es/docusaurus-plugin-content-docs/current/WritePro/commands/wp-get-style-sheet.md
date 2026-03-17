@@ -44,7 +44,7 @@ If the style sheet is part of a hierarchical list style sheet, you can optionall
 
 - *listLevelIndex* represents the level of the style sheet in the hierarchy (1 = root level, 2 = first sub-level, etc.).
 - If the parameter is omitted and the style sheet is hierarchical, the root-level style sheet is returned.
-- If the requested level does not exist, a null object is returned.
+- Si el nivel solicitado no existe, se devuelve un objeto null.
 - If the style sheet is not a hierarchical list style sheet and *listLevelIndex* is greater than 1, a null object is returned.
 
 ## Ejemplo 1

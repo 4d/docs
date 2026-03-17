@@ -1,13 +1,13 @@
 ---
 id: async
-title: Asynchronous Execution
+title: Ejecución asíncrona
 ---
 
 4D supports both **synchronous** and **asynchronous** execution modes, allowing developers to choose the best approach based on performance, responsiveness, and workload distribution.
 
 ## Básicos
 
-#### Synchronous Execution
+#### Ejecución sincrónica
 
 Synchronous execution follows a **sequential** flow, a step-by-step where each instruction must complete before the next one starts. This means the execution thread is blocked until the operation finishes.
 
@@ -15,29 +15,29 @@ Synchronous execution is used when:
 
 - Task execution must follow a strict order.
 - Performance impact is minimal (e.g., quick operations).
-- Running in a single-threaded context where blocking is acceptable.
+- Se ejecuta en un contexto de un solo hilo donde el bloqueo es aceptable.
 - Synchronous execution blocks the UI and is best suited for quick, ordered tasks where blocking is acceptable.
 
-#### Asynchronous Execution
+#### Ejecución asíncrona
 
 Asynchronous execution is **event-driven** and allows tasks other operations to complete. It relies on **callbacks**, **workers**, and **event handlers** to manage execution flow.
 
-Asynchronous execution is used when:
+La ejecución asíncrona se utiliza cuando:
 
 - An operation takes a long time (e.g., waiting for a server response).
 - Responsiveness is critical (e.g., UI interactions).
 - Performing background tasks, network communication, or parallel processing.
 
-Choosing Between Synchronous and Asynchronous Execution:
+Elegir entre ejecución síncrona y asíncrona:
 
-| Scenario                                   | Mejor enfoque    |
-| ------------------------------------------ | ---------------- |
-| Quick operations with minimal processing   | **Síncrono**     |
-| Tasks requiring strict execution order     | **Síncrono**     |
-| Long-running background tasks              | **Asynchronous** |
-| Long-running UI interactions               | **Asynchronous** |
-| Short-running UI interactions              | **Síncrono**     |
-| High-performance, multi-threaded workloads | **Asynchronous** |
+| Scenario                                               | Mejor enfoque    |
+| ------------------------------------------------------ | ---------------- |
+| Operaciones rápidas con un procesamiento mínimo        | **Síncrono**     |
+| Tareas que requieren un orden de ejecución estricto    | **Síncrono**     |
+| Tareas en segundo plano de larga duración              | **Asynchronous** |
+| Long-running UI interactions                           | **Asynchronous** |
+| Interacciones de interfaz de usuario de corta duración | **Síncrono**     |
+| High-performance, multi-threaded workloads             | **Asynchronous** |
 
 ## Principios básicos
 
@@ -57,7 +57,7 @@ Using worker processes in asynchronous programming **is mandatory** since "class
 
 Each worker (or form window for [`CALL FORM`](../commands-legacy/call-form.md)) has its own message queue. [`CALL WORKER`](../commands-legacy/call-worker.md) or [`CALL FORM`](../commands-legacy/call-form.md) simply posts a message to this queue. The worker handles messages one by one, in the order they arrive, within its own context. Process variables, current selections, etc. are preserved.
 
-### Bidirectional communication via messages
+### Comunicación bidireccional mediante mensajes
 
 The calling process posts a message then the worker executes it. The worker can in turn post a message (via [`CALL WORKER`](../commands-legacy/call-worker.md) or [`CALL FORM`](../commands-legacy/call-form.md)) back to the caller or another worker to notify an event (task completion, data received, error, progress, etc.). This mechanism replaces the classic return of synchronous calls.
 
@@ -89,7 +89,7 @@ Para las clases asíncronas, 4D mantiene siempre una **referencia adicional** en
 
 Si desea "forzar" la liberación de un objeto en cualquier momento, utilice un `. hutdown()` o función `terminate()`; desencadena el evento 'onTerminate\` así libera el objeto.
 
-### Examples illustrating the common concept
+### Ejemplos que ilustran el concepto común
 
 | Feature                         | Async Launch                                                                          | Callback / Event Handling                                           |
 | ------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
@@ -97,7 +97,7 @@ Si desea "forzar" la liberación de un objeto en cualquier momento, utilice un `
 | CALL FORM                       | CALL FORM($win; "MyMethod"; $params)                               | MyMethod se llama con $params                                       |
 | 4D.SystemWorker | 4D.SystemWorker.new(cmd; $options) | Callbacks: onData, onResponse, onError, onTerminate |
 
-## Asynchronous programming with 4D classes
+## Programación asíncrona con clases 4D
 
 Several 4D classes support asynchronous processing:
 
@@ -111,7 +111,7 @@ Several 4D classes support asynchronous processing:
 
 All these classes follow the same rules regarding asynchronous execution. Su constructor acepta un parámetro *options* que se usa para configurar su objeto asíncrono. It is recommended that the *options* object is a [user class](../Concepts/classes.md) instance which has callback functions. Por ejemplo, puede crear una función `onResponse()` en la clase, que será llamada automáticamente de forma asíncrona cuando se dispare un evento *reponse*.
 
-We recommend the following sequence:
+Recomendamos la siguiente secuencia:
 
 1. You create the user class where you declare callback functions, for example a `cs.Params` with `onError()` and `onResponse()` functions.
 2. You instantiate the user class (in our example using `cs.Params.new()`) that will configure your asynchronous object.

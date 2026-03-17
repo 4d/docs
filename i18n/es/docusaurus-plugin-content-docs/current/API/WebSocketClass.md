@@ -15,7 +15,7 @@ Las conexiones cliente WebSocket son útiles, por ejemplo, para recibir datos fi
 
 </details>
 
-### Aynchronous programming
+### Programación asíncrona
 
 This class supports asynchronous programming in 4D as described in the [Asynchronous Execution](../Develop/async.md) page.
 

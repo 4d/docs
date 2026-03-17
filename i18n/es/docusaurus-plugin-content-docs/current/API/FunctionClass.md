@@ -16,7 +16,7 @@ Un objeto **`4D.Function`** contiene un trozo de código que puede ser ejecutado
 
 ### Ejecución del código en los objetos Function
 
-Function objects can be encapsulated in object properties:
+Los objetos Function pueden encapsularse en las propiedades de objeto:
 
 ```4d
 var $message : 4D.Formula
@@ -39,7 +39,7 @@ También se admite la sintaxis con paréntesis:
 Note that, even if it does not have parameters (see below), an object function to be executed must be called with `()` parenthesis. Llamar sólo a la propiedad del objeto devolverá una nueva referencia a la fórmula (y no la ejecutará):
 
 ```4d
- $o:=$f.message //returns the function object in $o
+ $o:=$f.message //devuelve el objeto función en $o
 ```
 
 You can also execute a function using the [`apply()`](#apply) and [`call()`](#call):

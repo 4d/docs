@@ -42,7 +42,7 @@ Pour modifier la taille de la deuxième colonne et définir un en-tête, le code
 ```4d
 var $column; $properties : Object
  
-$column:=VP Column("ViewProArea";1) //colonne B
+$column:=VP Column("ViewProArea";1) //column B
 $properties:=New object("width";100;"header";"Hello World")
  
 VP SET COLUMN ATTRIBUTES($column;$properties)

@@ -599,7 +599,7 @@ El parámetro opcional *propertyPath* permite contar valores dentro de una colec
 | ------------ | ---------- | :-------------------------: | ------------------------------------------------------- |
 | propertyPath | Text       |              ->             | Ruta del atributo cuyos valores distintos desea obtener |
 | options      | Integer    |              ->             | `ck diacritical`, `ck count values`                     |
-| Resultado    | Collection | <- | New collection with only distinct values                |
+| Resultado    | Collection | <- | Nueva colección con sólo valores distintos              |
 
 </div>
 <!-- END REF -->

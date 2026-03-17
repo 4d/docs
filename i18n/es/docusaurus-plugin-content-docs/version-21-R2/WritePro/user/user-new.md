@@ -13,7 +13,7 @@ para importar
 4D Write Pro soporta dos tipos principales de listas:
 
 - listas desordenadas: donde los elementos de la lista se marcan con viñetas, viñetas personalizadas o imágenes utilizadas como marcadores.
-- ordered lists: where list items are marked with numbers or letters
+- listas ordenadas: en las que los elementos de la lista se marcan con números o letras
 
 Pueden crearse utilizando:
 

@@ -14,10 +14,10 @@ para importar
 
 ### Single-level lists
 
-4D Write Pro supports two main types of single-level lists:
+4D Write Pro soporta dos tipos principales de listas de un solo nivel:
 
 - listas desordenadas: donde los elementos de la lista se marcan con viñetas, viñetas personalizadas o imágenes utilizadas como marcadores.
-- ordered lists: where list items are marked with numbers or letters
+- listas ordenadas: en las que los elementos de la lista se marcan con números o letras
 
 Pueden crearse utilizando:
 
@@ -50,7 +50,7 @@ When a new sub-level is created, the level numbering restarts at 1. When you add
 
 Multi-level lists are created by applying a hierarchical list style sheet to a paragraph using [WP SET ATTRIBUTE](../commands/wp-set-attributes.md).
 
-Multi-level lists can be managed using:
+Listas de varios niveles pueden ser gestionadas usando:
 
 - paragraph [style sheet attributes](../commands-legacy/4d-write-pro-attributes.md#style-sheets) (such as `wk list level index`, `wk list level count`, and `wk list concat string format`)
 - dedicated [standard actions](../user-legacy/standard-actions.md) for level management (`listLevelAppend`, `listLevelInc`, `listLevelDec`)
@@ -122,10 +122,10 @@ resultado:
 
 When created, hierarchical list style sheets use predefined values:
 
-- `wk margin left` = 0.75 cm × (number of previous levels)
+- `wk margen izquierdo` = 0,75 cm × (número de niveles anteriores)
 - `wk list type` = `wk decimal`
 - `wk name` is derived from the root style sheet name (Read-only for sub-levels)
-- `wk list level count` is set to the specified value for all levels
+- `wk list level count` se fija en el valor especificado para todos los niveles
 
   - Ejemplo:
 

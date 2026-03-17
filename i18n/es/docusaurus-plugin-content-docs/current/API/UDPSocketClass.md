@@ -23,7 +23,7 @@ Para depuración y monitorización, puede utilizar el fichero de registro [4DTCP
 
 :::
 
-### Aynchronous programming
+### Programación asíncrona
 
 This class supports asynchronous programming in 4D as described in the [Asynchronous Execution](../Develop/async.md) page.
 

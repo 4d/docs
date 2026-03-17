@@ -213,9 +213,9 @@ Esta propiedad es **de sólo lectura**.
 <!--REF #FileHandleClass.getSize().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|Result|Real|<-|Size of the document in bytes|
+|Resultado|Real|<-|Size of the document in bytes|
 </div>
 <!-- END REF -->
 
@@ -360,9 +360,9 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 <!--REF #FileHandleClass.readLine().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|Result|Text|<-|Line of text|
+|Parámetro|Tipo||Descripción|
+|---|----|---|---|
+|Resultado|Text|<-|Line of text|
 </div>
 <!-- END REF -->
 

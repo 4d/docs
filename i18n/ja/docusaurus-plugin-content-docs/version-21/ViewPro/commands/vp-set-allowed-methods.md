@@ -47,13 +47,13 @@ title: VP SET ALLOWED METHODS
 
 ```4d
 var $allowed : Object
-$allowed:=New object // コマンドに渡す引数
-
-$allowed.Hello:=New object // "Hello" という名前の 1つ目の簡単なファンクションを作成します
-$allowed.Hello.method:="My_Hello_Method" // 4Dメソッドを設定します
+$allowed:=New object //parameter for the command
+ 
+$allowed.Hello:=New object //create a first simple function named "Hello"
+$allowed.Hello.method:="My_Hello_Method" //sets the 4D method
 $allowed.Hello.summary:="Hello prints hello world"
-
-$allowed.Byebye:=New object // "Byebye" という名前の、引数を受け付ける 2つ目のファンクションを作成
+ 
+$allowed.Byebye:=New object //create a second function with parameters named "Byebye"
 $allowed.Byebye.method:="My_ByeBye_Method"
 $allowed.Byebye.parameters:=New collection
 $allowed.Byebye.parameters.push(New object("name";"Message";"type";Is text))
@@ -62,7 +62,7 @@ $allowed.Byebye.parameters.push(New object("name";"Time";"type";Is time))
 $allowed.Byebye.summary:="Byebye prints a custom timestamp"
 $allowed.Byebye.minParams:=3
 $allowed.Byebye.maxParams:=3
-
+ 
 VP SET ALLOWED METHODS($allowed)
 ```
 

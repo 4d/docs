@@ -15,7 +15,7 @@ La clase `HTTPRequest` permite manejar [objetos `HTTPRequest`](#httprequest-obje
 
 La clase `HTTPRequest` está disponible en el class store `4D`. Para crear y enviar peticiones HTTP se utiliza la función [4D.HTTPRequest.new()](#4dhttprequestnew), que devuelve un [objeto `HTTPRequest`](#httprequest-object).
 
-### Aynchronous programming
+### Programación asíncrona
 
 This class supports asynchronous programming in 4D as described in the [Asynchronous Execution](../Develop/async.md) page.
 
@@ -98,7 +98,7 @@ Los objetos HTTPRequest ofrecen las siguientes propiedades y funciones:
 
 | Lanzamiento | Modificaciones                                                    |
 | ----------- | ----------------------------------------------------------------- |
-| 21 R3       | Support of *storeCertificateName* property on macOS               |
+| 21 R3       | Soporte de la propiedad *storeCertificateName* en macOS           |
 | 21          | Support of *storeCertificateName* property on Windows             |
 | 20          | Validación TLS por defecto                                        |
 | 19 R7       | Soporte de las propiedades *automaticRedirections* y *decodeData* |

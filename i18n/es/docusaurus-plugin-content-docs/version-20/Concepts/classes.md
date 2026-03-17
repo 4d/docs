@@ -664,9 +664,9 @@ $message:=$square.description() //tengo 4 lados iguales
 <!-- REF #_command_.This.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|  
+|Parámetro|Tipo||Descripción|  
 |---|---|---|---|
-|Result|Object|<-|Current object|
+|Resultado|Object|<-|Current object|
 </div>
 <!-- END REF -->
 

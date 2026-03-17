@@ -11,13 +11,13 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Parámetros     | Tipo    |                             | Descripción                             |
-| -------------- | ------- | --------------------------- | --------------------------------------- |
-| wpDoc          | Object  | &#8594; | Documento 4D Write Pro                  |
-| styleSheetType | Integer | &#8594; | Tipo de hoja de estilo                  |
-| styleSheetName | Text    | &#8594; | Nombre de la hoja de estilo             |
-| listLevelCount | Integer | &#8594; | Total number of levels in the hierarchy |
-| Resultado      | Object  | &#8592; | Objeto hoja de estilo                   |
+| Parámetros     | Tipo    |                             | Descripción                         |
+| -------------- | ------- | --------------------------- | ----------------------------------- |
+| wpDoc          | Object  | &#8594; | Documento 4D Write Pro              |
+| styleSheetType | Integer | &#8594; | Tipo de hoja de estilo              |
+| styleSheetName | Text    | &#8594; | Nombre de la hoja de estilo         |
+| listLevelCount | Integer | &#8594; | Número total de niveles jerárquicos |
+| Resultado      | Object  | &#8592; | Objeto hoja de estilo               |
 
 </div>
 <!-- END REF-->
@@ -39,16 +39,16 @@ displayed_sidebar: docs
 
 In the *wpDoc* parameter, pass a 4D Write Pro document.
 
-The *styleSheetType* parameter lets you designate the type of the style sheet, *i.e.* the part of the *wpDoc* that will be affected by the style sheet. Two types are available:
+The *styleSheetType* parameter lets you designate the type of the style sheet, *i.e.* the part of the *wpDoc* that will be affected by the style sheet. Hay dos tipos disponibles:
 
 - wk type character: Applies style attributes to characters.
 - wk type paragraph: Applies style attributes to paragraphs (required if you want to create [hierarchical list style sheets](#hierarchical-list-style-sheet)).
 
-Pass a name for the style sheet in the *styleSheetName* parameter. The style sheet's name is stored with the document and facilitates reusing or modifying the style. It can also be used with the [WP Get style sheet](../WritePro/commands/wp-get-style-sheet) and [WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet) commands. The style sheet name must comply with the following rules:
+Pase un nombre para la hoja de estilo en el parámetro *styleSheetName*. The style sheet's name is stored with the document and facilitates reusing or modifying the style. It can also be used with the [WP Get style sheet](../WritePro/commands/wp-get-style-sheet) and [WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet) commands. The style sheet name must comply with the following rules:
 
 - debe empezar por una letra
 - it can then contain alphanumeric characters, space characters, "-" characters or unicode characters >= 128
-- it must be unique in the document regardless of the type
+- debe ser único en el documento independientemente del tipo
 - it must not start with "section", which is reserved
 - the "\_" is replaced by a space and trailing spaces are removed.
 
@@ -69,7 +69,7 @@ The following predefined values are applied:
 
 - `wk list style type` is set to `wk decimal`
 - `wk list level index` is automatically assigned (1 for the root level, incremented for sub-levels)
-- `wk list level count` is set to the specified value for all levels
+- `wk list level count` se fija en el valor especificado para todos los niveles
 - El margen izquierdo se calcula automáticamente (0,75 cm × índice de nivel)
 
 If the parameter is omitted or set to 0, a standard (non-list) paragraph style sheet is created.
@@ -121,7 +121,7 @@ Resultado:
 - Las hojas de estilo de los subniveles:
   - have incremented `wk list level index` values (2 and 3)
   - comparte la misma `wk list level count`
-  - are automatically indented (0.75 cm × level index)
+  - se indentarán automáticamente (0,75 cm × índice de nivel)
   - reference the root style sheet through `wk root style`
 
 ## Ver también

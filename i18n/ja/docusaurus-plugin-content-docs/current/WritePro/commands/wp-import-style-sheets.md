@@ -11,27 +11,27 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| 引数        | 型      |                             | 説明                                             |
-| --------- | ------ | --------------------------- | ---------------------------------------------- |
-| targetDoc | Object | &#8594; | 4D Write Pro document to receive style sheets  |
-| sourceDoc | Object | &#8594; | 4D Write Pro document to get style sheets from |
+| 引数        | 型      |                             | 説明                                |
+| --------- | ------ | --------------------------- | --------------------------------- |
+| targetDoc | Object | &#8594; | スタイルシートを適用先となる4D Write Pro ドキュメント |
+| sourceDoc | Object | &#8594; | スタイルシートを取得元となる4D Write Pro ドキュメント |
 
 </div>
 <!-- END REF-->
 
 ## 説明
 
-<!--REF #_command_.WP IMPORT STYLE SHEETS.Summary-->The **WP IMPORT STYLE SHEETS** command imports all of the style sheets from the *sourceDoc* into the *targetDoc*.<!-- END REF-->
+<!--REF #_command_.WP IMPORT STYLE SHEETS.Summary-->**WP IMPORT STYLE SHEETS** コマンドは*sourceDoc* 引数で指定したドキュメントから全てのスタイルシートを読み込み、*targetDoc* 引数で指定したドキュメントへとインポートします。<!-- END REF-->
 
-In the *targetDoc* parameter, pass the 4D Write Pro document that will receive the imported style sheets.
+*targetDoc* 引数には、インポートされたスタイルシートを受け取る4D Write Pro ドキュメントを渡します。
 
-In the *sourceDoc* parameter, pass the 4D Write Pro document containing the style sheets to import.
+*sourceDoc* 引数には、インポートされるスタイルシートを格納している4D Write Pro ドキュメントを渡します。
 
-**Note**: If a style sheet from *sourceDoc* has the same name as a style sheet in *targetDoc*, the imported style sheet will overwrite (replace) the style sheet in the *targetDoc*.
+**注意**: *sourceDoc* のスタイルシートで、*targetDoc* 内のスタイルシートと同じ名前のものがあった場合、インポートされたスタイルシートは*targetDoc* 内の同名のスタイルシートを上書き(置換)します。
 
 ## 例題
 
-You want to import a template style sheet and receive a notification with the number for each type of style sheet imported:
+テンプレートとなるスタイルシートをインポートし、インポートされたスタイルシートの種類ごとの数の通知を受け取りたい場合を考えます:
 
 ```4d
  wpArea:=WP New

@@ -1177,9 +1177,9 @@ El siguiente código genérico duplica todas las entidades de la entity selectio
 <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|result|Text|<-|Context attributes linked to the entity selection, separated by a comma|
+|Parámetro|Tipo||Descripción|
+|---|----|---|---|
+|Resultado|Text|<-|Context attributes linked to the entity selection, separated by a comma|
 </div>
 <!-- END REF -->
 

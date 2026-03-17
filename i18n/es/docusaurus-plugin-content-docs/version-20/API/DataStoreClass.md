@@ -493,9 +493,9 @@ ds.unlock() //Nuestra copia ha terminado, ahora podemos desbloquear el datastore
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|Result|Collection|<-|Collection of optimization context objects|
+|Resultado|Collection|<-|Collection of optimization context objects|
 </div>
 <!-- END REF -->
 

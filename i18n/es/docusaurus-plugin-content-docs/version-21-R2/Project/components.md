@@ -340,7 +340,7 @@ Se crea un archivo `dependency-lock.json` en la carpeta [`userPreferences`](arch
 
 Este archivo registra información como el estado de las dependencias, rutas, urls, errores de carga, así como otra información. Podría ser útil para la gestión de la carga de componentes o la resolución de problemas.
 
-## Monitoring Project Dependencies {#monitoring-project-dependencies}
+## Monitoreo de dependencias del proyecto {#monitoring-project-dependencies}
 
 En un proyecto abierto, puede añadir, eliminar, actualizar y obtener información sobre las dependencias y su estado de carga actual en el panel **Dependencias**.
 

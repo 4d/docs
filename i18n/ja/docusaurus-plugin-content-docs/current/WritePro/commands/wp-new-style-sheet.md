@@ -11,13 +11,13 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| 引数             | 型       |                             | 説明                                      |
-| -------------- | ------- | --------------------------- | --------------------------------------- |
-| wpDoc          | Object  | &#8594; | 4D Write Pro ドキュメント                     |
-| styleSheetType | Integer | &#8594; | Type of style sheet                     |
-| styleSheetName | Text    | &#8594; | Name of style sheet                     |
-| listLevelCount | Integer | &#8594; | Total number of levels in the hierarchy |
-| 戻り値            | Object  | &#8592; | スタイルシートオブジェクト                           |
+| 引数             | 型       |                             | 説明                  |
+| -------------- | ------- | --------------------------- | ------------------- |
+| wpDoc          | Object  | &#8594; | 4D Write Pro ドキュメント |
+| styleSheetType | Integer | &#8594; | スタイルシートの種類          |
+| styleSheetName | Text    | &#8594; | スタイルシートの名前          |
+| listLevelCount | Integer | &#8594; | 階層内でのレベルの合計数        |
+| 戻り値            | Object  | &#8592; | スタイルシートオブジェクト       |
 
 </div>
 <!-- END REF-->
@@ -25,19 +25,19 @@ displayed_sidebar: docs
 <div class="no-index">
 <details><summary>履歴</summary>
 
-| リリース     | 内容                               |
-| -------- | -------------------------------- |
-| 4D 18    | Created                          |
-| 4D 21 R3 | *listLevelCount* parameter added |
+| リリース     | 内容                     |
+| -------- | ---------------------- |
+| 4D 18    | Created                |
+| 4D 21 R3 | *listLevelCount* 引数の追加 |
 
 </details>
 </div>
 
 ## 説明
 
-<!--REF #_command_.WP New style sheet.Summary-->The **WP New style sheet** command creates a new (empty) style sheet object for the designated *wpDoc*.<!-- END REF-->
+<!--REF #_command_.WP New style sheet.Summary-->**WP New style sheet** コマンドは *wpDoc* 引数で指定したドキュメントに対して新しい(空の)スタイルシートオブジェクトを作成します。<!-- END REF-->
 
-In the *wpDoc* parameter, pass a 4D Write Pro document.
+*wpDoc* 引数には、4D Write Pro ドキュメントを渡します。
 
 The *styleSheetType* parameter lets you designate the type of the style sheet, *i.e.* the part of the *wpDoc* that will be affected by the style sheet. Two types are available:
 

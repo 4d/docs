@@ -206,9 +206,9 @@ La propiedad `.disposition` contiene <!-- REF #MailAttachmentClass.disposition.S
 <!-- REF #MailAttachmentClass.getContent().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|--- |:---:|------|
-|Result|Blob|<-|Content of the attachment|
+|Resultado|Blob|<-|Content of the attachment|
 </div>
 <!-- END REF -->
 

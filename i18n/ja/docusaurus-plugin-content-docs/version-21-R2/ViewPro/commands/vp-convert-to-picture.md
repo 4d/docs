@@ -61,7 +61,7 @@ title: VP Convert to picture
 var $vpAreaObj : Object
 var $vPict : Picture
 $vpAreaObj:=VP Export to object("ViewProArea")
-$vPict:=VP Convert to picture($vpAreaObj) // エリア全体を書き出します
+$vPict:=VP Convert to picture($vpAreaObj) //export the whole area
 ```
 
 ## 参照

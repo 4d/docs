@@ -10,9 +10,9 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Parámetros | Tipo |                             | Descripción                                                                                          |
-| ---------- | ---- | --------------------------- | ---------------------------------------------------------------------------------------------------- |
-| Resultado  | Text | &#8592; | Theme used by the current form: "Classic" or "FluentUI" (Windows) |
+| Parámetros | Tipo |                             | Descripción                                                                                                  |
+| ---------- | ---- | --------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| Resultado  | Text | &#8592; | Tema utilizado por el formulario actual: "Classic" o "FluentUI" (Windows) |
 
 </div>
 <!-- END REF-->

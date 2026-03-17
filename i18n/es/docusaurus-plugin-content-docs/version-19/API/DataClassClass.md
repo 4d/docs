@@ -589,9 +589,9 @@ La función `.getInfo( )` <!-- REF #DataClassClass.getInfo().Summary -->devuelve
 <!-- REF #DataClassClass.new().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|Result|4D.Entity|<-|New entity matching the Dataclass|
+|Resultado|4D.Entity|<-|New entity matching the Dataclass|
 </div>
 <!-- END REF -->
 

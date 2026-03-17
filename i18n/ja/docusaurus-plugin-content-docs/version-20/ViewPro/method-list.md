@@ -672,7 +672,7 @@ $vpObj:=VP Convert from 4D View($pvblob)
 var $vpAreaObj : Object
 var $vPict : Picture
 $vpAreaObj:=VP Export to object("ViewProArea")
-$vPict:=VP Convert to picture($vpAreaObj) // エリア全体を書き出します
+$vPict:=VP Convert to picture($vpAreaObj) //export the whole area
 ```
 
 #### 参照
@@ -4514,13 +4514,13 @@ VP SET ACTIVE CELL($activeCell)
 
 ```4d
 var $allowed : Object
-$allowed:=New object // コマンドに渡す引数
+$allowed:=New object //parameter for the command
 
-$allowed.Hello:=New object // "Hello" という名前の 1つ目の簡単なファンクションを作成します
-$allowed.Hello.method:="My_Hello_Method" // 4Dメソッドを設定します
+$allowed.Hello:=New object //create a first simple function named "Hello"
+$allowed.Hello.method:="My_Hello_Method" //sets the 4D method
 $allowed.Hello.summary:="Hello prints hello world"
 
-$allowed.Byebye:=New object // "Byebye" という名前の、引数を受け付ける 2つ目のファンクションを作成
+$allowed.Byebye:=New object //create a second function with parameters named "Byebye"
 $allowed.Byebye.method:="My_ByeBye_Method"
 $allowed.Byebye.parameters:=New collection
 $allowed.Byebye.parameters.push(New object("name";"Message";"type";Is text))
@@ -4808,7 +4808,7 @@ VP SET CELL STYLE(VP Cell("ViewProArea";1;1);$style)
 ```4d
 var $column; $properties : Object
 
-$column:=VP Column("ViewProArea";1) // カラムB を取得
+$column:=VP Column("ViewProArea";1) //column B
 $properties:=New object("width";100;"header";"Hello World")
 
 VP SET COLUMN ATTRIBUTES($column;$properties)

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | 引数             | 型       |                             | 説明                  |
 | -------------- | ------- | --------------------------- | ------------------- |
 | wpDoc          | Object  | &#8594; | 4D Write Pro ドキュメント |
-| styleSheetName | Text    | &#8594; | Style sheet name    |
+| styleSheetName | Text    | &#8594; | スタイルシート名            |
 | listLevelIndex | Integer | &#8594; | 階層内でのスタイルシートのレベル    |
 | 戻り値            | Object  | &#8592; | スタイルシートオブジェクト       |
 
@@ -34,44 +34,44 @@ displayed_sidebar: docs
 
 ## 説明
 
-<!--REF #_command_.WP Get style sheet.Summary-->The **WP Get style sheet** command returns the style sheet object designated by the *styleSheetName* or by the style sheet name and the *listLevelIndex* in the case of a [hierarchical list style sheet](../user-legacy/stylesheets.md#hierarchical-list-style-sheets).<!-- END REF-->
+<!--REF #_command_.WP Get style sheet.Summary-->**WP Get style sheet** コマンドは、*styleSheetName* 引数で指定したスタイルシート、または[階層リストスタイルシート](../user-legacy/stylesheets.md#hierarchical-list-style-sheets) の場合にはスタイルシート名と*listLevelIndex* 引数のインデックスで指定したスタイルシートのスタイルシートオブジェクトを返します。<!-- END REF-->
 
-In *wpDoc*, pass the 4D Write Pro document that contains the style sheet.
+*wpDoc* 引数には、スタイルシートを持った4D Write Pro ドキュメントを渡します。
 
-The *styleSheetName* parameter allows you to specify the name of the style sheet to return. If the style sheet name does not exist in *wpDoc*, an null object is returned.
+*styleSheetName* 引数を使用すると、返すスタイルシートの名前を指定することができます。 *wpDoc* 引数のドキュメント内のそのスタイルシート名が存在しない場合、null オブジェクトが返されます。
 
-If the style sheet is part of a hierarchical list style sheet, you can optionally specify the *listLevelIndex* parameter to retrieve a specific level of the hierarchy.
+指定したスタイルシートが改装リストスタイルシートの一部である場合、オプションの *listLevelIndex* 引数で階層レベルを指定することで階層内の特定のレベルを取得することができます。
 
-- *listLevelIndex* represents the level of the style sheet in the hierarchy (1 = root level, 2 = first sub-level, etc.).
-- If the parameter is omitted and the style sheet is hierarchical, the root-level style sheet is returned.
-- If the requested level does not exist, a null object is returned.
-- If the style sheet is not a hierarchical list style sheet and *listLevelIndex* is greater than 1, a null object is returned.
+- *listLevelIndex* 引数は階層内のスタイルシートのレベルを表します(1 = ルートレベル、2 = 第一サブレベル、など)。
+- スタイルシートが階層で、この 引数が省略された場合には、ルートレベルのスタイルシートが返されます。
+- リクエストされたレベルが存在しない場合、null オブジェクトが返されます。
+- スタイルシートが改装リストスタイルシートではない場合に、*listLevelIndex* が1 より大きかった場合、null オブジェクトが返されます。
 
 ## 例題 1
 
-To retrieve the "Main title" style sheet:
+"Main title" スタイルシートを取得したい場合を考えます:
 
 ```4d
  var $styleSheet : Object
  
  $styleSheet:=WP Get style sheet(wpArea;"Main title")
- If($styleSheet=Null) // check if the style sheet exists//if not create it
+ If($styleSheet=Null) // スタイルシートが存在するか チェックし、なければ作成する
     $styleSheet:=WP New style sheet(wpArea;wk type paragraph;"Main title")
  End if
 ```
 
 ## 例題 2
 
-To retrieve a specific level of a hierarchical list style sheet:
+階層リストスタイルシートの特定のレベルを取得したい場合:
 
 ```4d
 var $rootStyle : Object
 var $subLevelStyle : Object
 
-// Retrieve root-level style sheet
+// ルートレベルのスタイルシートを取得
 $rootStyle:=WP Get style sheet(wpArea;"MainList")
 
-// Retrieve second level (first sub-level)
+// 第2レベルを取得(最初のサブレベル)
 $subLevelStyle:=WP Get style sheet(wpArea;"MainList";2)
 
 If($subLevelStyle=Null)
@@ -81,7 +81,7 @@ End if
 
 ## 参照
 
-[Style sheets](../user-legacy/stylesheets.md)  
+[スタイルシート](../user-legacy/stylesheets.md)  
 [WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet)  
 [WP Get style sheets](../commands-legacy/wp-get-style-sheets.md)
 [WP IMPORT STYLE SHEETS](../WritePro/commands/wp-import-style-sheet)  

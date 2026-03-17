@@ -47,7 +47,7 @@ var $result : Text
 $result:=$o.concat("Hello ") // $result is "Hello John"
 ```
 
-#### Using a text file with syntax checking
+#### Utilizar un archivo de texto con comprobación sintáctica
 
 ```text
 //4d method stored in a text file
@@ -79,7 +79,7 @@ End if
 
 ### Method Object
 
-4D.Method objects provide the following properties and functions:
+Los objetos 4D.Method ofrecen las siguientes propiedades y funciones:
 
 |                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------------------------- |
@@ -105,11 +105,11 @@ End if
 
 <div class="no-index">
 
-| Parámetros | Tipo                      |                             | Descripción                                                                                                                 |
-| ---------- | ------------------------- | :-------------------------: | --------------------------------------------------------------------------------------------------------------------------- |
-| source     | Text                      |              ->             | Textual representation of a 4D method to be encapsuled as an object                                                         |
-| name       | Text                      |              ->             | Name of the method to display in the debugger. If omitted, the method name will be displayed as "anonymous" |
-| Resultado  | 4D.Method | <- | New Method shared object                                                                                                    |
+| Parámetros | Tipo                      |                             | Descripción                                                                                                                   |
+| ---------- | ------------------------- | :-------------------------: | ----------------------------------------------------------------------------------------------------------------------------- |
+| source     | Text                      |              ->             | Textual representation of a 4D method to be encapsuled as an object                                                           |
+| name       | Text                      |              ->             | Name of the method to display in the debugger. Si se omite, el nombre del método se mostrará como "anonymous" |
+| Resultado  | 4D.Method | <- | Nuevo método objeto compartido                                                                                                |
 
 </div>
 <!-- END REF -->
@@ -208,7 +208,7 @@ The Result object contains the following properties:
 | success   |                                                                                   | Boolean              | True if no syntax error was detected, false otherwise                                                                  |
 | errors    |                                                                                   | Colección de objetos | **Disponible sólo en caso de error o de warning**. Collection of objects describing errors or warnings |
 |           | [].isError    | Boolean              | Error si es True, sino warning                                                                                         |
-|           | [].message    | Text                 | Error or warning message                                                                                               |
+|           | [].message    | Text                 | Mensaje de error o advertencia                                                                                         |
 |           | [].lineNumber | Integer              | Número de línea del error en el código                                                                                 |
 
 #### Ejemplo
@@ -237,7 +237,7 @@ End if
 
 #### Descripción
 
-The `.name` property <!-- REF #MethodClass.name.Summary -->contains the name of the `4D.Method` object, if it was declared in the *name* parameter of the `new()` constructor<!-- END REF -->. Otherwise, the property is not returned.
+The `.name` property <!-- REF #MethodClass.name.Summary -->contains the name of the `4D.Method` object, if it was declared in the *name* parameter of the `new()` constructor<!-- END REF -->. En caso contrario, no se devuelve la propiedad.
 
 Esta propiedad es de **solo lectura**.
 

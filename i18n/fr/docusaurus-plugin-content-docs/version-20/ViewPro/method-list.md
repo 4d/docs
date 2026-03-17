@@ -672,7 +672,7 @@ Vous souhaitez convertir une zone 4D View Pro en SVG, prévisualiser le résulta
 var $vpAreaObj : Object
 var $vPict : Picture
 $vpAreaObj:=VP Export to object("ViewProArea")
-$vPict:=VP Convert to picture($vpAreaObj) //exporter toute la zone
+$vPict:=VP Convert to picture($vpAreaObj) //export the whole area
 ```
 
 #### Voir également
@@ -4510,23 +4510,23 @@ Vous souhaitez autoriser deux méthodes dans vos zones 4D View Pro :
 
 ```4d
 var $allowed : Object
- $allowed:=New object //paramètre pour la commande
+$allowed:=New object //parameter for the command
 
- $allowed.Hello:=New object //crée une première fonction simple nommée "Hello"
- $allowed.Hello.method:="My_Hello_Method" //définit la méthode 4D
- $allowed.Hello.summary:="Hello prints hello world" 
+$allowed.Hello:=New object //create a first simple function named "Hello"
+$allowed.Hello.method:="My_Hello_Method" //sets the 4D method
+$allowed.Hello.summary:="Hello prints hello world"
 
- $allowed.Byebye:=New object //crée une deuxième fonction avec des paramètres nommée "Byebye" 
- $allowed.Byebye.method:="My_ByeBye_Method"
- $allowed.Byebye.parameters:=New collection
- $allowed.Byebye.parameters.push(New object("name";"Message";"type";Is text))
- $allowed.Byebye.parameters.push(New object("name";"Date";"type";Is date))
- $allowed.Byebye.parameters.push(New object("name";"Time";"type";Is time))
- $allowed.Byebye.summary:="Byebye prints a custom timestamp" 
- $allowed.Byebye.minParams:=3
- $allowed.Byebye.maxParams:=3
+$allowed.Byebye:=New object //create a second function with parameters named "Byebye"
+$allowed.Byebye.method:="My_ByeBye_Method"
+$allowed.Byebye.parameters:=New collection
+$allowed.Byebye.parameters.push(New object("name";"Message";"type";Is text))
+$allowed.Byebye.parameters.push(New object("name";"Date";"type";Is date))
+$allowed.Byebye.parameters.push(New object("name";"Time";"type";Is time))
+$allowed.Byebye.summary:="Byebye prints a custom timestamp"
+$allowed.Byebye.minParams:=3
+$allowed.Byebye.maxParams:=3
 
- VP SET ALLOWED METHODS($allowed)
+VP SET ALLOWED METHODS($allowed)
 ```
 
 Une fois ce code exécuté, les fonctions définies peuvent être utilisées dans des formules 4D View Pro :
@@ -4804,7 +4804,7 @@ Pour modifier la taille de la deuxième colonne et définir un en-tête, le code
 ```4d
 var $column; $properties : Object
 
-$column:=VP Column("ViewProArea";1) //colonne B
+$column:=VP Column("ViewProArea";1) //column B
 $properties:=New object("width";100;"header";"Hello World")
 
 VP SET COLUMN ATTRIBUTES($column;$properties)
