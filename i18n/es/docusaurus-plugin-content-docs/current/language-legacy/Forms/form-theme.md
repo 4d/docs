@@ -6,39 +6,47 @@ displayed_sidebar: docs
 ---
 
 <!--REF #_command_.FORM theme.Syntax-->**FORM theme**: Text<!-- END REF-->
-
 <!--REF #_command_.FORM theme.Params-->
-
 <div class="no-index">
 
-| Parámetros | Tipo |                             | Descripción                                                                                          |
-| ---------- | ---- | --------------------------- | ---------------------------------------------------------------------------------------------------- |
-| Resultado  | Text | &#8592; | Theme used by the current form: "Classic" or "FluentUI" (Windows) |
-
+| Parámetros | Tipo |  | Descripción |
+| --- | --- | --- | --- |
+| Resultado  | Text | &#8592; | Tema utilizado por el formulario actual: "Classic" o "FluentUI" (Windows) |
 </div>
 <!-- END REF-->
 
-<div class="no-index">
+
 <details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
-| ----------- | -------------- |
-| 21 R2       | Añadidos       |
+|---|---|
+|21 R3|Soporte de LiquidGlass en macOS |
+|21 R2|Añadidos|
 
 </details>
-</div>
+
 
 ## Descripción
 
-<!--REF #_command_.FORM theme.Summary-->El comando **FORM theme** devuelve el tema Windows realmente renderizado para el formulario actual: "Classic" or "FluentUI".<!-- END REF-->
+<!--REF #_command_.FORM theme.Summary-->El comando **FORM theme** devuelve el tema Windows realmente renderizado para el formulario actual: "FluentUI" (Windows), "LiquidGlass" (macOS), o "Classic" (todas las plataformas).<!-- END REF-->
 
-The Windows form rendering theme can be defined at [application level](../../settings/interface.md#use-fluent-ui-on-windows) and/or at [form level](../../FormEditor/properties_FormProperties.md#form-theme-on-windows) (where it can be inherited or explicitely defined), and also depends on the [availability of specific Microsoft libraries](../../FormEditor/forms.md#requirements) on the current machine at runtime. Este comando le permite saber qué tema de formulario se está ejecutando actualmente.
+Si no hay ningún formulario activo, o si el comando se ejecuta en macOS, **FORM theme** devuelve una cadena vacía.
 
-If there is no current form, or if the command is executed on macOS, **FORM theme** returns an empty string.
+### Windows
+
+El tema de renderización de los formularios Windows se puede definir en el [nivel aplicación](../../settings/interface.md#use-fluent-ui-on-windows) y/o en el [nivel formulario](../../FormEditor/properties_FormProperties.md#form-theme-on-windows) (donde puede heredarse o definirse explícitamente), y también depende de la [disponibilidad de librerías Microsoft específicas](../../FormEditor/forms.md#requirements) en la máquina actual en tiempo de ejecución. Este comando le permite saber qué tema de formulario se está ejecutando actualmente. 
+
+### macOS
+
+A partir de la versión 21 R3, 4D y 4D Server se ejecutan de forma nativa con la interfaz Liquid Glass en macOS 26 Tahoe. Esta renderización se utiliza automáticamente y no se puede desactivar, salvo en aplicaciones basadas en el motor, como medida transitoria para dar a los desarrolladores más tiempo para adaptar sus formularios (ver la [documentación de Apple](https://developer.apple.com/documentation/BundleResources/Information-Property-List/UIDesignRequiresCompatibility) sobre la llave "UIDesignRequiresCompatibility" de *Info.plist*).
+
+
 
 ## Ver también
 
-[Renderización Fluent UI](../../FormEditor/forms.md#fluent-ui-rendering)
+[Renderización Fluent UI](../../FormEditor/forms.md#fluent-ui-rendering)  
+[(blog post) Despliegue Fluent UI sin esfuerzo en sus aplicaciones 4D](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications/)   
+[(blog post) El nuevo diseño macOS Tahoe llega a sus aplicaciones 4D](https://blog.4d.com/the-new-macos-tahoe-design-comes-to-your-4d-applications)
 
 ## Propiedades
 
@@ -46,5 +54,3 @@ If there is no current form, or if the command is executed on macOS, **FORM them
 | ----------------- | ---- |
 | Número de comando | 1832 |
 | Hilo seguro       | no   |
-
-
