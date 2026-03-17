@@ -38,7 +38,7 @@ The Windows form rendering theme can be defined at [application level](../../set
 
 ### macOS
 
-As of version 21 R3, 4D and 4D Server run natively under Liquid Glass interface on macOS 26 Tahoe. This rendering is automatically used and cannot be disabled, [except in engine-based applications](https://blog.4d.com/the-new-macos-tahoe-design-comes-to-your-4d-applications) as a transitional measure to give developers additional time to adapt their forms. 
+As of version 21 R3, 4D and 4D Server run natively under Liquid Glass interface on macOS 26 Tahoe. This rendering is automatically used and cannot be disabled, except in engine-based applications as a transitional measure to give developers additional time to adapt their forms (see [Apple's documentation](https://developer.apple.com/documentation/BundleResources/Information-Property-List/UIDesignRequiresCompatibility) about the "UIDesignRequiresCompatibility" *Info.plist* file key).
 
 
 
