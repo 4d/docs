@@ -102,7 +102,7 @@ Esta propiedad se ignora en macOS.
 | -------- | -------------- | ---------------- |
 | fluentUI | boolean        | true, false      |
 
-If the property is not defined, the "inherited" option is selected.
+Si la propiedad no está definida, se selecciona la opción "inherited".
 
 ---
 

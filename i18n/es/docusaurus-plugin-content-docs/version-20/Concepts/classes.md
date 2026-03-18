@@ -107,7 +107,7 @@ Las clases disponibles son accesibles desde sus class stores. Hay dos class stor
 <!-- REF #_command_.cs.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
 |classStore|Object|<-|User class store for the project or component|
 </div>
@@ -131,7 +131,7 @@ $instance:=cs.myClass.new()
 <!-- REF #_command_.4D.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
 |classStore|Object|<-|4D class store|
 </div>

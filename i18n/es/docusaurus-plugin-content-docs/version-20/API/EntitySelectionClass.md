@@ -2002,9 +2002,9 @@ Para más información, consulte el párrafo **querySettings** en la página [`.
 <!-- REF #EntitySelectionClass.refresh().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
+||||No requiere ningún parámetro|
 </div>
 <!-- END REF -->
 

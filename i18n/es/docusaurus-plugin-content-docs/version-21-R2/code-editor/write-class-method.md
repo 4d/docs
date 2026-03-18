@@ -682,7 +682,7 @@ Este comando muestra sus resultados en una nueva ventana.
 
 ## Rename
 
-Una función de renombrado global se puede utilizar con **variables** y **métodos proyecto**, que permite renombrarlos de forma segura en todo el proyecto. Para ello, resalte la variable o el nombre del método del proyecto en el editor y seleccione **Renombrar...** en el menú **Método** o en el menú contextual. A dialog box is then displayed, allowing you to write the new name. For more information, refer to [Renaming project methods and variables](../Project/search-replace.md#renaming-project-methods-and-variables) section.
+Una función de renombrado global se puede utilizar con **variables** y **métodos proyecto**, que permite renombrarlos de forma segura en todo el proyecto. Para ello, resalte la variable o el nombre del método del proyecto en el editor y seleccione **Renombrar...** en el menú **Método** o en el menú contextual. A continuación, se muestra un cuadro de diálogo, lo que le permite escribir el nuevo nombre. For more information, refer to [Renaming project methods and variables](../Project/search-replace.md#renaming-project-methods-and-variables) section.
 
 ## Macros
 

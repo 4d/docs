@@ -219,9 +219,9 @@ Dans 4D, les tokens de session OTP sont utiles pour appeler des URL externes et 
 
 :::
 
-:::note
+:::info
 
-Les tokens de session peuvent être partagés avec les [sessions desktop](../Desktop/sessions.md) permettant d'implémenter des applications utilisant des sessions hybrides.
+Session tokens can also be created from [remote user sessions](../Desktop/sessions.md) and shared with web sessions to implement desktop applications that use web-based interfaces. See [Sharing a remote session for web accesses](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses).
 
 :::
 
@@ -481,7 +481,7 @@ Un nouvel utilisateur est créé et des informations sont stockées dans la sess
 - Les schémas HTTP et HTTPS sont tous deux pris en charge.
 - Seules des [sessions évolutives](#enabling-web-sessions) peuvent être réutilisées avec des tokens.
 - Seules les sessions de la base de données hôte peuvent être réutilisées (les sessions créées dans les serveurs web des composants ne peuvent pas être restaurées).
-- Les tokens peuvent être **partagés** avec des [sessions desktop](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) pour les accès hybrides (desktop et web).
+- Tokens can be **shared** with [remote user sessions](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) for hybrid accesses (desktop and web).
 
 ### Durée de vie
 

@@ -270,9 +270,9 @@ Function _createFile($title : Text; $textBody : Text)
 <!-- REF #SystemWorkerClass.closeInput().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
+||||No requiere ningún parámetro|
 </div>
 <!-- END REF -->
 
@@ -490,9 +490,9 @@ La propiedad `.responseError` <!-- REF #SystemWorkerClass.responseError.Summary 
 <!-- REF #SystemWorkerClass.terminate().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
+||||No requiere ningún parámetro|
 </div>
 <!-- END REF -->
 

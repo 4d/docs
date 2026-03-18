@@ -5,7 +5,7 @@ title: Formula
 
 `4D.Formula` objects are created by the [Formula](../commands/formula) or [Formula from string](../commands/formula-from-string) commands and allow you execute any 4D expression or code expressed as single-line text.
 
-`4D.Formula` class objects inherit from the [`4D.Function`](./FunctionClass.md) class. Así, para ejecutar la fórmula, puede:
+Los objetos de la clase `4D.Formula` heredan de la clase [`4D.Function`](./FunctionClass.md). Así, para ejecutar la fórmula, puede:
 
 - store a `4D.Formula` object in an object property and use the `()` operator after the property name,
 - or directly call the `4D.Formula` object using the [`call()`](#call) or [`apply()`](#apply) function on it.

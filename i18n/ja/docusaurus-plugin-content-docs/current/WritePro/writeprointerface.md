@@ -4,13 +4,13 @@ title: 4D WritePro インターフェース
 slug: /WritePro/write-pro-interface
 ---
 
-4D Write Pro Interface offers a set of palettes, which allow end users to easily customize a 4D Write Pro document.
+4D WritePro インターフェースは、エンドユーザーが 4D Write Proドキュメントを簡単にカスタマイズできるパレットを提供します。
 
 4D のデベロッパーは、これらのパレットをアプリケーションに簡単に実装することができます。 それにより、エンドユーザーは、フォントやテキストの揃え方向、ブックマーク、表レイアウト、フレームなど、4D Write Pro のプロパティをすべて管理することができます。
 
-## Installation & documentation
+## インストールとドキュメンテーション
 
-4D Write Pro Interface is a **4D component** that needs to be [installed in your project](../Project/components.md#overview). 4D Write Pro Interface source files are [provided on Github](https://github.com/4d/4D-WritePro-Interface).
+4D Write Pro インターフェースは、[プロジェクト内にインストールする](../Project/components.md#概要) する必要のある**4D コンポーネント** です。 4D Write Pro インターフェースのソースファイルは[Github 上で提供されています](https://github.com/4d/4D-WritePro-Interface)。
 
 インターフェースのマニュアルについては、*4D デザインリファレンス* の [4D Write Pro エリアのドキュメント](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.ja.html) を参照ください。 ここには以下のような情報があります:
 
@@ -385,32 +385,32 @@ AI に質問を送信するためには、送信ボタンをクリックしま�
 
 :::
 
-#### Copy buttons
+#### コピーボタン
 
-These buttons propose basic interactions between the chat area, the underlying 4D Write Pro document, and the clipboard:
+これらのボタンはチャットエリア、基礎となる4D Write Pro ドキュメント、およびクリップボードとの基礎的なインタラクションを提示します:
 
 ![ai interaction](../assets/en/WritePro/ai-interaction.png)
 
-- **Return raw text**/**Return styled text**: Copy the latest response or the selected response from the AI to the 4D Write Pro document at the current insertion point, replacing the selected text if any.
-- **Copy raw text**/**Copy styled text**: Copy the latest response or the selected response from the AI in the clipboard.
+- **標準テキストを返す**/**スタイル付きテキストを返す**: AI からの最後のレスポンスあるいは選択されたレスポンスをコピーし、4D Write Pro ドキュメント内のカレントの挿入ポイントへと挿入し、選択されたテキストがある場合にはそれを置き換えます。
+- **標準テキストをコピー**/**スタイル付きテキストをコピー**: AI からの最後のレスポンスまたは選択されたレスポンスをクリップボード内へとコピーします。
 
-In both cases, if the response was provided with styles, you can decide to copy the text with or without styles.
+どちらの場合にも、レスポンスがスタイル付きで提供されていた場合には、スタイル付きのテキストかスタイルなしのテキストをコピーするかを選ぶことができます。
 
 :::note
 
-The chat box uses the Markdown language to format text. Basic styles such as bold, italic, underline, titles are supported. When pasting styled text from the AI in the 4D Write Pro area, you may lose some formatting information.
+チャットボックスはテキストのフォーマットにMarkdown ランゲージを使用します。 太字、イタリック、下線、タイトルなどの基本的なスタイルはサポートされています。 AI からのスタイル付きテキストを4D Write Pro エリアにペーストする場合、一部のフォーマット情報が失われる可能性があります。
 
 :::
 
-#### Chat area
+#### チャットエリア
 
-The Chat area displays the whole interaction between you and the AI. You can scroll and select and part you want.
+チャットエリアは、AI との間のやりとり全体を表示します。 スクロールして、好きな部分を選択することができます。
 
-To empty this area, you can click on the Erase button of the History area (resets the window and all interactions).
+このエリアを消去して空にするには、履歴エリアの消去ボタンをクリックします(ウィンドウと全てのやりとりをリセットします)。
 
 #### 履歴
 
-The History area lists all your prompts sent to the AI. You can hide/show this area using the button on the top right corner of the Chat area.
+履歴エリアにはAI に送信したプロンプトが全て一覧表示されます。 チャットエリアの右上端にあるボタンを使用することで、このエリアを表示/非表示にすることができます。
 
-The Erase button allows you to reset the whole window and erase all interactions. It is equivalent to close/reopen the AI dialog box.
+消去ボタンを使用すると全てのやりとりを消去しウィンドウ全体をリセットすることができます。 これはAI ダイアログボックスを閉じて再度開くのと同じです。
 

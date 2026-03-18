@@ -50,7 +50,7 @@ Pase un nombre para la hoja de estilo en el parámetro *styleSheetName*. The sty
 - it can then contain alphanumeric characters, space characters, "-" characters or unicode characters >= 128
 - debe ser único en el documento independientemente del tipo
 - it must not start with "section", which is reserved
-- the "\_" is replaced by a space and trailing spaces are removed.
+- el "\_" se sustituye por un espacio y se eliminan los espacios finales.
 
 You can specify the attributes of the style sheet using the [WP SET ATTRIBUTES](../commands/wp-set-attributes) command or the object notation (see [4D Write Pro Attributes](../commands-legacy/4d-write-pro-attributes.md)). For the list of available attributes, see the [Style sheet attributes](../commands-legacy/4d-write-pro-attributes.md#style-sheets) section.
 
@@ -98,7 +98,7 @@ The following code creates and defines a paragraph style sheet:
 
 ## Ejemplo 2
 
-The following code creates a hierarchical list style sheet with 3 levels:
+El siguiente código crea una hoja de estilo de lista jerárquica con 3 niveles:
 
 ```4d
 var $mainList : Object

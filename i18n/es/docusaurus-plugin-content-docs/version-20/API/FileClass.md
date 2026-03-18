@@ -704,9 +704,9 @@ $infoPlistFile.setAppInfo($info)
 <!--REF #FileClass.setContent().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|content|BLOB|->|New contents for the file|
+|contenido|BLOB|->|Nuevo contenido para el archivo|
 </div>
 <!-- END REF -->
 

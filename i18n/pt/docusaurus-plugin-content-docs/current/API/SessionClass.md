@@ -3,13 +3,14 @@ id: SessionClass
 title: Session
 ---
 
-Os objetos de sessão são retornados pelo comando [`Session`](../commands/session). These objects provide the developer with an interface allowing to manage the current user session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web context only) manage [privileges](../ORDA/privileges.md).
+Os objetos de sessão são retornados pelo comando [`Session`](../commands/session). These objects provide the developer with an interface allowing to manage the current session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web context only) manage [privileges](../ORDA/privileges.md).
 
 :::tip Related blog posts
 
 - [Scalable sessions for advanced web applications](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
 - [Permissions: Inspect Session Privileges for Easy Debugging](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging/)
 - [Generate, share and use web sessions One-Time Passcodes (OTP)](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/)
+- [Client / server – Handle a session when working on a 4D client](https://blog.4d.com/client-server-handle-a-session-when-working-on-a-4d-client)
 
 :::
 
@@ -18,10 +19,9 @@ Os objetos de sessão são retornados pelo comando [`Session`](../commands/sessi
 Os seguintes tipos de sessões são suportados por essa classe:
 
 - [**Sessões de usuário web**](WebServer/sessions.md): sessões de usuário web estão disponíveis quando [sessões escaláveis estão habilitadas em seu projeto](WebServer/sessions.md#enabling-web-sessions). They are used for Web connections (including REST access), and are controlled by assigned [privileges](../ORDA/privileges.md).
-- [**Desktop sessions**](../Desktop/sessions.md), which include:
-  - [**Remote user sessions**](../Desktop/sessions.md#remote-user-sessions): In client/server applications, remote users have their own sessions managed on the server.
-  - [**Stored procedures sessions**](../Desktop/sessions.md#stored-procedure-sessions): Virtual user session for all stored procedures executed on the server.
-  - [**Standalone sessions**](../Desktop/sessions.md#standalone-sessions): Local session object returned in single-user application (useful in development and test phases of client/server applications).
+- [**Remote user sessions**](../Desktop/sessions.md#remote-user-sessions): In client/server applications, remote users have their own sessions, managed from the client and from the server.
+- [**Stored procedures sessions**](../Desktop/sessions.md#stored-procedure-sessions): Virtual user session for all stored procedures executed on the server.
+- [**Standalone sessions**](../Desktop/sessions.md#standalone-sessions): Local session object returned in single-user application (useful in development and test phases of client/server applications).
 
 :::warning About session privileges
 
@@ -79,15 +79,11 @@ All session types can handle privileges, but only the code executed in a **web c
 
 The `.clearPrivileges()` function <!-- REF #SessionClass.clearPrivileges().Summary -->removes all the privileges associated to the session (excluding promoted privileges) and returns **True** if the execution was successful<!-- END REF -->.
 
-:::note
+:::note Notas
 
-This function does not remove **promoted privileges** from the web process, whether they are added through the [roles.json](../ORDA/privileges.md#rolesjson-file) file or the [`promote()`](#promote) function.
-
-:::
-
-:::note
-
-Keep in mind that privileges only apply to the code executed through web accesses, whatever the [session type](#session-types) on which this function is executed.
+- Keep in mind that privileges only apply to the code executed through web accesses, whatever the [session type](#session-types) on which this function is executed.
+- This function does not remove **promoted privileges** from the web process, whether they are added through the [roles.json](../ORDA/privileges.md#rolesjson-file) file or the [`promote()`](#promote) function.
+- For security reasons, this function cannot be called from the client side of a remote user session (an error is returned).
 
 :::
 
@@ -121,10 +117,10 @@ $isOK:=Session.clearPrivileges()
 
 <div class="no-index">
 
-| Parâmetro  | Tipo    |                             | Descrição                                                                |
-| ---------- | ------- | :-------------------------: | ------------------------------------------------------------------------ |
-| lifespan   | Integer |              ->             | Session token lifespan in seconds (web sessions only) |
-| Resultados | Text    | <- | UUID of the token                                                        |
+| Parâmetro  | Tipo    |                             | Descrição                              |
+| ---------- | ------- | :-------------------------: | -------------------------------------- |
+| lifespan   | Integer |              ->             | Duração do token de sessão em segundos |
+| Resultados | Text    | <- | UUID of the token                      |
 
 </div>
 <!-- END REF -->
@@ -133,17 +129,18 @@ $isOK:=Session.clearPrivileges()
 
 A função `.createOTP()` <!-- REF #SessionClass.createOTP().Summary -->cria um novo OTP (uma senha única) para a sessão e retorna seu UUID<!-- END REF -->. Esse token é exclusivo da sessão em que foi gerado.
 
+You can set a custom timeout by passing a value in seconds in *lifespan*. By default, if the *lifespan* parameter is omitted:
+
+- for web sessions, the token is created with the same lifespan as the [`.idleTimeOut`](#idletimeout) of the session.
+- for remote user sessions, the token is created with a 10 seconds lifespan.
+
+In web sessions, the returned token can be used in exchanges with third-party applications or websites to securely identify the session. Por exemplo, o token de sessão OTP pode ser usado com um aplicativo de pagamento.
+
+In remote user sessions (and standalone sessions for test purposes), the returned token can be used by 4D to identify requests coming from the web that [share the session](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses).
+
 Para mais informações sobre os tokens OTP, consulte [esta seção](../WebServer/sessions.md#session-token-otp).
 
 If an expired token is used to restore a session, it is ignored.
-
-For web sessions, you can set a custom timeout by passing a value in seconds in *lifespan*. Por padrão, se o parâmetro *lifespan* for omitido, o token será criado com o mesmo tempo de vida que o [`.idleTimeOut`](#idletimeout) da sessão.
-
-For desktop sessions, the token is created with a 10 seconds lifespan.
-
-The returned token can be used in exchanges with third-party applications or websites to securely identify the session. Por exemplo, o token de sessão OTP pode ser usado com um aplicativo de pagamento.
-
-The returned token can be used by 4D Server or 4D single-user application to identify requests coming from the web that [share the session](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses).
 
 #### Exemplo
 
@@ -187,9 +184,10 @@ If no privilege with *promoteId* was promoted using [`.promote()`](#promote) in 
 
 If several privileges have been added to the web process, the `demote()` function must be called for each one with the appropriate *promoteId*. Privileges are stacked in the order they have been added to the process, it is recommended to unstack privileges in a LIFO (*Last In, First Out*) order.
 
-:::note
+:::note Notas
 
-Keep in mind that privileges only apply to the code executed through web accesses, whatever the [session type](#session-types) on which this function is executed.
+- Keep in mind that privileges only apply to the code executed through web accesses, whatever the [session type](#session-types) on which this function is executed.
+- This function cannot be called from the client side of a remote user session (an error is returned).
 
 :::
 
@@ -397,6 +395,7 @@ This function returns True for the *privilege* if called from a function that wa
 :::note
 
 Keep in mind that privileges only apply to the code executed through web accesses, whatever the [session type](#session-types) on which this function is executed.
+
 :::
 
 #### Exemplo
@@ -434,7 +433,9 @@ End if
 
 #### Descrição
 
-A propriedade `.id` contém <!-- REF #SessionClass.id.Summary --> o identificador único (UUID) da sessão do usuário<!-- END REF -->. Com o 4D Server, essa string exclusiva é atribuída automaticamente pelo servidor para cada sessão e permite que você identifique seus processos.
+A propriedade `.id` contém <!-- REF #SessionClass.id.Summary --> o identificador único (UUID) da sessão do usuário<!-- END REF -->.
+
+Com o 4D Server, essa string exclusiva é atribuída automaticamente pelo servidor para cada sessão e permite que você identifique seus processos. It is available in both the `Session` on the server side and on the client side.
 
 :::tip
 
@@ -507,26 +508,26 @@ End if
 
 #### Descrição
 
-The `.info` property <!-- REF #SessionClass.info.Summary -->describes the desktop or web session<!-- END REF -->.
+The `.info` property <!-- REF #SessionClass.info.Summary -->describes the session<!-- END REF -->.
 
-- **Remote sessions** and **Stored procedure sessions**: The `.info` object is the same object as the one returned in the "session" property by the [`Process activity`](../commands/process-activity) command.
+- **Remote user sessions** and **Stored procedure sessions**: The `.info` object is the same object as the one returned in the "session" property by the [`Process activity`](../commands/process-activity) command.
 - **Standalone sessions**: The `.info` object is the same object as the one returned by the [`Session info`](../commands/session-info) command.
 - **Web user sessions**: The `.info` object contains properties available for web user sessions.
 
 O objeto `.info` contém as seguintes propriedades:
 
-| Propriedade      | Tipo          | Descrição                                                                                                                                                                                                                   |
-| ---------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type             | Text          | Session type: "remote", "storedProcedure", "standalone", "rest", "web"                                                                                                                                      |
-| userName         | Text          | Nome de usuário 4D (o mesmo valor que [`.userName`](#username))                                                                                                                                          |
-| machineName      | Text          | Sessões remotas: nome da máquina remota. Sessão de procedimentos armazenados: nome da máquina do servidor. Sessão autônoma: nome da máquina |
-| systemUserName   | Text          | Sessões remotas: nome da sessão do sistema aberta na máquina remota.                                                                                                                        |
-| IPAddress        | Text          | Endereço IP da máquina remota                                                                                                                                                                                               |
-| hostType         | Text          | Tipo de host: "windows" ou "mac"                                                                                                                                                                            |
-| creationDateTime | Date ISO 8601 | Data e hora de criação da sessão. Sessão autônoma: data e hora da inicialização do aplicativo                                                                                               |
-| state            | Text          | Estado da sessão: "ativa", "adiada", "em espera"                                                                                                                                                            |
-| ID               | Text          | UUID da sessão (mesmo valor que [`.id`](#id))                                                                                                                                                            |
-| persistentID     | Text          | Sessões remotas: ID persistente da sessão                                                                                                                                                                   |
+| Propriedade      | Tipo          | Descrição                                                                                                                                                                                                                          |
+| ---------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type             | Text          | Session type: "remote", "storedProcedure", "standalone", "rest", "web"                                                                                                                                             |
+| userName         | Text          | Nome de usuário 4D (o mesmo valor que [`.userName`](#username))                                                                                                                                                 |
+| machineName      | Text          | <ul><li>Remote sessions: name of the remote machine.</li><li>Client sessions: name of the local machine.</li><li>Stored procedures session: name of the server machine.</li><li> Standalone session: name of the machine</li></ul> |
+| systemUserName   | Text          | <ul><li>Remote sessions: name of the system session opened on the remote machine.</li><li>Client sessions: name of the local system session</li><ul>                                                                               |
+| IPAddress        | Text          | <ul><li>Remote sessions: IP address of the remote machine.</li><li>Client sessions: IP address of the local machine.</li><li>Standalone session: "localhost"</li></ul>                                                             |
+| hostType         | Text          | Host type: "windows", "mac", or "browser"                                                                                                                                                                          |
+| creationDateTime | Date ISO 8601 | Date and time of session creation (standalone session: date and time of application startup)                                                                                                    |
+| state            | Text          | Estado da sessão: "ativa", "adiada", "em espera"                                                                                                                                                                   |
+| ID               | Text          | UUID da sessão (mesmo valor que [`.id`](#id))                                                                                                                                                                   |
+| persistentID     | Text          | Remote/client sessions: Session's persistent ID                                                                                                                                                                    |
 
 :::note
 
@@ -565,7 +566,7 @@ Desde `. nfo` é uma propriedade computada, é recomendável chamá-lo uma vez e
 
 :::note
 
-This function always returns **False** with desktop sessions.
+This function always returns **False** with non-web sessions.
 
 :::
 
@@ -632,9 +633,11 @@ The returned id is incremented each time a privilege is dynamically added to the
 
 To remove a privilege dynamically, call the `demote()` function with the appropriate id.
 
-:::note
+:::note Notas
 
-Keep in mind that privileges only apply to the code executed through web accesses, whatever the [session type](#session-types) on which this function is executed.
+- Keep in mind that privileges only apply to the code executed through web accesses, whatever the [session type](#session-types) on which this function is executed.
+- This function cannot be called from the client side of a remote user session (an error is returned).
+
 :::
 
 #### Exemplo
@@ -711,9 +714,10 @@ A função retorna `false` se:
 
 Nesse caso, a sessão atual do usuário da Web não é alterada (nenhuma sessão é restaurada).
 
-:::note
+:::note Notas
 
-Keep in mind that privileges only apply to the code executed through web accesses, whatever the [session type](#session-types) on which this function is executed.
+- Keep in mind that privileges only apply to the code executed through web accesses, whatever the [session type](#session-types) on which this function is executed.
+- This function cannot be called from the client side of a remote user session (an error is returned).
 
 :::
 
@@ -790,9 +794,11 @@ Como padrão quando não houver um privilégio associado à sessão, a sessão �
 
 A propriedade [`userName`](#username) está disponível no nível do objeto de sessão (somente leitura).
 
-:::note
+:::note Notas
 
-Keep in mind that privileges only apply to the code executed through web accesses, whatever the [session type](#session-types) on which this function is executed.
+- Keep in mind that privileges only apply to the code executed through web accesses, whatever the [session type](#session-types) on which this function is executed.
+- This function cannot be called from the client side of a remote user session (an error is returned).
+
 :::
 
 #### Exemplo
@@ -838,19 +844,24 @@ End if
 
 A propriedade `.storage` contém <!-- REF #SessionClass.storage.Summary --> um objeto compartilhado que pode ser usado para armazenar informações disponíveis para todos os processos da sessão<!-- END REF -->.
 
-Quando um objeto `Session` é criado, a propriedade `.storage` está vazia. Como se trata de um objeto compartilhado, essa propriedade estará disponível no objeto `Storage` do servidor.
+Quando um objeto `Session` é criado, a propriedade `.storage` está vazia. Essa propriedade é **apenas de leitura**, mas retorna um objeto de leitura e gravação.
 
-> Como o objeto `Storage` do servidor, a propriedade `.storage` é sempre "single": adicionar um objeto compartilhado ou uma coleção compartilhada a `.storage` não cria um grupo compartilhado.
+:::note Notas
 
-Essa propriedade é **apenas de leitura**, mas retorna um objeto de leitura e gravação.
+- Since it is a shared object, this property will be available in the `Storage` object of the machine (server or client).
+- Like the `Storage` object of the machine, the `.storage` property is always "single": adding a shared object or a shared collection to `.storage` does not create a shared group.
+
+:::
+
+In client/server, the `.storage` object of the remote user session is **not** the same on the server and on the client.
+
+When a remote user session and a web session are [shared using an OTP](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses), they also share the same `.storage` object on the server, even if the OTP was [created](#createotp) from the session on the client side.
 
 :::tip
 
 Você pode obter a propriedade `.storage` de uma sessão usando o comando [`Session storage`](../commands/session-storage).
 
 :::
-
-When a desktop session and a web session are [shared using an OTP](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses), they also share the same `.storage` object.
 
 #### Exemplo de sessão na web
 

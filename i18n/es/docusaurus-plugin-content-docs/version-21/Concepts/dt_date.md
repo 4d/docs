@@ -54,7 +54,7 @@ Como las fechas en JavaScript son objetos, se envían a 4D como texto que contie
 
 The JSON form of JavaScript Date objects follows the ISO 8601 standard, for example "2013-08-23T00:00:00Z". It is your responsibility to convert this text into a 4D date. Hay dos soluciones disponibles:
 
-Using the [`JSON Parse`](../commands-legacy/json-parse.md) command:
+Utilizando el comando [`JSON Parse`](../commands-legacy/json-parse.md):
 
 ```4d
  var $dateIso : Texto // recepción de una fecha en formato ISO

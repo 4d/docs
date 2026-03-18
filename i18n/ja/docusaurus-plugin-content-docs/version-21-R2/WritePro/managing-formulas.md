@@ -31,7 +31,7 @@ slug: /WritePro/formulas
 
 :::note
 
-For security reasons, when formulas are pasted from a different 4D application or an external environment, only the *computed values* (text or images) available at the time of copying are pasted. 値が何も取得できない場合(例: フォーミュラが一度も計算されていないなど)、4D はフォーミュラのソースを標準テキストとしてペーストします。
+セキュリティ上の理由から、別の4D アプリケーションや外部環境からフォーミュラがペーストされた際には、コピーした時点で取得可能な*計算された値*(テキストまたは画像)のみがペーストされます。 値が何も取得できない場合(例: フォーミュラが一度も計算されていないなど)、4D はフォーミュラのソースを標準テキストとしてペーストします。
 
 :::
 

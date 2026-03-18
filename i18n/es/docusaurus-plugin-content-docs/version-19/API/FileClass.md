@@ -271,9 +271,9 @@ Quiere crear un alias para un archivo en su carpeta principal:
 <!-- REF #FileClass.delete().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|----|---|---|
-| |  ||Does not require any parameters|
+|Parámetro|Tipo||Descripción|
+|---|----|-|-|
+| |  ||No requiere parámetros|
 </div>
 <!-- END REF -->
 
@@ -608,9 +608,9 @@ $infoPlistFile.setAppInfo($info)
 <!--REF #FileClass.setContent().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|content|BLOB|->|New contents for the file|
+|contenido|BLOB|->|Nuevo contenido para el archivo|
 </div>
 <!-- END REF -->
 

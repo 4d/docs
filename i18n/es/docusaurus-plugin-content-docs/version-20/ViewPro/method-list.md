@@ -5709,9 +5709,9 @@ VP SET ROW COUNT("ViewProArea";5)
 <!-- REF #_method_.VP SET SELECTION.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|rangeObj |Object|->|Range object of cells|
+|rangeObj |Object|->|Objeto de rango de celdas|
 </div>
 <!-- END REF -->
 

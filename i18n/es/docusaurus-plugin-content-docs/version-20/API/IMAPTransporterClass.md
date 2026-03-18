@@ -918,9 +918,9 @@ Si la cuenta no contiene buzones, se devuelve una colección vacía.
 <!-- REF #IMAPTransporterClass.getDelimiter().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|-----|--- |:---:|------|
-|Result|Text|<-|Hierarchy delimiter character|
+|Parámetro|Tipo||Descripción|
+|---|--- |:---:|------|
+|Resultado|Text|<-|Hierarchy delimiter character|
 </div>
 <!-- END REF -->
 

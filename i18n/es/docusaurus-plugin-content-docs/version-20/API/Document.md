@@ -453,9 +453,9 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 <!-- REF #document.getContent().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|----|---|---|
-|Result | 4D.Blob |<-|File content|
+|Resultado | 4D.Blob |<-|File content|
 </div>
 <!-- END REF -->
 

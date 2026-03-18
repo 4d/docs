@@ -120,9 +120,9 @@ El objeto servidor web devuelto contiene los valores actuales de las propiedades
 <!-- REF #_command_.WEB Server list.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|----|---|
-|Result|Collection|<-|Collection of the available Web server objects|
+|Resultado|Collection|<-|Collection of the available Web server objects|
 </div>
 <!-- END REF -->
 

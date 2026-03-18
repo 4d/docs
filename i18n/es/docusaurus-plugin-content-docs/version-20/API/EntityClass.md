@@ -731,9 +731,9 @@ $info:=$address.getRemoteContextAttributes()
 <!-- REF #EntityClass.getSelection().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|4D.EntitySelection|<-|Entity selection to which the entity belongs (Null if not found)|
+|Resultado|4D.EntitySelection|<-|Entity selection to which the entity belongs (Null if not found)|
 </div>
 <!-- END REF -->
 

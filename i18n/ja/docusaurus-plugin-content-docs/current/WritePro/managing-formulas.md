@@ -10,7 +10,7 @@ slug: /WritePro/formulas
 
 4D Write Pro エリアへのフォーミュラの挿入には [**WP INSERT FORMULA**](commands/wp-insert-formula.md) コマンドを使用し、フォーミュラの読み出しには[**WP Get formulas**](commands-legacy/wp-get-formulas.md) コマンドを使用します。 また、[**WP Get text**](commands-legacy/wp-get-text.md) コマンドを使用することでも返されます。
 
-### Formula evaluation
+### フォーミュラの評価
 
 フォーミュラは以下のタイミングで評価されます:
 
@@ -33,7 +33,7 @@ slug: /WritePro/formulas
 
 :::note
 
-For security reasons, when formulas are pasted from a different 4D application or an external environment, only the *computed values* (text or images) available at the time of copying are pasted. 値が何も取得できない場合(例: フォーミュラが一度も計算されていないなど)、4D はフォーミュラのソースを標準テキストとしてペーストします。
+セキュリティ上の理由から、別の4D アプリケーションや外部環境からフォーミュラがペーストされた際には、コピーした時点で取得可能な*計算された値*(テキストまたは画像)のみがペーストされます。 値が何も取得できない場合(例: フォーミュラが一度も計算されていないなど)、4D はフォーミュラのソースを標準テキストとしてペーストします。
 
 :::
 
@@ -56,26 +56,26 @@ For security reasons, when formulas are pasted from a different 4D application o
 
 [WP Insert formula](commands/wp-insert-formula.md) コマンドを使用することで、あらゆるドキュメントエリア(本文、ヘッダー、フッター) にドキュメント属性に関連した特殊な式を挿入することができます。 フォーミュラ内ではフォーミュラコンテキストオブジェクトが自動的に公開されます。 [**This**](../commands/this) を通してこのオブジェクトのプロパティを使用することができます:
 
-| プロパティ                                                   | 型      | 説明                                                                                                                                                                                                                                                                                                                                                                      |
-| ------------------------------------------------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| This.title                              | Text   | wk title 属性で定義されているタイトル                                                                                                                                                                                                                                                                                                                                                 |
-| This.author                             | Text   | wk author 属性で定義されている作者                                                                                                                                                                                                                                                                                                                                                  |
-| This.subject                            | Text   | wk subject 属性で定義されている主題                                                                                                                                                                                                                                                                                                                                                 |
-| This.company                            | Text   | wk company 属性で定義されている会社                                                                                                                                                                                                                                                                                                                                                 |
-| This.notes                              | Text   | wk notes 属性で定義されている注記                                                                                                                                                                                                                                                                                                                                                   |
-| This.dateCreation                       | Date   | wk date creation 属性で定義されている作成日                                                                                                                                                                                                                                                                                                                                          |
-| This.dateModified                       | Date   | wk date modified 属性で定義されている変更日                                                                                                                                                                                                                                                                                                                                          |
-| This.pageNumber (\*) | Number | Page number as it is defined:<ul><li>From the document start (default) or </li><li>From the section page start if it is defined by section page start.</li></ul>  This formula is always dynamic; it is not affected by the [**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) command. |
-| This.pageCount (\*)  | Number | ページ数: 総合のページ数。<br/>このフォーミュラは常に動的です。つまり[**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) コマンドの影響を受けません。                                                                                                                                                                                                                                    |
-| This.document                           | Object | 4D Write Pro ドキュメント                                                                                                                                                                                                                                                                                                                                                     |
-| This.data                               | Object | [**WP SET DATA CONTEXT**](commands-legacy/wp-set-data-context.md) コマンドで設定された4D Write Pro ドキュメントのデータコンテキスト                                                                                                                                                                                                                                                               |
-| This.sectionIndex                       | Number | 4D Write Pro ドキュメント内のセクションのインデックス(1から開始)                                                                                                                                                                                                                                                                                                             |
-| This.pageIndex                          | Number | 4D Write Pro ドキュメント内の実際のページ番号(1から開始、セクションのページ番号とは無関係)                                                                                                                                                                                                                                                                                                |
-| This.sectionName                        | 文字列    | ユーザーが与えたセクションの名前                                                                                                                                                                                                                                                                                                                                                        |
+| プロパティ                                                   | 型      | 説明                                                                                                                                                                                                                                                     |
+| ------------------------------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| This.title                              | Text   | wk title 属性で定義されているタイトル                                                                                                                                                                                                                                |
+| This.author                             | Text   | wk author 属性で定義されている作者                                                                                                                                                                                                                                 |
+| This.subject                            | Text   | wk subject 属性で定義されている主題                                                                                                                                                                                                                                |
+| This.company                            | Text   | wk company 属性で定義されている会社                                                                                                                                                                                                                                |
+| This.notes                              | Text   | wk notes 属性で定義されている注記                                                                                                                                                                                                                                  |
+| This.dateCreation                       | Date   | wk date creation 属性で定義されている作成日                                                                                                                                                                                                                         |
+| This.dateModified                       | Date   | wk date modified 属性で定義されている変更日                                                                                                                                                                                                                         |
+| This.pageNumber (\*) | Number | 以下の場所から定義されているページ番号:<ul><li>- ドキュメントの開始からのページ番号(デフォルト)</li><li>- セクションの開始から定義されている場合には、セクションの開始からのページ番号</li></ul> このフォーミュラは常に動的です。つまり[**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) コマンドの影響を受けません。 |
+| This.pageCount (\*)  | Number | ページ数: 総合のページ数。<br/>このフォーミュラは常に動的です。つまり[**WP FREEZE FORMULAS**](commands-legacy/wp-freeze-formulas.md) コマンドの影響を受けません。                                                                                                                   |
+| This.document                           | Object | 4D Write Pro ドキュメント                                                                                                                                                                                                                                    |
+| This.data                               | Object | [**WP SET DATA CONTEXT**](commands-legacy/wp-set-data-context.md) コマンドで設定された4D Write Pro ドキュメントのデータコンテキスト                                                                                                                                              |
+| This.sectionIndex                       | Number | 4D Write Pro ドキュメント内のセクションのインデックス(1から開始)                                                                                                                                                                                            |
+| This.pageIndex                          | Number | 4D Write Pro ドキュメント内の実際のページ番号(1から開始、セクションのページ番号とは無関係)                                                                                                                                                                               |
+| This.sectionName                        | 文字列    | ユーザーが与えたセクションの名前                                                                                                                                                                                                                                       |
 
 :::note
 
-When you **work with tables**, [additional context expressions](./user-legacy/handling-tables.md#table-formula-object) such as `This.item` are available.
+**表を扱う** 場合には、 `This.item` などの[追加のコンテキスト式](./user-legacy/handling-tables.md#表フォーミュラオブジェクト) が利用可能となります。
 
 :::
 
@@ -95,7 +95,7 @@ When you **work with tables**, [additional context expressions](./user-legacy/ha
 
 :::note
 
-For more information about formula insertion, see [WP INSERT FORMULA](../commands/wp-insert-formula).
+フォーミュラの挿入に関する詳細な情報については、[WP INSERT FORMULA](../commands/wp-insert-formula) を参照してください。
 
 :::
 

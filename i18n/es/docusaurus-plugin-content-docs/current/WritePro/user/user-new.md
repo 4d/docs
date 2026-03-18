@@ -31,7 +31,7 @@ Cuando se crea una lista utilizando una acción estándar (`listStyleType` o `li
 
 When the list is created using [the WP SET ATTRIBUTE command](../commands-legacy/4d-write-pro-attributes.md#lists), no specific margin is managed, by default the marker is added at the left boundary of the paragraph. El desarrollador puede añadir un margen personalizado si es necesario.
 
-add a part about the fact that you define where your ordered list start.
+añada una parte sobre el hecho de que usted define dónde empieza su lista ordenada.
 
 :::tip Entrada de blog relacionada
 
@@ -42,9 +42,9 @@ and the level are managed with (standard actions)
 
 ### Multi-level lists
 
-Multi-level lists are based on [hierarchical list style sheets](stylesheets.md#hierarchical-list-style-sheets). Multi-level lists contain a root-level style sheet and one or more sub-level style sheet(s). Each level is attached to a hierarchical list style sheet and represents a depth in the list (level 1, level 2, level 3, etc.).
+Multi-level lists are based on [hierarchical list style sheets](stylesheets.md#hierarchical-list-style-sheets). Las listas multinivel contienen una hoja de estilo de nivel raíz y una o más hojas de estilo de subnivel. Each level is attached to a hierarchical list style sheet and represents a depth in the list (level 1, level 2, level 3, etc.).
 
-When a new sub-level is created, the level numbering restarts at 1. When you add or remove an element in your multi-level list, the numbers are automatically adjusted.
+Cuando se crea un nuevo subnivel, la numeración de niveles vuelve a empezar en 1. When you add or remove an element in your multi-level list, the numbers are automatically adjusted.
 
 ![](../../assets/en/WritePro/multilevel-lists.png)
 
@@ -120,7 +120,7 @@ resultado:
 
 ### Predefined attribute values
 
-When created, hierarchical list style sheets use predefined values:
+Cuando se crean, las hojas de estilo de listas jerárquicas utilizan valores predefinidos:
 
 - `wk margen izquierdo` = 0,75 cm × (número de niveles anteriores)
 - `wk list type` = `wk decimal`

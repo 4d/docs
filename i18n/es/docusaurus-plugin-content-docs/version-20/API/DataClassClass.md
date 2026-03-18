@@ -188,9 +188,9 @@ En el parámetro opcional *settings* se puede pasar un objeto que contenga opcio
 <!-- REF #DataClassClass.clearRemoteCache().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
+||||No requiere ningún parámetro|
 </div>
 <!-- END REF -->
 

@@ -44,19 +44,19 @@ This command provides two ways to remove a style sheet. You can specify:
 When the style sheet to delete belongs to a [hierarchical list style sheet](../user-legacy/stylesheets.md#hierarchical-list-style-sheets), the behavior depends on the level being removed. You can delete:
 
 - the root-level style sheet, or
-- a specific sub-level style sheet by providing the optional *listLevelIndex* parameter.
+- una hoja de estilo de subnivel específica ofreciendo el parámetro opcional *listLevelIndex*.
 
 When you delete the root-level style sheet (by passing 1 in the *listLevelIndex* parameter or ommitting it), all associated sub-level style sheets are deleted automatically and the entire hierarchical structure is removed from the document.
 
 When you delete a sub-level style sheet:
 
 - The `wk list level index` of all subsequent sub-level style sheets is decremented to maintain continuous level numbering.
-- The names of the affected sub-level style sheets are updated to reflect their new level index.
+- Los nombres de las hojas de estilo de subnivel afectadas se actualizan para reflejar su nuevo índice de nivel.
 - The `wk list level count` attribute of the root style sheet and all remaining sub-level style sheets is decremented to match the new total number of levels.
 
 The command performs no action if the specified level does not exist, or if the style sheet is not part of a hierarchical list and *listLevelIndex* is greater than 1.
 
-**Note**: The default ("Normal") style sheet can not be deleted.
+**Nota**: la hoja de estilo por defecto ("Normal") no se puede eliminar.
 
 ## Ejemplo
 

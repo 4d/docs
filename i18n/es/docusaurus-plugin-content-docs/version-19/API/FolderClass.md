@@ -277,9 +277,9 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 <!-- REF #FolderClass.delete().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|----|---|---|
-|option |Integer|->|Folder deletion option|
+|opción |Integer|->|Opciones de eliminación de carpetas|
 </div>
 <!-- END REF -->
 

@@ -80,7 +80,7 @@ ARRAY OBJECT(obColumn;0) //array de columnas
 Cuando una columna de list box está asociada a un array de objetos, la forma en que se muestra, introduce o edita una celda se basa en el atributo valueType del elemento del array. Los valores valueType soportados son:
 
 - "text": para un valor de texto
-- "real": for a numeric value that can include separators like a `\<space>`, <.>, or <,>
+- "real": para un valor numérico que puede incluir separadores como `\<space>`, <.>, o <,>
 - "integer": para un valor entero
 - "boolean": para un valor True/False
 - "color": para definir un color de fondo

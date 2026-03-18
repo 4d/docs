@@ -219,9 +219,9 @@ In 4D, OTP session tokens are useful when calling external URLs and being called
 
 :::
 
-:::note
+:::info
 
-Session tokens can be shared with [desktop sessions](../Desktop/sessions.md) to implement applications using hybrid sessions.
+Session tokens can also be created from [remote user sessions](../Desktop/sessions.md) and shared with web sessions to implement desktop applications that use web-based interfaces. See [Sharing a remote session for web accesses](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses).
 
 :::
 
@@ -481,7 +481,7 @@ A new user is created, and some information is stored in the session, especially
 - Both HTTP and HTTPS schemas are supported.
 - Apenas [sessões escaláveis](#enabling-web-sessions) podem ser reutilizadas com tokens.
 - Somente as sessões do banco de dados do host podem ser reutilizadas (as sessões criadas em servidores Web de componentes não podem ser restauradas).
-- Tokens can be **shared** with [desktop sessions](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) for hybrid accesses (desktop and web).
+- Tokens can be **shared** with [remote user sessions](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) for hybrid accesses (desktop and web).
 
 ### Lifespan
 

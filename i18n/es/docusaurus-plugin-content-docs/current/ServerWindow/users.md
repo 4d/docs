@@ -29,7 +29,7 @@ Para cada usuario conectado al servidor, la lista ofrece la siguiente informaci�
 
 ### Gestión de usuarios dormidos
 
-4D Server gestiona específicamente los casos en los que una máquina que ejecuta una aplicación remota 4D pasa al modo de reposo mientras su conexión con la máquina servidor sigue activa. En este caso, la aplicación remota 4D conectada notifica automáticamente a 4D Server su desconexión inminente. On the server, the connected user changes to a **Sleeping** status:
+4D Server gestiona específicamente los casos en los que una máquina que ejecuta una aplicación remota 4D pasa al modo de reposo mientras su conexión con la máquina servidor sigue activa. En este caso, la aplicación remota 4D conectada notifica automáticamente a 4D Server su desconexión inminente. En el servidor, el usuario conectado pasa a un estado **Dormido**:
 
 ![](../assets/en/Admin/server-sleep.png)
 

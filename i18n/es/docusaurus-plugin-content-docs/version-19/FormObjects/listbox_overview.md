@@ -30,9 +30,9 @@ El usuario puede seleccionar una o varias líneas utilizando los atajos estánda
 
 Un list box se compone de cuatro partes distintas:
 
-*   the [list box object](./listbox-object.md) in its entirety,
+*   el [objeto list box](./listbox-object.md) en su totalidad,
 *   [columnas](./listbox-column.md),
-*   column [headers](./listbox-header-footer.md#headers), and
+*   [encabezados de](./listbox-header-footer.md#headers) columna y
 *   column [footers](./listbox-header-footer.md#footers).
 
 ![](../assets/en/FormObjects/listbox_parts.png)

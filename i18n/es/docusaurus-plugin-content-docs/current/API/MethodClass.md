@@ -3,9 +3,9 @@ id: MethodClass
 title: Método
 ---
 
-A `4D.Method` object contains a piece of code that is created from text source and can be executed. `4D.Method` methods always execute in interpreted mode, regardless of the project running mode (interpreted/compiled). This feature is especially designed to support dynamic, on-the-fly execution of code snippets.
+A `4D.Method` object contains a piece of code that is created from text source and can be executed. `4D.Method` methods always execute in interpreted mode, regardless of the project running mode (interpreted/compiled). Esta funcionalidad está especialmente diseñada para permitir la ejecución dinámica y sobre la marcha de fragmentos de código.
 
-A `4D.Method` object is created with the `4D.Method.new()` function.
+Un objeto `4D.Method` se crea con la función `4D.Method.new()`.
 
 `4D.Method` objects inherit from the [`4D.Function`](./FunctionClass.md) class. Thus, to execute the method object, you can:
 
@@ -107,7 +107,7 @@ Los objetos 4D.Method ofrecen las siguientes propiedades y funciones:
 
 | Parámetros | Tipo                      |                             | Descripción                                                                                                                   |
 | ---------- | ------------------------- | :-------------------------: | ----------------------------------------------------------------------------------------------------------------------------- |
-| source     | Text                      |              ->             | Textual representation of a 4D method to be encapsuled as an object                                                           |
+| source     | Text                      |              ->             | Representación textual de un método 4D a encapsularse como un objeto                                                          |
 | name       | Text                      |              ->             | Name of the method to display in the debugger. Si se omite, el nombre del método se mostrará como "anonymous" |
 | Resultado  | 4D.Method | <- | Nuevo método objeto compartido                                                                                                |
 
@@ -118,7 +118,7 @@ Los objetos 4D.Method ofrecen las siguientes propiedades y funciones:
 
 The `4D.Method.new()` function <!-- REF #4D.Method.new().Summary -->creates and returns a new `4D.Method` object built from the *source* code<!-- END REF -->.
 
-In the *source* parameter, pass the 4D source code of the method as text. All end-of-line characters are supported (LF, CR, CRLF) using the [`Char`](../commands/char) command or an [escape sequence](../Concepts/quick-tour.md#escape-sequences).
+En el parámetro *source*, pase el código fuente 4D del método como texto. All end-of-line characters are supported (LF, CR, CRLF) using the [`Char`](../commands/char) command or an [escape sequence](../Concepts/quick-tour.md#escape-sequences).
 
 In the optional *name* parameter, pass the name of the method to be displayed in the 4D debugger or Runtime explorer. Si omite este parámetro, el nombre del método aparecerá como "anonymous".
 

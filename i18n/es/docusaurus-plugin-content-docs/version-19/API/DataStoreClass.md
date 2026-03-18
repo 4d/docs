@@ -255,9 +255,9 @@ Cada clase de datos de un almacén de datos está disponible como una propiedad 
 <!-- REF #DataStoreClass.cancelTransaction().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
+||||No requiere ningún parámetro|
 </div>
 <!-- END REF -->
 
@@ -516,9 +516,9 @@ Por defecto, el acceso al Explorador de Datos se concede para las sesiones `webA
 <!-- REF #DataStoreClass.makeSelectionsAlterable().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
+||||No requiere ningún parámetro|
 </div>
 <!-- END REF -->
 

@@ -103,9 +103,9 @@ IP:port/4DACTION/action_Session
 <!-- REF #SessionClass.clearPrivileges().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
+||||No requiere ningún parámetro|
 </div>
 <!-- END REF -->
 

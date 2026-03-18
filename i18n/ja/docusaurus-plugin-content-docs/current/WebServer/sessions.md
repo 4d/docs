@@ -220,9 +220,9 @@ End if
 
 :::
 
-:::note
+:::info
 
-セッショントークンは[デスクトップセッション](../Desktop/sessions.md) と共有することができ、これによりハイブリッドセッションを使用したアプリケーションを実装することができます。
+Session tokens can also be created from [remote user sessions](../Desktop/sessions.md) and shared with web sessions to implement desktop applications that use web-based interfaces. See [Sharing a remote session for web accesses](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses).
 
 :::
 
@@ -482,7 +482,7 @@ Function validateEmail() : 4D.OutgoingMessage
 - HTTP とHTTPS スキーマの両方がサポートされます。
 - トークンで再使用ができるのは[スケーラブルセッション](#Webセッションの有効化) のみです。
 - 再使用ができるのはホストデータベースのセッションのみです(コンポーネントのWeb サーバーで作成されたセッションは復元することができません)。
-- トークンは[desktop sessions](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) と**共有する**ことができ、これによりハイブリッドアクセス(デスクトップとWeb) を実現することができます。
+- Tokens can be **shared** with [remote user sessions](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) for hybrid accesses (desktop and web).
 
 ### ライフスパン
 

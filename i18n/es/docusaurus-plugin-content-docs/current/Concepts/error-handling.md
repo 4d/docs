@@ -21,7 +21,7 @@ Es muy recomendable instalar un método global de gestión de errores en 4D Serv
 
 :::
 
-## Predictable vs unpredictable errors {#predictable-vs-unpredictable-errors}
+## Errores previsibles frente a errores imprevisibles {#predictable-vs-unpredictable-errors}
 
 Muchas funciones de clase de 4D, como [`entity.save()`](../API/EntityClass.md#save) o [`transporter.send()`](../API/SMTPTransporterClass.md#send), devuelven un objeto que contiene información de *status*. Este objeto se utiliza para almacenar errores**predecibles** en el contexto de ejecución, por ejemplo, una contraseña no válida, una entidad bloqueada, etc., que no requieren detener la ejecución del programa. Esta categoría de errores, también llamados **errores silenciosos**, pueden ser manejados por código normal. Cuando estos errores se producen en un contexto de intercepción de errores, es decir, un [`Try`](#tryexpression), [`Try/Catch`](#trycatchend-try) o un [método de gestión de errores](#installing-an-error-handling-method), no interrumpen la ejecución y no activan el tratamiento de errores (por ejemplo, la parte `Catch` del [`Try/Catch`](#trycatchend-try) no se ejecuta). No aparecen en la colección [`Last errors`](../commands/last-errors). El error sólo se devuelve en las propiedades `status` y `statusText` del objeto devuelto. Puede ser procesado de acuerdo a su lógica de negocio.
 

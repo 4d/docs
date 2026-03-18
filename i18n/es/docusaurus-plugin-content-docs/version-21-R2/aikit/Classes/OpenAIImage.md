@@ -56,7 +56,7 @@ var $picture:=$image.asPicture()
 | *file*     | 4D.File | El objeto File donde se guardará la imagen.                |
 | Resultado  | Boolean                 | Devuelve `True` si la imagen se ha guardado correctamente. |
 
-Saves the image to disk, attempting to download it first if it is a URL. Devuelve `False` si no ha podido recuperar los datos de la imagen.
+Guarda la imagen en el disco, intentando descargarla primero si es una URL. Devuelve `False` si no ha podido recuperar los datos de la imagen.
 
 #### Ejemplo de Uso
 

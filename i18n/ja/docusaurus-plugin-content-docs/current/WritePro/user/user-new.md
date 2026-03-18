@@ -125,7 +125,7 @@ When created, hierarchical list style sheets use predefined values:
 - `wk margin left` = 0.75 cm × (number of previous levels)
 - `wk list type` = `wk decimal`
 - `wk name` is derived from the root style sheet name (Read-only for sub-levels)
-- `wk list level count` is set to the specified value for all levels
+- `wk list level count` は、指定された値が全てのレベルに対して設定されます
 
   - 例:
 

@@ -525,9 +525,9 @@ Quiere saber el número total y el tamaño de los correos electrónicos en el bu
 <!-- REF #POP3TransporterClass.undeleteAll().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
+||||No requiere ningún parámetro|
 </div>
 <!-- END REF -->
 
