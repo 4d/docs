@@ -16,7 +16,7 @@ Synchronous execution is used when:
 - Task execution must follow a strict order.
 - Performance impact is minimal (e.g., quick operations).
 - Se ejecuta en un contexto de un solo hilo donde el bloqueo es aceptable.
-- Synchronous execution blocks the UI and is best suited for quick, ordered tasks where blocking is acceptable.
+- La ejecución síncrona bloquea la interfaz de usuario y es más adecuada para tareas rápidas y ordenadas en las que el bloqueo es aceptable.
 
 #### Ejecución asíncrona
 
@@ -73,7 +73,7 @@ In the context of asynchronous execution, the following features place your code
 
 ### Event triggering
 
-Events are automatically triggered during the execution flow and passed to your corresponding callbacks. Se puede forzar la activación de eventos llamando a `terminate()` o `shutdown()` durante una `wait()`.
+Los eventos se activan automáticamente durante el flujo de ejecución y se pasan a sus retrollamadas correspondientes. Se puede forzar la activación de eventos llamando a `terminate()` o `shutdown()` durante una `wait()`.
 
 ### Contexto de ejecución de retrollamada
 
@@ -83,9 +83,9 @@ For callbacks to work properly in fully asynchronous mode, the operation should 
 
 ### Releasing an asynchronous object
 
-In 4D, all objects are released [when no more references](../Concepts/dt_object.md#resources) to them exist in memory. Esto suele ocurrir al final de la ejecución de un método para variables locales.
+En 4D, todos los objetos son liberados [cuando no existen más referencias](../Concepts/dt_object.md#resources) a ellos en memoria. Esto suele ocurrir al final de la ejecución de un método para variables locales.
 
-Para las clases asíncronas, 4D mantiene siempre una **referencia adicional** en el proceso que instanciaba el objeto. This reference is only released when the operation is finished, i.e. after the `onTerminate` event is triggered. This automatic referencing allows your object to survive even if you don't have referenced it specifically in a variable.
+Para las clases asíncronas, 4D mantiene siempre una **referencia adicional** en el proceso que instanciaba el objeto. This reference is only released when the operation is finished, i.e. after the `onTerminate` event is triggered. Esta referencia automática permite a su objeto sobrevivir aunque no lo haya mencionado específicamente en una variable.
 
 Si desea "forzar" la liberación de un objeto en cualquier momento, utilice un `. hutdown()` o función `terminate()`; desencadena el evento 'onTerminate\` así libera el objeto.
 
@@ -114,7 +114,7 @@ Todas estas clases siguen las mismas reglas de ejecución asíncrona. Su constru
 Recomendamos la siguiente secuencia:
 
 1. You create the user class where you declare callback functions, for example a `cs.Params` with `onError()` and `onResponse()` functions.
-2. You instantiate the user class (in our example using `cs.Params.new()`) that will configure your asynchronous object.
+2. Instanciará la clase usuario (en nuestro ejemplo utilizando `cs.Params.new()`) que configurará su objeto asíncrono.
 3. You call the constructor of the 4D class (for example `4D.SystemWorker.new()`) and pass the *options* object as parameter. It starts the operations passed immediately without delay.
 
 Here is a full example of implementation of an *options* object based upon a user class:

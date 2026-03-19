@@ -35,7 +35,7 @@ displayed_sidebar: docs
 
 ## Descripción
 
-<!--REF #_command_.WP New style sheet.Summary-->The **WP New style sheet** command creates a new (empty) style sheet object for the designated *wpDoc*.<!-- END REF-->
+<!--REF #_command_.WP New style sheet.Summary-->El comando **WP New style sheet** crea un nuevo objeto (vacío) de hoja de estilo para el *wpDoc* designado.<!-- END REF-->
 
 In the *wpDoc* parameter, pass a 4D Write Pro document.
 

@@ -457,10 +457,10 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 <!-- REF #directory.file().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|----|---|---|
-|path|Text|->|Relative POSIX file pathname|
-|Result|4D.File|<-|`File` object (null if invalid path)|
+|path|Text|->|Nombre de ruta del archivo POSIX relativo|
+|Resultado|4D.File|<-|`File` object (null if invalid path)|
 </div>
 <!-- END REF -->
 
@@ -567,10 +567,10 @@ Quiere obtener todos los archivos que no son invisibles en la carpeta Documents:
 <!-- REF #directory.folder().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|----|---|---|
-|path|Text|->|Relative POSIX file pathname|
-|Result|4D.Folder|<-|Created folder object (null if invalid *path*)|
+|path|Text|->|Nombre de ruta del archivo POSIX relativo|
+|Resultado|4D.Folder|<-|Created folder object (null if invalid *path*)|
 </div>
 <!-- END REF -->
 
@@ -612,10 +612,10 @@ Un objeto `Folder` o null si *path* no es válido.
 <!-- REF #directory.folders().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|----|---|---|
-|options|Integer|->|Folder list options|
-|Result|Collection|<-|Collection of children folder objects|
+|Parámetro|Tipo||Descripción|
+|---|----|---|-|
+|opciones|Integer|->|Opciones de lista de carpetas|
+|Resultado|Collection|<-|Collection of children folder objects|
 </div>
 <!-- END REF -->
 

@@ -376,10 +376,10 @@ La propiedad `.to` contiene la(s) <!-- REF #EmailObjectClass.to.Summary -->[dire
 <!-- REF #_command_.MAIL Convert from MIME.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|mime|Blob, Text|->|Email in MIME|
-|Result|Object|<-|Email object|
+|mime|Blob, Text|->|Email en MIME|
+|Resultado|Object|<-|Email object|
 </div>
 <!-- END REF -->
 

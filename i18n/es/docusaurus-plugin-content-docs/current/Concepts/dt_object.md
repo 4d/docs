@@ -53,7 +53,7 @@ Varios comandos y funciones 4D devuelven objetos, por ejemplo [`Database measure
 
 ### Comando `New object`
 
-The [`New object`](../commands/new-object) command creates a new empty or prefilled object and returns its reference.
+El comando [`New object`](../commands/new-object) crea un nuevo objeto vacío o prellenado y devuelve su referencia.
 
 Ejemplos:
 
@@ -110,7 +110,7 @@ $col:=$o.col[5] //6
 
 Puede crear dos tipos de objetos:
 
-- regular (non-shared) objects, using the [`New object`](../commands/new-object) command or object literal syntax (`{}`). Estos objetos pueden ser editados sin ningún control de acceso específico, pero no pueden ser compartidos entre procesos.
+- los objetos ordinarios (no compartidos), utilizando el comando [`New object`](../commands/new-object) o la sintaxis literal de los objetos (`{}`). Estos objetos pueden ser editados sin ningún control de acceso específico, pero no pueden ser compartidos entre procesos.
 - objetos compartidos, utilizando el comando [`New shared object`](../commands/new-shared-object). Estos objetos pueden ser compartidos entre procesos, incluidos los hilos apropiativos. Estos objetos pueden ser compartidos entre procesos, incluidos los hilos apropiativos.
   Para más información, consulte la sección [Objetos y colecciones compartidos](shared.md).
 

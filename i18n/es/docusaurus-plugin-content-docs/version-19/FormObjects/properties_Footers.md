@@ -60,4 +60,4 @@ Tenga en cuenta que la conversión de ida y vuelta puede conducir a un resultado
 
 #### Ver también
 
-[Headers](properties_Headers.md) - [List box footers](listbox-header-footer.md#footers)
+[Encabezados](properties_Headers.md) - [Pies de List box](listbox-header-footer.md#footers)

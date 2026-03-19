@@ -42,8 +42,8 @@ El parámetro *styleSheetName* permite especificar el nombre de la hoja de estil
 
 If the style sheet is part of a hierarchical list style sheet, you can optionally specify the *listLevelIndex* parameter to retrieve a specific level of the hierarchy.
 
-- *listLevelIndex* represents the level of the style sheet in the hierarchy (1 = root level, 2 = first sub-level, etc.).
-- If the parameter is omitted and the style sheet is hierarchical, the root-level style sheet is returned.
+- *listLevelIndex* representa el nivel de la hoja de estilo en la jerarquía (1 = nivel raíz, 2 = primer subnivel, etc.).
+- Si se omite el parámetro y la hoja de estilo es jerárquica, se devuelve la hoja de estilo del nivel raíz.
 - Si el nivel solicitado no existe, se devuelve un objeto null.
 - If the style sheet is not a hierarchical list style sheet and *listLevelIndex* is greater than 1, a null object is returned.
 

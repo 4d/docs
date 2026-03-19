@@ -29,7 +29,7 @@ In client/server applications, when a user connects to the server, a **remote us
 
 Este objeto se maneja a través de las funciones y propiedades de la [clase `Session`](../API/SessionClass.md).
 
-### Comparing server-side and client-side user session objects {#comparing-server-side-and-client-side-user-session-objects}
+### Comparación de objetos de sesión de usuario del lado del servidor y del lado del cliente {#comparing-server-side-and-client-side-user-session-objects}
 
 Depending on where the code is executed, a server-side or a client-side user `session` object is available. Both objects are similar, except that:
 

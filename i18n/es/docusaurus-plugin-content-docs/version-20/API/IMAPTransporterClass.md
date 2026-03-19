@@ -641,10 +641,10 @@ Para eliminar todos los mensajes del buzón actual:
 <!-- REF #IMAPTransporterClass.deleteBox().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|name|Text|->|Name of the mailbox to delete|
-|Result|Object|<-|Status of the mailbox deletion operation|
+|name|Text|->|Nombre del buzón a eliminar|
+|Resultado|Object|<-|Status of the mailbox deletion operation|
 </div>
 <!-- END REF -->
 
@@ -795,10 +795,10 @@ $status:=$transporter.expunge()
 <!-- REF #IMAPTransporterClass.getBoxInfo().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|name|Text|->|Name of the mailbox|
-|Result|Object|<-|boxInfo object|
+|name|Text|->|Nombre del buzón|
+|Resultado|Object|<-|boxInfo object|
 </div>
 <!-- END REF -->
 
@@ -851,10 +851,10 @@ El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 <!-- REF #IMAPTransporterClass.getBoxList().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetros|Tipo||Descripción|
 |---------|--- |:---:|------|
-|parameters|Object|->|Parameter object|
-|Result|Collection|<-|Collection of mailbox objects|
+|parameters|Object|->|Parámetros objeto|
+|Resultado|Colección|<-|Collection of mailbox objects|
 </div>
 <!-- END REF -->
 
@@ -1575,10 +1575,10 @@ End if
 <!-- REF #IMAPTransporterClass.searchMails().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|searchCriteria|Text|-> |Search criteria|
-|Result|Collection|<-|Collection of message numbers|
+|searchCriteria|Text|-> |Criterios de búsqueda|
+|Resultado|Collection|<-|Collection of message numbers|
 </div>
 <!-- END REF -->
 
@@ -1793,10 +1793,10 @@ Si la cadena `permanentFlags` incluye la bandera especial \*, significa que el s
 <!-- REF #IMAPTransporterClass.subscribe().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|name|Text|-> |Name of the mailbox|
-|Result|Object|<-|Status of the subscribe operation|
+|name|Text|-> |Nombre del buzón|
+|Resultado|Object|<-|Status of the subscribe operation|
 </div>
 <!-- END REF -->
 
@@ -1871,10 +1871,10 @@ End if
 <!-- REF #IMAPTransporterClass.unsubscribe().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|name|Text|-> |Name of the mailbox|
-|Result|Object|<-|Status of the unsubscribe operation|
+|name|Text|-> |Nombre del buzón|
+|Resultado|Object|<-|Status of the unsubscribe operation|
 </div>
 <!-- END REF -->
 

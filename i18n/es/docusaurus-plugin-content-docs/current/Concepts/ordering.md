@@ -15,7 +15,7 @@ The 4D language provides several mechanisms that rely on sorting collection elem
 - **Entity selection sorting functions**: [`entitySelection.orderBy()`](../API/EntitySelectionClass.md#orderby), which applies the same sorting rules as collections,
 - **Query functions with ordering**: [`entitySelection.query()`](../API/EntitySelectionClass.md#query), [`dataClass.query()`](../API/DataClassClass.md#query) with the `order by attributePath` keyword, which return results in deterministic order,
 - **Order-dependent statistical functions**: [`collection.max()`](../API/CollectionClass.md#max), [`collection.min()`](../API/CollectionClass.md#min), [`entitySelection.max()`](../API/EntitySelectionClass.md#max), [`entitySelection.min()`](../API/EntitySelectionClass.md#min), which rely on the ordering relation to identify extrema,
-- [**`ORDER BY ATTRIBUTE`**](../commands/order-by-attribute) command to order a database table based upon an object field.
+- [**`ORDER BY ATTRIBUTE`**](../commands/order-by-attribute) comando para ordenar una tabla de base de datos en base a un campo objeto.
 
 ## Sorting rules
 
@@ -24,7 +24,7 @@ When a collection or entity selection containing elements of different types is 
 1. **Fase de reparto**: los elementos se agrupan en clases de equivalencia en función de su tipo base. This phase establishes a partition of the entire element set.
 2. **Intra-class ordering phase**: Within each class, elements are sorted according to type-specific comparison rules. The default order is **ascending**.
 
-Types are ordered according to the following sequence, with their respective comparison relations in ascending order:
+Los tipos se ordenan según la secuencia siguiente, con sus respectivas relaciones de comparación en orden ascendente:
 
 | Rank | Tipo           | Also includes                                                                                                          | Comparison rule                                                                                                                          |
 | ---- | -------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |

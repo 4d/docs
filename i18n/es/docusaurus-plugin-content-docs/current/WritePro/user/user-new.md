@@ -68,7 +68,7 @@ Listas de varios niveles pueden ser gestionadas usando:
 
 ## Hojas de estilo de listas jerárquicas
 
-Hierarchical list style sheets are used to create [multi-level lists](using-a-4d-write-pro-area.md#multi-level-lists).
+Las hojas de estilo de listas jerárquicas se utilizan para crear [listas multinivel](using-a-4d-write-pro-area.md#multi-level-lists).
 
 To create a hierarchical list style sheet, use [WP New style sheet](../commands/wp-new-style-sheet.md) and pass in *listLevelCount* the desired number of levels. You then define a hierarchy of related paragraph style sheets: one **root-level** style sheet and one or more **sub-level** style sheets linked to it. Cada nivel representa una profundidad en la lista (nivel 1, nivel 2, nivel 3, etc.) and is automatically named "root-level name + lvl + index", for example "Mylist lvl 2".
 

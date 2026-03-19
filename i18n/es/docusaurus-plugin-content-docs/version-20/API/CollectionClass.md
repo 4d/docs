@@ -251,10 +251,10 @@ Esta función modifica la colección original.
 <!-- REF #collection.at().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|index|Integer|->|Index of element to return|
-|Result|any |<-|The element at that index|
+|index|Integer|->|Índice de elemento a regresar|
+|Resultado|cualquiera |<-|The element at that index|
 </div>
 <!-- END REF -->
 

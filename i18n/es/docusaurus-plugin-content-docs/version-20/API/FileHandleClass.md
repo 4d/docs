@@ -320,10 +320,10 @@ $s:=$fh.readText()
 <!--REF #FileHandleClass.readBlob().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|bytes|Real|->|Number of bytes to be read|
-|Result|[4D.Blob](BlobClass)|<-|Bytes read from the file|
+|Parámetro|Tipo||Descripción|
+|---|-|-|-|---|
+|bytes|Real|->|Número de bytes a leer|
+|Result|[4D.Blob](BlobClass)||<-|Bytes read from the file|
 </div>
 <!-- END REF -->
 
@@ -406,10 +406,10 @@ Esta función asume que la propiedad [`.offset`](#offset) es un número de carac
 <!--REF #FileHandleClass.readText().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|stopChar|Text|->|Character(s) at which to stop reading|
-|Result|Text|<-|Text from the file|
+|Parámetro|Tipo||Descripción|
+|---|---|-|---|
+|stopChar|Text|->|Carácter(es) en los que parar la lectura|
+|Resultado|Text|<-|Text from the file|
 </div>
 <!-- END REF -->
 
@@ -491,9 +491,9 @@ Si el valor del *size* es menor que el tamaño actual del documento, el contenid
 <!--REF #FileHandleClass.writeBlob().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|blob|[4D.Blob](BlobClass)|->|Blob to write in the file|
+|Parámetro|Tipo||Descripción|
+|---|-|-|-|---|
+|blob|[4D.Blob](BlobClass)|->|Blob a escribir en el archivo|
 </div>
 <!-- END REF -->
 

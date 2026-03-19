@@ -643,10 +643,10 @@ En un almacén de datos remoto:
 <!-- REF #DataStoreClass.getRemoteContextInfo().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|contextName|Text|->|Name of the context|
-|Result|Object|<-|Description of the optimization context|
+|contextName|Text|->|Nombre del contexto|
+|Resultado|Object|<-|Description of the optimization context|
 </div>
 <!-- END REF -->
 

@@ -476,10 +476,10 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 <!--REF #FileClass.rename().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|newName|Text|->|New full name for the file|
-|Result|4D.File|<-|Renamed file|
+|newName|Text|->|Nuevo nombre completo para el archivo|
+|Resultado|4D.Archivo|<-|Renamed file|
 </div>
 <!-- END REF -->
 
