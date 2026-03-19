@@ -93,7 +93,6 @@ Some data is also collected at regular intervals.
 |system|Text|Operating system version and build number|
 |uniqueID|Text|Unique ID of the 4D Server|
 |uptime|Number|Time elapsed (in seconds) since local 4D database was opened|
-|usingLegacyNetworkLayer|Boolean|True if legacy network layer used for the application server|
 |usingQUICNetworkLayer|Boolean|True if the database uses the QUIC network layer|
 |version|Number|Version number of the 4D application|
 |webServer|Object|"started":true if the web server is starting or started|

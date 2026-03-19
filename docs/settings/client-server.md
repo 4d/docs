@@ -66,24 +66,36 @@ When Single Sign On (SSO) is enabled (see above), you must fill in this field if
 
 #### Network Layer
 
-This drop-down box contains 3 network layer options to choose between: **legacy**, **ServerNet** and **QUIC** (only in project mode), which are used to handle communications between 4D Server and remote 4D machines (clients).
--   **Legacy**: This former "legacy" network layer is still supported in order to ensure compatibility for databases created prior to v15. This network layer can also be enabled by programming using the [SET DATABASE PARAMETER](../commands/set-database-parameter) command.
--   **ServerNet** (by default): Enables the ServerNet network layer on the server (available since 4D v15).
--   **QUIC** (available only in project mode): Enables the QUIC network layer on the server.
+This drop-down box contains the available network layers, which are used to handle communications between 4D Server and remote 4D machines (clients).
+-   **QUIC** (projects only): Enables the QUIC network layer on the server.
 
- 	 **Notes**:
-	- Selecting this option overrides the Use legacy network layer option in case it has been set using the [SET DATABASE PARAMETER](../commands/set-database-parameter) command.
-	- You can know if a 4D application is running with a QUIC network layer using the [Application info](../commands/application-info) command.
+ 	 **Notes about QUIC**:
+	- You can know if a 4D application is running with the QUIC network layer using the [`Application info`](../commands/application-info) command.
 	- Since QUIC uses the UDP protocol, make sure UDP is allowed in your network security settings.
-	- QUIC automatically connects to the port 19813 for both application server and DB4D server.
+	- QUIC automatically connects to the port 19813 for both [application server and DB4D server](#4d-server-and-port-numbers).
 	- When the QUIC layer option is selected:
 		-	[Client-server Connections Timeout settings](#client-server-connections-timeout) are hidden
 		-	The [Encrypt Client-Server communication checkbox](#encrypt-client-server-communications) is hidden (QUIC communications are always in TLS, whatever your secured mode is).
 	- **Compatibility**: You need to deploy your client/server applications with 4D 20 or higher before switching to the QUIC network layer.
+-   **ServerNet** (only option available for binary databases): Enables the ServerNet network layer on the server.
+
+:::info
+
+Using QUIC network layer is **recommended** for projects.
+
+:::
 
 :::note
 
 In case of a modification, you need to restart the application for the change to be taken into account. Any client applications that were logged must also be restarted to be able to connect with the new network layer.
+
+:::
+
+:::tip Related blog posts
+
+[QUIC Network Layer is Production Ready!](https://blog.4d.com/quic-network-layer-is-production-ready/)  
+[QUIC network layer: Automatic update and sleep mode](https://blog.4d.com/quic-network-layer-automatic-update-and-sleep-mode/)   
+[Work and Move with QUIC and Network Switching](https://blog.4d.com/work-and-move-with-quic-and-network-switching/)  
 
 :::
 

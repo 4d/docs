@@ -22,6 +22,7 @@ displayed_sidebar: docs
 
 |Release|Changes|
 |---|---|
+|21 R3|Removed support of *Use legacy network layer*|
 |20 R6|Modified|
 |20 R3|Modified|
 |19 R5|Modified|
@@ -643,12 +644,6 @@ SET DATABASE PARAMETER(Log command list;"-1666;-323")
 - TLSv1\_2 (TLS 1.2, introduced in 2008)
 - TLSv1\_3 (TLS 1.3, introduced in 2018)
 
-**NOTES**: 
-- The 4D Internet Commands plugin uses a different network layer, therefore this selector will have no impact on its TLS version.
-- This setting is ignored for your client server connections if your 4D Server uses the legacy network layer.
-
-
-
 
 ### Number of formulas in cache (92)
 
@@ -1038,23 +1033,6 @@ In previous releases, time values were converted and stored as number of millise
 **Description:** Sets or gets the current display status of the tips for the 4D application. By default, tips are enabled.
 
  Note that this parameter sets all 4D tips, i.e. form help messages and Design mode editor's tips.
-
-
-
-
-### Use legacy network layer (87)
-
-**Scope**: 4D in local mode, 4D Server
-
-**Kept between two sessions**: Yes
-
-**Description:** Sets or gets the current status of the legacy network layer for client/server connections. The legacy network layer is obsolete beginning with 4D v14 R5 and should be replaced progressively in your applications with the *ServerNet* network layer. *ServerNet* will be required in upcoming 4D releases in order to benefit from future network evolutions. For compatibility reasons, the legacy network layer is still supported to allow a smooth transition for existing applications; (it is used by default in applications converted from a release prior to v14 R5). Pass 1 in this parameter to use the legacy network layer (and disable *ServerNet*) for your client/server connections, and pass 0 to disable the legacy network (and use the *ServerNet*). 
-
-This property can also be set by means of the "Use legacy network layer" option found on the *Compatibility page* of the Database Settings (see *Network and Client-Server options*). In this section, you will also find a discussion about migration strategy. We recommend that you activate the *ServerNet* as soon as possible. You will need to restart the application in order for this parameter to be taken into account. 
-
-**Possible values:** 0 or 1 (0 = do not use legacy layer, 1 = use legacy layer)
-
-**Default value:** 0 in databases created with 4D v14 R5 or higher, 1 in databases converted from 4D v14 R4 or earlier.
 
 
 

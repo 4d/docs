@@ -72,11 +72,6 @@ TLS certificates managed by 4D must be in the **PEM format**. If your certificat
 - [**RSA**](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
 - [**ECDSA**](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) 
 
-:::info Compatibility
-
-The ECDSA encryption format is not supported by the 4D [legacy network layer](../settings/client-server.md#network-layer).
-
-::: 
 
 :::note
 
