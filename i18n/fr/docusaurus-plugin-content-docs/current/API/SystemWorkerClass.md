@@ -7,9 +7,9 @@ Les System workers permettent au code 4D d'appeler n'importe quel process extern
 
 La classe `SystemWorker` est disponible dans le class store `4D` .
 
-### Aynchronous programming
+### Programmation asynchrone
 
-This class supports asynchronous programming in 4D as described in the [Asynchronous Execution](../Develop/async.md) page.
+Cette classe prend en charge la programmation asynchrone dans 4D, comme décrit dans la page [Exécution asynchrone](../Develop/async.md).
 
 ### Exemple
 
@@ -328,7 +328,7 @@ $output:=$worker.response
 
 #### Description
 
-The `.commandLine` property <!-- REF #SystemWorkerClass.commandLine.Summary -->contains the command line passed as parameter to the [`new()`](#4dsystemworkernew) function<!-- END REF -->.
+La propriété `.commandLine` <!-- REF #SystemWorkerClass.commandLine.Summary -->contient la ligne de commande passée en paramètre à la fonction [`new()`](#4dsystemworkernew)<!-- END REF -->.
 
 Cette propriété est en **lecture seule**.
 

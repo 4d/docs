@@ -494,9 +494,9 @@ Si la entidad no pertenece a ninguna selección de entidades existente (es decir
 <!-- REF #EntityClass.fromObject().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|filler|Object|->|Object from which to fill the entity|
+|filler|Object|->|Objeto desde el cual llenar la entidad|
 </div>
 <!-- END REF -->
 

@@ -174,7 +174,7 @@ Este parámetro puede utilizarse con formatos de fecha predefinidos o basados en
 - El formato ISO Date GMT corresponde a la norma ISO8601 y contiene una fecha y una hora expresadas con respecto a la zona horaria (GMT).
 
 ```4d
- $mydate:=String(Current date;ISO Date GMT;Current time) // returns, for instance, 2010-09-13T16:11:53Z  
+ $mydate:=String(Current date;ISO Date GMT;Current time) // devuelve, por ejemplo, 2010-09-13T16:11:53Z  
 ```
 
 Tenga en cuenta que el caracter "Z" al final indica el formato GMT.  
@@ -194,7 +194,7 @@ Si no se pasa el parámetro *addTime*, el comando devuelve la fecha a medianoche
 - El formato Date RFC 1123 formatea una combinación fecha/hora según el estándar definido por RFC 822 y 1123\. Este formato es necesario, por ejemplo, para establecer la fecha de caducidad de las cookies en un encabezado HTTP.
 
 ```4d
- $mydate:=String(Current date;Date RFC 1123;Current time) // returns, for example Fri, 10 Sep 2010 13:07:20 GMT  
+ $mydate:=String(Current date;Date RFC 1123;Current time) // devuelve, por ejemplo Fri, 10 Sep 2010 13:07:20 GMT  
 ```
 
 La hora expresada tiene en cuenta la zona horaria (zona GMT). Si solo pasa una fecha, el comando devuelve la fecha a medianoche (hora local) expresada en hora GMT, lo que puede hacer que la fecha se adelante o se atrase en función de la zona horaria local:

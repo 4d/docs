@@ -411,10 +411,10 @@ Quiere mover y renombrar una carpeta:
 <!--REF #FolderClass.rename().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|newName|Text|->|New full name for the folder|
-|Result|4D.Folder|<-|Renamed folder|
+|newName|Text|->|Nuevo nombre completo para la carpeta|
+|Resultado|4D.Folder|<-|Renamed folder|
 </div>
 <!-- END REF -->
 

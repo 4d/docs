@@ -28,9 +28,9 @@ Pour le débogage et la surveillance, vous pouvez utiliser le fichier journal [4
 
 :::
 
-### Aynchronous programming
+### Programmation asynchrone
 
-This class supports asynchronous programming in 4D as described in the [Asynchronous Execution](../Develop/async.md) page.
+Cette classe prend en charge la programmation asynchrone dans 4D, comme décrit dans la page [Exécution asynchrone](../Develop/async.md).
 
 ### Exemples
 

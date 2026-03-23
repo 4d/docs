@@ -31,7 +31,7 @@ La classe `WebForm` contient des fonctions et des propriétés permettant de gé
 
 #### Description
 
-The components of web pages are <!-- REF WebFormClass.componentName.Summary -->objects that are available directly as properties<!-- END REF --> of these web pages.
+Les composants des pages web sont des <!-- REF WebFormClass.componentName.Summary -->objets qui sont disponibles directement en tant que propriétés<!-- END REF --> de ces pages web.
 
 Les objets retournés sont de la classe [`4D.WebFormItem`](WebFormItemClass.md). Ces objets possèdent des fonctions que vous pouvez utiliser pour gérer vos composants de manière dynamique.
 

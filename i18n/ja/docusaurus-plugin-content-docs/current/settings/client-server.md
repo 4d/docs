@@ -64,26 +64,38 @@ Single Sign On (SSO) が有効になっている場合 (上述参照)、認証�
 
 #### ネットワークレイヤー
 
-ここでは、ドロップダウンメニューにて 3つのネットワークオプションから選択できます: **Legacy**、**ServerNet** 、**QUIC** (プロジェクトモードのみ)。ネットワークレイヤーは、4D Server とリモートの 4Dマシン (クライアント) 間の通信を管理するのに使用されます。
+This drop-down box contains the available network layers, which are used to handle communications between 4D Server and remote 4D machines (clients).
 
-- **旧式**: v15以前に作成されたデータベースとの互換性を確保するため、この旧式ネットワークレイヤーは引き続きサポートされています。 このネットワークレイヤーは [SET DATABASE PARAMETER](../commands/set-database-parameter) コマンドを使用することでプログラミングで有効化することができます。
-- **ServerNet** (デフォルト): サーバーの ServerNet ネットワークレイヤーを有効にします (4D 15 以降で利用可能)。
-- **QUIC** (プロジェクトモードでのみ利用可能): サーバー上で QUICネットワークレイヤーを有効にします。
+- **QUIC** (projects only): Enables the QUIC network layer on the server.
 
-  **注**:
+  **Notes about QUIC**:
 
-  - このオプションを設定すると、 [SET DATABASE PARAMETER](../commands/set-database-parameter) コマンドにより "旧式ネットワークレイヤーを使用する" オプションが設定されていても無視されます。
-  - 4Dアプリケーションが QUICネットワークレイヤーで動作しているかどうかは、 [Application info](../commands/application-info) コマンドで確認できます。
+  - You can know if a 4D application is running with the QUIC network layer using the [`Application info`](../commands/application-info) command.
   - QUIC は UDPプロトコルを使用するため、ネットワークのセキュリティ設定で UDP が許可されている必要があります。
-  - アプリケーションサーバーと DB4Dサーバーの両方で、QUIC は自動的にポート19813 に接続します。
+  - QUIC automatically connects to the port 19813 for both [application server and DB4D server](#4d-server-and-port-numbers).
   - QUICレイヤーオプションを選択すると:
     - [クライアント/サーバー接続タイムアウト](#クライアントサーバー接続タイムアウト) の設定は非表示になります。
     - [クライアント-サーバー通信の暗号化](#クライアント-サーバー通信の暗号化) チェックボックスは非表示になります (セキュアモードに関わらず、QUIC 通信は常に TLS です)。
   - **互換性**: QUICネットワークレイヤーに切り替えるには、まずクライアント/サーバーアプリケーションを 4D 20以上で運用する必要があります。
+- **ServerNet** (only option available for binary databases): Enables the ServerNet network layer on the server.
+
+:::info
+
+Using QUIC network layer is **recommended** for projects.
+
+:::
 
 :::note
 
 オプションを変更した場合、変更を反映するには 4Dアプリケーションを再起動する必要があります。 接続していたクライアントアプリケーションも、新しいネットワークレイヤーで接続するため再起動しなければなりません。
+
+:::
+
+:::tip 関連したblog 記事
+
+[QUIC Network Layer is Production Ready!](https://blog.4d.com/quic-network-layer-is-production-ready/)  
+[QUIC network layer: Automatic update and sleep mode](https://blog.4d.com/quic-network-layer-automatic-update-and-sleep-mode/)  
+[Work and Move with QUIC and Network Switching](https://blog.4d.com/work-and-move-with-quic-and-network-switching/)
 
 :::
 

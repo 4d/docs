@@ -41,9 +41,9 @@ Vous devez [créer le serveur WebSocket](#4dwebsocketservernew) dans un [worker]
 
 Le [serveur Web 4D](WebServerClass.md) doit être démarré.
 
-### Aynchronous programming
+### Programmation asynchrone
 
-This class supports asynchronous programming in 4D as described in the [Asynchronous Execution](../Develop/async.md) page.
+Cette classe prend en charge la programmation asynchrone dans 4D, comme décrit dans la page [Exécution asynchrone](../Develop/async.md).
 
 ### Exemple
 

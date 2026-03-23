@@ -45,10 +45,10 @@ Los objetos POP3 Transporter se instancian con el comando [POP3 New transporter]
 <!-- REF #_command_.POP3 New transporter.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|server|object|->|Mail server information|
-|Result|4D.POP3Transporter|<-|[POP3 transporter object](#pop3-transporter-object)|
+|server|object|-->|Información del servidor de correo|
+|Resultado|4D.POP3Transporter|<-|[POP3 transporter object](#pop3-transporter-object)|
 </div>
 <!-- END REF -->
 
@@ -106,10 +106,10 @@ La función devuelve un [**objeto POP3 transporter**](#pop3-transporter-object).
 <!-- REF #4D.POP3Transporter.new().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|server|Object|->|Mail server information|
-|Result|4D.POP3Transporter|<-|[POP3 transporter object](#pop3-transporter-object)|
+|server|Object|->|Información del servidor de correo|
+|Resultado|4D.POP3Transporter|<-|[POP3 transporter object](#pop3-transporter-object)|
 </div>
 <!-- END REF -->
 
@@ -170,9 +170,9 @@ La función `4D.POP3Transporter.new()` <!-- REF #4D.POP3Transporter.new().Summar
 <!-- REF #POP3TransporterClass.delete().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|msgNumber|Integer|->|Number of the message to delete|
+|msgNumber|Integer|->|Número del mensaje a borrar|
 </div>
 <!-- END REF -->
 
@@ -458,10 +458,10 @@ Quiere saber el número total y el tamaño de los correos electrónicos en el bu
 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|msgNumber|Integer|-> |Number of the message in the list|
-|Result|Blob|<-|Blob of the MIME string returned from the mail server|
+|msgNumber|Integer|-> |Número del mensaje en la lista|
+|Resultado|Blob|<-|Blob of the MIME string returned from the mail server|
 </div>
 <!-- END REF -->
 

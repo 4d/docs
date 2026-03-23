@@ -285,7 +285,7 @@ Para la traducción de la aplicación, puede introducir una referencia XLIFF en 
 
 ## Cálculo de variables
 
-This property sets the type of calculation to be done in a [column footer](listbox-header-footer.md#footers) area.
+Esta propiedad define el tipo de cálculo que se realizará en un área [pie de columna](listbox-header-footer.md#footers).
 
 > El cálculo de los pies de página también puede establecerse utilizando el comando 4D [`LISTBOX SET FOOTER CALCULATION`](../commands-legacy/listbox-set-footer-calculation.md).
 

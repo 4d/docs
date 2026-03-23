@@ -68,12 +68,6 @@ Los certificados TLS gestionados por 4D deben estar en formato **PEM**. Si su pr
 - [**RSA**](https://en.wikipedia.org/wiki/RSA_\\(cryptosystem\\))
 - [**ECDSA**](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm)
 
-:::info Compatibilidad
-
-El formato de cifrado ECDSA no es compatible por 4D [capa de red legacy](../settings/client-server.md#network-layer).
-
-:::
-
 :::note
 
 4D le propone dos comandos para ayudarle a solicitar un certificado RSA, [vea el tutorial más abajo](#how-to-get-a-rsa-certificate-tutorial).

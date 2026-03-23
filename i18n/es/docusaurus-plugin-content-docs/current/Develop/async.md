@@ -45,7 +45,7 @@ Elegir entre ejecución síncrona y asíncrona:
 
 The general concept of asynchronous event management in 4D is based on an asynchronous messaging model using **workers** (processes that listen to events) and **callbacks** (functions or formulas automatically invoked when an event occurs). Instead of waiting for a result (synchronous mode), you provide a function that will be automatically called when the desired event occurs. Callbacks can be passed as class functions (recommended) or Formula objects.
 
-This model is common to [`CALL WORKER`](../commands/call-worker), [`CALL FORM`](../commands/call-form), and [classes that support aynchronous execution](#asynchronous-programming-with-4d-classes). Todos estos comandos/clases inician una operación que se ejecuta en segundo plano. The statement that launches the operation returns immediately, without waiting for the operation to finish.
+This model is common to [`CALL WORKER`](../commands/call-worker), [`CALL FORM`](../commands/call-form), and [classes that support aynchronous execution](#asynchronous-programming-with-4d-classes). Todos estos comandos/clases inician una operación que se ejecuta en segundo plano. La sentencia que lanza la operación retorna inmediatamente, sin esperar a que la operación finalice.
 
 ### Workers
 
@@ -85,7 +85,7 @@ For callbacks to work properly in fully asynchronous mode, the operation should 
 
 En 4D, todos los objetos son liberados [cuando no existen más referencias](../Concepts/dt_object.md#resources) a ellos en memoria. Esto suele ocurrir al final de la ejecución de un método para variables locales.
 
-Para las clases asíncronas, 4D mantiene siempre una **referencia adicional** en el proceso que instanciaba el objeto. This reference is only released when the operation is finished, i.e. after the `onTerminate` event is triggered. Esta referencia automática permite a su objeto sobrevivir aunque no lo haya mencionado específicamente en una variable.
+Para las clases asíncronas, 4D mantiene siempre una **referencia adicional** en el proceso que instanciaba el objeto. Esta referencia sólo se libera cuando finaliza la operación, es decir, después de que se active el evento `onTerminate`. Esta referencia automática permite a su objeto sobrevivir aunque no lo haya mencionado específicamente en una variable.
 
 Si desea "forzar" la liberación de un objeto en cualquier momento, utilice un `. hutdown()` o función `terminate()`; desencadena el evento 'onTerminate\` así libera el objeto.
 

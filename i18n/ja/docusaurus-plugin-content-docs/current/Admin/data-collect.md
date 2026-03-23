@@ -91,7 +91,6 @@ title: データ収集
 | system                                                      | Text                              | OS のバージョンとビルド番号                                                                                             |
 | uniqueID                                                    | Text                              | 4D Server の固有ID                                                                                             |
 | uptime                                                      | Number                            | ローカル4Dデータベースが開かれてからの経過時間 (秒単位)                                                           |
-| usingLegacyNetworkLayer                                     | Boolean                           | アプリケーションサーバーに旧式ネットワークレイヤーが使用されている場合は true                                                                   |
 | usingQUICNetworkLayer                                       | Boolean                           | データベースが QUICネットワークレイヤーを使用している場合は True                                                                       |
 | version                                                     | Number                            | 4Dアプリケーションのバージョン番号                                                                                          |
 | webServer                                                   | Object                            | Webサーバーが起動中、または起動済みの場合は "started":true                                                      |

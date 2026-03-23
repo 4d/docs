@@ -73,9 +73,9 @@ Esta propiedad es de sólo lectura.
 <!-- REF #WebSocketConnectionClass.send().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|message|Text / Blob / Object|->|The message to send|
+|message|Text / Blob / Object|->|El mensaje a enviar|
 </div>
 <!-- END REF -->
 

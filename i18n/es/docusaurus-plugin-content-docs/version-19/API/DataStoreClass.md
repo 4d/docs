@@ -42,9 +42,9 @@ Un [Datastore](ORDA/dsMapping.md#datastore) es el objeto de interfaz suministrad
 <!-- REF #_command_.ds.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|localID|Text|->|Local ID of the remote datastore to return|
+|localID|Text|->|ID local del datastore remoto a devolver|
 |Result |cs.DataStore|<-|Reference to the datastore|
 </div>
 <!-- END REF -->

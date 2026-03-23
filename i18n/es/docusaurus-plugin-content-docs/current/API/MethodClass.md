@@ -10,9 +10,9 @@ Un objeto `4D.Method` se crea con la función `4D.Method.new()`.
 `4D.Method` objects inherit from the [`4D.Function`](./FunctionClass.md) class. Thus, to execute the method object, you can:
 
 - store a `4D.Method` object in an object property and use the `()` operator after the property name,
-- or directly call the `4D.Method` object using the [`call()`](#call) or [`apply()`](#apply) function on it.
+- o llamar directamente al objeto `4D.Method` usando la función [`call()`](#call) o [`apply()`](#apply) en él.
 
-See examples in the [Executing code in Function objects](../API/FunctionClass.md#executing-code-in-function-objects) paragraph.
+Ver ejemplos en el párrafo [Ejecución de código en los objetos Function](../API/FunctionClass.md#executing-code-in-function-objects).
 
 :::tip Entrada de blog relacionada
 

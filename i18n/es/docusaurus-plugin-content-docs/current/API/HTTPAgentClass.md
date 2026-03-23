@@ -106,10 +106,9 @@ Creación del HTTPAgent:
 
 ```4d
 var $options:={}
-$options.maxSockets:=5 //5 is the maximum number of sockets per server
-$options.maxTotalSockets:=10 //10 is the maximum number of sockets for the agent
-$opt
-ons.validateTLSCertificate:=True //To validate the server's certificate
+$options.maxSockets:=5 //5 es el número máximo de sockets por servidor
+$options.maxTotalSockets:=10 //10 es el número máximo de sockets para el agente
+$options.validateTLSCertificate:=True //Validar el certificado del servidor
 
 var $myAgent:=4D.HTTPAgent.new($options)
 

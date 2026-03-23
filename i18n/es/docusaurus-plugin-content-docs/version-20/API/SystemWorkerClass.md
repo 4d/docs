@@ -552,10 +552,10 @@ Esta propiedad es **de sólo lectura**.
 <!-- REF #SystemWorkerClass.wait().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|timeout|Real|->|Waiting time (in seconds)|
-|Result|4D.SystemWorker|<-|SystemWorker object|
+|timeout|Real|->|Tiempo de espera (en segundos)|
+|Resultado|4D.SystemWorker|<-|SystemWorker object|
 </div>
 <!-- END REF -->
 

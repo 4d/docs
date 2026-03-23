@@ -1,47 +1,47 @@
 ---
 id: ordering
-title: Ordering collections and objects
+title: Tri des collections et des objets
 ---
 
-To sort a series of data, 4D compares each value against the others by applying comparison criteria defined according to the data type (see [sorting rules](#sorting-rules)). This process relies on a sorting algorithm that establishes a total order across all elements. When all data belongs to the same [data type](./data-types.md), the comparison rules are straightforward and well-defined.
+Pour trier une série de données, 4D compare chaque valeur les unes aux autres en appliquant des critères de comparaison en fonction du type de données (voir [règles de tri](#sorting-rules)). Ce processus repose sur un algorithme de tri qui établit un ordre total entre tous les éléments. Lorsque toutes les données sont du même [type](./data-types.md), les règles de comparaison sont simples et bien définies.
 
-However, [collections](./dt_collection.md) and [objects](./dt_object.md), including [entity selections](../ORDA/dsMapping.md#entity-selection), can contain elements and attributes of heterogeneous types: scalar types (text, numbers, booleans, dates) or complex types (objects, blobs, collections). When ordering a collection or object containing heterogeneous values, 4D applies a stratified sorting scheme that first partitions elements by type, then applies comparison rules within each type partition.
+Cependant, les [collections](./dt_collection.md) et les [objets](./dt_object.md), y compris les [entity selections](../ORDA/dsMapping.md#entity-selection), peuvent contenir des éléments et des attributs de types hétérogènes : types scalaires (texte, nombres, booléens, dates) ou types complexes (objets, blobs, collections). Pour ordonner une collection ou un objet contenant des valeurs hétérogènes, 4D applique un schéma de tri stratifié qui partitionne d'abord les éléments par type, puis applique des règles de comparaison à l'intérieur de chaque partition de type.
 
-## Ordering functions
+## Fonctions de tri
 
-The 4D language provides several mechanisms that rely on sorting collection elements, object attributes, or orchestrate sorting to produce an ordered result:
+Le langage 4D propose plusieurs mécanismes qui s'appuient sur le tri d'éléments de collection, d'attributs d'objets ou sur le tri orchestré pour produire un résultat ordonné :
 
-- **Collection sorting functions**: [`collection.multiSort()`](../API/CollectionClass.md#multisort) (multi-criteria sorting with explicit key and order specification), [`collection.orderBy()`](../API/CollectionClass.md#orderby) (sorting by evaluating an expression on each element), [`collection.sort()`](../API/CollectionClass.md#sort) (in-place sorting according to the natural ordering relation),
-- **Entity selection sorting functions**: [`entitySelection.orderBy()`](../API/EntitySelectionClass.md#orderby), which applies the same sorting rules as collections,
-- **Query functions with ordering**: [`entitySelection.query()`](../API/EntitySelectionClass.md#query), [`dataClass.query()`](../API/DataClassClass.md#query) with the `order by attributePath` keyword, which return results in deterministic order,
-- **Order-dependent statistical functions**: [`collection.max()`](../API/CollectionClass.md#max), [`collection.min()`](../API/CollectionClass.md#min), [`entitySelection.max()`](../API/EntitySelectionClass.md#max), [`entitySelection.min()`](../API/EntitySelectionClass.md#min), which rely on the ordering relation to identify extrema,
-- [**`ORDER BY ATTRIBUTE`**](../commands/order-by-attribute) command to order a database table based upon an object field.
+- **Fonctions de tri des collections** : [`collection.multiSort()`](../API/CollectionClass.md#multisort) (tri multicritères avec spécification explicite de la clé et de l'ordre), [`collection.orderBy()`](../API/CollectionClass.md#orderby) (tri par évaluation d'une expression sur chaque élément), [`collection.sort()`](../API/CollectionClass.md#sort) (tri direct en fonction de la relation d'ordre naturelle),
+- **Fonctions de tri d'entity selections** : [`entitySelection.orderBy()`](../API/EntitySelectionClass.md#orderby), qui applique les mêmes règles de tri que les collections,
+- **Fonctions de recherche avec tri** : [`entitySelection.query()`](../API/EntitySelectionClass.md#query), [`dataClass.query()`](../API/DataClassClass.md#query) avec le mot-clé `order by attributePath`, qui renvoient les résultats dans un ordre déterministe,
+- **Fonctions statistiques dépendantes du tri** : [`collection.max()`](../API/CollectionClass.md#max), [`collection.min()`](../API/CollectionClass.md#min), [`entitySelection.max()`](../API/EntitySelectionClass.md#max), [`entitySelection.min()`](../API/EntitySelectionClass.md#min), qui s'appuient sur la relation d'ordre pour identifier les extrêmes,
+- Commande [**`ORDER BY ATTRIBUTE`**](../commands/order-by-attribute) pour trier une table de base de données en fonction d'un champ objet.
 
-## Sorting rules
+## Règles de tri
 
-When a collection or entity selection containing elements of different types is sorted, a **type-based stratification** is applied according to the following algorithm:
+Lorsqu'une collection ou une sélection d'entités contenant des éléments de différents types est triée, une **stratification par type** est appliquée selon l'algorithme suivant :
 
-1. **Partitioning phase**: Elements are grouped into equivalence classes based on their base type. This phase establishes a partition of the entire element set.
-2. **Intra-class ordering phase**: Within each class, elements are sorted according to type-specific comparison rules. The default order is **ascending**.
+1. **Phase de partitionnement** : Les éléments sont regroupés en classes d'équivalence en fonction de leur type de base. Cette phase établit une partition de l'ensemble des éléments.
+2. **Phase de classement intra-classe** : Au sein de chaque classe, les éléments sont triés selon des règles de comparaison spécifiques au type. L'ordre par défaut est **croissant**.
 
-Types are ordered according to the following sequence, with their respective comparison relations in ascending order:
+Les types sont classés selon la séquence suivante, avec leurs relations de comparaison respectives dans l'ordre croissant :
 
-| Rank | Type           | Also includes                                                                                                          | Comparison rule                                                                                                                                     |
-| ---- | -------------- | ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1    | **null**       | pointers (null pointers only for collections)                                                       | no comparison criteria applicable                                                                                                                   |
-| 2    | **boolean**    |                                                                                                                        | logical ordering: false *before* true                                                                                               |
-| 3    | **string**     |                                                                                                                        | lexicographical order (e.g., "a" *before* "ab" *before* "b")                                     |
-| 4    | **number**     | time (converted to milliseconds or seconds depending on the `Time inside objects` database setting) | standard algebraic order (numeric comparison)                                                                                    |
-| 5    | **object**     | blobs, pictures, non-null pointers (collections)                                                    | internal order (consistent for collection functions, see below)                                                                  |
-| 6    | **collection** |                                                                                                                        | internal order (consistent for collection functions, see below)                                                                  |
-| 7    | **date**       |                                                                                                                        | chronological order (older dates *before* newer dates, e.g., !1990-01-01! *before* !2000-01-01!) |
+| Rang | Type           | Inclut également                                                                                                      | Règle de comparaison                                                                                                                                       |
+| ---- | -------------- | --------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1    | **null**       | pointeurs (pointeurs nuls uniquement pour les collections)                                         | aucun critère de comparaison applicable                                                                                                                    |
+| 2    | **boolean**    |                                                                                                                       | ordre logique : faux *avant* vrai                                                                                                          |
+| 3    | **string**     |                                                                                                                       | ordre lexicographique (par exemple, "a" *avant* "ab" *avant* "b")                                                                       |
+| 4    | **number**     | heure (convertie en millisecondes ou en secondes selon le paramètre de base `Time inside objects`) | ordre algébrique standard (comparaison numérique)                                                                                       |
+| 5    | **object**     | blobs, images, pointeurs non nuls (collections)                                                    | ordre interne (cohérent pour les fonctions de collection, voir ci-dessous)                                                              |
+| 6    | **collection** |                                                                                                                       | ordre interne (cohérent pour les fonctions de collection, voir ci-dessous)                                                              |
+| 7    | **date**       |                                                                                                                       | ordre chronologique (les dates les plus anciennes *avant* les dates les plus récentes, par exemple, !1990-01-01 ! *avant* !2000-01-01!) |
 
-### Special numeric values
+### Valeurs numériques spéciales
 
-Special floating-point values `+INF` (positive infinity), `-INF` (negative infinity), and `NaN` (Not-a-Number) present in collections and objects are ordered according to the following natural sequence: **NaN < -INF < finite values < +INF**.
+Les valeurs spéciales en virgule flottante `+INF` (infini positif), `-INF` (infini négatif) et `NaN` (Not-a-Number) présentes dans les collections et les objets sont triées selon la séquence naturelle suivante : **NaN < -INF < valeurs finies < +INF**.
 
-### Consistent ordering in collections
+### Ordre cohérent dans les collections
 
-Collection sorting functions (see [Ordering functions](#ordering-functions) section above) implement a **consistent sort** for complex types such as objects and collections. By "consistent", we mean that successive calls to the same sorting function (e.g., `collection.orderBy()`) on the same collection produce identical ordering for complex type values. Formally, if a sort expression yields the same comparative result for two elements, the relative order of those elements is preserved.
+Les fonctions de tri des collections (voir la section [Fonctions de tri](#ordering-functions) ci-dessus) mettent en œuvre un **tri cohérent** pour les types complexes tels que les objets et les collections. Par "cohérent", nous entendons que des appels successifs à la même fonction de tri (par exemple, `collection.orderBy()`) sur la même collection produisent un ordre identique pour les valeurs de type complexe. Formellement, si une expression de tri donne le même résultat comparatif pour deux éléments, l'ordre relatif de ces éléments est préservé.
 
-Other 4D sorting operations do not provide this stability guarantee when comparing complex types.
+Les autres opérations de tri 4D n'offrent pas cette garantie de stabilité lors de la comparaison de types complexes.

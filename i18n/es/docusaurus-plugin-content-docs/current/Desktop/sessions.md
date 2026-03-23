@@ -19,7 +19,7 @@ El siguiente diagrama muestra los diferentes tipos de sesión y cómo interactú
 
 Al igual que en una [**sesión de usuario web**](../WebServer/sessions.md), el código ejecutado en una sesión de escritorio tiene acceso a un objeto [`Session`](../API/SessionClass.md) que proporciona funciones y propiedades que permiten almacenar valores de sesión y compartirlos entre procesos de usuario, por ejemplo utilizando el objeto [`session.storage`](../API/SessionClass.md#storage).
 
-Sin embargo, a diferencia del código ejecutado en las sesiones de usuario web, el código ejecutado en las sesiones de escritorio no está controlado por [roles y privilegios](../ORDA/privileges.md). It can access any parts of the 4D application, including ORDA and data model classes (on 4D Server, [users and groups feature](../Users/handling_users_groups.md) can manage user accesses). Note also that desktop sessions do not require [scalable sessions](../WebServer/sessions.md#enabling-web-sessions) to be enabled.
+Sin embargo, a diferencia del código ejecutado en las sesiones de usuario web, el código ejecutado en las sesiones de escritorio no está controlado por [roles y privilegios](../ORDA/privileges.md). It can access any parts of the 4D application, including ORDA and data model classes (on 4D Server, [users and groups feature](../Users/handling_users_groups.md) can manage user accesses). Tenga en cuenta también que las sesiones de escritorio no requieren [sesiones escalables](../WebServer/sessions.md#enabling-web-sessions) para ser activadas.
 
 You can nevertheless [**share** a remote session with a web session](#sharing-a-remote-session-for-web-accesses) so that desktop application users can access your 4D application through a web interface, using in particular **Qodly pages** and Web areas.
 
@@ -31,7 +31,7 @@ Este objeto se maneja a través de las funciones y propiedades de la [clase `Ses
 
 ### Comparación de objetos de sesión de usuario del lado del servidor y del lado del cliente {#comparing-server-side-and-client-side-user-session-objects}
 
-Depending on where the code is executed, a server-side or a client-side user `session` object is available. Both objects are similar, except that:
+Dependiendo de dónde se ejecute el código, se dispondrá de un objeto `session` de usuario del lado del servidor o del lado del cliente. Both objects are similar, except that:
 
 - sus propiedades [`.storage`](../API/SessionClass.md#storage) no son el mismo objeto. A value stored in the `.storage` of the user session on the server will not be available in the `.storage` of the user session on the client and conversely.
 - for security reasons, the client-side session cannot execute functions that **modify** [privileges](../ORDA/privileges.md) ([`setPrivileges()`](../API/SessionClass.md#setprivileges), [`clearPrivileges()`](../API/SessionClass.md#clearprivileges), [`promote()`](../API/SessionClass.md#promote), [`demote()`](../API/SessionClass.md#demote), [`restore()`](../API/SessionClass.md#restore)). Calling these functions on a client generates an error.

@@ -270,10 +270,10 @@ Si la señal ya está en el estado de señalización (es decir, la propiedad `si
 <!-- REF #SignalClass.wait().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|timeout|Real|->|Maximum waiting time for the signal in seconds|
-|Result|Boolean|<-|State of the `.signaled` property|
+|Parámetro|Tipo||Descripción|
+|---|-|-|-|-|-|
+|timeout|Real|->|Tiempo máximo de espera de la señal en segundos|
+|Resultado|Boolean|<-|State of the `.signaled` property|
 </div>
 <!-- END REF -->
 

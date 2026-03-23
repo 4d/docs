@@ -221,7 +221,7 @@ En 4D, los tokens de sesión OTP son útiles cuando se llama a URLs externas y s
 
 :::info
 
-Session tokens can also be created from [remote user sessions](../Desktop/sessions.md) and shared with web sessions to implement desktop applications that use web-based interfaces. See [Sharing a remote session for web accesses](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses).
+Session tokens can also be created from [remote user sessions](../Desktop/sessions.md) and shared with web sessions to implement desktop applications that use web-based interfaces. Ver [Compartir una sesión remota para acceder a la web] (../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses).
 
 :::
 

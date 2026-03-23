@@ -79,7 +79,7 @@ En tiempo de ejecución, 4D cargará automáticamente la imagen clara u oscura s
 
 :::note
 
-The dark mode is not available on Windows with [Classic theme](../settings/interface.md#use-fluent-ui-on-windows).
+El modo oscuro no está disponible en Windows con [Tema clásico](../settings/interface.md#use-fluent-ui-on-windows).
 
 :::
 

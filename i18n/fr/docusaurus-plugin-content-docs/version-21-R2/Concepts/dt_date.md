@@ -48,24 +48,24 @@ Une date nulle s’écrit *!00-00-00!*.
 | Inférieur ou égal à | Date <= Date | Boolean  | !2017-01-20! <= !2017-01-20! | True         |
 |                     |                                       |          | !2017-01-20! <= !2017-01-01! | False        |
 
-## Conversion of dates from JavaScript
+## Conversion de dates à partir de JavaScript
 
-Since dates in JavaScript are objects, they are sent to 4D as text containing their JSON form like any other object. This principle is implemented in particular when using [JSON commands](../commands/theme/JSON.md) or [Web Areas](../FormObjects/webArea_overview.md).
+Comme les dates en JavaScript sont des objets, elles sont envoyées à 4D sous forme de texte contenant leur forme JSON comme n'importe quel autre objet. This principle is implemented in particular when using [JSON commands](../commands/theme/JSON.md) or [Web Areas](../FormObjects/webArea_overview.md).
 
-The JSON form of JavaScript Date objects follows the ISO 8601 standard, for example "2013-08-23T00:00:00Z". It is your responsibility to convert this text into a 4D date. Two solutions are available:
+La forme JSON des objets Date JavaScript suit la norme ISO 8601, par exemple "2013-08-23T00:00:00Z". Il est de votre ressort de convertir ce texte en une date 4D. Deux solutions sont possibles :
 
 Using the [`JSON Parse`](../commands-legacy/json-parse.md) command:
 
 ```4d
- var $dateIso : Text // reception of a date in ISO format
+ var $dateIso : Text // réception d'une date au format ISO
  var $date4D : Date 
- $date4D:=JSON Parse("\""+$dateIso+"\"";Is date))
+ $date4D:=JSON Parse("\""+$dateIso+"\""Is date))
 ```
 
 Using the [`Date`](../commands-legacy/date.md) command:
 
 ```4d
- var $dateIso : Text // reception of a date in ISO format
+ var $dateIso : Text // réception d'une date au format ISO
  var $date4D : Date 
  $date4D:=Date($dateIso)
 ```

@@ -240,7 +240,7 @@ Si se lanza un error *diferido* fuera del bloque `Try`, la ejecución del códig
 
 :::info
 
-For more information on *deferred* and *non-deferred* errors, please refer to the [`throw`](../commands/throw) command description.
+Para más información sobre errores *diferidos* y *no diferidos*, por favor consulte la descripción del comando [`throw`](../commands/throw).
 
 :::
 

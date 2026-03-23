@@ -707,7 +707,7 @@ Las llaves primarias pueden ser números (enteros) o cadenas. Puede "forzar" que
 
 La función `.getRemoteContextAttributes()` <!-- REF #EntityClass.getRemoteContextAttributes().Summary -->devuelve información sobre el contexto de optimización utilizado por la entidad <!-- END REF -->.
 
-If there is no [optimization context](../ORDA/client-server-optimization.md) for the entity, the function returns an empty Text.
+Si no hay un [contexto de optimización](../ORDA/client-server-optimization.md) para la entidad, la función devuelve un texto vacío.
 
 #### Ejemplo
 

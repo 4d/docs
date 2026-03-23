@@ -106,10 +106,9 @@ HTTPAgent の作成:
 
 ```4d
 var $options:={}
-$options.maxSockets:=5 //5 is the maximum number of sockets per server
-$options.maxTotalSockets:=10 //10 is the maximum number of sockets for the agent
-$opt
-ons.validateTLSCertificate:=True //To validate the server's certificate
+$options.maxSockets:=5 //1サーバーあたりのソケット数の最大値を5 に設定
+$options.maxTotalSockets:=10 // 1エージェントあたりのソケット数の最大値を10 に設定
+$options.validateTLSCertificate:=True // サーバーの証明書を評価する
 
 var $myAgent:=4D.HTTPAgent.new($options)
 

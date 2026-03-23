@@ -180,30 +180,30 @@ Function square($x : Integer) -> $result : Integer
    return $x * $x
 ```
 
-L'instruction `return` peut être utilisée avec la syntaxe standard pour les [valeurs retournées](#returned-value) (la valeur retournée doit être du type déclaré). When you have declared a return parameter (e.g. `myFunction() -> $myReturnValue : Text`), `return $x` implicitely executes `$myReturnValue:=$x`, and returns to the caller. Keep in mind that it ends immediately the code execution. Examine the following examples:
+L'instruction `return` peut être utilisée avec la syntaxe standard pour les [valeurs retournées](#returned-value) (la valeur retournée doit être du type déclaré). Lorsque vous avez déclaré un paramètre de retour (par exemple, `myFunction() -> $myReturnValue : Text`), `return $x` exécute implicitement `$myReturnValue:=$x`, et retourne à l'appelant. Gardez à l'esprit qu'il met fin immédiatement à l'exécution du code. Examinez les exemples suivants :
 
 ```4d
 Function getValue -> $v : Integer
 	$v:=10
 	return
-	// function returns 10
+	// la fonction retourne 10
 	
 Function getValue -> $v : Integer
 	$v:=10
 	return 20
-	// function returns 20
+	// la fonction retourne 20
 
 Function getValue -> $v : Integer
 	return 10
-	$v:=20 // never executed
-	// function returns 10
+	$v:=20 // jamais exécutée
+	// la fonction retourne 10
 
 Function getValue -> $v : Integer
-	return "Hello" //error
+	return "Hello" //erreur
 
 Function returnHello
 	return "Hello"
-	// function returns "Hello"
+	// la fonction retourne "Hello"
 ```
 
 ## Indirections sur les paramètres (${N})
@@ -309,7 +309,7 @@ $total3:=SumNumbers(1 ; 2 ; "hello" ; 4 ; 5) // erreur
 
 :::note Compatibilité
 
-L'ancienne syntaxe de déclaration des paramètres variadiques (`C_TEXT(${4})`) est obsolète à partir de 4D 20 R7.
+L'ancienne syntaxe de déclaration des paramètres variadiques (`C_TEXT(${4})`) est obsolète à compter de 4D 20 R7.
 
 :::
 

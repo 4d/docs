@@ -704,7 +704,7 @@ Les clés primaires peuvent être des nombres (integer) ou des textes. Vous pouv
 
 La fonction `.getRemoteContextAttributes()`<!-- REF #EntityClass.getRemoteContextAttributes().Summary -->retourne des informations relatives au contexte d'optimisation utilisé par l'entité<!-- END REF -->.
 
-If there is no [optimization context](../ORDA/client-server-optimization.md) for the entity, the function returns an empty Text.
+S'il n'y a pas de [contexte d'optimisation](../ORDA/client-server-optimization.md) pour l'entité, la fonction renvoie un texte vide.
 
 #### Exemple
 

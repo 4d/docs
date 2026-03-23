@@ -594,10 +594,10 @@ Quiere combinar los rangos de tipo celda, columna y línea en un nuevo rango dis
 <!-- REF #_method_.VP Convert from 4D View.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|Parámetro|Tipo| |Descripción|
 |---|---|---|---|
-|4DViewDocument| Blob|->|4D View document|
-|Result| Object|<-|4D View Pro object
+|4DViewDocument| Blob|->|Documento 4D View|
+|Resultado| Object|<-|4D View Pro object
 </div>
 <!-- END REF -->
 
@@ -1538,10 +1538,10 @@ $cellStyle:=VP Get cell style(VP Get selection("myDoc"))
 <!-- REF #_method_.VP Get column attributes.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|Parámetro|Tipo| |Descripción|
 |---|---|---|---|
-|rangeObj  |Object|->|Range object|
-|Result  |Collection|<-|Collection of column properties|
+|rangoObj |Objeto|->|Rango objeto|
+|Resultado |Collection|<-|Collection of column properties|
 </div>
 <!-- END REF -->
 
@@ -1618,10 +1618,10 @@ $colCount:=VP Get column count("ViewProarea")
 <!-- REF #_method_.VP Get current sheet.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|Parámetro|Tipo| |Descripción|
 |---|---|---|---|
-|vpAreaName| Text|->|4D View Pro area form object name|
-|Function result|Integer|<-|Index of the current sheet|
+|vpAreaName| Text|->|Nombre del objeto 4D View Pro|
+|Resultado de la función|Integer|<-|Index of the current sheet|
 </div>
 <!-- END REF -->
 
@@ -1846,10 +1846,10 @@ $formula:=VP Get formula by name("ViewProArea";"Total")
 <!-- REF #_method_.VP Get formulas.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|Parámetro|Tipo| |Descripción|
 |---|---|---|---|
-|rangeObj  |Object|->|Range object|
-|Result  |Collection|<-|Collection of formula values|
+|rangoObj |Objeto|->|Rango objeto|
+|Resultado |Collection|<-|Collection of formula values|
 </div>
 <!-- END REF -->
 
@@ -2079,10 +2079,10 @@ zoomFactor:1
 <!-- REF #_method_.VP Get row attributes.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|Parámetro|Tipo| |Descripción|
 |---|---|---|---|
-|rangeObj  |Object|->|Range object|
-|Result  |Collection|<-|Collection of row properties|
+|rangoObj |Objeto|->|Rango objeto|
+|Resultado |Collection|<-|Collection of row properties|
 </div>
 <!-- END REF -->
 
@@ -2202,10 +2202,10 @@ $currentSelection:=VP Get selection("myVPArea")
 <!-- REF #_method_.VP Get sheet count.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|Parámetro|Tipo| |Descripción|
 |---|---|---|---|
-|vpAreaName| Text|->|4D View Pro area form object name|
-|Function result|Integer|<-|Number of sheets|
+|vpAreaName| Text|->|Nombre del objeto 4D View Pro|
+|Resultado de la función|Integer|<-|Number of sheets|
 </div>
 <!-- END REF -->
 
@@ -4124,10 +4124,10 @@ VP RESET SELECTION("myVPArea")
 <!-- REF #_method_.VP RESIZE TABLE.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|rangeObj|Object|->|New range for the table|
-|tableName|Text|->|Name of the table|
+|rangeObj|Object|->|Nuevo rango para la tabla|
+|tableName|Text|->|Nombre de la tabla|
 </div>
 <!-- END REF -->
 
@@ -4477,9 +4477,9 @@ VP SET ACTIVE CELL($activeCell)
 <!-- REF #_method_.VP SET ALLOWED METHODS.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|methodObj   |Object|->|Allowed methods in the 4D View Pro areas|
+|methodObj |Object|->|Métodos permitidos en las áreas 4D View Pro|
 </div>
 <!-- END REF -->
 
@@ -6342,10 +6342,10 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";Null))
 <!-- REF #_method_.VP SET VALUES.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|rangeObj |Object|->|Range object|
-|valuesCol  |Collection|->|Collection of values|
+|rangeObj |Object|->|Objeto rango|
+|valuesCol |Collection|->|Colección de valores|
 </div>
 <!-- END REF -->
 

@@ -47,7 +47,7 @@ The *styleSheetType* parameter lets you designate the type of the style sheet, *
 Pase un nombre para la hoja de estilo en el parámetro *styleSheetName*. The style sheet's name is stored with the document and facilitates reusing or modifying the style. It can also be used with the [WP Get style sheet](../WritePro/commands/wp-get-style-sheet) and [WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet) commands. The style sheet name must comply with the following rules:
 
 - debe empezar por una letra
-- it can then contain alphanumeric characters, space characters, "-" characters or unicode characters >= 128
+- puede contener caracteres alfanuméricos, espacios en blanco, caracteres "-" o caracteres unicode >= 128
 - debe ser único en el documento independientemente del tipo
 - it must not start with "section", which is reserved
 - el "\_" se sustituye por un espacio y se eliminan los espacios finales.
@@ -56,7 +56,7 @@ You can specify the attributes of the style sheet using the [WP SET ATTRIBUTES](
 
 **Notas**:
 
-- A style sheet only modifies the display of a character or paragraph, not how it is stored in the document. Si se elimina una hoja de estilo, el texto volverá al estilo por defecto.
+- Una hoja de estilo sólo modifica la visualización de un carácter o párrafo, no cómo se almacena en el documento. Si se elimina una hoja de estilo, el texto volverá al estilo por defecto.
 - Any style attributes not defined in the new style sheet will automatically use the Normal style. For more information, see the [*Style sheets* page](../user-legacy/stylesheets.md).
 
 ### Hierarchical list style sheet

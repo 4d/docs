@@ -63,7 +63,7 @@ The command performs no action if the specified level does not exist, or if the 
 The following example deletes the second level of a hierarchical list style sheet:
 
 ```4d
-// Delete level 2 of the "MainList" hierarchical style sheet
+// Borrar el nivel 2 de la hoja de estilo jerárquica "MainList"
 WP DELETE STYLE SHEET(wpArea; "MainList"; 2)
 ```
 

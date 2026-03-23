@@ -610,9 +610,9 @@ Quiere renombrar "ReadMe.txt" como "ReadMe_new.txt":
 <!--REF #FileClass.setAppInfo().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|info|Object|->|Properties to write in .exe/.dll version resource or .plist file|
+|info|Object|->|Propiedades para escribir en el recurso de versión .exe/.dll o archivo .plist|
 </div>
 <!-- END REF -->
 

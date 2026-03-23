@@ -65,26 +65,38 @@ Lorsque l'authentification unique (SSO) est activée (voir ci-dessus), vous deve
 
 #### Couche réseau
 
-Cette liste déroulante contient 3 options de couche réseau : **Historique**, **ServerNet** et **QUIC** (uniquement en mode projet), qui sont utilisées pour gérer les communications entre le serveur 4D et les machines 4D distantes (clients).
+This drop-down box contains the available network layers, which are used to handle communications between 4D Server and remote 4D machines (clients).
 
-- **Historique** : Cette ancienne couche réseau "historique" est toujours prise en charge afin d'assurer la compatibilité avec les bases de données créées avant la version 15. Cette couche réseau peut également être activée par programmation à l'aide de la commande [SET DATABASE PARAMETER](../commands/set-database-parameter).
-- **ServerNet** (par défaut) : Active la couche réseau ServerNet sur le serveur (disponible depuis 4D v15).
-- **QUIC** (disponible uniquement en mode projet) : Active la couche réseau QUIC sur le serveur.
+- **QUIC** (projects only): Enables the QUIC network layer on the server.
 
-  **Notes** :
+  **Notes about QUIC**:
 
-  - La sélection de cette option remplace l'option Utiliser l'ancienne couche réseau si elle a été définie à l'aide de la commande [SET DATABASE PARAMETER](../commands/set-database-parameter).
-  - Vous pouvez savoir si une application 4D fonctionne avec une couche réseau QUIC en utilisant la commande [Application info](../commands/application-info).
+  - You can know if a 4D application is running with the QUIC network layer using the [`Application info`](../commands/application-info) command.
   - Étant donné que QUIC utilise le protocole UDP, assurez-vous que l'UDP est autorisé dans les paramètres de sécurité de votre réseau.
-  - QUIC se connecte automatiquement au port 19813 à la fois pour le serveur d'application et le serveur DB4D.
+  - QUIC automatically connects to the port 19813 for both [application server and DB4D server](#4d-server-and-port-numbers).
   - Lorsque l'option de couche QUIC est sélectionnée :
     - Les paramètres de [délai avant déconnexion client-serveur](#client-server-connections-timeout) sont masqués
     - La case à cocher [Crypter les communications Client-Serveur](#encrypt-client-server-communications) est masquée (les communications QUIC sont toujours en TLS, quel que soit votre mode sécurisé).
   - **Compatibilité** : Vous devez déployer vos applications client/serveur avec 4D 20 ou plus avant de passer à la couche réseau QUIC.
+- **ServerNet** (only option available for binary databases): Enables the ServerNet network layer on the server.
+
+:::info
+
+Using QUIC network layer is **recommended** for projects.
+
+:::
 
 :::note
 
 En cas de modification, vous devez redémarrer l'application pour que le changement soit pris en compte. Toute application cliente qui était connectée doit également être redémarrée afin de se connecter avec la nouvelle couche réseau.
+
+:::
+
+:::tip Articles de blog sur le sujet
+
+[QUIC Network Layer is Production Ready!](https://blog.4d.com/quic-network-layer-is-production-ready/)  
+[QUIC network layer: Automatic update and sleep mode](https://blog.4d.com/quic-network-layer-automatic-update-and-sleep-mode/)  
+[Work and Move with QUIC and Network Switching](https://blog.4d.com/work-and-move-with-quic-and-network-switching/)
 
 :::
 

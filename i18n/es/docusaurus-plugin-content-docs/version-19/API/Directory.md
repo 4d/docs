@@ -663,10 +663,10 @@ Quiere obtener la colección de todas las carpetas y subcarpetas de la carpeta d
 <!-- REF #directory.getIcon().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|----|---|---|
-|size|Integer|->|Side length for the returned picture (pixels)|
-|Result|Picture|<-|Icon|
+|size|Integer|->|Longitud lateral para la imagen devuelta (píxeles)|
+|Resultado|Image|<-|Icon|
 </div>
 <!-- END REF -->
 

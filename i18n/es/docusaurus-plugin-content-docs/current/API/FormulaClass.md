@@ -8,9 +8,9 @@ title: Formula
 Los objetos de la clase `4D.Formula` heredan de la clase [`4D.Function`](./FunctionClass.md). Así, para ejecutar la fórmula, puede:
 
 - store a `4D.Formula` object in an object property and use the `()` operator after the property name,
-- or directly call the `4D.Formula` object using the [`call()`](#call) or [`apply()`](#apply) function on it.
+- o llamar directamente al objeto `4D.Formula` usando la función [`call()`](#call) o [`apply()`](#apply) sobre él.
 
-See examples in the [Executing code in Function objects](../API/FunctionClass.md#executing-code-in-function-objects) paragraph.
+Ver ejemplos en el párrafo [Ejecución de código en los objetos Function](../API/FunctionClass.md#executing-code-in-function-objects).
 
 ### Pasar parámetros a fórmulas
 

@@ -17,9 +17,9 @@ La classe `TCPListener` est disponible dans le class store `4D`. Vous pouvez cr�
 
 Toutes les fonctions de la classe `TCPListener` sont thread-safe.
 
-### Aynchronous programming
+### Programmation asynchrone
 
-This class supports asynchronous programming in 4D as described in the [Asynchronous Execution](../Develop/async.md) page.
+Cette classe prend en charge la programmation asynchrone dans 4D, comme décrit dans la page [Exécution asynchrone](../Develop/async.md).
 
 ### Exemple
 

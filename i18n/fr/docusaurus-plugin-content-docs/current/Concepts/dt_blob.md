@@ -34,7 +34,7 @@ Vous ne pouvez pas utiliser d'opérateurs sur les blobs.
 
 ## Vérifier si une variable contient un blob scalaire ou un `4D.Blob`
 
-Use the [Value type](../commands/value-type) command to determine if a value is of type Blob or Object.
+La commande [Value type](../commands/value-type) permet de déterminer si une valeur est de type Blob ou Object.
 Pour vérifier qu'un objet est un objet blob (`4D.Blob`), utilisez [OB instance of](../commands/ob-instance-of) :
 
 ```4d

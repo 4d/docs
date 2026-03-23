@@ -44,10 +44,10 @@ Los objetos SMTP Transporter se instancian con el comando [SMTP New transporter]
 <!-- REF #_command_.SMTP New transporter.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|server|Object|->|Mail server information|
-|Result|4D.SMTPTransporter|<-|[SMTP transporter object](#smtp-transporter-object)|
+|server|Object|->|Información del servidor de correo|
+|Resultado|4D.SMTPTransporter|<-|[SMTP transporter object](#smtp-transporter-object)|
 </div>
 <!-- END REF -->
 
@@ -122,10 +122,10 @@ La función devuelve un [**SMTP transporter**](#smtp-transporter-object). Todas 
 <!-- REF #4D.SMTPTransporter.new().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|server|Object|->|Mail server information|
-|Result|4D.SMTPTransporter|<-|[SMTP transporter object](#smtp-transporter-object)|
+|server|Object|->|Información del servidor de correo|
+|Resultado|4D.SMTPTransporter|<-|[SMTP transporter object](#smtp-transporter-object)|
 </div>
 <!-- END REF -->
 

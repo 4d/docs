@@ -1589,25 +1589,25 @@ searchCriteria = FLAGGED FROM "SMITH"
 searchCriteria = OR SEEN FLAGGED
 ```
 
-... returns all messages with \Seen flag set OR \Flagged flag set
+... retourne tous les messages comportant le marqueur \Seen OU \Flagged
 
 ```
 searchCriteria = NOT SEEN
 ```
 
-... returns all messages with \Seen flag not set.
+... retourne tous les messages ne comportant pas le marqueur \Seen.
 
 ```
 searchCriteria = HEADER CONTENT-TYPE "MIXED" NOT HEADER CONTENT-TYPE "TEXT"...
 ```
 
-... returns message whose content-type header contains “Mixed” and does not contain “Text”.
+... renvoie le message dont l'en-tête content-type contient "Mixed" et ne contient pas "Text".
 
 ```
 searchCriteria = HEADER CONTENT-TYPE "E" NOT SUBJECT "o" NOT HEADER CONTENT-TYPE "MIXED"
 ```
 
-... returns message whose content-type header contains “ e ” and whose Subject header does not contain “ o ” and whose content-type header is not “ Mixed ”.
+... renvoie le message dont l'en-tête content-type contient " e " et dont l'en-tête Subject ne contient pas " o " et dont l'en-tête content-type n'est pas " Mixed ".
 
 A noter que dans les deux derniers exemples, le résultat de la recherche est différent lorsque vous enlevez les parenthèses de la première liste de mots-clés.
 
