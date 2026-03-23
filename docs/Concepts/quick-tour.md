@@ -437,7 +437,7 @@ In the following example, the **Carriage return** character (escape sequence `\r
 
 The following conventions are used in the 4D language documentation:
 
-- the `{ }` characters (braces) indicate optional parameters. For example, `.delete( { option : Integer } )` means that the *option* parameter may be omitted when calling the function.
+- the `{ }` characters (braces) indicate optional parameters. For example, `.delete({ option : Integer })` means that the *option* parameter may be omitted when calling the function.
 - the `any` keyword is used for parameters that can be of any type (number, text, boolean, date, time, object, collection...).
-- the `{; *...param* : Type}` notation indicates an unlimited number of parameters of the same type. For example, `.concat( value : any { ;...valueN : any } ) : Collection` means that an unlimited number of values of any type can be passed to the function.
-- the `{; ...(*param* : Type ; *param2* : Type) }` notation indicates an unlimited number of groups of parameters. For example, `COLLECTION TO ARRAY ( collection : Collection ; array : Array {; propertyName : Text}{; ...(array : Array ; propertyName : Text) } )` means that an unlimited number of couple values of type array/text can be passed to the command.
+- the `*...param* : Type` notation indicates from 0 to an unlimited number of parameters of the same type. For example, `.concat( value : any { ;...valueN : any } ) : Collection` means that an unlimited number of values of any type can be passed to the function.
+- the `...(*param* : Type ; *param2* : Type)` notation indicates from 1 to an unlimited number of groups of parameters. For example, `COLLECTION TO ARRAY ( collection : Collection ; array : Array {; propertyName : Text}{; ...(array : Array ; propertyName : Text) } )` means that an unlimited number of couple values of type array/text can be passed to the command.

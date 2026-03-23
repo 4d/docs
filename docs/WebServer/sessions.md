@@ -502,7 +502,7 @@ A new user is created, and some information is stored in the session, especially
 - Both HTTP and HTTPS schemas are supported. 
 - Only [scalable sessions](#enabling-web-sessions) can be reused with tokens.
 - Only sessions of the host database can be reused (sessions created in component web servers cannot be restored).
-- Tokens can be **shared** with [remote user sessions](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) for hybrid accesses (desktop and web).
+- Tokens can be **shared** with [remote user sessions](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses) for hybrid accesses (desktop and web).
 
 ### Lifespan 
 

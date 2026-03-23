@@ -52,7 +52,7 @@ The returned formula can be called with:
  $o.myFormula() //returns 3
 ```
 
-You can pass [parameters](../../API/FunctionClass.md#passing-parameters) to the `Formula`, as seen below in [example 4](#example-4).
+You can pass [parameters](../../API/FormulaClass.md#passing-parameters-to-formulas) to the `Formula`, as seen below in [example 4](#example-4).
 
 You can specify the object on which the formula is executed, as seen in [example 5](#example-5). The properties of the object can then be accessed via the `This` command.
 
