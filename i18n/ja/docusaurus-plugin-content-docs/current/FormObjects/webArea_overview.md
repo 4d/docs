@@ -15,7 +15,7 @@ Web エリアを使用して、[Qodly ページ](https://developer.4d.com/qodly/
 
 Web エリア内にQodly ページを埋め込み、[`WA EXECUTE JAVASCRIPT FUNCTION`](../commands/wa-execute-javascript-function) を呼び出すことで4D から[Qodly ソース](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/qodlySources) を更新することができます。
 
-4D クライアント/サーバーアプリケーションにおいては、Web エリア内のQodly ページは[リモートユーザーとセッションを共有すること](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) ができ、これによって高レベルなセキュリティを実現できます。
+4D クライアント/サーバーアプリケーションにおいては、Web エリア内のQodly ページは[リモートユーザーとセッションを共有すること](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses) ができ、これによって高レベルなセキュリティを実現できます。
 
 :::tip 関連したblog 記事
 

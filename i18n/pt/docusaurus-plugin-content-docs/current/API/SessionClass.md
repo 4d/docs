@@ -136,7 +136,7 @@ You can set a custom timeout by passing a value in seconds in *lifespan*. By def
 
 In web sessions, the returned token can be used in exchanges with third-party applications or websites to securely identify the session. Por exemplo, o token de sessão OTP pode ser usado com um aplicativo de pagamento.
 
-In remote user sessions (and standalone sessions for test purposes), the returned token can be used by 4D to identify requests coming from the web that [share the session](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses).
+In remote user sessions (and standalone sessions for test purposes), the returned token can be used by 4D to identify requests coming from the web that [share the session](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses).
 
 Para mais informações sobre os tokens OTP, consulte [esta seção](../WebServer/sessions.md#session-token-otp).
 

@@ -481,7 +481,7 @@ Se crea un nuevo usuario y se almacena cierta información en la sesión, especi
 - Se admiten esquemas HTTP y HTTPS.
 - Sólo [sesiones escalables](#enabling-web-sessions) pueden ser reutilizados con tokens.
 - Sólo se pueden reutilizar las sesiones de la base de datos local (las sesiones creadas en servidores web de componentes no se pueden restaurar).
-- Tokens can be **shared** with [remote user sessions](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) for hybrid accesses (desktop and web).
+- Tokens can be **shared** with [remote user sessions](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses) for hybrid accesses (desktop and web).
 
 ### Vida útil
 

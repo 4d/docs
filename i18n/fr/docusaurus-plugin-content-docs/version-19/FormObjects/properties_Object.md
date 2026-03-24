@@ -275,13 +275,13 @@ Par défaut, le libellé est placé au centre de l'objet. Lorsque l'objet contie
 
 #### Objets pris en charge
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [List Box Header](listbox-header-footer.md#headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[Bouton](button_overview.md) - [Case à cocher](checkbox_overview.md) - [En-tête de list box](./listbox-header-footer.md#headers) - [Bouton radio](radio_overview.md) - [Zone de texte](text.md)
 
 ---
 
 ## Calcul de la variable
 
-Cette propriété définit le type de calcul à effectuer dans une zone de [pied de colonne](listbox_overview.md#list-box-footers).
+This property sets the type of calculation to be done in a [column footer](./listbox-header-footer.md#footers) area.
 > Le calcul des pieds peut également être défini à l'aide de la commande 4D [`LISTBOX SET FOOTER CALCULATION`](https://doc.4d.com/4dv19/help/command/en/page1140.html).
 
 Il existe plusieurs types de calculs. Le tableau suivant montre quels calculs peuvent être utilisés en fonction du type de données présentes dans chaque colonne et indique le type automatiquement affecté par 4D à la variable de pied de colonne (si elle n'est pas typée par le code) :

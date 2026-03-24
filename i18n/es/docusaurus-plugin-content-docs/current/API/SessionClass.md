@@ -136,7 +136,7 @@ Puede definir un tiempo de espera personalizado pasando un valor en segundos en 
 
 In web sessions, the returned token can be used in exchanges with third-party applications or websites to securely identify the session. Por ejemplo, el token OTP de sesión se puede utilizar con una aplicación de pago.
 
-In remote user sessions (and standalone sessions for test purposes), the returned token can be used by 4D to identify requests coming from the web that [share the session](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses).
+In remote user sessions (and standalone sessions for test purposes), the returned token can be used by 4D to identify requests coming from the web that [share the session](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses).
 
 Para más información sobre los tokens OTP, por favor consulte [esta sección](../WebServer/sessions.md#session-token-otp).
 

@@ -38,7 +38,7 @@ Depending on where the code is executed, a server-side or a client-side user `se
 
 :::note
 
-Functions that read privileges can be called on both client and server sides ([`getPrivileges()`](../API/SessionClass.md#getprivileges), [`hasPrivileges()`](../API/SessionClass.md#hasprivileges), [`isGuest()`](../API/SessionClass.md#isguest))
+Functions that read privileges can be called on both client and server sides ([`getPrivileges()`](../API/SessionClass.md#getprivileges), [`hasPrivilege()`](../API/SessionClass.md#hasprivilege), [`isGuest()`](../API/SessionClass.md#isguest))
 
 :::
 
@@ -48,9 +48,9 @@ You use the remote user `session` object to manage and share session data.
 
 Within each environment, a [session `storage`](../API/SessionClass.md#storage) object is shared across all processes of the same user session. For example on the server, you can launch a user authentication and verification procedure when a client connects to the server, involving entering a code sent by e-mail or SMS into the application. Em seguida, você adiciona as informações do usuário ao armazenamento de sessão, permitindo que o servidor identifique o usuário. Dessa forma, o servidor 4D pode acessar as informações do usuário para todos os processos do cliente, permitindo a escrita de código personalizado de acordo com o papel do usuário.
 
-Within each environment, you can use the remote user `session` object to [create an OTP](../API/SessionClass.md#createotp) and [share the remote session for web accesses](#sharing-a-remote-session-for-web-accesses-sharing-a-desktop-session-for-web-accesses).
+Within each environment, you can use the remote user `session` object to [create an OTP](../API/SessionClass.md#createotp) and [share the remote session for web accesses](#sharing-a-remote-session-for-web-accesses).
 
-On the server, you can also [assign privileges](../API/SessionClass.md#setprivileges) to a remote user session to control access when the session comes from [Qodly pages running in web areas](#sharing-a-remote-session-for-web-accesses-sharing-a-desktop-session-for-web-accesses).
+On the server, you can also [assign privileges](../API/SessionClass.md#setprivileges) to a remote user session to control access when the session comes from [Qodly pages running in web areas](#sharing-a-remote-session-for-web-accesses).
 
 :::note
 

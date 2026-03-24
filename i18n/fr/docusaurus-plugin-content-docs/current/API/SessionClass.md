@@ -136,7 +136,7 @@ Vous pouvez définir un délai personnalisé en passant une valeur en secondes d
 
 Dans les sessions web, le token renvoyé peut être utilisé dans les échanges avec des applications ou des sites web tiers pour identifier la session en toute sécurité. Par exemple, le token OTP de session peut être utilisé avec une application de paiement.
 
-Dans les sessions d'utilisateurs distants (et les sessions autonomes à des fins de test), le token renvoyé peut être utilisé par 4D pour identifier les requêtes provenant du web qui [partagent la session](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses).
+Dans les sessions d'utilisateurs distants (et les sessions autonomes à des fins de test), le token renvoyé peut être utilisé par 4D pour identifier les requêtes provenant du web qui [partagent la session](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses).
 
 Pour plus d'informations sur les tokens OTP, veuillez consulter [cette section](../WebServer/sessions.md#session-token-otp).
 

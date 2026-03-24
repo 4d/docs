@@ -477,7 +477,7 @@ SAVE RECORD($tablepointer->)
 
 ## Info.plist
 
-コンポーネントは、その[root フォルダ](../Project/architecture.md) にシステム(macOS のみ)と[依存関係マネージャ](../Project/components.md#コンポーネントのロード)が読み取り可能な追加の情報を提供する、 `Info.plist` ファイルを持っています。
+コンポーネントは、その[root フォルダ](../Project/architecture.md) にシステム(macOS のみ)と[依存関係マネージャ](../Project/components.md)が読み取り可能な追加の情報を提供する、 `Info.plist` ファイルを持っています。
 
 :::note
 
@@ -485,7 +485,7 @@ SAVE RECORD($tablepointer->)
 
 :::
 
-コンポーネントの`Info.plist` ファイル内でサポートされているキーは、大部分は[Apple bundle キー](https://developer.apple.com/documentation/bundleresources/information-property-list) であり、Windows 上では無視されます。 しかしながら、これらは全てのプラットフォームにおいて[依存関係マネージャ](../Project/components.md#コンポーネントの読み込み) によって使用されます。
+コンポーネントの`Info.plist` ファイル内でサポートされているキーは、大部分は[Apple bundle キー](https://developer.apple.com/documentation/bundleresources/information-property-list) であり、Windows 上では無視されます。 しかしながら、これらは全てのプラットフォームにおいて[依存関係マネージャ](../Project/components.md#monitoring-project-dependencies) によって使用されます。
 
 定義可能なキーは以下の通りです:
 

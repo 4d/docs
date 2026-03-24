@@ -482,7 +482,7 @@ Function validateEmail() : 4D.OutgoingMessage
 - HTTP とHTTPS スキーマの両方がサポートされます。
 - トークンで再使用ができるのは[スケーラブルセッション](#Webセッションの有効化) のみです。
 - 再使用ができるのはホストデータベースのセッションのみです(コンポーネントのWeb サーバーで作成されたセッションは復元することができません)。
-- Tokens can be **shared** with [remote user sessions](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) for hybrid accesses (desktop and web).
+- Tokens can be **shared** with [remote user sessions](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses) for hybrid accesses (desktop and web).
 
 ### ライフスパン
 

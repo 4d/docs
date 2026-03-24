@@ -15,7 +15,7 @@ Les zones Web peuvent être utilisées pour afficher des [pages Qodly](https://d
 
 Vous pouvez intégrer une page Qodly dans une zone Web et mettre à jour les [sources Qodly](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/qodlySources) à partir de 4D en appelant [`WA EXECUTE JAVASCRIPT FUNCTION`](../commands/wa-execute-javascript-function).
 
-In 4D client/server applications, Qodly pages inside Web areas can [share their session with the remote user](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) for a high level of security.
+In 4D client/server applications, Qodly pages inside Web areas can [share their session with the remote user](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses) for a high level of security.
 
 :::tip Article(s) de blog sur le sujet
 
