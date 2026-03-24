@@ -3,14 +3,14 @@ id: FormulaClass
 title: Formula
 ---
 
-`4D.Formula` objects are created by the [Formula](../commands/formula) or [Formula from string](../commands/formula-from-string) commands and allow you execute any 4D expression or code expressed as single-line text.
+`4D.Formula` オブジェクトは [Formula](../commands/formula) または [Formula from string](../commands/formula-from-string) コマンドによって作成され、これを使用するとあらゆる4D 式または単一行のテキストとして表現されたコードを実行することができます。
 
-`4D.Formula` class objects inherit from the [`4D.Function`](./FunctionClass.md) class. Thus, to execute the formula, you can:
+`4D.Formula` クラスオブジェクトは、 [`4D.Function`](./FunctionClass.md) クラスを継承します。 そのため、フォーミュラを実行するためには、以下のような方法があります:
 
-- store a `4D.Formula` object in an object property and use the `()` operator after the property name,
-- or directly call the `4D.Formula` object using the [`call()`](#call) or [`apply()`](#apply) function on it.
+- オブジェクトプロパティに `4D.Formula` オブジェクトを入れ、プロパティ名の後に `()` 演算子を使用する
+- または、 [`call()`](#call) あるいは [`apply()`](#apply) 関数を使用して `4D.Formula` オブジェクトを呼び出す。
 
-See examples in the [Executing code in Function objects](../API/FunctionClass.md#executing-code-in-function-objects) paragraph.
+[Function オブジェクト内のコードを実行する](../API/FunctionClass.md#executing-code-in-function-objects) の段落の例題を参照してください。
 
 ### フォーミュラに引数を渡す
 
@@ -18,7 +18,7 @@ See examples in the [Executing code in Function objects](../API/FunctionClass.md
 
 ```4d
  $f:={message: Formula(ALERT("Hello "+$2+", "+$1))}
- $f.message("John";"Smith") //displays "Hello Smith, John"
+ $f.message("John";"Smith") // "Hello Smith, John" と表示する
 ```
 
 あるいは、[.call()](#call) 関数を使用して:
@@ -26,8 +26,8 @@ See examples in the [Executing code in Function objects](../API/FunctionClass.md
 ```4d
  var $f : 4D.Formula
  $f:=Formula($1+" "+$2)
- $text:=$f.call(Null;"Hello";"World") //returns "Hello World"
- $text:=$f.call(Null;"Welcome to";String(Year of(Current date))) //returns "Welcome to 2026" (for example)
+ $text:=$f.call(Null;"Hello";"World") // "Hello World" を返す
+ $text:=$f.call(Null;"Welcome to";String(Year of(Current date))) // "Welcome to 2026" を返す(一例)
 ```
 
 #### 単一メソッド用の引数
@@ -38,9 +38,9 @@ See examples in the [Executing code in Function objects](../API/FunctionClass.md
  var $f : 4D.Formula
 
  $f:=Formula(myMethod)
-  //Writing Formula(myMethod($1;$2)) is not necessary
- $text:=$f.call(Null;"Hello";"World") //returns "Hello World"
- $text:=$f.call() //returns "How are you?"
+  // Formula(myMethod($1;$2)) と書くのは必須ではない
+ $text:=$f.call(Null;"Hello";"World") // "Hello World" を返す
+ $text:=$f.call() // "How are you?" を返す
 
   //myMethod
  #DECLARE ($param1 : Text; $param2 : Text)->$return : Text
@@ -70,7 +70,7 @@ See examples in the [Executing code in Function objects](../API/FunctionClass.md
  $f:=Formula($1+$2+$3)
 
  $c:=New collection(10;20;30)
- $result:=$f.apply(Null;$c) // returns 60
+ $result:=$f.apply(Null;$c) // 60 を返す
 ```
 
 #### 例題 2
@@ -94,7 +94,7 @@ See examples in the [Executing code in Function objects](../API/FunctionClass.md
 ```4d
  var $f : 4D.Formula
  $f:=Formula(Uppercase($1))
- $result:=$f.call(Null;"hello") // returns "HELLO"
+ $result:=$f.call(Null;"hello") // "HELLO" を返す
 ```
 
 #### 例題 2

@@ -359,10 +359,10 @@ $sellist2:=$sellist2.add($sellist1)
 
 <div class="no-index">
 
-| 引数    | 型                         |                             | 説明                       |
-| ----- | ------------------------- | :-------------------------: | ------------------------ |
-| index | Integer                   |              ->             | 取得するエンティティのインデックス        |
-| 戻り値   | 4D.Entity | <- | The entity at that index |
+| 引数    | 型                         |                             | 説明                |
+| ----- | ------------------------- | :-------------------------: | ----------------- |
+| index | Integer                   |              ->             | 取得するエンティティのインデックス |
+| 戻り値   | 4D.Entity | <- | そのインデックスにあるエンティティ |
 
 </div>
 <!-- END REF -->
@@ -783,10 +783,10 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 
 <div class="no-index">
 
-| 引数  | 型          |                             | 説明                                 |
-| --- | ---------- | :-------------------------: | ---------------------------------- |
-| 属性  | Text       |              ->             | 取得したいパスを持つオブジェクト属性名                |
-| 戻り値 | Collection | <- | New collection with distinct paths |
+| 引数  | 型          |                             | 説明                   |
+| --- | ---------- | :-------------------------: | -------------------- |
+| 属性  | Text       |              ->             | 取得したいパスを持つオブジェクト属性名  |
+| 戻り値 | Collection | <- | 重複しないパスを格納した新規コレクション |
 
 </div>
 <!-- END REF -->
@@ -1373,7 +1373,7 @@ Form.products.add(Form.product)
 
 `.max()` 関数は、<!-- REF #EntitySelectionClass.max().Summary -->*attributePath* に指定したエンティティセレクションの属性値のうち最高の (あるいは最大の) 値を返します<!-- END REF -->。 実際には、[`.orderBy()`](#orderby) 関数を使用してエンティティセレクションを昇順に並べ替えたときの最後のエンティティを返します。
 
-If you pass in *attributePath* a path to an object property containing different [types of values](../Concepts/data-types.md), the `.max()` function will return the maximum value within the first scalar type according to the [4D ordering principles](../Concepts/ordering.md).
+*attributePath* に異なる[値の型](../Concepts/data-types.md) へのオブジェクトプロパティへのパスを渡した場合、`.max()` 関数は、[4D 並べ替えの原則](../Concepts/ordering.md) に準じた最初のスカラー型の中での最大値を返します。
 
 エンティティセレクションが空の場合、または *attributePath* 引数がオブジェクト属性内に見つからない場合には、`.max()` は **undefined** を返します。
 
@@ -1426,7 +1426,7 @@ If you pass in *attributePath* a path to an object property containing different
 
 `.min()` 関数は、<!-- REF #EntitySelectionClass.min().Summary -->*attributePath* に指定したエンティティセレクションの属性値のうち最低の (あるいは最小の) 値を返します<!-- END REF -->。  実際には、[`.orderBy()`](#orderby) 関数を使用してエンティティセレクションを昇順に並べ替えたときの最初のエンティティを返します (**null**値は除く)。
 
-If you pass in *attributePath* a path to an object property containing different [types of values](../Concepts/data-types.md), the `.min()` function will return the minimum value within the first scalar type according to the [4D ordering principles](../Concepts/ordering.md).
+*attributePath* に異なる[値の型](../Concepts/data-types.md) へのオブジェクトプロパティへのパスを渡した場合、`.min()` 関数は、[4D 並べ替えの原則](../Concepts/ordering.md) に準じた最初のスカラー型の中での最小値を返します。
 
 エンティティセレクションが空の場合、または *attributePath* 引数がオブジェクト属性内に見つからない場合には、`.min()` は **undefined** を返します。
 
@@ -1656,7 +1656,7 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 
 pathObjects コレクションには必要な数だけオブジェクトを追加することができます。
 
-If the entity selection attributes contain values of different [types](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md).
+エンティティセレクションの属性に異なる[型](../Concepts/data-types.md) が格納されている場合、それらは[4D ordering principles](../Concepts/ordering.md) に準じて並べ替えられます。
 
 *pathString* または *pathObject* に無効な属性パスを渡すと、この関数は空のエンティティセレクションを返します。
 

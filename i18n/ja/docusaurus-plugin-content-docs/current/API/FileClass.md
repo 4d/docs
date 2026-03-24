@@ -615,7 +615,7 @@ $fhandle:=$f.open("read")
 
 `.setAppInfo()` 関数は、<!-- REF #FileClass.setAppInfo().Summary --> *info* に渡したプロパティをアプリケーションファイルの情報として書き込みます<!-- END REF -->。 これは4D アプリケーションのビルドチェーンをカスタマイズしたいデベロッパーのために設計されています。
 
-The function can only be used with the following file types: **.plist** (all platforms), existing **.exe**/**.dll** (Windows), or **macOS executable**. 他のファイルタイプを使用した場合、あるいはディスク上にまだ存在しない\*\*.exe\*\*/**.dll** ファイルに対して使用した場合、関数は何もしません(エラーも生成されません)。
+この関数は、以下のタイプに対してのみ使用可能です: **.plist** (全プラットフォーム)、存在する **.exe** / **.dll** (Windows)、あるいは **macOS 実行ファイル**。 他のファイルタイプを使用した場合、あるいはディスク上にまだ存在しない\*\*.exe\*\*/**.dll** ファイルに対して使用した場合、関数は何もしません(エラーも生成されません)。
 
 **.plist ファイル用の*info* オブジェクト (全プラットフォーム)**
 

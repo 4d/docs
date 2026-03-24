@@ -7,16 +7,16 @@ title: Function
 
 ### 継承
 
-4D handles several kinds of `Function` objects, inheriting from the **4D.Function** class:
+4D は**4D.Function** クラスを継承した、以下のような複数の種類の `Function` オブジェクトを管理します:
 
-- **native functions**, i.e. built-in functions from various 4D classes such as [`collection.sort()`](./CollectionClass.md#sort) or [`file.copyTo()`](./FileClass.md#copyto).
-- **user functions**, created in [user classes](Concepts/classes.md) using the [`Function` keyword](Concepts/classes.md#function).
-- **formula functions**, i.e. functions that can execute formula code stored in [4D.Formula](./FormulaClass.md) objects,
-- **method functions**, i.e. functions that can execute source code as text stored in [4D.Method](./MethodClass.md) objects.
+- **ネイティブ関数**、[`collection.sort()`](./CollectionClass.md#sort) や [`file.copyTo()`](./FileClass.md#copyto) などの、様々な4D クラスのビルトイン関数。
+- **ユーザー関数**、 [`Function` キーワード](Concepts/classes.md#function) を使用して[ユーザークラス](Concepts/classes.md) で作成された関数。
+- **フォーミュラ関数**、 [4D.Formula](./FormulaClass.md) オブジェクト内に保管されたフォーミュラコードを実行できる関数
+- **メソッド関数**、[4D.Method](./MethodClass.md) オブジェクト内にテキストとして保管されたソースコードを実行できる関数。
 
-### Executing code in Function objects
+### Function オブジェクト内のコードを実行する
 
-Function objects can be encapsulated in object properties:
+Function オブジェクトは、オブジェクトプロパティに格納することができます:
 
 ```4d
 var $message : 4D.Formula
@@ -36,16 +36,16 @@ $f:={message: $message}
  $f["message"]() // "Hello world" と表示します
 ```
 
-Note that, even if it does not have parameters (see below), an object function to be executed must be called with `()` parenthesis. オブジェクトプロパティのみを呼び出した場合、フォーミュラへの新しい参照が返されます (そしてフォーミュラは実行はされません):
+たとえ引数を受け取らなかったとしても (後述参照)、オブジェクト関数を実行するためにはカッコ `()` をつけて呼び出す必要があるという点に注意してください。 オブジェクトプロパティのみを呼び出した場合、フォーミュラへの新しい参照が返されます (そしてフォーミュラは実行はされません):
 
 ```4d
- $o:=$f.message //returns the function object in $o
+ $o:=$f.message // $o にはFunction オブジェクトが返されます
 ```
 
-You can also execute a function using the [`apply()`](#apply) and [`call()`](#call):
+[`apply()`](#apply) および [`call()`](#call) 関数を使って関数を実行することもできます:
 
 ```4d
- $message.apply() //displays "Hello world"
+ $message.apply() // "Hello world" を表示する
 ```
 
 ### 概要
@@ -62,10 +62,10 @@ You can also execute a function using the [`apply()`](#apply) and [`call()`](#ca
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                                            |
-| ----- | --------------------------------------------- |
-| 21 R3 | Support of 4D.Methods objects |
-| 17 R3 | 追加                                            |
+| リリース  | 内容                                     |
+| ----- | -------------------------------------- |
+| 21 R3 | 4D.Methods オブジェクトのサポート |
+| 17 R3 | 追加                                     |
 
 </details>
 
@@ -75,25 +75,25 @@ You can also execute a function using the [`apply()`](#apply) and [`call()`](#ca
 
 <div class="no-index">
 
-| 引数      | 型          |                             | 説明                                                              |
-| ------- | ---------- | :-------------------------: | --------------------------------------------------------------- |
-| thisObj | Object     |              ->             | Object to be returned by the `This` command in the function     |
-| params  | Collection |              ->             | Collection of values to be passed as parameters to the function |
-| 戻り値     | any        | <- | Value from function execution                                   |
+| 引数      | 型          |                             | 説明                              |
+| ------- | ---------- | :-------------------------: | ------------------------------- |
+| thisObj | Object     |              ->             | 関数内での `This` コマンドによって返されるオブジェクト |
+| params  | Collection |              ->             | 関数に引数として渡される値のコレクション            |
+| 戻り値     | any        | <- | 関数の実行結果の値                       |
 
 </div>
 <!-- END REF -->
 
 #### 説明
 
-The `.apply()` function <!-- REF #FunctionClass.apply().Summary -->executes the function object to which it is applied, passing parameters as a collection, and returns the resulting value<!-- END REF -->.
+`.apply()` 関数は、<!-- REF #FunctionClass.apply().Summary -->対象の function オブジェクトを、引数をコレクションとして渡して実行し、その結果の値を返します<!-- END REF -->。
 
-In the *thisObj* parameter, you can pass a reference to the object to be used as `This` within the function. Pass Null if you do not want to use `This` but you want to send parameters.
+*thisObj* には、関数内で `This` として使用されるオブジェクトへの参照を渡すことができます。 `This` を使用せず、しかし引数を渡したい場合には、ここに Null を渡します。
 
-You can pass a collection to be used as parameters in the function using the optional *params* parameter:
+任意の *params* 引数を使用することで、フォーミュラ内で引数として使用されるコレクションを渡すこともできます:
 
-- in `4D.Formula` objects, parameters are passed in $1...$n in the formula.
-- in other `4D.Function` objects such as `4D.Method` objects, parameters are passed in [declared method parameters](../Concepts/parameters.md).
+- `4D.Formula` オブジェクトには、引数は $1...$n でフォーミュラに渡されます。
+- `4D.Method` オブジェクトのようなその他の `4D.Function` オブジェクトには、引数は[宣言されたメソッド引数](../Concepts/parameters.md) 内に渡されます。
 
 `.apply()` は [`.call()`](#call) と似ていますが、引数をコレクションとして渡す点が異なります。 これは計算された結果を渡すのに便利です。
 
@@ -105,10 +105,10 @@ You can pass a collection to be used as parameters in the function using the opt
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                                            |
-| ----- | --------------------------------------------- |
-| 21 R3 | Support of 4D.Methods objects |
-| 17 R3 | 追加                                            |
+| リリース  | 内容                                     |
+| ----- | -------------------------------------- |
+| 21 R3 | 4D.Methods オブジェクトのサポート |
+| 17 R3 | 追加                                     |
 
 </details>
 
@@ -118,25 +118,25 @@ You can pass a collection to be used as parameters in the function using the opt
 
 <div class="no-index">
 
-| 引数      | 型      |                             | 説明                                                          |
-| ------- | ------ | --------------------------- | ----------------------------------------------------------- |
-| thisObj | Object | ->                          | Object to be returned by the `This` command in the function |
-| params  | any    | ->                          | Values to be passed as parameters to the function           |
-| 戻り値     | any    | <- | Value from function execution                               |
+| 引数      | 型      |                             | 説明                              |
+| ------- | ------ | --------------------------- | ------------------------------- |
+| thisObj | Object | ->                          | 関数内での `This` コマンドによって返されるオブジェクト |
+| params  | any    | ->                          | 関数に引数として渡される値                   |
+| 戻り値     | any    | <- | 関数の実行結果の値                       |
 
 </div>
 <!-- END REF -->
 
 #### 説明
 
-The `.call()` function <!-- REF #FunctionClass.call().Summary -->executes the function object to which it is applied, with one or more parameter(s) passed directly, and returns the resulting value<!-- END REF -->.
+`.call()` 関数は、<!-- REF #FunctionClass.apply().Summary -->対象の function オブジェクトを、一つまたはそれ以上の引数を直接渡して実行し、その結果の値を返します<!-- END REF -->。
 
-In the *thisObj* parameter, you can pass a reference to the object to be used as `This` within the function.
+*thisObj* には、関数内で `This` として使用されるオブジェクトへの参照を渡すことができます。
 
-You can pass values to be used as parameters in the function using the optional *params* parameter:
+任意の *params* 引数を使用することで、フォーミュラ内で引数として使用される値を渡すこともできます:
 
-- in `4D.Formula` objects, parameters are passed in $1...$n in the formula.
-- in `4D.Method` objects, parameters are passed in [declared method parameters](../Concepts/parameters.md).
+- `4D.Formula` オブジェクトには、引数は $1...$n でフォーミュラに渡されます。
+- `4D.Method` オブジェクトでは、引数は[宣言されたメソッド引数](../Concepts/parameters.md) 内に渡されます。
 
 `.call()` は [`.apply()`](#apply) と似ていますが、引数を直接渡す点が異なります。
 
@@ -164,10 +164,10 @@ You can pass values to be used as parameters in the function using the optional 
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                                            |
-| ----- | --------------------------------------------- |
-| 21 R3 | Support of 4D.Methods objects |
-| 18 R2 | 追加                                            |
+| リリース  | 内容                                     |
+| ----- | -------------------------------------- |
+| 21 R3 | 4D.Methods オブジェクトのサポート |
+| 18 R2 | 追加                                     |
 
 </details>
 
@@ -175,9 +175,9 @@ You can pass values to be used as parameters in the function using the optional 
 
 #### 説明
 
-The `.source` property <!-- REF #FunctionClass.source.Summary -->contains the source code of the function as text<!-- END REF -->.
+`.source` プロパティは、<!-- REF #FunctionClass.source.Summary -->対象ファンクションのテキスト型のソースコード<!-- END REF -->を格納します。
 
-The returned value is the original text used to create the 4D.Formula or 4D.Method object but reformatted.
+返される値は4D.Formula または4D.Method オブジェクトを作成するのに使用された元のテキストですが、再フォーマットされます。
 
 このプロパティは **読み取り専用** です。
 
