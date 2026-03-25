@@ -37,6 +37,8 @@ Los navegadores web solo autorizan los certificados emitidos por una autoridad d
 
 :::
 
+
+
 ## Versión mínima
 
 Por defecto, la versión mínima del protocolo de seguridad aceptado por los servidores 4D es TLS 1.3. Puede modificar este valor utilizando el selector `Min TLS version` con el comando `SET DATABASE PARAMETER`.
@@ -46,6 +48,8 @@ Por defecto, la versión mínima del protocolo de seguridad aceptado por los ser
 Puedes controlar de forma separada la [versión mínima de TLS](WebServer/webServerConfig.md#minimum-tls-version) para **objetos webServer**.
 
 :::
+
+
 
 ## Habilitar TLS con el servidor HTTP
 
@@ -67,6 +71,7 @@ Los certificados TLS gestionados por 4D deben estar en formato **PEM**. Si su pr
 
 - [**RSA**](https://en.wikipedia.org/wiki/RSA_\\(cryptosystem\\))
 - [**ECDSA**](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm)
+
 
 :::note
 
@@ -96,6 +101,7 @@ El servidor web 4D también soporta [la opción HSTS](WebServer/webServerConfig.
 
 :::
 
+
 ### Perfect Forward Secrecy (PFS)
 
 [PFS](https://en.wikipedia.org/wiki/Forward_secrecy) añade una capa adicional de seguridad a sus comunicaciones. En lugar de utilizar llaves de intercambio predefinidas, PFS crea llaves de sesión de forma cooperativa entre las partes que se comunican utilizando algoritmos Diffie-Hellman (DH). La forma conjunta en que se construyen las llaves crea un "secreto compartido" que impide que partes externas puedan comprometerlas.
@@ -104,12 +110,17 @@ Cuando se habilita TLS en el servidor, PFS se habilita automáticamente. Si el a
 
 Si utiliza una [lista de cifrado personalizada](WebServer/webServerConfig.md#cipher-list) y desea activar PFS, debe verificar que contiene entradas con algoritmos DH o ECDH (Elliptic-curve Diffie-Hellman).
 
+
+
 ## Activar TLS con los otros servidores
 
 Para utilizar TLS con el servidor de aplicaciones 4D (aplicaciones cliente-servidor de escritorio) o el servidor SQL, solo tiene que habilitar las comunicaciones TLS y el servidor configura automáticamente las conexiones al inicio.
 
 - Con el servidor de aplicaciones, seleccione la opción **Encriptar las comunicaciones cliente-servidor** en la página ["Opciones cliente-servidor/red" del diálogo Parámetros](../settings/client-server#encrypt-client-server-communications).
 - Con el servidor SQL, seleccione la opción **Activar TLS** en la [página "SQL" del cuadro de diálogo Parámetros](../settings/sql#sql-server-publishing).
+
+
+
 
 ## ¿Cómo obtener un certificado RSA? (tutorial)
 
@@ -140,4 +151,3 @@ Para obtener un certificado digital:
 5. Coloca el archivo “cert.pem” en la [ubicación apropiada](#installing-certificate-files).
 
 El servidor 4D puede ahora trabajar en modo seguro. Un certificado suele tener una validez de entre 3 meses y un año.
-

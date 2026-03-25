@@ -51,8 +51,9 @@ Para actualizar las otras máquinas clientes que no estén conectadas, basta con
 
 - **SQL Server**: 19812 por defecto (puede modificarse a través de la página "SQL/Configuración" de las Preferencias).
 - **Servidor de aplicaciones**: 19813 por defecto (puede modificarse a través de la página "Cliente-Servidor/Configuración" de las Preferencias, ver arriba).
-- **Servidor DB4D** (servidor de base de datos): 19814 por defecto. Este número de puerto no se puede modificar directamente, pero siempre consiste en el número de puerto del servidor de aplicaciones + 1. Cuando un cliente 4D se conecta a 4D Server, utiliza el puerto TCP del servidor de aplicaciones (19813 o el puerto indicado después de los dos puntos ':' en la dirección IP mostrada en la caja de diálogo de conexión). La conexión a otros servidores a través de sus respectivos puertos es entonces automática; ya no es necesario especificarlos.\
-  Tenga en cuenta que en caso de acceso a través de un enrutador o un cortafuegos, los tres puertos TCP deben abrirse explícitamente.
+- **Servidor DB4D** (servidor de base de datos): 19814 por defecto. Este número de puerto no se puede modificar directamente, pero siempre consiste en el número de puerto del servidor de aplicaciones + 1.
+Cuando un cliente 4D se conecta a 4D Server, utiliza el puerto TCP del servidor de aplicaciones (19813 o el puerto indicado después de los dos puntos ':' en la dirección IP mostrada en la caja de diálogo de conexión). La conexión a otros servidores a través de sus respectivos puertos es entonces automática; ya no es necesario especificarlos.\
+Tenga en cuenta que en caso de acceso a través de un enrutador o un cortafuegos, los tres puertos TCP deben abrirse explícitamente.
 - [**Depurador remoto**](../Debugging/debugging-remote.md): 19815 por defecto. Este número de puerto no puede modificarse directamente, pero siempre consta del número de puerto del servidor de aplicaciones + 2.
 
 #### Autenticación del usuario con el servidor de dominio
@@ -137,6 +138,7 @@ Este parámetro puede utilizarse para definir globalmente el modo de actualizaci
 - **Preguntar**: cuando la notificación es enviada por el servidor, se muestra una caja de diálogo en las máquinas cliente, indicando la modificación. A continuación, el usuario puede aceptar o rechazar la sincronización de la carpeta local **Resources**.\
   La carpeta **Resources** centraliza los archivos personalizados necesarios para la interfaz de la base (archivos de traducción, imágenes, etc.). Se pueden utilizar mecanismos automáticos o manuales para notificar a cada cliente cuándo se ha modificado el contenido de esta carpeta. Para más información, consulte la sección [Gestión de la carpeta Resources](https://doc.4d.com/4Dv20/4D/20/Managing-the-Resources-folder.300-6330534.en.html).
 
+
 ## Página Configuración IP
 
 ### Tabla de configuración Autorizar-Rechazar
@@ -155,4 +157,3 @@ El funcionamiento de la tabla de configuración es el siguiente:
   - Autorizar \* (y permitir todas las demás direcciones)
 
 Por defecto, 4D Server no aplica ninguna restricción de conexión: la primera línea de la tabla contiene la etiqueta Autorizar y el caracter \* (todas las direcciones).
-
