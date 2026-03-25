@@ -13,7 +13,7 @@ Synchronous execution follows a **sequential** flow, a step-by-step where each i
 
 Synchronous execution is used when:
 
-- Task execution must follow a strict order.
+- La ejecución de las tareas debe seguir un orden estricto.
 - Performance impact is minimal (e.g., quick operations).
 - Se ejecuta en un contexto de un solo hilo donde el bloqueo es aceptable.
 - La ejecución síncrona bloquea la interfaz de usuario y es más adecuada para tareas rápidas y ordenadas en las que el bloqueo es aceptable.
@@ -25,7 +25,7 @@ La ejecución asincrónica es **event-driiven** y permite que otras operaciones 
 La ejecución asíncrona se utiliza cuando:
 
 - Una operación tarda mucho tiempo (por ejemplo, esperando una respuesta del servidor).
-- Responsiveness is critical (e.g., UI interactions).
+- La capacidad de respuesta es fundamental (por ejemplo, las interacciones de la interfaz de usuario).
 - Realización de tareas en segundo plano, comunicación en red o procesamiento paralelo.
 
 Elegir entre ejecución síncrona y asíncrona:
@@ -37,7 +37,7 @@ Elegir entre ejecución síncrona y asíncrona:
 | Tareas en segundo plano de larga duración              | **Asynchronous** |
 | Long-running UI interactions                           | **Asynchronous** |
 | Interacciones de interfaz de usuario de corta duración | **Síncrono**     |
-| High-performance, multi-threaded workloads             | **Asynchronous** |
+| Cargas de trabajo multihilo de alto rendimiento        | **Asynchronous** |
 
 ## Principios básicos
 
@@ -91,15 +91,15 @@ Si desea "forzar" la liberación de un objeto en cualquier momento, utilice un `
 
 ### Ejemplos que ilustran el concepto común
 
-| Feature                         | Async Launch                                                                          | Callback / Event Handling                                           |
-| ------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| CALL WORKER                     | CALL WORKER("wk"; "MyMethod"; $params)                             | MyMethod se llama con $params                                       |
-| CALL FORM                       | CALL FORM($win; "MyMethod"; $params)                               | MyMethod se llama con $params                                       |
-| 4D.SystemWorker | 4D.SystemWorker.new(cmd; $options) | Callbacks: onData, onResponse, onError, onTerminate |
+| Feature                         | Async Launch                                                                          | Callback / Event Handling                                               |
+| ------------------------------- | ------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| CALL WORKER                     | CALL WORKER("wk"; "MyMethod"; $params)                             | MyMethod se llama con $params                                           |
+| CALL FORM                       | CALL FORM($win; "MyMethod"; $params)                               | MyMethod se llama con $params                                           |
+| 4D.SystemWorker | 4D.SystemWorker.new(cmd; $options) | Retrollamadas: onData, onResponse, onError, onTerminate |
 
 ## Programación asíncrona con clases 4D
 
-Several 4D classes support asynchronous processing:
+Varias clases 4D soportan el procesamiento asíncrono:
 
 - [`HTTPRequest`](../API/HTTPRequestClass.md) - Gestiona peticiones y respuestas HTTP asíncronas.
 - [`SystemWorker`](../API/SystemWorkerClass.md) - Ejecuta procesos externos de forma asíncrona.
@@ -169,7 +169,7 @@ var $options.onResponse:=Formula(myMethod)
 
 :::
 
-## Synchronous execution in asynchronous code
+## Ejecución síncrona en código asíncrono
 
 Incluso cuando se utiliza código moderno y asíncrono, puede ser necesario introducir cierto grado de ejecución síncrona. Por ejemplo, puede querer que una función espere un cierto tiempo para obtener un resultado. It could be the case with guaranteed fast network connections or system workers. A continuación, puede forzar la ejecución sincrónica utilizando la función `wait()`.
 

@@ -11,10 +11,10 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Parámetros | Tipo   |                             | Descripción                                    |
-| ---------- | ------ | --------------------------- | ---------------------------------------------- |
-| targetDoc  | Object | &#8594; | 4D Write Pro document to receive style sheets  |
-| sourceDoc  | Object | &#8594; | 4D Write Pro document to get style sheets from |
+| Parámetros | Tipo   |                             | Descripción                                         |
+| ---------- | ------ | --------------------------- | --------------------------------------------------- |
+| targetDoc  | Object | &#8594; | Documento 4D Write Pro para recibir hojas de estilo |
+| sourceDoc  | Object | &#8594; | 4D Write Pro document to get style sheets from      |
 
 </div>
 <!-- END REF-->

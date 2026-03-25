@@ -49,7 +49,7 @@ Pase un nombre para la hoja de estilo en el parámetro *styleSheetName*. The sty
 - debe empezar por una letra
 - puede contener caracteres alfanuméricos, espacios en blanco, caracteres "-" o caracteres unicode >= 128
 - debe ser único en el documento independientemente del tipo
-- it must not start with "section", which is reserved
+- no debe empezar por "section", que está reservado
 - el "\_" se sustituye por un espacio y se eliminan los espacios finales.
 
 You can specify the attributes of the style sheet using the [WP SET ATTRIBUTES](../commands/wp-set-attributes) command or the object notation (see [4D Write Pro Attributes](../commands-legacy/4d-write-pro-attributes.md)). For the list of available attributes, see the [Style sheet attributes](../commands-legacy/4d-write-pro-attributes.md#style-sheets) section.
@@ -65,9 +65,9 @@ If the *styleSheetType* parameter is set to `wk type paragraph`, you can optiona
 
 The *listLevelCount* parameter defines the total number of levels in the hierarchy. When specified (value ≥ 1), the command automatically creates a root-level style sheet and the corresponding sub-level style sheets.
 
-The following predefined values are applied:
+Se aplican los siguientes valores predefinidos:
 
-- `wk list style type` is set to `wk decimal`
+- `wk list style type` se establece en `wk decimal`
 - `wk list level index` is automatically assigned (1 for the root level, incremented for sub-levels)
 - `wk list level count` se fija en el valor especificado para todos los niveles
 - El margen izquierdo se calcula automáticamente (0,75 cm × índice de nivel)

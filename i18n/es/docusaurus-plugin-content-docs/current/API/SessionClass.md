@@ -523,11 +523,11 @@ El objeto `.info` contiene las siguientes propiedades:
 | machineName      | Text          | <ul><li>Remote sessions: name of the remote machine.</li><li>Client sessions: name of the local machine.</li><li>Stored procedures session: name of the server machine.</li><li> Standalone session: name of the machine</li></ul> |
 | systemUserName   | Text          | <ul><li>Remote sessions: name of the system session opened on the remote machine.</li><li>Client sessions: name of the local system session</li><ul>                                                                               |
 | IPAddress        | Text          | <ul><li>Remote sessions: IP address of the remote machine.</li><li>Client sessions: IP address of the local machine.</li><li>Standalone session: "localhost"</li></ul>                                                             |
-| hostType         | Text          | Host type: "windows", "mac", or "browser"                                                                                                                                                                          |
+| hostType         | Text          | Tipo de host: "windows", "mac" o "browser"                                                                                                                                                                         |
 | creationDateTime | Date ISO 8601 | Fecha y hora de creación de la sesión (sesión autónoma: fecha y hora de inicio de la aplicación)                                                                                                |
 | state            | Text          | Estado de la sesión: "active", "postponed", "sleeping"                                                                                                                                                             |
 | ID               | Text          | UUID de sesión (el mismo valor que [`.id`](#id))                                                                                                                                                                |
-| persistentID     | Text          | Remote/client sessions: Session's persistent ID                                                                                                                                                                    |
+| persistentID     | Text          | Sesiones remotas servidor/clientes: ID persistente de la sesión                                                                                                                                                    |
 
 :::note
 

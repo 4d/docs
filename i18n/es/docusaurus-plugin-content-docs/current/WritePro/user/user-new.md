@@ -12,7 +12,7 @@ para importar
 
 4D Write Pro supports flat lists (single-level) and hierarchical lists (multi-level).
 
-### Single-level lists
+### Listas de un solo nivel
 
 4D Write Pro soporta dos tipos principales de listas de un solo nivel:
 
@@ -40,7 +40,7 @@ añada una parte sobre el hecho de que usted define dónde empieza su lista orde
 :::
 and the level are managed with (standard actions)
 
-### Multi-level lists
+### Listas de múltiples niveles
 
 Multi-level lists are based on [hierarchical list style sheets](stylesheets.md#hierarchical-list-style-sheets). Las listas multinivel contienen una hoja de estilo de nivel raíz y una o más hojas de estilo de subnivel. Cada nivel se adjunta a una hoja de estilo de lista jerárquica y representa una profundidad en la lista (nivel 1, nivel 2, nivel 3, etc.).
 

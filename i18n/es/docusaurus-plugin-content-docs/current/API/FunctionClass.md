@@ -121,7 +121,7 @@ Tenga en cuenta que `.apply()` es similar a [`.call()`](#call) excepto que los p
 | Parámetros | Tipo   |                             | Descripción                                                 |
 | ---------- | ------ | --------------------------- | ----------------------------------------------------------- |
 | thisObj    | Object | ->                          | Object to be returned by the `This` command in the function |
-| params     | any    | ->                          | Values to be passed as parameters to the function           |
+| params     | any    | ->                          | Valores a pasar como parámetros a la función                |
 | Resultado  | any    | <- | Valor de la ejecución de la función                         |
 
 </div>

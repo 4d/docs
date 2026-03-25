@@ -7,7 +7,7 @@ A `4D.Method` object contains a piece of code that is created from text source a
 
 Un objeto `4D.Method` se crea con la función `4D.Method.new()`.
 
-`4D.Method` objects inherit from the [`4D.Function`](./FunctionClass.md) class. Thus, to execute the method object, you can:
+`4D.Method` objects inherit from the [`4D.Function`](./FunctionClass.md) class. Así, para ejecutar el objeto método, puede:
 
 - store a `4D.Method` object in an object property and use the `()` operator after the property name,
 - o llamar directamente al objeto `4D.Method` usando la función [`call()`](#call) o [`apply()`](#apply) en él.
@@ -77,7 +77,7 @@ If ($myMethod.checkSyntax().success)
 End if 
 ```
 
-### Method Object
+### Objeto Método
 
 Los objetos 4D.Method ofrecen las siguientes propiedades y funciones:
 
@@ -105,11 +105,11 @@ Los objetos 4D.Method ofrecen las siguientes propiedades y funciones:
 
 <div class="no-index">
 
-| Parámetros | Tipo                      |                             | Descripción                                                                                                                   |
-| ---------- | ------------------------- | :-------------------------: | ----------------------------------------------------------------------------------------------------------------------------- |
-| source     | Text                      |              ->             | Representación textual de un método 4D a encapsularse como un objeto                                                          |
-| name       | Text                      |              ->             | Name of the method to display in the debugger. Si se omite, el nombre del método se mostrará como "anonymous" |
-| Resultado  | 4D.Method | <- | Nuevo método objeto compartido                                                                                                |
+| Parámetros | Tipo                      |                             | Descripción                                                                                                                 |
+| ---------- | ------------------------- | :-------------------------: | --------------------------------------------------------------------------------------------------------------------------- |
+| source     | Text                      |              ->             | Representación textual de un método 4D a encapsularse como un objeto                                                        |
+| name       | Text                      |              ->             | Nombre del método a mostrar en el depurador. Si se omite, el nombre del método se mostrará como "anonymous" |
+| Resultado  | 4D.Method | <- | Nuevo método objeto compartido                                                                                              |
 
 </div>
 <!-- END REF -->
@@ -201,15 +201,15 @@ var $result:=$m.call(Null; 10; 5) //50
 
 The `.checkSyntax()` function <!-- REF #MethodClass.checkSyntax().Summary -->checks the syntax of the source code of the `4D.Method` object and returns a result object<!-- END REF -->.
 
-The Result object contains the following properties:
+El objeto devuelto contiene las siguientes propiedades:
 
-| Propiedad |                                                                                   | Tipo                 | Descripción                                                                                                            |
-| --------- | --------------------------------------------------------------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| success   |                                                                                   | Boolean              | True if no syntax error was detected, false otherwise                                                                  |
-| errors    |                                                                                   | Colección de objetos | **Disponible sólo en caso de error o de warning**. Collection of objects describing errors or warnings |
-|           | [].isError    | Boolean              | Error si es True, sino warning                                                                                         |
-|           | [].message    | Text                 | Mensaje de error o advertencia                                                                                         |
-|           | [].lineNumber | Integer              | Número de línea del error en el código                                                                                 |
+| Propiedad |                                                                                   | Tipo                 | Descripción                                                                                                                  |
+| --------- | --------------------------------------------------------------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| success   |                                                                                   | Boolean              | True if no syntax error was detected, false otherwise                                                                        |
+| errors    |                                                                                   | Colección de objetos | **Disponible sólo en caso de error o de warning**. Colección de objetos que describen errores o advertencias |
+|           | [].isError    | Boolean              | Error si es True, sino warning                                                                                               |
+|           | [].message    | Text                 | Mensaje de error o advertencia                                                                                               |
+|           | [].lineNumber | Integer              | Número de línea del error en el código                                                                                       |
 
 #### Ejemplo
 

@@ -11,12 +11,12 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Parámetros     | Tipo    |                             | Descripción                               |
-| -------------- | ------- | --------------------------- | ----------------------------------------- |
-| wpDoc          | Object  | &#8594; | Documento 4D Write Pro                    |
-| styleSheetName | Text    | &#8594; | Style sheet name                          |
-| listLevelIndex | Integer | &#8594; | Level of the style sheet in the hierarchy |
-| Resultado      | Object  | &#8592; | Objeto hoja de estilo                     |
+| Parámetros     | Tipo    |                             | Descripción                                |
+| -------------- | ------- | --------------------------- | ------------------------------------------ |
+| wpDoc          | Object  | &#8594; | Documento 4D Write Pro                     |
+| styleSheetName | Text    | &#8594; | Style sheet name                           |
+| listLevelIndex | Integer | &#8594; | Nivel de la hoja de estilo en la jerarquía |
+| Resultado      | Object  | &#8592; | Objeto hoja de estilo                      |
 
 </div>
 <!-- END REF-->
@@ -49,7 +49,7 @@ If the style sheet is part of a hierarchical list style sheet, you can optionall
 
 ## Ejemplo 1
 
-To retrieve the "Main title" style sheet:
+Para recuperar la hoja de estilo "Main title":
 
 ```4d
  var $styleSheet : Object

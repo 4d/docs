@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | ----------- | ------------------------------------------------------- | --------------------------- | ------------------------------------------------------------- |
 | targetObj   | Object                                                  | &#8594; | Rango o elemento o documento 4D Write Pro                     |
 | picture     | Picture                                                 | &#8594; | Campo imagen o variable, o ruta al archivo imagen en el disco |
-| pictureFile | [4D.File](../../API/FileClass.md), Text | &#8594; | A File object representing a picture file or a path           |
+| pictureFile | [4D.File](../../API/FileClass.md), Text | &#8594; | Un objeto File que representa un archivo de imagen o una ruta |
 | mode        | Integer                                                 | &#8594; | Modo de inserción                                             |
 | rangeUpdate | Integer                                                 | &#8594; | Modo de actualización del rango                               |
 | Resultado   | Object                                                  | &#8592; | Objeto que hace referencia a la imagen                        |

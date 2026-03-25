@@ -69,7 +69,7 @@ This drop-down box contains the available network layers, which are used to hand
 
 - **QUIC** (projects only): Enables the QUIC network layer on the server.
 
-  **Notes about QUIC**:
+  **Notas sobre QUIC**:
 
   - You can know if a 4D application is running with the QUIC network layer using the [`Application info`](../commands/application-info) command.
   - Dado que QUIC utiliza el protocolo UDP, asegúrese de que UDP está permitido en la configuración de seguridad de su red.

@@ -7,7 +7,7 @@ To sort a series of data, 4D compares each value against the others by applying 
 
 However, [collections](./dt_collection.md) and [objects](./dt_object.md), including [entity selections](../ORDA/dsMapping.md#entity-selection), can contain elements and attributes of heterogeneous types: scalar types (text, numbers, booleans, dates) or complex types (objects, blobs, collections). When ordering a collection or object containing heterogeneous values, 4D applies a stratified sorting scheme that first partitions elements by type, then applies comparison rules within each type partition.
 
-## Ordering functions
+## Funciones de ordenación
 
 The 4D language provides several mechanisms that rely on sorting collection elements, object attributes, or orchestrate sorting to produce an ordered result:
 
@@ -17,7 +17,7 @@ The 4D language provides several mechanisms that rely on sorting collection elem
 - **Order-dependent statistical functions**: [`collection.max()`](../API/CollectionClass.md#max), [`collection.min()`](../API/CollectionClass.md#min), [`entitySelection.max()`](../API/EntitySelectionClass.md#max), [`entitySelection.min()`](../API/EntitySelectionClass.md#min), which rely on the ordering relation to identify extrema,
 - [**`ORDER BY ATTRIBUTE`**](../commands/order-by-attribute) comando para ordenar una tabla de base de datos en base a un campo objeto.
 
-## Sorting rules
+## Reglas de ordenación
 
 When a collection or entity selection containing elements of different types is sorted, a **type-based stratification** is applied according to the following algorithm:
 
@@ -26,13 +26,13 @@ When a collection or entity selection containing elements of different types is 
 
 Los tipos se ordenan según la secuencia siguiente, con sus respectivas relaciones de comparación en orden ascendente:
 
-| Rank | Tipo           | Also includes                                                                                                          | Comparison rule                                                                                                                          |
+| Rank | Tipo           | También incluye                                                                                                        | Comparison rule                                                                                                                          |
 | ---- | -------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| 1    | **null**       | pointers (null pointers only for collections)                                                       | no se aplican criterios de comparación                                                                                                   |
+| 1    | **null**       | punteros (punteros null sólo para colecciones)                                                      | no se aplican criterios de comparación                                                                                                   |
 | 2    | **boolean**    |                                                                                                                        | orden lógico: false *antes que* true                                                                                     |
 | 3    | **string**     |                                                                                                                        | orden lexicográfico (por ejemplo, "a" *antes* "ab" *antes* "b")                                                       |
 | 4    | **number**     | time (converted to milliseconds or seconds depending on the `Time inside objects` database setting) | standard algebraic order (numeric comparison)                                                                         |
-| 5    | **object**     | blobs, pictures, non-null pointers (collections)                                                    | internal order (consistent for collection functions, see below)                                                       |
+| 5    | **object**     | blobs, imágenes, punteros no nulos (colecciones)                                                    | internal order (consistent for collection functions, see below)                                                       |
 | 6    | **collection** |                                                                                                                        | internal order (consistent for collection functions, see below)                                                       |
 | 7    | **date**       |                                                                                                                        | orden cronológico (fechas más antiguas *antes* de las más recientes, por ejemplo, ¡1990-01-01! *before* !2000-01-01!) |
 

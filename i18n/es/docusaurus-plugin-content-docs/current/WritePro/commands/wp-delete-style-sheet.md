@@ -11,12 +11,12 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Parámetros     | Tipo    |                             | Descripción                               |
-| -------------- | ------- | --------------------------- | ----------------------------------------- |
-| styleSheetObj  | Object  | &#8594; | Objeto hoja de estilo                     |
-| wpDoc          | Object  | &#8594; | Documento 4D Write Pro                    |
-| listLevelIndex | Integer | &#8594; | Level of the style sheet in the hierarchy |
-| styleSheetName | Text    | &#8594; | Nombre de la hoja de estilo               |
+| Parámetros     | Tipo    |                             | Descripción                                |
+| -------------- | ------- | --------------------------- | ------------------------------------------ |
+| styleSheetObj  | Object  | &#8594; | Objeto hoja de estilo                      |
+| wpDoc          | Object  | &#8594; | Documento 4D Write Pro                     |
+| listLevelIndex | Integer | &#8594; | Nivel de la hoja de estilo en la jerarquía |
+| styleSheetName | Text    | &#8594; | Nombre de la hoja de estilo                |
 
 </div>
 <!-- END REF-->
@@ -48,7 +48,7 @@ When the style sheet to delete belongs to a [hierarchical list style sheet](../u
 
 When you delete the root-level style sheet (by passing 1 in the *listLevelIndex* parameter or ommitting it), all associated sub-level style sheets are deleted automatically and the entire hierarchical structure is removed from the document.
 
-When you delete a sub-level style sheet:
+Al eliminar una hoja de estilo de subnivel:
 
 - The `wk list level index` of all subsequent sub-level style sheets is decremented to maintain continuous level numbering.
 - Los nombres de las hojas de estilo de subnivel afectadas se actualizan para reflejar su nuevo índice de nivel.
@@ -67,7 +67,7 @@ The following example deletes the second level of a hierarchical list style shee
 WP DELETE STYLE SHEET(wpArea; "MainList"; 2)
 ```
 
-After execution:
+Después de la ejecución:
 
 - The `wk list level index` values are updated (former level 3 becomes level 2).
 - Se decrementa el `wk list level count`.

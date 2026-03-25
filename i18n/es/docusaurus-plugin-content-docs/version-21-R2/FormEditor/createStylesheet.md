@@ -214,7 +214,7 @@ Available media features and values:
 
 | Media features         | Valores                                        | Descripción                                                                                                                                                                              |
 | ---------------------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `prefers-color-scheme` | <li>**light**</li><li>**dark**</li>            | Color scheme to use                                                                                                                                                                      |
+| `prefers-color-scheme` | <li>**light**</li><li>**dark**</li>            | Esquema de color a utilizar                                                                                                                                                              |
 | `form-theme`           | <li>**fluent-ui**</li><li>**win-classic**</li> | Tema de la plataforma a utilizar (Windows). Para más información sobre el tema **fluent-ui**, consulte [esta sección](./forms.md#fluent-ui-rendering) |
 
 :::note
