@@ -69,7 +69,7 @@ To open the *ContactPage* project form with "name-input" object selected:
 
 ## See also 
 
-[Design Object Access Commands](../commands/theme/Design_Object_Access)  
+[Design Object Access Commands](../../Project/code-overview.md#design-object-access-commands)
 
 ## Properties
 

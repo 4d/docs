@@ -38,67 +38,8 @@ $person:=cs.Person.new("John";"Doe")
 $hello:=$person.sayHello() //"Hello John Doe"
 ```
 
-## Managing classes
+Class files are managed through the 4D Explorer (see [Creating classes](../Project/code-overview.md#creating-classes)).
 
-### Class definition
-
-A user class in 4D is defined by a specific [method](methods.md) file (.4dm), stored in the `/Project/Sources/Classes/` folder. The name of the file is the class name.
-
-When naming classes, you should keep in mind the following rules:
-
-- A [class name](identifiers.md#classes) must be compliant with [property naming rules](identifiers.md#object-properties).
-- Class names are case sensitive.
-- Giving the same name to a class and a database table is not recommended, in order to prevent any conflict.
-
-For example, if you want to define a class named "Polygon", you need to create the following file:
-
-```
-Project folder
- Project
-  Sources
-   Classes
-    Polygon.4dm
-```
-
-
-### Deleting a class
-
-To delete an existing class, you can:
-
-- on your disk, remove the .4dm class file from the "Classes" folder,
-- in the 4D Explorer, select the class and click ![](../assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu.
-
-### Using the 4D interface
-
-Class files are automatically stored at the appropriate location when created through the 4D interface, either via the **File** menu or the Explorer.
-
-#### File menu and toolbar
-
-You can create a new class file for the project by selecting **New > Class...** in the 4D Developer **File** menu or from the toolbar.
-
-You can also use the **Ctrl+Shift+Alt+k** shortcut.
-
-#### Explorer
-
-In the **Methods** page of the Explorer, classes are grouped in the **Classes** category.
-
-To create a new class, you can:
-
-- select the **Classes** category and click on the ![](../assets/en/Users/PlussNew.png) button.
-- select **New Class...** from the action menu at the bottom of the Explorer window, or from the contexual menu of the Classes group.
-![](../assets/en/Concepts/newClass.png)
-- select **New > Class...** from the contexual menu of the Explorer's Home page.
-
-#### Class code support
-
-In the various 4D windows (code editor, compiler, debugger, runtime explorer), class code is basically handled like a project method with some specificities:
-
-- In the code editor:
-  - a class cannot be run
-  - a class function is a code block
-  - **Goto definition** on an object member searches for class Function declarations; for example, "$o.f()" will find "Function f".
-  - **Search references** on class function declaration searches for the function used as object member; for example, "Function f" will find "$o.f()".
-- In the Runtime explorer and Debugger, class functions are displayed with the `<ClassName>` constructor or `<ClassName>.<FunctionName>` format.
 
 ## Class stores
 

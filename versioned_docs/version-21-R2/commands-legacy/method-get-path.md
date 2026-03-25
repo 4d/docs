@@ -48,10 +48,10 @@ Pass values in the *aTable*, *objectName* and *formObjectName* parameters accord
 
 | **Type of object**   | *aTable* | *objectName* | *formObjectName* |
 | -------------------- | -------- | ------------ | ---------------- |
-| Path Project form    | X        | X (optional) |                  |
+| Path Project form    | |X        | X (optional) |   
 | Path Table form      | X        | X            | X (optional)     |
-| Path Database method | X        |              |                  |
-| Path Project method  | X        |              |                  |
+| Path Database method | |X        |              |   
+| Path Project method | | X        |              |   
 | Path Trigger         | X        |              |                  |
 
 **Note:** The command does not check if the method actually exists in the database. An error is generated only when an invalid database method name is passed with the Path database method selector. 

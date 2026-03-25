@@ -42,7 +42,7 @@ You can execute this command from a component, but in this case, you must pass t
 
 ## See also 
 
-*Design Object Access Commands*  
+[Design Object Access Commands](../../Project/code-overview.md#design-object-access-commands)
 [METHOD Get path](../commands/method-get-path)  
 
 ## Properties

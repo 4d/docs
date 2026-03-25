@@ -40,7 +40,7 @@ In *attributes*, you pass an object or an array of objects, depending on the kin
 
 If the command is executed from a component, by default it applies to the component methods. If you pass the *\** parameter, it accesses the methods of the host database.
 
-**Compatibility note:** The *published4DMobile* property is deprecated as for 4D v18.
+**Compatibility note:** The *published4DMobile* property is deprecated as for 4D 18.
 
 ## Example 
 

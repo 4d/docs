@@ -27,7 +27,9 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Current method path.Summary-->The **Current method path** command returns the internal pathname of the database method, trigger, project method, form method or object method being executed.<!-- END REF-->In the context of 4D macro-commands, the *<method\_path>* tag is replaced in the code by the full pathname of the method being executed. 
+<!--REF #_command_.Current method path.Summary-->The **Current method path** command returns the internal pathname of the database method, trigger, project method, form method or object method being executed.<!-- END REF-->
+
+In the context of [4D macro-commands](../../code-editor/write-class-method.md#macros), the *<method\_path>* tag is replaced in the code by the full pathname of the method being executed. 
 
 ## See also 
 
