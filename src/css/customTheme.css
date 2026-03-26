@@ -100,9 +100,6 @@ details[data-value='properties'] > div > div > table > thead {
   display: inline-block;
 }
 
-footer {
-  margin-top: 100px;
-}
 
 
 @media only screen and (max-width: 768px) {
