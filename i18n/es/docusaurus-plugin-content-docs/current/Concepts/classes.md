@@ -37,62 +37,7 @@ $person:=cs.Person.new("John";"Doe")
 $hello:=$person.sayHello() //"Hello John Doe"
 ```
 
-## Gestión de clases
-
-### Definición de una clase
-
-Una clase usuario en 4D está definida por un archivo [método ](methods.md) específico (.4dm), almacenado en la carpeta `/Project/Sources/Classes/`. El nombre del archivo es el nombre de la clase.
-
-Al nombrar las clases, debe tener en cuenta las siguientes reglas:
-
-- Un [nombre de clase](identifiers.md#classes) debe cumplir con [reglas de denominación de las propiedades](identifiers.md#object-properties).
-- Los nombres de clases son sensibles a las mayúsculas y minúsculas.
-- No se recomienda dar el mismo nombre a una clase y a una tabla de la base, para evitar conflictos.
-
-Por ejemplo, si quiere definir una clase llamada "Polygon", tiene que crear el siguiente archivo:
-
-```
-Project folder Project Sources Classes Polygon.4dm
-```
-
-### Borrar una clase
-
-Para eliminar una clase existente, puede:
-
-- en su disco, elimine el archivo de clase .4dm de la carpeta "Classes",
-- en el Explorador 4D, seleccione la clase y haga clic ![](../assets/en/Users/MinussNew.png) o elija **Mover a la Papelera** en el menú contextual.
-
-### Utilizar la interfaz 4D
-
-Los archivos de clase se almacenan automáticamente en la ubicación adecuada cuando se crean a través de la interfaz de 4D, ya sea a través del menú **Archivo** o del Explorador.
-
-#### Menú Archivo y barra de herramientas
-
-Puede crear un nuevo archivo de clase para el proyecto seleccionando **Nueva > Clase...** en el menú **Archivo** de 4D Developer o en la barra de herramientas.
-
-También puede utilizar el atajo **Ctrl+Mayús+Alt+k**.
-
-#### Explorador
-
-En la página **Métodos** del Explorador, las clases se agrupan en la categoría **Clases**.
-
-Para crear una nueva clase, puede:
-
-- seleccione la categoría **Clases** y haga clic en el botón ![](../assets/en/Users/PlussNew.png).
-- seleccione **Nueva clase...** en el menú de acciones de la parte inferior de la ventana del Explorador, o en el menú contextual del grupo Clases.
-  ![](../assets/en/Concepts/newClass.png)
-- seleccione **Nueva > Clase...** en el menú contextual de la página de inicio del Explorador.
-
-#### Soporte del código de clase
-
-En las diferentes ventanas 4D (editor de código, compilador, depurador, explorador de ejecución), el código de la clase se maneja básicamente como un método proyecto con algunas especificidades:
-
-- En el editor de código:
-  - una clase no puede ser ejecutada
-  - una función de clase es un bloque de código
-  - **Ir a la definición** en un objeto miembro busca las declaraciones de función de clase; por ejemplo, "$o.f()" encontrará "Function f".
-  - **Buscar referencias** en la declaración de función de clase busca la función utilizada como miembro de objeto; por ejemplo, "Function f" encontrará "$o.f()".
-- En el explorador de Ejecución y Depurador, las funciones clase se muestran con el formato `<ClassName>` constructor o `<ClassName>.<FunctionName>`.
+Class files are managed through the 4D Explorer (see [Creating classes](../Project/code-overview.md#creating-classes)).
 
 ## Class stores
 

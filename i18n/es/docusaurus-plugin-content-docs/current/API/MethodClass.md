@@ -124,7 +124,7 @@ En el parámetro opcional *name*, pase el nombre del método que se mostrará en
 
 :::tip
 
-Giving a *name* to your method is recommended if you want to:
+Se recomienda nombrar explícitamente su método si lo desea:
 
 - use persistent method name in the [Custom watch pane of the Debugger](../Debugging/debugger#custom-watch-pane) (anonymous methods are not persistent in the debugger).
 - handle the volatile method using commands such as [`Method get path`](../commands/method-get-path) and [`Method resolve path`](../commands/method-resolve-path) (anonymous methods don't have paths).
@@ -205,7 +205,7 @@ El objeto devuelto contiene las siguientes propiedades:
 
 | Propiedad |                                                                                   | Tipo                 | Descripción                                                                                                                  |
 | --------- | --------------------------------------------------------------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| success   |                                                                                   | Boolean              | True if no syntax error was detected, false otherwise                                                                        |
+| success   |                                                                                   | Boolean              | True si no se ha detectado ningún error de sintaxis, false en caso contrario                                                 |
 | errors    |                                                                                   | Colección de objetos | **Disponible sólo en caso de error o de warning**. Colección de objetos que describen errores o advertencias |
 |           | [].isError    | Boolean              | Error si es True, sino warning                                                                                               |
 |           | [].message    | Text                 | Mensaje de error o advertencia                                                                                               |

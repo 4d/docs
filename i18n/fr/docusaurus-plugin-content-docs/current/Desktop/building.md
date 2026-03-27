@@ -559,7 +559,7 @@ Sélectionnez cette option pour créer une application prête à l'emploi (auton
 
 Lorsque vous sélectionnez cette option, une liste de licences s'affiche dans l'onglet. Vous devez désigner les fichiers qui contiennent vos licences. Ces fichiers ont été générés ou mis à jour lors de l'achat de la licence *4D Developer Professional* et des licences de déploiement. Votre licence *4D Developer Professional* courante est automatiquement associée à chaque licence de déploiement à utiliser dans l'application créée. Vous pouvez ajouter un autre numéro de 4D Developer Professional et ses licences associées.
 
-Pour ajouter ou supprimer des licences, utilisez les boutons **[+]** et **[-]** situés en bas de la fenêtre. Lorsque vous cliquez sur le bouton \[+], une boîte de dialogue d’ouverture de document apparaît, affichant par défaut le contenu du dossier *[Licenses]* de votre poste. For more information about the location of this folder, refer to the [Get 4D folder](../commands/get-4d-folder) command.
+Pour ajouter ou supprimer des licences, utilisez les boutons **[+]** et **[-]** situés en bas de la fenêtre. Lorsque vous cliquez sur le bouton \[+], une boîte de dialogue d’ouverture de document apparaît, affichant par défaut le contenu du dossier *[Licenses]* de votre poste. Pour plus d'informations sur l'emplacement de ce dossier, reportez-vous à la commande [Get 4D folder](../commands/get-4d-folder).
 
 Une fois que vous avez sélectionné un fichier, la liste indique les caractéristiques de la licence qu’il contient.
 

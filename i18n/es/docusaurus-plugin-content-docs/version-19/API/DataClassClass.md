@@ -514,9 +514,9 @@ El método de proyecto ***SearchDuplicate*** busca valores duplicados en cualqui
 <!-- REF #DataClassClass.getInfo().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción| 
 |---|---|---|---|
-|Result|Object|<-|Information on the dataclass|
+|Resultado|Object|<-|Information on the dataclass|
 </div>
 <!-- END REF -->
 

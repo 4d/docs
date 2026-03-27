@@ -530,9 +530,9 @@ Este ejemplo ilustra el uso de la propiedad *context*:
 <!-- REF #DataClassClass.getCount().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|result|Integer|<-|Number of entities in the dataclass|
+|resultado|Integer|<-|Number of entities in the dataclass|
 </div>
 <!-- END REF -->
 
@@ -628,9 +628,9 @@ El método de proyecto ***SearchDuplicate*** busca valores duplicados en cualqui
 <!-- REF #DataClassClass.getInfo().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción| 
 |---|---|---|---|
-|Result|Object|<-|Information on the dataclass|
+|Resultado|Object|<-|Information on the dataclass|
 </div>
 <!-- END REF -->
 
@@ -703,9 +703,9 @@ La función `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->devuelve 
 <!-- REF #DataClassClass.getRemoteCache().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|result|Object|<-|Object describing the contents of the ORDA cache for the dataclass.|
+|resultado|Object|<-|Object describing the contents of the ORDA cache for the dataclass.|
 </div>
 <!-- END REF -->
 

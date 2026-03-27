@@ -37,14 +37,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP New style sheet.Summary-->El comando **WP New style sheet** crea un nuevo objeto (vacío) de hoja de estilo para el *wpDoc* designado.<!-- END REF-->
 
-In the *wpDoc* parameter, pass a 4D Write Pro document.
+En el parámetro *wpDoc*, pasa un documento 4D Write Pro.
 
 The *styleSheetType* parameter lets you designate the type of the style sheet, *i.e.* the part of the *wpDoc* that will be affected by the style sheet. Hay dos tipos disponibles:
 
-- wk type character: Applies style attributes to characters.
+- wk type character: aplica atributos de estilo a los caracteres.
 - wk type paragraph: Applies style attributes to paragraphs (required if you want to create [hierarchical list style sheets](#hierarchical-list-style-sheet)).
 
-Pase un nombre para la hoja de estilo en el parámetro *styleSheetName*. The style sheet's name is stored with the document and facilitates reusing or modifying the style. It can also be used with the [WP Get style sheet](../WritePro/commands/wp-get-style-sheet) and [WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet) commands. The style sheet name must comply with the following rules:
+Pase un nombre para la hoja de estilo en el parámetro *styleSheetName*. The style sheet's name is stored with the document and facilitates reusing or modifying the style. It can also be used with the [WP Get style sheet](../WritePro/commands/wp-get-style-sheet) and [WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet) commands. El nombre de la hoja de estilo debe cumplir las siguientes reglas:
 
 - debe empezar por una letra
 - puede contener caracteres alfanuméricos, espacios en blanco, caracteres "-" o caracteres unicode >= 128
@@ -76,7 +76,7 @@ If the parameter is omitted or set to 0, a standard (non-list) paragraph style s
 
 ## Ejemplo 1
 
-The following code creates and defines a paragraph style sheet:
+El siguiente código crea y define una hoja de estilo de párrafo:
 
 ```4d
  var $styleSheet : Object
@@ -119,10 +119,10 @@ Resultado:
   - `wk list style type` = `wk decimal`
 
 - Las hojas de estilo de los subniveles:
-  - have incremented `wk list level index` values (2 and 3)
+  - han incrementado los valores de `wk list level index` (2 y 3)
   - comparte la misma `wk list level count`
   - se indentarán automáticamente (0,75 cm × índice de nivel)
-  - reference the root style sheet through `wk root style`
+  - hacer referencia a la hoja de estilo raíz mediante `wk root style`
 
 ## Ver también
 

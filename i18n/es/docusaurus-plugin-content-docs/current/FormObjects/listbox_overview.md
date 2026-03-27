@@ -514,7 +514,7 @@ Este principio se aplica a los arrays internos que se pueden utilizar para gesti
 *Non-hierarchical representation:*  
 ![](../assets/en/FormObjects/hierarch7.png)
 
-*Hierarchical representation:*  
+*Representación jerárquica:*  
 ![](../assets/en/FormObjects/hierarch8.png)
 
 > Si una o más líneas están ocultas porque sus padres están contraídos, ya no se seleccionan. Sólo se pueden seleccionar las líneas visibles (directamente o por desplazamiento). En otras palabras, las líneas no pueden estar ocultas y seleccionadas a la vez.

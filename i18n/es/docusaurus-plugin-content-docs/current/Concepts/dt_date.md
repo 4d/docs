@@ -52,7 +52,7 @@ Una fecha null es especificada por *!00-00-00!*.
 
 Como las fechas en JavaScript son objetos, se envían a 4D como texto que contiene su forma JSON como cualquier otro objeto. Este principio se aplica en particular cuando se utilizan [comandos JSON](../commands/theme/JSON) o [Áreas Web](../FormObjects/webArea_overview.md).
 
-The JSON form of JavaScript Date objects follows the ISO 8601 standard, for example "2013-08-23T00:00:00Z". It is your responsibility to convert this text into a 4D date. Hay dos soluciones disponibles:
+The JSON form of JavaScript Date objects follows the ISO 8601 standard, for example "2013-08-23T00:00:00Z". Es su responsabilidad convertir este texto en una fecha 4D. Hay dos soluciones disponibles:
 
 Utilizando el comando [`JSON Parse`](../commands/json-parse):
 

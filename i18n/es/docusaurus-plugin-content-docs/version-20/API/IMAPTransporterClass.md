@@ -1157,8 +1157,8 @@ Quiere recuperar los 20 correos electrónicos más recientes sin cambiar el esta
 |---------|--- |:---:|------|
 |msgNumber|Integer|-> |Sequence number of the message|
 |msgID|Text|-> |Unique ID of the message|
-|updateSeen|Boolean|->|If True, the message is marked "seen" in the mailbox. If False the message is left untouched.|
-|Result|BLOB|<-|Blob of the MIME string returned from the mail server|
+|updateSeen|Boolean|->|If True, the message is marked "seen" in the mailbox. Si es False el mensaje se deja intacto.|
+|Resultado|BLOB|<-|Blob of the MIME string returned from the mail server|
 </div>
 <!-- END REF -->
 

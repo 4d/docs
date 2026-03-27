@@ -9,6 +9,7 @@ La página Compatibilidad agrupa los parámetros relacionados con el mantenimien
 > Esta página enumera las opciones de compatibilidad disponibles para las bases de datos/proyectos convertidos a partir de 4D v18. Para las opciones de compatibilidad más antiguas, consulte la [página Compatibilidad](https://doc.4d.com/4Dv20/4D/20.2/Compatibility-page.300-6750362.en.html) en **doc.4d.com**.
 
 - **Utilizar XPath estándar**: por defecto, esta opción está desmarcada para las bases convertidas desde una versión 4D anterior a la v18 R3, y marcada para las bases creadas con 4D v18 R3 y superiores. A partir de la v18 R3, la implementación de XPath en 4D ha sido modificada para ser más compatible y soportar más predicados. Como consecuencia, las funcionalidades no estándar de la implementación anterior ya no funcionan. Incluyen:
+
   - el caracter inicial "/" no es sólo el nodo raíz - la utilización del caracter / como primer caracter en una expresión XPath no declara una ruta absoluta desde el nodo raíz
   - no hay nodo actual implícito - el nodo actual debe incluirse en la expresión XPath
   - no hay búsquedas recursivas en las estructuras repetidas: sólo se analiza el primer elemento. \

@@ -99,7 +99,7 @@ Los objetos HTTPRequest ofrecen las siguientes propiedades y funciones:
 | Lanzamiento | Modificaciones                                                    |
 | ----------- | ----------------------------------------------------------------- |
 | 21 R3       | Soporte de la propiedad *storeCertificateName* en macOS           |
-| 21          | Support of *storeCertificateName* property on Windows             |
+| 21          | Soporte de la propiedad *storeCertificateName* en Windows         |
 | 20          | Validación TLS por defecto                                        |
 | 19 R7       | Soporte de las propiedades *automaticRedirections* y *decodeData* |
 

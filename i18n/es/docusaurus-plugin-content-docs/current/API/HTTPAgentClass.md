@@ -53,10 +53,10 @@ Dado que HTTPAgent es un objeto compartible, puede añadir uno a una clase singl
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                                          |
-| ----------- | ------------------------------------------------------- |
-| 21 R3       | Soporte de la propiedad *storeCertificateName* en macOS |
-| 21          | Support of *storeCertificateName* property on Windows   |
+| Lanzamiento | Modificaciones                                            |
+| ----------- | --------------------------------------------------------- |
+| 21 R3       | Soporte de la propiedad *storeCertificateName* en macOS   |
+| 21          | Soporte de la propiedad *storeCertificateName* en Windows |
 
 </details>
 

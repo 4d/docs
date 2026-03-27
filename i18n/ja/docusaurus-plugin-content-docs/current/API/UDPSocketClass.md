@@ -23,9 +23,9 @@ UDP ソケットに関連したイベントを記録する[4DTCPUDPLog.txt ロ�
 
 :::
 
-### Aynchronous programming
+### 非同期プログラミング
 
-This class supports asynchronous programming in 4D as described in the [Asynchronous Execution](../Develop/async.md) page.
+このクラスは、[非同期実行](../Develop/async.md) のページで説明されているように、4D 内での非同期プログライミングをサポートしています。
 
 ### UDPSocket オブジェクト
 

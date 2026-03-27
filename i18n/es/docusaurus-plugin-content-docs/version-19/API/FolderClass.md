@@ -158,9 +158,9 @@ La función `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->crea y devuel
 <!--REF #FolderClass.create().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|Result|Boolean|<-|True if the folder was created successfully, false otherwise|
+|Parámetro|Tipo||Descripción|
+|---|-|-|-|-|
+|Resultado|Boolean|<-|True if the folder was created successfully, false otherwise|
 </div>
 <!-- END REF -->
 

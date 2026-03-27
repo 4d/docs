@@ -1585,7 +1585,7 @@ searchCriteria = FLAGGED FROM "SMITH"
 searchCriteria = OR SEEN FLAGGED
 ```
 
-... returns all messages with \Seen flag set OR \Flagged flag set
+... devuelve todos los mensajes con el marcador \Seen O \Flagged
 
 ```
 searchCriteria = NOT SEEN

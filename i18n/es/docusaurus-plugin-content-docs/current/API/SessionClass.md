@@ -566,7 +566,7 @@ Dado que `.info` es una propiedad calculada, se recomienda llamarla una vez y lu
 
 :::note
 
-This function always returns **False** with non-web sessions.
+Esta función siempre devuelve **False** con sesiones no web.
 
 :::
 

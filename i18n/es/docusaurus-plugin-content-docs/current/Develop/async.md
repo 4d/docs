@@ -14,7 +14,7 @@ Synchronous execution follows a **sequential** flow, a step-by-step where each i
 Synchronous execution is used when:
 
 - La ejecución de las tareas debe seguir un orden estricto.
-- Performance impact is minimal (e.g., quick operations).
+- El impacto en el rendimiento es mínimo (por ejemplo, operaciones rápidas).
 - Se ejecuta en un contexto de un solo hilo donde el bloqueo es aceptable.
 - La ejecución síncrona bloquea la interfaz de usuario y es más adecuada para tareas rápidas y ordenadas en las que el bloqueo es aceptable.
 
@@ -43,7 +43,7 @@ Elegir entre ejecución síncrona y asíncrona:
 
 4D ofrece capacidades integradas de **ejecución asíncrona** a través de varias clases y comandos. These allow background task execution, network communication, and large data processing, while waiting other operations to complete without blocking the current process.
 
-The general concept of asynchronous event management in 4D is based on an asynchronous messaging model using **workers** (processes that listen to events) and **callbacks** (functions or formulas automatically invoked when an event occurs). Instead of waiting for a result (synchronous mode), you provide a function that will be automatically called when the desired event occurs. Callbacks can be passed as class functions (recommended) or Formula objects.
+The general concept of asynchronous event management in 4D is based on an asynchronous messaging model using **workers** (processes that listen to events) and **callbacks** (functions or formulas automatically invoked when an event occurs). Instead of waiting for a result (synchronous mode), you provide a function that will be automatically called when the desired event occurs. Las retrollamadas se pueden pasar como funciones clase (recomendado) o como objetos Formula.
 
 This model is common to [`CALL WORKER`](../commands/call-worker), [`CALL FORM`](../commands/call-form), and [classes that support aynchronous execution](#asynchronous-programming-with-4d-classes). Todos estos comandos/clases inician una operación que se ejecuta en segundo plano. La sentencia que lanza la operación retorna inmediatamente, sin esperar a que la operación finalice.
 
@@ -51,11 +51,11 @@ This model is common to [`CALL WORKER`](../commands/call-worker), [`CALL FORM`](
 
 Asynchronous programming relies on a system of [**workers**](../Develop/processes.md#worker-processes) (worker processes), which allows code to be executed in parallel without blocking the main process. This is particularly useful for long tasks (such as HTTP calls, executing external processes, background processing), while keeping the user interface responsive.
 
-Using worker processes in asynchronous programming **is mandatory** since "classic" processes automatically terminate their execution when the process method ends, thus using callbacks is not possible. A worker process stays alive and can **listen to events**.
+Using worker processes in asynchronous programming **is mandatory** since "classic" processes automatically terminate their execution when the process method ends, thus using callbacks is not possible. Un proceso worker permanece vivo y puede **escuchar eventos**.
 
 ### Event queue (mailbox)
 
-Each worker (or form window for [`CALL FORM`](../commands/call-form)) has its own message queue. [`CALL WORKER`](../commands/call-worker) o [`CALL FORM`](../commands/call-form) simplemente envía un mensaje a esta cola. El worker trata los mensajes uno a uno, en el orden en que llegan, dentro de su propio contexto. Process variables, current selections, etc. are preserved.
+Each worker (or form window for [`CALL FORM`](../commands/call-form)) has its own message queue. [`CALL WORKER`](../commands/call-worker) o [`CALL FORM`](../commands/call-form) simplemente envía un mensaje a esta cola. El worker trata los mensajes uno a uno, en el orden en que llegan, dentro de su propio contexto. Se conservan las variables de proceso, las selecciones actuales, etc.
 
 ### Comunicación bidireccional mediante mensajes
 
@@ -115,7 +115,7 @@ Recomendamos la siguiente secuencia:
 
 1. You create the user class where you declare callback functions, for example a `cs.Params` with `onError()` and `onResponse()` functions.
 2. Instanciará la clase usuario (en nuestro ejemplo utilizando `cs.Params.new()`) que configurará su objeto asíncrono.
-3. You call the constructor of the 4D class (for example `4D.SystemWorker.new()`) and pass the *options* object as parameter. It starts the operations passed immediately without delay.
+3. You call the constructor of the 4D class (for example `4D.SystemWorker.new()`) and pass the *options* object as parameter. Inicia las operaciones pasadas inmediatamente sin demora.
 
 Here is a full example of implementation of an *options* object based upon a user class:
 

@@ -75,11 +75,11 @@ You can also execute a function using the [`apply()`](#apply) and [`call()`](#ca
 
 <div class="no-index">
 
-| Parámetros | Tipo       |                             | Descripción                                                     |
-| ---------- | ---------- | :-------------------------: | --------------------------------------------------------------- |
-| thisObj    | Object     |              ->             | Object to be returned by the `This` command in the function     |
-| params     | Collection |              ->             | Collection of values to be passed as parameters to the function |
-| Resultado  | any        | <- | Valor de la ejecución de la función                             |
+| Parámetros | Tipo       |                             | Descripción                                                      |
+| ---------- | ---------- | :-------------------------: | ---------------------------------------------------------------- |
+| thisObj    | Object     |              ->             | Objeto a devolver por el comando `This` en la función            |
+| params     | Collection |              ->             | Colección de valores que se pasarán como parámetros a la función |
+| Resultado  | any        | <- | Valor de la ejecución de la función                              |
 
 </div>
 <!-- END REF -->
@@ -118,11 +118,11 @@ Tenga en cuenta que `.apply()` es similar a [`.call()`](#call) excepto que los p
 
 <div class="no-index">
 
-| Parámetros | Tipo   |                             | Descripción                                                 |
-| ---------- | ------ | --------------------------- | ----------------------------------------------------------- |
-| thisObj    | Object | ->                          | Object to be returned by the `This` command in the function |
-| params     | any    | ->                          | Valores a pasar como parámetros a la función                |
-| Resultado  | any    | <- | Valor de la ejecución de la función                         |
+| Parámetros | Tipo   |                             | Descripción                                           |
+| ---------- | ------ | --------------------------- | ----------------------------------------------------- |
+| thisObj    | Object | ->                          | Objeto a devolver por el comando `This` en la función |
+| params     | any    | ->                          | Valores a pasar como parámetros a la función          |
+| Resultado  | any    | <- | Valor de la ejecución de la función                   |
 
 </div>
 <!-- END REF -->

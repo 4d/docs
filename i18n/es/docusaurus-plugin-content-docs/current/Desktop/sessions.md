@@ -34,7 +34,7 @@ Este objeto se maneja a través de las funciones y propiedades de la [clase `Ses
 Dependiendo de dónde se ejecute el código, se dispondrá de un objeto `session` de usuario del lado del servidor o del lado del cliente. Both objects are similar, except that:
 
 - sus propiedades [`.storage`](../API/SessionClass.md#storage) no son el mismo objeto. A value stored in the `.storage` of the user session on the server will not be available in the `.storage` of the user session on the client and conversely.
-- for security reasons, the client-side session cannot execute functions that **modify** [privileges](../ORDA/privileges.md) ([`setPrivileges()`](../API/SessionClass.md#setprivileges), [`clearPrivileges()`](../API/SessionClass.md#clearprivileges), [`promote()`](../API/SessionClass.md#promote), [`demote()`](../API/SessionClass.md#demote), [`restore()`](../API/SessionClass.md#restore)). Calling these functions on a client generates an error.
+- for security reasons, the client-side session cannot execute functions that **modify** [privileges](../ORDA/privileges.md) ([`setPrivileges()`](../API/SessionClass.md#setprivileges), [`clearPrivileges()`](../API/SessionClass.md#clearprivileges), [`promote()`](../API/SessionClass.md#promote), [`demote()`](../API/SessionClass.md#demote), [`restore()`](../API/SessionClass.md#restore)). Llamar a estas funciones en un cliente genera un error.
 
 :::note
 

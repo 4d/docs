@@ -912,9 +912,9 @@ El siguiente código genérico duplica todas las entidades de la entity selectio
 <!-- REF #EntitySelectionClass.isAlterable().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|Boolean|<-|True if the entity selection is alterable, False otherwise|
+|Resultado|Boolean|<-|True if the entity selection is alterable, False otherwise|
 </div>
 <!-- END REF -->
 
@@ -955,9 +955,9 @@ Form.products.add(Form.product)
 <!-- REF #EntitySelectionClass.isOrdered().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|Boolean|<-|True if the entity selection is ordered, False otherwise|
+|Resultado|Boolean|<-|True if the entity selection is ordered, False otherwise|
 </div>
 <!-- END REF -->
 

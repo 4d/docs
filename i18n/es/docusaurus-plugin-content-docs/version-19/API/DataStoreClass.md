@@ -481,9 +481,9 @@ Ver el ejemplo 2 de [`.startRequestLog()`](#startrequestlog).
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|Boolean|<-|True if the Data Explorer access is disabled, False if it is enabled (default)|
+|Resultado|Boolean|<-|True if the Data Explorer access is disabled, False if it is enabled (default)|
 </div>
 <!-- END REF -->
 

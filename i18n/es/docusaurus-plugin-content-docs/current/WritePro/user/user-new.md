@@ -38,7 +38,7 @@ añada una parte sobre el hecho de que usted define dónde empieza su lista orde
 [4D Write Pro – Adding a margin automatically when bullets are set using standard actions](https://blog.4d.com/4d-write-pro-adding-a-margin-automatically-when-bullets-are-set-using-standard-actions)
 
 :::
-and the level are managed with (standard actions)
+y el nivel se gestionan con (acciones estándar)
 
 ### Listas de múltiples niveles
 

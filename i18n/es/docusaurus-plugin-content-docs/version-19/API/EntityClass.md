@@ -715,9 +715,9 @@ Si la entidad no pertenece a una selección de entidades, la función devuelve N
 <!-- REF #EntityClass.getStamp().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|Integer|<-|Stamp of the entity (0 if entity has just been created)|
+|Resultado|Integer|<-|Stamp of the entity (0 if entity has just been created)|
 </div>
 <!-- END REF -->
 
@@ -813,9 +813,9 @@ El valor resultante se incluye entre 0 y la longitud de la selección de entidad
 <!-- REF #EntityClass.isNew().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|Boolean|<-|True if entity has just been created and not yet saved. Otherwise, False.|
+|Resultado|Boolean|<-|True if entity has just been created and not yet saved. Otherwise, False.|
 </div>
 <!-- END REF -->
 
@@ -1579,9 +1579,9 @@ Ejemplo con el tipo `relatedEntity` con una forma simple:
 <!-- REF #EntityClass.touched().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|Boolean|<-|True if at least one entity attribute has been modified and not yet saved, else False|
+|Resultado|Boolean|<-|True if at least one entity attribute has been modified and not yet saved, else False|
 </div>
 <!-- END REF -->
 

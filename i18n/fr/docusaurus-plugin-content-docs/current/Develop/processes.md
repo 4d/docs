@@ -33,7 +33,7 @@ Un process peut être effacé dans les conditions suivantes (les deux premières
 - Lorsque l'exécution de la méthode du process est terminée
 - Lorsque l'utilisateur quitte l'application
 - Si vous arrêtez le process de manière procédurale ou si vous utilisez le bouton **Abort** dans le débogueur ou dans l'Explorateur d'exécution
-- If you call the [`KILL WORKER`](../commands/kill-worker) command (to delete a worker process only).
+- Si vous appelez la commande [`KILL WORKER`](../commands/kill-worker) (pour supprimer un process worker uniquement).
 
 Un process peut créer un autre process. Les process ne sont pas organisés de manière hiérarchique - tous les process sont égaux, quel que soit le process à partir duquel ils ont été créés. Une fois que le process "parent" a créé un process "enfant", le process enfant se poursuit, que le process parent soit toujours en cours d'exécution ou non.
 

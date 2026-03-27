@@ -701,7 +701,7 @@ Les macro-commandes de 4D sont écrites au format XML. Vous pouvez utiliser “t
 Le dossier “Macros v2” peut être situé :
 
 - Dans le dossier 4D actif de la machine. Les macros sont alors partagées pour toutes les bases.
-  **Note :** L’emplacement du dossier 4D actif varie en fonction du système d’exploitation. For more information, refer to the description of the [Get 4D folder](../commands/get-4d-folder) command in the 4D *Language Reference* manual.
+  **Note :** L’emplacement du dossier 4D actif varie en fonction du système d’exploitation. Pour plus d’informations, reportez-vous à la description de la commande [Get 4D folder](../commands/get-4d-folder).
 - A côté du fichier de structure de la base. Les macros ne sont chargées que pour cette structure.
 - Pour les composants : dans le dossier **Components** de la base. Les macros ne sont alors chargées que si le composant est installé.
 
@@ -838,7 +838,7 @@ La prise en charge des macros peut changer d'une version de 4D à l'autre. Afin 
 
 #### Variables de sélection de texte pour les méthodes
 
-Il est recommandé de gérer les sélections de texte à l'aide des commandes [GET MACRO PARAMETER](../commands/get-macro-parameter) et [SET MACRO PARAMETER](../commands/set-macro-parameter) . Ces commandes peuvent être utilisées pour surmonter le cloisonnement des espaces d'exécution du projet hôte/composant et ainsi permettre la création de composants dédiés à la gestion des macros. Afin d'activer ce mode pour une macro, vous devez déclarer l'attribut Version avec la valeur 2 dans l'élément Macro. In this case, 4D no longer manages the predefined variables _textSel,_textReplace, etc. and the [GET MACRO PARAMETER](../commands/get-macro-parameter) and [SET MACRO PARAMETER](../commands/set-macro-parameter) commands are used. Cet attribut doit être déclaré comme suit :
+Il est recommandé de gérer les sélections de texte à l'aide des commandes [GET MACRO PARAMETER](../commands/get-macro-parameter) et [SET MACRO PARAMETER](../commands/set-macro-parameter) . Ces commandes peuvent être utilisées pour surmonter le cloisonnement des espaces d'exécution du projet hôte/composant et ainsi permettre la création de composants dédiés à la gestion des macros. Afin d'activer ce mode pour une macro, vous devez déclarer l'attribut Version avec la valeur 2 dans l'élément Macro. Dans ce cas, 4D ne gère plus les variables prédéfinies _textSel, _textReplace, etc. et les commandes [GET MACRO PARAMETER](../commands/get-macro-parameter) et [SET MACRO PARAMETER](../commands/set-macro-parameter) sont utilisées. Cet attribut doit être déclaré comme suit :
 
 `<macro name="MyMacro" version="2">`<br/> `--- Text of the macro ---`<br/> `</macro>`
 

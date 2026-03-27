@@ -170,9 +170,9 @@ La función `4D.File.new()` <!-- REF #4D.File.new().Summary -->crea y devuelve u
 <!--REF #FileClass.create().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|Result|Boolean|<-|True if the file was created successfully, false otherwise|
+|Parámetro|Tipo||Descripción|
+|---|-|-|-|-|
+|Resultado|Boolean|<-|True if the file was created successfully, false otherwise|
 </div>
 <!-- END REF -->
 
@@ -330,9 +330,9 @@ Desea eliminar un archivo específico en la carpeta de la base de datos:
 <!--REF #FileClass.getAppInfo().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción| 
 |---|---|---|---|
-|Result|Object|<-|Contents of .exe/.dll version resource or .plist file|
+|Resultado|Object|<-|Contents of .exe/.dll version resource or .plist file|
 </div>
 <!-- END REF -->
 

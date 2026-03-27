@@ -737,9 +737,9 @@ Ver el ejemplo 2 de [`.startRequestLog()`](#startrequestlog).
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|Boolean|<-|True if the Data Explorer access is disabled, False if it is enabled (default)|
+|Resultado|Boolean|<-|True if the Data Explorer access is disabled, False if it is enabled (default)|
 </div>
 <!-- END REF -->
 
@@ -773,9 +773,9 @@ Por defecto, el acceso al Explorador de Datos se concede para las sesiones `webA
 <!-- REF #DataStoreClass.locked().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|Result|Boolean|<-|True if locked|
+|Parámetro|Tipo||Descripción|
+|---|-|-|-|-|
+|Resultado|Boolean|<-|True if locked|
 </div>
 <!-- END REF -->
 
