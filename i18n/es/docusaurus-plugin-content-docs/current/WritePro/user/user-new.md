@@ -31,14 +31,11 @@ Cuando se crea una lista utilizando una acción estándar (`listStyleType` o `li
 
 When the list is created using [the WP SET ATTRIBUTE command](../commands-legacy/4d-write-pro-attributes.md#lists), no specific margin is managed, by default the marker is added at the left boundary of the paragraph. El desarrollador puede añadir un margen personalizado si es necesario.
 
-añada una parte sobre el hecho de que usted define dónde empieza su lista ordenada.
-
 :::tip Entrada de blog relacionada
 
 [4D Write Pro – Adding a margin automatically when bullets are set using standard actions](https://blog.4d.com/4d-write-pro-adding-a-margin-automatically-when-bullets-are-set-using-standard-actions)
 
 :::
-y el nivel se gestionan con (acciones estándar)
 
 ### Listas de múltiples niveles
 

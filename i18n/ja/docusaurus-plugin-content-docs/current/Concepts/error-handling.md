@@ -240,7 +240,7 @@ End try
 
 :::info
 
-For more information on *deferred* and *non-deferred* errors, please refer to the [`throw`](../commands/throw) command description.
+*遅延* および *非遅延* エラーについての詳細は、[`throw`](../commands/throw) コマンドの説明を参照ください。
 
 :::
 

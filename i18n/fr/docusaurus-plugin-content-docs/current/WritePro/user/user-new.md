@@ -31,14 +31,11 @@ Lorsqu'une liste est créée à l'aide d'une action standard (`listStyleType` ou
 
 Lorsque la liste est créée à l'aide de la commande WP SET ATTRIBUTE(../commands-legacy/4d-write-pro-attributes.md#lists), aucune marge spécifique n'est gérée ; par défaut, le marqueur est ajouté à la limite gauche du paragraphe. Le développeur peut ajouter une marge personnalisée si nécessaire.
 
-add a part about the fact that you define where your ordered list start.
-
 :::tip Article(s) de blog sur le sujet
 
 [4D Write Pro - Ajout automatique d'une marge lorsque des puces sont définies à l'aide d'actions standard](https://blog.4d.com/4d-write-pro-adding-a-margin-automatically-when-bullets-are-set-using-standard-actions)
 
 :::
-and the level are managed with (standard actions)
 
 ### Multi-level lists
 

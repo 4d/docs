@@ -3,7 +3,7 @@ id: SessionClass
 title: Session
 ---
 
-Session オブジェクトは [`Session`](../commands/session.md) コマンドによって返されます。  These objects provide the developer with an interface allowing to manage the current session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web context only) manage [privileges](../ORDA/privileges.md).
+Session オブジェクトは [`Session`](../commands/session.md) コマンドによって返されます。  このオブジェクトは、カレントセッションを管理するためのインターフェースをデベロッパーに対して提供し、コンテキストデータの保存、プロセス間の情報共有、セッションに関連したプリエンプティブプロセスの開始などのアクションの実行や、[アクセス権](../ORDA/privileges.md) の管理(web コンテキストのみ)を可能にします。
 
 :::tip 関連したblog 記事
 

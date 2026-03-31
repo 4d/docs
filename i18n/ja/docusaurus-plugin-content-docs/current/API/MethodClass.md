@@ -124,18 +124,18 @@ End if
 
 :::tip
 
-Giving a *name* to your method is recommended if you want to:
+以下のような場合には、 *name* 引数を使用してメソッドに名前をつけることが推奨されます:
 
-- use persistent method name in the [Custom watch pane of the Debugger](../Debugging/debugger#custom-watch-pane) (anonymous methods are not persistent in the debugger).
-- handle the volatile method using commands such as [`Method get path`](../commands/method-get-path) and [`Method resolve path`](../commands/method-resolve-path) (anonymous methods don't have paths).
+- [デバッガのカスタムウォッチエリア](../Debugging/debugger#カスタムウォッチエリア) 内で一貫したメソッド名を使用する(anonymous なメソッドはデバッガでは永続的ではありません)。
+- [`Method get path`](../commands/method-get-path) や [`Method resolve path`](../commands/method-resolve-path) などのコマンドを使用して揮発性のメソッドを管理する(anonymous なメソッドはパスを持ちません)。
 
 :::
 
-The resulting 4D.Method object can be checked using [`checkSyntax()`](#checksyntax) and executed using `()`, [`.apply()`](#apply) or [`.call()`](#call).
+返される4D.Method オブジェクトは、[`checkSyntax()`](#checksyntax) を使用してチェックできる他、 `()`、 [`.apply()`](#apply) あるいは [`.call()`](#call) を使用して実行可能です。
 
 :::note
 
-Named volatile method objects are not project methods, they are not stored in disk files and cannot be called by commands such as [`EXECUTE METHOD`](../commands/execute-method). On the other hand, since they inherit from the [`4D.Function`](./FunctionClass.md) class, they can be used wherever a `4D.Function` object is expected.
+命名された揮発性のメソッドオブジェクトはプロジェクトメソッドではありません。これらはディスクファイル内に保存はされず、[`EXECUTE METHOD`](../commands/execute-method) などのコマンドで呼び出すことはできません。 その一方で、これらは[`4D.Function`](./FunctionClass.md) クラスを継承するため、 `4D.Function` オブジェクトが想定されているところであればどこでも使用可能です。
 
 :::
 
@@ -190,26 +190,26 @@ var $result:=$m.call(Null; 10; 5) //50
 
 <div class="no-index">
 
-| 引数  | 型      |                             | 説明                         |
-| --- | ------ | --------------------------- | -------------------------- |
-| 戻り値 | Object | <- | Syntax check result object |
+| 引数  | 型      |                             | 説明                  |
+| --- | ------ | --------------------------- | ------------------- |
+| 戻り値 | Object | <- | シンタックスチェックの結果オブジェクト |
 
 </div>
 <!-- END REF -->
 
 #### 説明
 
-The `.checkSyntax()` function <!-- REF #MethodClass.checkSyntax().Summary -->checks the syntax of the source code of the `4D.Method` object and returns a result object<!-- END REF -->.
+`.checkSyntax()` 関数は <!-- REF #MethodClass.checkSyntax().Summary -->`4D.Method` オブジェクトのソースコードに対してシンタックスをチェックし、その結果のオブジェクトを返します<!-- END REF -->。
 
-The Result object contains the following properties:
+結果オブジェクトには、以下のプロパティが格納されています:
 
-| プロパティ   |                                                                                   | 型                   | 説明                                                                                       |
-| ------- | --------------------------------------------------------------------------------- | ------------------- | ---------------------------------------------------------------------------------------- |
-| success |                                                                                   | Boolean             | True if no syntax error was detected, false otherwise                                    |
-| errors  |                                                                                   | Object の Collection | **以下はerror または warningの場合にのみ返されます**。 Collection of objects describing errors or warnings |
-|         | [].isError    | Boolean             | エラーならTrue、それ以外の場合は警告                                                                     |
-|         | [].message    | Text                | Error or warning message                                                                 |
-|         | [].lineNumber | Integer             | Line number of error in the code                                                         |
+| プロパティ   |                                                                                   | 型                   | 説明                                                                 |
+| ------- | --------------------------------------------------------------------------------- | ------------------- | ------------------------------------------------------------------ |
+| success |                                                                                   | Boolean             | シンタックスエラーが何も検出されなかった場合にはTrue、それ以外の場合にはFalse                        |
+| errors  |                                                                                   | Object の Collection | **以下はerror または warningの場合にのみ返されます**。 エラーまたは警告の詳細を格納したオブジェクトのコレクション |
+|         | [].isError    | Boolean             | エラーならTrue、それ以外の場合は警告                                               |
+|         | [].message    | Text                | エラーならTrue、それ以外の場合は警告                                               |
+|         | [].lineNumber | Integer             | コード内でのエラーが発生した行番号                                                  |
 
 #### 例題
 
@@ -237,7 +237,7 @@ End if
 
 #### 説明
 
-The `.name` property <!-- REF #MethodClass.name.Summary -->contains the name of the `4D.Method` object, if it was declared in the *name* parameter of the `new()` constructor<!-- END REF -->. Otherwise, the property is not returned.
+`.name` プロパティには、<!-- REF #MethodClass.name.Summary -->`new()` コンストラクターの *name* 引数内で宣言されていれば、`4D.Method` オブジェクトの名前が格納されています<!-- END REF -->。 それ以外の場合、プロパティは返されません。
 
 このプロパティは **読み取り専用** です。
 

@@ -37,7 +37,7 @@ $person:=cs.Person.new("John";"Doe")
 $hello:=$person.sayHello() // "Hello John Doe"
 ```
 
-Class files are managed through the 4D Explorer (see [Creating classes](../Project/code-overview.md#creating-classes)).
+クラスファイルは、4D エクスプローラーを通して管理されます([クラスの作成](../Project/code-overview.md#クラスの作成)を参照してください)。
 
 ## クラスストア
 

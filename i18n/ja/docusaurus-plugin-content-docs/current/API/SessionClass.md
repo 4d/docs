@@ -3,7 +3,7 @@ id: SessionClass
 title: Session
 ---
 
-Session オブジェクトは [`Session`](../commands/session) コマンドによって返されます。  These objects provide the developer with an interface allowing to manage the current session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web context only) manage [privileges](../ORDA/privileges.md).
+Session オブジェクトは [`Session`](../commands/session) コマンドによって返されます。  このオブジェクトは、カレントセッションを管理するためのインターフェースをデベロッパーに対して提供し、コンテキストデータの保存、プロセス間の情報共有、セッションに関連したプリエンプティブプロセスの開始などのアクションの実行や、[アクセス権](../ORDA/privileges.md) の管理(web コンテキストのみ)を可能にします。
 
 :::tip 関連したblog 記事
 
@@ -19,7 +19,7 @@ Session オブジェクトは [`Session`](../commands/session) コマンドに�
 このクラスは以下の種類のセッションをサポートしています:
 
 - [**Webユーザーセッション**](WebServer/sessions.md): [プロジェクトにおいてスケーラブルセッションが有効化されている](WebServer/sessions.md#webセッションの有効化) 場合、Webユーザーセッションが利用可能です。 これらは(REST アクセスを含めた)Web 接続に使用され、割り当てられた[権限](../ORDA/privileges.md) によって管理されます。
-- [**Remote user sessions**](../Desktop/sessions.md#remote-user-sessions): In client/server applications, remote users have their own sessions, managed from the client and from the server.
+- [**リモートユーザー セッション**](../Desktop/sessions.md#リモートユーザーセッション): クライアント/サーバーアプリケーションでは、リモートユーザーは、クライアントおよびサーバーから管理される独自のセッションを持ちます。
 - [**ストアドプロシージャーセッション**](../Desktop/sessions.md#ストアドプロシージャーセッション): サーバー上で実行される全てのストアドプロシージャーセッションの仮想ユーザーセッション。
 - [**スタンドアロンセッション**](../Desktop/sessions.md#standalone-sessions): シングルユーザーアプリケーションで返されるローカルのセッションオブジェクト(クライアント/サーバーアプリケーションの開発およびテストフェーズにおいて有用です)。
 
@@ -83,7 +83,7 @@ Session オブジェクトは [`Session`](../commands/session) コマンドに�
 
 - 権限は、この関数が実行された[セッションの種類](#セッションの種類) に関わらず、Web アクセスを通して実行されたコードにのみ適用されるという点に注意してください。
 - この関数は [roles.json](../ORDA/privileges.md#rolesjsonファイル) ファイルで追加されたものであれ [`promote()`](#promote) 関数で追加されたものであれ、Web プロセスから**昇格された権限** を削除しません。
-- For security reasons, this function cannot be called from the client side of a remote user session (an error is returned).
+- セキュリティ上の理由から、この関数はリモートユーザーセッションのクライアント側から呼び出すことはできません(エラーが返されます)。
 
 :::
 
@@ -131,12 +131,12 @@ $isOK:=Session.clearPrivileges()
 
 *lifespan* に秒単位の値を渡すことで、カスタムのタイムアウト時間を設定することができます。 *lifespan* 引数が省略された場合はデフォルトで:
 
-- for web sessions, the token is created with the same lifespan as the [`.idleTimeOut`](#idletimeout) of the session.
-- for remote user sessions, the token is created with a 10 seconds lifespan.
+- Web セッションの場合、トークンはセッションの[`.idleTimeOut`](#idletimeout) と同じ有効期限を持って作成されます。
+- リモートユーザーセッションの場合、トークンは10秒の有効期限を持って作成されます。
 
-In web sessions, the returned token can be used in exchanges with third-party applications or websites to securely identify the session. 例えば、セッションOTP トークンは支払いアプリケーションなどにおいて使用することができます。
+Web セッションにおいては、返されたトークンは、サードパーティアプリケーションや他のWebサイトとのやり取りで使用することでセッションを安全に特定することができます。 例えば、セッションOTP トークンは支払いアプリケーションなどにおいて使用することができます。
 
-In remote user sessions (and standalone sessions for test purposes), the returned token can be used by 4D to identify requests coming from the web that [share the session](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses).
+リモートユーザーセッション(あるいはテスト目的でのスタンドアロンセッション)においては、返されたトークンを使用することで、4D が[セッションを共有した](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses) Web からのリクエストを特定することができます。
 
 OTP トークンについてのより詳細な情報については、[こちらの章](../WebServer/sessions.md#セッショントークンotp)を参照して下さい。
 
@@ -187,7 +187,7 @@ Web プロセスに複数の権限が追加されていた場合、 `demote()` �
 :::note 注記
 
 - 権限は、この関数が実行された[セッションの種類](#セッションの種類) に関わらず、Web アクセスを通して実行されたコードにのみ適用されるという点に注意してください。
-- This function cannot be called from the client side of a remote user session (an error is returned).
+- この関数は、リモートユーザーセッションのクライアント側から呼び出すことはできません(エラーが返されます)。
 
 :::
 
@@ -435,7 +435,7 @@ End if
 
 `.id` プロパティは、<!-- REF #SessionClass.id.Summary -->ユーザーセッションの固有のID を格納しています<!-- END REF -->。
 
-4D Server ではこの一意の文字列は、サーバーによって各セッションに対して自動的に割り当てられ、そのプロセスを識別することを可能にします。 It is available in both the `Session` on the server side and on the client side.
+4D Server ではこの一意の文字列は、サーバーによって各セッションに対して自動的に割り当てられ、そのプロセスを識別することを可能にします。 サーバー側とクライアント側の、両方の `Session` から利用可能です。
 
 :::tip
 
@@ -508,26 +508,26 @@ End if
 
 #### 説明
 
-The `.info` property <!-- REF #SessionClass.info.Summary -->describes the session<!-- END REF -->.
+`.info` プロパティは、<!-- REF #SessionClass.info.Summary -->セッションの情報を格納します<!-- END REF -->。
 
-- **Remote user sessions** and **Stored procedure sessions**: The `.info` object is the same object as the one returned in the "session" property by the [`Process activity`](../commands/process-activity) command.
+- **リモートユーザーセッション** および **ストアドプロシージャーセッション**の場合: `.info` オブジェクトは[`Process activity`](../commands/process-activity) コマンドの "session" プロパティに返されるオブジェクトと同じです。
 - **スタンドアロンセッションの場合**: `.info` オブジェクトは、[`Session info`](../commands/session-info) コマンドで返されるものと同じオブジェクトです。
 - **Web ユーザーセッション**: `.info` オブジェクトにはWeb ユーザーセッションにおいて利用可能なプロパティが格納されています。
 
 `.info` オブジェクトには、次のプロパティが格納されています:
 
-| プロパティ            | 型                                | 説明                                                                                                                                                                                                                                 |
-| ---------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type             | Text                             | セッションのタイプ: "remote"、"storedProcedure"、"standalone"、"rest"、"web"                                                                                                                                                    |
-| userName         | Text                             | 4Dユーザー名 ([`.userName`](#username) と同じ値)                                                                                                                                                                         |
-| machineName      | Text                             | <ul><li>Remote sessions: name of the remote machine.</li><li>Client sessions: name of the local machine.</li><li>Stored procedures session: name of the server machine.</li><li> Standalone session: name of the machine</li></ul> |
-| systemUserName   | Text                             | <ul><li>Remote sessions: name of the system session opened on the remote machine.</li><li>Client sessions: name of the local system session</li><ul>                                                                               |
-| IPAddress        | Text                             | <ul><li>Remote sessions: IP address of the remote machine.</li><li>Client sessions: IP address of the local machine.</li><li>Standalone session: "localhost"</li></ul>                                                             |
-| hostType         | Text                             | Host type: "windows", "mac", or "browser"                                                                                                                                                                          |
-| creationDateTime | 日付 (ISO 8601) | Date and time of session creation (standalone session: date and time of application startup)                                                                                                    |
-| state            | Text                             | セッションの状態: "active", "postponed", "sleeping"                                                                                                                                                                        |
-| ID               | Text                             | セッションUUID ([`.id`](#id) と同じ値))                                                                                                                                                                                  |
-| persistentID     | Text                             | Remote/client sessions: Session's persistent ID                                                                                                                                                                    |
+| プロパティ            | 型                                | 説明                                                                                                                                           |
+| ---------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| type             | Text                             | セッションのタイプ: "remote"、"storedProcedure"、"standalone"、"rest"、"web"                                                              |
+| userName         | Text                             | 4Dユーザー名 ([`.userName`](#username) と同じ値)                                                                                   |
+| machineName      | Text                             | <ul><li>リモートセッション: リモートマシンの名前。</li><li>クライアントセッション: ローカルマシンの名前。</li><li>ストアドプロシージャーセッション: サーバーマシンの名前。</li><li>スタンドアロンセッション: マシンの名前</li></ul> |
+| systemUserName   | Text                             | <ul><li>リモートセッション: リモートマシン上で開かれたシステムセッションの名前</li><li>クライアントセッション: ローカルシステムセッションの名前</li><ul>                                                  |
+| IPAddress        | Text                             | <ul><li>リモートセッション: リモートマシンのIP アドレス。</li><li>クライアントセッション: ローカルマシンのIP アドレス。</li><li>スタンドアロンセッション: "localhost"</li></ul>                        |
+| hostType         | Text                             | ホストのタイプ: "windows"、"mac"、あるいは "browser"                                                                                      |
+| creationDateTime | 日付 (ISO 8601) | セッション作成の日時(スタンドアロンセッション: アプリケーションのスタートアップの日時)                                                             |
+| state            | Text                             | セッションの状態: "active", "postponed", "sleeping"                                                                                  |
+| ID               | Text                             | セッションUUID ([`.id`](#id) と同じ値))                                                                                            |
+| persistentID     | Text                             | リモート/クライアントセッション: セッションの永続的なID                                                                                               |
 
 :::note
 
@@ -566,7 +566,7 @@ The `.info` property <!-- REF #SessionClass.info.Summary -->describes the sessio
 
 :::note
 
-This function always returns **False** with non-web sessions.
+この関数はWeb ではないセッションに対しては常に **False** を返します。
 
 :::
 
@@ -636,7 +636,7 @@ End if
 :::note 注記
 
 - 権限は、この関数が実行された[セッションの種類](#セッションの種類) に関わらず、Web アクセスを通して実行されたコードにのみ適用されるという点に注意してください。
-- This function cannot be called from the client side of a remote user session (an error is returned).
+- この関数は、リモートユーザーセッションのクライアント側から呼び出すことはできません(エラーが返されます)。
 
 :::
 
@@ -717,7 +717,7 @@ End if
 :::note 注記
 
 - 権限は、この関数が実行された[セッションの種類](#セッションの種類) に関わらず、Web アクセスを通して実行されたコードにのみ適用されるという点に注意してください。
-- This function cannot be called from the client side of a remote user session (an error is returned).
+- この関数は、リモートユーザーセッションのクライアント側から呼び出すことはできません(エラーが返されます)。
 
 :::
 
@@ -797,7 +797,7 @@ Function callback($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 :::note 注記
 
 - 権限は、この関数が実行された[セッションの種類](#セッションの種類) に関わらず、Web アクセスを通して実行されたコードにのみ適用されるという点に注意してください。
-- This function cannot be called from the client side of a remote user session (an error is returned).
+- この関数は、リモートユーザーセッションのクライアント側から呼び出すことはできません(エラーが返されます)。
 
 :::
 
@@ -848,14 +848,14 @@ End if
 
 :::note 注記
 
-- Since it is a shared object, this property will be available in the `Storage` object of the machine (server or client).
-- Like the `Storage` object of the machine, the `.storage` property is always "single": adding a shared object or a shared collection to `.storage` does not create a shared group.
+- これは共有オブジェクトのため、このプロパティはマシン(サーバーまたはクライアント)の `Storage` オブジェクトにおいて利用可能です。
+- マシンの `Storage` オブジェクトと同様に、`.storage` プロパティは常に "single" で存在します。 共有オブジェクトや共有コレクションを `.storage` に追加しても、共有グループは作成されません。
 
 :::
 
-In client/server, the `.storage` object of the remote user session is **not** the same on the server and on the client.
+クライアント/サーバーでは、リモートユーザーセッションの `.storage` オブジェクトは、サーバーまたはクライアントのものとは**同じではありません**。
 
-When a remote user session and a web session are [shared using an OTP](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses), they also share the same `.storage` object on the server, even if the OTP was [created](#createotp) from the session on the client side.
+リモートユーザーセッションとWeb セッションが[OTP を使用して共有されていた](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) 場合、これらはたとえOTP がクライアント側のセッションから[作成](#createotp) されていた場合でも、同じ`.storage` オブジェクトをサーバー上で共有します。
 
 :::tip
 
