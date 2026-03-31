@@ -1,4 +1,4 @@
-<!doctype html><html lang=fr dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21 docs-doc-page docs-doc-id-API/EntityClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.9.2"><title data-rh=true>Entity | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/fr/21/API/EntityClass /><meta data-rh=true property=og:locale content=fr /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=fr /><meta data-rh=true name=docsearch:language content=fr /><meta data-rh=true name=docusaurus_version content=21 /><meta data-rh=true name=docusaurus_tag content=docs-default-21 /><meta data-rh=true name=docsearch:version content=21 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21 /><meta data-rh=true property=og:title content="Entity | 4D Docs"/><meta data-rh=true name=description content='Une entity (ou "entité") est une instance d&apos;une Dataclass, tel un enregistrement de la table correspondant à la dataclass contenue dans son datastore associé. Elle contient les mêmes attributs que la dataclass ainsi que les valeurs des données et des propriétés et fonctions spécifiques.'/><meta data-rh=true property=og:description content='Une entity (ou "entité") est une instance d&apos;une Dataclass, tel un enregistrement de la table correspondant à la dataclass contenue dans son datastore associé. Elle contient les mêmes attributs que la dataclass ainsi que les valeurs des données et des propriétés et fonctions spécifiques.'/><link data-rh=true rel=icon href=/docs/fr/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/fr/21/API/EntityClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21/API/EntityClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/21/API/EntityClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/21/API/EntityClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/21/API/EntityClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/21/API/EntityClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21/API/EntityClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/21/category/4d-language","name":"Langage 4D","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/21/category/class-API-reference","name":"Classes","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/21/API/EntityClass","name":"Entity","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/fr/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/fr/assets/css/styles.e11661f1.css /><script src=/docs/fr/assets/js/runtime~main.3775508b.js defer></script><script src=/docs/fr/assets/js/main.2a477101.js defer></script></head><body class=navigation-with-keyboard><svg style="display: none;"><defs>
+<!doctype html><html lang=fr dir=ltr class="docs-wrapper plugin-docs plugin-id-default docs-version-21 docs-doc-page docs-doc-id-API/EntityClass" data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.9.2"><title data-rh=true>Entity | 4D Docs</title><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://developer.4d.com/docs/fr/21/API/EntityClass /><meta data-rh=true property=og:locale content=fr /><meta data-rh=true property=og:locale:alternate content=en /><meta data-rh=true property=og:locale:alternate content=es /><meta data-rh=true property=og:locale:alternate content=ja /><meta data-rh=true property=og:locale:alternate content=pt /><meta data-rh=true name=docusaurus_locale content=fr /><meta data-rh=true name=docsearch:language content=fr /><meta data-rh=true name=docusaurus_version content=21 /><meta data-rh=true name=docusaurus_tag content=docs-default-21 /><meta data-rh=true name=docsearch:version content=21 /><meta data-rh=true name=docsearch:docusaurus_tag content=docs-default-21 /><meta data-rh=true property=og:title content="Entity | 4D Docs"/><meta data-rh=true name=description content='Une entity (ou "entité") est une instance d&apos;une Dataclass, tel un enregistrement de la table correspondant à la dataclass contenue dans son datastore associé. Elle contient les mêmes attributs que la dataclass ainsi que les valeurs des données et des propriétés et fonctions spécifiques.'/><meta data-rh=true property=og:description content='Une entity (ou "entité") est une instance d&apos;une Dataclass, tel un enregistrement de la table correspondant à la dataclass contenue dans son datastore associé. Elle contient les mêmes attributs que la dataclass ainsi que les valeurs des données et des propriétés et fonctions spécifiques.'/><link data-rh=true rel=icon href=/docs/fr/img/favicon/4d.gif /><link data-rh=true rel=canonical href=https://developer.4d.com/docs/fr/21/API/EntityClass /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21/API/EntityClass hreflang=en /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/fr/21/API/EntityClass hreflang=fr /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/es/21/API/EntityClass hreflang=es /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/ja/21/API/EntityClass hreflang=ja /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/pt/21/API/EntityClass hreflang=pt /><link data-rh=true rel=alternate href=https://developer.4d.com/docs/21/API/EntityClass hreflang=x-default /><link data-rh=true rel=preconnect href=https://OJ04C0M3CU-dsn.algolia.net crossorigin=anonymous /><script data-rh=true type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/21/category/4d-language","name":"Langage 4D","position":1},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/21/category/class-API-reference","name":"Classes","position":2},{"@type":"ListItem","item":"https://developer.4d.com/docs/fr/21/API/EntityClass","name":"Entity","position":3}]}</script><link rel=search type=application/opensearchdescription+xml title="4D Docs" href=/docs/fr/opensearch.xml><script src=https://kit.fontawesome.com/daeacc3fc4.js crossorigin=anonymous></script><link rel=stylesheet href=/docs/fr/assets/css/styles.8e50bf2d.css /><script src=/docs/fr/assets/js/runtime~main.28819ba5.js defer></script><script src=/docs/fr/assets/js/main.44833831.js defer></script></head><body class=navigation-with-keyboard><svg style="display: none;"><defs>
 <symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><link rel=preload as=image href=/docs/fr/img/logohome.png /><div role=region aria-label="Aller au contenu principal"><a class=skipToContent_fXgn href=#__docusaurus_skipToContent_fallback>Aller au contenu principal</a></div><nav aria-label=Main class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class=navbar__inner><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded=false class="navbar__toggle clean-btn" type=button><svg width=30 height=30 viewBox="0 0 30 30" aria-hidden=true><path stroke=currentColor stroke-linecap=round stroke-miterlimit=10 stroke-width=2 d="M4 7h22M4 15h22M4 23h22"/></svg></button><a class=navbar__brand href=/docs/fr/><div class=navbar__logo><img src=/docs/fr/img/logohome.png alt="4D Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/fr/img/logohome.png alt="4D Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"/></div><b class="navbar__title text--truncate">4D Documentation</b></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a aria-current=page class="navbar__link active" aria-haspopup=true aria-expanded=false role=button href=/docs/fr/21/API/EntityClass>21</a><ul class=dropdown__menu><li><a class=dropdown__link href=/docs/fr/API/EntityClass>21 R2 BETA</a><li><a aria-current=page class="dropdown__link dropdown__link--active" href=/docs/fr/21/API/EntityClass>21</a><li><a class=dropdown__link href=/docs/fr/20/API/EntityClass>20</a><li><a class=dropdown__link href=/docs/fr/19/API/EntityClass>19</a><li><a class=dropdown__link href=/docs/fr/18/GettingStarted/installation>18</a></ul></div><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href=# aria-haspopup=true aria-expanded=false role=button class=navbar__link><svg viewBox="0 0 24 24" width=20 height=20 aria-hidden=true class=iconLanguage_nlXk><path fill=currentColor d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>Français</a><ul class=dropdown__menu><li><a href=/docs/21/API/EntityClass target=_self rel="noopener noreferrer" class=dropdown__link lang=en>English</a><li><a href=/docs/fr/21/API/EntityClass target=_self rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang=fr>Français</a><li><a href=/docs/es/21/API/EntityClass target=_self rel="noopener noreferrer" class=dropdown__link lang=es>Español</a><li><a href=/docs/ja/21/API/EntityClass target=_self rel="noopener noreferrer" class=dropdown__link lang=ja>日本語</a><li><a href=/docs/pt/21/API/EntityClass target=_self rel="noopener noreferrer" class=dropdown__link lang=pt>Português</a></ul></div><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type=button disabled title="mode système" aria-label="Basculer entre le mode sombre et clair (actuellement mode système)"><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill=currentColor d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill=currentColor d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg><svg viewBox="0 0 24 24" width=24 height=24 aria-hidden=true class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill=currentColor d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"/></svg></button></div><div class=navbarSearchContainer_Bca1><button type=button class="DocSearch DocSearch-Button" aria-label="Rechercher (Meta+k)" aria-keyshortcuts=Meta+k><span class=DocSearch-Button-Container><svg width=20 height=20 class=DocSearch-Search-Icon viewBox="0 0 24 24" aria-hidden=true><circle cx=11 cy=11 r=8 stroke=currentColor fill=none stroke-width=1.4 /><path d="m21 21-4.3-4.3" stroke=currentColor fill=none stroke-linecap=round stroke-linejoin=round /></svg><span class=DocSearch-Button-Placeholder>Rechercher</span></span><span class=DocSearch-Button-Keys></span></button></div></div></div><div role=presentation class=navbar-sidebar__backdrop></div></nav><div id=__docusaurus_skipToContent_fallback class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class=docsWrapper_hBAB><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type=button></button><div class=docRoot_UBD9><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class=sidebarViewport_aRkj><div class="sidebar_njMd sidebarWithHideableNavbar_wUlq"><a tabindex=-1 class=sidebarLogo_isFc href=/docs/fr/><img src=/docs/fr/img/logohome.png alt="4D Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"/><img src=/docs/fr/img/logohome.png alt="4D Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"/><b>4D Documentation</b></a><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/docs/fr/21/category/getting-started><span title="Prise en main" class=categoryLinkLabel_W154>Prise en main</span></a><button aria-label="Expand sidebar category 'Prise en main'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/docs/fr/21/category/project-ide><span title="Projet & IDE" class=categoryLinkLabel_W154>Projet & IDE</span></a><button aria-label="Expand sidebar category 'Projet & IDE'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" href=/docs/fr/21/category/4d-language><span title="Langage 4D" class=categoryLinkLabel_W154>Langage 4D</span></a><button aria-label="Collapse sidebar category 'Langage 4D'" aria-expanded=true type=button class="clean-btn menu__caret"></button></div><ul class=menu__list><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role=button aria-expanded=false tabindex=0 href=/docs/fr/21/Concepts/about><span title=Concepts class=categoryLinkLabel_W154>Concepts</span></a></div><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/commands/command-index><span title="Commandes par nom" class=linkLabel_WmDU>Commandes par nom</span></a><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex=0 href=/docs/fr/21/category/commands><span title="Commandes par thème" class=categoryLinkLabel_W154>Commandes par thème</span></a><button aria-label="Expand sidebar category 'Commandes par thème'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" tabindex=0 href=/docs/fr/21/category/class-API-reference><span title=Classes class=categoryLinkLabel_W154>Classes</span></a><button aria-label="Collapse sidebar category 'Classes'" aria-expanded=true type=button class="clean-btn menu__caret"></button></div><ul class=menu__list><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/BlobClass><span title=Blob class=linkLabel_WmDU>Blob</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/ClassClass><span title=Class class=linkLabel_WmDU>Class</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/CollectionClass><span title=Collection class=linkLabel_WmDU>Collection</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/CryptoKeyClass><span title=CryptoKey class=linkLabel_WmDU>CryptoKey</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/DataClassClass><span title=DataClass class=linkLabel_WmDU>DataClass</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/DataStoreClass><span title=DataStore class=linkLabel_WmDU>DataStore</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/EmailObjectClass><span title=Email class=linkLabel_WmDU>Email</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current=page tabindex=0 href=/docs/fr/21/API/EntityClass><span title=Entity class=linkLabel_WmDU>Entity</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/EntitySelectionClass><span title=EntitySelection class=linkLabel_WmDU>EntitySelection</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/FileClass><span title=File class=linkLabel_WmDU>File</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/FileHandleClass><span title=FileHandle class=linkLabel_WmDU>FileHandle</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/FolderClass><span title=Folder class=linkLabel_WmDU>Folder</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/FunctionClass><span title=Function class=linkLabel_WmDU>Function</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/HTTPAgentClass><span title=HTTPAgent class=linkLabel_WmDU>HTTPAgent</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/HTTPRequestClass><span title=HTTPRequest class=linkLabel_WmDU>HTTPRequest</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/IMAPTransporterClass><span title=IMAPTransporter class=linkLabel_WmDU>IMAPTransporter</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/IncomingMessageClass><span title=IncomingMessage class=linkLabel_WmDU>IncomingMessage</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/MailAttachmentClass><span title=MailAttachment class=linkLabel_WmDU>MailAttachment</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/OutgoingMessageClass><span title=OutgoingMessage class=linkLabel_WmDU>OutgoingMessage</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/POP3TransporterClass><span title=POP3Transporter class=linkLabel_WmDU>POP3Transporter</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/SessionClass><span title=Session class=linkLabel_WmDU>Session</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/SignalClass><span title=Signal class=linkLabel_WmDU>Signal</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/SMTPTransporterClass><span title=SMTPTransporter class=linkLabel_WmDU>SMTPTransporter</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/SystemWorkerClass><span title=SystemWorker class=linkLabel_WmDU>SystemWorker</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/TCPConnectionClass><span title=TCPConnection class=linkLabel_WmDU>TCPConnection</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/TCPEventClass><span title=TCPEvent class=linkLabel_WmDU>TCPEvent</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/TCPListenerClass><span title=TCPListener class=linkLabel_WmDU>TCPListener</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/UDPEventClass><span title=UDPEvent class=linkLabel_WmDU>UDPEvent</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/UDPSocketClass><span title=UDPSocket class=linkLabel_WmDU>UDPSocket</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/VectorClass><span title=Vector class=linkLabel_WmDU>Vector</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/WebFormClass><span title=WebForm class=linkLabel_WmDU>WebForm</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/WebFormItemClass><span title=WebFormItem class=linkLabel_WmDU>WebFormItem</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/WebServerClass><span title=WebServer class=linkLabel_WmDU>WebServer</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/WebSocketClass><span title=WebSocket class=linkLabel_WmDU>WebSocket</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/WebSocketConnectionClass><span title=WebSocketConnection class=linkLabel_WmDU>WebSocketConnection</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/WebSocketServerClass><span title=WebSocketServer class=linkLabel_WmDU>WebSocketServer</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/ZipArchiveClass><span title=ZIPArchive class=linkLabel_WmDU>ZIPArchive</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/ZipFileClass><span title=ZIPFile class=linkLabel_WmDU>ZIPFile</span></a><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class=menu__link tabindex=0 href=/docs/fr/21/API/ZipFolderClass><span title=ZIPFolder class=linkLabel_WmDU>ZIPFolder</span></a></ul></ul><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/docs/fr/21/category/core><span title=Développement class=categoryLinkLabel_W154>Développement</span></a><button aria-label="Expand sidebar category 'Développement'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/docs/fr/21/category/web-applications><span title="Applications Web" class=categoryLinkLabel_W154>Applications Web</span></a><button aria-label="Expand sidebar category 'Applications Web'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/docs/fr/21/category/desktop-applications><span title="Applications Desktop" class=categoryLinkLabel_W154>Applications Desktop</span></a><button aria-label="Expand sidebar category 'Applications Desktop'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/docs/fr/21/category/administration><span title=Administration class=categoryLinkLabel_W154>Administration</span></a><button aria-label="Expand sidebar category 'Administration'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class=menu__list-item-collapsible><a class="categoryLink_byQd menu__link menu__link--sublist" href=/docs/fr/21/category/extensions><span title=Extensions class=categoryLinkLabel_W154>Extensions</span></a><button aria-label="Expand sidebar category 'Extensions'" aria-expanded=false type=button class="clean-btn menu__caret"></button></div></ul></nav><button type=button title="Réduire le menu latéral" aria-label="Réduire le menu latéral" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width=20 height=20 aria-hidden=true class=collapseSidebarButtonIcon_kv0_><g fill=#7a7a7a><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"/><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"/></g></svg></button></div></div></aside><main class=docMainContainer_TBSr><div class="container padding-top--md padding-bottom--lg"><div class=row><div class="col docItemCol_VOVn"><div class=docItemContainer_Djhp><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label=Breadcrumbs><ul class=breadcrumbs><li class=breadcrumbs__item><a aria-label="Page d’accueil" class=breadcrumbs__link href=/docs/fr/><svg viewBox="0 0 24 24" class=breadcrumbHomeIcon_YNFT><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill=currentColor /></svg></a><li class=breadcrumbs__item><a class=breadcrumbs__link href=/docs/fr/21/category/4d-language><span>Langage 4D</span></a><li class=breadcrumbs__item><a class=breadcrumbs__link href=/docs/fr/21/category/class-API-reference><span>Classes</span></a><li class="breadcrumbs__item breadcrumbs__item--active"><span class=breadcrumbs__link>Entity</span></ul></nav><span class="theme-doc-version-badge badge badge--secondary">Version : 21</span><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type=button class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Entity</h1></header><p>Une <a class="" href=/docs/fr/21/ORDA/dsmapping#entity>entity</a> (ou "entité") est une instance d'une <a class="" href=/docs/fr/21/ORDA/dsmapping#dataclass>Dataclass</a>, tel un enregistrement de la table correspondant à la dataclass contenue dans son datastore associé. Elle contient les mêmes attributs que la dataclass ainsi que les valeurs des données et des propriétés et fonctions spécifiques.</p>
@@ -130,6 +130,7 @@
 <table><thead><tr><th>Release<th>Modifications<tbody><tr><td>17<td>Ajout</table>
 </div></div></details>
 <p><strong>.clone()</strong> : 4D.Entity</p>
+<div class=no-index>
 
 
 
@@ -148,6 +149,7 @@
 
 
 <table><thead><tr><th>Paramètres<th>Type<th style=text-align:center><th>Description<tbody><tr><td>Résultat<td>4D.Entity<td style=text-align:center>&lt;-<td>Nouvelle entité référençant l'enregistrement</table>
+</div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description-1>Description<a href=#description-1 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>La fonction <code>.clone()</code> crée en mémoire une nouvelle entité faisant référence au même enregistrement que l'entité d'origine.</p>
 <p>Cette fonction vous permet de mettre à jour des entités séparément. Notez cependant que, pour des raisons de performance, la nouvelle entité partage la même référence d'attributs d'objets que l'entité clonée.</p>
@@ -178,6 +180,7 @@
 <table><thead><tr><th>Release<th>Modifications<tbody><tr><td>17<td>Ajout</table>
 </div></div></details>
 <p><strong>.diff</strong>( <em>entityToCompare</em> : 4D.Entity { ; <em>attributesToCompare</em> : Collection } ) : Collection</p>
+<div class=no-index>
 
 
 
@@ -208,6 +211,7 @@
 
 
 <table><thead><tr><th>Paramètres<th>Type<th style=text-align:center><th>Description<tbody><tr><td>entityToCompare<td>4D.Entity<td style=text-align:center>-><td>Entité à comparer à l'entité d'origine<tr><td>attributesToCompare<td>Collection<td style=text-align:center>-><td>Noms des attributs à comparer<tr><td>Résultat<td>Collection<td style=text-align:center>&lt;-<td>Différences entre les entités</table>
+</div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description-2>Description<a href=#description-2 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>La fonction <code>.diff()</code> compare le contenu de deux entités et renvoie leurs différences.</p>
 <p>Dans le paramètre <em>entityToCompare</em>, passez l'entité à comparer à l'entité d'origine.</p>
@@ -276,6 +280,7 @@
 <table><thead><tr><th>Release<th>Modifications<tbody><tr><td>21<td>Ajout des statuts 7 et 8<tr><td>17<td>Ajout</table>
 </div></div></details>
 <p><strong>.drop</strong>( {<em>mode</em> : Integer} ) : Object</p>
+<div class=no-index>
 
 
 
@@ -300,6 +305,7 @@
 
 
 <table><thead><tr><th>Paramètres<th>Type<th style=text-align:center><th>Description<tbody><tr><td>mode<td>Integer<td style=text-align:center>-><td><code>dk force drop if stamp changed</code> : Force la suppression même si le marqueur interne a changé<tr><td>Résultat<td>Object<td style=text-align:center>&lt;-<td>Résultat de l'opération de suppression</table>
+</div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description-3>Description<a href=#description-3 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>La fonction <code>.drop()</code> supprime les données contenues dans l'entitéde la table liée à sa dataclass. A noter que l'entité reste en mémoire.</p>
 <p>Dans une application multiprocess ou multi-utilisateurs, la fonction <code>.drop()</code> est exécutée en mode <a class="" href=/docs/fr/21/ORDA/entities#verrouillage-d-une-entite>"verrouillage optimiste"</a> dans lequel un marqueur de verrouillage interne est automatiquement incrémenté chaque fois que l'enregistrement est sauvegardé.</p>
@@ -498,6 +504,7 @@
 <table><thead><tr><th>Release<th>Modifications<tbody><tr><td>17<td>Ajout</table>
 </div></div></details>
 <p><strong>.first()</strong>: 4D.Entity</p>
+<div class=no-index>
 
 
 
@@ -516,6 +523,7 @@
 
 
 <table><thead><tr><th>Paramètres<th>Type<th style=text-align:center><th>Description<tbody><tr><td>Résultat<td>4D.Entity<td style=text-align:center>&lt;-<td>Référence à la première entité de l'entity selection (Null si non trouvée)</table>
+</div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description-4>Description<a href=#description-4 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>La fonction <code>.first()</code> renvoie une référence vers l'entité en première position dans l'entity selection à laquelle l'entité appartient.</p>
 <p>Si l'entité n'appartient à aucune entity selection (i.e. <a href=#getselection class="">.getSelection( )</a> retourne Null), la fonction renvoie une valeur Null.</p>
@@ -539,6 +547,7 @@
 <table><thead><tr><th>Release<th>Modifications<tbody><tr><td>17<td>Ajout</table>
 </div></div></details>
 <p><strong>.fromObject</strong>( <em>filler</em> : Object )</p>
+<div class=no-index>
 
 
 
@@ -557,6 +566,7 @@
 
 
 <table><thead><tr><th>Paramètres<th>Type<th style=text-align:center><th>Description<tbody><tr><td>filler<td>Object<td style=text-align:center>-><td>Objet avec lequel remplir l'entité</table>
+</div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description-5>Description<a href=#description-5 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>La fonction <code>.fromObject()</code> remplit une entité avec le contenu du <em>filler</em>.</p>
 <blockquote>
@@ -599,6 +609,7 @@
 <table><thead><tr><th>Release<th>Modifications<tbody><tr><td>17 R5<td>Ajout</table>
 </div></div></details>
 <p><strong>.getDataClass()</strong> : 4D.DataClass</p>
+<div class=no-index>
 
 
 
@@ -617,6 +628,7 @@
 
 
 <table><thead><tr><th>Paramètres<th>Type<th style=text-align:center><th>Description<tbody><tr><td>Résultat<td>4D.DataClass<td style=text-align:center>&lt;-<td>Dataclass à laquelle appartient l'entité</table>
+</div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description-6>Description<a href=#description-6 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>La fonction <code>.getDataClass()</code> retourne la dataclass de l'entité. Cette fonction est utile pour l'écriture de code générique.</p>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=exemple-5>Exemple<a href=#exemple-5 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
@@ -640,6 +652,7 @@
 <table><thead><tr><th>Release<th>Modifications<tbody><tr><td>17<td>Ajout</table>
 </div></div></details>
 <p><strong>.getKey</strong>( { <em>mode</em> : Integer } ) : any</p>
+<div class=no-index>
 
 
 
@@ -664,6 +677,7 @@
 
 
 <table><thead><tr><th>Paramètres<th>Type<th style=text-align:center><th>Description<tbody><tr><td>mode<td>Integer<td style=text-align:center>-><td><code>dk key as string</code>: retourner la clé primaire en texte, quel que soit son type d'origine<tr><td>Résultat<td>any<td style=text-align:center>&lt;-<td>Valeur de la clé primaire de l'entité (Integer ou Text)</table>
+</div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description-7>Description<a href=#description-7 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>La fonction <code>.getKey()</code> renvoie la valeur de la clé primaire de l'entité.</p>
 <p>Les clés primaires peuvent être des nombres (integer) ou des textes. Vous pouvez "forcer" la méthode à retourner la valeur de clé primaire sous forme de chaîne, quel que soit son type d'origine, en passant l'option <code>dk key as string</code> dans le paramètre <em>mode</em>.</p>
@@ -687,6 +701,7 @@
 <table><thead><tr><th>Release<th>Modifications<tbody><tr><td>19R5<td>Ajout</table>
 </div></div></details>
 <p><strong>.getRemoteContextAttributes()</strong> : Text</p>
+<div class=no-index>
 
 
 
@@ -705,12 +720,13 @@
 
 
 <table><thead><tr><th>Paramètres<th>Type<th><th>Description<tbody><tr><td>Résultat<td>Text<td>&lt;-<td>Attributs de contexte associés à l'entity, séparés par une virgule</table>
+</div>
 <blockquote>
 <p><strong>Mode avancé :</strong> Cette fonction est destinée aux développeurs qui souhaitent personnaliser les fonctionnalités par défaut de ORDA dans le cadre de configurations spécifiques. Dans la plupart des cas, vous n'aurez pas besoin de l'utiliser.</p>
 </blockquote>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description-8>Description<a href=#description-8 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>La fonction <code>.getRemoteContextAttributes()</code>retourne des informations relatives au contexte d'optimisation utilisé par l'entité.</p>
-<p>If there is no <a class="" href=/docs/fr/21/ORDA/client-server-optimization>optimization context</a> for the entity, the function returns an empty Text.</p>
+<p>S'il n'y a pas de <a class="" href=/docs/fr/21/ORDA/client-server-optimization>contexte d'optimisation</a> pour l'entité, la fonction renvoie un texte vide.</p>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=exemple-7>Exemple<a href=#exemple-7 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <div class="language-4d codeBlockContainer_Ckt0 theme-code-block" style=--prism-color:#393A34;--prism-background-color:#f6f8fa><div class=codeBlockContent_QJqH><pre tabindex=0 class="prism-code language-4d codeBlock_bY9V thin-scrollbar" style=color:#393A34;background-color:#f6f8fa><code class=codeBlockLines_e6Vv><span class=token-line style=color:#393A34><span class="token plain">var $ds : 4D.DataStoreImplementation</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">var $address : cs.AddressEntity</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">var $p : cs.PersonsEntity</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">var $contextA : Object</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">var $info : Text</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">var $text : Text</span><br/></span><span class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">$ds:=Open datastore(New object("hostname"; "www.myserver.com"); "myDS")</span><br/></span><span class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">$contextA:=New object("context"; "contextA")</span><br/></span><span class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">$address:=$ds.Address.get(1; $contextA)</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">$text:=""</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">For each ($p; $address.persons)</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">    $text:=$p.firstname+" "+$p.lastname</span><br/></span><span class=token-line style=color:#393A34><span class="token plain">End for each</span><br/></span><span class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">$info:=$address.getRemoteContextAttributes()</span><br/></span><span class=token-line style=color:#393A34><span class="token plain" style=display:inline-block></span><br/></span><span class=token-line style=color:#393A34><span class="token plain">//$info = "persons,persons.lastname,persons.firstname"</span><br/></span></code></pre></div></div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=voir-également>Voir également<a href=#voir-également class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
@@ -733,6 +749,7 @@
 <table><thead><tr><th>Release<th>Modifications<tbody><tr><td>17<td>Ajout</table>
 </div></div></details>
 <p><strong>.getSelection()</strong>: 4D.EntitySelection</p>
+<div class=no-index>
 
 
 
@@ -751,6 +768,7 @@
 
 
 <table><thead><tr><th>Paramètres<th>Type<th style=text-align:center><th>Description<tbody><tr><td>Résultat<td>4D.EntitySelection<td style=text-align:center>&lt;-<td>Entity selection à laquelle appartient l'entité (Null si non trouvée)</table>
+</div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description-9>Description<a href=#description-9 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>La fonction <code>.getSelection()</code> renvoie l'entity selection à laquelle l'entité appartient.</p>
 <p>Si l'entité n'appartient pas à une entity selection, la fonction renvoie Null.</p>
@@ -774,6 +792,7 @@
 <table><thead><tr><th>Release<th>Modifications<tbody><tr><td>17<td>Ajout</table>
 </div></div></details>
 <p><strong>.getStamp()</strong> : Integer</p>
+<div class=no-index>
 
 
 
@@ -792,6 +811,7 @@
 
 
 <table><thead><tr><th>Paramètres<th>Type<th style=text-align:center><th>Description<tbody><tr><td>Résultat<td>Integer<td style=text-align:center>&lt;-<td>Valeur du "stamp" de l'entité (0 si l'entité vient d'être créée)</table>
+</div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description-10>Description<a href=#description-10 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>La fonction <code>.getStamp()</code>  renvoie la valeur courante du stamp de l'entité.</p>
 <p>Le stamp (marqueur interne) d'une entité est automatiquement incrémenté par 4D à chaque fois qu'une entité est enregistrée sur disque. Il gère les accès concurrents des utilisateurs et les modifications sur les mêmes entités (voir <a class="" href=/docs/fr/21/ORDA/entities#entity-locking><strong>Verrouillage d'une entité</strong></a>).</p>
@@ -818,6 +838,7 @@
 <table><thead><tr><th>Release<th>Modifications<tbody><tr><td>17<td>Ajout</table>
 </div></div></details>
 <p><strong>.indexOf</strong>( { <em>entitySelection</em> : 4D.EntitySelection } ) : Integer</p>
+<div class=no-index>
 
 
 
@@ -842,6 +863,7 @@
 
 
 <table><thead><tr><th>Paramètres<th>Type<th style=text-align:center><th>Description<tbody><tr><td>entitySelection<td>4D.EntitySelection<td style=text-align:center>-><td>Entity selection dans laquelle obtenir la position de l'entité<tr><td>Résultat<td>Integer<td style=text-align:center>&lt;-<td>Position de l'entité dans l'entity selection</table>
+</div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description-11>Description<a href=#description-11 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>La fonction <code>.indexOf()</code> retourne la position de l'entité dans une entity selection.</p>
 <p>Par défaut, si le paramètre <em>entitySelection</em> est omis, la fonction retourne la position de l'entité dans sa propre entity selection (si elle existe). Sinon, elle renvoie la position de l'entité dans l'<em>entitySelection</em> spécifiée.</p>
@@ -870,6 +892,7 @@
 <table><thead><tr><th>Release<th>Modifications<tbody><tr><td>17<td>Ajout</table>
 </div></div></details>
 <p><strong>.isNew()</strong> : Boolean</p>
+<div class=no-index>
 
 
 
@@ -888,6 +911,7 @@
 
 
 <table><thead><tr><th>Paramètres<th>Type<th style=text-align:center><th>Description<tbody><tr><td>Résultat<td>Boolean<td style=text-align:center>&lt;-<td>Vrai si l'entité vient juste d'être créée et n'a pas encore été enregistrée. Sinon, Faux.</table>
+</div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description-12>Description<a href=#description-12 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>La fonction <code>.isNew()</code>  renvoie Vrai si l'entité à laquelle elle est appliquée vient d'être créée et n'a pas encore été enregistrée dans le datastore. Sinon, elle renvoie Faux.</p>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=exemple-11>Exemple<a href=#exemple-11 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
@@ -910,6 +934,7 @@
 <table><thead><tr><th>Release<th>Modifications<tbody><tr><td>17<td>Ajout</table>
 </div></div></details>
 <p><strong>.last()</strong> : 4D.Entity</p>
+<div class=no-index>
 
 
 
@@ -928,6 +953,7 @@
 
 
 <table><thead><tr><th>Paramètres<th>Type<th style=text-align:center><th>Description<tbody><tr><td>Résultat<td>4D.Entity<td style=text-align:center>&lt;-<td>Référence à la dernière entité de l'entity selection (Null si non trouvée)</table>
+</div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description-13>Description<a href=#description-13 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>La fonction <code>.last()</code> renvoie une référence vers l'entité en dernière position dans l'entity selection à laquelle l'entité appartient.</p>
 <p>Si l'entité n'appartient à aucune entity selection (i.e. <a href=#getselection class="">.getSelection( )</a> retourne Null), la fonction renvoie une valeur Null.</p>
@@ -951,6 +977,7 @@
 <table><thead><tr><th>Release<th>Modifications<tbody><tr><td>17<td>Ajout</table>
 </div></div></details>
 <p><strong>.lock</strong>( { <em>mode</em> : Integer } ) : Object</p>
+<div class=no-index>
 
 
 
@@ -975,6 +1002,7 @@
 
 
 <table><thead><tr><th>Paramètres<th>Type<th style=text-align:center><th>Description<tbody><tr><td>mode<td>Integer<td style=text-align:center>-><td><code>dk reload if stamp changed</code> : Recharger avant de verrouiller si le marqueur interne a changé<tr><td>Résultat<td>Object<td style=text-align:center>&lt;-<td>Résultat de l'opération lock</table>
+</div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description-14>Description<a href=#description-14 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>La fonction <code>.lock()</code> pose un verrou pessimiste sur l'enregistrement référencé par l'entité. Le <a class="" href=/docs/fr/21/ORDA/entities#verrouillage-d-une-entite>verrou est posé</a> pour l'enregistrement et toutes les références de l'entité dans le process courant.</p>
 <p>Pour les autres process, cet enregistrement apparaîtra verrouillé (la propriété <code>result.success</code> contiendra Faux s'ils tentent de verrouiller la même entité à l'aide de cette fonction). Seules les fonctions exécutées dans la session à l'origine du verrouillage auront la possibilité de modifier et de sauvegarder les attributs de l'entité. L'entité peut être chargée en lecture seulement dans les autres sessions, mais elles ne pourront ni saisir ni sauvegarder des valeurs.</p>
@@ -1215,6 +1243,7 @@
 <table><thead><tr><th>Release<th>Modifications<tbody><tr><td>17<td>Ajout</table>
 </div></div></details>
 <p><strong>.next()</strong> : 4D.Entity</p>
+<div class=no-index>
 
 
 
@@ -1233,6 +1262,7 @@
 
 
 <table><thead><tr><th>Paramètres<th>Type<th style=text-align:center><th>Description<tbody><tr><td>Résultat<td>4D.Entity<td style=text-align:center>&lt;-<td>Référence à l'entité suivante dans l'entity selection (Null si non trouvée)</table>
+</div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description-15>Description<a href=#description-15 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>La fonction <code>.next()</code> renvoie une référence vers l'entité suivante dans l'entity selection à laquelle l'entité appartient.</p>
 <p>Si l'entité n'appartient à aucune entity selection existante (i.e. <a href=#getselection class="">.getSelection()</a> retourne Null), la fonction renvoie une valeur Null.</p>
@@ -1257,6 +1287,7 @@
 <table><thead><tr><th>Release<th>Modifications<tbody><tr><td>17<td>Ajout</table>
 </div></div></details>
 <p><strong>.previous()</strong>  : 4D.Entity</p>
+<div class=no-index>
 
 
 
@@ -1275,6 +1306,7 @@
 
 
 <table><thead><tr><th>Paramètres<th>Type<th style=text-align:center><th>Description<tbody><tr><td>Résultat<td>4D.Entity<td style=text-align:center>&lt;-<td>Référence à l'entité précédente dans l'entity selection (Null si non trouvée)</table>
+</div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description-16>Description<a href=#description-16 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>La fonction <code>.previous()</code>  renvoie une référence vers l'entité précédente dans l'entity selection à laquelle l'entité appartient.</p>
 <p>Si l'entité n'appartient à aucune entity selection existante (i.e. <a href=#getselection class="">.getSelection()</a> retourne Null), la fonction renvoie une valeur Null.</p>
@@ -1299,6 +1331,7 @@
 <table><thead><tr><th>Release<th>Modifications<tbody><tr><td>17<td>Ajout</table>
 </div></div></details>
 <p><strong>.reload()</strong> : Object</p>
+<div class=no-index>
 
 
 
@@ -1317,6 +1350,7 @@
 
 
 <table><thead><tr><th>Paramètres<th>Type<th style=text-align:center><th>Description<tbody><tr><td>Résultat<td>Object<td style=text-align:center>&lt;-<td>Objet statut</table>
+</div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description-17>Description<a href=#description-17 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>La fonction <code>.reload()</code> recharge le contenu de l'entité en mémoire, en fonction des informations stockées dans la table relative à la dataclass dans le datastore. Le rechargement est effectué uniquement si l'entité existe toujours avec la même clé primaire.</p>
 <p><strong>Résultat</strong></p>
@@ -1393,6 +1427,7 @@
 <table><thead><tr><th>Release<th>Modifications<tbody><tr><td>21<td>Ajout des statuts 7 et 8<tr><td>17<td>Ajout</table>
 </div></div></details>
 <p><strong>.save</strong>( { <em>mode</em> : Integer } ) : Object</p>
+<div class=no-index>
 
 
 
@@ -1417,10 +1452,11 @@
 
 
 <table><thead><tr><th>Paramètres<th>Type<th style=text-align:center><th>Description<tbody><tr><td>mode<td>Integer<td style=text-align:center>-><td><code>dk auto merge</code> : Active le mode "automatic merge"<tr><td>Résultat<td>Object<td style=text-align:center>&lt;-<td>Résultat de la sauvegarde</table>
+</div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description-18>Description<a href=#description-18 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>La fonction <code>.save()</code> enregistre les modifications apportées à l'entité dans la table liée à sa dataClass. Vous devez appeler cette fonction après toute création ou modification d'entité si vous souhaitez sauvegarder les changements.</p>
 <p>L'opération de sauvegarde n'est exécutée que si au moins un attribut de l'entité a été "touché" (voir les fonctions <a href=#touched class=""><code>.touched()</code></a> et <a href=#touchedattributes class=""><code>.touchedAttributes()</code></a>). Sinon, la fonction ne fait rien (le trigger n'est pas appelé).</p>
-<p>In a multi-user or multi-process application, the <code>.save()</code> function is executed under an <a class="" href=/docs/fr/21/ORDA/entities#entity-locking>"optimistic lock"</a> mechanism, wherein an internal locking stamp is automatically incremented each time the record is saved.</p>
+<p>Dans une application multiprocess ou multi-utilisateurs, la fonction <code>.save()</code> est exécutée en mode <a class="" href=/docs/fr/21/ORDA/entities#entity-locking>"verrouillage optimiste"</a> dans lequel un marqueur de verrouillage interne est automatiquement incrémenté chaque fois que l'enregistrement est sauvegardé.</p>
 <p>Par défaut, si le paramètre <em>mode</em> est omis, la fonction retournera systématiquement une erreur (voir ci-dessous) lorsque la même entité a été modifiée entre-temps par un autre process ou utilisateur, quel(s) que soi(en)t l(es) attribut(s) modifié(s).</p>
 <p>Sinon, vous pouvez passer l'option <code>dk auto merge</code> dans le paramètre <em>mode</em> afin d'activer le mode "automatic merge". Les données effectivement stockées dans l'enregistrement résultent alors de la combinaison (le "merge") des modifications non-concurrentes (si des modifications ont été effectuées sur le même attribut, la sauvegarde échoue et une erreur est retournée, même en mode "automatic merge").</p>
 <blockquote>
@@ -1640,6 +1676,7 @@
 <table><thead><tr><th>Release<th>Modifications<tbody><tr><td>17<td>Ajout</table>
 </div></div></details>
 <p><strong>.toObject</strong>() : Object<br/><strong>.toObject</strong>( <em>filterString</em> : Text { ; <em>options</em> : Integer}  ) : Object<br/><strong>.toObject</strong>( <em>filterCol</em> : Collection { ; <em>options</em> : Integer } ) : Object</p>
+<div class=no-index>
 
 
 
@@ -1676,6 +1713,7 @@
 
 
 <table><thead><tr><th>Paramètres<th>Type<th style=text-align:center><th>Description<tbody><tr><td>filterString<td>Text<td style=text-align:center>-><td>Attribut(s) à extraire (chaînes séparées par des virgules)<tr><td>filterCol<td>Collection<td style=text-align:center>-><td>Collection d'attribut(s) à extraire<tr><td>options<td>Integer<td style=text-align:center>-><td><code>dk with primary key</code>: ajoute la propriété __KEY ;<br/><code>dk with stamp</code>: ajoute la propriété _STAMP<tr><td>Résultat<td>Object<td style=text-align:center>&lt;-<td>Objet généré à partir de l'entité</table>
+</div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description-19>Description<a href=#description-19 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>La fonction <code>.toObject()</code> renvoie un objet qui a été construit à partir de l'entité. Les noms des propriétés de l'objet correspondent aux noms des attributs de l'entité.</p>
 <p>Si aucun filtre n'est passé ou si le paramètre <em>filterString</em> contient une chaîne vide ou "*", l'objet retourné contiendra :</p>
@@ -1756,6 +1794,7 @@
 <table><thead><tr><th>Release<th>Modifications<tbody><tr><td>17<td>Ajout</table>
 </div></div></details>
 <p><strong>.touched()</strong> : Boolean</p>
+<div class=no-index>
 
 
 
@@ -1774,6 +1813,7 @@
 
 
 <table><thead><tr><th>Paramètres<th>Type<th style=text-align:center><th>Description<tbody><tr><td>Résultat<td>Boolean<td style=text-align:center>&lt;-<td>Vrai si au moins un attribut de l'entité a été modifié et non encore sauvegardé, sinon Faux</table>
+</div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description-20>Description<a href=#description-20 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>La fonction <code>.touched()</code> renvoie True si au moins un attribut de l'entité a été modifié depuis que l'entité a été chargée en mémoire ou sauvegardée. Vous pouvez utiliser cette fonction pour déterminer si vous devez sauvegarder l'entité.</p>
 <p>Ceci ne s'applique qu'aux attributs de <a class="" href=/docs/fr/21/API/DataClassClass#returned-object><code>kind</code></a> "storage" ou "relatedEntity".</p>
@@ -1799,6 +1839,7 @@
 <table><thead><tr><th>Release<th>Modifications<tbody><tr><td>17<td>Ajout</table>
 </div></div></details>
 <p><strong>.touchedAttributes()</strong> : Collection</p>
+<div class=no-index>
 
 
 
@@ -1817,6 +1858,7 @@
 
 
 <table><thead><tr><th>Paramètres<th>Type<th style=text-align:center><th>Description<tbody><tr><td>Résultat<td>Collection<td style=text-align:center>&lt;-<td>Noms des attributs touchés ou collection vide</table>
+</div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description-21>Description<a href=#description-21 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>La fonction <code>.touchedAttributes()</code> renvoie les noms des attributs qui ont été modifiés depuis que l'entité a été chargée en mémoire.</p>
 <p>Ceci ne s'applique qu'aux attributs de <a class="" href=/docs/fr/21/API/DataClassClass#returned-object><code>kind</code></a> "storage" ou "relatedEntity".</p>
@@ -1850,6 +1892,7 @@
 <table><thead><tr><th>Release<th>Modifications<tbody><tr><td>17<td>Ajout</table>
 </div></div></details>
 <p><strong>.unlock()</strong> : Object</p>
+<div class=no-index>
 
 
 
@@ -1868,6 +1911,7 @@
 
 
 <table><thead><tr><th>Paramètres<th>Type<th style=text-align:center><th>Description<tbody><tr><td>Résultat<td>Object<td style=text-align:center>&lt;-<td>Objet statut</table>
+</div>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id=description-22>Description<a href=#description-22 class=hash-link aria-label="Lien direct vers le titre" title="Lien direct vers le titre" translate=no>​</a></h4>
 <p>La fonction <code>.unlock()</code> supprime le verrou pessimiste sur l'enregistrement correspondant à l'entité dans le datastore et la table liés à sa dataclass.</p>
 <blockquote>
