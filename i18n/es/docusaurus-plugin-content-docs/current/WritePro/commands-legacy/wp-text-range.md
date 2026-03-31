@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Text range.Summary-->El comando **WP Text range** devuelve un nuevo de rango de selección (objRange) que contiene los caracteres ubicados entre *rangoInicio* y *rangoFin* en el área 4D Write Pro *wpArea*.<!-- END REF-->
 
-Un **objeto rango de texto 4D Write Pro** se puede utilizar para manejar los atributos de una parte del documento (especialmente con los comandos [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) y [WP SET ATTRIBUTES](../commands/wp-set-attributes.md)). Para más información, consulte el párrafo *Comandos de gestión de rangos*.
+Un **objeto rango de texto 4D Write Pro** se puede utilizar para manejar los atributos de una parte del documento (especialmente con los comandos [WP GET ATTRIBUTES](../commands/wp-get-attributes) y [WP SET ATTRIBUTES](../commands/wp-set-attributes)). Para más información, consulte el párrafo *Comandos de gestión de rangos*.
 
 Puede pasar en *objRango*:
 
@@ -67,11 +67,12 @@ Quiere crear un rango de una sección:
 
 ## Ver también 
 
-[WP Bookmark range](wp-bookmark-range.md)  
-[WP Get body](wp-get-body.md)  
-[WP Get header](wp-get-header.md)  
-[WP Paragraph range](wp-paragraph-range.md)  
-[WP Picture range](wp-picture-range.md)  
-[WP SELECT](wp-select.md)  
-[WP Selection range](wp-selection-range.md)  
-[WP Table range](wp-table-range.md)  
+[WP Bookmark range](../commands/wp-bookmark-range)  
+[WP Get body](../commands/wp-get-body)  
+[WP Get header](../commands/wp-get-header)  
+[WP Paragraph range](../commands/wp-paragraph-range)  
+[WP Picture range](../commands/wp-picture-range)  
+[WP SELECT](../commands/wp-select)  
+[WP Selection range](../commands/wp-selection-range)  
+[WP Table range](../commands/wp-table-range)  
+

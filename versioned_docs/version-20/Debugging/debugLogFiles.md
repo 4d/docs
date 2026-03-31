@@ -256,7 +256,7 @@ The following fields are logged for each event:
 |timestamp|Date and time in ISO 8601 format (YYYY-MM-DDThh:mm:ss.mmm)|
 |loggerID|Optional|
 |componentSignature|Optional - internal component signature|
-|messageLevel|Trace, Debug, Info, Warning, Error|
+|messageLevel|Trace, Debug, Info, Warning, Error, Fatal|
 |message|Description of the log entry|
 
 Depending on the event, various other fields can also be logged, such as task, socket, etc.

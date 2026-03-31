@@ -5,7 +5,7 @@ title: EntitySelection
 
 Uma seleção de entidade é um objeto que contém uma ou mais referências a [entidades](ORDA/dsMapping.md#entity) pertencentes à mesma [Dataclass](ORDA/dsMapping.md#dataclass). Uma seleção de entidades pode conter 0, 1 ou X entidades da dataclass -- onde X pode representar o número total de entidades contidas na dataclass.
 
-As seleções de entidades podem ser criadas a partir de seleções existentes usando várias funções da classe [`DataClass`](DataClassClass.md), como [`.all()`](DataClassClass.md#all) ou [`.query()`](DataClassClass.md#query), ou funções da própria classe `EntityClass`, como [`.and()`](#and) ou [`orderBy()`](#orderby). Você também pode criar seleções de entidades em branco usando a função [`dataClass.newSelection()`](DataClassClass.md#newselection) ou o comando [`Create entity selection`](../commands/create-entity-selection.md).
+As seleções de entidades podem ser criadas a partir de seleções existentes usando várias funções da classe [`DataClass`](DataClassClass.md), como [`.all()`](DataClassClass.md#all) ou [`.query()`](DataClassClass.md#query), ou funções da própria classe `EntityClass`, como [`.and()`](#and) ou [`orderBy()`](#orderby). Você também pode criar seleções de entidades em branco usando a função [`dataClass.newSelection()`](DataClassClass.md#newselection) ou o comando [`Create entity selection`](../commands/create-entity-selection).
 
 ### Resumo
 
@@ -49,7 +49,7 @@ As seleções de entidades podem ser criadas a partir de seleções existentes u
 
 #### Veja também
 
-[`USE ENTITY SELECTION`](../commands/use-entity-selection.md)
+[`USE ENTITY SELECTION`](../commands/use-entity-selection)
 
 <!-- REF EntitySelectionClass.index.Desc -->
 
@@ -294,7 +294,7 @@ $sellist2:=$sellist2.add($sellist1)
 | Parâmetro       | Tipo                                |                             | Descrição                                                            |
 | --------------- | ----------------------------------- | :-------------------------: | -------------------------------------------------------------------- |
 | entity          | 4D. Entity          |              ->             | Entidade a intersectar                                               |
-| entitySelection | 4D. EntitySelection |              ->             | Entity selection a intersectar                                       |
+| entitySelection | 4D. EntitySelection |              ->             | Seleção de entidade para interseção com                              |
 | Resultados      | 4D. EntitySelection | <- | Entity selection resultante da intersecção com o operador lógico AND |
 
 </div>
@@ -1366,7 +1366,7 @@ As seleções de entidade sempre têm uma propriedade `.length`.
 
 A função `.max()` <!-- REF #EntitySelectionClass.max().Summary -->retorna o valor mais alto (ou máximo) entre todos os valores de *attributePath* na seleção da entidade<!-- END REF -->. Na verdade, ele retorna o valor da última entidade da seleção de entidades, pois ela seria classificada em ordem crescente usando a função [`.orderBy()`](#orderby).
 
-Se você passar em *attributePath* um caminho para uma propriedade de objeto que contenha diferentes tipos de valores, a função `.max()` retornará o valor máximo dentro do primeiro tipo escalar na ordem padrão da lista de tipos 4D (ver descrição de [`sort()`](CollectionClass.md#sort)).
+If you pass in *attributePath* a path to an object property containing different [types of values](../Concepts/data-types.md), the `.max()` function will return the maximum value within the first scalar type according to the [4D ordering principles](../Concepts/ordering.md).
 
 `.max()` retorna **undefined** se a seleção da entidade estiver vazia ou se *attributePath* não for encontrado no atributo do objeto.
 
@@ -1419,7 +1419,7 @@ Se quisermos encontrar o maior salário entre as funcionárias mulheres:
 
 A função `.min()` <!-- REF #EntitySelectionClass.min().Summary --> retorna o valor mais baixo (ou mínimo) entre todos os valores de attributePath na seleção de entidades<!-- END REF -->.  Na verdade, ele retorna a primeira entidade da seleção de entidades, pois ela seria classificada em ordem crescente usando a função [`.orderBy()`](#orderby) (excluindo valores **null**).
 
-Se você passar em *attributePath* um caminho para uma propriedade de objeto que contenha diferentes tipos de valores, a função `.min()` retornará o valor mínimo dentro do primeiro tipo de valor escalar na ordem da lista de tipos (consulte a descrição de [`.sort()`](CollectionClass.md#sort)).
+If you pass in *attributePath* a path to an object property containing different [types of values](../Concepts/data-types.md), the `.min()` function will return the minimum value within the first scalar type according to the [4D ordering principles](../Concepts/ordering.md).
 
 `.min()` retorna **undefined** se a seleção da entidade estiver vazia ou se *attributePath* não for encontrado no atributo do objeto.
 
@@ -1549,7 +1549,7 @@ Employee.newSelection(dk keep ordered)
 | Parâmetro       | Tipo                                |                             | Descrição                                                                  |
 | --------------- | ----------------------------------- | :-------------------------: | -------------------------------------------------------------------------- |
 | entity          | 4D. Entity          |              ->             | Entidade a intersectar                                                     |
-| entitySelection | 4D. EntitySelection |              ->             | Entity selection a intersectar                                             |
+| entitySelection | 4D. EntitySelection |              ->             | Seleção de entidade para interseção com                                    |
 | Resultados      | 4D. EntitySelection | <- | Nova seleção de entidade ou nova referência à seleção de entidade original |
 
 </div>
@@ -1650,7 +1650,7 @@ Como padrão, atributos são ordenados em ordem ascendente ("descendente" é fal
 
 Pode adicionar quantos objetos quiser nos critérios da coleção.
 
-> Valores null são avaliados como menor que outros valores.
+If the entity selection attributes contain values of different [types](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md).
 
 Se você passar um caminho de atributo inválido em *pathString* ou *pathObject*, a função retornará uma seleção de entidade vazia.
 
@@ -2680,3 +2680,4 @@ $employeesCollection:=$employees.toCollection("firstName, lastName, directReport
 ```
 
 <!-- END REF -->
+

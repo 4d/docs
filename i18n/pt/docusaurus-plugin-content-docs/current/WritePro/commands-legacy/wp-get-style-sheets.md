@@ -40,7 +40,7 @@ Se quiser recuperar uma coleção de todas as folhas de estilo de caracteres:
 ## Ver também 
 
 *Accessar texto e atributos de imagem por programação*  
-[WP DELETE STYLE SHEET](wp-delete-style-sheet.md)  
-[WP Get style sheet](wp-get-style-sheet.md)  
-[WP IMPORT STYLE SHEETS](wp-import-style-sheets.md)  
-[WP New style sheet](wp-new-style-sheet.md)  
+[WP DELETE STYLE SHEET](../commands/wp-delete-style-sheet)  
+[WP Get style sheet](../commands/wp-get-style-sheet)  
+[WP IMPORT STYLE SHEETS](../commands/wp-import-style-sheets)  
+[WP New style sheet](../commands/wp-new-style-sheet)  

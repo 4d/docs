@@ -8,6 +8,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get attributes.Params-->
 
+<div class="no-index">
+
 | Parâmetro   | Tipo                                           |                             | Descrição                                       |
 | ----------- | ---------------------------------------------- | --------------------------- | ----------------------------------------------- |
 | targetObj   | Object                                         | &#8594; | Intervalo ou elemento ou documento 4D Write Pro |
@@ -16,6 +18,7 @@ displayed_sidebar: docs
 | attribColl  | Collection                                     | &#8594; | Coleção de nomes de atributo para obter         |
 | Resultado   | Object                                         | &#8592; | Nomes e valores dos atributos                   |
 
+</div>
 <!-- END REF-->
 
 ## Descrição

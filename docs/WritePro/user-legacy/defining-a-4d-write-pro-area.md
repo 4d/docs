@@ -24,7 +24,7 @@ To configure the drag and drop features for your 4D Write Pro areas, you need to
 
 Document view properties are directly available in the Property List for 4D Write Pro areas. They allow you to define how a 4D Write Pro document will be displayed by default in the 4D Write Pro area. These properties let you customize, for example, whether 4D Write Pro documents are displayed as they would be printed, or as they would be rendered in a browser. You can set different views of the same 4D Write Pro document in the same form.
 
-**Note:** View settings can be managed dynamically using the [WP SET VIEW PROPERTIES](./commands/wp-set-view-properties) and [WP Get view properties](./commands/wp-get-view-properties) commands. 
+**Note:** View settings can be managed dynamically using the [WP SET VIEW PROPERTIES](../commands/wp-set-view-properties) and [WP Get view properties](../commands/wp-get-view-properties) commands. 
 
 Document view settings are handled through specific items in the **Appearance** theme of the Property List for 4D Write Pro form objects:  
   

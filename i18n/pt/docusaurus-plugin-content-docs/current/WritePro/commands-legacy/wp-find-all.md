@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Find all.Summary-->O comando WP Find all pesquisa *objAlvo*, pelo *valorPesquisa* baseado na *condiçãoPesquisa*.<!-- END REF--> Um parâmetro opcional pode ser usado para substituir os resultados encontrados. 
 
-**Nota**: WP Find all não pesquisa ou substitui texto em fórmulas. Use o comando [WP Get formulas](wp-get-formulas.md) neste caso. 
+**Nota**: WP Find all não pesquisa ou substitui texto em fórmulas. Use o comando [WP Get formulas](../commands/wp-get-formulas) neste caso. 
 
 No parâmetro *objAlvo*, passe um objeto contendo:
 
@@ -98,5 +98,5 @@ Uma coleção vazia é retornada se nenhum resultado for encontrado.
 
 ## Ver também 
 
-[WP Find next](wp-find-next.md)  
-[WP Find previous ](wp-find-previous.md)  
+[WP Find next](../commands/wp-find-next)  
+[WP Find previous ](../commands/wp-find-previous)  

@@ -37,69 +37,14 @@ $person:=cs. Person.new("John";"Doe")
 $hello:=$person.sayHello() //"Hello John Doe"
 ```
 
-## Gestão de classes
-
-### Definição de classe
-
-Uma classe de usuário em 4D é definida por um arquivo [method](methods.md) (.4dm), armazenado na pasta `/Project/Sources/Classes/` específico. O nome do arquivo é o nome da classe.
-
-Ao nomear classes, deve ter em mente as seguintes regras:
-
-- Um [nome de classe](identifiers.md#classes) deve estar em conformidade com as [regras de nomenclatura das propriedades](identifiers.md#object-properties).
-- Nomes de classe diferenciam minúsculas de maiúsculas.
-- Não se recomenda dar o mesmo nome a uma classe e a uma tabela de base de dados, a fim de evitar qualquer conflito.
-
-Por exemplo, se quiser definir uma classe chamada "Polígono", precisa  criar o seguinte arquivo:
-
-```
-Project folder
-```
-
-### Eliminação de uma classe
-
-Para eliminar uma classe existente, pode:
-
-- no seu disco, remover o arquivo de classe .4dm da pasta "Classes",
-- no Explorador 4D, selecione a classe e clique ![](../assets/en/Users/MinussNew.png) ou escolha **Mover para Lixo** no menu contextual.
-
-### Using 4D interface
-
-Os arquivos de classe são automaticamente armazenados no local apropriado quando criados através da interface 4D, quer através do menu **File**, quer através do Explorer.
-
-#### Menu Arquivo e barra de ferramentas
-
-Você pode criar um novo arquivo de classe para o projeto selecionando **Nova > Classe...** no menu **File** do 4D Developer ou na barra de ferramentas.
-
-Você também pode usar o atalho **Ctrl+Shift+Alt+k**.
-
-#### Explorador
-
-Na página de **Métodos** do Explorador, as classes são agrupadas na categoria **Classes**.
-
-Para criar uma nova classe, pode:
-
-- selecione a categoria **Classes** e clique no botão ![](../assets/en/Users/PlussNew.png).
-- selecione **Nova Classe...** no menu de ação na parte inferior da janela do Explorer, ou no menu contextual do grupo Classes.
-  ![](../assets/en/Concepts/newClass.png)
-- selecione **Novo > Classe...** a partir do menu contextual da página inicial do Explorador.
-
-#### Suporte de código de classe
-
-Nas várias janelas 4D (editor de código, compilador, depurador, explorador de tempo de execução), o código de classe é basicamente tratado como um método de projecto com algumas especificidades:
-
-- No editor de código:
-  - uma aula não pode ser executada
-  - uma função de classe é um bloco de código
-  - **Ir para a definição** em um membro do objeto procura por declarações da classe Função; por exemplo, "$o.f()" encontrará "Função f".
-  - **Procurar referências** na declaração de função da classe procura a função utilizada como membro do objeto; por exemplo, "Função f" irá encontrar "$o.f()".
-- No explorador e Depurador de Runtime, as funções de classe são exibidas com o formato `<ClassName>` construtor ou `<ClassName>.<FunctionName>`.
+Class files are managed through the 4D Explorer (see [Creating classes](../Project/code-overview.md#creating-classes)).
 
 ## Lojas de classe
 
 As classes disponíveis são acessíveis a partir das suas class stores. Estão disponíveis duas class stores:
 
-- [`cs`](../commands/cs.md) para o class store de usuário
-- [`4D`](../commands/4d.md) para o class store integrado
+- [`cs`](../commands/cs) para o class store de usuário
+- [`4D`](../commands/4d) para o class store integrado
 
 ### `cs`
 
@@ -638,13 +583,13 @@ Os comandos a seguir têm recursos específicos quando são usados em funções 
 
 ### `Super`
 
-O comando [`Super`](../commands/super.md) permite chamadas para a [`superclass`](../API/ClassClass#superclass), ou seja, a classe principal da função. Só pode haver uma função de construtor em uma classe (caso contrário um erro é retornado).
+O comando [`Super`](../commands/super) permite chamadas para a [`superclass`](../API/ClassClass#superclass), ou seja, a classe principal da função. Só pode haver uma função de construtor em uma classe (caso contrário um erro é retornado).
 
-Para obter mais detalhes, consulte a descrição do comando [`Super`](../commands/super.md).
+Para obter mais detalhes, consulte a descrição do comando [`Super`](../commands/super).
 
 ### `This`
 
-O comando [`This`](../commands/this.md) retorna uma referência ao objeto processado no momento. Geralmente, o valor de `Isso` é determinado pela forma como uma função de classe é chamada. Normalmente, `This` refere-se ao objeto em que a função foi chamada, como se a função estivesse no objeto.
+O comando [`This`](../commands/this) retorna uma referência ao objeto processado no momento. Geralmente, o valor de `Isso` é determinado pela forma como uma função de classe é chamada. Normalmente, `This` refere-se ao objeto em que a função foi chamada, como se a função estivesse no objeto.
 
 Exemplo:
 
@@ -664,7 +609,7 @@ $o.b:=3
 $val:=$o.f() //8
 ```
 
-Para obter mais detalhes, consulte a descrição do comando [`This`](../commands/this.md).
+Para obter mais detalhes, consulte a descrição do comando [`This`](../commands/this).
 
 ## Comandos de classe
 
@@ -887,3 +832,4 @@ $myList := cs.ItemInventory.me.itemList
 #### Veja também
 
 [Singletons em 4D](https://blog.4d.com/singletons-in-4d) (postagem no blog) <br/> [Session Singletons](https://blog.4d.com/introducing-session-singletons) (postagem no blog).
+

@@ -26,8 +26,8 @@ displayed_sidebar: docs
 
 |Versão|Alterações|
 |---|---|
-|13|Modificado|
 |<6|Criado|
+|13|Modificado|
 
 </details>
 </div>
@@ -82,11 +82,11 @@ O segundo parâmetro (*$http*) é o cabeçalho e o corpo da petição HTTP envia
 **Notas:** 
 
 * Por razões de rendimento, o tamanho dos dados que transita através do parâmetro $http não deve superar os 32 KB. Do contrário serão truncados pelo servidor HTTP de 4D.
-* Para mais informação sobre este parâmetro, consulte a descrição do [On Web Connection database method](on-web-connection-database-method.md).
+* Para mais informação sobre este parâmetro, consulte a descrição do [On Web Connection database method](../commands/on-web-connection-database-method).
 * **Endereço IP do Web client**  
 O terceiro parâmetro $ipBrowser recebe a direção IP do máquina navegador. Esta informação permite distinguir entre as conexões de Intranet e Internet.
 * **Servidor de endereço IP**  
-O quarto parâmetro $ipServer recebe o endereço IP utilizado para chamar ao servidor Web. 4D a partir da versão 6.5 autoriza o multi-homing, permitindo explorar máquinas com mais de um endereço IP. Para maior informação, consulte a seção [QR DELETE COLUMN](qr-delete-column.md).
+O quarto parâmetro $ipServer recebe o endereço IP utilizado para chamar ao servidor Web. 4D a partir da versão 6.5 autoriza o multi-homing, permitindo explorar máquinas com mais de um endereço IP. Para maior informação, consulte a seção [QR DELETE COLUMN](../commands/qr-delete-column).
 * **NOme de usuário e Senha**  
     
 Os parâmetros $user e $pw recebem o nome de usuário e senha introduzidos pelo usuário na caixa de diálogo padrão de identificação mostrada pelo navegador. Esta caixa de diálogo aparece para cada conexão, se uma opção de gestão de senhas tiver sido selecionada nas Propriedades da banco (ver a seção *Conexões de Segurança*).
@@ -98,12 +98,12 @@ On Web Authentication database method retorna um booleano em $result:
    * Se $result for **True**, a conexão é aceita.  
    * Se $result for **False**, a conexão é recusada.
 
- O Método de banco [On Web Connection database method](on-web-connection-database-method.md) só é executado se a conexão tiver sido aceita por **On Web Authentication**.
+ O Método de banco [On Web Connection database method](../commands/on-web-connection-database-method) só é executado se a conexão tiver sido aceita por **On Web Authentication**.
 
-**AVISO**: se não for passado nenhum valor em *$result* ou se *$result* não se define no On Web Authentication database method, a conexão se considerará como aceita e se executa o [On Web Connection database method](on-web-connection-database-method.md).  
+**AVISO**: se não for passado nenhum valor em *$result* ou se *$result* não se define no On Web Authentication database method, a conexão se considerará como aceita e se executa o [On Web Connection database method](../commands/on-web-connection-database-method).  
   
 **Notas**:  
-* Não chame elementos de interface no On Web Authentication database method ([ALERT](alert.md), [DIALOG](../commands/dialog.md), etc.) porque do contrário sua execução será interrompida e a conexão será recusada. O mesmo acontece se for apresentado um erro durante seu processo.
+* Não chame elementos de interface no On Web Authentication database method ([ALERT](../commands/alert), [DIALOG](../commands/dialog), etc.) porque do contrário sua execução será interrompida e a conexão será recusada. O mesmo acontece se for apresentado um erro durante seu processo.
 * É possível evitar a execução por *4DACTION* ou *4DSCRIPT* de cada método de projeto com a ajuda da opção “Disponível através das etiquetas HTML e URLs. Para mais informação, consulte *Conexões de Segurança*.
 
 ## On Web Authentication Database Method calls 
@@ -116,7 +116,7 @@ Portanto o On Web Authentication database method se chama nos seguintes casos:
 * quando 4D recebe uma URL que começa por *4DCGI/*
 * quando 4D recebe uma URL que começa por *4DSYNC/*
 * quando 4D recebe uma URL solicitando uma página estática que não existe
-* quando 4D recebe uma URL de acesso a raiz e não foi definida uma página de início nas propriedades da base ou por meio do comando [WEB SET HOME PAGE](web-set-home-page.md)
+* quando 4D recebe uma URL de acesso a raiz e não foi definida uma página de início nas propriedades da base ou por meio do comando [WEB SET HOME PAGE](../commands/web-set-home-page)
 * quando 4D processa uma etiqueta *4DSCRIPT* em uma página semi dinâmica
 * quando 4D processa uma etiqueta *4DLOOP* baseada em um método em uma página semi dinâmica.
 **Nota de compatibilidade**: o método banco também se chama quando 4D recebe um URL que começa por *4DMETHOD*/. Esta URL é obsoleta e só se conserva por razões de compatibilidade.  
@@ -213,3 +213,4 @@ var $i : Integer
     End if
  End for
 ```
+

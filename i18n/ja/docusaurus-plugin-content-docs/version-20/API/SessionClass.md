@@ -38,12 +38,13 @@ title: Session
 
 
 <!-- REF #_command_.Session.Params -->
-| 引数  | 型          |    | 説明                                        |
-| --- | ---------- |:--:| ----------------------------------------- |
-| 戻り値 | 4D.Session | <- | Session オブジェクト|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|4D.Session|<-|Session object|
+</div>
+<!-- END REF -->
 
 
 #### 説明
@@ -100,12 +101,13 @@ IP:port/4DACTION/action_Session
 
 
 <!-- REF #SessionClass.clearPrivileges().Params -->
-| 引数 | 型 |  | 説明                                           |
-| -- | - |::| -------------------------------------------- |
-|    |   |  | このコマンドは引数を必要としません|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+||||Does not require any parameters|
+</div>
+<!-- END REF -->
 
 
 #### 説明
@@ -173,13 +175,14 @@ $expiration:=Session.expirationDate // 例: "2021-11-05T17:10:42Z"
 
 
 <!-- REF #SessionClass.hasPrivilege().Params -->
-| 引数        | 型       |    | 説明                                                                           |
-| --------- | ------- |:--:| ---------------------------------------------------------------------------- |
-| privilege | Text    | <- | 確認するアクセス権の名称                                                                 |
-| 戻り値       | Boolean | <- | セッションが *privilege* のアクセス権を持っていれば true、それ以外は false|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|privilege|Text|<-|Name of the privilege to verify|
+|Result|Boolean|<-|True if session has *privilege*, False otherwise|
+</div>
+<!-- END REF -->
 
 
 #### 説明
@@ -259,11 +262,13 @@ End if
 
 
 <!-- REF #SessionClass.isGuest().Params -->
-| 引数  | 型       |    | 説明                                                       |
-| --- | ------- |:--:| -------------------------------------------------------- |
-| 戻り値 | Boolean | <- | ゲストセッションの場合は true、それ以外は false|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Boolean|<-|True if session is a Guest one, False otherwise|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -300,13 +305,15 @@ End if
 
 
 <!-- REF #SessionClass.setPrivileges().Params -->
-| 引数         | 型          |    | 説明                                                                     |
-| ---------- | ---------- |:--:| ---------------------------------------------------------------------- |
-| privilege  | Text       | -> | アクセス権の名称                                                               |
-| privileges | Collection | -> | アクセス権の名称のコレクション                                                        |
-| settings   | Object     | -> | "privileges" プロパティ (文字列またはコレクション) を持つオブジェクト|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|privilege|Text|->|Privilege name|
+|privileges|Collection|->|Collection of privilege names|
+|settings|Object|->|Object with a "privileges" property (string or collection)|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -318,11 +325,11 @@ End if
 
 - *settings* には、以下のプロパティを持つオブジェクトを渡します:
 
-| プロパティ      | 型                   | 説明                                                  |
-| ---------- | ------------------- | --------------------------------------------------- |
-| privileges | Text または Collection | <li>アクセス権名の文字列</li><li>アクセス権名のコレクション</li>  |
+| プロパティ      | 型                   | 説明                                                   |
+| ---------- | ------------------- | ---------------------------------------------------- |
+| privileges | Text または Collection | <li>アクセス権名の文字列</li><li>アクセス権名のコレクション</li> |
 | roles      | Text または Collection | <li>ロールの文字列</li><li>ロールの文字列のコレクション</li> |
-| userName   | Text                | (任意) セッションと紐づけるユーザー名                                |
+| userName   | Text                | (任意) セッションと紐づけるユーザー名                                 |
 
 :::info
 

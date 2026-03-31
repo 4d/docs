@@ -599,11 +599,14 @@ O <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->validação de 
 
 <!-- REF #WebServerClass.start().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo   |                             | Descrição                                           |
 | ---------- | ------ | --------------------------- | --------------------------------------------------- |
 | settings   | Object | ->                          | Configurações do servidor Web a definir no arranque |
 | Resultados | Object | <- | Estado de arranque do servidor web                  |
 
+</div>
 <!-- END REF -->
 
 A função `.start()` <!-- REF #WebServerClass.start().Summary -->inicia o servidor da Web no qual ela é aplicada<!-- END REF -->, usando as propriedades definidas no parâmetro opcional do objeto *settings*.
@@ -661,10 +664,13 @@ A função devolve um objecto que descreve o estado de lançamento do servidor W
 
 <!-- REF #WebServerClass.stop().Params -->
 
+<div class="no-index">
+
 | Parâmetro | Tipo |   | Descrição                  |
 | --------- | ---- | - | -------------------------- |
 |           |      |   | Não exige nenhum parâmetro |
 
+</div>
 <!-- END REF -->
 
 A função `.stop()` <!-- REF #WebServerClass.stop().Summary -->interrompe o servidor web no qual ele é aplicado<!-- END REF -->.

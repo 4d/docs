@@ -8,6 +8,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert document body.Params-->
 
+<div class="no-index">
+
 | Paramètres  | Type    |                             | Description                                                     |
 | ----------- | ------- | --------------------------- | --------------------------------------------------------------- |
 | targetObj   | Object  | &#8594; | Plage ou élément ou document 4D Write Pro                       |
@@ -16,6 +18,7 @@ displayed_sidebar: docs
 | rangeUpdate | Integer | &#8594; | Mode de mise à jour de la plage                                 |
 | Résultat    | Object  | &#8592; | Objet de plage de texte référençant le corps du document inséré |
 
+</div>
 <!-- END REF-->
 
 ## Description

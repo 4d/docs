@@ -9,9 +9,14 @@ title: VP ADD SPAN
 
 <!-- REF #_method_.VP ADD SPAN.Params -->
 
-| Parámetros | Tipo   |    | Descripción  |                  |
-| ---------- | ------ | -- | ------------ | ---------------- |
-| rangeObj   | Object | -> | Objeto rango | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo   |    | Descripción  |
+| ---------- | ------ | -- | ------------ |
+| rangeObj   | Object | -> | Objeto rango |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

@@ -103,5 +103,5 @@ Se quiser recuperar as células que um usuário tiver sido selecionado:
 
 ## Ver também 
 
-[WP Table get columns ](wp-table-get-columns.md)  
-[WP Table get rows](wp-table-get-rows.md)  
+[WP Table get columns ](../commands/wp-table-get-columns)  
+[WP Table get rows](../commands/wp-table-get-rows)  

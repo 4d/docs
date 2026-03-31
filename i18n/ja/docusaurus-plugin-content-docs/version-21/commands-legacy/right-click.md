@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.Right click.Summary-->Right click コマンドは、マウスの右ボタンがクリックされた場合に[True](true.md "True") を返します。<!-- END REF-->
+<!--REF #_command_.Right click.Summary-->Right click コマンドは、マウスの右ボタンがクリックされた場合に[True](../commands/true) を返します。<!-- END REF-->
 
 このコマンドはOn clickedフォームイベントのコンテキストで使用します。したがって、デザインモードにおいて、このイベントがフォームや特定のオブジェクトのプロパティで適切に選択されていることを確認する必要があります。
 

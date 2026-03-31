@@ -27,7 +27,7 @@ Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *zo
 
 **Note :** Cette commande ne peut être utilisée que si *zoneWP* est associée à un objet de formulaire (i.e. elle est affichée dans le formulaire/la page courant(e)).
 
-Si une image ancrée (image à emplacement fixe) est sélectionnée dans *wpArea*, **WP Selection range** retourne un objet contenant une référence d'image et non un objet plage (pour plus d'informations, reportez-vous à la description de la commande [WP Add picture](../commands/wp-add-picture.md)). Sinon, **WP Selection range** retourne un nouvel objet de type objPlage (pour plus d'informations, reportez-vous au paragraphe *Gestion des plages*).
+Si une image ancrée (image à emplacement fixe) est sélectionnée dans *wpArea*, **WP Selection range** retourne un objet contenant une référence d'image et non un objet plage (pour plus d'informations, reportez-vous à la description de la commande [WP Add picture](../commands/wp-add-picture)). Sinon, **WP Selection range** retourne un nouvel objet de type objPlage (pour plus d'informations, reportez-vous au paragraphe *Gestion des plages*).
 
 ## Exemple 
 
@@ -39,6 +39,7 @@ Vous souhaitez récupérer le texte sélectionné dans une zone 4D Write Pro :
 
 ## Voir aussi 
 
-[WP Paragraph range](wp-paragraph-range.md)  
-[WP Picture range](wp-picture-range.md)  
-[WP Text range](wp-text-range.md)  
+[WP Paragraph range](../commands/wp-paragraph-range)  
+[WP Picture range](../commands/wp-picture-range)  
+[WP Text range](../commands/wp-text-range)  
+

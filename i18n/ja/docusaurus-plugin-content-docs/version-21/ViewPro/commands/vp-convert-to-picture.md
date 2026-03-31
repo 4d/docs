@@ -9,11 +9,16 @@ title: VP Convert to picture
 
 <!-- REF #_method_.VP Convert to picture.Params -->
 
-| 引数       | 型       |                             | 説明                              |                  |
-| -------- | ------- | --------------------------- | ------------------------------- | ---------------- |
-| vpObject | Object  | ->                          | 変換するエリアを格納した 4D View Pro オブジェクト |                  |
-| rangeObj | Object  | ->                          | レンジオブジェクト                       |                  |
-| 戻り値      | Picture | <- | エリアの SVGピクチャー                   | <!-- END REF --> |
+<div class="no-index">
+
+| 引数       | 型       |                             | 説明                              |
+| -------- | ------- | --------------------------- | ------------------------------- |
+| vpObject | Object  | ->                          | 変換するエリアを格納した 4D View Pro オブジェクト |
+| rangeObj | Object  | ->                          | レンジオブジェクト                       |
+| 戻り値      | Picture | <- | エリアの SVGピクチャー                   |
+
+</div>
+<!-- END REF -->
 
 ## 説明
 
@@ -53,10 +58,10 @@ title: VP Convert to picture
 4D View Pro エリアを SVG に変換し、結果をプレビューするためピクチャー変数に戻り値を代入します:
 
 ```4d
-C_OBJECT($vpAreaObj)
-C_PICTURE($vPict)
+var $vpAreaObj : Object
+var $vPict : Picture
 $vpAreaObj:=VP Export to object("ViewProArea")
-$vPict:=VP Convert to picture($vpAreaObj) // エリア全体を書き出します
+$vPict:=VP Convert to picture($vpAreaObj) //export the whole area
 ```
 
 ## 参照

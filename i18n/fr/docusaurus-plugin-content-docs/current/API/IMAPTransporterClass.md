@@ -7,7 +7,7 @@ La classe `IMAPTransporter` vous permet de récupérer des messages à partir d'
 
 ### Objet IMAP Transporter
 
-Les objets IMAP Transporter sont instanciés avec la commande [IMAP New transporter](../commands/imap-new-transporter.md). Leurs propriétés et fonctions sont les suivantes :
+Les objets IMAP Transporter sont instanciés avec la commande [IMAP New transporter](../commands/imap-new-transporter). Leurs propriétés et fonctions sont les suivantes :
 
 |                                                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -60,7 +60,7 @@ Les objets IMAP Transporter sont instanciés avec la commande [IMAP New transpor
 
 #### Description
 
-La fonction `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summary -->crée et retourne un nouvel objet de type `4D.IMAPTransporter`<!-- END REF -->. Elle est identique à la commande [`IMAP New transporter`](../commands/imap-new-transporter.md) (raccourci).
+La fonction `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summary -->crée et retourne un nouvel objet de type `4D.IMAPTransporter`<!-- END REF -->. Elle est identique à la commande [`IMAP New transporter`](../commands/imap-new-transporter) (raccourci).
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -499,7 +499,7 @@ Vous pouvez passer :
 - dans le paramètre `msgsIDs`, une collection contenant les ID uniques des messages spécifiques à supprimer, ou
 - dans le paramètre `allMsgs`, la constante `IMAP all` (integer) pour supprimer tous les messages de la boîte de réception sélectionnée.
 
-L'exécution de cette fonction ne supprime pas réellement les messages. Les messages ayant le marqueur "deleted" peuvent toujours être trouvés par la fonction [.searchMails()](#searchmails). Flagged messages are deleted from the IMAP server with the [`.expunge()`](#expunge) function or by selecting another mailbox or when the [transporter object](#imap-transporter-object) (created with [IMAP New transporter](../commands/imap-new-transporter.md)) is destroyed.
+L'exécution de cette fonction ne supprime pas réellement les messages. Les messages ayant le marqueur "deleted" peuvent toujours être trouvés par la fonction [.searchMails()](#searchmails). Les messages marqués sont supprimés du serveur IMAP avec la fonction [`.expunge()`](#expunge) ou en sélectionnant une autre boîte de réception ou lorsque l'objet [transporter](#imap-transporter-object) (créé avec [IMAP New transporter](../commands/imap-new-transporter)) est détruit.
 
 **Objet retourné**
 
@@ -1589,25 +1589,25 @@ searchCriteria = FLAGGED FROM "SMITH"
 searchCriteria = OR SEEN FLAGGED
 ```
 
-... returns all messages with \Seen flag set OR \Flagged flag set
+... retourne tous les messages comportant le marqueur \Seen OU \Flagged
 
 ```
 searchCriteria = NOT SEEN
 ```
 
-... returns all messages with \Seen flag not set.
+... retourne tous les messages ne comportant pas le marqueur \Seen.
 
 ```
 searchCriteria = HEADER CONTENT-TYPE "MIXED" NOT HEADER CONTENT-TYPE "TEXT"...
 ```
 
-... returns message whose content-type header contains “Mixed” and does not contain “Text”.
+... renvoie le message dont l'en-tête content-type contient "Mixed" et ne contient pas "Text".
 
 ```
 searchCriteria = HEADER CONTENT-TYPE "E" NOT SUBJECT "o" NOT HEADER CONTENT-TYPE "MIXED"
 ```
 
-... returns message whose content-type header contains “ e ” and whose Subject header does not contain “ o ” and whose content-type header is not “ Mixed ”.
+... renvoie le message dont l'en-tête content-type contient " e " et dont l'en-tête Subject ne contient pas " o " et dont l'en-tête content-type n'est pas " Mixed ".
 
 A noter que dans les deux derniers exemples, le résultat de la recherche est différent lorsque vous enlevez les parenthèses de la première liste de mots-clés.
 
@@ -1919,3 +1919,4 @@ End if
 <!-- END REF -->
 
 <!-- INCLUDE transporter.user.Desc -->
+

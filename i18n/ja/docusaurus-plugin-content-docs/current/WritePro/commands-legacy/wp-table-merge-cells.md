@@ -68,5 +68,5 @@ If startColumn 引数と ColumnCount 引数の和、または *startRow* 引数�
 
 ## 参照 
 
-[WP TABLE SPLIT CELLS](wp-table-split-cells.md)  
+[WP TABLE SPLIT CELLS](../commands/wp-table-split-cells)  
 *表の管理*  

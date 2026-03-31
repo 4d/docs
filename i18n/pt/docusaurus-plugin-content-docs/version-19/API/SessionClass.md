@@ -34,9 +34,12 @@ Para obter informação detalhada sobre a implementação da sessão, consulte [
 
 
 <!-- REF #_command_.Session.Params -->
-| Parâmetro  | Tipo        |    | Descrição       |
-| ---------- | ----------- |:--:| --------------- |
-| Resultados | 4D. Session | <- | Objecto Session |
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|4D.Session|<-|Session object|
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -89,11 +92,13 @@ IP:port/4DACTION/action_Session
 
 
 <!-- REF #SessionClass.clearPrivileges().Params -->
-| Parâmetro | Tipo |  | Descrição                                             |
-| --------- | ---- |::| ----------------------------------------------------- |
-|           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+||||Does not require any parameters|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -152,10 +157,13 @@ $expiration:=Session.expirationDate //por exemplo "2021-11-05T17:10:42Z"
 
 
 <!-- REF #SessionClass.hasPrivilege().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                |
-| ---------- | ---------- |:--:| -------------------------------------------------------- |
-| privilege  | Text       | <- | Nome do privilegio a verificar                           |
-| Resultados | Parâmetros | <- | True se a sessão tiver *privilege*, False caso contrário |
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|privilege|Text|<-|Name of the privilege to verify|
+|Result|Boolean|<-|True if session has *privilege*, False otherwise|
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -231,9 +239,12 @@ End if
 
 
 <!-- REF #SessionClass.isGuest().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                   |
-| ---------- | ---------- |:--:| ----------------------------------------------------------- |
-| Resultados | Parâmetros | <- | True se a sessão for uma sessão Guest, False caso contrário |
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Boolean|<-|True if session is a Guest one, False otherwise|
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -267,11 +278,14 @@ End if
 
 
 <!-- REF #SessionClass.setPrivileges().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                        |
-| ---------- | ---------- |:--:| ---------------------------------------------------------------- |
-| privilege  | Text       | -> | Nome do privilégio                                               |
-| privileges | Collection | -> | Collection de nomes de privilégios                               |
-| settings   | Object     | -> | Objetos com as propriedades "privilégios" (string ou collection) |
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|privilege|Text|->|Privilege name|
+|privileges|Collection|->|Collection of privilege names|
+|settings|Object|->|Object with a "privileges" property (string or collection)|
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -284,10 +298,10 @@ A função `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary -->
 
 - No parâmetro *settings*, passe um objeto contendo as propriedades abaixo:
 
-| Propriedade | Tipo               | Descrição                                          |
-| ----------- | ------------------ | -------------------------------------------------- |
+| Propriedade | Tipo               | Descrição                                            |
+| ----------- | ------------------ | ---------------------------------------------------- |
 | privileges  | Text ou Collection | <li>Strings contendo um nome de privilégio ou</li><li>Collection de strings contendo nomes de privilégios</li> |
-| userName    | Text               | Nome de usuário associado à sessão (opcional)      |
+| userName    | Text               | Nome de usuário associado à sessão (opcional)        |
 
 Se a propriedade `privileges` contém um nome de privilégio inválido, ele é ignorado.
 

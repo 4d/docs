@@ -20,9 +20,9 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.WP USE PAGE SETUP.Summary-->**WP USE PAGE SETUP** コマンドはカレントのプリンターページ設定を、4D Write Proドキュメント属性のページサイズとページの向きに変更します。<!-- END REF-->このコマンドは、カレントのプリンターページ設定を4D Write Proドキュメントページ設定と同期させるために、[WP PRINT](wp-print.md)の直前に呼び出される必要があります。
+<!--REF #_command_.WP USE PAGE SETUP.Summary-->**WP USE PAGE SETUP** コマンドはカレントのプリンターページ設定を、4D Write Proドキュメント属性のページサイズとページの向きに変更します。<!-- END REF-->このコマンドは、カレントのプリンターページ設定を4D Write Proドキュメントページ設定と同期させるために、[WP PRINT](../commands/wp-print)の直前に呼び出される必要があります。
 
-その他の設定は [PRINT SETTINGS](../../commands-legacy/print-settings.md) 4Dコマンドによって定義されます。カレントの印刷設定は 4Dセッション全体に対して設定されます。
+その他の設定は [PRINT SETTINGS](../../commands/print-settings) 4Dコマンドによって定義されます。カレントの印刷設定は 4Dセッション全体に対して設定されます。
 
 ## 例題 
 
@@ -34,4 +34,4 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP PRINT](wp-print.md)  
+[WP PRINT](../commands/wp-print)  

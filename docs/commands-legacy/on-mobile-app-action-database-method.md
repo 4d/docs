@@ -34,4 +34,4 @@ The documentation for this database method has been updated and moved to [develo
 
 ## See also 
 
-[On Mobile App Authentication database method](on-mobile-app-authentication-database-method.md)  
+[On Mobile App Authentication database method](../commands/on-mobile-app-authentication-database-method)  

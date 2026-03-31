@@ -29,15 +29,15 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.Modified.Summary-->**Modified** retorna [True](true.md "True") se um valor tiver sido atribuído por programação a *campo* ou se tiver sido modificado durante a entrada de dados.<!-- END REF--> O comando **Modified**deve ser utilizado unicamente em um método de formulário (ou uma subrotina chamada por um método de formulário).
+<!--REF #_command_.Modified.Summary-->**Modified** retorna [True](../commands/true) se um valor tiver sido atribuído por programação a *campo* ou se tiver sido modificado durante a entrada de dados.<!-- END REF--> O comando **Modified**deve ser utilizado unicamente em um método de formulário (ou uma subrotina chamada por um método de formulário).
 
-Atenção, este comando só devolve um valor significativo dentro do mesmo ciclo de execução. Particularmente devolve [False](false.md "False") para todos os eventos de formulário que correspondam ao antigo ciclo de execução *\_o\_During*
+Atenção, este comando só devolve um valor significativo dentro do mesmo ciclo de execução. Particularmente devolve [False](../commands/false) para todos os eventos de formulário que correspondam ao antigo ciclo de execução *\_o\_During*
 
-Durante a entrada de dados, um campo é considerado modificado se o usuário edita o campo (sem importar se modifica o valor original) e logo passa a outro campo ou clicar num controle. Note que o fato de sair de um campo com a ajuda da tecla Tab não significa que **Modified** retorna [True](true.md "True"). O campo deve ser editado para que **Modified** seja [True](true.md "True").
+Durante a entrada de dados, um campo é considerado modificado se o usuário edita o campo (sem importar se modifica o valor original) e logo passa a outro campo ou clicar num controle. Note que o fato de sair de um campo com a ajuda da tecla Tab não significa que **Modified** retorna [True](../commands/true). O campo deve ser editado para que **Modified** seja [True](../commands/true).
 
 Quando se executa um método, se considera que um campo foi modificado se lhe atribui um valor (diferente ou não).
 
-**Nota:** **Modified** sempre devolve [True](true.md "True") depois da execução dos comandos [PUSH RECORD](push-record.md) e [POP RECORD](pop-record.md). 
+**Nota:** **Modified** sempre devolve [True](../commands/true) depois da execução dos comandos [PUSH RECORD](push-record.md) e [POP RECORD](pop-record.md). 
 
 Em todos os casos, utilize o comando [Old](old.md) para detectar se o valor do campo realmente foi modificado.
 

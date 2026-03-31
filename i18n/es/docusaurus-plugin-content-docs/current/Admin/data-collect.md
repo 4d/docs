@@ -91,7 +91,6 @@ También se recogen algunos datos a intervalos regulares.
 | system                                                      | Text                                       | Versión del sistema operativo y número de build                                                                                           |
 | uniqueID                                                    | Text                                       | ID único de 4D Server                                                                                                                     |
 | uptime                                                      | Number                                     | Tiempo transcurrido (en segundos) desde que se abrió la base 4D local                                                  |
-| usingLegacyNetworkLayer                                     | Boolean                                    | True si se utiliza la capa de red heredada para el servidor de aplicaciones                                                               |
 | usingQUICNetworkLayer                                       | Boolean                                    | True si la base utiliza la capa de red QUIC                                                                                               |
 | version                                                     | Number                                     | Número de versión de la aplicación 4D                                                                                                     |
 | webServer                                                   | Object                                     | "started":true si el servidor web está arrancando o iniciado                                                              |
@@ -101,7 +100,7 @@ También se recogen algunos datos a intervalos regulares.
 
 ## ¿Dónde se almacena y envía?
 
-Los datos recolectados se escriben en un archivo de texto (formato JSON) por base de datos cuando 4D Server cierra. El archivo se guarda dentro de la [carpeta activa de 4D](../commands-legacy/get-4d-folder.md), es decir:
+Los datos recolectados se escriben en un archivo de texto (formato JSON) por base de datos cuando 4D Server cierra. El archivo se guarda dentro de la [carpeta activa de 4D](../commands/get-4d-folder), es decir:
 
 - en Windows: `Users\[userName]\AppData\Roaming\4D Server`
 - en macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`

@@ -64,4 +64,4 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP Get frame](wp-get-frame.md)  
+[WP Get frame](../commands/wp-get-frame)  

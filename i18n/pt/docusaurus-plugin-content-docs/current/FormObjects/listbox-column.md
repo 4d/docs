@@ -17,7 +17,7 @@ Você pode definir propriedades padrão (texto, cor de fundo, etc.) para cada co
 
 ## Supported Form Events {#supported-form-events}
 
-| Evento formulário    | Propriedades adicionais retornadas (consulte [Form event](../commands/form-event.md) para obter as propriedades principais)                                                                                                                                                                         | Comentários                                                                                                                                                         |
+| Evento formulário    | Propriedades adicionais retornadas (consulte [Form event](../commands/form-event) para obter as propriedades principais)                                                                                                                                                                            | Comentários                                                                                                                                                         |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>                                                                                                                         |                                                                                                                                                                     |
 | On After Keystroke   | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>                                                                                                                         |                                                                                                                                                                     |
@@ -52,7 +52,7 @@ A seguinte caixa de listagem foi concebida utilizando uma matriz de objectos:
 
 ### Configuração de uma coluna de matriz de objectos
 
-Para atribuir um arrayz de objetos a uma coluna list box, basta definir o nome do array de objetos na lista de propriedades (campo "Variable Name") ou usar o comando [LISTBOX INSERT COLUMN](../commands-legacy/listbox-insert-column.md), como em qualquer coluna baseada em arrays. Na lista de propriedades, pode agora selecionar Objecto como "Tipo de Expressão" para a coluna:
+To assign an object array to a list box column, you just need to set the object array name in either the Property list ("Variable Name" field), or using the [LISTBOX INSERT COLUMN](../commands/listbox-insert-column) command, like with any array-based column. Na lista de propriedades, pode agora selecionar Objecto como "Tipo de Expressão" para a coluna:
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_config.png)
 
@@ -322,7 +322,7 @@ Você deseja exibir uma caixa de combinação com base em uma lista de "cores" d
 Você pode usar atributos específicos para adicionar unidades associadas aos valores das células (por exemplo: "10 cm", "20 pixels" etc.). Para definir a lista de unidades, pode utilizar um dos seguintes atributos:
 
 - "unitsList": um array que contém os elementos x usados para definir as unidades disponíveis (por exemplo: "cm", "polegadas", "km", "milhas" etc.). Utilize este atributo para definir unidades no interior do objeto.
-- "unitsListReference": uma referência de lista 4D que contém as unidades disponíveis. Use esse atributo para definir unidades com uma lista 4D criada com o comando [`New list`](../commands-legacy/new-list.md).
+- "unitsListReference": uma referência de lista 4D que contém as unidades disponíveis. Use esse atributo para definir unidades com uma lista 4D criada com o comando [`New list`](../commands/new-list).
 - "unitsListName": um nome de uma lista 4D baseada em design que contém unidades disponíveis. Utilize este atributo para definir unidades com uma lista 4D criada na caixa de ferramentas.
 
 Independentemente da forma como a lista de unidades é definida, ela pode ser associada ao seguinte atributo:
@@ -410,3 +410,4 @@ Vários eventos podem ser tratados durante o uso de um list box array de objetos
   - numa caixa de verificação (alternar entre verificado/não verificado)
 - **On Clicked**: quando o usuário clicar em um botão instalado usando o atributo "event" *valueType*, será gerado um evento `On Clicked`. Este evento é gerido pelo programador.
 - **On Alternative Click**: quando o usuário clicar em um botão de reticências (atributo "alternateButton"), será gerado um evento `On Alternative Click`. Este evento é gerido pelo programador.
+

@@ -37,7 +37,7 @@ En el parámetro *objTarget*, puede pasar:
 | \[ \].formula    | Objeto   | El texto de la fórmula está disponible a través de **\[ \].formula.source**. La fórmula es una **copia** de la fórmula que se encuentra en el objetivo. Si desea modificar la fórmula, debe volver a insertarla en el documento para tenerla en cuenta |
 | \[ \].range      | Objeto   | Rango de la fórmula (no devuelto para fórmulas de imagen anclada)                                                                                                                                                                                      |
 | \[ \].anchoredID | Texto    | ID de la imagen anclada (devuelta solo para fórmulas de imagen anclada)                                                                                                                                                                                |
-| \[ \].name       | Texto    | Nombre de la fórmula, si se ha definido un nombre (no se devuelve en caso contrario). Los nombres pueden definirse utilizando [WP INSERT FORMULA](../commands/wp-insert-formula.md).                                                                               |
+| \[ \].name       | Texto    | Nombre de la fórmula, si se ha definido un nombre (no se devuelve en caso contrario). Los nombres pueden definirse utilizando [WP INSERT FORMULA](../commands/wp-insert-formula).                                                                               |
 | \[ \].owner      | Objeto   | Documento 4D Write Pro                                                                                                                                                                                                                                 |
 
 **Notas:**
@@ -74,7 +74,8 @@ Para obtener las fórmulas de todas las imágenes ancladas en un documento:
 ## Ver también 
 
 *Gestión de fórmulas*  
-[WP COMPUTE FORMULAS](wp-compute-formulas.md)  
-[WP FREEZE FORMULAS](wp-freeze-formulas.md)  
-[WP Get links](wp-get-links.md)  
-[WP INSERT FORMULA](../commands/wp-insert-formula.md)  
+[WP COMPUTE FORMULAS](../commands/wp-compute-formulas)  
+[WP FREEZE FORMULAS](../commands/wp-freeze-formulas)  
+[WP Get links](../commands/wp-get-links)  
+[WP INSERT FORMULA](../commands/wp-insert-formula)  
+

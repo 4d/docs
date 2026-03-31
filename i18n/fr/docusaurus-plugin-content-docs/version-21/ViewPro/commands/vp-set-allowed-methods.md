@@ -9,9 +9,14 @@ title: VP SET ALLOWED METHODS
 
 <!-- REF #_method_.VP SET ALLOWED METHODS.Params -->
 
-| Paramètres | Type   |    | Description                                    |                  |
-| ---------- | ------ | -- | ---------------------------------------------- | ---------------- |
-| methodObj  | Object | -> | Méthodes autorisées dans les zones 4D View Pro | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres | Type   |    | Description                                    |
+| ---------- | ------ | -- | ---------------------------------------------- |
+| methodObj  | Object | -> | Méthodes autorisées dans les zones 4D View Pro |
+
+</div>
+<!-- END REF -->
 
 > **Compatibilité**
 
@@ -41,14 +46,14 @@ Dans le paramètre *methodObj*, passez un objet dans lequel chaque propriété e
 Vous souhaitez autoriser deux méthodes dans vos zones 4D View Pro :
 
 ```4d
-C_OBJECT($allowed)
-$allowed:=New object //paramètre pour la commande
+var $allowed : Object
+$allowed:=New object //parameter for the command
  
-$allowed.Hello:=New object //créer une première fonction simple nommée "Hello"
+$allowed.Hello:=New object //create a first simple function named "Hello"
 $allowed.Hello.method:="My_Hello_Method" //sets the 4D method
 $allowed.Hello.summary:="Hello prints hello world"
  
-$allowed.Byebye:=New object //créer une deuxième fonction avec des paramètres nommée "Byebye"
+$allowed.Byebye:=New object //create a second function with parameters named "Byebye"
 $allowed.Byebye.method:="My_ByeBye_Method"
 $allowed.Byebye.parameters:=New collection
 $allowed.Byebye.parameters.push(New object("name";"Message";"type";Is text))

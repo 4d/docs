@@ -9,11 +9,16 @@ title: VP SET FORMULA
 
 <!-- REF #_method_.VP SET FORMULA.Params -->
 
-| 引数            | 型      |    | 説明               |                  |
-| ------------- | ------ | -- | ---------------- | ---------------- |
-| rangeObj      | Object | -> | レンジオブジェクト        |                  |
-| formula       | Text   | -> | フォーミュラまたは 4Dメソッド |                  |
-| formatPattern | Text   | -> | フィールドのフォーマット     | <!-- END REF --> |
+<div class="no-index">
+
+| 引数            | 型      |    | 説明               |
+| ------------- | ------ | -- | ---------------- |
+| rangeObj      | Object | -> | レンジオブジェクト        |
+| formula       | Text   | -> | フォーミュラまたは 4Dメソッド |
+| formatPattern | Text   | -> | フィールドのフォーマット     |
+
+</div>
+<!-- END REF -->
 
 ## 説明
 

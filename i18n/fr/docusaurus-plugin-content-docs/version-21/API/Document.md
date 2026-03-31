@@ -433,6 +433,8 @@ Cette propriété est en **lecture seule**.
 
 <!-- REF #document.copyTo().Params -->
 
+<div class="no-index">
+
 | Paramètres         | Type                      |                             | Description                                        |
 | ------------------ | ------------------------- | :-------------------------: | -------------------------------------------------- |
 | dossierDestination | 4D.Folder |              ->             | Dossier de destination                             |
@@ -440,6 +442,7 @@ Cette propriété est en **lecture seule**.
 | overwrite          | Integer                   |              ->             | `fk overwrite` pour écraser les éléments existants |
 | Résultat           | 4D.File   | <- | Fichier copié                                      |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -489,10 +492,13 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 <!-- REF #document.getContent().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type                    |                             | Description        |
 | ---------- | ----------------------- | --------------------------- | ------------------ |
 | Résultat   | 4D.Blob | <- | Contenu du fichier |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -533,11 +539,14 @@ Pour sauvegarder le contenu d'un document dans un champ `BLOB` :
 
 <!-- REF #document.getIcon().Params -->
 
+<div class="no-index">
+
 | Paramètres | Type    |                             | Description                                                       |
 | ---------- | ------- | --------------------------- | ----------------------------------------------------------------- |
 | size       | Integer | ->                          | Longueur du côté de l'image retournée (pixels) |
 | Résultat   | Picture | <- | Icône                                                             |
 
+</div>
 <!-- END REF -->
 
 #### Description
@@ -570,6 +579,8 @@ Si le fichier n'existe pas sur disque, une icône par défaut vide est retourné
 
 <!-- REF #document.getText().Params -->
 
+<div class="no-index">
+
 | Paramètres  | Type    |                             | Description                               |
 | ----------- | ------- | --------------------------- | ----------------------------------------- |
 | charSetName | Text    | ->                          | Nom du jeu de caractères                  |
@@ -577,6 +588,7 @@ Si le fichier n'existe pas sur disque, une icône par défaut vide est retourné
 | breakMode   | Integer | ->                          | Mode de traitement des retours à la ligne |
 | Résultat    | Text    | <- | Texte du document                         |
 
+</div>
 <!-- END REF -->
 
 #### Description

@@ -9,10 +9,15 @@ title: VP Convert from 4D View
 
 <!-- REF #_method_.VP Convert from 4D View.Params -->
 
-| Parámetros     | Tipo   |                             | Descripción                        |
-| -------------- | ------ | --------------------------- | ---------------------------------- |
-| 4DViewDocument | Blob   | ->                          | Documento 4D View                  |
-| Resultado      | Object | <- | Objeto 4D View Pro<!-- END REF --> |
+<div class="no-index">
+
+| Parámetros     | Tipo   |                             | Descripción        |
+| -------------- | ------ | --------------------------- | ------------------ |
+| 4DViewDocument | Blob   | ->                          | Documento 4D View  |
+| Resultado      | Object | <- | Objeto 4D View Pro |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 
@@ -27,7 +32,7 @@ En el parámetro *4DViewDocument*, pase una variable o un campo BLOB que conteng
 Quiere obtener un objeto 4D View Pro a partir de un área 4D View almacenada en un BLOB:
 
 ```4d
-C_OBJECT($vpObj)
+var $vpObj : Object
 $vpObj:=VP Convert from 4D View($pvblob)
 ```
 

@@ -63,5 +63,5 @@ $frameGet: :=WP Get frame(*;"WParea")
 
 ## Ver também 
 
-[WP Get footer](wp-get-footer.md)  
-[WP SET FRAME](wp-set-frame.md)  
+[WP Get footer](../commands/wp-get-footer)  
+[WP SET FRAME](../commands/wp-set-frame)  

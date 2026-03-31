@@ -17,7 +17,7 @@ Vous pouvez définir des propriétés standard (texte, couleur de fond, etc.) po
 
 ## Événements de formulaire pris en charge {#supported-form-events}
 
-| Evénement formulaire | Propriétés supplémentaires renvoyées (voir [Form event](../commands/form-event.md) pour les propriétés principales)                                                                                                                                                                                 | Commentaires                                                                                                                                                                       |
+| Evénement formulaire | Propriétés supplémentaires renvoyées (voir [Form event](../commands/form-event) pour les propriétés principales)                                                                                                                                                                                    | Commentaires                                                                                                                                                                       |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | On After Edit        | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>                                                                                                                         |                                                                                                                                                                                    |
 | On After Keystroke   | <ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>                                                                                                                         |                                                                                                                                                                                    |
@@ -52,7 +52,7 @@ La list box suivante a été définie à l'aide d'un tableau d'objets :
 
 ### Configurer une colonne tableau d'objets
 
-Pour affecter un tableau d'objets à une colonne de list box, il suffit de définir le nom du tableau d'objets soit dans la liste des propriétés (champ "Nom de la variable"), soit à l'aide de la commande [`LISTBOX INSERT COLUMN`](../commands-legacy/listbox-insert-column.md), comme pour toute autre colonne basée sur un tableau. Dans la Liste des propriétés, vous pouvez sélectionner Objet comme "Type de variable" pour la colonne :
+Pour affecter un tableau d'objets à une colonne de list box, il suffit de définir le nom du tableau d'objets soit dans la liste des propriétés (champ "Nom de la variable"), soit à l'aide de la commande [`LISTBOX INSERT COLUMN`](../commands/listbox-insert-column), comme pour toute autre colonne basée sur un tableau. Dans la Liste des propriétés, vous pouvez sélectionner Objet comme "Type de variable" pour la colonne :
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_config.png)
 
@@ -322,7 +322,7 @@ Vous voulez afficher une combo box basée sur une énumération nommée "colors"
 Vous pouvez utiliser des attributs spécifiques afin d'associer des unités aux valeurs des cellules (par exemple "10 cm", "20 pixels", etc.). Pour définir une liste d'unités, vous pouvez utiliser l'un des attributs suivants :
 
 - "unitsList" : un tableau contenant les x éléments définissant les unités disponibles (ex : "cm", "pouces", "km", "miles", etc.). Utilisez cet attribut pour définir des unités dans l'objet.
-- "unitsListReference" : une référence de liste 4D contenant les unités disponibles. "unitsListReference" : une référence de liste 4D contenant les unités disponibles.
+- "unitsListReference" : une référence de liste 4D contenant les unités disponibles. Use this attribute to define units with a 4D list created with the [`New list`](../commands/new-list) command.
 - "unitsListName" : un nom d'énumération 4D créée en mode Développement contenant les unités disponibles. Utilisez cet attribut pour définir des unités à l'aide d'une énumération 4D créée dans la Boîte à outils.
 
 Quel que soit son mode de définition, la liste d'unités peut être associée à l'attribut suivant :
@@ -410,3 +410,4 @@ Plusieurs événements peuvent être gérés lors de l'utilisation d'une listbox
   - case à cocher (passage cochée/non cochée)
 - **Sur clic** : Lorsque l'utilisateur clique sur un bouton installé à l'aide de l'attribut *valueType*, un événement `On Clicked` est généré. Cet événement doit être ensuite géré par le programmeur.
 - **Sur clic alternatif** : Lorsque l'utilisateur clique sur un bouton d'ellipse (attribut "alternateButton"), un événement `On Alternative Click` est généré. Cet événement doit être ensuite géré par le programmeur.
+

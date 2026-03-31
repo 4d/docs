@@ -41,7 +41,7 @@ Un contexte de données ne peut être utilisé uniquement dans le process où il
 * Lorsque vous utilisez le contexte de données dans des formules calculées d'un autre process, il est *null* et **This.data** est indéfini.
 * Si vous définissez un contexte de données qui a déjà été défini pour le même document dans un autre process, une erreur est générée.
 
-Afin de calculer des formules avec différents contextes de données dans différents process (c'est-à-dire générer différentes factures à partir du même document modèle), il est recommandé de dupliquer le document en utilisant [WP New](wp-new.md) dans chacun de ces process pour éviter toute erreur. A noter que le contexte de données n'est pas copié lorsque vous dupliquez un document.
+Afin de calculer des formules avec différents contextes de données dans différents process (c'est-à-dire générer différentes factures à partir du même document modèle), il est recommandé de dupliquer le document en utilisant [WP New](../commands/wp-new) dans chacun de ces process pour éviter toute erreur. A noter que le contexte de données n'est pas copié lorsque vous dupliquez un document.
 
 ## Exemple 1 
 
@@ -93,6 +93,6 @@ L'exemple suivant fait une boucle à travers une *entity selection* et crée un 
 
 ## Voir aussi 
 
-  
-[WP COMPUTE FORMULAS](wp-compute-formulas.md)  
-[WP Get data context](wp-get-data-context.md)  
+[Blog post - 4D Write Pro: Dynamically Fill Tables with Entity Selections & Collections](https://blog.4d.com/4d-write-pro-dynamically-fill-tables-with-entity-selections-collections/)    
+[WP COMPUTE FORMULAS](../commands/wp-compute-formulas)  
+[WP Get data context](../commands/wp-get-data-context)  

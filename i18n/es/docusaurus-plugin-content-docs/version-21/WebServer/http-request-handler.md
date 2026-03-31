@@ -26,7 +26,7 @@ Los manejadores de peticiones HTTP personalizadas están soportados en el siguie
 
 Since HTTP Request handler functions are called from standard web requests (they do not contain `/rest/xxx` pattern like REST requests), they are not subject to the [**Force login**](../REST/authUsers.md#force-login-mode) rules. It means that they can be executed without prior authentication, i.e. without a call to [`setPrivileges()`](../API/SessionClass.md#setprivileges) on the session, in which case they will be executed in a *guest* session.
 
-However, these functions need to have appropriate **permissions**, like all requests executed from web processes. When the handler function is called, the **privileges** of its web session must allow the code to run properly. Cualquier otro recurso al que se acceda dentro del código (datos, otras funciones...) también deben estar permitidos por los permisos.
+Sin embargo, estas funciones necesitan tener **permisos** apropiados, como todas las peticiones ejecutadas desde procesos web. When the handler function is called, the **privileges** of its web session must allow the code to run properly. Cualquier otro recurso al que se acceda dentro del código (datos, otras funciones...) también deben estar permitidos por los permisos.
 
 In [*restricted mode by default*](../ORDA/privileges.md#restriction-modes), if a HTTP Request handler can open a new, unauthenticated session (which is the case for example when your application provides **deep linking** feature), you need to make sure that the *guest* privilege is allowed to execute the handler function and access all subsequent resources.
 

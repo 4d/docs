@@ -52,7 +52,7 @@ El comando QUERY BY SQL es similar al comando [QUERY BY FORMULA](query-by-formul
 
 **Nota:** el comando QUERY BY SQL no puede utilizarse en el contexto de una conexión SQL externa; él contacta el motor SQL integrado de 4D directamente. 
 
-QUERY BY SQL aplica *formulaSQL* a cada registro de la selección de la tabla. *formulaSQL* es una expresión booleana que debe devolver [True](true.md "True") o [False](false.md "False"). Como sabe, en el estándar SQL, una condición de búsqueda puede tener un resultado [True](true.md "True"), [False](false.md "False") o [NULL](null.md "NULL"). Todos los registros (filas) donde la condición de búsqueda devuelva [True](true.md "True") se incluyen en la nueva selección actual.
+QUERY BY SQL aplica *formulaSQL* a cada registro de la selección de la tabla. *formulaSQL* es una expresión booleana que debe devolver [True](../commands/true) o [False](../commands/false). Como sabe, en el estándar SQL, una condición de búsqueda puede tener un resultado [True](../commands/true), [False](../commands/false) o [NULL](null.md "NULL"). Todos los registros (filas) donde la condición de búsqueda devuelva [True](../commands/true) se incluyen en la nueva selección actual.
 
 La expresión *formulaSQL* puede ser simple, como la comparación de un campo (columna) con un valor; o compleja, como un cálculo. Como [QUERY BY FORMULA](query-by-formula.md "QUERY BY FORMULA"), QUERY BY SQL puede evaluar la información en las tablas relacionadas (ver el ejemplo 4). *formulaSQL* debe ser una instrucción SQL válida, conforme con el estándar SQL-2 y con respecto a las limitaciones actuales de implementación del SQL en 4D. Para mayor información sobre soporte SQL en 4D, consulte el manual 4D SQL.
 

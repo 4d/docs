@@ -41,6 +41,6 @@ Vous souhaitez créer un en-tête pour les pages de droite d'une section :
 
 ## Voir aussi 
 
-[WP DELETE HEADER](wp-delete-header.md)  
-[WP Get header](wp-get-header.md)  
-[WP New footer](wp-new-footer.md)  
+[WP DELETE HEADER](../commands/wp-delete-header)  
+[WP Get header](../commands/wp-get-header)  
+[WP New footer](../commands/wp-new-footer)  

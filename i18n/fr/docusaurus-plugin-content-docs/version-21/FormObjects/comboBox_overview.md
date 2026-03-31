@@ -23,7 +23,7 @@ Un [objet ](../Concepts/dt_object.md) encapsulant une [collection ](../Concepts/
 
 | Propriété      | Type                   | Description                                                                                                                                                                                                                                                                                      |
 | -------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `valeurs`      | Collection             | Obligatoire - Collection de valeurs scalaires. Toutes les valeurs doivent être du même type. Types pris en charge:<li>chaînes de caractères</li><li>nombres</li><li>dates</li><li>heures</li>Si vide ou non défini, la liste déroulante est vide |
+| `values`       | Collection             | Obligatoire - Collection de valeurs scalaires. Toutes les valeurs doivent être du même type. Types pris en charge:<li>chaînes de caractères</li><li>nombres</li><li>dates</li><li>heures</li>Si vide ou non défini, la liste déroulante est vide |
 | `currentValue` | identique à Collection | Texte saisi par l'utilisateur                                                                                                                                                                                                                                                                    |
 
 Si l'objet contient d'autres propriétés, elles sont ignorées.

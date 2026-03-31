@@ -16,7 +16,7 @@ O conteúdo de um objeto formulário lista hierárquica pode ser inicializado de
 - Associar uma [lista de opções](properties_DataSource.md#choice-list) existente ao objeto. A lista de opções deve ter sido definida no editor de listas no modo Desenho.
 - Atribuir diretamente uma referência de lista hierárquica à [variável ou expressão](properties_Object.md#variable-or-expression) associada ao objeto formulário.
 
-Em ambos os casos, você gerencia uma lista hierárquica em tempo de execução através de sua referência *ListRef*, usando os comandos de [lista hierárquica](../commands/theme/Hierarchical_Lists.md) na linguagem 4D.
+Em ambos os casos, você gerencia uma lista hierárquica em tempo de execução através de sua referência *ListRef*, usando os comandos de [lista hierárquica](../commands/theme/Hierarchical_Lists) na linguagem 4D.
 
 ## RefList e nome de objeto
 

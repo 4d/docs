@@ -5,7 +5,7 @@ title: EntitySelection
 
 Une entity selection est un objet contenant une ou plusieurs référence(s) à des [entités](ORDA/dsMapping.md#entity) appartenant à la même [Dataclass](ORDA/dsMapping.md#dataclass). Une entity selection peut contenir 0, 1 ou X entités de la dataclass - où X peut représenter le nombre total d'entités contenues dans la dataclass.
 
-Les entity selections peuvent être créées à partir de sélections existantes en utilisant diverses fonctions de la classe [`DataClass`](DataClassClass.md) telles que [`.all()`](DataClassClass.md#all) ou [`.query()`](DataClassClass.md#query), ou des fonctions de la classe `EntityClass` elle-même, telles que [`.and()`](#and) ou [`orderBy()`](#orderby). Vous pouvez également créer des entity selections vierges à l'aide de la fonction [`dataClass.newSelection()`](DataClassClass.md#newselection) ou de la commande [`Create entity selection`](../commands/create-entity-selection.md).
+Les entity selections peuvent être créées à partir de sélections existantes en utilisant diverses fonctions de la classe [`DataClass`](DataClassClass.md) telles que [`.all()`](DataClassClass.md#all) ou [`.query()`](DataClassClass.md#query), ou des fonctions de la classe `EntityClass` elle-même, telles que [`.and()`](#and) ou [`orderBy()`](#orderby). Vous pouvez également créer des entity selections vierges à l'aide de la fonction [`dataClass.newSelection()`](DataClassClass.md#newselection) ou de la commande [`Create entity selection`](../commands/create-entity-selection).
 
 ### Sommaire
 
@@ -49,7 +49,7 @@ Les entity selections peuvent être créées à partir de sélections existantes
 
 #### Voir également
 
-[`USE ENTITY SELECTION`](../commands/use-entity-selection.md)
+[`USE ENTITY SELECTION`](../commands/use-entity-selection)
 
 <!-- REF EntitySelectionClass.index.Desc -->
 
@@ -198,7 +198,7 @@ L'objet résultant est une entity selection de la dataclass Employee sans doublo
 
 | Paramètres      | Type                               |                             | Description                                                      |
 | --------------- | ---------------------------------- | :-------------------------: | ---------------------------------------------------------------- |
-| entity          | 4D.Entity          |              ->             | Entité à ajouter à l'entity selection                            |
+| entité          | 4D.Entity          |              ->             | Entité à ajouter à l'entity selection                            |
 | entitySelection | 4D.EntitySelection |              ->             | Entity selection à ajouter à l'entity selection d'origine        |
 | Résultat        | 4D.EntitySelection | <- | Entity selection incluant l'*entity* ou *entitySelection*ajoutée |
 
@@ -290,7 +290,7 @@ $sellist2:=$sellist2.add($sellist1)
 
 | Paramètres      | Type                               |                             | Description                                                                      |
 | --------------- | ---------------------------------- | :-------------------------: | -------------------------------------------------------------------------------- |
-| entity          | 4D.Entity          |              ->             | Entité à intersecter                                                             |
+| entité          | 4D.Entity          |              ->             | Entité à intersecter                                                             |
 | entitySelection | 4D.EntitySelection |              ->             | Entity selection à intersecter                                                   |
 | Résultat        | 4D.EntitySelection | <- | Entity selection résultante de l'intersection à l'aide de l'opérateur logique ET |
 
@@ -517,7 +517,7 @@ $sel2:=$sel.clean()
 
 | Paramètres | Type                      |                             | Description                                                  |
 | ---------- | ------------------------- | :-------------------------: | ------------------------------------------------------------ |
-| entity     | 4D.Entity |              ->             | Entité à évaluer                                             |
+| entité     | 4D.Entity |              ->             | Entité à évaluer                                             |
 | Résultat   | Boolean                   | <- | Vrai si l'entité appartient à l'entity selection, sinon Faux |
 
 </div>
@@ -686,11 +686,11 @@ Cette entity selection est ensuite mise à jour avec les produits et vous souhai
 
 <div class="no-index">
 
-| Paramètres    | Type       |                             | Description                                                             |
-| ------------- | ---------- | :-------------------------: | ----------------------------------------------------------------------- |
-| attributePath | Text       |              ->             | Chemin de l'attribut dont vous souhaitez obtenir les valeurs distinctes |
-| options       | Integer    |              ->             | `dk diacritical`, `dk count values`                                     |
-| Résultat      | Collection | <- | Collection avec seulement les valeurs distinctes                        |
+| Paramètres    | Type       |                             | Description                                                     |
+| ------------- | ---------- | :-------------------------: | --------------------------------------------------------------- |
+| attributePath | Text       |              ->             | Chemin de propriété d'objet à utiliser pour évaluer les valeurs |
+| options       | Integer    |              ->             | `dk diacritical`, `dk count values`                             |
+| Résultat      | Collection | <- | Collection avec seulement les valeurs distinctes                |
 
 </div>
 <!-- END REF -->
@@ -1127,7 +1127,7 @@ Le code générique suivant duplique toutes les entités de l'entity selection :
 
 La fonction `.getRemoteContextAttributes()`<!-- REF #EntitySelectionClass.getRemoteContextAttributes().Summary -->retourne des informations sur le contexte d'optimisation utilisé par l'entity selection<!-- END REF -->.
 
-If there is no [optimization context](../ORDA/client-server-optimization.md) for the entity selection, the function returns an empty Text.
+S'il n'existe pas de [contexte d'optimisation](../ORDA/client-server-optimization.md) pour l'entity selection, la fonction retourne un texte vide.
 
 #### Exemple
 
@@ -1368,7 +1368,7 @@ Les entity selections ont toujours une propriété `.length`.
 
 La fonction `.max()` <!-- REF #EntitySelectionClass.max().Summary -->retourne la valeur la plus élevée (ou maximale) parmi toutes les valeurs de *attributePath* dans l'entity selection<!-- END REF -->. En fait, elle retourne la valeur de la dernière entité de l'entity selection si elle était triée par ordre croissant en utilisant la fonction [`.orderBy()`](#orderby).
 
-Si vous passez dans *attributePath* un chemin vers une propriété objet contenant différents types de valeurs, la fonction `.max()` retournera la valeur maximale du premier type scalaire dans l'ordre par défaut de la liste des types 4D (voir la description de [`.sort()`](CollectionClass.md#sort)).
+Si vous passez dans *attributePath* un chemin vers une propriété d'objet contenant différents [types de valeurs](../Concepts/data-types.md), la fonction `.max()` renverra la valeur maximale du premier type de scalaire conformément aux [principes de tri de 4D](../Concepts/ordering.md).
 
 `.max()` retourne **undefined** si l'entity selection est vide ou si *attributePath* n'est pas trouvé dans l'attribut objet.
 
@@ -1421,7 +1421,7 @@ Nous souhaitons connaître le salaire le plus élevé parmi les employées :
 
 La fonction `.min()` <!-- REF #EntitySelectionClass.min().Summary --> retourne la plus faible valeur (ou valeur minimale) parmi toutes les valeurs de attributePath dans l'entity selection<!-- END REF -->.  En fait, elle retourne la première entité de l'entity selection si elle était triée par ordre croissant en utilisant la fonction [`.orderBy()`](#orderby) (en excluant les valeurs **null**).
 
-Si vous passez dans *attributePath* un chemin vers une propriété objet contenant différents types de valeurs, la fonction `.min()` retournera la valeur minimale du premier type de valeur scalaire dans l'ordre de la liste des types (voir la description de [`.sort()`](CollectionClass.md#sort)).
+Si vous passez dans *attributePath* un chemin vers une propriété d'objet contenant différents [types de valeurs](../Concepts/data-types.md), la fonction `.min()` renverra la valeur minimale du premier type de scalaire conformément aux [principes de tri de 4D](../Concepts/ordering.md).
 
 `.min()` retourne **undefined** si l'entity selection est vide ou si *attributePath* n'est pas trouvé dans l'attribut objet.
 
@@ -1464,7 +1464,7 @@ Nous souhaitons connaître le salaire le plus bas parmi les employées :
 
 | Paramètres      | Type                               |                             | Description                                                                                                      |
 | --------------- | ---------------------------------- | :-------------------------: | ---------------------------------------------------------------------------------------------------------------- |
-| entity          | 4D.Entity          |              ->             | Entité à soustraire                                                                                              |
+| entité          | 4D.Entity          |              ->             | Entité à soustraire                                                                                              |
 | entitySelection | 4D.EntitySelection |              ->             | Entity selection à soustraire                                                                                    |
 | keepOrder       | Integer                            |              ->             | `dk keep ordered` (integer) pour conserver l'ordre initial dans l'entity selection résultante |
 | Résultat        | 4D.EntitySelection | <- | Nouvelle entity selection ou une nouvelle référence sur l'entity selection existante                             |
@@ -1549,7 +1549,7 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 
 | Paramètres      | Type                               |                             | Description                                                                    |
 | --------------- | ---------------------------------- | :-------------------------: | ------------------------------------------------------------------------------ |
-| entity          | 4D.Entity          |              ->             | Entité à intersecter                                                           |
+| entité          | 4D.Entity          |              ->             | Entité à intersecter                                                           |
 | entitySelection | 4D.EntitySelection |              ->             | Entity selection à intersecter                                                 |
 | Résultat        | 4D.EntitySelection | <- | Nouvelle entity selection ou nouvelle référence à l'entity selection d'origine |
 
@@ -1651,7 +1651,7 @@ Par défaut, les attributs sont triés par ordre croissant ("descending" est fal
 
 Vous pouvez ajouter autant d'objets que nécessaire dans la collection de critères.
 
-> Les valeurs nulles sont évaluées comme étant inférieures aux autres valeurs.
+Si les attributs de l'entity selection contiennent des valeurs de différents [types](../Concepts/data-types.md), ils seront triés selon les [principes de tri de 4D](../Concepts/ordering.md).
 
 Si vous passez un chemin d'attribut non valide dans *pathString* ou *pathObject*, la fonction renvoie une entity selection vide.
 
@@ -2726,3 +2726,4 @@ $employeesCollection:=$employees.toCollection("firstName, lastName, directReport
 ```
 
 <!-- END REF -->
+

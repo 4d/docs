@@ -43,7 +43,7 @@ Se quiser importar uma folha de estilo de modelo e receber uma notificação com
 
 ## Ver também 
 
-[WP DELETE STYLE SHEET](wp-delete-style-sheet.md)  
-[WP Get style sheet](wp-get-style-sheet.md)  
+[WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet)  
+[WP Get style sheet](../WritePro/commands/wp-get-style-sheet)  
 [WP Get style sheets](wp-get-style-sheets.md)  
-[WP New style sheet](wp-new-style-sheet.md)  
+[WP New style sheet](../WritePro/commands/wp-new-style-sheet)  

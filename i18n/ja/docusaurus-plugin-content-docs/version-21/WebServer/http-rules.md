@@ -1,95 +1,95 @@
 ---
 id: http-rules
-title: HTTP Rules
+title: HTTP ルール
 ---
 
-You can define HTTP rules to control HTTP response headers for any requests received by the 4D web server, including REST requests. You can add, modify, or remove HTTP headers, send redirections or set the HTTP status. This feature is useful to implement security policies based upon the handling of headers.
+4D Web サーバーで受信される任意のリクエスト(REST リクエストも含めます)に対してHTTP レスポンスヘッダーを管理するHTTP ルールを定義することができます。 HTTP ヘッダーの追加、変更、削除、リダイレクトの送信あるいはHTTP ステータスの設定などを行うことができます。 この機能はヘッダの管理に基づいてセキュリティポリシーを実装したい様な場合に有用です。
 
-To define HTTP rules, you just need to write some RegEx to declare the URL patterns you want to control, as well as how to modify response headers. You can set these rules using a `HTTPRules.json` file stored in the project folder, or using the *settings* parameter [`start()`](../API/WebServerClass.md#start) function of the web server object.
+HTTP ルールを定義するためには、管理したいURL パターンを宣言するための正規表現を書くのに加えて、レスポンスヘッダーの編集の方法を定義します。 これらのルールは、プロジェクトフォルダ内に保存されている`HTTPRules.json` ファイルを使用するか、あるいはWeb サーバーオブジェクトの[`start()`](../API/WebServerClass.md#start) 関数の*settings* 引数を使用することで設定可能です。
 
 ## 要件
 
-HTTP rules are supported in the following contexts:
+HTTP ルールは以下のコンテキストでサポートされています:
 
-- [scalable sessions](./sessions.md#enabling-web-sessions) or [no sessions](../settings/web.md#no-sessions) are enabled,
-- a web server run locally by 4D or 4D Server, including those [run by components](./webServerObject.md).
+- [スケーラブルセッション](./sessions.md#enabling-web-sessions) あるいは [セッションなし](../settings/web.md#セッションなし) が有効化されている
+- 4D あるいは4D Server 上でローカルに実行中のWeb サーバー([コンポーネントで実行されてるもの](./webServerObject.md) も含めます)。
 
-## How to set rules
+## ルールの設定方法
 
-You can declare HTTP response rules:
+以下の方法で、HTTP レスポンスルールを宣言することができます:
 
-- in a configuration file named **HTTPRules.json** stored in the [`Project/Sources`](../Project/architecture.md#sources) folder of the project. Rules are loaded and applied in the main Web server once it is started.
-- using a [`.rules`](../API/WebServerClass.md#rules) property set in the *settings* parameter of the [`start()`](../API/WebServerClass.md#start) function, for any web server object:
+- プロジェクトの[`Project/Sources`](../Project/architecture.md#sources) フォルダ内に保存されている**HTTPRules.json** という名前の設定ファイルを使用する。 設定したルールは、Web サーバーが起動したときにロードされて適用されます。
+- 任意のWeb サーバーオブジェクトに対して、[`start()`](../API/WebServerClass.md#start) 関数の*settings* 引数内で設定された[`.rules`](../API/WebServerClass.md#rules) プロパティを使用する:
 
 ```4d
-WEB Server.start($settings.rules) //set rules at web server startup
+WEB Server.start($settings.rules) //Web サーバー開始時にルールを設定する
 ```
 
-If both a **HTTPRules.json** file and a call to the [`WEB Server`](../commands/web-server.md) command with a valid `$settings.rules` are used, the `WEB Server` command has priority.
+**HTTPRules.json** ファイルと、有効な`$settings.rules` を持った [`WEB Server`](../commands/web-server.md) コマンドの両方が呼び出された場合、`WEB Server` コマンドの方が優先されます。
 
-If the URI of the request does not match any of the RegEx patterns, the web server returns a default response.
+リクエストのURI がRegEx(正規表現)パターンのいずれにも合致しない場合、Web サーバーはデフォルトのレスポンスを返します。
 
-## Rules Definition
+## ルールの定義
 
-The **HTTPRules.json** file or the [`.rules`](../API/WebServerClass.md#rules) property must contain a collection of **rule objects**.
+**HTTPRules.json** ファイルまたは[`.rules`](../API/WebServerClass.md#rules) プロパティは、**ルールオブジェクト** のコレクションを格納している必要があります。
 
-A rule object is defined by:
+ルールオブジェクトは以下の様に定義されます:
 
-- a RegEx describing a URL pattern, e.g. "^(.\*\\.(jpg|jpeg|png|gif))"
-- the name of the action to execute for the HTTP response, e.g. "removeHeaders"
-- the value of the action, e.g. "X-Unwanted-Header1"
+- URL パターンを記述するRegEx(正規表現)。例: "^(.\*\\.(jpg|jpeg|png|gif))"
+- HTTP レスポンスに対して実行するアクションの名前。例: "removeHeaders"
+- アクションの値。例: "X-Unwanted-Header1"
 
-Other properties are ignored.
+その他のプロパティは無視されます。
 
 ### URL パターン
 
-URL patterns are given using **regular expressions**. To declare a regular expression pattern, use the "RegExPattern" property name.
+URL パターンは、**正規表現** を使用して与えられます。 正規表現パターンを宣言するためには、"RegExPattern" プロパティ名を使用します。
 
-Ex: `"RegExPattern": "/Test/Authorized/(.*)"`
+例: `"RegExPattern": "/Test/Authorized/(.*)"`
 
-When the web server receives a request, **all** URL patterns are triggered sequentially in the given order, and all matching patterns are executed. In case of several actions modifying similar resources, the last executed action is taken into account.
+Web サーバーがリクエストを受信すると、**すべての** URL パターンが指定された順番で順次トリガーされ、全ての合致するパターンが実行されます。 複数のアクションが同様のリソースを編集しようとした場合、最後に実行されたアクションのみが考慮されます。
 
 ### アクション
 
-The following action keywords are supported:
+以下のアクションキーワードがサポートされています:
 
-| キーワード           | 値の型                         | 説明                                                                                                                                                                                                                                            |
-| --------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `removeHeaders` | Text or Collection of texts | Header(s) to remove from the HTTP responses. If a header to remove does not exist in the response header, it is ignored.                                                                   |
-| `addHeaders`    | Object                      | Name (text) and value (text) of header(s) to add to the HTTP responses.                                                                                              |
-| `setHeaders`    | Object                      | Name (text) and value (text) of header(s) to modify in the HTTP responses. If a header to modify does not exist in the response header, it is added. |
-| `denyAccess`    | Boolean                     | true to deny access to the resource, false to allow access. When the access to a resource is denied, the web server returns a 403 status by default                                                                           |
-| `redirect`      | Text                        | Redirection URL. When a redirection is triggered, the web server returns a 302 status by default                                                                                                                              |
-| `status`        | Number                      | HTTP status                                                                                                                                                                                                                                   |
+| キーワード        | 値の型                | 説明                                                                                                                           |
+| ------------ | ------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| Description  | テキストまたはテキストのコレクション | HTTP レスポンスから削除するヘッダー。 削除するヘッダーがレスポンスヘッダー内に存在しない場合は無視されます。                                                                    |
+| `addHeaders` | Object             | HTTP レスポンスに追加するヘッダーのname(テキスト)とvalue(テキスト)。                                            |
+| `setHeaders` | Object             | HTTP レスポンス内で編集するヘッダーのname (テキスト)とvalue (テキスト)。 編集するヘッダーがレスポンスヘッダー内に存在しない場合は、それが追加されます。 |
+| `denyAccess` | Boolean            | リソースへのアクセスを今日日するにはtrue、アクセスを許可するにはfalse。 リソースへのアクセスが拒否された場合、Web サーバーはデフォルトで403 ステータスを返します。                                   |
+| `redirect`   | Text               | リダイレクト URL。 リダイレクトがトリガーされた場合、Web サーバーはデフォルトで302 ステータスを返します。                                                                  |
+| `status`     | Number             | HTTP ステータス                                                                                                                   |
 
-### Non-modifiable headers
+### 変更不可なヘッダー
 
-Some headers could not be added, modified or removed:
+一部のヘッダーは追加、変更、削除ができません:
 
-| Header           | 追加 | Set        | Reduce |
-| ---------------- | -- | ---------- | ------ |
-| Date             | ×  | ×          | ×      |
-| Content-Length   | ×  | ×          | ×      |
-| Content-Encoding | ×  | ×          | ×      |
-| Vary             | ◯  | ×          | ×      |
-| Set-Cookie       | ◯  | Add cookie | ×      |
+| ヘッダー             | 追加 | 設定           | 削除 |
+| ---------------- | -- | ------------ | -- |
+| Date             | ×  | ×            | ×  |
+| Content-Length   | ×  | ×            | ×  |
+| Content-Encoding | ×  | ×            | ×  |
+| Vary             | ◯  | ×            | ×  |
+| Set-Cookie       | ◯  | Cookie を追加する | ×  |
 
-Unauthorized changes on these headers do not generate errors, however modifications will be ignored.
+これらのヘッダーに対する認証されていない変更はエラーを生成することはしませんが、それらの変更は無視されます。
 
-### Current rules
+### 現在のルール
 
-You can know the current rules using the [`.rules` property of the Web Server object](../API/WebServerClass.md#rules):
+[Web サーバーオブジェクトの`.rules` プロパティ](../API/WebServerClass.md#rules) を使用することで、現在のルールを知ることができます:
 
 ```
 var $rules : Collection
-$rules:=WEB Server.rules //current rules
+$rules:=WEB Server.rules //現在のルール
 ```
 
 ## 例題
 
-Rules can be set using a `HTTPRules.json` file or the *settings* parameter of the [`.start()`](../API/WebServerClass.md#start) web server function.
+ルールは、`HTTPRules.json` ファイルまたはWeb サーバー関数の[`.start()`](../API/WebServerClass.md#start) 関数の*settings* 引数を使用することで、設定することができます。
 
-### Using a HTTPRules.json file
+### HTTPRules.json ファイルを使用して設定する
 
 ```json
 
@@ -153,7 +153,7 @@ Rules can be set using a `HTTPRules.json` file or the *settings* parameter of th
 
 ```
 
-### Using a *settings* parameter
+### *settings* 引数を使用して設定する
 
 ```4d
 var $rule:={}

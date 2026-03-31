@@ -25,18 +25,19 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 
 
 <!-- REF #_command_.MAIL New attachment.Params -->
+<div class="no-index">
 
-| 引数          | 型                 |    | 説明                                                     |
-| ----------- | ----------------- |:--:| ------------------------------------------------------ |
-| path        | Text              | -> | 添付ファイルのパス                                              |
-| blob        | BLOB              | -> | 添付を格納した BLOB                                           |
-| name        | Text              | -> | メールクライアントが添付を指定するのに使用する名前 + 拡張子                        |
-| cid         | Text              | -> | 添付の ID (HTMLメッセージのみ)、あるいは cid が不要な場合は "" (空の文字列)       |
-| type        | Text              | -> | content-type ヘッダーの値                                    |
-| disposition | Text              | -> | content-disposition ヘッダーの値: "inline" あるいは "attachment" |
-| 戻り値         | 4D.MailAttachment | <- | Attachment オブジェクト|<!-- END REF -->
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|path|Text|->|Path of the attachment file|
+|blob|Blob|->|BLOB containing the attachment|
+|name|Text|->|Name + extension used by the mail client to designate the attachment|
+|cid|Text|->|ID of attachment (HTML messages only), or " " if no cid is required|
+|type|Text|->|Value of the content-type header|
+|disposition|Text|->|Value of the content-disposition header: "inline" or "attachment".|
+|Result|4D.MailAttachment|<-|Attachment object|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -161,18 +162,19 @@ $transporter.send($email)
 
 
 <!-- REF #4D.MailAttachment.new().Params -->
+<div class="no-index">
 
-| 引数          | 型                 |    | 説明                                                     |
-| ----------- | ----------------- |:--:| ------------------------------------------------------ |
-| path        | Text              | -> | 添付ファイルのパス                                              |
-| blob        | BLOB              | -> | 添付を格納した BLOB                                           |
-| name        | Text              | -> | メールクライアントが添付を指定するのに使用する名前 + 拡張子                        |
-| cid         | Text              | -> | 添付の ID (HTMLメッセージのみ)、あるいは cid が不要な場合は "" (空の文字列)       |
-| type        | Text              | -> | content-type ヘッダーの値                                    |
-| disposition | Text              | -> | content-disposition ヘッダーの値: "inline" あるいは "attachment" |
-| 戻り値         | 4D.MailAttachment | <- | Attachment オブジェクト|<!-- END REF -->
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|path|Text|->|Path of the attachment file|
+|blob|Blob|->|BLOB containing the attachment|
+|name|Text|->|Name + extension used by the mail client to designate the attachment|
+|cid|Text|->|ID of attachment (HTML messages only), or " " if no cid is required|
+|type|Text|->|Value of the content-type header|
+|disposition|Text|->|Value of the content-disposition header: "inline" or "attachment".|
+|Result|4D.MailAttachment|<-|Attachment object|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -203,11 +205,13 @@ $transporter.send($email)
 
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
-| 引数  | 型    |    | 説明                               |
-| --- | ---- |:--:| -------------------------------- |
-| 戻り値 | BLOB | <- | 添付の中身|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|--- |:---:|------|
+|Result|Blob|<-|Content of the attachment|
+</div>
+<!-- END REF -->
 
 #### 説明
 

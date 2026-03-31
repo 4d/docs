@@ -47,13 +47,13 @@ title: VP SET FROZEN PANES
 左側の最初の 3つのカラム、右側にある 2つのカラム、そして最初の行を固定化します:
 
 ```4d
-C_OBJECT($panes)
-
+var $panes : Object
+ 
 $panes:=New object
 $panes.columnCount:=3
 $panes.trailingColumnCount:=2
 $panes.rowCount:=1
-
+ 
 VP SET FROZEN PANES("ViewProArea";$panes)
 ```
 

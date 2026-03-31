@@ -55,7 +55,7 @@ Vous souhaitez copier l'en-tête de la première page d'un document 4D Write Pro
 ## Voir aussi 
 
 *Utiliser une zone 4D Write Pro*  
-[WP DELETE HEADER](wp-delete-header.md)  
-[WP Get footer](wp-get-footer.md)  
-[WP New header](wp-new-header.md)  
-[WP Text range](wp-text-range.md)  
+[WP DELETE HEADER](../commands/wp-delete-header)  
+[WP Get footer](../commands/wp-get-footer)  
+[WP New header](../commands/wp-new-header)  
+[WP Text range](../commands/wp-text-range)  

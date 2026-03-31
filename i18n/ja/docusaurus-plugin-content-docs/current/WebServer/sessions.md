@@ -10,7 +10,7 @@ Webセッションでは、以下のことが可能です:
 - 同一のWebクライアントからの複数のリクエストを、無制限のプリエンプティブプロセスで同時に処理 (Webセッションは **スケーラブル**です)。
 - `Session` オブジェクトと [Session API](API/SessionClass.md) を介したセッションの管理。
 - セッションの [.storage](../API/SessionClass.md#storage) を使用して、Webクライアントのプロセス間でデータを保存および共有。
-- associate [privileges](../ORDA/privileges.md) to the user running the session.
+- セッションを実行しているユーザーに[権限](../ORDA/privileges.md) を割り当てる。
 
 :::tip 関連したblog 記事
 
@@ -20,7 +20,7 @@ Webセッションでは、以下のことが可能です:
 
 :::note
 
-Destkop applications (client/server and single-user) also provide 4D developers with [specific sessions](../Desktop/sessions.md).
+デスクトップアプリケーション(クライアント/サーバーまたはシングルユーザー)は4D 開発者に[特定のセッション](../Desktop/sessions.md)を提供します。
 
 :::
 
@@ -28,8 +28,9 @@ Destkop applications (client/server and single-user) also provide 4D developers 
 
 Webセッションは次のものに使用されます:
 
-- [Web applications](gettingStarted.md) sending http requests (including [SOAP Web services](../commands/theme/Web_Services_Server.md) and [/4DACTION](../WebServer/httpRequests.md#4daction) requests),
-- calls to the [REST API](../REST/authUsers.md), which are used by [remote datastores](../ORDA/remoteDatastores.md) and [Qodly pages](https://developer.4d.com/qodly/).
+- HTTP リクエスト([SOAP Web サービス](../commands/theme/Web_Services_Server) および [/4DACTION](../WebServer/httpRequests.md#4daction) リクエストを含む)を送信する
+  [Web アプリケーション](gettingStarted.md)
+- [リモートデータストア](../ORDA/remoteDatastores.md) や [Qodly ページ](https://developer.4d.com/qodly/) が使用する [REST API](../REST/authUsers.md) への呼び出し。
 
 ## Webセッションの有効化 {#enabling-web-sessions}
 
@@ -41,7 +42,7 @@ Webセッションは次のものに使用されます:
 
 - Webサーバーオブジェクトの [`.scalableSession`](API/WebServerClass.md#scalablesession) プロパティを使用する ([`.start()`](API/WebServerClass.md#start) 関数に *settings* 引数として渡します）。  この場合、ストラクチャー設定ダイアログボックスで定義されたオプションよりも、Webサーバーオブジェクトの設定が優先されます (ディスクには保存されません)。
 
-> The [`WEB SET OPTION`](../commands-legacy/web-set-option.md) command can also set the session mode for the main Web server.
+> メインの Webサーバーのセッションモードは、[`WEB SET OPTION`](../commands/web-set-option) コマンドを使って設定することもできます。
 
 いずれの場合も、設定はマシンに対しローカルなものです。つまり、4D Server の Webサーバーと、リモートの 4Dマシンの Webサーバーで異なる設定が可能です。
 
@@ -68,11 +69,11 @@ Webセッションは次のものに使用されます:
 
 :::note
 
-Creating a web session for a REST request may require that a license is available, see [this page](../REST/authUsers.md).
+RESTリクエストのための Webセッションを作成するには、利用可能なライセンスが必要な場合があります。詳細は [こちらのページ](../REST/authUsers.md) を参照ください。
 
 :::
 
-カレントセッションの `Session` オブジェクトは、あらゆる Webプロセスのコードにおいて [`Session`](commands/session.md) コマンドを介してアクセスできます。
+カレントセッションの `Session` オブジェクトは、あらゆる Webプロセスのコードにおいて [`Session`](../commands/session) コマンドを介してアクセスできます。
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
 
@@ -89,9 +90,9 @@ Creating a web session for a REST request may require that a license is availabl
 
 非アクティブな cookie の有効期限は、デフォルトでは 60分です。つまり、Webサーバーは、非アクティブなセッションを 60分後に自動的に閉じます。
 
-このタイムアウトは、`Session` オブジェクトの [`.idleTimeout`](API/SessionClass.md#idletimeout) プロパティで設定できます (タイムアウトは 60分未満にはできません)。また、[`Open datastore`](../commands/open-datastore.md)コマンドの *connectionInfo* パラメーターを使っても設定できます。
+このタイムアウトは、`Session` オブジェクトの [`.idleTimeout`](API/SessionClass.md#idletimeout) プロパティで設定できます (タイムアウトは 60分未満にはできません)。また、[`Open datastore`](../commands/open-datastore)コマンドの *connectionInfo* パラメーターを使っても設定できます。
 
-Webセッションが閉じられた後に [`Session`](commands/session.md) コマンドが呼び出されると:
+Webセッションが閉じられた後に [`Session`](../commands/session) コマンドが呼び出されると:
 
 - `Session` オブジェクトには権限が含まれていません (ゲストセッション)。
 - [`.storage`](API/SessionClass.md#storage) プロパティは空です。
@@ -99,7 +100,7 @@ Webセッションが閉じられた後に [`Session`](commands/session.md) コ�
 
 :::info
 
-You can close a session from a Qodly form using the [**logout**](https://developer.4d.com/qodly/4DQodlyPro/force-login#logout) feature.
+[**logout**](https://developer.4d.com/qodly/4DQodlyPro/force-login#logout) 機能を使用することで、Qodly フォームからセッションを閉じることができます。
 
 :::
 
@@ -219,9 +220,9 @@ End if
 
 :::
 
-:::note
+:::info
 
-Session tokens can be shared with [desktop sessions](../Desktop/sessions.md) to implement applications using hybrid sessions.
+Session tokens can also be created from [remote user sessions](../Desktop/sessions.md) and shared with web sessions to implement desktop applications that use web-based interfaces. See [Sharing a remote session for web accesses](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses).
 
 :::
 
@@ -481,12 +482,13 @@ Function validateEmail() : 4D.OutgoingMessage
 - HTTP とHTTPS スキーマの両方がサポートされます。
 - トークンで再使用ができるのは[スケーラブルセッション](#Webセッションの有効化) のみです。
 - 再使用ができるのはホストデータベースのセッションのみです(コンポーネントのWeb サーバーで作成されたセッションは復元することができません)。
-- Tokens can be **shared** with [desktop sessions](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) for hybrid accesses (desktop and web).
+- Tokens can be **shared** with [remote user sessions](../Desktop/sessions.md#sharing-a-remote-session-for-web-accesses) for hybrid accesses (desktop and web).
 
 ### ライフスパン
 
 セッショントークンにはライフスパン(有効期限)があり、またセッション自身にもライフスパンがあります。 セッショントークンのライフスパンは、[トークン作成時](../API/SessionClass.md#createotp) に設定することが可能です。 デフォルトで、トークンのライフスパンは[`.idleTimeout`](../API/SessionClass.md#idletimeout) の値と同じ値となっています。
 
 セッショントークンのライフパンと、セッションのライフスパンの両方がどちらも失効していない場合に限り、トークンを使用してセッションを復元することができます。 それ以外の場合(セッショントークンが失効している、またはセッション自身が失効している)には、セッショントークンをもったWeb リクエストが受信されたときにゲストセッションが作成されます。
+
 
 

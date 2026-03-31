@@ -282,15 +282,15 @@ For application translation purposes, you can enter an XLIFF reference in the ti
 
 #### Objects Supported
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [List Box Header](listbox-header-footer.md#headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [List Box Header](./listbox-header-footer.md#headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
 
 ---
 
 ## Variable Calculation
 
-This property sets the type of calculation to be done in a [column footer](listbox_overview.md#list-box-footers) area.
+This property sets the type of calculation to be done in a [column footer](./listbox-header-footer.md#footers) area.
 
->The calculation for footers can also be set using the [`LISTBOX SET FOOTER CALCULATION`](https://doc.4d.com/4dv19/help/command/en/page1140.html) 4D command.
+>The calculation for footers can also be set using the [`LISTBOX SET FOOTER CALCULATION`](https://doc.4d.com/4dv20/help/command/en/page1140.html) 4D command.
 
 There are several types of calculations available. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
 

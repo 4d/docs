@@ -791,6 +791,254 @@ Reportez-vous à l'exemple 2.
 **Description :** Active ou désactive les optimisations pour RDP (Remote Desktop Protocol). Lorsqu'il est activé, optimise en particulier l'utilisation du presse-papiers partagé dans les connexions RDP, qui peut sinon entraîner des problèmes de blocage. Notez que ce sélecteur désactive la prise en charge dans le presse-papiers des images encodées en tant que data uri dans du texte brut (concerne uniquement les images déposées ou copiées explicitement en tant que texte à partir d'un navigateur). 
 
 
+### Remote connection sleep timeout (98)
+
+**Portée** : Application 4D Server
+
+**Conservé entre deux sessions** : Non
+
+**Valeurs possibles** : Longint positif
+
+**Description** : Délai d'inactivité de la connexion distante courante en secondes. Par défaut, la valeur est 172800 (48 heures).
+
+Le délai d'inactivité est appliqué après qu'une machine exécutant une application distante 4D soit passée en mode veille. Dans ce cas, sa session est maintenue par 4D Server (voir description de la fonctionnalité). 4D Server vérifie toutes les 5 minutes si une application distante 4D en veille a dépassé le délai d'inactivité, auquel cas elle est fermée. Ainsi, le temps d'inactivité maximal autorisé est *délai d'inactivité actuel + 300*. Dans certains cas, vous pouvez vouloir modifier le délai d'inactivité, par exemple pour libérer les enregistrements verrouillés/les licences plus rapidement.
+
+
+
+
+### Server base process stack size (53)
+
+**Portée** : 4D Server
+
+**Conservé entre deux sessions** : Non
+
+**Valeurs possibles** : Longint positif.
+
+**Description** : Taille de la pile allouée à chaque process système préemptif sur le serveur, exprimée en octets. La taille par défaut est déterminée par le système.
+
+Les process système préemptifs (process du type process base client 4D) sont chargés pour contrôler les process clients 4D principaux. La taille allouée par défaut à la pile de chaque process préemptif permet une bonne facilité d'exécution mais peut s'avérer conséquente quand de très grand nombres de process (plusieurs centaines) sont créés.
+
+À titre d'optimisation, cette taille peut être réduite considérablement si les opérations effectuées par la base de données le permettent (par exemple, si la base de données ne fait pas de tri de grandes quantités d'enregistrements). Des valeurs de 512 voire 256 KB sont possibles. Attention, un dimensionnement insuffisant de la pile est critique et peut endommager le fonctionnement de 4D Server. Le paramétrage de ce paramètre doit être effectué avec prudence et doit tenir compte des conditions d'utilisation de la base (nombre d'enregistrements, type d'opérations, etc.).
+
+Pour être pris en compte, ce paramètre doit être exécuté sur la machine serveur (par exemple dans la *Méthode base On Server Startup*).
+
+
+
+
+### SMTP Log (110)
+
+**Thread-safe** : Oui
+
+**Portée** : 4D local, 4D Server*
+
+**Conservé entre deux sessions** : Non
+
+**Valeurs possibles** : 0 ou de 1 à X (0 = ne pas enregistrer, 1 à X = numéro séquentiel, ajouté au nom du fichier). Par défaut, la valeur est 0 (échanges SMTP non enregistrés).
+
+**Description** : Démarre ou arrête l'enregistrement des échanges entre 4D et le serveur SMTP, lorsqu'un objet *transporter* est traité via *transporter.send()* ou *SMTP\_transporter.checkConnection()*. Par défaut, la valeur est 0 (échanges non enregistrés). Quand ce mécanisme est activé, un fichier journal est créé dans le dossier Logs de la base. Il est nommé 4DSMTPLog\_X.txt, où *X* est le numéro séquentiel du journal. Une fois que le fichier 4DSMTPLog a atteint une taille de 10 MB, il est fermé et un nouveau est généré, avec un numéro séquentiel incrémenté. Si un fichier du même nom existe déjà, il est remplacé directement. Vous pouvez définir le numéro de début de la séquence en utilisant le paramètre *value*. Par défaut, tous les fichiers sont conservés, mais vous pouvez contrôler le nombre de fichiers à conserver en utilisant le paramètre Limitation du journal circulaire.
+
+Pour plus d'informations sur les fichiers 4DSMTPLog\_X.txt, veuillez consulter la section *Description des fichiers journaux*.
+
+
+
+
+### Spellchecker (81)
+
+**Portée** : Application 4D
+
+ **Conservé entre deux sessions** : Non
+
+ **Valeurs possibles** : 0 (défaut) = vérificateur orthographique natif macOS (Hunspell désactivé), 1 = vérification orthographique Hunspell activée.
+
+**Description** : Active la vérification orthographique Hunspell sous macOS. Par défaut, le vérificateur orthographique natif est activé sur cette plateforme. Vous pouvez préférer utiliser la vérification orthographique Hunspell, par exemple pour unifier l'interface de vos applications multi-plateformes (sous Windows, seule la vérification orthographique Hunspell est disponible). Pour plus d'informations, consultez *Vérification orthographique*.
+
+
+
+
+### SQL Autocommit (43)
+
+**Portée** : Base de données
+
+**Conservé entre deux sessions** : Oui
+
+**Valeurs possibles** : 0 (désactivation) ou 1 (activation)
+
+**Description** : Activation ou désactivation du mode de validation automatique SQL. Par défaut, la valeur est 0 (mode désactivé)
+
+ Le mode de validation automatique est utilisé pour renforcer l'intégrité référentielle de la base. Quand ce mode est actif, toutes les requêtes *SELECT*, *INSERT*, *UPDATE* et *DELETE* (SIUD) sont automatiquement incluses dans des transactions ad hoc lorsqu'elles ne sont pas déjà exécutées dans une transaction. Ce mode peut aussi être défini dans les Préférences de la base.
+
+
+
+
+### SQL Engine case sensitivity (44)
+
+**Scope**: Database
+
+**Kept between two sessions**: Yes
+
+**Possible values**: 0 (case not taken into account) or 1 (case-sensitive)
+
+**Description**: Activation or deactivation of case-sensitivity for string comparisons carried out by the SQL engine. 
+
+By default, the value is 1 (case-sensitive): the SQL engine differentiates between upper and lower case and between accented characters when comparing strings (sorts and queries). For example “ABC”= “ABC” but “ABC” # “Abc” and "abc" # "âbc." In certain cases, for example so as to align the functioning of the SQL engine with that of the 4D engine, you may wish for string comparisons to not be case-sensitive (“ABC”=“Abc"="âbc"). 
+
+**Warning:* Since this option modifies the database structure file and all processes, for performance reasons it is highly recommended to set it at database startup only.* This option can also be set in the Database settings.
+
+
+
+
+### SQL Server Port ID (88)
+
+**Portée** : 4D local, 4D Server.
+
+**Conservé entre deux sessions** : Oui
+
+**Description** : Obtient ou définit le numéro de port TCP utilisé par le serveur SQL intégré de 4D en mode local ou 4D Server. Par défaut, la valeur est 19812. Quand ce sélecteur est défini, le paramètre de la base est mis à jour. Vous pouvez aussi définir le numéro de port TCP sur la page "SQL" de la boîte de dialogue Paramètres de la base.
+
+**Valeurs possibles** : 0 à 65535.
+
+**Valeur par défaut** : 19812
+
+
+
+
+### SSL cipher list (64)
+
+**Portée** : Application 4D
+
+**Conservé entre deux sessions** : Non
+
+**Valeurs possibles** : Séquence de chaînes séparées par des deux-points.
+
+**Description :** Liste de chiffrement utilisée par 4D pour le protocole sécurisé. Cette liste modifie la priorité des algorithmes de chiffrement implémentés par 4D. Par exemple, vous pouvez passer la chaîne suivante dans le paramètre *value* : "HIGH:!aNULL:!MD5:!3DES:!CAMELLIA:!AES128:!RSA:!DH:!RC4". Pour une description complète de la syntaxe de la liste de chiffrement, consultez la *page des ciphers du site OpenSSL*.
+
+Ce paramètre s'applique au serveur Web principal (à l'exclusion des objets serveur Web), au serveur SQL, aux connexions client/serveur, ainsi qu'au client HTTP et à toutes les commandes 4D qui font usage du protocole sécurisé. C'est temporaire (n'est pas maintenu entre les sessions).
+
+Quand la liste de chiffrement a été modifiée, vous devrez redémarrer le serveur concerné pour que les nouveaux paramètres soient pris en compte.
+
+Pour réinitialiser la liste de chiffrement à sa valeur par défaut (stockée de manière permanente dans le fichier SLI), appelez la commande [SET DATABASE PARAMETER](../commands/set-database-parameter) et passez une chaîne vide ("") dans le paramètre *value*.
+
+**Note :** Avec la commande [Get database parameter](../commands/get-database-parameter), la liste de chiffrement est renvoyée dans le paramètre optionnel *stringValue* et le paramètre de retour est toujours 0.
+
+
+
+
+### Table sequence number (31)
+
+**Portée** : Application 4D
+
+ **Conservé entre deux sessions** : Oui
+
+ **Valeurs possibles** : Toute valeur longint.
+
+**Description** : Ce sélecteur est utilisé pour modifier ou obtenir le numéro unique actuel pour les enregistrements de la table passée en paramètre. "Numéro actuel" signifie "dernier numéro utilisé" : si vous modifiez cette valeur en utilisant [SET DATABASE PARAMETER](../commands/set-database-parameter), l'enregistrement suivant sera créé avec un numéro constitué de la valeur passée + 1\. Ce nouveau numéro est celui renvoyé par la commande [Sequence number](../commands/sequence-number) ainsi que dans tous les champs de la table auxquels la propriété "Autoincrement" a été assignée dans l'éditeur de Structure ou via SQL.
+
+Par défaut, ce numéro unique est défini par 4D et correspond à l'ordre de création des enregistrements. Pour des informations supplémentaires, consultez la documentation de la commande [Sequence number](../commands/sequence-number).
+
+
+
+
+### TCPUDP log recording (131)
+
+**Portée :** Application 4D.
+
+**Conservé entre deux sessions :** Non.
+
+**Valeurs possibles :** `0` : Enregistrement désactivé (défaut), `1` : Enregistrement activé.
+
+**Description :** Active ou désactive le fichier `4DTCPUDPLog.txt` pour enregistrer les événements TCP.
+
+
+
+
+### Times inside objects (109)
+
+**Portée :** 4D local, 4D Server (tous les process)
+
+**Conservé entre deux sessions** : Non
+
+**Valeurs possibles** : Temps en secondes (0) (défaut), Temps en millisecondes (1)
+
+**Description** : Définit la façon dont les valeurs de temps sont converties et stockées dans les propriétés d'objets et les éléments de collection, ainsi que leur façon d'être importés/exportés en JSON et dans les zones Web. Par défaut, à partir de 4D 17, les temps sont convertis et stockés comme nombre de secondes dans les objets.
+
+Dans les versions précédentes, les valeurs de temps étaient converties et stockées comme nombre de millisecondes dans ces contextes. L'utilisation de ce sélecteur peut vous aider à migrer vos applications en revenant à des paramètres précédents si nécessaire.
+
+**Note** : Les méthodes ORDA et le moteur SQL ignorent ce paramètre, ils supposent toujours que les valeurs de temps sont des nombres de secondes.
+
+
+
+
+### Tips delay (102)
+
+**Portée :** Application 4D
+
+**Conservé entre deux sessions :** Non
+
+**Valeurs possibles :** longint >= 0 (ticks)
+
+**Description :** Délai avant que les conseils s'affichent une fois que le curseur souris s'est arrêté dans des objets avec des messages d'aide joints. La valeur est exprimée en ticks (1/60e de seconde). La valeur par défaut est 45 ticks (0,75 secondes).
+
+
+
+
+### Tips duration (103)
+
+**Portée :** Application 4D
+
+**Conservé entre deux sessions :** Non
+
+**Valeurs possibles :** longint >= 60 (ticks)
+
+**Description :** Durée d'affichage maximale pour une infobulle. La valeur est exprimée en ticks (1/60e de seconde). La valeur par défaut est 720 ticks (12 secondes).
+
+
+
+
+### Tips enabled (101)
+
+**Portée :** Application 4D
+
+**Conservé entre deux sessions :** Non
+
+**Valeurs possibles :** 0 = infobulles désactivées, 1 = infobulles activées (défaut)
+
+**Description :** Définit ou obtient l'état d'affichage actuel des infobulles pour l'application 4D. Par défaut, les infobulles sont activées.
+
+ Remarquez que ce paramètre définit toutes les infobulles 4D, c'est-à-dire les messages d'aide de formulaire et les infobulles de l'éditeur du mode Développement.
+
+
+
+
+### Use legacy network layer (87)
+
+**Portée** : 4D en mode local, 4D Server
+
+**Conservé entre deux sessions** : Oui
+
+**Description :** Définit ou obtient l'état courant de la couche réseau legacy pour les connexions client/serveur. La couche réseau legacy est obsolète à partir de 4D 14 R5 et doit être remplacée progressivement dans vos applications par la couche réseau *ServerNet*. *ServerNet* sera requise dans les prochaines versions de 4D pour bénéficier des futures évolutions réseau. Pour des raisons de compatibilité, la couche réseau legacy est toujours supportée pour permettre une transition en douceur pour les applications existantes (elle est utilisée par défaut dans les applications converties à partir d'une version antérieure à 14 R5). Passez 1 dans ce paramètre pour utiliser la couche réseau legacy (et désactiver *ServerNet*) pour vos connexions client/serveur, et passez 0 pour désactiver la couche réseau legacy (et utiliser *ServerNet*).
+
+Cette propriété peut aussi être définie au moyen de l'option "Utiliser la couche réseau legacy" trouvée sur la *page Compatibilité* des Paramètres de la Base (voir *Options réseau et Client-Serveur*). Dans cette section, vous trouverez aussi une discussion sur la stratégie de migration. Nous recommandons que vous activiez *ServerNet* dès que possible. Vous devrez redémarrer l'application pour que ce paramètre soit pris en compte.
+
+**Valeurs possibles :** 0 ou 1 (0 = ne pas utiliser la couche legacy, 1 = utiliser la couche legacy)
+
+**Valeur par défaut :** 0 dans les bases créées avec 4D 14 R5 ou ultérieure, 1 dans les bases converties à partir de 4D 14 R4 ou antérieure.
+
+
+
+
+### User param value (108)
+
+**Portée :** 4D local, 4D Server
+
+**Conservé entre deux sessions :** Non
+
+**Valeurs possibles** : Toute chaîne personnalisée
+
+**Description :** Chaîne personnalisée passée d'une session à la suivante quand l'application 4D est redémarrée. Ce sélecteur est utile dans le contexte de tests d'unité automatisés qui nécessitent que les applications se redémarrent avec différents paramètres.
+
+Quand elle est utilisée avec [SET DATABASE PARAMETER](../commands/set-database-parameter), définit une nouvelle valeur qui sera disponible dans la prochaine base ouverte après que 4D soit redémarré manuellement ou en utilisant les commandes [OPEN DATABASE](../commands/open-database)(\*), [OPEN DATA FILE](../commands/open-data-file), ou [RESTART 4D](../commands/restart-4d). Quand elle est utilisée avec [Get database parameter](../commands/get-database-parameter), obtient la valeur de paramètre utilisateur actuellement disponible, définie en utilisant une ligne de commande (voir *Interface ligne de commande*), le fichier .4DLink (voir *Utilisation d'un fichier 4DLink*), ou un appel à [SET DATABASE PARAMETER](../commands/set-database-parameter) durant la session précédente. (*) Si [SET DATABASE PARAMETER](../commands/set-database-parameter) définit une valeur User param avant un appel à [OPEN DATABASE](../commands/open-database) avec un fichier .4DLink qui contient aussi un attribut xml user-param, 4D prend en compte uniquement le paramètre fourni par [SET DATABASE PARAMETER](../commands/set-database-parameter).
+
+
 
 
 ## Sélecteurs thread-safe 

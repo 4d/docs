@@ -79,9 +79,9 @@ form data オブジェクトについての詳細な情報については、[`DI
 印刷ジョブにプロジェクトフォームを呼び出す場合:
 
 ```4d
- OPEN PRINTING JOB
- FORM LOAD("print_form")
-  // イベントとオブジェクトメソッドの実行
+ OPEN PRINTING JOB
+ FORM LOAD("print_form")
+  // execution of events and object methods
 ```
 
 ## 例題 2
@@ -89,9 +89,9 @@ form data オブジェクトについての詳細な情報については、[`DI
 印刷ジョブにテーブルフォームを呼び出す場合:
 
 ```4d
- OPEN PRINTING JOB
- FORM LOAD([People];"print_form")
-  // イベントとオブジェクトメソッドの実行
+ OPEN PRINTING JOB
+ FORM LOAD([People];"print_form")
+  // execution of events and object methods
 ```
 
 ## 例題 3
@@ -99,15 +99,15 @@ form data オブジェクトについての詳細な情報については、[`DI
 フォームの内容を解析してテキスト入力エリアに何らかの処理をする場合:
 
 ```4d
- FORM LOAD([People];"my_form")
-  // イベントやメソッドを実行することなくフォームを選択
- FORM GET OBJECTS(arrObjNames;arrObjPtrs;arrPages;*)
- For($i;1;Size of array(arrObjNames))
-    If(OBJECT Get type(*;arrObjNames{$i})=Object type text input)
-  //… 処理
-    End if
- End for
- FORM UNLOAD // フォームをunloadするのを忘れないこと
+ FORM LOAD([People];"my_form")
+  // selection of form without execution of events or methods
+ FORM GET OBJECTS(arrObjNames;arrObjPtrs;arrPages;*)
+ For($i;1;Size of array(arrObjNames))
+    If(OBJECT Get type(*;arrObjNames{$i})=Object type text input)
+  //… processing
+    End if
+ End for
+ FORM UNLOAD //do not forget to unload the form
 ```
 
 ## 例題 4
@@ -115,14 +115,14 @@ form data オブジェクトについての詳細な情報については、[`DI
 以下の例では、JSON ファイルで定義されたフォーム上にあるオブジェクトの数を返します:
 
 ```4d
- ARRAY TEXT(objectsArray;0) // フォームのオブジェクトを並べ替えて入れる配列
- ARRAY POINTER(variablesArray;0)
- ARRAY INTEGER(pagesArray;0)
- 
- FORM LOAD("/RESOURCES/OutputForm.json") // フォームを読み込む
- FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form all pages+Form inherited)
- 
- ALERT("The form contains "+String(size of array(objectsArray))+" objects") // オブジェクトの数を返す
+ ARRAY TEXT(objectsArray;0) //sort form items into arrays
+ ARRAY POINTER(variablesArray;0)
+ ARRAY INTEGER(pagesArray;0)
+ 
+ FORM LOAD("/RESOURCES/OutputForm.json") //load the form
+ FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form all pages+Form inherited)
+ 
+ ALERT("The form contains "+String(size of array(objectsArray))+" objects") //return the object count
 ```
 
 結果は以下のように表示されます:
@@ -136,38 +136,38 @@ form data オブジェクトについての詳細な情報については、[`DI
 1\. 印刷メソッド内に、以下のように書きます:
 
 ```4d
- var $formData : Object
- var $over : Boolean
- var $full : Boolean
- 
- OPEN PRINTING JOB
- $formData:=New object
- $formData.LBcollection:=New collection()
- ... // コレクションにデータを入れます
- 
- FORM LOAD("GlobalForm";$formData) // $formData 経由でコレクションをフォームに渡します
- $over:=False
- Repeat
-    $full:=Print object(*;"LB") // この"LB" はリストボックスで、Form.LBcollectionをデータソースとして持つとします。
-    LISTBOX GET PRINT INFORMATION(*;"LB";lk printing is over;$over)
-    If(Not($over))
-       PAGE BREAK
-    End if
- Until($over)
- FORM UNLOAD
- CLOSE PRINTING JOB
+ var $formData : Object
+ var $over : Boolean
+ var $full : Boolean
+ 
+ OPEN PRINTING JOB
+ $formData:=New object
+ $formData.LBcollection:=New collection()
+ ... //fill the collection with data
+ 
+ FORM LOAD("GlobalForm";$formData) //store the collection in $formData
+ $over:=False
+ Repeat
+    $full:=Print object(*;"LB") // the datasource of this "LB" listbox is Form.LBcollection
+    LISTBOX GET PRINT INFORMATION(*;"LB";lk printing is over;$over)
+    If(Not($over))
+       PAGE BREAK
+    End if
+ Until($over)
+ FORM UNLOAD
+ CLOSE PRINTING JOB
 ```
 
 2\. フォームメソッド内には以下のように書きます:
 
 ```4d
- var $o : Object
- Case of
-    :(Form event code=On Load)
-       For each($o;Form.LBcollection) // ここでForm.LBcollection は利用可能です
-          $o.reference:=Uppercase($o.reference)
-       End for each
- End case
+ var $o : Object
+ Case of
+    :(Form event code=On Load)
+       For each($o;Form.LBcollection) //LBcollection is available
+          $o.reference:=Uppercase($o.reference)
+       End for each
+ End case
 ```
 
 ## 参照

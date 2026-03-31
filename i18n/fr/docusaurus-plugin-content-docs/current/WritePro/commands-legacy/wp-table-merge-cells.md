@@ -69,4 +69,4 @@ Pour plus de détails, veuillez consulter *Fusionner et fractionner des cellules
 ## Voir aussi 
 
 *Manipuler des tableaux*  
-[WP TABLE SPLIT CELLS](wp-table-split-cells.md)  
+[WP TABLE SPLIT CELLS](../commands/wp-table-split-cells)  

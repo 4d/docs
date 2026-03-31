@@ -9,10 +9,15 @@ title: VP SET CURRENT SHEET
 
 <!-- REF #_method_.VP SET CURRENT SHEET.Params -->
 
-| 引数         | 型       |    | 説明                      |                  |
-| ---------- | ------- | -- | ----------------------- | ---------------- |
-| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名 |                  |
-| sheet      | Integer | -> | 新しいカレントシートのインデックス       | <!-- END REF --> |
+<div class="no-index">
+
+| 引数         | 型       |    | 説明                      |
+| ---------- | ------- | -- | ----------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名 |
+| sheet      | Integer | -> | 新しいカレントシートのインデックス       |
+
+</div>
+<!-- END REF -->
 
 ## 説明
 

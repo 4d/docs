@@ -5,7 +5,7 @@ title: VP Get current sheet
 
 <!-- REF #_method_.VP Get current sheet.Syntax -->
 
-**VP Get current sheet** ( *vpAreaName* : Text )<!-- END REF -->
+**VP Get current sheet** ( *vpAreaName* : Text ) : Integer<!-- END REF -->
 
 <!-- REF #_method_.VP Get current sheet.Params -->
 

@@ -34,11 +34,11 @@ displayed_sidebar: docs
 
 O parâmetro *redimensao* lhe permite definir se o formulário pode ser redimensionado verticalmente; em outras palavras, se a altura é modificável (manualmente pelo usuário ou por programação). 
 
-Se passa [True](true.md "True"), a altura do formulário pode ser modificada pelo usuario; 4D utiliza como marcadores os valores passados em *alturaMin* e *alturaMax*. 
+Se passa [True](../commands/true), a altura do formulário pode ser modificada pelo usuario; 4D utiliza como marcadores os valores passados em *alturaMin* e *alturaMax*. 
 
-Se passa [False](false.md "False"), não pode ser modificada a largura do formulário atual; neste caso, não há necessidade de passar valores nos parâmetros *alturaMin* e *alturaMax*. 
+Se passa [False](../commands/false), não pode ser modificada a largura do formulário atual; neste caso, não há necessidade de passar valores nos parâmetros *alturaMin* e *alturaMax*. 
 
-Se passar [True](true.md "True") no primeiro parâmetro, pode passar nos parâmetros opcionais *alturaMin* e *alturaMax* as novas alturas, mínimas e máximas, do formulário (em píxels). Se omitir estes parâmetros são utilizados os valores definidos no ambiente Desenho (se os houver).
+Se passar [True](../commands/true) no primeiro parâmetro, pode passar nos parâmetros opcionais *alturaMin* e *alturaMax* as novas alturas, mínimas e máximas, do formulário (em píxels). Se omitir estes parâmetros são utilizados os valores definidos no ambiente Desenho (se os houver).
 
 ## Exemplo 
 

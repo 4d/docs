@@ -14,7 +14,7 @@ title: VP SET FROZEN PANES
 | Paramètres | Type    |    | Description                                                                 |
 | ---------- | ------- | -- | --------------------------------------------------------------------------- |
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |
-| paneObj    | Object  | -> | Objet contenant des informations sur les colonnes et lignes figées          |
+| paneObj    | Object  | -> | \|                                                                          |
 | sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
 
 </div>
@@ -47,7 +47,7 @@ Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifi
 Vous souhaitez figer les trois premières colonnes de gauche, deux colonnes de droite et la première ligne :
 
 ```4d
-C_OBJECT($panes)
+var $panes : Object
  
 $panes:=New object
 $panes.columnCount:=3

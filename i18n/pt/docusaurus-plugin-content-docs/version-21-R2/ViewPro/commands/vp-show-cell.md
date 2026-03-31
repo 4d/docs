@@ -9,11 +9,16 @@ title: VP SHOW CELL
 
 <!-- REF #_method_.VP SHOW CELL.Params -->
 
-| Parâmetro | Tipo    |    | Descrição                                      |                  |
-| --------- | ------- | -- | ---------------------------------------------- | ---------------- |
-| rangeObj  | Object  | -> | Objeto intervalo                               |                  |
-| vPos      | Integer | -> | Posição vertical da vista da célula ou linha   |                  |
-| hPos      | Integer | -> | Posição horizontal da vista da célula ou linha | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro | Tipo    |    | Descrição                                      |
+| --------- | ------- | -- | ---------------------------------------------- |
+| rangeObj  | Object  | -> | Objeto intervalo                               |
+| vPos      | Integer | -> | Posição vertical da vista da célula ou linha   |
+| hPos      | Integer | -> | Posição horizontal da vista da célula ou linha |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

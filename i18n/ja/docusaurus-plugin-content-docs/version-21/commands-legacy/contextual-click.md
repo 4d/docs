@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.Contextual click.Summary-->Contextual click コマンドは、コンテキストクリックが行われた場合に[True](true.md "True")を返します。<!-- END REF-->
+<!--REF #_command_.Contextual click.Summary-->Contextual click コマンドは、コンテキストクリックが行われた場合に[True](../commands/true)を返します。<!-- END REF-->
 
 * WindowsとMac OSにおいて、コンテキストクリックはマウスの右ボタンを使用して行います。
 * Mac OSにおいて、コンテキストクリックは、**Control+クリック**でも行うことができます。

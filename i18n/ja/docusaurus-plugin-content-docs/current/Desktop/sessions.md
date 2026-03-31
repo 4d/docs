@@ -3,108 +3,96 @@ id: desktop-sessions
 title: デスクトップセッション
 ---
 
-**デスクトップセッション** とは、4D Server または4D シングルユーザー版のユーザー関連の実行コンテキストであり、Web やREST アクセスに起因するものではないものです。
+## 概要
 
-[**Web ユーザーセッション**](../WebServer/sessions.md) 同様、デスクトップセッションで実行されたコードは[`Session`](../API/SessionClass.md) オブジェクトへのアクセスが可能で、これによって提供される関数やプロパティによって(例えば[`session.storage`](../API/SessionClass.md#storage) オブジェクトを使用することによって)セッションの値を保存したりユーザープロセス間で共有することが可能になります。
-
-しかしながら、Web ユーザーセッション内で実行されたコードとは違い、デスクトップセッション内で実行されたコードは[ロールと権限](../ORDA/privileges.md)によっては管理されません。 これはORDA およびデータモデルクラスを含め、4D アプリケーションのどの部分へもアクセスすることができます。 4D Server 上では、[ユーザー&グループ機能](../Users/handling_users_groups.md) でユーザーアクセスを管理することができます。
-
-それでも、[デスクトップセッションをWeb セッションと**共有** すること](#webアクセス用にデスクトップセッションを共有する) ことができ、これによってデスクトップユーザーは、例えばQodly ページとWeb エリアを使用して、Web インターフェースを通して4D アプリケーションへとアクセスうすることができます。
-
-## セッションの種類 {#session-types}
+A desktop session is a user-related execution context on 4D Server, 4D remote, or 4D single-user that **does not result from any web or REST access**.
 
 デスクトップセッションには以下のような種類が含まれます:
 
-- **リモートユーザーセッション**: クライアント/サーバーアプリケーションにおいては、サーバー上でユーザープロセスを管理するセッション。
+- **Remote user sessions**: In client/server applications, remote users have their own sessions, managed from the client and from the server.
 - **ストアドプロシージャーセッション**: クライアント/サーバーアプリケーションにおいては、サーバー上で実行される全てのストアドプロシージャーを管理する固有のバーチャルユーザーセッション。
 - **スタンドアロンセッション**: シングルユーザーアプリケーション内で返されるローカルセッションオブジェクト(クライアント/サーバーアプリケーションの開発およびテストフェーズにおいて有用です)。
-
-:::note
-
-[スケーラブルセッション](../WebServer/sessions.md#webセッションの有効化) 有効化されているときに、4D プロジェクトがWeb またはREST 経由でアクセスがあれば、すぐに[**Web セッション**](../WebServer/sessions.md) が使用されるという点に注意してください。
-
-:::
 
 以下の図は、異なるセッションの種類とそれらがどのように関連するかを表しています:
 
 ![](../assets/en/Desktop/sessions.png)
 
+[**Web ユーザーセッション**](../WebServer/sessions.md) 同様、デスクトップセッションで実行されたコードは[`Session`](../API/SessionClass.md) オブジェクトへのアクセスが可能で、これによって提供される関数やプロパティによって(例えば[`session.storage`](../API/SessionClass.md#storage) オブジェクトを使用することによって)セッションの値を保存したりユーザープロセス間で共有することが可能になります。
+
+しかしながら、Web ユーザーセッション内で実行されたコードとは違い、デスクトップセッション内で実行されたコードは[ロールと権限](../ORDA/privileges.md)によっては管理されません。 It can access any parts of the 4D application, including ORDA and data model classes (on 4D Server, [users and groups feature](../Users/handling_users_groups.md) can manage user accesses). Note also that desktop sessions do not require [scalable sessions](../WebServer/sessions.md#enabling-web-sessions) to be enabled.
+
+You can nevertheless [**share** a remote session with a web session](#sharing-a-remote-session-for-web-accesses) so that desktop application users can access your 4D application through a web interface, using in particular **Qodly pages** and Web areas.
+
 ## リモートユーザーセッション {#remote-user-sessions}
 
-サーバー上では、"ユーザープロセス"(つまりリモートユーザーに関連したプロセス)内では、[`Session`](../commands/session.md) コマンドはカレントのユーザーセッションを表す `session` オブジェクトを返します。  このオブジェクトを扱うには、[`Session` クラス](../API/SessionClass.md) の関数とプロパティを使用します。
+In client/server applications, when a user connects to the server, a **remote user session object** is created and available on both the server and the client. It is returned by the [`Session`](../commands/session) command on both machines.
+
+このオブジェクトを扱うには、[`Session` クラス](../API/SessionClass.md) の関数とプロパティを使用します。
+
+### Comparing server-side and client-side user session objects {#comparing-server-side-and-client-side-user-session-objects}
+
+Depending on where the code is executed, a server-side or a client-side user `session` object is available. Both objects are similar, except that:
+
+- their [`.storage`](../API/SessionClass.md#storage) properties are not the same object. A value stored in the `.storage` of the user session on the server will not be available in the `.storage` of the user session on the client and conversely.
+- for security reasons, the client-side session cannot execute functions that **modify** [privileges](../ORDA/privileges.md) ([`setPrivileges()`](../API/SessionClass.md#setprivileges), [`clearPrivileges()`](../API/SessionClass.md#clearprivileges), [`promote()`](../API/SessionClass.md#promote), [`demote()`](../API/SessionClass.md#demote), [`restore()`](../API/SessionClass.md#restore)). Calling these functions on a client generates an error.
 
 :::note
 
-リモート4D 上では、 [`Session`](../commands/session) コマンドは必ず null を返します。
+Functions that read privileges can be called on both client and server sides ([`getPrivileges()`](../API/SessionClass.md#getprivileges), [`hasPrivilege()`](../API/SessionClass.md#hasprivilege), [`isGuest()`](../API/SessionClass.md#isguest))
+
+:::
+
+### 効果
+
+You use the remote user `session` object to manage and share session data.
+
+Within each environment, a [session `storage`](../API/SessionClass.md#storage) object is shared across all processes of the same user session. For example on the server, you can launch a user authentication and verification procedure when a client connects to the server, involving entering a code sent by e-mail or SMS into the application. 次に、ユーザー情報をセッションの storage に追加し、サーバーがユーザーを識別できるようにします。 この方法により、4Dサーバーはすべてのクライアントプロセスのユーザー情報にアクセスできるため、ユーザーの役割に応じてカスタマイズされたコードを用意することができます。
+
+Within each environment, you can use the remote user `session` object to [create an OTP](../API/SessionClass.md#createotp) and [share the remote session for web accesses](#sharing-a-remote-session-for-web-accesses).
+
+On the server, you can also [assign privileges](../API/SessionClass.md#setprivileges) to a remote user session to control access when the session comes from [Qodly pages running in web areas](#sharing-a-remote-session-for-web-accesses).
+
+:::note
+
+On the client side, two distinct local storage objects are available:
+
+- the [`Storage`](../commands/storage) object of the client machine,
+- the [`session.storage`](../API/SessionClass.md#storage) object of the user remote session (also returned by the [`Session storage`](../commands/session-storage) command).
 
 :::
 
 :::tip 関連したblog 記事
 
-[クライアント/サーバー接続とストアドプロシージャーに対応した新しい 4Dリモートセッションオブジェクト](https://blog.4d.com/ja/new-4d-remote-session-object-with-client-server-connection-and-stored-procedure/)。
+- [クライアント/サーバー接続とストアドプロシージャーに対応した新しい 4Dリモートセッションオブジェクト](https://blog.4d.com/ja/new-4d-remote-session-object-with-client-server-connection-and-stored-procedure/)。
+- [Client / server – Handle a session when working on a 4D client](https://blog.4d.com/client-server-handle-a-session-when-working-on-a-4d-client).
 
 :::
 
-### 効果
+### Sharing a remote session for web accesses {#sharing-a-remote-session-for-web-accesses}
 
-`session` オブジェクトを使用すると、リモートユーザーセッションに関する情報や権限を管理できます。
+Remote user sessions can be used to handle web accesses to the application by the same user and thus, manage their [privileges](../ORDA/privileges.md). これは、リモートマシン上で実行中の、 [Qodly pages](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) がインターフェースとして使用されているクライアント/サーバーアプリケーションにおいて特に有用です。 この構成では、アプリケーションは現代的なCSS ベースのWeb インターフェースを持ちながらも、統合されたクライアント/サーバーのパワーと単純さの恩恵に預かることができます。 このようなアプリケーションでは、Qodly ページは標準の4D [Web エリア](../FormObjects/webArea_overview.md)内で実行されます。
 
-ユーザーセッションのすべてのプロセス間でデータを共有するには、[`Session.storage`](../API/SessionClass.md#storage) 共有オブジェクトを使用できます。 たとえば、クライアントがサーバーに接続する際にユーザー認証手続きを開始し、メールや SMS で送信されたコードをアプリケーションに入力させることができます。 次に、ユーザー情報をセッションの storage に追加し、サーバーがユーザーを識別できるようにします。 この方法により、4Dサーバーはすべてのクライアントプロセスのユーザー情報にアクセスできるため、ユーザーの役割に応じてカスタマイズされたコードを用意することができます。
+このような構成を製品において管理するためには、リモートユーザーセッションが必要です。 実は、リモート4D アプリケーションとWeb エリアにロードされたQodly ページの両方からリクエストが来る場合には、これらは同じセッション内で動作する必要があります。 You just have to share the session on the server between the remote client and its web pages so that you can have the same [session storage](../API/SessionClass.md#storage) and client license, wherever the request comes from (web or remote 4D).
 
-また、リモートユーザーセッションに権限を割り当てることで、Webエリア内で実行されているQodly ページからセッションがきている場合にアクセスを管理することができます。
-
-### 利用可能性
-
-リモートユーザー `Session` オブジェクトは以下から利用できます:
-
-- [サーバー上で実行](../Project/project-method-properties.md#サーバー上で実行) 属性を持つプロジェクトメソッド (クライアントプロセスの "ツイン(双子)" プロセスで実行されます)
-- トリガー
-- ORDA [データモデル関数](../ORDA/ordaClasses.md) (ただし、[`local`](../ORDA/ordaClasses.md#local-functions) キーワードで宣言されているものを除く)
-- [`On Server Open Connection`](../commands/on-server-open-connection-database-method) と [`On Server Close Connection`](../commands/on-server-close-connection-database-method)などのデータベースメソッド。
-
-## ストアドプロシージャーセッション {#stored-procedure-sessions}
-
-サーバー上では、全ての[ストアドプロシージャー](https://doc.4d.com/4Dv20/4D/20/Stored-Procedures.300-6330553.ja.html) は同じバーチャルユーザーセッションを共有します。
-
-### 効果
-
-ストアドプロシージャーセッションのすべてのプロセス間でデータを共有するには、[`Session.storage`](../API/SessionClass.md#storage) 共有オブジェクトを使用できます。
-
-### 利用可能性
-
-ストアドプロシージャーの `session` オブジェクトは、次のいずれかから利用できます:
-
-- [`Execute on Server`](../commands-legacy/execute-on-server.md) コマンドで呼び出されたプロジェクトメソッド
-- ストアドプロシージャーから呼び出されたORDA [データモデル関数](../ORDA/ordaClasses.md)
-- [`On Server Startup`](../commands/on-server-startup-database-method) と [`On Server Shutdown`](../commands/on-server-shutdown-database-method)などのデータベースメソッド。
-
-## スタンドアロンセッション {#standalone-sessions}
-
-スタンドアロンセッションとは、4D をローカルに使用している際に実行されるシングルユーザーセッションのことです。
-
-### 効果
-
-スタンドアロンセッションでも、Web セッションと [OTP 共有](#sharing-a-desktop-session-for-web-accesses)を使用することでクライアント/サーバーアプリケーションの開発とテストを行うことができます。 スタンドアロンセッション内のコードでも、リモートセッションにおける `session` オブジェクトと同じように `session` オブジェクトを使用することができます。
-
-### 利用可能性
-
-スタンドアロンの `session` オブジェクトは4D アプリケーション上で実行される全てのメソッドとコードから利用することが可能です。
-
-## Webアクセスのためにデスクトップセッションを共有する {#sharing-a-desktop-session-for-web-accesses}
-
-デスクトップセッションを使用して、同じユーザーによるアプリケーションへのWeb アクセスを管理し、それによって [権限](../ORDA/privileges.md) を管理することができます。 これは、リモートマシン上で実行中の、 [Qodly pages](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) がインターフェースとして使用されているクライアント/サーバーアプリケーションにおいて特に有用です。 この構成では、アプリケーションは現代的なCSS ベースのWeb インターフェースを持ちながらも、統合されたクライアント/サーバーのパワーと単純さの恩恵に預かることができます。 このようなアプリケーションでは、Qodly ページは標準の4D [Web エリア](../FormObjects/webArea_overview.md)内で実行されます。
-
-このような構成を製品において管理するためには、リモートユーザーセッションが必要です。 実は、リモート4D アプリケーションとWeb エリアにロードされたQodly ページの両方からリクエストが来る場合には、これらは同じセッション内で動作する必要があります。 リクエストがどこから来ているか(Web またはリモート4Dか)に関わらず、リモートクライアントとWeb ページが同じ[セッション storage](../API/SessionClass.md#storage) とクライアントライセンスを持つように、リモートクライアントとWeb ページ間でセッションを共有するようにするだけです。
-
-この場合、ユーザーがWeb アクセスに対して持っている権限を自動的に取得できるように、Web リクエストをWeb エリアから実行する前にセッション内に[権限](../ORDA/privileges.md) を設定するべきであるという点に注意してください(例題参照)。 ただし権限は**Web から来るリクエストに対してのみ適用される**という点に注意してください。
-
-この設定は、4D Developer アプリケーション(シングルユーザー)で開発することができます: [standalone session](#standalone-sessions) を使用して、Web アクセスに関連した全ての機能のコードを書いてテストすることができます。アプリケーションの運用がシングルユーザー向けかクライアント/サーバー向けかは関係ありません。
-
-共有セッションは [OTPトークン](../WebServer/sessions.md#session-token-otp) を通して管理されます。 サーバー上またはシングルユーザー4D アプリケーション上のデスクトップセッション用の OTP トークンを作成した後、Qodly ページを格納しているWeb エリア(あるいは他のWeb ブラウザ)から送信されたWeb リクエストに(`$4DSID` 引数値を通して)トークンを追加します。これによってサーバー上またはシングルユーザーアプリケーション上のユーザーセッションを特定して共有することができます。 Web サーバー側では、Web リクエストが $4DSID パラメーター内に *OTP id* を格納していた場合、そのOTP トークンに対応したセッションが使用されます。
+[Privileges](../ORDA/privileges.md) should be set in the session before executing a web request, so that the user automatically gets their privileges for web access (see example). Keep in mind that privileges only apply to requests coming from the web.
 
 :::note
 
-クライアント/サーバー環境においてOTP トークンを作成する場合、[OTP 作成コード](../API/SessionClass.md#createotp) を**サーバー上で** 実行する必要があります(`Session` オブジェクトはリモート4D ではNull となります)。 たとえば [`On Server Open Connection`](../commands-legacy/on-server-open-connection-database-method.md) データベースメソッドなどを使用することができます。
+Privileges can only be set from the remote user session on the server. For security reasons, they cannot be modified from the remote user session on the client (see [Comparing server-side and client-side user session objects](#comparing-server-side-and-client-side-user-session-objects)).
+
+:::
+
+共有セッションは [OTPトークン](../WebServer/sessions.md#session-token-otp) を通して管理されます。 After you created an OTP token for the remote session, you add the token (through the `$4DSID` parameter value) to web requests sent from Web areas containing Qodly pages (or from any web browser) so that the user session on the server is identified and shared. Web サーバー側では、Web リクエストが $4DSID パラメーター内に *OTP id* を格納していた場合、そのOTP トークンに対応したセッションが使用されます。
+
+:::note
+
+You can execute the [OTP creation code](../API/SessionClass.md#createotp) from the server or directly from the client (on the server you can use for example the [`On Server Open Connection`](../commands/on-server-open-connection-database-method) database method). However, keep in mind that the web session `.storage` is shared with the server-side user session `.storage` that and privileges can only be set from the user session on the server.
+
+:::
+
+:::tip
+
+For development and testing purposes, you can use a [standalone session](#standalone-sessions) to code and test all features related to web access sharing, whether your application is intended for single-user or client/server deployment.
 
 :::
 
@@ -153,4 +141,33 @@ return Session.createOTP()
 Session.clearPrivileges() // セッションから古い権限を消去する
 Session.setPrivileges("viewProducts")
 ```
+
+## ストアドプロシージャーセッション {#stored-procedure-sessions}
+
+サーバー上では、全ての[ストアドプロシージャー](https://doc.4d.com/4Dv20/4D/20/Stored-Procedures.300-6330553.ja.html) は同じバーチャルユーザーセッションを共有します。
+
+### 効果
+
+ストアドプロシージャーセッションのすべてのプロセス間でデータを共有するには、[`Session.storage`](../API/SessionClass.md#storage) 共有オブジェクトを使用できます。
+
+### 利用可能性
+
+ストアドプロシージャーの `session` オブジェクトは、次のいずれかから利用できます:
+
+- [`Execute on Server`](../commands/execute-on-server) コマンドで呼び出されたプロジェクトメソッド
+- ストアドプロシージャーから呼び出されたORDA [データモデル関数](../ORDA/ordaClasses.md)
+- [`On Server Startup`](../commands/on-server-startup-database-method) と [`On Server Shutdown`](../commands/on-server-shutdown-database-method)などのデータベースメソッド。
+
+## スタンドアロンセッション {#standalone-sessions}
+
+スタンドアロンセッションとは、4D をローカルに使用している際に実行されるシングルユーザーセッションのことです。
+
+### 効果
+
+スタンドアロンセッションでも、Web セッションと [OTP 共有](#sharing-a-desktop-session-for-web-accesses)を使用することでクライアント/サーバーアプリケーションの開発とテストを行うことができます。 スタンドアロンセッション内のコードでも、リモートセッションにおける `session` オブジェクトと同じように `session` オブジェクトを使用することができます。
+
+### 利用可能性
+
+スタンドアロンの `session` オブジェクトは4D アプリケーション上で実行される全てのメソッドとコードから利用することが可能です。
+
 

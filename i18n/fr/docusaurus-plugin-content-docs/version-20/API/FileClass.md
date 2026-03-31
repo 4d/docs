@@ -72,15 +72,17 @@ Les objets de type `File` prennent en charge plusieurs noms de chemin, y compris
 
 
 <!-- REF #_command_.File.Params -->
-| Paramètres   | Type    |    | Description                                        |
-| ------------ | ------- |:--:| -------------------------------------------------- |
-| path         | Text    | -> | Chemin de fichier                                  |
-| fileConstant | Integer | -> | Constante de fichier 4D                            |
-| pathType     | Integer | -> | `fk posix path` (par défaut) ou `fk platform path` |
-| *            |         | -> | * pour retourner le fichier de la base hôte        |
-| Résultat     | 4D.File | <- | Nouvel objet fichier|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|path|Text|->|File path|
+|fileConstant|Integer|->|4D file constant|
+|pathType|Integer|->|`fk posix path` (default) or `fk platform path`|
+|*||->|* to return file of host database|
+|Result|4D.File|<-|New file object|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -171,11 +173,13 @@ La fonction `4D.File.new()` <!-- REF #4D.File.new().Summary -->crée et renvoie 
 
 
 <!--REF #FileClass.create().Params -->
-| Paramètres | Type    |    | Description                                                                      |
-| ---------- | ------- | -- | -------------------------------------------------------------------------------- |
-| Résultat   | Boolean | <- | Vrai si le fichier a été créé avec succès, sinon Faux|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|Result|Boolean|<-|True if the file was created successfully, false otherwise|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -212,14 +216,16 @@ Création d'un fichier de préférences dans le dossier principal :
 
 
 <!--REF #FileClass.createAlias().Params -->
-| Paramètres         | Type      |    | Description                                                                |
-| ------------------ | --------- | -- | -------------------------------------------------------------------------- |
-| dossierDestination | 4D.Folder | -> | Dossier de destination pour l'alias ou le raccourci                        |
-| aliasName          | Text      | -> | Nom de l'alias ou du raccourci                                             |
-| aliasType          | Integer   | -> | Type de lien de l'alias                                                    |
-| Résultat           | 4D.File   | <- | Référence du fichier de l'alias ou du raccourci|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|destinationFolder|4D.Folder|->|Destination folder for the alias or shortcut|
+|aliasName|Text|->|Name of the alias or shortcut|
+|aliasType|Integer|->|Type of the alias link|
+|Result|4D.File|<-|Alias or shortcut file reference|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -268,14 +274,13 @@ Vous souhaitez créer un alias pour un fichier contenu dans votre dossier princi
 
 
 <!-- REF #FileClass.delete().Params -->
+<div class="no-index">
 
-| Paramètres | Type |  | Description                                            |
-| ---------- | ---- |  | ------------------------------------------------------ |
-|            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
-
-
-
-|
+|Parameter|Type||Description|
+|---|----|---|---|
+||||Does not require any parameters|
+</div>
+<!-- END REF -->
 
 
 
@@ -329,12 +334,13 @@ Vous souhaitez supprimer un fichier spécifique dans le dossier de la base de do
 
 
 <!--REF #FileClass.getAppInfo().Params -->
-| Paramètres | Type   |    | Description                                                                        |
-| ---------- | ------ | -- | ---------------------------------------------------------------------------------- |
-| Résultat   | Object | <- | Contenu du fichier version resource .exe/.dll ou .plist|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|Result|Object|<-|Contents of .exe/.dll version resource or .plist file|
+</div>
+<!-- END REF -->
 
 
 #### Description
@@ -424,14 +430,15 @@ ALERT($info.Copyright)
 
 
 <!--REF #FileClass.moveTo().Params -->
-| Paramètres         | Type      |    | Description                                |
-| ------------------ | --------- | -- | ------------------------------------------ |
-| dossierDestination | 4D.Folder | -> | Dossier de destination                     |
-| nouveauNom         | Text      | -> | Nom complet du fichier déplacé             |
-| Résultat           | 4D.File   | <- | Fichier déplacé|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---|----|---|---|
+|destinationFolder|4D.Folder|->|Destination folder|
+|newName|Text|->|Full name for the moved file|
+|Result|4D.File|<-|Moved file|
+</div>
+<!-- END REF -->
 
 
 #### Description
@@ -471,13 +478,15 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 
 <!--REF #FileClass.open().Params -->
-| Paramètres | Type                             |    | Description                                         |
-| ---------- | -------------------------------- | -- | --------------------------------------------------- |
-| mode       | Text                             | -> | Mode d'ouverture : "read", "write", "append"        |
-| options    | Object                           | -> | Options d'ouverture                                 |
-| Résultat   | [4D.FileHandle](FileHandleClass) | <- | Nouvel objet File handle|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|mode|Text|->|Opening mode: "read", "write", "append"|
+|options|Object|->|Opening options|
+|Result|[4D.FileHandle](FileHandleClass)|<-|New File handle object|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -552,12 +561,14 @@ $fhandle:=$f.open("read")
 
 
 <!--REF #FileClass.rename().Params -->
-| Paramètres | Type    |    | Description                                |
-| ---------- | ------- | -- | ------------------------------------------ |
-| nouveauNom | Text    | -> | Nouveau nom complet du fichier             |
-| Résultat   | 4D.File | <- | Fichier renommé|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|newName|Text|->|New full name for the file|
+|Result|4D.File|<-|Renamed file|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -596,11 +607,13 @@ Vous souhaitez que "ReadMe.txt" soit renommé "ReadMe_new.txt" :
 
 
 <!--REF #FileClass.setAppInfo().Params -->
-| Paramètres | Type   |    | Description                                                                                                        |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------------------------------------------ |
-| info       | Object | -> | Propriétés à écrire dans le fichier .plist ou la ressource version du fichier .exe/.dll|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|info|Object|->|Properties to write in .exe/.dll version resource or .plist file|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -688,11 +701,13 @@ $infoPlistFile.setAppInfo($info)
 
 
 <!--REF #FileClass.setContent().Params -->
-| Paramètres | Type |    | Description                                           |
-| ---------- | ---- | -- | ----------------------------------------------------- |
-| content    | BLOB | -> | Nouveau contenu du fichier|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|---|---|
+|content|BLOB|->|New contents for the file|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -723,15 +738,16 @@ La fonction `.setContent()` <!-- REF #FileClass.setContent().Summary -->réécri
 
 
 <!--REF #FileClass.setText().Params -->
-| Paramètres  | Type    |    | Description                                                          |
-| ----------- | ------- | -- | -------------------------------------------------------------------- |
-| text        | Text    | -> | Texte à stocker dans le fichier                                      |
-| charSetName | Text    | -> | Nom du jeu de caractères                                             |
-| charSetNum  | Integer | -> | Numéro du jeu de caractères                                          |
-| breakMode   | Integer | -> | Mode de traitement des retours à la ligne|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---------|----|---|--------|
+|text|Text|->|Text to store in the file|
+|charSetName|Text|->|Name of character set|
+|charSetNum|Integer|->|Number of character set|
+|breakMode|Integer|->|Processing mode for line breaks|
+</div>
+<!-- END REF -->
 
 
 #### Description

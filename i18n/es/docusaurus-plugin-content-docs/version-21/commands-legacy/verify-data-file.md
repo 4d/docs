@@ -37,7 +37,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.VERIFY DATA FILE.Summary-->El comando VERIFY DATA FILE efectúa una verificación estructural de los objetos contenidos en el archivo de datos 4D designado por *rutaEstructura* y *rutaDatos*.<!-- END REF-->para mayor información sobre el proceso de verificación de datos, consulte el Manual de Diseño. *rutaEstructura* designa el archivo de estructura (compilado o no) asociado con el archivo de datos a verificar. Puede tratarse del archivo de estructura abierto o de cualquier otro archivo de estructura. Usted debe pasar un nombre de ruta completo, expresado con la sintaxis del sistema operativo. También puede pasar una cadena vacía, en este caso aparece una caja de diálogo estándar de apertura de archivos que permite al usuario designar el archivo de estructura a utilizar.
 
-*rutaDatos* designa un archivo de datos 4D (.4DD). Debe corresponder al archivo de estructura definido por el parámetro *rutaEstructura*. Atención, usted puede designar el archivo de estructura actual pero el archivo de datos no debe ser el archivo actual (abierto). Para verificar el archivo de datos está abierto actualmente, utilice el comando [VERIFY CURRENT DATA FILE](verify-current-data-file.md). Si intenta verificar el archivo de datos actual con el comando VERIFY DATA FILE, se genera un error.
+*dataPath* designa un archivo de datos 4D (.4DD). Debe corresponder al fichero de estructura definido por el parámetro *structurePath*. Para verificar el archivo de datos abierto actualmente, utilice el comando [VERIFY CURRENT DATA FILE](verify-current-data-file.md).
 
 El archivo de datos designado se abre en modo solo lectura. Debe asegurarse de que ninguna aplicación acceda a este archivo en modo escritura, de lo contrario los resultados de la verificación podrían ser distorsionados.
 
@@ -178,7 +178,7 @@ Verifique el archivo de datos, cree y muestre el archivo de registro:
 
 ## Variables y conjuntos del sistema 
 
-Si el método de retrollamada no existe, la verificación no se efectúa, se genera un error y la variable sistema OK toma el valor 0\. Si un archivo de historial se ha generado, su ruta completa se devuelve en la variable sistema Document.  
+Si la verificación no se lleva a cabo, se genera un error y la variable de sistema OK se establece en 0. Si se generó un archivo de registro, su nombre de ruta completo se devuelve en la variable de sistema Document.
 
 ## Ver también 
 

@@ -18,7 +18,7 @@ También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COL
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md) - [List Box Column](listbox-column.md)
+[List Box](listbox_overview.md) - [Columna de List Box](listbox-column.md)
 
 ---
 
@@ -63,7 +63,7 @@ También puede definir esta propiedad utilizando el comando [`LISTBOX SET PROPER
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md) - [List Box Column](listbox-column.md)
+[List Box](listbox_overview.md) - [Columna de List Box](listbox-column.md)
 
 ---
 
@@ -199,7 +199,7 @@ Puede obtener el mismo resultado utilizando los comandos [`LISTBOX SET ROW FONT 
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md) - [List Box Column](listbox-column.md)
+[List Box](listbox_overview.md) - [Columna de List Box](listbox-column.md)
 
 ---
 

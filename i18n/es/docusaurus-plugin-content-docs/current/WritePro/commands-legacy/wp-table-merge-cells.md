@@ -70,4 +70,4 @@ Para más detalles, consulte *Fusión y división de celdas*.
 ## Ver también 
 
 *Manejo de tablas*  
-[WP TABLE SPLIT CELLS](wp-table-split-cells.md)  
+[WP TABLE SPLIT CELLS](../commands/wp-table-split-cells)  

@@ -20,7 +20,7 @@ Pictures are displayed in a continuous loop. When the user reaches the last pict
 
 #### Commands
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 
 ---
@@ -42,7 +42,7 @@ Displays the first picture all the time except when the user clicks the button. 
 
 #### Commands
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 
 ---
@@ -64,7 +64,7 @@ Allows the user to hold down the mouse button to display the pictures continuous
 
 #### Commands
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 
 ---
@@ -86,7 +86,7 @@ Enables cycling through the contents of the picture button at the specified spee
 
 #### Commands
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 
 ---
@@ -108,7 +108,7 @@ Modifies the contents of the picture button when the mouse cursor passes over it
 
 #### Commands
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT SET FORMAT](../commands/object-set-format)
 
 
 ---
@@ -129,5 +129,6 @@ Enables setting the last thumbnail as the one to display when the button is disa
 
 #### Commands
 
-[OBJECT Get format](../commands-legacy/object-get-format.md) - [OBJECT SET FORMAT](../commands-legacy/object-set-format.md)
+[OBJECT Get format](../commands/object-get-format) - [OBJECT SET FORMAT](../commands/object-set-format)
+
 

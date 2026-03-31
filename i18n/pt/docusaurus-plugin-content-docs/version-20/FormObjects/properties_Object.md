@@ -276,14 +276,14 @@ Para a tradução do banco de dados, pode introduzir uma referência XLIFF na á
 
 #### Objectos suportados
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [List Box Header](listbox-header-footer.md#headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[Botão](button_overview.md) - [Caixa de seleção](checkbox_overview.md) - [Cabeçalho de list box](./listbox-header-footer.md#headers) - [Botão rádio](radio_overview.md) - [Área de texto](text.md)
 
 ---
 
 ## Cálculo de variáveis
 
-Esta propriedade define o tipo de cálculo a ser feito em uma área de [rodapé da coluna](listbox_overview.md#list-box-footers).
-> Ó cálculo de rodapés também pode ser definido com o comando 4D `LISTBOX SET FOOTER CALCULATION`.
+This property sets the type of calculation to be done in a [column footer](./listbox-header-footer.md#footers) area.
+> The calculation for footers can also be set using the [`LISTBOX SET FOOTER CALCULATION`](https://doc.4d.com/4dv20/help/command/en/page1140.html) 4D command.
 
 Existem vários tipos de cálculos disponíveis. A tabela a seguir mostra quais cálculos podem ser usados conforme o tipo de dados encontrados em cada coluna e indica que o tipo é automaticamente afetado por 4D para a variável de rodapé (se não for digitado pelo código):
 

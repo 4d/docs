@@ -9,10 +9,15 @@ title: VP SET VALUES
 
 <!-- REF #_method_.VP SET VALUES.Params -->
 
-| Parâmetro | Tipo       |    | Descrição          |                  |
-| --------- | ---------- | -- | ------------------ | ---------------- |
-| rangeObj  | Object     | -> | Objeto intervalo   |                  |
-| valuesCol | Collection | -> | Coleção de valores | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro | Tipo       |    | Descrição          |
+| --------- | ---------- | -- | ------------------ |
+| rangeObj  | Object     | -> | Objeto intervalo   |
+| valuesCol | Collection | -> | Coleção de valores |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

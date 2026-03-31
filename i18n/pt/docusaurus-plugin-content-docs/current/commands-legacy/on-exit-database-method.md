@@ -31,8 +31,8 @@ O Método banco de dados On Exit é invocado automaticamente por 4D; diferenteme
 Você sai de um banco se:
 
 * O usuário seleciona o comando **Sair** do menu **Arquivo** no ambiente Desenho ou desde o ambiente Aplicação (Quit standard action).
-* Uma chamada é realizada ao comando [QUIT 4D](quit-4d.md).
-* Um plug-in 4D faz uma chamada ao ponto de entrada [QUIT 4D](quit-4d.md).
+* Uma chamada é realizada ao comando [QUIT 4D](../commands/quit-4d).
+* Um plug-in 4D faz uma chamada ao ponto de entrada [QUIT 4D](../commands/quit-4d).
 
 Sem importar como se inicie a saída do banco, 4D realiza as seguintes ações:
 
@@ -46,15 +46,15 @@ O Método banco de dados On Exit é perfeito para:
 
 **Nota:** não esqueça que o processo criado pelo Método banco de dados On Exit é um processo local/cliente, portanto não pode acessar ao arquivo de dados. Se o Método banco de dados On Exit realiza uma consulta ou uma ordenação, um cliente 4D que está a ponto de sair quedará "congelado" e em realidade não sairá da aplicação. Se necessita acessar a dados quando um cliente sai da aplicação, cria um novo processo global desde o qual o Método banco de dados On Exit possa acessar ao arquivo de dados. Neste caso, tenha certeza de que o novo processo termine corretamente antes do final da execução do Método banco de dados On Exit (utilizando por exemplo variáveis interprocesso).
 
-**Nota**: em um ambiente cliente/servidor, Método banco de dados On Exit se comporta de maneira diferente dependendo de se o usuàrio sair manualmente (via o comando de menu Sair ou uma chamada ao comando [QUIT 4D](quit-4d.md)) ou que 4D Server se feche, o que obriga a todos os clientes a sair.  
+**Nota**: em um ambiente cliente/servidor, Método banco de dados On Exit se comporta de maneira diferente dependendo de se o usuàrio sair manualmente (via o comando de menu Sair ou uma chamada ao comando [QUIT 4D](../commands/quit-4d)) ou que 4D Server se feche, o que obriga a todos os clientes a sair.  
   
 Quando sair de 4D Server e se dá um tempo de corte (por exemplo, 10 minutos), cada cliente conectado mostra uma mensagem de advertência e se o usuário sair durante o período de tempo determinado, o Método banco de dados On Exit é executado normalmente. Entretanto, em outros casos (por exemplo, o usuário não responde a tempo, o servidor solicita sar imediatamente ou o administrador desconecta manualmente ao cliente), o Método banco de dados On Exit se executa ao mesmo tempo que a conexão ao servidor se fecha. Como resultado, o código em Método banco de dados On Exit não pode iniciar outro processo local ou de servidor e não pode esperar a que se cancelem outros processos (nem esses processos podem seguir acessando ao servidor). Se tentar fazer isso, um erro de rede é gerado (como 10001 ou 10002) já que a conexão ao servidor já está fechada.
 
 ## Nota 
 
-O exemplo abaixo mostra um caso típico onde você lança um ou mais processos no fundo fazendo trabalhos regulares, rodando sem parar em [Método banco de dados On Startup](metodo-banco-de-dados-on-startup.md) (ou em [On Server Startup database method](on-server-startup-database-method.md)). Uma flag no objeto da aplicação [Storage](storage.md) é usado para dizer para terminar - e marcar se terminaram.
+O exemplo abaixo mostra um caso típico onde você lança um ou mais processos no fundo fazendo trabalhos regulares, rodando sem parar em [Método banco de dados On Startup](../commands/metodo-banco-de-dados-on-startup) (ou em [On Server Startup database method](../commands/on-server-startup-database-method)). Uma flag no objeto da aplicação [Storage](../commands/storage) é usado para dizer para terminar - e marcar se terminaram.
 
-* Em [Método banco de dados On Startup](metodo-banco-de-dados-on-startup.md)
+* Em [Método banco de dados On Startup](../commands/metodo-banco-de-dados-on-startup)
 
 ```4d
  Use(Storage)
@@ -98,5 +98,5 @@ O exemplo abaixo mostra um caso típico onde você lança um ou mais processos n
 
 ## Ver também 
 
-[Método banco de dados On Startup](metodo-banco-de-dados-on-startup.md)  
-[QUIT 4D](quit-4d.md)  
+[Método banco de dados On Startup](../commands/metodo-banco-de-dados-on-startup)  
+[QUIT 4D](../commands/quit-4d)  

@@ -8,6 +8,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Table append row.Params-->
 
+<div class="no-index">
+
 | 引数        | 型          |                             | 説明              |
 | --------- | ---------- | --------------------------- | --------------- |
 | tableRef  | Object     | &#8594; | 表組の参照           |
@@ -15,11 +17,12 @@ displayed_sidebar: docs
 | valueColl | Collection | &#8594; | 行内に設定する値のコレクション |
 | 戻り値       | Object     | &#8592; | 行レンジオブジェクト      |
 
+</div>
 <!-- END REF-->
 
 ## 説明
 
-The **WP Table append row** command<!--REF #_command_.WP Table append row.Summary--> appends one row to the *tableRef* table, fills it with *value*(s) or a *valueColl* collection, and returns the corresponding row range object.<!-- END REF-->
+**WP Table append row** コマンドは<!--REF #_command_.WP Table append row.Summary-->*tableRef* 引数で指定した表組に行を一つ追加し、その中に*value* or a *valueColl* で指定した値を入れ、それに対応する行レンジオブジェクトを返します<!-- END REF-->
 
 このコマンドは2種類のシンタックスをサポートします:
 

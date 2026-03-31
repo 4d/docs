@@ -30,9 +30,9 @@ El usuario puede seleccionar una o varias líneas utilizando los atajos estánda
 
 Un list box se compone de cuatro partes distintas:
 
-*   the [list box object](./listbox-object.md) in its entirety,
-*   [columns](./listbox-column.md),
-*   column [headers](./listbox-header-footer.md#headers), and
+*   el [objeto list box](./listbox-object.md) en su totalidad,
+*   [columnas](./listbox-column.md),
+*   [encabezados de](./listbox-header-footer.md#headers) columna y
 *   column [footers](./listbox-header-footer.md#footers).
 
 ![](../assets/en/FormObjects/listbox_parts.png)
@@ -303,7 +303,7 @@ Puede definir el valor de la variable (por ejemplo, Header2:=2) para "forzar" la
 Hay varias formas de definir los colores de fondo, los colores de fuente y los estilos de fuente en los list box:
 
 * at the level of the [list box object properties](./listbox-object.md),
-* at the level of the [column properties](./listbox-column.md),
+* a nivel de las [propiedades de las columnas](./listbox-column.md),
 * utilizando los [arrays o expresiones](#using-arrays-and-expressions) para el list box y/o para cada columna,
 * a nivel del texto de cada celda (si [texto multi-estilo](properties_Text.md#multi-style)).
 

@@ -9,11 +9,16 @@ title: VP Convert to picture
 
 <!-- REF #_method_.VP Convert to picture.Params -->
 
-| Parâmetro  | Tipo   |                             | Descrição                                        |                  |
-| ---------- | ------ | --------------------------- | ------------------------------------------------ | ---------------- |
-| vpObject   | Object | ->                          | Objeto 4D View Pro que contém a área a converter |                  |
-| rangeObj   | Object | ->                          | Objeto intervalo                                 |                  |
-| Resultados | Imagem | <- | Imagem SVG da área                               | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro  | Tipo   |                             | Descrição                                        |
+| ---------- | ------ | --------------------------- | ------------------------------------------------ |
+| vpObject   | Object | ->                          | Objeto 4D View Pro que contém a área a converter |
+| rangeObj   | Object | ->                          | Objeto intervalo                                 |
+| Resultados | Imagem | <- | Imagem SVG da área                               |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 
@@ -52,10 +57,10 @@ O comando devolve uma imagem em formato SVG.
 Pretende converter uma área 4D View Pro em SVG, pré-visualizar o resultado e enviá-lo para uma variável imagem:
 
 ```4d
-C_OBJECT($vpAreaObj)
-C_PICTURE($vPict)
+var $vpAreaObj : Object
+var $vPict : Picture
 $vpAreaObj:=VP Export to object("ViewProArea")
-$vPict:=VP Convert to picture($vpAreaObj) //exportar toda a área
+$vPict:=VP Convert to picture($vpAreaObj) //export the whole area
 ```
 
 ## Veja também

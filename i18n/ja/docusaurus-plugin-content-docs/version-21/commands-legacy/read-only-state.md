@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.Read only state.Summary-->このコマンドは、コマンドが呼び出されるプロセス内の*aTable*の状態が読み込み専用かどうかを調べます。<!-- END REF-->*aTable*が読み込み専用であれば、[True](true.md "True")を返します。*aTable*が読み書き可であれば、[False](false.md "False")を返します。
+<!--REF #_command_.Read only state.Summary-->このコマンドは、コマンドが呼び出されるプロセス内の*aTable*の状態が読み込み専用かどうかを調べます。<!-- END REF-->*aTable*が読み込み専用であれば、[True](../commands/true)を返します。*aTable*が読み書き可であれば、[False](../commands/false)を返します。
 
 ## 例題 
 

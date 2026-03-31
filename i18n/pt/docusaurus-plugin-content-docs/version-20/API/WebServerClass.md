@@ -71,12 +71,13 @@ Eles oferecem as propriedades abaixo e funções:
 
 
 <!-- REF #_command_.WEB Server.Params -->
+<div class="no-index">
 
-| Parâmetro  | Tipo          |    | Descrição                                                                          |
-| ---------- | ------------- | -- | ---------------------------------------------------------------------------------- |
-| option     | Integer       | -> | Servidor Web a ser obtido (padrão se omitido = `Banco de dados de servidores Web`) |
-| Resultados | 4D. WebServer | <- | Objeto Web Server                                                                  |
-
+|Parameter|Type||Description|
+|---|---|----|---|
+|option|Integer|->|Web server to get (default if omitted = `Web server database`)|  
+|Result|4D.WebServer|<-|Web server object|
+</div>
 <!-- END REF -->
 
 O comando `WEB Server` <!-- REF #_command_.WEB Server.Summary -->retorna o objeto padrão web server ou o objeto web server definido através do parâmetro *option*<!-- END REF -->.
@@ -117,11 +118,12 @@ Do seu componente, você quer saber se o servidor Web do banco de dados host est
 
 
 <!-- REF #_command_.WEB Server list.Params -->
+<div class="no-index">
 
-| Parâmetro  | Tipo       |    | Descrição                                     |
-| ---------- | ---------- | -- | --------------------------------------------- |
-| Resultados | Collection | <- | Coleção de objetos do Servidor Web disponível |
-
+|Parameter|Type||Description|
+|---|---|----|---|
+|Result|Collection|<-|Collection of the available Web server objects|
+</div>
 <!-- END REF -->
 
 O comando `WEB Server list` <!-- REF #_command_.WEB Server list.Summary -->retorna uma coleção de todos os objetos Web server disponíveis na aplicação 4D<!-- END REF -->.
@@ -689,12 +691,13 @@ O <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->Validação de 
 
 
 <!-- REF #WebServerClass.start().Params -->
+<div class="no-index">
 
-| Parâmetro  | Tipo   |    | Descrição                                           |
-| ---------- | ------ | -- | --------------------------------------------------- |
-| settings   | Object | -> | Configurações do servidor Web a definir no arranque |
-| Resultados | Object | <- | Estado de arranque do servidor web                  |
-
+|Parameter|Type||Description|
+|---|---|----|---|
+|settings|Object|->|Web server settings to set at startup|  
+|Result|Object|<-|Status of the web server startup|
+</div>
 <!-- END REF -->
 
 A função `.start()` <!-- REF #WebServerClass.start().Summary -->inicia o servidor web em que é aplicado<!-- END REF -->, utilizando propriedades definidas nas definições opcionais ** parâmetro do objecto.
@@ -750,11 +753,13 @@ A função devolve um objecto que descreve o estado de lançamento do servidor W
 
 
 <!-- REF #WebServerClass.stop().Params -->
-| Parâmetro | Tipo |  | Descrição                                             |
-| --------- | ---- |  | ----------------------------------------------------- |
-|           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|---|----|---|
+||||Does not require any parameters|
+</div>
+<!-- END REF -->
 
 A função `.stop()` <!-- REF #WebServerClass.stop().Summary -->pára o servidor web em que é aplicado<!-- END REF -->.
 

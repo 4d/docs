@@ -43,10 +43,13 @@ Para obter uma apresentação completa dessa classe, recomendamos que você leia
 
 
 <!-- REF #4D.CryptoKey.new().Params -->
-| Parâmetro  | Tipo         |    | Descrição                                          |
-| ---------- | ------------ | -- | -------------------------------------------------- |
-| settings   | Object       | -> | Parâmetros para gerar ou carregar um par de chaves |
-| Resultados | 4D.CryptoKey | <- | Objeto que contém um par de chaves de encriptação  |
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---|---|----|---|
+|settings|Object|->|Settings to generate or load a key pair|
+|Result|4D.CryptoKey|<-|Object encapsulating an encryption key pair|
+</div>
 <!-- END REF -->
 
 A função `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->cria um objeto `4D.CryptoKey` que encapsula um par de chaves de encriptação<!-- END REF -->, com base no parâmetro objeto *settings*. Permite gerar uma nova chave RSA o ECDSA, ou carregar um par de chaves existente desde uma definição PEM.
@@ -159,11 +162,14 @@ Definido apenas para as chaves ECDSA: o <!-- REF #CryptoKey.curve.Summary -->nom
 
 
 <!-- REF #CryptoKey.decrypt().Params -->
-| Parâmetro  | Tipo   |    | Descrição                                                                             |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------------- |
-| message    | Text   | -> | String de mensagens a decodificar utilizando `options.encodingEncrypted` e descifrar. |
-| options    | Object | -> | Opções de codificação                                                                 |
-| Resultados | Object | <- | Estado                                                                                |
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---|---|----|---|
+|message|Text|->|Message string to be decoded using `options.encodingEncrypted` and decrypted.|  
+|options|Object|->|Decoding options|
+|Result|Object|<-|Status|
+</div>
 <!-- END REF -->
 
 A função `.decrypt()` <!-- REF #CryptoKey.decrypt().Summary -->decifra o parâmetro *mensagem* usando a chave **privada**<!-- END REF -->. O algoritmo utilizado depende do tipo da chave.
@@ -205,11 +211,14 @@ A função devolve um objeto "status" com a propriedade `success` definida como 
 
 
 <!-- REF #CryptoKey.encrypt().Params -->
-| Parâmetro  | Tipo   |    | Descrição                                                                          |
-| ---------- | ------ | -- | ---------------------------------------------------------------------------------- |
-| message    | Text   | -> | String de mensagens a codificar utilizando `options.encodingDecrypted` e encriptar |
-| options    | Object | -> | Opções de decodificação                                                            |
-| Resultados | Text   | <- | Mensagem criptografada e codificada utilizando `options.encodingEncrypted`         |
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---|---|----|---|
+|message|Text|->|Message string to be encoded using `options.encodingDecrypted` and encrypted.|  
+|options|Object|->|Encoding options|
+|Result|Text|<-|Message encrypted and encoded using the `options.encodingEncrypted`|
+</div>
 <!-- END REF -->
 
 A função `.encrypt()` <!-- REF #CryptoKey.encrypt().Summary -->encripta o parâmetro *mensagem* utilizando a chave **public**<!-- END REF -->. O algoritmo utilizado depende do tipo da chave.
@@ -243,9 +252,12 @@ O valor devolvido é uma mensagem encriptada.
 
 
 <!-- REF #CryptoKey.getPrivateKey().Params -->
-| Parâmetro  | Tipo |    | Descrição                    |
-| ---------- | ---- | -- | ---------------------------- |
-| Resultados | Text | <- | Chave privada em formato PEM |
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---|---|----|---|
+|Result|Text|<-|Private key in PEM format|
+</div>
 <!-- END REF -->
 
 A função `.getPrivateKey()`  <!-- REF #CryptoKey.getPrivateKey().Summary -->devolve a chave privada do objecto `CryptoKey`<!-- END REF --> em formato PEM, ou uma string vazia se nenhum estiver disponível.
@@ -269,9 +281,12 @@ O valor devolvido é a chave privada.
 
 
 <!-- REF #CryptoKey.getPublicKey().Params -->
-| Parâmetro  | Tipo |    | Descrição                    |
-| ---------- | ---- | -- | ---------------------------- |
-| Resultados | Text | <- | Chave pública em formato PEM |
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---|----|---|---|
+|Result|Text|<-|Public key in PEM format|
+</div>
 <!-- END REF -->
 
 A função `.getPublicKey()` <!-- REF #CryptoKey.getPublicKey().Summary -->devolve a chave pública do objecto `CryptoKey`<!-- END REF --> em formato PEM, ou uma string vazia se nenhum estiver disponível.
@@ -311,11 +326,14 @@ O valor devolvido é a chave pública.
 
 
 <!-- REF #CryptoKey.sign().Params -->
-| Parâmetro  | Tipo   |    | Descrição                                                                       |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------- |
-| message    | Text   | -> | String mensagem a assinar                                                       |
-| options    | Object | -> | Opções de assinatura                                                            |
-| Resultados | Text   | <- | Assinatura na representação Base64 ou Base64URL, dependendo da opção "encoding" |
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---|----|---|---|
+|message|Text|->|Message string to sign|  
+|options|Object|->|Signing options|
+|Result|Text|<-|Signature in Base64 or Base64URL representation, depending on "encoding" option|
+</div>
 <!-- END REF -->
 
 A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->assina a representação utf8 de uma mensagem ** string<!-- END REF --> utilizando o `CryptoKey` chaves-objecto e forneceu *opções*. Devolve a sua assinatura no formato base64 ou base64URL, dependendo do valor do atributo `options.encoding` que passou.
@@ -389,12 +407,15 @@ Contém <!-- REF #CryptoKey.type.Summary -->nome do tipo da chave - "RSA", "ECDS
 
 
 <!-- REF #CryptoKey.verify().Params -->
-| Parâmetro  | Tipo   |    | Descrição                                                                                                          |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------------------------------------------ |
-| message    | Text   | -> | String de mensagem utilizada para gerar a assinatura                                                               |
-| signature  | Text   | -> | Assinatura que vai ser verificada, em representação Base64 ou Base64URL, dependendo do valor de `options.encoding` |
-| options    | Object | -> | Opções de assinatura                                                                                               |
-| Resultados | Object | <- | Estado da verificação                                                                                              |
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---|---|---|---|
+|message|Text|->|Message string that was used to produce the signature|  
+|signature|Text|->|Signature to verify, in Base64 or Base64URL representation, depending on `options.encoding` value|
+|options|Object|->|Signing options|
+|Result|Object|<-|Status of the verification|
+</div>
 <!-- END REF -->
 
 

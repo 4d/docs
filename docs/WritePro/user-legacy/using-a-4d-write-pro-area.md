@@ -47,7 +47,7 @@ You can control automatic breaks in paragraphs using the following features:
 * **Avoid page break inside**: When this option is set for a paragraph, 4D Write Pro prevents this paragraph from being broken into parts on two or more pages.
 * **Keep with next:** When this option is set for a paragraph, that paragraph cannot be separated from the one that follows it by an automatic break. See `wk keep with next` and the corresponding *keepWithNext* [standard action](./standard-actions.md).
 
-These options can be set using the context menu, or [attributes](../commands-legacy/4d-write-pro-attributes.md) (`wk avoid widows and orphans`, `wk page break inside paragraph`, or *widowAndOrphanControlEnabled* and *avoidPageBreakInside* [standard actions](./standard-actions). 
+These options can be set using the context menu, or [attributes](../commands/4d-write-pro-attributes) (`wk avoid widows and orphans`, `wk page break inside paragraph`, or *widowAndOrphanControlEnabled* and *avoidPageBreakInside* [standard actions](./standard-actions). 
 
 
 <!-- INCLUDE lists-WP.Desc -->
@@ -63,7 +63,7 @@ The background of 4D Write Pro documents and document elements (tables, paragrap
 * painting area
 * repeat
 
-These [attributes](../commands-legacy/4d-write-pro-attributes.md) can be defined programmatically for either individual elements on a page and/or entire document backgrounds with the [WP SET ATTRIBUTES](./commands/wp-set-attributes) command or by [standard actions](./standard-actions). 
+These [attributes](../commands/4d-write-pro-attributes) can be defined programmatically for either individual elements on a page and/or entire document backgrounds with the [WP SET ATTRIBUTES](../commands/wp-set-attributes) command or by [standard actions](./standard-actions). 
 
 Users can modify background attributes via the contextual menu as shown below:
 
@@ -159,7 +159,7 @@ You can then enter any static contents, which will be repeated automatically on 
 
 You can insert dynamic contents such as the page number or the page count using the [ST INSERT EXPRESSION](../../commands/st-insert-expression) command (for more information, please refer to the *Inserting document and page expressions* paragraph). 
 
-**Note:** You can also handle footers and headers by programming using specific commands such as [WP Get header](./commands/wp-get-header) and [WP Get footer](./commands/wp-get-footer).
+**Note:** You can also handle footers and headers by programming using specific commands such as [WP Get header](../commands/wp-get-header) and [WP Get footer](../commands/wp-get-footer).
 
 Once a header or a footer has been defined for a section, you can configure its common attributes using the contextual menu:
 
@@ -236,7 +236,7 @@ To create a tab, just right-click directly on the horizontal ruler and choose it
 
 :::note Notes 
 
-* Tabs can also be defined programmatically with the [WP SET ATTRIBUTES](./commands/wp-set-attributes), [WP GET ATTRIBUTES](./commands/wp-get-attributes), and [WP RESET ATTRIBUTES](./commands/wp-reset-attributes) commands with the `wk tab default` and `wk tabs` selectors.
+* Tabs can also be defined programmatically with the [WP SET ATTRIBUTES](../commands/wp-set-attributes), [WP GET ATTRIBUTES](../commands/wp-get-attributes), and [WP RESET ATTRIBUTES](../commands/wp-reset-attributes) commands with the `wk tab default` and `wk tabs` selectors.
 * For decimal tabs, 4D Write Pro considers the first dot or comma character from the right as the decimal separator; this default setting can be modified with the `wk tab decimal separator` selector.
 
 :::
@@ -251,7 +251,7 @@ The characters preceeding tabs (leading characters) can be defined by selecting 
 * \_\_ (underscores)
 * \*\*\* (asterisks)
 
-Leading characters always appear before the tab and follows the text direction (left to right or right to left). They can be defined programmatically with the [WP SET ATTRIBUTES](./commands/wp-set-attributes), [WP GET ATTRIBUTES](./commands/wp-get-attributes), and [WP RESET ATTRIBUTES](./commands/wp-reset-attributes) commands using `wk leading` with the `wk tab default` or `wk tabs` selectors, or via the horizontal ruler's contextual menu (as shown below).
+Leading characters always appear before the tab and follows the text direction (left to right or right to left). They can be defined programmatically with the [WP SET ATTRIBUTES](../commands/wp-set-attributes), [WP GET ATTRIBUTES](../commands/wp-get-attributes), and [WP RESET ATTRIBUTES](../commands/wp-reset-attributes) commands using `wk leading` with the `wk tab default` or `wk tabs` selectors, or via the horizontal ruler's contextual menu (as shown below).
 
 ![](../../assets/en/WritePro/pict5761675.en.png)
 
@@ -277,12 +277,12 @@ An [`On After Edit`](../../Events/onAfterEdit.md) form event is triggered for a 
 
 Columns can be defined at the document level (they are displayed in the whole document) and/or at the section level (each section can have its own column configuration). 
 
-**Note:** Columns are supported in **Page view** mode and **Draft view** mode only (they are not displayed in **Embedded** view mode), and they are exported to .docx using [WP EXPORT DOCUMENT](./commands/wp-export-document) but not to HTML and MIME HTML formats (wk web page complete format).
+**Note:** Columns are supported in **Page view** mode and **Draft view** mode only (they are not displayed in **Embedded** view mode), and they are exported to .docx using [WP EXPORT DOCUMENT](../commands/wp-export-document) but not to HTML and MIME HTML formats (wk web page complete format).
 
 Columns can be set using:
 
 * the **Columns** submenu of the 4D Write Pro area context menu,
-* 4D Write Pro [attributes](../commands-legacy/4d-write-pro-attributes.md),
+* 4D Write Pro [attributes](../commands/4d-write-pro-attributes),
 * 4D Write Pro [standard actions](./standard-actions).
 
 You can set or get the following properties and actions for columns:
@@ -293,7 +293,7 @@ You can set or get the following properties and actions for columns:
 | Column spacing   | Space between columns in pts, inches, or cm. Note that all columns will have the same size. Each column width is automatically calculated by 4D Write Pro according to the number of columns, the page width, and the spacing  | wk column spacing   | *columnSpacing*  |
 | Column width    | (read-only attribute) Current width for each column, i.e. computed width  | wk column width  | \-    |
 | Column rule style, color, and width | You can add a vertical separator (a decorative line) between columns. These options let you design the separator style, color and width. ![](../../assets/en/WritePro/pict3752176.en.png)To remove the vertical separator, select **None** as a style. | wk column rule style, wk column rule color, wk column rule width | *columnRuleStyle*, *columnRuleColor*, *columnRuleWidth* |
-| Insert break  | Insert a column break  | wk column break, see also [WP INSERT BREAK](./commands/wp-insert-break) | *insertColumnBreak*     |
+| Insert break  | Insert a column break  | wk column break, see also [WP INSERT BREAK](../commands/wp-insert-break) | *insertColumnBreak*     |
 | Columns menu     | Create a Columns sub-menu  | \- | *columns*   |
 
 ### Creating a page with multiple-column and single column sections 
@@ -319,16 +319,16 @@ Bookmarks are dynamic, which means that if the user moves, adds or removes text 
 - Then you insert 50 pages at the beginning of the document.
 - You will still be able to access the same "Hello world" text automatically, now on page 70 of the document, by means of the "MyBM" bookmark.
 
-A document can contain an unlimited number of bookmarks. Several bookmarks can reference the same range, and bookmark ranges can be interleaved. However, each bookmark name must be unique in the document. Bookmarks are not imported when using the [WP INSERT DOCUMENT BODY](./commands/wp-insert-document-body) command (bookmarks in the destination document cannot be overwritten).
+A document can contain an unlimited number of bookmarks. Several bookmarks can reference the same range, and bookmark ranges can be interleaved. However, each bookmark name must be unique in the document. Bookmarks are not imported when using the [WP INSERT DOCUMENT BODY](../commands/wp-insert-document-body) command (bookmarks in the destination document cannot be overwritten).
 
 Once created, a bookmark is stored within the document. It is saved with the document, and can be handled by several different commands. It can also be used to reference parts of a template document. These parts can then be assembled automatically with data from the database to produce dynamic output documents such as invoices or catalogs.
 
 Several commands allow you to create, remove, and use bookmarks:
 
-[WP NEW BOOKMARK](../commands-legacy/wp-new-bookmark.md) to create a new bookmark from a range,
-[WP GET BOOKMARKS](../commands-legacy/wp-get-bookmarks.md) to get all bookmarks defined in a document,
-[WP Bookmark range](../commands-legacy/wp-bookmark-range.md) to retrieve a range from an existing bookmark,
-[WP DELETE BOOKMARK](../commands-legacy/wp-delete-bookmark.md) to delete a bookmark.
+[WP NEW BOOKMARK](../commands/wp-new-bookmark) to create a new bookmark from a range,
+[WP GET BOOKMARKS](../commands/wp-get-bookmarks) to get all bookmarks defined in a document,
+[WP Bookmark range](../commands/wp-bookmark-range) to retrieve a range from an existing bookmark,
+[WP DELETE BOOKMARK](../commands/wp-delete-bookmark) to delete a bookmark.
 
 ## Links
 
@@ -340,19 +340,19 @@ Hyperlinks can also be activated from within 4D Write Pro documents using the **
 
 | Link Type | Description |
 |-----------|-------------|
-| `url`     | Links to web pages or to any document, opens the associated application when activated (\*). Activating a URL link to a 4D Write Pro document (`.4wp`, `.4w7`) replaces the current document in the 4D Write Pro area.<br>(\*) Just like the [OPEN URL](../../commands-legacy/open-url.md) command. |
+| `url`     | Links to web pages or to any document, opens the associated application when activated (\*). Activating a URL link to a 4D Write Pro document (`.4wp`, `.4w7`) replaces the current document in the 4D Write Pro area.<br>(\*) Just like the [OPEN URL](../../commands/open-url) command. |
 | `bookmark`| Links to bookmarks in the document |
-| `method`  | Activating a link to a 4D method executes the method (provided it is registered by the [SET ALLOWED METHODS](../../commands/set-allowed-methods.md) method). |
+| `method`  | Activating a link to a 4D method executes the method (provided it is registered by the [SET ALLOWED METHODS](../../commands/set-allowed-methods) method). |
 
 Hyperlinks are managed through the following commands:
 
-- [WP SET LINK](../commands-legacy/wp-set-link.md) to insert a link using a target object
-- [WP Get links](../commands-legacy/wp-get-links.md) to get the collection of all links in a target object.
+- [WP SET LINK](../commands/wp-set-link) to insert a link using a target object
+- [WP Get links](../commands/wp-get-links) to get the collection of all links in a target object.
 
 
 :::note
 
-Links are handled as attributes, thus they can be set or get using the [WP SET ATTRIBUTES](./commands/wp-set-attributes) and [WP GET ATTRIBUTES](./commands/wp-get-attributes) commands along with the `wk link url` constant. However, we recommended using [WP SET LINK](../commands-legacy/wp-set-link.md) and [WP Get links](../commands-legacy/wp-get-links.md) because they automatically encode/decode hyperlinks as URLs. When reading links using the [WP GET ATTRIBUTES](./commands/wp-get-attributes) command, if the target object contains several links, the command returns the first link string.
+Links are handled as attributes, thus they can be set or get using the [WP SET ATTRIBUTES](../commands/wp-set-attributes) and [WP GET ATTRIBUTES](../commands/wp-get-attributes) commands along with the `wk link url` constant. However, we recommended using [WP SET LINK](../commands/wp-set-link) and [WP Get links](../commands/wp-get-links) because they automatically encode/decode hyperlinks as URLs. When reading links using the [WP GET ATTRIBUTES](../commands/wp-get-attributes) command, if the target object contains several links, the command returns the first link string.
 
 :::
 
@@ -386,7 +386,7 @@ or
 
 ## Using commands from the Objects (Forms) theme 
 
-The following 4D commands from the [Objects (Forms)](../../commands/theme/Objects_Forms.md) theme support 4D Write Pro form objects:
+The following 4D commands from the [Objects (Forms)](../../commands/theme/Objects_Forms) theme support 4D Write Pro form objects:
 
 
 
@@ -419,4 +419,5 @@ The following 4D commands from the [Objects (Forms)](../../commands/theme/Object
 | `OBJECT Get pointer`                                        |          |
 
 Any OBJECT commands not listed above are not applicable to 4D Write Pro areas.
+
 

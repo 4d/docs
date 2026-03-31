@@ -356,7 +356,7 @@ Cuando una [expresión booleana](properties_Object.md#expression-type) se muestr
 
 #### Objetos soportados
 
-[List Box Column](listbox-column.md) - [Input](input_overview.md)
+[Columna List Box](listbox-column.md) - [Entrada](input_overview.md)
 
 ---
 
@@ -424,7 +424,7 @@ También en este caso, la propiedad [Título](#title) está disponible para que 
 
 #### Objetos soportados
 
-[Check box](checkbox_overview.md) - [List Box Column](listbox-column.md)
+[Casilla de selección](checkbox_overview.md) - [Columna List Box](listbox-column.md)
 
 ---
 

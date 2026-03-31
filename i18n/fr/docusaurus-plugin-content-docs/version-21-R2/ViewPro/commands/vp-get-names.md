@@ -9,11 +9,16 @@ title: VP Get names
 
 <!-- REF #_method_.VP Get names.Params -->
 
-| Paramètres | Type       |                             | Description                                                    |                  |
-| ---------- | ---------- | --------------------------- | -------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text       | ->                          | Nom d'objet formulaire zone 4D View Pro                        |                  |
-| scope      | Integer    | ->                          | "Scope" cible (par défaut=feuille courante) |                  |
-| Résultat   | Collection | <- | Noms existant dans la zone définie                             | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres | Type       |                             | Description                                                    |
+| ---------- | ---------- | --------------------------- | -------------------------------------------------------------- |
+| vpAreaName | Text       | ->                          | Nom d'objet formulaire zone 4D View Pro                        |
+| scope      | Integer    | ->                          | "Scope" cible (par défaut=feuille courante) |
+| Résultat   | Collection | <- | Noms existant dans la zone définie                             |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

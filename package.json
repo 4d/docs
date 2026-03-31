@@ -21,6 +21,7 @@
     "write-translations": "docusaurus write-translations",
     "version": "docusaurus-version",
     "rename-version": "docusaurus-rename-version",
+    "translate-commit": "node ./tools/propagate-commit-translations.js",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "docusaurus": "docusaurus"

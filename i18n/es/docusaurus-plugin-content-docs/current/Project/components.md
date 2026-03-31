@@ -340,7 +340,7 @@ Se crea un archivo `dependency-lock.json` en la carpeta [`userPreferences`](arch
 
 Este archivo registra información como el estado de las dependencias, rutas, urls, errores de carga, así como otra información. Podría ser útil para la gestión de la carga de componentes o la resolución de problemas.
 
-## Monitoring Project Dependencies {#monitoring-project-dependencies}
+## Monitoreo de dependencias del proyecto {#monitoring-project-dependencies}
 
 En un proyecto abierto, puede añadir, eliminar, actualizar y obtener información sobre las dependencias y su estado de carga actual en el panel **Dependencias**.
 
@@ -440,7 +440,7 @@ Para añadir una dependencia local, haga clic en el botón **+** en el área de 
 
 ![dependency-add](../assets/en/Project/dependency-add.png)
 
-Make sure the **Local** tab is selected and click on the *...*\*\* button. Aparece una caja de diálogo estándar Abrir archivo, que le permite seleccionar el componente que desea añadir. Puede seleccionar un [**.4DZ**](../Desktop/building.md#build-component) o un archivo [**.4DProject**](architecture.md#applicationname4dproject-file).
+Asegúrese de que la pestaña **Local** está seleccionada y haga clic en el botón *...*\*\*. Aparece una caja de diálogo estándar Abrir archivo, que le permite seleccionar el componente que desea añadir. Puede seleccionar un [**.4DZ**](../Desktop/building.md#build-component) o un archivo [**.4DProject**](architecture.md#applicationname4dproject-file).
 
 Si el elemento seleccionado es válido, su nombre y ubicación se muestran en la caja de diálogo.
 
@@ -603,7 +603,7 @@ Luego puede introducir su token de acceso personal:
 
 Solo puede introducir un token de acceso personal. Una vez se ha sido introducido un token, puede editarlo.
 
-El token proporcionado se almacena en un archivo **github.json** en la [carpeta activa de 4D](../commands-legacy/get-4d-folder.md#active-4d-folder).
+El token proporcionado se almacena en un archivo **github.json** en la [carpeta activa de 4D](../commands/get-4d-folder#active-4d-folder).
 
 ### Eliminando una dependencia
 
@@ -624,4 +624,5 @@ Si confirma la caja de diálogo, la dependencia eliminada [estado](#estado-depen
 #### Advertencias sobre el uso de dependencias
 
 Cuando intente eliminar una dependencia primaria que es requerida por otras dependencias en su proyecto, se le advertirá de que la dependencia todavía está en uso. El sistema mostrará qué otras dependencias lo requieren y le pedirá que confirme la eliminación, ya que eliminarlo puede hacer que esos componentes dependientes dejen de funcionar correctamente.
+
 

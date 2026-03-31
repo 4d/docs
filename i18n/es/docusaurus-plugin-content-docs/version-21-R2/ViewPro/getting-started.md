@@ -11,7 +11,7 @@ Una hoja de cálculo es una aplicación que contiene una cuadrícula de celdas e
 
 :::note
 
-Go to the [Library table](../Notes/updates.md#library-table) to know the SpreadJS version integrated in your 4D release.
+Vaya a la [tabla Library](../Notes/updates.md#library-table) para conocer la versión de SpreadJS integrada en su versión 4D.
 
 :::
 

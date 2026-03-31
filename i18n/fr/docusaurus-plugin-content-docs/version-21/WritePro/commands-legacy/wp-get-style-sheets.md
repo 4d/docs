@@ -40,7 +40,7 @@ Vous souhaitez récupérer une collection de toutes les feuilles de style de car
 ## Voir aussi 
 
 *Accéder au contenu des documents par programmation*  
-[WP DELETE STYLE SHEET](wp-delete-style-sheet.md)  
-[WP Get style sheet](wp-get-style-sheet.md)  
-[WP IMPORT STYLE SHEETS](wp-import-style-sheets.md)  
-[WP New style sheet](wp-new-style-sheet.md)  
+[WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet)  
+[WP Get style sheet](../WritePro/commands/wp-get-style-sheet)  
+[WP IMPORT STYLE SHEETS](../WritePro/commands/wp-import-style-sheet)  
+[WP New style sheet](../WritePro/commands/wp-new-style-sheet)  

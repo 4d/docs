@@ -6,7 +6,7 @@ title: Collection
 
 The Collection class manages [Collection](Concepts/dt_collection.md) type expressions.
 
-A collection is initialized with the [`New collection`](../commands/new-collection.md) or [`New shared collection`](../commands/new-shared-collection.md) commands.
+A collection is initialized with the [`New collection`](../commands/new-collection) or [`New shared collection`](../commands/new-shared-collection) commands.
 
 
 
@@ -307,7 +307,7 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 </details>
 
-<!-- REF #collection.concat().Syntax -->**.concat**( *value* : any { ; *...valueN* } ) : Collection<!-- END REF -->
+<!-- REF #collection.concat().Syntax -->**.concat**( *value* : any { ; *...valueN* : any } ) : Collection<!-- END REF -->
 
 
 <!-- REF #collection.concat().Params -->
@@ -2040,7 +2040,8 @@ The `.max()` function <!-- REF #collection.max().Summary -->returns the element 
 
 >This function does not modify the original collection.
 
-If the collection contains different types of values, the `.max()` function will return the maximum value within the last element type in the type list order (see [`.sort()`](#sort) description).
+If the collection contains different [types of values](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md) and the `.max()` function will return the maximum value within the last element type in the type list order. 
+
 
 
 If the collection contains objects, pass the *propertyPath* parameter to indicate the object property whose maximum value you want to get.
@@ -2097,7 +2098,7 @@ The `.min()` function <!-- REF #collection.min().Summary -->returns the element 
 
 >This function does not modify the original collection.
 
-If the collection contains different types of values, the `.min()` function will return the minimum value within the first element type in the type list order (see [`.sort()`](#sort) description).
+If the collection contains different [types of values](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md) and the `.min()` function will return the minimum value within the first element type in the type list order. 
 
 If the collection contains objects, pass the *propertyPath* parameter to indicate the object property whose minimum value you want to get.
 
@@ -2152,15 +2153,9 @@ The `.multiSort()` function <!-- REF #collection.multiSort().Summary -->enables 
 
 >This function modifies the original collection as well as all collections used in *colsToSort* parameter.
 
-If `.multiSort()` is called with no parameters, the function has the same effect as the [`.sort()`](#sort) function: the collection is sorted (only scalar values) in ascending order by default, according to their type. If the collection contains values of different types, they are first grouped by type and sorted afterwards. Types are returned in the following order:
+If `.multiSort()` is called with no parameters, the function has the same effect as the [`.sort()`](#sort) function: the collection is sorted (only scalar values) in ascending order by default, according to their type. 
 
-1. null
-2. booleans
-3. strings
-4. numbers
-5. objects
-6. collections
-7. dates
+If the collection contains elements of different [types](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md).
 
 
 **Single-level synchronized sort**
@@ -2173,7 +2168,7 @@ All *colsToSort* collections must have the same number of elements, otherwise an
 
 :::
 
-If you want to sort the collections in some other order than ascending, you must supply a *formula* ([Formula object](../commands/formula.md) that defines the sort order. The return value should be a boolean that indicates the relative order of the two elements: **True** if *$1.value* is less than *$1.value2*, **False** if *$1.value* is greater than *$1.value2*. You can provide additional parameters to the formula if necessary.
+If you want to sort the collections in some other order than ascending, you must supply a *formula* ([Formula object](../commands/formula) that defines the sort order. The return value should be a boolean that indicates the relative order of the two elements: **True** if *$1.value* is less than *$1.value2*, **False** if *$1.value* is greater than *$1.value2*. You can provide additional parameters to the formula if necessary.
 
 The formula receives the following parameters:
 
@@ -2326,15 +2321,7 @@ You can also pass a criteria parameter to define how the collection elements mus
 
 	This syntax orders scalar values in the collection only (other element types such as objects or collections are returned unordered).
 
-If the collection contains elements of different types, they are first grouped by type and sorted afterwards. Types are returned in the following order:
-
-1.	null
-2.	booleans
-3.	strings
-4.	numbers
-5.	objects
-6.	collections
-7.	dates
+If the collection contains elements of different [types](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md).
 
 #### Example 1
 
@@ -2425,7 +2412,7 @@ Ordering with a property path:
 
 </details>
 
-<!-- REF #collection.orderByMethod().Syntax -->**.orderByMethod**( *formula* : 4D.Function { ; *...extraParam* : expression } ) : Collection<br/>**.orderByMethod**( *methodName* : Text { ; *...extraParam* : expression } ) : Collection<!-- END REF -->
+<!-- REF #collection.orderByMethod().Syntax -->**.orderByMethod**( *formula* : 4D.Function { ; *...extraParam* : Expression } ) : Collection<br/>**.orderByMethod**( *methodName* : Text { ; *...extraParam* : Expression } ) : Collection<!-- END REF -->
 
 
 
@@ -2589,7 +2576,7 @@ When applied to an empty collection, `.pop()` returns ***undefined***.
 
 </details>
 
-<!-- REF #collection.push().Syntax -->**.push**( *element* : any { ;...*elementN* } ) : Collection <!-- END REF -->
+<!-- REF #collection.push().Syntax -->**.push**( *element* : any { ;...*elementN* : any } ) : Collection <!-- END REF -->
 
 
 <!-- REF #collection.push().Params -->
@@ -3074,7 +3061,7 @@ With the following ***Flatten*** method:
 
 </details>
 
-<!-- REF #collection.reduceRight().Syntax -->**.reduceRight**( *formula* : 4D.Function { ; *initValue* : any { ; *...param* : expression }} ) : any<br/>**.reduceRight**( *methodName* : Text { ; *initValue* : any { ; *...param* : expression }} ) : any <!-- END REF -->
+<!-- REF #collection.reduceRight().Syntax -->**.reduceRight**( *formula* : 4D.Function { ; *initValue* : any { ; *...param* : Expression }} ) : any<br/>**.reduceRight**( *methodName* : Text { ; *initValue* : any { ; *...param* : Expression }} ) : any <!-- END REF -->
 
 
 <!-- REF #collection.reduceRight().Params -->
@@ -3581,15 +3568,7 @@ You can also pass one of the following constants in the *ascOrDesc* parameter:
 
 This syntax orders scalar values in the collection only (other element types such as objects or collections are returned unordered).
 
-If the collection contains elements of different types, they are first grouped by type and sorted afterwards. Types are returned in the following order:
-
-1. null
-2. booleans
-3. strings
-4. numbers
-5. objects
-6. collections
-7. dates
+If the collection contains elements of different [types](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md).
 
 If you want to sort the collection elements in some other order or sort any type of element, you must supply in *formula* ([Formula object](FunctionClass.md)) or *methodName* (Text) a callback that defines the sort order. The return value should be a boolean that indicates the relative order of the two elements: **True** if *$1.value* is less than *$1.value2*, **False** if *$1.value* is greater than *$1.value2*. You can provide additional parameters to the callback if necessary.
 
@@ -3751,3 +3730,4 @@ If several values are passed, they are inserted all at once, which means that th
 ```
 
 <!-- END REF -->
+

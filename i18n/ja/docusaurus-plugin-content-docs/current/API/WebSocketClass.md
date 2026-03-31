@@ -15,6 +15,10 @@ WebSocketクライアント接続は、たとえばリアルタイムで財務�
 
 </details>
 
+### 非同期プログラミング
+
+このクラスは、[非同期実行](../Develop/async.md) のページで説明されているように、4D 内での非同期プログライミングをサポートしています。
+
 ### 例題
 
 この例題では、基本的な WebSocketクライアントを作成します。
@@ -199,11 +203,11 @@ This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
 
 *メッセージ* の型によって、以下の内容が送信されます:
 
-| 型      | 内容                                                                                                         |
-| ------ | ---------------------------------------------------------------------------------------------------------- |
-| Text   | UTF-8 のテキスト                                                                                                |
-| BLOB   | バイナリデータ                                                                                                    |
-| Object | JSON UTF-8 形式のテキスト([`JSON Stringify`](../commands-legacy/json-stringify.md) と同じ結果になります) |
+| 型      | 内容                                                                                               |
+| ------ | ------------------------------------------------------------------------------------------------ |
+| Text   | UTF-8 のテキスト                                                                                      |
+| BLOB   | バイナリデータ                                                                                          |
+| Object | JSON UTF-8 形式のテキスト([`JSON Stringify`](../commands/json-stringify) と同じ結果になります) |
 
 <!-- END REF -->
 
@@ -265,3 +269,4 @@ This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
 このプロパティは 読み取り専用 です。
 
 <!-- END REF -->
+

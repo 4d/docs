@@ -5,7 +5,7 @@ title: Pies
 
 ## Mostrar pies
 
-This property is used to display or hide [list box column footers](listbox-header-footer.md#footers). Hay un pie de página por columna; cada pie de página se configura por separado.
+Esta propiedad se utiliza para mostrar u ocultar [los pies de columna de los list box](listbox-header-footer.md#footers). Hay un pie de página por columna; cada pie de página se configura por separado.
 
 #### Gramática JSON
 
@@ -60,4 +60,4 @@ Tenga en cuenta que la conversión de ida y vuelta puede conducir a un resultado
 
 #### Ver también
 
-[Headers](properties_Headers.md) - [List box footers](listbox-header-footer.md#footers)
+[Encabezados](properties_Headers.md) - [Pies de List box](listbox-header-footer.md#footers)

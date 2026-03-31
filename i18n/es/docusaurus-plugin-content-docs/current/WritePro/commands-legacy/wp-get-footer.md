@@ -54,7 +54,7 @@ Usted desea copiar el pie de la primera página de un documento 4D Write Pro en 
 ## Ver también 
 
 *Utilizar un área 4D Write Pro*  
-[WP DELETE FOOTER](wp-delete-footer.md)  
-[WP Get frame](wp-get-frame.md)  
-[WP Get header](wp-get-header.md)  
-[WP New footer](wp-new-footer.md)  
+[WP DELETE FOOTER](../commands/wp-delete-footer)  
+[WP Get frame](../commands/wp-get-frame)  
+[WP Get header](../commands/wp-get-header)  
+[WP New footer](../commands/wp-new-footer)  

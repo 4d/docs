@@ -11,11 +11,11 @@ title: VP Get stylesheets
 
 <div class="no-index">
 
-| Paramètres | Type       |                             | Description                                              |
-| ---------- | ---------- | --------------------------- | -------------------------------------------------------- |
-| vpAreaName | Text       | ->                          | Nom d'objet formulaire zone 4D View Pro                  |
-| sheet      | Integer    | ->                          | Cible (par défaut = feuille courante) |
-| Résultat   | Collection | <- | Collection d'objets feuille de style                     |
+| Paramètres | Type       |                             | Description                             |
+| ---------- | ---------- | --------------------------- | --------------------------------------- |
+| vpAreaName | Text       | ->                          | Nom d'objet formulaire zone 4D View Pro |
+| sheet      | Integer    | ->                          | \|                                      |
+| Résultat   | Collection | <- | Collection d'objets feuille de style    |
 
 </div>
 <!-- END REF -->

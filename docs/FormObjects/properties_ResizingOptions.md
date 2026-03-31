@@ -27,7 +27,7 @@ The appearance of the fake column matches that of the existing columns; it will 
 
 The fake header and/or footer can be clicked but this does not have any effect on the other columns (e.g.: no sort is performed); nevertheless, the `On Clicked`, `On Header Click` and `On Footer Click` events are generated accordingly.
 
-If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](../commands-legacy/listbox-get-cell-position.md) command returns "X+1" for its column number (where X is the number of existing columns).
+If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](../commands/listbox-get-cell-position) command returns "X+1" for its column number (where X is the number of existing columns).
 
 #### JSON Grammar
 
@@ -41,13 +41,13 @@ If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](../comm
 
 #### Commands
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
 
 ---
 
 ## Horizontal Sizing
 
-This property specifies if an object should be horizontally moved or resized when a user resizes the form. It can also be set dynamically by the [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options.md) language command.
+This property specifies if an object should be horizontally moved or resized when a user resizes the form. It can also be set dynamically by the [`OBJECT SET RESIZING OPTIONS`](../commands/object-set-resizing-options) language command.
 
 Three options are available:
 
@@ -71,13 +71,13 @@ Three options are available:
 
 #### Commands
 
-[`OBJECT GET RESIZING OPTIONS`](../commands-legacy/object-get-resizing-options.md) - [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options.md)
+[`OBJECT GET RESIZING OPTIONS`](../commands/object-get-resizing-options) - [`OBJECT SET RESIZING OPTIONS`](../commands/object-set-resizing-options)
 
 ---
 
 ## Vertical Sizing
 
-This property specifies if an object should be vertically moved or resized when a user resizes the form. It can also be set dynamically by the [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options.md) command.
+This property specifies if an object should be vertically moved or resized when a user resizes the form. It can also be set dynamically by the [`OBJECT SET RESIZING OPTIONS`](../commands/object-set-resizing-options) command.
 
 Three options are available:
 
@@ -101,7 +101,7 @@ Three options are available:
 
 #### Commands
 
-[`OBJECT GET RESIZING OPTIONS`](../commands-legacy/object-get-resizing-options.md) - [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options.md)
+[`OBJECT GET RESIZING OPTIONS`](../commands/object-get-resizing-options) - [`OBJECT SET RESIZING OPTIONS`](../commands/object-set-resizing-options)
 
 
 ---
@@ -147,5 +147,6 @@ Designates if the size of the column can be modified by the user.
 
 #### Commands
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
+
 

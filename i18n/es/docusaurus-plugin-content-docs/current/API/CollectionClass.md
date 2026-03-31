@@ -3,9 +3,9 @@ id: CollectionClass
 title: Collection
 ---
 
-The Collection class manages [Collection](Concepts/dt_collection.md) type expressions.
+La clase Collection gestiona las expresiones de tipo [Collection](Concepts/dt_collection.md).
 
-Una colección es inicializada con los comandos [`New collection`](../commands/new-collection.md) o [`New shared collection`](../commands/new-shared-collection.md).
+Una colección es inicializada con los comandos [`New collection`](../commands/new-collection) o [`New shared collection`](../commands/new-shared-collection).
 
 ### Ejemplo
 
@@ -282,7 +282,7 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 </details>
 
-<!-- REF #collection.concat().Syntax -->**.concat**( *value* : any { ; *...valueN* } ) : Collection<!-- END REF -->
+<!-- REF #collection.concat().Syntax -->**.concat**( *value* : any { ; *...valueN* : any } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.concat().Params -->
 
@@ -599,7 +599,7 @@ El parámetro opcional *propertyPath* permite contar valores dentro de una colec
 | ------------ | ---------- | :-------------------------: | ------------------------------------------------------- |
 | propertyPath | Text       |              ->             | Ruta del atributo cuyos valores distintos desea obtener |
 | options      | Integer    |              ->             | `ck diacritical`, `ck count values`                     |
-| Resultado    | Collection | <- | New collection with only distinct values                |
+| Resultado    | Collection | <- | Nueva colección con sólo valores distintos              |
 
 </div>
 <!-- END REF -->
@@ -1920,7 +1920,7 @@ La función `.max()` <!-- REF #collection.max().Summary -->devuelve el elemento 
 
 > Esta función no modifica la colección original.
 
-Si la colección contiene diferentes tipos de valores, la función `.max()` devolverá el valor máximo dentro del último tipo de elemento en el orden de la lista de tipos (ver la descripción de [`.sort()`](#sort)).
+If the collection contains different [types of values](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md) and the `.max()` function will return the maximum value within the last element type in the type list order.
 
 Si la colección contiene objetos, pase el parámetro *propertyPath* para indicar la propiedad del objeto cuyo valor máximo desea obtener.
 
@@ -1973,7 +1973,7 @@ La función `.min()` <!-- REF #collection.min().Summary -->devuelve el elemento 
 
 > Esta función no modifica la colección original.
 
-Si la colección contiene diferentes tipos de valores, la función `.min()` devolverá el valor mínimo dentro del primer tipo de elemento en el orden de la lista de tipos (ver la descripción de [`.sort()`](#sort)).
+If the collection contains different [types of values](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md) and the `.min()` function will return the minimum value within the first element type in the type list order.
 
 Si la colección contiene objetos, pase el parámetro *propertyPath* para indicar la propiedad del objeto cuyo valor mínimo desea obtener.
 
@@ -2027,15 +2027,9 @@ La función `.multiSort()` <!-- REF #collection.multiSort().Summary -->permite r
 
 > Esta función modifica la colección original, así como todas las colecciones utilizadas en el parámetro *colsToSort*.
 
-Si se llama a `.multiSort()` sin parámetros, la función tiene el mismo efecto que la función [`.sort()`](#sort): la colección se ordena (sólo valores escalares) en orden ascendente por defecto, según su tipo. Si la colección contiene valores de diferentes tipos, se agrupan primero por tipo y se ordenan después. Si <em x-id="3">attributePath</em> lleva a una propiedad de objeto que contiene valores de diferentes tipos, primero se agrupan por tipo y se ordenan después.
+Si se llama a `.multiSort()` sin parámetros, la función tiene el mismo efecto que la función [`.sort()`](#sort): la colección se ordena (sólo valores escalares) en orden ascendente por defecto, según su tipo.
 
-1. null
-2. booleans
-3. cadenas
-4. numbers
-5. objects
-6. collections
-7. dates
+If the collection contains elements of different [types](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md).
 
 **Ordenación sincronizada de un nivel**
 
@@ -2047,7 +2041,7 @@ Todas las colecciones *colsToSort* deben tener el mismo número de elementos, de
 
 :::
 
-Si desea ordenar las colecciones en algún otro orden que no sea ascendente, debe suministrar una *formula* ([objeto Formula](../commands/formula.md)) que defina el orden de clasificación. El valor de retorno debe ser un booleano que indica el orden relativo de los dos elementos: **True** si *$1.value* es menor que *$1.value2*, **False** si *$1.value* es mayor que *$1.value2*. Puede ofrecer parámetros adicionales a la fórmula si es necesario.
+Si desea ordenar las colecciones en algún otro orden que no sea ascendente, debe suministrar una *formula* ([objeto Formula](../commands/formula)) que defina el orden de clasificación. El valor de retorno debe ser un booleano que indica el orden relativo de los dos elementos: **True** si *$1.value* es menor que *$1.value2*, **False** si *$1.value* es mayor que *$1.value2*. Puede ofrecer parámetros adicionales a la fórmula si es necesario.
 
 En *index*, pase la posición donde quiere eliminar el elemento de la colección.
 
@@ -2196,15 +2190,7 @@ También puede pasar un parámetro de criterios para definir cómo deben ordenar
 
   Esta sintaxis sólo ordena los valores escalares de la colección (otros tipos de elementos, como objetos o colecciones, se devuelven desordenados).
 
-Si la colección contiene elementos de diferentes tipos, se agrupan primero por tipo y se ordenan después. Si <em x-id="3">attributePath</em> lleva a una propiedad de objeto que contiene valores de diferentes tipos, primero se agrupan por tipo y se ordenan después.
-
-1. null
-2. booleans
-3. cadenas
-4. numbers
-5. objects
-6. collections
-7. dates
+If the collection contains elements of different [types](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md).
 
 #### Ejemplo 1
 
@@ -2289,7 +2275,7 @@ Ordenar con una ruta de propiedad:
 
 </details>
 
-<!-- REF #collection.orderByMethod().Syntax -->**.orderByMethod**( *formula* : 4D.Function { ; *...extraParam* : expression } ) : Collection<br/>**.orderByMethod**( *methodName* : Text { ; *...extraParam* : expression } ) : Collection<!-- END REF -->
+<!-- REF #collection.orderByMethod().Syntax -->**.orderByMethod**( *formula* : 4D.Function { ; *...extraParam* : Expression } ) : Collection<br/>**.orderByMethod**( *methodName* : Text { ; *...extraParam* : Expression } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.orderByMethod().Params -->
 
@@ -2443,7 +2429,7 @@ Cuando se aplica a una colección vacía, `.pop()` devuelve ***undefined***.
 
 </details>
 
-<!-- REF #collection.push().Syntax -->**.push**( *element* : any { ;...*elementN* } ) : Collection <!-- END REF -->
+<!-- REF #collection.push().Syntax -->**.push**( *element* : any { ;...*elementN* : any } ) : Collection <!-- END REF -->
 
 <!-- REF #collection.push().Params -->
 
@@ -2892,7 +2878,7 @@ Con el siguiente método ***Flatten***:
 
 </details>
 
-<!-- REF #collection.reduceRight().Syntax -->**.reduceRight**( *formula* : 4D.Function { ; *initValue* : any { ; *...param* : expression }} ) : any<br/>**.reduceRight**( *methodName* : Text { ; *initValue* : any { ; *...param* : expression }} ) : any <!-- END REF -->
+<!-- REF #collection.reduceRight().Syntax -->**.reduceRight**( *formula* : 4D.Function { ; *initValue* : any { ; *...param* : Expression }} ) : any<br/>**.reduceRight**( *methodName* : Text { ; *initValue* : any { ; *...param* : Expression }} ) : any <!-- END REF -->
 
 <!-- REF #collection.reduceRight().Params -->
 
@@ -3355,15 +3341,7 @@ También puede pasar una de las siguientes constantes en el parámetro *ascOrDes
 
 Esta sintaxis sólo ordena los valores escalares de la colección (otros tipos de elementos, como objetos o colecciones, se devuelven desordenados).
 
-Si la colección contiene elementos de diferentes tipos, se agrupan primero por tipo y se ordenan después. Si <em x-id="3">attributePath</em> lleva a una propiedad de objeto que contiene valores de diferentes tipos, primero se agrupan por tipo y se ordenan después.
-
-1. null
-2. booleans
-3. cadenas
-4. numbers
-5. objects
-6. collections
-7. dates
+If the collection contains elements of different [types](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md).
 
 Si quiere ordenar los elementos de la colección en algún otro orden o ordenar cualquier tipo de elemento, debe suministrar en *formula* ([objeto Formula](FunctionClass.md)) o *methodName* (Text) una retro llamada que define el orden de clasificación. El valor de retorno debe ser un booleano que indica el orden relativo de los dos elementos: **True** si *$1.value* es menor que *$1.value2*, **False** si *$1.value* es mayor que *$1.value2*. Puede ofrecer parámetros adicionales a la retrollamada si es necesario.
 
@@ -3515,3 +3493,4 @@ Si se pasan varios valores, se insertan todos a la vez, lo que significa que apa
 ```
 
 <!-- END REF -->
+

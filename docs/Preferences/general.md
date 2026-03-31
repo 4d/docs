@@ -102,7 +102,7 @@ If you intend to use VCS or external code editors with your new projects, you mi
 
 > This option can only be applied to projects (binary databases always include tokens).
 
-> You can always get the code with tokens by calling [`METHOD GET CODE`](../commands-legacy/method-get-code.md) with 1 in the *option* parameter.
+> You can always get the code with tokens by calling [`METHOD GET CODE`](../commands/method-get-code) with 1 in the *option* parameter.
 
 #### Excluding tokens in existing projects
 
@@ -165,3 +165,4 @@ Sets where 4D will look for documentation pages.
 Indicates the location of the static HTML documentation. By default, this is the \Help\Command\language subfolder. You can view the location by clicking on the menu associated with the area. If this subfolder is not present, the location is shown in red. 
 
 You can modify this location as desired, for example if you want to display the documentation in a language different from that of the application. The static HTML documentation can be located on another volume, on a web server, etc. To designate a different location, click on the **[...]** button next to the entry area and choose a documentation root folder (folder corresponding to the language: `fr`, `en`, `es`, `de` or `ja`). 
+

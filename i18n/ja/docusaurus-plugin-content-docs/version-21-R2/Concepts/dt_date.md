@@ -48,16 +48,16 @@ C_DATE によって宣言された日付は 32767年までの範囲に対応し�
 | 以下    | Date <= Date | Boolean | !2017-01-20! <= !2017-01-20! | true         |
 |       |                                       |         | !2017-01-20! <= !2017-01-01! | false        |
 
-## Conversion of dates from JavaScript
+## JavaScriptからの日付の変換
 
-Since dates in JavaScript are objects, they are sent to 4D as text containing their JSON form like any other object. This principle is implemented in particular when using [JSON commands](../commands/theme/JSON.md) or [Web Areas](../FormObjects/webArea_overview.md).
+JavaScript 内での日付はオブジェクトであるため、他のオブジェクト同様、4D に対して日付のJSON 形式を格納したテキストとして送信されます。 This principle is implemented in particular when using [JSON commands](../commands/theme/JSON.md) or [Web Areas](../FormObjects/webArea_overview.md).
 
-The JSON form of JavaScript Date objects follows the ISO 8601 standard, for example "2013-08-23T00:00:00Z". It is your responsibility to convert this text into a 4D date. Two solutions are available:
+JavaScript 日付オブジェクトのJSON 形式は、ISO 8601 標準に準拠しています。例: "2013-08-23T00:00:00Z"。 このテキストを4D 日付に変換するのはデベロッパーの責任です。 これには2つの解決策が利用可能です:
 
 Using the [`JSON Parse`](../commands-legacy/json-parse.md) command:
 
 ```4d
- var $dateIso : Text // reception of a date in ISO format
+ var $dateIso : Text // ISO フォーマットの日付を受け取る
  var $date4D : Date 
  $date4D:=JSON Parse("\""+$dateIso+"\"";Is date))
 ```
@@ -65,7 +65,7 @@ Using the [`JSON Parse`](../commands-legacy/json-parse.md) command:
 Using the [`Date`](../commands-legacy/date.md) command:
 
 ```4d
- var $dateIso : Text // reception of a date in ISO format
+ var $dateIso : Text // ISO フォーマットの日付を受け取る
  var $date4D : Date 
  $date4D:=Date($dateIso)
 ```

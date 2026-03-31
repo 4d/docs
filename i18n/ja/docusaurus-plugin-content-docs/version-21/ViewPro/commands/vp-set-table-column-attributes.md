@@ -17,13 +17,18 @@ title: VP SET TABLE COLUMN ATTRIBUTES
 
 <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Params -->
 
-| 引数         | 型       |    | 説明                                             |                  |
-| ---------- | ------- | -- | ---------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                        |                  |
-| tableName  | Text    | -> | Table name                                     |                  |
-| column     | Integer | -> | 表の列のインデックス                                     |                  |
-| attributes | Object  | -> | *column* の列に適用する属性                             |                  |
-| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) | <!-- END REF --> |
+<div class="no-index">
+
+| 引数         | 型       |    | 説明                                             |
+| ---------- | ------- | -- | ---------------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                        |
+| tableName  | Text    | -> | Table name                                     |
+| column     | Integer | -> | 表の列のインデックス                                     |
+| attributes | Object  | -> | *column* の列に適用する属性                             |
+| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) |
+
+</div>
+<!-- END REF -->
 
 ## 説明
 

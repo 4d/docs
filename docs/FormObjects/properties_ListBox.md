@@ -76,7 +76,7 @@ For the last two actions, the `On Open Detail` form event is also generated. The
 
 #### Commands
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
 
 
 ---
@@ -103,7 +103,7 @@ This property is used to specify the set to be used to manage highlighted record
 
 #### Commands
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
 
 
 ---
@@ -162,7 +162,7 @@ Number of columns that cannot be moved during execution.
 
 #### Commands
 
-[LISTBOX Get locked columns](../commands-legacy/listbox-get-locked-columns.md) - [LISTBOX Get static columns](../commands-legacy/listbox-get-static-columns.md) - [LISTBOX SET LOCKED COLUMNS](../commands-legacy/listbox-set-locked-columns.md) - [LISTBOX SET STATIC COLUMNS](../commands-legacy/listbox-set-static-columns.md)
+[LISTBOX Get locked columns](../commands/listbox-get-locked-columns) - [LISTBOX Get static columns](../commands/listbox-get-static-columns) - [LISTBOX SET LOCKED COLUMNS](../commands/listbox-set-locked-columns) - [LISTBOX SET STATIC COLUMNS](../commands/listbox-set-static-columns)
 
 
 
@@ -172,7 +172,7 @@ Number of columns that cannot be moved during execution.
 
 Sets the number of columns of the list box.
 
->You can add or remove columns dynamically by programming, using commands such as [`LISTBOX INSERT COLUMN`](../commands-legacy/listbox-insert-column.md) or [`LISTBOX DELETE COLUMN`](../commands-legacy/listbox-delete-column.md).
+>You can add or remove columns dynamically by programming, using commands such as [`LISTBOX INSERT COLUMN`](../commands/listbox-insert-column) or [`LISTBOX DELETE COLUMN`](../commands/listbox-delete-column).
 
 #### JSON Grammar
 
@@ -186,7 +186,7 @@ Sets the number of columns of the list box.
 
 #### Commands
 
-[`LISTBOX DELETE COLUMN`](../commands-legacy/listbox-delete-column.md) - [LISTBOX Get number of columns](../commands-legacy/listbox-get-number-of-columns.md) - [`LISTBOX INSERT COLUMN`](../commands-legacy/listbox-insert-column.md) - [`LISTBOX INSERT COLUMN FORMULA`](../commands-legacy/listbox-insert-column-formula.md)
+[`LISTBOX DELETE COLUMN`](../commands/listbox-delete-column) - [LISTBOX Get number of columns](../commands/listbox-get-number-of-columns) - [`LISTBOX INSERT COLUMN`](../commands/listbox-insert-column) - [`LISTBOX INSERT COLUMN FORMULA`](../commands/listbox-insert-column-formula)
 
 
 ---
@@ -244,7 +244,7 @@ Note that setting properties for an element overrides any other values for this 
 
 #### Commands
 
-[`LISTBOX Get array`](../commands-legacy/listbox-get-array.md) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays.md) - [`LISTBOX SET ARRAY`](../commands-legacy/listbox-set-array.md)
+[`LISTBOX Get array`](../commands/listbox-get-array) - [`LISTBOX GET ARRAYS`](../commands/listbox-get-arrays) - [`LISTBOX SET ARRAY`](../commands/listbox-set-array)
 
 
 ---
@@ -269,5 +269,6 @@ The Up and Down arrow keys select the previous/next row in the list. The other n
 
 #### Commands
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
+
 

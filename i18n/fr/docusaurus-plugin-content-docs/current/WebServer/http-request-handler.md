@@ -43,7 +43,7 @@ Vous pouvez déclarer des gestionnaires de requêtes HTTP :
 WEB Server.start($settings.handlers) //prise en compte au démarrage du server web
 ```
 
-Si à la fois un fichier **HTTPHandlers.json** et un appel à la commande [`WEB Server`](../commands/web-server.md) avec un `$settings.handlers` valide sont utilisés, la commande `WEB Server` est prioritaire.
+Si à la fois un fichier **HTTPHandlers.json** et un appel à la commande [`WEB Server`](../commands/web-server) avec un `$settings.handlers` valide sont utilisés, la commande `WEB Server` est prioritaire.
 
 Le fichier json (ou l'objet dans le paramètre *settings*) contient tous les modèles d'URL listés, les verbes traités et le code à appeler.
 

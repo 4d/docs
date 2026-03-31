@@ -22,7 +22,7 @@ to import
 They can be created using: 
 * the toolbar or sidebar of the [4D Write Pro interface](https://doc.4d.com/4Dv20/4D/20.2/Entry-areas.300-6750367.en.html#5865253)
 * the `listStyleType` or `listStyleImage` [standard actions](./standard-actions) , 
-* or [programmatically](../commands-legacy/4d-write-pro-attributes.md#lists) using [WP SET ATTRIBUTE](../commands/wp-set-attributes.md). 
+* or [programmatically](../commands-legacy/4d-write-pro-attributes.md#lists) using [WP SET ATTRIBUTE](../commands/wp-set-attributes). 
 
 When a list is created using a standard action (`listStyleType` or `listStyleImage`) or the toolbar/sidebar, 4D Write Pro automatically inserts a margin before the text so that the marker is positioned inside it. The value of the inserted margin corresponds to the offset of the default tab (`wk tab default`). 
 
@@ -30,14 +30,11 @@ When a list is created using a standard action (`listStyleType` or `listStyleIma
 
 When the list is created using [the WP SET ATTRIBUTE command](../commands-legacy/4d-write-pro-attributes.md#lists), no specific margin is managed, by default the marker is added at the left boundary of the paragraph. The developer can add a custom margin if necessary.
 
-add a part about the fact that you define where your ordered list start.
-
 :::tip Related blog post
 
 [4D Write Pro – Adding a margin automatically when bullets are set using standard actions](https://blog.4d.com/4d-write-pro-adding-a-margin-automatically-when-bullets-are-set-using-standard-actions)
 
 :::
-and the level are managed with (standard actions)
 
 ### Multi-level lists
 
@@ -51,7 +48,7 @@ Multi-level lists are created by applying a hierarchical list style sheet to a p
 
 Multi-level lists can be managed using:
 
-* paragraph [style sheet attributes](../commands/4d-write-pro-attributes.md#style-sheets) (such as `wk list level index`, `wk list level count`, and `wk list concat string format`)
+* paragraph [style sheet attributes](../commands-legacy/4d-write-pro-attributes.md#style-sheets) (such as `wk list level index`, `wk list level count`, and `wk list concat string format`)
 * dedicated [standard actions](../user-legacy/standard-actions.md) for level management (`listLevelAppend`, `listLevelInc`, `listLevelDec`)
 * dedicated standard actions for numbering marker management (`listConcatString`, `listNumberFormat`).
 
@@ -71,7 +68,7 @@ Hierarchical list style sheets are used to create [multi-level lists](using-a-4d
 
 To create a hierarchical list style sheet, use [WP New style sheet](../commands/wp-new-style-sheet.md) and pass in *listLevelCount* the desired number of levels. You then define a hierarchy of related paragraph style sheets: one **root-level** style sheet and one or more **sub-level** style sheets linked to it. Each level represents a depth in the list (level 1, level 2, level 3, etc.) and is automatically named "root-level name + lvl + index", for example "Mylist lvl 2".
 
-To define and manage the hierarchy, the paragraph style sheet object can be customized using [style sheet attributes](../commands/4d-write-pro-attributes.md#style-sheets).
+To define and manage the hierarchy, the paragraph style sheet object can be customized using [style sheet attributes](../commands-legacy/4d-write-pro-attributes.md#style-sheets).
 
 Hierarchical list style sheets are fully supported by the following commands: [`WP Get style sheet`](../commands/wp-get-style-sheet.md), [`WP SET ATTRIBUTES`](../commands/wp-set-attributes.md), [`WP DELETE STYLE SHEET`](../commands/wp-delete-style-sheet.md).
 

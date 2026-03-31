@@ -89,4 +89,4 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP Get text](wp-get-text.md)  
+[WP Get text](../commands/wp-get-text)  

@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.WP Paragraph range.Summary-->La commande **WP Paragraph range** retourne un objet plage qui référence uniquement les paragraphes qui intersectent l'*objCible* que vous avez passé en paramètre.<!-- END REF-->  La plage de paragraphes retournée peut être utilisée avec [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) et [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) afin de manipuler les attributs de paragraphes uniquement.
+<!--REF #_command_.WP Paragraph range.Summary-->La commande **WP Paragraph range** retourne un objet plage qui référence uniquement les paragraphes qui intersectent l'*objCible* que vous avez passé en paramètre.<!-- END REF-->  La plage de paragraphes retournée peut être utilisée avec [WP GET ATTRIBUTES](../commands/wp-get-attributes) et [WP SET ATTRIBUTES](../commands/wp-set-attributes) afin de manipuler les attributs de paragraphes uniquement.
 
 Dans *objCible*, vous pouvez passer :
 
@@ -37,6 +37,7 @@ Vous voulez définir la marge intérieure pour les paragraphes uniquement :
 
 ## Voir aussi 
 
-[WP Picture range](wp-picture-range.md)  
-[WP Selection range](wp-selection-range.md)  
-[WP Text range](wp-text-range.md)  
+[WP Picture range](../commands/wp-picture-range)  
+[WP Selection range](../commands/wp-selection-range)  
+[WP Text range](../commands/wp-text-range)  
+

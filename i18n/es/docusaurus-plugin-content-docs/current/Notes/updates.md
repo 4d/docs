@@ -7,12 +7,24 @@ title: Notas del lanzamiento
 
 #### Lo más destacado
 
-- El comando [`JSON Validate`](../commands/json-validate.md) ahora es compatible con el borrador 2020-12 del esquema JSON.
+- El comando [`JSON Validate`](../commands/json-validate) ahora es compatible con el borrador 2020-12 del esquema JSON.
+- 4D Write Pro now supports [hierarchical list style sheets](../WritePro/user-legacy/stylesheets.md#hierarchical-list-style-sheets), enabling the creation and management of structured [multi-level lists](../WritePro/user-legacy/using-a-4d-write-pro-area.md#multi-level-lists) with automatic numbering.
 - Ability to use a custom certificate from the macOS keychain instead of a local certificates folder in [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) and [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) classes.
+- New [`4D.Method` class](../API/MethodClass.md) to create and execute a 4D method code from text source. [`METHOD Get path`](../commands/method-get-path) and [`METHOD RESOLVE PATH`](../commands/method-resolve-path) commands support a new `path volatile method` constant (128).
+- Remote [session](../API/SessionClass.md) objects are now [available client-side](../Desktop/sessions.md#availability).
+
+#### Soporte de Liquid glass en macOS
+
+- Automatic support of [**Liquid glass** interface](https://www.apple.com/newsroom/2025/06/apple-introduces-a-delightful-and-elegant-new-software-design/) with 4D on macOS 26 Tahoe. See [this blog post](https://blog.4d.com/the-new-macos-tahoe-design-comes-to-your-4d-applications) for detailed information.
+- New values returned by the [`FORM Theme`](../commands/form-theme) command and [CSS Media queries](../FormEditor/createStylesheet.md#media-queries).
+- To help developers gradually adapt their interfaces, ability to **disable Liquid glass in 4D engine-based applications** via the "UIDesignRequiresCompatibility" key in the application's *Info.plist* file (see [Apple's documentation about this key](https://developer.apple.com/documentation/BundleResources/Information-Property-List/UIDesignRequiresCompatibility)).
 
 #### Cambios de comportamiento
 
-- El comando [`JSON Validate`](../commands/json-validate.md) ahora tiene en cuenta la llave *$schema* y genera un error si se declara una versión no soportada en el esquema.
+- El comando [`JSON Validate`](../commands/json-validate) ahora tiene en cuenta la llave *$schema* y genera un error si se declara una versión no soportada en el esquema.
+- For clarity, formula objects are now instances of a new [`4D.Formula`](../API/FormulaClass.md) class that inherits from the generic [`4D.Function`](../API/FunctionClass.md) class.
+- The "PHP" page has been removed from the [Settings dialog box](../settings/overview.md). Use the [PHP selectors with the `SET DATABASE PARAMETER`](../commands/set-database-parameter#php-interpreter-ip-address-55) command to configure a PHP interpeter.
+- La capa de red **Legacy** ya no es soportada desde 4D 21 R3. Projects and binary databases that were using the Legacy network layer are automatically set to [**ServerNet**](../settings/client-server.md#network-layer) when upgraded to 4D 21 R3 and higher.
 
 ## 4D 21 R2
 
@@ -32,13 +44,13 @@ Lea [**Novedades en 4D 21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/), la 
 #### Vista previa para desarrolladores
 
 - Soporte de [**renderización de interfaz Fluent UI**](../FormEditor/forms.md#fluent-ui-rendering) en Windows:
-  - nuevo comando [`FORM theme`](../commands/form-theme.md)
+  - nuevo comando [`FORM theme`](../commands/form-theme)
   - nuevo [media query css `form-theme`](../FormEditor/createStylesheet.md#media-queries),
   - nueva opción [**Utilizar Fluent UI en Windows**](../settings/interface.md#use-fluent-ui-on-windows) en el cuadro de diálogo de Propiedades del proyecto.
 
 #### Cambios de comportamiento
 
-- En Windows, si la [renderización **fluent UI**](../FormEditor/forms.md#fluent-ui-rendering) está activada, el comando [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) puede devolver información diferente si se llama desde un formulario o no.
+- En Windows, si la [renderización **fluent UI**](../FormEditor/forms.md#fluent-ui-rendering) está activada, el comando [`GET STYLE SHEET INFO`](../commands/get-style-sheet-info) puede devolver información diferente si se llama desde un formulario o no.
 
 ## Tabla de la librería
 
@@ -61,3 +73,4 @@ Lea [**Novedades en 4D 21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/), la 
 | webKit    | WKWebView                              | 19                |                                                                                                                                                        |
 | Xerces    | 3.3.0  | 21                | Utilizado para comandos XML                                                                                                                            |
 | Zlib      | 1.3.1  | 21                |                                                                                                                                                        |
+

@@ -97,10 +97,13 @@ A função `4D.File.new()` <!-- REF #4D.File.new().Summary -->cria e retorna um 
 
 <!--REF #FileClass.create().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo       |                             | Descrição                                                      |
 | ---------- | ---------- | --------------------------- | -------------------------------------------------------------- |
 | Resultados | Parâmetros | <- | True se o arquivo foi criado com sucesso, false caso contrário |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -141,6 +144,8 @@ Criação de um arquivo de preferências na pasta da base de dados:
 
 <!--REF #FileClass.createAlias().Params -->
 
+<div class="no-index">
+
 | Parâmetro         | Tipo                       |                             | Descrição                                     |
 | ----------------- | -------------------------- | --------------------------- | --------------------------------------------- |
 | destinationFolder | 4D. Folder | ->                          | Pasta de destino para o pseudónimo ou atalho  |
@@ -148,6 +153,7 @@ Criação de um arquivo de preferências na pasta da base de dados:
 | aliasType         | Integer                    | ->                          | Tipo de ligação do pseudónimo                 |
 | Resultados        | 4D. File   | <- | Referência a pseudónimo ou ficheiro de atalho |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -200,10 +206,13 @@ Se quiser criar um alias para um arquivo na sua pasta database:
 
 <!-- REF #FileClass.delete().Params -->
 
+<div class="no-index">
+
 | Parâmetro | Tipo |     | Descrição                  |
 | --------- | ---- | :-: | -------------------------- |
 |           |      |     | Não exige nenhum parâmetro |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -260,10 +269,13 @@ Se quiser apagar um ficheiro específico na pasta da base de dados:
 
 <!--REF #FileClass.getAppInfo().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo   |                             | Descrição                           |
 | ---------- | ------ | --------------------------- | ----------------------------------- |
 | Resultados | Object | <- | Informações do arquivo da aplicação |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -407,12 +419,15 @@ Resultado em *$info*:
 
 <!--REF #FileClass.moveTo().Params -->
 
+<div class="no-index">
+
 | Parâmetro         | Tipo                       |                             | Descrição                        |
 | ----------------- | -------------------------- | --------------------------- | -------------------------------- |
 | destinationFolder | 4D. Folder | ->                          | Pasta de destino                 |
 | newName           | Text                       | ->                          | Nome completo do ficheiro movido |
 | Resultados        | 4D. File   | <- | Arquivo movido                   |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -455,12 +470,15 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 <!--REF #FileClass.open().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo                                             |                             | Descrição                                                   |
 | ---------- | ------------------------------------------------ | --------------------------- | ----------------------------------------------------------- |
 | mode       | Text                                             | ->                          | Modo de abertura: "read", "write", "append" |
 | options    | Object                                           | ->                          | Opções de abertura                                          |
 | Resultados | [4D.FileHandle](FileHandleClass) | <- | Novo objeto File handle                                     |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -536,11 +554,14 @@ $fhandle:=$f.open("read")
 
 <!--REF #FileClass.rename().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo                     |                             | Descrição                          |
 | ---------- | ------------------------ | --------------------------- | ---------------------------------- |
 | newName    | Text                     | ->                          | Novo nome completo para o ficheiro |
 | Resultados | 4D. File | <- | Ficheiro renomeado                 |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -583,10 +604,13 @@ Se quiser renomear "ReadMe.txt" em "ReadMe_new.txt":
 
 <!--REF #FileClass.setAppInfo().Params -->
 
+<div class="no-index">
+
 | Parâmetro | Tipo   |    | Descrição                                                             |
 | --------- | ------ | -- | --------------------------------------------------------------------- |
 | info      | Object | -> | Propriedades para escrever em informações de um arquivo de aplicativo |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -713,10 +737,13 @@ $app.setAppInfo($info)
 
 <!--REF #FileClass.setContent().Params -->
 
+<div class="no-index">
+
 | Parâmetro | Tipo |    | Descrição                      |
 | --------- | ---- | -- | ------------------------------ |
 | content   | Blob | -> | Novos conteúdos para o arquivo |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -749,13 +776,16 @@ A função `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescrev
 
 <!--REF #FileClass.setText().Params -->
 
-| Parâmetro   | Tipo    |    | Descrição                                   |
-| ----------- | ------- | -- | ------------------------------------------- |
-| text        | Text    | -> | Texto a armazenar no arquivo                |
-| charSetName | Text    | -> | Nome do conjunto de caracteres              |
-| charSetNum  | Integer | -> | Número de conjuntos de caracteres           |
-| breakMode   | Integer | -> | Modo de processamento para quebras de linha |
+<div class="no-index">
 
+| Parâmetro   | Tipo    |    | Descrição                                    |
+| ----------- | ------- | -- | -------------------------------------------- |
+| text        | Text    | -> | Texto a armazenar no arquivo                 |
+| charSetName | Text    | -> | Nome do conjunto de caracteres               |
+| charSetNum  | Integer | -> | Número de conjuntos de caracteres            |
+| breakMode   | Integer | -> | Modo de processamento para retornos de linha |
+
+</div>
 <!-- END REF -->
 
 #### Descrição

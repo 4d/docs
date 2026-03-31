@@ -57,13 +57,14 @@ Esta propiedad es **de sólo lectura**.
 
 
 <!-- REF #ClassClass.new().Params -->
-| Parámetros | Tipo      |    | Descripción                                         |
-| ---------- | --------- |:--:| --------------------------------------------------- |
-| param      | any       | -> | Parámetro(s) a pasar a la función constructor       |
-| Resultado  | 4D.Object | <- | Nuevo objeto de la clase|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parámetro|Tipo||Descripción|
+|---------|--- |:---:|------|
+|param|any|->|Parámetro(s) a pasar a la función constructor|
+|Resultado|4D.Object|<-|New object of the class|
+</div>
+<!-- END REF -->
 
 
 #### Descripción

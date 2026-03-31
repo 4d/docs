@@ -9,11 +9,16 @@ title: VP SET COLUMN COUNT
 
 <!-- REF #_method_.VP SET COLUMN COUNT.Params -->
 
-| Paramètres  | Type    |    | Description                                                                 |                  |
-| ----------- | ------- | -- | --------------------------------------------------------------------------- | ---------------- |
-| vpAreaName  | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |                  |
-| columnCount | Integer | -> | Nombre de colonnes                                                          |                  |
-| sheet       | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres  | Type    |    | Description                                                                 |
+| ----------- | ------- | -- | --------------------------------------------------------------------------- |
+| vpAreaName  | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |
+| columnCount | Integer | -> | Nombre de colonnes                                                          |
+| sheet       | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

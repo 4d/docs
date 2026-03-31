@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | filePath | Text | &#8594;  | Path to: a 4D Write document (.4w7 or .4wt) or a 4D Write Pro document (.4wp) or a .docx document (.docx) |
-| fileObj | [4D.File](../API/FileClass.md)  | &#8594; | File object to import |
+| fileObj | [4D.File](../../API/FileClass.md)  | &#8594; | File object to import |
 | option | Integer, Object | &#8594;  | (Integer) Import option for HTML expressions, (object) Import options for .docx document |
 | Function result | Object | &#8592; | 4D Write Pro object |
 </div>
@@ -33,7 +33,7 @@ The following types of documents are supported:
 * 4D Write Pro (.4wp) format documents. For more information about the 4D Write Pro document format, refer to *.4wp document format*.
 * documents in .docx format. For more information about, refer to *Importing and Exporting in .docx format*.
 
-**Note:** If you want to import a document stored in a 4D BLOB field, you can also consider using the [WP New](../commands-legacy/wp-new.md) command.
+**Note:** If you want to import a document stored in a 4D BLOB field, you can also consider using the [WP New](../commands/wp-new) command.
 
 An error is returned if the *filePath* or *fileObj* parameter is invalid, if the file is missing, or if the file format is not supported.
 
@@ -117,4 +117,5 @@ WParea:=WP Import document($file)
 
 ## See also
 
-[WP New](../commands-legacy/wp-new.md)
+[WP New](../commands/wp-new)
+

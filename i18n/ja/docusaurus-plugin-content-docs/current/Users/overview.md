@@ -9,7 +9,7 @@ title: アクセスコントロールの概要
 
 - マルチユーザーのWeb およびREST アプリケーションでは、アクセス管理は[ORDA のロールと権限](../ORDA/privileges.md) 機能に基づいています。
 - マルチユーザーのデスクトップアプリケーションでは、4D のユーザー&グループ機能を利用することができます。
-- シングルユーザーアプリケーションでは、[`Current system user`](../commands-legacy/current-system-user.md) などのコマンドを使用して、システムセッションを通じてユーザーアクセスを制御します。
+- シングルユーザーアプリケーションでは、[`Current system user`](../commands/current-system-user) などのコマンドを使用して、システムセッションを通じてユーザーアクセスを制御します。
 
 :::tip 関連したBlog 記事
 
@@ -33,7 +33,7 @@ title: アクセスコントロールの概要
 
 ### ユーザー認証
 
-4D のシングルユーザーアプリケーションでカレントユーザーを特定するには、そのシステムセッションを開いたユーザーを返す [`Current system user`](../commands-legacy/current-system-user.md) コマンドが利用できます。 つまり、ユーザー認証は OSレベルに委ねられています。
+4D のシングルユーザーアプリケーションでカレントユーザーを特定するには、そのシステムセッションを開いたユーザーを返す [`Current system user`](../commands/current-system-user) コマンドが利用できます。 つまり、ユーザー認証は OSレベルに委ねられています。
 
 この場合、次のようなコードを使用して、アプリケーション内でアクセスを許可または拒否することができます:
 
@@ -44,7 +44,7 @@ End if
 
 ```
 
-"Designer" ではなく、システムユーザー名を 4D で使用したい場合 (ログファイルなど) は、[`SET USER ALIAS`](../commands-legacy/set-user-alias.md) コマンドを使います。例:
+"Designer" ではなく、システムユーザー名を 4D で使用したい場合 (ログファイルなど) は、[`SET USER ALIAS`](../commands/set-user-alias) コマンドを使います。例:
 
 ```4d
 SET USER ALIAS(Current system user)

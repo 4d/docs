@@ -9,11 +9,16 @@ title: VP Get column count
 
 <!-- REF #_method_.VP Get column count.Params -->
 
-| Parâmetro  | Tipo    |                             | Descrição                                                   |                  |
-| ---------- | ------- | --------------------------- | ----------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | ->                          | Nome da área 4D View Pro no formulário                      |                  |
-| sheet      | Integer | ->                          | Índice da folha (folha atual se omitida) |                  |
-| Resultados | Integer | <- | Número total de colunas                                     | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro  | Tipo    |                             | Descrição                                                   |
+| ---------- | ------- | --------------------------- | ----------------------------------------------------------- |
+| vpAreaName | Text    | ->                          | Nome da área 4D View Pro no formulário                      |
+| sheet      | Integer | ->                          | Índice da folha (folha atual se omitida) |
+| Resultados | Integer | <- | Número total de colunas                                     |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 
@@ -28,7 +33,7 @@ You can define where to get the column count in the optional *sheet* parameter u
 O código seguinte retorna o número de colunas na área 4D View Pro:
 
 ```4d
-C_INTEGER($colCount)
+var $colCount : Integer
 $colCount:=VP Get column count("ViewProarea")
 ```
 

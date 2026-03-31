@@ -9,10 +9,15 @@ title: VP REMOVE SHEET
 
 <!-- REF #_method_.VP REMOVE SHEET.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                  |                  |
-| ---------- | ------- | -- | -------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro |                  |
-| index      | Integer | -> | Índice de la hoja a eliminar                 | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo    |    | Descripción                                  |
+| ---------- | ------- | -- | -------------------------------------------- |
+| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro |
+| index      | Integer | -> | Índice de la hoja a eliminar                 |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

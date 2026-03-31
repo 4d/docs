@@ -9,10 +9,15 @@ title: VP Get cell style
 
 <!-- REF #_method_.VP Get cell style.Params -->
 
-| Paramètres | Type   |                             | Description |                  |
-| ---------- | ------ | --------------------------- | ----------- | ---------------- |
-| rangeObj   | Object | ->                          | Objet plage |                  |
-| Résultat   | Object | <- | Objet style | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres | Type   |                             | Description                                                                    |
+| ---------- | ------ | --------------------------- | ------------------------------------------------------------------------------ |
+| rangeObj   | Object | ->                          | Objet plage                                                                    |
+| Résultat   | Object | <- | Le nom de la troisième feuille est "Total premier trimestre" : |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

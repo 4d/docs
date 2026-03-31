@@ -353,9 +353,9 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 <div class="no-index">
 
-| Parámetros | Tipo |                             | Descripción  |
-| ---------- | ---- | --------------------------- | ------------ |
-| Resultado  | Text | <- | Line of text |
+| Parámetros | Tipo |                             | Descripción    |
+| ---------- | ---- | --------------------------- | -------------- |
+| Resultado  | Text | <- | Línea de texto |
 
 </div>
 <!-- END REF -->

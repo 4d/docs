@@ -25,7 +25,7 @@ Puede declarar las reglas de respuesta HTTP:
 WEB Server.start($settings.rules) //definir reglas al inicio del servidor web
 ```
 
-Si se utiliza tanto un archivo **HTTPRules.json** como una llamada al comando [`WEB Server`](../commands/web-server.md) con un `$settings.rules` válido, el comando `WEB Server` tiene prioridad.
+Si se utiliza tanto un archivo **HTTPRules.json** como una llamada al comando [`WEB Server`](../commands/web-server) con un `$settings.rules` válido, el comando `WEB Server` tiene prioridad.
 
 Si la URI de la petición no coincide con ninguno de los patrones de RegEx, el servidor web devuelve una respuesta por defecto.
 
@@ -225,3 +225,4 @@ $return:=WEB Server.start($settings)
 [Nueva forma de controlar sus respuestas HTTP](https://blog.4d.com/new-way-to-control-your-http-responses/)
 
 :::
+

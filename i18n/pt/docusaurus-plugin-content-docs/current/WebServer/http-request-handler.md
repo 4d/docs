@@ -43,7 +43,7 @@ You can declare HTTP Request handlers:
 WEB Server.start($settings.handlers) //set rules at web server startup
 ```
 
-If both a **HTTPHandlers.json** file and a call to the [`WEB Server`](../commands/web-server.md) command with a valid `$settings.handlers` are used, the `WEB Server` command has priority.
+If both a **HTTPHandlers.json** file and a call to the [`WEB Server`](../commands/web-server) command with a valid `$settings.handlers` are used, the `WEB Server` command has priority.
 
 The json file (or the object in the *settings* parameter) contains all listened URL patterns, the handled verbs, and the code to be called.
 

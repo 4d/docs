@@ -53,7 +53,7 @@ displayed_sidebar: docs
 シンタックス:
 
 ```4d
- height:=Print form(myTable;myForm)
+ height:=Print form(myTable;myForm)
 ```
 
 この場合、**Print form** はフォームの詳細エリア (ヘッダマーカと詳細マーカの間のエリア) だけを印刷します。
@@ -63,7 +63,7 @@ displayed_sidebar: docs
 シンタックス:
 
 ```4d
- height:=Print form(myTable;myForm;marker)
+ height:=Print form(myTable;myForm;marker)
 ```
 
 この場合コマンドは *marker* で示されるセクションを印刷します。 以下の *Form Area* テーマの定数のうちの1つをmarker 引数に渡します:
@@ -99,7 +99,7 @@ displayed_sidebar: docs
 シンタックス:
 
 ```4d
- height:=Print form(myTable;myForm;areaStart;areaEnd)
+ height:=Print form(myTable;myForm;areaStart;areaEnd)
 ```
 
 この場合、コマンドは *areaStart* および *areaEnd* 引数間に含まれる部分を印刷します。 値はピクセル単位で入力しなければいけません。
@@ -139,24 +139,24 @@ form data オブジェクトについての詳細な情報については、[`DI
 以下の例は [PRINT SELECTION](../commands-legacy/print-selection.md)コマンドをエミュレートします。 しかし、レコードが小切手用かデポジット用であるかによって2種類のフォームの1つを使用します:
 
 ```4d
- QUERY([Register]) // レコードを選択
- If(OK=1)
-    ORDER BY([Register]) // レコードをソート
-    If(OK=1)
-       PRINT SETTINGS // 印刷設定ダイアログを表示
-       If(OK=1)
-          For($vlRecord;1;Records in selection([Register]))
-             If([Register]Type ="Check")
-                Print form([Register];"Check Out") // 小切手用のフォーム
-             Else
-                Print form([Register];"Deposit Out") // デポジット用のフォーム
-             End if
-             NEXT RECORD([Register])
-          End for
-          PAGE BREAK // 最後のページを印刷
-       End if
-    End if
- End if
+ QUERY([Register]) // Select the records
+ If(OK=1)
+    ORDER BY([Register]) // Sort the records
+    If(OK=1)
+       PRINT SETTINGS // Display Printing dialog boxes
+       If(OK=1)
+          For($vlRecord;1;Records in selection([Register]))
+             If([Register]Type ="Check")
+                Print form([Register];"Check Out") // Use one form for checks
+             Else
+                Print form([Register];"Deposit Out") // Use another form for deposits
+             End if
+             NEXT RECORD([Register])
+          End for
+          PAGE BREAK // Make sure the last page is printed
+       End if
+    End if
+ End if
 ```
 
 ## 例題 2
@@ -172,23 +172,23 @@ form data オブジェクトについての詳細な情報については、[`DI
 フォームメソッド:
 
 ```4d
- If(Form event code=On Printing Detail)
-    Form.lastname:=Uppercase(Form.lastname)
-    Form.firstname:=Uppercase(Substring(Form.firstname;1;1))+Lowercase(Substring(Form.firstname;2))
-    Form.request:=Lowercase(Form.request)
- End if
+ If(Form event code=On Printing Detail)
+    Form.lastname:=Uppercase(Form.lastname)
+    Form.firstname:=Uppercase(Substring(Form.firstname;1;1))+Lowercase(Substring(Form.firstname;2))
+    Form.request:=Lowercase(Form.request)
+ End if
 ```
 
 ダイアログを表示し、その後印刷するコードは以下のようなものになります:
 
 ```4d
- $formData:=New object
- $formData.lastname:="Smith"
- $formData.firstname:="john"
- $formData.request:="I need more COFFEE"
- $win:=Open form window("Request_obj";Plain form window;Horizontally centered;Vertically centered)
- DIALOG("Request_obj";$formData)
- $h:=Print form("Request_var";$formData;Form detail)
+ $formData:=New object
+ $formData.lastname:="Smith"
+ $formData.firstname:="john"
+ $formData.request:="I need more COFFEE"
+ $win:=Open form window("Request_obj";Plain form window;Horizontally centered;Vertically centered)
+ DIALOG("Request_obj";$formData)
+ $h:=Print form("Request_var";$formData;Form detail)
 ```
 
 ## 参照

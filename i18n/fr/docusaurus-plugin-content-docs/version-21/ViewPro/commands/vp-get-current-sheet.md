@@ -5,14 +5,19 @@ title: VP Get current sheet
 
 <!-- REF #_method_.VP Get current sheet.Syntax -->
 
-**VP Get current sheet** ( *vpAreaName* : Text )<!-- END REF -->
+**VP Get current sheet** ( *vpAreaName* : Text ) : Integer<!-- END REF -->
 
 <!-- REF #_method_.VP Get current sheet.Params -->
 
-| Paramètres | Type    |                             | Description                             |                  |
-| ---------- | ------- | --------------------------- | --------------------------------------- | ---------------- |
-| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro |                  |
-| Résultat   | Integer | <- | Indice de la feuille courante           | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres | Type    |                             | Description                             |
+| ---------- | ------- | --------------------------- | --------------------------------------- |
+| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro |
+| Résultat   | Integer | <- | Indice de la feuille courante           |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

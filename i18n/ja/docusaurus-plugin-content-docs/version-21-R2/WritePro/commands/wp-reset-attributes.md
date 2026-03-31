@@ -8,6 +8,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP RESET ATTRIBUTES.Params-->
 
+<div class="no-index">
+
 | 引数                  | 型          |                             | 説明                                  |
 | ------------------- | ---------- | --------------------------- | ----------------------------------- |
 | targetObj           | Object     | &#8594; | レンジまたは要素または4D Write Pro ドキュメント      |
@@ -15,6 +17,7 @@ displayed_sidebar: docs
 | attribName          | Text       | &#8594; | 削除したい属性の名前                          |
 | attribColl          | Collection | &#8594; | 削除したい属性のコレクション                      |
 
+</div>
 <!-- END REF-->
 
 ## 説明
@@ -29,12 +32,12 @@ displayed_sidebar: docs
 - 要素(ヘッダー / フッター / 本文 / 表 / 段落 / アンカーされた画像またはインラインの画像 / セクション / サブセクション / スタイルシート)
 - 4D Write Pro ドキュメント
 
-**WP RESET ATTRIBUTES** コマンドを使用して属性の値が削除された場合、*targetObj* あるいは *sectionOrSubsection* にはデフォルトの値が適用されます。 デフォルトの値については、*4D Write Pro Attributes* の章に記載されています。 **WP RESET ATTRIBUTES** コマンドを使用して属性の値が削除された場合、*targetObj* あるいは *sectionOrSubsection* にはデフォルトの値が適用されます。 デフォルトの値については、*4D Write Pro Attributes* の章に記載されています。 デフォルトの値については、*4D Write Pro Attributes* の章に記載されています。 **WP RESET ATTRIBUTES** コマンドを使用して属性の値が削除された場合、*targetObj* あるいは *sectionOrSubsection* にはデフォルトの値が適用されます。 デフォルトの値については、*4D Write Pro Attributes* の章に記載されています。 デフォルトの値については、*4D Write Pro Attributes* の章に記載されています。 **WP RESET ATTRIBUTES** コマンドを使用して属性の値が削除された場合、*targetObj* あるいは *sectionOrSubsection* にはデフォルトの値が適用されます。 デフォルトの値については、*4D Write Pro Attributes* の章に記載されています。 デフォルトの値については、*4D Write Pro Attributes* の章に記載されています。 Default values are listed in the [4D Write Pro Attributes](../4d-write-pro-attributes) section.
+**WP RESET ATTRIBUTES** コマンドを使用して属性の値が削除された場合、*targetObj* あるいは *sectionOrSubsection* にはデフォルトの値が適用されます。 デフォルトの値は[4D Write Pro 属性](../4d-write-pro-attributes) の章にまとめられています。
 
 :::note 注記
 
 - **WP RESET ATTRIBUTES** がセクション/サブセクションオブジェクトに対して適用された場合、属性はその親セクションまたはドキュメントから継承されます。
-- **WP RESET ATTRIBUTES** がスタイルシートオブジェクトに対して適用された場合、スタイルシートがデフォルト("Normal")スタイルシートである場合を除き、その属性はスタイルシートから削除されます。 この場合、デフォルトの値が属性に対して適用されます(スタイルシートは全てのスタイルシート属性を定義します)。 この場合、デフォルトの値が属性に対して適用されます(スタイルシートは全てのスタイルシート属性を定義します)。 この場合、デフォルトの値が属性に対して適用されます(スタイルシートは全てのスタイルシート属性を定義します)。 この場合、デフォルトの値が属性に対して適用されます(スタイルシートは全てのスタイルシート属性を定義します)。 この場合、デフォルトの値が属性に対して適用されます(スタイルシートは全てのスタイルシート属性を定義します)。 この場合、デフォルトの値が属性に対して適用されます(スタイルシートは全てのスタイルシート属性を定義します)。
+- **WP RESET ATTRIBUTES** がスタイルシートオブジェクトに対して適用された場合、スタイルシートがデフォルト("Normal")スタイルシートである場合を除き、その属性はスタイルシートから削除されます。 この場合、デフォルトの値が属性に対して適用されます(スタイルシートは全てのスタイルシート属性を定義します)。
 - *sectionOrSubsection* 引数がセクションでもサブセクションでもなく、また属性が何も指定されたなかった場合には、エラーが生成されます。
 
 :::
@@ -84,6 +87,6 @@ WP RESET ATTRIBUTES($subSection) // サブセクションの全ての属性が�
 
 ## 参照
 
-[4D Write Pro Attributes](../4d-write-pro-attributes)  
+[4D Write Pro 属性](../4d-write-pro-attributes)  
 [WP GET ATTRIBUTES](wp-get-attributes.md)  
 [WP SET ATTRIBUTES](wp-set-attributes.md)

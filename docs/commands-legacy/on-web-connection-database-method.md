@@ -25,7 +25,7 @@ displayed_sidebar: docs
 <!--REF #_command_.On Web Connection database method.Summary-->The **On Web Connection database method** can be called when the web server receives an invalid request.<!-- END REF-->
 
 
- The request should have previously been accepted by the [On Web Authentication database method](on-web-authentication-database-method.md) (if it exists) and the web server must be launched.
+ The request should have previously been accepted by the [On Web Authentication database method](../commands/on-web-authentication-database-method) (if it exists) and the web server must be launched.
 
 The **On Web Connection database method** receives six text parameters passed by 4D ($url, $http, $ipBrowser, $ipServer, $user, and $pw). These parameters are described in the following table:   
 
@@ -87,9 +87,10 @@ The *$user* and *$pw* parameters receive the user name and password entered by t
 
 The **On Web Connection database method** can be used as the entry point for the 4D Web server using customized command URLs.
 
-**Warning:** Calling a 4D command that displays an interface element ([DIALOG](../commands/dialog.md), [ALERT](alert.md), etc.) ends the method processing.
+**Warning:** Calling a 4D command that displays an interface element ([DIALOG](../commands/dialog), [ALERT](../commands/alert), etc.) ends the method processing.
 
 The **On Web Connection database method** is therefore called in the following cases:
 
 * When a Web page called with a URL of type `<path>/<file>` is not found. The database method is called with the URL.
 * When a Web page is called with a URL of type `<file>/` and no home page has been defined by default. The database method is called with the URL.
+

@@ -204,18 +204,34 @@ Se designar mais de cinco linhas como cabeçalho (ou se resultar de uma inserç�
 
 ## Table datasource 
 
-Pode atribuir um objeto fórmulaa como fonte de dados para uma tabela e acessar os valores resultantes desde a tabela usando *Expressões com This* (ver abaixo). a fórmula da fonte de dados é processada por 4D Write Pro quando se calculam as fórmulas (por exemplo, quando abrir o documento, quando chamar ao comando [WP COMPUTE FORMULAS](../commands/wp-compute-formulas), etc.). Esta função aproveita os contextos de dados (ver [WP SET DATA CONTEXT](../commands/wp-set-data-context)).
+Pode atribuir um [objeto fórmula](../../API/FormulaClass.md) como **datasource** para uma tabela e acessar os valores resultantes desde a tabela usando [expressões com `This`](#objeto-formula-de-tabela) específicas. A fórmula da fonte de dados é processada por 4D Write Pro cada vez que as [fórmulas são calculadas](../managing-formulas.md#formula-evaluation) (por exemplo, quando abrir o documento, quando chamar ao comando [WP COMPUTE FORMULAS](../commands/wp-compute-formulas), etc.). 
 
-Para atribuir uma fonte de dados a uma tabela, use o comando [WP SET ATTRIBUTES](../commands/wp-set-attributes) com o comando wk datasource e um objeto *4D formula* como valor. Por exemplo, para preencher uma tabela com uma linha por cada pessoa que vive em França:
+### Atribuir uma fonte de dados
+
+Para atribuir uma fonte de dados a uma tabela, use o comando [WP SET ATTRIBUTES](../commands/wp-set-attributes) com a constante `wk datasource` como atributo e o objeto datasource como valor. O objeto datasource pode ser:
+
+- uma [**fórmula 4D**](../../API/FormulaClass.md). Por exemplo, para preencher uma tabela com uma linha por cada pessoa que vive em França:
 
 ```4d
- $formula:=Formula(ds.people.query("country = :1";"France"))
+ var $formula:=Formula(ds.people.query("country = :1";"France"))
  WP SET ATTRIBUTES($table;wk datasource;$formula)
 ```
 
-* Se o objeto fórmula da fonte de dados devolve uma coleção ou uma seleção de entidades (não vazia), a tabela se preenche automaticamente quando se calcular a fórmula: contém ao menos tantas linhas quanto elementos tiver na coleção ou entidades na seleção de entidades. A primeira linha da tabela, chamada a linha repetida, se utiliza como linha de modelo (excluindo as linhas de cabeçalho e as possíveis linhas de ruptura).
-* Na linha repetida (e linhas de ruptura) pode inserir expressões que usem palavras chaves especiais como *This.elemento.sobrenome*. As expressôes se sustituem durante o processamento pelos dados da coleção ou a seleção de entidades. Esta linha de modelo se duplicará para que o número de linhas de elementos seja igual ao número de elementos da coleção ou seleção de entidades depois de calcular as fórmulas.
-* Se a fórmula da fonte de dados não devolver uma coleção ou uma seleção de entidades, ou se devolver uma coleção/seleção de entidades vazia, as linhas da tabela não são criadas automaticamente e todas as linhas se tratam como linhas normais.
+- um **contexto de dados**, definido usando o comando [WP SET DATA CONTEXT](../commands/wp-set-data-context) para todo o documento. Um contexto de dados pode ser atribuído a uma tabela através do objeto `This.data`. Por exemplo, para preencher uma tabela com uma [seleção de entidades](../../API/EntitySelectionClass.md) de pedidos:
+
+```4d
+var $context:={}
+$context.orders:=ds.Order.query("customerID=:1"; $customer.ID)
+var $doc:=WP New($template)
+WP SET DATA CONTEXT($doc; $context)
+WP SET ATTRIBUTES($table;wk datasource;This.data.orders)
+```
+
+Se o objeto fórmula da fonte de dados devolve uma coleção ou uma seleção de entidades (não vazia), a tabela se preenche automaticamente quando se calcular a fórmula: contém ao menos tantas linhas quanto elementos tiver na coleção ou entidades na seleção de entidades. A primeira linha da tabela, chamada a linha repetida, se utiliza como linha de modelo (excluindo as linhas de cabeçalho e as possíveis linhas de ruptura).
+
+Na linha repetida (e linhas de ruptura) pode inserir expressões que usem palavras chaves especiais como *This.elemento.sobrenome*. As expressôes se sustituem durante o processamento pelos dados da coleção ou a seleção de entidades. Esta linha de modelo se duplicará para que o número de linhas de elementos seja igual ao número de elementos da coleção ou seleção de entidades depois de calcular as fórmulas.
+
+Se a fórmula da fonte de dados não devolver uma coleção ou uma seleção de entidades, ou se devolver uma coleção/seleção de entidades vazia, as linhas da tabela não são criadas automaticamente e todas as linhas se tratam como linhas normais.
 
 Para eliminar uma fonte de dados de uma tabela, utilize o comando [WP RESET ATTRIBUTES](../commands/wp-reset-attributes). Definirá o valor de atributo datasource como *null*:
 
@@ -223,7 +239,7 @@ Para eliminar uma fonte de dados de uma tabela, utilize o comando [WP RESET ATTR
  WP RESET ATTRIBUTES($table;wk datasource)
 ```
 
-### Fazer uma tabela com um datasource 
+### Definição de linhas 
 
 Um design da tabela baseado em uma fonte de dados que contém as linhas abaixo:
 
@@ -277,7 +293,7 @@ As tabelas baseadas em fontes de dados são compatíveis com uma ou várias Lina
 
 Cada vez que mudar o valor da fórmula, se insere uma nova linha de ruptura. Portanto, para que as tabelas se mostram corretamente, a seleção de entidades (ou coleção) utilizada como fonte de dados da tabela deve estar ordenada em consequencia. Por exemplo, se quiser desgloses por países e cidades, a fonte de dados deve ser ordenada do seguinte modo: *ds.people.all().orderBy("country asc, city asc")*
 
-o valor de ruptura se define mediante o atributo *wk break formula*. O valor deve ser una fórmula baseada em uma propriedade do elemento como "This.item.name'', do contrario o valor calculado pode não mudar nunca, o que faz que a fórmula de ruptura seja inútil. O atributo wk break formula se ignora se a tabela não tiver fonte de dados ou se a linha for um cabeçalho. Uma linha de ruptura deve ser adjacente à línha repetida (seja antes ou depois), ou a outra línha de interrupção, do contrario se ignora.
+o valor de ruptura se define mediante o atributo `wk break formula`. O valor deve ser una fórmula baseada em uma propriedade do elemento como "This.item.name'', do contrario o valor calculado pode não mudar nunca, o que faz que a fórmula de ruptura seja inútil. O atributo `wk break formula` se ignora se a tabela não tiver fonte de dados ou se a linha for um cabeçalho. Uma linha de ruptura deve ser adjacente à línha repetida (seja antes ou depois), ou a outra línha de interrupção, do contrario se ignora.
 
 ```4d
  WP SET ATTRIBUTES($row_2;wk break formula;Formula(This.item.country))
@@ -289,14 +305,16 @@ Para criar líinhas de ruptura:
 
 1. Ordene a fonte de dados com os niveis correspondentes às rupturas que quiser mostrar, por exemplo, *ds.People.all().orderBy("continent asc, country asc, city asc")*
 2. Desenhe as linhas de ruptura na plantilla de tabela. Se as quebras forem encontradas depois da linha repetida, devem coincidir com a **ordem inversa** da fonte de dados, e se for encontrada antes da linha repetida, deve coincidir com a mesma ordem da fonte de dados.
-3. Defina o atributo *wk break formula* para as linhas selecionadas:
+3. Defina o atributo `wk break formula` para as linhas selecionadas:
 
 ```4d
  $row:=WP Table get rows($table;2;1) //selecione a segunda linha como quebra
  WP SET ATTRIBUTES($row_2;wk break formula;Formula(This.item.country))
 ```
 
-### Expressões com This 
+### Objeto fórmula de tabela 
+
+Quando utilizado numa fórmula dentro da tabela, a palavra-chave [`This`](../commands/this.md) dá acesso a [expressões](../managing-formulas.md#formula-context-object) adicionais, de acordo com o contexto:
 
 | **Contexto**                                                                                                            | **Expressão**                            | **Tipo**                                                             | **Retorna**                                                                                                                                                                                                                                                                                                                        |
 | ----------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

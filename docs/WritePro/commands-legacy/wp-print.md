@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.WP PRINT.Summary-->The **WP PRINT** command launches a print job for the 4D Write Pro document specified in *wpDoc*, or adds the document to the current print job if it is called between [OPEN PRINTING JOB](../../commands-legacy/open-printing-job.md) and [CLOSE PRINTING JOB](../../commands-legacy/close-printing-job.md).<!-- END REF--> **WP PRINT** uses print settings defined by the 4D [PRINT SETTINGS](../../commands-legacy/print-settings.md) or [SET PRINT OPTION](../../commands-legacy/set-print-option.md) commands, except for page margins which are always based on the 4D Write Pro document page settings. **WP PRINT** uses current page setup options (such as page size and orientation), or those of the document if [WP USE PAGE SETUP](wp-use-page-setup.md) was called previously.
+<!--REF #_command_.WP PRINT.Summary-->The **WP PRINT** command launches a print job for the 4D Write Pro document specified in *wpDoc*, or adds the document to the current print job if it is called between [OPEN PRINTING JOB](../../commands/open-printing-job) and [CLOSE PRINTING JOB](../../commands/close-printing-job).<!-- END REF--> **WP PRINT** uses print settings defined by the 4D [PRINT SETTINGS](../../commands/print-settings) or [SET PRINT OPTION](../../commands/set-print-option) commands, except for page margins which are always based on the 4D Write Pro document page settings. **WP PRINT** uses current page setup options (such as page size and orientation), or those of the document if [WP USE PAGE SETUP](wp-use-page-setup.md) was called previously.
 
 The optional *printOptions* parameter can be used to set the HTML WYSIWYG view for the print output as well as the formula computing. You can pass one or a combination of the following constants from the "4D Write Pro" theme:
 
@@ -36,7 +36,7 @@ If *printOptions* is omitted, by default the 4D Write Pro layout is used and exp
 
 **Note:** When printed with **WP PRINT**, 4D Write Pro documents are always printed as in Page view mode, regardless of the View property setting for the area (see *Configuring View properties*).
 
-**Compatibility Note:** The GDI-based legacy printing layer (which can be set using the [SET PRINT OPTION](../../commands-legacy/set-print-option.md) command) **is deprecated** and should not be used with **WP PRINT**, since it may result in rendering artifacts. It is recommended to only use the default printing layer with this command. 
+**Compatibility Note:** The GDI-based legacy printing layer (which can be set using the [SET PRINT OPTION](../../commands/set-print-option) command) **is deprecated** and should not be used with **WP PRINT**, since it may result in rendering artifacts. It is recommended to only use the default printing layer with this command. 
 
 ## Example 
 

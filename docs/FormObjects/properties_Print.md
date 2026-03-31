@@ -9,7 +9,7 @@ This property handles the print mode for objects whose size can vary from one re
 
 You cannot place more than one variable frame object side-by-side on a form. You can place non-variable frame objects on either side of an object that will be printed with a variable size provided that the variable frame object is at least one line longer than the object beside it and that all objects are aligned on the top. If this condition is not respected, the contents of the other fields will be repeated for every horizontal slice of the variable frame object.
 
-> The [`Print object`](../commands-legacy/print-object.md) and [`Print form`](../commands/print-form.md) commands do not support this property.
+> The [`Print object`](../commands/print-object) and [`Print form`](../commands/print-form) commands do not support this property.
 
 The print options are:
 
@@ -19,7 +19,7 @@ The print options are:
 
 - **Fixed (Multiple Records)** (subforms only): the initial size of the subform area is kept but 4D prints the form several times in order to print all the records.
 
-> This property can be set by programming using the [`OBJECT SET PRINT VARIABLE FRAME`](../commands-legacy/object-set-print-variable-frame.md) command.
+> This property can be set by programming using the [`OBJECT SET PRINT VARIABLE FRAME`](../commands/object-set-print-variable-frame) command.
 
 #### JSON Grammar
 
@@ -34,4 +34,5 @@ The print options are:
 
 #### Commands
 
-[`OBJECT GET PRINT VARIABLE FRAME`](../commands-legacy/object-get-print-variable-frame.md) - [`OBJECT SET PRINT VARIABLE FRAME`](../commands-legacy/object-set-print-variable-frame.md)
+[`OBJECT GET PRINT VARIABLE FRAME`](../commands/object-get-print-variable-frame) - [`OBJECT SET PRINT VARIABLE FRAME`](../commands/object-set-print-variable-frame)
+

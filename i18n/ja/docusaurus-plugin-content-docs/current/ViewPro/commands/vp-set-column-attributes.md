@@ -40,11 +40,11 @@ title: VP SET COLUMN ATTRIBUTES
 2列目のカラムの幅を変更して、ヘッダーを設定します:
 
 ```4d
-C_OBJECT($column;$properties)
-
-$column:=VP Column("ViewProArea";1) // カラムB を取得
+var $column; $properties : Object
+ 
+$column:=VP Column("ViewProArea";1) //column B
 $properties:=New object("width";100;"header";"Hello World")
-
+ 
 VP SET COLUMN ATTRIBUTES($column;$properties)
 ```
 

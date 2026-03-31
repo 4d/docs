@@ -18,8 +18,7 @@ L'architecture des [projets 4D](../Project/architecture.md) est ouverte et peut 
 
 4D propose différents composants à la communauté 4D, couvrant de nombreux besoins de développement. Tous les composants 4D sont présents sur le [dépôt github de 4D](https://github.com/4d).
 
-A subset of these components is listed by default in the Github panel of the [Dependency Manager](../Project/components.md#adding-a-github-dependency), including:
-including:
+Un sous-ensemble de ces composants est listé par défaut dans le panneau Github du [Dependency Manager](../Project/components.md#adding-a-github-dependency), notamment :
 
 | Composant             | Dépôt Github                                                                | Description                                                                                             | Principales fonctionnalités                                                                                                             |
 | --------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
@@ -32,6 +31,7 @@ including:
 | 4D Widgets            | https://github.com/4d/4D-Widgets            | Gestion des widgets 4D DatePicker, TimePicker et SearchPicker                                           | `DatePicker calendar`, `DateEntry area`, `TimeEntry`, `SearchPicker SET HELP TEXT`, ... |
 | Interface 4D WritePro | https://github.com/4d/4D-WritePro-Interface | Gestion de palettes et de [l'assistant de tableaux](../WritePro/writeprointerface.md) dans 4D Write Pro | `WP PictureSettings`, `WP ShowTabPages`, `WP SwitchToolbar`, `WP UpdateWidget`                                                          |
 | Build4D               | https://github.com/4d-depot/Build4D         | Compiler, construire et signer des projets                                                              | CI/CD                                                                                                                                   |
+
 
 
 

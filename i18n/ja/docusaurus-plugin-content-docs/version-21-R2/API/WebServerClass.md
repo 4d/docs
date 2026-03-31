@@ -599,11 +599,14 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 <!-- REF #WebServerClass.start().Params -->
 
+<div class="no-index">
+
 | 引数       | 型      |                             | 説明              |
 | -------- | ------ | --------------------------- | --------------- |
 | settings | Object | ->                          | 開始時の Webサーバー設定  |
 | 戻り値      | Object | <- | Webサーバー開始のステータス |
 
+</div>
 <!-- END REF -->
 
 `.start()` 関数は、任意の *settings* オブジェクト引数に設定したプロパティを使用して、<!-- REF #WebServerClass.start().Summary -->対象の Webサーバーを開始させます<!-- END REF -->。
@@ -661,10 +664,13 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 <!-- REF #WebServerClass.stop().Params -->
 
+<div class="no-index">
+
 | 引数 | 型 |   | 説明         |
 | -- | - | - | ---------- |
 |    |   |   | 引数を必要としません |
 
+</div>
 <!-- END REF -->
 
 `.stop()` 関数は、<!-- REF #WebServerClass.stop().Summary -->対象の Webサーバーを停止します<!-- END REF -->。

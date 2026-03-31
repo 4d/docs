@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET AUTOMATIC RELATIONS.Summary-->**SET AUTOMATIC RELATIONS** は、カレントプロセスで、データベース全体のマニュアルリレートを一時的に自動リレートに変更します。<!-- END REF-->リレートは、次に**SET AUTOMATIC RELATIONS** コマンドを使用するまで自動リレートのままになります。
 
-* *one* が[True](true.md "True") の場合、すべてのn対1のマニュアルリレートを自動リレートに設定します。*one* が[False](false.md "False") の場合、前もって自動リレートにしたすべてのn対1リレートがマニュアルリレートに戻ります。
+* *one* が[True](../commands/true) の場合、すべてのn対1のマニュアルリレートを自動リレートに設定します。*one* が[False](../commands/false) の場合、前もって自動リレートにしたすべてのn対1リレートがマニュアルリレートに戻ります。
 * *many* も1対nリレートに対して同じように作用します。
 
 このコマンドはデザインモードで既に自動リレートに設定されたものに対しては無効です。
@@ -42,7 +42,7 @@ displayed_sidebar: docs
 
 **注意:** 
 
-* **SET AUTOMATIC RELATIONS**コマンドに [True](true.md "True") を渡すと、全ての手動リレートがセッション中に自動モードが"ロック"されます。この場合、 [SET FIELD RELATION](set-field-relation.md) コマンドは**SET AUTOMATIC RELATIONS** の前にあっても後ろにあっても、同じセッション中は呼び出しが無視されます。自動モードを解除して[SET FIELD RELATION](set-field-relation.md) の呼び出しを有効化する際には、**SET AUTOMATIC RELATIONS** に [False](false.md "False")を渡します。
+* **SET AUTOMATIC RELATIONS**コマンドに [True](../commands/true) を渡すと、全ての手動リレートがセッション中に自動モードが"ロック"されます。この場合、 [SET FIELD RELATION](set-field-relation.md) コマンドは**SET AUTOMATIC RELATIONS** の前にあっても後ろにあっても、同じセッション中は呼び出しが無視されます。自動モードを解除して[SET FIELD RELATION](set-field-relation.md) の呼び出しを有効化する際には、**SET AUTOMATIC RELATIONS** に [False](../commands/false)を渡します。
 * 自動リレーション機能はリレートされたテーブルが[DISPLAY SELECTION](display-selection.md) 、[MODIFY SELECTION](modify-selection.md) 、あるいはサブフォームを使用して表示されたリストフォーム内で表示されている場合には、無効化されているということに注意してください。詳細については*自動およびマニュアルリレーション* を参照してください。
 
 ## 例題 

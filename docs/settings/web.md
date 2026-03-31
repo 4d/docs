@@ -183,7 +183,7 @@ List of allowed hosts and methods for the CORS service. See [CORS Settings](../W
 
 Starts or stops the recording of requests received by the 4D web server in the *logweb.txt* file and sets its format. See [Log Recording](../WebServer/webServerConfig.md#log-recording).
 
-> The activation and deactivation of the log file of requests can also be carried out by programming using the [WEB SET OPTION](../commands-legacy/web-set-option.md) command.
+> The activation and deactivation of the log file of requests can also be carried out by programming using the [WEB SET OPTION](../commands/web-set-option) command.
 
 
 The log format menu provides the following options:
@@ -354,3 +354,4 @@ This option only appears if the Qodly Studio license is activated.
 :::
 
 This option enables user access to [Qodly Studio](developer.4d.com/qodly/) for the current project. Note that global access must be allowed at the [application level](../Admin/webAdmin.md).
+

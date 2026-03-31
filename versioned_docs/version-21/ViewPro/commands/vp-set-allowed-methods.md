@@ -47,7 +47,7 @@ In the *methodObj* parameter, pass an object in which each property is the name 
 You want to allow two methods in your 4D View Pro areas:
 
 ```4d
-C_OBJECT($allowed)
+var $allowed : Object
 $allowed:=New object //parameter for the command
  
 $allowed.Hello:=New object //create a first simple function named "Hello"

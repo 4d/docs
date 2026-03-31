@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Find next.Summary-->**WP Find next** コマンドは、コマンドは*targetObj* 引数のオブジェクト内の*searchAfter* 引数で指定したレンジの後の部分内を、*searchValue* 引数の値を、*searchCondition* 引数の検索条件に基づいて検索を行います。<!-- END REF--> また任意の引数を使用することで見つかった結果を置き換えることができます。
 
-**注**: **WP Find next** はフォーミュラ内のテキストを検索または置換はしません。この場合には、[WP Get formulas](wp-get-formulas.md) コマンドを使用して下さい。
+**注**: **WP Find next** はフォーミュラ内のテキストを検索または置換はしません。この場合には、[WP Get formulas](../commands/wp-get-formulas) コマンドを使用して下さい。
 
 *targetObj* 引数には、以下のいずれかを格納したオブジェクトを渡します:
 
@@ -100,5 +100,5 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP Find all](wp-find-all.md)  
-[WP Find previous](wp-find-previous.md)  
+[WP Find all](../commands/wp-find-all)  
+[WP Find previous](../commands/wp-find-previous)  

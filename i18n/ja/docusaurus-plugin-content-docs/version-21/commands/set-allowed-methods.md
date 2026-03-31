@@ -61,10 +61,10 @@ displayed_sidebar: docs
 この例は、名前が“formula”で始まるすべてのメソッドと、“Total\_general” メソッドを、保護されたコンテキスト下においてユーザーによって入力できるようにします:
 
 ```4d
- ARRAY TEXT(methodsArray;2)
- methodsArray{1}:="formula@"
- methodsArray{2}:="Total_general"
- SET ALLOWED METHODS(methodsArray)
+ ARRAY TEXT(methodsArray;2)
+ methodsArray{1}:="formula@"
+ methodsArray{2}:="Total_general"
+ SET ALLOWED METHODS(methodsArray)
 ```
 
 ## 参照

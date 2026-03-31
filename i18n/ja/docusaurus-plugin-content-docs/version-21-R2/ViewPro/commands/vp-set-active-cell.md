@@ -9,9 +9,14 @@ title: VP SET ACTIVE CELL
 
 <!-- REF #_method_.VP SET ACTIVE CELL.Params -->
 
-| 引数       | 型      |    | 説明        |                  |
-| -------- | ------ | -- | --------- | ---------------- |
-| rangeObj | Object | -> | レンジオブジェクト | <!-- END REF --> |
+<div class="no-index">
+
+| 引数       | 型      |    | 説明        |
+| -------- | ------ | -- | --------- |
+| rangeObj | Object | -> | レンジオブジェクト |
+
+</div>
+<!-- END REF -->
 
 ## 説明
 

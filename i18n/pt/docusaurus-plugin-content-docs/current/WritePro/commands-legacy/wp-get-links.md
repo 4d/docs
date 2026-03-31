@@ -58,5 +58,5 @@ Se quiser mudar a cor de todas as etiquetas de link url em um documento 4D Write
 ## Ver também 
 
   
-[WP Get formulas](wp-get-formulas.md)  
-[WP SET LINK](wp-set-link.md)  
+[WP Get formulas](../commands/wp-get-formulas)  
+[WP SET LINK](../commands/wp-set-link)  

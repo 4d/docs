@@ -48,13 +48,13 @@ Una fecha null es especificada por *!00-00-00!*.
 | Menor o igual que | Date <= Date | Boolean  | !2017-01-20! - !2017-01-01! <= !2017-01-20! | True         |
 |                   |                                       |          | !2017-01-20! <= !2017-01-01!                | False        |
 
-## Conversion of dates from JavaScript
+## Conversión de fechas desde JavaScript
 
 Como las fechas en JavaScript son objetos, se envían a 4D como texto que contiene su forma JSON como cualquier otro objeto. Este principio se aplica en particular cuando se utilizan [comandos JSON](../commands/theme/JSON.md) o [Áreas Web](../FormObjects/webArea_overview.md).
 
-The JSON form of JavaScript Date objects follows the ISO 8601 standard, for example "2013-08-23T00:00:00Z". It is your responsibility to convert this text into a 4D date. Hay dos soluciones disponibles:
+The JSON form of JavaScript Date objects follows the ISO 8601 standard, for example "2013-08-23T00:00:00Z". Es su responsabilidad convertir este texto en una fecha 4D. Hay dos soluciones disponibles:
 
-Using the [`JSON Parse`](../commands-legacy/json-parse.md) command:
+Utilizando el comando [`JSON Parse`](../commands-legacy/json-parse.md):
 
 ```4d
  var $dateIso : Texto // recepción de una fecha en formato ISO
@@ -70,7 +70,7 @@ Utilizando el comando [`Date`](../commands-legacy/date.md):
  $date4D:=Date($dateIso)
 ```
 
-Note the difference between these two solutions: [`JSON Parse`](../commands-legacy/json-parse.md) respects the [conversion mode set using the `SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md#dates-inside-objects-85) (if any), while [`Date`](../commands-legacy/date.md) is not subject to this. Conversion using the [`Date`](../commands-legacy/date.md) command always takes the local time zone into account.
+Note the difference between these two solutions: [`JSON Parse`](../commands-legacy/json-parse.md) respects the [conversion mode set using the `SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md#dates-inside-objects-85) (if any), while [`Date`](../commands-legacy/date.md) is not subject to this. Conversión usando el comando [`Date`](../commands-legacy/date.md) siempre tiene en cuenta la zona horaria local.
 
 :::note
 

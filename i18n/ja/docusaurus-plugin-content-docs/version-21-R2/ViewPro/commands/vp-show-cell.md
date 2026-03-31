@@ -9,11 +9,16 @@ title: VP SHOW CELL
 
 <!-- REF #_method_.VP SHOW CELL.Params -->
 
-| 引数       | 型       |    | 説明                 |                  |
-| -------- | ------- | -- | ------------------ | ---------------- |
-| rangeObj | Object  | -> | レンジオブジェクト          |                  |
-| vPos     | Integer | -> | セルあるいは行の縦方向の表示位置   |                  |
-| hPos     | Integer | -> | セルあるいはカラムの横方向の表示位置 | <!-- END REF --> |
+<div class="no-index">
+
+| 引数       | 型       |    | 説明                 |
+| -------- | ------- | -- | ------------------ |
+| rangeObj | Object  | -> | レンジオブジェクト          |
+| vPos     | Integer | -> | セルあるいは行の縦方向の表示位置   |
+| hPos     | Integer | -> | セルあるいはカラムの横方向の表示位置 |
+
+</div>
+<!-- END REF -->
 
 ## 説明
 

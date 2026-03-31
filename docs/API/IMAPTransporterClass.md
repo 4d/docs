@@ -7,7 +7,7 @@ The `IMAPTransporter` class allows you to retrieve messages from a IMAP email se
 
 ### IMAP Transporter object
 
-IMAP Transporter objects are instantiated with the [IMAP New transporter](../commands/imap-new-transporter.md) command. They provide the following properties and functions:
+IMAP Transporter objects are instantiated with the [IMAP New transporter](../commands/imap-new-transporter) command. They provide the following properties and functions:
 
 ||
 |---|
@@ -60,7 +60,7 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](../com
 
 #### Description
 
-The `4D.IMAPTransporter.new()` function <!-- REF #4D.IMAPTransporter.new().Summary -->creates and returns a new object of the `4D.IMAPTransporter` type<!-- END REF -->. It is identical to the [`IMAP New transporter`](../commands/imap-new-transporter.md) command (shortcut).
+The `4D.IMAPTransporter.new()` function <!-- REF #4D.IMAPTransporter.new().Summary -->creates and returns a new object of the `4D.IMAPTransporter` type<!-- END REF -->. It is identical to the [`IMAP New transporter`](../commands/imap-new-transporter) command (shortcut).
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -490,7 +490,7 @@ You can pass:
 * in the `msgsIDs` parameter, a collection containing the unique IDs of the specific messages to delete, or
 * in the `allMsgs` parameter, the `IMAP all` constant (integer) to delete all messages in the selected mailbox.
 
-Executing this function does not actually remove messages. Messages with the "delete" flag can still be found by the [.searchMails()](#searchmails) function. Flagged messages are deleted from the IMAP server with the [`.expunge()`](#expunge) function or by selecting another mailbox or when the [transporter object](#imap-transporter-object) (created with [IMAP New transporter](../commands/imap-new-transporter.md)) is destroyed.
+Executing this function does not actually remove messages. Messages with the "delete" flag can still be found by the [.searchMails()](#searchmails) function. Flagged messages are deleted from the IMAP server with the [`.expunge()`](#expunge) function or by selecting another mailbox or when the [transporter object](#imap-transporter-object) (created with [IMAP New transporter](../commands/imap-new-transporter)) is destroyed.
 
 **Returned object**
 
@@ -1879,3 +1879,4 @@ End if
 <!-- END REF -->
 
 <!-- INCLUDE transporter.user.Desc -->
+

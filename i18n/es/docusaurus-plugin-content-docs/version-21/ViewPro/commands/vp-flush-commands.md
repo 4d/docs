@@ -17,11 +17,14 @@ title: VP FLUSH COMMANDS
 
 <!-- REF #_method_.VP FLUSH COMMANDS.Params -->
 
+<div class="no-index">
+
 | Parámetros   | Tipo                        |    | Descripción                                                                                                                                                           |
 | ------------ | --------------------------- | -- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | vpAreaName   | Text                        | -> | Nombre de objeto formulario área 4D View Pro                                                                                                                          |
 | retrollamada | 4D.Function | -> | (Opcional) Una función de retrollamada que se ejecuta después de que se hayan ejecutado todos los comandos VP y las funciones personalizadas de 4D |
 
+</div>
 <!-- END REF -->
 
 ## Descripción

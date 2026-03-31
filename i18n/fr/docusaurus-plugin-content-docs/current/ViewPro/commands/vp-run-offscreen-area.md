@@ -11,10 +11,10 @@ title: VP Run offscreen area
 
 <div class="no-index">
 
-| Paramètres | Type   |                             | Description                                                                     |
-| ---------- | ------ | --------------------------- | ------------------------------------------------------------------------------- |
-| parameters | Object | ->                          | Objet contenant les attributs de la zone hors écran                             |
-| Résultat   | Mixed  | <- | `.result` property of the `.onEvent` object, or Null if does not return a value |
+| Paramètres | Type   |                             | Description                                                                                                                                                  |
+| ---------- | ------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| parameters | Object | ->                          | Assurez-vous que la commande n'a pas été exécutée auparavant à l'aide de <code>VP RECOMPUTE FORMULAS</code>, sinon la commande ne fait rien. |
+| Résultat   | Mixed  | <- | `.result` property of the `.onEvent` object, or Null if does not return a value                                                                              |
 
 </div>
 <!-- END REF -->

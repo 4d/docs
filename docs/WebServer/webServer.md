@@ -53,7 +53,7 @@ REST requests are detailed in the [REST server](../REST/gettingStarted.md) secti
 
 ## Extended settings
 
-The 4D web server configuration is defined through a comprehensive set of application-level settings that can also be customized for the session using the `webServer` object properties or the [`WEB SET OPTION`](../commands-legacy/web-set-option.md) command.
+The 4D web server configuration is defined through a comprehensive set of application-level settings that can also be customized for the session using the `webServer` object properties or the [`WEB SET OPTION`](../commands/web-set-option) command.
 
 ## Templates and URLs
 
@@ -66,3 +66,4 @@ The 4D web server supports access to data stored in your 4D applications through
 ## Dedicated Database Methods
 
 `On Web Authentication`, `On Web Connection`, as well as `On REST Authentication` database methods are the entry points of requests in the web server; they can be used to evaluate and route any type of request.
+

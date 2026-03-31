@@ -4,7 +4,7 @@ title: WP SET ATTRIBUTES
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP SET ATTRIBUTES.Syntax-->**WP SET ATTRIBUTES** ( *targetObj* : Object ; *...(attribName* : Text {; *...attribValue* : any }) )<br/>**WP SET ATTRIBUTES** ( *targetObj* : Object ; *attribObj* : Object )<!-- END REF-->
+<!--REF #_command_.WP SET ATTRIBUTES.Syntax-->**WP SET ATTRIBUTES** ( *targetObj* : Object ; ...(*attribName* : Text {; *attribValue* : any }) )<br/>**WP SET ATTRIBUTES** ( *targetObj* : Object ; *attribObj* : Object )<!-- END REF-->
 
 <!--REF #_command_.WP SET ATTRIBUTES.Params-->
 
@@ -152,5 +152,5 @@ El resultado es:
 ## Ver también
 
 [4D Write Pro Attributes](../4d-write-pro-attributes)  
-[WP GET ATTRIBUTES](../commands/wp-get-attributes.md)  
-[WP RESET ATTRIBUTES](../commands/wp-reset-attributes.md)
+[WP GET ATTRIBUTES](../commands/wp-get-attributes)  
+[WP RESET ATTRIBUTES](../commands/wp-reset-attributes)

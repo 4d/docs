@@ -93,7 +93,6 @@ Some data is also collected at regular intervals.
 |system|Text|Operating system version and build number|
 |uniqueID|Text|Unique ID of the 4D Server|
 |uptime|Number|Time elapsed (in seconds) since local 4D database was opened|
-|usingLegacyNetworkLayer|Boolean|True if legacy network layer used for the application server|
 |usingQUICNetworkLayer|Boolean|True if the database uses the QUIC network layer|
 |version|Number|Version number of the 4D application|
 |webServer|Object|"started":true if the web server is starting or started|
@@ -104,7 +103,7 @@ Some data is also collected at regular intervals.
 
 ## Where is it stored and sent?
 
-Collected data is written in a text file (JSON format) per database when 4D Server quits. The file is stored inside the [active 4D folder](../commands-legacy/get-4d-folder.md), i.e.:
+Collected data is written in a text file (JSON format) per database when 4D Server quits. The file is stored inside the [active 4D folder](../commands/get-4d-folder), i.e.:
 
 - on Windows: `Users\[userName]\AppData\Roaming\4D Server`
 - on macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`

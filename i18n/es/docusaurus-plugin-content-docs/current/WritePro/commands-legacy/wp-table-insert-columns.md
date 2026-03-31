@@ -61,4 +61,4 @@ Insertará las nuevas columnas en la ubicación correcta:
 
 ## Ver también 
 
-[WP Table insert rows](wp-table-insert-rows.md)  
+[WP Table insert rows](../commands/wp-table-insert-rows)  

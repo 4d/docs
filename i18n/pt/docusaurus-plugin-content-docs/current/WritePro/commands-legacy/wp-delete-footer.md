@@ -38,5 +38,5 @@ Se quiser eliminar o rodapé das páginas da esquerda de uma seção:
 
 ## Ver também 
 
-[WP Get footer](wp-get-footer.md)  
-[WP New footer](wp-new-footer.md)  
+[WP Get footer](../commands/wp-get-footer)  
+[WP New footer](../commands/wp-new-footer)  

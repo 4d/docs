@@ -13,14 +13,14 @@ Les documents 4D Write Pro peuvent contenir des tableaux. Les tableaux 4D Write 
 
 ## Créer un tableau 
 
-Pour créer un tableau 4D Write Pro, vous devez appeler la commande [WP Inserer tableau](../commands/wp-inserer-tableau). Vous pouvez ensuite ajouter des lignes à l'aide de la commande [WP Tableau ajouter ligne](../commands/wp-tableau-ajouter-ligne).
+Pour créer un tableau 4D Write Pro, vous devez appeler la commande [WP Insert table](../commands/wp-insert-table). Vous pouvez ensuite ajouter des lignes à l'aide de la commande [WP Table append row](../commands/wp-table-append-row).
 
 **Note :** L'utilisateur peut créer un tableau par copier-coller d'une plage de cellules :   
 ![](../../assets/en/WritePro/pict3307941.en.png)
 
 ## Modifier les tableaux 
 
-Le contenu des cellules peut être ajouté par programmation à l'aide de la commande [WP Tableau ajouter ligne](../commands/wp-tableau-ajouter-ligne).
+Le contenu des cellules peut être ajouté par programmation à l'aide de la commande [WP Table insert rows](../commands/wp-table-insert-rows).
 
 Une fois qu'un tableau est créé, le contenu des cellulles peut également être modifié à l'exécution par l'utilisateur. Il peut cliquer dans les cellules, puis sélectionner, modifier, copier/coller ou supprimer le texte et les images comme dans tout paragraphe. Il peut naviguer parmi les cellules en appuyant sur la touche **Tabulation** (**Maj+Tabulation** pour se déplacer dans la direction inverse).
 
@@ -38,7 +38,7 @@ Les utilisateurs peuvent également sélectionner des colonnes, des lignes ou de
 
 (\*) Les colonnes n'ont pas d'équivalent en html. Dans 4D Write Pro, une plage de colonne est en réalité une plage de cellules, ce qui signifie que les colonnes ont la même priorité que les cellules (cf. ci-dessous).
 
-Une fois que vous avez sélectionné une plage, vous pouvez lui appliquer un attribut à l'aide de la commande [WP FIXER ATTRIBUTS](../commands/wp-fixer-attributs). A l'intérieur des cellules, les attributs sont appliqués aux paragraphes, caractères ou images, suivant leur contenu. Par exemple, vous pouvez définir la hauteur, la taille de police, la bordure, la marge intérieure etc. d'un tableau ou des cellules d'un tableau (pour plus d'informations, veuillez vous référer à la section *Attributs 4D Write Pro*).
+Une fois que vous avez sélectionné une plage, vous pouvez lui appliquer un attribut à l'aide de la commande [WP SET ATTRIBUTES](../commands/wp-set-attributes). A l'intérieur des cellules, les attributs sont appliqués aux paragraphes, caractères ou images, suivant leur contenu. Par exemple, vous pouvez définir la hauteur, la taille de police, la bordure, la marge intérieure etc. d'un tableau ou des cellules d'un tableau (pour plus d'informations, veuillez vous référer à la section *Attributs 4D Write Pro*).
 
 Lorsque des attributs différents sont appliqués à des éléments concurrents d'un tableau, l'ordre de priorité suivant est utilisé pour le rendu :
 
@@ -177,11 +177,11 @@ Les coupures de tableaux peuvent s'effectuer entre les lignes et les coupures de
 La pagination des tableaux peut également être contrôlée par programmation ou par l'utilisateur. Les actions disponibles incluent :
 
 * l'insertion d'un saut de page dans un tableau :  
-   * commande [WP INSERER RUPTURE](../commands/wp-inserer-rupture)  
+   * commande [WP INSERT BREAK](../commands/wp-insert-break)  
    * action standard *insertPageBreak*  
    * option **Insérer saut de page** du menu contextuel par défaut
 * l'insertion d'un saut de colonne dans un tableau :  
-   * commande [WP INSERER RUPTURE](../commands/wp-inserer-rupture)  
+   * commande [WP INSERT BREAK](../commands/wp-insert-break)  
    * action standard *insertColumnBreak*  
    * option **Insérer saut de colonne** du menu contextuel par défaut
 
@@ -210,26 +210,42 @@ Si vous désignez plus de cinq lignes comme en-tête (ou si cela résulte d'une 
 
 ## Datasource de tableau 
 
-Vous pouvez assigner un objet formule comme source de données pour un tableau et accéder aux valeurs résultantes à travers le tableau en utilisant des *Expressions avec This* (voir ci-dessous). La formule de la source de données est évaluée par 4D Write Pro lors du calcul des formules (par exemple à l'ouverture du document, lors de l'appel de la commande [WP CALCULER FORMULES](../commands/wp-calculer-formules), etc.). Cette fonctionnalité bénéficie des contextes de données (voir [WP FIXER CONTEXTE DONNEES](../commands/wp-fixer-contexte-donnees)).
+Vous pouvez assigner un [objet formule](../../API/FormulaClass.md) comme **datasource** pour un tableau et accéder aux valeurs résultantes à travers le tableau en utilisant des [expressions avec `This`](#objet-formule-du-tableau) spécifiques. La datasource est évaluée par 4D Write Pro lors du [calcul des formules](../managing-formulas.md#formula-evaluation) (par exemple à l'ouverture du document, lors de l'appel de la commande [WP CALCULER FORMULES](../commands/wp-calculer-formules), etc.). 
 
-Pour affecter une source de données à un tableau, utilisez la commande [WP FIXER ATTRIBUTS](../commands/wp-fixer-attributs) avec wk datasource et un objet [formule 4D](https://developer.4d.com/docs/fr/API/FunctionClass/) comme valeur. Par exemple, pour remplir un tableau avec une ligne pour chaque personne vivant en France :
+### Assigner une datasource
+
+Pour affecter une datasource à un tableau, utilisez la commande [WP SET ATTRIBUTES](../commands/wp-set-attributes) avec la constante `wk datasource` comme attribut et l'objet datasource comme valeur. L'objet datasource peut être :
+
+- une [**formule 4D**](../../API/FormulaClass.md). Par exemple, pour remplir un tableau avec une ligne pour chaque personne vivant en France :
 
 ```4d
- $formula:=Formula(ds.people.query("country = :1";"France"))
+ var $formula:=Formula(ds.people.query("country = :1";"France"))
  WP SET ATTRIBUTES($table;wk datasource;$formula)
 ```
 
-* Si l'objet formule de la source de données renvoie une collection ou une sélection d'entités (non vide), le tableau est automatiquement rempli lorsque la formule est calculée : il contient au moins autant de lignes qu'il y a d'éléments dans la collection ou d'entités dans la sélection d'entités. La première ligne du tableau, appelée ligne de données, est utilisée comme ligne modèle (à l'exclusion de la ou des lignes d'en-tête et de la ou des lignes de rupture éventuelles).
-* Dans la ligne de données (et la ou les lignes de rupture), vous pouvez insérer des expressions qui utilisent des mots-clés spéciaux tels que This.item.lastname. Les expressions sont remplacées au cours du traitement par les données de la collection ou de la sélection d'entités. La ligne de données sera dupliquée de manière à ce que le nombre de lignes d'éléments soit égal au nombre d'éléments de la collection ou de la sélection d'entités après le traitement des formules.
-* Si la formule de la source de données ne renvoie pas de collection ou de sélection d'entités, ou si elle retourne une collection/sélection d'entités vide, les lignes du tableau ne sont pas créées automatiquement et toutes les lignes sont traitées comme des lignes normales. Vous pouvez définir une ligne de remplacement à afficher en cas de source de données vide.
+- un **contexte de données**, défini à l'aide de la commande [WP SET DATA CONTEXT](../commands/wp-set-data-context) pour l'ensemble du document. Un contexte de données peut être assigné à un tableau via l'objet `This.data`. Par exemple, pour remplir un tableau avec une [entity selection](../../API/EntitySelectionClass.md) depuis des commandes :
 
-Pour supprimer une source de données d'un tableau, utilisez la commande [WP REINITIALISER ATTRIBUTS](../commands/wp-reinitialiser-attributs). La valeur de l'attribut de la source de données sera alors *null* :
+```4d
+var $context:={}
+$context.orders:=ds.Order.query("customerID=:1"; $customer.ID)
+var $doc:=WP New($template)
+WP SET DATA CONTEXT($doc; $context)
+WP SET ATTRIBUTES($table;wk datasource;This.data.orders)
+```
+
+Si l'objet formule de la source de données renvoie une collection ou une sélection d'entités (non vide), le tableau est automatiquement rempli lorsque la formule est calculée : il contient au moins autant de lignes qu'il y a d'éléments dans la collection ou d'entités dans la sélection d'entités. La première ligne du tableau, appelée ligne de données, est utilisée comme ligne modèle (à l'exclusion de la ou des lignes d'en-tête et de la ou des lignes de rupture éventuelles).
+
+Dans la ligne de données (et la ou les lignes de rupture), vous pouvez insérer des expressions qui utilisent des mots-clés spéciaux tels que This.item.lastname. Les expressions sont remplacées au cours du traitement par les données de la collection ou de la sélection d'entités. La ligne de données sera dupliquée de manière à ce que le nombre de lignes d'éléments soit égal au nombre d'éléments de la collection ou de la sélection d'entités après le traitement des formules.
+
+Si la formule de la source de données ne renvoie pas de collection ou de sélection d'entités, ou si elle retourne une collection/sélection d'entités vide, les lignes du tableau ne sont pas créées automatiquement et toutes les lignes sont traitées comme des lignes normales. Vous pouvez définir une ligne de remplacement à afficher en cas de source de données vide.
+
+Pour supprimer une source de données d'un tableau, utilisez la commande [WP RESET ATTRIBUTES](../commands/wp-reset-attributes). La valeur de l'attribut de la source de données sera alors *null* :
 
 ```4d
  WP RESET ATTRIBUTES($table;wk datasource)
 ```
 
-### Créer un tableau avec une datasource 
+### Définition des lignes 
 
 Un tableau fondé sur une datasource peut être composé des lignes suivantes:
 
@@ -242,7 +258,7 @@ Un tableau fondé sur une datasource peut être composé des lignes suivantes:
 | ![](../../assets/en/WritePro/pict7014959.en.png)<br/> | ligne de remplacement   | 1          | \-            | La source de données doit être définie                         | La ligne de remplacement doit être affichée à la place de la ligne de données et des lignes de rupture (le cas échéant) lorsque la source de données est vide et que l'attribut "Show placeholder row" est défini sur le tableau via l'action standard *emptyDatasource* ou la constante *wk empty datasource*. La ligne de remplacement précède immédiatement les autres lignes.                                         |
 | |  Autres lignes                                              | illimité                | \-         | \-            | Lignes standard (non dupliquées)                               |                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
-Exemple (*Mode d'affichage des références*):
+Exemple (*Mode affichage des références*):
 
 ![](../../assets/en/WritePro/pict7148443.en.png)
 
@@ -277,7 +293,7 @@ Pour créer des carry-over rows :
 1. Dans le template de tableau, ajoutez une ligne juste après la ligne de données ou la (les) ligne(s) de rupture et insérez-y les formules nécessaires, en utilisant par exemple **This.previousItems**.
 2. Activer la fonctionnalité carry-over row pour votre document. Vous pouvez:  
 \- Utiliser l'action standard *bottomCarryOverRow* (voir *Utiliser les actions standard 4D Write Pro*), ou  
-\- Utiliser la commande [WP FIXER ATTRIBUTS](../commands/wp-fixer-attributs) avec le sélecteur d'attribut wk bottom carry over row *Tableaux*.
+\- Utiliser la commande [WP SET ATTRIBUTES](../commands/wp-set-attributes) avec le sélecteur d'attribut *Tableaux* wk bottom carry over row.
 
 **Remarque:** Les sauts de page à l'intérieur des lignes ne sont pas autorisés lorsque la fonctionnalité carry-over row est activée (voir *Pagination des tableaux*). Les options correspondantes, si elles sont définies, sont ignorées.
 
@@ -289,7 +305,7 @@ Les tableaux basés sur des sources de données acceptent une ou plusieurs **Sor
 
 Chaque fois que la valeur de la formule change, une nouvelle ligne de rupture est insérée. Par conséquent, pour que votre tableau soit rendu correctement, l'entity selection (ou la collection) utilisée comme source de données du tableau **doit être triée en conséquence**. Par exemple, si on souhaite obtenir des ruptures par pays et par ville, la source de données doit être triée comme suit : *ds.people.all().orderBy("country asc, city asc")*
 
-La valeur de rupture est définie par l'attribut *wk break formula.* La valeur est généralement une formule basée sur une propriété d'élément comme "This.item.name", autrement la valeur calculée risque de ne jamais changer, ce qui rend la formule de rupture inutile. L'attribut *wk break formula* est ignoré si le tableau n'a pas de source de données ou si la ligne est un en-tête. Une ligne de rupture doit être adjacente à la ligne de données (avant ou après) ou à une autre ligne de rupture, sinon elle est ignorée.
+La valeur de rupture est définie par l'attribut `wk break formula`. La valeur est généralement une formule basée sur une propriété d'élément comme "This.item.name", autrement la valeur calculée risque de ne jamais changer, ce qui rend la formule de rupture inutile. L'attribut `wk break formula` est ignoré si le tableau n'a pas de source de données ou si la ligne est un en-tête. Une ligne de rupture doit être adjacente à la ligne de données (avant ou après) ou à une autre ligne de rupture, sinon elle est ignorée.
 
 ```4d
  WP SET ATTRIBUTES($row_2;wk break formula;Formula(This.item.country))
@@ -301,16 +317,16 @@ Pour créer des lignes de rupture :
 
 1. Ordonnez la source de données avec les niveaux correspondant aux ruptures que vous souhaitez afficher, par exemple, *ds.People.all().orderBy("continent asc, country asc, city asc")*
 2. Tracer la ou les lignes de rupture dans le modèle de tableau. Si les ruptures sont situées après la ligne de données, elles doivent suivre **l'ordre de tri opposé** à celui de la source de données, et si elles sont situées avant la ligne de données, elles doivent suivre **le même ordre de tri** que celui de la source de données.
-3. Définir la formule de rupture de l'attribut *wk break formula* pour la ou les ligne(s) sélectionnée(s) :
+3. Définir la formule de rupture de l'attribut `wk break formula` pour la ou les ligne(s) sélectionnée(s) :
 
 ```4d
  $row:=WP Table get rows($table;2;1) //sélectionner la deuxième ligne comme rupture
  WP SET ATTRIBUTES($row_2;wk break formula;Formula(This.item.country))
 ```
 
-### Expressions avec This 
+### Objet formule du tableau 
 
-Lorsqu'il est utilisé dans une formule à l'intérieur du tableau, le mot-clé **This** donne accès à des données différentes selon le contexte :
+Lorsqu'il est utilisé dans une formule à l'intérieur du tableau, le mot-clé [`This`](../commands/this.md) donne accès à des [expressions](../managing-formulas.md#formula-context-object) supplémentaires, selon le contexte :
 
 | **Contexte**                                                                                                                                                    | **Expression**                           | **Type**                                                                                    | **Retourne**                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

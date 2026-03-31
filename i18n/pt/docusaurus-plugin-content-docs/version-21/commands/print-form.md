@@ -53,7 +53,7 @@ Três sintaxes diferentes podem ser usadas:
 Sintaxe:
 
 ```4d
- height:=Print form(myTable;myForm)
+ height:=Print form(myTable;myForm)
 ```
 
 Nesse caso, **Imprimir formulário** imprime apenas a área de detalhes (a área entre a linha do cabeçalho e a linha de detalhes) do formulário.
@@ -63,7 +63,7 @@ Nesse caso, **Imprimir formulário** imprime apenas a área de detalhes (a área
 Sintaxe:
 
 ```4d
- height:=Print form(myTable;myForm;marker)
+ height:=Print form(myTable;myForm;marker)
 ```
 
 Nesse caso, o comando imprimirá a seção designada pelo *marker*. Passe uma das constantes do tema *Form Area* no parâmetro do marcador:
@@ -99,7 +99,7 @@ Nesse caso, o comando imprimirá a seção designada pelo *marker*. Passe uma da
 Sintaxe:
 
 ```4d
- height:=Print form(myTable;myForm;areaStart;areaEnd)
+ height:=Print form(myTable;myForm;areaStart;areaEnd)
 ```
 
 Nesse caso, o comando imprimirá a seção incluída entre os parâmetros *areaStart* e *areaEnd*. Os valores inseridos devem ser expressos em pixels.
@@ -139,24 +139,24 @@ Esse comando imprime áreas e objetos externos (por exemplo, áreas 4D Write ou 
 O exemplo a seguir funciona como um comando [PRINT SELECTION](../commands-legacy/print-selection.md). No entanto, o relatório usa um de dois formulários diferentes, dependendo se o registro é de um cheque ou de um depósito:
 
 ```4d
- QUERY([Register]) // Selecionar os registros
- If(OK=1)
-    ORDER BY([Register]) // Ordenar os registros
-    If(OK=1)
-       PRINT SETTINGS // Exibir caixas de diálogo de impressão
-       If(OK=1)
-          For($vlRecord;1;Records in selection([Register]))
-             If([Register]Type ="Check")
-                Print form([Register];"Check Out") // Use um formulário para cheques
-             Else
-                Print form([Register];"Deposit Out") // Use outro formulário para depósitos
-             End if
-             NEXT RECORD([Register])
-          End for
-          PAGE BREAK // Certifique-se de que a última página seja impressa
-       End if
-    End if
- End if
+ QUERY([Register]) // Select the records
+ If(OK=1)
+    ORDER BY([Register]) // Sort the records
+    If(OK=1)
+       PRINT SETTINGS // Display Printing dialog boxes
+       If(OK=1)
+          For($vlRecord;1;Records in selection([Register]))
+             If([Register]Type ="Check")
+                Print form([Register];"Check Out") // Use one form for checks
+             Else
+                Print form([Register];"Deposit Out") // Use another form for deposits
+             End if
+             NEXT RECORD([Register])
+          End for
+          PAGE BREAK // Make sure the last page is printed
+       End if
+    End if
+ End if
 ```
 
 ## Exemplo 2
@@ -172,23 +172,23 @@ Esse formulário é usado como diálogo e depois impresso com modificações:
 O método formulário:
 
 ```4d
- If(Form event code=On Printing Detail)
-    Form.lastname:=Uppercase(Form.lastname)
-    Form.firstname:=Uppercase(Substring(Form.firstname;1;1))+Lowercase(Substring(Form.firstname;2))
-    Form.request:=Lowercase(Form.request)
- End if
+ If(Form event code=On Printing Detail)
+    Form.lastname:=Uppercase(Form.lastname)
+    Form.firstname:=Uppercase(Substring(Form.firstname;1;1))+Lowercase(Substring(Form.firstname;2))
+    Form.request:=Lowercase(Form.request)
+ End if
 ```
 
 O código que chama a caixa de diálogo imprime seu corpo:
 
 ```4d
- $formData:=New object
- $formData.lastname:="Smith"
- $formData.firstname:="john"
- $formData.request:="I need more COFFEE"
- $win:=Open form window("Request_obj";Plain form window;Horizontally centered;Vertically centered)
- DIALOG("Request_obj";$formData)
- $h:=Print form("Request_var";$formData;Form detail)
+ $formData:=New object
+ $formData.lastname:="Smith"
+ $formData.firstname:="john"
+ $formData.request:="I need more COFFEE"
+ $win:=Open form window("Request_obj";Plain form window;Horizontally centered;Vertically centered)
+ DIALOG("Request_obj";$formData)
+ $h:=Print form("Request_var";$formData;Form detail)
 ```
 
 ## Veja também

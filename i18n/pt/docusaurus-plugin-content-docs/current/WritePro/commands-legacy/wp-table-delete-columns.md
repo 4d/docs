@@ -54,4 +54,4 @@ Eliminará a coluna da localização correta:
 
 ## Ver também 
 
-[WP TABLE DELETE ROWS](wp-table-delete-rows.md)  
+[WP TABLE DELETE ROWS](../commands/wp-table-delete-rows)  

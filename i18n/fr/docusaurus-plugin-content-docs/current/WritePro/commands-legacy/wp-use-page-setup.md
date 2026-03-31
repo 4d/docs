@@ -20,9 +20,9 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.WP USE PAGE SETUP.Summary-->La commande **WP USE PAGE SETUP** modifie les options d'impression de la page courante, sur la base des attributs du document 4D Write Pro qui concernent la taille et l'orientation de la page.<!-- END REF--> Cette commande doit être appelée juste avant [WP PRINT](wp-print.md) de façon à synchroniser les paramètres courants d'impression de la page avec les options de page du document 4D Write Pro.
+<!--REF #_command_.WP USE PAGE SETUP.Summary-->La commande **WP USE PAGE SETUP** modifie les options d'impression de la page courante, sur la base des attributs du document 4D Write Pro qui concernent la taille et l'orientation de la page.<!-- END REF--> Cette commande doit être appelée juste avant [WP PRINT](../commands/wp-print) de façon à synchroniser les paramètres courants d'impression de la page avec les options de page du document 4D Write Pro.
 
-D'autres options peuvent être définies avec la commande 4D [PRINT SETTINGS](../../commands-legacy/print-settings.md). Les options d'impression sont définies pour toute la session 4D.
+D'autres options peuvent être définies avec la commande 4D [PRINT SETTINGS](../../commands/print-settings). Les options d'impression sont définies pour toute la session 4D.
 
 ## Exemple 
 
@@ -34,4 +34,4 @@ Avant d'imprimer un document, vous souhaitez réinitialiser la taille et l'orien
 
 ## Voir aussi 
 
-[WP PRINT](wp-print.md)  
+[WP PRINT](../commands/wp-print)  

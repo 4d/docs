@@ -375,12 +375,14 @@ La propriété `.to` contient la ou les <!-- REF #EmailObjectClass.to.Summary --
 
 
 <!-- REF #_command_.MAIL Convert from_MIME.Params -->
-| Paramètres | Type       |    | Description                            |
-| ---------- | ---------- |:--:| -------------------------------------- |
-| mime       | Blob, Text | -> | Email en MIME                          |
-| Résultat   | Object     | <- | Objet email|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|mime|Blob, Text|->|Email in MIME|
+|Result|Object|<-|Email object|
+</div>
+<!-- END REF -->
 
 #### Description
 
@@ -461,13 +463,15 @@ $status:=$transporter.send($email)
 
 
 <!-- REF #_command_.MAIL Convert to MIME.Params -->
-| Paramètres | Type   |    | Description                                             |
-| ---------- | ------ |:--:| ------------------------------------------------------- |
-| mail       | Object | -> | Objet email                                             |
-| options    | Object | -> | Options d'encodage et de charset du mail                |
-| Résultat   | Text   | <- | Objet email converti en MIME|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|mail|Object|->|Email object|
+|options|Object|->|Charset and encoding mail options|
+|Result|Text|<-|Email object converted to MIME|
+</div>
+<!-- END REF -->
 
 #### Description
 

@@ -28,7 +28,7 @@ Por ejemplo, dada una lista de selección que contiene "Francia, Alemania, Itali
 
 #### Objetos soportados
 
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox-column.md)
+[Combo Box](comboBox_overview.md) - [Columna List Box](listbox-column.md)
 
 ---
 
@@ -277,7 +277,7 @@ El uso de esta propiedad requiere el cumplimiento de los siguientes principios:
 
 #### Objetos soportados
 
-[Input](input_overview.md) - [List Box Column](listbox-column.md)
+[Entrada](input_overview.md) - [Columna de List Box](listbox-column.md)
 
 ---
 

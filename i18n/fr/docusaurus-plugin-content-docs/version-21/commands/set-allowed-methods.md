@@ -61,10 +61,10 @@ Cette commande ne filtre que la **saisie** des méthodes, pas leur **exécution*
 Cet exemple autorise la saisie de toutes les méthodes commençant par "formula" et de la méthode "Total_general" par l'utilisateur dans des contextes protégés :
 
 ```4d
- ARRAY TEXT(methodsArray;2)
- methodsArray{1}:="formula@"
- methodsArray{2}:="Total_general"
- SET ALLOWED METHODS(methodsArray)
+ ARRAY TEXT(methodsArray;2)
+ methodsArray{1}:="formula@"
+ methodsArray{2}:="Total_general"
+ SET ALLOWED METHODS(methodsArray)
 ```
 
 ## Voir également

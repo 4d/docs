@@ -68,12 +68,6 @@ TLS は公開鍵暗号化技術を用います。これは、暗号化と復号�
 - [**RSA**](https://ja.wikipedia.org/wiki/RSA%E6%9A%97%E5%8F%B7)
 - [**ECDSA**](https://ja.wikipedia.org/wiki/%E6%A5%95%E5%86%86%E6%9B%B2%E7%B7%9ADSA)
 
-:::info 互換性
-
-ECDSA形式は、4D の [Legacyネットワークレイヤー](../settings/client-server.md#ネットワークレイヤー) ではサポートされていません。
-
-:::
-
 :::note
 
 4D では、RSA証明書のリクエストに役立つ 2つのコマンドを用意しています ([後述のチュートリアル参照](#rsa証明書の取得方法-チュートリアル))。
@@ -90,7 +84,7 @@ ECDSA形式は、4D の [Legacyネットワークレイヤー](../settings/clien
 **key.pem** と **cert.pem** は次の場所に保存する必要があります:
 
 - 4D Server およびローカルモードの 4D では、[Project フォルダー](Project/architecture.md#project-フォルダー) と同階層。
-- 4D のリモートモードでは、これらのファイルはリモートマシンの 4D Client Database フォルダーに置かれなければなりません。 このフォルダーの場所に関する情報は、[`Get 4D Folder`](../commands-legacy/get-4d-folder.md) コマンドの説明を参照ください。 これらのファイルはリモートマシンに手動でコピーする必要があります。
+- 4D のリモートモードでは、これらのファイルはリモートマシンの 4D Client Database フォルダーに置かれなければなりません。 このフォルダーの場所に関する情報は、[`Get 4D Folder`](../commands/get-4d-folder) コマンドの説明を参照ください。 これらのファイルはリモートマシンに手動でコピーする必要があります。
 
 ### TLSを有効にする
 
@@ -147,3 +141,4 @@ HTTPサーバーで TLS接続を受け入れるには、HTTPS を有効化しな
 5. "cert.pem" ファイルを [適切な場所](#証明書ファイルのインストール) に保存します。
 
 4Dサーバーが保護モードで動作するようになります。 証明書は通常、3ヶ月から1年間の間で有効です。
+

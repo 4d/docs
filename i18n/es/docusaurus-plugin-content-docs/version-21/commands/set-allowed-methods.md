@@ -61,10 +61,10 @@ Este comando sólo filtra la **entrada** de los métodos, no su **ejecución**. 
 Este ejemplo autoriza a todos los métodos que empiezan por "formula" y al método "Total_general" a ser introducidos por el usuario en contextos protegidos:
 
 ```4d
- ARRAY TEXT(methodsArray;2)
- methodsArray{1}:="formula@"
- methodsArray{2}:="Total_general"
- SET ALLOWED METHODS(methodsArray)
+ ARRAY TEXT(methodsArray;2)
+ methodsArray{1}:="formula@"
+ methodsArray{2}:="Total_general"
+ SET ALLOWED METHODS(methodsArray)
 ```
 
 ## Ver también

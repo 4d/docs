@@ -40,8 +40,8 @@ Pase en el parámetro *color* un valor de color RGB. Para mayor información sob
 
 Los parámetros *horizontal* y *vertical* le permiten especificar las líneas a las cuales quiere darle color:
 
-* Si pasa [True](true.md "True") en *horizontal*, el color se aplicará a las líneas horizontales. Si pasa **False**, el color de las líneas horizontales no cambiará.
-* Si pasa [True](true.md "True") en *vertical*, el color se aplicará a las líneas verticales. Si pasa **False**, el color de las líneas verticales no cambiará.
+* Si pasa [True](../commands/true) en *horizontal*, el color se aplicará a las líneas horizontales. Si pasa **False**, el color de las líneas horizontales no cambiará.
+* Si pasa [True](../commands/true) en *vertical*, el color se aplicará a las líneas verticales. Si pasa **False**, el color de las líneas verticales no cambiará.
 
 ## Ver también 
 

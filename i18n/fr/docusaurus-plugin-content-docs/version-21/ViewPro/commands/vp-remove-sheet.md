@@ -9,10 +9,15 @@ title: VP REMOVE SHEET
 
 <!-- REF #_method_.VP REMOVE SHEET.Params -->
 
-| Paramètres | Type    |    | Description                             |                  |
-| ---------- | ------- | -- | --------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro |                  |
-| index      | Integer | -> | Index de la feuille à supprimer         | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres | Type    |    | Description                             |
+| ---------- | ------- | -- | --------------------------------------- |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro |
+| index      | Integer | -> | Index de la feuille à supprimer         |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

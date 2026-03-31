@@ -8,26 +8,26 @@ slug: /commands/theme/String
 
 ||
 |---|
-|[<!-- INCLUDE #_command_.Change string.Syntax -->](../../commands-legacy/change-string.md)<br/>|
-|[<!-- INCLUDE #_command_.Char.Syntax -->](../../commands-legacy/char.md)<br/>|
-|[<!-- INCLUDE #_command_.Character code.Syntax -->](../../commands-legacy/character-code.md)<br/>|
-|[<!-- INCLUDE #_command_.Compare strings.Syntax -->](../../commands-legacy/compare-strings.md)<br/>|
-|[<!-- INCLUDE #_command_.CONVERT FROM TEXT.Syntax -->](../../commands-legacy/convert-from-text.md)<br/>|
-|[<!-- INCLUDE #_command_.Convert to text.Syntax -->](../../commands-legacy/convert-to-text.md)<br/>|
-|[<!-- INCLUDE #_command_.Delete string.Syntax -->](../../commands-legacy/delete-string.md)<br/>|
-|[<!-- INCLUDE #_command_.GET TEXT KEYWORDS.Syntax -->](../../commands-legacy/get-text-keywords.md)<br/>|
-|[<!-- INCLUDE #_command_.Insert string.Syntax -->](../../commands-legacy/insert-string.md)<br/>|
-|[<!-- INCLUDE #_command_.Length.Syntax -->](../../commands-legacy/length.md)<br/>|
-|[<!-- INCLUDE #_command_.Localized string.Syntax -->](../../commands-legacy/localized-string.md)<br/>|
-|[<!-- INCLUDE #_command_.Lowercase.Syntax -->](../../commands-legacy/lowercase.md)<br/>|
-|[<!-- INCLUDE #_command_.Match regex.Syntax -->](../../commands-legacy/match-regex.md)<br/>|
-|[<!-- INCLUDE #_command_.Num.Syntax -->](../num.md)<br/>|
-|[<!-- INCLUDE #_command_.Position.Syntax -->](../../commands-legacy/position.md)<br/>|
-|[<!-- INCLUDE #_command_.Replace string.Syntax -->](../../commands-legacy/replace-string.md)<br/>|
-|[<!-- INCLUDE #_command_.Split string.Syntax -->](../../commands-legacy/split-string.md)<br/>|
-|[<!-- INCLUDE #_command_.String.Syntax -->](../string.md)<br/>|
-|[<!-- INCLUDE #_command_.Substring.Syntax -->](../../commands-legacy/substring.md)<br/>|
-|[<!-- INCLUDE #_command_.Trim.Syntax -->](../trim.md)<br/>|
-|[<!-- INCLUDE #_command_.Trim end.Syntax -->](../trim-end.md)<br/>|
-|[<!-- INCLUDE #_command_.Trim start.Syntax -->](../trim-start.md)<br/>|
-|[<!-- INCLUDE #_command_.Uppercase.Syntax -->](../../commands-legacy/uppercase.md)<br/>|
+|[<!-- INCLUDE #_command_.Change string.Syntax -->](../../commands/change-string)<br/>|
+|[<!-- INCLUDE #_command_.Char.Syntax -->](../../commands/char)<br/>|
+|[<!-- INCLUDE #_command_.Character code.Syntax -->](../../commands/character-code)<br/>|
+|[<!-- INCLUDE #_command_.Compare strings.Syntax -->](../../commands/compare-strings)<br/>|
+|[<!-- INCLUDE #_command_.CONVERT FROM TEXT.Syntax -->](../../commands/convert-from-text)<br/>|
+|[<!-- INCLUDE #_command_.Convert to text.Syntax -->](../../commands/convert-to-text)<br/>|
+|[<!-- INCLUDE #_command_.Delete string.Syntax -->](../../commands/delete-string)<br/>|
+|[<!-- INCLUDE #_command_.GET TEXT KEYWORDS.Syntax -->](../../commands/get-text-keywords)<br/>|
+|[<!-- INCLUDE #_command_.Insert string.Syntax -->](../../commands/insert-string)<br/>|
+|[<!-- INCLUDE #_command_.Length.Syntax -->](../../commands/length)<br/>|
+|[<!-- INCLUDE #_command_.Localized string.Syntax -->](../../commands/localized-string)<br/>|
+|[<!-- INCLUDE #_command_.Lowercase.Syntax -->](../../commands/lowercase)<br/>|
+|[<!-- INCLUDE #_command_.Match regex.Syntax -->](../../commands/match-regex)<br/>|
+|[<!-- INCLUDE #_command_.Num.Syntax -->](../../commands/num)<br/>|
+|[<!-- INCLUDE #_command_.Position.Syntax -->](../../commands/position)<br/>|
+|[<!-- INCLUDE #_command_.Replace string.Syntax -->](../../commands/replace-string)<br/>|
+|[<!-- INCLUDE #_command_.Split string.Syntax -->](../../commands/split-string)<br/>|
+|[<!-- INCLUDE #_command_.String.Syntax -->](../../commands/string)<br/>|
+|[<!-- INCLUDE #_command_.Substring.Syntax -->](../../commands/substring)<br/>|
+|[<!-- INCLUDE #_command_.Trim.Syntax -->](../../commands/trim)<br/>|
+|[<!-- INCLUDE #_command_.Trim end.Syntax -->](../../commands/trim-end)<br/>|
+|[<!-- INCLUDE #_command_.Trim start.Syntax -->](../../commands/trim-start)<br/>|
+|[<!-- INCLUDE #_command_.Uppercase.Syntax -->](../../commands/uppercase)<br/>|

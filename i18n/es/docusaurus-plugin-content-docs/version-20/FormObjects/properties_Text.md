@@ -228,7 +228,7 @@ También puede definir esta propiedad utilizando el comando `LISTBOX SET PROPERT
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md) - [List Box Column](listbox-column.md)
+[List Box](listbox_overview.md) - [Columna de List Box](listbox-column.md)
 
 ---
 
@@ -378,7 +378,7 @@ Por defecto, esta opción no está activa.
 
 #### Objetos soportados
 
-[Input](input_overview.md) - [List Box Column](listbox-column.md)
+[Entrada](input_overview.md) - [Columna de List Box](listbox-column.md)
 
 ---
 
@@ -423,7 +423,7 @@ Se debe utilizar el nombre de un array Entero largo. Cada elemento de este array
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md) - [List Box Column](listbox-column.md)
+[List Box](listbox_overview.md) - [Columna de List Box](listbox-column.md)
 
 ---
 
@@ -443,7 +443,7 @@ Se debe utilizar el nombre de un array Entero largo. Cada elemento de este array
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md) - [List Box Column](listbox-column.md)
+[List Box](listbox_overview.md) - [Columna de List Box](listbox-column.md)
 
 ---
 

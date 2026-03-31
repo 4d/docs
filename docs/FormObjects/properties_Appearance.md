@@ -54,7 +54,7 @@ The focus rectangle is only available on macOS and (for text and picture [inputs
 
 #### Commands
 
-[OBJECT Get focus rectangle invisible](../commands-legacy/object-get-focus-rectangle-invisible.md) - [OBJECT SET FOCUS RECTANGLE INVISIBLE](../commands-legacy/object-set-focus-rectangle-invisible.md)
+[OBJECT Get focus rectangle invisible](../commands/object-get-focus-rectangle-invisible) - [OBJECT SET FOCUS RECTANGLE INVISIBLE](../commands/object-set-focus-rectangle-invisible)
 
 ---
 
@@ -81,7 +81,7 @@ By default, this option is not enabled.
 
 #### Commands
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
 
 ---
 
@@ -111,7 +111,7 @@ Available values:
 
 #### Commands
 
-[OBJECT GET SCROLLBAR](../commands-legacy/object-get-scrollbar.md) - [OBJECT SET SCROLLBAR](../commands-legacy/object-set-scrollbar.md)
+[OBJECT GET SCROLLBAR](../commands/object-get-scrollbar) - [OBJECT SET SCROLLBAR](../commands/object-set-scrollbar)
 
 
 
@@ -428,7 +428,7 @@ Available values:
 
 #### Commands
 
-[OBJECT GET SCROLLBAR](../commands-legacy/object-get-scrollbar.md) - [OBJECT SET SCROLLBAR](../commands-legacy/object-set-scrollbar.md)
+[OBJECT GET SCROLLBAR](../commands/object-get-scrollbar) - [OBJECT SET SCROLLBAR](../commands/object-set-scrollbar)
 
 
 #### See also

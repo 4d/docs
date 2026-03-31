@@ -17,13 +17,18 @@ title: VP Get table range
 
 <!-- REF #_method_.VP Get table range.Params -->
 
-| Paramètres | Type    |                             | Description                                                                    |                  |
-| ---------- | ------- | --------------------------- | ------------------------------------------------------------------------------ | ---------------- |
-| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro                                        |                  |
-| tableName  | Text    | ->                          | Nom de table                                                                   |                  |
-| onlyData   | Integer | ->                          | `vk table full range` (par défaut) ou `vk table data range` |                  |
-| sheet      | Integer | ->                          | Numéro d'indice de la feuille (feuille courante si omis)    |                  |
-| Résultat   | Object  | <- | Plage contenant la table                                                       | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres | Type    |                             | Description                                                                    |
+| ---------- | ------- | --------------------------- | ------------------------------------------------------------------------------ |
+| vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro                                        |
+| tableName  | Text    | ->                          | Nom de table                                                                   |
+| onlyData   | Integer | ->                          | `vk table full range` (par défaut) ou `vk table data range` |
+| sheet      | Integer | ->                          | Numéro d'indice de la feuille (feuille courante si omis)    |
+| Résultat   | Object  | <- | Plage contenant la table                                                       |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

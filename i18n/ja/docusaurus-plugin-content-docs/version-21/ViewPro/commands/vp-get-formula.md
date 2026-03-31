@@ -9,10 +9,15 @@ title: VP Get formula
 
 <!-- REF #_method_.VP Get formula.Params -->
 
-| 引数       | 型      |                             | 説明        |                  |
-| -------- | ------ | --------------------------- | --------- | ---------------- |
-| rangeObj | Object | ->                          | レンジオブジェクト |                  |
-| 戻り値      | Text   | <- | Formula   | <!-- END REF --> |
+<div class="no-index">
+
+| 引数       | 型      |                             | 説明        |
+| -------- | ------ | --------------------------- | --------- |
+| rangeObj | Object | ->                          | レンジオブジェクト |
+| 戻り値      | Text   | <- | Formula   |
+
+</div>
+<!-- END REF -->
 
 ## 説明
 

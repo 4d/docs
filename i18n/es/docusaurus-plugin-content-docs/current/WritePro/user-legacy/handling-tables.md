@@ -205,18 +205,34 @@ Si designa más de cinco líneas como encabezado (o si resulta de una inserción
 
 ## Tabla fuentes de datos 
 
-Puede asignar un objeto fórmula como fuente de datos para una tabla y acceder a los valores resultantes desde la tabla utilizando *Expresiones con This* (ver más abajo). La fórmula de la fuente de datos es procesada por 4D Write Pro cuando se calculan las fórmulas (por ejemplo, cuando se abre el documento, cuando se llama al comando [WP COMPUTE FORMULAS](../commands/wp-compute-formulas), etc.). Esta función aprovecha los contextos de datos (ver [WP SET DATA CONTEXT](../commands/wp-set-data-context)).
+Puede asignar un [objeto fórmula](../../API/FormulaClass.md) como **datasource** para una tabla y acceder a los valores resultantes desde la tabla utilizando [expresiones con `This`](#objeto-formula-de-tabla) específicas. La fórmula de la fuente de datos es procesada por 4D Write Pro cada vez que se [calculan las fórmulas](../managing-formulas.md#formula-evaluation) (por ejemplo, cuando se abre el documento, cuando se llama al comando [WP COMPUTE FORMULAS](../commands/wp-compute-formulas), etc.). 
 
-Para asignar una fuente de datos a una tabla, utilice el comando [WP SET ATTRIBUTES](../commands/wp-set-attributes) con el comando wk datasource y un objeto *4D formula* como valor. Por ejemplo, para llenar una tabla con una línea por cada persona que vive en Francia:
+### Asignar una fuente de datos
+
+Para asignar una fuente de datos a una tabla, utilice el comando [WP SET ATTRIBUTES](../commands/wp-set-attributes) con la constante `wk datasource` como atributo y el objeto datasource como valor. El objeto datasource puede ser:
+
+- una [**fórmula 4D**](../../API/FormulaClass.md). Por ejemplo, para llenar una tabla con una línea por cada persona que vive en Francia:
 
 ```4d
- $formula:=Formula(ds.people.query("country = :1";"France"))
+ var $formula:=Formula(ds.people.query("country = :1";"France"))
  WP SET ATTRIBUTES($table;wk datasource;$formula)
 ```
 
-* Si el objeto fórmula de la fuente de datos devuelve una colección o una selección de entidades (no vacía), la tabla se llena automáticamente cuando se calcula la fórmula: contiene al menos tantas líneas como elementos haya en la colección o entidades en la selección de entidades. La primera línea de la tabla, llamada la línea de datos, se utiliza como línea de plantilla (excluyendo las líneas de encabezado y las posibles líneas de ruptura).
-* En la línea de datos (y líneas de ruptura), puede insertar expresiones que utilicen palabras claves especiales como *Este.elemento.apellido*. Las expresiones se sustituyen durante el procesamiento por los datos de la colección o la selección de entidades. La línea de datosse duplicará para que el número de líneas de elementos sea igual al número de elementos de la colección o selección de entidades después de calcular las fórmulas.
-* Si la fórmula de la fuente de datos no devuelve una colección o una selección de entidades, o si devuelve una colección/selección de entidades vacía, las líneas de la tabla no se crean automáticamente y todas las líneas se tratan como líneas normales. Puede definir una fila de marcador de posición que se mostrará en caso de que la fuente de datos esté vacía.
+- un **contexto de datos**, definido mediante el comando [WP SET DATA CONTEXT](../commands/wp-set-data-context) para todo el documento. Un contexto de datos puede asignarse a una tabla a través del objeto `This.data`. Por ejemplo, para rellenar una tabla con una [selección de entidades](../../API/EntitySelectionClass.md) de pedidos:
+
+```4d
+var $context:={}
+$context.orders:=ds.Order.query("customerID=:1"; $customer.ID)
+var $doc:=WP New($template)
+WP SET DATA CONTEXT($doc; $context)
+WP SET ATTRIBUTES($table;wk datasource;This.data.orders)
+```
+
+Si el objeto fórmula de la fuente de datos devuelve una colección o una selección de entidades (no vacía), la tabla se llena automáticamente cuando se calcula la fórmula: contiene al menos tantas líneas como elementos haya en la colección o entidades en la selección de entidades. La primera línea de la tabla, llamada la línea de datos, se utiliza como línea de plantilla (excluyendo las líneas de encabezado y las posibles líneas de ruptura).
+
+En la línea de datos (y líneas de ruptura), puede insertar expresiones que utilicen palabras claves especiales como *Este.elemento.apellido*. Las expresiones se sustituyen durante el procesamiento por los datos de la colección o la selección de entidades. La línea de datosse duplicará para que el número de líneas de elementos sea igual al número de elementos de la colección o selección de entidades después de calcular las fórmulas.
+
+Si la fórmula de la fuente de datos no devuelve una colección o una selección de entidades, o si devuelve una colección/selección de entidades vacía, las líneas de la tabla no se crean automáticamente y todas las líneas se tratan como líneas normales. Puede definir una fila de marcador de posición que se mostrará en caso de que la fuente de datos esté vacía.
 
 Para eliminar una fuente de datos de una tabla, utilice el comando [WP RESET ATTRIBUTES](../commands/wp-reset-attributes). Definirá el valor del atributo datasource como null:
 
@@ -224,7 +240,7 @@ Para eliminar una fuente de datos de una tabla, utilice el comando [WP RESET ATT
  WP RESET ATTRIBUTES($table;wk datasource)
 ```
 
-### Crear una tabla con fuente de datos 
+### Definición de filas 
 
 Un diseño de tabla basado en una fuente de datos que contiene las siguientes líneas:
 
@@ -280,7 +296,7 @@ Las tablas basadas en fuentes de datos soportan una o varias **Líneas de ruptur
 
 Cada vez que cambia el valor de la fórmula, se inserta una nueva línea de ruptura. Por lo tanto, para que las tablas se muestren correctamente, la selección de entidades (o colección) utilizada como fuente de datos de la tabla debe estar ordenada en consecuencia. Por ejemplo, si se desean desgloses por países y ciudades, la fuente de datos debe ordenarse del siguiente modo: *ds.people.all().orderBy("country asc, city asc")*
 
-El valor de ruptura se define mediante el atributo *wk break formula*. El valor suele ser una fórmula basada en una propiedad del elemento como "This.item.name'', de lo contrario el valor calculado puede no cambiar nunca, lo que hace que la fórmula de ruptura sea inútil. El atributo wk break formula se ignora si la tabla no tiene fuente de datos o si la línea es un encabezado. Una línea de ruptura debe ser adyacente a la línea de datos (ya sea antes o después), o a otra línea de interrupción, de lo contrario se ignora.
+El valor de ruptura se define mediante el atributo `wk break formula`. El valor suele ser una fórmula basada en una propiedad del elemento como "This.item.name'', de lo contrario el valor calculado puede no cambiar nunca, lo que hace que la fórmula de ruptura sea inútil. El atributo `wk break formula` se ignora si la tabla no tiene fuente de datos o si la línea es un encabezado. Una línea de ruptura debe ser adyacente a la línea de datos (ya sea antes o después), o a otra línea de interrupción, de lo contrario se ignora.
 
 ```4d
  WP SET ATTRIBUTES($row_2;wk break formula;Formula(This.item.country))
@@ -292,16 +308,16 @@ Para crear líneas de ruptura:
 
 1. Ordene la fuente de datos con los niveles correspondientes a las rupturas que desea mostrar, por ejemplo, *ds.People.all().orderBy("continent asc, country asc, city asc")*
 2. Dibuje la(s) líneas(s) de ruptura en la plantilla de tabla. Si los saltos se encuentran después de la línea de datos, deben coincidir con el **orden inverso** de la fuente de datos, y si se encuentran antes de la línea de datos, deben coincidir con el mismo orden de la fuente de datos.
-3. Defina el atributo *wk break formula* para la(s) línea(s) seleccionada(s):
+3. Defina el atributo `wk break formula` para la(s) línea(s) seleccionada(s):
 
 ```4d
  $row:=WP Table get rows($table;2;1) //select the second row as break
  WP SET ATTRIBUTES($row_2;wk break formula;Formula(This.item.country))
 ```
 
-### Expresiones con This 
+### Objeto fórmula de tabla 
 
-Cuando se utiliza en una fórmula dentro de la tabla, la palabra clave **This** da acceso a diferentes datos según el contexto:
+Cuando se utiliza en una fórmula dentro de la tabla, la palabra clave [`This`](../commands/this.md) da acceso a [expresiones](../managing-formulas.md#formula-context-object) adicionales, según el contexto:
 
 | **Contexto <br/>**                                                                                                               | **Expresión**                                    | **Tipo**                                                                             | **Devuelve**                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

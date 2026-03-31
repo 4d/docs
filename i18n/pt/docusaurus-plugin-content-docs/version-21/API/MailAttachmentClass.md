@@ -34,6 +34,8 @@ Objetos anexos oferecem as propriedades e funções apenas leitura abaixo:
 
 <!-- REF #4D.MailAttachment.new().Params -->
 
+<div class="no-index">
+
 | Parâmetro   | Tipo                               |                             | Descrição                                                                                         |
 | ----------- | ---------------------------------- | :-------------------------: | ------------------------------------------------------------------------------------------------- |
 | file        | 4D. File           |              ->             | Parâmetros                                                                                        |
@@ -46,6 +48,7 @@ Objetos anexos oferecem as propriedades e funções apenas leitura abaixo:
 | disposition | Text                               |              ->             | Valor do cabeçalho content-disposition: "inline" ou "attachment". |
 | Resultados  | 4D. MailAttachment | <- | Objeto anexo                                                                                      |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -77,10 +80,13 @@ A propriedade `.disposition` contém <!-- REF #MailAttachmentClass.disposition.S
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo                     |                             | Descrição         |
 | ---------- | ------------------------ | :-------------------------: | ----------------- |
 | Resultados | 4D. Blob | <- | Conteúdo do anexo |
 
+</div>
 <!-- END REF -->
 
 #### Descrição

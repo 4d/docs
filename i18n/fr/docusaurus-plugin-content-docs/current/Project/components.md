@@ -603,7 +603,7 @@ Vous pouvez ensuite saisir votre jeton d'accès personnel :
 
 Vous ne pouvez saisir qu'un seul jeton d'accès personnel. Une fois le jeton saisi, vous pouvez le modifier.
 
-Le jeton fourni est stocké dans un fichier **github.json** dans le [dossier actif 4D](../commands-legacy/get-4d-folder.md#active-4d-folder).
+Le jeton fourni est stocké dans un fichier **github.json** dans le [dossier actif 4D](../commands/get-4d-folder#active-4d-folder).
 
 ### Suppression d'une dépendance
 
@@ -624,4 +624,5 @@ Si vous confirmez la boîte de dialogue, le [statut](#dependency-status) de la d
 #### Avertissements relatifs à l'utilisation des dépendances
 
 Lorsque vous tentez de supprimer une dépendance primaire qui est requise par d'autres dépendances dans votre projet, vous serez averti que la dépendance est toujours en cours d'utilisation. Le système affichera les autres dépendances qui la requièrent et vous demandera de confirmer la suppression, car celle-ci peut entraîner l'arrêt du fonctionnement de ces composants dépendants.
+
 

@@ -58,10 +58,10 @@ title: VP Convert to picture
 4D View Pro エリアを SVG に変換し、結果をプレビューするためピクチャー変数に戻り値を代入します:
 
 ```4d
-C_OBJECT($vpAreaObj)
-C_PICTURE($vPict)
+var $vpAreaObj : Object
+var $vPict : Picture
 $vpAreaObj:=VP Export to object("ViewProArea")
-$vPict:=VP Convert to picture($vpAreaObj) // エリア全体を書き出します
+$vPict:=VP Convert to picture($vpAreaObj) //export the whole area
 ```
 
 ## 参照

@@ -704,7 +704,7 @@ Les clés primaires peuvent être des nombres (integer) ou des textes. Vous pouv
 
 La fonction `.getRemoteContextAttributes()`<!-- REF #EntityClass.getRemoteContextAttributes().Summary -->retourne des informations relatives au contexte d'optimisation utilisé par l'entité<!-- END REF -->.
 
-If there is no [optimization context](../ORDA/client-server-optimization.md) for the entity, the function returns an empty Text.
+S'il n'y a pas de [contexte d'optimisation](../ORDA/client-server-optimization.md) pour l'entité, la fonction renvoie un texte vide.
 
 #### Exemple
 
@@ -1287,7 +1287,7 @@ La fonction `.save()` <!-- REF #EntityClass.save().Summary -->enregistre les mod
 
 L'opération de sauvegarde n'est exécutée que si au moins un attribut de l'entité a été "touché" (voir les fonctions [`.touched()`](#touched) et [`.touchedAttributes()`](#touchedattributes)). Sinon, la fonction ne fait rien (le trigger n'est pas appelé).
 
-In a multi-user or multi-process application, the `.save()` function is executed under an ["optimistic lock"](ORDA/entities.md#entity-locking) mechanism, wherein an internal locking stamp is automatically incremented each time the record is saved.
+Dans une application multiprocess ou multi-utilisateurs, la fonction `.save()` est exécutée en mode ["verrouillage optimiste"](ORDA/entities.md#entity-locking) dans lequel un marqueur de verrouillage interne est automatiquement incrémenté chaque fois que l'enregistrement est sauvegardé.
 
 Par défaut, si le paramètre *mode* est omis, la fonction retournera systématiquement une erreur (voir ci-dessous) lorsque la même entité a été modifiée entre-temps par un autre process ou utilisateur, quel(s) que soi(en)t l(es) attribut(s) modifié(s).
 

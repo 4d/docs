@@ -99,5 +99,6 @@ El siguiente ejemplo recorre una selección de entidades y crea una vista previa
 ## Ver también 
 
   
+[Blog post - 4D Write Pro: Dynamically Fill Tables with Entity Selections & Collections](https://blog.4d.com/4d-write-pro-dynamically-fill-tables-with-entity-selections-collections/)  
 [WP COMPUTE FORMULAS](wp-compute-formulas.md)  
 [WP Get data context](wp-get-data-context.md)  

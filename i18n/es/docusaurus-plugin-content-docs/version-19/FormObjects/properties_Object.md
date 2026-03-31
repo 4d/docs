@@ -275,13 +275,13 @@ Para la traducción de la aplicación, puede introducir una referencia XLIFF en 
 
 #### Objetos soportados
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [List Box Header](listbox-header-footer.md#headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [List Box Header](./listbox-header-footer.md#headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
 
 ---
 
 ## Cálculo de variables
 
-Esta propiedad define el tipo de cálculo que se realizará en un área [pie de columna](listbox_overview.md#list-box-footers).
+This property sets the type of calculation to be done in a [column footer](./listbox-header-footer.md#footers) area.
 > El cálculo de los pies de página también puede establecerse utilizando el comando 4D [`LISTBOX SET FOOTER CALCULATION`](https://doc.4d.com/4dv19/help/command/en/page1140.html).
 
 Hay varios tipos de cálculos disponibles. La tabla siguiente muestra los cálculos que se pueden utilizar según el tipo de datos que se encuentran en cada columna e indica el tipo afectado automáticamente por 4D a la variable de pie de página (si no está escrita por el código):

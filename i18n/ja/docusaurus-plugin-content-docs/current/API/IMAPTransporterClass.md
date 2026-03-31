@@ -7,7 +7,7 @@ title: IMAPTransporter
 
 ### IMAP Transporter オブジェクト
 
-IMAP Transporter オブジェクトは [IMP New transporter](../commands/imap-new-transporter.md) コマンドによってインスタンス化されます。 これらは、次のプロパティや関数を持ちます:
+IMAP Transporter オブジェクトは [IMP New transporter](../commands/imap-new-transporter) コマンドによってインスタンス化されます。 これらは、次のプロパティや関数を持ちます:
 
 |                                                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -60,7 +60,7 @@ IMAP Transporter オブジェクトは [IMP New transporter](../commands/imap-ne
 
 #### 説明
 
-`4D.IMAPTransporter.new()` 関数は、<!-- REF #4D.IMAPTransporter.new().Summary -->新規の `4D.IMAPTransporter`型オブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`IMAP New transporter`](../commands/imap-new-transporter.md) コマンドと同一です。
+`4D.IMAPTransporter.new()` 関数は、<!-- REF #4D.IMAPTransporter.new().Summary -->新規の `4D.IMAPTransporter`型オブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`IMAP New transporter`](../commands/imap-new-transporter) コマンドと同一です。
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -83,11 +83,11 @@ IMAP Transporter オブジェクトは [IMP New transporter](../commands/imap-ne
 
 <div class="no-index">
 
-| 引数       | 型      |                             | 説明                                                                                                                                                                                            |
-| -------- | ------ | :-------------------------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| msgIDs   | any    |              ->             | 文字列のコレクション: メッセージの固有ID (テキスト型)<br/>&#xA;テキスト: メッセージの固有ID<br/>&#xA;倍長整数 (IMAP all): 選択されたメールボックス内の全メッセージ |
-| keywords | Object |              ->             | 追加するキーワードフラグ                                                                                                                                                                                  |
-| 戻り値      | Object | <- | addFlags処理のステータス                                                                                                                                                                              |
+| 引数       | 型      |                             | 説明                                                                                                                                                                                    |
+| -------- | ------ | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| msgIDs   | any    |              ->             | 文字列のコレクション: メッセージの固有ID (テキスト型)<br/> テキスト: メッセージの固有ID<br/> 倍長整数 (IMAP all): 選択されたメールボックス内の全メッセージ |
+| keywords | Object |              ->             | 追加するキーワードフラグ                                                                                                                                                                          |
+| 戻り値      | Object | <- | addFlags処理のステータス                                                                                                                                                                      |
 
 </div>
 <!-- END REF -->
@@ -500,7 +500,7 @@ End if
 - `msgsIDs` には、削除するメッセージの固有ID を格納したコレクション
 - `allMsgs` には、選択されているメールボックスの全メッセージを削除するための定数 (倍長整数型):
 
-この関数を実行しても、メールが実際に削除される訳ではありません。 "削除済み" フラグがつけられたメッセージも引き続き [.searchMails()](#searchmails) 関数によって検索可能です。 Flagged messages are deleted from the IMAP server with the [`.expunge()`](#expunge) function or by selecting another mailbox or when the [transporter object](#imap-transporter-object) (created with [IMAP New transporter](../commands/imap-new-transporter.md)) is destroyed.
+この関数を実行しても、メールが実際に削除される訳ではありません。 "削除済み" フラグがつけられたメッセージも引き続き [.searchMails()](#searchmails) 関数によって検索可能です。 フラグがつけられたメッセージは、[`.expunge()`](#expunge) を実行したときか、別のメールボックスを選択したとき、あるいは([IMAP New transporter](../commands/imap-new-transporter) で作成された) [transporter オブジェクト](#imap-transporter-オブジェクト) が消去されたときにのみ、IMAPサーバーから削除されます。
 
 **返されるオブジェクト**
 
@@ -1374,11 +1374,11 @@ ID = 1のメッセージを取得します:
 
 <div class="no-index">
 
-| 引数       | 型      |                             | 説明                                                                                                                                                                                            |
-| -------- | ------ | :-------------------------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| msgIDs   | any    |              ->             | 文字列のコレクション: メッセージの固有ID (テキスト型)<br/>&#xA;テキスト: メッセージの固有ID<br/>&#xA;倍長整数 (IMAP all): 選択されたメールボックス内の全メッセージ |
-| keywords | Object |              ->             | 削除するキーワードフラグ                                                                                                                                                                                  |
-| 戻り値      | Object | <- | removeFlags処理のステータス                                                                                                                                                                           |
+| 引数       | 型      |                             | 説明                                                                                                                                                                                    |
+| -------- | ------ | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| msgIDs   | any    |              ->             | 文字列のコレクション: メッセージの固有ID (テキスト型)<br/> テキスト: メッセージの固有ID<br/> 倍長整数 (IMAP all): 選択されたメールボックス内の全メッセージ |
+| keywords | Object |              ->             | 削除するキーワードフラグ                                                                                                                                                                          |
+| 戻り値      | Object | <- | removeFlags処理のステータス                                                                                                                                                                   |
 
 </div>
 <!-- END REF -->
@@ -1919,3 +1919,4 @@ End if
 <!-- END REF -->
 
 <!-- INCLUDE transporter.user.Desc -->
+

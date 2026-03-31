@@ -10,7 +10,7 @@ title: Propiedades de los formularios
 > La propiedad de combinación de colores sólo se aplica en macOS y [Windows con el tema Fluent UI](../settings/interface.md#use-fluent-ui-on-windows).
 > ).
 
-Esta propiedad define el esquema de colores para el formulario. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](../commands-legacy/get-application-color-scheme.md)). Esto se puede cambiar para el formulario a una de las dos opciones siguientes:
+Esta propiedad define el esquema de colores para el formulario. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](../commands/get-application-color-scheme)). Esto se puede cambiar para el formulario a una de las dos opciones siguientes:
 
 - dark -- texto claro sobre fondo oscuro
 - light - dark text on a light background
@@ -54,7 +54,7 @@ Asociar una clase al formulario ofrece las siguientes ventajas:
 
 - También puede beneficiarse de las [funciones de autocompletado](../code-editor/write-class-method.md#autocomplete-functions) en el editor de código.
 
-- Cuando se ejecuta el formulario, 4D instancia automáticamente un objeto clase usuario para el formulario, que es devuelto por el objeto [`Form`](../commands/form.md). Su código puede acceder directamente a las funciones de clase definidas en la clase de usuario a través del comando `Form` (por ejemplo, `Form.message()`) sin tener que pasar un objeto *formData* como parámetro a los comandos [`DIALOG`](../commands/dialog.md), [`Print form`](../commands/print-form.md), [`FORM LOAD`](../commands/form-load.md), y [`PRINT SELECTION`](../commands-legacy/print-selection.md).
+- Cuando se ejecuta el formulario, 4D instancia automáticamente un objeto clase usuario para el formulario, que es devuelto por el objeto [`Form`](../commands/form). Su código puede acceder directamente a las funciones de clase definidas en la clase de usuario a través del comando `Form` (por ejemplo, `Form.message()`) sin tener que pasar un objeto *formData* como parámetro a los comandos [`DIALOG`](../commands/dialog), [`Print form`](../commands/print-form), [`FORM LOAD`](../commands/form-load), y [`PRINT SELECTION`](../commands/print-selection).
 
 :::note
 
@@ -80,14 +80,14 @@ El nombre del formulario está definido por el nombre de la carpeta que contiene
 
 ---
 
-## Form Theme on Windows
+## Tema del formulario en Windows
 
 Esta propiedad le permite seleccionar explícitamente el tema de interfaz que desea que se utilice cuando el formulario se ejecute en Windows. By default, forms inherit from the [global project theme settings](../settings/interface.md) but you can override this setting for each form.
 
 Valores disponibles:
 
 - **heredado** (por defecto): hereda del tema del proyecto
-- **Classic**: use the Windows classic interface theme
+- **Classic**: utiliza el tema de interfaz clásico de Windows
 - **Fluent UI**: utilice el tema de interfaz [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) ([cuando esté disponible](../FormEditor/forms.md#requirements)).
 
 :::note
@@ -102,7 +102,7 @@ Esta propiedad se ignora en macOS.
 | -------- | -------------- | ---------------- |
 | fluentUI | boolean        | true, false      |
 
-If the property is not defined, the "inherited" option is selected.
+Si la propiedad no está definida, se selecciona la opción "inherited".
 
 ---
 
@@ -237,4 +237,5 @@ Puede utilizar referencias dinámicas para definir los nombres de ventana de los
 | Nombre      | Tipos de datos | Valores posibles                                         |
 | ----------- | -------------- | -------------------------------------------------------- |
 | windowTitle | string         | El nombre de la ventana como texto plano o de referencia |
+
 

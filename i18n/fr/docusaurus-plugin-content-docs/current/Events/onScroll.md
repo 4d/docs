@@ -22,3 +22,4 @@ L'événement est généré dès qu'un utilisateur fait défiler une image dans 
 ### List box
 
 L'événement est généré dès qu'un utilisateur fait défiler les lignes ou les colonnes de la list box.
+

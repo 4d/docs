@@ -1,0 +1,58 @@
+﻿---
+id: soap-get-info
+title: SOAP get info
+slug: /commands/soap-get-info
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.SOAP Get info.Syntax-->**SOAP get info** ( *numInfo* : Integer ) : Text<!-- END REF-->
+<!--REF #_command_.SOAP Get info.Params-->
+<div class="no-index">
+
+| Parámetro | Tipo |  | Descripción |
+| --- | --- | --- | --- |
+| numInfo | Integer | &#8594; | Número de tipo de información SOAP a obtener |
+| Resultado | Text | &#8592; | Información SOAP |
+</div>
+<!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|13|Renombrar|
+|13|Renombrar|
+|2003|Creado por|
+
+</details>
+</div>
+
+#### Descripción 
+
+<!--REF #_command_.SOAP Get info.Summary-->El comando **SOAP get info** permite recuperar bajo la forma de cadena de caracteres diferentes tipos de información relacionada con una petición SOAP.<!-- END REF--> 
+
+Cuando procesa una petición SOAP, puede ser útil obtener información adicional, diferente a los valores de los parámetros RPC, sobre la petición. Por ejemplo, por razones de seguridad, puede utilizar este comando en el *Método base On Web Authentication* para conocer el nombre del método Web service solicitado. 
+
+Pase en el parámetro *numInfo* el número del tipo de información SOAP que quiere conocer. Puede utilizar las siguientes constantes predefinidas, ubicadas en el tema *Servicios Web (Servidor)*:
+
+| Constante         | Tipo         | Valor | Comentario                                                         |
+| ----------------- | ------------ | ----- | ------------------------------------------------------------------ |
+| SOAP method name  | Entero largo | 1     | Nombre del método ofrecido como servicio web a punto de ejecutarse |
+| SOAP service name | Entero largo | 2     | Nombre del servicio web al que pertenece el método                 |
+
+**Nota:** por razones de seguridad, es posible obtener el tamaño máximo de las peticiones de servicios web enviadas a 4D. Esta configuración se lleva a cabo utilizando el comando [SET DATABASE PARAMETER](../commands/set-database-parameter) (Tema “Definición estructura”).
+
+#### Ver también 
+
+[SET DATABASE PARAMETER](../commands/set-database-parameter)  
+[SOAP SEND FAULT](../commands/soap-send-fault)  
+
+#### Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 784 |
+| Hilo seguro | yes |
+
+

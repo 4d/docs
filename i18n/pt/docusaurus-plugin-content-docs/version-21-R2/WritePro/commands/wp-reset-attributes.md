@@ -8,6 +8,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP RESET ATTRIBUTES.Params-->
 
+<div class="no-index">
+
 | Parâmetro           | Tipo       |                             | Descrição                                                              |
 | ------------------- | ---------- | --------------------------- | ---------------------------------------------------------------------- |
 | targetObj           | Object     | &#8594; | Intervalo ou elemento ou documento 4D Write Pro                        |
@@ -15,11 +17,12 @@ displayed_sidebar: docs
 | attribName          | Text       | &#8594; | Nome do(s) atributo(s) a remover |
 | attribColl          | Collection | &#8594; | Coleção de atributos para remover                                      |
 
+</div>
 <!-- END REF-->
 
 ## Descrição
 
-O comando **WP RESET ATTRIBUTES**<!--REF #_command_.WP RESET ATTRIBUTES.Summary--> permite que você reinicie o valor de um ou mais atributos no intervalo, elemento ou documento passado como parâmetro.<!-- END REF--> Este comando pode remover qualquer tipo de atributo interno 4D Write Pro: caractere, parágrafo, tabela ou imagem. Você pode passar o nome do atributo para ser redefinido em *attribName* ou você pode passar uma coleção de atributos em *attribColl* para redefinir vários atributos de uma vez.
+The **WP RESET ATTRIBUTES** command <!--REF #_command_.WP RESET ATTRIBUTES.Summary--> allows you to reset the value of one or more attributes in the range, element, or document passed as parameter.<!-- END REF--> Este comando pode remover qualquer tipo de atributo interno 4D Write Pro: caractere, parágrafo, tabela ou imagem. Você pode passar o nome do atributo para ser redefinido em *attribName* ou você pode passar uma coleção de atributos em *attribColl* para redefinir vários atributos de uma vez.
 
 > No caso de uma seção ou uma subseção, o objeto *sectionOrSubsection* pode ser passado sozinho e todos os atributos são redefinidos de uma vez.
 

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 | wpDoc          | Object                  | &#8594; | Documento 4D Write Pro                                          |
 | picture        | Picture                 | &#8594; | Imagen 4D                                                       |
 | picturePath    | Text                    | &#8594; | Ruta de la imagen                                               |
-| pictureFileObj | [4D.File](../API/FileClass.md)  | &#8594; | Objeto 4D.File que representa un archivo imagen |
+| pictureFileObj | 4D.File | &#8594; | Objeto 4D.File que representa un archivo imagen |
 | Resultado      | Object                  | &#8592; | Objeto que hace referencia a la imagen                          |
 
 </div>
@@ -35,7 +35,7 @@ Para el segundo parámetro opcional, puede pasar:
 
 :::note
 
-Todo formato imagen [soportado por 4D](../../FormEditor/pictures.md#native-formats-supported) puede ser usado. Puede obtener la lista de formatos de imagen disponibles usando el comando [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md). Si la imagen encapsula varios formatos (codecs), 4D Write Pro solo mantiene un formato para la visualización y otro para la impresión (si son diferentes) en el documento; los "mejores" formatos se seleccionan automáticamente.
+Todo formato imagen [soportado por 4D](../../FormEditor/pictures.md#native-formats-supported) puede ser usado. Puede obtener la lista de formatos de imagen disponibles usando el comando [PICTURE CODEC LIST](../../commands/picture-codec-list). Si la imagen encapsula varios formatos (codecs), 4D Write Pro solo mantiene un formato para la visualización y otro para la impresión (si son diferentes) en el documento; los "mejores" formatos se seleccionan automáticamente.
 
 :::
 
@@ -49,7 +49,7 @@ Por defecto, la imagen añadida es:
 
 La ubicación, la capa (en línea, delante/detrás del texto), la visibilidad y cualquier otra propiedad de la imagen pueden modificarse mediante el comando [WP SET ATTRIBUTES](wp-set-attributes.md), o mediante acciones estándar (ver *Uso de las acciones estándar 4D Write Pro*).
 
-**Nota:** el comando [WP Selection range](../commands-legacy/wp-selection-range.md) devuelve un objeto *referencia a imagen* si se selecciona una imagen anclada y un objeto *rango* si se selecciona una imagen en línea. Puede determinar si un objeto seleccionado es un objeto imagen comprobando el atributo `wk type`:
+**Nota:** el comando [WP Selection range](../commands/wp-selection-range) devuelve un objeto *referencia a imagen* si se selecciona una imagen anclada y un objeto *rango* si se selecciona una imagen en línea. Puede determinar si un objeto seleccionado es un objeto imagen comprobando el atributo `wk type`:
 
 - **Value = 2**: el objeto seleccionado es un objeto imagen.
 - **Valor = 0**: el objeto seleccionado es un objeto de rango.
@@ -103,5 +103,5 @@ Desea utilizar una expresión de campo para añadir una imagen anclada a un docu
 
 ## Ver también
 
-[WP DELETE PICTURE](../commands-legacy/wp-delete-picture.md)</br>
-[WP Picture range](../commands-legacy/wp-picture-range.md)
+[WP DELETE PICTURE](../commands/wp-delete-picture)</br>
+[WP Picture range](../commands/wp-picture-range)

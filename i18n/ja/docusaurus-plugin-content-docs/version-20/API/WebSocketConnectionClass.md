@@ -71,11 +71,13 @@ WebSocketConnection オブジェクトは、次のプロパティと関数を提
 
 
 <!-- REF #WebSocketConnectionClass.send().Params -->
-| 引数      | 型                    |    | 説明                                   |
-| ------- | -------------------- |:--:| ------------------------------------ |
-| message | Text / Blob / Object | -> | 送信するメッセージ|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|message|Text / Blob / Object|->|The message to send|
+</div>
+<!-- END REF -->
 
 #### 説明
 
@@ -115,13 +117,14 @@ WebSocketConnection オブジェクトは、次のプロパティと関数を提
 
 
 <!-- REF #WebSocketConnectionClass.terminate().Params -->
-| 引数      | 型       |    | 説明                                                        |
-| ------- | ------- |:--:| --------------------------------------------------------- |
-| code    | Integer | -> | クライアントに送信されるエラーコード (> 3000 である必要があり、そうでない場合メッセージは送信されません) |
-| message | Text    | -> | クライアントに送信されるエラーメッセージ|<!-- END REF -->
+<div class="no-index">
 
-
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|code|Integer|->|Error code sent to the client (must be > 3000, otherwise the message is not sent)|
+|message|Text|->|Error message sent to the client|
+</div>
+<!-- END REF -->
 
 
 #### 説明

@@ -9,11 +9,16 @@ title: VP REMOVE STYLESHEET
 
 <!-- REF #_method_.VP REMOVE STYLESHEET.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                                    |                  |
-| ---------- | ------- | -- | -------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                   |                  |
-| styleName  | Text    | -> | Nombre del estilo a eliminar                                   |                  |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo    |    | Descripción                                                    |
+| ---------- | ------- | -- | -------------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                   |
+| styleName  | Text    | -> | Nombre del estilo a eliminar                                   |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

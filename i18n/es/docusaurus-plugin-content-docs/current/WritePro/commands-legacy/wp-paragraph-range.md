@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.WP Paragraph range.Summary-->El comando **WP Paragraph range** devuelve un rango de objetos específico que se refiere únicamente a los párrafos contenidos en *rangoObj* que se pasó como parámetro.<!-- END REF--> El objeto rango de párrafo devuelto puede ser utilizado por [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) y [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) para manejar los atributos del párrafo únicamente.
+<!--REF #_command_.WP Paragraph range.Summary-->El comando **WP Paragraph range** devuelve un rango de objetos específico que se refiere únicamente a los párrafos contenidos en *rangoObj* que se pasó como parámetro.<!-- END REF--> El objeto rango de párrafo devuelto puede ser utilizado por [WP GET ATTRIBUTES](../commands/wp-get-attributes) y [WP SET ATTRIBUTES](../commands/wp-set-attributes) para manejar los atributos del párrafo únicamente.
 
 En *rangoObj*, puede pasar:
 
@@ -37,6 +37,7 @@ Usted quiere definir el margen interior para los párrafos únicamente:
 
 ## Ver también 
 
-[WP Picture range](wp-picture-range.md)  
-[WP Selection range](wp-selection-range.md)  
-[WP Text range](wp-text-range.md)  
+[WP Picture range](../commands/wp-picture-range)  
+[WP Selection range](../commands/wp-selection-range)  
+[WP Text range](../commands/wp-text-range)  
+

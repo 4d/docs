@@ -33,16 +33,16 @@ O Método banco de dados On Startup é perfeito para:
 * Inicializar variáveis interprocesso que utilizará durante toda a sessão de trabalho.
 * Iniciar processos automaticamente quando abre um banco.
 * Carregar preferências ou parâmetros guardados durante a sessão de trabalho anterior.
-* Evitar a abertura do banco se não se cumprirem uma condição (por exemplo, se faltar um recurso do sistema) chamando explicitamente [QUIT 4D](quit-4d.md).
+* Evitar a abertura do banco se não se cumprirem uma condição (por exemplo, se faltar um recurso do sistema) chamando explicitamente [QUIT 4D](../commands/quit-4d).
 * Realizar outras ações que deseja executar automaticamente cada vez que abra um banco.
 No entanto, lhe recomendamos NÃO lançar trabalhos de impressão desde o **Método banco de dados On Startup**. 
 
 ## Exemplo 
 
-Veja o exemplo na seção [Semaphore](semaphore.md).
+Veja o exemplo na seção [Semaphore](../commands/semaphore).
 
 ## Ver também 
 
-[Método banco de dados On Exit](metodo-banco-de-dados-on-exit.md)  
+[Método banco de dados On Exit](../commands/metodo-banco-de-dados-on-exit)  
 *Métodos de banco de dados*  
-[QUIT 4D](quit-4d.md)  
+[QUIT 4D](../commands/quit-4d)  

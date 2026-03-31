@@ -50,7 +50,7 @@ Since it requires additional calculations at runtime, the automatic row height o
 
 #### Commands
 
-[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md) 
+[`LISTBOX Get property`](../commands/listbox-get-property) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property) 
 
 
 ---
@@ -71,7 +71,7 @@ Bottom coordinate of the object in the form.
 
 #### Commands
 
-[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+[OBJECT GET COORDINATES](../commands/object-get-coordinates) - [OBJECT MOVE](../commands/object-move) - [OBJECT SET COORDINATES](../commands/object-set-coordinates)
 
 ---
 
@@ -91,7 +91,7 @@ Left coordinate of the object on the form.
 
 #### Commands
 
-[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+[OBJECT GET COORDINATES](../commands/object-get-coordinates) - [OBJECT MOVE](../commands/object-move) - [OBJECT SET COORDINATES](../commands/object-set-coordinates)
 
 ---
 
@@ -111,7 +111,7 @@ Right coordinate of the object in the form.
 
 #### Commands
 
-[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+[OBJECT GET COORDINATES](../commands/object-get-coordinates) - [OBJECT MOVE](../commands/object-move) - [OBJECT SET COORDINATES](../commands/object-set-coordinates)
 
 ---
 
@@ -131,7 +131,7 @@ Top coordinate of the object in the form.
 
 #### Commands
 
-[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+[OBJECT GET COORDINATES](../commands/object-get-coordinates) - [OBJECT MOVE](../commands/object-move) - [OBJECT SET COORDINATES](../commands/object-set-coordinates)
 
 ---
 
@@ -163,7 +163,7 @@ With [text areas](text.md) and [inputs](input_overview.md):
 
 :::
 
-You can also set this property using the [OBJECT Get corner radius](../commands-legacy/object-get-corner-radius.md) and [OBJECT SET CORNER RADIUS](../commands-legacy/object-set-corner-radius.md) commands.
+You can also set this property using the [OBJECT Get corner radius](../commands/object-get-corner-radius) and [OBJECT SET CORNER RADIUS](../commands/object-set-corner-radius) commands.
 
 #### JSON Grammar
 
@@ -177,7 +177,7 @@ You can also set this property using the [OBJECT Get corner radius](../commands-
 
 #### Commands
 
-[OBJECT GET CORNER RADIUS](../commands-legacy/object-get-corner-radius.md) - [OBJECT SET CORNER RADIUS](../commands-legacy/object-set-corner-radius.md)
+[OBJECT GET CORNER RADIUS](../commands/object-get-corner-radius) - [OBJECT SET CORNER RADIUS](../commands/object-set-corner-radius)
 
 
 ---
@@ -200,7 +200,7 @@ This property designates an object's vertical size.
 
 #### Commands
 
-[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+[OBJECT GET COORDINATES](../commands/object-get-coordinates) - [OBJECT MOVE](../commands/object-move) - [OBJECT SET COORDINATES](../commands/object-set-coordinates)
 
 ---
 
@@ -224,7 +224,7 @@ This property designates an object's horizontal size.
 
 #### Commands
 
-[OBJECT GET COORDINATES](../commands-legacy/object-get-coordinates.md) - [OBJECT MOVE](../commands-legacy/object-move.md) - [OBJECT SET COORDINATES](../commands-legacy/object-set-coordinates.md)
+[OBJECT GET COORDINATES](../commands/object-get-coordinates) - [OBJECT MOVE](../commands/object-move) - [OBJECT SET COORDINATES](../commands/object-set-coordinates)
 
 ---
 
@@ -246,7 +246,7 @@ The maximum width of the column (in pixels). The width of the column cannot be i
 
 #### Commands
 
-[LISTBOX Get column width](../commands-legacy/listbox-get-column-width.md) - [LISTBOX SET COLUMN WIDTH](../commands-legacy/listbox-set-column-width.md)
+[LISTBOX Get column width](../commands/listbox-get-column-width) - [LISTBOX SET COLUMN WIDTH](../commands/listbox-set-column-width)
 
 ---
 
@@ -268,7 +268,7 @@ The minimum width of the column (in pixels). The width of the column cannot be r
 
 #### Commands
 
-[LISTBOX Get column width](../commands-legacy/listbox-get-column-width.md) - [LISTBOX SET COLUMN WIDTH](../commands-legacy/listbox-set-column-width.md)
+[LISTBOX Get column width](../commands/listbox-get-column-width) - [LISTBOX SET COLUMN WIDTH](../commands/listbox-set-column-width)
 
 ---
 
@@ -288,7 +288,7 @@ Sets the height of list box rows (excluding headers and footers). By default, th
 
 #### Commands
 
-[LISTBOX Get row height](../commands-legacy/listbox-get-row-height.md) - [LISTBOX Get rows height](../commands-legacy/listbox-get-rows-height.md) - [LISTBOX SET ROW HEIGHT](../commands-legacy/listbox-set-row-height.md) - [LISTBOX SET ROWS HEIGHT](../commands-legacy/listbox-set-rows-height.md)
+[LISTBOX Get row height](../commands/listbox-get-row-height) - [LISTBOX Get rows height](../commands/listbox-get-rows-height) - [LISTBOX SET ROW HEIGHT](../commands/listbox-set-row-height) - [LISTBOX SET ROWS HEIGHT](../commands/listbox-set-rows-height)
 
 
 
@@ -329,7 +329,7 @@ Assuming that the unit of the rows is "lines," then the fifth row of the list bo
 
 #### Commands
 
-[`LISTBOX Get array`](../commands-legacy/listbox-get-array.md) - [`LISTBOX GET ARRAYS`](../commands-legacy/listbox-get-arrays.md) 
+[`LISTBOX Get array`](../commands/listbox-get-array) - [`LISTBOX GET ARRAYS`](../commands/listbox-get-arrays) 
 
 
 #### See also
@@ -357,7 +357,7 @@ Sets a horizontal padding for the cells. The value is set in pixels (default = 0
 
 #### Commands
 
-[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md) 
+[`LISTBOX Get property`](../commands/listbox-get-property) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property) 
 
 
 
@@ -383,9 +383,10 @@ Sets a vertical padding for the cells. The value is set in pixels (default = 0).
 
 #### Commands
 
-[`LISTBOX Get property`](../commands/listbox-get-property.md) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md) 
+[`LISTBOX Get property`](../commands/listbox-get-property) - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property) 
 
 
 #### See also
 
 [Horizontal Padding](#horizontal-padding)
+

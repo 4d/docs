@@ -244,7 +244,7 @@ Puede crear un objeto de tipo [entity selection](dsMapping.md#entity-selection) 
 
 - Lance una búsqueda en las entidades [en una dataclass](API/DataClassClass.md#query) o en una [selección de entidades existente](API/EntitySelectionClass.md#query);
 - Uso de la función dataclass [`.all()`](API/DataClassClass.md#all) para seleccionar todas las entidades de una dataclass;
-- Usando el comando [`Create entity selection`](../commands/create-entity-selection.md) o la función [`.newSelection()`](API/DataClassClass.md#newselection) de la dataclass para crear una selección de entidades en blanco;
+- Usando el comando [`Create entity selection`](../commands/create-entity-selection) o la función [`.newSelection()`](API/DataClassClass.md#newselection) de la dataclass para crear una selección de entidades en blanco;
 - Utilizando la función [`.copy()`](API/EntitySelectionClass.md#copy) para duplicar una entity selection existente;
 - Utilizando una de las diversas funciones de la [clase Entity selection](API/EntitySelectionClass.md) que devuelve una nueva selección de entidades, como [`.or()`](API/EntitySelectionClass.md#or);
 - Utilizando un atributo de relación de tipo "related entities" (ver abajo).
@@ -435,7 +435,7 @@ $myInvoices:=$myParts.invoiceItems.invoice
 
 La última línea devolverá en *$myInvoices* una selección de entidades de todas las facturas que tengan al menos una partida de factura relacionada con una parte en la selección de entidades myParts. Cuando se utiliza un atributo de relación como propiedad de una selección de entidades, el resultado es siempre otra selección de entidades, aunque sólo se devuelva una entidad. Cuando se utiliza un atributo de relación como propiedad de una selección de entidades y no se devuelve ninguna entidad, el resultado es una selección de entidades vacía, no nula.
 
-## Restricting entity selections {#restricting-entity-selections}
+## Restringir la selección de entidades {#restricting-entity-selections}
 
 En ORDA, puede crear filtros para restringir el acceso a entidades de cualquiera de sus clases de datos. Una vez implementado, se aplica automáticamente un filtro siempre que se accede a las entidades de la dataclass, ya sea mediante **funciones de clase ORDA** como [`all()`](../API/DataClassClass.md#all) o [`query()`](../API/EntitySelectionClass.md#query), o por la [**API REST**](../category/api-dataclass) (que implica el [Explorador de datos](../Admin/dataExplorer.md) y [remote datastores](remoteDatastores.md)).
 
@@ -532,7 +532,7 @@ Los filtros no se aplican a las selecciones heredadas de registros manejadas a t
 | [entitySelection.query()](../API/EntitySelectionClass.md#query)       |                                                                                                                                                                                                                                                                                                                                                                                             |
 | [entitySelection.attributeName](../API/EntitySelectionClass.md#attributename)            | Filtro aplicado si *attributeName* es una entidad relacionada o entidades relacionadas de una clase de datos filtrada (incluyendo alias o atributo calculado)                                                                                                                                                                                                            |
 | [entity.attributeName](../API/EntityClass.md#attributename)                              | Filtro aplicado si *attributeName* corresponde a entidades relacionadas de una clase de datos filtrada (incluyendo alias o atributo calculado)                                                                                                                                                                                                                           |
-| [Create entity selection](../commands/create-entity-selection.md)                                        |                                                                                                                                                                                                                                                                                                                                                                                             |
+| [Create entity selection](../commands/create-entity-selection)                                           |                                                                                                                                                                                                                                                                                                                                                                                             |
 
 Otras funciones ORDA que acceden a los datos no activan directamente el filtro, pero sin embargo se benefician de él. Por ejemplo, la función [`entity.next()`](../API/EntityClass.md#next) devolverá la siguiente entidad de la selección de entidades ya filtrada. Por otro lado, si la selección de entidades no está filtrada, [`entity.next()`](../API/EntityClass.md#next) funcionará en entidades no filtradas.
 
@@ -615,3 +615,4 @@ Los **bloqueos de transacciones** también se aplican tanto a los comandos clás
 
 - Ejemplo con un bloqueo definido por un comando clásico:<br/><br/>![](../assets/en/ORDA/concurrent2.png)
 - Ejemplo con un bloqueo definido por una función ORDA:<br/><br/>![](../assets/en/ORDA/concurrent3.png)
+

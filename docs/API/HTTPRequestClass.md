@@ -164,6 +164,12 @@ In the *options* parameter, pass an object that can contain the following proper
 |validateTLSCertificate|Boolean|If false, 4D does not validate the TLS certificate and does not return an error if it is invalid (i.e. expired, self-signed...). Important: In the current implementation, the Certification Authority itself is not verified.|True|
 
 
+:::note
+
+On macOS, when a new application (new [UUID](./FileClass.md#setappinfo)) requests access to the keychain for the first time, a password can be requested to the user, depending on the local keychain configuration.  
+
+:::
+
 #### Callback functions
 
 All callback functions receive two object parameters:
@@ -184,7 +190,7 @@ Here is the sequence of callback calls:
 
 :::info
 
-For the callback functions to be called when you do not use [`wait()`](#wait) (asynchronous call), the process must be a [worker](../Develop/processes.md#worker-processes) created with [`CALL WORKER`](../commands-legacy/call-worker.md), NOT [`New process`](../commands-legacy/new-process.md).
+For the callback functions to be called when you do not use [`wait()`](#wait) (asynchronous call), the process must be a [worker](../Develop/processes.md#worker-processes) created with [`CALL WORKER`](../commands/call-worker), NOT [`New process`](../commands/new-process).
 
 :::
 
@@ -425,8 +431,9 @@ If the response from the server has already arrived, the function returns immedi
 
 :::note 
 
-During the .wait() execution, callback functions from workers are executed, whether they originate from other `HTTPRequest` or  [`SystemWorker`](SystemWorkerClass.md) instances, or other [`CALL WORKER`](../commands-legacy/call-worker.md) calls.  You can exit from a .wait() by calling [`terminate()`](#terminate) from a callback.
+During the .wait() execution, callback functions from workers are executed, whether they originate from other `HTTPRequest` or  [`SystemWorker`](SystemWorkerClass.md) instances, or other [`CALL WORKER`](../commands/call-worker) calls.  You can exit from a .wait() by calling [`terminate()`](#terminate) from a callback.
 
 :::
 
 <!-- END REF -->
+

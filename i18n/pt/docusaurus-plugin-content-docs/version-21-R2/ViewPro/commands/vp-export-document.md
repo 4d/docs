@@ -18,11 +18,16 @@ title: VP EXPORT DOCUMENT
 
 <!-- REF #_method_.VP EXPORT DOCUMENT.Params -->
 
-| Parâmetro  | Tipo   |    | Descrição                                  |                  |
-| ---------- | ------ | -- | ------------------------------------------ | ---------------- |
-| vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro |                  |
-| filePath   | Text   | -> | Caminho do documento                       |                  |
-| paramObj   | Object | -> | Opções de exportação                       | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro  | Tipo   |    | Descrição                                  |
+| ---------- | ------ | -- | ------------------------------------------ |
+| vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro |
+| filePath   | Text   | -> | Caminho do documento                       |
+| paramObj   | Object | -> | Opções de exportação                       |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

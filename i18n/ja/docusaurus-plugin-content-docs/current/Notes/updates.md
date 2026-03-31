@@ -7,12 +7,24 @@ title: リリースノート
 
 #### ハイライト
 
-- [`JSON Validate`](../commands/json-validate.md) コマンドは、JSON スキーマドラフト 2020-12 をサポートするようになりました。
+- [`JSON Validate`](../commands/json-validate) コマンドは、JSON スキーマドラフト 2020-12 をサポートするようになりました。
+- 4D Write Pro は[階層リストスタイルシート](../WritePro/user-legacy/stylesheets.md#hierarchical-list-style-sheets) サポートするようになり、これにより自動ナンバリングつきの、構造化された[マルチレベルのリスト](../WritePro/user-legacy/using-a-4d-write-pro-area.md#multi-level-lists) の作成と管理が可能になりました。
 - [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) および [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) クラスにおいて、ローカル証明書フォルダの代わりにmacOS キーチェーンからのカスタムの証明書を使用できるようになりました。
+- テキストソースから4D メソッドを作成し実行するための[`4D.Method` クラス](../API/MethodClass.md)。 [`METHOD Get path`](../commands/method-get-path) および [`METHOD RESOLVE PATH`](../commands/method-resolve-path) コマンドは新しい`path volatile method` 定数 (128) をサポートするようになりました。
+- リモートの[session](../API/SessionClass.md) オブジェクトは、[クライアント側でも利用可能](../Desktop/sessions.md#availability) になりました。
+
+#### macOS におけるLiquid glass のサポート
+
+- macOS 26 Tahoe 上での4D における、[**Liquid glass** インターフェース](https://www.apple.com/newsroom/2025/06/apple-introduces-a-delightful-and-elegant-new-software-design/) の自動サポート。 詳細な情報については、[こちらの blog 記事](https://blog.4d.com/the-new-macos-tahoe-design-comes-to-your-4d-applications) を参照してください。
+- [`FORM Theme`](../commands/form-theme) コマンド　および [CSS メディアクエリ](../FormEditor/createStylesheet.md#media-queries)から返される新しい値。
+- 開発者がインターフェースを徐々に適合していけるようにするために、アプリケーションの*Info.plist* ファイル内の"UIDesignRequiresCompatibility" キーを使用して**4D 組み込みのアプリケーションにおいてLiquid glass を無効化する機能** ([このキーに関するApple のドキュメンテーション](https://developer.apple.com/documentation/BundleResources/Information-Property-List/UIDesignRequiresCompatibility) を参照のこと)。
 
 #### 動作の変更
 
-- [`JSON Validate`](../commands/json-validate.md) コマンドは *$schema* キーを考慮するようになり、スキーマ内でサポートされていないバージョンが宣言されたときにはエラーを生成するようになりました。
+- [`JSON Validate`](../commands/json-validate) コマンドは *$schema* キーを考慮するようになり、スキーマ内でサポートされていないバージョンが宣言されたときにはエラーを生成するようになりました。
+- 分かりやすさのために、フォーミュラオブジェクトは、汎用的な [`4D.Function`](../API/FunctionClass.md) クラスを継承する [`4D.Formula`](../API/FormulaClass.md) クラスの新しいインスタンスになりました。
+- [設定ダイアログボックス](../settings/overview.md) から、"PHP" ページが削除されました。 PHP インタープリターを設定するためには、[`SET DATABASE PARAMETER` のPHP セレクター](../commands/set-database-parameter#php-interpreter-ip-address-55) を使用してください。
+- The **Legacy** network layer is no longer supported as of 4D 21 R3. Projects and binary databases that were using the Legacy network layer are automatically set to [**ServerNet**](../settings/client-server.md#network-layer) when upgraded to 4D 21 R3 and higher.
 
 ## 4D 21 R2
 
@@ -32,13 +44,13 @@ title: リリースノート
 #### デベロッパー・プレビュー
 
 - Windows 上での [**fluent UI** レンダリング](../FormEditor/forms.md#fluent-ui-レンダリング) のサポート:
-  - 新しい [`FORM theme`](../commands/form-theme.md) コマンド
+  - 新しい [`FORM theme`](../commands/form-theme) コマンド
   - 新しい [`form-theme` CSS メディアクエリ](../FormEditor/createStylesheet.md#メディアクエリ)
   - 設定ダイアログボック内での新しい [**Windows 上でFluent UI を使用**](../settings/interface.md#windows-上でfluent-ui-を使用) オプション。
 
 #### 動作の変更
 
-- Windows 上で、[**fluent UI** レンダリング](../FormEditor/forms.md#fluent-ui-レンダリング) が有効化されている場合、 [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) コマンドは、フォームから呼ばれているかどうかに関わらず、異なる情報を返すことがあります。
+- Windows 上で、[**fluent UI** レンダリング](../FormEditor/forms.md#fluent-ui-レンダリング) が有効化されている場合、 [`GET STYLE SHEET INFO`](../commands/get-style-sheet-info) コマンドは、フォームから呼ばれているかどうかに関わらず、異なる情報を返すことがあります。
 
 ## ライブラリの一覧
 
@@ -61,3 +73,4 @@ title: リリースノート
 | webKit    | WKWebView                              | 19             |                                                                                                                                                      |
 | Xerces    | 3.3.0  | 21             | XML コマンドにおいて使用されます                                                                                                                                   |
 | Zlib      | 1.3.1  | 21             |                                                                                                                                                      |
+

@@ -48,4 +48,4 @@ Desea cambiar un atributo para la última sección del área 4D Write Pro:
 
 ## Ver también 
 
-[WP Get section](wp-get-section.md)  
+[WP Get section](../commands/wp-get-section)  

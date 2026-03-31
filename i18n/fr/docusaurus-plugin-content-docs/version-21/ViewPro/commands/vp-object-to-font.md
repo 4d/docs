@@ -9,10 +9,15 @@ title: VP Object to font
 
 <!-- REF #_method_.VP Object to font.Params -->
 
-| Paramètres | Type   |                             | Description                                      |                  |
-| ---------- | ------ | --------------------------- | ------------------------------------------------ | ---------------- |
-| fontObj    | Object | ->                          | Objet police                                     |                  |
-| Résultat   | Text   | <- | Police raccourcie (shorthand) | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres | Type   |                             | Description                                                                        |
+| ---------- | ------ | --------------------------- | ---------------------------------------------------------------------------------- |
+| fontObj    | Object | ->                          | <strong x-id="1">Notes sur le format de fichier SpreadJS</strong>: |
+| Résultat   | Text   | <- | Police raccourcie (shorthand)                                   |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

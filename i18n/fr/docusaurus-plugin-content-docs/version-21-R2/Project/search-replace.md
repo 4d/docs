@@ -187,7 +187,7 @@ Le menu d'options vous permet d'effectuer diverses actions :
 
 - **Retirer de la liste** : supprime le(s) élément(s) sélectionné(s) de la fenêtre de résultats. Cette fonction permet notamment de ne conserver que les éléments cibles d'un remplacement dans le contenu ou utilisés pour un glisser-déposer inter-applications.
 - **Retirer tous les éléments de la liste sauf la sélection** : efface tout le contenu de la fenêtre de résultats sauf le(s) élément(s) sélectionné(s).
-- [**Remplacer dans le contenu**](#replace-in-contents) : remplace une chaîne de caractères dans le(s) élément(s) sélectionné(s).
+- [**Remplacer dans le contenu**](#replace-in-content) : remplace une chaîne de caractères dans le(s) élément(s) sélectionné(s).
 - **Sélectionner >** : sélectionne un type d'élément (méthodes projet, noms d'objets, etc.) parmi tous les éléments de la fenêtre de résultats. Le sous-menu hiérarchique fournit également des commandes pour sélectionner (Tout) ou désélectionner (Rien) tous les éléments d'un coup.
 - **Contracter tout/Déployer tout** : développe ou contracte tous les éléments hiérarchiques de la liste de résultats.
 - **Exporter les résultats** : exporte des informations sur les critères de recherche et les éléments listés dans la fenêtre de résultats. Ce fichier texte peut ensuite être importé dans un tableur tel qu'Excel, par exemple. Pour chaque élément, les informations suivantes sont exportées sous forme de valeurs séparées par des tabulations :

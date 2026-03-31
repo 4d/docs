@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 ## Descrição 
 
-<!--REF #_command_.WP Paragraph range.Summary-->O comando **WP Paragraph range** devolve uma faixa de objetos específica que se refere unicamente aos parágrafos contidos em *rfaixaObj* que foi passada como parâmetro.<!-- END REF--> A faixa de objetos parágrafo devolvido deve ser utilizado por [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) e [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) para manejar os atributos do parágrafo unicamente.
+<!--REF #_command_.WP Paragraph range.Summary-->O comando **WP Paragraph range** devolve uma faixa de objetos específica que se refere unicamente aos parágrafos contidos em *rfaixaObj* que foi passada como parâmetro.<!-- END REF--> A faixa de objetos parágrafo devolvido deve ser utilizado por [WP GET ATTRIBUTES](../commands/wp-get-attributes) e [WP SET ATTRIBUTES](../commands/wp-set-attributes) para manejar os atributos do parágrafo unicamente.
 
 Em *faixaObj*, passe:
 
@@ -37,6 +37,7 @@ Se quiser definiri a margem interior apenas para os parágrafos:
 
 ## Ver também 
 
-[WP Picture range](wp-picture-range.md)  
-[WP Selection range](wp-selection-range.md)  
-[WP Text range](wp-text-range.md)  
+[WP Picture range](../commands/wp-picture-range)  
+[WP Selection range](../commands/wp-selection-range)  
+[WP Text range](../commands/wp-text-range)  
+

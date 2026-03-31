@@ -60,6 +60,7 @@ Para congelar todas las fórmulas en la primera sección de un documento:
 
 ## Ver también 
 
-[WP COMPUTE FORMULAS](wp-compute-formulas.md)  
-[WP Get formulas](wp-get-formulas.md)  
-[WP INSERT FORMULA](../commands/wp-insert-formula.md)  
+[WP COMPUTE FORMULAS](../commands/wp-compute-formulas)  
+[WP Get formulas](../commands/wp-get-formulas)  
+[WP INSERT FORMULA](../commands/wp-insert-formula)  
+

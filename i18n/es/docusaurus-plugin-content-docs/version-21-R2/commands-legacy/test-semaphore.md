@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Test semaphore.Summary-->El comando Test semaphore le permite probar la existencia de un semáforo.<!-- END REF-->
 
-La diferencia entre la función [Semaphore](semaphore.md "Semaphore") y Test semaphore es que Test semaphore no crea el *semaphore* si éste no existe. Si el *semaforo* existe, la función devuelve [True](true.md "True"). De lo contrario, devuelve [False](false.md "False"). 
+La diferencia entre la función [Semaphore](semaphore.md "Semaphore") y Test semaphore es que Test semaphore no crea el *semaphore* si éste no existe. Si el *semaforo* existe, la función devuelve [True](../commands/true). De lo contrario, devuelve [False](../commands/false). 
 
 ## Ejemplo 
 

@@ -34,6 +34,8 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 
 <!-- REF #4D.MailAttachment.new().Params -->
 
+<div class="no-index">
+
 | 引数          | 型                                 |                             | 説明                                                                                     |
 | ----------- | --------------------------------- | :-------------------------: | -------------------------------------------------------------------------------------- |
 | file        | 4D.File           |              ->             | 添付ファイル                                                                                 |
@@ -46,6 +48,7 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 | disposition | Text                              |              ->             | content-disposition ヘッダーの値: "inline" あるいは "attachment"                 |
 | 戻り値         | 4D.MailAttachment | <- | Attachment オブジェクト                                                                      |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -77,10 +80,13 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
 
+<div class="no-index">
+
 | 引数  | 型                       |                             | 説明    |
 | --- | ----------------------- | :-------------------------: | ----- |
 | 戻り値 | 4D.Blob | <- | 添付の中身 |
 
+</div>
 <!-- END REF -->
 
 #### 説明

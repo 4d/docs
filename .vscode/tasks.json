@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Translate commit (dry-run)",
+      "type": "shell",
+      "command": "npm run translate-commit -- --commit ${input:commitSha} --targets fr,es,ja,pt --dry-run --verbose",
+      "group": "none",
+      "problemMatcher": []
+    },
+    {
+      "label": "Translate commit (apply + commit)",
+      "type": "shell",
+      "command": "npm run translate-commit -- --commit ${input:commitSha} --targets fr,es,ja,pt --commit-changes \"--commit-message=chore(i18n): propagate translations from ${input:commitSha}\"",
+      "group": "none",
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "commitSha",
+      "type": "promptString",
+      "description": "Git commit SHA to propagate to i18n"
+    }
+  ]
+}

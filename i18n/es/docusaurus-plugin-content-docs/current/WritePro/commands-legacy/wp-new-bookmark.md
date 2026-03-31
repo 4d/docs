@@ -70,6 +70,6 @@ Usted quiere cambiar el nombre de un marcador existente. Para ello, es necesario
 ## Ver también 
 
   
-[WP Bookmark range](wp-bookmark-range.md)  
-[WP DELETE BOOKMARK](wp-delete-bookmark.md)  
-[WP GET BOOKMARKS](wp-get-bookmarks.md)  
+[WP Bookmark range](../commands/wp-bookmark-range)  
+[WP DELETE BOOKMARK](../commands/wp-delete-bookmark)  
+[WP GET BOOKMARKS](../commands/wp-get-bookmarks)  

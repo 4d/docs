@@ -55,8 +55,8 @@ The command returns a picture in SVG format.
 You want to convert a 4D View Pro area in SVG, preview the result, and send it to a picture variable:
 
 ```4d
-C_OBJECT($vpAreaObj)
-C_PICTURE($vPict)
+var $vpAreaObj : Object
+var $vPict : Picture
 $vpAreaObj:=VP Export to object("ViewProArea")
 $vPict:=VP Convert to picture($vpAreaObj) //export the whole area
 ```

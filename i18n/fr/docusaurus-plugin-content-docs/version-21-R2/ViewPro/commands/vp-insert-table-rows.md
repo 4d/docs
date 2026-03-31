@@ -17,14 +17,19 @@ title: VP INSERT TABLE ROWS
 
 <!-- REF #_method_.VP INSERT TABLE ROWS.Params -->
 
-| Paramètres  | Type    |    | Description                                                                 |                  |
-| ----------- | ------- | -- | --------------------------------------------------------------------------- | ---------------- |
-| vpAreaName  | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |                  |
-| tableName   | Text    | -> | Nom de table                                                                |                  |
-| row         | Integer | -> | Indice dans la table de la ligne de départ à insérer                        |                  |
-| count       | Integer | -> | Nombre de lignes à ajouter (doit être >0)                |                  |
-| insertAfter | Integer | -> | `vk table insert before` ou `vk table insert after` *row*                   |                  |
-| sheet       | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres  | Type    |    | Description                                                                 |
+| ----------- | ------- | -- | --------------------------------------------------------------------------- |
+| vpAreaName  | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |
+| tableName   | Text    | -> | Nom de table                                                                |
+| row         | Integer | -> | Indice dans la table de la ligne de départ à insérer                        |
+| count       | Integer | -> | Nombre de lignes à ajouter (doit être >0)                |
+| insertAfter | Integer | -> | `vk table insert before` ou `vk table insert after` *row*                   |
+| sheet       | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

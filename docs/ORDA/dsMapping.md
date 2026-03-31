@@ -8,7 +8,7 @@ The ORDA technology is based upon an automatic mapping of an underlying [databas
 
 ## Structure mapping 
 
-When you call a datastore using the [`ds`](commands/ds.md) or the [`Open datastore`](commands/open-datastore.md) command, 4D automatically references tables and fields of the corresponding 4D structure as properties of the returned [datastore](#datastore) object:
+When you call a datastore using the [`ds`](../commands/ds) or the [`Open datastore`](../commands/open-datastore) command, 4D automatically references tables and fields of the corresponding 4D structure as properties of the returned [datastore](#datastore) object:
 
 *	Tables are mapped to [dataclasses](#dataclass).
 *	Fields are mapped to [storage attributes](#storage-and-relation-attributes).
@@ -29,7 +29,7 @@ The following rules are applied for any conversions:
 
 > ORDA mapping does not take into account:  
 > - the "Invisible" option for tables or fields, 
-> - the virtual structure defined through [`SET TABLE TITLES`](../commands-legacy/set-table-titles.md) or [`SET FIELD TITLES`](../commands-legacy/set-field-titles.md),
+> - the virtual structure defined through [`SET TABLE TITLES`](../commands/set-table-titles) or [`SET FIELD TITLES`](../commands/set-field-titles),
 > - the "Manual" or "Automatic" property of relations.
 
 
@@ -266,3 +266,4 @@ Unordered entity selections are created in the following cases:
 >*	entity selections built upon remote datastores.
 
 Note that when an ordered entity selection becomes an unordered entity selection, any repeated entity references are removed.
+

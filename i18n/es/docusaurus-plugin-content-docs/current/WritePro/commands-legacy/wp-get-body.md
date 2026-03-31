@@ -22,9 +22,9 @@ displayed_sidebar: docs
 
 Esta referencia se puede pasar a:
 
-* el comando [WP SELECT](wp-select.md) para seleccionar el cuerpo del documento.
-* el comando [WP Text range](wp-text-range.md) para definir el cuerpo como un rango.
-* los comandos [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) y [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) para manejar los atributos del cuerpo.
+* el comando [WP SELECT](../commands/wp-select) para seleccionar el cuerpo del documento.
+* el comando [WP Text range](../commands/wp-text-range) para definir el cuerpo como un rango.
+* los comandos [WP SET ATTRIBUTES](../commands/wp-set-attributes) y [WP GET ATTRIBUTES](../commands/wp-get-attributes) para manejar los atributos del cuerpo.
 
 ## Ejemplo 
 
@@ -45,4 +45,5 @@ Usted desea copiar la parte del cuerpo de un documento 4D Write Pro a otro docum
 
 ## Ver también 
 
-[WP Text range](wp-text-range.md)  
+[WP Text range](../commands/wp-text-range)  
+

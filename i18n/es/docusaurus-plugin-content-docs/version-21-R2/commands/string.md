@@ -83,7 +83,7 @@ El formato se especifica del mismo modo que se haría para una [entrada numéric
 | String(1/0)                                                      | "INF"                             | Número infinito positivo                           |
 | String(-1/0)                                                     | "-INF"                            | Número infinito negativo                           |
 
-(\*) The algorithm for converting [real values](../Concepts/dt_number.md) into text is based on 13 significant digits.
+(\*) El algoritmo de conversión de los [valores reales](../Concepts/dt_number.md) en texto se basa en 13 dígitos significativos.
 
 #### String(number;base)
 

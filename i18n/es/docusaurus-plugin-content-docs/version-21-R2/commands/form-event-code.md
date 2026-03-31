@@ -21,10 +21,10 @@ displayed_sidebar: docs
 <div class="no-index">
 <details><summary>Historia</summary>
 
-| Lanzamiento                 | Modificaciones                          |
-| --------------------------- | --------------------------------------- |
-| 18                          | Renamed (Form event) |
-| <6 | Created                                 |
+| Lanzamiento                 | Modificaciones                             |
+| --------------------------- | ------------------------------------------ |
+| 18                          | Renombrado (Form event) |
+| <6 | Created                                    |
 
 </details>
 </div>

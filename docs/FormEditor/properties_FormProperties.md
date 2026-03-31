@@ -10,7 +10,7 @@ title: Form Properties
 >Color scheme property is only applied on macOS and [Windows with Fluent UI theme](../settings/interface.md#use-fluent-ui-on-windows).
 ).
 
-This property defines the color scheme for the form. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](../commands-legacy/get-application-color-scheme.md)). This can be changed for the form to one of the following two options:
+This property defines the color scheme for the form. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](../commands/get-application-color-scheme)). This can be changed for the form to one of the following two options:
 
 *	dark - light text on a dark background 
 *	light - dark text on a light background
@@ -57,7 +57,7 @@ Associating a class to the form provides the following benefits:
  
 - You can also to benefit from [autocompletion features](../code-editor/write-class-method.md#autocomplete-functions) in the code editor. 
 
-- When the form is executed, 4D automatically instantiates a user class object for the form, which is returned by the [`Form`](../commands/form.md) object. Your code can directly access class functions defined in the user class through the `Form` command (e.g. `Form.message()`) without having to pass a *formData* object as parameter to the [`DIALOG`](../commands/dialog.md), [`Print form`](../commands/print-form.md), [`FORM LOAD`](../commands/form-load.md), and [`PRINT SELECTION`](../commands-legacy/print-selection.md) commands. 
+- When the form is executed, 4D automatically instantiates a user class object for the form, which is returned by the [`Form`](../commands/form) object. Your code can directly access class functions defined in the user class through the `Form` command (e.g. `Form.message()`) without having to pass a *formData* object as parameter to the [`DIALOG`](../commands/dialog), [`Print form`](../commands/print-form), [`FORM LOAD`](../commands/form-load), and [`PRINT SELECTION`](../commands/print-selection) commands. 
 
 :::note
 
@@ -259,4 +259,5 @@ You can use dynamic references to set the window titles for forms, *i.e.*:
 |Name|Data Type|Possible Values|
 |---|---|---|
 |windowTitle |string |The name of the window as plain text or as a reference|
+
 

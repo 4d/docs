@@ -8,6 +8,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP SET ATTRIBUTES.Params-->
 
+<div class="no-index">
+
 | 引数          | 型                                               |                             | 説明                                  |
 | ----------- | ----------------------------------------------- | --------------------------- | ----------------------------------- |
 | targetObj   | Object                                          | &#8594; | レンジまたは要素または4D Write Pro ドキュメント      |
@@ -15,6 +17,7 @@ displayed_sidebar: docs
 | attribValue | Text, Number, Object, Collection, Picture, Date | &#8594; | 新しい属性の値                             |
 | attribObj   | Object                                          | &#8594; | 設定したい属性の名前とそれに対応する設定したい値を格納したオブジェクト |
 
+</div>
 <!-- END REF-->
 
 ## 説明
@@ -33,7 +36,7 @@ displayed_sidebar: docs
 
 - *attribObj* 引数を使用して、属性の名前と対応する値をオブジェクトのプロパティとして格納した一つのオブジェクトを渡すことができます。
 
-For a comprehensive list of attributes to pass, as well as their scope and respective values, please refer to the [4D Write Pro Attributes](../4d-write-pro-attributes) section.
+渡すことのできる属性の包括的な一覧と、そのスコープおよび値については、[4D Write Pro 属性](../4d-write-pro-attributes) の章を参照してください。
 
 ## 例題 1
 
@@ -88,7 +91,7 @@ For a comprehensive list of attributes to pass, as well as their scope and respe
  WP SET ATTRIBUTES(WParea;wk background image;$picture)
 ```
 
-The result is:
+結果は以下のとおりです:
 
 ![](../../assets/en/WritePro/commands/pict3514231.en.png)
 
@@ -108,7 +111,7 @@ The result is:
  WP SET ATTRIBUTES(WParea;$myAttributes)
 ```
 
-The result is:
+結果は以下のとおりです:
 
 ![](../../assets/en/WritePro/commands/pict3514233.en.png)
 
@@ -142,7 +145,7 @@ paper box の値はドキュメントあるいはセクションに対しての�
  WP SET ATTRIBUTES(wpArea;wk tabs;$_tabs)
 ```
 
-The result is:
+結果は以下のとおりです:
 
 ![](../../assets/en/WritePro/commands/pict4251559.en.png)
 

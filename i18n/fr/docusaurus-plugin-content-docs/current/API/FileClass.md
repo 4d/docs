@@ -3,7 +3,7 @@ id: FileClass
 title: File
 ---
 
-Les objets `File` sont créés avec la commande [`File`](../commands/file.md). Ils contiennent des références à des fichiers du disque qui peuvent exister réellement ou non sur le disque. Par exemple, lorsque vous exécutez la commande `File` pour créer un nouveau fichier, un objet `File` valide est créé mais rien n'est réellement stocké sur le disque jusqu'à ce que vous appeliez la fonction [`file.create( )`](#create).
+Les objets `File` sont créés avec la commande [`File`](../commands/file). Ils contiennent des références à des fichiers du disque qui peuvent exister réellement ou non sur le disque. Par exemple, lorsque vous exécutez la commande `File` pour créer un nouveau fichier, un objet `File` valide est créé mais rien n'est réellement stocké sur le disque jusqu'à ce que vous appeliez la fonction [`file.create( )`](#create).
 
 ### Exemple
 
@@ -71,9 +71,9 @@ Les objets de type `File` prennent en charge plusieurs noms de chemin, y compris
 
 #### Description
 
-La fonction `4D.File.new()` <!-- REF #4D.File.new().Summary -->crée et retourne un nouvel objet de type `4D.File`<!-- END REF -->. Elle est identique à la commande [`File`](../commands/file.md) (raccourci).
+La fonction `4D.File.new()` <!-- REF #4D.File.new().Summary -->crée et retourne un nouvel objet de type `4D.File`<!-- END REF -->. Elle est identique à la commande [`File`](../commands/file) (raccourci).
 
-> Il est recommandé d'utiliser la commande [`File`](../commands/file.md) au lieu de `4D.File.new()`.
+> Il est recommandé d'utiliser la commande [`File`](../commands/file) au lieu de `4D.File.new()`.
 
 <!-- INCLUDE document.copyTo().Desc -->
 
@@ -615,7 +615,7 @@ Vous souhaitez que "ReadMe.txt" soit renommé "ReadMe_new.txt" :
 
 La fonction `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->écrit les propriétés *info* en tant que contenu d'information d'un fichier d'application<!-- END REF -->. Elle est principalement destinée aux développeurs qui souhaitent personnaliser leur chaîne de construction d'applications 4D.
 
-The function can only be used with the following file types: **.plist** (all platforms), existing **.exe**/**.dll** (Windows), or **macOS executable**. Si elle est utilisée avec un autre type de fichier ou avec un fichier **.exe**/**.dll** qui n'existe pas déjà sur le disque, la fonction ne fait rien (aucune erreur n'est générée).
+La fonction ne peut être utilisée qu'avec les types de fichiers suivants : **.plist** (toutes les plateformes), **.exe**/**.dll** (Windows), ou **macOS exécutable**. Si elle est utilisée avec un autre type de fichier ou avec un fichier **.exe**/**.dll** qui n'existe pas déjà sur le disque, la fonction ne fait rien (aucune erreur n'est générée).
 
 **Paramètre *info* avec un fichier .plist (toutes plateformes)**
 
@@ -829,3 +829,4 @@ $myFile.setText("Hello world")
 <!-- END REF -->
 
 <!-- INCLUDE document.size.Desc -->
+

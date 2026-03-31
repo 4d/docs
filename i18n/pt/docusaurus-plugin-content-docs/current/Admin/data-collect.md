@@ -91,7 +91,6 @@ Alguns dados são também recolhidos a intervalos regulares.
 | system                                                      | Text                                                     | Versão do sistema operativo e número de construção                                                                                       |
 | uniqueID                                                    | Text                                                     | ID único do 4D Server                                                                                                                    |
 | uptime                                                      | Number                                                   | Tempo decorrido (em segundos) desde que a base de dados 4D local foi aberta                                           |
-| usingLegacyNetworkLayer                                     | Parâmetros                                               | Verdadeiro se a usar a camada de rede herdada para o servidor de aplicações                                                              |
 | usingQUICNetworkLayer                                       | Parâmetros                                               | True se a base de dados utilizar a camada de rede QUIC                                                                                   |
 | version                                                     | Number                                                   | Número da versão da aplicação 4D                                                                                                         |
 | webServer                                                   | Object                                                   | "started":true se o servidor Web estiver a arrancar ou iniciado                                                          |
@@ -101,7 +100,7 @@ Alguns dados são também recolhidos a intervalos regulares.
 
 ## Onde é armazenado e enviado?
 
-Os dados coletados são escritos em um arquivo de texto (formato JSON) por banco de dados quando 4D Servidor abandona. O ficheiro é armazenado dentro da [pasta 4D ativa](../commands-legacy/get-4d-folder.md), ou seja:
+Os dados coletados são escritos em um arquivo de texto (formato JSON) por banco de dados quando 4D Servidor abandona. O ficheiro é armazenado dentro da [pasta 4D ativa](../commands/get-4d-folder), ou seja:
 
 - en Windows:
   `Users\[userName]\AppData\Roaming\4D Server`

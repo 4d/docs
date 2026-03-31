@@ -9,11 +9,16 @@ title: VP REMOVE STYLESHEET
 
 <!-- REF #_method_.VP REMOVE STYLESHEET.Params -->
 
-| 引数         | 型       |    | 説明                                             |                  |
-| ---------- | ------- | -- | ---------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                        |                  |
-| styleName  | Text    | -> | 削除するスタイルの名前                                    |                  |
-| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) | <!-- END REF --> |
+<div class="no-index">
+
+| 引数         | 型       |    | 説明                                             |
+| ---------- | ------- | -- | ---------------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                        |
+| styleName  | Text    | -> | 削除するスタイルの名前                                    |
+| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) |
+
+</div>
+<!-- END REF -->
 
 ## 説明
 

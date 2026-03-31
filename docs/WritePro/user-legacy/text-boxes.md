@@ -17,14 +17,14 @@ Text boxes are added with an absolute position, in front of/behind text, as well
 
 Adding a text box to a 4D Write Pro document can be accomplished in the following ways:
 
-* using the [`WP New text box`](../commands-legacy/wp-new-text-box.md) command,
+* using the [`WP New text box`](../commands/wp-new-text-box) command,
 * using the *insertTextBox* [standard action](./standard-actions.md)
 
 To select a text box, the user has to click on it (**Ctrl/Cmd+click** if the text box is on the background layer). Once selected, the text box can be moved or resized using the mouse or arrow keys. 
 
-To remove a selected text box, you can hit the **Delete** or **Backspace** key, use the **textBox/remove** standard action, or execute the [`WP DELETE TEXT BOX`](../commands-legacy/wp-delete-text-box.md) command. 
+To remove a selected text box, you can hit the **Delete** or **Backspace** key, use the **textBox/remove** standard action, or execute the [`WP DELETE TEXT BOX`](../commands/wp-delete-text-box) command. 
 
-Text box attributes are handled with the [WP SET ATTRIBUTES](./commands/wp-set-attributes) command or [standard actions](./standard-actions.md). The following attributes and actions are available:
+Text box attributes are handled with the [WP SET ATTRIBUTES](../commands/wp-set-attributes) command or [standard actions](./standard-actions.md). The following attributes and actions are available:
 
 | **Property (constant)** | **Standard action**       | **Comments**                                                                |
 | ----------------------- | ------------------------- | --------------------------------------------------------------------------- |
@@ -53,4 +53,5 @@ Text boxes are not displayed if:
 * the view mode is Draft;
 * they are centered or anchored to sections and the **Show HTML WYSIWYG** option is checked;
 * the "visible background" option is not enabled.
+
 

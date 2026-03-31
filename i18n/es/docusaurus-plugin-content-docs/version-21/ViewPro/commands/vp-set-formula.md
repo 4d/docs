@@ -9,11 +9,16 @@ title: VP SET FORMULA
 
 <!-- REF #_method_.VP SET FORMULA.Params -->
 
-| Parámetros    | Tipo   |    | Descripción         |                  |
-| ------------- | ------ | -- | ------------------- | ---------------- |
-| rangeObj      | Object | -> | Objeto rango        |                  |
-| formula       | Text   | -> | Fórmula o método 4D |                  |
-| formatPattern | Text   | -> | Formato del campo   | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros    | Tipo   |    | Descripción         |
+| ------------- | ------ | -- | ------------------- |
+| rangeObj      | Object | -> | Objeto rango        |
+| formula       | Text   | -> | Fórmula o método 4D |
+| formatPattern | Text   | -> | Formato del campo   |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

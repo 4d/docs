@@ -433,6 +433,8 @@ Essa propriedade é **somente leitura**.
 
 <!-- REF #document.copyTo().Params -->
 
+<div class="no-index">
+
 | Parâmetro         | Tipo                       |                             | Descrição                                              |
 | ----------------- | -------------------------- | :-------------------------: | ------------------------------------------------------ |
 | destinationFolder | 4D. Folder |              ->             | Pasta de destino                                       |
@@ -440,6 +442,7 @@ Essa propriedade é **somente leitura**.
 | overwrite         | Integer                    |              ->             | `fk overwrite` para substituir os elementos existentes |
 | Resultados        | 4D. File   | <- | Arquivo copiado                                        |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -489,10 +492,13 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 <!-- REF #document.getContent().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo                     |                             | Descrição           |
 | ---------- | ------------------------ | --------------------------- | ------------------- |
 | Resultados | 4D. Blob | <- | Conteúdo do arquivo |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -533,11 +539,14 @@ Para salvar o conteúdo de um documento em um campo `BLOB`:
 
 <!-- REF #document.getIcon().Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo    |                             | Descrição                                                          |
 | ---------- | ------- | --------------------------- | ------------------------------------------------------------------ |
 | size       | Integer | ->                          | Longitude de lado da imagem devolvida (píxeles) |
 | Resultados | Imagem  | <- | Ícone                                                              |
 
+</div>
 <!-- END REF -->
 
 #### Descrição
@@ -570,13 +579,16 @@ Se o arquivo não existir no disco, um ícone em branco padrão será retornado.
 
 <!-- REF #document.getText().Params -->
 
-| Parâmetro   | Tipo    |                             | Descrição                                   |
-| ----------- | ------- | --------------------------- | ------------------------------------------- |
-| charSetName | Text    | ->                          | Nome do conjunto de caracteres              |
-| charSetNum  | Integer | ->                          | Número de conjuntos de caracteres           |
-| breakMode   | Integer | ->                          | Modo de processamento para quebras de linha |
-| Resultados  | Text    | <- | Texto do documento                          |
+<div class="no-index">
 
+| Parâmetro   | Tipo    |                             | Descrição                                    |
+| ----------- | ------- | --------------------------- | -------------------------------------------- |
+| charSetName | Text    | ->                          | Nome do conjunto de caracteres               |
+| charSetNum  | Integer | ->                          | Número de conjuntos de caracteres            |
+| breakMode   | Integer | ->                          | Modo de processamento para retornos de linha |
+| Resultados  | Text    | <- | Texto do documento                           |
+
+</div>
 <!-- END REF -->
 
 #### Descrição

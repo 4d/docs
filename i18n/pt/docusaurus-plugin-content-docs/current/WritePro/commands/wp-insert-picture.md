@@ -4,20 +4,20 @@ title: WP Insert picture
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Insert picture.Syntax-->**WP Insert picture** ( *targetObj* : Object ; *picture* : Picture ; *mode* : Integer {; *rangeUpdate* : Integer} ): Object<br/>**WP Insert picture** ( *targetObj* : Object ; *pictureFileObj* : 4D.File; *mode* : Integer {; *rangeUpdate* : Integer}): Object<!-- END REF-->
+<!--REF #_command_.WP Insert picture.Syntax-->**WP Insert picture** ( *targetObj* : Object ; *picture* : Picture ; *mode* : Integer {; *rangeUpdate* : Integer} ): Object<br/>**WP Insert picture** ( *targetObj* : Object ; *pictureFile* : 4D.File, Text; *mode* : Integer {; *rangeUpdate* : Integer}): Object<!-- END REF-->
 
 <!--REF #_command_.WP Insert picture.Params-->
 
 <div class="no-index">
 
-| Parâmetro      | Tipo                     |                             | Descrição                                                                 |
-| -------------- | ------------------------ | --------------------------- | ------------------------------------------------------------------------- |
-| targetObj      | Object                   | &#8594; | Intervalo ou elemento ou documento 4D Write Pro                           |
-| picture        | Imagem                   | &#8594; | Campo de imagem ou variável, ou caminho para o arquivo de imagem no disco |
-| pictureFileObj | 4D. File | &#8594; | Um objeto de arquivo representando um arquivo de imagem.  |
-| mode           | Integer                  | &#8594; | Modo de inserção                                                          |
-| rangeUpdate    | Integer                  | &#8594; | Modo de atualização de intervalo                                          |
-| Resultado      | Object                   | &#8592; | Objeto referenciando a imagem                                             |
+| Parâmetro   | Tipo                                                    |                             | Descrição                                                                 |
+| ----------- | ------------------------------------------------------- | --------------------------- | ------------------------------------------------------------------------- |
+| targetObj   | Object                                                  | &#8594; | Intervalo ou elemento ou documento 4D Write Pro                           |
+| picture     | Imagem                                                  | &#8594; | Campo de imagem ou variável, ou caminho para o arquivo de imagem no disco |
+| pictureFile | [4D.File](../../API/FileClass.md), Text | &#8594; | A File object representing a picture file or a path                       |
+| mode        | Integer                                                 | &#8594; | Modo de inserção                                                          |
+| rangeUpdate | Integer                                                 | &#8594; | Modo de atualização de intervalo                                          |
+| Resultado   | Object                                                  | &#8592; | Objeto referenciando a imagem                                             |
 
 </div>
 <!-- END REF-->
@@ -38,9 +38,9 @@ Para o segundo parâmetro, você também pode passar:
   - Um campo de imagem ou variável
   - Uma string que contém um caminho para um arquivo de imagem armazenado no disco, na sintaxe do sistema.
     Se você usar uma string, você poderá passar um nome completo ou um nome de caminho relativo ao arquivo de estrutura do banco de dados. Você também pode passar um nome de arquivo, neste caso o arquivo deve estar localizado ao lado do arquivo de estrutura de banco de dados. Se você passar um nome de arquivo, você deve indicar a extensão do arquivo.
-- Em *pictureFileObj*: um objeto `File` que representa um arquivo imagem.
+- In *pictureFile* : a `File` object representing a picture file or a path.
 
-Qualquer formato imagem [suportado por 4D](../../FormEditor/pictures.md#native-formats-supported) pode ser usado. Você pode obter a lista de formatos de imagens disponíveis usando o comando [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md). Se a imagem encapsular vários formatos (codecs), 4D Write Pro apenas mantém um formato para exibição e um formato para impressão (se diferente) no documento; os "melhores" formatos são selecionados automaticamente.
+Qualquer formato imagem [suportado por 4D](../../FormEditor/pictures.md#native-formats-supported) pode ser usado. Você pode obter a lista de formatos de imagens disponíveis usando o comando [PICTURE CODEC LIST](../../commands/picture-codec-list). Se a imagem encapsular vários formatos (codecs), 4D Write Pro apenas mantém um formato para exibição e um formato para impressão (se diferente) no documento; os "melhores" formatos são selecionados automaticamente.
 
 No parâmetro *modo*, passe uma das seguintes constantes para indicar o modo de inserção a ser usado na imagem no documento:
 
@@ -110,4 +110,4 @@ $pictRef:=WP Insert picture(WParea; $file; wk replace)
 ## Veja também
 
 [WP Insert document body](wp-insert-document-body.md)</br>
-[WP Picture range](../commands-legacy/wp-picture-range.md)
+[WP Picture range](../commands/wp-picture-range)

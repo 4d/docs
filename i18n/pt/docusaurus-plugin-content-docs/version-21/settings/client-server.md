@@ -119,12 +119,12 @@ Essa opção permite que você ative o modo seguro para comunicações entre a m
 
 #### Atualizar a pasta Resources durante uma sessão
 
-This setting can be used to globally set the updating mode for the local instance of the **Resources** folder on the connected 4D machines when the **Resources** folder of the database is modified during the session (the **Resources** folder is automatically synchronized on the remote machine each time a session is opened). Estão disponíveis três parâmetros:
+Essa configuração pode ser usada para definir globalmente o modo de atualização da instância local da pasta **Resources** nas máquinas 4D conectadas quando a pasta **Resources** do banco de dados for modificada durante a sessão (a pasta **Resources** é sincronizada automaticamente na máquina remota sempre que uma sessão for aberta). Estão disponíveis três parâmetros:
 
 - **Nunca**: a pasta local **Resources** não é atualizada durante a sessão. A notificação enviada pelo servidor é ignorada. A pasta local **Resources** pode ser atualizada manualmente com o comando do menu de ação **Update Local Resources** (consulte [Usando o explorador de recursos](https://doc.4d.com/4Dv20/4D/20.2/Using-the-Resources-explorer.300-6750254.en.html)).
-- **Always**: The synchronization of the local **Resources** folder is automatically carried out during the session whenever notification is sent by the server.
-- **Ask**: When the notification is sent by the server, a dialog box is displayed on the client machines, indicating the modification. The user can then accept or refuse the synchronization of the local **Resources** folder.\
-  The **Resources** folder centralizes the custom files required for the database interface (translation files, pictures, etc.). Mecanismos automáticos ou manuais podem ser usados para notificar cada cliente quando o conteúdo dessa pasta tiver sido modificado. Para mais informações, por favor consulte a seção [Gerenciando da pasta Resources](https://doc.4d.com/4Dv20/4D/20/Managing-the-Resources-folder.300-6330534.en.html).
+- **Sempre**: a sincronização da pasta **Resources** local é realizada automaticamente durante a sessão sempre que a notificação é enviada pelo servidor.
+- **Perguntar**: quando a notificação for enviada pelo servidor, uma caixa de diálogo é exibida nas máquinas de cliente, indicando a modificação. O usuário pode então aceitar ou recusar a sincronização da pasta local **Resources**.\
+  A pasta **Resources** centraliza os arquivos personalizados necessários para a interface do banco de dados (arquivos de tradução, imagens, etc.). Mecanismos automáticos ou manuais podem ser usados para notificar cada cliente quando o conteúdo dessa pasta tiver sido modificado. Para mais informações, por favor consulte a seção [Gerenciando da pasta Resources](https://doc.4d.com/4Dv20/4D/20/Managing-the-Resources-folder.300-6330534.en.html).
 
 ## Página Configuração IP
 

@@ -250,7 +250,7 @@ You can create an object of type [entity selection](dsMapping.md#entity-selectio
 
 *	Querying the entities [in a dataclass](API/DataClassClass.md#query) or in an [existing entity selection](API/EntitySelectionClass.md#query);
 *	Using the [`.all()`](API/DataClassClass.md#all) dataclass function to select all the entities in a dataclass;
-*	Using the [`Create entity selection`](../commands/create-entity-selection.md) command or the [`.newSelection()`](API/DataClassClass.md#newselection) dataclass function to create a blank entity selection;
+*	Using the [`Create entity selection`](../commands/create-entity-selection) command or the [`.newSelection()`](API/DataClassClass.md#newselection) dataclass function to create a blank entity selection;
 *	Using the [`.copy()`](API/EntitySelectionClass.md#copy) function to duplicate an existing entity selection;
 *	Using one of the various functions from the [Entity selection class](API/EntitySelectionClass.md) that returns a new entity selection, such as [`.or()`](API/EntitySelectionClass.md#or);
 *	Using a relation attribute of type "related entities" (see below).
@@ -551,7 +551,7 @@ Filters do not apply to legacy selections of records handled through the 4D inte
 |[entitySelection.query()](../API/EntitySelectionClass.md#query)||
 |[entitySelection.attributeName](../API/EntitySelectionClass.md#attributename)|Filter applied if *attributeName* is a related entity or related entities of a filtered dataclass (including alias or computed attribute)|
 |[entity.attributeName](../API/EntityClass.md#attributename)|Filter applied if *attributeName* corresponds to related entities of a filtered dataclass (including alias or computed attribute)|
-|[Create entity selection](../commands/create-entity-selection.md)||
+|[Create entity selection](../commands/create-entity-selection)||
 
 
 Other ORDA functions accessing data do not directly trigger the filter, but they nevertheless benefit from it. For example, the [`entity.next()`](../API/EntityClass.md#next) function will return the next entity in the already-filtered entity selection. On the other hand, if the entity selection is not filtered, [`entity.next()`](../API/EntityClass.md#next) will work on non-filtered entities.
@@ -640,3 +640,4 @@ These principles are shown in the following diagram:
 
 *	Example with a lock set by a classic command:<br/><br/>![](../assets/en/ORDA/concurrent2.png)
 *	Example with a lock set by an ORDA function:<br/><br/>![](../assets/en/ORDA/concurrent3.png)
+

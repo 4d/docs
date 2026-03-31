@@ -93,6 +93,13 @@ HTTPAgent options will be merged with [HTTPRequest options](HTTPRequestClass.md#
 | validateTLSCertificate |Boolean| undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | validateTLSCertificate for the requests using the agent|
 
 :::note
+
+On macOS, when a new application (new [UUID](./FileClass.md#setappinfo)) requests access to the keychain for the first time, a password can be requested to the user, depending on the local keychain configuration.  
+
+:::
+
+
+:::note
  
 You can request multiple servers using the same agent. In that case, each server will have its own pool of connections using the same agent options.
 
@@ -106,8 +113,7 @@ Creating the HTTPAgent:
 var $options:={}
 $options.maxSockets:=5 //5 is the maximum number of sockets per server
 $options.maxTotalSockets:=10 //10 is the maximum number of sockets for the agent
-$opt
-ons.validateTLSCertificate:=True //To validate the server's certificate
+$options.validateTLSCertificate:=True //To validate the server's certificate
 
 var $myAgent:=4D.HTTPAgent.new($options)
 

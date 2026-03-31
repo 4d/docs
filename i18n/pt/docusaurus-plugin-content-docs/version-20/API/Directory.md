@@ -399,14 +399,16 @@ Essa propriedade é **apenas leitura**.
 
 
 <!-- REF #directory.copyTo().Params -->
-| Parâmetro         | Tipo       |    | Descrição                                              |
-| ----------------- | ---------- |:--:| ------------------------------------------------------ |
-| destinationFolder | 4D. Folder | -> | Pasta de destino                                       |
-| newName           | Text       | -> | Nome para a copia                                      |
-| overwrite         | Integer    | -> | `fk overwrite` para substituir os elementos existentes |
-| Resultados        | 4D. Folder | <- | Pasta ou arquivo copiado|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|destinationFolder |4D.Folder |->|Destination folder|
+|newName|Text|->|Name for the copy|
+|overwrite|Integer|->|`fk overwrite` to replace existing elements|
+|Result|4D.Folder|<-|Copied file or folder|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -454,12 +456,14 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 
 <!-- REF #directory.file().Params -->
-| Parâmetro  | Tipo     |    | Descrição                                                                |
-| ---------- | -------- | -- | ------------------------------------------------------------------------ |
-| path       | Text     | -> | Rota POSIX relativa                                                      |
-| Resultados | 4D. File | <- | Objeto `File` (null se a rota não for válida)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|----|---|---|
+|path|Text|->|Relative POSIX file pathname|
+|Result|4D.File|<-|`File` object (null if invalid path)|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -496,12 +500,14 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 
 <!-- REF #directory.files().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                      |
-| ---------- | ---------- | -- | -------------------------------------------------------------- |
-| options    | Integer    | -> | Opções da lista de arquivos                                    |
-| Resultados | Collection | <- | Coleção de objetos de arquivo filho|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|----|---|---|
+|options|Integer|->|File list options|
+|Result|Collection|<-|Collection of children file objects|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -561,12 +567,14 @@ Se quiser obter todos os arquivos que não são invisíveis na pasta Documents:
 
 
 <!-- REF #directory.folder().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                     |
-| ---------- | ---------- | -- | ----------------------------------------------------------------------------- |
-| path       | Text       | -> | Rota POSIX relativa                                                           |
-| Resultados | 4D. Folder | <- | Objeto pasta criado (null se *path*não for válido)|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|----|---|---|
+|path|Text|->|Relative POSIX file pathname|
+|Result|4D.Folder|<-|Created folder object (null if invalid *path*)|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -603,12 +611,14 @@ Um objeto `Folder` ou null se *path* não for válido.
 
 
 <!-- REF #directory.folders().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                    |
-| ---------- | ---------- | -- | ------------------------------------------------------------ |
-| options    | Integer    | -> | Opções da lista de pasta                                     |
-| Resultados | Collection | <- | Coleção de objetos de pasta filho|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|----|---|---|
+|options|Integer|->|Folder list options|
+|Result|Collection|<-|Collection of children folder objects|
+</div>
+<!-- END REF -->
 
 #### Descrição
 
@@ -652,12 +662,14 @@ Se quiser a coleção de todas as pastas e subpastas da pasta database:
 
 
 <!-- REF #directory.getIcon().Params -->
-| Parâmetro  | Tipo    |    | Descrição                                       |
-| ---------- | ------- | -- | ----------------------------------------------- |
-| size       | Integer | -> | Longitude de lado da imagem devolvida (píxeles) |
-| Resultados | Imagem  | <- | Ícone|<!-- END REF -->
+<div class="no-index">
 
-|
+|Parameter|Type||Description|
+|---|----|---|---|
+|size|Integer|->|Side length for the returned picture (pixels)|
+|Result|Picture|<-|Icon|
+</div>
+<!-- END REF -->
 
 #### Descrição
 

@@ -348,5 +348,11 @@ contents of the_category_.json files:
    - ../commands-legacy/truc.md -> ../commands/truc
 
 
+## Propager les traductions par IA dans VScode 
 
-
+1. Dans une branche un commit propre contenant les modifications EN à reporter
+2. Dans VSCode faire Ctrl+Shift+P (ou Terminal > Run task)
+3. Choisir :
+Translate commit (dry-run) — pour prévisualiser
+Translate commit (apply + commit) — pour appliquer et committer
+4. Coller le SHA du commit quand demandé

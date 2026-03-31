@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 *targetObj* コマンドは引数のページ数を返します。サブセクションを渡した場合、その親セクションのページ数が返されます。
 
-**WP Get page count** では、[WP PRINT](wp-print.md) コマンドと同じ表示設定が適用されます:
+**WP Get page count** では、[WP PRINT](../commands/wp-print) コマンドと同じ表示設定が適用されます:
 
 * ヘッダー: 表示
 * フッター: 表示
@@ -51,3 +51,4 @@ Items テーブルのカレントセレクション内で、"Manual" フィー�
  End while
  ALERT("マニュアルの総ページ数: "+String($totalCount))
 ```
+

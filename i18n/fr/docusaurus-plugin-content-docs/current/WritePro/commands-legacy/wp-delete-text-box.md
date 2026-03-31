@@ -40,4 +40,4 @@ Vous souhaitez supprimer une zone de texte en utilisant son ID :
 
 ## Voir aussi 
 
-[WP New text box](wp-new-text-box.md)  
+[WP New text box](../commands/wp-new-text-box)  

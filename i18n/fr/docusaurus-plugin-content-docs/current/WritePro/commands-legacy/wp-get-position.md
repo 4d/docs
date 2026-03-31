@@ -59,7 +59,7 @@ Si *presentation* est omis, la présentation 4D Write Pro (0) est utilisée par 
 
 **Notes sur les performances** 
 
-* Les mêmes paramétrages de présentation que pour la commande [WP PRINT](wp-print.md) sont utilisés avec **WP Get position** :  
+* Les mêmes paramétrages de présentation que pour la commande [WP PRINT](../commands/wp-print) sont utilisés avec **WP Get position** :  
    * en-têtes : visible  
    * pieds : visible  
    * expressions : calculées et affichées  
@@ -157,4 +157,4 @@ Les exemples suivants illustrent les coordonnées retournées du rectangle englo
 
 ## Voir aussi 
 
-[WP PRINT](wp-print.md)  
+[WP PRINT](../commands/wp-print)  

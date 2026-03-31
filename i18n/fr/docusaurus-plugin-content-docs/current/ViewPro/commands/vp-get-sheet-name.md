@@ -14,7 +14,7 @@ title: VP Get sheet name
 | Paramètres | Type    |                             | Description                             |
 | ---------- | ------- | --------------------------- | --------------------------------------- |
 | vpAreaName | Text    | ->                          | Nom d'objet formulaire zone 4D View Pro |
-| sheet      | Integer | ->                          | Numéro d'indice de la feuille           |
+| sheet      | Integer | ->                          | Indice de la feuille                    |
 | Résultat   | Text    | <- | Nom de la feuille                       |
 
 </div>

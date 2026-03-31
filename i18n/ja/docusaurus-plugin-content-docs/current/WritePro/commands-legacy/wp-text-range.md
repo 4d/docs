@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Text range.Summary-->**WP Text range**コマンドは*targetObj* 引数の4D Write Proエリア内から、*startRange* と*endRange* の間に含まれるセレクションを新しいレンジオブジェクトを返します。<!-- END REF-->
 
-**4D Write Pro レンジオブジェクト**を使用するとテキストのセレクションの属性を管理することができます(具体的には[WP GET ATTRIBUTES](../commands/wp-get-attributes.md) and [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) コマンドを使用します)。詳細な情報については、*セレクションレンジコマンド* の段落を参照してください。
+**4D Write Pro レンジオブジェクト**を使用するとテキストのセレクションの属性を管理することができます(具体的には[WP GET ATTRIBUTES](../commands/wp-get-attributes) and [WP SET ATTRIBUTES](../commands/wp-set-attributes) コマンドを使用します)。詳細な情報については、*セレクションレンジコマンド* の段落を参照してください。
 
 *targetObj* 引数には以下のものを渡すことができます:
 
@@ -67,11 +67,12 @@ displayed_sidebar: docs
 
 ## 参照 
 
-[WP Bookmark range](wp-bookmark-range.md)  
-[WP Get body](wp-get-body.md)  
-[WP Get header](wp-get-header.md)  
-[WP Paragraph range](wp-paragraph-range.md)  
-[WP Picture range](wp-picture-range.md)  
-[WP SELECT](wp-select.md)  
-[WP Selection range](wp-selection-range.md)  
-[WP Table range](wp-table-range.md)  
+[WP Bookmark range](../commands/wp-bookmark-range)  
+[WP Get body](../commands/wp-get-body)  
+[WP Get header](../commands/wp-get-header)  
+[WP Paragraph range](../commands/wp-paragraph-range)  
+[WP Picture range](../commands/wp-picture-range)  
+[WP SELECT](../commands/wp-select)  
+[WP Selection range](../commands/wp-selection-range)  
+[WP Table range](../commands/wp-table-range)  
+

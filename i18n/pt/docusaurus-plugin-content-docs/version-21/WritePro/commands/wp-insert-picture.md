@@ -8,6 +8,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert picture.Params-->
 
+<div class="no-index">
+
 | Parâmetro      | Tipo                     |                             | Descrição                                                                 |
 | -------------- | ------------------------ | --------------------------- | ------------------------------------------------------------------------- |
 | targetObj      | Object                   | &#8594; | Intervalo ou elemento ou documento 4D Write Pro                           |
@@ -17,6 +19,7 @@ displayed_sidebar: docs
 | rangeUpdate    | Integer                  | &#8594; | Modo de atualização de intervalo                                          |
 | Resultado      | Object                   | &#8592; | Objeto referenciando a imagem                                             |
 
+</div>
 <!-- END REF-->
 
 ## Descrição

@@ -5,6 +5,6 @@ sidebar_label: Subregistros
 slug: /commands/theme/Subrecords
 ---
 
-|                                                                                                         |
-| ------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #_command_.Get subrecord key.Syntax -->](../../commands-legacy/get-subrecord-key.md)<br/> |
+|                                                                                               |
+| --------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #_command_.Get subrecord key.Syntax -->](../../commands/get-subrecord-key)<br/> |

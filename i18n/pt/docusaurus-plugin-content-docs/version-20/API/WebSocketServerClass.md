@@ -111,11 +111,14 @@ Os objectos de servidor WebSocket fornecem as seguintes propriedades e funções
 
 
 <!-- REF #4D.WebSocketServer.new().Params -->
-| Parâmetro                           | Tipo               |    | Descrição                                                                                |
-| ----------------------------------- | ------------------ |:--:| ---------------------------------------------------------------------------------------- |
-| [WSSHandler](#wsshandler-parameter) | Object             | -> | Objecto da classe de utilizador que declara as chamadas de retorno do servidor WebSocket |
-| [options](#options-parameter)       | Object             | -> | Parâmetros de configuração do WebSocket                                                  |
-| Resultados                          | 4D.WebSocketServer | <- | Novo objeto WebSocketServer                                                              |
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|[WSSHandler](#wsshandler-parameter)|Object|->|Object of the user class declaring the WebSocket Server callbacks|
+|[options](#options-parameter)|Object|->|WebSocket configuration parameters|
+|Result|4D.WebSocketServer|<-|New WebSocketServer object|
+</div>
 <!-- END REF -->
 
 
@@ -391,9 +394,12 @@ Esta propriedade é só de leitura.
 
 
 <!-- REF #WebSocketServerClass.terminate().Params -->
-| Parâmetro | Tipo    |    | Descrição                                                          |
-| --------- | ------- |:--:| ------------------------------------------------------------------ |
-| timeout   | Integer | -> | Tempo de espera em segundos antes de terminar o servidor WebSocket |
+<div class="no-index">
+
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|timeout|Integer|->|Waiting time in seconds before terminating the WebSocket server|
+</div>
 <!-- END REF -->
 
 

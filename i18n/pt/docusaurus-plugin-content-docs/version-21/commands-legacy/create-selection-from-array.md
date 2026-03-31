@@ -33,7 +33,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE SELECTION FROM ARRAY.Summary-->O comando **CREATE SELECTION FROM ARRAY** cria a seleção selectionName<!-- END REF--> a partir de:
 
 * um array de números de registros absolutos *regArray* de *tabela*,
-* ou de um array de booleanos. Neste caso, os valores do array indicam a associação ([True](true.md "True")) ou não ([False](false.md "False")) de cada registro de *tabela* à seleção selectionName.
+* ou de um array de booleanos. Neste caso, os valores do array indicam a associação ([True](../commands/true)) ou não ([False](../commands/false)) de cada registro de *tabela* à seleção selectionName.
 
 **Cuidado:** Uma seleção nomeada é criada e carregada na memória. Portanto, tenha certeza de ter memória suficiente antes de executar o comando.
 
@@ -43,7 +43,7 @@ Quando você utiliza um array de inteiros longos com este comando, todos os núm
 
 **Nota:** atenção, deve ter certeza de que o array não contenha linhas que tenham o mesmo valor, do contrário a seleção resultante será incorreta.
 
-Quando usa um array booleano com este comando, o elemento X do array indica se o registro número X é ([True](true.md "True")) ou não ([False](false.md "False")) em selectionName. O número de elementos em *regArray* deve ser igual ao número de registros em *tabela*. Se o array é menor que o número de registros, só os registros definidos pelo array podem fazer parte da seleção.
+Quando usa um array booleano com este comando, o elemento X do array indica se o registro número X é ([True](../commands/true)) ou não ([False](../commands/false)) em selectionName. O número de elementos em *regArray* deve ser igual ao número de registros em *tabela*. Se o array é menor que o número de registros, só os registros definidos pelo array podem fazer parte da seleção.
 
 **Nota:** com um array de booleanos, o comando utiliza elementos do número 0 al X-1.
 

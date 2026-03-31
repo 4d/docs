@@ -4,7 +4,7 @@ title: WP Get attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Get attributes.Syntax-->**WP Get attributes** ( *targetObj* : Object ; *...(attribName* : Text {; *attribValue* : Variable }) ) : Object<br/>**WP Get attributes** ( *targetObj* : Object ; *attribColl* : Collection ) : Object<!-- END REF-->
+<!--REF #_command_.WP Get attributes.Syntax-->**WP Get attributes** ( *targetObj* : Object {; ...(*attribName* : Text {; *attribValue* : Variable })} ) : Object<br/>**WP Get attributes** ( *targetObj* : Object ; *attribColl* : Collection ) : Object<!-- END REF-->
 
 <!--REF #_command_.WP Get attributes.Params-->
 
@@ -69,5 +69,5 @@ Vous voulez obtenir la taille de la police, la couleurd 'arrière-plan et le sty
 ## Voir également
 
 [4D Write Pro Attributes](../4d-write-pro-attributes)  
-[WP RESET ATTRIBUTES](../commands/wp-reset-attributes.md)  
+[WP RESET ATTRIBUTES](../commands/wp-reset-attributes)  
 [WP SET ATTRIBUTES](wp-set-attributes.md)

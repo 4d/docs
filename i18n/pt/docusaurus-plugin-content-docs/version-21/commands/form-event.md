@@ -61,9 +61,9 @@ O objeto evento pode conter propriedades adicionais, dependendo do objeto para o
 Você deseja manipular o evento On Clicked em um botão:
 
 ```4d
- If(FORM Event.code=On Clicked)
-    ...
- End if
+ If(FORM Event.code=On Clicked)
+    ...
+ End if
 ```
 
 ## Exemplo 2
@@ -75,13 +75,13 @@ Se você definir o nome do objeto coluna com um nome de atributo real de uma dat
 Você pode classificar a coluna usando o evento On Header Click:
 
 ```4d
- Form.event:=FORM Event
- Case of
-    :(Form event code=On Header Click)
-       if(Form.event.columnName="lastname")
-          Form.employees:=Form.employees.orderBy(Form.event.columnName+", firstname")
-       End if
- End case
+ Form.event:=FORM Event
+ Case of
+    :(Form event code=On Header Click)
+       if(Form.event.columnName="lastname")
+          Form.employees:=Form.employees.orderBy(Form.event.columnName+", firstname")
+       End if
+ End case
 ```
 
 ## Exemplo 3
@@ -93,17 +93,17 @@ Você deseja tratar On Display Details em um objeto list box com um método defi
 O método *setColor*:
 
 ```4d
- var $event;$0;$meta : Object
- $event:=FORM Event
- $meta:=New object
- 
- Case of
-    :($event.code=On Display Detail)
-       If($event.isRowSelected)
-          $meta.fill:="lightblue"
-       End if
- End case
- $0:=$meta
+ var $event;$0;$meta : Object
+ $event:=FORM Event
+ $meta:=New object
+ 
+ Case of
+    :($event.code=On Display Detail)
+       If($event.isRowSelected)
+          $meta.fill:="lightblue"
+       End if
+ End case
+ $0:=$meta
 ```
 
 O list box resultante quando as linhas são selecionadas:

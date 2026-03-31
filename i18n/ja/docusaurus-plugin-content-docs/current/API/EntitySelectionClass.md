@@ -5,7 +5,7 @@ title: EntitySelection
 
 エンティティセレクションとは、同じ [データクラス](ORDA/dsMapping.md#データクラス) に所属する一つ以上の[エンティティ](ORDA/dsMapping.md#エンティティ) への参照を格納しているオブジェクトのことです。 エンティティセレクションは、データクラスから 0個、1個、あるいは X個のエンティティを格納することができます (X はデータクラスに格納されているエンティティの総数です)。
 
-エンティティセレクションは、[`.all()`](DataClassClass.md#all)、[`.query()`](DataClassClass.md#query) などの [`DataClass` クラス](DataClassClass.md) の関数や、[`.and()`](#and)、[`orderBy()`](#orderby) など `EntitySelection` クラス自身の関数を用いて、既存のセレクションから作成することができます。 また、[`dataClass.newSelection()`](DataClassClass.md#newselection) 関数または [`Create entity selection`](../commands/create-entity-selection.md) コマンドを使用して、空のエンティティセレクションを作成することもできます。
+エンティティセレクションは、[`.all()`](DataClassClass.md#all)、[`.query()`](DataClassClass.md#query) などの [`DataClass` クラス](DataClassClass.md) の関数や、[`.and()`](#and)、[`orderBy()`](#orderby) など `EntitySelection` クラス自身の関数を用いて、既存のセレクションから作成することができます。 また、[`dataClass.newSelection()`](DataClassClass.md#newselection) 関数または [`Create entity selection`](../commands/create-entity-selection) コマンドを使用して、空のエンティティセレクションを作成することもできます。
 
 ### 概要
 
@@ -49,7 +49,7 @@ title: EntitySelection
 
 #### 参照
 
-[`USE ENTITY SELECTION`](../commands/use-entity-selection.md)
+[`USE ENTITY SELECTION`](../commands/use-entity-selection)
 
 <!-- REF EntitySelectionClass.index.Desc -->
 
@@ -359,10 +359,10 @@ $sellist2:=$sellist2.add($sellist1)
 
 <div class="no-index">
 
-| 引数    | 型                         |                             | 説明                       |
-| ----- | ------------------------- | :-------------------------: | ------------------------ |
-| index | Integer                   |              ->             | 取得するエンティティのインデックス        |
-| 戻り値   | 4D.Entity | <- | The entity at that index |
+| 引数    | 型                         |                             | 説明                |
+| ----- | ------------------------- | :-------------------------: | ----------------- |
+| index | Integer                   |              ->             | 取得するエンティティのインデックス |
+| 戻り値   | 4D.Entity | <- | そのインデックスにあるエンティティ |
 
 </div>
 <!-- END REF -->
@@ -783,10 +783,10 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 
 <div class="no-index">
 
-| 引数  | 型          |                             | 説明                                 |
-| --- | ---------- | :-------------------------: | ---------------------------------- |
-| 属性  | Text       |              ->             | 取得したいパスを持つオブジェクト属性名                |
-| 戻り値 | Collection | <- | New collection with distinct paths |
+| 引数  | 型          |                             | 説明                   |
+| --- | ---------- | :-------------------------: | -------------------- |
+| 属性  | Text       |              ->             | 取得したいパスを持つオブジェクト属性名  |
+| 戻り値 | Collection | <- | 重複しないパスを格納した新規コレクション |
 
 </div>
 <!-- END REF -->
@@ -1373,7 +1373,7 @@ Form.products.add(Form.product)
 
 `.max()` 関数は、<!-- REF #EntitySelectionClass.max().Summary -->*attributePath* に指定したエンティティセレクションの属性値のうち最高の (あるいは最大の) 値を返します<!-- END REF -->。 実際には、[`.orderBy()`](#orderby) 関数を使用してエンティティセレクションを昇順に並べ替えたときの最後のエンティティを返します。
 
-*attributePath* に、異なる型の値を格納しているオブジェクトプロパティを渡した場合、`.max()` メソッドは型のリスト順の中で最初のスカラー型の値の中の最大値を返します ([`.sort()`](CollectionClass.md#sort) の詳細を参照ください)。
+*attributePath* に異なる[値の型](../Concepts/data-types.md) へのオブジェクトプロパティへのパスを渡した場合、`.max()` 関数は、[4D 並べ替えの原則](../Concepts/ordering.md) に準じた最初のスカラー型の中での最大値を返します。
 
 エンティティセレクションが空の場合、または *attributePath* 引数がオブジェクト属性内に見つからない場合には、`.max()` は **undefined** を返します。
 
@@ -1426,7 +1426,7 @@ Form.products.add(Form.product)
 
 `.min()` 関数は、<!-- REF #EntitySelectionClass.min().Summary -->*attributePath* に指定したエンティティセレクションの属性値のうち最低の (あるいは最小の) 値を返します<!-- END REF -->。  実際には、[`.orderBy()`](#orderby) 関数を使用してエンティティセレクションを昇順に並べ替えたときの最初のエンティティを返します (**null**値は除く)。
 
-*attributePath* に、異なる型の値を格納しているオブジェクトプロパティを渡した場合、`.min()` メソッドは型のリスト順の中で最初のスカラー型の値の中の最小値を返します([`.sort()`](CollectionClass.md#sort) の詳細を参照してください)。
+*attributePath* に異なる[値の型](../Concepts/data-types.md) へのオブジェクトプロパティへのパスを渡した場合、`.min()` 関数は、[4D 並べ替えの原則](../Concepts/ordering.md) に準じた最初のスカラー型の中での最小値を返します。
 
 エンティティセレクションが空の場合、または *attributePath* 引数がオブジェクト属性内に見つからない場合には、`.min()` は **undefined** を返します。
 
@@ -1656,7 +1656,7 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 
 pathObjects コレクションには必要な数だけオブジェクトを追加することができます。
 
-> Null は他の値より小さいと評価されます。
+エンティティセレクションの属性に異なる[型](../Concepts/data-types.md) が格納されている場合、それらは[4D ordering principles](../Concepts/ordering.md) に準じて並べ替えられます。
 
 *pathString* または *pathObject* に無効な属性パスを渡すと、この関数は空のエンティティセレクションを返します。
 
@@ -1833,7 +1833,7 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 | ------------- | ---------------------------------- | :-------------------------: | ---------------------------------------------------------------------------------------------------- |
 | queryString   | Text                               |              ->             | 検索条件 (文字列)                                                                        |
 | formula       | Object                             |              ->             | 検索条件 (フォーミュラオブジェクト)                                                               |
-| value         | any                                |              ->             | プレースホルダー用の値                                                                                          |
+| value         | any                                |              ->             | 定数値 (プレースホルダーを使用しない)                                                              |
 | querySettings | Object                             |              ->             | クエリオプション: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan |
 | 戻り値           | 4D.EntitySelection | <- | *queryString* または *formula* に渡した検索条件に合致する、エンティティセレクション内のエンティティから構成された新しいエンティティセレクション\*               |
 
@@ -2729,3 +2729,4 @@ $employeesCollection:=$employees.toCollection("firstName, lastName, directReport
 ```
 
 <!-- END REF -->
+

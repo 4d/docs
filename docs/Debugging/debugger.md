@@ -18,7 +18,7 @@ If you are used to coding with **VS Code**, you can also use this editor to debu
 There are multiple ways to get the Debugger to display:
 
 * Clicking the **Trace** button in the [Syntax Error window](basics.md#syntax-error-window)
-* Using the [`TRACE`](../commands-legacy/trace.md) command
+* Using the [`TRACE`](../commands/trace) command
 * Clicking the **Debug** button in the Execute Method window or selecting **Run and debug...** button in the Code Editor
 * Using **Alt+Shift+Right click** (Windows) or **Ctrl+Option+Cmd+Click** (macOS) while a method is executing, then selecting the process to trace in the pop-up menu:
 
@@ -298,7 +298,7 @@ To display the parameter type, check the **Show types** option in the contextual
 
 After you deploy the list of parameters, you can drag and drop parameters and function results to the [Custom Watch Pane](#custom-watch-pane).
 
-You can also use the [Call chain](../commands/call-chain.md) command to retrieve the call chain programmatically.
+You can also use the [Call chain](../commands/call-chain) command to retrieve the call chain programmatically.
 
 ## Custom Watch Pane
 
@@ -315,7 +315,7 @@ The Custom Watch Pane is useful for evaluating expressions. It is similar to the
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
 
-You can evaluate any expression that can be shown in text form. This does not cover picture and BLOB fields or variables. To display BLOB contents, you can use BLOB commands, such as [BLOB to text](../commands-legacy/blob-to-text.md).
+You can evaluate any expression that can be shown in text form. This does not cover picture and BLOB fields or variables. To display BLOB contents, you can use BLOB commands, such as [BLOB to text](../commands/blob-to-text).
 
 ### Display mode
 
@@ -509,3 +509,4 @@ This section lists all the shortcuts available in the debugger window.
 * When no item is selected in any pane, press **Enter** to step over.
 * When an item value is selected, use the arrows keys to navigate through the list.
 * When editing an item, use the arrow keys to move the cursor. Use Ctrl-A/X/C/V (Windows) or Command-A/X/C/V (macOS) as shortcuts to the Select All/Cut/Copy/Paste menu commands of the Edit menu.
+

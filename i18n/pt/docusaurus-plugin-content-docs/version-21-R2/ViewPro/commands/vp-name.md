@@ -9,12 +9,17 @@ title: VP Name
 
 <!-- REF #_method_.VP Name.Params -->
 
-| Parâmetro  | Tipo    |                             | Descrição                                                            |                  |
-| ---------- | ------- | --------------------------- | -------------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | ->                          | Nome de objeto formulário área 4D View Pro                           |                  |
-| rangeName  | Text    | ->                          | Nome do intervalo existente                                          |                  |
-| sheet      | Integer | ->                          | Localização do intervalo (folha atual se omitida) |                  |
-| Resultados | Object  | <- | Objeto intervalo de nome                                             | <!-- END REF --> |
+<div class="no-index">
+
+| Parâmetro  | Tipo    |                             | Descrição                                                            |
+| ---------- | ------- | --------------------------- | -------------------------------------------------------------------- |
+| vpAreaName | Text    | ->                          | Nome de objeto formulário área 4D View Pro                           |
+| rangeName  | Text    | ->                          | Nome do intervalo existente                                          |
+| sheet      | Integer | ->                          | Localização do intervalo (folha atual se omitida) |
+| Resultados | Object  | <- | Objeto intervalo de nome                                             |
+
+</div>
+<!-- END REF -->
 
 ## Descrição
 

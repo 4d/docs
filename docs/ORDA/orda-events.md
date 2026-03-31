@@ -60,7 +60,7 @@ ORDA [`constructor()`](./ordaClasses.md#class-constructor) functions are always 
 
 :::
 
-With other remote configurations (i.e. [Qodly applications](https://developer.4d.com/qodly), [REST API requests](../REST/REST_requests.md), or requests through [`Open datastore`](../commands/open-datastore.md)), the `touched()` event function is always executed **server-side**. It means that you have to make sure the server can "see" that an attribute has been touched to trigger the event (see below). 
+With other remote configurations (i.e. [Qodly applications](https://developer.4d.com/qodly), [REST API requests](../REST/REST_requests.md), or requests through [`Open datastore`](../commands/open-datastore)), the `touched()` event function is always executed **server-side**. It means that you have to make sure the server can "see" that an attribute has been touched to trigger the event (see below). 
 
 
 ### Summary table
@@ -119,8 +119,8 @@ When an error occurs in an event, the other events are stopped at the first rais
 
 |Property|Type|Description|Set by the developer|
 |---|---|----|----|
-|errCode|Integer|Same as for [`Last errors`](../commands/last-errors.md) command|Yes|
-|message|Text|Same as for [`Last errors`](../commands/last-errors.md) command|Yes|
+|errCode|Integer|Same as for [`Last errors`](../commands/last-errors) command|Yes|
+|message|Text|Same as for [`Last errors`](../commands/last-errors) command|Yes|
 |extraDescription|Object|Free information to set up|Yes|
 |seriousError|Boolean|Used only with validate events (see below). <li>`True`: creates a [serious (unpredictable) error](../Concepts/error-handling.md#predictable-vs-unpredictable-errors) and triggers an exception. Adds the `dk status serious validation error` status</li><li>`False`: creates only a [silent (predictable) error](../Concepts/error-handling.md#predictable-vs-unpredictable-errors). Adds the `dk status validation failed` status</li>|Yes (default is false)|
 |componentSignature|Text|Always "DBEV"|No|
@@ -128,7 +128,7 @@ When an error occurs in an event, the other events are stopped at the first rais
 - [Serious errors](../Concepts/error-handling.md#predictable-vs-unpredictable-errors) are stacked in the `errors` collection property of the **Result object** returned by the [`save()`](../API/EntityClass.md#save) or [`drop()`](../API/EntityClass.md#drop) functions.
 - In case of an error triggered by a **validate** event, the `seriousError` property allows you to choose the level of the error to generate:
     - If **true**: a serious error is thrown and should be handled by the [error processing code](../Concepts/error-handling.md#predictable-vs-unpredictable-errors), such as a [try catch](../Concepts/error-handling.md#trycatchend-try). In the result object of the calling function, `status` gets `dk status serious validation error` and `statusText` gets "Serious Validation Error". The error is raised at the end of the event and reach the client requesting the save/drop action (REST client for example).
-    - If **false** (default): a [silent (predictable) error is generated](../Concepts/error-handling.md#predictable-vs-unpredictable-errors). It does not trigger any exception and is not stacked in the errors returned by the [`Last errors`](../commands/last-errors.md) command. In the result object of the calling function, `status` gets `dk status validation failed` and `statusText` gets "Mild Validation Error".
+    - If **false** (default): a [silent (predictable) error is generated](../Concepts/error-handling.md#predictable-vs-unpredictable-errors). It does not trigger any exception and is not stacked in the errors returned by the [`Last errors`](../commands/last-errors) command. In the result object of the calling function, `status` gets `dk status validation failed` and `statusText` gets "Mild Validation Error".
 - In case of an error triggered by a **saving/dropping** event, when an error object is returned, the error is always raised as a serious error whatever the `seriousError` property value.
 
 
@@ -158,8 +158,8 @@ This event is triggered as soon as the 4D Server / 4D engine can detect a modifi
 - in **client/server with the [`local` keyword](../ORDA/ordaClasses.md#local-functions)** or in **4D single-user**:
     - the user sets a value on a 4D form,
     - the 4D code makes an assignment with the `:=` operator. The event is also triggered in case of self-assignment (`$entity.attribute:=$entity.attribute`).
-- in **client/server without the `local` keyword**: some 4D code that makes an assignment with the `:=` operator is [executed on the server](../commands-legacy/execute-on-server.md).
-- in **client/server without the `local` keyword**, in **[Qodly application](https://developer.4d.com/qodly)** and **[remote datastore](../commands/open-datastore.md)**: the entity is received on 4D Server while calling an ORDA function (on the entity or with the entity as parameter). It means that you might have to implement a *refresh* or *preview* function on the remote application that sends an ORDA request to the server and triggers the event.
+- in **client/server without the `local` keyword**: some 4D code that makes an assignment with the `:=` operator is [executed on the server](../commands/execute-on-server).
+- in **client/server without the `local` keyword**, in **[Qodly application](https://developer.4d.com/qodly)** and **[remote datastore](../commands/open-datastore)**: the entity is received on 4D Server while calling an ORDA function (on the entity or with the entity as parameter). It means that you might have to implement a *refresh* or *preview* function on the remote application that sends an ORDA request to the server and triggers the event.
 - with the REST server: the value is received on the REST server with a [REST request](../REST/$method.md#methodupdate) (`$method=update`)
 
 
@@ -668,4 +668,5 @@ If (($event.status.success=False) && ($event.status.errors=Null))
 End if 
 
 ```
+
 

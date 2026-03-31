@@ -9,11 +9,16 @@ title: VP SET SHOW PRINT LINES
 
 <!-- REF #_method_.VP SET SHOW PRINT LINES.Params -->
 
-| 引数         | 型       |    | 説明                                                        |                  |
-| ---------- | ------- | -- | --------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                                   |                  |
-| visible    | Boolean | -> | 印刷線を表示する場合は true (デフォルト)、非表示の場合は false |                  |
-| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)            | <!-- END REF --> |
+<div class="no-index">
+
+| 引数         | 型       |    | 説明                                                        |
+| ---------- | ------- | -- | --------------------------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                                   |
+| visible    | Boolean | -> | 印刷線を表示する場合は true (デフォルト)、非表示の場合は false |
+| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)            |
+
+</div>
+<!-- END REF -->
 
 ## 説明
 

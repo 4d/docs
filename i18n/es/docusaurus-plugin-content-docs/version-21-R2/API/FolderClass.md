@@ -89,10 +89,13 @@ La función `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->crea y devuel
 
 <!--REF #FolderClass.create().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo    |                             | Descripción                                                        |
 | ---------- | ------- | --------------------------- | ------------------------------------------------------------------ |
 | Resultado  | Boolean | <- | True si la carpeta se ha creado con éxito, false en caso contrario |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -146,6 +149,8 @@ End if
 
 <!--REF #FolderClass.createAlias().Params -->
 
+<div class="no-index">
+
 | Parámetros        | Tipo                      |                             | Descripción                                          |
 | ----------------- | ------------------------- | --------------------------- | ---------------------------------------------------- |
 | destinationFolder | 4D.Folder | ->                          | Carpeta de destino para el alias o el acceso directo |
@@ -153,6 +158,7 @@ End if
 | aliasType         | Integer                   | ->                          | Tipo de enlace del alias                             |
 | Resultado         | 4D.File   | <- | Referencia de alias o de acceso directo              |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -205,10 +211,13 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 <!-- REF #FolderClass.delete().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo    |    | Descripción                      |
 | ---------- | ------- | -- | -------------------------------- |
 | option     | Integer | -> | Opción de eliminación de carpeta |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -283,12 +292,15 @@ Cuando se pasa `Delete with contents`:
 
 <!--REF #FolderClass.moveTo().Params -->
 
+<div class="no-index">
+
 | Parámetros        | Tipo                      |                             | Descripción                              |
 | ----------------- | ------------------------- | --------------------------- | ---------------------------------------- |
 | destinationFolder | 4D.Folder | ->                          | Carpeta de destino                       |
 | newName           | Text                      | ->                          | Nombre completo de la carpeta trasladada |
 | Resultado         | 4D.Folder | <- | Carpeta movida                           |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -342,11 +354,14 @@ Quiere mover y renombrar una carpeta:
 
 <!--REF #FolderClass.rename().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo                      |                             | Descripción                           |
 | ---------- | ------------------------- | --------------------------- | ------------------------------------- |
 | newName    | Text                      | ->                          | Nuevo nombre completo para la carpeta |
 | Resultado  | 4D.Folder | <- | Carpeta renombrada                    |
 
+</div>
 <!-- END REF -->
 
 #### Descripción

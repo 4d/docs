@@ -14,14 +14,14 @@ slug: /WritePro/tables
 
 ## Creating a table 
 
-4D Write Pro tables are created by calling the [WP Insert table](./commands/wp-insert-table) command. You can then add rows by using the [WP Table append row](./commands/wp-table-append-row) command.
+4D Write Pro tables are created by calling the [WP Insert table](../commands/wp-insert-table) command. You can then add rows by using the [WP Table append row](../commands/wp-table-append-row) command.
 
 **Note:** A user can create a table by copying and pasting a range of cells:   
 ![](../../assets/en/WritePro/pict3307941.en.png)
 
 ## Editing tables 
 
-Cell contents can be added by programming using the [WP Table append row](./commands/wp-table-append-row) command.
+Cell contents can be added by programming using the [WP Table append row](../commands/wp-table-append-row) command.
 
 Once a table is created, cell contents can also be edited at runtime by users. They can click into cells and select, edit, copy/paste, or delete text or pictures just like in regular paragraphs. They can navigate through cells using the **Tab** key (**Shift+Tab** to navigate in opposite direction).
 
@@ -33,13 +33,13 @@ Note that cell width is fixed: when a user enters text or pastes a picture, the 
 
 Users can also select columns, rows, or cells and apply available attributes regarding text style, colors, alignment, etc. using the built-in pop up menu or any customized interface. 4D Write Pro provides several commands to select any parts of a table:
 
-* [WP Table get rows](./commands/wp-table-get-rows) to get a row range (or header row range)
-* [WP Table get columns](./commands/wp-table-get-columns) to get a column range(\*)
-* [WP Table get cells](./commands/wp-table-get-cells) to get a cell range
+* [WP Table get rows](../commands/wp-table-get-rows) to get a row range (or header row range)
+* [WP Table get columns](../commands/wp-table-get-columns) to get a column range(\*)
+* [WP Table get cells](../commands/wp-table-get-cells) to get a cell range
 
 (\*) Columns do not have equivalent in html. In 4D Write Pro, a column range is actually a range of cells, which means that columns have the same priority as cells.
 
-Once you have selected a range, you can apply any appropriate attribute using the [WP SET ATTRIBUTES](./commands/wp-set-attributes) command. Within cells, attributes are applied to paragraphs, characters, or pictures, depending on their contents. For example, you can set the height, font size, border, padding, etc. of tables or table cells (for more information, please refer to the [4D Write Pro Attributes](../4d-write-pro-attributes) section).
+Once you have selected a range, you can apply any appropriate attribute using the [WP SET ATTRIBUTES](../commands/wp-set-attributes) command. Within cells, attributes are applied to paragraphs, characters, or pictures, depending on their contents. For example, you can set the height, font size, border, padding, etc. of tables or table cells (for more information, please refer to the [4D Write Pro Attributes](../4d-write-pro-attributes) section).
 
 When different attributes are applied to concurrent elements of a table, a priority order is applied for the rendering:
 
@@ -67,7 +67,7 @@ If you press the **Shift** key while resizing a column, the size of the adjacent
 
 ### Merging and splitting cells 
 
-With 4D Write Pro, you can split and merge cells in a table. Merging cells is combining two or more adjacent table cells located in the same row or column into a single cell. Splitting cells is taking already merged cells and separating them into multiple adjacent cells in the same row or column. Cells can be merged using the command [WP TABLE MERGE CELLS](./commands/wp-table-merge-cells) or the standard action **cell/merge,** and splitted using the command [WP TABLE SPLIT CELLS](./commands/wp-table-split-cells) or the standard action **cell/split**.
+With 4D Write Pro, you can split and merge cells in a table. Merging cells is combining two or more adjacent table cells located in the same row or column into a single cell. Splitting cells is taking already merged cells and separating them into multiple adjacent cells in the same row or column. Cells can be merged using the command [WP TABLE MERGE CELLS](../commands/wp-table-merge-cells) or the standard action **cell/merge,** and splitted using the command [WP TABLE SPLIT CELLS](../commands/wp-table-split-cells) or the standard action **cell/split**.
 
 ![](../../assets/en/WritePro/pict6421031.en.png)
 
@@ -78,7 +78,7 @@ The table cells can be merged:
 **Example of cell merging using the language:**
 
 1. Designate a range of cells to merge in your table, the cells have to be either adjacent horizontally or vertically, or both.
-2. Call the command [WP TABLE MERGE CELLS](./commands/wp-table-merge-cells) on the selected range .
+2. Call the command [WP TABLE MERGE CELLS](../commands/wp-table-merge-cells) on the selected range .
 
 ```4d
  $cells:=WP Table get cells($table;1;1;3;1)
@@ -98,7 +98,7 @@ after
 **Example of cell splitting using the language:**
 
 1. Designate a range of cells to be splitted in your table, the selected range has to contain some already merged cells.
-2. Call the command [WP TABLE SPLIT CELLS](./commands/wp-table-split-cells) on the selected range.
+2. Call the command [WP TABLE SPLIT CELLS](../commands/wp-table-split-cells) on the selected range.
 
 ```4d
  $cells:=WP Table get cells($table;1;1;1;1)
@@ -122,7 +122,7 @@ after
 
 **Designating merged cells:** 
 
-A merged cell can be manipulated the same as a single cell (background color, border style, paragraph styles..) using the 4D Write Pro interface, the standard actions or the command [WP SET ATTRIBUTES](./commands/wp-set-attributes) .
+A merged cell can be manipulated the same as a single cell (background color, border style, paragraph styles..) using the 4D Write Pro interface, the standard actions or the command [WP SET ATTRIBUTES](../commands/wp-set-attributes) .
 
 All the existing table commands are applicable to ranges or elements containing merged cells. In a table that contains merged cells, the indexes of the cells remain as if no cell has been merged. 
 
@@ -172,11 +172,11 @@ Tables can split between rows, and rows can split too. The table pagination is d
 Table pagination can also be controlled by programming or by the user. Available actions include:
 
 * inserting a page break in a table:  
-   * [WP INSERT BREAK](./commands/wp-insert-break) command  
+   * [WP INSERT BREAK](../commands/wp-insert-break) command  
    * *insertPageBreak* standard action  
    * **Insert page break** option of the default contextual menu
 * inserting a column break in a table:  
-   * [WP INSERT BREAK](./commands/wp-insert-break) command  
+   * [WP INSERT BREAK](../commands/wp-insert-break) command  
    * *insertColumnBreak* standard action  
    * **Insert column break** option of the default contextual menu
 
@@ -190,7 +190,7 @@ When a page break or a column break is inserted through a standard action or the
 * Tables cannot be broken in different sections. Inserting a section break in a table will move the whole table to the new section.
 * Breaks inside rows are not allowed when *Carry-over rows* are enabled.
 
-## Repeated headers 
+### Repeated headers 
 
 4D Write Pro allows you to define up to five header rows per table. Selected header rows will be repeated on every column or page when a column break or a page break occurs. 
 
@@ -199,32 +199,48 @@ When a page break or a column break is inserted through a standard action or the
 Table headers are the first row(s) of the table. To define header rows, you can:
 
 * use the *headerRowCount* standard action (see *Using 4D Write Pro standard actions*), or
-* use the [WP SET ATTRIBUTES](./commands/wp-set-attributes) with wk header row count (on a table, see *Tables*), or wk header (on a row, see *Rows and columns*).
+* use the [WP SET ATTRIBUTES](../commands/wp-set-attributes) with wk header row count (on a table, see *Tables*), or wk header (on a row, see *Rows and columns*).
 
 If you designate more than five rows as header (or if it results from an insertion of rows in an existing header), 4D Write Pro only uses the first five rows as header. If you remove row(s) defined in the header, the number of header rows is decreased. 
 
 ## Table datasource 
 
-You can assign a formula object as a datasource for a table and access the resulting value(s) from within the table using *Expressions with This* (see below). The datasource formula is processed by 4D Write Pro when formulas are computed (e.g. when the document is opened, when the [WP COMPUTE FORMULAS](./commands/wp-compute-formulas) command is called, etc.). This feature takes advantage of data contexts (see [WP SET DATA CONTEXT](./commands/wp-set-data-context)). 
+You can assign a [formula object](../../API/FormulaClass.md) as a **datasource** for a table and access the resulting value(s) from within the table using specific [expressions with `This`](#table-formula-object). The datasource formula is processed by 4D Write Pro each time [formulas are evaluated](../managing-formulas.md#formula-evaluation) (e.g. when the document is opened, when the [WP COMPUTE FORMULAS](./commands/wp-compute-formulas) command is called, etc.). 
 
-To assign a datasource to a table, use the [WP SET ATTRIBUTES](./commands/wp-set-attributes) command with the wk datasource and a *4D formula* object as value. For example, to fill a table with a row for every person living in France:
+### Assigning a datasource
+
+To assign a datasource to a table, use the [WP SET ATTRIBUTES](./commands/wp-set-attributes) command with the `wk datasource` constant as attribute and the datasource object as value. The datasource object can be:
+
+- a [**4D formula**](../../API/FormulaClass.md). For example, to fill a table with a row for every person living in France:
 
 ```4d
- $formula:=Formula(ds.people.query("country = :1";"France"))
+ var $formula:=Formula(ds.people.query("country = :1";"France"))
  WP SET ATTRIBUTES($table;wk datasource;$formula)
 ```
 
-* If the datasource formula object returns a (non empty) collection or entity selection, the table is automatically filled when the formula is computed: it contains at least as many rows as there are elements in the collection or entities in the entity selection. The first table row, called the data row, is used as a template row (excluding header row(s) and the possible break row(s)).
-* In the data row (and break row(s)), you can insert expressions that use special keywords such as *This.item.lastname*. Expressions are replaced during processing by data from the collection or entity selection. The data row will be duplicated so that the number of item rows is equal to the number of items in the collection or entity selection after formulas are computed.
-* If the datasource formula does not return a collection or a an entity selection, or if it returns an empty collection/entity selection, the table rows are not created automatically and all rows are treated as regular rows. You can define a placeholder row to be displayed in case of empty datasource.
+- a **data context**, defined using the [WP SET DATA CONTEXT](./commands/wp-set-data-context) command for the whole document. A data context can be assigned to a table through the `This.data` object. For example, to fill a table with an [entity selection](../../API/EntitySelectionClass.md) from orders:
 
-To remove a datasource from a table, use the [WP RESET ATTRIBUTES](./commands/wp-reset-attributes) command. It will set the datasource attribute value to *null*:
+```4d
+var $context:={}
+$context.orders:=ds.Order.query("customerID=:1"; $customer.ID)
+var $doc:=WP New($template)
+WP SET DATA CONTEXT($doc; $context)
+WP SET ATTRIBUTES($table;wk datasource;This.data.orders)
+```
+
+If the datasource formula object returns a (non empty) collection or entity selection, the table is automatically filled when the formula is computed: it contains at least as many rows as there are elements in the collection or entities in the entity selection. The first table row, called the data row, is used as a template row (excluding header row(s) and the possible break row(s)).
+
+In the data row (and break row(s)), you can insert expressions that use [special keywords](#table-formula-object) such as `This.item.lastname`. Expressions are replaced during processing by data from the collection or entity selection. The data row will be duplicated so that the number of item rows is equal to the number of items in the collection or entity selection after formulas are computed.
+
+If the datasource formula does not return a collection or a an entity selection, or if it returns an empty collection/entity selection, the table rows are not created automatically and all rows are treated as regular rows. You can define a placeholder row to be displayed in case of empty datasource.
+
+To remove a datasource from a table, use the [WP RESET ATTRIBUTES](../commands/wp-reset-attributes) command. It will set the datasource attribute value to *null*:
 
 ```4d
  WP RESET ATTRIBUTES($table;wk datasource)
 ```
 
-### Building a table with datasource 
+### Row definition
 
 A table design based upon a datasource can contain the following rows:
 
@@ -270,19 +286,19 @@ To create carry-over rows:
 1. In the table template, add a row just after the data row or the break row(s) and insert any necessary formulas inside, using for example **This.previousItems**.
 2. Enable the carry-over row feature for your document. You can:  
 \- use the *bottomCarryOverRow* standard action (see *Using 4D Write Pro standard actions*), or  
-\- use the [WP SET ATTRIBUTES](./commands/wp-set-attributes) command with the wk bottom carry over row *Tables* attribute selector.
+\- use the [WP SET ATTRIBUTES](../commands/wp-set-attributes) command with the wk bottom carry over row *Tables* attribute selector.
 
 **Note:** Page breaks inside rows are not allowed when the carry-over row feature is enabled (see *Table pagination*). Corresponding options, if set, are ignored.
 
 ### Break rows 
 
-Tables based on datasources support one or several **Sort Break Rows** that can be displayed either before or after the data row. S**ort Break Rows** help you to visually divide your already sorted datasource items in your table into different parts based on a computed formula value.
+Tables based on datasources support one or several **Sort Break Rows** that can be displayed either before or after the data row. **Sort Break Rows** help you to visually divide your already sorted datasource items in your table into different parts based on a computed formula value.
 
 ![](../../assets/en/WritePro/pict6236360.en.png)
 
-Each time the formula value changes, a new break row is inserted. Therefore, for tables to be rendered correctly, the entity selection (or collection) used as table datasource **must be sorted accordingly**. For example, if breaks by countries and cities are wanted, then the datasource must be sorted as follows: *ds.people.all().orderBy("country asc, city asc")*
+Each time the formula value changes, a new break row is inserted. Therefore, for tables to be rendered correctly, the entity selection (or collection) used as table datasource **must be sorted accordingly**. For example, if breaks by countries and cities are wanted, then the datasource must be sorted as follows: `ds.people.all().orderBy("country asc, city asc")`
 
-The break value is defined through the *wk break formula* attribute. Value is usually a formula based on an item property like "This.item.name'', otherwise the computed value may never change which makes the break formula useless. The *wk break formula* attribute is ignored if the table has no datasource or if the row is a header. A break row must be adjacent to the data row (either before or after), or to another break row, otherwise it is ignored.
+The break value is defined through the `wk break formula` attribute. Value is usually a formula based on an item property like "This.item.name'', otherwise the computed value may never change which makes the break formula useless. The *wk break formula* attribute is ignored if the table has no datasource or if the row is a header. A break row must be adjacent to the data row (either before or after), or to another break row, otherwise it is ignored.
 
 ```4d
  WP SET ATTRIBUTES($row_2;wk break formula;Formula(This.item.country))
@@ -292,7 +308,7 @@ Thanks to the **This.breakItems** expression you can use this feature, for examp
 
 To create break rows:
 
-1. Order the datasource with the levels corresponding to the breaks you want to display, for example, *ds.People.all().orderBy("continent asc, country asc, city asc")*
+1. Order the datasource with the levels corresponding to the breaks you want to display, for example, `ds.People.all().orderBy("continent asc, country asc, city asc")`
 2. Draw the break row(s) in the table template. If the breaks are located after the data row, they must match the **opposite sort order** as the datasource, and if they are located before the data row, they must match **the same sort order** as the datasource.
 3. Set the attribute *wk break formula* to the selected row(s):
 
@@ -301,25 +317,25 @@ To create break rows:
  WP SET ATTRIBUTES($row_2;wk break formula;Formula(This.item.country))
 ```
 
-### Expressions with This 
+### Table formula object
 
-When used in a formula within the table, the **This** keyword gives access to different data according to the context:
+When used in a formula within the table, the [`This`](../../commands/this) keyword gives access to additional [expressions](../managing-formulas.md#formula-context-object), according to the context:
 
-| **Context**                                                                                         | **Expression**                           | **Type**                                                                         | **Returns**                                                                                                                                                                                                                                                                                                                                                                 |
-| --------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Anywhere                                                                                            | This.table                               | Object                                                                           | Current table                                                                                                                                                                                                                                                                                                                                                               |
-| |  This.row                                                                                         | Object                                   | Current table row element                                                        |                                                                                                                                                                                                                                                                                                                                                                             |
-| |  This.rowIndex                                                                                    | Number                                   | Index of the current row, starting from 1                                        |                                                                                                                                                                                                                                                                                                                                                                             |
-| When a datasource has been defined for the table                                                    | This.table.dataSource                    | Object (formula)                                                                 | Datasource as a formula                                                                                                                                                                                                                                                                                                                                                     |
-| |  This.tableData                                                                                   | Collection or Entity selection (usually) | Evaluated table.dataSource                                                       |                                                                                                                                                                                                                                                                                                                                                                             |
-| In each data row when a table datasource returns a collection or an entity selection                | This.item.xxx                            | Any                                                                              | Mapped to each item of the table datasource collection or entity selection, for example **This.item.firstName** if the associated entity has the *firstName* attribute                                                                                                                                                                                                      |
-| |  This.itemIndex                                                                                   | Number                                   | Index of the current item in the collection or entity selection, starting from 0 |                                                                                                                                                                                                                                                                                                                                                                             |
-| In any row (except header rows) when a table datasource returns a collection or an entity selection | This.previousItems                       | Collection or Entity selection                                                   | Items displayed on the pages before the bottom carry over row (if any) or before the row of the expression, including the page where is displayed the row containing the expression. <br/>This expression returns the same type of value as the **This.tableData** expression.                                                                                      |
-| In a break row                                                                                      | This.breakItems                          | Collection or Entity selection                                                   | Items of the collection or entity selection displayed in the rows between: the current break row and the previous break row of the same level (or the start of the table) if the break row(s) are displayed after the data row. the current break and the next break row of the same level (or the end of the table) if the break row(s) are displayed before the data row. |
+| **Context**     | **Expression**   | **Type** | **Returns**               | 
+|---------------- | ---------------- | -------- | ------------------------- |  
+|Anywhere         | This.table       | Object   | Current table             |               
+|                 | This.row         | Object   | Current table row element |
+|                 | This.rowIndex    | Number   | Index of the current row, starting from 1  |
+|When a datasource has been defined for the table | This.table.dataSource | Object (formula) | Datasource as a formula |
+|                 | This.tableData   | Collection or Entity selection (usually) | Evaluated table.dataSource |  
+|In each data row when a table datasource returns a collection or an entity selection | This.item.xxx | Any | Mapped to each item of the table datasource collection or entity selection, for example **This.item.firstName** if the associated entity has the *firstName* attribute   |
+|                 | This.itemIndex   | Number   | Index of the current item in the collection or entity selection, starting from 0 |  
+| In any row (except header rows) when a table datasource returns a collection or an entity selection | This.previousItems  | Collection or Entity selection | Items displayed on the pages before the bottom carry over row (if any) or before the row of the expression, including the page where is displayed the row containing the expression. <br/>This expression returns the same type of value as the **This.tableData** expression.  |
+| In a break row  | This.breakItems  | Collection or Entity selection  | Items of the collection or entity selection displayed in the rows between:<br/><ul><li>the current break row and the previous break row of the same level (or the start of the table) if the break row(s) are displayed after the data row.</li><li>the current break and the next break row of the same level (or the end of the table) if the break row(s) are displayed before the data row.</li></ul>|  
 
 In any other contexts, these expressions will return *undefined*.
 
-**Note:** For more information about formula insertion, see [WP INSERT FORMULA](./commands/wp-insert-formula).
+**Note:** For more information about formula insertion, see [WP INSERT FORMULA](../commands/wp-insert-formula).
 
 ### Working with a table datasource 
 

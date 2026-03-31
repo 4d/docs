@@ -9,12 +9,15 @@ title: VP SET FROZEN PANES
 
 <!-- REF #_method_.VP SET FROZEN PANES.Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo    |    | Descripción                                                            |
 | ---------- | ------- | -- | ---------------------------------------------------------------------- |
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                           |
 | paneObj    | Object  | -> | Objeto que contiene la información de las columnas y líneas congeladas |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)         |
 
+</div>
 <!-- END REF -->
 
 ## Descripción
@@ -44,7 +47,7 @@ En el parámetro opcional *sheet*, puede designar una hoja específica donde se 
 Quiere congelar las tres primeras columnas de la izquierda, dos columnas de la derecha y la primera línea:
 
 ```4d
-C_OBJECT($panes)
+var $panes : Object
  
 $panes:=New object
 $panes.columnCount:=3

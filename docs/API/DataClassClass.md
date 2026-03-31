@@ -56,7 +56,7 @@ Returned attribute objects contain the following properties:
 |autoFilled|Boolean|True if the attribute value is automatically filled by 4D. Corresponds to the following 4D field properties: "Autoincrement" for numeric type fields and "Auto UUID" for UUID (alpha) fields. Not returned if `.kind` = "relatedEntity" or "relatedEntities". |
 |exposed|Boolean|True if the attribute is exposed in REST|
 |fieldNumber|integer|Internal 4D field number of the attribute. Not returned if `.kind` = "relatedEntity" or "relatedEntities". |
-|fieldType|Integer|4D database field type of the attribute. Depends on the attribute `kind`. Possible values: <li>if `.kind` = "storage": corresponding 4D field type, see [`Value type`](../commands-legacy/value-type.md)</li><li>if `.kind` = "relatedEntity": 38 (`is object`)</li><li>if `.kind` = "relatedEntities": 42 (`is collection`)</li><li>if `.kind` = "calculated" or "alias" = same as above, depending on the resulting value (field type, relatedEntity or relatedEntities)</li>|
+|fieldType|Integer|4D database field type of the attribute. Depends on the attribute `kind`. Possible values: <li>if `.kind` = "storage": corresponding 4D field type, see [`Value type`](../commands/value-type)</li><li>if `.kind` = "relatedEntity": 38 (`is object`)</li><li>if `.kind` = "relatedEntities": 42 (`is collection`)</li><li>if `.kind` = "calculated" or "alias" = same as above, depending on the resulting value (field type, relatedEntity or relatedEntities)</li>|
 |indexed|Boolean|True if there is a B-tree or a Cluster B-tree index on the attribute. Not returned if `.kind` = "relatedEntity" or "relatedEntities". |
 |inverseName|Text|Name of the attribute which is at the other side of the relation. Returned only when `.kind` = "relatedEntity" or "relatedEntities".|
 |keywordIndexed|Boolean|True if there is a keyword index on the attribute. Not returned if `.kind` = "relatedEntity" or "relatedEntities". |
@@ -933,7 +933,7 @@ where:
 * **formula**: a valid formula passed as `Text` or `Object`. The formula will be evaluated for each processed entity and must return a boolean value. Within the formula, the entity is available through the `This` object.  
 
   * **Text**: the formula string must be preceeded by the `eval()` statement, so that the query parser evaluates the expression correctly. For example: *"eval(length(This.lastname) >=30)"*
-  * **Object**: the [formula object](FunctionClass.md) is passed as a **placeholder** (see below). The formula must have been created using the [`Formula`](../commands/formula.md) or [`Formula from string`](../commands/formula-from-string.md) command.
+  * **Object**: the [formula object](FunctionClass.md) is passed as a **placeholder** (see below). The formula must have been created using the [`Formula`](../commands/formula) or [`Formula from string`](../commands/formula-from-string) command.
 
  >* Keep in mind that 4D formulas only support `&` and `|` symbols as logical operators.
  >* If the formula is not the only search criteria, the query engine optimizer could prior process other criteria (e.g. indexed attributes) and thus, the formula could be evaluated for only a subset of entities.
@@ -977,6 +977,8 @@ When using a constant value, the following rules must be respected:
 
 * **order by attributePath**: you can include an order by *attributePath* statement in the query so that the resulting data will be sorted according to that statement. You can use multiple order by statements, separated by commas (e.g., order by *attributePath1* desc, *attributePath2* asc). By default, the order is ascending. Pass 'desc' to define a descending order and 'asc' to define an ascending order.
  >If you use this statement, the returned entity selection is ordered (for more information, please refer to [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
+
+If the entity selection attributes contain values of different [types](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md).
 
 ### Using quotes
 
@@ -1254,6 +1256,7 @@ var $results := ds.MyClass.query("myVectorField > :1 and myVectorField > :2 orde
 
 See [more examples below](#example-4-2) (examples 4 and 5). 
 
+
 :::tip Related blog posts
 
 - [4D AI: Searching Entities by Vector Similarity in 4D](https://blog.4d.com/4d-ai-searching-entities-by-vector-similarity-in-4d)
@@ -1265,11 +1268,11 @@ See [more examples below](#example-4-2) (examples 4 and 5).
 
 As an alternative to formula insertion within the *queryString* parameter (see above), you can pass directly a formula object as a boolean search criteria. Using a formula object for queries is **recommended** since you benefit from tokenization, and code is easier to search/read.  
 
-The formula must have been created using the [`Formula`](../commands/formula.md) or [`Formula from string`](../commands/formula-from-string.md) command. In this case:
+The formula must have been created using the [`Formula`](../commands/formula) or [`Formula from string`](../commands/formula-from-string) command. In this case:
 
 * the *formula* is evaluated for each entity and must return true or false. During the execution of the query, if the formula's result is not a boolean, it is considered as false.
 * within the *formula*, the entity is available through the `This` object.  
-* if the `Formula` object is **null**, the error 1626 ("Expecting a text or formula") is generated, that you can intercept using a method installed with [`ON ERR CALL`](../commands-legacy/on-err-call.md).
+* if the `Formula` object is **null**, the error 1626 ("Expecting a text or formula") is generated, that you can intercept using a method installed with [`ON ERR CALL`](../commands/on-err-call).
 
  >For security reasons, formula calls within `query()` functions can be disallowed. See *querySettings* parameter description.
 
@@ -1722,3 +1725,4 @@ $ds.Buildings.setRemoteCacheSettings(New object("timeout"; 60; "maxEntries"; 350
 #### See also
 
 [.clearRemoteCache()](#clearremotecache)<br/>[.getRemoteCache()](#clearremotecache)
+

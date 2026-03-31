@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Find previous.Summary-->El comando **WP Find previous**  busca el *objTarget*, antes del rango *buscarAntes*, para *buscarValor* basado en *condicionBusq*.<!-- END REF--> Se puede utilizar un parámetro opcional para reemplazar los resultados encontrados.
 
-**Nota**: **WP Find previous** no busca ni reemplaza el texto en fórmulas. Utilice el comando [WP Get formulas](wp-get-formulas.md) en este caso.
+**Nota**: **WP Find previous** no busca ni reemplaza el texto en fórmulas. Utilice el comando [WP Get formulas](../commands/wp-get-formulas) en este caso.
 
 En el parámetro *objTarget*, pase un objeto que contenga:
 
@@ -101,5 +101,5 @@ Se devuelve un rango vacío si no se encuentran resultados.
 
 ## Ver también 
 
-[WP Find all](wp-find-all.md)  
-[WP Find next](wp-find-next.md)  
+[WP Find all](../commands/wp-find-all)  
+[WP Find next](../commands/wp-find-next)  

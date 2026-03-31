@@ -52,7 +52,7 @@ To restore the original value of a field, assign it the value returned by **Old*
 
 ## See also 
 
-[Modified](modified.md)  
+[Modified](../commands/modified)  
 
 ## Properties
 

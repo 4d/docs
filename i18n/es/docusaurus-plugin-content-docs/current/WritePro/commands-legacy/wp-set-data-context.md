@@ -40,7 +40,7 @@ Un contexto de datos sólo puede utilizarse en el proceso en el que se ha defini
 
 * Cuando se utiliza el contexto de datos en fórmulas calculadas de otro proceso, es *null* y **This.data** es indefinido
 * Si se establece un contexto de datos que ya ha sido definido para el mismo documento en otro proceso, se produce un error
- Para calcular fórmulas con diferentes contextos de datos en diferentes procesos (es decir, generar diferentes facturas a partir del mismo documento modelo), se recomienda duplicar el documento utilizando [WP New](wp-new.md) en cada uno de esos procesos para evitar errores. Tenga en cuenta que el contexto de datos no se copia cuando se duplica un documento.
+ Para calcular fórmulas con diferentes contextos de datos en diferentes procesos (es decir, generar diferentes facturas a partir del mismo documento modelo), se recomienda duplicar el documento utilizando [WP New](../commands/wp-new) en cada uno de esos procesos para evitar errores. Tenga en cuenta que el contexto de datos no se copia cuando se duplica un documento.
 
 ## Ejemplo 1 
 
@@ -99,5 +99,6 @@ El siguiente ejemplo recorre una selección de entidades y crea una vista previa
 ## Ver también 
 
   
-[WP COMPUTE FORMULAS](wp-compute-formulas.md)  
-[WP Get data context](wp-get-data-context.md)  
+[Blog post - 4D Write Pro: Dynamically Fill Tables with Entity Selections & Collections](https://blog.4d.com/4d-write-pro-dynamically-fill-tables-with-entity-selections-collections/)  
+[WP COMPUTE FORMULAS](../commands/wp-compute-formulas)  
+[WP Get data context](../commands/wp-get-data-context)  

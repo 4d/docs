@@ -11,11 +11,11 @@ title: VP SET SHOW PRINT LINES
 
 <div class="no-index">
 
-| Paramètres | Type    |    | Description                                                                             |
-| ---------- | ------- | -- | --------------------------------------------------------------------------------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                                 |
-| visible    | Boolean | -> | Lignes d'impression affichées si True (par défaut), cachées si False |
-| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis)             |
+| Paramètres | Type    |    | Description                                                                 |
+| ---------- | ------- | -- | --------------------------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |
+| visible    | Boolean | -> | Collection de formules\|                                                    |
+| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
 
 </div>
 <!-- END REF -->

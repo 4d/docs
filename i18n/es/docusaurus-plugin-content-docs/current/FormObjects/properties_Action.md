@@ -32,7 +32,7 @@ Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv20/4
 
 #### Comandos
 
-[OBJECT GET DRAG AND DROP OPTIONS](../commands-legacy/object-get-drag-and-drop-options.md) - [OBJECT SET DRAG AND DROP OPTIONS](../commands-legacy/object-set-drag-and-drop-options.md)
+[OBJECT GET DRAG AND DROP OPTIONS](../commands/object-get-drag-and-drop-options) - [OBJECT SET DRAG AND DROP OPTIONS](../commands/object-set-drag-and-drop-options)
 
 #### Ver también
 
@@ -64,7 +64,7 @@ Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv20/4
 
 #### Comandos
 
-[OBJECT GET DRAG AND DROP OPTIONS](../commands-legacy/object-get-drag-and-drop-options.md) - [OBJECT SET DRAG AND DROP OPTIONS](../commands-legacy/object-set-drag-and-drop-options.md)
+[OBJECT GET DRAG AND DROP OPTIONS](../commands/object-get-drag-and-drop-options) - [OBJECT SET DRAG AND DROP OPTIONS](../commands/object-set-drag-and-drop-options)
 
 #### Ver también
 
@@ -136,7 +136,7 @@ Autoriza el desplazamiento de líneas durante la ejecución. Esta opción está 
 
 #### Comandos
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
 
 ---
 
@@ -156,7 +156,7 @@ Permite la selección de múltiples registros/opciones en una [lista jerárquica
 
 #### Comandos
 
-[GET LIST PROPERTIES](../commands-legacy/get-list-properties.md) - [SET LIST PROPERTIES](../commands-legacy/set-list-properties.md)
+[GET LIST PROPERTIES](../commands/get-list-properties) - [SET LIST PROPERTIES](../commands/set-list-properties)
 
 ---
 
@@ -183,13 +183,13 @@ En otros casos (list box basados en selecciones temporales, columnas asociadas a
 
 #### Comandos
 
-[LISTBOX Get property](../commands/listbox-get-property.md) - [LISTBOX SET PROPERTY](../commands/listbox-set-property.md)
+[LISTBOX Get property](../commands/listbox-get-property) - [LISTBOX SET PROPERTY](../commands/listbox-set-property)
 
 ---
 
 ## Acción estándar
 
-Actividades típicas que deben realizar los objetos activos (\*por ejemplo, permitir al usuario aceptar, cancelar o eliminar registros, desplazarse entre registros o de una página a otra en un formulario multipágina, etc.) han sido predefinidas por 4D como acciones estándar. Se describen con detalle en la sección [Acciones estándar](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) de la *manual de Diseño*. There are also [standard actions specific to 4D Write Pro areas](../WritePro/user-legacy/standard-actions.md).
+Actividades típicas que deben realizar los objetos activos (\*por ejemplo, permitir al usuario aceptar, cancelar o eliminar registros, desplazarse entre registros o de una página a otra en un formulario multipágina, etc.) han sido predefinidas por 4D como acciones estándar. Se describen con detalle en la sección [Acciones estándar](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) de la *manual de Diseño*. También hay [acciones estándar específicas de las áreas 4D Write Pro](../WritePro/user-legacy/standard-actions.md).
 
 Puede asignar al mismo tiempo una acción estándar y un método proyecto de un objeto. En este caso, la acción estándar suele ejecutarse después del método y 4D utiliza esta acción para activar/desactivar el objeto según el contexto actual. Cuando se desactiva un objeto, no se puede ejecutar el método proyecto asociado.
 
@@ -205,5 +205,6 @@ Puede asignar al mismo tiempo una acción estándar y un método proyecto de un 
 
 #### Comandos
 
-[`OBJECT Get action`](../commands-legacy/object-get-action.md) - [`OBJECT SET ACTION`](../commands-legacy/object-set-action.md)
+[`OBJECT Get action`](../commands/object-get-action) - [`OBJECT SET ACTION`](../commands/object-set-action)
+
 

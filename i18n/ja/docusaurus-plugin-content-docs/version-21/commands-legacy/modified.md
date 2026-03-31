@@ -29,15 +29,15 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.Modified.Summary-->**Modified** はデータ入力中、プログラムを使用して*field* に値が代入されていたり、データ入力中に値が編集された場合に、[True](true.md "True")を返します。<!-- END REF-->**Modified** コマンドはフォームメソッド（またはフォームメソッドから呼ばれたサブルーチン）で使用されなければなりません。 
+<!--REF #_command_.Modified.Summary-->**Modified** はデータ入力中、プログラムを使用して*field* に値が代入されていたり、データ入力中に値が編集された場合に、[True](../commands/true)を返します。<!-- END REF-->**Modified** コマンドはフォームメソッド（またはフォームメソッドから呼ばれたサブルーチン）で使用されなければなりません。 
 
-このコマンドは同じ実行サイクル内でのみ意味のある値を返します。特に以前の*\_o\_During* 実行サイクルに対応するフォームイベント(On Clicked、On After Keystroke、等)では、[False](false.md "False")に設定されます。
+このコマンドは同じ実行サイクル内でのみ意味のある値を返します。特に以前の*\_o\_During* 実行サイクルに対応するフォームイベント(On Clicked、On After Keystroke、等)では、[False](../commands/false)に設定されます。
 
 データ入力時には、（元の値が変更されたかどうかに関わらず）ユーザがフィールドを編集した後別のフィールドへ移動するか、コントロールをクリックすると、フィールドが更新されたとみなされます。tabキーでフィールドを移動しただけでは、**Modified** はTrueにならない点に注意してください。**Modified** がTrueになるためには、フィールドが編集されなければなりません。
 
 メソッドの実行時には、フィールドに値が割り当てられると（異なる値かどうかに関係なく）、フィールドが編集されたものと解釈されます。
 
-**注:** **Modified** は、[PUSH RECORD](push-record.md) と[POP RECORD](pop-record.md) コマンド実行後は、常に[True](true.md "True")を返します。
+**注:** **Modified** は、[PUSH RECORD](push-record.md) と[POP RECORD](pop-record.md) コマンド実行後は、常に[True](../commands/true)を返します。
 
 いずれの場合でも、フィールドの値が実際に変更されたかどうかを調べるには、[Old](old.md) コマンドを使用します。
 

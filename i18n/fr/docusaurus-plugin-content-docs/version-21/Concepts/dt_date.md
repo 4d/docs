@@ -48,32 +48,32 @@ Une date nulle s’écrit *!00-00-00!*.
 | Inférieur ou égal à | Date <= Date | Boolean  | !2017-01-20! <= !2017-01-20! | True         |
 |                     |                                       |          | !2017-01-20! <= !2017-01-01! | False        |
 
-## Conversion of dates from JavaScript
+## Conversion de dates à partir de JavaScript
 
-Since dates in JavaScript are objects, they are sent to 4D as text containing their JSON form like any other object. This principle is implemented in particular when using [JSON commands](../commands/theme/JSON.md) or [Web Areas](../FormObjects/webArea_overview.md).
+Comme les dates en JavaScript sont des objets, elles sont envoyées à 4D sous forme de texte contenant leur forme JSON comme n'importe quel autre objet. Ce principe est mis en œuvre en particulier lors de l'utilisation des [commandes JSON](../commands/theme/JSON.md) ou des [zones Web](../FormObjects/webArea_overview.md).
 
-The JSON form of JavaScript Date objects follows the ISO 8601 standard, for example "2013-08-23T00:00:00Z". It is your responsibility to convert this text into a 4D date. Two solutions are available:
+La forme JSON des objets Date JavaScript suit la norme ISO 8601, par exemple "2013-08-23T00:00:00Z". Il est de votre ressort de convertir ce texte en une date 4D. Deux solutions sont possibles :
 
-Using the [`JSON Parse`](../commands-legacy/json-parse.md) command:
+Utiliser la commande [`JSON Parse`](../commands-legacy/json-parse.md) :
 
 ```4d
- var $dateIso : Text // reception of a date in ISO format
+ var $dateIso : Text // réception d'une date au format ISO
  var $date4D : Date 
- $date4D:=JSON Parse("\""+$dateIso+"\"";Is date))
+ $date4D:=JSON Parse("\""+$dateIso+"\""Is date))
 ```
 
-Using the [`Date`](../commands-legacy/date.md) command:
+Utiliser la commande [`Date`](../commands-legacy/date.md) :
 
 ```4d
- var $dateIso : Text // reception of a date in ISO format
+ var $dateIso : Text // réception d'une date au format ISO
  var $date4D : Date 
  $date4D:=Date($dateIso)
 ```
 
-Note the difference between these two solutions: [`JSON Parse`](../commands-legacy/json-parse.md) respects the [conversion mode set using the `SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md#dates-inside-objects-85) (if any), while [`Date`](../commands-legacy/date.md) is not subject to this. Conversion using the [`Date`](../commands-legacy/date.md) command always takes the local time zone into account.
+Notez la différence entre ces deux solutions : [`JSON Parse`](../commands-legacy/json-parse.md) respecte le [mode de conversion défini à l'aide de `SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md#dates-inside-objects-85) (s'il est défini), alors que [`Date`](../commands-legacy/date.md) n'y est pas soumis. La conversion à l'aide de la commande [`Date`](../commands-legacy/date.md) tient toujours compte du fuseau horaire local.
 
 :::note
 
-When the current date storage setting is [`date type`](../commands-legacy/set-database-parameter.md#dates-inside-objects-85) (default), JSON date strings in "YYYY-MM-DD" format are automatically handled as date values by the [`JSON Parse`](../commands-legacy/json-parse.md) and [`Date`](../commands-legacy/date.md) commands.
+Lorsque le paramétrage courant de stockage de la date est [`date type`](../commands-legacy/set-database-parameter.md#dates-inside-objects-85) (par défaut), les chaînes de date JSON au format "YYYY-MM-DD" sont automatiquement traitées comme des valeurs de date par les commandes [`JSON Parse`](../commands-legacy/json-parse.md) et [`Date`](../commands-legacy/date.md).
 
 :::

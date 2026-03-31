@@ -35,5 +35,5 @@ The documentation for this database method has been updated and moved to [develo
 ## See also 
 
 [Go Mobile with 4D](https://developer.4d.com/go-mobile/)  
-[MOBILE APP REFRESH SESSIONS](mobile-app-refresh-sessions.md)  
-[On Mobile App Action database method](on-mobile-app-action-database-method.md)  
+[MOBILE APP REFRESH SESSIONS](../commands/mobile-app-refresh-sessions)  
+[On Mobile App Action database method](../commands/on-mobile-app-action-database-method)  

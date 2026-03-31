@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.Shift down.Summary-->Shift down コマンドはShift キーが押されていると[True](true.md "True")を返します。<!-- END REF-->
+<!--REF #_command_.Shift down.Summary-->Shift down コマンドはShift キーが押されていると[True](../commands/true)を返します。<!-- END REF-->
 
 ## 例題 
 

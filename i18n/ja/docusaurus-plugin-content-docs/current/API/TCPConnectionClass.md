@@ -5,6 +5,15 @@ title: TCPConnection
 
 `TCPConnection` クラスを使用すると、[サーバー](./TCPListenerClass.md) へのTransmission Control Protocol (TCP) クライアント接続を管理でき、これによってデータの送受信と、コールバックを使用した接続ライフサイクルイベントの管理が可能になります。
 
+<details><summary>履歴</summary>
+
+| リリース  | 内容                                     |
+| ----- | -------------------------------------- |
+| 20 R9 | 新しい `listener`、`address`、および `port` 属性 |
+| 20 R8 | クラスを追加                                 |
+
+</details>
+
 `TCPConnection` クラスは`4D` クラスストアにて提供されています。  TCP 接続は、[TCPConnection オブジェクト](#tcpconnection-オブジェクト) を返す[4D.TCPConnection.new()](#4dtcpconnectionnew) 関数を使用して作成できます。
 
 全ての`TCPConnection` クラス関数はスレッドセーフです。
@@ -19,14 +28,9 @@ TCP 接続に関連したイベントを記録する[4DTCPUDPLog.txt ログフ�
 
 :::
 
-<details><summary>履歴</summary>
+### 非同期プログラミング
 
-| リリース  | 内容                                     |
-| ----- | -------------------------------------- |
-| 20 R9 | 新しい `listener`、`address`、および `port` 属性 |
-| 20 R8 | クラスを追加                                 |
-
-</details>
+このクラスは、[非同期実行](../Develop/async.md) のページで説明されているように、4D 内での非同期プログライミングをサポートしています。
 
 ### 例題
 

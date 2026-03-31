@@ -17,13 +17,18 @@ title: VP SET DATA CONTEXT
 
 <!-- REF #_method_.VP SET DATA CONTEXT.Params -->
 
-| Parámetros | Tipo       |    | Descripción                                      |                  |
-| ---------- | ---------- | -- | ------------------------------------------------ | ---------------- |
-| vpAreaName | Text       | -> | Nombre de objeto formulario área 4D View Pro     |                  |
-| dataObj    | Object     | -> | Objeto datos a cargar en el contexto de datos    |                  |
-| dataColl   | Collection | -> | Colección datos a cargar en el contexto de datos |                  |
-| options    | Object     | -> | Opciones adicionales                             |                  |
-| sheet      | Integer    | -> | Índice de la hoja                                | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo       |    | Descripción                                      |
+| ---------- | ---------- | -- | ------------------------------------------------ |
+| vpAreaName | Text       | -> | Nombre de objeto formulario área 4D View Pro     |
+| dataObj    | Object     | -> | Objeto datos a cargar en el contexto de datos    |
+| dataColl   | Collection | -> | Colección datos a cargar en el contexto de datos |
+| options    | Object     | -> | Opciones adicionales                             |
+| sheet      | Integer    | -> | Índice de la hoja                                |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 

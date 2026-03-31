@@ -161,4 +161,4 @@ To export the first page of a 4D Write Pro as SVG in a Text variable and hide th
 [Blog post - 4D Write Pro: Export to PDF with enclosures](https://blog.4d.com/4d-write-pro-export-to-pdf-with-enclosures)  
 [Exporting to HTML and MIME HTML formats](https://doc.4d.com/4Dv20/4D/20/Exporting-to-HTML-and-MIME-HTML-formats.200-6229467.en.html)<br/>
 [Importing and Exporting in .docx format](https://doc.4d.com/4Dv20/4D/20/Importing-and-Exporting-in-docx-format.200-6229466.en.html)<br/>
-[WP EXPORT DOCUMENT](../commands/wp-export-document.md)  
+[WP EXPORT DOCUMENT](../commands/wp-export-document)  

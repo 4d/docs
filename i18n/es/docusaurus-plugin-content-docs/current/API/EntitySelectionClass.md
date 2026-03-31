@@ -5,7 +5,7 @@ title: EntitySelection
 
 Una entity selection es un objeto que contiene una o más referencias a [entidades](ORDA/dsMapping.md#entity) pertenecientes a la misma [Dataclass](ORDA/dsMapping.md#dataclass). Una entity selection puede contener 0, 1 o X entidades de la dataclass -- donde X puede representar el número total de entidades contenidas en la dataclass.
 
-Las entity selections pueden crearse a partir de selecciones existentes utilizando varias funciones de la clase [`DataClass`](DataClassClass.md) como [`.all()`](DataClassClass.md#all) o [`.query()`](DataClassClass.md#query), o funciones de la propia clase `EntityClass`, como [`.and()`](#and) u [`orderBy()`](#orderby). También puede crear entity selections vacías utilizando la función [`dataClass.newSelection()`](DataClassClass.md#newselection) o el comando [`Create entity selection`](../commands/create-entity-selection.md).
+Las entity selections pueden crearse a partir de selecciones existentes utilizando varias funciones de la clase [`DataClass`](DataClassClass.md) como [`.all()`](DataClassClass.md#all) o [`.query()`](DataClassClass.md#query), o funciones de la propia clase `EntityClass`, como [`.and()`](#and) u [`orderBy()`](#orderby). También puede crear entity selections vacías utilizando la función [`dataClass.newSelection()`](DataClassClass.md#newselection) o el comando [`Create entity selection`](../commands/create-entity-selection).
 
 ### Resumen
 
@@ -49,7 +49,7 @@ Las entity selections pueden crearse a partir de selecciones existentes utilizan
 
 #### Ver también
 
-[`USE ENTITY SELECTION`](../commands/use-entity-selection.md)
+[`USE ENTITY SELECTION`](../commands/use-entity-selection)
 
 <!-- REF EntitySelectionClass.index.Desc -->
 
@@ -362,7 +362,7 @@ Queremos tener una selección de empleados llamados "Jones" que vivan en Nueva Y
 | Parámetros | Tipo                      |                             | Descripción                     |
 | ---------- | ------------------------- | :-------------------------: | ------------------------------- |
 | index      | Integer                   |              ->             | Índice de la entidad a devolver |
-| Resultado  | 4D.Entity | <- | The entity at that index        |
+| Resultado  | 4D.Entity | <- | La entidad en ese índice        |
 
 </div>
 <!-- END REF -->
@@ -785,7 +785,7 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 | Parámetros | Tipo       |                             | Descripción                                              |
 | ---------- | ---------- | :-------------------------: | -------------------------------------------------------- |
 | atributo   | Text       |              ->             | Nombre del atributo del objeto cuyas rutas desea obtener |
-| Resultado  | Collection | <- | New collection with distinct paths                       |
+| Resultado  | Collection | <- | Nueva colección con rutas distintas                      |
 
 </div>
 <!-- END REF -->
@@ -1372,7 +1372,7 @@ Las entity selections siempre tienen una propiedad `.length`.
 
 La función `.max()` <!-- REF #EntitySelectionClass.max().Summary -->devuelve el valor más alto (o máximo) entre todos los valores de *attributePath* en la entity selection<!-- END REF -->. En realidad devuelve el valor de la última entidad de la selección de entidades tal y como se ordenaría de forma ascendente utilizando la función [`.orderBy()`](#orderby).
 
-Si se pasa en *attributePath* una ruta a una propiedad objeto que contenga diferentes tipos de valores, la función `.max()` devolverá el valor máximo dentro del primer tipo escalar en el orden predeterminado de la lista de tipos 4D (ver la descripción de [`.sort()`](CollectionClass.md#sort)).
+If you pass in *attributePath* a path to an object property containing different [types of values](../Concepts/data-types.md), the `.max()` function will return the maximum value within the first scalar type according to the [4D ordering principles](../Concepts/ordering.md).
 
 `.max()` devuelve **undefined** si la entity selection está vacía o no se encuentra *attributePath* en el atributo objeto.
 
@@ -1425,7 +1425,7 @@ Queremos encontrar el salario más alto entre todas las empleadas:
 
 La función `.min()` <!-- REF #EntitySelectionClass.min().Summary --> devuelve el valor más bajo (o mínimo) entre todos los valores de attributePath en la entity selection<!-- END REF -->.  En realidad devuelve la primera entidad de la entity selection tal y como se ordenaría de forma ascendente utilizando la función [`.orderBy()`](#orderby) (excluyendo los valores **null**).
 
-Si se pasa en *attributePath* una ruta a una propiedad objeto que contiene diferentes tipos de valores, la función `.min()` devolverá el valor mínimo dentro del primer tipo de valor escalar en el orden de la lista de tipos (ver la descripción de [`.sort()`](CollectionClass.md#sort)).
+If you pass in *attributePath* a path to an object property containing different [types of values](../Concepts/data-types.md), the `.min()` function will return the minimum value within the first scalar type according to the [4D ordering principles](../Concepts/ordering.md).
 
 `.min()` devuelve **undefined** si la entity selection está vacía o *attributePath* no se encuentra en el atributo objeto.
 
@@ -1655,7 +1655,7 @@ Por defecto, los atributos se clasifican en orden ascendente ("descending" es fa
 
 Puede añadir tantos objetos en la colección de criterios como sea necesario.
 
-> Esta función sólo funciona con un datastore remoto (cliente/servidor o conexión <code>Open datastore</code>).
+If the entity selection attributes contain values of different [types](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md).
 
 Si pasa una ruta de atributo inválida en *pathString* o *pathObject*, la función devuelve una entity selection vacía.
 
@@ -2728,3 +2728,4 @@ $employeesCollection:=$employees.toCollection("firstName, lastName, directReport
 ```
 
 <!-- END REF -->
+

@@ -8,6 +8,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Get attributes.Params-->
 
+<div class="no-index">
+
 | 引数          | 型                                              |                             | 説明                             |
 | ----------- | ---------------------------------------------- | --------------------------- | ------------------------------ |
 | targetObj   | Object                                         | &#8594; | レンジまたは要素または4D Write Pro ドキュメント |
@@ -16,6 +18,7 @@ displayed_sidebar: docs
 | attribColl  | Collection                                     | &#8594; | 取得する属性名のコレクション                 |
 | 戻り値         | Object                                         | &#8592; | 属性名と値                          |
 
+</div>
 <!-- END REF-->
 
 ## 説明
@@ -32,7 +35,7 @@ displayed_sidebar: docs
 
 また、*attribColl* 引数には属性名のコレクションを渡すこともできます。この場合、コマンドは*attribColl* 引数に渡した属性とそれに対応する値を格納したオブジェクトを返します。
 
-For a comprehensive list of attributes to pass, as well as their scope and values, please refer to the [4D Write Pro Attributes](../4d-write-pro-attributes) section.
+渡すことのできる属性の包括的な一覧と、そのスコープおよび値については、[4D Write Pro 属性](../4d-write-pro-attributes) の章を参照してください。
 
 引数として渡した要素内の同じ属性に対して異なる値があった場合、コマンドは以下のように対応します:
 

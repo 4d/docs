@@ -58,7 +58,7 @@ Allows setting a list whose values cannot be entered in the object. If an exclud
 
 #### Commands
 
-[OBJECT Get list name](../commands-legacy/object-get-list-name.md) - [OBJECT Get list reference](../commands-legacy/object-get-list-reference.md) - [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name.md) - [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference.md)
+[OBJECT Get list name](../commands/object-get-list-name) - [OBJECT Get list reference](../commands/object-get-list-reference) - [OBJECT SET LIST BY NAME](../commands/object-set-list-by-name) - [OBJECT SET LIST BY REFERENCE](../commands/object-set-list-by-reference)
 
 
 ---
@@ -84,4 +84,5 @@ However, unlike the [Choice List](properties_DataSource.md#choice-list) property
 
 #### Commands
 
-[OBJECT Get list name](../commands-legacy/object-get-list-name.md) - [OBJECT Get list reference](../commands-legacy/object-get-list-reference.md) - [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name.md) - [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference.md)
+[OBJECT Get list name](../commands/object-get-list-name) - [OBJECT Get list reference](../commands/object-get-list-reference) - [OBJECT SET LIST BY NAME](../commands/object-set-list-by-name) - [OBJECT SET LIST BY REFERENCE](../commands/object-set-list-by-reference)
+

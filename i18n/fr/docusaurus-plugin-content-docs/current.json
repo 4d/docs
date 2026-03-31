@@ -588,7 +588,7 @@
     "description": "The label for category 'Graphs' in sidebar 'docs'"
   },
   "sidebar.docs.category.HTTP": {
-    "message": "HTTP",
+    "message": "Client HTTP",
     "description": "The label for category 'HTTP' in sidebar 'docs'"
   },
   "sidebar.docs.category.Hierarchical Lists": {
@@ -900,7 +900,7 @@
     "description": "The generated-index page title for category Graphs in sidebar docs"
   },
   "sidebar.docs.category.HTTP.link.generated-index.title": {
-    "message": "HTTP",
+    "message": "Client HTTP",
     "description": "The generated-index page title for category HTTP in sidebar docs"
   },
   "sidebar.docs.category.Hierarchical Lists.link.generated-index.title": {

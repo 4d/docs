@@ -68,12 +68,6 @@ Los certificados TLS gestionados por 4D deben estar en formato **PEM**. Si su pr
 - [**RSA**](https://en.wikipedia.org/wiki/RSA_\\(cryptosystem\\))
 - [**ECDSA**](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm)
 
-:::info Compatibilidad
-
-El formato de cifrado ECDSA no es compatible por 4D [capa de red legacy](../settings/client-server.md#network-layer).
-
-:::
-
 :::note
 
 4D le propone dos comandos para ayudarle a solicitar un certificado RSA, [vea el tutorial más abajo](#how-to-get-a-rsa-certificate-tutorial).
@@ -90,7 +84,7 @@ Los archivos de certificados incluyen:
 Ambos archivos **key.pem** y **cert.pem** deben ubicarse:
 
 - con 4D Server o 4D en modo local, junto a la [carpeta Project](Project/architecture.md#project-folder)
-- con 4D en modo remoto, en la carpeta de la base cliente en la máquina remota (para más información sobre la ubicación de esta carpeta, ver el comando [`Get 4D folder`](../commands-legacy/get-4d-folder.md)). Debe copiar estos archivos manualmente en la máquina remota.
+- con 4D en modo remoto, en la carpeta de la base cliente en la máquina remota (para más información sobre la ubicación de esta carpeta, ver el comando [`Get 4D folder`](../commands/get-4d-folder)). Debe copiar estos archivos manualmente en la máquina remota.
 
 ### Activar TLS
 
@@ -146,3 +140,4 @@ Para obtener un certificado digital:
 5. Coloca el archivo “cert.pem” en la [ubicación apropiada](#installing-certificate-files).
 
 El servidor 4D puede ahora trabajar en modo seguro. Un certificado suele tener una validez de entre 3 meses y un año.
+

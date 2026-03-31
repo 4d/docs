@@ -6,7 +6,7 @@ title: EntitySelection
 
 An entity selection is an object containing one or more reference(s) to [entities](ORDA/dsMapping.md#entity) belonging to the same [Dataclass](ORDA/dsMapping.md#dataclass). An entity selection can contain 0, 1 or X entities from the dataclass -- where X can represent the total number of entities contained in the dataclass.
 
-Entity selections can be created from existing selections using various functions of the [`DataClass` class](DataClassClass.md) such as [`.all()`](DataClassClass.md#all) or [`.query()`](DataClassClass.md#query), or functions of the `EntityClass` class itself, such as [`.and()`](#and) or [`orderBy()`](#orderby). You can also create blank entity selections using the [`dataClass.newSelection()`](DataClassClass.md#newselection) function or the [`Create entity selection`](../commands/create-entity-selection.md) command.
+Entity selections can be created from existing selections using various functions of the [`DataClass` class](DataClassClass.md) such as [`.all()`](DataClassClass.md#all) or [`.query()`](DataClassClass.md#query), or functions of the `EntityClass` class itself, such as [`.and()`](#and) or [`orderBy()`](#orderby). You can also create blank entity selections using the [`dataClass.newSelection()`](DataClassClass.md#newselection) function or the [`Create entity selection`](../commands/create-entity-selection) command.
 
 
 
@@ -54,7 +54,7 @@ Entity selections can be created from existing selections using various function
 
 #### See also
 
-[`USE ENTITY SELECTION`](../commands/use-entity-selection.md)
+[`USE ENTITY SELECTION`](../commands/use-entity-selection)
 
 
 <!-- REF EntitySelectionClass.index.Desc -->
@@ -1417,7 +1417,8 @@ Entity selections always have a `.length` property.
 
 The `.max()` function <!-- REF #EntitySelectionClass.max().Summary -->returns the highest (or maximum) value among all the values of *attributePath* in the entity selection<!-- END REF -->. It actually returns the value of the last entity of the entity selection as it would be sorted in ascending order using the [`.orderBy()`](#orderby) function.
 
-If you pass in *attributePath* a path to an object property containing different types of values, the `.max()` function will return the maximum value within the first scalar type in the default 4D type list order (see [`.sort()`](CollectionClass.md#sort) description).
+If you pass in *attributePath* a path to an object property containing different [types of values](../Concepts/data-types.md), the `.max()` function will return the maximum value within the first scalar type according to the [4D ordering principles](../Concepts/ordering.md).
+
 
 `.max()` returns **undefined** if the entity selection is empty or *attributePath* is not found in the object attribute.
 
@@ -1473,7 +1474,7 @@ We want to find the highest salary among all the female employees:
 
 The `.min()` function <!-- REF #EntitySelectionClass.min().Summary --> returns the lowest (or minimum) value among all the values of attributePath in the entity selection<!-- END REF -->.  It actually returns the first entity of the entity selection as it would be sorted in ascending order using the [`.orderBy()`](#orderby) function (excluding **null** values).
 
-If you pass in *attributePath* a path to an object property containing different types of values, the `.min()` function will return the minimum value within the first scalar value type in the type list order (see [`.sort()`](CollectionClass.md#sort) description).
+If you pass in *attributePath* a path to an object property containing different [types of values](../Concepts/data-types.md), the `.min()` function will return the minimum value within the first scalar type according to the [4D ordering principles](../Concepts/ordering.md).
 
 `.min()` returns **undefined** if the entity selection is empty or *attributePath* is not found in the object attribute.
 
@@ -1704,7 +1705,7 @@ By default, attributes are sorted in ascending order ("descending" is false).
 
 You can add as many objects in the criteria collection as necessary.
 
->Null values are evaluated as less than other values.
+If the entity selection attributes contain values of different [types](../Concepts/data-types.md), they will be sorted according to the [4D ordering principles](../Concepts/ordering.md).
 
 If you pass an invalid attribute path in *pathString* or *pathObject*, the function returns an empty entity selection.
 
@@ -2811,3 +2812,4 @@ $employeesCollection:=$employees.toCollection("firstName, lastName, directReport
 
 
 <!-- END REF -->
+

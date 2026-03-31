@@ -3,7 +3,7 @@ id: FileClass
 title: File
 ---
 
-`File` オブジェクトは [`File`](../commands/file.md) コマンドによって作成されます。 これらのオブジェクトには、(実在しているか否かに関わらず) ディスクファイルへの参照が格納されます。 たとえば、新規ファイルを作成するために `File` コマンドを実行した場合、有効な `File` オブジェクトが作成されますが、[`file.create()`](#create) 関数を呼び出すまで、ディスク上にはなにも保存されていません。
+`File` オブジェクトは [`File`](../commands/file) コマンドによって作成されます。 これらのオブジェクトには、(実在しているか否かに関わらず) ディスクファイルへの参照が格納されます。 たとえば、新規ファイルを作成するために `File` コマンドを実行した場合、有効な `File` オブジェクトが作成されますが、[`file.create()`](#create) 関数を呼び出すまで、ディスク上にはなにも保存されていません。
 
 ### 例題
 
@@ -71,9 +71,9 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 #### 説明
 
-`4D.File.new()` 関数は、<!-- REF #4D.File.new().Summary -->`4D.File` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`File`](../commands/file.md) コマンドと同一です。
+`4D.File.new()` 関数は、<!-- REF #4D.File.new().Summary -->`4D.File` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`File`](../commands/file) コマンドと同一です。
 
-> `4D.File.new()` よりも、短い [`File`](../commands/file.md) コマンドの使用が推奨されます。
+> `4D.File.new()` よりも、短い [`File`](../commands/file) コマンドの使用が推奨されます。
 
 <!-- INCLUDE document.copyTo().Desc -->
 
@@ -615,7 +615,7 @@ $fhandle:=$f.open("read")
 
 `.setAppInfo()` 関数は、<!-- REF #FileClass.setAppInfo().Summary --> *info* に渡したプロパティをアプリケーションファイルの情報として書き込みます<!-- END REF -->。 これは4D アプリケーションのビルドチェーンをカスタマイズしたいデベロッパーのために設計されています。
 
-The function can only be used with the following file types: **.plist** (all platforms), existing **.exe**/**.dll** (Windows), or **macOS executable**. 他のファイルタイプを使用した場合、あるいはディスク上にまだ存在しない\*\*.exe\*\*/**.dll** ファイルに対して使用した場合、関数は何もしません(エラーも生成されません)。
+この関数は、以下のタイプに対してのみ使用可能です: **.plist** (全プラットフォーム)、存在する **.exe** / **.dll** (Windows)、あるいは **macOS 実行ファイル**。 他のファイルタイプを使用した場合、あるいはディスク上にまだ存在しない\*\*.exe\*\*/**.dll** ファイルに対して使用した場合、関数は何もしません(エラーも生成されません)。
 
 **.plist ファイル用の*info* オブジェクト (全プラットフォーム)**
 
@@ -829,3 +829,4 @@ $myFile.setText("Hello world")
 <!-- END REF -->
 
 <!-- INCLUDE document.size.Desc -->
+

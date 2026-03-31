@@ -34,8 +34,8 @@ The elements in the array are ordered in the order in which the records are crea
 
 Each element of the array is:
 
-* [True](true.md "True") if the corresponding record belongs to the set.
-* [False](false.md "False") if the corresponding record does not belong to the set.
+* [True](../commands/true) if the corresponding record belongs to the set.
+* [False](../commands/false) if the corresponding record does not belong to the set.
 
 **Warning:** The total number of elements in the *booleanArr* array is not significant. For structural reasons, this number can be different from the number of records actually present in the table. Possible extra elements are set to [False](false.md).
 

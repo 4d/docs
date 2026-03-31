@@ -91,7 +91,6 @@ title: データ収集
 | system                                                      | Text                              | OS のバージョンとビルド番号                                                                                             |
 | uniqueID                                                    | Text                              | 4D Server の固有ID                                                                                             |
 | uptime                                                      | Number                            | ローカル4Dデータベースが開かれてからの経過時間 (秒単位)                                                           |
-| usingLegacyNetworkLayer                                     | Boolean                           | アプリケーションサーバーに旧式ネットワークレイヤーが使用されている場合は true                                                                   |
 | usingQUICNetworkLayer                                       | Boolean                           | データベースが QUICネットワークレイヤーを使用している場合は True                                                                       |
 | version                                                     | Number                            | 4Dアプリケーションのバージョン番号                                                                                          |
 | webServer                                                   | Object                            | Webサーバーが起動中、または起動済みの場合は "started":true                                                      |
@@ -101,7 +100,7 @@ title: データ収集
 
 ## 保存先と送信先
 
-収集されたデータは、4D Server の終了時にデータベース毎にテキストファイル (JSON形式) に書き込まれます。 このファイルは[active 4D folder](../commands-legacy/get-4d-folder.md) 内、つまり以下の場所に保存されます:
+収集されたデータは、4D Server の終了時にデータベース毎にテキストファイル (JSON形式) に書き込まれます。 このファイルは[active 4D folder](../commands/get-4d-folder) 内、つまり以下の場所に保存されます:
 
 - Windows: `Users\[userName]\AppData\Roaming\4D Server`
 - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`

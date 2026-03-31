@@ -9,10 +9,15 @@ title: VP SET COLUMN ATTRIBUTES
 
 <!-- REF #_method_.VP SET COLUMN ATTRIBUTES.Params -->
 
-| 引数          | 型      |    | 説明                  |                  |
-| ----------- | ------ | -- | ------------------- | ---------------- |
-| rangeObj    | Object | -> | レンジオブジェクト           |                  |
-| propertyObj | Object | -> | カラムプロパティを格納したオブジェクト | <!-- END REF --> |
+<div class="no-index">
+
+| 引数          | 型      |    | 説明                  |
+| ----------- | ------ | -- | ------------------- |
+| rangeObj    | Object | -> | レンジオブジェクト           |
+| propertyObj | Object | -> | カラムプロパティを格納したオブジェクト |
+
+</div>
+<!-- END REF -->
 
 ## 説明
 
@@ -35,11 +40,11 @@ title: VP SET COLUMN ATTRIBUTES
 2列目のカラムの幅を変更して、ヘッダーを設定します:
 
 ```4d
-C_OBJECT($column;$properties)
-
-$column:=VP Column("ViewProArea";1) // カラムB を取得
+var $column; $properties : Object
+ 
+$column:=VP Column("ViewProArea";1) //column B
 $properties:=New object("width";100;"header";"Hello World")
-
+ 
 VP SET COLUMN ATTRIBUTES($column;$properties)
 ```
 

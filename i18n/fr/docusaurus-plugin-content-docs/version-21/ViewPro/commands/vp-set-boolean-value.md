@@ -9,10 +9,15 @@ title: VP SET BOOLEAN VALUE
 
 <!-- REF #_method_.VP SET BOOLEAN VALUE.Params -->
 
-| Paramètres | Type    |    | Description               |                  |
-| ---------- | ------- | -- | ------------------------- | ---------------- |
-| rangeObj   | Object  | -> | Objet plage               |                  |
-| boolValue  | Boolean | -> | Valeur du booléen à fixer | <!-- END REF --> |
+<div class="no-index">
+
+| Paramètres | Type    |    | Description               |
+| ---------- | ------- | -- | ------------------------- |
+| rangeObj   | Object  | -> | Objet plage               |
+| boolValue  | Boolean | -> | Valeur du booléen à fixer |
+
+</div>
+<!-- END REF -->
 
 ## Description
 

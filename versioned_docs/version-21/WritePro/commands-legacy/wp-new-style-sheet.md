@@ -29,7 +29,7 @@ The *styleSheetType* parameter lets you designate the type of the style sheet, *
 * wk type character: Applies style attributes to characters.
 * wk type paragraph: Applies style attributes to paragraphs.
 
-Pass a name for the style sheet in the *styleSheetName* parameter. The style sheet's name is stored with the document and facilitates reusing or modifying the style. It can also be used with the [WP Get style sheet](wp-get-style-sheet.md) and [WP DELETE STYLE SHEET](wp-delete-style-sheet.md) commands. The style sheet name must comply with the following rules:
+Pass a name for the style sheet in the *styleSheetName* parameter. The style sheet's name is stored with the document and facilitates reusing or modifying the style. It can also be used with the [WP Get style sheet](../WritePro/commands/wp-get-style-sheet) and [WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet) commands. The style sheet name must comply with the following rules:
 
 * it must start with a letter
 * it can then contain alphanumeric characters, space characters, "-" characters or unicode characters >= 128
@@ -69,7 +69,7 @@ The following code creates and defines a paragraph style sheet:
 ## See also 
 
 *Accessing document contents by programming*  
-[WP DELETE STYLE SHEET](wp-delete-style-sheet.md)  
-[WP Get style sheet](wp-get-style-sheet.md)  
+[WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet)  
+[WP Get style sheet](../WritePro/commands/wp-get-style-sheet)  
 [WP Get style sheets](wp-get-style-sheets.md)  
-[WP IMPORT STYLE SHEETS](wp-import-style-sheets.md)  
+[WP IMPORT STYLE SHEETS](../WritePro/commands/wp-import-style-sheet)  

@@ -45,11 +45,14 @@ AI の世界では、ベクトルとは、機会が複雑なデータを理解�
 
 <!--REF #4D.Vector.new().Params -->
 
+<div class="no-index">
+
 | 引数  | 型                         |                             | 説明                 |
 | --- | ------------------------- | --------------------------- | ------------------ |
 | 引数  | Collection                | ->                          | ベクトルを表せる実数値のコレクション |
 | 戻り値 | 4D.Vector | <- | 新規ベクトルオブジェクト       |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -79,11 +82,14 @@ var $collection := $vector.toCollection()
 
 <!--REF #VectorClass.cosineSimilarity().Params -->
 
+<div class="no-index">
+
 | 引数     | 型                         |                             | 説明       |
 | ------ | ------------------------- | --------------------------- | -------- |
 | vector | 4D.Vector | ->                          | 比較するベクトル |
 | 戻り値    | Real                      | <- | ベクトル感の距離 |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -155,11 +161,14 @@ End if
 
 <!--REF #VectorClass.dotSimilarity().Params -->
 
+<div class="no-index">
+
 | 引数     | 型                         |                             | 説明       |
 | ------ | ------------------------- | --------------------------- | -------- |
 | vector | 4D.Vector | ->                          | 比較するベクトル |
 | 戻り値    | Real                      | <- | ベクトル感の距離 |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -229,11 +238,14 @@ ALERT("Best answer: "+$documents[0].text)
 
 <!--REF #VectorClass.euclideanDistance().Params -->
 
+<div class="no-index">
+
 | 引数     | 型                         |                             | 説明       |
 | ------ | ------------------------- | --------------------------- | -------- |
 | vector | 4D.Vector | ->                          | 比較するベクトル |
 | 戻り値    | Real                      | <- | ベクトル感の距離 |
 
+</div>
 <!-- END REF -->
 
 #### 説明
@@ -291,10 +303,13 @@ ALERT("Nearest monument: "+$places[0].name)
 
 <!--REF #VectorClass.toCollection().Params -->
 
+<div class="no-index">
+
 | 引数  | 型          |                             | 説明                  |
 | --- | ---------- | --------------------------- | ------------------- |
 | 戻り値 | Collection | <- | ベクトル成分を表す実数値のコレクション |
 
+</div>
 <!-- END REF -->
 
 `.toCollection()` 関数は、<!-- REF #VectorClass.toCollection().Summary -->ベクトル成分を実数値のコレクションとして返します<!-- END REF -->。

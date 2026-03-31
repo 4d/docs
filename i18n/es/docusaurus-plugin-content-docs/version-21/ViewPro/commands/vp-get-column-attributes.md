@@ -9,10 +9,15 @@ title: VP Get column attributes
 
 <!-- REF #_method_.VP Get column attributes.Params -->
 
-| Parámetros | Tipo       |                             | Descripción                          |                  |
-| ---------- | ---------- | --------------------------- | ------------------------------------ | ---------------- |
-| rangeObj   | Object     | ->                          | Objeto rango                         |                  |
-| Resultado  | Collection | <- | Colección de propiedades de columnas | <!-- END REF --> |
+<div class="no-index">
+
+| Parámetros | Tipo       |                             | Descripción                          |
+| ---------- | ---------- | --------------------------- | ------------------------------------ |
+| rangeObj   | Object     | ->                          | Objeto rango                         |
+| Resultado  | Collection | <- | Colección de propiedades de columnas |
+
+</div>
+<!-- END REF -->
 
 ## Descripción
 
@@ -27,8 +32,8 @@ La colección devuelta contiene todas las propiedades de las columnas, tanto si 
 El código siguiente:
 
 ```4d
-C_OBJECT($range)
-C_COLLECTION($attr)
+var $range : Object
+var $attr: Collection
  
 $range:=VP Column("ViewProArea";1;2)
 $attr:=VP Get column attributes($range)

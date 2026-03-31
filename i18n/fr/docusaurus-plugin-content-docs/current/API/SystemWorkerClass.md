@@ -7,6 +7,10 @@ Les System workers permettent au code 4D d'appeler n'importe quel process extern
 
 La classe `SystemWorker` est disponible dans le class store `4D` .
 
+### Programmation asynchrone
+
+Cette classe prend en charge la programmation asynchrone dans 4D, comme décrit dans la page [Exécution asynchrone](../Develop/async.md).
+
 ### Exemple
 
 ```4d
@@ -97,7 +101,7 @@ Dans le paramètre *options*, passez un objet qui peut contenir les propriétés
 | onTerminate      | Formula | undefined  | Callback lorsque le process externe est terminé. Elle reçoit deux objets en paramètres (voir ci-dessous)                                                                                                                                                                                                                                                                                                                        |
 | timeout          | Number  | undefined  | Délai en secondes avant que le process soit tué s'il est toujours actif                                                                                                                                                                                                                                                                                                                                                                                            |
 | dataType         | Text    | "text"     | Type de contenu du corps de la réponse. Valeurs possibles : "text" (par défaut), "blob".                                                                                                                                                                                                                                                                                                        |
-| encoding         | Text    | "UTF-8"    | Seulement si `dataType="text"`. Encodage du contenu du corps de la réponse. Pour la liste des valeurs disponibles, voir la description de la commande [`CONVERT FROM TEXT`](../commands-legacy/convert-from-text.md)                                                                                                                                                                                                               |
+| encoding         | Text    | "UTF-8"    | Seulement si `dataType="text"`. Encodage du contenu du corps de la réponse. Pour la liste des valeurs disponibles, voir la description de la commande [`CONVERT FROM TEXT`](../commands/convert-from-text)                                                                                                                                                                                                                         |
 | variables        | Object  |            | Définit des variables d'environnement personnalisées pour le system worker. Syntaxe : `variables.key=value`, où `key` est le nom de la variable et `value` sa valeur. Les valeurs sont converties en chaînes de caractères lorsque cela est possible. La valeur ne peut pas contenir un '='. S'il n'est pas défini, le system worker hérite de l'environnement 4D. |
 | currentDirectory | Folder  |            | Répertoire de travail dans lequel le process est exécuté                                                                                                                                                                                                                                                                                                                                                                                                           |
 | hideWindow       | Boolean | true       | (Windows) Masquer la fenêtre de l'application (si possible) ou la console Windows                                                                                                                                                                                                                                                                                                                                            |
@@ -119,7 +123,7 @@ Voici la séquence des appels de callbacks :
 
 :::info
 
-Pour que les fonctions de rappel soient appelées lorsque vous n'utilisez pas [`wait()`](#wait) (appel asynchrone), le process doit être un [process worker](../Develop/processes.md#worker-processes) créé avec [`CALL WORKER`](../commands-legacy/call-worker.md), et NON [`New process`](../commands-legacy/new-process.md).
+Pour que les fonctions de rappel soient appelées lorsque vous n'utilisez pas [`wait()`](#wait) (appel asynchrone), le process doit être un [process worker](../Develop/processes.md#worker-processes) créé avec [`CALL WORKER`](../commands/call-worker), et NON [`New process`](../commands/new-process).
 
 :::
 
@@ -324,7 +328,7 @@ $output:=$worker.response
 
 #### Description
 
-The `.commandLine` property <!-- REF #SystemWorkerClass.commandLine.Summary -->contains the command line passed as parameter to the [`new()`](#4dsystemworkernew) function<!-- END REF -->.
+La propriété `.commandLine` <!-- REF #SystemWorkerClass.commandLine.Summary -->contient la ligne de commande passée en paramètre à la fonction [`new()`](#4dsystemworkernew)<!-- END REF -->.
 
 Cette propriété est en **lecture seule**.
 
@@ -587,3 +591,4 @@ Pendant une exécution `.wait()`, les fonctions de callback sont exécutées, en
 > Cette fonction n'est pas nécessaire si vous avez créé le `SystemWorker` à partir d'un process worker 4D.
 
 <!-- END REF -->
+

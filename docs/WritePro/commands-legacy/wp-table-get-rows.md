@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-table-get-rows
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Table get rows.Syntax-->**WP Table get rows** ( *targetObj* : Object ) : Object<br/>**WP Table get rows** ( *tableRef* : Object ; startRow {; *numRows* : Integer} ) : Object<br/>**WP Table get rows** ( *tableRef* : Object ; *headers* : Text ) : Object<!-- END REF-->
+<!--REF #_command_.WP Table get rows.Syntax-->**WP Table get rows** ( *targetObj* : Object ) : Object<br/>**WP Table get rows** ( *tableRef* : Object ; startRow : Integer {; *numRows* : Integer} ) : Object<br/>**WP Table get rows** ( *tableRef* : Object ; *headers* : Text ) : Object<!-- END REF-->
 <!--REF #_command_.WP Table get rows.Params-->
 <div class="no-index">
 
@@ -117,6 +117,6 @@ The following example:
 ## See also 
 
 [WP Insert table](wp-insert-table.md)  
-[WP Table append row](../commands/wp-table-append-row.md)  
+[WP Table append row](../commands/wp-table-append-row)  
 [WP Table get cells](wp-table-get-cells.md)  
 [WP Table get columns](wp-table-get-columns.md)  

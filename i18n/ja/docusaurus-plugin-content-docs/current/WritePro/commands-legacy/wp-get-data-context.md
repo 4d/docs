@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.WP Get data context.Summary-->**WP Get data context** コマンドは、 wpDoc 引数で指定したドキュメントのデータコンテキストを返します。<!-- END REF-->データコンテキストは、[WP SET DATA CONTEXT](wp-set-data-context.md) コマンドを使用することで定義されます。
+<!--REF #_command_.WP Get data context.Summary-->**WP Get data context** コマンドは、 wpDoc 引数で指定したドキュメントのデータコンテキストを返します。<!-- END REF-->データコンテキストは、[WP SET DATA CONTEXT](../commands/wp-set-data-context) コマンドを使用することで定義されます。
 
 *wpDoc* 引数には、データコンテキストを取得したい4D Write Pro ドキュメントを渡します。
 
@@ -63,4 +63,4 @@ method2 の中身は、例えば以下のようになっています:
 ## 参照 
 
   
-[WP SET DATA CONTEXT](wp-set-data-context.md)  
+[WP SET DATA CONTEXT](../commands/wp-set-data-context)  

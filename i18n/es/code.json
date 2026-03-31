@@ -45,7 +45,7 @@
     "message": "Administración Web"
   },
   "Command Line Interface": {
-    "message": "Interfaz de línea de\n          comando"
+    "message": "Interfaz de línea de comando"
   },
   "TLS Protocol": {
     "message": "Protocolo TLS"
@@ -801,15 +801,15 @@
     "description": "The ARIA label for search input"
   },
   "theme.SearchModal.searchBox.backToKeywordSearchButtonText": {
-    "message": "Back to keyword search",
+    "message": "Volver a la búsqueda de palabras clave",
     "description": "The text for back to keyword search button"
   },
   "theme.SearchModal.searchBox.backToKeywordSearchButtonAriaLabel": {
-    "message": "Back to keyword search",
+    "message": "Volver a la búsqueda de palabras clave",
     "description": "The ARIA label for back to keyword search button"
   },
   "theme.SearchModal.startScreen.recentConversationsTitle": {
-    "message": "Recent conversations",
+    "message": "Conversaciones recientes",
     "description": "The title for recent conversations"
   },
   "theme.SearchModal.startScreen.removeRecentConversationButtonTitle": {
@@ -825,7 +825,7 @@
     "description": "The disclaimer text for AI answers"
   },
   "theme.SearchModal.askAiScreen.relatedSourcesText": {
-    "message": "Related sources",
+    "message": "Fuentes relacionadas",
     "description": "The text for related sources"
   },
   "theme.SearchModal.askAiScreen.thinkingText": {

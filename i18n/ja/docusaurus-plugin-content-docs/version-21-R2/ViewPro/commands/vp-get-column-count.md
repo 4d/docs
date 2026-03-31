@@ -9,11 +9,16 @@ title: VP Get column count
 
 <!-- REF #_method_.VP Get column count.Params -->
 
-| 引数         | 型       |                             | 説明                                             |                  |
-| ---------- | ------- | --------------------------- | ---------------------------------------------- | ---------------- |
-| vpAreaName | Text    | ->                          | 4D View Pro エリアフォームオブジェクト名                     |                  |
-| sheet      | Integer | ->                          | シートのインデックス (省略した場合はカレントシート) |                  |
-| 戻り値        | Integer | <- | スタイルオブジェクト                                     | <!-- END REF --> |
+<div class="no-index">
+
+| 引数         | 型       |                             | 説明                                             |
+| ---------- | ------- | --------------------------- | ---------------------------------------------- |
+| vpAreaName | Text    | ->                          | 4D View Pro エリアフォームオブジェクト名                     |
+| sheet      | Integer | ->                          | シートのインデックス (省略した場合はカレントシート) |
+| 戻り値        | Integer | <- | スタイルオブジェクト                                     |
+
+</div>
+<!-- END REF -->
 
 ## 説明
 
@@ -28,7 +33,7 @@ title: VP Get column count
 以下のコードを実行すると、4D View Pro エリア内のカラムの数が返されます:
 
 ```4d
-C_INTEGER($colCount)
+var $colCount : Integer
 $colCount:=VP Get column count("ViewProarea")
 ```
 

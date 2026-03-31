@@ -11,11 +11,11 @@ title: VP REMOVE STYLESHEET
 
 <div class="no-index">
 
-| Paramètres | Type    |    | Description                                                                 |
-| ---------- | ------- | -- | --------------------------------------------------------------------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |
-| styleName  | Text    | -> | Nom du style à supprimer                                                    |
-| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
+| Paramètres | Type    |    | Description                                                                                                                           |
+| ---------- | ------- | -- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                                                                               |
+| styleName  | Text    | -> | Indique si les formules doivent être calculées uniquement lorsqu'elles sont demandées, la valeur par défaut est faux. |
+| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis)                                                           |
 
 </div>
 <!-- END REF -->

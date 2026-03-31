@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-The **WP Table range** command returns a range object that addresses only the tables that intersect with the *targetObj* you passed as parameter. It will return a range of the wk type table, even if the *targetObj* you passed as parameter does not contain a table. The table range object returned can be used by [WP GET ATTRIBUTES](../commands/wp-get-attributes.md) and [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) to handle attributes that apply to tables and table contents. 
+The **WP Table range** command returns a range object that addresses only the tables that intersect with the *targetObj* you passed as parameter. It will return a range of the wk type table, even if the *targetObj* you passed as parameter does not contain a table. The table range object returned can be used by [WP GET ATTRIBUTES](../commands/wp-get-attributes) and [WP SET ATTRIBUTES](../commands/wp-set-attributes) to handle attributes that apply to tables and table contents. 
 
 In the *targetObj* parameter, you can pass:
 

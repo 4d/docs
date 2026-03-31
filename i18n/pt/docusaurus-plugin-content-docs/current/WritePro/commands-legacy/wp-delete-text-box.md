@@ -40,4 +40,4 @@ Se quiser apagar uma text box usando seu ID:
 
 ## Ver também 
 
-[WP New text box](wp-new-text-box.md)  
+[WP New text box](../commands/wp-new-text-box)  

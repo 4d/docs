@@ -34,11 +34,13 @@ Los objetos Attachment ofrecen las siguientes propiedades y funciones de sólo l
 
 <!-- REF #4D.MailAttachment.new().Params -->
 
+<div class="no-index">
+
 | Parámetros  | Tipo                              |                             | Descripción                                                                                        |
 | ----------- | --------------------------------- | :-------------------------: | -------------------------------------------------------------------------------------------------- |
 | file        | 4D.File           |              ->             | Archivo adjunto                                                                                    |
 | zIPFile     | 4D.ZipFile        |              ->             | Archivo zip adjunto                                                                                |
-| blob        | 4D.Blob           |              ->             | BLOB que contiene el adjunto                                                                       |
+| blob        | 4D.Blob           |              ->             | BLOB que contiene el archivo adjunto                                                               |
 | path        | Text                              |              ->             | Ruta del archivo adjunto                                                                           |
 | name        | Text                              |              ->             | Nombre + extensión utilizados por el cliente de correo para designar el archivo adjunto            |
 | cid         | Text                              |              ->             | ID del archivo adjunto (sólo en mensajes HTML), o " " si no se requiere cid     |
@@ -46,6 +48,7 @@ Los objetos Attachment ofrecen las siguientes propiedades y funciones de sólo l
 | disposition | Text                              |              ->             | Valor del encabezado content-disposition: "inline" o "attachment". |
 | Resultado   | 4D.MailAttachment | <- | Objeto adjunto                                                                                     |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
@@ -77,10 +80,13 @@ La propiedad `.disposition` contiene <!-- REF #MailAttachmentClass.disposition.S
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo                    |                             | Descripción         |
 | ---------- | ----------------------- | :-------------------------: | ------------------- |
 | Resultado  | 4D.Blob | <- | Contenido del anexo |
 
+</div>
 <!-- END REF -->
 
 #### Descripción

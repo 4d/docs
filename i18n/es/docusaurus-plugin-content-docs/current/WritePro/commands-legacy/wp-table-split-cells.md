@@ -69,4 +69,4 @@ Para más detalles, consulte *Fusión y división de celdas*.
 ## Ver también 
 
 *Manejo de tablas*  
-[WP TABLE MERGE CELLS](wp-table-merge-cells.md)  
+[WP TABLE MERGE CELLS](../commands/wp-table-merge-cells)  

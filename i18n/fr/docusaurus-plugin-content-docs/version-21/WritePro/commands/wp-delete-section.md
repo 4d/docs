@@ -9,6 +9,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP DELETE SECTION.Params-->
 
+<div class="no-index">
+
 | Paramètres  | Type    |                             | Description                     |
 | ----------- | ------- | --------------------------- | ------------------------------- |
 | section     | Object  | &#8594; | Section 4D Write Pro            |
@@ -16,6 +18,7 @@ displayed_sidebar: docs
 | indexNumber | Integer | &#8594; | Index de la section à supprimer |
 | count       | Integer | &#8594; | Nombre de sections à supprimer  |
 
+</div>
 <!-- END REF-->
 
 ## Description
