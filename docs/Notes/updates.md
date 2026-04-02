@@ -25,6 +25,7 @@ title: Release Notes
 
 - The [`JSON Validate`](../commands/json-validate) command now takes the *$schema* key into account and generates an error if a non-supported version is declared in the schema. 
 - For clarity, formula objects are now instances of a new [`4D.Formula`](../API/FormulaClass.md) class that inherits from the generic [`4D.Function`](../API/FunctionClass.md) class.
+- In 4D 21 R3, new improvements to the [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) apply to language commands (see [this blog post](https://blog.4d.com/enhancement-of-command-syntax-checking-in-the-editor)). Syntax errors that were previously undetected may now be flagged in your code. 
 - The "PHP" page has been removed from the [Settings dialog box](../settings/overview.md). Use the [PHP selectors with the `SET DATABASE PARAMETER`](../commands/set-database-parameter#php-interpreter-ip-address-55) command to configure a PHP interpeter. 
 - The **Legacy** network layer is no longer supported as of 4D 21 R3. Projects and binary databases that were using the Legacy network layer are automatically set to [**ServerNet**](../settings/client-server.md#network-layer) when upgraded to 4D 21 R3 and higher. 
 
@@ -34,7 +35,7 @@ Read [**What’s new in 4D 21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/),
 
 #### Highlights
 
-- [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) has been enhanced to provide greater precision in error detection (see [this blog post](https://blog.4d.com/better-error-handling-and-type-inference-for-4d-developers) for more information).
+- The [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) has been enhanced to provide greater precision in error detection (see [this blog post](https://blog.4d.com/better-error-handling-and-type-inference-for-4d-developers) for more information).
 - [4D Write Pro standard actions](../WritePro/user-legacy/standard-actions.md) that apply [lists](../WritePro/user-legacy/using-a-4d-write-pro-area.md#lists) now automatically adjust paragraph margins to keep markers positioned inside it.
 - Built-in support of `order by` in query strings for AI vector searches using [`query()`](../API/DataClassClass.md#query-by-vector-similarity) functions and the [REST API](../REST/$orderby.md).
 - You can now create and open Qodly Pages from the [Explorer](../Develop/explorer.md).
