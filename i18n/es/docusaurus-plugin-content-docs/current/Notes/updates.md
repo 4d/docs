@@ -23,6 +23,7 @@ title: Notas del lanzamiento
 
 - El comando [`JSON Validate`](../commands/json-validate) ahora tiene en cuenta la llave *$schema* y genera un error si se declara una versión no soportada en el esquema.
 - For clarity, formula objects are now instances of a new [`4D.Formula`](../API/FormulaClass.md) class that inherits from the generic [`4D.Function`](../API/FunctionClass.md) class.
+- In 4D 21 R3, new improvements to the [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) apply to language commands (see [this blog post](https://blog.4d.com/enhancement-of-command-syntax-checking-in-the-editor)). Syntax errors that were previously undetected may now be flagged in your code.
 - The "PHP" page has been removed from the [Settings dialog box](../settings/overview.md). Use the [PHP selectors with the `SET DATABASE PARAMETER`](../commands/set-database-parameter#php-interpreter-ip-address-55) command to configure a PHP interpeter.
 - La capa de red **Legacy** ya no es soportada desde 4D 21 R3. Projects and binary databases that were using the Legacy network layer are automatically set to [**ServerNet**](../settings/client-server.md#network-layer) when upgraded to 4D 21 R3 and higher.
 
@@ -32,7 +33,7 @@ Lea [**Novedades en 4D 21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/), la 
 
 #### Lo más destacado
 
-- El [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) ha sido mejorado para ofrecer mayor precisión en la detección de errores (ver [esta entrada del blog](https://blog.4d.com/better-error-handling-and-type-inference-for-4d-developers) para más información).
+- The [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) has been enhanced to provide greater precision in error detection (see [this blog post](https://blog.4d.com/better-error-handling-and-type-inference-for-4d-developers) for more information).
 - Las [acciones estándar de 4D Write Pro](../WritePro/user-legacy/standard-actions.md) que aplican [listas](../WritePro/user-legacy/using-a-4d-write-pro-area.md#lists) ahora ajustan automáticamente los márgenes de los párrafos para mantener los marcadores posicionados al interior de este margen.
 - Soporte integrado de `order by` en las cadenas de consulta para búsquedas vectoriales IA utilizando las funciones [`query()`](../API/DataClassClass.md#query-by-vector-similarity) y la [API REST](../REST/$orderby.md).
 - Ahora puede crear y abrir Páginas Qodly desde el [Explorador](../Develop/explorer.md).
