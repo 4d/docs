@@ -5,7 +5,7 @@ slug: /commands/svg-set-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG SET ATTRIBUTE.Syntax-->**SVG SET ATTRIBUTE** ( * ; *pictureObject* : Text ; *element_ID* : Text ; ...(*attribName* : Text ; *attribValue* : Text, Integer) {; *})<br/>**SVG SET ATTRIBUTE** (  *pictureObject* : Variable, Field; *element_ID* : Text ;...(*attribName* : Text ; *attribValue* : Text, Integer) {; *})<!-- END REF-->
+<!--REF #_command_.SVG SET ATTRIBUTE.Syntax-->**SVG SET ATTRIBUTE** ( * ; *pictureObject* : Text ; *element_ID* : Text ; ...(*attribName* : Text ; *attribValue* : Text, Integer, Boolean) {; *})<br/>**SVG SET ATTRIBUTE** (  *pictureObject* : Variable, Field; *element_ID* : Text ;...(*attribName* : Text ; *attribValue* : Text, Integer, Boolean) {; *})<!-- END REF-->
 <!--REF #_command_.SVG SET ATTRIBUTE.Params-->
 <div class="no-index">
 
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 | pictureObject | Text, Variable, Field | &#8594;  | Object name (if * specified) or <br/>Variable or field (if * omitted) |
 | element_ID | Text | &#8594;  | ID of element where one or more attributes are set |
 | attribName | Text | &#8594;  | Attribute to be specified |
-| attribValue | Text, Integer | &#8594;  | New value of attribute |
+| attribValue | Text, Integer, Boolean | &#8594;  | New value of attribute |
 | * | Operator | &#8594;  | If passed = modify SVG image itself |
 </div>
 <!-- END REF-->

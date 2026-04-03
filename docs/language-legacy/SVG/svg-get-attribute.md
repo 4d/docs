@@ -5,7 +5,7 @@ slug: /commands/svg-get-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG GET ATTRIBUTE.Syntax-->**SVG GET ATTRIBUTE** ( * ; *pictureObject* : Text ; *element_ID* : Text ; *attribName* : Text ; *attribValue* : Text, Integer )<br/>**SVG GET ATTRIBUTE** ( *pictureObject* : Variable, Field ; *element_ID* : Text ; *attribName* : Text ; *attribValue* : Text, Integer )<!-- END REF-->
+<!--REF #_command_.SVG GET ATTRIBUTE.Syntax-->**SVG GET ATTRIBUTE** ( * ; *pictureObject* : Text ; *element_ID* : Text ; *attribName* : Text ; *attribValue* : Text, Integer, Boolean )<br/>**SVG GET ATTRIBUTE** ( *pictureObject* : Variable, Field ; *element_ID* : Text ; *attribName* : Text ; *attribValue* : Text, Integer, Boolean )<!-- END REF-->
 <!--REF #_command_.SVG GET ATTRIBUTE.Params-->
 <div class="no-index">
 
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 | pictureObject | Text, Variable, Field | &#8594;  | Object name (if * specified) or <br/>Variable or field (if * omitted) |
 | element_ID | Text | &#8594;  | ID of element whose attribute value you want to get |
 | attribName | Text | &#8594;  | Attribute whose value you want to get |
-| attribValue | Text, Integer | &#8592; | Current value of attribute |
+| attribValue | Text, Integer, Boolean | &#8592; | Current value of attribute |
 </div>
 <!-- END REF-->
 

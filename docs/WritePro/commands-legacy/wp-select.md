@@ -5,14 +5,14 @@ slug: /WritePro/commands/wp-select
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP SELECT.Syntax-->**WP SELECT** ( {{* ;} *wpArea* : Text, Object;} {*targetObj* : Object} {; *startRange* : Integer ; *endRange* : Integer} )<!-- END REF-->
+<!--REF #_command_.WP SELECT.Syntax-->**WP SELECT** ( * ; *wpArea* : Text {; *targetObj* : Object} {; *startRange* : Integer ; *endRange* : Integer} )<br/>**WP SELECT** ( *wpArea* : Variable, Field {; *targetObj* : Object} {; *startRange* : Integer ; *endRange* : Integer} )<!-- END REF-->
 <!--REF #_command_.WP SELECT.Params-->
 <div class="no-index">
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, wpArea is a form object name (string). If omitted, wpArea is an object field or variable (document) |
-| wpArea | Text, Object | &#8594;  | Form object name (if * is specified) or 4D Write Pro object variable or field (if * is omitted) |
+| wpArea | Text, Variable, Field | &#8594;  | Form object name (if * is specified) or 4D Write Pro object variable or field (if * is omitted) |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | startRange | Integer | &#8594;  | Starting offset of text range |
 | endRange | Integer | &#8594;  | Ending offset of text range |
