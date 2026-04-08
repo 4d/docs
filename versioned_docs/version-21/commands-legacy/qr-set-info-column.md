@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | area | Integer | &#8594;  | Reference of the area |
 | colNum | Integer | &#8594;  | Column number |
 | title | Text | &#8594;  | Title of the column |
-| object | Field, Variable | &#8594;  | Object assigned for that column |
+| object | Text, Pointer | &#8594;  | Object assigned for that column |
 | hide | Integer | &#8594;  | 0 = displayed, 1 = hidden |
 | size | Integer | &#8594;  | Column size |
 | repeatedValue | Integer | &#8594;  | 0 = not repeated, 1 = repeated |

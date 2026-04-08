@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定時: pictureObjectはオブジェクト名 (文字) <br/>省略時: pictureObjectは変数 |
-| pictureObject | Picture | &#8594;  | オブジェクト名 (* 指定時) または変数またはフィールド (* 省略時) |
+| pictureObject | Text, Variable, Field | &#8594;  | オブジェクト名 (* 指定時) または変数またはフィールド (* 省略時) |
 | id | Text | &#8594;  | 表示する要素のID属性 |
 | margin | Integer | &#8594;  | 表示のマージン (デフォルトでピクセル単位) |
 </div>

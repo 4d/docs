@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | * | 演算子 | &#8594;  | 指定時: pictureObjectはオブジェクト名 (文字) <br/>省略時: pictureObjectは変数 |
-| pictureObject | Picture | &#8594;  | オブジェクト名 (* 指定時) またはフィールドや変数 (* 省略時) |
+| pictureObject | Text, Variable, Field | &#8594;  | オブジェクト名 (* 指定時) またはフィールドや変数 (* 省略時) |
 | x | Integer | &#8594;  | 選択領域の左上の横座標 |
 | y | Integer | &#8594;  | 選択領域の左上の縦座標 |
 | width | Integer | &#8594;  | 選択領域の幅 |

@@ -5,14 +5,14 @@ slug: /commands/svg-find-element-ids-by-rect
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG Find element IDs by rect.Syntax-->**SVG Find element IDs by rect** ( {* ;} *pictureObject* : Picture ; *x* : Integer ; *y* : Integer ; *width* : Integer ; *height* : Integer ; *arrIDs* : Text array ) : Boolean<!-- END REF-->
+<!--REF #_command_.SVG Find element IDs by rect.Syntax-->**SVG Find element IDs by rect** ( * ; *pictureObject* : Text ; *x* : Integer ; *y* : Integer ; *width* : Integer ; *height* : Integer ; *arrIDs* : Text array ) : Boolean<br/>**SVG Find element IDs by rect** ( *pictureObject* : Variable, Field ; *x* : Integer ; *y* : Integer ; *width* : Integer ; *height* : Integer ; *arrIDs* : Text array ) : Boolean<!-- END REF-->
 <!--REF #_command_.SVG Find element IDs by rect.Params-->
 <div class="no-index">
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, pictureObject is an object name (string) <br/>If omitted, pictureObject is a variable |
-| pictureObject | Picture | &#8594;  | Object name (if * specified) or <br/>Field or variable (if * omitted) |
+| pictureObject | Text, Variable, Field | &#8594;  | Object name (if * specified) or <br/>Field or variable (if * omitted) |
 | x | Integer | &#8594;  | Horizontal coordinate of top left corner of selection rectangle |
 | y | Integer | &#8594;  | Vertical coordinate of top left corner of selection rectangle |
 | width | Integer | &#8594;  | Width of selection rectangle |
