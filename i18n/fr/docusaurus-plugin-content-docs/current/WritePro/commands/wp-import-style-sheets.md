@@ -11,27 +11,27 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres | Type   |                             | Description                                    |
-| ---------- | ------ | --------------------------- | ---------------------------------------------- |
-| targetDoc  | Object | &#8594; | 4D Write Pro document to receive style sheets  |
-| sourceDoc  | Object | &#8594; | 4D Write Pro document to get style sheets from |
+| Paramètres | Type   |                             | Description                                                 |
+| ---------- | ------ | --------------------------- | ----------------------------------------------------------- |
+| targetDoc  | Object | &#8594; | Document 4D Write Pro qui reçoit les feuilles de style      |
+| sourceDoc  | Object | &#8594; | Document 4D Write Pro pour obtenir des feuilles de style de |
 
 </div>
 <!-- END REF-->
 
 ## Description
 
-<!--REF #_command_.WP IMPORT STYLE SHEETS.Summary-->The **WP IMPORT STYLE SHEETS** command imports all of the style sheets from the *sourceDoc* into the *targetDoc*.<!-- END REF-->
+<!--REF #_command_.WP IMPORT STYLE SHEETS.Summary-->La commande **WP IMPORT STYLE SHEETS** importe toutes les feuilles de style du *sourceDoc* dans le *targetDoc*.<!-- END REF-->
 
-In the *targetDoc* parameter, pass the 4D Write Pro document that will receive the imported style sheets.
+Dans le paramètre *targetDoc*, passez le document 4D Write Pro qui recevra les feuilles de style importées.
 
-In the *sourceDoc* parameter, pass the 4D Write Pro document containing the style sheets to import.
+Dans le paramètre *sourceDoc*, passez le document 4D Write Pro contenant les feuilles de style à importer.
 
-**Note**: If a style sheet from *sourceDoc* has the same name as a style sheet in *targetDoc*, the imported style sheet will overwrite (replace) the style sheet in the *targetDoc*.
+**Note** : Si une feuille de style de *sourceDoc* a le même nom qu'une feuille de style dans *targetDoc*, la feuille de style importée écrasera (remplace) la feuille de style dans le *targetDoc*.
 
 ## Exemple
 
-You want to import a template style sheet and receive a notification with the number for each type of style sheet imported:
+Vous souhaitez importer une feuille de style nommée template et recevoir une notification avec le numéro de chaque type de feuille de style importée :
 
 ```4d
  wpArea:=WP New

@@ -875,9 +875,9 @@ title: Comandos por nombre
 [`Printing page`](../commands-legacy/printing-page.md)<br/>
 [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md)<br/>
 [`Process aborted`](../commands-legacy/process-aborted.md)<br/>
-[`Process activity`](process-activity.md) - **modified 4D 20 R7**<br/>
-[`Process info`](process-info.md) - **new 4D 20 R7**<br/>
-[`Process number`](process-number.md) - **modified 4D 20 R7**<br/>
+[`Process activity`](process-activity.md) - **modificado 4D 20 R7**<br/>
+[`Process info`](process-info.md) - **nuevo 4D 20 R7**<br/>
+[`Process number`](process-number.md) - **modificado 4D 20 R7**<br/>
 [`Process state`](../commands-legacy/process-state.md)<br/>
 [`PUSH RECORD`](../commands-legacy/push-record.md)<br/>
 
@@ -1261,7 +1261,7 @@ title: Comandos por nombre
 [`WA Evaluate JavaScript`](../commands-legacy/wa-evaluate-javascript.md)<br/>
 [`WA EXECUTE JAVASCRIPT FUNCTION`](../commands-legacy/wa-execute-javascript-function.md)<br/>
 [`WA Forward URL available`](../commands-legacy/wa-forward-url-available.md)<br/>
-[`WA Get context`](../commands/wa-get-context.md) **new 4D 20 R9**<br/>
+[`WA Get context`](../commands/wa-get-context.md) **nuevo 4D 20 R9**<br/>
 [`WA Get current URL`](../commands-legacy/wa-get-current-url.md)<br/>
 [`WA GET EXTERNAL LINKS FILTERS`](../commands-legacy/wa-get-external-links-filters.md)<br/>
 [`WA Get last filtered URL`](../commands-legacy/wa-get-last-filtered-url.md)<br/>
@@ -1277,7 +1277,7 @@ title: Comandos por nombre
 [`WA OPEN WEB INSPECTOR`](../commands-legacy/wa-open-web-inspector.md)<br/>
 [`WA REFRESH CURRENT URL`](../commands-legacy/wa-refresh-current-url.md)<br/>
 [`WA Run offscreen area`](../commands-legacy/wa-run-offscreen-area.md)<br/>
-[`WA SET CONTEXT`](../commands/wa-set-context.md)  **new 4D 20 R9**<br/>
+[`WA SET CONTEXT`](../commands/wa-set-context.md)  **nuevo 4D 20 R9**<br/>
 [`WA SET EXTERNAL LINKS FILTERS`](../commands-legacy/wa-set-external-links-filters.md)<br/>
 [`WA SET PAGE CONTENT`](../commands-legacy/wa-set-page-content.md)<br/>
 [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md)<br/>

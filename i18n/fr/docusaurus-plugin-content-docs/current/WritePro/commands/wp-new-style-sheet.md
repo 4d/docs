@@ -11,13 +11,13 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres     | Type    |                             | Description                             |
-| -------------- | ------- | --------------------------- | --------------------------------------- |
-| wpDoc          | Object  | &#8594; | Document 4D Write Pro                   |
-| styleSheetType | Integer | &#8594; | Type of style sheet                     |
-| styleSheetName | Text    | &#8594; | Name of style sheet                     |
-| listLevelCount | Integer | &#8594; | Total number of levels in the hierarchy |
-| Résultat       | Object  | &#8592; | Objet feuille de style                  |
+| Paramètres     | Type    |                             | Description                                |
+| -------------- | ------- | --------------------------- | ------------------------------------------ |
+| wpDoc          | Object  | &#8594; | Document 4D Write Pro                      |
+| styleSheetType | Integer | &#8594; | Type de la feuille de style                |
+| styleSheetName | Text    | &#8594; | Nom de la feuille de style                 |
+| listLevelCount | Integer | &#8594; | Nombre total de niveaux dans la hiérarchie |
+| Résultat       | Object  | &#8592; | Objet feuille de style                     |
 
 </div>
 <!-- END REF-->
@@ -25,10 +25,10 @@ displayed_sidebar: docs
 <div class="no-index">
 <details><summary>Historique</summary>
 
-| Release  | Modifications                    |
-| -------- | -------------------------------- |
-| 4D 18    | Created                          |
-| 4D 21 R3 | *listLevelCount* parameter added |
+| Release  | Modifications                       |
+| -------- | ----------------------------------- |
+| 4D 18    | Created                             |
+| 4D 21 R3 | Ajout du paramètre *listLevelCount* |
 
 </details>
 </div>

@@ -23,9 +23,9 @@ title: Commandes 4D Write Pro
 [`WP DELETE FOOTER`](../commands/wp-delete-footer)<br/>
 [`WP DELETE HEADER`](../commands/wp-delete-header)<br/>
 [`WP DELETE PICTURE`](../commands/wp-delete-picture)<br/>
-[`WP DELETE SECTION`](../commands/wp-delete-section) ***New 4D 20 R7***<br/>
-[`WP DELETE STYLE SHEET`](../commands/wp-delete-style-sheet) ***Modified 4D 21 R3***<br/>
-[`WP DELETE SUBSECTION`](wp-delete-subsection.md) ***Modified 4D 20 R7***<br/>
+[`WP DELETE SECTION`](../commands/wp-delete-section) ***nouveau 4D 20 R7***<br/>
+[`WP DELETE STYLE SHEET`](../commands/wp-delete-style-sheet) ***Modifié 4D 21 R3***<br/>
+[`WP DELETE SUBSECTION`](wp-delete-subsection.md) ***Modifié 4D 20 R7***<br/>
 [`WP DELETE TEXT BOX`](../commands/wp-delete-text-box)
 
 <a id="E"><b>E</b></a>
@@ -42,7 +42,7 @@ title: Commandes 4D Write Pro
 
 <a id="G"><b>G</b></a>
 
-[`WP GET ATTRIBUTES`](wp-get-attributes.md) ***Modified 4D 20 R8***<br/>
+[`WP GET ATTRIBUTES`](wp-get-attributes.md) ***Modifié 4D 20 R8***<br/>
 [`WP Get body`](../commands/wp-get-body)<br/>
 [`WP GET BOOKMARKS`](../commands/wp-get-bookmarks)<br/>
 [`WP Get breaks`](../commands/wp-get-breaks)<br/>
@@ -58,7 +58,7 @@ title: Commandes 4D Write Pro
 [`WP Get position`](../commands/wp-get-position)<br/>
 [`WP Get section`](../commands/wp-get-section)<br/>
 [`WP Get sections`](../commands/wp-get-sections)<br/>
-[`WP Get style sheet`](../commands/wp-get-style-sheet) ***Modified 4D 21 R3***<br/>
+[`WP Get style sheet`](../commands/wp-get-style-sheet) ***Modifié 4D 21 R3***<br/>
 [`WP Get style sheets`](../commands/wp-get-style-sheets)<br/>
 [`WP Get subsection`](../commands/wp-get-subsection)<br/>
 [`WP Get text`](../commands/wp-get-text)<br/>
@@ -66,12 +66,12 @@ title: Commandes 4D Write Pro
 
 <a id="I"><b>I</b></a>
 
-[`WP Import document`](wp-import-document.md) ***Modified 4D 20 R8***<br/>
+[`WP Import document`](wp-import-document.md) ***Modifié 4D 20 R8***<br/>
 [`WP IMPORT STYLE SHEETS`](../commands/wp-import-style-sheets)<br/>
-[`WP INSERT BREAK`](wp-insert-break.md) ***Modified 4D 20 R8***<br/>
-[`WP Insert document body`](wp-insert-document-body.md) ***Modified 4D 20 R8***<br/>
-[`WP INSERT FORMULA`](wp-insert-formula.md) ***Modified 4D 20 R8***<br/>
-[`WP INSERT PICTURE`](wp-insert-picture.md) ***Modified 4D 20 R8***<br/>
+[`WP INSERT BREAK`](wp-insert-break.md) ***Modifié 4D 20 R8***<br/>
+[`WP Insert document body`](wp-insert-document-body.md) ***Modifié 4D 20 R8***<br/>
+[`WP INSERT FORMULA`](wp-insert-formula.md) ***Modifié 4D 20 R8***<br/>
+[`WP INSERT PICTURE`](wp-insert-picture.md) ***Modifié 4D 20 R8***<br/>
 [`WP Insert table`](../commands/wp-insert-table)<br/>
 [`WP Is font style supported`](../commands/wp-is-font-style-supported)
 
@@ -81,7 +81,7 @@ title: Commandes 4D Write Pro
 [`WP NEW BOOKMARK`](../commands/wp-new-bookmark)<br/>
 [`WP New footer`](../commands/wp-new-footer)<br/>
 [`WP New header`](../commands/wp-new-header)<br/>
-[`WP New style sheet`](../commands/wp-new-style-sheet) ***Modified 4D 21 R3***<br/>
+[`WP New style sheet`](../commands/wp-new-style-sheet) ***Modifié 4D 21 R3***<br/>
 [`WP New subsection`](../commands/wp-new-subsection)<br/>
 [`WP New text box`](../commands/wp-new-text-box)
 
@@ -99,7 +99,7 @@ title: Commandes 4D Write Pro
 
 [`WP SELECT`](../commands/wp-select)<br/>
 [`WP Selection range`](../commands/wp-selection-range)<br/>
-[`WP SET ATTRIBUTES`](wp-set-attributes.md) ***Modified 4D 20 R8***<br/>
+[`WP SET ATTRIBUTES`](wp-set-attributes.md) ***Modifié 4D 20 R8***<br/>
 [`WP SET DATA CONTEXT`](../commands/wp-set-data-context)<br/>
 [`WP SET FRAME`](../commands/wp-set-frame)<br/>
 [`WP SET LINK`](../commands/wp-set-link)<br/>
@@ -108,7 +108,7 @@ title: Commandes 4D Write Pro
 
 <a id="T"><b>T</b></a>
 
-[`WP Table append row`](wp-table-append-row.md) ***Modified 4D 20 R8***<br/>
+[`WP Table append row`](wp-table-append-row.md) ***Modifié 4D 20 R8***<br/>
 [`WP TABLE DELETE COLUMNS`](../commands/wp-table-delete-columns)<br/>
 [`WP TABLE DELETE ROWS`](../commands/wp-table-delete-rows)<br/>
 [`WP Table get cells`](../commands/wp-table-get-cells)<br/>

@@ -11,12 +11,12 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres     | Type    |                             | Description                               |
-| -------------- | ------- | --------------------------- | ----------------------------------------- |
-| wpDoc          | Object  | &#8594; | Document 4D Write Pro                     |
-| styleSheetName | Text    | &#8594; | Style sheet name                          |
-| listLevelIndex | Integer | &#8594; | Level of the style sheet in the hierarchy |
-| Résultat       | Object  | &#8592; | Objet feuille de style                    |
+| Paramètres     | Type    |                             | Description                                      |
+| -------------- | ------- | --------------------------- | ------------------------------------------------ |
+| wpDoc          | Object  | &#8594; | Document 4D Write Pro                            |
+| styleSheetName | Text    | &#8594; | Style sheet name                                 |
+| listLevelIndex | Integer | &#8594; | Niveau de la feuille de style dans la hiérarchie |
+| Résultat       | Object  | &#8592; | Objet feuille de style                           |
 
 </div>
 <!-- END REF-->
@@ -24,10 +24,10 @@ displayed_sidebar: docs
 <div class="no-index">
 <details><summary>Historique</summary>
 
-| Release  | Modifications                    |
-| -------- | -------------------------------- |
-| 4D 18    | Created                          |
-| 4D 21 R3 | *listLevelIndex* parameter added |
+| Release  | Modifications                       |
+| -------- | ----------------------------------- |
+| 4D 18    | Created                             |
+| 4D 21 R3 | Ajout du paramètre *listLevelIndex* |
 
 </details>
 </div>

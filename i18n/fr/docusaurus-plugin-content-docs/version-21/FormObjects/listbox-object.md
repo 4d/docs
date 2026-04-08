@@ -7,12 +7,12 @@ title: List Box Object
 
 Dans une list box de type tableau, chaque colonne est associée à un tableau 4D à une dimension ; tous les types de tableaux peuvent être utilisés, à l’exception des tableaux de pointeurs. Le nombre de lignes est basé sur le nombre d’éléments du tableau.
 
-Par défaut, 4D affecte le nom “ColonneN” à chaque variable de colonne. You can change it, as well as other column properties, in the [column properties](./listbox-column.md). The display format for each column can also be defined using the [`OBJECT SET FORMAT`](../commands-legacy/object-set-format.md) command.
+Par défaut, 4D affecte le nom “ColonneN” à chaque variable de colonne. You can change it, as well as other column properties, in the [column properties](./listbox-column.md). Le format d'affichage de chaque colonne peut également être défini à l'aide de la commande [`OBJECT SET FORMAT`](../commands-legacy/object-set-format.md).
 
 > Les list box basées sur des tableaux peuvent être affichées sous forme de [list box hiérarchiques](listbox_overview.md#list-box-hierarchiques), disposant de mécanismes spécifiques.
 
 Avec les list box de type tableau, les valeurs des colonnes (saisie et affichage) sont gérées à l’aide des commandes du langage 4D. Vous pouvez également associer une [énumération](properties_DataSource.md#choice-list) à une colonne afin de contrôler la saisie.
-The values of columns are managed using high-level List box commands (such as [`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows) or [`LISTBOX DELETE ROWS`](../commands-legacy/listbox-delete-rows.md)) as well as array manipulation commands. Par exemple, pour initialiser le contenu d’une colonne, vous pouvez utiliser l’instruction suivante :
+Les valeurs des colonnes sont gérées à l'aide de commandes List box de haut niveau (telles que [`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows) ou [`LISTBOX DELETE ROWS`](../commands-legacy/listbox-delete-rows.md)) ainsi que de commandes de manipulation de tableaux. Par exemple, pour initialiser le contenu d’une colonne, vous pouvez utiliser l’instruction suivante :
 
 ```4d
 ARRAY TEXT(varCol;size)
@@ -28,7 +28,7 @@ LIST TO ARRAY("ListName";varCol)
 
 ## List box de type sélection
 
-Dans ce type de list box, chaque colonne peut être associée à un champ (par exemple `[Employees]LastName)` ou à une expression. L’expression peut être basée sur un ou plusieurs champs (par exemple `[Employés]Nom+“ ”+[Employés]Prénom`) ou être simplement une formule (par exemple`String(Milliseconds)`). L’expression peut également être une méthode projet, une variable ou un élément de tableau. You can use the [`LISTBOX SET COLUMN FORMULA`](../commands-legacy/listbox-set-column-formula.md) and [`LISTBOX INSERT COLUMN FORMULA`](../commands-legacy/listbox-insert-column-formula.md) commands to modify columns programmatically.
+Dans ce type de list box, chaque colonne peut être associée à un champ (par exemple `[Employees]LastName)` ou à une expression. L’expression peut être basée sur un ou plusieurs champs (par exemple `[Employés]Nom+“ ”+[Employés]Prénom`) ou être simplement une formule (par exemple`String(Milliseconds)`). L’expression peut également être une méthode projet, une variable ou un élément de tableau. Vous pouvez utiliser les commandes [`LISTBOX SET COLUMN FORMULA`](../commands-legacy/listbox-set-column-formula.md) et [`LISTBOX INSERT COLUMN FORMULA`](../commands-legacy/listbox-insert-column-formula.md) pour modifier les colonnes par programmation.
 
 Le contenu de chaque ligne est ensuite évalué en fonction d'une sélection d'enregistrements : la **sélection courante** d'une table ou une **sélection temporaire**.
 

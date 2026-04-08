@@ -5,11 +5,11 @@ title: デスクトップセッション
 
 ## 概要
 
-A desktop session is a user-related execution context on 4D Server, 4D remote, or 4D single-user that **does not result from any web or REST access**.
+デスクトップセッションとは、4D Server、4D リモートまたは4D シングルユーザー版のユーザー関連の実行コンテキストのうち、**Web やREST アクセスに起因するものではないもの**です。
 
 デスクトップセッションには以下のような種類が含まれます:
 
-- **Remote user sessions**: In client/server applications, remote users have their own sessions, managed from the client and from the server.
+- **リモートユーザー セッション**: クライアント/サーバーアプリケーションでは、リモートユーザーは、クライアントおよびサーバーから管理される独自のセッションを持ちます。
 - **ストアドプロシージャーセッション**: クライアント/サーバーアプリケーションにおいては、サーバー上で実行される全てのストアドプロシージャーを管理する固有のバーチャルユーザーセッション。
 - **スタンドアロンセッション**: シングルユーザーアプリケーション内で返されるローカルセッションオブジェクト(クライアント/サーバーアプリケーションの開発およびテストフェーズにおいて有用です)。
 
@@ -19,34 +19,34 @@ A desktop session is a user-related execution context on 4D Server, 4D remote, o
 
 [**Web ユーザーセッション**](../WebServer/sessions.md) 同様、デスクトップセッションで実行されたコードは[`Session`](../API/SessionClass.md) オブジェクトへのアクセスが可能で、これによって提供される関数やプロパティによって(例えば[`session.storage`](../API/SessionClass.md#storage) オブジェクトを使用することによって)セッションの値を保存したりユーザープロセス間で共有することが可能になります。
 
-しかしながら、Web ユーザーセッション内で実行されたコードとは違い、デスクトップセッション内で実行されたコードは[ロールと権限](../ORDA/privileges.md)によっては管理されません。 It can access any parts of the 4D application, including ORDA and data model classes (on 4D Server, [users and groups feature](../Users/handling_users_groups.md) can manage user accesses). Note also that desktop sessions do not require [scalable sessions](../WebServer/sessions.md#enabling-web-sessions) to be enabled.
+しかしながら、Web ユーザーセッション内で実行されたコードとは違い、デスクトップセッション内で実行されたコードは[ロールと権限](../ORDA/privileges.md)によっては管理されません。 これはORDA やデータモデルクラスを含め、4D アプリケーションのあるゆる箇所にアクセスすることが可能です(4D Server では、[ユーザーとグループ機能](../Users/handling_users_groups.md) を使用してユーザーアクセスを管理することができます)。 また、デスクトップセッションは[スケーラブルセッション](../WebServer/sessions.md#enabling-web-sessions) を有効化する必要がないという点に注意してください。
 
-You can nevertheless [**share** a remote session with a web session](#sharing-a-remote-session-for-web-accesses) so that desktop application users can access your 4D application through a web interface, using in particular **Qodly pages** and Web areas.
+それでも、[リモートセッションをWeb セッションと**共有** すること](#sharing-a-remote-session-for-web-accesses) ことができ、これによってデスクトップアプリケーションのユーザーは、具体的には**Qodly ページ**とWeb エリアを使用して、Web インターフェースを通して4D アプリケーションへとアクセスすることができます。
 
 ## リモートユーザーセッション {#remote-user-sessions}
 
-In client/server applications, when a user connects to the server, a **remote user session object** is created and available on both the server and the client. It is returned by the [`Session`](../commands/session) command on both machines.
+クライアント/サーバーアプリケーションにおいては、ユーザーがサーバーに接続すると、**リモートユーザーセッションオブジェクト**が作成され、サーバーとクライアントの両方から利用可能になります。 これは両方のマシンにおいて [`Session`](../commands/session) コマンドで返されます。
 
 このオブジェクトを扱うには、[`Session` クラス](../API/SessionClass.md) の関数とプロパティを使用します。
 
-### Comparing server-side and client-side user session objects {#comparing-server-side-and-client-side-user-session-objects}
+### サーバー側とクライアント側のユーザーセッションオブジェクトの比較{#comparing-server-side-and-client-side-user-session-objects}
 
-Depending on where the code is executed, a server-side or a client-side user `session` object is available. Both objects are similar, except that:
+コードが実行される場所に応じて、サーバー側またはクライアント側の `session` オブジェクトが利用可能です。 どちらのオブジェクトも似ていますが、以下の点で異なります:
 
-- their [`.storage`](../API/SessionClass.md#storage) properties are not the same object. A value stored in the `.storage` of the user session on the server will not be available in the `.storage` of the user session on the client and conversely.
-- for security reasons, the client-side session cannot execute functions that **modify** [privileges](../ORDA/privileges.md) ([`setPrivileges()`](../API/SessionClass.md#setprivileges), [`clearPrivileges()`](../API/SessionClass.md#clearprivileges), [`promote()`](../API/SessionClass.md#promote), [`demote()`](../API/SessionClass.md#demote), [`restore()`](../API/SessionClass.md#restore)). Calling these functions on a client generates an error.
+- それぞれの[`.storage`](../API/SessionClass.md#storage) プロパティは同じオブジェクトではありません。 サーバー側のユーザーセッションの `.storage` で保管されている値は、クライアント側のユーザーセッションの `.storage` では利用できず、その逆もまた同様です。
+- セキュリティ上の理由から、クライアント側のセッションからは、[権限](../ORDA/privileges.md) を**変更**する関数は実行できません([`setPrivileges()`](../API/SessionClass.md#setprivileges)、 [`clearPrivileges()`](../API/SessionClass.md#clearprivileges)、 [`promote()`](../API/SessionClass.md#promote)、 [`demote()`](../API/SessionClass.md#demote)、 [`restore()`](../API/SessionClass.md#restore))。 クライアント側でこれらの関数を呼び出した場合、エラーが生成されます。
 
 :::note
 
-Functions that read privileges can be called on both client and server sides ([`getPrivileges()`](../API/SessionClass.md#getprivileges), [`hasPrivilege()`](../API/SessionClass.md#hasprivilege), [`isGuest()`](../API/SessionClass.md#isguest))
+権限を読み出す関数は、クライアント側とサーバー側の両方で呼び出すことが可能です([`getPrivileges()`](../API/SessionClass.md#getprivileges)、 [`hasPrivilege()`](../API/SessionClass.md#hasprivilege)、 [`isGuest()`](../API/SessionClass.md#isguest))
 
 :::
 
 ### 効果
 
-You use the remote user `session` object to manage and share session data.
+セッションのデータを管理して共有するには、リモートユーザー側の `session` オブジェクトを使用します。
 
-Within each environment, a [session `storage`](../API/SessionClass.md#storage) object is shared across all processes of the same user session. For example on the server, you can launch a user authentication and verification procedure when a client connects to the server, involving entering a code sent by e-mail or SMS into the application. 次に、ユーザー情報をセッションの storage に追加し、サーバーがユーザーを識別できるようにします。 この方法により、4Dサーバーはすべてのクライアントプロセスのユーザー情報にアクセスできるため、ユーザーの役割に応じてカスタマイズされたコードを用意することができます。
+それぞれの環境において、[セッションの `storage`](../API/SessionClass.md#storage) オブジェクトは同じユーザーセッションの全てのプロセス間で共有されます。 たとえばサーバー上では、クライアントがサーバーに接続する際にユーザー認証手続きを開始し、メールや SMS で送信されたコードをアプリケーションに入力させることができます。 次に、ユーザー情報をセッションの storage に追加し、サーバーがユーザーを識別できるようにします。 この方法により、4Dサーバーはすべてのクライアントプロセスのユーザー情報にアクセスできるため、ユーザーの役割に応じてカスタマイズされたコードを用意することができます。
 
 Within each environment, you can use the remote user `session` object to [create an OTP](../API/SessionClass.md#createotp) and [share the remote session for web accesses](#sharing-a-remote-session-for-web-accesses).
 

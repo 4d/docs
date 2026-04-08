@@ -11,12 +11,12 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres     | Type    |                             | Description                               |
-| -------------- | ------- | --------------------------- | ----------------------------------------- |
-| styleSheetObj  | Object  | &#8594; | Objet feuille de style                    |
-| wpDoc          | Object  | &#8594; | Document 4D Write Pro                     |
-| listLevelIndex | Integer | &#8594; | Level of the style sheet in the hierarchy |
-| styleSheetName | Text    | &#8594; | Name of style sheet                       |
+| Paramètres     | Type    |                             | Description                                      |
+| -------------- | ------- | --------------------------- | ------------------------------------------------ |
+| styleSheetObj  | Object  | &#8594; | Objet feuille de style                           |
+| wpDoc          | Object  | &#8594; | Document 4D Write Pro                            |
+| listLevelIndex | Integer | &#8594; | Niveau de la feuille de style dans la hiérarchie |
+| styleSheetName | Text    | &#8594; | Nom de la feuille de style                       |
 
 </div>
 <!-- END REF-->
@@ -24,55 +24,55 @@ displayed_sidebar: docs
 <div class="no-index">
 <details><summary>Historique</summary>
 
-| Release  | Modifications                    |
-| -------- | -------------------------------- |
-| 4D 18    | Created                          |
-| 4D 21 R3 | *listLevelIndex* parameter added |
+| Release  | Modifications                       |
+| -------- | ----------------------------------- |
+| 4D 18    | Created                             |
+| 4D 21 R3 | Ajout du paramètre *listLevelIndex* |
 
 </details>
 </div>
 
 ## Description
 
-<!--REF #_command_.WP DELETE STYLE SHEET.Summary-->The **WP DELETE STYLE SHEET** command removes the designated paragraph or character style sheet from the current document.<!-- END REF--> When a style sheet is removed, every character or paragraph that it was applied to reverts to its original style (*i.e.* the default).
+<!--REF #_command_.WP DELETE STYLE SHEET.Summary-->La commande **WP DELETE STYLE SHEET** supprime la feuille de style de paragraphe ou de caractère désignée du document en cours.<!-- END REF--> Lorsqu'une feuille de style est supprimée, tous les caractères ou paragraphes auxquels elle s'appliquait reprennent leur style d'origine (c'est-à-dire la valeur par défaut).
 
-This command provides two ways to remove a style sheet. You can specify:
+Cette commande propose deux façons de supprimer une feuille de style. Vous pouvez spécifier :
 
-- the style sheet object (created with the [WP New style sheet](../WritePro/commands/wp-new-style-sheet) or returned by the [WP Get style sheet](../WritePro/commands/wp-get-style-sheet) command) to remove in the *styleSheetType* parameter, or
-- the 4D Write Pro document along with the name of the style sheet to remove in the *wpDoc* and *styleSheetName* parameters.
+- l'objet feuille de style (créé avec la commande [WP New style sheet](../WritePro/commands/wp-new-style-sheet) ou renvoyé par la commande [WP Get style sheet](../WritePro/commands/wp-get-style-sheet)) à supprimer via le paramètre *styleSheetType*, ou
+- le document 4D Write Pro ainsi que le nom de la feuille de style à supprimer dans les paramètres *wpDoc* et *styleSheetName*.
 
-When the style sheet to delete belongs to a [hierarchical list style sheet](../user-legacy/stylesheets.md#hierarchical-list-style-sheets), the behavior depends on the level being removed. You can delete:
+Lorsque la feuille de style à supprimer appartient à une [feuille de style de liste hiérarchique](../user-legacy/stylesheets.md#hierarchical-list-style-sheets), le comportement dépend du niveau supprimé. Vous pouvez supprimer :
 
-- the root-level style sheet, or
-- a specific sub-level style sheet by providing the optional *listLevelIndex* parameter.
+- la feuille de style au niveau de la racine, ou
+- une feuille de style de sous-niveau spécifique en fournissant le paramètre facultatif *listLevelIndex*.
 
-When you delete the root-level style sheet (by passing 1 in the *listLevelIndex* parameter or ommitting it), all associated sub-level style sheets are deleted automatically and the entire hierarchical structure is removed from the document.
+Lorsque vous supprimez la feuille de style du niveau racine (en passant 1 dans le paramètre *listLevelIndex* ou en l'omettant), toutes les feuilles de style des sous-niveaux associés sont automatiquement supprimées et l'ensemble de la structure hiérarchique est supprimée du document.
 
-When you delete a sub-level style sheet:
+Lorsque vous supprimez une feuille de style de sous-niveau :
 
-- The `wk list level index` of all subsequent sub-level style sheets is decremented to maintain continuous level numbering.
-- The names of the affected sub-level style sheets are updated to reflect their new level index.
-- The `wk list level count` attribute of the root style sheet and all remaining sub-level style sheets is decremented to match the new total number of levels.
+- L'indice `wk list level index` de toutes les feuilles de style de sous-niveau suivantes est décrémenté pour maintenir une numérotation continue des niveaux.
+- Les noms des feuilles de style de sous-niveau concernées sont mis à jour pour refléter leur nouvel indice de niveau.
+- L'attribut `wk list level count` de la feuille de style racine et de toutes les autres feuilles de style de sous-niveau est décrémenté pour correspondre au nouveau nombre total de niveaux.
 
-The command performs no action if the specified level does not exist, or if the style sheet is not part of a hierarchical list and *listLevelIndex* is greater than 1.
+La commande ne fait rien si le niveau spécifié n'existe pas, ou si la feuille de style ne fait pas partie d'une liste hiérarchique et que *listLevelIndex* est supérieur à 1.
 
-**Note**: The default ("Normal") style sheet can not be deleted.
+**Note** : La feuille de style par défaut ("Normal") ne peut pas être supprimée.
 
 ## Exemple
 
-The following example deletes the second level of a hierarchical list style sheet:
+L'exemple suivant supprime le deuxième niveau d'une feuille de style de liste hiérarchique :
 
 ```4d
-// Delete level 2 of the "MainList" hierarchical style sheet
-WP DELETE STYLE SHEET(wpArea; "MainList"; 2)
+// Supprimer le niveau 2 de la feuille de style hiérarchique "MainList"
+WP DELETE STYLE SHEET(wpArea ; "MainList" ; 2)
 ```
 
-After execution:
+Après l'exécution :
 
-- The `wk list level index` values are updated (former level 3 becomes level 2).
-- The `wk list level count` is decremented.
+- Les valeurs d'indice `wk list level index` sont mises à jour (l'ancien niveau 3 devient le niveau 2).
+- Le nombre `wk list level count` est décrémenté.
 
-To delete the entire hierarchical style sheet (root and all associated sub-levels):
+Pour supprimer l'ensemble de la feuille de style hiérarchique (racine et tous les sous-niveaux associés) :
 
 ```4d
 WP DELETE STYLE SHEET(wpArea; "MainList")
