@@ -453,7 +453,7 @@ Note over Qodly page: product.creationDate is "06/17/25" <br> and product.commen
 ```
 
 
-#### Example 5 (diagram): Qodly - Entity instanciated in a function
+#### Example 5 (diagram): Qodly - Entity instantiated in a function
 
 ```mermaid
 

@@ -28,7 +28,7 @@ Basically, ORDA handles objects. In ORDA, all main concepts, including the datas
 
 ORDA objects can be handled like 4D standard objects, but they automatically benefit from specific properties and methods.
 
-ORDA objects are created and instanciated when necessary by 4D methods (you do not need to create them). However, ORDA data model objects are associated with [classes where you can add custom functions](ordaClasses.md).
+ORDA objects are created and instantiated when necessary by 4D methods (you do not need to create them). However, ORDA data model objects are associated with [classes where you can add custom functions](ordaClasses.md).
 
 
 
