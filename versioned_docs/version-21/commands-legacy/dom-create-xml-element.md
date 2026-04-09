@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | elementRef | Text | &#8594;  | Root XML element reference |
 | xPath | Text | &#8594;  | XPath path of the XML element to create |
 | attribName | Text | &#8594;  | Attribute to set |
-| attrValue | Text, Boolean, Integer, Real, Time, Date | &#8594;  | New attribute value |
+| attrValue | any | &#8594;  | New attribute value |
 | Function result | Text | &#8592; | Reference of the created XML element |
 </div>
 <!-- END REF-->
