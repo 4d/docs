@@ -1,105 +1,105 @@
 ---
 id: async
-title: Asynchronous Execution
+title: 非同期実行
 ---
 
-4D supports both **synchronous** and **asynchronous** execution modes, allowing developers to choose the best approach based on performance, responsiveness, and workload distribution.
+4D では **同期的** および **非同期** な実行モードの両方をサポートしており、これによりデベロッパーがパフォーマンス、レスポンス、作業負荷分散に基づいて最適なアプローチを選択することができます。
 
 ## 基本
 
-#### Synchronous Execution
+#### 同期的実行
 
-Synchronous execution follows a **sequential** flow, a step-by-step where each instruction must complete before the next one starts. This means the execution thread is blocked until the operation finishes.
+同期実行は **シーケンシャル** なフローに従います。これはそれぞれの指示が、次の指示が始まるまでに完了するというステップ・バイ・ステップ方式です。 これはつまりオペレーションが完了するまで実行スレッドがブロックされるということを意味します。
 
-Synchronous execution is used when:
+同期的実行は以下のような場合で使用されます:
 
-- Task execution must follow a strict order.
-- Performance impact is minimal (e.g., quick operations).
-- Running in a single-threaded context where blocking is acceptable.
-- Synchronous execution blocks the UI and is best suited for quick, ordered tasks where blocking is acceptable.
+- タスクの実行が厳密な順番に従う必要があるとき。
+- パフォーマンスへの影響が最小限である(例: 素早いオペレーション)。
+- ブロッキングが許容可能な、シングルスレッドでのコンテキストで実行される。
+- 同期実行はUI をブロックするため、ブロックが起きても許容され得る、素早く順序付けされたタスクに対して適しています。
 
-#### Asynchronous Execution
+#### 非同期実行
 
-Asynchronous execution is **event-driven** and allows tasks other operations to complete. It relies on **callbacks**, **workers**, and **event handlers** to manage execution flow.
+非同期実行は**イベント駆動型**であり、タスクを実行中でも他の操作を完了させることができます。 これは実行フローを管理するために、 **コールバック**、**ワーカー**、および **イベントハンドラ** といったものに依存します。
 
-Asynchronous execution is used when:
+非同期実行は以下のような場合で使用されます:
 
-- An operation takes a long time (e.g., waiting for a server response).
-- Responsiveness is critical (e.g., UI interactions).
-- Performing background tasks, network communication, or parallel processing.
+- 操作が長時間にわたる(例: サーバーのレスポンスを待つなど)。
+- レスポンシブネスの良さが重要である場合(例: UI インタラクションなど)。
+- バックグラウンド処理、ネットワーク通信、あるいは並列処理などを実行する場合。
 
-Choosing Between Synchronous and Asynchronous Execution:
+同期的実行と非同期実行のどちらを選んだら良いかについては、以下の表をご覧下さい:
 
-| シナリオ                                       | Best Approach    |
-| ------------------------------------------ | ---------------- |
-| Quick operations with minimal processing   | **Synchronous**  |
-| Tasks requiring strict execution order     | **Synchronous**  |
-| Long-running background tasks              | **Asynchronous** |
-| Long-running UI interactions               | **Asynchronous** |
-| Short-running UI interactions              | **Synchronous**  |
-| High-performance, multi-threaded workloads | **Asynchronous** |
+| シナリオ                       | 最適なアプローチ  |
+| -------------------------- | --------- |
+| 最小限の処理とクイックなオペレーション        | **同期的実行** |
+| 厳密な順番に従う必要があるタスク           | **同期的実行** |
+| 長時間にわたるバックグラウンド処理          | **非同期実行** |
+| 長時間にわたるUI インタラクション処理       | **非同期実行** |
+| 短時間のUI インタラクション処理          | **同期的実行** |
+| 高パフォーマンスが必要な、マルチスレッドワークロード | **非同期実行** |
 
-## Core principles
+## 基本原理
 
-4D provides built-in **asynchronous execution** capabilities through various classes and commands. These allow background task execution, network communication, and large data processing, while waiting other operations to complete without blocking the current process.
+4D はさまざまなクラスやコマンドを通して、ビルトインの**非同期実行**機能を提供します。 これらを使用することで、カレンとプロセスをブロックすることなく、他のオペレーションが完了するのを待ちながら、バックグラウンド処理、ネットワーク通信、そして大量のデータ処理などを行うことができます。
 
-The general concept of asynchronous event management in 4D is based on an asynchronous messaging model using **workers** (processes that listen to events) and **callbacks** (functions or formulas automatically invoked when an event occurs). Instead of waiting for a result (synchronous mode), you provide a function that will be automatically called when the desired event occurs. Callbacks can be passed as class functions (recommended) or Formula objects.
+4D における非同期イベントの管理の一般的な概念は、**ワーカー**(イベントをリッスンするプロセス)および**コールバック**(あるイベントが発生した際に自動的に実行される関数またはフォーミュラ)を使用した非同期メッセージモデルに基づいています。 ここでは何かの結果を待つ(同期モード)のではなく、特定のイベントが発生した際に自動的に呼び出される関数を提供します。 コールバックはクラス関数(推奨)またはフォーミュラオブジェクトとして渡すことができます。
 
-This model is common to [`CALL WORKER`](../commands-legacy/call-worker.md), [`CALL FORM`](../commands-legacy/call-form.md), and [classes that support aynchronous execution](#asynchronous-programming-with-4d-classes). All these commands/classes start an operation that runs in the background. The statement that launches the operation returns immediately, without waiting for the operation to finish.
+This model is common to [`CALL WORKER`](../commands-legacy/call-worker.md), [`CALL FORM`](../commands-legacy/call-form.md), and [classes that support aynchronous execution](#asynchronous-programming-with-4d-classes). これらのコマンド/クラスは全て、バックグラウンドで実行されるオペレーションを開始します。 オペレーションを開始するステートメントは、オペレーションが終わるのを待たずに即座に戻ります。
 
-### Workers
+### ワーカー
 
-Asynchronous programming relies on a system of [**workers**](../Develop/processes.md#worker-processes) (worker processes), which allows code to be executed in parallel without blocking the main process. This is particularly useful for long tasks (such as HTTP calls, executing external processes, background processing), while keeping the user interface responsive.
+非同期プログラミングは [**ワーカー**](../Develop/processes.md#ワーカープロセス) (ワーカープロセス) というシステムに依存しています。これを使用することでメインプロセスをブロックすることなく、コードを実行することができます。 これは特に、インターフェースをレスポンシブな状態にしたまま、長時間にわたるタスク(HTTP 呼び出し、外部プロセスの実行、バックグラウンド処理など)を処理するのに有効です。
 
-Using worker processes in asynchronous programming **is mandatory** since "classic" processes automatically terminate their execution when the process method ends, thus using callbacks is not possible. A worker process stays alive and can **listen to events**.
+非同期プログラミングにおいてワーカープロセスの使用は**必須**です。いわゆる"クラシック"なプロセスはプロセスメソッドが終了した時に実行を自動的に終了するため、コールバックを使用するようなことができないからです。 ワーカープロセスであればその後も生き続け、**イベントをリッスンする**ことができます。
 
-### Event queue (mailbox)
+### イベントキュー(メールボックス)
 
-Each worker (or form window for [`CALL FORM`](../commands-legacy/call-form.md)) has its own message queue. [`CALL WORKER`](../commands-legacy/call-worker.md) or [`CALL FORM`](../commands-legacy/call-form.md) simply posts a message to this queue. The worker handles messages one by one, in the order they arrive, within its own context. Process variables, current selections, etc. are preserved.
+Each worker (or form window for [`CALL FORM`](../commands-legacy/call-form.md)) has its own message queue. [`CALL WORKER`](../commands-legacy/call-worker.md) or [`CALL FORM`](../commands-legacy/call-form.md) simply posts a message to this queue. ワーカーは、独自のコンテキスト内において、メッセージを一つずつ受信した順番で管理していきます。 プロセス変数、カレンとレクション、などは保持されます。
 
-### Bidirectional communication via messages
+### メッセージを介した双方向通信
 
-The calling process posts a message then the worker executes it. The worker can in turn post a message (via [`CALL WORKER`](../commands-legacy/call-worker.md) or [`CALL FORM`](../commands-legacy/call-form.md)) back to the caller or another worker to notify an event (task completion, data received, error, progress, etc.). This mechanism replaces the classic return of synchronous calls.
+呼び出しプロセスがメッセージを投稿すると、ワーカーはそれを実行します。 The worker can in turn post a message (via [`CALL WORKER`](../commands-legacy/call-worker.md) or [`CALL FORM`](../commands-legacy/call-form.md)) back to the caller or another worker to notify an event (task completion, data received, error, progress, etc.). この機構により、クラシックな同期呼び出しの応答を置き換えることができます。
 
-### Event listening
+### イベントリスニング
 
-In event-driven development, it is obvious that some code must be able to listen for incoming events. Events can be generated by the user interface (such as a mouse click on an object or a keyboard key pressed) or by any other interaction such as an http request or the end of another action. For example, when a form is displayed using the `DIALOG` command, user actions can trigger events that your code can process. A click on a button will trigger the code associated to the button.
+イベント駆動型の開発において、一部のコードが、入ってくるイベントを聞ける(リッスンできる)状態でなければならい事は明らかです。 イベントは、ユーザーインターフェース(オブジェクトのマウスクリックやキーボードのキーが押されたなど)や、HTTP リクエストや他のアクションの完了などのその他のインタラクションによって生成され得ます。 例えば、フォームが`DIALOG` コマンドを使用して表示されている場合、ユーザーアクションによってイベントがトリガーされ、それをコードで処理することが可能です。 ボタンをクリックした場合はボタンに割り当てられたコードがトリガーされることになります。
 
-In the context of asynchronous execution, the following features place your code in listening mode:
+非同期実行のコンテキストにおいては、以下の機能がリスニングモード内でコードを配置します:
 
 - [`CALL WORKER`](../commands-legacy/call-worker.md) executes the code for which it has been called, then returns to a listening status from where it can be called afterwards.
 - [`CALL FORM`](../commands-legacy/call-form.md) opens a form and makes it listen for incoming messages from the event queue.
-- a call for a `wait()` listens for `terminate()` or `shutdown()` in a callback from any other instance.
+- `wait()` を呼び出すと、他のインスタンスからのコールバック内の `terminate()` あるいは `shutdown()` をリッスンします。
 
-### Event triggering
+### イベントのトリガー
 
-Events are automatically triggered during the execution flow and passed to your corresponding callbacks. You can force the triggering of events by calling `terminate()` or `shutdown()` during  a `wait()`.
+イベントは実行フローの間に自動的にトリガーされ、対応するコールバックへと渡されます。 `wait()` の途中に `terminate()` あるいは `shutdown()` を呼び出すことで、強制的にイベントをトリガーさせることもできます。
 
-### Callback execution context
+### コールバック実行コンテキスト
 
-When 4D execute one of your callbacks, it does so in the context of the current process (worker), i.e. if your object is instantiated inside a form, the callback function will be executed in the context of that same form.
+4D がコールバックを実行する時、それをカレントプロセス(ワーカー)のコンテキストにおいて実行します。つまり、例えばオブジェクトがフォーム内でインスタンス化された場合、コールバックもその同じフォームのコンテキスト内で実行されるということです。
 
-For callbacks to work properly in fully asynchronous mode, the operation should generally be launched from a worker (via `CALL WORKER`). If launched from a process handling UI, some callbacks may not be called until the UI is listening events.
+コールバックが適切に非同期モードで実行されるためには、オペレーションは一般的に、ワーカーから(`CALL WORKER` 経由で)ローンチされる必要があります。 UI を管理しているプロセスからローンチした場合、UI がイベントをリッスンできる状態になるまで一部のコールバックが呼び出されない可能性があります。
 
-### Releasing an asynchronous object
+### 非同期オブジェクトのリリース
 
-In 4D, all objects are released [when no more references](../Concepts/dt_object.md#resources) to them exist in memory. This typically occurs at the end of a method execution for local variables.
+4D では、全てのオブジェクトは、メモリ内に [そのオブジェクトへの参照がもう残っていない](../Concepts/dt_object.md#resources) 場合にそのオブジェクトがリリースされます。 これは一般的に、メソッド実行の最後にローカル変数が消去される時に発生します。
 
-For asynchronous classes, an **extra reference** is always maintained by 4D in the process that instantiated the object. This reference is only released when the operation is finished, i.e. after the `onTerminate` event is triggered. This automatic referencing allows your object to survive even if you don't have referenced it specifically in a variable.
+非同期クラスにおいては、オブジェクトをインスタンス化したプロセス内において **追加の参照** が必ず4D によって維持されています。 この参照はオペレーションが完了したときにのみリリースされます。つまり、 `onTerminate` イベントがトリガーされたあとです。 この自動参照によって、変数から特別に参照していなくても、オブジェクトを最後まで存続させることができます。
 
-If you want to "force" the release of an object at any moment, use a `.shutdown()` or `terminate()` function; it triggers the onTerminate\` event ànd thus releases the object.
+オブジェクトを任意のタイミングで"強制的に"リリースしたい場合、`.shutdown()` あるいは `terminate()` 関数を使用します: これらは`onTerminate` イベントをトリガーするため、オブジェクトはリリースされます。
 
-### Examples illustrating the common concept
+### 共通した概念を示した表
 
-| Feature                         | Async Launch                                                                          | Callback / Event Handling                                           |
-| ------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| CALL WORKER                     | CALL WORKER("wk"; "MyMethod"; $params)                             | MyMethod is called with $params                                     |
-| CALL FORM                       | CALL FORM($win; "MyMethod"; $params)                               | MyMethod is called with $params                                     |
-| 4D.SystemWorker | 4D.SystemWorker.new(cmd; $options) | Callbacks: onData, onResponse, onError, onTerminate |
+| 機能                              | 非同期のローンチの方法                                                                           | コールバック / イベントの管理                                              |
+| ------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| CALL WORKER                     | CALL WORKER("wk"; "MyMethod"; $params)                             | MyMethod は $params の引数を渡して呼び出されます                             |
+| CALL FORM                       | CALL FORM($win; "MyMethod"; $params)                               | MyMethod は $params の引数を渡して呼び出されます                             |
+| 4D.SystemWorker | 4D.SystemWorker.new(cmd; $options) | コールバック: onData、onResponse、onError、onTerminate |
 
-## Asynchronous programming with 4D classes
+## 4Dクラスによる非同期プログラミング
 
-Several 4D classes support asynchronous processing:
+複数の4D クラスが非同期処理をサポートしています:
 
 - [`HTTPRequest`](../API/HTTPRequestClass.md) – Handles asynchronous HTTP requests and responses.
 - [`SystemWorker`](../API/SystemWorkerClass.md) – Executes external processes asynchronously.

@@ -140,7 +140,7 @@ Desea obtener información sobre su licencia actual de 4D Server:
                     "expirationDate": {"day":1, "month":11, "year":2017}
                 }, {
                     "count": 10,
-                    "expirationDate": {"day":1, "month":11, "year":2015} //expired, not counted
+                    "expirationDate": {"day":1, "month":11, "year":2015} //expirado, no contado
                 }
             ],
             "usedCount": 12

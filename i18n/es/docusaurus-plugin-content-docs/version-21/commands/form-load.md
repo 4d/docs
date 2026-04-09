@@ -81,7 +81,7 @@ Llamada a un formulario proyecto en un trabajo de impresión:
 ```4d
  OPEN PRINTING JOB
  FORM LOAD("print_form")
-  // execution of events and object methods
+// ejecución de eventos y de métodos objeto
 ```
 
 ## Ejemplo 2
@@ -91,7 +91,7 @@ Llamada a un formulario tabla en un trabajo de impresión:
 ```4d
  OPEN PRINTING JOB
  FORM LOAD([People];"print_form")
-  // execution of events and object methods
+  // ejecución de eventos y métodos de objeto
 ```
 
 ## Ejemplo 3
@@ -100,14 +100,14 @@ Análisis del contenido de los formularios para efectuar el tratamiento de las �
 
 ```4d
  FORM LOAD([People];"my_form")
-  // selection of form without execution of events or methods
+  // selección de formulario sin ejecución de eventos o métodos
  FORM GET OBJECTS(arrObjNames;arrObjPtrs;arrPages;*)
  For($i;1;Size of array(arrObjNames))
     If(OBJECT Get type(*;arrObjNames{$i})=Object type text input)
-  //… processing
+  //… procesamiento
     End if
  End for
- FORM UNLOAD //do not forget to unload the form
+ FORM UNLOAD //no olvide descargar el formulario
 ```
 
 ## Ejemplo 4
@@ -115,14 +115,14 @@ Análisis del contenido de los formularios para efectuar el tratamiento de las �
 El siguiente ejemplo devuelve el número de objetos de un formulario JSON:
 
 ```4d
- ARRAY TEXT(objectsArray;0) //sort form items into arrays
+ ARRAY TEXT(objectsArray;0) //ordenar los elementos del formulario en arrays
  ARRAY POINTER(variablesArray;0)
  ARRAY INTEGER(pagesArray;0)
  
- FORM LOAD("/RESOURCES/OutputForm.json") //load the form
+ FORM LOAD("/RESOURCES/OutputForm.json") //cargar el formulario
  FORM GET OBJECTS(objectsArray;variablesArray;pagesArray;Form all pages+Form inherited)
  
- ALERT("The form contains "+String(size of array(objectsArray))+" objects") //return the object count
+ ALERT("The form contains "+String(size of array(objectsArray))+" objects") //devuelve el recuento de objetos
 ```
 
 el resultado mostrado es:
@@ -145,10 +145,10 @@ Desea imprimir un formulario que contiene un list box. Durante el evento *on loa
  $formData.LBcollection:=New collection()
  ... //fill the collection with data
  
- FORM LOAD("GlobalForm";$formData) //store the collection in $formData
+ FORM LOAD("GlobalForm";$formData) //almacenar la colección en $formData
  $over:=False
  Repeat
-    $full:=Print object(*;"LB") // the datasource of this "LB" listbox is Form.LBcollection
+    $full:=Print object(*;"LB") // la fuente de datos de este listbox "LB" es Form.LBcollection
     LISTBOX GET PRINT INFORMATION(*;"LB";lk printing is over;$over)
     If(Not($over))
        PAGE BREAK
@@ -164,7 +164,7 @@ Desea imprimir un formulario que contiene un list box. Durante el evento *on loa
  var $o : Object
  Case of
     :(Form event code=On Load)
-       For each($o;Form.LBcollection) //LBcollection is available
+       For each($o;Form.LBcollection) //LBcollection está disponible
           $o.reference:=Uppercase($o.reference)
        End for each
  End case

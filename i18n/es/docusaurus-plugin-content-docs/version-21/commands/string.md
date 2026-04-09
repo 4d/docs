@@ -187,8 +187,8 @@ Si no se pasa el parámetro *addTime*, el comando devuelve la fecha a medianoche
 - El formato ISO Date es similar al formato ISO Date GMT, salvo que expresa la fecha y la hora sin tener en cuenta la zona horaria. Tenga en cuenta que, dado que este formato no cumple la norma ISO8601, su uso debe reservarse para fines muy específicos.
 
 ```4d
- $mydate:=String(!13/09/2010!;ISO Date) // returns 2010-09-13T00:00:00 regardless of the time zone  
- $mydate:=String(Current date;ISO Date;Current time) // returns 2010-09-13T18:11:53  
+ $mydate:=String(!13/09/2010!;ISO Date) // devuelve 2010-09-13T00:00:00 independientemente de la zona horaria  
+ $mydate:=String(Current date;ISO Date;Current time) // devuelve 2010-09-13T18:11:53  
 ```
 
 - El formato Date RFC 1123 formatea una combinación fecha/hora según el estándar definido por RFC 822 y 1123\. Este formato es necesario, por ejemplo, para establecer la fecha de caducidad de las cookies en un encabezado HTTP.
@@ -230,7 +230,7 @@ Ejemplos:
 
 ```4d
  $vsResult:=String(?17:30:45?;HH MM AM PM) //"5:30 PM"  
- $vsResult:=String(?17:30:45?;Hour Min Sec) //"17 hours 30 minutes 45 seconds"  
+ $vsResult:=String(?17:30:45?;Hour Min Sec) //"17 horas 30 minutos 45 segundos"  
 ```
 
 - o un [formato personalizado basado en un modelo](../Project/date-time-formats.md) (valor cadena)  
