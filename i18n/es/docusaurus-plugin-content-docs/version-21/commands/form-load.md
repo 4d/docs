@@ -4,9 +4,11 @@ title: FORM LOAD
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM LOAD.Syntax-->**FORM LOAD** ( {*aTable* ;} *form* {; *formData*}{; *} )<!-- END REF-->
+<!--REF #_command_.FORM LOAD.Syntax-->**FORM LOAD** ( {*aTable* : Table ;} *form* : Text, Object {; *formData* : Object}{; *} )<!-- END REF-->
 
 <!--REF #_command_.FORM LOAD.Params-->
+
+<div class="no-index">
 
 | Parámetros | Tipo         |                             | Descripción                                                                                                                                                                                                                                         |
 | ---------- | ------------ | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -15,6 +17,7 @@ displayed_sidebar: docs
 | formData   | Object       | &#8594; | Datos a asociar al formulario                                                                                                                                                                                                                       |
 | \*         | Operador     | &#8594; | Si se pasa = el comando se aplica a la base de datos del host cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto)                                                                                  |
 
+</div>
 <!-- END REF-->
 
 <div class="no-index">
