@@ -4,6 +4,24 @@ title: Folder
 displayed_sidebar: docs
 ---
 
+<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; * } ) : 4D.Folder<!-- END REF -->
+
+<!-- REF #_command_.Folder.Params -->
+
+<div class="no-index">
+
+| Paramètres     | Type                                               |                             | Description                                                           |
+| -------------- | -------------------------------------------------- | :-------------------------: | --------------------------------------------------------------------- |
+| path           | Text                                               | &#8594; | Chemin du dossier                                                     |
+| folderConstant | Integer                                            | &#8594; | Constante de dossier 4D                                               |
+| pathType       | Integer                                            | &#8594; | `fk posix path` (par défaut) ou `fk platform path` |
+| \*             | Opérateur                                          | &#8594; | \* pour retourner le dossier de la base hôte                          |
+| Résultat       | [4D.Folder](../API/FolderClass.md) | &#8592; | Nouvel objet dossier                                                  |
+
+</div>
+<!-- END REF -->
+
+<div class="no-index">
 <details><summary>Historique</summary>
 
 | Release | Modifications                       |
@@ -12,20 +30,7 @@ displayed_sidebar: docs
 | 17 R5   | Ajout                               |
 
 </details>
-
-<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; \* } ) : 4D.Folder<!-- END REF -->
-
-<!-- REF #_command_.Folder.Params -->
-
-| Paramètres     | Type                                               |                             | Description                                                           |
-| -------------- | -------------------------------------------------- | :-------------------------: | --------------------------------------------------------------------- |
-| path           | Text                                               | &#8594; | Chemin du dossier                                                     |
-| folderConstant | Integer                                            | &#8594; | Constante de dossier 4D                                               |
-| pathType       | Integer                                            | &#8594; | `fk posix path` (par défaut) ou `fk platform path` |
-| \*             | operator                                           | &#8594; | \* pour retourner le dossier de la base hôte                          |
-| Résultat       | [4D.Folder](../API/FolderClass.md) | &#8592; | Nouvel objet dossier                                                  |
-
-<!-- END REF -->
+</div>
 
 ## Description
 
