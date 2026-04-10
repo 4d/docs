@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|server|Object|&#8594; |Mail server information|
+|parameter|Object|&#8594; |Mail server configuration|
 |Result|4D.IMAPTransporter|&#8592;|[IMAP transporter object](../../API/IMAPTransporterClass.md#imap-transporter-object)|
 </div>
 <!-- END REF -->
@@ -31,22 +31,64 @@ displayed_sidebar: docs
 
 ## Description
 
-The `IMAP New transporter` command <!-- REF #_command_.IMAP New transporter.Summary -->configures a new IMAP connection<!-- END REF --> according to the *server* parameter and returns a new *transporter* object. The returned transporter object will then usually be used to receive emails.
+The `IMAP New transporter` command <!-- REF #_command_.IMAP New transporter.Summary -->configures a new IMAP connection<!-- END REF --> according to the *parameter* parameter and returns a new *transporter* object. The returned transporter object will then usually be used to receive emails.
 
-In the *server* parameter, pass an object containing the following properties:
+In the *parameter* parameter, pass an object containing the following properties:
 
-|*server*|Default value (if omitted)|
-|---|---|
-|[<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](../../API/IMAPTransporterClass.md#acceptunsecureconnection)<br/><!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->|False|
-|.**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<br/>Text string or token object representing OAuth2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[IMAP transporter](../../API/IMAPTransporterClass.md#imap-transporter-object)* object.|none|
-|[<!-- INCLUDE #transporter.authenticationMode.Syntax -->](../../API/IMAPTransporterClass.md#authenticationmode)<br/><!-- INCLUDE #transporter.authenticationMode.Summary -->|the most secure authentication mode supported by the server is used|
-|[<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Syntax -->](../../API/IMAPTransporterClass.md#checkconnectiondelay)<br/><!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Summary -->|300|
-|[<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](../../API/IMAPTransporterClass.md#connectiontimeout)<br/><!-- INCLUDE #transporter.connectionTimeOut.Summary -->|30|
-|[<!-- INCLUDE #transporter.host.Syntax -->](../../API/IMAPTransporterClass.md#host)<br/><!-- INCLUDE #transporter.host.Summary -->|*mandatory*
-|[<!-- INCLUDE #transporter.logFile.Syntax -->](../../API/IMAPTransporterClass.md#logfile)<br/><!-- INCLUDE #transporter.logFile.Summary -->|none|
-|.**password** : Text<br/>User password for authentication on the server. Not returned in *[IMAP transporter](../../API/IMAPTransporterClass.md#imap-transporter-object)* object.|none|
-|[<!-- INCLUDE #transporter.port.Syntax -->](../../API/IMAPTransporterClass.md#port)<br/><!-- INCLUDE #transporter.port.Summary -->|993|
-|[<!-- INCLUDE #transporter.user.Syntax -->](../../API/IMAPTransporterClass.md#user)<br/><!-- INCLUDE #transporter.user.Summary -->|none|
+|*parameter*| |Description|Default value (if omitted)|
+|---|---|---|---|
+|[<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](../../API/IMAPTransporterClass.md#acceptunsecureconnection)| |<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->|False|
+|.**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object| |Text string or token object representing OAuth2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[IMAP transporter](../../API/IMAPTransporterClass.md#imap-transporter-object)* object.|none|
+|[<!-- INCLUDE #transporter.authenticationMode.Syntax -->](../../API/IMAPTransporterClass.md#authenticationmode)| |<!-- INCLUDE #transporter.authenticationMode.Summary -->|the most secure authentication mode supported by the server is used|
+|[<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Syntax -->](../../API/IMAPTransporterClass.md#checkconnectiondelay)| |<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Summary -->|300|
+|[<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](../../API/IMAPTransporterClass.md#connectiontimeout)| |<!-- INCLUDE #transporter.connectionTimeOut.Summary -->|30|
+|[<!-- INCLUDE #transporter.host.Syntax -->](../../API/IMAPTransporterClass.md#host)| |<!-- INCLUDE #transporter.host.Summary -->|*mandatory*|
+|.**listener**: Object||allows you to manage IMAP IDLE notifications for the selected mailbox through callback functions.|none|
+|                     |.onMailCreated : [4D.Function](../../API/FunctionClass.md)|Called when a new message is detected.|none|
+|                     |.onMailDeleted : [4D.Function](../../API/FunctionClass.md)|Called when a message is permanently deleted.|none|
+|                     |.onFlagsModified : [4D.Function](../../API/FunctionClass.md)|Called when message flags are modified.|none|
+|[<!-- INCLUDE #transporter.logFile.Syntax -->](../../API/IMAPTransporterClass.md#logfile)| |<!-- INCLUDE #transporter.logFile.Summary -->|none|
+|.**password** : Text| |User password for authentication on the server. Not returned in *[IMAP transporter](../../API/IMAPTransporterClass.md#imap-transporter-object)* object.|none|
+|[<!-- INCLUDE #transporter.port.Syntax -->](../../API/IMAPTransporterClass.md#port)| |<!-- INCLUDE #transporter.port.Summary -->|993|
+|[<!-- INCLUDE #transporter.user.Syntax -->](../../API/IMAPTransporterClass.md#user)| |<!-- INCLUDE #transporter.user.Summary -->|none|
+
+### listener object
+
+When the `listener` property is provided in the *parameter* object, the following callback functions are supported:
+
+* `onMailCreated`: triggered when a new message is added to the mailbox
+* `onMailDeleted`: triggered when a message is permanently deleted
+* `onFlagsModified`: triggered when message flags are modified
+
+Each callback receives the following parameters:
+
+|Parameter|Type|Description|
+|---|---|---|
+|transporter|Object|Current IMAP transporter|
+|event|Object|Event data|
+
+#### onMailCreated(*transporter* : Object; *event* : Object)
+
+|Property|Type|Description|
+|---|---|---|
+|event.type|Text|`"mailCreated"`|
+|event.mailCount|Integer|Number of messages in the mailbox|
+
+#### onMailDeleted(*transporter* : Object; *event* : Object)
+
+|Property|Type|Description|
+|---|---|---|
+|event.type|Text|`"mailDeleted"`|
+|event.msgNumber|Integer|Message sequence number|
+
+#### onFlagsModified(*transporter* : Object; *event* : Object)
+
+|Property|Type|Description|
+|---|---|---|
+|event.type|Text|`"FlagsModified"`|
+|event.msgNumber|Integer|Message sequence number|
+|event.flags|Collection|Updated flags|
+
 
 >**Warning**: Make sure the defined timeout is lower than the server timeout, otherwise the client timeout will be useless.
 

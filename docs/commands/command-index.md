@@ -472,7 +472,7 @@ title: Commands by name
 <a id="I"><b>I</b></a>
 
 [`IDLE`](../commands/idle)<br/>
-[`IMAP New transporter`](../commands/imap-new-transporter)<br/>
+[`IMAP New transporter`](../commands/imap-new-transporter) **modified 4D 21 R3**<br/>
 [`IMPORT DATA`](../commands/import-data)<br/>
 [`IMPORT DIF`](../commands/import-dif)<br/>
 [`IMPORT STRUCTURE`](../commands/import-structure)<br/>
