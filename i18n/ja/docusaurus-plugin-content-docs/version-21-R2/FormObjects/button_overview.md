@@ -283,7 +283,7 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
 
 このボタンスタイルはmacOS および[Windows Fluent UI テーマ](../FormEditor/forms.md#fluent-ui-レンダリングを有効化する)でサポートされています。
 
-On Windows Classic UI theme, this style is not supported.
+Windows Classic UI テーマでは、このスタイルはサポートされません。
 
 #### JSON 例:
 
