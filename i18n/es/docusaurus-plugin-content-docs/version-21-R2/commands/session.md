@@ -14,8 +14,10 @@ displayed_sidebar: docs
 | ---------- | ---------------------------------------------------- | --------------------------- | -------------- |
 | Resultado  | [4D.Session](../API/SessionClass.md) | &#8592; | Objeto Session |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones                                                     |
@@ -25,6 +27,7 @@ displayed_sidebar: docs
 | 18 R6       | Añadidos                                                           |
 
 </details>
+</div>
 
 ## Descripción
 
