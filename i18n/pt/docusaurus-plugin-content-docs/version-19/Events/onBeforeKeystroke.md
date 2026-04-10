@@ -3,9 +3,9 @@ id: onBeforeKeystroke
 title: On Before Keystroke
 ---
 
-| Code | Pode ser chamado por                                                                                                                                                                                                                                                                   | Definição                                                                                                                                     |
-| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| 17   | [Área 4D Write Pro ](FormObjects/writeProArea_overview.md) - [Combo Box](FormObjects/comboBox_overview.md) - Formulário - [Entrada](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) - [Coluna List box](FormObjects/listbox_overview.md#list-box-columns) | Um carácter está prestes a ser introduzido no objecto que tem o foco. `Obter texto editado` devolve o texto do objecto **sem** este carácter. |
+| Code | Pode ser chamado por                                                                                                                                                                                                                                       | Definição                                                                                                                                     |
+| ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| 17   | [4D Write Pro area](FormObjects/writeProArea_overview.md) - [Combo Box](FormObjects/comboBox_overview.md) - Form - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox-column.md) | Um carácter está prestes a ser introduzido no objecto que tem o foco. `Obter texto editado` devolve o texto do objecto **sem** este carácter. |
 
 <details><summary>Histórico</summary>
 
@@ -22,7 +22,7 @@ Depois que as propriedades de evento `On Before Keystroke` e [`On After Keystrok
 
 O evento `On Before Keystroke` não é gerado:
 
-- no método [colunas de list box](FormObjects/listbox_overview.md#list-box-columns), exceto quando uma célula está sendo editada (entretanto, ela é gerada em quaisquer casos no método [list box](FormObjects/listbox_overview.md)),
+- in a [List Box Column](FormObjects/listbox-column.md) method except when a cell is being edited (however it is generated in any cases in the [list box](FormObjects/listbox_overview.md) method),
 - quando as modificações do usuário não forem realizadas usando o teclado (colar, arrastar e soltar, caixa de seleção, lista suspensa, caixa de seleção). Para processar esses eventos, você deve usar [`On After Edit`](onAfterEdit.md).
 
 ### Objectos não enterráveis
