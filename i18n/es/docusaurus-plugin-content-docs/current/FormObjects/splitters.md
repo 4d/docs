@@ -35,6 +35,10 @@ Una vez insertado, el separador aparece como una línea. Puede modificar su [est
 
 [Estilo de línea de borde](properties_BackgroundAndBorder.md#border-line-style) - [Fondo](properties_CoordinatesAndSizing.md#bottom) - [Clase](properties_Object.md#css-class) - [Altura](properties_CoordinatesAndSizing.md#height) - [Ayuda](properties_Help.md#help-tip) - [Tamaño horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Izquierda](properties_CoordinatesAndSizing.md#left) - [Color de línea](properties_BackgroundAndBorder.md#line-color) - [Nombre del objeto](properties_Object.md#nombre_objeto) - [Empujador](properties_ResizingOptions.md#empujador) - [Derecha](properties_CoordinatesAndSizing.md#derecha) - [Arriba](properties_CoordinatesAndSizing.md#arriba) - [Tipo](properties_Object.md#type) - [Tamaño vertical](properties_ResizingOptions.md#vertical-sizing) - [Variable o expresión](properties_Object.md#variable-or-expression) - [Visibilidad](properties_Display.md#visibility) - [Ancho](properties_CoordinatesAndSizing.md#width)
 
+### Supported Events
+
+[On Begin Drag Over](../Events/onBeginDragOver.md) - [On Clicked](../Events/onClicked.md) - [On Double Clicked](../Events/onDoubleClicked.md) - [On Drag Over](../Events/onDragOver.md) - [On Drop](../Events/onDrop.md) - [On Header](../Events/onHeader.md) - [On Load](../Events/onLoad.md) - [On Mouse Enter](../Events/onMouseEnter.md) - [On Mouse Leave](../Events/onMouseLeave.md) - [On Mouse Move](../Events/onMouseMove.md) - [On Printing Break](../Events/onPrintingBreak.md) - [On Printing Detail](../Events/onPrintingDetail.md) - [On Printing Footer](../Events/onPrintingFooter.md) - [On Unload](../Events/onUnload.md) - [On Validate](../Events/onValidate.md)
+
 ## Interacción con las propiedades de los objetos vecinos
 
 En un formulario, los separadores interactúan con los objetos que están a su alrededor según las opciones de cambio de tamaño de estos objetos:
