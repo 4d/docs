@@ -41,19 +41,22 @@ Dado que HTTPAgent es un objeto compartible, puede añadir uno a una clase singl
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                                 |
-| ----------- | ---------------------------------------------- |
-| 21          | Soporte de la propiedad *storeCertificateName* |
+| Lanzamiento | Modificaciones                              |
+| ----------- | ------------------------------------------- |
+| 21          | Soporte de propiedad *storeCertificateName* |
 
 </details>
 
 <!-- REF #4D.HTTPAgent.new().Params -->
+
+<div class="no-index">
 
 | Parámetros | Tipo                                              |                             | Descripción                            |
 | ---------- | ------------------------------------------------- | :-------------------------: | -------------------------------------- |
 | options    | Object                                            |              ->             | opciones por defecto para el HTTPAgent |
 | Resultado  | [4D.HTTPAgent](#httpagent-object) | <- | Nuevo objeto HTTPAgent                 |
 
+</div>
 <!-- END REF -->
 
 #### Descripción
