@@ -185,25 +185,13 @@ La instrucción `return` puede utilizarse junto con la sintaxis estándar para l
 ```4d
 Function getValue -> $v : Integer
 	$v:=10
-	return
-	// function returns 10
-	
-Function getValue -> $v : Integer
-	$v:=10
 	return 20
-	// function returns 20
+	// devuelve 20
 
 Function getValue -> $v : Integer
 	return 10
-	$v:=20 // never executed
-	// function returns 10
-
-Function getValue -> $v : Integer
-	return "Hello" //error
-
-Function returnHello
-	return "Hello"
-	// function returns "Hello"
+	$v:=20 // nunca ejecutado
+	// devuelve 10
 ```
 
 ## Indirección de parámetros (${N})

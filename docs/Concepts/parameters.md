@@ -178,35 +178,29 @@ The `return` statement ends function or method execution and can be used to retu
 For example, the following function returns the square of its argument, $x, where $x is a number.
 
 ```4d
-Function square($x : Integer) : Integer
+Function square($x : Integer) -> $result : Integer
    return $x * $x
 ```
 
-The `return` statement can be used along with the standard syntax for [returned values](#returned-value) (the returned value must be of the declared type). When you have declared a return parameter (e.g. `myFunction() -> $myReturnValue : Text`), `return $x` implicitely executes `$myReturnValue:=$x`, and returns to the caller. Keep in mind that it ends immediately the code execution. Examine the following examples:
+:::note
+
+Internally, `return x` executes `myReturnValue:=x`, and returns to the caller. If `return` is used without an expression, the function or method returns a null value of the declared return type (if any), otherwise *undefined*.
+
+:::
+
+The `return` statement can be used along with the standard syntax for [returned values](#returned-value) (the returned value must be of the declared type). However, note that it ends immediately the code execution. For example:
 
 
 ```4d
 Function getValue -> $v : Integer
 	$v:=10
-	return
-	// function returns 10
-	
-Function getValue -> $v : Integer
-	$v:=10
 	return 20
-	// function returns 20
+	// returns 20
 
 Function getValue -> $v : Integer
 	return 10
 	$v:=20 // never executed
-	// function returns 10
-
-Function getValue -> $v : Integer
-	return "Hello" //error
-
-Function returnHello
-	return "Hello"
-	// function returns "Hello"
+	// returns 10
 ```
 
 

@@ -8,27 +8,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Create entity selection.Params-->
 
-<div class="no-index">
-
 | 引数       | 型                                  |                             | 説明                                            |
 | -------- | ---------------------------------- | --------------------------- | --------------------------------------------- |
 | dsTable  | Table                              | &#8594; | エンティティセレクションの元となるカレントセレクションが属する 4Dデータベースのテーブル |
 | settings | Object                             | &#8594; | ビルドオプション: context             |
 | 戻り値      | 4D.EntitySelection | &#8592; | 指定したテーブルに対応するデータクラスのエンティティセレクション              |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>履歴</summary>
-
-| リリース  | 内容      |
-| ----- | ------- |
-| 17 R5 | 変更      |
-| 17    | Created |
-
-</details>
-</div>
 
 ## 説明
 

@@ -79,7 +79,7 @@ Los objetos HTTPRequest ofrecen las siguientes propiedades y funciones:
 
 | Lanzamiento | Modificaciones                                                    |
 | ----------- | ----------------------------------------------------------------- |
-| 21          | Soporte de propiedad *storeCertificateName*                       |
+| 21          | Soporte de la propiedad *storeCertificateName*                    |
 | 20          | Validación TLS por defecto                                        |
 | 19 R7       | Soporte de las propiedades *automaticRedirections* y *decodeData* |
 
@@ -89,15 +89,12 @@ Los objetos HTTPRequest ofrecen las siguientes propiedades y funciones:
 
 <!-- REF #4D.HTTPRequest.new().Params -->
 
-<div class="no-index">
-
 | Parámetros | Tipo                           |                             | Descripción                                 |
 | ---------- | ------------------------------ | :-------------------------: | ------------------------------------------- |
 | url        | Text                           |              ->             | URL a la que enviar la solicitud            |
 | options    | Object                         |              ->             | Propiedades de configuración de la petición |
 | Resultado  | 4D.HTTPRequest | <- | Nuevo objeto HTTPRequest                    |
 
-</div>
 <!-- END REF -->
 
 #### Descripción
@@ -344,13 +341,10 @@ La propiedad `.returnResponseBody` contiene <!-- REF #HTTPRequestClass.returnRes
 
 <!-- REF #HTTPRequestClass.terminate().Params -->
 
-<div class="no-index">
-
 | Parámetros | Tipo |     | Descripción                  |
 | ---------- | ---- | :-: | ---------------------------- |
 |            |      |     | No requiere ningún parámetro |
 
-</div>
 <!-- END REF -->
 
 #### Descripción
@@ -405,14 +399,11 @@ La propiedad `.url` contiene <!-- REF #HTTPRequestClass.url.Summary -->la URL de
 
 <!-- REF #HTTPRequestClass.wait().Params -->
 
-<div class="no-index">
-
 | Parámetros | Tipo                           |                             | Descripción                         |
 | ---------- | ------------------------------ | :-------------------------: | ----------------------------------- |
 | timeout    | Real                           |              ->             | Tiempo máximo de espera en segundos |
 | Resultado  | 4D.HTTPRequest | <- | Objeto HTTPRequest                  |
 
-</div>
 <!-- END REF -->
 
 #### Descripción

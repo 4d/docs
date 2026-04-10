@@ -4,22 +4,6 @@ title: Formula from string
 displayed_sidebar: docs
 ---
 
-<!-- REF #_command_.Formula from string.Syntax -->**Formula from string**( *formulaString* : Text ) : 4D.Function<br/>**Formula from string**( *formulaString* : Text ; *context* : Integer ) : 4D.Function<!-- END REF -->
-
-<!-- REF #_command_.Formula from string.Params -->
-
-<div class="no-index">
-
-| Paramètres    | Type                        |                             | Description                                                                                       |
-| ------------- | --------------------------- | :-------------------------: | ------------------------------------------------------------------------------------------------- |
-| formulaString | Text                        | &#8594; | Formule texte à retourner comme objet                                                             |
-| context       | Integer                     | &#8594; | `sk execute in current database` (par défaut) ou `sk execute in host database` |
-| Résultat      | 4D.Function | &#8592; | Objet natif encapsulant la formule                                                                |
-
-</div>
-<!-- END REF -->
-
-<div class="no-index">
 <details><summary>Historique</summary>
 
 | Release | Modifications                                                             |
@@ -29,7 +13,18 @@ displayed_sidebar: docs
 | 17 R3   | Ajout                                                                     |
 
 </details>
-</div>
+
+<!-- REF #_command_.Formula from string.Syntax -->**Formula from string**( *formulaString* : Text ) : 4D.Function<br/>**Formula from string**( *formulaString* : Text ; *context* : Integer ) : 4D.Function<!-- END REF -->
+
+<!-- REF #_command_.Formula from string.Params -->
+
+| Paramètres    | Type                        |                             | Description                                                                                       |
+| ------------- | --------------------------- | :-------------------------: | ------------------------------------------------------------------------------------------------- |
+| formulaString | Text                        | &#8594; | Formule texte à retourner comme objet                                                             |
+| context       | Integer                     | &#8594; | `sk execute in current database` (par défaut) ou `sk execute in host database` |
+| Résultat      | 4D.Function | &#8592; | Objet natif encapsulant la formule                                                                |
+
+<!-- END REF -->
 
 ## Description
 

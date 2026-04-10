@@ -8,27 +8,22 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Process activity.Params-->
 
-<div class="no-index">
-
 | 引数        | 型       |                             | 説明                                                             |
 | --------- | ------- | --------------------------- | -------------------------------------------------------------- |
 | sessionID | Text    | &#8594; | セッションID                                                        |
 | options   | Integer | &#8594; | 返される情報を指定するオプション                                               |
 | 戻り値       | Object  | &#8592; | 実行中のプロセスまたはユーザーセッション(4D Serverのみ) のスナップショット |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>履歴</summary>
 
-| リリース  | 内容                                                                                        |
-| ----- | ----------------------------------------------------------------------------------------- |
-| 21    | Web ユーザーセッションのサポート                                                                        |
-| 20 R7 | <ul><li>Support of *sessionID* parameter</li><li>Renamed (Get process activity)</li></ul> |
+| リリース  | 内容                  |
+| ----- | ------------------- |
+| 20 R7 | *sessionID* 引数のサポート |
+| 21    | Web ユーザーセッションのサポート  |
 
 </details>
-</div>
 
 ## 説明
 

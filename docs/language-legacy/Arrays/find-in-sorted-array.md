@@ -5,7 +5,7 @@ slug: /commands/find-in-sorted-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Find in sorted array.Syntax-->**Find in sorted array** ( *array* : Array ; *value* : Expression ; *order* : >, < {; *posFirst* : Integer {; *posLast* : Integer}} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Find in sorted array.Syntax-->**Find in sorted array** ( *array* : Array ; *value* : Expression ; *>_or_<* : Comparator {; *posFirst* : Integer {; *posLast* : Integer}} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Find in sorted array.Params-->
 <div class="no-index">
 
@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | array | Array | &#8594;  | Array to search |
 | value | Expression | &#8594;  | Value (same type as array) to search for in the array |
-| order | >, < | &#8594;  | > if array is sorted in ascending order, < if it is sorted in descending order |
+| >_or_< | Comparator | &#8594;  | > if array is sorted in ascending order, < if it is sorted in descending order |
 | posFirst | Integer | &#8592; | Position of its first occurrence if the value is found; otherwise position where the value should be inserted |
 | posLast | Integer | &#8592; | Position of its last occurrence if the value is found; otherwise same as posFirst |
 | Function result | Boolean | &#8592; | True if at least one element in array matches the value, False otherwise |
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Find in sorted array.Summary-->The **Find in sorted array** command returns **true** if at least one element in the sorted *array* matches the *value*, and optionally returns position(s) of matched element(s).<!-- END REF--> Unlike [Find in array](../commands/find-in-array), **Find in sorted array** only works with a sorted *array* and provides information about the position of occurrences, which allows you to insert elements if necessary.
 
-The *array* must be already sorted and must match the ordering specified by the *order* parameter (i.e. the "greater than" symbol for ascending order and the "lower than" symbol for descending order). The **Find in sorted array** command will take advantage of the sort and use a *binary search* algorithm, which is much more efficient for large arrays (for more information, please refer to the [binary search algorithm page on Wikipedia](http://en.wikipedia.org/wiki/Binary%5Fsearch%5Falgorithm)). However, if the array is not properly sorted, the result may be incorrect.
+The *array* must be already sorted and must match the ordering specified by the *\> or <* parameter (i.e. the "greater than" symbol for ascending order and the "lower than" symbol for descending order). The **Find in sorted array** command will take advantage of the sort and use a *binary search* algorithm, which is much more efficient for large arrays (for more information, please refer to the [binary search algorithm page on Wikipedia](http://en.wikipedia.org/wiki/Binary%5Fsearch%5Falgorithm)). However, if the array is not properly sorted, the result may be incorrect.
 
 **Note:** When using this command with a sorted array of type Object, you can only pass an object reference in *value*. 
 

@@ -9,28 +9,22 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Process number.Params-->
 
-<div class="no-index">
-
 | Paramètres | Type      |                             | Description                                     |
 | ---------- | --------- | --------------------------- | ----------------------------------------------- |
 | name       | Text      | &#8594; | Nom du process duquel obtenir le numéro         |
 | id         | Text      | &#8594; | ID du process duquel récupérer le numéro        |
 | \*         | Opérateur | &#8594; | Renvoyer le numéro du process depuis le serveur |
-| Résultat   | Integer   | &#8592; | Process number                                  |
+| Résultat   | Integer   | &#8592; | Numéro du process                               |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>Historique</summary>
 
 | Release | Modifications                   |
 | ------- | ------------------------------- |
 | 20 R7   | Prise en charge du paramètre id |
-| 6       | Created                         |
 
 </details>
-</div>
 
 ## Description
 

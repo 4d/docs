@@ -46,7 +46,7 @@ title: ピクチャー
 * [ボタン](FormObjects/button_overview.md)/[ラジオボタン](FormObjects/radio_overview.md)/[チェックボックス](FormObjects/checkbox_overview.md)
 * [ピクチャーボタン](FormObjects/pictureButton_overview.md)/[ピクチャーポップアップメニュー](FormObjects/picturePopupMenu_overview.md)
 * [タブコントロール](FormObjects/tabControl.md)
-* [リストボックスヘッダー](FormObjects/listbox-header-footer.md#headers)
+* [リストボックスヘッダー](FormObjects/listbox_overview.md#リストボックスヘッダー)
 * [メニューアイコン](Menus/properties.md#項目アイコン)
 
 4D は自動的に最高解像度のピクチャーを優先します。 例: 標準解像度と高解像度の２つのスクリーンを使用している際に、片方からもう片方へとフォームを移動させると、4D は常に使用可能な範囲内での最高解像度のピクチャーを表示します。 コマンドまたはプロパティが *circle.png* を指定していたとしても、*circle@3x.png* があれば、それを使用します。

@@ -5,11 +5,17 @@ slug: /commands/mail-new-attachment
 displayed_sidebar: docs
 ---
 
+<details><summary>履歴</summary>
+
+| リリース  | 内容                                                                                 |
+| ----- | ---------------------------------------------------------------------------------- |
+| 19 R2 | 4D.File, 4D.ZipFile, 4D.Blob の受け入れ |
+
+</details>
+
 <!-- REF #_command_.MAIL New attachment.Syntax -->**MAIL New attachment**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
 
 <!--REF #_command_.MAIL New attachment.Params-->
-
-<div class="no-index">
 
 | 引数          | 型                                 |                             | 説明                                                                                     |
 | ----------- | --------------------------------- | --------------------------- | -------------------------------------------------------------------------------------- |
@@ -23,19 +29,7 @@ displayed_sidebar: docs
 | disposition | Text                              | &#8594; | content-disposition ヘッダーの値: "inline" あるいは "attachment"                 |
 | 戻り値         | 4D.MailAttachment | &#8592; | Attachment オブジェクト                                                                      |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>履歴</summary>
-
-| リリース  | 内容                                                                                 |
-| ----- | ---------------------------------------------------------------------------------- |
-| 19 R2 | 4D.File, 4D.ZipFile, 4D.Blob の受け入れ |
-| 17 R4 | 追加                                                                                 |
-
-</details>
-</div>
 
 ## 説明
 

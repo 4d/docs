@@ -5,22 +5,6 @@ slug: /commands/open-datastore
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open datastore.Syntax-->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : 4D.DataStoreImplementation<!-- END REF-->
-
-<!--REF #_command_.Open datastore.Params-->
-
-<div class="no-index">
-
-| Parâmetro      | Tipo                                       |                             | Descrição                                                                                       |
-| -------------- | ------------------------------------------ | --------------------------- | ----------------------------------------------------------------------------------------------- |
-| connectionInfo | Object                                     | &#8594; | Propriedades de conexão utilizadas para alcançar o armazém de datos remoto                      |
-| localID        | Text                                       | &#8594; | Id para assignar ao armazém de dados aberto na aplicação local (obrigatorio) |
-| Resultado      | 4D.DataStoreImplementation | &#8592; | Objeto do armazém de dados                                                                      |
-
-</div>
-<!-- END REF-->
-
-<div class="no-index">
 <details><summary>História</summary>
 
 | Release | Mudanças                                |
@@ -31,7 +15,18 @@ displayed_sidebar: docs
 | 18      | Adicionado                              |
 
 </details>
-</div>
+
+<!--REF #_command_.Open datastore.Syntax-->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : 4D.DataStoreImplementation<!-- END REF-->
+
+<!--REF #_command_.Open datastore.Params-->
+
+| Parâmetro      | Tipo                                       |                             | Descrição                                                                                       |
+| -------------- | ------------------------------------------ | --------------------------- | ----------------------------------------------------------------------------------------------- |
+| connectionInfo | Object                                     | &#8594; | Propriedades de conexão utilizadas para alcançar o armazém de datos remoto                      |
+| localID        | Text                                       | &#8594; | Id para assignar ao armazém de dados aberto na aplicação local (obrigatorio) |
+| Resultado      | 4D.DataStoreImplementation | &#8592; | Objeto do armazém de dados                                                                      |
+
+<!-- END REF-->
 
 ## Descrição
 
@@ -51,14 +46,14 @@ Exchanges with the remote datastore are automatically managed via REST requests.
 
 Passe em connectionInfo um objeto que desceva o armazém de dados remoto ao que quiser se conectar. Pode conter as propriedades abaixo (todas as propriedades são opcionais menos *hostname*):
 
-| Propriedade | Tipo       | Aplicação 4D remoto                                                                                                                                                                                                                                                                                                                                                                                                                                                           |                                       |
-| ----------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
-| hostname    | Text       | Nome ou endereço IP da database remota + ":" + número de porta (o numero de porta é obrigatório)                                                                                                                                                                                                                                                                                                                                           | API Endpoint de instância Qodly cloud |
-| user        | Text       | Nome de usuario                                                                                                                                                                                                                                                                                                                                                                                                                                                               |                                       |
-| senha       | Text       | senha de usuario                                                                                                                                                                                                                                                                                                                                                                                                                                                              |                                       |
-| idleTimeout | Integer    | Tempo de espera da sessão de inatividade (em minutos) depois do qual a sessão é fechada automaticamente por 4D. Se omitido, o valor por defeito é 60 (1h). O valor não pode ser < 60 (se for passado um valor menor, o tempo limite será definido como 60). Para saber mais informação, consulte **Fechamento de sessões**. |                                       |
-| tls         | Parâmetros | True para usar conexão segura(1). Se omitido, false por defeito. Se for omitido, o normal é falso Usar uma conexão segura é recomendado sempre que possível.                                                                                                                                                                                                                                               |                                       |
-| type        | Text       | deve ser "4D Server"                                                                                                                                                                                                                                                                                                                                                                                                                                                          |                                       |
+| Propriedade | Tipo       | Aplicação 4D remoto                                                                                                                                                                                                                                                                                                                                                                                                                                                          |                                       |
+| ----------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
+| hostname    | Text       | Nome ou endereço IP da database remota + ":" + número de porta (o numero de porta é obrigatório)                                                                                                                                                                                                                                                                                                                                          | API Endpoint de instância Qodly cloud |
+| user        | Text       | Nome de usuario                                                                                                                                                                                                                                                                                                                                                                                                                                                              |                                       |
+| senha       | Text       | senha de usuario                                                                                                                                                                                                                                                                                                                                                                                                                                                             |                                       |
+| idleTimeout | Integer    | Tempo de espera da sessão de inatividade (em minutos) depois do qual a sessão é fechada automaticamente por 4D. Se omitido, o valor por defeito é 60 (1h). O valor não pode ser < 60 (se for passado um valor menor, o tempo limite será definido como 60). Para obter mais informações, veja **Sessões de encerramento**. |                                       |
+| tls         | Parâmetros | True para usar conexão segura(1). Se omitido, false por defeito. Se for omitido, o normal é falso Usar uma conexão segura é recomendado sempre que possível.                                                                                                                                                                                                                                              |                                       |
+| type        | Text       | deve ser "4D Server"                                                                                                                                                                                                                                                                                                                                                                                                                                                         |                                       |
 
 (1) Se `tls` for true, o protocolo HTTPS é utilizado se:
 

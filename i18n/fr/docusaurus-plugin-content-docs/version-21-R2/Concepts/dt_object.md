@@ -121,7 +121,7 @@ Vous accédez aux valeurs des propriétés de l'objet à travers une chaîne de 
 - en utilisant un symbole "point" :
   > object.propertyName
 
-Exemple :
+Voici un exemple :
 
 ```4d
      employee.name:="Dupont"
@@ -160,14 +160,14 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
 ```
 
 - **les commandes 4D** qui retournent des objets.
-  Exemple :
+  Voici un exemple :
 
 ```4d
      $measures:=Database measures.DB.tables
 ```
 
 - **les méthodes projet** ou **les fonctions** qui retournent des objets.
-  Exemple :
+  Voici un exemple :
 
 ```4d
       // MyMethod1
@@ -216,7 +216,7 @@ La notation objet pour les pointeurs est semblable à la notation objet standard
 
 > pointeurObjet->["nomPropriété"]
 
-Exemple :
+Voici un exemple :
 
 ```4d
  var vObj : Object

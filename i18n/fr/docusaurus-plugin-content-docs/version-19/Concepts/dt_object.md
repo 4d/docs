@@ -36,7 +36,7 @@ Chaque valeur de propriété accessible par la notation objet est considérée c
 
 Les objets doivent être initialisés à l'aide, par exemple, de la commande `New object`, sinon une erreur de syntaxe sera générée à la suite d'une lecture ou d'une modification de leurs propriétés.
 
-Exemple :
+Voici un exemple :
 ```4d
  C_OBJECT($obVar) ////création d'une variable 4D de type objet
  $obVar:=New object //initialisation de l'objet et assignation à la variable 4D
@@ -60,7 +60,7 @@ Avec la notation objet, il est possible d'accéder aux propriétés d'objets (au
 
 - à l'aide du symbole "point" : > objet.NomPropriété
 
-Exemple :
+Voici un exemple :
 ```4d
      employee.name:="Smith"
 ```
@@ -91,14 +91,14 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
  $pop:=$aObjCountries{2}.population //tableau d'objets
  $val:=$myCollection[3].subvalue //élément de collection
 ```
-- avec les **commandes 4D** qui retournent des objets. Exemple :
+- avec les **commandes 4D** qui retournent des objets. Voici un exemple :
 
 
 ```4d
      $measures:=Lire mesures base.DB.tables
 ```
 
-- avec les **méthodes projet** qui retournent des objets. Exemple :
+- avec les **méthodes projet** qui retournent des objets. Voici un exemple :
 
 ```4d
       // MyMethod1
@@ -127,7 +127,7 @@ La notation objet pour les pointeurs est semblable à la notation objet standard
 - Accès par le nom :
 > pointeurObjet->[nomPropriété"]
 
-Exemple :
+Voici un exemple :
 
 ```4d
  C_OBJECT(vObj)

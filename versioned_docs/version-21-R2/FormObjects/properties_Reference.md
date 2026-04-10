@@ -91,7 +91,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |**g**|||
 |[`graduationStep`](properties_Scale.md#graduation-step)| Scale display measurement.|minimum: 0<a id="h"></a>|
 |**h**|||
-|[`header`](./listbox-header-footer.md#headers)|Defines the header of a list box column|Object with properties "text", "name", "icon", "dataSource", "fontWeight", "fontStyle", "tooltip" |
+|[`header`](./listbox_overview.md#list-box-headers)|Defines the header of a list box column|Object with properties "text", "name", "icon", "dataSource", "fontWeight", "fontStyle", "tooltip" |
 |[`headerHeight`](properties_Headers.md#height)|Used to set the row height |positive decimal + px &#124; em |
 |[`height`](properties_CoordinatesAndSizing.md#height)|Designates an object's vertical size|minimum: 0|
 |[`hideExtraBlankRows`](properties_BackgroundAndBorder.md#hide-extra-blank-rows)|Deactivates the visibility of extra, empty rows.	|true, false|

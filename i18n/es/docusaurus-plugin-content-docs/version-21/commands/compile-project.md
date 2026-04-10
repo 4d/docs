@@ -5,11 +5,9 @@ slug: /commands/compile-project
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Compile project.Syntax-->**Compile project** ( {*options* : Object} ) : Object<br/>**Compile project** ( *projectFile* : 4D.File {; *options* : Object} ) : Object<!-- END REF-->
+<!--REF #_command_.Compile project.Syntax-->**Compile project** {( {*projectFile*}{;}{*options*} )} : Object<!-- END REF-->
 
 <!--REF #_command_.Compile project.Params-->
-
-<div class="no-index">
 
 | Parámetros  | Tipo                    |                             | Descripción                                                       |
 | ----------- | ----------------------- | --------------------------- | ----------------------------------------------------------------- |
@@ -17,10 +15,8 @@ displayed_sidebar: docs
 | options     | Object                  | &#8594; | Objeto que especifica las opciones de compilación                 |
 | Resultado   | Object                  | &#8592; | Objeto que contiene información sobre el estado de la compilación |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones                            |
@@ -28,7 +24,6 @@ displayed_sidebar: docs
 | 20 R8       | Soporte del "type" "formObjectExpression" |
 
 </details>
-</div>
 
 ## Descripción
 
@@ -63,7 +58,7 @@ El parámetro *options* es un objeto. Estas son las opciones de compilación dis
 | defaultTypeForButtons                                                              | Integer                          | Valor posible: Is real o Is longint                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | defaultTypeForNumerics                                                             | Integer                          | Valor posible: Is real o Is longint                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | generateSymbols                                                                    | Boolean                          | True para generar información de símbolos en el objeto devuelto                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| generateSyntaxFile                                                                 | Boolean                          | True para generar un [archivo de sintaxis para la finalización del código](../settings/general.md) en la carpeta \\Resources\\en.lproj del proyecto                                                                                                                                                                                                                                                                                                                                                                                          |
+| generateSyntaxFile                                                                 | Boolean                          | True para generar un [archivo de sintaxis para la finalización del código](../settings/general.md).md#generate-syntax-file-for-code-completion-when en-compiled) en la carpeta \\Resources\\en.lproj del proyecto                                                                                                                                                                                                                                                                                                            |
 | generateTypingMethods                                                              | Text                             | "reset" o "append" para generar métodos de tipado. Si el valor es "append", las declaraciones de variables existentes no serán modificadas (comportamiento de la ventana del compilador). Si el valor es "reset" las declaraciones de variables existentes se eliminan de antemano.                                                                                                                                                                                                         |
 | plugins                                                                            | Objeto 4D.Folder | Carpeta de Plug-ins a usar en lugar de [Carpeta de Plug-ins del proyecto actual](../Project/architecture.md#plugins). Esta propiedad solo está disponible con la sintaxis *projectFile*.                                                                                                                                                                                                                                                                                                                                       |
 | targets                                                                            | Colección de cadenas             | Valores posibles: "x86_64_generic", "arm64_macOS_lib". Pase una colección vacía para ejecutar solo la verificación de sintaxis                                                                                                                                                                                                                                                                                                             |

@@ -14,20 +14,17 @@ displayed_sidebar: docs
 | --- | ---------------------------------------------------- | --------------------------- | -------------- |
 | 戻り値 | [4D.Session](../API/SessionClass.md) | &#8592; | Session オブジェクト |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>履歴</summary>
 
 | リリース  | 内容                               |
 | ----- | -------------------------------- |
-| 20 R8 | Support of standalone sessions   |
+| 20 R8 | スタンドアロンセッションのサポート                |
 | 20 R5 | リモートクライアントとストアドプロシージャーセッションをサポート |
 | 18 R6 | 追加                               |
 
 </details>
-</div>
 
 ## 説明
 

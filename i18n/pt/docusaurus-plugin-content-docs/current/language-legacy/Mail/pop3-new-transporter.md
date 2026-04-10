@@ -9,17 +9,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.POP3 New transporter.Params-->
 
-<div class="no-index">
-
 | Parâmetro | Tipo                               |                             | Descrição                                                                         |
 | --------- | ---------------------------------- | --------------------------- | --------------------------------------------------------------------------------- |
 | server    | Object                             | &#8594; | Informação de servidor de correio                                                 |
 | Resultado | 4D.POP3Transporter | &#8592; | [Objeto transporter POP3](../../API/POP3TransporterClass.md#pop3-transporter-object) |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>História</summary>
 
 | Release | Mudanças   |
@@ -27,13 +23,12 @@ displayed_sidebar: docs
 | 18 R2   | Adicionado |
 
 </details>
-</div>
 
 ## Descrição
 
 The `POP3 New transporter` command <!-- REF #_command_.POP3 New transporter.Summary -->configures a new POP3 connection<!-- END REF -->according to the *server* parameter and returns a new [POP3 transporter](../../API/POP3TransporterClass.md#pop3-transporter-object) object. O objeto transporter retornado vai geralmente ser usado para receber emails.
 
-No parâmetro *server*, passe um objeto contendo as propriedades abaixo:
+No parâmetro server, passe um objeto contendo as propriedades abaixo:
 
 | *server*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Valor padrão (se omitido)                      |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |

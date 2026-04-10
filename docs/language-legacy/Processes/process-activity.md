@@ -17,16 +17,14 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>History</summary>
 
 |Release|Changes|
 |---|---|
+|20 R7|Support of *sessionID* parameter|
 |21|Support of web user sessions|
-|20 R7|<ul><li>Support of *sessionID* parameter</li><li>Renamed (Get process activity)</li></ul>|
 
 </details>
-</div>
 
 
 ## Description 

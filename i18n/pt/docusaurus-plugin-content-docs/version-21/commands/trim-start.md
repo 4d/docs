@@ -4,21 +4,17 @@ title: Trim start
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Trim start.Syntax-->**Trim start** ( *aString* : Text ) : Text<!-- END REF-->
+<!--REF #_command_.Trim start.Syntax-->**Trim start** ( *aString* ) : Text<!-- END REF-->
 
 <!--REF #_command_.Trim start.Params-->
-
-<div class="no-index">
 
 | Parâmetro | Tipo |                             | Descrição    |
 | --------- | ---- | --------------------------- | ------------ |
 | aString   | Text | &#8594; | Text to trim |
 | Resultado | Text | &#8592; | Trimmed text |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>História</summary>
 
 | Release | Mudanças   |
@@ -26,7 +22,6 @@ displayed_sidebar: docs
 | 21      | Adicionado |
 
 </details>
-</div>
 
 ## Descrição
 

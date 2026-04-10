@@ -53,7 +53,7 @@ Permet de définir une liste dont les valeurs ne peuvent pas être saisies dans 
 
 #### Objets pris en charge
 
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox-column.md) - [Input](input_overview.md)
+[Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
 
 #### Commandes
 
@@ -78,7 +78,7 @@ Cependant, contrairement à la propriété [Enumération](properties_DataSource.
 
 #### Objets pris en charge
 
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox-column.md) - [Input](input_overview.md)
+[Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
 
 #### Commandes
 

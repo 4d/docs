@@ -4,24 +4,6 @@ title: File
 displayed_sidebar: docs
 ---
 
-<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
-
-<!-- REF #_command_.File.Params -->
-
-<div class="no-index">
-
-| 引数           | 型                                              |                             | 説明                                                                |
-| ------------ | ---------------------------------------------- | :-------------------------: | ----------------------------------------------------------------- |
-| path         | Text                                           | &#8594; | ファイルパス                                                            |
-| fileConstant | Integer                                        | &#8594; | 4Dファイル定数                                                          |
-| pathType     | Integer                                        | &#8594; | `fk posix path` (デフォルト) または `fk platform path` |
-| \*           | 演算子                                            | &#8594; | ホストデータベースのファイルを返すには \* を渡します                                      |
-| 戻り値          | [4D.File](../API/FileClass.md) | &#8592; | 新規ファイルオブジェクト                                                      |
-
-</div>
-<!-- END REF -->
-
-<div class="no-index">
 <details><summary>履歴</summary>
 
 | リリース  | 内容                            |
@@ -30,7 +12,20 @@ displayed_sidebar: docs
 | 17 R5 | 追加                            |
 
 </details>
-</div>
+
+<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; \* } ) : 4D.File<!-- END REF -->
+
+<!-- REF #_command_.File.Params -->
+
+| 引数           | 型                                              |                             | 説明                                                                |
+| ------------ | ---------------------------------------------- | :-------------------------: | ----------------------------------------------------------------- |
+| path         | Text                                           | &#8594; | ファイルパス                                                            |
+| fileConstant | Integer                                        | &#8594; | 4Dファイル定数                                                          |
+| pathType     | Integer                                        | &#8594; | `fk posix path` (デフォルト) または `fk platform path` |
+| \*           | operator                                       | &#8594; | ホストデータベースのファイルを返すには \* を渡します                                      |
+| 戻り値          | [4D.File](../API/FileClass.md) | &#8592; | 新規ファイルオブジェクト                                                      |
+
+<!-- END REF -->
 
 ## 説明
 

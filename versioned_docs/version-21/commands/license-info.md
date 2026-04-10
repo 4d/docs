@@ -14,18 +14,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-<div class="no-index">
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|20 R7|Renamed (Get License info)|
-|16 R6|Modified|
-|16 R4|Created|
-
-</details>
-</div>
-
 ## Description 
 
 <!--REF #_command_.License info.Summary-->The **License info** command returns an object providing detailed information about the active license.<!-- END REF-->
@@ -37,8 +25,6 @@ If the command is executed on a 4D application that does not use locally a licen
 This command reloads the license files from the disk and updates the associated rights if they have been modified. 
 
 :::
-
-
 The returned object contains the following properties:
 
 ```json

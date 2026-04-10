@@ -21,12 +21,12 @@ title: 4D Write Pro Commands
 
 <a id="D"><b>D</b></a>
 
-[`WP DELETE BOOKMARK`](../commands/wp-delete-bookmark)<br/>
-[`WP DELETE FOOTER`](../commands/wp-delete-footer)<br/>
-[`WP DELETE HEADER`](../commands/wp-delete-header)<br/>
-[`WP DELETE PICTURE`](../commands/wp-delete-picture)<br/>
-[`WP DELETE SECTION`](../commands/wp-delete-section) ***New 4D 20 R7***<br/>
-[`WP DELETE STYLE SHEET`](../commands/wp-delete-style-sheet) ***Modified 4D 21 R3***<br/>
+[`WP DELETE BOOKMARK`](../commands-legacy/wp-delete-bookmark.md)<br/>
+[`WP DELETE FOOTER`](../commands-legacy/wp-delete-footer.md)<br/>
+[`WP DELETE HEADER`](../commands-legacy/wp-delete-header.md)<br/>
+[`WP DELETE PICTURE`](../commands-legacy/wp-delete-picture.md)<br/>
+[`WP DELETE SECTION`](wp-delete-section.md) ***New 4D 20 R7***<br/>
+[`WP DELETE STYLE SHEET`](wp-delete-style-sheet.md) ***Modified 4D 21 R3***<br/>
 [`WP DELETE SUBSECTION`](wp-delete-subsection.md) ***Modified 4D 20 R7***<br/>
 [`WP DELETE TEXT BOX`](../commands/wp-delete-text-box)
 
@@ -45,31 +45,31 @@ title: 4D Write Pro Commands
 <a id="G"><b>G</b></a>
 
 [`WP GET ATTRIBUTES`](wp-get-attributes.md) ***Modified 4D 20 R8***<br/>
-[`WP Get body`](../commands/wp-get-body)<br/>
-[`WP GET BOOKMARKS`](../commands/wp-get-bookmarks)<br/>
-[`WP Get breaks`](../commands/wp-get-breaks)<br/>
-[`WP Get data context`](../commands/wp-get-data-context)<br/>
-[`WP Get element by ID`](../commands/wp-get-element-by-id)<br/>
-[`WP Get elements`](../commands/wp-get-elements)<br/>
-[`WP Get footer`](../commands/wp-get-footer)<br/>
-[`WP Get formulas`](../commands/wp-get-formulas)<br/>
-[`WP Get frame`](../commands/wp-get-frame)<br/>
-[`WP Get header`](../commands/wp-get-header)<br/>
-[`WP Get links`](../commands/wp-get-links)<br/>
-[`WP Get page count`](../commands/wp-get-page-count)<br/>
-[`WP Get position`](../commands/wp-get-position)<br/>
-[`WP Get section`](../commands/wp-get-section)<br/>
-[`WP Get sections`](../commands/wp-get-sections)<br/>
-[`WP Get style sheet`](../commands/wp-get-style-sheet) ***Modified 4D 21 R3***<br/>
-[`WP Get style sheets`](../commands/wp-get-style-sheets)<br/>
-[`WP Get subsection`](../commands/wp-get-subsection)<br/>
-[`WP Get text`](../commands/wp-get-text)<br/>
-[`WP Get view properties`](../commands/wp-get-view-properties)
+[`WP Get body`](../commands-legacy/wp-get-body.md)<br/>
+[`WP GET BOOKMARKS`](../commands-legacy/wp-get-bookmarks.md)<br/>
+[`WP Get breaks`](../commands-legacy/wp-get-breaks.md)<br/>
+[`WP Get data context`](../commands-legacy/wp-get-data-context.md)<br/>
+[`WP Get element by ID`](../commands-legacy/wp-get-element-by-id.md)<br/>
+[`WP Get elements`](../commands-legacy/wp-get-elements.md)<br/>
+[`WP Get footer`](../commands-legacy/wp-get-footer.md)<br/>
+[`WP Get formulas`](../commands-legacy/wp-get-formulas.md)<br/>
+[`WP Get frame`](../commands-legacy/wp-get-frame.md)<br/>
+[`WP Get header`](../commands-legacy/wp-get-header.md)<br/>
+[`WP Get links`](../commands-legacy/wp-get-links.md)<br/>
+[`WP Get page count`](../commands-legacy/wp-get-page-count.md)<br/>
+[`WP Get position`](../commands-legacy/wp-get-position.md)<br/>
+[`WP Get section`](../commands-legacy/wp-get-section.md)<br/>
+[`WP Get sections`](../commands-legacy/wp-get-sections.md)<br/>
+[`WP Get style sheet`](wp-get-style-sheet.md) ***Modified 4D 21 R3***<br/>
+[`WP Get style sheets`](../commands-legacy/wp-get-style-sheets.md)<br/>
+[`WP Get subsection`](../commands-legacy/wp-get-subsection.md)<br/>
+[`WP Get text`](../commands-legacy/wp-get-text.md)<br/>
+[`WP Get view properties`](../commands-legacy/wp-get-view-properties.md)
 
 <a id="I"><b>I</b></a>
 
 [`WP Import document`](wp-import-document.md) ***Modified 4D 20 R8***<br/>
-[`WP IMPORT STYLE SHEETS`](../commands/wp-import-style-sheets)<br/>
+[`WP IMPORT STYLE SHEETS`](wp-import-style-sheets.md)<br/>
 [`WP INSERT BREAK`](wp-insert-break.md) ***Modified 4D 20 R8***<br/>
 [`WP Insert document body`](wp-insert-document-body.md) ***Modified 4D 20 R8***<br/>
 [`WP INSERT FORMULA`](wp-insert-formula.md) ***Modified 4D 20 R8***<br/>
@@ -79,13 +79,13 @@ title: 4D Write Pro Commands
 
 <a id="N"><b>N</b></a>
 
-[`WP New`](../commands/wp-new)<br/>
-[`WP NEW BOOKMARK`](../commands/wp-new-bookmark)<br/>
-[`WP New footer`](../commands/wp-new-footer)<br/>
-[`WP New header`](../commands/wp-new-header)<br/>
-[`WP New style sheet`](../commands/wp-new-style-sheet) ***Modified 4D 21 R3***<br/>
-[`WP New subsection`](../commands/wp-new-subsection)<br/>
-[`WP New text box`](../commands/wp-new-text-box)
+[`WP New`](../commands-legacy/wp-new.md)<br/>
+[`WP NEW BOOKMARK`](../commands-legacy/wp-new-bookmark.md)<br/>
+[`WP New footer`](../commands-legacy/wp-new-footer.md)<br/>
+[`WP New header`](../commands-legacy/wp-new-header.md)<br/>
+[`WP New style sheet`](wp-new-style-sheet.md) ***Modified 4D 21 R3***<br/>
+[`WP New subsection`](../commands-legacy/wp-new-subsection.md)<br/>
+[`WP New text box`](../commands-legacy/wp-new-text-box.md)
 
 <a id="P"><b>P</b></a>
 

@@ -4,7 +4,7 @@ title: FORM LOAD
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM LOAD.Syntax-->**FORM LOAD** ( {*aTable* : Table ;} *form* : Text, Object {; *formData* : Object}{; *} )<!-- END REF-->
+<!--REF #_command_.FORM LOAD.Syntax-->**FORM LOAD** ( {*aTable* ;} *form* {; *formData*}{; *} )<!-- END REF-->
 <!--REF #_command_.FORM LOAD.Params-->
 <div class="no-index">
 
@@ -16,19 +16,6 @@ displayed_sidebar: docs
 | * | Operator | &#8594;  | If passed = command applies to host database when it is executed from a component (parameter ignored outside of this context) |
 </div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|20|Modified|
-|16 R6|Modified|
-|14|Renamed (OPEN PRINTING FORM)|
-|12|Created|
-
-</details>
-</div>
 
 ## Description 
 

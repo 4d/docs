@@ -112,7 +112,7 @@ title: メソッドページ
 
 ![](../assets/en/Preferences/show-clipboards.png)
 
-これらのクリップボードが非表示の時でも、対応する[クリップボードのショートカット](../code-editor/write-class-method.md#クリップボード) は引き続きアクティブです。
+The corresponding [clipboard shorcuts](../code-editor/write-class-method.md#clipboards) are still active when these clipboards are hidden.
 
 #### 論理ブロックを強調
 

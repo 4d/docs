@@ -9,25 +9,12 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Super.Params -->
 
-<div class="no-index">
-
 | Paramètres | Type   |                             | Description                                                                   |
 | ---------- | ------ | --------------------------- | ----------------------------------------------------------------------------- |
 | param      | any    | ->                          | Paramètre(s) à passer au constructeur de la classe parente |
 | Résultat   | Object | <- | Parent de l'objet                                                             |
 
-</div>
 <!-- END REF -->
-
-<div class="no-index">
-<details><summary>Historique</summary>
-
-| Release | Modifications |
-| ------- | ------------- |
-| 19      | Created       |
-
-</details>
-</div>
 
 Le mot-clé `Super` <!-- REF #_command_.Super.Summary -->permet les appels à la `superclass`, c'est-à-dire à la classe parente<!-- END REF -->.
 

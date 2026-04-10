@@ -22,17 +22,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-<div class="no-index">
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|2004|Modified|
-|<6|Created|
-
-</details>
-</div>
-
 ## Description 
 
 <!--REF #_command_.Open window.Summary-->**Open window** opens a new window with the dimensions given by the first four parameters<!-- END REF-->:

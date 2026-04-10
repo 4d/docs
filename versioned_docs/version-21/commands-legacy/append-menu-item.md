@@ -56,7 +56,7 @@ You define the items to be appended with the parameter *itemText* as follows:
 * To add a check mark to an item: In the item text, place an exclamation mark (*!*) followed by the character you want as a check mark. On Macintosh, the character is displayed; on Windows, a check mark is displayed no matter what character you passed.
 * To add an icon to an item: In the item text, place a circumflex accent (^) followed by a character whose code plus 208 is the resource ID of a Mac OS-based icon resource.
 * To add a shortcut to an item: In the item text, place a slash (*/*) followed by the shortcut character for the item.
-* If the item is associated with a standard action, pass the ak standard action title constant in *itemText* to automatically use the localized action name and context information (if any), for example "Undo <previous action>".
+* (**Starting with 4D v16 R3**) If the item is associated with a standard action, pass the ak standard action title constant in *itemText* to automatically use the localized action name and context information (if any), for example "Undo <previous action>".
 
 **Note:** Use menus that have a reasonable number of items. For example, if you want to display more than 50 items, consider using a scrollable area in a form instead of a menu.
 

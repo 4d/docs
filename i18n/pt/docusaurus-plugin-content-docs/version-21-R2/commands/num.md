@@ -9,8 +9,6 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Num.Params-->
 
-<div class="no-index">
-
 | Parâmetro | Tipo                   |                             | Descrição                                                                                       |
 | --------- | ---------------------- | --------------------------- | ----------------------------------------------------------------------------------------------- |
 | expressão | Text, Boolean, Integer | &#8594; | String for which to return the numeric form, or Boolean to return 0 or 1, or Numeric expression |
@@ -18,19 +16,15 @@ displayed_sidebar: docs
 | base      | Integer                | &#8594; | Value between 2 and 36 that represents the radix                                                |
 | Resultado | Real                   | &#8592; | Numeric form of the expression parameter                                                        |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>História</summary>
 
-| Release                     | Mudanças                    |
-| --------------------------- | --------------------------- |
-| 21                          | Support of *base* parameter |
-| <6 | Created                     |
+| Release | Mudanças                    |
+| ------- | --------------------------- |
+| 21      | Support of *base* parameter |
 
 </details>
-</div>
 
 ## Descrição
 

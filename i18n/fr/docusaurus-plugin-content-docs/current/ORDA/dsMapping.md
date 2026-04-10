@@ -205,7 +205,7 @@ Une entity selection est un objet contenant une ou plusieurs référence(s) à d
 
 Un objet Entity selection est géré par les fonctions et les propriétés de la classe [**EntitySelection**](../API/EntitySelectionClass.md).
 
-Exemple :
+Voici un exemple :
 
 ```4d
 var $e : cs.EmployeeSelection //déclare une variable objet $e de type de classe EmployeeSelection

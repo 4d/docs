@@ -8,17 +8,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New signal.Params-->
 
-<div class="no-index">
-
 | 引数          | 型                         |                             | 説明                   |
 | ----------- | ------------------------- | --------------------------- | -------------------- |
 | description | Text                      | &#8594; | シグナルの詳細              |
 | 戻り値         | 4D.Signal | &#8592; | シグナルを格納するネイティブオブジェクト |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>履歴</summary>
 
 | リリース  | 内容 |
@@ -26,7 +22,6 @@ displayed_sidebar: docs
 | 17 R4 | 追加 |
 
 </details>
-</div>
 
 ## 説明
 

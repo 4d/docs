@@ -4,30 +4,17 @@ title: WA Get context
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Get context.Syntax-->**WA Get context** ( * ; *object* : Text ) -> Object<br/>**WA Get context** ( *object* : Variable ) -> Object<!-- END REF-->
+<!--REF #_command_.WA Get context.Syntax-->**WA Get context** ( * ; *object* : Text ) -> *contextObj* : Object<br/>**WA Get context** ( *object* : Field, Variable ) -> *contextObj* : Object<!-- END REF-->
 
 <!--REF #_command_.WA Get context.Params-->
 
-<div class="no-index">
+| 引数         | 型      |                             | 説明                                                                    |
+| ---------- | ------ | --------------------------- | --------------------------------------------------------------------- |
+| \*         | 演算子    | &#8594; | 指定時、*object* はオブジェクト名(文字列)。 省略時、*object* は変数。      |
+| object     | any    | &#8594; | オブジェクト名 (\* 指定時) または変数 (\* 省略時) |
+| contextObj | Object | &#8592; | 事前に定義されていればコンテキストオブジェクト、それ以外の場合には `null`                              |
 
-| 引数     | 型              |                             | 説明                                                                    |
-| ------ | -------------- | --------------------------- | --------------------------------------------------------------------- |
-| \*     | 演算子            | &#8594; | 指定時、*object* はオブジェクト名(文字列)。 省略時、*object* は変数。      |
-| object | Text, Variable | &#8594; | オブジェクト名 (\* 指定時) または変数 (\* 省略時) |
-| 戻り値    | Object         | &#8592; | 事前に定義されていればコンテキストオブジェクト、それ以外の場合には `null`                              |
-
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>履歴</summary>
-
-| リリース  | 内容 |
-| ----- | -- |
-| 20 R9 | 追加 |
-
-</details>
-</div>
 
 ### 説明
 

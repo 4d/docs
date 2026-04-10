@@ -170,34 +170,28 @@ A instrução `return` encerra a execução da função ou do método e pode ser
 Por exemplo, a seguinte função devolve o quadrado de seu argumento, $x, onde $x é um número.
 
 ```4d
-Function square($x : Integer) : Integer
+Function square($x : Integer) -> $result : Integer
    return $x * $x
 ```
 
-A instrução `return` pode ser usada junto com a sintaxe padrão para [valores retornados](#valorretornado) (o valor retornado deve ser do tipo declarado). When you have declared a return parameter (e.g. `myFunction() -> $myReturnValue : Text`), `return $x` implicitely executes `$myReturnValue:=$x`, and returns to the caller. Keep in mind that it ends immediately the code execution. Examine the following examples:
+:::note
+
+Internamente, `return x` executa `myReturnValue:=x`, e retorna ao chamador. Se `return` for usado sem uma expressão, a função ou o método retornará um valor nulo do tipo de retorno declarado (se houver), caso contrário, *indefinido*.
+
+:::
+
+A instrução `return` pode ser usada junto com a sintaxe padrão para [valores retornados](#valorretornado) (o valor retornado deve ser do tipo declarado). Entretanto lembre que isso finaliza imediatamente a execução de código. Por exemplo:
 
 ```4d
 Function getValue -> $v : Integer
 	$v:=10
-	return
-	// function returns 10
-	
-Function getValue -> $v : Integer
-	$v:=10
 	return 20
-	// function returns 20
+	// retorna 20
 
 Function getValue -> $v : Integer
 	return 10
 	$v:=20 // never executed
-	// function returns 10
-
-Function getValue -> $v : Integer
-	return "Hello" //error
-
-Function returnHello
-	return "Hello"
-	// function returns "Hello"
+	// retorna 10
 ```
 
 ## Indireção dos parâmetros

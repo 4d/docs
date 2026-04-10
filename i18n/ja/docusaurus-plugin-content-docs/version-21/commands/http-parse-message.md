@@ -9,17 +9,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HTTP Parse message.Params-->
 
-<div class="no-index">
-
 | 引数   | 型          |                             | 説明                                                |
 | ---- | ---------- | --------------------------- | ------------------------------------------------- |
 | data | Text, Blob | &#8594; | 解析するデータ                                           |
 | 戻り値  | Object     | &#8592; | オブジェクト (各プロパティは、マルチパートの各データです) |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>履歴</summary>
 
 | リリース  | 内容 |
@@ -27,7 +23,6 @@ displayed_sidebar: docs
 | 20 R4 | 追加 |
 
 </details>
-</div>
 
 ## 説明
 

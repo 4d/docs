@@ -6,11 +6,9 @@ displayed_sidebar: docs
 toc_max_heading_level: 3
 ---
 
-<!--REF #_command_.Open form window.Syntax-->**Open form window** ( {*aTable* : Table ;} *formName* : Text, Object {; *type* : Integer {; *hPos* : Integer {; *vPos* : Integer}}}{; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.Open form window.Syntax-->**Open form window** ( {*aTable* : Table ;} *formName* : Text, Object {; *type* : Integer {; *hPos* : Integer {; *vPos* : Integer {; *}}}} ) : Integer<!-- END REF-->
 
 <!--REF #_command_.Open form window.Params-->
-
-<div class="no-index">
 
 | Parâmetro | Tipo         |                             | Descrição                                                                                                                                                                                   |
 | --------- | ------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -22,22 +20,7 @@ toc_max_heading_level: 3
 | \*        | Operador     | &#8594; | Save current position and size of the window                                                                                                                                                |
 | Resultado | Integer      | &#8592; | Número de referência da janela                                                                                                                                                              |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>História</summary>
-
-| Release                     | Mudanças   |
-| --------------------------- | ---------- |
-| 16 R6                       | Modificado |
-| 16 R4                       | Modificado |
-| 14 R5                       | Modificado |
-| 11 SQL                      | Modificado |
-| <6 | Adicionado |
-
-</details>
-</div>
 
 ## Descrição
 

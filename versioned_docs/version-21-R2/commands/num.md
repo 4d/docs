@@ -18,16 +18,14 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-<div class="no-index">
+
 <details><summary>History</summary>
 
 |Release|Changes|
 |---|---|
 |21|Support of *base* parameter|
-|<6|Created|
 
 </details>
-</div>
 
 
 ## Description 
@@ -54,7 +52,6 @@ There are three reserved characters that **Num** treats specially: the decimal s
 * The hyphen causes the number or exponent to be negative. The hyphen must appear before any negative numeric characters or after the “e” for an exponent. Except for the “e” character, if a hyphen is embedded in a numeric string, the portion of the string after the hyphen is ignored. For example, `Num("123-456")` returns 123, but `Num("-9")` returns -9.
 * The e or E causes any numeric characters to its right to be interpreted as the power of an exponent. The “e” must be embedded in a numeric string. Thus, `Num("123e–2")` returns 1.23.  
 Note that when the string includes more than one "e", conversion might give different results under macOS and under Windows.
-* The algorithm for converting text into [real values](../Concepts/dt_number.md) is based on 13 significant digits.
 
 #### *separator* parameter
 

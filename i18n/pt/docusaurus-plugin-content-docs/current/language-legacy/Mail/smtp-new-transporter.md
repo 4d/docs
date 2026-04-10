@@ -9,17 +9,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SMTP New transporter.Params-->
 
-<div class="no-index">
-
 | Parâmetro | Tipo                               |                             | Descrição                                                                         |
 | --------- | ---------------------------------- | --------------------------- | --------------------------------------------------------------------------------- |
 | server    | Object                             | &#8594; | Informação de servidor de correio                                                 |
 | Resultado | 4D.SMTPTransporter | &#8592; | [Objeto SMTP transporter](../../API/SMTPTransporterClass.md#smtp-transporter-object) |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>História</summary>
 
 | Release | Mudanças                                       |
@@ -29,7 +25,6 @@ displayed_sidebar: docs
 | 17 R4   | Adicionado                                     |
 
 </details>
-</div>
 
 ## Descrição
 
@@ -42,7 +37,7 @@ The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summ
 > - quando o objeto transporter for destruído se a propriedade [`keepAlive`](../../API/SMTPTransporterClass.md#keepalive) for true (padrão),
 > - after each  [`.send()`](../../API/SMTPTransporterClass.md#send) function execution if the [`keepAlive`](../../API/SMTPTransporterClass.md#keepalive) property is set to false.
 
-No parâmetro *server*, passe um objeto contendo as propriedades abaixo:
+No parâmetro server, passe um objeto contendo as propriedades abaixo:
 
 | *server*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Valor padrão (se omitido)                                                     |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |

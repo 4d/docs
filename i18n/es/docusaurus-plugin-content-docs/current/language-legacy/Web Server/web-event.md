@@ -9,24 +9,11 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Web Event.Params -->
 
-<div class="no-index">
-
 | Parámetros | Tipo   |                             | Descripción                          |
 | ---------- | ------ | :-------------------------: | ------------------------------------ |
 | Resultado  | Object | &#8592; | Información sobre el evento activado |
 
-</div>
 <!-- END REF -->
-
-<div class="no-index">
-<details><summary>Historia</summary>
-
-| Lanzamiento | Modificaciones |
-| ----------- | -------------- |
-| 21          | Añadidos       |
-
-</details>
-</div>
 
 ## Descripción
 

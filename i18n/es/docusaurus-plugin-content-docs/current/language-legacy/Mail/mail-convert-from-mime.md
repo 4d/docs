@@ -5,21 +5,6 @@ slug: /commands/mail-convert-from-mime
 displayed_sidebar: docs
 ---
 
-<!-- REF #_command_.MAIL Convert from MIME.Syntax -->**MAIL Convert from MIME**( *mime* : Blob ) : Object<br/>**MAIL Convert from MIME**( *mime* : Text ) : Object<!-- END REF -->
-
-<!-- REF #_command_.MAIL Convert from MIME.Params -->
-
-<div class="no-index">
-
-| Parámetros | Tipo       |                             | Descripción   |
-| ---------- | ---------- | :-------------------------: | ------------- |
-| mime       | Blob, Text | &#8594; | Email en MIME |
-| Resultado  | Object     | &#8592; | Objeto Email  |
-
-</div>
-<!-- END REF -->
-
-<div class="no-index">
 <details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
@@ -27,7 +12,17 @@ displayed_sidebar: docs
 | 18          | Añadidos       |
 
 </details>
-</div>
+
+<!-- REF #_command_.MAIL Convert from MIME.Syntax -->**MAIL Convert from MIME**( *mime* : Blob ) : Object<br/>**MAIL Convert from MIME**( *mime* : Text ) : Object<!-- END REF -->
+
+<!-- REF #_command_.MAIL Convert from MIME.Params -->
+
+| Parámetros | Tipo       |                             | Descripción   |
+| ---------- | ---------- | :-------------------------: | ------------- |
+| mime       | Blob, Text | &#8594; | Email en MIME |
+| Resultado  | Object     | &#8592; | Objeto Email  |
+
+<!-- END REF -->
 
 ## Descripción
 

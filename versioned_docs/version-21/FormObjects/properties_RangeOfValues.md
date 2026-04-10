@@ -53,7 +53,7 @@ Allows setting a list whose values cannot be entered in the object. If an exclud
 
 #### Objects Supported
 
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox-column.md) - [Input](input_overview.md)
+[Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
 
 
 #### Commands
@@ -80,7 +80,7 @@ However, unlike the [Choice List](properties_DataSource.md#choice-list) property
 
 #### Objects Supported
 
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox-column.md) - [Input](input_overview.md)
+[Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
 
 #### Commands
 

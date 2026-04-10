@@ -9,27 +9,21 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM EDIT.Params-->
 
-<div class="no-index">
-
 | Parâmetro | Tipo   |                             | Descrição                                                                                               |
 | --------- | ------ | --------------------------- | ------------------------------------------------------------------------------------------------------- |
 | aTable    | Tabela | &#8594; | Tabela possuindo o formulário ou se omitido: tabela padrão ou uso do formulário projeto |
 | form      | Text   | &#8594; | Nome do formulario                                                                                      |
 | object    | Text   | &#8594; | Nome do objeto do formulário ou nome do grupo                                                           |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>História</summary>
 
 | Release | Mudanças                      |
 | ------- | ----------------------------- |
 | 20 R8   | Suporte ao parâmetro *objeto* |
-| 18 R5   | Created                       |
 
 </details>
-</div>
 
 ## Descrição
 

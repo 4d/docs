@@ -4,30 +4,16 @@ title: SELECT LOG FILE
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SELECT LOG FILE.Syntax-->**SELECT LOG FILE** ( *logFile* : Text )<br/>**SELECT LOG FILE** ( * )<!-- END REF-->
+<!--REF #_command_.SELECT LOG FILE.Syntax-->**SELECT LOG FILE** ( *logFile* )<br/>**SELECT LOG FILE** ( * )<!-- END REF-->
 
 <!--REF #_command_.SELECT LOG FILE.Params-->
-
-<div class="no-index">
 
 | 引数      | 型    |                             | 説明              |
 | ------- | ---- | --------------------------- | --------------- |
 | logFile | Text | &#8594; | ログファイルの名前       |
 | \*      | 演算子  | &#8594; | カレントのログファイルを閉じる |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>履歴</summary>
-
-| リリース                        | 内容      |
-| --------------------------- | ------- |
-| 11 SQL                      | 変更      |
-| <6 | Created |
-
-</details>
-</div>
 
 ## 説明
 

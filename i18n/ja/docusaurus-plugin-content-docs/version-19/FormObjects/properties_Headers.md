@@ -5,7 +5,7 @@ title: ヘッダー
 
 ## ヘッダーを表示
 
-This property is used to display or hide [list box column headers](listbox-header-footer.md#headers). 列ごとに 1つのヘッダーを表示できます。それぞれのヘッダーは個別に設定できます。
+このプロパティは、[リストボックス列ヘッダー](listbox_overview.md#リストボックスヘッダー) の表示/非表示を指定します。 列ごとに 1つのヘッダーを表示できます。それぞれのヘッダーは個別に設定できます。
 
 #### JSON 文法
 
@@ -61,4 +61,4 @@ This property is used to display or hide [list box column headers](listbox-heade
 
 #### 参照
 
-[Footers](properties_Footers.md) - [List box headers](listbox-header-footer.md#headers)
+[フッター](properties_Footers.md) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー)

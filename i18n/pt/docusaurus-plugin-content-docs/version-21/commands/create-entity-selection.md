@@ -8,27 +8,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Create entity selection.Params-->
 
-<div class="no-index">
-
 | Parâmetro | Tipo                                |                             | Descrição                                                                                         |
 | --------- | ----------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------- |
 | dsTable   | Tabela                              | &#8594; | Tabela do banco de dados 4D cuja seleção atual se utilizará para construir a seleção de entidades |
 | settings  | Object                              | &#8594; | Opção de construção: context                                                      |
 | Resultado | 4D. EntitySelection | &#8592; | Seleção de entidades que coincidem com a classe de dados relacionada com a tabela dada            |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>História</summary>
-
-| Release | Mudanças   |
-| ------- | ---------- |
-| 17 R5   | Modificado |
-| 17      | Created    |
-
-</details>
-</div>
 
 ## Descrição
 

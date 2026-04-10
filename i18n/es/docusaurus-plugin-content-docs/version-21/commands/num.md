@@ -5,32 +5,26 @@ slug: /commands/num
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Num.Syntax-->**Num** ( *expression* : Text, Boolean, Integer {; *separator* : Text} ) : Real<br/>**Num** ( *expression* : Text, Boolean, Integer ; *base* : Integer ) : Real<!-- END REF-->
+<!--REF #_command_.Num.Syntax-->**Num** ( *expression* {; *separator*} ) : Real<br/>**Num** ( *expression* ; *base* ) : Real<!-- END REF-->
 
 <!--REF #_command_.Num.Params-->
 
-<div class="no-index">
-
 | Parámetros | Tipo                   |                             | Descripción                                                                         |
 | ---------- | ---------------------- | --------------------------- | ----------------------------------------------------------------------------------- |
-| expression | Text, Boolean, Integer | &#8594; | Cadena a convertir en numérica o Booleano para devolver 0 o 1, o Expresión numérica |
+| expresión  | Text, Boolean, Integer | &#8594; | Cadena a convertir en numérica o Booleano para devolver 0 o 1, o Expresión numérica |
 | separador  | Text                   | &#8594; | Separador decimal                                                                   |
 | base       | Integer                | &#8594; | Valor entre 2 y 36 que representa la base                                           |
 | Resultado  | Real                   | &#8592; | Forma numérica del parámetro de expresión                                           |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>Historia</summary>
 
-| Lanzamiento                 | Modificaciones               |
-| --------------------------- | ---------------------------- |
-| 21                          | Soporte del parámetro *base* |
-| <6 | Created                      |
+| Lanzamiento | Modificaciones               |
+| ----------- | ---------------------------- |
+| 21          | Soporte del parámetro *base* |
 
 </details>
-</div>
 
 ## Descripción
 

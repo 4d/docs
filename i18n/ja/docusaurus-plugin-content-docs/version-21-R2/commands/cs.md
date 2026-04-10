@@ -8,16 +8,6 @@ displayed_sidebar: docs
 | ---------- | ------ | --------------------------- | --------------------------- |
 | classStore | Object | &#8592; | プロジェクトまたはコンポーネントのユーザークラスストア |
 
-<div class="no-index">
-<details><summary>履歴</summary>
-
-| リリース | 内容      |
-| ---- | ------- |
-| 19   | Created |
-
-</details>
-</div>
-
 **cs** キーワードは、[**クラスのコンセプト**](../Concepts/classes.md#cs) で説明されています。
 
 ## プロパティ

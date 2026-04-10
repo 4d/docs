@@ -9,16 +9,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Call chain.Params-->
 
-<div class="no-index">
-
 | 引数  | 型          |                             | 説明                                |
 | --- | ---------- | --------------------------- | --------------------------------- |
 | 戻り値 | Collection | &#8592; | プロセス内での呼び出しチェーンを記述したオブジェクトのコレクション |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>履歴</summary>
 
 | リリース  | 内容                   |
@@ -26,7 +22,6 @@ displayed_sidebar: docs
 | 20 R9 | `formula` プロパティをサポート |
 
 </details>
-</div>
 
 ## 説明
 

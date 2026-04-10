@@ -4,30 +4,16 @@ title: ds
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ds.Syntax-->**ds** ({ *localID* : Text }) : cs.DataStore <!-- END REF -->
+<!--REF #_command_.ds.Syntax-->**ds** { ( *localID* : Text ) } : cs.DataStore <!-- END REF -->
 
 <!--REF #_command_.ds.Params-->
-
-<div class="no-index">
 
 | Parâmetro  | Tipo                          |                             | Descrição                                       |
 | ---------- | ----------------------------- | --------------------------- | ----------------------------------------------- |
 | localID    | Text                          | &#8594; | ID local del armazém de dados remoto a devolver |
 | Resultados | cs. DataStore | &#8592; | Referencia ao armazém de dados                  |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>História</summary>
-
-| Release | Mudanças   |
-| ------- | ---------- |
-| 18      | Modificado |
-| 17      | Created    |
-
-</details>
-</div>
 
 ## Descrição
 

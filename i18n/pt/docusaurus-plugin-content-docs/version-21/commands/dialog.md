@@ -4,11 +4,9 @@ title: DIALOG
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DIALOG.Syntax-->**DIALOG** ( {*aTable* : Table ;} *form* : Text, Object {; *formData* : Object}{; *} )<!-- END REF-->
+<!--REF #_command_.DIALOG.Syntax-->**DIALOG** ( {*aTable* ;} *form* {; *formData*}{; *} )<!-- END REF-->
 
 <!--REF #_command_.DIALOG.Params-->
-
-<div class="no-index">
 
 | Parâmetro | Tipo         |                             | Descrição                                                                                                                                                                                                                  |
 | --------- | ------------ | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -17,20 +15,7 @@ displayed_sidebar: docs
 | formData  | Object       | &#8594; | Dados para associar ao formulário                                                                                                                                                                                          |
 | \*        | Operador     | &#8594; | Usar o mesmo processo                                                                                                                                                                                                      |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>História</summary>
-
-| Release                     | Mudanças   |
-| --------------------------- | ---------- |
-| 17                          | Modificado |
-| 11 SQL                      | Modificado |
-| <6 | Created    |
-
-</details>
-</div>
 
 ## Descrição
 

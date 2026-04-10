@@ -9,8 +9,6 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX SET PROPERTY.Params-->
 
-<div class="no-index">
-
 | Parámetros | Tipo           |                             | Descripción                                                                                                                                       |
 | ---------- | -------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | \*         | Operador       | &#8594; | Si se especifica, object es un nombre de objeto (cadena). Si se omite, object es una variable. |
@@ -18,19 +16,7 @@ displayed_sidebar: docs
 | property   | Integer        | &#8594; | Propiedad de list box o de columna de list box                                                                                                    |
 | value      | Integer, Text  | &#8594; | Valor de la propiedad                                                                                                                             |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>Historia</summary>
-
-| Lanzamiento | Modificaciones |
-| ----------- | -------------- |
-| 19 R6       | Modificado     |
-| 16 R2       | Created        |
-
-</details>
-</div>
 
 ## Descripción
 

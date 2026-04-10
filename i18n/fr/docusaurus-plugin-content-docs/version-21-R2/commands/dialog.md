@@ -8,8 +8,6 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DIALOG.Params-->
 
-<div class="no-index">
-
 | Paramètres | Type         |                             | Description                                                                                                                                                                            |
 | ---------- | ------------ | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | aTable     | Table        | &#8594; | Table à laquelle appartient le formulaire; Si omis : Table par défaut ou utilisation d'un formulaire projet                                                            |
@@ -17,20 +15,7 @@ displayed_sidebar: docs
 | formData   | Object       | &#8594; | Données à associer au formulaire                                                                                                                                                       |
 | \*         | Opérateur    | &#8594; | Utiliser le même process                                                                                                                                                               |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>Historique</summary>
-
-| Release                     | Modifications |
-| --------------------------- | ------------- |
-| 17                          | Modifié       |
-| 11 SQL                      | Modifié       |
-| <6 | Created       |
-
-</details>
-</div>
 
 ## Description
 

@@ -103,8 +103,8 @@ Les actions standard ci-dessous sont disponibles pour les zones 4D Write Pro :
 | insertSoftHyphen | insertSoftHyphen | | Insère un trait d'union au niveau du curseur. |
 | keepWithNext | keepWithNext | Paragraphe | Relie un paragraphe au suivant afin qu'ils ne puissent pas être séparés par des sauts de page ou de colonne automatiques.<br/><br/>Si cette action est appliquée au dernier paragraphe de la dernière cellule d'un tableau, la dernière ligne du tableau est reliée au paragraphe suivant. |
 | lineHeight | lineHeight?value={<Css_length> \| <Css_percentage>} | Paragraphe, *Sous-menu* | Hauteur de ligne du paragraphe.<br/><br/>Ex: lineHeight?value=120% |
-| listConcatString | listConcatStringFormat | Paragraph | Determines whether the numbering marker of the current level should be concatenated with the one of the previous level or not.|
-| listLevelAppend  | listLevelDec  | Paragraph | Creates a new hierarchical paragraph style sheet of a higher level and applies it to the selected paragraph.| 
+| listConcatStringFormat | listConcatStringFormat | Paragraph | Determines whether the numbering marker of the current level should be concatenated with the one of the previous level or not.|
+| listLevelAppend  | listLevelAppend  | Paragraph | Creates a new hierarchical paragraph style sheet of a higher level and applies it to the selected paragraph.| 
 | listLevelDec     | listLevelDec  | Paragraph | Applies the hierarchical paragraph style sheet of the next level to the selected paragraph.| 
 | listLevelInc     | listLevelInc  | Paragraph | Applies the hierarchical paragraph style sheet of the previous level to the selected paragraph.| 
 | listNumberFormat | listNumberFormat?value=endDot|endParenthesis|doubleParenthesis | Paragraph, Submenu | Determines which delimiter to add to the numbering marker: an ending dot, an ending parenthesis, or double parenthesis (“1.”, “1)”, “(1)” |

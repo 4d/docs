@@ -9,13 +9,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.License info.Params-->
 
-<div class="no-index">
-
 | Paramètres | Type   |                             | Description                        |
 | ---------- | ------ | --------------------------- | ---------------------------------- |
 | Résultat   | Object | &#8592; | Informations sur la licence active |
 
-</div>
 <!-- END REF-->
 
 <div class="no-index">

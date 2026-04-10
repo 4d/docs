@@ -9,17 +9,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Trim.Params-->
 
-<div class="no-index">
-
 | Parâmetro | Tipo |                             | Descrição    |
 | --------- | ---- | --------------------------- | ------------ |
 | aString   | Text | &#8594; | Text to trim |
 | Resultado | Text | &#8592; | Trimmed text |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>História</summary>
 
 | Release | Mudanças   |
@@ -27,7 +23,6 @@ displayed_sidebar: docs
 | 21      | Adicionado |
 
 </details>
-</div>
 
 ## Descrição
 

@@ -5,7 +5,7 @@ slug: /commands/set-allowed-methods
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET ALLOWED METHODS.Syntax-->**SET ALLOWED METHODS** ( *methodsArray* : Text array )<!-- END REF-->
+<!--REF #_command_.SET ALLOWED METHODS.Syntax-->**SET ALLOWED METHODS** ( *methodsArray* )<!-- END REF-->
 <!--REF #_command_.SET ALLOWED METHODS.Params-->
 <div class="no-index">
 
@@ -14,17 +14,6 @@ displayed_sidebar: docs
 | methodsArray | Text array | &#8594;  | Array of method names |
 </div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|17 R2|Modified|
-|<6|Added|
-
-</details>
-</div>
 
 ## Description 
 

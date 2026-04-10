@@ -52,7 +52,7 @@ Permet de définir une liste dont les valeurs ne peuvent pas être saisies dans 
 
 #### Objets pris en charge
 
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox-column.md) - [Input](input_overview.md)
+[Combo Box](comboBox_overview.md) - [Colonne de List Box](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
 
 ---
 
@@ -71,4 +71,4 @@ La création d'une liste obligatoire n'affiche pas automatiquement la liste lors
 
 #### Objets pris en charge
 
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox-column.md) - [Input](input_overview.md)
+[Combo Box](comboBox_overview.md) - [Colonne de List Box](listbox_overview.md#list-box-columns) - [Input](input_overview.md)

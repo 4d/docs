@@ -9,8 +9,6 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Print form.Params-->
 
-<div class="no-index">
-
 | Parámetros | Tipo         |                             | Descripción                                                                                                                                                                                                  |
 | ---------- | ------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | aTable     | Tabla        | &#8594; | Tabla del formulario, o tabla por defecto, si se omite                                                                                                                                                       |
@@ -20,20 +18,7 @@ displayed_sidebar: docs
 | areaEnd    | Integer      | &#8594; | Área final (si se especifica areaStart)                                                                                                                                                   |
 | Resultado  | Integer      | &#8592; | Altura de la sección impresa                                                                                                                                                                                 |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>Historia</summary>
-
-| Lanzamiento                 | Modificaciones |
-| --------------------------- | -------------- |
-| 20                          | Modificado     |
-| 16 R6                       | Modificado     |
-| <6 | Añadidos       |
-
-</details>
-</div>
 
 ## Descripción
 

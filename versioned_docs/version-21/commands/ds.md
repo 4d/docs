@@ -4,7 +4,7 @@ title: ds
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ds.Syntax-->**ds** ({ *localID* : Text }) : cs.DataStore <!-- END REF -->
+<!--REF #_command_.ds.Syntax-->**ds** { ( *localID* : Text ) } : cs.DataStore <!-- END REF -->
 
 <!--REF #_command_.ds.Params-->
 <div class="no-index">
@@ -15,17 +15,6 @@ displayed_sidebar: docs
 | Result | cs.DataStore | &#8592; | Reference to the datastore |
 </div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|18|Modified|
-|17|Created|
-
-</details>
-</div>
 
 
 ## Description

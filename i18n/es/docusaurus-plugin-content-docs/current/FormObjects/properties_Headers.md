@@ -5,7 +5,7 @@ title: Encabezados
 
 ## Mostrar encabezados
 
-Esta propiedad se utiliza para mostrar u ocultar [los encabezados de columna listbox](listbox-header-footer.md#headers). Hay un encabezado por columna; cada encabezado se configura por separado.
+Esta propiedad se utiliza para mostrar u ocultar [los encabezados de columna listbox](listbox_overview.md#list-box-headers). Hay un encabezado por columna; cada encabezado se configura por separado.
 
 #### Gramática JSON
 

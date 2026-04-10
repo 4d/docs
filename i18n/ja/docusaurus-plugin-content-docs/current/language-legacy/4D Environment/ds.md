@@ -9,26 +9,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ds.Params-->
 
-<div class="no-index">
-
 | 引数      | 型                            |                             | 説明                        |
 | ------- | ---------------------------- | --------------------------- | ------------------------- |
 | localID | Text                         | &#8594; | 参照を取得したいリモートデータストアのローカルID |
 | 戻り値     | cs.DataStore | &#8592; | データストア参照                  |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>履歴</summary>
-
-| リリース | 内容      |
-| ---- | ------- |
-| 18   | 変更      |
-| 17   | Created |
-
-</details>
-</div>
 
 ## 説明
 

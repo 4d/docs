@@ -198,7 +198,7 @@ Puede realizar varias acciones utilizando el menú opciones:
   - Contenido (si es preciso): ofrece el contenido que realmente coincide con los criterios; por ejemplo, la línea de código que contiene la cadena solicitada.
   - Número de línea (para código) o número de página (para objetos de formulario)
 
-## Reemplazar en el contenido{#replace-in-content}
+## Reemplazar en el contenido {#replace-in-content}
 
 La función Reemplazar en el contenido permite sustituir una cadena de caracteres por otra dentro de los objetos listados en la ventana Resultados. Está disponible en el [menú de opciones](#options-menu) de la ventana.
 

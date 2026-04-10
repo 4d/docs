@@ -8,17 +8,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB Server.Params-->
 
-<div class="no-index">
-
 | Parámetros | Tipo                         |                             | Descripción                                                                                 |
 | ---------- | ---------------------------- | --------------------------- | ------------------------------------------------------------------------------------------- |
 | option     | Integer                      | &#8594; | Servidor web a obtener (por defecto si se omite = `Web server database`) |
 | Resultado  | 4D.WebServer | &#8592; | Objeto servidor web                                                                         |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones                                    |
@@ -27,7 +23,6 @@ displayed_sidebar: docs
 | 19          | soporte de .sessionCookieSameSite |
 
 </details>
-</div>
 
 ## Descripción
 
@@ -35,11 +30,11 @@ El comando `WEB Server` <!-- REF #_command_.WEB Server.Summary -->devuelve el ob
 
 Por defecto, si se omite el parámetro *option*, el comando devuelve una referencia al servidor web de la base de datos, es decir, al servidor web por defecto. Para designar el servidor web a devolver, puede pasar una de las siguientes constantes en el parámetro *option*:
 
-| Constante                      | Valor | Comentario                                                                                              |
-| ------------------------------ | ----- | ------------------------------------------------------------------------------------------------------- |
-| `Web server database`          | 1     | Servidor web del proyecto desde el que se llama al comando (por defecto si se omite) |
-| `Web server host database`     | 2     | Servidor web de la base local de un componente                                                          |
-| `Web server receiving request` | 3     | Servidor web que ha recibido la solicitud (servidor web objetivo)                    |
+| Constante                      | Valor | Comentario                                                                           |
+| ------------------------------ | ----- | ------------------------------------------------------------------------------------ |
+| `Web server database`          | 1     | Servidor web de la base actual (por defecto si se omite)          |
+| `Web server host database`     | 2     | Servidor web de la base local de un componente                                       |
+| `Web server receiving request` | 3     | Servidor web que ha recibido la solicitud (servidor web objetivo) |
 
 El **objeto servidor web devuelto** contiene los valores actuales de las [propiedades del servidor web](../API/WebServerClass.md).
 
@@ -58,7 +53,7 @@ El objeto servidor web devuelto contiene los valores actuales de las propiedades
 
 ## Ver también
 
-[Lista servidor WEB](web-server-list.md)  
+[Lista servidor WEB](web-server-list.md)\
 [webServer.stop()](../API/WebServerClass.md#stop)
 
 ## Propiedades

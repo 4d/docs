@@ -153,10 +153,10 @@ $txt:="Hello world!"
 - テーブルタグ:
 
 ```
-| 引数 | 型   | 説明  |
+| Parameter | Type   | Description  |
 | --------- | ------ | ------------ |
-| wpArea    | テキスト |Write pro エリア|
-| toolbar   | テキスト |ツールバー名  |
+| wpArea    | Text |Write pro area|
+| toolbar   | Text |Toolbar name  |
 ```
 
 - リンクタグ:

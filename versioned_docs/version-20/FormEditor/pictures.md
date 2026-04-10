@@ -46,7 +46,7 @@ High resolution pictures with the @nx convention can be used in the following ob
 * [Buttons](FormObjects/button_overview.md)/[radio](FormObjects/radio_overview.md)/[check boxes](FormObjects/checkbox_overview.md)
 * [Picture buttons](FormObjects/pictureButton_overview.md)/[Picture pop-ups](FormObjects/picturePopupMenu_overview.md)
 * [Tab controls](FormObjects/tabControl.md)
-* [List box headers](FormObjects/listbox-header-footer.md#headers)
+* [List box headers](FormObjects/listbox_overview.md#list-box-headers)
 * [Menu icons](Menus/properties.md#item-icon)
 
 4D automatically prioritizes pictures with the highest resolution. For example, when using two screens (one high resolution display, one standard display) and you move a form from one screen to another, 4D automatically renders the highest possible resolution of the picture. Even if a command or property specifies *circle.png*, *circle@3x.png* will be used (if it exists).

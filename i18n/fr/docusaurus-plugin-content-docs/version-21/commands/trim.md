@@ -4,21 +4,17 @@ title: Trim
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Trim.Syntax-->**Trim** ( *aString* : Text ) : Text<!-- END REF-->
+<!--REF #_command_.Trim.Syntax-->**Trim** ( *aString* ) : Text<!-- END REF-->
 
 <!--REF #_command_.Trim.Params-->
-
-<div class="no-index">
 
 | Paramètres | Type |                             | Description      |
 | ---------- | ---- | --------------------------- | ---------------- |
 | aString    | Text | &#8594; | Texte à tronquer |
 | Résultat   | Text | &#8592; | Texte tronqué    |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>Historique</summary>
 
 | Release | Modifications |
@@ -26,7 +22,6 @@ displayed_sidebar: docs
 | 21      | Ajout         |
 
 </details>
-</div>
 
 ## Description
 

@@ -9,26 +9,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA SET CONTEXT.Params-->
 
-<div class="no-index">
-
 | 引数         | 型                     |                             | 説明                                                                                                                  |
 | ---------- | --------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | \*         | 演算子                   | &#8594; | 指定時、*object* はオブジェクト名(文字列)。 省略時、*object* は変数。                                                    |
 | object     | Text, Variable, Field | &#8594; | Object name (if \* is specified) or <br/>Variable or field (if \* is omitted) |
 | contextObj | Object                | &#8594; | `$4d` を使用して呼び出せる関数を格納したオブジェクト                                                                                       |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>履歴</summary>
-
-| リリース  | 内容 |
-| ----- | -- |
-| 20 R9 | 追加 |
-
-</details>
-</div>
 
 ### 説明
 

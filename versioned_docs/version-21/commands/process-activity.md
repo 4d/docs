@@ -4,7 +4,7 @@ title: Process activity
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Process activity.Syntax-->**Process activity** () : Object<br/>**Process activity** ( *options* : Integer ) : Object<br/>**Process activity** ( *sessionID* : Text ) : Object<br/>**Process activity** ( *sessionID* : Text ; *options* : Integer ) : Object<!-- END REF-->
+<!--REF #_command_.Process activity.Syntax-->**Process activity** () : Object<br/>**Process activity** ( *options* ) : Object<br/>**Process activity** ( *sessionID* ) : Object<br/>**Process activity** ( *sessionID* ; *options* ) : Object<!-- END REF-->
 <!--REF #_command_.Process activity.Params-->
 <div class="no-index">
 
@@ -16,16 +16,14 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>History</summary>
 
 |Release|Changes|
 |---|---|
+|20 R7|Support of *sessionID* parameter|
 |21|Support of web user sessions|
-|20 R7|<ul><li>Support of *sessionID* parameter</li><li>Renamed (Get process activity)</li></ul>|
 
 </details>
-</div>
 
 
 ## Description 

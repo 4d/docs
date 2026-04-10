@@ -5,7 +5,7 @@ slug: /commands/string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.String.Syntax-->**String** ( *expression* : Expression {; *format* : Integer, Text {; *addTime* : Time}} ) : Text<br/>**String** ( *expression* : Expression ; *base* : Integer ) : Text<!-- END REF-->
+<!--REF #_command_.String.Syntax-->**String** ( *expression* {; *format* {; *addTime*}} ) : Text<br/>**String** ( *expression* ; *base* ) : Text<!-- END REF-->
 <!--REF #_command_.String.Params-->
 <div class="no-index">
 
@@ -19,16 +19,15 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-<div class="no-index">
+
 <details><summary>History</summary>
 
 |Release|Changes|
 |---|---|
 |21|Support of *base* parameter|
-|<6|Created|
 
 </details>
-</div>
+
 
 
 
@@ -82,7 +81,7 @@ The format is specified in the same way as it would be for a [number input on a 
 | String(1/0)                        | "INF"                | Positive infinite number        |
 | String(-1/0)                       | "-INF"               | Negative infinite number        |
 
-(\*) The algorithm for converting [real values](../Concepts/dt_number.md) into text is based on 13 significant digits.
+(\*) The algorithm for converting real values into text is based on 13 significant digits, see [`SET REAL COMPARISON LEVEL`](../commands-legacy/set-real-comparison-level.md).
 
 #### String(number;base)
 

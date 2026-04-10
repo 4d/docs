@@ -41,6 +41,14 @@ Since HTTPAgent is a shareable object, you can add one to a singleton class so y
 
 <!-- REF #4D.HTTPAgent.new().Syntax -->**4D.HTTPAgent.new**( { *options* : Object } ) : 4D.HTTPAgent<!-- END REF -->
 
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|21|Support of *storeCertificateName* property|
+
+</details>
+
 
 <!-- REF #4D.HTTPAgent.new().Params -->
 <div class="no-index">
@@ -51,17 +59,6 @@ Since HTTPAgent is a shareable object, you can add one to a singleton class so y
 |Result|[4D.HTTPAgent](#httpagent-object)|<-|New HTTPAgent object|
 </div>
 <!-- END REF -->
-
-
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|21 R3|Support of *storeCertificateName* property on macOS|
-|21|Support of *storeCertificateName* property on Windows|
-
-</details>
-
 
 #### Description
 
@@ -88,7 +85,7 @@ HTTPAgent options will be merged with [HTTPRequest options](HTTPRequestClass.md#
 | maxTotalSockets  |Integer| 65535     |Maximum number of sockets for the agent |
 | minTLSVersion  |Text| undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) |Sets the minimum version of TLS for the requests using this agent|
 | protocol |Text| undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) |Protocol used for the requests using the agent |
-|storeCertificateName|Text|undefined| Name of a certificate stored in the Certificate Store (Windows) or in the *keychain* (macOS) to use instead of one saved in the certificates folder. If the certificate is not found in the store, an error is returned. For more information, see [this blog post for Windows](https://blog.4d.com/https-requests-now-support-windows-certificate-store) and [this blog post for macOS](https://blog.4d.com/https-requests-macos-keychain-support-is-here).|
+|storeCertificateName|Text|undefined|(Windows only) Name of the OS certificate store (e.g. "LocalMachine") from where to use certificates instead of those in the certificates folder for the requests using the agent. If the certificate store is not found, an error is returned. For more information, see [this blog post](https://blog.4d.com/https-requests-now-support-windows-certificate-store).|
 | timeout |Real| undefined |If defined, timeout after which an unused socket is closed  |
 | validateTLSCertificate |Boolean| undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | validateTLSCertificate for the requests using the agent|
 

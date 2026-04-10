@@ -5,7 +5,7 @@ slug: /commands/command-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Command name.Syntax-->**Command name** ( *command* : Integer {; *info* : Integer {; *theme* : Text}} ) : Text<!-- END REF-->
+<!--REF #_command_.Command name.Syntax-->**Command name** ( *command* {; *info* {; *theme*}} ) : Text<!-- END REF-->
 <!--REF #_command_.Command name.Params-->
 <div class="no-index">
 
@@ -18,7 +18,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>History</summary>
 
 |Release|Changes|
@@ -26,7 +25,7 @@ displayed_sidebar: docs
 |20 R9|Support of deprecated property|
 
 </details>
-</div>
+
 
 ## Description 
 

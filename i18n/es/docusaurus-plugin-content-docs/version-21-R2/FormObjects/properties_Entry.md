@@ -31,7 +31,7 @@ Permite al usuario acceder a un menú contextual estándar en el objeto cuando s
 
 Para una imagen de tipo [entrada](input_overview.md), además de los comandos de edición estándar (Cortar, Copiar, Pegar y Borrar), el menú contiene el comando **Importar...**, que puede utilizarse para importar una imagen almacenada en un archivo, así como el comando **Guardar como...**, que puede utilizarse para guardar la imagen en el disco. El menú también permite modificar el formato de visualización de la imagen: se ofrecen las opciones **Truncado no centrado**, **Escalado para ajustar** y **Escalado para ajustar centrado prop.**. La modificación del [formato de visualización](properties_Display.md#picture-format) utilizando este menú es temporal; no se guarda con el registro.
 
-For a [multi-style](properties_Text.md#multi-style) text type [input](input_overview.md) or [listbox column](listbox-column.md), in addition to standard editing commands, the context menu provides the following commands:
+For a [multi-style](properties_Text.md#multi-style) text type [input](input_overview.md) or [listbox column](listbox_overview.md#list-box-columns), in addition to standard editing commands, the context menu provides the following commands:
 
 - **Fuentes...**: muestra el diálogo del sistema de fuentes
 - **Fuentes recientes**: muestra los nombres de las fuentes recientes seleccionadas durante la sesión. La lista puede almacenar hasta 10 fuentes (más allá, la última fuente utilizada sustituye a la más antigua). Por defecto, esta lista está vacía y la opción no se muestra. Puede gestionar esta lista utilizando los comandos `SET RECENT FONTS` y `FONT LIST`.
@@ -48,7 +48,7 @@ Para un [Área Web](webArea_overview.md), el contenido del menú depende del mot
 
 #### Objetos soportados
 
-[Input](input_overview.md) - [List Box Column](listbox-column.md) - [Web Area](webArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md)
+[Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Web Area](webArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md)
 
 #### Comandos
 
@@ -72,7 +72,7 @@ Cuando esta propiedad está desactivada, se desactiva todo menú emergente asoci
 
 #### Objetos soportados
 
-[Áreas 4D Write Pro](writeProArea_overview.md) - [Casilla de selección](checkbox_overview.md) - [Lista jerárquica](list_overview.md) - [Área de entrada](input_overview.md) - [Columna List Box](listbox-column.md) - [Barra de progreso](progressIndicator.md) - [Regla](ruler.md) - [Contador](stepper.md)
+[Áreas 4D Write Pro](writeProArea_overview.md) - [Casilla de selección](checkbox_overview.md) - [Lista jerárquica](list_overview.md) - [Área de entrada](input_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Barra de progreso](progressIndicator.md) - [Regla](ruler.md) - [Contador](stepper.md)
 
 #### Comandos
 
@@ -134,7 +134,7 @@ A continuación se presenta una tabla que explica cada una de las opciones de fi
 
 #### Objetos soportados
 
-[Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [ Lista jerárquica](list_overview.md) - [Área de entrada](input_overview.md) - [Columna List Box](listbox-column.md)
+[Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [ Lista jerárquica](list_overview.md) - [Área de entrada](input_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
 
 ---
 

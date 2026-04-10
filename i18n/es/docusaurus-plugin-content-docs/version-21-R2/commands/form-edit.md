@@ -8,27 +8,21 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM EDIT.Params-->
 
-<div class="no-index">
-
 | Parámetros | Tipo  |                             | Descripción                                                                                                    |
 | ---------- | ----- | --------------------------- | -------------------------------------------------------------------------------------------------------------- |
 | aTable     | Tabla | &#8594; | Tabla propia del formulario o Si se omite: tabla por defecto o uso del formulario del proyecto |
 | form       | Text  | &#8594; | Nombre del formulario                                                                                          |
 | object     | Text  | &#8594; | Nombre del objeto del formulario o nombre del grupo                                                            |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones                 |
 | ----------- | ------------------------------ |
 | 20 R8       | Soporte del parámetro *object* |
-| 18 R5       | Created                        |
 
 </details>
-</div>
 
 ## Descripción
 

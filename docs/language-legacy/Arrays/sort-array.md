@@ -5,14 +5,14 @@ slug: /commands/sort-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SORT ARRAY.Syntax-->**SORT ARRAY** ( *array* : Array {; *...array* : Array}{; *order* : >, < } )<!-- END REF-->
+<!--REF #_command_.SORT ARRAY.Syntax-->**SORT ARRAY** ( *array* : Array {; *...array* : Array}{; *>_or_<* : Comparator } )<!-- END REF-->
 <!--REF #_command_.SORT ARRAY.Params-->
 <div class="no-index">
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | array | Array | &#8594;  | Arrays to sort |
-| order | >, < | &#8594;  | ">" to sort in Ascending order, or "<" to sort in Descending order, or Ascending order if omitted |
+| >_or_< | Comparator | &#8594;  | ">" to sort in Ascending order, or "<" to sort in Descending order, or Ascending order if omitted |
 </div>
 <!-- END REF-->
 
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 * You cannot sort [Pointer](# "A reference to another variable (including arrays and array elements), table, or field") or [Picture](# "Can be any Windows or Macintosh picture") arrays. You can sort the elements of a two-dimensional array (i.e., *a2DArray{$vlThisElem}*) but you cannot sort the two-dimensional array itself (i.e., *a2DArray*).
 * You can sort [Object](# "Data structured as a native 4D object") arrays. Null elements are grouped and array elements are sorted with an internal order.
 
-The last parameter specifies whether to sort *array* in ascending or descending *order*. The “greater than” symbol (>) indicates an ascending sort; the “less than” symbol (<) indicates a descending sort. If you do not specify the sorting order, then the sort is ascending.
+The last parameter specifies whether to sort *array* in ascending or descending order. The “greater than” symbol (>) indicates an ascending sort; the “less than” symbol (<) indicates a descending sort. If you do not specify the sorting order, then the sort is ascending.
 
 If more than one array is specified, the arrays are sorted following the sort order of the first array; no multi-level sorting is performed here. Instead you can use the [MULTI SORT ARRAY](../commands/multi-sort-array) command when you want to sort synchronized arrays.
 

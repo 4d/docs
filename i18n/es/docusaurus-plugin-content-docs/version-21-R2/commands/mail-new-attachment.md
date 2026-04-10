@@ -4,11 +4,17 @@ title: MAIL New attachment
 displayed_sidebar: docs
 ---
 
+<details><summary>Historia</summary>
+
+| Lanzamiento | Modificaciones                                                                      |
+| ----------- | ----------------------------------------------------------------------------------- |
+| 19 R2       | Acepta 4D.File, 4D.ZipFile, 4D.Blob |
+
+</details>
+
 <!-- REF #_command_.MAIL New attachment.Syntax -->**MAIL New attachment**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
 
 <!--REF #_command_.MAIL New attachment.Params-->
-
-<div class="no-index">
 
 | Parámetros  | Tipo                              |                             | Descripción                                                                                        |
 | ----------- | --------------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------- |
@@ -22,19 +28,7 @@ displayed_sidebar: docs
 | disposition | Text                              | &#8594; | Valor del encabezado content-disposition: "inline" o "attachment". |
 | Resultado   | 4D.MailAttachment | &#8592; | Objeto adjunto                                                                                     |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>Historia</summary>
-
-| Lanzamiento | Modificaciones                                                                      |
-| ----------- | ----------------------------------------------------------------------------------- |
-| 19 R2       | Acepta 4D.File, 4D.ZipFile, 4D.Blob |
-| 17 R4       | Añadidos                                                                            |
-
-</details>
-</div>
 
 ## Descripción
 

@@ -5,7 +5,7 @@ title: Rodapés
 
 ## Exibir rodapés
 
-Essa propriedade é usada para exibir ou ocultar [os rodapés de coluna list box](listbox-header-footer.md#footers). Existe um rodapé por coluna; cada rodapé é configurado separadamente.
+Essa propriedade é usada para exibir ou ocultar [os rodapés de coluna list box](listbox_overview.md#list-box-footers). Existe um rodapé por coluna; cada rodapé é configurado separadamente.
 
 #### Gramática JSON
 

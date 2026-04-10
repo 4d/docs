@@ -9,25 +9,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM Event.Params-->
 
-<div class="no-index">
-
 | Parâmetro | Tipo   |                             | Descrição      |
 | --------- | ------ | --------------------------- | -------------- |
 | Resultado | Object | &#8592; | Objecto evento |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>História</summary>
-
-| Release | Mudanças   |
-| ------- | ---------- |
-| 18 R2   | Modificado |
-| 18      | Created    |
-
-</details>
-</div>
 
 ## Descrição
 

@@ -15,17 +15,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF -->
 
-<div class="no-index">
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|21 |Added|
-
-</details>
-</div>
-
-
 ## Description
 
 The `Web Form` command <!-- REF #_command_.Web Form.Summary --> returns a `4D.WebForm` proxy object, providing a means to work with and effectively emulates the Page's properties and functions<!-- END REF -->.

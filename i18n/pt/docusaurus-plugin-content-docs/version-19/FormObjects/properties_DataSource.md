@@ -11,7 +11,7 @@ Quando a opção **inserção automática** não está definida (padrão), o val
 
 Esta propriedade é suportada por:
 
-- [Combo box](comboBox_overview.md) and [list box column](listbox-column.md) form objects associated to a choice list.
+- os objetos de formulário [Combo box](comboBox_overview.md) e [colunas de list box](listbox_overview.md#list-box-columns) associados a uma lista de opções.
 - os [Combo box](comboBox_overview.md) cuja lista associada é preenchida por seu array ou objeto datasource.
 
 Por exemplo, dada uma lista de opções contendo "França, Alemanha, Itália" que está associada a um combo box "Countries": se a propriedade **inserção automática** estiver definida e um usuário digitar "Espanha", o valor "Espanha" será automaticamente adicionado à lista na memória:
@@ -28,7 +28,7 @@ Por exemplo, dada uma lista de opções contendo "França, Alemanha, Itália" qu
 
 #### Objectos suportados
 
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox-column.md)
+[Combo Bo](comboBox_overview.md) - [Coluna List Box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -47,7 +47,7 @@ Você também pode associar listas de opções a objetos usando os comandos [OBJ
 
 #### Objectos suportados
 
-[Lista suspensa](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Lista Hierárquica](list_overview.md) - [Coluna](listbox-column.md)
+[Lista suspensa](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Lista Hierárquica](list_overview.md) - [Coluna](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -113,7 +113,7 @@ Especifica uma variável ou expressão a que será atribuída uma longa indicand
 
 Define o tipo de dados para a expressão apresentada. Esta propriedade é utilizada com:
 
-- [List box columns](listbox-column.md) of the selection and collection types.
+- To be able to store the reference, the field or variable data source must be of the Number type (regardless of the type of value displayed in the list).
 - Naturally, the value entered must not belong to the list of [excluded values](properties_RangeOfValues.md#excluded-list) associated with the object, if one has been set.
 
 Please refer to [Expression Type](properties_Object.md#expression-type) section.
@@ -126,7 +126,7 @@ Please refer to [Expression Type](properties_Object.md#expression-type) section.
 
 #### Objectos suportados
 
-[Drop-down Lists](dropdownList_Overview.md) associated to objects or arrays - [List Box column](listbox-column.md)
+[Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -183,13 +183,13 @@ Lista de valores usados como valores padrão para a coluna do list box (somente 
 
 #### Objectos suportados
 
-[Coluna List Box (apenas tipo array)](listbox-column.md)
+[Coluna List Box (apenas tipo array)](listbox_overview.md#list-box-columns)
 
 ---
 
 ## Expression
 
-This description is specific to [selection](FormObjects/listbox-object.md#selection-list-boxes) and [collection](FormObjects/listbox-object.md#collection-or-entity-selection-list-boxes) type list box columns. Veja também a seção **[Variável ou expressão](properties_Object.md#variable-or-expression)**.
+Esta descrição é específica para as colunas de tipo list box [seleção](listbox_overview.md#selection-list-boxes) e [collection](listbox_overview.md#collection-or-entity-selection-list-boxes). Veja também a seção **[Variável ou expressão](properties_Object.md#variable-or-expression)**.
 
 Uma expressão 4D a associar a uma coluna. Você pode entrar:
 
@@ -226,7 +226,7 @@ Se for usado um campo, uma variável ou uma expressão atribuível*(por exemplo,
 
 #### Objectos suportados
 
-[Coluna da List Box](listbox-column.md)
+[Coluna da List Box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -255,7 +255,7 @@ Todas as tabelas do banco de dados podem ser usadas, independentemente de o form
 Esta propriedade está disponível nas seguintes condições:
 
 - uma [lista de escolha](#choice-list) está associada ao objeto
-- for [inputs](input_overview.md) and [list box columns](listbox-column.md), a [required list](properties_RangeOfValues.md#required-list) is also defined for the object (both options should use usually the same list), so that only values from the list can be entered by the user.
+- para as [entradas](input_overview.md) e as [colunas de list box](listbox_overview.md#list-box-columns), uma [lista necessária](properties_RangeOfValues.md#required-list) também está definida para o objeto (ambas as opções devem usar geralmente a mesma lista), para que apenas os valores da lista possam ser inseridos pelo usuário.
 
 Essa propriedade específica, no contexto de um campo ou variável associado a uma lista de valores, o tipo de conteúdo a ser salvo:
 
@@ -277,7 +277,7 @@ A utilização deste bem exige o cumprimento dos seguintes princípios:
 
 #### Objectos suportados
 
-[Input](input_overview.md) - [List Box Column](listbox-column.md)
+Coluna da List Box
 
 ---
 

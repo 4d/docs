@@ -5,6 +5,15 @@ slug: /commands/file
 displayed_sidebar: docs
 ---
 
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|19 R4|New `HTTP Client log file` constant|
+|17 R5|Added|
+
+</details>
+
 <!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
 
 
@@ -20,18 +29,6 @@ displayed_sidebar: docs
 |Result|[4D.File](../../API/FileClass.md)|&#8592;|New file object|
 </div>
 <!-- END REF -->
-
-<div class="no-index">
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|19 R4|New `HTTP Client log file` constant|
-|17 R5|Added|
-
-</details>
-</div>
-
 
 ## Description
 

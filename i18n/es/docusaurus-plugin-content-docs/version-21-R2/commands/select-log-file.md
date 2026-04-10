@@ -8,26 +8,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SELECT LOG FILE.Params-->
 
-<div class="no-index">
-
 | Parámetros | Tipo     |                             | Descripción                          |
 | ---------- | -------- | --------------------------- | ------------------------------------ |
 | logFile    | Text     | &#8594; | Nombre del archivo de registro       |
 | \*         | Operador | &#8594; | Cerrar el archivo de registro actual |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>Historia</summary>
-
-| Lanzamiento                 | Modificaciones |
-| --------------------------- | -------------- |
-| 11 SQL                      | Modificado     |
-| <6 | Created        |
-
-</details>
-</div>
 
 ## Descripción
 

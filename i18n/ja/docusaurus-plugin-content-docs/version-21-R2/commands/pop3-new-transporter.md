@@ -8,17 +8,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.POP3 New transporter.Params-->
 
-<div class="no-index">
-
 | 引数     | 型                                  |                             | 説明                                                                                |
 | ------ | ---------------------------------- | --------------------------- | --------------------------------------------------------------------------------- |
 | server | Object                             | &#8594; | メールサーバー情報                                                                         |
 | 戻り値    | 4D.POP3Transporter | &#8592; | [POP3 transporter オブジェクト](../API/POP3TransporterClass.md#pop3-transporter-object) |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>履歴</summary>
 
 | リリース  | 内容 |
@@ -26,7 +22,6 @@ displayed_sidebar: docs
 | 18 R2 | 追加 |
 
 </details>
-</div>
 
 ## 説明
 

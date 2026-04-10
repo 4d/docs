@@ -6,38 +6,21 @@ displayed_sidebar: docs
 toc_max_heading_level: 3
 ---
 
-<!--REF #_command_.Open form window.Syntax-->**Open form window** ( {*aTable* : Table ;} *formName* : Text, Object {; *type* : Integer {; *hPos* : Integer {; *vPos* : Integer}}}{; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.Open form window.Syntax-->**Open form window** ( {*aTable* : Table ;} *formName* : Text, Object {; *type* : Integer {; *hPos* : Integer {; *vPos* : Integer {; *}}}} ) : Integer<!-- END REF-->
 
 <!--REF #_command_.Open form window.Params-->
-
-<div class="no-index">
 
 | Parámetros | Tipo         |                             | Descripción                                                                                                                                                                                 |
 | ---------- | ------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | aTable     | Tabla        | &#8594; | Tabla del formulario o Tabla por defecto, si se omite                                                                                                                                       |
 | formName   | Text, Object | &#8594; | Name (string) of table or project form, or a POSIX path (string) to a .json file describing the form, oran object describing the form |
-| type       | Integer      | &#8594; | Tipo de ventana                                                                                                                                                                             |
+| type       | Integer      | &#8594; | Window type                                                                                                                                                                                 |
 | hPos       | Integer      | &#8594; | Horizontal position of the window                                                                                                                                                           |
 | vPos       | Integer      | &#8594; | Posición vertical de la ventana                                                                                                                                                             |
 | \*         | Operador     | &#8594; | Guardar la posición y el tamaño actuales de la ventana                                                                                                                                      |
 | Resultado  | Integer      | &#8592; | Número de referencia de la ventana                                                                                                                                                          |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>Historia</summary>
-
-| Lanzamiento                 | Modificaciones |
-| --------------------------- | -------------- |
-| 16 R6                       | Modificado     |
-| 16 R4                       | Modificado     |
-| 14 R5                       | Modificado     |
-| 11 SQL                      | Modificado     |
-| <6 | Añadidos       |
-
-</details>
-</div>
 
 ## Descripción
 
@@ -100,7 +83,7 @@ These parameters are expressed relative to the top left corner of the contents a
 
 If you pass the optional parameter *\**, the current position and size of the window are memorized when closed. Cuando se vuelve a abrir la ventana, se respetan su posición y tamaño anteriores. In this case, the *vPos* and *hPos* parameters are only used the first time the window is opened.
 
-### Tipos de ventanas {#window-types}
+### Window types {#window-types}
 
 #### Controller form window {#controller-form-window}
 

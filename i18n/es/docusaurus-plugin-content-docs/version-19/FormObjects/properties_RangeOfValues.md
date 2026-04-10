@@ -52,7 +52,7 @@ Permite definir una lista cuyos valores no pueden introducirse en el objeto. Si 
 
 #### Objetos soportados
 
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox-column.md) - [Input](input_overview.md)
+[Combo Box](comboBox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Entrada](input_overview.md)
 
 ---
 
@@ -71,4 +71,4 @@ La creación de una lista obligatoria no muestra automáticamente la lista cuand
 
 #### Objetos soportados
 
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox-column.md) - [Input](input_overview.md)
+[Combo Box](comboBox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Entrada](input_overview.md)

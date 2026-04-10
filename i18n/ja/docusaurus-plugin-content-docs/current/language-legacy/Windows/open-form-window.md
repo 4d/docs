@@ -6,11 +6,9 @@ displayed_sidebar: docs
 toc_max_heading_level: 3
 ---
 
-<!--REF #_command_.Open form window.Syntax-->**Open form window** ( {*aTable* : Table ;} *formName* : Text, Object {; *type* : Integer {; *hPos* : Integer {; *vPos* : Integer}}}{; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.Open form window.Syntax-->**Open form window** ( {*aTable* : Table ;} *formName* : Text, Object {; *type* : Integer {; *hPos* : Integer {; *vPos* : Integer {; *}}}} ) : Integer<!-- END REF-->
 
 <!--REF #_command_.Open form window.Params-->
-
-<div class="no-index">
 
 | 引数       | 型            |                             | 説明                                                                                                                                                                                          |
 | -------- | ------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -22,22 +20,7 @@ toc_max_heading_level: 3
 | \*       | 演算子          | &#8594; | Save current position and size of the window                                                                                                                                                |
 | 戻り値      | Integer      | &#8592; | ウィンドウ参照番号                                                                                                                                                                                   |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>履歴</summary>
-
-| リリース                        | 内容 |
-| --------------------------- | -- |
-| 16 R6                       | 変更 |
-| 16 R4                       | 変更 |
-| 14 R5                       | 変更 |
-| 11 SQL                      | 変更 |
-| <6 | 追加 |
-
-</details>
-</div>
 
 ## 説明
 

@@ -4,32 +4,18 @@ title: LISTBOX SET PROPERTY
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET PROPERTY.Syntax-->**LISTBOX SET PROPERTY** ( * ; *object* : Text ; *property* : Integer ; *value* : Integer, Text )<br/>**LISTBOX SET PROPERTY** ( *object* : Variable ; *property* : Integer ; *value* : Integer, Text )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET PROPERTY.Syntax-->**LISTBOX SET PROPERTY** ( {* ;} *object* ; *property* ; *value* )<!-- END REF-->
 
 <!--REF #_command_.LISTBOX SET PROPERTY.Params-->
 
-<div class="no-index">
+| Parâmetro | Tipo          |                             | Descrição                                                                                                                             |
+| --------- | ------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| \*        | Operador      | &#8594; | If specified, object is an object name (string). If omitted, object is a variable. |
+| object    | any           | &#8594; | Nome do objeto (se \* for especificado) ou Variável (se \* for omitido)                         |
+| property  | Integer       | &#8594; | List box or column property                                                                                                           |
+| value     | Integer, Text | &#8594; | Valor da propriedade                                                                                                                  |
 
-| Parâmetro | Tipo           |                             | Descrição                                                                                                                             |
-| --------- | -------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| \*        | Operador       | &#8594; | If specified, object is an object name (string). If omitted, object is a variable. |
-| object    | Text, Variable | &#8594; | Form object name (if \* is specified) or Variable (if \* is omitted)                            |
-| property  | Integer        | &#8594; | List box or column property                                                                                                           |
-| value     | Integer, Text  | &#8594; | Valor da propriedade                                                                                                                  |
-
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>História</summary>
-
-| Release | Mudanças   |
-| ------- | ---------- |
-| 19 R6   | Modificado |
-| 16 R2   | Created    |
-
-</details>
-</div>
 
 ## Descrição
 

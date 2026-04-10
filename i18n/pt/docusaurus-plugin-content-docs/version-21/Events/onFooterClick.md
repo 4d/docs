@@ -3,9 +3,9 @@ id: onFooterClick
 title: On Footer Click
 ---
 
-| Code | Pode ser chamado por                                                                            | Definição                                            |
-| ---- | ----------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| 57   | [List Box](FormObjects/listbox_overview.md) - [Columna List Box](FormObjects/listbox-column.md) | Ocorre um clique no rodapé de uma coluna de list box |
+| Code | Pode ser chamado por                                                                                                  | Definição                                            |
+| ---- | --------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| 57   | [List Box](FormObjects/listbox_overview.md) - [Columna de List Box](FormObjects/listbox_overview.md#list-box-columns) | Ocorre um clique no rodapé de uma coluna de list box |
 
 ## Descrição
 

@@ -4,11 +4,9 @@ title: FORM LOAD
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM LOAD.Syntax-->**FORM LOAD** ( {*aTable* : Table ;} *form* : Text, Object {; *formData* : Object}{; *} )<!-- END REF-->
+<!--REF #_command_.FORM LOAD.Syntax-->**FORM LOAD** ( {*aTable* ;} *form* {; *formData*}{; *} )<!-- END REF-->
 
 <!--REF #_command_.FORM LOAD.Params-->
-
-<div class="no-index">
 
 | 引数       | 型            |                             | 説明                                                                                                                                                                      |
 | -------- | ------------ | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -17,21 +15,7 @@ displayed_sidebar: docs
 | formData | Object       | &#8594; | フォームに関連づけるデータ                                                                                                                                                           |
 | \*       | 演算子          | &#8594; | 指定時、コマンドはコンポーネントから実行した場合にホストのデータベースコマンドが適応されます(それ以外の場合は無視されます)。                                                                                      |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>履歴</summary>
-
-| リリース  | 内容                                              |
-| ----- | ----------------------------------------------- |
-| 20    | 変更                                              |
-| 16 R6 | 変更                                              |
-| 14    | Renamed (OPEN PRINTING FORM) |
-| 12    | Created                                         |
-
-</details>
-</div>
 
 ## 説明
 

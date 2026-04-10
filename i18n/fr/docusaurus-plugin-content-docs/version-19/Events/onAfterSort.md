@@ -3,9 +3,9 @@ id: onAfterSort
 title: On After Sort
 ---
 
-| Code | Peut être appelé par                                                                           | Définition                                                          |
-| ---- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| 30   | [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox-column.md) | Un tri standard vient d'être effectué dans une colonne de list box. |
+| Code | Peut être appelé par                                                                                                  | Définition                                                          |
+| ---- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| 30   | [List Box](FormObjects/listbox_overview.md) - [Colonne de List Box](FormObjects/listbox_overview.md#list-box-columns) | Un tri standard vient d'être effectué dans une colonne de list box. |
 
 
 ## Description

@@ -177,7 +177,7 @@ The **`.wait()`** function pauses execution of the current process and puts 4D i
 
 The `wait()` function returns when the `onTerminate` event has been triggered on the object, or when the provided timeout (if any) has expired. Consequently, you can explicitly exit from a `.wait()` by calling `shutdown()` or `terminate()` from within a callback. Otherwise, the `.wait()` is exited when the current operation ends.
 
-Exemple :
+Voici un exemple :
 
 ```4d
 var $options:=cs.Params.new() 

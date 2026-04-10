@@ -5,7 +5,7 @@ title: Footers
 
 ## Display Footers
 
-This property is used to display or hide [list box column footers](listbox-header-footer.md#footers). There is one footer per column; each footer is configured separately.
+This property is used to display or hide [list box column footers](listbox_overview.md#list-box-footers). There is one footer per column; each footer is configured separately.
 
 #### JSON Grammar
 
@@ -30,7 +30,7 @@ This property is used to set the row height for a list box footer in **pixels** 
   * This calculation does not take into account the size of pictures nor any styles applied to the fonts.
   * In macOS, the row height may be incorrect if the user enters characters that are not available in the selected font. When this occurs, a substitute font is used, which may cause variations in size.
  
->This property can also be set dynamically using the [LISTBOX SET FOOTERS HEIGHT](https://doc.4d.com/4Dv20/4D/20.6/LISTBOX-SET-FOOTERS-HEIGHT.301-7487629.en.html) command.
+>This property can also be set dynamically using the [LISTBOX SET FOOTERS HEIGHT](https://doc.4d.com/4Dv17R6/4D/17-R6/List-box-footer-specific-properties.300-4354808.en.html) command.
 
 Conversion of units: When you switch from one unit to the other, 4D converts them automatically and displays the result in the Property List. For example, if the font used is "Lucida grande 24", a height of "1 line" is converted to "30 pixels" and a height of "60 pixels" is converted to "2 lines".
 
@@ -62,4 +62,4 @@ Note that converting back and forth may lead to an end result that is different 
 
 #### See also
 
-[Headers](properties_Headers.md) - [List box footers](listbox-header-footer.md#footers)
+[Headers](properties_Headers.md) - [List box footers](listbox_overview.md#list-box-footers)

@@ -544,10 +544,10 @@ Este ejemplo ilustra el uso de la opción `ck resolve pointers`:
 <!-- REF #collection.count().Params -->
 <div class="no-index">
 
-|Parámetro|Tipo||Descripción|
+|Parameter|Type||Description|
 |---------|--- |:---:|------|
-|propertyPath|Text|->|Ruta de propiedad del objeto a utilizar para el cálculo|
-|Resultado|Real|<-|Number of elements in the collection|
+|propertyPath|Text|->|Object property path to be used for calculation|
+|Result|Real|<-|Number of elements in the collection|
 </div>
 <!-- END REF -->
 

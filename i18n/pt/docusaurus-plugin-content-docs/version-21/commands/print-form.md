@@ -4,11 +4,9 @@ title: Print form
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Print form.Syntax-->**Print form** ( {*aTable* : Table ;} *form* : Text, Object {; *formData* : Object} {; *areaStart* : Integer{; *areaEnd* : Integer}} ) : Integer<!-- END REF-->
+<!--REF #_command_.Print form.Syntax-->**Print form** ( {*aTable* ;} *form* {; *formData*} {; *areaStart*{; *areaEnd*}} ) : Integer<!-- END REF-->
 
 <!--REF #_command_.Print form.Params-->
-
-<div class="no-index">
 
 | Parâmetro | Tipo         |                             | Descrição                                                                                                                                                                                                                                                |
 | --------- | ------------ | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -19,20 +17,7 @@ displayed_sidebar: docs
 | areaEnd   | Integer      | &#8594; | Área final (se for especificado pela areaStart)                                                                                                                                                                                       |
 | Resultado | Integer      | &#8592; | Altura da seção impressa                                                                                                                                                                                                                                 |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>História</summary>
-
-| Release                     | Mudanças   |
-| --------------------------- | ---------- |
-| 20                          | Modificado |
-| 16 R6                       | Modificado |
-| <6 | Adicionado |
-
-</details>
-</div>
 
 ## Descrição
 

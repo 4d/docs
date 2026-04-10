@@ -9,25 +9,19 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Form.Params-->
 
-<div class="no-index">
-
 | Paramètres | Type   |                             | Description                  |
 | ---------- | ------ | --------------------------- | ---------------------------- |
 | Résultat   | Object | &#8592; | Données du formulaire actuel |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>Historique</summary>
 
 | Release | Modifications                      |
 | ------- | ---------------------------------- |
 | 20 R8   | Support des classes de formulaires |
-| 16 R6   | Created                            |
 
 </details>
-</div>
 
 ## Description
 

@@ -5,6 +5,15 @@ slug: /commands/folder
 displayed_sidebar: docs
 ---
 
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|19 R8 |Support of `fk home folder`|
+|17 R5|Added|
+
+</details>
+
 <!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; * } ) : 4D.Folder<!-- END REF -->
 
 
@@ -20,18 +29,6 @@ displayed_sidebar: docs
 |Result|[4D.Folder](../../API/FolderClass.md)|&#8592;|New folder object|
 </div>
 <!-- END REF -->
-
-<div class="no-index">
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|19 R8 |Support of `fk home folder`|
-|17 R5|Added|
-
-</details>
-</div>
-
 
 ## Description
 

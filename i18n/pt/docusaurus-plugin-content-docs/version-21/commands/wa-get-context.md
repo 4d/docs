@@ -4,30 +4,17 @@ title: WA Get context
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Get context.Syntax-->**WA Get context** ( * ; *object* : Text ) -> Object<br/>**WA Get context** ( *object* : Variable ) -> Object<!-- END REF-->
+<!--REF #_command_.WA Get context.Syntax-->**WA Get context** ( {* ;} *object* ) -> *contextObj*<!-- END REF-->
 
 <!--REF #_command_.WA Get context.Params-->
 
-<div class="no-index">
+| Parâmetro  | Tipo     |                             | Descrição                                                                                                                                       |
+| ---------- | -------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| \*         | Operador | &#8594; | Se especificado, *object* é um nome de objeto (string). Se omitido, *object* é uma variável. |
+| object     | any      | &#8594; | Nome do objeto (se \* for especificado) ou Variável (se \* for omitido).                  |
+| contextObj | Object   | &#8592; | Context object if previously defined, otherwise `null`.                                                                         |
 
-| Parâmetro | Tipo           |                             | Descrição                                                                                                                                       |
-| --------- | -------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| \*        | Operador       | &#8594; | Se especificado, *object* é um nome de objeto (string). Se omitido, *object* é uma variável. |
-| object    | Text, Variable | &#8594; | Nome do objeto (se \* for especificado) ou Variável (se \* for omitido).                  |
-| Resultado | Object         | &#8592; | Context object if previously defined, otherwise `null`.                                                                         |
-
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>História</summary>
-
-| Release | Mudanças   |
-| ------- | ---------- |
-| 20 R9   | Adicionado |
-
-</details>
-</div>
 
 ### Descrição
 

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to print the current record or Default table if omitted |
 | *  | Operator | &#8594;  | Suppress the printing dialog box |
-| > | > | &#8594;  | Do not reinitialize print settings |
+| > | Comparator | &#8594;  | Do not reinitialize print settings |
 </div>
 <!-- END REF-->
 
