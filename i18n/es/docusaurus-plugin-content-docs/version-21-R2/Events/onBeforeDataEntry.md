@@ -3,9 +3,9 @@ id: onBeforeDataEntry
 title: On Before Data Entry
 ---
 
-| Code | Puede ser llamado por                                                                                                 | Definición                                                       |
-| ---- | --------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| 41   | [List Box](FormObjects/listbox_overview.md) - [Columna de List Box](FormObjects/listbox_overview.md#list-box-columns) | Una celda de list box está a punto de cambiar al modo de edición |
+| Code | Puede ser llamado por                                                                           | Definición                                                       |
+| ---- | ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| 41   | [List Box](FormObjects/listbox_overview.md) - [Columna List Box](FormObjects/listbox-column.md) | Una celda de list box está a punto de cambiar al modo de edición |
 
 ## Descripción
 
