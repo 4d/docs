@@ -25,13 +25,13 @@ You can nevertheless [**share** a remote session with a web session](#sharing-a-
 
 ## Sesiones de usuarios remotos {#remote-user-sessions}
 
-In client/server applications, when a user connects to the server, a **remote user session object** is created and available on both the server and the client. It is returned by the [`Session`](../commands/session) command on both machines.
+In client/server applications, when a user connects to the server, a **remote user session object** is created and available on both the server and the client. Es devuelto por el comando [`Session`](../commands/session) en ambas máquinas.
 
 Este objeto se maneja a través de las funciones y propiedades de la [clase `Session`](../API/SessionClass.md).
 
 ### Comparación de objetos de sesión de usuario del lado del servidor y del lado del cliente {#comparing-server-side-and-client-side-user-session-objects}
 
-Dependiendo de dónde se ejecute el código, se dispondrá de un objeto `session` de usuario del lado del servidor o del lado del cliente. Both objects are similar, except that:
+Dependiendo de dónde se ejecute el código, se dispondrá de un objeto `session` de usuario del lado del servidor o del lado del cliente. Ambos objetos son similares, excepto que:
 
 - sus propiedades [`.storage`](../API/SessionClass.md#storage) no son el mismo objeto. A value stored in the `.storage` of the user session on the server will not be available in the `.storage` of the user session on the client and conversely.
 - for security reasons, the client-side session cannot execute functions that **modify** [privileges](../ORDA/privileges.md) ([`setPrivileges()`](../API/SessionClass.md#setprivileges), [`clearPrivileges()`](../API/SessionClass.md#clearprivileges), [`promote()`](../API/SessionClass.md#promote), [`demote()`](../API/SessionClass.md#demote), [`restore()`](../API/SessionClass.md#restore)). Llamar a estas funciones en un cliente genera un error.

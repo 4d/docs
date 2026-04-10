@@ -5,13 +5,11 @@ title: Dépendances
 
 [L'architecture des projets](../Project/architecture.md) 4D est modulaire. Vous pouvez ajouter des fonctionnalités supplémentaires dans vos projets 4D en installant des [**composants**](Concepts/components.md) et des [**plug-ins**](../Concepts/plug-ins.md). Les composants sont constitués de code 4D, tandis que les plug-ins peuvent être [construits à l'aide de n'importe quel langage](../Extensions/develop-plug-ins.md).
 
-Vous pouvez [développer](../Extensions/develop-components.md) et [construire](../Desktop/building.md) vos propres composants 4D, ou télécharger des composants publics partagés par la communauté 4D [sur GitHub](https://github.com/topics/4d-component).
+You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that [can be found for example on GitHub](https://github.com/topics/4d-component).
 
 Une fois installées dans votre environnement 4D, les extensions sont traitées comme des **dépendances** avec des propriétés spécifiques.
 
 ## Composants interprétés et compilés
-
-Lorsque vous développez dans 4D, les fichiers de composants peuvent être stockés de manière transparente sur votre ordinateur ou sur un dépôt Github.
 
 Les composants peuvent être interprétés ou [compilés](../Desktop/building.md).
 
@@ -35,9 +33,11 @@ L'architecture de dossier "Contents" est recommandée pour les composants si vou
 
 ## Emplacements des composants
 
+When developing in 4D, the component files can be transparently stored in your computer or located on an external GitHub or GitLab repository.
+
 :::note
 
-Cette page décrit comment travailler avec les composants dans les environnements **4D** et **4D Server**. Dans les autres environnements, les composants sont gérés différemment :
+This section describes how to work with components in the **4D** and **4D Server** environments. Dans les autres environnements, les composants sont gérés différemment :
 
 - dans [4D en mode distant](../Desktop/clientServer.md), les composants sont chargés par le serveur et envoyés à l'application distante.
 - dans les applications fusionnées, les composants sont [inclus à l'étape de construction](../Desktop/building.md#plugins--components-page).
@@ -55,7 +55,7 @@ Les composants déclarés dans le fichier **dependencies.json** peuvent être st
 
 - au même niveau que le dossier racine de votre projet 4D : c'est l'emplacement par défaut,
 - n'importe où sur votre machine : le chemin du composant doit être déclaré dans le fichier **environment4d.json**
-- sur un dépôt GitHub : le chemin du composant peut être déclaré dans le fichier **dependencies.json** ou dans le fichier **environment4d.json**, ou dans les deux.
+- on a GitHub or [GitLab](https://blog.4d.com/integrate-4d-components-directly-from-gitlab) repository: the component path can be declared in the **dependencies.json** file or in the **environment4d.json** file, or in both files (a [local cache](#local-cache-for-dependencies) is then handled automatically).
 
 Si le même composant est installé à différents endroits, un [ordre de priorité](#priority) est appliqué.
 
@@ -72,7 +72,7 @@ Le fichier **dependencies.json** référence tous les composants nécessaires à
 Il peut contenir :
 
 - les noms des composants [stockés localement](#local-components) (chemin par défaut ou chemin défini dans un fichier **environment4d.json**),
-- les noms des composants [stockés sur des dépôts GitHub](#components-stored-on-github) (leur chemin peut être défini dans ce fichier ou dans un fichier **environment4d.json**).
+- names of components [stored on GitHub or GitLab repositories](#components-stored-on-git-hosting-platforms) (their path can be defined in this file or in an **environment4d.json** file).
 
 #### environment4d.json
 
@@ -81,7 +81,7 @@ Le fichier **environment4d.json** est facultatif. Il vous permet de définir des
 Les principaux avantages de cette architecture sont les suivants :
 
 - vous pouvez stocker le fichier **environment4d.json** dans un dossier parent de vos projets et décider de ne pas le livrer (*commit*), ce qui vous permet d'avoir une organisation locale pour vos composants.
-- si vous souhaitez utiliser le même dépôt GitHub pour plusieurs de vos projets, vous pouvez le référencer dans le fichier **environment4d.json** et le déclarer dans le fichier **dependencies.json**.
+- if you want to use the same GitHub or GitLab repository for several of your projects, you can reference it in the **environment4d.json** file and declare it in the **dependencies.json** file.
 
 ### Priorité
 
@@ -152,9 +152,9 @@ Exemples :
 ```json
 {
 	"dependencies": {
-		"myComponent1" : "MyComponent1",
-		"myComponent2" : "../MyComponent2",
-    "myComponent3" : "file:///Users/jean/MyComponent3"
+		"myComponent1" : "MyComponent1",  
+		"myComponent2" : "../MyComponent2",  
+ 		"myComponent3" : "file:///Users/jean/MyComponent3"  
     }
 }
 ```
@@ -171,48 +171,74 @@ Les chemins sont exprimés en syntaxe POSIX comme décrit dans [ce paragraphe](.
 
 Les chemins relatifs sont relatifs au fichier [`environment4d.json`](#environment4djson). Les chemins absolus sont liés à la machine de l'utilisateur.
 
-L'utilisation de chemins relatifs est **recommandée** dans la plupart des cas, puisqu'ils fournissent flexibilité et portabilité de l'architecture des composants, surtout si le projet est hébergé dans un outil de contrôle de source.
+L'utilisation de chemins relatifs est **recommandée** dans la plupart des cas, puisqu'ils fournissent flexibilité et portabilité de l'architecture des composants, surtout si le projet est hébergé dans un outil de contrôle de source. Les chemins absolus ne doivent être utilisés que pour les composants spécifiques à une machine et à un utilisateur.
 
-Les chemins absolus ne doivent être utilisés que pour les composants spécifiques à une machine et à un utilisateur.
+### Components stored on Git hosting platforms {#components-stored-on-git-hosting-platforms}
 
-### Composants stockés sur GitHub
-
-Des composants 4D disponibles en tant que releases GitHub peuvent être référencés et automatiquement chargés et mis à jour dans vos projets 4D.
+4D components available as **releases** on GitHub and GitLab platforms can be referenced and automatically loaded and updated in your 4D projects.
 
 :::note
 
-En ce qui concerne les composants stockés sur GitHub, les fichiers [**dependencies.json**](#dependenciesjson) et [**environment4d.json**](#environment4djson) prennent en charge le même contenu.
+Regarding components stored on GitHub or GitLab, both [**dependencies.json**](#dependenciesjson) and [**environment4d.json**](#environment4djson) files support the same contents.
 
 :::
 
-#### Configuration du dépôt GitHub
+To be able to directly reference and use a 4D component stored on GitHub or GitLab, you need to configure the component's repository.
 
-Pour pouvoir référencer et utiliser directement un composant 4D stocké sur GitHub, vous devez configurer le dépôt du composant GitHub :
+#### Configuring a GitHub repository
 
-- Compressez les fichiers des composants au format ZIP.
-- Nommez cette archive avec le même nom que le dépôt GitHub.
+1. Compressez les fichiers des composants au format ZIP.
+2. Nommez cette archive avec le même nom que le dépôt GitHub. For example, for a "my-4D-Component" repository, the archive must be named "my-4D-Component.zip".
+
 - Intégrez l'archive dans une [release GitHub](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) du dépôt.
 
 Ces étapes peuvent être facilement automatisées, avec du code 4D ou en utilisant des actions GitHub, par exemple.
 
+#### Configuring a GitLab repository
+
+GitLab releases only store the name and URL of assets, they do not contain uploaded files. You need to provide your component's zip file as a link.
+
+1. Upload the component's ZIP file somewhere, i.e. either on an external server, or [using GitLab Package Registry](#using-the-gitlab-package-registry) (generic package).
+2. Create a [GitLab release](https://docs.gitlab.com/user/project/releases/) for your component, including the link to your component's file as release asset.
+
+The asset name is typically an artifact link name (\<my-component\>.zip).
+
+#### Using the GitLab Package Registry
+
+The [GitLab Package Registry](https://docs.gitlab.com/user/packages/package_registry/) allows you to host your files in GitLab itself. Its main advantages include an authenticated access, stable and versioned urls, and the ability to associate binairies with release tags. To use the Package Registry:
+
+1. Build your component file (for example: *MyComponent.zip*)
+2. Upload it to the [generic packages repository](https://docs.gitlab.com/user/packages/generic_packages/) using a script (see [examples in the GitLab documentation](https://docs.gitlab.com/user/packages/generic_packages/#publish-a-single-file)).
+3. **Deploy** \> **Package Registry** to see the result.
+4. Use the package URL as a release asset link.
+5. Associate it with the same Git tag.
+
 #### Déclaration des chemins
 
-Vous déclarez un composant stocké sur GitHub dans le fichier [**dependencies.json** ](#dependenciesjson) de la manière suivante :
+You declare components stored on GitHub and GitLab in the [**dependencies.json** file](#dependenciesjson) in the following way:
 
-```json
+```json title="dependencies.json"
 {
 	"dependencies": {
 		"myGitHubComponent1": {
 			"github" : "JohnSmith/myGitHubComponent1"
+		},
+		"myGitLabComponent": {
+			"gitlab" : "JohnSmith/myGitLabComponent"
+		},
+		"myPrivateGitLabComponent": {
+			"gitlab" : "JohnSmith/myPrivateGitLabComponent",
+			"host" : "https://myprivate-gitlab.com"
 		},
 		"myGitHubComponent2": {}
 	}
 }
 ```
 
-... où "myGitHubComponent1" est référencé et déclaré pour le projet, tandis que "myGitHubComponent2" est seulement référencé. Vous devez le déclarer dans le fichier [**environment4d.json**](#environment4djson) :
+- (GitLab dependencies only) Use the "host" property to declare a private GitLab self-hosted instance. Using only the "gitlab" property indicates a GitLab repository hosted on https://gitlab.com.
+- "myGitHubComponent1" is referenced and declared for the project, although "myGitHubComponent2" is only referenced. Vous devez le déclarer dans le fichier [**environment4d.json**](#environment4djson) :
 
-```json
+```json title="environment4d.json"
 {
 	"dependencies": {
 		"myGitHubComponent2": {
@@ -226,7 +252,7 @@ Vous déclarez un composant stocké sur GitHub dans le fichier [**dependencies.j
 
 #### Tags et versions
 
-Lorsqu'une release est créée dans GitHub, elle est associée à un **tag** et à une **version**. Le gestionnaire de dépendances utilise ces informations pour gérer la disponibilité automatique des composants.
+When a release is created in GitHub or GitLab, it is associated to a **tag** and a **version**. Le gestionnaire de dépendances utilise ces informations pour gérer la disponibilité automatique des composants.
 
 :::note
 
@@ -234,9 +260,9 @@ Si vous sélectionnez la règle de dépendance [**Suivre la version 4D**](#defin
 
 :::
 
-- Les **Tags** sont des textes qui référencent de manière unique une release. Dans les fichiers [**dependencies.json**](#dependenciesjson) et [**environment4d.json**](#environment4djson), vous pouvez indiquer le release tag que vous souhaitez utiliser dans votre projet. Par exemple :
+- Les **Tags** sont des textes qui référencent de manière unique une release. In the [**dependencies.json**](#dependenciesjson) and [**environment4d.json**](#environment4djson) files, you can indicate the release tag you want to use in your project. Par exemple :
 
-```json
+```json title="dependencies.json"
 {
 	"dependencies": {
 		"myFirstGitHubComponent": {
@@ -249,7 +275,7 @@ Si vous sélectionnez la règle de dépendance [**Suivre la version 4D**](#defin
 
 - Une release est également identifiée par une **version**. Le système de versionnement utilisé est basé sur le concept de [*Semantic Versioning*](https://regex101.com/r/Ly7O1x/3/), qui est le plus couramment utilisé. Chaque numéro de version est identifié comme suit : `majorNumber.minorNumber.pathNumber`. De la même manière que pour les tags, vous pouvez indiquer la version du composant que vous souhaitez utiliser dans votre projet, comme dans cet exemple :
 
-```json
+```json title="dependencies.json"
 {
 	"dependencies": {
 		"myFirstGitHubComponent": {
@@ -264,7 +290,8 @@ Un intervalle est défini par deux versions sémantiques, un minimum et un maxim
 
 Voici quelques exemples :
 
-- "latest" : la version ayant le badge "latest" dans les releases GitHub.
+- "latest" (GitHub only): the GitHub release with the "latest" badge (to be selected by the developer).
+- "highest" (GitLab only): the GitLab release with the highest semantic value.
 - "\*" : la dernière version publiée.
 - "1.\*" : toutes les versions de la version majeure 1.
 - "1.2.\*" : tous les correctifs de la version mineure 1.2.
@@ -278,11 +305,11 @@ Voici quelques exemples :
 
 Si vous ne spécifiez pas de tag ou de version, 4D récupère automatiquement la version "latest".
 
-Le Gestionnaire de dépendances vérifie périodiquement si des mises à jour de composants sont disponibles sur Github. Si une nouvelle version est disponible pour un composant, un indicateur de mise à jour est alors affiché pour le composant dans la liste des dépendances, [en fonction de vos paramètres](#defining-a-github-dependency-version-range).
+The Dependency manager checks periodically if component updates are available on the Git hosting platform. Si une nouvelle version est disponible pour un composant, un indicateur de mise à jour est alors affiché pour le composant dans la liste des dépendances, [en fonction de vos paramètres](#defining-a-dependency-version-range).
 
 #### Conventions de nommage pour les tags de version 4D
 
-Si vous souhaitez utiliser la règle de dépendance [**Suivre la version 4D**](#defining-a-github-dependency-version-range), les tags des releases des composants sur le dépôt Github doivent respecter des conventions spécifiques.
+If you want to use the [**Follow 4D Version**](#defining-a-github-dependency-version-range) dependency rule, the tags for component releases must comply with specific conventions.
 
 - **Versions LTS** : Modèle `x.y.p`, où `x.y` correspond à la version principale de 4D à suivre et `p` (facultatif) peut être utilisé pour les versions correctives ou les mises à jour supplémentaires. Lorsqu'un projet spécifie qu'il suit la version 4D pour la version LTS *x.y*, le Gestionnaire de dépendances le résoudra comme "la dernière version x.\*" si elle est disponible ou "une version inférieure à x". Si une telle version n'existe pas, l'utilisateur en sera informé. Par exemple, "20.4" sera résolu par le Gestionnaire de dépendances comme "la dernière version du composant 20.\* ou une version inférieure à 20".
 
@@ -294,39 +321,39 @@ Le développeur du composant peut définir une version 4D minimale dans le fichi
 
 :::
 
-#### Dépôts privés
+#### Authentication and tokens
 
 Si vous souhaitez intégrer un composant situé dans un référentiel privé, vous devez indiquer à 4D d'utiliser un token (*jeton*) de connexion pour y accéder.
 
-Pour cela, dans votre compte GitHub, créez un token **classic** avec les droits d'accès au **dépôt**.
+- for GitHub: in your [GitHub token interface](https://github.com/settings/tokens), create a token with the recommended following properties:
+  - type: **classic**
+  - access rights: **repo**
 
-:::note
+- for GitLab: in your GitLab account, create a token with the following properties:
+  - type: **Personal Access token**
+  - scopes: **read_api** and **read_repository**
 
-Pour plus d'informations, veuillez vous référer à [GitHub token interface](https://github.com/settings/tokens).
-
-:::
-
-Vous devez ensuite [fournir votre token de connexion](#providing-your-github-access-token) au Gestionnaire de dépendances.
+Vous devez ensuite [fournir votre token de connexion](#providing-your-access-token) au Gestionnaire de dépendances.
 
 #### Cache local pour les dépendances
 
-Les composants GitHub référencés sont téléchargés dans un dossier de cache local puis chargés dans votre environnement. Le dossier de cache local est stocké à l'emplacement suivant :
+Referenced GitHub and GitLab components are downloaded in a local cache folder then loaded in your environment. Le dossier de cache local est stocké à l'emplacement suivant :
 
-- sous macOs : `$HOME/Library/Caches/<app name>/Dependencies`
+- on macOS: `$HOME/Library/Caches/<app name>/Dependencies`
 - sous Windows : `C:\Users\<username>\AppData\Local\<app name>\Dependencies`
 
 ...où `<app name>` peut être "4D", "4D Server" ou "tool4D".
 
 ### Résolution automatique des dépendances
 
-Lorsque vous ajoutez ou mettez à jour un composant (qu'il soit [local](#local-components) ou [obtenu depuis GitHub](#components-stored-on-github)), 4D résout et installe automatiquement toutes les dépendances requises par ce composant. Cela inclut :
+When you add or update a component (whether [local](#local-components) or [from a Git hosting platform](#components-stored-on-git-hosting-platforms)), 4D automatically resolves and installs all dependencies required by that component. Cela inclut :
 
 - les **dépendances primaires** : Composants que vous déclarez explicitement dans votre fichier `dependencies.json`.
 - les **dépendances secondaires** : Composants requis par des dépendances primaires ou d'autres dépendances secondaires, qui sont automatiquement résolues et installées.
 
 Le gestionnaire de dépendances lit le fichier `dependencies.json` de chaque composant et installe récursivement toutes les dépendances nécessaires, en respectant les spécifications de version dans la mesure du possible. Il n'est donc pas nécessaire d'identifier et d'ajouter manuellement les dépendances imbriquées, une par une.
 
-- **les résolutions de conflits** : Lorsque plusieurs dépendances nécessitent [différentes versions](#defining-a-github-dependency-version-range) du même composant, le gestionnaire de dépendances tente automatiquement de résoudre les conflits en trouvant une version qui satisfait toutes les plages de versions qui se chevauchent. Si une dépendance primaire entre en conflit avec des dépendances secondaires, la dépendance primaire est prioritaire.
+- **les résolutions de conflits** : Lorsque plusieurs dépendances nécessitent [différentes versions](#defining-a-dependency-version-range) du même composant, le gestionnaire de dépendances tente automatiquement de résoudre les conflits en trouvant une version qui satisfait toutes les plages de versions qui se chevauchent. Si une dépendance primaire entre en conflit avec des dépendances secondaires, la dépendance primaire est prioritaire.
 
 :::note
 
@@ -393,9 +420,15 @@ Les étiquettes de statut suivantes sont disponibles :
 - **Dupliqué** : La dépendance n'est pas chargée car une autre dépendance portant le même nom existe au même endroit (et est chargée).
 - **Disponible après redémarrage** : La référence de la dépendance vient d'être ajoutée ou mise à jour [à l'aide de l'interface](#monitoring-project-dependencies), elle sera chargée une fois que l'application aura redémarré.
 - **Déchargé après redémarrage** : La référence à la dépendance vient d'être supprimée [en utilisant l'interface](#removing-a-dependency), elle sera déchargée une fois que l'application aura redémarré.
-- **Mise à jour disponible \<version\>** : Une nouvelle version de la dépendance GitHub correspondant à votre [configuration de version du composant](#defining-a-github-dependency-version-range) a été détectée.
-- **Actualisé après redémarrage** : La [configuration de version](#defining-a-github-dependency-version-range) de la dépendance GitHub a été modifiée, elle sera ajustée au prochain démarrage.
-- **Mise à jour récente** : Une nouvelle version de la dépendance GitHub a été chargée au démarrage.
+- **Update available \<version\>**: A new version of the dependency matching your [component version configuration](#defining-a-github-dependency-version-range) has been detected.
+- **Refreshed after restart**: The [component version configuration](#defining-a-dependency-version-range) of the dependency has been modified, it will be adjusted at the next startup.
+- **Recent update**: A new version of the dependency has been loaded at startup.
+
+:::tip
+
+When you click on the **Available after restart** label, a dialog box is displayed and allows you to restart immediately.
+
+:::
 
 Une infobulle s'affiche lorsque vous survolez la ligne de dépendance, fournissant des informations supplémentaires sur le statut :
 
@@ -430,13 +463,13 @@ Cet élément n'est pas affiché si la dépendance est inactive parce que ses fi
 L'icône du composant et le logo de l'emplacement fournissent des informations supplémentaires :
 
 - Le logo du composant indique s'il est fourni par 4D ou par un développeur tiers.
-- Les composants locaux peuvent être différenciés des composants GitHub par une petite icône.
+- Local components can be differentiated from GitHub and GitLab components by a small icon.
 
 ![dependency-origin](../assets/en/Project/dependency-github.png)
 
 ### Ajouter une dépendance locale
 
-Pour ajouter une dépendance locale, cliquez sur le bouton **+** dans la zone inférieure de la page. La fenêtre suivante s'affiche :
+To add a local dependency, click on the **[+]** button in the footer area of the panel. La fenêtre suivante s'affiche :
 
 ![dependency-add](../assets/en/Project/dependency-add.png)
 
@@ -461,15 +494,17 @@ Si aucun fichier [**environment4d.json**](#environment4djson) n'est déjà défi
 
 La dépendance est ajoutée à la [liste des dépendances inactives](#dependency-status) avec le statut **Disponible après redémarrage**. Elle sera chargée une fois que l'application aura redémarré.
 
-### Ajouter une dépendance GitHub
+### Adding a GitHub or GitLab dependency
 
-Pour ajouter une [dépendance GitHub](#components-stored-on-github), cliquez sur le bouton **+** dans la zone de bas de page du tableau de bord et sélectionnez l'onglet **GitHub**.
+To add a [GitHub or GitLab dependency](#components-stored-on-git-hosting-platforms):
+
+1. Click on the **[+]** button in the footer area of the panel and select the tab corresponding to your platform: **GitHub** or **GitLab**.
 
 ![dependency-add-git](../assets/en/Project/dependency-add-git.png)
 
 :::note
 
-Par défaut, les [composants développés par 4D](../Extensions/overview.md#components-developed-by-4d) sont répertoriés dans la liste, ce qui vous permet de sélectionner et d'installer facilement ces fonctionnalités dans votre environnement :
+By default, [components developed by 4D](../Extensions/overview.md#components-developed-by-4d) are listed in the GitHub combo box, so that you can easily select and install these features in your environment:
 
 ![dependency-default-git](../assets/en/Project/dependency-default.png)
 
@@ -477,25 +512,29 @@ Les composants déjà installés ne sont pas dans la liste.
 
 :::
 
-Entrez l'adresse du dépôt GitHub de la dépendance. Il peut s'agir d'une **URL de dépôt** ou d'une **chaîne de nom de compte/dépôt-Github**, par exemple :
+2. Enter the path of the GitHub or GitLab repository of the dependency. It could be:
+
+- a **repository URL** (e.g. "https://github.com/vdelachaux/UI-with-Classes")
+- (GitLab only) a self-hosted instance private server URL (e.g. "https://git-my-server.com/4d/components/mycomponent")
+- a **user-account/repository-name string**, for example:
 
 ![dependency-add-git-2](../assets/en/Project/dependency-add-git-2.png)
 
-Une fois la connexion établie, l'icône GitHub ![dependency-gitlogo](../assets/en/Project/dependency-gitlogo.png) s'affiche sur le côté droit de la zone de saisie. Vous pouvez cliquer sur cette icône pour ouvrir le dépôt dans votre navigateur par défaut.
+Once the connection is established, an icon ![dependency-gitlogo](../assets/en/Project/dependency-gitlogo.png) is displayed on the right side of the entry area. Vous pouvez cliquer sur cette icône pour ouvrir le dépôt dans votre navigateur par défaut.
 
 :::note
 
-Si le composant est stocké sur un [dépôt GitHub privé](#private-repositories) et que votre token personnel est manquant, un message d'erreur s'affiche et un bouton **Ajouter un jeton d'accès personnel...** s'affiche (voir [Fournir votre jeton d'accès GitHub](#providing-your-github-access-token)).
+If the component is stored on a [private repository](#private-repositories) and your personal token is missing, an error message is displayed and a **Add a personal access token...** button is displayed (see [Providing your access token](#providing-your-access-token)).
 
 :::
 
-Définissez la [plage de versions des dépendances](#tags-and-versions) à utiliser pour ce projet. Par défaut, l'option "Latest" est sélectionnée, ce qui signifie que la dernière version sera automatiquement utilisée.
+3. Définissez la [plage de versions des dépendances](#tags-and-versions) à utiliser pour ce projet. By defaut, "Latest" (GitHub) or "Highest" (GitLab) is selected, which means that the most recent version will be automatically used.
 
-Cliquez sur le bouton **Ajouter** pour ajouter la dépendance au projet.
+4. Cliquez sur le bouton **Ajouter** pour ajouter la dépendance au projet.
 
-La dépendance GitHub est déclarée dans le fichier [**dependencies.json**](#dependenciesjson) et ajoutée à la [liste des dépendances inactives](#dependency-status) avec le statut **Disponible après redémarrage**. Elle sera chargée une fois que l'application aura redémarré.
+The dependency is declared in the [**dependencies.json**](#dependenciesjson) file and added to the [inactive dependency list](#dependency-status) with the **Available at restart** status. Elle sera chargée une fois que l'application aura redémarré.
 
-#### Définir une plage de versions pour une dépendance GitHub
+#### Defining a dependency version range
 
 Vous pouvez définir l'option [règle de dépendance](#tags-and-versions) pour une dépendance :
 
@@ -505,19 +544,19 @@ Vous pouvez définir l'option [règle de dépendance](#tags-and-versions) pour u
 - **Jusqu'à la version majeure suivante** : Définit une [plage sémantique de versions](#tags-and-versions) pour limiter les mises à jour à la version majeure suivante.
 - **Jusqu'à la prochaine version mineure** : De même, limite les mises à jour à la version mineure suivante.
 - **Version exacte (balise)** : Sélectionnez ou saisissez manuellement un [tag spécifique](#tags-and-versions) dans la liste disponible.
-- **La dernière** : Permet de télécharger la version la plus récente. **Attention :** Bien que l'utilisation de cette option soit pratique au début du développement, il est préférable de l'éviter dans les projets en production ou partagés car elle récupère automatiquement les nouvelles versions, y compris les versions bêta, ce qui peut conduire à des mises à jour non souhaitées ou à des ruptures de compatibilité.
+- **Latest** (GitHub) or **Highest** (GitLab): Allows to download the release that is tagged as the most recent version. **Attention :** Bien que l'utilisation de cette option soit pratique au début du développement, il est préférable de l'éviter dans les projets en production ou partagés car elle récupère automatiquement les nouvelles versions, y compris les versions bêta, ce qui peut conduire à des mises à jour non souhaitées ou à des ruptures de compatibilité.
 
-La version courante de la dépendance GitHub est affichée sur le côté droit de l'élément de la dépendance :
+The current dependency version is displayed on the right side of the dependency item:
 
 ![dependency-origin](../assets/en/Project/dependency-version.png)
 
-#### Modifier la plage de versions des dépendances GitHub
+#### Modifying the dependency version range
 
-Vous pouvez modifier le [paramètre de version](#defining-a-github-dependency-version-range) pour une dépendance GitHub listée : sélectionnez la dépendance à modifier et sélectionnez **Editer la dépendance...** dans le menu contextuel. Dans la boîte de dialogue "Editer la dépendance", modifiez le menu Règle de dépendance et cliquez sur **Appliquer**.
+You can modify the [version setting](#defining-a-dependency-version-range) for a listed dependency: select the dependency to modify and select **Edit the dependency...** from the contextual menu. Dans la boîte de dialogue "Editer la dépendance", modifiez le menu Règle de dépendance et cliquez sur **Appliquer**.
 
 La modification de la plage de versions est utile par exemple si vous utilisez la fonction de mise à jour automatique et que vous souhaitez verrouiller une dépendance à un numéro de version spécifique.
 
-### Mise à jour des dépendances GitHub
+### Mise à jour des dépendances
 
 Le Gestionnaire de dépendances permet une gestion intégrée des mises à jour sur GitHub. Les fonctionnalités suivantes sont prises en charge :
 
@@ -556,7 +595,7 @@ Si vous ne souhaitez pas utiliser la mise à jour des composants (par exemple, v
 
 #### Mise à jour des dépendances
 
-**Mettre à jour une dépendance** signifie télécharger une nouvelle version de la dépendance depuis GitHub et la garder prête à être chargée lors du prochain démarrage du projet.
+**Updating a dependency** means downloading a new version of the dependency from GitHub or GitLab and keeping it ready to be loaded the next time the project is started.
 
 Vous pouvez mettre à jour les dépendances à tout moment, pour une seule dépendance ou pour toutes les dépendances :
 
@@ -573,27 +612,32 @@ Dans tous les cas, quel que soit le statut courant de la dépendance, une vérif
 Lorsque vous sélectionnez une commande de mise à jour :
 
 - une boîte de dialogue s'affiche et propose de **redémarrer le projet**, afin que les dépendances mises à jour soient immédiatement disponibles. Il est généralement recommandé de redémarrer le projet pour évaluer les dépendances mises à jour.
-- si vous cliquez sur Plus tard, la commande de mise à jour n'est plus disponible dans le menu, ce qui signifie que l'action a été planifiée pour le prochain démarrage.
+- if you click **Later**, the update command is no longer available in the menu, meaning the action has been planned for the next startup.
 
 #### Mise à jour automatique
 
 L'option **Mise à jour automatique** est disponible dans le menu **options** en bas de la fenêtre du gestionnaire de dépendances.
 
-Lorsque cette option est cochée (par défaut), les nouvelles versions des composants GitHub correspondant à vos [règles de version des composants](#defining-a-github-dependency-version-range) sont automatiquement mises à jour lors du prochain démarrage du projet. Cette option facilite la gestion quotidienne des mises à jour des dépendances, en éliminant la nécessité de sélectionner manuellement les mises à jour.
+When this option is checked (default), new GitHub or GitLab component versions matching your [component versioning configuration](#defining-a-github-dependency-version-range) are automatically updated for the next project startup. Cette option facilite la gestion quotidienne des mises à jour des dépendances, en éliminant la nécessité de sélectionner manuellement les mises à jour.
 
 Lorsque cette option n'est pas cochée, une nouvelle version de composant correspondant à votre [règle de version des composants](#defining-a-github-dependency-version-range) n'est indiquée que comme disponible et nécessitera une [mise à jour manuelle](#updating-dependencies). Désélectionnez l'option **Mise à jour automatique** si vous souhaitez contrôler précisément les mises à jour des dépendances.
 
-### Fournir votre jeton d'accès GitHub
+### Providing your access token
 
-L'enregistrement de votre *token* (jeton) d'accès personnel dans le gestionnaire de dépendances est :
+Registering your [personal access token](#authentication-and-tokens) in the Dependency manager is:
 
-- obligatoire si le composant est stocké sur un [dépôt GitHub privé](#private-repositories),
-- recommandé pour une [vérification des mises à jour des dépendances](#updating-github-dependencies) plus fréquente.
+- mandatory if the component is stored on a private repository,
+- recommandé pour une [vérification des mises à jour des dépendances](#updating-dependencies) plus fréquente.
 
-Pour fournir votre jeton d'accès à GitHub, vous pouvez soit :
+#### Adding a token
 
-- cliquez sur le bouton **Ajouter un jeton d'accès personnel...** qui est affiché dans la boîte de dialogue "Ajouter une dépendance" après avoir entré un chemin de dépôt privé GitHub.
-- ou sélectionner **Ajouter un jeton d'accès personnel GitHub...** dans le menu du Gestionnaire de dépendances à tout moment.
+To provide your GitHub or GitLab access token, you can either:
+
+- click on **Add a personal access token...** button that is displayed in the "Add a dependency" dialog box after you entered a private repository path.
+
+![dependency-add-token](../assets/en/Project/dependency-add-token-button.png)
+
+- or, select **Add a GitHub personal access token...** or **Add a GitLab personal access token...** in the Dependency manager menu at any moment. For GitLab access tokens, you can select the host:
 
 ![dependency-add-token](../assets/en/Project/dependency-add-token.png)
 
@@ -601,7 +645,9 @@ Vous pouvez ensuite saisir votre jeton d'accès personnel :
 
 ![dependency-add-token-2](../assets/en/Project/dependency-add-token-2.png)
 
-Vous ne pouvez saisir qu'un seul jeton d'accès personnel. Une fois le jeton saisi, vous pouvez le modifier.
+#### Editing a token
+
+You can only enter one personal access token per host. Once a token has been entered, you can **edit** it.
 
 Le jeton fourni est stocké dans un fichier **github.json** dans le [dossier actif 4D](../commands/get-4d-folder#active-4d-folder).
 

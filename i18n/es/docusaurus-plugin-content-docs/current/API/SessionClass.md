@@ -435,7 +435,7 @@ End if
 
 La propiedad `.id` contiene <!-- REF #SessionClass.id.Summary -->el identificador único (UUID) de la sesión de usuario<!-- END REF -->.
 
-Con 4D Server, esta cadena única es asignada automáticamente por el servidor para cada sesión y permite identificar sus procesos. It is available in both the `Session` on the server side and on the client side.
+Con 4D Server, esta cadena única es asignada automáticamente por el servidor para cada sesión y permite identificar sus procesos. Está disponible tanto en `Session` del lado del servidor como del lado del cliente.
 
 :::tip
 

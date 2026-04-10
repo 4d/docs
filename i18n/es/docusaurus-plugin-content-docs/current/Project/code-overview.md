@@ -106,15 +106,15 @@ Para eliminar un método o clase existente, puede:
 
 You can access the contents and paths of all methods in your applications by programming, thanks to the [**"Design Object Access" command theme**](../commands/theme/Design_Object_Access.md). This source toolkit facilitates the integration into your applications of code control tools and more particularly version control systems (VCS). It also lets you implement advanced systems for [code documentation](../Project/documentation.md), for building a custom explorer or for organizing scheduled backups of the code saved as disk files.
 
-The following principles are implemented:
+Se aplican los siguientes principios:
 
-- Each method and form in a 4D application has its own address in the form of a pathname. For example, the trigger method for table 1 can be found at "[trigger]/table_1". Each object pathname is unique in an application.
+- Each method and form in a 4D application has its own address in the form of a pathname. Por ejemplo, el método de activación de la tabla 1 se encuentra en "[trigger]/tabla_1". Each object pathname is unique in an application.
 - You can access objects in the 4D application using the commands of the **"Design Object Access"** command theme, for example [`METHOD GET NAMES`](../commands/method-get-names) or [`METHOD GET PATHS`](../commands/method-get-paths).
 - Most of the commands in this theme work in both [interpreted and compiled](../Concepts/interpreted.md) mode. However, commands that modify properties or access contents executable from methods can only be used in interpreted mode (see the table below).
 - Puede utilizar todos los comandos de este tema con 4D en modo local o remoto. However, keep in mind that you cannot use certain commands in compiled mode: the purpose of this theme is to create custom development support tools. You must not use these commands to dynamically change the functioning of a database that is running. For example, you cannot use [`METHOD SET ATTRIBUTE`](../commands/method-set-attribute) to change a method attribute according to the status of the current user.
 - When a command of this theme is called from a [component](../Project/components.md), by default it accesses the component objects. In this case, to access objects of the host, you just pass a `*` as the last parameter.
 
-### Use in compiled mode
+### Uso en modo compilado
 
 For reasons related to the principle of the compilation process, only certain commands in this theme can be used in compiled mode. The following table indicates the available of the commands in compiled mode:
 
@@ -150,7 +150,7 @@ The error -9762 "The command cannot be executed in a compiled database." is gene
 
 Pathnames generated for 4D objects must be compatible with the file management of the operating system. Characters that are forbidden at the OS level such as ":" are automatically encoded in method names, so that generated files may be integrated automatically in a version control system.
 
-Here are the encoded characters:
+Estos son los caracteres codificados:
 
 | Caracter                     | Encoding |
 | ---------------------------- | -------- |

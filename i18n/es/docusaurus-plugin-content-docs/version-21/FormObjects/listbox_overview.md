@@ -511,7 +511,7 @@ Este principio se aplica a los arrays internos que se pueden utilizar para gesti
  ->MyListbox{3}:=True
 ```
 
-*Non-hierarchical representation:*  
+_Representación no jerárquica:\*  
 ![](../assets/en/FormObjects/hierarch7.png)
 
 *Representación jerárquica:*  
@@ -521,7 +521,7 @@ Este principio se aplica a los arrays internos que se pueden utilizar para gesti
 
 Al igual que con las selecciones, el comando [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) devolverá los mismos valores para un list box jerárquico que para un list box no jerárquico. Esto significa que en los dos ejemplos siguientes, [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) devolverá la misma posición: (3;2).
 
-*Non-hierarchical representation:*  
+_Representación no jerárquica:\*  
 ![](../assets/en/FormObjects/hierarch9.png)
 
 *Hierarchical representation:*  

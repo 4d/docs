@@ -126,10 +126,10 @@ Este ejemplo compara los resultados obtenidos dependiendo del separador “actua
 ```4d
  $thestring:="33,333.33"
  $thenum:=Num($thestring)
-  // by default, $thenum equals 33,33333 on a French system
+  // por defecto, $thenum equivale a 33,33333 en un sistema francés
  $thenum:=Num($thestring;".")
-  // $thenum will be correctly evaluated regardless of the system;
-  // for example, 33 333,33 on a French system
+  // $thenum se evaluará correctamente independientemente del sistema;
+  // por ejemplo, 33 333,33 en un sistema francés
 ```
 
 ## Ejemplo 4

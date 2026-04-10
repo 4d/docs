@@ -5,13 +5,11 @@ title: 依存関係
 
 4D [プロジェクトアーキテクチャー](../Project/architecture.md) はモジュール式です。 [**コンポーネント**](../Concepts/components.md) や [**プラグイン**](../Concepts/plug-ins.md) をインストールすることで、4Dプロジェクトに追加機能を持たせることができます。 コンポーネントは4D コードで書かれていますが、プラグインは[あらゆる言語を使用してビルドすることができます](../Extensions/develop-plug-ins.md)。
 
-独自の 4Dコンポーネントを [開発](../Extensions/develop-components.md) し、[ビルド](../Desktop/building.md) することもできますし、4Dコミュニティによって共有されているパブリックコンポーネントを [GitHubで見つけて](https://github.com/topics/4d-component) ダウンロードすることもできます。
+You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that [can be found for example on GitHub](https://github.com/topics/4d-component).
 
 4D 環境にインストールされると、拡張機能は特別なプロパティを持つ**依存関係** として扱われます。
 
 ## インタープリターとコンパイル済みコンポーネント
-
-4D で開発する際、コンポーネントファイルはコンピューター上または Githubリポジトリ上に、透過的に保存することができます。
 
 コンポーネントは、インタープリターまたは [コンパイル済み](../Desktop/building.md) のものが使えます。
 
@@ -35,9 +33,11 @@ title: 依存関係
 
 ## コンポーネントの場所
 
+When developing in 4D, the component files can be transparently stored in your computer or located on an external GitHub or GitLab repository.
+
 :::note
 
-このページでは、**4D** と **4D Server** 環境でのコンポーネントの使用方法について説明します。 他の環境では、コンポーネントの管理は異なります:
+This section describes how to work with components in the **4D** and **4D Server** environments. 他の環境では、コンポーネントの管理は異なります:
 
 - [リモートモードの 4D](../Desktop/clientServer.md) では、サーバーがコンポーネントを読み込み、リモートアプリケーションに送信します。
 - 統合されたアプリケーションでは、コンポーネントは [ビルドする際に組み込まれます](../Desktop/building.md#プラグインコンポーネントページ)。
@@ -55,7 +55,7 @@ title: 依存関係
 
 - 4Dプロジェクトのパッケージフォルダーと同じ階層 (デフォルトの場所です)
 - マシン上の任意の場所 (コンポーネントパスは **environment4d.json** ファイル内で宣言する必要があります)
-- GitHubリポジトリ (コンポーネントパスは、**dependencies.json** ファイルまたは **environment4d.json** ファイル、あるいはその両方で宣言できます)
+- on a GitHub or [GitLab](https://blog.4d.com/integrate-4d-components-directly-from-gitlab) repository: the component path can be declared in the **dependencies.json** file or in the **environment4d.json** file, or in both files (a [local cache](#local-cache-for-dependencies) is then handled automatically).
 
 同じコンポーネントが異なる場所にインストールされている場合、[優先順位](#優先順位) が適用されます。
 
@@ -72,7 +72,7 @@ title: 依存関係
 このファイルには次の内容を含めることができます:
 
 - [ローカル保存されている](#ローカルコンポーネント) コンポーネントの名前(デフォルトパス、または **environment4d.json** ファイルで定義されたパス)。
-- [GitHubリポジトリ](#github-に保存されたコンポーネント) に保存されているコンポーネントの名前 (パスはこのファイルまたは **environment4d.json** ファイルで定義できます)。
+- names of components [stored on GitHub or GitLab repositories](#components-stored-on-git-hosting-platforms) (their path can be defined in this file or in an **environment4d.json** file).
 
 #### environment4d.json
 
@@ -81,7 +81,7 @@ title: 依存関係
 このアーキテクチャーの主な利点は次のとおりです:
 
 - **environment4d.json** ファイルをプロジェクトの親フォルダーに保存することで、コミットしないように選択できることです。これにより、ローカルでのコンポーネントの管理が可能になります。
-- 複数のプロジェクトで同じ GitHubリポジトリを使用したい場合は、**dependencies.json** ファイルでそれを宣言し、**environment4d.json** ファイルで参照することができます。
+- if you want to use the same GitHub or GitLab repository for several of your projects, you can reference it in the **environment4d.json** file and declare it in the **dependencies.json** file.
 
 ### 優先順位
 
@@ -152,9 +152,9 @@ flowchart TB
 ```json
 {
 	"dependencies": {
-		"myComponent1" : "MyComponent1",
-		"myComponent2" : "../MyComponent2",
-    "myComponent3" : "file:///Users/jean/MyComponent3"
+		"myComponent1" : "MyComponent1",  
+		"myComponent2" : "../MyComponent2",  
+ 		"myComponent3" : "file:///Users/jean/MyComponent3"  
     }
 }
 ```
@@ -171,48 +171,74 @@ flowchart TB
 
 相対パスは、[`environment4d.json`](#environment4djson) ファイルを基準とした相対パスです。 絶対パスは、ユーザーのマシンにリンクされています。
 
-コンポーネントアーキテクチャーの柔軟性と移植性のため、ほとんどの場合、相対パスを使用することが **推奨** されます (特に、プロジェクトがソース管理ツールにホストされている場合)。
+コンポーネントアーキテクチャーの柔軟性と移植性のため、ほとんどの場合、相対パスを使用することが **推奨** されます (特に、プロジェクトがソース管理ツールにホストされている場合)。 絶対パスは、1台のマシンと 1人のユーザーに特化したコンポーネントの場合にのみ使用すべきです。
 
-絶対パスは、1台のマシンと 1人のユーザーに特化したコンポーネントの場合にのみ使用すべきです。
+### Components stored on Git hosting platforms {#components-stored-on-git-hosting-platforms}
 
-### GitHub に保存されたコンポーネント
-
-GitHubリリースとして利用可能な 4Dコンポーネントを参照して、4Dプロジェクトに自動で読み込んで更新することができます。
+4D components available as **releases** on GitHub and GitLab platforms can be referenced and automatically loaded and updated in your 4D projects.
 
 :::note
 
-GitHub に保存されているコンポーネントに関しては、[**dependencies.json**](#dependenciesjson) ファイルと [**environment4d.json**](#environment4djson) ファイルの両方で同じ内容をサポートしています。
+Regarding components stored on GitHub or GitLab, both [**dependencies.json**](#dependenciesjson) and [**environment4d.json**](#environment4djson) files support the same contents.
 
 :::
 
-#### GitHubリポジトリの設定
+To be able to directly reference and use a 4D component stored on GitHub or GitLab, you need to configure the component's repository.
 
-GitHub に保存された 4Dコンポーネントを直接参照して使用するには、GitHubコンポーネントのリポジトリを設定する必要があります。
+#### Configuring a GitHub repository
 
-- ZIP形式でコンポーネントファイルを圧縮します。
-- GitHubリポジトリと同じ名前をこのアーカイブに付けます。
+1. ZIP形式でコンポーネントファイルを圧縮します。
+2. GitHubリポジトリと同じ名前をこのアーカイブに付けます。 For example, for a "my-4D-Component" repository, the archive must be named "my-4D-Component.zip".
+
 - このリポジトリの [GitHubリリース](https://docs.github.com/ja/repositories/releasing-projects-on-github/managing-releases-in-a-repository) にアーカイブを統合します。
 
 これらのステップは、4Dコードや GitHubアクションを使用することで簡単に自動化できます。
 
+#### Configuring a GitLab repository
+
+GitLab releases only store the name and URL of assets, they do not contain uploaded files. You need to provide your component's zip file as a link.
+
+1. Upload the component's ZIP file somewhere, i.e. either on an external server, or [using GitLab Package Registry](#using-the-gitlab-package-registry) (generic package).
+2. Create a [GitLab release](https://docs.gitlab.com/user/project/releases/) for your component, including the link to your component's file as release asset.
+
+The asset name is typically an artifact link name (\<my-component\>.zip).
+
+#### Using the GitLab Package Registry
+
+The [GitLab Package Registry](https://docs.gitlab.com/user/packages/package_registry/) allows you to host your files in GitLab itself. Its main advantages include an authenticated access, stable and versioned urls, and the ability to associate binairies with release tags. To use the Package Registry:
+
+1. Build your component file (for example: *MyComponent.zip*)
+2. Upload it to the [generic packages repository](https://docs.gitlab.com/user/packages/generic_packages/) using a script (see [examples in the GitLab documentation](https://docs.gitlab.com/user/packages/generic_packages/#publish-a-single-file)).
+3. **Deploy** \> **Package Registry** to see the result.
+4. Use the package URL as a release asset link.
+5. Associate it with the same Git tag.
+
 #### パスの宣言
 
-GitHub に保存されているコンポーネントは [**dependencies.json**ファイル](#dependenciesjson) にて次のように宣言します:
+You declare components stored on GitHub and GitLab in the [**dependencies.json** file](#dependenciesjson) in the following way:
 
-```json
+```json title="dependencies.json"
 {
 	"dependencies": {
 		"myGitHubComponent1": {
 			"github" : "JohnSmith/myGitHubComponent1"
+		},
+		"myGitLabComponent": {
+			"gitlab" : "JohnSmith/myGitLabComponent"
+		},
+		"myPrivateGitLabComponent": {
+			"gitlab" : "JohnSmith/myPrivateGitLabComponent",
+			"host" : "https://myprivate-gitlab.com"
 		},
 		"myGitHubComponent2": {}
 	}
 }
 ```
 
-... 上記の場合、"myGitHubComponent1" は宣言とパス定義の両方がされていますが、"myComponent2" は宣言されているだけです。 **environment4d.json** ファイルは必須ではありません。 このファイルは、**dependencies.json** ファイル内で宣言された一部またはすべてのコンポーネントのついて、**カスタムパス** を定義するのに使用します。 このファイルは、プロジェクトパッケージフォルダーまたはその親フォルダーのいずれかに保存することができます (ルートまでの任意のレベル)。
+- (GitLab dependencies only) Use the "host" property to declare a private GitLab self-hosted instance. Using only the "gitlab" property indicates a GitLab repository hosted on https://gitlab.com.
+- "myGitHubComponent1" is referenced and declared for the project, although "myGitHubComponent2" is only referenced. **environment4d.json** ファイルは必須ではありません。 このファイルは、**dependencies.json** ファイル内で宣言された一部またはすべてのコンポーネントのついて、**カスタムパス** を定義するのに使用します。 このファイルは、プロジェクトパッケージフォルダーまたはその親フォルダーのいずれかに保存することができます (ルートまでの任意のレベル)。
 
-```json
+```json title="environment4d.json"
 {
 	"dependencies": {
 		"myGitHubComponent2": {
@@ -226,7 +252,7 @@ GitHub に保存されているコンポーネントは [**dependencies.json**�
 
 #### タグとバージョン
 
-GitHubでリリースが作成されると、そこに**タグ**と**バージョン**が関連づけられます。 依存関係マネージャーはこれらの情報を使用してコンポーネントの自動利用可能性を管理します。
+When a release is created in GitHub or GitLab, it is associated to a **tag** and a **version**. 依存関係マネージャーはこれらの情報を使用してコンポーネントの自動利用可能性を管理します。
 
 :::note
 
@@ -234,9 +260,9 @@ GitHubでリリースが作成されると、そこに**タグ**と**バージ�
 
 :::
 
-- **タグ** はリリースを一意に参照するテキストです。 [**dependencies.json** ファイル](#dependenciesjson) および [**environment4d.json**](#environment4djson) ファイルでは、プロジェクトで使用するリリースタグを指定することができます。 たとえば:
+- **タグ** はリリースを一意に参照するテキストです。 In the [**dependencies.json**](#dependenciesjson) and [**environment4d.json**](#environment4djson) files, you can indicate the release tag you want to use in your project. たとえば:
 
-```json
+```json title="dependencies.json"
 {
 	"dependencies": {
 		"myFirstGitHubComponent": {
@@ -249,7 +275,7 @@ GitHubでリリースが作成されると、そこに**タグ**と**バージ�
 
 - リリースは **バージョン** によっても識別されます。 使用されるバージョニングシステムは一般的に使用されている [*セマンティックバージョニング*](https://regex101.com/r/Ly7O1x/3/) コンセプトに基づいています。 各バージョン番号は次のように識別されます: `majorNumber.minorNumber.pathNumber`。 タグと同様に、プロジェクトで使用したいコンポーネントのバージョンを指定することができます。例:
 
-```json
+```json title="dependencies.json"
 {
 	"dependencies": {
 		"myFirstGitHubComponent": {
@@ -264,7 +290,8 @@ GitHubでリリースが作成されると、そこに**タグ**と**バージ�
 
 以下にいくつかの例を示します:
 
-- "`latest`": GitHubリリースで "latest" バッジを持つバージョン。
+- "latest" (GitHub only): the GitHub release with the "latest" badge (to be selected by the developer).
+- "highest" (GitLab only): the GitLab release with the highest semantic value.
 - "`*`": リリースされている最新バージョン。
 - "`1.*`": メジャーバージョン 1 の全バージョン。
 - "`1.2.*`": マイナーバージョン 1.2 のすべてのパッチ。
@@ -278,11 +305,11 @@ GitHubでリリースが作成されると、そこに**タグ**と**バージ�
 
 タグやバージョンを指定しない場合、4D は自動的に "latest" バージョンを取得します。
 
-依存関係マネージャーはコンポーネントの更新がGitHub上で利用可能かどうかを定期的にチェックします。 コンポーネントに対して新しいバージョンが利用可能だった場合、[設定に応じて](#github依存関係バージョン範囲)依存関係一覧の中で更新マークが表示されます。
+The Dependency manager checks periodically if component updates are available on the Git hosting platform. If a new version is available for a component, an update indicator is then displayed for the component in the dependency list, [depending on your settings](#defining-a-dependency-version-range).
 
 #### 4Dバージョンタグの命名規則
 
-[**4Dのバージョンに追随する**](#github依存関係バージョン範囲) 依存関係ルールを使用したい場合、GitHub レポジトリ上でのコンポーネントのリリースのタグは、特定の命名規則に従う必要があります。
+If you want to use the [**Follow 4D Version**](#defining-a-github-dependency-version-range) dependency rule, the tags for component releases must comply with specific conventions.
 
 - **LTS バージョン**: `x.y.p` パターン。ここでの`x.y` は追随したいメインの4D バージョンを表し、`p` (オプション) はパッチバージョンや他の追加のアップデートなどのために使用することができます。 プロジェクトが4D バージョンの *x.y* のLTS バージョンを追随すると指定した場合、依存関係マネージャーはそれを"x.\* の最新バージョン"(利用可能であれば)、あるいは"x 未満のバージョン"と解釈します。 もしそのようなバージョンが存在しない場合、その旨がユーザーに通知されます。 たとえば、 "20.4" という指定は依存関係マネージャーによって"バージョン 20.\* の最新コンポーネント、または20 未満のバージョン"として解決されます。
 
@@ -294,39 +321,39 @@ GitHubでリリースが作成されると、そこに**タグ**と**バージ�
 
 :::
 
-#### プライベートリポジトリ
+#### Authentication and tokens
 
 プライベートリポジトリにあるコンポーネントを統合したい場合は、アクセストークンを使用して接続するよう 4D に指示する必要があります。
 
-これには、GitHubアカウントで **リポジトリ** へのアクセス権を持つ **classic** トークンを作成します。
+- for GitHub: in your [GitHub token interface](https://github.com/settings/tokens), create a token with the recommended following properties:
+  - type: **classic**
+  - access rights: **repo**
 
-:::note
+- for GitLab: in your GitLab account, create a token with the following properties:
+  - type: **Personal Access token**
+  - scopes: **read_api** and **read_repository**
 
-詳細については [GitHubトークンのインターフェース](https://github.com/settings/tokens) を参照ください。
-
-:::
-
-その後依存関係マネージャーに[接続トークンを提供する](#githubアクセストークンを提供する) 必要があります。
+You then need to [provide your connection token](#providing-your-access-token) to the Dependency manager.
 
 #### 依存関係のローカルキャッシュ
 
-参照された GitHubコンポーネントはローカルのキャッシュフォルダーにダウンロードされ、その後環境に読み込まれます。 ローカルキャッシュフォルダーは以下の場所に保存されます:
+Referenced GitHub and GitLab components are downloaded in a local cache folder then loaded in your environment. ローカルキャッシュフォルダーは以下の場所に保存されます:
 
-- macOs: `$HOME/Library/Caches/<app name>/Dependencies`
+- on macOS: `$HOME/Library/Caches/<app name>/Dependencies`
 - Windows: `C:\Users\<username>\AppData\Local\<app name>\Dependencies`
 
 ... 上記で `<app name>` は "4D"、"4D Server"、または "tool4D" となります。
 
 ### 依存関係の自動解決
 
-コンポーネントを([ローカルで](#local-components) 、あるいは [GitHub 経由で](#components-stored-on-github))追加またはアップデートした場合、4D コンポーネントが必要とする依存関係を自動的に解決してインストールします。 構成には次の内容が含まれます:
+When you add or update a component (whether [local](#local-components) or [from a Git hosting platform](#components-stored-on-git-hosting-platforms)), 4D automatically resolves and installs all dependencies required by that component. 構成には次の内容が含まれます:
 
 - **一次依存関係**: `dependencies.json` ファイル内で明示的に宣言したコンポーネント
 - **二次依存関係**: 一次依存関係または他の二次依存関係が必要とするコンポーネントで、自動的に解決され、インストールされます。
 
 依存関係マネージャは、それぞれのコンポーネントが持つ `dependencies.json` ファイルを読み込み、可能な限り指定されたバージョンを遵守しつつ全ての必要な依存関係を回帰的にインストールします。 これによって、ネストされた依存関係を手動で特定し、一つずつ追加しなくても済むようになります。
 
-- **コンフリクトの解決**: 複数の依存関係が同じコンポーネントの[異なるバージョン](#defining-a-github-dependency-version-range) を必要とする場合、依存関係マネージャは全ての重なったバージョン範囲を満たすバージョンを探し出すことでコンフリクトを自動的に解決しようとします。 一次依存関係が二次依存関係とコンフリクトを起こした場合には、一次依存関係が優先されます。
+- **コンフリクトの解決**: 複数の依存関係が同じコンポーネントの[異なるバージョン](#defining-a-dependency-version-range) を必要とする場合、依存関係マネージャは全ての重なったバージョン範囲を満たすバージョンを探し出すことでコンフリクトを自動的に解決しようとします。 一次依存関係が二次依存関係とコンフリクトを起こした場合には、一次依存関係が優先されます。
 
 :::note
 
@@ -393,9 +420,15 @@ GitHubでリリースが作成されると、そこに**タグ**と**バージ�
 - **Duplicated**: 依存関係は読み込まれていません。同じ名前を持つ別の依存関係が同じ場所に存在し、すでに読み込まれています。
 - **Available after restart**: [インターフェースによって](#プロジェクトの依存関係の監視) 依存関係の参照が追加・更新されました。この依存関係は、アプリケーションの再起動後に読み込まれます。
 - **Unloaded after restart**: [インターフェースによって](#プロジェクトの依存関係の監視) 依存関係の参照が削除されました。この依存関係は、アプリケーションの再起動時にアンロードされます。
-- **Update available \<version\>**: [コンポーネントバージョン設定](#defining-a-github-dependency-version-range) に合致するGitHub 依存関係の新しいバージョンが検知されました。
-- **Refreshed after restart**: GitHub 依存関係の[コンポーネントバージョン設定](#github-依存関係のバージョン範囲の定義) が変更されたので、次回起動時に調整されます。
-- **Recent update**: GitHub 依存関係の新しいバージョンが開始時にロードされました。
+- **Update available \<version\>**: A new version of the dependency matching your [component version configuration](#defining-a-github-dependency-version-range) has been detected.
+- **Refreshed after restart**: The [component version configuration](#defining-a-dependency-version-range) of the dependency has been modified, it will be adjusted at the next startup.
+- **Recent update**: A new version of the dependency has been loaded at startup.
+
+:::tip
+
+When you click on the **Available after restart** label, a dialog box is displayed and allows you to restart immediately.
+
+:::
 
 依存関係の行にマウスオーバーするとツールチップが表示され、ステータスに関する追加の情報を提供します:
 
@@ -430,13 +463,13 @@ GitHubでリリースが作成されると、そこに**タグ**と**バージ�
 コンポーネントアイコンとロケーションロゴが追加情報を提供します:
 
 - コンポーネントロゴは、それが 4D またはサードパーティーによる提供かを示します。
-- ローカルコンポーネントと GitHubコンポーネントは、小さなアイコンで区別できます。
+- Local components can be differentiated from GitHub and GitLab components by a small icon.
 
 ![dependency-origin](../assets/en/Project/dependency-github.png)
 
 ### ローカルな依存関係の追加
 
-ローカルな依存関係を追加するには、パネルのフッターエリアにある **+** ボタンをクリックします。 次のようなダイアログボックスが表示されます:
+To add a local dependency, click on the **[+]** button in the footer area of the panel. 次のようなダイアログボックスが表示されます:
 
 ![dependency-add](../assets/en/Project/dependency-add.png)
 
@@ -461,15 +494,17 @@ GitHubでリリースが作成されると、そこに**タグ**と**バージ�
 
 この依存関係は、[非アクティブな依存関係のリスト](#依存関係のステータス) に **Available after restart** (再起動後に利用可能) というステータスで追加されます。 このコンポーネントはアプリケーションの再起動後にロードされます。
 
-### GitHubの依存関係の追加
+### Adding a GitHub or GitLab dependency
 
-[GitHubの依存関係](#github-に保存されたコンポーネント) を追加するには、パネルのフッターエリアにある **+** ボタンをクリックし、**GitHub** タブを選択します。
+To add a [GitHub or GitLab dependency](#components-stored-on-git-hosting-platforms):
+
+1. Click on the **[+]** button in the footer area of the panel and select the tab corresponding to your platform: **GitHub** or **GitLab**.
 
 ![dependency-add-git](../assets/en/Project/dependency-add-git.png)
 
 :::note
 
-デフォルトで、[4D によって開発されたコンポーネント](../Extensions/overview.md#4dによって開発されたコンポーネント) がコンボボックスに一覧として表示されていて、これらの機能を選択して簡単に環境にインストールすることができます:
+By default, [components developed by 4D](../Extensions/overview.md#components-developed-by-4d) are listed in the GitHub combo box, so that you can easily select and install these features in your environment:
 
 ![dependency-default-git](../assets/en/Project/dependency-default.png)
 
@@ -477,25 +512,29 @@ GitHubでリリースが作成されると、そこに**タグ**と**バージ�
 
 :::
 
-依存関係の GitHubリポジトリのパスを入力します。 **リポジトリURL** または **GitHubアカウント名/リポジトリ名 の文字列** が使えます。例:
+2. Enter the path of the GitHub or GitLab repository of the dependency. It could be:
+
+- a **repository URL** (e.g. "https://github.com/vdelachaux/UI-with-Classes")
+- (GitLab only) a self-hosted instance private server URL (e.g. "https://git-my-server.com/4d/components/mycomponent")
+- a **user-account/repository-name string**, for example:
 
 ![dependency-add-git-2](../assets/en/Project/dependency-add-git-2.png)
 
-接続が確立されると、入力エリアの右側に GitHubアイコン ![dependency-gitlogo](../assets/en/Project/dependency-gitlogo.png) が表示されます。 このアイコンをクリックすると、既定のブラウザーでリポジトリを開くことができます。
+Once the connection is established, an icon ![dependency-gitlogo](../assets/en/Project/dependency-gitlogo.png) is displayed on the right side of the entry area. このアイコンをクリックすると、既定のブラウザーでリポジトリを開くことができます。
 
 :::note
 
-もしコンポーネントが [GitHub のプライベートリポジトリ](#プライベートリポジトリ) に保存されていて、必要なパーソナルアクセストークン (personal access token) がない場合はエラーメッセージが表示され、**パーソナルアクセストークンを追加...** ボタンが表示されます ([GitHubアクセストークンの提供](#githubアクセストークンの提供) 参照)。
+If the component is stored on a [private repository](#private-repositories) and your personal token is missing, an error message is displayed and a **Add a personal access token...** button is displayed (see [Providing your access token](#providing-your-access-token)).
 
 :::
 
-このプロジェクトで使用する[依存関係のバージョン範囲](#タグとバージョン) を定義します。 デフォルトでは"Latest" が選択されており、これは最新のバージョンが自動的に使用されるということを意味します。
+3. このプロジェクトで使用する[依存関係のバージョン範囲](#タグとバージョン) を定義します。 By defaut, "Latest" (GitHub) or "Highest" (GitLab) is selected, which means that the most recent version will be automatically used.
 
-プロジェクトに依存関係を追加するには、**追加** ボタンをクリックします。
+4. プロジェクトに依存関係を追加するには、**追加** ボタンをクリックします。
 
-GitHub 依存関係は[**dependencies.json**](#dependenciesjson) ファイル内で宣言され、[無効化依存関係一覧](#dependency-status) 内に、**Available at restart** のステータスで追加されます。 このコンポーネントはアプリケーションの再起動後にロードされます。
+The dependency is declared in the [**dependencies.json**](#dependenciesjson) file and added to the [inactive dependency list](#dependency-status) with the **Available at restart** status. このコンポーネントはアプリケーションの再起動後にロードされます。
 
-#### GitHub 依存関係のバージョン範囲を定義
+#### Defining a dependency version range
 
 依存関係の [タグとバージョン](#タグとバージョン) オプションを定義することができます:
 
@@ -505,19 +544,19 @@ GitHub 依存関係は[**dependencies.json**](#dependenciesjson) ファイル内
 - **メジャー更新の手前まで**: [セマンティックバージョニングの範囲](#タグとバージョン)を定義して、更新を次のメジャーバージョンの手前までに制限します。
 - **マイナー更新の手前まで**: 上と同様に、更新を次のマイナーバージョンの手前までに制限します。
 - **自動更新しない(タグ指定)**: 利用可能なリストから [特定のタグ](#セマンティックバージョン範囲]) を選択するか、手動で入力します。
-- **自動更新する(latest)**: 最新(latest)としてタグづけされたリリースをダウンロードすることを許可します。 **警告:** このオプションを使用するのは開発の初期段階では便利かもしれませんが、ベータリリースを含め新しいリリースを自動的に取り込むため、予期せぬアップデートや変更を引き起こす可能性があります。そのため、製品環境や共有プロジェクトでは避けた方が賢明です。
+- **Latest** (GitHub) or **Highest** (GitLab): Allows to download the release that is tagged as the most recent version. **警告:** このオプションを使用するのは開発の初期段階では便利かもしれませんが、ベータリリースを含め新しいリリースを自動的に取り込むため、予期せぬアップデートや変更を引き起こす可能性があります。そのため、製品環境や共有プロジェクトでは避けた方が賢明です。
 
-現在のGitHub 依存関係バージョンは、依存関係の項目の右側に表示されます:
+The current dependency version is displayed on the right side of the dependency item:
 
 ![dependency-origin](../assets/en/Project/dependency-version.png)
 
-#### GitHub 依存関係バージョン範囲の変更
+#### Modifying the dependency version range
 
-一覧に表示されたGitHub 依存関係に対して[バージョン設定](#github-依存関係のバージョン範囲を定義) を編集することができます: 編集する依存関係を選択し、コンテキストメニューから**依存関係を編集...** を選択して下さい。 In the "依存関係を編集" ダイアログボックス内にて、依存関係のルールメニューを編集し、**適用** をクリックします。
+You can modify the [version setting](#defining-a-dependency-version-range) for a listed dependency: select the dependency to modify and select **Edit the dependency...** from the contextual menu. In the "依存関係を編集" ダイアログボックス内にて、依存関係のルールメニューを編集し、**適用** をクリックします。
 
 バージョン範囲の変更は、自動アップデート機能を使用しているときに依存関係を特定のバージョン番号にロックしておきたいときに有用です。
 
-### GitHub 依存関係の更新
+### 依存関係の更新
 
 依存関係マネージャはGitHub 上の更新を統合的に管理する方法を提供します。 以下の機能がサポートされています:
 
@@ -556,7 +595,7 @@ GitHub 依存関係は[**dependencies.json**](#dependenciesjson) ファイル内
 
 #### 依存関係の更新
 
-**依存関係の更新** とはGitHub から依存関係の新しいバージョンをダウンロードし、次にプロジェクトが開始されたときにロードされるように用意しておくということを意味します。
+**Updating a dependency** means downloading a new version of the dependency from GitHub or GitLab and keeping it ready to be loaded the next time the project is started.
 
 依存関係はいつでも更新することができ、また単一の依存関係に対してでも、依存関係全てに対してでも更新することが可能です:
 
@@ -573,27 +612,32 @@ GitHub 依存関係は[**dependencies.json**](#dependenciesjson) ファイル内
 更新コマンドを選択すると:
 
 - ダイアログボックスが表示され**プロジェクトを再起動する**ことが提示されます。再起動することによって更新された依存関係が直ちに利用可能になります。 通常、更新された依存関係を直ちに有効化するためにプロジェクトを再起動することが推奨されます。
-- 「あとで」をクリックすると、更新コマンドはメニューには表示されなくなります。これは次回起動時に更新が予定されるということになります。
+- if you click **Later**, the update command is no longer available in the menu, meaning the action has been planned for the next startup.
 
 #### 自動アップデート
 
 依存関係マネージャウィンドウの下部の**オプション**メニューから、**自動アップデート** オプションを選択することができます。
 
-このオプションがチェックされている場合(デフォルトでチェック)、GitHub コンポーネントで[コンポーネントバージョン設定](#github依存関係バージョン範囲の定義) に合致している新しいバージョンは、次回プロジェクト起動時に自動的に更新されます。 このオプションは手動で更新を洗濯する必要性を排除することで、日々の依存関係アップデートの管理を容易にします。
+When this option is checked (default), new GitHub or GitLab component versions matching your [component versioning configuration](#defining-a-github-dependency-version-range) are automatically updated for the next project startup. このオプションは手動で更新を洗濯する必要性を排除することで、日々の依存関係アップデートの管理を容易にします。
 
 このオプションがチェックされていない場合、[コンポーネントバージョン設定](#github依存関係バージョン範囲の定義) に合致している新しいコンポーネントバージョンは、利用可能であることが表示されるに止まり、[手動での更新](#依存関係の更新) を必要とします。 依存関係の更新を正確に監視したい場合には、**自動アップデート** オプションの選択を外します。
 
-### GitHubアクセストークンの提供
+### Providing your access token
 
-依存関係マネージャにパーソナルアクセストークンを登録することは:
+Registering your [personal access token](#authentication-and-tokens) in the Dependency manager is:
 
-- コンポーネントが[プライベートなGitHub レポジトリ](#プライベートリポジトリ) に保存されている場合には必須です。
-- [依存関係の更新のチェック](#github-依存関係の更新) をより頻繁にしたい場合には推奨されます。
+- mandatory if the component is stored on a private repository,
+- recommended for a more frequent [checking of dependency updates](#updating-dependencies).
 
-GitHub アクセストークンを提供するには、次のいずれかを実行します:
+#### Adding a token
 
-- "依存関係を追加..." ダイアログボックスで、GitHub のプライベートリポジトリパスを入力した後に表示される \*\*パーソナルアクセストークンを追加... \*\* ボタンをクリックします。
-- または、依存関係マネージャーのメニューで、**GitHubパーソナルアクセストークンを追加...** をいつでも選択できます。
+To provide your GitHub or GitLab access token, you can either:
+
+- click on **Add a personal access token...** button that is displayed in the "Add a dependency" dialog box after you entered a private repository path.
+
+![dependency-add-token](../assets/en/Project/dependency-add-token-button.png)
+
+- or, select **Add a GitHub personal access token...** or **Add a GitLab personal access token...** in the Dependency manager menu at any moment. For GitLab access tokens, you can select the host:
 
 ![dependency-add-token](../assets/en/Project/dependency-add-token.png)
 
@@ -601,7 +645,9 @@ GitHub アクセストークンを提供するには、次のいずれかを実�
 
 ![dependency-add-token-2](../assets/en/Project/dependency-add-token-2.png)
 
-パーソナルアクセストークンは 1つしか入力できません。 入力されたトークンは編集することができます。
+#### Editing a token
+
+You can only enter one personal access token per host. Once a token has been entered, you can **edit** it.
 
 提供されたトークンは、[アクティブな4Dフォルダー](../commands/get-4d-folder#active-4d-folder) 内の**github.json** ファイルに保存されます。
 

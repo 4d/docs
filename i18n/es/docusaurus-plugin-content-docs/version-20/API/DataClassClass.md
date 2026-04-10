@@ -572,9 +572,9 @@ $number:=$ds.Persons.getCount()
 <!-- REF #DataClassClass.getDataStore().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|cs.DataStore|<-|Datastore of the dataclass|
+|Resultado|cs.DataStore|<-|Datastore of the dataclass|
 </div>
 <!-- END REF -->
 

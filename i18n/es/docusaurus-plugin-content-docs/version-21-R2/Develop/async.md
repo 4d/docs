@@ -30,14 +30,14 @@ La ejecución asíncrona se utiliza cuando:
 
 Elegir entre ejecución síncrona y asíncrona:
 
-| Scenario                                               | Mejor enfoque    |
-| ------------------------------------------------------ | ---------------- |
-| Operaciones rápidas con un procesamiento mínimo        | **Síncrono**     |
-| Tareas que requieren un orden de ejecución estricto    | **Síncrono**     |
-| Tareas en segundo plano de larga duración              | **Asynchronous** |
-| Long-running UI interactions                           | **Asynchronous** |
-| Interacciones de interfaz de usuario de corta duración | **Síncrono**     |
-| Cargas de trabajo multihilo de alto rendimiento        | **Asynchronous** |
+| Scenario                                               | Mejor enfoque |
+| ------------------------------------------------------ | ------------- |
+| Operaciones rápidas con un procesamiento mínimo        | **Síncrono**  |
+| Tareas que requieren un orden de ejecución estricto    | **Síncrono**  |
+| Tareas en segundo plano de larga duración              | **Asíncrono** |
+| Long-running UI interactions                           | **Asíncrono** |
+| Interacciones de interfaz de usuario de corta duración | **Síncrono**  |
+| Cargas de trabajo multihilo de alto rendimiento        | **Asíncrono** |
 
 ## Principios básicos
 
@@ -71,7 +71,7 @@ In the context of asynchronous execution, the following features place your code
 - [`CALL FORM`](../commands-legacy/call-form.md) abre un formulario y lo hace escuchar los mensajes entrantes de la cola de eventos.
 - a call for a `wait()` listens for `terminate()` or `shutdown()` in a callback from any other instance.
 
-### Event triggering
+### Activación de eventos
 
 Los eventos se activan automáticamente durante el flujo de ejecución y se pasan a sus retrollamadas correspondientes. Se puede forzar la activación de eventos llamando a `terminate()` o `shutdown()` durante una `wait()`.
 
@@ -171,7 +171,7 @@ var $options.onResponse:=Formula(myMethod)
 
 ## Ejecución síncrona en código asíncrono
 
-Incluso cuando se utiliza código moderno y asíncrono, puede ser necesario introducir cierto grado de ejecución síncrona. Por ejemplo, puede querer que una función espere un cierto tiempo para obtener un resultado. It could be the case with guaranteed fast network connections or system workers. A continuación, puede forzar la ejecución sincrónica utilizando la función `wait()`.
+Incluso cuando se utiliza código moderno y asíncrono, puede ser necesario introducir cierto grado de ejecución síncrona. Por ejemplo, puede querer que una función espere un cierto tiempo para obtener un resultado. Podría ser el caso de conexiones de red rápidas garantizadas o workers del sistema. A continuación, puede forzar la ejecución sincrónica utilizando la función `wait()`.
 
 The **`.wait()`** function pauses execution of the current process and puts 4D in [event listening](#event-listening) mode. Keep in mind that it will trigger events received from any sources, not only from the object on which the `wait()` function was called.
 

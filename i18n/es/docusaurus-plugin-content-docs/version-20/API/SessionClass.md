@@ -40,9 +40,9 @@ Para obtener información detallada sobre la implementación de la sesión, cons
 <!-- REF #_command_.Session.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|4D.Session|<-|Session object|
+|Resultado|4D.Session|<-|Session object|
 </div>
 <!-- END REF -->
 

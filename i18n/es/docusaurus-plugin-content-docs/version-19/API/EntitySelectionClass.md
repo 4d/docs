@@ -1007,9 +1007,9 @@ Para más información, consulte [Entity selection ordenadas o desordenadas](ORD
 <!-- REF #EntitySelectionClass.last().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|4D.Entity |<-|Reference to the last entity of the entity selection (Null if empty entity selection)|
+|Resultado|4D.Entity |<-|Reference to the last entity of the entity selection (Null if empty entity selection)|
 </div>
 <!-- END REF -->
 

@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | Parámetros     | Tipo    |                             | Descripción                                |
 | -------------- | ------- | --------------------------- | ------------------------------------------ |
 | wpDoc          | Object  | &#8594; | Documento 4D Write Pro                     |
-| styleSheetName | Text    | &#8594; | Style sheet name                           |
+| styleSheetName | Text    | &#8594; | Nombre de la hoja de estilo                |
 | listLevelIndex | Integer | &#8594; | Nivel de la hoja de estilo en la jerarquía |
 | Resultado      | Object  | &#8592; | Objeto hoja de estilo                      |
 

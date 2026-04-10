@@ -57,13 +57,13 @@ You can specify the attributes of the style sheet using the [WP SET ATTRIBUTES](
 **Notas**:
 
 - Una hoja de estilo sólo modifica la visualización de un carácter o párrafo, no cómo se almacena en el documento. Si se elimina una hoja de estilo, el texto volverá al estilo por defecto.
-- Any style attributes not defined in the new style sheet will automatically use the Normal style. For more information, see the [*Style sheets* page](../user-legacy/stylesheets.md).
+- Any style attributes not defined in the new style sheet will automatically use the Normal style. Para más información, consulte la página [*Hojas de estilo*](../user-legacy/stylesheets.md).
 
 ### Hierarchical list style sheet
 
 If the *styleSheetType* parameter is set to `wk type paragraph`, you can optionally pass the *listLevelCount* parameter to create a [hierarchical list style sheet](../user-legacy/stylesheets.md#hierarchical-list-style-sheets).
 
-The *listLevelCount* parameter defines the total number of levels in the hierarchy. When specified (value ≥ 1), the command automatically creates a root-level style sheet and the corresponding sub-level style sheets.
+El parámetro *listLevelCount* define el número total de niveles de la jerarquía. When specified (value ≥ 1), the command automatically creates a root-level style sheet and the corresponding sub-level style sheets.
 
 Se aplican los siguientes valores predefinidos:
 

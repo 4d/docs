@@ -431,7 +431,7 @@ Note over Qodly page: product.creationDate は "25/06/17" <br> そして product
 
 ```
 
-#### 例題 5 (図): Qodly - 関数内でインスタンス化されたエンティティ
+#### Example 5 (diagram): Qodly - Entity instantiated in a function
 
 ```mermaid
 

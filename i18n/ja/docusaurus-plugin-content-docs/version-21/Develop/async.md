@@ -101,31 +101,31 @@ Each worker (or form window for [`CALL FORM`](../commands-legacy/call-form.md)) 
 
 複数の4D クラスが非同期処理をサポートしています:
 
-- [`HTTPRequest`](../API/HTTPRequestClass.md) – Handles asynchronous HTTP requests and responses.
-- [`SystemWorker`](../API/SystemWorkerClass.md) – Executes external processes asynchronously.
-- [`TCPConnection`](../API/TCPConnectionClass.md) – Manages TCP client connections with event-driven callbacks.
-- [`TCPListener`](../API/TCPListenerClass.md) – Manages TCP server connections.
-- [`UDPSocket`](../API/UDPSocketClass.md) – Sends and receives UDP packets.
-- [`WebSocket`](../API/WebSocketClass.md) – Manages WebSocket client connections.
-- [`WebSocketServer`](../API/WebSocketServerClass.md) – Manages WebSocket server connections.
+- [`HTTPRequest`](../API/HTTPRequestClass.md) – 非同期のHTTP リクエストやレスポンスを管理します。
+- [`SystemWorker`](../API/SystemWorkerClass.md) – 外部プロセスを非同期に実行します。
+- [`TCPConnection`](../API/TCPConnectionClass.md) – TCP クライアント接続をイベント駆動型のコールバックで管理します。
+- [`TCPListener`](../API/TCPListenerClass.md) – TCP サーバー接続を管理します。
+- [`UDPSocket`](../API/UDPSocketClass.md) – UDP パケットを送信し受信します。
+- [`WebSocket`](../API/WebSocketClass.md) – WebSocket クライアント接続を管理します。
+- [`WebSocketServer`](../API/WebSocketServerClass.md) – WebSocket サーバー接続を管理します。
 
-All these classes follow the same rules regarding asynchronous execution. Their constructor accepts an *options* parameter that is used to configure your asynchronous object. It is recommended that the *options* object is a [user class](../Concepts/classes.md) instance which has callback functions. For example, you can create an `onResponse()` function in the class, it will be automatically called asychronously when a *reponse* event is fired.
+これらのクラスは非同期実行に関しては同じルールに従います。 これらのクラスのコンストラクターは、非同期オブジェクトを設定するために使用される *options* 引数を受付ます。 この場合の *options* オブジェクトには、コールバック関数を備えた[ユーザークラス](../Concepts/classes.md) インスタンスであることが推奨されます。 例えば、クラス内に `onResponse()` 関数を作成した場合、*reponse* イベントが発生した際にそれが自動的に非同期で呼び出されます。
 
-We recommend the following sequence:
+以下のような手順が推奨されます:
 
-1. You create the user class where you declare callback functions, for example a `cs.Params` with `onError()` and `onResponse()` functions.
-2. You instantiate the user class (in our example using `cs.Params.new()`) that will configure your asynchronous object.
-3. You call the constructor of the 4D class (for example `4D.SystemWorker.new()`) and pass the *options* object as parameter. It starts the operations passed immediately without delay.
+1. コールバック関数を宣言するユーザークラスを作成します。例えば、`onError()` および `onResponse()` 関数を持つ、`cs.Params` クラスなどです。
+2. そのユーザークラスをインスタンス化し(ここでの例では`cs.Params.new()` クラスを使用)、それを使用して非同期オブジェクトを設定します。
+3. 4D クラスのコンストラクターを呼び出し(例えば`4D.SystemWorker.new()` など)、*options* オブジェクトを引数として渡します。 渡されたオペレーションは、遅延なくすぐに開始されます。
 
-Here is a full example of implementation of an *options* object based upon a user class:
+以下は、ユーザークラスに基づいた *options* オブジェクトの実装の完全な一例です:
 
 ```4d
-// asynchronous code creation
-var $options:=cs.Params.new(10) //see cs.Params class code below
+// 非同期コード作成
+var $options:=cs.Params.new(10) // cs.Params クラスのコードについては以下参照
 var $systemworker:=4D.SystemWorker.new("/bin/ls -l /Users ";$options) 
 
 
-// "Params" class
+// "Params" クラス
 
 Class constructor ($timeout : Real)
  This.dataType:="text"
@@ -155,13 +155,13 @@ Function _createFile($title : Text; $textBody : Text)
 
 ```
 
-Note that `onResponse`, `onData`, `onDataError`, and `onTerminate` are functions supported by [`4D.SystemWorker`](../API/SystemWorkerClass.md).
+ここで`onResponse`、 `onData`、 `onDataError` および `onTerminate` 関数は、[`4D.SystemWorker`](../API/SystemWorkerClass.md) によってサポートされている関数であるという点に注意してください。
 
-Once the user class is instantiated; 4D is put in [event listening](#event-listening) mode, in which case 4D can [trigger an event](#event-triggering) that calls the corresponding function in the user class.
+ユーザークラスがインスタンス化されたら、4D は[event listening](#イベントリスニング) モードになり、4D は[イベントをトリガー](#イベントのトリガー) することで、ユーザークラス内の対応する関数を呼び出すことができます。
 
 :::tip
 
-In some cases, you might want to use formulas as property values instead of class functions. Although it is not the best practice, a syntax such as the following is supported:
+一部の場合においては、クラス関数の代わりに、プロパティ値としてフォーミュラを使用したい場合があるかもしれません。 これはベストプラクティスではありませんが、以下のようなシンタックスがサポートされています:
 
 ```4d
 var $options.onResponse:=Formula(myMethod) 
@@ -169,20 +169,20 @@ var $options.onResponse:=Formula(myMethod)
 
 :::
 
-## Synchronous execution in asynchronous code
+## 非同期コード内での同期的な実行
 
-Even when using modern, asynchronous code, you may need to introduce a degree of synchronous execution. For example, you may want a function to wait for a certain amount of time to get a result. It could be the case with guaranteed fast network connections or system workers. Then, you can enforce synchronous execution using the `wait()` function.
+現代的な非同期コードを使用している場合でも、ある程度の同期実行が必要となる場合があるかもしれません。 例えば、ある関数が結果を得るまで、ある程度の時間待つようにしたいかもしれません。 これは例えば、保証された速いネットワーク接続や、システムワーカーなどが考えられます。 このような場合、`wait()` 関数を使用することで、同期的な実行を強制することができます。
 
-The **`.wait()`** function pauses execution of the current process and puts 4D in [event listening](#event-listening) mode. Keep in mind that it will trigger events received from any sources, not only from the object on which the `wait()` function was called.
+**`.wait()`** 関数はカレントプロセスの実行を一時停止させ、4D を[イベントリスニング](#イベントリスニング) モードにします。 ただし、これは `wait()` 関数が呼ばれたオブジェクトからだけでなく、どのソースから受信したイベントであってもトリガーされるという点に注意してください。
 
-The `wait()` function returns when the `onTerminate` event has been triggered on the object, or when the provided timeout (if any) has expired. Consequently, you can explicitly exit from a `.wait()` by calling `shutdown()` or `terminate()` from within a callback. Otherwise, the `.wait()` is exited when the current operation ends.
+`wait()` 関数は、`onTerminate` イベントがオブジェクト上でトリガーされた場合か、あるいは指定されたタイムアウト(あれば)が経過した場合に実行を返します。 結果として、コールバック内から `shutdown()` あるいは `terminate()` を呼び出すことで、`.wait()` から明示的に抜け出すことができます。 それ以外の場合は、 `.wait()` はカレントのオペレーションが終了した際に終了します。
 
 例:
 
 ```4d
 var $options:=cs.Params.new() 
 var $systemworker:=4D.SystemWorker.new("/bin/ls -l /Users ";$options) 
-$systemworker.wait(0.5) // Waits for up to 0.5 seconds for get file info
+$systemworker.wait(0.5) // ファイル情報を取得するまで0.5 秒まで待機します
 ```
 
 ## 参照
