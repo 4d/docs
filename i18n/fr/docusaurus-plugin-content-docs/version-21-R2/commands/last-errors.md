@@ -9,24 +9,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Last errors.Params-->
 
-<div class="no-index">
-
 | Paramètres | Type       |                             | Description                |
 | ---------- | ---------- | --------------------------- | -------------------------- |
 | Résultat   | Collection | &#8592; | Collection d'objets erreur |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>Historique</summary>
-
-| Release | Modifications |
-| ------- | ------------- |
-| 19 R8   | Created       |
-
-</details>
-</div>
 
 ## Description
 

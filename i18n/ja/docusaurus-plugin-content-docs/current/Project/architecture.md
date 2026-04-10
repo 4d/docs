@@ -99,11 +99,11 @@ title: アーキテクチャー
 
 #### `Shared`
 
-| 内容                                                      | 説明                                                                                                                                       | 形式   |
-| ------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---- |
-| assets/                                                 | Qodly ページで使用されているピクチャーのような、[共有されたファイル](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#shared-folder) | 様々   |
-| CustomComponents/                                       | Qodly ページで使用される[カスタムのコンポーネント](https://developer.4d.com/qodly/Integrations/customComponent/overview)                                      | json |
-| *other_files*.json | Qodly ページで使用されるCSS やデータソースなどの共有された要素                                                                                                     | json |
+| 内容                                                      | 説明                                                                                                                                                    | 形式   |
+| ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+| assets/                                                 | [Shared files](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#shared-folder) such as pictures used in Qodly pages | 様々   |
+| CustomComponents/                                       | [Custom components](https://developer.4d.com/qodly/Integrations/customComponent/overview) files used in Qodly pages                                   | json |
+| *other_files*.json | shared elements such as css or datasources used in Qodly pages                                                                                        | json |
 
 #### `TableForms`
 
@@ -129,10 +129,10 @@ title: アーキテクチャー
 
 #### `WebForms`
 
-| 内容                                                           | 説明                                                                                                     | 形式   |
-| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ---- |
-| *QodlyFormName*.WebForm                      | JSON で表された Qodly ページ                                                                                   | JSON |
-| crafted_components.json | Qodly ページ上の [クラフトコンポーネント](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/craftedComponents) の詳細 | JSON |
+| 内容                                                           | 説明                                                                                                                          | 形式   |
+| ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------- | ---- |
+| *QodlyFormName*.WebForm                      | Json representations of Qodly pages                                                                                         | JSON |
+| crafted_components.json | Description of [components crafted](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/craftedComponents) on Qodly pages | JSON |
 
 ### `Trash`
 
@@ -179,9 +179,9 @@ Data フォルダーには、データファイルのほか、データに関わ
 
 ### `Settings` (ユーザーデータ)
 
-このフォルダには、アプリケーションの管理に使用される [**データのユーザー設定**](../settings/overview.md#データファイル用のユーザー設定) が格納されます。
+This folder contains [**user settings for data**](../settings/overview.md#user-settings-for-data-file) used for application administration.
 
-> この設定は [ユーザー設定](#settings-ユーザー) や [ストラクチャー設定](#sources) より優先されます。 [設定の優先順位](../settings/overview.md#設定の優先順位) も参照ください。
+> この設定は [ユーザー設定](#settings-ユーザー) や [ストラクチャー設定](#sources) より優先されます。 See also [Priority of settings](../settings/overview.md#priority-of-settings).
 
 | 内容                                  | 説明                                                                                                                                                                                                                      | 形式   |
 | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
@@ -204,9 +204,9 @@ Logs フォルダーには、プロジェクトが使用するすべてのログ
 
 ## `Settings` (ユーザー)
 
-このフォルダには、アプリケーションの管理に使用される [**ユーザー設定**](../settings/overview.md#ユーザー設定) が格納されます。
+This folder contains [**user settings**](../settings/overview.md#user-settings) used for application administration.
 
-> この設定は [ストラクチャー設定](#sources) より優先されます。 しかしながら、[データファイル用のユーザー設定](#settings-ユーザーデータ) が存在する場合は、そちらが優先されます。 [設定の優先順位](../settings/overview.md#設定の優先順位) も参照ください。
+> この設定は [ストラクチャー設定](#sources) より優先されます。 しかしながら、[データファイル用のユーザー設定](#settings-ユーザーデータ) が存在する場合は、そちらが優先されます。 See also [Priority of settings](../settings/overview.md#priority-of-settings).
 
 | 内容                                  | 説明                                                                                                                                                                                                                                                              | 形式   |
 | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |

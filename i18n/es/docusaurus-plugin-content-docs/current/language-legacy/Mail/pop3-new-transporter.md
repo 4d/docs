@@ -9,17 +9,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.POP3 New transporter.Params-->
 
-<div class="no-index">
-
 | Parámetros | Tipo                               |                             | Descripción                                                                       |
 | ---------- | ---------------------------------- | --------------------------- | --------------------------------------------------------------------------------- |
 | server     | Object                             | &#8594; | Información del servidor de correo                                                |
 | Resultado  | 4D.POP3Transporter | &#8592; | [Objeto transporter POP3](../../API/POP3TransporterClass.md#pop3-transporter-object) |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
@@ -27,7 +23,6 @@ displayed_sidebar: docs
 | 18 R2       | Añadidos       |
 
 </details>
-</div>
 
 ## Descripción
 

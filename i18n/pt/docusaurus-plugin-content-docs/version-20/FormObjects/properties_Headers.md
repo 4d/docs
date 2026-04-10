@@ -5,7 +5,7 @@ title: Cabeçalhos
 
 ## Exibir cabeçalhos
 
-Esta propriedade é usada para exibir ou ocultar [os cabeçalhos de coluna listbox](listbox-header-footer.md#headers). Existe um cabeçalho por coluna; cada cabeçalho é configurado separadamente.
+Esta propriedade é usada para exibir ou ocultar [os cabeçalhos de coluna listbox](listbox_overview.md#list-box-headers). Existe um cabeçalho por coluna; cada cabeçalho é configurado separadamente.
 
 #### Gramática JSON
 
@@ -61,4 +61,4 @@ Observe que a conversão para frente e para trás pode levar a um resultado dife
 
 #### Veja também
 
-[Footers](properties_Footers.md) - [List box headers](listbox-header-footer.md#headers)
+[Rodapés](properties_Footers.md) - [Cabeçalhos de List box](listbox_overview.md#list-box-headers)

@@ -9,18 +9,14 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.ZIP Read archive.Params -->
 
-<div class="no-index">
-
 | 引数       | 型                             |                             | 説明                                         |
 | -------- | ----------------------------- | :-------------------------: | ------------------------------------------ |
 | zipFile  | 4D.File       | &#8594; | ZIPアーカイブファイル                               |
 | password | Text                          | &#8594; | ZIPアーカイブのパスワード (必要であれば) |
 | 戻り値      | 4D.ZipArchive | &#8592; | アーカイブオブジェクト                                |
 
-</div>
 <!-- END REF -->
 
-<div class="no-index">
 <details><summary>履歴</summary>
 
 | リリース | 内容 |
@@ -28,7 +24,6 @@ displayed_sidebar: docs
 | 18   | 追加 |
 
 </details>
-</div>
 
 ## 説明
 

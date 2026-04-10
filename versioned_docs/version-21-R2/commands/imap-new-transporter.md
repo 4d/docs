@@ -4,6 +4,14 @@ title: IMAP New transporter
 displayed_sidebar: docs
 ---
 
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|18 R4|Added|
+
+</details>
+
 <!-- REF #_command_.IMAP New transporter.Syntax -->**IMAP New transporter**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
 
 
@@ -16,16 +24,6 @@ displayed_sidebar: docs
 |Result|4D.IMAPTransporter|&#8592;|[IMAP transporter object](../API/IMAPTransporterClass.md#imap-transporter-object)|
 </div>
 <!-- END REF -->
-
-<div class="no-index">
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|18 R4|Added|
-
-</details>
-</div>
 
 
 ## Description

@@ -4,11 +4,11 @@ title: 4D at a glance
 slug: /GettingStarted/overview
 ---
 
-Web やデスクトップ、モバイルの運用形態に関わらず、データベースストラクチャーからユーザーインターフェースまで (コード、Web ページ、フォーム、メニュー、ユーザー設定、その他必要なリソース含む) 、4D アプリケーションのすべてのソースコードが 4D プロジェクトには格納されています。 4D プロジェクトは主にテキストファイルによって構成されています。
+A 4D project contains all of the source code of a 4D application, whatever its deployment type (web, desktop, or mobile), from the database structure to the user interface, including code, web pages, forms, menus, user settings, or any required resources. 4D プロジェクトは主にテキストファイルによって構成されています。
 
 ## プロジェクトファイル
 
-4D プロジェクトファイルはWindows またはmacOS 上では通常の4D プラットフォームアプリケーション(4D または 4D Server) で開いて編集します。 4D では、ファイルを管理するための機能を完全に備えたエディターが利用可能です。これには [コードエディター(メソッドエディター)](../code-editor/write-class-method.md)、 [Web インターフェースビルダー(4D Qodly Pro)](https://developer.4d.com/qodly/)、 [フォームエディター](../FormEditor/formEditor.md)、ストラクチャーエディター、メニューエディターなどのエディターが含まれます。
+4D project files are open and edited using regular 4D platform applications (4D or 4D Server), on Windows or macOS. With 4D, full-featured editors are available to manage files, including a [code editor](../code-editor/write-class-method.md), a [web interface builder (4D Qodly Pro)](https://developer.4d.com/qodly/), a [form editor](../FormEditor/formEditor.md), a structure editor, a menu editor...
 
 また、人間にも解読可能なテキストファイル (JSON、XML等) 形式で提供されているため、プロジェクトの読み書きは任意のコードエディターでおこなうことも可能です。
 
@@ -16,18 +16,18 @@ Web やデスクトップ、モバイルの運用形態に関わらず、デー�
 
 ## 開発
 
-4D プロジェクトは **4D** アプリケーションを使って作成します。 4D は 4D プロジェクト用の統合開発環境 (IDE) を提供するだけでなく、Webサーバー、Web インターフェースビルダー、モバイルプロジェクトジェネレーター、およびアプリケーションランタイムも提供し、プロジェクトの開発・テスト・デバッグに使います。
+4D プロジェクトは **4D** アプリケーションを使って作成します。 It provides an Integrated Development Environment (IDE) for 4D projects as well as a web server, a web interface builder, a mobile project generator, and an application runtime, allowing you to develop, test, and debug any kind of project.
 
 ### ソース管理
 
 マルチユーザー開発は標準的な **ソース管理** リポジトリツール (Perforce, Git, SVN 等) を使っておこないます。これによって、異なるブランチで開発し、比較してマージまたは変更を戻すといった処理が可能になります。
 
-### 4D Serverにおける開発モード
+### Development mode on 4D Server
 
-小規模な開発チームで、ソース管理ツールを使用したくない場合、4D Server の [**開発モード**](../Desktop/clientServer.md#開発モード) を使用することができます。これを使用すると、開発者は4D リモートから同じプロジェクトに対してオンラインで作業することができます。 ただしこの選択肢は特別なケースにおいてのみ使用されるべきであるという点に注意してください。一般的にはソース管理ツール(上記参照)に基づいた管理を行うことが推奨されます。
+If you are a small-size development team and you do not want to use a source control tool, you can use the [**Development mode**](../Desktop/clientServer.md#development-mode) of 4D Server, allowing developers to work online on the same project with 4D in remote mode. Note that this alternative mode should be used in specific cases; using an organisation based upon source control tools (see above) is usually recommended.
 
 ## 運用
 
-プロジェクトファイルは [コンパイル](compiler.md) し、簡単に運用することができます。 4D では、 [Web](WebServer/webServer.md) アプリケーション、 [デスクトップ](Desktop/building.md) アプリケーション(クライアント/サーバーまたはシングルユーザー)、あるいは [モバイルアプリケーション](https://developer.4d.com/go-mobile/) など、プロジェクトから複数のアプリケーションを作成することができます。
+プロジェクトファイルは [コンパイル](compiler.md) し、簡単に運用することができます。 4D allows you to create several types of application from your projects, including [web](WebServer/webServer.md) applications, [desktop](Desktop/building.md) applications (client/server or single-user), or [mobile applications](https://developer.4d.com/go-mobile/).
 
 バックエンドアプリケーションは、4D Server または 4D で運用するほか、[4D Volume Desktopライセンスと統合](../Desktop/building.md) することも可能です。

@@ -18,7 +18,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>History</summary>
 
 |Release|Changes|
@@ -26,7 +25,7 @@ displayed_sidebar: docs
 |20 R9|Support of deprecated property|
 
 </details>
-</div>
+
 
 ## Description 
 

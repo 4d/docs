@@ -5,7 +5,7 @@ title: Number (Real, Integer)
 
 Number is a generic term that stands for:
 
-- Real field, variable or expression. The range for the Real data type is ±1.7e±308 (following the [IEEE 754 standard for double-precision binary floating-point format](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)).
+- Real field, variable or expression. The range for the Real data type is ±1.7e±308 (13 significant digits).
 - Integer variable or expression. The range for the Integer data type is -2^31..(2^31)-1 (4-byte Integer, aka *Long* or *Longint*).
 
 :::info Compatibility

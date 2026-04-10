@@ -4,24 +4,6 @@ title: File
 displayed_sidebar: docs
 ---
 
-<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
-
-<!-- REF #_command_.File.Params -->
-
-<div class="no-index">
-
-| Paramètres   | Type                                           |                             | Description                                                           |
-| ------------ | ---------------------------------------------- | :-------------------------: | --------------------------------------------------------------------- |
-| path         | Text                                           | &#8594; | Chemin de fichier                                                     |
-| fileConstant | Integer                                        | &#8594; | Constante de fichier 4D                                               |
-| pathType     | Integer                                        | &#8594; | `fk posix path` (par défaut) ou `fk platform path` |
-| \*           | Opérateur                                      | &#8594; | \* pour retourner le fichier de la base hôte                          |
-| Résultat     | [4D.File](../API/FileClass.md) | &#8592; | Nouvel objet fichier                                                  |
-
-</div>
-<!-- END REF -->
-
-<div class="no-index">
 <details><summary>Historique</summary>
 
 | Release | Modifications                             |
@@ -30,7 +12,20 @@ displayed_sidebar: docs
 | 17 R5   | Ajout                                     |
 
 </details>
-</div>
+
+<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; \* } ) : 4D.File<!-- END REF -->
+
+<!-- REF #_command_.File.Params -->
+
+| Paramètres   | Type                                           |                             | Description                                                           |
+| ------------ | ---------------------------------------------- | :-------------------------: | --------------------------------------------------------------------- |
+| path         | Text                                           | &#8594; | Chemin de fichier                                                     |
+| fileConstant | Integer                                        | &#8594; | Constante de fichier 4D                                               |
+| pathType     | Integer                                        | &#8594; | `fk posix path` (par défaut) ou `fk platform path` |
+| \*           | operator                                       | &#8594; | \* pour retourner le fichier de la base hôte                          |
+| Résultat     | [4D.File](../API/FileClass.md) | &#8592; | Nouvel objet fichier                                                  |
+
+<!-- END REF -->
 
 ## Description
 

@@ -8,26 +8,21 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Session storage.Params-->
 
-<div class="no-index">
+| Parâmetro | Tipo   |                             | Descrição                                                  |
+| --------- | ------ | --------------------------- | ---------------------------------------------------------- |
+| id        | Text   | &#8594; | Unique identifier (UUID) of the session |
+| Resultado | Object | &#8592; | Storage object of the session                              |
 
-| Parâmetro | Tipo   |                             | Descrição                                               |
-| --------- | ------ | --------------------------- | ------------------------------------------------------- |
-| id        | Text   | &#8594; | Identificador único (UUID) da sessão |
-| Resultado | Object | &#8592; | Objeto de armazenamento da sessão                       |
-
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>História</summary>
 
-| Release | Mudanças                    |
-| ------- | --------------------------- |
-| 20 R8   | Suporte a sessões autônomas |
-| 20 R6   | Adicionado                  |
+| Release | Mudanças                       |
+| ------- | ------------------------------ |
+| 20 R8   | Support of standalone sessions |
+| 20 R6   | Adicionado                     |
 
 </details>
-</div>
 
 ## Descrição
 
@@ -37,11 +32,11 @@ Em *id*, passe o UUID da sessão para a qual você deseja obter o armazenamento.
 
 **Nota:** você pode obter os identificadores de sessão usando o comando [Process activity](process-activity.md).
 
-O objeto retornado é a propriedade [**.storage**](../API/SessionClass.md#storage) da sessão. It is a shared object used to store information available to all processes of the session. É um objeto compartilhado usado para armazenar informações disponíveis para todos os processos da sessão.
+O objeto retornado é a propriedade [**.storage**](../API/SessionClass.md#storage) da sessão. It is a shared object used to store information available to all processes of the session. It is a shared object used to store information available to all processes of the session.
 
 ## Exemplo
 
-Esse método modifica o valor de uma propriedade "settings" armazenada no objeto de armazenamento de uma sessão específica:
+This method modifies the value of a "settings" property stored in the storage object of a specific session:
 
 ```4d
   //Definir armazenamento para uma sessão

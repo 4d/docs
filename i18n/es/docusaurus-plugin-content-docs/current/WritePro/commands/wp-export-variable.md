@@ -21,6 +21,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|4D 14 R5|Created|
+|4D 15 R2|Created|
+|4D 17 R4|Created|
+
+</details>
+</div>
+
 ## Descripción
 
 <!--REF #_command_.WP EXPORT VARIABLE.Summary-->The **WP EXPORT VARIABLE** command exports the *wpDoc* 4D Write Pro object to the 4D *destination* variable in the specified *format*.<!-- END REF-->

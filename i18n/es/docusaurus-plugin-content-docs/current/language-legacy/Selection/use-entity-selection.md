@@ -9,24 +9,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.USE ENTITY SELECTION.Params-->
 
-<div class="no-index">
-
 | Parámetros      | Tipo                               |                             | Descripción          |
 | --------------- | ---------------------------------- | --------------------------- | -------------------- |
 | entitySelection | 4D.EntitySelection | &#8594; | Una entity selection |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>Historia</summary>
-
-| Lanzamiento | Modificaciones |
-| ----------- | -------------- |
-| 17          | Añadidos       |
-
-</details>
-</div>
 
 ## Descripción
 

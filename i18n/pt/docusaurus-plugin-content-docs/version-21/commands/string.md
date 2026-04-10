@@ -5,11 +5,9 @@ slug: /commands/string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.String.Syntax-->**String** ( *expression* : Expression {; *format* : Integer, Text {; *addTime* : Time}} ) : Text<br/>**String** ( *expression* : Expression ; *base* : Integer ) : Text<!-- END REF-->
+<!--REF #_command_.String.Syntax-->**String** ( *expression* {; *format* {; *addTime*}} ) : Text<br/>**String** ( *expression* ; *base* ) : Text<!-- END REF-->
 
 <!--REF #_command_.String.Params-->
-
-<div class="no-index">
 
 | Parâmetro | Tipo          |                             | Descrição                                                                                                                                             |
 | --------- | ------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -19,19 +17,15 @@ displayed_sidebar: docs
 | base      | Integer       | &#8594; | Value between 2 and 36 that represents the radix if expression is a number                                                                            |
 | Resultado | Text          | &#8592; | String form of the expression                                                                                                                         |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>História</summary>
 
-| Release                     | Mudanças                    |
-| --------------------------- | --------------------------- |
-| 21                          | Support of *base* parameter |
-| <6 | Created                     |
+| Release | Mudanças                    |
+| ------- | --------------------------- |
+| 21      | Support of *base* parameter |
 
 </details>
-</div>
 
 ## Descrição
 

@@ -15,7 +15,7 @@ displayed_sidebar: docs
 | conjOp | &, \|, # | &#8594;  | Conjunction operator to use to join multiple queries (if any) |
 | objectField | Field | &#8594;  | Object field to query attributes |
 | attributePath | Text | &#8594;  | Name or path of attribute |
-| queryOp | Text, >, <, >=, <=, #, =, \|, %  | &#8594;  | Query operator (comparator) |
+| queryOp | Text, Operator  | &#8594;  | Query operator (comparator) |
 | value | Text, Real, Date, Time | &#8594;  | Value to compare |
 | * | Operator | &#8594;  | Continue query flag |
 </div>

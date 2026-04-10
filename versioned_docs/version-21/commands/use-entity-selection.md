@@ -14,18 +14,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-
-<div class="no-index">
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|17|Added|
-
-</details>
-</div>
-
-
 ## Description 
 
 The `USE ENTITY SELECTION` command <!--REF #_command_.USE ENTITY SELECTION.Summary-->updates the current selection of the table matching the dataclass of the *entitySelection* parameter, according to the content of the entity selection<!-- END REF-->.

@@ -36,7 +36,7 @@ Você pode definir essa propriedade usando o comando [**OBJECT SET FONT STYLE**]
 
 #### Objectos suportados
 
-[Botão](button_overview.md) - [Caixa de Verificação](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista Drop-down](dropdownList_Overview.md) - [Caixa de Grupo](groupBox.md) - [Lista Hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna de List Box](listbox-column.md) - [Rodapie de List Box](listbox-header-footer.md#footers) - [Cabeçalho de List Box](listbox-header-footer.md#headers) - [Botão rádio](radio_overview.md) - [Área de Texto](text.md)
+[Botão](button_overview.md) - [Caixa de seleção](checkbox_overview.md) - [Caixa de combinação](comboBox_overview.md) - [Lista suspensa](dropdownList_Overview.md) - [Caixa de grupo](groupBox.md) - [Lista hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna de List Box](listbox_overview.md#list-box-columns) - [Rodapé de List Box](listbox_overview.md#list-box-footers) - [Cabeçalho de List Box](listbox_overview.md#list-box-headers) - [Botão de rádio](radio_overview.md) - [Área de texto](text.md)
 
 ---
 
@@ -55,7 +55,7 @@ Você também pode definir essa propriedade por meio do comando [**OBJECT SET FO
 
 #### Objectos suportados
 
-[Botão](button_overview.md) - [Caixa de Verificação](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista Drop-down](dropdownList_Overview.md) - [Caixa de Grupo](groupBox.md) - [Lista Hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna de List Box](listbox-column.md) - [Rodapie de List Box](listbox-header-footer.md#footers) - [Cabeçalho de List Box](listbox-header-footer.md#headers) - [Botão rádio](radio_overview.md) - [Área de Texto](text.md)
+[Botão](button_overview.md) - [Caixa de seleção](checkbox_overview.md) - [Caixa de combinação](comboBox_overview.md) - [Lista suspensa](dropdownList_Overview.md) - [Caixa de grupo](groupBox.md) - [Lista hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna de List Box](listbox_overview.md#list-box-columns) - [Rodapé de List Box](listbox_overview.md#list-box-footers) - [Cabeçalho de List Box](listbox_overview.md#list-box-headers) - [Botão de rádio](radio_overview.md) - [Área de texto](text.md)
 
 ---
 
@@ -71,7 +71,7 @@ Define o texto para ter uma linha por baixo.
 
 #### Objectos suportados
 
-[Botão](button_overview.md) - [Caixa de Verificação](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista Drop-down](dropdownList_Overview.md) - [Caixa de Grupo](groupBox.md) - [Lista Hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna de List Box](listbox-column.md) - [Rodapie de List Box](listbox-header-footer.md#footers) - [Cabeçalho de List Box](listbox-header-footer.md#headers) - [Botão rádio](radio_overview.md) - [Área de Texto](text.md)
+[Botão](button_overview.md) - [Caixa de seleção](checkbox_overview.md) - [Caixa de combinação](comboBox_overview.md) - [Lista suspensa](dropdownList_Overview.md) - [Caixa de grupo](groupBox.md) - [Lista hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna de List Box](listbox_overview.md#list-box-columns) - [Rodapé de List Box](listbox_overview.md#list-box-footers) - [Cabeçalho de List Box](listbox_overview.md#list-box-headers) - [Botão de rádio](radio_overview.md) - [Área de texto](text.md)
 
 ---
 
@@ -107,7 +107,7 @@ Estão disponíveis três temas de tipos de letra:
 
 #### Objectos suportados
 
-[Botão](button_overview.md) - [Caixa de Verificação](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista Drop-down](dropdownList_Overview.md) - [Caixa de Grupo](groupBox.md) - [Lista Hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna de List Box](listbox-column.md) - [Rodapie de List Box](listbox-header-footer.md#footers) - [Cabeçalho de List Box](listbox-header-footer.md#headers) - [Botão rádio](radio_overview.md) - [Área de Texto](text.md)
+[Botão](button_overview.md) - [Caixa de seleção](checkbox_overview.md) - [Caixa de combinação](comboBox_overview.md) - [Lista suspensa](dropdownList_Overview.md) - [Caixa de grupo](groupBox.md) - [Lista hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna de List Box](listbox_overview.md#list-box-columns) - [Rodapé de List Box](listbox_overview.md#list-box-footers) - [Cabeçalho de List Box](listbox_overview.md#list-box-headers) - [Botão de rádio](radio_overview.md) - [Área de texto](text.md)
 
 ### Família de letras
 
@@ -127,7 +127,7 @@ Pode ser definido utilizando o comando [**OBJECT SET FONT**](https://doc.4d.com/
 
 #### Objectos suportados
 
-[Botão](button_overview.md) - [Caixa de Verificação](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista Drop-down](dropdownList_Overview.md) - [Caixa de Grupo](groupBox.md) - [Lista Hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna de List Box](listbox-column.md) - [Rodapie de List Box](listbox-header-footer.md#footers) - [Cabeçalho de List Box](listbox-header-footer.md#headers) - [Botão rádio](radio_overview.md) - [Área de Texto](text.md)
+[Botão](button_overview.md) - [Caixa de seleção](checkbox_overview.md) - [Caixa de combinação](comboBox_overview.md) - [Lista suspensa](dropdownList_Overview.md) - [Caixa de grupo](groupBox.md) - [Lista hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna de List Box](listbox_overview.md#list-box-columns) - [Rodapé de List Box](listbox_overview.md#list-box-footers) - [Cabeçalho de List Box](listbox_overview.md#list-box-headers) - [Botão de rádio](radio_overview.md) - [Área de texto](text.md)
 
 ---
 
@@ -143,7 +143,7 @@ Permite definir o tamanho da fonte do objeto em pontos.
 
 #### Objectos suportados
 
-[Botão](button_overview.md) - [Caixa de Verificação](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista Drop-down](dropdownList_Overview.md) - [Caixa de Grupo](groupBox.md) - [Lista Hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna de List Box](listbox-column.md) - [Rodapie de List Box](listbox-header-footer.md#footers) - [Cabeçalho de List Box](listbox-header-footer.md#headers) - [Botão rádio](radio_overview.md) - [Área de Texto](text.md)
+[Botão](button_overview.md) - [Caixa de seleção](checkbox_overview.md) - [Caixa de combinação](comboBox_overview.md) - [Lista suspensa](dropdownList_Overview.md) - [Caixa de grupo](groupBox.md) - [Lista hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna de List Box](listbox_overview.md#list-box-columns) - [Rodapé de List Box](listbox_overview.md#list-box-footers) - [Cabeçalho de List Box](listbox_overview.md#list-box-headers) - [Botão de rádio](radio_overview.md) - [Área de texto](text.md)
 
 ---
 
@@ -169,7 +169,7 @@ Você também pode definir esta propriedade usando o comando [**OBJECT SET RGB C
 
 #### Objectos suportados
 
-[Botão](button_overview.md) - [Caixa de Verificação](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista Drop-down](dropdownList_Overview.md) - [Caixa de Grupo](groupBox.md) - [Lista Hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna de List Box](listbox-column.md) - [Rodapie de List Box](listbox-header-footer.md#footers) - [Cabeçalho de List Box](listbox-header-footer.md#headers) - [Indicadores de progresso](progressIndicator.md) - [Régua](ruler.md) - [Botão rádio](radio_overview.md) - [Área de Texto](text.md)
+[Botão](button_overview.md) - [Caixa de Verificação](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista Drop-down](dropdownList_Overview.md) - [Caixa de Grupo](groupBox.md) - [Lista Hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna de List Box](listbox_overview.md#list-box-columns) - [Rodapie de List Box](listbox_overview.md#list-box-footers) - [Cabeçalho de List Box](listbox_overview.md#list-box-headers) - [Indicadores de progresso](progressIndicator.md) - [Régua](ruler.md) - [Botão rádio](radio_overview.md) - [Área de Texto](text.md)
 
 ---
 
@@ -227,7 +227,7 @@ Também pode definir esta propriedade utilizando o comando `LISTBOX SET PROPERTY
 
 #### Objectos suportados
 
-[Caixa de Listagem](listbox_overview.md) - [Coluna da caixa de listagem](listbox-column.md)
+[Caixa de Listagem](listbox_overview.md) - [Coluna da caixa de listagem](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -250,7 +250,7 @@ Localização horizontal do texto na área que o contém.
 
 #### Objectos suportados
 
-[Botão](button_overview.md) - [Caixa de seleção](checkbox_overview.md) (todos os estilos, exceto Regular e Flat) - [Caixa de Grupo](groupBox.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna List Box](listbox-column.md) - [Cabeçalho List Box](listbox-header-footer.md#headers) - [Rodapé List Box](listbox-header-footer.md#footers) - [Botão rádio](radio_overview.md) (todos os estilos exceto Regular e Flat) - [Área de Texto](text.md)
+[Botão](button_overview.md) - [Caixa de seleção](checkbox_overview.md) (todos os estilos, exceto Regular e Flat) - [Caixa de Grupo](groupBox.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna List Box](listbox_overview.md#list-box-columns) - [Cabeçalho List Box](listbox_overview.md#list-box-headers) - [Rodapé List Box](listbox_overview.md#list-box-footers) - [Botão rádio](radio_overview.md) (todos os estilos exceto Regular e Flat) - [Área de Texto](text.md)
 
 ---
 
@@ -273,7 +273,7 @@ Esta propriedade também pode ser manipulada pelos comandos [OBJECT Get vertical
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [List Box Header](listbox-header-footer.md#headers)
+[List Box](listbox_overview.md) - [Coluna List Box](listbox_overview.md#list-box-columns) - [Rodapé List Box](listbox_overview.md#list-box-footers) - [Cabeçalho List Box](listbox_overview.md#list-box-headers)
 
 ---
 
@@ -367,7 +367,7 @@ Por defeito, esta opção não está activada.
 
 #### Objectos suportados
 
-[Input](input_overview.md) - [List Box Column](listbox-column.md)
+Coluna da List Box
 
 ---
 
@@ -412,7 +412,7 @@ O nome do array LongInt deve ser usado. Cada elemento deste array corresponde a 
 
 #### Objectos suportados
 
-[Caixa de Listagem](listbox_overview.md) - [Coluna da caixa de listagem](listbox-column.md)
+[Caixa de Listagem](listbox_overview.md) - [Coluna da caixa de listagem](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -432,7 +432,7 @@ O nome do array LongInt deve ser usado. Cada elemento deste array corresponde a 
 
 #### Objectos suportados
 
-[Caixa de Listagem](listbox_overview.md) - [Coluna da caixa de listagem](listbox-column.md)
+[Caixa de Listagem](listbox_overview.md) - [Coluna da caixa de listagem](listbox_overview.md#list-box-columns)
 
 ---
 

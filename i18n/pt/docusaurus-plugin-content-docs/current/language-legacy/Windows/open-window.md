@@ -9,8 +9,6 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Open window.Params-->
 
-<div class="no-index">
-
 | Parâmetro      | Tipo    |                             | Descrição                                                                              |
 | -------------- | ------- | --------------------------- | -------------------------------------------------------------------------------------- |
 | left           | Integer | &#8594; | Global left coordinate of window contents area                                         |
@@ -22,19 +20,7 @@ displayed_sidebar: docs
 | controlMenuBox | Text    | &#8594; | Method to call when the Control-menu box is double-clicked or the Close box is clicked |
 | Resultado      | Integer | &#8592; | Número de referência da janela                                                         |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>História</summary>
-
-| Release                     | Mudanças   |
-| --------------------------- | ---------- |
-| 2004                        | Modificado |
-| <6 | Created    |
-
-</details>
-</div>
 
 ## Descrição
 

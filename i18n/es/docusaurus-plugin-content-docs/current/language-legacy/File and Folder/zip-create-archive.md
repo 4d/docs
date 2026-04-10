@@ -9,8 +9,6 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.ZIP Create archive.Params -->
 
-<div class="no-index">
-
 | Parámetros      | Tipo                      |                             | Descripción                                                          |
 | --------------- | ------------------------- | :-------------------------: | -------------------------------------------------------------------- |
 | fileToZip       | 4D.File   | &#8594; | Objeto archivo o carpeta a comprimir                                 |
@@ -20,10 +18,8 @@ displayed_sidebar: docs
 | options         | Integer                   | &#8594; | Opción *folderToZip*: `ZIP Without enclosing folder` |
 | Resultado       | Object                    | &#8592; | Objeto estado                                                        |
 
-</div>
 <!-- END REF -->
 
-<div class="no-index">
 <details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones                                                                    |
@@ -32,7 +28,6 @@ displayed_sidebar: docs
 | 18          | Añadidos                                                                          |
 
 </details>
-</div>
 
 ## Descripción
 

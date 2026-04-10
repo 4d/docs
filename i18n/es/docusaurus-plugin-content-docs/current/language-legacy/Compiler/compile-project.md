@@ -9,18 +9,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Compile project.Params-->
 
-<div class="no-index">
-
 | Parámetros  | Tipo                    |                             | Descripción                                                       |
 | ----------- | ----------------------- | --------------------------- | ----------------------------------------------------------------- |
 | projectFile | [4D.File](../API/FileClass.md)  | &#8594; | Archivo .4DProject a compilar                     |
 | options     | Object                  | &#8594; | Objeto que especifica las opciones de compilación                 |
 | Resultado   | Object                  | &#8592; | Objeto que contiene información sobre el estado de la compilación |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones                            |
@@ -28,7 +24,6 @@ displayed_sidebar: docs
 | 20 R8       | Soporte del "type" "formObjectExpression" |
 
 </details>
-</div>
 
 ## Descripción
 

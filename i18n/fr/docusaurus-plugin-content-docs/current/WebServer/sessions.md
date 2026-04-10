@@ -110,7 +110,7 @@ Des privilèges peuvent être associés aux sessions utilisateur web. Sur le ser
 
 Vous assignez des privilèges en utilisant la [fonction `.setPrivileges()`](API/SessionClass.md#setprivileges). Dans votre code, vous pouvez vérifier les privilèges de la session pour autoriser ou refuser l'accès à l'aide de la fonction [`.hasPrivilege()`](API/SessionClass.md#hasprivilege). Par défaut, les nouvelles sessions n'ont aucun privilège : ce sont des sessions **Guest** (la fonction [`isGuest()`](API/SessionClass.md#isguest) retourne true).
 
-Exemple :
+Voici un exemple :
 
 ```4d
 If (Session.hasPrivilege("WebAdmin"))

@@ -8,17 +8,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB Server.Params-->
 
-<div class="no-index">
-
 | 引数     | 型                            |                             | 説明                                                                  |
 | ------ | ---------------------------- | --------------------------- | ------------------------------------------------------------------- |
 | option | Integer                      | &#8594; | 取得する Webサーバー (省略時のデフォルト = `Web server database`) |
 | 戻り値    | 4D.WebServer | &#8592; | WebServer オブジェクト                                                    |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>履歴</summary>
 
 | リリース  | 内容                                           |
@@ -27,7 +23,6 @@ displayed_sidebar: docs
 | 19    | .sessionCookieSameSite をサポート |
 
 </details>
-</div>
 
 ## 説明
 
@@ -35,11 +30,11 @@ displayed_sidebar: docs
 
 *option* が省略された場合のデフォルトでは、このコマンドはデータベースの Webサーバー (デフォルトWebサーバー) への参照を返します。 取得する Webサーバーを指定するには、*option* に以下の定数のいずれか一つを渡してください:
 
-| 定数                             | 値 | 説明                                                     |
-| ------------------------------ | - | ------------------------------------------------------ |
-| `Web server database`          | 1 | コマンドが呼ばれたプロジェクトのWeb サーバー(省略時のデフォルト) |
-| `Web server host database`     | 2 | コンポーネントのホストデータベースの Webサーバー                             |
-| `Web server receiving request` | 3 | リクエストを受け取った Webサーバー (ターゲットWebサーバー)  |
+| 定数                             | 値 | 説明                                                    |
+| ------------------------------ | - | ----------------------------------------------------- |
+| `Web server database`          | 1 | カレントデータベースの Webサーバー( 省略時のデフォルト)    |
+| `Web server host database`     | 2 | コンポーネントのホストデータベースの Webサーバー                            |
+| `Web server receiving request` | 3 | リクエストを受け取った Webサーバー (ターゲットWebサーバー) |
 
 **返されたWeb サーバーオブジェクト** には[Web server プロパティ](../API/WebServerClass.md) のカレントのプロパティが格納されています。
 

@@ -5,14 +5,14 @@ slug: /commands/sort-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SORT LIST.Syntax-->**SORT LIST** ( *list* : Integer {; order : >, < } )<!-- END REF-->
+<!--REF #_command_.SORT LIST.Syntax-->**SORT LIST** ( *list* : Integer {; >_or_< : Comparator } )<!-- END REF-->
 <!--REF #_command_.SORT LIST.Params-->
 <div class="no-index">
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | list | Integer | &#8594;  | List reference number |
-| order | >, < | &#8594;  | Sorting order: > to sort in ascending order, or < to sort in descending order |
+| >_or_< | Comparator | &#8594;  | Sorting order: > to sort in ascending order, or < to sort in descending order |
 </div>
 <!-- END REF-->
 
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SORT LIST.Summary-->The **SORT LIST** command sorts the list whose reference number is passed in *list*.<!-- END REF-->
 
-To sort in ascending *order*, pass *\>*. To sort in descending *order*, pass <. If you omit the sorting order parameter, **SORT LIST** sorts in ascending order by default.
+To sort in ascending order, pass *\>*. To sort in descending order, pass <. If you omit the sorting order parameter, **SORT LIST** sorts in ascending order by default.
 
 **SORT LIST** sorts all levels of the list; it first sorts the items of the list, then it sorts the items in each sublist (if any), and so on, through all the levels of the list. This is why you will usually apply **SORT LIST** to a list in a form. Sorting a sublist is of little interest because the order will be changed by a call to a higher level.
 

@@ -648,7 +648,7 @@ Pour plus de détails, voir la description de la commande [`Super`](../commands/
 
 La commande [`This`](../commands/this.md) renvoie une référence à l'objet en cours de traitement. Dans la plupart des cas, la valeur de `This` est déterminée par la manière dont une fonction de classe est appelée. Habituellement, `This` fait référence à l'objet sur lequel la fonction a été appelée, comme si la fonction était sur l'objet.
 
-Exemple :
+Voici un exemple :
 
 ```4d
 //Classe : ob

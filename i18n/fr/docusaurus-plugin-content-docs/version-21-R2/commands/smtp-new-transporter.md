@@ -8,17 +8,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SMTP New transporter.Params-->
 
-<div class="no-index">
-
 | Paramètres | Type                               |                             | Description                                                                      |
 | ---------- | ---------------------------------- | --------------------------- | -------------------------------------------------------------------------------- |
 | server     | Object                             | &#8594; | Informations sur le serveur de messagerie                                        |
 | Résultat   | 4D.SMTPTransporter | &#8592; | [Objet SMTP transporter](../API/SMTPTransporterClass.md#smtp-transporter-object) |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>Historique</summary>
 
 | Release | Modifications                                     |
@@ -28,7 +24,6 @@ displayed_sidebar: docs
 | 17 R4   | Ajout                                             |
 
 </details>
-</div>
 
 ## Description
 

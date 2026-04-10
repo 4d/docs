@@ -4,22 +4,6 @@ title: Open datastore
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open datastore.Syntax-->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : 4D.DataStoreImplementation<!-- END REF-->
-
-<!--REF #_command_.Open datastore.Params-->
-
-<div class="no-index">
-
-| 引数             | 型                                          |                             | 説明                                                            |
-| -------------- | ------------------------------------------ | --------------------------- | ------------------------------------------------------------- |
-| connectionInfo | Object                                     | &#8594; | リモートデータストアへの接続に使用する接続プロパティ                                    |
-| localID        | Text                                       | &#8594; | ローカルアプリケーション内で、開かれたデータストアに対して割り当てる ID (必須) |
-| 戻り値            | 4D.DataStoreImplementation | &#8592; | データストアオブジェクト                                                  |
-
-</div>
-<!-- END REF-->
-
-<div class="no-index">
 <details><summary>履歴</summary>
 
 | リリース  | 内容                            |
@@ -30,7 +14,18 @@ displayed_sidebar: docs
 | 18    | 追加                            |
 
 </details>
-</div>
+
+<!--REF #_command_.Open datastore.Syntax-->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : 4D.DataStoreImplementation<!-- END REF-->
+
+<!--REF #_command_.Open datastore.Params-->
+
+| 引数             | 型                                          |                             | 説明                                                            |
+| -------------- | ------------------------------------------ | --------------------------- | ------------------------------------------------------------- |
+| connectionInfo | Object                                     | &#8594; | リモートデータストアへの接続に使用する接続プロパティ                                    |
+| localID        | Text                                       | &#8594; | ローカルアプリケーション内で、開かれたデータストアに対して割り当てる ID (必須) |
+| 戻り値            | 4D.DataStoreImplementation | &#8592; | データストアオブジェクト                                                  |
+
+<!-- END REF-->
 
 ## 説明
 

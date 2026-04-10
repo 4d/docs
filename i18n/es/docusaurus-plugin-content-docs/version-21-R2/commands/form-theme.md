@@ -14,10 +14,8 @@ displayed_sidebar: docs
 | ---------- | ---- | --------------------------- | ------------------------------------------------------------------------------------------------------------ |
 | Resultado  | Text | &#8592; | Tema utilizado por el formulario actual: "Classic" o "FluentUI" (Windows) |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
@@ -25,7 +23,6 @@ displayed_sidebar: docs
 | 21 R2       | Añadidos       |
 
 </details>
-</div>
 
 ## Descripción
 

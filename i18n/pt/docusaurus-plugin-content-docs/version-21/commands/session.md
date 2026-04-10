@@ -8,26 +8,21 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Session.Params-->
 
-<div class="no-index">
-
 | Parâmetro | Tipo                        |                             | Descrição       |
 | --------- | --------------------------- | --------------------------- | --------------- |
 | Resultado | 4D. Session | &#8592; | Objecto Session |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>História</summary>
 
 | Release | Mudanças                                                      |
 | ------- | ------------------------------------------------------------- |
-| 20 R8   | Suporte a sessões autônomas                                   |
+| 20 R8   | Support of standalone sessions                                |
 | 20 R5   | Suporte a sessões de procedimento armazenado e cliente remoto |
 | 18 R6   | Adicionado                                                    |
 
 </details>
-</div>
 
 ## Descrição
 
@@ -51,10 +46,10 @@ The command returns *Null* if:
 
 O objeto `Session` das sessões web está disponível em qualquer processo web:
 
-- nos métodos de database `On Web Authentication`, `On Web Connection` e`On REST Authentication`,
+- `On Web Authentication`, `On Web Connection`, and `On REST Authentication` database methods,
 - código processado a través das etiquetas 4D nas páginas semidinâmicas (4DTEXT, 4DHTML, 4DEVAL, 4DSCRIPT/, 4DCODE)
-- nos métodos projeto com o atributo "Available through 4D tags and URLs (4DACTION...)" e chamados através de 4DACTION/ urls,
-- nos métodos de database para petições móveis [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) and [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action),
+- os métodos projeto com o atributo "Available through 4D tags and URLs (4DACTION...)" e chamados através de 4DACTION/ urls,
+- [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) and [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action) database methods for mobile requests,
 - Funções ORDA [chamadas com solicitações REST](../REST/ClassFunctions.md).
 
 Para obter mais informações sobre as sessões dos usuários da web, consulte a seção [Sessões de Servidor Web](../WebServer/sessions.md).
@@ -75,7 +70,7 @@ For more information on remote user sessions, please refer to the [**Remote user
 Todos os processos de procedimento armazenado compartilham a mesma sessão de usuário virtual. O objeto `Session` de procedimentos armazenados está disponível em:
 
 - métodos chamados com o comando [`Execute on server`](../commands-legacy/execute-on-server.md),
-- Métodos de database `On Server Startup`, `On Server Shutdown`, `On Backup Startup`, `On Backup Shutdown` e`On System event`
+- `On Server Startup`, `On Server Shutdown`, `On Backup Startup`, `On Backup Shutdown`, and `On System event` database methods
 
 For more information on stored procedures virtual user session, please refer to the [**Stored procedure sessions**](../Desktop/sessions.md#stored-procedure-sessions) paragraph.
 
@@ -112,7 +107,7 @@ flowchart TD
 
 ## Exemplo
 
-Você definiu o método `action_Session` com o atributo "Disponível através de tags 4D e URLs". Pode chamar ao método introduzindo a URL abaixo no navegador:
+You have defined the `action_Session` method with attribute "Available through 4D tags and URLs". Pode chamar ao método introduzindo a URL abaixo no navegador:
 
 ```
 IP:port/4DACTION/action_Session

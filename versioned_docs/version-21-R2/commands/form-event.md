@@ -15,18 +15,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-<div class="no-index">
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|18 R2|Modified|
-|18|Created|
-
-</details>
-</div>
-
-
 ## Description 
 
 <!--REF #_command_.FORM Event.Summary-->**FORM Event** returns an object containing information about the form event that has just occurred.<!-- END REF--> Usually, you will use **FORM Event** from within a form or object method.
@@ -49,7 +37,7 @@ For example, in the case of a click on a button, the object contains the followi
 
 The event object can contain additional properties, depending on the object for which the event occurs. For *eventObj* objects generated on:
 
-* List box or list box column objects, see [this section](../FormObjects/listbox-object.md#supported-form-events).
+* List box or list box column objects, see [this section](../FormObjects/listbox_overview.md#supported-form-events).
 * 4D View Pro areas, see [On VP Ready form event](../Events/onVpReady.md).
 
 **Note:** If there is no current event, **FORM Event** returns a null object.

@@ -4,30 +4,18 @@ title: OBJECT SET DATA SOURCE FORMULA
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET DATA SOURCE FORMULA.Syntax-->**OBJECT SET DATA SOURCE FORMULA** ( * ; *object* : Text ; *formula* : 4D.Formula )<br/>**OBJECT SET DATA SOURCE FORMULA** ( *object* : Variable, Field ; *formula* : 4D.Formula )<!-- END REF-->
+<!--REF #_command_.OBJECT SET DATA SOURCE FORMULA.Syntax-->**OBJECT SET DATA SOURCE FORMULA** ( {* ;} *object* ; *formula* )<!-- END REF-->
 
 <!--REF #_command_.OBJECT SET DATA SOURCE FORMULA.Params-->
 <div class="no-index">
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string) ; if omitted, object is a variable or a field |
+| * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
 | object | Text, Variable, Field | &#8594;  | Form object name (if * is specified) or<br/>Field or variable (if * is omitted) |
 | formula | 4D.Formula | &#8594;  | Formula to assign as the data source |
 </div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|21|Support of *base* parameter|
-|20 R10|Created|
-
-</details>
-</div>
-
 
 ## Description 
 

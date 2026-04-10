@@ -5,7 +5,7 @@ slug: /commands/compile-project
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Compile project.Syntax-->**Compile project** ( {*options* : Object} ) : Object<br/>**Compile project** ( *projectFile* : 4D.File {; *options* : Object} ) : Object<!-- END REF-->
+<!--REF #_command_.Compile project.Syntax-->**Compile project** ( {*options* : Object} ) : Object<br/>**Compile project** ( *projectFile* : 4D.File } {; *options* : Object} ) : Object<!-- END REF-->
 <!--REF #_command_.Compile project.Params-->
 <div class="no-index">
 
@@ -17,7 +17,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>History</summary>
 
 |Release|Changes|
@@ -25,7 +24,7 @@ displayed_sidebar: docs
 |20 R8|Support of `type` "formObjectExpression"|
 
 </details>
-</div>
+
 
 ## Description 
 

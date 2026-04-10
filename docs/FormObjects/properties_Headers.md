@@ -5,7 +5,7 @@ title: Headers
 
 ## Display Headers
 
-This property is used to display or hide [list box column headers](listbox-header-footer.md#headers). There is one header per column; each header is configured separately.
+This property is used to display or hide [list box column headers](listbox_overview.md#list-box-headers). There is one header per column; each header is configured separately.
 
 #### JSON Grammar
 

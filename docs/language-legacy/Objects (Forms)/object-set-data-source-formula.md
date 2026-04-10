@@ -18,18 +18,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-<div class="no-index">
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|21|Support of *base* parameter|
-|20 R10|Created|
-
-</details>
-</div>
-
-
 ## Description 
 
 The **OBJECT SET DATA SOURCE FORMULA** command <!--REF #_command_.OBJECT SET DATA SOURCE FORMULA.Summary-->  assigns a formula (expression) as the data source of the object(s) designated by the *object* and *\** parameters <!-- END REF-->. The formula must be provided as a [`4D.Formula`](../../API/FormulaClass.md#formula-object) object.

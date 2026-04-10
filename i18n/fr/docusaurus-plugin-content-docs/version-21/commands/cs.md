@@ -8,16 +8,6 @@ displayed_sidebar: docs
 | ---------- | ------ | --------------------------- | ------------------------------------------------------------------- |
 | classStore | Object | &#8592; | Class store utilisateur utilisateurs pour le projet ou le composant |
 
-<div class="no-index">
-<details><summary>Historique</summary>
-
-| Release | Modifications |
-| ------- | ------------- |
-| 19      | Created       |
-
-</details>
-</div>
-
 Le mot-clé **cs** est décrit dans la [**Page de concepts pour les classes**](../Concepts/classes.md#cs).
 
 ## Propriétés

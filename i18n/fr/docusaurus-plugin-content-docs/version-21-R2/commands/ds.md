@@ -4,30 +4,16 @@ title: ds
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ds.Syntax-->**ds** ({ *localID* : Text }) : cs.DataStore <!-- END REF -->
+<!--REF #_command_.ds.Syntax-->**ds** { ( *localID* : Text ) } : cs.DataStore <!-- END REF -->
 
 <!--REF #_command_.ds.Params-->
-
-<div class="no-index">
 
 | Paramètres | Type                         |                             | Description                            |
 | ---------- | ---------------------------- | --------------------------- | -------------------------------------- |
 | localID    | Text                         | &#8594; | Identifiant local du datastore distant |
 | Résultat   | cs.DataStore | &#8592; | Nouvelle référence de datastore        |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>Historique</summary>
-
-| Release | Modifications |
-| ------- | ------------- |
-| 18      | Modifié       |
-| 17      | Created       |
-
-</details>
-</div>
 
 ## Description
 

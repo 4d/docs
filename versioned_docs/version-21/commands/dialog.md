@@ -4,7 +4,7 @@ title: DIALOG
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DIALOG.Syntax-->**DIALOG** ( {*aTable* : Table ;} *form* : Text, Object {; *formData* : Object}{; *} )<!-- END REF-->
+<!--REF #_command_.DIALOG.Syntax-->**DIALOG** ( {*aTable* ;} *form* {; *formData*}{; *} )<!-- END REF-->
 <!--REF #_command_.DIALOG.Params-->
 <div class="no-index">
 
@@ -16,19 +16,6 @@ displayed_sidebar: docs
 | * | Operator | &#8594;  | Use the same process |
 </div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|17|Modified|
-|11 SQL|Modified|
-|<6|Created|
-
-</details>
-</div>
-
 
 ## Description 
 

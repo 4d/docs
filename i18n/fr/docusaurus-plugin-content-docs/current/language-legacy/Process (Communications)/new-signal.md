@@ -16,7 +16,6 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>Historique</summary>
 
 | Release | Modifications |
@@ -24,7 +23,6 @@ displayed_sidebar: docs
 | 17 R4   | Ajout         |
 
 </details>
-</div>
 
 ## Description
 

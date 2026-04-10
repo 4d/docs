@@ -79,13 +79,13 @@ title: 4D Write Pro Commands
 
 <a id="N"><b>N</b></a>
 
-[`WP New`](../commands/wp-new)<br/>
-[`WP NEW BOOKMARK`](../commands/wp-new-bookmark)<br/>
-[`WP New footer`](../commands/wp-new-footer)<br/>
-[`WP New header`](../commands/wp-new-header)<br/>
-[`WP New style sheet`](../commands/wp-new-style-sheet) ***Modified 4D 21 R3***<br/>
-[`WP New subsection`](../commands/wp-new-subsection)<br/>
-[`WP New text box`](../commands/wp-new-text-box)
+[`WP New`](../commands-legacy/wp-new.md)<br/>
+[`WP NEW BOOKMARK`](../commands-legacy/wp-new-bookmark.md)<br/>
+[`WP New footer`](../commands-legacy/wp-new-footer.md)<br/>
+[`WP New header`](../commands-legacy/wp-new-header.md)<br/>
+[`WP New style sheet`](wp-new-style-sheet.md) ***Modified 4D 21 R3***<br/>
+[`WP New subsection`](../commands-legacy/wp-new-subsection.md)<br/>
+[`WP New text box`](../commands-legacy/wp-new-text-box.md)
 
 <a id="P"><b>P</b></a>
 

@@ -17,17 +17,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-<div class="no-index">
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|21|Support of *base* parameter|
-|20 R10|Created|
-
-</details>
-</div>
-
 ## Description 
 
 The **OBJECT Get data source formula** command<!--REF #_command_.OBJECT Get data source formula.Summary--> returns the formula (if any) associated object(s) designated by the *object* and *\** parameters.<!-- END REF-->

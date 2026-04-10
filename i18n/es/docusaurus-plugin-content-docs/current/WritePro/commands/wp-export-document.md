@@ -21,6 +21,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|4D 14 R5|Created|
+|4D 15 R2|Created|
+|4D 17 R4|Created|
+
+</details>
+</div>
+
 ## Descripción
 
 El comando **WP EXPORT DOCUMENT**<!--REF #_command_.WP EXPORT DOCUMENT.Summary--> exporta el objeto *wpDoc* 4D Write Pro a un documento en disco de acuerdo con el parámetro *filePath* o *fileObj*, así como cualquier parámetro opcional.<!-- END REF-->

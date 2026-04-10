@@ -74,7 +74,7 @@ Designa la ubicación de un icono en relación con el objeto formulario.
 
 #### Objetos soportados
 
-[Encabezado de list box](listbox-header-footer.md#headers)
+[Encabezado de list box](listbox_overview.md#list-box-headers)
 
 ---
 
@@ -256,9 +256,9 @@ Es importante señalar que la propiedad "Con menú emergente" sólo gestiona el 
 
 #### Gramática JSON
 
-| Nombre         | Tipos de datos | Valores posibles          |
-|:-------------- | -------------- | ------------------------- |
-| popupPlacement | string         | <ul><li>"none"</li><li>"linked"</li><li>"separated"</li></ul> |
+| Nombre         | Tipos de datos | Valores posibles                                                            |
+|:-------------- | -------------- | --------------------------------------------------------------------------- |
+| popupPlacement | string         | <li>"none"</li><li>"linked"</li><li>"separated"</li> |
 
 #### Objetos soportados
 

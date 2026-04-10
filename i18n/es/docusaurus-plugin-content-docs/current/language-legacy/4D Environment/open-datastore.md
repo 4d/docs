@@ -5,22 +5,6 @@ slug: /commands/open-datastore
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open datastore.Syntax-->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : 4D.DataStoreImplementation<!-- END REF-->
-
-<!--REF #_command_.Open datastore.Params-->
-
-<div class="no-index">
-
-| Parámetros     | Tipo                                       |                             | Descripción                                                                                         |
-| -------------- | ------------------------------------------ | --------------------------- | --------------------------------------------------------------------------------------------------- |
-| connectionInfo | Object                                     | &#8594; | Propiedades de conexión utilizadas para alcanzar el almacén de datos remoto                         |
-| localID        | Text                                       | &#8594; | Id para asignar al almacén de datos abierto en la aplicación local (obligatorio) |
-| Resultado      | 4D.DataStoreImplementation | &#8592; | Objeto del almacén de datos                                                                         |
-
-</div>
-<!-- END REF-->
-
-<div class="no-index">
 <details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones                                  |
@@ -31,7 +15,18 @@ displayed_sidebar: docs
 | 18          | Añadidos                                        |
 
 </details>
-</div>
+
+<!--REF #_command_.Open datastore.Syntax-->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : 4D.DataStoreImplementation<!-- END REF-->
+
+<!--REF #_command_.Open datastore.Params-->
+
+| Parámetros     | Tipo                                       |                             | Descripción                                                                                         |
+| -------------- | ------------------------------------------ | --------------------------- | --------------------------------------------------------------------------------------------------- |
+| connectionInfo | Object                                     | &#8594; | Propiedades de conexión utilizadas para alcanzar el almacén de datos remoto                         |
+| localID        | Text                                       | &#8594; | Id para asignar al almacén de datos abierto en la aplicación local (obligatorio) |
+| Resultado      | 4D.DataStoreImplementation | &#8592; | Objeto del almacén de datos                                                                         |
+
+<!-- END REF-->
 
 ## Descripción
 

@@ -9,25 +9,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET ALLOWED METHODS.Params-->
 
-<div class="no-index">
-
 | Parámetros   | Tipo           |                             | Descripción                 |
 | ------------ | -------------- | --------------------------- | --------------------------- |
 | methodsArray | Array de texto | &#8594; | Array de nombres de métodos |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>Historia</summary>
-
-| Lanzamiento                 | Modificaciones |
-| --------------------------- | -------------- |
-| 17 R2                       | Modificado     |
-| <6 | Añadidos       |
-
-</details>
-</div>
 
 ## Descripción
 

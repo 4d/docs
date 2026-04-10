@@ -2103,10 +2103,10 @@ La función `.slice()` <!-- REF #EntitySelectionClass.slice().Summary -->devuelv
 
 La entity selection devuelta contiene las entidades especificadas por *startFrom* y todas las entidades subsiguientes hasta, pero sin incluir, la entidad especificada por *end*. Si sólo se especifica el parámetro *startFrom*, la entity selection devuelta contiene todas las entidades entre *startFrom* y la última entidad de la entity selection original.
 
-- Si *startFrom* < 0, se recalcula como *startFrom:=startFrom+length* (se considera el desplazamiento desde el final de la entity selection). Si el valor calculado < 0, *startFrom* toma el valor 0.
+- Si *startFrom* < 0, se recalcula como *startFrom:=startFrom+length* (se considera el desplazamiento desde el final de la entity selection). Descripción
 - Si *startFrom >= length*, la función devuelve una entity selection vacía.
 - Si *end* < 0, se recalcula como *end:=end+length*.
-- Si *end < startFrom* (valores pasados o calculados), el método no hace nada.
+- Este ejemplo permite reducir varios elementos de la colección a uno solo:
 
 <code>.sum()</code> devuelve 0 si la entity selection está vacía.
 

@@ -9,8 +9,6 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Process number.Params-->
 
-<div class="no-index">
-
 | 引数   | 型       |                             | 説明                  |
 | ---- | ------- | --------------------------- | ------------------- |
 | name | Text    | &#8594; | プロセス番号を取得したいプロセスの名前 |
@@ -18,19 +16,15 @@ displayed_sidebar: docs
 | \*   | 演算子     | &#8594; | サーバーからプロセス番号を返す     |
 | 戻り値  | Integer | &#8592; | Process number      |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>履歴</summary>
 
 | リリース  | 内容         |
 | ----- | ---------- |
 | 20 R7 | id 引数のサポート |
-| 6     | Created    |
 
 </details>
-</div>
 
 ## 説明
 

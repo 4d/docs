@@ -9,8 +9,6 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.ZIP Create archive.Params -->
 
-<div class="no-index">
-
 | 引数              | 型                         |                             | 説明                                                                                                                |
 | --------------- | ------------------------- | :-------------------------: | ----------------------------------------------------------------------------------------------------------------- |
 | fileToZip       | 4D.File   | &#8594; | 圧縮する File または Folder オブジェクト                                                                                       |
@@ -20,10 +18,8 @@ displayed_sidebar: docs
 | options         | Integer                   | &#8594; | *folderToZip* オプション: `ZIP Without enclosing folder` (外側のフォルダーを除外して ZIP圧縮をおこなう) |
 | 戻り値             | Object                    | &#8592; | ステータスオブジェクト                                                                                                       |
 
-</div>
 <!-- END REF -->
 
-<div class="no-index">
 <details><summary>履歴</summary>
 
 | リリース  | 内容                                                              |
@@ -32,7 +28,6 @@ displayed_sidebar: docs
 | 18    | 追加                                                              |
 
 </details>
-</div>
 
 ## 説明
 

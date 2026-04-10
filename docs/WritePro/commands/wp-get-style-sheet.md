@@ -79,7 +79,7 @@ End if
 ## See also 
 
 [Style sheets](../user-legacy/stylesheets.md)   
-[WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet)  
+[WP DELETE STYLE SHEET](wp-delete-style-sheet.md)  
 [WP Get style sheets](../commands-legacy/wp-get-style-sheets.md) 
-[WP IMPORT STYLE SHEETS](../WritePro/commands/wp-import-style-sheet)  
-[WP New style sheet](../WritePro/commands/wp-new-style-sheet)  
+[WP IMPORT STYLE SHEETS](wp-import-style-sheets.md)  
+[WP New style sheet](wp-new-style-sheet.md)  

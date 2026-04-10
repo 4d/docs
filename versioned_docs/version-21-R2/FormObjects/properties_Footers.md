@@ -5,7 +5,7 @@ title: Footers
 
 ## Display Footers
 
-This property is used to display or hide [list box column footers](listbox-header-footer.md#footers). There is one footer per column; each footer is configured separately.
+This property is used to display or hide [list box column footers](listbox_overview.md#list-box-footers). There is one footer per column; each footer is configured separately.
 
 #### JSON Grammar
 
@@ -72,4 +72,4 @@ Note that converting back and forth may lead to an end result that is different 
 
 #### See also
 
-[Headers](properties_Headers.md) - [List box footers](listbox-header-footer.md#footers)
+[Headers](properties_Headers.md) - [List box footers](listbox_overview.md#list-box-footers)

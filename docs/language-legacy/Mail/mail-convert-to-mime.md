@@ -5,6 +5,14 @@ slug: /commands/mail-convert-to-mime
 displayed_sidebar: docs
 ---
 
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|17 R4|Added|
+|17 R5|Modified|
+
+</details>
 
 <!-- REF #_command_.MAIL Convert to MIME.Syntax -->**MAIL Convert to MIME**( *mail* : Object { ; *options* : Object } ) : Text<!-- END REF -->
 
@@ -19,18 +27,6 @@ displayed_sidebar: docs
 |Result|Text|&#8592;|Email object converted to MIME|
 </div>
 <!-- END REF -->
-
-<div class="no-index">
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|17 R5|Modified|
-|17 R4|Added|
-
-</details>
-</div>
-
 
 ## Description
 

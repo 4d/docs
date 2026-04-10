@@ -9,27 +9,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get data source formula.Params-->
 
-<div class="no-index">
-
 | 引数     | 型                          |                             | 説明                                                                                                                      |
 | ------ | -------------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | \*     | 演算子                        | &#8594; | If specified, object is an object name (string) ; if omitted, object is a variable or a field        |
 | object | Text, Variable, Field      | &#8594; | Form object name (if \* is specified) or<br/>Field or variable (if \* is omitted) |
 | 戻り値    | 4D.Formula | &#8592; | フォームオブジェクトに割り当てられているフォーミュラ(フォーミュラが何も割り当てられていない場合には `Null`)                                           |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>履歴</summary>
-
-| リリース   | 内容             |
-| ------ | -------------- |
-| 21     | *base* 引数のサポート |
-| 20 R10 | Created        |
-
-</details>
-</div>
 
 ## 説明
 

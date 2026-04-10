@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ORDER BY FORMULA.Summary-->**ORDER BY FORMULA** sorts (reorders) the records of the current selection of *aTable* for the current process.<!-- END REF--> After the sort has been completed, the new first record of the selection becomes the current record. **Note**: you must specify *aTable*. You cannot use a default table.
 
-You can sort the selection on one or several levels. For each sort level, you specify an expression in *formula* and the sorting *order*. If you pass the “greater than” symbol (>), the order is ascending. If you pass the “less than” symbol (<), the order is descending. If you do not specify the sorting order, ascending order is the default.
+You can sort the selection on one or several levels. For each sort level, you specify an expression in *formula* and the sorting order in *\> or <*. If you pass the “greater than” symbol (>), the order is ascending. If you pass the “less than” symbol (<), the order is descending. If you do not specify the sorting order, ascending order is the default.
 
 The *formula* parameter can be of type: Alphanumeric, Real, Integer, Long Integer, Date, Time or Boolean.
 

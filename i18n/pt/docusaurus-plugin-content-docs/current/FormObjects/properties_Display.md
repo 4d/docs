@@ -46,7 +46,7 @@ O campo contém efetivamente "proportion". 4D aceita e armazena a entrada inteir
 
 #### Objectos suportados
 
-[Lista desplegable](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Columna List Box](listbox-column.md) - [Pie List Box](listbox-header-footer.md#footers)
+[Lista desplegable](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie List Box](listbox_overview.md#list-box-footers)
 
 #### Comandos
 
@@ -105,13 +105,13 @@ Customized date formats can be built using several patterns described in the [**
 :::note blankIfNull
 
 - By default, a [null date](../Concepts/dt_date.md#date-literals) is displayed with zeros, e.g. 00/00/00. Com a opção "blankIfNull", uma data nula é exibida como uma área vazia. A cadeia de caracteres "blankIfNull" (sensível a maiúsculas e minúsculas) deve ser combinada com o valor de formato selecionado. A cadeia de caracteres "blankIfNull" (sensível a maiúsculas e minúsculas) deve ser combinada com o valor de formato selecionado.
-- [List box columns](listbox-column.md) and [list box footers](listbox-header-footer.md#footers) of type date always use the "blank if null" behavior (it cannot be disengaged).
+- [List box columns](listbox_overview.md#list-box-columns) and [list box footers](listbox_overview.md#list-box-footers) of type date always use the "blank if null" behavior (it cannot be disengaged).
 
 :::
 
 #### Objectos suportados
 
-[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
+[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
 #### Comandos
 
@@ -276,7 +276,7 @@ A tabela a seguir mostra como os diferentes formatos afetam a exibição dos nú
 
 #### Objectos suportados
 
-[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [Progress Indicators](progressIndicator.md)
+[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Progress Indicators](progressIndicator.md)
 
 #### Comandos
 
@@ -340,7 +340,7 @@ Se o campo for reduzido para um tamanho inferior ao da imagem original, a imagem
 
 #### Objectos suportados
 
-[Entrada](input_overview.md) - [Columna List Box](listbox-column.md) - [Pie List Box](listbox-header-footer.md#footers)
+[Entrada](input_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie List Box](listbox_overview.md#list-box-footers)
 
 #### Comandos
 
@@ -398,7 +398,7 @@ Por padrão, uma hora nula é exibida com zeros, por exemplo, "00:00:00". Com a 
 
 #### Objectos suportados
 
-[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
+[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
 #### Comandos
 
@@ -411,7 +411,7 @@ Por padrão, uma hora nula é exibida com zeros, por exemplo, "00:00:00". Com a 
 Cuando una [expresión booleana](properties_Object.md#expression-type) se muestra como:
 
 - un texto en un [objeto de entrada](input_overview.md)
-- un "popup" [](properties_Display.md#display-type) en una [columna del list box](listbox-column.md),
+- un "popup" [](properties_Display.md#display-type) en una [columna del list box](listbox_overview.md#list-box-columns),
 
 ... pode selecionar o texto a apresentar para cada valor:
 
@@ -426,7 +426,7 @@ Cuando una [expresión booleana](properties_Object.md#expression-type) se muestr
 
 #### Objectos suportados
 
-[Columna List Box](listbox-column.md) - [Entrada](input_overview.md)
+[Columna List Box](listbox_overview.md#list-box-columns) - [Entrada](input_overview.md)
 
 #### Comandos
 
@@ -450,7 +450,7 @@ As colunas booleanas também podem ser apresentadas como menus pop-up. Nesse cas
 
 #### Objectos suportados
 
-[Coluna de list box](listbox-column.md)
+[Coluna de list box](listbox_overview.md#list-box-columns)
 
 #### Comandos
 
@@ -502,7 +502,7 @@ También en este caso, la propiedad [Título](#title) está disponible para que 
 
 #### Objectos suportados
 
-[Casilla de selección](checkbox_overview.md) - [Columna List Box](listbox-column.md)
+[Casilla de selección](checkbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
 
 #### Comandos
 
@@ -527,7 +527,7 @@ Nesse caso, o título da caixa de seleção pode ser inserido usando essa propri
 
 #### Objectos suportados
 
-[Coluna de list box](listbox-column.md)
+[Coluna de list box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -564,7 +564,7 @@ La propiedad Truncar con elipsis puede aplicarse a columnas de tipo booleano; si
 
 #### Objectos suportados
 
-[Columna List Box](listbox-column.md) - [Rodapé List Box](listbox-header-footer.md#footers)
+[Columna List Box](listbox_overview.md#list-box-columns) - [Rodapé List Box](listbox_overview.md#list-box-footers)
 
 #### Comandos
 
@@ -599,7 +599,7 @@ Essa propriedade é usada somente ao desenhar objetos localizados no corpo de um
 
 #### Objectos suportados
 
-[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [List Box Header](listbox-header-footer.md#headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
+[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botão](button_overview.md) - [Grade de botões](buttonGrid_overview.md) - [Caixa de seleção](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista suspensa](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista hierárquica](list_overview.md) - [List Box](listbox_overview.md) - [Coluna List Box](listbox_overview.md#list-box-columns) - [Rodapie List Box](listbox_overview.md#list-box-footers) - [Cabeçalho de List Box](listbox_overview.md#list-box-headers) - [Botão de imagem](pictureButton_overview.md) - [Menu pop-up com imagem](picturePopupMenu_overview.md) - [Área de Plug-in](pluginArea_overview.md) - [Indicador de progresso](progressIndicator.md) - [Botão de opção](radio_overview.md) - [Spinner](spinner.md) - [Separador](splitters.md) - [Imagem estática](staticPicture.md) - [Etapas](stepper.md) - [Subformulário](subform_overview.md) - [Control de pestañas](tabControl.md) - [Área de texto](text.md) - [Área web](webArea_overview.md)
 
 #### Comandos
 
@@ -658,7 +658,7 @@ Observe que, independentemente do valor da opção Wordwrap, a altura da linha n
 
 #### Objectos suportados
 
-[Entrada](input_overview.md) - [Columna List Box](listbox-column.md) - [Pie List Box](listbox-header-footer.md#footers)
+[Entrada](input_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie List Box](listbox_overview.md#list-box-footers)
 
 #### Comandos
 

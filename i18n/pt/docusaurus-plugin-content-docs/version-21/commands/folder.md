@@ -4,24 +4,6 @@ title: Folder
 displayed_sidebar: docs
 ---
 
-<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; * } ) : 4D.Folder<!-- END REF -->
-
-<!-- REF #_command_.Folder.Params -->
-
-<div class="no-index">
-
-| Parâmetro      | Tipo                                               |                             | Descrição                                                         |
-| -------------- | -------------------------------------------------- | :-------------------------: | ----------------------------------------------------------------- |
-| path           | Text                                               | &#8594; | Folder path                                                       |
-| folderConstant | Integer                                            | &#8594; | Constante Pasta 4D                                                |
-| pathType       | Integer                                            | &#8594; | `fk posix path` (padrão) ou `fk platform path` |
-| \*             | Operador                                           | &#8594; | \* para devolver a pasta da base de dados do anfitrião            |
-| Resultados     | [4D.Folder](../API/FolderClass.md) | &#8592; | Novo Objeto Folder                                                |
-
-</div>
-<!-- END REF -->
-
-<div class="no-index">
 <details><summary>História</summary>
 
 | Release | Mudanças                    |
@@ -30,7 +12,20 @@ displayed_sidebar: docs
 | 17 R5   | Adicionado                  |
 
 </details>
-</div>
+
+<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; \* } ) : 4D.Folder<!-- END REF -->
+
+<!-- REF #_command_.Folder.Params -->
+
+| Parâmetro      | Tipo                                               |                             | Descrição                                                         |
+| -------------- | -------------------------------------------------- | :-------------------------: | ----------------------------------------------------------------- |
+| path           | Text                                               | &#8594; | Folder path                                                       |
+| folderConstant | Integer                                            | &#8594; | Constante Pasta 4D                                                |
+| pathType       | Integer                                            | &#8594; | `fk posix path` (padrão) ou `fk platform path` |
+| \*             | operator                                           | &#8594; | \* para devolver a pasta da base de dados do anfitrião            |
+| Resultados     | [4D.Folder](../API/FolderClass.md) | &#8592; | Novo Objeto Folder                                                |
+
+<!-- END REF -->
 
 ## Descrição
 
@@ -42,7 +37,7 @@ No parâmetro *path*, passe uma string de rotas de pasta. Você pode usar uma ca
 
 > Apenas são compatíveis com os nomes de caminho absolutos com o comando `Folder`.
 
-Como padrão, 4D espera um caminho expresso com a sintaxe POSIX. Se trabalhar com pathnames de plataforma (Windows ou macOS), deve declará-lo usando o parâmetro *pathType*. Estão disponíveis as seguintes constantes:
+Como padrão, 4D espera um caminho expresso com a sintaxe POSIX. If you work with platform pathnames (Windows or macOS), you must declare it using the *pathType* parameter. Estão disponíveis as seguintes constantes:
 
 | Parâmetros       | Valor | Comentário                                                                                                                  |
 | ---------------- | ----- | --------------------------------------------------------------------------------------------------------------------------- |
@@ -70,7 +65,7 @@ No parâmetro *folderConstant*, passe uma pasta 4D incorporada ou de sistema, ut
 | fk user preferences folder | 0     | 4D folder that stores user preference files within the <code>\&lt;userName&gt;</code> directory. |
 | fk web root folder         | 8     | Pasta raiz atual da Web da base de dados: se estiver dentro do pacote "/PACKAGE/percurso", caso contrário, caminho completo                     |
 
-Se o comando é chamado de um componente, passe o parâmetro opcional `*` para obter o caminho do banco de dados de host. Caso contrário, se omitir o parâmetro `*`, um objecto nulo é sempre devolvido.
+If the command is called from a component, pass the optional `*` parameter to get the path of the host database. Caso contrário, se omitir o parâmetro `*`, um objecto nulo é sempre devolvido.
 
 > No Windows, em clientes mesclados, o local das pastas incorporadas é modificado se a chave `ShareLocalResourcesOnWindowsClient` [BuildApp key](../Desktop/building.md#buildapp4dsettings) for usada.
 

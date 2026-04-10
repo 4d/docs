@@ -5,21 +5,6 @@ slug: /commands/formula
 displayed_sidebar: docs
 ---
 
-<!-- REF #_command_.Formula.Syntax -->**Formula** ( *formulaExp* : Expression ) : 4D.Function<!-- END REF -->
-
-<!-- REF #_command_.Formula.Params -->
-
-<div class="no-index">
-
-| 引数         | 型                           |                             | 説明                                  |
-| ---------- | --------------------------- | :-------------------------: | ----------------------------------- |
-| formulaExp | 式                           | &#8594; | オブジェクトとして返されるフォーミュラ                 |
-| 戻り値        | 4D.Function | &#8592; | フォーミュラを格納しているネイティブな Function オブジェクト |
-
-</div>
-<!-- END REF -->
-
-<div class="no-index">
 <details><summary>履歴</summary>
 
 | リリース  | 内容                                               |
@@ -28,7 +13,17 @@ displayed_sidebar: docs
 | 17 R3 | 追加                                               |
 
 </details>
-</div>
+
+<!-- REF #_command_.Formula.Syntax -->**Formula** ( *formulaExp* : Expression ) : 4D.Function<!-- END REF -->
+
+<!-- REF #_command_.Formula.Params -->
+
+| 引数         | 型                           |                             | 説明                                  |
+| ---------- | --------------------------- | :-------------------------: | ----------------------------------- |
+| formulaExp | 式                           | &#8594; | オブジェクトとして返されるフォーミュラ                 |
+| 戻り値        | 4D.Function | &#8592; | フォーミュラを格納しているネイティブな Function オブジェクト |
+
+<!-- END REF -->
 
 ## 説明
 

@@ -8,26 +8,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.License info.Params-->
 
-<div class="no-index">
-
 | 引数  | 型      |                             | 説明                |
 | --- | ------ | --------------------------- | ----------------- |
 | 戻り値 | Object | &#8592; | アクティブなライセンスに関する情報 |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>履歴</summary>
-
-| リリース  | 内容                                            |
-| ----- | --------------------------------------------- |
-| 20 R7 | Renamed (Get License info) |
-| 16 R6 | 変更                                            |
-| 16 R4 | Created                                       |
-
-</details>
-</div>
 
 ## 説明
 

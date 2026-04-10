@@ -4,7 +4,7 @@ title: Print form
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Print form.Syntax-->**Print form** ( {*aTable* : Table ;} *form* : Text, Object {; *formData* : Object} {; *areaStart* : Integer{; *areaEnd* : Integer}} ) : Integer<!-- END REF-->
+<!--REF #_command_.Print form.Syntax-->**Print form** ( {*aTable* ;} *form* {; *formData*} {; *areaStart*{; *areaEnd*}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Print form.Params-->
 <div class="no-index">
 
@@ -18,18 +18,6 @@ displayed_sidebar: docs
 | Function result | Integer | &#8592; | Height of printed section |
 </div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|20|Modified|
-|16 R6|Modified|
-|<6|Added|
-
-</details>
-</div>
 
 ## Description 
 

@@ -9,26 +9,21 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Session info.Params -->
 
-<div class="no-index">
-
 | Parâmetro  | Tipo    |                             | Descrição                  |
 | ---------- | ------- | :-------------------------: | -------------------------- |
 | sessionID  | Integer | &#8594; | ID da sessão               |
 | Resultados | Object  | &#8592; | Informações sobre a sessão |
 
-</div>
 <!-- END REF -->
 
-<div class="no-index">
 <details><summary>História</summary>
 
-| Release | Mudanças                    |
-| ------- | --------------------------- |
-| 20 R8   | Suporte a sessões autônomas |
-| 20 R7   | Adicionado                  |
+| Release | Mudanças                       |
+| ------- | ------------------------------ |
+| 20 R8   | Support of standalone sessions |
+| 20 R7   | Adicionado                     |
 
 </details>
-</div>
 
 ## Descrição
 

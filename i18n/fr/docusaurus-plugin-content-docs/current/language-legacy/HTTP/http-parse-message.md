@@ -9,17 +9,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.HTTP Parse message.Params-->
 
-<div class="no-index">
-
 | Paramètres | Type       |                             | Description                                                         |
 | ---------- | ---------- | --------------------------- | ------------------------------------------------------------------- |
 | data       | Text, Blob | &#8594; | Données à analyser                                                  |
 | Résultat   | Object     | &#8592; | Objet dont chaque propriété est une partie des données multiparties |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>Historique</summary>
 
 | Release | Modifications |
@@ -27,7 +23,6 @@ displayed_sidebar: docs
 | 20 R4   | Ajout         |
 
 </details>
-</div>
 
 ## Description
 

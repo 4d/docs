@@ -8,17 +8,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Session storage.Params-->
 
-<div class="no-index">
-
 | Parámetros | Tipo   |                             | Descripción                                                |
 | ---------- | ------ | --------------------------- | ---------------------------------------------------------- |
 | id         | Text   | &#8594; | Identificador único (UUID) de la sesión |
 | Resultado  | Object | &#8592; | Objeto de almacenamiento de la sesión                      |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones                |
@@ -27,7 +23,6 @@ displayed_sidebar: docs
 | 20 R6       | Añadidos                      |
 
 </details>
-</div>
 
 ## Descripción
 

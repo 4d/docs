@@ -4,11 +4,9 @@ title: Print form
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Print form.Syntax-->**Print form** ( {*aTable* : Table ;} *form* : Text, Object {; *formData* : Object} {; *areaStart* : Integer{; *areaEnd* : Integer}} ) : Integer<!-- END REF-->
+<!--REF #_command_.Print form.Syntax-->**Print form** ( {*aTable* ;} *form* {; *formData*} {; *areaStart*{; *areaEnd*}} ) : Integer<!-- END REF-->
 
 <!--REF #_command_.Print form.Params-->
-
-<div class="no-index">
 
 | Paramètres | Type         |                             | Description                                                                                                                                                                                           |
 | ---------- | ------------ | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -19,20 +17,7 @@ displayed_sidebar: docs
 | areaEnd    | Integer      | &#8594; | Zone de fin (si areaStart est spécifié)                                                                                                                                            |
 | Résultat   | Integer      | &#8592; | Hauteur de la section imprimée                                                                                                                                                                        |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>Historique</summary>
-
-| Release                     | Modifications |
-| --------------------------- | ------------- |
-| 20                          | Modifié       |
-| 16 R6                       | Modifié       |
-| <6 | Ajout         |
-
-</details>
-</div>
 
 ## Description
 

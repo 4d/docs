@@ -8,13 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.License info.Params-->
 
-<div class="no-index">
-
 | Parámetros | Tipo   |                             | Descripción                          |
 | ---------- | ------ | --------------------------- | ------------------------------------ |
 | Resultado  | Object | &#8592; | Información sobre la licencia activa |
 
-</div>
 <!-- END REF-->
 
 <div class="no-index">

@@ -198,7 +198,7 @@ Le menu d'options vous permet d'effectuer diverses actions :
   - Contenu (si pertinent) : fournit la partie de l'élément qui correspond à la recherche ; par exemple, la ligne de code qui contient la chaîne de caractères recherchée.
   - Numéro de ligne (pour le code) ou numéro de page (pour les objets de formulaire)
 
-## Replace in content{#replace-in-content}
+## Replace in content {#replace-in-content}
 
 La fonction de remplacement dans le contenu permet de remplacer une chaîne de caractères par une autre à l’intérieur des objets listés dans la Fenêtre de résultat. Elle est disponible dans le [menu d'options](#options-menu) de la fenêtre.
 

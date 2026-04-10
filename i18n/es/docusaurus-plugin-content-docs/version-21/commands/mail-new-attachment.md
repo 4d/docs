@@ -4,17 +4,23 @@ title: MAIL New attachment
 displayed_sidebar: docs
 ---
 
+<details><summary>Historia</summary>
+
+| Lanzamiento | Modificaciones                                                                      |
+| ----------- | ----------------------------------------------------------------------------------- |
+| 19 R2       | Acepta 4D.File, 4D.ZipFile, 4D.Blob |
+
+</details>
+
 <!-- REF #_command_.MAIL New attachment.Syntax -->**MAIL New attachment**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
 
 <!--REF #_command_.MAIL New attachment.Params-->
-
-<div class="no-index">
 
 | Parámetros  | Tipo                              |                             | Descripción                                                                                        |
 | ----------- | --------------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------- |
 | file        | 4D.File           | &#8594; | Archivo adjunto                                                                                    |
 | zIPFile     | 4D.ZipFile        | &#8594; | Archivo zip adjunto                                                                                |
-| blob        | 4D.Blob           | &#8594; | Blob que contiene el archivo adjunto                                                               |
+| blob        | 4D.Blob           | &#8594; | BLOB que contiene el adjunto                                                                       |
 | path        | Text                              | &#8594; | Ruta del archivo adjunto                                                                           |
 | name        | Text                              | &#8594; | Nombre + extensión utilizados por el cliente de correo para designar el archivo adjunto            |
 | cid         | Text                              | &#8594; | ID del archivo adjunto (sólo en mensajes HTML), o " " si no se requiere cid     |
@@ -22,19 +28,7 @@ displayed_sidebar: docs
 | disposition | Text                              | &#8594; | Valor del encabezado content-disposition: "inline" o "attachment". |
 | Resultado   | 4D.MailAttachment | &#8592; | Objeto adjunto                                                                                     |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>Historia</summary>
-
-| Lanzamiento | Modificaciones                                                                      |
-| ----------- | ----------------------------------------------------------------------------------- |
-| 19 R2       | Acepta 4D.File, 4D.ZipFile, 4D.Blob |
-| 17 R4       | Añadidos                                                                            |
-
-</details>
-</div>
 
 ## Descripción
 

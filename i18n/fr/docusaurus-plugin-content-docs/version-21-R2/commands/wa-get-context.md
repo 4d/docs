@@ -4,30 +4,17 @@ title: WA Get context
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Get context.Syntax-->**WA Get context** ( * ; *object* : Text ) -> Object<br/>**WA Get context** ( *object* : Variable ) -> Object<!-- END REF-->
+<!--REF #_command_.WA Get context.Syntax-->**WA Get context** ( * ; *object* : Text ) -> *contextObj* : Object<br/>**WA Get context** ( *object* : Field, Variable ) -> *contextObj* : Object<!-- END REF-->
 
 <!--REF #_command_.WA Get context.Params-->
 
-<div class="no-index">
+| Paramètres | Type      |                             | Description                                                                                                                                          |
+| ---------- | --------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| \*         | Opérateur | &#8594; | Si passé, *object* est un nom d'objet (chaîne de caractères). Si omis, *object* est une variable. |
+| object     | any       | &#8594; | Nom de l'objet (si \* est spécifié) ou Variable (si \* est omis).                              |
+| contextObj | Object    | &#8592; | Objet contexte si défini précédemment, sinon `null`.                                                                                 |
 
-| Paramètres | Type           |                             | Description                                                                                                                                          |
-| ---------- | -------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \*         | Opérateur      | &#8594; | Si passé, *object* est un nom d'objet (chaîne de caractères). Si omis, *object* est une variable. |
-| object     | Text, Variable | &#8594; | Nom de l'objet (si \* est spécifié) ou Variable (si \* est omis).                              |
-| Résultat   | Object         | &#8592; | Objet contexte si défini précédemment, sinon `null`.                                                                                 |
-
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>Historique</summary>
-
-| Release | Modifications |
-| ------- | ------------- |
-| 20 R9   | Ajout         |
-
-</details>
-</div>
 
 ### Description
 

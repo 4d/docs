@@ -18,7 +18,7 @@ Você também pode definir essa propriedade usando o comando [`OBJECT SET RGB CO
 
 #### Objectos suportados
 
-[Caixa de Listagem](listbox_overview.md) - [Coluna da caixa de listagem](listbox-column.md)
+[Caixa de Listagem](listbox_overview.md) - [Coluna da caixa de listagem](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -38,7 +38,7 @@ Você também pode definir essa propriedade usando o comando [`OBJECT SET RGB CO
 
 #### Objectos suportados
 
-[Lista hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna List Box](listbox-column.md) - [Rodapé de List Box](listbox-header-footer.md#footers) - [Oval](shapes_overview.md#oval) - [Retângulo](shapes_overview.md#rectangle) - [Área de texto](text.md)
+[Lista hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna List Box](listbox_overview.md#list-box-columns) - [Rodapé de List Box](listbox_overview.md#list-box-footers) - [Oval](shapes_overview.md#oval) - [Retângulo](shapes_overview.md#rectangle) - [Área de texto](text.md)
 
 #### Veja também
 
@@ -63,7 +63,7 @@ Você também pode definir essa propriedade usando a propriedade [`LISTBOX SET P
 
 #### Objectos suportados
 
-[Caixa de Listagem](listbox_overview.md) - [Coluna da caixa de listagem](listbox-column.md)
+[Caixa de Listagem](listbox_overview.md) - [Coluna da caixa de listagem](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -199,7 +199,7 @@ Você pode obter o mesmo resultado usando os comandos [`LISTBOX SET UMA ARTA`](h
 
 #### Objectos suportados
 
-[Caixa de Listagem](listbox_overview.md) - [Coluna da caixa de listagem](listbox-column.md)
+[Caixa de Listagem](listbox_overview.md) - [Coluna da caixa de listagem](listbox_overview.md#list-box-columns)
 
 ---
 

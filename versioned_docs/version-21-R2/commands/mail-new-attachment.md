@@ -4,6 +4,13 @@ title: MAIL New attachment
 displayed_sidebar: docs
 ---
 
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|19 R2|Accepts 4D.File, 4D.ZipFile, 4D.Blob
+</details>
+
 
 <!-- REF #_command_.MAIL New attachment.Syntax -->**MAIL New attachment**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
 
@@ -23,17 +30,6 @@ displayed_sidebar: docs
 |Result|4D.MailAttachment|&#8592;|Attachment object|
 </div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|19 R2|Accepts 4D.File, 4D.ZipFile, 4D.Blob
-|17 R4|Added|
-
-</details>
-</div>
 
 
 ## Description

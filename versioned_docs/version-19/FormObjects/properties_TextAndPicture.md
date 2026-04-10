@@ -75,7 +75,7 @@ Designates the placement of an icon in relation to the form object.
 
 #### Objects Supported
 
-[List Box Header](listbox-header-footer.md#headers)
+[List Box Header](listbox_overview.md#list-box-headers)
 
 ---
 
@@ -140,7 +140,7 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 #### Objects Supported
 
-[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [List Box Header](listbox-header-footer.md#headers) - [Radio Button](radio_overview.md)
+[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md)
 
 ---
 
@@ -225,4 +225,4 @@ It is important to note that the "With Pop-up Menu" property only manages the gr
 
 #### Objects Supported
 
-[Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-xp) - [Custom](button_overview.md#custom)
+[Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-xp) - [Circle Button](button_overview.md#circle) - [Custom](button_overview.md#custom)

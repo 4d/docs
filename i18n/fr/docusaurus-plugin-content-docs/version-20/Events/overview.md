@@ -28,7 +28,7 @@ Chaque événement est retourné sous forme d'objet par la commande `FORM Event`
 
 Des propriétés supplémentaires sont retournées lorsque l'événement se produit sur des objets spécifiques. En particulier :
 
-- Les [list box](FormObjects/listbox-object.md#supported-form-events) et les [colonnes de list box](FormObjects/listbox-column.md#supported-form-events) renvoient des [propriétés supplémentaires](FormObjects/listbox-object.md#supported-form-events) telles que `columnName` ou `isRowSelected`.
+- Les [list box](FormObjects/listbox_overview.md#supported-form-events) et les [colonnes de list box](FormObjects/listbox_overview.md#supported-form-events-1) renvoient des [propriétés supplémentaires](FormObjects/listbox_overview.md#supported-form-events) telles que `columnName` ou `isRowSelected`.
 - Les [zones 4D View Pro](FormObjects/viewProArea_overview.md) retournent par exemple des propriétés `sheetName` ou `action` dans l'objet événement [On After Edit](onAfterEdit.md).
 
 

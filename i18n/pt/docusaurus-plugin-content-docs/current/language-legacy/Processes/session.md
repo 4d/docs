@@ -9,26 +9,21 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Session.Params-->
 
-<div class="no-index">
-
 | Parâmetro | Tipo                        |                             | Descrição       |
 | --------- | --------------------------- | --------------------------- | --------------- |
 | Resultado | 4D. Session | &#8592; | Objecto Session |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>História</summary>
 
 | Release | Mudanças                                                      |
 | ------- | ------------------------------------------------------------- |
-| 20 R8   | Suporte a sessões autônomas                                   |
+| 20 R8   | Support of standalone sessions                                |
 | 20 R5   | Suporte a sessões de procedimento armazenado e cliente remoto |
 | 18 R6   | Adicionado                                                    |
 
 </details>
-</div>
 
 ## Descrição
 
@@ -52,7 +47,7 @@ The command returns *Null* if:
 
 O objeto `Session` das sessões web está disponível em qualquer processo web:
 
-- nos métodos de database `On Web Authentication`, `On Web Connection` e`On REST Authentication`,
+- `On Web Authentication`, `On Web Connection`, and `On REST Authentication` database methods,
 - código processado a través das etiquetas 4D nas páginas semidinâmicas (4DTEXT, 4DHTML, 4DEVAL, 4DSCRIPT/, 4DCODE)
 - os métodos projeto com o atributo "Available through 4D tags and URLs (4DACTION...)" e chamados através de 4DACTION/ urls,
 - [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) and [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action) database methods for mobile requests,
@@ -113,7 +108,7 @@ flowchart TD
 
 ## Exemplo
 
-Você definiu o método `action_Session` com o atributo "Disponível através de tags 4D e URLs". Pode chamar ao método introduzindo a URL abaixo no navegador:
+You have defined the `action_Session` method with attribute "Available through 4D tags and URLs". Pode chamar ao método introduzindo a URL abaixo no navegador:
 
 ```
 IP:port/4DACTION/action_Session

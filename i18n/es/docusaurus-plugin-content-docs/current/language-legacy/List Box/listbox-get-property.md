@@ -9,29 +9,14 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX Get property.Params-->
 
-<div class="no-index">
-
 | Parámetros | Tipo           |                             | Descripción                                                                                                                      |
 | ---------- | -------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | \*         | Operador       | &#8594; | Si se especifica, object es un nombre de objeto (cadena). Si se omite, object es una variable |
-| object     | Text, Variable | &#8594; | Nombre del objeto del formulario (si se especifica \*) o Variable (si se omite \*)         |
+| object     | Text, Variable | &#8594; | Form object name (if \* is specified) or Variable (if \* is omitted)                       |
 | property   | Integer        | &#8594; | Propiedad cuyo valor desea obtener                                                                                               |
 | Resultado  | any            | &#8592; | Current value (Integer, Text)                                                                                 |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>Historia</summary>
-
-| Lanzamiento                 | Modificaciones                                       |
-| --------------------------- | ---------------------------------------------------- |
-| 19 R6                       | Modificado                                           |
-| 16 R2                       | Renamed (Get Listbox information) |
-| <6 | Created                                              |
-
-</details>
-</div>
 
 ## Descripción
 

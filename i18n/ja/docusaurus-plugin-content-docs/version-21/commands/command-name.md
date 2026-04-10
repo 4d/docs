@@ -5,11 +5,9 @@ slug: /commands/command-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Command name.Syntax-->**Command name** ( *command* : Integer {; *info* : Integer {; *theme* : Text}} ) : Text<!-- END REF-->
+<!--REF #_command_.Command name.Syntax-->**Command name** ( *command* {; *info* {; *theme*}} ) : Text<!-- END REF-->
 
 <!--REF #_command_.Command name.Params-->
-
-<div class="no-index">
 
 | 引数    | 型       |                             | 説明             |
 | ----- | ------- | --------------------------- | -------------- |
@@ -18,10 +16,8 @@ displayed_sidebar: docs
 | theme | Text    | &#8592; | コマンドのランゲージテーマ  |
 | 戻り値   | Text    | &#8592; | ローカライズされたコマンド名 |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>履歴</summary>
 
 | リリース  | 内容                    |
@@ -29,7 +25,6 @@ displayed_sidebar: docs
 | 20 R9 | deprecated プロパティのサポート |
 
 </details>
-</div>
 
 ## 説明
 

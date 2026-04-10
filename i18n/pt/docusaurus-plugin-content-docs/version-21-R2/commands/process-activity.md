@@ -8,27 +8,22 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Process activity.Params-->
 
-<div class="no-index">
-
 | Parâmetro | Tipo    |                             | Descrição                                                                                |
 | --------- | ------- | --------------------------- | ---------------------------------------------------------------------------------------- |
 | sessionID | Text    | &#8594; | ID da sessão                                                                             |
 | options   | Integer | &#8594; | Opções de retorno                                                                        |
 | Resultado | Object  | &#8592; | Snapshot de sessões de usuários em execução e/ou (apenas 4D Servidor) |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>História</summary>
 
-| Release | Mudanças                                                                                  |
-| ------- | ----------------------------------------------------------------------------------------- |
-| 21      | Support of web user sessions                                                              |
-| 20 R7   | <ul><li>Support of *sessionID* parameter</li><li>Renamed (Get process activity)</li></ul> |
+| Release | Mudanças                         |
+| ------- | -------------------------------- |
+| 20 R7   | Suporte do parâmetro *sessionID* |
+| 21      | Support of web user sessions     |
 
 </details>
-</div>
 
 ## Descrição
 
@@ -39,7 +34,7 @@ Por padrão quando usado sem quaisquer parâmetros, a **atividade de processo** 
 - "processos", uma coleção de todos os processos
 - "sessões" (apenas 4D Servidor), uma coleção de todas as sessões
 
-No 4D Server, você pode filtrar informações para serem retornadas usando os parâmetros opcionais *sessionID* e *options*:
+No Servidor 4D, você pode filtrar informações para serem retornadas usando os parâmetros opcionais *sessionID* e *opções*:
 
 - Se você passar um ID de sessão de usuário no parâmetro *sessionID*, o comando retorna somente informações relacionadas a esta sessão. Por padrão se o parâmetro *options* for omitido, o objeto retornado contém uma coleção com todos os processos relacionados à sessão e uma coleção com um único objeto descrevendo a sessão. Se você passar um ID de sessão inválido, um objeto **null** será retornado.
 - Você pode selecionar a(s) coleção(ões) a retornar passando uma das seguintes constantes no parâmetro *options*:
@@ -48,7 +43,7 @@ No 4D Server, você pode filtrar informações para serem retornadas usando os p
 | ---------------------- | ----- | --------------------------------------------------------------------------- |
 | Processes and sessions | 0     | Retorna as listas "processos" e "sessões" (valor padrão) |
 | Processes only         | 1     | Retorna apenas a lista de "processos"                                       |
-| Sessions only          | 2     | Retorna apenas a lista de "sessões"                                         |
+| Somente sessões        | 2     | Retorna apenas a lista de "sessões"                                         |
 
 :::note
 

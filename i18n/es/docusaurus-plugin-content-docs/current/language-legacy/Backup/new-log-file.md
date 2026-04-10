@@ -9,24 +9,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New log file.Params-->
 
-<div class="no-index">
-
 | Parámetros | Tipo |                             | Descripción                                   |
 | ---------- | ---- | --------------------------- | --------------------------------------------- |
 | Resultado  | Text | &#8592; | Ruta completa del archivo de registro cerrado |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>Historia</summary>
-
-| Lanzamiento                 | Modificaciones |
-| --------------------------- | -------------- |
-| <6 | Created        |
-
-</details>
-</div>
 
 ## Descripción
 

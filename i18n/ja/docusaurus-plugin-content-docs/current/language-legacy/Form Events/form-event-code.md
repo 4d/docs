@@ -9,25 +9,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Form event code.Params-->
 
-<div class="no-index">
-
 | 引数  | 型       |                             | 説明         |
 | --- | ------- | --------------------------- | ---------- |
 | 戻り値 | Integer | &#8592; | フォームイベント番号 |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>履歴</summary>
-
-| リリース                        | 内容                                      |
-| --------------------------- | --------------------------------------- |
-| 18                          | Renamed (Form event) |
-| <6 | Created                                 |
-
-</details>
-</div>
 
 ## 説明
 

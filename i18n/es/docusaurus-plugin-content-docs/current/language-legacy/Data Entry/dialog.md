@@ -9,8 +9,6 @@ displayed_sidebar: docs
 
 <!--REF #_command_.DIALOG.Params-->
 
-<div class="no-index">
-
 | Parámetros | Tipo         |                             | Descripción                                                                                                                                                                                                              |
 | ---------- | ------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | aTable     | Tabla        | &#8594; | Tabla propia del formulario o Si se omite: tabla por defecto o uso del formulario del proyecto                                                                                                           |
@@ -18,20 +16,7 @@ displayed_sidebar: docs
 | formData   | Object       | &#8594; | Datos a asociar al formulario                                                                                                                                                                                            |
 | \*         | Operador     | &#8594; | Usar el mismo proceso                                                                                                                                                                                                    |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>Historia</summary>
-
-| Lanzamiento                 | Modificaciones |
-| --------------------------- | -------------- |
-| 17                          | Modificado     |
-| 11 SQL                      | Modificado     |
-| <6 | Created        |
-
-</details>
-</div>
 
 ## Descripción
 

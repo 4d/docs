@@ -89,15 +89,12 @@ Les objets HTTPRequest fournissent les propriétés et fonctions suivantes :
 
 <!-- REF #4D.HTTPRequest.new().Params -->
 
-<div class="no-index">
-
 | Paramètres | Type                           |                             | Description                               |
 | ---------- | ------------------------------ | :-------------------------: | ----------------------------------------- |
 | url        | Text                           |              ->             | URL à laquelle envoyer la requête         |
 | options    | Object                         |              ->             | Propriétés de configuration de la requête |
 | Résultat   | 4D.HTTPRequest | <- | Nouvel objet HTTPRequest                  |
 
-</div>
 <!-- END REF -->
 
 #### Description
@@ -344,13 +341,10 @@ La propriété `.returnResponseBody` contient <!-- REF #HTTPRequestClass.returnR
 
 <!-- REF #HTTPRequestClass.terminate().Params -->
 
-<div class="no-index">
-
 | Paramètres | Type |     | Description                 |
 | ---------- | ---- | :-: | --------------------------- |
 |            |      |     | Ne requiert aucun paramètre |
 
-</div>
 <!-- END REF -->
 
 #### Description
@@ -405,14 +399,11 @@ La propriété `.url` contient <!-- REF #HTTPRequestClass.url.Summary -->l'URL d
 
 <!-- REF #HTTPRequestClass.wait().Params -->
 
-<div class="no-index">
-
 | Paramètres | Type                           |                             | Description                                         |
 | ---------- | ------------------------------ | :-------------------------: | --------------------------------------------------- |
 | timeout    | Real                           |              ->             | Délai d'attente maximum en secondes pour la réponse |
 | Résultat   | 4D.HTTPRequest | <- | Objet HTTPRequest                                   |
 
-</div>
 <!-- END REF -->
 
 #### Description

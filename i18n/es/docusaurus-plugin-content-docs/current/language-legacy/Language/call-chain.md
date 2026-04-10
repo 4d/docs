@@ -9,16 +9,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Call chain.Params-->
 
-<div class="no-index">
-
 | Parámetros | Tipo       |                             | Descripción                                                                   |
 | ---------- | ---------- | --------------------------- | ----------------------------------------------------------------------------- |
 | Resultado  | Collection | &#8592; | Colección de objetos que describen la cadena de llamadas dentro de un proceso |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones                    |
@@ -26,7 +22,6 @@ displayed_sidebar: docs
 | 20 R9       | Soporte de la propiedad `formula` |
 
 </details>
-</div>
 
 ## Descripción
 

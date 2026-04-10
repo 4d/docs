@@ -170,7 +170,7 @@ L'instruction `return` met fin à l'exécution d'une fonction ou d'une méthode 
 Par exemple, la fonction suivante retourne le carré de son argument, $x, où $x est un nombre.
 
 ```4d
-Function square($x : Integer) : Integer
+Function square($x : Integer) -> $result : Integer
    return $x * $x
 ```
 

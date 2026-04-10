@@ -1415,11 +1415,11 @@ $c2:=$c.flatMap($f; $c.sum())
 
 <div class="no-index">
 
-| 引数        | 型          |                             | 説明                             |
-| --------- | ---------- | :-------------------------: | ------------------------------ |
-| toSearch  | expression |              ->             | コレクション内を検索する式                  |
-| startFrom | Integer    |              ->             | 検索を開始するインデックス                  |
-| 戻り値       | Boolean    | <- | *toSearch* がコレクションにある場合は true。 |
+| 引数        | 型       |                             | 説明                             |
+| --------- | ------- | :-------------------------: | ------------------------------ |
+| toSearch  | 式       |              ->             | コレクション内を検索する式                  |
+| startFrom | Integer |              ->             | 検索を開始するインデックス                  |
+| 戻り値       | Boolean | <- | *toSearch* がコレクションにある場合は true。 |
 
 </div>
 <!-- END REF -->
@@ -1480,11 +1480,11 @@ $c2:=$c.flatMap($f; $c.sum())
 
 <div class="no-index">
 
-| 引数        | 型          |                             | 説明                                        |
-| --------- | ---------- | :-------------------------: | ----------------------------------------- |
-| toSearch  | expression |              ->             | コレクション内を検索する式                             |
-| startFrom | Integer    |              ->             | 検索を開始するインデックス                             |
-| 戻り値       | Integer    | <- | 最初に見つかった toSearch のインデックス。見つからなかった場合には -1 |
+| 引数        | 型       |                             | 説明                                        |
+| --------- | ------- | :-------------------------: | ----------------------------------------- |
+| toSearch  | 式       |              ->             | コレクション内を検索する式                             |
+| startFrom | Integer |              ->             | 検索を開始するインデックス                             |
+| 戻り値       | Integer | <- | 最初に見つかった toSearch のインデックス。見つからなかった場合には -1 |
 
 </div>
 <!-- END REF -->
@@ -1751,11 +1751,11 @@ $last:=$emptyCol.last() // このコードは undefined を返します
 
 <div class="no-index">
 
-| 引数        | 型          |                             | 説明                                        |
-| --------- | ---------- | :-------------------------: | ----------------------------------------- |
-| toSearch  | expression |              ->             | コレクション内を検索する要素                            |
-| startFrom | Integer    |              ->             | 検索を開始するインデックス                             |
-| 戻り値       | Integer    | <- | 最後に見つかった toSearch のインデックス。見つからなかった場合には -1 |
+| 引数        | 型       |                             | 説明                                        |
+| --------- | ------- | :-------------------------: | ----------------------------------------- |
+| toSearch  | 式       |              ->             | コレクション内を検索する要素                            |
+| startFrom | Integer |              ->             | 検索を開始するインデックス                             |
+| 戻り値       | Integer | <- | 最後に見つかった toSearch のインデックス。見つからなかった場合には -1 |
 
 </div>
 <!-- END REF -->
@@ -2820,7 +2820,7 @@ $entitySelection:=ds.Employee.query("birthDate <= :1";Current date-10950)
 | formula    | 4D.Function                     |              ->             | フォーミュラオブジェクト                                      |
 | methodName | Text                                            |              ->             | メソッド名                                             |
 | initValue  | Text, Number, Object, Collection, Date, Boolean |              ->             | *formula* または *methodName* の最初の呼び出しに最初の引数として使用する値 |
-| param      | expression                                      |              ->             | 渡す引数                                              |
+| param      | 式                                               |              ->             | 渡す引数                                              |
 | 戻り値        | Text, Number, Object, Collection, Date, Boolean | <- | アキュムレーター値の結果                                      |
 
 </div>
@@ -2908,7 +2908,7 @@ $r:=$c.reduce(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 で�
 | formula    | 4D.Function                     |              ->             | フォーミュラオブジェクト                                      |
 | methodName | Text                                            |              ->             | メソッド名                                             |
 | initValue  | Text, Number, Object, Collection, Date, Boolean |              ->             | *formula* または *methodName* の最初の呼び出しに最初の引数として使用する値 |
-| param      | expression                                      |              ->             | 渡す引数                                              |
+| param      | 式                                               |              ->             | 渡す引数                                              |
 | 戻り値        | Text, Number, Object, Collection, Date, Boolean | <- | アキュムレーター値の結果                                      |
 
 </div>

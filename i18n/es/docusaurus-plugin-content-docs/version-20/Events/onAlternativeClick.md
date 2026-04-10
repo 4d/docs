@@ -22,7 +22,7 @@ Algunos estilos de botón pueden ser [vinculados a un menú emergente](FormObjec
 
 ### List box
 
-Este evento se genera en columnas de [list boxes de tipo array de objetos](FormObjects/listbox-column.md#object-arrays-in-columns), cuando el usuario haga clic en un botón ellipsis del widget (atributo "alternateButton").
+Este evento se genera en columnas de [list boxes de tipo array de objetos](FormObjects/listbox_overview.md#object-arrays-in-columns), cuando el usuario haga clic en un botón ellipsis del widget (atributo "alternateButton").
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)
 

@@ -30,7 +30,7 @@ Cada evento é retornado como um objeto pelo comando `FORM Event`. Por padrão, 
 
 Propriedades adicionais são retornadas quando o evento ocorre em objetos específicos. Em particular:
 
-- [caixas de listagem](FormObjects/listbox-object.md#supported-form-events) e [colunas de caixa de listagem](FormObjects/listbox-column.md#supported-form-events) retornam [propriedades adicionais](FormObjects/listbox-object.md#supported-form-events), como `columnName` ou `isRowSelected`.
+- [caixas de listagem](FormObjects/listbox_overview.md#supported-form-events) e [colunas de caixa de listagem](FormObjects/listbox_overview.md#supported-form-events-1) retornam [propriedades adicionais](FormObjects/listbox_overview.md#supported-form-events), como `columnName` ou `isRowSelected`.
 - [As áreas do 4D View Pro](FormObjects/viewProArea_overview.md) retornam, por exemplo, `sheetName` ou propriedades `de ação` no objeto de evento [On After Edit](onAfterEdit.md).
 
 

@@ -160,7 +160,7 @@ La référence du fichier peut être :
 - un objet 4D.File
 - un chemin au format POSIX
 
-Exemple :
+Voici un exemple :
 
 ```4d
 Function createCompany($name : Text; $logo : 4D.File)
@@ -292,7 +292,7 @@ Une nouvelle entity selection est **partageable** dans les cas suivants :
 - la nouvelle entity selection est basée sur une relation [entity.*attributeName*](API/EntityClass.md#attributename) (par exemple, "company.employees") lorsque *attributeName* est un attribut lié 1-vers-N mais que l'entité n'appartient pas à une entity selection.
 - la nouvelle entity selection est explicitement copiée comme partageable avec [entitySelection.copy()](API/EntitySelectionClass.md#copy) ou `OB Copy` (c'est-à-dire avec l'option `ck shared`).
 
-Exemple :
+Voici un exemple :
 
 ```4d
 var $myComp : cs.CompanyEntity
@@ -306,7 +306,7 @@ Une nouvelle entity selection est **modifiable** dans les cas suivants :
 - nouvelle entity selection créée vide à l'aide de la fonction [dataClass.newSelection()](API/DataClassClass.md#newselection) ou de la commande `Create entity selection`,
 - nouvelle entity selection explicitement copiée comme modifiable avec [entitySelection.copy()](API/EntitySelectionClass.md#copy) ou `OB Copy` (c'est-à-dire sans l'option `ck shared`).
 
-Exemple :
+Voici un exemple :
 
 ```4d
 var $toModify : cs.CompanySelection
@@ -339,7 +339,7 @@ $comp2:=$lowSal.employer //$comp2 est modifiable car $lowSal est modifiable
 
 :::note Entity selections retournées depuis le serveur
 
-Dans l'architecture client/serveur, les entity selections renvoyées par le serveur sont toujours partageables sur le client, même si [`copy()`](API/EntitySelectionClass.md#copy) a été appelée sur le serveur. Pour rendre une telle entity selection modifiable côté client, vous devez exécuter [`copy()`](API/EntitySelectionClass.md#copy) côté client. Exemple :
+Dans l'architecture client/serveur, les entity selections renvoyées par le serveur sont toujours partageables sur le client, même si [`copy()`](API/EntitySelectionClass.md#copy) a été appelée sur le serveur. Pour rendre une telle entity selection modifiable côté client, vous devez exécuter [`copy()`](API/EntitySelectionClass.md#copy) côté client. Voici un exemple :
 
 ```4d
 	//une fonction est toujours exécutée sue le serveur

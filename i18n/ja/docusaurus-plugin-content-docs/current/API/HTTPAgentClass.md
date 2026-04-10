@@ -39,6 +39,14 @@ HTTPAgent オブジェクトは共有可能なため、 シングルトンクラ
 
 <!-- REF #4D.HTTPAgent.new().Syntax -->**4D.HTTPAgent.new**( { *options* : Object } ) : 4D.HTTPAgent<!-- END REF -->
 
+<details><summary>履歴</summary>
+
+| リリース | 内容                                |
+| ---- | --------------------------------- |
+| 21   | *storeCertificateName* プロパティのサポート |
+
+</details>
+
 <!-- REF #4D.HTTPAgent.new().Params -->
 
 <div class="no-index">

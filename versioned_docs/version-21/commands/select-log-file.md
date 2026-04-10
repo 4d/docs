@@ -4,7 +4,7 @@ title: SELECT LOG FILE
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SELECT LOG FILE.Syntax-->**SELECT LOG FILE** ( *logFile* : Text )<br/>**SELECT LOG FILE** ( * )<!-- END REF-->
+<!--REF #_command_.SELECT LOG FILE.Syntax-->**SELECT LOG FILE** ( *logFile* )<br/>**SELECT LOG FILE** ( * )<!-- END REF-->
 <!--REF #_command_.SELECT LOG FILE.Params-->
 <div class="no-index">
 
@@ -14,17 +14,6 @@ displayed_sidebar: docs
 | \* | Operator | &#8594;  | Close the current log file |
 </div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|11 SQL|Modified|
-|<6|Created|
-
-</details>
-</div>
 
 ## Description 
 

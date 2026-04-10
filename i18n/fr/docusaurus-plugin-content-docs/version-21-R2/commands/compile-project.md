@@ -5,11 +5,9 @@ slug: /commands/compile-project
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Compile project.Syntax-->**Compile project** ( {*options* : Object} ) : Object<br/>**Compile project** ( *projectFile* : 4D.File {; *options* : Object} ) : Object<!-- END REF-->
+<!--REF #_command_.Compile project.Syntax-->**Compile project** ( {*options* : Object} ) : Object<br/>**Compile project** ( *projectFile* : 4D.File } {; *options* : Object} ) : Object<!-- END REF-->
 
 <!--REF #_command_.Compile project.Params-->
-
-<div class="no-index">
 
 | Paramètres  | Type                    |                             | Description                                                   |
 | ----------- | ----------------------- | --------------------------- | ------------------------------------------------------------- |
@@ -17,10 +15,8 @@ displayed_sidebar: docs
 | options     | Object                  | &#8594; | Objet qui spécifie les options de compilation                 |
 | Résultat    | Object                  | &#8592; | Objet contenant des informations sur le statut de compilation |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>Historique</summary>
 
 | Release | Modifications                                    |
@@ -28,7 +24,6 @@ displayed_sidebar: docs
 | 20 R8   | Prise en charge du `type` "formObjectExpression" |
 
 </details>
-</div>
 
 ## Description
 
@@ -104,7 +99,7 @@ L'objet renvoyé par **Compile project** possède jusqu'à trois propriétés :
 | symbols.methods\[\].params       | Collection          | Collection de types de paramètres (codes numériques des types de valeurs)                                                             |
 | symbols.methods\[\]. threadSafe  | Boolean             | Indique si cette méthode est *thread safe*                                                                                                               |
 
-Pour plus d'informations, voir [Outils de compilation](../Projet/compiler.md#compilation-tools).
+Pour plus d'informations, voir [Outils de compilation](../Project/compiler.md#compilation-tools).
 
 ## Objets variables
 
@@ -147,14 +142,14 @@ Pour effectuer un contrôle de syntaxe uniquement, passez une collection vide au
  $status:=Compile project($options)
 ```
 
-Compilez le projet actuel en utilisant uniquement les options de compilateur définies dans les Paramètres de Structure :
+Compilez le projet courant en utilisant uniquement les options de compilateur définies dans les Paramètres de Structure :
 
 ```4d
  var $status : Object
  $status:=Compile project
 ```
 
-Sur un Mac Silicon, compilez le projet actuel uniquement pour ARM :
+Sur un Mac Silicon, compilez le projet courant uniquement pour ARM :
 
 ```4d
  var $status : Object
@@ -163,7 +158,7 @@ Sur un Mac Silicon, compilez le projet actuel uniquement pour ARM :
  $status:=Compile project($options)
 ```
 
-Compilez un projet autre que le projet actuel :
+Compilez un projet autre que le projet courant :
 
 ```4d
  var $status : Object
@@ -183,7 +178,7 @@ Compilez un projet et déclarez son composant :
  $status:=Compile project($options)
 ```
 
-Désactivez les avertissements 518.1 et 518.2 lors de la compilation de votre projet :
+Désactivez les warnings 518.1 et 518.2 lors de la compilation de votre projet :
 
 ```4d
 var $options:={}

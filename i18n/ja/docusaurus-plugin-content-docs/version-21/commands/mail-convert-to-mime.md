@@ -4,11 +4,18 @@ title: MAIL Convert to MIME
 displayed_sidebar: docs
 ---
 
+<details><summary>履歴</summary>
+
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R4 | 追加 |
+| 17 R5 | 変更 |
+
+</details>
+
 <!-- REF #_command_.MAIL Convert to MIME.Syntax -->**MAIL Convert to MIME**( *mail* : Object { ; *options* : Object } ) : Text<!-- END REF -->
 
 <!-- REF #_command_.MAIL Convert to MIME.Params -->
-
-<div class="no-index">
 
 | 引数      | 型      |                             | 説明                      |
 | ------- | ------ | :-------------------------: | ----------------------- |
@@ -16,19 +23,7 @@ displayed_sidebar: docs
 | options | Object | &#8594; | 文字セットとエンコーディングのメールオプション |
 | 戻り値     | Text   | &#8592; | MIME に変換された Emailオブジェクト |
 
-</div>
 <!-- END REF -->
-
-<div class="no-index">
-<details><summary>履歴</summary>
-
-| リリース  | 内容 |
-| ----- | -- |
-| 17 R5 | 変更 |
-| 17 R4 | 追加 |
-
-</details>
-</div>
 
 ## 説明
 

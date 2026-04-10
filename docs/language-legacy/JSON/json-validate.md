@@ -5,6 +5,14 @@ slug: /commands/json-validate
 displayed_sidebar: docs
 ---
 
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|21 R2|Support of JSON Schema draft 2020-12|
+
+</details>
+
 
 <!--REF #_command_.JSON Validate.Syntax-->**JSON Validate** ( *vJson* : Object, Collection ; *vSchema* : Object ) : Object<!-- END REF-->
 <!--REF #_command_.JSON Validate.Params-->
@@ -17,18 +25,6 @@ displayed_sidebar: docs
 | Function result | Object | &#8592; | Validation status and errors (if any) |
 </div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|21 R2|Support of JSON Schema draft 2020-12|
-|16 R4|Created|
-
-</details>
-</div>
-
 
 ## Description 
 

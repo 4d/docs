@@ -4,11 +4,9 @@ title: Print form
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Print form.Syntax-->**Print form** ( {*aTable* : Table ;} *form* : Text, Object {; *formData* : Object} {; *areaStart* : Integer{; *areaEnd* : Integer}} ) : Integer<!-- END REF-->
+<!--REF #_command_.Print form.Syntax-->**Print form** ( {*aTable* ;} *form* {; *formData*} {; *areaStart*{; *areaEnd*}} ) : Integer<!-- END REF-->
 
 <!--REF #_command_.Print form.Params-->
-
-<div class="no-index">
 
 | 引数        | 型            |                             | 説明                                                                                                                            |
 | --------- | ------------ | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
@@ -19,20 +17,7 @@ displayed_sidebar: docs
 | areaEnd   | Integer      | &#8594; | 終了エリア(areaStartが指定された場合)                                                                                   |
 | 戻り値       | Integer      | &#8592; | 印刷されたエリアの高さ                                                                                                                   |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>履歴</summary>
-
-| リリース                        | 内容 |
-| --------------------------- | -- |
-| 20                          | 変更 |
-| 16 R6                       | 変更 |
-| <6 | 追加 |
-
-</details>
-</div>
 
 ## 説明
 

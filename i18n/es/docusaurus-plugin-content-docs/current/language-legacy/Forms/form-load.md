@@ -9,8 +9,6 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM LOAD.Params-->
 
-<div class="no-index">
-
 | Parámetros | Tipo         |                             | Descripción                                                                                                                                                                                                                                         |
 | ---------- | ------------ | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | aTable     | Tabla        | &#8594; | Formulario tabla a cargar (si se omite, carga un formulario proyecto)                                                                                                                                                            |
@@ -18,21 +16,7 @@ displayed_sidebar: docs
 | formData   | Object       | &#8594; | Datos a asociar al formulario                                                                                                                                                                                                                       |
 | \*         | Operador     | &#8594; | Si se pasa = el comando se aplica a la base de datos del host cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto)                                                                                  |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>Historia</summary>
-
-| Lanzamiento | Modificaciones                                  |
-| ----------- | ----------------------------------------------- |
-| 20          | Modificado                                      |
-| 16 R6       | Modificado                                      |
-| 14          | Renamed (OPEN PRINTING FORM) |
-| 12          | Created                                         |
-
-</details>
-</div>
 
 ## Descripción
 

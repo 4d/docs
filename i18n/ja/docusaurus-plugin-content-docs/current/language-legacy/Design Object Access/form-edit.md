@@ -9,27 +9,21 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM EDIT.Params-->
 
-<div class="no-index">
-
 | 引数     | 型     |                             | 説明                                                |
 | ------ | ----- | --------------------------- | ------------------------------------------------- |
 | aTable | Table | &#8594; | フォームの属するテーブルまたは 省略した場合はデフォルトテーブルまたは プロジェクトフォームを使用 |
 | form   | Text  | &#8594; | フォーム名                                             |
 | object | Text  | &#8594; | フォームオブジェクト名またはグループ名                               |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>履歴</summary>
 
 | リリース  | 内容               |
 | ----- | ---------------- |
 | 20 R8 | *object* 引数のサポート |
-| 18 R5 | Created          |
 
 </details>
-</div>
 
 ## 説明
 

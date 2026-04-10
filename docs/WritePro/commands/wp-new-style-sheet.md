@@ -42,7 +42,7 @@ The *styleSheetType* parameter lets you designate the type of the style sheet, *
 * wk type character: Applies style attributes to characters.
 * wk type paragraph: Applies style attributes to paragraphs (required if you want to create [hierarchical list style sheets](#hierarchical-list-style-sheet)).
 
-Pass a name for the style sheet in the *styleSheetName* parameter. The style sheet's name is stored with the document and facilitates reusing or modifying the style. It can also be used with the [WP Get style sheet](../WritePro/commands/wp-get-style-sheet) and [WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet) commands. The style sheet name must comply with the following rules:
+Pass a name for the style sheet in the *styleSheetName* parameter. The style sheet's name is stored with the document and facilitates reusing or modifying the style. It can also be used with the [WP Get style sheet](wp-get-style-sheet.md) and [WP DELETE STYLE SHEET](wp-delete-style-sheet.md) commands. The style sheet name must comply with the following rules:
 
 * it must start with a letter
 * it can then contain alphanumeric characters, space characters, "-" characters or unicode characters >= 128
@@ -50,7 +50,7 @@ Pass a name for the style sheet in the *styleSheetName* parameter. The style she
 * it must not start with "section", which is reserved
 * the "\_" is replaced by a space and trailing spaces are removed.
 
-You can specify the attributes of the style sheet using the [WP SET ATTRIBUTES](../commands/wp-set-attributes) command or the object notation (see [4D Write Pro Attributes](../commands-legacy/4d-write-pro-attributes.md)). For the list of available attributes, see the [Style sheet attributes](../commands-legacy/4d-write-pro-attributes.md#style-sheets) section.
+You can specify the attributes of the style sheet using the [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) command or the object notation (see [4D Write Pro Attributes](../4d-write-pro-attributes)). For the list of available attributes, see the [Style sheet attributes](../commands/4d-write-pro-attributes.md#style-sheets) section.
 
 **Notes**: 
 

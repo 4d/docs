@@ -4,11 +4,9 @@ title: SET WINDOW DOCUMENT ICON
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET WINDOW DOCUMENT ICON.Syntax-->**SET WINDOW DOCUMENT ICON** ( *winRef* : Integer )<br/>**SET WINDOW DOCUMENT ICON** ( *winRef* : Integer ; *image* : Picture )<br/>**SET WINDOW DOCUMENT ICON** ( *winRef* : Integer ; *file* : 4D.File, 4D.Folder )<br/>**SET WINDOW DOCUMENT ICON** (  *winRef* : Integer ; *image* : Picture ; *file* : 4D.File, 4D.Folder )<!-- END REF-->
+<!--REF #_command_.SET WINDOW DOCUMENT ICON.Syntax-->**SET WINDOW DOCUMENT ICON** ( *winRef* )<br/>**SET WINDOW DOCUMENT ICON** ( *winRef* ; *image* )<br/>**SET WINDOW DOCUMENT ICON** ( *winRef* ; *file* )<br/>**SET WINDOW DOCUMENT ICON** (  *winRef* ; *image* ; *file* )<!-- END REF-->
 
 <!--REF #_command_.SET WINDOW DOCUMENT ICON.Params-->
-
-<div class="no-index">
 
 | Parámetros | Tipo                                               |                             | Descripción                        |
 | ---------- | -------------------------------------------------- | --------------------------- | ---------------------------------- |
@@ -16,10 +14,8 @@ displayed_sidebar: docs
 | image      | Picture                                            | &#8594; | Ícono personalizado                |
 | file       | 4D.File, 4D.Folder | &#8594; | Ruta del archivo o de la carpeta   |
 
-</div>
 <!-- END REF-->
 
-<div class="no-index">
 <details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
@@ -27,7 +23,6 @@ displayed_sidebar: docs
 | 20 R7       | Añadidos       |
 
 </details>
-</div>
 
 ## Descripción
 

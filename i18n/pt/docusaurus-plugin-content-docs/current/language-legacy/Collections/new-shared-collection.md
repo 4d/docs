@@ -19,16 +19,6 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-<div class="no-index">
-<details><summary>História</summary>
-
-| Release | Mudanças |
-| ------- | -------- |
-| 16 R6   | Created  |
-
-</details>
-</div>
-
 ## Descrição
 
 O comando `New shared collection` <!-- REF #_command_.New shared collection.Summary --> cria uma nova coleção compartilhada vazia ou pré-preenchida<!-- END REF --> e retorna sua referência. Coleções podem ser tratadas usando propriedades e funções da [API da classe da coleção](../../API/CollectionClass.md).

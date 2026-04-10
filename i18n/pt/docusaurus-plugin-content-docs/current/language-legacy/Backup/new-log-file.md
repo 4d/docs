@@ -9,24 +9,11 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New log file.Params-->
 
-<div class="no-index">
-
 | Parâmetro | Tipo |                             | Descrição                        |
 | --------- | ---- | --------------------------- | -------------------------------- |
 | Resultado | Text | &#8592; | Full pathname of closed log file |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>História</summary>
-
-| Release                     | Mudanças |
-| --------------------------- | -------- |
-| <6 | Created  |
-
-</details>
-</div>
 
 ## Descrição
 

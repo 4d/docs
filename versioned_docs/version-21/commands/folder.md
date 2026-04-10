@@ -4,7 +4,16 @@ title: Folder
 displayed_sidebar: docs
 ---
 
-<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; * } ) : 4D.Folder<!-- END REF -->
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|19 R8 |Support of `fk home folder`|
+|17 R5|Added|
+
+</details>
+
+<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; \* } ) : 4D.Folder<!-- END REF -->
 
 
 <!-- REF #_command_.Folder.Params -->
@@ -15,28 +24,16 @@ displayed_sidebar: docs
 |path|Text|&#8594; |Folder path|
 |folderConstant|Integer|&#8594; |4D folder constant|
 |pathType|Integer|&#8594; |`fk posix path` (default) or `fk platform path`|
-|*|Operator|&#8594; |* to return folder of host database|
+|*|operator|&#8594; |* to return folder of host database|
 |Result|[4D.Folder](../API/FolderClass.md)|&#8592;|New folder object|
 </div>
 <!-- END REF -->
-
-<div class="no-index">
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|19 R8 |Support of `fk home folder`|
-|17 R5|Added|
-
-</details>
-</div>
-
 
 ## Description
 
 The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the [`4D.Folder`](../API/FolderClass.md) type<!-- END REF -->. The command accepts two syntaxes:
 
-**Folder ( path { ; pathType } { ; * } )**
+**Folder ( path { ; pathType } { ; \* } )**
 
 In the *path* parameter, pass a folder path string. You can use a custom string or a [filesystem](../Concepts/paths.md#filesystem-pathnames) (e.g., "/DATA").
 
@@ -49,7 +46,7 @@ By default, 4D expects a path expressed with the POSIX syntax. If you work with 
 |fk platform path|1|Path expressed with a platform-specific syntax (mandatory in case of platform pathname)|
 |fk posix path|0|Path expressed with POSIX syntax (default)
 
-**Folder ( folderConstant { ; * } )**
+**Folder ( folderConstant { ; \* } )**
 
 In the *folderConstant* parameter, pass a 4D built-in or system folder, using one of the following constants:
 

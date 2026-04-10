@@ -3,9 +3,9 @@ id: onAfterSort
 title: On After Sort
 ---
 
-| Code | Pode ser chamado por                                                                            | Definição                                                                                 |
-| ---- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| 30   | [List Box](FormObjects/listbox_overview.md) - [Columna List Box](FormObjects/listbox-column.md) | Uma ordenação standard acaba de ser efectuada numa coluna de um list box. |
+| Code | Pode ser chamado por                                                                                                  | Definição                                                                                 |
+| ---- | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| 30   | [List Box](FormObjects/listbox_overview.md) - [Columna de List Box](FormObjects/listbox_overview.md#list-box-columns) | Uma ordenação standard acaba de ser efectuada numa coluna de um list box. |
 
 ## Descrição
 

@@ -8,18 +8,14 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.ZIP Read archive.Params -->
 
-<div class="no-index">
-
 | Parámetros | Tipo                          |                             | Descripción                           |
 | ---------- | ----------------------------- | :-------------------------: | ------------------------------------- |
 | zIPFile    | 4D.File       | &#8594; | Archivos Zip                          |
 | contraseña | Text                          | &#8594; | Contraseña del archivo ZIP, si la hay |
 | Resultado  | 4D.ZipArchive | &#8592; | Objeto archivo                        |
 
-</div>
 <!-- END REF -->
 
-<div class="no-index">
 <details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
@@ -27,7 +23,6 @@ displayed_sidebar: docs
 | 18          | Añadidos       |
 
 </details>
-</div>
 
 ## Descripción
 

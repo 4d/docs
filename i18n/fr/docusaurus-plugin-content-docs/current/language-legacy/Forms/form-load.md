@@ -9,8 +9,6 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM LOAD.Params-->
 
-<div class="no-index">
-
 | Paramètres | Type         |                             | Description                                                                                                                                                                                                                              |
 | ---------- | ------------ | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | aTable     | Table        | &#8594; | Formulaire table à charger (si omis, charger un formulaire projet)                                                                                                                                                    |
@@ -18,21 +16,7 @@ displayed_sidebar: docs
 | formData   | Object       | &#8594; | Données à associer au formulaire                                                                                                                                                                                                         |
 | \*         | Opérateur    | &#8594; | Si passé = la commande s'applique à la base de données hôte lorsqu'elle est exécutée à partir d'un composant (paramètre ignoré en dehors de ce contexte)                                                              |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>Historique</summary>
-
-| Release | Modifications                                   |
-| ------- | ----------------------------------------------- |
-| 20      | Modifié                                         |
-| 16 R6   | Modifié                                         |
-| 14      | Renamed (OPEN PRINTING FORM) |
-| 12      | Created                                         |
-
-</details>
-</div>
 
 ## Description
 

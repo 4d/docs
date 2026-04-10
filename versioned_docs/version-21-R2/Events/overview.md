@@ -29,7 +29,7 @@ objectName|text|Name of the object triggering the event - Not included if the ev
 
 Additional properties are returned when the event occurs on specific objects. In particular:
 
-- [list boxes](FormObjects/listbox-object.md#supported-form-events) and [list box columns](FormObjects/listbox-column.md#supported-form-events) return [additional properties](FormObjects/listbox-object.md#supported-form-events) such as `columnName` or `isRowSelected`.
+- [list boxes](FormObjects/listbox_overview.md#supported-form-events) and [list box columns](FormObjects/listbox_overview.md#supported-form-events-1) return [additional properties](FormObjects/listbox_overview.md#supported-form-events) such as `columnName` or `isRowSelected`.
 - [4D View Pro areas](FormObjects/viewProArea_overview.md) return for example `sheetName` or `action` properties in the [On After Edit](onAfterEdit.md) event object.  
 
 

@@ -8,25 +8,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New shared collection.Params-->
 
-<div class="no-index">
-
 | 引数    | 型          |                             | 説明                    |
 | ----- | ---------- | --------------------------- | --------------------- |
 | value | any        | &#8594; | 共有コレクションの値            |
 | 戻り値   | Collection | &#8592; | New shared collection |
 
-</div>
 <!-- END REF-->
-
-<div class="no-index">
-<details><summary>履歴</summary>
-
-| リリース  | 内容      |
-| ----- | ------- |
-| 16 R6 | Created |
-
-</details>
-</div>
 
 ## 説明
 
