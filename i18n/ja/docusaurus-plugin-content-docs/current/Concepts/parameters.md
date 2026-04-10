@@ -170,7 +170,7 @@ Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
 たとえば、次の関数は引数 $x の 2乗を返します。 $x は数値です。
 
 ```4d
-Function square($x : Integer) -> $result : Integer
+Function square($x : Integer) : Integer
    return $x * $x
 ```
 
