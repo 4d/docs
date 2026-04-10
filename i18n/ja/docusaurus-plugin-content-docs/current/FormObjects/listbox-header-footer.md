@@ -1,11 +1,11 @@
 ---
 id: listbox-header-footer
-title: List Box Header and Footer
+title: リストボックスのヘッダーとフッター
 ---
 
 :::note
 
-- To be able to access header properties for a list box, you must enable the [Display Headers](properties_Headers.md#display-headers) option.
+- リストボックスのヘッダープロパティにアクセスするためには、リストボックスのプロパティリストで [ヘッダーを表示](properties_Headers.md#ヘッダーを表示) オプションが選択されていなければなりません。
 - リストボックスのフッタープロパティにアクセスするためには、リストボックスのプロパティリストで [フッターを表示](properties_Footers.md#フッターを表示) オプションが選択されていなければなりません。
 
 :::
@@ -18,7 +18,7 @@ title: List Box Header and Footer
 
 リストボックスの各列ヘッダー毎に標準のテキストプロパティを設定できます。 設定すると、これらのプロパティの方がリストボックスや列に対する設定よりも優先されます。
 
-さらに、ヘッダー特有のプロパティを設定することができます。 Specifically, an icon can be displayed in the header next to or in place of the column title, for example when performing [customized sorts](./listbox_overview.md#managing-sorts).
+さらに、ヘッダー特有のプロパティを設定することができます。 [カスタマイズされた並び替え](./listbox_overview.md#ソートの管理) などの用途に、ヘッダーの列タイトルの隣、あるいはタイトルの代わりにアイコンを表示することができます。
 
 ![](../assets/en/FormObjects/lbHeaderIcon.png)
 
