@@ -39,14 +39,6 @@ Comme HTTPAgent est un objet partageable, vous pouvez en ajouter un à une class
 
 <!-- REF #4D.HTTPAgent.new().Syntax -->**4D.HTTPAgent.new**( { *options* : Object } ) : 4D.HTTPAgent<!-- END REF -->
 
-<details><summary>Historique</summary>
-
-| Release | Modifications                                          |
-| ------- | ------------------------------------------------------ |
-| 21      | Prise en charge de la propriété *storeCertificateName* |
-
-</details>
-
 <!-- REF #4D.HTTPAgent.new().Params -->
 
 <div class="no-index">
