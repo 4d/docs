@@ -8,11 +8,24 @@ displayed_sidebar: docs
 
 <!--REF #_command_.USE ENTITY SELECTION.Params-->
 
+<div class="no-index">
+
 | Parâmetro       | Tipo                                |                             | Descrição            |
 | --------------- | ----------------------------------- | --------------------------- | -------------------- |
 | entitySelection | 4D. EntitySelection | &#8594; | Seleção de entidades |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>História</summary>
+
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
+
+</details>
+</div>
 
 ## Descrição
 
