@@ -8,12 +8,16 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM theme.Params-->
 
+<div class="no-index">
+
 | Parâmetro | Tipo |                             | Descrição                                                                                            |
 | --------- | ---- | --------------------------- | ---------------------------------------------------------------------------------------------------- |
 | Resultado | Text | &#8592; | Theme used by the current form: "Classic" or "FluentUI" (Windows) |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>História</summary>
 
 | Release | Mudanças   |
@@ -21,6 +25,7 @@ displayed_sidebar: docs
 | 21 R2   | Adicionado |
 
 </details>
+</div>
 
 ## Descrição
 
