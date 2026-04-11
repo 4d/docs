@@ -5,9 +5,11 @@ slug: /commands/num
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Num.Syntax-->**Num** ( *expression* {; *separator*} ) : Real<br/>**Num** ( *expression* ; *base* ) : Real<!-- END REF-->
+<!--REF #_command_.Num.Syntax-->**Num** ( *expression* : Text, Boolean, Integer {; *separator* : Text} ) : Real<br/>**Num** ( *expression* : Text, Boolean, Integer ; *base* : Integer ) : Real<!-- END REF-->
 
 <!--REF #_command_.Num.Params-->
+
+<div class="no-index">
 
 | Parâmetro | Tipo                   |                             | Descrição                                                                                       |
 | --------- | ---------------------- | --------------------------- | ----------------------------------------------------------------------------------------------- |
@@ -16,15 +18,19 @@ displayed_sidebar: docs
 | base      | Integer                | &#8594; | Value between 2 and 36 that represents the radix                                                |
 | Resultado | Real                   | &#8592; | Numeric form of the expression parameter                                                        |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>História</summary>
 
-| Release | Mudanças                    |
-| ------- | --------------------------- |
-| 21      | Support of *base* parameter |
+| Release                     | Mudanças                    |
+| --------------------------- | --------------------------- |
+| 21                          | Support of *base* parameter |
+| <6 | Created                     |
 
 </details>
+</div>
 
 ## Descrição
 
