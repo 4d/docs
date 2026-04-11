@@ -32,6 +32,7 @@ Os objetos IMAP Transporter são instanciados com o comando [IMAP New transporte
 | [<!-- INCLUDE #transporter.host.Syntax -->](#host)<br/><!-- INCLUDE #transporter.host.Summary -->                                                                   |
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<br/><!-- INCLUDE #transporter.logFile.Summary -->                                                          |
 | [<!-- INCLUDE #IMAPTransporterClass.move().Syntax -->](#move)<br/><!-- INCLUDE #IMAPTransporterClass.move().Summary -->                                             |
+| [<!-- INCLUDE #IMAPTransporterClass.notifier.Syntax -->](#notifier)<br/><!-- INCLUDE #IMAPTransporterClass.notifier.Summary -->                                     |
 | [<!-- INCLUDE #IMAPTransporterClass.numToID().Syntax -->](#numtoid)<br/><!-- INCLUDE #IMAPTransporterClass.numToID().Summary -->                                    |
 | [<!-- INCLUDE #IMAPTransporterClass.removeFlags().Syntax -->](#removeflags)<br/><!-- INCLUDE #IMAPTransporterClass.removeFlags().Summary -->                        |
 | [<!-- INCLUDE #IMAPTransporterClass.renameBox().Syntax -->](#renamebox)<br/><!-- INCLUDE #IMAPTransporterClass.renameBox().Summary -->                              |
@@ -52,7 +53,7 @@ Os objetos IMAP Transporter são instanciados com o comando [IMAP New transporte
 
 | Parâmetro  | Tipo                               |                             | Descrição                                                |
 | ---------- | ---------------------------------- | :-------------------------: | -------------------------------------------------------- |
-| server     | Object                             |              ->             | Informação de servidor de correio                        |
+| parâmetro  | Object                             |              ->             | Mail server configuration                                |
 | Resultados | 4D.IMAPTransporter | <- | [Objeto do transportador IMAP](#imap-transporter-object) |
 
 </div>
@@ -1282,6 +1283,20 @@ Para mover todas as mensagens na mailbox atual:
   // mover todas as mensagens da caixa de correio actual para a caixa de correio "documents"
  $status:=$transporter.move(IMAP all;"documents")
 ```
+
+<!-- END REF -->
+
+  <!-- REF IMAPTransporterClass.notifier.Desc -->
+
+## .notifier
+
+<!-- REF #IMAPTransporterClass.notifier.Syntax -->**.notifier** : 4D.IMAPNotifier<!-- END REF -->
+
+#### Descrição
+
+The `.notifier` property <!-- REF #IMAPTransporterClass.notifier.Summary -->contains the IMAPNotifier object associated with the transporter<!-- END REF -->. Essa propriedade é **somente leitura**.
+
+See [IMAPNotifier](./IMAPNotifierClass.md).
 
 <!-- END REF -->
 
