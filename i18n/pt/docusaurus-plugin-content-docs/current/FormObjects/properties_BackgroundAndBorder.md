@@ -17,7 +17,7 @@ Você também pode definir esta propriedade usando o comando [`OBJECT SET RGB CO
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [Columna List Box](listbox-column.md)
 
 #### Comandos
 
@@ -41,7 +41,7 @@ Você também pode definir esta propriedade usando o comando [`OBJECT SET RGB CO
 
 #### Objectos suportados
 
-[Lista hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna List Box](listbox_overview.md#list-box-columns) - [Rodapé List Box](listbox_overview.md#list-box-footers) - [Oval](shapes_overview.md#oval) - [Rectângulo](shapes_overview.md#rectangle) - [Área de texto](text.md)
+[Lista hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Coluna List Box](listbox-column.md) - [Rodapé List Box](listbox-header-footer.md#footers) - [Oval](shapes_overview.md#oval) - [Rectângulo](shapes_overview.md#rectangle) - [Área de texto](text.md)
 
 #### Comandos
 
@@ -71,7 +71,7 @@ Você também pode definir esta propriedade usando o comando [`LISTBOX SET PROPE
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [Columna List Box](listbox-column.md)
 
 #### Comandos
 
@@ -224,7 +224,7 @@ Você pode obter o mesmo resultado usando os comandos [`LISTBOX SET ROW STYLE`](
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [Columna List Box](listbox-column.md)
 
 #### Comandos
 
