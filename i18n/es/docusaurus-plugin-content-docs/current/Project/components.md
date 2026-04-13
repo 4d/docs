@@ -37,7 +37,7 @@ When developing in 4D, the component files can be transparently stored in your c
 
 :::note
 
-This section describes how to work with components in the **4D** and **4D Server** environments. En otros entornos, los componentes se gestionan de manera diferente:
+Esta sección describe cómo trabajar con componentes en los entornos **4D** y **4D Server**. En otros entornos, los componentes se gestionan de manera diferente:
 
 - en [4D en modo remoto](../Desktop/clientServer.md), los componentes son cargados por el servidor y enviados a la aplicación remota.
 - en las aplicaciones fusionadas, los componentes se [incluyen en el paso de compilación](../Desktop/building.md#plugins--components-page).
@@ -196,7 +196,7 @@ Estos pasos pueden automatizarse fácilmente, con código 4D o utilizando GitHub
 
 #### Configuring a GitLab repository
 
-GitLab releases only store the name and URL of assets, they do not contain uploaded files. You need to provide your component's zip file as a link.
+GitLab releases only store the name and URL of assets, they do not contain uploaded files. Debe ofrecer el archivo zip de su componente como enlace.
 
 1. Upload the component's ZIP file somewhere, i.e. either on an external server, or [using GitLab Package Registry](#using-the-gitlab-package-registry) (generic package).
 2. Create a [GitLab release](https://docs.gitlab.com/user/project/releases/) for your component, including the link to your component's file as release asset.
@@ -211,7 +211,7 @@ The [GitLab Package Registry](https://docs.gitlab.com/user/packages/package_regi
 2. Upload it to the [generic packages repository](https://docs.gitlab.com/user/packages/generic_packages/) using a script (see [examples in the GitLab documentation](https://docs.gitlab.com/user/packages/generic_packages/#publish-a-single-file)).
 3. **Deploy** \> **Package Registry** to see the result.
 4. Utilice la URL del paquete como enlace a los activos de la versión.
-5. Associate it with the same Git tag.
+5. Asócielo con la misma etiqueta Git.
 
 #### Declarando rutas
 
@@ -321,17 +321,17 @@ El desarrollador del componente puede definir una versión mínima de 4D en el a
 
 :::
 
-#### Authentication and tokens
+#### Autenticación y tokens
 
 Si quiere integrar un componente ubicado en un repositorio privado, necesita decirle a 4D que utilice un token de conexión para acceder a él.
 
 - for GitHub: in your [GitHub token interface](https://github.com/settings/tokens), create a token with the recommended following properties:
   - type: **classic**
-  - access rights: **repo**
+  - derechos de acceso: **repo**
 
-- for GitLab: in your GitLab account, create a token with the following properties:
+- para GitLab: en su cuenta de GitLab, cree un token con las siguientes propiedades:
   - type: **Personal Access token**
-  - scopes: **read_api** and **read_repository**
+  - alcances: **read_api** y **read_repository**
 
 A continuación, deberá [suministrar su token de conexión](#providing-your-access-token) al gestor de dependencias.
 
@@ -496,7 +496,7 @@ La dependencia se añade a la [lista de dependencias inactivas](#dependency-stat
 
 ### Adding a GitHub or GitLab dependency
 
-To add a [GitHub or GitLab dependency](#components-stored-on-git-hosting-platforms):
+Para añadir una [dependencia GitHub o GitLab](#components-stored-on-git-hosting-platforms):
 
 1. Click on the **[+]** button in the footer area of the panel and select the tab corresponding to your platform: **GitHub** or **GitLab**.
 
@@ -512,7 +512,7 @@ Los componentes ya instalados no están listados.
 
 :::
 
-2. Enter the path of the GitHub or GitLab repository of the dependency. It could be:
+2. Enter the path of the GitHub or GitLab repository of the dependency. Podría ser:
 
 - a **repository URL** (e.g. "https://github.com/vdelachaux/UI-with-Classes")
 - (GitLab only) a self-hosted instance private server URL (e.g. "https://git-my-server.com/4d/components/mycomponent")
@@ -546,11 +546,11 @@ Puede definir la opción [etiqueta o versión](#tags-and-versions) para una depe
 - **Versión exacta (Etiqueta)**: selecciona o introduce manualmente una [etiqueta específica](#tags-and-versions) de la lista disponible.
 - **Latest** (GitHub) or **Highest** (GitLab): Allows to download the release that is tagged as the most recent version. **Warning:** While using this option can be convenient during early development, it is better to avoid it in production or shared projects since it automatically pulls in newer releases, including beta releases, which may lead to unexpected updates or breaking changes.
 
-The current dependency version is displayed on the right side of the dependency item:
+La versión actual de la dependencia se muestra a la derecha del elemento de la dependencia:
 
 ![dependency-origin](../assets/en/Project/dependency-version.png)
 
-#### Modifying the dependency version range
+#### Modificación del intervalo de versiones de las dependencias
 
 You can modify the [version setting](#defining-a-dependency-version-range) for a listed dependency: select the dependency to modify and select **Edit the dependency...** from the contextual menu. En el cuadro de diálogo "Editar la dependencia", edite el menú Regla de dependencia y haga clic en **Aplicar**.
 
@@ -637,7 +637,7 @@ To provide your GitHub or GitLab access token, you can either:
 
 ![dependency-add-token](../assets/en/Project/dependency-add-token-button.png)
 
-- or, select **Add a GitHub personal access token...** or **Add a GitLab personal access token...** in the Dependency manager menu at any moment. For GitLab access tokens, you can select the host:
+- or, select **Add a GitHub personal access token...** or **Add a GitLab personal access token...** in the Dependency manager menu at any moment. Para los tokens de acceso de GitLab, puede seleccionar el host:
 
 ![dependency-add-token](../assets/en/Project/dependency-add-token.png)
 
@@ -647,7 +647,7 @@ Luego puede introducir su token de acceso personal:
 
 #### Editing a token
 
-You can only enter one personal access token per host. Once a token has been entered, you can **edit** it.
+Sólo puede introducir un token de acceso personal por host. Una vez se ha sido introducido un token, puede **editarlo**.
 
 El token proporcionado se almacena en un archivo **github.json** en la [carpeta activa de 4D](../commands/get-4d-folder#active-4d-folder).
 
