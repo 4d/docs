@@ -42,7 +42,7 @@ Tenga en cuenta que, aunque no tenga parámetros (ver arriba), una función obje
  $o:=$f.message //devuelve el objeto función en $o
 ```
 
-You can also execute a function using the [`apply()`](#apply) and [`call()`](#call):
+También puede ejecutar una función utilizando [`apply()`](#apply) y [`call()`](#call):
 
 ```4d
  $message.apply() //muestra "Hello world"
