@@ -1125,9 +1125,9 @@ Sin embargo, hay una diferencia entre ambas afirmaciones cuando la selección es
 <!-- REF #EntitySelectionClass.getDataClass().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|4D.DataClass|<-|Dataclass object to which the entity selection belongs|
+|Resultado|4D.DataClass|<-|Dataclass object to which the entity selection belongs|
 </div>
 <!-- END REF -->
 
