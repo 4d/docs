@@ -208,6 +208,6 @@ Para más información, consulte la descripción del comando `EXECUTE METHOD IN 
 [Ocultar rectángulo de enfoque](properties_Appearance.md#hide-focus-rectangle) -
 [Barra de desplazamiento horizontal](properties_Appearance.md#horizontal-scroll-bar) - [Dimensionado horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Izquierda](properties_CoordinatesAndSizing.md#left) - [Formulario listado](properties_Subform.md#list-form) - [Método](properties_Action.md#method) - [Nombre de objeto](properties_Object.md#object-name) - [Marco de impresión](properties_Print.md#print-frame) - [Derecha](properties_CoordinatesAndSizing.md#right) - [Modo de selección](properties_Subform.md#selection-mode) - [Fuente](properties_Subform.md#source) - [Superior](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Variable o Expresión](properties_Object.md#variable-or-expression) - [Barra de desplazamiento vertical](properties_Appearance.md#vertical-scroll-bar) - [Dimensionado vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidad](properties_Display.md#visibility) - [Ancho](properties_CoordinatesAndSizing.md#width)
 
-## Supported Events
+## Eventos soportados
 
 [On Data Change](../Events/onDataChange.md) - [On Getting focus](../Events/onGettingFocus.md) - [On Load](../Events/onLoad.md) - [On Losing focus](../Events/onLosingFocus.md) - [On Unload](../Events/onUnload.md) - [On Validate](../Events/onValidate.md)
