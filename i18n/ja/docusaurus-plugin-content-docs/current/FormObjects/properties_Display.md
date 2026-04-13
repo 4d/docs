@@ -46,9 +46,7 @@ RB-1762-1
 
 #### 対象オブジェクト
 
-[コンボボックス](comboBox_overview.md)* [ドロップダウンリスト](dropdownList_Overview.md)
-* [リストボックス列](listbox_overview.md#リストボックス列)
-* [リストボックスフッター](listbox_overview.md#リストボックスフッター)
+[Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
 
 #### コマンド
 
@@ -107,13 +105,13 @@ RB-1762-1
 :::note blankIfNull
 
 - デフォルトでは、 [null 日付](../Concepts/dt_date.md#日付リテラル) は 00/00/00 のように、ゼロとして表示されます。 "blankIfNull" オプションを使用すると、null の日付は空白として表示されます。 "blankIfNull" 文字列 (文字の大小を区別) は、選択されたフォーマットの値と組み合わせて使います。 例: "systemShort blankIfNull" または "LLLdd日 ee blankIfNull"。
-- 日付型の [リストボックスの列](listbox_overview.md#リストボックス列]) および [リストボックスのフッター](listbox_overview.md#リストボックスフッター) は常に "blankIfNull" (null値は空白表示) の振る舞いをします (解除できません)。
+- [List box columns](listbox-column.md) and [list box footers](listbox-header-footer.md#footers) of type date always use the "blank if null" behavior (it cannot be disengaged).
 
 :::
 
 #### 対象オブジェクト
 
-[コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [入力](input_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター)
+[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
 
 #### コマンド
 
@@ -278,12 +276,7 @@ RB-1762-1
 
 #### 対象オブジェクト
 
-[コンボボックス](comboBox_overview.md) -
-[ドロップダウンリスト](dropdownList_Overview.md) -
-[入力](input_overview.md) -
-[リストボックス列](listbox_overview.md#リストボックス列) -
-[リストボックスフッター](listbox_overview.md#リストボックスフッター) -
-[進捗インジケーター](progressIndicator.md)
+[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [Progress Indicators](progressIndicator.md)
 
 #### コマンド
 
@@ -347,7 +340,7 @@ RB-1762-1
 
 #### 対象オブジェクト
 
-[入力](input_overview.md)* [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター)
+[Input](input_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
 
 #### コマンド
 
@@ -405,7 +398,7 @@ Customized time formats can be built using several patterns described in the [**
 
 #### 対象オブジェクト
 
-[コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [入力](input_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター)
+[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
 
 #### コマンド
 
@@ -418,7 +411,7 @@ Customized time formats can be built using several patterns described in the [**
 [ブール式](properties_Object.md#式の型) を次のフォームオブジェクトで表示した場合:
 
 - [入力オブジェクト](input_overview.md) にテキストとして
-- [リストボックス列](listbox_overview.md#リストボックス列) に表示タイプ ["ポップアップ"](properties_Display.md#表示タイプ) を選択して
+- a ["popup"](properties_Display.md#display-type) in a [list box column](listbox-column.md),
 
 ... 値の代わりに表示するテキストを指定することができます:
 
@@ -433,7 +426,7 @@ Customized time formats can be built using several patterns described in the [**
 
 #### 対象オブジェクト
 
-[リストボックス列](listbox_overview.md#リストボックス列) - [入力](input_overview.md)
+[List Box Column](listbox-column.md) - [Input](input_overview.md)
 
 #### コマンド
 
@@ -457,7 +450,7 @@ Customized time formats can be built using several patterns described in the [**
 
 #### 対象オブジェクト
 
-[リストボックス列](listbox_overview.md#リストボックス列)
+[List Box Column](listbox-column.md)
 
 #### コマンド
 
@@ -509,7 +502,7 @@ Customized time formats can be built using several patterns described in the [**
 
 #### 対象オブジェクト
 
-[チェックボックス](checkbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
+[Check box](checkbox_overview.md) - [List Box Column](listbox-column.md)
 
 #### コマンド
 
@@ -534,7 +527,7 @@ Customized time formats can be built using several patterns described in the [**
 
 #### 対象オブジェクト
 
-[リストボックス列](listbox_overview.md#リストボックス列)
+[List Box Column](listbox-column.md)
 
 ---
 
@@ -571,7 +564,7 @@ Customized time formats can be built using several patterns described in the [**
 
 #### 対象オブジェクト
 
-[リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター)
+[List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
 
 #### コマンド
 
@@ -606,32 +599,7 @@ Customized time formats can be built using several patterns described in the [**
 
 #### 対象オブジェクト
 
-[4D View Pro エリア](viewProArea_overview.md) -
-[4D Write Pro エリア](writeProArea_overview.md) -
-[ボタン](button_overview.md) -
-[ボタングリッド](buttonGrid_overview.md) -
-[チェックボックス](checkbox_overview.md) -
-[コンボボックス](comboBox_overview.md) -
-[ドロップダウンリスト](dropdownList_Overview.md) -
-[グループボックス](groupBox.md) -
-[階層リスト](list_overview.md) -
-[リストボックス](listbox_overview.md) -
-[リストボックス列](listbox_overview.md#リストボックス列) -
-[リストボックスフッター](listbox_overview.md#リストボックスフッター) -
-[リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) -
-[ピクチャーボタン](pictureButton_overview.md) -
-[ピクチャーポップアップメニュー](picturePopupMenu_overview.md) -
-[プラグインエリア](pluginArea_overview.md) -
-[進捗インジケーター](progressIndicator.md) -
-[ラジオボタン](radio_overview.md) -
-[スピナー](spinner.md) -
-[スプリッター](splitters.md) -
-[スタティックピクチャー](staticPicture.md) -
-[ステッパー](stepper.md) -
-[サブフォーム](subform_overview.md) -
-[タブコントロール](tabControl.md) -
-[テキストエリア](text.md) -
-[Web エリア](webArea_overview.md)
+[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [List Box Header](listbox-header-footer.md#headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
 #### コマンド
 
@@ -690,7 +658,7 @@ Customized time formats can be built using several patterns described in the [**
 
 #### 対象オブジェクト
 
-[入力](input_overview.md)* [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター)
+[Input](input_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
 
 #### コマンド
 

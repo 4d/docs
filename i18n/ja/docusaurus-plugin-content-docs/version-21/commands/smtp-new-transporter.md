@@ -8,13 +8,17 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SMTP New transporter.Params-->
 
+<div class="no-index">
+
 | 引数     | 型                                  |                             | 説明                                                                                |
 | ------ | ---------------------------------- | --------------------------- | --------------------------------------------------------------------------------- |
 | server | Object                             | &#8594; | メールサーバー情報                                                                         |
 | 戻り値    | 4D.SMTPTransporter | &#8592; | [SMTP transporter オブジェクト](../API/SMTPTransporterClass.md#smtp-transporter-object) |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>履歴</summary>
 
 | リリース  | 内容                                   |
@@ -24,6 +28,7 @@ displayed_sidebar: docs
 | 17 R4 | 追加                                   |
 
 </details>
+</div>
 
 ## 説明
 

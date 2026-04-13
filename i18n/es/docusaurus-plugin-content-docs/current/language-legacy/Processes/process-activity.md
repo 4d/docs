@@ -9,22 +9,27 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Process activity.Params-->
 
+<div class="no-index">
+
 | Parámetros | Tipo    |                             | Descripción                                                                                          |
 | ---------- | ------- | --------------------------- | ---------------------------------------------------------------------------------------------------- |
 | sessionID  | Text    | &#8594; | ID de sesión                                                                                         |
 | options    | Integer | &#8594; | Opciones de retorno                                                                                  |
 | Resultado  | Object  | &#8592; | Instantánea de los procesos en ejecución y/o sesiones de usuario (sólo 4D Server) |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                    |
-| ----------- | --------------------------------- |
-| 20 R7       | Soporte del parámetro *sessionID* |
-| 21          | Soporte de sesiones usuario web   |
+| Lanzamiento | Modificaciones                                                                            |
+| ----------- | ----------------------------------------------------------------------------------------- |
+| 21          | Soporte de sesiones usuario web                                                           |
+| 20 R7       | <ul><li>Support of *sessionID* parameter</li><li>Renamed (Get process activity)</li></ul> |
 
 </details>
+</div>
 
 ## Descripción
 

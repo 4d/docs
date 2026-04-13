@@ -5,7 +5,7 @@ slug: /commands/listbox-sort-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SORT COLUMNS.Syntax-->**LISTBOX SORT COLUMNS** ( * ; *object* : Text ; *colNum* : Integer ; *order* : Comparator {; ...(*colNum* : Integer ; *order* : Comparator)} )<br/>**LISTBOX SORT COLUMNS** ( *object* : Variable ; *colNum* : Integer ; *order* : Comparator {; ...(*colNum* : Integer ; *order* : Comparator)} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SORT COLUMNS.Syntax-->**LISTBOX SORT COLUMNS** ( * ; *object* : Text ; *colNum* : Integer ; *order* : >, < {; ...(*colNum* : Integer ; *order* : >, <)} )<br/>**LISTBOX SORT COLUMNS** ( *object* : Variable ; *colNum* : Integer ; *order* : >, < {; ...(*colNum* : Integer ; *order* : >, <)} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SORT COLUMNS.Params-->
 <div class="no-index">
 
@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
 | object | Text, Variable | &#8594;  | Form object name (if * is specified) or Variable (if * is omitted) |
 | colNum | Integer | &#8594;  | Column number(s) to sort |
-| order | Comparator | &#8594;  | `>` to sort in ascending order or `<` to sort in descending order |
+| order | >, < | &#8594;  | `>` to sort in ascending order or `<` to sort in descending order |
 </div>
 <!-- END REF-->
 

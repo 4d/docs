@@ -5,7 +5,7 @@ slug: /commands/modify-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MODIFY RECORD.Syntax-->**MODIFY RECORD** ( {*aTable* : Table}{;}{*} )<!-- END REF-->
+<!--REF #_command_.MODIFY RECORD.Syntax-->**MODIFY RECORD** ( *aTable* : Table {; *} )<br/>**MODIFY RECORD** ( * )<!-- END REF-->
 <!--REF #_command_.MODIFY RECORD.Params-->
 <div class="no-index">
 

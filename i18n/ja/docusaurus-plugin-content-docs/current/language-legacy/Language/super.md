@@ -9,12 +9,25 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Super.Params -->
 
+<div class="no-index">
+
 | 引数    | 型      |                             | 説明               |
 | ----- | ------ | --------------------------- | ---------------- |
 | param | any    | ->                          | 親コンストラクターに受け渡す引数 |
 | 戻り値   | Object | <- | 親オブジェクト          |
 
+</div>
 <!-- END REF -->
+
+<div class="no-index">
+<details><summary>履歴</summary>
+
+| リリース | 内容      |
+| ---- | ------- |
+| 19   | Created |
+
+</details>
+</div>
 
 `Super` キーワードによって、<!-- REF #_command_.Super.Summary -->スーパークラス (親クラス) を呼び出すことができます<!-- END REF -->。
 

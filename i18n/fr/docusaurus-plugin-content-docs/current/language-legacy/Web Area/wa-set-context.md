@@ -15,7 +15,18 @@ displayed_sidebar: docs
 | object     | Text, Variable, Field       | &#8594; | Nom de l'objet (si \* est spécifié) ou Variable ou Champ (si \* est omis).                              |
 | contextObj | Object    | &#8594; | Objet contenant les fonctions qui peuvent être appelées avec `$4d`.   |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historique</summary>
+
+| Release | Modifications |
+| ------- | ------------- |
+| 20 R9   | Ajout         |
+
+</details>
+</div>
 
 ### Description
 

@@ -9,11 +9,24 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Web Form.Params -->
 
+<div class="no-index">
+
 | Paramètres | Type                       |                             | Description                  |
 | ---------- | -------------------------- | :-------------------------: | ---------------------------- |
 | Résultat   | 4D.WebForm | &#8592; | Nouvel objet proxy `WebForm` |
 
+</div>
 <!-- END REF -->
+
+<div class="no-index">
+<details><summary>Historique</summary>
+
+| Release | Modifications |
+| ------- | ------------- |
+| 21      | Ajout         |
+
+</details>
+</div>
 
 ## Description
 

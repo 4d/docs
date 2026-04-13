@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+| リリース  | 内容      |
+| ----- | ------- |
+| 16 R4 | Created |
+
+</details>
+</div>
+
 ## 説明
 
 `New collection` コマンドは、<!--REF #_command_.New collection.Summary-->新しい空の、または値が既に入れられたコレクションを作成し、その参照を返します。<!-- END REF-->コレクションは、[Collection クラス API](../../API/CollectionClass.md)のプロパティや関数を使用して操作することができます。

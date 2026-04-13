@@ -9,13 +9,17 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Process info.Params -->
 
+<div class="no-index">
+
 | 引数            | 型       |                             | 説明             |
 | ------------- | ------- | :-------------------------: | -------------- |
 | processNumber | Integer | &#8594; | Process number |
 | 戻り値           | Object  | &#8592; | プロセスに関する情報     |
 
+</div>
 <!-- END REF -->
 
+<div class="no-index">
 <details><summary>履歴</summary>
 
 | リリース  | 内容 |
@@ -23,6 +27,7 @@ displayed_sidebar: docs
 | 20 R7 | 追加 |
 
 </details>
+</div>
 
 ## 説明
 
@@ -76,7 +81,7 @@ displayed_sidebar: docs
 | DB4D Listener                 | -51 |
 | DB4D Mirror                   | -50 |
 | DB4D Worker pool user         | -48 |
-| Design process                | -2  |
+| Design process                | -3  |
 | Event manager                 | -8  |
 | Execute on client process     | -14 |
 | Execute on server process     | 1   |

@@ -8,13 +8,17 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New signal.Params-->
 
+<div class="no-index">
+
 | Parámetros  | Tipo                      |                             | Descripción                          |
 | ----------- | ------------------------- | --------------------------- | ------------------------------------ |
 | description | Text                      | &#8594; | Descripción para la señal            |
 | Resultado   | 4D.Signal | &#8592; | Objeto nativo que encapsula la señal |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
@@ -22,6 +26,7 @@ displayed_sidebar: docs
 | 17 R4       | Añadidos       |
 
 </details>
+</div>
 
 ## Descripción
 

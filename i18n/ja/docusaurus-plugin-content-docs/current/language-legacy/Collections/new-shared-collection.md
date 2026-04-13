@@ -19,6 +19,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>履歴</summary>
+
+| リリース  | 内容      |
+| ----- | ------- |
+| 16 R6 | Created |
+
+</details>
+</div>
+
 ## 説明
 
 `New shared collection` コマンドは、 <!-- REF #_command_.New shared collection.Summary -->空の、あるいは値が入った新規共有コレクションを作成し、その参照を返します<!-- END REF -->。 コレクションは、[Collection クラス API](../../API/CollectionClass.md) のプロパティや関数を使用して操作することができます。

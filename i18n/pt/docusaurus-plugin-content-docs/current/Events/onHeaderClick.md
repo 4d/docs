@@ -3,9 +3,9 @@ id: onHeaderClick
 title: On Header Click
 ---
 
-| Code | Pode ser chamado por                                                                                                                                                             | Definição                                   |
-| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
-| 42   | [Área 4D View Pro](FormObjects/viewProArea_overview.md) - [List Box](FormObjects/listbox_overview.md) - [Columna de List Box ](FormObjects/listbox_overview.md#list-box-columns) | Ocorre um clique no cabeçalho de uma coluna |
+| Code | Pode ser chamado por                                                                                                                                        | Definição                                   |
+| ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
+| 42   | [Área 4D View Pro](FormObjects/viewProArea_overview.md) - [List Box](FormObjects/listbox-object.md) - [Columna de List Box ](FormObjects/listbox-column.md) | Ocorre um clique no cabeçalho de uma coluna |
 
 ## Descrição
 

@@ -9,11 +9,25 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Form event code.Params-->
 
+<div class="no-index">
+
 | Parámetros | Tipo    |                             | Descripción                 |
 | ---------- | ------- | --------------------------- | --------------------------- |
 | Resultado  | Integer | &#8592; | Número de evento formulário |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historia</summary>
+
+| Lanzamiento                 | Modificaciones                          |
+| --------------------------- | --------------------------------------- |
+| 18                          | Renamed (Form event) |
+| <6 | Created                                 |
+
+</details>
+</div>
 
 ## Descripción
 

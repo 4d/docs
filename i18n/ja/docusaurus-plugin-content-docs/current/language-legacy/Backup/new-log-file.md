@@ -9,11 +9,24 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New log file.Params-->
 
+<div class="no-index">
+
 | 引数  | 型    |                             | 説明              |
 | --- | ---- | --------------------------- | --------------- |
 | 戻り値 | Text | &#8592; | 閉じたログファイルの完全パス名 |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>履歴</summary>
+
+| リリース                        | 内容      |
+| --------------------------- | ------- |
+| <6 | Created |
+
+</details>
+</div>
 
 ## 説明
 

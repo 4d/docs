@@ -9,12 +9,16 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB Server list.Params-->
 
+<div class="no-index">
+
 | Parámetros | Tipo       |                             | Descripción                                     |
 | ---------- | ---------- | --------------------------- | ----------------------------------------------- |
 | Resultado  | Collection | &#8592; | Colección de los objetos Web Server disponibles |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
@@ -22,6 +26,7 @@ displayed_sidebar: docs
 | 18 R3       | Añadidos       |
 
 </details>
+</div>
 
 ## Descripción
 

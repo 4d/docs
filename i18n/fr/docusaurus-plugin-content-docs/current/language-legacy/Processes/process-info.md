@@ -9,13 +9,17 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Process info.Params -->
 
+<div class="no-index">
+
 | Paramètres    | Type    |                             | Description                 |
 | ------------- | ------- | :-------------------------: | --------------------------- |
-| processNumber | Integer | &#8594; | Numéro du process           |
+| processNumber | Integer | &#8594; | Process number              |
 | Résultat      | Object  | &#8592; | Informations sur le process |
 
+</div>
 <!-- END REF -->
 
+<div class="no-index">
 <details><summary>Historique</summary>
 
 | Release | Modifications |
@@ -23,6 +27,7 @@ displayed_sidebar: docs
 | 20 R7   | Ajout         |
 
 </details>
+</div>
 
 ## Description
 

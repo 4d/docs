@@ -9,12 +9,26 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ds.Params-->
 
+<div class="no-index">
+
 | Parámetros | Tipo                         |                             | Descripción                                     |
 | ---------- | ---------------------------- | --------------------------- | ----------------------------------------------- |
 | localID    | Text                         | &#8594; | ID local del almacén de datos remoto a devolver |
 | Resultado  | cs.DataStore | &#8592; | Referencia al almacén de datos                  |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historia</summary>
+
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18          | Modificado     |
+| 17          | Created        |
+
+</details>
+</div>
 
 ## Descripción
 

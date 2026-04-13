@@ -4,7 +4,7 @@ title: LISTBOX Get property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get property.Syntax-->**LISTBOX Get property** ( {* ;} *object* ; *property* ) : any<!-- END REF-->
+<!--REF #_command_.LISTBOX Get property.Syntax-->**LISTBOX Get property** ( * ; *object* : Text ; *property* : Integer ) : any<br/>**LISTBOX Get property** ( *object* : Variable ; *property* : Integer ) : any<!-- END REF-->
 <!--REF #_command_.LISTBOX Get property.Params-->
 <div class="no-index">
 
@@ -16,6 +16,18 @@ displayed_sidebar: docs
 | Function result | any | &#8592; | Current value (Integer, Text)  |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|19 R6|Modified|
+|16 R2|Renamed (Get Listbox information)|
+|<6|Created|
+
+</details>
+</div>
 
 ## Description 
 

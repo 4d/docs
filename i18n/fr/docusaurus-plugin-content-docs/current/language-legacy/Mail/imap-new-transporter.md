@@ -5,6 +5,21 @@ title: IMAP New transporter
 displayed_sidebar: docs
 ---
 
+<!-- REF #_command_.IMAP New transporter.Syntax -->**IMAP New transporter**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
+
+<!-- REF #_command_.IMAP New transporter.Params -->
+
+<div class="no-index">
+
+| Paramètres | Type                               |                             | Description                                                                      |
+| ---------- | ---------------------------------- | :-------------------------: | -------------------------------------------------------------------------------- |
+| server     | Object                             | &#8594; | Informations sur le serveur de messagerie                                        |
+| Résultat   | 4D.IMAPTransporter | &#8592; | [Objet IMAP transporter](../API/IMAPTransporterClass.md#imap-transporter-object) |
+
+</div>
+<!-- END REF -->
+
+<div class="no-index">
 <details><summary>Historique</summary>
 
 | Release | Modifications |
@@ -12,17 +27,7 @@ displayed_sidebar: docs
 | 18 R4   | Ajout         |
 
 </details>
-
-<!-- REF #_command_.IMAP New transporter.Syntax -->**IMAP New transporter**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
-
-<!-- REF #_command_.IMAP New transporter.Params -->
-
-| Paramètres | Type                               |                             | Description                                                                      |
-| ---------- | ---------------------------------- | :-------------------------: | -------------------------------------------------------------------------------- |
-| server     | Object                             | &#8594; | Informations sur le serveur de messagerie                                        |
-| Résultat   | 4D.IMAPTransporter | &#8592; | [Objet IMAP transporter](../API/IMAPTransporterClass.md#imap-transporter-object) |
-
-<!-- END REF -->
+</div>
 
 ## Description
 

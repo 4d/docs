@@ -9,13 +9,17 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Session info.Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo    |                             | Descripción                 |
 | ---------- | ------- | :-------------------------: | --------------------------- |
 | sessionID  | Integer | &#8594; | ID de sesión                |
 | Resultado  | Object  | &#8592; | Información sobre la sesión |
 
+</div>
 <!-- END REF -->
 
+<div class="no-index">
 <details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones                |
@@ -24,6 +28,7 @@ displayed_sidebar: docs
 | 20 R7       | Añadidos                      |
 
 </details>
+</div>
 
 ## Descripción
 

@@ -28,7 +28,7 @@ Cada evento es devuelto como un objeto por el comando [`FORM Event`](../commands
 
 Se devuelven propiedades adicionales cuando el evento se produce en objetos específicos. En particular:
 
-- los [list boxes](FormObjects/listbox_overview.md#supported-form-events) y [columnas list box](FormObjects/listbox_overview.md#supported-form-events-1) devuelven [propiedades adicionales](FormObjects/listbox_overview.md#supported-form-events) como `columnName` o `isRowSelected`.
+- los [list boxes](FormObjects/listbox-object.md#supported-form-events) y [columnas list box](FormObjects/listbox-column.md#supported-form-events) devuelven [propiedades adicionales](FormObjects/listbox-object.md#supported-form-events) como `columnName` o `isRowSelected`.
 - Las [áreas de View Pro](FormObjects/viewProArea_overview.md) devuelven por ejemplo las propiedades `sheetName` o `action` en el objeto evento [On After Edit](onAfterEdit.md).
 
 ## Eventos y métodos

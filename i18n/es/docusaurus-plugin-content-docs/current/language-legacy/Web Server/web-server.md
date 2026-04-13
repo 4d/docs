@@ -9,13 +9,17 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB Server.Params-->
 
+<div class="no-index">
+
 | Parámetros | Tipo                         |                             | Descripción                                                                                 |
 | ---------- | ---------------------------- | --------------------------- | ------------------------------------------------------------------------------------------- |
 | option     | Integer                      | &#8594; | Servidor web a obtener (por defecto si se omite = `Web server database`) |
 | Resultado  | 4D.WebServer | &#8592; | Objeto servidor web                                                                         |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones                                    |
@@ -24,6 +28,7 @@ displayed_sidebar: docs
 | 19          | soporte de .sessionCookieSameSite |
 
 </details>
+</div>
 
 ## Descripción
 

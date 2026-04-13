@@ -9,13 +9,27 @@ displayed_sidebar: docs
 
 <!--REF #_command_.OBJECT Get data source formula.Params-->
 
+<div class="no-index">
+
 | Parâmetro | Tipo                       |                             | Descrição                                                                                                               |
 | --------- | -------------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | \*        | Operador                   | &#8594; | If specified, object is an object name (string) ; if omitted, object is a variable or a field        |
 | object    | Text, Variable, Field      | &#8594; | Form object name (if \* is specified) or<br/>Field or variable (if \* is omitted) |
 | Resultado | 4D.Formula | &#8592; | Fórmula associada com o objeto de formulário (`Null` se nenhuma fórmula estiver associada)           |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>História</summary>
+
+| Release | Mudanças                    |
+| ------- | --------------------------- |
+| 21      | Support of *base* parameter |
+| 20 R10  | Created                     |
+
+</details>
+</div>
 
 ## Descrição
 

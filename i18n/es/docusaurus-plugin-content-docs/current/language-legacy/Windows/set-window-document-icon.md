@@ -9,14 +9,18 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET WINDOW DOCUMENT ICON.Params-->
 
+<div class="no-index">
+
 | Parámetros | Tipo                                               |                             | Descripción                        |
 | ---------- | -------------------------------------------------- | --------------------------- | ---------------------------------- |
 | winRef     | Integer                                            | &#8594; | Número de referencia de la ventana |
 | image      | Picture                                            | &#8594; | Ícono personalizado                |
 | file       | 4D.File, [4D.Folder](../API/FolderClass.md)  | &#8594; | Ruta del archivo o de la carpeta   |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones |
@@ -24,6 +28,7 @@ displayed_sidebar: docs
 | 20 R7       | Añadidos       |
 
 </details>
+</div>
 
 ## Descripción
 

@@ -198,7 +198,7 @@ You can perform various actions using the options menu:
   - Contents (if accurate): provides the contents that actually matches the criteria; for example, the code line that contains the requested string.
   - Line number (for code) or page number (for form objects)
 
-## Replace in content {#replace-in-content}
+## Replace in content{#replace-in-content}
 
 The Replace in content function allows you to replace one character string with another within the listed objects in the Results window. It is available in the [options menu](#options-menu) of the window.
 

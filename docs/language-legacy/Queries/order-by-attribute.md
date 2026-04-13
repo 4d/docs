@@ -5,7 +5,7 @@ slug: /commands/order-by-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ORDER BY ATTRIBUTE.Syntax-->**ORDER BY ATTRIBUTE** ( {*aTable* : Table ;} {; ...(*objectField* : Field ; *attributePath* : Text  {; *>_or_<* : Comparator})} {; *} )<!-- END REF-->
+<!--REF #_command_.ORDER BY ATTRIBUTE.Syntax-->**ORDER BY ATTRIBUTE** ( {*aTable* : Table ;} {; ...(*objectField* : Field ; *attributePath* : Text  {; *order* : >, <})} {; *} )<!-- END REF-->
 <!--REF #_command_.ORDER BY ATTRIBUTE.Params-->
 <div class="no-index">
 
@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | aTable | Table | &#8594;  | Table for which to order selected records, or Default table, if omitted |
 | objectField | Object | &#8594;  | Object field containing the sorting attribute |
 | attributePath | Text | &#8594;  | Name or path of attribute on which to set the order for each level |
-| >_or_< | Comparator | &#8594;  | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
+| order | >, < | &#8594;  | Ordering direction for each level: > to order in ascending order, or < to order in descending order |
 | * | Operator | &#8594;  | Continue order flag |
 </div>
 <!-- END REF-->
@@ -53,7 +53,7 @@ If the field attribute value is **null** for some records (i.e. the attribute va
 * If the order is **ascending** (>), records with **null** value will be placed at the beginning of the selection.
 * If the order is **descending** (<), records with **null** value will be placed at the end of the selection.
 
-You can sort the selection on one level or on several levels. For each sort level, you specify an *aField*, an *attributePath* and the sorting order in *\> or <*. If you pass the “greater than” symbol (>), the order is ascending. If you pass the “less than” symbol (<), the order is descending. If you do not specify the sorting order, ascending order is the default.   
+You can sort the selection on one level or on several levels. For each sort level, you specify an *aField*, an *attributePath* and the sorting order in *order*. If you pass the “greater than” symbol (>), the order is ascending. If you pass the “less than” symbol (<), the order is descending. If you do not specify the sorting order, ascending order is the default.   
 If only one field is specified (one level sort) and it is indexed, the index is used for the order. If the field is not indexed or if there is more than one field, the order is performed sequentially. 
 
 For multiple sorts (sorts on multiple fields), you can call **ORDER BY ATTRIBUTE** as many times as necessary and specify the optional *\** parameter, except for the last **ORDER BY ATTRIBUTE** call, which starts the actual sort operation. This feature is useful for multiple sorts management in customized user interfaces. Note that you can combine **ORDER BY ATTRIBUTE** calls with [ORDER BY](../commands/order-by) calls.

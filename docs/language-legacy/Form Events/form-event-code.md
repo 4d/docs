@@ -15,6 +15,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|18|Renamed (Form event)|
+|<6|Created|
+
+</details>
+</div>
 
 ## Description 
 

@@ -4,16 +4,6 @@ title: Formula from string
 displayed_sidebar: docs
 ---
 
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|20 R3|Support of *context* parameter |
-|17 R6|Renamed New formula from string -> Formula from string|
-|17 R3|Added|
-
-</details>
-
 <!-- REF #_command_.Formula from string.Syntax -->**Formula from string**( *formulaString* : Text ) : 4D.Function<br/>**Formula from string**( *formulaString* : Text ; *context* : Integer ) : 4D.Function<!-- END REF -->
 
 
@@ -28,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF -->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|20 R3|Support of *context* parameter |
+|17 R6|Renamed New formula from string -> Formula from string|
+|17 R3|Added|
+
+</details>
+</div>
 
 ## Description
 

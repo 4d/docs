@@ -112,7 +112,7 @@ COMPUTE BLOB(->$myBlobVar)
 
 Vous pouvez affecter une variable Blob à une autre :
 
-**Voici un exemple :**
+**Exemple :**
 
 ```4d
 // Déclarer deux variables de type Blob

@@ -18,7 +18,7 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](../commands/o
 
 #### Objects Supported
 
-[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [List Box Column](listbox-column.md)
 
 #### Commands
 
@@ -42,7 +42,7 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](../commands/o
 
 #### Objects Supported
 
-[Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
+[Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
 
 #### Commands
 
@@ -74,7 +74,7 @@ You can also set this property using the [`LISTBOX SET PROPERTY`](../commands/li
 
 #### Objects Supported
 
-[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [List Box Column](listbox-column.md)
 
 #### Commands
 
@@ -232,7 +232,7 @@ You can get the same result using the [`LISTBOX SET ROW FONT STYLE`](../commands
 
 #### Objects Supported
 
-[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [List Box Column](listbox-column.md)
 
 #### Commands
 

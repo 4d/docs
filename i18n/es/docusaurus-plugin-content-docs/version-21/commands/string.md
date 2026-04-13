@@ -5,27 +5,33 @@ slug: /commands/string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.String.Syntax-->**String** ( *expression* {; *format* {; *addTime*}} ) : Text<br/>**String** ( *expression* ; *base* ) : Text<!-- END REF-->
+<!--REF #_command_.String.Syntax-->**String** ( *expression* : Expression {; *format* : Integer, Text {; *addTime* : Time}} ) : Text<br/>**String** ( *expression* : Expression ; *base* : Integer ) : Text<!-- END REF-->
 
 <!--REF #_command_.String.Params-->
 
+<div class="no-index">
+
 | Parámetros | Tipo          |                             | Descripción                                                                                                                              |
 | ---------- | ------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| expresión  | Expression    | &#8594; | Expresión a convertir en cadena (puede ser Real, Integer, Long Integer, Date, Time, Text, Boolean, Undefined, o Null) |
+| expression | Expression    | &#8594; | Expresión a convertir en cadena (puede ser Real, Integer, Long Integer, Date, Time, Text, Boolean, Undefined, o Null) |
 | format     | Integer, Text | &#8594; | Formato de visualización                                                                                                                 |
 | addTime    | Time          | &#8594; | Hora a combinar si *expression* es una fecha                                                                                             |
 | base       | Integer       | &#8594; | Valor entre 2 y 36 que representa la base si *expression* es un número                                                                   |
 | Resultado  | Text          | &#8592; | expresión convertida en cadena alfanumérica                                                                                              |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones               |
-| ----------- | ---------------------------- |
-| 21          | Soporte del parámetro *base* |
+| Lanzamiento                 | Modificaciones               |
+| --------------------------- | ---------------------------- |
+| 21                          | Soporte del parámetro *base* |
+| <6 | Created                      |
 
 </details>
+</div>
 
 ## Descripción
 

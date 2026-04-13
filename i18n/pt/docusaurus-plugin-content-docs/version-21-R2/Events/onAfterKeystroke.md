@@ -3,9 +3,9 @@ id: onAfterKeystroke
 title: On After Keystroke
 ---
 
-| Code | Pode ser chamado por                                                                                                                                                                                                                                                                               | Definição                                                                                                                                                                       |
-| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 28   | [Área 4D Write Pro](FormObjects/writeProArea_overview.md) - [Caixa de Combinação](FormObjects/comboBox_overview.md) - Formulário - [Entrada](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) - [Coluna de List Box](FormObjects/listbox_overview.md#list-box-columns) | Um carácter está prestes a ser introduzido no objecto que tem o foco. `Get edited text` retorna o texto do objeto **incluindo** este caractere. |
+| Code | Pode ser chamado por                                                                                                                                                                                                                                                          | Definição                                                                                                                                                                       |
+| ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 28   | [Área 4D Write Pro](FormObjects/writeProArea_overview.md) - [Caixa de Combinação](FormObjects/comboBox_overview.md) - Formulário - [Entrada](FormObjects/input_overview.md) - [List Box](FormObjects/listbox-object.md) - [Coluna de List Box](FormObjects/listbox-column.md) | Um carácter está prestes a ser introduzido no objecto que tem o foco. `Get edited text` retorna o texto do objeto **incluindo** este caractere. |
 
 <details><summary>História</summary>
 
@@ -25,7 +25,7 @@ Depois que as propriedades de evento [`On Before Keystroke`](onBeforeKeystroke.m
 
 O evento `No Depois da tecla` não é gerado:
 
-- no método de [colunas da list box](FormObjects/listbox_overview.md#list-box-columns) exceto quando uma célula está sendo editada (no entanto, é gerado em todos os casos no método da [list box](FormObjects/listbox_overview.md))
+- no método de [colunas da list box](FormObjects/listbox-column.md) exceto quando uma célula está sendo editada (no entanto, é gerado em todos os casos no método da [list box](FormObjects/listbox_overview.md))
 - quando as modificações do usuário não forem realizadas usando o teclado (colar, arrastar e soltar, caixa de seleção, lista suspensa, caixa de seleção). Para processar estes eventos, você deve usar [`No After Edit`](onAfterEdit.md).
 
 ### Sequência de teclas

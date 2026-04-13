@@ -5,13 +5,6 @@ slug: /commands/mail-convert-from-mime
 displayed_sidebar: docs
 ---
 
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|18|Added|
-
-</details>
 
 <!-- REF #_command_.MAIL Convert from MIME.Syntax -->**MAIL Convert from MIME**( *mime* : Blob ) : Object<br/>**MAIL Convert from MIME**( *mime* : Text ) : Object<!-- END REF -->
 
@@ -25,6 +18,16 @@ displayed_sidebar: docs
 |Result|Object|&#8592;|Email object|
 </div>
 <!-- END REF -->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|18|Added|
+
+</details>
+</div>
 
 ## Description
 

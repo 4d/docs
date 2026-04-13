@@ -9,6 +9,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Open window.Params-->
 
+<div class="no-index">
+
 | 引数             | 型       |                             | 説明                                                                                     |
 | -------------- | ------- | --------------------------- | -------------------------------------------------------------------------------------- |
 | left           | Integer | &#8594; | Global left coordinate of window contents area                                         |
@@ -20,7 +22,19 @@ displayed_sidebar: docs
 | controlMenuBox | Text    | &#8594; | Method to call when the Control-menu box is double-clicked or the Close box is clicked |
 | 戻り値            | Integer | &#8592; | ウィンドウ参照番号                                                                              |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>履歴</summary>
+
+| リリース                        | 内容      |
+| --------------------------- | ------- |
+| 2004                        | 変更      |
+| <6 | Created |
+
+</details>
+</div>
 
 ## 説明
 

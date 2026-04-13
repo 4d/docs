@@ -5,6 +5,21 @@ slug: /commands/formula
 displayed_sidebar: docs
 ---
 
+<!-- REF #_command_.Formula.Syntax -->**Formula** ( *formulaExp* : Expression ) : 4D.Function<!-- END REF -->
+
+<!-- REF #_command_.Formula.Params -->
+
+<div class="no-index">
+
+| Parámetros | Tipo                        |                             | Descripción                             |
+| ---------- | --------------------------- | :-------------------------: | --------------------------------------- |
+| formulaExp | Expression                  | &#8594; | Fórmula a devolver como objeto          |
+| Resultado  | 4D.Function | &#8592; | Función nativa que encapsula la fórmula |
+
+</div>
+<!-- END REF -->
+
+<div class="no-index">
 <details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones                                         |
@@ -13,17 +28,7 @@ displayed_sidebar: docs
 | 17 R3       | Añadidos                                               |
 
 </details>
-
-<!-- REF #_command_.Formula.Syntax -->**Formula** ( *formulaExp* : Expression ) : 4D.Function<!-- END REF -->
-
-<!-- REF #_command_.Formula.Params -->
-
-| Parámetros | Tipo                        |                             | Descripción                             |
-| ---------- | --------------------------- | :-------------------------: | --------------------------------------- |
-| formulaExp | Expression                  | &#8594; | Fórmula a devolver como objeto          |
-| Resultado  | 4D.Function | &#8592; | Función nativa que encapsula la fórmula |
-
-<!-- END REF -->
+</div>
 
 ## Descripción
 

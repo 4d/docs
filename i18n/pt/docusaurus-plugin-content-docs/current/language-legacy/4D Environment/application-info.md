@@ -9,12 +9,16 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Application info.Params-->
 
+<div class="no-index">
+
 | Parâmetro | Tipo   |                             | Descrição                                         |
 | --------- | ------ | --------------------------- | ------------------------------------------------- |
 | Resultado | Object | &#8592; | Information about the active application activity |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>História</summary>
 
 | Release | Mudanças                                                 |
@@ -22,6 +26,7 @@ displayed_sidebar: docs
 | 21 R2   | Support of "useFluentUI" and "canUseFluentUI" properties |
 
 </details>
+</div>
 
 ## Descrição
 

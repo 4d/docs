@@ -4,18 +4,11 @@ title: File
 displayed_sidebar: docs
 ---
 
-<details><summary>履歴</summary>
-
-| リリース  | 内容                            |
-| ----- | ----------------------------- |
-| 19 R4 | 新しい `HTTP Client log file` 定数 |
-| 17 R5 | 追加                            |
-
-</details>
-
 <!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
 
 <!-- REF #_command_.File.Params -->
+
+<div class="no-index">
 
 | 引数           | 型                                              |                             | 説明                                                                |
 | ------------ | ---------------------------------------------- | :-------------------------: | ----------------------------------------------------------------- |
@@ -25,7 +18,19 @@ displayed_sidebar: docs
 | \*           | 演算子                                            | &#8594; | ホストデータベースのファイルを返すには \* を渡します                                      |
 | 戻り値          | [4D.File](../API/FileClass.md) | &#8592; | 新規ファイルオブジェクト                                                      |
 
+</div>
 <!-- END REF -->
+
+<div class="no-index">
+<details><summary>履歴</summary>
+
+| リリース  | 内容                            |
+| ----- | ----------------------------- |
+| 19 R4 | 新しい `HTTP Client log file` 定数 |
+| 17 R5 | 追加                            |
+
+</details>
+</div>
 
 ## 説明
 

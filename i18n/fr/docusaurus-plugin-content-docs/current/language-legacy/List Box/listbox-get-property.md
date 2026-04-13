@@ -8,6 +8,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX Get property.Params-->
 
+<div class="no-index">
+
 | Paramètres | Type           |                             | Description                                                                                                                         |
 | ---------- | -------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | \*         | Opérateur      | &#8594; | Si passé, *object* est un nom d'objet (chaîne de caractères). Si omis, *object* est une variable |
@@ -15,6 +17,7 @@ displayed_sidebar: docs
 | property   | Integer        | &#8594; | Propriété dont vous voulez obtenir la valeur                                                                                        |
 | Résultat   | any            | &#8592; | Valeur courante (Entier, Texte)                                                                                  |
 
+</div>
 <!-- END REF-->
 
 <div class="no-index">

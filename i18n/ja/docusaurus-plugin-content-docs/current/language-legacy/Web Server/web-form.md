@@ -9,11 +9,24 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Web Form.Params -->
 
+<div class="no-index">
+
 | 引数  | 型                          |                             | 説明                        |
 | --- | -------------------------- | :-------------------------: | ------------------------- |
 | 戻り値 | 4D.WebForm | &#8592; | 新しい `Web Form` プロキシオブジェクト |
 
+</div>
 <!-- END REF -->
+
+<div class="no-index">
+<details><summary>履歴</summary>
+
+| リリース | 内容 |
+| ---- | -- |
+| 21   | 追加 |
+
+</details>
+</div>
 
 ## 説明
 
