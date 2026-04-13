@@ -68,7 +68,8 @@ The following predefined values are applied:
 * `wk list style type` is set to `wk decimal`
 * `wk list level index` is automatically assigned (1 for the root level, incremented for sub-levels)
 * `wk list level count` is set to the specified value for all levels
-* `wk margin left` is automatically calculated (0.75 cm × level index)
+* `wk margin left` is automatically calculated (0.75 cm × level index or 0.25 inches * level index, depending on current layout unit): so offset may be different depending if layout unit is metric or inches (for better alignment on default with current Write ruler graduations)
+
 
 
 If the parameter is omitted or set to 0, a standard (non-list) paragraph style sheet is created.
