@@ -26,8 +26,8 @@ displayed_sidebar: docs
 
 | Release  | Modifications                       |
 | -------- | ----------------------------------- |
-| 4D 18    | Created                             |
 | 4D 21 R3 | Ajout du paramètre *listLevelIndex* |
+| 4D 18    | Created                             |
 
 </details>
 </div>
@@ -58,7 +58,15 @@ La commande ne fait rien si le niveau spécifié n'existe pas, ou si la feuille 
 
 **Note** : La feuille de style par défaut ("Normal") ne peut pas être supprimée.
 
-## Exemple
+## Exemple 1
+
+To delete a character style sheet "MyCharStyle":
+
+```4d
+WP DELETE STYLE SHEET(wpArea; "MyCharStyle")
+```
+
+## Exemple 2
 
 L'exemple suivant supprime le deuxième niveau d'une feuille de style de liste hiérarchique :
 
