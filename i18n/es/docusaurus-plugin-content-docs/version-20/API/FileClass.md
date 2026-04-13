@@ -276,9 +276,9 @@ Quiere crear un alias para un archivo en su carpeta principal:
 <!-- REF #FileClass.delete().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|----|---|---|
-||||Does not require any parameters|
+|Parámetro|Tipo||Descripción|
+|---|----|---|-|
+||||No requiere ningún parámetro|
 </div>
 <!-- END REF -->
 
