@@ -70,7 +70,7 @@ Utilizando el comando [`Date`](../commands/date):
  $date4D:=Date($dateIso)
 ```
 
-Note the difference between these two solutions: [`JSON Parse`](../commands/json-parse) respects the [conversion mode set using the `SET DATABASE PARAMETER`](../commands/set-database-parameter#dates-inside-objects-85) (if any), while [`Date`](../commands/date) is not subject to this. Conversion using the [`Date`](../commands/date) command always takes the local time zone into account.
+Note the difference between these two solutions: [`JSON Parse`](../commands/json-parse) respects the [conversion mode set using the `SET DATABASE PARAMETER`](../commands/set-database-parameter#dates-inside-objects-85) (if any), while [`Date`](../commands/date) is not subject to this. Conversión usando el comando [`Date`](../commands/date) siempre tiene en cuenta la zona horaria local.
 
 :::note
 
