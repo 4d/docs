@@ -58,7 +58,7 @@ title: Commandes 4D Write Pro
 [`WP Get position`](../commands/wp-get-position)<br/>
 [`WP Get section`](../commands/wp-get-section)<br/>
 [`WP Get sections`](../commands/wp-get-sections)<br/>
-[`WP Get style sheet`](../commands/wp-get-style-sheet) ***Modifié 4D 21 R3***<br/>
+[`WP Get style sheet`](../commands/wp-get-style-sheet) ***Modified 4D 21 R3***<br/>
 [`WP Get style sheets`](../commands/wp-get-style-sheets)<br/>
 [`WP Get subsection`](../commands/wp-get-subsection)<br/>
 [`WP Get text`](../commands/wp-get-text)<br/>
