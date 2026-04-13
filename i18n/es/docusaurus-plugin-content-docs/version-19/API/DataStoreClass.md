@@ -751,9 +751,9 @@ Quiere registrar las peticiones de los clientes ORDA en la memoria:
 <!-- REF #DataStoreClass.startTransaction().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-||||Does not require any parameters|
+||||No requiere ningún parámetro|
 </div>
 <!-- END REF -->
 
@@ -817,9 +817,9 @@ Puede anidar varias transacciones (subtransacciones). Cada transacción o sub-tr
 <!-- REF #DataStoreClass.stopRequestLog().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-||||Does not require any parameters|
+||||No requiere ningún parámetro|
 </div>
 <!-- END REF -->
 
@@ -852,9 +852,9 @@ Ver ejemplos de [`.startRequestLog()`](#startrequestlog).
 <!-- REF #DataStoreClass.validateTransaction().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-||||Does not require any parameters|
+||||No requiere ningún parámetro|
 </div>
 <!-- END REF -->
 
