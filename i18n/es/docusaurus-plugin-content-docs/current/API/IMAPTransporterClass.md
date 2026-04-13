@@ -53,7 +53,7 @@ Los objetos IMAP Transporter se instancian con el comando [IMAP New transporter]
 
 | Parámetros | Tipo                               |                             | Descripción                                           |
 | ---------- | ---------------------------------- | :-------------------------: | ----------------------------------------------------- |
-| parámetros | Object                             |              ->             | Mail server configuration                             |
+| parámetros | Object                             |              ->             | Configuración del servidor de correo                  |
 | Resultado  | 4D.IMAPTransporter | <- | [Objeto transportador IMAP](#objeto-imap-transporter) |
 
 </div>
@@ -1296,7 +1296,7 @@ Para mover todos los mensajes del buzón actual:
 
 The `.notifier` property <!-- REF #IMAPTransporterClass.notifier.Summary -->contains the IMAPNotifier object associated with the transporter<!-- END REF -->. Esta propiedad es de **solo lectura**.
 
-See [IMAPNotifier](./IMAPNotifierClass.md).
+Véase [IMAPNotifier](./IMAPNotifierClass.md).
 
 <!-- END REF -->
 
