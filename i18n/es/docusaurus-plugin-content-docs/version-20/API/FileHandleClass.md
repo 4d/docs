@@ -455,9 +455,9 @@ Si el parámetro *stopChar* se pasa y no se encuentra, `.readText()` devuelve un
 <!--REF #FileHandleClass.setSize().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|size|Real|->|New size of the document in bytes|
+|Parámetro|Tipo||Descripción|
+|---|-|-|-|-|
+|size|Real|->|Nuevo tamaño del documento en bytes|
 </div>
 <!-- END REF -->
 
@@ -529,9 +529,9 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 <!--REF #FileHandleClass.writeLine().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|lineOfText|Text|->|Text to write|
+|lineOfText|Text|->|Texto a escribir|
 </div>
 <!-- END REF -->
 
@@ -565,9 +565,9 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 <!--REF #FileHandleClass.writeText().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|textToWrite|Text|->|Text to write|
+|textToWrite|Text|->|Texto a escribir|
 </div>
 <!-- END REF -->
 
