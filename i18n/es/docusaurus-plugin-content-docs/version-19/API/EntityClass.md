@@ -581,9 +581,9 @@ También puede utilizar una entidad relacionada dada como objeto:
 <!-- REF #EntityClass.getDataClass().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|4D.DataClass|<-|DataClass object to which the entity belongs|
+|Resultado|4D.DataClass|<-|DataClass object to which the entity belongs|
 </div>
 <!-- END REF -->
 
