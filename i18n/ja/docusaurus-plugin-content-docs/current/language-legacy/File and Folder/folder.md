@@ -5,18 +5,11 @@ slug: /commands/folder
 displayed_sidebar: docs
 ---
 
-<details><summary>履歴</summary>
-
-| リリース  | 内容                     |
-| ----- | ---------------------- |
-| 19 R8 | `fk home folder` をサポート |
-| 17 R5 | 追加                     |
-
-</details>
-
 <!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; * } ) : 4D.Folder<!-- END REF -->
 
 <!-- REF #_command_.Folder.Params -->
+
+<div class="no-index">
 
 | 引数             | 型                                                  |                             | 説明                                                                |
 | -------------- | -------------------------------------------------- | :-------------------------: | ----------------------------------------------------------------- |
@@ -26,7 +19,19 @@ displayed_sidebar: docs
 | \*             | 演算子                                                | &#8594; | ホストデータベースのフォルダーを返すには \* を渡します                                     |
 | 戻り値            | [4D.Folder](../../API/FolderClass.md) | &#8592; | 新規フォルダーオブジェクト                                                     |
 
+</div>
 <!-- END REF -->
+
+<div class="no-index">
+<details><summary>履歴</summary>
+
+| リリース  | 内容                     |
+| ----- | ---------------------- |
+| 19 R8 | `fk home folder` をサポート |
+| 17 R5 | 追加                     |
+
+</details>
+</div>
 
 ## 説明
 
@@ -66,7 +71,7 @@ displayed_sidebar: docs
 | fk user preferences folder | 0   | ユーザー環境設定ファイルを保存している、ユーザーホームフォルダー内の 4Dフォルダー                                               |
 | fk web root folder         | 8   | データベースのカレントの Webルートフォルダー: ただし "/PACKAGE/path" のパッケージ内にある場合。そうでない場合はフルパス。 |
 
-コマンドがコンポーネントから呼び出されている場合、`*` 引数を渡してホストデータベースのパスを取得するようにします。 `*` 引数を省略すると、常に null オブジェクトが返されます。
+コマンドがコンポーネントから呼び出されている場合、 `*` 引数を渡してホストデータベースのパスを取得するようにします。 `*` 引数を省略すると、常に null オブジェクトが返されます。
 
 > Windows の場合、組み込みクライアントでは、`ShareLocalResourcesOnWindowsClient` [BuildApp キー](../../Desktop/building.md#buildapp4dsettings) を使用されていた場合、ビルトインフォルダーの場所が変更されています。
 

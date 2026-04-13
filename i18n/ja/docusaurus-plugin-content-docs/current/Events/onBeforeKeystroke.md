@@ -23,7 +23,6 @@ title: On Before Keystroke
 
 `On Before Keystroke` イベントは次の場合には生成されません:
 
-- [リストボックス列](FormObjects/listbox_overview.md#リストボックス列) メソッドの場合、ただし、セルを編集している場合を除きます ([リストボックス](FormObjects/listbox_overview.md) メソッドではどのような場合でも生成されます)。
 - [リストボックス列](FormObjects/listbox-column.md) メソッドの場合、ただし、セルを編集している場合を除きます ([リストボックス](FormObjects/listbox_overview.md) メソッドではどのような場合でも生成されます)。
 - キーボードを使用せずに (ペーストやドラッグ＆ドロップ、チェックボックス、ドロップダウンリスト、コンボボックス) おこなわれた変更の場合。 キーボードを使用せずに (ペーストやドラッグ＆ドロップ、チェックボックス、ドロップダウンリスト、コンボボックス) おこなわれた変更の場合。 これらのイベントを処理するには [`On After Edit`](onAfterEdit.md) を使用します。
 

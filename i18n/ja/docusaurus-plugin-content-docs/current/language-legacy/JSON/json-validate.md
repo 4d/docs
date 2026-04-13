@@ -5,17 +5,11 @@ slug: /commands/json-validate
 displayed_sidebar: docs
 ---
 
-<details><summary>履歴</summary>
-
-| リリース  | 内容                                   |
-| ----- | ------------------------------------ |
-| 21 R2 | Support of JSON Schema draft 2020-12 |
-
-</details>
-
 <!--REF #_command_.JSON Validate.Syntax-->**JSON Validate** ( *vJson* : Object ; *vSchema* : Object ) : Object<!-- END REF-->
 
 <!--REF #_command_.JSON Validate.Params-->
+
+<div class="no-index">
 
 | 引数      | 型      |                             | 説明                                                       |
 | ------- | ------ | --------------------------- | -------------------------------------------------------- |
@@ -23,7 +17,19 @@ displayed_sidebar: docs
 | vSchema | Object | &#8594; | JSON schema used to validate JSON objects                |
 | 戻り値     | Object | &#8592; | Validation status and errors (if any) |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>履歴</summary>
+
+| リリース  | 内容                                   |
+| ----- | ------------------------------------ |
+| 21 R2 | Support of JSON Schema draft 2020-12 |
+| 16 R4 | Created                              |
+
+</details>
+</div>
 
 ## 説明
 

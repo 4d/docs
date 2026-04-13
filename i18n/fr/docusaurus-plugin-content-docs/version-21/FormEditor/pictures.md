@@ -46,7 +46,7 @@ Les images haute résolution avec la convention @nx peuvent être utilisées dan
 - [Boutons](FormObjects/button_overview.md)/[radio](FormObjects/radio_overview.md)/[cases à cocher](FormObjects/checkbox_overview.md)
 - [Boutons image](FormObjects/pictureButton_overview.md)/[Pop-up image](FormObjects/picturePopupMenu_overview.md)
 - [Onglets](FormObjects/tabControl.md)
-- [En-têtes de listbox](FormObjects/listbox_overview.md#list-box-headers)
+- [En-têtes de listbox](FormObjects/listbox-header-footer.md#headers)
 - [Icônes de menu](Menus/properties.md#item-icon)
 
 4D priorise automatiquement les images avec la résolution la plus élevée. 4D priorise automatiquement les images avec la résolution la plus élevée. Même si une commande ou une propriété spécifie *circle.png*, *circle@3x.png* sera utilisé (le cas échéant).

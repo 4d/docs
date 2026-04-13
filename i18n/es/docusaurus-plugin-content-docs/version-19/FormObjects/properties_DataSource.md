@@ -47,7 +47,7 @@ También se pueden asociar listas de selección a objetos utilizando los comando
 
 #### Objetos soportados
 
-[Lista desplegable](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Lista jerárquica](list_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
+[Lista desplegable](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Lista jerárquica](list_overview.md) - [Columna List Box](listbox-column.md)
 
 ---
 
@@ -183,7 +183,7 @@ Debe introducir una lista de valores. En el editor de formularios, un diálogo e
 
 #### Objetos soportados
 
-[Columna List Box (sólo tipo array)](listbox_overview.md#list-box-columns)
+[Columna List Box (sólo tipo array)](listbox-column.md)
 
 ---
 
@@ -226,7 +226,7 @@ Si se utiliza un campo, una variable o una expresión asignable (*por ejemplo Pe
 
 #### Objetos soportados
 
-[Columna de list box](listbox_overview.md#list-box-columns)
+[Columna de list box](listbox-column.md)
 
 ---
 

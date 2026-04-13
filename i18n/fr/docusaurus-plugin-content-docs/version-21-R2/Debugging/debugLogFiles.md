@@ -273,7 +273,7 @@ Vous pouvez sélectionner le niveau des messages à l'aide du sélecteur `Diagno
 | `Log debug` | ID unique du process                                                                                                        | `Log error`, `Log warn`, `Log info`, `Log debug`              |
 | `Log trace` | Autres informations internes (pour les services techniques de 4D)                                        | `Log error`, `Log warn`, `Log info`, `Log debug`, `Log trace` |
 
-Voici un exemple :
+Exemple :
 
 ```4d
 SET DATABASE PARAMETER (Diagnostic log recording; 1)

@@ -16,6 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF -->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|21 |Added|
+
+</details>
+</div>
+
 ## Description
 
 `Web Event` <!-- REF #_command_.Web Event.Summary -->returns an object with information on a triggered event linked to a web page component<!-- END REF -->.

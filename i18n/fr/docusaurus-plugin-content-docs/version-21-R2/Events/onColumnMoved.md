@@ -3,9 +3,9 @@ id: onColumnMoved
 title: On Column Moved
 ---
 
-| Code | Peut être appelé par                                                                                                        | Définition                                                                 |
-| ---- | --------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| 32   | [List Box](../FormObjects/listbox_overview.md) - [Colonne de List Box](../FormObjects/listbox_overview.md#list-box-columns) | Une colonne de list box est déplacée par l'utilisateur par glisser-déposer |
+| Code | Peut être appelé par                                                                                     | Définition                                                                 |
+| ---- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| 32   | [List Box](../FormObjects/listbox_overview.md) - [Colonne de List Box](../FormObjects/listbox-column.md) | Une colonne de list box est déplacée par l'utilisateur par glisser-déposer |
 
 ## Description
 

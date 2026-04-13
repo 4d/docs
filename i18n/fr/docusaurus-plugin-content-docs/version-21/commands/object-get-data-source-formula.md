@@ -1,9 +1,10 @@
 ---
 id: object-get-data-source-formula
 title: OBJECT Get data source formula
+displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get data source formula.Syntax-->**OBJECT Get data source formula** ( {* ;} *object* ) : 4D.Formula<!-- END REF-->
+<!--REF #_command_.OBJECT Get data source formula.Syntax-->**OBJECT Get data source formula** ( * ; *object* : Text ) : 4D.Formula<br/>**OBJECT Get data source formula** ( *object* : Variable, Field ) : 4D.Formula<!-- END REF-->
 
 <!--REF #_command_.OBJECT Get data source formula.Params-->
 
@@ -15,7 +16,19 @@ title: OBJECT Get data source formula
 | object     | Text, Variable, Field      | &#8594; | Nom de l'objet formulaire (si \* est spécifié) ou <br/> Champ ou variable (si \* est omis) |
 | Résultat   | 4D.Formula | &#8592; | Formule associée à l'objet de formulaire (`Null` si aucune formule n'est associée)                            |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historique</summary>
+
+| Release | Modifications                       |
+| ------- | ----------------------------------- |
+| 21      | Prise en charge du paramètre *base* |
+| 20 R10  | Created                             |
+
+</details>
+</div>
 
 ## Description
 

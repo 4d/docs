@@ -22,6 +22,20 @@ toc_max_heading_level: 3
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|16 R6|Modified|
+|16 R4|Modified|
+|14 R5|Modified|
+|11 SQL|Modified|
+|<6|Added|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.Open form window.Summary-->The Open form window command opens a new window using the size and resizing properties of the form *formName*.<!-- END REF-->

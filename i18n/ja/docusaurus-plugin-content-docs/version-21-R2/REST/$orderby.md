@@ -49,7 +49,7 @@ title: $orderby
 
 ## 例題 2
 
-`$orderby` statement is supported in [vector similarity filters](./$filter.md#vector-similarity):
+`$orderby` ステートメントは [ベクトル類似度フィルター](./$filter.md#ベクトル類似度) においてサポートされています:
 
 ```
 GET /rest/Person?$filter="Vector>=:1"&$params=[{"vector":[1,2,3],"metric":"cosine","threshold":0.95}]&$orderby="Vector desc"

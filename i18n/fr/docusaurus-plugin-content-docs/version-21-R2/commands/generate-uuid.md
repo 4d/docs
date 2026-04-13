@@ -5,24 +5,30 @@ slug: /commands/generate-uuid
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Generate UUID.Syntax-->**Generate UUID** : Text<br>**Generate UUID**( *version* : Integer ) : Text<!-- END REF-->
+<!--REF #_command_.Generate UUID.Syntax-->**Generate UUID** : Text<br/>**Generate UUID** ( *version* : Integer ) : Text<!-- END REF-->
 
 <!--REF #_command_.Generate UUID.Params-->
+
+<div class="no-index">
 
 | Paramètres | Type    |                             | Description                                                                      |
 | ---------- | ------- | --------------------------- | -------------------------------------------------------------------------------- |
 | version    | Integer | &#8594; | Version de l'UUID : 4 (par défaut) ou 7       |
 | Résultat   | Text    | &#8592; | Nouvel UUID sous forme de texte non canonique (32 caractères) |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>Historique</summary>
 
 | Release | Modifications                          |
 | ------- | -------------------------------------- |
 | 20 R10  | Prise en charge du paramètre *version* |
+| 12      | Created                                |
 
 </details>
+</div>
 
 ## Description
 

@@ -9,12 +9,16 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM theme.Params-->
 
+<div class="no-index">
+
 | 引数  | 型    |                             | 説明                                                                                         |
 | --- | ---- | --------------------------- | ------------------------------------------------------------------------------------------ |
 | 戻り値 | Text | &#8592; | カレントフォームで使用されているテーマ: "Classic" または "FluentUI" (Windows) |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>履歴</summary>
 
 | リリース  | 内容 |
@@ -22,6 +26,7 @@ displayed_sidebar: docs
 | 21 R2 | 追加 |
 
 </details>
+</div>
 
 ## 説明
 

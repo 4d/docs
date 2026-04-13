@@ -8,11 +8,24 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New log file.Params-->
 
+<div class="no-index">
+
 | Paramètres | Type |                             | Description                             |
 | ---------- | ---- | --------------------------- | --------------------------------------- |
 | Résultat   | Text | &#8592; | Chemin complet du fichier journal fermé |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historique</summary>
+
+| Release                     | Modifications |
+| --------------------------- | ------------- |
+| <6 | Created       |
+
+</details>
+</div>
 
 ## Description
 

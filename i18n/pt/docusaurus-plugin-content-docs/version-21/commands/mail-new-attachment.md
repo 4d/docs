@@ -4,23 +4,17 @@ title: MAIL New attachment
 displayed_sidebar: docs
 ---
 
-<details><summary>História</summary>
-
-| Release | Mudanças                                                                                |
-| ------- | --------------------------------------------------------------------------------------- |
-| 19 R2   | Accepts 4D. File, 4D. ZipFile, 4D. Blob |
-
-</details>
-
 <!-- REF #_command_.MAIL New attachment.Syntax -->**MAIL New attachment**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
 
 <!--REF #_command_.MAIL New attachment.Params-->
+
+<div class="no-index">
 
 | Parâmetro   | Tipo                               |                             | Descrição                                                                                         |
 | ----------- | ---------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------- |
 | file        | 4D. File           | &#8594; | Parâmetros                                                                                        |
 | zipFile     | 4D. ZipFile        | &#8594; | Arquivo zip                                                                                       |
-| blob        | 4D. Blob           | &#8594; | Blob contendo o anexo                                                                             |
+| blob        | 4D. Blob           | &#8594; | Blob containing the attachment                                                                    |
 | path        | Text                               | &#8594; | Pode passar uma rota ou um Blob para definir o anexo.                             |
 | name        | Text                               | &#8594; | Nome + extensão usado pelo cliente email para designar o anexo                                    |
 | cid         | Text                               | &#8594; | ID do anexo (apenas mensagens HTML), ou " " se nenhum cid for exigido          |
@@ -28,7 +22,19 @@ displayed_sidebar: docs
 | disposition | Text                               | &#8594; | Valor do cabeçalho content-disposition: "inline" ou "attachment". |
 | Resultados  | 4D. MailAttachment | &#8592; | Objeto anexo                                                                                      |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>História</summary>
+
+| Release | Mudanças                                                                                |
+| ------- | --------------------------------------------------------------------------------------- |
+| 19 R2   | Accepts 4D. File, 4D. ZipFile, 4D. Blob |
+| 17 R4   | Adicionado                                                                              |
+
+</details>
+</div>
 
 ## Descrição
 

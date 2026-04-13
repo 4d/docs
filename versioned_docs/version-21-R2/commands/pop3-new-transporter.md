@@ -16,6 +16,7 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>History</summary>
 
 |Release|Changes|
@@ -23,6 +24,7 @@ displayed_sidebar: docs
 |18 R2|Added|
 
 </details>
+</div>
 
 ## Description 
 

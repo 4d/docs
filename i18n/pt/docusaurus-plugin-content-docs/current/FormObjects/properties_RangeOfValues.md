@@ -53,7 +53,7 @@ Permite definir uma lista cujos valores não podem ser introduzidos no objeto. S
 
 #### Objectos suportados
 
-[Combo Box](comboBox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Entrada](input_overview.md)
+[Combo Box](comboBox_overview.md) - [Columna List Box](listbox-column.md) - [Entrada](input_overview.md)
 
 #### Comandos
 
@@ -78,7 +78,7 @@ No entanto, ao contrário da propriedade [Lista de opções](properties_DataSour
 
 #### Objectos suportados
 
-[Combo Box](comboBox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Entrada](input_overview.md)
+[Combo Box](comboBox_overview.md) - [Columna List Box](listbox-column.md) - [Entrada](input_overview.md)
 
 #### Comandos
 

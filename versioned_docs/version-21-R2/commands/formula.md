@@ -5,15 +5,6 @@ slug: /commands/formula
 displayed_sidebar: docs
 ---
 
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|17 R6|Renamed (New formula -> Formula)|
-|17 R3|Added|
-
-</details>
-
 <!-- REF #_command_.Formula.Syntax -->**Formula** ( *formulaExp* : Expression ) : 4D.Function<!-- END REF -->
 
 
@@ -26,6 +17,17 @@ displayed_sidebar: docs
 |Result|4D.Function|&#8592;|Native function encapsulating the formula|
 </div>
 <!-- END REF -->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|17 R6|Renamed (New formula -> Formula)|
+|17 R3|Added|
+
+</details>
+</div>
 
 
 ## Description

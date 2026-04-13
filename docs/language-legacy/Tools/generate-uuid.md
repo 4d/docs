@@ -16,14 +16,16 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
-
+<div class="no-index">
 <details><summary>History</summary>
 
 |Release|Changes|
 |---|---|
 |20 R10|Support of *version* parameter|
+|12|Created|
 
 </details>
+</div>
 
 
 ## Description 

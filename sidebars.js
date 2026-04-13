@@ -543,7 +543,20 @@ module.exports =
                 "FormObjects/groupBox",
                 "FormObjects/inputOverview",
                 "FormObjects/listOverview",
-                "FormObjects/listboxOverview",
+                {
+                  type: "category",
+                  label: "List Box",
+                  key: "listbox-in-form",
+                  link: {
+                    type: "doc",
+                    id: "FormObjects/listboxOverview"
+                  },
+                  items: [
+                    "FormObjects/listbox-object",
+                    "FormObjects/listbox-column",
+                    "FormObjects/listbox-header-footer"
+                  ]
+                },
                 "FormObjects/pictureButtonOverview",
                 "FormObjects/picturePopupMenuOverview",
                 "FormObjects/pluginAreaOverview",

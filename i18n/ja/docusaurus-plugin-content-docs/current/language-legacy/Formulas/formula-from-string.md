@@ -5,6 +5,22 @@ slug: /commands/formula-from-string
 displayed_sidebar: docs
 ---
 
+<!-- REF #_command_.Formula from string.Syntax -->**Formula from string**( *formulaString* : Text ) : 4D.Function<br/>**Formula from string**( *formulaString* : Text ; *context* : Integer ) : 4D.Function<!-- END REF -->
+
+<!-- REF #_command_.Formula from string.Params -->
+
+<div class="no-index">
+
+| 引数            | 型                           |                             | 説明                                                                                            |
+| ------------- | --------------------------- | :-------------------------: | --------------------------------------------------------------------------------------------- |
+| formulaString | Text                        | &#8594; | オブジェクトとして返されるフォーミュラ文字列                                                                        |
+| context       | Integer                     | &#8594; | `sk execute in current database` (デフォルト) または `sk execute in host database` |
+| 戻り値           | 4D.Function | &#8592; | フォーミュラを格納しているネイティブなオブジェクト                                                                     |
+
+</div>
+<!-- END REF -->
+
+<div class="no-index">
 <details><summary>履歴</summary>
 
 | リリース  | 内容                                                                       |
@@ -14,18 +30,7 @@ displayed_sidebar: docs
 | 17 R3 | 追加                                                                       |
 
 </details>
-
-<!-- REF #_command_.Formula from string.Syntax -->**Formula from string**( *formulaString* : Text ) : 4D.Function<br/>**Formula from string**( *formulaString* : Text ; *context* : Integer ) : 4D.Function<!-- END REF -->
-
-<!-- REF #_command_.Formula from string.Params -->
-
-| 引数            | 型                           |                             | 説明                                                                                            |
-| ------------- | --------------------------- | :-------------------------: | --------------------------------------------------------------------------------------------- |
-| formulaString | Text                        | &#8594; | オブジェクトとして返されるフォーミュラ文字列                                                                        |
-| context       | Integer                     | &#8594; | `sk execute in current database` (デフォルト) または `sk execute in host database` |
-| 戻り値           | 4D.Function | &#8592; | フォーミュラを格納しているネイティブなオブジェクト                                                                     |
-
-<!-- END REF -->
+</div>
 
 ## 説明
 

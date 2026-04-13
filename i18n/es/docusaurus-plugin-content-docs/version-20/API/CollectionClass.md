@@ -271,7 +271,13 @@ La función devuelve Undefined si el *index* sobrepasa los límites de la colecc
 #### Ejemplo
 
 ```4d
-Lanzamiento
+var $col : Collection
+$col:=New collection(10; 20; 30; 40; 50)
+$element:=$col.at(0) // 10
+$element:=$col.at(1) // 20
+$element:=$col.at(-1) // 50
+$element:=$col.at(-2) // 40
+$element:=$col.at(10) // indefinido
 ```
 
 <!-- END REF -->
@@ -647,10 +653,10 @@ Este ejemplo ilustra el uso de la opción `ck resolve pointers`:
 <!-- REF #collection.count().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|propertyPath|Text|->|Object property path to be used for calculation|
-|Result|Real|<-|Number of elements in the collection|
+|propertyPath|Text|->|Ruta de propiedad del objeto a utilizar para el cálculo|
+|Resultado|Real|<-|Number of elements in the collection|
 </div>
 <!-- END REF -->
 

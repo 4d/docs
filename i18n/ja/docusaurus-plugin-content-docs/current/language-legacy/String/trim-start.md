@@ -9,13 +9,17 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Trim start.Params-->
 
+<div class="no-index">
+
 | 引数      | 型    |                             | 説明           |
 | ------- | ---- | --------------------------- | ------------ |
 | aString | Text | &#8594; | トリミングするテキスト  |
 | 戻り値     | Text | &#8592; | トリミングされたテキスト |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>履歴</summary>
 
 | リリース | 内容 |
@@ -23,6 +27,7 @@ displayed_sidebar: docs
 | 21   | 追加 |
 
 </details>
+</div>
 
 ## 説明
 

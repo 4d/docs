@@ -5,7 +5,7 @@ slug: /commands/database-measures
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Database measures.Syntax-->**Database measures** ( *options* : Object ) : Object<!-- END REF-->
+<!--REF #_command_.Database measures.Syntax-->**Database measures** ({ *options* : Object }) : Object<!-- END REF-->
 <!--REF #_command_.Database measures.Params-->
 <div class="no-index">
 
@@ -27,7 +27,22 @@ displayed_sidebar: docs
 The returned object contains a single property named "DB" that has the following basic structure:
 
 ```json
-{    "DB": {        "diskReadBytes": {…},        "cacheReadBytes": {…},        "cacheMissBytes": {…},        "diskWriteBytes": {…},        "diskReadCount": {…},        "cacheReadCount": {…},        "cacheMissCount": {…},        "diskWriteCount": {…},        "dataSegment1": {…},        "indexSegment": {…},        "tables": {…},        "indexes": {…}    }}
+{
+   "DB": {
+      "diskReadBytes": {…},
+      "cacheReadBytes": {…},
+      "cacheMissBytes": {…},
+      "diskWriteBytes": {…},
+      "diskReadCount": {…},
+      "cacheReadCount": {…},
+      "cacheMissCount": {…},
+      "diskWriteCount": {…},
+      "dataSegment1": {…},
+      "indexSegment": {…},
+      "tables": {…},
+      "indexes": {…}
+   }
+}
 ```
 
 This object is made up of eight properties that contain basic measures ("diskReadBytes", "cacheReadBytes", "cacheMissBytes", "diskWriteBytes", "diskReadCount", "cacheReadCount", "cacheMissCount", "diskWriteCount") and additional properties ("dataSegment1", "indexSegment", "tables", "index") that can also contain elementary properties but at a different level and with a different scope (see below).
@@ -77,7 +92,18 @@ The eight elementary properties all have the same object structure, for example:
 The "dataSegment1" and "indexSegment" properties contain up to four elementary properties (when available): 
 
 ```json
-"dataSegment1": {    "diskReadBytes": {…},    "diskWriteBytes": {…},    "diskReadCount": {…},    "diskWriteCount": {…}    },"indexSegment": {    "diskReadBytes": {…},    "diskWriteBytes": {…},    "diskReadCount": {…},    "diskWriteCount": {…}    }
+"dataSegment1": {
+   "diskReadBytes": {…},
+   "diskWriteBytes": {…},
+   "diskReadCount": {…},
+   "diskWriteCount": {…}
+},
+"indexSegment": {
+   "diskReadBytes": {…},
+   "diskWriteBytes": {…},
+   "diskReadCount": {…},
+   "diskWriteCount": {…}
+}
 ```
 
 These properties return the same information as the elementary properties, but detailed for each database file:

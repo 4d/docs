@@ -9,13 +9,26 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WA SET CONTEXT.Params-->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo                  |                             | Descrição                                                                                                                                       |
 | ---------- | --------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | \*         | Operador              | &#8594; | Se especificado, *object* é um nome de objeto (string). Se omitido, *object* é uma variável. |
 | object     | Text, Variable, Field | &#8594; | Object name (if \* is specified) or <br/>Variable or field (if \* is omitted)                             |
 | contextObj | Object                | &#8594; | Object containing the functions that can be called with `$4d`.                                                                  |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>História</summary>
+
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20 R9   | Adicionado |
+
+</details>
+</div>
 
 ### Descrição
 

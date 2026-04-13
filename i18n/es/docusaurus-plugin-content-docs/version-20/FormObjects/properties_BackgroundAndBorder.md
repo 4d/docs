@@ -38,7 +38,7 @@ También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COL
 
 #### Objetos soportados
 
-[Lista Jerárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Columna de List Box](listbox_overview.md#list-box-columns) - [Pie de List Box](listbox_overview.md#list-box-footers) - [Óvalo](shapes_overview.md#oval) - [Rectángulo](shapes_overview.md#rectangle) - [Área de Texto](text.md)
+[Lista Jerárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Columna de List Box](listbox-column.md) - [Pie de List Box](listbox-header-footer.md#footers) - [Óvalo](shapes_overview.md#oval) - [Rectángulo](shapes_overview.md#rectangle) - [Área de Texto](text.md)
 
 #### Ver también
 

@@ -18,7 +18,7 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4
 
 #### Objects Supported
 
-[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [List Box Column](listbox-column.md)
 
 ---
 
@@ -38,7 +38,7 @@ You can also set this property using the [`OBJECT SET RGB COLORS`](https://doc.4
 
 #### Objects Supported
 
-[Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
+[Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
 
 #### See also
 
@@ -64,7 +64,7 @@ You can also set this property using the [`LISTBOX SET PROPERTY`](https://doc.4d
 
 #### Objects Supported
 
-[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [List Box Column](listbox-column.md)
 
 ---
 
@@ -201,7 +201,7 @@ You can get the same result using the [`LISTBOX SET ROW FONT STYLE`](https://doc
 
 #### Objects Supported
 
-[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [List Box Column](listbox-column.md)
 
 ---
 

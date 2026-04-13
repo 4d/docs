@@ -5,9 +5,11 @@ slug: /commands/string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.String.Syntax-->**String** ( *expression* {; *format* {; *addTime*}} ) : Text<br/>**String** ( *expression* ; *base* ) : Text<!-- END REF-->
+<!--REF #_command_.String.Syntax-->**String** ( *expression* : Expression {; *format* : Integer, Text {; *addTime* : Time}} ) : Text<br/>**String** ( *expression* : Expression ; *base* : Integer ) : Text<!-- END REF-->
 
 <!--REF #_command_.String.Params-->
+
+<div class="no-index">
 
 | Paramètres | Type          |                             | Description                                                                                                                                  |
 | ---------- | ------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -17,15 +19,19 @@ displayed_sidebar: docs
 | base       | Integer       | &#8594; | Valeur comprise entre 2 et 36 qui représente la base si *expression* est un nombre                                                           |
 | Résultat   | Text          | &#8592; | expression convertie en chaîne alphanumérique                                                                                                |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>Historique</summary>
 
-| Release | Modifications                       |
-| ------- | ----------------------------------- |
-| 21      | Prise en charge du paramètre *base* |
+| Release                     | Modifications                       |
+| --------------------------- | ----------------------------------- |
+| 21                          | Prise en charge du paramètre *base* |
+| <6 | Created                             |
 
 </details>
+</div>
 
 ## Description
 

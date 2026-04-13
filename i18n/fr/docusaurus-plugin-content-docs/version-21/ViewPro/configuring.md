@@ -418,7 +418,7 @@ La commande [VP Get stylesheet](commands/vp-get-stylesheet.md) peut être utilis
 
 ### Propriétés d'objet de style
 
-Voici un exemple :
+Exemple :
 
 ```4d
  $style:=New object

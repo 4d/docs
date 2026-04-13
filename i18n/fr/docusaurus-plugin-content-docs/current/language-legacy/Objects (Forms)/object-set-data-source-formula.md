@@ -16,7 +16,19 @@ displayed_sidebar: docs
 | object     | Text, Variable, Field      | &#8594; | Nom de l'objet formulaire (si \* est spécifié) ou <br/> Champ ou variable (si \* est omis) |
 | formula    | 4D.Formula | &#8594; | Formule à assigner comme source de données                                                                                       |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historique</summary>
+
+| Release | Modifications                       |
+| ------- | ----------------------------------- |
+| 21      | Prise en charge du paramètre *base* |
+| 20 R10  | Created                             |
+
+</details>
+</div>
 
 ## Description
 

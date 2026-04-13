@@ -8,12 +8,25 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New shared collection.Params-->
 
-| Paramètres | Type                                                  |                             | Description                                            |
-| ---------- | ----------------------------------------------------- | --------------------------- | ------------------------------------------------------ |
-| value      | Number, Text, Date, Time, Boolean, Object, Collection | &#8594; | Valeur(s) de la collection partagée |
-| Résultat   | Collection                                            | &#8592; | New shared collection                                  |
+<div class="no-index">
 
+| Paramètres | Type       |                             | Description                                            |
+| ---------- | ---------- | --------------------------- | ------------------------------------------------------ |
+| value      | any        | &#8594; | Valeur(s) de la collection partagée |
+| Résultat   | Collection | &#8592; | New shared collection                                  |
+
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historique</summary>
+
+| Release | Modifications |
+| ------- | ------------- |
+| 16 R6   | Created       |
+
+</details>
+</div>
 
 ## Description
 

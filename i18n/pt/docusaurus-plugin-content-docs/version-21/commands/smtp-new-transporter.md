@@ -8,13 +8,17 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SMTP New transporter.Params-->
 
+<div class="no-index">
+
 | Parâmetro | Tipo                               |                             | Descrição                                                                         |
 | --------- | ---------------------------------- | --------------------------- | --------------------------------------------------------------------------------- |
 | server    | Object                             | &#8594; | Informação de servidor de correio                                                 |
 | Resultado | 4D.SMTPTransporter | &#8592; | [Objeto SMTP transporter](../API/SMTPTransporterClass.md#smtp-transporter-object) |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>História</summary>
 
 | Release | Mudanças                                       |
@@ -24,6 +28,7 @@ displayed_sidebar: docs
 | 17 R4   | Adicionado                                     |
 
 </details>
+</div>
 
 ## Descrição
 
@@ -36,12 +41,12 @@ The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summ
 > - quando o objeto transporter for destruído se a propriedade [`keepAlive`](../API/SMTPTransporterClass.md#keepalive) for true (padrão),
 > - after each  [`.send()`](../API/SMTPTransporterClass.md#send) function execution if the [`keepAlive`](../API/SMTPTransporterClass.md#keepalive) property is set to false.
 
-No parâmetro server, passe um objeto contendo as propriedades abaixo:
+No parâmetro *server*, passe um objeto contendo as propriedades abaixo:
 
 | *server*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Valor padrão (se omitido)                                                     |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](../API/SMTPTransporterClass.md#acceptunsecureconnection)<br/><!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                  | False                                                                                            |
-| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Objeto<br/>Cadeia ou objeto token que representa as credenciais de autorização OAuth2. Usado somente com OAUTH2 `authenticationMode`. Se `accessTokenOAuth2` for usado, mas `authenticationMode` for omitido, o protocolo OAuth 2 será usado (se permitido pelo servidor). Não retornado no objeto *[SMTP transporter](../API/SMTPTransporterClass.md#smtp-transporter-object)*. | nenhum                                                                                           |
+| .**accessTokenOAuth2**: Texto<br/>.**accessTokenOAuth2**: Objeto<br/>Cadeia ou objeto token que representa as credenciais de autorização OAuth2. Usado somente com OAUTH2 `authenticationMode`. Se `accessTokenOAuth2` for usado, mas `authenticationMode` for omisso, o protocolo OAuth 2 será usado (se permitido pelo servidor). Não retornado no objeto *[SMTP transporter](../API/SMTPTransporterClass.md#smtp-transporter-object)*. | nenhum                                                                                           |
 | [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](../API/SMTPTransporterClass.md#authenticationmode)<br/><!-- INCLUDE #transporter.authenticationMode.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                    | o modo de autenticação mais seguro disponível no servidor é usado                                |
 | [<!-- INCLUDE #transporter.bodyCharset.Syntax -->](../API/SMTPTransporterClass.md#bodycharset)<br/><!-- INCLUDE #transporter.bodyCharset.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                         | `mail mode UTF8` (US-ASCII_UTF8_QP) |
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](../API/SMTPTransporterClass.md#connectiontimeout)<br/><!-- INCLUDE #transporter.connectionTimeOut.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                       | 30                                                                                               |

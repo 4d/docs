@@ -8,13 +8,17 @@ displayed_sidebar: docs
 
 <!--REF #_command_.POP3 New transporter.Params-->
 
+<div class="no-index">
+
 | Parâmetro | Tipo                               |                             | Descrição                                                                         |
 | --------- | ---------------------------------- | --------------------------- | --------------------------------------------------------------------------------- |
 | server    | Object                             | &#8594; | Informação de servidor de correio                                                 |
 | Resultado | 4D.POP3Transporter | &#8592; | [Objeto transporter POP3](../API/POP3TransporterClass.md#pop3-transporter-object) |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>História</summary>
 
 | Release | Mudanças   |
@@ -22,17 +26,18 @@ displayed_sidebar: docs
 | 18 R2   | Adicionado |
 
 </details>
+</div>
 
 ## Descrição
 
 The `POP3 New transporter` command <!-- REF #_command_.POP3 New transporter.Summary -->configures a new POP3 connection<!-- END REF -->according to the *server* parameter and returns a new [POP3 transporter](../API/POP3TransporterClass.md#pop3-transporter-object) object. O objeto transporter retornado vai geralmente ser usado para receber emails.
 
-No parâmetro server, passe um objeto contendo as propriedades abaixo:
+No parâmetro *server*, passe um objeto contendo as propriedades abaixo:
 
 | *server*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Valor padrão (se omitido)                      |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
 | [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](../API/POP3TransporterClass.md#acceptunsecureconnection)<br/><!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                  | False                                                             |
-| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Objeto<br/>Cadeia ou objeto token que representa as credenciais de autorização OAuth2. Usado somente com OAUTH2 `authenticationMode`. Se `accessTokenOAuth2` for usado, mas `authenticationMode` for omitido, o protocolo OAuth 2 será usado (se permitido pelo servidor). Não retornado no objeto *[POP3 transporter](../API/POP3TransporterClass.md#pop3-transporter-object)*. | nenhum                                                            |
+| .**accessTokenOAuth2**: Texto<br/>.**accessTokenOAuth2**: Objeto<br/>Cadeia ou objeto token que representa as credenciais de autorização OAuth2. Usado somente com OAUTH2 `authenticationMode`. Se `accessTokenOAuth2` for usado, mas `authenticationMode` for omisso, o protocolo OAuth 2 será usado (se permitido pelo servidor). Não retornado no objeto *[POP3 transporter](../API/POP3TransporterClass.md#pop3-transporter-object)*. | nenhum                                                            |
 | [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](../API/POP3TransporterClass.md#authenticationmode)<br/><!-- INCLUDE #transporter.authenticationMode.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                    | o modo de autenticação mais seguro disponível no servidor é usado |
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](../API/POP3TransporterClass.md#connectiontimeout)<br/><!-- INCLUDE #transporter.connectionTimeOut.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                       | 30                                                                |
 | [<!-- INCLUDE #transporter.host.Syntax -->](../API/POP3TransporterClass.md#host)<br/><!-- INCLUDE #transporter.host.Summary -->                                                                                                                                                                                                                                                                                                                                                                                                                                                              | *mandatory*                                                       |

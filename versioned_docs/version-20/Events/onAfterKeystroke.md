@@ -5,7 +5,7 @@ title: On After Keystroke
 
 |Code|Can be called by|Definition|  
 |---|---|---|
-|28|[4D Write Pro area](FormObjects/writeProArea_overview.md) - [Combo Box](FormObjects/comboBox_overview.md) - Form - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns)|A character is about to be entered in the object that has the focus. `Get edited text` returns the object's text **including** this character.|
+|28|[4D Write Pro area](FormObjects/writeProArea_overview.md) - [Combo Box](FormObjects/comboBox_overview.md) - Form - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox-column.md)|A character is about to be entered in the object that has the focus. `Get edited text` returns the object's text **including** this character.|
 
 <details><summary>History</summary>
 
@@ -24,7 +24,7 @@ After the [`On Before Keystroke`](onBeforeKeystroke.md) and `On After Keystroke`
 
 The `On After Keystroke` event is not generated:
 
-- in [list box columns](FormObjects/listbox_overview.md#list-box-columns) method except when a cell is being edited (however it is generated in any cases in the [list box](FormObjects/listbox_overview.md) method),
+- in [list box columns](FormObjects/listbox-column.md) method except when a cell is being edited (however it is generated in any cases in the [list box](FormObjects/listbox_overview.md) method),
 - when user modifications are not carried out using the keyboard (paste, drag-and-drop, checkbox, drop down list, combo box). To process these events, you must use [`On After Edit`](onAfterEdit.md).
 
 ### Keystroke sequence

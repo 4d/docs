@@ -9,11 +9,25 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM Event.Params-->
 
+<div class="no-index">
+
 | 引数  | 型      |                             | 説明         |
 | --- | ------ | --------------------------- | ---------- |
 | 戻り値 | Object | &#8592; | イベントオブジェクト |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>履歴</summary>
+
+| リリース  | 内容      |
+| ----- | ------- |
+| 18 R2 | 変更      |
+| 18    | Created |
+
+</details>
+</div>
 
 ## 説明
 
@@ -37,7 +51,7 @@ displayed_sidebar: docs
 
 イベントオブジェクトには、イベントが発生したオブジェクト によっては追加のプロパティが含まれていることがあります。  これは以下のオブジェクトで生成された *eventObj* オブジェクトが対象です:
 
-- リストボックスまたはリストボックスカラムオブジェクト。詳細は[こちらの章](../FormObjects/listbox_overview.md#supported-form-events)を参照してください。
+- リストボックスまたはリストボックスカラムオブジェクト。詳細は[こちらの章](../FormObjects/listbox-object.md#supported-form-events)を参照してください。
 - 4D View Pro エリア。詳細は[On VP Ready フォームイベント](../Events/onVpReady.md) を参照してください。
 
 ***注意:*** カレントのイベントが何もない場合、**FORM Event** はnull オブジェクトを返します。

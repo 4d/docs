@@ -18,6 +18,19 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|20|Modified|
+|16 R6|Modified|
+|14|Renamed (OPEN PRINTING FORM)|
+|12|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.FORM LOAD.Summary-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.<!-- END REF--> There can only be one current form per process.

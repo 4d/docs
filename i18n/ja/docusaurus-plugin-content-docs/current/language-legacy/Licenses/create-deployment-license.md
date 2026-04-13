@@ -5,18 +5,11 @@ slug: /commands/create-deployment-license
 displayed_sidebar: docs
 ---
 
-<details><summary>履歴</summary>
-
-| リリース   | 内容                        |
-| ------ | ------------------------- |
-| 20 R10 | 新しい*autoLicenseTarget* 引数 |
-| 20     | 追加                        |
-
-</details>
-
 <!--REF #_command_.Create deployment license.Syntax-->**Create deployment license** ( *mergedApp* : 4D.Folder ; *autoLicenseTarget* : Integer ) : Object<br/>**Create deployment license** ( *mergedApp* : 4D.Folder ; *buildLicense* : 4D.File {; *oemLicense* : 4D.File} ) : Object<!-- END REF-->
 
 <!--REF #_command_.Create deployment license.Params-->
+
+<div class="no-index">
 
 | 引数                | 型                         |                             | 説明                              |
 | ----------------- | ------------------------- | --------------------------- | ------------------------------- |
@@ -26,7 +19,19 @@ displayed_sidebar: docs
 | oemLicense        | 4D.File   | &#8594; | サーバーライセンスの場合は4D OEM XML キーライセンス |
 | 戻り値               | Object                    | &#8592; | ステータス                           |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>履歴</summary>
+
+| リリース   | 内容                        |
+| ------ | ------------------------- |
+| 20 R10 | 新しい*autoLicenseTarget* 引数 |
+| 20     | 追加                        |
+
+</details>
+</div>
 
 ## 説明
 

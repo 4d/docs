@@ -4,7 +4,7 @@ title: Trim
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Trim.Syntax-->**Trim** ( *aString* ) : Text<!-- END REF-->
+<!--REF #_command_.Trim.Syntax-->**Trim** ( *aString* : Text ) : Text<!-- END REF-->
 <!--REF #_command_.Trim.Params-->
 <div class="no-index">
 
@@ -16,6 +16,7 @@ displayed_sidebar: docs
 <!-- END REF-->
 
 
+<div class="no-index">
 <details><summary>History</summary>
 
 |Release|Changes|
@@ -23,6 +24,8 @@ displayed_sidebar: docs
 |21|Added|
 
 </details>
+</div>
+
 
 
 

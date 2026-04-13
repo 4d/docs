@@ -86,7 +86,7 @@ Designa la ubicación de un icono en relación con el objeto formulario.
 
 #### Objetos soportados
 
-[Encabezado de List Box](listbox_overview.md#list-box-headers)
+[Encabezado de List Box](listbox-header-footer.md#headers)
 
 #### Comandos
 
@@ -171,7 +171,7 @@ El nombre de la ruta a introducir es similar al de [la propiedad Ruta de acceso 
 
 #### Objetos soportados
 
-[Botón](button_overview.md) (todos los estilos excepto [Ayuda](button_overview.md#help)) - [Casilla de selección](checkbox_overview.md) - [Encabezado List Box](listbox_overview.md#list-box-headers) - [Botón radio](radio_overview.md)
+[Botón](button_overview.md) (todos los estilos excepto [Ayuda](button_overview.md#help)) - [Casilla de selección](checkbox_overview.md) - [Encabezado List Box](listbox-header-footer.md#headers) - [Botón radio](radio_overview.md)
 
 #### Comandos
 
@@ -294,13 +294,13 @@ Es importante señalar que la propiedad "Con menú emergente" sólo gestiona el 
 
 #### Gramática JSON
 
-| Nombre         | Tipos de datos | Valores posibles                                     |
-| :------------- | -------------- | ---------------------------------------------------- |
-| popupPlacement | string         | <li>"none"</li><li>"linked"</li><li>"separated"</li> |
+| Nombre         | Tipos de datos | Valores posibles                                              |
+| :------------- | -------------- | ------------------------------------------------------------- |
+| popupPlacement | string         | <ul><li>"none"</li><li>"linked"</li><li>"separated"</li></ul> |
 
 #### Objetos soportados
 
-[Botón de barra de herramientas](button_overview.md#toolbar) - [Botón biselado](button_overview.md#bevel) - [Botón biselado redondeado](button_overview.md#rounded-bevel) - [Botón de degradado OS X](button_overview.md#os-x-gradient) - [Botón con textura OS X](button_overview.md#os-x-textured) - [Botón Office XP](button_overview.md#office-xp) - [Botón circular](button_overview.md#circle) - [Personalizado](button_overview.md#custom)
+[Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-xp) - [Custom](button_overview.md#custom)
 
 #### Comandos
 

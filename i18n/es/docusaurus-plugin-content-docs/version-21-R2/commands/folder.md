@@ -4,18 +4,11 @@ title: Folder
 displayed_sidebar: docs
 ---
 
-<details><summary>Historia</summary>
-
-| Lanzamiento | Modificaciones              |
-| ----------- | --------------------------- |
-| 19 R8       | Soporte de `fk home folder` |
-| 17 R5       | Añadidos                    |
-
-</details>
-
 <!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; * } ) : 4D.Folder<!-- END REF -->
 
 <!-- REF #_command_.Folder.Params -->
+
+<div class="no-index">
 
 | Parámetros     | Tipo                                               |                             | Descripción                                                           |
 | -------------- | -------------------------------------------------- | :-------------------------: | --------------------------------------------------------------------- |
@@ -25,7 +18,19 @@ displayed_sidebar: docs
 | \*             | Operador                                           | &#8594; | \* para devolver la carpeta de la base local                          |
 | Resultado      | [4D.Folder](../API/FolderClass.md) | &#8592; | Nuevo objeto de carpeta                                               |
 
+</div>
 <!-- END REF -->
+
+<div class="no-index">
+<details><summary>Historia</summary>
+
+| Lanzamiento | Modificaciones              |
+| ----------- | --------------------------- |
+| 19 R8       | Soporte de `fk home folder` |
+| 17 R5       | Añadidos                    |
+
+</details>
+</div>
 
 ## Descripción
 

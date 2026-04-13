@@ -8,11 +8,24 @@ displayed_sidebar: docs
 
 <!--REF #_command_.This.Params-->
 
+<div class="no-index">
+
 | Parâmetro | Tipo   |                             | Descrição                |
 | --------- | ------ | --------------------------- | ------------------------ |
 | Resultado | Object | &#8592; | Elemento ou objeto atual |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>História</summary>
+
+| Release | Mudanças |
+| ------- | -------- |
+| 19      | Created  |
+
+</details>
+</div>
 
 ## Descrição
 

@@ -8,11 +8,24 @@ displayed_sidebar: docs
 
 <!--REF #_command_.USE ENTITY SELECTION.Params-->
 
+<div class="no-index">
+
 | 引数              | 型                                  |                             | 説明           |
 | --------------- | ---------------------------------- | --------------------------- | ------------ |
 | entitySelection | 4D.EntitySelection | &#8594; | エンティティセレクション |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>履歴</summary>
+
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
+
+</details>
+</div>
 
 ## 説明
 

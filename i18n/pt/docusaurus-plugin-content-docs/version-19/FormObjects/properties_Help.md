@@ -27,7 +27,7 @@ Você também pode:
 
 #### Objectos suportados
 
-[Botão](button_overview.md) - [Grade de Botões](buttonGrid_overview.md) - [Caixa de Seleção](checkbox_overview.md)  - [Lista suspensa](dropdownList_Overview.md) - [Combo Box](./comboBox_overview.md) - [Lista Hierárquica](list_overview.md) - [Cabeçalho List Box](listbox_overview.md#list-box-headers) - [Rodapé List Box](listbox_overview.md#list-box-footers) - [Botão de Imagem](pictureButton_overview.md) - [Menu Pop-up imagem](picturePopupMenu_overview.md) - [Botão de rádio](radio_overview.md)
+[Botão](button_overview.md) - [Grade de Botões](buttonGrid_overview.md) - [Caixa de Seleção](checkbox_overview.md)  - [Lista suspensa](dropdownList_Overview.md) - [Combo Box](./comboBox_overview.md) - [Lista Hierárquica](list_overview.md) - [Cabeçalho List Box](listbox-header-footer.md#headers) - [Rodapé List Box](listbox-header-footer.md#footers) - [Botão de Imagem](pictureButton_overview.md) - [Menu Pop-up imagem](picturePopupMenu_overview.md) - [Botão de rádio](radio_overview.md)
 
 #### Outras funcionalidades de ajuda
 

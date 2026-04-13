@@ -8,12 +8,25 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Super.Params -->
 
+<div class="no-index">
+
 | Parámetros | Tipo   |                             | Descripción                                                              |
 | ---------- | ------ | --------------------------- | ------------------------------------------------------------------------ |
 | param      | any    | ->                          | Parámetro(s) a pasar al constructor de la clase padre |
 | Resultado  | Object | <- | Padre del objeto                                                         |
 
+</div>
 <!-- END REF -->
+
+<div class="no-index">
+<details><summary>Historia</summary>
+
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19          | Created        |
+
+</details>
+</div>
 
 La palabra clave `Super` <!-- REF #_command_.Super.Summary -->permite llamar a la `superclass`, es decir, la clase padre<!-- END REF -->.
 

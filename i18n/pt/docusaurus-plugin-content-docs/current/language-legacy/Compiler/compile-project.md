@@ -9,14 +9,18 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Compile project.Params-->
 
+<div class="no-index">
+
 | Parâmetro   | Tipo                     |                             | Descrição                                                |
 | ----------- | ------------------------ | --------------------------- | -------------------------------------------------------- |
 | projectFile | 4D. File | &#8594; | Arquivo .4DProject para compilar         |
 | options     | Object                   | &#8594; | Objeto que especifica as opções de compilação            |
 | Resultado   | Object                   | &#8592; | Objeto contendo informações sobre o estado de compilação |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>História</summary>
 
 | Release | Mudanças                                 |
@@ -24,10 +28,11 @@ displayed_sidebar: docs
 | 20 R8   | Suporte do `type` "formObjectExpression" |
 
 </details>
+</div>
 
 ## Descrição
 
-**Compile project**<!--REF #_command_.Compile project.Summary--> permite que você compile o projeto host atual ou o projeto especificado no parâmetro *projectFile*.<!-- END REF--> Para obter mais informações sobre a compilação, verifique a [página de compilação](../Project/compiler.md).
+**Compile project**<!--REF #_command_.Comile project.Summary--> permite que você compile o projeto host atual ou o projeto especificado no parâmetro *projectFile*.<!-- END REF--> Para obter mais informações sobre a compilação, verifique a [página de compilação](../Project/compiler.md).
 
 Por padrão, o comando usa as opções do compilador definidas nas Configurações da estrutura. Você pode substituí-los passando um parâmetro *options*. As seguintes sintaxes são suportadas:
 
@@ -36,7 +41,7 @@ Por padrão, o comando usa as opções do compilador definidas nas Configuraçõ
 - **Compile project**(*projectFile*): compila o projeto 4D *projectFile* usando as opções definidas nas parâmetros de estrutura
 - **Compile project**(*projectFile*; *options*): compila o projeto 4D *projectFile* e as *options* definidas substituem os parâmetros de estrutura
 
-**Nota:** Os bancos de dados binários não podem ser compilados usando este comando.
+**Nota:** os bancos de dados binários não podem ser compilados usando este comando.
 
 Ao contrário da janela do Compilador, esse comando requer que você designe explicitamente o(s) componente(s) para compilar. Ao compilar um projeto com **Compilar projeto**, você precisa declarar seus componentes usando a propriedade *components* do parâmetro *options*. Tenha em mente que os componentes já devem ser compilados (componentes binários são suportados).
 
@@ -46,9 +51,9 @@ Se você passar uma coleção vazia em *targets*, **Compilar projeto** executar�
 
 Erros de compilação, se houver, são retornados como objetos na coleção de *erros*.
 
-**Nota:** Você não pode chamar este comando quando outra compilação está sendo executada (por exemplo, uma compilação lançada a partir da janela de Compilação).
+**Nota:** você não pode chamar este comando quando outra compilação está sendo executada (por exemplo, uma compilação lançada a partir da janela de Compilação).
 
-### Parâmetro options
+### Parâmetro opções
 
 O parâmetro *opções* é um objeto. Aqui estão as opções de compilação disponíveis:
 
@@ -83,7 +88,7 @@ O objeto retornado pelo **projeto Compilar** possui até três propriedades:
 | \[\].code                                        | Object                 | [objeto código](#code-object)                                                                                                                |
 | \[\].line                                        | Number                 | Número de erro da linha no código. Para métodos de classe, o número de linha na função                                       |
 | \[\].lineInFile                                  | Number                 | Número da linha no arquivo (diferente de "linha" para métodos de classe, e leva em conta a linha de prefixo %attribuções) |
-| symbols                                                                                                                | Object                 | **Disponível apenas se a opção generateSymbols estiver definida como Verdade:**                                              |
+| symbols                                                                                                                | Object                 | **Disponível apenas se a opção generateSymbols estiver definida como True:**                                                 |
 | symbols.interprocessVariables                                                                          | Object                 | Lista de todas as variáveis de interprocesso                                                                                                 |
 | symbols.interprocessVariables.variables                                                | Collection             | Coleção de [objetos variáveis](#variable-objects)                                                                                            |
 | symbols.interprocessVariables.size                                                     | Number                 |                                                                                                                                              |

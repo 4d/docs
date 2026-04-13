@@ -4,6 +4,24 @@ title: Folder
 displayed_sidebar: docs
 ---
 
+<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; * } ) : 4D.Folder<!-- END REF -->
+
+<!-- REF #_command_.Folder.Params -->
+
+<div class="no-index">
+
+| Parámetros     | Tipo                                               |                             | Descripción                                                           |
+| -------------- | -------------------------------------------------- | :-------------------------: | --------------------------------------------------------------------- |
+| path           | Text                                               | &#8594; | Ruta de la carpeta                                                    |
+| folderConstant | Integer                                            | &#8594; | Constante de la carpeta 4D                                            |
+| pathType       | Integer                                            | &#8594; | `fk posix path` (por defecto) o `fk platform path` |
+| \*             | Operador                                           | &#8594; | \* para devolver la carpeta de la base local                          |
+| Resultado      | [4D.Folder](../API/FolderClass.md) | &#8592; | Nuevo objeto de carpeta                                               |
+
+</div>
+<!-- END REF -->
+
+<div class="no-index">
 <details><summary>Historia</summary>
 
 | Lanzamiento | Modificaciones              |
@@ -12,20 +30,7 @@ displayed_sidebar: docs
 | 17 R5       | Añadidos                    |
 
 </details>
-
-<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; \* } ) : 4D.Folder<!-- END REF -->
-
-<!-- REF #_command_.Folder.Params -->
-
-| Parámetros     | Tipo                                               |                             | Descripción                                                           |
-| -------------- | -------------------------------------------------- | :-------------------------: | --------------------------------------------------------------------- |
-| path           | Text                                               | &#8594; | Ruta de la carpeta                                                    |
-| folderConstant | Integer                                            | &#8594; | Constante de la carpeta 4D                                            |
-| pathType       | Integer                                            | &#8594; | `fk posix path` (por defecto) o `fk platform path` |
-| \*             | operator                                           | &#8594; | \* para devolver la carpeta de la base local                          |
-| Resultado      | [4D.Folder](../API/FolderClass.md) | &#8592; | Nuevo objeto de carpeta                                               |
-
-<!-- END REF -->
+</div>
 
 ## Descripción
 

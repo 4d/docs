@@ -9,9 +9,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Form event code.Params-->
 
-| Paramètres | Type    |                             | Description                   |
-| ---------- | ------- | --------------------------- | ----------------------------- |
-| Résultat   | Integer | &#8592; | Numéro d'événement formulaire |
+<div class="no-index">
 
 | Paramètres | Type    |                             | Description                      |
 | ---------- | ------- | --------------------------- | -------------------------------- |

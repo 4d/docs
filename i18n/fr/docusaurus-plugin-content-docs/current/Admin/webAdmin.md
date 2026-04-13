@@ -148,7 +148,7 @@ Vous pouvez aussi définir un fichier `.4DSettings`. (format XML) et l'utiliser 
 
 > La clé d'accès n'est pas stockée en clair dans le fichier `.4DSettings`.
 
-Voici un exemple :
+Exemple :
 
 ```
 "%HOMEPATH%\Desktop\4D Server.exe" MyApp.4DLink --webadmin-access-key 

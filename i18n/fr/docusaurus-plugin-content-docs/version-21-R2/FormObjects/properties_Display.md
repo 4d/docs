@@ -46,7 +46,7 @@ Le champ contient en fait "proportion". 4D accepte et stocke la saisie complète
 
 #### Objets pris en charge
 
-[Liste déroulante](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Colonne de List box](listbox_overview.md#list-box-columns) - [Footer List Box](listbox_overview.md#list-box-footers)
+[Liste déroulante](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Colonne de List box](listbox-column.md) - [Footer List Box](listbox-header-footer.md#footers)
 
 #### Commandes
 
@@ -105,13 +105,13 @@ Des formats de date personnalisés peuvent être construits en utilisant plusieu
 :::note blankIfNull
 
 - Par défaut, une [date nulle](../Concepts/dt_date.md#date-literals) est affichée avec des zéros, par exemple 00/00/00. Avec l'option "blankIfNull", une date nulle est affichée comme une zone vide. La chaîne "blankIfNull" (sensible à la casse) doit être combinée avec la valeur de format sélectionnée. Ex : "systemShort blankIfNull" ou "ee dd LL blankIfNull".
-- Les [colonnes de list box](listbox_overview.md#list-box-columns) et les [pieds de list box](listbox_overview.md#list-box-footers) de type date utilisent toujours le comportement "blank if null" (il ne peut pas être désactivé).
+- Les [colonnes de list box](listbox-column.md) et les [pieds de list box](listbox-header-footer.md#footers) de type date utilisent toujours le comportement "blank if null" (il ne peut pas être désactivé).
 
 :::
 
 #### Objets pris en charge
 
-[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [Colonne de List Box](listbox-column.md) - [Pied de List Box Footer](listbox-header-footer.md#footers)
 
 #### Commandes
 
@@ -276,7 +276,7 @@ Le tableau suivant montre comment les différents formats affectent l'affichage 
 
 #### Objets pris en charge
 
-[Combo Box](comboBox_overview.md) - [Liste déroulante](dropdownList_Overview.md) - [Input](input_overview.md) - [Colonne de List box](listbox_overview.md#list-box-columns) - [Pied List Box](listbox_overview.md#list-box-footers) - [Progress Indicators](progressIndicator.md)
+[Combo Box](comboBox_overview.md) - [Liste déroulante](dropdownList_Overview.md) - [Input](input_overview.md) - [Colonne de List box](listbox-column.md) - [Pied List Box](listbox-header-footer.md#footers) - [Progress Indicators](progressIndicator.md)
 
 #### Commandes
 
@@ -340,7 +340,7 @@ Si le champ est réduit à une taille plus petite que celle de l'image d'origine
 
 #### Objets pris en charge
 
-[Input](input_overview.md) - [Colonne de List box](listbox_overview.md#list-box-columns) - [Pied List Box](listbox_overview.md#list-box-footers)
+[Input](input_overview.md) - [Colonne de List box](listbox-column.md) - [Pied List Box](listbox-header-footer.md#footers)
 
 #### Commandes
 
@@ -398,7 +398,7 @@ Par défaut, une heure nulle est affichée avec des zéros, par exemple "00:00:0
 
 #### Objets pris en charge
 
-[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [Colonne de List Box](listbox-column.md) - [Pied de List Box Footer](listbox-header-footer.md#footers)
 
 #### Commandes
 
@@ -411,7 +411,7 @@ Par défaut, une heure nulle est affichée avec des zéros, par exemple "00:00:0
 Lorsqu'une [expression booléenne](properties_Object.md#expression-type) est affichée comme :
 
 - un texte dans un [input](input_overview.md)
-- une ["popup"](properties_Display.md#display-type) dans une [colonne de list box](listbox_overview.md#list-box-columns),
+- une ["popup"](properties_Display.md#display-type) dans une [colonne de list box](listbox-column.md),
 
 ... vous pouvez sélectionner le texte à afficher pour chaque valeur :
 
@@ -426,7 +426,7 @@ Lorsqu'une [expression booléenne](properties_Object.md#expression-type) est aff
 
 #### Objets pris en charge
 
-[Colonne de list box](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
+[Colonne de list box](listbox-column.md) - [Input](input_overview.md)
 
 #### Commandes
 
@@ -450,7 +450,7 @@ Les colonnes booléennes peuvent également être affichées sous forme de pop u
 
 #### Objets pris en charge
 
-[Colonne de list box](listbox_overview.md#list-box-columns)
+[Colonne de list box](listbox-column.md)
 
 #### Commandes
 
@@ -502,7 +502,7 @@ Dans ce cas également, la propriété [Titre](#titre) est également disponible
 
 #### Objets pris en charge
 
-[Case à cocher](checkbox_overview.md) - [Colonne de list box](listbox_overview.md#list-box-columns)
+[Case à cocher](checkbox_overview.md) - [Colonne de list box](listbox-column.md)
 
 #### Commandes
 
@@ -527,7 +527,7 @@ Dans ces cas, le titre de la case à cocher peut être saisi en utilisant cette 
 
 #### Objets pris en charge
 
-[Colonne de list box](listbox_overview.md#list-box-columns)
+[Colonne de list box](listbox-column.md)
 
 ---
 
@@ -564,7 +564,7 @@ La propriété Tronquer avec ellipse peut être appliquée aux colonnes de type 
 
 #### Objets pris en charge
 
-[List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+[List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers)
 
 #### Commandes
 
@@ -599,7 +599,7 @@ Cette propriété est utilisée uniquement lors du dessin d'objets situés dans 
 
 #### Objets pris en charge
 
-[Zone 4D View Pro](viewProArea_overview.md) - [Zone 4D Write Pro](writeProArea_overview.md) - [Bouton](button_overview.md) - [Grille de boutons](buttonGrid_overview.md) - [Case à cocher](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Liste déroulante](dropdownList_Overview.md) - [Zone de groupe](groupBox.md) - [Liste hiérarchique](list_overview.md) - [List Box](listbox_overview.md) - [Colonne de list box](listbox_overview.md#list-box-columns) - [Pied de list box](listbox_overview.md#list-box-footers) - [En-tête de list box](listbox_overview.md#list-box-headers) - [Bouton image](pictureButton_overview.md) - [Pop up menu image](picturePopupMenu_overview.md) - [Zone de Plug-in](pluginArea_overview.md) - [Indicateur de progression](progressIndicator.md) - [Bouton radio](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Image statique](staticPicture.md) - [Stepper](stepper.md) - [Sous-formulaire](subform_overview.md) - [Onglet](tabControl.md) - [Zone de texte](text.md) - [Zone Web](webArea_overview.md)
+[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [List Box Header](listbox-header-footer.md#headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
 #### Commandes
 
@@ -658,7 +658,7 @@ Notez que quelle que soit la valeur de l'option de renvoi à la ligne automatiqu
 
 #### Objets pris en charge
 
-[Input](input_overview.md) - [Colonne de List box](listbox_overview.md#list-box-columns) - [Pied List Box](listbox_overview.md#list-box-footers)
+[Input](input_overview.md) - [Colonne de List box](listbox-column.md) - [Pied List Box](listbox-header-footer.md#footers)
 
 #### Commandes
 

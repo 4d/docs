@@ -17,6 +17,18 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|19 R6|Modified|
+|16 R2|Renamed (Get Listbox information)|
+|<6|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX Get property.Summary-->The **LISTBOX Get property** command returns the value of the *property* of the list box or column specified using the *object* and *\** parameters.<!-- END REF-->

@@ -699,7 +699,7 @@ Cette entity selection est ensuite mise à jour avec les produits et vous souhai
 
 La fonction `.distinct()` <!-- REF #EntitySelectionClass.distinct().Summary -->renvoie une collection contenant uniquement des valeurs distinctes (différentes) de *attributePath* dans l'entity selection<!-- END REF -->.
 
-La collection retournée est automatiquement triée. Vous souhaitez créer une collection pré-remplie :
+La collection retournée est automatiquement triée. Les valeurs **Null** ne sont pas retournées.
 
 Dans le paramètre *attributePath* passez l'attribut d'entité dont vous voulez obtenir les valeurs distinctes. Seules les valeurs scalaires (texte, nombre, booléen ou date) peuvent être gérées. Seules les valeurs scalaires (texte, nombre, booléen ou date) peuvent être gérées. Les types sont renvoyés dans l'ordre suivant :
 
@@ -710,7 +710,7 @@ Dans le paramètre *attributePath* passez l'attribut d'entité dont vous voulez 
 
 Vous pouvez utiliser la notation `[]` pour désigner une collection lorsque *attributePath* est un chemin dans un objet (cf. exemples).
 
-Exemple 2
+Dans le paramètre *options*, vous pouvez passer une ou une combinaison des constantes suivantes :
 
 | Constante         | Valeur | Commentaire                                                                                                                                                                                                                                         |
 | ----------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -934,7 +934,7 @@ Par défaut, les entités pour lesquelles *attributePath* est *null* ou indéfin
 
 **.extract ( attributePath ; targetPath { ; ...attributePathN ; ... targetPathN}) : Collection**
 
-Avec cette syntaxe, `.extract()` remplit la collection retournée avec les valeurs de *attributePath*. Chaque élément de la collection retournée est un objet avec les propriétés *targetPath* complétées par les propriétés *attributePath* correspondantes. Par exemple, vous pouvez organiser une recherche de la manière suivante :
+Avec cette syntaxe, `.extract()` remplit la collection retournée avec les valeurs de *attributePath*. Chaque élément de la collection retournée est un objet avec les propriétés *targetPath* complétées par les propriétés *attributePath* correspondantes. Les valeurs null sont conservées (le paramètre *option* est ignoré avec cette syntaxe).
 
 Si plusieurs *attributePath* sont renseignés, un *targetPath* doit être fourni pour chacun. Seules les paires \[*attributePath*, *targetPath*] valides sont extraites.
 

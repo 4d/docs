@@ -27,7 +27,7 @@ title: $filter
 
 ### paramsプロパティの使用
 
-You can also use 4D's `params` property which is a collection of values.
+また値のコレクションである4D の `params` プロパティを使用することもできます。
 
 **\{attribute\} {comparator} {placeholder} {AND/OR/EXCEPT} \{attribute\} {comparator} {placeholder}&$params='["{value1}","{value2}"]'**
 
@@ -77,23 +77,23 @@ You can also use 4D's `params` property which is a collection of values.
 | <= | 以下    |
 | begin                       | 前方一致  |
 
-## Vector similarity
+## ベクトル類似度
 
-If the attribute stores [**vector objects**](../API/VectorClass.md) (see how to [configure a 4D field to only store 4D.Vector class objects](../Develop/field-properties.md#class)), you can filter the dataclass using **vectors**, aka **embeddings**.
+属性が[**ベクトルオブジェクト**](../API/VectorClass.md) を保存する場合([4D フィールドを 4D.Vector クラスオブジェクトのみを保存するように設定する方法](../Develop/field-properties.md#class) を参照)、**ベクトル** つまり**埋め込み** を使用してデータクラスをフィルターすることができます。
 
-For more information about vector similarity searches, please refer to [Query by vector similarity](../API/DataClassClass.md#query-by-vector-similarity) section.
+ベクトル類似度の詳細な情報については、[ベクトル類似度によるクエリ](../API/DataClassClass.md#ベクトル類似度によるクエリ) の章を参照してください。
 
-Use the `params` property to provide the filter with the vector comparison parameter, using a syntax like:
+`params` プロパティを使用してベクトル比較パラメーターのフィルターを提供します。使用する構文は以下の通りです:
 
 **\{vectorAttribute\} \{comparator\} \{placeholder\}&$params=vectorComparison**
 
-The *vectorComparison* parameter is a collection of the following elements:
+*vectorComparison* パラメーターは、以下のような要素を格納したコレクションです:
 
-| プロパティ                                                                            | 型                     | 説明                                                                                                                                                                                                                                                                                   |
-| -------------------------------------------------------------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [].vector    | Collection of numbers | 必須設定です。 A collection that represents the vector to compare                                                                                                                                                                                                                           |
-| [].metric    | Text                  | 任意。 クエリに使用する[ベクトル計算](../API/VectorClass.md#ことなるベクトル計算を理解する)。 サポートされる値:<li>"cosine" (省略時のデフォルト): ベクトル間のコサイン類似度を計算します。</li><li>"dot": ベクトルのドット類似度を計算します。</li><li>"euclidean": ベクトル間のユークリッド距離を計算します。 |
-| [].threshold | Real                  | 任意(デフォルト: 0.5)。 選択された"metric"に従って、コサイン、ドット、またはユークリッド類似度に基づいたベクトル比較をフィルタリングするために使用されるしきい値。 最適な結果を得るためには、特定の用途に最適な類似度のしきい値をきちんと選択することが強く推奨されます。                                                                                     |
+| プロパティ                                                                            | 型         | 説明                                                                                                                                                                                                                                                                                   |
+| -------------------------------------------------------------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [].vector    | 数値のコレクション | 必須設定です。 比較するベクトルを表すコレクションです                                                                                                                                                                                                                                                          |
+| [].metric    | Text      | 任意。 クエリに使用する[ベクトル計算](../API/VectorClass.md#ことなるベクトル計算を理解する)。 サポートされる値:<li>"cosine" (省略時のデフォルト): ベクトル間のコサイン類似度を計算します。</li><li>"dot": ベクトルのドット類似度を計算します。</li><li>"euclidean": ベクトル間のユークリッド距離を計算します。 |
+| [].threshold | Real      | 任意(デフォルト: 0.5)。 選択された"metric"に従って、コサイン、ドット、またはユークリッド類似度に基づいたベクトル比較をフィルタリングするために使用されるしきい値。 最適な結果を得るためには、特定の用途に最適な類似度のしきい値をきちんと選択することが強く推奨されます。                                                                                     |
 
 Only a subset of **comparator** symbols are supported with vector comparisons. これらの比較記号は、結果としきい値を比較するのに使用されるという点に注意してください:
 
@@ -125,7 +125,7 @@ Person データクラスより、anotherobj オブジェクト属性の number 
  GET  /rest/Person/?filter="anotherobj.mynum > 50"
 ```
 
-In this example, we do a vector search with basic values:
+この例では、基本的な値でベクトル検索を行います:
 
 ```
  GET  /rest/Person/?filter="VectorAtt>=:1"&$params='[{vector:[1,2,3],threshold:1}]'

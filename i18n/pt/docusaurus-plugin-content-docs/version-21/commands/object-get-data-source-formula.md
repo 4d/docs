@@ -1,19 +1,34 @@
 ---
 id: object-get-data-source-formula
 title: OBJECT Get data source formula
+displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get data source formula.Syntax-->**OBJECT Get data source formula** ( {* ;} *object* ) : 4D.Formula<!-- END REF-->
+<!--REF #_command_.OBJECT Get data source formula.Syntax-->**OBJECT Get data source formula** ( * ; *object* : Text ) : 4D.Formula<br/>**OBJECT Get data source formula** ( *object* : Variable, Field ) : 4D.Formula<!-- END REF-->
 
 <!--REF #_command_.OBJECT Get data source formula.Params-->
 
-| Parâmetro | Tipo                       |                             | Descrição                                                                                                                  |
-| --------- | -------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| \*        | Operador                   | &#8594; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable           |
-| object    | any                        | &#8594; | Nome do objeto (se \* for especificado) ou<br/>Campo ou variável (se \* for omitido) |
-| formula   | 4D.Formula | &#8592; | Fórmula associada com o objeto de formulário (`Null` se nenhuma fórmula estiver associada)              |
+<div class="no-index">
 
+| Parâmetro | Tipo                       |                             | Descrição                                                                                                               |
+| --------- | -------------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| \*        | Operador                   | &#8594; | If specified, object is an object name (string) ; if omitted, object is a variable or a field        |
+| object    | Text, Variable, Field      | &#8594; | Form object name (if \* is specified) or<br/>Field or variable (if \* is omitted) |
+| Resultado | 4D.Formula | &#8592; | Fórmula associada com o objeto de formulário (`Null` se nenhuma fórmula estiver associada)           |
+
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>História</summary>
+
+| Release | Mudanças                    |
+| ------- | --------------------------- |
+| 21      | Support of *base* parameter |
+| 20 R10  | Created                     |
+
+</details>
+</div>
 
 ## Descrição
 

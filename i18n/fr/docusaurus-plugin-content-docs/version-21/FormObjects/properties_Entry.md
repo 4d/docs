@@ -31,7 +31,7 @@ Permet à l'utilisateur d'accéder à un menu contextuel standard dans l'objet l
 
 Pour une [zone de saisie](input_overview.md) de type image, en plus des commandes d'édition standard (Couper, Copier, Coller et Effacer), le menu contient la commande **Importer...**, qui peut être utilisée pour importer une image stockée dans un fichier, ainsi que la commande **Enregistrer sous...**, qui peut être utilisée pour enregistrer l'image sur le disque. Le menu peut également être utilisé pour modifier le format d'affichage de l'image : les options **Tronquée non centrée**, **Non tronquée** et **Proportionnelle centrée** sont proposées. La modification du [format d'affichage](properties_Display.md#picture-format) à l'aide de ce menu est temporaire ; elle n'est pas sauvegardée avec l'enregistrement.
 
-Pour une [zone de saisie](input_overview.md) ou une [colonne de list box](listbox_overview.md#list-box-columns) de texte [multi-style](properties_Text.md#multi-style), en plus des commandes d'édition standard, le menu contextuel fournit les commandes suivantes :
+Pour une [zone de saisie](input_overview.md) ou une [colonne de list box](listbox-column.md) de texte [multi-style](properties_Text.md#multi-style), en plus des commandes d'édition standard, le menu contextuel fournit les commandes suivantes :
 
 - **Polices...** : affiche la boîte de dialogue système de police
 - **Polices récentes** : affiche les noms des polices récentes sélectionnées au cours de la session. La liste peut stocker jusqu'à 10 polices (au-delà, la dernière police utilisée remplace la plus ancienne). Par défaut, cette liste est vide et l'option n'est pas affichée. Vous pouvez gérer cette liste en utilisant les commandes `SET RECENT FONTS` et `FONT LIST`.
@@ -72,7 +72,7 @@ Lorsque cette propriété est désactivée, tous les pop-up menus associés à u
 
 #### Objets pris en charge
 
-[4D Write Pro areas](writeProArea_overview.md) - [Check Box](checkbox_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Progress Bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
+[4D Write Pro areas](writeProArea_overview.md) - [Check Box](checkbox_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox-column.md) - [Progress Bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
 
 #### Commandes
 
@@ -134,7 +134,7 @@ Ce tableau explique chaque filtre présent dans la liste déroulante Filtre de s
 
 #### Objets pris en charge
 
-[Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Liste hiérarchique](list_overview.md) - [Zone de saisie](input_overview.md) - [Colonne List Box](listbox_overview.md#list-box-columns)
+[Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Liste hiérarchique](list_overview.md) - [Zone de saisie](input_overview.md) - [Colonne List Box](listbox-column.md)
 
 ---
 

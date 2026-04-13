@@ -376,7 +376,7 @@ Las columnas booleanas también pueden mostrarse como menús emergentes. En este
 
 #### Objetos soportados
 
-[Columna de list box](listbox_overview.md#list-box-columns)
+[Columna de list box](listbox-column.md)
 
 ---
 
@@ -445,7 +445,7 @@ En ese caso, el título de la casilla de verificación puede introducirse utiliz
 
 #### Objetos soportados
 
-[Columna de list box](listbox_overview.md#list-box-columns)
+[Columna de list box](listbox-column.md)
 
 ---
 
@@ -481,7 +481,7 @@ La propiedad Truncar con elipsis puede aplicarse a columnas de tipo booleano; si
 
 #### Objetos soportados
 
-[Columna List Box](listbox_overview.md#list-box-columns) - [Pie List Box](listbox_overview.md#list-box-footers)
+[Columna List Box](listbox-column.md) - [Pie List Box](listbox-header-footer.md#footers)
 
 ---
 

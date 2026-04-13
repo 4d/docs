@@ -5,7 +5,7 @@ title: Pieds
 
 ## Afficher pieds
 
-Cette propriété est utilisée pour afficher ou masquer [les pieds de de colonne listbox](listbox_overview.md#list-box-footers). Il existe un pied par colonne; chaque pied est configuré séparément.
+Cette propriété est utilisée pour afficher ou masquer [les pieds de de colonne listbox](listbox-header-footer.md#footers). Il existe un pied par colonne; chaque pied est configuré séparément.
 
 #### Grammaire JSON
 
@@ -69,4 +69,4 @@ A noter que la conversion en va-et-vient peut conduire à un résultat final dif
 
 #### Voir également
 
-[En-têtes](properties_Headers.md) - [Pieds List box](listbox_overview.md#list-box-footers)
+[En-têtes](properties_Headers.md) - [Pieds List box](listbox-header-footer.md#footers)

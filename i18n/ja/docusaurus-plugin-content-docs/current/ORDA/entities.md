@@ -442,7 +442,7 @@ $myInvoices:=$myParts.invoiceItems.invoice
 
 最後の行は、$myParts エンティティセレクション内のパーツにリレートされている請求項目が少なくとも1行含まれているすべての請求書のエンティティセレクションを、*$myInvoices* 内に返します。 エンティティセレクションのプロパティとしてリレーション属性が使用されると、返される結果は、たとえ返されるエンティティが一つだけだとしても、常に新しいエンティティセレクションとなります。 エンティティセレクションのプロパティとしてリレーション属性が使用された結果、エンティティが何も返ってこない場合には、返されるのは空のエンティティセレクションであり、null ではありません。
 
-## Restricting entity selections {#restricting-entity-selections}
+## エンティティセレクションを制限する {#restricting-entity-selections}
 
 ORDAでは、あらゆるデータクラスにおいて、エンティティへのアクセスを制限するフィルターを作成することができます。 一旦実装されると、データクラスのエンティティが **ORDAクラス関数** ([`all()`](../API/DataClassClass.md#all) や [`query()`](../API/EntitySelectionClass.md#query)など) または [**REST API**](../category/api-dataclass) ([Data Explorer](../Admin/dataExplorer.md) や [remote datastores](remoteDatastores.md)など) によってアクセスされるたびに、フィルターが自動的に適用されます。
 

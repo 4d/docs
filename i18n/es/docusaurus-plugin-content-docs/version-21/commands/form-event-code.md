@@ -9,10 +9,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Form event code.Params-->
 
+<div class="no-index">
+
 | Parámetros | Tipo    |                             | Descripción                 |
 | ---------- | ------- | --------------------------- | --------------------------- |
 | Resultado  | Integer | &#8592; | Número de evento formulário |
 
+</div>
 <!-- END REF-->
 
 <div class="no-index">

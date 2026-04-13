@@ -5,26 +5,32 @@ slug: /commands/num
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Num.Syntax-->**Num** ( *expression* {; *separator*} ) : Real<br/>**Num** ( *expression* ; *base* ) : Real<!-- END REF-->
+<!--REF #_command_.Num.Syntax-->**Num** ( *expression* : Text, Boolean, Integer {; *separator* : Text} ) : Real<br/>**Num** ( *expression* : Text, Boolean, Integer ; *base* : Integer ) : Real<!-- END REF-->
 
 <!--REF #_command_.Num.Params-->
 
-| 引数        | 型                      |                             | 説明                                    |
-| --------- | ---------------------- | --------------------------- | ------------------------------------- |
-| 式         | Text, Boolean, Integer | &#8594; | 数値形式を返したい文字列、あるいは0か1を返したいブール値、あるいは数値式 |
-| separator | Text                   | &#8594; | 小数点記号                                 |
-| base      | Integer                | &#8594; | 基数を表す2から36までの値                        |
-| 戻り値       | Real                   | &#8592; | expression 引数の数値形式                    |
+<div class="no-index">
 
+| 引数         | 型                      |                             | 説明                                    |
+| ---------- | ---------------------- | --------------------------- | ------------------------------------- |
+| expression | Text, Boolean, Integer | &#8594; | 数値形式を返したい文字列、あるいは0か1を返したいブール値、あるいは数値式 |
+| separator  | Text                   | &#8594; | 小数点記号                                 |
+| base       | Integer                | &#8594; | 基数を表す2から36までの値                        |
+| 戻り値        | Real                   | &#8592; | expression 引数の数値形式                    |
+
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>履歴</summary>
 
-| リリース | 内容             |
-| ---- | -------------- |
-| 21   | *base* 引数のサポート |
+| リリース                        | 内容             |
+| --------------------------- | -------------- |
+| 21                          | *base* 引数のサポート |
+| <6 | Created        |
 
 </details>
+</div>
 
 ## 説明
 

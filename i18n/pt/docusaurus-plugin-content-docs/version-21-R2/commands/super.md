@@ -8,12 +8,25 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Super.Params -->
 
+<div class="no-index">
+
 | Parâmetro  | Tipo   |                             | Descrição                                                      |
 | ---------- | ------ | --------------------------- | -------------------------------------------------------------- |
 | param      | any    | ->                          | Parâmetro(s) a passar para o construtor pai |
 | Resultados | Object | <- | Pai do objecto                                                 |
 
+</div>
 <!-- END REF -->
+
+<div class="no-index">
+<details><summary>História</summary>
+
+| Release | Mudanças |
+| ------- | -------- |
+| 19      | Created  |
+
+</details>
+</div>
 
 A palavra-chave `Super` <!-- REF #_command_.Super.Summary -->permite chamadas à `superclasse`, ou seja, a classe pai<!-- END REF -->.
 

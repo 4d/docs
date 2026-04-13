@@ -8,11 +8,26 @@ displayed_sidebar: docs
 
 <!--REF #_command_.License info.Params-->
 
+<div class="no-index">
+
 | 引数  | 型      |                             | 説明                |
 | --- | ------ | --------------------------- | ----------------- |
 | 戻り値 | Object | &#8592; | アクティブなライセンスに関する情報 |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>履歴</summary>
+
+| リリース  | 内容                                            |
+| ----- | --------------------------------------------- |
+| 20 R7 | Renamed (Get License info) |
+| 16 R6 | 変更                                            |
+| 16 R4 | Created                                       |
+
+</details>
+</div>
 
 ## 説明
 
@@ -25,7 +40,8 @@ displayed_sidebar: docs
 このコマンドはライセンスファイルをディスクからリロードし、それらが変更されていた場合には、関連する権限を更新します。
 
 :::
-The returned object contains the following properties:
+
+戻り値のオブジェクトには、以下のプロパティが格納されています:
 
 ```json
 {

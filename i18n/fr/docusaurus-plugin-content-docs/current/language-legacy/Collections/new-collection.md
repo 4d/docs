@@ -16,6 +16,16 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>Historique</summary>
+
+| Release | Modifications |
+| ------- | ------------- |
+| 16 R4   | Created       |
+
+</details>
+</div>
+
 ## Description
 
 La commande `New collection` <!--REF #_command_.New collection.Summary-->crée une nouvelle collection vide ou pré-remplie et retourne sa référence.<!-- END REF--> Les collections peuvent être gérées à l'aide des propriétés et des fonctions de la [classe Collection](../../API/CollectionClass.md).

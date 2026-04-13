@@ -487,7 +487,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 #### Descripción
 
-Rutas de acceso Puede utilizar las funciones y propiedades de la clase [4D.FileHandle](FileHandleClass) para escribir, leer o añadir contenido al archivo.
+La función `.open()` <!-- REF #FileClass.open().Summary -->crea y devuelve un nuevo objeto [4D.FileHandle](FileHandleClass) sobre el archivo, en el *modo* especificado o con las *opciones* especificadas<!-- END REF -->. Puede utilizar las funciones y propiedades de la clase [4D.FileHandle](FileHandleClass) para escribir, leer o añadir contenido al archivo.
 
 Si utiliza el parámetro *mode* (texto), pase el modo de apertura para el file handle:
 

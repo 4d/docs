@@ -8,13 +8,17 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WEB Server.Params-->
 
+<div class="no-index">
+
 | 引数     | 型                            |                             | 説明                                                                  |
 | ------ | ---------------------------- | --------------------------- | ------------------------------------------------------------------- |
 | option | Integer                      | &#8594; | 取得する Webサーバー (省略時のデフォルト = `Web server database`) |
 | 戻り値    | 4D.WebServer | &#8592; | WebServer オブジェクト                                                    |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>履歴</summary>
 
 | リリース  | 内容                                           |
@@ -23,6 +27,7 @@ displayed_sidebar: docs
 | 19    | .sessionCookieSameSite をサポート |
 
 </details>
+</div>
 
 ## 説明
 

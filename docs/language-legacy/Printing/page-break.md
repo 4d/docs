@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | Cancel printing job started with Print form |
-| > | Operator | &#8594;  | Force one printing job |
+| > | > | &#8594;  | Force one printing job |
 </div>
 <!-- END REF-->
 

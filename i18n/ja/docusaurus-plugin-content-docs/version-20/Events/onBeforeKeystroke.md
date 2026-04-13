@@ -3,9 +3,9 @@ id: onBeforeKeystroke
 title: On Before Keystroke
 ---
 
-| コード | 呼び出し元                                                                                                                                                                                                                                                             | 定義                                                                                 |
-| --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| 17  | [4D Write Pro エリア](FormObjects/writeProArea_overview.md) - [コンボボックス](FormObjects/comboBox_overview.md) - フォーム - [入力](FormObjects/input_overview.md) - [リストボックス](FormObjects/listbox_overview.md) - [リストボックスカラム](FormObjects/listbox_overview.md#list-box-columns) | フォーカスのあるオブジェクトに文字が入力されようとしている。 `Get edited text` はこの文字を **含まない** オブジェクトのテキストを返します。 |
+| コード | 呼び出し元                                                                                                                                                                                                                                          | 定義                                                                                 |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| 17  | [4D Write Pro エリア](FormObjects/writeProArea_overview.md) - [コンボボックス](FormObjects/comboBox_overview.md) - フォーム - [入力](FormObjects/input_overview.md) - [リストボックス](FormObjects/listbox_overview.md) - [リストボックスカラム](FormObjects/listbox-column.md) | フォーカスのあるオブジェクトに文字が入力されようとしている。 `Get edited text` はこの文字を **含まない** オブジェクトのテキストを返します。 |
 
 <details><summary>履歴</summary>
 
@@ -22,7 +22,7 @@ title: On Before Keystroke
 
 `On Before Keystroke` イベントは次の場合には生成されません:
 
-- [リストボックス列](FormObjects/listbox_overview.md#リストボックス列) メソッドの場合、ただし、セルを編集している場合を除きます ([リストボックス](FormObjects/listbox_overview.md) メソッドではどのような場合でも生成されます)。
+- in a [List Box Column](FormObjects/listbox-column.md) method except when a cell is being edited (however it is generated in any cases in the [list box](FormObjects/listbox_overview.md) method),
 - キーボードを使用せずに (ペーストやドラッグ＆ドロップ、チェックボックス、ドロップダウンリスト、コンボボックス) おこなわれた変更の場合。 これらのイベントを処理するには [`On After Edit`](onAfterEdit.md) を使用します。
 
 ### 入力不可オブジェクト

@@ -5,7 +5,7 @@ title: Rodapés
 
 ## Exibir rodapés
 
-Esta propriedade é usada para exibir ou ocultar [os rodapés de coluna listbox](listbox_overview.md#list-box-footers). Existe um rodapé por coluna; cada rodapé é configurado separadamente.
+Esta propriedade é usada para exibir ou ocultar [os rodapés de coluna listbox](listbox-header-footer.md#footers). Existe um rodapé por coluna; cada rodapé é configurado separadamente.
 
 #### Gramática JSON
 
@@ -29,7 +29,7 @@ Esta propriedade é usada para definir a altura da linha para um rodapé de list
   * Se mais de um tamanho for definido, 4D usa o maior. Por exemplo, se uma linha contém "Verdana 18", "Geneva 12" e "Arial 9", 4D usa "Verdana 18" para determinar a altura da linha (por exemplo, 25 pixeis). Esta altura é depois multiplicada pelo número de linhas definido.
   * Este cálculo não tem em conta o tamanho das imagens nem os estilos aplicados aos tipos de letra.
   * No macOS, a altura da linha pode estar incorreta se o usuário inserir caracteres que não estejam disponíveis na fonte selecionada. Quando isso ocorre, uma fonte substituta é usada, o que pode causar variações no tamanho.
-> > Esta propriedade também pode ser definida dinamicamente usando o comando [LISTBOX SET FOOTERS HEIGHT](https://doc.4d.com/4Dv17R6/4D/17-R6/List-box-footer-specific-properties.300-4354808.en.html).
+> This property can also be set dynamically using the [LISTBOX SET FOOTERS HEIGHT](https://doc.4d.com/4Dv20/4D/20.6/LISTBOX-SET-FOOTERS-HEIGHT.301-7487629.en.html) command.
 
 Conversão de unidades: quando você muda de uma unidade para a outra, 4D converte-os automaticamente e exibe o resultado na Lista de propriedades. Por exemplo, se a fonte usada for "Lucida grande 24", uma altura de "1 linha" será convertida em "30 píxeis" e uma altura de "60 píxeis" será convertida em "2 linhas".
 
@@ -60,4 +60,4 @@ Observe que a conversão para frente e para trás pode levar a um resultado dife
 
 #### Veja também
 
-[Cabeçalhos](properties_Headers.md) - [Rodapés List box](listbox_overview.md#list-box-footers)
+[Headers](properties_Headers.md) - [List box footers](listbox-header-footer.md#footers)

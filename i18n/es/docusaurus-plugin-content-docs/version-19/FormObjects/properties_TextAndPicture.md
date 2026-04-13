@@ -74,7 +74,7 @@ Designa la ubicación de un icono en relación con el objeto formulario.
 
 #### Objetos soportados
 
-[Encabezado de list box](listbox_overview.md#list-box-headers)
+[Encabezado de list box](listbox-header-footer.md#headers)
 
 ---
 

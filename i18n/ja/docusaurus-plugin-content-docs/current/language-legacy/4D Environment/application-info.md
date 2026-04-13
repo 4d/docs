@@ -9,12 +9,16 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Application info.Params-->
 
+<div class="no-index">
+
 | 引数  | 型      |                             | 説明                   |
 | --- | ------ | --------------------------- | -------------------- |
 | 戻り値 | Object | &#8592; | アクティブなアプリケーションに関する情報 |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>履歴</summary>
 
 | リリース  | 内容                                            |
@@ -22,6 +26,7 @@ displayed_sidebar: docs
 | 21 R2 | "useFluentUI" および "canUseFluentUI" プロパティのサポート |
 
 </details>
+</div>
 
 ## 説明
 

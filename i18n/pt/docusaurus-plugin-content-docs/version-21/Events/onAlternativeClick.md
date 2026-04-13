@@ -3,9 +3,9 @@ id: onAlternativeClick
 title: On Alternative Click
 ---
 
-| Code | Pode ser chamado por                                                                                                                                                        | Definição                                                                                                                                                                         |
-| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 38   | [Button](FormObjects/button_overview.md) - [Caixa de lista](FormObjects/listbox_overview.md) - [Coluna de caixa de lista](FormObjects/listbox_overview.md#list-box-columns) | <li>Botões: a área de "seta" de um botão é clicada em</li><li>Caixas de lista: Em uma coluna de um array de objeto, um botão ellipsis (atributo "alternateButton") é clicado</li> |
+| Code | Pode ser chamado por                                                                                                                                   | Definição                                                                                                                                                                         |
+| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 38   | [Button](FormObjects/button_overview.md) - [Caixa de lista](FormObjects/listbox-object.md) - [Coluna de caixa de lista](FormObjects/listbox-column.md) | <li>Botões: a área de "seta" de um botão é clicada em</li><li>Caixas de lista: Em uma coluna de um array de objeto, um botão ellipsis (atributo "alternateButton") é clicado</li> |
 
 ## Descrição
 
@@ -22,8 +22,8 @@ Alguns estilos de botão podem ser [vinculados a um menu pop-up](FormObjects/pro
 
 ### List box
 
-Esse evento é gerado nas colunas das [caixas de listagem do tipo matriz de objetos](FormObjects/listbox_overview.md#object-arrays-in-columns), quando o usuário clica em um botão de reticências do widget (atributo "alternateButton").
+Esse evento é gerado nas colunas das [caixas de listagem do tipo matriz de objetos](../FormObjects/listbox-column.md#object-arrays-in-columns), quando o usuário clica em um botão de reticências do widget (atributo "alternateButton").
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)
 
-Veja a [descrição do atributo "alternateButton"](FormObjects/listbox_overview.md#alternatebutton).
+Veja a [descrição do atributo "alternateButton"](../FormObjects/listbox-column.md#alternatebutton).

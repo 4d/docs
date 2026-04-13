@@ -9,11 +9,24 @@ displayed_sidebar: docs
 
 <!--REF #_command_.This.Params-->
 
+<div class="no-index">
+
 | Paramètres | Type   |                             | Description              |
 | ---------- | ------ | --------------------------- | ------------------------ |
 | Résultat   | Object | &#8592; | Élément ou objet courant |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historique</summary>
+
+| Release | Modifications |
+| ------- | ------------- |
+| 19      | Created       |
+
+</details>
+</div>
 
 ## Description
 

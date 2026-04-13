@@ -4,9 +4,11 @@ title: DIALOG
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DIALOG.Syntax-->**DIALOG** ( {*aTable* ;} *form* {; *formData*}{; *} )<!-- END REF-->
+<!--REF #_command_.DIALOG.Syntax-->**DIALOG** ( {*aTable* : Table ;} *form* : Text, Object {; *formData* : Object}{; *} )<!-- END REF-->
 
 <!--REF #_command_.DIALOG.Params-->
+
+<div class="no-index">
 
 | 引数       | 型            |                             | 説明                                                                                                                                                          |
 | -------- | ------------ | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -15,7 +17,20 @@ displayed_sidebar: docs
 | formData | Object       | &#8594; | フォームに関連づけるデータ                                                                                                                                               |
 | \*       | 演算子          | &#8594; | 同じプロセスを使用                                                                                                                                                   |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>履歴</summary>
+
+| リリース                        | 内容      |
+| --------------------------- | ------- |
+| 17                          | 変更      |
+| 11 SQL                      | 変更      |
+| <6 | Created |
+
+</details>
+</div>
 
 ## 説明
 

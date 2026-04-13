@@ -5,7 +5,7 @@ slug: /commands/get-list-item-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM PARAMETER.Syntax-->**GET LIST ITEM PARAMETER** ( * ; *list* : Text ; *itemRef* : Integer, Operator ; *selector* : Text ; *value* : Text, Boolean, Real )<br/>**GET LIST ITEM PARAMETER** ( *list* : Integer ; *itemRef* : Integer, Operator ; *selector* : Text ; *value* : Text, Boolean, Real )<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM PARAMETER.Syntax-->**GET LIST ITEM PARAMETER** ( * ; *list* : Text ; *itemRef* : Integer, Operator ; *selector* : Text ; *value* : Variable )<br/>**GET LIST ITEM PARAMETER** ( *list* : Integer ; *itemRef* : Integer, Operator ; *selector* : Text ; *value* : Variable )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM PARAMETER.Params-->
 <div class="no-index">
 
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 | list | Integer, Text | &#8594;  | List reference number (if * omitted) or Name of list type object (if * passed) |
 | itemRef | Integer, Operator | &#8594;  | Item reference number or 0 for the last item appended to the list or * for the current list item |
 | selector | Text | &#8594;  | Parameter constant |
-| value | Text, Boolean, Real | &#8592; | Current value of parameter |
+| value | Variable | &#8592; | Current value of parameter (variable of type Text, Boolean, Real) |
 </div>
 <!-- END REF-->
 

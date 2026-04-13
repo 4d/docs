@@ -79,16 +79,6 @@ Los objetos HTTPRequest ofrecen las siguientes propiedades y funciones:
 
 ## 4D.HTTPRequest.new()
 
-<details><summary>Historia</summary>
-
-| Lanzamiento | Modificaciones                                                    |
-| ----------- | ----------------------------------------------------------------- |
-| 21          | Soporte de propiedad *storeCertificateName*                       |
-| 20          | Validación TLS por defecto                                        |
-| 19 R7       | Soporte de las propiedades *automaticRedirections* y *decodeData* |
-
-</details>
-
 <!-- REF #4D.HTTPRequest.new().Syntax -->**4D.HTTPRequest.new**( *url* : Text { ; *options* : Object } ) : 4D.HTTPRequest<!-- END REF -->
 
 <!-- REF #4D.HTTPRequest.new().Params -->

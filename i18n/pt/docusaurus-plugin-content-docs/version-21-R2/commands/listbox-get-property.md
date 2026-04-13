@@ -4,18 +4,33 @@ title: LISTBOX Get property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get property.Syntax-->**LISTBOX Get property** ( * ; *object* : Text ; *property* : Integer ) : any<br/>**LISTBOX Get property** ( *object* : Field, Variable ; *property* : Integer ) : any<!-- END REF-->
+<!--REF #_command_.LISTBOX Get property.Syntax-->**LISTBOX Get property** ( * ; *object* : Text ; *property* : Integer ) : any<br/>**LISTBOX Get property** ( *object* : Variable ; *property* : Integer ) : any<!-- END REF-->
 
 <!--REF #_command_.LISTBOX Get property.Params-->
 
-| Parâmetro | Tipo          |                             | Descrição                                                                                                            |
-| --------- | ------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| \*        | Operador      | &#8594; | If specified, object is an object name (string). If omitted, object is a variable |
-| object    | any           | &#8594; | Nome do objeto (se \* for especificado) ou Variável (se \* for omitido)        |
-| property  | Integer       | &#8594; | Property whose value you want to get                                                                                 |
-| Resultado | Integer, Text | &#8592; | Valor atual                                                                                                          |
+<div class="no-index">
 
+| Parâmetro | Tipo           |                             | Descrição                                                                                                            |
+| --------- | -------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| \*        | Operador       | &#8594; | If specified, object is an object name (string). If omitted, object is a variable |
+| object    | Text, Variable | &#8594; | Form object name (if \* is specified) or Variable (if \* is omitted)           |
+| property  | Integer        | &#8594; | Property whose value you want to get                                                                                 |
+| Resultado | any            | &#8592; | Current value (Integer, Text)                                                                     |
+
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>História</summary>
+
+| Release                     | Mudanças                                             |
+| --------------------------- | ---------------------------------------------------- |
+| 19 R6                       | Modificado                                           |
+| 16 R2                       | Renamed (Get Listbox information) |
+| <6 | Created                                              |
+
+</details>
+</div>
 
 ## Descrição
 

@@ -26,4 +26,4 @@ title: On Alternative Click
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)
 
-["alternateButton" 属性の説明](FormObjects/listbox_overview.md#alternatebutton) を参照ください。
+["alternateButton" 属性の説明](../FormObjects/listbox-column.md#alternatebutton) を参照ください。

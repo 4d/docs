@@ -9,6 +9,8 @@ displayed_sidebar: docs
 
 <!--REF #_command_.LISTBOX SET PROPERTY.Params-->
 
+<div class="no-index">
+
 | 引数       | 型              |                             | 説明                                                                                                         |
 | -------- | -------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | \*       | 演算子            | &#8594; | 指定時、object はオブジェクト名(文字列)。 省略時、object は変数                                                |
@@ -16,7 +18,19 @@ displayed_sidebar: docs
 | property | Integer        | &#8594; | リストボックスまたはカラムのプロパティ                                                                                        |
 | value    | Integer, Text  | &#8594; | プロパティの値                                                                                                    |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>履歴</summary>
+
+| リリース  | 内容      |
+| ----- | ------- |
+| 19 R6 | 変更      |
+| 16 R2 | Created |
+
+</details>
+</div>
 
 ## 説明
 

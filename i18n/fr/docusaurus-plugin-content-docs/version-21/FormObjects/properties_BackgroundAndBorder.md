@@ -17,7 +17,7 @@ Vous pouvez également définir cette propriété à l'aide de la commande.
 
 #### Objets pris en charge
 
-[List Box](listbox_overview.md) - [Colonne List Box](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [Colonne de List Box](listbox-column.md)
 
 #### Commandes
 
@@ -41,7 +41,7 @@ Vous pouvez également définir cette propriété à l'aide de la commande [`OBJ
 
 #### Objets pris en charge
 
-[Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
+[Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
 
 #### Commandes
 
@@ -71,7 +71,7 @@ Vous pouvez également définir cette propriété en utilisant la commande [`LIS
 
 #### Objets pris en charge
 
-[List Box](listbox_overview.md) - [Colonne List Box](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [Colonne de List Box](listbox-column.md)
 
 #### Commandes
 
@@ -224,7 +224,7 @@ Vous pouvez obtenir le même résultat en utilisant les commandes [`LISTBOX SET 
 
 #### Objets pris en charge
 
-[List Box](listbox_overview.md) - [Colonne List Box](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [Colonne de List Box](listbox-column.md)
 
 #### Commandes
 

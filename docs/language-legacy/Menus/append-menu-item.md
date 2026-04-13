@@ -5,14 +5,14 @@ slug: /commands/append-menu-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.APPEND MENU ITEM.Syntax-->**APPEND MENU ITEM** ( *menu* : Integer, Text ; *itemText* : Text, Integer {; *subMenu* : Text {; *process* : Integer} {; *}} )<!-- END REF-->
+<!--REF #_command_.APPEND MENU ITEM.Syntax-->**APPEND MENU ITEM** ( *menu* : Integer, Text ; *itemText* : Text {; *subMenu* : Text {; *process* : Integer}} {; *} )<!-- END REF-->
 <!--REF #_command_.APPEND MENU ITEM.Params-->
 <div class="no-index">
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | menu | Integer, Text | &#8594;  | Menu number or Menu reference |
-| itemText | Text, Integer | &#8594;  | Text for the new menu items |
+| itemText | Text | &#8594;  | Text for the new menu items |
 | subMenu | Text | &#8594;  | Reference of submenu associated with item |
 | process | Integer | &#8594;  | Process reference number |
 | * | Operator | &#8594;  | If passed: consider metacharacters as standard characters |
@@ -49,8 +49,9 @@ You define the items to be appended with the parameter *itemText* as follows:
 * To specify a separation line: Pass "-" or "(-" as item text.
 * To specify a font style for a line: In the item text, place a less than sign (*<*) followed by one of these characters:
   
-| <B | Bold      |  
+| Symbols | Style |  
 | -- | --------- |  
+| <B | Bold      |  
 | <I | Italic    |  
 | <U | Underline |
 * To add a check mark to an item: In the item text, place an exclamation mark (*!*) followed by the character you want as a check mark. On Macintosh, the character is displayed; on Windows, a check mark is displayed no matter what character you passed.
@@ -75,17 +76,17 @@ This example appends the names of the available fonts to the Font menu, which in
 ```4d
   // In the On Startup database method
   // The font list is loaded and menu item text is built
- FONT LIST(◊asAvailableFont)
- ◊atFontMenuItems:=""
- For($vlFont;1;Size of array(◊asAvailableFont))
-    ◊atFontMenuItems:=◊atFontMenuItems+";"+◊asAvailableFont{$vlFont}
+ FONT LIST(<>asAvailableFont)
+ <>atFontMenuItems:=""
+ For($vlFont;1;Size of array(<>asAvailableFont))
+    <>atFontMenuItems:=<>atFontMenuItems+";"+<>asAvailableFont{$vlFont}
  End for
 ```
 
 Then, in any form or project method, you can write:
 
 ```4d
- APPEND MENU ITEM(6;◊atFontMenuItems)
+ APPEND MENU ITEM(6;<>atFontMenuItems)
 ```
 
 ## See also 

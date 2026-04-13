@@ -5,18 +5,11 @@ slug: /commands/create-deployment-license
 displayed_sidebar: docs
 ---
 
-<details><summary>Historia</summary>
-
-| Lanzamiento | Modificaciones                      |
-| ----------- | ----------------------------------- |
-| 20 R10      | Nuevo parámetro *autoLicenseTarget* |
-| 20          | Añadidos                            |
-
-</details>
-
 <!--REF #_command_.Create deployment license.Syntax-->**Create deployment license** ( *mergedApp* : 4D.Folder ; *autoLicenseTarget* : Integer ) : Object<br/>**Create deployment license** ( *mergedApp* : 4D.Folder ; *buildLicense* : 4D.File {; *oemLicense* : 4D.File} ) : Object<!-- END REF-->
 
 <!--REF #_command_.Create deployment license.Params-->
+
+<div class="no-index">
 
 | Parámetros        | Tipo                      |                             | Descripción                                                   |
 | ----------------- | ------------------------- | --------------------------- | ------------------------------------------------------------- |
@@ -26,7 +19,19 @@ displayed_sidebar: docs
 | oemLicense        | 4D.File   | &#8594; | Licencia 4D OEM XML Key si se trata de una licencia servidor  |
 | Resultado         | Object                    | &#8592; | Estado                                                        |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historia</summary>
+
+| Lanzamiento | Modificaciones                      |
+| ----------- | ----------------------------------- |
+| 20 R10      | Nuevo parámetro *autoLicenseTarget* |
+| 20          | Añadidos                            |
+
+</details>
+</div>
 
 ## Descripción
 

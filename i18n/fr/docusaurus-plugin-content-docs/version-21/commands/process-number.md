@@ -5,9 +5,11 @@ slug: /commands/process-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Process number.Syntax-->**Process number** ( *name* {; *} ) : Integer<br/>**Process number** ( *id* {; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.Process number.Syntax-->**Process number** ( *name* : Text {; *} ) : Integer<br/>**Process number** ( *id* : Text {; *} ) : Integer<!-- END REF-->
 
 <!--REF #_command_.Process number.Params-->
+
+<div class="no-index">
 
 | Paramètres | Type      |                             | Description                                     |
 | ---------- | --------- | --------------------------- | ----------------------------------------------- |
@@ -16,15 +18,19 @@ displayed_sidebar: docs
 | \*         | Opérateur | &#8594; | Renvoyer le numéro du process depuis le serveur |
 | Résultat   | Integer   | &#8592; | Process number                                  |
 
+</div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>Historique</summary>
 
 | Release | Modifications                   |
 | ------- | ------------------------------- |
 | 20 R7   | Prise en charge du paramètre id |
+| 6       | Created                         |
 
 </details>
+</div>
 
 ## Description
 

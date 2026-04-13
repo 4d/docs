@@ -4,18 +4,11 @@ title: MAIL Convert to MIME
 displayed_sidebar: docs
 ---
 
-<details><summary>Historique</summary>
-
-| Release | Modifications |
-| ------- | ------------- |
-| 17 R4   | Ajout         |
-| 17 R5   | Modifié       |
-
-</details>
-
 <!-- REF #_command_.MAIL Convert to MIME.Syntax -->**MAIL Convert to MIME**( *mail* : Object { ; *options* : Object } ) : Text<!-- END REF -->
 
 <!-- REF #_command_.MAIL Convert to MIME.Params -->
+
+<div class="no-index">
 
 | Paramètres | Type   |                             | Description                              |
 | ---------- | ------ | :-------------------------: | ---------------------------------------- |
@@ -23,7 +16,19 @@ displayed_sidebar: docs
 | options    | Object | &#8594; | Options d'encodage et de charset du mail |
 | Résultat   | Text   | &#8592; | Objet email converti en MIME             |
 
+</div>
 <!-- END REF -->
+
+<div class="no-index">
+<details><summary>Historique</summary>
+
+| Release | Modifications |
+| ------- | ------------- |
+| 17 R5   | Modifié       |
+| 17 R4   | Ajout         |
+
+</details>
+</div>
 
 ## Description
 

@@ -8,11 +8,24 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Web Event.Params -->
 
+<div class="no-index">
+
 | 引数  | 型      |                             | 説明                |
 | --- | ------ | :-------------------------: | ----------------- |
 | 戻り値 | Object | &#8592; | トリガーされたイベントに関する情報 |
 
+</div>
 <!-- END REF -->
+
+<div class="no-index">
+<details><summary>履歴</summary>
+
+| リリース | 内容 |
+| ---- | -- |
+| 21   | 追加 |
+
+</details>
+</div>
 
 ## 説明
 

@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, pictureObject is an object name (string) If omitted, pictureObject is a field or variable |
-| pictureObject | Picture | &#8594;  | Object name (if * specified) or Field or Variable (if * omitted) |
+| pictureObject | Text, Picture | &#8594;  | Object name (if * specified) or Field or Variable (if * omitted) |
 | x | Integer | &#8594;  | X coordinate in pixels |
 | y | Integer | &#8594;  | Y coordinate in pixels |
 | Function result | Text | &#8592; | ID of element found at the location X, Y |

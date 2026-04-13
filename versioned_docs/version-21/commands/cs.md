@@ -8,6 +8,15 @@ displayed_sidebar: docs
 |---|---|---|---|
 | classStore | Object | &#8592; | User class store for the project or component |
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|19|Created|
+
+</details>
+</div>
 
 The **cs** keyword is described in the [**Concept page for Classes**](../Concepts/classes.md#cs).  
 

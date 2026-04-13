@@ -5,18 +5,11 @@ title: File
 displayed_sidebar: docs
 ---
 
-<details><summary>Historique</summary>
-
-| Release | Modifications                             |
-| ------- | ----------------------------------------- |
-| 19 R4   | Nouvelle constante `HTTP Client log file` |
-| 17 R5   | Ajout                                     |
-
-</details>
-
 <!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
 
 <!-- REF #_command_.File.Params -->
+
+<div class="no-index">
 
 | Paramètres   | Type                                           |                             | Description                                                           |
 | ------------ | ---------------------------------------------- | :-------------------------: | --------------------------------------------------------------------- |
@@ -26,7 +19,19 @@ displayed_sidebar: docs
 | \*           | operator                                       | &#8594; | \* pour retourner le fichier de la base hôte                          |
 | Résultat     | [4D.File](../../API/FileClass.md) | &#8592; | Nouvel objet fichier                                                  |
 
+</div>
 <!-- END REF -->
+
+<div class="no-index">
+<details><summary>Historique</summary>
+
+| Release | Modifications                             |
+| ------- | ----------------------------------------- |
+| 19 R4   | Nouvelle constante `HTTP Client log file` |
+| 17 R5   | Ajout                                     |
+
+</details>
+</div>
 
 ## Description
 

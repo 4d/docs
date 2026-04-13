@@ -4,7 +4,7 @@ title: LISTBOX SET PROPERTY
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET PROPERTY.Syntax-->**LISTBOX SET PROPERTY** ( {* ;} *object* ; *property* ; *value* )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET PROPERTY.Syntax-->**LISTBOX SET PROPERTY** ( * ; *object* : Text ; *property* : Integer ; *value* : Integer, Text )<br/>**LISTBOX SET PROPERTY** ( *object* : Variable ; *property* : Integer ; *value* : Integer, Text )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET PROPERTY.Params-->
 <div class="no-index">
 
@@ -16,6 +16,17 @@ displayed_sidebar: docs
 | value | Integer, Text | &#8594;  | Value of property |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|19 R6|Modified|
+|16 R2|Created|
+
+</details>
+</div>
 
 ## Description 
 

@@ -5,7 +5,7 @@ title: On Alternative Click
 
 |Code|Can be called by|Definition|  
 |---|---|---|
-|38|[Button](FormObjects/button_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns)|<li>Buttons: The "arrow" area of a button is clicked</li><li>List boxes: In a column of an object array, an ellipsis button ("alternateButton" attribute) is clicked</li>|
+|38|[Button](FormObjects/button_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox-column.md)|<li>Buttons: The "arrow" area of a button is clicked</li><li>List boxes: In a column of an object array, an ellipsis button ("alternateButton" attribute) is clicked</li>|
 
 ## Description
 
@@ -22,8 +22,8 @@ Some button styles can be [linked to a pop-up menu](FormObjects/properties_TextA
 
 ### List box
 
-This event is generated in columns of [object array type list boxes](FormObjects/listbox_overview.md#object-arrays-in-columns), when the user clicks on a widget ellipsis button ("alternateButton" attribute).
+This event is generated in columns of [object array type list boxes](FormObjects/listbox-column.md#object-arrays-in-columns), when the user clicks on a widget ellipsis button ("alternateButton" attribute).
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)
 
-See the [description of the "alternateButton" attribute](FormObjects/listbox_overview.md#alternatebutton).
+See the [description of the "alternateButton" attribute](FormObjects/listbox-column.md#alternatebutton).

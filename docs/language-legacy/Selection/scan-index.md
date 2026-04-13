@@ -5,7 +5,7 @@ slug: /commands/scan-index
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SCAN INDEX.Syntax-->**SCAN INDEX** ( *aField* : Field ; *number* : Integer {; *>_or_<* : Comparator} )<!-- END REF-->
+<!--REF #_command_.SCAN INDEX.Syntax-->**SCAN INDEX** ( *aField* : Field ; *number* : Integer {; *order* : >, <} )<!-- END REF-->
 <!--REF #_command_.SCAN INDEX.Params-->
 <div class="no-index">
 
@@ -13,13 +13,13 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | aField | Field | &#8594;  | Indexed field on which to scan index |
 | number | Integer | &#8594;  | Number of records to return |
-| >_or_< | Comparator | &#8594;  | > from beginning of index < from end of index |
+| order | >, < | &#8594;  | > from beginning of index < from end of index |
 </div>
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.SCAN INDEX.Summary-->**SCAN INDEX** returns a selection of *number* records from the table containing the *aField* field.<!-- END REF--> If you pass <, **SCAN INDEX** returns the *number* of records from the end of the index (high values). If you pass >, **SCAN INDEX** returns the *number* of records from the beginning of the index (low values). This command is very efficient because it uses the index to perform the operation.
+<!--REF #_command_.SCAN INDEX.Summary-->**SCAN INDEX** returns a selection of *number* records from the table containing the *aField* field.<!-- END REF--> If you pass < in *order*, **SCAN INDEX** returns the *number* of records from the end of the index (high values). If you pass >, **SCAN INDEX** returns the *number* of records from the beginning of the index (low values). This command is very efficient because it uses the index to perform the operation.
 
 **Note:** The selection obtained is not sorted.
 

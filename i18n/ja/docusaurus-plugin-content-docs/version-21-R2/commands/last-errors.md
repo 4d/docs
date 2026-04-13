@@ -9,11 +9,24 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Last errors.Params-->
 
+<div class="no-index">
+
 | 引数  | 型          |                             | 説明               |
 | --- | ---------- | --------------------------- | ---------------- |
 | 戻り値 | Collection | &#8592; | エラーオブジェクトのコレクション |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>履歴</summary>
+
+| リリース  | 内容      |
+| ----- | ------- |
+| 19 R8 | Created |
+
+</details>
+</div>
 
 ## 説明
 

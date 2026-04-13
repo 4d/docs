@@ -18,6 +18,17 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|19 R6|Modified|
+|16 R2|Created|
+
+</details>
+</div>
+
 ## Description 
 
 <!--REF #_command_.LISTBOX SET PROPERTY.Summary-->The **LISTBOX SET PROPERTY** command sets the *value* for the *property* of the list box or list box column specified using the *object* and *\** parameters.<!-- END REF-->

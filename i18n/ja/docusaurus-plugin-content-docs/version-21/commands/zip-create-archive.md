@@ -8,6 +8,8 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.ZIP Create archive.Params -->
 
+<div class="no-index">
+
 | 引数              | 型                         |                             | 説明                                                                                                                |
 | --------------- | ------------------------- | :-------------------------: | ----------------------------------------------------------------------------------------------------------------- |
 | fileToZip       | 4D.File   | &#8594; | 圧縮する File または Folder オブジェクト                                                                                       |
@@ -17,8 +19,10 @@ displayed_sidebar: docs
 | options         | Integer                   | &#8594; | *folderToZip* オプション: `ZIP Without enclosing folder` (外側のフォルダーを除外して ZIP圧縮をおこなう) |
 | 戻り値             | Object                    | &#8592; | ステータスオブジェクト                                                                                                       |
 
+</div>
 <!-- END REF -->
 
+<div class="no-index">
 <details><summary>履歴</summary>
 
 | リリース  | 内容                                                              |
@@ -27,6 +31,7 @@ displayed_sidebar: docs
 | 18    | 追加                                                              |
 
 </details>
+</div>
 
 ## 説明
 
@@ -51,7 +56,7 @@ displayed_sidebar: docs
 
 *destinationFile* には、作成する ZIPアーカイブ (名前や位置など) を記述する `4D.File` オブジェクトを渡します。 作成した ZIPアーカイブがあらゆるソフトウェアで自動的に処理されるようにするため、".zip" 拡張子の使用が推奨されます。
 
-アーカイブが作成されると、[ZIP Read archive](zip-read-archive.md) を使用してアクセスすることができます。
+Once an archive is created, you can use the [ZIP Read archive](zip-read-archive.md) command to access it.
 
 **ステータスオブジェクト**
 

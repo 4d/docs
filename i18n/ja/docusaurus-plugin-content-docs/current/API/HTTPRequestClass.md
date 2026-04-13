@@ -79,16 +79,6 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 
 ## 4D.HTTPRequest.new()
 
-<details><summary>履歴</summary>
-
-| リリース  | 内容                                                   |
-| ----- | ---------------------------------------------------- |
-| 21    | *storeCertificateName* プロパティのサポート                    |
-| 20    | TLS検証がデフォルトに                                         |
-| 19 R7 | *automaticRedirections* および *decodeData* プロパティをサポート。 |
-
-</details>
-
 <!-- REF #4D.HTTPRequest.new().Syntax -->**4D.HTTPRequest.new**( *url* : Text { ; *options* : Object } ) : 4D.HTTPRequest<!-- END REF -->
 
 <!-- REF #4D.HTTPRequest.new().Params -->

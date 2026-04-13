@@ -4,18 +4,33 @@ title: LISTBOX Get property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get property.Syntax-->**LISTBOX Get property** ( {* ;} *object* ; *property* ) : any<!-- END REF-->
+<!--REF #_command_.LISTBOX Get property.Syntax-->**LISTBOX Get property** ( * ; *object* : Text ; *property* : Integer ) : any<br/>**LISTBOX Get property** ( *object* : Variable ; *property* : Integer ) : any<!-- END REF-->
 
 <!--REF #_command_.LISTBOX Get property.Params-->
 
-| 引数       | 型             |                             | 説明                                                                    |
-| -------- | ------------- | --------------------------- | --------------------------------------------------------------------- |
-| \*       | 演算子           | &#8594; | 指定時、object はオブジェクト名(文字列)。 省略時、object は変数。          |
-| object   | any           | &#8594; | オブジェクト名 (\* 指定時) または変数 (\* 省略時) |
-| property | Integer       | &#8594; | 値を取得したいプロパティ                                                          |
-| 戻り値      | Integer, Text | &#8592; | カレントの値                                                                |
+<div class="no-index">
 
+| 引数       | 型              |                             | 説明                                                                                                         |
+| -------- | -------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| \*       | 演算子            | &#8594; | 指定時、object はオブジェクト名(文字列)。 省略時、object は変数。                                               |
+| object   | Text, Variable | &#8594; | Form object name (if \* is specified) or Variable (if \* is omitted) |
+| property | Integer        | &#8594; | 値を取得したいプロパティ                                                                                               |
+| 戻り値      | any            | &#8592; | Current value (Integer, Text)                                                           |
+
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>履歴</summary>
+
+| リリース                        | 内容                                                   |
+| --------------------------- | ---------------------------------------------------- |
+| 19 R6                       | 変更                                                   |
+| 16 R2                       | Renamed (Get Listbox information) |
+| <6 | Created                                              |
+
+</details>
+</div>
 
 ## 説明
 

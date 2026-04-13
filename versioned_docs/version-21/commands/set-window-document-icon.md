@@ -4,7 +4,7 @@ title: SET WINDOW DOCUMENT ICON
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET WINDOW DOCUMENT ICON.Syntax-->**SET WINDOW DOCUMENT ICON** ( *winRef* )<br/>**SET WINDOW DOCUMENT ICON** ( *winRef* ; *image* )<br/>**SET WINDOW DOCUMENT ICON** ( *winRef* ; *file* )<br/>**SET WINDOW DOCUMENT ICON** (  *winRef* ; *image* ; *file* )<!-- END REF-->
+<!--REF #_command_.SET WINDOW DOCUMENT ICON.Syntax-->**SET WINDOW DOCUMENT ICON** ( *winRef* : Integer )<br/>**SET WINDOW DOCUMENT ICON** ( *winRef* : Integer ; *image* : Picture )<br/>**SET WINDOW DOCUMENT ICON** ( *winRef* : Integer ; *file* : 4D.File, 4D.Folder )<br/>**SET WINDOW DOCUMENT ICON** (  *winRef* : Integer ; *image* : Picture ; *file* : 4D.File, 4D.Folder )<!-- END REF-->
 
 <!--REF #_command_.SET WINDOW DOCUMENT ICON.Params-->
 <div class="no-index">
@@ -17,12 +17,14 @@ displayed_sidebar: docs
 </div>
 <!-- END REF-->
 
+<div class="no-index">
 <details><summary>History</summary>
 
 |Release|Changes|
 |---|---|
 |20 R7|Added
 </details>
+</div>
 
 
 ## Description 

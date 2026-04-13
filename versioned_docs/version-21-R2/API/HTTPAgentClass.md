@@ -85,7 +85,7 @@ HTTPAgent options will be merged with [HTTPRequest options](HTTPRequestClass.md#
 | maxTotalSockets  |Integer| 65535     |Maximum number of sockets for the agent |
 | minTLSVersion  |Text| undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) |Sets the minimum version of TLS for the requests using this agent|
 | protocol |Text| undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) |Protocol used for the requests using the agent |
-|storeCertificateName|Text|undefined|(Windows only) Name of the OS certificate store (e.g. "LocalMachine") from where to use certificates instead of those in the certificates folder for the requests using the agent. If the certificate store is not found, an error is returned. For more information, see [this blog post](https://blog.4d.com/https-requests-now-support-windows-certificate-store).|
+|storeCertificateName|Text|undefined|(Windows only) Name of a certificate stored in the Certificate Store to use instead of one saved in the certificates folder. If the certificate is not found, an error is returned. For more information, see [this blog post](https://blog.4d.com/https-requests-now-support-windows-certificate-store).|
 | timeout |Real| undefined |If defined, timeout after which an unused socket is closed  |
 | validateTLSCertificate |Boolean| undefined (see default value in [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | validateTLSCertificate for the requests using the agent|
 

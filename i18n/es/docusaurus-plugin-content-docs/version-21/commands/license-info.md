@@ -8,10 +8,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.License info.Params-->
 
+<div class="no-index">
+
 | Parámetros | Tipo   |                             | Descripción                          |
 | ---------- | ------ | --------------------------- | ------------------------------------ |
 | Resultado  | Object | &#8592; | Información sobre la licencia activa |
 
+</div>
 <!-- END REF-->
 
 <div class="no-index">
@@ -37,6 +40,7 @@ Si el comando se ejecuta en una aplicación 4D que no utiliza localmente una lic
 Este comando recarga los archivos de licencia desde el disco y actualiza los derechos asociados si han sido modificados.
 
 :::
+
 El objeto devuelto contiene las siguientes propiedades:
 
 ```json

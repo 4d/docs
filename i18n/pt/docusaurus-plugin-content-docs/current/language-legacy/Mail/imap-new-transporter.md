@@ -5,6 +5,21 @@ slug: /commands/imap-new-transporter
 displayed_sidebar: docs
 ---
 
+<!-- REF #_command_.IMAP New transporter.Syntax -->**IMAP New transporter**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
+
+<!-- REF #_command_.IMAP New transporter.Params -->
+
+<div class="no-index">
+
+| Parâmetro  | Tipo                               |                             | Descrição                                                                         |
+| ---------- | ---------------------------------- | :-------------------------: | --------------------------------------------------------------------------------- |
+| server     | Object                             | &#8594; | Informação de servidor de correio                                                 |
+| Resultados | 4D.IMAPTransporter | &#8592; | [Objeto IMAP transporter](../API/IMAPTransporterClass.md#imap-transporter-object) |
+
+</div>
+<!-- END REF -->
+
+<div class="no-index">
 <details><summary>História</summary>
 
 | Release | Mudanças   |
@@ -12,23 +27,13 @@ displayed_sidebar: docs
 | 18 R4   | Adicionado |
 
 </details>
-
-<!-- REF #_command_.IMAP New transporter.Syntax -->**IMAP New transporter**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
-
-<!-- REF #_command_.IMAP New transporter.Params -->
-
-| Parâmetro  | Tipo                               |                             | Descrição                                                                         |
-| ---------- | ---------------------------------- | :-------------------------: | --------------------------------------------------------------------------------- |
-| server     | Object                             | &#8594; | Informação de servidor de correio                                                 |
-| Resultados | 4D.IMAPTransporter | &#8592; | [Objeto IMAP transporter](../API/IMAPTransporterClass.md#imap-transporter-object) |
-
-<!-- END REF -->
+</div>
 
 ## Descrição
 
 O comando `IMAP New transporter` <!-- REF #_command_.IMAP New transporter.Summary -->configura uma nova conexão IMAP<!-- END REF --> de acordo com o parâmetro *server* e retorna um novo objeto *transporter*. O objeto transporter retornado vai geralmente ser usado para receber emails.
 
-No parâmetro server, passe um objeto contendo as propriedades abaixo:
+No parâmetro *server*, passe um objeto contendo as propriedades abaixo:
 
 | *server*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Valor padrão (se omitido)                      |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |

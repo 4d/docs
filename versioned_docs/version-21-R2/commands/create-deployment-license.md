@@ -5,15 +5,6 @@ slug: /commands/create-deployment-license
 displayed_sidebar: docs
 ---
 
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|20 R10|New *autoLicenseTarget* parameter|
-|20|Added|
-
-</details>
-
 <!--REF #_command_.Create deployment license.Syntax-->**Create deployment license** ( *mergedApp* : 4D.Folder ; *autoLicenseTarget* : Integer ) : Object<br/>**Create deployment license** ( *mergedApp* : 4D.Folder ; *buildLicense* : 4D.File {; *oemLicense* : 4D.File} ) : Object<!-- END REF-->
 
 <!--REF #_command_.Create deployment license.Params-->
@@ -28,6 +19,17 @@ displayed_sidebar: docs
 | Function result | Object | &#8592; | Status |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|20 R10|New *autoLicenseTarget* parameter|
+|20|Added|
+
+</details>
+</div>
 
 ## Description 
 

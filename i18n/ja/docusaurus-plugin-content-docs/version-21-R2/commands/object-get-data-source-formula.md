@@ -4,17 +4,31 @@ title: OBJECT Get data source formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get data source formula.Syntax-->**OBJECT Get data source formula** ( * ; *object* : Text ) : 4D.Formula<br/>**OBJECT Get data source formula** ( *object* : Field, Variable ) : 4D.Formula<!-- END REF-->
+<!--REF #_command_.OBJECT Get data source formula.Syntax-->**OBJECT Get data source formula** ( * ; *object* : Text ) : 4D.Formula<br/>**OBJECT Get data source formula** ( *object* : Variable, Field ) : 4D.Formula<!-- END REF-->
 
 <!--REF #_command_.OBJECT Get data source formula.Params-->
 
-| 引数      | 型                          |                             | 説明                                                                                      |
-| ------- | -------------------------- | --------------------------- | --------------------------------------------------------------------------------------- |
-| \*      | 演算子                        | &#8594; | 指定時、object はオブジェクト名(文字列)<br/>省略時: object は変数またはフィールド |
-| object  | any                        | &#8594; | オブジェクト名( \* 指定時)、または<br/>変数やフィールド( \* 省略時)        |
-| formula | 4D.Formula | &#8592; | フォームオブジェクトに割り当てられているフォーミュラ(フォーミュラが何も割り当てられていない場合には `Null`)           |
+<div class="no-index">
 
+| 引数     | 型                          |                             | 説明                                                                                                                      |
+| ------ | -------------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| \*     | 演算子                        | &#8594; | If specified, object is an object name (string) ; if omitted, object is a variable or a field        |
+| object | Text, Variable, Field      | &#8594; | Form object name (if \* is specified) or<br/>Field or variable (if \* is omitted) |
+| 戻り値    | 4D.Formula | &#8592; | フォームオブジェクトに割り当てられているフォーミュラ(フォーミュラが何も割り当てられていない場合には `Null`)                                           |
+
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>履歴</summary>
+
+| リリース   | 内容             |
+| ------ | -------------- |
+| 21     | *base* 引数のサポート |
+| 20 R10 | Created        |
+
+</details>
+</div>
 
 ## 説明
 

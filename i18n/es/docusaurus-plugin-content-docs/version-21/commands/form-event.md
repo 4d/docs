@@ -9,11 +9,25 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM Event.Params-->
 
+<div class="no-index">
+
 | Parámetros | Tipo   |                             | Descripción   |
 | ---------- | ------ | --------------------------- | ------------- |
 | Resultado  | Object | &#8592; | Objeto evento |
 
+</div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historia</summary>
+
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R2       | Modificado     |
+| 18          | Created        |
+
+</details>
+</div>
 
 ## Descripción
 
@@ -37,7 +51,7 @@ Por ejemplo, en el caso de un clic en un botón, el objeto contiene las siguient
 
 El objeto evento puede contener propiedades adicionales, dependiendo del objeto para el que se produzca el evento. Para objetos *eventObj* generados en:
 
-- los objetos list box o columna de list box, ver [esta sección](../FormObjects/listbox_overview.md#supported-form-events).
+- los objetos list box o columna de list box, ver [esta sección](../FormObjects/listbox-object.md#supported-form-events).
 - áreas 4D View Pro, ver [On VP Ready form event](../Events/onVpReady.md).
 
 **Nota:** si no hay ningún evento actual, **FORM Event** devuelve un objeto null.

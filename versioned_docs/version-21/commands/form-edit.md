@@ -4,7 +4,7 @@ title: FORM EDIT
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM EDIT.Syntax-->**FORM EDIT** ( {*aTable* ;} *form* )<br/>**FORM EDIT** ( {*aTable* ;} *form* ; *object* )<!-- END REF-->
+<!--REF #_command_.FORM EDIT.Syntax-->**FORM EDIT** ( {*aTable* : Table ;} *form* : Text )<br/>**FORM EDIT** ( {*aTable* : Table ;} *form* : Text ; *object* : Text )<!-- END REF-->
 <!--REF #_command_.FORM EDIT.Params-->
 <div class="no-index">
 
@@ -15,13 +15,17 @@ displayed_sidebar: docs
 | object | Text | &#8594;  | Form object name or group name |
 </div>
 <!-- END REF-->
+
+<div class="no-index">
 <details><summary>History</summary>
 
 |Release|Changes|
 |---|---|
 |20 R8|Support of *object* parameter|
+|18 R5|Created|
 
 </details>
+</div>
 
 
 ## Description 

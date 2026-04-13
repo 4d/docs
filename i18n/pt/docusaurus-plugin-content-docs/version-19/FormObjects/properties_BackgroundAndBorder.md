@@ -16,7 +16,7 @@ Permite definir uma cor de fundo diferente para linhas/colunas ímpares em uma c
 
 #### Objectos suportados
 
-[Caixa de Listagem](listbox_overview.md) - [Coluna da caixa de listagem](listbox_overview.md#list-box-columns)
+[Caixa de Listagem](listbox_overview.md) - [Coluna da caixa de listagem](listbox-column.md)
 
 ---
 
@@ -34,7 +34,7 @@ No caso de uma caixa de listagem, por padrão, *Automático* é selecionado: a c
 
 #### Objectos suportados
 
-[Lista hierárquica](list_overview.md) - [Caixa de listagem](listbox_overview.md) - [Coluna](listbox_overview.md#list-box-columns) de caixa de listagem - [Rodapé de caixa de lista](listbox_overview.md#list-box-footers) gem - [Oval](shapes_overview.md#oval) - [Retângulo](shapes_overview.md#rectangle) - [Área de texto](text.md)
+[Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [List Box Footer](listbox-header-footer.md#footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
 
 #### Veja também
 
@@ -59,7 +59,7 @@ Você também pode definir essa propriedade usando a propriedade [`LISTBOX SET P
 
 #### Objectos suportados
 
-[Caixa de Listagem](listbox_overview.md) - [Coluna da caixa de listagem](listbox_overview.md#list-box-columns)
+[Caixa de Listagem](listbox_overview.md) - [Coluna da caixa de listagem](listbox-column.md)
 
 ---
 
@@ -195,7 +195,7 @@ Você pode obter o mesmo resultado usando os comandos [`LISTBOX SET UMA ARTA`](h
 
 #### Objectos suportados
 
-[Caixa de Listagem](listbox_overview.md) - [Coluna da caixa de listagem](listbox_overview.md#list-box-columns)
+[Caixa de Listagem](listbox_overview.md) - [Coluna da caixa de listagem](listbox-column.md)
 
 ---
 

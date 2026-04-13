@@ -74,7 +74,7 @@ title: テキスト、ピクチャー
 
 #### 対象オブジェクト
 
-[[リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー)](listbox_overview.md#リストボックスヘッダー)
+[[リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー)](listbox-header-footer.md#headers)
 
 ---
 
@@ -149,7 +149,7 @@ title: テキスト、ピクチャー
 
 #### 対象オブジェクト
 
-[ボタン](button_overview.md) ([ヘルプ](button_overview.md#ヘルプ)ボタンを除く) - [チェックボックス](checkbox_overview.md) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [ラジオボタン](radio_overview.md)
+[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [List Box Header](listbox-header-footer.md#headers) - [Radio Button](radio_overview.md)
 
 ---
 
@@ -256,10 +256,10 @@ title: テキスト、ピクチャー
 
 #### JSON 文法
 
-| 名称             | データタイプ | とりうる値                                                                       |
-|:-------------- | ------ | --------------------------------------------------------------------------- |
-| popupPlacement | string | <li>"none"</li><li>"linked"</li><li>"separated"</li> |
+| 名称             | データタイプ | とりうる値                     |
+|:-------------- | ------ | ------------------------- |
+| popupPlacement | string | <ul><li>"none"</li><li>"linked"</li><li>"separated"</li></ul> |
 
 #### 対象オブジェクト
 
-[ツールバーボタン](button_overview.md#ツールバー) - [ベベルボタン](button_overview.md#ベベル) - [角の丸いべべルボタン](button_overview.md#角の丸いベベル) - [OS X グラデーションボタン](button_overview.md#os-x-グラデーション) - [OS X テクスチャーボタン](button_overview.md#os-x-テクスチャー) - [Office XP ボタン](button_overview.md#office-xp) - [サークルボタン](button_overview.md#サークル) - [カスタムボタン](button_overview.md#カスタム)
+[Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-xp) - [Custom](button_overview.md#custom)

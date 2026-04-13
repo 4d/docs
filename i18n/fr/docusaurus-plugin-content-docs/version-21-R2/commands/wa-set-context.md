@@ -4,15 +4,11 @@ title: WA SET CONTEXT
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA SET CONTEXT.Syntax-->**WA SET CONTEXT** ( * ; *object* : Text ; *contextObj* : Object )<br/>**WA SET CONTEXT** ( *object* : Field, Variable ; *contextObj* : Object )<!-- END REF-->
+<!--REF #_command_.WA SET CONTEXT.Syntax-->**WA SET CONTEXT** ( * ; *object* : Text ; *contextObj* : Object )<br/>**WA SET CONTEXT** ( *object* : Variable, Field ; *contextObj* : Object )<!-- END REF-->
 
 <!--REF #_command_.WA SET CONTEXT.Params-->
 
-| Paramètres | Type      |                             | Description                                                                                                                                          |
-| ---------- | --------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \*         | Opérateur | &#8594; | Si passé, *object* est un nom d'objet (chaîne de caractères). Si omis, *object* est une variable. |
-| object     | any       | &#8594; | Nom de l'objet (si \* est spécifié) ou Variable (si \* est omis).                              |
-| contextObj | Object    | &#8594; | Objet contenant les fonctions qui peuvent être appelées avec `$4d`.                                                                  |
+<div class="no-index">
 
 | Paramètres | Type                  |                             | Description                                                                                                                                          |
 | ---------- | --------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -22,6 +18,16 @@ displayed_sidebar: docs
 
 </div>
 <!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historique</summary>
+
+| Release | Modifications |
+| ------- | ------------- |
+| 20 R9   | Ajout         |
+
+</details>
+</div>
 
 ### Description
 
