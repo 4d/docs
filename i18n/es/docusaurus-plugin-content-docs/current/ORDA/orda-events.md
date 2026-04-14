@@ -44,11 +44,11 @@ También puede definir el mismo evento tanto a nivel del atributo como de la ent
 
 Normalmente, los eventos ORDA se ejecutan en el servidor.
 
-Sin embargo, en la configuración cliente/servidor, la función de evento `touched()` puede ejecutarse en el **servidor o en el cliente**, dependiendo del uso de la palabra clave [`local`](./ordaClasses.md#local-functions). Una implementación específica en el lado del cliente permite la activación del evento en el cliente.
+Sin embargo, en la configuración cliente/servidor, la función de evento `touched()` puede ejecutarse en el **servidor o en el cliente**, dependiendo del uso de la palabra clave [`local`](../Concepts/classes.md#local). Una implementación específica en el lado del cliente permite la activación del evento en el cliente.
 
 :::note
 
-Las funciones ORDA [`constructor()`](./ordaClasses.md#class-constructor) se ejecutan siempre en el cliente.
+ORDA [`constructor()`](./ordaClasses.md#class-constructor) functions are always executed locally.
 
 :::
 
@@ -58,21 +58,21 @@ Con otras configuraciones remotas (p. ej. [aplicaciones Qodly](https://developer
 
 La siguiente tabla lista los eventos ORDA junto con sus reglas.
 
-| Evento                          | Nivel    | Nombre de la función                                    |                     (C/S) Ejecutado en                     | Puede detener la acción devolviendo un error |
-| :------------------------------ | :------- | :------------------------------------------------------ | :---------------------------------------------------------------------------: | -------------------------------------------- |
-| Instanciación de entidades      | Entity   | [`constructor()`](./ordaClasses.md#class-constructor-1) |                                     client                                    | no                                           |
-| Atributo tocado                 | Atributo | `event touched <attrName>()`                            | Depende de la palabra clave [`local`](../ORDA/ordaClasses.md#local-functions) | no                                           |
-|                                 | Entity   | `event touched()`                                       | Depende de la palabra clave [`local`](../ORDA/ordaClasses.md#local-functions) | no                                           |
-| Antes de guardar una entidad    | Atributo | `validateSave <attrName>()`                             |                                     server                                    | sí                                           |
-|                                 | Entity   | `validateSave()`                                        |                                     server                                    | sí                                           |
-| Al guardar una entidad          | Atributo | `saving <attrName>()`                                   |                                     server                                    | sí                                           |
-|                                 | Entity   | `saving()`                                              |                                     server                                    | sí                                           |
-| Después de guardar una entidad  | Entity   | `afterSave()`                                           |                                     server                                    | no                                           |
-| Antes de eliminar una entidad   | Atributo | `validateDrop <attrName>()`                             |                                     server                                    | sí                                           |
-|                                 | Entity   | `validateDrop()`                                        |                                     server                                    | sí                                           |
-| Al soltar una entidad           | Atributo | `dropping <attrName>()`                                 |                                     server                                    | sí                                           |
-|                                 | Entity   | `dropping()`                                            |                                     server                                    | sí                                           |
-| Después de eliminar una entidad | Entity   | `afterDrop()`                                           |                                     server                                    | no                                           |
+| Evento                          | Nivel    | Nombre de la función                                    |                  (C/S) Execution                 | Puede detener la acción devolviendo un error |
+| :------------------------------ | :------- | :------------------------------------------------------ | :-----------------------------------------------------------------: | -------------------------------------------- |
+| Instanciación de entidades      | Entity   | [`constructor()`](./ordaClasses.md#class-constructor-1) |                                local                                | no                                           |
+| Atributo tocado                 | Atributo | `event touched <attrName>()`                            | Depende de la palabra clave [`local`](../Concepts/classes.md#local) | no                                           |
+|                                 | Entity   | `event touched()`                                       | Depende de la palabra clave [`local`](../Concepts/classes.md#local) | no                                           |
+| Antes de guardar una entidad    | Atributo | `validateSave <attrName>()`                             |                                server                               | sí                                           |
+|                                 | Entity   | `validateSave()`                                        |                                server                               | sí                                           |
+| Al guardar una entidad          | Atributo | `saving <attrName>()`                                   |                                server                               | sí                                           |
+|                                 | Entity   | `saving()`                                              |                                server                               | sí                                           |
+| Después de guardar una entidad  | Entity   | `afterSave()`                                           |                                server                               | no                                           |
+| Antes de eliminar una entidad   | Atributo | `validateDrop <attrName>()`                             |                                server                               | sí                                           |
+|                                 | Entity   | `validateDrop()`                                        |                                server                               | sí                                           |
+| Al soltar una entidad           | Atributo | `dropping <attrName>()`                                 |                                server                               | sí                                           |
+|                                 | Entity   | `dropping()`                                            |                                server                               | sí                                           |
+| Después de eliminar una entidad | Entity   | `afterDrop()`                                           |                                server                               | no                                           |
 
 :::note
 
