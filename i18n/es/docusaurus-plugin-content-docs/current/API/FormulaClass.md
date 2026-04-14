@@ -94,7 +94,7 @@ Los parámetros se reciben en el método, en el orden en que se especifican en l
 ```4d
  var $f : 4D.Formula
  $f:=Formula(Uppercase($1))
- $result:=$f.call(Null;"hello") // returns "HELLO"
+ $result:=$f.call(Null;"hello") // devuelve "HELLO"
 ```
 
 #### Ejemplo 2
