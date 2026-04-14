@@ -141,3 +141,55 @@ Por defecto, la caché ORDA es manejada de forma transparente por 4D. Sin embarg
 - [dataClass.getRemoteCache()](../API/DataClassClass.md#getremotecache)
 - [dataClass.clearRemoteCache()](../API/DataClassClass.md#clearremotecache)
 
+### Using the `local` keyword
+
+By default, [ORDA data model functions](../ORDA/ordaClasses.md) are executed on the server, which usually provides the best performance since only the function request and the result are sent over the network. However, it could happen that a function processes data that's already in the local cache and is fully executable on the client side. In this case, you can save requests to the server and thus, enhance the application performance by [using the `local` keyword in the function definition](../Concepts/classes.md#local).
+
+Tenga en cuenta que la función funcionará incluso si eventualmente requiere acceder al servidor (por ejemplo si la caché ORDA está vencida). Sin embargo, es muy recomendable asegurarse de que la función local no accede a los datos del servidor, ya que de lo contrario la ejecución local no podría aportar ninguna ventaja en cuanto al rendimiento. Una función local que genera numerosas peticiones al servidor es menos eficiente que una función ejecutada en el servidor que sólo devolvería los valores resultantes. Por ejemplo, considere la siguiente función en la entidad Schools:
+
+```4d
+// Get the youngest students  
+// Inappropriate use of local keyword
+local Function getYoungest() : Object
+    return This.students.query("birthDate >= :1"; !2000-01-01!).orderBy("birthDate desc").slice(0; 5)
+```
+
+- **sin** la palabra clave `local`, el resultado se da utilizando una única petición
+- **con** la palabra clave `local`, son necesarias 4 peticiones: una para obtener la entidad Schools, una para la `query()`, una para la `orderBy()`, y una para la `slice()`. En este ejemplo, el uso de la palabra clave `local` es inapropiado.
+
+#### Example: Checking attributes
+
+Queremos comprobar la consistencia de los atributos de una entidad cargada en el cliente y actualizada por el usuario antes de solicitar al servidor que los guarde.
+
+En la clase *StudentsEntity*, la función local `checkData()` verifica la edad del estudiante:
+
+```4d
+Class extends Entity
+
+local Function checkData() -> $status : Object
+
+$status:=New object("success"; True)
+Case of
+    : (This.age()=Null)
+        $status.success:=False
+        $status.statusText:="The birthdate is missing"
+
+    :((This.age() <15) | (This.age()>30) )
+        $status.success:=False
+        $status.statusText:="The student must be between 15 and 30 - This one is "+String(This.age())
+End case
+```
+
+Código de llamada:
+
+```4d
+var $status : Object
+
+//Form.student es cargado con todos sus atributos y actualizado en un Formulario
+$status:=Form.student.checkData()
+If ($status.success)
+    $status:=Form.student.save() // llamada al servidor
+End if
+```
+
+
