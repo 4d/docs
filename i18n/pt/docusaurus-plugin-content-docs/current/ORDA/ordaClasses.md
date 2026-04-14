@@ -60,6 +60,7 @@ Além disso, as instâncias de objetos das classes de usuárioes do modelo de da
 
 | Release | Mudanças                                                                                                                                                 |
 | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 21 R3   | Support for the `server` keyword.                                                                                                        |
 | 19 R4   | Atributos alias na Entity Class                                                                                                                          |
 | 19 R3   | Atributos calculados en la Entity Class                                                                                                                  |
 | 18 R5   | As funções de classe do modelo de dados não são expostas ao REST por defeito. Nuevas palabras clave `exposed` y `local`. |
@@ -278,7 +279,7 @@ Ao criar ou editar classes de modelo de dados, é necessário preste atenção �
 Quando compiladas, as funções da classe do modelo de dados são executadas:
 
 - em **processos preventivos ou cooperativos** (dependendo do processo de chamada) em aplicativos de usuário único,
-- em **processos preemptivos** em aplicações cliente/servidor (exceto se for utilizada a palavra-chave [`local`](#local-functions), caso em que depende do processo de chamada, como no utilizador único).
+- em **processos preemptivos** em aplicações cliente/servidor (exceto se for utilizada a palavra-chave [`local`](../Concepts/classes.md#local), caso em que depende do processo de chamada, como no utilizador único).
 
 Se o seu projeto foi concebido para ser executado em cliente/servidor, certifique-se de que o código da função da classe do modelo de dados é thread-safe. Se o código thread-unsafe for chamado, será lançado um erro em tempo de execução (nenhum erro será lançado em tempo de compilação, uma vez que a execução cooperativa é suportada em aplicações de utilizador único).
 
@@ -341,9 +342,7 @@ The `Class constructor` function is triggered by the following commands and feat
 
 #### Remote configurations
 
-When using a remote configurations, you need to pay attention to the following principles:
-
-- In **client/server** the function can be called on the client or on the server, depending on the location of the calling code. When it is called on the client, it is not triggered again when the client attempts to save the new entity and sends an update request to the server to create in memory on the server.
+When using a remote configurations, you need to pay attention to the following principle: in **client/server** the function can be called on the client or on the server, depending on the location of the calling code. When it is called on the client, it is not triggered again when the client attempts to save the new entity and sends an update request to the server to create in memory on the server.
 
 :::warning
 
@@ -464,14 +463,14 @@ Dentro das funções de atributo computadas, [`Isso`](Concepts/classes.md#this) 
 
 > Atributos computados da ORDA não são [**expostos**](#funções-expostas-vs-não-expostas) por padrão. Você expõe um atributo calculado adicionando a palavra-chave `exposed` à definição da **função get**.
 
-> **funções get e set** podem ter a propriedade [**local**](#local-functions) para otimizar o processamento cliente/servidor.
+> **get and set functions** can have the [`local`](../Concepts/classes.md#local) property to optimize client/server processing.
 
 ### `Function get <attributeName>`
 
 #### Sintaxe
 
 ```4d
-{local} {exposed} Function get <attributeName>({$event : Object}) -> $result : type
+{local | server} {exposed} Function get <attributeName>({$event : Object}) -> $result : type
 // code
 ```
 
@@ -496,6 +495,12 @@ El parámetro *$event* contiene las siguientes propiedades:
 | dataClassName | Text         | Nome do dataclass                                                                                                      |
 | kind          | Text         | "get"                                                                                                                  |
 | resultado     | Diferente de | Opcional. Adicione esta propriedade com o valor Null se pretender que um atributo escalar devolva Null |
+
+:::note
+
+For more information about the `local` and `server` keywords, please refer to the [local and server](../Concepts/classes.md#local-and-server) section.
+
+:::
 
 #### Exemplos
 
@@ -541,7 +546,7 @@ Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
 
 ```4d
 
-{local} Function set <attributeName>($value : type {; $event : Object})
+{local | server} Function set <attributeName>($value : type {; $event : Object})
 // code
 ```
 
@@ -557,6 +562,12 @@ El parámetro *$event* contiene las siguientes propiedades:
 | dataClassName | Text         | Nome do dataclass                      |
 | kind          | Text         | "set"                                  |
 | value         | Diferente de | Valor a tratar pelo atributo calculado |
+
+:::note
+
+For more information about the `local` and `server` keywords, please refer to the [local and server](../Concepts/classes.md#local-and-server) section.
+
+:::
 
 #### Exemplo
 
@@ -1073,129 +1084,4 @@ It can be called by the following HTTP GET request:
 ```
 IP:port/rest/Products/getThumbnail?$params='["Yellow Pack",200,200]'
 ```
-
-## Funções locais
-
-Por padrão na arquitetura cliente/servidor, funções do modelo de dados da ORDA são executadas **no servidor**. Normalmente, proporciona o melhor desempenho, uma vez que apenas o pedido de função e o resultado são enviados através da rede.
-
-No entanto, pode acontecer que uma função seja totalmente executável no lado do cliente (por exemplo, quando processa dados que já estão na cache local). No entanto, pode acontecer que uma função seja totalmente executável no lado do cliente (por exemplo, quando processa dados que já estão na cache local). A sintaxe formal é:
-
-```4d
-// declarar uma função para executar localmente no cliente/servidor
-local Function <functionName>   
-```
-
-Com esta palavra-chave, a função será sempre executada no lado do cliente.
-
-> A palavra-chave `local` só pode ser usada com funções de classe de modelo de dados. Se usado com uma [classe de usuário regular](Concepts/classes.md) função, ela é ignorada e um erro é retornado pelo compilador.
-
-Note-se que a função funcionará mesmo que eventualmente seja necessário aceder ao servidor (por exemplo, se a cache ORDA tiver expirado). No entanto, é altamente recomendável certificar-se de que a função local não acede a dados no servidor, caso contrário a execução local não poderá trazer qualquer benefício em termos de desempenho. Uma função local que gera muitos pedidos ao servidor é menos eficiente do que uma função executada no servidor que apenas devolveria os valores resultantes. Por exemplo, considere a seguinte função na classe de entidade Escolas:
-
-```4d
-// Obter os alunos mais novos 
-// Uso inapropriado da palavra-chave local
-local Function getYoungest
-	var $0 : Object
-    $0:=This.students.query("birthDate >= :1"; !2000-01-01!).orderBy("birthDate desc").slice(0; 5)
-```
-
-- **sem** a palavra-chave `local`, o resultado é dado através de um único pedido
-- **com** a palavra-chave `local`, 4 pedidos são necessários: um para obter os alunos da entidade das escolas, um para a `query()`, um para o `orderBy()`, e um para o `slice()`. Neste exemplo, usar a palavra-chave `local` é inapropriado.
-
-### Exemplos
-
-#### Cálculo da idade
-
-Dada uma entidade com um atributo de *data de nascimento*, queremos definir uma função `idade()` que seria chamada em uma caixa de lista. Esta função pode ser executada no cliente, o que evita desencadear um pedido ao servidor para cada linha da caixa de listagem.
-
-Na classe StudentsEntity:
-
-```4d
-Class extends Entity
-
-local Function age() -> $age: Variant
-
-If (This.birthDate#!00-00-00!)
-    $age:=Year of(Current date)-Year of(This.birthDate)
-Else
-    $age:=Null
-End if
-```
-
-#### Verificação de atributos
-
-Pretendemos verificar a consistência dos atributos de uma entidade carregada no cliente e actualizada pelo utilizador antes de solicitar ao servidor que os guarde.
-
-Na classe *AlunosEntidade*, a função local `checkData()` verifica a idade do Aluno:
-
-```4d
-Class extends Entity
-
-local Function checkData() -> $status : Object
-
-$status:=New object("success"; True)
-Case of
-    : (This.age()=Null)
-        $status.success:=False
-        $status.statusText:="The birthdate is missing"
-
-    :((This.age() <15) | (This.age()>30) )
-        $status.success:=False
-        $status.statusText:="The student must be between 15 and 30 - This one is "+String(This.age())
-End case
-```
-
-Código de chamada:
-
-```4d
-var $status : Object
-
-//Form.student is loaded with all its attributes and updated on a Form
-$status:=Form.student.checkData()
-If ($status.success)
-    $status:=Form.student.save() // call the server End if
-```
-
-## Support in 4D projects
-
-### Ficheiros de classe (class files)
-
-Uma classe de usuário do modelo de dados ORDA é definida por adicionar, no [mesmo local dos arquivos de classes normais](../Concepts/classes.md#class-definition) (*e.* na pasta `/Sources/Classes` da pasta do projeto), um arquivo .4dm com o nome da classe. Por exemplo, uma classe de entidade para o dataclass `Utilities` será definida através de um arquivo `UtilitiesEntity.4dm`.
-
-### Criação de classes
-
-4D pré-criou automaticamente classes vazias na memória para cada objeto de modelo de dados disponível.
-
-![](../assets/en/ORDA/ORDA_Classes-3.png)
-
-> Por padrão, as classes ORDA vazias não são exibidas no Explorer. Para mostrar a eles, você precisa selecionar **Mostrar todas as classes de dados** do menu de opções do Explorador:
-> ![](../assets/en/ORDA/showClass.png)
-
-As classes de utilizadores ORDA têm um ícone diferente das classes normais. As classes vazias são escurecidas:
-
-![](../assets/en/ORDA/classORDA2.png)
-
-Para criar um arquivo de classe ORDA, basta fazer duplo clique na classe predefinida correspondente no Explorador. Para criar um arquivo de classe ORDA, basta fazer duplo clique na classe predefinida correspondente no Explorador. Por exemplo, para uma classe Entity:
-
-```
-Class extends Entity
-```
-
-Quando uma classe for definida, o seu nome deixa de estar obscurecido no Explorador.
-
-### Edição de classes
-
-Para abrir una clase ORDA definida en el editor de código 4D, seleccione o haga doble clic en el nombre de una clase ORDA y utilice **Editar...** en el menú contextual/menú de opciones de la ventana del Explorador:
-
-![](../assets/en/ORDA/classORDA4.png)
-
-Para as classes ORDA baseadas no armazenamento de dados local (`ds`), é possível acessar diretamente o código da classe pela janela 4D Structure:
-
-![](../assets/en/ORDA/classORDA5.png)
-
-### Editor de método
-
-No Editor de Código 4D, as variáveis digitadas como uma classe ORDA se beneficiam automaticamente das características de autocompletar. Exemplo com uma variável de classe Entity:
-
-![](../assets/en/ORDA/AutoCompletionEntity.png)
 
