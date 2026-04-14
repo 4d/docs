@@ -71,13 +71,13 @@ Los objetos de tipo `File` soportan varios nombres de ruta, incluida las sintaxi
 <!-- REF #_command_.File.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|path|Text|->|File path|
-|fileConstant|Integer|->|4D file constant|
-|pathType|Integer|->|`fk posix path` (default) or `fk platform path`|
-|*||->|* to return file of host database|
-|Result|4D.File|<-|New file object|
+|path|Text|->|Ruta de archivo|
+|fileConstant|Integer|->|Constante de archivo 4D|
+|pathType|Integer|->|`fk posix path` (por defecto) o `fk platform path`|
+|*||->|* para devolver el archivo de la base de datos host|
+|Resultado|4D.File|<-|New file object|
 </div>
 <!-- END REF -->
 
@@ -213,11 +213,11 @@ Creación de un archivo de preferencias en la carpeta principal:
 <!--REF #FileClass.createAlias().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|destinationFolder|4D.Folder|->|Destination folder for the alias or shortcut|
-|aliasName|Text|->|Name of the alias or shortcut|
-|aliasType|Integer|->|Type of the alias link|
+|Parámetro|Tipo||Descripción|
+|---|---|-|---|
+|destinationFolder|4D.Folder|->|Carpeta de destino para el alias o acceso directo|
+|aliasName|Text|->|Nombre del alias o acceso directo|
+|aliasType|Integer|->|Tipo del enlace del alias|
 |Result|4D.File|<-|Alias or shortcut file reference|
 </div>
 <!-- END REF -->
@@ -420,11 +420,11 @@ ALERT($info.Copyright)
 <!--REF #FileClass.moveTo().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|----|---|---|
-|destinationFolder|4D.Folder|->|Destination folder|
-|newName|Text|->|Full name for the moved file|
-|Result|4D.File|<-|Moved file|
+|destinationFolder|4D.Folder|->|Carpeta de destino|
+|newName|Text|->|Nombre completo de la carpeta movida|
+|Resultado|4D.File|<-|Moved file|
 </div>
 <!-- END REF -->
 
@@ -643,12 +643,12 @@ La función `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescri
 <!--REF #FileClass.setText().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|----|---|--------|
-|text|Text|->|Text to store in the file|
-|charSetName|Text|->|Name of character set|
-|charSetNum|Integer|->|Number of character set|
-|breakMode|Integer|->|Processing mode for line breaks|
+|text|Text|->|Texto a almacenar en el archivo|
+|charSetName|Text|->Nombre del conjunto de caracteres|
+|charSetNum|Integer|->|Número del conjunto de caracteres|
+|breakMode|Integer|->|Modo de procesamiento para saltos de línea|
 </div>
 <!-- END REF -->
 
