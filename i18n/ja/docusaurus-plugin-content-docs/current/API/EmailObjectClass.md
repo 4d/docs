@@ -17,6 +17,12 @@ title: Email
 
 [`MAIL Convert from MIME`](../commands/mail-convert-from-mime) および [`MAIL Convert to MIME`](../commands/mail-convert-to-mime) コマンドは、MIME コンテンツから `Email` オブジェクトに、またはその逆の変換をおこなうのに使用できます。
 
+:::info
+
+This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
+
+:::
+
 ### Email オブジェクト
 
 Email オブジェクトは次のプロパティを提供します:
