@@ -52,11 +52,11 @@ You can also define the same event at both attribute and entity levels. The attr
 
 Usually, ORDA events are executed on the server. 
 
-In client/server configuration however, the `touched()` event function can be executed on the **server or the client**, depending on the use of [`local`](./ordaClasses.md#local-functions) keyword. A specific implementation on the client side allows the triggering of the event on the client. 
+In client/server configuration however, the `touched()` event function can be executed on the **server or the client**, depending on the use of [`local`](../Concepts/classes.md#local) keyword. A specific implementation on the client side allows the triggering of the event on the client. 
 
 :::note
 
-ORDA [`constructor()`](./ordaClasses.md#class-constructor) functions are always executed on the client. 
+ORDA [`constructor()`](./ordaClasses.md#class-constructor) functions are always executed locally. 
 
 :::
 
@@ -67,11 +67,11 @@ With other remote configurations (i.e. [Qodly applications](https://developer.4d
 
 The following table lists ORDA events along with their rules. 
 
-| Event  | Level    | Function name   |  (C/S) Executed on |Can stop action by returning an error	
+| Event  | Level    | Function name   |  (C/S) Execution |Can stop action by returning an error	
 | :------- |:------- | :----- | :-----: |---|
-| Entity instantiation  | Entity      |   [`constructor()`](./ordaClasses.md#class-constructor-1) |   client | no|
-| Attribute touched  | Attribute    |    `event touched <attrName>()`  | Depends on [`local`](../ORDA/ordaClasses.md#local-functions) keyword | no|
-| | Entity   |   `event touched()`  | Depends on [`local`](../ORDA/ordaClasses.md#local-functions) keyword | no|
+| Entity instantiation  | Entity      |   [`constructor()`](./ordaClasses.md#class-constructor-1) |   local | no|
+| Attribute touched  | Attribute    |    `event touched <attrName>()`  | Depends on [`local`](../Concepts/classes.md#local) keyword | no|
+| | Entity   |   `event touched()`  | Depends on [`local`](../Concepts/classes.md#local) keyword | no|
 |Before saving an entity|Attribute|`validateSave <attrName>()`|server|yes|
 ||Entity|`validateSave()`|server|yes|
 |When saving an entity|Attribute|`saving <attrName>()`|server|yes|

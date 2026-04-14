@@ -62,7 +62,7 @@ The `Session` object of a remote user session is available:
 - On the server, from code running in the user context, such as project methods that have the [Execute on Server](../../Project/project-method-properties.md#execute-on-server) attribute (they are executed in the "twinned" process of the client process) or ORDA [data model functions](../../ORDA/ordaClasses.md).
 - On the client, from code running locally, such as in project methods or ORDA data model functions with the *local* property.
 
-For more information, see [the "Availability" paragraph](../../Desktop/sessions.md#availability). 
+For more information, see the ["Remote user sessions" paragraph in the Desktop sessions](../../Desktop/sessions.md#remote-user-sessions) page. 
 
 
 

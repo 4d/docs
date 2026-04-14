@@ -17,7 +17,6 @@ Object resources, such as documents, are released when no more references exist 
 
 :::
 
-
 ### Example
 
 ```code4d
@@ -56,6 +55,7 @@ While (Not($fhandle.eof))
 End while
 
 ```
+
 
 ### FileHandle object
 

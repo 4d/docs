@@ -9,6 +9,11 @@ The Collection class manages [Collection](Concepts/dt_collection.md) type expres
 A collection is initialized with the [`New collection`](../commands/new-collection) or [`New shared collection`](../commands/new-shared-collection) commands.
 
 
+:::info
+
+This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
+
+:::
 
 ### Example
 

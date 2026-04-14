@@ -66,6 +66,7 @@ Also, object instances from ORDA data model user classes benefit from their pare
 
 |Release|Changes|
 |---|---|
+|21 R3|Support for the `server` keyword.
 |19 R4|Alias attributes in the Entity Class
 |19 R3|Computed attributes in the Entity Class
 |18 R5|Data model class functions are not exposed to REST by default. New `exposed` and `local` keywords.
@@ -303,7 +304,7 @@ When creating or editing data model classes, you must pay attention to the follo
 When compiled, data model class functions are executed:
 
 - in **preemptive or cooperative processes** (depending on the calling process) in single-user applications,
-- in **preemptive processes** in client/server applications (except if the [`local`](#local-functions) keyword is used, in which case it depends on the calling process like in single-user).
+- in **preemptive processes** in client/server applications (except if the [`local`](../Concepts/classes.md#local) keyword is used, in which case it depends on the calling process like in single-user).
 
 If your project is designed to run in client/server, make sure your data model class function code is thread-safe. If thread-unsafe code is called, an error will be thrown at runtime (no error will be thrown at compilation time since cooperative execution is supported in single-user applications).
 
@@ -369,9 +370,7 @@ The `Class constructor` function is triggered by the following commands and feat
 
 #### Remote configurations
 
-When using a remote configurations, you need to pay attention to the following principles:
-
-- In **client/server** the function can be called on the client or on the server, depending on the location of the calling code. When it is called on the client, it is not triggered again when the client attempts to save the new entity and sends an update request to the server to create in memory on the server.
+When using a remote configurations, you need to pay attention to the following principle: in **client/server** the function can be called on the client or on the server, depending on the location of the calling code. When it is called on the client, it is not triggered again when the client attempts to save the new entity and sends an update request to the server to create in memory on the server.
 
 :::warning
 
@@ -499,7 +498,7 @@ Within computed attribute functions, [`This`](Concepts/classes.md#this) designat
 
 > ORDA computed attributes are not [**exposed**](#exposed-vs-non-exposed-functions) by default. You expose a computed attribute by adding the `exposed` keyword to the **get function** definition.
 
-> **get and set functions** can have the [**local**](#local-functions) property to optimize client/server processing.
+> **get and set functions** can have the [`local`](../Concepts/classes.md#local) property to optimize client/server processing.
 
 
 ### `Function get <attributeName>`
@@ -507,7 +506,7 @@ Within computed attribute functions, [`This`](Concepts/classes.md#this) designat
 #### Syntax
 
 ```4d
-{local} {exposed} Function get <attributeName>({$event : Object}) -> $result : type
+{local | server} {exposed} Function get <attributeName>({$event : Object}) -> $result : type
 // code
 ```
 The *getter* function is mandatory to declare the *attributeName* computed attribute. Whenever the *attributeName* is accessed, 4D evaluates the `Function get` code and returns the *$result* value.
@@ -531,6 +530,12 @@ The *$event* parameter contains the following properties:
 |dataClassName|Text|Dataclass name|
 |kind|Text|"get"|
 |result|Variant|Optional. Add this property with Null value if you want a scalar attribute to return Null|
+
+:::note
+
+For more information about the `local` and `server` keywords, please refer to the [local and server](../Concepts/classes.md#local-and-server) section. 
+
+:::
 
 
 #### Examples
@@ -578,7 +583,7 @@ Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
 
 ```4d
 
-{local} Function set <attributeName>($value : type {; $event : Object})
+{local | server} Function set <attributeName>($value : type {; $event : Object})
 // code
 ```
 
@@ -594,6 +599,12 @@ The *$event* parameter contains the following properties:
 |dataClassName|Text|Dataclass name|
 |kind|Text|"set"|
 |value|Variant|Value to be handled by the computed attribute|
+
+:::note
+
+For more information about the `local` and `server` keywords, please refer to the [local and server](../Concepts/classes.md#local-and-server) section. 
+
+:::
 
 #### Example
 
@@ -1130,139 +1141,4 @@ It can be called by the following HTTP GET request:
 ```
 IP:port/rest/Products/getThumbnail?$params='["Yellow Pack",200,200]'
 ```
-
-
-## Local functions
-
-By default in client/server architecture, ORDA data model functions are executed **on the server**. It usually provides the best performance since only the function request and the result are sent over the network.
-
-However, it could happen that a function is fully executable on the client side (e.g., when it processes data that's already in the local cache). In this case, you can save requests to the server and thus, enhance the application performance by inserting the `local` keyword. The formal syntax is:
-
-```4d  
-// declare a function to execute locally in client/server
-local Function <functionName>   
-```
-
-With this keyword, the function will always be executed on the client side.
-
-> The `local` keyword can only be used with data model class functions. If used with a [regular user class](Concepts/classes.md) function, it is ignored and an error is returned by the compiler.
-
-Note that the function will work even if it eventually requires to access the server (for example if the ORDA cache is expired). However, it is highly recommended to make sure that the local function does not access data on the server, otherwise the local execution could not bring any performance benefit. A local function that generates many requests to the server is less efficient than a function executed on the server that would only return the resulting values. For example, consider the following function on the Schools entity class:
-
-```4d
-// Get the youngest students  
-// Inappropriate use of local keyword
-local Function getYoungest
-	var $0 : Object
-    $0:=This.students.query("birthDate >= :1"; !2000-01-01!).orderBy("birthDate desc").slice(0; 5)
-```
-- **without** the `local` keyword, the result is given using a single request
-- **with** the `local` keyword, 4 requests are necessary: one to get the Schools entity students, one for the `query()`, one for the `orderBy()`, and one for the `slice()`. In this example, using the `local` keyword is inappropriate.
-
-
-### Examples
-
-#### Calculating age
-
-Given an entity with a *birthDate* attribute, we want to define an `age()` function that would be called in a list box. This function can be executed on the client, which avoids triggering a request to the server for each line of the list box.
-
-On the *StudentsEntity* class:
-
-```4d
-Class extends Entity
-
-local Function age() -> $age: Variant
-
-If (This.birthDate#!00-00-00!)
-    $age:=Year of(Current date)-Year of(This.birthDate)
-Else
-    $age:=Null
-End if
-```
-
-#### Checking attributes
-
-We want to check the consistency of the attributes of an entity loaded on the client and updated by the user before requesting the server to save them.
-
-On the *StudentsEntity* class, the local `checkData()` function checks the Student's age:
-
-```4d
-Class extends Entity
-
-local Function checkData() -> $status : Object
-
-$status:=New object("success"; True)
-Case of
-    : (This.age()=Null)
-        $status.success:=False
-        $status.statusText:="The birthdate is missing"
-
-    :((This.age() <15) | (This.age()>30) )
-        $status.success:=False
-        $status.statusText:="The student must be between 15 and 30 - This one is "+String(This.age())
-End case
-```
-
-Calling code:
-
-```4d
-var $status : Object
-
-//Form.student is loaded with all its attributes and updated on a Form
-$status:=Form.student.checkData()
-If ($status.success)
-    $status:=Form.student.save() // call the server
-End if
-```
-
-
-
-## Support in 4D IDE
-
-
-### Class files
-
-An ORDA data model user class is defined by adding, at the [same location as regular class files](../Concepts/classes.md#class-definition) (*i.e.* in the `/Sources/Classes` folder of the project folder), a .4dm file with the name of the class. For example, an entity class for the `Utilities` dataclass will be defined through a `UtilitiesEntity.4dm` file.
-
-
-### Creating classes
-
-4D automatically pre-creates empty classes in memory for each available data model object.
-
-![](../assets/en/ORDA/ORDA_Classes-3.png)
-
-
-> By default, empty ORDA classes are not displayed in the Explorer. To show them you need to select **Show all data classes** from the Explorer's options menu:
-![](../assets/en/ORDA/showClass.png)
-
-ORDA user classes have a different icon from regular classes. Empty classes are dimmed:
-
-
-![](../assets/en/ORDA/classORDA2.png)
-
-To create an ORDA class file, you just need to double-click on the corresponding predefined class in the Explorer. 4D creates the class file and add the `extends` code. For example, for an Entity class:
-
-```
-Class extends Entity
-```
-
-Once a class is defined, its name is no longer dimmed in the Explorer.
-
-
-### Editing classes
-
-To open a defined ORDA class in the 4D Code Editor, select or double-click on an ORDA class name and use **Edit...** from the contextual menu/options menu of the Explorer window:
-
-![](../assets/en/ORDA/classORDA4.png)
-
-For ORDA classes based upon the local datastore (`ds`), you can directly access the class code from the 4D Structure window:
-
-![](../assets/en/ORDA/classORDA5.png)
-
-
-### Code Editor
-
-In the 4D Code Editor, variables typed as an ORDA class automatically benefit from autocompletion features. Example with an Entity class variable:
-
-![](../assets/en/ORDA/AutoCompletionEntity.png)
 
