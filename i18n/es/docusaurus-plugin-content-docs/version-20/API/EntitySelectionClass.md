@@ -388,11 +388,11 @@ $sellist2:=$sellist2.add($sellist1)
 <!-- REF #EntitySelectionClass.and().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|entity |4D.Entity|->|Entity to intersect with|
-|entitySelection |4D.EntitySelection|->|Entity selection to intersect with|
-|Result|4D.EntitySelection|<-|New entity selection with the result of intersection with logical AND operator|
+|entity|4D.Entity|->|Entidad con la que interceptar |
+|entitySelection|4D.EntitySelection|->|Selección de entidad a interceptar|
+|Resultado|4D.EntitySelection|<-|New entity selection with the result of intersection with logical AND operator|
 </div>
 <!-- END REF -->
 
@@ -507,16 +507,16 @@ $emp2:=$employees.at(-3) //empezando por el final, 3ª entidad
 <!-- REF #EntitySelectionClass.average().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|attributePath |Text|->|Attribute path to be used for calculation|
-|Result|Real|<-|Arithmetic mean (average) of entity attribute values (Undefined if empty entity selection)|
+|attributePath |Text|->|Ruta del atributo a utilizar para el cálculo|
+|Resultado|Real|<-|Arithmetic mean (average) of entity attribute values (Undefined if empty entity selection)|
 </div>
 <!-- END REF -->
 
 #### Descripción
 
-La función `.average()` <!-- REF #EntitySelectionClass.average().Summary -->The `.average()` function<!-- END REF -->.
+La función `.average()` <!-- REF #EntitySelectionClass.average().Summary -->devuelve la media aritmética (promedio) de todos los valores no nulos de *attributePath* en la selección de entidades<!-- END REF -->.
 
 Pase en el parámetro *attributePath* la ruta del atributo a evaluar.
 
@@ -615,10 +615,10 @@ Si *entity* y la entity selection no pertenecen a la misma dataclass, se produce
 <!-- REF #EntitySelectionClass.count().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|attributePath |Text|->|Path of the attribute to be used for calculation|
-|Result|Real|<-|Number of non null *attributePath* values in the entity selection|
+|attributePath |Text|->|Ruta del atributo a utilizar para el cálculo|
+|Resultado|Real|<-|Number of non null *attributePath* values in the entity selection|
 </div>
 <!-- END REF -->
 
@@ -664,10 +664,10 @@ Queremos averiguar el número total de empleados de una empresa sin contar a los
 <!-- REF #EntitySelectionClass.copy().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|option |Integer|->|`ck shared`: return a shareable entity selection|
-|Result|4D.EntitySelection|<-|Copy of the entity selection|
+|option |Integer|->|`ck shared`: devuelve una selección de entidades compartible|
+|Resultado|4D.EntitySelection|<-|Copy of the entity selection|
 </div>
 <!-- END REF -->
 
@@ -742,7 +742,7 @@ A continuación, esta selección de entidades se actualiza con productos y se de
 
 #### Descripción
 
-La función `.distinct()` <!-- REF #EntitySelectionClass.distinct().Summary -->The `.distinct()` function<!-- END REF -->.
+La función `.distinct()` <!-- REF #EntitySelectionClass.distinct().Summary -->devuelve una colección que contiene sólo valores distintos (diferentes) del *attributePath* en la selección de entidades<!-- END REF -->.
 
 La colección devuelta se clasifica automáticamente. Los valores **Null** no se devuelven.
 
@@ -886,10 +886,10 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 <!-- REF #EntitySelectionClass.drop().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|mode|Integer|->|`dk stop dropping on first error`: stops method execution on first non-droppable entity|
-|Result|4D.EntitySelection|<-|Empty entity selection if successful, else entity selection containing non-droppable entity(ies)|
+|mode|Integer|->|`dk stop dropping on first error`: para la ejecución del método en la primera entidad no soltable|
+|Resultado|4D.EntitySelection|<-|Empty entity selection if successful, else entity selection containing non-droppable entity(ies)|
 </div>
 <!-- END REF -->
 
@@ -958,12 +958,12 @@ Ejemplo con la opción `dk stop dropping on first error`:
 <!-- REF #EntitySelectionClass.extract().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|attributePath |Text|->|Attribute path whose values must be extracted to the new collection |
-|targetPath|Text|->|Target attribute path or attribute name|
-|option|Integer|->|`ck keep null`: include null attributes in the returned collection (ignored by default)|
-|Result|Collection|<-|Collection containing extracted values|
+|attributePath |Text|->|Ruta del atributo cuyos valores deben extraerse a la nueva colección |
+|targetPath|Text|->|Ruta del atributo de destino o nombre del atributo|
+|option|Integer||->|`ck keep null`: incluir atributos nulos en la colección devuelta (ignorado por defecto)|
+|Resultado|Collection||<-|Collection containing extracted values|
 </div>
 <!-- END REF -->
 
@@ -1064,9 +1064,9 @@ Dada la siguiente tabla y relación:
 <!-- REF #EntitySelectionClass.first().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|4D.Entity|<-|Reference to the first entity of the entity selection (Null if selection is empty)|
+|Resultado|4D.Entity|<-|Reference to the first entity of the entity selection (Null if selection is empty)|
 </div>
 <!-- END REF -->
 
@@ -1133,7 +1133,7 @@ Sin embargo, hay una diferencia entre ambas afirmaciones cuando la selección es
 
 #### Descripción
 
-La función `.isNew()` <!-- REF #EntitySelectionClass.getDataClass().Summary -->The `.getDataClass()` function<!-- END REF -->.
+La función `.isNew()` <!-- REF #EntitySelectionClass.getDataClass().Summary -->devuelve la dataclass de la entity selection<!-- END REF -->.
 
 Esta función es principalmente útil en el contexto del código genérico.
 
@@ -1481,10 +1481,10 @@ Queremos encontrar el salario más alto entre todas las empleadas:
 <!-- REF #EntitySelectionClass.min().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|attributePath |Text|->|Path of the attribute to be used for calculation|
-|Result|any|<-|Lowest value of attribute|
+|attributePath |Text|->|Ruta del atributo a utilizar para el cálculo|
+|Resultado|any|<-|Lowest value of attribute|
 </div>
 <!-- END REF -->
 
@@ -1894,13 +1894,13 @@ En este ejemplo, el campo objeto "marks" de la dataClass **Students** contiene l
 <!-- REF #EntitySelectionClass.query().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|queryString |Text |-> |Search criteria as string|
-|formula |Object |-> |Search criteria as formula object|
-|value|any|->|Value(s) to use for indexed placeholder(s)|
-|querySettings|Object|->|Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan|
-|Result|4D.EntitySelection|<-|New entity selection made up of entities from entity selection meeting the search criteria specified in *queryString* or *formula*|
+|queryString |Text |-> |Criterios de búsqueda como cadena|
+|formula |Object |-> |Criterios de búsqueda como objeto fórmula|
+|value|any|->|Valor(es) a utilizar para marcador(es) de posición indexado(s)|
+|querySettings|Object|->Opciones de consulta: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan|
+|Result|4D.EntitySelection<-|New entity selection made up of entities from entity selection meeting the search criteria specified in *queryString* or *formula*|
 </div>
 <!-- END REF -->
 
@@ -2227,10 +2227,10 @@ $slice:=ds.Employee.all().slice(-1;-2) //intenta devolver entidades del índice 
 <!-- REF #EntitySelectionClass.sum().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|attributePath |Text|->|Path of the attribute to be used for calculation|
-|Result|Real|<-|Sum of entity selection values|
+|attributePath |Text|->|Ruta del atributo a utilizar para el cálculo|
+|Resultado|Real|<-|Sum of entity selection values|
 </div>
 <!-- END REF -->
 
@@ -2281,13 +2281,13 @@ $sum:=$sel.sum("salary")
 <!-- REF #EntitySelectionClass.toCollection().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|filterString |Text|->|String with entity attribute path(s) to extract|
-|filterCol |Collection|->|Collection of entity attribute path(s) to extract|
-|options|Integer|->|`dk with primary key`: adds the primary key<br/>`dk with stamp`: adds the stamp|
-|begin|Integer| ->|Designates the starting index|
-|howMany|Integer|->|Number of entities to extract|
+|filterString |Text|->|Cadena con ruta(s) de atributo(s) de entidad a extraer|
+|filterCol |Collection|->|Colección de ruta(s) de atributo(s) de entidad a extraer|
+|options|Integer||->|`dk with primary key`: añade la llave primaria<br/>`dk with stamp`: añade el sello|
+|begin|Integer| ->|Designa el índice de inicio|
+|howMany|Integer|->|Número de entidades a extraer|
 |Result|Collection|<-|Collection of objects containing attributes and values of entity selection|
 </div>
 <!-- END REF -->
