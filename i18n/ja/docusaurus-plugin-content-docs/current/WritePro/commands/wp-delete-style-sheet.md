@@ -26,8 +26,8 @@ displayed_sidebar: docs
 
 | リリース     | 内容                    |
 | -------- | --------------------- |
-| 4D 18    | Created               |
 | 4D 21 R3 | *listLevelIndex* 引数追加 |
+| 4D 18    | Created               |
 
 </details>
 </div>
@@ -58,7 +58,15 @@ displayed_sidebar: docs
 
 **注意**: デフォルト("Normal") のスタイルシートは削除することができません。
 
-## 例題
+## 例題 1
+
+To delete a character style sheet "MyCharStyle":
+
+```4d
+WP DELETE STYLE SHEET(wpArea; "MyCharStyle")
+```
+
+## 例題 2
 
 以下の例では、階層リストスタイルシートの第2レベルを削除したい場合を考えます:
 
