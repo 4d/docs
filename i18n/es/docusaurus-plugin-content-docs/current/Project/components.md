@@ -339,7 +339,7 @@ A continuación, deberá [suministrar su token de conexión](#providing-your-acc
 
 Referenced GitHub and GitLab components are downloaded in a local cache folder then loaded in your environment. La carpeta de caché local se guarda en la siguiente ubicación:
 
-- on macOS: `$HOME/Library/Caches/<app name>/Dependencies`
+- en macOS: `$HOME/Library/Caches/<app name>/Dependencies`
 - en Windows: `C:\Users\<username>\AppData\Local\<app name>\Dependencies`
 
 ...donde `<app name>` puede ser "4D", "4D Server" o "tool4D".
@@ -645,7 +645,7 @@ Luego puede introducir su token de acceso personal:
 
 ![dependency-add-token-2](../assets/en/Project/dependency-add-token-2.png)
 
-#### Editing a token
+#### Editar un token
 
 Sólo puede introducir un token de acceso personal por host. Una vez se ha sido introducido un token, puede **editarlo**.
 
