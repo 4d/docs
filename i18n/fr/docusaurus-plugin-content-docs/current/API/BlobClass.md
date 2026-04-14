@@ -5,6 +5,12 @@ title: Blob
 
 La classe Blob vous permet de créer et de manipuler des [objets blob](../Concepts/dt_blob.md#blob-types) (`4D.Blob`).
 
+:::info
+
+This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
+
+:::
+
 ### Sommaire
 
 |                                                                                                  |
