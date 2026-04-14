@@ -26,8 +26,8 @@ displayed_sidebar: docs
 
 | Lanzamiento | Modificaciones                                |
 | ----------- | --------------------------------------------- |
-| 4D 18       | Created                                       |
 | 4D 21 R3    | \*Se ha añadido el parámetro *listLevelIndex* |
+| 4D 18       | Created                                       |
 
 </details>
 </div>
@@ -41,7 +41,7 @@ Este comando ofrece dos formas de eliminar una hoja de estilo. Puede especificar
 - the style sheet object (created with the [WP New style sheet](../WritePro/commands/wp-new-style-sheet) or returned by the [WP Get style sheet](../WritePro/commands/wp-get-style-sheet) command) to remove in the *styleSheetType* parameter, or
 - the 4D Write Pro document along with the name of the style sheet to remove in the *wpDoc* and *styleSheetName* parameters.
 
-When the style sheet to delete belongs to a [hierarchical list style sheet](../user-legacy/stylesheets.md#hierarchical-list-style-sheets), the behavior depends on the level being removed. You can delete:
+When the style sheet to delete belongs to a [hierarchical list style sheet](../user-legacy/stylesheets.md#hierarchical-list-style-sheets), the behavior depends on the level being removed. Puede eliminar:
 
 - la hoja de estilo de nivel raíz, o
 - una hoja de estilo de subnivel específica ofreciendo el parámetro opcional *listLevelIndex*.
@@ -58,9 +58,17 @@ The command performs no action if the specified level does not exist, or if the 
 
 **Nota**: la hoja de estilo por defecto ("Normal") no se puede eliminar.
 
-## Ejemplo
+## Ejemplo 1
 
-The following example deletes the second level of a hierarchical list style sheet:
+Para eliminar una hoja de estilo de caracteres "MyCharStyle":
+
+```4d
+WP DELETE STYLE SHEET(wpArea; "MyCharStyle")
+```
+
+## Ejemplo 2
+
+El siguiente ejemplo elimina el segundo nivel de una hoja de estilo de lista jerárquica:
 
 ```4d
 // Borrar el nivel 2 de la hoja de estilo jerárquica "MainList"
