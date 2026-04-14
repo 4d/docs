@@ -97,7 +97,7 @@ Un método de menú se llama cuando se selecciona el comando de menú personaliz
 
 Los comandos de menú personalizados pueden hacer que se realicen una o varias actividades. For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the [`ADD RECORD`(../commands/add-record)] command until the user cancels the data entry activity.
 
-Automating sequences of activities is a very powerful capability of the 4D programming language. Utilizando los menús personalizados, se pueden automatizar las secuencias de tareas y, por lo tanto, ofrecer más orientación a los usuarios de la aplicación.
+La automatización de secuencias de actividades es una capacidad muy poderosa del lenguaje de programación 4D. Utilizando los menús personalizados, se pueden automatizar las secuencias de tareas y, por lo tanto, ofrecer más orientación a los usuarios de la aplicación.
 
 ### Métodos de gestión de proceso
 
@@ -105,7 +105,7 @@ Un **método proyecto** es un método proyecto que se llama cuando se inicia un 
 
 ### Métodos de gestión de eventos y errores
 
-Un **método de gestión de eventos** es un método dedicado a la gestión de eventos, que se ejecuta en un proceso diferente del método de gestión de procesos. Generalmente, para la gestión de eventos, 4D se encarga de la mayor parte. Por ejemplo, durante la entrada de datos, 4D detecta las pulsaciones de las teclas y los clics, y luego llama a los métodos objeto y formulario correspondientes para que usted pueda responder adecuadamente a los eventos desde estos métodos. For more information, see the description of the command [`ON EVENT CALL`](../commands/on-event-call).
+Un **método de gestión de eventos** es un método dedicado a la gestión de eventos, que se ejecuta en un proceso diferente del método de gestión de procesos. Generalmente, para la gestión de eventos, 4D se encarga de la mayor parte. Por ejemplo, durante la entrada de datos, 4D detecta las pulsaciones de las teclas y los clics, y luego llama a los métodos objeto y formulario correspondientes para que usted pueda responder adecuadamente a los eventos desde estos métodos. Para más información, consulte la descripción del comando [`ON EVENT CALL`](../commands/on-event-call).
 
 Un **método de gestión de errores** es un método proyecto basado en interrupciones. Se llama cada vez que se produce un error o una excepción. Para más información, consulte la sección [Gestión de errores](../Concepts/error-handling.md).
 
@@ -114,7 +114,7 @@ Un **método de gestión de errores** es un método proyecto basado en interrupc
 Project methods can be called from external contexts such as other applications, web apps, processed files, etc., in which case they can be seen as API. Such calls include:
 
 - calls to the web server through [http request handlers](../WebServer/http-request-handler.md) or [`4DACTION` URLs](../WebServer/httpRequests.md#4daction),
-- [tag processing](../Tags/transformation-tags.md)
+- [procesamiento de etiquetas](../Tags/transformation-tags.md)
 - expressions called from extensions ([4D Write Pro](../WritePro/commands/wp-insert-formula.md), [4D View Pro](../ViewPro/formulas.md) or form objects (e.g. [`ST INSERT EXPRESSION`](../commands/st-insert-expression)).
 
 External calls to project methods must be allowed in the [project method properties](../Project/project-method-properties.md).
@@ -239,7 +239,7 @@ En 4D, algunos usos típicos de la recursividad son:
 
 :::warning
 
-Recursive calls should always end at some point. En el ejemplo, el método `Genealogy of` deja de llamarse a sí mismo cuando la consulta no devuelve ningún registro. Sin esta prueba condicional, el método se llamaría a sí mismo indefinidamente; eventualmente, 4D devolvería un error "Pila llena" porque ya no tendría espacio para "apilar" las llamadas (así como los parámetros y las variables locales utilizadas en el método).
+Las llamadas recursivas siempre deben terminar en algún punto. En el ejemplo, el método `Genealogy of` deja de llamarse a sí mismo cuando la consulta no devuelve ningún registro. Sin esta prueba condicional, el método se llamaría a sí mismo indefinidamente; eventualmente, 4D devolvería un error "Pila llena" porque ya no tendría espacio para "apilar" las llamadas (así como los parámetros y las variables locales utilizadas en el método).
 
 :::
 
