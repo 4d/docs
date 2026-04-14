@@ -55,7 +55,7 @@ Using worker processes in asynchronous programming **is mandatory** since "class
 
 ### Event queue (mailbox)
 
-Each worker (or form window for [`CALL FORM`](../commands/call-form)) has its own message queue. [`CALL WORKER`](../commands/call-worker) o [`CALL FORM`](../commands/call-form) simplemente envía un mensaje a esta cola. El worker trata los mensajes uno a uno, en el orden en que llegan, dentro de su propio contexto. Se conservan las variables de proceso, las selecciones actuales, etc.
+Cada worker (o ventana de formulario para [`CALL FORM`](../commands/call-form)) tiene su propia cola de mensajes. [`CALL WORKER`](../commands/call-worker) o [`CALL FORM`](../commands/call-form) simplemente envía un mensaje a esta cola. El worker trata los mensajes uno a uno, en el orden en que llegan, dentro de su propio contexto. Se conservan las variables de proceso, las selecciones actuales, etc.
 
 ### Comunicación bidireccional mediante mensajes
 
@@ -69,7 +69,7 @@ In the context of asynchronous execution, the following features place your code
 
 - [`CALL WORKER`](../commands/call-worker) ejecuta el código para el que ha sido llamado, luego vuelve a un estado de escucha desde donde puede ser llamado posteriormente.
 - [`CALL FORM`](../commands/call-form) abre un formulario y lo hace escuchar los mensajes entrantes de la cola de eventos.
-- a call for a `wait()` listens for `terminate()` or `shutdown()` in a callback from any other instance.
+- una llamada a `wait()` espera `terminate()` o `shutdown()` en una retrollamada de cualquier otra instancia.
 
 ### Activación de eventos
 
@@ -91,7 +91,7 @@ Si desea "forzar" la liberación de un objeto en cualquier momento, utilice un `
 
 ### Ejemplos que ilustran el concepto común
 
-| Feature                         | Async Launch                                                                          | Callback / Event Handling                                               |
+| Feature                         | Lanzamiento asíncrono                                                                 | Callback / Event Handling                                               |
 | ------------------------------- | ------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
 | CALL WORKER                     | CALL WORKER("wk"; "MyMethod"; $params)                             | MyMethod se llama con $params                                           |
 | CALL FORM                       | CALL FORM($win; "MyMethod"; $params)                               | MyMethod se llama con $params                                           |
@@ -161,7 +161,7 @@ Once the user class is instantiated; 4D is put in [event listening](#event-liste
 
 :::tip
 
-En algunos casos, es posible que desee utilizar fórmulas como valores de propiedad en lugar de funciones de clase. Although it is not the best practice, a syntax such as the following is supported:
+En algunos casos, es posible que desee utilizar fórmulas como valores de propiedad en lugar de funciones de clase. Aunque no es la mejor práctica, se admite una sintaxis como la siguiente:
 
 ```4d
 var $options.onResponse:=Formula(myMethod) 
