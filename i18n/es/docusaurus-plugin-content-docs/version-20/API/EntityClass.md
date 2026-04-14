@@ -86,9 +86,9 @@ El tipo de valor del atributo depende del tipo [kind](DataClassClass.md#attribut
 <!-- REF #EntityClass.clone().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|4D.Entity|<-|New entity referencing the record|
+|Resultado|4D.Entity|<-|New entity referencing the record|
 </div>
 <!-- END REF -->
 
@@ -454,9 +454,9 @@ Ejemplo con la opción `dk force drop if stamp changed`:
 <!-- REF #EntityClass.first().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|4D.Entity|<-|Reference to first entity of an entity selection (Null if not found)|
+|Resultado|4D.Entity|<-|Reference to first entity of an entity selection (Null if not found)|
 </div>
 <!-- END REF -->
 
@@ -915,9 +915,9 @@ La función `.isNew()` <!-- REF #EntityClass.isNew().Summary --> devuelve True s
 <!-- REF #EntityClass.last().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|4D.Entity|<-|Reference to last entity of an entity selection (Null if not found)|
+|Resultado|4D.Entity|<-|Reference to last entity of an entity selection (Null if not found)|
 </div>
 <!-- END REF -->
 
@@ -1081,9 +1081,9 @@ Ejemplo con la opción `dk reload if stamp changed`:
 <!-- REF #EntityClass.next().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|4D.Entity|<-|Reference to next entity in the entity selection (Null if not found)|
+|Resultado|4D.Entity|<-|Reference to next entity in the entity selection (Null if not found)|
 </div>
 <!-- END REF -->
 
@@ -1125,9 +1125,9 @@ Si no hay una entidad siguiente válida en la selección de entidades (es decir,
 <!-- REF #EntityClass.previous().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|4D.Entity|<-|Reference to previous entity in the entity selection (Null if not found)|
+|Resultado|4D.Entity|<-|Reference to previous entity in the entity selection (Null if not found)|
 </div>
 <!-- END REF -->
 
