@@ -7,6 +7,12 @@ La classe Collection gère les expressions de type [Collection](Concepts/dt_coll
 
 Une collection est initialisée avec les commandes [`New collection`](../commands/new-collection) ou [`New shared collection`](../commands/new-shared-collection).
 
+:::info
+
+This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
+
+:::
+
 ### Exemple
 
 ```4d
