@@ -72,13 +72,13 @@ Los objetos `Folder` soportan varios nombres de ruta, incluyendo las sintaxis `f
 <!-- REF #_command_.Folder.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|path|Text|->|Folder path|
-|folderConstant|Integer|->|4D folder constant|
-|pathType|Integer|->|`fk posix path` (default) or `fk platform path`|
-|*||->|* to return folder of host database|
-|Result|4D.Folder|<-|New folder object|
+|path|Text|->|Ruta de la carpeta|
+|folderConstant|Integer|->|Constante de la carpeta 4D|
+|pathType|Integer|->|`fk posix path` (por defecto) o `fk platform path`|
+|*||->|* para devolver la carpeta de la base de datos local|
+|Resultado|4D.Folder|<-|New folder object|
 </div>
 <!-- END REF -->
 
@@ -222,11 +222,11 @@ End if
 <!--REF #FolderClass.createAlias().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|destinationFolder|4D.Folder|->|Destination folder for the alias or shortcut|
-|aliasName|Text|->|Name of the alias or shortcut|
-|aliasType|Integer|->|Type of the alias link|
+|Parámetro|Tipo||Descripción|
+|---|---|-|---|
+|destinationFolder|4D.Folder|->|Carpeta de destino para el alias o acceso directo|
+|aliasName|Text|->|Nombre del alias o acceso directo|
+|aliasType|Integer|->|Tipo del enlace del alias|
 |Result|4D.File|<-|Alias or shortcut reference|
 </div>
 <!-- END REF -->
@@ -356,11 +356,11 @@ Cuando se pasa `Delete with contents`:
 <!--REF #FolderClass.moveTo().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|----|---|---|
-|destinationFolder|4D.Folder|->|Destination folder|
-|newName|Text|->|Full name for the moved folder|
-|Result|4D.Folder|<-|Moved folder|
+|destinationFolder|4D.Folder|->|Carpeta de destino|
+|newName|Text|->|Nombre completo de la carpeta movida|
+|Resultado|4D.Folder|<-|Moved folder|
 </div>
 <!-- END REF -->
 
