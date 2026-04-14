@@ -45,13 +45,13 @@ When a new sub-level is created, the level numbering restarts at 1. When you add
 
 ![](../../assets/en/WritePro/multilevel-lists.png)
 
-Multi-level lists are created by applying a hierarchical list style sheet to a paragraph using [WP SET ATTRIBUTE](../commands/wp-set-attributes.md).
+Multi-level lists are created with command [WP New style sheet](../commands/wp-new-style-sheet.md) and can be applied to a paragraph using [WP SET ATTRIBUTE](../commands/wp-set-attributes.md).
 
 Multi-level lists can be managed using:
 
-- paragraph [style sheet attributes](../commands-legacy/4d-write-pro-attributes.md#style-sheets) (such as `wk list level index`, `wk list level count`, and `wk list concat string format`)
+- paragraph [style sheet attributes](../commands/4d-write-pro-attributes.md#style-sheets) (such as `wk list level index`, `wk list level count`, and `wk list concat string format`)
 - dedicated [standard actions](../user-legacy/standard-actions.md) for level management (`listLevelAppend`, `listLevelInc`, `listLevelDec`)
-- dedicated standard actions for numbering marker management (`listConcatString`, `listNumberFormat`).
+- dedicated standard actions for numbering marker management (`listConcatStringFormat`, `listNumberFormat`).
 
 :::tip Related blog post
 
@@ -69,7 +69,7 @@ Hierarchical list style sheets are used to create [multi-level lists](using-a-4d
 
 To create a hierarchical list style sheet, use [WP New style sheet](../commands/wp-new-style-sheet.md) and pass in *listLevelCount* the desired number of levels. You then define a hierarchy of related paragraph style sheets: one **root-level** style sheet and one or more **sub-level** style sheets linked to it. Each level represents a depth in the list (level 1, level 2, level 3, etc.) and is automatically named "root-level name + lvl + index", for example "Mylist lvl 2".
 
-To define and manage the hierarchy, the paragraph style sheet object can be customized using [style sheet attributes](../commands-legacy/4d-write-pro-attributes.md#style-sheets).
+To customize hierarchical list styles, the paragraph style sheet object can be customized using [style sheet attributes](../commands/4d-write-pro-attributes.md#style-sheets).
 
 Hierarchical list style sheets are fully supported by the following commands: [`WP Get style sheet`](../commands/wp-get-style-sheet.md), [`WP SET ATTRIBUTES`](../commands/wp-set-attributes.md), [`WP DELETE STYLE SHEET`](../commands/wp-delete-style-sheet.md).
 
@@ -119,7 +119,7 @@ result:
 
 When created, hierarchical list style sheets use predefined values:
 
-- `wk margin left` = 0.75 cm × (number of previous levels)
+- `wk margin left` = 0.75 cm \* (number of previous levels) or 0.25 inches \* (number of previous levels), depending on current layout unit
 - `wk list type` = `wk decimal`
 - `wk name` is derived from the root style sheet name (Read-only for sub-levels)
 - `wk list level count` is set to the specified value for all levels
