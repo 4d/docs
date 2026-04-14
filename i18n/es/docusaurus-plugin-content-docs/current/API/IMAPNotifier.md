@@ -17,7 +17,7 @@ The `IMAPNotifier` class is available from the `4D` class store.
 
 An `IMAPNotifier` object is associated with an [IMAP transporter](./IMAPTransporterClass.md#imap-transporter-object) and provides access to mailbox notification management.
 
-All `IMAPNotifier` class functions are thread-safe.
+Todas las funciones de clase `IMAPNotifier` son hilo seguro.
 
 :::tip Entradas de blog relacionadas
 
@@ -64,15 +64,15 @@ An IMAPNotifier object provides the following properties and functions:
 
 <!-- REF #4D.IMAPNotifier.new().params -->
 
-| Parámetros | Tipo                            |                             | Descripción             |
-| ---------- | ------------------------------- | --------------------------- | ----------------------- |
-| Resultado  | 4D.IMAPNotifier | <- | New IMAPNotifier object |
+| Parámetros | Tipo                            |                             | Descripción               |
+| ---------- | ------------------------------- | --------------------------- | ------------------------- |
+| Resultado  | 4D.IMAPNotifier | <- | Nuevo objeto IMAPNotifier |
 
 <!-- END REF -->
 
 #### Descripción
 
-The `4D.IMAPNotifier.new()` function <!-- REF #4D.IMAPNotifier.new().Summary -->creates a new IMAPNotifier object<!-- END REF -->.
+La función `4D.IMAPNotifier.new()` <!-- REF #4D.IMAPNotifier.new().Summary -->crea un nuevo objeto IMAPNotifier<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -96,9 +96,9 @@ The `.isStarted` property <!-- REF #IMAPNotifier.isStarted.Summary -->indicates 
 
 <!-- REF #IMAPNotifier.start().params -->
 
-| Parámetros | Tipo   |                             | Descripción      |
-| ---------- | ------ | :-------------------------: | ---------------- |
-| Resultado  | Object | <- | Operation status |
+| Parámetros | Tipo   |                             | Descripción            |
+| ---------- | ------ | :-------------------------: | ---------------------- |
+| Resultado  | Object | <- | Estado de la operación |
 
 <!-- END REF -->
 
@@ -127,7 +127,7 @@ Callback functions are executed in the worker where `.start()` is called.
 | errors     |                                                                                             | Collection | 4D error stack (not returned if a server response is received)                 |
 |            | \[].errcode            | Number     | Código de error 4D                                                                                |
 |            | \[].message            | Text       | Descripción del error                                                                             |
-|            | \[].componentSignature | Text       | Signature of the component that returned the error                                                |
+|            | \[].componentSignature | Text       | Firma del componente que ha devuelto el error                                                     |
 
 <!-- END REF -->
 
@@ -139,9 +139,9 @@ Callback functions are executed in the worker where `.start()` is called.
 
 <!-- REF #IMAPNotifier.stop().params -->
 
-| Parámetros | Tipo   |                             | Descripción      |
-| ---------- | ------ | :-------------------------: | ---------------- |
-| Resultado  | Object | <- | Operation status |
+| Parámetros | Tipo   |                             | Descripción            |
+| ---------- | ------ | :-------------------------: | ---------------------- |
+| Resultado  | Object | <- | Estado de la operación |
 
 <!-- END REF -->
 
@@ -158,7 +158,7 @@ The `.stop()` function <!-- REF #IMAPNotifier.stop().Summary -->stops the notifi
 | errors     |                                                                                             | Collection | 4D error stack (not returned if a server response is received)                 |
 |            | \[].errcode            | Number     | Código de error 4D                                                                                |
 |            | \[].message            | Text       | Descripción del error                                                                             |
-|            | \[].componentSignature | Text       | Signature of the component that returned the error                                                |
+|            | \[].componentSignature | Text       | Firma del componente que ha devuelto el error                                                     |
 
 <!-- END REF -->
 
