@@ -51,10 +51,10 @@ Las selecciones de entidades pueden crearse a partir de selecciones existentes u
 <!-- REF #_command_.Create entity selection.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|dsTable|Table|->|Table in the 4D database whose current selection will be used to build the entity selection|
-|settings|Object|->|Build option: context |
+|dsTable|Table|->|Tabla en la base de datos 4D cuya selección actual se utilizará para construir la selección de entidades|
+|settings|Object|->|Opción de construcción: contexto |
 |Result|4D.EntitySelection|<-|Entity selection matching the dataclass related to the given table|
 </div>
 <!-- END REF -->
