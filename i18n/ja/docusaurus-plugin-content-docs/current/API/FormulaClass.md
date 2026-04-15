@@ -12,6 +12,12 @@ title: Formula
 
 [Function オブジェクト内のコードを実行する](../API/FunctionClass.md#executing-code-in-function-objects) の段落の例題を参照してください。
 
+:::info
+
+This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
+
+:::
+
 ### フォーミュラに引数を渡す
 
 フォーミュラには、順番引数シンタックス `$1, $2...$n` を使用して引数を渡すことができます。 $ 付きの引数の番号は、それらがフォーミュラに渡される順番を表します。 たとえば:

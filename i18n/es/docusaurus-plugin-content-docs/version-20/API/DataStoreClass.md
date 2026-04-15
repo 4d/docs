@@ -411,9 +411,9 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
 <!-- REF #DataStoreClass.flushAndLock().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-||||Does not require any parameters|
+||||No requiere ningún parámetro|
 </div>
 <!-- END REF -->
 
@@ -1289,9 +1289,9 @@ Puede anidar varias transacciones (subtransacciones). Cada transacción o sub-tr
 <!-- REF #DataStoreClass.stopRequestLog().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-||||Does not require any parameters|
+||||No requiere ningún parámetro|
 </div>
 <!-- END REF -->
 
@@ -1327,9 +1327,9 @@ Ver ejemplos de [`.startRequestLog()`](#startrequestlog).
 <!-- REF #DataStoreClass.unlock().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-||||Does not require any parameters|
+||||No requiere ningún parámetro|
 </div>
 <!-- END REF -->
 
@@ -1367,9 +1367,9 @@ Si se llama a la función `.unlock()` en un datastore desbloqueado, no hace nada
 <!-- REF #DataStoreClass.validateTransaction().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-||||Does not require any parameters|
+||||No requiere ningún parámetro|
 </div>
 <!-- END REF -->
 

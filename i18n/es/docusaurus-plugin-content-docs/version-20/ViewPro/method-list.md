@@ -110,9 +110,9 @@ VP ADD RANGE NAME($range;"Total1")
 <!-- REF #_method_.VP ADD SELECTION.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|Parámetro|Tipo| |Descripción|
 |---|---|---|---|
-|rangeObj| Object|->|Range object |
+|rangeObj| Object|->|Objeto Rango |
 </div>
 <!-- END REF -->
 
@@ -197,9 +197,9 @@ VP ADD SHEET("ViewProArea";2;"March")
 <!-- REF #_method_.VP ADD SPAN.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|Parámetro|Tipo| |Descripción|
 |---|---|---|---|
-|rangeObj| Object|->|Range object|
+|rangeObj| Object|->|Objeto Rango |
 </div>
 <!-- END REF -->
 
@@ -513,9 +513,9 @@ El código es el siguiente:
 <!-- REF #_method_.VP COLUMN AUTOFIT.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|Parámetro|Tipo| |Descripción|
 |---|---|---|---|
-|rangeObj| Object|->|Range object|
+|rangeObj| Object|->|Objeto Rango |
 </div>
 <!-- END REF -->
 
@@ -863,9 +863,9 @@ Aquí está el resultado:
 <!-- REF #_method_.VP DELETE COLUMNS.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|Parámetro|Tipo| |Descripción|
 |---|---|---|---|
-|rangeObj| Object|->|Range object|
+|rangeObj| Object|->|Objeto Rango |
 </div>
 <!-- END REF -->
 
@@ -903,9 +903,9 @@ VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 <!-- REF #_method_.VP DELETE ROWS.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|Parámetro|Tipo| |Descripción|
 |---|---|---|---|
-|rangeObj| Object|->|Range object|
+|rangeObj| Object|->|Objeto Rango |
 </div>
 <!-- END REF -->
 
@@ -2905,10 +2905,10 @@ $tables:=VP Get tables("ViewProArea")
 <!-- REF #_method_.VP Get value.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|Parámetro|Tipo| |Descripción|
 |---|---|---|---|
-|rangeObj   |Object|->|Range object|
-|Result  |Object|<-|Object containing a cell value|
+|rangeObj   |Object|->|Objeto Rango|
+|Resultado |Objeto|<-|Object containing a cell value|
 </div>
 <!-- END REF -->
 
@@ -3195,9 +3195,9 @@ VP IMPORT FROM OBJECT("ViewProArea1";[VPWorkBooks]SPBook)
 <!-- REF #_method_.VP INSERT COLUMNS.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|rangeObj   |Object|->|Range object|
+|rangeObj |Object|->|Objeto rango|
 </div>
 <!-- END REF -->
 
@@ -3233,9 +3233,9 @@ El resultado es:
 <!-- REF #_method_.VP INSERT ROWS.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|rangeObj   |Object|->|Range object|
+|rangeObj |Object|->|Objeto rango|
 </div>
 <!-- END REF -->
 
@@ -3839,9 +3839,9 @@ VP REMOVE SHEET("ViewProArea";2)
 <!-- REF #_method_.VP REMOVE SPAN.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|rangeObj   |Object|->|Range object|
+|rangeObj |Object|->|Objeto rango|
 </div>
 <!-- END REF -->
 #### Descripción
@@ -4270,9 +4270,9 @@ $row:=VP Row("ViewProArea";9) // línea 10
 <!-- REF #_method_.VP ROW AUTOFIT.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|rangeObj  |Object|->|Range object|
+|rangeObj |Object|->|Objeto rango|
 </div>
 <!-- END REF -->
 
@@ -4442,9 +4442,9 @@ $result:=VP Run offscreen area($o)
 <!-- REF #_method_.VP SET ACTIVE CELL.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|rangeObj   |Object|->|Range object|
+|rangeObj |Object|->|Objeto rango|
 </div>
 <!-- END REF -->
 

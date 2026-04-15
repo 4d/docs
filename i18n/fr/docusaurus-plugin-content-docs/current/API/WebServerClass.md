@@ -5,13 +5,16 @@ title: WebServer
 
 La classe `WebServer` vous permet de démarrer et de contrôler un serveur web pour l'application principale (hôte) ainsi que pour chaque composant (voir la présentation de l'[objet Web Server](WebServer/webServerObject.md)). Cette classe est disponible depuis le "class store" de `4D`.
 
+### Propriétés
+
+- **Streamable**: no
+- **Sharable**: no
+
 ### Objet Web Server
 
 Les objets serveur Web sont instanciés avec la commande [`WEB Server`](../commands/web-server).
 
 Leurs propriétés et fonctions sont les suivantes :
-
-### Sommaire
 
 |                                                                                                                                                                           |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

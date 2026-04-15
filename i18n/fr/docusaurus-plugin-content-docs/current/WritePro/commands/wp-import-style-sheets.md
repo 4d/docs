@@ -48,5 +48,5 @@ Vous souhaitez importer une feuille de style nommée template et recevoir une no
 
 [WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet)  
 [WP Get style sheet](../WritePro/commands/wp-get-style-sheet)  
-[WP Get style sheets](../WritePro/commands/wp-get-style-sheets.md)  
+[WP Get style sheets](../WritePro/commands/wp-get-style-sheets)  
 [WP New style sheet](../WritePro/commands/wp-new-style-sheet)

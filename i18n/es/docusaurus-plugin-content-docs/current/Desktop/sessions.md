@@ -64,7 +64,7 @@ Del lado del cliente, existen dos objetos de almacenamiento local distintos:
 :::tip Entradas de blog relacionadas
 
 - [Objeto sesión remota 4D con conexión cliente/servidor y procedimiento almacenado](https://blog.4d.com/new-4D-remote-session-object-with-client-server-connection-and-stored-procedure).
-- [Client / server – Handle a session when working on a 4D client](https://blog.4d.com/client-server-handle-a-session-when-working-on-a-4d-client).
+- [Forget server-side wrappers, use 4D Sessions from the client](https://blog.4d.com/forget-server-side-wrappers-use-4d-sessions-from-the-client).
 
 :::
 

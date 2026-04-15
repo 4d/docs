@@ -44,11 +44,11 @@ title: エンティティイベント
 
 一般的に、ORDA イベントはサーバー上で実行されます。
 
-しかしながらクライアント/サーバー構成においては、[`local`](./ordaClasses.md#local-functions) キーワードの使用によっては、`touched()` イベント関数を**サーバーまたはクライアント**で実行することが可能です。 クライアント側で特定の実装をすることにより、イベントをクライアント上でトリガーすることができるようになります。
+しかしながらクライアント/サーバー構成においては、[`local`](../Concepts/classes.md#local) キーワードの使用によっては、`touched()` イベント関数を**サーバーまたはクライアント**で実行することが可能です。 クライアント側で特定の実装をすることにより、イベントをクライアント上でトリガーすることができるようになります。
 
 :::note
 
-ORDA [`constructor()`](./ordaClasses.md#class-constructor) 関数は必ずクライアント上で実行されます。
+ORDA [`constructor()`](./ordaClasses.md#class-constructor) functions are always executed locally.
 
 :::
 
@@ -58,21 +58,21 @@ ORDA [`constructor()`](./ordaClasses.md#class-constructor) 関数は必ずクラ
 
 以下の表は、ORDA イベントの一覧とそのルールをまとめたものです。
 
-| イベント                                  | レベル    | 関数名                                                     |            (C/S の場合) 実行される場所            | エラーを返すことでアクションを停止できる |
-| :------------------------------------ | :----- | :------------------------------------------------------ | :--------------------------------------------------------: | -------------------- |
-| エンティティのインスタンス化                        | Entity | [`constructor()`](./ordaClasses.md#class-constructor-1) |                           client                           | ×                    |
-| 属性がタッチされた                             | 属性     | `event touched <attrName>()`                            | [`local`](../ORDA/ordaClasses.md#local-functions) キーワードによる | ×                    |
-|                                       | Entity | `event touched()`                                       | [`local`](../ORDA/ordaClasses.md#local-functions) キーワードによる | ×                    |
-| エンティティを保存する前                          | 属性     | `validateSave <attrName>()`                             |                           server                           | ◯                    |
-|                                       | Entity | `validateSave()`                                        |                           server                           | ◯                    |
-| エンティティの保存時                            | 属性     | `saving <attrName>()`                                   |                           server                           | ◯                    |
-|                                       | Entity | `saving()`                                              |                           server                           | ◯                    |
-| エンティティを保存した後                          | Entity | `afterSave()`                                           |                           server                           | ×                    |
-| エンティティをドロップ(削除)する前 | 属性     | `validateDrop <attrName>()`                             |                           server                           | ◯                    |
-|                                       | Entity | `validateDrop()`                                        |                           server                           | ◯                    |
-| エンティティのドロップ(削除)時   | 属性     | `dropping <attrName>()`                                 |                           server                           | ◯                    |
-|                                       | Entity | `dropping()`                                            |                           server                           | ◯                    |
-| エンティティをドロップした後                        | Entity | `afterDrop()`                                           |                           server                           | ×                    |
+| イベント                                  | レベル    | 関数名                                                     |        (C/S) Execution        | エラーを返すことでアクションを停止できる |
+| :------------------------------------ | :----- | :------------------------------------------------------ | :----------------------------------------------: | -------------------- |
+| エンティティのインスタンス化                        | Entity | [`constructor()`](./ordaClasses.md#class-constructor-1) |                       ローカル                       | ×                    |
+| 属性がタッチされた                             | 属性     | `event touched <attrName>()`                            | [`local`](../Concepts/classes.md#local) キーワードによる | ×                    |
+|                                       | Entity | `event touched()`                                       | [`local`](../Concepts/classes.md#local) キーワードによる | ×                    |
+| エンティティを保存する前                          | 属性     | `validateSave <attrName>()`                             |                      server                      | ◯                    |
+|                                       | Entity | `validateSave()`                                        |                      server                      | ◯                    |
+| エンティティの保存時                            | 属性     | `saving <attrName>()`                                   |                      server                      | ◯                    |
+|                                       | Entity | `saving()`                                              |                      server                      | ◯                    |
+| エンティティを保存した後                          | Entity | `afterSave()`                                           |                      server                      | ×                    |
+| エンティティをドロップ(削除)する前 | 属性     | `validateDrop <attrName>()`                             |                      server                      | ◯                    |
+|                                       | Entity | `validateDrop()`                                        |                      server                      | ◯                    |
+| エンティティのドロップ(削除)時   | 属性     | `dropping <attrName>()`                                 |                      server                      | ◯                    |
+|                                       | Entity | `dropping()`                                            |                      server                      | ◯                    |
+| エンティティをドロップした後                        | Entity | `afterDrop()`                                           |                      server                      | ×                    |
 
 :::note
 

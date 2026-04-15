@@ -60,6 +60,7 @@ ORDA データモデルユーザークラスのオブジェクトインスタン
 
 | リリース  | 内容                                                                   |
 | ----- | -------------------------------------------------------------------- |
+| 21 R3 | Support for the `server` keyword.                    |
 | 19 R4 | Entity クラスのエイリアス属性                                                   |
 | 19 R3 | Entity クラスの計算属性                                                      |
 | 18 R5 | データモデルクラス関数は、デフォルトでは REST に公開されません。 新しい `exposed` および `local` キーワード。 |
@@ -287,7 +288,7 @@ End if
 コンパイル済みの状態では、データモデルクラス関数は次のように実行されます:
 
 - シングルユーザーアプリケーションでは、**プリエンプティブまたはコオペラティブプロセス** で実行されます (呼び出し元のプロセスに依存します)。
-- クライアント/サーバーアプリケーションでは、**プリエンプティブプロセス** で実行されます (ただし、[`local`](#ローカル関数) キーワードが使用されている場合は、シングルユーザーの場合と同様に、呼び出し元プロセスに依存します)。
+- in **preemptive processes** in client/server applications (except if the [`local`](../Concepts/classes.md#local) keyword is used, in which case it depends on the calling process like in single-user).
 
 クライアント/サーバーで動作するように設計されているプロジェクトでは、データモデルクラス関数のコードがスレッドセーフであることを確認してください。 スレッドセーフでないコードが呼び出された場合、実行時にエラーが発生します (シングルユーザーアプリケーションではコオペラティブ実行がサポートされているため、コンパイル時にはエラーが発生しません)。
 
@@ -350,9 +351,7 @@ ORDA クラスコンストラクター関数は、[ユーザークラスコン�
 
 #### リモート構成
 
-リモート構成を使用している場合、以下の原則に対して注意する必要があります:
-
-- **クライアント/サーバー** では、コードを呼び出した場所によっては関数はクライアントまたはサーバーのどちらでも呼び出すことができます。 クライアント上で呼び出された場合、クライアントが新規エンティティを保存しようとして、サーバーのメモリ上に作成するために更新リクエストを送信したときにはもう一度トリガーされることはありません。
+When using a remote configurations, you need to pay attention to the following principle: in **client/server** the function can be called on the client or on the server, depending on the location of the calling code. クライアント上で呼び出された場合、クライアントが新規エンティティを保存しようとして、サーバーのメモリ上に作成するために更新リクエストを送信したときにはもう一度トリガーされることはありません。
 
 :::warning
 
@@ -473,15 +472,15 @@ Note over Qodly page: product.creationDate は "25/06/17" <br>そして product.
 
 > ORDA の計算属性は、デフォルトでは [**公開**](#公開vs非公開関数) されません。 計算属性を公開するには、**get 関数** の定義に `exposed` キーワードを追加します。
 
-> **get および set関数**は、クライアント/サーバー処理を最適化するために、[**local**](#ローカル関数) プロパティを持つこともできます。
+> **get and set functions** can have the [`local`](../Concepts/classes.md#local) property to optimize client/server processing.
 
 ### `Function get <attributeName>`
 
 #### シンタックス
 
 ```4d
-{local} {exposed} Function get <attributeName>({$event : Object}) -> $result : type
-// コード
+{local | server} {exposed} Function get <attributeName>({$event : Object}) -> $result : type
+// code
 ```
 
 *ゲッター* 関数は、*attributeName* 計算属性を宣言するために必須です。 *attributeName* がアクセスされるたびに、4D は `Function get` のコードを評価し、*$result* 値を返します。
@@ -505,6 +504,12 @@ Note over Qodly page: product.creationDate は "25/06/17" <br>そして product.
 | dataClassName | Text    | データクラスの名称                                         |
 | kind          | Text    | "get"                                             |
 | 戻り値           | Variant | 任意。 スカラー属性が Null を返すようにするには、このプロパティを Null値で追加します。 |
+
+:::note
+
+For more information about the `local` and `server` keywords, please refer to the [local and server](../Concepts/classes.md#local-and-server) section.
+
+:::
 
 #### 例題
 
@@ -550,9 +555,8 @@ Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
 
 ```4d
 
-{local} Function set <attributeName>($value : type {; $event : Object})
-// コード
-
+{local | server} Function set <attributeName>($value : type {; $event : Object})
+// code
 ```
 
 *セッター* 関数は、属性に値が割り当てられたときに実行されます。 この関数は通常、入力値を処理し、その結果を 1つ以上の他の属性に転送します。
@@ -567,6 +571,12 @@ Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
 | dataClassName | Text    | データクラスの名称        |
 | kind          | Text    | "set"            |
 | value         | Variant | 計算属性によって処理されるべき値 |
+
+:::note
+
+For more information about the `local` and `server` keywords, please refer to the [local and server](../Concepts/classes.md#local-and-server) section.
+
+:::
 
 #### 例題
 
@@ -1091,131 +1101,4 @@ exposed onHTTPGet Function getThumbnail($name : Text; $width : Integer; $height 
 ```
 IP:port/rest/Products/getThumbnail?$params='["Yellow Pack",200,200]'
 ```
-
-## ローカル関数
-
-クライアント/サーバーアーキテクチャーではデフォルトで、ORDA データモデル関数は **サーバー上で** 実行されます。 関数リクエストとその結果だけが通信されるため、通常はベストパフォーマンスが提供されます。
-
-しかしながら、状況によってはその関数はクライアント側で完結するものかもしれません (たとえば、すでにローカルキャッシュにあるデータを処理する場合など)。 そのような場合には、`local` キーワードを使ってサーバーへのリクエストをおこなわないようにし、アプリケーションのパフォーマンスを向上させることができます。 シンタックスは次の通りです:
-
-```4d
-// クライアント/サーバーにおいてローカル実行する関数の宣言
-local Function <functionName>   
-
-```
-
-このキーワードを使うと、関数は常にクライアントサイドで実行されます。
-
-> `local` キーワードは、データモデルクラス関数に対してのみ利用可能です。 [通常のユーザークラス](Concepts/classes.md) 関数に対して使った場合、キーワードは無視され、コンパイラーはエラーを返します。
-
-最終的にサーバーへのアクセスが必要になっても (ORDAキャッシュが有効期限切れになった場合など) 関数は動作します。 もっとも、それではローカル実行によるパフォーマンスの向上は見込めないため、ローカル関数がサーバー上のデータにアクセスしないことを確認しておくことが推奨されます。 サーバーに対して複数のリクエストをおこなうローカル関数は、サーバー上で実行されて結果だけを返す関数よりも非効率的です。 たとえば、Schools Entityクラスの次の関数を考えます:
-
-```4d
-// 2000年以降の生まれの生徒を検索します  
-// local キーワードを適切に使用していない例です
-local Function getYoungest
-	var $0 : Object
-    $0:=This.students.query("birthDate >= :1"; !2000-01-01!).orderBy("birthDate desc").slice(0; 5)
-
-```
-
-- `local` キーワードを **使わない** 場合、1つのリクエストで結果が得られます。
-- `local` キーワードを **使う** 場合、4つのリクエストが必要になります: Schools エンティティの students エンティティセレクションの取得、`query()` の実行、`orderBy()` の実行、`slice()` の実行。 この例では、`local` キーワードを使用するのは適切ではありません。
-
-### 例題
-
-#### 年齢の計算
-
-*birthDate* (生年月日) 属性を持つエンティティがある場合に、リストボックス内で呼び出すための `age()` 関数を定義します。 この関数をクライアントサイドで実行することで、リストボックスの各行がサーバーへのリクエストを生成するのを防ぎます。
-
-*StudentsEntity* クラス:
-
-```4d
-Class extends Entity
-
-local Function age() -> $age: Variant
-
-If (This.birthDate#!00-00-00!)
-    $age:=Year of(Current date)-Year of(This.birthDate)
-Else
-    $age:=Null
-End if
-```
-
-#### 属性のチェック
-
-クライアントにロードされ、ユーザーによって更新されたエンティティの属性について、サーバーへ保存リクエストを出すまえに、それらの一貫性を検査します。
-
-*StudentsEntity* クラスのローカル関数 `checkData()` は生徒の年齢をチェックします:
-
-```4d
-Class extends Entity
-
-local Function checkData() -> $status : Object
-
-$status:=New object("success"; True)
-Case of
-    : (This.age()=Null)
-        $status.success:=False
-        $status.statusText:="The birthdate is missing"
-
-    :((This.age() <15) | (This.age()>30) )
-        $status.success:=False
-        $status.statusText:="The student must be between 15 and 30 - This one is "+String(This.age())
-End case
-```
-
-呼び出し元のコード:
-
-```4d
-var $status : Object
-
-// Form.student は全属性とともにロードされており、フォーム上で更新されました
-$status:=Form.student.checkData()
-If ($status.success)
-    $status:=Form.student.save() // サーバーを呼び出します
-End if
-```
-
-## 4D IDE (統合開発環境) におけるサポート
-
-### クラスファイル
-
-ORDA データモデルユーザークラスは、クラスと同じ名称の .4dm ファイルを [通常のクラスファイルと同じ場所](../Concepts/classes.md#クラス定義) (つまり、Project フォルダー内の `/Sources/Classes` フォルダー) に追加することで定義されます。 たとえば、`Utilities` データクラスのエンティティクラスは、`UtilitiesEntity.4dm` ファイルによって定義されます。
-
-### クラスの作成
-
-各データモデルオブジェクトに関わるクラスは、4D によってあらかじめ自動的にメモリ内に作成されます。
-
-![](../assets/en/ORDA/ORDA_Classes-3.png)
-
-> 空の ORDA クラスは、デフォルトではエクスプローラーに表示されません。 表示するにはエクスプローラーのオプションメニューより **データクラスを全て表示** を選択します: ![](../assets/en/ORDA/showClass.png)
-
-ORDA ユーザークラスは通常のクラスとは異なるアイコンで表されます。 空のクラスは薄く表示されます:
-
-![](../assets/en/ORDA/classORDA2.png)
-
-ORDA クラスファイルを作成するには、エクスプローラーで任意のクラスをダブルクリックします。 4D はクラスファイルを作成し、`extends` ステートメントを自動で追加します。 たとえば、Entity クラスを継承するクラスの場合は:
-
-```
-Class extends Entity
-```
-
-定義されたクラスはエクスプローラー内で濃く表示されます。
-
-### クラスの編集
-
-定義された ORDA クラスファイルを 4Dコードエディターで開くには、ORDA クラス名を選択してエクスプローラーのオブションメニュー、またはコンテキストメニューの **編集...** を使用するか、ORDA クラス名をダブルクリックします:
-
-![](../assets/en/ORDA/classORDA4.png)
-
-ローカルデータストア (`ds`) に基づいた ORDA クラスの場合には、4D ストラクチャーウィンドウからも直接クラスコードにアクセスできます:
-
-![](../assets/en/ORDA/classORDA5.png)
-
-### コードエディター
-
-4Dコードエディターにおいて、ORDA クラス型として定義された変数は、自動補完機能の対象となります。 Entity クラス変数の例です:
-
-![](../assets/en/ORDA/AutoCompletionEntity.png)
 

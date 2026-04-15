@@ -32,6 +32,7 @@ IMAP Transporter オブジェクトは [IMP New transporter](../commands/imap-ne
 | [<!-- INCLUDE #transporter.host.Syntax -->](#host)<br/><!-- INCLUDE #transporter.host.Summary -->                                                                   |
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<br/><!-- INCLUDE #transporter.logFile.Summary -->                                                          |
 | [<!-- INCLUDE #IMAPTransporterClass.move().Syntax -->](#move)<br/><!-- INCLUDE #IMAPTransporterClass.move().Summary -->                                             |
+| [<!-- INCLUDE #IMAPTransporterClass.notifier.Syntax -->](#notifier)<br/><!-- INCLUDE #IMAPTransporterClass.notifier.Summary -->                                     |
 | [<!-- INCLUDE #IMAPTransporterClass.numToID().Syntax -->](#numtoid)<br/><!-- INCLUDE #IMAPTransporterClass.numToID().Summary -->                                    |
 | [<!-- INCLUDE #IMAPTransporterClass.removeFlags().Syntax -->](#removeflags)<br/><!-- INCLUDE #IMAPTransporterClass.removeFlags().Summary -->                        |
 | [<!-- INCLUDE #IMAPTransporterClass.renameBox().Syntax -->](#renamebox)<br/><!-- INCLUDE #IMAPTransporterClass.renameBox().Summary -->                              |
@@ -50,10 +51,10 @@ IMAP Transporter オブジェクトは [IMP New transporter](../commands/imap-ne
 
 <div class="no-index">
 
-| 引数     | 型                                  |                             | 説明                                                  |
-| ------ | ---------------------------------- | :-------------------------: | --------------------------------------------------- |
-| server | Object                             |              ->             | メールサーバー情報                                           |
-| 戻り値    | 4D.IMAPTransporter | <- | [IMAP transporter オブジェクト](#imap-transporter-オブジェクト) |
+| 引数  | 型                                  |                             | 説明                                                  |
+| --- | ---------------------------------- | :-------------------------: | --------------------------------------------------- |
+| 引数  | Object                             |              ->             | Mail server configuration                           |
+| 戻り値 | 4D.IMAPTransporter | <- | [IMAP transporter オブジェクト](#imap-transporter-オブジェクト) |
 
 </div>
 <!-- END REF -->
@@ -1286,6 +1287,20 @@ ID = 1のメッセージを取得します:
   // カレントメールボックスの全メッセージを "documents" メールボックスに移動します
  $status:=$transporter.move(IMAP all;"documents")
 ```
+
+<!-- END REF -->
+
+  <!-- REF IMAPTransporterClass.notifier.Desc -->
+
+## .notifier
+
+<!-- REF #IMAPTransporterClass.notifier.Syntax -->**.notifier** : 4D.IMAPNotifier<!-- END REF -->
+
+#### 説明
+
+The `.notifier` property <!-- REF #IMAPTransporterClass.notifier.Summary -->contains the IMAPNotifier object associated with the transporter<!-- END REF -->. このプロパティは **読み取り専用** です。
+
+See [IMAPNotifier](./IMAPNotifierClass.md).
 
 <!-- END REF -->
 

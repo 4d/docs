@@ -7,6 +7,12 @@ La clase Collection gestiona las expresiones de tipo [Collection](Concepts/dt_co
 
 Una colección es inicializada con los comandos [`New collection`](../commands/new-collection) o [`New shared collection`](../commands/new-shared-collection).
 
+:::info
+
+This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
+
+:::
+
 ### Ejemplo
 
 ```4d
@@ -1340,7 +1346,7 @@ Se designa la retrollamada a ejecutar para evaluar los elementos de la colecció
 - *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 - o *methodName*, el nombre de un método proyecto (texto).
 
-La retrollamada se llama con los parámetros pasados en *param* (opcional). The callback is called with the parameter(s) passed in <em x-id="3">param</em> (optional). Recibe un `Object` en el primer parámetro ($1).
+La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada puede realizar cualquier operación, con o sin los parámetros, y debe devolver un nuevo valor transformado para añadirlo a la colección resultante. Recibe un `Object` en el primer parámetro ($1).
 
 La retrollamada recibe los siguientes parámetros:
 
@@ -1864,7 +1870,7 @@ Se designa la retrollamada a ejecutar para evaluar los elementos de la colecció
 - *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 - o *methodName*, el nombre de un método proyecto (texto).
 
-La retrollamada se llama con los parámetros pasados en *param* (opcional). The callback is called with the parameter(s) passed in <em x-id="3">param</em> (optional). Recibe un `Object` en el primer parámetro ($1).
+La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada puede realizar cualquier operación, con o sin los parámetros, y debe devolver un nuevo valor transformado para añadirlo a la colección resultante. Recibe un `Object` en el primer parámetro ($1).
 
 La retrollamada recibe los siguientes parámetros:
 

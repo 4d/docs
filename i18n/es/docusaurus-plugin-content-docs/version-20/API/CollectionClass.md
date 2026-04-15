@@ -791,11 +791,11 @@ El parámetro opcional *propertyPath* permite contar valores dentro de una colec
 <!-- REF #collection.distinct().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|propertyPath|Text|->|Path of attribute whose distinct values you want to get|
+|propertyPath|Text|->|Ruta del atributo cuyos valores distintos desea obtener|
 |options|Integer|->|`ck diacritical`, `ck count values`|
-|Result|Collection|<-|New collection with only distinct values|
+|Resultado|Collection|<-|New collection with only distinct values|
 </div>
 <!-- END REF -->
 
@@ -925,13 +925,13 @@ Por defecto, se realiza una evaluación no diacrítica. Si desea que la evaluaci
 <!-- REF #collection.every().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|startFrom|Integer|->|Index to start the test at|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|param|Mixed|->|Parameter(s) to pass to *formula* or *methodName*|
-|Result|Boolean|<-|True if all elements successfully passed the test|
+|startFrom|Integer|->|Índice en el que se inicia la prueba|
+|formula|4D.Function|->|Objeto de fórmula|
+|methodName|Text|->|Nombre de un método|
+|param|Mixed|->|Parámetro(s) a pasar a *formula* o *methodName*|
+|Resultado|Boolean|<-|True if all elements successfully passed the test|
 </div>
 <!-- END REF -->
 
@@ -1164,12 +1164,12 @@ En caso de incoherencia, se aplican las siguientes reglas:
 <!-- REF #collection.filter().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|param|any|->|Parameter(s) to pass to *formula* or *methodName*|
-|Result|Collection|<-|New collection containing filtered elements (shallow copy)|
+|formula|4D.Function|->|Objeto de fórmula|
+|methodName|Text|->|Nombre de un método|
+|param|any|->|Parámetro(s) a pasar a *formula* o *methodName*|
+|Resultado|Collection|<-|New collection containing filtered elements (shallow copy)|
 </div>
 <!-- END REF -->
 
@@ -1349,13 +1349,13 @@ $c2:=$c.find(Formula($1.value.name=$2); "Clanton")  //$c2={name:Clanton,zc:35046
 <!-- REF #collection.findIndex().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|startFrom|Integer|->|Index to start the search at|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|param|any|->|Parameter(s) to pass to *formula* or *methodName*|
-|Result|Integer |<-|Index of first value found, or -1 if not found|
+|startFrom|Integer|->|Índice para iniciar la búsqueda|
+|formula|4D.Function|->|Objeto fórmula|
+|methodName|Text|->|Nombre de un método|
+|param|any|->|Parámetro(s) a pasar a *formula* o *methodName*|
+|Resultado|Integer |<-|Index of first value found, or -1 if not found|
 </div>
 <!-- END REF -->
 
@@ -1533,12 +1533,12 @@ $col.flat(MAXLONG)
 <!-- REF #collection.flatMap().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|param|any|->|Parameter(s) to pass to *formula* or *methodName*|
-|Result|Collection |<-|Collection of transformed values and flattened by a depth of 1|
+|formula|4D.Function|->|Objeto fórmula|
+|methodName|Text|->|Nombre de un método|
+|param|any|->|Parámetro(s) a pasar a *formula* o *methodName*|
+|Resultado|Collection |<-|Collection of transformed values and flattened by a depth of 1|
 </div>
 <!-- END REF -->
 
@@ -1555,7 +1555,7 @@ Se designa la retrollamada a ejecutar para evaluar los elementos de la colecció
 - *formula* (sintaxis recomendada), un [objeto fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 - o en *methodName*, el nombre de un método proyecto (texto).
 
-La retrollamada se llama con los parámetros pasados en *param* (opcional). The callback is called with the parameter(s) passed in *param* (optional). Recibe un objeto `` en el primer parámetro ($1).
+La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada puede realizar cualquier operación, con o sin los parámetros, y debe devolver un nuevo valor transformado para añadirlo a la colección resultante. Recibe un objeto `` en el primer parámetro ($1).
 
 La retrollamada recibe los siguientes parámetros:
 
@@ -1630,11 +1630,11 @@ $c2:=$c.flatMap($f; $c.sum())
 <!-- REF #collection.includes().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|toSearch|expression|->|Expression to search in the collection|
-|startFrom|Integer|->|Index to start the search at|
-|Result|Boolean |<-|True if *toSearch* is found in the collection|
+|toSearch|Expression|->|Expresión a buscar en la colección|
+|startFrom|Integer|->|Índice a partir del cual comenzar la búsqueda|
+|Resultado|Boolean|<-|True if *toSearch* is found in the collection|
 </div>
 <!-- END REF -->
 
@@ -2077,12 +2077,12 @@ La propiedad `.length` se inicializa cuando se crea la colección. Añadir o eli
 <!-- REF #collection.map().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|param|any|->|Parameter(s) to pass to *formula* or *methodName*|
-|Result|Collection |<-|Collection of transformed values|
+|formula|4D.Function|->|Objeto fórmula|
+|methodName|Text|->|Nombre de un método|
+|param|any|->|Parámetro(s) a pasar a *formula* o *methodName*|
+|Resultado|Collection |<-|Collection of transformed values|
 </div>
 <!-- END REF -->
 
@@ -2098,7 +2098,7 @@ Se designa la retrollamada a ejecutar para evaluar los elementos de la colecció
 - *formula* (sintaxis recomendada), un [objeto fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 - o en *methodName*, el nombre de un método proyecto (texto).
 
-La retrollamada se llama con los parámetros pasados en *param* (opcional). The callback is called with the parameter(s) passed in *param* (optional). Recibe un objeto `` en el primer parámetro ($1).
+La retrollamada se llama con los parámetros pasados en *param* (opcional). La retrollamada puede realizar cualquier operación, con o sin los parámetros, y debe devolver un nuevo valor transformado para añadirlo a la colección resultante. Recibe un objeto `` en el primer parámetro ($1).
 
 La retrollamada recibe los siguientes parámetros:
 
@@ -2403,12 +2403,12 @@ Ordenar con una ruta de propiedad:
 <!-- REF #collection.orderByMethod().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|extraParam|any|->|Parameter(s) to pass |
-|Result|Collection |<-|Sorted copy of the collection (shallow copy)|
+|formula|4D.Function|->|Objeto fórmula|
+|methodName|Text|->|Nombre de un método|
+|extraParam|any|->|Parámetro(s) a transmitir |
+|Resultado|Collection |<-|Sorted copy of the collection (shallow copy)|
 </div>
 <!-- END REF -->
 
@@ -2744,13 +2744,13 @@ Se pueden encontrar más ejemplos de búsquedas en la página `dataClass.query()
 <!-- REF #collection.reduce().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|initValue |Text, Number, Object, Collection, Date, Boolean|->|Value to use as the first argument to the first call of *formula* or *methodName*|
-|param |expression|->|Parameter(s) to pass|
-|Result|Text, Number, Object, Collection, Date, Boolean |<-|Result of the accumulator value|
+|formula|4D.Function|->|Objeto fórmula|
+|methodName|Text|->|Nombre de un método|
+|initValue |Text, Number, Object, Collection, Date, Boolean|->|Valor a utilizar como primer argumento en la primera llamada de *formula* o *methodName*|
+|param |expression|->|Parámetro(s) a pasar|
+|Resultado|Text, Number, Object, Collection, Date, Boolean |<-|Result of the accumulator value|
 </div>
 <!-- END REF -->
 
@@ -2838,13 +2838,13 @@ Con el siguiente método ***Flatten***:
 <!-- REF #collection.reduceRight().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|initValue |Text, Number, Object, Collection, Date, Boolean|->|Value to use as the first argument to the first call of *formula* or *methodName*|
-|param |expression|->|Parameter(s) to pass|
-|Result|Text, Number, Object, Collection, Date, Boolean |<-|Result of the accumulator value|
+|formula|4D.Function|->|Objeto fórmula|
+|methodName|Text|->|Nombre de un método|
+|initValue |Text, Number, Object, Collection, Date, Boolean|->|Valor a utilizar como primer argumento en la primera llamada de *formula* o *methodName*|
+|param |expression|->|Parámetro(s) a pasar|
+|Resultado|Text, Number, Object, Collection, Date, Boolean |<-|Result of the accumulator value|
 </div>
 <!-- END REF -->
 
@@ -3216,13 +3216,13 @@ La colección devuelta contiene el elemento especificado por *startFrom* y todos
 <!-- REF #collection.some().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|startFrom |Integer |->|Index to start the test at|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|param |Mixed |->|Parameter(s) to pass|
-|Result|Boolean|<-|True if at least one element successfully passed the test|
+|startFrom |Integer |->|Índice de inicio de la prueba|
+|formula|4D.Function|->|Objeto Fórmula|
+|methodName|Text|->|Nombre de un método|
+|param |Mixed |->|Parámetro(s) a pasar|
+|Resultado|Boolean|<-|True if at least one element successfully passed the test|
 </div>
 <!-- END REF -->
 
@@ -3304,12 +3304,12 @@ Quiere saber si al menos un valor de la colección es >0.
 <!-- REF #collection.sort().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|ascOrDesc|Integer|->|`ck ascending` or `ck descending` (scalar values)|
-|formula|4D.Function|->|Formula object|
-|methodName|Text|->|Name of a method|
-|extraParam |any |->|Parameter(s) for the method|
+|ascOrDesc|Integer|->|`ck ascendente` o `ck descendente` (valores escalares)|
+|formula|4D.Function|->|Objeto de fórmula|
+|methodName|Text|->|Nombre de un método|
+|extraParam |any |->|Parámetro(s) para el método|
 |Result|Collection|<-|Original collection sorted|
 </div>
 <!-- END REF -->

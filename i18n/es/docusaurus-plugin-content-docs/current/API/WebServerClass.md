@@ -5,13 +5,16 @@ title: WebServer
 
 La API clase `WebServer` le permite iniciar y controlar un servidor web para la aplicación principal (host) así como para cada componente alojado (ver la descripción general del [objeto servidor web](WebServer/webServerObject.md)). Esta clase está disponible en el "class store" de `4D`.
 
+### Propiedades
+
+- **Streamable**: no
+- **Sharable**: no
+
 ### Objeto servidor web
 
 Los objetos servidor web se instancian con el comando [`WEB Server`](../commands/web-server).
 
 Ofrecen las siguientes propiedades y funciones:
-
-### Resumen
 
 |                                                                                                                                                                           |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

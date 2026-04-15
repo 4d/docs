@@ -5,6 +5,12 @@ title: Folder
 
 `Folder` オブジェクトは [`Folder`](../commands/folder) コマンドによって作成されます。 これらのオブジェクトには、(実在しているか否かに関わらず) フォルダーへの参照が格納されます。 たとえば、新規フォルダーを作成するために `Folder` コマンドを実行した場合、有効な `Folder` オブジェクトが作成されますが、[`folder.create()`](#create) 関数を呼び出すまで、ディスク上にはなにも保存されていません。
 
+:::info
+
+This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
+
+:::
+
 ### 例題
 
 "JohnSmith" フォルダーを作成します:

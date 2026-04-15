@@ -108,7 +108,7 @@ You can access the contents and paths of all methods in your applications by pro
 
 Se aplican los siguientes principios:
 
-- Each method and form in a 4D application has its own address in the form of a pathname. Por ejemplo, el método de activación de la tabla 1 se encuentra en "[trigger]/tabla_1". Each object pathname is unique in an application.
+- Each method and form in a 4D application has its own address in the form of a pathname. Por ejemplo, el método de activación de la tabla 1 se encuentra en "[trigger]/tabla_1". Cada nombre de ruta de objeto es único en una aplicación.
 - You can access objects in the 4D application using the commands of the **"Design Object Access"** command theme, for example [`METHOD GET NAMES`](../commands/method-get-names) or [`METHOD GET PATHS`](../commands/method-get-paths).
 - Most of the commands in this theme work in both [interpreted and compiled](../Concepts/interpreted.md) mode. However, commands that modify properties or access contents executable from methods can only be used in interpreted mode (see the table below).
 - Puede utilizar todos los comandos de este tema con 4D en modo local o remoto. However, keep in mind that you cannot use certain commands in compiled mode: the purpose of this theme is to create custom development support tools. You must not use these commands to dynamically change the functioning of a database that is running. For example, you cannot use [`METHOD SET ATTRIBUTE`](../commands/method-set-attribute) to change a method attribute according to the status of the current user.

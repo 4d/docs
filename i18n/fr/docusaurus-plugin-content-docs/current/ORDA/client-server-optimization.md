@@ -141,3 +141,55 @@ Par défaut, le cache ORDA est géré de manière transparente par 4D. Cependant
 - [dataClass.getRemoteCache()](../API/DataClassClass.md#getremotecache)
 - [dataClass.clearRemoteCache()](../API/DataClassClass.md#clearremotecache)
 
+### Using the `local` keyword
+
+By default, [ORDA data model functions](../ORDA/ordaClasses.md) are executed on the server, which usually provides the best performance since only the function request and the result are sent over the network. However, it could happen that a function processes data that's already in the local cache and is fully executable on the client side. In this case, you can save requests to the server and thus, enhance the application performance by [using the `local` keyword in the function definition](../Concepts/classes.md#local).
+
+A noter que la fonction sera exécutée avec succès même si elle nécessite d'accéder au serveur (par exemple si le cache ORDA est expiré). Toutefois, il est fortement recommandé de s'assurer que la fonction locale n'accède pas aux données sur le serveur, sinon l'exécution locale pourrait n'apporter aucun avantage en termes de performances. Une fonction locale qui génère de nombreuses requêtes au serveur est moins efficace qu'une fonction exécutée sur le serveur qui ne retournerait que les valeurs résultantes. Prenons l'exemple suivant, avec une fonction sur l'entité Schools :
+
+```4d
+// Get the youngest students  
+// Inappropriate use of local keyword
+local Function getYoungest() : Object
+    return This.students.query("birthDate >= :1"; !2000-01-01!).orderBy("birthDate desc").slice(0; 5)
+```
+
+- **sans** le mot clé `local`, le résultat est donné en une seule requête
+- **avec** le mot-clé `local`, 4 requêtes sont nécessaires : une pour obtenir les élèves de l'entité Schools, une pour la `query()`, une pour le `orderBy()` et une pour la `slice()`. Dans cet exemple, l'utilisation du mot-clé `local` est inappropriée.
+
+#### Example: Checking attributes
+
+Nous souhaitons vérifier la cohérence des attributs d'une entité chargée sur le client et mise à jour par l'utilisateur, avant de demander au serveur de les enregistrer.
+
+Sur la classe *StudentsEntity*, la fonction locale `checkData()` vérifie l'âge de l'étudiant :
+
+```4d
+Class extends Entity
+
+local Function checkData() -> $status : Object
+
+$status:=New object("success"; True)
+Case of
+    : (This.age()=Null)
+        $status.success:=False
+        $status.statusText:="The birthdate is missing"
+
+    :((This.age() <15) | (This.age()>30) )
+        $status.success:=False
+        $status.statusText:="The student must be between 15 and 30 - This one is "+String(This.age())
+End case
+```
+
+Code d'appel :
+
+```4d
+var $status : Object
+
+//Form.student est chargé avec tous ses attributs et mis à jour
+$status:=Form.student.checkData()
+If ($status.success)
+    $status:=Form.student.save() // appelle le serveur
+End if
+```
+
+

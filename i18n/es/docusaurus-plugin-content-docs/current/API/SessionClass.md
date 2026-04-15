@@ -10,7 +10,7 @@ Los objetos de sesión son devueltos por el comando [`Session`](../commands/sess
 - [Sesiones escalables para aplicaciones web avanzadas](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
 - [Permissions: inspeccionar los privilegios de la sesión para facilitar la depuración](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging/)
 - [Generar, compartir y utilizar contraseñas de un solo uso (OTP) para las sesiones web](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/)
-- [Client / server – Handle a session when working on a 4D client](https://blog.4d.com/client-server-handle-a-session-when-working-on-a-4d-client)
+- [Forget server-side wrappers, use 4D Sessions from the client](https://blog.4d.com/forget-server-side-wrappers-use-4d-sessions-from-the-client)
 
 :::
 

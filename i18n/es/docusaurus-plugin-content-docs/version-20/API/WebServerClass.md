@@ -755,9 +755,9 @@ La función devuelve un objeto que describe el estado de lanzamiento del servido
 <!-- REF #WebServerClass.stop().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|----|---|
-||||Does not require any parameters|
+||||No requiere ningún parámetro|
 </div>
 <!-- END REF -->
 

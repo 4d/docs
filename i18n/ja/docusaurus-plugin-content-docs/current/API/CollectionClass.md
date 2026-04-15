@@ -7,6 +7,12 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の式
 
 コレクションは [`New collection`](../commands/new-collection) または [`New shared collection`](../commands/new-shared-collection) コマンドで初期化されます。
 
+:::info
+
+This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
+
+:::
+
 ### 例題
 
 ```4d

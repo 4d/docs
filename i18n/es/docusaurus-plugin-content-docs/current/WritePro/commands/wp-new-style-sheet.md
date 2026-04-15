@@ -57,7 +57,7 @@ You can specify the attributes of the style sheet using the [WP SET ATTRIBUTES](
 **Notas**:
 
 - Una hoja de estilo sólo modifica la visualización de un carácter o párrafo, no cómo se almacena en el documento. Si se elimina una hoja de estilo, el texto volverá al estilo por defecto.
-- Any style attributes not defined in the new style sheet will automatically use the Normal style. Para más información, consulte la página [*Hojas de estilo*](../user-legacy/stylesheets.md).
+- Todo atributo de estilo no definido en la nueva hoja de estilo utilizará automáticamente el estilo Normal. Para más información, consulte la página [*Hojas de estilo*](../user-legacy/stylesheets.md).
 
 ### Hierarchical list style sheet
 
@@ -70,9 +70,9 @@ Se aplican los siguientes valores predefinidos:
 - `wk list style type` se establece en `wk decimal`
 - `wk list level index` is automatically assigned (1 for the root level, incremented for sub-levels)
 - `wk list level count` se fija en el valor especificado para todos los niveles
-- El margen izquierdo se calcula automáticamente (0,75 cm × índice de nivel)
+- `wk margin left` is automatically calculated (0.75 cm × level index or 0.25 inches \* level index, depending on current layout unit): so offset may be different depending if layout unit is metric or inches (for better alignment on default with current Write ruler graduations)
 
-If the parameter is omitted or set to 0, a standard (non-list) paragraph style sheet is created.
+Si el parámetro se omite o se establece en 0, se crea una hoja de estilo de párrafo estándar (no de lista).
 
 ## Ejemplo 1
 
@@ -129,5 +129,5 @@ Resultado:
 [Style sheets](../user-legacy/stylesheets.md)  
 [WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet)  
 [WP Get style sheet](../WritePro/commands/wp-get-style-sheet)  
-[WP Get style sheets](../commands/wp-get-style-sheets)  
-[WP IMPORT STYLE SHEETS](../commands/wp-import-style-sheets.md)
+[WP Get style sheets](../WritePro/commands/wp-get-style-sheets)  
+[WP IMPORT STYLE SHEETS](../WritePro/commands/wp-import-style-sheets)

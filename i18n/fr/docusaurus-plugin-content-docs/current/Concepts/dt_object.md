@@ -18,7 +18,7 @@ Les variables, champs ou expressions de type objet peuvent contenir des données
   - Image(2)
   - collection
 
-(1) Les **objets non streamables** tels que les objets ORDA ([entités](ORDA/dsMapping.md#entity), [entity selections](ORDA/dsMapping.md#entity-selection), etc.), [file handles](../API/FileHandleClass.md), [serveur web](../API/WebServerClass.md)... ne peuvent pas être stockés dans des **champs objets**. Une erreur est retournée si vous essayez de le faire ; toutefois, ils sont entièrement pris en charge dans les **variables objets** en mémoire.
+(1) [**Non-streamable objects**](#streaming-support) such as ORDA objects ([entities](ORDA/dsMapping.md#entity), [entity selections](ORDA/dsMapping.md#entity-selection), etc.), [file handles](../API/FileHandleClass.md), [web server](../API/WebServerClass.md)... ne peuvent pas être stockés dans des **champs objets**. Une erreur est retournée si vous essayez de le faire ; toutefois, ils sont entièrement pris en charge dans les **variables objets** en mémoire.
 
 (2) Lorsqu'elles sont exposées sous forme de texte dans le débogueur ou exportées en JSON, les propriétés d'objet de type image indiquent "[object Picture]".
 
@@ -262,6 +262,35 @@ $doc:=Null // libérer les ressources occupées par $doc
 	... // continuer l'exécution avec davantage de mémoire libre
 
 ```
+
+## Classes
+
+Objects can belong to classes. Using a class allows to predefine an object behaviour and structure with associated properties and functions.
+
+The 4D language proposes several [native classes](../category/class-API-reference/) that you can use to handle objects. You can also define and use your own [user classes](./classes.md) to organize your code.
+
+## Streaming support
+
+A streamable class (or *serializable* class) is a class whose objects can be converted into a sequence of bytes (text or binary) in order to write them in a file, to send them as parameters, or to be able to store and rebuild them afterwards.
+
+### Text streaming (`JSON Stringify`)
+
+JSON commands that stringify contents such as [`JSON Stringify`](../commands/json-stringify) and the [`Execute on server`](../commands/execute-on-server) command allow you to convert objects to json (text). They support objects, collections, and user classes.
+
+However, text streaming of objects has the following limitations:
+
+- circular references (i.e. objects containing themselves as a property) are not supported and return an error,
+- a class object loses its class when it is stringified,
+- native 4D class objects such as [Entity](../API/EntityClass.md) cannot be represented as JSON and are returned as "[object \<class>]", for example "[object Entity]".
+
+### Binary streaming (`VARIABLE TO BLOB`)
+
+4D also implements a built-in binary streaming feature through the [`VARIABLE TO BLOB`](../commands/variable-to-blob) command. This feature allows you to get rid of most of text streaming limitations regarding objects (see above):
+
+- circular references are supported,
+- objects keep their class,
+- an extended range of objects are streamable: [4D Write Pro](../WritePro/user-legacy/presentation.md) documents, pictures as objects, [blobs as objects](dt_blob.md#blob-types), and pointers as objects,
+- several native 4D class objects can be streamed, for example [`File`](../API/FileClass.md), [`Folder`](../API/FolderClass.md), or [`Vector`](../API/VectorClass.md). However, only a few native 4D classes are streamable. Unless explicitely stated that "This class is **streamable** in binary", consider that a native 4D class is NOT streamable.
 
 ## Exemples
 

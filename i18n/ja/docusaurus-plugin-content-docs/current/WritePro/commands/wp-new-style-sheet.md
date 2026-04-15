@@ -70,7 +70,7 @@ displayed_sidebar: docs
 - `wk list style type` は `wk decimal` に設定されます
 - `wk list level index` は自動的に割り当てられます(ルートレベルは1 、そこからサブレベルに対してはインクリメントされていきます)
 - `wk list level count` は、指定された値が全てのレベルに対して設定されます
-- `wk margin left` は自動的に計算されます(0.75 cm × レベルインデックス)
+- `wk margin left` is automatically calculated (0.75 cm × level index or 0.25 inches \* level index, depending on current layout unit): so offset may be different depending if layout unit is metric or inches (for better alignment on default with current Write ruler graduations)
 
 引数が省略または0 に設定された場合、標準の(階層でない)段落スタイルシートが作成されます。
 
@@ -129,5 +129,5 @@ $mainList:=WP New style sheet(wpArea; wk type paragraph; "MainList"; 3)
 [スタイルシート](../user-legacy/stylesheets.md)  
 [WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet)  
 [WP Get style sheet](../WritePro/commands/wp-get-style-sheet)  
-[WP Get style sheets](../commands/wp-get-style-sheets)  
-[WP IMPORT STYLE SHEETS](../commands/wp-import-style-sheets.md)
+[WP Get style sheets](../WritePro/commands/wp-get-style-sheets)  
+[WP IMPORT STYLE SHEETS](../WritePro/commands/wp-import-style-sheets)

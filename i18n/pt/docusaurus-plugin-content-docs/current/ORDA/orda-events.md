@@ -44,11 +44,11 @@ You can also define the same event at both attribute and entity levels. The attr
 
 Usually, ORDA events are executed on the server.
 
-In client/server configuration however, the `touched()` event function can be executed on the **server or the client**, depending on the use of [`local`](./ordaClasses.md#local-functions) keyword. A specific implementation on the client side allows the triggering of the event on the client.
+In client/server configuration however, the `touched()` event function can be executed on the **server or the client**, depending on the use of [`local`](../Concepts/classes.md#local) keyword. A specific implementation on the client side allows the triggering of the event on the client.
 
 :::note
 
-ORDA [`constructor()`](./ordaClasses.md#class-constructor) functions are always executed on the client.
+ORDA [`constructor()`](./ordaClasses.md#class-constructor) functions are always executed locally.
 
 :::
 
@@ -58,21 +58,21 @@ With other remote configurations (i.e. [Qodly applications](https://developer.4d
 
 The following table lists ORDA events along with their rules.
 
-| Evento                    | Nível    | Function name                                           |                 (C/S) Executed on                 | Can stop action by returning an error |
-| :------------------------ | :------- | :------------------------------------------------------ | :------------------------------------------------------------------: | ------------------------------------- |
-| Entity instantiation      | Entity   | [`constructor()`](./ordaClasses.md#class-constructor-1) |                                client                                | não                                   |
-| Attribute touched         | Atributo | `event touched <attrName>()`                            | Depends on [`local`](../ORDA/ordaClasses.md#local-functions) keyword | não                                   |
-|                           | Entity   | `event touched()`                                       | Depends on [`local`](../ORDA/ordaClasses.md#local-functions) keyword | não                                   |
-| Before saving an entity   | Atributo | `validateSave <attrName>()`                             |                                server                                | sim                                   |
-|                           | Entity   | `validateSave()`                                        |                                server                                | sim                                   |
-| When saving an entity     | Atributo | `saving <attrName>()`                                   |                                server                                | sim                                   |
-|                           | Entity   | `saving()`                                              |                                server                                | sim                                   |
-| After saving an entity    | Entity   | `afterSave()`                                           |                                server                                | não                                   |
-| Before dropping an entity | Atributo | `validateDrop <attrName>()`                             |                                server                                | sim                                   |
-|                           | Entity   | `validateDrop()`                                        |                                server                                | sim                                   |
-| When dropping an entity   | Atributo | `dropping <attrName>()`                                 |                                server                                | sim                                   |
-|                           | Entity   | `dropping()`                                            |                                server                                | sim                                   |
-| After dropping an entity  | Entity   | `afterDrop()`                                           |                                server                                | não                                   |
+| Evento                    | Nível    | Function name                                           |             (C/S) Execution             | Can stop action by returning an error |
+| :------------------------ | :------- | :------------------------------------------------------ | :--------------------------------------------------------: | ------------------------------------- |
+| Entity instantiation      | Entity   | [`constructor()`](./ordaClasses.md#class-constructor-1) |                            local                           | não                                   |
+| Attribute touched         | Atributo | `event touched <attrName>()`                            | Depends on [`local`](../Concepts/classes.md#local) keyword | não                                   |
+|                           | Entity   | `event touched()`                                       | Depends on [`local`](../Concepts/classes.md#local) keyword | não                                   |
+| Before saving an entity   | Atributo | `validateSave <attrName>()`                             |                           server                           | sim                                   |
+|                           | Entity   | `validateSave()`                                        |                           server                           | sim                                   |
+| When saving an entity     | Atributo | `saving <attrName>()`                                   |                           server                           | sim                                   |
+|                           | Entity   | `saving()`                                              |                           server                           | sim                                   |
+| After saving an entity    | Entity   | `afterSave()`                                           |                           server                           | não                                   |
+| Before dropping an entity | Atributo | `validateDrop <attrName>()`                             |                           server                           | sim                                   |
+|                           | Entity   | `validateDrop()`                                        |                           server                           | sim                                   |
+| When dropping an entity   | Atributo | `dropping <attrName>()`                                 |                           server                           | sim                                   |
+|                           | Entity   | `dropping()`                                            |                           server                           | sim                                   |
+| After dropping an entity  | Entity   | `afterDrop()`                                           |                           server                           | não                                   |
 
 :::note
 
