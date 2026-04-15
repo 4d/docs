@@ -20,6 +20,12 @@ title: メソッド
 
 :::
 
+:::info
+
+This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
+
+:::
+
 ### 例題
 
 #### 基本的なダイナミックメソッド作成
