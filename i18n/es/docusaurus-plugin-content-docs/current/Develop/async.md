@@ -35,7 +35,7 @@ Elegir entre ejecución síncrona y asíncrona:
 | Operaciones rápidas con un procesamiento mínimo        | **Síncrono**  |
 | Tareas que requieren un orden de ejecución estricto    | **Síncrono**  |
 | Tareas en segundo plano de larga duración              | **Asíncrono** |
-| Long-running UI interactions                           | **Asíncrono** |
+| Interacciones de interfaz de usuario de larga duración | **Asíncrono** |
 | Interacciones de interfaz de usuario de corta duración | **Síncrono**  |
 | Cargas de trabajo multihilo de alto rendimiento        | **Asíncrono** |
 
@@ -104,7 +104,7 @@ Varias clases 4D soportan el procesamiento asíncrono:
 - [`HTTPRequest`](../API/HTTPRequestClass.md) - Gestiona peticiones y respuestas HTTP asíncronas.
 - [`SystemWorker`](../API/SystemWorkerClass.md) - Ejecuta procesos externos de forma asíncrona.
 - [`TCPConnection`](../API/TCPConnectionClass.md) - Gestiona conexiones de cliente TCP con retrollamadas basadas en eventos.
-- [`TCPListener`](../API/TCPListenerClass.md) – Manages TCP server connections.
+- [`TCPListener`](../API/TCPListenerClass.md) - Gestiona las conexiones del servidor TCP.
 - [`UDPSocket`](../API/UDPSocketClass.md) - Envía y recibe paquetes UDP.
 - [`WebSocket`](../API/WebSocketClass.md) – Manages WebSocket client connections.
 - [`WebSocketServer`](../API/WebSocketServerClass.md) - Gestiona las conexiones del servidor WebSocket.
