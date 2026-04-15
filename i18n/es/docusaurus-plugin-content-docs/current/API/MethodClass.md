@@ -20,6 +20,12 @@ Ver ejemplos en el párrafo [Ejecución de código en los objetos Function](../A
 
 :::
 
+:::info
+
+This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
+
+:::
+
 ### Ejemplos
 
 #### Basic dynamic method creation
