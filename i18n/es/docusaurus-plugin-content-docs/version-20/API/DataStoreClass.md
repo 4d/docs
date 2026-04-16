@@ -850,11 +850,11 @@ Cuando no se llama a esta función, las nuevas selecciones de entidades pueden s
 <!-- REF #DataStoreClass.provideDataKey().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|curPassPhrase |Text|->|Current encryption passphrase|
-|curDataKey |Object|->|Current data encryption key|
-|Result|Object|<-|Result of the encryption key matching|
+|Parámetro|Tipo||Descripción|
+|---|-|-|---|-|
+|curPassPhrase |Text|->|Frase de contraseña de cifrado actual|
+|curDataKey |Object|->|Llave de cifrado de datos actual|
+|Resultado|Object||<-|Result of the encryption key matching|
 </div>
 <!-- END REF -->
 
@@ -927,9 +927,9 @@ Si no se da *curPassphrase* o *curDataKey*, `.provideDataKey()` devuelve **null*
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|status|Boolean|->|True to disable Data Explorer access to data on the `webAdmin` port, False (default) to grant access|
+|status|Boolean|->|True para desactivar el acceso del Explorador de Datos a los datos en el puerto `webAdmin`, False (por defecto) para conceder acceso|
 </div>
 <!-- END REF -->
 

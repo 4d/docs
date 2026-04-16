@@ -33,20 +33,20 @@ title: リリースノート
 
 | ライブラリ     | 現在のバージョン                               | 更新された 4D バージョン | 説明                                                                                                                                                   |
 | --------- | -------------------------------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BoringSSL | 9b86817                                | **21**         | QUIC に使用                                                                                                                                             |
-| CEF       | 7258                                   | **21**         | Chromium 139                                                                                                                                         |
+| BoringSSL | 9b86817                                | 21             | QUIC に使用                                                                                                                                             |
+| CEF       | 7258                                   | 21             | Chromium 139                                                                                                                                         |
 | Hunspell  | 1.7.2  | 20             | 4D フォームと 4D Write Pro でスペルチェックに使用されます。                                                                                                               |
-| ICU       | 77.1                   | **21**         | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。                                                                                                     |
-| libldap   | 2.6.10 | **21**         |                                                                                                                                                      |
+| ICU       | 77.1                   | 21             | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。                                                                                                     |
+| libldap   | 2.6.10 | 21             |                                                                                                                                                      |
 | libsasl   | 2.1.28 | 20             |                                                                                                                                                      |
 | Liblsquic | 4.2.0  | 20 R10         | QUIC に使用                                                                                                                                             |
-| Libuv     | 1.51.0 | **21**         | QUIC に使用                                                                                                                                             |
-| libZip    | 1.11.4 | **21**         | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。                                                                                                |
-| LZMA      | 5.8.1  | **21**         |                                                                                                                                                      |
-| ngtcp2    | 1.18.0 | **21**         | QUIC に使用                                                                                                                                             |
-| OpenSSL   | 3.5.2  | **21**         |                                                                                                                                                      |
-| PDFWriter | 4.7.0  | **21**         | [`WP Export document`](../WritePro/commands/wp-export-document.md) および [`WP Export variable`](../WritePro/commands/wp-export-variable.md) において使用されます |
-| SpreadJS  | 18.2.0 | 21 R2          | 新機能の概要については、 [このブログ記事](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) を参照してください。                                                            |
+| Libuv     | 1.51.0 | 21             | QUIC に使用                                                                                                                                             |
+| libZip    | 1.11.4 | 21             | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。                                                                                                |
+| LZMA      | 5.8.1  | 21             |                                                                                                                                                      |
+| ngtcp2    | 1.18.0 | 21             | QUIC に使用                                                                                                                                             |
+| OpenSSL   | 3.5.2  | 21             |                                                                                                                                                      |
+| PDFWriter | 4.7.0  | 21             | [`WP Export document`](../WritePro/commands/wp-export-document.md) および [`WP Export variable`](../WritePro/commands/wp-export-variable.md) において使用されます |
+| SpreadJS  | 18.2.0 | **21 R2**      | 新機能の概要については、 [このブログ記事](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) を参照してください。                                                            |
 | webKit    | WKWebView                              | 19             |                                                                                                                                                      |
-| Xerces    | 3.3.0  | **21**         | XML コマンドにおいて使用されます                                                                                                                                   |
-| Zlib      | 1.3.1  | **21**         |                                                                                                                                                      |
+| Xerces    | 3.3.0  | 21             | XML コマンドにおいて使用されます                                                                                                                                   |
+| Zlib      | 1.3.1  | 21             |                                                                                                                                                      |

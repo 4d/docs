@@ -148,10 +148,10 @@ La función `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summar
 <!-- REF #IMAPTransporterClass.addFlags().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|msgIDs|any|->|Collection of strings: Message unique IDs (text)<br/>Text: Unique ID of a message<br/>Longint (IMAP all): All messages in the selected mailbox|
-|keywords|Object|->|Keyword flags to add|
+|msgIDs|any|->|Colección de cadenas: Identificadores únicos de mensajes (texto)<br/>Texto: ID único de un mensaje<br/>Longint (IMAP all): Todos los mensajes del buzón seleccionado|
+|keywords|Object|->|Banderas de palabras clave a añadir|
 |Result|Object|<-|Status of the addFlags operation|
 </div>
 <!-- END REF -->
@@ -237,12 +237,12 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 <!-- REF #IMAPTransporterClass.append().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|mailObj|Object|->|Email object|
-|destinationBox|Text|->|Mailbox to receive Email object|
-|options|Object|->|Object containing charset info |
-|Result|Object|<-|Status of the append operation|
+|mailObj|Objeto|->|Objeto de correo electrónico|
+|destinationBox|Text|->|Buzón para recibir el objeto de correo electrónico|
+|options|Object|->|Objeto que contiene información sobre el conjunto de caracteres |
+|Resultado|Object|<-|Status of the append operation|
 </div>
 <!-- END REF -->
 

@@ -19,7 +19,7 @@ title: Document Class
 
 #### Descripción
 
-La propiedad `.creationDate` devuelve <!-- REF #document.creationDate.Summary -->The `.creationDate` property returns<!-- END REF -->.
+La propiedad `.creationDate` devuelve <!-- REF #document.creationDate.Summary -->la fecha de creación del archivo<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -160,7 +160,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La propiedad `.isFile` devuelve <!-- REF #document.isFile.Summary -->The `.copyTo()` function<!-- END REF -->.
+La propiedad `.isFile` devuelve <!-- REF #document.isFile.Summary -->siempre true para un archivo<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -180,7 +180,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La propiedad `.isFolder` devuelve <!-- REF #document.isFolder.Summary -->always true for a file<!-- END REF -->.
+La propiedad `.isFolder` devuelve <!-- REF #document.isFolder.Summary -->siempre false para un archivo<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -230,7 +230,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La propiedad `.modificationDate` devuelve <!-- REF #document.modificationDate.Summary -->The `.modificationDate` property returns<!-- END REF -->.
+La propiedad `.modificationDate` devuelve <!-- REF #document.modificationDate.Summary -->la fecha de la última modificación del archivo<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -250,7 +250,7 @@ Esta propiedad es **de sólo lectura**.
 
 ##### Descripción
 
-La propiedad `.modificationTime` devuelve <!-- REF #document.modificationTime.Summary -->The `.modificationTime` property returns<!-- END REF --> (expresado como un número de segundos que comienza en 00:00).
+La propiedad `.modificationTime` devuelve <!-- REF #document.modificationTime.Summary -->la hora de la última modificación del archivo<!-- END REF --> (expresado como un número de segundos que comienza en 00:00).
 
 Esta propiedad es **de sólo lectura**.
 
@@ -315,7 +315,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La propiedad `.parent` devuelve <!-- REF #document.parent.Summary -->The `.parent` property returns<!-- END REF -->. Si la ruta representa una ruta del sitema (por ejemplo, "/DATA/"), se devuelve la ruta del sistema.
+La propiedad `.parent` devuelve <!-- REF #document.parent.Summary -->el objeto de la carpeta padre del archivo<!-- END REF -->. Si la ruta representa una ruta del sitema (por ejemplo, "/DATA/"), se devuelve la ruta del sistema.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -335,7 +335,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La propiedad `.path` devuelve <!-- REF #document.path.Summary -->The `.path` property returns<!-- END REF -->. Si la ruta representa un filesystem (por ejemplo, "/DATA/"), se devuelve el filesystem.
+La propiedad `.path` devuelve <!-- REF #document.path.Summary -->la ruta POSIX del archivo<!-- END REF -->. Si la ruta representa un filesystem (por ejemplo, "/DATA/"), se devuelve el filesystem.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -355,7 +355,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La propiedad `.platformPath` devuelve <!-- REF #document.platformPath.Summary -->The `.platformPath` property returns<!-- END REF -->.
+La propiedad `.platformPath` devuelve <!-- REF #document.platformPath.Summary -->la ruta del archivo expresada con la sintaxis de la plataforma actual<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -397,18 +397,18 @@ Esta propiedad es **de sólo lectura**.
 <!-- REF #document.copyTo().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|destinationFolder | 4D.Folder |->|Destination folder|
-|newName|Text|->|Name for the copy|
-|overwrite|Integer|->|`fk overwrite` to replace existing elements|
+|destinationFolder | 4D.Folder |->|carpeta Destino|
+|newName|Text|->|Nombre para la copia|
+|overwrite|Integer|->|`fk overwrite` para reemplazar elementos existentes|
 |Result|4D.File|<-|Copied file|
 </div>
 <!-- END REF -->
 
 #### Descripción
 
-La función `.copyTo()` <!-- REF #document.copyTo().Summary -->The `.isFolder` property returns <!-- END REF -->.
+La función `.copyTo()` <!-- REF #document.copyTo().Summary -->copia el objeto `File` en la carpeta *destinationFolder* especificada <!-- END REF -->.
 
 La *destinationFolder* debe existir en el disco, de lo contrario se genera un error.
 
@@ -534,12 +534,12 @@ Icono de archivo [picture](../Concepts/picture.html).
 <!-- REF #document.getText().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|charSetName |Text |-> |Name of character set|
-|charSetNum |Integer |-> |Number of character set|
-|breakMode|Integer |-> |Processing mode for line breaks|
-|Result |Text  |<- |Text from the document|
+|Parámetro|Tipo||Descripción|
+|---|---|-|---|
+|charSetName |Text |-> |Nombre del conjunto de caracteres|
+|charSetNum |Integer |-> |Número del conjunto de caracteres|
+|breakMode|Integer |-> |Modo de procesamiento para saltos de línea|
+|Resultado |Text |<- |Texto de the document|
 </div>
 <!-- END REF -->
 

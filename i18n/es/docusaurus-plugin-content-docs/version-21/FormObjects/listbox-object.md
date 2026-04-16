@@ -197,3 +197,4 @@ Los eventos formulario de los objetos list box o columnas de list box pueden dev
 > Si un evento se produce en una columna o línea "fake" que no existe, se suele devolver una cadena vacía.
 
 
+
