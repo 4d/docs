@@ -108,6 +108,7 @@ module.exports =
                 "settings/client-server",
                 "settings/web",
                 "settings/sql",
+                "settings/ai",
                 "settings/security",
                 "settings/compatibility"
               ]
