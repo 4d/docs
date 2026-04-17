@@ -7,7 +7,7 @@ title: クラス
 
 4D ランゲージでは **クラス** の概念がサポートされています 。  プログラミング言語では、クラスを利用することによって、属性やメソッドなどを持つ特定のオブジェクト種を定義することができます。
 
-ユーザークラスが定義されていれば、そのクラスのオブジェクトをコード内で **インスタンス化** することができます。  各オブジェクトは、それ自身が属するクラスのインスタンスです。 ユーザークラスが定義されていれば、そのクラスのオブジェクトをコード内で **インスタンス化** することができます。 各オブジェクトは、それ自身が属するクラスのインスタンスです。 クラスは、別のクラスを [継承](#class-extends-classname) することで、その [関数](#function) と、([宣言された](#property) および [計算された](#function-get-と-function-set)) プロパティを受け継ぐことができます。
+ユーザークラスが定義されていれば、そのクラスのオブジェクトをコード内で **インスタンス化** することができます。  各オブジェクトは、それ自身が属するクラスのインスタンスです。 クラスは、別のクラスを [継承](#class-extends-classname) することで、その [関数](#function) と、([宣言された](#property) および [計算された](#function-get-と-function-set)) プロパティを受け継ぐことができます。
 
 > 4D におけるクラスモデルは JavaScript のクラスに類似しており、プロトタイプチェーンに基づきます。
 
@@ -41,9 +41,9 @@ $hello:=$person.sayHello() // "Hello John Doe"
 
 #### クラスの削除
 
-To delete an existing class, select it in the Explorer and click ![](../assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu.
+既存のクラスを削除するには、エクスプローラー内でクラスを選択して ![](../assets/en/Users/MinussNew.png) をクリックするか、コンテキストメニューより **移動** ＞ **ゴミ箱** を選択します。
 
-You can also remove the .4dm class file from the "Classes" folder on your disk.
+またディスク上の"Classes" フォルダから.4dm クラスファイルを削除することもできます。
 
 ## クラスストア
 
@@ -107,7 +107,7 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 ```4d
  var $keys : Collection
  $keys:=OB Keys(4D)
- ALERT("There are "+String($keys.length)+" built-in classes.")
+ ALERT(String($keys.length)+"件のビルトインクラスが存在します。")
 ```
 
 ## Class オブジェクト
@@ -149,7 +149,7 @@ Class オブジェクトそのものは [共有オブジェクト](shared.md) �
 
 ```4d
 {local | server} {shared} Function <name>({$parameterName : type; ...}){->$parameterName : type}
-// code
+// コード
 ```
 
 :::note
@@ -162,7 +162,7 @@ Class オブジェクトそのものは [共有オブジェクト](shared.md) �
 
 [共有クラス](#共有クラス) 内で関数が宣言されている場合は、`shared` キーワードを使用することによって、[`Use...End use` 構文](shared.md#useend-use)なしで関数を呼び出せるようにできます。 詳細については、後述の [共有関数](#共有関数) の項目を参照ください。
 
-In the context of a client/server application, the `local` or `server` keyword allows you to specify on which machine the function must be executed. These keywords can only be used with ORDA data model functions and shared/session singleton functions. For more information, refer to the [local and server functions](#local-and-server) paragraph below.
+クライアント/サーバーアプリケーションのコンテキストにおいては、 `local` or `server` キーワードを使用することで、どちらのマシン上で関数を実行すべきかを指定することができます。 これらのキーワードはORDA データモデル関数と共有シングルトン/セッションシングルトン関数でのみ使用することができます。 詳細については、後述の [local および server 関数](#local-および-server) の項目を参照ください。
 
 関数名は [プロパティ名の命名規則](Concepts/identifiers.md#オブジェクトプロパティ) に準拠している必要があります。
 
@@ -457,12 +457,12 @@ $o.age:="Smith"  // シンタックスチェックでエラー
 
 ```4d
 {local | server} {shared} Function get <name>()->$result : type
-// code
+// コード
 ```
 
 ```4d
 {local | server} {shared} Function set <name>($parameterName : type)
-// code
+// コード
 ```
 
 `Function get` と `Function set` は、クラスの **計算プロパティ** を定義するアクセサーです 。  計算プロパティとは、計算をマスクするデータ型を持つ命名プロパティです。 計算プロパティの値にアクセスすると、4D は対応するアクセサーのコードを実行します:
@@ -488,7 +488,7 @@ $o.age:="Smith"  // シンタックスチェックでエラー
 
 関数が[共有クラス](#共有クラス)で宣言されている場合、`shared` キーワードを使用することで、[`Use...End use` 構文](shared.md#useend-use)なしで呼び出せるようにすることができます。 詳細については、後述の [共有関数](#共有関数) の項目を参照ください。
 
-In the context of a client/server application, the `local` or `server` keyword allows you to specify on which machine the function must be executed. These keywords can only be used with ORDA data model functions and shared/session singleton functions. For more information, refer to the [local and server functions](#local-and-server) paragraph below.
+クライアント/サーバーアプリケーションのコンテキストにおいては、 `local` or `server` キーワードを使用することで、どちらのマシン上で関数を実行すべきかを指定することができます。 これらのキーワードはORDA データモデル関数と共有シングルトン/セッションシングルトン関数でのみ使用することができます。 詳細については、後述の [local および server 関数](#local-および-server) の項目を参照ください。
 
 計算プロパティの型は、*ゲッター* の `$return` の型宣言によって定義されます。  [有効なプロパティタイプ](dt_object.md) であれば、いずれも使用可能です。 [有効なプロパティタイプ](dt_object.md) であれば、いずれも使用可能です。
 
@@ -596,13 +596,13 @@ Class constructor ($side : Integer)
 
 ### `Super`
 
-[`Super`](../commands/super) コマンドを使用すると、[`スーパークラス`](../API/ClassClass#superclass)、つまり関数の親クラスを呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。
+[`Super`](../commands/super) コマンドを使用すると、[`スーパークラス`](../API/ClassClass#superclass)、つまり関数の親クラスを呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。
 
 詳細な情報については、[`Super`](../commands/super) コマンドの説明を参照してください。
 
 ### `This`
 
-[`This`](../commands/this) コマンドは現在処理されているオブジェクトへの参照を返します。  多くの場合、`This` の値はクラス関数がどのように呼ばれたかによって決まります。 通常、`This` は、まるでその関数がオブジェクト上にあるかのように、関数が呼ばれたオブジェクトを参照します。 多くの場合、`This` の値はクラス関数がどのように呼ばれたかによって決まります。 通常、`This` は、まるでその関数がオブジェクト上にあるかのように、関数が呼ばれたオブジェクトを参照します。
+[`This`](../commands/this) コマンドは現在処理されているオブジェクトへの参照を返します。 多くの場合、`This` の値はクラス関数がどのように呼ばれたかによって決まります。 通常、`This` は、まるでその関数がオブジェクト上にあるかのように、関数が呼ばれたオブジェクトを参照します。
 
 例:
 
@@ -840,31 +840,31 @@ $myList := cs.ItemInventory.me.itemList
 
 :::tip 関連したblog 記事
 
-[Singletons in 4D](https://blog.4d.com/singletons-in-4d)  
-[Session Singletons](https://blog.4d.com/introducing-session-singletons)
+[4D のシングルトン](https://blog.4d.com/ja/singletons-in-4d/)
+[セッションシングルトン](https://blog.4d.com/ja/introducing-session-singletons)
 
 :::
 
-## `local` and `server`
+## `local` および `server`
 
-In [client/server architecture](../Desktop/clientServer.md), `local` and `server` keywords allow you to specify where you want the function to be executed: client-side, or server-side. Controlling the execution location is useful for performance reasons or to implement business logic features.
+[クライアント/サーバーアーキテクチャ](../Desktop/clientServer.md) におていは、`local` および `server` キーワードを使用することで関数を実行する場所を指定することができます: クライアント側、またはサーバー側です。 実行場所をコントロールすることは、パフォーマンス上の理由から、またビジネスロジック機能を実装する観点からも有用といえます。
 
 シンタックスは次の通りです:
 
 ```4d
-// declare a function to execute on a client in client/server
+// クライアント/サーバーにおいてクライアント上で実行される関数を宣言する
 local Function <functionName>   
 ```
 
 ```4d
-// declare a function to execute on the server in client/server
+// クライアント/サーバーにおいてサーバー上で実行される関数を宣言する
 server Function <functionName>   
 ```
 
-`local` and `server` keywords are only available for the functions of the following classes:
+`local` および `server` キーワードは以下の場合に該当する関数においてのみ利用可能です:
 
-- [ORDA data model](../ORDA/ordaClasses.md) classes
-- [shared or session singleton](#singleton-classes) classes.
+- [ORDA データモデル](../ORDA/ordaClasses.md) クラス
+- [共有シングルトンまたはセッションシングルトン](#singleton-classes) クラス。
 
 :::tip 関連したblog 記事
 
@@ -874,34 +874,34 @@ server Function <functionName>
 
 ### 概要
 
-Supported functions have a **default execution location** when no location keyword is used. You can nevertheless insert a `local` or `server` keyword to modify the execution location, or to make the code more explicit.
+サポートされる関数には、ロケーションキーワードが何も使用されていない場合の **デフォルトの実行場所** があります。 それにもかかわらず、`local` あるいは `server` キーワードを挿入することで実行場所を変更したり、あるいはコードをより明示的にすることができます。
 
-| Supported functions                               | Default execution | with `local` keyword                                           | with `server` keyword                                                                                                                                                                       |
-| ------------------------------------------------- | ----------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [ORDA data model](../ORDA/ordaClasses.md)         | on Server         | The function is executed on the client if called on the client |                                                                                                                                                                                             |
-| [Shared or session singleton](#singleton-classes) | ローカル              |                                                                | The function is executed on the server on the server instance of the singleton. <br/>If there is no instance of the singleton on the server, it is created. |
+| サポートされる関数                             | デフォルトの実行場所 | `local` キーワードを使用した場合                | `server` キーワードを使用した場合                                                    |
+| ------------------------------------- | ---------- | ----------------------------------- | ------------------------------------------------------------------------ |
+| [ORDA データモデル](../ORDA/ordaClasses.md) | サーバー上      | 関数は、クライアント上で呼ばれた場合にはクライアント上で実行されます。 |                                                                          |
+| [共有シングルトンまたはセッションシングルトン](#シングルトンクラス)  | ローカル       |                                     | 関数はシングルトンのサーバーインスタンスのサーバー上で実行されます。 <br/>サーバー上にシングルトンのインスタンスがない場合、作成されます。 |
 
-If `local` and `server` keywords are used in another context, an error is returned.
+`local` および `server` キーワードがこれ以外のコンテキストで使用された場合、エラーが返されます。
 
 :::note
 
-For a overall description of where code is actually executed in client/server, please refer to [this section](../Desktop/clientServer.md#code-execution-location).
+クライアント/サーバーにおいてコードが実際にどこで実行されるかについての全体的な説明については、[こちらの章](../Desktop/clientServer.md#コードの実行場所) を参照してください。
 
 ::::
 
-### `ローカル`
+### `local`
 
-In a [client/server architecture](../Desktop/clientServer.md), the `local` keyword specifies that the function must be executed **on the machine from where it is called**.
+[クライアント/サーバーアーキテクチャ](../Desktop/clientServer.md) においては、`local` キーワードは、関数は**呼ばれた場所で実行されなければならない**ということを指定します。
 
-:::note
+:::note リマインダー
 
-The `local` keyword is useless for [shared or session singleton functions](#singleton-classes), which are executed locally by default.
+`local` キーワードは [共有シングルトンまたはセッションシングルトンの関数](#シングルトンクラス) においては意味を持ちません。これらはデフォルトでローカルに実行されるからです。
 
 :::
 
-By default, [ORDA data model functions](../ORDA/ordaClasses.md) are executed on the server. 関数リクエストとその結果だけが通信されるため、通常はベストパフォーマンスが提供されます。 However, [for optimization reasons](../ORDA/client-server-optimization.md#using-the-local-keyword), you could want to execute a data model function on client. You can then use the `local` keyword.
+デフォルトで、 [ORDA データモデル関数](../ORDA/ordaClasses.md) はサーバー上で実行されます。 関数リクエストとその結果だけが通信されるため、通常はベストパフォーマンスが提供されます。 しかしながら、[最適化のために](../ORDA/client-server-optimization.md#local-キーワードの使用) 、データモデル関数をクライアント上で実行したい様な場合があるかもしれません。 その場合は `local` キーワードを使用することができます。
 
-#### Example: Calculating age
+#### 例: 年齢を計算する
 
 *birthDate* (生年月日) 属性を持つエンティティがある場合に、リストボックス内で呼び出すための `age()` 関数を定義します。 この関数をクライアントサイドで実行することで、リストボックスの各行がサーバーへのリクエストを生成するのを防ぎます。
 
@@ -921,19 +921,19 @@ End if
 
 ### `server`
 
-In a [client/server architecture](../Desktop/clientServer.md), the `server` keyword specifies that the function must be executed **on the server side**.
+[クライアント/サーバーアーキテクチャ](../Desktop/clientServer.md) においては、`server` キーワードは、関数は**サーバー側で実行されなければならない** ということを意味します。
 
-:::note 注記
+:::note リマインダー
 
-The `server` keyword is useless for [ORDA data model functions](../ORDA/ordaClasses.md), which are executed on the server by default.
+`server` キーワードは、デフォルトでサーバー上で実行される [ORDA データモデル関数](../ORDA/ordaClasses.md) に対しては特に意味を持ちません。
 
 :::
 
-`server` function parameters and result must be [**streamable**](./dt_object.md#streaming-support). For example, [4D.Datastore](../API/DataStoreClass.md), [File handle](../API/FileHandleClass.md), or [WebServer](../API/WebServerClass.md) are non-streamable classes but [4D.File](../API/FileClass.md) is streamable.
+`server` の関数の引数と戻り値は、[**ストリーム可能**](./dt_object.md#ストリーミングサポート) ストリーム可能でなければなりません。 例えば、[4D.Datastore](../API/DataStoreClass.md)、[File handle](../API/FileHandleClass.md)、あるいは [WebServer](../API/WebServerClass.md) などはストリーム不可能なクラスですが、 [4D.File](../API/FileClass.md) クラスはストリーム可能です。
 
-This feature is particularly useful in the context of [remote user sessions](../Desktop/sessions.md#remote-user-sessions), allowing you to implement the business logic in a [session singleton](#shared-or-session-singleton-functions) to share it accross all the processes of the session, thus extending the functionalities of the [`Session`](../commands/session) command. In this case, you might want the relevant business logic to be executed **on the server** so that all the session information is gathered on the server.
+この機能は、特に[リモートユーザーセッション](../Desktop/sessions.md#リモートユーザーセッション) のコンテキストにおいて有用で、これを使用することでビジネスロジックを[セッションシングルトン](#shared-or-session-singleton-functions) に実装することでセッションの全てのプロセス間でこれを共有することができ、結果として[`Session`](../commands/session) コマンドの機能を拡張することが可能になります。 この場合、全てのセッション情報がサーバーに集められる様に、関連するビジネスロジックが**サーバー上で**実行されるようにしたい場合があるかもしれません。
 
-By default, shared or session singleton functions are executed locally. Adding the `server` keyword in the class function definition makes 4D use the singleton instance on the server. Note that this can result of an instantiation of the singleton on the server if no instance exists yet.
+デフォルトで、共有シングルトンまたはセッションシングルトンの関数はローカルに実行されます。 `server` キーワードをクラス関数定義に追加することで、4D はシングルトンインスタンスをサーバー上で使用します。 この場合、まだインスタンスが存在していない場合、サーバー上でシングルトンのインスタンス化が起こりうることに注意してください。
 
 For [sessions singletons](#singleton-classes), the function is executed on the server in the corresponding singleton instance, i.e. the instance of the singleton for the current session.
 

@@ -271,7 +271,7 @@ Objects can belong to classes. Using a class allows to predefine an object behav
 
 The 4D language proposes several [native classes](../category/class-API-reference/) that you can use to handle objects. You can also define and use your own [user classes](./classes.md) to organize your code.
 
-## Streaming support
+## ストリーミングサポート
 
 A streamable class (or *serializable* class) is a class whose objects can be converted into a sequence of bytes (text or binary) in order to write them in a file, to send them as parameters, or to be able to store and rebuild them afterwards.
 

@@ -141,7 +141,7 @@ title: クライアント/サーバーの最適化
 - [dataClass.getRemoteCache()](../API/DataClassClass.md#getremotecache)
 - [dataClass.clearRemoteCache()](../API/DataClassClass.md#clearremotecache)
 
-### Using the `local` keyword
+### `local` キーワードの使用
 
 By default, [ORDA data model functions](../ORDA/ordaClasses.md) are executed on the server, which usually provides the best performance since only the function request and the result are sent over the network. However, it could happen that a function processes data that's already in the local cache and is fully executable on the client side. In this case, you can save requests to the server and thus, enhance the application performance by [using the `local` keyword in the function definition](../Concepts/classes.md#local).
 
