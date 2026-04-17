@@ -107,7 +107,7 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 ```4d
  var $keys : Collection
  $keys:=OB Keys(4D)
- ALERT("There are "+String($keys.length)+" built-in classes.")
+ ALERT(String($keys.length)+"件のビルトインクラスが存在します。")
 ```
 
 ## Class オブジェクト
