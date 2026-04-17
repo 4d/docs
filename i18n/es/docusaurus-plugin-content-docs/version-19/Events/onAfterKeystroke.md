@@ -24,7 +24,7 @@ Después de que las propiedades de evento [`On Before Keystroke`](onBeforeKeystr
 
 El evento `On After Keystroke` no se genera:
 
-- in [list box columns](FormObjects/listbox-column.md) method except when a cell is being edited (however it is generated in any cases in the [list box](FormObjects/listbox_overview.md) method),
+- en el método [columnas de list box](FormObjects/listbox-column.md) excepto cuando se está editando una celda (sin embargo se genera en cualquier caso en el método [list box](FormObjects/listbox_overview.md)),
 - cuando las modificaciones usuario no se realizan con el teclado (pegar, arrastrar y soltar, casilla de verificación, lista desplegable, combo box). Para procesar estos eventos, debe utilizar [`On After Edit`](onAfterEdit.md).
 
 ### Secuencia de tecla

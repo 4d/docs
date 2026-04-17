@@ -3,9 +3,9 @@ id: onColumnResize
 title: On Column Resize
 ---
 
-| Code | Puede ser llamado por                                                                                                                                    | Definición                                                                                                                                |
-| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| 33   | [4D View Pro Area](FormObjects/viewProArea_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox-column.md) | El ancho de una columna es modificado directamente por el usuario o en consecuencia de un redimensionamiento de la ventana del formulario |
+| Code | Puede ser llamado por                                                                                                                                        | Definición                                                                                                                                |
+| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| 33   | [Área 4D View Pro](FormObjects/viewProArea_overview.md) - [List Box](FormObjects/listbox_overview.md) - [Columna de List Box](FormObjects/listbox-column.md) | El ancho de una columna es modificado directamente por el usuario o en consecuencia de un redimensionamiento de la ventana del formulario |
 
 
 ## Descripción

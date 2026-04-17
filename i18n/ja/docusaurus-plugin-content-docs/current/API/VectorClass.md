@@ -9,7 +9,7 @@ AI の世界では、ベクトルとは、機会が複雑なデータを理解�
 
 :::info
 
-This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
+このクラスは、バイナリーで[**ストリーム可能**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) です。
 
 :::
 

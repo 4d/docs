@@ -10,7 +10,7 @@ title: On Validate
 
 ## Descripción
 
-This event is triggered when the record data entry has been validated, for example after an `accept` [standard action](FormObjects/properties_Action.md#standard-action).
+Este evento se activa cuando se ha validado la entrada de datos del registro, por ejemplo después de una [acción estándar ](FormObjects/properties_Action.md#standard-action) `accept`.
 
 
 ### Subformulario

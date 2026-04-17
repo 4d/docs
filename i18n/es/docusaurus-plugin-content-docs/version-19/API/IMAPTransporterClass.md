@@ -72,18 +72,18 @@ El comando `IMAP New transporter` <!-- REF #_command_.IMAP New transporter.Summa
 
 En el parámetro *server*, pase un objeto que contenga las siguientes propiedades:
 
-| *server*                                                                                                                                                                                                                                                                                                                                                                                                                               | Valor por defecto (si se omite)                                          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| False                                                                    |
-| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<br/>Cadena de texto u objeto token que representa las credenciales de autorización OAuth2. Sólo se utiliza con OAUTH2 `authenticationMode`. Si se utiliza `accessTokenOAuth2` pero se omite `authenticationMode`, se utiliza el protocolo OAuth 2 (si el servidor lo permite). No se devuelve en el objeto *[IMAP transporter](#imap-transporter-object)*. | ninguno                                                                  |
-| [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| se utiliza el modo de autenticación más seguro soportado por el servidor |
-| [<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Summary -->| 300                                                                      |
-| [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                                                                       |
-| [<!-- INCLUDE #transporter.host.Syntax -->](#host)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *mandatory*                                                              |
-| [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| ninguno                                                                  |
-| .**password**: Text<br/>Contraseña de usuario para la autenticación en el servidor. No se devuelve en el objeto *[IMAP transporter](#imap-transporter-object)*.                                                                                                                                                                                                                                                                  | ninguno                                                                  |
-| [<!-- INCLUDE #transporter.port.Syntax -->](#port)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 993                                                                      |
-| [<!-- INCLUDE #transporter.user.Syntax -->](#user)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| ninguno                                                                  |
+| *server*                                                                                                                                                                                                                                                                                                                                                                                                                               | Valor por defecto (si se omite)                                     |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| False                                                               |
+| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<br/>Cadena de texto u objeto token que representa las credenciales de autorización OAuth2. Sólo se utiliza con OAUTH2 `authenticationMode`. Si se utiliza `accessTokenOAuth2` pero se omite `authenticationMode`, se utiliza el protocolo OAuth 2 (si el servidor lo permite). No se devuelve en el objeto *[IMAP transporter](#imap-transporter-object)*. | ninguno                                                             |
+| [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| the most secure authentication mode supported by the server is used |
+| [<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Summary -->| 300                                                                 |
+| [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                                                                  |
+| [<!-- INCLUDE #transporter.host.Syntax -->](#host)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *mandatory*                                                         |
+| [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| ninguno                                                             |
+| .**password**: Text<br/>Contraseña de usuario para la autenticación en el servidor. No se devuelve en el objeto *[IMAP transporter](#imap-transporter-object)*.                                                                                                                                                                                                                                                                  | ninguno                                                             |
+| [<!-- INCLUDE #transporter.port.Syntax -->](#port)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 993                                                                 |
+| [<!-- INCLUDE #transporter.user.Syntax -->](#user)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| ninguno                                                             |
 > **Atención**: asegúrese de que el tiempo de espera definido sea menor que el tiempo de espera del servidor, de lo contrario el tiempo de espera del cliente será inútil.
 
 #### Resultado
@@ -351,12 +351,12 @@ La propiedad `.checkConnectionDelay` contiene <!-- REF #IMAPTransporterClass.che
 <!-- REF #IMAPTransporterClass.copy().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|msgsIDs|Collection|->|Collection of message unique IDs (strings)|
-|allMsgs|Integer|->|`IMAP all`: All messages in the selected mailbox|
-|destinationBox|Text|->|Mailbox to receive copied messages|
-|Result|Object|<-|Status of the copy operation|
+|msgsIDs|Collection|->|Colección de IDs únicos de mensajes (cadenas)|
+|allMsgs|Integer|->|`IMAP all`: todos los mensajes del buzón seleccionado|
+|destinationBox|Text|->|Buzón para recibir los mensajes copiados|
+|Resultado|Object|<-|Status of the copy operation|
 </div>
 <!-- END REF -->
 
@@ -535,11 +535,11 @@ End for each
 <!-- REF #IMAPTransporterClass.delete().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|msgsIDs|Collection|->|Collection of message unique IDs (strings)|
-|allMsgs|Integer|->|`IMAP all`: All messages in the selected mailbox|
-|Result|Object|<-|Status of the delete operation|
+|msgsIDs|Colección|->|Colección de IDs únicos de mensajes (cadenas)|
+|allMsgs|Integer|->|`IMAP all`: todos los mensajes del buzón seleccionado|
+|Resultado|Object|<-|Status of the delete operation|
 </div>
 <!-- END REF -->
 
@@ -968,12 +968,12 @@ Caracter delimitador del nombre del buzón.
 <!-- REF #IMAPTransporterClass.getMail().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|msgNumber|Integer|->|Sequence number of the message|
-|msgID|Text|->|Unique ID of the message|
-|options|Object|->|Message handling instructions|
-|Result|Object|<-|[Email object](EmailObjectClass.md#email-object)|
+|msgNumber|Integer|->|Número de secuencia del mensaje|
+|msgID|Text|->|Identificación única del mensaje|
+|options|Object|->|Instrucciones de gestión del mensaje|
+|Resultado|Object|<-|[Email object](EmailObjectClass.md#email-object)|
 </div>
 <!-- END REF -->
 
@@ -1044,13 +1044,13 @@ Quiere obtener el mensaje con ID = 1:
 <!-- REF #IMAPTransporterClass.getMails().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|ids |Collection|->|Collection of message ID|
-|startMsg|Integer|->|Sequence number of the first message|
-|endMsg |Integer|->|Sequence number of the last message|
-|options|Object|->|Message handling instructions|
-|Result|Object|<-|Object containing:<br/><ul><li>una colección de [objetos Email](EmailObjectClass.md#email-object) y</li><li>una colección de identificadores o números para los mensajes que faltan, si los hay</li></ul>|
+|ids |Collection|->|Colección de ID de mensaje|
+|startMsg|Integer|->|Número de secuencia del primer mensaje|
+|endMsg |Integer|->|Número de secuencia del último mensaje|
+|options|Object|->|Instrucciones de gestión de mensajes|
+|Resultado|Object|<-|Object containing:<br/><ul><li>una colección de [objetos Email](EmailObjectClass.md#email-object) y</li><li>una colección de identificadores o números para los mensajes que faltan, si los hay</li></ul>|
 </div>
 <!-- END REF -->
 
@@ -1149,11 +1149,11 @@ Quiere recuperar los 20 correos electrónicos más recientes sin cambiar el esta
 <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|msgNumber|Integer|-> |Sequence number of the message|
-|msgID|Text|-> |Unique ID of the message|
-|updateSeen|Boolean|->|If True, the message is marked "seen" in the mailbox. Si es False el mensaje se deja intacto.|
+|msgNumber|Integer|-> |Número de secuencia del mensaje|
+|msgID|Text|-> |Identificación única del mensaje|
+|updateSeen|Boolean|->|Si es True, el mensaje se marca como "visto" en el buzón. Si es False el mensaje se deja intacto.|
 |Resultado|BLOB|<-|Blob of the MIME string returned from the mail server|
 </div>
 <!-- END REF -->
@@ -1226,12 +1226,12 @@ El parámetro opcional *updateSeen* permite indicar si el mensaje está marcado 
 <!-- REF #IMAPTransporterClass.move().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|msgsIDs|Collection|->|Collection of message unique IDs (strings)|
-|allMsgs|Integer|->|`IMAP all`: All messages in the selected mailbox|
-|destinationBox|Text|->|Mailbox to receive moved messages|
-|Result|Object|<-|Status of the move operation|
+|msgsIDs|Collection|->|Colección de IDs únicos de mensajes (cadenas)|
+|allMsgs|Integer|->|`IMAP all`: todos los mensajes del buzón seleccionado|
+|destinationBox|Text|->|Buzón para recibir los mensajes movidos|
+|Resultado|Object|<-|Status of the move operation|
 </div>
 <!-- END REF -->
 
@@ -1330,11 +1330,11 @@ Para mover todos los mensajes del buzón actual:
 <!-- REF #IMAPTransporterClass.numToID().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |-----|--- |:---:|------|
-|startMsg|Integer|-> |Sequence number of the first message|
-|endMsg|Integer|->|Sequence number of the last message|
-|Result|Collection|<-|Collection of unique IDs|
+|startMsg|Integer|-> |Número de secuencia del primer mensaje|
+|endMsg|Integer|->|Número de secuencia del último mensaje|
+|Resultado|Collection||<-|Collection of unique IDs|
 </div>
 <!-- END REF -->
 
@@ -1394,17 +1394,17 @@ La función devuelve una colección de cadenas (IDs únicos).
 <!-- REF #IMAPTransporterClass.removeFlags().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|msgIDs|any|->|Collection of strings: Message unique IDs (text)<br/>Text: Unique ID of a message<br/>Longint (IMAP all): All messages in the selected mailbox|
-|keywords|Object|->|Keyword flags to remove|
+|msgIDs|any|->|Colección de cadenas: Identificadores únicos de mensajes (texto)<br/>Texto: ID único de un mensaje<br/>Longint (IMAP all): todos los mensajes del buzón seleccionado|
+|keywords|Object|->|Banderas de palabras clave a eliminar|
 |Result|Object|<-|Status of the removeFlags operation|
 </div>
 <!-- END REF -->
 
 #### Descripción
 
-The `.delete()` function <!-- REF #IMAPTransporterClass.removeFlags().Summary -->sets the "deleted" flag for the messages defined in `msgsIDs` or `allMsgs`<!-- END REF -->.
+La función `.removeFlags()` <!-- REF #IMAPTransporterClass.removeFlags().Summary -->elimina las banderas de los `msgIDs` para las `palabras clave` especificadas<!-- END REF -->.
 
 En el parámetro `msgIDs`, puede pasar:
 
@@ -1483,11 +1483,11 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 <!-- REF #IMAPTransporterClass.renameBox().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|currentName|Text|->|Name of the current mailbox|
-|newName|Text|->|New mailbox name|
-|Result|Object|<-|Status of the renaming operation|
+|currentName|Text|->|Nombre del buzón actual|
+|newName|Text|->|Nombre del nuevo buzón|
+|Resultado|Object|<-|Status of the renaming operation|
 </div>
 <!-- END REF -->
 
@@ -1647,7 +1647,7 @@ Las claves de búsqueda pueden solicitar el valor a buscar:
 
 * **Marcadores**: los valores de tipo marcador (flags) aceptan una o varias palabras claves (incluyendo marcadores estándar) separados por espacios. Ejemplo: `searchCriteria = KEYWORD \Flagged \Draft`
 
-* **Conjunto de mensajes**: identifica un conjunto de mensajes. En el caso de los números de secuencia de los mensajes, se trata de números consecutivos desde el 1 hasta el número total de mensajes en el buzón. Los números son separados por coma; un dos puntos (:) delimita entre dos números inclusive. Examples: `2,4:7,9,12:*` is `2,4,5,6,7,9,12,13,14,15` for a mailbox with 15 messages. `searchCriteria = 1:5 ANSWERED` busca en la selección de mensajes 1 a 5, los mensajes que tienen el marcador \Answered. `searchCriteria= 2,4 ANSWERED` busca en la selección de mensajes (números de mensaje 2 y 4) los mensajes que tienen el marcador \Answered.
+* **Conjunto de mensajes**: identifica un conjunto de mensajes. En el caso de los números de secuencia de los mensajes, se trata de números consecutivos desde el 1 hasta el número total de mensajes en el buzón. Los números son separados por coma; un dos puntos (:) delimita entre dos números inclusive. Ejemplos: `2,4:7,9,12:*` es `2,4,5,6,7,9,12,13,14,15` para un buzón con 15 mensajes. `searchCriteria = 1:5 ANSWERED` busca en la selección de mensajes 1 a 5, los mensajes que tienen el marcador \Answered. `searchCriteria= 2,4 ANSWERED` busca en la selección de mensajes (números de mensaje 2 y 4) los mensajes que tienen el marcador \Answered.
 
 #### Teclas de búsqueda disponibles
 
@@ -1706,11 +1706,11 @@ Las claves de búsqueda pueden solicitar el valor a buscar:
 <!-- REF #IMAPTransporterClass.selectBox().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|name|Text|-> |Name of the mailbox|
-|state|Integer|->|Mailbox access status|
-|Result|Object|<-|boxInfo object|
+|name|Text|-> |Nombre del buzón|
+|state|Integer|->|Estado de acceso al buzón|
+|Resultado|Object|<-|boxInfo object|
 </div>
 <!-- END REF -->
 

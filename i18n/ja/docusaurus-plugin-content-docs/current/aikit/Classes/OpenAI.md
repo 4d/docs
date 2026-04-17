@@ -77,3 +77,7 @@ $client.images.generate(...)
 $client.files.create(...)
 $client.model.lists(...)
 ```
+
+## Provider Model Aliases
+
+The OpenAI client supports provider model aliases for easy multi-provider usage. See [Provider Model Aliases](../provider-model-aliases.md) for complete documentation.
