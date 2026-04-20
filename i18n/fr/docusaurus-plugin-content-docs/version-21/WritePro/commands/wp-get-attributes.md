@@ -10,13 +10,13 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres  | Type                                           |                             | Description                               |
-| ----------- | ---------------------------------------------- | --------------------------- | ----------------------------------------- |
-| targetObj   | Object                                         | &#8594; | Plage ou élément ou document 4D Write Pro |
-| attribName  | Text                                           | &#8594; | Nom de l'attribut à récupérer             |
-| attribValue | Text, Number, Array, Collection, Picture, Date | &#8592; | Current value of attribute for the target |
-| attribColl  | Collection                                     | &#8594; | Collection of attribute names to get      |
-| Résultat    | Object                                         | &#8592; | Attribute names and values                |
+| Paramètres  | Type                                           |                             | Description                                |
+| ----------- | ---------------------------------------------- | --------------------------- | ------------------------------------------ |
+| targetObj   | Object                                         | &#8594; | Plage ou élément ou document 4D Write Pro  |
+| attribName  | Text                                           | &#8594; | Nom de l'attribut à récupérer              |
+| attribValue | Text, Number, Array, Collection, Picture, Date | &#8592; | Valeur courante de l'attribut              |
+| attribColl  | Collection                                     | &#8594; | Collection de noms d'attributs à récupérer |
+| Résultat    | Object                                         | &#8592; | Noms et valeurs des attributs              |
 
 </div>
 <!-- END REF-->
@@ -33,18 +33,18 @@ Dans *targetObj*, vous pouvez passer:
 
 Dans *attribName*, passez le nom de l'attribut que vous souhaitez récupérer.
 
-You can also pass a collection of attribute names in *attribColl*, in which case the command will return an object containing the attribute names passed in *attribColl* along with their corresponding values.
+Vous pouvez également passer une collection de noms d'attributs dans *attribColl*, auquel cas la commande renverra un objet contenant les noms d'attributs passés dans *attribColl* ainsi que leurs valeurs correspondantes.
 
-For a comprehensive list of attributes to pass, as well as their scope and values, please refer to the [4D Write Pro Attributes](../4d-write-pro-attributes) section.
+Pour obtenir une liste complète des attributs à passer, ainsi que leur portée et leurs valeurs, veuillez consulter la section [Attributs 4D Write Pro](../4d-write-pro-attributes).
 
-If there are different values for the same attribute in the element passed as a parameter, the command returns:
+S'il existe différentes valeurs pour le même attribut dans l'élément passé en paramètre, la commande retourne :
 
-- for numerical values, wk mixed
-- for an array, an empty array (tab stops, color if *attribValue* is defined as array), with an exception for wk text shadow offset for which the array value will always contain 2 entries which may be set separately to wk mixed if either horizontal offset or vertical offset (or both) are mixed.
-- for string values, an empty string
-- for picture values, an empty picture.
+- pour les valeurs numériques, wk mixed
+- pour un tableau, un tableau vide (taquets de tabulation, couleur si *attribValue* est défini comme tableau), à l'exception de wk text shadow offset pour lequel la valeur du tableau contiendra toujours 2 entrées qui peuvent valoir séparément wk mixed si le décalage horizontal ou vertical (ou les deux) sont mélangés.
+- pour les valeurs de type chaîne, une chaîne vide
+- pour les valeurs image, une image vide.
 
-**Note**: If *targetObj* contains a paragraph and a character style sheets, the paragraph style sheet name is returned.
+**Note** : Si *targetObj* contient une feuille de style de paragraphe et une feuille de style de caractère, le nom de la feuille de style de paragraphe est retourné.
 
 ## Exemple 1
 
