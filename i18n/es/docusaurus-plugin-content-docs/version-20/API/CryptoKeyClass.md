@@ -331,11 +331,11 @@ El valor devuelto es la llave pública.
 <!-- REF #CryptoKey.sign().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|----|---|---|
-|message|Text OR Blob|->|Message to sign|  
-|options|Object|->|Signing options|
-|Result|Text|<-|Signature in Base64 or Base64URL representation, depending on "encoding" option|
+|Parámetro|Tipo||Descripción|
+|---|----|---|-|
+|message|Text|->|Mensaje a firmar|  
+|options|Object|->|Opciones de firma|
+|Resultado|Text|<-|Signature in Base64 or Base64URL representation, depending on "encoding" option|
 </div>
 <!-- END REF -->
 
@@ -413,12 +413,12 @@ Contiene el <!-- REF #CryptoKey.type.Summary -->nombre del tipo de llave - "RSA"
 <!-- REF #CryptoKey.verify().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|message|Text OR Blob|->|Message that was used to produce the signature|  
-|signature|Text|->|Signature to verify, in Base64 or Base64URL representation, depending on `options.encoding` value|
-|options|Object|->|Signing options|
-|Result|Object|<-|Status of the verification|
+|Parámetro|Tipo||Descripción|
+|---|---|-|---|-|
+|message|Text O Blob|->|Mensaje que se utilizó para producir la firma|  
+|signature|Text|->|Firma a verificar, en representación Base64 o Base64URL, dependiendo del valor de `options.encoding`|
+|options|Object|->|Opciones de firma|
+|Resultado|Object|<-|Status of the verification|
 </div>
 <!-- END REF -->
 
