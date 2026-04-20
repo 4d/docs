@@ -76,40 +76,40 @@ En este ejemplo, la gestión completa de una lista desplegable (inicialización,
 Este ejemplo es un método formulario genérico. Muestra cada uno de los posibles eventos que pueden ocurrir cuando un formulario se utiliza como formulario de salida:
 
 ```4d
-  //Method of a form being used as output form for a summary report
- $vpFormTable:=Current form table
- Case of
-  //...
-    :(Form event code=On Header)
-  //A header area is about to be printed
-       Case of
-          :(Before selection($vpFormTable->))
-  //Code for the first break header goes here
-          :(Level=1)
-  //Code for a break header level 1 goes here
-          :(Level=2)
-  //Code for a break header level 2 goes here
-  //...
-       End case
-    :(Form event code=On Printing Detail)
-  //A record is about to be printed
-  //Code for each record goes here
-    :(Form event code=On Printing Break)
-  //A break area is about to be printed
-       Case of
-          :(Level=0)
-  //Code for a break level 0 goes here
-          :(Level=1)
-  //Code for a break level 1 goes here
-  //...
-       End case
-    :(Form event code=On Printing Footer)
-       If(End selection($vpFormTable->))
-  //Code for the last footer goes here
-       Else
-  //Code for a footer goes here
-       End if
- End case
+    //Método de un formulario utilizado como formulario de salida para un informe resumen
+ $vpFormTable:=Current form table
+ Case of
+  //...
+    :(Form event code=On Header)
+  //Un área de encabezado está a punto de imprimirse
+       Case of
+          :(Before selection($vpFormTable->))
+  //El código para la primera ruptura de encabezado va aquí
+          :(Level=1)
+  //El código para la ruptura de encabezado nivel 1 debe ser pasado aquí
+          :(Level=2)
+  //El código para la ruptura de encabezado nivel 2 debe ser pasado aquí
+  //...
+       End case
+    :(Form event code=On Printing Detail)
+  //Un registro está a punto de imprimirse
+  //El código para cada registro va aquí
+    :(Form event code=On Printing Break)
+  //Un área de ruptura está a punto de imprimirse
+       Case of
+          :(Level=0)
+  //El código para un nivel de ruptura 0 va aquí
+          :(Level=1)
+  //El código para un nivel de ruptura 1 va aquí
+  //...
+       End case
+    :(Form event code=On Printing Footer)
+       If(End selection($vpFormTable->))
+  //El código para el último pie de página va aquí
+       Else
+  //Código par un pie va aquí
+       End if
+ End case
 ```
 
 ## Ejemplo 4
@@ -160,7 +160,7 @@ Para ejemplos sobre cómo manejar los eventos [`On Before Keystroke`](../Events/
 Este ejemplo muestra cómo tratar de la misma manera los clics y los dobles clics en un área desplazable:
 
 ```4d
-  //asChoices scrollable area object method
+    //Método objeto para el área de desplazamiento asChoices
  Case of
     :(Form event code=On Load)
        ARRAY TEXT(asChoices;...)
@@ -168,11 +168,11 @@ Este ejemplo muestra cómo tratar de la misma manera los clics y los dobles clic
        asChoices:=0
     :((Form event code=On Clicked)|(Form event code=On Double Clicked))
        If(asChoices#0)
-  //An item has been clicked, do something here
-  //...
-       End if
-  //...
- End case
+  //Al hacer clic en un elemento, hacer algo aquí
+  //...
+       End if
+  //...
+ End case
 ```
 
 ## Ejemplo 7
@@ -180,7 +180,7 @@ Este ejemplo muestra cómo tratar de la misma manera los clics y los dobles clic
 Este ejemplo muestra cómo tratar los clics y los dobles clics utilizando una respuesta diferente. Tenga en cuenta el uso del elemento cero para realizar un seguimiento del elemento seleccionado:
 
 ```4d
-  //asChoices scrollable area object method
+  //Método de objeto de área desplazable asChoices
  Case of
     :(Form event code=On Load)
        ARRAY TEXT(asChoices;...)
@@ -190,9 +190,9 @@ Este ejemplo muestra cómo tratar los clics y los dobles clics utilizando una re
     :(Form event code=On Clicked)
        If(asChoices#0)
           If(asChoices#Num(asChoices))
-  //A new item has been clicked, do something here
+  //Se ha hecho clic en un nuevo elemento, haga algo aquí
   //...
-  //Save the new selected element for the next time
+  //Guarda el nuevo elemento seleccionado para la próxima vez
              asChoices{0}:=String(asChoices)
           End if
        Else
@@ -211,7 +211,7 @@ Este ejemplo muestra cómo tratar los clics y los dobles clics utilizando una re
 Este ejemplo muestra cómo mantener un área de información de texto de estado desde dentro de un método de formulario, utilizando los eventos [`On Getting Focus`](../Events/onGettingFocus.md) y [`On Losing Focus`](../Events/onLosingFocus.md):
 
 ```4d
-  //[Contacts];"Data Entry" form method
+  //Método formulario [Contacts];"Data Entry" form method
  Case of
     :(Form event code=On Load)
        var vtStatusArea : Text
@@ -263,7 +263,7 @@ Este ejemplo muestra cómo responder a un evento de cierre de ventana con un for
 Este ejemplo muestra cómo poner en mayúsculas un campo de texto o alfanumérico cada vez que se modifica su valor:
 
 ```4d
-  //[Contacts]First Name Object method
+  //Método Objeto [Contacts]First Name
  Case of
   //...
     :(Form event code=On Data Change)
@@ -277,7 +277,7 @@ Este ejemplo muestra cómo poner en mayúsculas un campo de texto o alfanuméric
 El siguiente ejemplo ilustra cómo gestionar una acción de borrado en una lista jerárquica:
 
 ```4d
- ... //method of hierarchical list
+ ... //Método de lista jerárquica
 :(Form event code=On Delete Action)
  ARRAY LONGINT($itemsArray;0)
  $Ref:=Selected list items(<>HL;$itemsArray;*)
@@ -307,9 +307,9 @@ En este ejemplo, el evento formulario [`On Scroll`](../Events/onScroll.md) nos p
 ```4d
  Case of
     :(Form event code=On Scroll)
-  // we take the position of the left picture
+  // tomamos la posición de la imagen izquierda
        OBJECT GET SCROLL POSITION(*;"satellite";vPos;hPos)
-  // and we apply it to the right picture
+// y la aplicamos a la imagen derecha
        OBJECT SET SCROLL POSITION(*;"plan";vPos;hPos;*)
  End case
 ```
@@ -335,9 +335,9 @@ Desea dibujar un rectángulo rojo alrededor de la celda seleccionada de un list 
        OBJECT GET COORDINATES(*;"LB1";$xlb1;$ylb1;$xlb2;$ylb2)
        $toAdd:=LISTBOX Get headers height(*;"LB1") //height of the header so as not to overlap it
        If($ylb1+$toAdd<$y1)&($ylb2>$y2) //if we are inside the list box
-  //to keep it simple, we only handle headers
-  //but we should handle horizontal clipping
-  //as well as scroll bars
+//para simplificar, sólo manejamos los encabezados
+//pero deberíamos manejar el recorte horizontal
+//así como las barras de desplazamiento
           OBJECT SET VISIBLE(*;"RedRect";True)
           OBJECT SET COORDINATES(*;"RedRect";$x1;$y1;$x2;$y2)
        Else

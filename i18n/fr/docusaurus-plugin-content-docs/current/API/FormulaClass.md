@@ -12,6 +12,12 @@ Les objets de la classe `4D.Formula` héritent de la classe [`4D.Function`](./Fu
 
 Voir les exemples dans le paragraphe [Exécution du code dans les objets Function](../API/FunctionClass.md#executing-code-in-function-objects).
 
+:::info
+
+This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
+
+:::
+
 ### Passer des paramètres aux formules
 
 Vous pouvez passer des paramètres à vos formules en utilisant une syntaxe séquentielle basée sur `$1, $2,...,$n`. La numérotation des paramètres $ représente l'ordre dans lequel ils seront passés à la formule. Par exemple, vous pouvez écrire :

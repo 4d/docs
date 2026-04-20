@@ -5,6 +5,12 @@ title: Folder
 
 Os objetos `Folder` são criados com o comando [`Folder`](../commands/folder). Contêm referências a pastas que podem ou não existir efectivamente no disco. Por exemplo, quando executa o comando ’Folder`para criar uma pasta, é criado um objeto válido`Folder` mas nada é realmente armazenado no disco até chamar a função [`folder.create()\\\`](#create).
 
+:::info
+
+This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
+
+:::
+
 ### Exemplo
 
 O exemplo seguinte cria uma pasta "JohnSmith":

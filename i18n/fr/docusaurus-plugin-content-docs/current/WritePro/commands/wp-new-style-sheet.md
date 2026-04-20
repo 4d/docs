@@ -11,13 +11,13 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres     | Type    |                             | Description                             |
-| -------------- | ------- | --------------------------- | --------------------------------------- |
-| wpDoc          | Object  | &#8594; | Document 4D Write Pro                   |
-| styleSheetType | Integer | &#8594; | Type of style sheet                     |
-| styleSheetName | Text    | &#8594; | Name of style sheet                     |
-| listLevelCount | Integer | &#8594; | Total number of levels in the hierarchy |
-| Résultat       | Object  | &#8592; | Objet feuille de style                  |
+| Paramètres     | Type    |                             | Description                                |
+| -------------- | ------- | --------------------------- | ------------------------------------------ |
+| wpDoc          | Object  | &#8594; | Document 4D Write Pro                      |
+| styleSheetType | Integer | &#8594; | Type de la feuille de style                |
+| styleSheetName | Text    | &#8594; | Nom de la feuille de style                 |
+| listLevelCount | Integer | &#8594; | Nombre total de niveaux dans la hiérarchie |
+| Résultat       | Object  | &#8592; | Objet feuille de style                     |
 
 </div>
 <!-- END REF-->
@@ -25,10 +25,10 @@ displayed_sidebar: docs
 <div class="no-index">
 <details><summary>Historique</summary>
 
-| Release  | Modifications                    |
-| -------- | -------------------------------- |
-| 4D 18    | Created                          |
-| 4D 21 R3 | *listLevelCount* parameter added |
+| Release  | Modifications                       |
+| -------- | ----------------------------------- |
+| 4D 18    | Created                             |
+| 4D 21 R3 | Ajout du paramètre *listLevelCount* |
 
 </details>
 </div>
@@ -70,7 +70,7 @@ The following predefined values are applied:
 - `wk list style type` is set to `wk decimal`
 - `wk list level index` is automatically assigned (1 for the root level, incremented for sub-levels)
 - `wk list level count` is set to the specified value for all levels
-- `wk margin left` is automatically calculated (0.75 cm × level index)
+- `wk margin left` is automatically calculated (0.75 cm × level index or 0.25 inches \* level index, depending on current layout unit): so offset may be different depending if layout unit is metric or inches (for better alignment on default with current Write ruler graduations)
 
 If the parameter is omitted or set to 0, a standard (non-list) paragraph style sheet is created.
 
@@ -129,5 +129,5 @@ Résultat:
 [Style sheets](../user-legacy/stylesheets.md)  
 [WP DELETE STYLE SHEET](../WritePro/commands/wp-delete-style-sheet)  
 [WP Get style sheet](../WritePro/commands/wp-get-style-sheet)  
-[WP Get style sheets](../commands/wp-get-style-sheets)  
-[WP IMPORT STYLE SHEETS](../commands/wp-import-style-sheets.md)
+[WP Get style sheets](../WritePro/commands/wp-get-style-sheets)  
+[WP IMPORT STYLE SHEETS](../WritePro/commands/wp-import-style-sheets)

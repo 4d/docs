@@ -5,14 +5,14 @@ slug: /commands/query-selection-by-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Syntax-->**QUERY SELECTION BY ATTRIBUTE** ( {*aTable* : Table ;}{*conjOp* : Operator ;} *objectField* : Field ; *attributePath* : Text ; *queryOp* :  Text, >, <, >=, <=, #, =, |, % ; *value* : Text, Real, Date, Time {; *} )<!-- END REF-->
+<!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Syntax-->**QUERY SELECTION BY ATTRIBUTE** ( {*aTable* : Table ;}{*conjOp* : &, \|, # ;} *objectField* : Field ; *attributePath* : Text ; *queryOp* :  Text, >, <, >=, <=, #, =, \|, % ; *value* : Text, Real, Date, Time {; *} )<!-- END REF-->
 <!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Params-->
 <div class="no-index">
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to return a selection of records, or Default table if omitted |
-| conjOp | Operator | &#8594;  | Conjunction operator to use to join multiple queries (if any) |
+| conjOp | &, \|, # | &#8594;  | Conjunction operator to use to join multiple queries (if any) |
 | objectField | Field | &#8594;  | Object field to query attributes |
 | attributePath | Text | &#8594;  | Name or path of attribute |
 | queryOp | Text, >, <, >=, <=, #, =, \|, %  | &#8594;  | Query operator (comparator) |

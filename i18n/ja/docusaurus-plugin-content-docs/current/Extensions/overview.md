@@ -18,8 +18,7 @@ title: 4D アプリケーションの拡張
 
 4D は様々なコンポーネントを4D コミュニティに対して提供しており、これは幅広い開発需要をカバーしています。 全ての4D製の コンポーネントは[**4D github repository**](https://github.com/4d) にあります。
 
-A subset of these components is listed by default in the Github panel of the [Dependency Manager](../Project/components.md#adding-a-github-dependency), including:
-including:
+これらのコンポーネントの一部は、デフォルトで[依存関係マネージャ](../Project/components.md#adding-a-github-dependency), に登録されています。具体的には以下の通りです:
 
 | コンポーネント               | Github リポジトリ                                                                | 説明                                                                   | 主な機能                                                                                                                                    |
 | --------------------- | --------------------------------------------------------------------------- | -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |

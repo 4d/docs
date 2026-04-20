@@ -7,7 +7,7 @@ A `4D.Method` object contains a piece of code that is created from text source a
 
 Un objeto `4D.Method` se crea con la función `4D.Method.new()`.
 
-`4D.Method` objects inherit from the [`4D.Function`](./FunctionClass.md) class. Así, para ejecutar el objeto método, puede:
+Los objetos `4D.Method` heredan de la clase [`4D.Function`](./FunctionClass.md). Así, para ejecutar el objeto método, puede:
 
 - store a `4D.Method` object in an object property and use the `()` operator after the property name,
 - o llamar directamente al objeto `4D.Method` usando la función [`call()`](#call) o [`apply()`](#apply) en él.
@@ -17,6 +17,12 @@ Ver ejemplos en el párrafo [Ejecución de código en los objetos Function](../A
 :::tip Entrada de blog relacionada
 
 [Execute Code from Text with 4D.Method](https://blog.4d.com/execute-code-from-text-with-4d-method)
+
+:::
+
+:::info
+
+This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
 
 :::
 

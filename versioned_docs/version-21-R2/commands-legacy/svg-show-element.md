@@ -5,14 +5,14 @@ slug: /commands/svg-show-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG SHOW ELEMENT.Syntax-->**SVG SHOW ELEMENT** ( {* ;} *pictureObject* : Picture ; *id* : Text {; *margin* : Integer} )<!-- END REF-->
+<!--REF #_command_.SVG SHOW ELEMENT.Syntax-->**SVG SHOW ELEMENT** ( * ; *pictureObject* : Text ; *id* : Text {; *margin* : Integer} )<br/>**SVG SHOW ELEMENT** ( *pictureObject* : Variable, Field ; *id* : Text {; *margin* : Integer} )<!-- END REF-->
 <!--REF #_command_.SVG SHOW ELEMENT.Params-->
 <div class="no-index">
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, pictureObject is an object name (string) <br/>If omitted, pictureObject is a variable |
-| pictureObject | Picture | &#8594;  | Object name (if * specified) or <br/>Variable or field (if * omitted) |
+| pictureObject | Text, Variable, Field | &#8594;  | Object name (if * specified) or <br/>Variable or field (if * omitted) |
 | id | Text | &#8594;  | ID attribute of element to display |
 | margin | Integer | &#8594;  | Margin of visibility (in pixels by default) |
 </div>

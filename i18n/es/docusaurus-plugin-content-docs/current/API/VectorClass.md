@@ -7,6 +7,12 @@ La clase `Vector` permite manejar **vectores** y ejecutar cálculos de distancia
 
 En el mundo de las IA, un vector es una secuencia de números que permite a una máquina comprender y manipular datos complejos. Para una visión detallada del papel de los vectores con las IAs, puede consultar [esta página](https://aiforsocialgood.ca/blog/understanding-the-role-of-vectors-in-artificial-intelligence-a-comprehensive-guide).
 
+:::info
+
+This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
+
+:::
+
 ### Comprender los diferentes cálculos vectoriales
 
 La clase `4D.Vector` propone tres tipos de cálculos vectoriales. La siguiente tabla resume las principales características de cada uno:

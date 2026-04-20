@@ -5,13 +5,21 @@ title: Release Notes
 
 ## 4D 21 R3
 
+Read [**What’s new in 4D 21 R3**](https://blog.4d.com/whats-new-in-4d-21-r3/), the blog post that lists all new features and enhancements in 4D 21 R3.
+
 #### Highlights
 
 - The [`JSON Validate`](../commands/json-validate) command now supports of JSON Schema draft 2020-12. 
 - 4D Write Pro now supports [hierarchical list style sheets](../WritePro/user-legacy/stylesheets.md#hierarchical-list-style-sheets), enabling the creation and management of structured [multi-level lists](../WritePro/user-legacy/using-a-4d-write-pro-area.md#multi-level-lists) with automatic numbering.
 - Ability to use a custom certificate from the macOS keychain instead of a local certificates folder in [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) and [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) classes. 
 - New [`4D.Method` class](../API/MethodClass.md) to create and execute a 4D method code from text source. [`METHOD Get path`](../commands/method-get-path) and [`METHOD RESOLVE PATH`](../commands/method-resolve-path) commands support a new `path volatile method` constant (128).
+- IMAP transporter now supports mailbox event notifications using the IDLE protocol through a [notifier object](../API/IMAPTransporterClass.md#notifier) of the [4D.IMAPNotifier](../API/IMAPNotifier.md) class, configurable via the `listener` property of [IMAP New transporter](../commands/imap-new-transporter).
 - Remote [session](../API/SessionClass.md) objects are now [available client-side](../Desktop/sessions.md#availability).
+- New [**AI** page in Settings](../settings/ai.md), allowing to configure [Provider model aliases](../aikit/provider-model-aliases.md) that can be called in the code using 4D AIKit component. 
+- 4D AIKit component: new [Providers](../aikit/Classes/OpenAIProviders.md) class to instantiate and handle [Provider and model aliases](../aikit/provider-model-aliases.md). 
+- Support of [`server` keyword](../Concepts/classes.md#server) for ORDA data model functions and shared/session singleton functions. 
+- Dependencies: support of [components stored on GitLab repositories](../Project/components.md#configuring-a-gitlab-repository).
+
 
 
 #### Support of Liquid glass on macOS
@@ -25,8 +33,10 @@ title: Release Notes
 
 - The [`JSON Validate`](../commands/json-validate) command now takes the *$schema* key into account and generates an error if a non-supported version is declared in the schema. 
 - For clarity, formula objects are now instances of a new [`4D.Formula`](../API/FormulaClass.md) class that inherits from the generic [`4D.Function`](../API/FunctionClass.md) class.
-- The "PHP" page has been removed from the [Settings dialog box](../settings/overview.md). Use the [PHP selectors with the `SET DATABASE PARAMETER`](../commands/set-database-parameter#php-interpreter-ip-address-55) command to configure a PHP interpeter. 
-- The **Legacy** network layer is no longer supported as of 4D 21 R3. Projects and binary databases that were using the Legacy network layer are automatically set to [**ServerNet**](../settings/client-server.md#network-layer) when upgraded to 4D 21 R3 and higher. 
+- In 4D 21 R3, new improvements to the [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) apply to language commands (see [this blog post](https://blog.4d.com/enhancement-of-command-syntax-checking-in-the-editor)). Syntax errors that were previously undetected may now be flagged in your code. 
+- The "PHP" page has been removed from the [Settings dialog box](../settings/overview.md). Use the [PHP selectors with the `SET DATABASE PARAMETER`](../commands/set-database-parameter#php-interpreter-ip-address-55) command to configure a PHP interpreter. 
+- The **Legacy** network layer is no longer supported. Projects and binary databases that were using the Legacy network layer are automatically set to [**ServerNet**](../settings/client-server.md#network-layer) when upgraded to 4D 21 R3 and higher. 
+
 
 ## 4D 21 R2
 
@@ -34,7 +44,7 @@ Read [**What’s new in 4D 21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/),
 
 #### Highlights
 
-- [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) has been enhanced to provide greater precision in error detection (see [this blog post](https://blog.4d.com/better-error-handling-and-type-inference-for-4d-developers) for more information).
+- The [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) has been enhanced to provide greater precision in error detection (see [this blog post](https://blog.4d.com/better-error-handling-and-type-inference-for-4d-developers) for more information).
 - [4D Write Pro standard actions](../WritePro/user-legacy/standard-actions.md) that apply [lists](../WritePro/user-legacy/using-a-4d-write-pro-area.md#lists) now automatically adjust paragraph margins to keep markers positioned inside it.
 - Built-in support of `order by` in query strings for AI vector searches using [`query()`](../API/DataClassClass.md#query-by-vector-similarity) functions and the [REST API](../REST/$orderby.md).
 - You can now create and open Qodly Pages from the [Explorer](../Develop/explorer.md).

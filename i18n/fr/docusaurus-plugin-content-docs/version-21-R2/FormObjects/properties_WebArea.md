@@ -89,8 +89,8 @@ Cette option vous permet de choisir entre deux moteurs de rendus pour la zone We
 
 Le moteur CEF a les limitations suivantes :
 
-- [`WA SET PAGE CONTENT`](../commands-legacy/wa-set-page-content.md): using this command requires that at least one page is already loaded in the area (through a call to [`WA OPEN URL`](../commands-legacy/wa-open-url.md) or an assignment to the URL variable associated to the area).
-- When URL drops are enabled by the `WA enable URL drop` selector of the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command, the first drop must be preceded by at least one call to [`WA OPEN URL`](../commands-legacy/wa-open-url.md) or one assignment to the URL variable associated to the area.
+- [`WA SET PAGE CONTENT`](../commands-legacy/wa-set-page-content.md) : pour utiliser cette commande, il faut qu'au moins une page soit déjà chargée dans la zone (par un appel à [`WA OPEN URL`](../commands-legacy/wa-open-url.md) ou par une affectation à la variable URL associée à la zone).
+- Lorsque les dépôts d'URL sont activés par le sélecteur `WA enable URL drop` de la commande [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md), le premier dépôt doit être précédé d'au moins un appel à [`WA OPEN URL`](../commands-legacy/wa-open-url.md) ou d'une assignation à la variable URL associée à la zone.
 
 :::note
 

@@ -9,7 +9,6 @@ displayed_sidebar: docs
 
 |Release|Mofifications|
 |---|---|
-|21|Suppression du traitement spécifique des process locuax|
 
 </details>
 
@@ -34,6 +33,7 @@ displayed_sidebar: docs
 
 |Version|Changements|
 |---|---|
+|21|Suppression du traitement des process locaux ($ dans le nom est ignoré)|
 |16 R4|Modifié|
 |2004.3|Modifié|
 |<6|Créé|

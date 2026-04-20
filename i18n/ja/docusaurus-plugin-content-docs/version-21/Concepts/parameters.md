@@ -180,30 +180,30 @@ Function square($x : Integer) -> $result : Integer
    return $x * $x
 ```
 
-`return`文は、[戻り値](#戻り値) の標準的なシンタックスと併用することができます (戻り値は宣言された型でなくてはなりません)。  When you have declared a return parameter (e.g. `myFunction() -> $myReturnValue : Text`), `return $x` implicitely executes `$myReturnValue:=$x`, and returns to the caller. Keep in mind that it ends immediately the code execution. Examine the following examples:
+`return`文は、[戻り値](#戻り値) の標準的なシンタックスと併用することができます (戻り値は宣言された型でなくてはなりません)。  戻り値の宣言していた場合(例: `myFunction() -> $myReturnValue : Text`)、 `return $x` は暗示的に `$myReturnValue:=$x` を実行し、呼び出し元に戻ります。 この場合、コード実行は直ちに終了されるという点に注意してください。 以下の例で詳しく見てみましょう:
 
 ```4d
 Function getValue -> $v : Integer
 	$v:=10
 	return
-	// function returns 10
+	// 関数は 10 を返す
 	
 Function getValue -> $v : Integer
 	$v:=10
 	return 20
-	// function returns 20
+	// 関数は 20 を返す
 
 Function getValue -> $v : Integer
 	return 10
 	$v:=20 // never executed
-	// function returns 10
+	// 関数は 10 を返す
 
 Function getValue -> $v : Integer
-	return "Hello" //error
+	return "Hello" // エラー
 
 Function returnHello
 	return "Hello"
-	// function returns "Hello"
+	// 関数は "Hello" を返す
 ```
 
 ## 引数の間接参照 (${N})

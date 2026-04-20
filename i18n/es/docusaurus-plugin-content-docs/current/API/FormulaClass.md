@@ -12,6 +12,12 @@ Los objetos de la clase `4D.Formula` heredan de la clase [`4D.Function`](./Funct
 
 Ver ejemplos en el párrafo [Ejecución de código en los objetos Function](../API/FunctionClass.md#executing-code-in-function-objects).
 
+:::info
+
+This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
+
+:::
+
 ### Pasar parámetros a fórmulas
 
 Puede pasar parámetros a sus fórmulas utilizando una sintaxis secuencial de parámetros basada en `$1, $2,...,$n`. La numeración de los parámetros $ representa el orden en que se pasarán a la fórmula. Por ejemplo, puede escribir:
@@ -94,7 +100,7 @@ Los parámetros se reciben en el método, en el orden en que se especifican en l
 ```4d
  var $f : 4D.Formula
  $f:=Formula(Uppercase($1))
- $result:=$f.call(Null;"hello") // returns "HELLO"
+ $result:=$f.call(Null;"hello") // devuelve "HELLO"
 ```
 
 #### Ejemplo 2

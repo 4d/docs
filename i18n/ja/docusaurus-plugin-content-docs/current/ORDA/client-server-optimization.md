@@ -141,3 +141,55 @@ title: クライアント/サーバーの最適化
 - [dataClass.getRemoteCache()](../API/DataClassClass.md#getremotecache)
 - [dataClass.clearRemoteCache()](../API/DataClassClass.md#clearremotecache)
 
+### `local` キーワードの使用
+
+By default, [ORDA data model functions](../ORDA/ordaClasses.md) are executed on the server, which usually provides the best performance since only the function request and the result are sent over the network. However, it could happen that a function processes data that's already in the local cache and is fully executable on the client side. In this case, you can save requests to the server and thus, enhance the application performance by [using the `local` keyword in the function definition](../Concepts/classes.md#local).
+
+最終的にサーバーへのアクセスが必要になっても (ORDAキャッシュが有効期限切れになった場合など) 関数は動作します。 もっとも、それではローカル実行によるパフォーマンスの向上は見込めないため、ローカル関数がサーバー上のデータにアクセスしないことを確認しておくことが推奨されます。 サーバーに対して複数のリクエストをおこなうローカル関数は、サーバー上で実行されて結果だけを返す関数よりも非効率的です。 たとえば、Schools Entityクラスの次の関数を考えます:
+
+```4d
+// Get the youngest students  
+// Inappropriate use of local keyword
+local Function getYoungest() : Object
+    return This.students.query("birthDate >= :1"; !2000-01-01!).orderBy("birthDate desc").slice(0; 5)
+```
+
+- `local` キーワードを **使わない** 場合、1つのリクエストで結果が得られます。
+- `local` キーワードを **使う** 場合、4つのリクエストが必要になります: Schools エンティティの students エンティティセレクションの取得、`query()` の実行、`orderBy()` の実行、`slice()` の実行。 この例では、`local` キーワードを使用するのは適切ではありません。
+
+#### Example: Checking attributes
+
+クライアントにロードされ、ユーザーによって更新されたエンティティの属性について、サーバーへ保存リクエストを出すまえに、それらの一貫性を検査します。
+
+*StudentsEntity* クラスのローカル関数 `checkData()` は生徒の年齢をチェックします:
+
+```4d
+Class extends Entity
+
+local Function checkData() -> $status : Object
+
+$status:=New object("success"; True)
+Case of
+    : (This.age()=Null)
+        $status.success:=False
+        $status.statusText:="The birthdate is missing"
+
+    :((This.age() <15) | (This.age()>30) )
+        $status.success:=False
+        $status.statusText:="The student must be between 15 and 30 - This one is "+String(This.age())
+End case
+```
+
+呼び出し元のコード:
+
+```4d
+var $status : Object
+
+// Form.student は全属性とともにロードされており、フォーム上で更新されました
+$status:=Form.student.checkData()
+If ($status.success)
+    $status:=Form.student.save() // サーバーを呼び出します
+End if
+```
+
+

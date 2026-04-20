@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 ## Descripción
 
-The **Command name** command <!--REF #_command_.Command name.Summary-->returns the name as well as (optionally) the properties of the command whose command number you pass in *command*.<!-- END REF-->El número de cada comando se indica tanto en el explorador como en el área Propiedades de esta documentación.
+El comando **Command name** <!--REF #_command_.Command name.Summary-->devuelve el nombre así como (opcionalmente) las propiedades del comando cuyo número de comando pasa en *command*.<!-- END REF-->El número de cada comando se indica tanto en el explorador como en el área Propiedades de esta documentación.
 
 **Nota de compatibilidad:** el nombre de un comando puede variar de una versión 4D a la siguiente (comandos renombrados), este comando se utilizaba en versiones anteriores para designar un comando directamente mediante su número, especialmente en porciones de código no tokenizadas. Esta necesidad ha disminuido con el tiempo a medida que 4D sigue evolucionando porque, para las sentencias no tokenizadas (fórmulas), 4D ahora ofrece una sintaxis con tokens. Esta sintaxis le permite evitar posibles problemas debidos a las variaciones en los nombres de los comandos y otros elementos, como las tablas, sin dejar de poder escribir estos nombres de forma legible (para más información, consulte la sección *Utilización de tokens en las fórmulas*). Tenga en cuenta también que la opción \*[Usar parámetros del sistema regional\* de las Preferencias](../Preferences/methods.md#4d-programming-language-use-regional-system-settings) le permite seguir usando el idioma francés en una versión francesa de 4D.
 
@@ -60,13 +60,13 @@ El siguiente código permite cargar todos los comandos 4D válidos en un array:
  Repeat
     $Lon_id:=$Lon_id+1
     $Txt_command:=Command name($Lon_id)
-    If(OK=1) //command number exists
-       If(Length($Txt_command)>0) //command is not disabled
+    If(OK=1) //el número de comando existe
+       If(Length($Txt_command)>0) //el comando no está desactivado
           APPEND TO ARRAY($tTxt_commands;$Txt_command)
           APPEND TO ARRAY($tLon_Command_IDs;$Lon_id)
        End if
     End if
- Until(OK=0) //end of existing commands
+ Until(OK=0) //fin de los comandos existentes
 ```
 
 ## Ejemplo 2
@@ -94,12 +94,12 @@ En la versión inglesa de 4D, la lista desplegable leerá: Sum, Average, Min y M
 Quiere crear un método que devuelva **True** si el comando, cuyo número se pasa como parámetro, es hilo seguro, y **False** en caso contrario.
 
 ```4d
-  //Is_Thread_Safe project method
+  //Método proyecto Is_Thread_Safe
  #declare($command : Integer) : Boolean
  var $threadsafe : Integer
  var $name; $theme : Text
  $name:=Command name($command;$threadsafe;$theme)
- If($threadsafe ?? 0) //if the first bit is set to 1
+ If($threadsafe ?? 0) //si el primer bit es 1
     return True
  Else
     return False
@@ -125,11 +125,11 @@ var $deprecated : Collection
 Repeat
     $Lon_id:=$Lon_id+1
     $Txt_command:=Command name($Lon_id;$info)
-    If($info ?? 1) //the second bit is set to 1
-            //then the command is deprecated
+    If($info ?? 1) //el segundo bit está a 1
+            //entonces el comando es obsoleto
         $deprecated.push($Txt_command)
     End if
-Until(OK=0) //end of existing commands
+Until(OK=0) //fin de los comandos existentes
 
 ```
 

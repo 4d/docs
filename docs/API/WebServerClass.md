@@ -6,13 +6,16 @@ title: WebServer
 
 The `WebServer` class API allows you to start and monitor a web server for the main (host) application as well as each hosted component (see the [Web Server object](WebServer/webServerObject.md) overview). This class is available from the `4D` class store.
 
+### Properties
+
+- **Streamable**: no
+- **Sharable**: no
+
 ### Web Server object
 
 Web server objects are instantiated with the [`WEB Server`](../commands/web-server) command.
 
 They provide the following properties and functions:
-
-### Summary
 
 ||
 |---|

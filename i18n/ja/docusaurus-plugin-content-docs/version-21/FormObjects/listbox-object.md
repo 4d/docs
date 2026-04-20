@@ -168,9 +168,10 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | On Mouse Move        | <ul><li>[area](#additional-properties)</li><li>[areaName](#additional-properties)</li><li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li></ul> |                                                                                                                              |
 | On Open Detail       | <ul><li>[row](#additional-properties)</li></ul>                                                                                                                                                                         | *カレントセレクション&命名セレクションリストボックスのみ*                                                                           |
 | On Row Moved         | <ul><li>[newPosition](#additional-properties)</li><li>[oldPosition](#additional-properties)</li></ul>                                                                                                                   | *配列リストボックスのみ*                                                                                                                |
-| On Selection Change  |                                                                                                                                                                                                                         |                                                                                                                              |
 | On Scroll            | <ul><li>[horizontalScroll](#additional-properties)</li><li>[verticalScroll](#additional-properties)</li></ul>                                                                                                           |                                                                                                                              |
+| On Selection Change  |                                                                                                                                                                                                                         |                                                                                                                              |
 | On Unload            |                                                                                                                                                                                                                         |                                                                                                                              |
+| On Validate          |                                                                                                                                                                                                                         |                                                                                                                              |
 
 ### 追加プロパティ {#additional-properties}
 
@@ -194,5 +195,6 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | verticalScroll   | longint | 下方向スクロールの場合は正の数値、上方向の場合は負の数値                                     |
 
 > "偽" カラムや存在しないカラムにてイベントが発生した場合には、主に空の文字列が返されます。
+
 
 

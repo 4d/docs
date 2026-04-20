@@ -39,6 +39,12 @@ $hello:=$person.sayHello() //"Hello John Doe"
 
 Class files are managed through the 4D Explorer (see [Creating classes](../Project/code-overview.md#creating-classes)).
 
+#### Eliminação de uma classe
+
+To delete an existing class, select it in the Explorer and click ![](../assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu.
+
+You can also remove the .4dm class file from the "Classes" folder on your disk.
+
 ## Lojas de classe
 
 As classes disponíveis são acessíveis a partir das suas class stores. Estão disponíveis duas class stores:
@@ -46,7 +52,7 @@ As classes disponíveis são acessíveis a partir das suas class stores. Estão 
 - [`cs`](../commands/cs) para o class store de usuário
 - [`4D`](../commands/4d) para o class store integrado
 
-### `cs`
+#### `cs`
 
 <!-- REF #_command_.cs.Syntax -->**cs** : Object<!-- END REF -->
 
@@ -71,7 +77,7 @@ Se quiser criar uma nova instância de um objecto de `myClass`:
 $instance:=cs.myClass.new()
 ```
 
-### `4D`
+#### `4D`
 
 <!-- REF #_command_.4D.Syntax -->**4D** : Object <!-- END REF -->
 
@@ -99,7 +105,7 @@ $key:=4D. CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 Você deseja listar as classes 4D integradas:
 
 ```4d
- var $keys : collection
+ var $keys : Collection
  $keys:=OB Keys(4D)
  ALERT("There are "+String($keys.length)+" built-in classes.")
 ```
@@ -142,7 +148,7 @@ As palavras-chave 4D específicas podem ser utilizadas nas definições de class
 #### Sintaxe
 
 ```4d
-{shared} Function <name>({$parameterName : type; ...}){->$parameterName : type}
+{local | server} {shared} Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // code
 ```
 
@@ -155,6 +161,8 @@ Não existe uma palavra-chave final para o código de função. A linguagem 4D d
 As funções de classe são propriedades específicas da classe. Eles são objetos da classe [4D.Function](API/FunctionClass.md). No arquivo de definição de classe, as declarações de funções usam a palavra-chave `Function` seguida pelo nome da função.
 
 Usando a palavra-chave `compartilhado` cria uma **classe compartilhada**, usada apenas para instanciar objetos compartilhados. Para obter mais informações, consulte o parágrafo [Shared functions](#shared-functions) abaixo.
+
+In the context of a client/server application, the `local` or `server` keyword allows you to specify on which machine the function must be executed. These keywords can only be used with ORDA data model functions and shared/session singleton functions. For more information, refer to the [local and server functions](#local-and-server) paragraph below.
 
 O nome da função deve estar em conformidade com as [regras de nomenclatura de objetos](Concepts/identifiers.md#object-properties).
 
@@ -446,13 +454,13 @@ $o.age:="Smith"  //error com a sintaxe checada
 #### Sintaxe
 
 ```4d
-{shared} Function get <name>()->$result : type
-// código
+{local | server} {shared} Function get <name>()->$result : type
+// code
 ```
 
 ```4d
-{shared} Function set <name>($parameterName : type)
-// código
+{local | server} {shared} Function set <name>($parameterName : type)
+// code
 ```
 
 `Function get` e `Function set` são acessores que definem **propriedades computadas** na classe. Uma propriedade calculada é uma propriedade nomeada com um tipo de dados que oculta um cálculo. Quando um valor de propriedade computado é acessado, 4D substitui o código do acessor correspondente:
@@ -477,6 +485,8 @@ No arquivo de definição de classe, as declarações de propriedade computadas 
 Quando ambas as funções são definidas, a propriedade computada é **read-write**. Se apenas uma `Function get` for definida, a propriedade computada será **somente leitura**. Neste caso, é devolvido um erro se o código tentar modificar a propriedade. Neste caso, é devolvido um erro se o código tentar modificar a propriedade.
 
 Se as funções forem declaradas em uma [classe compartilhada](#shared-classes), você poderá usar a palavra-chave `shared` com elas para que possam ser chamadas sem a estrutura [`Use...End use`](shared.md#useend-use). Para obter mais informações, consulte o parágrafo [Shared functions](#shared-functions) abaixo.
+
+In the context of a client/server application, the `local` or `server` keyword allows you to specify on which machine the function must be executed. These keywords can only be used with ORDA data model functions and shared/session singleton functions. For more information, refer to the [local and server functions](#local-and-server) paragraph below.
 
 O tipo da propriedade calculada é definido pela declaração de tipo `$return` do *getter*. Pode ser de qualquer [tipo de propriedade válida](dt_object.md).
 
@@ -610,10 +620,6 @@ $val:=$o.f() //8
 ```
 
 Para obter mais detalhes, consulte a descrição do comando [`This`](../commands/this).
-
-## Comandos de classe
-
-Vários comandos da linguagem 4D permitem-lhe lidar com funcionalidades de classe.
 
 ### `OB Class`
 
@@ -829,7 +835,182 @@ $myList := cs.ItemInventory.me.itemList
 
 ```
 
-#### Veja também
+:::tip Related blog posts
 
-[Singletons em 4D](https://blog.4d.com/singletons-in-4d) (postagem no blog) <br/> [Session Singletons](https://blog.4d.com/introducing-session-singletons) (postagem no blog).
+[Singletons in 4D](https://blog.4d.com/singletons-in-4d)  
+[Session Singletons](https://blog.4d.com/introducing-session-singletons)
+
+:::
+
+## `local` and `server`
+
+In [client/server architecture](../Desktop/clientServer.md), `local` and `server` keywords allow you to specify where you want the function to be executed: client-side, or server-side. Controlling the execution location is useful for performance reasons or to implement business logic features.
+
+A sintaxe formal é:
+
+```4d
+// declare a function to execute on a client in client/server
+local Function <functionName>   
+```
+
+```4d
+// declare a function to execute on the server in client/server
+server Function <functionName>   
+```
+
+`local` and `server` keywords are only available for the functions of the following classes:
+
+- [ORDA data model](../ORDA/ordaClasses.md) classes
+- [shared or session singleton](#singleton-classes) classes.
+
+:::tip Related blog post
+
+[A new way to execute business logic on the server](https://blog.4d.com/a-new-way-to-execute-business-logic-on-the-server)
+
+:::
+
+### Visão Geral
+
+Supported functions have a **default execution location** when no location keyword is used. You can nevertheless insert a `local` or `server` keyword to modify the execution location, or to make the code more explicit.
+
+| Supported functions                               | Default execution | with `local` keyword                                           | with `server` keyword                                                                                                                                                                       |
+| ------------------------------------------------- | ----------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [ORDA data model](../ORDA/ordaClasses.md)         | on Server         | The function is executed on the client if called on the client |                                                                                                                                                                                             |
+| [Shared or session singleton](#singleton-classes) | Local             |                                                                | The function is executed on the server on the server instance of the singleton. <br/>If there is no instance of the singleton on the server, it is created. |
+
+If `local` and `server` keywords are used in another context, an error is returned.
+
+:::note
+
+For a overall description of where code is actually executed in client/server, please refer to [this section](../Desktop/clientServer.md#code-execution-location).
+
+::::
+
+### `local`
+
+In a [client/server architecture](../Desktop/clientServer.md), the `local` keyword specifies that the function must be executed **on the machine from where it is called**.
+
+:::note Reminder
+
+The `local` keyword is useless for [shared or session singleton functions](#singleton-classes), which are executed locally by default.
+
+:::
+
+By default, [ORDA data model functions](../ORDA/ordaClasses.md) are executed on the server. Normalmente, proporciona o melhor desempenho, uma vez que apenas o pedido de função e o resultado são enviados através da rede. However, [for optimization reasons](../ORDA/client-server-optimization.md#using-the-local-keyword), you could want to execute a data model function on client. You can then use the `local` keyword.
+
+#### Example: Calculating age
+
+Dada uma entidade com um atributo de *data de nascimento*, queremos definir uma função `idade()` que seria chamada em uma caixa de lista. Esta função pode ser executada no cliente, o que evita desencadear um pedido ao servidor para cada linha da caixa de listagem.
+
+Na classe StudentsEntity:
+
+```4d
+Class extends Entity
+
+local Function age() -> $age: Variant
+
+If (This.birthDate#!00-00-00!)
+    $age:=Year of(Current date)-Year of(This.birthDate)
+Else
+    $age:=Null
+End if
+```
+
+### `server`
+
+In a [client/server architecture](../Desktop/clientServer.md), the `server` keyword specifies that the function must be executed **on the server side**.
+
+:::note Lembrete
+
+The `server` keyword is useless for [ORDA data model functions](../ORDA/ordaClasses.md), which are executed on the server by default.
+
+:::
+
+`server` function parameters and result must be [**streamable**](./dt_object.md#streaming-support). For example, [4D.Datastore](../API/DataStoreClass.md), [File handle](../API/FileHandleClass.md), or [WebServer](../API/WebServerClass.md) are non-streamable classes but [4D.File](../API/FileClass.md) is streamable.
+
+This feature is particularly useful in the context of [remote user sessions](../Desktop/sessions.md#remote-user-sessions), allowing you to implement the business logic in a [session singleton](#shared-or-session-singleton-functions) to share it accross all the processes of the session, thus extending the functionalities of the [`Session`](../commands/session) command. In this case, you might want the relevant business logic to be executed **on the server** so that all the session information is gathered on the server.
+
+By default, shared or session singleton functions are executed locally. Adding the `server` keyword in the class function definition makes 4D use the singleton instance on the server. Note that this can result of an instantiation of the singleton on the server if no instance exists yet.
+
+For [sessions singletons](#singleton-classes), the function is executed on the server in the corresponding singleton instance, i.e. the instance of the singleton for the current session.
+
+:::note
+
+If you declare a `server Function` in a shared singleton, then:
+
+- you instantiate a singleton *S1* on the client (named *s1*),
+- you run *s1.function()* on the client.
+
+If no instance of *S1* exists on the server at that moment, *S1* is instantiated on the server (the constructor is executed), and *function()* runs on that server instance. As a result, two instances of *S1* can coexist (client-side and server-side), with distinct property values. In this case, *s1.property* is always accessed locally. It cannot be accessed on the server, for example from server-side code using direct dot notation (an error is returned).
+
+:::
+
+#### Example: Administration singleton
+
+The *Administration* shared singleton has a "server" function running the [`Process activity`](../commands/process-activity) command. This singleton is instantiated on a remote 4D but the function returns the server activity on the server.
+
+```4d
+  // Administration class
+
+shared singleton Class constructor
+
+  // This function is executed on the server
+server Function processActivity() : Object
+  return Process activity
+
+
+Function localProcessActivity() : Object
+  return Process activity
+```
+
+Code running on the client:
+
+```4d
+var $localActivity; $serverActivity : Object
+var $administration : cs.Administration
+
+// The Administration singleton is instantiated on the 4D Client
+$administration:=cs.Administration.me
+
+// Get processes running on the remote 4D
+$localActivity:=$administration.localProcessActivity()
+
+// Get processes and sessions running on 4D Server
+$serverActivity:=$administration.processActivity()
+
+```
+
+#### Example: Session singleton
+
+You store your users in a Users table and handle a custom authentication. You use a session singleton for the authentication:
+
+```4d
+// UserSession session singleton class
+
+server Function checkUser($credentials : Object) : Boolean
+	
+var $user : cs.UsersEntity
+var $result:=False
+	
+If ($credentials#Null)
+	$user:=ds.Users.query("Email === :1"; $credentials.identifier).first()
+		
+	If (($user#Null) && (Verify password hash($credentials.password; $user.Password)))
+		Use (Session.storage)
+			Session.storage.userInfo:=New shared object("userId"; $user.ID)
+		End use 
+			
+		$result:=True
+	End if 
+End if 
+	
+return $result
+```
+
+To provide the current user to 4D clients, the singleton exposes a user computed property got from the server:
+
+```4d
+server Function get user() : cs.UsersEntity
+	return ds.Users.get(Session.storage.userInfo.userId)
+```
 

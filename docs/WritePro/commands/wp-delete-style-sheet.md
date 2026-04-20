@@ -24,8 +24,8 @@ displayed_sidebar: docs
 
 |Release|Changes|
 |---|---|
-|4D 18|Created|
 |4D 21 R3|*listLevelIndex* parameter added|
+|4D 18|Created|
 
 </details>
 </div>
@@ -54,7 +54,16 @@ The command performs no action if the specified level does not exist, or if the 
 
 **Note**: The default ("Normal") style sheet can not be deleted.
 
-## Example
+## Example 1
+
+To delete a character style sheet "MyCharStyle":
+
+```4d
+WP DELETE STYLE SHEET(wpArea; "MyCharStyle")
+```
+
+
+## Example 2
 
 The following example deletes the second level of a hierarchical list style sheet:
 

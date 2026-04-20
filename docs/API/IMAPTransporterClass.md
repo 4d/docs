@@ -31,7 +31,8 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](../com
 |[<!-- INCLUDE #IMAPTransporterClass.getMIMEAsBlob().Syntax -->](#getmimeasblob)<br/><!-- INCLUDE #IMAPTransporterClass.getMIMEAsBlob().Summary -->|
 |[<!-- INCLUDE #transporter.host.Syntax -->](#host)<br/><!-- INCLUDE #transporter.host.Summary -->|
 |[<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<br/><!-- INCLUDE #transporter.logFile.Summary -->|
-|[<!-- INCLUDE #IMAPTransporterClass.move().Syntax -->](#move)<br/><!-- INCLUDE #IMAPTransporterClass.move().Summary -->|
+|[<!-- INCLUDE #IMAPTransporterClass.move().Syntax -->](#move)<br/><!-- INCLUDE #IMAPTransporterClass.move().Summary -->|  
+|[<!-- INCLUDE #IMAPTransporterClass.notifier.Syntax -->](#notifier)<br/><!-- INCLUDE #IMAPTransporterClass.notifier.Summary -->|
 |[<!-- INCLUDE #IMAPTransporterClass.numToID().Syntax -->](#numtoid)<br/><!-- INCLUDE #IMAPTransporterClass.numToID().Summary -->|
 |[<!-- INCLUDE #IMAPTransporterClass.removeFlags().Syntax -->](#removeflags)<br/><!-- INCLUDE #IMAPTransporterClass.removeFlags().Summary -->|
 |[<!-- INCLUDE #IMAPTransporterClass.renameBox().Syntax -->](#renamebox)<br/><!-- INCLUDE #IMAPTransporterClass.renameBox().Summary -->|
@@ -53,7 +54,7 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](../com
 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|server|Object|->|Mail server information|
+|parameter|Object|->|Mail server configuration|
 |Result|4D.IMAPTransporter|<-|[IMAP transporter object](#imap-transporter-object)|
 </div>
 <!-- END REF -->
@@ -1158,6 +1159,7 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 <!-- INCLUDE transporter.logFile.Desc -->
 
 <!-- REF IMAPTransporterClass.move().Desc -->
+
 ## .move()
 
 <details><summary>History</summary>
@@ -1258,6 +1260,19 @@ To move all messages in the current mailbox:
   // move all messages in the current mailbox to the "documents" mailbox
  $status:=$transporter.move(IMAP all;"documents")
 ```
+
+<!-- END REF -->
+  
+  <!-- REF IMAPTransporterClass.notifier.Desc -->
+## .notifier
+
+<!-- REF #IMAPTransporterClass.notifier.Syntax -->**.notifier** : 4D.IMAPNotifier<!-- END REF -->
+
+#### Description
+
+The `.notifier` property <!-- REF #IMAPTransporterClass.notifier.Summary -->contains the IMAPNotifier object associated with the transporter<!-- END REF -->. This property is **read-only**.
+
+See [IMAPNotifier](./IMAPNotifierClass.md).
 
 <!-- END REF -->
 

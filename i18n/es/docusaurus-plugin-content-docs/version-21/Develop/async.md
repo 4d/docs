@@ -30,14 +30,14 @@ La ejecución asíncrona se utiliza cuando:
 
 Elegir entre ejecución síncrona y asíncrona:
 
-| Scenario                                               | Mejor enfoque    |
-| ------------------------------------------------------ | ---------------- |
-| Operaciones rápidas con un procesamiento mínimo        | **Síncrono**     |
-| Tareas que requieren un orden de ejecución estricto    | **Síncrono**     |
-| Tareas en segundo plano de larga duración              | **Asynchronous** |
-| Long-running UI interactions                           | **Asynchronous** |
-| Interacciones de interfaz de usuario de corta duración | **Síncrono**     |
-| Cargas de trabajo multihilo de alto rendimiento        | **Asynchronous** |
+| Scenario                                               | Mejor enfoque |
+| ------------------------------------------------------ | ------------- |
+| Operaciones rápidas con un procesamiento mínimo        | **Síncrono**  |
+| Tareas que requieren un orden de ejecución estricto    | **Síncrono**  |
+| Tareas en segundo plano de larga duración              | **Asíncrono** |
+| Interacciones de interfaz de usuario de larga duración | **Asíncrono** |
+| Interacciones de interfaz de usuario de corta duración | **Síncrono**  |
+| Cargas de trabajo multihilo de alto rendimiento        | **Asíncrono** |
 
 ## Principios básicos
 
@@ -69,9 +69,9 @@ In the context of asynchronous execution, the following features place your code
 
 - [`CALL WORKER`](../commands-legacy/call-worker.md) ejecuta el código para el que ha sido llamado, luego vuelve a un estado de escucha desde donde puede ser llamado posteriormente.
 - [`CALL FORM`](../commands-legacy/call-form.md) abre un formulario y lo hace escuchar los mensajes entrantes de la cola de eventos.
-- a call for a `wait()` listens for `terminate()` or `shutdown()` in a callback from any other instance.
+- una llamada a `wait()` espera `terminate()` o `shutdown()` en una retrollamada de cualquier otra instancia.
 
-### Event triggering
+### Activación de eventos
 
 Los eventos se activan automáticamente durante el flujo de ejecución y se pasan a sus retrollamadas correspondientes. Se puede forzar la activación de eventos llamando a `terminate()` o `shutdown()` durante una `wait()`.
 
@@ -91,7 +91,7 @@ Si desea "forzar" la liberación de un objeto en cualquier momento, utilice un `
 
 ### Ejemplos que ilustran el concepto común
 
-| Feature                         | Async Launch                                                                          | Callback / Event Handling                                               |
+| Feature                         | Lanzamiento asíncrono                                                                 | Callback / Event Handling                                               |
 | ------------------------------- | ------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
 | CALL WORKER                     | CALL WORKER("wk"; "MyMethod"; $params)                             | MyMethod se llama con $params                                           |
 | CALL FORM                       | CALL FORM($win; "MyMethod"; $params)                               | MyMethod se llama con $params                                           |
@@ -104,7 +104,7 @@ Varias clases 4D soportan el procesamiento asíncrono:
 - [`HTTPRequest`](../API/HTTPRequestClass.md) - Gestiona peticiones y respuestas HTTP asíncronas.
 - [`SystemWorker`](../API/SystemWorkerClass.md) - Ejecuta procesos externos de forma asíncrona.
 - [`TCPConnection`](../API/TCPConnectionClass.md) - Gestiona conexiones de cliente TCP con retrollamadas basadas en eventos.
-- [`TCPListener`](../API/TCPListenerClass.md) – Manages TCP server connections.
+- [`TCPListener`](../API/TCPListenerClass.md) - Gestiona las conexiones del servidor TCP.
 - [`UDPSocket`](../API/UDPSocketClass.md) - Envía y recibe paquetes UDP.
 - [`WebSocket`](../API/WebSocketClass.md) – Manages WebSocket client connections.
 - [`WebSocketServer`](../API/WebSocketServerClass.md) - Gestiona las conexiones del servidor WebSocket.
@@ -161,7 +161,7 @@ Once the user class is instantiated; 4D is put in [event listening](#event-liste
 
 :::tip
 
-En algunos casos, es posible que desee utilizar fórmulas como valores de propiedad en lugar de funciones de clase. Although it is not the best practice, a syntax such as the following is supported:
+En algunos casos, es posible que desee utilizar fórmulas como valores de propiedad en lugar de funciones de clase. Aunque no es la mejor práctica, se admite una sintaxis como la siguiente:
 
 ```4d
 var $options.onResponse:=Formula(myMethod) 
@@ -171,7 +171,7 @@ var $options.onResponse:=Formula(myMethod)
 
 ## Ejecución síncrona en código asíncrono
 
-Incluso cuando se utiliza código moderno y asíncrono, puede ser necesario introducir cierto grado de ejecución síncrona. Por ejemplo, puede querer que una función espere un cierto tiempo para obtener un resultado. It could be the case with guaranteed fast network connections or system workers. A continuación, puede forzar la ejecución sincrónica utilizando la función `wait()`.
+Incluso cuando se utiliza código moderno y asíncrono, puede ser necesario introducir cierto grado de ejecución síncrona. Por ejemplo, puede querer que una función espere un cierto tiempo para obtener un resultado. Podría ser el caso de conexiones de red rápidas garantizadas o workers del sistema. A continuación, puede forzar la ejecución sincrónica utilizando la función `wait()`.
 
 The **`.wait()`** function pauses execution of the current process and puts 4D in [event listening](#event-listening) mode. Keep in mind that it will trigger events received from any sources, not only from the object on which the `wait()` function was called.
 

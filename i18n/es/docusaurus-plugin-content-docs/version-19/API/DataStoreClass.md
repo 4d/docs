@@ -115,11 +115,11 @@ Utilizando el almacén de datos principal de la base 4D:
 <!-- REF #_command_.Open datastore.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|connectionInfo|Object|->|Connection properties used to reach the remote datastore|
-|localID |Text|->|Id to assign to the opened datastore on the local application (mandatory)|
-|Result |cs.DataStore|<-|Datastore object|
+|connectionInfo|Object|->|Propiedades de conexión utilizadas para llegar al datastore remoto|
+|localID |Text|->|Id para asignar al datastore abierto en la aplicación local (obligatorio)|
+|Resultado |cs.DataStore|<-|Datastore object|
 </div>
 <!-- END REF -->
 
@@ -551,11 +551,11 @@ Cuando no se llama a esta función, las nuevas selecciones de entidades pueden s
 <!-- REF #DataStoreClass.provideDataKey().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|curPassPhrase |Text|->|Current encryption passphrase|
-|curDataKey |Object|->|Current data encryption key|
-|Result|Object|<-|Result of the encryption key matching|
+|Parámetro|Tipo||Descripción|
+|---|-|-|---|-|
+|curPassPhrase |Text|->|Frase de contraseña de cifrado actual|
+|curDataKey |Object|->|Llave de cifrado de datos actual|
+|Resultado|Object||<-|Result of the encryption key matching|
 </div>
 <!-- END REF -->
 
@@ -628,9 +628,9 @@ Si no se da *curPassphrase* o *curDataKey*, `.provideDataKey()` devuelve **null*
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|status|Boolean|->|True to disable Data Explorer access to data on the `webAdmin` port, False (default) to grant access|
+|status|Boolean|->|True para desactivar el acceso del Explorador de Datos a los datos en el puerto `webAdmin`, False (por defecto) para conceder acceso|
 </div>
 <!-- END REF -->
 
@@ -673,10 +673,10 @@ Se crea un método proyecto *protectDataFile* para llamar antes de los despliegu
 <!-- REF #DataStoreClass.startRequestLog().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|file |4D.File|->|File object|
-|reqNum |Integer|->|Number of requests to keep in memory|
+|file |4D.File|->|Objeto Archivo|
+|reqNum |Integer|->|Número de solicitudes a conservar en memoria|
 </div>
 <!-- END REF -->
 
@@ -751,9 +751,9 @@ Quiere registrar las peticiones de los clientes ORDA en la memoria:
 <!-- REF #DataStoreClass.startTransaction().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-||||Does not require any parameters|
+||||No requiere ningún parámetro|
 </div>
 <!-- END REF -->
 
@@ -817,9 +817,9 @@ Puede anidar varias transacciones (subtransacciones). Cada transacción o sub-tr
 <!-- REF #DataStoreClass.stopRequestLog().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-||||Does not require any parameters|
+||||No requiere ningún parámetro|
 </div>
 <!-- END REF -->
 
@@ -852,9 +852,9 @@ Ver ejemplos de [`.startRequestLog()`](#startrequestlog).
 <!-- REF #DataStoreClass.validateTransaction().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-||||Does not require any parameters|
+||||No requiere ningún parámetro|
 </div>
 <!-- END REF -->
 

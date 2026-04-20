@@ -5,6 +5,12 @@ title: MailAttachment
 
 Attachment オブジェクトによって、[`Email`](EmailObjectClass.md) オブジェクト内のファイルを参照することができます。 MailAttachment オブジェクトは [`MAIL New attachment`](../commands/mail-new-attachment) コマンドによって作成されます。
 
+:::info
+
+このクラスは、バイナリーで[**ストリーム可能**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) です。
+
+:::
+
 ### Attachment オブジェクト
 
 Attachment オブジェクトは、次の読み取り専用プロパティや、関数を提供します:

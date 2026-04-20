@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, pictureObject is an object name (string) <br/>If omitted, pictureObject is a variable |
-| pictureObject | Picture | &#8594;  | Object name (if * specified) or <br/>Variable or field (if * omitted) |
+| pictureObject | Text, Variable, Field | &#8594;  | Object name (if * specified) or <br/>Variable or field (if * omitted) |
 | element_ID | Text | &#8594;  | ID of element whose attribute value you want to get |
 | attribName | Text | &#8594;  | Attribute whose value you want to get |
 | attribValue | Text, Integer | &#8592; | Current value of attribute |

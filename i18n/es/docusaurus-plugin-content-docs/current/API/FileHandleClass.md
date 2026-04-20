@@ -522,9 +522,9 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 <div class="no-index">
 
-| Parámetros | Tipo |    | Descripción   |
-| ---------- | ---- | -- | ------------- |
-| lineOfText | Text | -> | Text to write |
+| Parámetros | Tipo |    | Descripción      |
+| ---------- | ---- | -- | ---------------- |
+| lineOfText | Text | -> | Texto a escribir |
 
 </div>
 <!-- END REF -->
@@ -559,9 +559,9 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 <div class="no-index">
 
-| Parámetros  | Tipo |    | Descripción   |
-| ----------- | ---- | -- | ------------- |
-| textToWrite | Text | -> | Text to write |
+| Parámetros  | Tipo |    | Descripción      |
+| ----------- | ---- | -- | ---------------- |
+| textToWrite | Text | -> | Texto a escribir |
 
 </div>
 <!-- END REF -->

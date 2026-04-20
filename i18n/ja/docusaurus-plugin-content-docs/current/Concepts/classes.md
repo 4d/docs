@@ -7,7 +7,7 @@ title: クラス
 
 4D ランゲージでは **クラス** の概念がサポートされています 。  プログラミング言語では、クラスを利用することによって、属性やメソッドなどを持つ特定のオブジェクト種を定義することができます。
 
-ユーザークラスが定義されていれば、そのクラスのオブジェクトをコード内で **インスタンス化** することができます。  各オブジェクトは、それ自身が属するクラスのインスタンスです。 ユーザークラスが定義されていれば、そのクラスのオブジェクトをコード内で **インスタンス化** することができます。 各オブジェクトは、それ自身が属するクラスのインスタンスです。 クラスは、別のクラスを [継承](#class-extends-classname) することで、その [関数](#function) と、([宣言された](#property) および [計算された](#function-get-と-function-set)) プロパティを受け継ぐことができます。
+ユーザークラスが定義されていれば、そのクラスのオブジェクトをコード内で **インスタンス化** することができます。  各オブジェクトは、それ自身が属するクラスのインスタンスです。 クラスは、別のクラスを [継承](#class-extends-classname) することで、その [関数](#function) と、([宣言された](#property) および [計算された](#function-get-と-function-set)) プロパティを受け継ぐことができます。
 
 > 4D におけるクラスモデルは JavaScript のクラスに類似しており、プロトタイプチェーンに基づきます。
 
@@ -39,6 +39,12 @@ $hello:=$person.sayHello() // "Hello John Doe"
 
 クラスファイルは、4D エクスプローラーを通して管理されます([クラスの作成](../Project/code-overview.md#クラスの作成)を参照してください)。
 
+#### クラスの削除
+
+既存のクラスを削除するには、エクスプローラー内でクラスを選択して ![](../assets/en/Users/MinussNew.png) をクリックするか、コンテキストメニューより **移動** ＞ **ゴミ箱** を選択します。
+
+またディスク上の"Classes" フォルダから.4dm クラスファイルを削除することもできます。
+
 ## クラスストア
 
 定義されたクラスには、クラスストアよりアクセスすることができます。 クラスストアには次の二つが存在します:
@@ -46,7 +52,7 @@ $hello:=$person.sayHello() // "Hello John Doe"
 - [`cs`](../commands/cs) - ユーザークラスストア
 - [`4D`](../commands/4d) - ビルトインクラスストア
 
-### `cs`
+#### `cs`
 
 <!-- REF #_command_.cs.Syntax -->**cs** : Object<!-- END REF -->
 
@@ -71,7 +77,7 @@ $hello:=$person.sayHello() // "Hello John Doe"
 $instance:=cs.myClass.new()
 ```
 
-### `4D`
+#### `4D`
 
 <!-- REF #_command_.4D.Syntax -->**4D** : Object <!-- END REF -->
 
@@ -99,7 +105,7 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 ビルトイン4Dクラスの数を表示します:
 
 ```4d
- var $keys : collection
+ var $keys : Collection
  $keys:=OB Keys(4D)
  ALERT(String($keys.length)+"件のビルトインクラスが存在します。")
 ```
@@ -142,7 +148,7 @@ Class オブジェクトそのものは [共有オブジェクト](shared.md) �
 #### シンタックス
 
 ```4d
-{shared} Function <name>({$parameterName : type; ...}){->$parameterName : type}
+{local | server} {shared} Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // コード
 ```
 
@@ -155,6 +161,8 @@ Class オブジェクトそのものは [共有オブジェクト](shared.md) �
 クラス関数とは、当該クラスのプロパティです。 クラス関数は [`4D.Function`](API/FunctionClass.md) クラスのオブジェクトです 。  クラス関数とは、当該クラスのプロパティです。 クラス関数とは、当該クラスのプロパティです。 クラス関数は [`4D.Function`](API/FunctionClass.md) クラスのオブジェクトです。 クラス定義ファイルでは、`Function` キーワードに続けて関数名を指定して宣言をおこないます。 クラス定義ファイルでは、`Function` キーワードに続けて関数名を指定して宣言をおこないます。
 
 [共有クラス](#共有クラス) 内で関数が宣言されている場合は、`shared` キーワードを使用することによって、[`Use...End use` 構文](shared.md#useend-use)なしで関数を呼び出せるようにできます。 詳細については、後述の [共有関数](#共有関数) の項目を参照ください。
+
+クライアント/サーバーアプリケーションのコンテキストにおいては、 `local` or `server` キーワードを使用することで、どちらのマシン上で関数を実行すべきかを指定することができます。 これらのキーワードはORDA データモデル関数と共有シングルトン/セッションシングルトン関数でのみ使用することができます。 詳細については、後述の [local および server 関数](#local-および-server) の項目を参照ください。
 
 関数名は [プロパティ名の命名規則](Concepts/identifiers.md#オブジェクトプロパティ) に準拠している必要があります。
 
@@ -448,12 +456,12 @@ $o.age:="Smith"  // シンタックスチェックでエラー
 #### シンタックス
 
 ```4d
-{shared} Function get <name>()->$result : type
+{local | server} {shared} Function get <name>()->$result : type
 // コード
 ```
 
 ```4d
-{shared} Function set <name>($parameterName : type)
+{local | server} {shared} Function set <name>($parameterName : type)
 // コード
 ```
 
@@ -479,6 +487,8 @@ $o.age:="Smith"  // シンタックスチェックでエラー
 両方の関数が定義されている場合、計算プロパティは **read-write** となります。   両方の関数が定義されている場合、計算プロパティは **read-write** となります。  `Function get` のみが定義されている場合、計算プロパティは**read-only** です。 この場合、コードがプロパティを変更しようとするとエラーが返されます。 `Function set` のみが定義されている場合、4D はプロパティの読み取り時に *undefined* を返します。 この場合、コードがプロパティを変更しようとするとエラーが返されます。 `Function set` のみが定義されている場合、4D はプロパティの読み取り時に *undefined* を返します。
 
 関数が[共有クラス](#共有クラス)で宣言されている場合、`shared` キーワードを使用することで、[`Use...End use` 構文](shared.md#useend-use)なしで呼び出せるようにすることができます。 詳細については、後述の [共有関数](#共有関数) の項目を参照ください。
+
+クライアント/サーバーアプリケーションのコンテキストにおいては、 `local` or `server` キーワードを使用することで、どちらのマシン上で関数を実行すべきかを指定することができます。 これらのキーワードはORDA データモデル関数と共有シングルトン/セッションシングルトン関数でのみ使用することができます。 詳細については、後述の [local および server 関数](#local-および-server) の項目を参照ください。
 
 計算プロパティの型は、*ゲッター* の `$return` の型宣言によって定義されます。  [有効なプロパティタイプ](dt_object.md) であれば、いずれも使用可能です。 [有効なプロパティタイプ](dt_object.md) であれば、いずれも使用可能です。
 
@@ -586,13 +596,13 @@ Class constructor ($side : Integer)
 
 ### `Super`
 
-[`Super`](../commands/super) コマンドを使用すると、[`スーパークラス`](../API/ClassClass#superclass)、つまり関数の親クラスを呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。
+[`Super`](../commands/super) コマンドを使用すると、[`スーパークラス`](../API/ClassClass#superclass)、つまり関数の親クラスを呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。
 
 詳細な情報については、[`Super`](../commands/super) コマンドの説明を参照してください。
 
 ### `This`
 
-[`This`](../commands/this) コマンドは現在処理されているオブジェクトへの参照を返します。  多くの場合、`This` の値はクラス関数がどのように呼ばれたかによって決まります。 通常、`This` は、まるでその関数がオブジェクト上にあるかのように、関数が呼ばれたオブジェクトを参照します。 多くの場合、`This` の値はクラス関数がどのように呼ばれたかによって決まります。 通常、`This` は、まるでその関数がオブジェクト上にあるかのように、関数が呼ばれたオブジェクトを参照します。
+[`This`](../commands/this) コマンドは現在処理されているオブジェクトへの参照を返します。 多くの場合、`This` の値はクラス関数がどのように呼ばれたかによって決まります。 通常、`This` は、まるでその関数がオブジェクト上にあるかのように、関数が呼ばれたオブジェクトを参照します。
 
 例:
 
@@ -613,10 +623,6 @@ $val:=$o.f() //8
 ```
 
 詳細な情報については、[`This`](../commands/this) コマンドの説明を参照してください。
-
-## クラスコマンド
-
-4Dランゲージには、クラス機能を扱う複数のコマンドがあります。
 
 ### `OB Class`
 
@@ -832,7 +838,182 @@ $myList := cs.ItemInventory.me.itemList
 
 ```
 
-#### 参照
+:::tip 関連したblog 記事
 
-[4D のシングルトン](https://blog.4d.com/ja/singletons-in-4d/) (ブログ記事) <br/> [セッションシングルトン](https://blog.4d.com/ja/introducing-session-singletons) (ブログ記事)
+[4D のシングルトン](https://blog.4d.com/ja/singletons-in-4d/)
+[セッションシングルトン](https://blog.4d.com/ja/introducing-session-singletons)
+
+:::
+
+## `local` および `server`
+
+[クライアント/サーバーアーキテクチャ](../Desktop/clientServer.md) におていは、`local` および `server` キーワードを使用することで関数を実行する場所を指定することができます: クライアント側、またはサーバー側です。 実行場所をコントロールすることは、パフォーマンス上の理由から、またビジネスロジック機能を実装する観点からも有用といえます。
+
+シンタックスは次の通りです:
+
+```4d
+// クライアント/サーバーにおいてクライアント上で実行される関数を宣言する
+local Function <functionName>   
+```
+
+```4d
+// クライアント/サーバーにおいてサーバー上で実行される関数を宣言する
+server Function <functionName>   
+```
+
+`local` および `server` キーワードは以下の場合に該当する関数においてのみ利用可能です:
+
+- [ORDA データモデル](../ORDA/ordaClasses.md) クラス
+- [共有シングルトンまたはセッションシングルトン](#singleton-classes) クラス。
+
+:::tip 関連したblog 記事
+
+[A new way to execute business logic on the server](https://blog.4d.com/a-new-way-to-execute-business-logic-on-the-server)
+
+:::
+
+### 概要
+
+サポートされる関数には、ロケーションキーワードが何も使用されていない場合の **デフォルトの実行場所** があります。 それにもかかわらず、`local` あるいは `server` キーワードを挿入することで実行場所を変更したり、あるいはコードをより明示的にすることができます。
+
+| サポートされる関数                             | デフォルトの実行場所 | `local` キーワードを使用した場合                | `server` キーワードを使用した場合                                                    |
+| ------------------------------------- | ---------- | ----------------------------------- | ------------------------------------------------------------------------ |
+| [ORDA データモデル](../ORDA/ordaClasses.md) | サーバー上      | 関数は、クライアント上で呼ばれた場合にはクライアント上で実行されます。 |                                                                          |
+| [共有シングルトンまたはセッションシングルトン](#シングルトンクラス)  | ローカル       |                                     | 関数はシングルトンのサーバーインスタンスのサーバー上で実行されます。 <br/>サーバー上にシングルトンのインスタンスがない場合、作成されます。 |
+
+`local` および `server` キーワードがこれ以外のコンテキストで使用された場合、エラーが返されます。
+
+:::note
+
+クライアント/サーバーにおいてコードが実際にどこで実行されるかについての全体的な説明については、[こちらの章](../Desktop/clientServer.md#コードの実行場所) を参照してください。
+
+::::
+
+### `local`
+
+[クライアント/サーバーアーキテクチャ](../Desktop/clientServer.md) においては、`local` キーワードは、関数は**呼ばれた場所で実行されなければならない**ということを指定します。
+
+:::note リマインダー
+
+`local` キーワードは [共有シングルトンまたはセッションシングルトンの関数](#シングルトンクラス) においては意味を持ちません。これらはデフォルトでローカルに実行されるからです。
+
+:::
+
+デフォルトで、 [ORDA データモデル関数](../ORDA/ordaClasses.md) はサーバー上で実行されます。 関数リクエストとその結果だけが通信されるため、通常はベストパフォーマンスが提供されます。 しかしながら、[最適化のために](../ORDA/client-server-optimization.md#local-キーワードの使用) 、データモデル関数をクライアント上で実行したい様な場合があるかもしれません。 その場合は `local` キーワードを使用することができます。
+
+#### 例: 年齢を計算する
+
+*birthDate* (生年月日) 属性を持つエンティティがある場合に、リストボックス内で呼び出すための `age()` 関数を定義します。 この関数をクライアントサイドで実行することで、リストボックスの各行がサーバーへのリクエストを生成するのを防ぎます。
+
+*StudentsEntity* クラス:
+
+```4d
+Class extends Entity
+
+local Function age() -> $age: Variant
+
+If (This.birthDate#!00-00-00!)
+    $age:=Year of(Current date)-Year of(This.birthDate)
+Else
+    $age:=Null
+End if
+```
+
+### `server`
+
+[クライアント/サーバーアーキテクチャ](../Desktop/clientServer.md) においては、`server` キーワードは、関数は**サーバー側で実行されなければならない** ということを意味します。
+
+:::note リマインダー
+
+`server` キーワードは、デフォルトでサーバー上で実行される [ORDA データモデル関数](../ORDA/ordaClasses.md) に対しては特に意味を持ちません。
+
+:::
+
+`server` の関数の引数と戻り値は、[**ストリーム可能**](./dt_object.md#ストリーミングサポート) ストリーム可能でなければなりません。 例えば、[4D.Datastore](../API/DataStoreClass.md)、[File handle](../API/FileHandleClass.md)、あるいは [WebServer](../API/WebServerClass.md) などはストリーム不可能なクラスですが、 [4D.File](../API/FileClass.md) クラスはストリーム可能です。
+
+この機能は、特に[リモートユーザーセッション](../Desktop/sessions.md#リモートユーザーセッション) のコンテキストにおいて有用で、これを使用することでビジネスロジックを[セッションシングルトン](#shared-or-session-singleton-functions) に実装することでセッションの全てのプロセス間でこれを共有することができ、結果として[`Session`](../commands/session) コマンドの機能を拡張することが可能になります。 この場合、全てのセッション情報がサーバーに集められる様に、関連するビジネスロジックが**サーバー上で**実行されるようにしたい場合があるかもしれません。
+
+デフォルトで、共有シングルトンまたはセッションシングルトンの関数はローカルに実行されます。 `server` キーワードをクラス関数定義に追加することで、4D はシングルトンインスタンスをサーバー上で使用します。 この場合、まだインスタンスが存在していない場合、サーバー上でシングルトンのインスタンス化が起こりうることに注意してください。
+
+[セッションシングルトン](#シングルトンクラス) においては、関数は対応するシングルトンインスタンス(つまりカレントセッションのシングルトンのインスタンス)内においてサーバー上で実行されます。
+
+:::note
+
+共有シングルトン内で `server Function` を宣言した場合、以下のようになります:
+
+- シングルトン *S1* はクライアント上でインスタンス化されます(名前は *s1* )
+- *s1.function()* はクライアント上で実行されます。
+
+その時にサーバー上で *S1* のインスタンスが存在しない場合、*S1* はサーバー上でインスタンス化され(コンストラクターが実行されます)、*function()* 関数はサーバーインスタン上で実行されます。 As a result, two instances of *S1* can coexist (client-side and server-side), with distinct property values. In this case, *s1.property* is always accessed locally. It cannot be accessed on the server, for example from server-side code using direct dot notation (an error is returned).
+
+:::
+
+#### Example: Administration singleton
+
+The *Administration* shared singleton has a "server" function running the [`Process activity`](../commands/process-activity) command. This singleton is instantiated on a remote 4D but the function returns the server activity on the server.
+
+```4d
+  // Administration class
+
+shared singleton Class constructor
+
+  // This function is executed on the server
+server Function processActivity() : Object
+  return Process activity
+
+
+Function localProcessActivity() : Object
+  return Process activity
+```
+
+Code running on the client:
+
+```4d
+var $localActivity; $serverActivity : Object
+var $administration : cs.Administration
+
+// The Administration singleton is instantiated on the 4D Client
+$administration:=cs.Administration.me
+
+// Get processes running on the remote 4D
+$localActivity:=$administration.localProcessActivity()
+
+// Get processes and sessions running on 4D Server
+$serverActivity:=$administration.processActivity()
+
+```
+
+#### Example: Session singleton
+
+You store your users in a Users table and handle a custom authentication. You use a session singleton for the authentication:
+
+```4d
+// UserSession session singleton class
+
+server Function checkUser($credentials : Object) : Boolean
+	
+var $user : cs.UsersEntity
+var $result:=False
+	
+If ($credentials#Null)
+	$user:=ds.Users.query("Email === :1"; $credentials.identifier).first()
+		
+	If (($user#Null) && (Verify password hash($credentials.password; $user.Password)))
+		Use (Session.storage)
+			Session.storage.userInfo:=New shared object("userId"; $user.ID)
+		End use 
+			
+		$result:=True
+	End if 
+End if 
+	
+return $result
+```
+
+To provide the current user to 4D clients, the singleton exposes a user computed property got from the server:
+
+```4d
+server Function get user() : cs.UsersEntity
+	return ds.Users.get(Session.storage.userInfo.userId)
+```
 

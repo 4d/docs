@@ -212,10 +212,10 @@ Une media query est composée d'une fonctionnalité média et d'une valeur (`<fo
 
 Available media features and values:
 
-| Media features         | Valeurs                                        | Description                                                                                                                                                              |
-| ---------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `prefers-color-scheme` | <li>**light**</li><li>**dark**</li>            | Color scheme to use                                                                                                                                                      |
-| `form-theme`           | <li>**fluent-ui**</li><li>**win-classic**</li> | Platform theme to use (Windows). For more information on **fluent-ui** theme, refer to [this section](./forms.md#fluent-ui-rendering) |
+| Media features         | Valeurs                                        | Description                                                                                                                                                                                        |
+| ---------------------- | ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `prefers-color-scheme` | <li>**light**</li><li>**dark**</li>            | Color scheme to use                                                                                                                                                                                |
+| `form-theme`           | <li>**fluent-ui**</li><li>**win-classic**</li> | Thème de plate-forme à utiliser (Windows). Pour plus d'informations sur le thème **fluent-ui**, reportez-vous à [cette section](./forms.md#fluent-ui-rendering) |
 
 :::note
 

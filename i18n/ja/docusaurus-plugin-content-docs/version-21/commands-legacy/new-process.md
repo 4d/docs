@@ -5,14 +5,6 @@ slug: /commands/new-process
 displayed_sidebar: docs
 ---
 
-<details><summary>History</summary>
-
-|リリース|リリース|
-|---|---|
-|21|特定のローカルプロセス処理について削除|
-
-</details>
-
 
 <!--REF #_command_.New process.Syntax-->**New process** ( *method* ; *stack* {; *name* {; *param* {; *param2* ; ... ; *paramN*}}}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.New process.Params-->
@@ -34,6 +26,7 @@ displayed_sidebar: docs
 
 |リリース|内容|
 |---|---|
+|21|特定のローカルプロセス処理について削除|
 |16 R4|変更|
 |2004.3|変更|
 |<6|初出|

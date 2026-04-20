@@ -41,10 +41,10 @@ Añade una URL de imagen al contenido del mensaje.
 ### Crear un mensaje simple y adjuntar una imagen
 
 ```4d
-// Create an instance of OpenAIMessage
+// Crear una instancia de OpenAIMessage
 var $message:=cs.AIKit.OpenAIMessage({role: "user"; content: "Hello!"})
 
-// Add an image URL with details
+// Añadir una URL de imagen con detalles
 $message.addImageURL("http://example.com/image.jpg"; "high")
 ```
 

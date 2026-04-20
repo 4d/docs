@@ -7,6 +7,12 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の式
 
 コレクションは [`New collection`](../commands/new-collection) または [`New shared collection`](../commands/new-shared-collection) コマンドで初期化されます。
 
+:::info
+
+このクラスは、バイナリーで[**ストリーム可能**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) です。
+
+:::
+
 ### 例題
 
 ```4d
@@ -3089,7 +3095,7 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 </details>
 
-<!-- REF #collection.reverse().Syntax -->**.reverse( )** : Collection <!-- END REF -->
+<!-- REF #collection.reverse().Syntax -->**.reverse()** : Collection <!-- END REF -->
 
 <!-- REF #collection.reverse().Params -->
 
@@ -3104,7 +3110,7 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 #### 説明
 
-`.reverse()` 関数は、<!-- REF #collection.reverse().Summary -->全要素が逆順になった、コレクションのディープ・コピーを返します<!-- END REF -->。また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
+The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a new collection with all elements of the original collection in reverse order<!-- END REF -->. また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。
 
 > このコマンドは、元のコレクションを変更しません。
 

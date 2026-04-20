@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | XML element reference |
 | attribName | Text | &#8594;  | Attribute to set |
-| attrValue | Text, Boolean, Integer, Real, Time, Date | &#8594;  | New attribute value |
+| attrValue | any | &#8594;  | New attribute value |
 </div>
 <!-- END REF-->
 

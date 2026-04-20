@@ -16,6 +16,13 @@ You send `Email` objects using the SMTP [`.send()`](SMTPTransporterClass.md#send
 
 [`MAIL Convert from MIME`](../commands/mail-convert-from-mime) and [`MAIL Convert to MIME`](../commands/mail-convert-to-mime) commands can be used to convert `Email` objects to and from MIME contents.
 
+:::info
+
+This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
+
+:::
+
+
 ### Email Object
 
 Email objects provide the following properties:

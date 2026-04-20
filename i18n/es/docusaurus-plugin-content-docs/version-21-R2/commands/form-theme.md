@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM theme.Summary-->El comando **FORM theme** devuelve el tema Windows realmente renderizado para el formulario actual: "Classic" or "FluentUI".<!-- END REF-->
 
-The Windows form rendering theme can be defined at [application level](../settings/interface.md#use-fluent-ui-on-windows) and/or at [form level](../FormEditor/properties_FormProperties.md#form-theme-on-windows) (where it can be inherited or explicitely defined), and also depends on the [availability of specific Microsoft libraries](../FormEditor/forms.md#requirements) on the current machine at runtime. Este comando le permite saber qué tema de formulario se está ejecutando actualmente.
+El tema de renderizado de los formularios Windows puede definirse a [nivel de la aplicación](../settings/interface.md#use-fluent-ui-on-windows) y/o a [nivel del formulario](../FormEditor/properties_FormProperties.md#form-theme-on-windows) (donde puede heredarse o definirse explícitamente), y también depende de la [disponibilidad de bibliotecas Microsoft específicas](../FormEditor/forms.md#requirements) en la máquina actual en tiempo de ejecución. Este comando le permite saber qué tema de formulario se está ejecutando actualmente.
 
 Si no hay un formulario actual, o si el comando se ejecuta en macOS, **FORM theme** devuelve una cadena vacía.
 

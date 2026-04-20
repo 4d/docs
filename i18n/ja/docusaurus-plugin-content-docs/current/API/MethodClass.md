@@ -20,6 +20,12 @@ title: メソッド
 
 :::
 
+:::info
+
+このクラスは、バイナリーで[**ストリーム可能**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) です。
+
+:::
+
 ### 例題
 
 #### 基本的なダイナミックメソッド作成

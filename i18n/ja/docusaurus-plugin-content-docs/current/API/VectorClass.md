@@ -7,6 +7,12 @@ title: Vector
 
 AI の世界では、ベクトルとは、機会が複雑なデータを理解し、操作することを可能にする、一連の数字です。 AI におけるベクトルの役割の詳細な概要については、[こちらのページ](https://aiforsocialgood.ca/blog/understanding-the-role-of-vectors-in-artificial-intelligence-a-comprehensive-guide) を参照してください。
 
+:::info
+
+このクラスは、バイナリーで[**ストリーム可能**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) です。
+
+:::
+
 ### 様々なベクトル計算を理解する
 
 `4D.Vector` クラスは、3種類のベクター計算を提供します。 以下の表はそれぞれの計算の主な特徴をまとめたものです:

@@ -5,6 +5,12 @@ title: MailAttachment
 
 Los objetos Attachment permiten referenciar archivos en un objeto [`Email`](EmailObjectClass.md). Los objetos Attachment son creados utilizando el comando [`MAIL New attachment`](../commands/mail-new-attachment).
 
+:::info
+
+This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
+
+:::
+
 ### Objetos adjuntos
 
 Los objetos Attachment ofrecen las siguientes propiedades y funciones de sólo lectura:

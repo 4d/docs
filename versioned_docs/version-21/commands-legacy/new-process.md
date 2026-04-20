@@ -5,15 +5,6 @@ slug: /commands/new-process
 displayed_sidebar: docs
 ---
 
-<details><summary>History</summary>
-
-|Release|Changes|
-|---|---|
-|21|Removed specific local process handling|
-
-</details>
-
-
 <!--REF #_command_.New process.Syntax-->**New process** ( *method* ; *stack* {; *name* {; *param* {; *param2* ; ... ; *paramN*}}}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.New process.Params-->
 <div class="no-index">
@@ -34,6 +25,7 @@ displayed_sidebar: docs
 
 |Release|Changes|
 |---|---|
+|21|Removed local process handling ($ in process name is ignored)|
 |16 R4|Modified|
 |2004.3|Modified|
 |<6|Created|

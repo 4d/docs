@@ -5,6 +5,12 @@ title: Folder
 
 Les objets `Folder` sont créés avec la commande [`Folder`](../commands/folder). Ils contiennent des références à des dossiers qui peuvent exister réellement ou non sur le disque. Par exemple, lorsque vous exécutez la commande `Folder` pour créer un nouveau dossier, un objet `Folder` valide est créé mais rien n'est réellement stocké sur le disque jusqu'à ce que vous appeliez la fonction [`folder.create()`](#create).
 
+:::info
+
+This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
+
+:::
+
 ### Exemple
 
 L'exemple suivant crée un dossier "JohnSmith" :

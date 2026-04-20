@@ -42,10 +42,7 @@ If you pass the *offset* variable parameter, the variable is written at the offs
 
 After the call, the *offset* variable parameter is returned, incremented by the number of bytes that have been written. Therefore, you can reuse that same variable with another BLOB writing command to write another variable or list.
 
-VARIABLE TO BLOB accepts any type of variable (including other BLOBs), except the following:
-
-* Pointer
-* Array of pointers
+VARIABLE TO BLOB accepts any type of variable, including other BLOBs and [**streamable objects**](../../Concepts/dt_object.md#streaming-support).
 
 Note that:
 
@@ -54,17 +51,15 @@ Note that:
 
 **WARNING:** If you use a BLOB for storing variables, you must later use the command [BLOB TO VARIABLE](../commands/blob-to-variable) for reading back the contents of the BLOB, because variables are stored in BLOBs using a 4D internal format.
 
-After the call, if the variable has been successfully stored, the OK variable is set to 1\. If the operation could not be performed, the OK variable is set to 0; for example, there was not enough memory.
-
 **Note regarding Platform Independence:** VARIABLE TO BLOB and [BLOB TO VARIABLE](../commands/blob-to-variable) use a 4D internal format for handling variables stored in BLOBs. As a benefit, you do not need to worry about byte swapping between platforms while using these two commands. In other words, a BLOB created on Windows using either of these commands can be reused on Macintosh, and vice-versa.
 
 ### Note 
 
-**Compatiblity note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See [Passing blobs and blob objects to 4D commands](../../Concepts/dt_blob.md#passing-blobs-and-blob-objects-to-4d-commands).
+**Compatibility note:** Since this command alters the blob passed as a parameter, it does not support blob objects (4D.Blob type). See [Passing blobs and blob objects to 4D commands](../../Concepts/dt_blob.md#passing-blobs-and-blob-objects-to-4d-commands).
 
 ## System variables and sets 
 
-The OK variable is set to 1 if the variable has been successfully stored, otherwise it is set to 0.
+The OK variable is set to 1 if the variable has been successfully stored, otherwise it is set to 0, for example if there was not enough memory.
 
 ## Example 1 
 

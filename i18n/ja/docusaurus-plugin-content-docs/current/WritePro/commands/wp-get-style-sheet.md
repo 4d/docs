@@ -26,8 +26,8 @@ displayed_sidebar: docs
 
 | リリース     | 内容                    |
 | -------- | --------------------- |
-| 4D 18    | Created               |
 | 4D 21 R3 | *listLevelIndex* 引数追加 |
+| 4D 18    | Created               |
 
 </details>
 </div>
@@ -40,9 +40,9 @@ displayed_sidebar: docs
 
 *styleSheetName* 引数を使用すると、返すスタイルシートの名前を指定することができます。 *wpDoc* 引数のドキュメント内のそのスタイルシート名が存在しない場合、null オブジェクトが返されます。
 
-指定したスタイルシートが改装リストスタイルシートの一部である場合、オプションの *listLevelIndex* 引数で階層レベルを指定することで階層内の特定のレベルを取得することができます。
+If the *styleSheetName* is the root-level name of a hierarchical list style sheet, you can optionally specify the *listLevelIndex* parameter to retrieve a specific level of the hierarchy.
 
-- *listLevelIndex* 引数は階層内のスタイルシートのレベルを表します(1 = ルートレベル、2 = 第一サブレベル、など)。
+- *listLevelIndex* represents the level of the style sheet in the hierarchy (1 = root-level, 2 = first sub-level, etc.).
 - スタイルシートが階層で、この 引数が省略された場合には、ルートレベルのスタイルシートが返されます。
 - リクエストされたレベルが存在しない場合、null オブジェクトが返されます。
 - スタイルシートが改装リストスタイルシートではない場合に、*listLevelIndex* が1 より大きかった場合、null オブジェクトが返されます。

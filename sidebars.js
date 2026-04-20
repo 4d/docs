@@ -108,6 +108,7 @@ module.exports =
                 "settings/client-server",
                 "settings/web",
                 "settings/sql",
+                "settings/ai",
                 "settings/security",
                 "settings/compatibility"
               ]
@@ -230,6 +231,7 @@ module.exports =
             "API/FunctionClass",
             "API/HTTPAgentClass",
             "API/HTTPRequestClass",
+            "API/IMAPNotifierClass",
             "API/IMAPTransporterClass",
             "API/IncomingMessageClass",
             "API/MailAttachmentClass",

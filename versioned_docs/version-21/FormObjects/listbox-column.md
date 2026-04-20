@@ -41,8 +41,8 @@ You can set standard properties (text, background color, etc.) for each column o
 |On Load||
 |On Losing Focus|<ul><li>[column](./listbox-object.md#additional-properties)</li><li>[columnName](./listbox-object.md#additional-properties)</li><li>[row](./listbox-object.md#additional-properties)</li></ul>|*Additional properties returned only when editing a cell has been completed*|
 |On Row Moved|<ul><li>[newPosition](./listbox-object.md#additional-properties)</li><li>[oldPosition](./listbox-object.md#additional-properties)</li></ul>|*Arrays list boxes only*|
-|On Scroll|<ul><li>[horizontalScroll](./listbox-object.md#additional-properties)</li><li>[verticalScroll](./listbox-object.md#additional-properties)</li></ul>||
-|On Unload|||
+|On Unload|||  
+|On Validate|||
 
 
 ## Object arrays in columns  
@@ -415,3 +415,4 @@ Several events can be handled while using an object list box array:
 	*	in a check box (switch between checked/unchecked)
 *	**On Clicked**: When the user clicks on a button installed using the "event" *valueType* attribute, an `On Clicked` event will be generated. This event is managed by the programmer.
 *	**On Alternative Click**: When the user clicks on an ellipsis button ("alternateButton" attribute), an `On Alternative Click` event will be generated. This event is managed by the programmer.
+

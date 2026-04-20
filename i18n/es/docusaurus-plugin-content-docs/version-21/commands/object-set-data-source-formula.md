@@ -10,11 +10,11 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Parámetros | Tipo                       |                             | Descripción                                                                                                                  |
-| ---------- | -------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| \*         | Operador                   | &#8594; | Si se especifica, object es un nombre de objeto (cadena) ; si se omite, object es una variable o un campo |
-| object     | Text, Variable, Field      | &#8594; | Form object name (if \* is specified) or<br/>Field or variable (if \* is omitted)      |
-| formula    | 4D.Formula | &#8594; | Fórmula a asignar como fuente de datos                                                                                       |
+| Parámetros | Tipo                       |                             | Descripción                                                                                                                      |
+| ---------- | -------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| \*         | Operador                   | &#8594; | Si se especifica, object es un nombre de objeto (cadena) ; si se omite, object es una variable o un campo     |
+| object     | Text, Variable, Field      | &#8594; | Nombre del objeto formulario (si se especifica \*) o<br/>Campo o variable (si se omite \*) |
+| formula    | 4D.Formula | &#8594; | Fórmula a asignar como fuente de datos                                                                                           |
 
 </div>
 <!-- END REF-->

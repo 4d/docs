@@ -5,6 +5,12 @@ title: BLOB
 
 Blobクラスを使って、[BLOB オブジェクト](../Concepts/dt_blob.md#BLOB-の種類) (`4D.Blob`) を操作することができます。
 
+:::info
+
+このクラスは、バイナリーで[**ストリーム可能**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) です。
+
+:::
+
 ### 概要
 
 |                                                                                                  |

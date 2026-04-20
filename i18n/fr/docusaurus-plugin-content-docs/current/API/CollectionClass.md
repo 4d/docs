@@ -7,6 +7,12 @@ La classe Collection gère les expressions de type [Collection](Concepts/dt_coll
 
 Une collection est initialisée avec les commandes [`New collection`](../commands/new-collection) ou [`New shared collection`](../commands/new-shared-collection).
 
+:::info
+
+This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
+
+:::
+
 ### Exemple
 
 ```4d
@@ -3086,7 +3092,7 @@ Par défaut, les nouveaux éléments sont remplis par des valeurs **null**. Vous
 
 </details>
 
-<!-- REF #collection.reverse().Syntax -->**.reverse( )** : Collection <!-- END REF -->
+<!-- REF #collection.reverse().Syntax -->**.reverse()** : Collection <!-- END REF -->
 
 <!-- REF #collection.reverse().Params -->
 
@@ -3101,7 +3107,7 @@ Par défaut, les nouveaux éléments sont remplis par des valeurs **null**. Vous
 
 #### Description
 
-La fonction `.reverse()` <!-- REF #collection.reverse().Summary-->retourne une copie profonde de la collection avec tous ses éléments dans l'ordre inverse<!-- END REF -->. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
+The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a new collection with all elements of the original collection in reverse order<!-- END REF -->. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
 
 > Cette fonction ne modifie pas la collection d'origine.
 

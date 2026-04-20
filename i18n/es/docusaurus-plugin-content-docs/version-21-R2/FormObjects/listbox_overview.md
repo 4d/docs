@@ -31,8 +31,8 @@ Un list box se compone de cuatro partes distintas:
 
 - el [objeto list box](./listbox-object.md) en su totalidad,
 - [columnas](./listbox-column.md),
-- column [headers](./listbox-header-footer.md#headers), and
-- column [footers](./listbox-header-footer.md#footers).
+- [encabezados](./listbox-header-footer.md#headers) de columna y
+- [pies de página](./listbox-header-footer.md#footers) de columna.
 
 ![](../assets/en/FormObjects/listbox_parts.png)
 
@@ -316,7 +316,7 @@ Hay varias formas de definir los colores de fondo, los colores de fuente y los e
 
 Los principios de prioridad y de herencia se observan cuando la misma propiedad se define en más de un nivel.
 
-1. (highest priority) Cell (if multi-style text)
+1. (prioridad más alta) Celda (si es texto multiestilo)
 2. Arrays de columnas/métodos
 3. Arrays/métodos de Listbox
 4. Propiedades de la columna
@@ -511,7 +511,7 @@ Este principio se aplica a los arrays internos que se pueden utilizar para gesti
  ->MyListbox{3}:=True
 ```
 
-*Non-hierarchical representation:*  
+_Representación no jerárquica:\*  
 ![](../assets/en/FormObjects/hierarch7.png)
 
 *Representación jerárquica:*  
@@ -521,10 +521,10 @@ Este principio se aplica a los arrays internos que se pueden utilizar para gesti
 
 Al igual que con las selecciones, el comando [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) devolverá los mismos valores para un list box jerárquico que para un list box no jerárquico. Esto significa que en los dos ejemplos siguientes, [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) devolverá la misma posición: (3;2).
 
-*Non-hierarchical representation:*  
+_Representación no jerárquica:\*  
 ![](../assets/en/FormObjects/hierarch9.png)
 
-*Hierarchical representation:*  
+*Representación jerárquica:*  
 ![](../assets/en/FormObjects/hierarch10.png)
 
 Cuando se ocultan todas las líneas de una subjerarquía, la línea de ruptura se oculta automáticamente. En el ejemplo anterior, si las líneas 1 a 3 están ocultas, la línea de ruptura "Bretaña" no aparecerá.
@@ -541,10 +541,10 @@ Las líneas de rotura no se tienen en cuenta en los arrays internos utilizados p
 
 El siguiente list box fue diseñado utilizando un array de objetos:
 
-*Non-hierarchical representation:*  
+_Representación no jerárquica:\*  
 ![](../assets/en/FormObjects/hierarch12.png)
 
-*Hierarchical representation:*  
+*Representación jerárquica:*  
 ![](../assets/en/FormObjects/hierarch13.png)
 
 En modo jerárquico, los niveles de ruptura no son tenidos en cuenta por los arrays de modificación de estilo denominados `tStyle` y `tColors`. Para modificar el color o el estilo de los niveles de ruptura, debe ejecutar las siguientes instrucciones:

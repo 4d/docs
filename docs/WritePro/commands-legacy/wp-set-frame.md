@@ -5,14 +5,14 @@ slug: /WritePro/commands/wp-set-frame
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP SET FRAME.Syntax-->**WP SET FRAME** ( {* ;} *wpArea* : Text ; *frameSelector* : Integer {; *textBoxID* : Text} )<!-- END REF-->
+<!--REF #_command_.WP SET FRAME.Syntax-->**WP SET FRAME** ( * ; *wpArea* : Text ; *frameSelector* : Integer {; *textBoxID* : Text} )<br/>**WP SET FRAME** ( *wpArea* : Variable, Field ; *frameSelector* : Integer {; *textBoxID* : Text} )<!-- END REF-->
 <!--REF #_command_.WP SET FRAME.Params-->
 <div class="no-index">
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, wpArea is a form object name (string). If omitted, wpArea is an object field or variable. |
-| wpArea | Text | &#8594;  | Form object name (if * is specified) or 4D Write Pro object variable or field (if * is omitted) |
+| wpArea | Text, Variable, Field  | &#8594;  | Form object name (if * is specified) or 4D Write Pro object variable or field (if * is omitted) |
 | frameSelector | Integer | &#8594;  | Frame where the cursor should be set |
 | textBoxID | Text | &#8594;  | Id of the text box where the cursor should be set |
 </div>

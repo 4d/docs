@@ -36,12 +36,12 @@ title: コレクションとオブジェクトの並び替え
 | 6   | **collection** |                                                                           | 内部的な順序(コレクション関数と同じ、以下参照)                                                        |
 | 7   | **日付**         |                                                                           | 時系列順(古い日付が新しい日付の *前* になります。例:  !1990-01-01! *の次に* !2000-01-01!) |
 
-### Special numeric values
+### 特殊な数値
 
-Special floating-point values `+INF` (positive infinity), `-INF` (negative infinity), and `NaN` (Not-a-Number) present in collections and objects are ordered according to the following natural sequence: **NaN < -INF < finite values < +INF**.
+コレクションおよびオブジェクト内の特殊な浮動小数点値 `+INF` (正の無限大)、 `-INF` (負の無限大)、および `NaN` (Not-a-Number、数値ではない) は、以下の自然な順番 に従って並べ替えされます: **NaN < -INF < 有限の値 < +INF** 。
 
-### Consistent ordering in collections
+### コレクション内での一貫した並び順
 
-Collection sorting functions (see [Ordering functions](#ordering-functions) section above) implement a **consistent sort** for complex types such as objects and collections. By "consistent", we mean that successive calls to the same sorting function (e.g., `collection.orderBy()`) on the same collection produce identical ordering for complex type values. Formally, if a sort expression yields the same comparative result for two elements, the relative order of those elements is preserved.
+コレクションのソート関数(上記の[並べ替え機能](#並べ替え機能) の章を参照してください)はオブジェクトやコレクションなどの複雑な型のための **一貫したソート** を実装しています。 ここでいう "一貫した" とは、同じコレクションに対して同じソート関数(例: `collection.orderBy()`) への連続した呼び出しをした場合、これらは複雑な型の値に対して同一の並べ替えの結果を生成するということです。 正式には、二つの要素に対してソート式が同じ比較結果をもたらす場合、それらの要素の相対的な順序は保持されるということです。
 
-Other 4D sorting operations do not provide this stability guarantee when comparing complex types.
+他の4D のソート操作で複雑な型の比較をした場合には、こういった同一性の保証はしないということです。

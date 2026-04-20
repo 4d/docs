@@ -5,14 +5,6 @@ slug: /commands/new-process
 displayed_sidebar: docs
 ---
 
-<details><summary>Historia</summary>
-
-|Versión|Cambios|
-|---|---|
-|21|Se ha eliminado el manejo específico de procesos locales.|
-
-</details>
-
 
 <!--REF #_command_.New process.Syntax-->**New process** ( *metodo* ; *pila* {; *nombre* {; *param* {; *param2* ; ... ; *paramN*}}}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.New process.Params-->
@@ -34,6 +26,7 @@ displayed_sidebar: docs
 
 |Versión|Cambios|
 |---|---|
+|21|Se ha eliminado el manejo específico de procesos locales.|
 |16 R4|Modificado|
 |2004.3|Modificado|
 |<6|Creado|

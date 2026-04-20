@@ -25,7 +25,7 @@ Para cada usuario conectado al servidor, la lista ofrece la siguiente informaci�
 - **Fecha de conexión**: fecha y hora de la conexión de la máquina remota.
 - **Tiempos CPU**: tiempos procesador consumidos por este usuario desde la conexión.
 - **Actividad**: ratio de tiempo que 4D Server dedica a este usuario (visualización dinámica).
-- **Status**: "Online" or "Sleeping" if the remote machine has switched to sleep mode (see below).
+- **Estado**: "En línea" o "En reposo" si la máquina remota ha pasado al modo de reposo (ver abajo).
 
 ### Gestión de usuarios dormidos
 

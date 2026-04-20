@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | blobToEncrypt | Blob | &#8594;  | BLOB à encrypter |
 | keyObject &#124; passPhrase | Objet, Texte | &#8594;  | Objet JSON contenant la clé de chiffrement ou le mot de passe pour une génération directe de clé de chiffrement (texte) |
-| salt | Integer | &#8594;  | Additional salt for algorithm |
+| salt | Integer | &#8594;  | "Sel" additionnel pour l'algorithme |
 | encryptedBlob | Blob | &#8592; | BLOB encrypté |
 | Résultat | Boolean | &#8592; | True si le chiffrement a été effectué correctement. Sinon False |
 </div>
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Encrypt data BLOB.Summary-->La commande **Encrypt data BLOB**encrypte le paramètre *blobToEncrypt* avec le même algorithme utilisé par 4D pour encrypter les données (AES-256) et retourne le résultat dans encryptedBlob.<!-- END REF-->.
+<!--REF #_command_.Encrypt data BLOB.Summary-->La commande **Encrypt data BLOB** encrypte le paramètre *blobToEncrypt* avec le même algorithme utilisé par 4D pour encrypter les données (AES-256) et retourne le résultat dans *encryptedBlob*.<!-- END REF-->  
 
 Vous pouvez utiliser un paramètre *keyObject* ou un *passPhrase* pour encrypter le BLOB :
 
@@ -48,7 +48,7 @@ En cas d'erreur, le BLOB est retourné vide et la commande retourne false.
 
 ## Exemple 
 
-Cryptez un fichier texte situé dans le dossier RESSOURCES de la base de données :
+Cryptez un fichier texte situé dans le dossier RESOURCES de la base de données :
 
 ```4d
  var $fileToEncrypt;$encryptedFile : 4D.File
@@ -60,7 +60,7 @@ Cryptez un fichier texte situé dans le dossier RESSOURCES de la base de donnée
  
  $blobToencrypt:=$fileToEncrypt.getContent()
  
- $result:=Encrypter donnees BLOB($blobToEncrypt;"myPassPhrase";MAXLONG;$encryptedBlob)
+ $result:=Encrypt data BLOB($blobToEncrypt;"myPassPhrase";MAXLONG;$encryptedBlob)
  $encryptedFile.setContent($encryptedBlob)
 ```
 

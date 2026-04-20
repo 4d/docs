@@ -5,7 +5,7 @@ title: On Alternative Click
 
 | Code | Puede ser llamado por                                                                                                                     | Definición                                         |
 | ---- | ----------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| 38   | [Button](FormObjects/button_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox-column.md) | <li>Botones: el área "flecha" de un botón se presiona</li><li>List box: en una columna de un array, se hace clic en un botón de selección (atributo "alternateButton")</li> |
+| 38   | [Botón](FormObjects/button_overview.md) - [List Box](FormObjects/listbox_overview.md) - [Columna List Box](FormObjects/listbox-column.md) | <li>Botones: el área "flecha" de un botón se presiona</li><li>List box: en una columna de un array, se hace clic en un botón de selección (atributo "alternateButton")</li> |
 
 ## Descripción
 

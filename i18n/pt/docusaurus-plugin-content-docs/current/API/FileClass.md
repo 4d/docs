@@ -5,6 +5,12 @@ title: File
 
 Os objetos `File` são criados com o comando [`File`](../commands/file). Contêm referências a ficheiros de disco que podem ou não existir efectivamente no disco. Por exemplo, quando você executa o comando `File` para criar um arquivo, um objeto `File` válido é criado, mas nada é realmente armazenado no disco até que você chame a função [`file.create( )`](#create).
 
+:::info
+
+This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
+
+:::
+
 ### Exemplo
 
 O exemplo seguinte cria um arquivo de preferências na pasta do projecto:

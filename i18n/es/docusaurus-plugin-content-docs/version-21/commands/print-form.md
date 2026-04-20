@@ -139,21 +139,21 @@ Este comando imprime áreas y objetos externos (por ejemplo, áreas 4D Write o 4
 El siguiente ejemplo funciona como lo haría un comando [PRINT SELECTION](../commands-legacy/print-selection.md). Sin embargo, el informe utiliza una de dos formas diferentes, dependiendo de si el registro corresponde a un cheque o a un ingreso:
 
 ```4d
- QUERY([Register]) // Select the records
+ QUERY([Register]) // Seleccionar los registros
  If(OK=1)
-    ORDER BY([Register]) // Sort the records
+    ORDER BY([Register]) // Ordenar los registros
     If(OK=1)
-       PRINT SETTINGS // Display Printing dialog boxes
+       PRINT SETTINGS // Mostrar cuadros de diálogo de impresión
        If(OK=1)
           For($vlRecord;1;Records in selection([Register]))
              If([Register]Type ="Check")
-                Print form([Register];"Check Out") // Use one form for checks
+                Print form([Register]; "Check Out") // Utilice un formulario para cheques
              Else
-                Print form([Register];"Deposit Out") // Use another form for deposits
+                Print form([Register]; "Deposit Out") // Utilice otro formulario para depósitos
              End if
              NEXT RECORD([Register])
           End for
-          PAGE BREAK // Make sure the last page is printed
+          PAGE BREAK // Asegúrese de que se imprime la última página
        End if
     End if
  End if

@@ -27,4 +27,4 @@ Basicamente, o ORDA lida com objetos. No ORDA, todos os conceitos principais, in
 
 Os objetos no ORDA podem ser manipulados como os objetos padrão 4D, mas eles se beneficiam automaticamente de propriedades e métodos específicos.
 
-Os objetos ORDA são criados e instanciados quando necessário pelos métodos 4D (você não precisa criá-los). No entanto, objetos de modelo de dados da ORDA estão associados a classes [onde você pode adicionar funções personalizadas](ordaClasses.md).
+ORDA objects are created and instantiated when necessary by 4D methods (you do not need to create them). No entanto, objetos de modelo de dados da ORDA estão associados a classes [onde você pode adicionar funções personalizadas](ordaClasses.md).

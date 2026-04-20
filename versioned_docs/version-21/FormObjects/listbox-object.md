@@ -178,9 +178,10 @@ Supported properties depend on the list box type.
 |On Mouse Move|<ul><li>[area](#additional-properties)</li><li>[areaName](#additional-properties)</li><li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li></ul>||
 |On Open Detail|<ul><li>[row](#additional-properties)</li></ul>|*Current Selection & Named Selection list boxes only*|
 |On Row Moved|<ul><li>[newPosition](#additional-properties)</li><li>[oldPosition](#additional-properties)</li></ul>|*Arrays list boxes only*|
+|On Scroll|<ul><li>[horizontalScroll](#additional-properties)</li><li>[verticalScroll](#additional-properties)</li></ul>||  
 |On Selection Change|||
-|On Scroll|<ul><li>[horizontalScroll](#additional-properties)</li><li>[verticalScroll](#additional-properties)</li></ul>||
-|On Unload|||
+|On Unload|||  
+|On Validate|||
 
 
 ### Additional Properties {#additional-properties}
@@ -205,5 +206,6 @@ Form events on list box or list box column objects may return the following addi
 |verticalScroll|longint|Positive if scroll is towards the bottom, negative if towards the top|
 
 >If an event occurs on a "fake" column or row that doesn't exist, an empty string is typically returned.
+
 
 

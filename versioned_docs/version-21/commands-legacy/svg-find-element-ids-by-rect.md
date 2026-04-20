@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, pictureObject is an object name (string) <br/>If omitted, pictureObject is a variable |
-| pictureObject | Picture | &#8594;  | Object name (if * specified) or <br/>Field or variable (if * omitted) |
+| pictureObject | Text, Variable, Field | &#8594;  | Object name (if * specified) or <br/>Field or variable (if * omitted) |
 | x | Integer | &#8594;  | Horizontal coordinate of top left corner of selection rectangle |
 | y | Integer | &#8594;  | Vertical coordinate of top left corner of selection rectangle |
 | width | Integer | &#8594;  | Width of selection rectangle |

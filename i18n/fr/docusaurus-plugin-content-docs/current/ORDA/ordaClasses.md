@@ -60,6 +60,7 @@ De plus, les instances d'objet de classes utilisateurs du modèles de données O
 
 | Release | Modifications                                                                                                                                                    |
 | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 21 R3   | Support for the `server` keyword.                                                                                                                |
 | 19 R4   | Attributs alias dans la classe Entity                                                                                                                            |
 | 19 R3   | Attributs calculés dans la classe Entity                                                                                                                         |
 | 18 R5   | Les fonctions des classes du modèle de données ne sont pas exposées par défaut en REST. Nouveaux mots-clés `exposed` et `local`. |
@@ -282,7 +283,7 @@ Lors de la création ou de la modification de classes de modèles de données, v
 Lors de la compilation, les fonctions de classe du modèle de données sont exécutées :
 
 - dans **des process préemptifs ou coopératifs** (en fonction du process appelant) dans les applications monoposte,
-- dans des **process préemptifs** dans les applications client/serveur (sauf si le mot-clé [`local`](#local-functions) est utilisé, auquel cas cela dépend du process d'appel comme en mono-utilisateur).
+- dans des **process préemptifs** dans les applications client/serveur (sauf si le mot-clé [`local`](../Concepts/classes.md#local) est utilisé, auquel cas cela dépend du process d'appel comme en mono-utilisateur).
 
 Si votre projet est conçu de façon à être exécuté en client/serveur, assurez-vous que le code de la fonction de classe du modèle de données est thread-safe. Si un code thread-unsafe est appelé, une erreur sera générée au moment de l'exécution (aucune erreur ne sera déclenchée au moment de la compilation puisque l'exécution coopérative est prise en charge dans les applications monoposte).
 
@@ -345,9 +346,7 @@ La fonction `Class constructor` est déclenchée par les commandes et fonctionna
 
 #### Configurations distantes
 
-Lorsque vous utilisez une configuration à distance, il convient de respecter les principes suivants :
-
-- En **client/serveur**, la fonction peut être appelée sur le client ou sur le serveur, en fonction de l'emplacement du code d'appel. Lorsqu'elle est appelée sur le client, elle n'est pas déclenchée à nouveau lorsque le client tente d'enregistrer la nouvelle entité et envoie une demande de mise à jour au serveur pour la créer en mémoire sur le serveur.
+When using a remote configurations, you need to pay attention to the following principle: in **client/server** the function can be called on the client or on the server, depending on the location of the calling code. Lorsqu'elle est appelée sur le client, elle n'est pas déclenchée à nouveau lorsque le client tente d'enregistrer la nouvelle entité et envoie une demande de mise à jour au serveur pour la créer en mémoire sur le serveur.
 
 :::warning
 
@@ -426,7 +425,7 @@ Note over Qodly page: product.creationDate is "06/17/25" <br> and product.commen
 
 ```
 
-#### Exemple 5 (diagramme) : Qodly - Entité instanciée dans une fonction
+#### Example 5 (diagram): Qodly - Entity instantiated in a function
 
 ```mermaid
 
@@ -468,14 +467,14 @@ Dans les fonctions d'attributs calculés, [`This`](Concepts/classes.md#this) dé
 
 > Les attributs calculés ORDA ne sont pas [**exposés**](#exposed-vs-non-exposed-functions) par défaut. Exposez un champ calculé en ajoutant le mot-clé `exposed` lors de la définition de la fonction **get**.
 
-> **Les fonctions get et set** peuvent avoir la propriété [**local**](#local-functions) pour optimiser le traitement client/serveur.
+> **get and set functions** can have the [`local`](../Concepts/classes.md#local) property to optimize client/server processing.
 
 ### `Function get <attributeName>`
 
 #### Syntaxe
 
 ```4d
-{local} {exposed} Function get <attributeName>({$event : Object}) -> $result : type
+{local | server} {exposed} Function get <attributeName>({$event : Object}) -> $result : type
 // code
 ```
 
@@ -500,6 +499,12 @@ Les propriétés du paramètre *$event* sont les suivantes :
 | dataClassName | Text    | Nom de la dataclass                                                                                                           |
 | kind          | Text    | "get"                                                                                                                         |
 | Résultat      | Variant | Optionnel. Complétez cette propriété avec la valeur Null si vous souhaitez qu'un champ scalaire retourne Null |
+
+:::note
+
+For more information about the `local` and `server` keywords, please refer to the [local and server](../Concepts/classes.md#local-and-server) section.
+
+:::
 
 #### Exemples
 
@@ -545,7 +550,7 @@ Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
 
 ```4d
 
-{local} Function set <attributeName>($value : type {; $event : Object})
+{local | server} Function set <attributeName>($value : type {; $event : Object})
 // code
 ```
 
@@ -561,6 +566,12 @@ Les propriétés du paramètre *$event* sont les suivantes :
 | dataClassName | Text    | Nom de la dataclass                   |
 | kind          | Text    | "set"                                 |
 | value         | Variant | Valeur à gérer par l'attribut calculé |
+
+:::note
+
+For more information about the `local` and `server` keywords, please refer to the [local and server](../Concepts/classes.md#local-and-server) section.
+
+:::
 
 #### Exemple
 
@@ -1081,130 +1092,4 @@ Elle peut être appelée par la requête HTTP GET suivante :
 ```
 IP:port/rest/Products/getThumbnail ?$params='["Yellow Pack",200,200]'
 ```
-
-## Fonctions locales
-
-Par défaut dans l'architecture client/serveur, les fonctions de modèle de données ORDA sont exécutées **sur le serveur**. Cela garantit généralement les meilleures performances puisque seuls la requête de fonction et le résultat sont envoyés sur le réseau.
-
-Cependant, il peut arriver qu'une fonction soit entièrement exécutable côté client (par exemple, lorsqu'elle traite des données qui se trouvent déjà dans le cache local). Dans ce cas, vous pouvez économiser des requêtes au serveur et ainsi améliorer les performances de l'application en saisissant le mot-clé `local`. La syntaxe formelle est la suivante :
-
-```4d
-// déclarer une fonction à exécuter localement en client/serveur
-local Function <functionName>   
-```
-
-Avec ce mot-clé, la fonction sera toujours exécutée côté client.
-
-> Le mot-clé `local` ne peut être utilisé qu'avec les fonctions de classe du modèle de données. S'il est utilisé avec une fonction de [classe utilisateur standard](Concepts/classes.md), il est ignoré et une erreur est retournée par le compilateur.
-
-A noter que la fonction sera exécutée avec succès même si elle nécessite d'accéder au serveur (par exemple si le cache ORDA est expiré). Toutefois, il est fortement recommandé de s'assurer que la fonction locale n'accède pas aux données sur le serveur, sinon l'exécution locale pourrait n'apporter aucun avantage en termes de performances. Une fonction locale qui génère de nombreuses requêtes au serveur est moins efficace qu'une fonction exécutée sur le serveur qui ne retournerait que les valeurs résultantes. Prenons l'exemple suivant, avec une fonction sur l'entité Schools :
-
-```4d
-// Trouver les étudiants les plus jeunes  
-// Utilisation inappropriée du mot-clé local
-local Function getYoungest
-	var $0 : Object
-    $0:=This.students.query("birthDate >= :1"; !2000-01-01!).orderBy("birthDate desc").slice(0; 5)
-```
-
-- **sans** le mot clé `local`, le résultat est donné en une seule requête
-- **avec** le mot-clé `local`, 4 requêtes sont nécessaires : une pour obtenir les élèves de l'entité Schools, une pour la `query()`, une pour le `orderBy()` et une pour la `slice()`. Dans cet exemple, l'utilisation du mot-clé `local` est inappropriée.
-
-### Exemples
-
-#### Calcul de l'âge
-
-Considérons une entité avec un attribut *birthDate*. Nous souhaitons définir une fonction `age()` qui serait appelée dans une list box. Cette fonction peut être exécutée sur le client, ce qui évite de déclencher une requête au serveur pour chaque ligne de la list box.
-
-Dans la classe *StudentsEntity* :
-
-```4d
-Class extends Entity
-
-local Function age() -> $age: Variant
-
-If (This.birthDate#!00-00-00!)
-    $age:=Year of(Current date)-Year of(This.birthDate)
-Else
-    $age:=Null
-End if
-```
-
-#### Vérification des attributs
-
-Nous souhaitons vérifier la cohérence des attributs d'une entité chargée sur le client et mise à jour par l'utilisateur, avant de demander au serveur de les enregistrer.
-
-Sur la classe *StudentsEntity*, la fonction locale `checkData()` vérifie l'âge de l'étudiant :
-
-```4d
-Class extends Entity
-
-local Function checkData() -> $status : Object
-
-$status:=New object("success"; True)
-Case of
-    : (This.age()=Null)
-        $status.success:=False
-        $status.statusText:="The birthdate is missing"
-
-    :((This.age() <15) | (This.age()>30) )
-        $status.success:=False
-        $status.statusText:="The student must be between 15 and 30 - This one is "+String(This.age())
-End case
-```
-
-Code d'appel :
-
-```4d
-var $status : Object
-
-//Form.student est chargé avec tous ses attributs et mis à jour
-$status:=Form.student.checkData()
-If ($status.success)
-    $status:=Form.student.save() // appelle le serveur
-End if
-```
-
-## Prise en charge dans l'IDE 4D
-
-### Fichiers de classe (class files)
-
-Une classe utilisateur ORDA de modèle de données est définie en ajoutant, au [même emplacement que les fichiers de classe usuels](../Concepts/classes.md#class-definition) (c'est-à-dire dans le dossier `/Sources/Classes` du dossier projet), un fichier .4dm avec le nom de la classe. Par exemple, une classe d'entité pour la dataclass `Utilities` sera définie via un fichier `UtilitiesEntity.4dm`.
-
-### Créer des classes
-
-4D crée préalablement et automatiquement des classes vides en mémoire pour chaque objet de modèle de données disponible.
-
-![](../assets/en/ORDA/ORDA_Classes-3.png)
-
-> Par défaut, les classes ORDA vides ne sont pas affichées dans l'Explorateur. Pour les afficher, vous devez sélectionner **Afficher toutes les dataclasses** dans le menu d'options de l'Explorateur :
-> ![](../assets/en/ORDA/showClass.png)
-
-Les classes utilisateurs ORDA ont une icône différente des autres classes. Les classes vides sont grisées :
-
-![](../assets/en/ORDA/classORDA2.png)
-
-Pour créer un fichier de classe ORDA, il vous suffit de double-cliquer sur la classe prédéfinie correspondante dans l'Explorateur. Pour créer un fichier de classe ORDA, il vous suffit de double-cliquer sur la classe prédéfinie correspondante dans l'Explorateur. Par exemple, pour une classe Entity :
-
-```
-Class extends Entity
-```
-
-Une fois qu'une classe est définie, son nom n'est plus grisé dans l'Explorateur.
-
-### Modifier des classes
-
-Pour ouvrir une classe ORDA définie dans l'éditeur de code de 4D, sélectionnez ou double-cliquez sur un nom de classe ORDA et utilisez **Edit...** depuis le menu contextuel/options de la fenêtre de l'Explorateur:
-
-![](../assets/en/ORDA/classORDA4.png)
-
-Pour les classes ORDA basées sur le datastore local (`ds`), vous pouvez accéder directement au code de la classe depuis la fenêtre de structure de 4D :
-
-![](../assets/en/ORDA/classORDA5.png)
-
-### Éditeur de code
-
-Dans l'éditeur de code 4D, les variables typées en tant que classe ORDA bénéficient automatiquement des fonctions d'auto-complétion. Exemple avec une variable de classe Entity :
-
-![](../assets/en/ORDA/AutoCompletionEntity.png)
 

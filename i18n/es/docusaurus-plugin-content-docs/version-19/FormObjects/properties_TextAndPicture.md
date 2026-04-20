@@ -139,7 +139,7 @@ El nombre de la ruta a introducir es similar al de [ la propiedad Ruta de acceso
 
 #### Objetos soportados
 
-[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [List Box Header](listbox-header-footer.md#headers) - [Radio Button](radio_overview.md)
+[Botón](button_overview.md) (todos los estilos excepto [Ayuda](button_overview.md#help)) - [Casilla de verificación](checkbox_overview.md) - [Encabezado de List Box](listbox-header-footer.md#headers) - [Botón de radio](radio_overview.md)
 
 ---
 
@@ -223,4 +223,4 @@ Es importante señalar que la propiedad "Con menú emergente" sólo gestiona el 
 
 #### Objetos soportados
 
-[Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-xp) - [Custom](button_overview.md#custom)
+[Botón de la barra de herramientas](button_overview.md#toolbar) - [Botón Bisel](button_overview.md#bevel) - [Botón Bisel redondeado](button_overview.md#rounded-bevel) - [Botón Gradiente OS X](button_overview.md#os-x-gradient) - [Botón Texturizado OS X](button_overview.md#os-x-textured) - [Botón Office XP](button_overview.md#office-xp) - [Personalizado](button_overview.md#custom)

@@ -9,6 +9,11 @@ The Collection class manages [Collection](Concepts/dt_collection.md) type expres
 A collection is initialized with the [`New collection`](../commands/new-collection) or [`New shared collection`](../commands/new-shared-collection) commands.
 
 
+:::info
+
+This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
+
+:::
 
 ### Example
 
@@ -3290,7 +3295,7 @@ By default, new elements are filled will **null** values. You can specify the va
 
 </details>
 
-<!-- REF #collection.reverse().Syntax -->**.reverse( )** : Collection <!-- END REF -->
+<!-- REF #collection.reverse().Syntax -->**.reverse()** : Collection <!-- END REF -->
 
 
 <!-- REF #collection.reverse().Params -->
@@ -3305,7 +3310,7 @@ By default, new elements are filled will **null** values. You can specify the va
 
 #### Description
 
-The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a deep copy of the collection with all its elements in reverse order<!-- END REF -->. If the original collection is a shared collection, the returned collection is also a shared collection.
+The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a new collection with all elements of the original collection in reverse order<!-- END REF -->. If the original collection is a shared collection, the returned collection is also a shared collection.
 
 >This function does not modify the original collection.
 

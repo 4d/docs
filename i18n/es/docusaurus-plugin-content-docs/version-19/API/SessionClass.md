@@ -36,9 +36,9 @@ Para obtener información detallada sobre la implementación de la sesión, cons
 <!-- REF #_command_.Session.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|4D.Session|<-|Session object|
+|Resultado|4D.Session|<-|Session object|
 </div>
 <!-- END REF -->
 
@@ -283,11 +283,11 @@ End if
 <!-- REF #SessionClass.setPrivileges().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|privilege|Text|->|Privilege name|
-|privileges|Collection|->|Collection of privilege names|
-|settings|Object|->|Object with a "privileges" property (string or collection)|
+|privilege|Text|->|Nombre de privilegio|
+|privileges|Collection|->|Colección de nombres de privilegio|
+|settings|Object|->Objeto con una propiedad "privilegios" (cadena o colección)|
 </div>
 <!-- END REF -->
 

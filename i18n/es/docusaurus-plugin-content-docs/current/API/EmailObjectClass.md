@@ -16,6 +16,12 @@ Los objetos `Email` se envían utilizando la función SMTP [`.send()`](SMTPTrans
 
 Los comandos [`MAIL Convert from MIME`](../commands/mail-convert-from-mime) y [`MAIL Convert to MIME`](../commands/mail-convert-to-mime) se pueden utilizar para convertir los objetos `Email` a y desde contenidos MIME.
 
+:::info
+
+This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
+
+:::
+
 ### Objeto Email
 
 Los objetos Email ofrecen las siguientes propiedades:

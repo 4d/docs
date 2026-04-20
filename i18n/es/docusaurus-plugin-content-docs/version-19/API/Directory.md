@@ -400,11 +400,11 @@ Esta propiedad es **de sólo lectura**.
 <!-- REF #directory.copyTo().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|destinationFolder |4D.Folder |->|Destination folder|
-|newName|Text|->|Name for the copy|
-|overwrite|Integer|->|`fk overwrite` to replace existing elements|
+|destinationFolder | 4D.Folder |->|carpeta Destino|
+|newName|Text|->|Nombre para la copia|
+|overwrite|Integer|->|`fk overwrite` para reemplazar elementos existentes|
 |Result|4D.Folder|<-|Copied file or folder|
 </div>
 <!-- END REF -->

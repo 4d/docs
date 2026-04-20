@@ -2362,7 +2362,7 @@ Por padrão, são preenchidos novos elementos **null** valores. Pode especificar
 
 #### Descrição
 
-A função `.reverse()` <!-- REF #collection.reverse().Summary -->devolve uma cópia profunda da colecção com todos os seus elementos em ordem inversa<!-- END REF -->. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
+A função `.reverse()` <!-- REF #collection.reverse().Summary -->returns a new collection with all elements of the original collection in reverse order<!-- END REF -->. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 > Essa função não modifica a coleção original.
 
 #### Exemplo

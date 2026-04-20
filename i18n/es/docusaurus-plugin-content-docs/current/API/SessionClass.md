@@ -10,7 +10,7 @@ Los objetos de sesión son devueltos por el comando [`Session`](../commands/sess
 - [Sesiones escalables para aplicaciones web avanzadas](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
 - [Permissions: inspeccionar los privilegios de la sesión para facilitar la depuración](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging/)
 - [Generar, compartir y utilizar contraseñas de un solo uso (OTP) para las sesiones web](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/)
-- [Client / server – Handle a session when working on a 4D client](https://blog.4d.com/client-server-handle-a-session-when-working-on-a-4d-client)
+- [Forget server-side wrappers, use 4D Sessions from the client](https://blog.4d.com/forget-server-side-wrappers-use-4d-sessions-from-the-client)
 
 :::
 
@@ -435,7 +435,7 @@ End if
 
 La propiedad `.id` contiene <!-- REF #SessionClass.id.Summary -->el identificador único (UUID) de la sesión de usuario<!-- END REF -->.
 
-Con 4D Server, esta cadena única es asignada automáticamente por el servidor para cada sesión y permite identificar sus procesos. It is available in both the `Session` on the server side and on the client side.
+Con 4D Server, esta cadena única es asignada automáticamente por el servidor para cada sesión y permite identificar sus procesos. Está disponible tanto en `Session` del lado del servidor como del lado del cliente.
 
 :::tip
 

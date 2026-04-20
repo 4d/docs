@@ -445,11 +445,11 @@ En este ejemplo, la primera entidad se creará y guardará pero la segunda falla
 <!-- REF #DataClassClass.get().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|primaryKey |Integer OR Text|->|Primary key value of the entity to retrieve|
-|settings  |Object|->|Build option: context|
-|Result|4D.Entity|<-|Entity matching the designated primary key|
+|primaryKey |Integer O Text|->|Valor de la llave primaria de la entidad a recuperar|
+|settings |Object|->|Opción de Build: contexto|
+|Resultado|4D.Entity|<-|Entity matching the designated primary key|
 </div>
 <!-- END REF -->
 
@@ -572,9 +572,9 @@ $number:=$ds.Persons.getCount()
 <!-- REF #DataClassClass.getDataStore().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|Result|cs.DataStore|<-|Datastore of the dataclass|
+|Resultado|cs.DataStore|<-|Datastore of the dataclass|
 </div>
 <!-- END REF -->
 
@@ -844,10 +844,10 @@ Este ejemplo crea una nueva entidad en la clase de datos "Log" y registra la inf
 <!-- REF #DataClassClass.newSelection().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|keepOrder |Integer |-> |`dk keep ordered`: creates an ordered entity selection,<br/>`dk non ordered`: creates an unordered entity selection (default if omitted) |
-|Result|4D.EntitySelection|<-|New blank entity selection related to the dataclass|
+|keepOrder |Integer |-> |`dk keep ordered`: crea una selección de entidades ordenada,<br/>`dk non ordered`: crea una selección de entidades desordenada (por defecto si se omitió) |
+|Resultado|4D.EntitySelection|<-|New blank entity selection related to the dataclass|
 </div>
 <!-- END REF -->
 
@@ -890,12 +890,12 @@ Cuando se crea, la selección de entidades no contiene ninguna entidad (`mySelec
 <!-- REF #DataClassClass.query().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|queryString |Text |-> |Search criteria as string|
-|formula |Object |-> |Search criteria as formula object|
-|value|any|->|Value(s) to use for indexed placeholder(s)|
-|querySettings|Object|->|Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan|
+|queryString |Text |-> |Criterios de búsqueda como cadena|
+|formula |Object |-> |Criterios de búsqueda como objeto fórmula|
+|value|any|->|Valor(es) a utilizar para marcador(es) de posición indexado(s)|
+|querySettings|Object|->Opciones de consulta: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan|
 |Result|4D.EntitySelection|<-|New entity selection made up of entities from dataclass meeting the search criteria specified in *queryString* or *formula*|
 </div>
 <!-- END REF -->
