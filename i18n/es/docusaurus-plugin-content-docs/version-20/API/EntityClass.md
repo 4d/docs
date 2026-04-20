@@ -1370,11 +1370,11 @@ Actualización de una entidad con la opción `dk auto merge`:
 <!-- REF #EntityClass.toObject().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|filterString |Text |->|Attribute(s) to extract (comma-separated string)|
-|filterCol |Collection |->|Collection of attribute(s) to extract|
-|options|Integer|->|`dk with primary key`: adds the \_\_KEY property;<br/>`dk with stamp`: adds the \_STAMP property|
+|filterString |Text |->|Atributo(s) a extraer (cadena separada por comas)|
+|filterCol |Colección |->|Colección de atributo(s) a extraer|
+|options|Integer|->|`dk with primary key`: añade la propiedad \_\_KEY;<br/>`dk with stamp`: añade la propiedad \_STAMP|
 |Result|Object|<-|Object built from the entity|
 </div>
 <!-- END REF -->
