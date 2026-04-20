@@ -48,7 +48,7 @@ Você pode omitir o parâmetro *format*, neste caso você precisa especificar a 
 
 - "4D tags específicas" significa 4D XHTML com um namespace 4D e estilos 4D CSS
 - Para mais informações sobre o formato 4D Write Pro do documento, consulte [formato do documento .4wp](https://doc.4d.com/4Dv20/4D/20/Using-a-4D-Write-Pro-area.200-6229460.en.html#2895813).
-- Para visualizar uma lista das diferenças conhecidas ou incompatibilidades ao usar o formato .docx, consulte [Importando e Exportando no formato .docx](https://doc.4d.com/4Dv20/4D/20/Importing-and-Exporting-in-docx-format.200-6229466.en.html).
+- Para visualizar uma lista das diferenças conhecidas ou incompatibilidades ao usar o formato .docx, consulte [Importando e Exportando no formato .docx](../user-legacy/importing-and-exporting-in-docx-format.md).
 - Para obter mais informações sobre exportação para o formato SVG, consulte [Exportando para o formato SVG](https://doc.4d.com/4Dv20/4D/20/Exporting-to-SVG-format.200-6229468.en.html).
 
 ### Parâmetro option
@@ -271,8 +271,8 @@ WP EXPORT DOCUMENT(WParea; $file; wk docx; $options)
 ## Veja também
 
 [4D QPDF (Component) - PDF Get attachments](https://github.com/4d/4D-QPDF)</br>
-[Exporting to HTML and MIME HTML formats](https://doc.4d.com/4Dv20/4D/20/Exporting-to-HTML-and-MIME-HTML-formats.200-6229467.en.html)<br/>
-[Importing and Exporting in .docx format](https://doc.4d.com/4Dv20/4D/20/Importing-and-Exporting-in-docx-format.200-6229466.en.html)<br/>
+[Exporting to HTML and MIME HTML formats](../user-legacy/exporting-to-html-and-mime-html-formats.md)<br/>
+[Importing and Exporting in .docx format](../user-legacy/importing-and-exporting-in-docx-format.md)<br/>
 [Blog post - 4D Write Pro: Electronic invoice generation](https://blog.4d.com/4d-write-pro-electronic-invoice-generation)</br>
 [Blog post - 4D Write Pro: Export to PDF with enclosures](https://blog.4d.com/4d-write-pro-export-to-pdf-with-enclosures)</br>
 [WP EXPORT VARIABLE](wp-export-variable.md)</br>

@@ -35,7 +35,7 @@ In the *format* parameter, pass a constant from the *4D Write Pro Constants* the
 | ------------------- | ------- | ----- | ------------|
 | wk 4wp              | Integer | 4     | 4D Write Pro document is saved in a native archive format (zipped HTML and images saved in a separate folder). 4D specific tags are included and 4D expressions are not computed. This format is particularly suitable for saving and archiving 4D Write Pro documents on disk without any loss.   |
 | wk docx   |Integer           | 7     | .docx extension. 4D Write Pro document is saved in Microsoft Word format. Certified support for Microsoft Word 2010 and newer. <br/>The document parts exported are: <ul><li>Body / headers / footers / sections</li><li>Page / print settings (margins, background color / image, borders, padding, paper size / orientation)</li><li>Images - inline, anchored, and background image pattern (defined with wk background image)</li><li>Style sheets (character, paragraph)</li><li>Compatible variables and expressions (page number, number of pages, date, time, metadata). Non-compatible variables and expressions will be evaluated and frozen before export.</li><li>Links - Bookmarks and URLs</li></ul>Note that some 4D Write Pro settings may not be available or may behave differently in Microsoft Word. |
-| wk mime html        | Integer | 1     | 4D Write Pro document is saved as standard MIME HTML with HTML documents and images embedded as MIME parts (encoded in base64). Expressions are computed and 4D specific tags and method links are removed. Only text boxes anchored to embedded view are exported (as divs). This format is particularly suitable for sending HTML emails with the  command.    |
+| wk mime html        | Integer | 1     | 4D Write Pro document is saved as standard MIME HTML with HTML documents and images embedded as MIME parts (encoded in base64). Expressions are computed and 4D specific tags and method links are removed. Only text boxes anchored to embedded view are exported (as divs). This format is particularly suitable for sending HTML emails.    |
 | wk pdf              | Integer | 5     | .pdf extension. 4D Write Pro document is saved in PDF format, based on Page view mode. The following metadata is exported in a PDF document: Title Author Subject Content creator **Notes**: Expressions are automatically frozen when document is exported Links to methods are NOT exported  |
 | wk svg              | Integer | 8     | 4D Write Pro document page is saved in SVG format, based on Page view mode. **Note:** When exporting to SVG, you can only export one page at a time. Use the wk page index to specify which page to export. |
 | wk web page html 4D | Integer | 3     | 4D Write Pro document is saved as HTML and includes 4D specific tags; each expression is inserted as a non-breaking space. Since this format is lossless, it is appropriate for storing purposes in a text field.  |
@@ -44,13 +44,13 @@ In the *format* parameter, pass a constant from the *4D Write Pro Constants* the
 
 * "4D specific tags" means 4D XHTML with a 4D namespace and 4D CSS styles.
 * For more information about the 4D Write Pro document format, refer to [.4wp document format](https://doc.4d.com/4Dv20/4D/20/Using-a-4D-Write-Pro-area.200-6229460.en.html#2895813).
-* To view a list of known differences or incompatibility when using the .docx format, see [Importing and Exporting in .docx format](https://doc.4d.com/4Dv20/4D/20/Importing-and-Exporting-in-docx-format.200-6229466.en.html).
+* To view a list of known differences or incompatibility when using the .docx format, see [Importing and Exporting in .docx format](../user-legacy/importing-and-exporting-in-docx-format.md).
 * When exporting to SVG format with this command, images are embedded in base64 format.
 * For more information on exporting to SVG format, see [Exporting to SVG format](https://doc.4d.com/4Dv20/4D/20/Exporting-to-SVG-format.200-6229468.en.html).
 
 ### option parameter 
 
-Pass an [object](# "Data structured as a native 4D object") in *option* containing the values to define the properties of the exported document. The following properties are available: 
+Pass in *option* an object containing the values to define the properties of the exported document. The following properties are available: 
 
 | Constant   | Value              | Comment   |
 | ----------- | ------------------ | ---------------------------------------- |
@@ -66,7 +66,7 @@ Pass an [object](# "Data structured as a native 4D object") in *option* containi
 | wk pdfa version                             | pdfaVersion        | Exports PDF with conformance to a PDF/A version. For more information on PDF/A properties and versions, please refer to the [PDF/A page on Wikipedia](https://en.wikipedia.org/wiki/PDF/A). Possible values: <li>`wk pdfa2`: Exports to version "PDF/A-2"</li><li> `wk pdfa3`: Exports to version "PDF/A-3"<li> **Note:** On macOS, `wk pdfa2` may export to PDF/A-2 or PDF/A-3 or higher, depending on platform implementation. Also, `wk pdfa3` means "exports to *at least* PDF/A-3". On Windows, the output PDF file will always be equal to the desired conformance.  |
 | wk recompute formulas                       | recomputeFormulas  | Defines if formulas must be recomputed when exported. Possible values:<li>true - Default value. All formulas are recomputed</li><li>false - Do not recompute formulas </li>  |
 | wk visible background and anchored elements | visibleBackground  | Displays or exports background images/color, anchored images and text boxes (for display, visible effect in Page or Embedded view mode only). Possible values: True/False  |
-| wk visible empty images                     | visibleEmptyImages | Displays or exports a default black rectangle for images that cannot be loaded or computed (empty images or images in an unsupported format). Possible values: True/False. Default value: True If value is False, missing image elements will not be displayed at all even if they have borders, width, height, or background; this may impact the page layout for inline images.  |
+| wk visible empty images                     | visibleEmptyImages | Displays or exports a default black rectangle for images that cannot be loaded or computed (empty images or images in an unsupported format). Possible values: True/False. Default value: True. If value is False, missing image elements will not be displayed at all even if they have borders, width, height, or background; this may impact the page layout for inline images.  |
 | wk visible footers                          | visibleFooters     | Displays or exports the footers (for display, visible effect in Page view mode only). Possible values: True/False  |
 | wk visible headers                          | visibleHeaders     | Displays or exports the headers (for display, visible effect in Page view mode only). Possible values: True/False   |
 | wk visible references                       | visibleReferences  | Displays or exports all 4D expressions inserted in the document as references. Possible values: True/False  |
@@ -94,7 +94,7 @@ The following table indicates the *option* available per export *format*:
 | wk visible references                       | \-                                                                         | \-                                                                        | \-                                                                             | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: false) | \-                                                                         | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: false)    |
 | wk whitespace                         | \-   | \-    | ![](../../assets/en/WritePro/commands/pict5058606.en.png) (default: "pre-wrap")  | \-  |  \-   | \-  |
 
-**Compatibility Note:** Passing a *longint* value in *option* is supported for compatibility reasons, but it is recommended to use an [object](# "Data structured as a native 4D object") parameter. 
+**Compatibility Note:** Passing a *longint* value in *option* is supported for compatibility reasons, but it is recommended to use an object parameter. 
 
 ## Example 1 
 
@@ -159,6 +159,6 @@ To export the first page of a 4D Write Pro as SVG in a Text variable and hide th
 [4D QPDF (Component) - PDF Get attachments](https://github.com/4d/4D-QPDF)  
 [Blog post - 4D Write Pro: Electronic invoice generation](https://blog.4d.com/4d-write-pro-electronic-invoice-generation)  
 [Blog post - 4D Write Pro: Export to PDF with enclosures](https://blog.4d.com/4d-write-pro-export-to-pdf-with-enclosures)  
-[Exporting to HTML and MIME HTML formats](https://doc.4d.com/4Dv20/4D/20/Exporting-to-HTML-and-MIME-HTML-formats.200-6229467.en.html)<br/>
-[Importing and Exporting in .docx format](https://doc.4d.com/4Dv20/4D/20/Importing-and-Exporting-in-docx-format.200-6229466.en.html)<br/>
+[Exporting to HTML and MIME HTML formats](../user-legacy/exporting-to-html-and-mime-html-formats.md)<br/>
+[Importing and Exporting in .docx format](../user-legacy/importing-and-exporting-in-docx-format.md)<br/>
 [WP EXPORT DOCUMENT](../commands/wp-export-document.md)  
