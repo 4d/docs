@@ -61,7 +61,7 @@ folders.json|Explorer folder definitions|JSON
 menus.json|Menu definitions|JSON
 roles.json|[Privileges, permissions](../ORDA/privileges.md#rolesjson-file) and other security settings for the project|JSON
 settings.4DSettings|*Structure* database settings. They are not taken into account if *[user settings](#settings-user)* or *[user settings for data](#settings-user-data)* are defined (see also [Priority of settings](../settings/overview.md#priority-of-settings). **Warning**: In compiled applications, structure settings are stored in the .4dz file (read-only). For deployment needs, it is necessary to [enable](../settings/overview.md#enabling-user-settings) and use *user settings* or *user settings for data* to define custom settings.|XML
-AIProviders.json|[AI provider configuration file](../settings/ai.md#aiprovidersjson) for Structure|JSON    
+AIProviders.json|*Structure* [AI provider configuration file](../settings/ai.md#aiprovidersjson). Can be overriden by an AIProviders.json file added in *[user settings](#settings-user)* or *[user settings for data](#settings-user-data)* (see also [Priority of settings](../settings/overview.md#priority-of-settings). |JSON    
 tips.json|Defined tips|JSON
 lists.json|Defined lists|JSON
 filters.json|Defined filters|JSON
