@@ -935,16 +935,16 @@ End if
 
 デフォルトで、共有シングルトンまたはセッションシングルトンの関数はローカルに実行されます。 `server` キーワードをクラス関数定義に追加することで、4D はシングルトンインスタンスをサーバー上で使用します。 この場合、まだインスタンスが存在していない場合、サーバー上でシングルトンのインスタンス化が起こりうることに注意してください。
 
-For [sessions singletons](#singleton-classes), the function is executed on the server in the corresponding singleton instance, i.e. the instance of the singleton for the current session.
+[セッションシングルトン](#シングルトンクラス) においては、関数は対応するシングルトンインスタンス(つまりカレントセッションのシングルトンのインスタンス)内においてサーバー上で実行されます。
 
 :::note
 
-If you declare a `server Function` in a shared singleton, then:
+共有シングルトン内で `server Function` を宣言した場合、以下のようになります:
 
-- you instantiate a singleton *S1* on the client (named *s1*),
-- you run *s1.function()* on the client.
+- シングルトン *S1* はクライアント上でインスタンス化されます(名前は *s1* )
+- *s1.function()* はクライアント上で実行されます。
 
-If no instance of *S1* exists on the server at that moment, *S1* is instantiated on the server (the constructor is executed), and *function()* runs on that server instance. As a result, two instances of *S1* can coexist (client-side and server-side), with distinct property values. In this case, *s1.property* is always accessed locally. It cannot be accessed on the server, for example from server-side code using direct dot notation (an error is returned).
+その時にサーバー上で *S1* のインスタンスが存在しない場合、*S1* はサーバー上でインスタンス化され(コンストラクターが実行されます)、*function()* 関数はサーバーインスタン上で実行されます。 As a result, two instances of *S1* can coexist (client-side and server-side), with distinct property values. In this case, *s1.property* is always accessed locally. It cannot be accessed on the server, for example from server-side code using direct dot notation (an error is returned).
 
 :::
 

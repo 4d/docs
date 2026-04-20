@@ -11,7 +11,7 @@ Cuando la opción **inserción automática** no está definida (por defecto), el
 
 Esta propiedad es soportada por:
 
-- [Combo box](comboBox_overview.md) and [list box column](listbox-column.md) form objects associated to a choice list.
+- objetos formulario [Combo box](comboBox_overview.md) y [columna de list box](listbox-column.md) y asociados a una lista de selección.
 - objetos de formulario [Combo box](comboBox_overview.md) cuya lista asociada se llena mediante su array o fuente de datos de objetos.
 
 Por ejemplo, dada una lista de selección que contiene "Francia, Alemania, Italia" que está asociada a un combo box "Países": si la propiedad **inserción automática** está activada y un usuario introduce "España", entonces el valor "España" se añade automáticamente a la lista en memoria:
@@ -113,7 +113,7 @@ Indica una variable o expresión a la que se le asignará un entero largo que in
 
 Define el tipo de datos para la expresión mostrada. Esta propiedad se utiliza con:
 
-- [List box columns](listbox-column.md) of the selection and collection types.
+- [Columnas de List box](listbox-column.md) de los tipos selección y collection.
 - [Listas desplegables](dropdownList_Overview.md) asociadas a objetos o arrays.
 
 Ver también la sección [**Tipo de expresión**](properties_Object.md#expression-type).
@@ -126,7 +126,7 @@ Ver también la sección [**Tipo de expresión**](properties_Object.md#expressio
 
 #### Objetos soportados
 
-[Drop-down Lists](dropdownList_Overview.md) associated to objects or arrays - [List Box column](listbox-column.md)
+[Listas desplegables](dropdownList_Overview.md) asociadas a objetos o arrays - [Columna de List Box ](listbox-column.md)
 
 ---
 
@@ -189,7 +189,7 @@ Debe introducir una lista de valores. En el editor de formularios, un diálogo e
 
 ## Expression
 
-This description is specific to [selection](FormObjects/listbox-object.md#selection-list-boxes) and [collection](FormObjects/listbox-object.md#collection-or-entity-selection-list-boxes) type list box columns. Ver también la sección **[Variable o Expresión](properties_Object.md#variable-or-expression)**.
+Esta descripción es específica para la [selección](FormObjects/listbox-object.md#selection-list-boxes) y las columnas de list box de tipo [colección](FormObjects/listbox-object.md#collection-or-entity-selection-list-boxes). Ver también la sección **[Variable o Expresión](properties_Object.md#variable-or-expression)**.
 
 Una expresión 4D que se asociará a una columna. Puede introducir:
 
@@ -255,7 +255,7 @@ Se pueden utilizar todas las tablas de la base de datos, independientemente de s
 Esta propiedad está disponible en las siguientes condiciones:
 
 - una [lista de selección](#choice-list) está asociada al objeto
-- for [inputs](input_overview.md) and [list box columns](listbox-column.md), a [required list](properties_RangeOfValues.md#required-list) is also defined for the object (both options should use usually the same list), so that only values from the list can be entered by the user.
+- para [entradas](input_overview.md) y [columnas de list box](listbox-column.md), una [lista obligatoria](properties_RangeOfValues.md#required-list), también se define para el objeto (ambas opciones deben utilizar normalmente la misma lista), de modo que el usuario sólo pueda introducir valores de la lista.
 
 Esta propiedad especifica, en el contexto de un campo o variable asociado a una lista de valores, el tipo de contenido a guardar:
 
