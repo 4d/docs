@@ -345,7 +345,7 @@ La fonction *getter* définit le type de données du champ calculé grâce au pa
 - Image
 - BLOB
 - Entity (i.e. cs.EmployeeEntity)
-- Entity selection (i.e. cs.EmployeeSelection)
+- **Exemple ** : cs.EmployeeSelection
 
 Les propriétés du paramètre *$event* sont les suivantes :
 
@@ -708,7 +708,7 @@ Un attribut alias hérite son [`type`](../API/DataClassClass.md#attributename) d
 - si le [`kind`](../API/DataClassClass.md#attributename) l'attribut cible est "storage", le type de données de l'alias est du même type,
 - si le [`kind`](../API/DataClassClass.md#attributename) de l'attribut cible est "relatedEntity" ou "relatedEntities", le type de données de l'alias est `4D.Entity` ou `4D.EntitySelection` (*"classnameEntity*" ou*"classnameSelection*").
 
-Les attributs alias basés sur des relations ont un [`path`](../API/DataClassClass.md#attributename) spécifique, contenant le chemin de leurs attributs cibles. Les attributs alias basés sur des attributs de la même dataclass ont les mêmes propriétés que leurs attributs cibles (et aucune propriété de `path` ).
+Les attributs alias basés sur des attributs de la même dataclass ont les mêmes propriétés que leurs attributs cibles (et aucune propriété de `path` ). Les attributs alias basés sur des relations ont un [`path`](../API/DataClassClass.md#attributename) spécifique, contenant le chemin de leurs attributs cibles.
 
 
 ### Exemples
@@ -795,7 +795,7 @@ $arch.save() //courseName et name sont "Archaeology II"
 
 ## Fonctions exposées et non exposées
 
-Pour des raisons de sécurité, toutes les fonctions des classes de votre modèle de données et les attributs alias **ne sont pas exposés** par défaut (i.e. ils sont privés) pour les requêtes distantes.
+Pour des raisons de sécurité, toutes les fonctions des classes de votre modèle de données et les attributs alias **ne sont pas exposés** par défaut (i.e.
 
 Les requêtes distantes incluent :
 
