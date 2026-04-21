@@ -17,7 +17,7 @@ La parte superior de la página provee información sobre el estado actual del s
 
 Este botón se alterna y puede utilizarse para controlar la activación del servidor SQL de 4D Server.
 
-- Cuando el estado del servidor SQL es "Iniciado", el botón se etiqueta **Detener el servidor SQL**. Si presiona este botón, el servidor SQL de 4D Server se detiene inmediatamente; ya no responde a ninguna petición SQL externa recibida en el puerto TCP designado.
+- Cuando el estado del servidor SQL es "Detenido", el botón se etiqueta **Iniciar el servidor SQL**. Si presiona este botón, el servidor SQL de 4D Server se detiene inmediatamente; ya no responde a ninguna petición SQL externa recibida en el puerto TCP designado.
 - Cuando el estado del servidor SQL es "Detenido", el botón se etiqueta **Iniciar el servidor SQL**. Si presiona este botón, el servidor SQL de 4D Server se inicia inmediatamente; responde a las peticiones SQL externas recibida en el puerto TCP designado. Tenga en cuenta que necesitará una licencia adecuada para poder utilizar el servidor SQL de 4D.
 
 > El servidor SQL también puede iniciarse automáticamente al iniciar la aplicación (opción de las Preferencias) o por programación.
