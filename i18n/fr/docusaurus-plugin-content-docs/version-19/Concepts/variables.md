@@ -233,7 +233,7 @@ En mode client/serveur, chaque poste (client et serveur) partage la même défin
 
 ## Variables système
 
-Le langage 4D gère plusieurs **variables système** qui vous permettent de contrôler l'exécution de différentes opérations. Vous pouvez tester leur valeur et les utiliser comme n'importe quelle variable. Toutes les variables système sont des [variables process](#process-variables).
+Le langage 4D gère plusieurs **variables système** qui vous permettent de contrôler l'exécution de différentes opérations. Vous pouvez tester leur valeur et les utiliser comme n'importe quelle variable. Vous pouvez tester leur valeur et les utiliser comme n'importe quelle variable.
 
 Les variables système sont utilisées par les commandes 4D. Reportez-vous au paragraphe "Variables et ensembles système" dans la description d'une commande pour savoir si elle affecte une variable système.
 
