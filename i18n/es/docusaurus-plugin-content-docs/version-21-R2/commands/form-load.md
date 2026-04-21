@@ -48,7 +48,7 @@ Cuando el comando se ejecuta desde un componente, carga los formularios del comp
 ### formData
 
 Opcionalmente, puede pasar parámetros al *form* usando el objeto *formData* o el objeto de clase form automáticamente instanciado por 4D si has [asociado una clase de usuario al formulario](../FormEditor/properties_FormProperties.md#form-class). Todas las propiedades del objeto de datos del formulario estarán entonces disponibles desde el contexto del formulario a través del comando [Form](form.md).
-El objeto de datos del formulario está disponible en el [evento de formulario `On Load`](../Events/onLoad.md).
+Todas las propiedades del objeto de datos del formulario estarán entonces disponibles desde el contexto del formulario a través del comando [Form](form.md).
 
 Para obtener información detallada sobre el objeto de datos del formulario, consulte el comando [`DIALOG`](dialog.md).
 
