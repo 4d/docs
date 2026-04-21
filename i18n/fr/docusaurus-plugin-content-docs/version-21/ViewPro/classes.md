@@ -13,7 +13,7 @@ Les classes suivantes peuvent être utilisées dans 4D View Pro.
 
 **.color** : Text<!-- END REF -->
 
-La propriété `.color` est la <!-- REF #LineBorder.color.Summary -->[couleur](configuring.md#borders) de la bordure<!-- END REF -->. Par défaut = black.
+La propriété `.color` est la <!-- REF #LineBorder.color.Summary -->[couleur](configuring.md#borders) de la bordure<!-- END REF -->. .
 
 ### .style
 
@@ -21,7 +21,7 @@ La propriété `.color` est la <!-- REF #LineBorder.color.Summary -->[couleur](c
 
 **.style** : Integer<!-- END REF -->
 
-La propriété `.style` est le <!-- REF #LineBorder.style.Summary -->[style](configuring.md#borders) de la bordure<!-- END REF -->. Par défaut = empty.
+La propriété `.style` est le <!-- REF #LineBorder.style.Summary -->[style](configuring.md#borders) de la bordure<!-- END REF -->. .
 
 ## TableColumn
 
@@ -57,7 +57,7 @@ La propriété `.name` <!-- REF #TableColumn.name.Summary -->contient le nom de 
 
 **.allowAutoExpand** : Boolean<!-- END REF -->
 
-La propriété `.allowAutoExpand` <!-- REF #TableOptions.allowAutoExpand.Summary -->indique si les colonnes ou les lignes du tableau doivent être étendues lorsque des valeurs sont ajoutées dans des cellules vides adjacentes<!-- END REF -->. Par défaut = True
+La propriété `.allowAutoExpand` <!-- REF #TableOptions.allowAutoExpand.Summary -->indique si les colonnes ou les lignes du tableau doivent être étendues lorsque des valeurs sont ajoutées dans des cellules vides adjacentes<!-- END REF -->. .
 
 ### .bandColumns
 
@@ -65,7 +65,7 @@ La propriété `.allowAutoExpand` <!-- REF #TableOptions.allowAutoExpand.Summary
 
 **.bandColumns** : Boolean<!-- END REF -->
 
-La propriété `.bandRows` <!-- REF #TableOptions.bandRows.Summary -->indique s'il faut afficher un style de ligne alternée<!-- END REF -->. Défaut = Faux
+La propriété `.secondColumnStripSize` est la <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->taille de la deuxième colonne alternée<!-- END REF -->. .
 
 ### .bandRows
 
@@ -73,7 +73,7 @@ La propriété `.bandRows` <!-- REF #TableOptions.bandRows.Summary -->indique s'
 
 **.bandRows** : Boolean<!-- END REF -->
 
-La propriété `.showHeader` <!-- REF #TableOptions.showHeader.Summary -->indique s'il faut afficher un en-tête<!-- END REF -->. Par défaut = True
+La propriété `.showHeader` <!-- REF #TableOptions.showHeader.Summary -->indique s'il faut afficher un en-tête<!-- END REF -->. .
 
 ### .highlightLastColumn
 
@@ -81,7 +81,7 @@ La propriété `.showHeader` <!-- REF #TableOptions.showHeader.Summary -->indiqu
 
 **.highlightLastColumn** : Boolean<!-- END REF -->
 
-La propriété `.highlightLastColumn` <!-- REF #TableOptions.highlightLastColumn.Summary -->indique s'il faut mettre en surbrillance la dernière colonne<!-- END REF -->. Défaut = Faux
+La propriété `.highlightLastColumn` <!-- REF #TableOptions.highlightLastColumn.Summary -->indique s'il faut mettre en surbrillance la dernière colonne<!-- END REF -->. .
 
 ### .highlightFirstColumn
 
@@ -89,7 +89,7 @@ La propriété `.highlightLastColumn` <!-- REF #TableOptions.highlightLastColumn
 
 **.highlightFirstColumn** : Boolean<!-- END REF -->
 
-La propriété `.highlightFirstColumn` <!-- REF #TableOptions.highlightFirstColumn.Summary -->indique s'il faut mettre en surbrillance la première colonne<!-- END REF -->. Défaut = Faux
+La propriété `.highlightFirstColumn` <!-- REF #TableOptions.highlightFirstColumn.Summary -->indique s'il faut mettre en surbrillance la première colonne<!-- END REF -->. .
 
 ### .showFooter
 
@@ -97,7 +97,7 @@ La propriété `.highlightFirstColumn` <!-- REF #TableOptions.highlightFirstColu
 
 **.showFooter** : Boolean<!-- END REF -->
 
-La propriété `.showFooter` <!-- REF #TableOptions.showFooter.Summary -->indique s'il faut afficher un pied de page<!-- END REF -->. Défaut = Faux
+La propriété `.showFooter` <!-- REF #TableOptions.showFooter.Summary -->indique s'il faut afficher un pied de page<!-- END REF -->. .
 
 ### .showHeader
 
@@ -105,7 +105,7 @@ La propriété `.showFooter` <!-- REF #TableOptions.showFooter.Summary -->indiqu
 
 **.showHeader** : Boolean<!-- END REF -->
 
-La propriété `.secondColumnStripSize` est la <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->taille de la deuxième colonne alternée<!-- END REF -->. Par défaut = True
+La propriété `.bandColumns` <!-- REF #TableOptions.bandColumns.Summary -->indique s'il faut afficher un style de colonne alternée<!-- END REF -->. .
 
 ### .showResizeHandle
 
@@ -113,7 +113,7 @@ La propriété `.secondColumnStripSize` est la <!-- REF #TableThemeOptions.secon
 
 **.showResizeHandle** : Boolean<!-- END REF -->
 
-La propriété `.showResizeHandle` <!-- REF #TableOptions.showResizeHandle.Summary -->indique s'il faut afficher la poignée de redimensionnement pour les tables qui n'ont pas de *source*<!-- END REF -->. Défaut = Faux
+La propriété `.showResizeHandle` <!-- REF #TableOptions.showResizeHandle.Summary -->indique s'il faut afficher la poignée de redimensionnement pour les tables qui n'ont pas de *source*<!-- END REF -->. .
 
 ### .tableColumns
 
@@ -139,7 +139,7 @@ Voir les [thèmes natifs de SpreadJS](https://developer.mescius.com/spreadjs/api
 
 **.useFooterDropDownList** : Boolean<!-- END REF -->
 
-La propriété `.useFooterDropDownList` <!-- REF #TableOptions.useFooterDropDownList.Summary -->indique si une liste déroulante doit être utilisée dans les cellules du pied de page qui calculent la valeur totale d'une colonne<!-- END REF -->. Défaut = Faux
+La propriété `.useFooterDropDownList` <!-- REF #TableOptions.useFooterDropDownList.Summary -->indique si une liste déroulante doit être utilisée dans les cellules du pied de page qui calculent la valeur totale d'une colonne<!-- END REF -->. .
 
 ## TableStyle
 
@@ -394,7 +394,7 @@ La propriété `.secondColumnStripStyle` est le <!-- REF #TableThemeOptions.seco
 
 **.secondRowStripSize** : Integer<!-- END REF -->
 
-La propriété `.bandColumns` <!-- REF #TableOptions.bandColumns.Summary -->indique s'il faut afficher un style de colonne alternée<!-- END REF -->. Par défaut=1.
+La propriété `.bandRows` <!-- REF #TableOptions.bandRows.Summary -->indique s'il faut afficher un style de ligne alternée<!-- END REF -->. Par défaut=1.
 
 ### .secondRowStripStyle
 
