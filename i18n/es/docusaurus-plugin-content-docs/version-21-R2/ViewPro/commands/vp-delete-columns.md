@@ -27,7 +27,7 @@ En *rangeObj*, pase un objeto que contenga un rango de columnas a eliminar. Si e
 - de las columnas y de las líneas, sólo se eliminan las columnas.
 - únicamente las líneas, el comando no hace nada.
 
-> &#062; Columns are deleted from right to left.
+> &#062; &#062; Columns are deleted from right to left.
 
 ## Ejemplo
 
