@@ -93,7 +93,7 @@ For more information, see the [`4D.Formula` class description](../API/FormulaCla
 
 ### Métodos de menú
 
-Un método de menú se llama cuando se selecciona el comando de menú personalizado al que está asociado. You assign the method to the menu command using the Menu editor or a [command of the "Menus" theme](../commands/theme/Menus.md). El método se ejecuta cuando se elige el comando del menú. Al crear menús personalizados con métodos de menú que realizan acciones específicas, usted crea interfaces personalizadas para sus aplicaciones de escritorio.
+Un método de menú se llama cuando se selecciona el comando de menú personalizado al que está asociado. Un método de menú se llama cuando se selecciona el comando de menú personalizado al que está asociado. El método se ejecuta cuando se elige el comando del menú. Al crear menús personalizados con métodos de menú que realizan acciones específicas, usted crea interfaces personalizadas para sus aplicaciones de escritorio.
 
 Los comandos de menú personalizados pueden hacer que se realicen una o varias actividades. For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the [`ADD RECORD`(../commands/add-record)] command until the user cancels the data entry activity.
 
