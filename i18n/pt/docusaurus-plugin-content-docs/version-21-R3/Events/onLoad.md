@@ -1,0 +1,25 @@
+---
+id: onLoad
+title: On Load
+---
+
+| Code | Pode ser chamado por                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Definição                                               |
+| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| 1    | [4D View Pro Area](FormObjects/viewProArea_overview.md) - [4D Write Pro area](FormObjects/writeProArea_overview.md) - [Button](FormObjects/button_overview.md) - [Button Grid](FormObjects/buttonGrid_overview.md) - [Check Box](FormObjects/checkbox_overview.md) - [Combo Box](FormObjects/comboBox_overview.md) - [Dropdown list](FormObjects/dropdownList_Overview.md) - Form - [Hierarchical List](FormObjects/list_overview.md) - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox-object.md) - [List Box Column](FormObjects/listbox-column.md) - [Picture Button](FormObjects/pictureButton_overview.md) - [Picture Pop up menu](FormObjects/picturePopupMenu_overview.md) - [Plug-in Area](FormObjects/pluginArea_overview.md) - [Progress Indicators](FormObjects/progressIndicator.md) - [Radio Button](FormObjects/radio_overview.md) - [Ruler](FormObjects/ruler.md) - [Spinner](FormObjects/spinner.md) - [Splitter](FormObjects/splitters.md) - [Stepper](FormObjects/stepper.md) - [Subform](FormObjects/subform_overview.md) - [Tab control](FormObjects/tabControl.md) - [Web Area](FormObjects/webArea_overview.md) | O formulário está prestes a ser apresentado ou impresso |
+
+## Descrição
+
+Este evento é acionado quando o formulário é carregado ou impresso.
+
+Todos os objetos do formulário (de qualquer página) cuja propriedade de evento de objeto `On Load` estiver selecionada terão seu método objeto chamado.
+Então, se a propriedade de evento formulário `On Load` for selecionada, o formulário terá seu método formulário chamado.
+
+> Os eventos `On Load` e [`On Unload`](onUnload.md) são gerados para objetos se estiverem ativados tanto para os objetos quanto para o formulário ao qual os objetos pertencem. Se os eventos estiverem ativados somente para objetos, eles não ocorrerão; esses dois eventos também devem ser ativados no nível do formulário.
+
+### Subformulário
+
+O evento `On Load` é gerado ao abrir o subformulário (esse evento também deve ter sido ativado no nível do formulário pai para ser considerado). O evento é gerado antes dos eventos do formulário principal. Observe também que, conforme os princípios operacionais dos eventos de formulário, se o subformulário for colocado em uma página diferente da página 0 ou 1, esse evento só será gerado quando essa página for exibida (e não quando o formulário for exibido).
+
+### Veja também
+
+[`On Unload`](onUnload.md)

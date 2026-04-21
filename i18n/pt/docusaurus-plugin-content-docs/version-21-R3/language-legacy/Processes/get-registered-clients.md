@@ -1,0 +1,70 @@
+﻿---
+id: get-registered-clients
+title: GET REGISTERED CLIENTS
+slug: /commands/get-registered-clients
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.GET REGISTERED CLIENTS.Syntax-->**GET REGISTERED CLIENTS** ( *listaClientes* : Text array ; *metodos* : Integer array )<!-- END REF-->
+<!--REF #_command_.GET REGISTERED CLIENTS.Params-->
+<div class="no-index">
+
+| Parâmetro | Tipo |  | Descrição |
+| --- | --- | --- | --- |
+| listaClientes | Text array | &#8592; | Lista dos clientes 4D registrados |
+| metodos | Integer array | &#8592; | Lista de métodos a executar |
+</div>
+<!-- END REF-->
+
+<div class="no-index">
+<details><summary>Histórico</summary>
+
+|Versão|Alterações|
+|---|---|
+|6.5|Criado por|
+
+</details>
+</div>
+
+## Descrição 
+
+<!--REF #_command_.GET REGISTERED CLIENTS.Summary-->O comando GET REGISTERED CLIENTS preenche dois arrays<!-- END REF-->:
+
+* *listaClientes* contém a lista dos clientes “registrados” utilizando o comando [REGISTER CLIENT](../commands/register-client).
+* *metodos* fornece a lista de “cargas de trabalho” de cada cliente. A carga de trabalho é o número de métodos que um cliente 4D deve executar chamando o comando [EXECUTE ON CLIENT](../commands/execute-on-client) (para mais informação, consulte la descrição do comando [EXECUTE ON CLIENT](../commands/execute-on-client)).
+
+**Nota:** se a operação foi bem sucedida, a variável sistema OK é igual a 1.
+
+## Exemplo 1 
+
+Vamos supor que você quer obter uma lista de todos os clientes registrados e os métodos que faltam por executar: 
+
+```4d
+ ARRAY TEXT($clientes;0)
+ ARRAY LONGINT($metodos;0)
+ GET REGISTERED CLIENTS($clientes;$metodos)
+```
+
+## Exemplo 2 
+
+Consulte o exemplo do comando [REGISTER CLIENT](../commands/register-client).
+
+## Variáveis e conjuntos do sistema 
+
+ Se a operação foi bem sucedida, a variável do sistema OK, tem valor 1.
+
+## Ver também 
+
+[EXECUTE ON CLIENT](../commands/execute-on-client)  
+[REGISTER CLIENT](../commands/register-client)  
+[UNREGISTER CLIENT](../commands/unregister-client)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 650 |
+| Thread-seguro | no |
+| Modificar variáveis | OK |
+
+

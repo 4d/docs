@@ -1,0 +1,91 @@
+﻿---
+id: blob-to-print-settings
+title: BLOB to print settings
+slug: /commands/blob-to-print-settings
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.BLOB to print settings.Syntax-->**BLOB to print settings** ( *confImpr* : Blob {; *params* : Integer} ) : Integer<!-- END REF-->
+<!--REF #_command_.BLOB to print settings.Params-->
+<div class="no-index">
+
+| Parámetro | Tipo |  | Descripción |
+| --- | --- | --- | --- |
+| confImpr | Blob | &#8594; | BLOB que contiene la configuración de impresión |
+| params | Integer | &#8594; | 0=Restaura valores guardados para el número de copias y rango de páginas, 1=Restablece los valores predeterminados |
+| Resultado | Integer | &#8592; | Código de estado: 1=operación exitosa, 0=no hay impresora actual, -1=parámetros incorrectos, 2=impresora modificada |
+</div>
+<!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|16|Creado por|
+
+</details>
+</div>
+
+## Descripción 
+
+<!--REF #_command_.BLOB to print settings.Summary-->El comando **BLOB to print settings** reemplaza los parámetros de impresión actuales de 4D por los parámetros almacenados en el BLOB *confImpr*.<!-- END REF--> Este BLOB debe haber sido generado por el comando [Print settings to BLOB](../commands/print-settings-to-blob).
+
+El parámetro *params* le permite definir cómo manejar los parámetros básicos para el "número de copias" y el "intervalo de impresión":
+
+* Si pasa 0 u omite este parámetro, los valores almacenados en el BLOB se utilizan para la impresión.
+* Si pasa 1, los valores se restablecen a los valores predeterminados: el número de copias se establece en 1 y el intervalo de páginas se establece en "todas las páginas".
+
+Los parámetros se aplican a los [parámetros actuales de impresión 4D](../../settings/compatibility.md) siempre y cuando ningún comando como [SET PRINT OPTION](../commands/set-print-option) o [PRINT SELECTION](../commands/print-selection) sin el parámetro > los modifique. Los parámetros definidos se utiliza particularmente para los comandos [PRINT SELECTION](../commands/print-selection), [PRINT LABEL](../commands/print-label), [PRINT RECORD](../commands/print-record), [Print form](../commands/print-form) y [QR REPORT](../commands/qr-report), así como también para los comandos de impresión en los menú de 4D, incluyendo los del entorno Diseño.
+
+Los comandos [PRINT SELECTION](../commands/print-selection), [PRINT LABEL](../commands/print-label) y [PRINT RECORD](../commands/print-record) deben ser llamados con el parámetro *\>* (si aplica) para que los parámetros definidos por **BLOB to print settings** se mantengan.
+
+El comando devuelve uno de los siguientes códigos de estado:
+
+* \-1: el BLOB es incorrecto,
+* 0: ninguna impresora actual está seleccionada (en este caso, el comando no hace nada),
+* 1: el BLOB se ha cargado correctamente,
+* 2: el BLOB se ha cargado correctamente, pero el nombre de la impresora actual ha cambiado(\*)  
+
+(\*) Los parámetros dependen de la impresora actual seleccionada en el momento en que el BLOB se guardó. La aplicación de estos valores en otra impresora es soportada si ambas impresoras son del mismo modelo. Si las impresoras son diferentes, se restaurarán sólo los parámetros comunes.
+
+### Windows / macOS 
+
+El BLOB *confImp* se puede guardar y leer en ambas plataformas. Sin embargo, incluso si ciertos parámetros de impresión son comunes, algunos otros son específicos de la plataforma y dependen de los controladores de impresión y de las versiones del sistema operativo. Si el mismo BLOB *confImp* se comparte entre ambas plataformas, es posible que pierda partes de información.
+Cuando se utiliza en un entorno heterogéneo, con el fin de restaurar el máximo de parámetros de impresión disponibles para cada plataforma (y no sólo la parte común), se recomienda que maneje dos BLOBs *confImp*, uno para cada plataforma.
+
+## Ejemplo 
+
+Usted desea aplicar la configuración de impresión guardada en el disco para el contexto de impresión 4D actual: 
+
+```4d
+ var curSettings : Blob
+ DOCUMENT TO BLOB(Get 4D folder(Active 4D Folder)+"current4Dsettings.blob";curSettings)
+  //current4Dsettings ha sido creado por Print settings to BLOB
+ $err:=BLOB to print settings(curSettings;0)
+ Case of
+    :($err=1)
+  //todo está OK
+    :($err=2)
+       CONFIRM("¡La impresora ha cambiado!\n\n¿Revisar los parámetros de impresión?")
+       If(OK=1)
+          PRINT SETTINGS
+       End if
+    :($err=0)
+       ALERT("No hay impresora actual.")
+    :($err=-1)
+       ALERT("Archivo de configuración no valido.")
+ End case
+```
+
+## Ver también 
+
+[Print settings to BLOB](../commands/print-settings-to-blob)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 1434 |
+| Hilo seguro | no |
+

@@ -1,0 +1,84 @@
+---
+id: vp-flush-commands
+title: VP FLUSH COMMANDS
+---
+
+<details><summary>Historia</summary>
+
+| Lanzamiento | Modificaciones                   |
+| ----------- | -------------------------------- |
+| 20 R9       | Soporte del parámetro *callback* |
+
+</details>
+
+<!-- REF #_method_.VP FLUSH COMMANDS.Syntax -->
+
+**VP FLUSH COMMANDS** ( *vpAreaName* : Text {; *callback* : 4D.Function} )<!-- END REF -->
+
+<!-- REF #_method_.VP FLUSH COMMANDS.Params -->
+
+<div class="no-index">
+
+| Parámetros   | Tipo                        |    | Descripción                                                                                                                                                           |
+| ------------ | --------------------------- | -- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| vpAreaName   | Text                        | -> | Nombre de objeto formulario área 4D View Pro                                                                                                                          |
+| retrollamada | 4D.Function | -> | (Opcional) Una función de retrollamada que se ejecuta después de que se hayan ejecutado todos los comandos VP y las funciones personalizadas de 4D |
+
+</div>
+<!-- END REF -->
+
+## Descripción
+
+El comando `VP FLUSH COMMANDS` <!-- REF #_method_.VP FLUSH COMMANDS.Summary -->ejecuta inmediatamente los comandos almacenados y borra el buffer de comandos<!-- END REF -->.
+
+En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
+
+Para aumentar el rendimiento y reducir el número de peticiones enviadas, los comandos 4D View Pro llamados por el desarrollador se almacenan en un buffer de comandos. Cuando se llama, `VP FLUSH COMMANDS` ejecuta los comandos como un lote al salir del método y vacía el contenido del buffer de comandos.
+
+Si se ofrece una función *callback*, sólo se ejecuta después de que todos los comandos almacenados y las funciones personalizadas 4D hayan terminado de procesarse. Esto garantiza que cualquier acción posterior, como guardar o imprimir el documento, sólo se realice una vez que se hayan completado todos los cálculos.
+
+Los siguientes parámetros se pueden utilizar en la función de retrollamada:
+
+| Parámetros |                               | Tipo    | Descripción                                                                       |
+| ---------- | ----------------------------- | ------- | --------------------------------------------------------------------------------- |
+| param1     |                               | Text    | El nombre del objeto de área 4D View Pro                                          |
+| param2     |                               | Object  | Un objeto devuelto por el método con un mensaje de estado                         |
+|            | .success      | Boolean | `True` si la importación se ha realizado correctamente, `False` en caso contrario |
+|            | .errorCode    | Integer | Código de error                                                                   |
+|            | .errorMessage | Text    | Mensaje de error                                                                  |
+
+---
+
+## Ejemplo 1
+
+Desea ejecutar comandos y vaciar el búfer de comandos:
+
+```4d
+// Definir valores de texto en celdas específicas
+VP SET TEXT VALUE(VP Cell("ViewProArea1";10;1); "INVOICE")
+VP SET TEXT VALUE(VP Cell("ViewProArea1";10;2);"Invoice date: ")
+VP SET TEXT VALUE(VP Cell("ViewProArea1";10;3);"Due date: ")
+
+// Ejecutar los comandos almacenados, borrar la memoria intermedia y activar la llamada de retorno
+VP FLUSH COMMANDS("ViewProArea1")
+```
+
+## Ejemplo 2
+
+Desea ejecutar comandos, vaciar el búfer de comandos y activar una función de retrollamada:
+
+```4d
+// Definir valores de texto en celdas específicas
+VP SET FORMULA(VP Cell("ViewProArea1";10;1); "MyCustomFunction()")
+VP SET FORMULA(VP Cell("ViewProArea1";10;2); "MyCustomFunction2()")
+VP SET FORMULA(VP Cell("ViewProArea1";10;3); "MyCustomFunction3()")
+
+// Ejecutar los comandos almacenados, borrar la memoria intermedia y activar la retrollamada
+VP FLUSH COMMANDS("ViewProArea1"; Formula(onFlushComplete))
+```
+
+```4d
+// Método 'onFlushComplete'
+#DECLARE($name : Text; $status : Object)
+   ALERT("All commands and custom functions have finished executing. You can now print or save the document.")
+```

@@ -1,0 +1,65 @@
+﻿---
+id: wa-get-context
+title: WA Get context
+slug: /commands/wa-get-context
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.WA Get context.Syntax-->**WA Get context** ( * ; *object* : Text ) -> Object<br/>**WA Get context** ( *object* : Variable ) -> Object<!-- END REF-->
+<!--REF #_command_.WA Get context.Params-->
+<div class="no-index">
+
+| Parameter | Type |  | Description |
+| --- | --- | --- | --- |
+| * | Operator | &#8594;  | If specified, *object* is an object name (string). If omitted, *object* is a variable. |
+| object | Text, Variable | &#8594;  | Object name (if * is specified) or Variable (if * is omitted). |
+| Function result | Object | &#8592;  | Context object if previously defined, otherwise `null`. |
+</div>
+<!-- END REF-->
+
+
+<div class="no-index">
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|20 R9|Added|
+
+</details>
+</div>
+
+
+### Description 
+
+The `WA Get context` command<!--REF #_command_.WA Get context.Summary--> retrieves the context object defined for `$4d` in the Web area designated by the * and *object* parameters using [`WA SET CONTEXT`](./wa-set-context.md).<!-- END REF--> If `WA SET CONTEXT` was not called for the web area the command returns `null`.
+
+:::note
+
+The command is only usable with an embedded web area where the [**Use embedded web rendering engine**](../../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine) and **Access 4D methods** parameters are set to `true`.
+
+:::
+
+### Example
+
+Checking if a context exists:
+
+```4d
+ var $contextObj:=WA Get context(*; "myWebArea")
+
+ If ($contextObj=Null)
+	ALERT("No context set for this web area.")
+ Else 
+	ALERT("Context is defined!")
+ End if
+```
+
+### See also 
+
+[WA SET CONTEXT](../commands/wa-set-context)  
+
+### Properties
+
+|  |  |
+| --- | --- |
+| Command number | 1849 |
+| Thread safe | no |

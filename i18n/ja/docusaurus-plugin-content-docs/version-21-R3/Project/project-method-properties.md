@@ -1,0 +1,377 @@
+---
+id: project-method-properties
+title: プロジェクトメソッド
+---
+
+## Roles
+
+その実行方法や使用方法に応じて、プロジェクトメソッドは次のような役割を果たします:
+
+- サブルーチン
+- オブジェクトフォーミュラ
+- メニューメソッド
+- プロセスメソッド
+- イベントまたはエラー処理メソッド
+- APIs to be called from the web server, transformation tags, extensions...
+- また、テスト目的などで、プロジェクトメソッドを手動で実行することもできます。
+
+### サブルーチン
+
+サブルーチンは、処理の下請け的なプロジェクトメソッドです。 他のメソッドから呼ばれて、要求された処理を実行します。 関数は、呼び出し元のメソッドに値を返すサブルーチンのことです。
+
+プロジェクトメソッドを作成すると、それは同データベースのランゲージの一部となります。 プロジェクトメソッドは、4Dのビルトインコマンドと同様に、ほかのメソッド (プロジェクトメソッドやオブジェクトメソッド)  から呼び出すことができます。 このように使用されるプロジェクトメソッドをサブルーチンと呼びます。
+
+サブルーチンは、以下のような目的で使います:
+
+- 重複コードの削減
+- メソッドの役割の明確化
+- メソッド改変の容易化
+- コードのモジュール化
+
+たとえば、顧客データベースがあるとします。 プロジェクトをカスタマイズしていくうちに、顧客を検索してレコードを修正するという一連の作業を繰り返しおこなっていることに気づいたとします。 そのコーディングは以下のようになっています:
+
+```4d
+  // 顧客を検索します
+ QUERY BY EXAMPLE([Customers])
+  // 入力フォームを選択します
+ FORM SET INPUT([Customers];"Data Entry")
+  // 顧客レコードを修正します
+ MODIFY RECORD([Customers])
+```
+
+サブルーチンを使用しなければ、顧客レコード修正のたびにコードを作成しなければなりません。 プロジェクトの 10箇所で同じ処理が必要であれば、同じコーディングを 10回も書かねばなりません。 サブルーチンを使用すれば 1回コーディングするだけですみます。 これがコーディングの重複を減らすというサブルーチンの第一の利点です。
+
+先ほど説明したコードが `MODIFY_CUSTOMER` と呼ばれるメソッドであるとすれば、他のメソッド内でそのメソッド名を使うことで実行できます。 たとえば、顧客のレコードを修正し、それからレコードをプリントするために、以下のようなメソッドを書くことができます:
+
+```4d
+ MODIFY_CUSTOMER
+ PRINT SELECTION([Customers])
+```
+
+この機能はメソッドを劇的にに簡素化します。 さきほどの例で言えば、`MODIFY_CUSTOMER` メソッドがどのように動作するかは知る必要がなく、何をおこなうかだけ知っていればよいのです。 これはメソッドをサブルーチン化することの2番目の理由、役割の明確化です。 このように、作成されたメソッドは 4Dランゲージを拡張します。
+
+このプロジェクトの例で顧客の検索方法を変える場合、10箇所ではなく、たった1つのメソッドを変更するだけですみます。 これがサブルーチンを使うもう一つの理由、改変の容易化です。
+
+また、サブルーチンの利用はコードをモジュール化します。 これはコードをモジュール (サブルーチン) に分割することを意味し、それぞれは論理的な処理を実行します。 小切手振り出し口座のプロジェクトから、以下のコードを見てみましょう:
+
+```4d
+ FIND_CLEARED_CHECKS // 決済された小切手の検索
+ RECONCILE_ACCOUNT // 口座の照合
+ PRINT_CHECK_BOOK_REPORT // レポートの印刷
+```
+
+プロジェクトの詳細を知らない人でも、このプログラムが何をしているかはわかります。 各サブルーチンの処理手順を知る必要はありません。 各サブルーチンは長く、複雑な処理で構成されていることもありますが、それらが何を実行するのかだけを知っていれば十分なのです。 プログラムを論理的な処理単位やモジュールにできるだけ分割することをお勧めします。
+
+### オブジェクトフォーミュラ
+
+プロジェクトメソッドは、**フォーミュラ** オブジェクトにカプセル化して、オブジェクトから呼び出すことができます。
+
+The [`Formula`](../commands/formula) or [`Formula from string`](../commands/formula-from-string) commands allow you to create [native formula objects](../API/FormulaClass.md) that you can encapsulate in object properties. つまり、カスタムなオブジェクトメソッドを実装することが可能です。
+
+オブジェクトプロパティに保存されているメソッドを実行するには、プロパティ名のあとに **()** をつけます。 例:
+
+```4d
+// myAlert プロジェクトメソッド
+ALERT("Hello world!")
+```
+
+この `myAlert` プロジェクトメソッドを任意のオブジェクトに格納し、呼び出すことができます:
+
+```4d
+var $o : Object
+$o:=New object("custom_Alert";Formula(myAlert))
+$o.custom_Alert() // "Hello world!" と表示します
+```
+
+大カッコを使用したシンタックスもサポートされます:
+
+```4d
+$o["custom_Alert"]() // "Hello world!" と表示します
+```
+
+For more information, see the [`4D.Formula` class description](../API/FormulaClass.md) and the [Using object properties as named parameters](../Concepts/parameters.md#using-object-properties-as-named-parameters) paragraph.
+
+### メニューメソッド
+
+メニューメソッドは、カスタムメニューから呼び出されるプロジェクトメソッドです。 You assign the method to the menu command using the Menu editor or a [command of the "Menus" theme](../commands/theme/Menus.md). メニューが選択されると、それに対応するメニューメソッドが実行されます。 特定の処理を実行するメニューメソッドを割り当てたカスタムメニューを作成することで、デスクトップアプリケーションのユーザーインターフェースをカスタマイズすることができます。
+
+メニューメソッドにより、単一または複数の処理を実行することができます。 For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the [`ADD RECORD`(../commands/add-record)] command until the user cancels the data entry activity.
+
+Automating sequences of activities is a very powerful capability of the 4D programming language. カスタムメニューを使用することで処理を自動化することができ、アプリケーションのユーザーにより多くのガイダンスを提供することができます。
+
+### プロセスメソッド
+
+**プロセスメソッド** とは、プロセスの開始時に呼び出されるプロジェクトメソッドのことです。 The process lasts only as long as the process method continues to execute, except if it is a [Worker process](../Develop/processes.md#worker-processes). Note that a menu method attached to a menu command with [*Start a New Process*](../Menus/properties.md#start-a-new-process) property is also the process method for the newly started process.
+
+### イベント・エラー処理メソッド
+
+**イベント処理メソッド** は、イベントを処理するプロセスメソッドとして、分離されたプロセス内で実行されます。 通常、開発者はイベント管理の大部分を 4Dに任せます。 たとえば、データ入力中にキーストロークやクリックを検出した 4Dは、正しいオブジェクトとフォームメソッドを呼び出します。このため開発者は、これらのメソッド内でイベントに対し適切に応答できるのです。 For more information, see the description of the command [`ON EVENT CALL`](../commands/on-event-call).
+
+**エラー処理メソッド** は、割り込みを実行するプロジェクトメソッドです。 エラーや例外が発生するたびに呼び出されます。 詳細については、[エラー処理](../Concepts/error-handling.md) を参照ください。
+
+### API Methods
+
+Project methods can be called from external contexts such as other applications, web apps, processed files, etc., in which case they can be seen as API. Such calls include:
+
+- calls to the web server through [http request handlers](../WebServer/http-request-handler.md) or [`4DACTION` URLs](../WebServer/httpRequests.md#4daction),
+- [tag processing](../Tags/transformation-tags.md)
+- expressions called from extensions ([4D Write Pro](../WritePro/commands/wp-insert-formula.md), [4D View Pro](../ViewPro/formulas.md) or form objects (e.g. [`ST INSERT EXPRESSION`](../commands/st-insert-expression)).
+
+External calls to project methods must be allowed in the [project method properties](../Project/project-method-properties.md).
+
+### 手動での実行
+
+アプリケーションに定義されたプロジェクトメソッドは通常、アプリケーションの使用中にボタンやメニュー、他のメソッドなどから自動的に呼び出されます。 データベースメソッドについては、アプリケーションで発生する特定のイベントに反応して実行されます。
+
+しかし、テストやデバッグの目的で、プロジェクトメソッドや特定のデータベースメソッドをデザインモードで実行することができます。 この場合、メソッドを新規プロセスで実行するか、または直接デバッグモードで一行ごと実行できます。
+
+メソッド実行は 2つの方法でおこなえます:
+
+- コードエディターウィンドウからメソッド実行
+- メソッド実行ダイアログボックスから実行 (プロジェクトメソッドのみ)
+
+#### コードエディターからメソッド実行
+
+[**コードエディター**](../code-editor/write-class-method.md) ウィンドウには、そのエディターで開かれているメソッドを実行するためのボタンがあります。 このボタンに関連付けられているメニューから実行オプションを選択できます。
+
+このボタンは、プロジェクトメソッドと以下のデータベースメソッドでのみ利用できます:
+
+- On Startup
+- On Exit
+- On Server Startup
+- On Server Shutdown
+
+詳細は [ツールバー](../code-editor/write-class-method.md#ツールバー) を参照ください。
+
+#### メソッド実行ダイアログボックスから実行
+
+**実行** メニューから **メソッド...** コマンドを選択すると、**メソッド実行** ダイアログボックスが表示されます。
+
+このダイアログボックスには、データベースのプロジェクトメソッド (コンポーネントの共有メソッドを含む) が表示されます。 一方、非表示属性が設定されたプロジェクトメソッドは表示されません。
+
+プロジェクトメソッドを実行するには、リストからメソッドを選択し、**実行** をクリックします。 デバッグモードでメソッドを実行するには **デバッグ** をクリックします。 デバッガーに関する詳細は、[デバッガー](../Debugging/basics.md) の章を参照ください。
+
+**新規プロセス** チェックボックスを選択すると、選択したメソッドは新規に作成されたプロセス内で実行されます。 大量の印刷など時間のかかる処理をメソッドがおこなう場合でもこのオプションを使用すれば、レコードの追加、グラフの作成などの処理をアプリケーションプロセスで継続できます。 プロセスに関するより詳細な情報については、[プロセス](../Develop/processes.md) を参照してください。
+
+**4D Serverに関する注記**:
+
+- クライアントではなくサーバー上でメソッドを実行したい場合、実行モードメニューで **4D Server** を選択します。 この場合 *ストアドプロシージャー* と呼ばれるプロセスが新規にサーバー上で作成され、メソッドが実行されます。 このオプションを使用して、ネットワークトラフィックを減らしたり、4D Serverの動作を最適化したりできます (特にディスクに格納されたデータにアクセスする場合など)。 すべてのタイプのメソッドをサーバー上や他のクライアント上で実行できますが、ユーザーインターフェースを変更するものは例外です。 この場合、ストアドプロシージャーは効果がありません。
+- 他のクライアントマシン上でメソッドを実行するよう選択することもできます。 他のクライアントマシンは、事前に登録されていなければメニューに表示されません (詳細な情報については [REGISTER CLIENT](../commands/register-client) の説明を参照ください)。
+
+デフォルトでは、**ローカル** オプションが選択されています。 4D シングルユーザーの場合、このオプションしか選択できません。
+
+### プロジェクトメソッドの再帰呼び出し
+
+プロジェクトメソッドは、自分自身を呼び出すことができます。 例:
+
+- メソッドAがメソッドBを呼び出し、メソッドBはメソッドAを呼び出します。
+- メソッドAは自身を呼び出すことができます。
+
+これは再帰呼び出しと呼ばれています。 4D ランゲージは再帰呼び出しを完全にサポートしています。
+
+次に例を示します。 以下のフィールドから成る `[Friends and Relatives]` テーブルがあります:
+
+- `[Friends and Relatives]Name`
+- `[Friends and Relatives]ChildrensName`
+
+この例題では、フィールドの値は重複しない、つまり同じ名前の人間はいないとします。 名前を指定することで、以下のような文を作成します: “A friend of mine, John who is the child of Paul who is the child of Jane who is the child of Robert who is the child of Eleanor, does this for a living!”:
+
+1. この文を以下のように作成できます:
+
+```4d
+ var $vsName:=Request("Enter the name:";"John")
+ If(OK=1)
+    QUERY([Friends and Relatives];[Friends and Relatives]Name=$vsName)
+    If(Records in selection([Friends and Relatives])>0)
+       var $vtTheWholeStory:="A friend of mine, "+$vsName
+       var $vlQueryResult : Integer
+       Repeat
+          QUERY([Friends and Relatives];[Friends and Relatives]ChildrensName=$vsName)
+          $vlQueryResult:=Records in selection([Friends and Relatives])
+          If($vlQueryResult>0)
+             $vtTheWholeStory:=$vtTheWholeStory+" who is the child of "+[Friends and Relatives]Name
+             $vsName:=[Friends and Relatives]Name
+          End if
+       Until($vlQueryResult=0)
+       $vtTheWholeStory:=$vtTheWholeStory+", does this for a living!"
+       ALERT($vtTheWholeStory)
+    End if
+ End if
+```
+
+2. 以下の方法でも作成できます:
+
+```4d
+ var $vsName:=Request("Enter the name:";"John")
+ If(OK=1)
+    QUERY([Friends and Relatives];[Friends and Relatives]Name=$vsName)
+    If(Records in selection([Friends and Relatives])>0)
+       ALERT("A friend of mine, "+Genealogy of($vsName)+", does this for a living!")
+    End if
+ End if
+```
+
+再帰関数 `Genealogy of` は以下の通りです:
+
+```4d
+  //Genealogy of project method
+  //Genealogy of ( String ) -> Text
+  //Genealogy of ( Name ) -> Part of sentence
+ 
+ #DECLARE($name : Text) -> $result : Text
+ $result:=$name
+ QUERY([Friends and Relatives];[Friends and Relatives]ChildrensName=$name)
+ If(Records in selection([Friends and Relatives])>0)
+    $result:=$result+" who is the child of "+Genealogy of([Friends and Relatives]Name)
+ End if
+```
+
+`Genealogy of` メソッドが自分自身を呼び出していることに注目してください。
+
+最初に挙げた方法は **反復性のアルゴリズム** です。 2番目に挙げた方法は **再帰呼び出しのアルゴリズム** です。
+
+前述の例題のようなコードを実装する場合、反復性や再帰呼び出しを使用してメソッドを書くことができるということに留意してください。 再帰呼び出しは一般的に、より明瞭で読みやすく、維持しやすいコードを提供します。ただし、この使用は必須ではありません。
+
+4D内での再帰呼び出しの代表的な使用方法は以下のとおりです:
+
+- 例題と同じく、互いに関連するテーブル内でのレコードの取り扱い。
+- Browsing documents and folders on your disk, using the commands [`FOLDER LIST`](../commands/folder-list) and [`DOCUMENT LIST`](document-list). フォルダーにはフォルダーとドキュメントが含まれており、サブフォルダーはまたフォルダーとドキュメントを含むことができます。
+
+:::warning
+
+Recursive calls should always end at some point. たとえば、`Genealogy of` メソッドが自身の呼び出しを止めるのは、クエリがレコードを返さないときです。 この条件のテストをしないと、メソッドは際限なく自身を呼び出します。 (メソッド内で使用される引数やローカル変数の蓄積を含む) 再帰呼び出しによって容量が一杯になると、最終的に 4Dは “スタックがいっぱいです” エラーを返します 。
+
+:::
+
+## プロパティ
+
+プロジェクトメソッドを作成した後、その名称やプロパティを変更することができます。 プロジェクトメソッドのプロパティは主に、実行アクセスやセキュリティ条件 (ユーザー、統合されたサーバーやサービスからのアクセスの可否) に加えて、実行モードに関する設定が含まれます。
+
+他のタイプのメソッドには専用のプロパティがありません。 これらのメソッドのプロパティは、それらが関連付けられているオブジェクトに基づいて決定されます。
+
+プロジェクトメソッドの **メソッドプロパティ** ダイアログボックスを表示するには、次の方法があります:
+
+- [コードエディター](../code-editor/write-class-method.md)において、**メソッド** メニューから **メソッドプロパティ...** を選択します。
+- または、エクスプローラーの **メソッド** ページでプロジェクトメソッドを選択し、コンテキストメニューまたはオプションメニューから **メソッドプロパティ...** を選択します。
+
+> 一回の処理で複数のプロジェクトメソッドの属性を設定するために、属性の一括設定を使用できます ([属性の一括設定](#属性の一括設定) 参照)。
+
+### 名称
+
+**メソッドプロパティ** ウィンドウの **名称** エリア、またはエクスプローラーでプロジェクトメソッド名を変更できます。
+
+新しい名称は 4D の命名規則に沿っていなければなりません ([識別子](../Concepts/identifiers.md) 参照)。 同じ名称のメソッドが既に存在する場合、4D はその旨を知らせるメッセージを表示します。 名称変更後、4D メソッドリストをソートします。
+
+:::caution
+
+プロジェクトメソッドの名前を変更すると、そのメソッドを旧名称で呼び出している他のメソッドやフォーミュラなど、アプリケーションの機能が無効になるリスクがあります。 この場合、 [プロジェクトメソッドの改名機能](../Project/search-replace.md#renaming-project-methods-and-variables) を使用することが強く推奨されます。 この機能を使用すれば、デザイン環境における当該メソッドの呼び出し箇所がすべて自動的に更新されます (ただし EXECUTE METHOD など、文字列としてメソッド名が参照されている個所を除きます)。
+
+4D Server の場合、名称変更は変更終了後にサーバーに反映されます。 複数のユーザーが同時に名称を変更しようとすると、最後におこなわれた名称変更が適用されます。 メソッドのオーナーを指定すれば特定のユーザー以外はメソッド名を変更できないようにできます。
+
+:::
+
+:::info
+
+データベースメソッドの名称を変更することはできません。 オブジェクトに紐付いたトリガー、フォームメソッド、オブジェクトメソッドも同様です。これらは関連先のオブジェクトにより名称を決定されます。
+
+:::
+
+### 属性
+
+属性を使用して、プロジェクトメソッドがどのコンテキストにおいて利用可能かを指定できます。 エクスプローラーを使用して複数のプロジェクトメソッドに対し、属性を一括して設定することもできます (後述参照)。
+
+#### 非表示
+
+ユーザーに対し、**実行** メニューの **メソッド...** から特定のメソッドを実行させたくない場合、このオプションを選択すればそのメソッドを非表示にできます。 非表示のメソッドは、メソッド実行ダイアログボックスに表示されません。
+
+プロジェクトメソッドを非表示にしても、データベースプログラマーはそれを使用することができます。 これらは、エクスプローラーやコードエディターのメソッドリストには引き続き表示されます。
+
+#### コンポーネントとホストプロジェクト間で共有
+
+この属性は、コンポーネントのフレームワークで使用されます。 このオプションが選択されていると、アプリケーションがホストデータベースとして実行されている場合、そのメソッドがコンポーネントから実行可能になります。 また、アプリケーションがコンポーネントとして実行されている場合、そのメソッドはホストデータベースから実行可能となります。
+
+コンポーネントについては [4Dコンポーネントの開発とインストール](../Extensions/develop-components.md) を参照ください。
+
+#### サーバー上で実行
+
+この属性は、クライアント/サーバーモードの 4Dアプリケーションでのみ考慮されます。 このオプションが選択されていると、そのプロジェクトメソッドは呼び出し方に関わらず常にサーバー上で実行されます。
+
+このオプションに関する詳細は、4D Serverリファレンスマニュアルの [サーバー上で実行属性](https://doc.4d.com/4Dv20/4D/20/Execute-on-Server-attribute.300-6330555.ja.html) を参照ください。
+
+### 実行モード
+
+このオプションを使用すると、メソッドのプリエンプティブ実行が可能であることを宣言できます。 これについては、[プリエンプティブプロセス](../Develop/preemptive.md) の章で説明されています。
+
+### 公開オプション
+
+公開オプション属性は、当該メソッドの呼び出しが明示的に許可された外部サービスを指定します。
+
+#### Webサービス
+
+この属性を使用して、SOAPリクエストでアクセス可能な Webサービスとして当該メソッドを公開することができます。 詳細は [Web サービスの公開と使用](https://doc.4d.com/4Dv20/4D/20.2/Publication-and-use-of-Web-Services.200-6750103.ja.html) を参照ください。 このオプションを選択すると、**WSDL を公開** オプションを選択できるようになります。
+
+エクスプローラーでは、Web サービスとして提供されるプロジェクトメソッドには専用のアイコンが表示されます。
+
+**注:** メソッド名が XML の命名規則に準拠しない文字 (たとえばスペース) を含む場合、そのメソッドは Webサービスとして公開できません。 この場合、設定は保存できません。
+
+#### WSDL を公開
+
+この属性は "Webサービス" 属性が設定されている場合にのみ利用可能です。 この属性を設定すると、当該メソッドが 4Dアプリケーションの WSDLに 含まれます。 詳細については [WSDL ファイルを生成する](https://doc.4d.com/4Dv20/4D/20.2/Publishing-a-Web-Service-with-4D.300-6750334.ja.html#502689) を参照ください。
+
+エクスプローラーでは、Webサービスとして提供され、WSDLで公開されたプロジェクトメソッドには専用のアイコンが表示されます。
+
+#### 4D タグと URL(4DACTION...)
+
+このオプションは、4D Webサーバーのセキュリティを強化するために使用されます。このオプションが選択されていない場合、[4DACTION URL](../WebServer/httpRequests.md#4daction) を使用した HTTPリクエスト、および [4DSCRIPT、4DTEXT、4DHTML タグ](../Tags/transformation-tags.md) から当該メソッドを直接呼び出すことができません。
+
+この属性が指定されたプロジェクトメソッドは、エクスプローラーで以下のアイコンが表示されます。
+
+セキュリティのため、このオプションはデフォルトで選択されていません。 Web機能から直接呼び出されるメソッドには、このオプションを明示的に選択しなければなりません。
+
+#### SQL
+
+この属性が選択されていると、当該プロジェクトメソッドは 4D の SQLエンジンから実行可能となります。 デフォルトでは選択されておらず、明示的に許可されない限り 4Dメソッドは保護されており、4D SQLエンジンから呼び出すことはできません。
+
+このプロパティは、全ての内部あるいは外部SQL クエリに対して適用されます。この外部SQL クエリにはODBC ドライバ、 [Begin SQL](../commands/begin-sql)/[End SQL](../commands/end-sql)  タグ内に挿入されたSQL コード、あるいは [QUERY BY SQL](../commands/query-by-sql) コマンドから実行されたものを含みます。
+
+**注:**
+
+- メソッドに "SQL" 属性が設定されていても、メソッドの実行時にはデータベース設定およびメソッドプロパティに設定されたアクセス権が考慮されます。
+- ODBC の **SQLProcedure** 関数は "SQL" 属性が設定されているプロジェクトメソッド名のみを返します。
+
+詳細については、SQLマニュアルの [4Dと4D SQLエンジン統合の原則](https://doc.4d.com/4Dv20/4D/20/4D-SQL-engine-implementation.300-6342089.ja.html) を参照ください。
+
+#### REST サーバー
+
+*このオプションは廃止されます。 RESTコールによるコードの呼び出しは、[ORDAデータモデルクラス関数](../REST/ClassFunctions.md) でのみサポートされます。*
+
+### 属性の一括設定
+
+"メソッド属性" ダイアログボックスを使用して、一回の操作で複数のプロジェクトメソッドに対して属性 (非表示、Webサービスで公開、等)  を設定することができます。 この機能は、多数のプロジェクトメソッドの属性を一括して変更する場合に便利です。 また、開発の段階で、類似のメソッド群に共通の属性を素早く適用するのに使用することもできます。
+
+メソッド属性の一括設定をおこなうには:
+
+1. エクスプローラーの [メソッドページ](https://doc.4d.com/4Dv20/4D/20.2/Methods-Page.300-6750119.ja.html) からオプションメニューを展開し、**属性の一括設定...** コマンドを選択します。 "メソッド属性" ダイアログボックスが表示されます:
+
+2. "一致するメソッド名" エリアに属性を一括設定するメソッドを指定するための名前条件を入力します。
+   入力した文字列を使用してメソッド名が検索されます。
+
+"@" をワイルドカード文字として使用し、メソッドグループを選択できます:
+
+- 前方一致で検索するには、文字列の最後に "@" を加えます。 例: `web@`
+- 含む検索をするには、文字列の中に "@" を加えます。 例: `web@write`
+- 後方一致で検索するには、文字列の先頭に "@" を加えます。 例: `web@write`
+- すべてのメソッドを選択するには "@" のみを入力します。
+
+**注:**
+
+- 文字の大小は区別されません。
+- "@" は文字列内で複数回使用できます (例: `dtro_@web@pro.@`)
+
+3. "更新する属性" エリアでは、ドロップダウンリストから更新対象の属性を選択し、**True** または **False** ラジオボタンを選択します。
+
+**注:** "WSDL で公開する" 属性を True に設定した場合、"Webサービスとして公開" 属性が True に設定されたメソッドにのみ適用されます。
+
+4. **適用** をクリックします。 検索条件に合致するプロジェクトメソッドに対し、属性の変更は即座に反映されます。
+
+

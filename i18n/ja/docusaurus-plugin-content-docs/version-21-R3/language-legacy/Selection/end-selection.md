@@ -1,0 +1,75 @@
+﻿---
+id: end-selection
+title: End selection
+slug: /commands/end-selection
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.End selection.Syntax-->**End selection** ( *aTable* : Table ) : Boolean<!-- END REF-->
+<!--REF #_command_.End selection.Params-->
+<div class="no-index">
+
+| 引数 | 型 |  | 説明 |
+| --- | --- | --- | --- |
+| aTable | Table | &#8594; | レコードポインタがセレクションの最後のレコードよりも 後ろにあるかテストするテーブル、または 省略時、デフォルトテーブル |
+| 戻り値 | Boolean | &#8592; | Yes (TRUE) or No (FALSE) |
+</div>
+<!-- END REF-->
+
+## 説明 
+
+<!--REF #_command_.End selection.Summary-->**End selection** は、カレントレコードポインタが*aTable*のカレントセレクションの後ろにある場合TRUEを返します。<!-- END REF-->一般に**End selection** は、[NEXT RECORD](../commands/next-record) コマンドで、カレントレコードポインタが最後のレコードの後に移動したかどうかをチェックするために使用します。カレントセレクションが空の場合、**End selection** はTRUEを返します。
+
+カレントレコードのポインタをセレクション内に戻すには、[FIRST RECORD](../commands/first-record)、[LAST RECORD](../commands/last-record) または [GOTO SELECTED RECORD](../commands/goto-selected-record) を使用します。[PREVIOUS RECORD](../commands/previous-record) では、ポインタはセレクション内に戻りません。
+
+[PRINT SELECTION](../commands/print-selection) またはプリント...メニューを選択してレポートを印刷する場合、**End selection** は最後のフッタでTRUEを返します。以下のステートメントを使用して、最後のフッタを判定して最終ページに特殊なフッタを印刷することができます:
+
+```4d
+  // 集計レポートの出力用フォームのフォームメソッド
+ $vpFormTable:=Current form table
+ Case of
+  // ...
+    :(Form event code=On Printing Footer)
+  // フッタが印刷されようとしている
+       If(End selection($vpFormTable->))
+  // 最後のフッタ用のコード
+       Else
+  // フッタ用のコード
+       End if
+ End case
+```
+
+## 例題 
+
+以下のフォームメソッドはレポートの印刷中に使用します。*vFooter*変数を設定し、最終ページのフッタエリアに印刷します:
+
+```4d
+  // [Finances];"Summary" Form Method
+ Case of
+  // ...
+    :(Form event code=On Printing Footer)
+       If(End selection([Finances]))
+          vFooter:="c2001 Acme Corp." // 最後のページのフッタ
+       Else
+          vFooter:="" // 他のページのフッタ
+       End if
+ End case
+```
+
+## 参照 
+
+[Before selection](../commands/before-selection)  
+[Form event code](../commands/form-event-code)  
+[LAST RECORD](../commands/last-record)  
+[NEXT RECORD](../commands/next-record)  
+[PRINT SELECTION](../commands/print-selection)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 36 |
+| スレッドセーフである | yes |
+
+
+

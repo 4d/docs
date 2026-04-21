@@ -1,0 +1,75 @@
+﻿---
+id: before-selection
+title: Before selection
+slug: /commands/before-selection
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.Before selection.Syntax-->**Before selection** ( *tabela* : Table ) : Boolean<!-- END REF-->
+<!--REF #_command_.Before selection.Params-->
+<div class="no-index">
+
+| Parâmetro | Tipo |  | Descrição |
+| --- | --- | --- | --- |
+| tabela | Table | &#8594; | Tabela na qual vai testar se o registro do ponteiro está antes do primeiro registro selecionado, ou tabela padrão, se omitido |
+| Resultado | Boolean | &#8592; | Sim (TRUE) ou Não (FALSE) |
+</div>
+<!-- END REF-->
+
+## Descrição 
+
+<!--REF #_command_.Before selection.Summary-->Before selection retorna TRUE quando o ponteiro do registro atual se encontra antes do primeiro registro da seleção atual de *tabela*.<!-- END REF--> Before selection geralmente é utilizado para verificar se o comando PREVIOUS RECORD tiver movido o ponteiro do registro atual antes do primeiro registro. Se a seleção atual estiver vazia, Before selection retorna TRUE.  
+  
+Para mover o ponteiro do registro atual à seleção, utilize os comandos [FIRST RECORD](../commands/first-record), [LAST RECORD](../commands/last-record) ou [GOTO SELECTED RECORD](../commands/goto-selected-record). [NEXT RECORD](../commands/next-record).  
+  
+Before selection retorna TRUE no cabeçalho quando um relatório está sendo impresso com [PRINT SELECTION](../commands/print-selection) ou a partir do comando de menu Imprimir. Pode utilizar o seguinte código para testar o primeiro cabeçalho e imprimir um cabeçalho especial para a primeira página:  
+
+```4d
+  // Método de um formulário de saída utilizado para um relatório
+ &NBSP;$vpFormTabela:=Current form table
+ &NBSP;Case of
+ &NBSP; // ...
+:(Form event code=On Header)
+ &NBSP; // A área cabeçalho vai ser impressa
+ &NBSP;Case of
+ &NBSP;:(Before selectiom($vpFormTabela->))
+ &NBSP; // O código para a primeira quebra do cabeçalho fica aqui
+ &NBSP; // ...
+ &NBSP;End case
+```
+
+## Exemplo 
+
+Este formulário é utilizado durante a impressão de um relatório. Define uma variável *vTitulo*, que será imprimida na área do cabeçalho na primeira página:
+
+```4d
+  // Método de formulário [Finanças];"Array"
+ Case of
+  // ...
+    :(Form event code=On Header)
+       Case of
+          :(Before selection([Finanças))
+             vTitulo:="Relatório de finanças de 1997" // Definir o título para a primeira página
+          Else
+             vTitulo:="" // Apagar o título para todas as outras páginas
+       End case
+ End case
+```
+
+## Ver também 
+
+[End selection](../commands/end-selection)  
+[FIRST RECORD](../commands/first-record)  
+[Form event code](../commands/form-event-code)  
+[PREVIOUS RECORD](../commands/previous-record)  
+[PRINT SELECTION](../commands/print-selection)  
+
+## Propriedades
+
+|  |  |
+| --- | --- |
+| Número do comando | 198 |
+| Thread-seguro | yes |
+
+
+

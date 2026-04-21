@@ -1,0 +1,45 @@
+---
+id: vp-set-active-cell
+title: VP SET ACTIVE CELL
+---
+
+<!-- REF #_method_.VP SET ACTIVE CELL.Syntax -->
+
+**VP SET ACTIVE CELL** ( *rangeObj* : Object) <!-- END REF -->
+
+<!-- REF #_method_.VP SET ACTIVE CELL.Params -->
+
+<div class="no-index">
+
+| Paramètres | Type   |    | Description |
+| ---------- | ------ | -- | ----------- |
+| rangeObj   | Object | -> | Objet plage |
+
+</div>
+<!-- END REF -->
+
+## Description
+
+La commande `VP SET ACTIVE CELL` <!-- REF #_method_.VP SET ACTIVE CELL.Summary -->définit une cellule spécifiée comme active<!-- END REF -->.
+
+Dans *rangeObj*, passez une plage contenant une seule cellule en tant qu'objet (voir [VP Cell](vp-cell.md)). Si *rangeObj* n'est pas une plage de cellules ou contient plusieurs plages, la première cellule de la première plage est utilisée.
+
+## Exemple
+
+Le code suivant déterminera comme active la cellule de la colonne D, ligne 5 :
+
+```4d
+$activeCell:=VP Cell("myVPArea";3;4)
+VP SET ACTIVE CELL($activeCell)
+```
+
+![](../../assets/en/ViewPro/cmd_vpSetActiveCell.PNG)
+
+## Voir également
+
+[VP ADD SELECTION](vp-add-selection.md)<br/>
+[VP Get active cell](vp-get-active-cell.md)<br/>
+[VP Get selection](vp-get-selection.md)<br/>
+[VP RESET SELECTION](vp-reset-selection.md)<br/>
+[VP SET SELECTION](vp-set-selection.md)<br/>
+[VP SHOW CELL](vp-show-cell.md)

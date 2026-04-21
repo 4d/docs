@@ -1,0 +1,68 @@
+---
+id: on-host-database-event-database-method
+title: On Host Database Event database method
+slug: /commands/on-host-database-event-database-method
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.On Host Database Event database method.Syntax-->On Host Database Event (*$event* : Integer)<!-- END REF-->
+<!--REF #_command_.On Host Database Event database method.Params-->
+<div class="no-index">
+
+| Paramètre | Type |  | Description |
+| --- | --- | --- | --- |
+| $event | Integer | &#8592; | Code d'événement |
+</div>
+<!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historique</summary>
+
+|Version|Changements|
+|---|---|
+|14|Créé|
+
+</details>
+</div>
+
+## Description 
+
+<!--REF #_command_.On Host Database Event database method.Summary-->La **On Host Database Event database method** permet aux composants 4D d’exécuter du code lors de l’ouverture et de la fermeture de la base hôte.<!-- END REF-->
+
+**Note :** Pour des raisons de sécurité, l’exécution de cette méthode base doit être autorisée explicitement dans la base hôte pour qu’elle puisse être appelée. Pour plus d’informations sur ce point, reportez-vous au manuel *Mode Développement*. 
+
+La **On Host Database Event database method** est exécutée uniquement dans les bases utilisées en tant que composants de bases hôtes (lorsqu’elle est autorisée dans les Propriétés de la base hôte). Elle est appelée lorsque des événements liés à l’ouverture et la fermeture de la base hôte se produisent. 
+
+Pour traiter un événement, vous devez tester la valeur du paramètre *$event* à l’intérieur de la méthode, et la comparer à l’une des constantes suivantes, placées dans le thème *Evénements de la base* :
+
+| Constante                       | Type        | Valeur | Comment                                                                                                                                                                                                                                                                                                                    |
+| ------------------------------- | ----------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| On after host database exit     | Entier long | 4      | La [Semaphore](../commands/semaphore) de la base hôte vient de terminer son exécution                                                                                                                                                                                                                                               |
+| On after host database startup  | Entier long | 2      | La de la base hôte vient de terminer son exécution                                                                                                                                                                                                                                                                         |
+| On before host database exit    | Entier long | 3      | La base hôte est en cours de fermeture. La [Semaphore](../commands/semaphore) de la base hôte n’a pas encore été appelée. <br/>La [Semaphore](../commands/semaphore) de la base hôte n’est pas appelée tant que la [On Host Database Event database method](../commands/on-host-database-event-database-method) du composant est en exécution |
+| On before host database startup | Entier long | 1      | La base hôte vient juste d’être lancée. La de la base hôte n’a pas encore été appelée. <br/>La de la base hôte n’est pas appelée tant que la [On Host Database Event database method](../commands/on-host-database-event-database-method) du composant est en exécution                                                     |
+
+Ce principe permet aux composants 4D de charger et de sauvegarder des préférences ou des états utilisateurs liés à l’exploitation de la base hôte. 
+
+## Exemple 
+
+Exemple de structure type d’une méthode base sur événement base hôte :
+
+```4d
+     // Méthode base sur événement base hôte
+ #DECLARE($event : Integer)
+ Case of
+          :($event=On before host database startup)
+              // placer ici le code à exécuter avant le "Sur ouverture" de la base hôte
+ 
+          :($event=On after host database startup)
+              // placer ici le code à exécuter après le "Sur ouverture" de la base hôte
+ 
+          :($event=On before host database exit)
+              // placer ici le code à exécuter avant le "Sur fermeture" de la base hôte
+ 
+          :($event=On after host database exit)
+              // placer ici le code à exécuter après le "Sur fermeture" de la base hôte
+ End case
+```
+
