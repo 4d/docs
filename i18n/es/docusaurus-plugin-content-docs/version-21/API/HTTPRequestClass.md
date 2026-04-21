@@ -266,7 +266,7 @@ Este es el contenido de la propiedad `.errors`:
 
 #### Descripción
 
-La propiedad `.headers` contiene <!-- REF #HTTPRequestClass.headers.Summary -->los `headers` pasados en el objeto [`options`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. Si se omite, contiene un objeto vacío.
+La propiedad `.headers` contiene <!-- REF #HTTPRequestClass.headers.Summary -->los `headers` pasados en el objeto [`options`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. .
 
 <!-- END REF -->
 
