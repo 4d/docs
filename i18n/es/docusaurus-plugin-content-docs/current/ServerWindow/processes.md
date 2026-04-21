@@ -11,7 +11,7 @@ El botón "Procesos" indica, entre paréntesis el número total de procesos en e
 
 Puede cambiar el orden de las columnas simplemente arrastrando y soltando las áreas de encabezado de las columnas. También puede ordenar la lista de los valores de las columnas haciendo clic en su encabezado.
 
-Al igual que la página Usuarios, esta página contiene un [área de búsqueda/filtrado](users.md#searchfiltering-area) dinámica que puede utilizarse para reducir el número de líneas mostradas en la lista a las que corresponden al texto introducido en el área La búsqueda/filtrado se realiza en las columnas Sesión y Nombre del proceso.
+Al igual que la página Usuarios, esta página contiene un [área de búsqueda/filtrado](users.md#searchfiltering-area) dinámica que puede utilizarse para reducir el número de líneas mostradas en la lista a las que corresponden al texto introducido en el área La búsqueda/filtrado se realiza en las columnas Sesión y Nombre del proceso. La búsqueda/filtrado se realiza en las columnas Sesión y Nombre del proceso.
 
 También hay tres botones de acceso directo que se pueden utilizar para filtrar por el tipo de proceso que se muestra en la ventana:
 
