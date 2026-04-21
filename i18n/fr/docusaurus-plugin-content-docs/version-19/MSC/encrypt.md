@@ -8,7 +8,7 @@ Vous pouvez utiliser cette page pour chiffrer ou *déchiffrer* (i.e. enlever le 
 
 :::info
 
-Pour des informations détaillées sur le cryptage des données dans 4D, veuillez vous référer à la section [Encrypting data](https://doc.4d.com/4Dv20/4D/20/Encrypting-data.300-6263735.en.html) dans le manuel *Design Reference*. Vous pouvez également lire l'article de blog intitulé [A deeper look into 4D data encryption](https://blog.4d.com/a-deeper-look-into-4d-data-encryption/).
+Vous pouvez également lire l'article de blog intitulé [A deeper look into 4D data encryption](https://blog.4d.com/a-deeper-look-into-4d-data-encryption/). Pour des informations détaillées sur le cryptage des données dans 4D, veuillez vous référer à la section [Encrypting data](https://doc.4d.com/4Dv20/4D/20/Encrypting-data.300-6263735.en.html) dans le manuel *Design Reference*.
 
 :::
 
