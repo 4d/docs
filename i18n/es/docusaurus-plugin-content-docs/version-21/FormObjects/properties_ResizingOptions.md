@@ -25,7 +25,7 @@ Cuando esta propiedad está desactivada (valor `legacy` en JSON), sólo se redim
 
 La apariencia de la columna falsa coincide con la de las columnas existentes; tendrá un encabezado y/o un pie de página falsos si estos elementos están presentes en las columnas del list box existentes y tendrá aplicados los mismos colores de fondo.
 
-Se puede hacer clic en el encabezado y/o en el pie de página falsos, pero esto no tiene ningún efecto sobre las otras columnas (por ejemplo: no se realiza ninguna ordenación); no obstante, los eventos se generan en consecuencia `On Clicked`, \\\`On Header Cl
+Se puede hacer clic en el encabezado y/o en el pie de página falsos, pero esto no tiene ningún efecto sobre las otras columnas (por ejemplo: no se realiza ninguna ordenación); no obstante, los eventos se generan en consecuencia `On Clicked`, \\\\`On Header Cl
 
 Si se hace clic en una celda de la columna falsa, el comando [LISTBOX GET CELL POSITION](../commands-legacy/listbox-get-cell-position.md) devuelve "X+1" para su número de columna (donde X es el número de columnas existent
 
