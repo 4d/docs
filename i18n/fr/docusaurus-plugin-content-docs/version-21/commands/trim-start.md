@@ -32,7 +32,7 @@ displayed_sidebar: docs
 
 La commande **Trim start** <!--REF #_command_.Trim start.Summary--> supprime les **whitespace** au début du paramètre *aString* et renvoie une nouvelle chaîne, sans modifier la chaîne d'origine.<!-- END REF--> Les **whitespace** incluent les espaces, tabulations, LF, CR, etc.
 
-Pour retourner une nouvelle chaîne avec les whitespace supprimés aux deux extrémités, utilisez [`Trim`](./trim.md). Pour retourner une nouvelle chaîne avec les whitespace supprimés à la fin de *aString*, utilisez [`Trim end`](./trim-end.md).
+Pour retourner une nouvelle chaîne avec les whitespace supprimés aux deux extrémités, utilisez [`Trim`](./trim.md). Pour retourner une nouvelle chaîne avec les whitespace supprimés aux deux extrémités, utilisez [`Trim`](./trim.md).
 
 Dans le paramètre *aString*, vous pouvez passer n'importe quelle expression de type texte. Elle ne sera pas touchée par la commande.
 
