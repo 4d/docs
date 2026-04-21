@@ -286,7 +286,7 @@ Vous souhaitez créer un alias pour un fichier contenu dans votre dossier princi
 
 #### Description
 
-La fonction `delete()` <!-- REF #FileClass.delete().Summary -->supprime le fichier<!-- END REF -->.
+La fonction `delete()` <!-- REF #FileClass.delete().Summary -->La fonction `delete()`<!-- END REF -->.
 
 Si le fichier n'existe pas sur le disque, la fonction ne fait rien (aucune erreur n'est générée).
 
@@ -297,7 +297,7 @@ Si le fichier est actuellement ouvert, le résultat dépend du système d'exploi
 
 :::caution
 
-`.delete()` peut supprimer n'importe quel fichier sur un disque. Cela inclut les documents créés avec d'autres applications, ainsi que les applications elles-mêmes. `.delete()` doit être utilisé avec prudence. La suppression d'un fichier est une opération permanente et irréversible.
+`.delete()` peut supprimer n'importe quel fichier sur un disque. Cela inclut les documents créés avec d'autres applications, ainsi que les applications elles-mêmes. `.delete()` peut supprimer n'importe quel fichier sur un disque. La suppression d'un fichier est une opération permanente et irréversible.
 
 :::
 
@@ -711,7 +711,7 @@ $infoPlistFile.setAppInfo($info)
 
 #### Description
 
-La fonction `.setContent()` <!-- REF #FileClass.setContent().Summary -->réécrit le contenu intégral du fichier à l'aide des données stockées dans le BLOB *content*<!-- END REF -->. Pour plus d'informations sur les BLOBs, veuillez vous reporter à la section [BLOB](Concepts/dt_blob.md).
+réécrit le contenu intégral du fichier à l'aide des données stockées dans le BLOB *content* <!-- REF #FileClass.setContent().Summary -->La fonction `.setContent()`<!-- END REF -->. Pour plus d'informations sur les BLOBs, veuillez vous reporter à la section [BLOB](Concepts/dt_blob.md).
 
 #### Exemple
 
