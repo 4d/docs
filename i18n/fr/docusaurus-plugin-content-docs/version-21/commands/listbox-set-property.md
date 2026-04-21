@@ -10,12 +10,12 @@ displayed_sidebar: docs
 
 <div class="no-index">
 
-| Paramètres | Type           |                             | Description                                                                                                                                          |
-| ---------- | -------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \*         | Opérateur      | &#8594; | Si passé, *object* est un nom d'objet (chaîne de caractères). Si omis, *object* est une variable. |
-| object     | Text, Variable | &#8594; | Nom d'objet de formulaire (si \* est spécifié) ou variable (si \* est omis)                                    |
-| property   | Integer        | &#8594; | Propriété de list box ou de colonne de list box                                                                                                      |
-| value      | Integer, Text  | &#8594; | Valeur de la propriété                                                                                                                               |
+| Paramètres | Type           |                             | Description                                                                                                                                                                                       |
+| ---------- | -------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| \*         | Opérateur      | &#8594; | Si passé, *object* est un nom d'objet (chaîne de caractères). Si passé, *object* est un nom d'objet (chaîne de caractères). |
+| object     | Text, Variable | &#8594; | Nom d'objet de formulaire (si \* est spécifié) ou variable (si \* est omis)                                                                                 |
+| property   | Integer        | &#8594; | Propriété de list box ou de colonne de list box                                                                                                                                                   |
+| value      | Integer, Text  | &#8594; | Valeur de la propriété                                                                                                                                                                            |
 
 </div>
 <!-- END REF-->
