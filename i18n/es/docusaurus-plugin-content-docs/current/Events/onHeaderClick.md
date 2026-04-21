@@ -11,7 +11,7 @@ title: On Header Click
 
 ### List Box
 
-Este evento se genera cuando se hace clic en el encabezado de una columna de list box. En este caso, el comando `Self` permite identificar el encabezado de la columna sobre la que se ha hecho clic.
+Este evento se genera cuando se hace clic en el encabezado de una columna de list box. Este evento se genera cuando se hace clic en el encabezado de una columna de list box.
 
 Si se seleccionó la propiedad [Sortable](FormObjects/properties_Action.md#sortable) para el list box, se puede decidir si se autoriza o no una ordenación estándar de la columna pasando el valor 0 o -1 en la variable `$0`:
 
