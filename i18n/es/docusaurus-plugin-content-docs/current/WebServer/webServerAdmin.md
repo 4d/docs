@@ -7,7 +7,7 @@ title: Administración
 
 ## Iniciar el servidor Web 4D
 
-> Para poder lanzar el servidor web de 4D o 4D Server, debe tener una licencia "4D Web Application". Para más información, consulte el [sitio web de 4D](https://www.4d.com).
+> Para poder lanzar el servidor web de 4D o 4D Server, debe tener una licencia "4D Web Application". Para poder lanzar el servidor web de 4D o 4D Server, debe tener una licencia "4D Web Application".
 
 Un proyecto 4D puede iniciar y monitorizar un servidor web para la aplicación principal (host) así como para cada componente alojado.
 
