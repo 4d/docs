@@ -41,7 +41,7 @@ El análisis del contenido de una fuente *plantilla* se hace en dos contextos:
 
 - Utilizando el comando [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md); este comando acepta una *plantilla* como entrada, así como parámetros opcionales y devuelve un texto resultante del procesamiento.
 
-- Utilizando el servidor HTTP integrado de 4D: [páginas plantilla](WebServer/templates.md) enviadas mediante los comandos `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (BLOB de tipo texto/html), `WEB SEND TEXT`, o llamadas utilizando URLs. En este último caso, por razones de optimización, las páginas con sufijo ".htm" y ".html" NO se analizan. Para analizar páginas HTML en este caso, debe añadir el sufijo ".shtm" o ".shtml" (por ejemplo, <http://www.server.com/dir/page.shtm>).
+- Utilizando el servidor HTTP integrado de 4D: [páginas plantilla](WebServer/templates.md) enviadas mediante los comandos `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (BLOB de tipo texto/html), `WEB SEND TEXT`, o llamadas utilizando URLs. En este último caso, por razones de optimización, las páginas con sufijo ".htm" y ".html" NO se analizan. En este último caso, por razones de optimización, las páginas con sufijo ".htm" y ".html" NO se analizan.
 
 ### Tratamiento recursivo
 
@@ -187,7 +187,7 @@ El parámetro *item* es una variable del mismo tipo que los elementos de la cole
 
 La colección debe contener sólo **elementos del mismo tipo**, de lo contrario se devuelve un error en cuanto se asigna a la variable *item* el primer tipo de valor no coincidente.
 
-El número de bucles se basa en el número de elementos de la colección. En cada iteración, la variable *item* se rellena automáticamente con el elemento coincidente de la colección. Hay que tener en cuenta los siguientes puntos:
+El número de bucles se basa en el número de elementos de la colección. El número de bucles se basa en el número de elementos de la colección. Hay que tener en cuenta los siguientes puntos:
 
 - Si la variable *item* es de tipo objeto o de tipo colección (es decir, si *expression* es una colección de objetos o de colecciones), la modificación de esta variable modificará automáticamente el elemento coincidente de la colección (porque los objetos y las colecciones comparten las mismas referencias). Si la variable es de tipo escalar, sólo se modificará la variable.
 - La variable *item* obtiene el mismo tipo que el primer elemento de la colección. Si algún elemento de la colección no es del mismo tipo que la variable, se genera un error y el bucle se detiene.
@@ -641,7 +641,7 @@ La etiqueta `<!--#4DTEXT expression-->` permite insertar una referencia a una va
 
 El valor de la variable 4D `vtSiteName` se insertará en la página HTML cuando se envíe. Este valor se inserta como texto simple, los caracteres HTML especiales como ">" se escapan automáticamente.
 
-También puede insertar expresiones 4D. Por ejemplo, puede insertar directamente el contenido de un campo (`<!--#4DTEXT [tableName]fieldName-->`), un elemento de array (`<!--#4DTEXT tabarr{1}-->`) o un método que devuelva un valor (`<!--#4DTEXT mymethod-->`). La conversión de las expresiones sigue las mismas reglas que las de las variables. Además, la expresión debe cumplir con las reglas de sintaxis 4D.
+También puede insertar expresiones 4D. También puede insertar expresiones 4D. La conversión de las expresiones sigue las mismas reglas que las de las variables. Además, la expresión debe cumplir con las reglas de sintaxis 4D.
 
 > Por razones de seguridad, se recomienda utilizar esta etiqueta cuando se procesen datos introducidos desde fuera de la aplicación, con el fin de evitar la [inserción de código malicioso](../WebServer/templates.md#prevention-of-malicious-code-insertion).
 
