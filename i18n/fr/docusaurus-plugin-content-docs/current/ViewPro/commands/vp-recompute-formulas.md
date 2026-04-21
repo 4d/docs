@@ -20,7 +20,7 @@ title: VP RECOMPUTE FORMULAS
 
 ## Description
 
-La commande `VP RECOMPUTE FORMULAS` <!-- REF #_method_.VP RECOMPUTE FORMULAS.Summary -->évalue immédiatement toutes les formules dans *vpAreaName*<!-- END REF -->. Par défaut, 4D calcule automatiquement les formules lorsqu'elles sont insérées, importées ou exportées. `VP RECOMPUTE FORMULAS` vous permet de forcer le calcul à tout moment (par exemple, si des modifications sont apportées aux formules ou si les formules contiennent des appels à la base de données). La commande lance l'exécution de la commande [VP FLUSH COMMANDS](vp-flush-commands.md) pour exécuter toutes les commandes stockées et vider le buffer de commandes, puis calcule toutes les formules du classeur.
+La commande `VP RECOMPUTE FORMULAS` <!-- REF #_method_.VP RECOMPUTE FORMULAS.Summary -->évalue immédiatement toutes les formules dans *vpAreaName*<!-- END REF -->. . Par défaut, 4D calcule automatiquement les formules lorsqu'elles sont insérées, importées ou exportées. `VP RECOMPUTE FORMULAS` vous permet de forcer le calcul à tout moment (par exemple, si des modifications sont apportées aux formules ou si les formules contiennent des appels à la base de données). La commande lance l'exécution de la commande [VP FLUSH COMMANDS](vp-flush-commands.md) pour exécuter toutes les commandes stockées et vider le buffer de commandes, puis calcule toutes les formules du classeur.
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
