@@ -1207,7 +1207,7 @@ La fórmula debe haber sido creada utilizando los comandos [`Formula`](FunctionC
 
 * *fórmula* se evalúa para cada entidad y debe devolver true o false. Durante la ejecución de la búsqueda, si el resultado de la fórmula no es un booleano, se considera como false.
 * dentro de la *fórmula*, la entidad está disponible a través del objeto `This`.
-* if the `Formula` object is **null**, the error 1626 ("Expecting a text or formula") is generated, that you can intercept using a method installed with `ON ERR CALL`.
+* si el objeto `Formula` es **null**, se genera el error 1626 ("Esperando un texto o una fórmula"), que puede interceptar utilizando un método instalado con `ON ERR CALL`.
 > Por razones de seguridad, las llamadas a fórmulas dentro de las funciones `query()` pueden ser desestimadas. Ver la descripción del parámetro *querySettings*.
 
 #### Pasar parámetros a fórmulas
@@ -1572,9 +1572,9 @@ Queremos desautorizar las fórmulas, por ejemplo, cuando el usuario introduce su
 <!-- REF #DataClassClass.setRemoteCacheSettings().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|settings|Object|->|Object that sets the timeout and maximum size of the ORDA cache for the dataclass.|
+|settings|Object|->|Objeto que define el tiempo de espera y el tamaño máximo de la caché ORDA para el nivel de datos.|
 </div>
 <!-- END REF -->
 
