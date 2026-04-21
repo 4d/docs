@@ -18,7 +18,7 @@ Ensuite, si la propriété d'événement formulaire `On Unload` est sélectionn�
 
 ### Sous-formulaire
 
-L'événement `On Unload` est généré à la fermeture du sous-formulaire (cet événement doit également avoir été activé au niveau du formulaire parent pour être pris en compte). L'événement est généré avant ceux du formulaire parent. Notez également que, conformément aux principes de fonctionnement des événements de formulaire, si le sous-formulaire est placé sur une page autre que la page 0 ou 1, cet événement ne sera généré que lorsque cette page sera fermée (et non lorsque le formulaire sera fermé).
+L'événement `On Unload` est généré à la fermeture du sous-formulaire (cet événement doit également avoir été activé au niveau du formulaire parent pour être pris en compte). L'événement est généré avant ceux du formulaire parent. L'événement est généré avant ceux du formulaire parent.
 
 ### Voir également
 
