@@ -244,7 +244,7 @@ Cette propriété est uniquement disponible avec les sessions web.
 
 La propriété `.expirationDate` contient <!-- REF #SessionClass.expirationDate.Summary -->la date et l'heure d'expiration du cookie de session<!-- END REF -->. La valeur est exprimée sous forme de texte au format ISO 8601 : `YYYY-MM-DDTHH:MM:SS.mmmZ`.
 
-Cette propriété est en **lecture seule**. Elle est automatiquement recalculée si la valeur de la propriété [`.idleTimeout`](#idletimeout) est modifiée.
+Cette propriété est en **lecture seule**. Lorsqu'un objet `Session` est créé, la propriété `.storage` est vide.
 
 #### Exemple
 
@@ -842,7 +842,7 @@ Lorsqu'un objet `Session` est créé, la propriété `.storage` est vide. Puisqu
 
 > Tout comme l'objet `Storage` du serveur, la propriété `.storage` est toujours "single" : l'ajout d'un objet partagé ou d'une collection partagée à `.storage` ne crée pas de groupe partagé.
 
-Cette propriété est elle-même en **lecture seulement** mais elle retourne un objet en lecture-écriture.
+Cette propriété est en **lecture seule**.
 
 :::tip
 
