@@ -71,7 +71,7 @@ Los objetos `File` soportan varios nombres de ruta, incluyendo la sintaxis `file
 
 #### Descripción
 
-Lanzamiento Es idéntico al comando [`File`](../commands/file.md) (atajo).
+Lanzamiento Lanzamiento Es idéntico al comando [`File`](../commands/file.md) (atajo).
 
 > Se recomienda utilizar el comando de acceso directo [`File`](../commands/file.md) en lugar de `4D.File.new()`.
 
@@ -434,7 +434,7 @@ La función `.moveTo()` <!-- REF #FileClass.moveTo().Summary -->mueve o renombra
 
 La *destinationFolder* debe existir en el disco, de lo contrario se genera un error.
 
-Por defecto, el archivo conserva su nombre cuando se mueve. Si desea renombrar el archivo desplazado, pase el nombre completo en el parámetro *newName*. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
+Por defecto, el archivo conserva su nombre cuando se mueve. Por defecto, el archivo conserva su nombre cuando se mueve. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
 
 **Objeto devuelto**
 
