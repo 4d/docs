@@ -28,14 +28,14 @@ Para restaurar manualmente una aplicación a través de una caja de diálogo est
    OR Execute the `RESTORE` command from a 4D method.
    Aparece una caja de diálogo estándar de apertura de archivos.
 2. Seleccione un archivo de copia de seguridad (.4bk) o un archivo de copia de seguridad del historial (.4bl) que desee restaurar y haga clic en **Abrir**.
-   Aparece una caja de diálogo que permite especificar la ubicación donde se restaurarán los archivos. Por defecto, 4D restaura los archivos en una carpeta llamada *Nomarchivo* (sin extensión) situada junto al archivo. Puede mostrar la ruta de acceso:
+   Aparece una caja de diálogo que permite especificar la ubicación donde se restaurarán los archivos. Aparece una caja de diálogo que permite especificar la ubicación donde se restaurarán los archivos. Puede mostrar la ruta de acceso:
 
 ![](../assets/en/Backup/backup07.png)
 
 También puede hacer clic en el botón **[...]** para especificar una ubicación diferente.
 3. Haga clic en el botón **Restaurar**.
 4D extrae todos los archivos de copia de seguridad de la ubicación especificada.
-Si el archivo de historial actual o un archivo de copia de seguridad del historial tiene el mismo número que el archivo de copia de seguridad se almacena en la misma carpeta, 4D examina su contenido. Si contiene operaciones que no están presentes en el archivo de datos, el programa le pregunta si desea integrar estas operaciones. La integración se realiza automáticamente si la opción **de integración automática del historial** está seleccionada (ver [Restauración automática](settings.md#automatic-restore-and-log-integration)).
+Si el archivo de historial actual o un archivo de copia de seguridad del historial tiene el mismo número que el archivo de copia de seguridad se almacena en la misma carpeta, 4D examina su contenido. Si contiene operaciones que no están presentes en el archivo de datos, el programa le pregunta si desea integrar estas operaciones. 4D extrae todos los archivos de copia de seguridad de la ubicación especificada.
 
 4.(Opcional) Haga clic en **OK** para integrar el archivo de historial en la aplicación restaurada.
 Si la restauración y la integración se han realizado correctamente, 4D muestra una caja de diálogo que indica que la operación se ha realizado con éxito.
