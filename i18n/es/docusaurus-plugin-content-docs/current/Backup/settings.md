@@ -25,8 +25,8 @@ Las opciones que se encuentran en esta pestaña le permiten establecer y configu
 
 - **Nunca**: la función de copia de seguridad programada está inactiva.
 - **Cada hora**: programa una copia de seguridad automática cada hora, a partir de la hora siguiente.
-- Backups periódicos A continuación, puede introducir la hora a la que debe comenzar la copia de seguridad.
-- **Todas las semanas**: programa una copia de seguridad automática cada semana. Dos áreas de entrada adicionales le permiten indicar el día y la hora en que debe comenzar la copia de seguridad.
+- **Todas las semanas**: programa una copia de seguridad automática cada semana. A continuación, puede introducir la hora a la que debe comenzar la copia de seguridad.
+- **Todos los meses**: programa una copia de seguridad automática cada mes. Dos áreas de entrada adicionales le permiten indicar el día y la hora en que debe comenzar la copia de seguridad.
 - **Todos los meses**: programa una copia de seguridad automática cada mes. Dos áreas de entrada adicionales le permiten indicar el día del mes y la hora en que debe comenzar la copia de seguridad.
 - **Personalizado**: sirve para configurar las copias de seguridad automáticas "a medida". Al seleccionar esta opción, aparecen varias áreas de entrada adicionales:
   - **Cada X hora(s)**: permite programar las copias de seguridad con una base horaria. Puede introducir un valor entre 1 y 24.
@@ -51,7 +51,7 @@ Esta área le permite determinar qué archivos y/o carpetas deben copiarse duran
 - **Datos**: archivo de datos de la aplicación. Cuando esta opción está marcada, los siguientes elementos se copian automáticamente al mismo tiempo que los datos:
   - el archivo de historial actual de la aplicación (si existe),
   - la carpeta `Settings` completa situada [junto al archivo de datos](../Project/architecture.md#settings-user-data) (si existe), es decir, *los parámetros usuario para los datos*.
-- **Estructura**: carpetas y archivos proyecto de la aplicación. En el caso de proyectos compilados, esta opción permite hacer una copia de seguridad del archivo .4dz. Cuando esta opción está marcada, se hace una copia de seguridad automática de la carpeta completa `Settings` situada [en el mismo nivel que la carpeta Project](../Project/architecture.md#settings-user), es decir, los *parámetros usuario*.
+- **Estructura**: carpetas y archivos proyecto de la aplicación. En el caso de proyectos compilados, esta opción permite hacer una copia de seguridad del archivo .4dz. En el caso de proyectos compilados, esta opción permite hacer una copia de seguridad del archivo .4dz.
 - **Archivo de estructura usuario (sólo para bases binaria)**: *funcionalidad obsoleta*
 - **Adjuntos**: esta área permite especificar un conjunto de archivos y/o carpetas que se respaldarán al mismo tiempo que la aplicación. Estos archivos pueden ser de cualquier tipo (documentos o plantillas de plug-ins, etiquetas, informes, imágenes, etc.). Puede definir archivos individuales o carpetas cuyo contenido se respaldará completamente. Cada elemento adjunto aparece con su ruta de acceso completa en el área "Adjuntos ".
   - **Eliminar**: retira el archivo seleccionado de la lista de archivos adjuntos.
@@ -72,7 +72,7 @@ La opción **Utilizar el archivo de historial**, cuando está marcada, indica qu
 
 Por defecto, todo proyecto creado con 4D utiliza un archivo de historial (opción **Utilizar archivo de historial**seleccionada en la **página General** de las **Preferencias**). El archivo de historial se llama *data.journal* y se coloca en la carpeta Data.
 
-> La activación de un nuevo archivo de historial requiere una copia de seguridad previa de los datos de la aplicación. Si marca esta opción para el archivo de datos utilizado actualmente, un mensaje de advertencia le informará de que es necesario realizar una copia de seguridad. La creación del archivo de historial se pospone y se creará realmente sólo después de la siguiente copia de seguridad de la aplicación.
+> La activación de un nuevo archivo de historial requiere una copia de seguridad previa de los datos de la aplicación. La activación de un nuevo archivo de historial requiere una copia de seguridad previa de los datos de la aplicación. La creación del archivo de historial se pospone y se creará realmente sólo después de la siguiente copia de seguridad de la aplicación.
 
 ## Copia de seguridad y restauración
 
@@ -109,7 +109,7 @@ Estas opciones se aplican a los archivos de copia de seguridad principales y a l
 - **Segment Size (Mb)** 4D allows you to segment archives, i.e., to cut it up into smaller sizes. Este funcionamiento permite, por ejemplo, almacenar una copia de seguridad en varios discos diferentes (DVD, dispositivos usb, etc.). Durante la restauración, 4D fusionará automáticamente los segmentos. Cada segmento se llama MyApplication[xxxx-yyyy].4BK, donde xxxx es el número de copia de seguridad e yyyy es el número de segmento. Por ejemplo, los tres segmentos de la copia de seguridad de la base MyApplication se llaman MyApplication[0006-0001].4BK, MyApplication[0006-0002].4BK y MyApplication[0006-0003].4BK.
   El menú **Tamaño del segmento** es un combo box que permite establecer el tamaño en MB de cada segmento de la copia de seguridad. Puede elegir uno de los tamaños preestablecidos o introducir un tamaño específico entre 0 y 2048. Si se pasa 0, no se produce ninguna segmentación (esto equivale a pasar **Ninguna**).
 
-- **Compression Rate** By default, 4D compresses backups to help save disk space. Sin embargo, la fase de compresión de archivos puede ralentizar notablemente las copias de seguridad cuando se trata de grandes volúmenes de datos. La opción **Tasa de compresión** permite ajustar la compresión de los archivos:
+- **Compression Rate** By default, 4D compresses backups to help save disk space. Sin embargo, la fase de compresión de archivos puede ralentizar notablemente las copias de seguridad cuando se trata de grandes volúmenes de datos. Sin embargo, la fase de compresión de archivos puede ralentizar notablemente las copias de seguridad cuando se trata de grandes volúmenes de datos.
   - **Ninguna:** no se aplica ninguna compresión de archivos. La copia de seguridad es más rápida, pero los archivos son considerablemente más grandes.
   - **Rápido** (por defecto): esta opción es un compromiso entre la velocidad de la copia de seguridad y el tamaño del archivo.
   - **Compactado**: la tasa de compresión máxima se aplica a los archivos. Los ficheros de archivos ocupan el menor espacio posible en el disco, pero la copia de seguridad se ralentiza notablemente.
