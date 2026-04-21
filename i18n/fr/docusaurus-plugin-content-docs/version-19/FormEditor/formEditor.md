@@ -457,7 +457,7 @@ Une valeur d'attribut définie dans une feuille de style peut être remplacée d
 | Icône                                         | Description                                                                                                                                                                           |
 | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![](../assets/en/FormEditor/cssIcon.png)      | Indique que la valeur d'un attribut a été définie dans une feuille de style                                                                                                           |
-| ![](../assets/en/FormEditor/cssImportant.png) | Indique que la valeur d'un attribut a été définie dans une feuille de style avec la déclaration `!important`                                                                        |
+| ![](../assets/en/FormEditor/cssImportant.png) | Indique que la valeur d'un attribut a été définie dans une feuille de style avec la déclaration `!important`                                                                          |
 | ![](../assets/en/FormEditor/cssIconMixed.png) | Affiché lorsque la valeur d'un attribut défini dans une feuille de style pour au moins un élément d'un groupe ou d'une sélection de plusieurs objets est différente des autres objets |
 
 ## Création de list box
