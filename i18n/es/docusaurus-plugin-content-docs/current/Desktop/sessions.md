@@ -82,7 +82,7 @@ Los privilegios sólo pueden definirse desde la sesión de usuario remoto en el 
 
 :::
 
-Las sesiones compartidas se gestionan con [tokens OTP](../WebServer/sessions.md#session-token-otp). After you created an OTP token for the remote session, you add the token (through the `$4DSID` parameter value) to web requests sent from Web areas containing Qodly pages (or from any web browser) so that the user session on the server is identified and shared. Del lado del servidor web, si una solicitud web contiene un *id OTP* en el parámetro $4DSID, se utiliza la sesión correspondiente a este token OTP.
+Las sesiones compartidas se gestionan con [tokens OTP](../WebServer/sessions.md#session-token-otp). Del lado del servidor web, si una solicitud web contiene un *id OTP* en el parámetro $4DSID, se utiliza la sesión correspondiente a este token OTP. After you created an OTP token for the remote session, you add the token (through the `$4DSID` parameter value) to web requests sent from Web areas containing Qodly pages (or from any web browser) so that the user session on the server is identified and shared.
 
 :::note
 
