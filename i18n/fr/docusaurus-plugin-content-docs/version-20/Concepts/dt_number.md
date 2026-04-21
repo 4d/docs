@@ -124,8 +124,8 @@ Une expression utilisant un opérateur sur les bits retourne une valeur de type 
 | ET                    | &             | long & E. E. long       | Long                    |
 | OU (inclusif)         | &#124;        | Long &#124; Long        | Long                    |
 | OU (exclusif)         | &#094; &#124; | Long &#094; &#124; Long | Long                    |
-| Décaler bits à gauche | <<            | E. Long << E. Long      | long (voir note n°1)    |
-| Décaler bits à droite | >>            | E. Long >> E. Long      | long (voir note n°1)    |
+| Décaler bits à gauche | <<            | Long << E. Long         | long (voir note n°1)    |
+| Décaler bits à droite | >>            | Long >> E. Long         | long (voir note n°1)    |
 | Mettre bit à 1        | ?+            | Long ?+ Long            | long (voir note n°2)    |
 | Mettre bit à 0        | ?-            | Long ?- Long            | long (voir note n°2)    |
 | Tester bit            | ??            | Long ?? Long            | Booléen (voir note n°2) |
