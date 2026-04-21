@@ -14,7 +14,7 @@ Hay dos maneras de crear una nueva entidad en una dataclass:
 
 Tenga en cuenta que la entidad sólo se crea en la memoria. Si desea añadirla al datastore, debe llamar a la función [`entity.save()`](../API/EntityClass.md#save).
 
-Los atributos de la entidad están disponibles directamente como propiedades del objeto entidad. Para más información, consulte [Uso de los atributos de entidad](#using-entity-attributes).
+Los atributos de la entidad están disponibles directamente como propiedades del objeto entidad. Los atributos de la entidad están disponibles directamente como propiedades del objeto entidad.
 
 Por ejemplo, queremos crear una nueva entidad en la dataclass "Employee" en el datastore actual con "John" y "Dupont" asignados a los atributos firstname y name:
 
