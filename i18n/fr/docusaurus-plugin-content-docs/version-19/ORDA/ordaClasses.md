@@ -179,9 +179,7 @@ Chaque table exposée avec ORDA affiche une classe EntitySelection dans le class
 
 Class extends EntitySelection
 
-//Extraire de cette entity selection les employés dont le salaire est supérieur à la moyenne.
-
-Function withSalaryGreaterThanAverage
+//Extraire de cette entity selection les employés dont le salaire est supérieur à la moyenne. Function withSalaryGreaterThanAverage
  C_OBJECT($0)
  $0:=This.query("salary > :1";This.average("salary")).orderBy("salary")
 
