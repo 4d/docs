@@ -53,13 +53,13 @@ Hay varios tipos de list box, con sus propios comportamientos y propiedades espe
 - **Selección** (**Selección actual** o **Selección con nombre**): cada columna está vinculada a una expresión (por ejemplo, un campo) que se evalúa para cada registro de la selección.
 - **Collection o Entity selection**: cada columna está ligada a una expresión que se evalúa para cada elemento de la colección o cada entidad de la selección de entidades.
 
-> &#062; &#062; No es posible combinar diferentes tipos de list box en el mismo objeto list box. La fuente de datos se define cuando se crea el list box. Entonces ya no es posible modificarlo por programación.
+> &#062; &#062; &#062; No es posible combinar diferentes tipos de list box en el mismo objeto list box. La fuente de datos se define cuando se crea el list box. Entonces ya no es posible modificarlo por programación.
 
 ### Gestión de list boxes
 
 Se puede configurar completamente un objeto list box a través de sus propiedades, y también se puede gestionar dinámicamente por programación.
 
-The 4D Language includes a dedicated "List Box" theme for list box commands, but commands from various other themes, such as "Object properties" commands or [`EDIT ITEM`](../commands/edit-item), [`Displayed line number`](../commands/displayed-line-number) commands can also be used. Para mayor información consulte la página [List Box Commands Summary](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) del manual *Lenguaje 4D*.
+Para mayor información consulte la página [List Box Commands Summary](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) del manual *Lenguaje 4D*. The 4D Language includes a dedicated "List Box" theme for list box commands, but commands from various other themes, such as "Object properties" commands or [`EDIT ITEM`](../commands/edit-item), [`Displayed line number`](../commands/displayed-line-number) commands can also be used.
 
 ## Gestión de entrada
 
@@ -378,6 +378,7 @@ En este modo:
 
 - La altura del objeto list box se reduce automáticamente cuando el número de líneas a imprimir es inferior a la altura original del objeto (no se imprimen líneas "vacías"). Por el contrario, la altura no aumenta automáticamente en función del contenido del objeto. El tamaño del objeto realmente impreso puede obtenerse mediante el comando [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information).
 - El objeto list box se imprime "tal cual", es decir, teniendo en cuenta sus parámetros de visualización actuales: visibilidad de los encabezados y de las rejillas, líneas ocultas y mostradas, etc.
+  El objeto list box se imprime "tal cual", es decir, teniendo en cuenta sus parámetros de visualización actuales: visibilidad de los encabezados y de las rejillas, líneas ocultas y mostradas, etc.
   Estos parámetros también incluyen la primera línea a imprimir: si llama al comando [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position) antes de lanzar la impresión, la primera línea impresa en el list box será la designada por el comando.
 - Un mecanismo automático facilita la impresión de los list box que contienen más líneas de las que es posible mostrar: se pueden realizar llamadas sucesivas a `Print object` para imprimir cada vez un nuevo conjunto de líneas. El comando [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) se puede utilizar para comprobar el estado de la impresión mientras se está realizando.
 
@@ -564,7 +565,7 @@ Resultado:
 
 Puede optimizar la visualización y gestión de los list box jerárquicos utilizando los eventos formulario `On Expand` y `On Collapse`.
 
-Un list box jerárquico se construye a partir del contenido de sus arrays, por lo que sólo puede mostrarse cuando todos estos arrays están cargados en memoria. Esto dificulta la generación de list box jerárquicos de gran tamaño basados en arrays generados a partir de datos (a través del comando [`SELECTION TO ARRAY`](../commands/selection-to-array)), no solo por la velocidad de visualización sino también por la memoria utilizada.
+Un list box jerárquico se construye a partir del contenido de sus arrays, por lo que sólo puede mostrarse cuando todos estos arrays están cargados en memoria. Un list box jerárquico se construye a partir del contenido de sus arrays, por lo que sólo puede mostrarse cuando todos estos arrays están cargados en memoria.
 
 El uso de los eventos de formulario `On Expand` y `On Collapse` puede superar estas limitaciones: por ejemplo, puede mostrar sólo una parte de la jerarquía y cargar/descargar los arrays sobre la marcha, basándose en las acciones del usuario. En el contexto de estos eventos, el comando [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) devuelve la celda en la que el usuario hizo clic para expandir o contraer una línea.
 
