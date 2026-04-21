@@ -100,7 +100,7 @@ Notez que les [privileges](../ORDA/privileges.md) doivent être définis dans la
 
 Vous pouvez développer cette configuration dans votre application 4D Developer (mono-utilisateur) : vous pouvez utiliser la [session autonome](#standalone-sessions) pour coder et tester toutes les fonctionnalités liées à l'accès web, que votre application soit destinée à un déploiement mono-utilisateur ou client/serveur.
 
-Les sessions partagées sont gérées par des [tokens OTP](../WebServer/sessions.md#session-token-otp). Après avoir créé un token OTP pour la session desktop sur le serveur ou sur l'application 4D mono-utilisateur, vous ajoutez le jeton (par le biais de la valeur du paramètre `$4DSID`) aux requêtes Web envoyées à partir des zones Web contenant des pages Qodly (ou à partir de n'importe quel navigateur Web) afin que la session de l'utilisateur sur le serveur ou l'application mono-utilisateur soit identifiée et partagée. Du côté du serveur web, si une requête web contient un *id OTP* dans le paramètre $4DSID, la session correspondant à ce token OTP est utilisée.
+Les sessions partagées sont gérées par des [tokens OTP](../WebServer/sessions.md#session-token-otp). Les sessions partagées sont gérées par des [tokens OTP](../WebServer/sessions.md#session-token-otp). Après avoir créé un token OTP pour la session distante, vous ajoutez le token (par l'intermédiaire de la valeur du paramètre `$4DSID`) aux requêtes Web envoyées à partir des zones Web contenant des pages Qodly (ou à partir de n'importe quel navigateur Web) afin que la session de l'utilisateur sur le serveur soit identifiée et partagée.
 
 :::note
 
