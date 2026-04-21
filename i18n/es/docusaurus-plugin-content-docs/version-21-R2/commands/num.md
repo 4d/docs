@@ -49,7 +49,7 @@ Cuando se utiliza el comando **Num** con una *expression* cadena, hay dos sintax
 
 Si *expression* contiene sólo uno o más caracteres alfabéticos, **Num** devuelve un cero. Si *expression* incluye caracteres alfabéticos y numéricos, el comando ignora los caracteres alfabéticos. Así, transforma la cadena "a1b2c3" en el número 123.
 
-Hay tres caracteres reservados que **Num** trata de forma especial: el separador decimal definido en el sistema (si no se pasa el parámetro *separator*), el guión "*\-*" y "*e*". *o* "E". Estos caracteres se interpretan como caracteres de formato numérico.
+Hay tres caracteres reservados que **Num** trata de forma especial: el separador decimal definido en el sistema (si no se pasa el parámetro *separator*), el guión "*\-*" y "*e*". Estos caracteres se interpretan como caracteres de formato numérico.
 
 - El separador decimal se interpreta como un decimal y debe aparecer incluido en una cadena numérica. Por defecto, el comando utiliza el separador decimal definido por el sistema operativo. Puede modificar este carácter utilizando el parámetro *separator* (ver abajo).
 - El guión hace que el número o exponente sea negativo. El guión debe aparecer antes de todo carácter numérico negativo o después de la "e" para un exponente. Excepto en el caso del carácter "e", si se introduce un guión en una cadena numérica, se ignora la parte de la cadena que va después del guión. Por ejemplo, `Num("123-456")` devuelve 123, pero `Num("-9")` devuelve -9.
