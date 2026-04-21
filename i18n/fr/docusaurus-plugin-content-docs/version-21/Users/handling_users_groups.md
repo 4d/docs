@@ -180,6 +180,7 @@ Les groupes sont hiérarchisés afin que les privilèges soient correctement aff
 
 - Le groupe Comptabilité contient des opérateurs de saisie mais aussi les utilisateurs des groupes Dir. finance et donc Direction générale. Super_Utilisateur et Administrateur
   Super_Utilisateur et Administrateur
+  Super_Utilisateur et Administrateur
 
 Vous pouvez ensuite décider des privilèges affectés à chaque groupe suivant le niveau de responsabilité des utilisateurs qu’il contient.
 
