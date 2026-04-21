@@ -276,7 +276,7 @@ Lors de l'utilisation du mot-clé `#DECLARE`, les paramètres sont automatiqueme
 
 ```4d
 #DECLARE($myParam : Text; $myOtherParam : Integer) : Boolean
-	// tous les paramètres de la méthode sont déclarés avec leur type
+    // tous les paramètres de la méthode sont déclarés avec leur type
 ```
 
 Cependant, une fonctionnalité du compilateur 4D vous permet de déclarer tous vos paramètres dans une méthode spécifique à l'aide d'une syntaxe spéciale :
@@ -324,13 +324,13 @@ Function add($x : Variant; $y : Integer)-> $result : Integer
 - Objets formulaires qui acceptent l'événement formulaire `Sur glisser` - Le paramètre $0 (Entier long), qui résulte de l'événement formulaire `Sur glisser` est typé par le compilateur si le paramètre n'a pas été explicitement déclaré. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans la méthode projet. **Note :** Le compilateur n'initialise pas le paramètre $0. Ainsi, dès que vous utilisez l'événement formulaire `Sur glisser`, vous devez initialiser $0. Par exemple :
 
 ```4d
- C_LONGINT($0)
- If(Form event code=On Drag Over)
-    $0:=0
-    ...
-    If($DataType=Is picture)
+ If($DataType=Is picture)
        $0:=-1
     End if
+    ...
+    C_LONGINT($0)
+ If(Form event code=On Drag Over)
+    $0:=0
     ...
  End if
 ```
