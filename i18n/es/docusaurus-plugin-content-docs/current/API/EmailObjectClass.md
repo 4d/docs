@@ -116,7 +116,7 @@ Las propiedades [`textBody`](#textbody) y [`htmlBody`](#htmlbody) sólo se utili
 
 La propiedad `.attachments` contiene una <!-- REF #EmailObjectClass.attachments.Summary -->colección de objetos `4D.MailAttachment`<!-- END REF -->.
 
-Los objetos adjuntos son definidos por el comando [`MAIL New attachment`](../commands/mail-new-attachment). Los objetos adjuntos tienen [propiedades y funciones](MailAttachmentClass.md) específicas.
+Los objetos adjuntos tienen [propiedades y funciones](MailAttachmentClass.md) específicas. Los objetos adjuntos son definidos por el comando [`MAIL New attachment`](../commands/mail-new-attachment).
 
 ## .bcc
 
