@@ -21,7 +21,7 @@ Los objetos Formula pueden encapsularse en las propiedades de objeto:
  $f.message:=Formula(ALERT("Hello world"))
 ```
 
-Esta propiedad es una "función objeto", es decir una función que está vinculada a su objeto padre. Para ejecutar una función almacenada en una propiedad objeto, utilice el operador **()** después del nombre de la propiedad, como:
+Esta propiedad es una "función objeto", es decir una función que está vinculada a su objeto padre. Esta propiedad es una "función objeto", es decir una función que está vinculada a su objeto padre.
 
 ```4d
  $f.message() //muestra "Hello world"
