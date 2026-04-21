@@ -165,7 +165,7 @@ En outre, les attributs relationnels suivants seront également disponibles auto
 - dans la dataclass Project : l'attribut **theClient**, du type "relatedEntity" ; il y a au plus une compagnie pour chaque projet (le client)
 - dans la dataclass Company : l'attribut **companyProjects**, du type "relatedEntities" ; pour chaque compagnie, il existe un certain nombre de projets reliés.
 
-> La propriété manuelle ou automatique d'une relation de base de données n'a aucun effet dans ORDA.
+> &#062; La propriété manuelle ou automatique d'une relation de base de données n'a aucun effet dans ORDA.
 
 Tous les attributs de la dataclass sont exposés en tant que propriétés de la dataclass :
 
