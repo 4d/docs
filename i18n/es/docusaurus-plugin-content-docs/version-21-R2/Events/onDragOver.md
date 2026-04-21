@@ -14,11 +14,11 @@ El evento `On Drag Over` se envía repetidamente al objeto de destino cuando el 
 - Obtenga los datos y las firmas que se encuentran en portapapeles (mediante el comando `GET PASTEBOARD DATA`).
 - Según la naturaleza y el tipo de datos en el portapapeles, se **acepta** o **rechaza** el arrastrar y soltar.
 
-Para **aceptar** el arrastrar, el método del objeto de destino debe devolver 0 (cero).
 Para **rechazar** el arrastrar, el método de objeto debe retornar -1 (menos uno).
-Durante un evento `On Drag Over`, 4D trata el método objeto como una función. Si no se devuelve ningún resultado, 4D asume que el arrastre es aceptado.
+Durante un evento `On Drag Over`, 4D trata el método objeto como una función.
+Para **aceptar** el arrastrar, el método del objeto de destino debe devolver 0 (cero). Si no se devuelve ningún resultado, 4D asume que el arrastre es aceptado.
 
-Si acepta el arrastre, el objeto de destino se resalta. Si rechaza el arrastre, el destino no se resalta. Aceptar el arrastre no significa que los datos arrastrados vayan a ser insertados en el objeto de destino. Esto solo significa que si se soltara el botón del ratón en este punto, el objeto de destino aceptaría los datos arrastrados y se dispararía el evento [`On Drop`](onDrop.md).
+Si acepta el arrastre, el objeto de destino se resalta. Si rechaza el arrastre, el destino no se resalta. Aceptar el arrastre no significa que los datos arrastrados vayan a ser insertados en el objeto de destino. Si acepta el arrastre, el objeto de destino se resalta.
 
 Si no se procesa el evento `On Drag Over` para un objeto soltable, ese objeto será resaltado para todas las operaciones de arrastre, sin importar la naturaleza y el tipo de los datos arrastrados.
 
