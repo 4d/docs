@@ -19,7 +19,7 @@ Indica si el servidor web aceptará o no conexiones no seguras. Ver [Activar HTT
 
 #### Puerto HTTP
 
-Número de puerto IP (TCP) de escucha para HTTP. Ver [Puerto HTTP](../WebServer/webServerConfig.md#http-port).
+Número de puerto IP (TCP) de escucha para HTTP. Número de puerto IP (TCP) de escucha para HTTP.
 
 #### Dirección IP
 
@@ -41,7 +41,7 @@ Definir la ubicación por defecto de los archivos del sitio web e indicar el niv
 
 #### Página de inicio por defecto
 
-Designa una página de inicio por defecto para el servidor web. Ver [Página de inicio por defecto](../WebServer/webServerConfig.md#default-home-page).
+Designa una página de inicio por defecto para el servidor web. Designa una página de inicio por defecto para el servidor web.
 
 ## Options (I)
 
@@ -58,7 +58,7 @@ Define el tamaño de la caché. Ver [Caché](../WebServer/webServerConfig.md#cac
 #### Vaciar la caché
 
 En cualquier momento, puede vacíar la caché de las páginas y de las imágenes que contiene (si, por ejemplo, ha modificado una página estática y quiere volver a cargarla en la caché).
-At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache). La caché se borra inmediatamente.
+En cualquier momento, puede vacíar la caché de las páginas y de las imágenes que contiene (si, por ejemplo, ha modificado una página estática y quiere volver a cargarla en la caché). La caché se borra inmediatamente.
 
 > También puede utilizar la URL especial [/4DCACHECLEAR](../WebServer/webServerAdmin.md#4dcacheclear).
 
@@ -86,7 +86,7 @@ En este modo, puede configurar los parámetros del servidor web adicionales:
 
 *Nota de compatibilidad:* esta opción sólo está disponible en las bases/proyectos creados con una versión 4D anterior a 4D v18 R6.
 
-Esta opción permite gestionar las antiguas sesiones usuario por el servidor HTTP de 4D. Este mecanismo se describe en la sección [Gestión de Sesiones Web (Legado)](https://doc.4d.com/4Dv20/4D/20.6/Web-Sessions-Management-Legacy.300-7487177.en.html). Ver [Mantener sesión](../WebServer/webServerConfig.md#keep-session).
+Esta opción permite gestionar las antiguas sesiones usuario por el servidor HTTP de 4D. Este mecanismo se describe en la sección [Gestión de Sesiones Web (Legado)](https://doc.4d.com/4Dv20/4D/20.6/Web-Sessions-Management-Legacy.300-7487177.en.html). Esta opción permite gestionar las antiguas sesiones usuario por el servidor HTTP de 4D.
 
 Cuando se selecciona, la opción [Reutilización de los contextos temporales (4D en modo remoto)](#reuse-temporary-contexts) es marcada automáticamente (y bloqueada).
 
@@ -94,7 +94,7 @@ Cuando se selecciona, la opción [Reutilización de los contextos temporales (4D
 
 No disponible con las [sesiones extensibles](../WebServer/sessions.md).
 
-Límite estrictamente superior de procesos web simultáneos. Ver [Procesos Web simultáneos máximos](../WebServer/webServerConfig.md#maximum-concurrent-web-processes).
+Límite estrictamente superior de procesos web simultáneos. Límite estrictamente superior de procesos web simultáneos.
 
 #### Reutilización de los contextos temporales
 
@@ -114,7 +114,7 @@ Activa los procesos web apropiativos en sus aplicaciones compiladas. Cuando se s
 
 No disponible con las [sesiones extensibles](../WebServer/sessions.md).
 
-Le permite definir el tiempo de espera máximo antes de cerrar los procesos Web inactivos en el servidor. Ver [Duración de los procesos inactivos](../WebServer/webServerConfig.md#inactive-process-timeout).
+Le permite definir el tiempo de espera máximo antes de cerrar los procesos Web inactivos en el servidor. Le permite definir el tiempo de espera máximo antes de cerrar los procesos Web inactivos en el servidor.
 
 ### Contraseñas Web
 
@@ -140,7 +140,7 @@ Ver [Propiedades obsoletas](../WebServer/webServerConfig.md#deprecated-settings)
 
 #### Standard Set
 
-Define el conjunto de caracteres a utilizar por el servidor web 4D. Ver [Conjunto de caracteres](../WebServer/webServerConfig.md#character-set).
+Define el conjunto de caracteres a utilizar por el servidor web 4D. Define el conjunto de caracteres a utilizar por el servidor web 4D.
 
 ### Conexiones Keep-Alive
 
@@ -249,7 +249,7 @@ Configure los parámetros de copia de seguridad automática para el registro de 
   - **a partir de**: permite definir la hora de activación de la primera copia de seguridad.
 - **Cada X día(s) a las X**: esta opción se utiliza para programar las copias de seguridad con una base diaria. Introduzca 1 si desea realizar una copia de seguridad diaria. Cuando esta opción está marcada, debe indicar la hora a la que debe comenzar la copia de seguridad.
 - **Cada X semana(s), día a las X**: esta opción se utiliza para programar las copias de seguridad con una base semanal. Introduzca 1 si desea realizar una copia de seguridad semanal. Enter 1 if you want to perform a weekly backup. When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started. You can select several days of the week if desired.
-- **Cada X mes(es), el día X a las X**: esta opción se utiliza para programar las copias de seguridad con una base mensual. Introduzca 1 si desea realizar una copia de seguridad mensual. Enter 1 if you want to perform a monthly backup.
+- **Cada X mes(es), el día X a las X**: esta opción se utiliza para programar las copias de seguridad con una base mensual. Introduzca 1 si desea realizar una copia de seguridad mensual. Introduzca 1 si desea realizar una copia de seguridad mensual.
 - **Todos los X MB**: esta opción se utiliza para programar las copias de seguridad en función del tamaño del archivo de registro actual. Una copia de seguridad se activa automáticamente cuando el archivo alcanza el tamaño especificado. Puedes definir un límite de tamaño de 1, 10, 100 o 1000 MB.
 
 > En el caso de las copias de seguridad programadas, si el servidor web no fue lanzado cuando se programó la copia de seguridad, en el siguiente lanzamiento 4D considera que la copia de seguridad ha fallado y aplica los parámetros adecuados, definidos en las Propiedades de la base.
@@ -264,7 +264,7 @@ Para más información sobre el soporte de los servicios web en 4D, consulte el 
 
 Esta área contiene varias opciones relativas con el uso de 4D como un "servidor" de Servicios Web, es decir la publicación de los métodos proyecto en forma de Servicios Web.
 
-- **Autorizar peticiones de servicios web**: esta opción le permite inicializar la publicación de servicios web. Si esta opción no ha sido seleccionada, 4D rechaza las peticiones SOAP y no genera una WSDL - incluso si los métodos tienen el atributo *Publicado en WSDL*. Cuando esta opción está marcada, 4D crea el archivo WSDL.
+- **Autorizar peticiones de servicios web**: esta opción le permite inicializar la publicación de servicios web. Si esta opción no ha sido seleccionada, 4D rechaza las peticiones SOAP y no genera una WSDL - incluso si los métodos tienen el atributo *Publicado en WSDL*. Si esta opción no ha sido seleccionada, 4D rechaza las peticiones SOAP y no genera una WSDL - incluso si los métodos tienen el atributo <em x-id="4">Publicado en WSDL</em>.
 - **Nombre del Servicio Web**: esta área le permite cambiar el "nombre genérico" del Servicio Web. Este nombre se utiliza para diferenciar los servicios tanto a nivel de servidor SOAP (cuando el servidor publica varios Servicios Web diferentes), así como en los directorios de Servicios Web. Por defecto, 4D utiliza el nombre A_WebService.
 - **Espacio de nombres de Servicios Web**: esta área se utiliza para cambiar el espacio de nombres (namespace) de los Servicios Web publicados por 4D. Cada Servicio Web publicado en Internet debe ser único. La unicidad de los nombres de los Servicios Web se asegura mediante el uso de espacios de nombres XML. Un namespace es una cadena de caracteres arbitraria usada para identificar de manera única un conjunto de etiquetas XML. Por lo general, el espacio de nombres comienza por la URL de la empresa (http://mycompany.com/mynamespace). En este caso, no es indispensable tener nada en particular en la URL indicada; lo que importa es que la cadena de caracteres utilizada sea única. Por defecto, 4D utiliza el siguiente espacio de nombres: http://www.4d.com/namespace/default.
 
@@ -274,7 +274,7 @@ Esta área contiene varias opciones relativas con el uso de 4D como un "servidor
 
 Esta área contiene varias opciones relacionadas con el uso de 4D como un "cliente" de Servicios Web, es decir, suscribirse a los servicios publicados en la red.
 
-- **Prefijo de los métodos creados por el asistente**: esta área le permite cambiar el prefijo que se añade automáticamente por 4D al nombre de los métodos proxy generados por el asistente de servicios web. Los métodos proyecto proxy forman un enlace entre la aplicación 4D y el servidor de Servicios Web. Por defecto, 4D utiliza el prefijo "proxy_".
+- **Prefijo de los métodos creados por el asistente**: esta área le permite cambiar el prefijo que se añade automáticamente por 4D al nombre de los métodos proxy generados por el asistente de servicios web. Los métodos proyecto proxy forman un enlace entre la aplicación 4D y el servidor de Servicios Web. Los métodos proyecto proxy forman un enlace entre la aplicación 4D y el servidor de Servicios Web.
 
 ## Funcionalidades Web
 
