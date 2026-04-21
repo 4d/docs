@@ -47,7 +47,7 @@ Dans le paramètre *attributes*, passez un objet qui contient les propriétés �
 | footerFormula       | text    | Formule de pied de colonne.                                                                                                                                                                                              |
 | filterButtonVisible | boolean | Définit si le bouton de filtre de la colonne de la table est affiché (par défaut `True` lors de la création de la table).                                                                             |
 
-Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
+Dans *sheet*, passez le numéro de la page cible. Si aucune feuille nommée <em x-id="3">name</em> n'est trouvée dans le document, la méthode retourne -1.
 
 > La numérotation démarre à 0.
 
