@@ -40,7 +40,7 @@ Dans *tableName*, passez le nom de la table pour laquelle vous souhaitez obtenir
 
 Par défaut, appeler la commande effacera le statut *dirty* de la table courante. Pour garder ce statut intact, passez `False` dans le paramètre *reset*.
 
-Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
+Dans *sheet*, passez le numéro de la page cible. Si aucune feuille nommée <em x-id="3">name</em> n'est trouvée dans le document, la méthode retourne -1.
 
 > La numérotation démarre à 0.
 
