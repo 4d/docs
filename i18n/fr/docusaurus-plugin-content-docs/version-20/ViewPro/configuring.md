@@ -167,7 +167,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";125571.35;"format";"_
 | ----------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `vk pattern full date time`               | "*fullDateTimePattern*"              | Format ISO 8601 pour la date et l'heure complète dans la localisation actuelle. Modèle par défaut des USA : "dddd, dd MMMM yyyy HH:mm:ss"                                                 |
 | `vk pattern long date`                    | "*longDatePattern*"                  | Format ISO 8601 pour la date complète dans la localisation courante. Modèle par défaut USA : "dddd, dd MMMM yyyy"                                                                         |
-| `vk pattern long time`                    | "*longTimePattern*"                  | Format ISO 8601 pour l'heure dans la localisation courante. Modèle par défaut des USA : "HH:mm:ss"                                                                                        |
+| `vk pattern long time`                    | "*longTimePattern*"                  | Format ISO 8601 abrégé pour l'heure dans la localisation actuelle. Modèle par défaut des USA : "HH:mm"                                                                                    |
 | `vk pattern month day`                    | "*monthDayPattern*"                  | Format ISO 8601 pour le mois et le jour dans la localisation courante. Modèle par défaut des USA : "MMMM dd"                                                                              |
 | `vk pattern short date`                   | "*shortDatePattern*"                 | Format ISO 8601 abrégé pour la date dans la localisation courante. Modèle par défaut des USA : "MM/jj/aaaa"                                                                               |
 | `vk pattern short time`                   | "*shortTimePattern*"                 | Format ISO 8601 abrégé pour l'heure dans la localisation actuelle. Modèle par défaut des USA : "HH:mm"                                                                                    |
@@ -228,7 +228,7 @@ En plus des caractères spéciaux et des codes décrits dans les sections préc�
 | =           | Signe égal                                                                                 | #+#=##               |
 | /           | Barre oblique. Lorsqu'elle est utilisée avec des nombres, les affiche comme des fractions. | mm/dd/yyyy           |
 | !           | Point d'exclamation                                                                        | $###.00!             |
-| &           | Esperluette                                                                                | "Hello" & "Welcome"  |
+| &           | Accolades                                                                                  | "Hello" & "Welcome"  |
 | ~           | Tilde                                                                                      | ~##                  |
 |             | Caractère espace                                                                           |                      |
 | €           | Euro                                                                                       | €###.00              |
@@ -294,7 +294,7 @@ Les caractères spéciaux suivants permettent l'ajout ou la mise en forme automa
 | G         | Image                             | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G" | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
 | S         | Barré                             | printInfo.headerLeft:="&SThis is text."                                | ~~This is text.~~                                    |
 | U         | Souligné                          | printInfo.headerLeft:="&UThis is text."                                | This is text. (Souligné)                             |
-| B         | Gras                              | printInfo.headerLeft:="&BThis is text."                                | **This is text.**                                    |
+| B         | Souligné                          | printInfo.headerLeft:="&BThis is text."                                | **This is text.**                                    |
 | I         | Italique                          | printInfo.headerLeft:="&IThis is text."                                | *This is text.*                                      |
 | "         | Préfixe de police                 | printInfo.headerLeft:="&\"Lucida Console\"&14This is text."          | ![](../assets/en/ViewPro/apx_vpPrintAttributes2.PNG) |
 | K         | Préfixe de couleur du texte       | printInfo.headerLeft:="&KFF0000This is text."                          | This is text (en rouge).                             |
@@ -308,8 +308,8 @@ Les attributs de marge sont utilisés pour spécifier les marges de zone 4D View
 | Propriété |        | Type        | Description                                                             |
 | --------- | ------ | ----------- | ----------------------------------------------------------------------- |
 | margin    |        | object      | Les marges d'impression                                                 |
-|           | top    | entier long | Marge supérieure, en centièmes de pouce. Valeur par défaut = 75         |
-|           | bottom | entier long | Marge inférieure, en centièmes de pouce. Valeur par défaut = 75         |
+|           | top    | entier long | Marge inférieure, en centièmes de pouce. Valeur par défaut = 75         |
+|           | bottom | entier long | Marge supérieure, en centièmes de pouce. Valeur par défaut = 75         |
 |           | left   | entier long | Marge gauche, en centièmes de pouce. Valeur par défaut = 70             |
 |           | right  | entier long | Marge droite, en centièmes de pouce. Valeur par défaut = 70             |
 |           | header | entier long | Décalage de l'en-tête, en centièmes de pouce. Valeur par défaut = 30    |
@@ -374,11 +374,11 @@ Les attributs d'échelle sont utilisés pour spécifier l'optimisation d'impress
 
 Les attributs Montrer/Cacher sont utilisés pour spécifier la visibilité (impression) des éléments de la zone 4D View Pro.
 
-| Propriété        | Type        | Description                                                                                                                                                                                                          |
-| ---------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| showBorder       | boolean     | Affiche la bordure du contour. Valeur par défaut = "true"                                                                                                                                                            |
+| Propriété        | Type        | Description                                                                                                                                                                                                  |
+| ---------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| showBorder       | boolean     | Affiche la bordure du contour. Valeur par défaut = "true"                                                                                                                                                    |
 | showColumnHeader | entier long | Paramètres d'impression des en-têtes des colonnes. Valeurs disponibles : `vk print visibility hide`, `vk print visibility inherit` (par défaut), `vk print visibility show`, `vk print visibility show once` |
-| showGridLine     | boolean     | Affiche les lignes de grille. Valeur par défaut = "false"                                                                                                                                                            |
+| showGridLine     | boolean     | Affiche les lignes de grille. Valeur par défaut = "false"                                                                                                                                                    |
 | showRowHeader    | entier long | Paramètres d'impression des en-têtes des lignes. Valeurs disponibles : `vk print visibility hide`, `vk print visibility inherit` (par défaut), `vk print visibility show`, `vk print visibility show once`   |
 
 ### Watermark
@@ -435,11 +435,11 @@ Exemple :
 
 #### Bordures
 
-| Propriété                                                                  |       | Type        | Description                                                                             | Valeurs possibles                                                                                                                                                                                                                                                                                                                                                |
-| -------------------------------------------------------------------------- | ----- | ----------- | --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| borderBottom, borderLeft, borderRight, borderTop, diagonalDown, diagonalUp |       | object      | Définit la ligne de bordure correspondante                                              |                                                                                                                                                                                                                                                                                                                                                                  |
-|                                                                            | color | text        | Définit la couleur de la bordure. Par défaut = black.                                   | Couleur CSS syntaxe "#rrggbb" (syntaxe préférée), couleur CSS syntaxe "rgb(r,g,b)" (syntaxe alternative), nom de couleur CSS (syntaxe alternative)                                                                                                                                                                                                               |
-|                                                                            | style | entier long | Définit le style de la bordure. Par défaut = empty. Ne peut pas être null ou undefined. | `vk line style dash dot`, `vk line style dash dot dot`, `vk line style dashed`, `vk line style dotted`, `vk line style double`, `vk line style empty`, `vk line style hair`, `vk line style medium`, `vk line style medium dash dot`, `vk line style medium dash dot dot`,`vk line style medium dashed`, `vk line style slanted dash dot`, `vk line style thick` |
+| Propriété                                                                  |       | Type        | Description                                           | Valeurs possibles                                                                                                                                                                                                                                                                                                                                                |
+| -------------------------------------------------------------------------- | ----- | ----------- | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| borderBottom, borderLeft, borderRight, borderTop, diagonalDown, diagonalUp |       | object      | Définit la ligne de bordure correspondante            |                                                                                                                                                                                                                                                                                                                                                                  |
+|                                                                            | color | text        | Définit la couleur de la bordure. .                   | Couleur CSS syntaxe "#rrggbb" (syntaxe préférée), couleur CSS syntaxe "rgb(r,g,b)" (syntaxe alternative), nom de couleur CSS (syntaxe alternative)                                                                                                                                                                                                               |
+|                                                                            | style | entier long | Définit le style de la bordure. . Par défaut = empty. | `vk line style dash dot`, `vk line style dash dot dot`, `vk line style dashed`, `vk line style dotted`, `vk line style double`, `vk line style empty`, `vk line style hair`, `vk line style medium`, `vk line style medium dash dot`, `vk line style medium dash dot dot`,`vk line style medium dashed`, `vk line style slanted dash dot`, `vk line style thick` |
 
 #### Polices et texte
 
@@ -486,7 +486,7 @@ Il contient les propriétés suivantes :
 | Propriété    | Value type | Description                              |
 | ------------ | ---------- | ---------------------------------------- |
 | version      | Integer    | Version interne du composant             |
-| dateCreation | Timestamp  | Date de création                         |
+| dateCreation | Timestamp  | Date de création                         |
 | dateModified | Timestamp  | Date de dernière modification            |
 | meta         | Object     | Contenu libre, réservé au développeur 4D |
 | spreadJS     | Object     | Réservé pour le composant 4D View Pro    |
