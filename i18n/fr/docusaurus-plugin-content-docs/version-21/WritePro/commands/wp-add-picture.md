@@ -35,7 +35,7 @@ Pour le deuxième paramètre facultatif, vous pouvez passer soit :
 
 :::note
 
-N'importe quel format d'image [supporté par 4D](../../FormEditor/pictures.md#native-formats-supported) peut être utilisé. Vous pouvez obtenir la liste des formats d'image disponibles en utilisant la commande [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md). Si l'image encapsule plusieurs formats (codecs), 4D Write Pro ne conserve qu'un format pour l'affichage et un format pour l'impression (si différent) dans le document ; les "meilleurs" formats sont automatiquement sélectionnés.
+N'importe quel format d'image [supporté par 4D](../../FormEditor/pictures.md#native-formats-supported) peut être utilisé. N'importe quel format d'image [supporté par 4D](../../FormEditor/pictures.md#native-formats-supported) peut être utilisé. Vous pouvez obtenir la liste des formats d'image disponibles en utilisant la commande [PICTURE CODEC LIST](../../commands/picture-codec-list).
 
 :::
 
