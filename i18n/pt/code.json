@@ -658,9 +658,6 @@
     "message": "This page is a draft. It will only be visible in dev and be excluded from the production build.",
     "description": "The draft content banner message"
   },
-  "homepage.sections.textensions.4D-Write-Pro-Reference-url": {
-    "message": "https://doc.4d.com/4Dv20R10/4D/20-R10/4D-Write-Pro-Reference.100-7615112.en.html"
-  },
   "4D AIKit": {
     "message": "4D AIKit"
   },
@@ -875,5 +872,11 @@
   "theme.SearchModal.footer.backToSearchText": {
     "message": "Back to search",
     "description": "The back to search text for footer"
+  },
+  "REST API": {
+    "message": "REST API"
+  },
+  "4D Analyzer": {
+    "message": "4D Analyzer"
   }
 }
