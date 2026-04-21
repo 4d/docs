@@ -55,7 +55,7 @@ Définit l'action à réaliser lorsqu'un utilisateur double-clique sur une ligne
 *   **Ne rien faire** (par défaut) : Un double-clic sur une ligne ne déclenche aucune action automatique.
 *   **Modifier enregistrement** : Un double-clic sur une ligne permet d'afficher l'enregistrement correspondant dans le formulaire détaillé défini [ pour la list box](#detail-form-name). L'enregistrement est ouvert en lecture-écriture afin qu'il puisse être modifié.
 *   **Afficher l'enregistrement**: Identique à l'action précédente, sauf que l'enregistrement est ouvert en mode lecture seule et ne peut donc pas être modifié.
-> Le double-clic sur une ligne vide est ignoré dans les listbox.
+> > Le double-clic sur une ligne vide est ignoré dans les listbox.
 
 Quelle que soit l'action sélectionnée/choisie, l'événement formulaire " `On Double clicked"` est généré.
 
@@ -104,7 +104,7 @@ Les colonnes verrouillées et les colonnes statiques sont deux fonctionnalités 
 
 *   Les colonnes verrouillées restent toujours affichées à gauche de la list box ; elles ne défilent pas horizontalement.
 *   Les colonnes statiques ne peuvent pas être déplacées par glisser-déposer dans la list box.
-> Vous pouvez définir des colonnes statiques et verrouillées par programmation, voir la section "List Box" dans le manuel *4D Language Reference* .
+> > Vous pouvez définir des colonnes statiques et verrouillées par programmation, voir la section "List Box" dans le manuel *4D Language Reference* .
 
 Ces propriétés interagissent comme suit :
 
