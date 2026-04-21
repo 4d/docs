@@ -279,7 +279,7 @@ L'objet `boxInfo` contient les propriété suivantes :
 
 La fonction `.getMail()` <!-- REF #POP3TransporterClass.getMail().Summary -->renvoie l'objet `Email ` correspondant au *msgNumber * dans la boîte aux lettres désignée par le [`POP3 transporter`](#pop3-transporter-object)<!-- END REF -->. Cette fonction vous permet de gérer localement le contenu de l'email.
 
-Passez dans *msgNumber* le numéro du message à récupérer. Dans le paramètre *msgNumber*, passez le numéro de l'email à récupérer.
+Passez dans *msgNumber* le numéro du message à récupérer. Passez dans *msgNumber* le numéro du message à récupérer.
 
 Optionnellement, vous pouvez passer `true` dans le paramètre *headerOnly* pour exclure les parties body de l'objet `Email` renvoyé. Seules les propriétés d'en-têtes ([`header`](EmailObjectClass.md#headers), [`to`](EmailObjectClass.md#to), [`from`](EmailObjectClass.md#from)...) sont alors retournées. Cette option vous permet d'optimiser l'étape de téléchargement lorsque beaucoup d'emails sont sur le serveur.
 
@@ -380,6 +380,7 @@ La fonction retourne **Null** si :
  $mailInfo:=$transporter.getMailInfo(1) //get the first mail
  If($mailInfo #Null)
     ALERT("First mail size is:"+String($mailInfo.size)+" bytes.")
+ End if
  End if
  End if
 ```
