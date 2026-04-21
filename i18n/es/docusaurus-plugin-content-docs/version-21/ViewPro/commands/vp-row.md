@@ -28,7 +28,7 @@ El comando `VP Row` <!-- REF #_method_.VP Row.Summary -->devuelve un nuevo objet
 
 En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-El parámetro *row* define la primera fila del rango de filas. Pase el índice de la línea (el conteo comienza en 0) en este parámetro. Si el rango contiene varias columnas, también debe utilizar el parámetro opcional *columnCount*.
+El parámetro *row* define la primera fila del rango de filas. Pase el índice de la línea (el conteo comienza en 0) en este parámetro. Pase el índice de la línea (el conteo comienza en 0) en este parámetro.
 
 El parámetro opcional *rowCount* permite definir el número total de líneas del rango. *rowCount* debe ser mayor que 0. Si se omite, el valor será 1 por defecto.
 
