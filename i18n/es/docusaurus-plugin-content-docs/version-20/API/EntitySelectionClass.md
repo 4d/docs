@@ -2084,10 +2084,10 @@ En este ejemplo, el código clásico y el código ORDA modifican los mismos dato
 <!-- REF #EntitySelectionClass.selected().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|selectedEntities |4D.EntitySelection|->|Entity selection with entities for which to know the rank in the entity selection|
-|Result|Object|<-|Range(s) of selected entities in entity selection|
+|selectedEntities |4D.EntitySelection|->|Selección de entidades con entidades para las que conocer el rango en la selección de entidades|
+|Resultado|Object|<-|Range(s) of selected entities in entity selection|
 </div>
 <!-- END REF -->
 
@@ -2158,11 +2158,11 @@ $result2:=$invoices.selected($creditSel)
 <!-- REF #EntitySelectionClass.slice().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|startFrom |Integer |->|Index to start the operation at (included)  |
-|end    |Integer|->|End index (not included)|
-|Result|4D.EntitySelection|<-|New entity selection containing sliced entities (shallow copy)|
+|startFrom |Integer |->|Índice para iniciar la operación (incluido) |
+|end    |Integer|->|Índice final (no incluido)|
+|Resultado|4D.EntitySelection||<-|New entity selection containing sliced entities (shallow copy)|
 </div>
 <!-- END REF -->
 
@@ -2176,7 +2176,7 @@ If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is c
 *   Si *startFrom* < 0, se recalcula como *startFrom:=startFrom+length*(se considera el desplazamiento desde el final de la entity selection). Si el valor calculado < 0, *startFrom* toma el valor 0.
 *   Si *startFrom >= length*, la función devuelve una selección de entidades vacía.
 *   Si *end* < 0, se recalcula como *end:=end+length*.
-*   If *end < startFrom* (passed or calculated values), the method does nothing.
+*   Si *end < startFrom* (valores pasados o calculados), el método no hace nada.
 
 `.sum()` devuelve 0 si la entity selection está vacía.
 
