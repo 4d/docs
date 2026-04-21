@@ -266,7 +266,7 @@ Voici la description de chaque ligne de l’exemple :
 - ($PointerTwo->)->:="Goodbye"
   \--> $PointerTwo-> référence le contenu de $PointerOne, qui à son tour fait référence à $MyVar. Par conséquent, ($PointeurDeux->)-> référence le contenu de $MaVar. Donc, dans ce cas, la valeur "Goodbye" est assignée à $MyVar.
 - ALERT (($PointerTwo->)->)
-  \--> Même chose : $PointerTwo-> référence le contenu de $PointerOne, qui à son tour fait référence à $MyVar. Par conséquent, ($PointeurDeux->)-> référence le contenu de $MaVar. Donc, dans ce cas, la boîte d'alerte affiche le contenu de $MyVar.
+  \--> Même chose : $PointerTwo-> référence le contenu de $PointerOne, qui à son tour fait référence à $MyVar. Par conséquent, ($PointeurDeux->)-> référence le contenu de $MaVar. Par conséquent, ($PointerTwo-&#062;)-&#062; référence le contenu de $MyVar.
 
 La ligne suivante place la valeur "Hello" dans $MyVar :
 
