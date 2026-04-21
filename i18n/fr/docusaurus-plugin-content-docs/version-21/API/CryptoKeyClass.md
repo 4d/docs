@@ -393,7 +393,7 @@ La représentation utf8 du *message*.
 
 <!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
 
-Défini uniquement pour les clés RSA : <!-- REF #CryptoKey.size.Summary -->la taille de la clé en bits<!-- END REF -->. Habituellement 2048 (par défaut).
+Défini uniquement pour les clés RSA : <!-- REF #CryptoKey.size.Summary -->la taille de la clé en bits<!-- END REF -->. .
 
 <!-- REF CryptoKey.type -->
 
