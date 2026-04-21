@@ -14,7 +14,7 @@ Hay dos maneras de crear una nueva entidad en una dataclass:
 
 Tenga en cuenta que la entidad sólo se crea en la memoria. Si desea añadirla al datastore, debe llamar a la función [`entity.save()`](../API/EntityClass.md#save).
 
-Los atributos de la entidad están disponibles directamente como propiedades del objeto entidad. Para más información, consulte [Uso de los atributos de entidad](#using-entity-attributes).
+Los atributos de la entidad están disponibles directamente como propiedades del objeto entidad. Los atributos de la entidad están disponibles directamente como propiedades del objeto entidad.
 
 Por ejemplo, queremos crear una nueva entidad en la dataclass "Employee" en el datastore actual con "John" y "Dupont" asignados a los atributos firstname y name:
 
@@ -433,7 +433,7 @@ $myInvoices:=$myParts.invoiceItems.invoice
   //Todas las facturas con al menos una partida relacionada con una pieza en $myParts
 ```
 
-La última línea devolverá en *$myInvoices* una selección de entidades de todas las facturas que tengan al menos una partida de factura relacionada con una parte en la selección de entidades myParts. Cuando se utiliza un atributo de relación como propiedad de una selección de entidades, el resultado es siempre otra selección de entidades, aunque sólo se devuelva una entidad. Cuando se utiliza un atributo de relación como propiedad de una selección de entidades y no se devuelve ninguna entidad, el resultado es una selección de entidades vacía, no nula.
+La última línea devolverá en *$myInvoices* una selección de entidades de todas las facturas que tengan al menos una partida de factura relacionada con una parte en la selección de entidades myParts. Cuando se utiliza un atributo de relación como propiedad de una selección de entidades, el resultado es siempre otra selección de entidades, aunque sólo se devuelva una entidad. Cuando se utiliza un atributo de relación como propiedad de una selección de entidades, el resultado es siempre otra selección de entidades, aunque sólo se devuelva una entidad.
 
 ## Restringir la selección de entidades {#restricting-entity-selections}
 
