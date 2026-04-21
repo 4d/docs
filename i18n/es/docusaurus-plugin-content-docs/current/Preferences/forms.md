@@ -24,7 +24,7 @@ Puede configurar esta opción en función de sus hábitos de trabajo y necesidad
 
 ### Activar alineación automática por defecto
 
-Esta opción activa la alineación automática por defecto en cada nueva ventana del editor de formularios. Es posible modificar esta opción individualmente en cada ventana (consulte [Utilizar la rejilla magnética](FormEditor/formEditor.md#using-the-magnetic-grid)).
+Esta opción activa la alineación automática por defecto en cada nueva ventana del editor de formularios. Esta opción activa la alineación automática por defecto en cada nueva ventana del editor de formularios.
 
 ## Nueva visualización por defecto del formulario
 
