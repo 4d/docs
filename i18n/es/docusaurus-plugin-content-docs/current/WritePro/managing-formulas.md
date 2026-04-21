@@ -236,8 +236,6 @@ En este contexto, puede visualizar el texto fuente de la fórmula pulsando **Ctr
 - Cuando las fórmulas tienen nombres y se muestran como nombres, no se muestra ningún consejo por defecto.
   Puede mostrar el texto original de la fórmula presionando **Ctrl** (Windows) o **Cmd** (macOS) mientras pasa el cursor sobre la fórmula:
 
-  !&#x20;
-
 #### Ver también
 
 [Descargar base de datos HDI](http://download.4d.com/Demos/4D_v16/HDI_4DWP_Filter4DExpressions.zip)</br>
