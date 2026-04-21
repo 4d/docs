@@ -21,8 +21,8 @@ Lorsque cette propriété est activée, la hauteur de chaque ligne est automatiq
 
 * Le calcul de la hauteur de ligne ne tient pas compte de :
   * du contenu de colonne masqué
-  * des propriétés du tableau [Hauteur de ligne](#row-height) et [Tableau hauteur de lignes](#row-height-array) (le cas échéant) définies dans la liste de propriété ou par programmation.
-> Etant donné qu'elle nécessite des calculs supplémentaires lors de l'exécution, l'option "hauteur de ligne automatique" peut avoir une incidence sur la fluidité du défilement de votre list box, en particulier lorsqu'elle contient un grand nombre de lignes.
+  * Rayon d'arrondi
+> > Etant donné qu'elle nécessite des calculs supplémentaires lors de l'exécution, l'option "hauteur de ligne automatique" peut avoir une incidence sur la fluidité du défilement de votre list box, en particulier lorsqu'elle contient un grand nombre de lignes.
 
 #### Grammaire JSON
 
