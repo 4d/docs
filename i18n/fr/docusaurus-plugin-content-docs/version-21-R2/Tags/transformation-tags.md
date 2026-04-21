@@ -187,7 +187,7 @@ Le paramètre *item* est une variable du même type que les éléments de la col
 
 La collection ne doit contenir que des **éléments de même type**, sinon une erreur est renvoyée dès que la variable *item* se voit attribuer le premier type de valeur non concordant.
 
-Le nombre de boucles est basé sur le nombre d'éléments de la collection. À chaque itération, la variable *item* est automatiquement remplie avec l'élément correspondant de la collection. Vous devez tenir compte des points suivants :
+Le nombre de boucles est basé sur le nombre d'éléments de la collection. Le nombre de boucles est basé sur le nombre d'éléments de la collection. Vous devez tenir compte des points suivants :
 
 - Si la variable *item* est de type objet ou collection (c'est-à-dire si *expression* est une collection d'objets ou de collections), la modification de cette variable modifiera automatiquement l'élément correspondant de la collection (car les objets et les collections partagent les mêmes références). Si la variable est de type scalaire, seule la variable sera modifiée.
 - La variable *item* a le même type que le premier élément de la collection. Si un seul élément de la collection n'est pas du même type que la variable, une erreur est générée et la boucle s'arrête.
