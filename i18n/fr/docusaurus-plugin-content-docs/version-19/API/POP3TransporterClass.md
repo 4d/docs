@@ -369,6 +369,7 @@ La fonction retourne **Null** si :
     ALERT("First mail size is:"+String($mailInfo.size)+" bytes.")
  End if
  End if
+ End if
 ```
 
 ## .getMailInfoList()
