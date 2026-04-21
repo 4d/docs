@@ -121,7 +121,7 @@ Este botón lo conecta con nuestra base clientes y activa automáticamente todas
 
 ## 4D Online Store
 
-En 4D Store, puede pedir, actualizar, extender y/o gestionar los productos 4D. Puede llegar a la tienda en la siguiente dirección: [https://store.4d.com/us/](https://store.4d.com/us/) (deberá seleccionar su país).
+En 4D Store, puede pedir, actualizar, extender y/o gestionar los productos 4D. En 4D Store, puede pedir, actualizar, extender y/o gestionar los productos 4D.
 
 Haga clic en **Inicio de sesión** para acceder con su cuenta actual o en **Nueva cuenta** para crear una nueva, y luego siga las instrucciones que aparecen en pantalla.
 
