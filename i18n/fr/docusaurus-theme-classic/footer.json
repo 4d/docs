@@ -49,7 +49,7 @@
   },
   "link.item.label.Downloads": {
     "message": "Téléchargements",
-    "description": "The label of footer link with label=Downloads linking to https://us.4d.com/product-download/Feature-Release"
+    "description": "The label of footer link with label=Downloads linking to https://us.4d.com/product-download"
   },
   "link.item.label.Resources": {
     "message": "Resources",
@@ -82,5 +82,13 @@
   "link.item.label.Documentation download": {
     "message": "Documentation download",
     "description": "The label of footer link with label=Documentation download linking to https://github.com/4d/docs/releases/tag/latest"
+  },
+  "link.item.label.Learn 4D": {
+    "message": "Learn 4D",
+    "description": "The label of footer link with label=Learn 4D linking to https://learn.4d.com"
+  },
+  "link.item.label.4D Doc Center (legacy documentation web site) ": {
+    "message": "4D Doc Center (legacy documentation web site) ",
+    "description": "The label of footer link with label=4D Doc Center (legacy documentation web site)  linking to https://doc.4d.com"
   }
 }
