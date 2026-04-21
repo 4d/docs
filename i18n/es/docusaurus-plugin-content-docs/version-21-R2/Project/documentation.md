@@ -24,7 +24,7 @@ También se puede exponer parcialmente como [consejos del editor de código](#vi
 
 ### Nombre del archivo de documentación
 
-Los archivos de documentación tienen el mismo nombre que su elemento adjunto, con la extensión ".md". Por ejemplo, el archivo de documentación adjunto al método proyecto `myMethod.4dm` se llamará `myMethod.md`.
+Los archivos de documentación tienen el mismo nombre que su elemento adjunto, con la extensión ".md". Los archivos de documentación tienen el mismo nombre que su elemento adjunto, con la extensión ".md".
 
 En el Explorador, 4D muestra automáticamente el archivo de documentación con el mismo nombre que el elemento seleccionado (ver abajo).
 
