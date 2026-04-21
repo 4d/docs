@@ -16,7 +16,7 @@ L'éditeur d'étiquettes de 4D offre un moyen pratique d'imprimer une grande var
 
 :::note
 
-Les étiquettes peuvent également être créées à l'aide de l'[Éditeur de formulaires](../FormEditor/formEditor.md). Utilisez l'éditeur de formulaires pour concevoir des étiquettes spécialisées qui incluent des variables ou profitez des outils de dessin disponibles dans l'éditeur de formulaires et imprimez-les en utilisant l'éditeur d'étiquettes ou la commande [`PRINT LABEL`](../commands-legacy/print-label.md).
+Les étiquettes peuvent également être créées à l'aide de l'[Éditeur de formulaires](../FormEditor/formEditor.md). Les étiquettes peuvent également être créées à l'aide de l'[Éditeur de formulaires](../FormEditor/formEditor.md).
 
 :::
 
@@ -62,9 +62,7 @@ Cette zone vous permet d’insérer tous les éléments que vous souhaitez voir 
 - Vous pouvez concaténer deux champs en déposant le second sur le premier. Ils seront automatiquement séparés par un espace.<br/>
   ![](../assets/en/Desktop/label-concat.png)<br/>
   Si vous appuyez sur la touche **Maj**, ils seront séparés par un retour chariot. Ce fonctionnement permet par exemple de créer des étiquettes d’adresses utilisant plusieurs champs superposés (Adresse1, Adresse2, etc.) ne générant pas de ligne vide lorsqu’une adresse ne requiert qu’un champ.
-- Vous pouvez ajouter une formule à l'étiquette en sélectionnant l'outil **Formule** ![](../assets/en/Desktop/label-tool6.png) (ou en choisissant **Outil>Formule** dans le menu contextuel) et en dessinant une zone. L'**Éditeur de formules** s'affiche alors :
-  ![](../assets/en/Desktop/label-formula1.png)<br/>
-  Par exemple, vous pouvez appliquer un format à un champ à l'aide de la commande [`String`](../commands/string.md) :<br/>
+- Vous pouvez ajouter une formule à l'étiquette en sélectionnant l'outil **Formule** ![](../assets/en/Desktop/label-tool6.png) (ou en choisissant **Outil>Formule** dans le menu contextuel) et en dessinant une zone. Vous pouvez ajouter une formule à l'étiquette en sélectionnant l'outil **Formule** ![](../assets/en/Desktop/label-tool6.png) (ou en choisissant **Outil>Formule** dans le menu contextuel) et en dessinant une zone.
 
 ![](../assets/en/Desktop/label-formula2.png)<br/>
 
