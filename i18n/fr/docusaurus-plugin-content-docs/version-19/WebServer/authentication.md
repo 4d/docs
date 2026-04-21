@@ -102,10 +102,10 @@ Vous devez déclarer ces paramètres de la manière suivante :
 
 ```4d
 //On Web Authentication 
- 
+
  C_TEXT($1;$2;$3;$4;$5;$6)
  C_BOOLEAN($0)
- 
+
 //Code de la méthode base
 ```
 
@@ -166,7 +166,7 @@ La méthode base `On Web Authentication` retourne un booléen dans $0 :
 
 La méthode base `On Web Connection` est exécutée seulement si la connexion a été acceptée par `On Web Authentication`.
 > **ATTENTION**<br/>Si aucune valeur n'est définie pour $0 ou si $0 n'est pas défini dans la méthode base `On Web Authentication`, la connexion est considérée comme acceptée et la méthode base `On Web Connection` est exécutée.
-> - N'appelez aucun élément d'interface dans la méthode base `On Web Authentication``(ALERT`, `DIALOG`, etc.) car sinon son exécution sera interrompue et la connexion refusée. La même chose se produira s'il y a une erreur lors de son traitement.
+> - - N'appelez aucun élément d'interface dans la méthode base `On Web Authentication``(ALERT`, `DIALOG`, etc.) car sinon son exécution sera interrompue et la connexion refusée. La même chose se produira s'il y a une erreur lors de son traitement.
 
 ### Exemple
 
@@ -175,14 +175,14 @@ Exemple de méthode base `On Web Authentication` en mode [DIGEST](#digest-protoc
 ```4d
  // On Web Authentication
  #DECLARE ($url : Text; $header : Text; $ipB : Text; $ipS : Text; \
- 	$user : Text; $pw : Text) -> $valid : Boolean
-  
+    $user : Text; $pw : Text) -> $valid : Boolean
+
  var $found : cs.WebUserSelection
  $valid:=False
 
  $found:=ds.WebUser.query("User === :1";$user)
  If($found.length=1) //User est trouvé
- 	$valid:=WEB Validate digest($user;[WebUser]password)
+    $valid:=WEB Validate digest($user;[WebUser]password)
  Else
     $valid:=False // User n'existe pas
  End if
