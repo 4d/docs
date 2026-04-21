@@ -110,7 +110,7 @@ Estado o formato del archivo de registro de peticiones HTTP (HTTPDebugLog_*nn*.t
 
 #### Llave de acceso
 
-La configuración de una llave de acceso es obligatoria para desbloquear el acceso al servidor de administración web a través de una URL (el acceso a través de un comando del menú 4D no requiere una llave de acceso). Cuando no se define ninguna llave de acceso, no se permite que ningún cliente web se conecte a través de una URL a una interfaz de administración web como la [página Explorador de datos](dataExplorer.md). Se devuelve una página de error en caso de solicitud de conexión:
+Cuando no se define ninguna llave de acceso, no se permite que ningún cliente web se conecte a través de una URL a una interfaz de administración web como la [página Explorador de datos](dataExplorer.md). La configuración de una llave de acceso es obligatoria para desbloquear el acceso al servidor de administración web a través de una URL (el acceso a través de un comando del menú 4D no requiere una llave de acceso). Se devuelve una página de error en caso de solicitud de conexión:
 
 ![alt-text](../assets/en/Admin/accessKey.png)
 
