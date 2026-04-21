@@ -55,7 +55,7 @@ El área "Registros encontrados en el archivo de datos" incluye dos tablas que r
   - La columna **Orden** indica el orden de recuperación del grupo de registros.
   - La columna **Número** indica el número de los registros de la tabla.
   - La columna **Tabla de destino** indica los nombres de las tablas que se asignaron automáticamente a los grupos de registros identificados. Los nombres de las tablas asignadas automáticamente aparecen en verde. Los grupos no asignados, es decir, las tablas a las que no se ha podido asociar ningún registro, aparecen en rojo.
-  - La columna **Recuperar** le permite indicar, para cada grupo, si quiere recuperar los registros. Por defecto, esta opción está marcada para todos los grupos con registros que pueden asociarse a una tabla.
+  - Archivos Por defecto, esta opción está marcada para todos los grupos con registros que pueden asociarse a una tabla.
 
 - La segunda tabla lista las tablas del archivo del proyecto.
 
