@@ -19,6 +19,7 @@ Lea [**Novedades en 4D 21 R3**](https://blog.4d.com/whats-new-in-4d-21-r3/), la 
 - 4D AIKit component: new [Providers](../aikit/Classes/OpenAIProviders.md) class to instantiate and handle [Provider and model aliases](../aikit/provider-model-aliases.md).
 - Support of [`server` keyword](../Concepts/classes.md#server) for ORDA data model functions and shared/session singleton functions.
 - Dependencies: support of [components stored on GitLab repositories](../Project/components.md#configuring-a-gitlab-repository).
+- [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=21_R3): lista de todos los bugs que se han corregido en 4D 21 R3.
 
 #### Soporte de Liquid glass en macOS
 
@@ -77,7 +78,7 @@ Lea [**Novedades en 4D 21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/), la 
 | ngtcp2    | 1.18.0 | 21                | Utilizado para QUIC                                                                                                                                    |
 | OpenSSL   | 3.5.2  | 21                |                                                                                                                                                        |
 | PDFWriter | 4.7.0  | 21                | Utilizado para [`WP Export document`](../WritePro/commands/wp-export-document.md) y [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
-| SpreadJS  | 18.2.0 | **21 R2**         | Consulte [esta entrada de blog](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) para obtener una visión general de las nuevas funciones        |
+| SpreadJS  | 18.2.0 | 21 R2             | Consulte [esta entrada de blog](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) para obtener una visión general de las nuevas funciones        |
 | webKit    | WKWebView                              | 19                |                                                                                                                                                        |
 | Xerces    | 3.3.0  | 21                | Utilizado para comandos XML                                                                                                                            |
 | Zlib      | 1.3.1  | 21                |                                                                                                                                                        |
