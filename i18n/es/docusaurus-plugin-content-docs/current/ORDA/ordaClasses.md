@@ -315,7 +315,7 @@ Una función class constructor ORDA se activa justo después de que se cree una 
 
 Esta función sólo puede definirse al [nivel de la entidad](#entity-class). Sólo puede haber una función constructor en una class entity (de lo contrario se devuelve un error).
 
-Esta función class constructor ORDA no recibe ni devuelve parámetros. Sin embargo, puede utilizarlo para inicializar valores de atributos utilizando [`This`](../commands/this). Tenga en cuenta que los valores inicializados por el constructor se anulan si el código llena los atributos correspondientes.
+Esta función class constructor ORDA no recibe ni devuelve parámetros. Tenga en cuenta que los valores inicializados por el constructor se anulan si el código llena los atributos correspondientes. Sin embargo, puede utilizarlo para inicializar valores de atributos utilizando [`This`](../commands/this).
 
 :::note
 
@@ -334,7 +334,7 @@ La función `Class constructor` es activada por los siguientes comandos y funcio
 
 - [`dataClass.new()`](../API/DataClassClass.md#new)
 - [`dataClass.fromCollection()`](../API/DataClassClass#fromcollection)
-- [REST API $method=update](../REST/$method.md#methodupdate) en un POST sin los parámetros `__KEY` y \`__STAMP
+- [REST API $method=update](../REST/$method.md#methodupdate) en un POST sin los parámetros `__KEY` y \\`__STAMP
 - el [Explorador de datos](../Admin/dataExplorer.md#editing-data).
 
 :::note Notas
