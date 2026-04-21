@@ -17,7 +17,7 @@ La clase `OpenAIFileParameters` gestiona los parámetros de las operaciones de c
 | ---------------------- | ------ | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `expires_after`        | Object | Opcional  | La política de caducidad de un archivo. Por defecto, los archivos con `purpose=batch` caducan a los 30 días y el resto de archivos se conservan hasta que se borran manualmente. |
 
-### Estructura del objeto \`expires_after
+### Estructura del objeto \\`expires_after
 
 El objeto `expires_after` contiene las siguientes propiedades:
 
