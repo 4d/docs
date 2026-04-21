@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 El comando `WEB Server list` <!-- REF #_command_.WEB Server list.Summary -->devuelve una colección de todos los objetos del servidor Web disponibles en la aplicación 4D <!-- END REF -->.
 
-Queremos saber cuántos servidores web en funcionamiento hay disponibles:
+Una aplicación 4D puede contener de uno a varios servidores web:
 
 - un servidor web para la base de datos del host (servidor web por defecto)
 - un servidor web para cada componente.
