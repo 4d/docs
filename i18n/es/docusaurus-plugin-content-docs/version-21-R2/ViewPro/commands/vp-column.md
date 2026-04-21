@@ -28,7 +28,7 @@ El comando `VP Column` <!-- REF #_method_.VP Column.Summary -->devuelve un nuevo
 
 En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-El parámetro *column* define la primera columna del rango. Pase el índice de la columna (el conteo comienza en 0) en este parámetro. Si el rango contiene varias columnas, también debe utilizar el parámetro opcional *columnCount*.
+El parámetro *column* define la primera columna del rango. Pase el índice de la columna (el conteo comienza en 0) en este parámetro. Pase el índice de la columna (el conteo comienza en 0) en este parámetro.
 
 El parámetro opcional *columnCount* permite definir el número total de columnas en las que se encuentra el rango. *columnCount* debe ser mayor que 0. Si se omite, el valor se establecerá en 1 por defecto y se creará un rango de tipo de columna.
 
