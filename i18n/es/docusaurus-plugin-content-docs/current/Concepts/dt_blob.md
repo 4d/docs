@@ -14,7 +14,7 @@ Al igual que otros tipos de campo que pueden retener una gran cantidad de datos 
 Utilizando el lenguaje 4D, hay dos maneras de manipular un blob:
 
 - **como un valor escalar**: un blob puede ser almacenado en una variable o un campo Blob y puede ser modificado.
-- **como un objeto (`4D.Blob`)**: un `4D.Blob` es un objeto blob. Puede encapsular un blob o una parte de él en un `4D.Blob` sin alterar el bloque original. Este método se llama [boxing](https://en.wikipedia.org/wiki/Object_type_(object-oriented_programming)#Boxing). Para más información sobre cómo instanciar un `4D.Blob`, vea [Blob Class](../API/BlobClass.md).
+- **como un objeto (`4D.Blob`)**: un `4D.Blob` es un objeto blob. Puede encapsular un blob o una parte de él en un `4D.Blob` sin alterar el bloque original. Este método se llama [boxing](https://en.wikipedia.org/wiki/Object_type_\(object-oriented_programming\)#Boxing). Para más información sobre cómo instanciar un `4D.Blob`, vea [Blob Class](../API/BlobClass.md).
 
 Cada tipo de blob tiene sus ventajas. Utilice la siguiente tabla para determinar cuál se ajusta a sus necesidades:
 
@@ -26,7 +26,7 @@ Cada tipo de blob tiene sus ventajas. Utilice la siguiente tabla para determinar
 | Rendimiento al acceder a los bytes   |   +  |            -            |
 | Tamaño máximo                        |  2GB |         Memoria         |
 
-Tenga en cuenta que a diferencia de los objetos blob, que son pasados por referencia, los blobs escalares se duplican en la memoria cuando se pasan a los métodos. Puede pasar blobs y objetos blob (`4D.Blob`) a los métodos.
+Tenga en cuenta que a diferencia de los objetos blob, que son pasados por referencia, los blobs escalares se duplican en la memoria cuando se pasan a los métodos. Al trabajar con métodos, usar objetos blob (`4D.Blob`) es más eficiente, ya que son pasados por referencia.
 
 > Por defecto, 4D define el tamaño máximo de los blobs escalares en 2GB, pero este límite de tamaño puede ser menor dependiendo de su sistema operativo y del espacio disponible.
 
@@ -76,7 +76,7 @@ Algunos comandos 4D modifican el blob, y por lo tanto no soportan el tipo `4D.Bl
 
 ### Pasar blobs y objetos blob a los métodos
 
-Al trabajar con métodos, usar objetos blob (`4D.Blob`) es más eficiente, ya que son pasados por referencia. Tenga en cuenta que a diferencia de los objetos blob, que son pasados por referencia, los blobs escalares se duplican en la memoria cuando se pasan a los métodos.
+Puede pasar blobs y objetos blob (`4D.Blob`) a los métodos. Tenga en cuenta que a diferencia de los objetos blob, que son pasados por referencia, los blobs escalares se duplican en la memoria cuando se pasan a los métodos.
 
 ### Pasar un blob escalar por referencia usando un puntero
 
