@@ -961,7 +961,7 @@ Le paramètre facultatif *options* vous permet de passer un objet définissant d
 
 > - La fonction génère une erreur et retourne **Null** si *msgID* désigne un message non existant,
 > - Si aucune boite de réception n'est sélectionnée avec la [fonction `.selectBox()`](#selectbox), une erreur est générée,
-> - S'il n'y a pas de connexion ouverte, `.getMail()` ouvrira une connexion avec la dernière boite de réception spécifiée à l'aide de [`.selectBox()`](#selectbox)\\`.
+> - S'il n'y a pas de connexion ouverte, `.getMail()` ouvrira une connexion avec la dernière boite de réception spécifiée à l'aide de [`.selectBox()`](#selectbox)\\\`.
 
 #### Résultat
 
@@ -1626,14 +1626,14 @@ searchCriteria = HEADER CONTENT-TYPE "E" NOT SUBJECT "o" NOT HEADER CONTENT-TYPE
 
 A noter que dans les deux derniers exemples, le résultat de la recherche est différent lorsque vous enlevez les parenthèses de la première liste de mots-clés.
 
-- Le paramètre *searchCriteria* peut inclure optionnellement l'instruction \[CHARSET]. Cette instruction est composée du mot "CHARSET" suivi d'un jeu de caractères défini \[CHARSET] (US ASCII, ISO-8859). Cette instruction est composée du mot "CHARSET" suivi d'un jeu de caractères défini \[CHARSET] (US ASCII, ISO-8859). Elle indique le codage de caractères utilisé dans la chaine *searchCriteria*.
+- Le paramètre *searchCriteria* peut inclure optionnellement l'instruction \[CHARSET]. Cette instruction est composée du mot "CHARSET" suivi d'un jeu de caractères défini \[CHARSET] (US ASCII, ISO-8859). Cette instruction est composée du mot "CHARSET" suivi d'un jeu de caractères défini \[CHARSET] (US ASCII, ISO-8859). Cette instruction est composée du mot "CHARSET" suivi d'un jeu de caractères défini \[CHARSET] (US ASCII, ISO-8859).
   Par défaut, 4D encode la chaîne de critères searchCriteria en "Quotable Printable" si elle contient des caractères étendus.
 
 ```
 searchCriteria = CHARSET "ISO-8859" BODY "Help"
 ```
 
-... signifie que le critère de recherche utilise le jeu de caractères iso-8859 et que le serveur devra convertir la chaîne avant la recherche, si nécessaire.
+... La fonction `.searchMails()` <!-- REF #IMAPTransporterClass.searchMails().Summary -->recherche les messages qui correspondent aux critères de recherche *searchCriteria* dans la boîte aux lettres courante<!-- END REF -->.
 
 #### Mots-clés de recherche autorisés
 
