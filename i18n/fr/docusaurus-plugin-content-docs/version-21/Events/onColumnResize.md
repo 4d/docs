@@ -11,7 +11,7 @@ title: On Column Resize
 
 ### List Box
 
-Cet événement est généré lorsque la largeur d'une colonne dans la list box est modifiée par un utilisateur. L'événement est déclenché "en direct", c'est-à-dire envoyé en continu pendant l'événement, tant que la list box ou la colonne concernée est redimensionnée. Ce redimensionnement s'effectue manuellement par un utilisateur, ou peut se produire suite au redimensionnement de la list box et de ses colonnes avec la fenêtre de formulaire elle-même (que le formulaire soit redimensionné manuellement ou à l'aide de la
+Cet événement est généré lorsque la largeur d'une colonne dans la list box est modifiée par un utilisateur. Cet événement est généré lorsque la largeur d'une colonne dans la list box est modifiée par un utilisateur. L'événement est déclenché "en direct", c'est-à-dire envoyé en continu pendant l'événement, tant que la list box ou la colonne concernée est redimensionnée.
 
 > L'événement `On Column Resize` n'est pas déclenché lorsqu'une [fausse colonne](../FormObjects/properties_ResizingOptions.md#about-the-fake-blank-column) est redimensionnée.
 
