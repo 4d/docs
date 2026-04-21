@@ -3,7 +3,7 @@ id: text
 title: Text
 ---
 
-Un objeto texto permite mostrar contenido escrito estático (*por ejemplo*, instrucciones, títulos, etiquetas, etc.) en un formulario. Estas áreas de texto estáticas pueden convertirse en dinámicas cuando incluyen referencias dinámicas. Para más información, consulte [Uso de referencias en textos estáticos](https://doc.4d.com/4Dv20/4D/20.2/Using-references-in-static-text.300-6750154.en.html).
+Un objeto texto permite mostrar contenido escrito estático (*por ejemplo*, instrucciones, títulos, etiquetas, etc.) en un formulario. Estas áreas de texto estáticas pueden convertirse en dinámicas cuando incluyen referencias dinámicas. Estas áreas de texto estáticas pueden convertirse en dinámicas cuando incluyen referencias dinámicas.
 
 #### Ejemplo JSON:
 
