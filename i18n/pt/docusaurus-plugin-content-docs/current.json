@@ -1290,5 +1290,337 @@
   "sidebar.docs.doc.Sessions": {
     "message": "Sessões",
     "description": "The label for the doc item 'Sessions' in sidebar 'docs', linking to the doc Desktop/desktop-sessions"
+  },
+  "sidebar.docs.category.Exploring Projects": {
+    "message": "Exploring Projects",
+    "description": "The label for category 'Exploring Projects' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Database Structure": {
+    "message": "Database Structure",
+    "description": "The label for category 'Database Structure' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Methods & Classes": {
+    "message": "Methods & Classes",
+    "description": "The label for category 'Methods & Classes' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.4D-Environment-key": {
+    "message": "Ambiente 4D",
+    "description": "The label for category '4D Environment' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Arrays-key": {
+    "message": "Arrays",
+    "description": "The label for category 'Arrays' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Backup-key": {
+    "message": "Página de Backup",
+    "description": "The label for category 'Backup' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.BLOB-key": {
+    "message": "BLOB",
+    "description": "The label for category 'BLOB' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Boolean-key": {
+    "message": "Parâmetros",
+    "description": "The label for category 'Boolean' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Cache-Management-key": {
+    "message": "Cache Management",
+    "description": "The label for category 'Cache Management' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Collections-key": {
+    "message": "Coleções",
+    "description": "The label for category 'Collections' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Communications-key": {
+    "message": "Communications",
+    "description": "The label for category 'Communications' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Compiler-key": {
+    "message": "Compiler",
+    "description": "The label for category 'Compiler' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Data-Entry-key": {
+    "message": "Entrada de dados",
+    "description": "The label for category 'Data Entry' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Data-Security-key": {
+    "message": "Segurança dos dados",
+    "description": "The label for category 'Data Security' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Date-and-Time-key": {
+    "message": "Data e Horas",
+    "description": "The label for category 'Date and Time' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Design-Object-Access-key": {
+    "message": "Design Object Access",
+    "description": "The label for category 'Design Object Access' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Drag-and-Drop-key": {
+    "message": "Arrastar e Soltar",
+    "description": "The label for category 'Drag and Drop' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Entry-Control-key": {
+    "message": "Controle de entrada",
+    "description": "The label for category 'Entry Control' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.File-and-Folder-key": {
+    "message": "File and Folder",
+    "description": "The label for category 'File and Folder' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Form-Events-key": {
+    "message": "Eventos formulário",
+    "description": "The label for category 'Form Events' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Forms-key": {
+    "message": "Formulários",
+    "description": "The label for category 'Forms' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Formulas-key": {
+    "message": "Fórmulas",
+    "description": "The label for category 'Formulas' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Graphs-key": {
+    "message": "Graphs",
+    "description": "The label for category 'Graphs' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Hierarchical-Lists-key": {
+    "message": "Hierarchical Lists",
+    "description": "The label for category 'Hierarchical Lists' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.HTTP-key": {
+    "message": "HTTP",
+    "description": "The label for category 'HTTP' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Import-and-Export-key": {
+    "message": "Import and Export",
+    "description": "The label for category 'Import and Export' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Interruptions-key": {
+    "message": "Interruptions",
+    "description": "The label for category 'Interruptions' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.JSON-key": {
+    "message": "JSON",
+    "description": "The label for category 'JSON' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Language-key": {
+    "message": "Línguagem",
+    "description": "The label for category 'Language' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.LDAP-key": {
+    "message": "LDAP",
+    "description": "The label for category 'LDAP' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Licenses-key": {
+    "message": "Licenças",
+    "description": "The label for category 'Licenses' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.List-Box-key": {
+    "message": "List Box",
+    "description": "The label for category 'List Box' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Mail-key": {
+    "message": "Mail",
+    "description": "The label for category 'Mail' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Math-key": {
+    "message": "Funções matemáticas",
+    "description": "The label for category 'Math' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Menus-key": {
+    "message": "Menus",
+    "description": "The label for category 'Menus' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Messages-key": {
+    "message": "Messages",
+    "description": "The label for category 'Messages' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Named-Selections-key": {
+    "message": "Seleções temporárias",
+    "description": "The label for category 'Named Selections' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Objects-(Forms)-key": {
+    "message": "Objects (Forms)",
+    "description": "The label for category 'Objects (Forms)' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Objects-(Language)-key": {
+    "message": "Objects (Language)",
+    "description": "The label for category 'Objects (Language)' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.On-a-Series-key": {
+    "message": "On a Series",
+    "description": "The label for category 'On a Series' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Pasteboard-key": {
+    "message": "Pasteboard",
+    "description": "The label for category 'Pasteboard' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Pictures-key": {
+    "message": "Imagens",
+    "description": "The label for category 'Pictures' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Printing-key": {
+    "message": "Printing",
+    "description": "The label for category 'Printing' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Process-(Communications)-key": {
+    "message": "Processo (Comunicações)",
+    "description": "The label for category 'Process (Communications)' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Process-(User-Interface)-key": {
+    "message": "Processo (Interface do Usuário)",
+    "description": "The label for category 'Process (User Interface)' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Processes-key": {
+    "message": "Processos",
+    "description": "The label for category 'Processes' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Queries-key": {
+    "message": "Queries",
+    "description": "The label for category 'Queries' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Quick-Report-key": {
+    "message": "Quick Report",
+    "description": "The label for category 'Quick Report' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Record-Locking-key": {
+    "message": "Record Locking",
+    "description": "The label for category 'Record Locking' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Records-key": {
+    "message": "Records",
+    "description": "The label for category 'Records' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Relations-key": {
+    "message": "Relações",
+    "description": "The label for category 'Relations' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Resources-key": {
+    "message": "Resources",
+    "description": "The label for category 'Resources' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Secured-Protocol-key": {
+    "message": "Protocolo seguro",
+    "description": "The label for category 'Secured Protocol' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Selection-key": {
+    "message": "Seleção",
+    "description": "The label for category 'Selection' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Sets-key": {
+    "message": "Conjuntos",
+    "description": "The label for category 'Sets' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Spell-Checker-key": {
+    "message": "Spell Checker",
+    "description": "The label for category 'Spell Checker' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.SQL-key": {
+    "message": "SQL",
+    "description": "The label for category 'SQL' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.String-key": {
+    "message": "String",
+    "description": "The label for category 'String' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Structure-Access-key": {
+    "message": "Structure Access",
+    "description": "The label for category 'Structure Access' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Styled-Text-key": {
+    "message": "Styled Text",
+    "description": "The label for category 'Styled Text' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Subrecords-key": {
+    "message": "Sub-registros",
+    "description": "The label for category 'Subrecords' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.SVG-key": {
+    "message": "SVG",
+    "description": "The label for category 'SVG' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.System-Documents-key": {
+    "message": "System Documents",
+    "description": "The label for category 'System Documents' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.System-Environment-key": {
+    "message": "System Environment",
+    "description": "The label for category 'System Environment' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Table-key": {
+    "message": "Tabela",
+    "description": "The label for category 'Table' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Tools-key": {
+    "message": "Tools",
+    "description": "The label for category 'Tools' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Transactions-key": {
+    "message": "Transactions",
+    "description": "The label for category 'Transactions' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Triggers-key": {
+    "message": "Triggers",
+    "description": "The label for category 'Triggers' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.User-Interface-key": {
+    "message": "Interface do usuário",
+    "description": "The label for category 'User Interface' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Users-and-Groups-key": {
+    "message": "Usuários e grupos",
+    "description": "The label for category 'Users and Groups' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Variables-key": {
+    "message": "Variáveis.",
+    "description": "The label for category 'Variables' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Web-Area-key": {
+    "message": "Área Web",
+    "description": "The label for category 'Web Area' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Web-Server-key": {
+    "message": "Servidor Web",
+    "description": "The label for category 'Web Server' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Web-Services-(Client)-key": {
+    "message": "Web Services (Client)",
+    "description": "The label for category 'Web Services (Client)' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Web-Services-(Server)-key": {
+    "message": "Web Services (Server)",
+    "description": "The label for category 'Web Services (Server)' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Windows-key": {
+    "message": "Windows",
+    "description": "The label for category 'Windows' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.XML-key": {
+    "message": "XML",
+    "description": "The label for category 'XML' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.XML-DOM-key": {
+    "message": "XML DOM",
+    "description": "The label for category 'XML DOM' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.XML-SAX-key": {
+    "message": "XML SAX",
+    "description": "The label for category 'XML SAX' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.listbox-in-form": {
+    "message": "List Box",
+    "description": "The label for category 'List Box' in sidebar 'docs'"
+  },
+  "sidebar.docs.link.qodly-pro-link1": {
+    "message": "4D Qodly Pro",
+    "description": "The label for link '4D Qodly Pro' in sidebar 'docs', linking to 'https://developer.4d.com/qodly/'"
+  },
+  "sidebar.docs.link.4D Analyzer": {
+    "message": "4D Analyzer",
+    "description": "The label for link '4D Analyzer' in sidebar 'docs', linking to 'https://marketplace.visualstudio.com/items?itemName=4D.4d-analyzer'"
+  },
+  "sidebar.docs.link.qodly-pro-link2": {
+    "message": "4D Qodly Pro",
+    "description": "The label for link '4D Qodly Pro' in sidebar 'docs', linking to 'https://developer.4d.com/qodly/'"
   }
 }
