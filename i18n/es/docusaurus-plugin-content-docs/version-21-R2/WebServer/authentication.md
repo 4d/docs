@@ -157,7 +157,7 @@ El parámetro `$IPServer` recibe la dirección IP utilizada para llamar al servi
 
 #### $user y $password - Nombre de usuario y contraseña
 
-Generalidades Generalidades Generalidades Generalidades Generalidades Generalidades Generalidades Generalidades Esta caja de diálogo aparece para cada conexión, si se selecciona la autenticación [basic](#basic-protocol) o [digest](#digest-protocol).
+Generalidades Generalidades Generalidades Generalidades Generalidades Generalidades Generalidades Generalidades Generalidades Esta caja de diálogo aparece para cada conexión, si se selecciona la autenticación [basic](#basic-protocol) o [digest](#digest-protocol).
 
 > Si el nombre de usuario enviado por el navegador existe en 4D, el parámetro $password (la contraseña del usuario) no se devuelve por razones de seguridad.
 
