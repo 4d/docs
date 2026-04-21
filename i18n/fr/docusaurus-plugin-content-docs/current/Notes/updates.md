@@ -13,12 +13,13 @@ Read [**What’s new in 4D 21 R3**](https://blog.4d.com/whats-new-in-4d-21-r3/),
 - 4D Write Pro prend en charge les [feuilles de style de liste hiérarchique](../WritePro/user-legacy/stylesheets.md#hierarchical-list-style-sheets), ce qui permet de créer et de gérer des [listes à plusieurs niveaux](../WritePro/user-legacy/using-a-4d-write-pro-area.md#multi-level-lists) structurées avec numérotation automatique.
 - Possibilité d'utiliser un certificat personnalisé provenant du trousseau de macOS au lieu d'un dossier de certificats local dans les classes [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) et [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew).
 - Nouvelle classe [`4D.Method`](../API/MethodClass.md) pour créer et exécuter le code d'une méthode 4D à partir d'un texte source. Les commandes [`METHOD Get path`](../commands/method-get-path) et [`METHOD RESOLVE PATH`](../commands/method-resolve-path) prennent charge une nouvelle constante `path volatile method` (128).
-- Le transporteur IMAP prend désormais en charge les notifications d'événements de boîte aux lettres utilisant le protocole IDLE via un objet [notifier](../API/IMAPTransporterClass.md#notifier) de la classe [4D.IMAPNotifier](../API/IMAPNotifier.md), configurable via la propriété `listener` de [IMAP New transporter](../commands/imap-new-transporter).
+- Le transporteur IMAP prend désormais en charge les notifications d'événements de boîte aux lettres utilisant le protocole IDLE via un objet [notifier](../API/IMAPTransporterClass.md#notifier) de la classe [4D.IMAPNotifier](../API/IMAPNotifierClass.md), configurable via la propriété `listener` de [IMAP New transporter](../commands/imap-new-transporter).
 - Les objets [session](../API/SessionClass.md) distantes sont maintenant [disponibles côté client](../Desktop/sessions.md#availability).
 - Nouvelle [page **IA**](../settings/ai.md) dans la boîte de dialogue des Propriétés, permettant de configurer des [alias de fournisseurs et de modèles](../aikit/provider-model-aliases.md) qui peuvent être appelés dans le code via le composant 4D AIKit.
 - Composant 4D AIKit : nouvelle classe [Providers](../aikit/Classes/OpenAIProviders.md) pour instancier et gérer les [alias de fournisseurs et de modèles](../aikit/provider-model-aliases.md).
 - Prise en charge du [mot-clé `server`](../Concepts/classes.md#server) pour les fonctions du modèle de données ORDA et les fonctions singleton partagées/session.
 - Dépendances : prise en charge des [composants stockés sur les dépôts GitLab](../Project/components.md#configuring-a-gitlab-repository).
+- [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=21_R3) : liste de tous les bugs qui ont été corrigés dans 4D 21 R3.
 
 #### Prise en charge de Liquid glass sur macOS
 
@@ -77,7 +78,7 @@ Lisez [**Les nouveautés de 4D 21 R2**](https://blog.4d.com/fr-whats-new-in-4d-2
 | ngtcp2       | 1.18.0 | 21                  | Utilisé pour QUIC                                                                                                                                     |
 | OpenSSL      | 3.5.2  | 21                  |                                                                                                                                                       |
 | PDFWriter    | 4.7.0  | 21                  | Utilisé pour [`WP Export document`](../WritePro/commands/wp-export-document.md) et [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
-| SpreadJS     | 18.2.0 | **21 R2**           | Voir [ce blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) pour un aperçu des nouvelles fonctionnalités.             |
+| SpreadJS     | 18.2.0 | 21 R2               | Voir [ce blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) pour un aperçu des nouvelles fonctionnalités.             |
 | webKit       | WKWebView                              | 19                  |                                                                                                                                                       |
 | Xerces       | 3.3.0  | 21                  | Utilisé pour les commandes XML                                                                                                                        |
 | Zlib         | 1.3.1  | 21                  |                                                                                                                                                       |
