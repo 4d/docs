@@ -10,12 +10,13 @@ title: Propriétés des formulaires
 > Color scheme property is only applied on macOS and [Windows with Fluent UI theme](../settings/interface.md#use-fluent-ui-on-windows).
 > ).
 
-Cette propriété définit la palette de couleurs du formulaire. Par défaut, lorsque la propriété n'est pas définie, la valeur d'une palette de couleurs est **héritée** (le formulaire utilise la palette définie [au niveau de l'application](../commands/get-application-color-scheme)). Pour le formulaire, cette option peut être remplacée par l'une des deux options suivantes :
+Cette propriété définit la palette de couleurs du formulaire. Cette propriété définit la palette de couleurs du formulaire. Pour le formulaire, cette option peut être remplacée par l'une des deux options suivantes :
 
 - dark - texte clair sur fond foncé
 - light - texte foncé sur fond clair
 
-> Une palette de couleurs définie ne peut pas être remplacée par un CSS.
+> light - texte foncé sur fond clair
+> &#062; Une palette de couleurs définie ne peut pas être remplacée par un CSS.
 
 #### Grammaire JSON
 
@@ -41,7 +42,7 @@ Un fichier CSS défini au niveau du formulaire remplacera la ou les feuilles de 
 
 ## Form Class
 
-Nom d'une [classe utilisateurs](../Concepts/classes.md#class-definition) existante à associer au formulaire. La classe utilisateur peut appartenir au projet hôte ou à un [composant](../Extensions/develop-components.md#sharing-of-classes), auquel cas la syntaxe formelle est "[*componentNameSpace*](../settings/general.md#component-namespace-in-the-class-store).className".
+La classe utilisateur peut appartenir au projet hôte ou à un [composant](../Extensions/develop-components.md#sharing-of-classes), auquel cas la syntaxe formelle est "[*componentNameSpace*](../settings/general.md#component-namespace-in-the-class-store).className". Nom d'une [classe utilisateurs](../Concepts/classes.md#class-definition) existante à associer au formulaire.
 
 L'association d'une classe au formulaire offre les avantages suivants :
 
@@ -141,7 +142,7 @@ Cette propriété désigne le [formulaire à hériter](forms.md#inherited-forms)
 
 Pour hériter d'un formulaire table, définissez la table dans la propriété [Table du formulaire hérité](#inherited-form-table).
 
-Pour supprimer l'héritage, sélectionnez \<Aucun>\` dans la liste des propriétés (ou " " en JSON).
+Pour supprimer l'héritage, sélectionnez \<Aucun>\\` dans la liste des propriétés (ou " " en JSON).
 
 #### Grammaire JSON
 
@@ -155,7 +156,7 @@ Pour supprimer l'héritage, sélectionnez \<Aucun>\` dans la liste des propriét
 
 Cette propriété spécifie la table de la base de données à partir de laquelle [hériter d'un formulaire](forms.md#inherited-forms) dans le formulaire courant.
 
-Fixé à \<Aucun>\` dans la liste des propriétés (ou " " en JSON) pour hériter d'un formulaire projet.
+Fixé à \<Aucun>\\` dans la liste des propriétés (ou " " en JSON) pour hériter d'un formulaire projet.
 
 #### Grammaire JSON
 
