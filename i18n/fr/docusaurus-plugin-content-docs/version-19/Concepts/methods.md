@@ -180,7 +180,7 @@ Des méthodes projet peuvent s'appeler les unes les autres. Par exemple :
 
 Cela s'appelle la récursivité. Le langage de 4D supporte pleinement la récursivité.
 
-Examinons l'exemple suivant : Supposons que vous disposiez d'une table `[Friends and Relatives]` composée de cet ensemble de champs extrêmement simplifié :
+Examinons l'exemple suivant : Examinons l'exemple suivant : Supposons que vous disposiez d'une table `[Friends and Relatives]` composée de cet ensemble de champs extrêmement simplifié :
 - `[Amis et parents]Nom`
 - `[Amis et parents]Enfant'Nom`
 
@@ -216,6 +216,8 @@ Pour cet exemple, nous supposons que les valeurs des champs sont uniques (il n'e
     QUERY([Amis et parents];[Amis et parents]Nom=$vsName)
     If(Records in selection([Amis et parents])>0)
        ALERT("Un de mes amis, "+Généalogie de($vsName)+", fait cela pour gagner sa vie !")
+    End if
+ End if
     End if
  End if
 ```
