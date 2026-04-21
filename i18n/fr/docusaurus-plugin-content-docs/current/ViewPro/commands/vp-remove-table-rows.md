@@ -34,7 +34,7 @@ title: VP REMOVE TABLE ROWS
 
 La commande `VP REMOVE TABLE ROWS` <!-- REF #_method_.VP REMOVE TABLE ROWS.Summary -->supprime une ou *count* ligne(s) de la *tableName* spécifiée à l'index *row* spécifié<!-- END REF -->. La commande supprime les valeurs et les styles.
 
-Cette commande supprime les lignes de la table *tableName*, PAS de la feuille. Le nombre total de lignes de la feuille n'est pas impacté par la commande. Les données présentes sous la table (le cas échéant) sont automatiquement déplacées vers le haut en fonction du nombre de lignes supprimées.
+Cette commande supprime les lignes de la table *tableName*, PAS de la feuille. Le nombre total de lignes de la feuille n'est pas impacté par la commande. Le nombre total de lignes de la feuille n'est pas impacté par la commande.
 
 Si la table *tableName* est liée à un [contexte de données](vp-set-data-context.md), la commande supprime le(s) élément(s) de la collection.
 
