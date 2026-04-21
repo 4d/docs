@@ -53,13 +53,13 @@ Il existe différents types de list box avec leurs propres comportements et prop
 - **Sélection** (**Sélection courante** ou **Sélection temporaire**) : chaque colonne est liée à une expression (par exemple un champ) qui est évaluée pour chaque enregistrement de la sélection.
 - **Collection ou Entity selection** : chaque colonne est liée à une expression qui est évaluée pour chaque élément de la collection ou chaque entité de l'entity selection.
 
-> Il n'est pas possible de combiner différents types de list box dans le même objet list box. La source de données est définie lors de la création de la list box. Il n'est alors plus possible de la modifier par programmation.
+> &#062; Il n'est pas possible de combiner différents types de list box dans le même objet list box. La source de données est définie lors de la création de la list box. Il n'est alors plus possible de la modifier par programmation.
 
 ### Gestion des list box
 
 Vous pouvez configurer complètement un objet de type list box via ses propriétés, et vous pouvez également le gérer dynamiquement par programmation.
 
-The 4D Language includes a dedicated "List Box" theme for list box commands, but commands from various other themes, such as "Object properties" commands or [`EDIT ITEM`](../commands/edit-item), [`Displayed line number`](../commands/displayed-line-number) commands can also be used. Pour plus d'informations, reportez-vous à la page [List Box Commands Summary](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) du *Manuel de référence du langage 4D*.
+Pour plus d'informations, reportez-vous à la page [List Box Commands Summary](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) du *Manuel de référence du langage 4D*. The 4D Language includes a dedicated "List Box" theme for list box commands, but commands from various other themes, such as "Object properties" commands or [`EDIT ITEM`](../commands/edit-item), [`Displayed line number`](../commands/displayed-line-number) commands can also be used.
 
 ## Gestion de la saisie
 
@@ -378,6 +378,7 @@ Dans ce mode :
 
 - La hauteur de l’objet list box est automatiquement réduite lorsque le nombre de lignes à imprimer est inférieur à la hauteur d’origine de l’objet (il n’y a pas de lignes "vides" imprimées). En revanche, la hauteur n’augmente pas automatiquement en fonction du contenu de l’objet. La taille de l'objet réellement imprimé peut être obtenue par la commande [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information).
 - L'objet list box est imprimé "tel quel", c’est-à-dire en tenant compte de ses paramètres d’affichage courants : visibilité des en-têtes et des grilles, lignes affichées et masquées, etc.
+  L'objet list box est imprimé "tel quel", c’est-à-dire en tenant compte de ses paramètres d’affichage courants : visibilité des en-têtes et des grilles, lignes affichées et masquées, etc.
   Ces paramètres incluent également la première ligne à imprimer : si vous appelez la commande [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position) avant de lancer l'impression, la première ligne imprimée dans la zone de liste sera celle désignée par la commande.
 - Un mécanisme automatique facilite l’impression des list box contenant plus de lignes qu’il est possible d’en afficher : des appels successifs à `Print object` permettent d’imprimer à chaque fois un nouvel ensemble de lignes. La commande [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) peut être utilisée pour vérifier l'état de l'impression en cours.
 
