@@ -18,7 +18,7 @@ title: Object
   - ピクチャー(2)
   - collection
 
-(1) [**Non-streamable objects**](#streaming-support) such as ORDA objects ([entities](ORDA/dsMapping.md#entity), [entity selections](ORDA/dsMapping.md#entity-selection), etc.), [file handles](../API/FileHandleClass.md), [web server](../API/WebServerClass.md)... は **オブジェクトフィールド** には保存できません。 保存しようとするとエラーが返されます。しかし、メモリ内の **オブジェクト変数** に保存することは可能です。
+(1) [\*\* ストリーム不可能なオブジェクト\*\*](#ストリーミングサポート) である [エンティティ](ORDA/dsMapping.md#エンティティ) や [エンティティセレクション](ORDA/dsMapping.md#エンティティセレクション) などの ORDAオブジェクト、[FileHandle](../API/FileHandleClass.md)、[Webサーバー](../API/WebServerClass.md)... は **オブジェクトフィールド** には保存できません。 保存しようとするとエラーが返されます。しかし、メモリ内の **オブジェクト変数** に保存することは可能です。
 
 (2) デバッガー内でテキストとして表示したり、JSON へと書き出されたりした場合、ピクチャー型のオブジェクトプロパティは "[object Picture]" と表されます。
 
@@ -267,9 +267,9 @@ $doc:=Null  //  $docが占有するリソースを解放します
 
 ## クラス
 
-Objects can belong to classes. Using a class allows to predefine an object behaviour and structure with associated properties and functions.
+オブジェクトは特定のクラスに所属することができます。 クラスを使用することで、オブジェクトの振る舞いと構造を、関連するプロパティと関数で事前に定義することができます。
 
-The 4D language proposes several [native classes](../category/class-API-reference/) that you can use to handle objects. You can also define and use your own [user classes](./classes.md) to organize your code.
+4D ランゲージでは、オブジェクトを管理するための複数の [ネイティブなクラス](../category/class-API-reference/) が提供されています。 またコードを整理するために独自の [ユーザークラス](./classes.md) を定義して使用することもできます。
 
 ## ストリーミングサポート
 
