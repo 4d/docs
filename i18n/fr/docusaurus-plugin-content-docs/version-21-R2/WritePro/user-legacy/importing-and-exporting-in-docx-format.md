@@ -1,6 +1,6 @@
 ---
 id: importing-and-exporting-in-docx-format
-title: Exporter au format docx
+title: Importer et exporter au format docx
 displayed_sidebar: docs
 slug: /WritePro/importing-and-exporting-in-docx-format
 ---
