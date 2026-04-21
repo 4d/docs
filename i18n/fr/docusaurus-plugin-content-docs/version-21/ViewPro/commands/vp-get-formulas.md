@@ -28,7 +28,7 @@ Dans *rangeObj*, passez une plage dont vous voulez récupérer les formules. Si 
 La collection retournée est bidemensionnelle :
 
 - La collection de premier niveau contient des sous-collections de formules. Chaque sous-collection représente une ligne.
-- Chaque sous-collection définit les valeurs des cellules de la ligne. Les valeurs sont des éléments textuels contenant les formules des cellules.
+- Chaque sous-collection définit les valeurs des cellules de la ligne. Les données passées en paramètre sont une collection qui contient des sous-collections.
 
 ## Exemple
 
