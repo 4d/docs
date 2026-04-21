@@ -24,7 +24,7 @@ Vous ne pouvez pas déclencher directement l'exécution d'une fonction d'événe
 
 :::info Note de compatibilité
 
-Les événements d'entité ORDA dans le datastore sont équivalents aux triggers dans la base de données 4D. Cependant, les actions déclenchées au niveau de la base de données 4D à l'aide des commandes du langage classique 4D ou des actions standard ne déclenchent pas les événements ORDA. Notez également que, contrairement aux triggers, les événements d'entité ORDA ne verrouillent pas l'ensemble de la table sous-jacente d'une dataclass lors de l'enregistrement ou de la suppression d'entités. Plusieurs événements peuvent se dérouler en parallèle tant qu'ils concernent des entités distinctes (c'est-à-dire des enregistrements distincts).
+Cependant, les actions déclenchées au niveau de la base de données 4D à l'aide des commandes du langage classique 4D ou des actions standard ne déclenchent pas les événements ORDA. Les événements d'entité ORDA dans le datastore sont équivalents aux triggers dans la base de données 4D. Notez également que, contrairement aux triggers, les événements d'entité ORDA ne verrouillent pas l'ensemble de la table sous-jacente d'une dataclass lors de l'enregistrement ou de la suppression d'entités. Plusieurs événements peuvent se dérouler en parallèle tant qu'ils concernent des entités distinctes (c'est-à-dire des enregistrements distincts).
 
 :::
 
@@ -107,13 +107,13 @@ Lorsqu'une erreur survient dans un événement, les autres événements sont sto
 | errCode            | Integer | Identique à la commande [`Last errors`](../commands/last-errors.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Oui                                                         |
 | message            | Text    | Identique à la commande [`Last errors`](../commands/last-errors.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Oui                                                         |
 | extraDescription   | Object  | Informations libres à définir                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Oui                                                         |
-| seriousError       | Boolean | Utilisé uniquement avec les événements de validation (voir ci-dessous). <li>`True` : crée une [erreur critique (imprévisible)](../Concepts/error-handling.md#predictable-vs-unpredictable-errors) et déclenche une exception. Ajoute le statut `dk status serious validation error`</li><li>`False` : crée seulement une [erreur silencieuse (prévisible)](../Concepts/error-handling.md#predictable-vs-unpredictable-errors). Ajoute le statut `dk status validation failed`.</li> | Oui (par défaut : False) |
+| seriousError       | Boolean | Utilisé uniquement avec les événements de validation (voir ci-dessous). <li>`True` : crée une [erreur critique (imprévisible)](../Concepts/error-handling.md#predictable-vs-unpredictable-errors) et déclenche une exception. Ajoute le statut `dk status validation failed`.</li> Ajoute le statut `dk status serious validation error`</li><li>`False` : crée seulement une [erreur silencieuse (prévisible)](../Concepts/error-handling.md#predictable-vs-unpredictable-errors). | Oui (par défaut : False) |
 | componentSignature | Text    | Toujours "DBEV"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Non                                                         |
 
 - Les [erreurs critiques](../Concepts/error-handling.md#predictable-vs-unpredictable-errors) sont empilées dans la collection de la propriété `errors` de l'objet **Result** renvoyé par les fonctions [`save()`](../API/EntityClass.md#save) ou [`drop()`](../API/EntityClass.md#drop).
 - Dans le cas d'une erreur déclenchée par un événement **validate**, la propriété `seriousError` permet de choisir le niveau d'erreur à générer :
   - Si **true** : une erreur critique est déclenchée et doit être traitée par le [code de traitement des erreurs](../Concepts/error-handling.md#predictable-vs-unpredictable-errors), par exemple un ["try catch"](../Concepts/error-handling.md#trycatchend-try). Dans l'objet résultat de la fonction appelante, `status` vaut `dk status serious validation error` et `statusText` vaut "Serious Validation Error". L'erreur est levée à la fin de l'événement et parvient au client qui demande l'action d'enregistrement/suppression (client REST par exemple).
-  - Si **false** (défaut) : une [erreur silencieuse (prévisible) est générée](../Concepts/error-handling.md#predictable-vs-unpredictable-errors). Elle ne déclenche aucune exception et n'est pas empilée dans les erreurs retournées par la commande [`Last errors`](../commands/last-errors.md). Dans l'objet résultat de la fonction appelante, `status` vaut `dk status validation failed` et `statusText` vaut "Mild Validation Error".
+  - Si **false** (défaut) : une [erreur silencieuse (prévisible) est générée](../Concepts/error-handling.md#predictable-vs-unpredictable-errors). Si **false** (défaut) : une [erreur silencieuse (prévisible) est générée](../Concepts/error-handling.md#predictable-vs-unpredictable-errors). Dans l'objet résultat de la fonction appelante, `status` vaut `dk status validation failed` et `statusText` vaut "Mild Validation Error".
 - Dans le cas d'une erreur déclenchée par un événement **saving/dropping**, lorsqu'un objet d'erreur est renvoyé, l'erreur est toujours définie comme critique, quelle que soit la valeur de la propriété `seriousError`.
 
 ## Description des fonctions
@@ -327,7 +327,7 @@ Function event validateSave <attributeName>($event : Object)
 Cet événement est déclenché chaque fois qu'une entité est sur le point d'être sauvegardée.
 
 - si vous avez défini la fonction au niveau de l'entité (première syntaxe), elle est appelée pour tout attribut de l'entité.
-- si vous avez défini la fonction au niveau de l'attribut (deuxième syntaxe), elle n'est appelée que pour cet attribut. Cette fonction n'est **pas** exécutée si l'attribut n'a pas été modifié dans l'entité.
+- Si vous avez défini la fonction au niveau de l'attribut (deuxième syntaxe), elle n'est appelée que pour cet attribut. La fonction n'est **pas** exécutée si l'attribut n'a pas été touché dans l'entité.
 
 La fonction reçoit un objet [*event*](#event-parameter) en paramètre.
 
@@ -380,7 +380,7 @@ Function event saving <attributeName>($event : Object)
 Cet événement est déclenché chaque fois qu'une entité est sur le point d'être sauvegardée.
 
 - Si vous avez défini la fonction au niveau de l'entité (première syntaxe), elle est appelée pour tout attribut de l'entité. La fonction est exécutée même si aucun attribut n'a été touché dans l'entité (par exemple, dans le cas de l'envoi de données à une application externe à chaque fois qu'une sauvegarde est effectuée).
-- Si vous avez défini la fonction au niveau de l'attribut (deuxième syntaxe), elle n'est appelée que pour cet attribut. La fonction n'est **pas** exécutée si l'attribut n'a pas été touché dans l'entité.
+- si vous avez défini la fonction au niveau de l'attribut (deuxième syntaxe), elle n'est appelée que pour cet attribut. Cette fonction n'est **pas** exécutée si l'attribut n'a pas été modifié dans l'entité.
 
 La fonction reçoit un objet [*event*](#event-parameter) en paramètre.
 
@@ -494,7 +494,7 @@ Function event validateDrop <attributeName>($event : Object)
 Cet événement est déclenché chaque fois qu'une entité est sur le point d'être supprimée.
 
 - Si vous avez défini la fonction au niveau de l'entité (première syntaxe), elle est appelée pour tout attribut de l'entité.
-- Si vous avez défini la fonction au niveau de l'attribut (deuxième syntaxe), elle n'est appelée que pour cet attribut.
+- si vous avez défini la fonction au niveau de l'attribut (deuxième syntaxe), elle n'est appelée que pour cet attribut.
 
 La fonction reçoit un objet [*event*](#event-parameter) en paramètre.
 
@@ -541,7 +541,7 @@ Function event dropping <attributeName>($event : Object)
 Cet événement est déclenché chaque fois qu'une entité est supprimée.
 
 - Si vous avez défini la fonction au niveau de l'entité (première syntaxe), elle est appelée pour tout attribut de l'entité.
-- Si vous avez défini la fonction au niveau de l'attribut (deuxième syntaxe), elle n'est appelée que pour cet attribut.
+- si vous avez défini la fonction au niveau de l'attribut (deuxième syntaxe), elle n'est appelée que pour cet attribut.
 
 La fonction reçoit un objet [*event*](#event-parameter) en paramètre.
 
