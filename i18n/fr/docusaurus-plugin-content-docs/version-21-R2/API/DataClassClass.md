@@ -279,7 +279,7 @@ Pour chaque objet de *objectCol* :
   - Si la clé primaire est fournie (telle quelle) et n'existe pas, l'entité est créée
   - Si la clé primaire n'est pas fournie, l'entité est créée et la clé primaire est assignée selon les règles en vigueur de la base de données.
 
-> La propriété "\*\*KEY" contenant une valeur est prise en compte uniquement lorsque la propriété "\*\*NEW" est à **false** (ou est omise) et qu'une entité correspondante existe. Dans tous les autres cas, la valeur de la propriété "\_\_KEY" est ignorée, la valeur de la clé primaire doit être passée "telle quelle".
+> La propriété "\*\*KEY" contenant une valeur est prise en compte uniquement lorsque la propriété "\*\*NEW" est à **false** (ou est omise) et qu'une entité correspondante existe. L'utilisation de la propriété \_\_KEY permet de ne pas dépendre du nom de l'attribut clé primaire.
 
 **Entités liées**
 
@@ -721,7 +721,7 @@ La fonction `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->renvoie u
 
 #### Description
 
-La fonction `.getRemoteCache()` <!-- REF #DataClassClass.getRemoteCache().Summary -->renvoie un objet qui contient le contenu du cache ORDA pour une dataclass<!-- END REF -->.
+La fonction `.setRemoteCacheSettings()` <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->définit le timeout et la taille maximale du cache ORDA pour une dataclass.<!-- END REF -->.
 
 Si elle est appelée depuis une application 4D monoposte, la fonction retourne `Null`.
 
@@ -965,7 +965,7 @@ Les formules contenues dans les requêtes peuvent recevoir des paramètres via $
 | Contient mot-clé                        | %                             | Les mots-clés peuvent être utilisés avec les attributs de type texte ou image                                                                                                                                                                     |                                          |
 
 - Peut être un **placeholder** (voir **Utiliser des placeholders** ci-dessous) ou toute expression correspondant à la propriété du type de donnée. **value** : valeur à comparer à la valeur courante de la propriété pour chaque entité de l'entity selection. Notez que, en cas de non-concordance avec les types scalaires (texte, date, numérique...), 4D tentera si possible de convertir le type de **value** dans le type de données de l'attribut pour une gestion plus facile des valeurs provenant d'Internet. Par exemple, si la chaîne "v20" est entrée en tant que **value** pour la comparer avec un attribut Integer, elle sera convertie en nombre 20.
-  Lorsque vous utilisez une valeur constante, les règles suivantes doivent être respectées :
+  Notez que, en cas de non-concordance avec les types scalaires (texte, date, numérique...), 4D tentera si possible de convertir le type de <strong x-id="1">value</strong> dans le type de données de l'attribut pour une gestion plus facile des valeurs provenant d'Internet.
   - Les valeurs constantes de type **texte** peuvent être passées avec ou sans guillemets (voir **Utilisation des guillemets** ci-dessous). Pour rechercher une chaîne dans une chaîne (recherche de type "contient"), utilisez le symbole joker (@) dans valeur pour isoler la chaîne à chercher, comme dans cet exemple : "@Smith@". Les mots-clés suivants sont interdits pour des constantes de type texte : true, false.
   - Valeurs constantes de type **booléen**: **true** or **false** (sensible à la casse).
   - Valeurs constantes de type **numérique** : les décimales doivent être séparées par un '.'
@@ -1683,7 +1683,7 @@ ds.VectorTable.query("embedding>:1 and embedding<:2" ;$vector1Comparison;$vector
 
 #### Description
 
-La fonction `.setRemoteCacheSettings()` <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->définit le timeout et la taille maximale du cache ORDA pour une dataclass.<!-- END REF -->.
+La fonction `.getRemoteCache()` <!-- REF #DataClassClass.getRemoteCache().Summary -->renvoie un objet qui contient le contenu du cache ORDA pour une dataclass<!-- END REF -->..
 
 Dans le paramètre *settings*, passez un objet contenant les propriétés suivantes :
 
