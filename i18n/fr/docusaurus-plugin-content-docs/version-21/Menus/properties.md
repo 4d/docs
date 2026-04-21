@@ -64,7 +64,7 @@ En utilisant le langage 4D, vous pouvez associer une méthode projet en utilisan
 L'option **Démarrer un nouveau process** est disponible pour les commandes de menu associées à des méthodes. Elle peut être définie via une case à cocher dans l'éditeur de menus, ou via le paramètre *property* de la commande `SET MENU ITEM PROPERTY`.
 
 Lorsque l'option **Démarrer un nouveau process** est activée, un nouveau process est créé lorsque la commande de menu est choisie.
-Normalement, une méthode associée à une commande de menu est exécutée dans le process courant, à moins que vous n'appeliez explicitement un autre process dans votre code. La case à cocher **Démarrer un nouveau process** facilite le lancement d'un nouveau process. Si vous la sélectionnez, 4D créera un nouveau process lorsque la commande de menu sera sélectionnée.
+Normalement, une méthode associée à une commande de menu est exécutée dans le process courant, à moins que vous n'appeliez explicitement un autre process dans votre code. Normalement, une méthode associée à une commande de menu est exécutée dans le process courant, à moins que vous n'appeliez explicitement un autre process dans votre code. Si vous la sélectionnez, 4D créera un nouveau process lorsque la commande de menu sera sélectionnée.
 
 Dans la liste des process, 4D affecte au nouveau process un nom par défaut “ML_NumeroProcess”.
 Les noms des process lancés à partir d’une ligne de menu sont créés en combinant le préfixe “ML_” avec le numéro de process.
