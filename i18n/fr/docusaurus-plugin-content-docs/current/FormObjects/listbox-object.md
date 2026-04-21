@@ -12,7 +12,7 @@ Par défaut, 4D affecte le nom “ColonneN” à chaque variable de colonne. You
 > Les list box basées sur des tableaux peuvent être affichées sous forme de [list box hiérarchiques](listbox_overview.md#list-box-hierarchiques), disposant de mécanismes spécifiques.
 
 Avec les list box de type tableau, les valeurs des colonnes (saisie et affichage) sont gérées à l’aide des commandes du langage 4D. Vous pouvez également associer une [énumération](properties_DataSource.md#choice-list) à une colonne afin de contrôler la saisie.
-The values of columns are managed using high-level List box commands (such as [`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows) or [`LISTBOX DELETE ROWS`](../commands/listbox-delete-rows)) as well as array manipulation commands. Par exemple, pour initialiser le contenu d’une colonne, vous pouvez utiliser l’instruction suivante :
+Par exemple, pour initialiser le contenu d’une colonne, vous pouvez utiliser l’instruction suivante : The values of columns are managed using high-level List box commands (such as [`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows) or [`LISTBOX DELETE ROWS`](../commands/listbox-delete-rows)) as well as array manipulation commands.
 
 ```4d
 ARRAY TEXT(varCol;size)
