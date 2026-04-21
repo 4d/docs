@@ -19,8 +19,9 @@ Les boutons image peuvent être utilisés de deux manières :
   | Bascule sur passage du curseur | switchWhenRollover     | true   |
   | Dernière imagette si désactivé | useLastFrameAsDisabled | true   |
 
-- Comme bouton permettant à l’utilisateur de choisir entre plusieurs options. Dans ce cas, le bouton image peut être utilisé à la place d’un pop-up menu image. Avec un [pop-up menu image](picturePopupMenu_overview.md), tous les choix sont affichés simultanément (comme les éléments du menu contextuel), tandis que le bouton image affiche les choix consécutivement (lorsque l'utilisateur clique sur le bouton).  
-  Dans ce cas, le bouton image peut être utilisé à la place d’un pop-up menu image. Vous souhaitez permettre aux utilisateurs de votre application de choisir la langue qui sera utilisée dans les menus, les boîtes de dialogue, etc. Vous pouvez implémenter cette option à l’aide d’un bouton image, placé dans une boîte de dialogue personnalisée de Propriétés :
+- Comme bouton permettant à l’utilisateur de choisir entre plusieurs options. Dans ce cas, le bouton image peut être utilisé à la place d’un pop-up menu image. Comme bouton permettant à l’utilisateur de choisir entre plusieurs options.  
+  Dans ce cas, le bouton image peut être utilisé à la place d’un pop-up menu image. Avec les <a href="picturePopupMenu_overview.md">Pop-up menus image</a>, tous les choix sont présentés simultanément (en tant que commandes du pop-up menu) ; avec un bouton image, les choix sont présentés consécutivement (à mesure que l’utilisateur clique sur le bouton).<br x-id="3" />
+  Voici un exemple de bouton image. Vous souhaitez permettre aux utilisateurs de votre application de choisir la langue qui sera utilisée dans les menus, les boîtes de dialogue, etc.
 
 ![](../assets/en/FormObjects/button_pictureButton.png)
 
