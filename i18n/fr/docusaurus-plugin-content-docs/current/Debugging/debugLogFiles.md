@@ -309,8 +309,7 @@ SET DATABASE PARAMETER(IMAP Log;1) //démarrer le journal IMAP
 Ce chemin d'accès au journal est retourné par la commande `Get 4D file`.
 
 - une version étendue :
-  - pièce(s) jointe(s) inclue(s)
-    pas de recyclage automatique
+  - pièce(s) jointe(s) inclue(s) pas de recyclage automatique
   - nom personnalisé
   - réservée à des fins spécifiques
 
@@ -671,7 +670,7 @@ Voici un exemple de fichier de configuration de log :
 
 :::note
 
-- Les valeurs de la propriété "state" sont décrites dans les commandes correspondantes : `[`WEB SET OPTION`](../commands/web-set-option) (`Enregistrement du journal Web`), [`HTTP SET OPTION`](../commands/http-set-option) (`Journal client HTTP`), [`SET DATABASE PARAMETER`](../commands/set-database-parameter) (`Client Web log recording`, `IMAP Log\`,...).
+- Les valeurs de la propriété "state" sont décrites dans les commandes correspondantes : `[`WEB SET OPTION`](../commands/web-set-option) (`Enregistrement du journal Web`), [`HTTP SET OPTION`](../commands/http-set-option) (`Journal client HTTP`), [`SET DATABASE PARAMETER`](../commands/set-database-parameter) (`Client Web log recording`, `IMAP Log\\`,...).
 - Pour httpDebugLogs, la propriété "level" correspond aux options de la constante `wdl` décrites dans la commande [`WEB SET OPTION`](../commands/web-set-option).
 - Pour diagnosticLogs, la propriété "level" correspond aux valeurs de la constante `Diagnostic log level` décrites dans la commande [`SET DATABASE PARAMETER`](../commands/set-database-parameter).
 
