@@ -66,19 +66,15 @@ Dans la méthode d'erreur personnalisée, vous pouvez accéder à plusieurs info
 
 :::info
 
-4D gère automatiquement un certain nombre de variables appelées**variables système**, répondant à différents besoins. :::</p> 
+4D gère automatiquement un certain nombre de variables appelées**variables système**, répondant à différents besoins. :::
 
 - La commande `GET LAST ERROR STACK` qui retourne les informations sur la pile d'erreur courant de l'application 4D.
 - la commande `Get call chain` qui retourne une collection d'objets décrivant chaque étape de la chaîne d'appel de la méthode dans le process courant.
 
 
-
-
 #### Exemple
 
 Voici un système de gestion des erreurs simple :
-
-
 
 ```4d
 //installer la méthode de gestion d'erreur
@@ -87,9 +83,6 @@ ON ERR CALL("errorMethod")
  ON ERR CALL("") //redonner le contrôle à 4D
 ```
 
-
-
-
 ```4d
 // méthode projet errorMethod
  If(Error#1006) //ceci n'est pas une interruption générée par l'utilisateur
@@ -97,20 +90,17 @@ ON ERR CALL("errorMethod")
  End if
 ```
 
-
-
-
 ### Utiliser une méthode de gestion des erreurs vide
 
 Si vous souhaitez essentiellement masquer la boite de dialogue d'erreur standard, vous pouvez installer une méthode de gestion d'erreurs vide. La variable système `Error` peut être testée dans n'importe quelle méthode, c'est-à-dire en dehors de la méthode de gestion d'erreurs :
-
-
 
 ```4d
 ON ERR CALL("emptyMethod") //emptyMethod existe mais est vide
 $doc:=Open document( "myFile.txt")
 If (Error=-43)
     ALERT("File not found.")
+End if
+ON ERR CALL.("")
 End if
 ON ERR CALL.("")
 ```
