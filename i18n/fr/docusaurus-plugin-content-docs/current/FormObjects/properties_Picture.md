@@ -11,7 +11,7 @@ Les emplacements suivants peuvent être utilisés pour le chemin d'images statiq
 
 - dans le dossier **Resources** du projet. Convient lorsque vous souhaitez partager des images statiques entre plusieurs formulaires du projet. Dans ce cas, le nom de chemin est "/RESOURCES/<picture path\>".
 - dans un dossier d'images (nommé **Images** par exemple) dans le dossier du formulaire. Convient lorsque les images statiques sont utilisées uniquement dans le formulaire et/ou lorsque vous souhaitez pouvoir déplacer ou dupliquer le formulaire entier dans un ou plusieurs projets. Dans ce cas, le nom de chemin est "<picture path\>" et est résolu à partir de la racine du dossier du formulaire.
-- dans une variable image 4D. L'image doit être chargée en mémoire lors de l'exécution du formulaire. Dans ce cas, le chemin est "var:\<variableName\>".
+- dans une variable image 4D. L'image doit être chargée en mémoire lors de l'exécution du formulaire. Dans ce cas, le chemin est "var:\&#060;variableName\&#062;".
 
 #### Grammaire JSON
 
