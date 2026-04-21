@@ -125,7 +125,7 @@ Si vous souhaitez utiliser une liste déroulante pour gérer les valeurs d'une z
 
 Par exemple, dans le cas d'un champ "Couleur" qui ne peut contenir que les valeurs "Blanc", "Bleu", "Vert" ou "Rouge", il est possible de créer une liste contenant ces valeurs et de l'associer à une liste déroulante qui fait référence au champ "Couleur" 4D. 4D se charge alors de gérer automatiquement la saisie et l’affichage de la valeur courante dans le formulaire.
 
-> Si vous utilisez une énumération hiérarchique, seul le premier niveau sera affiché et sélectionnable. Si vous souhaitez afficher un contenu hiérarchique, vous devez utiliser une [liste hiérarchique](#using-a-hierarchical-choice-list).
+> Si vous utilisez une énumération hiérarchique, seul le premier niveau sera affiché et sélectionnable. Si vous utilisez une énumération hiérarchique, seul le premier niveau sera affiché et sélectionnable.
 
 Pour associer une liste déroulante à un champ ou à une variable, saisissez le nom du champ ou de la variable directement dans le champ [Variable ou expression](properties_Object.md#variable-or-expression) de la liste déroulante dans la liste des propriétés.
 
