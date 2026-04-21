@@ -19,7 +19,7 @@ Estos errores de escritura suelen causar errores de sintaxis (en la imagen anter
 
 ### Errores de sintaxis
 
-Algunos errores sólo se pueden capturar cuando se ejecuta el método. La [ventana de error de sintáxis](#syntax-error-window) aparece cuando ocurre un error durante la ejecución del código. Por ejemplo:
+Algunos errores sólo se pueden capturar cuando se ejecuta el método. Algunos errores sólo se pueden capturar cuando se ejecuta el método. Por ejemplo:
 
 ![syntax-error](../assets/en/Debugging/syntax-error.png)
 
@@ -68,7 +68,7 @@ La ventana de error de sintaxis propone varias opciones:
 
 - **Rastrear**: entra en modo Rastrear/Depurador. Se muestra la ventana del [Depurador](debugger.md). Si la línea actual solo se ha ejecutado parcialmente, es posible que tenga que hacer clic en el botón **rastrear** varias veces.
 
-- **Continuar**: la ejecución continua. La línea con el error puede ser parcialmente ejecutada, dependiendo de donde se encuentre el error. Continúe con precaución: el error puede impedir que el resto de su método se ejecute correctamente. Recomendamos hacer clic en **Continuar** sólo si el error está en una llamada trivial (como `SET WINDOW TITLE`) que no impide ejecutar y probar el resto de su código.
+- **Continuar**: la ejecución continua. La línea con el error puede ser parcialmente ejecutada, dependiendo de donde se encuentre el error. Continúe con precaución: el error puede impedir que el resto de su método se ejecute correctamente. La línea con el error puede ser parcialmente ejecutada, dependiendo de donde se encuentre el error.
 
 :::tip
 
