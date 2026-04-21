@@ -15,7 +15,7 @@ De plus, le client HTTP 4D (commande `HTTP get` par exemple) prend également en
 
 Le protocole TLS (successeur du SSL) a pour but de sécuriser les informations de données entre deux applications—principalement entre un serveur web et un navigateur. Ce protocole est largement répandu et compatible avec la plupart des navigateurs web.
 
-Au niveau de l'architecture réseau, le protocole de sécurité s'insère entre la couche TCP/IP (bas niveau) et le protocole de haut niveau HTTP, pour lequel il est principalement destiné.
+Au niveau de l'architecture réseau, le protocole de sécurité s'insère entre la couche TCP/IP (bas niveau) et le protocole de haut niveau HTTP, pour lequel il est principalement destiné. pour lequel il est principalement destiné.
 
 Configuration du réseau avec TLS :
 
@@ -65,7 +65,7 @@ Les certificats TLS gérés par 4D doivent être au format **PEM**. Si votre pre
 
 4D prend en charge les certificats dans les formats de cryptage standard suivants :
 
-- [**RSA**](https://en.wikipedia.org/wiki/RSA_\\\\(cryptosystem\\\\))
+- [**RSA**](https://en.wikipedia.org/wiki/RSA_\\\\\(cryptosystem\\\\\))
 - [**ECDSA**](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm)
 
 :::info Compatibilité
