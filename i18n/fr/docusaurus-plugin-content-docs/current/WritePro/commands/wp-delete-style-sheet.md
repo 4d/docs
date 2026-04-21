@@ -60,7 +60,7 @@ La commande ne fait rien si le niveau spécifié n'existe pas, ou si la feuille 
 
 ## Exemple 1
 
-To delete a character style sheet "MyCharStyle":
+Pour supprimer une feuille de style de caractère "MyCharStyle" :
 
 ```4d
 WP DELETE STYLE SHEET(wpArea; "MyCharStyle")
