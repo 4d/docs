@@ -32,7 +32,7 @@ Cuando esta propiedad está activada, la altura de cada línea se calcula autom�
 
 :::caution
 
-&#062; Since it requires additional calculations at runtime, the automatic row height option could affect the scrolling fluidity of your list box, in particular when it contains a large number of rows.
+&#062; &#062; Since it requires additional calculations at runtime, the automatic row height option could affect the scrolling fluidity of your list box, in particular when it contains a large number of rows.
 
 :::
 
