@@ -166,8 +166,7 @@ Défini uniquement pour les clés ECDSA : le <!-- REF #CryptoKey.curve.Summary -
 
 |Parameter|Type||Description|
 |---|---|----|---|
-|message|Text|->|Message string to be decoded using `options.encodingEncrypted` and decrypted.|  
-|options|Object|->|Decoding options|
+|message|Text|->|Message string to be decoded using `options.encodingEncrypted` and decrypted.| |options|Object|->|Decoding options|
 |Result|Object|<-|Status|
 </div>
 <!-- END REF -->
@@ -215,8 +214,7 @@ Si le *message* n'a pas pu être déchiffré parce qu'il n'a pas été chiffré 
 
 |Parameter|Type||Description|
 |---|---|----|---|
-|message|Text|->|Message string to be encoded using `options.encodingDecrypted` and encrypted.|  
-|options|Object|->|Encoding options|
+|message|Text|->|Message string to be encoded using `options.encodingDecrypted` and encrypted.| |options|Object|->|Encoding options|
 |Result|Text|<-|Message encrypted and encoded using the `options.encodingEncrypted`|
 </div>
 <!-- END REF -->
@@ -336,7 +334,7 @@ La valeur retournée est la clé publique.
 </div>
 <!-- END REF -->
 
-La fonction `sign()` <!-- REF #CryptoKey.sign().Summary -->signe la représentation utf8 de la chaîne *message*<!-- END REF --> à l'aide des clés objet `CryptoKey` et des *options* fournies. Elle retourne sa signature au format base64 ou base64URL, selon la valeur de l'attribut `options.encoding` que vous avez passé.
+La fonction `sign()` <!-- REF #CryptoKey.sign().Summary -->signe la représentation utf8 de la chaîne *message*<!-- END REF --> à l'aide des clés objet `CryptoKey` et des *options* fournies. à l'aide des clés objet `CryptoKey` et des *options* fournies.
 
 `CryptoKey` doit contenir une clé **privée** valide.
 
@@ -368,7 +366,7 @@ La représentation utf8 de la chaîne *message*.
 <!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
 
 
-Défini uniquement pour les clés RSA : <!-- REF #CryptoKey.size.Summary -->la taille de la clé en octets<!-- END REF -->. Habituellement 2048 (par défaut).
+Défini uniquement pour les clés RSA : <!-- REF #CryptoKey.size.Summary -->la taille de la clé en octets<!-- END REF -->. .
 
 <!-- REF CryptoKey.type -->
 ## .type
