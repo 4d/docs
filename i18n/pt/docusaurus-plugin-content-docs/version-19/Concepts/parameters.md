@@ -51,7 +51,7 @@ Os valores de entrada e saida são [avaliados](#values-or-references) no momento
 - [variáveis numeradas sequencialmente](#sequential-parameters).
 
 
-A utilização de comandos tais como `New process` com métodos processo que aceitem parâmetros também requer que os parâmetros se declarem explicitamente no método chamado. Por exemplo:
+Você também pode declarar apenas o parâmetro de retorno adicionando `: type`, nesse caso estará automaticamente disponível através de `$0` ([ver sintaxe sequencial abaixo](#returned-value-1)). Por exemplo:
 
 ```4d
 Function add($x : Integer)
@@ -132,7 +132,7 @@ Pode declarar o parâmetro retornado de uma função adicionado uma flecha (->) 
 Function add($x : Variant; $y : Integer) -> $result : Integer
 ```
 
-Você também pode declarar apenas o parâmetro de retorno adicionando `: type`, nesse caso estará automaticamente disponível através de `$0` ([ver sintaxe sequencial abaixo](#returned-value-1)). Por exemplo:
+Quando se utiliza la [sintaxe de variáveis nomeadas](#named-parameters), os parámetros se declaram automáticamente através da palavra chave `#DECLARE` ou o prototipo `Function`. Por exemplo:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
@@ -144,8 +144,7 @@ Function add($x : Variant; $y : Integer): Integer
 Os parâmetros, que incluem o valor retornado, devem ser declarados apenas uma vez. Em particular, você não pode declarar o mesmo parâmetro como entrada e saída, mesmo com o mesmo tipo. Por exemplo:
 
 ```qs
-    //declaração inválida
-Function myTransform ($x : Integer) -> $x : Integer 
+    //declaração inválida Function myTransform ($x : Integer) -> $x : Integer 
     //erro: $x é declarado duas vezes
 ```
 
@@ -299,7 +298,7 @@ Esse comando significa que a partir do quarto parâmetro (incluído), o método 
 
 Mesmo não sendo obrigatório em [modo interpretado](Concepts/interpreted.md), deve declarar cada parâmetro nos métodos chamados para evitar problemas.
 
-Quando se utiliza la [sintaxe de variáveis nomeadas](#named-parameters), os parámetros se declaram automáticamente através da palavra chave `#DECLARE` ou o prototipo `Function`. Por exemplo:
+A utilização de comandos tais como `New process` com métodos processo que aceitem parâmetros também requer que os parâmetros se declarem explicitamente no método chamado. Por exemplo:
 
 ```4d
 Função add($x : Variante; $y : Integer)-> $result : Integer
@@ -355,13 +354,13 @@ A declaração de parâmetros também é obrigatóiria nos contextos abaixo (ess
 - Objectos de formulário que aceitam o evento de formulário `On Drag Over` - O parâmetro $0 (Longint), que é o resultado do evento de formulário `On Drag Over` , é tipado pelo compilador se o parâmetro não tiver sido explicitamente declarado. Entretanto, se quiser fazer a declaração, deve fazer isso no método objeto. **Nota:** o compilador não inicializa o parâmetro $0. Portanto, logo que utilizar o evento formulário `On Drag Over`, deve inicializar $0. Por exemplo:
 
 ```4d
- C_LONGINT($0)
- If(Form event code=On Drag Over)
-    $0:=0
-    ...
-    If($DataType=Is picture)
+ If($DataType=Is picture)
        $0:=-1
     End if
+    ...
+    C_LONGINT($0)
+ If(Form event code=On Drag Over)
+    $0:=0
     ...
  End if
 ```
@@ -430,7 +429,7 @@ No método `ChangeAge` anterior, as propriedades Age e Name são obrigatórias e
 ```
 Ambos parâmetros são opcionais: se não forem preenchidos, o resultado será "é 10 anos de idade", mas nenhum erro será gerado.
 
-Finalmente, com parâmetros com nome, a manutenção ou a reprodução das aplicações é muito simples e seguro. Imagine que depois perceba de que adicionar 10 anos não funciona sempre. You need another parameter to set how many years to add. You write: Escreva: Escreve:
+Finalmente, com parâmetros com nome, a manutenção ou a reprodução das aplicações é muito simples e seguro. Imagine que depois perceba de que adicionar 10 anos não funciona sempre. You need another parameter to set how many years to add. You write: Escreva: Escreve: Escreve:
 
 ```4d
 Result:=MySum("##0.00";125,2;33,5;24)
