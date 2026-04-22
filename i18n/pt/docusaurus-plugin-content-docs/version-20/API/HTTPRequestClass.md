@@ -323,7 +323,7 @@ A propriedade `.returnResponseBody` contém <!-- REF #HTTPRequestClass.returnRes
 
 > Esta função é thread segura.
 
-A função `.terminate()` <!-- REF #HTTPRequestClass.terminate().Summary -->aborta o pedido HTTP<!-- END REF -->. Desencadeia o evento `onTerminate` .
+A função `.terminate()` <!-- REF #HTTPRequestClass.terminate().Summary -->aborta o pedido HTTP<!-- END REF -->. .
 
 <!-- END REF -->
 
