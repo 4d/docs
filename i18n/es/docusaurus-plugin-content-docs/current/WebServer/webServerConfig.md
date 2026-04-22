@@ -123,7 +123,7 @@ Estado del archivo de registro de peticiones HTTP del servidor web ([*HTTPDebugL
 
 | Valor | Constante                      | Descripción                                                                                                            |
 | ----- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
-| 0     | wdl disable                    | Los debug logs Web HTTP son desactivados                                                                               |
+| 0     | wdl disable                    | Web HTTP debug log desactivado                                                                                         |
 | 1     | wdl enable without body        | Web HTTP debug log activado sin partes del cuerpo (en este caso se suministra el tamaño del cuerpo) |
 | 3     | wdl enable with response body  | Web HTTP debug log activado con la partes del cuerpo únicamente                                                        |
 | 5     | wdl enable with request body   | Web HTTP debug log activado con la partes del cuerpo en la petición únicamente                                         |

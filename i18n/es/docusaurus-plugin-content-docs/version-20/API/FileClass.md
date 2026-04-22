@@ -481,11 +481,11 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 <!--REF #FileClass.open().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|mode|Text|->|Opening mode: "read", "write", "append"|
-|options|Object|->|Opening options|
-|Result|[4D.FileHandle](FileHandleClass)|<-|New File handle object|
+|mode|Text|->|Modo de apertura: "read", "write", "append"|
+|options|Object|->|Opciones de apertura|
+|Resultado|[4D.FileHandle](FileHandleClass)|<-|New File handle object|
 </div>
 <!-- END REF -->
 

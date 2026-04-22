@@ -90,11 +90,11 @@ Los objetos HTTPRequest ofrecen las siguientes propiedades y funciones:
 <!-- REF #4D.HTTPRequest.new().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|url|Text|->|URL to which to send the request|
-|options|Object|->|Request configuration properties|
-|Result|4D.HTTPRequest|<-|New HTTPRequest object|
+|url|Text|->|URL a la que enviar la solicitud|
+|options|Object|->|Propiedades de configuración de la petición|
+|Resultado|4D.HTTPRequest|<-|New HTTPRequest object|
 </div>
 <!-- END REF -->
 
@@ -375,10 +375,10 @@ La propiedad `.url` contiene <!-- REF #HTTPRequestClass.url.Summary -->la URL de
 <!-- REF #HTTPRequestClass.wait().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|time|Real|->|Maximum time in seconds to wait for the response|
-|Result|4D.HTTPRequest|<-|HTTPRequest object|
+|time|Real|->|Tiempo máximo en segundos para esperar la respuesta|
+|Resultado|4D.HTTPRequest|<-|HTTPRequest object|
 </div>
 <!-- END REF -->
 

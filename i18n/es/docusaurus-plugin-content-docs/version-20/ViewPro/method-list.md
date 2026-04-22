@@ -18,12 +18,12 @@ title: Lista de los métodos
 <!-- REF #_method_.VP ADD FORMULA NAME.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|Parámetro|Tipo| |Descripción|
 |---|---|---|---|
-|vpAreaName| Text|->|4D View Pro area form object name|
+|vpAreaName| Text|->|Nombre del objeto de formulario del área 4D View Pro|
 |vpFormula|Text|-> |4D View Pro formula
-|name|Text|->|Name for the formula|
-|options|Object|->|Options for the named formula|
+|name|Text|->|Nombre para la fórmula|
+|options|Object|->|Opciones para la fórmula nombrada|
 </div>
 <!-- END REF -->
 
@@ -64,11 +64,11 @@ VP ADD FORMULA NAME("ViewProArea";"SUM($A$1:$A$10)";"Total2")
 <!-- REF #_method_.VP ADD RANGE NAME.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
-|---|---|---|---|
-|rangeObj| Object|->|Range object |
-|name|Text|->|Name for the fomula|
-|options|Object|->|Options for the named formula|
+|Parámetro|Tipo| |Descripción|
+|---|-|-|-|---|
+|rangeObj| Object|->|Objeto de rango |
+|name|Text|->|Nombre para la fórmula|
+|options|Object|->|Opciones para la fórmula nombrada||
 </div>
 <!-- END REF -->
 
@@ -152,11 +152,11 @@ Resultado:
 <!-- REF #_method_.VP ADD SHEET.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|Parámetro|Tipo| |Descripción|
 |---|---|---|---|
-|vpAreaName| Text|->|4D View Pro area form object name|
-|index|Integer|-> |Index of the new sheet|
-|name|Text|->|Sheet name|
+|vpAreaName| Text|->|Nombre del objeto de formulario del área 4D View Pro|
+|index|Integer|-> |Índice de la nueva hoja|
+|name|Text|->|Nombre de la hoja|
 </div>
 <!-- END REF -->
 
@@ -245,12 +245,12 @@ Para fusionar las celdas First quarter y Second quarter a través de las dos cel
 <!-- REF #_method_.VP ADD STYLESHEET.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|Parámetro|Tipo| |Descripción|
 |---|---|---|---|
-|vpAreaName| Text|->|4D View Pro area form object name|
-|styleName|Text|-> |Name of style|
-|styleObj|Object|->|Object defining attribute settings|
-|sheet|Integer|->|Sheet index (current sheet if omitted)|
+|vpAreaName| Text|->|Nombre del objeto del formulario del área 4D View Pro|
+|styleName|Text|-> |Nombre del estilo|
+|styleObj|Object|->|Objeto que define la configuración de atributos|
+|sheet|Integer|->|Índice de la hoja (hoja actual si se omite)|
 </div>
 <!-- END REF -->
 
@@ -320,10 +320,10 @@ creará y aplicará el siguiente objeto estilo llamado *GreenDashDotStyle*:
 <!-- REF #_method_.VP All.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|Parámetro|Tipo| |Descripción|
 |---|---|---|---|
-|vpAreaName| Text|->|4D View Pro area form object name|
-|sheet|Integer|->|Sheet index (current sheet if omitted)|
+|vpAreaName| Text|->|Nombre del objeto del formulario del área 4D View Pro|
+|sheet|Integer|->|Índice de la hoja (hoja actual si se omite)|
 |Result|Object|<-|Range object of all cells|
 </div>
 <!-- END REF -->
@@ -358,13 +358,13 @@ $all:=VP All("ViewProArea") // todas las celdas de la hoja actual
 <!-- REF #_method_.VP Cell.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|Parámetro|Tipo| |Descripción|
 |---|---|---|---|
-|vpAreaName| Text|->|4D View Pro area form object name|
-|column|Integer|->|Column index|
-|row|Integer|->|Row index|
-|sheet|Integer|->|Sheet index (current sheet if omitted)|
-|Result|Object|<-|Range object of a single cell|
+|vpAreaName| Text|->|Nombre del objeto formulario del área 4D View Pro|
+|column|Integer|->|Índice de columna|
+|row|Integer|->|Índice de fila|
+|sheet|Integer|->|Índice de hoja (hoja actual si se omite)|
+|Resultado|Object|<-|Range object of a single cell|
 </div>
 <!-- END REF -->
 
@@ -415,14 +415,14 @@ $cell:=VP Cell("ViewProArea";2;4) // C5
 <!-- REF #_method_.VP Cells.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|Parámetro|Tipo| |Descripción|
 |---|---|---|---|
-|vpAreaName| Text|->|4D View Pro area form object name|
-|column| Integer|->|Column index|
-|row| Integer|->|Row index|
-|columnCount| Integer|->|Number of columns|
-|rowCount| Integer|->|Number of rows|
-|sheet|Integer|->|Sheet index (current sheet if omitted)|
+|vpAreaName| Text|->|Nombre del objeto de formulario del área 4D View Pro|
+|column| Integer|->|Índice de columna|
+|fila| Integer|->|Índice de fila|
+|columnCount| Integer|->|Número de columnas|
+|rowCount| Integer|->|Número de filas|
+|sheet|Integer|->|Índice de hoja (hoja actual si se omite)|
 |Result|Object|<-|Range object of cells|
 </div>
 <!-- END REF -->
@@ -467,13 +467,13 @@ $cells:=VP Cells("ViewProArea";2;4;2;3) // de C5 a D7
 <!-- REF #_method_.VP Column.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|Parámetro|Tipo| |Descripción|
 |---|---|---|---|
-|vpAreaName| Text|->|4D View Pro area form object name|
-|column| Integer|->|Column index|
-|columnCount| Integer|->|Number of columns|
-|sheet|Integer|->|Sheet index (current sheet if omitted)|
-|Result|Object|<-|Range object of cells|
+|vpAreaName| Text|->|Nombre del objeto de formulario del área 4D View Pro|
+|column| Integer|->|Índice de columna|
+|columnCount| Integer|->|Número de columnas|
+|sheet|Integer|->|Índice de hoja (hoja actual si se omite)|
+|Resultado|Object|<-|Range object of cells|
 </div>
 <!-- END REF -->
 
@@ -553,11 +553,11 @@ La selección de las columnas y la ejecución de este código:
 <!-- REF #_method_.VP Combine ranges.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|Parámetro|Tipo| |Descripción|
 |---|---|---|---|
-|rangeObj| Object|->|Range object|
-|otherRangeObj| Object|->|Range object|
-|Result| Object|<-|Object containing a combined range|
+|rangeObj| Object|->|Objeto Rango|
+|otherRangeObject| Object|->|Objeto Rango|
+|Resultado| Object|<-|Object containing a combined range|
 </div>
 <!-- END REF -->
 
@@ -625,11 +625,11 @@ $vpObj:=VP Convert from 4D View($pvblob)
 <!-- REF #_method_.VP Convert to picture.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|Parámetro|Tipo| |Descripción|
 |---|---|---|---|
-|vpObject| Object|->|4D View Pro object containing the area to convert|
-|rangeObj| Object|->|Range object|
-|Result| Picture|<-|SVG picture of the area|
+|vpObject| Object|->|Objeto de 4D View Pro que contiene el área a convertir|
+|rangeObj| Object|->Objeto de rango|
+|Resultado| Imagen|<-|SVG picture of the area|
 </div>
 <!-- END REF -->
 
@@ -671,7 +671,7 @@ Quiere convertir un área 4D View Pro en SVG, previsualizar el resultado y envia
 var $vpAreaObj : Object
 var $vPict : Picture
 $vpAreaObj:=VP Export to object("ViewProArea")
-$vPict:=VP Convert to picture($vpAreaObj) //export the whole area
+$vPict:=VP Convertir a imagen($vpAreaObj) //exportar toda el área
 ```
 
 #### Ver también
@@ -693,11 +693,11 @@ $vPict:=VP Convert to picture($vpAreaObj) //export the whole area
 <!-- REF #_method_.VP Copy to object.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|rangeObj|Object|->|Range object|
-|options|Object|->|Additional options|
-|Result|Object|<-|Object returned. Contains the copied data|
+|rangeObj|Object|->|Objeto Rango|
+|opciones|Object|->|Opciones adicionales|
+|Resultado|Object|<-|Object returned. Contains the copied data|
 </div>
 <!-- END REF -->
 
@@ -762,12 +762,12 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 <!-- REF #_method_.VP CREATE TABLE.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|rangeObj|Object|->|Range object|
-|tableName|Text|->|Name for the table|
-|source|Text|->|Data context property name to display in the table|
-|options|[cs.ViewPro.TableOptions](classes.md#tableoptions)|->|Additional options|
+|rangeObj|Object|->|Objeto Rango|
+|tableName|Text|->|Nombre de la tabla|
+|source|Text|->Nombre de la propiedad del contexto de datos a mostrar en la tabla|
+|options|[cs.ViewPro.TableOptions](classes.md#tableoptions)|->|Opciones adicionales|
 </div>
 <!-- END REF -->
 
@@ -877,7 +877,7 @@ En *rangeObj*, pase un objeto que contenga un rango de columnas a eliminar. Si e
 
 * de las columnas y de las líneas, sólo se eliminan las columnas.
 * únicamente las líneas, el comando no hace nada.
-> > Columns are deleted from right to left.
+> Las columnas se borran de derecha a izquierda.
 
 #### Ejemplo
 
@@ -946,11 +946,11 @@ utilice el siguiente código:
 <!-- REF #_method_.VP EXPORT DOCUMENT.Params -->
 <div class="no-index">
 
-|Parameter|Type| |Description|
+|Parámetro|Tipo| |Descripción|
 |---|---|---|---|
-|vpAreaName| Text|->|4D View Pro area form object name|
-|filePath| Text|->|Pathname of the document|
-|paramObj| Object|->|Export options|
+|vpAreaName| Text|->|Nombre del objeto del formulario del área 4D View Pro|
+|filePath| Text|->|Nombre de la ruta del documento|
+|paramObj| Object|->|Opciones de exportación|
 </div>
 <!-- END REF -->
 

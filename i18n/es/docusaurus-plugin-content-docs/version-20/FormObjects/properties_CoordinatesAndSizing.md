@@ -186,7 +186,7 @@ Esta propiedad designa el tamaño horizontal de un objeto.
 
 #### Objetos soportados
 
-[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [Line](shapes_overview.md#line) - [List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
+[Área 4D View Pro](viewProArea_overview.md) -[Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md) - [Área de entrada](input_overview.md) - [Línea](shapes_overview.md#line) - [List Box](listbox_overview.md) - [Columna List Box](listbox-column.md) - [Óvalo](shapes_overview.md#oval) - [Botón imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área de plugins](pluginArea_overview.md) - [Indicadores de progreso](progressIndicator.md) - [Botón radio](radio_overview.md) - [Regla](ruler.md) - [Rectángulo](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Imagen estática](staticPicture.md) - [Stepper](stepper.md) - [Sub-formulario](subform_overview.md) - [Pestaña](tabControl.md) - [Área de texto](text.md) - [Área Web](webArea_overview.md)
 
 ---
 
@@ -291,7 +291,7 @@ Establece un relleno horizontal para las celdas. El valor se establece en píxel
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [Footers](properties_Footers.md) - [Headers](properties_Headers.md)
+[List Box](listbox_overview.md) - [Columna List Box](listbox-column.md) - [Pies de página](properties_Footers.md) - [Encabezados](properties_Headers.md)
 
 #### Ver también
 
@@ -311,7 +311,7 @@ Establece un relleno vertical para las celdas. El valor se establece en píxeles
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md) - [List Box Column](listbox-column.md) - [Footers](properties_Footers.md) - [Headers](properties_Headers.md)
+[List Box](listbox_overview.md) - [Columna List Box](listbox-column.md) - [Pies de página](properties_Footers.md) - [Encabezados](properties_Headers.md)
 
 #### Ver también
 
