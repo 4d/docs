@@ -129,7 +129,7 @@ For($vlChar;1;Length(vtSomeText))
 End for
 ```
 
-Um método projeto pode chamar a outro método projeto com ou sem parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). A method can return a single value in a parameter, which have to be declared. Os parâmetros estão disponíveis dentro do método chamado como variáveis locais numeradas sequencialmente: $1, $2,..., $n. Um método pode devolver um único valor no parâmetro $0. Quando chamar um método, apenas digite seu nome:
+Um método projeto pode chamar a outro método projeto com ou sem parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). Os parâmetros estão disponíveis dentro do método chamado como variáveis locais numeradas sequencialmente: $1, $2,..., $n. Um método pode devolver um único valor no parâmetro $0. Os parâmetros estão disponíveis dentro do método chamado como variáveis locais numeradas sequencialmente: $1, $2,..., $n. Um método pode devolver um único valor no parâmetro $0. A method can return a single value in a parameter, which have to be declared.
 
 ```4d
 $myText:="hello"
@@ -373,7 +373,7 @@ Insira `//` no início de uma linha ou após uma instrução para adicionar um c
 
 Contorne o conteúdo com `/*` ... caracteres `*/` para criar comentários em linha ou blocos de comentários de várias linhas. Ambos os blocos de comentário em linha e em várias linhas começam com `/*` e terminam com `*/`.
 
-- **As linhas de comentários podem ser inseridos em qualquer parte do código.** Exemplo:
+- Pode manipular objectos e colecções da linguagem 4D utilizando a notação de objeto para obter ou definir os seus valores. Exemplo:
 
 ```4d
 For /* linha de comentário */ ($vCounter;1;100)
