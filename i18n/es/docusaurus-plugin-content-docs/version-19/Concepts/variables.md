@@ -119,7 +119,7 @@ var $entity : cs.EmployeeEntity
 
 ### Utilizando un C_ directive
 
-> **Nota:** los parámetros $1, $2... pasados a los métodos son variables locales. Se recomienda utilizar la palabra clave [var](#using-the-var-keyword).
+> **Nota de compatibilidad:** no se recomienda esta funcionalidad para declarar variables dentro de métodos. Se recomienda utilizar la palabra clave [var](#using-the-var-keyword).
 
 Las directivas del tema "Compilador" permiten declarar variables de tipos básicos.
 
@@ -199,7 +199,7 @@ Con frecuencia, en una aplicación, se necesitan pequeñas piezas de informació
 
 Este método simplemente pide al usuario que introduzca un ID. Pone la respuesta en una variable local, $vsID, y luego busca el ID que el usuario introdujo. Cuando este método termina, la variable local $vsID se borra de la memoria. Este funcionamiento está bien, porque la variable se necesita sólo una vez y sólo en este método.
 
-**Nota de compatibilidad:** no se recomienda esta funcionalidad para declarar variables dentro de métodos. Se recomienda utilizar la palabra clave [var](#using-the-var-keyword).
+**Nota:** los parámetros $1, $2... pasados a los métodos son variables locales. Se recomienda utilizar la palabra clave [var](#using-the-var-keyword).
 
 ### Variables proceso
 
@@ -234,7 +234,7 @@ En modo cliente/servidor, cada máquina (cliente y servidor) comparten la misma 
 
 ## Variables del sistema
 
-El lenguaje 4D maneja varias **variables sistema**, las cuales le permiten controlar la ejecución de diferentes operaciones. Puedes probar sus valores y usarlos como cualquier variable. Todas las variables del sistema son [variables proceso](#process-variables).
+El lenguaje 4D maneja varias **variables sistema**, las cuales le permiten controlar la ejecución de diferentes operaciones. Puedes probar sus valores y usarlos como cualquier variable. Puedes probar sus valores y usarlos como cualquier variable.
 
 Las variables del sistema son utilizadas por los comandos 4D. Consulte el párrafo "Variables del sistema y conjuntos" en la descripción de un comando para averiguar si afecta a una variable del sistema.
 
@@ -246,7 +246,7 @@ Las variables del sistema son utilizadas por los comandos 4D. Consulte el párra
 | `FldDelimit`, `RecDelimit`                             | Integer       | Contienen los códigos de caracteres que se utilizarán respectivamente como separador de campos (por defecto es **Tabulación** (9)) y separador de registros (por defecto es **retorno de carro** (13)) al importar o exportar texto. Para utilizar un separador diferente, asigne un nuevo valor a la variable del sistema. |
 | `Error`, `Error method`, `Error line`, `Error formula` | Text, Longint | Utilizado en un método de captura de errores instalado por el comando [`ON ERR CALL`](https://doc.4d.com/4dv20/help/command/en/page155.html). Ver [Gestión de errores dentro del método](../Concepts/error-handling.md#handling-errors-within-the-method).                                                                  |
 | `MouseDown`                                            | Integer       | Utilizado en un método instalado por el comando [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/en/page190.html). Toma el valor 1 cuando se presiona el botón del ratón, de lo contrario 0.                                                                                                                         |
-| `MouseX`, `MouseY`                                     | Integer       | Utilizado en un método instalado por el comando [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/en/page190.html). <li>En un evento `MouseDown=1`, `MouseX` y `MouseY` se establecen respectivamente en las coordenadas verticales y horizontales del clic. Ambos valores se expresan en píxeles y utilizan el sistema de coordenadas local de la ventana. </li><li>En el caso de un campo imagen o variable, `MouseX` y `MouseY` devuelven las coordenadas locales de un clic de ratón en los eventos de formulario [`On Clicked`](../Events/onClicked.md), [`On Double Clicked`](../Events/onDoubleClicked.md) y [`On Mouse Up`](../Events/onMouseUp.md). Las coordenadas locales del cursor del ratón también se retornan en los eventos formulario [`On Mouse Enter`](../Events/onMouseEnter.md) y [`On Mouse Move`](../Events/onMouseMove.md). Para obtener más información, consulte la sección [Coordenadas del ratón en una imagen](../FormEditor/pictures.md#coordenadas-del-ratón-en-una-imagen).</li>                                                                                                                                                 |
+| `MouseX`, `MouseY`                                     | Integer       | Utilizado en un método instalado por el comando [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/en/page190.html). <li>En un evento `MouseDown=1`, `MouseX` y `MouseY` se establecen respectivamente en las coordenadas verticales y horizontales del clic. Ambos valores se expresan en píxeles y utilizan el sistema de coordenadas local de la ventana. </li><li>En el caso de un campo imagen o variable, `MouseX` y `MouseY` devuelven las coordenadas locales de un clic de ratón en los eventos de formulario [`On Clicked`](../Events/onClicked.md), [`On Double Clicked`](../Events/onDoubleClicked.md) y [`On Mouse Up`](../Events/onMouseUp.md). Las coordenadas locales del cursor del ratón también se retornan en los eventos formulario [`On Mouse Enter`](../Events/onMouseEnter.md) y [`On Mouse Move`](../Events/onMouseMove.md). Las coordenadas locales del cursor del ratón también se retornan en los eventos formulario [`On Mouse Enter`](../Events/onMouseEnter.md) y [`On Mouse Move`](../Events/onMouseMove.md).</li>                                                                                                                                                 |
 | `KeyCode`                                              | Integer       | Utilizado en un método instalado por el comando [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/en/page190.html). Define el código de carácter de la tecla que se acaba de presionar. Si la tecla es una tecla de función, `KeyCode` se establece como un código especial.                                          |
 | `Modifiers`                                            | Integer       | Utilizado en un método instalado por el comando [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/en/page190.html). Establece las teclas modificadoras del teclado (Ctrl/Command, Alt/Option, Shift, Caps Lock).                                                                                                      |
 | `MouseProc`                                            | Integer       | Utilizado en un método instalado por el comando [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/en/page190.html). Define el número de proceso en el que tuvo lugar el último evento                                                                                                                                 |
