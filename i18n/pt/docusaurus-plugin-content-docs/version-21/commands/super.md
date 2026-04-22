@@ -40,9 +40,7 @@ A palavra-chave `Super` <!-- REF #_command_.Super.Summary -->permite chamadas à
 
 ```4d
 // dentro do construtor myClass
-var $text1; $text2 : Text
-Super($text1) //chama o construtor da superclasse com um parâmetro de texto
-This.param:=$text2 // usa o segundo parâmetro
+var $text1; $text2 : Text Super($text1) //chama o construtor da superclasse com um parâmetro de texto This.param:=$text2 // usa o segundo parâmetro
 ```
 
 2. Dentro de uma [função da classe](../Concepts/classes.md#function), `Super` designa o protótipo da [`superclass`](../API/ClassClass.md#superclass) e permite chamar uma função da hierarquia da superclasse.
