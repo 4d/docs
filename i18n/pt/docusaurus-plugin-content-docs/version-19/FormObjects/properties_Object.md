@@ -184,7 +184,7 @@ A coleção ou a seleção da entidade deve estar disponível para o formulário
 
 - se você usou uma coleção de objetos, poderá chamar **This** na expressão do datasource para acessar cada valor de propriedade, por exemplo, `This.<propertyPath>`.
 - se você usou uma seleção de entidade, poderá chamar **This** na expressão de fonte de dados para acessar cada valor de atributo, por exemplo, `This.<attributePath>`.
-> Se você usou uma coleção de valores escalares (e não objetos), 4D permite que você exiba cada valor chamando **This.value** na expressão de fonte de dados. No entanto, neste caso, você não conseguirá modificar valores ou acessar o objeto atual (veja abaixo).
+> > Se você usou uma coleção de valores escalares (e não objetos), 4D permite que você exiba cada valor chamando **This.value** na expressão de fonte de dados. No entanto, neste caso, você não conseguirá modificar valores ou acessar o objeto atual (veja abaixo).
 
 #### Gramática JSON
 
