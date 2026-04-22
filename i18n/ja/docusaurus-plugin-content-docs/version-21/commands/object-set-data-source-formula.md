@@ -32,9 +32,9 @@ displayed_sidebar: docs
 
 ## 説明
 
-**OBJECT SET DATA SOURCE FORMULA** コマンドは、<!--REF #_command_.OBJECT SET DATA SOURCE FORMULA.Summary--> *object* 引数と *\** で指定したオブジェクトのデータソースとしてフォーミュラ(式)を割り当てます<!-- END REF-->。 フォーミュラは [`4D.Formula`](../API/FunctionClass.md#formula-objects) オブジェクトとしてとして提供されていなければなりません。
+**OBJECT SET DATA SOURCE FORMULA** コマンドは、<!--REF #_command_.OBJECT SET DATA SOURCE FORMULA.Summary--> *object* 引数と *\** で指定したオブジェクトのデータソースとしてフォーミュラ(式)を割り当てます<!-- END REF-->。 フォーミュラは [`4D.Formula`](../API/FunctionClass.md#formula-objects) オブジェクトとしてとして提供されていなければなりません。 フォーミュラは [`4D.Formula`](../API/FunctionClass.md#formula-objects) オブジェクトとしてとして提供されていなければなりません。
 
-任意の *\** 演算子を渡した場合、 *object* 引数でオブジェクト名を文字列で指定します。 この演算子を省略した場合には *object* 引数でフィールドまたは変数を指定します。 この場合、文字列ではなくてフィールドまたは変数参照を渡します(フィールドまたは変数オブジェクトのみ)。
+任意の *\** 演算子を渡した場合、 *object* 引数でオブジェクト名を文字列で指定します。 この演算子を省略した場合には *object* 引数でフィールドまたは変数を指定します。 任意の *\** 演算子を渡した場合、 *object* 引数でオブジェクト名を文字列で指定します。 この演算子を省略した場合には *object* 引数でフィールドまたは変数を指定します。 この場合、文字列ではなくてフィールドまたは変数参照を渡します(フィールドまたは変数オブジェクトのみ)。
 
 *formula* 引数のフォーミュラは、ランタイムでオブジェクトが値を取得するためのソースとして機能します。 これによって、計算された値、条件付き表示、あるいは派生データなどの動的な動作が可能になります。
 
