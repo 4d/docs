@@ -189,8 +189,7 @@ $p:=component_method2(...)
 Sem um ponteiro, um componente ainda pode acessar o valor de uma variável do banco de dados do host (mas não a própria variável) e vice-versa:
 
 ```4d
-//No banco de dados host
-C_TEXT($input_t)
+//No banco de dados host C_TEXT($input_t)
 $input_t:="DoSomething"
 component_method($input_t)
 // component_method gets "DoSome" in $1 (mas não na variável $input_t)
