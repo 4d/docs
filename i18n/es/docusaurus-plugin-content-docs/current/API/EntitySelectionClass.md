@@ -212,7 +212,7 @@ El objeto resultante es una entity selection de la dataclass Employee sin duplic
 
 La función `.add()` <!-- REF #EntitySelectionClass.add().Summary -->añade la *entity* o *entitySelection* especificada a la selección de entidades original y devuelve la selección de entidades modificada<!-- END REF -->.
 
-> Los valores de tipo Date se convierten en valores numéricos (segundos) y se utilizan para calcular la media.
+> Esta función sólo funciona con un datastore remoto (cliente/servidor o conexión <code>Open datastore</code>).
 
 :::info atención
 
@@ -228,7 +228,7 @@ La entity selection debe ser *modificable*, es decir, ha sido creada, por ejempl
 **Añadir una selección de entidades**
 
 - Si la selección de entidades está ordenada, se mantiene su orden y se añade *entitySelection* al final de la selección. Si las referencias a las mismas entidades de *entitySelection* ya pertenecen a la selección de entidades, se duplican y se añaden nuevas referencias.
-- Si la selección de entidades está desordenada, se convierte en ordenada.
+- Si no se encuentran entidades coincidentes, se devuelve una <code>EntitySelection</code> vacía.
 
 > Para más información, consulte la sección [Selección de entidades ordenadas o no ordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
 
@@ -305,7 +305,7 @@ $sellist2:=$sellist2.add($sellist1)
 La función `.and()` <!-- REF #EntitySelectionClass.and().Summary -->combina la entity selection con un parámetro *entity* o *entitySelection* utilizando el operador lógico AND<!-- END REF -->; devuelve una nueva entity selection desordenada que contiene sólo las entidades a las que se hace referencia tanto en la entity selection como en el parámetro.
 
 - Si pasa *entity* como parámetro, se combina esta entidad con la entity selection. Si la entidad pertenece a la entity selection, se devuelve una nueva entity selection que sólo contiene la entidad. En caso contrario, se devuelve una selección de entidades vacía.
-- Si se pasa *entitySelection* como parámetro, se combinan ambas selecciones de entidades. If the entity belongs to the entity selection, a new reference to the entity selection is returned. Otherwise, a new entity selection containing the original entity selection and the entity is returned.
+- Si se pasa *entitySelection* como parámetro, se combinan ambas selecciones de entidades. Se devuelve una nueva selección de entidades que contiene sólo las entidades a las que se hace referencia en ambas selecciones. A new entity selection that contains only the entities that are referenced in both selections is returned.
 
 > Puede comparar las [entity selections ordenadas y/o desordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). La selección resultante es siempre desordenada.
 
@@ -423,7 +423,7 @@ Pase en el parámetro *attributePath* la ruta del atributo a evaluar.
 
 Sólo se tienen en cuenta los valores numéricos para el cálculo. Tenga en cuenta, sin embargo, que si el *attributePath* de la selección de entidades contiene tipos de valores mixtos, `.average()` tiene en cuenta todos los elementos escalares para calcular el valor medio.
 
-> Para más información sobre propiedad compartible de entity selections, consulte la sección <a href="ORDA/entities.md#shareable-or-alterable-entity-selections">Entity selections compartibles o modificables</a>.
+> Los valores de tipo Date se convierten en valores numéricos (segundos) y se utilizan para calcular la media.
 
 `.average()` devuelve **undefined** si la entity selection está vacía o *attributePath* no contiene valores numéricos.
 
@@ -945,7 +945,7 @@ Si se indican varios *attributePath*, debe indicarse un *targetPath* para cada u
 - Los atributos dataclass con [.kind](DataClassClass.md#attributename) = "relatedEntity" se extraen como una entidad.
 - Los atributos dataclass con [.kind](DataClassClass.md#attributename) = "relatedEntities" se extraen como una selección de entidades.
 
-> Los valores Null se evalúan como inferiores a los otros valores.
+> Las entidades de una colección de entidades a las que se accede por medio de \[ ] no se recargan desde la base de datos.
 
 #### Ejemplo
 
@@ -1233,7 +1233,7 @@ Form.products.add(Form.product)
 
 La función `.isOrdered()` <!-- REF #EntitySelectionClass.isOrdered().Summary --> devuelve True si la entity selection está ordenada<!-- END REF -->, y False si está desordenada.
 
-> Esta función no modifica la selección de entidades original.
+> Esta función siempre devuelve True cuando la entity selection proviene de un datastore remoto.
 
 Para más información, consulte [Selección de entidades ordenadas o no ordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
 
@@ -2110,7 +2110,7 @@ La entity selection devuelta contiene las entidades especificadas por *startFrom
 - Si *end* < 0, se recalcula como *end:=end+length*.
 - Si *end < startFrom* (valores pasados o calculados), el método no hace nada.
 
-<code>.sum()</code> devuelve 0 si la entity selection está vacía.
+Si la entity selection contiene entidades que se han eliminado mientras tanto, también se devuelven.
 
 #### Ejemplo 1
 
@@ -2222,7 +2222,7 @@ $sum:=$sel.sum("salary")
 
 La función `.toCollection()` <!-- REF #EntitySelectionClass.toCollection().Summary -->crea y devuelve una colección donde cada elemento es un objeto que contiene un conjunto de propiedades y valores <!-- END REF -->correspondientes a los nombres y valores de los atributos de la entity selection.
 
-Si no se pasa ningún parámetro de filtro o si el primer parámetro contiene una cadena vacía o "\*", se extraen todos los atributos. Los atributos con la propiedad [kind](DataClassClass.md#attributename) como "relatedEntity" se extraen con la forma simple: un objeto con la propiedad \_\_KEY (llave primaria). Los atributos con la propiedad kind como "relatedEntities" no se extraen.
+Si no se pasa ningún parámetro de filtro o si el primer parámetro contiene una cadena vacía o "\*", se extraen todos los atributos. Los atributos con la propiedad [kind](DataClassClass.md#attributename) como "relatedEntity" se extraen con la forma simple: un objeto con la propiedad \_\*KEY (llave primaria). Los atributos con la propiedad <a href="DataClassClass.md#attributename">kind</a> como "relatedEntity" se extraen con el formulario simple: un objeto con la propiedad \*\_KEY (llave primaria).
 
 O bien, puede designar los atributos de la entidad a extraer utilizando un parámetro de filtro. Puede utilizar uno de estos dos filtros:
 
@@ -2425,7 +2425,7 @@ $employeesCollection:=New collection
 $employeesCollection:=$employees.toCollection("firstName,lastName,employer")
 ```
 
-Ejemplo con el tipo <code>relatedEntity</code> con una forma simple:
+devuelve:
 
 ```4d
 [
