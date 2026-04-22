@@ -19,7 +19,8 @@ Los botones imagen pueden utilizarse de dos maneras:
   | Use Last Frame as Disabled | useLastFrameAsDisabled | true  |
 
 - Como botón de imagen que permite al usuario elegir entre varias opciones. En este caso, se puede utilizar un botón de imagen en lugar de un menú de imagen emergente. Como botón de imagen que permite al usuario elegir entre varias opciones.  
-  En este caso, se puede utilizar un botón de imagen en lugar de un menú de imagen emergente. Supongamos que quiere dar a los usuarios de una aplicación personalizada la posibilidad de elegir el idioma de la interfaz de la aplicación. La opción se implementa como un botón imagen en una caja de diálogo personalizada de propiedades:
+  En este caso, se puede utilizar un botón de imagen en lugar de un menú de imagen emergente. Con los <a href="picturePopupMenu_overview.md">Menús emergergentes imagen</a>, todas las opciones se muestran simultáneamente (como los elementos del menú emergente), mientras que un botón imagen muestra las opciones consecutivamente (a medida que el usuario hace clic en el botón).<br x-id="3" />
+  Este es un ejemplo de botón imagen. Supongamos que quiere dar a los usuarios de una aplicación personalizada la posibilidad de elegir el idioma de la interfaz de la aplicación.
 
 ![](../assets/en/FormObjects/button_pictureButton.png)
 
