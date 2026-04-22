@@ -165,7 +165,7 @@ Além disso, os seguintes atributos de relação também estarão automaticament
 - en la dataclass Project: el atributo **theClient**, del tipo "relatedEntity"; hay como máximo una Empresa para cada Proyecto (el cliente)
 - en la dataclass Company: el atributo **companyProjects**, del tipo "relatedEntities"; para cada empresa existe un cierto número de proyectos relacionados.
 
-> &#062; &#062; &#062; &#062; A propriedade Manual ou Automática de uma relação de banco de dados não tem efeito no ORDA.
+> &#062; &#062; &#062; &#062; &#062; A propriedade Manual ou Automática de uma relação de banco de dados não tem efeito no ORDA.
 
 Todos os atributos da dataclass são expostos como propriedades da dataclass:
 
@@ -179,7 +179,7 @@ Los [atributos calculados](ordaClasses.md#computed-attributes) y [alias](ordaCla
 
 ### Entity
 
-Uma entidade é o equivalente a um registo. Na verdade, é um objeto que referir-se a um registo no banco de dados. Puede verse como una instancia de una [dataclass](#dataclass), como un registro de la tabla correspondiente a la dataclass. No entanto, uma entidade também contém dados correlacionados ao banco de dados relacionado ao datastore.
+Uma entidade é o equivalente a um registo. Na verdade, é um objeto que referir-se a um registo no banco de dados. Uma entidade é o equivalente a um registo. No entanto, uma entidade também contém dados correlacionados ao banco de dados relacionado ao datastore.
 
 O objetivo da entidade é gerir dados (criar, atualizar, apagar). Quando uma referência de entidade é obtida por uma seleção de entidade, ela também retém informações sobre a seleção de entidade, o que permite a iteração por meio da seleção.
 
