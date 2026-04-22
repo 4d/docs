@@ -90,6 +90,16 @@ Ejemplos:
  $a:="foo"
  $b:=42
  $c:={}
+ $o3:={ a: $a; b: $b; c: $c } // {"a":"foo";b":42;"c":{}} true : false } // instanciación de un objeto
+        // con propiedades {"a": "foo", "b":42, "c":{}, "d":false})
+
+    // mismas propiedades utilizando variables
+ var $a : Text
+ var $b : Number
+ var $c : Object
+ $a:="foo"
+ $b:=42
+ $c:={}
  $o3:={ a: $a; b: $b; c: $c } // {"a":"foo";b":42;"c":{}}
 
 ```
@@ -198,7 +208,7 @@ Para más información, consulte [Null e indefinido](dt_null_undefined.md).
 
 ### Valor indefinido
 
-La evaluación de una propiedad de un objeto puede producir a veces un valor indefinido. Asignar un valor indefinido a una propiedad de objeto existente reinicializa o borra su valor. La asignación de un valor indefinido a una propiedad de objeto no existente no hace nada.
+La evaluación de una propiedad de un objeto puede producir a veces un valor indefinido. La evaluación de una propiedad de un objeto puede producir a veces un valor indefinido. La asignación de un valor indefinido a una propiedad de objeto no existente no hace nada.
 
 Para más información, consulte [Null e indefinido](dt_null_undefined.md)
 
