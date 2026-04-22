@@ -3,7 +3,7 @@ id: WebSocketServerClass
 title: WebSocketServer
 ---
 
-`WebSocketServer` クラスを使って、4D で WebSocketサーバーを作成および設定することができます。 4D WebSocketサーバーがアクティブになると、[`WebSocketConnection` クラス](WebSocketConnectionClass.md) を使用して 4D とクライアント間で WebSocket 接続を開き、使用することができます。
+`WebSocketServer` クラスを使って、4D で WebSocketサーバーを作成および設定することができます。 `WebSocketServer` クラスを使って、4D で WebSocketサーバーを作成および設定することができます。 4D WebSocketサーバーがアクティブになると、[`WebSocketConnection` クラス](WebSocketConnectionClass.md) を使用して 4D とクライアント間で WebSocket 接続を開き、使用することができます。
 
 <details><summary>履歴</summary>
 
@@ -118,11 +118,11 @@ WebSocketサーバーオブジェクトは、以下のプロパティと機能�
 
 `4D.WebSocketServer.new()` 関数は、<!-- REF #4D.WebSocketServer.new().Summary -->指定した *WSSHandler* コールバックと、*options* の設定 (任意) を使用して WebSocketサーバーを作成および起動し、`4D.WebSocketServer` オブジェクトを返します<!-- END REF -->。
 
-この関数を呼び出すには、[4D Webサーバー](WebServerClass.md) が起動されている必要があります。 WebSocketサーバーの **ホスト** と **ポート** は、4D Webサーバーのホストとポートと同じです。
+この関数を呼び出すには、[4D Webサーバー](WebServerClass.md) が起動されている必要があります。 WebSocketサーバーの **ホスト** と **ポート** は、4D Webサーバーのホストとポートと同じです。 WebSocketサーバーの **ホスト** と **ポート** は、4D Webサーバーのホストとポートと同じです。
 
 ### *WSSHandler* 引数
 
-*WSSHandler* 引数には、WebSocketサーバーでイベント (主に接続イベント) が発生するたびに呼び出されるユーザークラスのインスタンスを渡します。 このクラスでは、以下のコールバック関数を定義します (`onConnection` のみ必須):
+*WSSHandler* 引数には、WebSocketサーバーでイベント (主に接続イベント) が発生するたびに呼び出されるユーザークラスのインスタンスを渡します。 このクラスでは、以下のコールバック関数を定義します (`onConnection` のみ必須): このクラスでは、以下のコールバック関数を定義します (`onConnection` のみ必須):
 
 | プロパティ        | 型                            | 説明                                                                        | デフォルト     |
 | ------------ | ---------------------------- | ------------------------------------------------------------------------- | --------- |
@@ -133,15 +133,15 @@ WebSocketサーバーオブジェクトは、以下のプロパティと機能�
 
 **WSHandler.onConnection**(*WSServer* : Object ; *event* : Object) : Object | null
 
-| 引数       |         | 型                                  |                             | 説明                                                                                                                                                                                                                                                                                                                                                                    |
-| -------- | ------- | ---------------------------------- | :-------------------------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| WSServer |         | 4D.WebSocketServer | <- | カレントの WebSocketサーバーオブジェクト                                                                                                                                                                                                                                                                                                                                             |
-| event    |         | Object                             | <- | 引数                                                                                                                                                                                                                                                                                                                                                                    |
-|          | type    | Text                               |                             | "connection"                                                                                                                                                                                                                                                                                                                                                          |
-|          | request | Object                             |                             | `request` オブジェクト。 接続要求に関する情報を格納します (後述参照)                                                                                                                                                                                                                                                                                                          |
-| 戻り値      |         | Object                             |              ->             | [`connectionHandler` オブジェクト](#connectionhandler-オブジェクト) (後述参照)。 この関数が `connectionHandler` オブジェクトを返す場合、[`4D.WebSocketConnection` オブジェクト](WebSocketConnectionClass.md#websocketconnection-オブジェクト) が自動的に作成され、[カレント接続のコレクション](#connections) に追加されます。 その後、このオブジェクトは `connectionHandler` オブジェクトの各関数に引数として受け取られます。 戻り値が null または undefined の場合、接続は解除されます。 |
+| 引数       |         | 型                                  |                             | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| -------- | ------- | ---------------------------------- | :-------------------------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| WSServer |         | 4D.WebSocketServer | <- | カレントの WebSocketサーバーオブジェクト                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| event    |         | Object                             | <- | 引数                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|          | type    | Text                               |                             | "connection"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|          | request | Object                             |                             | `request` オブジェクト。 接続要求に関する情報を格納します (後述参照)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| 戻り値      |         | Object                             |              ->             | [`connectionHandler` オブジェクト](#connectionhandler-オブジェクト) (後述参照)。 [`connectionHandler` オブジェクト](#connectionhandler-オブジェクト) (後述参照)。 この関数が `connectionHandler` オブジェクトを返す場合、[`4D.WebSocketConnection` オブジェクト](WebSocketConnectionClass.md#websocketconnection-オブジェクト) が自動的に作成され、[カレント接続のコレクション](#connections) に追加されます。 その後、このオブジェクトは `connectionHandler` オブジェクトの各関数に引数として受け取られます。 戻り値が null または undefined の場合、接続は解除されます。 その後、このオブジェクトは `connectionHandler` オブジェクトの各関数に引数として受け取られます。 戻り値が null または undefined の場合、接続は解除されます。 |
 
-このコールバックは、ハンドシェイクが完了したときに呼び出されます。 WebSocket 接続を作成するためには、有効な [`connectionHandler` オブジェクト](#connectionhandler-オブジェクト) を指定して呼び出す必要があり、そうでない場合は接続がキャンセルされます。
+このコールバックは、ハンドシェイクが完了したときに呼び出されます。 このコールバックは、ハンドシェイクが完了したときに呼び出されます。 WebSocket 接続を作成するためには、有効な [`connectionHandler` オブジェクト](#connectionhandler-オブジェクト) を指定して呼び出す必要があり、そうでない場合は接続がキャンセルされます。
 
 **WSHandler.onOpen**(*WSServer* : Object ; *event* : Object)
 
@@ -210,16 +210,16 @@ LogFile("!!! サーバーエラー: "+$event.errors.first().message)
 
 `request` オブジェクトには、次のプロパティが格納されています:
 
-| 引数            | 型      | 説明                                                                                                                         |
-| ------------- | ------ | -------------------------------------------------------------------------------------------------------------------------- |
-| headers       | Object | クライアントの HTTP GET リクエスト。 `headers.key=value` (同じ key を複数指定する場合、value にコレクションを使用できます)                     |
-| query         | Object | URL 引数を含むオブジェクト。 たとえば、引数が以下のような場合: `?key1=value1&key2=value2` -> `query.key1=value1`, `query.key2=value2`。 |
-| url           | Text   | 実際の HTTPリクエストにおける URL の部分を格納します。 例: `GET /status?name=ryan HTTP/1.1` -> url="/status?name=ryan"            |
-| remoteAddress | Text   | クライアントの IPアドレス                                                                                                             |
+| 引数            | 型      | 説明                                                                                                                                               |
+| ------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| headers       | Object | クライアントの HTTP GET リクエスト。 クライアントの HTTP GET リクエスト。 `headers.key=value` (同じ key を複数指定する場合、value にコレクションを使用できます)                   |
+| query         | Object | URL 引数を含むオブジェクト。 URL 引数を含むオブジェクト。 たとえば、引数が以下のような場合: `?key1=value1&key2=value2` -> `query.key1=value1`, `query.key2=value2`。      |
+| url           | Text   | 実際の HTTPリクエストにおける URL の部分を格納します。 実際の HTTPリクエストにおける URL の部分を格納します。 例: `GET /status?name=ryan HTTP/1.1` -> url="/status?name=ryan" |
+| remoteAddress | Text   | クライアントの IPアドレス                                                                                                                                   |
 
 ### `connectionHandler` オブジェクト
 
-`WSHandler.onConnection` コールバックの結果として、`connectionHandler` オブジェクトを渡します。これは、WebSocket 接続でイベントが発生するたび (主にメッセージが受信されるたび) に呼び出されるユーザークラスのインスタンスです。 このクラスでは、以下のコールバック関数を定義します (`onMessage` のみ必須):
+`WSHandler.onConnection` コールバックの結果として、`connectionHandler` オブジェクトを渡します。これは、WebSocket 接続でイベントが発生するたび (主にメッセージが受信されるたび) に呼び出されるユーザークラスのインスタンスです。 このクラスでは、以下のコールバック関数を定義します (`onMessage` のみ必須): このクラスでは、以下のコールバック関数を定義します (`onMessage` のみ必須):
 
 | 引数          | 型                            | 説明                                                     |
 | ----------- | ---------------------------- | ------------------------------------------------------ |
@@ -251,13 +251,13 @@ WebSocket データ用のコールバックです。 WebSocket がデータを�
 
 **connectionHandler.onTerminate**(*ws* : 4D.WebSocketConnection ; *event* : Object)
 
-| 引数    |        | 型                                                       |                             | 説明                                                                                                       |
-| ----- | ------ | ------------------------------------------------------- | :-------------------------: | -------------------------------------------------------------------------------------------------------- |
-| ws    |        | [`4D.WebSocketConnection`](WebSocketConnectionClass.md) | <- | カレントの WebSocket 接続オブジェクト                                                                                 |
-| event |        | Object                                                  | <- | 引数                                                                                                       |
-|       | type   | Text                                                    |                             | "terminate"                                                                                              |
-|       | code   | Number                                                  |                             | 接続が切断された理由を示すステータスコード。 WebSocket がエラーコードを返さない場合、エラーが発生しなかった場合は `code` が 1005 に、エラーが発生した場合は 1006 に設定されます。 |
-|       | reason | Text                                                    |                             | 接続が切断された理由を説明するテキスト。 WebSocket が理由を返さない場合、reason は未定義です。                                                 |
+| 引数    |        | 型                                                       |                             | 説明                                                                                                                              |
+| ----- | ------ | ------------------------------------------------------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------------- |
+| ws    |        | [`4D.WebSocketConnection`](WebSocketConnectionClass.md) | <- | カレントの WebSocket 接続オブジェクト                                                                                                        |
+| event |        | Object                                                  | <- | 引数                                                                                                                              |
+|       | type   | Text                                                    |                             | "terminate"                                                                                                                     |
+|       | code   | Number                                                  |                             | 接続が切断された理由を示すステータスコード。 接続が切断された理由を示すステータスコード。 WebSocket がエラーコードを返さない場合、エラーが発生しなかった場合は `code` が 1005 に、エラーが発生した場合は 1006 に設定されます。 |
+|       | reason | Text                                                    |                             | 接続が切断された理由を説明するテキスト。 WebSocket が理由を返さない場合、reason は未定義です。                                                                        |
 
 WebSocket 終了したときに呼び出されます。
 
@@ -309,10 +309,10 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 任意の *options* 引数には、以下のプロパティを持つオブジェクトを渡します:
 
-| プロパティ    | 型    | 説明                                                                                                                                                                                                                                                                                                        | デフォルト     |
-| -------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
-| path     | Text | WebSocketサーバーにアクセスするためのパス。 パスが定義されていない場合、WebSocketサーバーはすべての接続を管理します                                                                                                                                                                                                                                       | undefined |
-| dataType | Text | `connectionHandler.onMessage` で受信するデータ、および [`WebSocketConnection.send()`](WebSocketConnectionClass.md#send) 関数で送信するデータの型。 値: "text", "blob", "object"。 "object" の場合: (送信) object を json形式に変換して送信します; (受信) json形式を受信して object に変換します | text      |
+| プロパティ    | 型    | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | デフォルト     |
+| -------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| path     | Text | WebSocketサーバーにアクセスするためのパス。 パスが定義されていない場合、WebSocketサーバーはすべての接続を管理します                                                                                                                                                                                                                                                                                                                                                                                                                       | undefined |
+| dataType | Text | `connectionHandler.onMessage` で受信するデータ、および [`WebSocketConnection.send()`](WebSocketConnectionClass.md#send) 関数で送信するデータの型。 値: "text", "blob", "object"。 "object" の場合: (送信) object を json形式に変換して送信します; (受信) json形式を受信して object に変換します 値: "text", "blob", "object"。 "object" の場合: (送信) object を json形式に変換して送信します; (受信) json形式を受信して object に変換します | text      |
 
 <!-- REF WebSocketServerClass.connections.Desc -->
 
@@ -322,7 +322,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 #### 説明
 
-`.connections` プロパティは、<!-- REF #WebSocketServerClass.connections.Summary -->WebSocketサーバーが処理しているカレントの接続をすべて格納します<!-- END REF -->。 コレクションの各要素が [`WebSocketConnection` オブジェクト](WebSocketConnectionClass.md) です。
+`.connections` プロパティは、<!-- REF #WebSocketServerClass.connections.Summary -->WebSocketサーバーが処理しているカレントの接続をすべて格納します<!-- END REF -->。 コレクションの各要素が [`WebSocketConnection` オブジェクト](WebSocketConnectionClass.md) です。 コレクションの各要素が [`WebSocketConnection` オブジェクト](WebSocketConnectionClass.md) です。
 
 接続が終了すると、このオブジェクトの [`status`](WebSocketConnectionClass.md#status) は "Closed" に変わり、コレクションから削除されます。
 
@@ -362,7 +362,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 #### 説明
 
-`.path` プロパティは、<!-- REF #WebSocketServerClass.path.Summary -->WebSocketサーバーにアクセスするためのパスのパターンです<!-- END REF -->。 パスが定義されなかった場合、WebSocketサーバーはすべての接続を管理します。
+`.path` プロパティは、<!-- REF #WebSocketServerClass.path.Summary -->WebSocketサーバーにアクセスするためのパスのパターンです<!-- END REF -->。 パスが定義されなかった場合、WebSocketサーバーはすべての接続を管理します。 パスが定義されなかった場合、WebSocketサーバーはすべての接続を管理します。
 
 このプロパティは 読み取り専用 です。
 
@@ -389,7 +389,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 `.terminate()` 関数は、<!-- REF #WebSocketServerClass.terminate().Summary -->WebSocketサーバーを終了します<!-- END REF -->。
 
-*timeout* 値が設定されていない場合のデフォルトでは、関数はクローズハンドシェイクを初期化し、相手からクローズフレームを受信するのを待ちます。 その後、FINパケットを送信し、クリーンにソケットを閉じます。 応答を受け取ると、ソケットは破棄されます。
+*timeout* 値が設定されていない場合のデフォルトでは、関数はクローズハンドシェイクを初期化し、相手からクローズフレームを受信するのを待ちます。 その後、FINパケットを送信し、クリーンにソケットを閉じます。 応答を受け取ると、ソケットは破棄されます。 応答を受け取ると、ソケットは破棄されます。
 
 *timeout* 値が設定されている場合:
 
