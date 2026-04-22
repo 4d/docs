@@ -3,7 +3,7 @@ id: client-server-optimization
 title: クライアント/サーバーの最適化
 ---
 
-4Dは、クライアント/サーバーアーキテクチャーにおいてエンティティセレクションを使用、あるいはエンティティを読み込む ORDAリクエストについて最適化する機構を提供しています。 この最適化機構は、ネットワーク間でやり取りされるデータの量を大幅に縮小させることで 4Dの実行速度を向上させます。 これには以下のような機能が含まれます:
+4Dは、クライアント/サーバーアーキテクチャーにおいてエンティティセレクションを使用、あるいはエンティティを読み込む ORDAリクエストについて最適化する機構を提供しています。 この最適化機構は、ネットワーク間でやり取りされるデータの量を大幅に縮小させることで 4Dの実行速度を向上させます。 これには以下のような機能が含まれます: この最適化機構は、ネットワーク間でやり取りされるデータの量を大幅に縮小させることで 4Dの実行速度を向上させます。 これには以下のような機能が含まれます:
 
 - **最適化コンテキスト**
 - **ORDAキャッシュ**
@@ -43,7 +43,7 @@ title: クライアント/サーバーの最適化
 
 :::note 互換性に関する注意
 
-[`Open datastore`](../commands/open-datastore) で確立された接続で扱われるコンテキストは、メジャーバージョンが共通する 4D でのみ使用できます。 たとえば、4D 20.x リモートアプリケーションは、4D Server 20.x のデータストアのコンテキストのみを使用できます。
+[`Open datastore`](../commands/open-datastore) で確立された接続で扱われるコンテキストは、メジャーバージョンが共通する 4D でのみ使用できます。 たとえば、4D 20.x リモートアプリケーションは、4D Server 20.x のデータストアのコンテキストのみを使用できます。 たとえば、4D 20.x リモートアプリケーションは、4D Server 20.x のデータストアのコンテキストのみを使用できます。
 
 :::
 
@@ -66,7 +66,7 @@ title: クライアント/サーバーの最適化
 
 > [`.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) 関数を使って、コンテキストを作成することもできます。
 
-エンティティセレクションを扱うすべての ORDA関数は、<strong x-id="1">context</strong> プロパティをサポートします (たとえば <a href="../API/DataClassClass.md#query"><code>dataClass.query( )</code></a> あるいは <a href="../API/DataClassClass.md#all"><code>dataClass.all( )</code></a> など)。 同じ最適化 context プロパティは、同じデータクラスのエンティティセレクションに対してであればどのエンティティセレクションにも渡すことができます。 ただし、 コードの他の部分で新しい属性が使用された際にはコンテキストは自動的に更新されるという点に注意してください。 同じコンテキストを異なるコードで再利用しすぎると、コンテキストを読み込み過ぎて、結果として効率が落ちる可能性があります。
+エンティティセレクションを扱うすべての ORDA関数は、<strong x-id="1">context</strong> プロパティをサポートします (たとえば <a href="../API/DataClassClass.md#query"><code>dataClass.query( )</code></a> あるいは <a href="../API/DataClassClass.md#all"><code>dataClass.all( )</code></a> など)。 エンティティセレクションを扱うすべての ORDA関数は、<strong x-id="1">context</strong> プロパティをサポートします (たとえば <a href="../API/DataClassClass.md#query"><code>dataClass.query( )</code></a> あるいは <a href="../API/DataClassClass.md#all"><code>dataClass.all( )</code></a> など)。 同じ最適化 context プロパティは、同じデータクラスのエンティティセレクションに対してであればどのエンティティセレクションにも渡すことができます。 ただし、 コードの他の部分で新しい属性が使用された際にはコンテキストは自動的に更新されるという点に注意してください。 同じコンテキストを異なるコードで再利用しすぎると、コンテキストを読み込み過ぎて、結果として効率が落ちる可能性があります。 ただし、 コードの他の部分で新しい属性が使用された際にはコンテキストは自動的に更新されるという点に注意してください。 同じコンテキストを異なるコードで再利用しすぎると、コンテキストを読み込み過ぎて、結果として効率が落ちる可能性があります。
 
 > 同様の機構は読み込まれたエンティティにも実装されており、それによって使用した属性のみがリクエストされるようになります ([`dataClass.get( )`](../API/DataClassClass.md#get) 関数参照)。
 
@@ -99,7 +99,7 @@ title: クライアント/サーバーの最適化
 
 4D クライアント/サーバーデスクトップアプリケーションでのエンティティセレクション型リストボックスにおいては、そのコンテンツを表示またはスクロールする際に、最適化が自動的に適用されます。 つまり、リストボックスに表示されている属性のみがサーバーにリクエストされます。
 
-また、リストボックスの **カレントの項目** プロパティ式 ([コレクション/エンティティセレクション型リストボックス](FormObjects/listbox_overview.md#リストボックスの型) 参照) を介してカレントエンティティをロードする場合には、専用の "ページモード" コンテキストが提供されます。 これによって、"ページ" が追加属性をリクエストしても、リストボックスのコンテキストのオーバーロードが避けられます。 なお、ページコンテキストの生成/使用は **カレントの項目** 式を使用した場合に限ります (たとえば、`entitySelection[index]` を介して同じエンティティにアクセスした場合は、エンティティセレクションコンテキストが変化します)。
+また、リストボックスの **カレントの項目** プロパティ式 ([コレクション/エンティティセレクション型リストボックス](FormObjects/listbox_overview.md#リストボックスの型) 参照) を介してカレントエンティティをロードする場合には、専用の "ページモード" コンテキストが提供されます。 これによって、"ページ" が追加属性をリクエストしても、リストボックスのコンテキストのオーバーロードが避けられます。 なお、ページコンテキストの生成/使用は **カレントの項目** 式を使用した場合に限ります (たとえば、`entitySelection[index]` を介して同じエンティティにアクセスした場合は、エンティティセレクションコンテキストが変化します)。 これによって、"ページ" が追加属性をリクエストしても、リストボックスのコンテキストのオーバーロードが避けられます。 なお、ページコンテキストの生成/使用は **カレントの項目** 式を使用した場合に限ります (たとえば、`entitySelection[index]` を介して同じエンティティにアクセスした場合は、エンティティセレクションコンテキストが変化します)。
 
 その後、エンティティを走査する関数がサーバーに送信するリクエストにも、同じ最適化が適用されます。 以下の関数は、ソースエンティティの最適化コンテキストを、戻り値のエンティティに自動的に付与します:
 
@@ -124,7 +124,7 @@ title: クライアント/サーバーの最適化
 
 1. アルゴリズムを設計します。
 2. アプリケーションを実行し、自動学習メカニズムに最適化コンテキストを作成させます。
-3. [`dataStore.getRemoteContextInfo()`](../API/DataStoreClass.md#getremotecontextinfo) または [`dataStore.getAllRemoteContexts()`](../API/DataStoreClass.md#getallremotecontexts) 関数を呼び出して、コンテキストを収集します。 [`entitySelection.getRemoteContextAttributes()`](../API/EntitySelectionClass.md#getremotecontextattributes) と [`entity.getRemoteContextAttributes()`](../API/EntityClass.md#getremotecontextattributes) 関数を使用して、アルゴリズムがどのように属性を使用するかを分析することができます。
+3. [`dataStore.getRemoteContextInfo()`](../API/DataStoreClass.md#getremotecontextinfo) または [`dataStore.getAllRemoteContexts()`](../API/DataStoreClass.md#getallremotecontexts) 関数を呼び出して、コンテキストを収集します。 [`entitySelection.getRemoteContextAttributes()`](../API/EntitySelectionClass.md#getremotecontextattributes) と [`entity.getRemoteContextAttributes()`](../API/EntityClass.md#getremotecontextattributes) 関数を使用して、アルゴリズムがどのように属性を使用するかを分析することができます。 [`entitySelection.getRemoteContextAttributes()`](../API/EntitySelectionClass.md#getremotecontextattributes) と [`entity.getRemoteContextAttributes()`](../API/EntityClass.md#getremotecontextattributes) 関数を使用して、アルゴリズムがどのように属性を使用するかを分析することができます。
 4. 最後に、アプリケーション起動時に [`dataStore.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) 関数を呼び出してコンテキストを構築し、[これらをアルゴリズムで使用します](#contextプロパティの再利用)。
 
 ## ORDAキャッシュ
@@ -155,7 +155,7 @@ local Function getYoungest() : Object
 ```
 
 - `local` キーワードを **使わない** 場合、1つのリクエストで結果が得られます。
-- `local` キーワードを **使う** 場合、4つのリクエストが必要になります: Schools エンティティの students エンティティセレクションの取得、`query()` の実行、`orderBy()` の実行、`slice()` の実行。 この例では、`local` キーワードを使用するのは適切ではありません。
+- `local` キーワードを **使う** 場合、4つのリクエストが必要になります: Schools エンティティの students エンティティセレクションの取得、`query()` の実行、`orderBy()` の実行、`slice()` の実行。 この例では、`local` キーワードを使用するのは適切ではありません。 この例では、`local` キーワードを使用するのは適切ではありません。
 
 #### Example: Checking attributes
 
