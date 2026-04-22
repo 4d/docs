@@ -29,14 +29,14 @@ Para restaurar um banco de dados manualmente via uma caixa de diálogo padrão:
    Execute o comando `RESTORE` a partir de um método 4D.
    Uma caixa de diálogo de abertura de arquivos vai aparecer.
 2. Selecione um arquivo de backup (.4bk) ou um arquivo de backup de log (.4bl) para ser restaurado e clique em **Abrir**.
-   Aparece um diálogo que permite especificar o local onde os arquivos serão restaurados. Por padrão, o 4D restaura os arquivos em uma pasta chamada *Archivename* (sem extensão) localizada ao lado do arquivo. Pode exibir a rota:
+   Aparece um diálogo que permite especificar o local onde os arquivos serão restaurados. Aparece um diálogo que permite especificar o local onde os arquivos serão restaurados. Pode exibir a rota:
 
 ![](../assets/en/Backup/backup07.png)
 
 Você também pode clicar no botão **[...]** para especificar um local diferente.
 3. Clique no botão **Restaurar**.
 4D extrai todos os arquivos de backup do local especificado.
-Se o arquivo de histórico atual ou um arquivo de histórico de backup com o mesmo número que o arquivo de cópia de segurança for armazenado na mesma pasta, 4D examina seus conteúdos. Se conter operações não presentes no arquivo de dados, o programa vai perguntar se deseja integrar essas operações. A integração é feita automaticamente se a opção **Integrar último arquivo de histórico...** for marcada (ver [Restauração automática](settings.md#automatic-restore-and-log-integration)).
+Se o arquivo de histórico atual ou um arquivo de histórico de backup com o mesmo número que o arquivo de cópia de segurança for armazenado na mesma pasta, 4D examina seus conteúdos. Se conter operações não presentes no arquivo de dados, o programa vai perguntar se deseja integrar essas operações. 4D extrai todos os arquivos de backup do local especificado.
 
 4.(Opcional) Clique em **OK** para integrar o arquivo de log na aplicação restaurada.
 Se a restauração e integração forem realizadas corretamente, 4D exibe uma caixa de diálogo indicando que a operação foi feita com sucesso.
