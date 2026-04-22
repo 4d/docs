@@ -74,11 +74,11 @@ A propriedade `.size` <!-- REF #Blob.size.Summary -->retorna o tamanho de um `4D
 
 <div class="no-index">
 
-| Parâmetro  | Tipo                     |                             | Descrição                                                                             |
-| ---------- | ------------------------ | :-------------------------: | ------------------------------------------------------------------------------------- |
-| start      | Real                     |              ->             | índice do primeiro byte a incluir no novo 4D. Blob\`. |
-| end        | Real                     |              ->             | índice do primeiro byte que não será incluído no novo 4D. Blob\`      |
-| Resultados | 4D. Blob | <- | Novo `4D.Blob`                                                                        |
+| Parâmetro  | Tipo                     |                             | Descrição                                                                               |
+| ---------- | ------------------------ | :-------------------------: | --------------------------------------------------------------------------------------- |
+| start      | Real                     |              ->             | índice do primeiro byte a incluir no novo 4D. Blob\\`. |
+| end        | Real                     |              ->             | índice do primeiro byte que não será incluído no novo 4D. Blob\\`      |
+| Resultados | 4D. Blob | <- | Novo `4D.Blob`                                                                          |
 
 </div>
 <!-- END REF -->
@@ -87,9 +87,9 @@ A propriedade `.size` <!-- REF #Blob.size.Summary -->retorna o tamanho de um `4D
 
 `.slice()` <!-- REF #Blob.slice().Summary --> cria e retorna um `4D.Blob` que faz referência a dados de um subconjunto do blob no qual é chamado. O blob original não é alterado.<!-- END REF -->
 
-O parâmetro `start` é um índice no blob que indica o primeiro byte a ser incluído no novo `4D.Blob`. Se especificar um valor negativo, 4D trata-o como uma compensação desde o fim da bolha até ao início. Por exemplo, -10 seria o 10º do último byte na bolha. O valor predefinido é 0. Se você especificar um valor para start que seja maior do que o tamanho do blob de origem, o tamanho do `4D.Blob` retornado será 0 e não conterá dados.
+O parâmetro end é um índice no blob indicando o primeiro byte que não será incluído no novo 4D. Se especificar um valor negativo, 4D trata-o como uma compensação desde o fim da bolha até ao início. Por exemplo, -10 seria o 10º do último byte na bolha. O valor predefinido é 0. Blob (ou seja, o byte exactamente neste índice não está incluído).
 
-O parâmetro end é um índice no blob indicando o primeiro byte que não será incluído no novo 4D. Blob (ou seja, o byte exactamente neste índice não está incluído). Se especificar um valor negativo, 4D trata-o como uma compensação desde o fim da bolha até ao início. Por exemplo, -10 seria o 10º do último byte na bolha. O valor por defeito é o tamanho do blob.
+O parâmetro `start` é um índice no blob que indica o primeiro byte a ser incluído no novo `4D.Blob`. Se especificar um valor negativo, 4D trata-o como uma compensação desde o fim da bolha até ao início. Por exemplo, -10 seria o 10º do último byte na bolha. O valor por defeito é o tamanho do blob.
 
 #### Exemplo
 
