@@ -336,7 +336,7 @@ El valor devuelto es la llave pública.
 </div>
 <!-- END REF -->
 
-La función `.sign()` <!-- REF #CryptoKey.sign().Summary -->firma la representación utf8 de una cadena *mensaje*<!-- END REF --> utilizando las llaves del objeto `CryptoKey` y las *opciones* suministradas. Devuelve su firma en formato base64 o base64URL, dependiendo del valor del atributo `options.encoding` que haya pasado.
+La función `.sign()` <!-- REF #CryptoKey.sign().Summary -->firma la representación utf8 de una cadena *mensaje*<!-- END REF --> utilizando las llaves del objeto `CryptoKey` y las *opciones* suministradas. utilizando las llaves del objeto `CryptoKey` y las *opciones* suministradas.
 
 `CryptoKey` debe contener una llave válida **privada**.
 
