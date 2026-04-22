@@ -168,7 +168,7 @@ Se você tiver especificado "MyProject" como o nome do aplicativo, encontrará o
   - MyProject.exe - Seu executável e um MyProject.rsr (os recursos da aplicação)
   - Pasta 4D Extensions, pasta Resources, várias bibliotecas (DLL), pasta Native Components, pasta SASL Plugins - Arquivos necessários para a operação do aplicativo
   - Database folder  - Includes a Resources folder and  MyProject.4DZ file. Database folder  - Includes a Resources folder and  MyProject.4DZ file.
-    **Observação**: Essa pasta também contém a pasta *Default Data*, se ela tiver sido definida (consulte [Gerenciamento de arquivos de dados em aplicativos finais](#management-of-data-files)).
+    Database folder  - Includes a Resources folder and  MyProject.4DZ file.
   - (Opcional) Pasta Components e/ou pasta Plugins - Contém todos os componentes e/ou arquivos de plug-in incluídos no banco de dados. Para mais informações sobre isso, consulte a seção [Plugins e componentes](#plugins--components-page).
   - (Opcional) Pasta Licenses (Licenças) - Um arquivo XML de números de licença integrados ao aplicativo, se houver. Para obter mais informações sobre isso, consulte a seção [Licenças e Certificado](#licenses--certificate-page).
   - Itens adicionais adicionados à pasta da Área de Trabalho de Volume 4D, se houver (veja [Personalizando a pasta 4D Volume Desktop)](#customizing-4d-volume-desktop-folder)).
@@ -187,7 +187,7 @@ Ao criar um aplicativo autônomo, o 4D copia o conteúdo da pasta 4D Volume Desk
 - Personalize o conteúdo da pasta *Resources*.
 
 > Construir um pacote de projeto
-> &#062; Construir um pacote de projeto &#062; No macOS, o 4D Volume Desktop é fornecido na forma de um pacote de software. Para modificá-lo, você deve primeiro exibir seu conteúdo (**Control+clique** no ícone).
+> &#062; Construir um pacote de projeto &#062; Construir um pacote de projeto &#062; No macOS, o 4D Volume Desktop é fornecido na forma de um pacote de software. Para modificá-lo, você deve primeiro exibir seu conteúdo (**Control+clique** no ícone).
 
 #### Localização dos arquivos da Web
 
@@ -400,7 +400,7 @@ Os elementos devem ser instalados:
 
 - **no macOS**
   - **Aplicativo do servidor** - ao lado do pacote de software `<ApplicationName>Server`.
-  - **Aplicação de cliente** - ao lado do pacote de software \\\`<ApplicationName>cliente.
+  - **Aplicação de cliente** - ao lado do pacote de software \\\\`<ApplicationName>cliente.
 
 ### Incorporar uma aplicação cliente usuário único
 
@@ -631,7 +631,7 @@ Seu arquivo de ícone deve ter o mesmo nome do arquivo de projeto e incluir a ex
 
 - **Windows** - Ao construir uma aplicação clicável e dupla, o 4D lida com a personalização do seu ícone. Para fazer isso, você deve criar um arquivo de ícone (*.ico* extensão), antes de construir o arquivo do aplicativo e colocá-lo ao lado da pasta do projeto.
 
-Seu arquivo de ícone deve ter o mesmo nome do arquivo de projeto e incluir a extensão .ico. 4D leva automaticamente este arquivo em conta ao construir o aplicativo clicável duplo (o arquivo <em x-id="3">.icns</em> é renomeado <em x-id="3">ApplicationName.
+Seu arquivo de ícone deve ter o mesmo nome do arquivo de projeto e incluir a extensão .ico. 4D leva automaticamente este arquivo em conta ao construir o aplicativo clicável duplo (o arquivo <em x-id="3">.icns</em> é renomeado \*ApplicationName.
 
 Você também pode definir as [chaves XML](https://doc.4d.com/4Dv20/4D/20/4D-XML-Keys-BuildApplication.100-6335734.en.html) específicas no arquivo buildApp.4DSettings para designar cada ícone a usar. Estão disponíveis as seguintes chaves:
 
