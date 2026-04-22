@@ -128,12 +128,12 @@ El objeto servidor web devuelto contiene los valores actuales de las propiedades
 
 El comando `WEB Server list` <!-- REF #_command_.WEB Server list.Summary -->devuelve una colección de todos los objetos Web server disponibles en la aplicación 4D<!-- END REF -->.
 
-Queremos saber cuántos servidores web en funcionamiento hay disponibles:
+Una aplicación 4D puede contener de uno a varios servidores web:
 
 - un servidor web para la base de datos del host (servidor web por defecto)
 - un servidor web para cada componente.
 
-Una aplicación 4D puede contener de uno a varios servidores web:
+El comando `WEB Server list` devuelve todos los servidores web disponibles, estén o no en funcionamiento.
 
 > El objeto servidor web por defecto es cargado automáticamente por 4D al inicio. Por otro lado, cada componente servidor web que se quiera utilizar debe ser instanciado utilizando el comando [`WEB Server`](#web-server).
 
@@ -607,7 +607,7 @@ Contiene <!-- REF #WebServerClass.scalableSession.Summary -->`True` si las sesio
 <!-- REF #WebServerClass.sessionCookieDomain.Syntax -->**.sessionCookieDomain** : Text<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.sessionCookieDomain.Summary -->campo "domain" de la cookie de sesión<!-- END REF -->. Se utiliza para controlar el alcance de las cookies de sesión. Si define, por ejemplo, el valor "/*.4d.fr" para este selector, el cliente sólo enviará una cookie cuando la solicitud se dirija al dominio ".4d.fr", lo que excluye a los servidores que alojan datos estáticos externos.
+The <!-- REF #WebServerClass.sessionCookieDomain.Summary -->The<!-- END REF -->. Se utiliza para controlar el alcance de las cookies de sesión. Si define, por ejemplo, el valor "/*.4d.fr" para este selector, el cliente sólo enviará una cookie cuando la solicitud se dirija al dominio ".4d.fr", lo que excluye a los servidores que alojan datos estáticos externos.
 
 <!-- END REF -->
 
@@ -631,7 +631,7 @@ The <!-- REF #WebServerClass.sessionCookieName.Summary -->nombre de la cookie ut
 <!-- REF #WebServerClass.sessionCookiePath.Syntax -->**.sessionCookiePath** : Text<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.sessionCookiePath.Summary -->campo "path" de la cookie de sesión<!-- END REF -->. Se utiliza para controlar el alcance de las cookies de sesión. Si define, por ejemplo, el valor "/4DACTION" para este selector, el cliente sólo enviará una cookie para las peticiones dinámicas que empiecen por 4DACTION, y no para las imágenes, páginas estáticas, etc.
+The <!-- REF #WebServerClass.sessionCookiePath.Summary -->The<!-- END REF -->. Se utiliza para controlar el alcance de las cookies de sesión. Si define, por ejemplo, el valor "/4DACTION" para este selector, el cliente sólo enviará una cookie para las peticiones dinámicas que empiecen por 4DACTION, y no para las imágenes, páginas estáticas, etc.
 
 <!-- END REF -->
 
