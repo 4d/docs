@@ -310,7 +310,7 @@ Em seguida, você precisa [fornecer seu token de conexão](#providing-your-githu
 
 #### Cache local para dependências
 
-Os componentes GitHub referenciados são baixados em uma pasta de cache local e carregados em seu ambiente. A pasta de cache local é armazenada na seguinte localização:
+Os componentes GitHub referenciados são baixados em uma pasta de cache local e carregados em seu ambiente. Referenced GitHub and GitLab components are downloaded in a local cache folder then loaded in your environment.
 
 - en macOs: `$HOME/Library/Caches/<app name>/Dependencies`
 - no Windows: `C:\Users\<username>\AppData\Local\<app name>\Dependencies`
@@ -501,7 +501,7 @@ Você pode definir a opção [tag ou versão](#tags-and-versions) para uma depen
 
 ![dependency-git-tag](../assets/en/Project/dependency-git-tag.png)
 
-- **Follow 4D version** (default, recommended option): Download the latest component release that is compatible with the running 4D version. Você pode usar essa regra de dependência somente se as tags de liberação do componente seguirem a [convenção de nomenclatura] apropriada (#naming-conventions-for-4d-version-tags). This option is **recommended**, especially for the [components developed by 4D](../Extensions/overview.md#components-developed-by-4d).
+- Você pode usar essa regra de dependência somente se as tags de liberação do componente seguirem a [convenção de nomenclatura] apropriada (#naming-conventions-for-4d-version-tags). **Follow 4D version** (default, recommended option): Download the latest component release that is compatible with the running 4D version. This option is **recommended**, especially for the [components developed by 4D](../Extensions/overview.md#components-developed-by-4d).
 - **Até a próxima versão major**: defina um [intervalo de versão semântica](#tags-and-versions) para restringir as atualizações para a próxima versão principal.
 - **Até a próxima versão minor**: da mesma forma, restringe as atualizações para a próxima versão minor.
 - **Versão exata (etiqueta)**: selecione ou insira manualmente uma [etiqueta específica](#tags-and-versions) na lista disponível.
@@ -513,7 +513,7 @@ A versão atual da dependência do GitHub é exibida no lado direito do item de 
 
 #### Modificar o intervalo de versões de dependência do GitHub
 
-You can modify the [version setting](#defining-a-github-dependency-version-range) for a listed GitHub dependency: select the dependency to modify and select **Edit the dependency...** from the contextual menu. In the "Edit the dependency" dialog box, edit the Dependency Rule menu and click **Apply**.
+You can modify the [version setting](#defining-a-github-dependency-version-range) for a listed GitHub dependency: select the dependency to modify and select **Edit the dependency...** from the contextual menu. You can modify the [version setting](#defining-a-dependency-version-range) for a listed dependency: select the dependency to modify and select **Edit the dependency...** from the contextual menu.
 
 Modificar o intervalo de versão é útil, por exemplo, se você usar o recurso de atualização automática e deseja bloquear a dependência de um número de versão específico.
 
