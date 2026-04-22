@@ -945,7 +945,7 @@ Caracter delimitador del nombre del buzón.
 
 #### Descripción
 
-La función `.getMail()` <!-- REF #IMAPTransporterClass.getMail().Summary -->devuelve el objeto `Email` correspondiente al *msgNumber* o *msgID* en el buzón designado por el `IMAP_transporter`<!-- END REF -->. Esta función permite recuperar la información sobre el email.
+La función `.getMail()` <!-- REF #IMAPTransporterClass.getMail().Summary -->devuelve el objeto `Email` correspondiente al *msgNumber* o *msgID* en el buzón designado por el `IMAP_transporter`<!-- END REF -->. Esta función permite gestionar localmente la lista de mensajes localizados en el servidor de correo POP3.
 
 En el primer parámetro, puede pasar:
 
@@ -1051,10 +1051,10 @@ El parámetro opcional *options* permite definir las partes de los mensajes a de
 
 **Options**
 
-| Propiedad  | Tipo    | Descripción                                                                                                                                                                                         |
-| ---------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| updateSeen | Boolean | Si True, los mensajes especificados se marcan como "vistos" en el buzón. Si False, los mensajes no se marcan como "vistos". Valor por defecto: True |
-| withBody   | Boolean | Pase True para devolver el cuerpo de los mensajes específicos. Si False, sólo se devuelve los encabezados de los mensajes. Valor por defecto: True  |
+| Propiedad  | Tipo    | Descripción                                                                                                                                                                                                                                                                  |
+| ---------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| updateSeen | Boolean | Se accede al buzón seleccionado con privilegios de lectura y escritura. Los mensajes se consideran "vistos" y pierden la bandera "reciente" (que indica que son mensajes nuevos). Valor por defecto: True |
+| withBody   | Boolean | Pase True para devolver el cuerpo de los mensajes específicos. Si False, sólo se devuelve los encabezados de los mensajes. Valor por defecto: True                                                                           |
 
 > - Si no se selecciona ningún buzón con el comando [`.selectBox()`](#selectbox), se genera un error.
 > - Si no hay ninguna conexión abierta, `.getMails()` abrirá una conexión el último buzón especificado con [`.selectBox()`](#selectbox).
@@ -1583,7 +1583,7 @@ SearchKey2 = NOT FLAGGED
 SearchKey3 = FLAGGED DRAFT
 ```
 
-> Para obtener la información de un buzón sin cambiar el buzón actual, utilice <a href="#getboxinfo"><code>.getBoxInfo()</code></a>.
+> Las coincidencias no suelen diferenciar entre mayúsculas y minúsculas
 
 - Si el *searchCriteria* es una cadena null, la búsqueda será equivalente a un "seleccionar todo".
 - Si *searchCriteria* incluye varias llaves de búsqueda, el resultado es la intersección (función AND) de todos los mensajes que coinciden con esas llaves.
@@ -1732,10 +1732,10 @@ En el parámetro *name*, pase el nombre del buzón a acceder. El nombre represen
 
 El parámetro opcional *state* define el tipo de acceso al buzón. Los valores posibles son:
 
-| Constante             | Valor | Comentario                                                                                                                                                                                                                                                          |
-| --------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| IMAP read only state  | 1     | Se accede al buzón seleccionado con privilegios de sólo lectura. Los mensajes con la bandera "reciente" (que indica que son nuevos) no se modifican.                                                             |
-| IMAP read write state | 0     | Se accede al buzón seleccionado con privilegios de lectura y escritura. Los mensajes se consideran "vistos" y pierden la bandera "reciente" (que indica que son mensajes nuevos). Default value: |
+| Constante             | Valor | Comentario                                                                                                                                                                                                                                                              |
+| --------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| IMAP read only state  | 1     | Se accede al buzón seleccionado con privilegios de sólo lectura. Los mensajes con la bandera "reciente" (que indica que son nuevos) no se modifican.                                                                 |
+| IMAP read write state | 0     | Se accede al buzón seleccionado con privilegios de lectura y escritura. Los mensajes se consideran "vistos" y pierden la bandera "reciente" (que indica que son mensajes nuevos). Valor por defecto: |
 
 > - La función genera un error y devuelve **Null** si *name* designa un buzón inexistente.
 > - Si no hay ninguna conexión abierta, `.selectBox()` abrirá una conexión.
