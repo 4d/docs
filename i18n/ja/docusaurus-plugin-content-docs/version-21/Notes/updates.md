@@ -19,7 +19,7 @@ title: リリースノート
 - `roles.json` ファイル内での、明確な許可のないアクセスをデフォルトで全てブロックする新しい[`restrictedByDefault` プロパティ](../ORDA/privileges.md#制限モード) のサポート。
 - [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) および [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) クラスにおいて、ローカルの証明書フォルダの代わりにWindows 証明書ストアからの証明書を使用することを許可する新しいオプション。
 - [Sessions API](../API/SessionClass.md) は全ての[デスクトップセッション](../Desktop/sessions.md) をサポートするようになり、[デスクトップセッションとWeb アクセスを共有する](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) ことが可能になりました。これにより、Web エリア内にQodly ページを使用するアプリケーションの開発が容易になりました。
-- [QUIC ネットワークレイヤー](../settings/client-server.md#ネットワークレイヤー) はネットワークインターフェースの変更(例えばラップトップを持って良好するような場合)を透過的に管理できるように改善されました。 [こちらの blog 記事](https://blog.4d.com/work-and-move-with-quic-and-network-switching) をご覧ください。
+- [QUIC ネットワークレイヤー](../settings/client-server.md#ネットワークレイヤー) はネットワークインターフェースの変更(例えばラップトップを持って良好するような場合)を透過的に管理できるように改善されました。 [こちらの blog 記事](https://blog.4d.com/work-and-move-with-quic-and-network-switching) をご覧ください。 [こちらの blog 記事](https://blog.4d.com/work-and-move-with-quic-and-network-switching) をご覧ください。
 - プロジェクトを閉じたり再起動したりすることなく、4D エクスプローラーから[ホストプロジェクトから直接コンポーネントを作成](../Extensions/develop-components.md#コンポーネントの作成)したり、あるいは[専用のタブからコンポーネントのコードを編集する](../Extensions/develop-components.md#全てのコンポーネントコードを編集) ことができるようになりました。
 - 4D プロダクトのアクティベーションステップが、簡略化されて[サインイン](../GettingStarted/Installation.md#sign-in) 中に自動化されました。
 - 4D AIKit コンポーネント: [特定のツールを自動的に呼び出す](../aikit/Classes/OpenAIChatHelper.md#registertool) ことと [レスポンスフォーマットを指定する](../aikit/Classes/OpenAIChatCompletionsParameters.md#response-format) 新機能。
@@ -33,19 +33,23 @@ title: リリースノート
 
 :::caution インデックスの再構築
 
-4D 21 では、ICUライブラリのアップデート ([後述参照](#ライブラリの一覧-4d-21-lts)) により、文字列型、テキスト型、オブジェクト型のインデックスの再構築が強制されます。 データファイルのサイズに応じて、この処理には時間がかかることがあるため、計画的なアップグレードが推奨されます。
+4D 21 では、ICUライブラリのアップデート ([後述参照](#ライブラリの一覧-4d-21-lts)) により、文字列型、テキスト型、オブジェクト型のインデックスの再構築が強制されます。 データファイルのサイズに応じて、この処理には時間がかかることがあるため、計画的なアップグレードが推奨されます。 データファイルのサイズに応じて、この処理には時間がかかることがあるため、計画的なアップグレードが推奨されます。
 
 :::
 
-- Web サービス(SOAP): [スケーラブルセッション](../WebServer/sessions.md#webセッションの有効化) が有効化されている場合、コンパイルモードにおいてはWeb サービスは[**プリエンプティブプロセス**](../Develop/preemptive.md) で実行されます。 SOAP のコードがスレッドセーフであることと、それが実行されるセッションが適切な [権限](../API/SessionClass.md#setprivileges) を持っていることを確認してください。
+- Web サービス(SOAP): [スケーラブルセッション](../WebServer/sessions.md#webセッションの有効化) が有効化されている場合、コンパイルモードにおいてはWeb サービスは[**プリエンプティブプロセス**](../Develop/preemptive.md) で実行されます。 SOAP のコードがスレッドセーフであることと、それが実行されるセッションが適切な [権限](../API/SessionClass.md#setprivileges) を持っていることを確認してください。 SOAP のコードがスレッドセーフであることと、それが実行されるセッションが適切な [権限](../API/SessionClass.md#setprivileges) を持っていることを確認してください。
 - Web サーバー:
-  - 廃止予定だった`4DSYNC/` および `4DCGI/` URL のサポートが削除されました。 これらのURL に対しては、特に何の処理も行われなくなります。
+  - 廃止予定だった`4DSYNC/` および `4DCGI/` URL のサポートが削除されました。 これらのURL に対しては、特に何の処理も行われなくなります。 これらのURL に対しては、特に何の処理も行われなくなります。
   - Web プロセスは、今後 [スケーラブルセッション](../WebServer/sessions.md#enabling-web-sessions) が有効化されている場合には再利用されないようになりました。
 - Web ユーザーセッションは今後[`Process activity`](../commands/process-activity.md) コマンドで返されるようになります。
 - 今後PHP は [廃止予定](https://blog.4d.com/deprecation-of-php-commands-removal-of-4d-built-in-php-interpreter/) となり、開発においては今後使用されるべきではありません。
 - [`HIGHLIGHT TEXT`](../commands/highlight-text) コマンドは今後サブフォームのコンテキストでサポートされるようになりました。
-- クライアント/サーバーでは、ローカルプロセスという概念が削除されました。 プロセス名に置いて"$"記号をつけることは今後何も特別な意味を持たなくなり、また[`REGISTER CLIENT`](../commands/register-client) コマンドの \* 引数は無視されます。
+- クライアント/サーバーでは、ローカルプロセスという概念が削除されました。 クライアント/サーバーでは、ローカルプロセスという概念が削除されました。 プロセス名に置いて"$"記号をつけることは今後何も特別な意味を持たなくなり、また[`REGISTER CLIENT`](../commands/register-client) コマンドの \* 引数は無視されます。
 - **コンポーネントは埋め込まれなくなりました**: 4D 21 以降、4D によって開発されたコンポーネント(4D NetKit、4D SVG、など。詳細は[こちらの一覧](../Extensions/overview.md#4dによって開発されたコンポーネント)を参照) は4Dアプリケーションには埋め込まれなくなりました。 プロジェクトを4D 21 以降にアップグレードする場合、以下のようなダイアログボックスが表示されます:<br/>
+  ![alt-text](../assets/en/getStart/convert.png)<br/>
+  \- **すぐにインポートする**: 4D コンポーネントを依存関係としてプロジェクトに自動的にインポートします<br/>
+  \- **手動で管理する**: コンポーネントをインポートせず、[コンポーネントを手動で管理するようにします](../Project/components.md)<br/>
+  \- **あとでもう一度聞く**: コンポーネントをインポートせず、次にプロジェクトを開いたときにダイアログを表示させる。 プロジェクトを4D 21 以降にアップグレードする場合、以下のようなダイアログボックスが表示されます:<br/>
   ![alt-text](../assets/en/getStart/convert.png)<br/>
   \- **すぐにインポートする**: 4D コンポーネントを依存関係としてプロジェクトに自動的にインポートします<br/>
   \- **手動で管理する**: コンポーネントをインポートせず、[コンポーネントを手動で管理するようにします](../Project/components.md)<br/>
@@ -67,7 +71,7 @@ title: リリースノート
 - [`4D.TCPConnection.new()`](../API/TCPConnectionClass.md#4dtcpconnectionnew) 関数の[`options`](../API/TCPConnectionClass.md#options-parameter) 引数に新しい`connectionTimeout` オプションが追加されました。
 - 新しい[`4D.Vector`](../API/VectorClass.md) クラス。これを使用して、一般的にAI で計算されたベクトルを処理して比較することができます。
 - [4D 自動フィールド](../settings/database.md#自動uuidバージョン) および [`Generate UUID`](../commands/generate-uuid) コマンドに対して、**バージョン 7**のUUID を生成するための新しいオプション。
-- 新しい[`UDPSocket`](../API/UDPSocketClass.md) および [`UDPEvent`](../API/UDPEventClass.md) クラスを使用することでUDP ソケットを使用してデータを送信することができます。 [`4DTCPUDPLog.txt`](../Debugging/debugLogFiles.md#4dtcpudplogtxt) ログファイル(`4DTCPLog.txt` から改名)内でのUDP イベントの詳細なログのサポート。
+- 新しい[`UDPSocket`](../API/UDPSocketClass.md) および [`UDPEvent`](../API/UDPEventClass.md) クラスを使用することでUDP ソケットを使用してデータを送信することができます。 [`4DTCPUDPLog.txt`](../Debugging/debugLogFiles.md#4dtcpudplogtxt) ログファイル(`4DTCPLog.txt` から改名)内でのUDP イベントの詳細なログのサポート。 [`4DTCPUDPLog.txt`](../Debugging/debugLogFiles.md#4dtcpudplogtxt) ログファイル(`4DTCPLog.txt` から改名)内でのUDP イベントの詳細なログのサポート。
 - [Session class](../API/SessionClass.md) 内の[`.promote()`](../API/SessionClass.md#promote) および[`.demote()`](../API/SessionClass.md#demote) 関数を使用することでWeb プロセスの権限を動的に追加/削除することができます。
 - ビルドアプリケーションのダイアログボックスで[埋め込むライセンスの自動選択](../Desktop/building.md#アプリケーションの利用可能なライセンスの自動埋め込み)、 更新された[`Create deployment license`](../commands/create-deployment-license.md) コマンド、新しい[`AutomaticLicenseIntegration`](https://doc.4d.com/4Dv20R10/4D/20-R10/AutomaticLicenseIntegration.300-7611090.ja.html) ビルドアプリケーションXML キー。
 - [4D Write Pro](../WritePro/managing-formulas.md) および [スタイル付きテキストエリア](../FormObjects/input_overview.md)におけるフォーミュラのコピー/ペースト時のセキュリティの改善: カレントの4D アプリケーションの外部からコピーされたフォーミュラは、今後は常に値のみがペーストされます。
@@ -83,10 +87,10 @@ title: リリースノート
 #### 動作の変更
 
 - Windows 上では、印刷しか想定していない(つまりスクリーン上で使用不可能な)カレントプリンターフォントは、4D の起動時にはロードされないようになりました。
-- *MeCab* ライブラリーは削除されました。 この変更は、日本語テキストの処理のみに影響します。
+- *MeCab* ライブラリーは削除されました。 この変更は、日本語テキストの処理のみに影響します。 この変更は、日本語テキストの処理のみに影響します。
 - ["cs" クラス](../Concepts/classes.md#cs) タイプを使用して宣言されたオブジェクト型変数またはオブジェクト型引数に、異なるクラスのオブジェクトインスタンスを代入した場合にはシンタックスエラーを生成するようになりました。
 - [`.hasPrivilege()`](../API/SessionClass.md#hasprivilege) 関数は、Web プロセス内において昇格された権限に対してはTrue を返すようになりました。
-- [`Time`](../commands/time) コマンドは、*timeValue* 引数が負の値の場合には、負の時間式を返すようになりました。 例えば、`Time("-01:02:03")` は **-01:02:03** を返します。 過去のリリースにおいては、負の符号は無視されていました。
+- [`Time`](../commands/time) コマンドは、*timeValue* 引数が負の値の場合には、負の時間式を返すようになりました。 例えば、`Time("-01:02:03")` は **-01:02:03** を返します。 過去のリリースにおいては、負の符号は無視されていました。 例えば、`Time("-01:02:03")` は **-01:02:03** を返します。 過去のリリースにおいては、負の符号は無視されていました。
 
 ### 4D 20 R9
 
@@ -98,7 +102,7 @@ title: リリースノート
 - [`Session.createOTP()`](../API/SessionClass.md#createotp) および[`Session.restore()`](../API/SessionClass.md#restore) の新関数を使用して管理することで、[セッショントークン](../WebServer/sessions.md#session-token-otp) がサポートされるようになりました。
 - ラベルウィザードは、[ラベルデザインエリア](../Desktop/labels.md#ラベルプレビューエリア) においてフォーミュラを追加または編集する際にフォーミュラエディターを使用するようになりました。
 - TCP サーバー接続を作成するための新しい[`TCPListener`](../API/TCPListenerClass.md) クラス。関連クラスに新しいプロパティが追加されました。[`TCPConnection`](../API/TCPConnectionClass.md) クラスに`address`、`listener` および `port`。[`TCPEvent`](../API/TCPEventClass.md) クラスに `address` および `port`。
-- [ライブチェッカーとコンパイラー](../code-editor/write-class-method.md#warnings-and-errors).において、廃止予定のコマンドと定数は、特定の警告を生成するようになりました。 [`Command name`](../commands/command-name.md) コマンドを使用することで、コマンドが廃止予定かどうかを知ることができます。
+- [ライブチェッカーとコンパイラー](../code-editor/write-class-method.md#warnings-and-errors).において、廃止予定のコマンドと定数は、特定の警告を生成するようになりました。 [`Command name`](../commands/command-name.md) コマンドを使用することで、コマンドが廃止予定かどうかを知ることができます。 [`Command name`](../commands/command-name.md) コマンドを使用することで、コマンドが廃止予定かどうかを知ることができます。
 - 新しいコマンド[WA SET CONTEXT](../commands/wa-set-context.md) および [WA Get context](../commands/wa-get-context.md) を使用して、Web エリア内の[$4d](../FormObjects/webArea_overview.md#4d-object) コンテンツを管理することができるようになります。
 - 新しい[`RDP optimization` データベースパラメーター](../commands-legacy/set-database-parameter.md#rdp-optimization-133) を使用して、例えば4D をリモートデスクトッププロトコルを使用している場合の共有クリップボードを最適化することができます。
 - インタープリタ版のコンポーネントは今後 [ホストプロジェクトから編集](../Extensions/develop-components.md#editing-components) できるようになりました。
@@ -123,7 +127,7 @@ title: リリースノート
 - Apple 公証ガイドラインにより合致する[新しくビルトされたコンポーネントアーキテクチャ](../Desktop/building.md#build-component)
 - ビルドアプリケーションダイアログボックスから、簡単に[評価版アプリケーションをビルド](../Desktop/building.md#評価版アプリケーション) することができるようになりました。
 - 依存関係: 依存関係マネージャーを使用して、GitHub 上のコンポーネントの[新バージョンをチェック](../Project/components.md#新バージョンをチェック) したり[更新する](../Project/components.md#依存関係の更新) ことができます。
-- 新しい [`TCPConnection`](../API/TCPConnectionClass.md) および [`TCPEvent`](../API/TCPEventClass.md) クラスを使用してTCP クライアント接続を管理したり、イベントを管理したり、データ転送のコントロールを改善することができます。 追加された[`4DTCPLog.txt`](../Debugging/debugLogFiles.md#4dtcpudplogtxt) を使用することでTCP イベントの詳細なログを取ることができます。
+- 新しい [`TCPConnection`](../API/TCPConnectionClass.md) および [`TCPEvent`](../API/TCPEventClass.md) クラスを使用してTCP クライアント接続を管理したり、イベントを管理したり、データ転送のコントロールを改善することができます。 追加された[`4DTCPLog.txt`](../Debugging/debugLogFiles.md#4dtcpudplogtxt) を使用することでTCP イベントの詳細なログを取ることができます。 追加された[`4DTCPLog.txt`](../Debugging/debugLogFiles.md#4dtcpudplogtxt) を使用することでTCP イベントの詳細なログを取ることができます。
 - [VP EXPORT DOCUMENT](../ViewPro/commands/vp-export-document.md) および [VP IMPORT DOCUMENT](../ViewPro/commands/vp-import-document.md) の新しいオプションを使用して、スタイル、フォーミュラ、データ整合性、そしてパスワードによる保護などを管理することができます。
 - 4D Write Pro:
   - 以下のコマンドが、引数としてオブジェクトまたはコレクションを受け取れるようになりました: [WP SET ATTRIBUTES](../WritePro/commands/wp-set-attributes.md)、[WP Get attributes](../WritePro/commands/wp-get-attributes.md)、[WP RESET ATTRIBUTES](../WritePro/commands/wp-reset-attributes.md)、[WP Table append row](../WritePro/commands/wp-table-append-row.md)、 [WP Import document](../WritePro/commands/wp-import-document.md)、 [WP EXPORT DOCUMENT](../WritePro/commands/wp-export-document.md)、 [WP Add picture](../WritePro/commands/wp-add-picture.md)、および [WP Insert picture](../WritePro/commands/wp-insert-picture.md)
@@ -136,7 +140,7 @@ title: リリースノート
 
 #### 動作の変更
 
-- [`SELECT LOG FILE`](../commands/select-log-file.md) コマンドあるいは [バックアップ設定](../Backup/settings.md#ログ管理) を使用してログファイルを変更したあと、[`New log file`](../commands/new-log-file.md) コマンドは、バックアップを待たずに変更を検証するようになりました。 エラー -4447 (バックアップが必要です) は発生しなくなりました。
+- [`SELECT LOG FILE`](../commands/select-log-file.md) コマンドあるいは [バックアップ設定](../Backup/settings.md#ログ管理) を使用してログファイルを変更したあと、[`New log file`](../commands/new-log-file.md) コマンドは、バックアップを待たずに変更を検証するようになりました。 エラー -4447 (バックアップが必要です) は発生しなくなりました。 エラー -4447 (バックアップが必要です) は発生しなくなりました。
 - [新アーキテクチャ](../Desktop/building.md#build-component) 導入の影響により、4D 20 R8 以降でビルドされたコンポーネントはそれ以前の4D リリースへとインストールすることはできません。
 
 ### 4D 20 R7
@@ -148,7 +152,7 @@ title: リリースノート
 - 時間型のリストボックスの列とヘッダーは、["blankIfNull" オプション](../FormObjects/properties_Display.md#時間フォーマット) をサポートするようになりました。
 - [`.getBoxInfo()`](../API/IMAPTransporterClass.md#getboxinfo) and [`.getBoxList()`](../API/IMAPTransporterClass.md#getboxlist) に新しいプロパティが追加されました。
 - [コンポーネントマネージャーのインターフェースを使用してコンポーネントを追加および削除](../Project/components.md#プロジェクトの依存関係のモニタリング) できるようになりました。
-- コンパイラー設定の新しい [**直接型指定モード**](../Project/compiler.md#直接型指定の有効化): コード内のすべての変数および引数を `var` と `#DECLARE`/`Function` キーワードで宣言します (新規プロジェクトではこのモードのみサポートされます)。  これに伴い、[シンタックスチェック機能](../Project/compiler.md#シンタックスチェック) が強化されました。 これに伴い、[シンタックスチェック機能](../Project/compiler.md#シンタックスチェック) が強化されました。
+- コンパイラー設定の新しい [**直接型指定モード**](../Project/compiler.md#直接型指定の有効化): コード内のすべての変数および引数を `var` と `#DECLARE`/`Function` キーワードで宣言します (新規プロジェクトではこのモードのみサポートされます)。  これに伴い、[シンタックスチェック機能](../Project/compiler.md#シンタックスチェック) が強化されました。 これに伴い、[シンタックスチェック機能](../Project/compiler.md#シンタックスチェック) が強化されました。 これに伴い、[シンタックスチェック機能](../Project/compiler.md#シンタックスチェック) が強化されました。
 - [セッションシングルトン](../Concepts/classes.md#シングルトンクラス) と、新しい [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) クラスプロパティをサポート。
 - 新しい[`onHTTPGet` 関数キーワード](../ORDA/ordaClasses.md#onhttpget-keyword) を使用して[HTTP REST GET requests](../REST/ClassFunctions.md#function-calls) 経由で呼び出し可能なシングルトンまたはORDA 関数を定義できるようになりました。
 - 新しい [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) クラスを使用してREST サーバーがあらゆるWeb コンテンツを返すようになりました。
@@ -159,7 +163,7 @@ title: リリースノート
 - 4Dランゲージ:
   - 新コマンド: [Process info](../commands/process-info.md)、 [Session info](../commands/session-info.md)、 [SET WINDOW DOCUMENT ICON](../commands/set-window-document-icon.md)
   - 変更されたコマンド: [Process activity](../commands/process-activity.md)、 [Process number](../commands/process-number.md)
-  - 廃止予定コマンド(置き換え): `GET LAST ERROR STACK` ([Last errors](../commands/last-errors.md))、`GET SERIAL INFORMATION` ([License info](../commands/license-info.md))、`PROCESS PROPERTIES` ([Process info](../commands/process-info.md))、`SET SCREEN DEPTH`、`C_XXX` 系コマンド ([var](../Concepts/variables.md#declaring-variables) および [#DECLARE/Function](../Concepts/parameters.md#declaring-parameters) 宣言)。 廃止予定のコマンドには"\*o\*" の接頭辞がつけられます。
+  - 廃止予定コマンド(置き換え): `GET LAST ERROR STACK` ([Last errors](../commands/last-errors.md))、`GET SERIAL INFORMATION` ([License info](../commands/license-info.md))、`PROCESS PROPERTIES` ([Process info](../commands/process-info.md))、`SET SCREEN DEPTH`、`C_XXX` 系コマンド ([var](../Concepts/variables.md#declaring-variables) および [#DECLARE/Function](../Concepts/parameters.md#declaring-parameters) 宣言)。 廃止予定のコマンドには"\*o\*" の接頭辞がつけられます。 廃止予定のコマンドには"\*o\*" の接頭辞がつけられます。
 - 4D Write Pro:
   - 新コマンド: [WP DELETE SECTION](../WritePro/commands/wp-delete-section.md)
   - 変更されたコマンド: [WP DELETE SUBSECTION](../WritePro/commands/wp-delete-subsection.md) および [WP RESET ATTRIBUTES](../WritePro/commands/wp-reset-attributes.md)
@@ -167,9 +171,9 @@ title: リリースノート
 
 #### 動作の変更
 
-- [4Dランゲージ](../commands/command-index.md) よび [4D Write Pro ランゲージ](../WritePro/commands/command-index.md) のドキュメントが、developer.4d.com で利用できるようになりました。  これらのドキュメントに関する新機能と変更点については、このリリースノートを参照ください。 これらのドキュメントに関する新機能と変更点については、このリリースノートを参照ください。
+- [4Dランゲージ](../commands/command-index.md) よび [4D Write Pro ランゲージ](../WritePro/commands/command-index.md) のドキュメントが、developer.4d.com で利用できるようになりました。  これらのドキュメントに関する新機能と変更点については、このリリースノートを参照ください。 これらのドキュメントに関する新機能と変更点については、このリリースノートを参照ください。 これらのドキュメントに関する新機能と変更点については、このリリースノートを参照ください。
 - [`File`](../commands/file.md) コマンド (および [`4D.File.new()`](../API/FileClass.md#4dfilenew) コマンド) は、引数として与えられた *path* のシンタックスをより厳しくチェックする様になりました。
-- [permission](../ORDA/privileges.md#permission-actions) の利用可能なアクションから、**describe** アクションが削除されました。 [`/rest/$catalog`](../REST/$catalog.md) URL へのアクセスは制御されなくなりました。 Session の *describe* 権限は今後は無視されます。
+- [permission](../ORDA/privileges.md#permission-actions) の利用可能なアクションから、**describe** アクションが削除されました。 [permission](../ORDA/privileges.md#permission-actions) の利用可能なアクションから、**describe** アクションが削除されました。 [`/rest/$catalog`](../REST/$catalog.md) URL へのアクセスは制御されなくなりました。 Session の *describe* 権限は今後は無視されます。 Session の *describe* 権限は今後は無視されます。
 
 ### 4D 20 R6
 
@@ -177,7 +181,7 @@ title: リリースノート
 
 #### ハイライト
 
-- [オブジェクト参照](../Concepts/dt_object.md#オブジェクト演算子) と [コレクション参照](../Concepts/dt_collection.md#コレクション演算子) を対象とした比較演算子をサポート。  [`collection.query()`](../API/CollectionClass.md#query) は、[オブジェクト参照やコレクション参照をクエリの値](../API/CollectionClass.md#オブジェクト参照やコレクション参照で検索する) としてサポートするようになりました。 [`collection.query()`](../API/CollectionClass.md#query) は、[オブジェクト参照やコレクション参照をクエリの値](../API/CollectionClass.md#オブジェクト参照やコレクション参照で検索する) としてサポートするようになりました。
+- [オブジェクト参照](../Concepts/dt_object.md#オブジェクト演算子) と [コレクション参照](../Concepts/dt_collection.md#コレクション演算子) を対象とした比較演算子をサポート。  [`collection.query()`](../API/CollectionClass.md#query) は、[オブジェクト参照やコレクション参照をクエリの値](../API/CollectionClass.md#オブジェクト参照やコレクション参照で検索する) としてサポートするようになりました。 [`collection.query()`](../API/CollectionClass.md#query) は、[オブジェクト参照やコレクション参照をクエリの値](../API/CollectionClass.md#オブジェクト参照やコレクション参照で検索する) としてサポートするようになりました。 [`collection.query()`](../API/CollectionClass.md#query) は、[オブジェクト参照やコレクション参照をクエリの値](../API/CollectionClass.md#オブジェクト参照やコレクション参照で検索する) としてサポートするようになりました。
 - [宣言された名前空間](../Extensions/develop-components.md#コンポーネント名前空間の宣言) をコンポーネントが持つ場合、そのクラスは [`cs.<namespace>`](../Concepts/classes.md#cs).
 - コンポーネントマネージャー: [GitHub に保存されたコンポーネント](../Project/components.md#github-に保存されたコンポーネント) のサポート。
 - 新しい [`entitySelection.clean()`](../API/EntitySelectionClass.md#clean) 関数と [`$clean`](../REST/$clean.md) REST API が追加されました。これらは、対象のエンティティセレクションから削除済みエンティティを除外したエンティティセレクションを新規に取得します。
@@ -207,16 +211,16 @@ title: リリースノート
 - [`Try...Catch...End try`](../Concepts/error-handling.md#trycatchend-try) エラー処理構文のサポート。
 - QUICネットワークレイヤーは [ブロードキャスト](../Desktop/clientServer.md#リモートプロジェクトを開く)、[SSO](https://doc.4d.com/4Dv20R5/4D/20-R5/Single-Sign-On-SSO-on-Windows.300-6932709.ja.html)、および [IPv6](https://doc.4d.com/4Dv20R5/4D/20-R5/IP-Settings.300-6932707.ja.html) に対応しました。
 - [制限付エンティティセレクション](../ORDA/entities.md#制限付エンティティセレクション) をサポート。
-- [共有クラス](../Concepts/classes.md#共有クラス) と [シングルトンクラス](../Concepts/classes.md#シングルトンクラス) をサポート。 新しいクラスプロパティ: [`.isShared`](../API/ClassClass.md#isshared), [`.isSingleton`](../API/ClassClass.md#issingleton), [`.me`](../API/ClassClass.md#me).
+- [共有クラス](../Concepts/classes.md#共有クラス) と [シングルトンクラス](../Concepts/classes.md#シングルトンクラス) をサポート。 [共有クラス](../Concepts/classes.md#共有クラス) と [シングルトンクラス](../Concepts/classes.md#シングルトンクラス) をサポート。 新しいクラスプロパティ: [`.isShared`](../API/ClassClass.md#isshared), [`.isSingleton`](../API/ClassClass.md#issingleton), [`.me`](../API/ClassClass.md#me).
 - [クラスプロパティを宣言の行において初期化すること](../Concepts/classes.md#initializing-the-property-in-the-declaration-line) がサポートされるようになりました。
-- RESTリクエスト用の新しい [強制ログインモード](../REST/authUsers.md#強制ログインモード) と、[Qodly Studio for 4D での専用サポート]((developer.4d.com/qodly/4DQodlyPro/force-login))。
+- RESTリクエスト用の新しい [強制ログインモード](../REST/authUsers.md#強制ログインモード) と、[Qodly Studio for 4D での専用サポート](\(developer.4d.com/qodly/4DQodlyPro/force-login\))。
 - 新しい [$format](../REST/$format.md) RESTパラメーター。
 - [`Session`](../commands/session.md) オブジェクトはリモートユーザーセッションおよびすトアドプロシージャーセッションにおいても利用可能になりました。
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20_R5): 4D 20 R5 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/122/release-note-version-20r5/))。
 
 #### 動作の変更
 
-- *4D Internet Commands* および *4D for OCI* プラグインは、4Dインストーラーに含まれなくなりました。 これらのプラグインを入手するには、[**4D製品ダウンロードポータル**](https://product-download.4d.com/) に接続する必要があります。
+- *4D Internet Commands* および *4D for OCI* プラグインは、4Dインストーラーに含まれなくなりました。 これらのプラグインを入手するには、[**4D製品ダウンロードポータル**](https://product-download.4d.com/) に接続する必要があります。 これらのプラグインを入手するには、[**4D製品ダウンロードポータル**](https://product-download.4d.com/) に接続する必要があります。
 - ストラクチャーエディターでテーブルやフィールドのグラフィカルな表示 (色、位置、順序など)  に加えた変更は、`catalog_editor.json` という個別ファイルに保存されるようになりました。このファイルはプロジェクトの [`Sources`フォルダー](../Project/architecture.md#sources) に保存されます。
 
 ### 4D 20 R4
@@ -241,8 +245,8 @@ title: リリースノート
 
 - 引数を宣言するための従来のシンタックス (例: `C_TEXT($1)` や `var $1 : Text`) は非推奨となり、コードの入力時、シンタックスチェック、コンパイル時に警告が生成されます。
 - セレクション内レコードの削除後に、別レコードが新規作成された場合でも、セレクションの一貫性が保持されるようになりました ([このブログ記事](https://blog.4d.com/ja/4d-keeps-your-selections-of-records-consistent-regarding-deletion-of-records/) を参照ください)。
-- 更新された [OpenSSL ライブラリ](#ライブラリの一覧-4d-21-lts) では、デフォルトの SSL/TLS セキュリティレベルが 1 から 2 に変更されました。 1024ビット以上2048ビット未満のRSA、DSA、DH鍵、および 160ビット以上224ビット未満の ECC鍵は使用できなくなりました。 デフォルトでは、以前の OpenSSLバージョンですでに TLS圧縮が無効にされていました。 セキュリティレベル2では、これを有効化できません。
-- [4D ユーザーがbcrypt アルゴリズムを使用できる](https://blog.4d.com/bcrypt-support-for-passwords/) ようにするため、[`Open datastore`](../commands/open-datastore.md) コマンドの*connectionInfo* 引数内の"password" の値はデフォルトでは平文で送信されるようになりました。 そのため、"On REST authentication" データベースメソッドがパスワードを平文で扱えるようにすること(そのため第3引数は**False** となります)と、`Open datastore` の*connectionInfo* の"tls" オプションに**True**  を渡すことで接続を暗号化するようにすることを忘れないようにして下さい。 特定の場合には、新しい "passwordAlgorithm" オプションも互換性のために使用できます ([`Open datastore`](../commands/open-datastore.md) コマンド参照)。
+- 更新された [OpenSSL ライブラリ](#ライブラリの一覧-4d-21-lts) では、デフォルトの SSL/TLS セキュリティレベルが 1 から 2 に変更されました。 1024ビット以上2048ビット未満のRSA、DSA、DH鍵、および 160ビット以上224ビット未満の ECC鍵は使用できなくなりました。 デフォルトでは、以前の OpenSSLバージョンですでに TLS圧縮が無効にされていました。 セキュリティレベル2では、これを有効化できません。 1024ビット以上2048ビット未満のRSA、DSA、DH鍵、および 160ビット以上224ビット未満の ECC鍵は使用できなくなりました。 デフォルトでは、以前の OpenSSLバージョンですでに TLS圧縮が無効にされていました。 セキュリティレベル2では、これを有効化できません。
+- [4D ユーザーがbcrypt アルゴリズムを使用できる](https://blog.4d.com/bcrypt-support-for-passwords/) ようにするため、[`Open datastore`](../commands/open-datastore.md) コマンドの*connectionInfo* 引数内の"password" の値はデフォルトでは平文で送信されるようになりました。 そのため、"On REST authentication" データベースメソッドがパスワードを平文で扱えるようにすること(そのため第3引数は**False** となります)と、`Open datastore` の*connectionInfo* の"tls" オプションに**True**  を渡すことで接続を暗号化するようにすることを忘れないようにして下さい。 特定の場合には、新しい "passwordAlgorithm" オプションも互換性のために使用できます ([`Open datastore`](../commands/open-datastore.md) コマンド参照)。 そのため、"On REST authentication" データベースメソッドがパスワードを平文で扱えるようにすること(そのため第3引数は**False** となります)と、`Open datastore` の*connectionInfo* の"tls" オプションに**True**  を渡すことで接続を暗号化するようにすることを忘れないようにして下さい。 特定の場合には、新しい "passwordAlgorithm" オプションも互換性のために使用できます ([`Open datastore`](../commands/open-datastore.md) コマンド参照)。
 
 ### 4D 20 R3
 
@@ -253,7 +257,7 @@ title: リリースノート
 - 新しい [`collection.multiSort()`](../API/CollectionClass.md#multisort) 関数を追加しました。
 - Support of *context* parameter in [`Formula from string`](../commands/formula-from-string.md).
 - [4D.WebSocket.new](../API/WebSocketClass.md#4dwebsocketnew) の *connectionHandler* パラメーターで `headers` プロパティをサポート。
-- データ同期モジュールの実装に役立つ [グローバル変更スタンプ](../ORDA/global-stamp.md)。 新しい [`ds.getGlobalStamp`](../API/DataStoreClass.md#getglobalstamp) と [`ds.setGlobalStamp`](../API/DataStoreClass.md#setglobalstamp) 関数が追加されました。
+- データ同期モジュールの実装に役立つ [グローバル変更スタンプ](../ORDA/global-stamp.md)。 データ同期モジュールの実装に役立つ [グローバル変更スタンプ](../ORDA/global-stamp.md)。 新しい [`ds.getGlobalStamp`](../API/DataStoreClass.md#getglobalstamp) と [`ds.setGlobalStamp`](../API/DataStoreClass.md#setglobalstamp) 関数が追加されました。
 - ピクチャー/BLOB 属性にファイル参照を代入することが、[ORDA でサポートされるようになりました](../ORDA/entities.md#assigning-files-to-picture-or-blob-attributes)。
 - [宣言と同時に変数のデータ型と値を初期化](../Concepts/variables/#宣言と同時に変数を初期化する) できるようになりました。
 - ログファイルの設定は、[カレントデータファイル](../Backup/settings.md#ログ管理) とともに保存されるようになりました。
@@ -263,8 +267,8 @@ title: リリースノート
 
 #### 動作の変更
 
-- いくつかのエラーは、[エラー処理メソッド](../Concepts/error-handling.md) によってインタプリタモードのみでキャッチ可能でした。 この問題の修正後、以下のエラーがコンパイルモードでも検出されるようになりました: *範囲外のインデックス*、*互換性のない型*、*Null ポインターの逆参照*。 ただし、Intelプロセッサーでは、このようなエラーによって以前と同様に処理が中断されますが、Apple Siliconプロセッサーでは、[`ABORT`](../commands-legacy/abort.md) コマンドを呼び出さない限り、処理は中断されません。
-- 4D は内部的な PHPインタプリターを実装しなくなりました。  PHPコマンドを使用するには、[別途PHPインタプリターをセットアップして実行する](https://blog.4d.com/ja/deprecation-of-php-commands-removal-of-4d-built-in-php-interpreter) 必要があります。
+- いくつかのエラーは、[エラー処理メソッド](../Concepts/error-handling.md) によってインタプリタモードのみでキャッチ可能でした。 この問題の修正後、以下のエラーがコンパイルモードでも検出されるようになりました: *範囲外のインデックス*、*互換性のない型*、*Null ポインターの逆参照*。 いくつかのエラーは、[エラー処理メソッド](../Concepts/error-handling.md) によってインタプリタモードのみでキャッチ可能でした。 この問題の修正後、以下のエラーがコンパイルモードでも検出されるようになりました: *範囲外のインデックス*、*互換性のない型*、*Null ポインターの逆参照*。 ただし、Intelプロセッサーでは、このようなエラーによって以前と同様に処理が中断されますが、Apple Siliconプロセッサーでは、[`ABORT`](../commands-legacy/abort.md) コマンドを呼び出さない限り、処理は中断されません。
+- 4D は内部的な PHPインタプリターを実装しなくなりました。  4D は内部的な PHPインタプリターを実装しなくなりました。  PHPコマンドを使用するには、[別途PHPインタプリターをセットアップして実行する](https://blog.4d.com/ja/deprecation-of-php-commands-removal-of-4d-built-in-php-interpreter) 必要があります。
 
 ### 4D 20 R2
 
@@ -272,7 +276,7 @@ title: リリースノート
 
 :::warning セキュリティに関する注記
 
-4Dアプリケーションが TLS接続を使用する場合は、4D 20 R2 HF1 build 100440以上へのアップグレードが推奨されます。  詳細は [セキュリティ情報](https://blog.4d.com/ja/security-bulletin-two-cves-and-how-to-stay-secure/) を参照ください。 詳細は [セキュリティ情報](https://blog.4d.com/ja/security-bulletin-two-cves-and-how-to-stay-secure/) を参照ください。
+4Dアプリケーションが TLS接続を使用する場合は、4D 20 R2 HF1 build 100440以上へのアップグレードが推奨されます。  詳細は [セキュリティ情報](https://blog.4d.com/ja/security-bulletin-two-cves-and-how-to-stay-secure/) を参照ください。 詳細は [セキュリティ情報](https://blog.4d.com/ja/security-bulletin-two-cves-and-how-to-stay-secure/) を参照ください。 詳細は [セキュリティ情報](https://blog.4d.com/ja/security-bulletin-two-cves-and-how-to-stay-secure/) を参照ください。
 
 :::
 
@@ -286,7 +290,7 @@ title: リリースノート
 
 #### 動作の変更
 
-- **警告**: [4D.FileHandle](../API/FileHandleClass.md) オブジェクトの [`offset`](../API/FileHandleClass.md#offset) の開始値が誤って 0 ではなく 1 に設定されていました。  **20.1 HF1** および **20 R2** のバージョンで 4D が修正され、この値が 0 になりました。 **20.1 HF1** および **20 R2** のバージョンで 4D が修正され、この値が 0 になりました。
+- **警告**: [4D.FileHandle](../API/FileHandleClass.md) オブジェクトの [`offset`](../API/FileHandleClass.md#offset) の開始値が誤って 0 ではなく 1 に設定されていました。  **20.1 HF1** および **20 R2** のバージョンで 4D が修正され、この値が 0 になりました。 **20.1 HF1** および **20 R2** のバージョンで 4D が修正され、この値が 0 になりました。 **20.1 HF1** および **20 R2** のバージョンで 4D が修正され、この値が 0 になりました。
 
 ## ライブラリの一覧 (4D 21 LTS)
 
