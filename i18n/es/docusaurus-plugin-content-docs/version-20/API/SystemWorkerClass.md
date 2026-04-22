@@ -341,7 +341,7 @@ La propiedad `.currentDirectory` <!-- REF #SystemWorkerClass.currentDirectory.Su
 
 #### Descripción
 
-La propiedad `.dataType` <!-- REF #SystemWorkerClass.dataType.Summary -->contiene el tipo de contenido del cuerpo de la respuesta<!-- END REF -->. Valores posibles: "text" o "blob".
+La propiedad `.dataType` <!-- REF #SystemWorkerClass.dataType.Summary -->contiene el tipo de contenido del cuerpo de la respuesta<!-- END REF -->. .
 
 Esta propiedad es **de sólo lectura**.
 
@@ -498,7 +498,7 @@ La propiedad `.responseError` <!-- REF #SystemWorkerClass.responseError.Summary 
 
 #### Descripción
 
-La función `.terminate()` <!-- REF #SystemWorkerClass.terminate().Summary -->fuerza al `SystemWorker` a terminar su ejecución<!-- END REF -->.
+La función `.terminate()` <!-- REF #SystemWorkerClass.terminate().Summary -->La función `.terminate()`<!-- END REF -->.
 
 Esta función envía la instrucción de terminar y devolver el control al script en ejecución.
 
@@ -571,6 +571,6 @@ Durante una ejecución de `.wait()` se ejecutan las funciones de retrollamada, e
 
 Esta función devuelve el objeto SystemWorker.
 
-> Esta función no es necesaria si creó el `SystemWorker` desde un proceso worker 4D.
+> This function is not necessary if you created the `SystemWorker` form a 4D worker process.
 
 <!-- END REF -->
