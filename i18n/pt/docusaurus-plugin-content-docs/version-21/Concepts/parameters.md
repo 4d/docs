@@ -7,7 +7,7 @@ Frequentemente será preciso passar dados para seus métodos. Isso é facilmente
 
 ## Utilização de parâmetros
 
-Os **parâmetros** (ou **argumentos**) são partes de dados que um método ou uma função de classe precisa para executar sua tarefa. Os termos *parâmetro* e *argumento* são usados de forma intercambiável ao longo deste manual. Parâmetros também são passados para comandos integrados 4D. Neste exemplo, a cadeia de caracteres "Hello" é um argumento para o comando interno `ALERT`:
+Os **parâmetros** (ou **argumentos**) são partes de dados que um método ou uma função de classe precisa para executar sua tarefa. Os termos *parâmetro* e *argumento* são usados de forma intercambiável ao longo deste manual. Parâmetros também são passados para comandos integrados 4D. Parâmetros também são passados para comandos integrados 4D.
 
 ```4d
 ALERT("Hello")
@@ -393,7 +393,7 @@ No método `ChangeAge` acima, as propriedades Age e Name são obrigatórias e pr
 
 Ambos parâmetros são opcionais: se não forem preenchidos, o resultado será "é 10 anos de idade", mas nenhum erro será gerado.
 
-Finalmente, com parâmetros com nome, a manutenção ou a reprodução das aplicações é muito simples e seguro. Imagine que depois perceba de que adicionar 10 anos não funciona sempre. You need another parameter to set how many years to add. You write: Escreva: Escreve:
+Finalmente, com parâmetros com nome, a manutenção ou a reprodução das aplicações é muito simples e seguro. Imagine que depois perceba de que adicionar 10 anos não funciona sempre. You need another parameter to set how many years to add. You write: Escreva: Escreve: Escreve:
 
 ```4d
 $person:=New object("Name";"Smith";"Age";40;"toAdd";10)
@@ -506,7 +506,7 @@ $param->:=Uppercase($param->)
 ALERT($param->)
 ```
 
-Aqui é o parâmetro não for o campo, mas sim um ponteiro ao mesmo. Portanto, no método `DO SOMETHING`, $param já não é o valor do campo, mas um ponteiro ao campo. O objeto **referenciado** por $param ($param-> no código acima) é o campo real. Portanto, mudar o objeto referenciado vai além do escopo da subrotina, e o campo real não é afetado. Neste exemplo, as duas caixas de alerta dirão "WILLIAMS".
+Aqui é o parâmetro não for o campo, mas sim um ponteiro ao mesmo. Aqui é o parâmetro não for o campo, mas sim um ponteiro ao mesmo. Portanto, no método `DO SOMETHING`, $param já não é o valor do campo, mas um ponteiro ao campo. Portanto, mudar o objeto referenciado vai além do escopo da subrotina, e o campo real não é afetado. Neste exemplo, as duas caixas de alerta dirão "WILLIAMS".
 
 2. Ao invés de ter o método `DO_SOMETHING` "fazendo algo", você pode reescrever o método para que ele retorne um valor. Portanto escreveria:
 
