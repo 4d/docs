@@ -234,7 +234,7 @@ LogFile("!!! サーバーエラー: "+$event.errors.first().message)
 
 ### `connectionHandler` オブジェクト
 
-`WSHandler.onConnection` コールバックの結果として、`connectionHandler` オブジェクトを渡します。これは、WebSocket 接続でイベントが発生するたび (主にメッセージが受信されるたび) に呼び出されるユーザークラスのインスタンスです。 このクラスでは、以下のコールバック関数を定義します (`onMessage` のみ必須):
+`WSHandler.onConnection` コールバックの結果として、`connectionHandler` オブジェクトを渡します。 これは、WebSocket 接続でイベントが発生するたび (主にメッセージが受信されるたび) に呼び出されるユーザークラスのインスタンスです。 このクラスでは、以下のコールバック関数を定義します (`onMessage` のみ必須):
 
 | 引数          | 型                            | 説明                                         |
 | ----------- | ---------------------------- | ------------------------------------------ |
@@ -303,7 +303,8 @@ Function onMessage($ws : 4D.WebSocketConnection; $message : Object)
 
 Function onOpen($ws : 4D.WebSocketConnection; $message : Object)
     // 新規接続ユーザーにメッセージを送信します
-    $ws.send("チャットへようこそ！")
+    $ws.send("チャットへようこそ！
+    ")
     // その他の接続済チャットクライアントに "新規クライアントが接続しました" メッセージを送信します
     This.broadcast($ws;"新規クライアントが接続しました")
 
@@ -369,7 +370,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 #### 説明
 
-`.handler` プロパティは、 <!-- REF #WebSocketServerClass.handler.Summary -->WebSocketサーバーの開始に使用された `WSSHandler` オブジェクトを取得するアクセサーです<!-- END REF -->。
+`.handler` プロパティは、 <!-- REF #WebSocketServerClass.handler.Summary -->`.handler` プロパティは、<!-- END REF -->。
 
 <!-- END REF -->
 
