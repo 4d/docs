@@ -198,7 +198,7 @@ Para más información, consulte [Null e indefinido](dt_null_undefined.md).
 
 ### Valor indefinido
 
-La evaluación de una propiedad de un objeto puede producir a veces un valor indefinido. Asignar un valor indefinido a una propiedad de objeto existente reinicializa o borra su valor. La asignación de un valor indefinido a una propiedad de objeto no existente no hace nada.
+La evaluación de una propiedad de un objeto puede producir a veces un valor indefinido. La evaluación de una propiedad de un objeto puede producir a veces un valor indefinido. La asignación de un valor indefinido a una propiedad de objeto no existente no hace nada.
 
 Para más información, consulte [Null e indefinido](dt_null_undefined.md)
 
