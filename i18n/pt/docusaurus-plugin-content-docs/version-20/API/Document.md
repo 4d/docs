@@ -160,7 +160,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.isFile` devolve <!-- REF #document.isFile.Summary -->A função `.copyTo()`<!-- END REF -->.
+A propriedade `.isFile` devolve <!-- REF #document.isFile.Summary -->A propriedade `.name` devolve<!-- END REF -->.
 
 Essa propriedade é **apenas leitura**.
 
@@ -180,7 +180,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.isFolder` devolve <!-- REF #document.isFolder.Summary -->A propriedade `.platformPath` devolve<!-- END REF -->.
+A propriedade `.isFolder` devolve <!-- REF #document.isFolder.Summary -->A função `.copyTo()`<!-- END REF -->.
 
 Essa propriedade é **apenas leitura**.
 
@@ -270,7 +270,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.name` devolve <!-- REF #document.name.Summary -->A propriedade `.isFile` devolve<!-- END REF -->.
+A propriedade `.name` devolve <!-- REF #document.name.Summary -->A propriedade `.isFolder` devolve<!-- END REF -->.
 
 Essa propriedade é **apenas leitura**.
 
@@ -355,7 +355,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.platformPath` devolve <!-- REF #document.platformPath.Summary -->o caminho do ficheiro expresso com a sintaxe da plataforma actual<!-- END REF -->.
+A propriedade `.platformPath` devolve <!-- REF #document.platformPath.Summary -->A propriedade `.isFile` devolve<!-- END REF -->.
 
 Essa propriedade é **apenas leitura**.
 
@@ -399,16 +399,16 @@ Essa propriedade é **apenas leitura**.
 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|destinationFolder | 4D.Folder |->|Destination folder|
+|destinationFolder | 4D. Folder |->|Destination folder|
 |newName|Text|->|Name for the copy|
 |overwrite|Integer|->|`fk overwrite` to replace existing elements|
-|Result|4D.File|<-|Copied file|
+|Result|4D. File|<-|Copied file|
 </div>
 <!-- END REF -->
 
 #### Descrição
 
-A função `.copyTo()` <!-- REF #document.copyTo().Summary -->A propriedade `.isFolder` devolve <!-- END REF -->.
+A função `.copyTo()` <!-- REF #document.copyTo().Summary -->A propriedade `.platformPath` devolve <!-- END REF -->.
 
 A *destinationFolder* deve existir em disco, senão um erro é gerado.
 
@@ -455,13 +455,13 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 |Parameter|Type||Description|
 |---|----|---|---|
-|Result | 4D.Blob |<-|File content|
+|Result | 4D. Blob |<-|File content|
 </div>
 <!-- END REF -->
 
 #### Descrição
 
-A função `.getContent()`  <!-- REF #document.getContent().Summary -->returns a `4D. Blob` object containing the entire content of a file<!-- END REF -->. Para informações sobre BLOBs, consultar a secção [BLOB](Concepts/dt_blob.md) .
+A função `.getContent()`  <!-- REF #document.getContent().Summary -->returns a `4D. Blob` object containing the entire content of a file<!-- END REF -->. .
 
 **Valor retornado**
 
