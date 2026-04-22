@@ -51,7 +51,7 @@ collectionRef[expression]
 
 :::info
 
-いくつかの 4Dコマンドや関数はコレクションを返します。たとえば、 [`Get Monitored Activity`](https://doc.4d.com/4dv19R/help/command/ja/page1713.html) や [`collection.copy`](../API/CollectionClass.md#copy) などです。 この場合、コレクションを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。
+いくつかの 4Dコマンドや関数はコレクションを返します。 たとえば、 [`Get Monitored Activity`](https://doc.4d.com/4dv19R/help/command/ja/page1713.html) や [`collection.copy`](../API/CollectionClass.md#copy) などです。 この場合、コレクションを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。
 
 :::
 
@@ -97,7 +97,7 @@ $users:=[{name: "Alice"; \
 
 :::note
 
-要素を 1つだけ含むコレクションリテラルを作成する場合、既存のテーブル名に対応する文字列を使用することはできません。競合が発生した場合、テーブルシンタックス `[tableName]` が優先されます。
+要素を 1つだけ含むコレクションリテラルを作成する場合、既存のテーブル名に対応する文字列を使用することはできません。 競合が発生した場合、テーブルシンタックス `[tableName]` が優先されます。
 
 :::
 
