@@ -14,7 +14,8 @@ Esta propriedade define o esquema de cores para o formulário. Esta propriedade 
 - dark - texto claro sobre um fundo escuro
 - light - texto escuro sobre um fundo claro
 
-> &#062; A defined color scheme can not be overridden by a CSS.
+> light - texto escuro sobre um fundo claro
+> &#062; &#062; A defined color scheme can not be overridden by a CSS.
 
 #### Gramática JSON
 
