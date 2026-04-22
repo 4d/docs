@@ -300,6 +300,10 @@ Function onInvoke($editor : Object)->$result : Object
 
     // Notificar ao 4D a modificação
     $result:=New object("currentPage"; $editor.editor.currentPage)
+    End if 
+
+    // Notificar ao 4D a modificação
+    $result:=New object("currentPage"; $editor.editor.currentPage)
 ```
 
 
