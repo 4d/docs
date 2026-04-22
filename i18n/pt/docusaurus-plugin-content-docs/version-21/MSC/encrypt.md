@@ -38,9 +38,7 @@ Para encriptar os seus dados pela primeira vez utilizando o CSM, são necessári
    You will be prompted to enter a passphrase for your data file:
    ![](../assets/en/MSC/MSC_encrypt4.png)
    The passphrase is used to generate the data encryption key. Uma frase-chave é uma versão mais segura de uma palavra-passe e pode conter um grande número de caracteres. Por exemplo, pode introduzir uma frase-chave como "Todos nós viemos para Montreux" ou "A minha primeira grande frase-chave!"
-   The security level indicator can help you evaluate the strength of your passphrase:
-   ![](../assets/en/MSC/MSC_encrypt5.png)
-   (deep green is the highest level)
+   Uma frase-chave é uma versão mais segura de uma palavra-passe e pode conter um grande número de caracteres.
 4. Introduza para confirmar a sua frase-passe protegida.
 
 O processo de encriptação é então iniciado. Se o MSC foi aberto em modo padrão, o banco de dados é reaberto em modo manutenção.
@@ -110,7 +108,7 @@ O arquivo de dados é totalmente descriptografado e uma mensagem de confirmaçã
 
 ## Guardar a chave de encriptação
 
-4D permite salvar a chave de encriptação de dados em um arquivo dedicado. El nombre del archivo debe tener la extensión `.4DKeyChain`, por ejemplo "myKeys.4DKeyChain". Armazenar esse arquivo em um aparelho externo, como um pendrive USB, facilita o uso de um banco de ados criptografado, já que o usuário só precisa conectar o aparelho para fornecer a chave de criptografia antes de abrir o banco de dados para poder acessar os dados criptografados.
+4D permite salvar a chave de encriptação de dados em um arquivo dedicado. 4D permite salvar a chave de encriptação de dados em um arquivo dedicado. Armazenar esse arquivo em um aparelho externo, como um pendrive USB, facilita o uso de um banco de ados criptografado, já que o usuário só precisa conectar o aparelho para fornecer a chave de criptografia antes de abrir o banco de dados para poder acessar os dados criptografados.
 
 É possível guardar a chave de encriptação sempre que for fornecida uma nova frase-chave:
 
