@@ -108,7 +108,7 @@ title: ドキュメンテーション
 
 - Markdown ファイルの先頭に設置した、HTML コメントタグで囲まれたテキスト (`<!-- コマンドの説明 -->`)
 
-- HTML のコメントタグが使用されていなければ、Markdown ファイルの `# Description` タグ後の最初の文章。  
+- HTML のコメントタグが使用されていなければ、Markdown ファイルの `# Description` タグ後の最初の文章。   
   この場合、最初の文章には 4D コードパーサーによって自動生成されたメソッドの **プロトタイプ** が入ります。
 
 :::note
@@ -230,6 +230,17 @@ C_LONGINT($size)
 
 // 最大ロゴを取得します
 $logo:=GetLogo(5)
+1 = 最小値, 5 = 最大値
+
+## Example
+
+```4d
+C_PICTURE($logo)
+C_LONGINT($size)
+
+// 最大ロゴを取得します
+$logo:=GetLogo(5)
+```
 1 = 最小値, 5 = 最大値
 
 ## Example
