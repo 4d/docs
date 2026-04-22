@@ -38,7 +38,7 @@ displayed_sidebar: docs
 
 *wpDoc* 引数には、スタイルシートを持った4D Write Pro ドキュメントを渡します。
 
-*styleSheetName* 引数を使用すると、返すスタイルシートの名前を指定することができます。 *wpDoc* 引数のドキュメント内のそのスタイルシート名が存在しない場合、null オブジェクトが返されます。
+*styleSheetName* 引数を使用すると、返すスタイルシートの名前を指定することができます。 *styleSheetName* 引数を使用すると、返すスタイルシートの名前を指定することができます。 *wpDoc* 引数のドキュメント内のそのスタイルシート名が存在しない場合、null オブジェクトが返されます。
 
 If the *styleSheetName* is the root-level name of a hierarchical list style sheet, you can optionally specify the *listLevelIndex* parameter to retrieve a specific level of the hierarchy.
 

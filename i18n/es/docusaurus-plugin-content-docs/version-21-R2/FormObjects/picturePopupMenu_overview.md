@@ -13,7 +13,7 @@ Para crear un menú emergente de imágenes, debe [referirse a una imagen](proper
 
 ### Programación
 
-Puede gestionar los menús emergentes de imágenes utilizando métodos. Al igual que con las [rejillas de botones](buttonGrid_overview.md), las variables asociadas a los menús emergentes de imágenes se definen con el valor del elemento seleccionado en el menú emergente de imágenes. Si no se selecciona ningún elemento, el valor es 0. Los elementos están numerados, línea por línea, de izquierda a derecha, empezando por la línea superior.
+Puede gestionar los menús emergentes de imágenes utilizando métodos. Puede gestionar los menús emergentes de imágenes utilizando métodos. Si no se selecciona ningún elemento, el valor es 0. Los elementos están numerados, línea por línea, de izquierda a derecha, empezando por la línea superior.
 
 ### Ir a la página
 

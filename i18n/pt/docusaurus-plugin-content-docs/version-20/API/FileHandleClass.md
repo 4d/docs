@@ -184,12 +184,12 @@ Essa propriedade é **apenas leitura**.
 <!-- REF FileHandleClass.file.Desc -->
 ## .file
 
-<!-- REF #FileHandleClass.file.Syntax -->**.file**: 4D.File<!-- END REF -->
+<!-- REF #FileHandleClass.file.Syntax -->**.file**: 4D. File<!-- END REF -->
 
 
 #### Descrição
 
-A propriedade `.file` devolve <!-- REF #FileHandleClass.file.Summary -->o objeto [4D.File](FileClass.md) no qual o identificador foi criado<!-- END REF -->.
+A propriedade `.file` devolve <!-- REF #FileHandleClass.file.Summary -->o objeto [4D. File](FileClass.md) no qual o identificador foi criado<!-- END REF -->.
 
 Essa propriedade é **apenas leitura**.
 
@@ -313,7 +313,7 @@ $s:=$fh.readText()
 | 18 R6   | Adicionado |
 </details>
 
-<!--REF #FileHandleClass.readBlob().Syntax -->**.readBlob**( *bytes* : Real ) : 4D.Blob <!-- END REF -->
+<!--REF #FileHandleClass.readBlob().Syntax -->**.readBlob**( *bytes* : Real ) : 4D. Blob <!-- END REF -->
 
 
 <!--REF #FileHandleClass.readBlob().Params -->
@@ -322,7 +322,7 @@ $s:=$fh.readText()
 |Parameter|Type||Description|
 |---|---|---|---|
 |bytes|Real|->|Number of bytes to be read|
-|Result|[4D.Blob](BlobClass)|<-|Bytes read from the file|
+|Result|[4D. Blob](BlobClass)|<-|Bytes read from the file|
 </div>
 <!-- END REF -->
 
@@ -492,7 +492,7 @@ Se o tamanho ** for inferior ao tamanho atual do documento, o conteúdo do docum
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|blob|[4D.Blob](BlobClass)|->|Blob to write in the file|
+|blob|[4D. Blob](BlobClass)|->|Blob to write in the file|
 </div>
 <!-- END REF -->
 

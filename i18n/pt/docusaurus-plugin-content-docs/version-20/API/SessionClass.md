@@ -42,7 +42,7 @@ Para obter informação detalhada sobre a implementação da sessão, consulte [
 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.Session|<-|Session object|
+|Result|4D. Session|<-|Session object|
 </div>
 <!-- END REF -->
 
@@ -309,7 +309,7 @@ If (Session.isGuest())
 
 #### Descrição
 
-A função `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary -->associa à sessão o(s) privilégio(s) definido(s) no parâmetro<!-- END REF -->.
+A função `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary -->A função `.setPrivileges()`<!-- END REF -->.
 
 - No parâmetro *privilege*, passe uma string contendo um nome de privilégio (ou vários nomes de privilégio separados por vígulas).
 

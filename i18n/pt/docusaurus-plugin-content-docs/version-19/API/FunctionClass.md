@@ -5,7 +5,7 @@ title: Function
 
 ### Acerca dos objectos Function
 
-Um objeto `4D.Function` contém um pedaço de código que pode ser executado de um objeto, seja usando o operador `()` ou usando as funções [`apply()`](#apply) e [`call()`](#call). 4D propõe três tipos de objetos `Function`:
+Os comandos [Formula](#formula) e [Formula from string](#formula-from-string) permitem que você crie objetos `4D. Function` para executar qualquer expressão 4D ou código expresso como texto.
 
 - **funções nativas**, ou seja, funções integradas, built-in, de várias classes 4D tais como `collection.sort()` ou `file.copyTo()`.
 - **funções usuário**, ciradas em [classes](Concepts/classes.md) usuário usanod a [palavra chave Function](Concepts/classes.md#function).
@@ -51,7 +51,7 @@ Também pode executar uma função usando as funções [`apply()`](#apply) e [`c
 
 #### Utilização de parâmetros
 
-Pode passar parâmetros para suas fórmulas usando o parâmetro sequencial [ syntax](Concepts/parameters.md#sequential-parameters) baseado em $1, $2...$n. For example, you can write: Por exemplo, pode escrever: Por exemplo, pode escrever:
+Pode passar parâmetros para suas fórmulas usando o parâmetro sequencial [ syntax](Concepts/parameters.md#sequential-parameters) baseado em $1, $2...$n. For example, you can write: Por exemplo, pode escrever: Por exemplo, pode escrever: Por exemplo, pode escrever:
 
 ```4d
  var $f : Object
@@ -126,7 +126,7 @@ Parâmetros são recebidos dentro do método, na ordem que são especificados na
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |formulaExp|Expression|->|Formula to be returned as object|
-|Result|4D.Function|<-|Native function encapsulating the formula|
+|Result|4D. Function|<-|Native function encapsulating the formula|
 </div>
 <!-- END REF -->
 
@@ -266,7 +266,7 @@ Chamar uma fórmula usando notação de objeto:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |formulaString|Text|->|Text formula to be returned as object|
-|Result|4D.Function|<-|Native object encapsulating the formula|
+|Result|4D. Function|<-|Native object encapsulating the formula|
 </div>
 <!-- END REF -->
 

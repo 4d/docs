@@ -19,7 +19,7 @@ title: Document クラス
 
 #### 説明
 
-`.creationDate` プロパティは、 <!-- REF #document.creationDate.Summary -->ファイルの作成日を返します<!-- END REF -->。
+`.creationDate` プロパティは、 <!-- REF #document.creationDate.Summary -->`.creationDate` プロパティは、<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 
@@ -180,7 +180,7 @@ title: Document クラス
 
 #### 説明
 
-`.isFolder` プロパティは、 <!-- REF #document.isFolder.Summary -->ファイルに対しては常に false を返します。<!-- END REF -->。
+`.isFolder` プロパティは、 <!-- REF #document.isFolder.Summary -->`.copyTo()` 関数は、<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 
@@ -230,7 +230,7 @@ title: Document クラス
 
 #### 説明
 
-`.modificationDate` プロパティは、 <!-- REF #document.modificationDate.Summary -->ファイルの最終変更日を返します<!-- END REF -->。
+`.modificationDate` プロパティは、 <!-- REF #document.modificationDate.Summary -->`.modificationDate` プロパティは、<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 
@@ -315,7 +315,7 @@ title: Document クラス
 
 #### 説明
 
-`.parent` プロパティは、 <!-- REF #document.parent.Summary -->対象ファイルの親フォルダーオブジェクトを返します<!-- END REF -->。 パスがシステムパスを表す場合 (例: "/DATA/")、システムパスが返されます。
+`.parent` プロパティは、 <!-- REF #document.parent.Summary -->`.parent` プロパティは、<!-- END REF -->。 パスがシステムパスを表す場合 (例: "/DATA/")、システムパスが返されます。
 
 このプロパティは **読み取り専用** です。
 
@@ -335,7 +335,7 @@ title: Document クラス
 
 #### 説明
 
-`.path` プロパティは、 <!-- REF #document.path.Summary -->ファイルの POSIXパスを返します<!-- END REF -->。 パスがファイルシステムを表す場合 (例: "/DATA/")、ファイルシステムが返されます。
+`.path` プロパティは、 <!-- REF #document.path.Summary -->`.path` プロパティは、<!-- END REF -->。 パスがファイルシステムを表す場合 (例: "/DATA/")、ファイルシステムが返されます。
 
 このプロパティは **読み取り専用** です。
 
@@ -355,7 +355,7 @@ title: Document クラス
 
 #### 説明
 
-`.platformPath` プロパティは、 <!-- REF #document.platformPath.Summary -->カレントプラットフォームのシンタックスで表現されたファイルのパスを返します<!-- END REF -->。
+`.platformPath` プロパティは、 <!-- REF #document.platformPath.Summary -->`.platformPath` プロパティは、<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 
@@ -408,11 +408,11 @@ title: Document クラス
 
 #### 説明
 
-`.copyTo()` 関数は、 <!-- REF #document.copyTo().Summary -->`File` オブジェクトを、*destinationFolder* 引数で指定したフォルダーへとコピーします <!-- END REF -->。
+`.copyTo()` 関数は、 <!-- REF #document.copyTo().Summary -->`.isFolder` プロパティは、 <!-- END REF -->。
 
 *destinationFolder* 引数が指定するフォルダーはディスク上に存在している必要があり、そうでない場合にはエラーが生成されます。
 
-デフォルトで、ファイルは元の名前を維持したままコピーされます。 コピーの際にフォルダー名を変更したい場合、新しい名前を *newName* に渡します。 新しい名前は命名規則に則っている必要があります (例: ":", "/", 等の文字を含んでいない、など)。そうでない場合、エラーが返されます。
+デフォルトで、ファイルは元の名前を維持したままコピーされます。 コピーの際にフォルダー名を変更したい場合、新しい名前を *newName* に渡します。 新しい名前は命名規則に則っている必要があります (例: ":", "/", 等の文字を含んでいない、など)。 そうでない場合、エラーが返されます。
 
 *destinationFolder* 引数が指定するフォルダー内に同じ名前のファイルが既に存在する場合、4D はデフォルトでエラーを生成します。 *overwrite* に `fk overwrite` 定数を渡すことで、既存のフォルダーを無視して上書きすることができます:
 
@@ -461,7 +461,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 #### 説明
 
-`.getContent()` 関数は、  <!-- REF #document.getContent().Summary -->ファイルの全コンテンツを格納した `4D.Blob` オブジェクトを返します<!-- END REF -->。 BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。
+`.getContent()` 関数は、  <!-- REF #document.getContent().Summary -->`.getContent()` 関数は、<!-- END REF -->。 BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。
 
 **戻り値**
 

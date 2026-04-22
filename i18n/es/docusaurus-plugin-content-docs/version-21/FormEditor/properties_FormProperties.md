@@ -15,7 +15,7 @@ Esta propiedad define el esquema de colores para el formulario. Esta propiedad d
 - light - dark text on a light background
   &#062; A defined color scheme can not be overridden by a CSS.
 
-> El número de caracteres para el título de una ventana está limitado a 31.
+> light - dark text on a light background &#062; A defined color scheme can not be overridden by a CSS.
 
 #### Gramática JSON
 
@@ -41,7 +41,7 @@ Un archivo CSS definido a nivel de formulario anulará la(s) hoja(s) de estilo p
 
 ## Clase de formulario
 
-Nombre de una [clase usuario](../Concepts/classes.md#class-definition) existente para asociar al formulario. The user class can belong to the host project or to a [component](../Extensions/develop-components.md#sharing-of-classes), in which case the formal syntax is "[*componentNameSpace*](../settings/general.md#component-namespace-in-the-class-store).className".
+The user class can belong to the host project or to a [component](../Extensions/develop-components.md#sharing-of-classes), in which case the formal syntax is "[*componentNameSpace*](../settings/general.md#component-namespace-in-the-class-store).className". Nombre de una [clase usuario](../Concepts/classes.md#class-definition) existente para asociar al formulario.
 
 Asociar una clase al formulario ofrece las siguientes ventajas:
 

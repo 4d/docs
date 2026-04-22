@@ -59,7 +59,7 @@ Each worker (or form window for [`CALL FORM`](../commands-legacy/call-form.md)) 
 
 ### Bidirectional communication via messages
 
-The calling process posts a message then the worker executes it. The worker can in turn post a message (via [`CALL WORKER`](../commands-legacy/call-worker.md) or [`CALL FORM`](../commands-legacy/call-form.md)) back to the caller or another worker to notify an event (task completion, data received, error, progress, etc.). This mechanism replaces the classic return of synchronous calls.
+The calling process posts a message then the worker executes it. The calling process posts a message then the worker executes it. This mechanism replaces the classic return of synchronous calls.
 
 ### Event listening
 
@@ -87,7 +87,7 @@ In 4D, all objects are released [when no more references](../Concepts/dt_object.
 
 For asynchronous classes, an **extra reference** is always maintained by 4D in the process that instantiated the object. This reference is only released when the operation is finished, i.e. after the `onTerminate` event is triggered. This automatic referencing allows your object to survive even if you don't have referenced it specifically in a variable.
 
-If you want to "force" the release of an object at any moment, use a `.shutdown()` or `terminate()` function; it triggers the onTerminate\` event ànd thus releases the object.
+If you want to "force" the release of an object at any moment, use a `.shutdown()` or `terminate()` function; it triggers the onTerminate\\` event ànd thus releases the object.
 
 ### Examples illustrating the common concept
 
@@ -171,7 +171,7 @@ var $options.onResponse:=Formula(myMethod)
 
 ## Synchronous execution in asynchronous code
 
-Even when using modern, asynchronous code, you may need to introduce a degree of synchronous execution. For example, you may want a function to wait for a certain amount of time to get a result. It could be the case with guaranteed fast network connections or system workers. Then, you can enforce synchronous execution using the `wait()` function.
+Even when using modern, asynchronous code, you may need to introduce a degree of synchronous execution. For example, you may want a function to wait for a certain amount of time to get a result. It could be the case with guaranteed fast network connections or system workers. It could be the case with guaranteed fast network connections or system workers.
 
 The **`.wait()`** function pauses execution of the current process and puts 4D in [event listening](#event-listening) mode. Keep in mind that it will trigger events received from any sources, not only from the object on which the `wait()` function was called.
 

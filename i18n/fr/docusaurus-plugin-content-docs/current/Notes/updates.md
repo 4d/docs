@@ -5,44 +5,49 @@ title: Release Notes
 
 ## 4D 21 R3
 
+Read [**What’s new in 4D 21 R3**](https://blog.4d.com/whats-new-in-4d-21-r3/), the blog post that lists all new features and enhancements in 4D 21 R3.
+
 #### Points forts
 
-- The [`JSON Validate`](../commands/json-validate) command now supports of JSON Schema draft 2020-12.
-- 4D Write Pro now supports [hierarchical list style sheets](../WritePro/user-legacy/stylesheets.md#hierarchical-list-style-sheets), enabling the creation and management of structured [multi-level lists](../WritePro/user-legacy/using-a-4d-write-pro-area.md#multi-level-lists) with automatic numbering.
-- Ability to use a custom certificate from the macOS keychain instead of a local certificates folder in [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) and [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) classes.
-- New [`4D.Method` class](../API/MethodClass.md) to create and execute a 4D method code from text source. [`METHOD Get path`](../commands/method-get-path) and [`METHOD RESOLVE PATH`](../commands/method-resolve-path) commands support a new `path volatile method` constant (128).
-- IMAP transporter now supports mailbox event notifications using the IDLE protocol through a [notifier object](../API/IMAPTransporterClass.md#notifier) of the [4D.IMAPNotifier](../API/IMAPNotifier.md) class, configurable via the `listener` property of [IMAP New transporter](../commands/imap-new-transporter).
-- Remote [session](../API/SessionClass.md) objects are now [available client-side](../Desktop/sessions.md#availability).
-- Support of [`server` keyword](../Concepts/classes.md#server) for ORDA data model functions and shared/session singleton functions.
-- Dependencies: support of [components stored on GitLab repositories](../Project/components.md#configuring-a-gitlab-repository).
+- La commande [`JSON Validate`](../commands/json-validate) prend désormais en charge le draft du schéma JSON 2020-12.
+- 4D Write Pro prend en charge les [feuilles de style de liste hiérarchique](../WritePro/user-legacy/stylesheets.md#hierarchical-list-style-sheets), ce qui permet de créer et de gérer des [listes à plusieurs niveaux](../WritePro/user-legacy/using-a-4d-write-pro-area.md#multi-level-lists) structurées avec numérotation automatique.
+- Possibilité d'utiliser un certificat personnalisé provenant du trousseau de macOS au lieu d'un dossier de certificats local dans les classes [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) et [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew).
+- Nouvelle classe [`4D.Method`](../API/MethodClass.md) pour créer et exécuter le code d'une méthode 4D à partir d'un texte source. Les commandes [`METHOD Get path`](../commands/method-get-path) et [`METHOD RESOLVE PATH`](../commands/method-resolve-path) prennent charge une nouvelle constante `path volatile method` (128).
+- Le transporteur IMAP prend désormais en charge les notifications d'événements de boîte aux lettres utilisant le protocole IDLE via un objet [notifier](../API/IMAPTransporterClass.md#notifier) de la classe [4D.IMAPNotifier](../API/IMAPNotifierClass.md), configurable via la propriété `listener` de [IMAP New transporter](../commands/imap-new-transporter).
+- Les objets [session](../API/SessionClass.md) distantes sont maintenant [disponibles côté client](../Desktop/sessions.md#availability).
+- Nouvelle [page **IA**](../settings/ai.md) dans la boîte de dialogue des Propriétés, permettant de configurer des [alias de fournisseurs et de modèles](../aikit/provider-model-aliases.md) qui peuvent être appelés dans le code via le composant 4D AIKit.
+- Composant 4D AIKit : nouvelle classe [Providers](../aikit/Classes/OpenAIProviders.md) pour instancier et gérer les [alias de fournisseurs et de modèles](../aikit/provider-model-aliases.md).
+- Prise en charge du [mot-clé `server`](../Concepts/classes.md#server) pour les fonctions du modèle de données ORDA et les fonctions singleton partagées/session.
+- Dépendances : prise en charge des [composants stockés sur les dépôts GitLab](../Project/components.md#configuring-a-gitlab-repository).
+- [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=21_R3) : liste de tous les bugs qui ont été corrigés dans 4D 21 R3.
 
-#### Support of Liquid glass on macOS
+#### Prise en charge de Liquid glass sur macOS
 
-- Automatic support of [**Liquid glass** interface](https://www.apple.com/newsroom/2025/06/apple-introduces-a-delightful-and-elegant-new-software-design/) with 4D on macOS 26 Tahoe. See [this blog post](https://blog.4d.com/the-new-macos-tahoe-design-comes-to-your-4d-applications) for detailed information.
-- New values returned by the [`FORM Theme`](../commands/form-theme) command and [CSS Media queries](../FormEditor/createStylesheet.md#media-queries).
-- To help developers gradually adapt their interfaces, ability to **disable Liquid glass in 4D engine-based applications** via the "UIDesignRequiresCompatibility" key in the application's *Info.plist* file (see [Apple's documentation about this key](https://developer.apple.com/documentation/BundleResources/Information-Property-List/UIDesignRequiresCompatibility)).
+- Prise en charge automatique de l'[interface **Liquid glass**](https://www.apple.com/newsroom/2025/06/apple-introduces-a-delightful-and-elegant-new-software-design/) avec 4D sur macOS 26 Tahoe. Consultez [cet article de blog](https://blog.4d.com/the-new-macos-tahoe-design-comes-to-your-4d-applications) pour plus d'informations.
+- Nouvelles valeurs renvoyées par la commande [`FORM Theme`](../commands/form-theme) et les [CSS Media queries](../FormEditor/createStylesheet.md#media-queries).
+- Pour aider les développeurs à adapter progressivement leurs interfaces, possibilité de **désactiver Liquid glass dans les applications 4D fusionnées** via la clé "UIDesignRequiresCompatibility" dans le fichier *Info.plist* de l'application (voir [la documentation d'Apple sur cette clé](https://developer.apple.com/documentation/BundleResources/Information-Property-List/UIDesignRequiresCompatibility)).
 
 #### Changements de comportement
 
-- The [`JSON Validate`](../commands/json-validate) command now takes the *$schema* key into account and generates an error if a non-supported version is declared in the schema.
-- For clarity, formula objects are now instances of a new [`4D.Formula`](../API/FormulaClass.md) class that inherits from the generic [`4D.Function`](../API/FunctionClass.md) class.
-- In 4D 21 R3, new improvements to the [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) apply to language commands (see [this blog post](https://blog.4d.com/enhancement-of-command-syntax-checking-in-the-editor)). Syntax errors that were previously undetected may now be flagged in your code.
-- The "PHP" page has been removed from the [Settings dialog box](../settings/overview.md). Use the [PHP selectors with the `SET DATABASE PARAMETER`](../commands/set-database-parameter#php-interpreter-ip-address-55) command to configure a PHP interpeter.
-- The **Legacy** network layer is no longer supported as of 4D 21 R3. Projects and binary databases that were using the Legacy network layer are automatically set to [**ServerNet**](../settings/client-server.md#network-layer) when upgraded to 4D 21 R3 and higher.
+- La commande [`JSON Validate`](../commands/json-validate) prend maintenant en compte la clé *$schema* et génère une erreur si une version non prise en charge est déclarée dans le schéma.
+- Pour plus de clarté, les objets formules sont désormais des instances d'une nouvelle classe [`4D.Formula`](../API/FormulaClass.md) qui hérite de la classe générique [`4D.Function`](../API/FunctionClass.md).
+- Dans 4D 21 R3, de nouvelles améliorations du [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) s'appliquent aux commandes du langage (voir [cet article de blog](https://blog.4d.com/enhancement-of-command-syntax-checking-in-the-editor)). Il est possible que des erreurs de syntaxe qui n'étaient pas détectées auparavant soient désormais signalées dans votre code.
+- La page "PHP" a été supprimée de la [boîte de dialogue des Propriétés](../settings/overview.md). Use the [PHP selectors with the `SET DATABASE PARAMETER`](../commands/set-database-parameter#php-interpreter-ip-address-55) command to configure a PHP interpreter.
+- The **Legacy** network layer is no longer supported. Les projets et les bases de données binaires qui utilisaient l'ancienne couche réseau sont automatiquement configurés en [**ServerNet**](../settings/client-server.md#network-layer) lors de la mise à niveau vers 4D 21 R3 et versions ultérieures.
 
 ## 4D 21 R2
 
-Read [**What’s new in 4D 21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/), the blog post that lists all new features and enhancements in 4D 21 R2.
+Lisez [**Les nouveautés de 4D 21 R2**](https://blog.4d.com/fr-whats-new-in-4d-21-R2/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 21 R2.
 
 #### Points forts
 
-- The [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) has been enhanced to provide greater precision in error detection (see [this blog post](https://blog.4d.com/better-error-handling-and-type-inference-for-4d-developers) for more information).
+- Le [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) a été amélioré pour fournir une plus grande précision dans la détection des erreurs (voir [cet article de blog](https://blog.4d.com/better-error-handling-and-type-inference-for-4d-developers) pour plus d'informations).
 - Les [actions standard de 4D Write Pro](../WritePro/user-legacy/standard-actions.md) qui s'appliquent aux [listes](../WritePro/user-legacy/using-a-4d-write-pro-area.md#lists) ajustent désormais automatiquement les marges des paragraphes pour que les marqueurs restent positionnés à l'intérieur de cette marge.
 - Prise en charge intégrée de `order by` dans les requêtes pour les recherches vectorielles IA en utilisant les fonctions [`query()`](../API/DataClassClass.md#query-by-vector-similarity) et l'[API REST](../REST/$orderby.md).
 - Vous pouvez désormais créer et ouvrir des pages Qodly à partir de l'[Explorateur](../Develop/explorer.md).
 - Vous pouvez [personnaliser les icônes de vos composants](../Extensions/develop-components.md#custom-icon).
 - Composant 4D AIKit : nouvelle classe [File API](../aikit/Classes/OpenAIFilesAPI.md) pour implémenter les fonctionnalités de **téléversement de fichiers**.
-- [**Find in Design**](../Project/search-replace.md#search-in-components) and [**Replace in content**](../Project/search-replace.md#replace-in-content) features can now support editable components.
+- Les fonctions [**Chercher dans le développement**](../Project/search-replace.md#search-in-components) et [**Remplacer dans le contenu**](../Project/search-replace.md#replace-in-content) peuvent maintenant intégrer les composants modifiables.
 - [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=21_R2) : liste de tous les bugs qui ont été corrigés dans 4D 21 R2.
 
 #### Developer Preview
@@ -73,7 +78,7 @@ Read [**What’s new in 4D 21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/),
 | ngtcp2       | 1.18.0 | 21                  | Utilisé pour QUIC                                                                                                                                     |
 | OpenSSL      | 3.5.2  | 21                  |                                                                                                                                                       |
 | PDFWriter    | 4.7.0  | 21                  | Utilisé pour [`WP Export document`](../WritePro/commands/wp-export-document.md) et [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
-| SpreadJS     | 18.2.0 | **21 R2**           | Voir [ce blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) pour un aperçu des nouvelles fonctionnalités.             |
+| SpreadJS     | 18.2.0 | 21 R2               | Voir [ce blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) pour un aperçu des nouvelles fonctionnalités.             |
 | webKit       | WKWebView                              | 19                  |                                                                                                                                                       |
 | Xerces       | 3.3.0  | 21                  | Utilisé pour les commandes XML                                                                                                                        |
 | Zlib         | 1.3.1  | 21                  |                                                                                                                                                       |

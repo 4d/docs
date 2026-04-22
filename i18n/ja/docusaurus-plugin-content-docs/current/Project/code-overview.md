@@ -22,7 +22,7 @@ title: Managing Methods and Classes
 
 ### User classes
 
-4D においてユーザークラスとは、[`/Project/Sources/Classes/`](../Project/architecture.md#sources) フォルダーに保存された専用のメソッドファイル (**.4dm**) によって定義されます。 ファイル名がクラス名になります。 For example, a class named "Polygon" will be stored in the following file:
+4D においてユーザークラスとは、[`/Project/Sources/Classes/`](../Project/architecture.md#sources) フォルダーに保存された専用のメソッドファイル (**.4dm**) によって定義されます。 ファイル名がクラス名になります。 For example, a class named "Polygon" will be stored in the following file: ファイル名がクラス名になります。 For example, a class named "Polygon" will be stored in the following file:
 
 ```
 Project フォルダー Project Sources Classes Polygon.4dm
@@ -55,13 +55,13 @@ An ORDA data model class is defined by adding, at the same location as regular c
 
 ![](../assets/en/ORDA/ORDA_Classes-3.png)
 
-空の ORDA クラスは、デフォルトではエクスプローラーに表示されません。 表示するにはエクスプローラーのオプションメニューより **データクラスを全て表示** を選択します: ![](../assets/en/ORDA/showClass.png)
+空の ORDA クラスは、デフォルトではエクスプローラーに表示されません。 空の ORDA クラスは、デフォルトではエクスプローラーに表示されません。 表示するにはエクスプローラーのオプションメニューより **データクラスを全て表示** を選択します: ![](../assets/en/ORDA/showClass.png)
 
 ORDA ユーザークラスは通常のクラスとは異なるアイコンで表されます。 空のクラスは薄く表示されます:
 
 ![](../assets/en/ORDA/classORDA2.png)
 
-ORDA クラスファイルを作成するには、エクスプローラーで任意のクラスをダブルクリックします。 4D creates the class file and add the [`extends`](../Concepts/classes.md#class-extends-classname) code. たとえば、Entity クラスを継承するクラスの場合は:
+ORDA クラスファイルを作成するには、エクスプローラーで任意のクラスをダブルクリックします。 ORDA クラスファイルを作成するには、エクスプローラーで任意のクラスをダブルクリックします。 4D creates the class file and add the [`extends`](../Concepts/classes.md#class-extends-classname) code. たとえば、Entity クラスを継承するクラスの場合は:
 
 ```
 Class extends Entity
@@ -160,7 +160,7 @@ Here are the encoded characters:
 | \< | %3C      |
 | \>                          | %3E      |
 | ?                            | %3F      |
-| \\|                         | %7C      |
+| ◯                            | %7C      |
 | \\                         | %5C      |
 | %                            | %25      |
 

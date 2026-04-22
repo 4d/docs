@@ -5,6 +5,8 @@ title: Notas de lançamento
 
 ## 4D 21 R3
 
+Leia [**O que há de novo no 4D v21 R3**](https://blog.4d.com/whats-new-in-4d-21-r3/), o post do blog que lista todos os novos recursos e aprimoramentos em 4D v21 R3.
+
 #### Destaques
 
 - The [`JSON Validate`](../commands/json-validate) command now supports of JSON Schema draft 2020-12.
@@ -13,8 +15,11 @@ title: Notas de lançamento
 - New [`4D.Method` class](../API/MethodClass.md) to create and execute a 4D method code from text source. [`METHOD Get path`](../commands/method-get-path) and [`METHOD RESOLVE PATH`](../commands/method-resolve-path) commands support a new `path volatile method` constant (128).
 - IMAP transporter now supports mailbox event notifications using the IDLE protocol through a [notifier object](../API/IMAPTransporterClass.md#notifier) of the [4D.IMAPNotifier](../API/IMAPNotifier.md) class, configurable via the `listener` property of [IMAP New transporter](../commands/imap-new-transporter).
 - Remote [session](../API/SessionClass.md) objects are now [available client-side](../Desktop/sessions.md#availability).
+- New [**AI** page in Settings](../settings/ai.md), allowing to configure [Provider model aliases](../aikit/provider-model-aliases.md) that can be called in the code using 4D AIKit component.
+- 4D AIKit component: new [Providers](../aikit/Classes/OpenAIProviders.md) class to instantiate and handle [Provider and model aliases](../aikit/provider-model-aliases.md).
 - Support of [`server` keyword](../Concepts/classes.md#server) for ORDA data model functions and shared/session singleton functions.
 - Dependencies: support of [components stored on GitLab repositories](../Project/components.md#configuring-a-gitlab-repository).
+- [**Lista de erros corrigida**](https://bugs.4d.fr/fixedbugslist?version=21_R3): lista de todos os bugs corrigidos em 4D 21 R3.
 
 #### Support of Liquid glass on macOS
 
@@ -27,8 +32,8 @@ title: Notas de lançamento
 - The [`JSON Validate`](../commands/json-validate) command now takes the *$schema* key into account and generates an error if a non-supported version is declared in the schema.
 - For clarity, formula objects are now instances of a new [`4D.Formula`](../API/FormulaClass.md) class that inherits from the generic [`4D.Function`](../API/FunctionClass.md) class.
 - In 4D 21 R3, new improvements to the [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) apply to language commands (see [this blog post](https://blog.4d.com/enhancement-of-command-syntax-checking-in-the-editor)). Syntax errors that were previously undetected may now be flagged in your code.
-- The "PHP" page has been removed from the [Settings dialog box](../settings/overview.md). Use the [PHP selectors with the `SET DATABASE PARAMETER`](../commands/set-database-parameter#php-interpreter-ip-address-55) command to configure a PHP interpeter.
-- The **Legacy** network layer is no longer supported as of 4D 21 R3. Projects and binary databases that were using the Legacy network layer are automatically set to [**ServerNet**](../settings/client-server.md#network-layer) when upgraded to 4D 21 R3 and higher.
+- The "PHP" page has been removed from the [Settings dialog box](../settings/overview.md). Use the [PHP selectors with the `SET DATABASE PARAMETER`](../commands/set-database-parameter#php-interpreter-ip-address-55) command to configure a PHP interpreter.
+- The **Legacy** network layer is no longer supported. Projects and binary databases that were using the Legacy network layer are automatically set to [**ServerNet**](../settings/client-server.md#network-layer) when upgraded to 4D 21 R3 and higher.
 
 ## 4D 21 R2
 
@@ -73,7 +78,7 @@ Leia [**O que há de novo no 4D v21 R2**](https://blog.4d.com/whats-new-in-4d-21
 | ngtcp2     | 1.18.0 | 21               | Usado para QUIC                                                                                                                                    |
 | OpenSSL    | 3.5.2  | 21               |                                                                                                                                                    |
 | PDFWriter  | 4.7.0  | 21               | Used for [`WP Export document`](../WritePro/commands/wp-export-document.md) and [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
-| SpreadJS   | 18.2.0 | **21 R2**        | Veja [este post de blog](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) para uma visão geral dos novos recursos                           |
+| SpreadJS   | 18.2.0 | 21 R2            | Veja [este post de blog](https://blog.4d.com/4d-view-pro-whats-new-in-4d-21-r2/) para uma visão geral dos novos recursos                           |
 | webKit     | WKWebView                              | 19               |                                                                                                                                                    |
 | Xerces     | 3.3.0  | 21               | Used for XML commands                                                                                                                              |
 | Zlib       | 1.3.1  | 21               |                                                                                                                                                    |

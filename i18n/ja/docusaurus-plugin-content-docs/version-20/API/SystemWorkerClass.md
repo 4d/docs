@@ -92,7 +92,7 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 | onResponse       | Formula | undefined | システムワーカーメッセージ用のコールバック。 完全なレスポンスを受け取り次第、このコールバックが呼び出されます。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                |
 | onData           | Formula | undefined | システムワーカーデータ用のコールバック。 システムワーカーがデータを受け取る度に、このコールバックが呼び出されます。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                              |
 | onDataError      | Formula | undefined | 外部プロセスエラー用のコールバック (外部プロセスの *stderr*)。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                   |
-| onError          | Formula | undefined | 実行エラー用のコールバック。異常なランタイム条件 (システムエラー) の場合にシステムワーカーによって返されます。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                               |
+| onError          | Formula | undefined | 外部プロセスが終了されたときのコールバック。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                                  |
 | onTerminate      | Formula | undefined | 外部プロセスが終了されたときのコールバック。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                                  |
 | timeout          | Number  | undefined | プロセスが生きている場合、キルされるまでの秒数。                                                                                                                                     |
 | dataType         | Text    | "text"    | レスポンス本文のデータ型。 可能な値: "text" (デフォルト), "blob"。                                                                                                                  |
@@ -118,7 +118,7 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 
 #### 戻り値
 
-この関数はシステムワーカーオブジェクトを返します。このオブジェクトに対して、SystemWorker クラスの関数やプロパティを呼び出すことができます。
+このオブジェクトに対して、SystemWorker クラスの関数やプロパティを呼び出すことができます。
 
 #### Windows の例
 
@@ -296,6 +296,13 @@ var $worker : 4D.SystemWorker
 $worker:= 4D.SystemWorker.new($gzip;New object("dataType";"blob"))
 
 // stdin に圧縮ファイルを送信します
+$worker.postMessage($input)
+// 終了したことを明確にするため closeInput() を呼び出します
+// gzip (および stdin からのデータを待機する多数のプログラム) は入力ストリームが明示的に閉じられるまで待機します
+$worker.closeInput()
+$worker.wait()
+
+$output:=$worker.response
 $worker.postMessage($input)
 // 終了したことを明確にするため closeInput() を呼び出します
 // gzip (および stdin からのデータを待機する多数のプログラム) は入力ストリームが明示的に閉じられるまで待機します
@@ -498,7 +505,7 @@ $output:=$worker.response
 
 #### 説明
 
-`.terminate()` 関数は、 <!-- REF #SystemWorkerClass.terminate().Summary -->`SystemWorker` の実行を強制終了します<!-- END REF -->。
+`.terminate()` 関数は、 <!-- REF #SystemWorkerClass.terminate().Summary -->`.terminate()` 関数は、<!-- END REF -->。
 
 この関数は、システムワーカーを終了して実行中のスクリプトに制御を戻す命令を送ります。
 

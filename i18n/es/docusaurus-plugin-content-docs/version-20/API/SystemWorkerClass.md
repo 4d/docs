@@ -3,7 +3,7 @@ id: SystemWorkerClass
 title: SystemWorker
 ---
 
-Los System workers permiten que el código 4D llame a cualquier proceso externo (un comando shell, PHP, etc.) en la misma máquina. Los trabajadores del sistema se llaman de forma asíncrona. Mediante el uso de retrollamadas, 4D hace posible la comunicación en ambos sentidos.
+Los System workers permiten que el código 4D llame a cualquier proceso externo (un comando shell, PHP, etc.) en la misma máquina. Los workers del sistema se llaman de forma asíncrona. Mediante el uso de retrollamadas, 4D hace posible la comunicación en ambos sentidos.
 
 La clase `SystemWorker` está disponible en el almacén de clases `4D`.
 
@@ -63,11 +63,11 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 <!-- REF #4D.SystemWorker.new().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|commandLine|Text|->|Command line to execute|
-|options|Object|->|Worker parameters|
-|result|4D.SystemWorker|<-|New asynchronous System worker or null if process not started|
+|commandLine|Text|->|Línea de comando a ejecutar|
+|options|Object|->|Parámetros del Worker|
+|resultado|4D.SystemWorker|<-|New asynchronous System worker or null if process not started|
 </div>
 <!-- END REF -->
 
@@ -341,7 +341,7 @@ La propiedad `.currentDirectory` <!-- REF #SystemWorkerClass.currentDirectory.Su
 
 #### Descripción
 
-La propiedad `.dataType` <!-- REF #SystemWorkerClass.dataType.Summary -->contiene el tipo de contenido del cuerpo de la respuesta<!-- END REF -->. Valores posibles: "text" o "blob".
+La propiedad `.dataType` <!-- REF #SystemWorkerClass.dataType.Summary -->contiene el tipo de contenido del cuerpo de la respuesta<!-- END REF -->. .
 
 Esta propiedad es **de sólo lectura**.
 
@@ -435,10 +435,10 @@ Esta propiedad es **de sólo lectura**.
 <!-- REF #SystemWorkerClass.postMessage().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|message|Text|->|Text to write on the input stream (stdin) of the external process|
-|messageBLOB|Blob|->|Bytes write on the input stream|
+|message|Text|-->|Texto a escribir en el flujo de entrada (stdin) del proceso externo|
+|messageBLOB|Blob|->|Bytes a escribir en el flujo de entrada|
 </div>
 <!-- END REF -->
 
@@ -498,7 +498,7 @@ La propiedad `.responseError` <!-- REF #SystemWorkerClass.responseError.Summary 
 
 #### Descripción
 
-La función `.terminate()` <!-- REF #SystemWorkerClass.terminate().Summary -->The `.terminate()` function<!-- END REF -->.
+La función `.terminate()` <!-- REF #SystemWorkerClass.terminate().Summary -->La función `.terminate()`<!-- END REF -->.
 
 Esta función envía la instrucción de terminar y devolver el control al script en ejecución.
 

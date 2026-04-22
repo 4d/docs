@@ -274,7 +274,7 @@ La mayoría de estos atajos pueden personalizarse en la caja de diálogo [Prefer
 
 4D utiliza técnicas estándar de edición de texto para digitar y editar en el Editor de código.
 
-El editor de código utiliza convenciones de visualización (estilo, color) para los elementos de sintaxis. Puede [personalizar estas convenciones](#editing-area). A medida que digita, cuando valida su entrada, 4D evalúa el texto de la línea y aplica el formato de visualización adecuado. 4D también indenta cada línea a su nivel adecuado en relación con la línea precedente cuando utiliza estructuras de programación (If, End if...).
+El editor de código utiliza convenciones de visualización (estilo, color) para los elementos de sintaxis. El editor de código utiliza convenciones de visualización (estilo, color) para los elementos de sintaxis. A medida que digita, cuando valida su entrada, 4D evalúa el texto de la línea y aplica el formato de visualización adecuado. 4D también indenta cada línea a su nivel adecuado en relación con la línea precedente cuando utiliza estructuras de programación (If, End if...).
 
 Puede utilizar las teclas de flecha para moverse rápidamente de línea a línea. Utilizar las teclas de flecha para desplazarse por varias líneas es más rápido que hacer clic porque el editor tarda en evaluar la línea en busca de errores.
 
@@ -839,7 +839,7 @@ El soporte de macros puede cambiar de una versión de 4D a otra. Con el fin de m
 
 #### Variables de selección de texto para métodos
 
-Se recomienda gestionar las selecciones de texto utilizando los comandos [GET MACRO PARAMETER](../commands/get-macro-parameter) y [SET MACRO PARAMETER](../commands/set-macro-parameter). Estos comandos pueden utilizarse para superar la partición de los espacios de ejecución del proyecto local/componente y permitir así la creación de componentes dedicados a la gestión de macros. Para activar este modo para una macro, debe declarar el atributo Version con el valor 2 en el elemento Macro. En este caso, 4D ya no gestiona las variables predefinidas _textSel,_textReplace, etc. y se utilizan los comandos [GET MACRO PARAMETER](../commands/get-macro-parameter) y [SET MACRO PARAMETER](../commands/set-macro-parameter). Este atributo debe declararse así:
+Se recomienda gestionar las selecciones de texto utilizando los comandos [GET MACRO PARAMETER](../commands/get-macro-parameter) y [SET MACRO PARAMETER](../commands/set-macro-parameter). Estos comandos pueden utilizarse para superar la partición de los espacios de ejecución del proyecto local/componente y permitir así la creación de componentes dedicados a la gestión de macros. Para activar este modo para una macro, debe declarar el atributo Version con el valor 2 en el elemento Macro. Estos comandos pueden utilizarse para superar la partición de los espacios de ejecución del proyecto local/componente y permitir así la creación de componentes dedicados a la gestión de macros. Este atributo debe declararse así:
 
 `<macro name="MyMacro" version="2">`<br/> `--- Text of the macro ---`<br/> `</macro>`
 

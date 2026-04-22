@@ -58,7 +58,7 @@ En règle générale, lorsque le code tente de lire ou d'assigner des expression
 ```4d
      var $o : Object
      mymethod($o.a) //passage d'un paramètre undefined
-     
+
       //Dans la méthode mymethod
      #Declare ($myText : Text) //Paramètre de type texte
       // $myText contient ""

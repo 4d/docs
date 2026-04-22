@@ -6,7 +6,7 @@ title: Flujo de control
 Independientemente de la simplicidad o la complejidad de un método o de una función, siempre utilizará uno o varios de los tres tipos de estructuras de programación. Las estructuras de programación determinan el flujo de ejecución, si se ejecutan y el orden de las líneas de instrucciones dentro de un método. Hay tres tipos de estructuras:
 
 - **Secuencial**: una estructura secuencial es una estructura simple y lineal. Una secuencia es una serie de sentencias que 4D ejecuta una tras otra, de la primera a la última. Una instrucción de una línea, utilizada frecuentemente para los métodos de los objetos, es el caso más simple de una estructura secuencial. Por ejemplo: `[People]lastName:=Uppercase([People]lastName)`
-- **Ramificación**: una estructura de ramificación permite que los métodos prueben una condición y tomen caminos alternativos, dependiendo del resultado. La condición es una expresión booleana, una expresión que evalúa TRUE o FALSE. Una estructura de ramificación es la estructura [`If...Else...End if`](#ifelseend-if), que dirige el flujo del programa a lo largo de una de dos rutas. La otra estructura de ramificación es la estructura [`Case of...Else...End case`](#case-ofelseend-case), que dirige el flujo del programa a una de muchas rutas.
+- **Ramificación**: una estructura de ramificación permite que los métodos prueben una condición y tomen caminos alternativos, dependiendo del resultado. La condición es una expresión booleana, una expresión que evalúa TRUE o FALSE. Una estructura de ramificación es la estructura [`If...Else...End if`](#ifelseend-if), que dirige el flujo del programa a lo largo de una de dos rutas. La otra estructura de ramificación es la estructura [`Case of... Else...End case`](#case-ofelseend-case), que dirige el flujo del programa a una de muchas rutas.
 - **Bucle**: cuando se escriben métodos, es muy común encontrarse con que se necesita que una secuencia de sentencias se repita un número de veces. Para hacer frente a esta necesidad, el lenguaje 4D ofrece las siguientes estructuras de bucle:
 
     - [`While...End while`](#whileend-while)
@@ -14,7 +14,7 @@ Independientemente de la simplicidad o la complejidad de un método o de una fun
     - [`For...End for`](#forend-for)
     - [`For each... End for each`](#for-eachend-for-each)
 
-Los bucles se controlan de dos maneras: o bien se repiten hasta que se cumple una condición, o bien se repiten un número determinado de veces. Cada estructura de bucle puede utilizarse de cualquier manera, pero los bucles `While` y los bucles `Repeat` son más apropiados para repetir hasta que se cumpla una condición, y los bucles `For` son más apropiados para hacer un bucle un número determinado de veces. `For each...End for each` permite la mezcla en ambos sentidos y está diseñado para realizar bucles dentro de objetos y colecciones.
+Los bucles se controlan de dos maneras: o bien se repiten hasta que se cumple una condición, o bien se repiten un número determinado de veces. Cada estructura de bucle puede utilizarse de cualquier manera, pero los bucles `While` y los bucles `Repeat` son más apropiados para repetir hasta que se cumpla una condición, y los bucles `For` son más apropiados para hacer un bucle un número determinado de veces. `For each... End for each` permite la mezcla en ambos sentidos y está diseñado para realizar bucles dentro de objetos y colecciones.
 
 **Nota:** 4D permite anidar estructuras de programación hasta una "profundidad" de 512 niveles.
 
@@ -72,6 +72,7 @@ El resultado es similar y _MethodB_ se evalúa sólo si es necesario.
     QUERY([People];[People]LastName=$Find)
  Else
     ALERT("You did not enter a name.")
+ End if
  End if
  End if 
 ```
@@ -172,25 +173,16 @@ Para comparar, aquí está la versión `If...Else...End if` del mismo método:
 
 ```4d
  If(vResult=1) //Probar si el número es 1
-    ALERT("One.") If(vResult=1) //Probar si el número es 1
-    ALERT("One.") If(vResult=1) //Probar si el número es 1
-    ALERT("One.") //Si es 1, mostrar una alerta
+    ALERT("One.") If(vResult=1) //Test if the number is 1
+    ALERT("One.") //If it is 1, display an alert
  Else
-    If(vResult=2) //Probar si el número es 2
-       ALERT("Two.") //Si es 2, mostrar una alerta
+    If(vResult=2) //Test if the number is 2
+       ALERT("Two.") //If it is 2, display an alert
     Else
-       If(vResult=3) //Probar si el número es 3
-          ALERT("Three.") //Si es 3, mostrar una alerta
-    Else //Si no es 1, 2 o 3, mostrar una alerta
-       ALERT("It was not one, two, or three.")
-       End if
-    End if
- End if //Si es 2, mostrar una alerta
-    Else
-       If(vResult=3) //Probar si el número es 3
-          ALERT("Three.") //Si es 3, mostrar una alerta
-    Else //Si no es 1, 2 o 3, mostrar una alerta
-       ALERT("It was not one, two, or three.")
+       If(vResult=3) //Test if the number is 3
+          ALERT("Three.") //If it is 3, display an alert
+       Else //If it is not 1, 2, or 3, display an alert
+          ALERT("It was not one, two, or three.")
        End if
     End if
  End if //Si es 2, mostrar una alerta
@@ -210,6 +202,16 @@ En consecuencia, cuando quiera implementar pruebas jerárquicas, debe asegurarse
 
 ```4d
  Case of
+    :((vResult=1) & (vCondition#2)) //this case will be detected first
+       ... //statement(s)
+    :(vResult=1)
+       ...
+```
+
+En el código anterior, la presencia de la segunda condición no se detecta, ya que la prueba "vResult=1" ramifica el código antes de cualquier otra prueba. Para que el código funcione correctamente, puedes escribirlo así:
+
+```4d
+ Case of
     :(vResult=1) //Test if the number is 1
        ALERT("One.") //If it is 1, display an alert
     :(vResult=2) //Test if the number is 2
@@ -219,24 +221,6 @@ En consecuencia, cuando quiera implementar pruebas jerárquicas, debe asegurarse
     Else //If it is not 1, 2, or 3, display an alert
        ALERT("It was not one, two, or three.")
  End case
-```
-
-En el código anterior, la presencia de la segunda condición no se detecta, ya que la prueba "vResult=1" ramifica el código antes de cualquier otra prueba. Para que el código funcione correctamente, puedes escribirlo así:
-
-```4d
- If(vResult=1) //Test if the number is 1
-    ALERT("One.") //If it is 1, display an alert
- Else
-    If(vResult=2) //Test if the number is 2
-       ALERT("Two.") //If it is 2, display an alert
-    Else
-       If(vResult=3) //Test if the number is 3
-          ALERT("Three.") //If it is 3, display an alert
-       Else //If it is not 1, 2, or 3, display an alert
-          ALERT("It was not one, two, or three.")
-       End if
-    End if
- End if
 ```
 
 Además, si quiere implementar pruebas jerárquicas, puede considerar el uso de código jerárquico.
@@ -308,7 +292,7 @@ Si se encuentra en una situación de este tipo, en la que un método se ejecuta 
 #### Ejemplo
 
 ```4d
- CONFIRM("¿Añadir un nuevo registro?") CONFIRM("Add a new record?") //The user wants to add a record?
+ CONFIRM("¿Añadir un nuevo registro?") CONFIRM("Add a new record?") //The user wants to add a record? CONFIRM("Add a new record?") //The user wants to add a record?
  While(OK=1) //Bucle mientras el usuario quiera
     ADD RECORD([aTable]) /Añadir un nuevo registro
  End while //El bucle siempre termina con End while
@@ -327,7 +311,7 @@ Repeat
     {continue}
 Until(Boolean_Expression)
 ```
-Un bucle `Repeat...Until` es similar a un bucle [While...End while](flow-control.md#whileend-while), excepto que comprueba la expresión booleana después del bucle en lugar de antes. Así, un bucle `Repeat...Until` siempre ejecuta el bucle una vez, mientras que si la expresión booleana es inicialmente False, un bucle `While...End while` no ejecuta el bucle en absoluto.
+Un bucle `Repeat...Until` es similar a un bucle [While...End while](flow-control.md#whileend-while), excepto que comprueba la expresión booleana después del bucle en lugar de antes. Es interesante ver cómo el bucle `While...End while` y el bucle `Repeat...Until` realizarían la misma acción.
 
 La otra diferencia con un bucle `Repeat...Until` es que el bucle continúa hasta que la expresión booleana sea TRUE.
 
@@ -498,7 +482,7 @@ Volvamos al primer ejemplo de `For...End for`. El siguiente ejemplo ejecuta 100 
  End for
 ```
 
-Es interesante ver cómo el bucle `While...End while` y el bucle `Repeat...Until` realizarían la misma acción. Aquí está el bucle equivalente `While...End while`:
+Un bucle `Repeat...Until` es similar a un bucle [While...End while](#whileend-while), excepto que comprueba la expresión booleana después del bucle en lugar de antes. Así, un bucle `Repeat...Until` siempre ejecuta el bucle una vez, mientras que si la expresión booleana es inicialmente False, un bucle `While...End while` no ejecuta el bucle en absoluto.
 ```4d
  $i:=1 //Inicializar el contador
  While($i<=100) //Bucle 100 veces
@@ -602,14 +586,14 @@ Las instrucciones `break` y `continue` se [describen a continuación](#break-and
 
 ### Bucle en las colecciones
 
-Cuando `For each...End for each` se utiliza con una _Expression_ del tipo _Collection_, el parámetro _Current_Item_ es una variable del mismo tipo que los elementos de la colección. El número de bucles se basa en el número de elementos de la colección.
+La variable _Current_Item_ debe ser del mismo tipo que los elementos de la colección. Si algún elemento de la colección no es del mismo tipo que la variable, se genera un error y el bucle se detiene.
 
 La colección debe contener sólo elementos del mismo tipo, de lo contrario se devolverá un error en cuanto a la variable _Current_Item_ se le asigne el primer tipo de valor diferente.
 
 En cada iteración del bucle, la variable _Current_Item_ se llena automáticamente con el elemento correspondiente de la colección. Hay que tener en cuenta los siguientes puntos:
 
 - Si la variable _Current_Item_ es de tipo objeto o de tipo colección (es decir, si _Expresión_ es una colección de objetos o de colecciones), al modificar esta variable se modificará automáticamente el elemento coincidente de la colección (porque los objetos y las colecciones comparten las mismas referencias). Si la variable es de tipo escalar, sólo se modificará la variable.
-- La variable _Current_Item_ debe ser del mismo tipo que los elementos de la colección. Si algún elemento de la colección no es del mismo tipo que la variable, se genera un error y el bucle se detiene.
+- End for each</code> se utiliza con una _Expression_ del tipo _Collection_, el parámetro _Current_Item_ es una variable del mismo tipo que los elementos de la colección. Si algún elemento de la colección no es del mismo tipo que la variable, se genera un error y el bucle se detiene.
 - Si la colección contiene elementos con un valor **Null**, se generará un error si el tipo de variable _Current_Item_ no soporta valores **Null** (como las variables de tipo entero largo).
 
 #### Ejemplo

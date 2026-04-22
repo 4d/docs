@@ -3,7 +3,7 @@ id: shared
 title: Objets et collections partagés
 ---
 
-**Les objets partagés** et **les collections partagées** sont des [objets](./dt_object.md) et des [collections](./dt_collection.md) spécifiques dont le contenu est partagé entre les process. Contrairement aux [variables interprocess](./variables.md#interprocess-variables) (désormais obsolètes), les objets partagés et les collections partagées ont l'avantage d'être compatibles avec les *[process préemptifs](../Develop/preemptive.md)* : ils peuvent être passés par référence en tant que paramètres à des commandes telles que [`New process`](../commands-legacy/new-process.md) ou [`CALL WORKER`](../commands-legacy/call-worker.md).
+**Les objets partagés** et **les collections partagées** sont des [objets](./dt_object.md) et des [collections](./dt_collection.md) spécifiques dont le contenu est partagé entre les process. La structure `Use...End use` définit une séquence d'instructions qui exécutera des tâches sur le paramètre *Shared_object_or_Shared_collection* sous la protection d'un sémaphore interne.
 
 Les objets partagés et les collections partagées sont stockés dans des variables standard de type [`Object`](./dt_object.md) et [`Collection`](./dt_collection.md), mais doivent être instanciés à l'aide de commandes spécifiques :
 
@@ -81,7 +81,7 @@ Appeler `OB Copy` avec un objet partagé (ou avec un objet dont des propriétés
 
 ### Storage
 
-**Storage** est un objet partagé unique, disponible automatiquement pour chaque application et machine. Cet objet partagé est renvoyé par la commande [`Storage`](../commands-legacy/storage.md). Il est destiné à référencer les objets ou collections partagé(e)s défini(e)s durant la session que vous souhaitez rendre accessibles à tous les process, préemptifs ou standard.
+**Storage** est un objet partagé unique, disponible automatiquement pour chaque application et machine. **Storage** est un objet partagé unique, disponible automatiquement pour chaque application et machine. Il est destiné à référencer les objets ou collections partagé(e)s défini(e)s durant la session que vous souhaitez rendre accessibles à tous les process, préemptifs ou standard.
 
 A noter que, à la différence de objets partagés standard, l'objet `Storage` ne crée par de groupe partagé lorsque des objets/collection lui sont assigné(e)s en tant que propriétés. Cette exception permet à l'objet **Storage** d'être utilisé sans verrouiller les objets/collections partagé(e)s connecté(e)s.
 

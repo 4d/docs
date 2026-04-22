@@ -198,7 +198,7 @@ Pour plus d'informations, voir la page [Null et Undefined](dt_null_undefined.md)
 
 ### Valeur Undefined
 
-L'évaluation d'une propriété d'objet peut parfois produire une valeur indéfinie (undefined). Attribuer une valeur undefined à une propriété d'objet existante réinitialise ou efface sa valeur. L'affectation d'une valeur indéfinie à une propriété d'objet inexistante ne fait rien.
+L'évaluation d'une propriété d'objet peut parfois produire une valeur indéfinie (undefined). L'évaluation d'une propriété d'objet peut parfois produire une valeur indéfinie (undefined). L'affectation d'une valeur indéfinie à une propriété d'objet inexistante ne fait rien.
 
 Pour plus d'informations, voir la page [Null et Undefined](dt_null_undefined.md)
 
@@ -256,12 +256,12 @@ L'utilisation de la notation objet simplifie grandement le code 4D de manipulati
  $myObj:={} //crée un objet littéral et l'assigne à la variable
  $myObj.age:=56
  $age:=$myObj.age //56
- 
+
   // Utilisation de la notation commande
  var $myObj2 : Object //déclare un objet variable 4D
  OB SET($myObj2;"age";42) //crée un objet et ajoute la propriété age
  $age:=OB Get($myObj2;"age") //42
- 
+
   // Bien sûr, les deux notations peuvent être mélangées
  var $myObj3 : Object
  OB SET($myObj3; age";10)

@@ -407,3 +407,4 @@ Se pueden manejar varios eventos mientras se utiliza un array list box de objeto
   - en una casilla de selección (cambia entre marcado/desmarcado)
 - **On Clicked**: cuando el usuario haga clic en un botón instalado con el "event" atributo *valueType*, se generará un evento `On Clicked`. Este evento es gestionado por el programador.
 - **On Alternative Click**: cuando el usuario haga clic en un botón de elipsis (atributo "alternateButton"), se generará un evento `On Alternative Click`. Este evento es gestionado por el programador.
+

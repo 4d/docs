@@ -509,7 +509,7 @@ $param->:=Uppercase($param->)
 ALERT($param->)
 ```
 
-Ici, le paramètre n'est pas le champ lui-même, mais un pointeur vers le champ. Par conséquent, dans la méthode `DO SOMETHING`, $param n'est plus la valeur du champ mais un pointeur sur le champ. L'objet **référencé** par $param ($param-> dans le code ci-dessus) est le champ lui-même. Par conséquent, la modification de l'objet référencé dépasse les limites de la sous-routine et le champ lui-même est affecté. Dans cet exemple, les deux boîtes de dialogue d'alerte afficheront "WILLIAMS".
+Ici, le paramètre n'est pas le champ lui-même, mais un pointeur vers le champ. Ici, le paramètre n'est pas le champ lui-même, mais un pointeur vers le champ. Par conséquent, dans la méthode `DO SOMETHING`, $param n'est plus la valeur du champ mais un pointeur sur le champ. Par conséquent, la modification de l'objet référencé dépasse les limites de la sous-routine et le champ lui-même est affecté. Dans cet exemple, les deux boîtes de dialogue d'alerte afficheront "WILLIAMS".
 
 2. Plutôt que la méthode `DO_SOMETHING` “fasse quelque chose”, vous pouvez la réécrire de manière à ce qu'elle retourne une valeur.
 

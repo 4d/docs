@@ -113,11 +113,11 @@ Los objetos de servidor WebSocket ofrecen las siguientes propiedades y funciones
 <!-- REF #4D.WebSocketServer.new().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|[WSSHandler](#wsshandler-parameter)|Object|->|Object of the user class declaring the WebSocket Server callbacks|
-|[options](#options-parameter)|Object|->|WebSocket configuration parameters|
-|Result|4D.WebSocketServer|<-|New WebSocketServer object|
+|[WSSHandler](#wsshandler-parameter)|Object|->|Objeto de la clase de usuario que declara las retrollamadas del Servidor WebSocket|
+|[options](#options-parameter)|Object|->|Parámetros de configuración del WebSocket|
+|Resultado|4D.WebSocketServer|<-|New WebSocketServer object|
 </div>
 <!-- END REF -->
 
@@ -216,7 +216,7 @@ Function onTerminate($wss : Object; $event : Object)
 LogFile("*** Server closed")
 
 Function onError($wss : Object; $event : Object)
-LogFile("!!! Error del servidor: "+$event.errors.first().message)
+LogFile("!!! Error del servidor: "+$event.errors.first().message) Error del servidor: "+$event.errors.first().message)
 
 ```
 
@@ -320,6 +320,22 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
             $client.send($message)
         End if
     End for each
+    // Enviar el mensaje "Nuevo cliente conectado" a todos los demás clientes de chat
+    This.broadcast($ws; "Nuevo cliente conectado")
+
+Function onTerminate($ws : 4D.WebSocketConnection; $message : Object)
+    // Enviar el mensaje "Cliente desconectado" a todos los demás clientes de chat
+    This.broadcast($ws; "Cliente desconectado")
+
+Function broadcast($ws : 4D.WebSocketConnection; $message:text)
+    var $client:4D.WebSocketConnection
+    // Reenviar el mensaje a todos los clientes de chat
+    For each ($client; $ws.wss.connections)
+        // Comprobar que el id no es la conexión actual
+        If ($client.id#$ws.id)
+            $client.send($message)
+        End if
+    End for each
 
 ```
 
@@ -356,7 +372,7 @@ Cuando se finaliza una conexión, su estado [``](WebSocketConnectionClass.md#sta
 
 #### Descripción
 
-La propiedad `.dataType` contiene <!-- REF #WebSocketServerClass.dataType.Summary -->el tipo de datos recibidos o enviados<!-- END REF -->.
+La propiedad `.dataType` contiene <!-- REF #WebSocketServerClass.dataType.Summary -->La propiedad `.dataType` contiene<!-- END REF -->.
 
 Esta propiedad es de sólo lectura.
 <!-- END REF -->
@@ -369,7 +385,7 @@ Esta propiedad es de sólo lectura.
 
 #### Descripción
 
-La propiedad `.handler` contiene <!-- REF #WebSocketServerClass.handler.Summary -->el accesor que recupera el objeto `WSHandler` utilizado para iniciar el servidor WebSocket<!-- END REF -->.
+La propiedad `.handler` contiene <!-- REF #WebSocketServerClass.handler.Summary -->La propiedad `.handler` contiene<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -396,9 +412,9 @@ Esta propiedad es de sólo lectura.
 <!-- REF #WebSocketServerClass.terminate().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|timeout|Integer|->|Waiting time in seconds before terminating the WebSocket server|
+|timeout|Integer|->|Tiempo de espera en segundos antes de terminar el servidor WebSocket|
 </div>
 <!-- END REF -->
 

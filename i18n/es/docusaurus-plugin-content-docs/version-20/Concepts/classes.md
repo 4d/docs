@@ -186,7 +186,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 
 :::note
 
-No hay palabra clave final para el código de una función. There is no ending keyword for function code.
+No hay palabra clave final para el código de una función. No hay palabra clave final para el código de una función.
 
 :::
 
@@ -304,14 +304,15 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 #### Sintaxis
 
 ```4d
-// Class: MyClass
+MyClass
 Class constructor({$parameterName : type; ...})
+// Class:
 // Class:
 ```
 
 :::note
 
-No hay palabra clave final para el código de función class constructor. There is no ending keyword for function code.
+No hay palabra clave final para el código de función class constructor. No hay palabra clave final para el código de una función.
 
 :::
 

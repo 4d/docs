@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.Encrypt data BLOB.Summary-->La commande **Encrypt data BLOB**encrypte le paramètre *blobToEncrypt* avec le même algorithme utilisé par 4D pour encrypter les données (AES-256) et retourne le résultat dans encryptedBlob.<!-- END REF-->.
+<!--REF #_command_.Encrypt data BLOB.Summary-->La commande **Encrypt data BLOB** encrypte le paramètre *blobToEncrypt* avec le même algorithme utilisé par 4D pour encrypter les données (AES-256) et retourne le résultat dans *encryptedBlob*.<!-- END REF-->  
 
 Vous pouvez utiliser un paramètre *keyObject* ou un *passPhrase* pour encrypter le BLOB :
 
@@ -48,7 +48,7 @@ En cas d'erreur, le BLOB est retourné vide et la commande retourne false.
 
 ## Exemple 
 
-Cryptez un fichier texte situé dans le dossier RESSOURCES de la base de données :
+Cryptez un fichier texte situé dans le dossier RESOURCES de la base de données :
 
 ```4d
  var $fileToEncrypt;$encryptedFile : 4D.File
@@ -60,7 +60,7 @@ Cryptez un fichier texte situé dans le dossier RESSOURCES de la base de donnée
  
  $blobToencrypt:=$fileToEncrypt.getContent()
  
- $result:=Encrypter donnees BLOB($blobToEncrypt;"myPassPhrase";MAXLONG;$encryptedBlob)
+ $result:=Encrypt data BLOB($blobToEncrypt;"myPassPhrase";MAXLONG;$encryptedBlob)
  $encryptedFile.setContent($encryptedBlob)
 ```
 

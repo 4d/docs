@@ -351,6 +351,9 @@ Vous souhaitez connaitre le nombre de tables chiffr√©es dans le fichier de donn√
  Else
     ALERT("This database is not encrypted.")
  End if
+ Else
+    ALERT("This database is not encrypted.")
+ End if
 ```
 
 <!-- END REF -->
@@ -794,11 +797,28 @@ Vous pouvez imbriquer plusieurs transactions (sous-transactions). Chaque transac
  End if
  ...
  ...
- If($error)
-    $ds.cancelTransaction()
- Else
-    $ds.validateTransaction()
+ var $connect; $status : Object
+ var $person : cs.PersonsEntity
+ var $ds : 4D.DataStoreImplementation
+ var $choice : Text
+ var $error : Boolean
+
+ Case of
+    :($choice="local")
+       $ds:=ds
+    :($choice="remote")
+       $connect:=New object("hostname";"111.222.3.4:8044")
+       $ds:=Open datastore($connect;"myRemoteDS")
+ End case
+
+ $ds.startTransaction()
+ $person:=$ds.Persons.query("lastname=:1";"Peters").first()
+
+ If($person#Null)
+    $person.lastname:="Smith"
+    $status:=$person.save()
  End if
+ ...
 ```
 
 <!-- END REF -->

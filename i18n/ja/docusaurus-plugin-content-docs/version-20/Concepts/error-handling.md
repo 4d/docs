@@ -42,7 +42,7 @@ ON ERR CALL("IO_Errors";ek local) // ローカルなエラー処理メソッド�
 ON ERR CALL("";ek local) // ローカルプロセスにおいてエラーの検知を中止します
 ```
 
-[`Method called on error`](https://doc.4d.com/4dv19/help/command/ja/page704.html) コマンドは、`ON ERR CALL` によってカレントプロセスにインストールされているエラー処理メソッド名を返します。 このコマンドは汎用的なコードでとくに有用です。エラー処理メソッドを一時的に変更し、後で復元することができます:
+[`Method called on error`](https://doc.4d.com/4dv19/help/command/ja/page704.html) コマンドは、`ON ERR CALL` によってカレントプロセスにインストールされているエラー処理メソッド名を返します。 このコマンドは汎用的なコードでとくに有用です。 エラー処理メソッドを一時的に変更し、後で復元することができます:
 
 ```4d
  $methCurrent:=Method called on error(ek local)
@@ -125,7 +125,8 @@ ON ERR CALL("componentHandler";ek errors from components) // コンポーネン�
 ON ERR CALL("emptyMethod") // emptyMethod は空のエラー処理メソッドです
 $doc:=Open document( "myFile.txt")
 If (Error=-43)
-    ALERT("ファイルが見つかりません。")
+    ALERT("ファイルが見つかりません。
+")
 End if
 ON ERR CALL("")
 ```

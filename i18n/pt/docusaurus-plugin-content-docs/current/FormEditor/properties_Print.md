@@ -7,7 +7,7 @@ title: Imprimir
 
 Permite definir os parâmetros de impressão específicos para o formulário. Esta funcionalidade é útil para visualizar os limites da página de impressão no editor de formulários.
 
-> **Compatibilidad:** aunque estos parámetros se tengan en cuenta cuando se imprime el formulario en modo Aplicación, se desaconseja confiar en esta funcionalidad para almacenar los parámetros de impresión del formulario, debido a las limitaciones relativas Es muy recomendable utilizar los comandos 4D `Print settings to BLOB`/`BLOB to print settings` que son más poderosos.
+> **Compatibilidad:** aunque estos parámetros se tengan en cuenta cuando se imprime el formulario en modo Aplicación, se desaconseja confiar en esta funcionalidad para almacenar los parámetros de impresión del formulario, debido a las limitaciones relativas Es muy recomendable utilizar los comandos 4D `Print settings to BLOB`/`BLOB to print settings` que son más poderosos. Es muy recomendable utilizar los comandos 4D `Print settings to BLOB`/`BLOB to print settings` que son más poderosos.
 
 Pode modificar os seguintes parâmetros de impressão:
 

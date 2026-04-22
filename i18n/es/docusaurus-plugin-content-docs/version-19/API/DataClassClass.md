@@ -381,11 +381,11 @@ En este ejemplo, la primera entidad se creará y guardará pero la segunda falla
 <!-- REF #DataClassClass.get().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|primaryKey |Integer OR Text|->|Primary key value of the entity to retrieve|
-|settings  |Object|->|Build option: context|
-|Result|4D.Entity|<-|Entity matching the designated primary key|
+|primaryKey |Integer O Text|->|Valor de la llave primaria de la entidad a recuperar|
+|settings |Object|->|Opción de Build: contexto|
+|Resultado|4D.Entity|<-|Entity matching the designated primary key|
 </div>
 <!-- END REF -->
 
@@ -633,10 +633,10 @@ Este ejemplo crea una nueva entidad en la clase de datos "Log" y registra la inf
 <!-- REF #DataClassClass.newSelection().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|keepOrder |Integer |-> |`dk keep ordered`: creates an ordered entity selection,<br/>`dk non ordered`: creates an unordered entity selection (default if omitted) |
-|Result|4D.EntitySelection|<-|New blank entity selection related to the dataclass|
+|keepOrder |Integer |-> |`dk keep ordered`: crea una selección de entidades ordenada,<br/>`dk non ordered`: crea una selección de entidades desordenada (por defecto si se omitió) |
+|Resultado|4D.EntitySelection|<-|New blank entity selection related to the dataclass|
 </div>
 <!-- END REF -->
 
@@ -679,12 +679,12 @@ Cuando se crea, la selección de entidades no contiene ninguna entidad (`mySelec
 <!-- REF #DataClassClass.query().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|queryString |Text |-> |Search criteria as string|
-|formula |Object |-> |Search criteria as formula object|
-|value|any|->|Value(s) to use for indexed placeholder(s)|
-|querySettings|Object|->|Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan|
+|queryString |Text |-> |Criterios de búsqueda como cadena|
+|formula |Object |-> |Criterios de búsqueda como objeto fórmula|
+|value|any|->|Valor(es) a utilizar para marcador(es) de posición indexado(s)|
+|querySettings|Object|->Opciones de consulta: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan|
 |Result|4D.EntitySelection|<-|New entity selection made up of entities from dataclass meeting the search criteria specified in *queryString* or *formula*|
 </div>
 <!-- END REF -->
@@ -714,7 +714,7 @@ donde:
 
   * **Text**: la cadena de fórmulas debe ir precedida de la declaración `eval( )`, para que el analizador de consultas evalúe la expresión correctamente. Por ejemplo: *"eval(length(This.lastname) >=30)"*
   * **Object**: el [objeto fórmula](FunctionClass.md) se pasa como un **marcador** (ver abajo). La fórmula debe haber sido creada utilizando los comandos [`Formula`](FunctionClass.md#formula) o [`Formula from string`](FunctionClass.md#formula-from-string).
-> * > * > * > * > * Keep in mind that 4D formulas only support `&` and `|` symbols as logical operators.
+> * > * > * > * > * > * Keep in mind that 4D formulas only support `&` and `|` symbols as logical operators.
 > * Si la fórmula no es el único criterio de búsqueda, el optimizador del motor de búsquedas podría procesar previamente otros criterios (por ejemplo, los atributos indexados) y, por tanto, la fórmula podría evaluarse sólo para un subconjunto de entidades.
 
  Las fórmulas en las consultas pueden recibir parámetros a través de $1. Este punto se detalla en el párrafo **Parámetro fórmula** más abajo.
@@ -737,7 +737,7 @@ donde:
  | Condición No aplicada a una sentencia | NOT         | Los paréntesis son obligatorios cuando se utiliza NOT antes de una instrucción que contiene varios operadores                  |
  | Contiene palabra clave                | %           | Las palabras claves pueden utilizarse en atributos de tipo texto o imagen                                                      |
 
-* **value**: el valor a comparar con el valor actual de la propiedad de cada entidad en la selección de entidades o elemento en la colección. Puede ser un **marcador** (ver **Uso de marcadores** más adelante) o cualquier expresión que coincida con la propiedad de tipo de datos. Tenga en cuenta que, en caso de discordancia de tipo con tipos escalares (texto, fecha, número...), 4D intentará convertir el tipo **value** en el tipo de datos de atributo siempre que sea posible, para una gestión más fácil de los valores procedentes de Internet. Por ejemplo, si la cadena "v20" se introduce como **value** para comparar con un atributo entero, se convertirá a 20. For example, if the string "v20" is entered as **value** to compare with an integer attribute, it will be converted to 20.
+* **value**: el valor a comparar con el valor actual de la propiedad de cada entidad en la selección de entidades o elemento en la colección. Puede ser un **marcador** (ver **Uso de marcadores** más adelante) o cualquier expresión que coincida con la propiedad de tipo de datos. Por ejemplo, si la cadena "v20" se introduce como **value** para comparar con un atributo entero, se convertirá a 20. Por ejemplo, si la cadena "v20" se introduce como **value** para comparar con un atributo entero, se convertirá a 20. Tenga en cuenta que, en caso de discordancia de tipo con tipos escalares (texto, fecha, número...), 4D intentará convertir el tipo **value** en el tipo de datos de atributo siempre que sea posible, para una gestión más fácil de los valores procedentes de Internet.
   * La constante de tipo **texto** puede pasarse con o sin comillas simples (ver **Uso de comillas** más abajo). Para consultar una cadena dentro de otra cadena (una consulta de tipo "contiene"), utilice el símbolo de comodín (@) en el valor para aislar la cadena a buscar como se muestra en este ejemplo: "@Smith@". Las siguientes palabras claves están prohibidas para las constantes de texto: true, false.
   * Valores constantes de tipo **boolean**: **true** o **false** (Sensible a las mayúsculas y minúsculas).
   * Valores constantes de tipo **numérico**: los decimales se separan con un '.' constantes de tipo de fecha: formato "YYYY-MM-DD"
@@ -751,7 +751,7 @@ donde:
  | O          | &#124;,&#124;&#124;, or |
 
 * **order by attributePath**: puede incluir una declaración order by *attributePath* en la búsqueda para que los datos resultantes se ordenen de acuerdo con esa declaración. Puede utilizar varias instrucciones de ordenación, separadas por comas (por ejemplo, ordenación por *attributePath1* desc, *attributePath2* asc). Por defecto, el orden es ascendente. Pase 'desc' para definir un orden descendente y 'asc' para definir un orden ascendente.
-> > > > > *If you use this statement, the returned entity selection is ordered (for more information, please refer to [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
+> > *Si utiliza esta declaración, la entity selection devuelta está ordenada (para más información, consulte [Entity selections ordenadas vs desordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
 
 **Utilizar comillas**
 
@@ -961,7 +961,7 @@ La fórmula debe haber sido creada con el comando `Formula` o `Formula from stri
 * *fórmula* se evalúa para cada entidad y debe devolver true o false. Durante la ejecución de la búsqueda, si el resultado de la fórmula no es un booleano, se considera como false.
 * dentro de la *fórmula*, la entidad está disponible a través del objeto `This`.
 * si el objeto `Formula` es **null**, se genera el error 1626 ("Esperando un texto o una fórmula"), que puede interceptar utilizando un método instalado con `ON ERR CALL`.
-> > > > > For security reasons, formula calls within `query(`) member methods can be disallowed. Ver la descripción del parámetro *querySettings*.
+> > > > > > For security reasons, formula calls within `query(`) member methods can be disallowed. Ver la descripción del parámetro *querySettings*.
 
 **Pasar parámetros a fórmulas**
 

@@ -111,10 +111,10 @@ Método ***OpenForm***:
 <!-- REF #_command_.New signal.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|description|Text|->|Description for the signal|
-|Result|4D.Signal|<-|Native object encapsulating the signal|
+|description|Text|->|Descripción de la señal|
+|Resultado|4D.Señal|<-|Native object encapsulating the signal|
 </div>
 <!-- END REF -->
 

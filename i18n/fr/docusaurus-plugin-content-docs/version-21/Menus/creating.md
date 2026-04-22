@@ -35,8 +35,7 @@ Vous pouvez modifier cette barre de menus comme vous le souhaitez ou créer des 
    Choisissez la commande **Créer une nouvelle barre de menus** ou **Créer un nouveau menu** dans le menu contextuel de la liste ou dans le menu d’options situé sous la liste.
    Si vous avez créé une barre de menu, une nouvelle barre de menus apparaît dans la liste, contenant les menus par défaut (Fichier et Edition).
 2. (Facultatif) Effectuez un double-clic sur le nom du menu/de la barre de menus afin de le rendre éditable et saisissez un nom personnalisé.
-   OU
-   Saisissez le nom personnalisé dans la zone “Titre”.
+   OU Saisissez le nom personnalisé dans la zone “Titre”.
    Les noms des barres de menu doivent être uniques. Ils peuvent comporter jusqu’à 31 caractères. Vous pouvez saisir le nom "codé en dur" ou saisir une référence (voir [informations sur la propriété Title](properties.md#title)).
 
 ### A l'aide du langage 4D
@@ -62,8 +61,7 @@ Pour ajouter une ligne de menu :
    Cliquez sur le bouton ajouter ![](../assets/en/Menus/PlussNew.png) situé sous la liste centrale.
    4D ajoute une nouvelle ligne avec le nom par défaut “Ligne X”, où X représente le nombre de lignes déjà créées.
 3. Double-cliquez sur le nom de la commande pour passer en mode édition et saisissez un nom personnalisé.
-   OU
-   Saisissez le nom personnalisé dans la zone “Titre”. Il peut comporter jusqu’à 31 caractères. Vous pouvez saisir le nom comme "en dur" ou saisir une référence (voir ci-dessous).
+   OU Saisissez le nom personnalisé dans la zone “Titre”. Il peut comporter jusqu’à 31 caractères. Vous pouvez saisir le nom comme "en dur" ou saisir une référence (voir ci-dessous).
 
 ### A l'aide du langage 4D
 
@@ -103,9 +101,7 @@ Un menu peut être attaché à une barre de menus ou à un autre menu.
 - Pour attacher un menu à une barre de menus : cliquez avec le bouton droit de la souris sur la barre de menus et sélectionnez **Attacher un menu à la barre de menus "nom de la barre" >**, puis choisissez le menu à attacher à la barre de menus :
   ![](../assets/en/Menus/attach.png)
   Vous pouvez également sélectionner une barre de menus, puis cliquer sur le bouton d'options situé en dessous de la liste.
-- Pour attacher un menu à un autre menu : sélectionnez le menu dans la zone de gauche, puis faites un clic droit sur l'élément de menu et sélectionnez **Attacher un sous-menu à l'élément "nom de l'élément">**, puis choisissez le menu que vous souhaitez utiliser comme sous-menu :  
-  ![](../assets/en/Menus/attach2.png)
-  Vous pouvez également sélectionner un élément de menu puis cliquer sur le bouton d'options situé sous la liste.
+- Ajouter des lignes
   Le menu que vous êtes en train de rattacher deviendra un sous-menu. Le titre de la ligne est maintenu (le nom initial du sous-menu est ignoré), mais il peut être modifié.
 
 #### Détacher des menus

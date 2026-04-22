@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | blobToDecrypt | Blob | &#8594;  | BLOB à décrypter |
 | keyObject &#124; passPhrase | Objet, Texte | &#8594;  | Objet JSON contenant la clé de chiffrement ou le mot de passe pour générer directement une clé de chiffrement (texte) |
-| salt | Integer | &#8594;  | Additional salt for algorithm |
+| salt | Integer | &#8594;  | "Sel" additionnel pour l'algorithme |
 | decryptedBlob | Blob | &#8592; | BLOB décrypté |
 | Résultat | Boolean | &#8592; | True si le déchiffrement a été effectué correctement. Sinon False |
 </div>

@@ -53,7 +53,7 @@ Essa propriedade é **apenas leitura**.
 
 </details>
 
-<!-- REF #ClassClass.new().Syntax -->**.new**() : 4D.Object<br/>**.new**( *param* : any { *;...paramN* } ) : 4D.Object<!-- END REF -->
+<!-- REF #ClassClass.new().Syntax -->**.new**() : 4D. Object<br/>**.new**( *param* : any { *;...paramN* } ) : 4D. Object<!-- END REF -->
 
 
 <!-- REF #ClassClass.new().Params -->
@@ -62,7 +62,7 @@ Essa propriedade é **apenas leitura**.
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |param|any|->|Parameter(s) to pass to the constructor function|
-|Result|4D.Object|<-|New object of the class|
+|Result|4D. Object|<-|New object of the class|
 </div>
 <!-- END REF -->
 

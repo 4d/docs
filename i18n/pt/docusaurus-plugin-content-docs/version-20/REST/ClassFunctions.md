@@ -439,9 +439,7 @@ Corpo do pedido:
 Neste exemplo, associamos uma escola existente a uma entidade Students. A classe `StudentEntity` tem um API:
 
 ```
-// Classe StudentsEntity
-
-Class extends Entity
+// Classe StudentsEntity Class extends Entity
 
 exposed Function putToSchool($school : Object) -> $status : Object
 

@@ -279,7 +279,7 @@ Quiere crear un alias para un archivo en su carpeta principal:
 
 #### Descripción
 
-La función `.delete()` <!-- REF #FileClass.delete().Summary -->elimina el archivo<!-- END REF -->.
+La función `.delete()` <!-- REF #FileClass.delete().Summary -->La función `.delete()`<!-- END REF -->.
 
 Si el archivo no existe en el disco, la función no hace nada (no se genera ningún error).
 
@@ -290,7 +290,7 @@ Si el archivo está abierto, el resultado depende del sistema operativo:
 
 :::caution
 
-`.delete()` puede eliminar cualquier archivo de un disco. Esto incluye los documentos creados con otras aplicaciones, así como las propias aplicaciones. `.delete()` debe utilizarse con extrema precaución. Eliminar un archivo es una operación permanente y no se puede deshacer.
+`.delete()` puede eliminar cualquier archivo de un disco. Esto incluye los documentos creados con otras aplicaciones, así como las propias aplicaciones. `.delete()` puede eliminar cualquier archivo de un disco. Eliminar un archivo es una operación permanente y no se puede deshacer.
 
 :::
 
@@ -303,6 +303,7 @@ Desea eliminar un archivo específico en la carpeta de la base de datos:
  If($tempo.exists)
     $tempo.delete()
     ALERT("User preference file deleted.")
+ End if
  End if
  End if
 ```

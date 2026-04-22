@@ -120,11 +120,11 @@ Utilizando el almacén de datos principal de la base 4D:
 <!-- REF #_command_.Open datastore.Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|connectionInfo|Object|->|Connection properties used to reach the remote datastore|
-|localID |Text|->|Id to assign to the opened datastore on the local application (mandatory)|
-|Result |4D.DataStoreImplementation|<-|Datastore object|
+|connectionInfo|Object|->|Propiedades de conexión utilizadas para llegar al datastore remoto|
+|localID |Text|->|Id para asignar al datastore abierto en la aplicación local (obligatorio)|
+|Resultado |4D.DataStoreImplementation|<-|Datastore object|
 </div>
 <!-- END REF -->
 
@@ -384,6 +384,9 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
        End if
     End for each
     ALERT(String($vcount)+" encrypted table(s) in this datastore.")
+ Else
+    ALERT("This database is not encrypted.")
+ End if
  Else
     ALERT("This database is not encrypted.")
  End if
@@ -850,11 +853,11 @@ Cuando no se llama a esta función, las nuevas selecciones de entidades pueden s
 <!-- REF #DataStoreClass.provideDataKey().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|curPassPhrase |Text|->|Current encryption passphrase|
-|curDataKey |Object|->|Current data encryption key|
-|Result|Object|<-|Result of the encryption key matching|
+|Parámetro|Tipo||Descripción|
+|---|-|-|---|-|
+|curPassPhrase |Text|->|Frase de contraseña de cifrado actual|
+|curDataKey |Object|->|Llave de cifrado de datos actual|
+|Resultado|Object||<-|Result of the encryption key matching|
 </div>
 <!-- END REF -->
 
@@ -927,9 +930,9 @@ Si no se da *curPassphrase* o *curDataKey*, `.provideDataKey()` devuelve **null*
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|status|Boolean|->|True to disable Data Explorer access to data on the `webAdmin` port, False (default) to grant access|
+|status|Boolean|->|True para desactivar el acceso del Explorador de Datos a los datos en el puerto `webAdmin`, False (por defecto) para conceder acceso|
 </div>
 <!-- END REF -->
 
@@ -976,7 +979,7 @@ Se crea un método proyecto *protectDataFile* para llamar antes de los despliegu
 |---|---|---|---|
 |contextName|Text|->|Name of the context|
 |dataClassName|Text|->|Name of the dataclass|
-|dataClassObject|4D.DataClass|->|dataclass object (e.g datastore.Employee)|
+|dataClassObject|4D.DataClass|->|dataclass object (e.g datastore. Employee)|
 |attributes|Text|->|Attribute list separated by a comma|
 |attributesColl|Collection|->|Collection of attribute names (text)|
 |contextType|Text|->|If provided, value must be "main" or "currentItem"|
@@ -1105,17 +1108,17 @@ End case
 <!-- REF #DataStoreClass.startRequestLog().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---|---|---|---|
-|file |4D.File|->|File object |
-|options |Integer|->|Log response option (server only)|
-|reqNum |Integer|->|Number of requests to keep in memory (client only)|
+|file |4D.File|>|Objeto File |
+|options |Integer|->|Opción de respuesta de registro (solo el servidor)|
+|reqNum |Integer|->|Número de peticiones a guardar en memoria (solo el cliente)|
 </div>
 <!-- END REF -->
 
 #### Descripción
 
-La función `.startRequestLog()` <!-- REF #DataStoreClass.startRequestLog().Summary -->inicia el registro de peticiones ORDA del lado del cliente o del lado del servidor<!-- END REF -->. Está diseñado para fines de depuración en configuraciones cliente/servidor.
+La función `.startRequestLog()` <!-- REF #DataStoreClass.startRequestLog().Summary -->La función `.startRequestLog()`<!-- END REF -->. Está diseñado para fines de depuración en configuraciones cliente/servidor.
 
 :::info
 
@@ -1262,11 +1265,28 @@ Puede anidar varias transacciones (subtransacciones). Cada transacción o sub-tr
  End if
  ...
  ...
- If($error)
-    $ds.cancelTransaction()
- Else
-    $ds.validateTransaction()
+ var $connect; $status : Object
+ var $person : cs.PersonsEntity
+ var $ds : 4D.DataStoreImplementation
+ var $choice : Text
+ var $error : Boolean
+
+ Case of
+    :($choice="local")
+       $ds:=ds
+    :($choice="remote")
+       $connect:=New object("hostname";"111.222.3.4:8044")
+       $ds:=Open datastore($connect;"myRemoteDS")
+ End case
+
+ $ds.startTransaction()
+ $person:=$ds.Persons.query("lastname=:1";"Peters").first()
+
+ If($person#Null)
+    $person.lastname:="Smith"
+    $status:=$person.save()
  End if
+ ...
 ```
 
 <!-- END REF -->
@@ -1297,7 +1317,7 @@ Puede anidar varias transacciones (subtransacciones). Cada transacción o sub-tr
 
 #### Descripción
 
-La función `.stopRequestLog()` <!-- REF #DataStoreClass.stopRequestLog().Summary -->detiene todo registro de peticiones ORDA en la máquina a la que se llama (cliente o servidor)<!-- END REF -->.
+La función `.stopRequestLog()` <!-- REF #DataStoreClass.stopRequestLog().Summary -->La función `.stopRequestLog()`<!-- END REF -->.
 
 En realidad, cierra el documento abierto en el disco. Del lado del cliente, si el registro se inició en memoria, se detiene.
 

@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 ## Description
 
-La commande `Session info` <!-- REF #_command_.Session info.Summary -->retourne un objet décrivant la session dont vous passez l'ID dans le paramètre *sessionID*<!-- END REF -->. Si vous transmettez une *sessionID* invalide, la commande renvoie un objet nul.
+La commande `Session info` <!-- REF #_command_.Session info.Summary -->retourne un objet décrivant la session dont vous passez l'ID dans le paramètre *sessionID*<!-- END REF -->.. Si vous transmettez une *sessionID* invalide, la commande renvoie un objet nul.
 
 L'objet retourné contient les propriétés suivantes :
 

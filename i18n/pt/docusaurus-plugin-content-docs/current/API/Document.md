@@ -451,7 +451,7 @@ A função `.copyTo()` <!-- REF #document.copyTo().Summary -->copia o objeto `Fi
 
 A *destinationFolder* deve existir em disco, senão um erro é gerado.
 
-Como padrão, o arquivo é copiado com o nome do arquivo original. Se quiser renomear a cópia, passe o novo nome no parâmetro *newName*. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
+Como padrão, o arquivo é copiado com o nome do arquivo original. Como padrão, a pasta é copiada com o nome da pasta original. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
 Se já existir um arquivo com o mesmo nome em *destinationFolder*, por padrão 4D gera um erro. Pode passar a constante `fk overwrite` no parâmetro *overwrite* para ignorar e sobrescriber o arquivo existente
 

@@ -65,7 +65,7 @@ Ejemplos:
  $obFilled:=New object("name";"Smith";"age";42) //instanciación y asignación de un objeto pre-rellenado
 ```
 
-### operador \\\`{}
+### operador \\\\`{}
 
 El operador `{}` permite crear un **literal de objeto**. Un literal de objeto es una lista separada por semicolumnas de cero o más pares de nombres de propiedades y valores asociados de un objeto, encerrados entre llaves (`{}`). La sintaxis literal de objeto crea objetos vacíos o llenos.
 
@@ -111,7 +111,7 @@ $col:=$o.col[5] //6
 Puede crear dos tipos de objetos:
 
 - objetos regulares (no compartidos), utilizando el comando [`New object`](../commands-legacy/new-object.md) o la sintaxis literal de objeto (`{}`). Estos objetos pueden ser editados sin ningún control de acceso específico, pero no pueden ser compartidos entre procesos.
-- objetos compartidos, utilizando el comando [`New shared object`](../commands-legacy/new-shared-object.md). Estos objetos pueden ser compartidos entre procesos, incluidos los hilos apropiativos. Estos objetos pueden ser compartidos entre procesos, incluidos los hilos apropiativos.
+- objetos compartidos, utilizando el comando [`New shared object`](../commands-legacy/new-shared-object.md). Estos objetos pueden ser compartidos entre procesos, incluidos los hilos apropiativos. objetos compartidos, utilizando el comando [`New shared object`](../commands/new-shared-object).
   Para más información, consulte la sección [Objetos y colecciones compartidos](shared.md).
 
 ## Propiedades {#properties}
@@ -198,7 +198,7 @@ Para más información, consulte [Null e indefinido](dt_null_undefined.md).
 
 ### Valor indefinido
 
-La evaluación de una propiedad de un objeto puede producir a veces un valor indefinido. Asignar un valor indefinido a una propiedad de objeto existente reinicializa o borra su valor. La asignación de un valor indefinido a una propiedad de objeto no existente no hace nada.
+La evaluación de una propiedad de un objeto puede producir a veces un valor indefinido. La evaluación de una propiedad de un objeto puede producir a veces un valor indefinido. La asignación de un valor indefinido a una propiedad de objeto no existente no hace nada.
 
 Para más información, consulte [Null e indefinido](dt_null_undefined.md)
 

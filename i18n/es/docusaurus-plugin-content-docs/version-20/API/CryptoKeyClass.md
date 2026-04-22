@@ -331,15 +331,15 @@ El valor devuelto es la llave pública.
 <!-- REF #CryptoKey.sign().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|----|---|---|
-|message|Text OR Blob|->|Message to sign|  
-|options|Object|->|Signing options|
-|Result|Text|<-|Signature in Base64 or Base64URL representation, depending on "encoding" option|
+|Parámetro|Tipo||Descripción|
+|---|----|---|-|
+|message|Text|->|Mensaje a firmar|  
+|options|Object|->|Opciones de firma|
+|Resultado|Text|<-|Signature in Base64 or Base64URL representation, depending on "encoding" option|
 </div>
 <!-- END REF -->
 
-La función `.sign()` <!-- REF #CryptoKey.sign().Summary -->firma la representación utf8 de una cadena o de un Blob *message*<!-- END REF --> utilizando las llaves del objeto `CryptoKey` y las *opciones* suministradas. Devuelve su firma en formato base64 o base64URL, dependiendo del valor del atributo `options.encoding` que haya pasado.
+La función `.sign()` <!-- REF #CryptoKey.sign().Summary -->La función `.sign()`<!-- END REF --> utilizando las llaves del objeto `CryptoKey` y las *opciones* suministradas. utilizando las llaves del objeto `CryptoKey` y las *opciones* suministradas.
 
 `CryptoKey` debe contener una llave válida **privada**.
 
@@ -413,12 +413,12 @@ Contiene el <!-- REF #CryptoKey.type.Summary -->nombre del tipo de llave - "RSA"
 <!-- REF #CryptoKey.verify().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
-|---|---|---|---|
-|message|Text OR Blob|->|Message that was used to produce the signature|  
-|signature|Text|->|Signature to verify, in Base64 or Base64URL representation, depending on `options.encoding` value|
-|options|Object|->|Signing options|
-|Result|Object|<-|Status of the verification|
+|Parámetro|Tipo||Descripción|
+|---|---|-|---|-|
+|message|Text O Blob|->|Mensaje que se utilizó para producir la firma|  
+|signature|Text|->|Firma a verificar, en representación Base64 o Base64URL, dependiendo del valor de `options.encoding`|
+|options|Object|->|Opciones de firma|
+|Resultado|Object|<-|Status of the verification|
 </div>
 <!-- END REF -->
 

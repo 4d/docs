@@ -39,7 +39,7 @@ Para obter uma apresentação completa dessa classe, recomendamos que você leia
 | 18 R4   | Adicionado |
 </details>
 
-<!-- REF #4D.CryptoKey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) : 4D.CryptoKey<!-- END REF -->
+<!-- REF #4D.CryptoKey.new().Syntax -->`CryptoKey` deve conter uma chave válida **privada**.<!-- END REF -->
 
 
 <!-- REF #4D.CryptoKey.new().Params -->
@@ -48,11 +48,11 @@ Para obter uma apresentação completa dessa classe, recomendamos que você leia
 |Parameter|Type||Description|
 |---|---|----|---|
 |settings|Object|->|Settings to generate or load a key pair|
-|Result|4D.CryptoKey|<-|Object encapsulating an encryption key pair|
+|Result|4D. CryptoKey|<-|Object encapsulating an encryption key pair|
 </div>
 <!-- END REF -->
 
-A função `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->cria um objeto `4D.CryptoKey` que encapsula um par de chaves de encriptação<!-- END REF -->, com base no parâmetro objeto *settings*. Permite gerar uma nova chave RSA o ECDSA, ou carregar um par de chaves existente desde uma definição PEM.
+A função `4D. CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->cria um objeto `4D.CryptoKey` que encapsula um par de chaves de encriptação<!-- END REF -->, com base no parâmetro objeto *settings*. Permite gerar uma nova chave RSA o ECDSA, ou carregar um par de chaves existente desde uma definição PEM.
 
 #### *settings*
 
@@ -102,13 +102,10 @@ $signature:=Folder(fk desktop folder).file("signature").getText()
 
 // Criar uma chave
 $type:=New object("type"; "PEM"; "pem";$publicKey)
-$key:=4D.CryptoKey.new($type)
+$key:=4D. CryptoKey.new($type)
 
-// Verificar assinatura
-If ($key.verify($message;$signature;$type).success)
-// A assinatura é válida
-
-End if
+// Verificar assinatura If ($key.verify($message;$signature;$type).success)
+// A assinatura é válida End if
 ```
 
 #### Exemplo 2
@@ -145,7 +142,7 @@ ASSERT($status.success)
 <!-- REF #CryptoKey.curve.Syntax -->**.curve** : Text<!-- END REF -->
 
 
-Definido apenas para as chaves ECDSA: o <!-- REF #CryptoKey.curve.Summary -->nome da curva normalizada da chave<!-- END REF -->. Normalmente "prime256v1" para ES256 (por defeito), "secp384r1" para ES384, "secp521r1" para ES512.
+Definido apenas para chaves RSA: <!-- REF #CryptoKey.curve.Summary -->o tamanho da chave em bits<!-- END REF -->. .
 <!-- END REF -->
 
 <!-- REF CryptoKey.decrypt().Desc -->
@@ -166,8 +163,7 @@ Definido apenas para as chaves ECDSA: o <!-- REF #CryptoKey.curve.Summary -->nom
 
 |Parameter|Type||Description|
 |---|---|----|---|
-|message|Text|->|Message string to be decoded using `options.encodingEncrypted` and decrypted.|  
-|options|Object|->|Decoding options|
+|message|Text|->|Message string to be decoded using `options.encodingEncrypted` and decrypted.| |options|Object|->|Decoding options|
 |Result|Object|<-|Status|
 </div>
 <!-- END REF -->
@@ -178,11 +174,11 @@ A chave deve ser uma chave RSA, o algoritmo é RSA-OAEP (consulte [RFC 3447](htt
 
 #### *options*
 
-| Propriedade       | Tipo | Descrição                                                                                                                                                   |
-| ----------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hash              | text | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512".                                                                                  |
-| encodingEncrypted | text | Codificação utilizada para converter o parâmetro `mensagem` na representação binaria a decifrar. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".  |
-| encodingDecrypted | text | Codificação utilizada para converter a mensagem binário decifrado na string de resultados. Pode ser "UTF-8", "Base64" ou "Base64URL". Por padrão é "UTF-8". |
+| Propriedade       | Tipo | Descrição                                                                                                                                                     |
+| ----------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| hash              | text | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512".                                                                                    |
+| encodingEncrypted | text | Codificação utilizada para converter o parâmetro `mensagem` na representação binaria a decifrar. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".    |
+| encodingDecrypted | text | Codificação utilizada para converter a mensagem binária criptografada na string  resultante. Pode ser "UTF-8", "Base64" ou "Base64URL". Por padrão é "UTF-8". |
 
 #### *Resultados*
 
@@ -215,8 +211,7 @@ A função devolve um objeto "status" com a propriedade `success` definida como 
 
 |Parameter|Type||Description|
 |---|---|----|---|
-|message|Text|->|Message string to be encoded using `options.encodingDecrypted` and encrypted.|  
-|options|Object|->|Encoding options|
+|message|Text|->|Message string to be encoded using `options.encodingDecrypted` and encrypted.| |options|Object|->|Encoding options|
 |Result|Text|<-|Message encrypted and encoded using the `options.encodingEncrypted`|
 </div>
 <!-- END REF -->
@@ -227,11 +222,11 @@ A chave deve ser uma chave RSA, o algoritmo é RSA-OAEP (consulte [RFC 3447](htt
 
 ##### *options*
 
-| Propriedade       | Tipo | Descrição                                                                                                                                                     |
-| ----------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hash              | text | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512".                                                                                    |
-| encodingEncrypted | text | Codificação utilizada para converter a mensagem binária criptografada na string resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".         |
-| encodingDecrypted | text | Codificação utilizada para converter a mensagem binária criptografada na string  resultante. Pode ser "UTF-8", "Base64" ou "Base64URL". Por padrão é "UTF-8". |
+| Propriedade       | Tipo | Descrição                                                                                                                                                   |
+| ----------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| hash              | text | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512".                                                                                  |
+| encodingEncrypted | text | Codificação utilizada para converter a mensagem binária criptografada na string  resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".      |
+| encodingDecrypted | text | Codificação utilizada para converter a mensagem binário decifrado na string de resultados. Pode ser "UTF-8", "Base64" ou "Base64URL". Por padrão é "UTF-8". |
 
 #### *Resultados*
 
@@ -336,7 +331,7 @@ O valor devolvido é a chave pública.
 </div>
 <!-- END REF -->
 
-A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->assina a representação utf8 de uma mensagem ** string<!-- END REF --> utilizando o `CryptoKey` chaves-objecto e forneceu *opções*. Devolve a sua assinatura no formato base64 ou base64URL, dependendo do valor do atributo `options.encoding` que passou.
+A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->assina a representação utf8 de uma mensagem ** string<!-- END REF --> utilizando o `CryptoKey` chaves-objecto e forneceu *opções*. utilizando o `CryptoKey` chaves-objecto e forneceu *opções*.
 
 `CryptoKey` deve conter uma chave válida **privada**.
 
@@ -345,7 +340,7 @@ A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->assina a representaç
 | Propriedade       | Tipo    | Descrição                                                                                                                                                                                         |
 | ----------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hash              | text    | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512". Quando utilizar para produzir um JWT, o tamanho de hash deve coincidir com o tamanho do algoritmo PS@, ES@, RS@ ou PS@ |
-| encodingEncrypted | text    | Codificação utilizada para converter a mensagem binária criptografada na string resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".                                             |
+| encodingEncrypted | text    | Codificação utilizada para converter a mensagem binária criptografada na string  resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".                                            |
 | pss               | boolean | Utiliza Probabilistic Signature Scheme (PSS). Ignorado se a chave não for uma chave RSA. Passa `true` ao produzir um JWT para o algoritmo PS@                                                     |
 | encoding          | text    | Representation of provided signature. Possible values are "Base64" or "Base64URL". Por padrão é "Base64".                                                                                         |
 
@@ -368,7 +363,7 @@ A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->assina a representaç
 <!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
 
 
-Definido apenas para chaves RSA: <!-- REF #CryptoKey.size.Summary -->o tamanho da chave em bits<!-- END REF -->. .
+Definido apenas para as chaves ECDSA: o <!-- REF #CryptoKey.size.Summary -->o tamanho da chave em bits<!-- END REF -->. .
 
 <!-- REF CryptoKey.type -->
 ## .type
@@ -429,7 +424,7 @@ A função `.verify()` <!-- REF #CryptoKey.verify().Summary -->verifica a assina
 | ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hash        | text    | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512". Quando utilizar para produzir um JWT, o tamanho de hash deve coincidir com o tamanho do algoritmo PS@, ES@, RS@ ou PS@ |
 | pss         | boolean | Utiliza Probabilistic Signature Scheme (PSS). Ignorado se a chave não for uma chave RSA. Passa `true` ao verficar um JWT para o algoritmo PS@                                                     |
-| encoding    | text    | Codificação utilizada para converter a mensagem binária criptografada na string  resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".                                            |
+| encoding    | text    | Codificação utilizada para converter a mensagem binária criptografada na string resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".                                             |
 
 #### *Resultados*
 

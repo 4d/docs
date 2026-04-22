@@ -16,7 +16,7 @@ Deux modes de glisser-déposer sont proposés dans 4D :
 - Un mode **automatique**, dans lequel 4D **copie** du texte ou des images directement à partir de l'objet formulaire. Il peut alors être utilisé dans la même zone 4D, entre deux zones 4D, ou entre 4D et une autre application. Par exemple, le glisser-déposer automatique vous permet de copier une valeur entre deux champs sans utiliser de programmation :  
   ![](../assets/en/FormObjects/property_automaticDragDrop.png)  
   ![](../assets/en/FormObjects/property_automaticDragDrop2.png)
-  Dans ce mode, l'événement de formulaire `On Begin Drag` n'est PAS généré. Si vous souhaitez "forcer" l'utilisation du glissement personnalisé alors que le glissement automatique est activé, maintenez la touche **Alt** (Windows) ou **Option** (macOS) enfoncée pendant l'action. Cette option n'est pas disponible pour les images.
+  Dans ce mode, l'événement de formulaire `On Begin Drag` n'est PAS généré. Il peut alors être utilisé dans la même zone 4D, entre deux zones 4D, ou entre 4D et une autre application. Cette option n'est pas disponible pour les images.
 
 Pour plus d'informations, reportez-vous à [Glisser-déposer](https://doc.4d.com/4Dv20/4D/20.6/Drag-and-Drop.300-7487471.en.html) dans le manuel *Langage 4D*.
 

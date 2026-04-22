@@ -123,7 +123,7 @@ Cette zone regroupe les options génériques utilisées lors du processus de com
 
 #### Générer le fichier de symboles
 
-Permet de générer le fichier de symboles (voir [fichier de symboles](#symbol-file)). Le fichier de symboles est créé dans le [dossier Logs](../Project/architecture.md#logs) du projet et est nommé `ProjectName_symbols.xml`.
+Permet de générer le fichier de symboles (voir [fichier de symboles](#symbol-file)). Permet de générer le fichier de symboles (voir [fichier de symboles](#symbol-file)).
 
 #### Générer le fichier d'erreurs
 

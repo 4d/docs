@@ -57,7 +57,7 @@ Dans *breakType*, passez l'une des constantes suivantes du thème *4D Write Pro 
  End for
 ``` |
 
-Dans le paramètre *mode*, passez une constante pour indiquer le mode d'insertion à utiliser pour le break dans la destination *targetObj* :
+\| wk section break            \| Integer \| 1      \| Saut de section : définit une nouvelle section                                                                                                \|Dans le paramètre *mode*, passez une constante pour indiquer le mode d'insertion à utiliser pour le break dans la destination *targetObj* :
 
 | Constante  | Type    | Valeur | Commentaire                             |
 | ---------- | ------- | ------ | --------------------------------------- |
@@ -65,7 +65,7 @@ Dans le paramètre *mode*, passez une constante pour indiquer le mode d'insertio
 | wk prepend | Integer | 1      | Insérer le contenu au début de la cible |
 | wk replace | Integer | 0      | Remplacer le contenu de la cible        |
 
-- Si *targetObj* est une plage, vous pouvez utiliser le paramètre facultatif *rangeUpdate* pour transmettre l'une des constantes suivantes afin de spécifier si le contenu inséré est inclus ou non dans la plage résultante :
+- - Si *targetObj* est une plage, vous pouvez utiliser le paramètre facultatif *rangeUpdate* pour transmettre l'une des constantes suivantes afin de spécifier si le contenu inséré est inclus ou non dans la plage résultante :
 
 | Constante             | Type    | Valeur | Commentaire                                                                     |
 | --------------------- | ------- | ------ | ------------------------------------------------------------------------------- |
@@ -78,16 +78,13 @@ Si vous ne passez pas un paramètre *rangeUpdate*, par défaut, le contenu insé
 
 ## Exemple 1
 
-Lors de la construction des factures, vous voulez insérer des sauts de page sauf sur la dernière page :
+Si vous ne passez pas un paramètre *rangeUpdate*, par défaut, le contenu inséré est inclus dans la plage résultante.\* Si *targetObj* n'est pas une plage, *rangeUpdate* est ignoré.## Exemple 1Lors de la construction des factures, vous voulez insérer des sauts de page sauf sur la dernière page :\`\`\`4d
 
 ```4d
- $nbInvoices:=Records in selection([INVOICE])
- For($j;1;$nbInvoices)
-    ... //traitement des factures
-    If($j#$nbInvoices) //insérer un saut de page à l'exception de la dernière page
-       WP Insert break($buildRange;wk page break;wk append;wk exclude from range)
-    End if
- End for
+... //traitement des factures
+If($j#$nbInvoices) //insérer un saut de page à l'exception de la dernière page
+   WP Insert break($buildRange;wk page break;wk append;wk exclude from range)
+End if
 ```
 
 ## Exemple 2

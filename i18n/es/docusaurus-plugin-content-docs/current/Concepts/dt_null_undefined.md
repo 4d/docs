@@ -41,7 +41,7 @@ Normalmente, al intentar leer o asignar expresiones indefinidas, 4D generará er
   - Booleano: False
   - Cadena: ""
   - Número: 0
-  - Fecha: !00-00-00! Date: !00-00-00! if "Use date type instead of ISO date format in objects" setting is enabled, otherwise ""
+  - Fecha: !00-00-00! Fecha: !00-00-00! Date: !00-00-00! if "Use date type instead of ISO date format in objects" setting is enabled, otherwise ""
   - Hora: 0 (número de ms)
   - Indefinido, Null: sin cambios
 

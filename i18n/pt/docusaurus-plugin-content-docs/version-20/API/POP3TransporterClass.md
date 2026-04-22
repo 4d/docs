@@ -155,6 +155,10 @@ A função `4D.POP3Transporter.new()` <!-- REF #4D.POP3Transporter.new().Summary
        ALERT("Error: "+$status.statusText)
     End if
  End if
+    Else
+       ALERT("Error: "+$status.statusText)
+    End if
+ End if
 ```
 
 <!-- INCLUDE transporter.connectionTimeOut.Desc -->
@@ -287,7 +291,7 @@ O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
 A função `.getMail()` <!-- REF #POP3TransporterClass.getMail().Summary -->devolve o `Email` objeto correspondente ao *msgNumber* na caixa de correio designada pelo transportador [`POP3`](#pop3-transporter-object)<!-- END REF -->. Essa função permite manejar localmente os conteúdos de email.
 
-Passe em *msgNumber* o número da mensagem a recuperar. O número é retornado na propriedade número pela função [`.getMailInfoList()`](#getmailinfolist).
+Passe em *msgNumber* o número da mensagem a recuperar. Passe em *msgNumber* o número da mensagem a recuperar.
 
 Opcionalmente, pode passar `true` no parâmetro *headerOnly* para excluir as partes do corpo do objecto devolvido `Email`. Apenas as propriedades dos cabeçalhos ([`cabeçalhos`](EmailObjectClass.md#headers), [`a`](EmailObjectClass.md#to), [`de`](EmailObjectClass.md#from)...) são então devolvidas. Esta opção permite-lhe optimizar a etapa de descarregamento quando muitos e-mails estão no servidor.
 
@@ -387,6 +391,7 @@ O método retorna **Null** se:
  $mailInfo:=$transporter.getMailInfo(1) //get the first mail
  If($mailInfo #Null)
     ALERT("First mail size is:"+String($mailInfo.size)+" bytes.")
+ End if
  End if
  End if
  End if

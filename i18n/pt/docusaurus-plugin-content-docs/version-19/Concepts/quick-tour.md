@@ -127,16 +127,16 @@ For($vlChar;1;Length(vtSomeText))
     End for
 ```
 
-Um método projeto pode chamar a outro método projeto com ou sem parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). A method can return a single value in a parameter, which have to be declared. Os parâmetros estão disponíveis dentro do método chamado como variáveis locais numeradas sequencialmente: $1, $2,..., $n. Um método pode devolver um único valor no parâmetro $0. Quando chamar um método, apenas digite seu nome:
+Um método projeto pode chamar a outro método projeto com ou sem parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). Os parâmetros estão disponíveis dentro do método chamado como variáveis locais numeradas sequencialmente: $1, $2,..., $n. Um método pode devolver um único valor no parâmetro $0. Os parâmetros estão disponíveis dentro do método chamado como variáveis locais numeradas sequencialmente: $1, $2,..., $n. Um método pode devolver um único valor no parâmetro $0. A method can return a single value in a parameter, which have to be declared.
 
 ```4d
-$myText:="hello"
-$myText:=Do_Something($myText) //Chamar o método Do_Something
 ALERT($myText) //"HELLO"
 
-  //Aqui o código do método Do_Something  
+  //Here the code of the method Do_Something  
 #DECLARE ($in : Text) -> $out : Text
 $out:=Uppercase($in)
+$myText:="hello"
+$myText:=Do_Something($myText) //Call the Do_Something method
 ```
 
 
@@ -183,11 +183,11 @@ Note-se que se o valor da propriedade do objeto for um objeto que encapsula um m
 ```4d
 ALERT($myText) //"HELLO"
 
-  //Here the code of the method Do_Something  
+  //Aqui o código do método Do_Something  
 #DECLARE ($in : Text) -> $out : Text
 $out:=Uppercase($in)
 $myText:="hello"
-$myText:=Do_Something($myText) //Call the Do_Something method
+$myText:=Do_Something($myText) //Chamar o método Do_Something
 ```
 
 Para aceder a um elemento da collection, é necessário passar o número do elemento entre parênteses rectos:
@@ -227,26 +227,17 @@ $f.message() //displays "Hello world!"
 Opcionalmente, utilize a palavra-chave `Class constructor` para declarar as propriedades do objeto.
 
 ```4d  
-//no arquivo Rectangle.4dm
-Class constructor ($height: Integer; $width : Integer)
-This.height:=$height
-This.width:=$width
-This.name:="Rectangle"
+//no arquivo Rectangle.4dm Class constructor ($height: Integer; $width : Integer)
+This.height:=$height This.width:=$width This.name:="Rectangle"
 ```
 
 Uma classe pode estender outra classe utilizando `Class extends <ClassName>`. As superclasses podem ser chamadas utilizando o comando `Super`. Por exemplo:
 
 ```4d  
-//no arquivo Square.4dm
-Class extends rectangle
-
-Class constructor($length : Integer)
+//no arquivo Square.4dm Class extends rectangle Class constructor($length : Integer)
 
   // Ele chama o construtor da classe pai com comprimentos   
-  // fornecido para a largura e altura
-Super($length;$length)
-
-This.name:="Square"
+  // fornecido para a largura e altura Super($length;$length) This.name:="Square"
 ```
 
 

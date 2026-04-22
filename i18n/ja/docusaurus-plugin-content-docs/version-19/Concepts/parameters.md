@@ -32,7 +32,7 @@ DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 
 ```4d
 EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)  
-// サブフォーム "Cal2" のコンテキストにおいて SetCalendarDate を実行し  
+// サブフォーム "Cal2" のコンテキストにおいて // サブフォーム "Cal2" のコンテキストにおいて SetCalendarDate を実行し  
 // その際に引数として日付リテラル !05/05/20! を渡します
 ```
 
@@ -366,6 +366,7 @@ C_TEXT($1;$2;$3;$4;$5;$6)
        $0:=-1
     End if
     ... 
+ ")
  End if
 ```
 

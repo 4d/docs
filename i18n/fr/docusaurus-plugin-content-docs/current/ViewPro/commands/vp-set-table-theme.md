@@ -37,7 +37,7 @@ Dans *vpAreaName*, passez le nom de la zone 4D View Pro et dans *tableName*, le 
 
 Dans le paramètre *options*, passez un objet de la classe [`cs.ViewPro.TableTheme`](../classes.md#tabletheme) qui contient les propriétés du thème à modifier.
 
-Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
+Dans *sheet*, passez le numéro de la page cible. Si aucune feuille nommée <em x-id="3">name</em> n'est trouvée dans le document, la méthode retourne -1.
 
 ## Exemple 1
 

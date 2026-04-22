@@ -138,7 +138,7 @@ Depois que o objeto for colocado no formulário, você poderá modificar suas ca
 
 - **Objetos estáticos** (linhas, quadros, imagens de fundo, etc.): esses objetos são geralmente usados para definir a aparência do formulário e de seus rótulos, bem como para a interface gráfica. Estão disponíveis na barra de objetos do editor de formulários. Você também pode definir seus atributos gráficos (tamanho, cor, fonte, etc.) e suas propriedades de redimensionamento usando a Lista de Propriedades. Os objetos estáticos não têm variáveis associadas como os objetos ativos. No entanto, é possível inserir objetos dinâmicos em objetos estáticos.
 
-- **Objetos ativos**: esses objetos executam tarefas ou funções na interface e podem assumir várias formas: campos, botões, listas roláveis, etc. Cada objeto ativo é associado com um campo ou uma variável.
+- **Objetos ativos**: esses objetos executam tarefas ou funções na interface e podem assumir várias formas: campos, botões, listas roláveis, etc. Cada objeto ativo é associado com um campo ou uma variável. Cada objeto ativo é associado com um campo ou uma variável.
 
 ### Selecção de objectos
 
@@ -155,7 +155,7 @@ Para selecionar um objeto usando a barra de ferramentas:
 Para selecionar um objecto utilizando a Lista de Propriedades:
 
 1. Escolher o nome do objecto na lista pendente da Lista de Objectos localizada no topo da Lista de Propriedades. Usando estes dois métodos, pode seleccionar um objecto que esteja escondido por outros objectos ou localizado fora da área visível da janela actual. Para desmarcar um objeto, clicar fora dos limites do objeto ou <**Shift+clique** o objeto.
-> Também é possível selecionar objetos clicando duas vezes neles na janela de resultados da operação "Localizar no design".
+> > Também é possível selecionar objetos clicando duas vezes neles na janela de resultados da operação "Localizar no design".
 
 ### Selecção de múltiplos objectos
 
@@ -171,7 +171,7 @@ A figura abaixo mostra um marque sendo desenhado para selecionar dois objetos:
 
 ![](../assets/en/FormEditor/selectMultiple.png)
 
-Para desmarcar um objecto, clicar fora dos limites do objecto ou **Shift+click** o objecto. Os outros objetos permanecem selecionados. Para desmarcar todos os objetos selecionados, clique fora dos limites de todos os objetos.
+Para desmarcar um objeto, clicar fora dos limites do objeto ou <**Shift+clique** o objeto. Os outros objetos permanecem selecionados. Para desmarcar todos os objetos selecionados, clique fora dos limites de todos os objetos.
 
 ### Duplicação de objectos
 

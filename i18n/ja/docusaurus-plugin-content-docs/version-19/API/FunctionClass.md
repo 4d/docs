@@ -5,7 +5,7 @@ title: Function
 
 ### Function オブジェクトについて
 
-`4D.Function` オブジェクトにはコードが格納されています。このコードは `()` 演算子を使用して、または [`apply()`](#apply) や [`call()`](#call) 関数を使用して呼び出すことができます。 4D では 3種類の `Function` オブジェクトが利用できます:
+`4D.Function` オブジェクトにはコードが格納されています。 このコードは `()` 演算子を使用して、または [`apply()`](#apply) や [`call()`](#call) 関数を使用して呼び出すことができます。 4D では 3種類の `Function` オブジェクトが利用できます:
 
 - **ネイティブ関数** (`collection.sort()` や `file.copyTo()` などの 4Dクラスにビルトインされた関数)。
 - **ユーザー関数** (ユーザー[クラス](Concepts/classes.md) において [Function キーワード](Concepts/classes.md#function)を使って作成されたもの)。
@@ -79,7 +79,9 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
  $f:=Formula(myMethod)
   // ここで Formula(myMethod($1;$2) と書く必要はありません
  $text:=$f.call(Null;"Hello";"World") // "Hello World" を返します
- $text:=$f.call() // "How are you?" を返します
+ $text:=$f.call() // "How are you?"
+
+  を返します
 
   //myMethod
  #DECLARE ($param1 : Text; $param2 : Text)->$return : Text
@@ -87,6 +89,7 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
     $return:=$param1+" "+$param2
  Else
     $return:="How are you?"
+ ")
  End if
 ```
 

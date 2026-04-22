@@ -56,7 +56,7 @@ La barra de herramientas contiene los siguientes elementos:
 | Icono                                            | Nombre                                                      | Descripción                                                                                                                                                                                                                                                                                                                                                               |
 | ------------------------------------------------ | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![](../assets/en/FormEditor/execute.png)         | Ejecutar el formulario                                      | Se utiliza para probar la ejecución del formulario. Al presionar este botón, 4D abre una nueva ventana y muestra el formulario en su contexto (lista de registros para un formulario lista y página de registro actual para un formulario detallado). El formulario se ejecuta en el proceso principal.                                                                   |
-| ![](../assets/en/FormEditor/selection.png)       | [Herramienta de selección](#selecting-objects)              | Allows selecting, moving and resizing form objects.<br/>**Note**: When an object of the Text or Group Box type is selected, pressing the **Enter** key lets you switch to editing mode.                                                                                                                                                                             |
+| ![](../assets/en/FormEditor/selection.png)       | [Herramienta de selección](#selecting-objects)              | Permite seleccionar, mover y cambiar el tamaño de los objetos del formulario.<br/>**Nota**: cuando se selecciona un objeto de tipo Texto o Área de Grupo, al presionar la tecla **Intro** se pasa al modo de edición.                                                                                                                                               |
 | ![](../assets/en/FormEditor/zOrder.png)          | [Orden de entrada](#data-entry-order)                       | Pasa al modo "Orden de entrada", donde es posible ver y cambiar el orden de entrada actual del formulario. Tenga en cuenta que las marcas permiten ver el orden de entrada actual, sin dejar de trabajar en el formulario.                                                                                                                                                |
 | ![](../assets/en/FormEditor/moving.png)          | [Desplazamiento](#moving-objects)                           | Pasa al modo " Desplazamiento ", en el que es posible llegar rápidamente a cualquier parte del formulario utilizando la función de arrastrar y soltar en la ventana. El cursor toma la forma de una mano. Este modo de navegación es especialmente útil cuando se hace zoom en el formulario.                                                                             |
 | ![](../assets/en/FormEditor/zoom.png)            | [Zoom](#zoom)                                               | Permite modificar la escala de visualización del formulario (100% por defecto). Puede pasar al modo "Zoom" haciendo clic en la lupa o pulsando directamente en la barra correspondiente a la escala deseada. Esta función se detalla en la sección anterior.                                                                                                              |
@@ -235,12 +235,12 @@ La agrupación sólo afecta a los objetos en el editor de formularios. Cuando se
 Para agrupar los objetos:
 
 1. Seleccione los objetos que desea agrupar.
-2. Elija **Agrupar** en el menú Objetos. OR Click the Group button  in the toolbar of the Form editor:<br/>![](../assets/en/FormEditor/group.png) 4D marks the boundary of the newly grouped objects with handles. No hay marcas que delimiten ninguno de los objetos individuales del grupo. Ahora, al modificar el objeto agrupado, se modifican todos los objetos que componen el grupo.
+2. Elija **Agrupar** en el menú Objetos. O Haga clic en el botón Agrupar en la barra de herramientas del editor de formularios:<br/>![](../assets/en/FormEditor/group.png) 4D marca el límite de los objetos recién agrupados con manijas. No hay marcas que delimiten ninguno de los objetos individuales del grupo. Ahora, al modificar el objeto agrupado, se modifican todos los objetos que componen el grupo.
 
 Para desagrupar un grupo de objetos:
 
 1. Seleccione el grupo de objetos que desea desagrupar.
-2. Choose **Ungroup** from the **Object** menu.<br/>OR<br/>Click the **Ungroup** button (variant of the **Group** button) in the toolbar of the Form editor.<br/>If **Ungroup** is dimmed, this means that the selected object is already separated into its simplest form. 4D marca los bordes de los objetos individuales con marcas.
+2. Seleccione **Desagrupar** en el menú **Objeto**.<br/>O<br/>Haga clic en el botón **Desagrupar** (variante del botón **Agrupar**) de la barra de herramientas del editor de formularios.<br/>Si **Desagrupar** aparece atenuado, significa que el objeto seleccionado ya está separado en su forma más simple. 4D marca los bordes de los objetos individuales con marcas.
 
 ### Alinear objetos
 
@@ -304,7 +304,7 @@ Para repartir los objetos con igual espacio:
 
 1. Seleccione tres o más objetos y haga clic en la herramienta Distribuir correspondiente.
 
-2. In the toolbar, click on the distribution tool that corresponds to the distribution you want to apply.<br/>![](../assets/en/FormEditor/distributionTool.png)<br/>OR<br/>Select a distribution menu command from the **Align** submenu in the **Object** menu or from the context menu of the editor. 4D distribuye los objetos consecuentemente. Los objetos se distribuyen utilizando la distancia a sus centros y se utiliza como referencia la mayor distancia entre dos objetos consecutivos.
+2. En la barra de herramientas, haga clic en la herramienta de distribución correspondiente a la distribución que desee aplicar.<br/>![](../assets/en/FormEditor/distributionTool.png)<br/>O<br/>Seleccione un comando de menú de distribución en el submenú **Alinear** del menú **Objeto** o en el menú contextual del editor. 4D distribuye los objetos consecuentemente. Los objetos se distribuyen utilizando la distancia a sus centros y se utiliza como referencia la mayor distancia entre dos objetos consecutivos.
 
 Para distribuir objetos utilizando la caja de diálogo Alinear y Distribuir:
 
@@ -312,9 +312,9 @@ Para distribuir objetos utilizando la caja de diálogo Alinear y Distribuir:
 
 2. Seleccione el comando **Alineación** del submenú **Alinear** del menú **Objeto** o del menú contextual del editor. Aparece la siguiente caja de diálogo:![](../assets/en/FormEditor/alignmentAssistant.png)
 
-3. In the Left/Right Alignment and/or Top/Bottom Alignment areas, click the standard distribution icon: ![](../assets/en/FormEditor/horizontalDistribution.png) <br/>(Standard horizontal distribution icon)<br/>The example area displays the results of your selection.
+3. En las áreas Alineación izquierda/derecha y/o Alineación superior/inferior, haga clic en el icono de distribución estándar: ![](../assets/en/FormEditor/horizontalDistribution.png)<br/>(Icono de distribución horizontal estándar)<br/>El área de ejemplo muestra los resultados de su selección.
 
-4. To perform a distribution that uses the standard scheme, click **Preview** or *Apply*.<br/>In this case 4D will perform a standard distribution, so that the objects are set out with an equal amount of space between them.<br/>OR:<br/>To execute a specific distribution, select the **Distribute** option (for example if you want to distribute the objects based on the distance to their right side). Esta opción actúa como un interruptor. Si la casilla de selección Distribuir está seleccionada, los iconos situados debajo de ella realizan una función diferente:<br/>
+4. Para realizar una distribución que utiliza el esquema estándar, haga clic en **Vista previa** o *Aplica*.<br/>En este caso, 4D realizará una distribución estándar para que los objetos estén espaciados de manera equitativa entre ellos.<br/>O:<br/>para ejecutar una distribución específica, seleccione la opción **Distribuir** (por ejemplo, si desea distribuir los objetos en función de la distancia a su lado derecho). Esta opción actúa como un interruptor. Si la casilla de selección Distribuir está seleccionada, los iconos situados debajo de ella realizan una función diferente:<br/>
 
 - Horizontalmente, los iconos corresponden a las siguientes distribuciones: uniformemente con respecto a los lados izquierdo, central (hor.) y derecho de los objetos seleccionados.
 - Verticalmente, los iconos corresponden a las siguientes distribuciones: uniformemente con respecto a los bordes superiores, centros (vert.) y bordes inferiores de los objetos seleccionados.
@@ -378,7 +378,7 @@ Para ver o cambiar el orden de entrada:
 
     El puntero se convierte en un puntero de orden de entrada y 4D dibuja una línea en el formulario mostrando el orden en que selecciona los objetos durante la entrada de datos. Ver y cambiar el orden de entrada de datos son las únicas acciones que puede realizar hasta que haga clic en cualquier herramienta de la paleta Herramientas.
 
-2. To change the data entry order, position the pointer on an object in the form and, while holding down the mouse button, drag the pointer to the object you want next in the data entry order.<br/>![](../assets/en/FormEditor/entryOrder3.png)<br/>4D will adjust the entry order accordingly.
+2. Para cambiar el orden de entrada de datos, ubique el puntero sobre un objeto del formulario y mientras mantiene presionado el botón del ratón, arrastre el puntero hasta el objeto que desee a continuación en el orden de entrada de datos.<br/>![](../assets/en/FormEditor/entryOrder3.png)<br/>4D ajustará el orden de entrada en consecuencia.
 
 3. Repita el paso 2 tantas veces como sea necesario para establecer el orden de entrada de datos que desee.
 
@@ -598,7 +598,7 @@ Aquí hay algunas cosas importantes que hay que saber antes de empezar a trabaja
 
 - **Contexto de uso**: las vistas son una herramienta puramente gráfica que sólo se puede utilizar en el Editor de formularios; no se puede acceder a las vistas por programación ni en el modo Aplicación.
 
-- **Vistas y páginas**: Los objetos de una misma vista pueden pertenecer a diferentes páginas del formulario; sólo se pueden mostrar los objetos de la página actual (y de la página 0 si es visible), independientemente de la configuración de las vistas.
+- **Vistas y páginas**: los objetos de una misma vista pueden pertenecer a diferentes páginas del formulario; sólo se pueden mostrar los objetos de la página actual (y de la página 0 si es visible), independientemente de la configuración de las vistas.
 
 - **Vistas y niveles**: las vistas son independientes de los niveles de los objetos; no existe una jerarquía de visualización entre las diferentes vistas.
 

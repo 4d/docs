@@ -21,7 +21,7 @@ Objetos anexos oferecem as propriedades e funções apenas leitura abaixo:
 
 ## MAIL New attachment
 
-<!-- REF #_command_.MAIL New attachment.Syntax -->**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *blob* : Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
+<!-- REF #_command_.MAIL New attachment.Syntax -->**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D. MailAttachment<br/>**MAIL New attachment**( *blob* : Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.<!-- END REF -->
 
 
 <!-- REF #_command_.MAIL New attachment.Params -->
@@ -34,8 +34,7 @@ Objetos anexos oferecem as propriedades e funções apenas leitura abaixo:
 |name|Text|->|Name + extension used by the mail client to designate the attachment|
 |cid|Text|->|ID of attachment (HTML messages only), or " " if no cid is required|
 |type|Text|->|Value of the content-type header|
-|disposition|Text|->|Value of the content-disposition header: "inline" or "attachment".|
-|Result|4D.MailAttachment|<-|Attachment object|
+|disposition|Text|->|Value of the content-disposition header: "inline" or "attachment".| |Result|4D. MailAttachment|<-|Attachment object|
 </div>
 <!-- END REF -->
 
@@ -151,7 +150,7 @@ $transporter.send($email)
 
 ## 4D. MailAttachment.new()
 
-<!-- REF #4D.MailAttachment.new().Syntax -->**4D.MailAttachment.new**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**4D.MailAttachment.new**( *blob* : Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
+<!-- REF #4D.MailAttachment.new().Syntax -->**4D. MailAttachment.new**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D. MailAttachment<br/>**4D. MailAttachment.new**( *blob* : Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.<!-- END REF -->
 
 
 <!-- REF #4D.MailAttachment.new().Params -->
@@ -164,14 +163,13 @@ $transporter.send($email)
 |name|Text|->|Name + extension used by the mail client to designate the attachment|
 |cid|Text|->|ID of attachment (HTML messages only), or " " if no cid is required|
 |type|Text|->|Value of the content-type header|
-|disposition|Text|->|Value of the content-disposition header: "inline" or "attachment".|
-|Result|4D.MailAttachment|<-|Attachment object|
+|disposition|Text|->|Value of the content-disposition header: "inline" or "attachment".| |Result|4D. MailAttachment|<-|Attachment object|
 </div>
 <!-- END REF -->
 
 #### Descrição
 
-A função `4D. MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary -->cria e devolve um novo objecto do tipo `4D. MailAttachment`<!-- END REF -->. . Isso é idêntico ao comando [`MAIL New attachment`](#mail-new-attachment) (atalho).
+A função `4D. MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary -->cria e devolve um novo objecto do tipo `4D. MailAttachment`<!-- END REF -->. . . Isso é idêntico ao comando [`MAIL New attachment`](#mail-new-attachment) (atalho).
 
 ## .cid
 

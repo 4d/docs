@@ -15,7 +15,7 @@ The `OpenAIChatCompletionParameters` class is designed to handle the parameters 
 
 | Property                   | Type    | Default Value           | Description                                                                                       |
 |---------------------------|---------|-------------------------|---------------------------------------------------------------------------------------------------|
-| `model`                 | Text       | `"gpt-4o-mini"` | ID of the model to use.  |
+| `model`                 | Text       | `"gpt-4o-mini"` | ID of the model to use. Supports [provider:model aliases](../provider-model-aliases.md) for multi-provider usage (e.g., `"openai:gpt-4o"`, `"anthropic:claude-3-opus"`).  |
 | `stream`                | Boolean    | `False`         | Whether to stream back partial progress. If set, tokens will be sent as data-only. Callback formula required.    |
 | `stream_options`        | Object     | `Null`          | Property for stream=True. For example: `{include_usage: True}`   |
 | `max_completion_tokens` | Integer    | `0`             | The maximum number of tokens that can be generated in the completion.                                                                                    |

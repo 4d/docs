@@ -239,7 +239,7 @@ Usar notação de objeto simplifica o código 4D no manejo dos mesmos. Entretant
   // É claro, ambas as notações podem ser misturadas
  C_OBJECT($myObj3)
  OB SET($myObj3; idade";10)
- $age:=$myObj3. de //10
+ $age:=$myObj3.
 ```
 
 - Criar uma propriedade e atribuir valores, incluindo objetos:
@@ -262,7 +262,7 @@ Usar notação de objeto simplifica o código 4D no manejo dos mesmos. Entretant
 - É possível acessar as propriedades como strings usando o operador []
 
 ```4d
-  $Emp["city"]:="Berlin" //modifica a propriedade city
+ $Emp["city"]:="Berlin" //modifica a propriedade city
   //isso pode ser útil para criar propriedades por meio de variáveis
  var $addr : Text
  $addr:="address"

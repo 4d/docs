@@ -327,7 +327,7 @@ $vSize:=$col.length //$vSize=0
 #### Description
 
 
-La fonction `.combine()` <!-- REF #collection.combine().Summary -->insère les éléments de *col2* à la fin ou à la position *index* de la collection et retourne la collection modifiée<!-- END REF -->. A la différence de la fonction `.insert()`, `.combine()` ajoute chaque valeur de *col2* dans la collection d'origine, et non en tant qu'élément unique de collection.
+La fonction `.combine()` <!-- REF #collection.combine().Summary -->insère les éléments de *col2* à la fin ou à la position *index* de la collection et retourne la collection modifiée<!-- END REF -->. . A la différence de la fonction `.insert()`, `.combine()` ajoute chaque valeur de *col2* dans la collection d'origine, et non en tant qu'élément unique de collection.
 > Cette fonction modifie la collection d'origine.
 
 Par défaut, les éléments de *col2* sont ajoutés à la fin de la collection d'origine. Vous pouvez passer dans *index* le numéro de l'élément après lequel vous souhaitez que les éléments de *col2* soient insérés dans la collection.
@@ -421,7 +421,7 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 #### Description
 
-La fonction `.copy()` <!-- REF #collection.copy().Summary --> retourne une copie profonde (deep copy) de la collection<!-- END REF -->. ***Deep copy*** signifie que les objets ou les collections présents dans la collection d'origine sont dupliqués et ne partagent pas leur référence avec la collection qui est retournée.
+La fonction `.copy()` <!-- REF #collection.copy().Summary --> retourne une copie profonde (deep copy) de la collection .<!-- END REF -->***Deep copy*** signifie que les objets ou les collections présents dans la collection d'origine sont dupliqués et ne partagent pas leur référence avec la collection qui est retournée.
 > Cette fonction ne modifie pas la collection d'origine.
 
 S'il est passé, le paramètre *option* peut contenir l'une des constantes suivantes (ou les deux) :
@@ -790,7 +790,7 @@ Par défaut, une évaluation non diacritique est effectuée. Si vous souhaitez q
 
 La fonction `.every()` <!-- REF #collection.every().Summary -->renvoie **true** si tous les éléments de la collection ont passé avec succès un test mis en œuvre dans la méthode *methodName* fournie<!-- END REF -->.
 
-Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer tout test, avec ou sans paramètres. La méthode reçoit un paramètre de type `Object` dans $1 et doit passer true dans *$1.result* pour chaque élément ayant satisfait aux conditions du test.
+Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer tout test, avec ou sans paramètres. Cette méthode reçoit un `Object` comme premier paramètre ($1) et doit définir *$1.result* à **True** pour chaque élément réussissant le test.
 
 *methodName* reçoit les paramètres suivants :
 
@@ -801,7 +801,7 @@ Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les é
 *methodName* doit fixer le(s) paramètre(s) suivant(s) :
 
 * *$1.result* (booléen) : **true** si l'évaluation de la valeur de l'élément est réussie, sinon **false**.
-* *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel. La valeur retournée est la dernière calculée.
+* *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.
 
 Dans tous les cas, au premier élément retournant **false** dans *$1.result*, la fonction `.every()` cesse d'appeler *methodName* et retourne **false**.
 
@@ -876,8 +876,7 @@ End if
 |---------|--- |:---:|------|
 |propertyPath|Text|->|Chemin de propriété d'objet dont les valeurs doivent être extraites dans la nouvelle collection|
 |targetpath|Text|->|Chemin ou nom de propriété cible|
-|option|Integer|->|`ck keep null`: inclure les propriétés null dans la collection retournée (ignorées par défaut). Paramètre ignoré si *targetPath* est passé.|
-|Résultat|Collection|<-|New collection containing extracted values|
+|option|Integer|->|`ck keep null`: inclure les propriétés null dans la collection retournée (ignorées par défaut). Paramètre ignoré si *targetPath* est passé.| |Résultat|Collection|<-|New collection containing extracted values|
 </div>
 <!-- END REF -->
 
@@ -892,7 +891,7 @@ Le contenu de la collection retournée dépend du paramètre *targetPath* :
 
  Par défaut, les éléments pour lesquels *propertyPath* est null ou undefined sont ignorés dans la collection résultante. Vous pouvez passer la constante `ck keep null` dans le paramètre *option* pour intégrer ces valeurs comme des éléments null dans la collection retournée.
 
-* Si un ou plusieurs paramètres *targetPath* sont passés (correspondant à un ou plusieurs paramètres *propertyPath* ), `.extract()` remplit la nouvelle collection avec les propriétés *propertyPath* et chaque élément de la nouvelle collection est un objet avec des propriétés *targetPath* contenant les propriétés *propertyPath* correspondantes. Les valeurs null sont conservées (le paramètre *option* est ignoré avec cette syntaxe).
+* *methodName* prend chaque élément de la collection et effectue toutes les opérations souhaitées pour accumuler le résultat dans *$1.accumulator*, qui est retourné dans *$1.value*. Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètres dans param (facultatif).
 
 #### Exemple 1
 
@@ -1009,7 +1008,7 @@ En cas d'incohérence, les règles suivantes sont appliquées :
 La fonction `.filter()` <!-- REF #collection.filter().Summary -->The `.filter()` function<!-- END REF -->. Cette fonction retourne une ***shallow copy*** (copie superficielle), ce qui signifie que les objets ou les collections présents dans les deux collections partagent la même référence. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
 > Cette fonction ne modifie pas la collection d'origine.
 
-Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer tout test, avec ou sans paramètres. Cette méthode reçoit un `Object` dans le premier paramètre ($1) et doit définir *$1.result* à **true** pour chaque élément remplissant la condition et donc, à pousser dans la nouvelle collection.
+Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer tout test, avec ou sans paramètres. Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel).
 
 *methodName* reçoit les paramètres suivants :
 
@@ -1102,7 +1101,7 @@ Le code de ***TypeLookUp*** est :
 La fonction `find()` <!-- REF #collection.find().Summary -->renvoie la première valeur de la collection pour laquelle *methodName*, appliquée à chaque élément, renvoie **true**<!-- END REF -->.
 > Cette fonction ne modifie pas la collection d'origine.
 
-Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer tout test, avec ou sans paramètres. Cette méthode reçoit un `Object` dans le premier paramètre ($1) et doit définir *$1.result* à **true** pour le premier élément remplissant la condition.
+Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer tout test, avec ou sans paramètres. Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel).
 
 *methodName* reçoit les paramètres suivants :
 
@@ -1198,7 +1197,7 @@ Le code de la méthode ***FindCity*** est :
 La fonction `.findIndex()` <!-- REF #collection.findIndex().Summary -->renvoie l'index, dans la collection, de la première valeur pour laquelle *methodName*, appliquée à chaque élément, renvoie **true**<!-- END REF -->.
 > Cette fonction ne modifie pas la collection d'origine.
 
-Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer n'importe quel test, en utilisant ou non le(s) paramètre(s). Cette méthode reçoit un `objet` comme premier paramètre ($1) et doit définir *$1.result* à **true** pour le premier élément remplissant la condition.
+Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer tout test, avec ou sans paramètres.
 
 *methodName* reçoit les paramètres suivants :
 
@@ -1435,7 +1434,7 @@ Vous pouvez passer tout type d'élément accepté par les collections, y compris
 
 #### Description
 
-La fonction `.join()` <!-- REF #collection.join().Summary -->retourne une nouvelle collection avec le contenu du paramètre *value* ajouté à la fin de la collection d'origine<!-- END REF -->. La fonction retourne la chaîne résultante.
+La fonction `unshift()` <!-- REF #collection.join().Summary -->insère la ou les *value*(s) au début de la collection<!-- END REF -->et retourne la collection modifiée.
 > Cette fonction ne modifie pas la collection d'origine.
 
 Par défaut, les éléments null ou vides de la collection sont inclus dans la chaîne résultante. Passez la constante `ck ignore null or empty` dans le paramètre *option* si vous souhaitez les exclure de la chaîne résultante.
@@ -1571,7 +1570,7 @@ La propriété `.length` est initialisée à la création de la collection. Elle
 La fonction `.map()` <!-- REF #collection.map().Summary -->crée une nouvelle collection basée sur le résultat de l'exécution de la méthode *methodName* sur chaque élément de la collection d'origine<!-- END REF -->. Optionnellement, vous pouvez passer des paramètres à *methodName* via le paramètre *param*. `.map()` renvoie toujours une collection de la même taille que la collection originale, sauf si *$1.stop* a été utilisé (voir ci-dessous).
 > Cette fonction ne modifie pas la collection d'origine.
 
-Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer n'importe quelle opération, avec ou sans paramètre(s).
+Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel).
 
 *methodName* reçoit les paramètres suivants :
 
@@ -1582,7 +1581,7 @@ Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les é
 *methodName* doit fixer le(s) paramètre(s) suivant(s) :
 
 * *$1.result* (tout type) : nouvelle valeur transformée à ajouter à la collection résultante
-* *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.
+* *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel. La valeur retournée est la dernière calculée.
 
 #### Exemple
 
@@ -1800,7 +1799,7 @@ Tri d'une collection d'objets basé sur une formule de texte avec noms de propri
  $c2:=$c.orderBy("value desc, id asc")
 ```
 
-Tri d'une collection d'objets sur des propriétés :
+Tri d'une collection d'objets via une collection d'objets critères :
 
 ```4d
  var $c; $c2 : Collection
@@ -1911,7 +1910,7 @@ Vous souhaitez trier une collection de chaînes de caractères en fonction de le
   //$c2=[Passion fruit,Blackberry,Orange,Banana,Apple,Grape,pear,fig]
 ```
 
-Vous souhaitez trier une collection par code de caractère ou par langage :
+Si vous souhaitez que l'évaluation soit sensible à la casse ou pour différencier des caractères accentués, passez la constante `ck diacritical` dans le paramètre option.
 
 ```4d
  $1.result:=Length(String($1.value))>Length(String($1.value2))
@@ -2113,6 +2112,10 @@ Pour plus d'informations sur la génération d'une requête à l'aide des param�
 
  $c.push(New object("name";"Sterling";"dateHired";!10-5-1999!;"age";Null))
  $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
+ $c.push(New object("name";"Winch";"dateHired";!16-05-2018!;"age";36))
+
+ $c.push(New object("name";"Sterling";"dateHired";!10-5-1999!;"age";Null))
+ $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
 ```
 
 Cet exemple renvoie les personnes dont le nom contient "in" :
@@ -2141,7 +2144,7 @@ Cet exemple retourne des personnes embauchées il y a plus de 90 jours :
 
 ```4d
  $col:=$c.query("dateHired < :1";(Current date-90))
-  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] si la date du jour est 01/10/2018
+  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] si la date du jour est 01/10/2018 si la date du jour est 01/10/2018
 ```
 
 #### Exemple 3
@@ -2181,9 +2184,9 @@ Vous trouverez plus d'exemples de requêtes dans la page `dataClass.query()`.
 La fonction `.reduce()` <!-- REF #collection.reduce().Summary -->applique la méthode callback *methodName* à un accumulateur et à chaque élément de la collection (de gauche à droite) pour les réduire à une seule valeur<!-- END REF -->.
 > Cette fonction ne modifie pas la collection d'origine.
 
-Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètres dans param (facultatif). *methodName* prend chaque élément de la collection et effectue toutes les opérations souhaitées pour accumuler le résultat dans *$1.accumulator*, qui est retourné dans *$1.value*.
-
 Vous pouvez passer la valeur pour initialiser l'accumulateur dans *initValue*. S'il est omis, *$1.accumulator* commence par *Undefined*.
+
+Dans *howMany*, passez le nombre d'éléments à supprimer à partir de l'*index*. Si *howMany* n'est pas spécifié, un élément est supprimé.
 
 *methodName* reçoit les paramètres suivants :
 
@@ -2204,7 +2207,7 @@ Vous pouvez passer la valeur pour initialiser l'accumulateur dans *initValue*. S
  $r:=$c.reduce("Multiply";1) //retourne 86400
 ```
 
-Cet exemple permet de réduire plusieurs éléments de collection en un seul élément :
+*$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de la méthode.
 
 ```4d
  If(Value type($1.value)=Is real)
@@ -2214,7 +2217,7 @@ Cet exemple permet de réduire plusieurs éléments de collection en un seul él
 
 #### Exemple 2
 
-Cet exemple permet de réduire plusieurs éléments de collections en une seule :
+Cet exemple permet de réduire plusieurs éléments de collection en un seul élément :
 
 ```4d
  var $c;$r : Collection
@@ -2274,7 +2277,7 @@ Dans *index*, passez le numéro de l'élément à partir duquel la suppression d
 * Si la valeur recalculée est négative, *index* prend la valeur 0.
 * Si valeur recalculée > longueur de la collection, *index* prend comme valeur la taille de la collection.
 
-Dans *howMany*, passez le nombre d'éléments à supprimer à partir de l'*index*. Si *howMany* n'est pas spécifié, un élément est supprimé.
+Si un ou plusieurs paramètres *targetPath* sont passés (correspondant à un ou plusieurs paramètres *propertyPath* ), `.extract()` remplit la nouvelle collection avec les propriétés *propertyPath* et chaque élément de la nouvelle collection est un objet avec des propriétés *targetPath* contenant les propriétés *propertyPath* correspondantes. Les valeurs null sont conservées (le paramètre *option* est ignoré avec cette syntaxe).
 
 Si vous essayez de supprimer un élément d'une collection vide, la méthode ne fait rien (aucune erreur n'est générée).
 
@@ -2509,7 +2512,7 @@ La collection retournée contient l'élément spécifié par *startFrom* et tous
 
 La fonction `some()` <!-- REF #collection.some().Summary -->retourne true si au moins un élément de la collection a réussi un test<!-- END REF --> implémenté dans la méthode *methodName* fournie.
 
-Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer tout test, avec ou sans paramètres. Cette méthode reçoit un `Object` comme premier paramètre ($1) et doit définir *$1.result* à **True** pour chaque élément réussissant le test.
+Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer tout test, avec ou sans paramètres. Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel).
 
 *methodName* reçoit les paramètres suivants :
 

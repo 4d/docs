@@ -1,6 +1,6 @@
 {
   "version.label": {
-    "message": "21 R2 BETA",
+    "message": "21 R2",
     "description": "The label for version 21-R2"
   },
   "sidebar.docs.category.Getting Started": {
@@ -794,5 +794,21 @@
   "sidebar.docs.doc.Data Collection": {
     "message": "データ収集",
     "description": "The label for the doc item 'Data Collection' in sidebar 'docs', linking to the doc Admin/data-collect"
+  },
+  "sidebar.docs.category.listbox-in-form": {
+    "message": "リストボックス",
+    "description": "The label for category 'List Box' in sidebar 'docs'"
+  },
+  "sidebar.docs.link.qodly-pro-link1": {
+    "message": "4D Qodly Pro",
+    "description": "The label for link '4D Qodly Pro' in sidebar 'docs', linking to 'https://developer.4d.com/qodly/'"
+  },
+  "sidebar.docs.link.4D Analyzer": {
+    "message": "4D Analyzer",
+    "description": "The label for link '4D Analyzer' in sidebar 'docs', linking to 'https://marketplace.visualstudio.com/items?itemName=4D.4d-analyzer'"
+  },
+  "sidebar.docs.link.qodly-pro-link2": {
+    "message": "4D Qodly Pro",
+    "description": "The label for link '4D Qodly Pro' in sidebar 'docs', linking to 'https://developer.4d.com/qodly/'"
   }
 }

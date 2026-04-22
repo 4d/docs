@@ -68,22 +68,22 @@ Se `varType` for omitido, é criada uma variável do tipo **variante** .
 
 A tabela seguinte enumera todos os valores `varType` suportados:
 
-| varType                | Conteúdos                              |
-| ---------------------- | -------------------------------------- |
-| `Text`                 | Valor texto                            |
-| `Date`                 | Valor data                             |
-| `Hora`                 | Valor Hora                             |
-| `Parâmetros`           | Valor booleano                         |
-| `Integer`              | Valor inteiro longo                    |
-| `Real`                 | Valor real                             |
-| `Ponteiro`             | Valor ponteiro                         |
-| `Imagem`               | Valor imagem                           |
-| `Blob`                 | Valor BLOB                             |
-| `Collection`           | Valor colecção                         |
-| `Diferente de`         | Valor variant                          |
-| `Object`               | Objeto com classe padrão (`4D.Object`) |
-| `4D.<className>` | Objecto do nome da classe 4D           |
-| `cs.<className>` | Objeto do nome da classe usuário       |
+| varType                | Conteúdos                               |
+| ---------------------- | --------------------------------------- |
+| `Text`                 | Valor texto                             |
+| `Date`                 | Valor data                              |
+| `Hora`                 | Valor Hora                              |
+| `Parâmetros`           | Valor booleano                          |
+| `Integer`              | Valor inteiro longo                     |
+| `Real`                 | Valor real                              |
+| `Ponteiro`             | Valor ponteiro                          |
+| `Imagem`               | Valor imagem                            |
+| `Blob`                 | Valor BLOB                              |
+| `Collection`           | Valor colecção                          |
+| `Diferente de`         | Valor variant                           |
+| `Object`               | Objeto com classe padrão (`4D. Object`) |
+| `4D.<className>` | Objecto do nome da classe 4D            |
+| `cs.<className>` | Objeto do nome da classe usuário        |
 
 #### Exemplos
 
@@ -96,7 +96,7 @@ var myVar //variant
 var $o : Object    
 //equivalente para:  
 
-var $o : 4D.Object
+var $o : 4D. Object
 //também equivalente a C_OBJECT($o)
 ```
 
@@ -234,7 +234,7 @@ Em Cliente/Servidor, cada máquina (máquinas Cliente e máquina Servidor) parti
 
 ## Variáveis do sistema
 
-A linguagem 4D gerencia diversas **variáveis sistema**, que permitem controlar a execução de diferentes operações. You can test their values and use them as any variable. Todas as variáveis sistema são [variáveis processo](#process-variables).
+A linguagem 4D gerencia diversas **variáveis sistema**, que permitem controlar a execução de diferentes operações. You can test their values and use them as any variable. You can test their values and use them as any variable.
 
 As variáveis sistema são usadas pelos comandos 4D. Refer to the "System variables and sets" paragraph in the description of a command to find out whether it affects a system variable.
 
@@ -246,7 +246,7 @@ As variáveis sistema são usadas pelos comandos 4D. Refer to the "System variab
 | `FldDelimit`, `RecDelimit`                             | Integer       | Contém os códigos de caracteres que serão usados respectivamente como um separador de campos (padrão é **Tab** (9)) e o separador de registros (padrão é **retorno do carro** (13)) quando importar ou exportar texto. Para usar um separador diferente, atribua um novo valor à variável do sistema. |
 | `Error`, `Error method`, `Error line`, `Error formula` | Text, Longint | Usado em um método de captura de erro instalado pelo comando [`ON ERR CALL`](https://doc.4d.com/4dv20/help/command/en/page155.html). Veja [Tratamento de erros no método](../Concepts/error-handling.md#handling-errors-within-the-method).                                                           |
 | `MouseDown`                                            | Integer       | Usado em um método instalado pelo comando [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/en/page190.html). Definir como 1 quando o botão do mouse for pressionado, caso contrário será definido como 0.                                                                                      |
-| `MouseX`, `MouseY`                                     | Integer       | Usado em um método instalado pelo comando [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/en/page190.html). <li>Em um evento `MouseDown=1`, `MouseX` e `MouseY` são respectivamente definidos como coordenadas verticais e horizontais do clique. Ambos os valores são expressos em píxeis e usam o sistema local de coordenadas da janela. </li><li>No caso de um campo ou de uma variável de imagem, `MouseX` e `MouseY` retornam as coordenadas locais de um mouse clique nos eventos formulário [`On Clicked`](../Events/onClicked.md), [`On Double Clicked`](../Events/onDoubleClicked.md) e [`On Mouse Up`](../Events/onMouseUp.md). As coordenadas locais do cursor do mouse também são retornadas nos eventos formulário [`On Mouse Enter`](../Events/onMouseEnter.md) e [`On Mouse Move`](../Events/onMouseMove.md). Para obter mais informações, consulte as [Coordenadas de Mouse em uma imagem](../FormEditor/pictures.md#mouse-coordinates-in-a-picture).</li>                                                                                                                                 |
+| `MouseX`, `MouseY`                                     | Integer       | Usado em um método instalado pelo comando [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/en/page190.html). <li>Em um evento `MouseDown=1`, `MouseX` e `MouseY` são respectivamente definidos como coordenadas verticais e horizontais do clique. Ambos os valores são expressos em píxeis e usam o sistema local de coordenadas da janela. </li><li>No caso de um campo ou de uma variável de imagem, `MouseX` e `MouseY` retornam as coordenadas locais de um mouse clique nos eventos formulário [`On Clicked`](../Events/onClicked.md), [`On Double Clicked`](../Events/onDoubleClicked.md) e [`On Mouse Up`](../Events/onMouseUp.md). As coordenadas locais do cursor do mouse também são retornadas nos eventos formulário [`On Mouse Enter`](../Events/onMouseEnter.md) e [`On Mouse Move`](../Events/onMouseMove.md). As coordenadas locais do cursor do mouse também são retornadas nos eventos formulário [`On Mouse Enter`](../Events/onMouseEnter.md) e [`On Mouse Move`](../Events/onMouseMove.md).</li>                                                                                                                                 |
 | `KeyCode`                                              | Integer       | Usado em um método instalado pelo comando [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/en/page190.html). Definido como o código de caractere da tecla que acabou de ser pressionada. Se a chave é uma chave de função, `KeyCode` é definida como um código especial.                       |
 | `Modifiers`                                            | Integer       | Usado em um método instalado pelo comando [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/en/page190.html). Definir para as teclas modificadoras do teclado (Ctrl/Comando, Alt/Option, Shift, Caps Lock).                                                                                     |
 | `MouseProc`                                            | Integer       | Usado em um método instalado pelo comando [`ON EVENT CALL`](https://doc.4d.com/4dv20/help/command/en/page190.html). Defina o número do processo em que o último evento teve lugar                                                                                                                     |

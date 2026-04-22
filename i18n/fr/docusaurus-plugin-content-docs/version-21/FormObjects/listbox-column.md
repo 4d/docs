@@ -1,6 +1,6 @@
 ---
 id: listbox-column
-title: "[Colonne de list box](listbox_overview.md#list-box-columns)"
+title: \[Colonne de list box\](listbox_overview.md#list-box-columns)
 ---
 
 Une list box est composée d'un ou plusieurs objets colonnes qui ont des propriétés spécifiques. Vous pouvez sélectionner une colonne de list box dans l’éditeur de formulaires en cliquant dessus lorsque l’objet List box est sélectionné :
@@ -410,3 +410,4 @@ Plusieurs événements peuvent être gérés lors de l'utilisation d'une listbox
   - case à cocher (passage cochée/non cochée)
 - **Sur clic** : Lorsque l'utilisateur clique sur un bouton installé à l'aide de l'attribut *valueType*, un événement `On Clicked` est généré. Cet événement doit être ensuite géré par le programmeur.
 - **Sur clic alternatif** : Lorsque l'utilisateur clique sur un bouton d'ellipse (attribut "alternateButton"), un événement `On Alternative Click` est généré. Cet événement doit être ensuite géré par le programmeur.
+

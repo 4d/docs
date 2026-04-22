@@ -16,7 +16,7 @@ El editor de etiquetas de 4D ofrece una forma práctica de imprimir una amplia v
 
 :::note
 
-Las etiquetas también se pueden crear usando el [Editor de formularios](../FormEditor/formEditor.md). Utilice el editor de formularios para diseñar etiquetas especializadas que incluyan variables o aproveche las herramientas de dibujo disponibles en el editor de formularios e imprímalas utilizando el editor de etiquetas o el comando [`PRINT LABEL`](../commands-legacy/print-label.md).
+Las etiquetas también se pueden crear usando el [Editor de formularios](../FormEditor/formEditor.md). Las etiquetas también se pueden crear usando el [Editor de formularios](../FormEditor/formEditor.md).
 
 :::
 
@@ -62,9 +62,7 @@ Utilice esta área para diseñar su zona de etiquetas colocando y posicionando t
 - También puede concatenar dos campos soltando el segundo campo sobre el primero. Se separan automáticamente con un espacio.<br/>
   ![](../assets/en/Desktop/label-concat.png)<br/>
   Si mantiene presionada la tecla **Mayús**, se separan con un retorno de carro. Esto le permite crear, por ejemplo, etiquetas de direcciones utilizando varios campos superpuestos (Dirección1, Dirección2, etc.), sin producir una línea vacía cuando una dirección sólo requiere un campo.
-- Puede añadir una fórmula a la etiqueta seleccionando la herramienta **Fórmula** ![](../assets/en/Desktop/label-tool6.png) (o eligiendo **Herramienta>Fórmula** en el menú contextual) y dibujando un área. Aparecerá el **Editor de fórmulas**:
-  ![](../assets/en/Desktop/label-formula1.png)<br/>
-  Por ejemplo, puede aplicar un formato a un campo utilizando el comando [`String`](../commands/string.md):<br/>
+- Puede añadir una fórmula a la etiqueta seleccionando la herramienta **Fórmula** ![](../assets/en/Desktop/label-tool6.png) (o eligiendo **Herramienta>Fórmula** en el menú contextual) y dibujando un área. Puede añadir una fórmula a la etiqueta seleccionando la herramienta **Fórmula** ![](../assets/en/Desktop/label-tool6.png) (o eligiendo **Herramienta>Fórmula** en el menú contextual) y dibujando un área.
 
 ![](../assets/en/Desktop/label-formula2.png)<br/>
 

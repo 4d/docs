@@ -171,6 +171,9 @@ Para informações sobre códigos de estado SMTP, consulte por favor [esta pági
  Else
     ALERT("Error # "+String($status.status)+", "+$status.statusText)
  End if
+ Else
+    ALERT("Error # "+String($status.status)+", "+$status.statusText)
+ End if
 ```
 
 <!-- INCLUDE transporter.connectionTimeOut.Desc -->

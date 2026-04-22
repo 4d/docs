@@ -225,6 +225,17 @@ C_LONGINT($size)
 
 // 最大ロゴを取得します
 $logo:=GetLogo(5)
+1 = 最小値, 5 = 最大値
+
+1 = 最小値, 5 = 最大値
+
+## Example
+
+C_PICTURE($logo)
+C_LONGINT($size)
+
+// 最大ロゴを取得します
+$logo:=GetLogo(5)
 ```
 
 - エクスプローラーの表示: ![](../assets/en/Project/explorer_Doc.png)

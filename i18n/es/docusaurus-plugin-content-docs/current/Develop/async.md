@@ -87,7 +87,7 @@ En 4D, todos los objetos son liberados [cuando no existen más referencias](../C
 
 Para las clases asíncronas, 4D mantiene siempre una **referencia adicional** en el proceso que instanciaba el objeto. Esta referencia sólo se libera cuando finaliza la operación, es decir, después de que se active el evento `onTerminate`. Esta referencia automática permite a su objeto sobrevivir aunque no lo haya mencionado específicamente en una variable.
 
-Si desea "forzar" la liberación de un objeto en cualquier momento, utilice un `. hutdown()` o función `terminate()`; desencadena el evento 'onTerminate\` así libera el objeto.
+Si desea "forzar" la liberación de un objeto en cualquier momento, utilice un `. hutdown()` o función `terminate()`; desencadena el evento 'onTerminate\\` así libera el objeto.
 
 ### Ejemplos que ilustran el concepto común
 

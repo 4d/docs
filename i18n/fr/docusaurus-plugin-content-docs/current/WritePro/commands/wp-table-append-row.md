@@ -22,32 +22,32 @@ displayed_sidebar: docs
 
 ## Description
 
-The **WP Table append row** command<!--REF #_command_.WP Table append row.Summary--> appends one row to the *tableRef* table, fills it with *value*(s) or a *valueColl* collection, and returns the corresponding row range object.<!-- END REF-->
+La commande **WP Table append row**<!--REF #_command_.WP Table append row.Summary--> ajoute une ligne à la table *tableRef*, la remplit avec *value*(s) ou une collection *valueColl*, et renvoie l'objet de plage de lignes correspondant.<!-- END REF-->
 
-La commande supporte deux syntaxes :
+La commande admet deux syntaxes :
 
 - **Using values as parameters:**
-  Adds as many cells in the row as there are values provided in the *value* parameter(s). You can pass any number of values of different types.
+  Adds as many cells in the row as there are values provided in the *value* parameter(s). Vous pouvez passer n'importe quel nombre de valeurs de différents types.
 
 - **Using a collection of values (*valueColl)*:**
-  Fills the row with values from the *valueColl* collection. Each element of the collection corresponds to a cell in the row.
+  Fills the row with values from the *valueColl* collection. Chaque élément de la collection correspond à une cellule de la ligne.
 
-  The following value types are supported in both syntaxes: Text, Number, Time, Date, Picture and Object (formulas or named formulas returning a row element).
+  Les types de valeurs suivants sont pris en charge dans les deux syntaxes : Texte, numérique, Heure, Date, Image et Objet (formules ou formules nommées renvoyant un élément de ligne).
 
-The default cell alignment will depend on the value type:
+L'alignement par défaut des cellules dépend du type de valeur :
 
 - texte : aligné à gauche
 - images : centrées
-- autres types (nombres, date et heure): alignés à droite
+- autres types (nombres, date et heure) : alignés à droite
 
 :::note Notes
 
-- Array type values are not supported.
-- Ensure the number of values or the size of the collection matches the number of cells in the table to avoid unexpected results.
+- Les valeurs de type tableau ne sont pas prises en charge.
+- Veillez à ce que le nombre de valeurs ou la taille de la collection corresponde au nombre de cellules du tableau afin d'éviter des résultats inattendus.
 
 :::
 
-The command returns the new row as a row range object.
+La commande renvoie la nouvelle ligne sous la forme d'un objet de plage de lignes.
 
 ## Exemple 1
 

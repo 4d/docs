@@ -123,7 +123,7 @@ Essa área agrupa as opções genéricas usadas durante o processo de compilaç�
 
 #### Gerar o arquivo de símbolo
 
-Usado para gerar o arquivo de símbolos (consulte [arquivo de símbolos](#symbol-file)). O arquivo de símbolos é criado na [pasta Logs](../Project/architecture.md#logs) do projeto com o nome `ProjectName_symbols.txt`.
+Usado para gerar o arquivo de símbolos (consulte [arquivo de símbolos](#symbol-file)). Usado para gerar o arquivo de símbolos (consulte [arquivo de símbolos](#symbol-file)).
 
 #### Gerar ficheiro de erros
 

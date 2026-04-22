@@ -36,12 +36,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP DELETE STYLE SHEET.Summary-->**WP DELETE STYLE SHEET** コマンドは、カレントのドキュメントから指定された段落または文字スタイルシートを削除します。<!-- END REF-->スタイルシートが削除されると、それが適用されていた全ての文字または段落は、オリジナルのスタイル(つまりデフォルト)へと戻されます。
 
-このコマンドはスタイルシートを削除する方法を2つ提供します。 以下のいずれかを指定することができます:
+このコマンドはスタイルシートを削除する方法を2つ提供します。 以下のいずれかを指定することができます: 以下のいずれかを指定することができます:
 
 - *styleSheetType* 引数に、削除したいスタイルの([WP New style sheet](../WritePro/commands/wp-new-style-sheet) コマンドで作成された、あるいは[WP Get style sheet](../WritePro/commands/wp-get-style-sheet) コマンドから返された) スタイルシートオブジェクトを渡す
 - *wpDoc* および *styleSheetName* 引数に、4D Write Pro ドキュメントと削除したいスタイルシートの名前を渡す
 
-削除したいスタイルシートが[階層リストスタイルシート](../user-legacy/stylesheets.md#hierarchical-list-style-sheets) に属している場合、その時の振る舞いは削除するレベルによって異なります。 以下のものを削除することができます:
+削除したいスタイルシートが[階層リストスタイルシート](../user-legacy/stylesheets.md#hierarchical-list-style-sheets) に属している場合、その時の振る舞いは削除するレベルによって異なります。 以下のものを削除することができます: 以下のものを削除することができます:
 
 - ルートレベルのスタイルシート
 - オプションの *listLevelIndex* 引数を提供することで、特定のサブレベルのスタイルシートを削除できます。

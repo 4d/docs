@@ -165,7 +165,7 @@ Además, los siguientes atributos relacionales también estarán disponibles aut
 - en la dataclass Project: el atributo **theClient**, del tipo "relatedEntity"; hay como máximo una Empresa para cada Proyecto (el cliente)
 - en la dataclass Company: el atributo **companyProjects**, del tipo "relatedEntities"; para cada empresa existe un cierto número de proyectos relacionados.
 
-> La propiedad Manual o Automática de una relación de base de datos no tiene efecto en ORDA.
+> &#062; La propiedad Manual o Automática de una relación de base de datos no tiene efecto en ORDA.
 
 Todos los atributos de la dataclass se exponen como propiedades de la dataclass:
 
@@ -179,7 +179,7 @@ Los [atributos calculados](ordaClasses.md#computed-attributes) y [alias](ordaCla
 
 ### Entity
 
-Una entidad es el equivalente a un registro. En realidad es un objeto que hace referencia a un registro de la base de datos. Puede verse como una instancia de una [dataclass](#dataclass), como un registro de la tabla correspondiente a la dataclass. Sin embargo, una entidad también contiene datos correlacionados a la base de datos relacionados con el datastore.
+Una entidad es el equivalente a un registro. En realidad es un objeto que hace referencia a un registro de la base de datos. Una entidad es el equivalente a un registro. Sin embargo, una entidad también contiene datos correlacionados a la base de datos relacionados con el datastore.
 
 La finalidad de la entidad es gestionar los datos (crear, actualizar, eliminar). Cuando se obtiene una referencia de entidad mediante una selección de entidad, también conserva información sobre la selección de entidad que permite la iteración a través de la selección.
 

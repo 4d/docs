@@ -216,7 +216,7 @@ Comme la page Constantes de la fenêtre de l'Explorateur, ce thème affiche des 
 
 #### Sémaphores
 
-Ce thème liste les sémaphores locaux définis. Pour chaque sémaphore, la colonne Valeur fournit le nom du process qui a posé le sémaphore. Les expressions de ce thème ne peuvent pas être modifiées. Les sémaphores globaux ne sont pas affichés.
+Ce thème liste les sémaphores locaux définis. Pour chaque sémaphore, la colonne Valeur fournit le nom du process qui a posé le sémaphore. Les expressions de ce thème ne peuvent pas être modifiées. Les expressions de ce thème ne peuvent pas être modifiées.
 
 #### Process
 

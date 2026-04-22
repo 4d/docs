@@ -19,7 +19,7 @@ A área gráfica permite que você veja a evolução em tempo real de vários pa
 - **Network**: Número de bytes recebidos por segundo pela máquina (servidor ou cliente). O número de bytes enviados é fornecido na área de informação "Rede".
 - Memória física ****: Quantidade de memória RAM da máquina usada pelo servidor 4D. Uma visão mais detalhada do uso de memória é fornecida na área de informação "Memória".
 - **Memória Virtual**: Quantidade de memória virtual usada pelo aplicativo 4D Servidor. Esta memória é alocada pelo sistema conforme as necessidades de aplicação. O valor encontrado no canto inferior direito da área indica a quantidade de memória atualmente em uso. O valor encontrado no canto superior esquerdo indica a quantidade máxima de memória virtual utilizável. O valor máximo é calculado dinamicamente de acordo com as configurações gerais de memória da aplicação.
-- **Cache**: Quantidade de memória de cache usada pelo aplicativo servidor 4D. O valor encontrado no canto inferior direito da área indica a quantidade de memória atualmente em uso. O valor encontrado no canto superior esquerdo indica o tamanho total da memória de cache, como definido nas Configurações.
+- **Cache**: Quantidade de memória de cache usada pelo aplicativo servidor 4D. O valor encontrado no canto inferior direito da área indica a quantidade de memória atualmente em uso. O valor encontrado no canto inferior direito da área indica a quantidade de memória atualmente em uso.
 
 Observe que quando esta opção for selecionada, a rolagem da área do gráfico é desacelerada, uma vez que uma análise eficiente do cache é geralmente realizada por um período de observação bastante longo.
 

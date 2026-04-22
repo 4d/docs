@@ -238,7 +238,7 @@ sidebarItemsGenerator: async function (args) {
 },
           versions: {
               '21-R2': {
-              label: '21 R2 BETA',
+              label: '21 R2',
               banner: 'none',
             },
               '21': {

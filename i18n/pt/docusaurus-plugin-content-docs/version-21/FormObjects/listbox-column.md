@@ -410,3 +410,4 @@ Vários eventos podem ser tratados durante o uso de um list box array de objetos
   - numa caixa de verificação (alternar entre verificado/não verificado)
 - **On Clicked**: quando o usuário clicar em um botão instalado usando o atributo "event" *valueType*, será gerado um evento `On Clicked`. Este evento é gerido pelo programador.
 - **On Alternative Click**: quando o usuário clicar em um botão de reticências (atributo "alternateButton"), será gerado um evento `On Alternative Click`. Este evento é gerido pelo programador.
+

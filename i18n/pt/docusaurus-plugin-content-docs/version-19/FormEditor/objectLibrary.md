@@ -34,7 +34,7 @@ Todos os objetos propostos na biblioteca de objetos padrão estão descritos em 
 
 ## Utilização da biblioteca de objetos padrão
 
-Pode criar e usar bibliotecas de objetos personalizados em 4D. Uma biblioteca de objetos personalizados é um projeto 4D onde você pode armazenar seus objetos favoritos (botões, textos, imagens etc.) Em seguida, você pode reutilizar esses objetos em diferentes formulários e projetos.
+Pode criar e usar bibliotecas de objetos personalizados em 4D. Uma biblioteca de objetos personalizados é um projeto 4D onde você pode armazenar seus objetos favoritos (botões, textos, imagens etc.) Em seguida, você pode reutilizar esses objetos em diferentes formulários e projetos. Em seguida, você pode reutilizar esses objetos em diferentes formulários e projetos.
 
 Os objetos são armazenados com todas as suas propriedades, incluindo seus métodos objeto. As bibliotecas são montadas e usadas por operações simples de arrastar e soltar ou copiar e colar.
 

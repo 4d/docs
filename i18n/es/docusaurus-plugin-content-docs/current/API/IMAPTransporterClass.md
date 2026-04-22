@@ -945,7 +945,7 @@ Caracter delimitador del nombre del buzón.
 
 #### Descripción
 
-La función `.getMail()` <!-- REF #IMAPTransporterClass.getMail().Summary -->devuelve el objeto `Email` correspondiente al *msgNumber* o *msgID* en el buzón designado por el `IMAP_transporter`<!-- END REF -->. Esta función permite recuperar la información sobre el email.
+La función `.getMail()` <!-- REF #IMAPTransporterClass.getMail().Summary -->devuelve el objeto `Email` correspondiente al *msgNumber* o *msgID* en el buzón designado por el `IMAP_transporter`<!-- END REF -->. Esta función permite gestionar localmente la lista de mensajes localizados en el servidor de correo POP3.
 
 En el primer parámetro, puede pasar:
 
@@ -961,7 +961,7 @@ El parámetro opcional *options* permite pasar un objeto que define las instrucc
 
 > - La función genera un error y devuelve **Null** si *msgID* designa un mensaje inexistente,
 > - Si no se selecciona ningún buzón con la función [`.selectBox()`](#selectbox), se genera un error,
-> - Si no hay ninguna conexión abierta, `.getMail()` abrirá una conexión el último buzón especificado con [`.selectBox()`](#selectbox)\`.
+> - Si no hay ninguna conexión abierta, `.getMail()` abrirá una conexión el último buzón especificado con [`.selectBox()`](#selectbox)\\`.
 
 #### Resultado
 
@@ -1043,18 +1043,18 @@ El parámetro opcional *options* permite definir las partes de los mensajes a de
 
 La segunda sintaxis permite recuperar los mensajes en función de un rango secuencial. Los valores pasados representan la posición de los mensajes en el buzón.
 
-En el parámetro *startMsg*, pase un valor *entero* correspondiente al número del primer mensaje en un rango secuencial. Si se pasa un número negativo (*startMsg* <= 0), se utilizará el primer mensaje del buzón como inicio de la secuencia.
+En el parámetro *startMsg*, pase un valor entero correspondiente al número del primer mensaje en un rango secuencial. Si se pasa un número negativo (*startMsg* <= 0), se utilizará el primer mensaje del buzón como inicio de la secuencia.
 
-En el parámetro *endMsg*, pase un valor *entero* correspondiente al número del último mensaje que se incluirá en un rango secuencial. Si se pasa un número negativo (*endMsg* <= 0), se utilizará el último mensaje del buzón como fin de secuencia.
+En el parámetro *endMsg*, pase un valor entero correspondiente al número del último mensaje que se incluirá en un rango secuencial. Si se pasa un número negativo (*endMsg* <= 0), se utilizará el último mensaje del buzón como fin de secuencia.
 
 El parámetro opcional *options* permite definir las partes de los mensajes a devolver.
 
 **Options**
 
-| Propiedad  | Tipo    | Descripción                                                                                                                                                                                         |
-| ---------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| updateSeen | Boolean | Si True, los mensajes especificados se marcan como "vistos" en el buzón. Si False, los mensajes no se marcan como "vistos". Valor por defecto: True |
-| withBody   | Boolean | Pase True para devolver el cuerpo de los mensajes específicos. Si False, sólo se devuelve los encabezados de los mensajes. Valor por defecto: True  |
+| Propiedad  | Tipo    | Descripción                                                                                                                                                                                                                                                                  |
+| ---------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| updateSeen | Boolean | Se accede al buzón seleccionado con privilegios de lectura y escritura. Los mensajes se consideran "vistos" y pierden la bandera "reciente" (que indica que son mensajes nuevos). Valor por defecto: True |
+| withBody   | Boolean | Pase True para devolver el cuerpo de los mensajes específicos. Si False, sólo se devuelve los encabezados de los mensajes. Valor por defecto: True                                                                           |
 
 > - Si no se selecciona ningún buzón con el comando [`.selectBox()`](#selectbox), se genera un error.
 > - Si no hay ninguna conexión abierta, `.getMails()` abrirá una conexión el último buzón especificado con [`.selectBox()`](#selectbox).
@@ -1331,9 +1331,9 @@ Véase [IMAPNotifier](./IMAPNotifierClass.md).
 
 La función `.numToID()` <!-- REF #IMAPTransporterClass.numToID().Summary -->convierte los números de secuencia en IDs únicos IMAP para los mensajes en el rango secuencial designado por *startMsg* y *endMsg*<!-- END REF --> en el buzón actualmente seleccionado.
 
-En el parámetro *startMsg*, pase un valor entero correspondiente al número del primer mensaje en un rango secuencial. Si se pasa un número negativo (*startMsg* <= 0), se utilizará el primer mensaje del buzón como inicio de la secuencia.
+En el parámetro *startMsg*, pase un valor *entero* correspondiente al número del primer mensaje en un rango secuencial. Si se pasa un número negativo (*startMsg* <= 0), se utilizará el primer mensaje del buzón como inicio de la secuencia.
 
-En el parámetro *endMsg*, pase un valor entero correspondiente al número del último mensaje que se incluirá en un rango secuencial. Si se pasa un número negativo (*endMsg* <= 0), se utilizará el último mensaje del buzón como fin de secuencia.
+En el parámetro *endMsg*, pase un valor *entero* correspondiente al número del último mensaje que se incluirá en un rango secuencial. Si se pasa un número negativo (*endMsg* <= 0), se utilizará el último mensaje del buzón como fin de secuencia.
 
 #### Resultado
 
@@ -1583,7 +1583,7 @@ SearchKey2 = NOT FLAGGED
 SearchKey3 = FLAGGED DRAFT
 ```
 
-> Para obtener la información de un buzón sin cambiar el buzón actual, utilice <a href="#getboxinfo"><code>.getBoxInfo()</code></a>.
+> Las coincidencias no suelen diferenciar entre mayúsculas y minúsculas
 
 - Si el *searchCriteria* es una cadena null, la búsqueda será equivalente a un "seleccionar todo".
 - Si *searchCriteria* incluye varias llaves de búsqueda, el resultado es la intersección (función AND) de todos los mensajes que coinciden con esas llaves.
@@ -1622,7 +1622,7 @@ searchCriteria = HEADER CONTENT-TYPE "E" NOT SUBJECT "o" NOT HEADER CONTENT-TYPE
 
 En cuanto a los dos últimos ejemplos, observe que el resultado de la búsqueda es diferente cuando se eliminan los paréntesis de la primera lista de llaves de búsqueda.
 
-- El parámetro *searchCriteria* puede incluir opcionalmente la instrucción \[CHARSET]. Esta instrucción consiste en la palabra "CHARSET" seguida de un conjunto de caracteres definido \[CHARSET] (US ASCII, ISO-8859). Indica el conjunto de caracteres de la cadena *searchCriteria*. Por lo tanto, debe convertir la cadena *searchCriteria* al conjunto de caracteres especificado si utiliza la instrucción \[CHARSET] (consulte los comandos `CONVERT FROM TEXT` o `Convert to text`).
+- El parámetro *searchCriteria* puede incluir opcionalmente la instrucción \[CHARSET]. Esta instrucción consiste en la palabra "CHARSET" seguida de un conjunto de caracteres definido \[CHARSET] (US ASCII, ISO-8859). Esta instrucción consiste en la palabra "CHARSET" seguida de un conjunto de caracteres definido \[CHARSET] (US ASCII, ISO-8859). Indica el conjunto de caracteres de la cadena *searchCriteria*.
   Por defecto, 4D codifica la cadena de criterios searchCriteria en Quotable Printable si contiene los caracteres extendidos.
 
 ```
@@ -1732,10 +1732,10 @@ En el parámetro *name*, pase el nombre del buzón a acceder. El nombre represen
 
 El parámetro opcional *state* define el tipo de acceso al buzón. Los valores posibles son:
 
-| Constante             | Valor | Comentario                                                                                                                                                                                                                                                          |
-| --------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| IMAP read only state  | 1     | Se accede al buzón seleccionado con privilegios de sólo lectura. Los mensajes con la bandera "reciente" (que indica que son nuevos) no se modifican.                                                             |
-| IMAP read write state | 0     | Se accede al buzón seleccionado con privilegios de lectura y escritura. Los mensajes se consideran "vistos" y pierden la bandera "reciente" (que indica que son mensajes nuevos). Default value: |
+| Constante             | Valor | Comentario                                                                                                                                                                                                                                                              |
+| --------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| IMAP read only state  | 1     | Se accede al buzón seleccionado con privilegios de sólo lectura. Los mensajes con la bandera "reciente" (que indica que son nuevos) no se modifican.                                                                 |
+| IMAP read write state | 0     | Se accede al buzón seleccionado con privilegios de lectura y escritura. Los mensajes se consideran "vistos" y pierden la bandera "reciente" (que indica que son mensajes nuevos). Valor por defecto: |
 
 > - La función genera un error y devuelve **Null** si *name* designa un buzón inexistente.
 > - Si no hay ninguna conexión abierta, `.selectBox()` abrirá una conexión.

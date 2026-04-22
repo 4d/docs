@@ -142,11 +142,11 @@ Si no desea que la nueva entidad comparta referencias de atributos de tipo objet
 <!-- REF #EntityClass.diff().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|entityToCompare|4D.Entity|->|Entity to be compared with the original entity|
-|attributesToCompare|Collection|-> |Name of attributes to be compared |
-|Result|Collection|<-|Differences between the entities|
+|entityToCompare|4D.Entity|->|Entidad a comparar con la entidad original|
+|attributesToCompare|Collection|-> |Nombre de los atributos a comparar |
+|Resultado|Collection|<-|Differences between the entities|
 </div>
 <!-- END REF -->
 
@@ -345,10 +345,10 @@ vCompareResult1 (se devuelven todas las diferencias):
 <!-- REF #EntityClass.drop().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|mode|Integer|->|`dk force drop if stamp changed`: Forces the drop even if the stamp has changed|
-|Result|Object|<-|Result of drop operation|
+|mode|Integer|->|`dk force drop if stamp changed`: Forza la caída incluso si el sello ha cambiado|
+|Resultado|Object|<-|Result of drop operation|
 </div>
 <!-- END REF -->
 
@@ -629,9 +629,9 @@ El siguiente código genérico duplica cualquier entidad:
 <!-- REF #EntityClass.getKey().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|mode|Integer|->|`dk key as string`: primary key is returned as a string, no matter the primary key type|
+|mode|Integer|->|`dk key as string`: la llave primaria se devuelve como una cadena, sin importar el tipo de clave primaria|
 |Result|any|<-|Value of the primary key of the entity (Integer or Text)|
 </div>
 <!-- END REF -->
@@ -824,16 +824,16 @@ El sello interno se incrementa automáticamente en 4D cada vez que se guarda la 
 <!-- REF #EntityClass.indexOf().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|entitySelection|4D.EntitySelection|->|Position of the entity is given according to this entity selection|
-|Result|Integer|<-|Position of the entity in an entity selection|
+|entitySelection|4D.EntitySelection|->|La posición de la entidad se da según esta selección de entidad|
+|Resultado|Integer|<-|Position of the entity in an entity selection|
 </div>
 <!-- END REF -->
 
 #### Descripción
 
-La función `.extract()` <!-- REF #EntityClass.indexOf().Summary -->devuelve la posición de la entidad en una selección de entidades<!-- END REF -->.
+La función `.push()` <!-- REF #EntityClass.indexOf().Summary -->devuelve la posición de la entidad en una selección de entidades<!-- END REF -->.
 
 Por defecto, si se omite el parámetro *entitySelection*, la función devuelve la posición de la entidad dentro de su propia selección de entidades. En caso contrario, devuelve la posición de la entidad dentro de la *entitySelection* especificada.
 
@@ -956,10 +956,10 @@ Si la entidad no pertenece a ninguna selección de entidades existente (es decir
 <!-- REF #EntityClass.lock().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|mode|Integer|->|`dk reload if stamp changed`: Reload before locking if stamp changed|
-|Result|Object|<-|Result of lock operation|
+|mode|Integer|->|`dk reload if stamp changed`: recarga antes de bloquear si el sello cambió|
+|Resultado|Object|<-|Result of lock operation|
 </div>
 <!-- END REF -->
 
@@ -1233,10 +1233,10 @@ El objeto devuelto por `.reload( )` contiene las siguientes propiedades:
 <!-- REF #EntityClass.save().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|mode|Integer|->|`dk auto merge`: Enables the automatic merge mode|
-|Result|Object|<-|Result of save operation|
+|mode|Integer|->|`dk auto merge`: activa el modo de fusión automática|
+|Resultado|Object|<-|Result of save operation|
 </div>
 <!-- END REF -->
 
@@ -1370,11 +1370,11 @@ Actualización de una entidad con la opción `dk auto merge`:
 <!-- REF #EntityClass.toObject().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|filterString |Text |->|Attribute(s) to extract (comma-separated string)|
-|filterCol |Collection |->|Collection of attribute(s) to extract|
-|options|Integer|->|`dk with primary key`: adds the \_\_KEY property;<br/>`dk with stamp`: adds the \_STAMP property|
+|filterString |Text |->|Atributo(s) a extraer (cadena separada por comas)|
+|filterCol |Colección |->|Colección de atributo(s) a extraer|
+|options|Integer|->|`dk with primary key`: añade la propiedad \_\_KEY;<br/>`dk with stamp`: añade la propiedad \_STAMP|
 |Result|Object|<-|Object built from the entity|
 </div>
 <!-- END REF -->

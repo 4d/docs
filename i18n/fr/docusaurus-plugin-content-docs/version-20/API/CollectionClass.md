@@ -421,7 +421,7 @@ $vSize:=$col.length //$vSize=0
 
 #### Description
 
-La fonction `.combine()` <!-- REF #collection.combine().Summary -->insère les éléments de *col2* à la fin ou à la position *index* de la collection et retourne la collection modifiée<!-- END REF -->. A la différence de la fonction `.insert()`, `.combine()` ajoute chaque valeur de *col2* dans la collection d'origine, et non en tant qu'élément unique de collection.
+La fonction `.combine()` <!-- REF #collection.combine().Summary -->insère les éléments de *col2* à la fin ou à la position *index* de la collection et retourne la collection modifiée<!-- END REF -->. . A la différence de la fonction `.insert()`, `.combine()` ajoute chaque valeur de *col2* dans la collection d'origine, et non en tant qu'élément unique de collection.
 > Cette fonction modifie la collection d'origine.
 
 Par défaut, les éléments de *col2* sont ajoutés à la fin de la collection d'origine. Vous pouvez passer dans *index* le numéro de l'élément après lequel vous souhaitez que les éléments de *col2* soient insérés dans la collection.
@@ -526,7 +526,7 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 #### Description
 
-La fonction `.copy()` <!-- REF #collection.copy().Summary --> retourne une copie profonde (deep copy) de la collection<!-- END REF -->. ***Deep copy*** signifie que les objets ou les collections présents dans la collection d'origine sont dupliqués et ne partagent pas leur référence avec la collection qui est retournée.
+La fonction `.copy()` <!-- REF #collection.copy().Summary --> retourne une copie profonde (deep copy) de la collection .<!-- END REF -->***Deep copy*** signifie que les objets ou les collections présents dans la collection d'origine sont dupliqués et ne partagent pas leur référence avec la collection qui est retournée.
 > Cette fonction ne modifie pas la collection d'origine.
 
 S'il est passé, le paramètre *option* peut contenir l'une des constantes suivantes (ou les deux) :
@@ -951,7 +951,7 @@ La callback reçoit les paramètres suivants :
 Elle peut définir le(s) paramètre(s) suivant(s) :
 
 *   (obligatoire si vous avez utilisé une méthode) *$1.result* (booléen) : **true** si l'évaluation de la valeur de l'élément est à vrai, **false** sinon.
-*   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel. La valeur retournée est la dernière calculée.
+*   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.
 
 Dans tous les cas, lorsque la fonction `.every()` rencontre le premier élément de collection évalué à **false**, elle cesse d'appeler la fonction de rétroappel et renvoie **false**.
 
@@ -1022,8 +1022,7 @@ $b:=$c.every($f;Is real) //$b=false
 |---------|--- |:---:|------|
 |propertyPath|Text|->|Chemin de propriété d'objet dont les valeurs doivent être extraites dans la nouvelle collection|
 |targetpath|Text|->|Chemin ou nom de propriété cible|
-|option|Integer|->|`ck keep null`: inclure les propriétés null dans la collection retournée (ignorées par défaut). Paramètre ignoré si *targetPath* est passé.|
-|Résultat|Collection|<-|New collection containing extracted values|
+|option|Integer|->|`ck keep null`: inclure les propriétés null dans la collection retournée (ignorées par défaut). Paramètre ignoré si *targetPath* est passé.| |Résultat|Collection|<-|New collection containing extracted values|
 </div>
 <!-- END REF -->
 
@@ -1040,7 +1039,7 @@ Le contenu de la collection retournée dépend du paramètre *targetPath* :
     Par défaut, les éléments pour lesquels *propertyPath* est null ou undefined sont ignorés dans la collection résultante. Vous pouvez passer la constante `ck keep null` dans le paramètre *option* pour intégrer ces valeurs comme des éléments null dans la collection retournée.
 
 
-*   Si un ou plusieurs paramètres *targetPath* sont passés (correspondant à un ou plusieurs paramètres *propertyPath* ), `.extract()` remplit la nouvelle collection avec les propriétés *propertyPath* et chaque élément de la nouvelle collection est un objet avec des propriétés *targetPath* contenant les propriétés *propertyPath* correspondantes. Les valeurs null sont conservées (le paramètre *option* est ignoré avec cette syntaxe).
+*   *methodName* prend chaque élément de la collection et effectue toutes les opérations souhaitées pour accumuler le résultat dans *$1.accumulator*, qui est retourné dans *$1.value*. Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètres dans param (facultatif).
 
 
 #### Exemple 1
@@ -1171,7 +1170,7 @@ En cas d'incohérence, les règles suivantes sont appliquées :
 
 #### Description
 
-La fonction `.filter()` <!-- REF #collection.filter().Summary -->retourne une nouvelle collection contenant tous les éléments de la collection d'origine pour lesquels le résultat de *formula* ou *methodName* est **true**<!-- END REF -->. Cette fonction retourne une ***shallow copy*** (copie superficielle), ce qui signifie que les objets ou les collections présents dans les deux collections partagent la même référence. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
+La fonction `.filter()` <!-- REF #collection.filter().Summary -->La fonction `.filter()`<!-- END REF -->. Cette fonction retourne une ***shallow copy*** (copie superficielle), ce qui signifie que les objets ou les collections présents dans les deux collections partagent la même référence. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
 > Cette fonction ne modifie pas la collection d'origine.
 
 Vous désignez le code de rétroappel (callback) à exécuter pour filtrer les éléments de la collection en utilisant soit :
@@ -1190,7 +1189,7 @@ La callback reçoit les paramètres suivants :
 Elle peut définir le(s) paramètre(s) suivant(s) :
 
 *   *$1.result* (booléen) : **true** si l'élément doit être conservé car sa la valeur correspond à la condition du filtre, **false** sinon.
-*   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel. La valeur retournée est la dernière calculée.
+*   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.
 
 :::note
 
@@ -1263,7 +1262,7 @@ Vous voulez filtrer les éléments de la collection en fonction de leur type :
 
 #### Description
 
-La fonction `find()` <!-- REF #collection.find().Summary -->retourne la première valeur dans la collection pour laquelle le résultat de *formula* ou *methodName* retourne **true**<!-- END REF -->.
+La fonction `find()` <!-- REF #collection.find().Summary -->La fonction `.indexOf()`<!-- END REF -->.
 > Cette fonction ne modifie pas la collection d'origine.
 
 Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les éléments de la collection en utilisant soit :
@@ -1271,7 +1270,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 - *formula* (syntaxe recommandée), un [objet formule](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet ;
 - *methodName*, le nom d'une méthode projet (texte).
 
-La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). La callback peut effectuer n'importe quel test, avec ou sans le(s) paramètre(s) et doit retourner **true** pour le premier élément remplissant le test. Elle reçoit un `objet` en premier paramètre ($1).
+La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). Elle reçoit un `objet` en premier paramètre ($1).
 
 La callback reçoit les paramètres suivants :
 
@@ -1282,7 +1281,7 @@ La callback reçoit les paramètres suivants :
 Elle peut définir le(s) paramètre(s) suivant(s) :
 
 *   (obligatoire si vous avez utilisé une méthode) *$1.result* (booléen) : **true** si la valeur de l'élément correspond à la condition de recherche, **false** sinon.
-*   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel. La valeur retournée est la dernière calculée.
+*   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.
 
 
 Par défaut, `.find()` effectue une recherche dans la totalité de la collection. Optionnellement, vous pouvez passer dans *startFrom* le numéro de l'élément auquel démarrer la recherche.
@@ -1357,7 +1356,7 @@ $c2:=$c.find(Formula($1.value.name=$2); "Clanton")  //$c2={name:Clanton,zc:35046
 
 #### Description
 
-La fonction `.findIndex()` <!-- REF #collection.findIndex().Summary -->retourne le numéro, dans la collection, du premier élément pour lequel *formula* ou *methodName* retourne **true**<!-- END REF -->.
+La fonction `.findIndex()` <!-- REF #collection.findIndex().Summary -->La fonction `.findIndex()`<!-- END REF -->.
 > Cette fonction ne modifie pas la collection d'origine.
 
 Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les éléments de la collection en utilisant soit :
@@ -1365,7 +1364,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 - *formula* (syntaxe recommandée), un [objet formule](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet ;
 - *methodName*, le nom d'une méthode projet (texte).
 
-La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). La callback peut effectuer n'importe quel test, avec ou sans le(s) paramètre(s) et doit retourner **true** pour le premier élément remplissant le test. Elle reçoit un `objet` en premier paramètre ($1).
+La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). Elle reçoit un `objet` en premier paramètre ($1).
 
 La callback reçoit les paramètres suivants :
 
@@ -1376,7 +1375,7 @@ La callback reçoit les paramètres suivants :
 Elle peut définir le(s) paramètre(s) suivant(s) :
 
 *   (obligatoire si vous avez utilisé une méthode) *$1.result* (booléen) : **true** si la valeur de l'élément correspond à la condition de recherche, **false** sinon.
-*   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel. La valeur retournée est la dernière calculée.
+*   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.
 
 Par défaut, `.findIndex()` effectue une recherche dans la totalité de la collection. Optionnellement, vous pouvez passer dans *startFrom* le numéro de l'élément auquel démarrer la recherche.
 
@@ -1431,7 +1430,7 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 
 #### Description
 
-La fonction `.first()` <!-- REF #collection.first().Summary -->renvoie le premier élément de la collection<!-- END REF -->.
+La fonction `.first()` <!-- REF #collection.first().Summary -->La fonction `.first()`<!-- END REF -->.
 > Cette fonction ne modifie pas la collection d'origine.
 
 La fonction renvoie Undefined si la collection est vide.
@@ -1539,7 +1538,7 @@ $col.flat(MAXLONG)
 
 #### Description
 
-La fonction `.flatMap()` <!-- REF #collection.flatMap().Summary -->crée une nouvelle collection basée sur le résultat de l'appel de la fonction 4D *formula* ou de la méthode *methodName* sur chaque élément de la collection originale et mise à plat sur une profondeur de 1<!-- END REF -->. Optionnellement, vous pouvez passer un ou plusieurs paramètre(s) à *formula* ou *methodName* via le paramètre *param*.
+La fonction `.flatMap()` <!-- REF #collection.flatMap().Summary -->crée une nouvelle collection basée sur le résultat de l'appel de la fonction 4D *formula* ou de la méthode *methodName* sur chaque élément de la collection originale et mise à plat sur une profondeur de 1 .<!-- END REF -->. Optionnellement, vous pouvez passer un ou plusieurs paramètre(s) à *formula* ou *methodName* via le paramètre *param*.
 
 Cette fonction est identique à un appel à [`map()`](#map) suivi d'un appel à [`flat()`](#flat) de profondeur 1.
 > Cette fonction ne modifie pas la collection d'origine.
@@ -1550,7 +1549,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 - *formula* (syntaxe recommandée), un [objet formule](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet ;
 - *methodName*, le nom d'une méthode projet (texte).
 
-La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). La callback peut effectuer n'importe quelle opération, avec ou sans le(s) paramètre(s), et doit renvoyer une nouvelle valeur transformée à ajouter à la collection résultante. Elle reçoit un `objet` en premier paramètre ($1).
+La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). Elle reçoit un `objet` en premier paramètre ($1).
 
 La callback reçoit les paramètres suivants :
 
@@ -1561,7 +1560,7 @@ La callback reçoit les paramètres suivants :
 Elle peut définir le(s) paramètre(s) suivant(s) :
 
 *   (obligatoire si vous avez utilisé une méthode) *$1.result* (n'importe quel type) : nouvelle valeur transformée à ajouter à la collection résultante
-*   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel. La valeur retournée est la dernière calculée.
+*   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.
 
 
 #### Exemple 1
@@ -1583,8 +1582,14 @@ $result:=$col.flatMap(Formula(New collection($1.value*2)))
 var $col; $result : Collection
 $col:=New collection("Hello how"; ""; "are you ?")
 
+var $col; $result : Collection
+$col:=New collection("Hello how"; ""; "are you ?")
+
 $result:=$col.map(Formula(Split string($1.value; " ")))
 // [["Hello", "how"], [], ["are", "you", "?"]]
+
+$result:=$col.flatMap(Formula(Split string($1.value; " ")))
+// ["Hello", "how", "are", "you", "?"]
 
 $result:=$col.flatMap(Formula(Split string($1.value; " ")))
 // ["Hello", "how", "are", "you", "?"]
@@ -1650,7 +1655,7 @@ Dans *toSearch*, passez l'expression à rechercher dans la collection. Vous pouv
 Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer la recherche dans *startFrom*.
 
 *   Si *startFrom* >= la longueur de la collection, False est retourné, ce qui signifie que la collection n'est pas testée.
-*   Si *startFrom* < 0, la fin de la collection est considérée comme point de départ du calcul de la position (*startFrom:=startFrom+length*). Notez que même si *startFrom* est négatif, la recherche est effectuée de la gauche vers la droite.
+*   Si *startFrom* < 0, la fin de la collection est considérée comme point de départ du calcul de la position (*startFrom:=startFrom+length*). **Attention :** N'oubliez pas que la numérotation des éléments de collection débute à 0.
 *   Si *startFrom* = 0, l'ensemble de la collection est évalué (défaut).
 
 #### Exemple
@@ -1881,7 +1886,7 @@ Vous pouvez passer tout type d'élément accepté par les collections, y compris
 
 #### Description
 
-La fonction `.join()` <!-- REF #collection.join().Summary -->retourne une nouvelle collection avec le contenu du paramètre *value* ajouté à la fin de la collection d'origine<!-- END REF -->. La fonction retourne la chaîne résultante.
+La fonction `unshift()` <!-- REF #collection.join().Summary -->insère la ou les *value*(s) au début de la collection<!-- END REF -->et retourne la collection modifiée.
 > Cette fonction ne modifie pas la collection d'origine.
 
 Par défaut, les éléments null ou vides de la collection sont inclus dans la chaîne résultante. Passez la constante `ck ignore null or empty` dans le paramètre *option* si vous souhaitez les exclure de la chaîne résultante.
@@ -1928,7 +1933,7 @@ Par défaut, les éléments null ou vides de la collection sont inclus dans la c
 
 #### Description
 
-La fonction `.last()` <!-- REF #collection.last().Summary -->renvoie le dernier élément de la collection<!-- END REF -->.
+La fonction `.last()` <!-- REF #collection.last().Summary -->La fonction `.last()`<!-- END REF -->.
 > Cette fonction ne modifie pas la collection d'origine.
 
 La fonction renvoie Undefined si la collection est vide.
@@ -2084,7 +2089,7 @@ La propriété `.length` est initialisée à la création de la collection. Elle
 
 #### Description
 
-La fonction `.map()` <!-- REF #collection.map().Summary -->crée une nouvelle collection basée sur le résultat de l'exécution de la fonction 4D *formula* ou de la méthode *methodName* sur chaque élément de la collection d'origine<!-- END REF -->. Optionnellement, vous pouvez passer un ou plusieurs paramètre(s) à *formula* ou *methodName* via le paramètre *param*. `.map()` renvoie toujours une collection de la même taille que la collection originale, sauf si *$1.stop* a été utilisé (voir ci-dessous).
+La fonction `.map()` <!-- REF #collection.map().Summary -->La fonction `.map()`<!-- END REF -->. Optionnellement, vous pouvez passer un ou plusieurs paramètre(s) à *formula* ou *methodName* via le paramètre *param*. `.map()` renvoie toujours une collection de la même taille que la collection originale, sauf si *$1.stop* a été utilisé (voir ci-dessous).
 > Cette fonction ne modifie pas la collection d'origine.
 
 
@@ -2093,7 +2098,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 - *formula* (syntaxe recommandée), un [objet formule](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet ;
 - *methodName*, le nom d'une méthode projet (texte).
 
-La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). La callback peut effectuer n'importe quelle opération, avec ou sans le(s) paramètre(s), et doit renvoyer une nouvelle valeur transformée à ajouter à la collection résultante. Elle reçoit un `objet` en premier paramètre ($1).
+La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). Elle reçoit un `objet` en premier paramètre ($1).
 
 La callback reçoit les paramètres suivants :
 
@@ -2104,7 +2109,7 @@ La callback reçoit les paramètres suivants :
 Elle peut définir le(s) paramètre(s) suivant(s) :
 
 *   (obligatoire si vous avez utilisé une méthode) *$1.result* (n'importe quel type) : nouvelle valeur transformée à ajouter à la collection résultante
-*   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel. La valeur retournée est la dernière calculée.
+*   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.
 
 
 #### Exemple
@@ -2333,7 +2338,7 @@ Tri d'une collection d'objets basé sur une formule de texte avec noms de propri
  $c2:=$c.orderBy("value desc, id asc")
 ```
 
-Tri d'une collection d'objets sur des propriétés :
+Tri d'une collection d'objets via une collection d'objets critères :
 
 ```4d
  var $c; $c2 : Collection
@@ -2410,7 +2415,7 @@ Tri avec un chemin de propriété :
 
 #### Description
 
-La fonction `.orderByMethod()` <!-- REF #collection.orderByMethod().Summary -->retourne une nouvelle collection contenant tous les éléments de la collection d'origine triés selon les critères définis par la fonction 4D *formula* 4D function ou la méthode *methodName*<!-- END REF -->.
+La fonction `.orderByMethod()` <!-- REF #collection.orderByMethod().Summary -->La fonction `.orderByMethod()`<!-- END REF -->.
 
 Cette fonction retourne une*shallow copy* (copie superficielle), ce qui signifie que les objets ou les collections présents dans les deux collections partagent la même référence. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
 > Cette fonction ne modifie pas la collection d'origine.
@@ -2675,6 +2680,10 @@ Pour plus d'informations sur la génération d'une requête à l'aide des param�
 
  $c.push(New object("name";"Sterling";"dateHired";!10-5-1999!;"age";Null))
  $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
+ $c.push(New object("name";"Winch";"dateHired";!16-05-2018!;"age";36))
+
+ $c.push(New object("name";"Sterling";"dateHired";!10-5-1999!;"age";Null))
+ $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
 ```
 
 Cet exemple renvoie les personnes dont le nom contient "in" :
@@ -2703,7 +2712,7 @@ Cet exemple retourne des personnes embauchées il y a plus de 90 jours :
 
 ```4d
  $col:=$c.query("dateHired < :1";(Current date-90))
-  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] si la date du jour est 01/10/2018
+  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] si la date du jour est 01/10/2018 si la date du jour est 01/10/2018
 ```
 
 
@@ -2749,7 +2758,7 @@ Vous trouverez plus d'exemples de requêtes dans la page `dataClass.query()`.
 #### Description
 
 
-La fonction `.reduce()` <!-- REF #collection.reduce().Summary -->applique la callback *formula* ou *methodName* à un accumulateur et à chaque élément de la collection (de gauche à droite) pour le réduire à une valeur unique<!-- END REF -->.
+La fonction `.reduce()` <!-- REF #collection.reduce().Summary -->La fonction `.reduceRight()`<!-- END REF -->.
 > Cette fonction ne modifie pas la collection d'origine.
 
 Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les éléments de la collection en utilisant soit :
@@ -2759,7 +2768,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 
 La callback prend chaque élément de la collection et effectue toutes les opérations souhaitées pour accumuler le résultat dans *$1.accumulator*, qui est retourné dans *$1.value*.
 
-Vous pouvez passer la valeur pour initialiser l'accumulateur dans *initValue*. S'il est omis, *$1.accumulator* commence par *Undefined*.
+Dans *howMany*, passez le nombre d'éléments à supprimer à partir de l'*index*. Si *howMany* n'est pas spécifié, un élément est supprimé.
 
 La callback reçoit les paramètres suivants :
 
@@ -2785,7 +2794,7 @@ $r:=$c.reduce(Formula($1.accumulator*=$1.value); 1)  //retourne 86400
 
 #### Exemple 2
 
-Cet exemple permet de réduire plusieurs éléments de collections en une seule :
+Cet exemple permet de réduire plusieurs éléments de collection en un seul élément :
 
 ```4d
  var $c;$r : Collection
@@ -2843,7 +2852,7 @@ Avec la méthode ***Flatten*** suivante :
 #### Description
 
 
-La fonction `.reduceRight()` <!-- REF #collection.reduceRight().Summary -->applique la callback *formula* ou *methodName* à un accumulateur et à chaque élément de la collection (de droite à gauche) pour la réduire à une seule valeur<!-- END REF -->.
+La fonction `.reduce()` <!-- REF #collection.reduceRight().Summary -->applique la callback *formula* ou *methodName* à un accumulateur et à chaque élément de la collection (de gauche à droite) pour le réduire à une valeur unique<!-- END REF -->.
 > Cette fonction ne modifie pas la collection d'origine.
 
 Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les éléments de la collection en utilisant soit :
@@ -2853,7 +2862,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 
 La callback prend chaque élément de la collection et effectue toutes les opérations souhaitées pour accumuler le résultat dans *$1.accumulator*, qui est retourné dans *$1.value*.
 
-Vous pouvez passer la valeur pour initialiser l'accumulateur dans *initValue*. S'il est omis, *$1.accumulator* commence par *Undefined*.
+Dans *howMany*, passez le nombre d'éléments à supprimer à partir de l'*index*. Si *howMany* n'est pas spécifié, un élément est supprimé.
 
 La callback reçoit les paramètres suivants :
 
@@ -2883,7 +2892,7 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //retourne 86400
 
 #### Exemple 2
 
-Cet exemple permet de réduire plusieurs éléments de collections en une seule :
+Cet exemple permet de réduire plusieurs éléments de collection en un seul élément :
 
 ```4d
  var $c;$r : Collection
@@ -2947,7 +2956,7 @@ Dans *index*, passez le numéro de l'élément à partir duquel la suppression d
 *   Si la valeur recalculée est négative, *index* prend la valeur 0.
 *   Si valeur recalculée > longueur de la collection, *index* prend comme valeur la taille de la collection.
 
-Dans *howMany*, passez le nombre d'éléments à supprimer à partir de l'*index*. Si *howMany* n'est pas spécifié, un élément est supprimé.
+Si un ou plusieurs paramètres *targetPath* sont passés (correspondant à un ou plusieurs paramètres *propertyPath* ), `.extract()` remplit la nouvelle collection avec les propriétés *propertyPath* et chaque élément de la nouvelle collection est un objet avec des propriétés *targetPath* contenant les propriétés *propertyPath* correspondantes. Les valeurs null sont conservées (le paramètre *option* est ignoré avec cette syntaxe).
 
 
 
@@ -3220,7 +3229,7 @@ La collection retournée contient l'élément spécifié par *startFrom* et tous
 
 #### Description
 
-La fonction `some()` <!-- REF #collection.some().Summary -->retourne vrai si au moins un des éléments de la collection a été évalué à vrai par le test implémenté dans l'objet *formula* ou la méthode *methodName*<!-- END REF -->.
+La fonction `some()` <!-- REF #collection.some().Summary -->La fonction `.every()`<!-- END REF -->.
 
 Vous désignez le code 4D de rétroappel (callback) à exécuter pour évaluer les éléments de la collection en utilisant soit :
 

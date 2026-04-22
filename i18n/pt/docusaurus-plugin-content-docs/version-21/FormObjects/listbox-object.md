@@ -197,3 +197,4 @@ Os eventos formulário nos list box ou colunas de list box podem retornar as seg
 > Se um evento ocorrer em uma coluna ou linha "falsa" que não exista, é normalmente retornada uma cadeia de caracteres vazia.
 
 
+

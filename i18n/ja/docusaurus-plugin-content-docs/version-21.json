@@ -818,5 +818,17 @@
   "sidebar.docs.doc.Sessions": {
     "message": "セッション",
     "description": "The label for the doc item 'Sessions' in sidebar 'docs', linking to the doc Desktop/desktop-sessions"
+  },
+  "sidebar.docs.category.listbox-in-form": {
+    "message": "リストボックス",
+    "description": "The label for category 'List Box' in sidebar 'docs'"
+  },
+  "sidebar.docs.link.qodly-pro-link1": {
+    "message": "4D Qodly Pro",
+    "description": "The label for link '4D Qodly Pro' in sidebar 'docs', linking to 'https://developer.4d.com/qodly/'"
+  },
+  "sidebar.docs.link.qodly-pro-link2": {
+    "message": "4D Qodly Pro",
+    "description": "The label for link '4D Qodly Pro' in sidebar 'docs', linking to 'https://developer.4d.com/qodly/'"
   }
 }

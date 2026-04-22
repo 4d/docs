@@ -47,8 +47,7 @@ Les objets Attachment fournissent les propriétés et fonctions suivantes en lec
 |name|Text|->|Name + extension used by the mail client to designate the attachment|
 |cid|Text|->|ID of attachment (HTML messages only), or " " if no cid is required|
 |type|Text|->|Value of the content-type header|
-|disposition|Text|->|Value of the content-disposition header: "inline" or "attachment".|
-|Result|4D.MailAttachment|<-|Attachment object|
+|disposition|Text|->|Value of the content-disposition header: "inline" or "attachment".| |Result|4D.MailAttachment|<-|Attachment object|
 </div>
 <!-- END REF -->
 
@@ -195,8 +194,7 @@ $transporter.send($email)
 |name|Text|->|Name + extension used by the mail client to designate the attachment|
 |cid|Text|->|ID of attachment (HTML messages only), or " " if no cid is required|
 |type|Text|->|Value of the content-type header|
-|disposition|Text|->|Value of the content-disposition header: "inline" or "attachment".|
-|Result|4D.MailAttachment|<-|Attachment object|
+|disposition|Text|->|Value of the content-disposition header: "inline" or "attachment".| |Result|4D.MailAttachment|<-|Attachment object|
 </div>
 <!-- END REF -->
 
@@ -293,7 +291,7 @@ La propriété `.platformPath` retourne <!-- REF #MailAttachmentClass.platformPa
 
 #### Description
 
-La propriété `.size` contient <!-- REF #MailAttachmentClass.size.Summary -->la valeur de l'en-tête `size` du fichier joint<!-- END REF -->. La propriété `.size` est renvoyée lorsque le message MIME définit un en-tête de taille dans la partie pièce jointe.
+La propriété `.disposition` contient <!-- REF #MailAttachmentClass.size.Summary -->la valeur de l'en-tête `Content-Disposition`<!-- END REF -->. .
 
 
 ## .type

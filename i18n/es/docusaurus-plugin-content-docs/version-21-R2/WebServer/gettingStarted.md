@@ -178,7 +178,7 @@ El servidor devuelve las entidades, es decir, los datos, de la clase de datos Fr
 }
 ```
 
-Este ejemplo muy sencillo muestra cómo el servidor web interactúa de forma transparente con el servidor [REST](REST/gettingStarted.md) para devolver cualquier dato solicitado, siempre que esté expuesto. En sus interfaces web, puede vincular fácilmente el código javascript o html con los datos devueltos. Vea el [Explorador de datos web](Admin/dataExplorer.md) integrado para tener un ejemplo de interfaz web sofisticada vinculada a las clases de datos.
+Este ejemplo muy sencillo muestra cómo el servidor web interactúa de forma transparente con el servidor [REST](REST/gettingStarted.md) para devolver cualquier dato solicitado, siempre que esté expuesto. En sus interfaces web, puede vincular fácilmente el código javascript o html con los datos devueltos. En sus interfaces web, puede vincular fácilmente el código javascript o html con los datos devueltos.
 
 ## Inicio de sesión y sesión
 

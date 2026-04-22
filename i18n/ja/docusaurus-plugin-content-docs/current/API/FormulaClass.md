@@ -5,7 +5,7 @@ title: Formula
 
 `4D.Formula` オブジェクトは [Formula](../commands/formula) または [Formula from string](../commands/formula-from-string) コマンドによって作成され、これを使用するとあらゆる4D 式または単一行のテキストとして表現されたコードを実行することができます。
 
-`4D.Formula` クラスオブジェクトは、 [`4D.Function`](./FunctionClass.md) クラスを継承します。 そのため、フォーミュラを実行するためには、以下のような方法があります:
+`4D.Formula` クラスオブジェクトは、 [`4D.Function`](./FunctionClass.md) クラスを継承します。 そのため、フォーミュラを実行するためには、以下のような方法があります: そのため、フォーミュラを実行するためには、以下のような方法があります:
 
 - オブジェクトプロパティに `4D.Formula` オブジェクトを入れ、プロパティ名の後に `()` 演算子を使用する
 - または、 [`call()`](#call) あるいは [`apply()`](#apply) 関数を使用して `4D.Formula` オブジェクトを呼び出す。
@@ -14,7 +14,7 @@ title: Formula
 
 :::info
 
-This class is [**streamable**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) in binary.
+このクラスは、バイナリーで[**ストリーム可能**](../Concepts/dt_object.md#binary-streaming-variable-to-blob) です。
 
 :::
 

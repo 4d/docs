@@ -451,7 +451,7 @@ La función `.copyTo()` <!-- REF #directory.copyTo().Summary -->copia el objeto 
 
 La *destinationFolder* debe existir en el disco, de lo contrario se genera un error.
 
-Por defecto, la carpeta se copia con el nombre de la carpeta original. Si desea cambiar el nombre de la copia, pase el nuevo nombre en el parámetro *newName*. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
+Por defecto, la carpeta se copia con el nombre de la carpeta original. Por defecto, la carpeta se copia con el nombre de la carpeta original. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
 
 Si ya existe una carpeta con el mismo nombre en la *destinationFolder*, por defecto 4D genera un error. Puede pasar la constante `fk overwrite` en el parámetro *overwrite* para ignorar y sobrescribir el archivo existente
 

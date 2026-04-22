@@ -81,7 +81,7 @@ Esta propiedad es de sólo lectura.
 
 #### Descripción
 
-La función `.send()` <!-- REF #WebSocketConnectionClass.send().Summary -->envía un *mensaje * al cliente<!-- END REF -->.
+La función `.send()` <!-- REF #WebSocketConnectionClass.send().Summary -->La función `.send()`<!-- END REF -->.
 
 Los siguientes contenidos se envían en función del tipo de *mensaje*:
 
@@ -119,10 +119,10 @@ Esta propiedad es de sólo lectura.
 <!-- REF #WebSocketConnectionClass.terminate().Params -->
 <div class="no-index">
 
-|Parameter|Type||Description|
+|Parámetro|Tipo||Descripción|
 |---------|--- |:---:|------|
-|code|Integer|->|Error code sent to the client (must be > 3000, otherwise the message is not sent)|
-|message|Text|->|Error message sent to the client|
+|code|Integer|->|Código de error enviado al cliente (debe ser > 3000, de lo contrario el mensaje no se envía)|
+|message|Text|->|Mensaje de error enviado al cliente|
 </div>
 <!-- END REF -->
 

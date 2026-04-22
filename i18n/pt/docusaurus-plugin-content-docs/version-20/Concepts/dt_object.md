@@ -195,7 +195,7 @@ Ao usar os objetos, o valor **null** é usado por meio do comando **Null** . Ess
 
 ### Valor não definido
 
-A avaliação de uma propriedade de um objeto pode produzir às vezes um valor indefinido. A atribuição de um valor indefinido a uma propriedade de objeto existente reinicializa ou limpa seu valor. Atribuir um valor indefinido a uma propriedade objecto não existente não faz nada.
+A avaliação de uma propriedade de um objeto pode produzir às vezes um valor indefinido. A avaliação de uma propriedade de um objeto pode produzir às vezes um valor indefinido. Atribuir um valor indefinido a uma propriedade objecto não existente não faz nada.
 
 Para saber mais, veja a descrição do comando `Null`
 

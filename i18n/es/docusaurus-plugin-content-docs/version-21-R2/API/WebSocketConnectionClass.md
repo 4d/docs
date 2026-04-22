@@ -139,7 +139,7 @@ Un *code* y un *message* pueden ser enviados al cliente durante el cierre para i
 
 #### Descripción
 
-La propiedad `.wss` contiene <!-- REF #WebSocketConnectionClass.wss.Summary -->el objeto padre [WebSocketServer\`](WebSocketServerClass.md#4dwebsocketservernew) de la conexión<!-- END REF -->.
+La propiedad `.wss` contiene <!-- REF #WebSocketConnectionClass.wss.Summary -->el objeto padre [WebSocketServer\\`](WebSocketServerClass.md#4dwebsocketservernew) de la conexión<!-- END REF -->.
 
 Esta propiedad es de sólo lectura.
 

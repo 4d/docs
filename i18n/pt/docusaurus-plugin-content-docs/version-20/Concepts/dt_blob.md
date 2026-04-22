@@ -182,4 +182,4 @@ $myText:= BLOB to text ( $myBlob ; UTF8 text without length )
 $byte:=$myBlob[5]
 ```
 
-`4D.Blob` não pode ser alterado, pode-se ler os bytes de um `4D.Blob` usando esta sintaxe, mas não modificá-los.
+Blob</code> não pode ser alterado, pode-se ler os bytes de um `4D. Blob` usando esta sintaxe, mas não modificá-los.

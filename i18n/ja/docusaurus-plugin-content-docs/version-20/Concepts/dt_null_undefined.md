@@ -41,7 +41,7 @@ Null は **null** の値のみをとることのできる特殊なデータタ�
     - ブール: False
     - 文字列: ""
     - 数値: 0
-    - 日付:  日付:  日付:  日付:  日付:  "オブジェクトでは ISO日付フォーマットの代わりに日付型を使用する" 設定が有効化されている場合は !00-00-00!、それ以外の場合には ""
+    - 日付:  日付:  日付:  日付:  日付:  日付:  "オブジェクトでは ISO日付フォーマットの代わりに日付型を使用する" 設定が有効化されている場合は !00-00-00!、それ以外の場合には ""
     - 時間: 0 (ミリ秒単位)
     - 未定義、Null: 変化なし
 
@@ -130,7 +130,7 @@ var $text : Text
 | 大きい | Undefined `>` string, Date, Time, number  | Boolean | a.undefinedProp `>` "abc"        | false |
 | 小さい | Undefined `<` string, Date, Time, number  | Boolean | a.undefinedProp `<` "abc"        | false |
 | 以上  | Undefined `>=` string, Date, Time, number | Boolean | a.undefinedProp `>=` "abc"       | false |
-| 以下  | Undefined `<=` string, Date, Time, number | Boolean | a.undefinedProp `<=` "abc"       | false |
+| 以上  | Undefined `<=` string, Date, Time, number | Boolean | a.undefinedProp `<=` "abc"       | false |
 
 *その他の値* は、未定義でも null でもない値を持つ任意の型の式です。
 
