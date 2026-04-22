@@ -18,7 +18,7 @@ title: Object
   - ピクチャー(2)
   - collection
 
-(1) [\*\* ストリーム不可能なオブジェクト\*\*](#ストリーミングサポート) である [エンティティ](ORDA/dsMapping.md#エンティティ) や [エンティティセレクション](ORDA/dsMapping.md#エンティティセレクション) などの ORDAオブジェクト、[FileHandle](../API/FileHandleClass.md)、[Webサーバー](../API/WebServerClass.md)... は **オブジェクトフィールド** には保存できません。 保存しようとするとエラーが返されます。しかし、メモリ内の **オブジェクト変数** に保存することは可能です。
+(1) [\*\* ストリーム不可能なオブジェクト\*\*](#ストリーミングサポート) である [エンティティ](ORDA/dsMapping.md#エンティティ) や [エンティティセレクション](ORDA/dsMapping.md#エンティティセレクション) などの ORDAオブジェクト、[FileHandle](../API/FileHandleClass.md)、[Webサーバー](../API/WebServerClass.md)... は **オブジェクトフィールド** には保存できません。 保存しようとするとエラーが返されます。しかし、メモリ内の **オブジェクト変数** に保存することは可能です。 保存しようとするとエラーが返されます。しかし、メモリ内の **オブジェクト変数** に保存することは可能です。
 
 (2) デバッガー内でテキストとして表示したり、JSON へと書き出されたりした場合、ピクチャー型のオブジェクトプロパティは "[object Picture]" と表されます。
 
@@ -47,7 +47,7 @@ title: Object
 
 :::info
 
-いくつかの 4Dコマンドや関数はオブジェクトを返します。たとえば、[`Database measures`](../commands/database-measures) や [`File`](../commands/file) などです。 この場合、オブジェクトを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。
+いくつかの 4Dコマンドや関数はオブジェクトを返します。たとえば、[`Database measures`](../commands/database-measures) や [`File`](../commands/file) などです。 この場合、オブジェクトを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。 この場合、オブジェクトを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。
 
 :::
 
@@ -69,7 +69,7 @@ title: Object
 
 `{}` 演算子を使って、**オブジェクトリテラル** を作成することができます。 オブジェクトリテラルとは、オブジェクトのプロパティ名とその値のペアが 0組以上含まれたセミコロン区切りのリストを中括弧 `{}` で囲んだものです。 オブジェクトリテラルのシンタックスは、空の、またはプロパティが格納されたオブジェクトを作成します。
 
-プロパティの値は式とみなされるため、プロパティ値に `{}` を使ってサブオブジェクトを作成することができます。  また、**コレクションリテラル** を作成し、参照することもできます。
+プロパティの値は式とみなされるため、プロパティ値に `{}` を使ってサブオブジェクトを作成することができます。  また、**コレクションリテラル** を作成し、参照することもできます。  また、**コレクションリテラル** を作成し、参照することもできます。
 
 例:
 
@@ -110,8 +110,9 @@ $col:=$o.col[5] // 6
 
 二種類のオブジェクトを作成することができます:
 
-- [`New object`](../commands/new-object) コマンド、またはオブジェクトリテラルのシンタックス (`{}`) を使用して作成する通常 (非共有) コレクション。 通常のオブジェクトは特別なアクセスコントロールをせずに編集可能ですが、プロセス間で共有することはできません。
+- [`New object`](../commands/new-object) コマンド、またはオブジェクトリテラルのシンタックス (`{}`) を使用して作成する通常 (非共有) コレクション。 通常のオブジェクトは特別なアクセスコントロールをせずに編集可能ですが、プロセス間で共有することはできません。 通常のオブジェクトは特別なアクセスコントロールをせずに編集可能ですが、プロセス間で共有することはできません。
 - [`New shared object`](../commands/new-shared-object) コマンドを使用して作成する共有コレクション。 共有オブジェクトはプロセス間 (プリエンティブ・スレッド含む) で共有可能なオブジェクトです。 共有オブジェクトへのアクセスは `Use...End use` 構造によって管理されています。
+  詳細な情報については、[共有オブジェクトと共有コレクション](shared.md) を参照ください。 共有オブジェクトはプロセス間 (プリエンティブ・スレッド含む) で共有可能なオブジェクトです。 共有オブジェクトへのアクセスは `Use...End use` 構造によって管理されています。
   詳細な情報については、[共有オブジェクトと共有コレクション](shared.md) を参照ください。
 
 ## プロパティ{#properties}
@@ -150,6 +151,7 @@ $col:=$o.col[5] // 6
 
 - **オブジェクト** 自身 (変数、フィールド、オブジェクトプロパティ、オブジェクト配列、コレクション要素などに保存されているもの)。
   例:
+  例:
 
 ```4d
      $age:=$myObjVar.employee.age // 変数
@@ -163,12 +165,14 @@ $col:=$o.col[5] // 6
   例:
   例:
   例:
+  例:
 
 ```4d
      $measures:=Database measures.DB.tables
 ```
 
 - オブジェクトを返す **プロジェクトメソッド** または **関数**。
+  例:
   例:
 
 ```4d
@@ -254,7 +258,7 @@ var $o3:=$o1 // 同じインスタンスへの参照
 
 たとえば、[`$entity.lock()`](../API/EntityClass.md#lock) でロックしたエンティティへの参照がなくなると、4D はメモリを解放すると同時に、関連するロックも自動で解放するため、[`$entity.unlock()`](../API/EntityClass.md#unlock) の呼び出しは不要です。
 
-オブジェクトが占有しているすべてのリソースについて、4D による自動解放 (メソッド実行終了時のローカル変数など) を待たずに、すぐに解放したい場合、オブジェクトの **参照をすべて無効化** することができます。 例: 例: 例:
+オブジェクトが占有しているすべてのリソースについて、4D による自動解放 (メソッド実行終了時のローカル変数など) を待たずに、すぐに解放したい場合、オブジェクトの **参照をすべて無効化** することができます。 例: 例: 例: 例:
 
 ```4d
 
@@ -273,26 +277,26 @@ $doc:=Null  //  $docが占有するリソースを解放します
 
 ## ストリーミングサポート
 
-A streamable class (or *serializable* class) is a class whose objects can be converted into a sequence of bytes (text or binary) in order to write them in a file, to send them as parameters, or to be able to store and rebuild them afterwards.
+ストリーム可能なクラス(または *シリアライズ可能な* クラス)とは、そのオブジェクトを連続したバイト(テキストまたはバイト)へと変換可能なクラスのことであり、これによってオブジェクトをファイルに書き込んだり、引数として送信したり、あるいは後で再構築できるように保存できるようなクラスをさします。
 
-### Text streaming (`JSON Stringify`)
+### テキストストリーミング(`JSON Stringify`)
 
-JSON commands that stringify contents such as [`JSON Stringify`](../commands/json-stringify) and the [`Execute on server`](../commands/execute-on-server) command allow you to convert objects to json (text). They support objects, collections, and user classes.
+[`JSON Stringify`](../commands/json-stringify) などの、コンテンツを文字列化するJSON コマンドと [`Execute on server`](../commands/execute-on-server) コマンドを使用することで、オブジェクトをJSON (テキスト)へと変換することができます。 これらのコマンドはオブジェクト、コレクション、そしてユーザークラスをサポートします。
 
-However, text streaming of objects has the following limitations:
+しかしながら、オブジェクトのテキストストリーミングには、以下の様な制約があります:
 
-- circular references (i.e. objects containing themselves as a property) are not supported and return an error,
-- a class object loses its class when it is stringified,
-- native 4D class objects such as [Entity](../API/EntityClass.md) cannot be represented as JSON and are returned as "[object \<class>]", for example "[object Entity]".
+- 循環参照(自分自身をプロパティとして格納してるオブジェクト)はサポートされおらず、エラーを返します
+- クラスのオブジェクトは文字列化した際にどのクラスであるかという情報は失われます
+- [Entity](../API/EntityClass.md) などのネイティブな4D クラスオブジェクトはJSON として表現はできず、"[object \<class>]" と返されます。例: "[object Entity]"
 
-### Binary streaming (`VARIABLE TO BLOB`)
+### バイナリーストリーミング(`VARIABLE TO BLOB`)
 
-4D also implements a built-in binary streaming feature through the [`VARIABLE TO BLOB`](../commands/variable-to-blob) command. This feature allows you to get rid of most of text streaming limitations regarding objects (see above):
+4D では、 [`VARIABLE TO BLOB`](../commands/variable-to-blob) コマンドを通して、ビルトインのバイナリーストリーミング機能を実装しています。 この機能を使用することで、テキストストリーミングにおける制約の大部分を回避することができます(上記参照):
 
-- circular references are supported,
-- objects keep their class,
-- an extended range of objects are streamable: [4D Write Pro](../WritePro/user-legacy/presentation.md) documents, pictures as objects, [blobs as objects](dt_blob.md#blob-types), and pointers as objects,
-- several native 4D class objects can be streamed, for example [`File`](../API/FileClass.md), [`Folder`](../API/FolderClass.md), or [`Vector`](../API/VectorClass.md). However, only a few native 4D classes are streamable. Unless explicitely stated that "This class is **streamable** in binary", consider that a native 4D class is NOT streamable.
+- 循環参照はサポートされます
+- オブジェクトはどのクラスであるかを維持します
+- 幅広いタイプのオブジェクトがストリーム可能です:  [4D Write Pro](../WritePro/user-legacy/presentation.md) ドキュメント、オブジェクトのピクチャー、[オブジェクトのBLOB](dt_blob.md#blob-types)、およびオブジェクトのポインターなど
+- いくつかのネイティブな4D クラスオブジェクトもストリーム可能です。例えば、 [`File`](../API/FileClass.md)、[`Folder`](../API/FolderClass.md)、あるいは [`Vector`](../API/VectorClass.md) など。 しかしながら、ストリーム可能なネイティブ4D クラスは限られています。 明示的に"このクラスはバイナリー形式で **ストリーム可能** です" と明示されていない限り、そのネイティブ4D クラスはストリーム可能**ではない**ものだと考えてください。
 
 ## 例題
 
