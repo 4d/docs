@@ -7,7 +7,7 @@ Nulo e Indefinido são tipos de dados que tratam de casos em que o valor de uma 
 
 ## Null
 
-Null é um tipo de dados especial com apenas um valor possível: **null**. Este valor é devolvido por uma expressão que não contém nenhum valor. Tentar ler uma propriedade de um valor **null** retorna um erro.
+Null é um tipo de dados especial com apenas um valor possível: **null**. Este valor é devolvido por uma expressão que não contém nenhum valor. Este valor é devolvido por uma expressão que não contém nenhum valor.
 
 Na linguagem 4D e para atributos do campo objeto, valores nulos são gerenciados através da função `Null`. Esta função pode ser usada com as expressões abaixo para definir ou comparar o valor nulo:
 
