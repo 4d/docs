@@ -12,7 +12,7 @@ Esta propriedade define o esquema de cores para o formulário. Por defeito, quan
 
 *   dark - texto claro sobre um fundo escuro
 *   light - texto escuro sobre um fundo claro
-> > A defined color scheme can not be overridden by a CSS.
+> light - texto escuro sobre um fundo claro > > A defined color scheme can not be overridden by a CSS.
 
 #### Gramática JSON
 
@@ -158,7 +158,7 @@ Quando a opção é usada, se a janela for aberta usando o comando `Open form wi
 
 *   a página atual,
 *   a posição, tamanho e visibilidade de cada objecto de formulário (incluindo o tamanho e visibilidade das colunas da lista box).
-> Esta opção não considera objetos gerados usando o comando `OBJECT DUPLICATE`. Para que um usuário recupere seu ambiente ao usar este comando, o desenvolvedor deve repetir a sequência de criação, definição e posicionamento dos objetos.
+> > Esta opção não considera objetos gerados usando o comando `OBJECT DUPLICATE`. Para que um usuário recupere seu ambiente ao usar este comando, o desenvolvedor deve repetir a sequência de criação, definição e posicionamento dos objetos.
 
 Quando essa opção é selecionada, a opção [Save Value](FormObjects/properties_Object.md#save-value) fica disponível para determinados objetos.
 
