@@ -16,7 +16,7 @@ Estão disponíveis dois modos de arrastamento:
 - **Automático**: nesse modo, 4D **cópia** o texto ou as imagens diretamente do objeto formulário. Poderá então ser utilizado na mesma área de 4D, entre duas áreas 4D ou entre 4D e outra aplicação. Por exemplo, o arrastar (e soltar) automático permite que você copie um valor entre dois campos sem usar programação:\
   ![](../assets/en/FormObjects/property_automaticDragDrop.png)\
   ![](../assets/en/FormObjects/property_automaticDragDrop2.png)
-  Nesse modo, o evento de formulário `On Begin Drag` NÃO é gerado. Si quiere "forzar" el uso del arrastre personalizado mientras está activado el arrastre automático, mantenga presionada la tecla **Alt** (Windows) o **Opción** (macOS) durante la acción. Esta opção não está disponível para as imagens.
+  Nesse modo, o evento de formulário `On Begin Drag` NÃO é gerado. Poderá então ser utilizado na mesma área de 4D, entre duas áreas 4D ou entre 4D e outra aplicação. Esta opção não está disponível para as imagens.
 
 Para más información, consulte [Arrastrar y soltar](https://doc.4d.com/4Dv20/4D/20.6/Drag-and-Drop.300-7487471.en.html) en el manual *Lenguaje 4D*.
 
