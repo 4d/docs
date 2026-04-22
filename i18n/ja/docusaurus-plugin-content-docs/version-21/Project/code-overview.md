@@ -20,7 +20,7 @@ title: メソッドとクラスの作成
 
 ## クラスの作成
 
-4D においてユーザークラスとは、[`/Project/Sources/Classes/`](../Project/architecture.md#sources) フォルダーに保存された専用のメソッドファイル (**.4dm**) によって定義されます。 ファイル名がクラス名になります。
+4D においてユーザークラスとは、[`/Project/Sources/Classes/`](../Project/architecture.md#sources) フォルダーに保存された専用のメソッドファイル (**.4dm**) によって定義されます。 ファイル名がクラス名になります。 For example, a class named "Polygon" will be stored in the following file: ファイル名がクラス名になります。
 
 クラスファイルは、**ファイル** メニューやツールバー (**新規/クラス...**)、あるいは **エクスプローラー** ウィンドウの **メソッド** ページにて作成可能です。
 
