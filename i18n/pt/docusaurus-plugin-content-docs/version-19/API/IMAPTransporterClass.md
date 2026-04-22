@@ -362,7 +362,7 @@ A propriedade `.checkConnectionDelay` contém <!-- REF #IMAPTransporterClass.che
 
 #### Descrição
 
-A função `.copy()` <!-- REF #IMAPTransporterClass.copy().Summary -->A função `.getMails()`<!-- END REF -->.
+A função `.copy()` <!-- REF #IMAPTransporterClass.copy().Summary -->A função `.copy()`<!-- END REF -->.
 
 Pode passar:
 
@@ -491,23 +491,24 @@ A função devolve um objecto que descreve o estado IMAP:
 Para criar uma nova caixa de correio "Facturas":
 
 ```4d
-var $pw; $name : text
+var $pw : text
 var $options; $transporter; $status : object
 
 $options:=New object
 
 $pw:=Request("Please enter your password:") If(OK=1) $options.host:="imap.gmail.com"
+
 $options.user:="test@gmail.com"
 $options.password:=$pw
 
 $transporter:=IMAP New transporter($options)
 
-$name:="Bills"+$transporter.getDelimiter()+"Atlas Corp"
-$status:=$transporter.unsubscribe($name) If ($status.success)
-   ALERT("Mailbox unsubscription successful!")
+// renomear caixa de correio
+$status:=$transporter.renameBox("Invoices"; "Bills") If ($status.success)
+   ALERT("Mailbox renaming successful!")
    Else
    ALERT("Error: "+$status.statusText)
-   End if
+ End if
    Else
    ALERT("Error: "+$status.statusText)
    End if
@@ -681,8 +682,8 @@ $options.password:=$pw
 $transporter:=IMAP New transporter($options)
 
 $name:="Bills"+$transporter.getDelimiter()+"Atlas Corp"
-$status:=$transporter.subscribe($name) If ($status.success)
-   ALERT("Mailbox subscription successful!")
+$status:=$transporter.unsubscribe($name) If ($status.success)
+   ALERT("Mailbox unsubscription successful!")
    Else
    ALERT("Error: "+$status.statusText)
    End if
@@ -1145,8 +1146,7 @@ Se quiser recuperar os 20 e-mails mais recentes sem alterar o seu estatuto de "v
 |---------|--- |:---:|------|
 |msgNumber|Integer|-> |Sequence number of the message|
 |msgID|Text|-> |Unique ID of the message|
-|updateSeen|Boolean|->|If True, the message is marked "seen" in the mailbox. If False the message is left untouched.|
-|Result|BLOB|<-|Blob of the MIME string returned from the mail server|
+|updateSeen|Boolean|->|If True, the message is marked "seen" in the mailbox. If False the message is left untouched.| |Result|BLOB|<-|Blob of the MIME string returned from the mail server|
 </div>
 <!-- END REF -->
 
@@ -1162,10 +1162,10 @@ No primeiro parâmetro, pode passar qualquer um dos dois:
 O parâmetro opcional *updateSeen* permite-lhe especificar se a mensagem está marcada como "vista" na caixa de correio. Pode passar:
 
 * **Verdadeiro** - para marcar a mensagem como "vista" (indicando que a mensagem foi lida)
-* **False** - para deixar o estado "seen" da mensagem intacto
+* **False** - para deixar o estado "seen" da mensagem intacto > * A função devolve um BLOB vazio se *msgNumber* ou msgID* designar uma mensagem inexistente, > * Se nenhuma caixa de correio for seleccionada com o comando [`.selectBox()`](#selectbox), é gerado um erro, > * Parâmetros
 > * A função devolve um BLOB vazio se *msgNumber* ou msgID* designar uma mensagem inexistente,
 > * Se nenhuma caixa de correio for seleccionada com o comando [`.selectBox()`](#selectbox), é gerado um erro,
-> * Parâmetros
+> * var $pw; $name : text var $options; $transporter; $status : object $options:=New object $pw:=Request("Please enter your password:") If(OK=1) $options.host:="imap.gmail.com" $options.user:="test@gmail.com" $options.password:=$pw $transporter:=IMAP New transporter($options) $name:="Bills"+$transporter.getDelimiter()+"Atlas Corp" $status:=$transporter.subscribe($name) If ($status.success) ALERT("Mailbox subscription successful!") Else ALERT("Error: "+$status.statusText) End if Else ALERT("Error: "+$status.statusText) End if End if
 
 #### Resultados
 
@@ -1632,7 +1632,7 @@ As chaves de pesquisa podem solicitar o valor a pesquisar:
 
 * **Chaves de pesquisa com um valor de marcador**: o valor pode aceitar uma ou várias palavras-chave (incluindo marcadores padrão), separadas por espaços. Exemplo: `searchCriteria = KEYWORD \Flagged \Draft`
 
-* **Pesquisa-chaves com um valor de conjunto de mensagens**: Identifica um conjunto de mensagens. Para números de sequência de mensagens, estes são números consecutivos de 1 até ao número total de mensagens na caixa de correio. Uma vírgula delimita números individuais; uma vírgula delimita entre dois números, inclusive. Exemplos: `2,4:7,9,12:*` é `2,4,5,6,7,9,12,13,14,15` para uma caixa de correio com 15 mensagens. `searchCriteria = 1:5 RESPOSTA` pesquisa na selecção de mensagens a partir da sequência de mensagens número 1 a 5 para mensagens que tenham o marcador \i1 `searchCriteria= 2,4 RESPOSTA` pesquisa na selecção de mensagens (mensagens números 2 e 4) por mensagens que tenham o marcador \i1 `searchCriteria= 2,4 ANSWERED` pesquisa na selecção de mensagens (mensagens números 2 e 4) por mensagens que tenham o marcador \Answered.
+* **Pesquisa-chaves com um valor de conjunto de mensagens**: Identifica um conjunto de mensagens. Para números de sequência de mensagens, estes são números consecutivos de 1 até ao número total de mensagens na caixa de correio. Uma vírgula delimita números individuais; uma vírgula delimita entre dois números, inclusive. Exemplos: `2,4:7,9,12:*` é `2,4,5,6,7,9,12,13,14,15` para uma caixa de correio com 15 mensagens. `searchCriteria = 1:5 RESPOSTA` pesquisa na selecção de mensagens a partir da sequência de mensagens número 1 a 5 para mensagens que tenham o marcador \i1 `searchCriteria= 2,4 RESPOSTA` pesquisa na selecção de mensagens (mensagens números 2 e 4) por mensagens que tenham o marcador \i1 `searchCriteria= 2,4 ANSWERED` pesquisa na selecção de mensagens (mensagens números 2 e 4) por mensagens que tenham o marcador \Answered. `searchCriteria= 2,4 ANSWERED` pesquisa na selecção de mensagens (mensagens números 2 e 4) por mensagens que tenham o marcador \Answered.
 
 #### Chaves de pesquisa autorizadas
 
@@ -1701,7 +1701,7 @@ As chaves de pesquisa podem solicitar o valor a pesquisar:
 
 #### Descrição
 
-selecciona a caixa de correio *name* como a caixa de correio actual <!-- REF #IMAPTransporterClass.selectBox().Summary -->A função `.selectBox()`<!-- END REF -->. Essa função permite que recupere informação sobre o mailbox.
+A função `.selectBox()` <!-- REF #IMAPTransporterClass.selectBox().Summary -->selecciona a caixa de correio *name* como a caixa de correio actual<!-- END REF -->. Essa função permite que recupere informação sobre o mailbox.
 > Para obter as informações de uma caixa de correio sem alterar a caixa de correio actual, utilize [`.getBoxInfo()`](#getboxinfo).
 
 No parâmetro *name*, passar o nome da caixa de correio para aceder. O nome representa uma hierarquia inequívoca da esquerda para a direita com níveis separados por um carácter delimitador específico. O delimitador pode ser encontrado com a função [`.getDelimiter()`](#getdelimiter) .
@@ -1790,28 +1790,28 @@ A função devolve um objecto que descreve o estado IMAP:
 Para subscrever a caixa de correio "Atlas Corp" na hierarquia "Bills":
 
 ```4d
-var $pw; $name : text
-var $options; $transporter; $status : object
+var $server,$boxInfo,$result : Object
+ var $transporter : 4D.IMAPTransporter
 
-$options:=New object
+ $server:=New object
+ $server.host:="imap.gmail.com" //Obrigatório
+ $server.port:=993
+ $server.user:="4d@gmail.com"
+ $server.password:="XXXXXXXX"
 
-$pw:=Request("Please enter your password:")
+  //cria transporter
+ $transporter:=IMAP New transporter($server)
 
-If(OK=1) $options.host:="imap.gmail.com"
-$options.user:="test@gmail.com"
-$options.password:=$pw
+  //seleciona mailbox
+ $boxInfo:=$transporter.selectBox("INBOX")
 
-$transporter:=IMAP New transporter($options)
-
-$name:="Bills"+$transporter.getDelimiter()+"Atlas Corp"
-$status:=$transporter.subscribe($name)
-
-If ($status.success)
-   ALERT("Mailbox subscription successful!")
-   Else
-   ALERT("Error: "+$status.statusText)
+  If($boxInfo.mailCount>0)
+  // recupera cabeçalhos das últimas 20 mensagens sem marcá-las como lidas
+    $result:=$transporter.getMails($boxInfo.mailCount-20;$boxInfo.mailCount;\
+     New object("withBody";False;"updateSeen";False))
+    For each($mail;$result.list)
+    // ...
    End if
-End if
 ```
 
 <!-- END REF -->
@@ -1864,28 +1864,24 @@ A função devolve um objecto que descreve o estado IMAP:
 Para cancelar a subscrição da caixa de correio "Atlas Corp" na hierarquia "Bills":
 
 ```4d
-var $pw : text
+var $pw; $name : text
 var $options; $transporter; $status : object
 
 $options:=New object
 
 $pw:=Request("Please enter your password:") If(OK=1) $options.host:="imap.gmail.com"
-
 $options.user:="test@gmail.com"
 $options.password:=$pw
 
 $transporter:=IMAP New transporter($options)
 
-// renomear caixa de correio
-$status:=$transporter.renameBox("Invoices"; "Bills") If ($status.success)
-   ALERT("Mailbox renaming successful!")
-   Else
-   ALERT("Error: "+$status.statusText)
- End if
+$name:="Bills"+$transporter.getDelimiter()+"Atlas Corp"
+$status:=$transporter.subscribe($name) If ($status.success)
+   ALERT("Mailbox subscription successful!")
    Else
    ALERT("Error: "+$status.statusText)
    End if
-End if
+   End if
 ```
 
 <!-- END REF -->
