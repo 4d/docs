@@ -216,7 +216,7 @@ Como a página Constantes da janela Explorer, esse tema exibe as constantes pred
 
 #### Semáforos
 
-Este tema lista os semáforos locais definidos atualmente. Para cada semáforo, a coluna Valor fornece o nome do processo que define o semáforo. As expressões deste tema não podem ser modificadas. The expressions from this theme cannot be modified.
+Este tema lista os semáforos locais definidos atualmente. Para cada semáforo, a coluna Valor fornece o nome do processo que define o semáforo. As expressões deste tema não podem ser modificadas. As expressões deste tema não podem ser modificadas.
 
 #### Processos
 
@@ -261,7 +261,7 @@ O menu contextual da janela de expressão oferece opções adicionais.
 - **Recolher tudo**: Recolhe todos os níveis da lista hierárquica.
 - **Expandir tudo**: Expandir todos os níveis da lista hierárquica.
 - **Mostrar tipos**: muestra el tipo de cada elemento de la lista (cuando es apropiado).
-- \*\*Mostrar os números dos campos e das tabelas: Apresenta o número de cada tabela ou campo. Útil se trabalhar com números de tabelas ou de campos, ou com apontadores utilizando comandos como Table ou Field\`.
+- **Mostrar números de campos e tabelas**: Exibe o número de cada tabela ou campo do site **Fields**. Útil se você trabalha com tabelas, números de campo ou ponteiros usando comandos como `Table` ou `Field`.
 - **Mostrar Ícones**: Cada objeto é precedido por um ícone que indica seu tipo. Você pode desativar essa opção para acelerar a exibição, ou apenas porque você prefere usar apenas a opção **Mostrar Tipos**.
 - **Tabelas e Campos classificados**: classifica as tabelas e os campos em ordem alfabética em suas respectivas listas.
 - **Mostrar números inteiros em hexadecimal**: Os números são normalmente apresentados em notação decimal. Esta opção apresenta-os em notação hexadecimal. Nota: para introduzir um valor numérico em hexadecimal, digite 0x (zero + "x"), seguido dos dígitos hexadecimais.
@@ -278,7 +278,7 @@ Cada item do nível principal é o nome de um método ou função classe. O item
 Na imagem acima:
 
 - O `thirdMethod` não recebeu nenhum parâmetro
-- \`$0 está atualmente indefinido, porque o método não atribuiu nenhum valor a $0 (porque ainda não executou esta atribuição ou por o método ser uma sub-rotina e não uma função)
+- \\`$0 está atualmente indefinido, porque o método não atribuiu nenhum valor a $0 (porque ainda não executou esta atribuição ou por o método ser uma sub-rotina e não uma função)
 - O `secondMethod` recebeu três parâmetros do `firstMethod`:
   - $1 é um ponteiro para a tabela `[Employee]`
   - $2 é um ponteiro para o campo `ID` na tabela `[Employee]`
@@ -380,7 +380,7 @@ The Custom Watch Pane’s menu is available on a contextual click or using the !
 
 - **Recolher tudo/Expandir tudo**: Recolhe ou expande todas as listas hierárquicas.
 - **Mostrar tipos**: Exibe o tipo de cada item da lista (quando apropriado).
-- **Mostrar números de campos e tabelas**: Exibe o número de cada tabela ou campo do site **Fields**. Útil se você trabalha com tabelas, números de campo ou ponteiros usando comandos como `Table` ou `Field`.
+- \*\*Mostrar os números dos campos e das tabelas: Apresenta o número de cada tabela ou campo. Útil se trabalhar com números de tabelas ou de campos, ou com apontadores utilizando comandos como Table ou Field\\`.
 - **Mostrar ícones**: Exibe um ícone que indica o tipo de cada item.
 - **Tabelas e campos ordenados**: Apresenta a tabela e os campos por ordem alfabética.
 - **Mostrar números inteiros na Hexadecimal**: Exibe números usando notação hexadecimal. Para introduzir um valor numérico em hexadecimal, digite 0x (zero + "x"), seguido dos dígitos hexadecimais.
@@ -457,7 +457,7 @@ O menu contextual do painel Código-fonte fornece acesso a várias funções que
 - **Mostrar documentação**: abre a documentação para o elemento de destino. Este comando está disponível para:
   - *Métodos projeto*, *classes usuário*: seleciona o método no Explorer e alterna para a guia de documentação
   - *Comandos 4D, funções e nomes de classes:* exibe a documentação on-line.
-- **Search References** (também disponível no Editor de código): Pesquisa todos os objetos do projeto (métodos e formulários) nos quais o elemento atual do método é referenciado. O elemento atual é o elemento selecionado ou o elemento onde se encontra o cursor. Pode ser o nome de um campo, variável, comando, cadeia de caracteres, etc. Os resultados da pesquisa são apresentados numa nova janela de resultados padrão.
+- **Search References** (também disponível no Editor de código): Pesquisa todos os objetos do projeto (métodos e formulários) nos quais o elemento atual do método é referenciado. O elemento atual é o elemento selecionado ou o elemento onde se encontra o cursor. Pode ser o nome de um campo, variável, comando, cadeia de caracteres, etc. Os resultados da pesquisa são apresentados numa nova janela de resultados padrão. Os resultados da pesquisa são apresentados numa nova janela de resultados padrão.
 - **Cópia**: Cópia padrão da expressão selecionada para a área de transferência.
 - **Copiar para o Painel de Expressão**: Copia a expressão selecionada para o painel de observação personalizado.
 - **Run to Cursor**:Executa instruções encontradas entre o contador de programas e a linha selecionada do método (onde o cursor se encontra).
