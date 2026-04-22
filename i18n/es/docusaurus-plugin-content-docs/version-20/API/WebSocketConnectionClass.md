@@ -81,7 +81,7 @@ Esta propiedad es de sólo lectura.
 
 #### Descripción
 
-La función `.send()` <!-- REF #WebSocketConnectionClass.send().Summary -->envía un *mensaje * al cliente<!-- END REF -->.
+La función `.send()` <!-- REF #WebSocketConnectionClass.send().Summary -->La función `.send()`<!-- END REF -->.
 
 Los siguientes contenidos se envían en función del tipo de *mensaje*:
 
