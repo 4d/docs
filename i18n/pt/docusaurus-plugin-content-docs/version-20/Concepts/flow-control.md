@@ -22,7 +22,7 @@ Os loops são controlados de duas maneiras: ou fazem loop até que uma condiçã
 
 ## If... Else... End if
 
-A sintaxe formal da estrutura de fluxo de controle `If...Else...End if` é:
+A sintaxe formal da estrutura de fluxo de controle `If... Else... End if` é:
 
 ```4d
  If(Boolean_Expression)
@@ -39,7 +39,7 @@ Note que a parte `Else` é opcional; pode escrever:
  End if
 ```
 
-A estrutura `If...Else...End if` permite que o seu método escolha entre duas ações, dependendo se um teste (uma expressão booleana) é TRUE ou FALSO. Quando a expressão Booleana for TRUE, são executadas as declarações que seguem imediatamente ao teste. Se a expressão Booleana for FALSE, são executadas as declarações que seguem a linha Else. A declaração `Else` é opcional; se omitir Else, a execução continua com a primeira instrução (se houver) que seguir `End if`.
+A estrutura `If... Else... End if` permite que o seu método escolha entre duas ações, dependendo se um teste (uma expressão booleana) é TRUE ou FALSO. Quando a expressão Booleana for TRUE, são executadas as declarações que seguem imediatamente ao teste. Se a expressão Booleana for FALSE, são executadas as declarações que seguem a linha Else. A declaração `Else` é opcional; se omitir Else, a execução continua com a primeira instrução (se houver) que seguir `End if`.
 
 Note que a expressão booleana é sempre avaliada completamente. Considere particularmente o teste abaixo:
 
@@ -74,6 +74,7 @@ O resultado é parecido mas o _MethodB_ é avaliado somente se necessário.
     ALERT("You did not enter a name.")
  End if
  End if
+ End if
  End if 
 ```
 
@@ -96,7 +97,7 @@ ou :
 
 ## Case of... Else... End case
 
-A sintaxe formal da estrutura de fluxo de controle `Case of...Else...End case` é:
+A sintaxe formal da estrutura de fluxo de controle `Case of... Else... End case` é:
 ```4d
  Case of
     :(Boolean_Expression)
@@ -129,7 +130,7 @@ Note que a parte `Else` é opcional; pode escrever:
        statement(s)
  End case
 ```
-Como na estrutura `If...Else...End if`, a estrutura `Case of...Else...End case` também permite que seu método escolha entre ações alternativas. Ao contrário da estrutura `If...Else...End`, a estrutura `Case of...Else...End case` pode testar um número ilimitado e razoável de expressões booleanas e tomar medidas, dependendo do qual uma seja TRUE.
+Como na estrutura `If... Else... End if`, a estrutura `Case of... Else... End case` também permite que seu método escolha entre ações alternativas. Ao contrário da estrutura `If... Else... End`, a estrutura `Case of... Else... End case` pode testar um número ilimitado e razoável de expressões booleanas e tomar medidas, dependendo do qual uma seja TRUE.
 
 Cada expressão booleana é precedida de dois pontos (`:`). A combinação dos dois pontos e da expressão booleana é chamada de um caso. Por exemplo, a linha abaixo é um caso:
 
@@ -162,13 +163,28 @@ Esse exemplo testa uma variável numérica e exibe uma caixa de alerta com uma a
     Else //Se não for 1, 2 ou 3, exibir um alerta
        ALERT("Não foram um, dois ou três.")
  //statement(s)
+ End case //Se for 1, mostrar um alerta
+    :(vResult=2) //Testar se o número é 2
+       ALERT("Two.") //Se for 2, exibe um alerta
+    :(vResult=3) //Testa se o número é 3
+       ALERT("Three.") //Se for 3, exibe um alerta
+    Else //Se não for 1, 2, ou 3, exibe um alerta
+       ALERT("It was not one, two, or three.")
+ //statement(s)
+ End case //Se for 2, mostrar um alerta
+    :(vResult=3) //Testar se o número é 3
+       ALERT("Three.") //Se for 3, exiba um alerta
+    Else //Se não for 1, 2 ou 3, exibir um alerta
+       ALERT("Não foram um, dois ou três.")
+ //statement(s)
  End case
 ```
 
-Para comparação, aqui está a versão `If...Else...End if` do mesmo método:
+Para comparação, aqui está a versão `If... Else... End if` do mesmo método:
 
 ```4d
  If(vResult=1) //Teste se o número é 1
+    ALERT("One.") If(vResult=1) //Teste se o número é 1
     ALERT("One.") If(vResult=1) //Test if the number is 1
     ALERT("One.") //If it is 1, display an alert
  Else
@@ -189,10 +205,18 @@ Para comparação, aqui está a versão `If...Else...End if` do mesmo método:
        ALERT("Não foram um, dois ou três.")
        End if
     End if
+ End if //Se for 2, exibir um alerta
+    Else
+       If(vResult=3) //Testa se o número é 3
+          ALERT("Três.") //Se for 3, exiba um alerta
+    Else //Se não for 1, 2 ou 3, exibir um alerta
+       ALERT("Não foram um, dois ou três.")
+       End if
+    End if
  End if
 ```
 
-Lembre-se que com uma estrutura `Case of...Else...End case`, apenas o primeiro caso TRUE é executado. Mesmo se dois ou mais casos forem TRUE, só as instruções que seguirem o primeiro caso TRUE serão executadas.
+Lembre-se que com uma estrutura `Case of... Else... End case`, apenas o primeiro caso TRUE é executado. Mesmo se dois ou mais casos forem TRUE, só as instruções que seguirem o primeiro caso TRUE serão executadas.
 
 Dessa maneira, quando quiser implementar testes hierárquicos, deve garantir que as declarações de condição que estejam mais abaixo no esquema hierárquico apareçam primeiro na sequência de testes. Por exemplo, o teste para a presença da condition1 cobre o teste para a presença de condition1&condition2 e, portanto deveria estar localizada por último na sequência de testes. Por exemplo, o código abaixo nunca terá sua última condição detectada:
 
@@ -307,7 +331,7 @@ Repeat
     {break}  
     {continue} Until(Boolean_Expression)
 ```
-Um ciclo `Repeat...Until` é como um ciclo [While...End while](flow-control.md#whileend-while), exceto que testa a expressão booleana depois do ciclo e não antes. A outra diferença com um loop `Repeat...</p>
+A outra diferença com um loop <code>Repeat... A outra diferença com um loop `Repeat...</p>
 
 <p spaces-before="0">A outra diferença com um loop <code>Repeat...Until` é que o loop continua até que a expressão booleana seja TRUE.
 
@@ -442,7 +466,7 @@ Em alguns casos, pode querer ter um loop cuja variável de contador seja decresc
  End for
 ```
 
-#### Incrementar a variável do contador em mais de um
+#### Diminuir a variável contador
 
 Se precisar, pode usar uma *Increment_Expression* (positiva ou negativa) cujo valor absoluto seja maior que um.
 
@@ -477,7 +501,7 @@ Vamos voltar para o primeiro exemplo `For... End for`. O seguinte exemplo execut
  End for
 ```
 
-Aqui está o loop `Repeat... Until` équivalente:
+Aqui está o equivalente ao loop `While... End while`:
 ```4d
  $i:=1 //Initializa o contador
  While($i<=100) //Loop 100 vezes
@@ -486,7 +510,7 @@ Aqui está o loop `Repeat... Until` équivalente:
  End while
 ```
 
-Aqui está o equivalente ao loop `While... End while`:
+Aqui está o loop `Repeat... Until` équivalente:
 ```4d
  $i:=1 //Initializa o contador
  Repeat
@@ -497,7 +521,7 @@ Aqui está o equivalente ao loop `While... End while`:
 
 :::tip
 
-Here is the equivalent `While... Portanto, use o loop <code>For... End for` sempre que possível.
+Aqui está o equivalente ao loop `While... Portanto, use o loop <code>For... End for` sempre que possível.
 
 :::
 
