@@ -29,7 +29,7 @@ Esta propiedad se utiliza para definir la altura de línea de un pie de list box
   * Si se define más de un tamaño, 4D utiliza el mayor. Por ejemplo, si una línea contiene "Verdana 18", "Geneva 12" y "Arial 9", 4D utiliza "Verdana 18" para determinar la altura de la línea (por ejemplo, 25 píxeles). Esta altura se multiplica por el número de líneas definidas.
   * Este cálculo no tiene en cuenta el tamaño de las imágenes ni los estilos aplicados a las fuentes.
   * En macOS, la altura de línea puede ser incorrecta si el usuario introduce caracteres que no están disponibles en la fuente seleccionada. Cuando esto ocurre, se utiliza un tipo de letra sustituto, lo que puede provocar variaciones en el tamaño.
-> Esta propiedad también puede establecerse dinámicamente mediante el comando [LISTBOX SET FOOTERS HEIGHT](https://doc.4d.com/4Dv20/4D/20.6/LISTBOX-SET-FOOTERS-HEIGHT.301-7487629.en.html).
+> > Esta propiedad también puede establecerse dinámicamente mediante el comando [LISTBOX SET FOOTERS HEIGHT](https://doc.4d.com/4Dv20/4D/20.6/LISTBOX-SET-FOOTERS-HEIGHT.301-7487629.en.html).
 
 Conversión de unidades: cuando se pasa de una unidad a otra, 4D las convierte automáticamente y muestra el resultado en la Lista de propiedades. Por ejemplo, si la fuente utilizada es "Lucida grande 24", una altura de "1 línea" se convierte en "30 píxeles" y una altura de "60 píxeles" se convierte en "2 líneas".
 
