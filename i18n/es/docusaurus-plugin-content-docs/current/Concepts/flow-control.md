@@ -570,7 +570,7 @@ Las instrucciones `break` y `continue` se [describen a continuación](#break-and
 
 ### Bucle en las colecciones
 
-Cuando `For each...End for each` se utiliza con una *Expression* del tipo *Collection*, el parámetro *Current_Item* es una variable del mismo tipo que los elementos de la colección. El número de bucles se basa en el número de elementos de la colección.
+Cuando `For each...End for each` se utiliza con una *Expression* del tipo *Collection*, el parámetro *Current_Item* es una variable del mismo tipo que los elementos de la colección. Si algún elemento de la colección no es del mismo tipo que la variable, se genera un error y el bucle se detiene.
 
 La colección debe contener sólo elementos del mismo tipo, de lo contrario se devolverá un error en cuanto a la variable *Current_Item* se le asigne el primer tipo de valor diferente.
 
