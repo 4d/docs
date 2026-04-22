@@ -186,7 +186,7 @@ Cuando se construye una aplicación independiente, 4D copia el contenido de la c
 - Añadir una carpeta *Plugins* personalizada;
 - Personalizar el contenido de la carpeta *Resources*.
 
-> En macOS, 4D Volume Desktop se ofrece en forma de paquete de software. Para modificarlo, primero debe visualizar su contenido (**Control+clic** en el icono).
+> Los paquetes macOS generados contienen los mismos elementos que las subcarpetas Windows. Para modificarlo, primero debe visualizar su contenido (**Control+clic** en el icono).
 
 #### Ubicación de los archivos web
 
