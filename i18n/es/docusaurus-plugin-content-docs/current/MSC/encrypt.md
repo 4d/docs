@@ -108,7 +108,7 @@ El archivo de datos se descifra completamente y se muestra un mensaje de confirm
 
 ## Guardar la llave de encriptación
 
-4D le permite guardar la llave de encriptación de datos en un archivo dedicado. 4D le permite guardar la llave de encriptación de datos en un archivo dedicado. El almacenamiento de este archivo en un dispositivo externo, como una llave USB, facilitará el uso de una aplicación cifrada, ya que el usuario sólo tendría que conectar el dispositivo para entregar la llave antes de abrir la aplicación para acceder a los datos cifrados.
+4D le permite guardar la llave de encriptación de datos en un archivo dedicado. 4D le permite guardar la llave de encriptación de datos en un archivo dedicado. El nombre del archivo debe tener la extensión <code>.4DKeyChain</code>, por ejemplo "myKeys.4DKeyChain".
 
 Puede guardar la llave de encriptación cada vez que se proporcione una nueva frase secreta:
 
