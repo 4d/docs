@@ -376,7 +376,7 @@ Les colonnes booléennes peuvent également être affichées sous forme de pop u
 
 #### Objets pris en charge
 
-[\[Colonne de list box\](listbox_overview.md#list-box-columns)](listbox-column.md)
+[Colonne de list box](listbox-column.md)
 
 ---
 
@@ -445,7 +445,7 @@ Dans ces cas, le titre de la case à cocher peut être saisi en utilisant cette 
 
 #### Objets pris en charge
 
-[\[Colonne de list box\](listbox_overview.md#list-box-columns)](listbox-column.md)
+[Colonne de list box](listbox-column.md)
 
 ---
 

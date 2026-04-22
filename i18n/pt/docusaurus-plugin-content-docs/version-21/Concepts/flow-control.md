@@ -5,8 +5,8 @@ title: Fluxo de controlo
 
 Independentemente da simplicidade ou da complexidade de um método, sempre utilizará um ou vários dos três tipos de estruturas de programação. As estruturas de programação determinam o fluxo de execução, se serão executadas, e a ordem das linhas de instruções dentro do método. Há três tipos de estruturas:
 
-- \*\*Sequencial: uma estrutura sequencial é uma estrutura simples e linear. Uma sequência é uma série de sentenças que 4D executa uma atrás da outra, da primera à última. Uma instrução de uma linha, utilizada frequentemente para os métodos dos objetos, é o caso mais simples de uma estrutura sequencial. Por exemplo: [People]lastName:=Uppercase([People]lastName)\`
-- **Branching**: Uma estrutura de bifurcação permite que os métodos testem uma condição e sigam caminhos alternativos, dependendo do resultado. A condição é uma expressão booleana, uma expressão que avalia TRUE ou FALSE. Uma estrutura condicional é a estrutura [`Se...Senão...Fim se`](#ifelseend-if), que direciona o fluxo do programa ao longo de um dos dois caminhos. A outra estrutura ramificada é a [`Caso do...Senão...Caso final`](#case-ofelseend-case), que direciona o fluxo do programa para um dos muitos caminhos.
+- \*\*Sequencial: uma estrutura sequencial é uma estrutura simples e linear. Uma sequência é uma série de sentenças que 4D executa uma atrás da outra, da primera à última. Uma instrução de uma linha, utilizada frequentemente para os métodos dos objetos, é o caso mais simples de uma estrutura sequencial. Por exemplo: [People]lastName:=Uppercase([People]lastName)\\`
+- **Branching**: Uma estrutura de bifurcação permite que os métodos testem uma condição e sigam caminhos alternativos, dependendo do resultado. A condição é uma expressão booleana, uma expressão que avalia TRUE ou FALSE. A condição é uma expressão booleana, uma expressão que avalia TRUE ou FALSE. Uma estrutura condicional é a estrutura [`Se...Senão...Fim se`](#ifelseend-if), que direciona o fluxo do programa ao longo de um dos dois caminhos.
 - **Loop**: ao escrever métodos, é muito comum descobrir que você precisa de uma sequência de afirmações para repetir várias vezes. Para lidar com esta necessidade, a linguagem 4D oferece as estruturas de loop abaixo:
 
   - [`While...End while`](#whileend-while)
@@ -14,7 +14,7 @@ Independentemente da simplicidade ou da complexidade de um método, sempre utili
   - [`For...End for`](#forend-for)
   - [`For each...End for each`](#for-eachend-for-each)
 
-Os loops são controlados de duas maneiras: ou fazem loop até que uma condição seja satisfeita, ou fazem loop um número especificado de vezes. Cada estrutura de repetição pode ser usada de qualquer maneira, mas laços `While` e laços `repeat` são mais apropriados para repetir até que uma condição seja atendida, e laços `For` são mais apropriados para repetir um número específico de vezes. \`For each... End for each permite misturar ambas as formas e foi concebido para fazer loop dentro de objectos e colecções.
+Os loops são controlados de duas maneiras: ou fazem loop até que uma condição seja satisfeita, ou fazem loop um número especificado de vezes. Cada estrutura de repetição pode ser usada de qualquer maneira, mas laços `While` e laços `repeat` são mais apropriados para repetir até que uma condição seja atendida, e laços `For` são mais apropriados para repetir um número específico de vezes. \\`For each... End for each permite misturar ambas as formas e foi concebido para fazer loop dentro de objectos e colecções.
 
 **Nota:** 4D permite que você incorpore estruturas de programação até uma "profundidade" de 512 níveis.
 
@@ -38,7 +38,7 @@ Note que a parte `Else` é opcional; pode escrever:
  End if
 ```
 
-A estrutura `Se...Senão...End if` permite que o seu método escolha entre duas ações, dependendo se um teste (uma expressão booleana) é TRUE ou FALSO. Quando a expressão Booleana for TRUE, são executadas as declarações que seguem imediatamente ao teste. Se a expressão Booleana for FALSE, são executadas as declarações que seguem a linha Else. A declaração Else é opcional; se omitir Else, a execução continua com a primeira instrução (se houver) que seguir End if\`.
+A estrutura `Se...Senão...End if` permite que o seu método escolha entre duas ações, dependendo se um teste (uma expressão booleana) é TRUE ou FALSO. Quando a expressão Booleana for TRUE, são executadas as declarações que seguem imediatamente ao teste. Se a expressão Booleana for FALSE, são executadas as declarações que seguem a linha Else. Quando a expressão Booleana for TRUE, são executadas as declarações que seguem imediatamente ao teste.
 
 Note que a expressão booleana é sempre avaliada completamente. Considere particularmente o teste abaixo:
 
@@ -138,7 +138,7 @@ Cada expressão booleana é precedida de dois pontos (`:`). A combinação dos d
 :(bValidate=1)
 ```
 
-Só são executadas as instruções que seguem o primeiro caso TRUE (até o próximo caso). Se nenhum dos casos for TRUE, nenhuma das afirmações será executada (se nenhuma parte `Senão` estiver incluída).
+Só são executadas as instruções que seguem o primeiro caso TRUE (até o próximo caso). Lembre-se que com uma estrutura de caso `Case of...Else...End case`, apenas o primeiro caso VERDADEIRO é executado.
 
 Pode incluir uma instrução Else depois do último caso. Se todos os casos forem FALSE, as instruções que seguem `Else` serão executadas.
 
@@ -177,9 +177,9 @@ Para comparar, aquí está la versión `If...Else...End if` del mismo método:
  End if
 ```
 
-Lembre-se que com uma estrutura de caso `Case of...Else...End case`, apenas o primeiro caso VERDADEIRO é executado. Mesmo se dois ou mais casos forem TRUE, só as instruções que seguirem o primeiro caso TRUE serão executadas.
+Só são executadas as instruções que seguem o primeiro caso TRUE (até o próximo caso). Mesmo se dois ou mais casos forem TRUE, só as instruções que seguirem o primeiro caso TRUE serão executadas.
 
-Dessa maneira, quando quiser implementar testes hierárquicos, deve garantir que as declarações de condição que estejam mais abaixo no esquema hierárquico apareçam primeiro na sequência de testes. Por exemplo, o teste de presença de condicionalidade 1 cobre o teste de presença de condicionalidade 1&condi2 e, por conseguinte, deve ser localizado por último na sequência de testes. Por exemplo, o código abaixo nunca terá sua última condição detectada:
+Dessa maneira, quando quiser implementar testes hierárquicos, deve garantir que as declarações de condição que estejam mais abaixo no esquema hierárquico apareçam primeiro na sequência de testes. Dessa maneira, quando quiser implementar testes hierárquicos, deve garantir que as declarações de condição que estejam mais abaixo no esquema hierárquico apareçam primeiro na sequência de testes. Por exemplo, o código abaixo nunca terá sua última condição detectada:
 
 ```4d
  Case of
@@ -258,7 +258,7 @@ Um loop `While...End while` executa as declarações dentro do loop enquanto a e
 
 As instruções `break` e `continue` são [descritas abaixo](#break-and-continue).
 
-É comum inicializar o valor testado na expressão booleana imediatamente antes de entrar no loop `Enquanto...Fim enquanto`. Inicializar o valor significa definí-lo como algo apropriado, geralmente para que a expressão booleana seja VERDADEIRA e `While... End while` executa o laço.
+Um loop `Repeat...Until` é similar a um loop [While...End while](flow-control.md#whileend-while), exceto que ele testa a expressão booleana depois do loop ao invés de antes. Assim, um loop `Repeat...Until` sempre executa o loop uma vez, enquanto se a expressão booleana for inicialmente Falsa, um loop `While...End while` não executa o loop de forma alguma.
 
 O valor da expressão booleana deve poder ser modificado por um elemento dentro do loop, do contrário será executado indefinidamente. O seguinte loop continua para sempre porque *NeverStop* sempre é TRUE:
 
@@ -293,7 +293,7 @@ Repeat
 Until(Boolean_Expression)
 ```
 
-Um loop `Repeat...Until` é similar a um loop [While...End while](flow-control.md#whileend-while), exceto que ele testa a expressão booleana depois do loop ao invés de antes. Assim, um loop `Repeat...Until` sempre executa o loop uma vez, enquanto se a expressão booleana for inicialmente Falsa, um loop `While...End while` não executa o loop de forma alguma.
+É interessante ver como o laço `While...End while` e o ciclo `Repeat...Until` realizariam a mesma ação. Aqui está o ciclo equivalente `While...End while`:
 
 A outra diferença com um loop `Repita...Até` é que o loop continua até que a expressão booleana seja VERDADEIRA.
 
@@ -428,7 +428,7 @@ Em alguns casos, pode querer ter um loop cuja variável de contador seja decresc
  End for
 ```
 
-#### Incrementar a variável do contador em mais de um
+#### Diminuir a variável contador
 
 Se precisar, pode usar uma Increment_Expression (positiva ou negativa) cujo valor absoluto seja maior que um.
 
@@ -543,7 +543,7 @@ A sintaxe formal da estrutura de controle de fluxo para `For each...End for each
  End for each
 ```
 
-La estructura `For each... End for each` ejecuta un *Current_item* especificado sobre todos los valores de *Expression*. El tipo *Current_item* depende del tipo *Expression*. El bucle `For each... End for each` puede iterar a través de tres tipos de *Expression*:
+La estructura `For each... End for each` ejecuta un *Current_item* especificado sobre todos los valores de *Expression*. El tipo *Current_item* depende del tipo *Expression*. End for each\` puede iterar a través de tres tipos de *Expression*:
 
 - collections: loop por cada elemento da coleção,
 - seleções de entidades: loop em cada entidade,
@@ -561,7 +561,7 @@ La siguiente tabla compara los tres tipos de `For each... End for each`:
 - O número de loops é avaliado no início e não muda durante o processo. Adicionar ou remover itens durante o loop não é recomendado porque resulta em iterações faltantes ou redundantes.
 - Por padrão, as  instruções anexas são executadas para cada valor de Expressão\*. Entretanto, é possível sair do loop comprovando uma condição ao início do loop (While) ou ao final do loop (Until).
 - Os parâmetros opcionais *begin* e *end* podem ser usados com coleções e seleções de entidades para definir os limites do loop.
-- O laço `Para cada... Fim para cada` pode ser usado em uma **coleção compartilhada** ou um **objeto compartilhado**. Se seu código precisar modificar um ou mais elemento(s) das propriedades de coleção ou objeto, você precisa usar as palavras-chave `Use...End use`. Dependendo de suas necessidades, você pode chamar as palavras-chave `Use...End use`:
+- Fim para cada`pode ser usado em uma **coleção compartilhada** ou um **objeto compartilhado**. Se seu código precisar modificar um ou mais elemento(s) das propriedades de coleção ou objeto, você precisa usar as palavras-chave`Use...End use`. Dependendo de suas necessidades, você pode chamar as palavras-chave `Use...End use\`:
   - antes de entrar no loop, se os elementos devem ser modificados juntos por razões de integridade, ou
   - dentro do loop quando só tiver que modificar alguns elementos/propriedades e não é necessário gerenciar a integridade.
 
@@ -569,14 +569,14 @@ As instruções `break` e `continue` são [descritas abaixo](#break-and-continue
 
 ### Loop através da coleção
 
-Quando \`For each... End for each' é usado com uma *Expressão* do tipo *Coleção*, o parâmetro *Current_Item* é uma variável do mesmo tipo que os elementos da coleção. Como padrão, o número de loops é baseado no número de elementos da coleção.
+A variável *Current_Item* deve ser do mesmo tipo que os elementos da coleção. Como padrão, o número de loops é baseado no número de elementos da coleção.
 
 A coleção deve conter apenas elementos do mesmo tipo, caso contrário, um erro será retornado assim que a variável *Current_Item* for atribuída ao primeiro tipo de valor incompatível.
 
 Em cada iteração do loop, a variável *Current_Item* é automaticamente preenchida com o elemento correspondente da coleção. Os pontos abaixo devem ser considerados:
 
 - Se a variável *Current_Item* é do tipo de objeto ou tipo de coleção (por exemplo, se *Expressão* for uma coleção de objetos ou de coleções), Modificar esta variável irá automaticamente modificar o elemento correspondente à coleção (porque os objetos e coleções compartilham as mesmas referências). Se a variável for de tipo escalar, só se modificará a variável.
-- A variável *Current_Item* deve ser do mesmo tipo que os elementos da coleção. Se algum elemento da coleção não for do mesmo tipo que a variável, um erro é gerado e o loop para.
+- End for each' é usado com uma *Expressão* do tipo *Coleção*, o parâmetro *Current_Item* é uma variável do mesmo tipo que os elementos da coleção. Se algum elemento da coleção não for do mesmo tipo que a variável, um erro é gerado e o loop para.
 - Se a coleção contiver elementos com um valor **Null**, será gerado um erro se o tipo de variável *Current_Item* não suportar valores **Null** (como variáveis longint).
 
 #### Exemplo
@@ -612,7 +612,7 @@ O número de loops é baseado no número de entidades da seleção de entidades.
 
 **Nota:** si la selección de entidades contiene una entidad que fue eliminada mientras tanto por otro proceso, se salta automáticamente durante el bucle.
 
-Lembre que qualquer modificação aplicada na entidade atual deve ser guardada explicitamente utilizando entity.save()\`.
+Lembre que qualquer modificação aplicada na entidade atual deve ser guardada explicitamente utilizando entity.save()\\`.
 
 #### Exemplo
 

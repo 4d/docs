@@ -110,7 +110,7 @@ As propriedades [`textBody`](#textbody) e [`htmlBody`](#htmlbody) são usadas so
 
 A propriedade `.attachments` contém uma <!-- REF #EmailObjectClass.attachments.Summary -->coleção de objeto(s) `4D.MailAttachment`<!-- END REF -->.
 
-Os objetos de anexo são definidos por meio do comando [`MAIL New attachment`](../commands/mail-new-attachment.md). Os objetos anexo têm [propriedades e funções](MailAttachmentClass.md) específicas.
+Os objetos de anexo são definidos por meio do comando [`MAIL New attachment`](../commands/mail-new-attachment.md). Os objetos de anexo são definidos por meio do comando [`MAIL New attachment`](../commands/mail-new-attachment).
 
 ## .bcc
 
@@ -198,7 +198,7 @@ Para uma melhor capacidade de entrega, é recomendado usar o mesmo endereço de 
 
 #### Descrição
 
-A propriedade `.headers` contém uma coleção <!-- REF #EmailObjectClass.headers.Summary -->de objetos `EmailHeader`, na ordem em que aparecem na mensagem<!-- END REF -->. Esta propriedade permite que usuários adicionem cabeçalhos estendidos (registrados) ou definidos pelo usuário (não registrados, começando com cabeçalhos "X").
+A propriedade `.headers` contém uma coleção <!-- REF #EmailObjectClass.headers.Summary -->de objetos `EmailHeader`, na ordem em que aparecem na mensagem<!-- END REF -->. .
 
 > Se uma propriedade de objeto `EmailHeader` define um cabeçalho como "from" ou "cc" que já está definida como uma propriedade no nível de correio, a propriedade `EmailHeader` é ignorada.
 

@@ -3,9 +3,9 @@ id: OutgoingMessageClass
 title: OutgoingMessage
 ---
 
-`4D.OutgoingMessage` クラスを使うと、アプリケーションの関数が[REST リクエスト](../REST/REST_requests.md) に応答して返すメッセージを作成することができます。 レスポンスが`4D.OutgoingMessage` 型であった場合、REST サーバーはオブジェクトを返すのではなく、`OutgoingMessage` クラスのオブジェクトインスタンスを返します。
+`4D.OutgoingMessage` クラスを使うと、アプリケーションの関数が[REST リクエスト](../REST/REST_requests.md) に応答して返すメッセージを作成することができます。 レスポンスが`4D.OutgoingMessage` 型であった場合、REST サーバーはオブジェクトを返すのではなく、`OutgoingMessage` クラスのオブジェクトインスタンスを返します。 レスポンスが`4D.OutgoingMessage` 型であった場合、REST サーバーはオブジェクトを返すのではなく、`OutgoingMessage` クラスのオブジェクトインスタンスを返します。
 
-通常、このクラスは、カスタムの[HTTP リクエストハンドラー関数](../WebServer/http-request-handler.md#関数の設定) またはHTTP GET リクエストを管理するようにデザインされた、[`onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword) キーワードで宣言された関数内で使用することができます。 このようなリクエストは、例えば、ファイルのダウンロード、画像の生成、ダウンロードなどの機能を実装するためや、ブラウザを介して任意のコンテンツタイプを受信するために使用されます。
+通常、このクラスは、カスタムの[HTTP リクエストハンドラー関数](../WebServer/http-request-handler.md#関数の設定) またはHTTP GET リクエストを管理するようにデザインされた、[`onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword) キーワードで宣言された関数内で使用することができます。 このようなリクエストは、例えば、ファイルのダウンロード、画像の生成、ダウンロードなどの機能を実装するためや、ブラウザを介して任意のコンテンツタイプを受信するために使用されます。 このようなリクエストは、例えば、ファイルのダウンロード、画像の生成、ダウンロードなどの機能を実装するためや、ブラウザを介して任意のコンテンツタイプを受信するために使用されます。
 
 このクラスのインスタンスは4D Server 上にビルドされ、[4D REST サーバー](../REST/gettingStarted.md) によってのみブラウザに送信することができます。 このクラスを使用することで、HTTP 以外のテクノロジー(例: モバイルなど)を使用することができます。
 
@@ -19,7 +19,7 @@ title: OutgoingMessage
 
 ### 例題
 
-この例題では、`getFile()` 関数は[Datastore クラス](../ORDA/ordaClasses.md#datastore-class) に実装されており、REST リクエストによって[呼び出すことができます](../ORDA/ordaClasses.md#onhttpget-keyword)。 ここでの目的は、**testFile.pdf** ファイルをリクエストへのレスポンスとして返すことです:
+この例題では、`getFile()` 関数は[Datastore クラス](../ORDA/ordaClasses.md#datastore-class) に実装されており、REST リクエストによって[呼び出すことができます](../ORDA/ordaClasses.md#onhttpget-keyword)。 ここでの目的は、**testFile.pdf** ファイルをリクエストへのレスポンスとして返すことです: ここでの目的は、**testFile.pdf** ファイルをリクエストへのレスポンスとして返すことです:
 
 ```4d
 Class extends DataStoreImplementation
@@ -61,7 +61,7 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 #### 説明
 
-`.body` プロパティには<!-- REF #OutgoingMessageClass.body.Summary -->送信されるメッセージ本文<!-- END REF -->が格納されています。 `.body` プロパティでは以下のデータ型がサポートされます:
+`.body` プロパティには<!-- REF #OutgoingMessageClass.body.Summary -->送信されるメッセージ本文<!-- END REF -->が格納されています。 `.body` プロパティでは以下のデータ型がサポートされます: `.body` プロパティでは以下のデータ型がサポートされます:
 
 - text
 - blob
@@ -84,7 +84,7 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 `.headers` プロパティには<!-- REF #OutgoingMessageClass.headers.Summary -->送信されるメッセージのカレントのヘッダーがキー/値のペアとして格納されてます<!-- END REF -->。
 
-`.headers` プロパティは、読み出し専用です。 ヘッダーを設定するには、[`setHeader()`](#setheader) 関数を使用します。
+`.headers` プロパティは、読み出し専用です。 `.headers` プロパティは、読み出し専用です。 ヘッダーを設定するには、[`setHeader()`](#setheader) 関数を使用します。
 
 <!-- END REF -->
 
@@ -147,13 +147,13 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 #### 説明
 
-`.setHeader()` 関数は、<!-- REF #OutgoingMessageClass.setHeader().Summary -->送信するメッセージのヘッダーの、*key* 引数で指定したキーを、*value* 引数で指定した値で設定します<!-- END REF -->。 両方の引数ともテキスト値でない場合、エラーが発生します。
+`.setHeader()` 関数は、<!-- REF #OutgoingMessageClass.setHeader().Summary -->送信するメッセージのヘッダーの、*key* 引数で指定したキーを、*value* 引数で指定した値で設定します<!-- END REF -->。 両方の引数ともテキスト値でない場合、エラーが発生します。 両方の引数ともテキスト値でない場合、エラーが発生します。
 
 When returning a 4D.OutgoingMessage object instance, 4D automatically sets some headers (e.g. `Set-Cookie` with `4DSID__ProjectName_=....`).4D.OutgoingMessage オブジェクトインスタンスを返す場合、4D は自動的に一部のヘッダーを自動的に設定します(例: `Set-Cookie` を `4DSID__ProjectName_=....` で設定するなど)。
 
 :::note
 
-*value* 引数の値を、*key* 引数で"Content-Type" ヘッダーを指定して設定しようとする場合、この関数を、[`setBody()`](#setbody) の後に呼び出すようにして下さい。`setBody()` は自動的にヘッダーに値を入れるからです。 "Content-Type" ヘッダーの値の一覧については、の[`WEB SEND BLOB`](../commands-legacy/web-send-blob.md) ドキュメンテーションを参照して下さい。
+*value* 引数の値を、*key* 引数で"Content-Type" ヘッダーを指定して設定しようとする場合、この関数を、[`setBody()`](#setbody) の後に呼び出すようにして下さい。`setBody()` は自動的にヘッダーに値を入れるからです。 "Content-Type" ヘッダーの値の一覧については、の[`WEB SEND BLOB`](../commands/web-send-blob) ドキュメンテーションを参照して下さい。 "Content-Type" ヘッダーの値の一覧については、の[`WEB SEND BLOB`](../commands-legacy/web-send-blob.md) ドキュメンテーションを参照して下さい。
 
 :::
 
@@ -194,6 +194,6 @@ HTTP ステータスコードの一覧については、[Wikipedia のHTTP ス�
 
 #### 説明
 
-`.status` プロパティには、<!-- REF #OutgoingMessageClass.status.Summary -->送信メッセージのカレントのステータス<!-- END REF -->が格納されています。 このプロパティは、[`setStatus()`](setstatus) 関数を使用して設定することができます。
+`.status` プロパティには、<!-- REF #OutgoingMessageClass.status.Summary -->送信メッセージのカレントのステータス<!-- END REF -->が格納されています。 このプロパティは、[`setStatus()`](setstatus) 関数を使用して設定することができます。 このプロパティは、[`setStatus()`](setstatus) 関数を使用して設定することができます。
 
 <!-- END REF -->

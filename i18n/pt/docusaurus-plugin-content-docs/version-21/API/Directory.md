@@ -451,7 +451,7 @@ A função `.copyTo()` <!-- REF #directory.copyTo().Summary -->copia o objeto `F
 
 A *destinationFolder* deve existir em disco, senão um erro é gerado.
 
-Como padrão, a pasta é copiada com o nome da pasta original. Se quiser renomear a cópia, passe o novo nome no parâmetro *newName*. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
+Como padrão, a pasta é copiada com o nome da pasta original. Como padrão, a pasta é copiada com o nome da pasta original. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
 Se já existir uma pasta com o mesmo nome em *destinationFolder*, por padrão 4D gera um erro. Pode passar a constante `fk overwrite` no parâmetro *overwrite* para ignorar e sobrescriber o arquivo existente
 
@@ -468,7 +468,7 @@ O objeto `Folder` copiado.
 Se quiser copiar uma *pasta* Imagens da pasta de documentos do usuário a pasta da Database:
 
 ```4d
-var $userImages; $copiedImages : 4D.Folder
+var $userImages; $copiedImages : 4D. Folder
 $userImages:=Folder(fk documents folder).folder("Pictures")
 $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 ```

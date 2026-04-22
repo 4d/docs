@@ -71,7 +71,7 @@ Los objetos `File` soportan varios nombres de ruta, incluyendo la sintaxis `file
 
 #### Descripción
 
-Lanzamiento Es idéntico al comando [`File`](../commands/file.md) (atajo).
+Lanzamiento Lanzamiento Es idéntico al comando [`File`](../commands/file.md) (atajo).
 
 > Se recomienda utilizar el comando de acceso directo [`File`](../commands/file.md) en lugar de `4D.File.new()`.
 

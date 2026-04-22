@@ -3,7 +3,7 @@ id: shared
 title: Objetos y colecciones compartidos
 ---
 
-**Los objetos compartidos** y **las colecciones compartidas** son [objetos](./dt_object.md) y [colecciones](./dt_collection.md) específicas cuyo contenido se comparte entre procesos. A diferencia de las [variables interproceso](./variables.md#interprocess-variables), los objetos compartidos y las colecciones compartidas tienen la ventaja de ser compatibles con *[Procesos apropiativos](../Develop/preemptive.md)*: pueden pasarse por referencia como parámetros a comandos como [`New process`](../commands-legacy/new-process.md) o [`CALL WORKER`](../commands-legacy/call-worker.md).
+**Los objetos compartidos** y **las colecciones compartidas** son [objetos](./dt_object.md) y [colecciones](./dt_collection.md) específicas cuyo contenido se comparte entre procesos. La estructura `Use...End use` define una secuencia de instrucciones que ejecutarán tareas sobre el parámetro *Shared_object_or_Shared_collection* bajo la protección de un semáforo interno.
 
 Los objetos compartidos y las colecciones compartidas se almacenan en variables estándar [`Object`](./dt_object.md) y [`Collection`](./dt_collection.md), pero deben instanciarse utilizando comandos específicos:
 
@@ -81,7 +81,7 @@ Llamar a `OB Copy` con un objeto compartido (o con un objeto cuyas propiedades s
 
 ### Storage
 
-**Storage** es un objeto compartido único, disponible automáticamente en cada aplicación y máquina. Este objeto compartido es devuelto por el comando [`Storage`](../commands-legacy/storage.md). Este objeto compartido es devuelto por el comando <a href="https://doc.4d.com/4dv19R/help/command/en/page1525.html"><code>Storage</code></a>.
+**Storage** es un objeto compartido único, disponible automáticamente en cada aplicación y máquina. **Storage** es un objeto compartido único, disponible automáticamente en cada aplicación y máquina. Este objeto compartido es devuelto por el comando <a href="https://doc.4d.com/4dv19R/help/command/en/page1525.html"><code>Storage</code></a>.
 
 Tenga en cuenta que, a diferencia de los objetos compartidos estándar, el objeto `Storage` no crea un grupo compartido cuando se añaden objetos/colecciones compartidos como sus propiedades. Esta excepción permite utilizar el objeto **Storage** sin bloquear todos los objetos o colecciones compartidos conectados.
 

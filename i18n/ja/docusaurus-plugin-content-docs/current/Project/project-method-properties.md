@@ -41,7 +41,7 @@ title: プロジェクトメソッド
 
 サブルーチンを使用しなければ、顧客レコード修正のたびにコードを作成しなければなりません。 プロジェクトの 10箇所で同じ処理が必要であれば、同じコーディングを 10回も書かねばなりません。 サブルーチンを使用すれば 1回コーディングするだけですみます。 これがコーディングの重複を減らすというサブルーチンの第一の利点です。
 
-先ほど説明したコードが `MODIFY_CUSTOMER` と呼ばれるメソッドであるとすれば、他のメソッド内でそのメソッド名を使うことで実行できます。 たとえば、顧客のレコードを修正し、それからレコードをプリントするために、以下のようなメソッドを書くことができます:
+先ほど説明したコードが `MODIFY_CUSTOMER` と呼ばれるメソッドであるとすれば、他のメソッド内でそのメソッド名を使うことで実行できます。 たとえば、顧客のレコードを修正し、それからレコードをプリントするために、以下のようなメソッドを書くことができます: たとえば、顧客のレコードを修正し、それからレコードをプリントするために、以下のようなメソッドを書くことができます:
 
 ```4d
  MODIFY_CUSTOMER
@@ -68,7 +68,7 @@ title: プロジェクトメソッド
 
 The [`Formula`](../commands/formula) or [`Formula from string`](../commands/formula-from-string) commands allow you to create [native formula objects](../API/FormulaClass.md) that you can encapsulate in object properties. つまり、カスタムなオブジェクトメソッドを実装することが可能です。
 
-オブジェクトプロパティに保存されているメソッドを実行するには、プロパティ名のあとに **()** をつけます。 例:
+オブジェクトプロパティに保存されているメソッドを実行するには、プロパティ名のあとに **()** をつけます。 例: 例:
 
 ```4d
 // myAlert プロジェクトメソッド
@@ -93,21 +93,21 @@ For more information, see the [`4D.Formula` class description](../API/FormulaCla
 
 ### メニューメソッド
 
-メニューメソッドは、カスタムメニューから呼び出されるプロジェクトメソッドです。 You assign the method to the menu command using the Menu editor or a [command of the "Menus" theme](../commands/theme/Menus.md). メニューが選択されると、それに対応するメニューメソッドが実行されます。 特定の処理を実行するメニューメソッドを割り当てたカスタムメニューを作成することで、デスクトップアプリケーションのユーザーインターフェースをカスタマイズすることができます。
+メニューメソッドは、カスタムメニューから呼び出されるプロジェクトメソッドです。 メニューメソッドは、カスタムメニューから呼び出されるプロジェクトメソッドです。 You assign the method to the menu command using the Menu editor or a [command of the "Menus" theme](../commands/theme/Menus.md). メニューが選択されると、それに対応するメニューメソッドが実行されます。 特定の処理を実行するメニューメソッドを割り当てたカスタムメニューを作成することで、デスクトップアプリケーションのユーザーインターフェースをカスタマイズすることができます。
 
-メニューメソッドにより、単一または複数の処理を実行することができます。 For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the [`ADD RECORD`(../commands/add-record)] command until the user cancels the data entry activity.
+メニューメソッドにより、単一または複数の処理を実行することができます。 メニューメソッドにより、単一または複数の処理を実行することができます。 For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the [`ADD RECORD`(../commands/add-record)] command until the user cancels the data entry activity.
 
 Automating sequences of activities is a very powerful capability of the 4D programming language. カスタムメニューを使用することで処理を自動化することができ、アプリケーションのユーザーにより多くのガイダンスを提供することができます。
 
 ### プロセスメソッド
 
-**プロセスメソッド** とは、プロセスの開始時に呼び出されるプロジェクトメソッドのことです。 The process lasts only as long as the process method continues to execute, except if it is a [Worker process](../Develop/processes.md#worker-processes). Note that a menu method attached to a menu command with [*Start a New Process*](../Menus/properties.md#start-a-new-process) property is also the process method for the newly started process.
+**プロセスメソッド** とは、プロセスの開始時に呼び出されるプロジェクトメソッドのことです。 ワーカープロセスの場合を除いて、プロセスはプロセスメソッドが実行されている間だけ存続します。 メニューに属するメニューメソッドのプロパティとして *新規プロセス開始* をチェックしている場合、そのメニューメソッドは新規プロセスのプロセスメソッドでもあります。 **プロセスメソッド** とは、プロセスの開始時に呼び出されるプロジェクトメソッドのことです。 The process lasts only as long as the process method continues to execute, except if it is a [Worker process](../Develop/processes.md#worker-processes). Note that a menu method attached to a menu command with [*Start a New Process*](../Menus/properties.md#start-a-new-process) property is also the process method for the newly started process.
 
 ### イベント・エラー処理メソッド
 
-**イベント処理メソッド** は、イベントを処理するプロセスメソッドとして、分離されたプロセス内で実行されます。 通常、開発者はイベント管理の大部分を 4Dに任せます。 たとえば、データ入力中にキーストロークやクリックを検出した 4Dは、正しいオブジェクトとフォームメソッドを呼び出します。このため開発者は、これらのメソッド内でイベントに対し適切に応答できるのです。 For more information, see the description of the command [`ON EVENT CALL`](../commands/on-event-call).
+**イベント処理メソッド** は、イベントを処理するプロセスメソッドとして、分離されたプロセス内で実行されます。 通常、開発者はイベント管理の大部分を 4Dに任せます。 たとえば、データ入力中にキーストロークやクリックを検出した 4Dは、正しいオブジェクトとフォームメソッドを呼び出します。 このため開発者は、これらのメソッド内でイベントに対し適切に応答できるのです。 For more information, see the description of the command [`ON EVENT CALL`](../commands/on-event-call).
 
-**エラー処理メソッド** は、割り込みを実行するプロジェクトメソッドです。 エラーや例外が発生するたびに呼び出されます。 詳細については、[エラー処理](../Concepts/error-handling.md) を参照ください。
+**エラー処理メソッド** は、割り込みを実行するプロジェクトメソッドです。 エラーや例外が発生するたびに呼び出されます。 詳細については、[エラー処理](error-handling.md) を参照ください。 エラーや例外が発生するたびに呼び出されます。 詳細については、[エラー処理](../Concepts/error-handling.md) を参照ください。
 
 ### API Methods
 
@@ -132,7 +132,7 @@ External calls to project methods must be allowed in the [project method propert
 
 #### コードエディターからメソッド実行
 
-[**コードエディター**](../code-editor/write-class-method.md) ウィンドウには、そのエディターで開かれているメソッドを実行するためのボタンがあります。 このボタンに関連付けられているメニューから実行オプションを選択できます。
+[**コードエディター**](../code-editor/write-class-method.md) ウィンドウには、そのエディターで開かれているメソッドを実行するためのボタンがあります。 このボタンに関連付けられているメニューから実行オプションを選択できます。 このボタンに関連付けられているメニューから実行オプションを選択できます。
 
 このボタンは、プロジェクトメソッドと以下のデータベースメソッドでのみ利用できます:
 
@@ -151,12 +151,12 @@ External calls to project methods must be allowed in the [project method propert
 
 プロジェクトメソッドを実行するには、リストからメソッドを選択し、**実行** をクリックします。 デバッグモードでメソッドを実行するには **デバッグ** をクリックします。 デバッガーに関する詳細は、[デバッガー](../Debugging/basics.md) の章を参照ください。
 
-**新規プロセス** チェックボックスを選択すると、選択したメソッドは新規に作成されたプロセス内で実行されます。 大量の印刷など時間のかかる処理をメソッドがおこなう場合でもこのオプションを使用すれば、レコードの追加、グラフの作成などの処理をアプリケーションプロセスで継続できます。 プロセスに関するより詳細な情報については、[プロセス](../Develop/processes.md) を参照してください。
+**新規プロセス** チェックボックスを選択すると、選択したメソッドは新規に作成されたプロセス内で実行されます。 大量の印刷など時間のかかる処理をメソッドがおこなう場合でもこのオプションを使用すれば、レコードの追加、グラフの作成などの処理をアプリケーションプロセスで継続できます。 プロセスに関するより詳細な情報については、[プロセス](../Develop/processes.md) を参照してください。 大量の印刷など時間のかかる処理をメソッドがおこなう場合でもこのオプションを使用すれば、レコードの追加、グラフの作成などの処理をアプリケーションプロセスで継続できます。 プロセスに関するより詳細な情報については、[プロセス](../Develop/processes.md) を参照してください。
 
 **4D Serverに関する注記**:
 
-- クライアントではなくサーバー上でメソッドを実行したい場合、実行モードメニューで **4D Server** を選択します。 この場合 *ストアドプロシージャー* と呼ばれるプロセスが新規にサーバー上で作成され、メソッドが実行されます。 このオプションを使用して、ネットワークトラフィックを減らしたり、4D Serverの動作を最適化したりできます (特にディスクに格納されたデータにアクセスする場合など)。 すべてのタイプのメソッドをサーバー上や他のクライアント上で実行できますが、ユーザーインターフェースを変更するものは例外です。 この場合、ストアドプロシージャーは効果がありません。
-- 他のクライアントマシン上でメソッドを実行するよう選択することもできます。 他のクライアントマシンは、事前に登録されていなければメニューに表示されません (詳細な情報については [REGISTER CLIENT](../commands/register-client) の説明を参照ください)。
+- クライアントではなくサーバー上でメソッドを実行したい場合、実行モードメニューで **4D Server** を選択します。 この場合 *ストアドプロシージャー* と呼ばれるプロセスが新規にサーバー上で作成され、メソッドが実行されます。 このオプションを使用して、ネットワークトラフィックを減らしたり、4D Serverの動作を最適化したりできます (特にディスクに格納されたデータにアクセスする場合など)。 すべてのタイプのメソッドをサーバー上や他のクライアント上で実行できますが、ユーザーインターフェースを変更するものは例外です。 この場合、ストアドプロシージャーは効果がありません。 この場合 *ストアドプロシージャー* と呼ばれるプロセスが新規にサーバー上で作成され、メソッドが実行されます。 このオプションを使用して、ネットワークトラフィックを減らしたり、4D Serverの動作を最適化したりできます (特にディスクに格納されたデータにアクセスする場合など)。 すべてのタイプのメソッドをサーバー上や他のクライアント上で実行できますが、ユーザーインターフェースを変更するものは例外です。 この場合、ストアドプロシージャーは効果がありません。
+- 他のクライアントマシン上でメソッドを実行するよう選択することもできます。 他のクライアントマシン上でメソッドを実行するよう選択することもできます。 他のクライアントマシンは、事前に登録されていなければメニューに表示されません (詳細な情報については [REGISTER CLIENT](../commands/register-client) の説明を参照ください)。
 
 デフォルトでは、**ローカル** オプションが選択されています。 4D シングルユーザーの場合、このオプションしか選択できません。
 
@@ -169,7 +169,7 @@ External calls to project methods must be allowed in the [project method propert
 
 これは再帰呼び出しと呼ばれています。 4D ランゲージは再帰呼び出しを完全にサポートしています。
 
-次に例を示します。 以下のフィールドから成る `[Friends and Relatives]` テーブルがあります:
+次に例を示します。 次に例を示します。 以下のフィールドから成る `[Friends and Relatives]` テーブルがあります:
 
 - `[Friends and Relatives]Name`
 - `[Friends and Relatives]ChildrensName`
@@ -228,9 +228,9 @@ External calls to project methods must be allowed in the [project method propert
 
 `Genealogy of` メソッドが自分自身を呼び出していることに注目してください。
 
-最初に挙げた方法は **反復性のアルゴリズム** です。 2番目に挙げた方法は **再帰呼び出しのアルゴリズム** です。
+最初に挙げた方法は **反復性のアルゴリズム** です。 最初に挙げた方法は **反復性のアルゴリズム** です。 2番目に挙げた方法は **再帰呼び出しのアルゴリズム** です。
 
-前述の例題のようなコードを実装する場合、反復性や再帰呼び出しを使用してメソッドを書くことができるということに留意してください。 再帰呼び出しは一般的に、より明瞭で読みやすく、維持しやすいコードを提供します。ただし、この使用は必須ではありません。
+前述の例題のようなコードを実装する場合、反復性や再帰呼び出しを使用してメソッドを書くことができるということに留意してください。 再帰呼び出しは一般的に、より明瞭で読みやすく、維持しやすいコードを提供します。 ただし、この使用は必須ではありません。
 
 4D内での再帰呼び出しの代表的な使用方法は以下のとおりです:
 
@@ -260,7 +260,7 @@ Recursive calls should always end at some point. たとえば、`Genealogy of` �
 
 **メソッドプロパティ** ウィンドウの **名称** エリア、またはエクスプローラーでプロジェクトメソッド名を変更できます。
 
-新しい名称は 4D の命名規則に沿っていなければなりません ([識別子](../Concepts/identifiers.md) 参照)。 同じ名称のメソッドが既に存在する場合、4D はその旨を知らせるメッセージを表示します。 名称変更後、4D メソッドリストをソートします。
+新しい名称は 4D の命名規則に沿っていなければなりません ([識別子](../Concepts/identifiers.md) 参照)。 同じ名称のメソッドが既に存在する場合、4D はその旨を知らせるメッセージを表示します。 名称変更後、4D メソッドリストをソートします。 同じ名称のメソッドが既に存在する場合、4D はその旨を知らせるメッセージを表示します。 名称変更後、4D メソッドリストをソートします。
 
 :::caution
 
@@ -272,7 +272,7 @@ Recursive calls should always end at some point. たとえば、`Genealogy of` �
 
 :::info
 
-データベースメソッドの名称を変更することはできません。 オブジェクトに紐付いたトリガー、フォームメソッド、オブジェクトメソッドも同様です。これらは関連先のオブジェクトにより名称を決定されます。
+データベースメソッドの名称を変更することはできません。 オブジェクトに紐付いたトリガー、フォームメソッド、オブジェクトメソッドも同様です。 これらは関連先のオブジェクトにより名称を決定されます。
 
 :::
 
@@ -312,7 +312,7 @@ Recursive calls should always end at some point. たとえば、`Genealogy of` �
 
 エクスプローラーでは、Web サービスとして提供されるプロジェクトメソッドには専用のアイコンが表示されます。
 
-**注:** メソッド名が XML の命名規則に準拠しない文字 (たとえばスペース) を含む場合、そのメソッドは Webサービスとして公開できません。 この場合、設定は保存できません。
+**注:** メソッド名が XML の命名規則に準拠しない文字 (たとえばスペース) を含む場合、そのメソッドは Webサービスとして公開できません。 この場合、設定は保存できません。 この場合、設定は保存できません。
 
 #### WSDL を公開
 
@@ -343,7 +343,7 @@ Recursive calls should always end at some point. たとえば、`Genealogy of` �
 
 #### REST サーバー
 
-*このオプションは廃止されます。 RESTコールによるコードの呼び出しは、[ORDAデータモデルクラス関数](../REST/ClassFunctions.md) でのみサポートされます。*
+\*このオプションは廃止されます。 *このオプションは廃止されます。 RESTコールによるコードの呼び出しは、[ORDAデータモデルクラス関数](../REST/ClassFunctions.md) でのみサポートされます。*
 
 ### 属性の一括設定
 
@@ -351,7 +351,7 @@ Recursive calls should always end at some point. たとえば、`Genealogy of` �
 
 メソッド属性の一括設定をおこなうには:
 
-1. エクスプローラーの [メソッドページ](https://doc.4d.com/4Dv20/4D/20.2/Methods-Page.300-6750119.ja.html) からオプションメニューを展開し、**属性の一括設定...** コマンドを選択します。 "メソッド属性" ダイアログボックスが表示されます:
+1. エクスプローラーの [メソッドページ](https://doc.4d.com/4Dv20/4D/20.2/Methods-Page.300-6750119.ja.html) からオプションメニューを展開し、**属性の一括設定...** コマンドを選択します。 "メソッド属性" ダイアログボックスが表示されます: "メソッド属性" ダイアログボックスが表示されます:
 
 2. "一致するメソッド名" エリアに属性を一括設定するメソッドを指定するための名前条件を入力します。
    入力した文字列を使用してメソッド名が検索されます。

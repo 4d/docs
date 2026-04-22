@@ -134,7 +134,7 @@ Quando uma estrutura virtual for definida:
 
 :::note
 
-Quando um documento for exibido no modo "exibir expressões", referências a tabelas ou campos que não pertençam à estrutura virtual são exibidas com "`? " caracteres, por exemplo `[VirtualTableName]?\` quando o campo não estiver definido na estrutura virtual.
+Quando um documento for exibido no modo "exibir expressões", referências a tabelas ou campos que não pertençam à estrutura virtual são exibidas com "`? " caracteres, por exemplo `[VirtualTableName]?\\` quando o campo não estiver definido na estrutura virtual.
 
 :::
 
@@ -234,6 +234,7 @@ Qualquer que seja o modo de exibição da fórmula, você pode obter informaçõ
 Nesse contexto, você pode exibir o texto de origem da fórmula pressionando **Ctrl** (Windows) ou **Cmd** (macOS) enquanto passa o mouse sobre a fórmula.
 
 - Quando as fórmulas tiverem nomes e forem exibidas como nomes, nenhuma dica será exibida como padrão.
+  Quando as fórmulas tiverem nomes e forem exibidas como nomes, nenhuma dica será exibida como padrão.
   You can display the source text of the formula by pressing **Ctrl** (Windows) or **Cmd** (macOS) while hovering on the formula:
   [
   ![](../assets/en/WritePro/wp-formulas9.png)

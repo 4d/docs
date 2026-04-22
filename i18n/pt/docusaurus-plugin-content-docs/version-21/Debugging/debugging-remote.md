@@ -74,7 +74,7 @@ Para ligar o depurador de novo ao servidor:
 
 > **Aviso**: se essa opção for selecionada para um servidor que será iniciado posteriormente no modo sem cabeça, o depurador não estará disponível para esse servidor.
 
-- Em um cliente remoto 4D, esta opção se chama **Anexar depurador remoto na inicialização**. Quando selecionado, o cliente 4D remoto tentará automaticamente anexar o depurador remoto em cada conexão subsequente com o mesmo banco de dados do 4D Server. Se o anexo for aceite (veja [solicitações de anexo rejeitadas](#rejected-attachment-requests)), o depurador remoto é anexado automaticamente ao cliente remoto 4D e a opção **Desanexar depurador remoto é exibida**.
+- Em um cliente remoto 4D, esta opção se chama **Anexar depurador remoto na inicialização**. Quando selecionado, o cliente 4D remoto tentará automaticamente anexar o depurador remoto em cada conexão subsequente com o mesmo banco de dados do 4D Server. Quando selecionado, o cliente 4D remoto tentará automaticamente anexar o depurador remoto em cada conexão subsequente com o mesmo banco de dados do 4D Server.
 
 > Essa configuração é aplicada por projeto e é armazenada localmente no arquivo [`.4DPreferences`](Project/architecture.md#userpreferencesusername).
 
