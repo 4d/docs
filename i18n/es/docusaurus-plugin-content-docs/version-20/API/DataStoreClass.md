@@ -390,6 +390,9 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
  Else
     ALERT("This database is not encrypted.")
  End if
+ Else
+    ALERT("This database is not encrypted.")
+ End if
 ```
 
 <!-- END REF -->
@@ -972,15 +975,15 @@ Se crea un método proyecto *protectDataFile* para llamar antes de los despliegu
 <!-- REF #DataStoreClass.setRemoteContextInfo().Params -->
 <div class="no-index">
 
-|Parámetro|Tipo||Descripción|
+|Parameter|Type||Description|
 |---|---|---|---|
-|contextName|Text|->|Nombre del contexto|
-|dataClassName|Text|->|Nombre del dataclass|
-|dataClassObject|4D.DataClass|->|Objeto dataclass (ej. datastore.Employee)|
-|attributes|Text|->|Lista de atributos separada por una coma|
-|attributesColl|Collection|->|Colección de nombres de atributos (text)|
-|contextType|Text|->|Si se proporciona, valor debe ser "main" o "currentItem"|
-|pageLength|Integer|->|Longitud de la página de la selección de entidad vinculada al contexto (por defecto es 80)|
+|contextName|Text|->|Name of the context|
+|dataClassName|Text|->|Name of the dataclass|
+|dataClassObject|4D.DataClass|->|dataclass object (e.g datastore. Employee)|
+|attributes|Text|->|Attribute list separated by a comma|
+|attributesColl|Collection|->|Collection of attribute names (text)|
+|contextType|Text|->|If provided, value must be "main" or "currentItem"|
+|pageLength|Integer|->|Page length of the entity selection linked to the context (default is 80)|
 </div>
 <!-- END REF -->
 
@@ -1115,7 +1118,7 @@ End case
 
 #### Descripción
 
-La función `.startRequestLog()` <!-- REF #DataStoreClass.startRequestLog().Summary -->inicia el registro de peticiones ORDA del lado del cliente o del lado del servidor<!-- END REF -->. Está diseñado para fines de depuración en configuraciones cliente/servidor.
+La función `.startRequestLog()` <!-- REF #DataStoreClass.startRequestLog().Summary -->La función `.startRequestLog()`<!-- END REF -->. Está diseñado para fines de depuración en configuraciones cliente/servidor.
 
 :::info
 
@@ -1262,11 +1265,28 @@ Puede anidar varias transacciones (subtransacciones). Cada transacción o sub-tr
  End if
  ...
  ...
- If($error)
-    $ds.cancelTransaction()
- Else
-    $ds.validateTransaction()
+ var $connect; $status : Object
+ var $person : cs.PersonsEntity
+ var $ds : 4D.DataStoreImplementation
+ var $choice : Text
+ var $error : Boolean
+
+ Case of
+    :($choice="local")
+       $ds:=ds
+    :($choice="remote")
+       $connect:=New object("hostname";"111.222.3.4:8044")
+       $ds:=Open datastore($connect;"myRemoteDS")
+ End case
+
+ $ds.startTransaction()
+ $person:=$ds.Persons.query("lastname=:1";"Peters").first()
+
+ If($person#Null)
+    $person.lastname:="Smith"
+    $status:=$person.save()
  End if
+ ...
 ```
 
 <!-- END REF -->
@@ -1297,7 +1317,7 @@ Puede anidar varias transacciones (subtransacciones). Cada transacción o sub-tr
 
 #### Descripción
 
-La función `.stopRequestLog()` <!-- REF #DataStoreClass.stopRequestLog().Summary -->detiene todo registro de peticiones ORDA en la máquina a la que se llama (cliente o servidor)<!-- END REF -->.
+La función `.stopRequestLog()` <!-- REF #DataStoreClass.stopRequestLog().Summary -->La función `.stopRequestLog()`<!-- END REF -->.
 
 En realidad, cierra el documento abierto en el disco. Del lado del cliente, si el registro se inició en memoria, se detiene.
 
