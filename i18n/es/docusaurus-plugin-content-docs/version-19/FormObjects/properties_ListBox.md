@@ -55,7 +55,7 @@ Define la acción a realizar cuando un usuario haga doble clic en una línea en 
 *   **No hacer nada** (por defecto): hacer doble clic en una línea no desencadena ninguna acción automática.
 *   **Editar registro**: al hacer doble clic en una línea se muestra el registro correspondiente en el formulario detallado definido [ para el list box](#detail-form-name). El registro se abre en modo de lectura-escritura para que pueda ser modificado.
 *   **Mostrar registro**: idéntica a la acción anterior, salvo que el registro se abre en modo de sólo lectura para que no pueda ser modificado.
-> > Double-clicking an empty row is ignored in list boxes.
+> > > Double-clicking an empty row is ignored in list boxes.
 
 Independientemente de la acción seleccionada/elegida, se genera el evento de formulario `On Double clicked`.
 
@@ -104,7 +104,7 @@ Las columnas bloqueadas y las columnas estáticas son dos funcionalidades distin
 
 *   Las columnas bloqueadas siempre se muestran a la izquierda del list box; no se desplazan horizontalmente.
 *   Las columnas estáticas no pueden moverse arrastrándolas y soltándolas dentro del list box.
-> Puede definir columnas estáticas y bloqueadas por programación, consulte la sección "List Box" en el manual *de Lenguaje 4D*.
+> > Puede definir columnas estáticas y bloqueadas por programación, consulte la sección "List Box" en el manual *de Lenguaje 4D*.
 
 Estas propiedades interactúan de la siguiente manera:
 
