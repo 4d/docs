@@ -34,7 +34,7 @@ ON ERR CALL("IO_ERRORS") // エラー処理メソッドを実装します
 ON ERR CALL("") // エラーの検知を中止します
 ```
 
-`Method called on error` コマンドは、`ON ERR CALL` によってカレントプロセスにインストールされているエラー処理メソッド名を返します。 このコマンドは汎用的なコードでとくに有用です。エラー処理メソッドを一時的に変更し、後で復元することができます:
+`Method called on error` コマンドは、`ON ERR CALL` によってカレントプロセスにインストールされているエラー処理メソッド名を返します。 このコマンドは汎用的なコードでとくに有用です。 エラー処理メソッドを一時的に変更し、後で復元することができます:
 
 ```4d
  $methCurrent:=Method called on error
@@ -98,7 +98,8 @@ ON ERR CALL("") // エラーの検知を中止します
 ON ERR CALL("emptyMethod") // emptyMethod は空のエラー処理メソッドです
 $doc:=Open document( "myFile.txt")
 If (Error=-43)
-    ALERT("ファイルが見つかりません。")
+    ALERT("ファイルが見つかりません。
+")
 End if
 ON ERR CALL("")
 ```
