@@ -59,7 +59,7 @@ Para poder crear directamente un archivo de historial, los datos deben estar en 
 - El archivo de datos está en blanco,
 - Acaba de realizar una copia de seguridad y aún no se han realizado cambios en los datos.
 
-Si hace clic en <strong x-id="1">Aceptar</strong>, la copia de seguridad comienza inmediatamente, y luego se activa el archivo de historial. Si hace clic en <strong x-id="1">Aceptar</strong>, la copia de seguridad comienza inmediatamente, y luego se activa el archivo de historial. Si hace clic en **Aceptar**, la copia de seguridad comienza inmediatamente, y luego se activa el archivo de historial. Esta precaución es indispensable porque, para restaurar una aplicación después de algún incidente, necesitará una copia de la aplicación en la que se integrarán las operaciones registradas en el archivo de historial.
+Si hace clic en <strong x-id="1">Aceptar</strong>, la copia de seguridad comienza inmediatamente, y luego se activa el archivo de historial. Si hace clic en **Aceptar**, la copia de seguridad comienza inmediatamente, y luego se activa el archivo de historial. Si hace clic en **Cancelar**, la solicitud se guarda pero la creación del archivo de historial se pospone y en realidad sólo se creará después de la siguiente copia de seguridad de la aplicación. Esta precaución es indispensable porque, para restaurar una aplicación después de algún incidente, necesitará una copia de la aplicación en la que se integrarán las operaciones registradas en el archivo de historial.
 
 Sin tener que hacer nada más, todas las operaciones realizadas sobre los datos se registran en este archivo y se utilizarán en el futuro cuando se abra la aplicación.
 

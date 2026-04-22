@@ -1,0 +1,35 @@
+﻿---
+id: add-to-set
+title: ADD TO SET
+slug: /commands/add-to-set
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.ADD TO SET.Syntax-->**ADD TO SET** ( {*tabla* : Table ;} *conjunto* : Text )<!-- END REF-->
+<!--REF #_command_.ADD TO SET.Params-->
+<div class="no-index">
+
+| Parámetro | Tipo |  | Descripción |
+| --- | --- | --- | --- |
+| tabla | Table | &#8594; | Tabla del registro actual o Tabla por defecto si se omite |
+| conjunto | Text | &#8594; | Nombre del conjunto al cual añadir el registro actual |
+</div>
+<!-- END REF-->
+
+## Descripción 
+
+<!--REF #_command_.ADD TO SET.Summary-->ADD TO SET añade el registro actual de *tabla* a *conjunto*.<!-- END REF--> El conjunto ya debe existir; si no, ocurre un error. Si no hay un registro actual para *tabla*, ADD TO SET no tiene efecto.
+
+## Ver también 
+
+[REMOVE FROM SET](../commands/remove-from-set)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 119 |
+| Hilo seguro | yes |
+| Modifica variables | error |
+
+

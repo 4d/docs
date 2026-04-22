@@ -1,0 +1,25 @@
+---
+id: methods
+title: Méthodes
+---
+
+Une méthode est essentiellement un morceau de code qui exécute une ou plusieurs action(s). Une méthode est composée d'instructions.
+
+Une instruction exécute une action, et peut être simple ou complexe. Chaque instruction tient généralement sur une ligne dans la méthode (si nécessaire, elle peut toutefois être [scindée à l'aide du caractère `\`](quick-tour.md#code-sur-plusieurs-lignes)).
+
+La taille maximale d'une méthode est limitée à 2 Go de texte ou à 32 000 lignes de code.
+
+## Types de méthodes
+
+Dans le langage 4D, il existe plusieurs catégories de méthodes. La catégorie dépend de la façon dont on peut les appeler :
+
+| Type                                                | Contexte d'appel                                                                                                                                                                                                                        | Accepte des paramètres                       | Description                                                                                                                                                                                                                                               |
+| --------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Méthode projet**                                  | À la demande, lorsque le nom de la méthode projet est appelé (voir [Appel de méthodes de projet](#calling-project-methods))                                                                                          | Oui                                          | Peut contenir du code pour exécuter des actions personnalisées. Une fois que votre méthode projet est créée, elle devient partie intégrante du langage du projet.                                                         |
+| **Méthode objet (widget)**       | Automatique, lorsqu'un événement implique l'objet auquel la méthode est associée                                                                                                                                                        | Non                                          | Propriété d'un objet formulaire (également appelé widget)                                                                                                                                                                              |
+| **Méthode formulaire**                              | Automatique, lorsqu'un événement implique le formulaire auquel la méthode est associée                                                                                                                                                  | Non                                          | Propriété d'un formulaire. Vous pouvez utiliser une méthode formulaire pour gérer les données et les objets, mais il est généralement plus simple et plus efficace d'utiliser une méthode objet dans ces cas de figure.   |
+| **Trigger** (ou *méthode table*) | Automatique, chaque fois que vous manipulez les enregistrements d'une table (Ajouter, Supprimer, Modifier)                                                                                                           | Non                                          | Propriété d'une table. Les triggers sont des méthodes qui permettent d'éviter les opérations "illégales" sur les enregistrements de votre base de données.                                                                |
+| **Méthode base**                                    | Automatique, lorsqu'un événement se produit sur la session de travail                                                                                                                                                                   | Oui (prédéfini)           | Il existe 16 méthodes base dans 4D.                                                                                                                                                                                                       |
+| **Type**                                            | Automatically called when an object of the class is instantiated or when a function of the class is executed on an object instance in any other methods or in a [database field](../Develop/field-properties.md#class). | oui (fonctions de classe) | Une **Classe** est utilisée pour déclarer et configurer le class [constructor](./classes.md#class-constructor), les [propriétés](./classes.md#property*) et [fonctions](./classes.md#function) des objets. Voir [**Classes**](classes.md) |
+
+

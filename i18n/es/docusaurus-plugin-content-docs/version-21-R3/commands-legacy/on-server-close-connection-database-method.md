@@ -1,0 +1,45 @@
+---
+id: on-server-close-connection-database-method
+title: On Server Close Connection database method
+slug: /commands/on-server-close-connection-database-method
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.On Server Close Connection database method.Syntax-->$1, $2, $3 -> Método base On Server Close Connection<!-- END REF-->
+<!--REF #_command_.On Server Close Connection database method.Params-->
+<div class="no-index">
+
+| Parámetro | Tipo |  | Descripción |
+| --- | --- | --- | --- |
+| $1 | Entero largo | &#8592; | Número de usuario utilizado internamente por 4D Server para identificar los usuarios |
+| $2 | Entero largo | &#8592; | Número de conexión utilizada internamente por 4D Server para identificar una conexión |
+| $3 | Entero largo | &#8592; | Obsoleto: devuelve siempre 0 pero debe declararse |
+</div>
+<!-- END REF-->
+
+## Descripción 
+
+<!--REF #_command_.On Server Close Connection database method.Summary-->El **Método base On Server Close Connection** se llama en el equipo servidor cada vez que termina un proceso 4D Client.<!-- END REF--> 
+
+Como para el [Método base On Server Open Connection](../commands/metodo-base-on-server-open-connection), 4D Server pasa tres parámetros de tipo entero largo al **Método base On Server Close Connection**. Por otra parte, 4D Server no espera un resultado en retorno.
+
+El método debe contener la declaración explícita de tres parámetros Entero largo:
+
+```4d
+ #DECLARE($user : Integer ; $id : Integer ; $toIgnore : Integer)
+```
+
+Esta tabla detalla la información ofrecida por los tres parámetros pasados al método base:
+
+| **Parámetro** | **Descripción**                                                                        |
+| ------------- | -------------------------------------------------------------------------------------- |
+| $user            | Número de usuario utilizado internamente por 4D Server para identificar usuarios       |
+| $id            | Número de conexión utilizado internamente por 4D Server para identificar una conexiónn |
+| $toIgnore            | Obsoleto: devuelve siempre 0 pero debe declararse                                      |
+
+El **Método base On Server Close Connection** es el inverso exacto del [Método base On Server Open Connection](../commands/metodo-base-on-server-open-connection). Para mayor información y una descripción de este método base, así como para la descripción de los **procesos 4D Client**, ver la descripción de este método base.
+
+## Ejemplo 
+
+Ver el primer ejemplo para [Método base On Server Open Connection](../commands/metodo-base-on-server-open-connection).
+

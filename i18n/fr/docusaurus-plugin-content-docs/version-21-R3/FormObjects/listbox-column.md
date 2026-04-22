@@ -1,6 +1,6 @@
 ---
 id: listbox-column
-title: \[Colonne de list box\](listbox_overview.md#list-box-columns)
+title: Colonne de list box
 ---
 
 Une list box est composée d'un ou plusieurs objets colonnes qui ont des propriétés spécifiques. Vous pouvez sélectionner une colonne de list box dans l’éditeur de formulaires en cliquant dessus lorsque l’objet List box est sélectionné :

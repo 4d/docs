@@ -1,0 +1,59 @@
+---
+id: inputOverview
+title: Zone de saisie
+---
+
+Les zones de saisie vous permettent d'ajouter des expressions saisissables ou non saisissables telles que des champs de la base de données et des [variables](Concepts/variables.md) dans vos formulaires. Les zone de saisie peuvent gérer des données basées sur des caractères (texte, dates, numériques, etc.) ou des images :
+
+![](../assets/en/FormObjects/input.png)
+
+Les zones de saisie peuvent contenir [des expressions assignables ou non assignables](Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).
+
+De plus, les zones de saisie peuvent être [saisissables ou non saisissables](properties_Entry.md#enterable). Une zone de saisie saisissable accepte des données. Vous pouvez définir des contrôles de saisie de données pour l'objet. Une zone de saisie non saisissable peut uniquement afficher des valeurs mais ne peut pas être modifiée par l'utilisateur.
+
+Vous pouvez gérer les données avec des [méthodes](Concepts/methods.md) objet ou formulaire.
+
+:::note
+
+Pour des raisons de sécurité, dans les zones de saisie [multi-style](./properties_Text.md#multi-style), lorsque des formules sont collées à partir d'une autre application 4D ou d'un environnement externe, seules les *valeurs calculées* (texte ou images) disponibles au moment de la copie sont collées. Si aucune valeur n'est disponible (par exemple, la formule n'a jamais été calculée), 4D colle la source de la formule sous forme de texte brut.
+
+:::
+
+### Exemple JSON :
+
+```4d
+	"myText": {
+		"type": "input",	//define the type of object
+		"spellcheck": true,	//enable spelling verification
+		"left": 60,			//left position on the form  
+		"top": 160,			//top position on the form 
+		"width": 100,		//width of the object
+		"height": 20		//height of the object
+		}
+```
+
+## Propriétés prises en charge
+
+<details><summary>Historique</summary>
+
+| Release | Modifications                                 |
+| ------- | --------------------------------------------- |
+| 19 R7   | Prise en charge de la propriété Rayon d'angle |
+
+</details>
+
+[Allow font/color picker](properties_Text.md#allow-fontcolor-picker) - [Alpha Format](properties_Display.md#alpha-format) - [Auto Spellcheck](properties_Entry.md#auto-spellcheck) - [Background Color](properties_BackgroundAndBorder.md#background-color--fill-color) - [Bold](properties_Text.md#bold) - [Boolean format](properties_Display.md#text-when-falsetext-when-true) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Context Menu](properties_Entry.md#context-menu) - [Corner radius](properties_CoordinatesAndSizing.md#corner-radius) - [Date Format](properties_Display.md#date-format) - [Default value](properties_RangeOfValues.md#default-value) - [Draggable](properties_Action.md#draggable) - [Droppable](properties_Action.md#droppable) - [Enterable](properties_Entry.md#enterable) - [Entry Filter](properties_Entry.md#entry-filter) - [Excluded List](properties_RangeOfValues.md#excluded-list) - [Expression type](properties_Object.md#expression-type) - [Fill Color](properties_BackgroundAndBorder.md#background-color--fill-color) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Horizontal Scroll Bar](properties_Appearance.md#horizontal-scroll-bar) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Multiline](properties_Entry.md#multiline) - [Multi-style](properties_Text.md#multi-style) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Orientation](properties_Text.md#orientation) - [Picture Format](properties_Display.md#picture-format) - [Placeholder](properties_Entry.md#placeholder) - [Print Frame](properties_Print.md#print-frame) - [Required List](properties_RangeOfValues.md#required-list) - [Right](properties_CoordinatesAndSizing.md#right) - [Selection always visible](properties_Entry.md#selection-always-visible) - [Store with default style tags](properties_Text.md#store-with-default-style-tags) - [Text when False/Text when True](properties_Display.md#text-when-falsetext-when-true) - [Time Format](properties_Display.md#time-format) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Scroll Bar](properties_Appearance.md#vertical-scroll-bar) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
+
+## Supported Events
+
+[On After Edit](../Events/onAfterEdit.md) - [On After Keystroke](../Events/onAfterKeystroke.md) - [On Before Keystroke](../Events/onBeforeKeystroke.md) - [On Begin Drag Over](../Events/onBeginDragOver.md) - [On Clicked](../Events/onClicked.md) - [On Data Change](../Events/onDataChange.md) - [On Double Clicked](../Events/onDoubleClicked.md) - [On Drag Over](../Events/onDragOver.md) - [On Drop](../Events/onDrop.md) - [On Getting focus](../Events/onGettingFocus.md) - [On Header](../Events/onHeader.md) - [On Load](../Events/onLoad.md) - [On Losing focus](../Events/onLosingFocus.md) - [On Mouse Enter](../Events/onMouseEnter.md) - [On Mouse Leave](../Events/onMouseLeave.md) - [On Mouse Move](../Events/onMouseMove.md) - [On Mouse Up ](../Events/onMouseUp.md)(Picture type only)-  [On Printing Break](../Events/onPrintingBreak.md) - [On Printing Detail](../Events/onPrintingDetail.md) - [On Printing Footer](../Events/onPrintingFooter.md) - [On Scroll](../Events/onScroll.md)(Picture type only) - [On Selection Change](../Events/onSelectionChange.md) - [On Unload](../Events/onUnload.md) - [On Validate](../Events/onValidate.md)
+
+## Alternatives
+
+Vous pouvez également représenter des expressions de champ et de variable dans vos formulaires à l'aide d'objets alternatifs, plus particulièrement :
+
+- Vous pouvez afficher et saisir des données à partir des champs de la base de données directement dans des colonnes [de type List box](listbox_overview.md).
+- Vous pouvez représenter un champ ou une variable liste directement dans un formulaire à l'aide des objets [Pop-up Menus/Listes déroulantes](dropdownList_Overview.md) et [Combo Boxes](comboBox_overview.md).
+- Vous pouvez représenter une expression booléenne sous forme de [case à cocher](checkbox_overview.md) ou de [bouton radio](radio_overview.md).
+
+

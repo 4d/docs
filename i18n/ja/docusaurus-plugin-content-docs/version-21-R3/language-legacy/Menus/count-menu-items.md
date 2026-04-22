@@ -1,0 +1,51 @@
+﻿---
+id: count-menu-items
+title: Count menu items
+slug: /commands/count-menu-items
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.Count menu items.Syntax-->**Count menu items** ( *menu* : Integer, Text {; *process* : Integer} ) : Integer<!-- END REF-->
+<!--REF #_command_.Count menu items.Params-->
+<div class="no-index">
+
+| 引数 | 型 |  | 説明 |
+| --- | --- | --- | --- |
+| menu | Integer, Text | &#8594; | メニュー番号またはメニュー参照 |
+| process | Integer | &#8594; | プロセス参照番号 |
+| 戻り値 | Integer | &#8592; | メニュー中のメニュー項目数 |
+</div>
+<!-- END REF-->
+
+<div class="no-index">
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|11 SQL|変更|
+|<6|初出|
+
+</details>
+</div>
+
+## 説明 
+
+<!--REF #_command_.Count menu items.Summary-->Count menu items コマンドは、*menu*引数に渡されたメニュー番号または参照を持つメニュー内にあるメニュー項目の数を返します。<!-- END REF-->
+
+*process* 引数を省略すると、Count menu items はカレントプロセスのメニューに適用されます。そうでない場合、*process*に渡されたプロセス参照番号のプロセスのメニューに適用されます。
+
+**Note:** *menu*に[MenuRef](# "Unique ID (16-character alphanumeric) of a menu")を渡すと、*process* 引数は意味を持たず、無視されます。
+
+## 参照 
+
+[Count menus](../commands/count-menus)  
+
+## プロパティ
+
+|  |  |
+| --- | --- |
+| コマンド番号 | 405 |
+| スレッドセーフである | no |
+| サーバー上での使用は不可 ||
+
+

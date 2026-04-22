@@ -206,7 +206,7 @@ title: Commands by name
 [`Delete string`](../commands/delete-string)<br/>
 [`DELETE USER`](../commands/delete-user)<br/>
 [`DESCRIBE QUERY EXECUTION`](../commands/describe-query-execution)<br/>
-[`DIALOG`]((../commands/dialog))<br/>
+[`DIALOG`](../commands/dialog)<br/>
 [`DIFFERENCE`](../commands/difference)<br/>
 [`DISABLE MENU ITEM`](../commands/disable-menu-item)<br/>
 [`Discover data key`](../commands/discover-data-key)<br/>

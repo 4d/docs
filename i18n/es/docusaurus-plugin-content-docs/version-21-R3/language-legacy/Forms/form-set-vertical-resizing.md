@@ -1,0 +1,60 @@
+﻿---
+id: form-set-vertical-resizing
+title: FORM SET VERTICAL RESIZING
+slug: /commands/form-set-vertical-resizing
+displayed_sidebar: docs
+---
+
+<!--REF #_command_.FORM SET VERTICAL RESIZING.Syntax-->**FORM SET VERTICAL RESIZING** ( *redimension* : Boolean {; *alturaMin* : Integer {; *alturaMax* : Integer}} )<!-- END REF-->
+<!--REF #_command_.FORM SET VERTICAL RESIZING.Params-->
+<div class="no-index">
+
+| Parámetro | Tipo |  | Descripción |
+| --- | --- | --- | --- |
+| redimension | Boolean | &#8594; | True: el formulario es redimensionable verticalmente False: el formulario no puede ser redimensionado verticalmente |
+| alturaMin | Integer | &#8594; | Altura mínima del formulario (píxeles) |
+| alturaMax | Integer | &#8594; | Altura máxima del formulario (píxeles) |
+</div>
+<!-- END REF-->
+
+<div class="no-index">
+<details><summary>Historial</summary>
+
+|Versión|Cambios|
+|---|---|
+|12|Renombrar|
+|2004|Creado por|
+
+</details>
+</div>
+
+## Descripción 
+
+<!--REF #_command_.FORM SET VERTICAL RESIZING.Summary-->El comando FORM SET VERTICAL RESIZING le permite modificar por programación las propiedades de redimensionamiento vertical del formulario actual.<!-- END REF--> Por defecto, estas propiedades son definidas en el editor de formularios en el entorno Diseño. Las nuevas propiedades son definidas para el proceso actual; no son almacenadas con el formulario.
+
+El parámetro *redimension* le permite definir si el formulario puede redimensionarse verticalmente; en otras palabras, si la altura es modificable (manualmente por el usuario o por programación). 
+
+Si pasa [True](../commands/true), la altura del formulario puede ser modificada por el usuario; 4D utiliza como marcadores los valores pasados en *alturaMin* y *altura*Max. 
+
+Si pasa [False](../commands/false), no se puede modificar el largo del formulario actual; en este caso, no hay necesidad de pasar valores en los parámetros *alturaMin* y *altura*Max. 
+
+Si ha pasado [True](../commands/true) en el primer parámetro, puede pasar en los parámetros opcionales *alturaMin* y *altura*Max las nuevas alturas, mínimas y máximas, del formulario (en píxeles). Si omite estos parámetros se utilizan los valores definidos en el entorno Diseño (si los hay).
+
+## Ejemplo 
+
+Consulte el ejemplo del comando [FORM SET SIZE](form-set-size.md "FORM SET SIZE"). 
+
+## Ver también 
+
+[FORM GET VERTICAL RESIZING](../commands/form-get-vertical-resizing)  
+[FORM SET HORIZONTAL RESIZING](../commands/form-set-horizontal-resizing)  
+[FORM SET SIZE](../commands/form-set-size)  
+
+## Propiedades
+
+|  |  |
+| --- | --- |
+| Número de comando | 893 |
+| Hilo seguro | no |
+
+

@@ -19,7 +19,7 @@ Indica si el servidor web aceptará o no conexiones no seguras. Ver [Activar HTT
 
 #### Puerto HTTP
 
-Número de puerto IP (TCP) de escucha para HTTP. Número de puerto IP (TCP) de escucha para HTTP.
+Número de puerto IP (TCP) de escucha para HTTP. Ver [Puerto HTTP](../WebServer/webServerConfig.md#http-port).
 
 #### Dirección IP
 
@@ -41,7 +41,7 @@ Definir la ubicación por defecto de los archivos del sitio web e indicar el niv
 
 #### Página de inicio por defecto
 
-Designa una página de inicio por defecto para el servidor web. Designa una página de inicio por defecto para el servidor web.
+Designa una página de inicio por defecto para el servidor web. Ver [Página de inicio por defecto](../WebServer/webServerConfig.md#default-home-page).
 
 ## Options (I)
 
@@ -86,7 +86,7 @@ En este modo, puede configurar los parámetros del servidor web adicionales:
 
 *Nota de compatibilidad:* esta opción sólo está disponible en las bases/proyectos creados con una versión 4D anterior a 4D v18 R6.
 
-Esta opción permite gestionar las antiguas sesiones usuario por el servidor HTTP de 4D. Este mecanismo se describe en la sección [Gestión de Sesiones Web (Legado)](https://doc.4d.com/4Dv20/4D/20.6/Web-Sessions-Management-Legacy.300-7487177.en.html). Esta opción permite gestionar las antiguas sesiones usuario por el servidor HTTP de 4D.
+Esta opción permite gestionar las antiguas sesiones usuario por el servidor HTTP de 4D. Este mecanismo se describe en la sección [Gestión de Sesiones Web (Legado)](https://doc.4d.com/4Dv20/4D/20.6/Web-Sessions-Management-Legacy.300-7487177.en.html). Ver [Mantener sesión](../WebServer/webServerConfig.md#keep-session).
 
 Cuando se selecciona, la opción [Reutilización de los contextos temporales (4D en modo remoto)](#reuse-temporary-contexts) es marcada automáticamente (y bloqueada).
 
@@ -94,7 +94,7 @@ Cuando se selecciona, la opción [Reutilización de los contextos temporales (4D
 
 No disponible con las [sesiones extensibles](../WebServer/sessions.md).
 
-Límite estrictamente superior de procesos web simultáneos. Límite estrictamente superior de procesos web simultáneos.
+Límite estrictamente superior de procesos web simultáneos. Ver [Procesos Web simultáneos máximos](../WebServer/webServerConfig.md#maximum-concurrent-web-processes).
 
 #### Reutilización de los contextos temporales
 
@@ -114,7 +114,7 @@ Activa los procesos web apropiativos en sus aplicaciones compiladas. Cuando se s
 
 No disponible con las [sesiones extensibles](../WebServer/sessions.md).
 
-Le permite definir el tiempo de espera máximo antes de cerrar los procesos Web inactivos en el servidor. Le permite definir el tiempo de espera máximo antes de cerrar los procesos Web inactivos en el servidor.
+Le permite definir el tiempo de espera máximo antes de cerrar los procesos Web inactivos en el servidor. Ver [Duración de los procesos inactivos](../WebServer/webServerConfig.md#inactive-process-timeout).
 
 ### Contraseñas Web
 
@@ -140,7 +140,7 @@ Ver [Propiedades obsoletas](../WebServer/webServerConfig.md#deprecated-settings)
 
 #### Standard Set
 
-Define el conjunto de caracteres a utilizar por el servidor web 4D. Define el conjunto de caracteres a utilizar por el servidor web 4D.
+Define el conjunto de caracteres a utilizar por el servidor web 4D. Ver [Conjunto de caracteres](../WebServer/webServerConfig.md#character-set).
 
 ### Conexiones Keep-Alive
 
@@ -264,7 +264,7 @@ Para más información sobre el soporte de los servicios web en 4D, consulte el 
 
 Esta área contiene varias opciones relativas con el uso de 4D como un "servidor" de Servicios Web, es decir la publicación de los métodos proyecto en forma de Servicios Web.
 
-- **Autorizar peticiones de servicios web**: esta opción le permite inicializar la publicación de servicios web. Si esta opción no ha sido seleccionada, 4D rechaza las peticiones SOAP y no genera una WSDL - incluso si los métodos tienen el atributo *Publicado en WSDL*. Si esta opción no ha sido seleccionada, 4D rechaza las peticiones SOAP y no genera una WSDL - incluso si los métodos tienen el atributo <em x-id="4">Publicado en WSDL</em>.
+- **Autorizar peticiones de servicios web**: esta opción le permite inicializar la publicación de servicios web. Si esta opción no ha sido seleccionada, 4D rechaza las peticiones SOAP y no genera una WSDL - incluso si los métodos tienen el atributo *Publicado en WSDL*. Cuando esta opción está marcada, 4D crea el archivo WSDL.
 - **Nombre del Servicio Web**: esta área le permite cambiar el "nombre genérico" del Servicio Web. Este nombre se utiliza para diferenciar los servicios tanto a nivel de servidor SOAP (cuando el servidor publica varios Servicios Web diferentes), así como en los directorios de Servicios Web. Por defecto, 4D utiliza el nombre A_WebService.
 - **Espacio de nombres de Servicios Web**: esta área se utiliza para cambiar el espacio de nombres (namespace) de los Servicios Web publicados por 4D. Cada Servicio Web publicado en Internet debe ser único. La unicidad de los nombres de los Servicios Web se asegura mediante el uso de espacios de nombres XML. Un namespace es una cadena de caracteres arbitraria usada para identificar de manera única un conjunto de etiquetas XML. Por lo general, el espacio de nombres comienza por la URL de la empresa (http://mycompany.com/mynamespace). En este caso, no es indispensable tener nada en particular en la URL indicada; lo que importa es que la cadena de caracteres utilizada sea única. Por defecto, 4D utiliza el siguiente espacio de nombres: http://www.4d.com/namespace/default.
 
@@ -274,7 +274,7 @@ Esta área contiene varias opciones relativas con el uso de 4D como un "servidor
 
 Esta área contiene varias opciones relacionadas con el uso de 4D como un "cliente" de Servicios Web, es decir, suscribirse a los servicios publicados en la red.
 
-- **Prefijo de los métodos creados por el asistente**: esta área le permite cambiar el prefijo que se añade automáticamente por 4D al nombre de los métodos proxy generados por el asistente de servicios web. Los métodos proyecto proxy forman un enlace entre la aplicación 4D y el servidor de Servicios Web. Los métodos proyecto proxy forman un enlace entre la aplicación 4D y el servidor de Servicios Web.
+- **Prefijo de los métodos creados por el asistente**: esta área le permite cambiar el prefijo que se añade automáticamente por 4D al nombre de los métodos proxy generados por el asistente de servicios web. Los métodos proyecto proxy forman un enlace entre la aplicación 4D y el servidor de Servicios Web. Por defecto, 4D utiliza el prefijo "proxy_".
 
 ## Funcionalidades Web
 
