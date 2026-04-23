@@ -209,6 +209,17 @@ module.exports =
               "dirName": "language-legacy",
             }
           ],
+          "link": 
+          {
+            "type": "generated-index",
+            "title": "Commands by theme",
+            "description": "4D commands by theme",
+            "slug": "/category/themes",
+            "keywords": [
+              "commands, themes"
+            ],
+            "image": "/img/docusaurus.png"
+          },
         },
         {
           type: "category",
